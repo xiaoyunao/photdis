@@ -2,6 +2,14 @@
 
 ## 2026-10-28
 
+- Final v2 checkpoint: committed selected-tier metrics, candidate-demo manifest,
+  report, figures, source and tests. Commit `fb9c09f` matched local, public
+  GitHub and NERSC after SHA-256-confirmed generated manifests were moved to
+  ignored NERSC data backups before Git synchronization. All 42 tests passed;
+  the checkout is clean. The original frozen model remains unchanged. Next
+  method iteration: expand strict blue/red training anchors, calibrate the
+  complete selected route, and reserve new final fields for its evaluation.
+
 - Selected-tier independent validation: NERSC job 60434623 completed with
   exit 0. Fixed route (color box, 2-D tenth-neighbor support, highest available
   A/B/C) retained 23/25 cold anchors in the sparse final field and
