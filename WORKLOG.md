@@ -2,6 +2,32 @@
 
 ## 2026-10-28
 
+- Task: implement the latest Pro follow-up with frozen baseline models and
+  preregistered field roles. Results in docs/followup_validation.md.
+- Runs: NERSC allocation 60430171, nid200038. Three 10° fields processed;
+  same-field recovery, external CQR, matched-band, flux-noise and target
+  coverage scripts ran on allocated CPU. Allocation released with scancel.
+- Recovery: 324 prior PS1<0.05 candidates all pass common nonoptical cuts;
+  303 pass <0.03. Frozen A residual +0.109 mag. Paired Legacy/PS1 replacement
+  changes residual median by -0.0006 mag. Matched strict-test difference
+  +0.063 mag; all out-of-fit strict-control difference -0.020 mag.
+- External: cold anchors 2077 calibration, 4145 north final, 271 south final.
+  CQR 95% offsets A/B/C 0.071/0.081/0.086 mag. North C coverage 93.5%,
+  south 94.3%; north C red-end 90.3%. Identical-star north C-A NMAD -0.048
+  mag, sky-block 95% interval [-0.060,-0.040]; south -0.058 interval
+  [-0.103,+0.0003].
+- Noise/target: C input acceptance at r=21-22 falls to 32.2%, calibrated
+  95% coverage 87.1%. Full-PSF denominators corrected in target coverage.
+  Color-only cold box selects 4323/4782, 9067/9755, 686/786 Gaia cold
+  stars across three fields; known DESI nonstars 65/2039 and 36/1330 also
+  pass in the two fields with matches. North cool DESI giants 7/23 pass.
+- Files: new followup, external validation/common, noise and coverage scripts;
+  manifest/figure products; follow-up report, README, PLAN and WORKLOG.
+  Validation: Python compile, 35-test suite, source/model/test hash
+  checks, same-star identity checks, figures viewed; local/GitHub/NERSC commits
+  synchronized after each analysis. Remaining: conditional interval
+  calibration and probabilistic type selection after user review.
+
 - Task: follow the latest Pro review after baseline c3637cb. Recovered clean
   local/main and matching GitHub/NERSC history; read complete latest review.
 - Predeclared: one external-calibration field RA 140–150/Dec 5–15 and two

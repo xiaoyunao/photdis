@@ -5,7 +5,8 @@ GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
-and [cold-main-sequence baseline](docs/cold_baseline.md) are complete.
+[cold-main-sequence baseline](docs/cold_baseline.md), and
+[external/depth follow-up](docs/followup_validation.md) are complete.
 The baseline is ready for user review.
 
 ## Locations
