@@ -120,7 +120,7 @@ def make_plots(raw, phot, gaia, labels, spec, masks, flows, summary, output):
         for method, style in [(1, "-"), (2, "--")]:
             values = spec[f"{survey}_separation_arcsec"][matched & (spec[f"{survey}_match_method"] == method)]
             if len(values):
-                axes[0,0].hist(values, bins=np.linspace(0,3,61), histtype="step", color=color,
+                axes[0,0].hist(values, bins=np.geomspace(1e-5,10,81), histtype="step", color=color,
                     linestyle=style, label=f"{survey.upper()} {'ID' if method==1 else 'position'} N={len(values):,}")
         axes[0,1].scatter(spec[f"{survey}_teff"][quality], spec[f"{survey}_logg"][quality], s=12,
                           alpha=.65, color=color, label=f"{survey.upper()} N={int(quality.sum()):,}")
@@ -128,9 +128,10 @@ def make_plots(raw, phot, gaia, labels, spec, masks, flows, summary, output):
         if len(values):
             axes[1,0].hist(values, bins=np.linspace(-4,1,41), histtype="step", color=color,
                            label=f"{survey.upper()} N={len(values):,}")
-    axes[0,0].set(xlabel="Coordinate separation [arcsec]", ylabel="Matched rows", title="grz sample: matching methods", xlim=(0,3))
+    axes[0,0].set(xlabel="Coordinate separation [arcsec]", ylabel="Matched rows", title="grz sample: matching methods", xlim=(1e-5,10))
+    axes[0,0].set_xscale("log")
     axes[0,0].set_yscale("symlog", linthresh=1)
-    axes[0,1].set(xlabel="$T_{eff}$ [K]", ylabel="log g [dex]", xlim=(9000,2500), ylim=(5.6,-.6), title="Quality spectroscopy in grz sample")
+    axes[0,1].set(xlabel="$T_{eff}$ [K]", ylabel="log g [dex]", xlim=(10000,2500), ylim=(5.6,-.6), title="Quality spectroscopy in grz sample")
     axes[1,0].set(xlabel="[Fe/H] [dex]", ylabel="Rows", title="Quality metallicities", xlim=(-4,1))
     reference = masks["gaia_reference"] & np.isfinite(bp_rp) & np.isfinite(mg)
     axes[1,1].scatter(bp_rp[reference], mg[reference], s=4, color=".8", label="Gaia reference")
@@ -169,11 +170,24 @@ def make_plots(raw, phot, gaia, labels, spec, masks, flows, summary, output):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config",default="configs/pilot_10deg.json")
+    parser.add_argument("--plot-only",action="store_true")
     args=parser.parse_args()
     require_compute()
     task=json.loads(Path(args.config).read_text())
     cfg=json.loads(Path(task["base_config"]).read_text())
     out=Path(task["output_dir"])
+    if args.plot_only:
+        summary=json.loads((out/"summary.json").read_text())
+        table=fitsio.read(str(out/"field_diagnostics.fits"),ext=1)
+        columns={name:table[name] for name in table.dtype.names}
+        gaia={name[5:]:value for name,value in columns.items() if name.startswith("gaia_")}
+        summary["figures"]=make_plots(table,columns,gaia,columns,columns,columns,
+            [summary["optical_cutflow"],summary["anchor_cutflow"]],summary,Path(task["figure_dir"]))
+        summary["plot_script_sha256"]=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        write_json(out/"summary.json",summary)
+        write_json(task["manifest_path"],summary)
+        print(json.dumps({"figures":summary["figures"],"mode":"plot-only"}))
+        return
     if (out/"summary.json").exists():
         raise FileExistsError(out/"summary.json")
     out.mkdir(parents=True,exist_ok=True)
