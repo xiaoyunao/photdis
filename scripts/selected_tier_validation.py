@@ -60,7 +60,7 @@ def main():
         visible["grz_high_quality"] = table["anchor"]
         selection = flags(visible, rule, tree)
         take = cold & selection["color_box"] & selection["support_ok"]
-        prediction = np.full((len(table), 5), np.nan)
+        prediction = np.full((len(table["source_id"]), 5), np.nan)
         by_tier = {}
         for level, (name, features) in TIERS.items():
             subset = take & (selection["tier"] == level)

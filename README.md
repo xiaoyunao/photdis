@@ -78,7 +78,8 @@ linked from [the report](docs/pro_followup_v2.md). The separate
 independent-field color-box candidates to an ignored NERSC `data/` FITS file.
 It reports frozen-model median distances under the cold-dwarf hypothesis and
 support, optical-quality, depth and unverified-type flags; it assigns no type
-probability or calibrated interval. Run in an allocated CPU environment after
+probability or calibrated interval. The support flag covers the two optical
+colors only. Run in an allocated CPU environment after
 loading the DESI Python environment:
 
 ```bash

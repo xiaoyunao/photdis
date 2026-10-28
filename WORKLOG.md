@@ -2,6 +2,11 @@
 
 ## 2026-10-28
 
+- Selected-tier job 60434418 stopped before writing its manifest. Root cause:
+  `load_field` returns a dict of columns; `len(table)` counted 44 keys rather
+  than 47 first-field rows. Changed prediction allocation to
+  `len(table["source_id"])`. Next: parse/test, sync and rerun.
+
 - Whole-route validation preparation: added
   `scripts/selected_tier_validation.py` to score the frozen A/B/C forest with
   the fixed color box, corrected tenth-neighbor support and highest-available
