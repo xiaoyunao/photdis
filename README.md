@@ -28,7 +28,10 @@ finds spatially varying center residuals under the frozen route; no global
 center correction has been fitted. These diagnostics have not changed the
 frozen distance route. DR11 `MW_TRANSMISSION` is applied to all five input
 bands and the final `g0` distance-modulus term; see the
-[extinction audit](docs/extinction_audit.md).
+[extinction audit](docs/extinction_audit.md). A bounded
+[dust-sensitivity check](docs/cold_v4_dust_sensitivity.md) shows that
+uniformly scaling down this correction does not remove the native
+north–south center contrast.
 
 ## Locations
 

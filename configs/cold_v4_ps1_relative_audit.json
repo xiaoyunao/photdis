@@ -1,0 +1,14 @@
+{
+  "status": "diagnostic_fixed_before_ps1_rows_or_residuals_examined",
+  "role": "explanatory photometric-system comparison on previously inspected native final fields; no new independent final test",
+  "fields": [
+    "native_final_ra330_340_dec_m035_m025",
+    "native_final_ra020_030_dec_m025_m015",
+    "native_north_final_ra130_140_dec_p025_p035"
+  ],
+  "reference": "PS1 chunks-qz-star-v3, propagated Gaia DR3 positions at each PS1 mean epoch, unique match within one arcsec, PS1-to-DECam g/r/z polynomials already used in pilot_audit",
+  "quality": "unambiguous unique match; PS1 g-i in (0.4,2.7); g,r,i,z median magnitudes 15-20, NMAG_OK >=3, and 0<STDEV<0.03 mag",
+  "primary_metric": "per-field median and NMAD of Legacy observed minus transformed PS1 observed g,r,z on frozen selected cold anchors, with nside64 sky-block intervals",
+  "secondary_metric": "same-source change in frozen-route predicted distance modulus when transformed PS1 grz replaces Legacy grz while WISE, Gaia parallax, source extinction, masks, forests, and WISE20 policy remain fixed; report common acceptance and p_corr>=2 mas separately",
+  "interpretation": "relative optical measurement/transform diagnostic; PS1 and Legacy share photometric calibration ancestry, and transformation range truncates cold-dwarf colors"
+}

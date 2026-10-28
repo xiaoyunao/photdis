@@ -12,144 +12,48 @@ examining their residuals. The full detailed objective is in the active goal.
 
 ## Current Diagnostic Round
 
-Extinction flow, selected weak-parallax PIT, same-pair wide binaries,
-DESI type boundaries and the 2×2 template/noise experiment are complete.
-The crossover shows a native template median difference of 0.059 mag,
-while matched noise-field swaps change the median by at most 0.011 mag and
-mainly affect deep scatter and acceptance. An outcome-blind color/A_g match
-retains a +0.065 mag field offset. Four additional disjoint 10° DR11 south
-fields are now registered in `configs/cold_v4_native_transfer_fields.json`:
-two development diagnostics and two reserved final tests. The exact-template
-Gaia-label census is complete; matching on Legacy colors, A_g, Gaia parallax,
-BP-RP and G still leaves a positive native field difference. Next: construct
-the registered fields on NERSC and apply a fixed native-transfer score. The
-existing deep final test remains
-frozen.
+The latest Pro-review requirements are complete: the frozen model and route
+were held fixed; extinction algebra, selection-aware weak-parallax PIT,
+WISE20 wide-binary and DESI boundary checks, and the same-source 2×2
+noise/template crossover are documented in `docs/pro_latest_round.md`.
 
-The RA235–245 development field produced only 17 strict anchors under the
-unchanged E(B-V)<0.03 cut. It remains in the result. A separate amendment,
-`configs/cold_v4_native_transfer_supplement.json`, registers RA180–190 as
-an additional development field before reading its source rows; the two
-reserved final fields remain fixed.
+Three preregistered independent native-transfer fields have been scored once.
+South RA330 and RA20 medians are −0.0178 and −0.0520 mag; north RA130 is
++0.0687 mag. The contrast persists at corrected parallax ≥2 mas, after
+outcome-blind source matching, in RUWE≤1.1 and ordinary tangential-speed
+strata. Six preregistered sky-census fields repeat positive medians in
+three informative positive-b regions; four opposite-sign Galactic/ecliptic
+fields yield too few low-extinction anchors to isolate coordinates.
 
-Development scoring: RA60–70 has 6,594 selected cold anchors and median
-residual −0.006 mag; RA235–245 has nine selected sources. The supplemental
-RA180–190 field has 6,815 strict Gaia anchors, all excluded by the frozen
-external-reference reservation; its zero cold count is now explained.
-`configs/cold_v4_native_transfer_supplement2.json` preregisters RA230–240
-as another high-latitude development field. Build and score it, then inspect
-the two reserved final-field residuals once under the fixed route.
+The bounded foreground-dust sensitivity job 60462368 is complete. Scaling
+the catalog extinction correction to 75% leaves north-minus-south contrasts
+within 0.003–0.004 mag of baseline; the difference persists even with no
+correction. See `docs/cold_v4_dust_sensitivity.md`. This is explanatory use
+of already inspected fields, not a fitted dust map.
 
-RA230–240 now scores 4,554 cold anchors with median Δμ=+0.042 mag;
-the ≥2 mas subgroup has +0.084 mag, whereas negative-latitude RA60–70
-is close to zero. A positive-versus-negative Galactic latitude hypothesis
-is fixed in `configs/cold_v4_native_transfer_north_final.json` before
-reading the new northern final field. Build RA130–140/Dec25–35, then
-score it and the two original southern final fields once with the same
-frozen route and report all outcomes.
+A PS1 relative grz photometry audit is registered in
+`configs/cold_v4_ps1_relative_audit.json` before reading PS1 rows. On the
+same selected Gaia cold anchors, compare Legacy observed g/r/z to
+quality-qualified transformed PS1 photometry, then replace all three input
+bands together and recompute the frozen route. Report selection and domain
+limits. This is an explanatory diagnostic on previously inspected fields.
 
-The three final fields have now been scored once with that fixed method.
-The northern RA130 field median is +0.0687 mag, versus −0.0178 and −0.0520
-mag in southern RA330 and RA20. Their nside64 median bootstrap intervals
-do not overlap. The ≥2 mas medians are +0.1121, −0.0221 and −0.0662 mag;
-the 1–2 mas medians are all close to zero. The registered directional
-hypothesis held in these fields. The next diagnostic is an outcome-blind
-source match across those final fields using colors, dust, parallax and
-Gaia color, run on allocated NERSC compute for explanation only. Do not
-use the final fields to fit a center correction. Outcome-blind matching on
-Legacy colors, source A_g, corrected parallax, Gaia BP-RP and r0 leaves a
-north-minus-south residual contrast of +0.046/+0.076 mag across 2,016/1,470
-unique pairs; the >=2 mas subset remains +0.081/+0.104 mag. Next check
-Gaia quality/zero-point and DESI metallicity counts on allocated compute.
-Preserve the frozen model
-and the previously published deep-interval limitation.
+## Outstanding Issues and Validation Criteria
 
-The Gaia/DESI audit finds the same field contrast among RUWE<=1.1 stars;
-applied zero-point medians differ by only ~0.003 mas, while usable DESI
-metallicities number 0/13/35 in the three final fields. Six additional
-non-overlapping sky-census regions are now fixed in
-`configs/cold_v4_native_transfer_sky_census.json` before source inspection.
-Run their field array and unchanged frozen scorer on NERSC allocated CPUs,
-then map the field medians against sky position and parallax. This census
-is explanatory development evidence, not a fresh final validation of a
-new method.
-
-The initial six-field regular-queue scan 60460329 and dependent score
-60460382 were cancelled while still pending; the same array is being
-resubmitted to 30-minute debug QoS. While waiting, run the separate registered-final
-Gaia proper-motion diagnostic to check whether residual patterns track
-tangential speed or absolute height. Report any field/kinematic association
-as a diagnostic; it does not establish metallicity or a physical population
-classification. Integrate findings in `docs/pro_latest_round.md`, then
-review whether there is evidence for a method change or whether to keep
-the frozen model and specify the next cause test.
-
-The Gaia-motion job is complete: among >=2 mas anchors with tangential
-speed <40 km/s, the north/south sign contrast persists
-(+0.121 versus −0.031/−0.083 mag). It also persists in the 40–80 km/s
-stratum, and northern |z|<200 pc stars are strongly positive. These
-kinematic cuts do not isolate a single population cause. Await the six
-field census, then make a final bounded method decision.
-
-Coordinate-sign issue: all first six census fields have Galactic and
-ecliptic latitudes of the same sign. Four additional disjoint fields are
-registered before reading the first six scores in
-`configs/cold_v4_native_transfer_cross_sign.json`: two b>0/β<0 and two
-b<0/β>0. Run them after the six-field census. Their fixed diagnostic is
-whether the native residual sign tracks Galactic or ecliptic hemisphere
-more consistently; do not fit a hemisphere correction from these fields.
-
-Six-field census is complete. Positive-b RA140/RA200/RA250 fields have
-median native Δμ +0.039/+0.050/+0.078 mag and >=2 mas medians
-+0.066/+0.076/+0.171; negative-b RA10 has −0.009, RA340 has 216
-selected sources with a wide interval, and RA310 has zero because of
-the unchanged E(B−V) cut. All outcomes are retained in
-`docs/cold_v4_sky_census.md`. The coordinate-sign crossover fields are
-being constructed; score them before interpreting the sky-coordinate
-association.
-
-The four coordinate-sign fields are scored. The two positive-b/negative-β
-fields have 16/0 selected anchors; the two negative-b/positive-β fields
-have 0/680. E(B−V)<0.03 removes essentially all sources in three fields,
-so the coordinate-origin question is unresolved by this sample. Preserve
-the negative result. A bounded dust-sensitivity experiment on the three
-already inspected native final fields can now test the model response to
-partial foreground correction without changing training or policy. Then
-decide whether further sky expansion is scientifically useful.
-
-The dust-response script is ready with fractions 1/0.75/0.5/0 of the
-catalog foreground correction, same-source paired predictions, route
-acceptance and p>=2 mas strata. Run on NERSC allocated CPU. Use it to
-bound the size and direction of a dust effect, then make the final method
-decision; no fitted correction follows from this sensitivity test.
-
-1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
-   Gaia `M_g` labels and cross-field dust handling in noise injection.
-2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted
-   magnitude distribution, convolve with Gaia error, condition on the actual
-   corrected-parallax/SNR<10 selection, compare frozen WISE20 with old routing
-   on the same objects, and retain negative parallaxes.
-3. On previously inspected calibration/final fields, record native and
-   degraded predictions per original source. Decompose native residual and
-   degradation increment, compare actual fallback with supported fixed tier,
-   and report source-cluster uncertainty.
-4. Run the 2×2 template-field × noise-environment exchange with common
-   target depths, paired accepted-source differences and full acceptance.
-   Diagnose error, color, support, E(B-V), source population and tier changes
-   before changing the center or interval model.
-5. Recheck wide binaries under WISE20; distinguish Blanco 1 internal scatter
-   from an absolute zero-point test. Inspect the 12 accepted DESI cold giants
-   and 14 optical-box-rejected metal-poor cold dwarfs individually, with
-   quality, boundary and CMD/feature-space plots.
-6. Decide from the evidence whether to expand development/calibration samples,
-   fit a continuous error scale or add a separate stellar branch. Register
-   new sky roles before any new independent final evaluation. Preserve all
-   failed/negative results, update reports and three-machine synchronization.
-
-Validation: local targeted tests and scientific invariants; NERSC compute
-allocation for all catalog scans and simulations; check hashes/role isolation,
-independent-source bootstrap and final result manifests. No new model or
-nominal deep interval is released solely from old final-field diagnostics.
+- Finish the PS1 relative optical check on an allocated NERSC CPU and report
+  field-specific differences with sky-block intervals and same-source route
+  changes. Do not infer an independent absolute zero point from PS1.
+- Preserve the v4 forests, color box, support and WISE20 policy. The current
+  median distance remains conditional on the cold-dwarf hypothesis. Deep
+  nominal intervals are still withheld because the independent deep test
+  undercovers in multiple measured-r bins.
+- If PS1 or a later independent source identifies a plausible cause, register
+  new calibration and final sky regions before fitting a correction. Existing
+  final regions stay explanatory and cannot validate that correction.
+- Run targeted tests, verify frozen hashes and source identities, inspect
+  figures, update documentation and sync committed programs, reports, small
+  manifests and figures across local, GitHub and NERSC. Catalogs and models
+  remain on NERSC.
 
 ## Milestones
 
@@ -275,11 +179,8 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Review the [application decision](docs/cold_v4_application_decision.md) with
-the user. The independent final test shows deep interval undercoverage and
-positive modulus bias; do not tune these frozen final results. For the next
-research round, preregister new development/calibration/final sky roles,
-investigate center and low-tail errors with binaries/metallicity and a
-forward weak-parallax check, then recalibrate conditionally on measured
-inputs. Build type probabilities only after quantifying DESI/Gaia label
-selection and application class priors.
+Interpret the registered PS1 relative-optical audit alongside the dust,
+Gaia-label, kinematic and sky-census evidence. Report which cause classes
+remain plausible and the exact data needed for a causal test. Keep the frozen
+cold-v4 route and the previous final tests unchanged until a new method has
+independent calibration and validation fields.

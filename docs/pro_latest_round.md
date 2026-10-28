@@ -20,6 +20,7 @@ some DESI-confirmed giants through, especially in optical-only tier A.
 | Question | Result | Evidence |
 |---|---|---|
 | Was foreground extinction corrected? | Yes. DR11 `MW_TRANSMISSION` converts nanomaggy `g,r,z,W1,W2` fluxes into dereddened AB magnitudes. Gaia labels and predicted distance modulus both use `g0`. Cross-field noise simulation transports flux with the source/target transmission ratio. | [Extinction audit](extinction_audit.md) |
+| Can a uniform reduction of the catalog dust correction remove the native field contrast? | No. On the same three fields, reducing the subtracted extinction to 75% changes the north-minus-south residual contrasts by only 0.003–0.004 mag; the contrast remains even at zero correction. This is a bounded sensitivity test, not a 3D dust estimate. | [Dust sensitivity](cold_v4_dust_sensitivity.md) |
 | Was the weak-parallax PIT affected by selection? | Yes. The revised diagnostic uses the forest-weighted absolute-magnitude distribution, convolves with the Gaia parallax error, and conditions on the observed corrected-parallax/S/N<10 cut. Negative parallaxes remain. Selected-PIT low tails are about 5.4%, 5.9%, 7.2% in the three diagnostic fields. | [Weak-parallax check](cold_v4_weak_parallax_v2.md) |
 | Does the deep discrepancy follow stellar templates or the noise environment? | The paired 2×2 crossover found native template medians −0.009/+0.050 mag. Swapping noise fields on the same source changes medians by ≤0.011 mag, while degrading to `r=21–22` raises NMAD by about 0.09–0.10 mag and lowers acceptance by 10–13 percentage points. | [Template/noise crossover](cold_v4_crossover.md) |
 | Do measured template properties explain the native offset? | Matching the old templates on Legacy colors, `A_g`, Gaia parallax, BP−RP and G left a positive center difference. The newly registered final fields reproduce a positive northern versus negative southern center; a six-feature outcome-blind match leaves +0.046/+0.076 mag north-minus-south. | [Population census](cold_v4_native_population.md), [registered transfer](cold_v4_native_transfer_final.md) |
@@ -74,6 +75,14 @@ the two sky-coordinate associations. The
 registered native transfer fields above remain the one-time independent
 test of the directional hypothesis. A future fitted correction requires
 fresh calibration and final fields.
+
+The [dust-sensitivity check](cold_v4_dust_sensitivity.md) kept Gaia labels,
+models and route fixed while changing the fraction of catalog foreground
+extinction subtracted in all five bands. A 25% reduction moves all three
+field medians negative but barely changes their contrast. An additional
+PS1-to-DECam optical comparison on these already inspected fields is
+registered as an explanatory diagnostic; it does not create a new final
+test or independently establish an optical zero point.
 
 ## Reproducibility and location
 

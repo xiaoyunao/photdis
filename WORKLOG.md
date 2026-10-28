@@ -2,6 +2,22 @@
 
 ## 2026-10-29
 
+- Registered the three-field PS1 relative-optical diagnostic before
+  inspecting any new PS1 source rows or results. Added NERSC allocated-node
+  crossmatch, frozen-route replacement, fixed quality domain and a targeted
+  optical-color propagation test. The comparison is explanatory because
+  these native fields have already been scored. Next: run and record match
+  counts, per-band offsets and same-source distance response.
+
+- Dust-sensitivity Slurm job 60462368 completed on allocated CPU in 70 s;
+  copied aggregate result, added `docs/cold_v4_dust_sensitivity.md` and
+  figure. At 75% of catalog extinction, north-minus-south overall residual
+  contrasts move by only 0.003–0.004 mag; even zero correction leaves
+  +0.066/+0.098 mag. `A_g` from transmission matches 3.214 EBV within
+  4.3e-8 mag. Python parse, focused dust tests and figure inspection pass.
+  Next: compare same-star Legacy/PS1 optical measurements for a separate
+  relative-photometry diagnostic.
+
 - Prepared a bounded dust-response experiment on the three already
   scored native final fields, keeping Gaia anchors, Gaia reference
   parallax, forests and WISE20 policy fixed. It compares assumed fractions
