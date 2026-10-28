@@ -2,22 +2,23 @@
 
 ## Current Objective
 
-Archive and clear the old local/NERSC projects; create a private GitHub repository
-and verify synchronization of programs and selected figures. Stop for user review
-before scientific sample construction or training.
+Completed: archival/reset, private GitHub repository and verified program/figure
+synchronization. Stop here for user review before scientific sample construction
+or training.
 
 ## Milestones
 
 1. Archive old work outside the active directories and recreate empty working
    directories. Complete: local checksums and remote directory identities verified.
 2. Initialize this fresh repository and synchronize it with GitHub and NERSC.
+   Complete.
 3. Verify code deployment and a tiny non-scientific figure round trip; verify
-   matching committed versions and that catalog/data files are excluded.
-4. Record the SpecDis/SPDist source assessment and stop for confirmation.
+   matching committed versions and that catalog/data files are excluded. Complete.
+4. Record the SpecDis/SPDist source assessment and stop for confirmation. Complete.
 
 ## Outstanding Issues
 
-- Complete synchronization verification and figure round trip.
+- Await the user's review of this completed infrastructure checkpoint.
 - LAMOST and independent cluster/wide-binary validation resources remain unverified.
 - SpecDis/SPDist require quality and identity joins before any scientific use;
   they are auxiliary comparisons with Gaia-related calibration, not independent
@@ -35,6 +36,6 @@ before scientific sample construction or training.
 
 ## Next Recommended Step
 
-Finish this infrastructure checkpoint and wait for the user's confirmation.
+Wait for the user's confirmation of this completed infrastructure checkpoint.
 The next scientific milestone, only after approval, is sample definitions,
 coverage and protected external-test design.

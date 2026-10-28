@@ -2,6 +2,49 @@
 
 ## 2026-10-28
 
+- Task: Complete archival/reset and the program/figure synchronization checkpoint.
+- Files changed: `.gitignore`, `.gitattributes`, `AGENTS.md`, `README.md`,
+  `PLAN.md`, `WORKLOG.md`, archive/source/sync docs, `scripts/sync.py`,
+  `scripts/make_sync_check.py`, `figures/sync_check.svg`.
+- Commands run: archive rename/verification scripts; `gh repo create --private`;
+  remote Git init with `receive.denyCurrentBranch=updateInstead`;
+  `python3 -m py_compile scripts/sync.py scripts/make_sync_check.py`;
+  `git check-ignore` on data/model/log paths; `python3 scripts/sync.py push`;
+  NERSC SVG generation/commit; `python3 scripts/sync.py pull`; GitHub connector
+  metadata/file reads; SHA-256 and Git-blob comparisons.
+- Key findings:
+  - Private GitHub repository: https://github.com/xiaoyunao/photdis.
+  - Fresh local root: `/Users/yunaoxiao/Desktop/photdis`; sole active NERSC
+    checkout: `/pscratch/sd/y/yunao/photdis_pipeline`; `photodis` is empty.
+  - Archives are independent of active roots; exact locations and old HEAD are
+    in `docs/archives.json`. No old implementation or history was imported.
+  - Push sends committed programs/docs/selected figures to GitHub and NERSC.
+    Pull audits NERSC before fetching, fast-forwards locally, then publishes
+    GitHub. No GitHub credentials were installed on NERSC.
+  - Source/history guards reject data/model paths, unsupported/oversized files,
+    and symlinks. Normal Git fast-forward and clean-worktree rules protect edits.
+  - The likely Wenting Wang VAC is SpecDis (Songting Li et al. 2025, Wenting Wang
+    corresponding author). Verified SpecDis v2.1 and SPDist headers and sources;
+    registered their paths, version/matching issues and Gaia dependence in
+    `docs/data_sources.md`. They are future auxiliary comparisons, not adopted
+    independent truth or current training labels.
+- Validation result:
+  - Local archive: 149 file checksums verified; both remote archived directory
+    inode/device identities preserved by rename.
+  - Actual deployment and NERSC-to-local-to-GitHub figure round trip passed.
+    All three main refs matched `0935e44706df73943a9f4dbc8f9102fb7c921eaf`
+    before this final documentation commit.
+  - Figure SHA-256: `d704a8c753456b8b3284669d8e2c0f5f0cf3159447bc0db8188cd3c1d8f2fd0b`;
+    GitHub blob `e3941fbcd06f57aef5958f83f479ad7487b521a0` matches local Git.
+  - Disposable/mocked guard tests passed for current/historical FITS rejection,
+    locally-ahead pull rejection, failed remote preflight preventing fetch,
+    deterministic SVG output and preservation of a conflicting existing SVG.
+  - No catalog data were synchronized, and no scientific sample or model was
+    built. Only source metadata and the synthetic synchronization SVG were used.
+- Remaining issues: user review; LAMOST and independent cluster/wide-binary test
+  resources remain unverified.
+- Next step: synchronize this final record and stop for user confirmation.
+
 - Task: User authorized archival/reset, a new GitHub repository and program/figure
   synchronization; explicitly stop before building samples or training.
 - Files changed: fresh README, PLAN, WORKLOG, AGENTS, ignore rules and source/

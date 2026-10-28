@@ -55,7 +55,8 @@ cd /Users/yunaoxiao/Desktop/photdis
 python3 scripts/sync.py pull
 ```
 
-This fetches committed NERSC changes, fast-forwards local main and pushes the
+This first checks the NERSC committed files/history over SSH, then fetches
+committed NERSC changes, fast-forwards local main and pushes the
 result to GitHub. If local main is already ahead, run `push` to converge. If
 histories diverge, stop and inspect the commits; the helper does not resolve
 conflicts or force-push. Commit intended remote changes before pushing new local
