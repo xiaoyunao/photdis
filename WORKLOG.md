@@ -2,6 +2,11 @@
 
 ## 2026-10-28
 
+- Type audit extension: added `--final` mode using the same frozen color and
+  support rule and identical DESI class definitions in the two preregistered
+  final fields. It writes a separate final manifest and figure after those
+  source catalogs finish; no class threshold is tuned on their labels.
+
 - Figure review: revised the target-support chart to show both color-box and
   box-plus-support rates. Revised DESI type chart to show disconnected field
   estimates, Wilson 95% intervals and label counts; the previous line plot

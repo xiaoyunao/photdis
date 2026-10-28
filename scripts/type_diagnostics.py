@@ -28,6 +28,10 @@ FIELDS = {
     "prior_south": "data/field_test_ra320_330_v1/field_diagnostics.fits",
     "new_cal": "data/field_dev_cal_ra205_215_v1/field_diagnostics.fits",
 }
+FINAL_FIELDS = {
+    "final_ra230_240": "data/field_final_ra230_240_v1/field_diagnostics.fits",
+    "final_ra050_060": "data/field_final_ra050_060_v1/field_diagnostics.fits",
+}
 COLS = ["grz_base", "grz_w1", "grz_w1_w2", "gr0", "rz0", "r",
         "desi_quality", "desi_match_ambiguous", "desi_known_contaminant",
         "desi_teff", "desi_logg"]
@@ -98,15 +102,18 @@ def field_summary(path, rule, tree):
     return result
 
 
-def plot_summary(summary):
-    FIG.mkdir(parents=True, exist_ok=True)
+def plot_summary(summary, figure_dir):
+    figure_dir.mkdir(parents=True, exist_ok=True)
     fig, ax = plt.subplots(figsize=(9, 4.5))
     labels = ("DESI_cool_dwarf", "DESI_cool_giant", "DESI_known_nonstar")
-    x = np.arange(len(FIELDS), dtype=float)
+    fields = list(summary["fields"])
+    x = np.arange(len(fields), dtype=float)
     for index, name in enumerate(labels):
         points = [(j, summary["fields"][field]["labels"][name])
-                  for j, field in enumerate(FIELDS)]
+                  for j, field in enumerate(fields)]
         points = [(j, value) for j, value in points if value["n_labeled"]]
+        if not points:
+            continue
         px = np.array([j + (index - 1) * .10 for j, _ in points])
         y = np.array([value["color_box_rate_given_label"] for _, value in points])
         lower = np.array([value["color_box_rate_wilson95"][0] for _, value in points])
@@ -116,37 +123,42 @@ def plot_summary(summary):
         for xx, yy, (_, value) in zip(px, y, points):
             ax.annotate(f'n={value["n_labeled"]}', (xx, yy), xytext=(3, 4),
                         textcoords="offset points", fontsize=7)
-    ax.set_xticks(x, list(FIELDS))
+    ax.set_xticks(x, fields)
     ax.set_ylim(0, 1)
     ax.set_ylabel("P(color-box selected | DESI label)")
     ax.grid(alpha=.2)
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(FIG / "01_class_conditional_box_rates.png", dpi=170)
+    fig.savefig(figure_dir / "01_class_conditional_box_rates.png", dpi=170)
     plt.close(fig)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plot-only", action="store_true")
+    parser.add_argument("--final", action="store_true")
     args = parser.parse_args()
+    fields = FINAL_FIELDS if args.final else FIELDS
+    out = Path("data/type_diagnostics_final_v1") if args.final else OUT
+    figure_dir = Path("figures/type_diagnostics_final_v1") if args.final else FIG
+    manifest = Path("manifests/type_diagnostics_final.json") if args.final else Path("manifests/type_diagnostics_dev.json")
     if args.plot_only:
-        plot_summary(json.loads(Path("manifests/type_diagnostics_dev.json").read_text()))
+        plot_summary(json.loads(manifest.read_text()), figure_dir)
         return
     require_compute()
-    if (OUT / "summary.json").exists():
-        raise FileExistsError(OUT / "summary.json")
+    if (out / "summary.json").exists():
+        raise FileExistsError(out / "summary.json")
     rule, tree = fixed_rule()
     summary = {"selection_rule": rule, "fields": {},
                "compute_host": socket.gethostname()}
-    for name, path in FIELDS.items():
+    for name, path in fields.items():
         summary["fields"][name] = field_summary(path, rule, tree)
         print(json.dumps({"field": name,
                           "labels": summary["fields"][name]["labels"]}), flush=True)
-    OUT.mkdir(parents=True, exist_ok=True)
-    plot_summary(summary)
-    write_json(OUT / "summary.json", summary)
-    write_json("manifests/type_diagnostics_dev.json", summary)
+    out.mkdir(parents=True, exist_ok=True)
+    plot_summary(summary, figure_dir)
+    write_json(out / "summary.json", summary)
+    write_json(manifest, summary)
 
 
 if __name__ == "__main__":
