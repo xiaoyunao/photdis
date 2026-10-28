@@ -13,7 +13,7 @@ sys.path[:0] = [str(ROOT / "src"), str(ROOT / ".deps")]
 import numpy as np
 
 from photdis.followup import apply_cqr, cqr_offset, identity_hash
-from photdis.noise import simulate_shared_flux, transformed_distance_quantiles
+from photdis.noise import interval_diagnostics, simulate_shared_flux, transformed_distance_quantiles
 from photdis.photometry import derive_photometry
 from photdis.route import FEATURES, LEVEL, feature_matrix, route_rows
 from photdis.route_policy import choose_policy
@@ -21,9 +21,11 @@ from photdis.stage1 import require_compute, write_json
 from cold_v4 import PREPARED, sha
 from cold_v4_policy_noise import (REGISTRATION, frozen_models, load_environment,
                                   raw_for_ids, source_templates)
+from noise_injection_v2 import source_cluster_ci
 
 LOCK = Path("configs/cold_v4_deep_policy.json")
 CAL_RESULT = Path("data/cold_v4_deep/calibration.json")
+CAL_TRACKED = Path("manifests/cold_v4_deep_calibration.json")
 FINAL_RESULT = Path("data/cold_v4_deep/final.json")
 MIN_GROUP = 80
 
@@ -163,7 +165,7 @@ def summarize(row, adjusted, seed):
               "selected_by_tier": {tier: int(np.sum(row["level"] == number))
                                    for tier, number in LEVEL.items()},
               "template_noise_gt_target_fraction": row["template_noise_gt_target"],
-              "tiers": {}}
+              "tiers": {}, "strata": {}}
     for name, use in [("all", selected), *[(tier, row["level"] == number)
                                           for tier, number in LEVEL.items()]]:
         if not use.any():
@@ -173,8 +175,6 @@ def summarize(row, adjusted, seed):
         cal = adjusted[use]
         index = row["source_index"][use]
         # Apply interval diagnostics directly to final distance modulus.
-        from photdis.noise import interval_diagnostics
-        from noise_injection_v2 import source_cluster_ci
         report["tiers"][name] = {
             "n_draws": int(use.sum()),
             "n_sources": int(len(np.unique(index))),
@@ -183,6 +183,30 @@ def summarize(row, adjusted, seed):
             "calibrated_source_cluster_ci": source_cluster_ci(
                 truth, cal, index, seed=seed + len(report["tiers"]), n_boot=200),
         }
+    conditions = {"color_tertile": range(3), "used_error_gt_0p10": range(2),
+                  "support_ratio_gt_0p8": range(2)}
+    arrays = {"color_tertile": row["color_group"],
+              "used_error_gt_0p10": row["error_group"],
+              "support_ratio_gt_0p8": row["support_group"]}
+    for name, labels in conditions.items():
+        report["strata"][name] = {}
+        for value in labels:
+            use = selected & (arrays[name] == value)
+            if use.sum() >= 20:
+                report["strata"][name][str(value)] = interval_diagnostics(
+                    row["truth_mu"][use], adjusted[use])
+            else:
+                report["strata"][name][str(value)] = {"n": int(use.sum())}
+    report["strata"]["tier_x_condition"] = {}
+    for tier, level in LEVEL.items():
+        report["strata"]["tier_x_condition"][tier] = {}
+        for name, labels in conditions.items():
+            report["strata"]["tier_x_condition"][tier][name] = {}
+            for value in labels:
+                use = selected & (row["level"] == level) & (arrays[name] == value)
+                report["strata"]["tier_x_condition"][tier][name][str(value)] = (
+                    interval_diagnostics(row["truth_mu"][use], adjusted[use])
+                    if use.sum() >= 20 else {"n": int(use.sum())})
     return report
 
 
@@ -200,6 +224,9 @@ def main():
         raise ValueError("Deep field registration changed")
     if policy_lock["prepared_sha256"] != sha(PREPARED):
         raise ValueError("Frozen v4 model changed")
+    if policy_lock["policy_development_sha256"] != sha(
+            "manifests/cold_v4_policy_development.json"):
+        raise ValueError("Locked policy development result changed")
     policy = policy_lock["chosen_policy"]
     route, forests = frozen_models()
     role = "interval_calibration" if args.mode == "calibrate" else "independent_final"
@@ -211,6 +238,8 @@ def main():
     if args.mode == "calibrate":
         offsets = fit_offsets(rows)
     else:
+        if sha(CAL_RESULT) != sha(CAL_TRACKED):
+            raise ValueError("Published deep calibration changed")
         calibration = json.loads(CAL_RESULT.read_text())
         if calibration["policy_lock_sha256"] != sha(LOCK):
             raise ValueError("Deep policy lock changed after calibration")

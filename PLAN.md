@@ -103,11 +103,12 @@ populations with reference systems and weak-parallax forward checks.
     development observations, considering precision, coverage, width and
     acceptance. Development chose and hash-locked `grz_clean` plus WISE
     S/N>=20; calibrate/test it on separately registered fields next.
-21. Pending: assemble high-S/N templates and WISE-unconditioned target-noise
+21. In progress: assembled high-S/N templates and WISE-unconditioned target-noise
     environments from several fields; isolate fit/development, calibration
     and final-test identities and sky blocks. Calibrate final distance-modulus
     intervals by chosen tier and measurable noise/support using independent
-    sources, and assess deep coverage and clean acceptance on unseen sources.
+    sources. RA35–45 calibration completed with one observation per source
+    per depth; assess deep coverage and clean acceptance on unseen RA170–180.
 22. In progress: used isolated wide-binary/cluster reference systems for color- and
     brightness-dependent distance checks, then assess weak/negative Gaia
     parallaxes with a parallax-space forward model and documented selection.

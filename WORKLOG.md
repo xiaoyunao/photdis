@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Deep calibration job 60443692 completed on NERSC CPU (14m58s, exit 0),
+  after the WISE20 policy lock. Verified registration, policy and model SHA;
+  copied the small manifest. In RA35–45, 500 independent templates per depth
+  yield accepted A/B/C counts 59/78/330, 100/192/161, 259/159/28,
+  337/63/0 from r18–19 through 21–22. The deepest raw 95% modulus
+  coverage 92.5% becomes 96.0% in the calibration field, widening median
+  width 1.517→1.708 mag. Sparse deep B uses depth-global fallback;
+  C has no selected calibration source there. Added report and final-mode
+  hash gate against this tracked calibration. Next: sync, run independent
+  RA170–180 final and re-audit locked policy on real candidates/DESI.
+
 - Rendered and visually checked `figures/cold_v4/03_policy_depth.png` from
   the registered development manifest, comparing acceptance and final-
   modulus NMAD for clean highest-supported, clean WISE20 and strict-quality
