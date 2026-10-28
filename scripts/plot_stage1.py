@@ -346,6 +346,134 @@ def plot_spectroscopy(run_dir: Path, output_dir: Path) -> tuple[str, dict]:
     return save_figure(fig, output_dir, "05_spectroscopic_coverage.png", caption, bottom=0.14), stats
 
 
+def color_support(reference_counts: np.ndarray, anchor_counts: np.ndarray,
+                  reference_min: int) -> dict:
+    """Describe occupied grid support without estimating prediction accuracy.
+
+    Fractions use only reference cells meeting reference_min. The row-weighted
+    denominator is reference rows in those cells, never all survey sources.
+    """
+    eligible = reference_counts >= reference_min
+    bin_denominator = int(eligible.sum())
+    row_denominator = int(reference_counts[eligible].sum())
+    result = {"reference_min_per_cell": reference_min,
+              "eligible_reference_cells": bin_denominator,
+              "eligible_reference_rows_in_view": row_denominator}
+    for threshold in (1, 20):
+        missing = eligible & (anchor_counts < threshold)
+        cells, rows = int(missing.sum()), int(reference_counts[missing].sum())
+        result[f"anchors_less_than_{threshold}"] = {
+            "reference_cells": cells, "reference_rows": rows,
+            "cell_fraction": cells / bin_denominator if bin_denominator else None,
+            "row_fraction": rows / row_denominator if row_denominator else None,
+        }
+    return result
+
+
+def _percentage(value: float | None) -> str:
+    return "n/a" if value is None else f"{100 * value:.1f}%"
+
+
+def plot_feature_coverage(run_dir: Path, output_dir: Path) -> tuple[str, dict]:
+    """Compare the application reference and available calibration coverage."""
+    features = ["g0", "gr0", "rz0"]
+    reference = read_table(run_dir, "coverage_reference", features)
+    anchors = read_table(run_dir, "anchor", features + ["partition"])
+    spectra = read_table(run_dir, "spectroscopy", features + ["spectro_quality"])
+    spectra = spectra[spectra["spectro_quality"].astype(bool)]
+    layers = [("reference", "Mother PSF reference", reference, GRAY, "-"),
+              ("anchor", "Gaia anchors (all partitions)", anchors, BLUE, "--"),
+              ("spectroscopy", "Quality spectroscopy", spectra, ORANGE, "-.")]
+    color_bins = (np.linspace(-1, 3, 81), np.linspace(-1, 4, 101))
+    histograms, finite_pairs, statistics = {}, {}, {}
+    for key, _, data, _, _ in layers:
+        finite = np.isfinite(data["gr0"]) & np.isfinite(data["rz0"])
+        histograms[key] = np.histogram2d(data["gr0"][finite], data["rz0"][finite], bins=color_bins)[0]
+        finite_pairs[key] = int(finite.sum())
+        statistics[key] = {"table_or_quality_rows": len(data),
+                           "finite_color_pairs": int(finite.sum()),
+                           "color_rows_in_view": int(histograms[key].sum()),
+                           "color_rows_outside_view": int(finite.sum()-histograms[key].sum())}
+    train = (anchors["partition"] == 0) & np.isfinite(anchors["gr0"]) & np.isfinite(anchors["rz0"])
+    training_counts = np.histogram2d(anchors["gr0"][train], anchors["rz0"][train], bins=color_bins)[0]
+    support = {}
+    for name, counts in [("all_anchor_partitions", histograms["anchor"]),
+                         ("training_anchors_partition_0", training_counts)]:
+        support[name] = {f"reference_min_{minimum}": color_support(histograms["reference"], counts, minimum)
+                         for minimum in (1, 20)}
+
+    # Each cell's probability is divided by ALL finite pairs, including pairs
+    # outside the view. Cropping must not silently renormalize distributions.
+    probabilities = {key: counts / max(1, finite_pairs[key]) for key, counts in histograms.items()}
+    positive = np.concatenate([values[values > 0] for values in probabilities.values()])
+    norm = LogNorm(vmin=float(positive.min()), vmax=max(float(positive.max()), float(positive.min())*1.01)) if len(positive) else None
+    fig, axes = plt.subplots(2, 3, figsize=(15.6, 10.8))
+    fig.suptitle("Photometric feature coverage — reference, anchors and spectroscopy", fontsize=16)
+    for column, (key, label, data, color, style) in enumerate(layers):
+        ax = axes[0, column]
+        if histograms[key].any():
+            mesh = ax.pcolormesh(*color_bins, np.ma.masked_equal(probabilities[key].T, 0),
+                                 norm=norm, cmap="Blues", rasterized=True)
+            fig.colorbar(mesh, ax=ax, label="Fraction of all finite pairs per cell", pad=0.02)
+        else:
+            empty_axis(ax)
+        ax.set(xlabel=r"$(g-r)_0$ [mag]", ylabel=r"$(r-z)_0$ [mag]",
+               xlim=(-1, 3), ylim=(-1, 4))
+        row = statistics[key]
+        ax.set_title(f"{label}\nFinite N={row['finite_color_pairs']:,}; outside={row['color_rows_outside_view']:,}", fontsize=10)
+
+    histogram_specs = [
+        ("g0", np.linspace(10, 25, 76), r"$g_0$ [AB mag]"),
+        ("gr0", color_bins[0], r"$(g-r)_0$ [mag]"),
+        ("rz0", color_bins[1], r"$(r-z)_0$ [mag]"),
+    ]
+    for column, (field, edges, label) in enumerate(histogram_specs):
+        ax = axes[1, column]
+        any_values = False
+        for key, _, data, color, style in layers:
+            values = data[field][np.isfinite(data[field])]
+            counts, _ = np.histogram(values, bins=edges)
+            statistics[key][field] = {"finite": len(values), "in_view": int(counts.sum()),
+                                       "outside_view": len(values)-int(counts.sum())}
+            if len(values):
+                # Units are fraction per magnitude, using the full finite N.
+                normalized = counts / (len(values) * np.diff(edges))
+                short_label = {"reference": "PSF reference", "anchor": "Anchors", "spectroscopy": "Spectroscopy"}[key]
+                ax.stairs(normalized, edges, color=color, linestyle=style, linewidth=1.7,
+                          label=f"{short_label}: N={len(values):,}, out={len(values)-int(counts.sum()):,}")
+                any_values |= bool(counts.any())
+        if any_values:
+            ax.set_yscale("log")
+            lower, upper = ax.get_ylim()
+            ax.set_ylim(max(lower, 1e-9), upper * 12)
+        else:
+            empty_axis(ax)
+        if ax.get_legend_handles_labels()[0]:
+            ax.legend(loc="upper left", fontsize=8, frameon=False)
+        ax.set(xlabel=label, ylabel="Fraction of all finite values per mag", xlim=(edges[0], edges[-1]))
+        ax.grid(alpha=0.16)
+
+    all_main = support["all_anchor_partitions"]["reference_min_20"]
+    train_main = support["training_anchors_partition_0"]["reference_min_20"]
+    zero, sparse = all_main["anchors_less_than_1"], all_main["anchors_less_than_20"]
+    train_zero = train_main["anchors_less_than_1"]
+    train_sparse = train_main["anchors_less_than_20"]
+    caption = (
+        "Reference = stored deterministic 1/128 mother-PSF sample, not confirmed stars. Color cells: 0.05 × 0.05 mag; shared probability scale.\n"
+        "All panels normalize by all finite measurements before view limits; outside-view counts are explicit. Infrared nondetections are not imputed.\n"
+        f"Support audit uses {all_main['eligible_reference_cells']:,} cells with reference N≥20 ({all_main['eligible_reference_rows_in_view']:,} reference rows in view). "
+        f"Zero anchors: {_percentage(zero['cell_fraction'])} of cells / {_percentage(zero['row_fraction'])} of rows; "
+        f"<20 anchors: {_percentage(sparse['cell_fraction'])} / {_percentage(sparse['row_fraction'])}.\n"
+        f"Training anchors only (partition 0), same row denominator: zero support {_percentage(train_zero['row_fraction'])}; "
+        f"<20 support {_percentage(train_sparse['row_fraction'])}. Grid support is a coverage diagnostic, not distance accuracy."
+    )
+    statistics["support"] = support
+    statistics["grid"] = {"gr0_range": [-1, 3], "rz0_range": [-1, 4], "cell_width_mag": 0.05,
+                           "primary_reference_min_per_cell": 20, "anchor_thresholds": [1, 20]}
+    path = save_figure(fig, output_dir, "06_feature_coverage.png", caption, bottom=0.18)
+    return path, statistics
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run-dir", type=Path, required=True)
@@ -364,7 +492,8 @@ def main() -> None:
     figures.append(path)
     diagnostics["counts"] = stats
     for name, function in [("sky", plot_sky), ("cmd", plot_cmd),
-                           ("extended", plot_parallax_noise), ("spectroscopy", plot_spectroscopy)]:
+                           ("extended", plot_parallax_noise), ("spectroscopy", plot_spectroscopy),
+                           ("feature_coverage", plot_feature_coverage)]:
         path, stats = function(args.run_dir, args.output_dir)
         figures.append(path)
         diagnostics[name] = stats

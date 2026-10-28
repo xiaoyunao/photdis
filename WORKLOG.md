@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Task: Complete the full scan and compare input-feature coverage explicitly.
+- Result: all 1,074 eligible tiles completed in 1,511 seconds with zero missing
+  Gaia files; full pre-dedup grz base contains 101,087,401 point-source records.
+- Files: plotting script adds a sixth figure comparing the deterministic optical
+  reference, anchors and quality spectroscopy in color and apparent magnitude.
+  Color-cell support is reported separately for all and train-partition anchors;
+  it describes coverage, not distance accuracy or confirmed stellar purity.
+- Validation: six synthetic figure renders and empty/support-denominator checks
+  passed. Production finalization is still running; FITS read benchmarks did not
+  support the initial indexed-read bottleneck hypothesis. Investigating writes.
+- Next: finish finalization, run independent audits and generate actual figures.
+
 - Task: Make the frozen test partition independently identifiable.
 - Files: independent validator and its tests.
 - Change: stream SHA256 of each role's ordered (Legacy ID, Gaia ID, partition)
