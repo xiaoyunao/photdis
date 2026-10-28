@@ -2,6 +2,12 @@
 
 ## 2026-10-28
 
+- NERSC application-audit job 60439716 stopped during environment setup after
+  5 s: DESI's environment script references an unset `DESI_ROOT`, while the
+  new batch wrapper enabled Bash `nounset` before sourcing it. Moved `set -u`
+  after the DESI source command; no scientific code or data ran in that job.
+  Next: validate the wrapper, sync, and resubmit once.
+
 - Latest Pro review restart: fetched local/GitHub/NERSC Git history and confirmed
   clean identical `4a695af`. Updated PLAN for application-range audit, v4
   spectral labels, routing and independent deep calibration. Fixed
