@@ -2,6 +2,32 @@
 
 ## 2026-10-28
 
+- Cold-v4 shared-noise job 60436242 completed on NERSC CPU in 16m02s with
+  exit 0. Copied small `manifests/cold_v4_noise.json` and figure; verified
+  prepared SHA, 223 templates × 8 repeats, tier-count identities, coverage
+  tail sums and figure SHA. Full-route acceptance across r=18–19/19–20/
+  20–21/21–22 is 95.5%/94.7%/93.2%/85.8%; strict-quality fraction is
+  90.5%/83.6%/67.7%/32.3%. Final-modulus 95% coverage is
+  92.5%/91.8%/92.4%/91.0%, all below nominal; 21–22 source-cluster 95%
+  coverage interval is 87.8%–93.7%. Added results and deep-use boundary to
+  `docs/cold_v4.md` and updated PLAN/README. All 44 local tests pass. Three
+  new-field manifests and 12 plots were SHA-verified against NERSC and copied
+  locally; remote untracked copies were preserved under ignored data/ for
+  clean Git synchronization. Next: review diff, commit and sync all three
+  endpoints, then report the deep undercoverage explicitly.
+
+- Cold-v4 new final fields: jobs 60435341/342/345 processed all three
+  preregistered DR11 fields; job 60436283 evaluated the published forest and
+  complete route after the last source job succeeded (exit 0). Copied the
+  small `manifests/cold_v4_final.json` to local. Selected strict cold anchors
+  are 4,991/4,784/2,681; final distance-modulus 95% coverage is
+  96.0%/94.7%/95.0% and relative-distance NMAD 9.8%/10.2%/10.0%.
+  Color-brightness groups still show center offsets up to 0.153 mag and
+  coverage as low as 92.8%. Added `docs/cold_v4.md` and a reproducible
+  final-field plot; Python parse and plot execution pass. The shared-noise
+  NERSC job 60436242 is running. Next: inspect its final-distance and
+  acceptance results, finish report and sync the milestone.
+
 - Cold-v4 preparation job 60435825 completed on NERSC CPU in 63 s with exit
   0. Strict fit anchors A/B/C: 7,782/7,351/7,341; matched-common fit uses
   7,341 identities for every tier and 223 frozen original test identities.

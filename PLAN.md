@@ -68,16 +68,22 @@ conditional label rates as candidate purity.
     with color-box and support selection on all four registered final fields.
     Report the selected fraction and direct frozen-model distance performance,
     including Gaia-color diagnostics, before any claim about a selected catalog.
-16. In progress: register cold_v4 expanded strict-anchor training, an independent
+16. Complete: register cold_v4 expanded strict-anchor training, an independent
     route-calibration field and three new untouched 10° final fields before
     reading their source rows. Fit the tier-specific forests, add feature-
     matched support and calibrate the complete routing flow without a center
     correction. Evaluate every registered final field and keep the original
-    c3637cb forests/results frozen.
-17. In progress: pass the shared five-band flux-noise experiment through the
+    c3637cb forests/results frozen. All three new final fields completed on
+    NERSC; the fixed route selects 4,991/4,784/2,681 strict cold anchors
+    and achieves final-modulus 95% coverage 96.0%/94.7%/95.0%.
+17. Complete: pass the shared five-band flux-noise experiment through the
     complete cold_v4 color box, feature-matched support, tier fallback,
     forest and route-calibrated intervals. Report acceptance, strict quality,
     final distance-modulus coverage and source-cluster uncertainty by depth.
+    The four r=18–22 bins have 95% final-modulus coverage
+    92.5%/91.8%/92.4%/91.0%; the deepest bin's strict-quality fraction is
+    32.3%, and W2 is selected in only 51/1,784 draws. The observed failure
+    is a depth-calibration limit, not a reason to change frozen final tests.
 
 ## Scope
 
@@ -89,11 +95,14 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-The v2 center correction is rejected for release because its bias worsened in
-all three large final fields. The complete photometric route's direct 95%
-coverage is only 91.5%–92.3% in the large final fields. Before any general
-catalog release, broaden the strict training anchors in underrepresented
-blue/red colors with a new frozen training identity set; calibrate the entire
-route and repeat independent final-field validation. Study red-end interval
-undercoverage and r=20–22 depth loss. Build a DESI/Gaia label sample with a
-known selection function before fitting type probabilities.
+Cold-v4 expanded blue/red strict anchors and calibrated the complete route;
+three newly registered final fields now have 94.7%–96.0% overall 95% final
+distance-modulus coverage for strict Gaia cold dwarfs. Per-color/brightness
+group center biases remain up to 0.153 mag, and one group's coverage is 92.8%.
+The shared-noise depth job now shows final-modulus 95% coverage below nominal
+in every r=18–22 bin, reaching 91.0% at r=21–22. Do not assign 95% coverage
+to deep candidates from this calibration. A future depth-calibration study
+needs independent deep distance truth or fresh independent template fields,
+then a new held-out check of the complete route. Build a Gaia/DESI label
+sample with a known selection function before fitting type probabilities.
+The v2 center correction remains rejected.

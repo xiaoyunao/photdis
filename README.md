@@ -8,8 +8,12 @@ Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),
 [external/depth follow-up](docs/followup_validation.md), and
 [second-round final-field validation](docs/pro_followup_v2.md) are complete.
-The frozen baseline remains a bounded cold-dwarf model. Its red-end intervals
-and deep W2 application need further work before a general catalog release.
+The separately trained [cold-v4 route](docs/cold_v4.md) has expanded strict
+Gaia anchors and has been checked in three newly registered final fields.
+Its distance estimates remain conditional on the cold-dwarf hypothesis; the
+same-star noise experiment finds 91%–93% final-distance 95% coverage at
+`r=18–22`, so those intervals are not validated for deep candidates.
+Type-selection probabilities also remain uncalibrated.
 
 ## Locations
 
@@ -90,6 +94,23 @@ python scripts/cold_candidate_demo.py --max-rows 2000
 support and highest-available A/B/C route on all four registered final fields.
 Its metrics are in `manifests/selected_tier_validation_v1.json`; the original
 forest intervals do not yet achieve 95% coverage under this complete route.
+
+The separately versioned cold-v4 workflow is registered in
+`configs/cold_v4_fields.json`. It first fits expanded strict-anchor A/B/C
+forests and calibrates the complete C→B→A route in the RA205–215 field, then
+checks three new final fields. Run these inside an allocated NERSC CPU step
+with the DESI environment and `PYTHONPATH` above:
+
+```bash
+python scripts/cold_v4.py prepare
+python scripts/cold_v4.py final
+python scripts/cold_v4_noise.py
+```
+
+The preparation, final-field and shared-noise small manifests are linked in
+the [cold-v4 report](docs/cold_v4.md). Forests, route state and per-star
+products stay under ignored `data/cold_v4/` on NERSC. Each final/noise run
+checks the published preparation and model hashes before reading its inputs.
 
 ## Stage 1 operation
 

@@ -1,0 +1,592 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "frozen_test_identity_sha256": "4bec4588fca88bdba134cc995492b85d2ce7496ed761eac6eed1d37ad6992e95",
+  "n_independent_templates": 223,
+  "repeats_per_template_and_depth": 8,
+  "target_mother": "all grz_base rows in the original pilot, without WISE success preselection",
+  "target_mother_rows": 312975,
+  "same_five_band_noise_draw_for_all_tiers": true,
+  "compute_host": "nid004927",
+  "depths": [
+    {
+      "r_bin": [
+        18,
+        19
+      ],
+      "mother_rows": 7735,
+      "draws": 1784,
+      "simulated_grz_base": 1784,
+      "color_box": 1723,
+      "selected": 1704,
+      "selected_fraction_of_grz_mother": 0.9551569506726457,
+      "strict_selected": 1614,
+      "strict_fraction_of_grz_mother": 0.9047085201793722,
+      "chosen_tier_counts": {
+        "A_grz": 251,
+        "B_grzW1": 213,
+        "C_grzW1W2": 1240
+      },
+      "template_noise_gt_target_fraction": {
+        "g": 0.05885650224215247,
+        "r": 0.09360986547085202,
+        "z": 0.22869955156950672,
+        "w1": 0.19394618834080718,
+        "w2": 0.1311659192825112
+      },
+      "direct": {
+        "absolute_magnitude_mag": {
+          "n": 1704,
+          "bias": 0.0056285858154296875,
+          "nmad": 0.26124530239105226,
+          "coverage_68": 0.698943661971831,
+          "coverage_95": 0.9184272300469484,
+          "miss_low_68": 0.13615023474178403,
+          "miss_high_68": 0.16490610328638497,
+          "miss_low_95": 0.03990610328638498,
+          "miss_high_95": 0.041666666666666664,
+          "median_width_68": 0.5808544158935547,
+          "median_width_95": 1.3340263366699219
+        },
+        "distance_modulus_mag": {
+          "n": 1704,
+          "bias": -0.005286510144356882,
+          "nmad": 0.26113509785960437,
+          "coverage_68": 0.6995305164319249,
+          "coverage_95": 0.92018779342723,
+          "miss_low_68": 0.1637323943661972,
+          "miss_high_68": 0.13673708920187794,
+          "miss_low_95": 0.03990610328638498,
+          "miss_high_95": 0.03990610328638498,
+          "median_width_68": 0.5808544158935547,
+          "median_width_95": 1.3340263366699219
+        },
+        "distance_pc": {
+          "n": 1704,
+          "bias": -1.9358361614914088,
+          "nmad": 67.83126974496834,
+          "coverage_68": 0.6995305164319249,
+          "coverage_95": 0.92018779342723,
+          "miss_low_68": 0.1637323943661972,
+          "miss_high_68": 0.13673708920187794,
+          "miss_low_95": 0.03990610328638498,
+          "miss_high_95": 0.03990610328638498,
+          "median_width_68": 161.44168193419415,
+          "median_width_95": 390.0420281834497,
+          "median_relative_error": -0.002431557934424622,
+          "nmad_relative_error": 0.11979653488657983
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 216,
+          "coverage_68_95pct": [
+            0.6462262571674047,
+            0.7547575634469242
+          ],
+          "coverage_95_95pct": [
+            0.8894295758454245,
+            0.9488993043523968
+          ],
+          "nmad_95pct": [
+            0.22316018233479856,
+            0.29124418033034555
+          ]
+        }
+      },
+      "calibrated": {
+        "absolute_magnitude_mag": {
+          "n": 1704,
+          "bias": 0.0056285858154296875,
+          "nmad": 0.26124530239105226,
+          "coverage_68": 0.715962441314554,
+          "coverage_95": 0.9237089201877934,
+          "miss_low_68": 0.13321596244131456,
+          "miss_high_68": 0.15082159624413147,
+          "miss_low_95": 0.03873239436619718,
+          "miss_high_95": 0.03755868544600939,
+          "median_width_68": 0.5866374969482422,
+          "median_width_95": 1.3713793754577637
+        },
+        "distance_modulus_mag": {
+          "n": 1704,
+          "bias": -0.005286510144356882,
+          "nmad": 0.26113509785960437,
+          "coverage_68": 0.7165492957746479,
+          "coverage_95": 0.9254694835680751,
+          "miss_low_68": 0.14964788732394366,
+          "miss_high_68": 0.13380281690140844,
+          "miss_low_95": 0.0357981220657277,
+          "miss_high_95": 0.03873239436619718,
+          "median_width_68": 0.5866374969482422,
+          "median_width_95": 1.3713793754577637
+        },
+        "distance_pc": {
+          "n": 1704,
+          "bias": -1.9358361614914088,
+          "nmad": 67.83126974496834,
+          "coverage_68": 0.7165492957746479,
+          "coverage_95": 0.9254694835680751,
+          "miss_low_68": 0.14964788732394366,
+          "miss_high_68": 0.13380281690140844,
+          "miss_low_95": 0.0357981220657277,
+          "miss_high_95": 0.03873239436619718,
+          "median_width_68": 162.38969747193346,
+          "median_width_95": 391.96608780802893,
+          "median_relative_error": -0.002431557934424622,
+          "nmad_relative_error": 0.11979653488657983
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 216,
+          "coverage_68_95pct": [
+            0.670076935522794,
+            0.7674395622735075
+          ],
+          "coverage_95_95pct": [
+            0.8961512213706259,
+            0.951521457279917
+          ],
+          "nmad_95pct": [
+            0.2197467889666698,
+            0.2927895718138575
+          ]
+        }
+      },
+      "large_relative_distance_abs_gt_0p5": 0.009976525821596244
+    },
+    {
+      "r_bin": [
+        19,
+        20
+      ],
+      "mother_rows": 11472,
+      "draws": 1784,
+      "simulated_grz_base": 1784,
+      "color_box": 1718,
+      "selected": 1689,
+      "selected_fraction_of_grz_mother": 0.9467488789237668,
+      "strict_selected": 1491,
+      "strict_fraction_of_grz_mother": 0.8357623318385651,
+      "chosen_tier_counts": {
+        "A_grz": 361,
+        "B_grzW1": 462,
+        "C_grzW1W2": 866
+      },
+      "template_noise_gt_target_fraction": {
+        "g": 0.00616591928251121,
+        "r": 0.011210762331838564,
+        "z": 0.03139013452914798,
+        "w1": 0.0257847533632287,
+        "w2": 0.011210762331838564
+      },
+      "direct": {
+        "absolute_magnitude_mag": {
+          "n": 1689,
+          "bias": 0.013179779052734375,
+          "nmad": 0.2894430599212646,
+          "coverage_68": 0.6844286560094731,
+          "coverage_95": 0.9123741859088218,
+          "miss_low_68": 0.16222616933096506,
+          "miss_high_68": 0.15334517465956188,
+          "miss_low_95": 0.045589105979869746,
+          "miss_high_95": 0.04203670811130847,
+          "median_width_68": 0.6028060913085938,
+          "median_width_95": 1.396554946899414
+        },
+        "distance_modulus_mag": {
+          "n": 1689,
+          "bias": -0.013664459842864574,
+          "nmad": 0.2885667521410753,
+          "coverage_68": 0.6826524570751924,
+          "coverage_95": 0.9117821195973949,
+          "miss_low_68": 0.152753108348135,
+          "miss_high_68": 0.16459443457667258,
+          "miss_low_95": 0.04262877442273535,
+          "miss_high_95": 0.045589105979869746,
+          "median_width_68": 0.6028060913085938,
+          "median_width_95": 1.396554946899414
+        },
+        "distance_pc": {
+          "n": 1689,
+          "bias": -6.200528529412168,
+          "nmad": 124.56141120269915,
+          "coverage_68": 0.6826524570751924,
+          "coverage_95": 0.9117821195973949,
+          "miss_low_68": 0.152753108348135,
+          "miss_high_68": 0.16459443457667258,
+          "miss_low_95": 0.04262877442273535,
+          "miss_high_95": 0.045589105979869746,
+          "median_width_68": 270.95945414974517,
+          "median_width_95": 650.3010421094904,
+          "median_relative_error": -0.006272958633205872,
+          "nmad_relative_error": 0.13311773512423736
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 215,
+          "coverage_68_95pct": [
+            0.6354018912529551,
+            0.7266599601299468
+          ],
+          "coverage_95_95pct": [
+            0.8824835450729906,
+            0.9374823183442526
+          ],
+          "nmad_95pct": [
+            0.25613456799933354,
+            0.3193873451261983
+          ]
+        }
+      },
+      "calibrated": {
+        "absolute_magnitude_mag": {
+          "n": 1689,
+          "bias": 0.013179779052734375,
+          "nmad": 0.2894430599212646,
+          "coverage_68": 0.6962699822380106,
+          "coverage_95": 0.9171107164002368,
+          "miss_low_68": 0.15926583777383066,
+          "miss_high_68": 0.14446417998815866,
+          "miss_low_95": 0.045589105979869746,
+          "miss_high_95": 0.037300177619893425,
+          "median_width_68": 0.6107521057128906,
+          "median_width_95": 1.4252252578735352
+        },
+        "distance_modulus_mag": {
+          "n": 1689,
+          "bias": -0.013664459842864574,
+          "nmad": 0.2885667521410753,
+          "coverage_68": 0.6950858496151568,
+          "coverage_95": 0.9182948490230906,
+          "miss_low_68": 0.14446417998815866,
+          "miss_high_68": 0.16044997039668443,
+          "miss_low_95": 0.036116044997039666,
+          "miss_high_95": 0.045589105979869746,
+          "median_width_68": 0.6107521057128906,
+          "median_width_95": 1.4252252578735352
+        },
+        "distance_pc": {
+          "n": 1689,
+          "bias": -6.200528529412168,
+          "nmad": 124.56141120269915,
+          "coverage_68": 0.6950858496151568,
+          "coverage_95": 0.9182948490230906,
+          "miss_low_68": 0.14446417998815866,
+          "miss_high_68": 0.16044997039668443,
+          "miss_low_95": 0.036116044997039666,
+          "miss_high_95": 0.045589105979869746,
+          "median_width_68": 271.42239260961026,
+          "median_width_95": 650.6494441958089,
+          "median_relative_error": -0.006272958633205872,
+          "nmad_relative_error": 0.13311773512423736
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 215,
+          "coverage_68_95pct": [
+            0.647947258465028,
+            0.7415405643377836
+          ],
+          "coverage_95_95pct": [
+            0.8929726501261939,
+            0.9458409260112738
+          ],
+          "nmad_95pct": [
+            0.25772407423495614,
+            0.3237808423129013
+          ]
+        }
+      },
+      "large_relative_distance_abs_gt_0p5": 0.008288928359976317
+    },
+    {
+      "r_bin": [
+        20,
+        21
+      ],
+      "mother_rows": 16932,
+      "draws": 1784,
+      "simulated_grz_base": 1784,
+      "color_box": 1721,
+      "selected": 1662,
+      "selected_fraction_of_grz_mother": 0.9316143497757847,
+      "strict_selected": 1207,
+      "strict_fraction_of_grz_mother": 0.6765695067264574,
+      "chosen_tier_counts": {
+        "A_grz": 666,
+        "B_grzW1": 640,
+        "C_grzW1W2": 356
+      },
+      "template_noise_gt_target_fraction": {
+        "g": 0.0,
+        "r": 0.0,
+        "z": 0.0011210762331838565,
+        "w1": 0.0,
+        "w2": 0.0
+      },
+      "direct": {
+        "absolute_magnitude_mag": {
+          "n": 1662,
+          "bias": 0.012477397918701172,
+          "nmad": 0.3150618318557739,
+          "coverage_68": 0.6492178098676293,
+          "coverage_95": 0.9211793020457281,
+          "miss_low_68": 0.18110709987966306,
+          "miss_high_68": 0.16967509025270758,
+          "miss_low_95": 0.04271961492178099,
+          "miss_high_95": 0.036101083032490974,
+          "median_width_68": 0.6292448043823242,
+          "median_width_95": 1.4748716354370117
+        },
+        "distance_modulus_mag": {
+          "n": 1662,
+          "bias": -0.012168064840411219,
+          "nmad": 0.3125136517570574,
+          "coverage_68": 0.6552346570397112,
+          "coverage_95": 0.9205776173285198,
+          "miss_low_68": 0.16726835138387486,
+          "miss_high_68": 0.17749699157641396,
+          "miss_low_95": 0.036101083032490974,
+          "miss_high_95": 0.04332129963898917,
+          "median_width_68": 0.6292448043823242,
+          "median_width_95": 1.4748716354370117
+        },
+        "distance_pc": {
+          "n": 1662,
+          "bias": -8.833699949840252,
+          "nmad": 219.71590887144237,
+          "coverage_68": 0.6552346570397112,
+          "coverage_95": 0.9205776173285198,
+          "miss_low_68": 0.16726835138387486,
+          "miss_high_68": 0.17749699157641396,
+          "miss_low_95": 0.036101083032490974,
+          "miss_high_95": 0.04332129963898917,
+          "median_width_68": 469.41303429536833,
+          "median_width_95": 1069.2895097602,
+          "median_relative_error": -0.0055879291997408265,
+          "nmad_relative_error": 0.143380464100071
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 217,
+          "coverage_68_95pct": [
+            0.6108197240954073,
+            0.6992182592914955
+          ],
+          "coverage_95_95pct": [
+            0.8910271729650854,
+            0.9459101315456615
+          ],
+          "nmad_95pct": [
+            0.2794801747462269,
+            0.3503054122620467
+          ]
+        }
+      },
+      "calibrated": {
+        "absolute_magnitude_mag": {
+          "n": 1662,
+          "bias": 0.012477397918701172,
+          "nmad": 0.3150618318557739,
+          "coverage_68": 0.661251504211793,
+          "coverage_95": 0.9253910950661853,
+          "miss_low_68": 0.17749699157641396,
+          "miss_high_68": 0.16125150421179302,
+          "miss_low_95": 0.0421179302045728,
+          "miss_high_95": 0.032490974729241874,
+          "median_width_68": 0.6333527565002441,
+          "median_width_95": 1.4939806461334229
+        },
+        "distance_modulus_mag": {
+          "n": 1662,
+          "bias": -0.012168064840411219,
+          "nmad": 0.3125136517570574,
+          "coverage_68": 0.6690734055354994,
+          "coverage_95": 0.9235860409145608,
+          "miss_low_68": 0.15764139590854392,
+          "miss_high_68": 0.17328519855595667,
+          "miss_low_95": 0.03369434416365824,
+          "miss_high_95": 0.04271961492178099,
+          "median_width_68": 0.6333527565002441,
+          "median_width_95": 1.4939806461334229
+        },
+        "distance_pc": {
+          "n": 1662,
+          "bias": -8.833699949840252,
+          "nmad": 219.71590887144237,
+          "coverage_68": 0.6690734055354994,
+          "coverage_95": 0.9235860409145608,
+          "miss_low_68": 0.15764139590854392,
+          "miss_high_68": 0.17328519855595667,
+          "miss_low_95": 0.03369434416365824,
+          "miss_high_95": 0.04271961492178099,
+          "median_width_68": 471.3853197791936,
+          "median_width_95": 1069.2895097602,
+          "median_relative_error": -0.0055879291997408265,
+          "nmad_relative_error": 0.143380464100071
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 217,
+          "coverage_68_95pct": [
+            0.628826178551272,
+            0.7092521612792607
+          ],
+          "coverage_95_95pct": [
+            0.89688322960375,
+            0.9488465697301645
+          ],
+          "nmad_95pct": [
+            0.2835973630022846,
+            0.3460360379895784
+          ]
+        }
+      },
+      "large_relative_distance_abs_gt_0p5": 0.017448856799037304
+    },
+    {
+      "r_bin": [
+        21,
+        22
+      ],
+      "mother_rows": 24050,
+      "draws": 1784,
+      "simulated_grz_base": 1784,
+      "color_box": 1708,
+      "selected": 1530,
+      "selected_fraction_of_grz_mother": 0.8576233183856502,
+      "strict_selected": 577,
+      "strict_fraction_of_grz_mother": 0.3234304932735426,
+      "chosen_tier_counts": {
+        "A_grz": 1007,
+        "B_grzW1": 472,
+        "C_grzW1W2": 51
+      },
+      "template_noise_gt_target_fraction": {
+        "g": 0.0,
+        "r": 0.0,
+        "z": 0.0,
+        "w1": 0.0,
+        "w2": 0.0
+      },
+      "direct": {
+        "absolute_magnitude_mag": {
+          "n": 1530,
+          "bias": 0.028065919876098633,
+          "nmad": 0.3853653468132019,
+          "coverage_68": 0.5830065359477125,
+          "coverage_95": 0.8973856209150327,
+          "miss_low_68": 0.22875816993464052,
+          "miss_high_68": 0.18823529411764706,
+          "miss_low_95": 0.05816993464052288,
+          "miss_high_95": 0.044444444444444446,
+          "median_width_68": 0.6629743576049805,
+          "median_width_95": 1.5173993110656738
+        },
+        "distance_modulus_mag": {
+          "n": 1530,
+          "bias": -0.03021312791208075,
+          "nmad": 0.37649566742699175,
+          "coverage_68": 0.5947712418300654,
+          "coverage_95": 0.9045751633986928,
+          "miss_low_68": 0.18235294117647058,
+          "miss_high_68": 0.22287581699346407,
+          "miss_low_95": 0.040522875816993466,
+          "miss_high_95": 0.054901960784313725,
+          "median_width_68": 0.6629743576049805,
+          "median_width_95": 1.5173993110656738
+        },
+        "distance_pc": {
+          "n": 1530,
+          "bias": -40.21902416710293,
+          "nmad": 414.58479565243533,
+          "coverage_68": 0.5947712418300654,
+          "coverage_95": 0.9045751633986928,
+          "miss_low_68": 0.18235294117647058,
+          "miss_high_68": 0.22287581699346407,
+          "miss_low_95": 0.040522875816993466,
+          "miss_high_95": 0.054901960784313725,
+          "median_width_68": 755.9526755217977,
+          "median_width_95": 1757.292762866965,
+          "median_relative_error": -0.013817297941027817,
+          "nmad_relative_error": 0.1700727225057645
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 218,
+          "coverage_68_95pct": [
+            0.5496326573880076,
+            0.6307875385196062
+          ],
+          "coverage_95_95pct": [
+            0.8779433914723257,
+            0.9316349347368106
+          ],
+          "nmad_95pct": [
+            0.3416595697384261,
+            0.4222215300422025
+          ]
+        }
+      },
+      "calibrated": {
+        "absolute_magnitude_mag": {
+          "n": 1530,
+          "bias": 0.028065919876098633,
+          "nmad": 0.3853653468132019,
+          "coverage_68": 0.5928104575163399,
+          "coverage_95": 0.9026143790849673,
+          "miss_low_68": 0.22549019607843138,
+          "miss_high_68": 0.18169934640522875,
+          "miss_low_95": 0.05751633986928104,
+          "miss_high_95": 0.03986928104575163,
+          "median_width_68": 0.6657967567443848,
+          "median_width_95": 1.5480265617370605
+        },
+        "distance_modulus_mag": {
+          "n": 1530,
+          "bias": -0.03021312791208075,
+          "nmad": 0.37649566742699175,
+          "coverage_68": 0.6032679738562091,
+          "coverage_95": 0.9104575163398693,
+          "miss_low_68": 0.17908496732026144,
+          "miss_high_68": 0.21764705882352942,
+          "miss_low_95": 0.03529411764705882,
+          "miss_high_95": 0.0542483660130719,
+          "median_width_68": 0.6657967567443848,
+          "median_width_95": 1.5480265617370605
+        },
+        "distance_pc": {
+          "n": 1530,
+          "bias": -40.21902416710293,
+          "nmad": 414.58479565243533,
+          "coverage_68": 0.6032679738562091,
+          "coverage_95": 0.9104575163398693,
+          "miss_low_68": 0.17908496732026144,
+          "miss_high_68": 0.21764705882352942,
+          "miss_low_95": 0.03529411764705882,
+          "miss_high_95": 0.0542483660130719,
+          "median_width_68": 756.7739573984846,
+          "median_width_95": 1762.2271611233155,
+          "median_relative_error": -0.013817297941027817,
+          "nmad_relative_error": 0.1700727225057645
+        },
+        "distance_modulus_source_cluster_ci": {
+          "cluster": "original Gaia anchor source",
+          "n_groups": 218,
+          "coverage_68_95pct": [
+            0.5619379081828659,
+            0.6435798392254809
+          ],
+          "coverage_95_95pct": [
+            0.8782797515707672,
+            0.93745110821382
+          ],
+          "nmad_95pct": [
+            0.3398331406748706,
+            0.4129829288451785
+          ]
+        }
+      },
+      "large_relative_distance_abs_gt_0p5": 0.026143790849673203
+    }
+  ]
+}
