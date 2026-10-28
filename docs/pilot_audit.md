@@ -29,13 +29,14 @@ Gaia 目录有 22 个 `BP_RP=0` 值，22 个对象都没有有效 BP/RP 通量�
 严格锚点中有 1,801 个；有效颜色与目录值偏差大于 0.001 mag 的对象为 0。
 [Gaia 颜色核查图](../figures/pilot_audit/02_gaia_color_check.png)显示原零颜色竖列消失。
 
-## 与 PS1 的独立测光对照
+## 与 PS1 的测光对照
 
 使用 NERSC 的 PS1 qz-star-v3 星表中位星等，按每颗对象的观测历元传播
 Gaia 自行，再作唯一的 1″ 匹配。比较限制为 PS1 每波段至少三次合格观测、
 星等 15–20、离散度 <0.03 mag，且 0.4<PS1 g−i<2.7。用
 [Legacy 发布的 PS1→DECam 颜色变换](https://www.legacysurvey.org/dr11/description/#photometry)
 计算预测 grz；差值是 Legacy 实测星等减预测星等，两侧都使用观测星等。
+PS1 也参与 Legacy 零点标定；这里检验对象级相对光度和颜色一致性。
 
 | 三波段共同满足 PS1 对照质量 | 颗数 | 三波段差值均 <0.03 mag | 均 <0.05 mag |
 |---|---:|---:|---:|

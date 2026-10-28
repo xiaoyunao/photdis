@@ -63,8 +63,11 @@ class QuantileForest:
             for j, member in enumerate(self.members):
                 ids = member[int(leaves[i, j])]
                 weight[ids] += 1 / (len(self.members) * len(ids))
-            cumulative = np.cumsum(weight[order])
-            results[i] = np.interp(quantiles, cumulative, self.y[order])
+            positive = weight[order] > 0
+            conditional_y = self.y[order][positive]
+            cumulative = np.cumsum(weight[order][positive])
+            positions = np.searchsorted(cumulative, quantiles, side="left")
+            results[i] = conditional_y[np.minimum(positions, len(conditional_y) - 1)]
         return results
 
 

@@ -24,7 +24,7 @@ from photdis.holdouts import annotate_holdouts, load_reference_catalogs
 from photdis.quantile import QUANTILES, QuantileForest, metrics, spatial_partition
 from photdis.stage1 import make_partition_map, require_compute, structured, write_json
 
-OUT = Path("data/cold_baseline_v2")
+OUT = Path("data/cold_baseline_v3")
 FIG = Path("figures/cold_baseline")
 MANIFEST = Path("manifests/cold_baseline.json")
 FEATURES = {"A_grz": ("gr0", "rz0"),
@@ -181,7 +181,7 @@ def main():
     original_partition = make_partition_map(original_cfg)[original_cells]
     cells = hp.ang2pix(64, table["gaia_ra"], table["gaia_dec"], nest=True, lonlat=True)
     partition, cell_map = spatial_partition(cells, selected)
-    earlier = Path("data/cold_baseline_v1/summary.json")
+    earlier = Path("data/cold_baseline_v2/summary.json")
     if earlier.exists():
         frozen = json.loads(earlier.read_text())["split"]["cell_map"]
         if cell_map != frozen:

@@ -13,6 +13,7 @@ class QuantileTests(unittest.TestCase):
         result = model.predict(np.array([[25.0], [55.0]]))
         self.assertEqual(result.shape, (2, len(QUANTILES)))
         self.assertTrue(np.all(np.diff(result, axis=1) >= 0))
+        self.assertTrue(np.all(np.isin(result, [-2.0, 2.0])))
         self.assertLess(result[0, 0], -1)
         self.assertGreater(result[0, -1], 1)
 
