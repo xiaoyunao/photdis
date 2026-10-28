@@ -2,6 +2,29 @@
 
 ## 2026-10-28
 
+- System-validation v2 job 60442060 completed (33 s, exit 0). Verified its
+  frozen-preparation SHA. Published 456 independent wide-binary pairs and
+  201 Blanco 1 routed members in a small manifest and report. The fainter-
+  minus-brighter pair modulus difference median is +0.046 mag with component
+  bootstrap 95% interval +0.015 to +0.079; pair NMAD is 0.353 mag. Next:
+  investigate this brightness dependence with photometric-error, color and
+  binary diagnostics before applying any center correction.
+
+- Policy-development job 60442059 failed before data simulation: the
+  frozen `configured_field` helper reads only fit columns, so the new
+  template selector tried to access absent `full_high_quality`. Fixed the
+  runner to retrieve that flag, Legacy ID and `r0` from the same anchor-row
+  order as a sidecar, checking Gaia IDs for exact alignment. Next: parse,
+  sync and resubmit once.
+
+- Added a DESI-qualified cool-dwarf weak/negative-Gaia-parallax forward
+  check. It retains corrected parallaxes below S/N 10, maps frozen v4 Mg
+  quantiles to a positive parallax distribution and convolves Gaia formal
+  errors for an approximate PIT and standardized residual audit. It never
+  inverts low-S/N measurements. Focused two-test and parse checks pass.
+  Next: run on allocated CPU and report actual counts before interpreting
+  the population diagnostic.
+
 - Held-out system job 60441842 completed in 23 s. The three final fields
   contain 456 clean-routed published wide-binary pairs and one cluster with
   >=5 members (Blanco 1, 201 stars). Pair modulus differences have NMAD

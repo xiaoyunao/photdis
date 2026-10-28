@@ -42,12 +42,20 @@ def raw_for_ids(ids, field):
 def source_templates(field, rng):
     references = load_reference_catalogs("data/reference")
     table, cold, mg, metadata = configured_field(field, references)
-    eligible = np.flatnonzero(cold & table["full_high_quality"])
+    # configured_field intentionally reads only columns used by frozen v4.
+    # Recover template quality, Legacy identity and r0 in the same anchor-row order.
+    with fitsio.FITS(metadata["path"]) as file:
+        anchor_rows = np.flatnonzero(file[1].read(columns=["anchor"])["anchor"])
+        extra = file[1].read(columns=["source_id", "ls_id", "r0",
+                                      "full_high_quality"], rows=anchor_rows)
+    if not np.array_equal(extra["source_id"], table["source_id"]):
+        raise ValueError("Template sidecar differs from frozen anchor order")
+    eligible = np.flatnonzero(cold & extra["full_high_quality"])
     if len(eligible) < 100:
         raise ValueError(f"Only {len(eligible)} full-band high-S/N Gaia templates")
     if len(eligible) > MAX_TEMPLATES:
         eligible = np.sort(rng.choice(eligible, MAX_TEMPLATES, replace=False))
-    ids = np.asarray(table["ls_id"][eligible], np.int64)
+    ids = np.asarray(extra["ls_id"][eligible], np.int64)
     source_id = np.asarray(table["source_id"][eligible], np.int64)
     if len(np.unique(ids)) != len(ids) or len(np.unique(source_id)) != len(ids):
         raise ValueError("Template Legacy or Gaia identity repeats")
@@ -55,7 +63,7 @@ def source_templates(field, rng):
     template = np.empty(len(raw), dtype=raw.dtype.descr + [("r0", "f8")])
     for name in raw.dtype.names:
         template[name] = raw[name]
-    template["r0"] = table["r0"][eligible]
+    template["r0"] = extra["r0"][eligible]
     truth_mg = np.asarray(mg[eligible], float)
     truth_mu = np.asarray(table["g0"][eligible], float) - truth_mg
     if not np.isfinite(truth_mg).all() or not np.isfinite(truth_mu).all():

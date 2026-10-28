@@ -107,10 +107,12 @@ populations with reference systems and weak-parallax forward checks.
     and final-test identities and sky blocks. Calibrate final distance-modulus
     intervals by chosen tier and measurable noise/support using independent
     sources, and assess deep coverage and clean acceptance on unseen sources.
-22. Pending: use isolated wide-binary/cluster reference systems for color- and
+22. In progress: used isolated wide-binary/cluster reference systems for color- and
     brightness-dependent distance checks, then assess weak/negative Gaia
     parallaxes with a parallax-space forward model and documented selection.
     Examine metal-poor, binary, extinction and field dependence of bias.
+    Initial final-field check has 456 clean-routed pairs and 201 Blanco 1
+    members; the pair fainter-minus-brighter median is +0.046 mag.
 23. Pending: publish the bounded application-range report, selected figures,
     small manifests and validation; update README/WORKLOG/PLAN, commit and
     sync local, public GitHub and NERSC. Keep catalogs/models on NERSC.
