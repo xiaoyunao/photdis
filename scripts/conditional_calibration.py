@@ -68,7 +68,7 @@ def load_field(name, references):
         rows = np.flatnonzero(file[1].read(columns=["anchor"])["anchor"])
         raw = file[1].read(columns=READ_COLUMNS, rows=rows)
     table = {key: raw[key] for key in raw.dtype.names}
-    gaia = {key[6:]: table[key] for key in GAIA}
+    gaia = {key[5:]: table[key] for key in GAIA}
     table.update(checked_gaia_color(gaia))
     external = annotate_holdouts(references, table["source_id"],
                                  table["ra"], table["dec"])["external_any"]

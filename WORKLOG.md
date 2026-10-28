@@ -2,6 +2,19 @@
 
 ## 2026-10-28
 
+- Debugging: first conditional-preparation job 60432776 stopped while building
+  Gaia color flags. Root cause: stripped six rather than five characters from
+  the `gaia_` column prefix, producing `aia_match`; corrected in
+  scripts/conditional_calibration.py. No prepared calibration or final-field
+  outputs were written. Next: rerun preparation on allocated CPU.
+
+- Task: add a DESI label audit in scripts/type_diagnostics.py across four
+  development/calibration fields, observed r and r-z bins. It separates cool
+  dwarfs, cool giants, other parameterized stars, known nonstars and DESI-
+  unverified objects; rates are conditional on label with Wilson intervals.
+  DESI target selection is recorded as a limitation. Next: run on CPU and
+  inspect sparse giant/nonstar strata before considering type probabilities.
+
 - Task: implement a two-stage conditional calibration. Prior north/south
   fields fit regularized residual-center corrections from Legacy/WISE colors,
   observed r and errors; the new RA205–215 field calibrates six fixed
