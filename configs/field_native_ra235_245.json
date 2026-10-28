@@ -1,0 +1,10 @@
+{
+  "name": "native_dev_ra235_245_dec_p000_p010",
+  "bounds_deg": [235, 0, 245, 10],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-235p000-240p005.fits", "sweep-235p005-240p010.fits", "sweep-240p000-245p005.fits", "sweep-240p005-245p010.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_native_ra235_245_v1",
+  "figure_dir": "figures/field_native_ra235_245",
+  "manifest_path": "manifests/field_native_ra235_245.json"
+}

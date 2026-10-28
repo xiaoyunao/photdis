@@ -216,7 +216,9 @@ def main():
         nonlocal raw
         before=len(raw);raw=raw[selected]
         optical.append(cut_entry(label,len(raw),before))
-    optical.append(cut_entry("RA∈[0,10)°，Dec∈[-10,0)°",len(raw),None))
+    optical.append(cut_entry(
+        f"RA∈[{bounds[0]},{bounds[2]})°，Dec∈[{bounds[1]},{bounds[3]})°",
+        len(raw), None))
     initial("TYPE=PSF",np.char.strip(raw["TYPE"].astype("U"))=="PSF")
     _,latitude=galactic(raw["RA"],raw["DEC"])
     initial("|b|>30°",np.abs(latitude)>cfg["sky"]["abs_b_min"])

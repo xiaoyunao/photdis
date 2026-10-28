@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "status": "frozen_before_inspecting_any_new_field_source_rows_or_residuals",
+  "purpose": "Test whether the native cold-v4 median shift persists across four additional disjoint 10-degree fields; no model or interval refit",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "selection": "same quality-qualified strict Gaia cold dwarfs as cold_v4; fixed grz_clean plus WISE S/N >= 20 route, C to B to A with original color box and support",
+  "primary_metric": "median and NMAD of final distance-modulus residual, predicted minus corrected-Gaia reference, with sky-block uncertainty",
+  "secondary_metrics": "route acceptance, tier fractions, color and extinction strata, Gaia parallax and BP-RP distributions, DESI type boundary where matched",
+  "development_fields": [
+    {"name": "native_dev_ra060_070_dec_m035_m025", "field_config": "configs/field_native_ra060_070.json", "bounds_deg": [60, -35, 70, -25]},
+    {"name": "native_dev_ra235_245_dec_p000_p010", "field_config": "configs/field_native_ra235_245.json", "bounds_deg": [235, 0, 245, 10]}
+  ],
+  "independent_final_fields": [
+    {"name": "native_final_ra330_340_dec_m035_m025", "field_config": "configs/field_native_ra330_340.json", "bounds_deg": [330, -35, 340, -25]},
+    {"name": "native_final_ra020_030_dec_m025_m015", "field_config": "configs/field_native_ra020_030.json", "bounds_deg": [20, -25, 30, -15]}
+  ],
+  "field_choice_basis": "disjoint sky areas spanning Galactic longitudes about 15-230 degrees and latitudes about -77 to +40 degrees; DR11 south sweep filename existence only, no source rows inspected"
+}

@@ -21,7 +21,8 @@ The current diagnostic round includes the [extinction audit](docs/extinction_aud
 [selection-aware weak-parallax check](docs/cold_v4_weak_parallax_v2.md),
 [WISE20 wide-binary check](docs/cold_v4_system_validation_v3.md),
 [DESI type-boundary audit](docs/cold_v4_type_boundary.md), and
-[template/noise-field crossover](docs/cold_v4_crossover.md). These diagnostics
+[template/noise-field crossover](docs/cold_v4_crossover.md), and its
+[Gaia-template census](docs/cold_v4_native_population.md). These diagnostics
 have not changed the frozen distance route.
 
 ## Locations

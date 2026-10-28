@@ -1,0 +1,10 @@
+{
+  "name": "native_final_ra330_340_dec_m035_m025",
+  "bounds_deg": [330, -35, 340, -25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-330m035-335m030.fits", "sweep-330m030-335m025.fits", "sweep-335m035-340m030.fits", "sweep-335m030-340m025.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_native_ra330_340_v1",
+  "figure_dir": "figures/field_native_ra330_340",
+  "manifest_path": "manifests/field_native_ra330_340.json"
+}

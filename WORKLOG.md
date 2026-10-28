@@ -2,6 +2,27 @@
 
 ## 2026-10-28
 
+- Gaia-template census job 60457418 completed in 4m43s on NERSC CPU with
+  exact crossover source hashes. Corrected parallax medians are 2.542/
+  2.634 mas, S/N 29.65/29.32, Gaia G 17.26/16.92 and RUWE 1.041/1.017
+  for RA35–45/RA170–180. Native residual medians agree near −0.01 mag
+  for p=1–2 mas but differ −0.009 versus +0.075 for p>=2 mas (342/351
+  sources). BP-RP bins 1.5–2.3 and 2.3–3.0 also show the field shift.
+  Added aggregate manifest and binned figure; prepared an outcome-blind
+  multivariate match including Gaia parallax/color/G. Next: run matching
+  and registered native-transfer fields; do not infer a center correction
+  from these two inspected fields.
+
+- Registered four additional disjoint 10° DR11 south fields for frozen
+  cold-v4 native transfer before reading their source rows: RA60–70 and
+  RA235–245 are development diagnostics, RA330–340 and RA20–30 are reserved
+  final tests. All 16 specified sweep filenames exist; only file existence
+  and sky coordinates informed selection. Added an allocated CPU array
+  runner and corrected the pilot cutflow's hardcoded original sky label.
+  Config geometry and Python syntax checks pass. Next: construct fields
+  after the exact-template Gaia population census, then score with a
+  preregistered native-transfer script.
+
 - NERSC outcome-blind native-template match job 60457203 completed in 19 s.
   One-to-one matching on g-r and r-z retains 460 pairs with final-minus-cal
   median residual +0.073 mag (bootstrap95 +0.038 to +0.105). Adding source

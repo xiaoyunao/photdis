@@ -1,0 +1,10 @@
+{
+  "name": "native_dev_ra060_070_dec_m035_m025",
+  "bounds_deg": [60, -35, 70, -25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-060m035-065m030.fits", "sweep-060m030-065m025.fits", "sweep-065m035-070m030.fits", "sweep-065m030-070m025.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_native_ra060_070_v1",
+  "figure_dir": "figures/field_native_ra060_070",
+  "manifest_path": "manifests/field_native_ra060_070.json"
+}
