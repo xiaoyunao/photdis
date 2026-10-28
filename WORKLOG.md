@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Final deep manifest SHA-256 matches the NERSC compute output
+  (`0f9a907aacf02757503a703c2d543985115d9a8aa4694983f13ad36ccccee13c`).
+  Verified role/source separation, four observed-r bins, tier and tail-count
+  partitions, and model/policy/registration hashes. All 52 local tests pass.
+  `2ed06ce` synchronized final program, manifest, report and figure to local,
+  public GitHub and NERSC. This checkpoint is ready for user review; next
+  research round requires newly registered development/calibration/final
+  fields because the v2 final result was inspected and remains frozen.
+
 - Independent deep final job 60445991 completed on NERSC CPU in 8m55s,
   exit 0, after calibration v2 was hash locked in `a0de76f`. RA170–180 has
   500 disjoint Gaia templates ×4 draws per target noise depth. In measured

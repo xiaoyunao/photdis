@@ -121,7 +121,7 @@ and independent final test, followed by type selection with calibrated priors.
     Examine metal-poor, binary, extinction and field dependence of bias.
     Initial final-field check has 456 clean-routed pairs and 201 Blanco 1
     members; the pair fainter-minus-brighter median is +0.046 mag.
-23. In progress: publish the bounded application-range report, selected figures,
+23. Complete: publish the bounded application-range report, selected figures,
     small manifests and validation; update README/WORKLOG/PLAN, commit and
     sync local, public GitHub and NERSC. Keep catalogs/models on NERSC.
 
