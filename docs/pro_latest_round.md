@@ -67,8 +67,10 @@ field has −0.009 mag. One negative-b field has 216 selected anchors and
 a broad interval; another has zero under the fixed E(B−V)<0.03 cut.
 The [sky census](cold_v4_sky_census.md) is explanatory evidence. Four
 further fields were registered before those six scores were read, with
-opposite signs of Galactic and ecliptic latitude. Their coordinate-sign
-comparison will distinguish the two observed sky associations. The
+opposite signs of Galactic and ecliptic latitude. Two of those fields
+have zero strict anchors under E(B−V)<0.03; one has 16 selected, and the
+last has 680 with a near-zero median. This diagnostic cannot distinguish
+the two sky-coordinate associations. The
 registered native transfer fields above remain the one-time independent
 test of the directional hypothesis. A future fitted correction requires
 fresh calibration and final fields.

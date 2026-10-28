@@ -108,6 +108,15 @@ the unchanged E(B−V) cut. All outcomes are retained in
 being constructed; score them before interpreting the sky-coordinate
 association.
 
+The four coordinate-sign fields are scored. The two positive-b/negative-β
+fields have 16/0 selected anchors; the two negative-b/positive-β fields
+have 0/680. E(B−V)<0.03 removes essentially all sources in three fields,
+so the coordinate-origin question is unresolved by this sample. Preserve
+the negative result. A bounded dust-sensitivity experiment on the three
+already inspected native final fields can now test the model response to
+partial foreground correction without changing training or policy. Then
+decide whether further sky expansion is scientifically useful.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

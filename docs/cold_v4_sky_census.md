@@ -41,9 +41,24 @@ The six centers also have matching signs of Galactic and ecliptic
 latitude. Before their scores were read, four further disjoint fields
 with *opposite* coordinate signs were fixed in
 `configs/cold_v4_native_transfer_cross_sign.json`: two b>0/β<0 and two
-b<0/β>0. Their registered comparison will check which sky coordinate
-sign, if either, better organizes the native residuals. All ten fields
-remain diagnostics under the same frozen method.
+b<0/β>0. The four outcomes are:
+
+| RA, Dec ranges (deg) | Center b, β | Strict anchors | Selected cold | Median Δμ [sky-block 95%], mag | ≥2 mas: n, median |
+|---|---:|---:|---:|---:|---:|
+| 160–170, −25 to −15 | +35.7°, −24.2° | 21 | 16 | −0.032, no block interval | 9, +0.029 |
+| 180–190, −25 to −15 | +42.3°, −16.3° | 0 | 0 | — | 0, — |
+| 340–350, +5 to +15 | −44.1°, +15.1° | 0 | 0 | — | 0, — |
+| 0–10, +15 to +25 | −42.3°, +16.3° | 1,001 | 680 | −0.0023 [−0.0263,+0.0124] | 427, +0.0117 |
+
+The unchanged dust cut retains only 7,039 of 4,502,722 PSF rows at
+|b|>30° in RA160, and none of 4,360,510/3,975,675 such rows in RA180
+and RA340. RA0 retains 256,714 of 3,487,530. Consequently, this
+coordinate-sign experiment has only one moderately populated field,
+and its median is near zero. It does not discriminate Galactic from
+ecliptic latitude effects. The precise cutflows and all four scores are
+retained in `manifests/cold_v4_native_transfer_cross_sign.json` and the
+NERSC field manifests. All ten fields remain diagnostics under the same
+frozen method.
 
 ## Reproducibility
 
@@ -51,5 +66,7 @@ remain diagnostics under the same frozen method.
   all six tasks completed on allocated CPUs. The initial regular-queue
   array 60460329 and its dependent score were cancelled while pending.
 - Frozen scoring: NERSC job 60461354, completed on allocated CPU.
+- Coordinate-sign scans: NERSC Slurm arrays 60461738 and 60461825; all
+  four tasks completed. Frozen scoring: job 60461961, completed in 31 s.
 - Full per-source tables and models remain on NERSC; aggregate manifests,
   registration, code, report and selected figure are synchronized.

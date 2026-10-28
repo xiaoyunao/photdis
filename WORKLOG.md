@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Coordinate-sign crossover arrays 60461738/60461825 completed all four
+  fields, and frozen score 60461961 completed in 31 s. Registered
+  b>0/β<0 fields RA160/RA180 yielded 16/0 selected strict cold anchors;
+  b<0/β>0 RA340/RA0 yielded 0/680. RA0 median Δμ is −0.0023 mag with
+  sky-block CI [−0.0263,+0.0124]; 16-source RA160 has no block interval.
+  The unchanged EBV<0.03 cut is responsible for the zero/low yields.
+  Updated sky-census and integrated Pro reports with all outcomes.
+  Next: assess how much a bounded dust-correction perturbation can move
+  the frozen predictions on the already inspected native final fields.
+
 - Six-field sky census scans completed in debug arrays 60460898 and
   60461294; frozen score 60461354 completed in 41 s on allocated CPU.
   Three positive-b fields select 5,331/5,395/2,218 cold anchors and have
