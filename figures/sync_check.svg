@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+<rect width="960" height="320" fill="#f5f7fb"/>
+<g font-family="sans-serif" text-anchor="middle" fill="#18253d">
+<text x="480" y="55" font-size="26" font-weight="bold">Photdis synchronization check</text>
+<text x="480" y="85" font-size="16">Infrastructure demonstration · no scientific data</text>
+<g stroke="#355da8" stroke-width="3" fill="#ffffff">
+<rect x="70" y="130" width="220" height="90" rx="12"/>
+<rect x="370" y="130" width="220" height="90" rx="12"/>
+<rect x="670" y="130" width="220" height="90" rx="12"/>
+<path d="M300 175H360 M345 165L360 175L345 185 M600 175H660 M645 165L660 175L645 185" fill="none"/>
+</g>
+<text x="180" y="182" font-size="22">NERSC</text>
+<text x="480" y="182" font-size="22">Local Git</text>
+<text x="780" y="182" font-size="22">GitHub</text>
+<text x="480" y="275" font-size="16">Programs and selected figures · catalogs remain on NERSC</text>
+</g>
+</svg>
