@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Measured-r v2 calibration job 60444980 completed on NERSC CPU in 13m32s,
+  exit 0. Copied and checked the small manifest against the locked policy and
+  frozen preparation hashes. Observed r=18–19/19–20/20–21/21–22 have
+  467/453/444/396 independent source identities in offset fitting; full
+  route yields 467/453/447/398 observations. Calibration-field 95% coverage
+  is 95.3%/96.0%/96.2%/96.0% after CQR. Added a focused report and final
+  observed-r plotting program. Next: lock this exact manifest and run the
+  independent RA170–180 final field.
+
 - Found that the first deep CQR grouped by target-noise r bin while the
   application only sees measured r. Canceled unpublished final job 60444633.
   Changed the calibration key to the measured r=18–22 bin and deduplicated
