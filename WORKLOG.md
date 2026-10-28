@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Added the registered-field crossover diagnostic using the same 500 Gaia
+  source identities as each frozen v2 field. For each template and target
+  brightness it pairs RA35–45/RA170–180 grz-base noise environments by
+  intrinsic target `r0`, then evaluates all four source×environment cells
+  under unchanged WISE20 routing. It records per-source native residual,
+  degradation increment, fixed-tier noise effect and tier-switch effect,
+  plus full acceptance and matched-environment differences. The exact
+  decomposition and nearest-target matching pass focused tests. Next: run
+  one allocated NERSC CPU job and inspect error/population strata before
+  choosing any correction.
+
 - NERSC weak-parallax v2 job 60454762 completed in 37 s, exit 0. The
   WISE20 route retains the same 607/202/222 weak-parallax DESI dwarfs as
   old clean routing, with C→B fallback changes. Forest raw low PIT in the
