@@ -156,12 +156,14 @@ def score(table, mg, take, direct, calibrated):
     g0 = np.asarray(table["g0"][take], float)
     parallax = np.asarray(table["p_corr"][take], float)
     mu_truth = 10 - 5 * np.log10(parallax)
+    mu_direct, _ = transformed_distance_quantiles(g0, direct[take])
     mu, distance = transformed_distance_quantiles(g0, calibrated[take])
     distance_truth = 1000 / parallax
     relative = distance[:, 2] / distance_truth - 1
     return {"n": int(take.sum()),
             "direct_Mg": interval_diagnostics(truth, direct[take]),
             "calibrated_Mg": interval_diagnostics(truth, calibrated[take]),
+            "direct_final_distance_modulus": interval_diagnostics(mu_truth, mu_direct),
             "final_distance_modulus": interval_diagnostics(mu_truth, mu),
             "relative_distance_bias": float(np.median(relative)),
             "relative_distance_nmad": float(1.4826 * np.median(np.abs(relative - np.median(relative)))),
@@ -232,17 +234,23 @@ def prepare():
     common = []
     for table, selected, mg, source in sources:
         matrix = feature_matrix(table, "C_grzW1W2")
-        take = selected & table[LAYER["C_grzW1W2"]] & np.isfinite(matrix).all(axis=1)
+        take = (selected & table[LAYER["A_grz"]] & table[LAYER["B_grzW1"]] &
+                table[LAYER["C_grzW1W2"]] & np.isfinite(matrix).all(axis=1))
         common.append((table, take, mg, source))
     common_meta = {"n_fit": int(sum(take.sum() for _, take, _, _ in common)),
                    "identity_sha256": identity_hash(np.concatenate(
                        [table["source_id"][take] for table, take, _, _ in common])),
                    "original_frozen_test": {}}
     test_table, test_mask, test_mg, _ = pilot_test
-    test_common = test_mask & test_table[LAYER["C_grzW1W2"]]
+    test_common = (test_mask & test_table[LAYER["A_grz"]] &
+                   test_table[LAYER["B_grzW1"]] &
+                   test_table[LAYER["C_grzW1W2"]] &
+                   np.isfinite(feature_matrix(test_table, "C_grzW1W2")).all(axis=1))
     common_meta["n_test"] = int(test_common.sum())
     for tier in FEATURES:
-        x, y, _, _ = per_tier_training(common, tier)
+        x, y, ids, _ = per_tier_training(common, tier)
+        if identity_hash(ids) != common_meta["identity_sha256"]:
+            raise ValueError(f"Matched-common fit identities differ for {tier}")
         model = QuantileForest(n_estimators=300, min_samples_leaf=20).fit(x, y)
         prediction = model.predict(feature_matrix(test_table, tier)[test_common])
         common_meta["original_frozen_test"][tier] = interval_diagnostics(test_mg[test_common], prediction)
