@@ -1,0 +1,1908 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "compute_host": "nid004200",
+  "distribution": "forest leaf-weighted discrete empirical Mg labels, no CQR; Gaussian Gaia formal parallax error convolution",
+  "selection_condition": "observed zero-point-corrected parallax / formal error < 10; PIT is F(y)/F(10sigma)",
+  "selection_scope": "explicit parallax threshold only; DESI/Gaia targeting and quality cuts are additional conditioning",
+  "historical_comparator": "CQR-expanded five-quantile interpolation, old approximate unconditional PIT, scored on same objects only",
+  "fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "deduplication": {
+        "matched_unambiguous_rows": 11329,
+        "unique_spectra": 11267,
+        "duplicate_Legacy_rows_removed": 62
+      },
+      "qualified_cool_dwarf_in_grz_base": 2022,
+      "weak_dwarf_before_route": 957,
+      "raw_negative_before_route": 17,
+      "corrected_negative_before_route": 16,
+      "old_route": {
+        "all": {
+          "n": 607,
+          "negative_corrected_parallax": 5,
+          "model_minus_observed_parallax_mas": {
+            "n": 607,
+            "median": 0.019657784287543167,
+            "nmad": 0.23898447626334002,
+            "mean": 0.02346172339265698
+          },
+          "standardized_residual": {
+            "n": 607,
+            "median": -0.07774223093339555,
+            "nmad": 0.9754144422411019,
+            "mean": -0.05652825045230923
+          },
+          "forest_unconditional_pit_below_0p05": 0.06260296540362438,
+          "forest_selected_pit_below_0p05": 0.054365733113673806,
+          "forest_selected_pit_above_0p95": 0.05271828665568369,
+          "forest_selected_pit_deciles": [
+            61,
+            58,
+            60,
+            46,
+            73,
+            50,
+            55,
+            59,
+            85,
+            60
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.06035893928772293,
+          "selection_probability": {
+            "n": 607,
+            "median": 0.99985432872654,
+            "nmad": 0.00021597223003063008,
+            "mean": 0.9490128345502182
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.05601317957166392
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 59,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 59,
+              "median": -0.021183491655347497,
+              "nmad": 0.26875582542865206,
+              "mean": -0.05128525280809729
+            },
+            "standardized_residual": {
+              "n": 59,
+              "median": 0.07235767293411628,
+              "nmad": 1.1264469112503093,
+              "mean": 0.11151867360111122
+            },
+            "forest_unconditional_pit_below_0p05": 0.01694915254237288,
+            "forest_selected_pit_below_0p05": 0.01694915254237288,
+            "forest_selected_pit_above_0p95": 0.1016949152542373,
+            "forest_selected_pit_deciles": [
+              4,
+              5,
+              11,
+              2,
+              5,
+              2,
+              5,
+              7,
+              9,
+              9
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05303613937766812,
+            "selection_probability": {
+              "n": 59,
+              "median": 0.9999146130965495,
+              "nmad": 0.0001265946230555492,
+              "mean": 0.9688414517967493
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.0
+          },
+          "B_grzW1": {
+            "n": 171,
+            "negative_corrected_parallax": 4,
+            "model_minus_observed_parallax_mas": {
+              "n": 171,
+              "median": 0.013616765113843687,
+              "nmad": 0.23368204065386367,
+              "mean": 0.011706155149016361
+            },
+            "standardized_residual": {
+              "n": 171,
+              "median": -0.042763871335159256,
+              "nmad": 0.7746727160247894,
+              "mean": -0.0009599396011526566
+            },
+            "forest_unconditional_pit_below_0p05": 0.06432748538011696,
+            "forest_selected_pit_below_0p05": 0.06432748538011696,
+            "forest_selected_pit_above_0p95": 0.03508771929824561,
+            "forest_selected_pit_deciles": [
+              19,
+              14,
+              12,
+              18,
+              21,
+              16,
+              16,
+              16,
+              28,
+              11
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.0507919406376811,
+            "selection_probability": {
+              "n": 171,
+              "median": 0.9999926366187399,
+              "nmad": 1.0916949056167223e-05,
+              "mean": 0.9888617412193871
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.06432748538011696
+          },
+          "C_grzW1W2": {
+            "n": 377,
+            "negative_corrected_parallax": 1,
+            "model_minus_observed_parallax_mas": {
+              "n": 377,
+              "median": 0.033341702960260844,
+              "nmad": 0.23619665548851204,
+              "mean": 0.04049162727994357
+            },
+            "standardized_residual": {
+              "n": 377,
+              "median": -0.13284359399958492,
+              "nmad": 1.0435982741802974,
+              "mean": -0.10803209574328954
+            },
+            "forest_unconditional_pit_below_0p05": 0.06896551724137931,
+            "forest_selected_pit_below_0p05": 0.05570291777188329,
+            "forest_selected_pit_above_0p95": 0.05305039787798409,
+            "forest_selected_pit_deciles": [
+              38,
+              39,
+              37,
+              26,
+              47,
+              32,
+              34,
+              36,
+              48,
+              40
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.0658443556374587,
+            "selection_probability": {
+              "n": 377,
+              "median": 0.9994321550246575,
+              "nmad": 0.0008418869604407522,
+              "mean": 0.9278349792240294
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.0610079575596817
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 5,
+            "negative_corrected_parallax": 5,
+            "model_minus_observed_parallax_mas": {
+              "n": 5,
+              "median": 0.6287029728338471,
+              "nmad": 0.13691033063073968,
+              "mean": 0.6238854682713851
+            },
+            "standardized_residual": {
+              "n": 5,
+              "median": -1.8944299272959813,
+              "nmad": 0.18306981271962267,
+              "mean": -1.9555987247685525
+            },
+            "forest_unconditional_pit_below_0p05": 0.8,
+            "forest_selected_pit_below_0p05": 0.8,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              4,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05000723562683956,
+            "selection_probability": {
+              "n": 5,
+              "median": 0.999999999999968,
+              "nmad": 4.6911474704813827e-14,
+              "mean": 0.9998553916267732
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.8
+          },
+          "zero_to_five": {
+            "n": 354,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 354,
+              "median": 0.04272563624344755,
+              "nmad": 0.24339697529846915,
+              "mean": 0.04046755545453002
+            },
+            "standardized_residual": {
+              "n": 354,
+              "median": -0.136607016905326,
+              "nmad": 0.9358171935388079,
+              "mean": -0.14507906748450045
+            },
+            "forest_unconditional_pit_below_0p05": 0.06779661016949153,
+            "forest_selected_pit_below_0p05": 0.06779661016949153,
+            "forest_selected_pit_above_0p95": 0.022598870056497175,
+            "forest_selected_pit_deciles": [
+              46,
+              38,
+              40,
+              32,
+              38,
+              31,
+              29,
+              37,
+              44,
+              19
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.050113422419719576,
+            "selection_probability": {
+              "n": 354,
+              "median": 0.9999998933702012,
+              "nmad": 1.5808933965404392e-07,
+              "mean": 0.9978367134897258
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.05649717514124294
+          },
+          "five_to_ten": {
+            "n": 248,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 248,
+              "median": -0.0115133419358045,
+              "nmad": 0.21936699167329102,
+              "mean": -0.012918047874668418
+            },
+            "standardized_residual": {
+              "n": 248,
+              "median": 0.05310906646478162,
+              "nmad": 1.038714913339443,
+              "mean": 0.10815861084195248
+            },
+            "forest_unconditional_pit_below_0p05": 0.04032258064516129,
+            "forest_selected_pit_below_0p05": 0.020161290322580645,
+            "forest_selected_pit_above_0p95": 0.0967741935483871,
+            "forest_selected_pit_deciles": [
+              11,
+              19,
+              20,
+              14,
+              35,
+              19,
+              26,
+              22,
+              41,
+              41
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07519229206827781,
+            "selection_probability": {
+              "n": 248,
+              "median": 0.9829202961438892,
+              "nmad": 0.0252802829952707,
+              "mean": 0.8782956332197002
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.04032258064516129
+          }
+        }
+      },
+      "wise20_route": {
+        "all": {
+          "n": 607,
+          "negative_corrected_parallax": 5,
+          "model_minus_observed_parallax_mas": {
+            "n": 607,
+            "median": 0.0190992041546571,
+            "nmad": 0.23981262716835688,
+            "mean": 0.02129914284772617
+          },
+          "standardized_residual": {
+            "n": 607,
+            "median": -0.07629421555221458,
+            "nmad": 1.0062067292615031,
+            "mean": -0.05232453491923482
+          },
+          "forest_unconditional_pit_below_0p05": 0.06260296540362438,
+          "forest_selected_pit_below_0p05": 0.054365733113673806,
+          "forest_selected_pit_above_0p95": 0.054365733113673806,
+          "forest_selected_pit_deciles": [
+            61,
+            58,
+            61,
+            47,
+            70,
+            52,
+            55,
+            58,
+            85,
+            60
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.06035061569588329,
+          "selection_probability": {
+            "n": 607,
+            "median": 0.9998399393566795,
+            "nmad": 0.00023730590978635253,
+            "mean": 0.949175376122874
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.05601317957166392
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 62,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 62,
+              "median": -0.02010579096864562,
+              "nmad": 0.2631482743452684,
+              "mean": -0.04587282952688991
+            },
+            "standardized_residual": {
+              "n": 62,
+              "median": 0.07161177500945645,
+              "nmad": 1.1205962855417397,
+              "mean": 0.0918104388961331
+            },
+            "forest_unconditional_pit_below_0p05": 0.016129032258064516,
+            "forest_selected_pit_below_0p05": 0.016129032258064516,
+            "forest_selected_pit_above_0p95": 0.0967741935483871,
+            "forest_selected_pit_deciles": [
+              4,
+              5,
+              13,
+              2,
+              5,
+              2,
+              6,
+              7,
+              9,
+              9
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05289013405007092,
+            "selection_probability": {
+              "n": 62,
+              "median": 0.9998997688105837,
+              "nmad": 0.00014860276142831,
+              "mean": 0.970331043581957
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.0
+          },
+          "B_grzW1": {
+            "n": 238,
+            "negative_corrected_parallax": 5,
+            "model_minus_observed_parallax_mas": {
+              "n": 238,
+              "median": -0.006009042867722525,
+              "nmad": 0.2219600129109775,
+              "mean": 0.0010644853862768716
+            },
+            "standardized_residual": {
+              "n": 238,
+              "median": 0.008845533615685186,
+              "nmad": 0.8149156935234635,
+              "mean": 0.027082667073021316
+            },
+            "forest_unconditional_pit_below_0p05": 0.0546218487394958,
+            "forest_selected_pit_below_0p05": 0.0546218487394958,
+            "forest_selected_pit_above_0p95": 0.03361344537815126,
+            "forest_selected_pit_deciles": [
+              24,
+              19,
+              16,
+              26,
+              28,
+              25,
+              22,
+              25,
+              37,
+              16
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05057064220300617,
+            "selection_probability": {
+              "n": 238,
+              "median": 0.9999992433536251,
+              "nmad": 1.1218039157391945e-06,
+              "mean": 0.9919644818250501
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.0546218487394958
+          },
+          "C_grzW1W2": {
+            "n": 307,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 307,
+              "median": 0.03979202749565447,
+              "nmad": 0.2408480925797743,
+              "mean": 0.050551620903267314
+            },
+            "standardized_residual": {
+              "n": 307,
+              "median": -0.1779876865125062,
+              "nmad": 1.0744592184290664,
+              "mean": -0.14299320739711682
+            },
+            "forest_unconditional_pit_below_0p05": 0.0781758957654723,
+            "forest_selected_pit_below_0p05": 0.06188925081433225,
+            "forest_selected_pit_above_0p95": 0.06188925081433225,
+            "forest_selected_pit_deciles": [
+              33,
+              34,
+              32,
+              19,
+              37,
+              25,
+              27,
+              26,
+              39,
+              35
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.06943916147225176,
+            "selection_probability": {
+              "n": 307,
+              "median": 0.9968637582611906,
+              "nmad": 0.004649791480583925,
+              "mean": 0.9117308857659326
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.06840390879478828
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 5,
+            "negative_corrected_parallax": 5,
+            "model_minus_observed_parallax_mas": {
+              "n": 5,
+              "median": 0.6287029728338471,
+              "nmad": 0.11816951549978857,
+              "mean": 0.6264135695975622
+            },
+            "standardized_residual": {
+              "n": 5,
+              "median": -1.9025097821372665,
+              "nmad": 0.1950490055073122,
+              "mean": -1.9572146957368095
+            },
+            "forest_unconditional_pit_below_0p05": 0.8,
+            "forest_selected_pit_below_0p05": 0.8,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              4,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05000723564427999,
+            "selection_probability": {
+              "n": 5,
+              "median": 0.9999999982559568,
+              "nmad": 2.5857178538979395e-09,
+              "mean": 0.9998553912779646
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.8
+          },
+          "zero_to_five": {
+            "n": 354,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 354,
+              "median": 0.03336119066938742,
+              "nmad": 0.23829773842149396,
+              "mean": 0.03689302842853974
+            },
+            "standardized_residual": {
+              "n": 354,
+              "median": -0.12963714239735685,
+              "nmad": 0.9518438457599713,
+              "mean": -0.14030672651343232
+            },
+            "forest_unconditional_pit_below_0p05": 0.06779661016949153,
+            "forest_selected_pit_below_0p05": 0.06779661016949153,
+            "forest_selected_pit_above_0p95": 0.022598870056497175,
+            "forest_selected_pit_deciles": [
+              46,
+              38,
+              41,
+              33,
+              35,
+              33,
+              29,
+              36,
+              44,
+              19
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05010039297612935,
+            "selection_probability": {
+              "n": 354,
+              "median": 0.9999997746092129,
+              "nmad": 3.341643810215178e-07,
+              "mean": 0.998090787091605
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.05649717514124294
+          },
+          "five_to_ten": {
+            "n": 248,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 248,
+              "median": -0.0115133419358045,
+              "nmad": 0.21936699167329102,
+              "mean": -0.01315975888355279
+            },
+            "standardized_residual": {
+              "n": 248,
+              "median": 0.05310906646478162,
+              "nmad": 1.038714913339443,
+              "mean": 0.11166799180832081
+            },
+            "forest_unconditional_pit_below_0p05": 0.04032258064516129,
+            "forest_selected_pit_below_0p05": 0.020161290322580645,
+            "forest_selected_pit_above_0p95": 0.10080645161290322,
+            "forest_selected_pit_deciles": [
+              11,
+              19,
+              20,
+              14,
+              35,
+              19,
+              26,
+              22,
+              41,
+              41
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07519051788560469,
+            "selection_probability": {
+              "n": 248,
+              "median": 0.9829202961438892,
+              "nmad": 0.0252802829952707,
+              "mean": 0.8783307972571234
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.04032258064516129
+          }
+        }
+      },
+      "same_object_comparison": {
+        "n_same_objects": 607,
+        "old_route": {
+          "n": 607,
+          "negative_corrected_parallax": 5,
+          "model_minus_observed_parallax_mas": {
+            "n": 607,
+            "median": 0.019657784287543167,
+            "nmad": 0.23898447626334002,
+            "mean": 0.02346172339265698
+          },
+          "standardized_residual": {
+            "n": 607,
+            "median": -0.07774223093339555,
+            "nmad": 0.9754144422411019,
+            "mean": -0.05652825045230923
+          },
+          "forest_unconditional_pit_below_0p05": 0.06260296540362438,
+          "forest_selected_pit_below_0p05": 0.054365733113673806,
+          "forest_selected_pit_above_0p95": 0.05271828665568369,
+          "forest_selected_pit_deciles": [
+            61,
+            58,
+            60,
+            46,
+            73,
+            50,
+            55,
+            59,
+            85,
+            60
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.06035893928772293,
+          "selection_probability": {
+            "n": 607,
+            "median": 0.99985432872654,
+            "nmad": 0.00021597223003063008,
+            "mean": 0.9490128345502182
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.05601317957166392
+        },
+        "wise20_route": {
+          "n": 607,
+          "negative_corrected_parallax": 5,
+          "model_minus_observed_parallax_mas": {
+            "n": 607,
+            "median": 0.0190992041546571,
+            "nmad": 0.23981262716835688,
+            "mean": 0.02129914284772617
+          },
+          "standardized_residual": {
+            "n": 607,
+            "median": -0.07629421555221458,
+            "nmad": 1.0062067292615031,
+            "mean": -0.05232453491923482
+          },
+          "forest_unconditional_pit_below_0p05": 0.06260296540362438,
+          "forest_selected_pit_below_0p05": 0.054365733113673806,
+          "forest_selected_pit_above_0p95": 0.054365733113673806,
+          "forest_selected_pit_deciles": [
+            61,
+            58,
+            61,
+            47,
+            70,
+            52,
+            55,
+            58,
+            85,
+            60
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.06035061569588329,
+          "selection_probability": {
+            "n": 607,
+            "median": 0.9998399393566795,
+            "nmad": 0.00023730590978635253,
+            "mean": 0.949175376122874
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.05601317957166392
+        }
+      }
+    },
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "deduplication": {
+        "matched_unambiguous_rows": 0,
+        "unique_spectra": 0
+      },
+      "qualified_cool_dwarf_in_grz_base": 0,
+      "weak_dwarf_before_route": 0,
+      "raw_negative_before_route": 0,
+      "corrected_negative_before_route": 0,
+      "old_route": {
+        "n": 0
+      },
+      "wise20_route": {
+        "n": 0
+      },
+      "same_object_comparison": {
+        "n_same_objects": 0
+      }
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "deduplication": {
+        "matched_unambiguous_rows": 4605,
+        "unique_spectra": 4570,
+        "duplicate_Legacy_rows_removed": 35
+      },
+      "qualified_cool_dwarf_in_grz_base": 984,
+      "weak_dwarf_before_route": 275,
+      "raw_negative_before_route": 3,
+      "corrected_negative_before_route": 3,
+      "old_route": {
+        "all": {
+          "n": 202,
+          "negative_corrected_parallax": 1,
+          "model_minus_observed_parallax_mas": {
+            "n": 202,
+            "median": 0.04112834770119583,
+            "nmad": 0.20409784502481243,
+            "mean": 0.05737977101933233
+          },
+          "standardized_residual": {
+            "n": 202,
+            "median": -0.17171247216421665,
+            "nmad": 0.9377606502660065,
+            "mean": -0.1852471312920235
+          },
+          "forest_unconditional_pit_below_0p05": 0.09405940594059406,
+          "forest_selected_pit_below_0p05": 0.0594059405940594,
+          "forest_selected_pit_above_0p95": 0.07920792079207921,
+          "forest_selected_pit_deciles": [
+            25,
+            17,
+            17,
+            23,
+            17,
+            23,
+            20,
+            13,
+            19,
+            28
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.08967070808661504,
+          "selection_probability": {
+            "n": 202,
+            "median": 0.9976050171156212,
+            "nmad": 0.0035508015632544133,
+            "mean": 0.9058156438414898
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09405940594059406
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 9,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 9,
+              "median": 0.055008621441833494,
+              "nmad": 0.1332280623433129,
+              "mean": 0.17310269643740728
+            },
+            "standardized_residual": {
+              "n": 9,
+              "median": -0.16708891682376117,
+              "nmad": 0.6170889422624216,
+              "mean": -0.3513358731666079
+            },
+            "forest_unconditional_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_below_0p05": 0.0,
+            "forest_selected_pit_above_0p95": 0.1111111111111111,
+            "forest_selected_pit_deciles": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              2
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.16461805077337954,
+            "selection_probability": {
+              "n": 9,
+              "median": 0.779400501345464,
+              "nmad": 0.2949030021907579,
+              "mean": 0.7613148341771984
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.1111111111111111
+          },
+          "B_grzW1": {
+            "n": 48,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 48,
+              "median": 0.07679546078365415,
+              "nmad": 0.18720917450978014,
+              "mean": 0.06553062900038438
+            },
+            "standardized_residual": {
+              "n": 48,
+              "median": -0.15299377851091203,
+              "nmad": 0.7205052361269083,
+              "mean": -0.1451908246246645
+            },
+            "forest_unconditional_pit_below_0p05": 0.08333333333333333,
+            "forest_selected_pit_below_0p05": 0.08333333333333333,
+            "forest_selected_pit_above_0p95": 0.0625,
+            "forest_selected_pit_deciles": [
+              7,
+              3,
+              5,
+              9,
+              2,
+              5,
+              4,
+              5,
+              3,
+              5
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.051891142987774495,
+            "selection_probability": {
+              "n": 48,
+              "median": 0.9992904128670957,
+              "nmad": 0.0010520338403320292,
+              "mean": 0.9719428726982112
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.08333333333333333
+          },
+          "C_grzW1W2": {
+            "n": 145,
+            "negative_corrected_parallax": 1,
+            "model_minus_observed_parallax_mas": {
+              "n": 145,
+              "median": 0.03860643627712379,
+              "nmad": 0.2237229440625052,
+              "mean": 0.047498753696207
+            },
+            "standardized_residual": {
+              "n": 145,
+              "median": -0.17633602750467212,
+              "nmad": 1.0968183779311476,
+              "mean": -0.18819819365865775
+            },
+            "forest_unconditional_pit_below_0p05": 0.09655172413793103,
+            "forest_selected_pit_below_0p05": 0.05517241379310345,
+            "forest_selected_pit_above_0p95": 0.08275862068965517,
+            "forest_selected_pit_deciles": [
+              18,
+              14,
+              11,
+              12,
+              13,
+              17,
+              15,
+              8,
+              16,
+              21
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.0975251428491217,
+            "selection_probability": {
+              "n": 145,
+              "median": 0.9955873682277893,
+              "nmad": 0.006542140414169197,
+              "mean": 0.8928942666129107
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.09655172413793103
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 1,
+            "negative_corrected_parallax": 1,
+            "model_minus_observed_parallax_mas": {
+              "n": 1,
+              "median": 0.686108540356956,
+              "nmad": 0.0,
+              "mean": 0.686108540356956
+            },
+            "standardized_residual": {
+              "n": 1,
+              "median": -3.4269660620894755,
+              "nmad": 0.0,
+              "mean": -3.4269660620894755
+            },
+            "forest_unconditional_pit_below_0p05": 1.0,
+            "forest_selected_pit_below_0p05": 1.0,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05002455621958042,
+            "selection_probability": {
+              "n": 1,
+              "median": 0.9995091166931571,
+              "nmad": 0.0,
+              "mean": 0.9995091166931571
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 1.0
+          },
+          "zero_to_five": {
+            "n": 77,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 77,
+              "median": 0.12248454101733364,
+              "nmad": 0.18925108872929297,
+              "mean": 0.11978490245034315
+            },
+            "standardized_residual": {
+              "n": 77,
+              "median": -0.4120042958300284,
+              "nmad": 0.9585997114333823,
+              "mean": -0.5069769440833183
+            },
+            "forest_unconditional_pit_below_0p05": 0.12987012987012986,
+            "forest_selected_pit_below_0p05": 0.12987012987012986,
+            "forest_selected_pit_above_0p95": 0.012987012987012988,
+            "forest_selected_pit_deciles": [
+              19,
+              12,
+              8,
+              10,
+              5,
+              7,
+              4,
+              5,
+              3,
+              4
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05013184106259898,
+            "selection_probability": {
+              "n": 77,
+              "median": 0.9999885301514515,
+              "nmad": 1.7005197189533993e-05,
+              "mean": 0.9974308359520383
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.12987012987012986
+          },
+          "five_to_ten": {
+            "n": 124,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 124,
+              "median": -0.0027755942032519076,
+              "nmad": 0.19505864863136868,
+              "mean": 0.013557804168320597
+            },
+            "standardized_residual": {
+              "n": 124,
+              "median": 0.018433627913803277,
+              "nmad": 0.9321043149833244,
+              "mean": 0.04067959867351803
+            },
+            "forest_unconditional_pit_below_0p05": 0.06451612903225806,
+            "forest_selected_pit_below_0p05": 0.008064516129032258,
+            "forest_selected_pit_above_0p95": 0.12096774193548387,
+            "forest_selected_pit_deciles": [
+              5,
+              5,
+              9,
+              13,
+              12,
+              16,
+              16,
+              8,
+              16,
+              24
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.11454279609239143,
+            "selection_probability": {
+              "n": 124,
+              "median": 0.9739195759565409,
+              "nmad": 0.03830250402725063,
+              "mean": 0.8481699723466197
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.06451612903225806
+          }
+        }
+      },
+      "wise20_route": {
+        "all": {
+          "n": 202,
+          "negative_corrected_parallax": 1,
+          "model_minus_observed_parallax_mas": {
+            "n": 202,
+            "median": 0.040173634018163096,
+            "nmad": 0.20314173250233425,
+            "mean": 0.055508471269136966
+          },
+          "standardized_residual": {
+            "n": 202,
+            "median": -0.17171247216421665,
+            "nmad": 0.9377606502660065,
+            "mean": -0.1840097884686467
+          },
+          "forest_unconditional_pit_below_0p05": 0.09405940594059406,
+          "forest_selected_pit_below_0p05": 0.0594059405940594,
+          "forest_selected_pit_above_0p95": 0.07920792079207921,
+          "forest_selected_pit_deciles": [
+            25,
+            17,
+            17,
+            23,
+            17,
+            23,
+            21,
+            12,
+            20,
+            27
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.08966427723028889,
+          "selection_probability": {
+            "n": 202,
+            "median": 0.997820482766685,
+            "nmad": 0.003231352207200997,
+            "mean": 0.9059411904025939
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09405940594059406
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 9,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 9,
+              "median": 0.055008621441833494,
+              "nmad": 0.1332280623433129,
+              "mean": 0.17310269643740728
+            },
+            "standardized_residual": {
+              "n": 9,
+              "median": -0.16708891682376117,
+              "nmad": 0.6170889422624216,
+              "mean": -0.3513358731666079
+            },
+            "forest_unconditional_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_below_0p05": 0.0,
+            "forest_selected_pit_above_0p95": 0.1111111111111111,
+            "forest_selected_pit_deciles": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              2
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.16461805077337954,
+            "selection_probability": {
+              "n": 9,
+              "median": 0.779400501345464,
+              "nmad": 0.2949030021907579,
+              "mean": 0.7613148341771984
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.1111111111111111
+          },
+          "B_grzW1": {
+            "n": 57,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 57,
+              "median": 0.06441245337570178,
+              "nmad": 0.21750645249849554,
+              "mean": 0.04237705743736408
+            },
+            "standardized_residual": {
+              "n": 57,
+              "median": -0.09500085908124474,
+              "nmad": 0.8767418098083171,
+              "mean": -0.0586654747467485
+            },
+            "forest_unconditional_pit_below_0p05": 0.07017543859649122,
+            "forest_selected_pit_below_0p05": 0.07017543859649122,
+            "forest_selected_pit_above_0p95": 0.05263157894736842,
+            "forest_selected_pit_deciles": [
+              7,
+              5,
+              5,
+              9,
+              2,
+              6,
+              5,
+              6,
+              6,
+              6
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.051597451426428916,
+            "selection_probability": {
+              "n": 57,
+              "median": 0.9995228807940149,
+              "nmad": 0.0007073769070741597,
+              "mean": 0.9762752788391477
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.07017543859649122
+          },
+          "C_grzW1W2": {
+            "n": 136,
+            "negative_corrected_parallax": 1,
+            "model_minus_observed_parallax_mas": {
+              "n": 136,
+              "median": 0.03917877789332325,
+              "nmad": 0.2046167061930218,
+              "mean": 0.053230107753670965
+            },
+            "standardized_residual": {
+              "n": 136,
+              "median": -0.184836123749546,
+              "nmad": 1.032000334269729,
+              "mean": -0.22547075258531254
+            },
+            "forest_unconditional_pit_below_0p05": 0.10294117647058823,
+            "forest_selected_pit_below_0p05": 0.058823529411764705,
+            "forest_selected_pit_above_0p95": 0.08823529411764706,
+            "forest_selected_pit_deciles": [
+              18,
+              12,
+              11,
+              12,
+              13,
+              16,
+              15,
+              6,
+              14,
+              19
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.10065857950184921,
+            "selection_probability": {
+              "n": 136,
+              "median": 0.994840737127783,
+              "nmad": 0.007648886480154314,
+              "mean": 0.8860337945580717
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.10294117647058823
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 1,
+            "negative_corrected_parallax": 1,
+            "model_minus_observed_parallax_mas": {
+              "n": 1,
+              "median": 0.686108540356956,
+              "nmad": 0.0,
+              "mean": 0.686108540356956
+            },
+            "standardized_residual": {
+              "n": 1,
+              "median": -3.4269660620894755,
+              "nmad": 0.0,
+              "mean": -3.4269660620894755
+            },
+            "forest_unconditional_pit_below_0p05": 1.0,
+            "forest_selected_pit_below_0p05": 1.0,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05002455621958042,
+            "selection_probability": {
+              "n": 1,
+              "median": 0.9995091166931571,
+              "nmad": 0.0,
+              "mean": 0.9995091166931571
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 1.0
+          },
+          "zero_to_five": {
+            "n": 77,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 77,
+              "median": 0.12011214221393529,
+              "nmad": 0.19186442850341712,
+              "mean": 0.11546365172093297
+            },
+            "standardized_residual": {
+              "n": 77,
+              "median": -0.4120042958300284,
+              "nmad": 0.96600928997949,
+              "mean": -0.5076108280873094
+            },
+            "forest_unconditional_pit_below_0p05": 0.12987012987012986,
+            "forest_selected_pit_below_0p05": 0.12987012987012986,
+            "forest_selected_pit_above_0p95": 0.012987012987012988,
+            "forest_selected_pit_deciles": [
+              19,
+              12,
+              8,
+              10,
+              5,
+              7,
+              5,
+              4,
+              5,
+              2
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05011569142465695,
+            "selection_probability": {
+              "n": 77,
+              "median": 0.9999854133690257,
+              "nmad": 2.1626138990831034e-05,
+              "mean": 0.9977459472060456
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.12987012987012986
+          },
+          "five_to_ten": {
+            "n": 124,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 124,
+              "median": -0.0027755942032519076,
+              "nmad": 0.19505864863136868,
+              "mean": 0.013192753818523192
+            },
+            "standardized_residual": {
+              "n": 124,
+              "median": 0.018433627913803277,
+              "nmad": 0.9321043149833244,
+              "mean": 0.043088891565690804
+            },
+            "forest_unconditional_pit_below_0p05": 0.06451612903225806,
+            "forest_selected_pit_below_0p05": 0.008064516129032258,
+            "forest_selected_pit_above_0p95": 0.12096774193548387,
+            "forest_selected_pit_deciles": [
+              5,
+              5,
+              9,
+              13,
+              12,
+              16,
+              16,
+              8,
+              15,
+              25
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.11454234842419507,
+            "selection_probability": {
+              "n": 124,
+              "median": 0.9739195759565409,
+              "nmad": 0.03830250402725063,
+              "mean": 0.8481788178206878
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.06451612903225806
+          }
+        }
+      },
+      "same_object_comparison": {
+        "n_same_objects": 202,
+        "old_route": {
+          "n": 202,
+          "negative_corrected_parallax": 1,
+          "model_minus_observed_parallax_mas": {
+            "n": 202,
+            "median": 0.04112834770119583,
+            "nmad": 0.20409784502481243,
+            "mean": 0.05737977101933233
+          },
+          "standardized_residual": {
+            "n": 202,
+            "median": -0.17171247216421665,
+            "nmad": 0.9377606502660065,
+            "mean": -0.1852471312920235
+          },
+          "forest_unconditional_pit_below_0p05": 0.09405940594059406,
+          "forest_selected_pit_below_0p05": 0.0594059405940594,
+          "forest_selected_pit_above_0p95": 0.07920792079207921,
+          "forest_selected_pit_deciles": [
+            25,
+            17,
+            17,
+            23,
+            17,
+            23,
+            20,
+            13,
+            19,
+            28
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.08967070808661504,
+          "selection_probability": {
+            "n": 202,
+            "median": 0.9976050171156212,
+            "nmad": 0.0035508015632544133,
+            "mean": 0.9058156438414898
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09405940594059406
+        },
+        "wise20_route": {
+          "n": 202,
+          "negative_corrected_parallax": 1,
+          "model_minus_observed_parallax_mas": {
+            "n": 202,
+            "median": 0.040173634018163096,
+            "nmad": 0.20314173250233425,
+            "mean": 0.055508471269136966
+          },
+          "standardized_residual": {
+            "n": 202,
+            "median": -0.17171247216421665,
+            "nmad": 0.9377606502660065,
+            "mean": -0.1840097884686467
+          },
+          "forest_unconditional_pit_below_0p05": 0.09405940594059406,
+          "forest_selected_pit_below_0p05": 0.0594059405940594,
+          "forest_selected_pit_above_0p95": 0.07920792079207921,
+          "forest_selected_pit_deciles": [
+            25,
+            17,
+            17,
+            23,
+            17,
+            23,
+            21,
+            12,
+            20,
+            27
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.08966427723028889,
+          "selection_probability": {
+            "n": 202,
+            "median": 0.997820482766685,
+            "nmad": 0.003231352207200997,
+            "mean": 0.9059411904025939
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09405940594059406
+        }
+      }
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "deduplication": {
+        "matched_unambiguous_rows": 6534,
+        "unique_spectra": 6456,
+        "duplicate_Legacy_rows_removed": 78
+      },
+      "qualified_cool_dwarf_in_grz_base": 1187,
+      "weak_dwarf_before_route": 351,
+      "raw_negative_before_route": 2,
+      "corrected_negative_before_route": 1,
+      "old_route": {
+        "all": {
+          "n": 222,
+          "negative_corrected_parallax": 0,
+          "model_minus_observed_parallax_mas": {
+            "n": 222,
+            "median": 0.04143801718933082,
+            "nmad": 0.19697402955069815,
+            "mean": 0.036958731976091924
+          },
+          "standardized_residual": {
+            "n": 222,
+            "median": -0.19809552351652657,
+            "nmad": 0.988741384117447,
+            "mean": -0.20623606846301518
+          },
+          "forest_unconditional_pit_below_0p05": 0.0990990990990991,
+          "forest_selected_pit_below_0p05": 0.07207207207207207,
+          "forest_selected_pit_above_0p95": 0.05855855855855856,
+          "forest_selected_pit_deciles": [
+            30,
+            24,
+            12,
+            22,
+            26,
+            19,
+            21,
+            20,
+            20,
+            28
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.07390116527080104,
+          "selection_probability": {
+            "n": 222,
+            "median": 0.9985233394760756,
+            "nmad": 0.00218929689184932,
+            "mean": 0.8941872971700163
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09009009009009009
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 18,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 18,
+              "median": 0.017018811018783886,
+              "nmad": 0.2848575808392079,
+              "mean": 0.030007793850754107
+            },
+            "standardized_residual": {
+              "n": 18,
+              "median": -0.0557721613680411,
+              "nmad": 1.095693731319194,
+              "mean": -0.18271770565628243
+            },
+            "forest_unconditional_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              3,
+              0,
+              0,
+              2,
+              0,
+              3,
+              6,
+              1,
+              2,
+              1
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07925534109010039,
+            "selection_probability": {
+              "n": 18,
+              "median": 0.9961809588727705,
+              "nmad": 0.005662110331888739,
+              "mean": 0.8370151723325798
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.1111111111111111
+          },
+          "B_grzW1": {
+            "n": 61,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 61,
+              "median": 0.05194359383675606,
+              "nmad": 0.20148291908136304,
+              "mean": 0.035242320536160894
+            },
+            "standardized_residual": {
+              "n": 61,
+              "median": -0.33619541898306593,
+              "nmad": 1.0440491717962068,
+              "mean": -0.2344327545345964
+            },
+            "forest_unconditional_pit_below_0p05": 0.08196721311475409,
+            "forest_selected_pit_below_0p05": 0.06557377049180328,
+            "forest_selected_pit_above_0p95": 0.04918032786885246,
+            "forest_selected_pit_deciles": [
+              9,
+              7,
+              5,
+              8,
+              8,
+              2,
+              3,
+              6,
+              3,
+              10
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07011543598904625,
+            "selection_probability": {
+              "n": 61,
+              "median": 0.9998683428172983,
+              "nmad": 0.00019519493741220742,
+              "mean": 0.9445524133094824
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.08196721311475409
+          },
+          "C_grzW1W2": {
+            "n": 143,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 143,
+              "median": 0.04090379188467186,
+              "nmad": 0.18804106423319483,
+              "mean": 0.03856585074596518
+            },
+            "standardized_residual": {
+              "n": 143,
+              "median": -0.15104616874479299,
+              "nmad": 1.0241529998342116,
+              "mean": -0.19716846482773362
+            },
+            "forest_unconditional_pit_below_0p05": 0.1048951048951049,
+            "forest_selected_pit_below_0p05": 0.06993006993006994,
+            "forest_selected_pit_above_0p95": 0.06993006993006994,
+            "forest_selected_pit_deciles": [
+              18,
+              17,
+              7,
+              12,
+              18,
+              14,
+              12,
+              13,
+              15,
+              17
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07484210458156786,
+            "selection_probability": {
+              "n": 143,
+              "median": 0.9963751137406494,
+              "nmad": 0.005374256358116185,
+              "mean": 0.8798993682369144
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.09090909090909091
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 0
+          },
+          "zero_to_five": {
+            "n": 105,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 105,
+              "median": 0.06306230031474569,
+              "nmad": 0.204118038978436,
+              "mean": 0.06931061947717755
+            },
+            "standardized_residual": {
+              "n": 105,
+              "median": -0.35340258572449507,
+              "nmad": 0.9358030060699111,
+              "mean": -0.37915692866513867
+            },
+            "forest_unconditional_pit_below_0p05": 0.10476190476190476,
+            "forest_selected_pit_below_0p05": 0.10476190476190476,
+            "forest_selected_pit_above_0p95": 0.009523809523809525,
+            "forest_selected_pit_deciles": [
+              22,
+              16,
+              5,
+              15,
+              16,
+              6,
+              6,
+              6,
+              5,
+              8
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05009140993459929,
+            "selection_probability": {
+              "n": 105,
+              "median": 0.9999978697792689,
+              "nmad": 3.158265218465894e-06,
+              "mean": 0.9982041500584834
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.10476190476190476
+          },
+          "five_to_ten": {
+            "n": 117,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 117,
+              "median": 0.004906849379483269,
+              "nmad": 0.1732303758522274,
+              "mean": 0.007924986782809958
+            },
+            "standardized_residual": {
+              "n": 117,
+              "median": -0.03389568258129895,
+              "nmad": 0.9683250253173381,
+              "mean": -0.051050681102135065
+            },
+            "forest_unconditional_pit_below_0p05": 0.09401709401709402,
+            "forest_selected_pit_below_0p05": 0.042735042735042736,
+            "forest_selected_pit_above_0p95": 0.10256410256410256,
+            "forest_selected_pit_deciles": [
+              8,
+              8,
+              7,
+              7,
+              10,
+              13,
+              15,
+              14,
+              15,
+              20
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.09526889441867442,
+            "selection_probability": {
+              "n": 117,
+              "median": 0.9516822654312337,
+              "nmad": 0.07159246210726566,
+              "mean": 0.8008388394495971
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.07692307692307693
+          }
+        }
+      },
+      "wise20_route": {
+        "all": {
+          "n": 222,
+          "negative_corrected_parallax": 0,
+          "model_minus_observed_parallax_mas": {
+            "n": 222,
+            "median": 0.04103757282033088,
+            "nmad": 0.19856552150638188,
+            "mean": 0.03774119642940911
+          },
+          "standardized_residual": {
+            "n": 222,
+            "median": -0.19809552351652657,
+            "nmad": 0.9983114845935828,
+            "mean": -0.20973552631433445
+          },
+          "forest_unconditional_pit_below_0p05": 0.0990990990990991,
+          "forest_selected_pit_below_0p05": 0.07207207207207207,
+          "forest_selected_pit_above_0p95": 0.05855855855855856,
+          "forest_selected_pit_deciles": [
+            31,
+            24,
+            11,
+            23,
+            25,
+            19,
+            21,
+            20,
+            22,
+            26
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.07390148237513386,
+          "selection_probability": {
+            "n": 222,
+            "median": 0.9985233394760756,
+            "nmad": 0.002189296885024441,
+            "mean": 0.8941809621479981
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09009009009009009
+        },
+        "by_tier": {
+          "A_grz": {
+            "n": 18,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 18,
+              "median": 0.017018811018783886,
+              "nmad": 0.2848575808392079,
+              "mean": 0.030007793850754107
+            },
+            "standardized_residual": {
+              "n": 18,
+              "median": -0.0557721613680411,
+              "nmad": 1.095693731319194,
+              "mean": -0.18271770565628243
+            },
+            "forest_unconditional_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_below_0p05": 0.1111111111111111,
+            "forest_selected_pit_above_0p95": 0.0,
+            "forest_selected_pit_deciles": [
+              3,
+              0,
+              0,
+              2,
+              0,
+              3,
+              6,
+              1,
+              2,
+              1
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.07925534109010039,
+            "selection_probability": {
+              "n": 18,
+              "median": 0.9961809588727705,
+              "nmad": 0.005662110331888739,
+              "mean": 0.8370151723325798
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.1111111111111111
+          },
+          "B_grzW1": {
+            "n": 75,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 75,
+              "median": 0.05497520192146377,
+              "nmad": 0.20854361607741378,
+              "mean": 0.03235881547259609
+            },
+            "standardized_residual": {
+              "n": 75,
+              "median": -0.35234930390845076,
+              "nmad": 1.0679989215865824,
+              "mean": -0.22880108414564465
+            },
+            "forest_unconditional_pit_below_0p05": 0.08,
+            "forest_selected_pit_below_0p05": 0.06666666666666667,
+            "forest_selected_pit_above_0p95": 0.04,
+            "forest_selected_pit_deciles": [
+              12,
+              9,
+              5,
+              12,
+              9,
+              2,
+              3,
+              6,
+              6,
+              11
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.06636149496633897,
+            "selection_probability": {
+              "n": 75,
+              "median": 0.9999682519989843,
+              "nmad": 4.7069585284996005e-05,
+              "mean": 0.9548838431648111
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.08
+          },
+          "C_grzW1W2": {
+            "n": 129,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 129,
+              "median": 0.03375249403891312,
+              "nmad": 0.18386780142513245,
+              "mean": 0.041949567112949934
+            },
+            "standardized_residual": {
+              "n": 129,
+              "median": -0.12906640299641678,
+              "nmad": 1.0234735310960015,
+              "mean": -0.20242082813213808
+            },
+            "forest_unconditional_pit_below_0p05": 0.10852713178294573,
+            "forest_selected_pit_below_0p05": 0.06976744186046512,
+            "forest_selected_pit_above_0p95": 0.07751937984496124,
+            "forest_selected_pit_deciles": [
+              16,
+              15,
+              6,
+              9,
+              16,
+              14,
+              12,
+              13,
+              14,
+              14
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.0775381459316472,
+            "selection_probability": {
+              "n": 129,
+              "median": 0.9937925898062666,
+              "nmad": 0.009203106114023066,
+              "mean": 0.866865211298514
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.09302325581395349
+          }
+        },
+        "by_corrected_snr": {
+          "negative": {
+            "n": 0
+          },
+          "zero_to_five": {
+            "n": 105,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 105,
+              "median": 0.06396614013100621,
+              "nmad": 0.20277800606684815,
+              "mean": 0.07096497289276246
+            },
+            "standardized_residual": {
+              "n": 105,
+              "median": -0.36682845469690867,
+              "nmad": 0.9531320951604965,
+              "mean": -0.386555782407928
+            },
+            "forest_unconditional_pit_below_0p05": 0.10476190476190476,
+            "forest_selected_pit_below_0p05": 0.10476190476190476,
+            "forest_selected_pit_above_0p95": 0.009523809523809525,
+            "forest_selected_pit_deciles": [
+              23,
+              16,
+              4,
+              16,
+              15,
+              6,
+              6,
+              6,
+              7,
+              6
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.05009208038376011,
+            "selection_probability": {
+              "n": 105,
+              "median": 0.9999962783398179,
+              "nmad": 5.517733375181888e-06,
+              "mean": 0.9981907560119306
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.10476190476190476
+          },
+          "five_to_ten": {
+            "n": 117,
+            "negative_corrected_parallax": 0,
+            "model_minus_observed_parallax_mas": {
+              "n": 117,
+              "median": 0.004906849379483269,
+              "nmad": 0.1732303758522274,
+              "mean": 0.007924986782809958
+            },
+            "standardized_residual": {
+              "n": 117,
+              "median": -0.03389568258129895,
+              "nmad": 0.9683250253173381,
+              "mean": -0.051050681102135065
+            },
+            "forest_unconditional_pit_below_0p05": 0.09401709401709402,
+            "forest_selected_pit_below_0p05": 0.042735042735042736,
+            "forest_selected_pit_above_0p95": 0.10256410256410256,
+            "forest_selected_pit_deciles": [
+              8,
+              8,
+              7,
+              7,
+              10,
+              13,
+              15,
+              14,
+              15,
+              20
+            ],
+            "expected_unconditional_low_pit_given_cut": 0.09526889441867442,
+            "selection_probability": {
+              "n": 117,
+              "median": 0.9516822654312337,
+              "nmad": 0.07159246210726566,
+              "mean": 0.8008388394495971
+            },
+            "historical_cqr_five_point_approx_pit_below_0p05": 0.07692307692307693
+          }
+        }
+      },
+      "same_object_comparison": {
+        "n_same_objects": 222,
+        "old_route": {
+          "n": 222,
+          "negative_corrected_parallax": 0,
+          "model_minus_observed_parallax_mas": {
+            "n": 222,
+            "median": 0.04143801718933082,
+            "nmad": 0.19697402955069815,
+            "mean": 0.036958731976091924
+          },
+          "standardized_residual": {
+            "n": 222,
+            "median": -0.19809552351652657,
+            "nmad": 0.988741384117447,
+            "mean": -0.20623606846301518
+          },
+          "forest_unconditional_pit_below_0p05": 0.0990990990990991,
+          "forest_selected_pit_below_0p05": 0.07207207207207207,
+          "forest_selected_pit_above_0p95": 0.05855855855855856,
+          "forest_selected_pit_deciles": [
+            30,
+            24,
+            12,
+            22,
+            26,
+            19,
+            21,
+            20,
+            20,
+            28
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.07390116527080104,
+          "selection_probability": {
+            "n": 222,
+            "median": 0.9985233394760756,
+            "nmad": 0.00218929689184932,
+            "mean": 0.8941872971700163
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09009009009009009
+        },
+        "wise20_route": {
+          "n": 222,
+          "negative_corrected_parallax": 0,
+          "model_minus_observed_parallax_mas": {
+            "n": 222,
+            "median": 0.04103757282033088,
+            "nmad": 0.19856552150638188,
+            "mean": 0.03774119642940911
+          },
+          "standardized_residual": {
+            "n": 222,
+            "median": -0.19809552351652657,
+            "nmad": 0.9983114845935828,
+            "mean": -0.20973552631433445
+          },
+          "forest_unconditional_pit_below_0p05": 0.0990990990990991,
+          "forest_selected_pit_below_0p05": 0.07207207207207207,
+          "forest_selected_pit_above_0p95": 0.05855855855855856,
+          "forest_selected_pit_deciles": [
+            31,
+            24,
+            11,
+            23,
+            25,
+            19,
+            21,
+            20,
+            22,
+            26
+          ],
+          "expected_unconditional_low_pit_given_cut": 0.07390148237513386,
+          "selection_probability": {
+            "n": 222,
+            "median": 0.9985233394760756,
+            "nmad": 0.002189296885024441,
+            "mean": 0.8941809621479981
+          },
+          "historical_cqr_five_point_approx_pit_below_0p05": 0.09009009009009009
+        }
+      }
+    }
+  }
+}

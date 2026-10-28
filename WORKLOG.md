@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- NERSC weak-parallax v2 job 60454762 completed in 37 s, exit 0. The
+  WISE20 route retains the same 607/202/222 weak-parallax DESI dwarfs as
+  old clean routing, with C→B fallback changes. Forest raw low PIT in the
+  two DESI-covered original final fields is 9.4%/9.9%; the explicit
+  truncated-sample expectation is 9.0%/7.4%, and conditional low PIT is
+  5.9%/7.2%. Model-minus-observed parallax median remains +0.040/+0.041
+  mas. Copied the small manifest and documented that CQR interval endpoints
+  do not define the tested CDF. Next: paired native/degraded and 2×2
+  template/noise-environment experiment.
+
 - Implemented weak-parallax v2 diagnostic without changing frozen forests.
   `QuantileForest.predict_weights` exposes the exact training-label weights;
   the new forward model convolves this discrete Mg distribution with Gaia
