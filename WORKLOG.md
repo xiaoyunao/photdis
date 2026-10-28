@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Cold-v4 depth test prepared: added `scripts/cold_v4_noise.py` to reuse the
+  same 223 frozen templates, 8 repeats and WISE-unconditioned grz target
+  mother from the prior shared-noise experiment. Each simulated five-band
+  observation now passes the expanded model's color box, per-tier support,
+  C→B→A fallback and route CQR; it reports Mg, final modulus/distance,
+  acceptance, strict quality and source-cluster uncertainty. Python parse and
+  all 44 tests pass. NERSC jobs 60435341/342 completed source processing;
+  60435345 and preparation 60435825 were pending. No new final-field rows or
+  residuals inspected. Next: sync this program, then run it after preparation.
+
 - Cold-v4 implementation: added `src/photdis/route.py` and
   `scripts/cold_v4.py`. Preparation uses the original non-test nside64 pilot
   cells and three former development fields for tier-specific strict-anchor

@@ -74,6 +74,10 @@ conditional label rates as candidate purity.
     matched support and calibrate the complete routing flow without a center
     correction. Evaluate every registered final field and keep the original
     c3637cb forests/results frozen.
+17. In progress: pass the shared five-band flux-noise experiment through the
+    complete cold_v4 color box, feature-matched support, tier fallback,
+    forest and route-calibrated intervals. Report acceptance, strict quality,
+    final distance-modulus coverage and source-cluster uncertainty by depth.
 
 ## Scope
 
