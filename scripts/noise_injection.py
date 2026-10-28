@@ -38,9 +38,10 @@ def sha(path):
 
 def simulate(anchor, target, rng):
     """Shift all source fluxes by one modulus, then draw target-sized band noise."""
+    raw_columns = ["MASKBITS", *PHOT_COLUMNS]
     raw = np.empty(len(anchor), dtype=[(name, anchor[name.lower()].dtype)
-                                        for name in PHOT_COLUMNS])
-    for name in PHOT_COLUMNS:
+                                        for name in raw_columns])
+    for name in raw_columns:
         raw[name] = anchor[name.lower()]
     shift = 10 ** (-.4 * (target["r"].astype(float) - anchor["r"].astype(float)))
     for band in ("G", "R", "Z", "W1", "W2"):
