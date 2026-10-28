@@ -5,9 +5,11 @@ GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
-[cold-main-sequence baseline](docs/cold_baseline.md), and
-[external/depth follow-up](docs/followup_validation.md) are complete.
-The baseline is ready for user review.
+[cold-main-sequence baseline](docs/cold_baseline.md),
+[external/depth follow-up](docs/followup_validation.md), and
+[second-round final-field validation](docs/pro_followup_v2.md) are complete.
+The frozen baseline remains a bounded cold-dwarf model. Its red-end intervals
+and deep W2 application need further work before a general catalog release.
 
 ## Locations
 
@@ -67,6 +69,21 @@ It writes models and per-star test predictions to `data/cold_baseline_v3/`,
 aggregate metrics to `manifests/cold_baseline.json`, and plots to
 `figures/cold_baseline/`. The pilot-only spatial test map is frozen in the
 manifest. The bounded model uses only photometric colors as predictors.
+
+The second-round validation uses `scripts/noise_injection_v2.py`,
+`scripts/conditional_calibration.py` and `scripts/type_diagnostics.py` on
+allocated NERSC CPUs. Their exact field roles and small result manifests are
+linked from [the report](docs/pro_followup_v2.md). The separate
+`scripts/cold_candidate_demo.py` exports up to 2,000 sampled rows by default from
+independent-field color-box candidates to an ignored NERSC `data/` FITS file.
+It reports frozen-model median distances under the cold-dwarf hypothesis and
+support, optical-quality, depth and unverified-type flags; it assigns no type
+probability or calibrated interval. Run in an allocated CPU environment after
+loading the DESI Python environment:
+
+```bash
+python scripts/cold_candidate_demo.py --max-rows 2000
+```
 
 ## Stage 1 operation
 

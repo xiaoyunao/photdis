@@ -2,6 +2,25 @@
 
 ## 2026-10-28
 
+- Whole-route validation preparation: added
+  `scripts/selected_tier_validation.py` to score the frozen A/B/C forest with
+  the fixed color box, corrected tenth-neighbor support and highest-available
+  tier on all four registered final fields. It uses only photometry for routing;
+  Gaia color is a diagnostic label. Python parse and all 42 tests pass. Next:
+  run on allocated NERSC CPU and publish the small metrics manifest.
+
+- Candidate demo and final report: NERSC job 60433940 stopped at import because
+  the DESI Python environment was not loaded. Re-submitted with the environment
+  as job 60433959; it completed in 30 s with exit 0. In the independent
+  RA50–60 final field, 290,075 color-box rows were found and 2,000 sampled.
+  The frozen A/B/C tiers supplied 1,033/309/658 medians; 1,363 passed color
+  support, 835 strict optical quality, and 1,568 have observed r>=20. The
+  per-star FITS remains in NERSC data/, while its hash and counts are in
+  manifests/cold_candidate_demo_v1.json. Added the result and release
+  decision to docs/pro_followup_v2.md and updated README/PLAN. Validation:
+  42 local unit tests, Python parse and diff check pass. Next: final commit,
+  three-end sync, and user review.
+
 - Final Pro v2 evaluation: added `docs/pro_followup_v2.md`, final-field
   plots with Wilson intervals and n labels, and a bounded candidate-export
   utility. Original RA230–240 field yielded 25 cold anchors; registered

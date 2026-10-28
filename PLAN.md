@@ -57,13 +57,17 @@ conditional label rates as candidate purity.
     class-conditional recall and leakage. Use cold-dwarf-hypothesis distances
     with type-risk and support flags until calibrated type probabilities are
     possible. Keep APOGEE auxiliary and recovery candidates separate.
-13. In progress: commit and synchronize programs, manifests, reports and selected figures
+13. Complete: commit and synchronize programs, manifests, reports and selected figures
     among local, GitHub and NERSC; keep catalogs and models on NERSC. Review
     final-field metrics and unresolved limits with the user.
-14. In progress: export a bounded photometry-only candidate demonstration in
+14. Complete: export a bounded photometry-only candidate demonstration in
     an independent field, with frozen-model median distances and explicit
     support, optical quality, depth and unverified-type flags. No class
     probability or calibrated interval is assigned.
+15. In progress: audit the fixed highest-available A/B/C routing rule together
+    with color-box and support selection on all four registered final fields.
+    Report the selected fraction and direct frozen-model distance performance,
+    including Gaia-color diagnostics, before any claim about a selected catalog.
 
 ## Scope
 
@@ -74,8 +78,9 @@ the comparison standard. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Run the bounded candidate demonstration on an allocated NERSC compute node,
-then publish the final report and manifests. The v2 center correction is
-rejected for release because its bias worsened in all three large final fields.
-Red-end interval undercoverage and r=20–22 depth loss remain open science
-issues for the next method iteration.
+The v2 center correction is rejected for release because its bias worsened in
+all three large final fields. Before any general catalog release, broaden the
+strict training anchors in underrepresented blue/red colors with a new frozen
+training identity set, repeat independent final-field validation, and study
+red-end interval undercoverage plus r=20–22 depth loss. Build a DESI/Gaia
+label sample with a known selection function before fitting type probabilities.

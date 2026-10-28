@@ -1,0 +1,27 @@
+{
+  "role": "photometry_only_cold_dwarf_hypothesis_demo",
+  "field": "final_ra050_060_dec_m030_m020",
+  "sample_rule": "uniform without replacement among color-box candidates",
+  "seed": 20261028,
+  "max_rows": 2000,
+  "mother_color_box_rows": 290075,
+  "output_rows": 2000,
+  "tier_counts": {
+    "A_grz": 1033,
+    "B_grzW1": 309,
+    "C_grzW1W2": 658
+  },
+  "support_ok_rows": 1363,
+  "strict_optical_rows": 835,
+  "r_ge_20_rows": 1568,
+  "type_risk": "All rows are unverified cold-dwarf hypotheses; no class probability is assigned",
+  "distance_scope": "Frozen baseline median only; no published 68/95% interval",
+  "frozen_baseline_commit": "c3637cbc88aed5cff05e400b607ed99d5d27214e",
+  "frozen_model_sha256": {
+    "A_grz": "990a90f794c805bd80954853dc2593d688c0b0e4578e96712be0b4d19a9d379c",
+    "B_grzW1": "909fd2a768211b466b54a8eb91d01d2e37d4108d2f45251430d0a4cb31959df8",
+    "C_grzW1W2": "9e02a9ec7b51e15f8032eed051d6f4cffb5a38e81647d8980987b62103067789"
+  },
+  "output_sha256": "3884fcd616618b220ff8ae96842103de255576d6a99bc28f74c9b2bd7d8bf5cf",
+  "compute_host": "nid004444"
+}
