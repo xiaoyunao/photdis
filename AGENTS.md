@@ -2,6 +2,7 @@
 
 - Current checkpoint: the user corrected the scope on 2026-10-28. First test
   ONE sky field and show its selections, counts and plots for user review.
+  The 10°×10° pilot is now complete; wait for the user to review it.
   Do not resume the full-footprint scan or finalization before that review.
   No model training. Keep progress and explanations direct and factual.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:

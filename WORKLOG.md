@@ -2,6 +2,30 @@
 
 ## 2026-10-28
 
+- Task completed: 10°×10° pilot, RA [0,10), Dec [-10,0); all four named sweeps
+  read on nid200006 under allocation 60427335 in 285.8 seconds.
+- Results: 13,036,998 input rows → 5,574,170 PSF → 1,302,324 low-extinction PSF
+  → 312,975 measured grz → 60,633 optical high-quality → 1,802 Gaia anchors.
+  Extended: 49,906 records / 49,903 Gaia IDs; 6,683 negative parallaxes;
+  extended_quality has 33,243 records including 4,586 negative parallaxes.
+- Spectroscopy in grz: DESI 2,590 matches / 2,589 targets, 1,065 quality records;
+  APOGEE 272 matches / 270 targets, 242 quality records. DESI classes are
+  STAR 1,321, QSO 1,117, GALAXY 152. Quality giant records (logg<3.2): 19/41.
+- Finding: 6,942 Gaia high-S/N references → 1,804 with optical high-quality
+  → 1,802 final anchors. 5,079 reference stars carry z saturation flags.
+  All 242 quality APOGEE grz matches fail the optical high-quality conditions;
+  164 satisfy Gaia anchor astrometry. Final quality spectral anchors: DESI55,
+  APOGEE0. The CMD shows strong removal of the bright main sequence and giants.
+- Files: docs/pilot_10deg.md; four PNGs; result and inspection manifests;
+  scripts/pilot_field.py; configs/pilot_10deg.json. Catalog stays on NERSC at
+  data/pilot_10deg_v1/field_diagnostics.fits (313,064 diagnostic rows).
+- Validation: exact cumulative photometry/anchor predicates; Legacy IDs and
+  anchor Gaia IDs unique; saved-table bounds and counts checked; four figures
+  viewed. Refreshed plot axes include the full measured separation/temperature
+  range. Both original build and plot-only modes ran successfully.
+- Sync: programs/figures/manifests returned via NERSC Git commits and sync pull.
+  Allocation 60427335 released. Next: user review of this field and its cuts.
+
 - Pilot diagnostics: add per-condition optical attrition within the high-S/N
   Gaia reference, including individual DR11 mask-bit counts; document pilot CLI.
 - Compute allocation: 60427335, nid200006, 20-minute pilot allocation.

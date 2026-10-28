@@ -2,34 +2,27 @@
 
 ## Current Objective
 
-Test one 10°×10° sky field and present its sample selection, counts and figures for user
-review. The previous full-footprint run exceeded the intended first checkpoint.
-Full-footprint finalization is stopped.
+The 10°×10° pilot is complete. Present its results and wait for user review.
 
-## Milestones
+## Completed
 
-1. Use RA 0–10 deg, Dec -10–0 deg: the four explicit DR11 south sweeps
-   listed in configs/pilot_10deg.json.
-2. Examine its Gaia anchor/extended and spectroscopy selections and plot the
-   actual distributions. Explain the cuts with the field results.
-3. Present the field result and wait for user confirmation.
+- RA [0,10) deg, Dec [-10,0) deg; four files in configs/pilot_10deg.json.
+- Every optical, Gaia-anchor and spectral-quality cut has a remaining/removal
+  count in docs/pilot_10deg.md and manifests/pilot_10deg.json.
+- Four figures: selection counts, Gaia CMD, spectroscopy, parallax/brightness.
+- Saved-table checks passed; allocation 60427335 released.
 
-## Current State
+## Results to Review
 
-- GitHub is public; code and prior outputs remain in the repository/NERSC.
-- The 1,074-tile scan has completed; its fragments are on NERSC.
-- Serial full-table materialization was interrupted. Its partial tables are at
-  data/stage1_v1/tables_partial_serial_20261028T060107Z.
-- Both compute allocations (60424566, 60426781) have been released.
-- No model has been trained. No full-table result has been published.
+- 312,975 measured grz records; 1,802 anchors; 49,906 extended records.
+- 6,683 negative parallaxes; 4,586 remain in the extended quality subset.
+- Optical quality keeps 1,804 of 6,942 Gaia high-S/N references (26.0%).
+- The bright main sequence, turnoff and giant branch lose many objects.
+- APOGEE: 242 quality grz matches, 164 with Gaia anchor astrometry, zero with
+  optical high-quality photometry. DESI: 55 quality spectral anchors.
 
-## Validation Criteria
+## Checkpoint
 
-- Review one field's data and selection at the next checkpoint.
-- Check Gaia IDs, parallax signs, photometric cuts, spectral matches and test
-  reservations using that field.
-- Synchronize the pilot code and figures across local, NERSC and GitHub.
-
-## Next Step
-
-Run the 10°×10° pilot, show every cut and count, Gaia CMD and spectroscopy matches; then user review. Keep full-footprint processing stopped.
+Wait for the user to review the pilot counts, diagrams and optical cuts.
+The earlier full-footprint processing remains stopped; its fragment and partial
+output locations are recorded in WORKLOG.md. Training has not started.

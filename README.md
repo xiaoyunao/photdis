@@ -4,8 +4,8 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Current state: test one sky field and present its samples and plots for user
-review. Full-footprint processing is stopped. Model training has not started.
+Current state: the 10°×10° pilot is complete. See the
+[per-step counts and figures](docs/pilot_10deg.md). Waiting for user review.
 
 ## Locations
 
