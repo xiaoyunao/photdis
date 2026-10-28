@@ -24,7 +24,7 @@ from photdis.holdouts import annotate_holdouts, load_reference_catalogs
 from photdis.quantile import QUANTILES, QuantileForest, metrics, spatial_partition
 from photdis.stage1 import make_partition_map, require_compute, structured, write_json
 
-OUT = Path("data/cold_baseline_v1")
+OUT = Path("data/cold_baseline_v2")
 FIG = Path("figures/cold_baseline")
 MANIFEST = Path("manifests/cold_baseline.json")
 FEATURES = {"A_grz": ("gr0", "rz0"),
@@ -61,7 +61,9 @@ def binned_diagnostics(table, mg, selection, prediction):
                  "Gaia_G": (table["gaia_phot_g_mean_mag"], [14, 16, 17, 18, 20]),
                  "EBV": (table["ebv"], [0, .01, .02, .03]),
                  "sigma_g": (table["sigma_g"], [0, .01, .02, .03]),
-                 "DESI_logg": (table["desi_logg"], [3.5, 4.3, 4.7, 5.5])}
+                 "DESI_logg": (table["desi_logg"], [3.5, 4.3, 4.7, 5.5]),
+                 "DESI_Teff": (table["desi_teff"], [3000, 3500, 4000, 4500, 5000]),
+                 "DESI_raw_FeH": (table["desi_feh"], [-3, -1.5, -.5, .5])}
     for name, (value, edges) in variables.items():
         subset = value[selection]
         rows = []
@@ -179,6 +181,11 @@ def main():
     original_partition = make_partition_map(original_cfg)[original_cells]
     cells = hp.ang2pix(64, table["gaia_ra"], table["gaia_dec"], nest=True, lonlat=True)
     partition, cell_map = spatial_partition(cells, selected)
+    earlier = Path("data/cold_baseline_v1/summary.json")
+    if earlier.exists():
+        frozen = json.loads(earlier.read_text())["split"]["cell_map"]
+        if cell_map != frozen:
+            raise ValueError("Previously frozen spatial test cell map changed")
     if np.any((original_partition[selected] == 2) & (partition[selected] != 2)):
         raise ValueError("Originally reserved test object changed partition")
     tier_masks = {name: selected & table[flag] & np.all(np.isfinite(feature_matrix(table, FEATURES[name])), axis=1)
@@ -230,12 +237,41 @@ def main():
         pred = model.predict(feature_matrix(table, features)[test])
         summary["tiers"][name]["common_test"] = evaluate(table, mg, test, pred)
         common[name] = test, pred
+    common_test = common["A_grz"][0]
+    test_cells = cells[common_test]
+    block_ids = np.unique(test_cells)
+    rng = np.random.default_rng(20261029)
+    block_differences = {"B_minus_A": [], "C_minus_B": [], "C_minus_A": []}
+    residuals = {name: pred[:, 2] - mg[mask] for name, (mask, pred) in common.items()}
+    for _ in range(1000):
+        chosen = rng.choice(block_ids, len(block_ids), replace=True)
+        draw = np.concatenate([np.flatnonzero(test_cells == cell) for cell in chosen])
+        values = {}
+        for name, residual in residuals.items():
+            piece = residual[draw]
+            values[name] = 1.4826 * np.median(np.abs(piece - np.median(piece)))
+        block_differences["B_minus_A"].append(values["B_grzW1"] - values["A_grz"])
+        block_differences["C_minus_B"].append(values["C_grzW1W2"] - values["B_grzW1"])
+        block_differences["C_minus_A"].append(values["C_grzW1W2"] - values["A_grz"])
+    summary["common_sample"]["test_spatial_blocks"] = int(len(block_ids))
+    summary["common_sample"]["block_bootstrap_nmad_difference_mag"] = {
+        key: {"median": float(np.median(value)),
+              "p2p5": float(np.percentile(value, 2.5)),
+              "p97p5": float(np.percentile(value, 97.5))}
+        for key, value in block_differences.items()}
     save_figures(table, mg, selected, partition, summary["tiers"], predictions, common)
-    fitsio.write(str(OUT / "test_predictions.fits"), structured({
-        "source_id": table["source_id"][selected & (partition == 2)],
-        "mg_gaia": mg[selected & (partition == 2)],
-        "g0": table["g0"][selected & (partition == 2)],
-        "bp_rp": table["bp_rp_checked"][selected & (partition == 2)]}),
+    all_test = selected & (partition == 2)
+    columns = {"source_id": table["source_id"][all_test],
+               "mg_gaia": mg[all_test], "g0": table["g0"][all_test],
+               "bp_rp": table["bp_rp_checked"][all_test],
+               "sky_cell": cells[all_test]}
+    for collection, suffix in ((predictions, "full"), (common, "common")):
+        for name, (mask, prediction) in collection.items():
+            for q, value in enumerate(QUANTILES):
+                vector = np.full(len(table), np.nan, np.float32)
+                vector[mask] = prediction[:, q]
+                columns[f"{name}_{suffix}_q{int(round(value * 1000)):03d}"] = vector[all_test]
+    fitsio.write(str(OUT / "test_predictions.fits"), structured(columns),
         extname="TEST", clobber=False)
     summary["elapsed_seconds"] = time.time() - started
     write_json(OUT / "summary.json", summary)
