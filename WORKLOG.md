@@ -2,6 +2,12 @@
 
 ## 2026-10-28
 
+- Rendered and visually checked `figures/cold_v4/03_policy_depth.png` from
+  the registered development manifest, comparing acceptance and final-
+  modulus NMAD for clean highest-supported, clean WISE20 and strict-quality
+  routing. The figure is linked from the policy report. Next: publish it
+  with the calibration result and continue independent final testing.
+
 - Added a DESI class-conditional re-audit for the newly locked clean WISE20
   route, reusing the same unique-spectrum labels and calibrated-domain poor
   subset as the original v4 audit. It records retained cool dwarfs,
