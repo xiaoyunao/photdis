@@ -1,0 +1,10 @@
+{
+  "name": "native_supp_dev_ra180_190_dec_p025_p035",
+  "bounds_deg": [180, 25, 190, 35],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-180p025-185p030.fits", "sweep-180p030-185p035.fits", "sweep-185p025-190p030.fits", "sweep-185p030-190p035.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_native_ra180_190_v1",
+  "figure_dir": "figures/field_native_ra180_190",
+  "manifest_path": "manifests/field_native_ra180_190.json"
+}

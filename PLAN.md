@@ -19,10 +19,18 @@ while matched noise-field swaps change the median by at most 0.011 mag and
 mainly affect deep scatter and acceptance. An outcome-blind color/A_g match
 retains a +0.065 mag field offset. Four additional disjoint 10° DR11 south
 fields are now registered in `configs/cold_v4_native_transfer_fields.json`:
-two development diagnostics and two reserved final tests. Next: inspect the
-exact-template Gaia-label census, construct the registered fields on NERSC
-and apply a fixed native-transfer score. The existing deep final test remains
+two development diagnostics and two reserved final tests. The exact-template
+Gaia-label census is complete; matching on Legacy colors, A_g, Gaia parallax,
+BP-RP and G still leaves a positive native field difference. Next: construct
+the registered fields on NERSC and apply a fixed native-transfer score. The
+existing deep final test remains
 frozen.
+
+The RA235–245 development field produced only 17 strict anchors under the
+unchanged E(B-V)<0.03 cut. It remains in the result. A separate amendment,
+`configs/cold_v4_native_transfer_supplement.json`, registers RA180–190 as
+an additional development field before reading its source rows; the two
+reserved final fields remain fixed.
 
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.

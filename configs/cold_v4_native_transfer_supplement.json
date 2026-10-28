@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "status": "registered_before_supplemental_field_source_rows_or_residuals",
+  "parent_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "reason": "The preregistered RA235-245 development field yielded only 17 strict Gaia anchors under the unchanged EBV<0.03 sky cut; retain and report that field, and add a high-latitude development field without changing the reserved finals",
+  "supplemental_development_fields": [
+    {"name": "native_supp_dev_ra180_190_dec_p025_p035", "field_config": "configs/field_native_ra180_190.json", "bounds_deg": [180, 25, 190, 35]}
+  ],
+  "field_choice_basis": "Galactic latitude near +80 degrees and existence of four DR11 south sweep filenames; no source rows or model residuals inspected"
+}

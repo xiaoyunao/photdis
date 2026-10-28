@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Four-field array 60458047 entered NERSC debug compute. The two
+  preregistered development scans completed in 3m52s/3m45s: RA60–70 has
+  9,431 strict anchors, RA235–245 only 17 after the unchanged E(B-V)<0.03
+  cut. Both remain in the result. Before reading any supplemental source
+  rows, registered RA180–190/Dec25–35 as an extra high-latitude development
+  field in a separate amendment; all four sweep filenames exist. The two
+  original independent final fields remain unchanged and are still being
+  constructed. Next: run supplemental scan and score all roles with the
+  locked native-transfer method.
+
 - Outcome-blind Gaia-property match job 60457843 completed in 17 s.
   Adding corrected parallax to Legacy colors/A_g leaves +0.054 mag
   final-minus-cal native residual (460 pairs; bootstrap95 +0.019 to
