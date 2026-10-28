@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "status": "frozen_before_catalog_or_residual_inspection",
+  "parent_baseline_commit": "c3637cbc88aed5cff05e400b607ed99d5d27214e",
+  "previous_followup_commit": "d6371ce",
+  "selection": {
+    "field_width_deg": 10,
+    "legacy_release": "DR11 south sweep 11.0",
+    "source_sky_cut": "abs(Galactic latitude)>30 deg and E(B-V)<0.03 per source, as in stage1.json",
+    "field_choice": "Separated 10 by 10 degree regions; choose roles before reading source catalog rows or model residuals",
+    "selection_metrics": "All model tuning and conditional calibration use only development and calibration fields. Final fields are evaluated once after methods and parameters are frozen."
+  },
+  "fields": [
+    {
+      "name": "dev_cal_ra205_215_dec_m010_p000",
+      "role": "development_calibration",
+      "bounds_deg": [205, -10, 215, 0],
+      "sweep_files": ["sweep-205m010-210m005.fits", "sweep-205m005-210p000.fits", "sweep-210m010-215m005.fits", "sweep-210m005-215p000.fits"]
+    },
+    {
+      "name": "final_ra230_240_dec_p005_p015",
+      "role": "untouched_final_test",
+      "bounds_deg": [230, 5, 240, 15],
+      "sweep_files": ["sweep-230p005-235p010.fits", "sweep-230p010-235p015.fits", "sweep-235p005-240p010.fits", "sweep-235p010-240p015.fits"]
+    },
+    {
+      "name": "final_ra050_060_dec_m030_m020",
+      "role": "untouched_final_test",
+      "bounds_deg": [50, -30, 60, -20],
+      "sweep_files": ["sweep-050m030-055m025.fits", "sweep-050m025-055m020.fits", "sweep-055m030-060m025.fits", "sweep-055m025-060m020.fits"]
+    }
+  ]
+}

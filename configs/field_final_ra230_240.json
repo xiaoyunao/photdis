@@ -1,0 +1,10 @@
+{
+  "name": "final_ra230_240_dec_p005_p015",
+  "bounds_deg": [230, 5, 240, 15],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-230p005-235p010.fits", "sweep-230p010-235p015.fits", "sweep-235p005-240p010.fits", "sweep-235p010-240p015.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_final_ra230_240_v1",
+  "figure_dir": "figures/field_final_ra230_240",
+  "manifest_path": "manifests/field_final_ra230_240.json"
+}

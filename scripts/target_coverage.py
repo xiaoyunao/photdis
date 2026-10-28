@@ -15,15 +15,15 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.spatial import cKDTree
 
 from photdis.audit import checked_gaia_color
 from photdis.followup import common_nonoptical, identity_hash
 from photdis.holdouts import annotate_holdouts, load_reference_catalogs
 from photdis.stage1 import require_compute, write_json
+from photdis.support import support_radius, supported
 
-OUT = Path("data/target_coverage_v1")
-FIG = Path("figures/target_coverage")
+OUT = Path("data/target_coverage_v2")
+FIG = Path("figures/target_coverage_v2")
 FIELD_FILES = {"cal_ra140_150_dec_p005_p015": "data/field_cal_ra140_150_v1/field_diagnostics.fits",
                "test_ra190_200_dec_p015_p025": "data/field_test_ra190_200_v1/field_diagnostics.fits",
                "test_ra320_330_dec_m025_m015": "data/field_test_ra320_330_v1/field_diagnostics.fits"}
@@ -55,13 +55,11 @@ def fixed_rule():
     low = np.quantile(color, .01, axis=0)
     high = np.quantile(color, .99, axis=0)
     scale = np.array([.2, .15])
-    tree = cKDTree(color / scale)
-    nearest = tree.query(color / scale, k=10)[0][:, -1]
-    threshold = float(np.quantile(nearest, .95))
+    tree, threshold = support_radius(color, scale, neighbors=10, quantile=.95)
     return {"fit_rows": int(fit.sum()), "fit_identity_sha256": identity_hash(table["source_id"][fit]),
             "color_1pct": low.tolist(), "color_99pct": high.tolist(),
             "support_scale_mag": scale.tolist(), "support_10th_neighbor_95pct": threshold,
-            "rule": "gr0 and rz0 within fit-star 1-99% boxes; support is separate 10th-neighbor radius"}, tree
+            "rule": "gr0 and rz0 within fit-star 1-99% boxes; support uses distance to the tenth other training star"}, tree
 
 
 def breakdown(mask, selected):
@@ -79,8 +77,8 @@ def field_result(name, path, rule, tree):
     candidate = base & np.all((colors >= low) & (colors <= high), axis=1)
     support = np.zeros(len(table), bool)
     good = np.flatnonzero(base)
-    distance = tree.query(colors[good] / rule["support_scale_mag"], k=10)[0][:, -1]
-    support[good] = distance <= rule["support_10th_neighbor_95pct"]
+    support[good] = supported(tree, colors[good], rule["support_scale_mag"],
+                              rule["support_10th_neighbor_95pct"], neighbors=10)
     qualified = candidate & support
     gaia = {key[5:]: table[key] for key in COLS if key.startswith("gaia_")}
     checked = checked_gaia_color(gaia)
@@ -103,16 +101,19 @@ def field_result(name, path, rule, tree):
             "Gaia_reference": {"cold_dwarf": breakdown(cold, candidate),
                                "other": breakdown(other, candidate),
                                "cold_with_support": breakdown(cold, qualified),
-                               "other_with_support": breakdown(other, qualified),
-                               "candidate_cold_fraction": float((candidate & cold).sum() / (candidate & gaia_reference).sum())
-                               if (candidate & gaia_reference).any() else None},
+                               "other_with_support": breakdown(other, qualified)},
             "DESI_quality_cool": {"dwarf": breakdown(dwarf, candidate),
                                    "giant": breakdown(giant, candidate),
                                    "dwarf_with_support": breakdown(dwarf, qualified),
-                                   "giant_with_support": breakdown(giant, qualified),
-                                   "candidate_dwarf_fraction": float((candidate & dwarf).sum() / (candidate & cool).sum())
-                                   if (candidate & cool).any() else None},
-            "DESI_known_nonstar": breakdown(nonstar, candidate)}
+                                   "giant_with_support": breakdown(giant, qualified)},
+            "DESI_known_nonstar": breakdown(nonstar, candidate),
+            "selection_rates": {
+                "Gaia_cold_color_box_recall": breakdown(cold, candidate)["fraction_selected"],
+                "Gaia_cold_color_and_support_recall": breakdown(cold, qualified)["fraction_selected"],
+                "DESI_cool_dwarf_color_box_recall": breakdown(dwarf, candidate)["fraction_selected"],
+                "DESI_cool_dwarf_color_and_support_recall": breakdown(dwarf, qualified)["fraction_selected"],
+                "DESI_known_nonstar_color_box_leakage": breakdown(nonstar, candidate)["fraction_selected"],
+                "DESI_known_nonstar_color_and_support_leakage": breakdown(nonstar, qualified)["fraction_selected"]}}
 
 
 def main():
@@ -151,7 +152,7 @@ def main():
     fig.savefig(FIG / "01_inputs_and_cold_candidate.png", dpi=170)
     plt.close(fig)
     write_json(OUT / "summary.json", summary)
-    write_json("manifests/target_coverage.json", summary)
+    write_json("manifests/target_coverage_v2.json", summary)
 
 
 if __name__ == "__main__":

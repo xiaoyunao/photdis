@@ -2,9 +2,12 @@
 
 ## Current Objective
 
-Review the completed frozen-model follow-up with the user, then refine
-conditional interval calibration and star-type probabilities based on the
-measured red-end, depth and contamination behavior.
+Complete the 2026-10-28 Pro review. Correct the support-neighbor and PS1
+interpretation errors, preserve the frozen c3637cb model and d6371ce outputs,
+then evaluate a same-star five-band noise experiment and a conditional
+center-plus-interval calibration. Use newly preregistered final fields for the
+last evaluation. Expand spectral type diagnostics without interpreting
+conditional label rates as candidate purity.
 
 ## Milestones
 
@@ -23,19 +26,44 @@ measured red-end, depth and contamination behavior.
    acceptance, residual and interval coverage by layer and depth.
 7. Complete: quantify target input coverage and pure-photometry cold-branch selection
    against independent Gaia/DESI labels. Plot, document and sync all results.
-8. Next after user review: fit and validate color/depth-dependent interval
-   adjustments using an untouched final test, and evaluate probabilistic
-   dwarf/giant/nonstar selection. Decide on recovery-sample training only
-   after that comparison.
+8. In progress: correct the paired PS1 statistics in the report, and rerun
+   target coverage with a training threshold defined by the tenth *other*
+   object (k=11 self-query; k=10 external query). Publish clearly named
+   color-box recall, color-plus-support recall, and known-nonstar leakage.
+9. Before any source inspection: freeze `configs/next_fields.json`. Its
+   RA 205–215/Dec −10–0 field is development calibration; RA 230–240/Dec
+   5–15 and RA 50–60/Dec −30–−20 are untouched final tests. The previous
+   north/south fields now count as development evidence for any new method.
+10. Build a revised noise experiment on the identical anchor stars, identical
+    target noise rows and one shared five-band realization for A/B/C. Draw
+    noise from a grz mother pool including weak WISE detections; quantify
+    source-template noise, all-tier acceptance, strict quality, Mg and final
+    distance-modulus/distance residuals and interval coverage. Cluster repeat
+    realizations by source for uncertainty.
+11. Fit bias correction and conditional 68/95% interval expansion using only
+    application-visible Legacy/WISE colors, magnitude and photometric errors.
+    Keep fit, calibration and final test identities disjoint. Report bias,
+    NMAD, both coverage rates, low/high misses, interval width, count and
+    spatial-block uncertainty by color and depth. Compare same-star A/B/C
+    under a common training identity set before attributing band benefit.
+12. Audit dwarf, giant, nonstar and other/unknown labels across color,
+    brightness and sky; state selection of each labeled sample. Evaluate
+    class-conditional recall and leakage. Use cold-dwarf-hypothesis distances
+    with type-risk and support flags until calibrated type probabilities are
+    possible. Keep APOGEE auxiliary and recovery candidates separate.
+13. Commit and synchronize programs, manifests, reports and selected figures
+    among local, GitHub and NERSC; keep catalogs and models on NERSC. Review
+    final-field metrics and unresolved limits with the user.
 
 ## Scope
 
-Original field RA [0,10), Dec [-10,0) remains a locked baseline. New fields,
-roles and source/model hashes are in configs/followup_fields.json. The strict
-optical and Gaia criteria remain the comparison standard. The previous full-
-footprint scan remains stopped. APOGEE remains auxiliary.
+Original field RA [0,10), Dec [-10,0) remains a locked baseline. Prior field
+roles and source/model hashes are in configs/followup_fields.json; new roles
+are in configs/next_fields.json. The strict optical and Gaia criteria remain
+the comparison standard. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Present docs/followup_validation.md and the tracked manifests/figures. Ask
-the user to review the conditional-calibration and star-type next step.
+Finish the support correction and preregistration milestone, then execute
+bounded analysis on an allocated NERSC compute node. Preserve original
+results and publish v2 products separately.

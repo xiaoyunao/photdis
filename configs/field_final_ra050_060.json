@@ -1,0 +1,10 @@
+{
+  "name": "final_ra050_060_dec_m030_m020",
+  "bounds_deg": [50, -30, 60, -20],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-050m030-055m025.fits", "sweep-050m025-055m020.fits", "sweep-055m030-060m025.fits", "sweep-055m025-060m020.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_final_ra050_060_v1",
+  "figure_dir": "figures/field_final_ra050_060",
+  "manifest_path": "manifests/field_final_ra050_060.json"
+}

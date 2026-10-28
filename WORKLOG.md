@@ -2,14 +2,32 @@
 
 ## 2026-10-28
 
+- Task: read the complete latest Pro review (11,113 characters) and create a
+  detailed active goal covering statistical corrections, same-noise final
+  distance evaluation, conditional calibration, type labels and three-end
+  synchronization. Baseline c3637cb and follow-up d6371ce remain frozen.
+- Files: corrected PS1 median wording and noise scope in
+  docs/followup_validation.md; added support.py, its two unit tests and
+  target_coverage_v2 output; preregistered one new development-calibration
+  and two untouched final fields in configs/next_fields.json and three runner
+  configs; updated PLAN/WORKLOG.
+- Checks: clean branch synced with origin/NERSC before edits; all 12 selected
+  DR11 sweep filenames exist on NERSC. Python parse and two focused support
+  tests pass. No new field rows or residuals have been read.
+- Next: commit and sync the preregistration, rerun support on compute,
+  implement and validate the shared-noise distance experiment, then develop
+  conditional calibration without touching final-field results.
+
 - Task: implement the latest Pro follow-up with frozen baseline models and
   preregistered field roles. Results in docs/followup_validation.md.
 - Runs: NERSC allocation 60430171, nid200038. Three 10° fields processed;
   same-field recovery, external CQR, matched-band, flux-noise and target
   coverage scripts ran on allocated CPU. Allocation released with scancel.
 - Recovery: 324 prior PS1<0.05 candidates all pass common nonoptical cuts;
-  303 pass <0.03. Frozen A residual +0.109 mag. Paired Legacy/PS1 replacement
-  changes residual median by -0.0006 mag. Matched strict-test difference
+  303 pass <0.03. Frozen A residual +0.109 mag. The PS1-replaced residual
+  median is +0.12332 versus Legacy +0.10852 mag (difference of medians
+  +0.01480); the median within-star Legacy-minus-PS1 difference is −0.00062.
+  Matched strict-test difference
   +0.063 mag; all out-of-fit strict-control difference -0.020 mag.
 - External: cold anchors 2077 calibration, 4145 north final, 271 south final.
   CQR 95% offsets A/B/C 0.071/0.081/0.086 mag. North C coverage 93.5%,

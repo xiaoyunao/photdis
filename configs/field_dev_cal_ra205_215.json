@@ -1,0 +1,10 @@
+{
+  "name": "dev_cal_ra205_215_dec_m010_p000",
+  "bounds_deg": [205, -10, 215, 0],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-205m010-210m005.fits", "sweep-205m005-210p000.fits", "sweep-210m010-215m005.fits", "sweep-210m005-215p000.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_dev_cal_ra205_215_v1",
+  "figure_dir": "figures/field_dev_cal_ra205_215",
+  "manifest_path": "manifests/field_dev_cal_ra205_215.json"
+}
