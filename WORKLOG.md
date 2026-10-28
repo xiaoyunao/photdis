@@ -2,6 +2,22 @@
 
 ## 2026-10-28
 
+- Task: Implement sample construction and leakage checks before full scan.
+- Files: Gaia/holdout/stage1 modules, build/plot scripts, reference manifests, tests.
+- Commands: allocated DESI/APOGEE projection; seven unit tests and two synthetic
+  FITS integration tests; actual zero-point dependency smoke.
+- Findings: 5,930,124 DESI primary records and 656,962 deduplicated APOGEE records
+  projected; quality subsets 3,673,970 / 544,624 before Legacy/domain matching.
+  Reference memberships/binary groups locked; physical cluster-region guards
+  use max(rt,rJ), not circles spanning full tidal tails. References are leakage
+  controls, not independent Gaia distance truth.
+- Fixes: recover consistent spectroscopy Gaia identities before holdouts; reserve
+  shared spectrum/ambiguous and duplicate identities; handle FITS Unicode and
+  empty HDUs explicitly; normalize single-point Galactic-coordinate output.
+- Validation: nine tests passed; initial real sweep smoke caught and fixed
+  singleton-coordinate behavior before any fragments were written.
+- Remaining/next: real sweep smoke, full eligible-sky scan, final coverage audit.
+
 - Task: User approved Pro step 1 sample/coverage work and public GitHub visibility;
   training remains excluded.
 - Files changed: current scope/plan, stage1 config and source-selection modules.

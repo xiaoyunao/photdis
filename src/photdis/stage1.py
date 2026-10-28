@@ -95,7 +95,7 @@ def legacy_ids(data):
 
 def galactic(ra, dec):
     longitude, latitude = ROTATOR(ra, dec, lonlat=True)
-    return np.mod(longitude, 360), latitude
+    return np.atleast_1d(np.mod(longitude, 360)), np.atleast_1d(latitude)
 
 
 def tile_bounds(path):
@@ -194,7 +194,7 @@ def spec_columns(catalog, matched, method, ambiguous, prefix):
                  "known_contaminant", "spectype", "label_dwarf", "label_giant"):
         dtype = table.dtype[name]
         value = np.empty(len(matched), dtype=dtype)
-        value[:] = np.nan if dtype.kind == "f" else (b"" if dtype.kind == "S" else 0)
+        value[:] = np.nan if dtype.kind == "f" else ("" if dtype.kind in "SU" else 0)
         value[ok] = table[name][matched[ok]]
         if name in ("quality", "label_dwarf", "label_giant"):
             value &= ~ambiguous
@@ -264,6 +264,11 @@ def process_tile(path_string):
     source_ids = raw["REF_ID"].astype(np.int64).copy()
     source_ids[(np.char.strip(raw["REF_CAT"].astype("U")) != "G3") | (source_ids <= 0)] = 0
     gaia = join_gaia(source_ids, cfg["gaia_root"])
+    counts["legacy_g3_positive_id"] = int((source_ids > 0).sum())
+    counts["legacy_g3_unmatched"] = int(((source_ids > 0) & ~gaia["gaia_match"]).sum())
+    counts["gaia_file_missing"] = int(gaia["gaia_file_missing"].sum())
+    if counts["gaia_file_missing"]:
+        raise FileNotFoundError(f"Gaia source tiles missing for {path.name}")
     labels = derive_gaia_labels(gaia)
     sid = np.where(gaia["gaia_match"], gaia["source_id"], source_ids)
     specs = {}
@@ -280,6 +285,8 @@ def process_tile(path_string):
     recover = (sid <= 0) & (recovered_id > 0) & ~identity_conflict
     if np.any(recover):
         recovered_gaia = join_gaia(recovered_id[recover], cfg["gaia_root"])
+        if np.any(recovered_gaia["gaia_file_missing"]):
+            raise FileNotFoundError("Gaia tiles missing for recovered spectroscopy identities")
         for key in gaia:
             gaia[key][recover] = recovered_gaia[key]
         sid[recover] = recovered_id[recover]
@@ -287,7 +294,8 @@ def process_tile(path_string):
     identity_reserved = identity_conflict | specs["desi_match_ambiguous"] | specs["apogee_match_ambiguous"]
     holds = annotate_holdouts(CTX["references"], sid, raw["RA"], raw["DEC"])
     specmatch = specs["desi_match"] | specs["apogee_match"]
-    contaminant = specs["desi_known_contaminant"] | specs["apogee_known_contaminant"]
+    contaminant = ((specs["desi_known_contaminant"] & ~specs["desi_match_ambiguous"])
+                   | (specs["apogee_known_contaminant"] & ~specs["apogee_match_ambiguous"]))
     candidate = labels["contaminant_candidate"]
     stellar_core = ~contaminant & ~candidate
     anchor = phot["grz_high_quality"] & labels["anchor_astrometry"] & stellar_core
@@ -324,6 +332,7 @@ def process_tile(path_string):
                "known_contaminant": contaminant, "gaia_candidate_contaminant": candidate,
                "coverage_reference": reference, "partition": partition,
                "gaia_identity_recovered": recover, "identity_ambiguity_reserved": identity_reserved,
+               "duplicate_identity_reserved": np.zeros(len(raw), bool),
                "split_healpix": pixels.astype("i4"), "mg": mg, "sigma_mg": sigma_mg,
                "train_eligible": (partition == 0) & (anchor | extended_quality | specquality)}
     for name in raw.dtype.names:
@@ -407,17 +416,19 @@ def finalize(config):
         raise RuntimeError("Not all requested tiles completed")
     totals = Counter()
     identities, legacy, scores, lengths = [], [], [], []
+    reservation_flags = []
     spectrum_ids = {survey: [] for survey in ("desi", "apogee")}
     for path in paths:
         meta = json.loads(path.with_suffix(".json").read_text())
         if meta["signature"] != manifest["signature"]:
             raise RuntimeError(f"Mixed fragment signatures: {path}")
         totals.update(meta["counts"])
-        small = fitsio.read(str(path), columns=["source_id", "ls_id", "grz_clean", "sigma_g", "sigma_r", "sigma_z", "desi_object_id", "apogee_object_id"])
+        small = fitsio.read(str(path), ext=1, columns=["source_id", "ls_id", "grz_clean", "sigma_g", "sigma_r", "sigma_z", "desi_object_id", "apogee_object_id", "external_any", "identity_ambiguity_reserved"])
         identities.append(np.where(small["source_id"] > 0, small["source_id"], -small["ls_id"]))
         legacy.append(small["ls_id"])
         scores.append((~small["grz_clean"]).astype(float) * 100 + small["sigma_g"] + small["sigma_r"] + small["sigma_z"])
         lengths.append(len(small))
+        reservation_flags.append(small["external_any"] | small["identity_ambiguity_reserved"])
         for survey in spectrum_ids:
             spectrum_ids[survey].append(small[f"{survey}_object_id"])
     keys, lsids, score = np.concatenate(identities), np.concatenate(legacy), np.concatenate(scores)
@@ -425,6 +436,12 @@ def finalize(config):
     first = np.r_[True, keys[order[1:]] != keys[order[:-1]]] if len(order) else np.array([], bool)
     keep = np.zeros(len(keys), bool)
     keep[order[first]] = True
+    duplicate_reserved = np.zeros(len(keep), bool)
+    if len(order):
+        starts = np.flatnonzero(first)
+        sizes = np.diff(np.r_[starts, len(order)])
+        any_reserved = np.logical_or.reduceat(np.concatenate(reservation_flags)[order], starts)
+        duplicate_reserved[order[first]] = any_reserved & (sizes > 1)
     duplicate_rows = int(len(keys) - keep.sum())
     if len(np.unique(lsids[keep])) != int(keep.sum()):
         raise RuntimeError("Conflicting Gaia identities for a repeated Legacy ID")
@@ -432,8 +449,8 @@ def finalize(config):
     # quarantined together. This also covers spectra without a Gaia identity.
     identity_reserved = np.zeros(len(keep), bool)
     for survey, chunks in spectrum_ids.items():
-        ids = np.concatenate(chunks)
-        unique, counts = np.unique(ids[keep & (ids != b"")], return_counts=True)
+        ids = np.char.strip(np.concatenate(chunks).astype("U"))
+        unique, counts = np.unique(ids[keep & (ids != "")], return_counts=True)
         repeated = unique[counts > 1]
         identity_reserved |= np.isin(ids, repeated)
     del identities, legacy, scores, score, order, keys, lsids, spectrum_ids, ids
@@ -454,14 +471,17 @@ def finalize(config):
         for path, length in zip(paths, lengths):
             rows = np.flatnonzero(keep[offset:offset+length])
             reserved = identity_reserved[offset:offset+length][rows]
+            duplicate_external = duplicate_reserved[offset:offset+length][rows]
             offset += length
-            table = fitsio.read(str(path), rows=rows)
+            table = fitsio.read(str(path), ext=1, rows=rows)
             table["identity_ambiguity_reserved"] |= reserved
-            table["partition"][table["identity_ambiguity_reserved"]] = 3
-            table["train_eligible"][table["identity_ambiguity_reserved"]] = False
+            table["duplicate_identity_reserved"] = duplicate_external
+            quarantine = table["identity_ambiguity_reserved"] | duplicate_external
+            table["partition"][quarantine] = 3
+            table["train_eligible"][quarantine] = False
             role_masks = {"parent": np.ones(len(table), bool), "anchor": table["anchor"],
                           "extended": table["extended"], "spectroscopy": table["spectroscopy_match"],
-                          "external_test": table["external_any"] | table["identity_ambiguity_reserved"], "coverage_reference": table["coverage_reference"]}
+                          "external_test": table["external_any"] | table["identity_ambiguity_reserved"] | table["duplicate_identity_reserved"], "coverage_reference": table["coverage_reference"]}
             if np.any(table["external_any"] & (table["partition"] != 3)):
                 raise RuntimeError("External group leaked into a nonexternal partition")
             if np.any(table["anchor"] & (~np.isfinite(table["mg"]) | (table["snr_corr"] < 20))):
@@ -476,7 +496,7 @@ def finalize(config):
                 final_counts[name] += len(subset)
                 bins = np.bincount(subset["partition"], minlength=4)
                 partition_counts[name] = (np.asarray(partition_counts[name]) + bins).tolist()
-            for key in ("gaia_match", "extended_quality", "spectro_quality", "known_contaminant", "gaia_candidate_contaminant", "identity_ambiguity_reserved", "gaia_identity_recovered"):
+            for key in ("gaia_match", "extended_quality", "spectro_quality", "known_contaminant", "gaia_candidate_contaminant", "identity_ambiguity_reserved", "duplicate_identity_reserved", "gaia_identity_recovered"):
                 final_counts[key] += int(table[key].sum())
             final_counts["negative_parallax"] += int((table["extended"] & (table["gaia_parallax"] < 0)).sum())
             final_counts["zero_parallax"] += int((table["extended"] & (table["gaia_parallax"] == 0)).sum())
