@@ -2,6 +2,34 @@
 
 ## 2026-10-28
 
+- Milestone: completed the same-field photometry audit and bounded cold-main-
+  sequence baseline. The final forest run used job 60429237 on nid200038;
+  model evaluation completed in 13.1 s. Final source commit 6ad4da9 and
+  generated-product commit f3fb179.
+- Sample: 1,802 strict anchors; exclude 82 external-reference anchors; verified
+  Gaia color and cold CMD branch leave 1,527. NESTED nside=64 cells freeze
+  1,039/250/238 train/validation/test; all original nside=8 selected stars
+  were in train. Full A/B/C tier counts: 1,527/1,456/1,453.
+- Results: empirical r-z cubic test NMAD 0.362 mag; QRF full-tier NMAD
+  0.294/0.282/0.240 mag, actual 95% coverage 0.895/0.911/0.915.
+  Same 223 test stars at leaf 20: 0.283/0.283/0.251 mag. Spatial-block
+  bootstrap C-minus-A 95% interval [-0.095,+0.0004] mag. PS1-agreeing
+  excluded cold group (324 stars) has +0.109 mag A-model median residual.
+- Method fix: replace interpolated weighted forest CDF with empirical weighted
+  order-statistic quantiles, excluding zero-weight labels. Added a regression
+  assertion that quantiles are observed response values; three targeted tests
+  and full 32-test suite passed. This changed final figures and metrics.
+- Validation: test_predictions.fits has 238 unique Gaia IDs and 35 columns;
+  all sky cells map to frozen test partition. Recomputed A/B/C test NMAD from
+  saved per-star quantiles and matched the published manifest within 1e-4 mag.
+  Viewed final audit/CMD/baseline figures. Models and per-star tables remain
+  under ignored NERSC data/cold_baseline_v3.
+- Files: docs/pilot_audit.md, docs/cold_baseline.md, corrected pilot docs,
+  README/PLAN/WORKLOG; scripts/cold_baseline.py, src/photdis/quantile.py,
+  three baseline figures and manifests. Remaining science checks: 95% interval
+  undercoverage, bright-star recovery offset and few spectral test stars.
+- Next: synchronize final documentation and stop for user review.
+
 - Task: user extended the Pro review goal through a bounded cold-main-sequence
   baseline. The same-field audit completed on nid200059 in 441.8 s and synced.
 - Findings: canonical Gaia reference 6,942; strict anchors 1,802; 22 catalog

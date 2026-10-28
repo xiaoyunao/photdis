@@ -4,8 +4,9 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Current state: the 10°×10° pilot is complete. See the
-[per-step counts and figures](docs/pilot_10deg.md). Waiting for user review.
+Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
+and [cold-main-sequence baseline](docs/cold_baseline.md) are complete.
+The baseline is ready for user review.
 
 ## Locations
 
@@ -25,7 +26,8 @@ Full scans, crossmatches and training must use allocated compute resources.
 
 Stage 1 uses the NERSC DESI environment (`source
 /global/common/software/desi/desi_environment.sh main`) for NumPy, fitsio,
-Astropy, healpy, SciPy and Matplotlib. `gaiadr3-zeropoint==0.1.0` is installed
+Astropy, healpy, SciPy, Matplotlib, scikit-learn and joblib.
+`gaiadr3-zeropoint==0.1.0` is installed
 without dependencies into ignored `.deps/` for the published Gaia parallax
 zero-point correction. Export `PYTHONPATH=$PWD/src:$PWD/.deps` when running.
 
@@ -52,7 +54,18 @@ python scripts/pilot_field.py --config configs/pilot_10deg.json
 Outputs: `data/pilot_10deg_v1/field_diagnostics.fits`, the per-step
 `summary.json`, `manifests/pilot_10deg.json` and `figures/pilot_10deg/`.
 The Gaia CMD compares the astrometric sample, measured-grz subset and final
-anchors using Gaia BP-RP and Gaia absolute G magnitude.
+anchors using validated Gaia BP/RP measurements and Gaia absolute G magnitude.
+
+The audited baseline reads `data/pilot_audit_v1/reference.fits` on NERSC:
+
+```bash
+python scripts/cold_baseline.py
+```
+
+It writes models and per-star test predictions to `data/cold_baseline_v3/`,
+aggregate metrics to `manifests/cold_baseline.json`, and plots to
+`figures/cold_baseline/`. The pilot-only spatial test map is frozen in the
+manifest. The bounded model uses only photometric colors as predictors.
 
 ## Stage 1 operation
 
