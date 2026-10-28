@@ -2,14 +2,43 @@
 
 ## Current Objective
 
-The latest Pro review of cold-v4 is complete through one independent deep
-final field. Keep the v4 forests, strict-anchor final fields and prior
-baselines frozen. The clean WISE20 application route is hash locked. Its
-measured-r depth interval v2 improves coverage but misses 68% and 95% nominal
-coverage in several independent bins; publish the conditional median-distance
-path with type/support/quality flags and keep the deep intervals diagnostic.
-The next research objective is a new, preregistered center/tail investigation
-and independent final test, followed by type selection with calibrated priors.
+Diagnose why the cold-v4 deep calibration and independent field differ in
+distance-modulus center and scatter, and correct the weak-parallax diagnostic.
+Keep the v4 forests, color box, support domain, WISE20 route, strict-anchor
+final fields and deep calibration/final v2 outputs frozen. Use the already
+inspected RA35–45 and RA170–180 fields only for cause analysis. If the cause
+supports a method change, preregister new calibration/final fields before
+examining their residuals. The full detailed objective is in the active goal.
+
+## Current Diagnostic Round
+
+1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
+   Gaia `M_g` labels and cross-field dust handling in noise injection.
+2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted
+   magnitude distribution, convolve with Gaia error, condition on the actual
+   corrected-parallax/SNR<10 selection, compare frozen WISE20 with old routing
+   on the same objects, and retain negative parallaxes.
+3. On previously inspected calibration/final fields, record native and
+   degraded predictions per original source. Decompose native residual and
+   degradation increment, compare actual fallback with supported fixed tier,
+   and report source-cluster uncertainty.
+4. Run the 2×2 template-field × noise-environment exchange with common
+   target depths, paired accepted-source differences and full acceptance.
+   Diagnose error, color, support, E(B-V), source population and tier changes
+   before changing the center or interval model.
+5. Recheck wide binaries under WISE20; distinguish Blanco 1 internal scatter
+   from an absolute zero-point test. Inspect the 12 accepted DESI cold giants
+   and 14 optical-box-rejected metal-poor cold dwarfs individually, with
+   quality, boundary and CMD/feature-space plots.
+6. Decide from the evidence whether to expand development/calibration samples,
+   fit a continuous error scale or add a separate stellar branch. Register
+   new sky roles before any new independent final evaluation. Preserve all
+   failed/negative results, update reports and three-machine synchronization.
+
+Validation: local targeted tests and scientific invariants; NERSC compute
+allocation for all catalog scans and simulations; check hashes/role isolation,
+independent-source bootstrap and final result manifests. No new model or
+nominal deep interval is released solely from old final-field diagnostics.
 
 ## Milestones
 

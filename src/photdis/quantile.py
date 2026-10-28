@@ -70,6 +70,23 @@ class QuantileForest:
             results[i] = conditional_y[np.minimum(positions, len(conditional_y) - 1)]
         return results
 
+    def predict_weights(self, x):
+        """Return normalized training-label weights for each query.
+
+        These weights define a discrete conditional distribution, including
+        its tails. Later CQR expansion only calibrates intervals.
+        """
+        x = np.asarray(x, float)
+        leaves = self.model.apply(x)
+        weights = np.zeros((len(x), len(self.y)), float)
+        for i in range(len(x)):
+            for j, members in enumerate(self.members):
+                ids = members[int(leaves[i, j])]
+                weights[i, ids] += 1 / (len(self.members) * len(ids))
+        if not np.allclose(weights.sum(axis=1), 1.0, atol=1e-10):
+            raise ValueError("Quantile forest weights do not sum to one")
+        return weights
+
 
 def metrics(truth, predicted, g0=None, parallax=None):
     """Residual, robust scatter, interval coverage and optional distance error."""

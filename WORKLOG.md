@@ -2,6 +2,27 @@
 
 ## 2026-10-28
 
+- Implemented weak-parallax v2 diagnostic without changing frozen forests.
+  `QuantileForest.predict_weights` exposes the exact training-label weights;
+  the new forward model convolves this discrete Mg distribution with Gaia
+  formal errors and divides PIT by F(10 sigma) for the explicit selected
+  parallax threshold. It reports raw/conditional PIT, the raw-tail null
+  expectation, historical five-CQR-point heuristic on same objects, and
+  old/WISE20 routing on common objects. Added unit tests for weights and
+  analytic truncated Gaussian; 11 focused tests pass. Next: run on NERSC
+  allocated CPU, inspect results and document inference limits.
+
+- Started the latest Pro follow-up as a detailed active goal. Recovered
+  `dc51856` on clean local/GitHub/NERSC main (all refs identical) and read
+  current WORKLOG/PLAN. Audited extinction flow: DR11 SFD98-derived
+  `MW_TRANSMISSION` enters all five AB magnitudes, Gaia `M_g` uses `g0`, and
+  cross-field simulation scales flux by target/source transmission before
+  recomputing colors. Added a numerical cross-field transmission regression;
+  8 focused tests pass. Documented full-column and dust-uncertainty limits in
+  `docs/extinction_audit.md`. Found the old weak-parallax PIT uses CQR endpoints
+  as a full CDF and compares a parallax-truncated sample to uniform PIT;
+  next: implement forest-weighted distribution and selected PIT under WISE20.
+
 - Final deep manifest SHA-256 matches the NERSC compute output
   (`0f9a907aacf02757503a703c2d543985115d9a8aa4694983f13ad36ccccee13c`).
   Verified role/source separation, four observed-r bins, tier and tail-count

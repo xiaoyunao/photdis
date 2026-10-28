@@ -37,3 +37,55 @@ def parallax_forward_check(observed_mas, error_mas, g0, absolute_magnitude_quant
             "model_parallax_variance_mas2": variance,
             "standardized_residual": standardized,
             "approximate_pit": pit}
+
+
+def weighted_selected_parallax_check(observed_mas, error_mas, g0,
+                                     training_mg, forest_weights,
+                                     selection_snr_max=10.0, chunk_size=128):
+    """Convolve a discrete forest Mg distribution and condition on Y/sigma < cut.
+
+    The returned selected PIT is conditional only on the explicit observed
+    parallax threshold. Other catalog and spectroscopy selection remains part
+    of the population being evaluated, rather than the conditional CDF.
+    """
+    observed = np.asarray(observed_mas, float)
+    error = np.asarray(error_mas, float)
+    g0 = np.asarray(g0, float)
+    mg = np.asarray(training_mg, float)
+    weights = np.asarray(forest_weights, float)
+    if (observed.ndim != 1 or error.shape != observed.shape or g0.shape != observed.shape
+            or mg.ndim != 1 or weights.shape != (len(observed), len(mg))):
+        raise ValueError("Forward-parallax distribution arrays must align")
+    if (not np.isfinite(observed).all() or not np.isfinite(error).all()
+            or not np.isfinite(g0).all() or not np.isfinite(mg).all()
+            or not np.isfinite(weights).all() or np.any(error <= 0)
+            or np.any(weights < 0) or not np.allclose(weights.sum(axis=1), 1, atol=1e-8)
+            or not np.isfinite(selection_snr_max) or selection_snr_max <= 0):
+        raise ValueError("Invalid parallax, error or forest weights")
+    threshold = selection_snr_max * error
+    if np.any(observed >= threshold):
+        raise ValueError("Observed parallax fails the stated upper selection")
+    result = {name: np.empty(len(observed), float) for name in (
+        "model_parallax_mean_mas", "model_parallax_variance_mas2",
+        "standardized_residual", "unconditional_pit", "selection_probability",
+        "selected_pit")}
+    for start in range(0, len(observed), chunk_size):
+        stop = min(len(observed), start + chunk_size)
+        p = 10 ** ((mg[None, :] - g0[start:stop, None] + 10) / 5)
+        w = weights[start:stop]
+        mean = np.sum(w * p, axis=1)
+        variance = np.sum(w * (p - mean[:, None]) ** 2, axis=1)
+        cdf_y = np.sum(w * ndtr((observed[start:stop, None] - p) /
+                                  error[start:stop, None]), axis=1)
+        cdf_t = np.sum(w * ndtr((threshold[start:stop, None] - p) /
+                                  error[start:stop, None]), axis=1)
+        if np.any(cdf_t <= 0):
+            raise ValueError("Predicted selection probability underflowed to zero")
+        result["model_parallax_mean_mas"][start:stop] = mean
+        result["model_parallax_variance_mas2"][start:stop] = variance
+        result["standardized_residual"][start:stop] = ((observed[start:stop] - mean) /
+            np.sqrt(error[start:stop] ** 2 + variance))
+        result["unconditional_pit"][start:stop] = cdf_y
+        result["selection_probability"][start:stop] = cdf_t
+        result["selected_pit"][start:stop] = np.clip(cdf_y / cdf_t, 0, 1)
+    return result

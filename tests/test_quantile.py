@@ -16,6 +16,15 @@ class QuantileTests(unittest.TestCase):
         self.assertTrue(np.all(np.isin(result, [-2.0, 2.0])))
         self.assertLess(result[0, 0], -1)
         self.assertGreater(result[0, -1], 1)
+        weights = model.predict_weights(np.array([[25.0], [55.0]]))
+        self.assertEqual(weights.shape, (2, len(y)))
+        np.testing.assert_allclose(weights.sum(axis=1), 1)
+        self.assertTrue(np.all(weights >= 0))
+        order = np.argsort(y)
+        for i in range(len(weights)):
+            cumulative = np.cumsum(weights[i, order])
+            expected = y[order][np.searchsorted(cumulative, QUANTILES, side="left")]
+            np.testing.assert_array_equal(result[i], expected)
 
     def test_spatial_cells_never_split(self):
         cells = np.repeat(np.arange(70), 10)
