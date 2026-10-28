@@ -2,6 +2,21 @@
 
 ## 2026-10-28
 
+- Added a DESI class-conditional re-audit for the newly locked clean WISE20
+  route, reusing the same unique-spectrum labels and calibrated-domain poor
+  subset as the original v4 audit. It records retained cool dwarfs,
+  cool giants/nonstars, tier transitions and lost baseline selections.
+  Local parse and focused tests pass. Next: sync once the calibration job
+  completes, then run this audit alongside the real candidate composition.
+
+- Extended the locked-policy application audit to report both real candidate
+  tier/clean/brightness transitions and direct, un-recalibrated distance
+  metrics on independently selected strict Gaia anchors in the same three
+  fields. Source, route and forest hashes are checked. This keeps the new
+  routing assessment separate from its forthcoming noise-specific CQR.
+  Local parse and route-policy test pass. Next: sync after calibration job
+  ends and run this bounded application audit on CPU.
+
 - Center-diagnostic job 60443694 completed (25 s, exit 0), with frozen
   preparation SHA confirmed. Published manifest/report. RA150–160 strict
   anchors show +0.005 mag bias at r14–17 versus +0.084 at r17–19;
