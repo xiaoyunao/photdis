@@ -108,14 +108,18 @@ populations with reference systems and weak-parallax forward checks.
     and final-test identities and sky blocks. Calibrate final distance-modulus
     intervals by chosen tier and measurable noise/support using independent
     sources. RA35–45 calibration completed with one observation per source
-    per depth; assess deep coverage and clean acceptance on unseen RA170–180.
+    per target-noise depth. Supersede that v1 calibration: it grouped by the
+    injected target-noise r, which the application cannot observe. Refit v2
+    with measured-r bins and one unique calibration source per measured bin,
+    then test once on unseen RA170–180. Apply deep intervals only at measured
+    r=18–22.
 22. In progress: used isolated wide-binary/cluster reference systems for color- and
     brightness-dependent distance checks, then assess weak/negative Gaia
     parallaxes with a parallax-space forward model and documented selection.
     Examine metal-poor, binary, extinction and field dependence of bias.
     Initial final-field check has 456 clean-routed pairs and 201 Blanco 1
     members; the pair fainter-minus-brighter median is +0.046 mag.
-23. Pending: publish the bounded application-range report, selected figures,
+23. In progress: publish the bounded application-range report, selected figures,
     small manifests and validation; update README/WORKLOG/PLAN, commit and
     sync local, public GitHub and NERSC. Keep catalogs/models on NERSC.
 
@@ -129,10 +133,9 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-First quantify the calibration/application mismatch: calibration and strict
-final stars are 92%–94% C, while actual candidates are 57% A, 19% B, 24% C.
-Calculate complete-route ∩ grz_clean and conditional performance in existing
-fields before choosing new cuts. Depth simulations currently have 91%–93%
-95%-interval coverage; the deepest bin is clearly below nominal. Preserve
-that finding while planning an independent source/sky calibration experiment.
-The v2 center correction remains rejected.
+Finish the measured-r v2 calibration and one independent RA170–180 final
+evaluation. Compare observed-r depth bins and A/B/C, report acceptance,
+final distance-modulus bias/NMAD, 68%/95% coverage and width with source
+cluster uncertainty. Close the application-range report for r18–22 and
+identify the uncalibrated bright/faint ranges. The v2 center correction
+remains rejected.

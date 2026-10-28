@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Found that the first deep CQR grouped by target-noise r bin while the
+  application only sees measured r. Canceled unpublished final job 60444633.
+  Changed the calibration key to the measured r=18–22 bin and deduplicated
+  source identities within each bin across target-noise experiments. Added
+  measured-bin aggregate metrics and a regression for boundary crossings;
+  focused tests pass. The v1 calibration is superseded as an application
+  interval rule. Next: rerun independent calibration v2 and final test, then
+  update the application boundary report and synchronize.
+
 - Locked-policy application job 60444634 (34 s) and DESI job 60444635
   (24 s) completed on NERSC CPU. Verified policy/preparation SHA. Three
   final fields retain 395,629 clean candidates versus 443,280 baseline,

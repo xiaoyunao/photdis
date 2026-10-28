@@ -24,9 +24,9 @@ from cold_v4_policy_noise import (REGISTRATION, frozen_models, load_environment,
 from noise_injection_v2 import source_cluster_ci
 
 LOCK = Path("configs/cold_v4_deep_policy.json")
-CAL_RESULT = Path("data/cold_v4_deep/calibration.json")
-CAL_TRACKED = Path("manifests/cold_v4_deep_calibration.json")
-FINAL_RESULT = Path("data/cold_v4_deep/final.json")
+CAL_RESULT = Path("data/cold_v4_deep/calibration_v2.json")
+CAL_TRACKED = Path("manifests/cold_v4_deep_calibration_v2.json")
+FINAL_RESULT = Path("data/cold_v4_deep/final_v2.json")
 MIN_GROUP = 80
 
 
@@ -60,7 +60,11 @@ def draw_field(field, config, policy, repeats, rng, route, forests):
         phot = derive_photometry(raw, **stage["photometry"])
         routed = route_rows(phot, route)
         level = choose_policy(phot, routed, policy)
+        observed_r = np.asarray(phot["r"], float)
+        application_depth = np.isfinite(observed_r) & (observed_r >= 18) & (observed_r < 22)
+        level[~application_depth] = 0
         selected = level > 0
+        observed_depth_index = np.searchsorted([19, 20, 21], observed_r, side="right")
         predicted_mg = np.full((len(level), 5), np.nan)
         sigma = np.full(len(level), np.nan)
         support = np.full(len(level), np.nan)
@@ -79,7 +83,9 @@ def draw_field(field, config, policy, repeats, rng, route, forests):
             "template_sources": len(template), "draws": len(level),
             "grz_base": int(phot["grz_base"].sum()),
             "grz_clean": int(phot["grz_clean"].sum()),
+            "observed_r_18_to_22": int(application_depth.sum()),
             "selected": selected, "level": level,
+            "observed_depth_index": observed_depth_index,
             "source_index": source_index,
             "truth_mg": truth_mg[source_index],
             "truth_mu": truth_mu[source_index] + shift,
@@ -104,7 +110,7 @@ def group_key(depth, tier=None, color=None, error=None, support=None):
 
 
 def offset_candidates(row, index):
-    depth = row["depth_index"]
+    depth = int(row["observed_depth_index"][index])
     tier = int(row["level"][index])
     color = int(row["color_group"][index])
     error = int(row["error_group"][index])
@@ -116,18 +122,24 @@ def offset_candidates(row, index):
 
 
 def fit_offsets(records):
-    """Use one draw per source/depth; progressively pool sparse conditions."""
+    """Use one independent source per observed-r bin; pool sparse conditions."""
     members = {}
+    seen_source_bin = set()
     for row in records:
         if row["draws"] != row["template_sources"]:
             raise ValueError("Calibration requires one draw per source and depth")
         for index in np.flatnonzero(row["selected"]):
+            unique_key = (int(row["observed_depth_index"][index]),
+                          int(row["source_index"][index]))
+            if unique_key in seen_source_bin:
+                continue
+            seen_source_bin.add(unique_key)
             for key in offset_candidates(row, index):
                 members.setdefault(key, []).append((row, index))
     offsets = {}
     for key, rows in members.items():
         n = len(rows)
-        if n < MIN_GROUP and key.count("*") < 4:
+        if n < 19 or (n < MIN_GROUP and key.count("*") < 4):
             continue
         truth = np.array([row["truth_mu"][i] for row, i in rows])
         predicted = np.array([row["predicted_mu"][i] for row, i in rows])
@@ -160,12 +172,16 @@ def summarize(row, adjusted, seed):
               "independent_template_sources": row["template_sources"],
               "draws": row["draws"],
               "grz_base": row["grz_base"], "grz_clean": row["grz_clean"],
+              "observed_r_18_to_22": row["observed_r_18_to_22"],
               "selected": int(selected.sum()),
               "acceptance": float(selected.mean()),
               "selected_by_tier": {tier: int(np.sum(row["level"] == number))
                                    for tier, number in LEVEL.items()},
               "template_noise_gt_target_fraction": row["template_noise_gt_target"],
               "tiers": {}, "strata": {}}
+    report["selected_by_observed_r_bin"] = {
+        str(index): int(np.sum(selected & (row["observed_depth_index"] == index)))
+        for index in range(4)}
     for name, use in [("all", selected), *[(tier, row["level"] == number)
                                           for tier, number in LEVEL.items()]]:
         if not use.any():
@@ -208,6 +224,43 @@ def summarize(row, adjusted, seed):
                     interval_diagnostics(row["truth_mu"][use], adjusted[use])
                     if use.sum() >= 20 else {"n": int(use.sum())})
     return report
+
+
+def summarize_observed_bins(rows, adjusted_rows, seed):
+    """Pool experimental depth strata by the r bin seen by the application."""
+    result = {}
+    for depth in range(4):
+        pooled = {}
+        for name in ("truth_mu", "predicted_mu", "calibrated_mu", "source_index", "level"):
+            pieces = []
+            for row, adjusted in zip(rows, adjusted_rows):
+                use = row["selected"] & (row["observed_depth_index"] == depth)
+                array = adjusted if name == "calibrated_mu" else row[name]
+                pieces.append(array[use])
+            pooled[name] = np.concatenate(pieces)
+        entry = {"observed_r_bin": [18 + depth, 19 + depth],
+                 "n_draws": len(pooled["truth_mu"]),
+                 "n_sources": int(len(np.unique(pooled["source_index"]))),
+                 "tiers": {}}
+        for name, use in [("all", np.ones(entry["n_draws"], bool)),
+                          *[(tier, pooled["level"] == number)
+                            for tier, number in LEVEL.items()]]:
+            if not use.any():
+                continue
+            truth = pooled["truth_mu"][use]
+            direct = pooled["predicted_mu"][use]
+            cal = pooled["calibrated_mu"][use]
+            sources = pooled["source_index"][use]
+            entry["tiers"][name] = {
+                "n_draws": len(truth),
+                "n_sources": int(len(np.unique(sources))),
+                "direct_mu": interval_diagnostics(truth, direct),
+                "calibrated_mu": interval_diagnostics(truth, cal),
+                "calibrated_source_cluster_ci": source_cluster_ci(
+                    truth, cal, sources, seed=seed + depth + len(entry["tiers"]), n_boot=200),
+            }
+        result[str(depth)] = entry
+    return result
 
 
 def main():
@@ -255,16 +308,20 @@ def main():
               "independent_template_sources": len(source_id),
               "template_source_id_sha256": identity_hash(source_id),
               "repeats_per_source_and_depth": repeats,
-              "calibration_unit": "one independent source per depth; repeats only in final",
-              "condition_hierarchy": "depth+tier+color_tertile+used_error_0p10+support_0p8; sparse groups pool to depth+tier+color, depth+tier, depth",
+              "calibration_unit": "one independent source per measured-r bin; repeated source crossings are deduplicated within each measured-r bin; repeats only in final",
+              "condition_hierarchy": "measured-r-bin+tier+color_tertile+used_error_0p10+support_0p8; sparse groups pool to measured-r-bin+tier+color, measured-r-bin+tier, measured-r-bin",
               "min_group_independent_sources": MIN_GROUP,
               "offsets": offsets if args.mode == "calibrate" else None,
               "depths": []}
+    adjusted_rows = []
     for row in rows:
         adjusted, applied = calibrated_mu(row, offsets)
+        adjusted_rows.append(adjusted)
         summary = summarize(row, adjusted, registration["seed"] + row["depth_index"])
         summary["applied_offset_group_counts"] = applied
         result["depths"].append(summary)
+    result["observed_r_bins"] = summarize_observed_bins(
+        rows, adjusted_rows, registration["seed"] + 700)
     output.parent.mkdir(parents=True, exist_ok=True)
     write_json(output, result)
 
