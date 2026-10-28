@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "registered_local_date": "2026-10-29",
+  "status": "registered_before_six_field_sky_census_scores_or_cross_sign_source_rows",
+  "parent_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "sky_census_registration_sha256": "97562c3ec52e3145ced32cac94358e969c56a8bfe57009238afc0eb0314c9c7b",
+  "purpose": "diagnostic coordinate-sign crossover for frozen native residuals; Galactic latitude and ecliptic latitude have opposite signs in all four fields; distinguish those observed sky associations without fitting corrections",
+  "fixed_comparison": "compare overall and corrected-parallax >=2 mas median residual signs and magnitudes across plus-b/minus-ecliptic versus minus-b/plus-ecliptic groups, retaining all low-yield fields",
+  "selection_basis": "disjoint 10-by-10-degree fields chosen from coordinate geometry; all 16 DR11 south sweep files exist; no source rows or scores inspected",
+  "diagnostic_fields": [
+    {
+      "name": "cross_sign_ra160_170_dec_m025_m015",
+      "field_config": "configs/field_cross_ra160_170.json",
+      "bounds_deg": [
+        160,
+        -25,
+        170,
+        -15
+      ],
+      "center_galactic_latitude_deg": 35.69,
+      "center_ecliptic_latitude_deg": -24.24
+    },
+    {
+      "name": "cross_sign_ra180_190_dec_m025_m015",
+      "field_config": "configs/field_cross_ra180_190.json",
+      "bounds_deg": [
+        180,
+        -25,
+        190,
+        -15
+      ],
+      "center_galactic_latitude_deg": 42.26,
+      "center_ecliptic_latitude_deg": -16.33
+    },
+    {
+      "name": "cross_sign_ra340_350_dec_p005_p015",
+      "field_config": "configs/field_cross_ra340_350.json",
+      "bounds_deg": [
+        340,
+        5,
+        350,
+        15
+      ],
+      "center_galactic_latitude_deg": -44.08,
+      "center_ecliptic_latitude_deg": 15.11
+    },
+    {
+      "name": "cross_sign_ra000_010_dec_p015_p025",
+      "field_config": "configs/field_cross_ra000_010.json",
+      "bounds_deg": [
+        0,
+        15,
+        10,
+        25
+      ],
+      "center_galactic_latitude_deg": -42.26,
+      "center_ecliptic_latitude_deg": 16.33
+    }
+  ]
+}

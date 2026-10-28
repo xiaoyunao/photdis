@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Before the six-field sky-census scores were read, noticed all six
+  diagnostic centers have matching signs of Galactic and ecliptic
+  latitude. Registered four disjoint 10-degree coordinate-sign crossover
+  fields (two b>0/β<0, two b<0/β>0) in
+  `configs/cold_v4_native_transfer_cross_sign.json`; all 16 DR11 south
+  sweep files exist. Fixed the comparison of native median residuals
+  overall and at corrected parallax>=2 mas, with no model correction.
+  Registration SHA links to the six-field census registration, geometry
+  and disjointness checks pass. Added compute-array and frozen-score
+  runners. Next: finish six-field jobs, then run four crossover fields.
+
 - Cancelled still-pending regular sky-census array 60460329 and dependent
   score 60460382 after scheduler returned no start estimate. Changed the
   identical six-field array to 30-minute debug QoS; previous analogous

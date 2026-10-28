@@ -91,6 +91,14 @@ stratum, and northern |z|<200 pc stars are strongly positive. These
 kinematic cuts do not isolate a single population cause. Await the six
 field census, then make a final bounded method decision.
 
+Coordinate-sign issue: all first six census fields have Galactic and
+ecliptic latitudes of the same sign. Four additional disjoint fields are
+registered before reading the first six scores in
+`configs/cold_v4_native_transfer_cross_sign.json`: two b>0/β<0 and two
+b<0/β>0. Run them after the six-field census. Their fixed diagnostic is
+whether the native residual sign tracks Galactic or ecliptic hemisphere
+more consistently; do not fit a hemisphere correction from these fields.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

@@ -1,0 +1,20 @@
+{
+  "name": "cross_sign_ra180_190_dec_m025_m015",
+  "bounds_deg": [
+    180,
+    -25,
+    190,
+    -15
+  ],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-180m025-185m020.fits",
+    "sweep-180m020-185m015.fits",
+    "sweep-185m025-190m020.fits",
+    "sweep-185m020-190m015.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cross_ra180_190_v1",
+  "figure_dir": "figures/field_cross_ra180_190",
+  "manifest_path": "manifests/field_cross_ra180_190.json"
+}

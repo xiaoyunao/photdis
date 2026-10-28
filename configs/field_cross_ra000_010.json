@@ -1,0 +1,20 @@
+{
+  "name": "cross_sign_ra000_010_dec_p015_p025",
+  "bounds_deg": [
+    0,
+    15,
+    10,
+    25
+  ],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-000p015-005p020.fits",
+    "sweep-000p020-005p025.fits",
+    "sweep-005p015-010p020.fits",
+    "sweep-005p020-010p025.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cross_ra000_010_v1",
+  "figure_dir": "figures/field_cross_ra000_010",
+  "manifest_path": "manifests/field_cross_ra000_010.json"
+}

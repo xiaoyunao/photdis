@@ -1,0 +1,20 @@
+{
+  "name": "cross_sign_ra340_350_dec_p005_p015",
+  "bounds_deg": [
+    340,
+    5,
+    350,
+    15
+  ],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-340p005-345p010.fits",
+    "sweep-340p010-345p015.fits",
+    "sweep-345p005-350p010.fits",
+    "sweep-345p010-350p015.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cross_ra340_350_v1",
+  "figure_dir": "figures/field_cross_ra340_350",
+  "manifest_path": "manifests/field_cross_ra340_350.json"
+}
