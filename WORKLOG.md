@@ -2,6 +2,12 @@
 
 ## 2026-10-28
 
+- Figure review: revised the target-support chart to show both color-box and
+  box-plus-support rates. Revised DESI type chart to show disconnected field
+  estimates, Wilson 95% intervals and label counts; the previous line plot
+  visually implied continuity across fields and hid the 2-object giant bin.
+  Both figures regenerated locally from the frozen small manifests and viewed.
+
 - Calibration diagnosis: first prepared version used a global observed-r
   median across three r-z bins. New calibration field had 1,317/1,276/1,274
   A/B/C anchors, but blue-faint and red-bright groups had only 8–17 objects.

@@ -2,6 +2,7 @@
 """Audit conditional cold-branch selection by DESI label, color and brightness."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import socket
@@ -97,7 +98,41 @@ def field_summary(path, rule, tree):
     return result
 
 
+def plot_summary(summary):
+    FIG.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(9, 4.5))
+    labels = ("DESI_cool_dwarf", "DESI_cool_giant", "DESI_known_nonstar")
+    x = np.arange(len(FIELDS), dtype=float)
+    for index, name in enumerate(labels):
+        points = [(j, summary["fields"][field]["labels"][name])
+                  for j, field in enumerate(FIELDS)]
+        points = [(j, value) for j, value in points if value["n_labeled"]]
+        px = np.array([j + (index - 1) * .10 for j, _ in points])
+        y = np.array([value["color_box_rate_given_label"] for _, value in points])
+        lower = np.array([value["color_box_rate_wilson95"][0] for _, value in points])
+        upper = np.array([value["color_box_rate_wilson95"][1] for _, value in points])
+        ax.errorbar(px, y, yerr=[y - lower, upper - y], fmt="o", capsize=3,
+                    label=name.replace("DESI_", "").replace("_", " "))
+        for xx, yy, (_, value) in zip(px, y, points):
+            ax.annotate(f'n={value["n_labeled"]}', (xx, yy), xytext=(3, 4),
+                        textcoords="offset points", fontsize=7)
+    ax.set_xticks(x, list(FIELDS))
+    ax.set_ylim(0, 1)
+    ax.set_ylabel("P(color-box selected | DESI label)")
+    ax.grid(alpha=.2)
+    ax.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(FIG / "01_class_conditional_box_rates.png", dpi=170)
+    plt.close(fig)
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--plot-only", action="store_true")
+    args = parser.parse_args()
+    if args.plot_only:
+        plot_summary(json.loads(Path("manifests/type_diagnostics_dev.json").read_text()))
+        return
     require_compute()
     if (OUT / "summary.json").exists():
         raise FileExistsError(OUT / "summary.json")
@@ -109,22 +144,7 @@ def main():
         print(json.dumps({"field": name,
                           "labels": summary["fields"][name]["labels"]}), flush=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    FIG.mkdir(parents=True, exist_ok=True)
-    fig, ax = plt.subplots(figsize=(9, 4.5))
-    labels = ("DESI_cool_dwarf", "DESI_cool_giant", "DESI_known_nonstar")
-    x = np.arange(len(FIELDS))
-    for name in labels:
-        y = [summary["fields"][field]["labels"][name]["color_box_rate_given_label"]
-             for field in FIELDS]
-        ax.plot(x, y, "o-", label=name)
-    ax.set_xticks(x, list(FIELDS))
-    ax.set_ylim(0, 1)
-    ax.set_ylabel("P(color-box selected | DESI label)")
-    ax.grid(alpha=.2)
-    ax.legend(fontsize=8)
-    fig.tight_layout()
-    fig.savefig(FIG / "01_class_conditional_box_rates.png", dpi=170)
-    plt.close(fig)
+    plot_summary(summary)
     write_json(OUT / "summary.json", summary)
     write_json("manifests/type_diagnostics_dev.json", summary)
 

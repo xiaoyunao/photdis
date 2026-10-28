@@ -2,6 +2,7 @@
 """Measure application input layers and a fixed color-only cold candidate rule."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import socket
@@ -116,17 +117,7 @@ def field_result(name, path, rule, tree):
                 "DESI_known_nonstar_color_and_support_leakage": breakdown(nonstar, qualified)["fraction_selected"]}}
 
 
-def main():
-    require_compute()
-    if (OUT / "summary.json").exists():
-        raise FileExistsError(OUT / "summary.json")
-    rule, tree = fixed_rule()
-    summary = {"fixed_from_original_non_test_cold_anchors": rule,
-               "fields": {}, "compute_host": socket.gethostname()}
-    for name, path in FIELD_FILES.items():
-        summary["fields"][name] = field_result(name, path, rule, tree)
-        print(json.dumps({"field": name, **summary["fields"][name]}), flush=True)
-    OUT.mkdir(parents=True, exist_ok=True)
+def plot_summary(summary):
     FIG.mkdir(parents=True, exist_ok=True)
     fields = list(FIELD_FILES)
     labels = ["cal", "north test", "south test"]
@@ -137,20 +128,44 @@ def main():
         axes[0].plot(x, [summary["fields"][f]["input_layers"][key] /
                           summary["fields"][f]["domain_psf_rows"] for f in fields],
                      "o-", label=key, color=color)
-    for label, key, color in (("Gaia cold", "cold_dwarf", "#3a79a3"),
-                               ("Gaia other", "other", "#bb7340")):
-        axes[1].plot(x, [summary["fields"][f]["Gaia_reference"][key]["fraction_selected"]
-                          for f in fields], "o-", label=label, color=color)
+    for label, key, color, style in (
+            ("Gaia cold: color box", "Gaia_cold_color_box_recall", "#3a79a3", "o-"),
+            ("Gaia cold: box + support", "Gaia_cold_color_and_support_recall", "#3a79a3", "s--"),
+            ("DESI nonstar: color box", "DESI_known_nonstar_color_box_leakage", "#bb7340", "o-"),
+            ("DESI nonstar: box + support", "DESI_known_nonstar_color_and_support_leakage", "#bb7340", "s--")):
+        values = [summary["fields"][f]["selection_rates"][key] for f in fields]
+        axes[1].plot(x, [np.nan if v is None else v for v in values], style,
+                     label=label, color=color)
     for ax in axes:
         ax.set_xticks(x, labels, rotation=15)
         ax.set_ylim(0, 1)
         ax.grid(alpha=.2)
         ax.legend(fontsize=8)
     axes[0].set_ylabel("Fraction of field PSF rows")
-    axes[1].set_ylabel("Color-only candidate selection fraction")
+    axes[1].set_ylabel("Selection fraction conditional on reference label")
     fig.tight_layout()
     fig.savefig(FIG / "01_inputs_and_cold_candidate.png", dpi=170)
     plt.close(fig)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--plot-only", action="store_true")
+    args = parser.parse_args()
+    if args.plot_only:
+        plot_summary(json.loads(Path("manifests/target_coverage_v2.json").read_text()))
+        return
+    require_compute()
+    if (OUT / "summary.json").exists():
+        raise FileExistsError(OUT / "summary.json")
+    rule, tree = fixed_rule()
+    summary = {"fixed_from_original_non_test_cold_anchors": rule,
+               "fields": {}, "compute_host": socket.gethostname()}
+    for name, path in FIELD_FILES.items():
+        summary["fields"][name] = field_result(name, path, rule, tree)
+        print(json.dumps({"field": name, **summary["fields"][name]}), flush=True)
+    OUT.mkdir(parents=True, exist_ok=True)
+    plot_summary(summary)
     write_json(OUT / "summary.json", summary)
     write_json("manifests/target_coverage_v2.json", summary)
 
