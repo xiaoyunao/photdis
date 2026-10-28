@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from photdis.holdouts import annotate_holdouts, load_reference_catalogs
+from photdis.audit import rvs_metallicity
 from photdis.quantile import QUANTILES, QuantileForest, metrics, spatial_partition
 from photdis.stage1 import make_partition_map, require_compute, structured, write_json
 
@@ -57,18 +58,23 @@ def evaluate(table, mg, selection, prediction):
 
 def binned_diagnostics(table, mg, selection, prediction):
     result = {}
-    variables = {"Gaia_BP_RP": (table["bp_rp_checked"], [1.3, 1.8, 2.3, 2.8, 3.5]),
-                 "Gaia_G": (table["gaia_phot_g_mean_mag"], [14, 16, 17, 18, 20]),
-                 "EBV": (table["ebv"], [0, .01, .02, .03]),
-                 "sigma_g": (table["sigma_g"], [0, .01, .02, .03]),
-                 "DESI_logg": (table["desi_logg"], [3.5, 4.3, 4.7, 5.5]),
-                 "DESI_Teff": (table["desi_teff"], [3000, 3500, 4000, 4500, 5000]),
-                 "DESI_raw_FeH": (table["desi_feh"], [-3, -1.5, -.5, .5])}
-    for name, (value, edges) in variables.items():
+    all_rows = np.ones(len(selection), bool)
+    quality = table["desi_quality"]
+    feh_cal, domain = rvs_metallicity(table["desi_feh"], table["desi_teff"], table["desi_logg"])
+    variables = {"Gaia_BP_RP": (table["bp_rp_checked"], [1.3, 1.8, 2.3, 2.8, 3.5], all_rows),
+                 "Gaia_G": (table["gaia_phot_g_mean_mag"], [14, 16, 17, 18, 20], all_rows),
+                 "EBV": (table["ebv"], [0, .01, .02, .03], all_rows),
+                 "sigma_g": (table["sigma_g"], [0, .01, .02, .03], all_rows),
+                 "DESI_logg_quality": (table["desi_logg"], [3.5, 4.3, 4.7, 5.5], quality),
+                 "DESI_Teff_quality": (table["desi_teff"], [3000, 3500, 4000, 4500, 5000], quality),
+                 "DESI_raw_FeH_quality": (table["desi_feh"], [-3, -1.5, -.5, .5], quality),
+                 "DESI_calibrated_FeH_quality": (feh_cal, [-3, -1.5, -.5, .5], quality & domain)}
+    for name, (value, edges, valid) in variables.items():
         subset = value[selection]
+        valid_subset = valid[selection]
         rows = []
         for lo, hi in zip(edges[:-1], edges[1:]):
-            take = (subset >= lo) & (subset < hi)
+            take = valid_subset & (subset >= lo) & (subset < hi)
             if take.sum() < 5:
                 rows.append({"lo": lo, "hi": hi, "n": int(take.sum())})
             else:
