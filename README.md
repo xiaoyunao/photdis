@@ -22,8 +22,13 @@ The current diagnostic round includes the [extinction audit](docs/extinction_aud
 [WISE20 wide-binary check](docs/cold_v4_system_validation_v3.md),
 [DESI type-boundary audit](docs/cold_v4_type_boundary.md), and
 [template/noise-field crossover](docs/cold_v4_crossover.md), and its
-[Gaia-template census](docs/cold_v4_native_population.md). These diagnostics
-have not changed the frozen distance route.
+[Gaia-template census](docs/cold_v4_native_population.md). The
+[registered native-transfer test](docs/cold_v4_native_transfer_final.md)
+finds spatially varying center residuals under the frozen route; no global
+center correction has been fitted. These diagnostics have not changed the
+frozen distance route. DR11 `MW_TRANSMISSION` is applied to all five input
+bands and the final `g0` distance-modulus term; see the
+[extinction audit](docs/extinction_audit.md).
 
 ## Locations
 
@@ -129,6 +134,16 @@ calibration/final runner is `scripts/run_cold_v4_deep.sh` with `calibrate`
 or `final`; it refuses to overwrite existing outputs and the final run checks
 the tracked calibration hash. See the [application decision](docs/cold_v4_application_decision.md)
 before interpreting candidate distances.
+
+The latest native-transfer diagnostics use the registered field and role
+configs under `configs/cold_v4_native_transfer_*`. On allocated NERSC CPUs,
+`scripts/cold_v4_native_transfer.py` applies the unchanged trained route;
+`scripts/run_cold_v4_sky_census_fields.sh` builds six additional diagnostic
+fields, and `scripts/run_cold_v4_sky_census_score.sh` scores them after all
+field jobs succeed. Their source catalogs, per-object diagnostics and models
+remain under ignored NERSC `data/`; only small aggregate results and selected
+figures are synchronized. The sky census is for cause analysis, not tuning or
+new independent validation of a correction.
 
 ## Stage 1 operation
 

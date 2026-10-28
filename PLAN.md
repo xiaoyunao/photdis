@@ -74,6 +74,15 @@ then map the field medians against sky position and parallax. This census
 is explanatory development evidence, not a fresh final validation of a
 new method.
 
+The six-field scan is submitted as Slurm array 60460329, with dependent
+frozen score job 60460382. While waiting, run the separate registered-final
+Gaia proper-motion diagnostic to check whether residual patterns track
+tangential speed or absolute height. Report any field/kinematic association
+as a diagnostic; it does not establish metallicity or a physical population
+classification. Integrate findings in `docs/pro_latest_round.md`, then
+review whether there is evidence for a method change or whether to keep
+the frozen model and specify the next cause test.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

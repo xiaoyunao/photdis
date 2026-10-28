@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Registered sky-census field array 60460329 and dependent unchanged-model
+  score 60460382 on NERSC; the array is waiting on scheduler priority.
+  Prepared a fixed b-versus-residual plot, integrated Pro-round report and
+  README update. Added a separate Gaia proper-motion diagnostic for the
+  already inspected final fields: tangential speed and absolute vertical
+  height strata, with no assigned population membership. Python parse,
+  shell syntax and mas/yr-to-km/s numerical smoke check pass. Next: run
+  kinematic diagnostic on allocated CPU while the six-field census queues.
+
 - Gaia/DESI diagnostic job 60460082 completed in 41 s on allocated CPU.
   Median applied Gaia zero points are −0.0345/−0.0336/−0.0370 mas
   (south RA330/south RA20/north RA130), and the native residual contrast
