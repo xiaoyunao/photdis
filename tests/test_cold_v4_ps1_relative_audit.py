@@ -14,9 +14,9 @@ def test_ps1_substitution_preserves_reddening_and_updates_color_chain():
              "gr0": np.array([1.1, 1.2]),
              "rz0": np.array([.5, .6]),
              "zw10": np.array([1.4, 1.5]),
-             "mw_transmission_g": 10 ** (-np.array([ag, ag]) / 2.5),
-             "mw_transmission_r": 10 ** (-np.array([ar, ar]) / 2.5),
-             "mw_transmission_z": 10 ** (-np.array([az, az]) / 2.5)}
+             "g": np.array([18 + ag, 17 + ag]),
+             "r": np.array([18 - 1.1 + ar, 17 - 1.2 + ar]),
+             "z": np.array([18 - 1.1 - .5 + az, 17 - 1.2 - .6 + az])}
     # The first source changes by +0.02, -0.01 and +0.03 mag in g/r/z.
     ps1 = {"g": np.array([18 + ag + .02, 0]),
            "r": np.array([18 - 1.1 + ar - .01, 0]),

@@ -31,8 +31,7 @@ OUT = Path("data/cold_v4_ps1_relative_audit/final.json")
 PS1_COLUMNS = ("OBJ_ID", "RA_OK", "DEC_OK", "EPOCHMEAN_OK", "MEDIAN",
                "NMAG_OK", "STDEV")
 EXTRA = ("source_id", "gaia_ra", "gaia_dec", "gaia_ref_epoch", "gaia_pmra",
-         "gaia_pmdec", "mw_transmission_g", "mw_transmission_r",
-         "mw_transmission_z", "ebv", "grz_clean", "snr_w1", "snr_w2")
+         "gaia_pmdec", "g", "r", "z", "grz_clean", "snr_w1", "snr_w2")
 
 
 def ps1_catalog(bounds):
@@ -135,12 +134,9 @@ def substitute_grz(table, quality, transformed):
     output = dict(table)
     g0 = np.asarray(table["g0"], float)
     r0 = g0 - np.asarray(table["gr0"], float)
-    z0 = r0 - np.asarray(table["rz0"], float)
-    old = {"g": g0, "r": r0, "z": z0}
     delta = {}
     for band in "grz":
-        observed = old[band] - 2.5 * np.log10(
-            np.asarray(table[f"mw_transmission_{band}"], float))
+        observed = np.asarray(table[band], float)
         delta[band] = np.where(quality, transformed[band] - observed, 0)
     output["g0"] = g0 + delta["g"]
     output["r0"] = r0 + delta["r"]

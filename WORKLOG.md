@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- PS1 audit job 60463039 failed after 36 s because new field diagnostics
+  retain the observed `g/r/z` magnitudes but only the g-band transmission;
+  it requested nonexistent `mw_transmission_r/z` columns. The audit now
+  uses the stored observed `g/r/z` directly for same-source PS1 differences
+  and applies those differences to the already dereddened colors and g0.
+  Updated targeted propagation test. Next: rerun after three-machine sync.
+
 - Registered the three-field PS1 relative-optical diagnostic before
   inspecting any new PS1 source rows or results. Added NERSC allocated-node
   crossmatch, frozen-route replacement, fixed quality domain and a targeted
