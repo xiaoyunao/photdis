@@ -64,6 +64,16 @@ Gaia quality/zero-point and DESI metallicity counts on allocated compute.
 Preserve the frozen model
 and the previously published deep-interval limitation.
 
+The Gaia/DESI audit finds the same field contrast among RUWE<=1.1 stars;
+applied zero-point medians differ by only ~0.003 mas, while usable DESI
+metallicities number 0/13/35 in the three final fields. Six additional
+non-overlapping sky-census regions are now fixed in
+`configs/cold_v4_native_transfer_sky_census.json` before source inspection.
+Run their field array and unchanged frozen scorer on NERSC allocated CPUs,
+then map the field medians against sky position and parallax. This census
+is explanatory development evidence, not a fresh final validation of a
+new method.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

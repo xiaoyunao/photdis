@@ -89,6 +89,30 @@ matching uncertainty are not fully represented. See
 `manifests/cold_v4_native_transfer_final_match.json` for all matching
 variants, including the 1–2 mas subgroup.
 
+### Astrometric quality and spectroscopy
+
+The selected stars in south RA330, south RA20 and north RA130 have median
+Gaia RUWE 1.004/1.016/1.013, formal parallax error
+0.0815/0.0786/0.0872 mas, and corrected-parallax S/N
+27.7/29.5/28.3. The *applied* Gaia zero-point terms have medians
+−0.0345/−0.0336/−0.0370 mas. Their ~0.003 mas difference corresponds
+to only a few millimagnitudes at typical 2–3 mas parallax, far below the
+observed ~0.09–0.12 mag field contrast; this comparison does not bound
+unmodeled spatial Gaia systematics.
+
+Restricting to RUWE≤1.1 leaves 5,476/6,723/2,761 selected sources with
+residual medians −0.009/−0.046/+0.073 mag. In the ≥2 mas and RUWE≤1.1
+subset, the medians are −0.016/−0.060/+0.120 mag. The field contrast is
+therefore present among the better Gaia single-source fits.
+
+The DESI quality, unambiguous cold-dwarf, valid metallicity-calibration
+subset contains only 0/13/35 selected stars in these fields. The latter
+two have similar calibrated median [Fe/H] (−0.319/−0.303 dex), but they
+are tiny, selected spectroscopic samples. Their median residuals
+(−0.030/−0.035 mag) differ from their full-field medians, so they do not
+measure the metallicity distribution of the photometric anchors. See
+`manifests/cold_v4_native_transfer_final_labels.json`.
+
 The figure `figures/cold_v4/08_native_transfer_final.png` plots the
 development and final medians. Development ≥2 mas points have no error bars
 because their per-stratum sky bootstrap was added after their original run;
@@ -109,10 +133,11 @@ by these field summaries alone. Retain the frozen high-quality cold-dwarf
 conditional distance and its field-dependent systematic limitation; do not
 publish a nominal deep interval from the old calibration.
 
-Next diagnostic: check Gaia parallax quality, the applied zero-point terms,
-and qualified spectroscopic metallicity in these final fields. Any
-subsequent correction requires new registered calibration and final sky
-regions.
+Next diagnostic: map the center across the six additional disjoint fields
+registered in `configs/cold_v4_native_transfer_sky_census.json` before
+source inspection. This is a diagnostic sky census under the same frozen
+route, not an independent test of a new correction. Any subsequent
+correction requires new registered calibration and final sky regions.
 
 ## Provenance
 
@@ -121,6 +146,7 @@ regions.
 - Northern final registration SHA256: `f1760873af3256a1e38d2a70317f1493b86b4c6b34165ca421e6e9c90a53eb79`.
 - Numerical evidence: `manifests/cold_v4_native_transfer_final.json` and
   `manifests/cold_v4_native_transfer_north_final.json`; matched-source
-  evidence: `manifests/cold_v4_native_transfer_final_match.json`.
+  evidence: `manifests/cold_v4_native_transfer_final_match.json`;
+  astrometric and DESI strata: `manifests/cold_v4_native_transfer_final_labels.json`.
 - All field scans and scorings ran on allocated Perlmutter compute nodes;
   source catalogs and trained forest objects remain on NERSC.

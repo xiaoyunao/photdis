@@ -1,0 +1,20 @@
+{
+  "name": "sky_census_ra250_260_dec_p025_p035",
+  "bounds_deg": [
+    250,
+    25,
+    260,
+    35
+  ],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-250p025-255p030.fits",
+    "sweep-250p030-255p035.fits",
+    "sweep-255p025-260p030.fits",
+    "sweep-255p030-260p035.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_sky_ra250_260_v1",
+  "figure_dir": "figures/field_sky_ra250_260",
+  "manifest_path": "manifests/field_sky_ra250_260.json"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "sky_census_ra310_320_dec_m035_m025",
+  "bounds_deg": [
+    310,
+    -35,
+    320,
+    -25
+  ],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-310m035-315m030.fits",
+    "sweep-310m030-315m025.fits",
+    "sweep-315m035-320m030.fits",
+    "sweep-315m030-320m025.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_sky_ra310_320_v1",
+  "figure_dir": "figures/field_sky_ra310_320",
+  "manifest_path": "manifests/field_sky_ra310_320.json"
+}

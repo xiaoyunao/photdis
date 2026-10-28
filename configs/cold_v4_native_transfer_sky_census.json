@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "registered_local_date": "2026-10-29",
+  "status": "registered_before_any_sky_census_source_rows",
+  "parent_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "purpose": "diagnostic sky census with frozen native WISE20 scorer; map variation of median predicted-minus-Gaia distance modulus, especially corrected parallax >=2 mas; never use census fields as a new independent final test or fit a correction from their scores",
+  "selection_basis": "six disjoint 10-by-10-degree fields spanning positive and negative Galactic latitude; all 24 DR11 south sweep files exist; source rows and photometric/astrometric outcomes not inspected",
+  "diagnostic_fields": [
+    {
+      "name": "sky_census_ra010_020_dec_m035_m025",
+      "field_config": "configs/field_sky_ra010_020.json",
+      "bounds_deg": [
+        10,
+        -35,
+        20,
+        -25
+      ],
+      "hemisphere": "south",
+      "center_galactic_latitude_deg": -86.57
+    },
+    {
+      "name": "sky_census_ra310_320_dec_m035_m025",
+      "field_config": "configs/field_sky_ra310_320.json",
+      "bounds_deg": [
+        310,
+        -35,
+        320,
+        -25
+      ],
+      "hemisphere": "south",
+      "center_galactic_latitude_deg": -39.65
+    },
+    {
+      "name": "sky_census_ra340_350_dec_m015_m005",
+      "field_config": "configs/field_sky_ra340_350.json",
+      "bounds_deg": [
+        340,
+        -15,
+        350,
+        -5
+      ],
+      "hemisphere": "south",
+      "center_galactic_latitude_deg": -58.66
+    },
+    {
+      "name": "sky_census_ra140_150_dec_p025_p035",
+      "field_config": "configs/field_sky_ra140_150.json",
+      "bounds_deg": [
+        140,
+        25,
+        150,
+        35
+      ],
+      "hemisphere": "north",
+      "center_galactic_latitude_deg": 48.17
+    },
+    {
+      "name": "sky_census_ra200_210_dec_p025_p035",
+      "field_config": "configs/field_sky_ra200_210.json",
+      "bounds_deg": [
+        200,
+        25,
+        210,
+        35
+      ],
+      "hemisphere": "north",
+      "center_galactic_latitude_deg": 78.96
+    },
+    {
+      "name": "sky_census_ra250_260_dec_p025_p035",
+      "field_config": "configs/field_sky_ra250_260.json",
+      "bounds_deg": [
+        250,
+        25,
+        260,
+        35
+      ],
+      "hemisphere": "north",
+      "center_galactic_latitude_deg": 36.03
+    }
+  ]
+}

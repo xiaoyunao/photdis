@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Gaia/DESI diagnostic job 60460082 completed in 41 s on allocated CPU.
+  Median applied Gaia zero points are −0.0345/−0.0336/−0.0370 mas
+  (south RA330/south RA20/north RA130), and the native residual contrast
+  persists with RUWE<=1.1: −0.009/−0.046/+0.073 mag. Only 0/13/35
+  selected anchors have unambiguous qualified DESI dwarf metallicities in
+  calibration domain; those spectra cannot characterize the full-field
+  populations. Added aggregate manifest and report. Before reading any
+  new source rows, registered six disjoint 10-degree diagnostic fields
+  spanning Galactic b≈−87 to +79 degrees; all 24 DR11 south sweep files
+  exist. Added allocated-node field-array and frozen scorer runners.
+  Next: run sky census as a diagnostic, keep corrections unfitted.
+
 - Outcome-blind final-field match job 60459873 completed in 44 s on
   allocated NERSC CPU. Six-feature unique matching on Legacy colors,
   source A_g, corrected parallax, Gaia BP-RP and r0 retains 2,016
