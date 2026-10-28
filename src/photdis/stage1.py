@@ -365,6 +365,12 @@ def run_signature(config):
     with reference.open("rb") as stream:
         for chunk in iter(lambda: stream.read(8 * 1024**2), b""):
             digest.update(chunk)
+    index_path = Path(config["output_dir"]) / "spectroscopy/index.json"
+    digest.update(index_path.read_bytes())
+    index = json.loads(index_path.read_text())
+    for survey in ("desi", "apogee"):
+        stat = Path(index[survey]).stat()
+        digest.update(f"{survey}:{stat.st_size}:{stat.st_mtime_ns}".encode())
     return digest.hexdigest()
 
 
@@ -450,9 +456,16 @@ def finalize(config):
     identity_reserved = np.zeros(len(keep), bool)
     for survey, chunks in spectrum_ids.items():
         ids = np.char.strip(np.concatenate(chunks).astype("U"))
-        unique, counts = np.unique(ids[keep & (ids != "")], return_counts=True)
-        repeated = unique[counts > 1]
-        identity_reserved |= np.isin(ids, repeated)
+        # Include associations on discarded optical duplicates too: one Gaia
+        # identity can carry different spectrum IDs on its candidate rows.
+        sort = np.argsort(ids, kind="stable")
+        starts = np.r_[0, np.flatnonzero(ids[sort][1:] != ids[sort][:-1]) + 1] if len(sort) else np.array([], int)
+        if len(starts):
+            low = np.minimum.reduceat(keys[sort], starts)
+            high = np.maximum.reduceat(keys[sort], starts)
+            shared_ids = ids[sort[starts]][(low != high) & (ids[sort[starts]] != "")]
+            shared_keys = np.unique(keys[np.isin(ids, shared_ids)])
+            identity_reserved |= np.isin(keys, shared_keys)
     del identities, legacy, scores, score, order, keys, lsids, spectrum_ids, ids
     table_dir = root / "tables"
     table_dir.mkdir(exist_ok=True)

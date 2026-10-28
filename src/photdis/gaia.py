@@ -31,6 +31,25 @@ GAIA_COLUMNS = (
 )
 
 
+def _decode_boolean(values, field):
+    """Decode both FITS logical and Gaia's string-valued candidate flags."""
+    values = np.asarray(values)
+    if values.dtype.kind == "b":
+        return values
+    if values.dtype.kind in "SU":
+        normalized = np.char.lower(np.char.strip(values.astype("U")))
+        yes = np.isin(normalized, ("true", "t", "1"))
+        no = np.isin(normalized, ("false", "f", "0"))
+    elif values.dtype.kind in "iu":
+        yes, no = values == 1, values == 0
+    else:
+        raise ValueError(f"Unsupported Gaia boolean dtype for {field}: {values.dtype}")
+    if not np.all(yes | no):
+        unknown = np.unique(values[~(yes | no)])[:5]
+        raise ValueError(f"Unknown Gaia boolean tokens for {field}: {unknown!r}")
+    return yes
+
+
 def _empty_columns(size):
     result = {}
     for field in GAIA_COLUMNS:
@@ -114,7 +133,10 @@ def join_gaia(source_ids, root):
         position = position[inside]
         result["gaia_match"][destination] = True
         for field in GAIA_COLUMNS:
-            result[field.lower()][destination] = table[field][position]
+            values = table[field][position]
+            if field in BOOLEAN_FIELDS:
+                values = _decode_boolean(values, field)
+            result[field.lower()][destination] = values
     return result
 
 

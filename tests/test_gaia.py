@@ -29,6 +29,8 @@ def good_gaia(size):
 
 def write_tile(root, pixel, source_ids):
     columns = good_gaia(len(source_ids))
+    if len(source_ids):
+        columns["in_qso_candidates"][0] = True
     fields = [(name, columns[name.lower()].dtype) for name in module.GAIA_COLUMNS]
     table = np.empty(len(source_ids), dtype=fields)
     for name in module.GAIA_COLUMNS:
@@ -36,7 +38,8 @@ def write_tile(root, pixel, source_ids):
     table["SOURCE_ID"] = source_ids
     table["PARALLAX"] = np.arange(len(table)) - 1.0
     # Test real source-file byte codes rather than only int16 fixture codes.
-    dtype = [(name, "i1" if name == "ASTROMETRIC_PARAMS_SOLVED" else dt)
+    dtype = [(name, "S5" if name in ("IN_QSO_CANDIDATES", "IN_GALAXY_CANDIDATES")
+              else ("i1" if name == "ASTROMETRIC_PARAMS_SOLVED" else dt))
              for name, dt in fields]
     table = table.astype(dtype)
     fitsio.write(str(Path(root) / f"healpix-{pixel:05d}.fits"), table,
@@ -74,6 +77,10 @@ class GaiaTests(unittest.TestCase):
             np.testing.assert_allclose(result["parallax"][[0, 1, 3, 5]], [-1, 0, -1, 0])
             self.assertTrue(np.isnan(result["parallax"][[2, 4, 6]]).all())
             self.assertEqual(result["astrometric_params_solved"].dtype, np.dtype("int16"))
+            np.testing.assert_array_equal(result["in_qso_candidates"],
+                                          [True, False, False, True, False, False, False])
+            self.assertFalse(result["in_galaxy_candidates"].any())
+            self.assertFalse(result["duplicated_source"].any())
             before = module._read_healpix.cache_info()
             module.join_gaia(query, root)
             after = module._read_healpix.cache_info()
@@ -88,6 +95,15 @@ class GaiaTests(unittest.TestCase):
             write_tile(root, 0, [30, 30])
             with self.assertRaisesRegex(ValueError, "Duplicate Gaia"):
                 module.join_gaia(np.array([30], dtype=np.int64), root)
+
+    def test_boolean_tokens_never_use_nonempty_string_truthiness(self):
+        for values in (np.array(["False", "True", " F ", " t", "0", "1"]),
+                       np.array([b"false", b"true", b"f", b"t", b"0", b"1"])):
+            np.testing.assert_array_equal(module._decode_boolean(values, "test"),
+                                          [False, True, False, True, False, True])
+        np.testing.assert_array_equal(module._decode_boolean(np.array([0, 1]), "test"), [False, True])
+        with self.assertRaisesRegex(ValueError, "Unknown Gaia boolean tokens"):
+            module._decode_boolean(np.array(["unknown"]), "test")
 
     def test_signed_parallaxes_quality_and_calibration_domain(self):
         data = good_gaia(13)

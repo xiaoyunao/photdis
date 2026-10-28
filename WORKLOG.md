@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Task: Correct actual Gaia FITS semantics before the full run.
+- Root cause: Gaia QSO/galaxy candidate fields are 5A strings `False`/`True`,
+  whereas DUPLICATED_SOURCE is logical. Generic bool coercion made every nonempty
+  `False` true; the initial two-tile smoke correctly exposed zero anchors.
+- Fix/validation: explicit fail-closed boolean decoding; regression fixtures now
+  match real FITS strings. Extended duplicate/spectrum-link tests also pass.
+  Failed smoke products remain isolated in ignored data/stage1_smoke; they are
+  not scientific results. Production uses the corrected, version-locked code.
+- Next: repeat real two-tile smoke, then complete all eligible tiles.
+
 - Task: Implement sample construction and leakage checks before full scan.
 - Files: Gaia/holdout/stage1 modules, build/plot scripts, reference manifests, tests.
 - Commands: allocated DESI/APOGEE projection; seven unit tests and two synthetic
