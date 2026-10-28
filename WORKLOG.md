@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Corrected application-audit job 60440314 completed (exit 0); validated
+  prepared hashes and per-field count identities. Three new fields contain
+  443,280 routed candidates: A/B/C = 251,212/85,717/106,351;
+  398,387 pass `grz_clean`. Strict Gaia final A/B 95% interval coverage
+  ranges 91.3–92.3%/85.3–91.8%, versus C 95.0–96.4%; nonclean A/B are
+  lower. Added the small manifest and `docs/cold_v4_application.md`. The
+  clean-but-low-precision candidate layer has 173,331 rows but no matching
+  high-quality Gaia references in these fields. Next: finish DESI type audit,
+  then design independent deep calibration for A/B and this quality layer.
+
 - V4 DESI audit job 60440313 computed all four fields but failed while
   serializing a `+inf` upper error-bin edge to strict JSON. Replaced that
   displayed upper edge with `null`, retaining infinity only in the numerical

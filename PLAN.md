@@ -89,14 +89,15 @@ populations with reference systems and weak-parallax forward checks.
     image-quality and error/support strata for calibration, new final Gaia
     fields, shared noise and real photometric candidates. Include per-tier
     bias/NMAD/68%/95% coverage/tail misses/width, sky- or source-cluster
-    uncertainty, and complete-route intersection with grz_clean.
+    uncertainty, and complete-route intersection with grz_clean. The real
+    candidate/Gaia field audit is complete; the noise tier cross-tab remains.
 19. Pending: apply the complete v4 route to deduplicated, quality-qualified
     Gaia/DESI labels in the new fields. Measure dwarf recall and giant/nonstar
     leakage by tier, clean state, fallback, color, magnitude, errors and sky;
     separately audit calibrated-domain metal-poor labels. Defer type
     probabilities until label selection and class priors are supportable.
-20. Pending: correct the simulated flux IVAR when template noise exceeds
-    target noise, and correct the report's description of borrowed masks.
+20. In progress: corrected simulated flux IVAR when template noise exceeds
+    target noise, and corrected the report's description of borrowed masks.
     Compare only a few predeclared routing policies on identical five-band
     development observations, considering precision, coverage, width and
     acceptance. Freeze the selected policy before new calibration/testing.
