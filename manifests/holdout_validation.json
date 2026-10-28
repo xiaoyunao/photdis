@@ -1,0 +1,9 @@
+{
+  "all_pairs_same_nonzero_group": true,
+  "all_cluster_members_reserved": true,
+  "all_cluster_centers_quarantined": true,
+  "pair_count": 1256400,
+  "region_count": 5949,
+  "cluster_member_count": 1873473,
+  "normalized_sha256": "29e8a7d26e6cbd4ec84fdc4898a0024bc7c0b5030ab6b45ce59ff6b7a453b3db"
+}

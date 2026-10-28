@@ -1,0 +1,60 @@
+{
+  "prepared_utc": "2026-10-28T05:04:01.646126+00:00",
+  "schema_version": 1,
+  "normalized_sha256": "29e8a7d26e6cbd4ec84fdc4898a0024bc7c0b5030ab6b45ce59ff6b7a453b3db",
+  "sources": {
+    "vasiliev_baumgardt_2021_clusters.txt": {
+      "url": "https://raw.githubusercontent.com/GalacticDynamics-Oxford/GaiaTools/master/input.txt",
+      "sha256": "e1c504be3abe9ceb7b582f0ccaacd1b18fc45afc0fa27107a056ec64d86331fa",
+      "bytes": 23256,
+      "download_file_mtime_utc": "2026-10-28T04:49:24+00:00"
+    },
+    "vasiliev_baumgardt_2021_members.zip": {
+      "url": "https://zenodo.org/records/4891252/files/clusters.zip",
+      "sha256": "9eafa2e10afc031790cfe36ed8545aa6336cc87c317fab167e9cea9dacbd0748",
+      "bytes": 118940646,
+      "download_file_mtime_utc": "2026-10-28T04:53:34+00:00"
+    },
+    "hunt_reffert_2024_clusters_extended.tsv": {
+      "url": "https://vizier.idia.ac.za/viz-bin/asu-tsv?-source=J/A%2BA/686/A42/clusters&-out=ID,Name,Type,RA_ICRS,DE_ICRS,r50,rt,rtot,rJ&-out.max=unlimited",
+      "sha256": "f1f2609ad0f46e4d524ce7fc30398384a5b5715730d273c52d6977c2d1e80172",
+      "bytes": 738344,
+      "download_file_mtime_utc": "2026-10-28T05:02:06+00:00"
+    },
+    "hunt_reffert_2024_members.tsv": {
+      "url": "https://vizier.idia.ac.za/viz-bin/asu-tsv?-source=J/A%2BA/686/A42/members&-out=ID,GaiaDR3,Prob&-out.max=unlimited",
+      "sha256": "792b96813ca4a81c7e8f377c84c7cfb82e4926732ef00fde93573011a1b4848b",
+      "bytes": 60722601,
+      "download_file_mtime_utc": "2026-10-28T04:52:41+00:00"
+    },
+    "elbadry_2021_hwang_2022_pairs.tsv": {
+      "url": "https://vizier.idia.ac.za/viz-bin/asu-tsv?-source=J/MNRAS/512/3383/table2&-out=GaiaEDR3-1,GaiaEDR3-2,R&-out.max=unlimited",
+      "sha256": "48a340909203959dbf2235cc6837e9c7c16d45b35567ecfd93570bbfd1e39d12",
+      "bytes": 112693010,
+      "download_file_mtime_utc": "2026-10-28T04:54:14+00:00"
+    }
+  },
+  "counts": {
+    "hunt_clusters": 7167,
+    "hunt_members_rows": 1291929,
+    "hunt_reserved_members": 1135057,
+    "globular_clusters": 170,
+    "globular_catalog_rows": 2343282,
+    "globular_probable_members": 1078216,
+    "unique_cluster_members": 1873473,
+    "cluster_regions": 5949,
+    "wide_binary_candidate_pairs": 1817594,
+    "wide_binary_reserved_pairs": 1256400,
+    "wide_binary_unique_endpoints": 2512800,
+    "wide_binary_components": 1256400
+  },
+  "policy": {
+    "members": "All Hunt/Reffert members of non-rejected o/m/g/d groups; Vasiliev/Baumgardt memberprob>=0.5.",
+    "regions": "Hunt/Reffert Type o/g: max(rt,rJ) degrees among finite positive published King/Jacobi radii. Vasiliev/Baumgardt published query rmax arcmin /60. No arbitrary radius cap. Region flag is background quarantine, not membership.",
+    "region_limitations": "Full rtot encloses sparse tails in enormous discs (Hyades49deg, Coma36deg); it is not used as background guard. All catalogued members including tails remain reserved by ID. Uncatalogued tail members and missing clusters are not guaranteed excluded.",
+    "binary": "El-Badry2021 endpoints and R reproduced in Hwang2022 full 1817594-row table; reserve both endpoints for finite R<0.1; components share minimum endpoint source_id.",
+    "distances": "No reference distances used. Gaia-selected membership/near-equal binary distances do not give an independent Gaia absolute calibration.",
+    "split": "Every reference match is external, taking precedence over any spatial or random split.",
+    "epoch": "Gaia membership IDs are EDR3/DR3; centers are published coordinates. Region radii are broad group radii, not arcsecond crossmatch gates."
+  }
+}
