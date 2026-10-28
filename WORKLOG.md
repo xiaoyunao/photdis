@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Task: implement shared-noise final-distance experiment without changing the
+  frozen v1 experiment. Added noise.py and noise_injection_v2.py: same 223
+  A/B/C test identities, one target row and five-band realization per draw,
+  WISE-agnostic grz mother, raw flux IVAR and target quality flags, extinction
+  transfer, template-noise accounting, source-cluster uncertainty, Mg/mu/pc
+  interval diagnostics and same-accepted-star comparison.
+- Validation: focused noise tests, Python parse and full 39-test suite passed.
+  Original v1 outputs are unchanged. Next: run v2 on allocated NERSC CPU,
+  inspect metrics and correct any data-dependent issues.
+
 - Task: read the complete latest Pro review (11,113 characters) and create a
   detailed active goal covering statistical corrections, same-noise final
   distance evaluation, conditional calibration, type labels and three-end
