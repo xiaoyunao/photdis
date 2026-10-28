@@ -101,7 +101,8 @@ populations with reference systems and weak-parallax forward checks.
     target noise, and corrected the report's description of borrowed masks.
     Compare only a few predeclared routing policies on identical five-band
     development observations, considering precision, coverage, width and
-    acceptance. Freeze the selected policy before new calibration/testing.
+    acceptance. Development chose and hash-locked `grz_clean` plus WISE
+    S/N>=20; calibrate/test it on separately registered fields next.
 21. Pending: assemble high-S/N templates and WISE-unconditioned target-noise
     environments from several fields; isolate fit/development, calibration
     and final-test identities and sky blocks. Calibrate final distance-modulus

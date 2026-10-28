@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "frozen_utc_date": "2026-10-28",
+  "registration_sha256": "52e684d14b03ca403fb6f9ccf0bf7b85226689cc7a55418f385beedb588c08c9",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "policy_development_sha256": "e89e8156bfa31c93a688bc091f813c99ffe974c26db60168f0124c440285f54e",
+  "chosen_policy": "clean_wise_snr_20",
+  "decision": "Require grz_clean. Among development policies, WISE S/N>=20 improves direct final-modulus NMAD at r=19-20/20-21/21-22 by 0.023/0.016/0.024 mag relative to the clean highest-available policy, with selected fractions 0.926/0.912/0.827 versus 0.929/0.913/0.837. The strict-quality policy reaches 0.302 mag NMAD at r=21-22 but selects only 0.568. Freeze WISE20 before reading calibration/final simulation residuals.",
+  "status": "development_choice_pending_independent_calibration_and_final_evaluation"
+}

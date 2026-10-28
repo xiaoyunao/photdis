@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Policy-development job 60442286 completed on NERSC CPU (16m06s, exit 0).
+  Verified registration/prepared SHA and published the same-draw 500-source,
+  2-repeat manifest. At target r=21–22, clean highest-available versus
+  clean+WISE S/N>=20 has acceptance 83.7%/82.7%, modulus NMAD
+  0.342/0.318 mag and direct 95% coverage 93.5%/94.0%; strict-quality
+  acceptance is 56.8%. Locked clean+WISE20 before reading the separate
+  calibration/final simulation results. Next: sync the lock and run the
+  independent source/sky calibration, then final field.
+
 - Rendered `figures/cold_v4/02_application_tiers.png` from the checked
   application manifest to show candidate tier×optical-quality composition
   beside strict-Gaia 95% coverage; visually inspected the output. Switched
