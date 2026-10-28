@@ -61,10 +61,17 @@ therefore stay fixed while the cause is mapped.
 Six further disjoint 10° fields, spanning center Galactic latitudes
 −87° to +79°, were registered in
 `configs/cold_v4_native_transfer_sky_census.json` before any source rows
-were read. Their role is an explanatory sky census; the registered native
-transfer fields above remain the one-time independent test of the
-directional hypothesis. A future fitted correction requires fresh
-calibration and final fields.
+were read. Three informative positive-b fields have native residual
+medians +0.039, +0.050 and +0.078 mag; the informative negative-b RA10
+field has −0.009 mag. One negative-b field has 216 selected anchors and
+a broad interval; another has zero under the fixed E(B−V)<0.03 cut.
+The [sky census](cold_v4_sky_census.md) is explanatory evidence. Four
+further fields were registered before those six scores were read, with
+opposite signs of Galactic and ecliptic latitude. Their coordinate-sign
+comparison will distinguish the two observed sky associations. The
+registered native transfer fields above remain the one-time independent
+test of the directional hypothesis. A future fitted correction requires
+fresh calibration and final fields.
 
 ## Reproducibility and location
 

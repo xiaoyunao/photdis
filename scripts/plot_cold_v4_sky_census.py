@@ -44,18 +44,21 @@ def main():
                           [high - median]]), fmt="o", color=color,
                           capsize=3, ms=6)
             axis.annotate(f"RA {item['bounds_deg'][0]}\nn={value['n']:,}",
-                          (b, median), xytext=(4, 5),
+                          (b, median), xytext=(4, 5), ha="left",
                           textcoords="offset points", fontsize=8)
     for axis, title in zip(axes, ("All selected cold anchors",
                                    r"Corrected parallax $\geq 2$ mas")):
         axis.axhline(0, color="black", lw=.7)
         axis.axvline(0, color="gray", lw=.7, alpha=.4)
+        axis.set_xlim(-100, 110)
         axis.set_title(title)
         axis.set_xlabel("Center Galactic latitude (deg)")
         axis.set_ylabel(r"Median $\hat\mu-\mu_{\rm Gaia}$ (mag)")
         axis.grid(alpha=.15)
     fig.suptitle("Six preregistered diagnostic fields; frozen cold-v4 route")
-    fig.tight_layout()
+    fig.text(.5, .01, "RA 310: zero sources after the unchanged E(B−V)<0.03 cut",
+             ha="center", fontsize=8)
+    fig.tight_layout(rect=(0, .035, 1, 1))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUTPUT, dpi=180)
     print(OUTPUT)

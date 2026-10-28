@@ -99,6 +99,15 @@ b<0/β>0. Run them after the six-field census. Their fixed diagnostic is
 whether the native residual sign tracks Galactic or ecliptic hemisphere
 more consistently; do not fit a hemisphere correction from these fields.
 
+Six-field census is complete. Positive-b RA140/RA200/RA250 fields have
+median native Δμ +0.039/+0.050/+0.078 mag and >=2 mas medians
++0.066/+0.076/+0.171; negative-b RA10 has −0.009, RA340 has 216
+selected sources with a wide interval, and RA310 has zero because of
+the unchanged E(B−V) cut. All outcomes are retained in
+`docs/cold_v4_sky_census.md`. The coordinate-sign crossover fields are
+being constructed; score them before interpreting the sky-coordinate
+association.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

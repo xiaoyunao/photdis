@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Six-field sky census scans completed in debug arrays 60460898 and
+  60461294; frozen score 60461354 completed in 41 s on allocated CPU.
+  Three positive-b fields select 5,331/5,395/2,218 cold anchors and have
+  native median Δμ +0.039/+0.050/+0.078 mag; their >=2 mas medians are
+  +0.066/+0.076/+0.171. Negative-b RA10 selects 5,656, median −0.009;
+  RA340 selects 216, median +0.007 with wide CI; RA310 has zero because
+  all 4.91 million |b|>30 PSF rows fail E(B−V)<0.03. Added aggregate
+  manifest, selected sky plot and report. The positive-b sign repeats,
+  but b and ecliptic latitude signs coincide in these six fields.
+  Cross-sign arrays are now running. Next: score their fixed coordinate
+  comparison and decide the next cause test.
+
 - Before the six-field sky-census scores were read, noticed all six
   diagnostic centers have matching signs of Galactic and ecliptic
   latitude. Registered four disjoint 10-degree coordinate-sign crossover
