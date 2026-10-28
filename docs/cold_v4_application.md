@@ -2,6 +2,8 @@
 
 2026-10-28。冻结的 `cold_v4` 森林、支持域、颜色盒、C→B→A 路由及六组区间偏移均未改动。本报告使用独立校准场和三块已登记的 v4 最终场，从[分层清单](../manifests/cold_v4_application_audit.json)汇总完整路由的候选组成与 Gaia 距离误差。原最终场的严格冷主序指标仍以[原清单](../manifests/cold_v4_final.json)为准。
 
+![实际候选质量组成与严格 Gaia 星的分层覆盖](../figures/cold_v4/02_application_tiers.png)
+
 ## 对象定义
 
 - **测光候选**：DR11 试验场已存的 PSF 测光行，满足 `grz_base`、冻结颜色盒、实际所选层的 2/3/4 维训练支持，再按 C→B→A 选层。没有逐星距离真值。

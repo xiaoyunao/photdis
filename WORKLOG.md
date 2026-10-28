@@ -2,6 +2,13 @@
 
 ## 2026-10-28
 
+- Rendered `figures/cold_v4/02_application_tiers.png` from the checked
+  application manifest to show candidate tier×optical-quality composition
+  beside strict-Gaia 95% coverage; visually inspected the output. Switched
+  the registered deep calibration/final runner to a 30-minute debug CPU
+  allocation for each bounded field job. Next: finish the policy-development
+  job, choose and hash-lock one route, then run independent calibration/final.
+
 - Added a no-fit v4 center-offset diagnostic for the three final fields.
   It groups the unchanged strict-Gaia residuals by selected tier, original
   six route groups, r/r-z, used-band error, support radius, parallax S/N,
