@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- User correction: first test one sky field and show it for review. I expanded
+  two I/O smoke files into a 1,074-tile scan too early.
+- Status: full scan finished; serial full-table merge stopped; 14,629,273,920
+  bytes of partial tables are in
+  data/stage1_v1/tables_partial_serial_20261028T060107Z. No final summary exists.
+- Actions: stopped bulk-writer development; moved its unfinished local script to
+  ../photdis_archives/20261028_stage1_scope_reset/; released both allocations
+  60424566 and 60426781; updated the project scope and next checkpoint.
+- Next: one-field sample/plot review. Full-footprint processing remains stopped.
+- Communication: use direct factual explanations; omit defensive caveats.
+
 - Task: Complete the full scan and compare input-feature coverage explicitly.
 - Result: all 1,074 eligible tiles completed in 1,511 seconds with zero missing
   Gaia files; full pre-dedup grz base contains 101,087,401 point-source records.

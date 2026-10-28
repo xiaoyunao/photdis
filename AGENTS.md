@@ -1,8 +1,9 @@
 # Project instructions
 
-- Current checkpoint: Pro step 1 is authorized: build Gaia anchor/extended and
-  spectroscopy samples, lock external/spatial test groups, and audit coverage.
-  Stop for user review after this step. Do not train models.
+- Current checkpoint: the user corrected the scope on 2026-10-28. First test
+  ONE sky field and show its selections, counts and plots for user review.
+  Do not resume the full-footprint scan or finalization before that review.
+  No model training. Keep progress and explanations direct and factual.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,
