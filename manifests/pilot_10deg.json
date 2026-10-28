@@ -537,16 +537,16 @@
   },
   "cmd_counts": {
     "gaia_reference": {
-      "finite": 6942,
-      "in_view": 6942
+      "finite": 6920,
+      "in_view": 6920
     },
     "gaia_with_grz": {
-      "finite": 6911,
-      "in_view": 6911
+      "finite": 6889,
+      "in_view": 6889
     },
     "anchor": {
-      "finite": 1802,
-      "in_view": 1802
+      "finite": 1801,
+      "in_view": 1801
     }
   },
   "figures": [
@@ -557,5 +557,5 @@
   ],
   "elapsed_seconds": 285.7701666355133,
   "script_sha256": "9afa972b26d0b3eea6da095ced21b86891cd890cc7c5a146d3fa42ef7202211d",
-  "plot_script_sha256": "d161cd2fcacfaec32e7ec03dee2cd46ef36fc39112a9be44fae3afd9f468ddb8"
+  "plot_script_sha256": "3138c8b42112f121dfd8dc9c2f27e94658aad6c170dfa5389ad5dc9381152d71"
 }
