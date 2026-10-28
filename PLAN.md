@@ -117,6 +117,12 @@ already inspected native final fields can now test the model response to
 partial foreground correction without changing training or policy. Then
 decide whether further sky expansion is scientifically useful.
 
+The dust-response script is ready with fractions 1/0.75/0.5/0 of the
+catalog foreground correction, same-source paired predictions, route
+acceptance and p>=2 mas strata. Run on NERSC allocated CPU. Use it to
+bound the size and direction of a dust effect, then make the final method
+decision; no fitted correction follows from this sensitivity test.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

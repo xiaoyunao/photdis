@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Prepared a bounded dust-response experiment on the three already
+  scored native final fields, keeping Gaia anchors, Gaia reference
+  parallax, forests and WISE20 policy fixed. It compares assumed fractions
+  1, 0.75, 0.5 and 0 of the DR11 foreground correction in all five bands,
+  reroutes the same stars and reports paired distance-modulus shifts and
+  acceptance, including p>=2 mas. The perturbation uses the measured
+  catalog A_g and official band-coefficient ratios; a source-hash check
+  reproduces published baseline identities. Python parse, shell syntax
+  and nine focused photometry/noise/dust tests pass. Next: run on allocated
+  NERSC CPU, interpret as sensitivity rather than a fitted dust map.
+
 - Coordinate-sign crossover arrays 60461738/60461825 completed all four
   fields, and frozen score 60461961 completed in 31 s. Registered
   b>0/β<0 fields RA160/RA180 yielded 16/0 selected strict cold anchors;
