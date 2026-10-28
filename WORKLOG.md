@@ -2,6 +2,14 @@
 
 ## 2026-10-28
 
+- Task: Make the frozen test partition independently identifiable.
+- Files: independent validator and its tests.
+- Change: stream SHA256 of each role's ordered (Legacy ID, Gaia ID, partition)
+  using documented little-endian 18-byte rows; also hash the scan manifest.
+- Validation: five targeted validator tests passed, including independent byte
+  encoding, empty tables and chunk-size invariance. No science module changed.
+- Next: run these audits on the completed production tables.
+
 - Task: Start production scan after corrected real-data smoke.
 - Commands/results: 20 regression tests passed; corrected two-tile smoke on
   nid200018 produced 585 anchors, 18,516 extended objects including 2,622 negative

@@ -1,10 +1,12 @@
 """Independent final-audit tests, including intentionally corrupted products."""
 
 import contextlib
+import hashlib
 import importlib.util
 import io
 from pathlib import Path
 import tempfile
+import struct
 import unittest
 from unittest.mock import patch
 
@@ -51,6 +53,19 @@ class FinalAuditTests(unittest.TestCase):
                 self.assertEqual(result["counts"]["parent"], size)
                 self.assertTrue((run_dir / "validation.json").exists())
                 self.assertLessEqual(result["coverage"]["parent"]["sample_rows"], 2)
+                self.assertEqual(result["scan_manifest_sha256"],
+                                 hashlib.sha256((run_dir / "scan_manifest.json").read_bytes()).hexdigest())
+                for role in stage1.ROLE_NAMES:
+                    table = fitsio.read(str(run_dir / "tables" / f"{role}.fits"), ext=1,
+                                        columns=["ls_id", "source_id", "partition"])
+                    canonical = b"".join(struct.pack("<qqh", int(row["ls_id"]), int(row["source_id"]),
+                                                    int(row["partition"])) for row in table)
+                    self.assertEqual(result["role_identity_partition_sha256"][role],
+                                     hashlib.sha256(canonical).hexdigest())
+                with patch.object(audit, "require_compute"):
+                    rechunked = audit.validate_run(run_dir, chunk_rows=1, sample_size=2)
+                self.assertEqual(result["role_identity_partition_sha256"],
+                                 rechunked["role_identity_partition_sha256"])
                 if size:
                     self.assertEqual(result["counts"]["negative_parallax"], 1)
                     self.assertEqual(result["counts"]["zero_parallax"], 1)

@@ -18,6 +18,7 @@ import numpy as np
 
 
 ROLES = ("parent", "anchor", "extended", "spectroscopy", "external_test", "coverage_reference")
+IDENTITY_PARTITION_DTYPE = np.dtype([("ls_id", "<i8"), ("source_id", "<i8"), ("partition", "<i2")], align=False)
 FLAGS = ("anchor", "extended", "extended_quality", "spectroscopy_match", "spectro_quality",
          "external_any", "external_cluster_member", "cluster_region", "widebinary",
          "identity_ambiguity_reserved", "duplicate_identity_reserved", "coverage_reference",
@@ -252,7 +253,8 @@ def validate_run(run_dir, chunk_rows=200000, sample_size=50000):
         raise ValueError("chunk_rows and sample_size must be positive")
     started = time.time()
     root = Path(run_dir).resolve()
-    manifest = json.loads((root / "scan_manifest.json").read_text())
+    manifest_bytes = (root / "scan_manifest.json").read_bytes()
+    manifest = json.loads(manifest_bytes)
     summary = json.loads((root / "summary.json").read_text())
     config, signature = manifest["config"], manifest["signature"]
     checks = Checks()
@@ -325,7 +327,7 @@ def validate_run(run_dir, chunk_rows=200000, sample_size=50000):
     checks.add("unique_gaia_ids", len(np.unique(known)) == len(known))
     sorting = np.argsort(ids, kind="stable")
     sorted_ids = ids[sorting]
-    actual_counts = {}
+    actual_counts, role_hashes = {}, {}
     for index, role in enumerate(ROLES):
         path = root / "tables" / f"{role}.fits"
         with fitsio.FITS(str(path)) as hdus:
@@ -334,7 +336,12 @@ def validate_run(run_dir, chunk_rows=200000, sample_size=50000):
             checks.add(f"{role}_header_signature", header.get("RUNHASH") == signature[:32])
             checks.add(f"{role}_header_role", header.get("ROLE") == role)
         got, role_partition = [], np.zeros(4, dtype="i8")
+        identity_partition_digest = hashlib.sha256()
         for table in chunks(path, ["ls_id", "source_id", "partition"], chunk_rows):
+            canonical = np.empty(len(table), dtype=IDENTITY_PARTITION_DTYPE)
+            for field in IDENTITY_PARTITION_DTYPE.names:
+                canonical[field] = table[field]
+            identity_partition_digest.update(canonical.tobytes(order="C"))
             got.append(table["ls_id"])
             position = np.searchsorted(sorted_ids, table["ls_id"])
             inside = position < len(ids)
@@ -347,6 +354,7 @@ def validate_run(run_dir, chunk_rows=200000, sample_size=50000):
             valid = (table["partition"] >= 0) & (table["partition"] <= 3)
             checks.add(f"{role}_valid_partition", valid)
             role_partition += np.bincount(table["partition"][valid], minlength=4)
+        role_hashes[role] = identity_partition_digest.hexdigest()
         got = concatenate(got, "i8")
         expected = ids[(membership & (1 << index)) != 0]
         checks.add(f"{role}_exact_identity_set", np.array_equal(np.sort(got), np.sort(expected)))
@@ -362,6 +370,15 @@ def validate_run(run_dir, chunk_rows=200000, sample_size=50000):
         spectrum_summary[survey] = check_spectrum_partitions(concatenate(object_ids, "U1"), concatenate(part, "i2"), checks, survey)
     result = {"passed": checks.passed, "checked_utc": datetime.now(timezone.utc).isoformat(),
               "run_dir": str(root), "signature": signature, "source_code_commit": manifest["code_commit"],
+              "scan_manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
+              "role_identity_partition_sha256": role_hashes,
+              "identity_partition_hash_schema": {
+                  "version": 1, "algorithm": "SHA256", "row_order": "FITS stored row order",
+                  "fields": [["ls_id", "little-endian signed int64"],
+                             ["source_id", "little-endian signed int64"],
+                             ["partition", "little-endian signed int16"]],
+                  "bytes_per_row": 18, "padding": "none", "header_or_separator": "none",
+                  "empty_table": "SHA256 of zero bytes", "chunk_size_independent": True},
               "validator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               "host": socket.gethostname(), "slurm_job_id": os.environ.get("SLURM_JOB_ID"),
               "elapsed_seconds": time.time() - started, "limited_smoke_run": manifest["limited_smoke_run"],
