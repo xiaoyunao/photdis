@@ -2,6 +2,12 @@
 
 ## 2026-10-28
 
+- Supplemental evaluation code: added a separate `supplemental` mode to the
+  frozen conditional model runner and a matching DESI label-audit mode. Both
+  read the prepared calibration.joblib and its published SHA-256; no model
+  coefficients, color edges, CQR offsets, class definitions or candidate
+  thresholds change. Original final products remain immutable.
+
 - Final-field sample-size diagnosis: RA230–240/Dec5–15 retains only 11,492
   of 4,647,352 PSF rows after the preexisting E(B−V)<0.03 cut, leaving 47
   strict Gaia anchors and 25 cold strict anchors. The result remains a final

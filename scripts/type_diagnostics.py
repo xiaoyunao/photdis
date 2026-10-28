@@ -32,6 +32,10 @@ FINAL_FIELDS = {
     "final_ra230_240": "data/field_final_ra230_240_v1/field_diagnostics.fits",
     "final_ra050_060": "data/field_final_ra050_060_v1/field_diagnostics.fits",
 }
+SUPPLEMENTAL_FIELDS = {
+    "supp_ra170_180": "data/field_supp_ra170_180_v1/field_diagnostics.fits",
+    "supp_ra035_045": "data/field_supp_ra035_045_v1/field_diagnostics.fits",
+}
 COLS = ["grz_base", "grz_w1", "grz_w1_w2", "gr0", "rz0", "r",
         "desi_quality", "desi_match_ambiguous", "desi_known_contaminant",
         "desi_teff", "desi_logg"]
@@ -137,11 +141,25 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plot-only", action="store_true")
     parser.add_argument("--final", action="store_true")
+    parser.add_argument("--supplemental", action="store_true")
     args = parser.parse_args()
-    fields = FINAL_FIELDS if args.final else FIELDS
-    out = Path("data/type_diagnostics_final_v1") if args.final else OUT
-    figure_dir = Path("figures/type_diagnostics_final_v1") if args.final else FIG
-    manifest = Path("manifests/type_diagnostics_final.json") if args.final else Path("manifests/type_diagnostics_dev.json")
+    if args.final and args.supplemental:
+        parser.error("Choose either final or supplemental fields")
+    if args.supplemental:
+        fields = SUPPLEMENTAL_FIELDS
+        out = Path("data/type_diagnostics_supplemental_v1")
+        figure_dir = Path("figures/type_diagnostics_supplemental_v1")
+        manifest = Path("manifests/type_diagnostics_supplemental.json")
+    elif args.final:
+        fields = FINAL_FIELDS
+        out = Path("data/type_diagnostics_final_v1")
+        figure_dir = Path("figures/type_diagnostics_final_v1")
+        manifest = Path("manifests/type_diagnostics_final.json")
+    else:
+        fields = FIELDS
+        out = OUT
+        figure_dir = FIG
+        manifest = Path("manifests/type_diagnostics_dev.json")
     if args.plot_only:
         plot_summary(json.loads(manifest.read_text()), figure_dir)
         return

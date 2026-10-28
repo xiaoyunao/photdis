@@ -54,6 +54,8 @@ CONFIGS = {
     "new_cal": "configs/field_dev_cal_ra205_215.json",
     "final_north": "configs/field_final_ra230_240.json",
     "final_south": "configs/field_final_ra050_060.json",
+    "supp_north": "configs/field_supp_ra170_180.json",
+    "supp_south": "configs/field_supp_ra035_045.json",
 }
 
 
@@ -223,21 +225,30 @@ def prepare(forests, references, frozen):
                                    for tier, item in manifest["tiers"].items()}}), flush=True)
 
 
-def final_test(forests, references, frozen):
-    if FINAL.exists() or (OUT / "final_summary.json").exists():
+def final_test(forests, references, frozen, supplemental=False):
+    manifest_path = (Path("manifests/conditional_supplemental_v2.json")
+                     if supplemental else FINAL)
+    summary_path = OUT / ("supplemental_summary.json" if supplemental else "final_summary.json")
+    if manifest_path.exists() or summary_path.exists():
         raise FileExistsError("Final evaluation already exists")
     prepared = json.loads(PREPARED.read_text())
     if prepared["frozen_baseline_commit"] != frozen["baseline_commit"] or sha(MODEL) != prepared["model_sha256"]:
         raise ValueError("Prepared calibration artifact changed")
-    registered = json.loads(Path("configs/next_fields.json").read_text())
+    registration = ("configs/supplemental_fields.json" if supplemental
+                    else "configs/next_fields.json")
+    registered = json.loads(Path(registration).read_text())
+    field_keys = (("supp_north", "supp_south") if supplemental
+                  else ("final_north", "final_south"))
+    expected_role = ("supplemental_untouched_final_test" if supplemental
+                     else "untouched_final_test")
     models = joblib.load(MODEL)
     summary = {"method_manifest_sha256": sha(PREPARED),
                "field_roles": {item["name"]: item["role"] for item in registered["fields"]},
                "fields": {}, "compute_host": socket.gethostname()}
-    for key in ("final_north", "final_south"):
+    for key in field_keys:
         field = load_field(key, references)
         name = field[3]["name"]
-        if summary["field_roles"].get(name) != "untouched_final_test":
+        if summary["field_roles"].get(name) != expected_role:
             raise ValueError("Final field role was not preregistered")
         item = {"field": field[3], "tiers": {}}
         cache = {}
@@ -286,21 +297,23 @@ def final_test(forests, references, frozen):
     axes[0].axhline(0, color=".5", ls=":")
     axes[1].axhline(.95, color=".5", ls=":")
     for ax in axes:
-        ax.set_xticks(np.arange(len(labels)), ["RA 230-240", "RA 050-060"])
+        ax.set_xticks(np.arange(len(labels)), ["RA 170-180", "RA 035-045"]
+                      if supplemental else ["RA 230-240", "RA 050-060"])
         ax.grid(alpha=.2)
     axes[0].set_ylabel("Centered Mg bias [mag]")
     axes[1].set_ylabel("95% Mg coverage (solid calibrated)")
     axes[0].legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(FIG / "01_final_conditional_calibration.png", dpi=170)
+    fig.savefig(FIG / ("02_supplemental_conditional_calibration.png" if supplemental
+                       else "01_final_conditional_calibration.png"), dpi=170)
     plt.close(fig)
-    write_json(OUT / "final_summary.json", summary)
-    write_json(FINAL, summary)
+    write_json(summary_path, summary)
+    write_json(manifest_path, summary)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("prepare", "final"))
+    parser.add_argument("mode", choices=("prepare", "final", "supplemental"))
     args = parser.parse_args()
     require_compute()
     frozen = json.loads(Path("configs/followup_fields.json").read_text())
@@ -316,7 +329,8 @@ def main():
     if args.mode == "prepare":
         prepare(forests, references, frozen)
     else:
-        final_test(forests, references, frozen)
+        final_test(forests, references, frozen,
+                   supplemental=args.mode == "supplemental")
 
 
 if __name__ == "__main__":
