@@ -25,8 +25,8 @@ from noise_injection_v2 import raw_for_unique_ids, score
 
 REGISTRATION = Path("configs/cold_v4_deep_fields.json")
 RESULT = Path("data/cold_v4_deep/policy_development.json")
-REPEATS = 4
-MAX_TEMPLATES = 1000
+REPEATS = 2
+MAX_TEMPLATES = 500
 
 
 def raw_for_ids(ids, field):

@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Held-out system job 60441842 completed in 23 s. The three final fields
+  contain 456 clean-routed published wide-binary pairs and one cluster with
+  >=5 members (Blanco 1, 201 stars). Pair modulus differences have NMAD
+  0.353 mag; fainter-minus-brighter median is +0.046 mag. Added component-
+  bootstrap median intervals and the cluster name to a v2 result; preserved
+  the original NERSC result and local ignored archival copy. Regular-queue
+  policy job 60441428 stayed pending, so canceled it before execution and
+  reduced development comparison to 500 independent templates × 2 draws
+  per depth for a debug allocation. Next: sync and run both bounded jobs.
+
 - Added independent deep split-CQR runner with one calibration draw per
   Gaia source and depth, hierarchical depth/tier/color/error/support groups,
   and a final field with clustered repeated-draw intervals. Added a test

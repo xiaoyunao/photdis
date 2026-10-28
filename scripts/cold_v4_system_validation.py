@@ -19,7 +19,7 @@ from photdis.route import FEATURES, LEVEL, apply_route_offsets, feature_matrix, 
 from photdis.stage1 import require_compute, write_json
 from cold_v4 import FINAL_CONFIGS, OUT, PREPARED, PREPARED_TRACKED, sha
 
-RESULT = Path("data/cold_v4_systems/relative_validation.json")
+RESULT = Path("data/cold_v4_systems/relative_validation_v2.json")
 READ = ["source_id", "g0", "r0", "rz0", "r", "gr0", "zw10", "w1w20",
         "grz_base", "grz_clean", "grz_w1", "grz_w1_w2"]
 
@@ -58,6 +58,21 @@ def robust_summary(values):
             "abs_gt_0p5_fraction": float(np.mean(np.abs(x) > .5))}
 
 
+def component_median_ci(values, groups, seed=20261028, repeats=1000):
+    """Resample independent wide-binary components, keeping linked pairs together."""
+    values, groups = np.asarray(values, float), np.asarray(groups, np.int64)
+    if not len(values):
+        return None
+    unique = np.unique(groups)
+    if len(unique) < 10:
+        return None
+    members = [values[groups == key] for key in unique]
+    rng = np.random.default_rng(seed)
+    medians = [np.median(np.concatenate([members[i] for i in
+               rng.integers(len(unique), size=len(unique))])) for _ in range(repeats)]
+    return np.quantile(medians, [.025, .975]).tolist()
+
+
 def evaluate_pairs(records, pair_catalog):
     ids = records["source_id"]
     order = np.argsort(ids)
@@ -92,14 +107,24 @@ def evaluate_pairs(records, pair_catalog):
     result["components"] = len(np.unique(pair_group))
     result["fainter_minus_brighter_mu"] = robust_summary(delta_faint)
     result["redder_minus_bluer_mu"] = robust_summary(delta_red)
+    result["fainter_minus_brighter_mu"]["median_component_bootstrap95"] = component_median_ci(
+        delta_faint, pair_group)
+    result["redder_minus_bluer_mu"]["median_component_bootstrap95"] = component_median_ci(
+        delta_red, pair_group)
     for low, high in ((0, .2), (.2, .5), (.5, 5)):
         take = (color_diff >= low) & (color_diff < high)
+        summary = robust_summary(delta_red[take])
+        summary["median_component_bootstrap95"] = component_median_ci(
+            delta_red[take], pair_group[take], seed=20261028 + int(low * 100))
         result["color_difference_bins"].append({"bin": [low, high],
-                                                 "redder_minus_bluer_mu": robust_summary(delta_red[take])})
+                                                 "redder_minus_bluer_mu": summary})
     for low, high in ((0, 1), (1, 2), (2, 10)):
         take = (r_diff >= low) & (r_diff < high)
+        summary = robust_summary(delta_faint[take])
+        summary["median_component_bootstrap95"] = component_median_ci(
+            delta_faint[take], pair_group[take], seed=20261028 + low)
         result["r_difference_bins"].append({"bin": [low, high],
-                                             "fainter_minus_brighter_mu": robust_summary(delta_faint[take])})
+                                             "fainter_minus_brighter_mu": summary})
     return result
 
 
@@ -112,6 +137,7 @@ def evaluate_clusters(records, references):
     group[hit] = references.member_group[position[hit]]
     within = []
     per_group = []
+    group_names = json.loads(Path("data/reference/holdout_group_names.json").read_text())
     for number in np.unique(group[group > 0]):
         take = group == number
         if take.sum() < 5:
@@ -120,6 +146,7 @@ def evaluate_clusters(records, references):
         centered = mu - np.median(mu)
         within.extend(centered)
         per_group.append({"reference_group": int(number),
+                          "reference_name": group_names.get(str(int(number)), {}).get("name"),
                           "n_clean_routed_members": int(take.sum()),
                           "relative_mu": robust_summary(centered)})
     return {"groups_with_at_least_5_members": len(per_group),
