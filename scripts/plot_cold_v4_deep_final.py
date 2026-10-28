@@ -19,8 +19,7 @@ def main():
     data = json.loads(SOURCE.read_text())
     rows = [data["observed_r_bins"][str(i)] for i in range(4)]
     x = np.arange(4)
-    labels = [f"{lo}–{hi}\n(n={row['n_draws']}, {row['n_sources']} sources)"
-              for row in rows for lo, hi in [row["observed_r_bin"]]]
+    labels = [f"{lo}–{hi}" for row in rows for lo, hi in [row["observed_r_bin"]]]
     fig, axes = plt.subplots(1, 3, figsize=(13, 4.2))
     for axis, key, nominal in zip(axes[:2], ("coverage_68", "coverage_95"), (.68, .95)):
         direct = np.array([row["tiers"]["all"]["direct_mu"][key] for row in rows])
@@ -47,6 +46,7 @@ def main():
         axis.set_xticks(x, labels)
         axis.set_xlabel("Final measured r (mag)")
     axes[0].legend(frameon=False, fontsize=8)
+    fig.suptitle("Independent final field · 4 draws per source · measured r bins", fontsize=11)
     fig.tight_layout()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUTPUT, dpi=180)

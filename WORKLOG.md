@@ -2,6 +2,19 @@
 
 ## 2026-10-28
 
+- Independent deep final job 60445991 completed on NERSC CPU in 8m55s,
+  exit 0, after calibration v2 was hash locked in `a0de76f`. RA170–180 has
+  500 disjoint Gaia templates ×4 draws per target noise depth. In measured
+  r18–19/19–20/20–21/21–22 the selected observation/source counts are
+  1707/493, 1694/493, 1607/489, 1296/484. Calibrated 95% final-modulus
+  coverage is 92.6%/92.9%/95.1%/92.3%; 68% coverage is 63.5%/62.6%/
+  65.2%/63.3%, with positive center bias +0.046 to +0.066 mag. The
+  deepest A tier has 92.1% 95% coverage and 0.405 mag NMAD. Model,
+  registration and policy hashes match. Rendered/visually inspected the
+  measured-r coverage figure; prepared the bounded application decision,
+  updated README and PLAN. Next: complete local validation, commit and sync
+  the final manifest/report/figure, then stop for user review.
+
 - Measured-r v2 calibration job 60444980 completed on NERSC CPU in 13m32s,
   exit 0. Copied and checked the small manifest against the locked policy and
   frozen preparation hashes. Observed r=18–19/19–20/20–21/21–22 have

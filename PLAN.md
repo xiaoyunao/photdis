@@ -2,13 +2,14 @@
 
 ## Current Objective
 
-Complete the latest Pro review of the cold-v4 component by measuring the gap
-between strict Gaia validation stars and actual photometric candidates. Keep
-the v4 forests, route, three final-field results and prior baselines frozen.
-Audit A/B/C, image cleanliness, errors and support; update DESI type and
-metal-poor diagnostics; then compare simple model-routing policies, calibrate
-deep-noise intervals with independent source/sky splits, and test real stellar
-populations with reference systems and weak-parallax forward checks.
+The latest Pro review of cold-v4 is complete through one independent deep
+final field. Keep the v4 forests, strict-anchor final fields and prior
+baselines frozen. The clean WISE20 application route is hash locked. Its
+measured-r depth interval v2 improves coverage but misses 68% and 95% nominal
+coverage in several independent bins; publish the conditional median-distance
+path with type/support/quality flags and keep the deep intervals diagnostic.
+The next research objective is a new, preregistered center/tail investigation
+and independent final test, followed by type selection with calibrated priors.
 
 ## Milestones
 
@@ -85,35 +86,36 @@ populations with reference systems and weak-parallax forward checks.
     92.5%/91.8%/92.4%/91.0%; the deepest bin's strict-quality fraction is
     32.3%, and W2 is selected in only 51/1,784 draws. The observed failure
     is a depth-calibration limit, not a reason to change frozen final tests.
-18. In progress: without changing forests, report A/B/C × clean/strict/other
+18. Complete: without changing forests, report A/B/C × clean/strict/other
     image-quality and error/support strata for calibration, new final Gaia
     fields, shared noise and real photometric candidates. Include per-tier
     bias/NMAD/68%/95% coverage/tail misses/width, sky- or source-cluster
     uncertainty, and complete-route intersection with grz_clean. The real
-    candidate/Gaia field audit is complete; the noise tier cross-tab remains.
+    candidate/Gaia audit and new deep source-cluster tier diagnostics are
+    published; sparse deep C is explicitly recorded.
 19. Complete: applied the complete v4 route to deduplicated, quality-qualified
     Gaia/DESI labels in the new fields. Measure dwarf recall and giant/nonstar
     leakage by tier, clean state, fallback, color, magnitude, errors and sky;
     separately audited calibrated-domain metal-poor labels. Two final fields
     have DESI matches; RA0–10 has none. Defer type probabilities until label
     selection and class priors are supportable.
-20. In progress: corrected simulated flux IVAR when template noise exceeds
+20. Complete: corrected simulated flux IVAR when template noise exceeds
     target noise, and corrected the report's description of borrowed masks.
     Compare only a few predeclared routing policies on identical five-band
     development observations, considering precision, coverage, width and
     acceptance. Development chose and hash-locked `grz_clean` plus WISE
-    S/N>=20; calibrate/test it on separately registered fields next.
-21. In progress: assembled high-S/N templates and WISE-unconditioned target-noise
+    S/N>=20; tested it on separately registered fields.
+21. Complete: assembled high-S/N templates and WISE-unconditioned target-noise
     environments from several fields; isolate fit/development, calibration
     and final-test identities and sky blocks. Calibrate final distance-modulus
     intervals by chosen tier and measurable noise/support using independent
     sources. RA35–45 calibration completed with one observation per source
-    per target-noise depth. Supersede that v1 calibration: it grouped by the
-    injected target-noise r, which the application cannot observe. Refit v2
-    with measured-r bins and one unique calibration source per measured bin,
-    then test once on unseen RA170–180. Apply deep intervals only at measured
-    r=18–22.
-22. In progress: used isolated wide-binary/cluster reference systems for color- and
+    per target-noise depth. Superseded v1 grouping by injected target-noise r;
+    v2 groups by measured r and deduplicates source identities in each bin.
+    The one-time RA170–180 final test has 95% coverage 92.6%/92.9%/95.1%/92.3%
+    and 68% coverage 62.6%–65.2% across measured r18–22. Deep v2 intervals
+    remain diagnostic pending a new development/calibration/final sequence.
+22. Complete for current scope: used isolated wide-binary/cluster reference systems for color- and
     brightness-dependent distance checks, then assess weak/negative Gaia
     parallaxes with a parallax-space forward model and documented selection.
     Examine metal-poor, binary, extinction and field dependence of bias.
@@ -133,9 +135,11 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Finish the measured-r v2 calibration and one independent RA170–180 final
-evaluation. Compare observed-r depth bins and A/B/C, report acceptance,
-final distance-modulus bias/NMAD, 68%/95% coverage and width with source
-cluster uncertainty. Close the application-range report for r18–22 and
-identify the uncalibrated bright/faint ranges. The v2 center correction
-remains rejected.
+Review the [application decision](docs/cold_v4_application_decision.md) with
+the user. The independent final test shows deep interval undercoverage and
+positive modulus bias; do not tune these frozen final results. For the next
+research round, preregister new development/calibration/final sky roles,
+investigate center and low-tail errors with binaries/metallicity and a
+forward weak-parallax check, then recalibrate conditionally on measured
+inputs. Build type probabilities only after quantifying DESI/Gaia label
+selection and application class priors.

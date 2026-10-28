@@ -9,11 +9,14 @@ Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [external/depth follow-up](docs/followup_validation.md), and
 [second-round final-field validation](docs/pro_followup_v2.md) are complete.
 The separately trained [cold-v4 route](docs/cold_v4.md) has expanded strict
-Gaia anchors and has been checked in three newly registered final fields.
-Its distance estimates remain conditional on the cold-dwarf hypothesis; the
-same-star noise experiment finds 91%–93% final-distance 95% coverage at
-`r=18–22`, so those intervals are not validated for deep candidates.
-Type-selection probabilities also remain uncalibrated.
+Gaia anchors and three registered strict-anchor final fields. Its frozen
+forests were also evaluated under an independently chosen clean WISE20 route
+and [measured-r deep calibration/final test](docs/cold_v4_application_decision.md).
+In the independent deep field the calibrated 95% final-distance-modulus
+interval covers 92.6%/92.9%/95.1%/92.3% at measured `r=18–19/19–20/20–21/21–22`;
+the 68% interval covers 62.6%–65.2%. These intervals are not released as
+nominal-coverage intervals. Median distances are cold-dwarf-hypothesis
+estimates, with type and support flags; type probabilities are uncalibrated.
 
 ## Locations
 
@@ -112,6 +115,14 @@ the [cold-v4 report](docs/cold_v4.md). Forests, route state and per-star
 products stay under ignored `data/cold_v4/` on NERSC. Each final/noise run
 checks the published preparation and model hashes before reading its inputs.
 
+The later application audit and measured-depth study use
+`configs/cold_v4_deep_fields.json` and the locked policy in
+`configs/cold_v4_deep_policy.json`. On allocated NERSC CPUs, the bounded
+calibration/final runner is `scripts/run_cold_v4_deep.sh` with `calibrate`
+or `final`; it refuses to overwrite existing outputs and the final run checks
+the tracked calibration hash. See the [application decision](docs/cold_v4_application_decision.md)
+before interpreting candidate distances.
+
 ## Stage 1 operation
 
 Read [sample definitions](docs/stage1_selection.md) before interpreting outputs.
@@ -146,6 +157,6 @@ scientific configuration or processing module requires a new output directory.
 Normalized references and their source hashes are listed in
 [the reference manifest](manifests/holdout_reference_manifest.json).
 
-Local regression checks use `python3 -m unittest discover -s tests -v` with
+Local regression checks use `python -m pytest -q` with
 NumPy, fitsio, healpy and SciPy available. They exercise synthetic measurements
 and identities; only the allocated NERSC run produces scientific sample counts.
