@@ -1,0 +1,560 @@
+{
+  "field": {
+    "name": "pilot_ra000_010_dec_m010_000",
+    "bounds_deg": [
+      0,
+      -10,
+      10,
+      0
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-000m010-005m005.fits",
+      "sweep-000m005-005p000.fits",
+      "sweep-005m010-010m005.fits",
+      "sweep-005m005-010p000.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/pilot_10deg_v1",
+    "figure_dir": "figures/pilot_10deg",
+    "manifest_path": "manifests/pilot_10deg.json"
+  },
+  "source_files": [
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-000m010-005m005.fits",
+      "bytes": 1427958720,
+      "mtime_ns": 1780600032000000000,
+      "field_rows": 2827554
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-000m005-005p000.fits",
+      "bytes": 1810889280,
+      "mtime_ns": 1780600056000000000,
+      "field_rows": 3585830
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m010-010m005.fits",
+      "bytes": 1440118080,
+      "mtime_ns": 1780600011000000000,
+      "field_rows": 2851633
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m005-010p000.fits",
+      "bytes": 1904895360,
+      "mtime_ns": 1780600075000000000,
+      "field_rows": 3771981
+    }
+  ],
+  "code_commit": "2c823ddb0ffb06b761ef9e7df237738d112fefab",
+  "compute_host": "nid200006",
+  "optical_cutflow": [
+    {
+      "condition": "RA\u2208[0,10)\u00b0\uff0cDec\u2208[-10,0)\u00b0",
+      "remaining": 13036998,
+      "removed": 0
+    },
+    {
+      "condition": "TYPE=PSF",
+      "remaining": 5574170,
+      "removed": 7462828
+    },
+    {
+      "condition": "|b|>30\u00b0",
+      "remaining": 5574170,
+      "removed": 0
+    },
+    {
+      "condition": "E(B\u2212V)\u6709\u9650\u4e140\u2264E(B\u2212V)<0.03",
+      "remaining": 1302324,
+      "removed": 4271846
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5NOBS\u22651",
+      "remaining": 1302181,
+      "removed": 143
+    },
+    {
+      "condition": "g\u3001r\u3001z\u6d41\u91cf\u6709\u9650\u4e14>0",
+      "remaining": 1256516,
+      "removed": 45665
+    },
+    {
+      "condition": "g\u3001r\u3001z\u9006\u65b9\u5dee\u6709\u9650\u4e14>0",
+      "remaining": 1256494,
+      "removed": 22
+    },
+    {
+      "condition": "g\u3001r\u3001z\u6d88\u5149\u900f\u5c04\u7387\u6709\u9650\u4e14>0",
+      "remaining": 1256494,
+      "removed": 0
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5S/N\u22655",
+      "remaining": 312975,
+      "removed": 943519
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5FRACMASKED<0.4",
+      "remaining": 306599,
+      "removed": 6376
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5FRACIN>0.7",
+      "remaining": 304666,
+      "removed": 1933
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5FRACFLUX<0.5",
+      "remaining": 287802,
+      "removed": 16864
+    },
+    {
+      "condition": "MASKBITS\u76842\u30013\u30014\u30015\u30016\u30017\u300110\u4f4d\u4e3a0",
+      "remaining": 286986,
+      "removed": 816
+    },
+    {
+      "condition": "g\u3001r\u3001z\u5404\u6ce2\u6bb5\u661f\u7b49\u8bef\u5dee<0.03 mag",
+      "remaining": 60633,
+      "removed": 226353
+    }
+  ],
+  "anchor_cutflow": [
+    {
+      "condition": "\u5149\u5b66\u9ad8\u8d28\u91cf\u6837\u672c",
+      "remaining": 60633,
+      "removed": 0
+    },
+    {
+      "condition": "\u5339\u914dGaia DR3",
+      "remaining": 47332,
+      "removed": 13301
+    },
+    {
+      "condition": "\u89c6\u5dee\u6709\u9650\uff0c\u8bef\u5dee\u6709\u9650\u4e14>0",
+      "remaining": 41860,
+      "removed": 5472
+    },
+    {
+      "condition": "\u4e94\u6216\u516d\u53c2\u6570\u89e3\uff0831\u621695\uff09",
+      "remaining": 41860,
+      "removed": 0
+    },
+    {
+      "condition": "0<RUWE<1.4",
+      "remaining": 41208,
+      "removed": 652
+    },
+    {
+      "condition": "visibility_periods_used\u22659",
+      "remaining": 41208,
+      "removed": 0
+    },
+    {
+      "condition": "duplicated_source=False",
+      "remaining": 40976,
+      "removed": 232
+    },
+    {
+      "condition": "\u96f6\u70b9\u4fee\u6b63\u9002\u7528\u57df\u5185\u4e14\u4fee\u6b63\u503c\u6709\u6548",
+      "remaining": 34845,
+      "removed": 6131
+    },
+    {
+      "condition": "\u4fee\u6b63\u89c6\u5deeS/N\u226520",
+      "remaining": 1804,
+      "removed": 33041
+    },
+    {
+      "condition": "Gaia QSO\u548cgalaxy\u5019\u9009\u6807\u8bb0\u5747\u4e3aFalse",
+      "remaining": 1802,
+      "removed": 2
+    },
+    {
+      "condition": "\u5149\u8c31\u5206\u7c7b\u672a\u6807\u4e3aQSO\u6216GALAXY",
+      "remaining": 1802,
+      "removed": 0
+    },
+    {
+      "condition": "\u6bcf\u4e2aGaia source_id\u4fdd\u7559\u6d4b\u5149\u8bef\u5dee\u6700\u5c0f\u7684\u4e00\u884c",
+      "remaining": 1802,
+      "removed": 0
+    }
+  ],
+  "domain_psf_rows": 1302324,
+  "grz_base_rows": 312975,
+  "gaia_matches_domain": 56922,
+  "anchor_rows": 1802,
+  "anchor_duplicate_rows_removed": 0,
+  "gaia_identity_recovered": 6,
+  "spectral_identity_conflicts": 0,
+  "extended_rows": 49906,
+  "extended_unique_gaia": 49903,
+  "negative_parallax": 6683,
+  "zero_parallax": 0,
+  "weak_corrected_snr_lt5": 25729,
+  "extended_quality_rows": 33243,
+  "negative_in_extended_quality": 4586,
+  "grz_w1_rows": 73044,
+  "grz_w1_w2_rows": 44806,
+  "gaia_reference_photometry": {
+    "rows": 6942,
+    "grz_base": 6910,
+    "grz_high_quality": 1804,
+    "fracmasked_fail": 4629,
+    "fracin_fail": 118,
+    "fracflux_fail": 38,
+    "maskbits_fail": 5082,
+    "sigma_fail": 35,
+    "maskbit_counts": {
+      "1": 880,
+      "2": 2245,
+      "3": 3884,
+      "4": 5079,
+      "5": 1003,
+      "6": 2321,
+      "7": 2914,
+      "10": 0,
+      "11": 4905,
+      "12": 11,
+      "13": 0
+    }
+  },
+  "spectroscopy": {
+    "desi": {
+      "domain_psf": {
+        "matched_rows": 2600,
+        "unique_spectra": 2599,
+        "id_match": 2033,
+        "coordinate_match": 567,
+        "ambiguous": 0,
+        "classes": {
+          "GALAXY": 158,
+          "QSO": 1118,
+          "STAR": 1324
+        },
+        "quality_rows": 1066,
+        "quality_unique_spectra": 1065,
+        "quality_logg_lt3p2": 19,
+        "quality_feh_lt_m1p5": 205,
+        "teff": {
+          "n": 1066,
+          "min": 3056.128662109375,
+          "median": 5401.8349609375,
+          "max": 9492.1953125
+        },
+        "logg": {
+          "n": 1066,
+          "min": 2.1886563301086426,
+          "median": 4.644081115722656,
+          "max": 5.327404975891113
+        },
+        "feh": {
+          "n": 1066,
+          "min": -3.963806629180908,
+          "median": -0.7270135879516602,
+          "max": 0.4447884261608124
+        },
+        "separation_arcsec": {
+          "n": 2600,
+          "min": 1.669310404395219e-05,
+          "median": 0.004107578191906214,
+          "max": 0.9783270359039307
+        }
+      },
+      "grz_base": {
+        "matched_rows": 2590,
+        "unique_spectra": 2589,
+        "id_match": 2032,
+        "coordinate_match": 558,
+        "ambiguous": 0,
+        "classes": {
+          "GALAXY": 152,
+          "QSO": 1117,
+          "STAR": 1321
+        },
+        "quality_rows": 1065,
+        "quality_unique_spectra": 1064,
+        "quality_logg_lt3p2": 19,
+        "quality_feh_lt_m1p5": 205,
+        "teff": {
+          "n": 1065,
+          "min": 3056.128662109375,
+          "median": 5403.2734375,
+          "max": 9492.1953125
+        },
+        "logg": {
+          "n": 1065,
+          "min": 2.1886563301086426,
+          "median": 4.6449503898620605,
+          "max": 5.327404975891113
+        },
+        "feh": {
+          "n": 1065,
+          "min": -3.963806629180908,
+          "median": -0.7282355427742004,
+          "max": 0.4447884261608124
+        },
+        "separation_arcsec": {
+          "n": 2590,
+          "min": 1.669310404395219e-05,
+          "median": 0.004107578191906214,
+          "max": 0.9783270359039307
+        }
+      },
+      "anchor": {
+        "matched_rows": 64,
+        "unique_spectra": 64,
+        "id_match": 64,
+        "coordinate_match": 0,
+        "ambiguous": 0,
+        "classes": {
+          "STAR": 64
+        },
+        "quality_rows": 55,
+        "quality_unique_spectra": 55,
+        "quality_logg_lt3p2": 0,
+        "quality_feh_lt_m1p5": 0,
+        "teff": {
+          "n": 55,
+          "min": 3128.6484375,
+          "median": 3500.24609375,
+          "max": 4659.185546875
+        },
+        "logg": {
+          "n": 55,
+          "min": 4.1814069747924805,
+          "median": 4.7247161865234375,
+          "max": 5.1488728523254395
+        },
+        "feh": {
+          "n": 55,
+          "min": -0.9364228844642639,
+          "median": -0.2714299261569977,
+          "max": 0.4058156907558441
+        },
+        "separation_arcsec": {
+          "n": 64,
+          "min": 0.0013167118886485696,
+          "median": 0.015001311898231506,
+          "max": 0.06650073081254959
+        }
+      },
+      "quality_cutflow_grz": [
+        {
+          "condition": "grz\u6bcd\u6837\u672c\u5185\u5149\u8c31\u5339\u914d",
+          "remaining": 2590,
+          "removed": 0
+        },
+        {
+          "condition": "\u5750\u6807\u5173\u8054\u65e0\u6b67\u4e49",
+          "remaining": 2590,
+          "removed": 0
+        },
+        {
+          "condition": "PRIMARY=True",
+          "remaining": 2590,
+          "removed": 0
+        },
+        {
+          "condition": "RR_SPECTYPE=STAR",
+          "remaining": 1321,
+          "removed": 1269
+        },
+        {
+          "condition": "RVS_WARN=0\u4e14SUCCESS=True",
+          "remaining": 1276,
+          "removed": 45
+        },
+        {
+          "condition": "SN_R\u226510",
+          "remaining": 1078,
+          "removed": 198
+        },
+        {
+          "condition": "0\u2264VSINI<30 km/s",
+          "remaining": 1065,
+          "removed": 13
+        },
+        {
+          "condition": "Teff\u3001logg\u3001[Fe/H]\u6709\u6548\u4e14\u8bef\u5dee>0",
+          "remaining": 1065,
+          "removed": 0
+        },
+        {
+          "condition": "\u5149\u8c31\u5750\u6807\u6709\u6548",
+          "remaining": 1065,
+          "removed": 0
+        }
+      ]
+    },
+    "apogee": {
+      "domain_psf": {
+        "matched_rows": 280,
+        "unique_spectra": 276,
+        "id_match": 276,
+        "coordinate_match": 4,
+        "ambiguous": 0,
+        "classes": {
+          "STAR": 280
+        },
+        "quality_rows": 249,
+        "quality_unique_spectra": 246,
+        "quality_logg_lt3p2": 41,
+        "quality_feh_lt_m1p5": 1,
+        "teff": {
+          "n": 249,
+          "min": 3697.343505859375,
+          "median": 5175.76708984375,
+          "max": 6659.64111328125
+        },
+        "logg": {
+          "n": 249,
+          "min": 0.625363826751709,
+          "median": 4.253582954406738,
+          "max": 4.697300910949707
+        },
+        "feh": {
+          "n": 249,
+          "min": -1.5224000215530396,
+          "median": -0.10943999886512756,
+          "max": 0.32359999418258667
+        },
+        "separation_arcsec": {
+          "n": 280,
+          "min": 0.011567141860723495,
+          "median": 0.4635249078273773,
+          "max": 7.656175136566162
+        }
+      },
+      "grz_base": {
+        "matched_rows": 272,
+        "unique_spectra": 270,
+        "id_match": 270,
+        "coordinate_match": 2,
+        "ambiguous": 0,
+        "classes": {
+          "STAR": 272
+        },
+        "quality_rows": 242,
+        "quality_unique_spectra": 240,
+        "quality_logg_lt3p2": 41,
+        "quality_feh_lt_m1p5": 1,
+        "teff": {
+          "n": 242,
+          "min": 3697.343505859375,
+          "median": 5157.037109375,
+          "max": 6659.64111328125
+        },
+        "logg": {
+          "n": 242,
+          "min": 0.625363826751709,
+          "median": 4.276867866516113,
+          "max": 4.697300910949707
+        },
+        "feh": {
+          "n": 242,
+          "min": -1.5224000215530396,
+          "median": -0.11265499889850616,
+          "max": 0.32359999418258667
+        },
+        "separation_arcsec": {
+          "n": 272,
+          "min": 0.011567141860723495,
+          "median": 0.45529359579086304,
+          "max": 7.656175136566162
+        }
+      },
+      "anchor": {
+        "matched_rows": 0,
+        "unique_spectra": 0,
+        "id_match": 0,
+        "coordinate_match": 0,
+        "ambiguous": 0,
+        "classes": {},
+        "quality_rows": 0,
+        "quality_unique_spectra": 0,
+        "quality_logg_lt3p2": 0,
+        "quality_feh_lt_m1p5": 0,
+        "teff": {
+          "n": 0
+        },
+        "logg": {
+          "n": 0
+        },
+        "feh": {
+          "n": 0
+        },
+        "separation_arcsec": {
+          "n": 0
+        }
+      },
+      "quality_cutflow_grz": [
+        {
+          "condition": "grz\u6bcd\u6837\u672c\u5185\u5149\u8c31\u5339\u914d",
+          "remaining": 272,
+          "removed": 0
+        },
+        {
+          "condition": "\u5750\u6807\u5173\u8054\u65e0\u6b67\u4e49",
+          "remaining": 272,
+          "removed": 0
+        },
+        {
+          "condition": "ASPCAPFLAG\u768423\u300124\u300131\u300132\u300133\u300136\u300140\u300141\u4f4d\u548cSTARFLAG\u76840\u30013\u300118\u300122\u4f4d\u4e3a0",
+          "remaining": 257,
+          "removed": 15
+        },
+        {
+          "condition": "SNR\u226550",
+          "remaining": 247,
+          "removed": 10
+        },
+        {
+          "condition": "FE_H_FLAG=0",
+          "remaining": 242,
+          "removed": 5
+        },
+        {
+          "condition": "Teff\u3001logg\u3001[Fe/H]\u6709\u6548\u4e14\u8bef\u5dee>0",
+          "remaining": 242,
+          "removed": 0
+        },
+        {
+          "condition": "\u5149\u8c31\u5750\u6807\u6709\u6548",
+          "remaining": 242,
+          "removed": 0
+        }
+      ]
+    }
+  },
+  "desi_apogee_overlap_grz": 0,
+  "validation": {
+    "unique_legacy_ids": true,
+    "exact_grz_base_predicates": true,
+    "exact_anchor_predicates": true,
+    "unique_anchor_gaia_ids": true
+  },
+  "cmd_counts": {
+    "gaia_reference": {
+      "finite": 6942,
+      "in_view": 6942
+    },
+    "gaia_with_grz": {
+      "finite": 6911,
+      "in_view": 6911
+    },
+    "anchor": {
+      "finite": 1802,
+      "in_view": 1802
+    }
+  },
+  "figures": [
+    "figures/pilot_10deg/01_selection_counts.png",
+    "figures/pilot_10deg/02_gaia_cmd.png",
+    "figures/pilot_10deg/03_spectroscopy.png",
+    "figures/pilot_10deg/04_parallax_brightness.png"
+  ],
+  "elapsed_seconds": 285.7701666355133,
+  "script_sha256": "9afa972b26d0b3eea6da095ced21b86891cd890cc7c5a146d3fa42ef7202211d"
+}

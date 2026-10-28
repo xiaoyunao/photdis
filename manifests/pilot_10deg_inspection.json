@@ -1,0 +1,33 @@
+{
+  "diagnostic_rows": 313064,
+  "anchor": 1802,
+  "extended": 49906,
+  "negative": 6683,
+  "checks": {
+    "field_bounds": true,
+    "unique_legacy_ids": true,
+    "unique_anchor_gaia": true
+  },
+  "spectroscopy_quality_by_optical_flag": {
+    "desi": {
+      "quality_in_grz": 1065,
+      "giants_in_grz": 19,
+      "anchor_astrometry": 72,
+      "grz_precise": 1064,
+      "grz_fraction_clean": 1025,
+      "grz_mask_clean": 1047,
+      "grz_high_quality": 1020,
+      "anchor": 55
+    },
+    "apogee": {
+      "quality_in_grz": 242,
+      "giants_in_grz": 41,
+      "anchor_astrometry": 164,
+      "grz_precise": 242,
+      "grz_fraction_clean": 0,
+      "grz_mask_clean": 0,
+      "grz_high_quality": 0,
+      "anchor": 0
+    }
+  }
+}
