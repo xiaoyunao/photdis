@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Center-diagnostic job 60443694 completed (25 s, exit 0), with frozen
+  preparation SHA confirmed. Published manifest/report. RA150–160 strict
+  anchors show +0.005 mag bias at r14–17 versus +0.084 at r17–19;
+  redder and support-edge groups also shift positive. S/N15–25 versus
+  >=25 gives +0.043/+0.045, four sky quadrants +0.030 to +0.062, and
+  Gaia IPD multi-peak 0 versus >0 gives +0.044/+0.046. Valid DESI Fe/H
+  groups are sparse; no center correction was fitted. Next: compare the
+  independent deep-calibration/final fields and system brightness trend.
+
 - Policy-development job 60442286 completed on NERSC CPU (16m06s, exit 0).
   Verified registration/prepared SHA and published the same-draw 500-source,
   2-repeat manifest. At target r=21–22, clean highest-available versus
