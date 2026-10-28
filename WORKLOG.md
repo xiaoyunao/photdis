@@ -2,6 +2,25 @@
 
 ## 2026-10-28
 
+- Added `scripts/cold_v4_type_audit.py` and its allocated NERSC runner for
+  DESI source-deduplicated v4 route diagnostics. Labels distinguish qualified
+  3000–5000 K cool dwarfs/giants, other stars, known QSO/galaxy and unknown;
+  output records class-conditional routed/clean rates with Wilson intervals,
+  chosen tier, higher-tier support fallback, color/brightness/error strata,
+  and calibrated-domain metal-poor cool dwarfs. A synthetic duplicate-spectrum
+  check selected the higher-S/N counterpart and the expected labels. Next:
+  sync and run on NERSC CPU after the application-count correction.
+
+- NERSC job 60439866 finished the first v4 application audit (exit 0).
+  Its conditional distance metrics correctly used the cold-Gaia mask, but
+  `cold_Gaia_distribution` counted all Gaia reference rows because the
+  shared counter had no parent mask. Added an explicit parent mask, with
+  shape checking, to all candidate/quality counts. Preserve the original
+  `data/cold_v4_application/audit.json` on NERSC as a diagnostic and write
+  corrected `audit_v2.json`. Preliminary strict-independent Gaia results
+  show much lower A/B than C interval coverage. Next: rerun, verify all
+  count identities, then publish corrected per-tier results.
+
 - NERSC application-audit job 60439716 stopped during environment setup after
   5 s: DESI's environment script references an unset `DESI_ROOT`, while the
   new batch wrapper enabled Bash `nounset` before sourcing it. Moved `set -u`

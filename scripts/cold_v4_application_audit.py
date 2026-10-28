@@ -25,7 +25,7 @@ from cold_v4 import (CAL_CONFIG, FINAL_CONFIGS, OUT, PREPARED,
                      PREPARED_TRACKED, registration, sha)
 from conditional_calibration import GAIA, READ_COLUMNS
 
-RESULT = Path("data/cold_v4_application/audit.json")
+RESULT = Path("data/cold_v4_application/audit_v2.json")
 QUALITY = ("clean_precise_optical", "clean_loose_optical", "base_nonclean")
 ERROR_BINS = ((0, .03), (.03, .10), (.10, .20), (.20, float("inf")))
 SUPPORT_BINS = ((0, .5), (.5, .8), (.8, 1.000001))
@@ -74,23 +74,27 @@ def tier_quality(table, tier):
     return np.asarray(table[name], bool)
 
 
-def count_groups(table, routed, sigma, ratio):
+def count_groups(table, routed, sigma, ratio, parent=None):
     selected = routed["selected"]
+    parent = np.ones(len(selected), bool) if parent is None else np.asarray(parent, bool)
+    if parent.shape != selected.shape:
+        raise ValueError("Parent mask must align with routed rows")
     q = quality_group(table)
     result = {"all_stored_rows": len(selected),
-              "grz_base_rows": int(np.sum(table["grz_base"])),
-              "grz_clean_rows": int(np.sum(table["grz_clean"])),
-              "color_box_rows": int(np.sum(routed["color_box"])),
-              "route_selected_rows": int(selected.sum()),
-              "route_selected_and_clean": int(np.sum(selected & table["grz_clean"])),
-              "route_selected_and_high_quality_optical": int(np.sum(selected & table["grz_high_quality"])),
-              "fraction_clean_failure": int(np.sum(selected & ~table["grz_fraction_clean"])),
-              "mask_clean_failure": int(np.sum(selected & ~table["grz_mask_clean"])),
+              "parent_rows": int(parent.sum()),
+              "grz_base_rows": int(np.sum(parent & table["grz_base"])),
+              "grz_clean_rows": int(np.sum(parent & table["grz_clean"])),
+              "color_box_rows": int(np.sum(parent & routed["color_box"])),
+              "route_selected_rows": int(np.sum(parent & selected)),
+              "route_selected_and_clean": int(np.sum(parent & selected & table["grz_clean"])),
+              "route_selected_and_high_quality_optical": int(np.sum(parent & selected & table["grz_high_quality"])),
+              "fraction_clean_failure": int(np.sum(parent & selected & ~table["grz_fraction_clean"])),
+              "mask_clean_failure": int(np.sum(parent & selected & ~table["grz_mask_clean"])),
               "tier_x_quality": {}, "tier_x_used_error": {},
               "tier_x_support_ratio": {}, "tier_high_quality": {},
               "fallback_after_unsupported_higher_layer": {}}
     for tier, level in LEVEL.items():
-        take = selected & (routed["tier"] == level)
+        take = parent & selected & (routed["tier"] == level)
         result["tier_x_quality"][tier] = {name: int(np.sum(take & mask)) for name, mask in q.items()}
         result["tier_high_quality"][tier] = int(np.sum(take & tier_quality(table, tier)))
         result["tier_x_used_error"][tier] = {
@@ -208,7 +212,7 @@ def summarize_field(config_path, references, route, forests, prepared):
               "cold_Gaia_route_selected": int(selected.sum()),
               "photometric_candidate_distribution": count_groups(mother, mother_route,
                                                                    mother_sigma, mother_ratio),
-              "cold_Gaia_distribution": count_groups(table, routed, sigma, ratio),
+              "cold_Gaia_distribution": count_groups(table, routed, sigma, ratio, parent=cold),
               "cold_Gaia_metrics": {}}
     strata = {"all": selected, "strict_anchor": selected & table["anchor"],
               "legacy_Mg_branch_strict_anchor": (selected & legacy_cold & table["anchor"])}
