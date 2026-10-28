@@ -1,0 +1,43 @@
+{
+  "method": "one-to-one minimum-cost native-source matching, no residual used in matching",
+  "source_counts": [
+    487,
+    493
+  ],
+  "unmatched_native_medians": [
+    -0.008393287658691406,
+    0.05002403259277344
+  ],
+  "color_only": {
+    "matched_pairs": 460,
+    "median_final_minus_cal_residual": 0.07335615158081055,
+    "median_bootstrap95": [
+      0.038199424743652344,
+      0.10478496551513672
+    ],
+    "median_matching_radius": 0.310070165570618,
+    "p95_matching_radius": 1.1588680443939834,
+    "median_absolute_feature_difference": {
+      "g-r": 0.016254425048828125,
+      "r-z": 0.045004844665527344,
+      "A_g": 0.014229562608754753
+    },
+    "residual_nmad": 0.3585002065658569
+  },
+  "color_and_extinction": {
+    "matched_pairs": 434,
+    "median_final_minus_cal_residual": 0.06489324569702148,
+    "median_bootstrap95": [
+      0.024282455444335938,
+      0.09993452429771423
+    ],
+    "median_matching_radius": 0.7229861514850939,
+    "p95_matching_radius": 1.3482310433309652,
+    "median_absolute_feature_difference": {
+      "g-r": 0.021020889282226562,
+      "r-z": 0.06395292282104492,
+      "A_g": 0.009925440164178224
+    },
+    "residual_nmad": 0.347495686340332
+  }
+}

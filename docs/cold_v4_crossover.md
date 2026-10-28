@@ -12,6 +12,15 @@ the frozen final test or calibrate a new interval. See
 `manifests/cold_v4_crossover_strata.json` and
 `figures/cold_v4/06_template_noise_crossover.png`.
 
+An outcome-blind native-source match is in
+`manifests/cold_v4_crossover_native_match.json`. Minimum-cost one-to-one
+matching on intrinsic g−r and r−z retains 460 pairs and gives a
+RA170–180 minus RA35–45 residual median of +0.073 mag, bootstrap 95%
+[+0.038,+0.105]. Adding source A_g retains 434 pairs and gives +0.065 mag,
+bootstrap 95% [+0.024,+0.100]. The latter pairs differ in median absolute
+g−r/r−z/A_g by 0.021/0.064/0.010 mag. The native shift persists after
+matching these measured colors and extinction within this diagnostic sample.
+
 ## Native sources and same-template degradation
 
 | Template field | Native accepted | Native Δμ median | Native NMAD | Median source A_g | Median intrinsic r−z |
@@ -22,8 +31,8 @@ the frozen final test or calibrate a new interval. See
 The native median difference is 0.059 mag before either field is degraded.
 The separate source-bootstrap 95% ranges are [−0.044,+0.016] and
 [+0.023,+0.065] mag. The two template samples differ in color and Galactic
-extinction; the native difference does not identify which underlying source
-property causes it.
+extinction. Matching these properties retains the residual difference but
+does not yet identify its cause.
 
 | Template | Noise field | Selected, r=18–19 | Δμ median / NMAD, r=18–19 | Selected, r=21–22 | Δμ median / NMAD, r=21–22 |
 |---|---|---:|---:|---:|---:|
@@ -65,9 +74,9 @@ the identity holds source by source.
 
 The 2×2 swap localizes most of the *median* field difference to the Gaia
 template populations; the noise field controls much of the deep scatter and
-acceptance. Keep the published route and interval status unchanged. Match
-native sources between fields using observed colors and A_g without using
-distance residuals in the matching, then test an expanded set of newly
-registered development/calibration/final fields if the population offset
-persists. The current one-draw crossover does not support a global center
+acceptance. Keep the published route and interval status unchanged. The
+outcome-blind color/A_g match confirms a residual offset. Next inspect the
+exact Gaia template parallax, color and quality distributions, then test an
+expanded set of newly registered development/calibration/final fields if
+the population offset persists. The current one-draw crossover does not support a global center
 shift or a single widening factor.

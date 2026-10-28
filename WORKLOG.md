@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- NERSC outcome-blind native-template match job 60457203 completed in 19 s.
+  One-to-one matching on g-r and r-z retains 460 pairs with final-minus-cal
+  median residual +0.073 mag (bootstrap95 +0.038 to +0.105). Adding source
+  A_g retains 434 pairs and +0.065 mag (+0.024 to +0.100). The offset remains
+  after these measured-property matches. Added the small match manifest and
+  prepared an allocated-node Gaia-template census for corrected parallax,
+  zero-point, BP-RP, RUWE and native-residual strata. Next: run census and
+  decide fresh registered field roles from the evidence.
+
 - NERSC crossover job 60456650 completed in 10m23s; dependent strata
   job 60456926 completed in 8 s. Reused the same 500 Gaia source IDs in
   each prior deep field and matched target r0 across noise fields to better
