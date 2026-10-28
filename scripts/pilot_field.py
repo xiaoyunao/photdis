@@ -359,6 +359,7 @@ def main():
     assert all(summary["validation"].values())
     selected=phot["grz_base"]|gaia["gaia_match"]|spec["desi_match"]|spec["apogee_match"]
     cols={"ls_id":ls,"source_id":sid,"ra":raw["RA"],"dec":raw["DEC"],"ebv":raw["EBV"],
+          "mw_transmission_g":raw["MW_TRANSMISSION_G"],
           **phot,**labels,**masks,**spec,**{"gaia_"+k:v for k,v in gaia.items()}}
     fitsio.write(str(out/"field_diagnostics.fits"),structured({k:v[selected] for k,v in cols.items()}),extname="PILOT",clobber=False)
     summary["figures"]=make_plots(raw,phot,gaia,labels,spec,masks,[optical,anchor_flow],summary,Path(task["figure_dir"]))

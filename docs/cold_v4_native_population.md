@@ -35,6 +35,13 @@ are too few to define the red tail.
 The applied zero-point terms and RUWE distributions describe the Gaia
 labels; they do not isolate a remaining parallax systematic. The next
 outcome-blind match adds corrected parallax, Gaia color and Gaia G to the
-Legacy color/A_g matching. Four separately registered 10° fields will
-then test native transfer across more sky before any center correction is
-considered.
+Legacy color/A_g matching. Its exact methods and small results are in
+`manifests/cold_v4_native_population_match.json`. The field difference
+remains +0.054 mag after color/A_g/parallax matching (460 pairs, bootstrap
+95% +0.019 to +0.089), +0.062 mag after color/A_g/parallax/BP−RP matching
+(458 pairs, +0.024 to +0.101), and +0.063 mag after color/A_g/G matching
+(465 pairs, +0.028 to +0.096). These comparisons rule out a simple shift
+in the measured distributions used for matching. They do not distinguish
+unmeasured stellar-population structure from spatial Gaia or Legacy
+systematics. Four separately registered 10° fields will test native transfer
+across more sky before any center correction is considered.

@@ -1,0 +1,147 @@
+{
+  "method": "outcome-blind minimum-cost 1:1 assignment, standardized Euclidean radius <=2.0",
+  "scales_and_features": {
+    "legacy_colors_ag": [
+      [
+        "native_gr",
+        0.2
+      ],
+      [
+        "native_rz",
+        0.15
+      ],
+      [
+        "source_ag",
+        0.02
+      ]
+    ],
+    "plus_parallax": [
+      [
+        "native_gr",
+        0.2
+      ],
+      [
+        "native_rz",
+        0.15
+      ],
+      [
+        "source_ag",
+        0.02
+      ],
+      [
+        "p_corr",
+        1.0
+      ]
+    ],
+    "plus_gaia_color": [
+      [
+        "native_gr",
+        0.2
+      ],
+      [
+        "native_rz",
+        0.15
+      ],
+      [
+        "source_ag",
+        0.02
+      ],
+      [
+        "gaia_bp_rp",
+        0.4
+      ]
+    ],
+    "plus_parallax_gaia_color": [
+      [
+        "native_gr",
+        0.2
+      ],
+      [
+        "native_rz",
+        0.15
+      ],
+      [
+        "source_ag",
+        0.02
+      ],
+      [
+        "p_corr",
+        1.0
+      ],
+      [
+        "gaia_bp_rp",
+        0.4
+      ]
+    ],
+    "plus_gaia_g": [
+      [
+        "native_gr",
+        0.2
+      ],
+      [
+        "native_rz",
+        0.15
+      ],
+      [
+        "source_ag",
+        0.02
+      ],
+      [
+        "gaia_phot_g_mean_mag",
+        1.0
+      ]
+    ]
+  },
+  "matches": {
+    "legacy_colors_ag": {
+      "n": 470,
+      "median_final_minus_cal": 0.06682109832763672,
+      "bootstrap95": [
+        0.02729511260986328,
+        0.1001846432685852
+      ],
+      "median_matching_radius": 0.7788010736844667,
+      "p95_matching_radius": 1.6512329767943632
+    },
+    "plus_parallax": {
+      "n": 460,
+      "median_final_minus_cal": 0.053583621978759766,
+      "bootstrap95": [
+        0.019008636474609375,
+        0.08948040008544922
+      ],
+      "median_matching_radius": 0.8599844360090947,
+      "p95_matching_radius": 1.7018833311140578
+    },
+    "plus_gaia_color": {
+      "n": 467,
+      "median_final_minus_cal": 0.0594482421875,
+      "bootstrap95": [
+        0.02246379852294922,
+        0.10027599334716797
+      ],
+      "median_matching_radius": 0.7955291005028519,
+      "p95_matching_radius": 1.5510439295020062
+    },
+    "plus_parallax_gaia_color": {
+      "n": 458,
+      "median_final_minus_cal": 0.06167411804199219,
+      "bootstrap95": [
+        0.023946762084960938,
+        0.10059022903442383
+      ],
+      "median_matching_radius": 0.8833057038597609,
+      "p95_matching_radius": 1.7184529693614743
+    },
+    "plus_gaia_g": {
+      "n": 465,
+      "median_final_minus_cal": 0.06318950653076172,
+      "bootstrap95": [
+        0.028097152709960938,
+        0.09633908271789542
+      ],
+      "median_matching_radius": 0.8615656275739052,
+      "p95_matching_radius": 1.7232064288172915
+    }
+  }
+}

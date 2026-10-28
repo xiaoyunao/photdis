@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Outcome-blind Gaia-property match job 60457843 completed in 17 s.
+  Adding corrected parallax to Legacy colors/A_g leaves +0.054 mag
+  final-minus-cal native residual (460 pairs; bootstrap95 +0.019 to
+  +0.089). Adding Gaia BP-RP too leaves +0.062 mag (458 pairs; +0.024
+  to +0.101); matching Gaia G leaves +0.063 mag (465 pairs; +0.028 to
+  +0.096). No single measured distribution matched here explains the
+  native field shift. Updated report. For newly registered fields, added
+  exact DR11 g transmission to pilot diagnostics and a frozen native
+  transfer scorer with spatial-block uncertainty. Next: run four field
+  preparations on allocated CPUs, then score development and final roles.
+
 - Gaia-template census job 60457418 completed in 4m43s on NERSC CPU with
   exact crossover source hashes. Corrected parallax medians are 2.542/
   2.634 mas, S/N 29.65/29.32, Gaia G 17.26/16.92 and RUWE 1.041/1.017
