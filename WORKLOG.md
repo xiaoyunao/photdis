@@ -2,6 +2,20 @@
 
 ## 2026-10-28
 
+- Task: follow the latest Pro review after baseline c3637cb. Recovered clean
+  local/main and matching GitHub/NERSC history; read complete latest review.
+- Predeclared: one external-calibration field RA 140–150/Dec 5–15 and two
+  final-test fields RA 190–200/Dec 15–25 and RA 320–330/Dec -25–-15.
+  Confirmed all 12 DR11 south sweep files exist; fixed baseline manifest,
+  model and original test-prediction checksums before processing new fields.
+- Plan: correct recovery/spectroscopy conditions, analyze paired PS1 input
+  replacement, direct field transfer, CQR interval calibration, flux-noise
+  sensitivity and photometric target eligibility. No baseline model retraining
+  or released-test refitting is authorized by the evidence yet.
+- Sources: Romano et al. 2019 CQR original paper and official DR11 docs checked.
+- Next: commit/sync field-role registration, then inspect count changes and
+  implement the bounded analyses on allocated NERSC compute.
+
 - Milestone: completed the same-field photometry audit and bounded cold-main-
   sequence baseline. The final forest run used job 60429237 on nid200038;
   model evaluation completed in 13.1 s. Final source commit 6ad4da9 and

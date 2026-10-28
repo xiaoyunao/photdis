@@ -1,11 +1,11 @@
 # Project instructions
 
-- Current checkpoint: user approved Pro's next same-field photometry audit.
-  Use RA 0–10 deg, Dec -10–0 deg. Audit joint saturation/mask failures, Gaia
-  BP/RP validity, external photometry and three input-color planes. Preserve
-  the current strict sample as the comparison; APOGEE stays auxiliary.
-  Present this audit for review before proceeding to model training.
-  Keep progress and explanations direct and factual.
+- Current checkpoint: user approved the latest Pro follow-up after the first
+  cold-main-sequence baseline. Freeze the c3637cb baseline/test identity,
+  reconcile recovery and spectral quality criteria, diagnose the bright-star
+  offset, and use configs/followup_fields.json for one external calibration
+  and two independent final-test fields. Compare direct frozen-model transfer
+  before interval calibration. Keep explanations direct and factual.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,

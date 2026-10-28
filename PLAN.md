@@ -2,35 +2,38 @@
 
 ## Current Objective
 
-Present the completed Pro-recommended photometry audit and cold-main-sequence
-baseline in the existing 10°×10° field for user review.
+Follow the latest Pro review: repair recovery and spectroscopy comparison
+criteria, preserve the existing model and test identities, diagnose the
+bright-star offset, and measure interval calibration, noisy-input behavior
+and transfer to three preassigned independent fields.
 
 ## Milestones
 
-1. Done: reconcile Gaia BP/RP measurements and the zero-color column; use one canonical
-   Legacy counterpart per Gaia source for consistent diagnostic counts.
-2. Done: audit joint SATUR/FRACMASKED/ALLMASK/BAILOUT and real-measurement failures,
-   stratified by band, brightness, reliable color and CMD position.
-3. Done: compare Legacy to PS1 stellar standards with published DECam color terms,
-   propagate Gaia positions to PS1 epochs and measure offsets/scatter by group.
-4. Done: compare target points, fixed strict anchors, quality DESI stars and classified
-   nonstars in the grz, grzW1 and grzW1W2 color planes; count anchors per layer.
-5. Done: store raw/corrected DESI RVS metallicities and published applicability flags.
-6. Done: define a cold-main-sequence sample and adapt spatial partitioning from actual
-   counts while retaining every originally reserved test object.
-7. Done: fit a simple color relation and quantile forests for three input tiers.
-   Compare all tiers on identical stars and measure each tier's full coverage.
-8. Done: validate residuals, interval coverage and trends, and plot.
-9. Done: synchronize final report and project logs. Stop for user review.
+1. Freeze baseline commit, model checksums, original test predictions and
+   nside=64 test cells. Preassign one external calibration and two external
+   final-test fields before examining model residuals.
+2. Reconcile strict and recovery nonoptical conditions; require DESI quality
+   and calibration domain in spectral residual bins. Record impact on counts.
+3. Decompose the recovered bright-star offset with matched strict controls,
+   out-of-fit strict predictions and paired Legacy/PS1 photometry replacement.
+4. Run the three external fields with unchanged selection and first measure
+   direct transfer of the frozen baseline models.
+5. Calibrate 68%/95% intervals on the preassigned external calibration field;
+   score them once in the two final-test fields, including red-color bins.
+6. Run raw-flux noise injection at observed target-depth S/N and report
+   acceptance, residual and interval coverage by layer and depth.
+7. Quantify target input coverage and pure-photometry cold-branch selection
+   against independent Gaia/DESI labels. Plot, document and sync all results.
 
 ## Scope
 
-RA [0,10) deg and Dec [-10,0) deg. Current strict anchors: 1,802. Existing
-APOGEE matching is diagnostic. The prior full-footprint run stays stopped.
+Original field RA [0,10), Dec [-10,0) remains a locked baseline. New fields,
+roles and source/model hashes are in configs/followup_fields.json. The strict
+optical and Gaia criteria remain the comparison standard. The previous full-
+footprint scan remains stopped. APOGEE remains auxiliary.
 
 ## Next Checkpoint
 
-Review [the optical audit](docs/pilot_audit.md) and
-[the cold-main-sequence baseline](docs/cold_baseline.md) together. The next
-scientific decision is whether to study the recovered bright-star offset,
-recalibrate the prediction intervals, or add an independent sky field.
+Present corrected recovery counts, paired-photometry diagnosis, calibrated
+intervals and cross-field/noise results before deciding whether recovered
+stars enter training or the W2 gain generalizes.

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "c3637cbc88aed5cff05e400b607ed99d5d27214e",
+  "baseline_manifest_sha256": "50ddb51cf1084da3ac63c49db53d5e58ad58e610f2f06b55b13c66c2cf7efb08",
+  "baseline_test_predictions_sha256": "adac753a5597a7d9a449c5365428e5003618e7c7db830594508f03ad3ca6807f",
+  "baseline_model_sha256": {
+    "A_grz": "990a90f794c805bd80954853dc2593d688c0b0e4578e96712be0b4d19a9d379c",
+    "B_grzW1": "909fd2a768211b466b54a8eb91d01d2e37d4108d2f45251430d0a4cb31959df8",
+    "C_grzW1W2": "9e02a9ec7b51e15f8032eed051d6f4cffb5a38e81647d8980987b62103067789"
+  },
+  "field_roles_frozen_before_processing": true,
+  "fields": [
+    {
+      "name": "cal_ra140_150_dec_p005_p015",
+      "role": "external_calibration",
+      "bounds_deg": [140, 5, 150, 15],
+      "sweep_files": [
+        "sweep-140p005-145p010.fits",
+        "sweep-140p010-145p015.fits",
+        "sweep-145p005-150p010.fits",
+        "sweep-145p010-150p015.fits"
+      ]
+    },
+    {
+      "name": "test_ra190_200_dec_p015_p025",
+      "role": "external_final_test",
+      "bounds_deg": [190, 15, 200, 25],
+      "sweep_files": [
+        "sweep-190p015-195p020.fits",
+        "sweep-190p020-195p025.fits",
+        "sweep-195p015-200p020.fits",
+        "sweep-195p020-200p025.fits"
+      ]
+    },
+    {
+      "name": "test_ra320_330_dec_m025_m015",
+      "role": "external_final_test",
+      "bounds_deg": [320, -25, 330, -15],
+      "sweep_files": [
+        "sweep-320m025-325m020.fits",
+        "sweep-320m020-325m015.fits",
+        "sweep-325m025-330m020.fits",
+        "sweep-325m020-330m015.fits"
+      ]
+    }
+  ]
+}
