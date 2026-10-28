@@ -2,6 +2,21 @@
 
 ## 2026-10-28
 
+- Final Pro v2 evaluation: added `docs/pro_followup_v2.md`, final-field
+  plots with Wilson intervals and n labels, and a bounded candidate-export
+  utility. Original RA230–240 field yielded 25 cold anchors; registered
+  supplemental RA170–180 and RA35–45 fields before source inspection.
+  All four final fields were scored without changing frozen model, center
+  coefficients, color edges or CQR offsets. The three large fields give C
+  overall 95% coverage 94.4%, 95.9%, 94.9%, while Gaia red-end coverage is
+  90.6%, 92.5%, 90.0%. The center correction makes C overall bias more
+  negative in every large field; reject it for release. New output keeps
+  cold-dwarf type unverified and support/quality/depth flags visible.
+  Validation: local candidate/support unit tests and Python parse pass;
+  NERSC candidate demonstration remains to run. Next: sync code, execute
+  bounded demo on allocated CPU, then commit its small manifest and finish
+  three-end synchronization.
+
 - Supplemental evaluation code: added a separate `supplemental` mode to the
   frozen conditional model runner and a matching DESI label-audit mode. Both
   read the prepared calibration.joblib and its published SHA-256; no model

@@ -26,11 +26,11 @@ conditional label rates as candidate purity.
    acceptance, residual and interval coverage by layer and depth.
 7. Complete: quantify target input coverage and pure-photometry cold-branch selection
    against independent Gaia/DESI labels. Plot, document and sync all results.
-8. In progress: correct the paired PS1 statistics in the report, and rerun
+8. Complete: correct the paired PS1 statistics in the report, and rerun
    target coverage with a training threshold defined by the tenth *other*
    object (k=11 self-query; k=10 external query). Publish clearly named
    color-box recall, color-plus-support recall, and known-nonstar leakage.
-9. Before any source inspection: freeze `configs/next_fields.json`. Its
+9. Complete: before any source inspection, freeze `configs/next_fields.json`. Its
    RA 205–215/Dec −10–0 field is development calibration; RA 230–240/Dec
    5–15 and RA 50–60/Dec −30–−20 are untouched final tests. The previous
    north/south fields now count as development evidence for any new method.
@@ -38,13 +38,13 @@ conditional label rates as candidate purity.
    E(B−V) cut, register two additional high-latitude fields in
    `configs/supplemental_fields.json` before reading their source rows.
    Evaluate and report all four final fields regardless of their counts.
-10. Build a revised noise experiment on the identical anchor stars, identical
+10. Complete: build a revised noise experiment on the identical anchor stars, identical
     target noise rows and one shared five-band realization for A/B/C. Draw
     noise from a grz mother pool including weak WISE detections; quantify
     source-template noise, all-tier acceptance, strict quality, Mg and final
     distance-modulus/distance residuals and interval coverage. Cluster repeat
     realizations by source for uncertainty.
-11. Fit bias correction and conditional 68/95% interval expansion using only
+11. Complete: fit bias correction and conditional 68/95% interval expansion using only
     application-visible Legacy/WISE colors, magnitude and photometric errors.
     Keep fit, calibration and final test identities disjoint. Report bias,
     NMAD, both coverage rates, low/high misses, interval width, count and
@@ -52,14 +52,18 @@ conditional label rates as candidate purity.
     under a common training identity set before attributing band benefit. The
     original cold_baseline.py already supplies that common-fit comparison;
     retain its result while assessing new external-field performance.
-12. Audit dwarf, giant, nonstar and other/unknown labels across color,
+12. Complete: audit dwarf, giant, nonstar and other/unknown labels across color,
     brightness and sky; state selection of each labeled sample. Evaluate
     class-conditional recall and leakage. Use cold-dwarf-hypothesis distances
     with type-risk and support flags until calibrated type probabilities are
     possible. Keep APOGEE auxiliary and recovery candidates separate.
-13. Commit and synchronize programs, manifests, reports and selected figures
+13. In progress: commit and synchronize programs, manifests, reports and selected figures
     among local, GitHub and NERSC; keep catalogs and models on NERSC. Review
     final-field metrics and unresolved limits with the user.
+14. In progress: export a bounded photometry-only candidate demonstration in
+    an independent field, with frozen-model median distances and explicit
+    support, optical quality, depth and unverified-type flags. No class
+    probability or calibrated interval is assigned.
 
 ## Scope
 
@@ -70,6 +74,8 @@ the comparison standard. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Finish the support correction and preregistration milestone, then execute
-bounded analysis on an allocated NERSC compute node. Preserve original
-results and publish v2 products separately.
+Run the bounded candidate demonstration on an allocated NERSC compute node,
+then publish the final report and manifests. The v2 center correction is
+rejected for release because its bias worsened in all three large final fields.
+Red-end interval undercoverage and r=20–22 depth loss remain open science
+issues for the next method iteration.
