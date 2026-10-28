@@ -24,8 +24,7 @@ from photdis.stage1 import require_compute, write_json
 
 OUT = Path("data/target_coverage_v1")
 FIG = Path("figures/target_coverage")
-FIELD_FILES = {"original_ra000_010_dec_m010_000": "data/pilot_10deg_v1/field_diagnostics.fits",
-               "cal_ra140_150_dec_p005_p015": "data/field_cal_ra140_150_v1/field_diagnostics.fits",
+FIELD_FILES = {"cal_ra140_150_dec_p005_p015": "data/field_cal_ra140_150_v1/field_diagnostics.fits",
                "test_ra190_200_dec_p015_p025": "data/field_test_ra190_200_v1/field_diagnostics.fits",
                "test_ra320_330_dec_m025_m015": "data/field_test_ra320_330_v1/field_diagnostics.fits"}
 COLS = ["source_id", "ra", "dec", "g0", "p_corr", "gr0", "rz0", "grz_base",
@@ -123,7 +122,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     FIG.mkdir(parents=True, exist_ok=True)
     fields = list(FIELD_FILES)
-    labels = ["pilot", "cal", "north test", "south test"]
+    labels = ["cal", "north test", "south test"]
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
     x = np.arange(len(fields))
     for key, color in (("grz_base", "#3a79a3"), ("grz_w1", "#56904e"),
