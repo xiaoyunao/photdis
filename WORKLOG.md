@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Task: User authorized a 10°×10° pilot with every selection/count, Gaia CMD
+  and spectroscopy matching results; stop after presentation.
+- Field: RA [0,10) deg, Dec [-10,0) deg; four named sweeps in pilot_10deg.json.
+- Files: pilot config and script; current PLAN updated.
+- Method: inspect raw field rows, PSF/sky/photometry sequential cuts; match
+  prepared DESI/APOGEE pools and Gaia IDs; compare Gaia CMD before/after Legacy
+  photometry cuts; tabulate separate spectroscopy quality cuts.
+- Validation: Python syntax checks passed. Next: allocated pilot execution.
+
 - User correction: first test one sky field and show it for review. I expanded
   two I/O smoke files into a 1,074-tile scan too early.
 - Status: full scan finished; serial full-table merge stopped; 14,629,273,920

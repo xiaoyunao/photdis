@@ -2,14 +2,14 @@
 
 ## Current Objective
 
-Test one sky field and present its sample selection, counts and figures for user
+Test one 10°×10° sky field and present its sample selection, counts and figures for user
 review. The previous full-footprint run exceeded the intended first checkpoint.
 Full-footprint finalization is stopped.
 
 ## Milestones
 
-1. Use one DR11 south sweep field; the first corrected smoke field is
-   sweep-000m005-005p000.fits (RA 0–5 deg, Dec -5–0 deg).
+1. Use RA 0–10 deg, Dec -10–0 deg: the four explicit DR11 south sweeps
+   listed in configs/pilot_10deg.json.
 2. Examine its Gaia anchor/extended and spectroscopy selections and plot the
    actual distributions. Explain the cuts with the field results.
 3. Present the field result and wait for user confirmation.
@@ -32,4 +32,4 @@ Full-footprint finalization is stopped.
 
 ## Next Step
 
-One-field inspection and user review. Keep full-footprint processing stopped.
+Run the 10°×10° pilot, show every cut and count, Gaia CMD and spectroscopy matches; then user review. Keep full-footprint processing stopped.

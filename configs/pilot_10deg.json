@@ -1,0 +1,15 @@
+{
+  "name": "pilot_ra000_010_dec_m010_000",
+  "bounds_deg": [0, -10, 10, 0],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-000m010-005m005.fits",
+    "sweep-000m005-005p000.fits",
+    "sweep-005m010-010m005.fits",
+    "sweep-005m005-010p000.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/pilot_10deg_v1",
+  "figure_dir": "figures/pilot_10deg",
+  "manifest_path": "manifests/pilot_10deg.json"
+}
