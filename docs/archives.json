@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-28",
+  "local_archive": "/Users/yunaoxiao/Desktop/photdis_archives/20261028T123010+0800",
+  "local_manifest": "/Users/yunaoxiao/Desktop/photdis_archives/20261028T123010+0800/manifest.json",
+  "local_original_root": "/Users/yunaoxiao/Desktop/photdis",
+  "local_files_checksum_verified": 149,
+  "old_head": "f846aee9ce0ce39a5b28f48801b77b29506a0ff1",
+  "nersc_archive": "/pscratch/sd/y/yunao/photdis_archives/20261028T123010+0800",
+  "nersc_targets": [
+    "/pscratch/sd/y/yunao/photodis",
+    "/pscratch/sd/y/yunao/photdis_pipeline"
+  ],
+  "method": "Rename into independent archive directories before initializing fresh active checkouts; old contents remain recoverable."
+}

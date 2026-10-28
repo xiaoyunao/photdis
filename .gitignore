@@ -1,0 +1,43 @@
+# Machine files and Python environments
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.deps/
+.env
+.env.*
+!.env.example
+
+# NERSC-only catalogs and products
+data/
+catalogs/
+results/
+results_small/
+models/
+logs/
+cache/
+archives/
+*_archives/
+*.fits
+*.fits.gz
+*.fits.fz
+*.fz
+*.parquet
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.ckpt
+*.csv
+*.tsv
+
+# Temporary files
+*.tmp
+*.swp
