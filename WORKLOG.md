@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Locked-policy application job 60444634 (34 s) and DESI job 60444635
+  (24 s) completed on NERSC CPU. Verified policy/preparation SHA. Three
+  final fields retain 395,629 clean candidates versus 443,280 baseline,
+  with A/B/C 249,654/79,418/66,557; 116,736 have r22–26 outside deep
+  calibration. Strict-Gaia tier identities stay unchanged; direct model
+  intervals remain weak in A/B. The two DESI-covered finals retain
+  573/984 and 630/1,187 cool dwarfs, plus 13/1,419 and 10/1,687 known
+  nonstars. Added bounded application report. Next: finish the independent
+  RA170–180 deep final before stating distance interval use boundaries.
+
 - Deep calibration job 60443692 completed on NERSC CPU (14m58s, exit 0),
   after the WISE20 policy lock. Verified registration, policy and model SHA;
   copied the small manifest. In RA35–45, 500 independent templates per depth

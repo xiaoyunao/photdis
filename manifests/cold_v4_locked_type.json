@@ -1,0 +1,441 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "compute_host": "nid005236",
+  "class_conditional_not_purity": true,
+  "fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "field": "dev_cal_ra205_215_dec_m010_p000",
+      "deduplication": {
+        "matched_unambiguous_rows": 11329,
+        "unique_spectra": 11267,
+        "duplicate_Legacy_rows_removed": 62
+      },
+      "label_scope": "unambiguous DESI object, quality-qualified where required, grz_base; class-conditional rates not candidate purity",
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 2022,
+          "baseline_route_selected": 1444,
+          "locked_clean_route_selected": 1116,
+          "locked_rate_given_label": 0.5519287833827893,
+          "locked_rate_wilson95": [
+            0.5301745791422846,
+            0.5734860426950791
+          ],
+          "by_chosen_tier": {
+            "A_grz": 106,
+            "B_grzW1": 271,
+            "C_grzW1W2": 739
+          },
+          "higher_tier_replaced_or_removed": 400,
+          "baseline_selected_lost": 328
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 32,
+          "baseline_route_selected": 14,
+          "locked_clean_route_selected": 12,
+          "locked_rate_given_label": 0.375,
+          "locked_rate_wilson95": [
+            0.2293366846595921,
+            0.5474589941047487
+          ],
+          "by_chosen_tier": {
+            "A_grz": 11,
+            "B_grzW1": 0,
+            "C_grzW1W2": 1
+          },
+          "higher_tier_replaced_or_removed": 2,
+          "baseline_selected_lost": 2
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 5445,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": 0.0,
+          "locked_rate_wilson95": [
+            0.0,
+            0.0007050305885199524
+          ],
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 2022,
+          "baseline_route_selected": 19,
+          "locked_clean_route_selected": 18,
+          "locked_rate_given_label": 0.008902077151335312,
+          "locked_rate_wilson95": [
+            0.005638350875158776,
+            0.014028339748629381
+          ],
+          "by_chosen_tier": {
+            "A_grz": 16,
+            "B_grzW1": 1,
+            "C_grzW1W2": 1
+          },
+          "higher_tier_replaced_or_removed": 1,
+          "baseline_selected_lost": 1
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 1704,
+          "baseline_route_selected": 366,
+          "locked_clean_route_selected": 320,
+          "locked_rate_given_label": 0.18779342723004694,
+          "locked_rate_wilson95": [
+            0.16995963205495732,
+            0.20703177042639695
+          ],
+          "by_chosen_tier": {
+            "A_grz": 73,
+            "B_grzW1": 108,
+            "C_grzW1W2": 139
+          },
+          "higher_tier_replaced_or_removed": 88,
+          "baseline_selected_lost": 46
+        }
+      },
+      "calibrated_domain_feh_below_minus_1p5_cool_dwarf": {
+        "n_labeled_in_grz_base": 40,
+        "baseline_route_selected": 14,
+        "locked_clean_route_selected": 12,
+        "locked_rate_given_label": 0.3,
+        "locked_rate_wilson95": [
+          0.18074670915695296,
+          0.454303106543204
+        ],
+        "by_chosen_tier": {
+          "A_grz": 3,
+          "B_grzW1": 6,
+          "C_grzW1W2": 3
+        },
+        "higher_tier_replaced_or_removed": 5,
+        "baseline_selected_lost": 2
+      }
+    },
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "field": "cold_v4_final_ra000_010_dec_m035_m025",
+      "deduplication": {
+        "matched_unambiguous_rows": 0,
+        "unique_spectra": 0
+      },
+      "label_scope": "unambiguous DESI object, quality-qualified where required, grz_base; class-conditional rates not candidate purity",
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 0,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": null,
+          "locked_rate_wilson95": null,
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 0,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": null,
+          "locked_rate_wilson95": null,
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 0,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": null,
+          "locked_rate_wilson95": null,
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 0,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": null,
+          "locked_rate_wilson95": null,
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 0,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": null,
+          "locked_rate_wilson95": null,
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        }
+      },
+      "calibrated_domain_feh_below_minus_1p5_cool_dwarf": {
+        "n_labeled_in_grz_base": 0,
+        "baseline_route_selected": 0,
+        "locked_clean_route_selected": 0,
+        "locked_rate_given_label": null,
+        "locked_rate_wilson95": null,
+        "by_chosen_tier": {
+          "A_grz": 0,
+          "B_grzW1": 0,
+          "C_grzW1W2": 0
+        },
+        "higher_tier_replaced_or_removed": 0,
+        "baseline_selected_lost": 0
+      }
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "field": "cold_v4_final_ra150_160_dec_p020_p030",
+      "deduplication": {
+        "matched_unambiguous_rows": 4605,
+        "unique_spectra": 4570,
+        "duplicate_Legacy_rows_removed": 35
+      },
+      "label_scope": "unambiguous DESI object, quality-qualified where required, grz_base; class-conditional rates not candidate purity",
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 984,
+          "baseline_route_selected": 778,
+          "locked_clean_route_selected": 573,
+          "locked_rate_given_label": 0.5823170731707317,
+          "locked_rate_wilson95": [
+            0.5512402993543115,
+            0.6127536041217112
+          ],
+          "by_chosen_tier": {
+            "A_grz": 38,
+            "B_grzW1": 69,
+            "C_grzW1W2": 466
+          },
+          "higher_tier_replaced_or_removed": 215,
+          "baseline_selected_lost": 205
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 10,
+          "baseline_route_selected": 2,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": 0.0,
+          "locked_rate_wilson95": [
+            -2.7755575615628914e-17,
+            0.2775401687666166
+          ],
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 2,
+          "baseline_selected_lost": 2
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 1485,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": 0.0,
+          "locked_rate_wilson95": [
+            0.0,
+            0.0025802610566496797
+          ],
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 1419,
+          "baseline_route_selected": 14,
+          "locked_clean_route_selected": 13,
+          "locked_rate_given_label": 0.009161381254404511,
+          "locked_rate_wilson95": [
+            0.005361689961265267,
+            0.015611551192212393
+          ],
+          "by_chosen_tier": {
+            "A_grz": 13,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 1,
+          "baseline_selected_lost": 1
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 649,
+          "baseline_route_selected": 241,
+          "locked_clean_route_selected": 213,
+          "locked_rate_given_label": 0.32819722650231126,
+          "locked_rate_wilson95": [
+            0.29317426847140926,
+            0.36524210695564674
+          ],
+          "by_chosen_tier": {
+            "A_grz": 29,
+            "B_grzW1": 59,
+            "C_grzW1W2": 125
+          },
+          "higher_tier_replaced_or_removed": 49,
+          "baseline_selected_lost": 28
+        }
+      },
+      "calibrated_domain_feh_below_minus_1p5_cool_dwarf": {
+        "n_labeled_in_grz_base": 8,
+        "baseline_route_selected": 3,
+        "locked_clean_route_selected": 3,
+        "locked_rate_given_label": 0.375,
+        "locked_rate_wilson95": [
+          0.13684175946152105,
+          0.6942621454161981
+        ],
+        "by_chosen_tier": {
+          "A_grz": 0,
+          "B_grzW1": 1,
+          "C_grzW1W2": 2
+        },
+        "higher_tier_replaced_or_removed": 1,
+        "baseline_selected_lost": 0
+      }
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "field": "cold_v4_final_ra220_230_dec_p020_p030",
+      "deduplication": {
+        "matched_unambiguous_rows": 6534,
+        "unique_spectra": 6456,
+        "duplicate_Legacy_rows_removed": 78
+      },
+      "label_scope": "unambiguous DESI object, quality-qualified where required, grz_base; class-conditional rates not candidate purity",
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 1187,
+          "baseline_route_selected": 870,
+          "locked_clean_route_selected": 630,
+          "locked_rate_given_label": 0.5307497893850042,
+          "locked_rate_wilson95": [
+            0.5023054337708937,
+            0.5589957501984939
+          ],
+          "by_chosen_tier": {
+            "A_grz": 38,
+            "B_grzW1": 87,
+            "C_grzW1W2": 505
+          },
+          "higher_tier_replaced_or_removed": 255,
+          "baseline_selected_lost": 240
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 12,
+          "baseline_route_selected": 3,
+          "locked_clean_route_selected": 1,
+          "locked_rate_given_label": 0.08333333333333333,
+          "locked_rate_wilson95": [
+            0.014864709450773478,
+            0.35388592179859524
+          ],
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 1
+          },
+          "higher_tier_replaced_or_removed": 2,
+          "baseline_selected_lost": 2
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 2779,
+          "baseline_route_selected": 0,
+          "locked_clean_route_selected": 0,
+          "locked_rate_given_label": 0.0,
+          "locked_rate_wilson95": [
+            0.0,
+            0.0013804594555435709
+          ],
+          "by_chosen_tier": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "higher_tier_replaced_or_removed": 0,
+          "baseline_selected_lost": 0
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 1687,
+          "baseline_route_selected": 12,
+          "locked_clean_route_selected": 10,
+          "locked_rate_given_label": 0.005927682276229994,
+          "locked_rate_wilson95": [
+            0.0032229497999634272,
+            0.010877483972188854
+          ],
+          "by_chosen_tier": {
+            "A_grz": 8,
+            "B_grzW1": 1,
+            "C_grzW1W2": 1
+          },
+          "higher_tier_replaced_or_removed": 2,
+          "baseline_selected_lost": 2
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 735,
+          "baseline_route_selected": 251,
+          "locked_clean_route_selected": 219,
+          "locked_rate_given_label": 0.2979591836734694,
+          "locked_rate_wilson95": [
+            0.26601377703338375,
+            0.3320056089892766
+          ],
+          "by_chosen_tier": {
+            "A_grz": 24,
+            "B_grzW1": 56,
+            "C_grzW1W2": 139
+          },
+          "higher_tier_replaced_or_removed": 46,
+          "baseline_selected_lost": 32
+        }
+      },
+      "calibrated_domain_feh_below_minus_1p5_cool_dwarf": {
+        "n_labeled_in_grz_base": 14,
+        "baseline_route_selected": 0,
+        "locked_clean_route_selected": 0,
+        "locked_rate_given_label": 0.0,
+        "locked_rate_wilson95": [
+          0.0,
+          0.21531701192718142
+        ],
+        "by_chosen_tier": {
+          "A_grz": 0,
+          "B_grzW1": 0,
+          "C_grzW1W2": 0
+        },
+        "higher_tier_replaced_or_removed": 0,
+        "baseline_selected_lost": 0
+      }
+    }
+  }
+}
