@@ -1,0 +1,233 @@
+{
+  "fixed_from_original_non_test_cold_anchors": {
+    "fit_rows": 1289,
+    "fit_identity_sha256": "b0129200ab89297195f00b038859192d9a17c5c691bbd5a3b270c0de219c7880",
+    "color_1pct": [
+      0.9153236746788025,
+      0.41514667868614197
+    ],
+    "color_99pct": [
+      1.5953216552734375,
+      2.364433765411377
+    ],
+    "support_scale_mag": [
+      0.2,
+      0.15
+    ],
+    "support_10th_neighbor_95pct": 0.2950925176791441,
+    "rule": "gr0 and rz0 within fit-star 1-99% boxes; support uses distance to the tenth other training star"
+  },
+  "fields": {
+    "cal_ra140_150_dec_p005_p015": {
+      "domain_psf_rows": 1183992,
+      "stored_diagnostic_rows": 339452,
+      "input_layers": {
+        "grz_base": 339138,
+        "grz_w1": 132188,
+        "grz_w1_w2": 85828,
+        "grz_high_quality": 85950
+      },
+      "color_candidate": 127640,
+      "color_support": 91587,
+      "candidate_and_support": 88486,
+      "Gaia_reference": {
+        "cold_dwarf": {
+          "n": 4782,
+          "selected": 4323,
+          "fraction_selected": 0.9040150564617315
+        },
+        "other": {
+          "n": 7776,
+          "selected": 4,
+          "fraction_selected": 0.00051440329218107
+        },
+        "cold_with_support": {
+          "n": 4782,
+          "selected": 4058,
+          "fraction_selected": 0.848598912588875
+        },
+        "other_with_support": {
+          "n": 7776,
+          "selected": 1,
+          "fraction_selected": 0.0001286008230452675
+        }
+      },
+      "DESI_quality_cool": {
+        "dwarf": {
+          "n": 1091,
+          "selected": 916,
+          "fraction_selected": 0.8395967002749771
+        },
+        "giant": {
+          "n": 2,
+          "selected": 0,
+          "fraction_selected": 0.0
+        },
+        "dwarf_with_support": {
+          "n": 1091,
+          "selected": 875,
+          "fraction_selected": 0.8020164986251146
+        },
+        "giant_with_support": {
+          "n": 2,
+          "selected": 0,
+          "fraction_selected": 0.0
+        }
+      },
+      "DESI_known_nonstar": {
+        "n": 2039,
+        "selected": 65,
+        "fraction_selected": 0.03187837175085827
+      },
+      "selection_rates": {
+        "Gaia_cold_color_box_recall": 0.9040150564617315,
+        "Gaia_cold_color_and_support_recall": 0.848598912588875,
+        "DESI_cool_dwarf_color_box_recall": 0.8395967002749771,
+        "DESI_cool_dwarf_color_and_support_recall": 0.8020164986251146,
+        "DESI_known_nonstar_color_box_leakage": 0.03187837175085827,
+        "DESI_known_nonstar_color_and_support_leakage": 0.008337420304070623
+      }
+    },
+    "test_ra190_200_dec_p015_p025": {
+      "domain_psf_rows": 2816789,
+      "stored_diagnostic_rows": 812156,
+      "input_layers": {
+        "grz_base": 811454,
+        "grz_w1": 274344,
+        "grz_w1_w2": 156677,
+        "grz_high_quality": 179730
+      },
+      "color_candidate": 248866,
+      "color_support": 161433,
+      "candidate_and_support": 154936,
+      "Gaia_reference": {
+        "cold_dwarf": {
+          "n": 9755,
+          "selected": 9067,
+          "fraction_selected": 0.9294720656073808
+        },
+        "other": {
+          "n": 10937,
+          "selected": 26,
+          "fraction_selected": 0.002377251531498583
+        },
+        "cold_with_support": {
+          "n": 9755,
+          "selected": 8470,
+          "fraction_selected": 0.8682726806765761
+        },
+        "other_with_support": {
+          "n": 10937,
+          "selected": 9,
+          "fraction_selected": 0.0008228947609033556
+        }
+      },
+      "DESI_quality_cool": {
+        "dwarf": {
+          "n": 5068,
+          "selected": 4273,
+          "fraction_selected": 0.8431333859510655
+        },
+        "giant": {
+          "n": 23,
+          "selected": 7,
+          "fraction_selected": 0.30434782608695654
+        },
+        "dwarf_with_support": {
+          "n": 5068,
+          "selected": 3922,
+          "fraction_selected": 0.7738752959747435
+        },
+        "giant_with_support": {
+          "n": 23,
+          "selected": 6,
+          "fraction_selected": 0.2608695652173913
+        }
+      },
+      "DESI_known_nonstar": {
+        "n": 1330,
+        "selected": 36,
+        "fraction_selected": 0.02706766917293233
+      },
+      "selection_rates": {
+        "Gaia_cold_color_box_recall": 0.9294720656073808,
+        "Gaia_cold_color_and_support_recall": 0.8682726806765761,
+        "DESI_cool_dwarf_color_box_recall": 0.8431333859510655,
+        "DESI_cool_dwarf_color_and_support_recall": 0.7738752959747435,
+        "DESI_known_nonstar_color_box_leakage": 0.02706766917293233,
+        "DESI_known_nonstar_color_and_support_leakage": 0.010526315789473684
+      }
+    },
+    "test_ra320_330_dec_m025_m015": {
+      "domain_psf_rows": 186782,
+      "stored_diagnostic_rows": 66661,
+      "input_layers": {
+        "grz_base": 66111,
+        "grz_w1": 25951,
+        "grz_w1_w2": 16291,
+        "grz_high_quality": 18595
+      },
+      "color_candidate": 24976,
+      "color_support": 17943,
+      "candidate_and_support": 17348,
+      "Gaia_reference": {
+        "cold_dwarf": {
+          "n": 786,
+          "selected": 686,
+          "fraction_selected": 0.8727735368956743
+        },
+        "other": {
+          "n": 1205,
+          "selected": 0,
+          "fraction_selected": 0.0
+        },
+        "cold_with_support": {
+          "n": 786,
+          "selected": 623,
+          "fraction_selected": 0.7926208651399491
+        },
+        "other_with_support": {
+          "n": 1205,
+          "selected": 0,
+          "fraction_selected": 0.0
+        }
+      },
+      "DESI_quality_cool": {
+        "dwarf": {
+          "n": 0,
+          "selected": 0,
+          "fraction_selected": null
+        },
+        "giant": {
+          "n": 0,
+          "selected": 0,
+          "fraction_selected": null
+        },
+        "dwarf_with_support": {
+          "n": 0,
+          "selected": 0,
+          "fraction_selected": null
+        },
+        "giant_with_support": {
+          "n": 0,
+          "selected": 0,
+          "fraction_selected": null
+        }
+      },
+      "DESI_known_nonstar": {
+        "n": 0,
+        "selected": 0,
+        "fraction_selected": null
+      },
+      "selection_rates": {
+        "Gaia_cold_color_box_recall": 0.8727735368956743,
+        "Gaia_cold_color_and_support_recall": 0.7926208651399491,
+        "DESI_cool_dwarf_color_box_recall": null,
+        "DESI_cool_dwarf_color_and_support_recall": null,
+        "DESI_known_nonstar_color_box_leakage": null,
+        "DESI_known_nonstar_color_and_support_leakage": null
+      }
+    }
+  },
+  "compute_host": "nid004717"
+}
