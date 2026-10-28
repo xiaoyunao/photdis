@@ -2,6 +2,7 @@
 """Score the preregistered supplemental development field without refitting."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import socket
@@ -16,15 +17,17 @@ from cold_v4 import PREPARED, sha
 from cold_v4_policy_noise import frozen_models
 from cold_v4_native_transfer import field_result, LOCK, REGISTRATION, OUT
 
-SUPPLEMENT = Path("configs/cold_v4_native_transfer_supplement.json")
-
-
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--registration", default="configs/cold_v4_native_transfer_supplement.json")
+    parser.add_argument("--output", default="supplemental_development")
+    args = parser.parse_args()
     require_compute()
-    destination = OUT / "supplemental_development.json"
+    supplement = Path(args.registration)
+    destination = OUT / f"{args.output}.json"
     if destination.exists():
         raise FileExistsError(destination)
-    config = json.loads(SUPPLEMENT.read_text())
+    config = json.loads(supplement.read_text())
     parent = json.loads(REGISTRATION.read_text())
     if config["parent_registration_sha256"] != sha(REGISTRATION):
         raise ValueError("Supplement does not match frozen field registration")
@@ -37,7 +40,7 @@ def main():
     fields = [field_result(item["field_config"], references, route, forests,
                            policy, 20261120 + index)
               for index, item in enumerate(config["supplemental_development_fields"])]
-    result = {"role": "supplemental_development", "registration_sha256": sha(SUPPLEMENT),
+    result = {"role": args.output, "registration_sha256": sha(supplement),
               "parent_registration_sha256": sha(REGISTRATION),
               "prepared_sha256": sha(PREPARED), "policy_lock_sha256": sha(LOCK),
               "compute_host": socket.gethostname(), "frozen_policy": policy,

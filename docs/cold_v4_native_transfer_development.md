@@ -27,8 +27,13 @@ criterion removes that direction. Its nine scored sources remain in the
 record and are too few for a field conclusion.
 
 The supplemental high-latitude field has 6,815 strict astrometric/optical
-anchors but no source passes the full frozen cold-branch definition. This
-requires a condition-by-condition investigation before interpreting it as a
-stellar-population result. A separate allocated-node cutflow will report the
-exact failing condition. The two originally registered independent final
-fields remain reserved until this development diagnosis is resolved.
+anchors, of which 5,401 have Gaia color 1.3≤BP−RP<3.5 and 6,744 have
+Legacy M_g>5. **All 6,815 strict anchors are excluded by the published
+external-reference reservation**, before the color/CMD requirements are
+applied. The zero cold-branch count is therefore a role-isolation result,
+not a stellar-population result. The full frozen-rule cutflow is in
+`manifests/cold_v4_anchor_cutflow_development.json`.
+
+The separate `configs/cold_v4_native_transfer_supplement2.json` registers
+RA230–240/Dec25–35 as another development field before inspecting its rows.
+The two originally registered independent final fields remain fixed.

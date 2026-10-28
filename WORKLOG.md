@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-10-29
+
+- NERSC anchor-cutflow job 60458837 completed in 19 s. The supplemental
+  RA180–190 field has 6,815 strict anchors, 5,401 with Gaia BP-RP in the
+  cold range and 6,744 with Legacy M_g>5; all 6,815 fail the frozen
+  `not_external_reserved` condition. Root cause is reference-region
+  quarantine, not a missing cold stellar population. Updated the development
+  report, retained this field as a recorded zero, and preregistered a
+  disjoint high-latitude RA230–240/Dec25–35 development field before source
+  inspection. Added config and allocated-node runners; next build and score
+  this replacement while keeping the two final fields reserved.
+
 ## 2026-10-28
 
 - Native development scoring jobs 60458064 and 60458386 completed on

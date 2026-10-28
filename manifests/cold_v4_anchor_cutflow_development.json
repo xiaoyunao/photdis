@@ -1,0 +1,167 @@
+{
+  "native_dev_ra060_070_dec_m035_m025": {
+    "strict_anchors": 9431,
+    "cold_anchors": 6821,
+    "gaia_color_finite": 9425,
+    "gaia_color_1p3_to_3p5": 7145,
+    "mg_gt_5": 9330,
+    "external_any": 335,
+    "cutflow": [
+      {
+        "name": "Gaia_anchor_astrometry",
+        "individual_pass": 9431,
+        "cumulative_pass": 9431
+      },
+      {
+        "name": "not_Gaia_candidate_contaminant",
+        "individual_pass": 9431,
+        "cumulative_pass": 9431
+      },
+      {
+        "name": "not_spectroscopic_nonstar",
+        "individual_pass": 9431,
+        "cumulative_pass": 9431
+      },
+      {
+        "name": "not_quality_spectroscopic_giant",
+        "individual_pass": 9431,
+        "cumulative_pass": 9431
+      },
+      {
+        "name": "not_external_reserved",
+        "individual_pass": 9096,
+        "cumulative_pass": 9096
+      },
+      {
+        "name": "Gaia_BP_RP_precise",
+        "individual_pass": 9400,
+        "cumulative_pass": 9077
+      },
+      {
+        "name": "cold_Gaia_color",
+        "individual_pass": 7145,
+        "cumulative_pass": 6821
+      },
+      {
+        "name": "cold_CMD_luminosity",
+        "individual_pass": 9330,
+        "cumulative_pass": 6821
+      },
+      {
+        "name": "measured_grz",
+        "individual_pass": 9431,
+        "cumulative_pass": 6821
+      }
+    ]
+  },
+  "native_dev_ra235_245_dec_p000_p010": {
+    "strict_anchors": 17,
+    "cold_anchors": 10,
+    "gaia_color_finite": 17,
+    "gaia_color_1p3_to_3p5": 10,
+    "mg_gt_5": 16,
+    "external_any": 0,
+    "cutflow": [
+      {
+        "name": "Gaia_anchor_astrometry",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "not_Gaia_candidate_contaminant",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "not_spectroscopic_nonstar",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "not_quality_spectroscopic_giant",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "not_external_reserved",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "Gaia_BP_RP_precise",
+        "individual_pass": 17,
+        "cumulative_pass": 17
+      },
+      {
+        "name": "cold_Gaia_color",
+        "individual_pass": 10,
+        "cumulative_pass": 10
+      },
+      {
+        "name": "cold_CMD_luminosity",
+        "individual_pass": 16,
+        "cumulative_pass": 10
+      },
+      {
+        "name": "measured_grz",
+        "individual_pass": 17,
+        "cumulative_pass": 10
+      }
+    ]
+  },
+  "native_supp_dev_ra180_190_dec_p025_p035": {
+    "strict_anchors": 6815,
+    "cold_anchors": 0,
+    "gaia_color_finite": 6813,
+    "gaia_color_1p3_to_3p5": 5401,
+    "mg_gt_5": 6744,
+    "external_any": 6815,
+    "cutflow": [
+      {
+        "name": "Gaia_anchor_astrometry",
+        "individual_pass": 6815,
+        "cumulative_pass": 6815
+      },
+      {
+        "name": "not_Gaia_candidate_contaminant",
+        "individual_pass": 6815,
+        "cumulative_pass": 6815
+      },
+      {
+        "name": "not_spectroscopic_nonstar",
+        "individual_pass": 6815,
+        "cumulative_pass": 6815
+      },
+      {
+        "name": "not_quality_spectroscopic_giant",
+        "individual_pass": 6815,
+        "cumulative_pass": 6815
+      },
+      {
+        "name": "not_external_reserved",
+        "individual_pass": 0,
+        "cumulative_pass": 0
+      },
+      {
+        "name": "Gaia_BP_RP_precise",
+        "individual_pass": 6761,
+        "cumulative_pass": 0
+      },
+      {
+        "name": "cold_Gaia_color",
+        "individual_pass": 5401,
+        "cumulative_pass": 0
+      },
+      {
+        "name": "cold_CMD_luminosity",
+        "individual_pass": 6744,
+        "cumulative_pass": 0
+      },
+      {
+        "name": "measured_grz",
+        "individual_pass": 6815,
+        "cumulative_pass": 0
+      }
+    ]
+  }
+}

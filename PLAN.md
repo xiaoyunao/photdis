@@ -34,9 +34,11 @@ reserved final fields remain fixed.
 
 Development scoring: RA60–70 has 6,594 selected cold anchors and median
 residual −0.006 mag; RA235–245 has nine selected sources. The supplemental
-RA180–190 field has 6,815 strict Gaia anchors but zero cold anchors; audit
-the exact frozen-rule cutflow before using it. Do not inspect the reserved
-final-field residuals until the development diagnosis is recorded.
+RA180–190 field has 6,815 strict Gaia anchors, all excluded by the frozen
+external-reference reservation; its zero cold count is now explained.
+`configs/cold_v4_native_transfer_supplement2.json` preregisters RA230–240
+as another high-latitude development field. Build and score it, then inspect
+the two reserved final-field residuals once under the fixed route.
 
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
