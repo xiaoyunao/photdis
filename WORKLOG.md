@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Task: user approved continuation using Pro's latest review. Read the complete
+  review (9,396 characters) from the referenced conversation.
+- Current step: same-field photometry/coverage audit before a cold-dwarf baseline.
+- Recovered: clean main at 139a440, all three remotes synchronized; prior pilot
+  and scope instructions read. NERSC SSH authentication is valid.
+- Sources verified: DR11 flag/flux semantics; PS1-to-DECam polynomial and color
+  range; DESI RVS metallicity correction and validity range from author code.
+- Located: /global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3; median
+  grizy, NMAG_OK, STDEV and per-object mean epochs. Gaia BP/RP flux/NOBS exist.
+- Next: implement the bounded audit and run it on allocated compute.
+
 - Task completed: 10°×10° pilot, RA [0,10), Dec [-10,0); all four named sweeps
   read on nid200006 under allocation 60427335 in 285.8 seconds.
 - Results: 13,036,998 input rows → 5,574,170 PSF → 1,302,324 low-extinction PSF

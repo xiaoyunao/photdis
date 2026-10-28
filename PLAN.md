@@ -2,27 +2,28 @@
 
 ## Current Objective
 
-The 10°×10° pilot is complete. Present its results and wait for user review.
+Complete the next Pro-recommended photometry and coverage audit in the existing
+10°×10° field, then present the result for user review.
 
-## Completed
+## Milestones
 
-- RA [0,10) deg, Dec [-10,0) deg; four files in configs/pilot_10deg.json.
-- Every optical, Gaia-anchor and spectral-quality cut has a remaining/removal
-  count in docs/pilot_10deg.md and manifests/pilot_10deg.json.
-- Four figures: selection counts, Gaia CMD, spectroscopy, parallax/brightness.
-- Saved-table checks passed; allocation 60427335 released.
+1. Reconcile Gaia BP/RP measurements and the zero-color column; use one canonical
+   Legacy counterpart per Gaia source for consistent diagnostic counts.
+2. Audit joint SATUR/FRACMASKED/ALLMASK/BAILOUT and real-measurement failures,
+   stratified by band, brightness, reliable color and CMD position.
+3. Compare Legacy to PS1 stellar standards with published DECam color terms,
+   propagate Gaia positions to PS1 epochs and measure offsets/scatter by group.
+4. Compare target points, fixed strict anchors, quality DESI stars and classified
+   nonstars in the grz, grzW1 and grzW1W2 color planes; count anchors per layer.
+5. Store raw/corrected DESI RVS metallicities and published applicability flags.
+6. Validate, plot, synchronize programs/figures and stop for user review.
 
-## Results to Review
+## Scope
 
-- 312,975 measured grz records; 1,802 anchors; 49,906 extended records.
-- 6,683 negative parallaxes; 4,586 remain in the extended quality subset.
-- Optical quality keeps 1,804 of 6,942 Gaia high-S/N references (26.0%).
-- The bright main sequence, turnoff and giant branch lose many objects.
-- APOGEE: 242 quality grz matches, 164 with Gaia anchor astrometry, zero with
-  optical high-quality photometry. DESI: 55 quality spectral anchors.
+RA [0,10) deg and Dec [-10,0) deg. Current strict anchors: 1,802. Existing
+APOGEE matching is diagnostic. The prior full-footprint run stays stopped.
 
-## Checkpoint
+## Next Checkpoint
 
-Wait for the user to review the pilot counts, diagrams and optical cuts.
-The earlier full-footprint processing remains stopped; its fragment and partial
-output locations are recorded in WORKLOG.md. Training has not started.
+Show joint failure groups, corrected Gaia CMD, external-photometry residuals
+and input-color coverage. A later cold-main-sequence baseline follows review.

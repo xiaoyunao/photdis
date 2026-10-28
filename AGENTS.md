@@ -1,10 +1,11 @@
 # Project instructions
 
-- Current checkpoint: the user corrected the scope on 2026-10-28. First test
-  ONE sky field and show its selections, counts and plots for user review.
-  The 10°×10° pilot is now complete; wait for the user to review it.
-  Do not resume the full-footprint scan or finalization before that review.
-  No model training. Keep progress and explanations direct and factual.
+- Current checkpoint: user approved Pro's next same-field photometry audit.
+  Use RA 0–10 deg, Dec -10–0 deg. Audit joint saturation/mask failures, Gaia
+  BP/RP validity, external photometry and three input-color planes. Preserve
+  the current strict sample as the comparison; APOGEE stays auxiliary.
+  Present this audit for review before proceeding to model training.
+  Keep progress and explanations direct and factual.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,
