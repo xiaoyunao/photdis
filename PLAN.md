@@ -91,11 +91,12 @@ populations with reference systems and weak-parallax forward checks.
     bias/NMAD/68%/95% coverage/tail misses/width, sky- or source-cluster
     uncertainty, and complete-route intersection with grz_clean. The real
     candidate/Gaia field audit is complete; the noise tier cross-tab remains.
-19. Pending: apply the complete v4 route to deduplicated, quality-qualified
+19. Complete: applied the complete v4 route to deduplicated, quality-qualified
     Gaia/DESI labels in the new fields. Measure dwarf recall and giant/nonstar
     leakage by tier, clean state, fallback, color, magnitude, errors and sky;
-    separately audit calibrated-domain metal-poor labels. Defer type
-    probabilities until label selection and class priors are supportable.
+    separately audited calibrated-domain metal-poor labels. Two final fields
+    have DESI matches; RA0–10 has none. Defer type probabilities until label
+    selection and class priors are supportable.
 20. In progress: corrected simulated flux IVAR when template noise exceeds
     target noise, and corrected the report's description of borrowed masks.
     Compare only a few predeclared routing policies on identical five-band

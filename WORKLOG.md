@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- DESI type audit job 60440796 completed on NERSC CPU (22 s, exit 0).
+  Published manifest and report after verifying frozen preparation SHA,
+  source-deduplication and class/tier count identities. The RA0–10 field has
+  no DESI matches; two other final fields retain 778/984 and 870/1,187
+  qualified cool dwarfs, with 2/10 and 3/12 cool giants and 14/1,419 and
+  12/1,687 known QSO/galaxies routed. Calibrated-domain metal-poor cool
+  dwarfs are retained at 3/8 and 0/14. Next: quantify tier-specific deep
+  behavior and compare limited routing rules on shared observations.
+
 - Corrected application-audit job 60440314 completed (exit 0); validated
   prepared hashes and per-field count identities. Three new fields contain
   443,280 routed candidates: A/B/C = 251,212/85,717/106,351;

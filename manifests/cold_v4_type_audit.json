@@ -1,0 +1,5325 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "field": "dev_cal_ra205_215_dec_m010_p000",
+      "path": "data/field_dev_cal_ra205_215_v1/field_diagnostics.fits",
+      "deduplication": {
+        "matched_unambiguous_rows": 11329,
+        "unique_spectra": 11267,
+        "duplicate_Legacy_rows_removed": 62
+      },
+      "selection_scope": "One Legacy counterpart per unambiguous DESI object ID; labels conditional on DESI target selection and grz_base, not candidate purity",
+      "label_thresholds": "DESI quality, stellar classification, finite Teff/logg, 3000<=Teff<5000 K and logg>=3.5 dwarf/<3.5 giant; nonstars from unambiguous known QSO/galaxy flag",
+      "class_conditional_not_purity": true,
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 2022,
+          "color_box": 1495,
+          "complete_route": 1444,
+          "complete_route_and_clean": 1116,
+          "route_rate_given_label": 0.7141444114737884,
+          "route_rate_wilson95": [
+            0.6940589152640209,
+            0.7334177443129175
+          ],
+          "clean_route_rate_given_label": 0.5519287833827893,
+          "clean_route_rate_wilson95": [
+            0.5301745791422846,
+            0.5734860426950791
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 165,
+              "grz_clean": 103,
+              "grz_high_quality": 103,
+              "used_tier_high_quality": 103
+            },
+            "B_grzW1": {
+              "all": 234,
+              "grz_clean": 202,
+              "grz_high_quality": 202,
+              "used_tier_high_quality": 202
+            },
+            "C_grzW1W2": {
+              "all": 1045,
+              "grz_clean": 811,
+              "grz_high_quality": 811,
+              "used_tier_high_quality": 806
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 82,
+            "B_grzW1": 221,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 185,
+                "routed": 119,
+                "routed_clean": 11
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 1008,
+                "routed": 704,
+                "routed_clean": 580
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 803,
+                "routed": 616,
+                "routed_clean": 525
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 4,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 892,
+                "routed": 370,
+                "routed_clean": 291
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 543,
+                "routed": 514,
+                "routed_clean": 421
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 411,
+                "routed": 399,
+                "routed_clean": 290
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 173,
+                "routed": 161,
+                "routed_clean": 114
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 165
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 233
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 780
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 259
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 6
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 32,
+          "color_box": 16,
+          "complete_route": 14,
+          "complete_route_and_clean": 12,
+          "route_rate_given_label": 0.4375,
+          "route_rate_wilson95": [
+            0.2816508596944317,
+            0.6067469796877387
+          ],
+          "clean_route_rate_given_label": 0.375,
+          "clean_route_rate_wilson95": [
+            0.2293366846595921,
+            0.5474589941047487
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 13,
+              "grz_clean": 11,
+              "grz_high_quality": 11,
+              "used_tier_high_quality": 11
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 12,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 5,
+                "routed": 1,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 20,
+                "routed": 12,
+                "routed_clean": 12
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 4,
+                "routed": 1,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 26,
+                "routed": 10,
+                "routed_clean": 10
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 5,
+                "routed": 3,
+                "routed_clean": 2
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 1,
+                "routed": 1,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 13
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 5445,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": 0.0,
+          "route_rate_wilson95": [
+            0.0,
+            0.0007050305885199524
+          ],
+          "clean_route_rate_given_label": 0.0,
+          "clean_route_rate_wilson95": [
+            0.0,
+            0.0007050305885199524
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 694,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 2761,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 1710,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 5195,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 3,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 2022,
+          "color_box": 72,
+          "complete_route": 19,
+          "complete_route_and_clean": 18,
+          "route_rate_given_label": 0.009396636993076163,
+          "route_rate_wilson95": [
+            0.006023840049758491,
+            0.014630094591528371
+          ],
+          "clean_route_rate_given_label": 0.008902077151335312,
+          "clean_route_rate_wilson95": [
+            0.005638350875158776,
+            0.014028339748629381
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 17,
+              "grz_clean": 16,
+              "grz_high_quality": 3,
+              "used_tier_high_quality": 3
+            },
+            "B_grzW1": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            },
+            "C_grzW1W2": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 10,
+            "B_grzW1": 1,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 24,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 477,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 1371,
+                "routed": 9,
+                "routed_clean": 8
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 149,
+                "routed": 8,
+                "routed_clean": 8
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 1395,
+                "routed": 6,
+                "routed_clean": 6
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 216,
+                "routed": 6,
+                "routed_clean": 5
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 58,
+                "routed": 6,
+                "routed_clean": 6
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 9,
+                "routed": 1,
+                "routed_clean": 1
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 12
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 1704,
+          "color_box": 426,
+          "complete_route": 366,
+          "complete_route_and_clean": 320,
+          "route_rate_given_label": 0.2147887323943662,
+          "route_rate_wilson95": [
+            0.19594230696633635,
+            0.23491825996211885
+          ],
+          "clean_route_rate_given_label": 0.18779342723004694,
+          "clean_route_rate_wilson95": [
+            0.16995963205495732,
+            0.20703177042639695
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 88,
+              "grz_clean": 71,
+              "grz_high_quality": 59,
+              "used_tier_high_quality": 59
+            },
+            "B_grzW1": {
+              "all": 75,
+              "grz_clean": 68,
+              "grz_high_quality": 68,
+              "used_tier_high_quality": 68
+            },
+            "C_grzW1W2": {
+              "all": 203,
+              "grz_clean": 181,
+              "grz_high_quality": 181,
+              "used_tier_high_quality": 171
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 38,
+            "B_grzW1": 71,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 76,
+                "routed": 12,
+                "routed_clean": 9
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 1152,
+                "routed": 311,
+                "routed_clean": 278
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 423,
+                "routed": 37,
+                "routed_clean": 28
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 51,
+                "routed": 6,
+                "routed_clean": 5
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 1149,
+                "routed": 78,
+                "routed_clean": 72
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 132,
+                "routed": 115,
+                "routed_clean": 102
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 134,
+                "routed": 106,
+                "routed_clean": 96
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 105,
+                "routed": 67,
+                "routed_clean": 50
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 72
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 12
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 72
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 3
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 79
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 114
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 10
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      "metallicity": {
+        "calibration_domain": "4200<=Teff<6600 K, 1.8<=logg<5.5, finite Fe/H and positive finite Fe/H error",
+        "cool_dwarf_valid_domain": 948,
+        "calibrated_FeH_below_minus_1p5": {
+          "n_labeled_in_grz_base": 40,
+          "color_box": 15,
+          "complete_route": 14,
+          "complete_route_and_clean": 12,
+          "route_rate_given_label": 0.35,
+          "route_rate_wilson95": [
+            0.2213433317104915,
+            0.5049440300646263
+          ],
+          "clean_route_rate_given_label": 0.3,
+          "clean_route_rate_wilson95": [
+            0.18074670915695296,
+            0.454303106543204
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 4,
+              "grz_clean": 3,
+              "grz_high_quality": 3,
+              "used_tier_high_quality": 3
+            },
+            "B_grzW1": {
+              "all": 4,
+              "grz_clean": 3,
+              "grz_high_quality": 3,
+              "used_tier_high_quality": 3
+            },
+            "C_grzW1W2": {
+              "all": 6,
+              "grz_clean": 6,
+              "grz_high_quality": 6,
+              "used_tier_high_quality": 6
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 3,
+            "B_grzW1": 3,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 3,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 14,
+                "routed": 3,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 22,
+                "routed": 10,
+                "routed_clean": 8
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 36,
+                "routed": 10,
+                "routed_clean": 8
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 4,
+                "routed": 4,
+                "routed_clean": 4
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 5
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "raw_FeH_below_minus_1p5_valid_domain": 20
+      }
+    },
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "field": "cold_v4_final_ra000_010_dec_m035_m025",
+      "path": "data/field_cold_v4_ra000_010_v1/field_diagnostics.fits",
+      "deduplication": {
+        "matched_unambiguous_rows": 0,
+        "unique_spectra": 0
+      },
+      "selection_scope": "One Legacy counterpart per unambiguous DESI object ID; labels conditional on DESI target selection and grz_base, not candidate purity",
+      "label_thresholds": "DESI quality, stellar classification, finite Teff/logg, 3000<=Teff<5000 K and logg>=3.5 dwarf/<3.5 giant; nonstars from unambiguous known QSO/galaxy flag",
+      "class_conditional_not_purity": true,
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      "metallicity": {
+        "calibration_domain": "4200<=Teff<6600 K, 1.8<=logg<5.5, finite Fe/H and positive finite Fe/H error",
+        "cool_dwarf_valid_domain": 0,
+        "calibrated_FeH_below_minus_1p5": {
+          "n_labeled_in_grz_base": 0,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": null,
+          "route_rate_wilson95": null,
+          "clean_route_rate_given_label": null,
+          "clean_route_rate_wilson95": null,
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "raw_FeH_below_minus_1p5_valid_domain": 0
+      }
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "field": "cold_v4_final_ra150_160_dec_p020_p030",
+      "path": "data/field_cold_v4_ra150_160_v1/field_diagnostics.fits",
+      "deduplication": {
+        "matched_unambiguous_rows": 4605,
+        "unique_spectra": 4570,
+        "duplicate_Legacy_rows_removed": 35
+      },
+      "selection_scope": "One Legacy counterpart per unambiguous DESI object ID; labels conditional on DESI target selection and grz_base, not candidate purity",
+      "label_thresholds": "DESI quality, stellar classification, finite Teff/logg, 3000<=Teff<5000 K and logg>=3.5 dwarf/<3.5 giant; nonstars from unambiguous known QSO/galaxy flag",
+      "class_conditional_not_purity": true,
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 984,
+          "color_box": 800,
+          "complete_route": 778,
+          "complete_route_and_clean": 573,
+          "route_rate_given_label": 0.790650406504065,
+          "route_rate_wilson95": [
+            0.7641237522276888,
+            0.8149164501691327
+          ],
+          "clean_route_rate_given_label": 0.5823170731707317,
+          "clean_route_rate_wilson95": [
+            0.5512402993543115,
+            0.6127536041217112
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 75,
+              "grz_clean": 38,
+              "grz_high_quality": 38,
+              "used_tier_high_quality": 38
+            },
+            "B_grzW1": {
+              "all": 69,
+              "grz_clean": 59,
+              "grz_high_quality": 59,
+              "used_tier_high_quality": 59
+            },
+            "C_grzW1W2": {
+              "all": 634,
+              "grz_clean": 476,
+              "grz_high_quality": 476,
+              "used_tier_high_quality": 476
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 32,
+            "B_grzW1": 64,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 127,
+                "routed": 84,
+                "routed_clean": 13
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 587,
+                "routed": 477,
+                "routed_clean": 371
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 255,
+                "routed": 216,
+                "routed_clean": 189
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 335,
+                "routed": 159,
+                "routed_clean": 122
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 281,
+                "routed": 269,
+                "routed_clean": 202
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 259,
+                "routed": 253,
+                "routed_clean": 179
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 106,
+                "routed": 97,
+                "routed_clean": 70
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 75
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 69
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 530
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 104
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 10,
+          "color_box": 3,
+          "complete_route": 2,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": 0.2,
+          "route_rate_wilson95": [
+            0.056680947980693314,
+            0.5098431532792765
+          ],
+          "clean_route_rate_given_label": 0.0,
+          "clean_route_rate_wilson95": [
+            -2.7755575615628914e-17,
+            0.2775401687666166
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 2,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 2,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 2,
+                "routed": 2,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 3,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 2,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 7,
+                "routed": 2,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 2
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 1485,
+          "color_box": 1,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": 0.0,
+          "route_rate_wilson95": [
+            0.0,
+            0.0025802610566496797
+          ],
+          "clean_route_rate_given_label": 0.0,
+          "clean_route_rate_wilson95": [
+            0.0,
+            0.0025802610566496797
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 331,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 707,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 301,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 1387,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 3,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 2,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 1419,
+          "color_box": 65,
+          "complete_route": 14,
+          "complete_route_and_clean": 13,
+          "route_rate_given_label": 0.009866102889358703,
+          "route_rate_wilson95": [
+            0.005886008242280993,
+            0.016492870755915292
+          ],
+          "clean_route_rate_given_label": 0.009161381254404511,
+          "clean_route_rate_wilson95": [
+            0.005361689961265267,
+            0.015611551192212393
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 14,
+              "grz_clean": 13,
+              "grz_high_quality": 6,
+              "used_tier_high_quality": 6
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 11,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 27,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 344,
+                "routed": 3,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 947,
+                "routed": 5,
+                "routed_clean": 5
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 101,
+                "routed": 6,
+                "routed_clean": 5
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 975,
+                "routed": 3,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 164,
+                "routed": 7,
+                "routed_clean": 6
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 53,
+                "routed": 3,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 5,
+                "routed": 1,
+                "routed_clean": 1
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 6
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 5
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 3
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 649,
+          "color_box": 257,
+          "complete_route": 241,
+          "complete_route_and_clean": 213,
+          "route_rate_given_label": 0.3713405238828968,
+          "route_rate_wilson95": [
+            0.3350264106348931,
+            0.40916881221855245
+          ],
+          "clean_route_rate_given_label": 0.32819722650231126,
+          "clean_route_rate_wilson95": [
+            0.29317426847140926,
+            0.36524210695564674
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 32,
+              "grz_clean": 29,
+              "grz_high_quality": 24,
+              "used_tier_high_quality": 24
+            },
+            "B_grzW1": {
+              "all": 42,
+              "grz_clean": 38,
+              "grz_high_quality": 38,
+              "used_tier_high_quality": 38
+            },
+            "C_grzW1W2": {
+              "all": 167,
+              "grz_clean": 146,
+              "grz_high_quality": 146,
+              "used_tier_high_quality": 142
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 11,
+            "B_grzW1": 41,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 1,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 4,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 496,
+                "routed": 229,
+                "routed_clean": 201
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 135,
+                "routed": 8,
+                "routed_clean": 8
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 12,
+                "routed": 3,
+                "routed_clean": 3
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 331,
+                "routed": 29,
+                "routed_clean": 28
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 53,
+                "routed": 48,
+                "routed_clean": 41
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 102,
+                "routed": 99,
+                "routed_clean": 89
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 83,
+                "routed": 65,
+                "routed_clean": 55
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 27
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 40
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 2
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 83
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 80
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 4
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      "metallicity": {
+        "calibration_domain": "4200<=Teff<6600 K, 1.8<=logg<5.5, finite Fe/H and positive finite Fe/H error",
+        "cool_dwarf_valid_domain": 352,
+        "calibrated_FeH_below_minus_1p5": {
+          "n_labeled_in_grz_base": 8,
+          "color_box": 3,
+          "complete_route": 3,
+          "complete_route_and_clean": 3,
+          "route_rate_given_label": 0.375,
+          "route_rate_wilson95": [
+            0.13684175946152105,
+            0.6942621454161981
+          ],
+          "clean_route_rate_given_label": 0.375,
+          "clean_route_rate_wilson95": [
+            0.13684175946152105,
+            0.6942621454161981
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 3,
+              "grz_clean": 3,
+              "grz_high_quality": 3,
+              "used_tier_high_quality": 3
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 2,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 6,
+                "routed": 2,
+                "routed_clean": 2
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 8,
+                "routed": 3,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 2
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "raw_FeH_below_minus_1p5_valid_domain": 3
+      }
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "field": "cold_v4_final_ra220_230_dec_p020_p030",
+      "path": "data/field_cold_v4_ra220_230_v1/field_diagnostics.fits",
+      "deduplication": {
+        "matched_unambiguous_rows": 6534,
+        "unique_spectra": 6456,
+        "duplicate_Legacy_rows_removed": 78
+      },
+      "selection_scope": "One Legacy counterpart per unambiguous DESI object ID; labels conditional on DESI target selection and grz_base, not candidate purity",
+      "label_thresholds": "DESI quality, stellar classification, finite Teff/logg, 3000<=Teff<5000 K and logg>=3.5 dwarf/<3.5 giant; nonstars from unambiguous known QSO/galaxy flag",
+      "class_conditional_not_purity": true,
+      "labels": {
+        "cool_dwarf": {
+          "n_labeled_in_grz_base": 1187,
+          "color_box": 904,
+          "complete_route": 870,
+          "complete_route_and_clean": 630,
+          "route_rate_given_label": 0.7329401853411963,
+          "route_rate_wilson95": [
+            0.7070489371548379,
+            0.7573285249694279
+          ],
+          "clean_route_rate_given_label": 0.5307497893850042,
+          "clean_route_rate_wilson95": [
+            0.5023054337708937,
+            0.5589957501984939
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 67,
+              "grz_clean": 38,
+              "grz_high_quality": 38,
+              "used_tier_high_quality": 38
+            },
+            "B_grzW1": {
+              "all": 84,
+              "grz_clean": 72,
+              "grz_high_quality": 72,
+              "used_tier_high_quality": 72
+            },
+            "C_grzW1W2": {
+              "all": 719,
+              "grz_clean": 520,
+              "grz_high_quality": 520,
+              "used_tier_high_quality": 520
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 27,
+            "B_grzW1": 80,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 191,
+                "routed": 113,
+                "routed_clean": 13
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 639,
+                "routed": 489,
+                "routed_clean": 389
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 328,
+                "routed": 263,
+                "routed_clean": 228
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 523,
+                "routed": 240,
+                "routed_clean": 171
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 275,
+                "routed": 259,
+                "routed_clean": 193
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 266,
+                "routed": 262,
+                "routed_clean": 183
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 119,
+                "routed": 109,
+                "routed_clean": 83
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 67
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 84
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 621
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 98
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "cool_giant": {
+          "n_labeled_in_grz_base": 12,
+          "color_box": 4,
+          "complete_route": 3,
+          "complete_route_and_clean": 1,
+          "route_rate_given_label": 0.25,
+          "route_rate_wilson95": [
+            0.08894003962896138,
+            0.53231033912066
+          ],
+          "clean_route_rate_given_label": 0.08333333333333333,
+          "clean_route_rate_wilson95": [
+            0.014864709450773478,
+            0.35388592179859524
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 2,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 2,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 3,
+                "routed": 1,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 4,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 2,
+                "routed": 1,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 12,
+                "routed": 3,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 2
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_parameterized_star": {
+          "n_labeled_in_grz_base": 2779,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": 0.0,
+          "route_rate_wilson95": [
+            0.0,
+            0.0013804594555435709
+          ],
+          "clean_route_rate_given_label": 0.0,
+          "clean_route_rate_wilson95": [
+            0.0,
+            0.0013804594555435709
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 644,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 1337,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 532,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 2615,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 1,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "known_QSO_or_galaxy": {
+          "n_labeled_in_grz_base": 1687,
+          "color_box": 72,
+          "complete_route": 12,
+          "complete_route_and_clean": 10,
+          "route_rate_given_label": 0.007113218731475993,
+          "route_rate_wilson95": [
+            0.004073690671779083,
+            0.012392428922155677
+          ],
+          "clean_route_rate_given_label": 0.005927682276229994,
+          "clean_route_rate_wilson95": [
+            0.0032229497999634272,
+            0.010877483972188854
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 10,
+              "grz_clean": 8,
+              "grz_high_quality": 4,
+              "used_tier_high_quality": 4
+            },
+            "B_grzW1": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            },
+            "C_grzW1W2": {
+              "all": 1,
+              "grz_clean": 1,
+              "grz_high_quality": 1,
+              "used_tier_high_quality": 1
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 6,
+            "B_grzW1": 1,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 19,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 397,
+                "routed": 5,
+                "routed_clean": 4
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 1159,
+                "routed": 5,
+                "routed_clean": 4
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 112,
+                "routed": 2,
+                "routed_clean": 2
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 1144,
+                "routed": 4,
+                "routed_clean": 3
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 224,
+                "routed": 7,
+                "routed_clean": 6
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 53,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 6,
+                "routed": 1,
+                "routed_clean": 1
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 6
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 3
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 1
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "other_or_unverified_spectrum": {
+          "n_labeled_in_grz_base": 735,
+          "color_box": 273,
+          "complete_route": 251,
+          "complete_route_and_clean": 219,
+          "route_rate_given_label": 0.3414965986394558,
+          "route_rate_wilson95": [
+            0.30811659320445683,
+            0.37652487798503775
+          ],
+          "clean_route_rate_given_label": 0.2979591836734694,
+          "clean_route_rate_wilson95": [
+            0.26601377703338375,
+            0.3320056089892766
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 32,
+              "grz_clean": 23,
+              "grz_high_quality": 20,
+              "used_tier_high_quality": 20
+            },
+            "B_grzW1": {
+              "all": 47,
+              "grz_clean": 43,
+              "grz_high_quality": 43,
+              "used_tier_high_quality": 43
+            },
+            "C_grzW1W2": {
+              "all": 172,
+              "grz_clean": 153,
+              "grz_high_quality": 153,
+              "used_tier_high_quality": 151
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 10,
+            "B_grzW1": 43,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 5,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 12,
+                "routed": 2,
+                "routed_clean": 1
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 555,
+                "routed": 233,
+                "routed_clean": 208
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 151,
+                "routed": 15,
+                "routed_clean": 9
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 10,
+                "routed": 1,
+                "routed_clean": 1
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 408,
+                "routed": 30,
+                "routed_clean": 24
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 63,
+                "routed": 55,
+                "routed_clean": 49
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 108,
+                "routed": 98,
+                "routed_clean": 90
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 76,
+                "routed": 68,
+                "routed_clean": 56
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 24
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 8
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 44
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 3
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 108
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 62
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 2
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      "metallicity": {
+        "calibration_domain": "4200<=Teff<6600 K, 1.8<=logg<5.5, finite Fe/H and positive finite Fe/H error",
+        "cool_dwarf_valid_domain": 532,
+        "calibrated_FeH_below_minus_1p5": {
+          "n_labeled_in_grz_base": 14,
+          "color_box": 0,
+          "complete_route": 0,
+          "complete_route_and_clean": 0,
+          "route_rate_given_label": 0.0,
+          "route_rate_wilson95": [
+            0.0,
+            0.21531701192718142
+          ],
+          "clean_route_rate_given_label": 0.0,
+          "clean_route_rate_wilson95": [
+            0.0,
+            0.21531701192718142
+          ],
+          "by_tier": {
+            "A_grz": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "B_grzW1": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            },
+            "C_grzW1W2": {
+              "all": 0,
+              "grz_clean": 0,
+              "grz_high_quality": 0,
+              "used_tier_high_quality": 0
+            }
+          },
+          "fallback_after_unsupported_higher_layer": {
+            "A_grz": 0,
+            "B_grzW1": 0,
+            "C_grzW1W2": 0
+          },
+          "strata": {
+            "r": [
+              {
+                "bin": [
+                  14,
+                  16
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  16,
+                  18
+                ],
+                "n_labeled": 5,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  18,
+                  20
+                ],
+                "n_labeled": 8,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  20,
+                  22
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  22,
+                  26
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "r_minus_z": [
+              {
+                "bin": [
+                  0,
+                  0.6
+                ],
+                "n_labeled": 14,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  0.6,
+                  1.0
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.0,
+                  1.6
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              },
+              {
+                "bin": [
+                  1.6,
+                  3.5
+                ],
+                "n_labeled": 0,
+                "routed": 0,
+                "routed_clean": 0
+              }
+            ],
+            "used_band_error": {
+              "A_grz": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "B_grzW1": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ],
+              "C_grzW1W2": [
+                {
+                  "bin": [
+                    0,
+                    0.03
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.03,
+                    0.1
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.1,
+                    0.2
+                  ],
+                  "selected": 0
+                },
+                {
+                  "bin": [
+                    0.2,
+                    null
+                  ],
+                  "selected": 0
+                }
+              ]
+            }
+          }
+        },
+        "raw_FeH_below_minus_1p5_valid_domain": 13
+      }
+    }
+  },
+  "compute_host": "nid004189"
+}
