@@ -40,6 +40,20 @@ The previous project is preserved outside the active directories; see
 [archive locations](docs/archives.json). Its last commit was
 `f846aee9ce0ce39a5b28f48801b77b29506a0ff1`; the new repository has a fresh history.
 
+## Current 10°×10° pilot
+
+Field: RA [0,10) deg, Dec [-10,0) deg; four explicit sweep files in
+[configs/pilot_10deg.json](configs/pilot_10deg.json). In an allocated NERSC step:
+
+```bash
+python scripts/pilot_field.py --config configs/pilot_10deg.json
+```
+
+Outputs: `data/pilot_10deg_v1/field_diagnostics.fits`, the per-step
+`summary.json`, `manifests/pilot_10deg.json` and `figures/pilot_10deg/`.
+The Gaia CMD compares the astrometric sample, measured-grz subset and final
+anchors using Gaia BP-RP and Gaia absolute G magnitude.
+
 ## Stage 1 operation
 
 Read [sample definitions](docs/stage1_selection.md) before interpreting outputs.

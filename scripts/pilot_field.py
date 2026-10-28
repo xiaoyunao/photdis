@@ -320,6 +320,16 @@ def main():
              "weak_corrected_snr_lt5":int((extended&labels["zpt_valid"]&(labels["snr_corr"]<5)).sum()),
              "extended_quality_rows":int(extended_quality.sum()),"negative_in_extended_quality":int((extended_quality&(gaia["parallax"]<0)).sum()),
              "grz_w1_rows":int(phot["grz_w1"].sum()),"grz_w1_w2_rows":int(phot["grz_w1_w2"].sum()),
+             "gaia_reference_photometry":{
+                 "rows":int(masks["gaia_reference"].sum()),
+                 "grz_base":int((masks["gaia_reference"]&phot["grz_base"]).sum()),
+                 "grz_high_quality":int((masks["gaia_reference"]&phot["grz_high_quality"]).sum()),
+                 "fracmasked_fail":int((masks["gaia_reference"]&~np.logical_and.reduce([np.isfinite(raw[f"FRACMASKED_{b}"])&(raw[f"FRACMASKED_{b}"]<.4) for b in "GRZ"])).sum()),
+                 "fracin_fail":int((masks["gaia_reference"]&~np.logical_and.reduce([np.isfinite(raw[f"FRACIN_{b}"])&(raw[f"FRACIN_{b}"]>.7) for b in "GRZ"])).sum()),
+                 "fracflux_fail":int((masks["gaia_reference"]&~np.logical_and.reduce([np.isfinite(raw[f"FRACFLUX_{b}"])&(raw[f"FRACFLUX_{b}"]<.5) for b in "GRZ"])).sum()),
+                 "maskbits_fail":int((masks["gaia_reference"]&~phot["grz_mask_clean"]).sum()),
+                 "sigma_fail":int((masks["gaia_reference"]&~np.logical_and.reduce([phot[f"sigma_{b}"]<.03 for b in "grz"])).sum()),
+                 "maskbit_counts":{str(bit):int((masks["gaia_reference"]&((raw["MASKBITS"]&(1<<bit))!=0)).sum()) for bit in [1,2,3,4,5,6,7,10,11,12,13]}},
              "spectroscopy":spectral,"desi_apogee_overlap_grz":int((phot["grz_base"]&spec["desi_match"]&spec["apogee_match"]).sum()),
              "validation":{"unique_legacy_ids":len(np.unique(ls))==len(ls),"exact_grz_base_predicates":True,
                            "exact_anchor_predicates":True,"unique_anchor_gaia_ids":len(np.unique(sid[anchor]))==int(anchor.sum())}}

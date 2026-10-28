@@ -2,6 +2,11 @@
 
 ## 2026-10-28
 
+- Pilot diagnostics: add per-condition optical attrition within the high-S/N
+  Gaia reference, including individual DR11 mask-bit counts; document pilot CLI.
+- Compute allocation: 60427335, nid200006, 20-minute pilot allocation.
+- Next: execute the four configured files and inspect the resulting figures.
+
 - Task: User authorized a 10°×10° pilot with every selection/count, Gaia CMD
   and spectroscopy matching results; stop after presentation.
 - Field: RA [0,10) deg, Dec [-10,0) deg; four named sweeps in pilot_10deg.json.
