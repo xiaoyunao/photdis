@@ -12,6 +12,14 @@ examining their residuals. The full detailed objective is in the active goal.
 
 ## Current Diagnostic Round
 
+Extinction flow, selected weak-parallax PIT, same-pair wide binaries,
+DESI type boundaries and the 2×2 template/noise experiment are complete.
+The crossover shows a native template median difference of 0.059 mag,
+while matched noise-field swaps change the median by at most 0.011 mag and
+mainly affect deep scatter and acceptance. Next: outcome-blind matching of
+native sources on color and A_g, then choose whether fresh registered fields
+are needed for a method change. The existing deep final test remains frozen.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

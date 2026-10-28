@@ -1,0 +1,2650 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "method": "paired-source diagnostic strata, no model fitting",
+  "cells": {
+    "0|0|0": {
+      "all_paired": {
+        "native_residual": {
+          "n": 466,
+          "median": -0.010233879089355469,
+          "nmad": 0.21432091398239134
+        },
+        "degradation_increment": {
+          "n": 466,
+          "median": -2.4740133497402894e-07,
+          "nmad": 0.04475553375249643
+        },
+        "degraded_total": {
+          "n": 466,
+          "median": -0.01073821026151478,
+          "nmad": 0.23983483110487747
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 466,
+          "median": -0.010233879089355469,
+          "nmad": 0.21432091398239134
+        },
+        "degradation_increment": {
+          "n": 466,
+          "median": -2.4740133497402894e-07,
+          "nmad": 0.04475553375249643
+        },
+        "degraded_total": {
+          "n": 466,
+          "median": -0.01073821026151478,
+          "nmad": 0.23983483110487747
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 287,
+          "median": -0.014212608337402344,
+          "nmad": 0.21047859306335448
+        },
+        "degradation_increment": {
+          "n": 287,
+          "median": -2.1831922225601375e-07,
+          "nmad": 0.05714943827968039
+        },
+        "degraded_total": {
+          "n": 287,
+          "median": -0.011384319874853333,
+          "nmad": 0.2223555558972757
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 179,
+          "median": 0.00687408447265625,
+          "nmad": 0.22789805717468262
+        },
+        "degradation_increment": {
+          "n": 179,
+          "median": -2.7648344769204414e-07,
+          "nmad": 0.030182068229196068
+        },
+        "degraded_total": {
+          "n": 179,
+          "median": -0.005659776695537744,
+          "nmad": 0.2718066616470153
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 85,
+          "median": 0.046237945556640625,
+          "nmad": 0.18879475364685058
+        },
+        "degradation_increment": {
+          "n": 85,
+          "median": -0.0015574192503784445,
+          "nmad": 0.07284368907670072
+        },
+        "degraded_total": {
+          "n": 85,
+          "median": 0.018704366112846316,
+          "nmad": 0.20175315647224717
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 142,
+          "median": -0.008549690246582031,
+          "nmad": 0.19702940940856933
+        },
+        "degradation_increment": {
+          "n": 142,
+          "median": 0.0031087540853977913,
+          "nmad": 0.08857119534761076
+        },
+        "degraded_total": {
+          "n": 142,
+          "median": 0.01337386159018017,
+          "nmad": 0.22793544840855628
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 239,
+          "median": -0.03643608093261719,
+          "nmad": 0.24196229496002197
+        },
+        "degradation_increment": {
+          "n": 239,
+          "median": -7.69013727364154e-07,
+          "nmad": 0.02242545585492423
+        },
+        "degraded_total": {
+          "n": 239,
+          "median": -0.033869226432397426,
+          "nmad": 0.24922307468578353
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 100,
+          "median": 0.02129077911376953,
+          "nmad": 0.21067371368408203
+        },
+        "degradation_increment": {
+          "n": 100,
+          "median": -0.00047171976911819513,
+          "nmad": 0.09070822566088452
+        },
+        "degraded_total": {
+          "n": 100,
+          "median": 0.005897842194009684,
+          "nmad": 0.20371856117735945
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 366,
+          "median": -0.035668373107910156,
+          "nmad": 0.21614062585830687
+        },
+        "degradation_increment": {
+          "n": 366,
+          "median": -8.070999690801273e-08,
+          "nmad": 0.03786697989396863
+        },
+        "degraded_total": {
+          "n": 366,
+          "median": -0.030381744204953876,
+          "nmad": 0.24588322133350463
+        }
+      }
+    },
+    "0|1|0": {
+      "all_paired": {
+        "native_residual": {
+          "n": 425,
+          "median": -0.0070667266845703125,
+          "nmad": 0.216727401638031
+        },
+        "degradation_increment": {
+          "n": 425,
+          "median": -0.0002871611290373721,
+          "nmad": 0.09171712345301268
+        },
+        "degraded_total": {
+          "n": 425,
+          "median": -0.019464071771853497,
+          "nmad": 0.25895647727676685
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 425,
+          "median": -0.0070667266845703125,
+          "nmad": 0.216727401638031
+        },
+        "degradation_increment": {
+          "n": 425,
+          "median": -0.0002871611290373721,
+          "nmad": 0.09171712345301268
+        },
+        "degraded_total": {
+          "n": 425,
+          "median": -0.019464071771853497,
+          "nmad": 0.25895647727676685
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 232,
+          "median": 0.000675201416015625,
+          "nmad": 0.20285121488571164
+        },
+        "degradation_increment": {
+          "n": 232,
+          "median": -0.0017180836057058002,
+          "nmad": 0.1066627849660875
+        },
+        "degraded_total": {
+          "n": 232,
+          "median": -0.017004287663162643,
+          "nmad": 0.22850382981106013
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 193,
+          "median": -0.02928924560546875,
+          "nmad": 0.2451252285003662
+        },
+        "degradation_increment": {
+          "n": 193,
+          "median": 0.0007877132847013968,
+          "nmad": 0.06722429002971059
+        },
+        "degraded_total": {
+          "n": 193,
+          "median": -0.025290802714877714,
+          "nmad": 0.2890380289429002
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 74,
+          "median": 0.04986572265625,
+          "nmad": 0.19186578254699707
+        },
+        "degradation_increment": {
+          "n": 74,
+          "median": 0.007648083814810747,
+          "nmad": 0.11640733934063868
+        },
+        "degraded_total": {
+          "n": 74,
+          "median": 0.035595344409976803,
+          "nmad": 0.18804772088159052
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 127,
+          "median": -0.009723663330078125,
+          "nmad": 0.19545430526733398
+        },
+        "degradation_increment": {
+          "n": 127,
+          "median": -0.0025062466493359636,
+          "nmad": 0.14578441479392143
+        },
+        "degraded_total": {
+          "n": 127,
+          "median": -0.03561506620583543,
+          "nmad": 0.2603316568490781
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 224,
+          "median": -0.029283523559570312,
+          "nmad": 0.2616624080657959
+        },
+        "degradation_increment": {
+          "n": 224,
+          "median": 3.9220215352742116e-05,
+          "nmad": 0.05487505075687986
+        },
+        "degraded_total": {
+          "n": 224,
+          "median": -0.039106732459288196,
+          "nmad": 0.27255940452852173
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 92,
+          "median": 0.01933908462524414,
+          "nmad": 0.20665182523727416
+        },
+        "degradation_increment": {
+          "n": 92,
+          "median": -0.0009395400390808106,
+          "nmad": 0.13186020593846445
+        },
+        "degraded_total": {
+          "n": 92,
+          "median": 0.015202787484284386,
+          "nmad": 0.2241121881260157
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 333,
+          "median": -0.025444984436035156,
+          "nmad": 0.2200734375
+        },
+        "degradation_increment": {
+          "n": 333,
+          "median": -2.49783127515002e-07,
+          "nmad": 0.0776822786394668
+        },
+        "degraded_total": {
+          "n": 333,
+          "median": -0.03561506620583543,
+          "nmad": 0.25992616421573517
+        }
+      }
+    },
+    "0|0|1": {
+      "all_paired": {
+        "native_residual": {
+          "n": 468,
+          "median": -0.007884502410888672,
+          "nmad": 0.21459273962974548
+        },
+        "degradation_increment": {
+          "n": 468,
+          "median": -0.0019209299924298762,
+          "nmad": 0.13530795789045744
+        },
+        "degraded_total": {
+          "n": 468,
+          "median": -0.036154310207685114,
+          "nmad": 0.2663463912709137
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 468,
+          "median": -0.007884502410888672,
+          "nmad": 0.21459273962974548
+        },
+        "degradation_increment": {
+          "n": 468,
+          "median": -0.0019209299924298762,
+          "nmad": 0.13530795789045744
+        },
+        "degraded_total": {
+          "n": 468,
+          "median": -0.036154310207685114,
+          "nmad": 0.2663463912709137
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 289,
+          "median": 0.0036773681640625,
+          "nmad": 0.2111332368850708
+        },
+        "degradation_increment": {
+          "n": 289,
+          "median": -0.0032594801605014823,
+          "nmad": 0.14127639475430356
+        },
+        "degraded_total": {
+          "n": 289,
+          "median": -0.02656087427914855,
+          "nmad": 0.2607905194043845
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 179,
+          "median": -0.04390525817871094,
+          "nmad": 0.2471881341934204
+        },
+        "degradation_increment": {
+          "n": 179,
+          "median": -0.0018619954633756208,
+          "nmad": 0.115767576018291
+        },
+        "degraded_total": {
+          "n": 179,
+          "median": -0.038011089454382585,
+          "nmad": 0.28394200172891126
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 87,
+          "median": 0.046237945556640625,
+          "nmad": 0.18879475364685058
+        },
+        "degradation_increment": {
+          "n": 87,
+          "median": 0.012977570551647943,
+          "nmad": 0.11347410584438526
+        },
+        "degraded_total": {
+          "n": 87,
+          "median": 0.011033299175316813,
+          "nmad": 0.20939588673604353
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 137,
+          "median": -0.009723663330078125,
+          "nmad": 0.19676500682830808
+        },
+        "degradation_increment": {
+          "n": 137,
+          "median": -0.01731259074872682,
+          "nmad": 0.15875522717327742
+        },
+        "degraded_total": {
+          "n": 137,
+          "median": -0.0367748537184589,
+          "nmad": 0.27449063338261237
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 244,
+          "median": -0.03378582000732422,
+          "nmad": 0.23708215856552123
+        },
+        "degradation_increment": {
+          "n": 244,
+          "median": -0.003080269012871284,
+          "nmad": 0.11899256640347261
+        },
+        "degraded_total": {
+          "n": 244,
+          "median": -0.05287417367192937,
+          "nmad": 0.2773102681113088
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 99,
+          "median": 0.018797874450683594,
+          "nmad": 0.21046021213531493
+        },
+        "degradation_increment": {
+          "n": 99,
+          "median": -0.033711129848171595,
+          "nmad": 0.13495537806643917
+        },
+        "degraded_total": {
+          "n": 99,
+          "median": -0.030243212456301904,
+          "nmad": 0.2288303589788115
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 369,
+          "median": -0.029277801513671875,
+          "nmad": 0.21786065654754638
+        },
+        "degradation_increment": {
+          "n": 369,
+          "median": -0.0008848666767242719,
+          "nmad": 0.12413022664856548
+        },
+        "degraded_total": {
+          "n": 369,
+          "median": -0.03644355504319918,
+          "nmad": 0.2770216001158502
+        }
+      }
+    },
+    "0|1|1": {
+      "all_paired": {
+        "native_residual": {
+          "n": 427,
+          "median": -0.025444984436035156,
+          "nmad": 0.22459797363281248
+        },
+        "degradation_increment": {
+          "n": 427,
+          "median": -0.003094350289490677,
+          "nmad": 0.14273628651927353
+        },
+        "degraded_total": {
+          "n": 427,
+          "median": -0.027447331296443167,
+          "nmad": 0.29508004096437557
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 427,
+          "median": -0.025444984436035156,
+          "nmad": 0.22459797363281248
+        },
+        "degradation_increment": {
+          "n": 427,
+          "median": -0.003094350289490677,
+          "nmad": 0.14273628651927353
+        },
+        "degraded_total": {
+          "n": 427,
+          "median": -0.027447331296443167,
+          "nmad": 0.29508004096437557
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 246,
+          "median": -0.002727508544921875,
+          "nmad": 0.210488490486145
+        },
+        "degradation_increment": {
+          "n": 246,
+          "median": -0.004399989223371037,
+          "nmad": 0.1379678554740817
+        },
+        "degraded_total": {
+          "n": 246,
+          "median": -0.023865065510953798,
+          "nmad": 0.26145779998437185
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 181,
+          "median": -0.04665374755859375,
+          "nmad": 0.2515175497055054
+        },
+        "degradation_increment": {
+          "n": 181,
+          "median": -0.0024966513505901844,
+          "nmad": 0.15661397128296128
+        },
+        "degraded_total": {
+          "n": 181,
+          "median": -0.027630698806280662,
+          "nmad": 0.33540035223639136
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 76,
+          "median": 0.03792524337768555,
+          "nmad": 0.1932662678718567
+        },
+        "degradation_increment": {
+          "n": 76,
+          "median": -0.0057229377908019075,
+          "nmad": 0.0807196454200792
+        },
+        "degraded_total": {
+          "n": 76,
+          "median": 0.03414350469550165,
+          "nmad": 0.22209087418261816
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 123,
+          "median": -0.009723663330078125,
+          "nmad": 0.19676500682830808
+        },
+        "degradation_increment": {
+          "n": 123,
+          "median": 0.00508262262229664,
+          "nmad": 0.18473863560174456
+        },
+        "degraded_total": {
+          "n": 123,
+          "median": -0.027447331296443167,
+          "nmad": 0.33499724999584196
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 228,
+          "median": -0.0407099723815918,
+          "nmad": 0.25563982629776
+        },
+        "degradation_increment": {
+          "n": 228,
+          "median": -0.002528492642863256,
+          "nmad": 0.14149263421699323
+        },
+        "degraded_total": {
+          "n": 228,
+          "median": -0.056787538016285666,
+          "nmad": 0.31601193966341795
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 88,
+          "median": 0.01933908462524414,
+          "nmad": 0.21067371368408203
+        },
+        "degradation_increment": {
+          "n": 88,
+          "median": -0.003540783378856105,
+          "nmad": 0.14028929207485555
+        },
+        "degraded_total": {
+          "n": 88,
+          "median": 0.003923022980556468,
+          "nmad": 0.2433310366104624
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 339,
+          "median": -0.036777496337890625,
+          "nmad": 0.22431801795959472
+        },
+        "degradation_increment": {
+          "n": 339,
+          "median": -0.0025603339351363275,
+          "nmad": 0.1420493681729614
+        },
+        "degraded_total": {
+          "n": 339,
+          "median": -0.045071602705128555,
+          "nmad": 0.31277728303829294
+        }
+      }
+    },
+    "0|0|2": {
+      "all_paired": {
+        "native_residual": {
+          "n": 443,
+          "median": -0.0023717880249023438,
+          "nmad": 0.22230884113311766
+        },
+        "degradation_increment": {
+          "n": 443,
+          "median": -0.0052005272537059,
+          "nmad": 0.1929955217601179
+        },
+        "degraded_total": {
+          "n": 443,
+          "median": -0.007932383338541626,
+          "nmad": 0.2877696183908696
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 443,
+          "median": -0.0023717880249023438,
+          "nmad": 0.22230884113311766
+        },
+        "degradation_increment": {
+          "n": 443,
+          "median": -0.0052005272537059,
+          "nmad": 0.1929955217601179
+        },
+        "degraded_total": {
+          "n": 443,
+          "median": -0.007932383338541626,
+          "nmad": 0.2877696183908696
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 279,
+          "median": 0.00139617919921875,
+          "nmad": 0.2298209850311279
+        },
+        "degradation_increment": {
+          "n": 279,
+          "median": 0.026183470521047525,
+          "nmad": 0.1825114114111183
+        },
+        "degraded_total": {
+          "n": 279,
+          "median": 0.02422264186325407,
+          "nmad": 0.2725858203521169
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 164,
+          "median": -0.030487537384033203,
+          "nmad": 0.21230254669189452
+        },
+        "degradation_increment": {
+          "n": 164,
+          "median": -0.037568548354942166,
+          "nmad": 0.1856398215303633
+        },
+        "degraded_total": {
+          "n": 164,
+          "median": -0.05034163735173536,
+          "nmad": 0.275650676149411
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 81,
+          "median": 0.02961254119873047,
+          "nmad": 0.1948533903121948
+        },
+        "degradation_increment": {
+          "n": 81,
+          "median": 0.009702376905874388,
+          "nmad": 0.11823139135887362
+        },
+        "degraded_total": {
+          "n": 81,
+          "median": 0.05793329033291528,
+          "nmad": 0.22734111654915853
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 130,
+          "median": 0.009475231170654297,
+          "nmad": 0.19042287969589233
+        },
+        "degradation_increment": {
+          "n": 130,
+          "median": 0.030244237174322564,
+          "nmad": 0.2499635530549668
+        },
+        "degraded_total": {
+          "n": 130,
+          "median": -0.011353251082802274,
+          "nmad": 0.32420493387499016
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 232,
+          "median": -0.026748180389404297,
+          "nmad": 0.2517784174919128
+        },
+        "degradation_increment": {
+          "n": 232,
+          "median": -0.0159142343778651,
+          "nmad": 0.1859050794533829
+        },
+        "degraded_total": {
+          "n": 232,
+          "median": -0.024094130858500762,
+          "nmad": 0.2978668897377802
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 88,
+          "median": 0.01933908462524414,
+          "nmad": 0.2162092008590698
+        },
+        "degradation_increment": {
+          "n": 88,
+          "median": 0.026360795750022703,
+          "nmad": 0.20061826756900777
+        },
+        "degraded_total": {
+          "n": 88,
+          "median": 0.06436773165006571,
+          "nmad": 0.2298278103515965
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 355,
+          "median": -0.0073757171630859375,
+          "nmad": 0.22367185764312744
+        },
+        "degradation_increment": {
+          "n": 355,
+          "median": -0.006750304889521885,
+          "nmad": 0.1850904668228997
+        },
+        "degraded_total": {
+          "n": 355,
+          "median": -0.027906949103513767,
+          "nmad": 0.3054866346363093
+        }
+      }
+    },
+    "0|1|2": {
+      "all_paired": {
+        "native_residual": {
+          "n": 392,
+          "median": 0.0026946067810058594,
+          "nmad": 0.22722503242492675
+        },
+        "degradation_increment": {
+          "n": 392,
+          "median": -0.003419658077566723,
+          "nmad": 0.23869562692678525
+        },
+        "degraded_total": {
+          "n": 392,
+          "median": 0.011230249687042004,
+          "nmad": 0.33107867476656255
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 392,
+          "median": 0.0026946067810058594,
+          "nmad": 0.22722503242492675
+        },
+        "degradation_increment": {
+          "n": 392,
+          "median": -0.003419658077566723,
+          "nmad": 0.23869562692678525
+        },
+        "degraded_total": {
+          "n": 392,
+          "median": 0.011230249687042004,
+          "nmad": 0.33107867476656255
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 233,
+          "median": -0.00540924072265625,
+          "nmad": 0.2268121685028076
+        },
+        "degradation_increment": {
+          "n": 233,
+          "median": 0.030087015375453774,
+          "nmad": 0.2615104681752055
+        },
+        "degraded_total": {
+          "n": 233,
+          "median": 0.03348131673605437,
+          "nmad": 0.35031481918840257
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 159,
+          "median": 0.02744579315185547,
+          "nmad": 0.2273494571685791
+        },
+        "degradation_increment": {
+          "n": 159,
+          "median": -0.027502837692654936,
+          "nmad": 0.20109026023940998
+        },
+        "degraded_total": {
+          "n": 159,
+          "median": -0.011325751546536367,
+          "nmad": 0.30314439449028135
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 67,
+          "median": 0.07323551177978516,
+          "nmad": 0.20602970151901243
+        },
+        "degradation_increment": {
+          "n": 67,
+          "median": 0.027308296531337817,
+          "nmad": 0.15240478214080588
+        },
+        "degraded_total": {
+          "n": 67,
+          "median": 0.04747443162374054,
+          "nmad": 0.20900312887160075
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 123,
+          "median": 0.022701263427734375,
+          "nmad": 0.20843972396850585
+        },
+        "degradation_increment": {
+          "n": 123,
+          "median": 0.02368889778005112,
+          "nmad": 0.2686539850636283
+        },
+        "degraded_total": {
+          "n": 123,
+          "median": 0.05772926484023344,
+          "nmad": 0.3366449926398552
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 202,
+          "median": -0.025487422943115234,
+          "nmad": 0.24059362277984617
+        },
+        "degradation_increment": {
+          "n": 202,
+          "median": -0.023348132445669023,
+          "nmad": 0.27339325758040106
+        },
+        "degraded_total": {
+          "n": 202,
+          "median": -0.039848147097565345,
+          "nmad": 0.37796602437796123
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 79,
+          "median": 0.019880294799804688,
+          "nmad": 0.21206500854492186
+        },
+        "degradation_increment": {
+          "n": 79,
+          "median": -0.06309759182811803,
+          "nmad": 0.21323697083993465
+        },
+        "degraded_total": {
+          "n": 79,
+          "median": 0.020888113731402314,
+          "nmad": 0.364322203149041
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 313,
+          "median": -0.0009298324584960938,
+          "nmad": 0.22984219379425047
+        },
+        "degradation_increment": {
+          "n": 313,
+          "median": 0.017430109497727386,
+          "nmad": 0.22367247549017502
+        },
+        "degraded_total": {
+          "n": 313,
+          "median": 0.010516228876522149,
+          "nmad": 0.32895197670648535
+        }
+      }
+    },
+    "0|0|3": {
+      "all_paired": {
+        "native_residual": {
+          "n": 398,
+          "median": -0.006237983703613281,
+          "nmad": 0.21446371965408323
+        },
+        "degradation_increment": {
+          "n": 398,
+          "median": 0.025556151024767715,
+          "nmad": 0.2869281906191972
+        },
+        "degraded_total": {
+          "n": 398,
+          "median": 0.015526862210288428,
+          "nmad": 0.38358195066742956
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 398,
+          "median": -0.006237983703613281,
+          "nmad": 0.21446371965408323
+        },
+        "degradation_increment": {
+          "n": 398,
+          "median": 0.025556151024767715,
+          "nmad": 0.2869281906191972
+        },
+        "degraded_total": {
+          "n": 398,
+          "median": 0.015526862210288428,
+          "nmad": 0.38358195066742956
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 244,
+          "median": 0.000675201416015625,
+          "nmad": 0.21040294847488403
+        },
+        "degradation_increment": {
+          "n": 244,
+          "median": 0.039732834168637154,
+          "nmad": 0.2808954442557277
+        },
+        "degraded_total": {
+          "n": 244,
+          "median": 0.02651318202174835,
+          "nmad": 0.3425708943889391
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 154,
+          "median": -0.01857900619506836,
+          "nmad": 0.2402182276725769
+        },
+        "degradation_increment": {
+          "n": 154,
+          "median": 0.005732863440623959,
+          "nmad": 0.2567489367687347
+        },
+        "degraded_total": {
+          "n": 154,
+          "median": -0.039492149720073755,
+          "nmad": 0.4717358526806082
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 75,
+          "median": 0.04720783233642578,
+          "nmad": 0.18556395206451415
+        },
+        "degradation_increment": {
+          "n": 75,
+          "median": 0.03914165226827038,
+          "nmad": 0.14332051946726368
+        },
+        "degraded_total": {
+          "n": 75,
+          "median": 0.03653519832948149,
+          "nmad": 0.20161674253557002
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 113,
+          "median": -0.0073757171630859375,
+          "nmad": 0.19770526199340818
+        },
+        "degradation_increment": {
+          "n": 113,
+          "median": -0.010727862318660186,
+          "nmad": 0.33242759467264177
+        },
+        "degraded_total": {
+          "n": 113,
+          "median": -0.0062097044622397846,
+          "nmad": 0.41368441677558115
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 210,
+          "median": -0.029283523559570312,
+          "nmad": 0.2390955771446228
+        },
+        "degradation_increment": {
+          "n": 210,
+          "median": 0.020594296373422694,
+          "nmad": 0.3245512969306894
+        },
+        "degraded_total": {
+          "n": 210,
+          "median": -0.006213512745297578,
+          "nmad": 0.448799649097052
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 82,
+          "median": 0.028470516204833984,
+          "nmad": 0.20258610534667967
+        },
+        "degradation_increment": {
+          "n": 82,
+          "median": 0.007405019304268734,
+          "nmad": 0.28594123363364
+        },
+        "degraded_total": {
+          "n": 82,
+          "median": 0.03660643186660195,
+          "nmad": 0.3784669146116843
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 316,
+          "median": -0.01921558380126953,
+          "nmad": 0.21004381341934203
+        },
+        "degradation_increment": {
+          "n": 316,
+          "median": 0.027819613723732317,
+          "nmad": 0.2796013383876203
+        },
+        "degraded_total": {
+          "n": 316,
+          "median": -0.0035451392518499603,
+          "nmad": 0.394754008456832
+        }
+      }
+    },
+    "0|1|3": {
+      "all_paired": {
+        "native_residual": {
+          "n": 346,
+          "median": -0.005063533782958984,
+          "nmad": 0.23084183349609375
+        },
+        "degradation_increment": {
+          "n": 346,
+          "median": 0.025821084674102934,
+          "nmad": 0.3349494586367998
+        },
+        "degraded_total": {
+          "n": 346,
+          "median": 0.035987567745802806,
+          "nmad": 0.48129228233198573
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 345,
+          "median": -0.004717826843261719,
+          "nmad": 0.23227271804809568
+        },
+        "degradation_increment": {
+          "n": 345,
+          "median": 0.024484676420875928,
+          "nmad": 0.33243945302422395
+        },
+        "degraded_total": {
+          "n": 345,
+          "median": 0.03270032728851646,
+          "nmad": 0.48211407496701747
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 1,
+          "median": -0.014212608337402344,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": 0.3009503324170737,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.28673772407967135,
+          "nmad": 0.0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 190,
+          "median": -0.026100635528564453,
+          "nmad": 0.22753715472221372
+        },
+        "degradation_increment": {
+          "n": 190,
+          "median": 0.04493610110926838,
+          "nmad": 0.28823523298229337
+        },
+        "degraded_total": {
+          "n": 190,
+          "median": 0.04208430189996193,
+          "nmad": 0.4240933692961928
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 156,
+          "median": 0.009953022003173828,
+          "nmad": 0.23686936397552488
+        },
+        "degradation_increment": {
+          "n": 156,
+          "median": -0.009410547837530814,
+          "nmad": 0.422243104754138
+        },
+        "degraded_total": {
+          "n": 156,
+          "median": 0.017009682786643054,
+          "nmad": 0.5453614110896856
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 55,
+          "median": 0.07323551177978516,
+          "nmad": 0.20466880588531494
+        },
+        "degradation_increment": {
+          "n": 55,
+          "median": 0.014839095857293927,
+          "nmad": 0.15248541375482488
+        },
+        "degraded_total": {
+          "n": 55,
+          "median": 0.05287739184691986,
+          "nmad": 0.22339327103726336
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 97,
+          "median": 0.014573097229003906,
+          "nmad": 0.22646858654022214
+        },
+        "degradation_increment": {
+          "n": 97,
+          "median": 0.0035031180092097713,
+          "nmad": 0.34318723748915614
+        },
+        "degraded_total": {
+          "n": 97,
+          "median": -0.0012325280158158591,
+          "nmad": 0.4960023738415944
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 194,
+          "median": -0.03776741027832031,
+          "nmad": 0.24229527254104613
+        },
+        "degradation_increment": {
+          "n": 194,
+          "median": 0.057442441532957744,
+          "nmad": 0.4781500129859867
+        },
+        "degraded_total": {
+          "n": 194,
+          "median": 0.035987567745802806,
+          "nmad": 0.5684332530873357
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 74,
+          "median": -0.0035448074340820312,
+          "nmad": 0.22124062643051146
+        },
+        "degradation_increment": {
+          "n": 74,
+          "median": -0.019166061127387835,
+          "nmad": 0.29503114869721625
+        },
+        "degraded_total": {
+          "n": 74,
+          "median": 0.07043993225694933,
+          "nmad": 0.4456227944923367
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 272,
+          "median": -0.006237983703613281,
+          "nmad": 0.23124904174804686
+        },
+        "degradation_increment": {
+          "n": 272,
+          "median": 0.03300343097262548,
+          "nmad": 0.34668910406579057
+        },
+        "degraded_total": {
+          "n": 272,
+          "median": 0.017009682786643054,
+          "nmad": 0.47927529446030426
+        }
+      }
+    },
+    "1|0|0": {
+      "all_paired": {
+        "native_residual": {
+          "n": 470,
+          "median": 0.04461336135864258,
+          "nmad": 0.21562171812057493
+        },
+        "degradation_increment": {
+          "n": 470,
+          "median": 8.738311585432257e-08,
+          "nmad": 0.058041121591913505
+        },
+        "degraded_total": {
+          "n": 470,
+          "median": 0.04149550883125386,
+          "nmad": 0.27376570327397043
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 470,
+          "median": 0.04461336135864258,
+          "nmad": 0.21562171812057493
+        },
+        "degradation_increment": {
+          "n": 470,
+          "median": 8.738311585432257e-08,
+          "nmad": 0.058041121591913505
+        },
+        "degraded_total": {
+          "n": 470,
+          "median": 0.04149550883125386,
+          "nmad": 0.27376570327397043
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 270,
+          "median": 0.04997539520263672,
+          "nmad": 0.21034639177322387
+        },
+        "degradation_increment": {
+          "n": 270,
+          "median": 7.758177691385981e-07,
+          "nmad": 0.06395971577304181
+        },
+        "degraded_total": {
+          "n": 270,
+          "median": 0.0505452544546543,
+          "nmad": 0.2527156204348561
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 200,
+          "median": 0.03871726989746094,
+          "nmad": 0.22819922161102293
+        },
+        "degradation_increment": {
+          "n": 200,
+          "median": -6.304958066749577e-07,
+          "nmad": 0.05019099105216879
+        },
+        "degraded_total": {
+          "n": 200,
+          "median": -0.0045247145043454395,
+          "nmad": 0.30209633044015394
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 104,
+          "median": -0.0027875900268554688,
+          "nmad": 0.1376151803970337
+        },
+        "degradation_increment": {
+          "n": 104,
+          "median": 0.0012042508009102448,
+          "nmad": 0.0706189304814713
+        },
+        "degraded_total": {
+          "n": 104,
+          "median": -0.008885916457018084,
+          "nmad": 0.17514437924957135
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 167,
+          "median": 0.06748104095458984,
+          "nmad": 0.1868477891921997
+        },
+        "degradation_increment": {
+          "n": 167,
+          "median": 0.0001993913298221628,
+          "nmad": 0.10672760540772434
+        },
+        "degraded_total": {
+          "n": 167,
+          "median": 0.05319751266148742,
+          "nmad": 0.2552352604004221
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 199,
+          "median": 0.05100440979003906,
+          "nmad": 0.33552404651641843
+        },
+        "degradation_increment": {
+          "n": 199,
+          "median": -2.9519277688905277e-08,
+          "nmad": 0.02423817627274289
+        },
+        "degraded_total": {
+          "n": 199,
+          "median": 0.05313008647013717,
+          "nmad": 0.3508071510114071
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 1,
+          "median": 0.13230323791503906,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": 0.21340040533063132,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.3457036432456704,
+          "nmad": 0.0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 469,
+          "median": 0.04263019561767578,
+          "nmad": 0.21868355655670166
+        },
+        "degradation_increment": {
+          "n": 469,
+          "median": 2.3081472733110786e-08,
+          "nmad": 0.05756445428258448
+        },
+        "degraded_total": {
+          "n": 469,
+          "median": 0.04143230342111082,
+          "nmad": 0.27338291893694383
+        }
+      }
+    },
+    "1|1|0": {
+      "all_paired": {
+        "native_residual": {
+          "n": 428,
+          "median": 0.050287723541259766,
+          "nmad": 0.21577795600891111
+        },
+        "degradation_increment": {
+          "n": 428,
+          "median": 0.0013662205673288241,
+          "nmad": 0.08824152995908659
+        },
+        "degraded_total": {
+          "n": 428,
+          "median": 0.061254499384080674,
+          "nmad": 0.29264510871306787
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 428,
+          "median": 0.050287723541259766,
+          "nmad": 0.21577795600891111
+        },
+        "degradation_increment": {
+          "n": 428,
+          "median": 0.0013662205673288241,
+          "nmad": 0.08824152995908659
+        },
+        "degraded_total": {
+          "n": 428,
+          "median": 0.061254499384080674,
+          "nmad": 0.29264510871306787
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 262,
+          "median": 0.04728555679321289,
+          "nmad": 0.2017971393585205
+        },
+        "degradation_increment": {
+          "n": 262,
+          "median": 0.0030421024617837134,
+          "nmad": 0.08869464316606382
+        },
+        "degraded_total": {
+          "n": 262,
+          "median": 0.07330141326149864,
+          "nmad": 0.26600211325205547
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 166,
+          "median": 0.058765411376953125,
+          "nmad": 0.2476660383224487
+        },
+        "degradation_increment": {
+          "n": 166,
+          "median": -2.2319595061048858e-07,
+          "nmad": 0.08710370577045869
+        },
+        "degraded_total": {
+          "n": 166,
+          "median": 0.030412675332991412,
+          "nmad": 0.3664399207760996
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 89,
+          "median": -0.0038776397705078125,
+          "nmad": 0.13817791957855224
+        },
+        "degradation_increment": {
+          "n": 89,
+          "median": 0.014064042695554946,
+          "nmad": 0.0903378007896253
+        },
+        "degraded_total": {
+          "n": 89,
+          "median": 0.012219464601308516,
+          "nmad": 0.19122183969733275
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 154,
+          "median": 0.07174444198608398,
+          "nmad": 0.2013779128074646
+        },
+        "degradation_increment": {
+          "n": 154,
+          "median": 0.0024954032928210523,
+          "nmad": 0.12453420637104741
+        },
+        "degraded_total": {
+          "n": 154,
+          "median": 0.07734023495968145,
+          "nmad": 0.26913626012404157
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 185,
+          "median": 0.05715370178222656,
+          "nmad": 0.34176790637969967
+        },
+        "degradation_increment": {
+          "n": 185,
+          "median": -1.0650094750985772e-05,
+          "nmad": 0.061630412979334956
+        },
+        "degraded_total": {
+          "n": 185,
+          "median": 0.06756846547359885,
+          "nmad": 0.3639817154044045
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 1,
+          "median": 0.13230323791503906,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": 0.1271269585100896,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.25943019642512866,
+          "nmad": 0.0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 427,
+          "median": 0.05002403259277344,
+          "nmad": 0.2163110029220581
+        },
+        "degradation_increment": {
+          "n": 427,
+          "median": 0.001358560957495314,
+          "nmad": 0.08811828453309285
+        },
+        "degraded_total": {
+          "n": 427,
+          "median": 0.060582689680639845,
+          "nmad": 0.29363950373017955
+        }
+      }
+    },
+    "1|0|1": {
+      "all_paired": {
+        "native_residual": {
+          "n": 474,
+          "median": 0.0516204833984375,
+          "nmad": 0.21680905537605286
+        },
+        "degradation_increment": {
+          "n": 474,
+          "median": 0.01255818010337606,
+          "nmad": 0.13918690051606197
+        },
+        "degraded_total": {
+          "n": 474,
+          "median": 0.06007601357711145,
+          "nmad": 0.3000282386599817
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 474,
+          "median": 0.0516204833984375,
+          "nmad": 0.21680905537605286
+        },
+        "degradation_increment": {
+          "n": 474,
+          "median": 0.01255818010337606,
+          "nmad": 0.13918690051606197
+        },
+        "degraded_total": {
+          "n": 474,
+          "median": 0.06007601357711145,
+          "nmad": 0.3000282386599817
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 282,
+          "median": 0.04997539520263672,
+          "nmad": 0.19442355937957762
+        },
+        "degradation_increment": {
+          "n": 282,
+          "median": 0.028685722536790692,
+          "nmad": 0.12549251129136132
+        },
+        "degraded_total": {
+          "n": 282,
+          "median": 0.07517973490299212,
+          "nmad": 0.28290857104200917
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 192,
+          "median": 0.05792856216430664,
+          "nmad": 0.25267413425445556
+        },
+        "degradation_increment": {
+          "n": 192,
+          "median": 0.0013838763884876926,
+          "nmad": 0.14616143934382878
+        },
+        "degraded_total": {
+          "n": 192,
+          "median": 0.037102515544294334,
+          "nmad": 0.3344180447932873
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 105,
+          "median": -0.004794120788574219,
+          "nmad": 0.1493450403213501
+        },
+        "degradation_increment": {
+          "n": 105,
+          "median": 0.028307497782293467,
+          "nmad": 0.09571720285053595
+        },
+        "degraded_total": {
+          "n": 105,
+          "median": 0.01516956856312035,
+          "nmad": 0.23202048627264538
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 167,
+          "median": 0.07863616943359375,
+          "nmad": 0.190395308303833
+        },
+        "degradation_increment": {
+          "n": 167,
+          "median": 0.008643111112863977,
+          "nmad": 0.17621174259031705
+        },
+        "degraded_total": {
+          "n": 167,
+          "median": 0.08110967190400586,
+          "nmad": 0.282745321749486
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 202,
+          "median": 0.05280494689941406,
+          "nmad": 0.3366064003944397
+        },
+        "degradation_increment": {
+          "n": 202,
+          "median": 0.008475011396585685,
+          "nmad": 0.11564161214694878
+        },
+        "degraded_total": {
+          "n": 202,
+          "median": 0.058442880387808316,
+          "nmad": 0.36506265371234675
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 1,
+          "median": 0.13230323791503906,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": -0.07163490412222373,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.06066833379281533,
+          "nmad": 0.0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 473,
+          "median": 0.05100440979003906,
+          "nmad": 0.21627282714843749
+        },
+        "degradation_increment": {
+          "n": 473,
+          "median": 0.013401910670982176,
+          "nmad": 0.1394699169499017
+        },
+        "degraded_total": {
+          "n": 473,
+          "median": 0.059483693361407575,
+          "nmad": 0.3009221243919236
+        }
+      }
+    },
+    "1|1|1": {
+      "all_paired": {
+        "native_residual": {
+          "n": 424,
+          "median": 0.05235767364501953,
+          "nmad": 0.21981893234252928
+        },
+        "degradation_increment": {
+          "n": 424,
+          "median": 0.00992674875080013,
+          "nmad": 0.16582258097622907
+        },
+        "degraded_total": {
+          "n": 424,
+          "median": 0.06077748195597188,
+          "nmad": 0.2879089126633055
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 424,
+          "median": 0.05235767364501953,
+          "nmad": 0.21981893234252928
+        },
+        "degradation_increment": {
+          "n": 424,
+          "median": 0.00992674875080013,
+          "nmad": 0.16582258097622907
+        },
+        "degraded_total": {
+          "n": 424,
+          "median": 0.06077748195597188,
+          "nmad": 0.2879089126633055
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 260,
+          "median": 0.06667566299438477,
+          "nmad": 0.2084920389175415
+        },
+        "degradation_increment": {
+          "n": 260,
+          "median": 0.011705764880730385,
+          "nmad": 0.16093009597559138
+        },
+        "degraded_total": {
+          "n": 260,
+          "median": 0.08520587476187025,
+          "nmad": 0.27151718389662804
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 164,
+          "median": -0.004338741302490234,
+          "nmad": 0.2697196171760559
+        },
+        "degradation_increment": {
+          "n": 164,
+          "median": 0.003906753630804616,
+          "nmad": 0.1754127580824829
+        },
+        "degraded_total": {
+          "n": 164,
+          "median": -0.022993335778375368,
+          "nmad": 0.3356435085946786
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 91,
+          "median": -0.0038776397705078125,
+          "nmad": 0.1422924196243286
+        },
+        "degradation_increment": {
+          "n": 91,
+          "median": 0.019908581900665467,
+          "nmad": 0.10081295980634059
+        },
+        "degraded_total": {
+          "n": 91,
+          "median": 0.004843356819048239,
+          "nmad": 0.18500530404061866
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 151,
+          "median": 0.07368087768554688,
+          "nmad": 0.19577950630187987
+        },
+        "degradation_increment": {
+          "n": 151,
+          "median": 0.006581148854625241,
+          "nmad": 0.22365090761994402
+        },
+        "degraded_total": {
+          "n": 151,
+          "median": 0.08798015596020292,
+          "nmad": 0.32657313719490244
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 182,
+          "median": 0.05280494689941406,
+          "nmad": 0.31617953367233276
+        },
+        "degradation_increment": {
+          "n": 182,
+          "median": 0.008323293346700567,
+          "nmad": 0.17816037757552647
+        },
+        "degraded_total": {
+          "n": 182,
+          "median": 0.06572609098477322,
+          "nmad": 0.32240141707143694
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 1,
+          "median": 0.13230323791503906,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": 0.27621072171866246,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.4085139596337015,
+          "nmad": 0.0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 423,
+          "median": 0.05223655700683594,
+          "nmad": 0.2200465730667114
+        },
+        "degradation_increment": {
+          "n": 423,
+          "median": 0.009916150503102017,
+          "nmad": 0.1651473390180659
+        },
+        "degraded_total": {
+          "n": 423,
+          "median": 0.06058039235145074,
+          "nmad": 0.2874858703145907
+        }
+      }
+    },
+    "1|0|2": {
+      "all_paired": {
+        "native_residual": {
+          "n": 441,
+          "median": 0.05223655700683594,
+          "nmad": 0.212660267829895
+        },
+        "degradation_increment": {
+          "n": 441,
+          "median": 0.020730669565548254,
+          "nmad": 0.1862672368112631
+        },
+        "degraded_total": {
+          "n": 441,
+          "median": 0.07703184737244229,
+          "nmad": 0.28500763133782386
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 441,
+          "median": 0.05223655700683594,
+          "nmad": 0.212660267829895
+        },
+        "degradation_increment": {
+          "n": 441,
+          "median": 0.020730669565548254,
+          "nmad": 0.1862672368112631
+        },
+        "degraded_total": {
+          "n": 441,
+          "median": 0.07703184737244229,
+          "nmad": 0.28500763133782386
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 268,
+          "median": 0.05840158462524414,
+          "nmad": 0.20640085487365722
+        },
+        "degradation_increment": {
+          "n": 268,
+          "median": 0.030505779386048815,
+          "nmad": 0.1819369537404479
+        },
+        "degraded_total": {
+          "n": 268,
+          "median": 0.10479001903362217,
+          "nmad": 0.2959699916856653
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 173,
+          "median": 0.018189430236816406,
+          "nmad": 0.23679018459320067
+        },
+        "degradation_increment": {
+          "n": 173,
+          "median": 0.011295665567523372,
+          "nmad": 0.19737969301135921
+        },
+        "degraded_total": {
+          "n": 173,
+          "median": 0.04498433316497241,
+          "nmad": 0.2803617593876093
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 94,
+          "median": 0.012168407440185547,
+          "nmad": 0.13717403812408446
+        },
+        "degradation_increment": {
+          "n": 94,
+          "median": 0.0414731449783563,
+          "nmad": 0.09582143485945019
+        },
+        "degraded_total": {
+          "n": 94,
+          "median": 0.0355560483620696,
+          "nmad": 0.18439583938898374
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 157,
+          "median": 0.06748104095458984,
+          "nmad": 0.19593079547882078
+        },
+        "degradation_increment": {
+          "n": 157,
+          "median": 0.012668904238495315,
+          "nmad": 0.2337370030476497
+        },
+        "degraded_total": {
+          "n": 157,
+          "median": 0.07703184737244229,
+          "nmad": 0.2901799881572359
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 190,
+          "median": 0.05280494689941406,
+          "nmad": 0.30903288745880125
+        },
+        "degradation_increment": {
+          "n": 190,
+          "median": 0.006828019767024074,
+          "nmad": 0.20077831689279002
+        },
+        "degraded_total": {
+          "n": 190,
+          "median": 0.09222367052767311,
+          "nmad": 0.34690069655014966
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 441,
+          "median": 0.05223655700683594,
+          "nmad": 0.212660267829895
+        },
+        "degradation_increment": {
+          "n": 441,
+          "median": 0.020730669565548254,
+          "nmad": 0.1862672368112631
+        },
+        "degraded_total": {
+          "n": 441,
+          "median": 0.07703184737244229,
+          "nmad": 0.28500763133782386
+        }
+      }
+    },
+    "1|1|2": {
+      "all_paired": {
+        "native_residual": {
+          "n": 389,
+          "median": 0.053131103515625,
+          "nmad": 0.21682849674224852
+        },
+        "degradation_increment": {
+          "n": 389,
+          "median": 0.03239674690148675,
+          "nmad": 0.23665858054771988
+        },
+        "degraded_total": {
+          "n": 389,
+          "median": 0.06214970971385014,
+          "nmad": 0.364713982564397
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 389,
+          "median": 0.053131103515625,
+          "nmad": 0.21682849674224852
+        },
+        "degradation_increment": {
+          "n": 389,
+          "median": 0.03239674690148675,
+          "nmad": 0.23665858054771988
+        },
+        "degraded_total": {
+          "n": 389,
+          "median": 0.06214970971385014,
+          "nmad": 0.364713982564397
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 222,
+          "median": 0.0489506721496582,
+          "nmad": 0.2171628882408142
+        },
+        "degradation_increment": {
+          "n": 222,
+          "median": 0.058495037741144174,
+          "nmad": 0.2182700646654095
+        },
+        "degraded_total": {
+          "n": 222,
+          "median": 0.08173970317335488,
+          "nmad": 0.3339947664957961
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 167,
+          "median": 0.06245279312133789,
+          "nmad": 0.21210671911239623
+        },
+        "degradation_increment": {
+          "n": 167,
+          "median": 0.012648880695884657,
+          "nmad": 0.24156682447696373
+        },
+        "degraded_total": {
+          "n": 167,
+          "median": 0.021556304642157187,
+          "nmad": 0.40489445968651827
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 75,
+          "median": -0.0003085136413574219,
+          "nmad": 0.15542842054367065
+        },
+        "degradation_increment": {
+          "n": 75,
+          "median": 0.04042654741709839,
+          "nmad": 0.14397846063240027
+        },
+        "degraded_total": {
+          "n": 75,
+          "median": 0.026942733350921344,
+          "nmad": 0.24116672599833702
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 141,
+          "median": 0.07368087768554688,
+          "nmad": 0.19577950630187987
+        },
+        "degradation_increment": {
+          "n": 141,
+          "median": 0.040893906744820185,
+          "nmad": 0.31202189898979465
+        },
+        "degraded_total": {
+          "n": 141,
+          "median": 0.0695958453386254,
+          "nmad": 0.3923390445151459
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 173,
+          "median": 0.053131103515625,
+          "nmad": 0.29807502651214596
+        },
+        "degradation_increment": {
+          "n": 173,
+          "median": 0.029900314950147333,
+          "nmad": 0.2478898333162434
+        },
+        "degraded_total": {
+          "n": 173,
+          "median": 0.050264389741709437,
+          "nmad": 0.4091104275096685
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 389,
+          "median": 0.053131103515625,
+          "nmad": 0.21682849674224852
+        },
+        "degradation_increment": {
+          "n": 389,
+          "median": 0.03239674690148675,
+          "nmad": 0.23665858054771988
+        },
+        "degraded_total": {
+          "n": 389,
+          "median": 0.06214970971385014,
+          "nmad": 0.364713982564397
+        }
+      }
+    },
+    "1|0|3": {
+      "all_paired": {
+        "native_residual": {
+          "n": 396,
+          "median": 0.051393985748291016,
+          "nmad": 0.2127578281402588
+        },
+        "degradation_increment": {
+          "n": 396,
+          "median": 0.00665270375196414,
+          "nmad": 0.2311054668106787
+        },
+        "degraded_total": {
+          "n": 396,
+          "median": 0.04214793631958713,
+          "nmad": 0.33686717775632957
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 396,
+          "median": 0.051393985748291016,
+          "nmad": 0.2127578281402588
+        },
+        "degradation_increment": {
+          "n": 396,
+          "median": 0.00665270375196414,
+          "nmad": 0.2311054668106787
+        },
+        "degraded_total": {
+          "n": 396,
+          "median": 0.04214793631958713,
+          "nmad": 0.33686717775632957
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 230,
+          "median": 0.04879045486450195,
+          "nmad": 0.21459167919158934
+        },
+        "degradation_increment": {
+          "n": 230,
+          "median": 0.03352828279433062,
+          "nmad": 0.21842028820661621
+        },
+        "degraded_total": {
+          "n": 230,
+          "median": 0.06320846810615066,
+          "nmad": 0.31821738323853327
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 166,
+          "median": 0.05672025680541992,
+          "nmad": 0.2042835133552551
+        },
+        "degradation_increment": {
+          "n": 166,
+          "median": -0.005315896560682987,
+          "nmad": 0.2760118448069734
+        },
+        "degraded_total": {
+          "n": 166,
+          "median": 0.017410037097695508,
+          "nmad": 0.3587911253582176
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 80,
+          "median": -0.0027875900268554688,
+          "nmad": 0.12632681622505187
+        },
+        "degradation_increment": {
+          "n": 80,
+          "median": 0.03628539540796005,
+          "nmad": 0.13922653631974338
+        },
+        "degraded_total": {
+          "n": 80,
+          "median": 0.01976779707632481,
+          "nmad": 0.1893430420143614
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 146,
+          "median": 0.09055566787719727,
+          "nmad": 0.1893214379310608
+        },
+        "degradation_increment": {
+          "n": 146,
+          "median": -0.028071131115245507,
+          "nmad": 0.26338085250719273
+        },
+        "degraded_total": {
+          "n": 146,
+          "median": 0.06837874534877209,
+          "nmad": 0.3571815572218538
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 170,
+          "median": 0.0449366569519043,
+          "nmad": 0.3200897226333618
+        },
+        "degradation_increment": {
+          "n": 170,
+          "median": 0.002640065299464922,
+          "nmad": 0.29905413289206606
+        },
+        "degraded_total": {
+          "n": 170,
+          "median": 0.039094592075310075,
+          "nmad": 0.41074357506919257
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 396,
+          "median": 0.051393985748291016,
+          "nmad": 0.2127578281402588
+        },
+        "degradation_increment": {
+          "n": 396,
+          "median": 0.00665270375196414,
+          "nmad": 0.2311054668106787
+        },
+        "degraded_total": {
+          "n": 396,
+          "median": 0.04214793631958713,
+          "nmad": 0.33686717775632957
+        }
+      }
+    },
+    "1|1|3": {
+      "all_paired": {
+        "native_residual": {
+          "n": 328,
+          "median": 0.058470726013183594,
+          "nmad": 0.20807493324279783
+        },
+        "degradation_increment": {
+          "n": 328,
+          "median": 0.022407686359851908,
+          "nmad": 0.30855921904199035
+        },
+        "degraded_total": {
+          "n": 328,
+          "median": 0.05079099789515773,
+          "nmad": 0.4285883533332473
+        }
+      },
+      "sigma_le_0p10": {
+        "native_residual": {
+          "n": 327,
+          "median": 0.05823802947998047,
+          "nmad": 0.20689289817810058
+        },
+        "degradation_increment": {
+          "n": 327,
+          "median": 0.02251411400040837,
+          "nmad": 0.3073023794624879
+        },
+        "degraded_total": {
+          "n": 327,
+          "median": 0.0497577392478874,
+          "nmad": 0.43028918182346465
+        }
+      },
+      "sigma_gt_0p10": {
+        "native_residual": {
+          "n": 1,
+          "median": 0.2911844253540039,
+          "nmad": 0.0
+        },
+        "degradation_increment": {
+          "n": 1,
+          "median": -0.19148703025382474,
+          "nmad": 0.0
+        },
+        "degraded_total": {
+          "n": 1,
+          "median": 0.09969739510017916,
+          "nmad": 0.0
+        }
+      },
+      "support_le_0p5": {
+        "native_residual": {
+          "n": 187,
+          "median": 0.047974586486816406,
+          "nmad": 0.19352713565826415
+        },
+        "degradation_increment": {
+          "n": 187,
+          "median": 0.028253468331403297,
+          "nmad": 0.26174431449168284
+        },
+        "degraded_total": {
+          "n": 187,
+          "median": 0.05682735399562233,
+          "nmad": 0.34863985003415693
+        }
+      },
+      "support_gt_0p5": {
+        "native_residual": {
+          "n": 141,
+          "median": 0.07345294952392578,
+          "nmad": 0.24842813987731932
+        },
+        "degradation_increment": {
+          "n": 141,
+          "median": 0.020592008084893365,
+          "nmad": 0.3802743213874872
+        },
+        "degraded_total": {
+          "n": 141,
+          "median": 0.01676343715583073,
+          "nmad": 0.5168176549932962
+        }
+      },
+      "native_rz_lt_0p8": {
+        "native_residual": {
+          "n": 66,
+          "median": 0.003786325454711914,
+          "nmad": 0.14363705520629882
+        },
+        "degradation_increment": {
+          "n": 66,
+          "median": 0.029486485977788135,
+          "nmad": 0.16098192341327885
+        },
+        "degraded_total": {
+          "n": 66,
+          "median": 0.029740395108417417,
+          "nmad": 0.20457095996370317
+        }
+      },
+      "native_rz_0p8_to_1p4": {
+        "native_residual": {
+          "n": 116,
+          "median": 0.06875848770141602,
+          "nmad": 0.19992511253356932
+        },
+        "degradation_increment": {
+          "n": 116,
+          "median": -0.024858199730601882,
+          "nmad": 0.3696605597097739
+        },
+        "degraded_total": {
+          "n": 116,
+          "median": 0.04574227604454428,
+          "nmad": 0.41559760045901206
+        }
+      },
+      "native_rz_ge_1p4": {
+        "native_residual": {
+          "n": 146,
+          "median": 0.08702850341796875,
+          "nmad": 0.28621155138015747
+        },
+        "degradation_increment": {
+          "n": 146,
+          "median": 0.0472988295924619,
+          "nmad": 0.39375128658062764
+        },
+        "degraded_total": {
+          "n": 146,
+          "median": 0.058284926905242784,
+          "nmad": 0.5874553389434419
+        }
+      },
+      "source_ag_le_0p05": {
+        "native_residual": {
+          "n": 0
+        },
+        "degradation_increment": {
+          "n": 0
+        },
+        "degraded_total": {
+          "n": 0
+        }
+      },
+      "source_ag_gt_0p05": {
+        "native_residual": {
+          "n": 328,
+          "median": 0.058470726013183594,
+          "nmad": 0.20807493324279783
+        },
+        "degradation_increment": {
+          "n": 328,
+          "median": 0.022407686359851908,
+          "nmad": 0.30855921904199035
+        },
+        "degraded_total": {
+          "n": 328,
+          "median": 0.05079099789515773,
+          "nmad": 0.4285883533332473
+        }
+      }
+    }
+  }
+}

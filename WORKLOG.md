@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- NERSC crossover job 60456650 completed in 10m23s; dependent strata
+  job 60456926 completed in 8 s. Reused the same 500 Gaia source IDs in
+  each prior deep field and matched target r0 across noise fields to better
+  than 0.0001 mag (95th percentile). Native median residual is −0.009
+  versus +0.050 mag. Same-template noise-field swaps change the paired
+  median by at most 0.011 mag but deepen NMAD by ~0.09–0.10 mag at r=21–22
+  and reduce acceptance 10–13 points. Selected used-color sigma>0.10 mag
+  is almost absent; the red source stratum has much larger deep scatter.
+  Added manifest, strata, plot, report. Prepared outcome-blind source
+  matching on g-r/r-z and A_g; next run it on allocated CPU, then decide
+  whether to register more fields.
+
 - DESI boundary rerun 60456349 completed on allocated CPU after fixing
   on-demand Gaia `M_g`. Added per-source manifest and color/CMD figure.
   Development RA205–215 has 12/32 accepted cool giants (11 in A tier),

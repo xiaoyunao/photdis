@@ -17,6 +17,12 @@ interval covers 92.6%/92.9%/95.1%/92.3% at measured `r=18–19/19–20/20–21/2
 the 68% interval covers 62.6%–65.2%. These intervals are not released as
 nominal-coverage intervals. Median distances are cold-dwarf-hypothesis
 estimates, with type and support flags; type probabilities are uncalibrated.
+The current diagnostic round includes the [extinction audit](docs/extinction_audit.md),
+[selection-aware weak-parallax check](docs/cold_v4_weak_parallax_v2.md),
+[WISE20 wide-binary check](docs/cold_v4_system_validation_v3.md),
+[DESI type-boundary audit](docs/cold_v4_type_boundary.md), and
+[template/noise-field crossover](docs/cold_v4_crossover.md). These diagnostics
+have not changed the frozen distance route.
 
 ## Locations
 
