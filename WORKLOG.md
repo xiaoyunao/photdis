@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Before either newly registered final-field residual was read or scored,
+  cancelled pending score jobs 60459346/60459360 and added nside64
+  sky-block median/NMAD uncertainty for the preregistered corrected-
+  parallax 1–2 and >=2 mas groups. Python parse and a focused block-
+  bootstrap smoke check pass. Next: sync the fixed score implementation,
+  resubmit final jobs; development scores can be reproduced with the same
+  CI addition.
+
 - Supplemental development field RA230–240 built in 3m27s (job
   60459005) and scored in 32 s (60459011) under frozen WISE20. It has
   7,128 strict anchors, 4,746 cold anchors and 4,554 selected; overall

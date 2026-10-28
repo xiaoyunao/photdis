@@ -102,6 +102,13 @@ def field_result(path, references, route, forests, policy, seed):
     by_group = {name: robust((prediction[use] -
                              (10 - 5 * np.log10(p[use]))))
                 for name, use in groups.items()}
+    parallax_block_ci = {}
+    for name in ("parallax_1_to_2_mas", "parallax_ge_2_mas"):
+        use = groups[name]
+        parallax_block_ci[name] = spatial_bootstrap(
+            prediction[use] - (10 - 5 * np.log10(p[use])),
+            np.asarray(table["ra"][use], float),
+            np.asarray(table["dec"][use], float), seed + len(name))
     return {"field": metadata["name"], "bounds_deg": metadata["bounds_deg"],
             "strict_anchor_count": metadata["strict_anchor_rows"],
             "strict_cold_count": int(cold.sum()),
@@ -120,7 +127,8 @@ def field_result(path, references, route, forests, policy, seed):
                 "p_corr_mas": robust(p[selected]),
                 "gaia_bp_rp": robust(bp_rp[selected]),
                 "r0": robust(r0[selected]), "source_ag": robust(ag[selected])},
-            "by_group": by_group}
+            "by_group": by_group,
+            "parallax_group_sky_block_bootstrap": parallax_block_ci}
 
 
 def main():
