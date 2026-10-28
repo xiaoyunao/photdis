@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- DESI boundary rerun 60456349 completed on allocated CPU after fixing
+  on-demand Gaia `M_g`. Added per-source manifest and color/CMD figure.
+  Development RA205–215 has 12/32 accepted cool giants (11 in A tier),
+  while RA150–160 and RA220–230 have 5/8 and 14/14 metal-poor cool
+  dwarfs rejected by the optical box. Every rejected dwarf crosses the
+  blue `g-r` edge; many retain clean grz photometry. Documented the
+  conditional DESI counts in `docs/cold_v4_type_boundary.md`. Changed the
+  pending crossover from 1h regular allocation 60455711 to a 30m debug
+  allocation 60456650; the job is running. Added an allocated-node
+  postprocessor for paired residual strata by used sigma, support, source
+  color and source extinction. Next: inspect crossover cells and strata.
+
 - Type-boundary job 60456142 failed immediately because the pilot field
   diagnostics omit a stored `mg` column; the cold-v4 pipeline calculates
   labels on demand. Fixed the boundary audit to read `g0`, corrected
