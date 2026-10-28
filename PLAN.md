@@ -45,7 +45,9 @@ conditional label rates as candidate purity.
     Keep fit, calibration and final test identities disjoint. Report bias,
     NMAD, both coverage rates, low/high misses, interval width, count and
     spatial-block uncertainty by color and depth. Compare same-star A/B/C
-    under a common training identity set before attributing band benefit.
+    under a common training identity set before attributing band benefit. The
+    original cold_baseline.py already supplies that common-fit comparison;
+    retain its result while assessing new external-field performance.
 12. Audit dwarf, giant, nonstar and other/unknown labels across color,
     brightness and sky; state selection of each labeled sample. Evaluate
     class-conditional recall and leakage. Use cold-dwarf-hypothesis distances

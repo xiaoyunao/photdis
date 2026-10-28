@@ -50,12 +50,15 @@ def correct_center(prediction, x, scaler, model):
     return np.asarray(prediction, float) - correction[:, None]
 
 
-def group_labels(rz, r, color_edges, r_edge):
-    """Six fixed groups: three observed r-z colors by two observed r depths."""
+def group_labels(rz, r, color_edges, r_edges_by_color):
+    """Six fixed groups: three observed r-z colors, each split by its r median."""
     rz = np.asarray(rz, float)
     r = np.asarray(r, float)
     color = np.searchsorted(np.asarray(color_edges)[1:-1], rz, side="right")
-    return color * 2 + (r >= r_edge).astype(int)
+    edges = np.asarray(r_edges_by_color, float)
+    if edges.shape != (3,):
+        raise ValueError("Expected one depth boundary per color bin")
+    return color * 2 + (r >= edges[color]).astype(int)
 
 
 def fit_group_cqr(truth, prediction, groups, min_group=80):

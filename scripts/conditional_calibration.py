@@ -27,11 +27,11 @@ from photdis.holdouts import annotate_holdouts, load_reference_catalogs
 from photdis.noise import interval_diagnostics, transformed_distance_quantiles
 from photdis.stage1 import require_compute, write_json
 
-OUT = Path("data/conditional_v1")
-FIG = Path("figures/conditional_v1")
+OUT = Path("data/conditional_v2")
+FIG = Path("figures/conditional_v2")
 MODEL = OUT / "calibration.joblib"
-PREPARED = Path("manifests/conditional_prepared.json")
-FINAL = Path("manifests/conditional_final.json")
+PREPARED = Path("manifests/conditional_prepared_v2.json")
+FINAL = Path("manifests/conditional_final_v2.json")
 FOREST_FEATURES = {"A_grz": ("gr0", "rz0"),
                    "B_grzW1": ("gr0", "rz0", "zw10"),
                    "C_grzW1W2": ("gr0", "rz0", "zw10", "w1w20")}
@@ -126,7 +126,7 @@ def sky_block_ci(truth, prediction, ra, dec, n_boot=300, seed=20261028):
             "nmad_95pct": np.quantile(nmad, [.025, .975]).tolist()}
 
 
-def evaluate(rows, corrected, calibrated, edges, r_edge):
+def evaluate(rows, corrected, calibrated, edges, r_edges):
     result = {"n": len(rows["truth"]),
               "direct_Mg": interval_diagnostics(rows["truth"], rows["prediction"]),
               "center_Mg": interval_diagnostics(rows["truth"], corrected),
@@ -139,7 +139,7 @@ def evaluate(rows, corrected, calibrated, edges, r_edge):
         distance[:, 2] / true_distance - 1 - np.median(distance[:, 2] / true_distance - 1))))
     result["sky_block_ci"] = sky_block_ci(rows["truth"], calibrated,
                                            rows["ra"], rows["dec"])
-    groups = group_labels(rows["rz0"], rows["r"], edges, r_edge)
+    groups = group_labels(rows["rz0"], rows["r"], edges, r_edges)
     result["application_visible_bins"] = []
     for group in range(6):
         take = groups == group
@@ -157,7 +157,9 @@ def evaluate(rows, corrected, calibrated, edges, r_edge):
         take = (rows["bp_rp"] >= lo) & (rows["bp_rp"] < hi)
         if take.sum():
             result["Gaia_color_diagnostics_only"].append({"BP_RP": [lo, hi],
-                "metrics": interval_diagnostics(rows["truth"][take], calibrated[take])})
+                "direct": interval_diagnostics(rows["truth"][take], rows["prediction"][take]),
+                "center": interval_diagnostics(rows["truth"][take], corrected[take]),
+                "center_and_group_cqr": interval_diagnostics(rows["truth"][take], calibrated[take])})
     return result
 
 
@@ -167,7 +169,7 @@ def prepare(forests, references, frozen):
     prior = [load_field(name, references) for name in ("prior_north", "prior_south")]
     diagnostic = load_field("prior_cal", references)
     calibration = load_field("new_cal", references)
-    manifest = {"method": "Ridge(alpha=100) on clipped predicted-minus-Gaia Mg residual; three development-rz quantile bins x two development-r median depth bins; split-CQR minimum 80 per group and fixed fallback by unlabeled count",
+    manifest = {"method": "Ridge(alpha=100) on clipped predicted-minus-Gaia Mg residual; three development-rz quantile bins, each split at its own development-r median; split-CQR minimum 80 per group and fixed fallback by unlabeled count",
                 "photometry_only_center_features": FEATURES,
                 "development_fields": [item[3] for item in prior],
                 "development_diagnostic_field": diagnostic[3],
@@ -185,28 +187,32 @@ def prepare(forests, references, frozen):
         edges = [float(np.min(training_rz) - .1),
                  *np.quantile(training_rz, [1/3, 2/3]).tolist(),
                  float(np.max(training_rz) + .1)]
-        r_edge = float(np.median(concatenate(train, "r")))
+        training_r = concatenate(train, "r")
+        color_index = np.searchsorted(edges[1:-1], training_rz, side="right")
+        r_edges = [float(np.median(training_r[color_index == group]))
+                   for group in range(3)]
         cal = tier_rows(calibration, tier, forest)
         corrected = correct_center(cal["prediction"], cal["center_features"], scaler, center)
-        groups = group_labels(cal["rz0"], cal["r"], edges, r_edge)
+        groups = group_labels(cal["rz0"], cal["r"], edges, r_edges)
         offsets = fit_group_cqr(cal["truth"], corrected, groups, min_group=80)
         adjusted = apply_group_cqr(corrected, groups, offsets)
         dev_check = tier_rows(diagnostic, tier, forest)
         dev_corrected = correct_center(dev_check["prediction"],
                                        dev_check["center_features"], scaler, center)
         models[tier] = {"scaler": scaler, "center": center,
-                        "color_edges": edges, "r_edge": r_edge, "offsets": offsets}
+                        "color_edges": edges, "r_edges_by_color": r_edges,
+                        "offsets": offsets}
         manifest["tiers"][tier] = {
             "development_n": len(truth),
             "development_identity_sha256": identity_hash(concatenate(train, "source_id")),
             "calibration_n": len(cal["truth"]),
             "calibration_identity_sha256": identity_hash(cal["source_id"]),
-            "color_edges_rz0": edges, "r_edge": r_edge,
+            "color_edges_rz0": edges, "r_edges_by_color": r_edges,
             "offsets": offsets,
             "prior_cal_development_check": {
                 "direct": interval_diagnostics(dev_check["truth"], dev_check["prediction"]),
                 "center": interval_diagnostics(dev_check["truth"], dev_corrected)},
-            "new_calibration_apparent": evaluate(cal, corrected, adjusted, edges, r_edge)}
+            "new_calibration_apparent": evaluate(cal, corrected, adjusted, edges, r_edges)}
     OUT.mkdir(parents=True, exist_ok=True)
     joblib.dump(models, MODEL)
     manifest["model_sha256"] = sha(MODEL)
@@ -241,10 +247,10 @@ def final_test(forests, references, frozen):
             corrected = correct_center(rows["prediction"], rows["center_features"],
                                        model["scaler"], model["center"])
             groups = group_labels(rows["rz0"], rows["r"],
-                                  model["color_edges"], model["r_edge"])
+                                  model["color_edges"], model["r_edges_by_color"])
             adjusted = apply_group_cqr(corrected, groups, model["offsets"])
             item["tiers"][tier] = evaluate(rows, corrected, adjusted,
-                                             model["color_edges"], model["r_edge"])
+                                             model["color_edges"], model["r_edges_by_color"])
             cache[tier] = (rows, adjusted)
         common_ids = set(cache["C_grzW1W2"][0]["source_id"].tolist())
         for tier in FOREST_FEATURES:

@@ -18,7 +18,7 @@ class ConditionalTests(unittest.TestCase):
     def test_fixed_groups_and_fallback_expand_intervals(self):
         rz = np.array([0.1, .5, .9])
         r = np.array([16, 18, 19])
-        np.testing.assert_array_equal(group_labels(rz, r, [0, .3, .7, 1], 18),
+        np.testing.assert_array_equal(group_labels(rz, r, [0, .3, .7, 1], [17, 18, 18]),
                                       [0, 3, 5])
         truth = np.linspace(-1, 1, 120)
         prediction = np.tile([-.2, -.1, 0, .1, .2], (120, 1))

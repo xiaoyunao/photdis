@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Calibration diagnosis: first prepared version used a global observed-r
+  median across three r-z bins. New calibration field had 1,317/1,276/1,274
+  A/B/C anchors, but blue-faint and red-bright groups had only 8–17 objects.
+  Revised the registered method before final-field processing: each color bin
+  now uses its own development-field r median. Outputs move to conditional_v2;
+  v1 products remain on NERSC as a diagnostic archive. Added direct/center/
+  calibrated Gaia-color diagnostics to measure red and blue bias explicitly.
+- Baseline code audit: scripts/cold_baseline.py already trains A/B/C on the
+  identical 1,230 common fit anchors and evaluates the identical 223 test
+  anchors at fixed leaf 20; its manifest includes block-bootstrap ablation.
+  No additional common-training experiment is required.
+
 - Debugging: first conditional-preparation job 60432776 stopped while building
   Gaia color flags. Root cause: stripped six rather than five characters from
   the `gaia_` column prefix, producing `aia_match`; corrected in
