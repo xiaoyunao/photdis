@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Type-boundary job 60456142 failed immediately because the pilot field
+  diagnostics omit a stored `mg` column; the cold-v4 pipeline calculates
+  labels on demand. Fixed the boundary audit to read `g0`, corrected
+  parallax and formal error and calculate diagnostic `M_g` only for
+  parallax S/N>=10; added an explicit CMD validity label. System job
+  60456143 succeeded in 36 s: WISE20 retains the same 456 wide-binary
+  pairs and 201 Blanco 1 members. Pair fainter-minus-brighter median is
+  +0.0441 mag (component bootstrap95 +0.0141 to +0.0774), versus old
+  +0.0455; matched pair change median is zero. Blanco 1 within-cluster
+  NMAD remains 0.244 mag, not an absolute zero-point test. Next: rerun
+  boundary audit, then inspect crossover when regular allocation starts.
+
 - Prepared two independent NERSC audits while crossover job 60455711 waits
   for regular-queue priority. The DESI boundary script records every
   selected cold giant and optical-box-rejected metal-poor dwarf with quality,

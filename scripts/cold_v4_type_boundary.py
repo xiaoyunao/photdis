@@ -22,7 +22,7 @@ from cold_v4_type_audit import COLS, class_masks, unique_spectra
 
 LOCK = Path("configs/cold_v4_deep_policy.json")
 RESULT = Path("data/cold_v4_type/boundary_v2.json")
-EXTRA = ["mg", "gaia_bp_rp", "p_corr", "gaia_parallax_error", "ebv",
+EXTRA = ["g0", "gaia_bp_rp", "p_corr", "gaia_parallax_error", "ebv",
          "grz_fraction_clean", "grz_mask_clean", "snr_w1", "snr_w2"]
 READ = sorted(set(COLS + EXTRA))
 
@@ -70,7 +70,7 @@ def object_record(table, i, route, routed, chosen, calibrated_feh, feh_valid):
             "gr0": finite(gr), "rz0": finite(rz),
             "zw10": finite(table["zw10"][i]),
             "w1w20": finite(table["w1w20"][i]),
-            "legacy_mg_from_gaia_anchor": finite(table["mg"][i]),
+            "legacy_mg_from_gaia_snr_ge_10": finite(table["computed_mg"][i]),
             "gaia_bp_rp": finite(table["gaia_bp_rp"][i]),
             "corrected_parallax_mas": finite(table["p_corr"][i]),
             "parallax_error_mas": finite(table["gaia_parallax_error"][i]),
@@ -105,6 +105,13 @@ def field_result(config, route, policy):
     raw = fitsio.read(Path(task["output_dir"]) / "field_diagnostics.fits",
                       columns=READ)
     table = {name: raw[name] for name in raw.dtype.names}
+    p = np.asarray(table["p_corr"], float)
+    error = np.asarray(table["gaia_parallax_error"], float)
+    good_mg = (np.isfinite(p) & np.isfinite(error) & (error > 0) &
+               (p / error >= 10) & np.isfinite(table["g0"]))
+    mg = np.full(len(p), np.nan)
+    mg[good_mg] = table["g0"][good_mg] - 10 + 5 * np.log10(p[good_mg])
+    table["computed_mg"] = mg
     unique, dedup = unique_spectra(table)
     labels = class_masks(table, unique & table["grz_base"])
     routed = route_rows(table, route)
@@ -124,7 +131,7 @@ def field_result(config, route, policy):
             ids = np.sort(rng.choice(ids, 600, replace=False))
         background[name] = [{"gr0": finite(table["gr0"][i]),
                              "rz0": finite(table["rz0"][i]),
-                             "mg": finite(table["mg"][i])} for i in ids]
+                             "mg": finite(table["computed_mg"][i])} for i in ids]
     return {"field": task["name"], "deduplication": dedup,
             "qualified_cold_giants": int(labels["cool_giant"].sum()),
             "selected_cold_giants": int(giant_selected.sum()),

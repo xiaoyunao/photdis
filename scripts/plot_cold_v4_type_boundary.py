@@ -48,14 +48,14 @@ def main():
             (dwarf, "DESI cool dwarfs", "#56616a", ".", 6),
             (giant, "Accepted cool giants", "#cf5b36", "D", 38),
             (poor, "Box-rejected poor dwarfs", "#225ca8", "x", 56)):
-        x, y = numeric(rows, "rz0"), numeric(rows, "legacy_mg_from_gaia_anchor"
+        x, y = numeric(rows, "rz0"), numeric(rows, "legacy_mg_from_gaia_snr_ge_10"
                                       if rows is not dwarf else "mg")
         good = np.isfinite(x) & np.isfinite(y)
         axes[1].scatter(x[good], y[good], s=size, marker=marker, color=color,
                         alpha=.18 if rows is dwarf else .9, label=f"{label} (n={good.sum()})")
     axes[1].invert_yaxis()
     axes[1].set_xlabel("Dereddened r−z")
-    axes[1].set_ylabel("Legacy M_g from high-quality Gaia (mag)")
+    axes[1].set_ylabel("Legacy M_g from Gaia parallax S/N≥10 (mag)")
     axes[1].legend(fontsize=7, frameon=False, loc="best")
     fig.tight_layout()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
