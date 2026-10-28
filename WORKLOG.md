@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- PS1 job 60463252 completed in 2m01s on allocated CPU. Quality-qualified
+  matches among frozen selected anchors number 1,623/2,734/1,495 in south
+  RA330/south RA20/north RA130. Median Legacy-minus-transformed-PS1 g is
+  +0.0089/+0.0046/−0.0039 mag; r and z are within ~0.003 mag of zero.
+  Same-source optical replacement moves median predicted modulus by
+  +0.0109/+0.0056/−0.0069 mag, while the distribution of residuals is
+  nonlinear. Added exploratory per-field residual sky-block intervals and
+  color/model-component summaries for a bounded rerun before interpretation.
+
 - PS1 audit job 60463039 failed after 36 s because new field diagnostics
   retain the observed `g/r/z` magnitudes but only the g-band transmission;
   it requested nonexistent `mw_transmission_r/z` columns. The audit now

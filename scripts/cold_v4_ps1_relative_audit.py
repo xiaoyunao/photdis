@@ -27,11 +27,11 @@ from cold_v4_policy_noise import frozen_models
 PS1_ROOT = Path("/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3")
 NORTH = Path("configs/cold_v4_native_transfer_north_final.json")
 CONFIG = Path("configs/cold_v4_ps1_relative_audit.json")
-OUT = Path("data/cold_v4_ps1_relative_audit/final.json")
+OUT = Path("data/cold_v4_ps1_relative_audit/final_v2.json")
 PS1_COLUMNS = ("OBJ_ID", "RA_OK", "DEC_OK", "EPOCHMEAN_OK", "MEDIAN",
                "NMAG_OK", "STDEV")
 EXTRA = ("source_id", "gaia_ra", "gaia_dec", "gaia_ref_epoch", "gaia_pmra",
-         "gaia_pmdec", "g", "r", "z", "grz_clean", "snr_w1", "snr_w2")
+         "gaia_pmdec", "g", "r", "z", "r0", "grz_clean", "snr_w1", "snr_w2")
 
 
 def ps1_catalog(bounds):
@@ -178,12 +178,26 @@ def field_result(item, references, route, forests, policy, expected, seed):
         mu_ref = 10 - 5 * np.log10(p[mask])
         ra = np.asarray(table["ra"][mask], float)
         dec = np.asarray(table["dec"][mask], float)
+        old_residual = baseline_pred[mask] - mu_ref
+        new_residual = new_pred[mask] - mu_ref
+        delta_g0 = np.asarray(shifted["g0"][mask], float) - \
+            np.asarray(table["g0"][mask], float)
         return {"n": int(mask.sum()),
                 "paired_prediction_shift": robust(delta),
                 "paired_prediction_shift_sky_block": spatial_bootstrap(
                     delta, ra, dec, seed),
-                "legacy_residual": robust(baseline_pred[mask] - mu_ref),
-                "ps1_replacement_residual": robust(new_pred[mask] - mu_ref),
+                "legacy_residual": robust(old_residual),
+                "legacy_residual_sky_block": spatial_bootstrap(
+                    old_residual, ra, dec, seed + 11),
+                "ps1_replacement_residual": robust(new_residual),
+                "ps1_replacement_residual_sky_block": spatial_bootstrap(
+                    new_residual, ra, dec, seed + 17),
+                "paired_apparent_g0_shift": robust(delta_g0),
+                "paired_model_mg_shift": robust(delta_g0 - delta),
+                "paired_gr0_shift": robust(np.asarray(shifted["gr0"][mask], float) -
+                                           np.asarray(table["gr0"][mask], float)),
+                "paired_rz0_shift": robust(np.asarray(shifted["rz0"][mask], float) -
+                                           np.asarray(table["rz0"][mask], float)),
                 "tier_changes": int((base_level[mask] != new_level[mask]).sum())}
 
     quality_mask = baseline & quality
@@ -198,6 +212,11 @@ def field_result(item, references, route, forests, policy, expected, seed):
     return {"field": metadata["name"], "baseline_selected_count": int(baseline.sum()),
             "ps1_catalog": inventory, "matching": matching,
             "quality_on_baseline_count": int(quality_mask.sum()),
+            "quality_properties": {
+                "gaia_bp_rp": robust(np.asarray(table["bp_rp_checked"][quality_mask], float)),
+                "corrected_parallax_mas": robust(p[quality_mask]),
+                "legacy_gr0": robust(np.asarray(table["gr0"][quality_mask], float)),
+                "legacy_r0": robust(np.asarray(table["r0"][quality_mask], float))},
             "replacement_common_count": int(common.sum()),
             "replacement_retention_fraction": float(common.sum() / max(quality_mask.sum(), 1)),
             "optical": optical, "replacement_all": summarize(common),
