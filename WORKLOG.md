@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Added independent deep split-CQR runner with one calibration draw per
+  Gaia source and depth, hierarchical depth/tier/color/error/support groups,
+  and a final field with clustered repeated-draw intervals. Added a test
+  that rejects repeated source draws in calibration and checks sparse-group
+  fallback. Added held-out wide-binary/cluster relative-distance runner
+  using the already reserved published reference IDs and unchanged v4 route.
+  Parse, shell syntax and focused tests pass. Next: run the system check on
+  allocated CPU while the development policy job waits for resources.
+
 - Registered three preexisting but cold-v4-independent fields for deep-noise
   policy development (RA50–60), source-independent calibration (RA35–45),
   and final evaluation (RA170–180) before reading their v4 simulation
