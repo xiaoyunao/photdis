@@ -2,8 +2,9 @@
 
 ## Current Objective
 
-Complete the next Pro-recommended photometry and coverage audit in the existing
-10°×10° field, then present the result for user review.
+Complete the Pro-recommended photometry/coverage audit in the existing 10°×10°
+field, use its findings to define a cold-main-sequence baseline, fit and test
+the grz, grzW1 and grzW1W2 models, then present the result for user review.
 
 ## Milestones
 
@@ -16,7 +17,12 @@ Complete the next Pro-recommended photometry and coverage audit in the existing
 4. Compare target points, fixed strict anchors, quality DESI stars and classified
    nonstars in the grz, grzW1 and grzW1W2 color planes; count anchors per layer.
 5. Store raw/corrected DESI RVS metallicities and published applicability flags.
-6. Validate, plot, synchronize programs/figures and stop for user review.
+6. Define a cold-main-sequence sample and adapt spatial partitioning from actual
+   counts while retaining every originally reserved test object.
+7. Fit a simple color relation and quantile forests for three input tiers.
+   Compare all tiers on identical stars and measure each tier's full coverage.
+8. Validate residuals, interval coverage and trends, plot, synchronize
+   programs/figures, then stop for user review.
 
 ## Scope
 
@@ -25,5 +31,4 @@ APOGEE matching is diagnostic. The prior full-footprint run stays stopped.
 
 ## Next Checkpoint
 
-Show joint failure groups, corrected Gaia CMD, external-photometry residuals
-and input-color coverage. A later cold-main-sequence baseline follows review.
+Show the optical audit and the tested cold-main-sequence baseline together.

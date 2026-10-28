@@ -2,6 +2,24 @@
 
 ## 2026-10-28
 
+- Task: user extended the Pro review goal through a bounded cold-main-sequence
+  baseline. The same-field audit completed on nid200059 in 441.8 s and synced.
+- Findings: canonical Gaia reference 6,942; strict anchors 1,802; 22 catalog
+  BP-RP=0 entries lack valid BP/RP. PS1 three-band comparison yields 617
+  SATUR/FRACMASKED recovery candidates, 610 within 0.05 mag in all bands.
+  ALLMASK/BAILOUT removes the known APOGEE giants. Input-tier strict anchors:
+  1,802/1,699/1,688 for grz/grzW1/grzW1W2.
+- Split correction: stage1 uses HEALPix NESTED. The nside=8 map assigns all
+  1,609 initially selected cold anchors to train in this particular field;
+  an earlier exploratory RING count was invalid and corrected to the user.
+  Of the 1,802 strict anchors, 82 are in external reference groups. A finer
+  cell split will be frozen before fitting.
+- Files changed: pilot/audit plot fixes, quantile-forest implementation,
+  cold-baseline runner, targeted tests and current plan. Commands: full
+  32-test suite passed; NERSC reference/PS1/FITS counts inspected on compute.
+- Next: sync code; run the cold baseline under a fresh CPU allocation,
+  inspect metrics and figures, document the audit and model scope.
+
 - Task: user approved continuation using Pro's latest review. Read the complete
   review (9,396 characters) from the referenced conversation.
 - Current step: same-field photometry/coverage audit before a cold-dwarf baseline.

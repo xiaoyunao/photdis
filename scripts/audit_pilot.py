@@ -148,7 +148,9 @@ def plots(ref,raw,phot,gaia,col,fail,ps1,target,summary):
     axes[2].set_xticks([0,1],["FRACMASKED pass","FRACMASKED fail"])
     axes[2].set_yticks([0,1],["No SATUR","SATUR"])
     for y in range(2):
-        for x in range(2): axes[2].text(x,y,f"{matrix[y,x]:,}",ha="center",va="center",fontsize=15)
+        for x in range(2):
+            axes[2].text(x,y,f"{matrix[y,x]:,}",ha="center",va="center",fontsize=15,
+                         color="white" if matrix[y,x]>matrix.max()*.55 else "black")
     axes[2].set_title("All 6,942 reference sources")
     fig.suptitle("Joint optical-quality failures in the same 10-degree field")
     fig.tight_layout();save(fig,"01_joint_failures.png")

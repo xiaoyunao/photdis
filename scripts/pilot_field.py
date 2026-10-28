@@ -19,6 +19,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from photdis.gaia import join_gaia, derive_gaia_labels
+from photdis.audit import checked_gaia_color
 from photdis.photometry import derive_photometry
 from photdis.stage1 import (CORE_COLUMNS, PHOT_COLUMNS, galactic, legacy_ids,
                            load_spectroscopy, match_spectroscopy, spec_columns,
@@ -88,7 +89,7 @@ def make_plots(raw, phot, gaia, labels, spec, masks, flows, summary, output):
     path = output / "01_selection_counts.png"
     fig.savefig(path, dpi=170); plt.close(fig); files.append(str(path))
 
-    bp_rp = gaia["bp_rp"]
+    bp_rp = checked_gaia_color(gaia)["bp_rp_checked"]
     mg = np.full(len(raw), np.nan)
     ok = labels["p_corr"] > 0
     mg[ok] = gaia["phot_g_mean_mag"][ok]-10+5*np.log10(labels["p_corr"][ok])
@@ -181,6 +182,11 @@ def main():
         table=fitsio.read(str(out/"field_diagnostics.fits"),ext=1)
         columns={name:table[name] for name in table.dtype.names}
         gaia={name[5:]:value for name,value in columns.items() if name.startswith("gaia_")}
+        if "phot_bp_n_obs" not in gaia:
+            fresh=join_gaia(columns["source_id"],cfg["gaia_root"])
+            for name in ("phot_bp_n_obs","phot_rp_n_obs","phot_bp_mean_flux",
+                         "phot_rp_mean_flux","phot_bp_mean_flux_error","phot_rp_mean_flux_error"):
+                gaia[name]=fresh[name]
         summary["figures"]=make_plots(table,columns,gaia,columns,columns,columns,
             [summary["optical_cutflow"],summary["anchor_cutflow"]],summary,Path(task["figure_dir"]))
         summary["plot_script_sha256"]=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
