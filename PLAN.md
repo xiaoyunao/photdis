@@ -2,12 +2,13 @@
 
 ## Current Objective
 
-Complete the 2026-10-28 Pro review. Correct the support-neighbor and PS1
-interpretation errors, preserve the frozen c3637cb model and d6371ce outputs,
-then evaluate a same-star five-band noise experiment and a conditional
-center-plus-interval calibration. Use newly preregistered final fields for the
-last evaluation. Expand spectral type diagnostics without interpreting
-conditional label rates as candidate purity.
+Complete the latest Pro review of the cold-v4 component by measuring the gap
+between strict Gaia validation stars and actual photometric candidates. Keep
+the v4 forests, route, three final-field results and prior baselines frozen.
+Audit A/B/C, image cleanliness, errors and support; update DESI type and
+metal-poor diagnostics; then compare simple model-routing policies, calibrate
+deep-noise intervals with independent source/sky splits, and test real stellar
+populations with reference systems and weak-parallax forward checks.
 
 ## Milestones
 
@@ -84,6 +85,33 @@ conditional label rates as candidate purity.
     92.5%/91.8%/92.4%/91.0%; the deepest bin's strict-quality fraction is
     32.3%, and W2 is selected in only 51/1,784 draws. The observed failure
     is a depth-calibration limit, not a reason to change frozen final tests.
+18. In progress: without changing forests, report A/B/C × clean/strict/other
+    image-quality and error/support strata for calibration, new final Gaia
+    fields, shared noise and real photometric candidates. Include per-tier
+    bias/NMAD/68%/95% coverage/tail misses/width, sky- or source-cluster
+    uncertainty, and complete-route intersection with grz_clean.
+19. Pending: apply the complete v4 route to deduplicated, quality-qualified
+    Gaia/DESI labels in the new fields. Measure dwarf recall and giant/nonstar
+    leakage by tier, clean state, fallback, color, magnitude, errors and sky;
+    separately audit calibrated-domain metal-poor labels. Defer type
+    probabilities until label selection and class priors are supportable.
+20. Pending: correct the simulated flux IVAR when template noise exceeds
+    target noise, and correct the report's description of borrowed masks.
+    Compare only a few predeclared routing policies on identical five-band
+    development observations, considering precision, coverage, width and
+    acceptance. Freeze the selected policy before new calibration/testing.
+21. Pending: assemble high-S/N templates and WISE-unconditioned target-noise
+    environments from several fields; isolate fit/development, calibration
+    and final-test identities and sky blocks. Calibrate final distance-modulus
+    intervals by chosen tier and measurable noise/support using independent
+    sources, and assess deep coverage and clean acceptance on unseen sources.
+22. Pending: use isolated wide-binary/cluster reference systems for color- and
+    brightness-dependent distance checks, then assess weak/negative Gaia
+    parallaxes with a parallax-space forward model and documented selection.
+    Examine metal-poor, binary, extinction and field dependence of bias.
+23. Pending: publish the bounded application-range report, selected figures,
+    small manifests and validation; update README/WORKLOG/PLAN, commit and
+    sync local, public GitHub and NERSC. Keep catalogs/models on NERSC.
 
 ## Scope
 
@@ -95,14 +123,10 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Cold-v4 expanded blue/red strict anchors and calibrated the complete route;
-three newly registered final fields now have 94.7%–96.0% overall 95% final
-distance-modulus coverage for strict Gaia cold dwarfs. Per-color/brightness
-group center biases remain up to 0.153 mag, and one group's coverage is 92.8%.
-The shared-noise depth job now shows final-modulus 95% coverage below nominal
-in every r=18–22 bin, reaching 91.0% at r=21–22. Do not assign 95% coverage
-to deep candidates from this calibration. A future depth-calibration study
-needs independent deep distance truth or fresh independent template fields,
-then a new held-out check of the complete route. Build a Gaia/DESI label
-sample with a known selection function before fitting type probabilities.
+First quantify the calibration/application mismatch: calibration and strict
+final stars are 92%–94% C, while actual candidates are 57% A, 19% B, 24% C.
+Calculate complete-route ∩ grz_clean and conditional performance in existing
+fields before choosing new cuts. Depth simulations currently have 91%–93%
+95%-interval coverage; the deepest bin is clearly below nominal. Preserve
+that finding while planning an independent source/sky calibration experiment.
 The v2 center correction remains rejected.

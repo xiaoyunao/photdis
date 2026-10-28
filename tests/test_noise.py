@@ -36,6 +36,25 @@ class NoiseTests(unittest.TestCase):
         self.assertEqual(diagnostic["coverage_68"], 1)
         self.assertEqual(diagnostic["coverage_95"], 1)
 
+    def test_template_noise_sets_effective_inverse_variance(self):
+        names = ["maskbits", *[name.lower() for name in PHOT_COLUMNS]]
+        dtype = [(name, "f8") for name in names] + [("r0", "f8")]
+        source = np.zeros(1, dtype=dtype)
+        target = np.zeros(1, dtype=dtype)
+        source["r0"] = 17.5
+        target["flux_r"] = 100
+        for band in ("g", "r", "z", "w1", "w2"):
+            source[f"flux_{band}"] = 100
+            source[f"flux_ivar_{band}"] = 1
+            source[f"mw_transmission_{band}"] = 1
+            target[f"flux_ivar_{band}"] = 100
+            target[f"mw_transmission_{band}"] = 1
+            target[f"nobs_{band}"] = 1
+        raw, _, ratio = simulate_shared_flux(source, target, np.random.default_rng(3))
+        self.assertAlmostEqual(ratio[0, 0], 10)
+        self.assertAlmostEqual(raw["FLUX_IVAR_G"][0], 1)
+        self.assertAlmostEqual(raw["FLUX_G"][0], 100)
+
 
 if __name__ == "__main__":
     unittest.main()

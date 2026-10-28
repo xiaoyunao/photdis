@@ -2,6 +2,20 @@
 
 ## 2026-10-28
 
+- Latest Pro review restart: fetched local/GitHub/NERSC Git history and confirmed
+  clean identical `4a695af`. Updated PLAN for application-range audit, v4
+  spectral labels, routing and independent deep calibration. Fixed
+  `simulate_shared_flux` to record the effective inverse variance when the
+  scaled template is noisier than the target; added a focused regression test.
+  Corrected the cold-v4 report's mask-source description while preserving its
+  published old-noise result. Added `scripts/cold_v4_application_audit.py` to
+  score the unchanged forest/route by tier, optical clean/precision state,
+  used-band error and support position in calibration and three new final
+  fields. Its additional Gaia cold diagnostic uses Gaia absolute G, avoiding
+  a Legacy-g-based dwarf decision on nonclean photometry. Parse, focused tests
+  and import pass. Next: commit/sync this diagnostic, run on NERSC CPU,
+  inspect application-candidate/strict-Gaia tier mismatch and clean fraction.
+
 - Cold-v4 shared-noise job 60436242 completed on NERSC CPU in 16m02s with
   exit 0. Copied small `manifests/cold_v4_noise.json` and figure; verified
   prepared SHA, 223 templates × 8 repeats, tier-count identities, coverage

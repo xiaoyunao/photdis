@@ -15,7 +15,8 @@ def simulate_shared_flux(anchor, target, rng):
 
     The same output row is used for A/B/C. The measured anchor flux contains
     template noise; additional Gaussian noise is reduced in quadrature where
-    possible so the total variance matches the target measurement variance.
+    possible. The output IVAR describes the larger of the target variance
+    and the scaled template variance, including impossible-to-denoise pairs.
     """
     if len(anchor) != len(target):
         raise ValueError("Anchor and target rows must be paired")
@@ -47,11 +48,15 @@ def simulate_shared_flux(anchor, target, rng):
         valid = (np.isfinite(source_flux) & np.isfinite(source_sigma) &
                  np.isfinite(target_sigma) & (target_sigma > 0))
         observed = np.zeros(len(anchor), dtype=float)
-        extra_variance = np.maximum(target_sigma[valid] ** 2 - source_sigma[valid] ** 2, 0)
+        effective_variance = np.maximum(target_sigma[valid] ** 2,
+                                        source_sigma[valid] ** 2)
+        extra_variance = effective_variance - source_sigma[valid] ** 2
         observed[valid] = (source_flux[valid] + rng.normal(size=valid.sum()) *
                            np.sqrt(extra_variance))
         raw[f"FLUX_{band}"] = observed
-        raw[f"FLUX_IVAR_{band}"] = np.where(valid, target_ivar, 0)
+        effective_ivar = np.zeros(len(anchor), dtype=float)
+        effective_ivar[valid] = 1 / effective_variance
+        raw[f"FLUX_IVAR_{band}"] = effective_ivar
     return raw, shift_mag, template_to_target_ratio
 
 
