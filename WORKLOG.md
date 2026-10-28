@@ -2,6 +2,16 @@
 
 ## 2026-10-28
 
+- Registered three preexisting but cold-v4-independent fields for deep-noise
+  policy development (RA50–60), source-independent calibration (RA35–45),
+  and final evaluation (RA170–180) before reading their v4 simulation
+  residuals. Added a frozen-support policy selector for available, optical
+  clean, strict quality and WISE S/N 5/10/20, plus a same-draw development
+  script using a WISE-unselected grz noise mother. Local parse and focused
+  six-test suite pass. Next: execute policy comparison on allocated CPU,
+  freeze the decision using development evidence only, and calibrate/test
+  with the two separate fields.
+
 - DESI type audit job 60440796 completed on NERSC CPU (22 s, exit 0).
   Published manifest and report after verifying frozen preparation SHA,
   source-deduplication and class/tier count identities. The RA0–10 field has

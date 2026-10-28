@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "model": "frozen cold_v4 prepared_sha256 in manifests/cold_v4_prepared.json",
+  "status": "registered_before_v4_deep_simulation_residuals_for_these_fields",
+  "prior_use": "These fields were final tests for older methods. They are not in the cold_v4 forest fit or route-CQR calibration. This registration is for cold_v4 deep-noise development/calibration/final evaluation only.",
+  "source_template_rule": "Existing strict Gaia cold dwarf anchor with high-quality grzW1W2 photometry; exclude externally identified members and require unique Gaia source. No role shares source identity or sky area.",
+  "target_environment_rule": "All grz_base PSF rows within the role's field and target observed r bin, without WISE detection or quality preselection; target masks and formal variances are borrowed from the selected row.",
+  "policy_development": {
+    "field_config": "configs/field_final_ra050_060.json",
+    "role": "compare six routing policies and choose one before calibration"
+  },
+  "interval_calibration": {
+    "field_config": "configs/field_supp_ra035_045.json",
+    "role": "one simulated observation per source and depth for split-CQR"
+  },
+  "independent_final": {
+    "field_config": "configs/field_supp_ra170_180.json",
+    "role": "score frozen policy and calibration on distinct source/sky identities"
+  },
+  "depth_bins_r": [[18, 19], [19, 20], [20, 21], [21, 22]],
+  "policies": ["available", "clean", "strict", "clean_wise_snr_5", "clean_wise_snr_10", "clean_wise_snr_20"],
+  "seed": 20261029,
+  "note": "The original 223-source cold_v4 shared-noise experiment remains a frozen, separate test; it is not used to select a routing policy or calibrate the new intervals."
+}
