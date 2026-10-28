@@ -1,0 +1,1928 @@
+{
+  "field_bounds_deg": [
+    0,
+    -10,
+    10,
+    0
+  ],
+  "code_commit": "0232920b4bc41e0e46ab9bbf769a29fc638d857b",
+  "script_sha256": "556fa39bab956ad6d285107aebcd35fa06d6c29c891b276484907619ba59f3a7",
+  "compute_host": "nid200059",
+  "job_id": "60428233",
+  "reference_count": 6942,
+  "strict_anchor_count": 1802,
+  "raw_sources": [
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-000m010-005m005.fits",
+      "rows_read": 941,
+      "bytes": 1427958720
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-000m005-005p000.fits",
+      "rows_read": 1547,
+      "bytes": 1810889280
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m010-010m005.fits",
+      "rows_read": 133,
+      "bytes": 1440118080
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m005-010p000.fits",
+      "rows_read": 4321,
+      "bytes": 1904895360
+    }
+  ],
+  "canonical_rule": "Gaia source ID; prefer strict optical pass, then measured grz, then smallest summed grz error, then Legacy ID",
+  "satur_fracmasked_matrix": [
+    [
+      1844,
+      16
+    ],
+    [
+      469,
+      4613
+    ]
+  ],
+  "groups": [
+    {
+      "index": 0,
+      "name": "strict optical pass",
+      "n": 1804,
+      "valid_gaia_color": 1803,
+      "G": {
+        "n": 1804,
+        "median": 17.077037811279297,
+        "nmad": 0.7134345173835754,
+        "p16": 16.336997985839844,
+        "p84": 17.759654998779297,
+        "abs_gt_0p1": 1804,
+        "abs_gt_0p3": 1804
+      },
+      "M_G": {
+        "n": 1804,
+        "median": 9.20266056060791,
+        "nmad": 1.8049070835113525,
+        "p16": 7.223148345947266,
+        "p84": 10.764474868774414,
+        "abs_gt_0p1": 1804,
+        "abs_gt_0p3": 1804
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    },
+    {
+      "index": 1,
+      "name": "SATUR only",
+      "n": 462,
+      "valid_gaia_color": 461,
+      "G": {
+        "n": 462,
+        "median": 16.023494720458984,
+        "nmad": 0.5420627593994141,
+        "p16": 15.566143035888672,
+        "p84": 16.635955810546875,
+        "abs_gt_0p1": 462,
+        "abs_gt_0p3": 462
+      },
+      "M_G": {
+        "n": 462,
+        "median": 7.025604248046875,
+        "nmad": 1.8140935897827148,
+        "p16": 5.668271064758301,
+        "p84": 9.131163597106934,
+        "abs_gt_0p1": 462,
+        "abs_gt_0p3": 462
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    },
+    {
+      "index": 2,
+      "name": "FRACMASKED only",
+      "n": 16,
+      "valid_gaia_color": 16,
+      "G": {
+        "n": 16,
+        "median": 17.268999099731445,
+        "nmad": 0.7014784216880798,
+        "p16": 16.689701080322266,
+        "p84": 17.943815231323242,
+        "abs_gt_0p1": 16,
+        "abs_gt_0p3": 16
+      },
+      "M_G": {
+        "n": 16,
+        "median": 11.44454574584961,
+        "nmad": 1.5549402236938477,
+        "p16": 9.950542449951172,
+        "p84": 12.848783493041992,
+        "abs_gt_0p1": 16,
+        "abs_gt_0p3": 16
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    },
+    {
+      "index": 3,
+      "name": "SATUR + FRACMASKED",
+      "n": 1492,
+      "valid_gaia_color": 1492,
+      "G": {
+        "n": 1492,
+        "median": 15.38308334350586,
+        "nmad": 0.5687581896781921,
+        "p16": 14.892539024353027,
+        "p84": 16.06450843811035,
+        "abs_gt_0p1": 1492,
+        "abs_gt_0p3": 1492
+      },
+      "M_G": {
+        "n": 1492,
+        "median": 6.3214616775512695,
+        "nmad": 1.7978686094284058,
+        "p16": 4.8446125984191895,
+        "p84": 8.489233016967773,
+        "abs_gt_0p1": 1492,
+        "abs_gt_0p3": 1492
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    },
+    {
+      "index": 4,
+      "name": "ALLMASK / BAILOUT",
+      "n": 3057,
+      "valid_gaia_color": 3050,
+      "G": {
+        "n": 3057,
+        "median": 13.915521621704102,
+        "nmad": 1.105648159980774,
+        "p16": 12.427440643310547,
+        "p84": 14.797170639038086,
+        "abs_gt_0p1": 3057,
+        "abs_gt_0p3": 3057
+      },
+      "M_G": {
+        "n": 3057,
+        "median": 4.863481521606445,
+        "nmad": 1.4739340543746948,
+        "p16": 3.633218288421631,
+        "p84": 6.792757987976074,
+        "abs_gt_0p1": 3057,
+        "abs_gt_0p3": 3052
+      },
+      "desi_giants": 0,
+      "apogee_giants": 28
+    },
+    {
+      "index": 5,
+      "name": "no valid measured grz",
+      "n": 31,
+      "valid_gaia_color": 31,
+      "G": {
+        "n": 31,
+        "median": 9.186281204223633,
+        "nmad": 1.2059924602508545,
+        "p16": 8.062994956970215,
+        "p84": 11.560529708862305,
+        "abs_gt_0p1": 31,
+        "abs_gt_0p3": 31
+      },
+      "M_G": {
+        "n": 31,
+        "median": 1.4540305137634277,
+        "nmad": 2.249861717224121,
+        "p16": -0.17331571877002716,
+        "p84": 5.035515785217285,
+        "abs_gt_0p1": 30,
+        "abs_gt_0p3": 30
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    },
+    {
+      "index": 6,
+      "name": "other optical cut",
+      "n": 80,
+      "valid_gaia_color": 67,
+      "G": {
+        "n": 80,
+        "median": 16.35165786743164,
+        "nmad": 1.0892388820648193,
+        "p16": 15.312539100646973,
+        "p84": 17.485599517822266,
+        "abs_gt_0p1": 80,
+        "abs_gt_0p3": 80
+      },
+      "M_G": {
+        "n": 80,
+        "median": 8.127089500427246,
+        "nmad": 2.3565585613250732,
+        "p16": 5.87310791015625,
+        "p84": 10.51876449584961,
+        "abs_gt_0p1": 80,
+        "abs_gt_0p3": 80
+      },
+      "desi_giants": 0,
+      "apogee_giants": 0
+    }
+  ],
+  "per_band": {
+    "g": {
+      "satur": 2245,
+      "allmask": 1003,
+      "fracmasked_fail": 1929,
+      "invalid_measurement": 12
+    },
+    "r": {
+      "satur": 3884,
+      "allmask": 2321,
+      "fracmasked_fail": 3498,
+      "invalid_measurement": 26
+    },
+    "z": {
+      "satur": 5079,
+      "allmask": 2914,
+      "fracmasked_fail": 4603,
+      "invalid_measurement": 25
+    }
+  },
+  "gaia_color": {
+    "catalog_zero": 22,
+    "zero_missing_bp_rp": 22,
+    "zero_valid_bp_rp": 0,
+    "valid_color": 6920,
+    "precise_color": 6909,
+    "catalog_difference_gt_0p001": 0,
+    "zero_bp_nobs": {
+      "n": 22,
+      "median": 0.0,
+      "nmad": 0.0,
+      "p16": 0.0,
+      "p84": 0.0,
+      "abs_gt_0p1": 0,
+      "abs_gt_0p3": 0
+    },
+    "zero_rp_nobs": {
+      "n": 22,
+      "median": 0.0,
+      "nmad": 0.0,
+      "p16": 0.0,
+      "p84": 0.0,
+      "abs_gt_0p1": 0,
+      "abs_gt_0p3": 0
+    }
+  },
+  "ps1": {
+    "root": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3",
+    "nside": 32,
+    "ordering": "RING",
+    "catalog_rows_in_margin": 280921,
+    "files": [
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05698.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05824.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05825.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05826.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05952.fits",
+        "rows_in_margin": 27
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05953.fits",
+        "rows_in_margin": 34
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05954.fits",
+        "rows_in_margin": 42
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-05955.fits",
+        "rows_in_margin": 28
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06080.fits",
+        "rows_in_margin": 5550
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06081.fits",
+        "rows_in_margin": 5269
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06082.fits",
+        "rows_in_margin": 4998
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06083.fits",
+        "rows_in_margin": 3401
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06207.fits",
+        "rows_in_margin": 20
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06208.fits",
+        "rows_in_margin": 5500
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06209.fits",
+        "rows_in_margin": 9127
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06210.fits",
+        "rows_in_margin": 9198
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06211.fits",
+        "rows_in_margin": 8849
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06212.fits",
+        "rows_in_margin": 151
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06335.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06336.fits",
+        "rows_in_margin": 9384
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06337.fits",
+        "rows_in_margin": 9104
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06338.fits",
+        "rows_in_margin": 8800
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06339.fits",
+        "rows_in_margin": 5860
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06340.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06463.fits",
+        "rows_in_margin": 19
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06464.fits",
+        "rows_in_margin": 5363
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06465.fits",
+        "rows_in_margin": 9384
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06466.fits",
+        "rows_in_margin": 9111
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06467.fits",
+        "rows_in_margin": 8959
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06468.fits",
+        "rows_in_margin": 140
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06591.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06592.fits",
+        "rows_in_margin": 9804
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06593.fits",
+        "rows_in_margin": 9256
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06594.fits",
+        "rows_in_margin": 9009
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06595.fits",
+        "rows_in_margin": 5769
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06596.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06719.fits",
+        "rows_in_margin": 27
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06720.fits",
+        "rows_in_margin": 5652
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06721.fits",
+        "rows_in_margin": 9372
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06722.fits",
+        "rows_in_margin": 9193
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06723.fits",
+        "rows_in_margin": 8781
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06724.fits",
+        "rows_in_margin": 145
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06847.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06848.fits",
+        "rows_in_margin": 9457
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06849.fits",
+        "rows_in_margin": 9076
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06850.fits",
+        "rows_in_margin": 8759
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06851.fits",
+        "rows_in_margin": 5730
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06852.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06975.fits",
+        "rows_in_margin": 26
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06976.fits",
+        "rows_in_margin": 5554
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06977.fits",
+        "rows_in_margin": 9153
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06978.fits",
+        "rows_in_margin": 8950
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06979.fits",
+        "rows_in_margin": 8751
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-06980.fits",
+        "rows_in_margin": 141
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07103.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07104.fits",
+        "rows_in_margin": 7863
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07105.fits",
+        "rows_in_margin": 7324
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07106.fits",
+        "rows_in_margin": 7361
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07107.fits",
+        "rows_in_margin": 4582
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07231.fits",
+        "rows_in_margin": 28
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07232.fits",
+        "rows_in_margin": 576
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07233.fits",
+        "rows_in_margin": 815
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07234.fits",
+        "rows_in_margin": 728
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07235.fits",
+        "rows_in_margin": 721
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07236.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07360.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07361.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07362.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07363.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07489.fits",
+        "rows_in_margin": 0
+      },
+      {
+        "path": "/global/cfs/cdirs/cosmo/work/ps1/cats/chunks-qz-star-v3/ps1-07490.fits",
+        "rows_in_margin": 0
+      }
+    ],
+    "epoch_jyear": {
+      "n": 280921,
+      "median": 2012.3704806779801,
+      "nmad": 0.2715403038953231,
+      "p16": 2012.0978688719497,
+      "p84": 2012.6455659124106,
+      "abs_gt_0p1": 280921,
+      "abs_gt_0p3": 280921
+    },
+    "match_radius_arcsec": 1,
+    "search_radius_arcsec": 5,
+    "quality": "NMAG_OK>=3, 0<STDEV<0.03, 15<median<20 in band and g/i; 0.4<g-i<2.7; unique 1 arcsec propagated match"
+  },
+  "layer_counts": {
+    "grz": {
+      "target": 312975,
+      "strict_anchors_usable_ir": 1802,
+      "strict_anchors_precise_ir": 1802
+    },
+    "grzW1": {
+      "target": 73044,
+      "strict_anchors_usable_ir": 1699,
+      "strict_anchors_precise_ir": 1692
+    },
+    "grzW1W2": {
+      "target": 44806,
+      "strict_anchors_usable_ir": 1688,
+      "strict_anchors_precise_ir": 1685
+    }
+  },
+  "photometry_residuals": {
+    "g": {
+      "strict optical pass": {
+        "n": 914,
+        "median": 0.001745383882635565,
+        "nmad": 0.012827740873003389,
+        "p16": -0.010754250329372182,
+        "p84": 0.015684367519473448,
+        "abs_gt_0p1": 1,
+        "abs_gt_0p3": 0
+      },
+      "SATUR only": {
+        "n": 314,
+        "median": -0.000168766192413905,
+        "nmad": 0.011240692859417905,
+        "p16": -0.010951721525384529,
+        "p84": 0.01201611497854387,
+        "abs_gt_0p1": 1,
+        "abs_gt_0p3": 0
+      },
+      "FRACMASKED only": {
+        "n": 5,
+        "median": 0.0016633661781035869,
+        "nmad": 0.021752517176790952,
+        "p16": -0.006617737646828061,
+        "p84": 0.017649510941418357,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "SATUR + FRACMASKED": {
+        "n": 614,
+        "median": 0.0003808397102282868,
+        "nmad": 0.01018671553931123,
+        "p16": -0.009950198283438851,
+        "p84": 0.010851835148554295,
+        "abs_gt_0p1": 1,
+        "abs_gt_0p3": 0
+      },
+      "ALLMASK / BAILOUT": {
+        "n": 73,
+        "median": -0.0010994446248737688,
+        "nmad": 0.009713790465692365,
+        "p16": -0.011364808323805136,
+        "p84": 0.0124809341784389,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "no valid measured grz": {
+        "n": 2,
+        "median": -0.0044493616510212775,
+        "nmad": 0.0031795871438324848,
+        "p16": -0.005907691111297879,
+        "p84": -0.002991032190744676,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "other optical cut": {
+        "n": 30,
+        "median": -0.004826347777846962,
+        "nmad": 0.012031550576817181,
+        "p16": -0.015314700722532493,
+        "p84": 0.01710024883961651,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "by_reference_mag": [
+        {
+          "lo": 15,
+          "hi": 16,
+          "n": 195,
+          "groups": {
+            "strict optical pass": {
+              "n": 11,
+              "median": 8.371118867422922e-05,
+              "nmad": 0.005148456674262243,
+              "p16": -0.005917747786124394,
+              "p84": 0.0037105963799390906,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 31,
+              "median": 0.0033099773274685163,
+              "nmad": 0.010183068624731137,
+              "p16": -0.00837489318605833,
+              "p84": 0.00860385981874252,
+              "abs_gt_0p1": 1,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 146,
+              "median": -0.0023876442516117535,
+              "nmad": 0.009214082358380168,
+              "p16": -0.011028903771932618,
+              "p84": 0.006169887908723126,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 4,
+              "median": 0.012674598057347275,
+              "nmad": 0.0006278078755679028,
+              "p16": -0.008306333832581388,
+              "p84": 0.013098437299643209,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 3,
+              "median": -0.01719220526764431,
+              "nmad": 0.0014103790847047573,
+              "p16": -0.024675869585952127,
+              "p84": -0.01654532965884947,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 16,
+          "hi": 17,
+          "n": 524,
+          "groups": {
+            "strict optical pass": {
+              "n": 137,
+              "median": -0.0012934729120246402,
+              "nmad": 0.009976060686518223,
+              "p16": -0.012666731357544876,
+              "p84": 0.008480278836593271,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 134,
+              "median": -0.0015924442901020797,
+              "nmad": 0.010291233319900813,
+              "p16": -0.011996099634557281,
+              "p84": 0.008793796024296795,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 220,
+              "median": 0.0004660388426813711,
+              "nmad": 0.00867662872387607,
+              "p16": -0.008311455385958198,
+              "p84": 0.00953610564320655,
+              "abs_gt_0p1": 1,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 27,
+              "median": -0.004359479503481367,
+              "nmad": 0.006561959213558582,
+              "p16": -0.012381948602107683,
+              "p84": 0.0006652243681963909,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 6,
+              "median": -0.00885826562902281,
+              "nmad": 0.0038664416725144824,
+              "p16": -0.013431965844237935,
+              "p84": -0.004933255655327427,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 17,
+          "hi": 18,
+          "n": 587,
+          "groups": {
+            "strict optical pass": {
+              "n": 257,
+              "median": 0.001549680908247808,
+              "nmad": 0.0095611641289118,
+              "p16": -0.007552421503209245,
+              "p84": 0.012180454597268664,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 86,
+              "median": 0.0009763667307538526,
+              "nmad": 0.010461184686586874,
+              "p16": -0.009644358336480963,
+              "p84": 0.01548643250981242,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 192,
+              "median": 0.0012150100177521495,
+              "nmad": 0.01221560770141175,
+              "p16": -0.01020130040487018,
+              "p84": 0.01273915858242816,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 38,
+              "median": 0.0016495632350892464,
+              "nmad": 0.011173613061763578,
+              "p16": -0.006570348577910892,
+              "p84": 0.012863499843305131,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 14,
+              "median": -0.0021401573488155634,
+              "nmad": 0.01254160032447463,
+              "p16": -0.01325479607824846,
+              "p84": 0.013232715535646662,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 18,
+          "hi": 19,
+          "n": 481,
+          "groups": {
+            "strict optical pass": {
+              "n": 350,
+              "median": 0.002161002647577348,
+              "nmad": 0.015389535359730123,
+              "p16": -0.012144605677314641,
+              "p84": 0.017312796257080966,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 63,
+              "median": -0.00029984153560391746,
+              "nmad": 0.019266824881330934,
+              "p16": -0.013314064485417276,
+              "p84": 0.02293779362320236,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 2,
+              "median": -0.008015718148177697,
+              "nmad": 0.007402306754646322,
+              "p16": -0.011410813651455385,
+              "p84": -0.00462062264490001,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 56,
+              "median": 0.0022223672133065975,
+              "nmad": 0.014578720743605165,
+              "p16": -0.012950515415217722,
+              "p84": 0.01961072139198663,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 4,
+              "median": 0.0006435707246410516,
+              "nmad": 0.015258512878757487,
+              "p16": -0.009956727865694574,
+              "p84": 0.015556527754242922,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 2,
+              "median": -0.0044493616510212775,
+              "nmad": 0.0031795871438324848,
+              "p16": -0.005907691111297879,
+              "p84": -0.002991032190744676,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "other optical cut": {
+              "n": 4,
+              "median": -0.005836106578254174,
+              "nmad": 0.002356540489357245,
+              "p16": -0.007473520928120791,
+              "p84": 0.013979372926898322,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 19,
+          "hi": 20,
+          "n": 165,
+          "groups": {
+            "strict optical pass": {
+              "n": 159,
+              "median": 0.008298910257831693,
+              "nmad": 0.017613635111399423,
+              "p16": -0.011726131401194663,
+              "p84": 0.02683616053349766,
+              "abs_gt_0p1": 1,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 3,
+              "median": 0.016398837499718155,
+              "nmad": 0.00515069012406866,
+              "p16": 0.006378717001020249,
+              "p84": 0.01876122066737409,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 3,
+              "median": 0.026394490159759698,
+              "nmad": 0.0003466577240155999,
+              "p16": 0.02551549794598671,
+              "p84": 0.0265534860132135,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        }
+      ]
+    },
+    "r": {
+      "strict optical pass": {
+        "n": 777,
+        "median": 0.001629007366922508,
+        "nmad": 0.009389722616702142,
+        "p16": -0.008395280313420414,
+        "p84": 0.010862762200952076,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "SATUR only": {
+        "n": 273,
+        "median": 0.0015377213306315696,
+        "nmad": 0.009192300448744625,
+        "p16": -0.007820776573197746,
+        "p84": 0.009289000277498828,
+        "abs_gt_0p1": 1,
+        "abs_gt_0p3": 0
+      },
+      "FRACMASKED only": {
+        "n": 5,
+        "median": -0.011147667395757566,
+        "nmad": 0.00835091842977755,
+        "p16": -0.013895685836842659,
+        "p84": 0.0030536152714935824,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "SATUR + FRACMASKED": {
+        "n": 539,
+        "median": 0.002676697652498561,
+        "nmad": 0.009076949076720143,
+        "p16": -0.007054432277904539,
+        "p84": 0.010761887174622444,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "ALLMASK / BAILOUT": {
+        "n": 62,
+        "median": 0.0012262188984228928,
+        "nmad": 0.009333578738294842,
+        "p16": -0.010288596926332617,
+        "p84": 0.009354468566930478,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "no valid measured grz": {
+        "n": 0
+      },
+      "other optical cut": {
+        "n": 28,
+        "median": 0.0019150154432807653,
+        "nmad": 0.006324443918480093,
+        "p16": -0.006156961930207173,
+        "p84": 0.01055638685576156,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "by_reference_mag": [
+        {
+          "lo": 15,
+          "hi": 16,
+          "n": 714,
+          "groups": {
+            "strict optical pass": {
+              "n": 124,
+              "median": 0.004495627827322934,
+              "nmad": 0.006767748080146721,
+              "p16": -0.001534059918048456,
+              "p84": 0.011401823036563811,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 157,
+              "median": 0.002332083906136262,
+              "nmad": 0.006708997370669532,
+              "p16": -0.00394178755373801,
+              "p84": 0.008929163570317939,
+              "abs_gt_0p1": 1,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 383,
+              "median": 0.0039076519546092925,
+              "nmad": 0.008086893570144532,
+              "p16": -0.004171194026560627,
+              "p84": 0.011459871156257151,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 37,
+              "median": 0.002861569579351908,
+              "nmad": 0.008057422837890581,
+              "p16": -0.003190752100698333,
+              "p84": 0.009958931945902093,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 13,
+              "median": 0.006173658610983068,
+              "nmad": 0.0068623832383626375,
+              "p16": -0.0021372253402530106,
+              "p84": 0.013303629740277927,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 16,
+          "hi": 17,
+          "n": 608,
+          "groups": {
+            "strict optical pass": {
+              "n": 342,
+              "median": 0.0029793046832633507,
+              "nmad": 0.007779106090149779,
+              "p16": -0.005155211005587717,
+              "p84": 0.011602620760323533,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 87,
+              "median": 0.0003734171331970515,
+              "nmad": 0.011246894147340059,
+              "p16": -0.010022860329546576,
+              "p84": 0.0103054007842141,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 144,
+              "median": -0.0026669309614426595,
+              "nmad": 0.00971681654493036,
+              "p16": -0.012011620548385907,
+              "p84": 0.008964307238505852,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 25,
+              "median": -0.004658829496520411,
+              "nmad": 0.011688244412144368,
+              "p16": -0.013928271114157412,
+              "p84": 0.007927524650570917,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 10,
+              "median": -0.00011427452751000544,
+              "nmad": 0.005080628565334683,
+              "p16": -0.01227998562311413,
+              "p84": 0.0047542246962137815,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 17,
+          "hi": 18,
+          "n": 324,
+          "groups": {
+            "strict optical pass": {
+              "n": 274,
+              "median": -0.0014431816174660383,
+              "nmad": 0.01047245374707961,
+              "p16": -0.012278089677974436,
+              "p84": 0.008421349126489728,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 29,
+              "median": -0.006542626430878329,
+              "nmad": 0.014908144847725409,
+              "p16": -0.0202466081373494,
+              "p84": 0.009590212014448837,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 4,
+              "median": -0.005955525035300724,
+              "nmad": 0.008532152690201472,
+              "p16": -0.011732891814786086,
+              "p84": 0.004750058803199124,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 12,
+              "median": -0.003631830149601001,
+              "nmad": 0.01317152215199858,
+              "p16": -0.018609024162439168,
+              "p84": 0.0050459136146618275,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 5,
+              "median": -0.0014600882998827558,
+              "nmad": 0.007252640504906522,
+              "p16": -0.0249415548633614,
+              "p84": 0.0011457531277713423,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 18,
+          "hi": 19,
+          "n": 38,
+          "groups": {
+            "strict optical pass": {
+              "n": 37,
+              "median": -0.005423215995264741,
+              "nmad": 0.013280416942970665,
+              "p16": -0.01917222499964197,
+              "p84": 0.00611317887292685,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 1,
+              "median": -0.01678028470978532,
+              "nmad": 0.0,
+              "p16": -0.01678028470978532,
+              "p84": -0.01678028470978532,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 0
+            }
+          }
+        },
+        {
+          "lo": 19,
+          "hi": 20,
+          "n": 0,
+          "groups": {
+            "strict optical pass": {
+              "n": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 0
+            }
+          }
+        }
+      ]
+    },
+    "z": {
+      "strict optical pass": {
+        "n": 854,
+        "median": 8.249674675298024e-05,
+        "nmad": 0.008630571850129167,
+        "p16": -0.00815139185275335,
+        "p84": 0.008279582446042539,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "SATUR only": {
+        "n": 295,
+        "median": 0.002388848918080555,
+        "nmad": 0.008739043887985604,
+        "p16": -0.005439356243132849,
+        "p84": 0.010923501780566836,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "FRACMASKED only": {
+        "n": 4,
+        "median": 0.0004504097342250546,
+        "nmad": 0.0068355403072727595,
+        "p16": -0.004516161439632427,
+        "p84": 0.005229711151547463,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "SATUR + FRACMASKED": {
+        "n": 412,
+        "median": 0.0027170230276984952,
+        "nmad": 0.009480952161483867,
+        "p16": -0.006651497984514236,
+        "p84": 0.013481349740536362,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "ALLMASK / BAILOUT": {
+        "n": 9,
+        "median": 0.016387050134728298,
+        "nmad": 0.027864060040935813,
+        "p16": -0.003722914931121508,
+        "p84": 0.05354671755597301,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "no valid measured grz": {
+        "n": 1,
+        "median": 0.011473167045892296,
+        "nmad": 0.0,
+        "p16": 0.011473167045892296,
+        "p84": 0.011473167045892296,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "other optical cut": {
+        "n": 25,
+        "median": 0.0016238494417297744,
+        "nmad": 0.007284412619272595,
+        "p16": -0.010689523421427155,
+        "p84": 0.0075488131744842245,
+        "abs_gt_0p1": 0,
+        "abs_gt_0p3": 0
+      },
+      "by_reference_mag": [
+        {
+          "lo": 15,
+          "hi": 16,
+          "n": 1346,
+          "groups": {
+            "strict optical pass": {
+              "n": 665,
+              "median": 0.0006032908747872767,
+              "nmad": 0.00833614811111368,
+              "p16": -0.007388620688245737,
+              "p84": 0.008558557655344074,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 293,
+              "median": 0.002390256962623738,
+              "nmad": 0.008741131454825328,
+              "p16": -0.00538485274842607,
+              "p84": 0.010946473195276595,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "FRACMASKED only": {
+              "n": 3,
+              "median": 5.971706186791437e-05,
+              "nmad": 0.013046533589085396,
+              "p16": -0.005924124055478685,
+              "p84": 0.0063300089935358975,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 358,
+              "median": 0.0027786105657581217,
+              "nmad": 0.00869558361104201,
+              "p16": -0.006433917017480081,
+              "p84": 0.013276127873407473,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 5,
+              "median": 0.016387050134728298,
+              "nmad": 0.03057374638217624,
+              "p16": -0.0030649579077527277,
+              "p84": 0.06092692405342255,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "no valid measured grz": {
+              "n": 1,
+              "median": 0.011473167045892296,
+              "nmad": 0.0,
+              "p16": 0.011473167045892296,
+              "p84": 0.011473167045892296,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "other optical cut": {
+              "n": 21,
+              "median": 0.0016238494417297744,
+              "nmad": 0.007284412619272595,
+              "p16": -0.005912812128319444,
+              "p84": 0.010926908794307626,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 16,
+          "hi": 17,
+          "n": 191,
+          "groups": {
+            "strict optical pass": {
+              "n": 189,
+              "median": -0.0015349550685286317,
+              "nmad": 0.009279864902093616,
+              "p16": -0.010419443809014125,
+              "p84": 0.006752061043306551,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 1,
+              "median": 0.0008411024065821948,
+              "nmad": 0.0,
+              "p16": 0.0008411024065821948,
+              "p84": 0.0008411024065821948,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 1,
+              "median": 0.004610728055286728,
+              "nmad": 0.0,
+              "p16": 0.004610728055286728,
+              "p84": 0.004610728055286728,
+              "abs_gt_0p1": 0,
+              "abs_gt_0p3": 0
+            }
+          }
+        },
+        {
+          "lo": 17,
+          "hi": 18,
+          "n": 0,
+          "groups": {
+            "strict optical pass": {
+              "n": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 0
+            }
+          }
+        },
+        {
+          "lo": 18,
+          "hi": 19,
+          "n": 0,
+          "groups": {
+            "strict optical pass": {
+              "n": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 0
+            }
+          }
+        },
+        {
+          "lo": 19,
+          "hi": 20,
+          "n": 0,
+          "groups": {
+            "strict optical pass": {
+              "n": 0
+            },
+            "SATUR only": {
+              "n": 0
+            },
+            "FRACMASKED only": {
+              "n": 0
+            },
+            "SATUR + FRACMASKED": {
+              "n": 0
+            },
+            "ALLMASK / BAILOUT": {
+              "n": 0
+            },
+            "no valid measured grz": {
+              "n": 0
+            },
+            "other optical cut": {
+              "n": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "strata": {
+    "G": [
+      {
+        "low": 6,
+        "high": 10,
+        "group_counts": [
+          0,
+          0,
+          0,
+          0,
+          53,
+          23,
+          0
+        ]
+      },
+      {
+        "low": 10,
+        "high": 12,
+        "group_counts": [
+          0,
+          0,
+          0,
+          0,
+          275,
+          3,
+          0
+        ]
+      },
+      {
+        "low": 12,
+        "high": 14,
+        "group_counts": [
+          0,
+          0,
+          0,
+          7,
+          1292,
+          3,
+          1
+        ]
+      },
+      {
+        "low": 14,
+        "high": 16,
+        "group_counts": [
+          125,
+          225,
+          1,
+          1215,
+          1406,
+          0,
+          33
+        ]
+      },
+      {
+        "low": 16,
+        "high": 18,
+        "group_counts": [
+          1527,
+          237,
+          12,
+          269,
+          30,
+          2,
+          41
+        ]
+      },
+      {
+        "low": 18,
+        "high": 20,
+        "group_counts": [
+          152,
+          0,
+          3,
+          1,
+          1,
+          0,
+          4
+        ]
+      },
+      {
+        "low": 20,
+        "high": 22,
+        "group_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "BP_RP": [
+      {
+        "low": -0.5,
+        "high": 0.5,
+        "group_counts": [
+          14,
+          0,
+          1,
+          0,
+          15,
+          1,
+          0
+        ]
+      },
+      {
+        "low": 0.5,
+        "high": 1,
+        "group_counts": [
+          43,
+          77,
+          3,
+          492,
+          1744,
+          8,
+          13
+        ]
+      },
+      {
+        "low": 1,
+        "high": 1.5,
+        "group_counts": [
+          255,
+          153,
+          0,
+          469,
+          883,
+          16,
+          12
+        ]
+      },
+      {
+        "low": 1.5,
+        "high": 2,
+        "group_counts": [
+          357,
+          107,
+          0,
+          270,
+          216,
+          2,
+          13
+        ]
+      },
+      {
+        "low": 2,
+        "high": 3,
+        "group_counts": [
+          1057,
+          121,
+          10,
+          247,
+          187,
+          3,
+          25
+        ]
+      },
+      {
+        "low": 3,
+        "high": 4.5,
+        "group_counts": [
+          77,
+          3,
+          2,
+          14,
+          5,
+          1,
+          4
+        ]
+      }
+    ],
+    "M_G": [
+      {
+        "low": -6,
+        "high": 0,
+        "group_counts": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          6,
+          0
+        ]
+      },
+      {
+        "low": 0,
+        "high": 2,
+        "group_counts": [
+          0,
+          0,
+          0,
+          0,
+          125,
+          11,
+          0
+        ]
+      },
+      {
+        "low": 2,
+        "high": 4,
+        "group_counts": [
+          1,
+          0,
+          0,
+          20,
+          668,
+          8,
+          0
+        ]
+      },
+      {
+        "low": 4,
+        "high": 6,
+        "group_counts": [
+          55,
+          122,
+          1,
+          618,
+          1483,
+          4,
+          15
+        ]
+      },
+      {
+        "low": 6,
+        "high": 8,
+        "group_counts": [
+          430,
+          183,
+          0,
+          527,
+          525,
+          0,
+          22
+        ]
+      },
+      {
+        "low": 8,
+        "high": 10,
+        "group_counts": [
+          734,
+          121,
+          2,
+          248,
+          189,
+          1,
+          24
+        ]
+      },
+      {
+        "low": 10,
+        "high": 14,
+        "group_counts": [
+          581,
+          36,
+          11,
+          79,
+          57,
+          1,
+          17
+        ]
+      },
+      {
+        "low": 14,
+        "high": 18,
+        "group_counts": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "recovery_agreement": {
+    "0.03": {
+      "candidate_count": 580,
+      "strict_count": 679
+    },
+    "0.05": {
+      "candidate_count": 610,
+      "strict_count": 720
+    },
+    "0.1": {
+      "candidate_count": 617,
+      "strict_count": 725
+    },
+    "common_reference_candidates": 617,
+    "common_reference_strict": 725
+  },
+  "desi_metallicity": {
+    "quality_in_grz": 1065,
+    "calibrated_in_grz": 772,
+    "quality_in_anchors": 55,
+    "calibrated_in_anchors": 7,
+    "correction": {
+      "n": 772,
+      "median": 0.11966426406061204,
+      "nmad": 0.07588697991889522,
+      "p16": -0.056191463653177585,
+      "p84": 0.16866250023139018,
+      "abs_gt_0p1": 521,
+      "abs_gt_0p3": 9
+    },
+    "bounds": "4200<=Teff<6600;1.8<=logg<5.5; author feh_correct RVS"
+  },
+  "validation": {
+    "group_partition": true,
+    "strict_anchor_ids_unchanged": true,
+    "strict_optical_predicate": true,
+    "gaia_parallax_labels_unchanged": true,
+    "source_files": 4
+  },
+  "color_planes": {
+    "grz": [
+      {
+        "population": "Target points",
+        "n": 312975,
+        "in_view": 312746,
+        "outside_view": 229
+      },
+      {
+        "population": "Fixed strict anchors",
+        "n": 1802,
+        "in_view": 1802,
+        "outside_view": 0
+      },
+      {
+        "population": "Quality DESI stars",
+        "n": 1065,
+        "in_view": 1065,
+        "outside_view": 0
+      },
+      {
+        "population": "DESI QSO / GALAXY",
+        "n": 1269,
+        "in_view": 1269,
+        "outside_view": 0
+      }
+    ],
+    "grzW1": [
+      {
+        "population": "Target points",
+        "n": 73044,
+        "in_view": 72870,
+        "outside_view": 174
+      },
+      {
+        "population": "Fixed strict anchors",
+        "n": 1699,
+        "in_view": 1692,
+        "outside_view": 7
+      },
+      {
+        "population": "Quality DESI stars",
+        "n": 980,
+        "in_view": 976,
+        "outside_view": 4
+      },
+      {
+        "population": "DESI QSO / GALAXY",
+        "n": 1080,
+        "in_view": 1079,
+        "outside_view": 1
+      }
+    ],
+    "grzW1W2": [
+      {
+        "population": "Target points",
+        "n": 44806,
+        "in_view": 44773,
+        "outside_view": 33
+      },
+      {
+        "population": "Fixed strict anchors",
+        "n": 1688,
+        "in_view": 1685,
+        "outside_view": 3
+      },
+      {
+        "population": "Quality DESI stars",
+        "n": 868,
+        "in_view": 866,
+        "outside_view": 2
+      },
+      {
+        "population": "DESI QSO / GALAXY",
+        "n": 1014,
+        "in_view": 1014,
+        "outside_view": 0
+      }
+    ]
+  },
+  "elapsed_seconds": 441.7663953304291
+}
