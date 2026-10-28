@@ -2,6 +2,15 @@
 
 ## 2026-10-28
 
+- Prepared two independent NERSC audits while crossover job 60455711 waits
+  for regular-queue priority. The DESI boundary script records every
+  selected cold giant and optical-box-rejected metal-poor dwarf with quality,
+  color-edge and support-radius evidence; a plot script uses the small
+  manifest. The system v3 script compares old clean and locked WISE20
+  predictions on the same wide-binary pairs and cluster members. Focused
+  object-boundary and matched-pair tests pass. Temporarily held the pending
+  crossover job to synchronize committed scripts safely, then release it.
+
 - Added the registered-field crossover diagnostic using the same 500 Gaia
   source identities as each frozen v2 field. For each template and target
   brightness it pairs RA35–45/RA170–180 grz-base noise environments by
