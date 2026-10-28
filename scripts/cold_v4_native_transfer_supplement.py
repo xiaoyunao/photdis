@@ -21,6 +21,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--registration", default="configs/cold_v4_native_transfer_supplement.json")
     parser.add_argument("--output", default="supplemental_development")
+    parser.add_argument("--field-key", default="supplemental_development_fields")
     args = parser.parse_args()
     require_compute()
     supplement = Path(args.registration)
@@ -39,7 +40,7 @@ def main():
     references = load_reference_catalogs("data/reference")
     fields = [field_result(item["field_config"], references, route, forests,
                            policy, 20261120 + index)
-              for index, item in enumerate(config["supplemental_development_fields"])]
+              for index, item in enumerate(config[args.field_key])]
     result = {"role": args.output, "registration_sha256": sha(supplement),
               "parent_registration_sha256": sha(REGISTRATION),
               "prepared_sha256": sha(PREPARED), "policy_lock_sha256": sha(LOCK),

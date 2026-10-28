@@ -40,6 +40,14 @@ external-reference reservation; its zero cold count is now explained.
 as another high-latitude development field. Build and score it, then inspect
 the two reserved final-field residuals once under the fixed route.
 
+RA230–240 now scores 4,554 cold anchors with median Δμ=+0.042 mag;
+the ≥2 mas subgroup has +0.084 mag, whereas negative-latitude RA60–70
+is close to zero. A positive-versus-negative Galactic latitude hypothesis
+is fixed in `configs/cold_v4_native_transfer_north_final.json` before
+reading the new northern final field. Build RA130–140/Dec25–35, then
+score it and the two original southern final fields once with the same
+frozen route and report all outcomes.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted

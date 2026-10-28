@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- Supplemental development field RA230–240 built in 3m27s (job
+  60459005) and scored in 32 s (60459011) under frozen WISE20. It has
+  7,128 strict anchors, 4,746 cold anchors and 4,554 selected; overall
+  median Δμ +0.0415 mag, NMAD 0.2146, nside64 block-bootstrap95 median
+  [+0.0335,+0.0509]. By corrected parallax, 1–2 mas is −0.0028 mag
+  (1,928) while >=2 mas is +0.0845 (2,606), matching the older positive
+  latitude RA170–180 pattern. RA60–70 at b≈−45° is near zero. Registered
+  one disjoint positive-latitude final field RA130–140/Dec25–35 before
+  reading its source rows; fixed prediction is a more positive native
+  median than two reserved southern finals, especially p>=2 mas. Added
+  configs/runners and updated development report. Next: build northern
+  final field, then score all three fixed final fields once.
+
 - NERSC anchor-cutflow job 60458837 completed in 19 s. The supplemental
   RA180–190 field has 6,815 strict anchors, 5,401 with Gaia BP-RP in the
   cold range and 6,744 with Legacy M_g>5; all 6,815 fail the frozen

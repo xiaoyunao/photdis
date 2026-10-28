@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-29",
+  "status": "frozen_before_north_final_field_source_rows_or_residuals",
+  "parent_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "development_evidence": "RA60-70 (Galactic b about -45 degrees) native median -0.006 mag; RA230-240 (b about +53 degrees) native median +0.042 mag; original RA35-45 and RA170-180 show a similar south/north difference",
+  "fixed_hypothesis": "A newly held-out northern high-latitude field has a more positive median distance-modulus residual than the two preregistered southern final fields, particularly for corrected parallax >=2 mas",
+  "selection_and_metric": "unchanged strict Gaia cold anchors, cold_v4 forest/color/support and grz_clean+WISE20 route; median predicted-minus-Gaia distance modulus and nside64 block CI overall and in 1-2/>=2 mas groups",
+  "independent_final_fields": [
+    {"name": "native_north_final_ra130_140_dec_p025_p035", "field_config": "configs/field_native_ra130_140.json", "bounds_deg": [130, 25, 140, 35]}
+  ],
+  "field_choice_basis": "center Galactic latitude about +40 degrees, disjoint from all project fields, four DR11 south sweep filenames exist; no source rows inspected"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "native_north_final_ra130_140_dec_p025_p035",
+  "bounds_deg": [130, 25, 140, 35],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-130p025-135p030.fits", "sweep-130p030-135p035.fits", "sweep-135p025-140p030.fits", "sweep-135p030-140p035.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_native_ra130_140_v1",
+  "figure_dir": "figures/field_native_ra130_140",
+  "manifest_path": "manifests/field_native_ra130_140.json"
+}
