@@ -2,6 +2,20 @@
 
 ## 2026-10-28
 
+- Cold-v4 implementation: added `src/photdis/route.py` and
+  `scripts/cold_v4.py`. Preparation uses the original non-test nside64 pilot
+  cells and three former development fields for tier-specific strict-anchor
+  training, checks frozen model hashes, and uses RA205–215 only for full-route
+  split-CQR. The route tests its own 2/3/4-color tenth-neighbor support and
+  falls back C→B→A. A separate `final` mode checks prepared hashes before
+  reading the three new fields and reports full-route selection, Mg/final
+  distance metrics, color/depth bins and sky-block uncertainty. Added two
+  synthetic route tests; all 44 tests and Python parse pass. Submitted three
+  new-field processing jobs 60435345, 60435342 and 60435341; they were
+  pending at last check. No new-field results inspected. Next: commit/sync
+  method, run preparation on allocated CPU, inspect training/calibration only,
+  then freeze before final evaluation.
+
 - Cold-v4 registration: local, origin and NERSC were clean and identical at
   `9d2dbc0` after fetch. Added configs/cold_v4_fields.json and three runner
   configs before reading any new final-field catalog rows. Training sources
