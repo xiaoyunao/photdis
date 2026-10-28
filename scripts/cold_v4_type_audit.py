@@ -124,7 +124,8 @@ def class_result(mask, table, routed):
         error = used_error(table, tier)
         take = mask & (routed["tier"] == level)
         result["strata"]["used_band_error"][tier] = [
-            {"bin": [lo, hi], "selected": int(np.sum(take & (error >= lo) & (error < hi)))}
+            {"bin": [lo, hi if np.isfinite(hi) else None],
+             "selected": int(np.sum(take & (error >= lo) & (error < hi)))}
             for lo, hi in ERROR_BINS]
     return result
 

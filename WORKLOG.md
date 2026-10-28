@@ -2,6 +2,13 @@
 
 ## 2026-10-28
 
+- V4 DESI audit job 60440313 computed all four fields but failed while
+  serializing a `+inf` upper error-bin edge to strict JSON. Replaced that
+  displayed upper edge with `null`, retaining infinity only in the numerical
+  comparison. Initial field read shows the RA0–10 field has no matched DESI
+  labels; RA150–160 and RA220–230 do. No output manifest was published.
+  Next: validate JSON serialization, sync and rerun once.
+
 - Added `scripts/cold_v4_type_audit.py` and its allocated NERSC runner for
   DESI source-deduplicated v4 route diagnostics. Labels distinguish qualified
   3000–5000 K cool dwarfs/giants, other stars, known QSO/galaxy and unknown;
