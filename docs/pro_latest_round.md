@@ -24,6 +24,7 @@ some DESI-confirmed giants through, especially in optical-only tier A.
 | Was the weak-parallax PIT affected by selection? | Yes. The revised diagnostic uses the forest-weighted absolute-magnitude distribution, convolves with the Gaia parallax error, and conditions on the observed corrected-parallax/S/N<10 cut. Negative parallaxes remain. Selected-PIT low tails are about 5.4%, 5.9%, 7.2% in the three diagnostic fields. | [Weak-parallax check](cold_v4_weak_parallax_v2.md) |
 | Does the deep discrepancy follow stellar templates or the noise environment? | The paired 2×2 crossover found native template medians −0.009/+0.050 mag. Swapping noise fields on the same source changes medians by ≤0.011 mag, while degrading to `r=21–22` raises NMAD by about 0.09–0.10 mag and lowers acceptance by 10–13 percentage points. | [Template/noise crossover](cold_v4_crossover.md) |
 | Do measured template properties explain the native offset? | Matching the old templates on Legacy colors, `A_g`, Gaia parallax, BP−RP and G left a positive center difference. The newly registered final fields reproduce a positive northern versus negative southern center; a six-feature outcome-blind match leaves +0.046/+0.076 mag north-minus-south. | [Population census](cold_v4_native_population.md), [registered transfer](cold_v4_native_transfer_final.md) |
+| Does an optical-system comparison show a relevant effect? | In the PS1-qualified subset, median Legacy−transformed-PS1 g is +0.0089/+0.0046/−0.0039 mag in the south/south/north fields. Replacing grz changes the frozen model's residual centers and reduces their contrast on the same restricted subset. PS1 substitution is a sensitivity check, not an independently calibrated correction. | [PS1 relative audit](cold_v4_ps1_relative_audit.md) |
 | Are the systems and type checks conclusive for absolute distance? | Under WISE20, the same 456 wide-binary pairs retain a fainter-minus-brighter median +0.044 mag. Blanco 1 tests internal scatter, not its absolute zero point. DESI finds 12/32 cold giants selected in RA205–215 (11 tier A) and 14/14 metal-poor cold dwarfs excluded by the optical box in RA220–230. | [System validation](cold_v4_system_validation_v3.md), [type boundary](cold_v4_type_boundary.md) |
 
 ### Native-transfer field results
@@ -80,9 +81,13 @@ The [dust-sensitivity check](cold_v4_dust_sensitivity.md) kept Gaia labels,
 models and route fixed while changing the fraction of catalog foreground
 extinction subtracted in all five bands. A 25% reduction moves all three
 field medians negative but barely changes their contrast. An additional
-PS1-to-DECam optical comparison on these already inspected fields is
-registered as an explanatory diagnostic; it does not create a new final
-test or independently establish an optical zero point.
+registered [PS1-to-DECam optical comparison](cold_v4_ps1_relative_audit.md)
+on these already inspected fields finds a g-band relative offset that
+changes sign between the southern and northern fields. On the PS1-quality
+subset, replacing grz alters the residual centers, with a nontrivial
+color-model response. PS1's limited footprint and color domain, shared
+calibration ancestry and the unchanged Legacy-trained forest prevent this
+substitution from establishing the cause or an improved zero point.
 
 ## Reproducibility and location
 

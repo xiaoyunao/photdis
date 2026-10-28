@@ -2,6 +2,24 @@
 
 ## 2026-10-29
 
+- Final local validation for this diagnostic round: `python -m pytest -q`
+  passed 62 tests; PS1 manifest field identity, match/quality counts and
+  common-route invariants passed; `git diff --check` and both selected
+  figures passed inspection. Updated README/PLAN/integrated Pro report.
+  Next: milestone commit and exact three-end sync.
+
+- PS1 v2 job 60463638 completed in 2m03s on allocated CPU. Added
+  `docs/cold_v4_ps1_relative_audit.md`, selected three-panel figure and
+  aggregate manifest. On 1,613/2,712/1,485 same accepted sources,
+  Legacy residual medians −0.0135/−0.0480/+0.0324 mag become
+  +0.0331/−0.0144/+0.0121 under simultaneous PS1 grz substitution;
+  nearby-star results and nside64 intervals are reported separately.
+  PS1-quality anchors are bluer/farther than the full sample, and the
+  unchanged forest was trained on Legacy colors. Scientific decision:
+  record relative optical sensitivity, keep the frozen route, require an
+  independent calibrated reference/new registered fields for a correction.
+  Figure inspection passed. Next: full validation, commit and three-end sync.
+
 - PS1 job 60463252 completed in 2m01s on allocated CPU. Quality-qualified
   matches among frozen selected anchors number 1,623/2,734/1,495 in south
   RA330/south RA20/north RA130. Median Legacy-minus-transformed-PS1 g is

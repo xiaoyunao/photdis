@@ -31,18 +31,20 @@ within 0.003–0.004 mag of baseline; the difference persists even with no
 correction. See `docs/cold_v4_dust_sensitivity.md`. This is explanatory use
 of already inspected fields, not a fitted dust map.
 
-A PS1 relative grz photometry audit is registered in
-`configs/cold_v4_ps1_relative_audit.json` before reading PS1 rows. On the
-same selected Gaia cold anchors, compare Legacy observed g/r/z to
-quality-qualified transformed PS1 photometry, then replace all three input
-bands together and recompute the frozen route. Report selection and domain
-limits. This is an explanatory diagnostic on previously inspected fields.
+The PS1 relative grz audit was registered before reading PS1 rows and is
+complete. On the restricted PS1-quality samples, Legacy-minus-transformed-
+PS1 g medians are +0.0089/+0.0046/−0.0039 mag in south RA330/south RA20/
+north RA130. Same-source three-band substitution changes the frozen route's
+residual centers, but the restricted color and footprint coverage plus
+Legacy/PS1 calibration ancestry make this a sensitivity diagnostic. See
+`docs/cold_v4_ps1_relative_audit.md`.
 
 ## Outstanding Issues and Validation Criteria
 
-- Finish the PS1 relative optical check on an allocated NERSC CPU and report
-  field-specific differences with sky-block intervals and same-source route
-  changes. Do not infer an independent absolute zero point from PS1.
+- A causal optical-system test needs an independent reference with a
+  validated cool-star bandpass transformation or a matched cross-field
+  training/calibration design. The existing PS1 comparison constrains
+  relative measurement response on only its qualified subset.
 - Preserve the v4 forests, color box, support and WISE20 policy. The current
   median distance remains conditional on the cold-dwarf hypothesis. Deep
   nominal intervals are still withheld because the independent deep test

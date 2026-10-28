@@ -31,7 +31,10 @@ bands and the final `g0` distance-modulus term; see the
 [extinction audit](docs/extinction_audit.md). A bounded
 [dust-sensitivity check](docs/cold_v4_dust_sensitivity.md) shows that
 uniformly scaling down this correction does not remove the native
-north–south center contrast.
+north–south center contrast. A registered
+[PS1 relative optical audit](docs/cold_v4_ps1_relative_audit.md) finds a
+field-dependent g-band difference on a restricted matched subset and
+quantifies how the frozen Legacy-trained route responds to replacing grz.
 
 ## Locations
 
