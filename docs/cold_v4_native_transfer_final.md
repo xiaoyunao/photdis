@@ -113,6 +113,18 @@ are tiny, selected spectroscopic samples. Their median residuals
 measure the metallicity distribution of the photometric anchors. See
 `manifests/cold_v4_native_transfer_final_labels.json`.
 
+Gaia proper motions provide a further descriptive check. The median
+tangential speeds are 44.5/46.7/39.1 km/s for south RA330/south RA20/north
+RA130. In the ≥2 mas and <40 km/s subsets, median residuals remain
+−0.031/−0.083/+0.121 mag; for 40–80 km/s they are
+−0.024/−0.075/+0.099 mag. Northern stars within 200 pc of the Galactic
+midplane have +0.170 mag median, versus −0.026 mag in southern RA20.
+The positive northern center is therefore present in ordinary tangential-
+speed and nearby-height strata, not confined to a high-speed sample.
+Tangential speed alone does not assign metallicity or disk/halo membership.
+Counts and sky-block intervals are in
+`manifests/cold_v4_native_transfer_final_kinematics.json`.
+
 The figure `figures/cold_v4/08_native_transfer_final.png` plots the
 development and final medians. Development ≥2 mas points have no error bars
 because their per-stratum sky bootstrap was added after their original run;
@@ -148,5 +160,6 @@ correction requires new registered calibration and final sky regions.
   `manifests/cold_v4_native_transfer_north_final.json`; matched-source
   evidence: `manifests/cold_v4_native_transfer_final_match.json`;
   astrometric and DESI strata: `manifests/cold_v4_native_transfer_final_labels.json`.
+  Kinematic strata: `manifests/cold_v4_native_transfer_final_kinematics.json`.
 - All field scans and scorings ran on allocated Perlmutter compute nodes;
   source catalogs and trained forest objects remain on NERSC.

@@ -74,14 +74,22 @@ then map the field medians against sky position and parallax. This census
 is explanatory development evidence, not a fresh final validation of a
 new method.
 
-The six-field scan is submitted as Slurm array 60460329, with dependent
-frozen score job 60460382. While waiting, run the separate registered-final
+The initial six-field regular-queue scan 60460329 and dependent score
+60460382 were cancelled while still pending; the same array is being
+resubmitted to 30-minute debug QoS. While waiting, run the separate registered-final
 Gaia proper-motion diagnostic to check whether residual patterns track
 tangential speed or absolute height. Report any field/kinematic association
 as a diagnostic; it does not establish metallicity or a physical population
 classification. Integrate findings in `docs/pro_latest_round.md`, then
 review whether there is evidence for a method change or whether to keep
 the frozen model and specify the next cause test.
+
+The Gaia-motion job is complete: among >=2 mas anchors with tangential
+speed <40 km/s, the north/south sign contrast persists
+(+0.121 versus −0.031/−0.083 mag). It also persists in the 40–80 km/s
+stratum, and northern |z|<200 pc stars are strongly positive. These
+kinematic cuts do not isolate a single population cause. Await the six
+field census, then make a final bounded method decision.
 
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.

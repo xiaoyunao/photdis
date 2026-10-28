@@ -42,6 +42,10 @@ zero-point medians differ by only ~0.003 mas across these fields; this
 measured term does not account for a ~0.1 mag contrast at 2–3 mas. Usable,
 unambiguous DESI dwarf metallicities number only 0, 13 and 35, so the
 current spectroscopy does not characterize the full anchor populations.
+The ≥2 mas contrast also persists among stars with tangential speed
+<40 km/s and 40–80 km/s; the northern field is most positive among its
+nearby-height stars. These Gaia-motion diagnostics do not identify a
+metallicity or age distribution.
 
 ## Scientific decision
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -C cpu
-#SBATCH -q regular
+#SBATCH -q debug
 #SBATCH -N 1
 #SBATCH -c 4
-#SBATCH -t 02:00:00
+#SBATCH -t 00:30:00
 #SBATCH --mem=64G
 #SBATCH --array=0-5%2
 #SBATCH -o logs/cold_v4_sky_census_field_%A_%a.out
