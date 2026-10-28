@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- The three preregistered native-transfer final score jobs completed on
+  allocated NERSC CPUs (60459490/60459491). With the frozen WISE20 route,
+  south RA330 and RA20 select 5,776/7,097 cold anchors and have native
+  median Δμ −0.0178/−0.0520 mag; north RA130 selects 2,941 and has
+  +0.0687 mag. Nside64 median bootstrap95 intervals do not overlap.
+  The contrast is strongest for corrected parallax >=2 mas: −0.0221,
+  −0.0662, +0.1121 mag. Recorded all final results, source/registration
+  hashes, marginal color/r/dust strata, and a summary plot in the native
+  transfer final report. The preregistered directional hypothesis holds
+  in these three fields; no center correction or new deep interval was
+  fitted. Added an outcome-blind final-field matching diagnostic on
+  allocated CPU for cause analysis only; Python parse and small synthetic
+  match pass. Next: run matching, assess cause limits, sync all artifacts.
+
 - Before either newly registered final-field residual was read or scored,
   cancelled pending score jobs 60459346/60459360 and added nside64
   sky-block median/NMAD uncertainty for the preregistered corrected-

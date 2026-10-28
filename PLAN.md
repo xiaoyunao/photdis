@@ -48,6 +48,17 @@ reading the new northern final field. Build RA130–140/Dec25–35, then
 score it and the two original southern final fields once with the same
 frozen route and report all outcomes.
 
+The three final fields have now been scored once with that fixed method.
+The northern RA130 field median is +0.0687 mag, versus −0.0178 and −0.0520
+mag in southern RA330 and RA20. Their nside64 median bootstrap intervals
+do not overlap. The ≥2 mas medians are +0.1121, −0.0221 and −0.0662 mag;
+the 1–2 mas medians are all close to zero. The registered directional
+hypothesis held in these fields. The next diagnostic is an outcome-blind
+source match across those final fields using colors, dust, parallax and
+Gaia color, run on allocated NERSC compute for explanation only. Do not
+use the final fields to fit a center correction. Preserve the frozen model
+and the previously published deep-interval limitation.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted
