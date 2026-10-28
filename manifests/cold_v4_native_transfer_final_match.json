@@ -1,0 +1,618 @@
+{
+  "method": "outcome-blind greedy one-to-one nearest-neighbor, 8 candidates, standardized Euclidean radius <=2; diagnostic final-field comparison only",
+  "compute_host": "nid005058",
+  "south_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "north_registration_sha256": "f1760873af3256a1e38d2a70317f1493b86b4c6b34165ca421e6e9c90a53eb79",
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "selected_counts": {
+    "native_final_ra330_340_dec_m035_m025": 5776,
+    "native_final_ra020_030_dec_m025_m015": 7097,
+    "native_north_final_ra130_140_dec_p025_p035": 2941
+  },
+  "feature_sets": {
+    "legacy_colors_dust": [
+      [
+        "gr0",
+        0.2
+      ],
+      [
+        "rz0",
+        0.15
+      ],
+      [
+        "ag",
+        0.02
+      ]
+    ],
+    "plus_parallax": [
+      [
+        "gr0",
+        0.2
+      ],
+      [
+        "rz0",
+        0.15
+      ],
+      [
+        "ag",
+        0.02
+      ],
+      [
+        "p_corr",
+        1.0
+      ]
+    ],
+    "plus_gaia_color": [
+      [
+        "gr0",
+        0.2
+      ],
+      [
+        "rz0",
+        0.15
+      ],
+      [
+        "ag",
+        0.02
+      ],
+      [
+        "bp_rp",
+        0.4
+      ]
+    ],
+    "plus_parallax_gaia_color_r": [
+      [
+        "gr0",
+        0.2
+      ],
+      [
+        "rz0",
+        0.15
+      ],
+      [
+        "ag",
+        0.02
+      ],
+      [
+        "p_corr",
+        1.0
+      ],
+      [
+        "bp_rp",
+        0.4
+      ],
+      [
+        "r0",
+        0.8
+      ]
+    ]
+  },
+  "matches": {
+    "native_final_ra330_340_dec_m035_m025": {
+      "all": {
+        "legacy_colors_dust": {
+          "n": 1962,
+          "north_minus_south_median": 0.05538795990975309,
+          "pair_bootstrap95": [
+            0.034623160167941515,
+            0.06982453639816377
+          ],
+          "north_sky_block_bootstrap95": [
+            0.03569568633948809,
+            0.07043722236755055
+          ],
+          "n_north_nside64_blocks": 77,
+          "median_matching_radius": 0.0939226157391277,
+          "p95_matching_radius": 0.21595231204558757,
+          "median_absolute_feature_difference": {
+            "gr0": 0.008630752563476562,
+            "rz0": 0.006366252899169922,
+            "ag": 0.0007971629880641276
+          }
+        },
+        "plus_parallax": {
+          "n": 1971,
+          "north_minus_south_median": 0.023516113802745764,
+          "pair_bootstrap95": [
+            0.009700079099803173,
+            0.03470324408736847
+          ],
+          "north_sky_block_bootstrap95": [
+            0.00809673756645264,
+            0.035001493873196794
+          ],
+          "n_north_nside64_blocks": 77,
+          "median_matching_radius": 0.19256609410053782,
+          "p95_matching_radius": 0.46505636059669,
+          "median_absolute_feature_difference": {
+            "gr0": 0.01378631591796875,
+            "rz0": 0.010897636413574219,
+            "ag": 0.001569852305306818,
+            "p_corr": 0.07129848003387451
+          }
+        },
+        "plus_gaia_color": {
+          "n": 1960,
+          "north_minus_south_median": 0.06298065684397613,
+          "pair_bootstrap95": [
+            0.04300361985633132,
+            0.0846386377471045
+          ],
+          "north_sky_block_bootstrap95": [
+            0.04435948065447089,
+            0.08402174083673312
+          ],
+          "n_north_nside64_blocks": 76,
+          "median_matching_radius": 0.11569675178363628,
+          "p95_matching_radius": 0.25938817458256297,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009249687194824219,
+            "rz0": 0.006786823272705078,
+            "ag": 0.0009120854994919131,
+            "bp_rp": 0.014708518981933594
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 2016,
+          "north_minus_south_median": 0.04588408086211171,
+          "pair_bootstrap95": [
+            0.03319478043652382,
+            0.05927810387208416
+          ],
+          "north_sky_block_bootstrap95": [
+            0.03349017322878882,
+            0.061810483892345225
+          ],
+          "n_north_nside64_blocks": 76,
+          "median_matching_radius": 0.3003685828736865,
+          "p95_matching_radius": 0.6401583572933782,
+          "median_absolute_feature_difference": {
+            "gr0": 0.01668834686279297,
+            "rz0": 0.014358043670654297,
+            "ag": 0.002166035349059743,
+            "p_corr": 0.09484374523162842,
+            "bp_rp": 0.02013254165649414,
+            "r0": 0.07870006561279297
+          }
+        }
+      },
+      "parallax_1_to_2_mas": {
+        "legacy_colors_dust": {
+          "n": 551,
+          "north_minus_south_median": -0.022729569091911372,
+          "pair_bootstrap95": [
+            -0.062102046908375286,
+            0.008017810184520968
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.06211771308583569,
+            0.01246545517473085
+          ],
+          "n_north_nside64_blocks": 63,
+          "median_matching_radius": 0.09841034297468643,
+          "p95_matching_radius": 0.2610032349133473,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009180068969726562,
+            "rz0": 0.006392478942871094,
+            "ag": 0.0009051363448205341
+          }
+        },
+        "plus_parallax": {
+          "n": 555,
+          "north_minus_south_median": -0.07346148630377591,
+          "pair_bootstrap95": [
+            -0.09482189323421428,
+            -0.044569937432324735
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.09451610508626937,
+            -0.0482224849019249
+          ],
+          "n_north_nside64_blocks": 65,
+          "median_matching_radius": 0.15576727711329041,
+          "p95_matching_radius": 0.32827527652377547,
+          "median_absolute_feature_difference": {
+            "gr0": 0.011226654052734375,
+            "rz0": 0.008276939392089844,
+            "ag": 0.0012292298252183642,
+            "p_corr": 0.05634605884552002
+          }
+        },
+        "plus_gaia_color": {
+          "n": 550,
+          "north_minus_south_median": -0.025041391116315204,
+          "pair_bootstrap95": [
+            -0.060938444759538773,
+            0.009833695132530032
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.06719427711563243,
+            0.01517680663335863
+          ],
+          "n_north_nside64_blocks": 66,
+          "median_matching_radius": 0.10868018075724314,
+          "p95_matching_radius": 0.2771640312764866,
+          "median_absolute_feature_difference": {
+            "gr0": 0.008989810943603516,
+            "rz0": 0.0065212249755859375,
+            "ag": 0.0009519889008565811,
+            "bp_rp": 0.012003898620605469
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 564,
+          "north_minus_south_median": -0.014318730495455512,
+          "pair_bootstrap95": [
+            -0.036387224337325996,
+            0.0003531382914054859
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.04069962272042993,
+            0.0028504195883314984
+          ],
+          "n_north_nside64_blocks": 66,
+          "median_matching_radius": 0.23769019161881444,
+          "p95_matching_radius": 0.4406535974371228,
+          "median_absolute_feature_difference": {
+            "gr0": 0.013189315795898438,
+            "rz0": 0.012378692626953125,
+            "ag": 0.0016741373972276666,
+            "p_corr": 0.06752198934555054,
+            "bp_rp": 0.014605998992919922,
+            "r0": 0.06273174285888672
+          }
+        }
+      },
+      "parallax_ge_2_mas": {
+        "legacy_colors_dust": {
+          "n": 1409,
+          "north_minus_south_median": 0.07806768800209518,
+          "pair_bootstrap95": [
+            0.0568355853926219,
+            0.10044551633055054
+          ],
+          "north_sky_block_bootstrap95": [
+            0.048959407492928264,
+            0.09607062951709702
+          ],
+          "n_north_nside64_blocks": 74,
+          "median_matching_radius": 0.10187645645618265,
+          "p95_matching_radius": 0.2331628317794098,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009138107299804688,
+            "rz0": 0.0065059661865234375,
+            "ag": 0.000853338255826161
+          }
+        },
+        "plus_parallax": {
+          "n": 1415,
+          "north_minus_south_median": 0.05743521143857411,
+          "pair_bootstrap95": [
+            0.036374635538083844,
+            0.07736881980469963
+          ],
+          "north_sky_block_bootstrap95": [
+            0.0349912470947936,
+            0.0796868982955301
+          ],
+          "n_north_nside64_blocks": 76,
+          "median_matching_radius": 0.214134641146053,
+          "p95_matching_radius": 0.5207602997856707,
+          "median_absolute_feature_difference": {
+            "gr0": 0.015405654907226562,
+            "rz0": 0.012182235717773438,
+            "ag": 0.0017626830265983426,
+            "p_corr": 0.0791165828704834
+          }
+        },
+        "plus_gaia_color": {
+          "n": 1402,
+          "north_minus_south_median": 0.10150058021381536,
+          "pair_bootstrap95": [
+            0.06650760801407876,
+            0.11903191157168043
+          ],
+          "north_sky_block_bootstrap95": [
+            0.07066412316016554,
+            0.11750721413981842
+          ],
+          "n_north_nside64_blocks": 74,
+          "median_matching_radius": 0.12716810788852628,
+          "p95_matching_radius": 0.27899917102117233,
+          "median_absolute_feature_difference": {
+            "gr0": 0.0101776123046875,
+            "rz0": 0.0073375701904296875,
+            "ag": 0.0009770751323090257,
+            "bp_rp": 0.016973018646240234
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 1453,
+          "north_minus_south_median": 0.0804759744536181,
+          "pair_bootstrap95": [
+            0.05949139173925979,
+            0.09566853216060374
+          ],
+          "north_sky_block_bootstrap95": [
+            0.05938386405480132,
+            0.09511668492365177
+          ],
+          "n_north_nside64_blocks": 75,
+          "median_matching_radius": 0.33171629400199704,
+          "p95_matching_radius": 0.6891331082610685,
+          "median_absolute_feature_difference": {
+            "gr0": 0.018301010131835938,
+            "rz0": 0.015966415405273438,
+            "ag": 0.0024529743639388757,
+            "p_corr": 0.10578060150146484,
+            "bp_rp": 0.023656845092773438,
+            "r0": 0.08560562133789062
+          }
+        }
+      }
+    },
+    "native_final_ra020_030_dec_m025_m015": {
+      "all": {
+        "legacy_colors_dust": {
+          "n": 1361,
+          "north_minus_south_median": 0.07837700555564364,
+          "pair_bootstrap95": [
+            0.05485947298762639,
+            0.10299148604840598
+          ],
+          "north_sky_block_bootstrap95": [
+            0.057790254901083186,
+            0.10137937675832225
+          ],
+          "n_north_nside64_blocks": 71,
+          "median_matching_radius": 0.09060466838049532,
+          "p95_matching_radius": 0.22073388635307112,
+          "median_absolute_feature_difference": {
+            "gr0": 0.00846099853515625,
+            "rz0": 0.0060558319091796875,
+            "ag": 0.0008564754156851484
+          }
+        },
+        "plus_parallax": {
+          "n": 1413,
+          "north_minus_south_median": 0.04501144708756222,
+          "pair_bootstrap95": [
+            0.02004197243085981,
+            0.0615798518975719
+          ],
+          "north_sky_block_bootstrap95": [
+            0.01911739532551029,
+            0.061862533990138316
+          ],
+          "n_north_nside64_blocks": 71,
+          "median_matching_radius": 0.19546184942684133,
+          "p95_matching_radius": 0.5086475262646194,
+          "median_absolute_feature_difference": {
+            "gr0": 0.013700485229492188,
+            "rz0": 0.010931015014648438,
+            "ag": 0.0016120814985122467,
+            "p_corr": 0.07440900802612305
+          }
+        },
+        "plus_gaia_color": {
+          "n": 1369,
+          "north_minus_south_median": 0.06890339980932136,
+          "pair_bootstrap95": [
+            0.0453531906849372,
+            0.097251590493829
+          ],
+          "north_sky_block_bootstrap95": [
+            0.050421040486319756,
+            0.09586100144223064
+          ],
+          "n_north_nside64_blocks": 69,
+          "median_matching_radius": 0.11188655136116432,
+          "p95_matching_radius": 0.24622048236126096,
+          "median_absolute_feature_difference": {
+            "gr0": 0.0089569091796875,
+            "rz0": 0.0065135955810546875,
+            "ag": 0.0009193060524579494,
+            "bp_rp": 0.01300811767578125
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 1470,
+          "north_minus_south_median": 0.075613992105656,
+          "pair_bootstrap95": [
+            0.06051269597804502,
+            0.08898757571374262
+          ],
+          "north_sky_block_bootstrap95": [
+            0.06038239976573605,
+            0.09152231741162843
+          ],
+          "n_north_nside64_blocks": 71,
+          "median_matching_radius": 0.31547009901852563,
+          "p95_matching_radius": 0.7581378281290299,
+          "median_absolute_feature_difference": {
+            "gr0": 0.016584396362304688,
+            "rz0": 0.013692855834960938,
+            "ag": 0.002327216211400713,
+            "p_corr": 0.10261833667755127,
+            "bp_rp": 0.019283294677734375,
+            "r0": 0.08274555206298828
+          }
+        }
+      },
+      "parallax_1_to_2_mas": {
+        "legacy_colors_dust": {
+          "n": 392,
+          "north_minus_south_median": -0.030264430109465223,
+          "pair_bootstrap95": [
+            -0.054863441835564686,
+            -0.001453120238016991
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.05499505179510264,
+            -0.006378268480263571
+          ],
+          "n_north_nside64_blocks": 57,
+          "median_matching_radius": 0.09936301804824907,
+          "p95_matching_radius": 0.2729411180443877,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009315013885498047,
+            "rz0": 0.0066051483154296875,
+            "ag": 0.0009180256815837333
+          }
+        },
+        "plus_parallax": {
+          "n": 399,
+          "north_minus_south_median": -0.05667784105579621,
+          "pair_bootstrap95": [
+            -0.08647987601071527,
+            -0.021240355084331093
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.07834511595488422,
+            -0.02131931271153653
+          ],
+          "n_north_nside64_blocks": 57,
+          "median_matching_radius": 0.1530894078564973,
+          "p95_matching_radius": 0.34075887882879086,
+          "median_absolute_feature_difference": {
+            "gr0": 0.011241912841796875,
+            "rz0": 0.008456230163574219,
+            "ag": 0.0011595315415360574,
+            "p_corr": 0.053525686264038086
+          }
+        },
+        "plus_gaia_color": {
+          "n": 394,
+          "north_minus_south_median": -0.031595265747810686,
+          "pair_bootstrap95": [
+            -0.06440590775917521,
+            -0.007344408279409879
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.0580259287988381,
+            -0.0070835796195127905
+          ],
+          "n_north_nside64_blocks": 58,
+          "median_matching_radius": 0.1092415116021152,
+          "p95_matching_radius": 0.27467512338241407,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009299278259277344,
+            "rz0": 0.006600379943847656,
+            "ag": 0.0009262499337208165,
+            "bp_rp": 0.010907649993896484
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 407,
+          "north_minus_south_median": 0.004734702124636669,
+          "pair_bootstrap95": [
+            -0.02157862373110925,
+            0.02996594599643818
+          ],
+          "north_sky_block_bootstrap95": [
+            -0.021462807407399254,
+            0.027619497138023842
+          ],
+          "n_north_nside64_blocks": 57,
+          "median_matching_radius": 0.2420056565834535,
+          "p95_matching_radius": 0.5254305524858863,
+          "median_absolute_feature_difference": {
+            "gr0": 0.015460968017578125,
+            "rz0": 0.010436058044433594,
+            "ag": 0.0017657834737381806,
+            "p_corr": 0.0698617696762085,
+            "bp_rp": 0.014507293701171875,
+            "r0": 0.07559585571289062
+          }
+        }
+      },
+      "parallax_ge_2_mas": {
+        "legacy_colors_dust": {
+          "n": 965,
+          "north_minus_south_median": 0.11631758315468588,
+          "pair_bootstrap95": [
+            0.09644763910788257,
+            0.14255153321734415
+          ],
+          "north_sky_block_bootstrap95": [
+            0.09776228329177081,
+            0.1430925133890728
+          ],
+          "n_north_nside64_blocks": 68,
+          "median_matching_radius": 0.09710255184377059,
+          "p95_matching_radius": 0.23887374597632843,
+          "median_absolute_feature_difference": {
+            "gr0": 0.008836746215820312,
+            "rz0": 0.006539344787597656,
+            "ag": 0.000889295130052814
+          }
+        },
+        "plus_parallax": {
+          "n": 1014,
+          "north_minus_south_median": 0.08989597819275419,
+          "pair_bootstrap95": [
+            0.06999288197040567,
+            0.11202159247046443
+          ],
+          "north_sky_block_bootstrap95": [
+            0.06999640302513743,
+            0.11407136996297547
+          ],
+          "n_north_nside64_blocks": 69,
+          "median_matching_radius": 0.21645155539421645,
+          "p95_matching_radius": 0.5858539697023911,
+          "median_absolute_feature_difference": {
+            "gr0": 0.015035629272460938,
+            "rz0": 0.012248516082763672,
+            "ag": 0.0017652858988948666,
+            "p_corr": 0.08183062076568604
+          }
+        },
+        "plus_gaia_color": {
+          "n": 975,
+          "north_minus_south_median": 0.10677299717755329,
+          "pair_bootstrap95": [
+            0.0783716308774891,
+            0.13000972435284108
+          ],
+          "north_sky_block_bootstrap95": [
+            0.08059549531040577,
+            0.12571826087250682
+          ],
+          "n_north_nside64_blocks": 67,
+          "median_matching_radius": 0.12161483762360185,
+          "p95_matching_radius": 0.28305924646586084,
+          "median_absolute_feature_difference": {
+            "gr0": 0.009763717651367188,
+            "rz0": 0.007099151611328125,
+            "ag": 0.0010234441348016127,
+            "bp_rp": 0.015420913696289062
+          }
+        },
+        "plus_parallax_gaia_color_r": {
+          "n": 1068,
+          "north_minus_south_median": 0.10382672028031914,
+          "pair_bootstrap95": [
+            0.08975539741279936,
+            0.11936717337458733
+          ],
+          "north_sky_block_bootstrap95": [
+            0.08681393148722046,
+            0.11924047700896878
+          ],
+          "n_north_nside64_blocks": 70,
+          "median_matching_radius": 0.3447963797926082,
+          "p95_matching_radius": 0.8309555313921577,
+          "median_absolute_feature_difference": {
+            "gr0": 0.017477035522460938,
+            "rz0": 0.01599407196044922,
+            "ag": 0.002705656372370871,
+            "p_corr": 0.11364805698394775,
+            "bp_rp": 0.022386550903320312,
+            "r0": 0.09282302856445312
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Outcome-blind final-field match job 60459873 completed in 44 s on
+  allocated NERSC CPU. Six-feature unique matching on Legacy colors,
+  source A_g, corrected parallax, Gaia BP-RP and r0 retains 2,016
+  north/RA330 and 1,470 north/RA20 pairs; north-minus-south median
+  residual remains +0.046 and +0.076 mag (northern nside64 block CIs
+  [+0.033,+0.062] and [+0.060,+0.092]). In >=2 mas pairs these become
+  +0.081 and +0.104 mag. Added manifest/report and prepared an allocated-
+  node audit of Gaia RUWE, formal parallax error, applied zero point and
+  quality-qualified DESI metallicity. Next: run that diagnostic and decide
+  which cause tests are supported by label counts; keep final fields out
+  of any fitted correction.
+
 - The three preregistered native-transfer final score jobs completed on
   allocated NERSC CPUs (60459490/60459491). With the frozen WISE20 route,
   south RA330 and RA20 select 5,776/7,097 cold anchors and have native

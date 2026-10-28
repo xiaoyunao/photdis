@@ -65,6 +65,30 @@ southern RA20 final field, the low/high `A_g=0.05` groups remain negative
 (−0.062/−0.041 mag); the northern field has only 36 low-`A_g` sources.
 These marginal strata do not isolate a dust cause.
 
+### Outcome-blind matched-source diagnostic
+
+On the three final fields *after* their one-time scoring, we matched
+individual northern and southern selected stars without using residuals
+in the matching. Greedy unique pairs used their eight nearest candidates
+and standardized Euclidean radius ≤2. Pair and northern-sky-block
+bootstraps were kept separate. These comparisons are explanatory use of
+already inspected final fields and cannot validate a newly fitted method.
+
+| North minus south, after matching | South RA330 | South RA20 |
+|---|---:|---:|
+| Legacy `g-r`, `r-z`, source `A_g`: pairs, median Δresidual [north sky-block 95%] | 1,962, +0.055 [+0.036,+0.070] | 1,361, +0.078 [+0.058,+0.101] |
+| Add corrected parallax, Gaia BP−RP, source `r0`: pairs, median [95%] | 2,016, +0.046 [+0.033,+0.062] | 1,470, +0.076 [+0.060,+0.092] |
+| Same six-feature match, ≥2 mas only: pairs, median [95%] | 1,453, +0.081 [+0.059,+0.095] | 1,068, +0.104 [+0.087,+0.119] |
+
+For the all-parallax six-feature pairs, median absolute differences are
+0.017 in `g-r`, 0.014 in `r-z`, 0.0022 mag in `A_g`, ~0.10 mas in corrected
+parallax, ~0.020 mag in Gaia BP−RP and ~0.08 mag in `r0`. The contrast
+persists under this measured-property control, especially for ≥2 mas.
+The bootstrap groups northern sky positions; shared southern blocks and
+matching uncertainty are not fully represented. See
+`manifests/cold_v4_native_transfer_final_match.json` for all matching
+variants, including the 1–2 mas subgroup.
+
 The figure `figures/cold_v4/08_native_transfer_final.png` plots the
 development and final medians. Development ≥2 mas points have no error bars
 because their per-stratum sky bootstrap was added after their original run;
@@ -85,12 +109,10 @@ by these field summaries alone. Retain the frozen high-quality cold-dwarf
 conditional distance and its field-dependent systematic limitation; do not
 publish a nominal deep interval from the old calibration.
 
-Next diagnostic: on allocated NERSC CPUs, compare outcome-blind matched
-stars across these three final fields, then test Gaia parallax quality and
-photometric-system residuals against external measurements by brightness,
-color and sky position. That analysis uses the final fields for explanation
-only. Any subsequent correction requires new registered calibration and
-final sky regions.
+Next diagnostic: check Gaia parallax quality, the applied zero-point terms,
+and qualified spectroscopic metallicity in these final fields. Any
+subsequent correction requires new registered calibration and final sky
+regions.
 
 ## Provenance
 
@@ -98,6 +120,7 @@ final sky regions.
 - Southern final registration SHA256: `2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75`.
 - Northern final registration SHA256: `f1760873af3256a1e38d2a70317f1493b86b4c6b34165ca421e6e9c90a53eb79`.
 - Numerical evidence: `manifests/cold_v4_native_transfer_final.json` and
-  `manifests/cold_v4_native_transfer_north_final.json`.
+  `manifests/cold_v4_native_transfer_north_final.json`; matched-source
+  evidence: `manifests/cold_v4_native_transfer_final_match.json`.
 - All field scans and scorings ran on allocated Perlmutter compute nodes;
   source catalogs and trained forest objects remain on NERSC.

@@ -56,7 +56,12 @@ the 1–2 mas medians are all close to zero. The registered directional
 hypothesis held in these fields. The next diagnostic is an outcome-blind
 source match across those final fields using colors, dust, parallax and
 Gaia color, run on allocated NERSC compute for explanation only. Do not
-use the final fields to fit a center correction. Preserve the frozen model
+use the final fields to fit a center correction. Outcome-blind matching on
+Legacy colors, source A_g, corrected parallax, Gaia BP-RP and r0 leaves a
+north-minus-south residual contrast of +0.046/+0.076 mag across 2,016/1,470
+unique pairs; the >=2 mas subset remains +0.081/+0.104 mag. Next check
+Gaia quality/zero-point and DESI metallicity counts on allocated compute.
+Preserve the frozen model
 and the previously published deep-interval limitation.
 
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
