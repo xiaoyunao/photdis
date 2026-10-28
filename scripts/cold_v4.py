@@ -32,6 +32,7 @@ REGISTRATION = Path("configs/cold_v4_fields.json")
 FROZEN = Path("configs/followup_fields.json")
 OUT = Path("data/cold_v4")
 PREPARED = OUT / "prepared.json"
+PREPARED_TRACKED = Path("manifests/cold_v4_prepared.json")
 FINAL = OUT / "final.json"
 PRIOR_CONFIGS = ("configs/field_cal_ra140_150.json",
                  "configs/field_test_ra190_200.json",
@@ -287,6 +288,8 @@ def final():
     config, frozen = registration()
     if FINAL.exists():
         raise FileExistsError(FINAL)
+    if sha(PREPARED) != sha(PREPARED_TRACKED):
+        raise ValueError("Published cold-v4 preparation changed")
     prepared = json.loads(PREPARED.read_text())
     if prepared["registration_sha256"] != sha(REGISTRATION):
         raise ValueError("Cold-v4 registration changed")

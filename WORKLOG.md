@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Cold-v4 preparation job 60435825 completed on NERSC CPU in 63 s with exit
+  0. Strict fit anchors A/B/C: 7,782/7,351/7,341; matched-common fit uses
+  7,341 identities for every tier and 223 frozen original test identities.
+  Four development fields contribute 780 Gaia BP-RP 2.8–3.5 red anchors
+  versus 140 in the original non-test pilot. Independent RA205–215 route
+  calibration retains 1,257/1,317 cold strict anchors, with six group sizes
+  148–240 and no fallback. Prepared forest, route and calibration hashes are
+  in manifests/cold_v4_prepared.json; large joblib files remain on NERSC.
+  Added exact published-manifest hash gate to final and noise runners. No new
+  final-field catalog rows or residuals inspected. Next: commit/sync the
+  preparation manifest, then evaluate every registered final field.
+
 - Cold-v4 depth test prepared: added `scripts/cold_v4_noise.py` to reuse the
   same 223 frozen templates, 8 repeats and WISE-unconditioned grz target
   mother from the prior shared-noise experiment. Each simulated five-band

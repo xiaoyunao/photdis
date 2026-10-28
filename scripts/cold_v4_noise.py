@@ -22,7 +22,7 @@ from photdis.noise import BANDS, simulate_shared_flux
 from photdis.photometry import derive_photometry
 from photdis.route import FEATURES, LEVEL, apply_route_offsets, feature_matrix, route_rows
 from photdis.stage1 import require_compute, write_json
-from cold_v4 import OUT, PREPARED, registration, sha
+from cold_v4 import OUT, PREPARED, PREPARED_TRACKED, registration, sha
 from noise_injection_v2 import (DEPTHS, REPEATS, SEED, STRICT,
                                 raw_for_unique_ids, score)
 
@@ -34,6 +34,8 @@ def main():
     require_compute()
     if OUTPUT.exists() or FIGURE.exists():
         raise FileExistsError("Cold-v4 noise products already exist")
+    if sha(PREPARED) != sha(PREPARED_TRACKED):
+        raise ValueError("Published cold-v4 preparation changed")
     _, frozen = registration()
     prepared = json.loads(PREPARED.read_text())
     if prepared["registration_sha256"] != sha("configs/cold_v4_fields.json"):
