@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Task: implement a two-stage conditional calibration. Prior north/south
+  fields fit regularized residual-center corrections from Legacy/WISE colors,
+  observed r and errors; the new RA205–215 field calibrates six fixed
+  color-by-depth CQR groups. Final-field mode checks the prepared model hash
+  and preregistered roles before one-time evaluation, including same-star
+  A/B/C, tails, widths, distance modulus and sky-block resampling.
+- Files: conditional.py, conditional_calibration.py, two focused tests.
+  Validation: parse and full 41-test suite passed. The new final-field
+  catalogs have not been processed.
+- Next: run `prepare` on a compute node, review development/calibration
+  diagnostics, commit the prepared manifest, then process final fields.
+
 - Task: implement shared-noise final-distance experiment without changing the
   frozen v1 experiment. Added noise.py and noise_injection_v2.py: same 223
   A/B/C test identities, one target row and five-band realization per draw,
