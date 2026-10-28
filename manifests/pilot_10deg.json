@@ -556,5 +556,6 @@
     "figures/pilot_10deg/04_parallax_brightness.png"
   ],
   "elapsed_seconds": 285.7701666355133,
-  "script_sha256": "9afa972b26d0b3eea6da095ced21b86891cd890cc7c5a146d3fa42ef7202211d"
+  "script_sha256": "9afa972b26d0b3eea6da095ced21b86891cd890cc7c5a146d3fa42ef7202211d",
+  "plot_script_sha256": "d161cd2fcacfaec32e7ec03dee2cd46ef36fc39112a9be44fae3afd9f468ddb8"
 }
