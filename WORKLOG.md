@@ -2,6 +2,22 @@
 
 ## 2026-10-28
 
+- Added a no-fit v4 center-offset diagnostic for the three final fields.
+  It groups the unchanged strict-Gaia residuals by selected tier, original
+  six route groups, r/r-z, used-band error, support radius, parallax S/N,
+  E(B-V), RUWE, Gaia binary/image indicators, sky quadrant and DESI-valid
+  Fe/H. Local parse and focused group smoke check pass. Next: run it on
+  NERSC CPU after current policy simulation releases the checkout.
+
+- Weak-parallax forward job 60442287 completed (35 s, exit 0); verified
+  frozen-preparation SHA and published its small manifest/report. Qualified
+  DESI cool dwarfs with clean v4 selection and corrected parallax S/N<10:
+  607/202/222 in the calibration/two DESI-covered final fields; corrected
+  negative counts 5/1/0. The two final fields show approximate low PIT
+  tails 9.4%/9.0% and model-minus-observed parallax medians +0.039/+0.040
+  mas. Next: investigate selection and zero-point contributions; no center
+  correction is applied from this diagnostic.
+
 - System-validation v2 job 60442060 completed (33 s, exit 0). Verified its
   frozen-preparation SHA. Published 456 independent wide-binary pairs and
   201 Blanco 1 routed members in a small manifest and report. The fainter-

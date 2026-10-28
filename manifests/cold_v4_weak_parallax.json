@@ -1,0 +1,793 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "compute_host": "nid004471",
+  "selection": "unique qualified DESI 3000-5000 K logg>=3.5; Gaia extended_quality; not strict anchor; corrected parallax/error<10 including negative; v4 route and grz_clean",
+  "forward_model": "interpolate five calibrated Mg quantiles, map to positive parallax, convolve with Gaia Gaussian formal error; approximate PIT only",
+  "limitations": "DESI targeting and Gaia quality selection may depend on parallax; Gaia zero-point errors are shared, and five quantiles do not specify a full stellar PDF",
+  "fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "field": "dev_cal_ra205_215_dec_m010_p000",
+      "deduplication": {
+        "matched_unambiguous_rows": 11329,
+        "unique_spectra": 11267,
+        "duplicate_Legacy_rows_removed": 62
+      },
+      "qualified_cool_dwarf_in_grz_base": 2022,
+      "weak_clean_routed": 607,
+      "raw_negative_parallax": 5,
+      "corrected_negative_parallax": 5,
+      "by_tier": {
+        "A_grz": {
+          "n": 59,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 59,
+            "median": 0.7790381908416748,
+            "nmad": 0.29285484294891356,
+            "mean": 0.7772196367130442
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 59,
+            "median": -0.028151737524221954,
+            "nmad": 0.27995314286474354,
+            "mean": -0.05190796902995123
+          },
+          "standardized_residual": {
+            "n": 59,
+            "median": 0.15591998502501045,
+            "nmad": 1.154387095331481,
+            "mean": 0.1393171309153232
+          },
+          "approximate_pit_histogram_deciles": [
+            4,
+            5,
+            12,
+            1,
+            5,
+            4,
+            5,
+            7,
+            9,
+            7
+          ],
+          "approximate_pit_below_0p05": 0.0,
+          "approximate_pit_above_0p95": 0.06779661016949153
+        },
+        "B_grzW1": {
+          "n": 171,
+          "negative_corrected_parallax": 4,
+          "observed_parallax_mas": {
+            "n": 171,
+            "median": 0.684623122215271,
+            "nmad": 0.26137370377779007,
+            "mean": 0.6855547395235265
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 171,
+            "median": 0.004605098551113795,
+            "nmad": 0.22925449953771787,
+            "mean": 0.0067813326909498175
+          },
+          "standardized_residual": {
+            "n": 171,
+            "median": -0.027660226792902382,
+            "nmad": 0.9042212949567171,
+            "mean": -0.004231466267582541
+          },
+          "approximate_pit_histogram_deciles": [
+            19,
+            14,
+            13,
+            19,
+            23,
+            15,
+            16,
+            17,
+            25,
+            10
+          ],
+          "approximate_pit_below_0p05": 0.06432748538011696,
+          "approximate_pit_above_0p95": 0.03508771929824561
+        },
+        "C_grzW1W2": {
+          "n": 377,
+          "negative_corrected_parallax": 1,
+          "observed_parallax_mas": {
+            "n": 377,
+            "median": 0.8665016293525696,
+            "nmad": 0.35480113316774364,
+            "mean": 0.9051140742252929
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 377,
+            "median": 0.030381977507012103,
+            "nmad": 0.23441963349999972,
+            "mean": 0.03655193077248774
+          },
+          "standardized_residual": {
+            "n": 377,
+            "median": -0.13979316669457692,
+            "nmad": 1.0430085329832013,
+            "mean": -0.10083342883291894
+          },
+          "approximate_pit_histogram_deciles": [
+            47,
+            40,
+            37,
+            35,
+            42,
+            37,
+            29,
+            40,
+            39,
+            31
+          ],
+          "approximate_pit_below_0p05": 0.0610079575596817,
+          "approximate_pit_above_0p95": 0.03713527851458886
+        }
+      },
+      "by_corrected_snr": {
+        "negative": {
+          "n": 5,
+          "negative_corrected_parallax": 5,
+          "observed_parallax_mas": {
+            "n": 5,
+            "median": -0.09306249022483826,
+            "nmad": 0.11095652181878686,
+            "mean": -0.09664642438292503
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 5,
+            "median": 0.623506591184304,
+            "nmad": 0.12511858470750115,
+            "mean": 0.6220046059412483
+          },
+          "standardized_residual": {
+            "n": 5,
+            "median": -1.8942261433257772,
+            "nmad": 0.33930278990558344,
+            "mean": -2.014750931665216
+          },
+          "approximate_pit_histogram_deciles": [
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "approximate_pit_below_0p05": 0.8,
+          "approximate_pit_above_0p95": 0.0
+        },
+        "zero_to_five": {
+          "n": 354,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 354,
+            "median": 0.6446289718151093,
+            "nmad": 0.2376781910866499,
+            "mean": 0.6556878427706533
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 354,
+            "median": 0.03570258746529453,
+            "nmad": 0.23972013413364116,
+            "mean": 0.036234367358472026
+          },
+          "standardized_residual": {
+            "n": 354,
+            "median": -0.1507513244313609,
+            "nmad": 1.0132039416592604,
+            "mean": -0.13965506116938184
+          },
+          "approximate_pit_histogram_deciles": [
+            43,
+            39,
+            40,
+            34,
+            39,
+            34,
+            28,
+            38,
+            40,
+            19
+          ],
+          "approximate_pit_below_0p05": 0.05649717514124294,
+          "approximate_pit_above_0p95": 0.01977401129943503
+        },
+        "five_to_ten": {
+          "n": 248,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 248,
+            "median": 1.0330469012260437,
+            "nmad": 0.2889969689369202,
+            "mean": 1.0995304870509333
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 248,
+            "median": -0.01590525416631422,
+            "nmad": 0.2130241995153209,
+            "mean": -0.016370457483839373
+          },
+          "standardized_residual": {
+            "n": 248,
+            "median": 0.06879532869112083,
+            "nmad": 1.0201763609203545,
+            "mean": 0.1169095711069527
+          },
+          "approximate_pit_histogram_deciles": [
+            23,
+            19,
+            22,
+            21,
+            31,
+            22,
+            22,
+            26,
+            33,
+            29
+          ],
+          "approximate_pit_below_0p05": 0.04032258064516129,
+          "approximate_pit_above_0p95": 0.06854838709677419
+        }
+      },
+      "all": {
+        "n": 607,
+        "negative_corrected_parallax": 5,
+        "observed_parallax_mas": {
+          "n": 607,
+          "median": 0.8073687553405762,
+          "nmad": 0.3088598592996597,
+          "mean": 0.830830024724099
+        },
+        "model_minus_observed_parallax_mas": {
+          "n": 607,
+          "median": 0.016019650115068673,
+          "nmad": 0.23941568942667507,
+          "mean": 0.019566912057023347
+        },
+        "standardized_residual": {
+          "n": 607,
+          "median": -0.05982464217652056,
+          "nmad": 1.0362205029199238,
+          "mean": -0.050276890737665544
+        },
+        "approximate_pit_histogram_deciles": [
+          70,
+          59,
+          62,
+          55,
+          70,
+          56,
+          50,
+          64,
+          73,
+          48
+        ],
+        "approximate_pit_below_0p05": 0.05601317957166392,
+        "approximate_pit_above_0p95": 0.039538714991762765
+      }
+    },
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "field": "cold_v4_final_ra000_010_dec_m035_m025",
+      "deduplication": {
+        "matched_unambiguous_rows": 0,
+        "unique_spectra": 0
+      },
+      "qualified_cool_dwarf_in_grz_base": 0,
+      "weak_clean_routed": 0,
+      "raw_negative_parallax": 0,
+      "corrected_negative_parallax": 0,
+      "by_tier": {},
+      "by_corrected_snr": {}
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "field": "cold_v4_final_ra150_160_dec_p020_p030",
+      "deduplication": {
+        "matched_unambiguous_rows": 4605,
+        "unique_spectra": 4570,
+        "duplicate_Legacy_rows_removed": 35
+      },
+      "qualified_cool_dwarf_in_grz_base": 984,
+      "weak_clean_routed": 202,
+      "raw_negative_parallax": 1,
+      "corrected_negative_parallax": 1,
+      "by_tier": {
+        "A_grz": {
+          "n": 9,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 9,
+            "median": 0.9247567057609558,
+            "nmad": 0.29197830244302747,
+            "mean": 1.003731045458052
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 9,
+            "median": 0.0718954329816226,
+            "nmad": 0.1084507886655756,
+            "mean": 0.17466442374939734
+          },
+          "standardized_residual": {
+            "n": 9,
+            "median": -0.21701323288690746,
+            "nmad": 0.6292988064384237,
+            "mean": -0.34217437999996797
+          },
+          "approximate_pit_histogram_deciles": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            0,
+            0
+          ],
+          "approximate_pit_below_0p05": 0.1111111111111111,
+          "approximate_pit_above_0p95": 0.0
+        },
+        "B_grzW1": {
+          "n": 48,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 48,
+            "median": 0.7543755173683167,
+            "nmad": 0.2817643388628959,
+            "mean": 0.7650405855771775
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 48,
+            "median": 0.06782304363682656,
+            "nmad": 0.17740271085050158,
+            "mean": 0.058521012916226876
+          },
+          "standardized_residual": {
+            "n": 48,
+            "median": -0.3295512817429084,
+            "nmad": 0.8262307007562002,
+            "mean": -0.18679668799697868
+          },
+          "approximate_pit_histogram_deciles": [
+            6,
+            4,
+            5,
+            10,
+            2,
+            6,
+            4,
+            4,
+            3,
+            4
+          ],
+          "approximate_pit_below_0p05": 0.08333333333333333,
+          "approximate_pit_above_0p95": 0.041666666666666664
+        },
+        "C_grzW1W2": {
+          "n": 145,
+          "negative_corrected_parallax": 1,
+          "observed_parallax_mas": {
+            "n": 145,
+            "median": 0.847926139831543,
+            "nmad": 0.30487632336616516,
+            "mean": 0.8988727487623691
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 145,
+            "median": 0.03810353538618638,
+            "nmad": 0.21183181292596498,
+            "mean": 0.04223199830773972
+          },
+          "standardized_residual": {
+            "n": 145,
+            "median": -0.16535750688012374,
+            "nmad": 1.109788932116004,
+            "mean": -0.17014917341138813
+          },
+          "approximate_pit_histogram_deciles": [
+            23,
+            16,
+            12,
+            14,
+            16,
+            18,
+            9,
+            11,
+            10,
+            16
+          ],
+          "approximate_pit_below_0p05": 0.09655172413793103,
+          "approximate_pit_above_0p95": 0.05517241379310345
+        }
+      },
+      "by_corrected_snr": {
+        "negative": {
+          "n": 1,
+          "negative_corrected_parallax": 1,
+          "observed_parallax_mas": {
+            "n": 1,
+            "median": -0.006561797112226486,
+            "nmad": 0.0,
+            "mean": -0.006561797112226486
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 1,
+            "median": 0.6835633265844874,
+            "nmad": 0.0,
+            "mean": 0.6835633265844874
+          },
+          "standardized_residual": {
+            "n": 1,
+            "median": -3.465704532466216,
+            "nmad": 0.0,
+            "mean": -3.465704532466216
+          },
+          "approximate_pit_histogram_deciles": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "approximate_pit_below_0p05": 1.0,
+          "approximate_pit_above_0p95": 0.0
+        },
+        "zero_to_five": {
+          "n": 77,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 77,
+            "median": 0.5947117209434509,
+            "nmad": 0.22647724678516387,
+            "mean": 0.6006650964112638
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 77,
+            "median": 0.09761516404917281,
+            "nmad": 0.2002583421578686,
+            "mean": 0.11055691976311384
+          },
+          "standardized_residual": {
+            "n": 77,
+            "median": -0.5120650932488332,
+            "nmad": 0.9287613194522273,
+            "mean": -0.5117192489249911
+          },
+          "approximate_pit_histogram_deciles": [
+            18,
+            13,
+            6,
+            11,
+            7,
+            7,
+            5,
+            3,
+            4,
+            3
+          ],
+          "approximate_pit_below_0p05": 0.12987012987012986,
+          "approximate_pit_above_0p95": 0.012987012987012988
+        },
+        "five_to_ten": {
+          "n": 124,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 124,
+            "median": 0.9653311669826508,
+            "nmad": 0.27011401180028916,
+            "mean": 1.0471566569420598
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 124,
+            "median": -0.003757506868225291,
+            "nmad": 0.19056227506194426,
+            "mean": 0.010549855161302203
+          },
+          "standardized_residual": {
+            "n": 124,
+            "median": 0.01586725917093505,
+            "nmad": 0.9540942826065992,
+            "mean": 0.04960198476761755
+          },
+          "approximate_pit_histogram_deciles": [
+            11,
+            7,
+            13,
+            14,
+            12,
+            18,
+            10,
+            13,
+            9,
+            17
+          ],
+          "approximate_pit_below_0p05": 0.06451612903225806,
+          "approximate_pit_above_0p95": 0.07258064516129033
+        }
+      },
+      "all": {
+        "n": 202,
+        "negative_corrected_parallax": 1,
+        "observed_parallax_mas": {
+          "n": 202,
+          "median": 0.8290513753890991,
+          "nmad": 0.2924175889492035,
+          "mean": 0.8717429509275768
+        },
+        "model_minus_observed_parallax_mas": {
+          "n": 202,
+          "median": 0.0391123872760174,
+          "nmad": 0.1965981480584847,
+          "mean": 0.05200310984329567
+        },
+        "standardized_residual": {
+          "n": 202,
+          "median": -0.18430394509069298,
+          "nmad": 0.9778069591630216,
+          "mean": -0.18176950786389093
+        },
+        "approximate_pit_histogram_deciles": [
+          30,
+          20,
+          19,
+          25,
+          19,
+          25,
+          15,
+          16,
+          13,
+          20
+        ],
+        "approximate_pit_below_0p05": 0.09405940594059406,
+        "approximate_pit_above_0p95": 0.04950495049504951
+      }
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "field": "cold_v4_final_ra220_230_dec_p020_p030",
+      "deduplication": {
+        "matched_unambiguous_rows": 6534,
+        "unique_spectra": 6456,
+        "duplicate_Legacy_rows_removed": 78
+      },
+      "qualified_cool_dwarf_in_grz_base": 1187,
+      "weak_clean_routed": 222,
+      "raw_negative_parallax": 0,
+      "corrected_negative_parallax": 0,
+      "by_tier": {
+        "A_grz": {
+          "n": 18,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 18,
+            "median": 0.849658191204071,
+            "nmad": 0.3259304392576218,
+            "mean": 0.8524713135427899
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 18,
+            "median": 0.009555423765508164,
+            "nmad": 0.28876049798733555,
+            "mean": 0.02970523922120221
+          },
+          "standardized_residual": {
+            "n": 18,
+            "median": -0.05801253930900725,
+            "nmad": 1.0946584411994247,
+            "mean": -0.1816128224326335
+          },
+          "approximate_pit_histogram_deciles": [
+            2,
+            3,
+            1,
+            2,
+            2,
+            1,
+            3,
+            1,
+            3,
+            0
+          ],
+          "approximate_pit_below_0p05": 0.1111111111111111,
+          "approximate_pit_above_0p95": 0.0
+        },
+        "B_grzW1": {
+          "n": 61,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 61,
+            "median": 0.5846301317214966,
+            "nmad": 0.23703382025957107,
+            "mean": 0.6167099492960288
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 61,
+            "median": 0.05120134914985286,
+            "nmad": 0.19998746449720883,
+            "mean": 0.03542014892095447
+          },
+          "standardized_residual": {
+            "n": 61,
+            "median": -0.3058778058256886,
+            "nmad": 1.0046923760643163,
+            "mean": -0.2280141192505651
+          },
+          "approximate_pit_histogram_deciles": [
+            9,
+            8,
+            5,
+            9,
+            8,
+            2,
+            8,
+            3,
+            2,
+            7
+          ],
+          "approximate_pit_below_0p05": 0.08196721311475409,
+          "approximate_pit_above_0p95": 0.03278688524590164
+        },
+        "C_grzW1W2": {
+          "n": 143,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 143,
+            "median": 0.7642532587051392,
+            "nmad": 0.2563238089084625,
+            "mean": 0.7970848470092653
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 143,
+            "median": 0.0342359729935966,
+            "nmad": 0.1826092227540888,
+            "mean": 0.03470040414292721
+          },
+          "standardized_residual": {
+            "n": 143,
+            "median": -0.197970367497676,
+            "nmad": 1.0093435965357815,
+            "mean": -0.19347046108914012
+          },
+          "approximate_pit_histogram_deciles": [
+            23,
+            15,
+            12,
+            14,
+            22,
+            10,
+            14,
+            11,
+            13,
+            9
+          ],
+          "approximate_pit_below_0p05": 0.09090909090909091,
+          "approximate_pit_above_0p95": 0.03496503496503497
+        }
+      },
+      "by_corrected_snr": {
+        "negative": {
+          "n": 0
+        },
+        "zero_to_five": {
+          "n": 105,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 105,
+            "median": 0.517595112323761,
+            "nmad": 0.20965852088928222,
+            "mean": 0.5619419242654528
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 105,
+            "median": 0.06735576995858383,
+            "nmad": 0.2088654752793274,
+            "mean": 0.06760730606134083
+          },
+          "standardized_residual": {
+            "n": 105,
+            "median": -0.35788967531634863,
+            "nmad": 0.954803191578471,
+            "mean": -0.38205383492822076
+          },
+          "approximate_pit_histogram_deciles": [
+            20,
+            15,
+            8,
+            15,
+            16,
+            6,
+            8,
+            4,
+            5,
+            8
+          ],
+          "approximate_pit_below_0p05": 0.10476190476190476,
+          "approximate_pit_above_0p95": 0.009523809523809525
+        },
+        "five_to_ten": {
+          "n": 117,
+          "negative_corrected_parallax": 0,
+          "observed_parallax_mas": {
+            "n": 117,
+            "median": 0.8519518375396729,
+            "nmad": 0.2425654191613197,
+            "mean": 0.9225899284211998
+          },
+          "model_minus_observed_parallax_mas": {
+            "n": 117,
+            "median": 0.0024332585039434917,
+            "nmad": 0.17542674829041965,
+            "mean": 0.004775333727843305
+          },
+          "standardized_residual": {
+            "n": 117,
+            "median": -0.019563609121540815,
+            "nmad": 0.9854442680309032,
+            "mean": -0.0404146610799635
+          },
+          "approximate_pit_histogram_deciles": [
+            14,
+            11,
+            10,
+            10,
+            16,
+            7,
+            17,
+            11,
+            13,
+            8
+          ],
+          "approximate_pit_below_0p05": 0.07692307692307693,
+          "approximate_pit_above_0p95": 0.05128205128205128
+        }
+      },
+      "all": {
+        "n": 222,
+        "negative_corrected_parallax": 0,
+        "observed_parallax_mas": {
+          "n": 222,
+          "median": 0.724957138299942,
+          "nmad": 0.29198691850304603,
+          "mean": 0.7520131696988871
+        },
+        "model_minus_observed_parallax_mas": {
+          "n": 222,
+          "median": 0.03963060224865028,
+          "nmad": 0.1918473838045309,
+          "mean": 0.034493158480173224
+        },
+        "standardized_residual": {
+          "n": 222,
+          "median": -0.20243014355398614,
+          "nmad": 1.0092763668227813,
+          "mean": -0.2020007568190041
+        },
+        "approximate_pit_histogram_deciles": [
+          34,
+          26,
+          18,
+          25,
+          32,
+          13,
+          25,
+          15,
+          18,
+          16
+        ],
+        "approximate_pit_below_0p05": 0.09009009009009009,
+        "approximate_pit_above_0p95": 0.03153153153153153
+      }
+    }
+  }
+}
