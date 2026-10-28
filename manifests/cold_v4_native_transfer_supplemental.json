@@ -1,0 +1,96 @@
+{
+  "role": "supplemental_development",
+  "registration_sha256": "4ab8d7448b54ea39880fdf74ca3fdc46e0b1da4c9bc08b2a6888c2ea679b2557",
+  "parent_registration_sha256": "2a32f23eb8bc0ee6ebe1999819acf3be929c15e67d51f99d44b3445bee5f3b75",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "compute_host": "nid004429",
+  "frozen_policy": "clean_wise_snr_20",
+  "fields": [
+    {
+      "field": "native_supp_dev_ra180_190_dec_p025_p035",
+      "bounds_deg": [
+        180,
+        25,
+        190,
+        35
+      ],
+      "strict_anchor_count": 6815,
+      "strict_cold_count": 0,
+      "selected_count": 0,
+      "acceptance_of_strict_cold": 0.0,
+      "selected_source_id_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tier_counts": {
+        "A_grz": 0,
+        "B_grzW1": 0,
+        "C_grzW1W2": 0
+      },
+      "distance_modulus_residual": {
+        "n": 0
+      },
+      "distance_relative_residual": {
+        "n": 0
+      },
+      "absolute_modulus_error_gt_0p5": 0,
+      "sky_block_bootstrap": null,
+      "selected_properties": {
+        "p_corr_mas": {
+          "n": 0
+        },
+        "gaia_bp_rp": {
+          "n": 0
+        },
+        "r0": {
+          "n": 0
+        },
+        "source_ag": {
+          "n": 0
+        }
+      },
+      "by_group": {
+        "parallax_1_to_2_mas": {
+          "n": 0
+        },
+        "parallax_ge_2_mas": {
+          "n": 0
+        },
+        "bp_rp_1p3_to_1p8": {
+          "n": 0
+        },
+        "bp_rp_1p8_to_2p3": {
+          "n": 0
+        },
+        "bp_rp_2p3_to_2p8": {
+          "n": 0
+        },
+        "bp_rp_2p8_to_3p5": {
+          "n": 0
+        },
+        "r0_lt_17": {
+          "n": 0
+        },
+        "r0_17_to_18": {
+          "n": 0
+        },
+        "r0_ge_18": {
+          "n": 0
+        },
+        "ag_le_0p05": {
+          "n": 0
+        },
+        "ag_gt_0p05": {
+          "n": 0
+        },
+        "A_grz": {
+          "n": 0
+        },
+        "B_grzW1": {
+          "n": 0
+        },
+        "C_grzW1W2": {
+          "n": 0
+        }
+      }
+    }
+  ]
+}

@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Native development scoring jobs 60458064 and 60458386 completed on
+  allocated CPUs (27 s and 24 s). RA60–70 selects 6,594/6,821 strict
+  cold anchors, median Δμ −0.0059 mag, NMAD 0.2056, nside64 bootstrap95
+  median [−0.0139,+0.0023]. RA235–245 selects 9/10 cold anchors from
+  only 17 strict anchors; all counts are retained. Supplemental RA180–190
+  unexpectedly has 6,815 strict anchors but zero cold anchors. Its Gaia
+  CMD contains 6,813 finite anchor points, so this needs a frozen-rule
+  cutflow audit; added allocated-node diagnostic script. The two reserved
+  new final fields have been constructed but their residuals remain unread.
+  Next: identify the supplemental failure before any final scoring.
+
 - Four-field array 60458047 entered NERSC debug compute. The two
   preregistered development scans completed in 3m52s/3m45s: RA60–70 has
   9,431 strict anchors, RA235–245 only 17 after the unchanged E(B-V)<0.03

@@ -32,6 +32,12 @@ unchanged E(B-V)<0.03 cut. It remains in the result. A separate amendment,
 an additional development field before reading its source rows; the two
 reserved final fields remain fixed.
 
+Development scoring: RA60–70 has 6,594 selected cold anchors and median
+residual −0.006 mag; RA235–245 has nine selected sources. The supplemental
+RA180–190 field has 6,815 strict Gaia anchors but zero cold anchors; audit
+the exact frozen-rule cutflow before using it. Do not inspect the reserved
+final-field residuals until the development diagnosis is recorded.
+
 1. Verify DR11 MW transmission, AB fluxes, all five dereddened magnitudes,
    Gaia `M_g` labels and cross-field dust handling in noise injection.
 2. Fix weak-parallax PIT selection bias. Build an explicit forest-weighted
