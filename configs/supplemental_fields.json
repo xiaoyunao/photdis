@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "reason": "The preregistered RA230-240/Dec5-15 field yielded 25 cold strict anchors because E(B-V)<0.03 left 11,492 of 4,647,352 PSF rows. Add two spatially independent high-latitude fields for a useful count while retaining every original final-field result.",
+  "selection_before_source_processing": "Chosen from sky coordinates and existence of DR11 south sweep files. No source rows, Gaia labels, spectroscopy or residuals from these supplemental fields were inspected before registration.",
+  "minimum_useful_cold_anchor_count_per_field": 200,
+  "reporting_rule": "Report all registered final and supplemental fields, including fields below 200 anchors; do not drop a field based on its measured performance.",
+  "method_manifest": "manifests/conditional_prepared_v2.json",
+  "fields": [
+    {
+      "name": "supp_final_ra170_180_dec_p015_p025",
+      "role": "supplemental_untouched_final_test",
+      "bounds_deg": [170, 15, 180, 25],
+      "sweep_files": ["sweep-170p015-175p020.fits", "sweep-170p020-175p025.fits", "sweep-175p015-180p020.fits", "sweep-175p020-180p025.fits"]
+    },
+    {
+      "name": "supp_final_ra035_045_dec_m035_m025",
+      "role": "supplemental_untouched_final_test",
+      "bounds_deg": [35, -35, 45, -25],
+      "sweep_files": ["sweep-035m035-040m030.fits", "sweep-035m030-040m025.fits", "sweep-040m035-045m030.fits", "sweep-040m030-045m025.fits"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "supp_final_ra170_180_dec_p015_p025",
+  "bounds_deg": [170, 15, 180, 25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-170p015-175p020.fits", "sweep-170p020-175p025.fits", "sweep-175p015-180p020.fits", "sweep-175p020-180p025.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_supp_ra170_180_v1",
+  "figure_dir": "figures/field_supp_ra170_180",
+  "manifest_path": "manifests/field_supp_ra170_180.json"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "supp_final_ra035_045_dec_m035_m025",
+  "bounds_deg": [35, -35, 45, -25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-035m035-040m030.fits", "sweep-035m030-040m025.fits", "sweep-040m035-045m030.fits", "sweep-040m030-045m025.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_supp_ra035_045_v1",
+  "figure_dir": "figures/field_supp_ra035_045",
+  "manifest_path": "manifests/field_supp_ra035_045.json"
+}

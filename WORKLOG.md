@@ -2,6 +2,14 @@
 
 ## 2026-10-28
 
+- Final-field sample-size diagnosis: RA230–240/Dec5–15 retains only 11,492
+  of 4,647,352 PSF rows after the preexisting E(B−V)<0.03 cut, leaving 47
+  strict Gaia anchors and 25 cold strict anchors. The result remains a final
+  field. Before reading new source rows, registered two supplemental high-
+  latitude final fields RA170–180/Dec15–25 and RA35–45/Dec−35–−25, with a
+  minimum useful count of 200 and a rule to report every field. All eight
+  DR11 sweep files exist. Next: sync registration, then process on compute.
+
 - Type audit extension: added `--final` mode using the same frozen color and
   support rule and identical DESI class definitions in the two preregistered
   final fields. It writes a separate final manifest and figure after those

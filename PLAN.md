@@ -34,6 +34,10 @@ conditional label rates as candidate purity.
    RA 205–215/Dec −10–0 field is development calibration; RA 230–240/Dec
    5–15 and RA 50–60/Dec −30–−20 are untouched final tests. The previous
    north/south fields now count as development evidence for any new method.
+   After the first final field yielded only 25 cold anchors due the fixed
+   E(B−V) cut, register two additional high-latitude fields in
+   `configs/supplemental_fields.json` before reading their source rows.
+   Evaluate and report all four final fields regardless of their counts.
 10. Build a revised noise experiment on the identical anchor stars, identical
     target noise rows and one shared five-band realization for A/B/C. Draw
     noise from a grz mother pool including weak WISE detections; quantify
