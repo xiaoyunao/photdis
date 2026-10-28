@@ -2,6 +2,22 @@
 
 ## 2026-10-28
 
+- Task: User approved Pro step 1 sample/coverage work and public GitHub visibility;
+  training remains excluded.
+- Files changed: current scope/plan, stage1 config and source-selection modules.
+- Commands run: status/branch/fetch/history recovery; gh visibility update;
+  representative DR11/Gaia/catalog header reads; primary-source literature checks.
+- Key findings: GitHub is public; actual DR11 Gaia REF_CAT is G3; measured optical
+  IVAR must be positive (some saturated Gaia stars use transformed flux with IVAR0).
+  A 1,600-file/1.80-TB DR11 south source inventory supports a full eligible-sky
+  scan, not the old tiny-field selection. Global ANYMASK/RCHISQ or color-box cuts
+  would alter label coverage; retain diagnostics with explicit clean subsets.
+- Validation result: schemas and provisional thresholds reviewed; compute job
+  60424566 allocated on nid200018 for catalog processing.
+- Remaining issues: build actual tables, freeze test groups and quantify coverage.
+- Next step: finish modules, project spectroscopy/references and scan eligible tiles.
+
+
 - Task: Complete archival/reset and the program/figure synchronization checkpoint.
 - Files changed: `.gitignore`, `.gitattributes`, `AGENTS.md`, `README.md`,
   `PLAN.md`, `WORKLOG.md`, archive/source/sync docs, `scripts/sync.py`,

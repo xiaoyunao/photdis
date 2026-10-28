@@ -1,7 +1,8 @@
 # Project instructions
 
-- Current checkpoint: infrastructure only. Do not build scientific samples or
-  train models until the user approves the next milestone.
+- Current checkpoint: Pro step 1 is authorized: build Gaia anchor/extended and
+  spectroscopy samples, lock external/spatial test groups, and audit coverage.
+  Stop for user review after this step. Do not train models.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,

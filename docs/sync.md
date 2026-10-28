@@ -2,7 +2,7 @@
 
 The local checkout coordinates two Git remotes:
 
-- `origin`: `https://github.com/xiaoyunao/photdis.git` (private)
+- `origin`: `https://github.com/xiaoyunao/photdis.git` (public)
 - `nersc`: `yunao@perlmutter.nersc.gov:/pscratch/sd/y/yunao/photdis_pipeline`
 
 NERSC receives commits over the user's existing SSH authentication. It does not
@@ -69,7 +69,7 @@ connection timeout. If NERSC authentication expires, run `sshproxy -u yunao`
 interactively, enter the password/OTP yourself, then retry. No credentials are
 stored in this repository or sent to NERSC for GitHub access.
 
-To resume on another machine, clone the private GitHub repository, configure the
+To resume on another machine, clone the GitHub repository, configure the
 `nersc` remote above, inspect status/history/WORKLOG/PLAN, and fetch before editing.
 Check clean fast-forward relationships before syncing. Do not replace a checkout
 that has uncommitted work or use force-push to resolve a disagreement.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_name": "stage1_v1",
+  "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+  "gaia_root": "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix",
+  "reference_dir": "data/reference",
+  "output_dir": "data/stage1_v1",
+  "desi_path": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits",
+  "apogee_path": "/global/cfs/cdirs/sdss/data/sdss/dr17/apogee/spectro/aspcap/dr17/synspec_rev1/allStar-dr17-synspec_rev1.fits",
+  "sky": {"abs_b_min": 30.0, "ebv_max": 0.03},
+  "photometry": {
+    "min_snr": 5.0,
+    "nobs_min": 1,
+    "fracmasked_max": 0.4,
+    "fracin_min": 0.7,
+    "fracflux_max": 0.5,
+    "wise_fracflux_max": 1.0,
+    "w1_snr_min": 5.0,
+    "w2_snr_min": 5.0,
+    "optical_sigma_max": 0.03,
+    "w1_sigma_max": 0.05,
+    "w2_sigma_max": 0.10,
+    "clean_reject_maskbits": [2, 3, 4, 5, 6, 7, 10],
+    "require_wisemask_zero": true
+  },
+  "coverage_reference_modulus": 128,
+  "spectroscopy_match_radius_arcsec": 1.0,
+  "split": {"nside": 8, "seed": 20261028, "train_fraction": 0.70, "validation_fraction": 0.15}
+}
