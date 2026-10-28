@@ -26,7 +26,7 @@ GOLD = "#A58525"
 PURPLE = "#80629B"
 GRAY = "#73777B"
 SPLITS = [(0, "Train", BLUE), (1, "Validation", GOLD),
-          (2, "Spatial test", PURPLE), (3, "External reserved", ORANGE)]
+          (2, "Spatial test", PURPLE), (3, "External / quarantine", ORANGE)]
 MAX_SCATTER = 200_000
 
 
@@ -89,14 +89,16 @@ def plot_counts(summary: dict, output_dir: Path) -> tuple[str, dict]:
         [("anchor", "High-quality Gaia anchors"),
          ("extended", "Extended Gaia sample"),
          ("spectroscopy", "Spectroscopic auxiliary sample"),
-         ("external_reserved", "External reserved sample"),
+         ("external_reserved", "External / identity-reserved sample"),
          ("negative_parallax", "Negative parallaxes")],
     ]
     fig, axes = plt.subplots(1, 2, figsize=(13.2, 5.4))
-    fig.suptitle("Stage 1 — full catalog counts", fontsize=16)
+    fig.suptitle("Stage 1 — audited sample counts", fontsize=16)
     plotted = {}
-    for ax, group, title in zip(axes, groups, ["Input selection", "Sample layers (may overlap)"]):
-        entries = [(key, label, int(counts[key])) for key, label in group if key in counts]
+    for index, (ax, group, title) in enumerate(zip(axes, groups,
+            ["Input selection (before deduplication)", "Final sample layers (may overlap)"])):
+        source = summary.get("pre_dedup_counts", counts) if index == 0 else counts
+        entries = [(key, label, int(source[key])) for key, label in group if key in source]
         if not entries:
             raise ValueError(f"No supported summary count keys for {title}")
         if any(value < 0 for _, _, value in entries):
@@ -121,8 +123,8 @@ def plot_counts(summary: dict, output_dir: Path) -> tuple[str, dict]:
         ax.grid(axis="x", alpha=0.18)
         ax.set_xlabel("Rows / sources, as recorded in summary.json (log scale)")
         ax.set_title(title, fontsize=12)
-    caption = ("Exact counts from the complete processing audit; no figure downsampling. Input stages follow the recorded selection.\n"
-               "Output layers and negative-parallax counts are not additive. Zero counts, if present, are labeled 0 at the axis floor.")
+    caption = ("Exact processing-audit counts; no figure downsampling. Left: input rows before identity deduplication. Right: final role counts.\n"
+               "Output roles overlap; external reservations include identity quarantine, not only physical reference objects. Zero counts are labeled 0.")
     return save_figure(fig, output_dir, "01_sample_counts.png", caption), plotted
 
 

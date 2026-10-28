@@ -39,3 +39,41 @@ Read Git history, [WORKLOG.md](WORKLOG.md), then [PLAN.md](PLAN.md) when resumin
 The previous project is preserved outside the active directories; see
 [archive locations](docs/archives.json). Its last commit was
 `f846aee9ce0ce39a5b28f48801b77b29506a0ff1`; the new repository has a fresh history.
+
+## Stage 1 operation
+
+Read [sample definitions](docs/stage1_selection.md) before interpreting outputs.
+The fixed configuration is [stage1.json](configs/stage1.json); data products live
+under `data/stage1_v1/` on NERSC. `parent` is the retained audit pool, not every
+optical object. Roles overlap; always select a `partition` before future fitting.
+
+Inside an allocated CPU environment on NERSC, from the checkout:
+
+```bash
+source /global/common/software/desi/desi_environment.sh main
+export PYTHONPATH="$PWD/src:$PWD/.deps"
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+
+# For a fresh run only. Published reference files listed in the reference
+# manifest must already be downloaded to data/reference under their exact names.
+python -m photdis.holdouts prepare --reference-dir data/reference
+python -m photdis.holdouts validate --reference-dir data/reference
+python scripts/prepare_stage1.py
+
+# Scan resumes only matching code/config/reference/input signatures.
+python scripts/build_stage1.py scan --workers 32
+python scripts/build_stage1.py finalize
+python scripts/validate_stage1.py --run-dir data/stage1_v1
+python scripts/plot_stage1.py --run-dir data/stage1_v1 \
+  --output-dir figures/stage1 --manifest-path manifests/stage1_plot_manifest.json
+```
+
+Spectroscopy preparation and table finalization refuse to overwrite existing products. A changed
+scientific configuration or processing module requires a new output directory.
+`--limit` on scan is only a recorded I/O smoke test, never the final coverage run.
+Normalized references and their source hashes are listed in
+[the reference manifest](manifests/holdout_reference_manifest.json).
+
+Local regression checks use `python3 -m unittest discover -s tests -v` with
+NumPy, fitsio, healpy and SciPy available. They exercise synthetic measurements
+and identities; only the allocated NERSC run produces scientific sample counts.

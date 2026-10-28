@@ -2,6 +2,17 @@
 
 ## 2026-10-28
 
+- Task: Start production scan after corrected real-data smoke.
+- Commands/results: 20 regression tests passed; corrected two-tile smoke on
+  nid200018 produced 585 anchors, 18,516 extended objects including 2,622 negative
+  parallaxes. Full scan launched with 32 workers over all 1,074 eligible tiles
+  (1,165,426,139,520 source bytes). These smoke counts are not final results.
+- Files: preparation/validation CLI, plotting denominator fixes, README runbook,
+  source-backed selection notes, independent validator regression tests.
+- Provenance: science code 78db981; production signature
+  cd69dcbb11232cc40c526f8ed91a4938cafa67cde00b101fc77c90a6f2c7529f.
+- Next: complete scan, finalize roles, independently validate and plot actual data.
+
 - Task: Correct actual Gaia FITS semantics before the full run.
 - Root cause: Gaia QSO/galaxy candidate fields are 5A strings `False`/`True`,
   whereas DUPLICATED_SOURCE is logical. Generic bool coercion made every nonempty
