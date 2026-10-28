@@ -28,7 +28,10 @@
   README/PLAN/WORKLOG; scripts/cold_baseline.py, src/photdis/quantile.py,
   three baseline figures and manifests. Remaining science checks: 95% interval
   undercoverage, bright-star recovery offset and few spectral test stars.
-- Next: synchronize final documentation and stop for user review.
+- Sync: final programs, manifests, documentation and figures match on local,
+  NERSC and public GitHub at 79edb89; allocation 60429237 was released.
+- Next: user review of the photometric selection and baseline before further
+  training or expansion.
 
 - Task: user extended the Pro review goal through a bounded cold-main-sequence
   baseline. The same-field audit completed on nid200059 in 441.8 s and synced.

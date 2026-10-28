@@ -21,7 +21,7 @@ baseline in the existing 10°×10° field for user review.
 7. Done: fit a simple color relation and quantile forests for three input tiers.
    Compare all tiers on identical stars and measure each tier's full coverage.
 8. Done: validate residuals, interval coverage and trends, and plot.
-9. Synchronize final report and project logs; stop for user review.
+9. Done: synchronize final report and project logs. Stop for user review.
 
 ## Scope
 
