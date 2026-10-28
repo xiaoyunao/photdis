@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Cold-v4 registration: local, origin and NERSC were clean and identical at
+  `9d2dbc0` after fetch. Added configs/cold_v4_fields.json and three runner
+  configs before reading any new final-field catalog rows. Training sources
+  are original non-test pilot plus the three former development fields;
+  RA205–215 is route calibration; new final fields are RA0–10/Dec−35–−25,
+  RA150–160/Dec20–30, RA220–230/Dec20–30. Their centers have Galactic
+  latitudes about −82.5°, +56.1°, +61.1°, and all 12 DR11 south sweep
+  filenames exist. Fixed tier forests, feature-matched support, fallback
+  routing and six-group split-CQR rules in registration. No new source row
+  or model residual was inspected. Next: validate configs, commit/sync, then
+  process fields on allocated NERSC CPUs.
+
 - Final v2 checkpoint: committed selected-tier metrics, candidate-demo manifest,
   report, figures, source and tests. Commit `fb9c09f` matched local, public
   GitHub and NERSC after SHA-256-confirmed generated manifests were moved to

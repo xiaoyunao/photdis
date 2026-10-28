@@ -1,0 +1,10 @@
+{
+  "name": "cold_v4_final_ra220_230_dec_p020_p030",
+  "bounds_deg": [220, 20, 230, 30],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-220p020-225p025.fits", "sweep-220p025-225p030.fits", "sweep-225p020-230p025.fits", "sweep-225p025-230p030.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cold_v4_ra220_230_v1",
+  "figure_dir": "figures/field_cold_v4_ra220_230",
+  "manifest_path": "manifests/field_cold_v4_ra220_230.json"
+}

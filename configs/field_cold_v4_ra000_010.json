@@ -1,0 +1,10 @@
+{
+  "name": "cold_v4_final_ra000_010_dec_m035_m025",
+  "bounds_deg": [0, -35, 10, -25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-000m035-005m030.fits", "sweep-000m030-005m025.fits", "sweep-005m035-010m030.fits", "sweep-005m030-010m025.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cold_v4_ra000_010_v1",
+  "figure_dir": "figures/field_cold_v4_ra000_010",
+  "manifest_path": "manifests/field_cold_v4_ra000_010.json"
+}

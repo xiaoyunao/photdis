@@ -68,13 +68,20 @@ conditional label rates as candidate purity.
     with color-box and support selection on all four registered final fields.
     Report the selected fraction and direct frozen-model distance performance,
     including Gaia-color diagnostics, before any claim about a selected catalog.
+16. In progress: register cold_v4 expanded strict-anchor training, an independent
+    route-calibration field and three new untouched 10° final fields before
+    reading their source rows. Fit the tier-specific forests, add feature-
+    matched support and calibrate the complete routing flow without a center
+    correction. Evaluate every registered final field and keep the original
+    c3637cb forests/results frozen.
 
 ## Scope
 
 Original field RA [0,10), Dec [-10,0) remains a locked baseline. Prior field
 roles and source/model hashes are in configs/followup_fields.json; new roles
 are in configs/next_fields.json. The strict optical and Gaia criteria remain
-the comparison standard. The full-footprint scan remains stopped.
+the comparison standard. Cold-v4 roles and fixed method are in
+configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 

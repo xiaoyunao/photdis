@@ -1,0 +1,10 @@
+{
+  "name": "cold_v4_final_ra150_160_dec_p020_p030",
+  "bounds_deg": [150, 20, 160, 30],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-150p020-155p025.fits", "sweep-150p025-155p030.fits", "sweep-155p020-160p025.fits", "sweep-155p025-160p030.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cold_v4_ra150_160_v1",
+  "figure_dir": "figures/field_cold_v4_ra150_160",
+  "manifest_path": "manifests/field_cold_v4_ra150_160.json"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "registered_utc_date": "2026-10-28",
+  "status": "frozen_before_new_final_field_rows_or_residuals",
+  "parent_frozen_baseline_commit": "c3637cbc88aed5cff05e400b607ed99d5d27214e",
+  "development_training": [
+    "original_pilot_non_test_nside64_cells",
+    "cal_ra140_150_dec_p005_p015",
+    "test_ra190_200_dec_p015_p025",
+    "test_ra320_330_dec_m025_m015"
+  ],
+  "independent_route_calibration": "dev_cal_ra205_215_dec_m010_p000",
+  "selection": {
+    "cold_anchor": "same strict optical, Gaia, cold CMD and external-reference exclusion used by conditional_calibration.py",
+    "forest": "three separate 300-tree quantile forests; min_samples_leaf=20, max_features=0.75, bootstrap=false, random_state=20261028",
+    "training": "fit each A/B/C tier on all eligible development-training anchors; also fit matched-common-training comparison forests for A/B/C",
+    "input_route": "optical color box from A training 1st to 99th percentiles; within each available tier require its own tenth-neighbor 95th-percentile support in that tier's colors; prefer C then B then A",
+    "support_feature_scales": {
+      "A_grz": [0.2, 0.15],
+      "B_grzW1": [0.2, 0.15, 0.2],
+      "C_grzW1W2": [0.2, 0.15, 0.2, 0.1]
+    },
+    "support_neighbors_other_training": 10,
+    "support_training_quantile": 0.95,
+    "calibration": "no center correction; six groups: development training r-z tertiles, then observed r median within each color group; split-CQR nonnegative 68% and 95% expansion on independent route-calibration field; fallback to global offset if a group has fewer than 80 calibration anchors",
+    "final_evaluation": "all three newly registered fields, no field removal by count or performance; report direct and calibrated metrics, color/depth bins, spatial blocks and complete-route acceptance"
+  },
+  "new_final_fields": [
+    {
+      "name": "cold_v4_final_ra000_010_dec_m035_m025",
+      "role": "untouched_final_test",
+      "bounds_deg": [0, -35, 10, -25],
+      "sweep_files": ["sweep-000m035-005m030.fits", "sweep-000m030-005m025.fits", "sweep-005m035-010m030.fits", "sweep-005m030-010m025.fits"]
+    },
+    {
+      "name": "cold_v4_final_ra150_160_dec_p020_p030",
+      "role": "untouched_final_test",
+      "bounds_deg": [150, 20, 160, 30],
+      "sweep_files": ["sweep-150p020-155p025.fits", "sweep-150p025-155p030.fits", "sweep-155p020-160p025.fits", "sweep-155p025-160p030.fits"]
+    },
+    {
+      "name": "cold_v4_final_ra220_230_dec_p020_p030",
+      "role": "untouched_final_test",
+      "bounds_deg": [220, 20, 230, 30],
+      "sweep_files": ["sweep-220p020-225p025.fits", "sweep-220p025-225p030.fits", "sweep-225p020-230p025.fits", "sweep-225p025-230p030.fits"]
+    }
+  ],
+  "field_choice_basis": "high Galactic latitude from sky coordinates and DR11 south sweep filename existence only; no new-field source rows or model residuals inspected before registration"
+}
