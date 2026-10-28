@@ -9,7 +9,7 @@ before scientific sample construction or training.
 ## Milestones
 
 1. Archive old work outside the active directories and recreate empty working
-   directories. Local complete; remote verification pending.
+   directories. Complete: local checksums and remote directory identities verified.
 2. Initialize this fresh repository and synchronize it with GitHub and NERSC.
 3. Verify code deployment and a tiny non-scientific figure round trip; verify
    matching committed versions and that catalog/data files are excluded.
@@ -17,7 +17,7 @@ before scientific sample construction or training.
 
 ## Outstanding Issues
 
-- Complete synchronization verification.
+- Complete synchronization verification and figure round trip.
 - LAMOST and independent cluster/wide-binary validation resources remain unverified.
 - SpecDis/SPDist require quality and identity joins before any scientific use;
   they are auxiliary comparisons with Gaia-related calibration, not independent
