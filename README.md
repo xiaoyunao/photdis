@@ -86,6 +86,11 @@ loading the DESI Python environment:
 python scripts/cold_candidate_demo.py --max-rows 2000
 ```
 
+`scripts/selected_tier_validation.py` checks the fixed color-box, two-color
+support and highest-available A/B/C route on all four registered final fields.
+Its metrics are in `manifests/selected_tier_validation_v1.json`; the original
+forest intervals do not yet achieve 95% coverage under this complete route.
+
 ## Stage 1 operation
 
 Read [sample definitions](docs/stage1_selection.md) before interpreting outputs.

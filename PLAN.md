@@ -64,7 +64,7 @@ conditional label rates as candidate purity.
     an independent field, with frozen-model median distances and explicit
     support, optical quality, depth and unverified-type flags. No class
     probability or calibrated interval is assigned.
-15. In progress: audit the fixed highest-available A/B/C routing rule together
+15. Complete: audit the fixed highest-available A/B/C routing rule together
     with color-box and support selection on all four registered final fields.
     Report the selected fraction and direct frozen-model distance performance,
     including Gaia-color diagnostics, before any claim about a selected catalog.
@@ -79,8 +79,10 @@ the comparison standard. The full-footprint scan remains stopped.
 ## Next Checkpoint
 
 The v2 center correction is rejected for release because its bias worsened in
-all three large final fields. Before any general catalog release, broaden the
-strict training anchors in underrepresented blue/red colors with a new frozen
-training identity set, repeat independent final-field validation, and study
-red-end interval undercoverage plus r=20–22 depth loss. Build a DESI/Gaia
-label sample with a known selection function before fitting type probabilities.
+all three large final fields. The complete photometric route's direct 95%
+coverage is only 91.5%–92.3% in the large final fields. Before any general
+catalog release, broaden the strict training anchors in underrepresented
+blue/red colors with a new frozen training identity set; calibrate the entire
+route and repeat independent final-field validation. Study red-end interval
+undercoverage and r=20–22 depth loss. Build a DESI/Gaia label sample with a
+known selection function before fitting type probabilities.

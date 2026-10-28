@@ -2,6 +2,18 @@
 
 ## 2026-10-28
 
+- Selected-tier independent validation: NERSC job 60434623 completed with
+  exit 0. Fixed route (color box, 2-D tenth-neighbor support, highest available
+  A/B/C) retained 23/25 cold anchors in the sparse final field and
+  8,138/8,644, 2,817/3,032, 7,911/8,442 in the three large fields. Their
+  direct forest 95% coverage was 91.3%, 91.5%, 92.0%, 92.3%; Gaia BP-RP
+  2.8–3.5 coverage in large fields was 87.4%, 88.8%, 89.3%. Stored counts,
+  spatial-block intervals and color diagnostics in
+  manifests/selected_tier_validation_v1.json. Direct intervals need
+  calibration of the complete routing flow; the previous CQR offsets were
+  fitted to tier-specific corrected predictions. Next: update final report,
+  sync and review.
+
 - Selected-tier job 60434418 stopped before writing its manifest. Root cause:
   `load_field` returns a dict of columns; `len(table)` counted 44 keys rather
   than 47 first-field rows. Changed prediction allocation to
