@@ -1,0 +1,15 @@
+{
+  "name": "cal_ra140_150_dec_p005_p015",
+  "bounds_deg": [140, 5, 150, 15],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-140p005-145p010.fits",
+    "sweep-140p010-145p015.fits",
+    "sweep-145p005-150p010.fits",
+    "sweep-145p010-150p015.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_cal_ra140_150_v1",
+  "figure_dir": "figures/field_cal_ra140_150",
+  "manifest_path": "manifests/field_cal_ra140_150.json"
+}

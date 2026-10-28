@@ -1,0 +1,15 @@
+{
+  "name": "test_ra190_200_dec_p015_p025",
+  "bounds_deg": [190, 15, 200, 25],
+  "base_config": "configs/stage1.json",
+  "sweep_files": [
+    "sweep-190p015-195p020.fits",
+    "sweep-190p020-195p025.fits",
+    "sweep-195p015-200p020.fits",
+    "sweep-195p020-200p025.fits"
+  ],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_test_ra190_200_v1",
+  "figure_dir": "figures/field_test_ra190_200",
+  "manifest_path": "manifests/field_test_ra190_200.json"
+}

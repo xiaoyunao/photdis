@@ -84,7 +84,8 @@ def make_plots(raw, phot, gaia, labels, spec, masks, flows, summary, output):
         ax.set_title(title)
         for yy, value in zip(y, numbers):
             ax.text(max(value, 1)*1.08, yy, f"{value:,}", va="center", fontsize=9)
-    fig.suptitle("Pilot field: RA 0–10 deg, Dec -10–0 deg")
+    r0,d0,r1,d1=summary["field"]["bounds_deg"]
+    fig.suptitle(f"Pilot field: RA {r0}–{r1} deg, Dec {d0}–{d1} deg")
     fig.tight_layout()
     path = output / "01_selection_counts.png"
     fig.savefig(path, dpi=170); plt.close(fig); files.append(str(path))
@@ -200,7 +201,7 @@ def main():
     start=time.time()
     bounds=task["bounds_deg"]
     names=task["sweep_files"]
-    assert len(names)==4 and bounds==[0,-10,10,0]
+    assert len(names)==4 and bounds[2]-bounds[0]==10 and bounds[3]-bounds[1]==10
     chunks=[]; sources=[]
     for name in names:
         path=Path(cfg["sweep_root"])/name
