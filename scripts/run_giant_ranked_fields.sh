@@ -3,7 +3,7 @@
 #SBATCH -q regular
 #SBATCH -N 1
 #SBATCH -c 4
-#SBATCH -t 02:00:00
+#SBATCH -t 00:30:00
 #SBATCH --mem=64G
 #SBATCH --array=0-2%2
 #SBATCH -o logs/giant_ranked_field_%A_%a.out

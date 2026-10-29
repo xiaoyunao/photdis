@@ -56,12 +56,18 @@ identified 227 prospective clean low-dust 4200–5000 K RVS giants in two
 southern cells (RA 200–210 and 190–200, Dec 0–10), and 59 in a separated
 northern cell (RA 210–220, Dec 40–50). These are **pre-DR11-match counts**.
 The three cells were registered as two development fields and one reserved
-field before inspection. Their actual clean Legacy/SPDist/SpecDis yield will
-determine whether a small cool-giant experiment is feasible. Existing cold
-v4 model, XD decision and historical final-test identities remain frozen.
+field before inspection. Their DR11 joint samples contain 225/59
+conservative 4200–5000 K giants in development/reserved roles; requiring
+clean grz and low dust leaves **173/11**. No high-S/N Gaia giant anchor
+appears in these fields. The actual SPDist/SpecDis quality-valid overlap is
+being audited separately. The 11-star clean reserved group is already too
+small to support a useful independent K-giant precision claim. Existing
+cold v4 model, XD decision and historical final-test identities remain
+frozen.
 
 Evidence: [model manifest](../manifests/giant_photo_baseline_v1.json),
 [field ranking](../manifests/desi_cool_giant_field_ranking_v1.json),
+[ranked joint evidence](../manifests/joint_giant_ranked_v1_evidence_v2.json),
 [diagnostic figure](../figures/giant_vac/03_warm_photo_baseline.png),
 [M3 color-neighborhood check](../manifests/giant_m3_color_diagnostic_v1.json),
 [M3 system audit](../manifests/giant_m3_reference_v1.json), and

@@ -2,9 +2,9 @@
 #SBATCH -C cpu
 #SBATCH -q shared
 #SBATCH -N 1
-#SBATCH -c 2
-#SBATCH -t 01:00:00
-#SBATCH --mem=20G
+#SBATCH -c 1
+#SBATCH -t 00:20:00
+#SBATCH --mem=6G
 #SBATCH -o logs/giant_ranked_vac_%j.out
 #SBATCH -e logs/giant_ranked_vac_%j.err
 

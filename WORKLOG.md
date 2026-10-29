@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- Completed DR11 ranked-field jobs 60488890_0/1 and 60489404_2, joint
+  identity job 60489405 and class-evidence job 60489406. The three fields
+  provide 131,958 unique DESI–Legacy records; 4200–5000 K conservative
+  giants number 225/59 in development/reserved, falling to 173/11 after
+  clean grz and low dust. No high-S/N Gaia giant anchors appear. Field 2
+  needed 16 minutes after the north path fix because of scratch I/O, so
+  future wrapper requests 30 minutes; VAC v3 peak RSS was 1.2 GB, so the
+  pending ranked VAC audit was resubmitted as job 60490902 with 6 GB/20
+  minutes. Files: three field and two joint manifests, PLAN, Slurm wrappers.
+  Commands: allocated Slurm array and dependent jobs, manifests and class
+  count checks. Validation: completed jobs exit 0; ranked VAC validity is
+  pending. Next: quantify true SPDist/SpecDis yield and decide cool-model
+  feasibility against a reserved sample of only 11 clean stars.
+
 - Ranked northern validation field 60488890_2 failed before any sweep read:
   `pilot_field.py` always used the stage1 south sweep root even when the
   registered field's four files exist only in DR11 north. Added a field-level

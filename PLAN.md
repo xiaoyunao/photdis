@@ -40,9 +40,11 @@ Complete a bounded correction and calibration round with these milestones:
    median −0.543 mag, so the cool branch needs further scale validation.
    The 4200–5000 K and cooler RGB samples are reported separately. A DESI-first ranking of
    untouched complete DR11 north/south 10° cells identified two southern
-   development cells and one separated northern reserved cell; actual DR11
-   and VAC yield remains to be measured. The existing eleven fields supply
-   only 42 SPDist labels at 4200–5000 K.
+   development cells and one separated northern reserved cell. Their DR11
+   joint samples have 225/59 conservative 4200–5000 K giants and 173/11
+   clean low-dust giants in development/reserved roles; the allocated
+   SpecDis/SPDist validity audit remains pending. The existing eleven fields
+   supply only 42 SPDist labels at 4200–5000 K.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous
