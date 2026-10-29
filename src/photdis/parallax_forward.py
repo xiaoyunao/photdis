@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import numpy as np
-from scipy.special import ndtr
+from scipy.special import ndtr, ndtri
 
 
 QUANTILE_LEVELS = np.array([.025, .16, .5, .84, .975])
@@ -68,7 +68,7 @@ def weighted_selected_parallax_check(observed_mas, error_mas, g0,
     result = {name: np.empty(len(observed), float) for name in (
         "model_parallax_mean_mas", "model_parallax_variance_mas2",
         "standardized_residual", "unconditional_pit", "selection_probability",
-        "selected_pit")}
+        "selected_pit", "cdf_at_zero", "cdf_at_five_sigma")}
     for start in range(0, len(observed), chunk_size):
         stop = min(len(observed), start + chunk_size)
         p = 10 ** ((mg[None, :] - g0[start:stop, None] + 10) / 5)
@@ -79,6 +79,9 @@ def weighted_selected_parallax_check(observed_mas, error_mas, g0,
                                   error[start:stop, None]), axis=1)
         cdf_t = np.sum(w * ndtr((threshold[start:stop, None] - p) /
                                   error[start:stop, None]), axis=1)
+        cdf_0 = np.sum(w * ndtr(-p / error[start:stop, None]), axis=1)
+        cdf_5 = np.sum(w * ndtr((5 * error[start:stop, None] - p) /
+                                  error[start:stop, None]), axis=1)
         if np.any(cdf_t <= 0):
             raise ValueError("Predicted selection probability underflowed to zero")
         result["model_parallax_mean_mas"][start:stop] = mean
@@ -88,4 +91,42 @@ def weighted_selected_parallax_check(observed_mas, error_mas, g0,
         result["unconditional_pit"][start:stop] = cdf_y
         result["selection_probability"][start:stop] = cdf_t
         result["selected_pit"][start:stop] = np.clip(cdf_y / cdf_t, 0, 1)
+        result["cdf_at_zero"][start:stop] = cdf_0
+        result["cdf_at_five_sigma"][start:stop] = cdf_5
     return result
+
+
+def interval_selected_pit(cdf_y, lower_cdf, upper_cdf):
+    """PIT conditional on the exact observed-parallax interval."""
+    y, lower, upper = (np.asarray(x, float) for x in (cdf_y, lower_cdf, upper_cdf))
+    if y.shape != lower.shape or y.shape != upper.shape:
+        raise ValueError("CDF arrays must align")
+    probability = upper - lower
+    if np.any(~np.isfinite(probability)) or np.any(probability <= 0):
+        raise ValueError("Selected interval has zero model probability")
+    return np.clip((y - lower) / probability, 0, 1), probability
+
+
+def selected_parallax_null_draws(error_mas, g0, training_mg, forest_weights,
+                                 seed, n_sim=1000, selection_snr_max=10):
+    """Simulate Gaussian measurements conditional on the observed SNR cut."""
+    error, g0, mg, weights = (np.asarray(x, float) for x in
+                              (error_mas, g0, training_mg, forest_weights))
+    if (error.ndim != 1 or g0.shape != error.shape
+            or weights.shape != (len(error), len(mg)) or np.any(error <= 0)
+            or np.any(weights < 0) or not np.allclose(weights.sum(axis=1), 1)):
+        raise ValueError("Invalid selected-parallax null inputs")
+    rng = np.random.default_rng(seed)
+    simulated = np.empty((n_sim, len(error)), float)
+    for i in range(len(error)):
+        parallax = 10 ** ((mg - g0[i] + 10) / 5)
+        upper_probability = ndtr(selection_snr_max - parallax / error[i])
+        selected_weights = weights[i] * upper_probability
+        total = selected_weights.sum()
+        if total <= 0:
+            raise ValueError("Selected null probability is zero")
+        components = rng.choice(len(mg), n_sim, p=selected_weights / total)
+        cdf_draw = rng.random(n_sim) * upper_probability[components]
+        simulated[:, i] = parallax[components] + error[i] * ndtri(
+            np.clip(cdf_draw, np.finfo(float).tiny, 1 - np.finfo(float).eps))
+    return simulated

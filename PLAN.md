@@ -2,13 +2,35 @@
 
 ## Current Objective
 
-Diagnose why the cold-v4 deep calibration and independent field differ in
-distance-modulus center and scatter, and correct the weak-parallax diagnostic.
-Keep the v4 forests, color box, support domain, WISE20 route, strict-anchor
-final fields and deep calibration/final v2 outputs frozen. Use the already
-inspected RA35–45 and RA170–180 fields only for cause analysis. If the cause
-supports a method change, preregister new calibration/final fields before
-examining their residuals. The full detailed objective is in the active goal.
+Implement the latest Pro review on the frozen cold-v4 baseline at `88f7330`.
+First repair crossover and weak-parallax statistics. Then audit A/B/C fallback
+reasons and test a quality-qualified infrared conflict flag on development
+labels and real candidates. Finally compare A/B/C on the same stars, match
+complete model inputs across fields and measure fixed-tier per-band PS1 and
+finite-perturbation responses. Use the results to choose a bounded v5
+candidate or retain v4. The active goal records detailed deliverables.
+
+## Current Round Milestones
+
+1. Recompute common-acceptance crossover centers, paired differences,
+   directly bootstrapped median differences and common-sample NMAD from the
+   existing per-source arrays. Keep full-flow acceptance and NMAD visible.
+2. Correct the weak-parallax subgroup PIT for each observed-SNR truncation
+   interval; simulate the same selected statistic to calibrate its center.
+3. Record each tier fallback reason and complete WISE quality evidence.
+   Compare a conflict marker and a conservative hold policy on development
+   dwarf, giant, metal-poor and unlabeled candidate samples. Assess boundary
+   stability under reported measurement errors.
+4. Force A/B/C on identical supported stars in the three native fields;
+   report Gaia residuals and within-star tier differences. Match same-tier
+   complete inputs and photometric quality across fields; separate label and
+   model-prediction contributions, with parallax/brightness strata.
+5. Measure fixed-tier PS1 g/r/z/grz substitutions and ±0.005/0.01/0.02 mag
+   band responses on the same qualified stars, plus optional rerouting.
+   Report center, scatter, tails, support-edge and color dependence.
+6. Decide the next candidate method and validation design, validate code and
+   results, update reports/worklog, and sync committed programs, manifests
+   and selected figures to local, GitHub and NERSC.
 
 ## Current Diagnostic Round
 

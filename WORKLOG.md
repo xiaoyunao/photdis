@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Recovered the complete latest Pro review after the ChatGPT source login was
+  refreshed. Registered the three detailed diagnostic groups as the active
+  goal and updated PLAN. Added a saved-row crossover common-acceptance audit
+  and weak-parallax v3: subgroup PIT now conditions on each observed-SNR
+  interval, and the center statistic has a selected-observation simulation
+  null. Commands: status/branch/fetch/history, NERSC login-node metadata
+  check, Python compile and 7 focused tests (all passed). Frozen v4 products
+  were not changed. Next: run both audits on allocated NERSC CPUs, inspect
+  results, then implement fallback and same-star cause diagnostics.
+
 - Final local validation for this diagnostic round: `python -m pytest -q`
   passed 62 tests; PS1 manifest field identity, match/quality counts and
   common-route invariants passed; `git diff --check` and both selected
