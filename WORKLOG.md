@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- Added a bounded profile of matched giant VAC labels: per-temperature and
+  low-gravity counts, per-star label uncertainties, SpecDis–SPDist same-star
+  disagreements, and published cluster-member groups with reference
+  distances. Files: `scripts/profile_giant_vac.py` and Slurm wrapper.
+  Validation: syntax and shell checks pass. Next: run after the exact-ID VAC
+  join and decide the giant fit and whole-system validation domain.
+
 - Found and fixed a numerical integration failure in the preliminary
   metal-poor forward likelihood before running it on science data: fixed
   Gauss–Hermite nodes centered on the prior missed narrow high-S/N Gaia
