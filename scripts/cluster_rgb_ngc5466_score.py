@@ -55,6 +55,8 @@ def describe(records):
            "coverage_95":float(np.mean([r["covered_95"] for r in records])),
            "mean_log_predictive_density":float(np.mean([r["log_predictive_density"]
                                                         for r in records])),
+           "mean_log_color_likelihood":float(np.mean([r["log_color_likelihood"]
+                                                       for r in records])),
            "posterior_mu_68_width_median":float(np.median([r["mu_68_width"]
                                                              for r in records]))}
     return out
@@ -73,6 +75,9 @@ def score_row(row, stage, tier, model, cfg, components, weights):
     sg,sr,sz = [float(row[k]) for k in ("sigma_g","sigma_r","sigma_z")]
     probability = posterior_on_grid(model["models"],grid,components,weights,
                                     observed,sg,sr,sz)
+    grid_step = cfg["forward_model"]["posterior_grid_step_mag"]
+    nearest = int(np.argmin(abs(grid-truth_mg)))
+    log_distance_density = float(np.log(max(probability[nearest],1e-300)/grid_step))
     q = quantiles(grid,probability)
     g0 = float(row["g0"])
     mu_pred = g0-q[2]
@@ -87,7 +92,8 @@ def score_row(row, stage, tier, model, cfg, components, weights):
             "covered_68":bool(mu_lo68<=mu_ref<=mu_hi68),
             "covered_95":bool(mu_lo95<=mu_ref<=mu_hi95),
             "mu_68_width":float(mu_hi68-mu_lo68),
-            "log_predictive_density":predictive_log_density(
+            "log_predictive_density":log_distance_density,
+            "log_color_likelihood":predictive_log_density(
                 model["models"],truth_mg,components,weights,observed,sg,sr,sz)}
 
 

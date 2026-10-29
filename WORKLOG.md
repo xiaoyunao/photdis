@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Before blind scoring, corrected the registered predictive score to the
+  held-out distance-modulus density (same units for gr and grz). Keep the
+  color-space likelihood separately as a diagnostic; its different input
+  dimensions make raw gr/grz log densities incomparable. Added a synthetic
+  score regression test. Files: blind score script, protocol, test.
+  Commands: Python compilation and five focused tests. Validation: pass.
+  NGC 5466 extraction had started, but no test labels/results were opened
+  when this scoring correction was made. Next: score after extraction.
+
 - Added a development-only residual audit for the already frozen conditional
   model, by cluster, Gaia stage and input tier. This will test whether the
   simple four-term color curve actually follows each measured DECam branch
