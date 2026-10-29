@@ -1,7 +1,7 @@
 import numpy as np
 
 from photdis.giant_kernel import (color_covariance, conditional_weights,
-                                  mixture_cdf, mixture_quantiles, predict_one)
+                                  mixture_cdf, mixture_logpdf, predict_one)
 
 
 def test_color_covariance_includes_shared_r_band():
@@ -23,3 +23,9 @@ def test_conditional_mixture_retains_two_luminosity_solutions():
     np.testing.assert_allclose(
         mixture_cdf(prediction["quantiles"][0], np.array([-2., 2.]), sigma,
                     weight), .025, atol=1e-5)
+
+
+def test_log_density_ignores_underflowed_zero_kernel_weights():
+    value = mixture_logpdf(0., np.array([0., 20.]), np.array([1., 1.]),
+                           np.array([1., 0.]))
+    np.testing.assert_allclose(value, -.5 * np.log(2 * np.pi))

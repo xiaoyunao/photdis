@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- In the registered giant kernel, distant training colors can receive
+  numerically zero normalized weights. Taking their logarithm would flood
+  the allocated job log with divide-by-zero warnings; score only positive
+  mixture weights. Files: `giant_kernel.py` and focused test. Commands:
+  Python compilation and three kernel tests. Validation: all pass. Next:
+  run the queued warm evolved-star model on the synced revision.
+
 - Completed v3 giant VAC quality/profile jobs 60488083/60488085. Clean
   SpecDis fractional distance error median is 0.491 (first-order Legacy
   Mg proxy 1.067 mag); valid SPDist Legacy Mg uncertainty median is 0.209

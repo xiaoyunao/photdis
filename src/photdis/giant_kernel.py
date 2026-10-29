@@ -49,8 +49,10 @@ def mixture_cdf(value, means, sigmas, weights):
 def mixture_logpdf(value, means, sigmas, weights, observation_sigma=0):
     width = np.hypot(sigmas, observation_sigma)
     z = (value - means) / width
-    return float(logsumexp(np.log(weights) - np.log(width)
-                           - .5 * z * z - .5 * np.log(2 * np.pi)))
+    positive = weights > 0
+    return float(logsumexp(np.log(weights[positive]) - np.log(width[positive])
+                           - .5 * z[positive] * z[positive]
+                           - .5 * np.log(2 * np.pi)))
 
 
 def mixture_quantiles(means, sigmas, weights, probabilities=(.025, .16, .5, .84, .975)):
