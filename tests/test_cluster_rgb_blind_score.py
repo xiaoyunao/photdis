@@ -6,6 +6,7 @@ import numpy as np
 
 sys.path[:0] = [str(Path(__file__).resolve().parents[1]/"scripts")]
 from cluster_rgb_ngc5466_score import describe, score_row
+from cluster_rgb_ngc5466_scale_sensitivity import perturb
 
 
 def test_score_reports_comparable_distance_density_and_ordered_mu_interval():
@@ -23,3 +24,11 @@ def test_score_reports_comparable_distance_density_and_ordered_mu_interval():
     assert np.isfinite(result["log_color_likelihood"])
     summary = describe([result])
     assert summary["mean_log_predictive_density"] == result["log_predictive_density"]
+
+
+def test_coherent_r_zero_point_moves_shared_colors_in_opposite_directions():
+    tab=np.array([(17.,.6,.3)],dtype=[("g0","f8"),("gr0","f8"),("rz0","f8")])
+    shifted=perturb(tab,"r_zero",.01)
+    np.testing.assert_allclose(shifted["g0"],tab["g0"])
+    np.testing.assert_allclose(shifted["gr0"],tab["gr0"]-.01)
+    np.testing.assert_allclose(shifted["rz0"],tab["rz0"]+.01)

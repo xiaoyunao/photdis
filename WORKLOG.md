@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Added a coherent test-cluster scale sensitivity for the frozen grz model:
+  vary the registered ±0.01 E(B−V) and ±0.01-mag g/r/z zero points across
+  all NGC 5466 stars, retain common IDs, and measure distance-center
+  changes without refitting. This distinguishes shared scale response from
+  source scatter. Files: scale-sensitivity Python/Slurm scripts, targeted
+  test. Commands: Python compilation and six focused tests. Validation:
+  pass after correcting a bracket typo. Next: allocated sensitivity job.
+
 - Registered NGC 5466 extraction completed on Slurm 60497743 (exit 0):
   4,918 unique DECam release-11010 matches, with 52/32 upper and 96/93
   lower gr/grz-clean high-probability Gaia-CMD candidates. Development-only
