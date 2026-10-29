@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- Added `scripts/cold_v5_xd_decide.py` and one focused test to apply the
+  registered center/NMAD/tail/g-and-r response gate on both held-out
+  development fields. `docs/cold_v5_xd_protocol.md` now labels both compared
+  interval sets as raw diagnostics. The focused test, Python compilation and
+  `git diff --check` pass. Next: score actual comparison results, apply this
+  gate once, and either retain v4 or lock one candidate for new validation.
+
 - Added `scripts/plot_cold_v5_xd_compare.py` for a same-star development
   figure of center, NMAD, raw interval coverage and fixed-tier g/r response.
   A temporary two-field manifest rendered a nonempty 129 kB PNG; script

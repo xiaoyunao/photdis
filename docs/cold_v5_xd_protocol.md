@@ -52,7 +52,7 @@ split or new final field is used for configuration selection.
 The selected mixture is compared with each frozen QRF on the exact same
 strict Gaia cold-anchor identities accepted by the locked WISE20 route.
 Report by field and tier: residual center, NMAD, |Δμ|>0.5 mag tail,
-68%/95% coverage, each 95% tail, width, error tertile, optical color,
+raw 68%/95% quantile coverage, each 95% tail, width, error tertile, optical color,
 infrared conflict status and fixed-tier +0.01 mag g/r response. The
 predeclared decision gate requires noninferiority in center, NMAD and tail
 in each informative development field, plus a 25% reduction in the median
@@ -61,6 +61,12 @@ is not a scientific win; inspect color-bin residuals for suppressed genuine
 color–luminosity slope. If this gate fails, retain v4 and close the bounded
 comparison. If it passes, lock one candidate before independent interval
 calibration and one newly registered final-field evaluation.
+
+`scripts/cold_v5_xd_decide.py` applies these inequalities to both registered
+configuration-development fields and records every check. It uses the
+forest's raw weighted quantiles and the mixture's raw posterior quantiles for
+the side-by-side interval diagnostic. The v4 calibrated deep intervals remain
+withheld; no nominal deep coverage is inferred from these raw values.
 
 Deep v4 nominal 68%/95% intervals remain withheld. The new mixture's raw
 intervals are development diagnostics until separately calibrated and
