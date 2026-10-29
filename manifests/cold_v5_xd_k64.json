@@ -1,0 +1,75 @@
+{
+  "components": 64,
+  "configuration_sha256": "28173c21932baaff6cca68be9ef95e9d40328ad1347bf0b622ec0611013ed22e",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "tiers": {
+    "A_grz": {
+      "fit_rows": 7782,
+      "identity_sha256": "32c3fc13f882af1cf3b3869fd77c5c4d01bdbc4fc2437f7fc7964dc6775d92f9",
+      "model_sha256": "59cde9e1e5432a9070aec215c31b6a9d5771222fa0435702655b6f924c0017f1",
+      "iterations": 113,
+      "converged": true,
+      "first_log_likelihood": 6725.737014941206,
+      "last_log_likelihood": 7474.024613115185,
+      "last_log_likelihood_gain": 0.7277802995185993,
+      "minimum_covariance_eigenvalue": 9.999999999999282e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 63,
+          "mean_negative_conditional_log_density": 0.6465452961179692
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 486,
+          "mean_negative_conditional_log_density": 0.3784064458867716
+        }
+      }
+    },
+    "B_grzW1": {
+      "fit_rows": 7351,
+      "identity_sha256": "879591d31d83881e388e31637be021ddf676aac680cbcb928a07772c327860e1",
+      "model_sha256": "79c8e2a3175c8909032a4e59678247290ab6d2c67524151c05a2dfffeff2904d",
+      "iterations": 49,
+      "converged": true,
+      "first_log_likelihood": 21896.867527704206,
+      "last_log_likelihood": 22737.01661554318,
+      "last_log_likelihood_gain": 2.2489294723527564,
+      "minimum_covariance_eigenvalue": 9.999999999995103e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 19,
+          "mean_negative_conditional_log_density": 0.583172909933516
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 153,
+          "mean_negative_conditional_log_density": 0.693076540958698
+        }
+      }
+    },
+    "C_grzW1W2": {
+      "fit_rows": 7341,
+      "identity_sha256": "29b8d394d37e03e0080c8a82b8e36fc374b2839b1d647eb669218744484e0e8c",
+      "model_sha256": "3cc38aefb3526a6e2a8c6dba7f19c11cafe606158d9d6fb00807bced34ba7a32",
+      "iterations": 45,
+      "converged": true,
+      "first_log_likelihood": 39613.98894185702,
+      "last_log_likelihood": 40799.20524669779,
+      "last_log_likelihood_gain": 3.8957050343888113,
+      "minimum_covariance_eigenvalue": 9.999999999999008e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 1175,
+          "mean_negative_conditional_log_density": 0.03385334204091747
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 5955,
+          "mean_negative_conditional_log_density": -0.04650721947991147
+        }
+      }
+    }
+  },
+  "development_field_names": [
+    "dev_cal_ra205_215_dec_m010_p000",
+    "native_dev_ra060_070_dec_m035_m025"
+  ],
+  "compute_host": "nid004096"
+}

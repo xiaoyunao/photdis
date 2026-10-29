@@ -14,9 +14,11 @@ Current compute checkpoint: the initial K=16 fit exposed an unfinished
 K=16/32/64 are NERSC jobs 60482139/60482140/60482141. Blue-side inventory
 retry is 60482142. Inspect each terminal job and validate its manifest
 before selecting or scoring a model.
-K=16 job 60482139 has completed with converged A/B/C fits. The first
-candidate export 60481110 produced multiple FITS extensions and is archived;
-resubmit it with the corrected single-table append writer.
+All three sizes converged with the frozen A/B/C training identities.
+The registered equal-field held-out score selects K=32. Run its same-star
+comparison and apply the locked decision gate. Blue inventory 60482142 and
+corrected candidate export 60482344 remain in the compute queue. The first
+candidate export 60481110 produced multiple FITS extensions and is archived.
 
 ## New Round Milestones
 

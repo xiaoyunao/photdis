@@ -1,0 +1,51 @@
+{
+  "configuration_sha256": "28173c21932baaff6cca68be9ef95e9d40328ad1347bf0b622ec0611013ed22e",
+  "selection_rule": "equal-field mean of held-out conditional negative log density for observed Mg given observed colors and measurement covariance",
+  "selected_components": 32,
+  "scores": {
+    "16": {
+      "equal_field_mean_nll": 0.02515390362889331,
+      "fields": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 1257,
+          "mean_negative_conditional_log_density": 0.06740822216790257
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 6594,
+          "mean_negative_conditional_log_density": -0.017100414910115953
+        }
+      }
+    },
+    "32": {
+      "equal_field_mean_nll": 0.006263167939913267,
+      "fields": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 1257,
+          "mean_negative_conditional_log_density": 0.03679075251091209
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 6594,
+          "mean_negative_conditional_log_density": -0.02426441663108556
+        }
+      }
+    },
+    "64": {
+      "equal_field_mean_nll": 0.03741752900499714,
+      "fields": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 1257,
+          "mean_negative_conditional_log_density": 0.07286421308054646
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 6594,
+          "mean_negative_conditional_log_density": 0.0019708449294478236
+        }
+      }
+    }
+  },
+  "fit_manifest_sha256": {
+    "16": "29568e4d12916cfd6eafba6f4d62b20d6db290f31f3cdb165baedeadba0a7cf5",
+    "32": "ff4c9222eae9ed96dd744446d031b1c68cb49c5736653b10ae3c9622ff88e8cb",
+    "64": "0ce20f98863324b847c4c8fa2fd58bd5bb3b17735b450ee973e042bd7737afd0"
+  }
+}

@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- XD refits 60482139/140/141 completed with converged A/B/C models and
+  exact frozen training hashes/counts; minimum latent covariance eigenvalues
+  are at or above the registered 1e-4 mag² floor. Copied only small manifests
+  locally; models remain on NERSC. The preregistered equal-field held-out
+  conditional NLL is 0.02515/0.00626/0.03742 for K=16/32/64, selecting
+  K=32. Its per-field strict-anchor counts are 1,257 and 6,594. Next:
+  commit the selection, sync three ends and submit the one same-star
+  development comparison; use its locked gate before any new final field.
+
 - Candidate export 60481110 finished but wrote seven FITS table extensions
   (18,017/17,905/18,343/17,735/18,061/18,434/17,103 rows) because
   `fitsio.write(..., append=True)` ignores `append`. The manifest total was
