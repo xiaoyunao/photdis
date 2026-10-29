@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Implemented a registered low-degree color–absolute-magnitude comparison
+  with zero versus one continuous calibrated iron term. The likelihood
+  integrates positive latent parallax over photometric, abundance and
+  intrinsic-scatter uncertainty, then convolves with measured Gaia parallax;
+  negative measurements are retained. Development and reserved fields stay
+  separate after Gaia-ID deduplication. Files: `metal_poor_forward.py`,
+  experiment/Slurm scripts and two focused tests. Commands: `py_compile`,
+  targeted pytest, shell syntax and a 180-star synthetic fit. Validation:
+  finite negative-parallax likelihood, shared-band covariance and successful
+  synthetic recovery. Next: run on allocated NERSC CPU and evaluate reserved
+  parallax-space likelihood and prior sensitivity.
+
 - Allocated joint evidence jobs 60486731/60486732 completed, preserving
   37,214/132,530 rows. The broader qualified RVS rule finds 609/3,085
   giants, of which 383/2,104 have clean low-dust DR11 photometry. The
