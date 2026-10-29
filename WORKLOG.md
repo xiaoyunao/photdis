@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- Color-response job 60483193 completed on allocated CPU in 43 s, exit 0,
+  empty stderr and 1.45 GiB peak RSS. Its small manifest matches the
+  frozen-comparison SHA256 and reproduces 1,257/6,594 development stars,
+  with color-bin counts summing exactly to each field. In both occupied
+  `(g−r)₀` bins and both fields, XD's median absolute +0.01 mag g/r
+  distance-modulus response exceeds frozen v4's. Added the table to
+  `docs/cold_v5_xd_result.md` and rendered/inspected
+  `figures/cold_v5/03_xd_color_response.png`. The registered v4-retain
+  decision remains unchanged. Validation: 81 tests passed, Python files
+  compiled, Slurm wrappers passed `bash -n`, and `git diff --check` passed.
+  Next: commit and synchronize the last report, manifest and figure, then
+  close the active goal after verifying all three Git heads.
+
 - Color-response diagnostic job 60483193 remains live in Slurm pending
   shared-partition resources. The earlier identical-model comparison used
   548,752 KiB peak RSS, so reduced this pending job from four CPUs/8 GiB

@@ -2,12 +2,11 @@
 
 ## Current Objective
 
-Implement the 2026-10-29 Pro review on the three-end synchronized `a18ef9b`
-checkpoint. Keep the cold-v4 route and all locked evaluations frozen. Export
-per-candidate route diagnostics, compare one measurement-error-aware smooth
-probabilistic distance candidate with v4 on identical training and development
-identities, and define a separate metal-poor blue branch. The active goal
-records the full scientific and validation criteria.
+The 2026-10-29 Pro review round from frozen `a18ef9b` is complete. Keep the
+cold-v4 route and locked tests frozen. The bounded error-aware XD comparison
+rejected K=32 under its registered gate; three candidate route exports and
+the separate metal-poor blue-branch definition are documented. Next research
+work is specified under Next Checkpoint below.
 
 Current compute checkpoint: all K=16/32/64 fits converged on frozen training
 identities. The registered equal-field score selected K=32; allocated job
@@ -18,6 +17,9 @@ exports completed in allocated jobs 60482344/60482677/60482678, producing
 one FITS table per field and 395,629 total selected rows. Their catalogs stay
 in ignored NERSC data; small manifests and a report are tracked. The first
 invalid multi-extension export is archived. The blue inventory is complete.
+Allocated job 60483193 completed the color-stratified g/r response diagnostic;
+its accepted identities and frozen-comparison hash agree with the original
+result. XD responds more strongly in both occupied color bins and fields.
 
 ## New Round Milestones
 
@@ -33,17 +35,17 @@ invalid multi-extension export is archived. The blue inventory is complete.
    accepted objects, compare chosen candidate against frozen v4 in bias,
    NMAD, tails, probability quality, g/r perturbation response and error/color
    strata. The registered gate rejected XD K=32; no new final test follows.
-   A separate color-stratified g/r response diagnostic is pending to close
-   the detailed comparison audit without altering that decision.
+   A separate color-stratified g/r response diagnostic confirms the same
+   direction in both occupied color bins without altering that decision.
 5. Complete: define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
    color-boundary failures, CMD position and giant/nonstar confusion. Keep it
    distinct from the frozen cold-v4 box. The current four-field inventory
    and label/anchor contract are in `docs/cold_v5_blue_branch.md`.
-6. Validate, document, commit and synchronize programs, small manifests and
+6. Complete: validate, document, commit and synchronize programs, small manifests and
    figures across local, GitHub and NERSC. Keep catalogs and model files on
-   NERSC and use allocated CPUs for scans/training. The three candidate
-   exports and single-table checks are complete; finish final validation
-   and three-end synchronization.
+   NERSC and use allocated CPUs for scans/training. Three candidate exports
+   and single-table checks are complete; 81 tests pass. The final color
+   response manifest and figure close the comparison record.
 
 ## Completed Previous Round Milestones
 

@@ -55,7 +55,28 @@ RA205: 92.1/89.5%, 95.5/91.2%, 96.2/88.1%; RA60: 91.5/90.6%,
 95.5/93.2%, 96.0/91.1%. XD's median 95% widths are shorter in all six
 cells; the full widths, lower/upper misses and optical-color groups are in
 the comparison manifest. These are conditional development diagnostics,
-not calibrated probability performance. A separate cause analysis could
-examine why the smooth mixture has a stronger g/r derivative while
-preserving the observed color–luminosity slope, but that would be a newly
-registered experiment.
+not calibrated probability performance.
+
+## Color-dependent optical response
+
+Allocated job 60483193 reran the fixed-tier +0.01 mag perturbations solely
+to tabulate their color dependence. Its separate
+`manifests/cold_v5_xd_color_response.json` records the frozen comparison
+SHA256 and reproduces the same 1,257/6,594 accepted development stars.
+The [color-response figure](../figures/cold_v5/03_xd_color_response.png)
+shows the result. Values below are median absolute changes in distance
+modulus, in mag.
+
+| Field | Observed `(g−r)₀` | Stars | g: v4 / XD | r: v4 / XD |
+|---|---|---:|---:|---:|
+| RA205–215 | 0.9–1.2 | 217 | 0.0100 / 0.0192 | 0.0167 / 0.0395 |
+| RA205–215 | 1.2–1.6 | 1,040 | 0.0397 / 0.0693 | 0.0445 / 0.0557 |
+| RA60–70 | 0.9–1.2 | 1,072 | 0.0100 / 0.0198 | 0.0218 / 0.0409 |
+| RA60–70 | 1.2–1.6 | 5,522 | 0.0439 / 0.0688 | 0.0473 / 0.0564 |
+
+Both models respond more strongly in the redder occupied bin, and XD has
+the larger g and r response in each populated field/bin. This reinforces
+the registered rejection. No development stars occupied the 1.6–2.0 or
+2.0–4.0 bins; the nine-star RA235 field remains diagnostic only. A new
+cause study of the optical derivative and true color–luminosity relation
+would need its own registered design.
