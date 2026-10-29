@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- The five allocated jobs remained pending in shared QOS. `scontrol show job`
+  revealed that the 48 GiB request reserved 26 CPUs per job despite only
+  four requested compute threads; reduced pending jobs to 16 GiB (nine
+  scheduler CPUs) and updated four Slurm wrappers for future runs. The
+  new blue inventory initially referenced a nonexistent field `mg` column;
+  commit `225b47c` derives it from extinction-corrected g and positive
+  high-SNR corrected Gaia parallax instead. Added the missing fixed-tier
+  +0.01 mag r response to `docs/pro_round_v5.md`: medians
+  +0.0173/+0.0209/+0.0105 mag, NMAD 0.048/0.048/0.046 mag. Commands:
+  field FITS header inspection, `scontrol update`, bounded manifest queries,
+  Python syntax and targeted tests. Next: inspect allocated job logs and
+  results, then choose one XD size on held-out development fields.
+
 - Four-core, 48 GiB NERSC jobs were pending for priority under exclusive
   regular QOS. Consulted current NERSC queue policy and changed the five
   still-pending jobs 60481106/108/109/110/185 to CPU shared QOS, which

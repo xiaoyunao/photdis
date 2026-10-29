@@ -91,6 +91,13 @@ cannot be reconstructed from the paired-shift median alone.
 For +0.01 mag imposed in g, median fixed-tier modulus responses are
 −0.0199/−0.0207/−0.0215 mag; the response NMAD is 0.044/0.046/0.047 mag.
 The g term acts both directly in modulus and through shared input colors.
+For the same +0.01 mag perturbation in r, the median responses are
++0.0173/+0.0209/+0.0105 mag and the response NMAD is
+0.048/0.048/0.046 mag. Thus r is also a strong response channel despite
+not appearing directly in the distance modulus. In the interior-support
+stratum (support ratio <0.7), +0.01 mag in g changes the fixed-tier modulus
+by more than 0.05 mag for 555/1,484, 987/2,547 and 523/1,377 stars
+(37–39%); this is not confined to the support boundary.
 Corresponding +0.01 mag z responses have median +0.0015/+0.0023/+0.0032
 mag. The manifest includes both signs at 0.005/0.01/0.02 mag, color and
 support-edge strata, and all fixed-tier and rerouted comparisons. These
