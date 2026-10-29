@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Corrected giant VAC join 60487258 produced 3,694 qualified RVS giants,
+  2,487 with clean low-dust DR11 photometry and 13 published HSC_2310
+  cluster members, but only one SpecDis and no SPDist strict valid label.
+  A small-row inspection confirmed target/Gaia IDs are integer exact; the
+  VACs may cover different observations or target programs. Added an
+  allocated exact-pair versus target-only versus unique-Gaia-ID audit before
+  changing the join policy. Files: VAC identity audit script/wrapper/test.
+  Validation: one targeted test and syntax/shell checks pass. Next: inspect
+  audit counts, then decide whether a cross-target same-Gaia join is justified.
+
 - Giant VAC job 60486865 finished but its summary was all zeros: FITS string
   columns read back as Unicode and a byte-string giant comparison selected
   no rows. The same type error was found in pending metal-poor role/parallax
