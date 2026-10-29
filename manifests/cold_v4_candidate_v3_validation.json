@@ -1,0 +1,43 @@
+{
+  "fields": {
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "rows": 197165,
+      "preserved_v2_columns": 20,
+      "class_counts": {
+        "unknown": 197165
+      },
+      "giant_conflicts": 0,
+      "raw_redrock_nonstellar": 0,
+      "blue_training_eligible": 0
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "rows": 125598,
+      "preserved_v2_columns": 20,
+      "class_counts": {
+        "conservative_dwarf": 541,
+        "nonstellar_unassessed": 13,
+        "other_star_or_transition": 35,
+        "unknown": 125009
+      },
+      "giant_conflicts": 0,
+      "raw_redrock_nonstellar": 13,
+      "blue_training_eligible": 117
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "rows": 72866,
+      "preserved_v2_columns": 20,
+      "class_counts": {
+        "conservative_dwarf": 588,
+        "nonstellar_unassessed": 11,
+        "other_star_or_transition": 43,
+        "unknown": 72224
+      },
+      "giant_conflicts": 0,
+      "raw_redrock_nonstellar": 11,
+      "blue_training_eligible": 152
+    }
+  },
+  "all_rows": 395629,
+  "all_old_columns_equal": true,
+  "compute_host": "nid004472"
+}

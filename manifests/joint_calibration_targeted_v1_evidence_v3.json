@@ -1,0 +1,14 @@
+{
+  "sample": "targeted_v1",
+  "source": "data/joint_calibration_targeted_v1_evidence_v2/same_star.fits",
+  "source_sha256": "4e8619c6977b567b9df7c2166741ce3565cf1bbf886629e171a8736184f486cc",
+  "audit": "manifests/blue_outlier_source_3601173023628559616.json",
+  "audit_sha256": "c6dfdeca4f83546762f4adc44cacc06e3fd962a058de5d1393b3023f1e1bca09",
+  "output": "data/joint_calibration_targeted_v1_evidence_v3/same_star.fits",
+  "output_sha256": "cb49a2279ea9f73391862752226aa2f245025f5e72259539e158c6f1dae4bbc9",
+  "rows": 132530,
+  "independently_flagged": 1,
+  "trusted_blue_before": 9702,
+  "trusted_blue_after": 9701,
+  "compute_host": "nid004080"
+}

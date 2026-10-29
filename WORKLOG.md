@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Completed Pro P0 class/evidence correction and independent blue-anchor audit.
+  Versioned joint v3 excludes one DR11 r-band discordant source from the
+  trusted blue core while retaining its row; the candidate v3 export preserves
+  all 395,629 source identities and all 20 frozen non-class columns. DR11
+  corrected magnitudes already use MW_TRANSMISSION; the targeted CMD now
+  displays M_g>10. Files: class audit report, v2/v3 joint manifests, candidate
+  manifests, outlier manifest and expanded CMD figure. Commands: allocated
+  Slurm evidence/export/validation jobs, identity and PS1 audit, focused tests.
+  Validation: candidate equality check and source identity checks passed.
+  Next: giant VAC identity diagnosis and external whole-system scale test.
+
 - Corrected giant VAC join 60487258 produced 3,694 qualified RVS giants,
   2,487 with clean low-dust DR11 photometry and 13 published HSC_2310
   cluster members, but only one SpecDis and no SPDist strict valid label.

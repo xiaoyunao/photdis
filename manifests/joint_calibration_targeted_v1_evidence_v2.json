@@ -1,0 +1,235 @@
+{
+  "source": "data/joint_calibration_targeted_v1/same_star.fits",
+  "source_sha256": "2e1b1243f50b3cc93ab7405a9847911d6a45546ab790a00ba8b356bc4f4afc6e",
+  "output": "data/joint_calibration_targeted_v1_evidence_v2/same_star.fits",
+  "output_sha256": "4e8619c6977b567b9df7c2166741ce3565cf1bbf886629e171a8736184f486cc",
+  "all": {
+    "rows": 132530,
+    "class_counts": {
+      "conservative_dwarf": 74908,
+      "conservative_giant": 3085,
+      "nonstellar_unassessed": 19387,
+      "other_star_or_transition": 15108,
+      "unknown": 20042
+    },
+    "redrock_nonstellar_raw": 19387,
+    "cmd_wd_candidate": 332,
+    "cmd_spectral_conflict": 0,
+    "trusted_blue_core_clean_low_dust": 9702,
+    "trusted_blue_core_with_parallax": 9392,
+    "trusted_poor_core_parallax_layers": {
+      "high_ge20": 18,
+      "mid_10_20": 42,
+      "weak_0_10": 228,
+      "negative": 3,
+      "unusable": 8
+    },
+    "giants": {
+      "all": 3085,
+      "clean_low_dust": 2104,
+      "high_snr": 0,
+      "feh_cal_valid": 2957,
+      "teff_lt_4200": 27,
+      "teff_4200_5000": 230,
+      "teff_5000_7000": 2828,
+      "logg_lt_1p8": 82
+    }
+  },
+  "by_role": {
+    "development": {
+      "rows": 88515,
+      "class_counts": {
+        "conservative_dwarf": 48104,
+        "conservative_giant": 2310,
+        "nonstellar_unassessed": 13359,
+        "other_star_or_transition": 10613,
+        "unknown": 14129
+      },
+      "redrock_nonstellar_raw": 13359,
+      "cmd_wd_candidate": 193,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 5979,
+      "trusted_blue_core_with_parallax": 5773,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 11,
+        "mid_10_20": 25,
+        "weak_0_10": 131,
+        "negative": 1,
+        "unusable": 6
+      },
+      "giants": {
+        "all": 2310,
+        "clean_low_dust": 1540,
+        "high_snr": 0,
+        "feh_cal_valid": 2217,
+        "teff_lt_4200": 16,
+        "teff_4200_5000": 187,
+        "teff_5000_7000": 2107,
+        "logg_lt_1p8": 63
+      }
+    },
+    "reserved_validation": {
+      "rows": 44015,
+      "class_counts": {
+        "conservative_dwarf": 26804,
+        "conservative_giant": 775,
+        "nonstellar_unassessed": 6028,
+        "other_star_or_transition": 4495,
+        "unknown": 5913
+      },
+      "redrock_nonstellar_raw": 6028,
+      "cmd_wd_candidate": 139,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 3723,
+      "trusted_blue_core_with_parallax": 3619,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 7,
+        "mid_10_20": 17,
+        "weak_0_10": 97,
+        "negative": 2,
+        "unusable": 2
+      },
+      "giants": {
+        "all": 775,
+        "clean_low_dust": 564,
+        "high_snr": 0,
+        "feh_cal_valid": 740,
+        "teff_lt_4200": 11,
+        "teff_4200_5000": 43,
+        "teff_5000_7000": 721,
+        "logg_lt_1p8": 19
+      }
+    }
+  },
+  "by_field": {
+    "targeted_ra020_030_dec_p000_p010": {
+      "rows": 16951,
+      "class_counts": {
+        "conservative_dwarf": 9800,
+        "conservative_giant": 320,
+        "nonstellar_unassessed": 2962,
+        "other_star_or_transition": 1626,
+        "unknown": 2243
+      },
+      "redrock_nonstellar_raw": 2962,
+      "cmd_wd_candidate": 70,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 1324,
+      "trusted_blue_core_with_parallax": 1289,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 3,
+        "mid_10_20": 2,
+        "weak_0_10": 16,
+        "negative": 0,
+        "unusable": 0
+      },
+      "giants": {
+        "all": 320,
+        "clean_low_dust": 249,
+        "high_snr": 0,
+        "feh_cal_valid": 306,
+        "teff_lt_4200": 6,
+        "teff_4200_5000": 15,
+        "teff_5000_7000": 299,
+        "logg_lt_1p8": 9
+      }
+    },
+    "targeted_ra180_190_dec_m010_p000": {
+      "rows": 37147,
+      "class_counts": {
+        "conservative_dwarf": 21276,
+        "conservative_giant": 896,
+        "nonstellar_unassessed": 4843,
+        "other_star_or_transition": 4464,
+        "unknown": 5668
+      },
+      "redrock_nonstellar_raw": 4843,
+      "cmd_wd_candidate": 96,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 2720,
+      "trusted_blue_core_with_parallax": 2631,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 4,
+        "mid_10_20": 10,
+        "weak_0_10": 64,
+        "negative": 0,
+        "unusable": 2
+      },
+      "giants": {
+        "all": 896,
+        "clean_low_dust": 603,
+        "high_snr": 0,
+        "feh_cal_valid": 860,
+        "teff_lt_4200": 6,
+        "teff_4200_5000": 55,
+        "teff_5000_7000": 835,
+        "logg_lt_1p8": 22
+      }
+    },
+    "targeted_ra180_190_dec_p000_p010": {
+      "rows": 51368,
+      "class_counts": {
+        "conservative_dwarf": 26828,
+        "conservative_giant": 1414,
+        "nonstellar_unassessed": 8516,
+        "other_star_or_transition": 6149,
+        "unknown": 8461
+      },
+      "redrock_nonstellar_raw": 8516,
+      "cmd_wd_candidate": 97,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 3259,
+      "trusted_blue_core_with_parallax": 3142,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 7,
+        "mid_10_20": 15,
+        "weak_0_10": 67,
+        "negative": 1,
+        "unusable": 4
+      },
+      "giants": {
+        "all": 1414,
+        "clean_low_dust": 937,
+        "high_snr": 0,
+        "feh_cal_valid": 1357,
+        "teff_lt_4200": 10,
+        "teff_4200_5000": 132,
+        "teff_5000_7000": 1272,
+        "logg_lt_1p8": 41
+      }
+    },
+    "targeted_ra190_200_dec_p020_p030": {
+      "rows": 27064,
+      "class_counts": {
+        "conservative_dwarf": 17004,
+        "conservative_giant": 455,
+        "nonstellar_unassessed": 3066,
+        "other_star_or_transition": 2869,
+        "unknown": 3670
+      },
+      "redrock_nonstellar_raw": 3066,
+      "cmd_wd_candidate": 69,
+      "cmd_spectral_conflict": 0,
+      "trusted_blue_core_clean_low_dust": 2399,
+      "trusted_blue_core_with_parallax": 2330,
+      "trusted_poor_core_parallax_layers": {
+        "high_ge20": 4,
+        "mid_10_20": 15,
+        "weak_0_10": 81,
+        "negative": 2,
+        "unusable": 2
+      },
+      "giants": {
+        "all": 455,
+        "clean_low_dust": 315,
+        "high_snr": 0,
+        "feh_cal_valid": 434,
+        "teff_lt_4200": 5,
+        "teff_4200_5000": 28,
+        "teff_5000_7000": 422,
+        "logg_lt_1p8": 10
+      }
+    }
+  },
+  "compute_host": "nid005428"
+}

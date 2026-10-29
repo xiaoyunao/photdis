@@ -1,0 +1,17 @@
+{
+  "field": "cold_v4_final_ra000_010_dec_m035_m025",
+  "input": "data/cold_v4_candidates_v2/cold_v4_final_ra000_010_dec_m035_m025.fits",
+  "input_sha256": "aa0db118809da52d76e3422c0e53676f67970fd935d115fcdb833b09adac8741",
+  "source": "data/field_cold_v4_ra000_010_v1/field_diagnostics.fits",
+  "output": "data/cold_v4_candidates_v3/cold_v4_final_ra000_010_dec_m035_m025.fits",
+  "output_sha256": "b8d1a19eac3b4566a9f0b94fa6a60fc6720b58e94627516aea8be74d6a7d54b6",
+  "rows": 197165,
+  "physical_class_counts": {
+    "unknown": 197165
+  },
+  "cold_dwarf_conflicts": 0,
+  "raw_redrock_nonstellar": 0,
+  "blue_training_eligible": 0,
+  "abundance_calibration_valid": 0,
+  "compute_host": "nid004251"
+}

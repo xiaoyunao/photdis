@@ -1,0 +1,20 @@
+{
+  "field": "cold_v4_final_ra150_160_dec_p020_p030",
+  "input": "data/cold_v4_candidates_v2/cold_v4_final_ra150_160_dec_p020_p030.fits",
+  "input_sha256": "72fed29245fdc40a57b2d1b2cfaafa43bee0e1139d24a1fcb2977627d8fd8720",
+  "source": "data/field_cold_v4_ra150_160_v1/field_diagnostics.fits",
+  "output": "data/cold_v4_candidates_v3/cold_v4_final_ra150_160_dec_p020_p030.fits",
+  "output_sha256": "857f60ab2c11d3402e14d472ee74d1831b892b4304bba425979cc23b55f1d371",
+  "rows": 125598,
+  "physical_class_counts": {
+    "conservative_dwarf": 541,
+    "nonstellar_unassessed": 13,
+    "other_star_or_transition": 35,
+    "unknown": 125009
+  },
+  "cold_dwarf_conflicts": 0,
+  "raw_redrock_nonstellar": 13,
+  "blue_training_eligible": 117,
+  "abundance_calibration_valid": 131,
+  "compute_host": "nid004282"
+}

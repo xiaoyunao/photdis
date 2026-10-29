@@ -5,7 +5,7 @@
 Keep cold-v4/XD models, routes and earlier final-test identities frozen.
 Complete a bounded correction and calibration round with these milestones:
 
-1. Separate general RVS dwarf/giant evidence, cold-dwarf hypothesis conflict,
+1. Complete: separate general RVS dwarf/giant evidence, cold-dwarf hypothesis conflict,
    4200–5000 K blue-branch training eligibility and calibrated-abundance
    validity. Preserve raw Redrock QSO/galaxy type with a separate quality
    state; the MWS VAC carries `RR_SPECTYPE` and `RR_Z` but no Redrock `ZWARN`
@@ -13,11 +13,11 @@ Complete a bounded correction and calibration round with these milestones:
    spectral label, count conflicts and omit unresolved conflicts from the
    trusted training core. Version the candidate and joint catalogs and
    verify all frozen distance/route columns against earlier products.
-2. Review Gaia source 3601173023628559616 by identity, neighbors,
+2. Complete: review Gaia source 3601173023628559616 by identity, neighbors,
    photometry, image-quality/exposure metadata and available alternate
    measurements; decide its core eligibility without residual-based cuts.
    Extend the joint luminosity plot to include `M_g≈10.19` anchors.
-3. Build a targeted giant sample from qualified broad-temperature RVS class
+3. In progress: build a targeted giant sample from qualified broad-temperature RVS class
    evidence and actual SpecDis v2.1 / SPDist v1.0 tables. Preserve each
    catalog's identity, quality, distance uncertainty, training correlation
    and applicability; derive Legacy `M_g` from DR11 `g0` and a distance
@@ -27,7 +27,7 @@ Complete a bounded correction and calibration round with these milestones:
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation
    only where label quality and external scale coverage support one.
-5. Combine the seven-field and four targeted-field main-sequence samples
+5. In progress: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous
    [Fe/H] term using a forward parallax likelihood for high, medium, weak
