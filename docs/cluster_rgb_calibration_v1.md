@@ -72,5 +72,9 @@ agreement is used to assign them.
   show the measured Legacy loci alongside Gaia phase candidates.
 - [`NGC 7006 phase manifest`](../manifests/cluster_rgb_ngc7006_phase_v1.json)
   contains only Gaia-CMD candidate and DR11 quality counts.
+- [`Development loci comparison`](../figures/cluster_rgb/03_development_loci.png)
+  displays 0.5-mag bin medians and within-bin color widths for the three
+  development systems. At overlapping magnitudes the loci differ, so a
+  pooled photo-only curve requires a whole-system transfer check.
 - External scales: [M3 RR Lyrae](https://arxiv.org/abs/2008.11745),
   [NGC 2419 RR Lyrae](https://arxiv.org/abs/1011.5398).

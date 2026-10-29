@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Plotted the three development clusters' measured Legacy RGB bin medians
+  together; M53 bridges luminosity but the systems' color–luminosity loci
+  differ at overlapping magnitudes. Added a compute-side cause audit for
+  DR11 SATUR/ALLMASK/BAILOUT bits and each optical fraction condition,
+  including only quality counts for the NGC 7006 holdout. Files: combined
+  plot/script, quality script/wrapper/test, calibration report.
+  Commands: local plotting, Python compilation, focused tests.
+  Validation: plot inspected; six focused tests pass. Next: execute
+  quality audit on allocated compute and inspect frozen development fit.
+
 - Completed allocated phase audit 60493436 for M53 and blind NGC 7006
   quality coverage. M53 has 156/253 clean upper/lower RGB candidates
   with measured Legacy `M_g` 5–95% −0.19 to +2.73, bridging M3 and
