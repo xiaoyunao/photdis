@@ -78,6 +78,7 @@ class XDMixture:
             initial.covariances_ - np.mean(s, axis=0)[None, :, :],
             self.covariance_floor)
         self.log_likelihood_history_ = []
+        self.converged_ = False
         n, d = x.shape
         for iteration in range(self.max_iter):
             count = np.zeros(self.components)
@@ -113,6 +114,7 @@ class XDMixture:
             self.log_likelihood_history_.append(float(log_like))
             change = log_like - self.log_likelihood_history_[-2] if iteration else np.inf
             if iteration >= 5 and 0 <= change < self.tolerance * max(1, abs(log_like)):
+                self.converged_ = True
                 break
             safe = np.maximum(count, 1e-12)
             means = first / safe[:, None]

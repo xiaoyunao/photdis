@@ -49,6 +49,15 @@ RA60, are scored separately, then weighted equally. RA235 is a small
 diagnostic field and does not choose the component count. No random-star
 split or new final field is used for configuration selection.
 
+Numerical repair before configuration selection: the first K=16 run used a
+40-iteration cap. A and C still gained 5.26 and 7.06 in total training log
+likelihood on the last step, so that run is archived as
+`manifests/cold_v5_xd_initial_40iter_k16.json`. The cap is now 200 for all
+three registered sizes; each tier records its final gain and a convergence
+flag, and an unfinished fit cannot enter the held-out selection. This change
+uses only training optimizer state and was made before comparing the three
+held-out scores or any candidate-v4 outcomes.
+
 The selected mixture is compared with each frozen QRF on the exact same
 strict Gaia cold-anchor identities accepted by the locked WISE20 route.
 Report by field and tier: residual center, NMAD, |Δμ|>0.5 mag tail,

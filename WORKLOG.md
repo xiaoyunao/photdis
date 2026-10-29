@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- NERSC job 60481106 finished K=16 in 66 s with the exact frozen A/B/C
+  identities (7,782/7,351/7,341) and positive covariance eigenvalues.
+  The 40-iteration cap was active for A and C; their last log-likelihood
+  gains were 5.26 and 7.06. Archived its manifest and ignored NERSC models,
+  cancelled still-pending K=32/64 jobs, raised the cap to 200 for all sizes,
+  and required `converged` before model selection. No held-out scores were
+  compared before this optimizer repair. Blue inventory job 60481185 failed:
+  `training_blue_coverage` requested `ebv` from the compact v4 anchor
+  sidecar. The source field already enforces the low-dust domain, so the
+  count now uses its selected/clean flags; added a test without an `ebv`
+  column. Next: validate, sync, resubmit fit and blue inventory jobs.
+
 - Added `scripts/cold_v5_xd_decide.py` and one focused test to apply the
   registered center/NMAD/tail/g-and-r response gate on both held-out
   development fields. `docs/cold_v5_xd_protocol.md` now labels both compared

@@ -21,6 +21,8 @@ def choose(config, manifests, names):
         fit = manifests[size]
         if fit["configuration_sha256"] != sha(CONFIG):
             raise ValueError(f"Configuration differs for size {size}")
+        if not all(entry["converged"] for entry in fit["tiers"].values()):
+            raise ValueError(f"XD optimization unfinished for size {size}")
         fields = {}
         for name in names:
             weighted = count = 0

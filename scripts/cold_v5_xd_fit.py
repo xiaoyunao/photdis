@@ -141,8 +141,10 @@ def main():
             "fit_rows": len(ids), "identity_sha256": identity_hash(ids),
             "model_sha256": sha(path),
             "iterations": len(model.log_likelihood_history_),
+            "converged": bool(model.converged_),
             "first_log_likelihood": model.log_likelihood_history_[0],
             "last_log_likelihood": model.log_likelihood_history_[-1],
+            "last_log_likelihood_gain": float(np.diff(model.log_likelihood_history_)[-1]),
             "minimum_covariance_eigenvalue": float(min(np.linalg.eigvalsh(
                 model.covariances_).min(axis=1))),
             "development": development_score(model, tier, development)}

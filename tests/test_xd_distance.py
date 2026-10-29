@@ -40,6 +40,7 @@ def test_xd_fit_scores_heldout_conditional_density():
                                   np.full(120, .02))
     model = XDMixture(2, max_iter=8, batch_size=32).fit(x, cov)
     assert np.isclose(model.weights_.sum(), 1)
+    assert isinstance(model.converged_, bool)
     assert np.linalg.eigvalsh(model.covariances_).min() > 0
     assert np.isfinite(model.conditional_mg_logpdf(x[:8], cov[:8])).all()
 

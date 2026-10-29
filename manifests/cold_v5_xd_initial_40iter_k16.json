@@ -1,0 +1,69 @@
+{
+  "components": 16,
+  "configuration_sha256": "f23c49482fc6ffbdc30bc2352263ce19e457b3e4137674eb8c5e5ce05aca219d",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "tiers": {
+    "A_grz": {
+      "fit_rows": 7782,
+      "identity_sha256": "32c3fc13f882af1cf3b3869fd77c5c4d01bdbc4fc2437f7fc7964dc6775d92f9",
+      "model_sha256": "b568291db9526cdbb0a7e0a036d83d4411cb79b30e58c3e797b3ea4e1eb9d4f3",
+      "iterations": 40,
+      "first_log_likelihood": 5963.630806911262,
+      "last_log_likelihood": 6669.245750637133,
+      "minimum_covariance_eigenvalue": 9.999999999999595e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 63,
+          "mean_negative_conditional_log_density": 0.5704390797992994
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 486,
+          "mean_negative_conditional_log_density": 0.3738258798456808
+        }
+      }
+    },
+    "B_grzW1": {
+      "fit_rows": 7351,
+      "identity_sha256": "879591d31d83881e388e31637be021ddf676aac680cbcb928a07772c327860e1",
+      "model_sha256": "39b5abaa95d31c5b4a47de1e4106880e0ae7db6274c0537e82bfa8897bc6c216",
+      "iterations": 30,
+      "first_log_likelihood": 20846.423258528856,
+      "last_log_likelihood": 21565.99038116498,
+      "minimum_covariance_eigenvalue": 9.999999999999759e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 19,
+          "mean_negative_conditional_log_density": 0.8160203053519394
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 153,
+          "mean_negative_conditional_log_density": 0.575249108055445
+        }
+      }
+    },
+    "C_grzW1W2": {
+      "fit_rows": 7341,
+      "identity_sha256": "29b8d394d37e03e0080c8a82b8e36fc374b2839b1d647eb669218744484e0e8c",
+      "model_sha256": "e9d2df6afef649b3eada2898e1839e0d74eedd550efd8041ebf0c483fea2ae86",
+      "iterations": 40,
+      "first_log_likelihood": 38025.14080292866,
+      "last_log_likelihood": 39192.52504456652,
+      "minimum_covariance_eigenvalue": 9.999999999999597e-05,
+      "development": {
+        "dev_cal_ra205_215_dec_m010_p000": {
+          "n": 1175,
+          "mean_negative_conditional_log_density": 0.0302145210395589
+        },
+        "native_dev_ra060_070_dec_m035_m025": {
+          "n": 5955,
+          "mean_negative_conditional_log_density": -0.06133435965300302
+        }
+      }
+    }
+  },
+  "development_field_names": [
+    "dev_cal_ra205_215_dec_m010_p000",
+    "native_dev_ra060_070_dec_m035_m025"
+  ],
+  "compute_host": "nid004124"
+}

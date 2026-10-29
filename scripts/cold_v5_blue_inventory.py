@@ -118,11 +118,12 @@ def training_blue_coverage(references, color_low):
     for table, selected, _, meta in load_training(references):
         blue = (selected & table["grz_base"] & np.isfinite(table["gr0"]) &
                 (table["gr0"] < color_low))
+        # The v4 source fields already enforced the registered low-dust domain.
+        # Their compact anchor sidecars do not carry EBV as a separate column.
         result[meta["name"]] = {
             "cold_strict_anchor_rows": _count(selected),
             "blue_below_frozen_gr_lower_edge": _count(blue),
-            "blue_clean_low_dust": _count(blue & table["grz_clean"] &
-                (table["ebv"] < .03)),
+            "blue_clean_low_dust": _count(blue & table["grz_clean"]),
             "blue_by_r": _bin_counts(blue, table["r"], R_BINS)}
     return result
 
