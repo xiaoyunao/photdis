@@ -2,6 +2,12 @@
 
 ## 2026-10-29
 
+- Added `scripts/plot_cold_v5_xd_compare.py` for a same-star development
+  figure of center, NMAD, raw interval coverage and fixed-tier g/r response.
+  A temporary two-field manifest rendered a nonempty 129 kB PNG; script
+  compiled. Next: render and inspect the real held-out results after NERSC
+  jobs complete.
+
 - The five allocated jobs remained pending in shared QOS. `scontrol show job`
   revealed that the 48 GiB request reserved 26 CPUs per job despite only
   four requested compute threads; reduced pending jobs to 16 GiB (nine
