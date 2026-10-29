@@ -51,6 +51,12 @@ distance model has been trained. The [candidate export report](docs/cold_v5_cand
 summarizes three field products; the export
 (`scripts/cold_v4_candidate_export.py`) writes per-object v4 tier, fallback
 reason, support ratio, conflict and depth state to ignored NERSC FITS files.
+Versioned v2 files add existing DESI class evidence while preserving all
+frozen distance columns. A bounded
+[DESI–Gaia–Legacy same-star inventory](docs/joint_calibration_v1.md) finds
+only one calibrated `[Fe/H]<−1.5` star among 224 conservative high-S/N
+cool-main-sequence anchors and none in the blue-side metal-poor intersection.
+K giant/cool RGB luminosity calibration is a separate next branch.
 
 ## Locations
 

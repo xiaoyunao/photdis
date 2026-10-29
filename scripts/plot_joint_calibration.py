@@ -31,7 +31,8 @@ def main():
     high = core & (layers == "high_ge20")
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.7), constrained_layout=True)
     axes[0].scatter(a["gr0"][core], a["feh_cal"][core], s=4, alpha=.2,
-                    color="#5a8198", rasterized=True, label=f"clean core: {core.sum():,}")
+                    color="#5a8198", rasterized=True,
+                    label=f"clean core with [Fe/H]: {core.sum():,}")
     axes[0].scatter(a["gr0"][high], a["feh_cal"][high], s=18,
                     facecolors="none", edgecolors="#c35832", linewidths=.8,
                     label=f"Gaia S/N≥20: {high.sum():,}")

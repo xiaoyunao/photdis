@@ -11,6 +11,8 @@ NERSC `data/joint_calibration_v1/same_star.fits`; the
 role, denominator and color–metallicity cross-tabulation.
 The [color–metallicity–luminosity figure](../figures/joint_calibration/01_color_metallicity_luminosity.png)
 shows the clean RVS core and its high-S/N geometric subset on the same axes.
+The plotted abundance subset has 2,314 objects; two other clean core objects
+do not have a valid calibrated abundance.
 
 ## Selection and labels
 

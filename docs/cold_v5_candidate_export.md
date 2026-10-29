@@ -65,3 +65,30 @@ The per-field manifests are:
 - `manifests/cold_v4_candidates_cold_v4_final_ra000_010_dec_m035_m025.json`
 - `manifests/cold_v4_candidates_cold_v4_final_ra150_160_dec_p020_p030.json`
 - `manifests/cold_v4_candidates_cold_v4_final_ra220_230_dec_p020_p030.json`
+
+## Versioned class-evidence export
+
+Allocated jobs 60484208/60484209/60484210 wrote v2 catalogs to
+`data/cold_v4_candidates_v2/`, leaving v1 files in place. The independent
+allocated validation job 60484704 compared all 395,629 records and **all 14
+frozen identity, route, photometric quality, magnitude and distance columns
+element by element** with v1. Every field matched, including NaN support
+ratios. The [validation manifest](../manifests/cold_v4_candidate_v2_validation.json)
+also checks the category-availability and conflict flags.
+
+| Existing DESI evidence category | v2 candidates |
+|---|---:|
+| Unknown | 394,418 |
+| Other qualified star or transitional label | 938 |
+| Conservative 4200–5000 K main-sequence label | 269 |
+| Conservative cool-giant label | 0 |
+| Qualified nonstellar Redrock conflict | 4 |
+
+Thus 1,211/395,629 (0.31%) carry any evidence under this conservative
+definition. Zero cool-giant flags in these three exported fields describe
+this narrow temperature, gravity-error and quality definition; they do not
+establish zero giant contamination. Four nonstellar conflicts are warnings
+against using a cold-dwarf distance for those objects. The vast majority
+remain `unknown`, and their published medians remain conditional distances.
+The versioned per-field manifests are
+`manifests/cold_v4_candidates_v2_*.json`.
