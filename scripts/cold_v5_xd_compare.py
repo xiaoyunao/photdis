@@ -46,6 +46,8 @@ def statistics(truth, prediction):
 
 
 def response_stats(change):
+    if not len(change):
+        return {"n": 0}
     return {"n": len(change), "median_mag": float(np.median(change)),
             "median_abs_mag": float(np.median(np.abs(change))),
             "nmad_mag": float(1.4826*np.median(np.abs(change-np.median(change)))),
@@ -124,7 +126,11 @@ def field_compare(source, route, policy, forests, mixtures):
         mask = (optical >= lo) & (optical < hi)
         field["by_color"][f"{lo:g}_{hi:g}"] = {
             "qrf": statistics(truth[mask], qrf[mask]),
-            "xd": statistics(truth[mask], xd[mask])}
+            "xd": statistics(truth[mask], xd[mask]),
+            "perturbation_plus_0p01_mag": {
+                band: {model: response_stats(change[mask])
+                       for model, change in perturb[band].items()}
+                for band in perturb}}
     for name, mask in (("conflict", conflict), ("no_conflict", ~conflict)):
         field["by_conflict"][name] = {"qrf": statistics(truth[mask], qrf[mask]),
                                       "xd": statistics(truth[mask], xd[mask])}
@@ -137,10 +143,18 @@ def field_compare(source, route, policy, forests, mixtures):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--components", type=int, required=True)
+    parser.add_argument("--color-response-only", action="store_true",
+                        help="Write a separate color-stratified diagnostic")
     args = parser.parse_args()
     require_compute()
-    if OUTPUT.exists() or SMALL.exists():
+    output = (Path("data/cold_v5_xd/color_response.json")
+              if args.color_response_only else OUTPUT)
+    small = (Path("manifests/cold_v5_xd_color_response.json")
+             if args.color_response_only else SMALL)
+    if output.exists() or small.exists():
         raise FileExistsError("Comparison already exists")
+    if args.color_response_only and not SMALL.exists():
+        raise FileNotFoundError("Frozen comparison manifest is required")
     cfg = json.loads(CONFIG.read_text())
     selected_size = json.loads(SELECTION.read_text())
     if args.components != selected_size["selected_components"] or sha(CONFIG) != selected_size["configuration_sha256"]:
@@ -173,16 +187,27 @@ def main():
               "policy": cfg["v4_policy"],
               "distance_modulus_prior": cfg["distance_modulus_prior"],
               "fields": {}, "compute_host": socket.gethostname()}
+    if args.color_response_only:
+        report["frozen_comparison_sha256"] = sha(SMALL)
     for path in paths:
         source = load_development(path, references, route, lock["chosen_policy"])
         field = field_compare(source, route, lock["chosen_policy"], forests, mixtures)
-        report["fields"][field["field"]] = field
+        if args.color_response_only:
+            report["fields"][field["field"]] = {
+                "n_same_selected": field["n_same_selected"],
+                "by_color": {name: {
+                    "n": metrics["qrf"]["n"],
+                    "perturbation_plus_0p01_mag":
+                        metrics["perturbation_plus_0p01_mag"]}
+                    for name, metrics in field["by_color"].items()}}
+        else:
+            report["fields"][field["field"]] = field
         print(json.dumps({"field": field["field"], "n": field["n_same_selected"],
                           "qrf_nmad": field["qrf"].get("nmad_mag"),
                           "xd_nmad": field["xd"].get("nmad_mag")}), flush=True)
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    write_json(OUTPUT, report)
-    write_json(SMALL, report)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    write_json(output, report)
+    write_json(small, report)
 
 
 if __name__ == "__main__":

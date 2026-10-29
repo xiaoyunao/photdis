@@ -33,6 +33,8 @@ invalid multi-extension export is archived. The blue inventory is complete.
    accepted objects, compare chosen candidate against frozen v4 in bias,
    NMAD, tails, probability quality, g/r perturbation response and error/color
    strata. The registered gate rejected XD K=32; no new final test follows.
+   A separate color-stratified g/r response diagnostic is pending to close
+   the detailed comparison audit without altering that decision.
 5. Complete: define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
    color-boundary failures, CMD position and giant/nonstar confusion. Keep it
    distinct from the frozen cold-v4 box. The current four-field inventory

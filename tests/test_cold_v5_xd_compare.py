@@ -38,3 +38,8 @@ def test_interval_statistics_distinguishes_tail_and_coverage():
     assert result["coverage95"] == 1.
     assert result["coverage68"] == .5
     assert result["abs_gt_0p5"] == .5
+
+
+def test_empty_color_group_has_explicit_response_count():
+    mod = _module()
+    assert mod.response_stats(np.array([])) == {"n": 0}

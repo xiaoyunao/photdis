@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Requirement-by-requirement audit found that the frozen XD comparison
+  reported residuals by color but g/r perturbation response only by whole
+  field. Extended `scripts/cold_v5_xd_compare.py` with color-bin responses
+  and a separate diagnostic output linked to the frozen comparison SHA256.
+  The original model selection/gate and candidate products remain unchanged.
+  Three focused comparison tests and Python syntax validation pass. Next:
+  sync the extension, run it on allocated NERSC CPU, then document the
+  color-dependent response and finish the goal audit.
+
 - Candidate export jobs 60482677/60482678 completed on allocated NERSC CPU
   nodes with exit code zero and empty stderr. RA0/RA220 contain
   197,165/72,866 selected rows in one FITS table each; header, columns and
