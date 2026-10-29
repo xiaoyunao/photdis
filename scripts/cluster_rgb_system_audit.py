@@ -272,13 +272,24 @@ def plot_loci(path, loci):
                 for p in pts:
                     ax.plot([p["p16"],p["p84"]],[p["mg"]]*2,
                             color=color, alpha=.5, lw=1.5)
+    for name, phase, label, color in (
+            ("m3", "diagnostic_upper_rgb", "M3 upper edge (diagnostic)", "tab:red"),
+            ("ngc2419", "diagnostic_lower_rgb",
+             "NGC 2419 lower/RHB overlap (diagnostic)", "0.45")):
+        diagnostic = loci[name][phase]
+        points = diagnostic["gr_points"]
+        if points:
+            axes[0].plot([p["color"] for p in points],
+                         [p["mg"] for p in points], "o--", color=color,
+                         ms=3, lw=1, alpha=.8,
+                         label=f"{label} (n={diagnostic['n']})")
     axes[0].set(xlabel="(g−r)₀",ylabel="g₀ − cluster μ")
     axes[1].set(xlabel="(r−z)₀",ylabel="g₀ − cluster μ")
     for ax in axes:
         ax.invert_yaxis()
         ax.grid(alpha=.2)
         ax.legend(fontsize=7)
-    fig.suptitle("Stage-matched native-system loci; bars: within-bin 16–84% (not intrinsic width)")
+    fig.suptitle("Stage-matched native-system loci; dashed: separate diagnostics; bars: within-bin 16–84%")
     path.parent.mkdir(parents=True,exist_ok=True)
     fig.savefig(path,dpi=170)
     plt.close(fig)

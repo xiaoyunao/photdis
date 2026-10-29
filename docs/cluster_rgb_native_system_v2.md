@@ -102,7 +102,9 @@ The new [stage-aligned locus figure](../figures/cluster_rgb/04_stage_matched_nat
 uses 480 M3 lower and 505 M53 upper+lower gr candidates, plus 405 NGC 2419
 upper candidates. Its `r-z` panel uses the unchanged frozen B cores of
 422, 409 and 391. The 81 new NGC 2419 lower-region stars remain a separate
-red-HB-overlap diagnostic and are not in the plotted upper sequence.
+red-HB-overlap diagnostic, plotted as a dashed gray gr sequence rather than
+mixed into the upper fit. The 97 M3 upper-edge gr candidates are likewise
+shown separately with a dashed red line.
 
 At seven common `M_g` grid points from `+1.0` to `+2.5`, the two southern
 **lower-RGB** gr sequences differ by median

@@ -33,7 +33,7 @@ cold-v4/XD and blue forward-parallax results unchanged.
    p(color | M_g, metallicity, RGB, system). Register a new whole-cluster
    test before any subsequent fit; NGC 7006 has already been used. Keep
    WISE as an acceptance diagnostic. Targeted tests passed; code, report,
-   small manifests and the selected figure are ready for milestone sync.
+   small manifests and the selected figure are in the milestone sync.
 
 Measured outcome: M3 upper RGB has 97 clean gr vs 2 clean grz candidates,
 but remains confined near `M_g≈+0.4…+0.9`; M3–M53 same-DECam lower loci

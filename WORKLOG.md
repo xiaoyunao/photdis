@@ -11,6 +11,8 @@
   with an inner/outer center shift; 25 quality PS1 matches show a median
   Legacy-minus-transformed-PS1 gr offset of −0.025 mag. Files: v2 aggregate
   manifest and figure, PS1 manifest, native-system report, PLAN.
+  Added separate dashed M3 upper-edge and NGC 2419 lower/RHB-overlap
+  sequences to the final plot so the frozen fitted stages remain explicit.
   Commands: Slurm cached finalize and PS1 cross-check, manifest/figure review,
   focused tests. Validation: both jobs exit 0; all four identities and
   camera releases verified. Remaining: no adopted giant-distance model;
