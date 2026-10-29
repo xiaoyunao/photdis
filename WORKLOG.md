@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Added the pre-result method document `docs/cold_v5_xd_protocol.md` and
+  comparison/select scripts. The comparison reads the same Gaia strict
+  anchors and frozen WISE20 tier, scores v4 and XD distance-modulus center,
+  NMAD, tails, coverage and width by field/tier/error/color/conflict, and
+  applies identical fixed-tier +0.01 mag g/r perturbations. `cold_v5_xd_select`
+  chooses one 16/32/64 fit by equal-field held-out conditional log density.
+  Focused comparison tests (5) and Python compilation pass. All five NERSC
+  jobs remain pending for priority; no results inspected. Next: synchronize
+  comparison code, collect fit manifests when available, then choose one
+  configuration and score it once on the development fields.
+
 - Submitted allocated NERSC jobs 60481106/108/109 for the three XD sizes
   and 60481110 for one frozen-v4 candidate export; all were pending at the
   last queue check. Added a bounded blue-side inventory program and plot:
