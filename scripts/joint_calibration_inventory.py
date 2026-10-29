@@ -2,6 +2,7 @@
 """Build a bounded DESI–Gaia–Legacy same-star sample without fitting a model."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import socket
@@ -173,10 +174,15 @@ def summarize(rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", type=Path, default=CONFIG)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--manifest", type=Path, default=MANIFEST)
+    args = parser.parse_args()
     require_compute()
-    if OUTPUT.exists() or MANIFEST.exists():
-        raise FileExistsError("Joint inventory v1 already exists")
-    config = json.loads(CONFIG.read_text())
+    if args.output.exists() or args.manifest.exists():
+        raise FileExistsError("Joint inventory output already exists")
+    config = json.loads(args.config.read_text())
     pieces = []
     field_counts = {}
     for entry in config["fields"]:
@@ -200,15 +206,15 @@ def main():
             "summary": summarize(out)}
         print(json.dumps({"field": field["name"], "desi_unique": len(out)}), flush=True)
     all_rows = np.concatenate(pieces)
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    fitsio.write(str(OUTPUT), all_rows, extname="JOINT", clobber=False)
-    manifest = {"scope": config["purpose"], "config_sha256": sha(CONFIG),
-                "output": str(OUTPUT), "output_sha256": sha(OUTPUT),
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    fitsio.write(str(args.output), all_rows, extname="JOINT", clobber=False)
+    manifest = {"scope": config["purpose"], "config_sha256": sha(args.config),
+                "output": str(args.output), "output_sha256": sha(args.output),
                 "output_rows": len(all_rows), "fields": field_counts,
                 "by_role": {role: summarize(all_rows[all_rows["role"] == role.encode()])
                             for role in ("development", "reserved_validation")},
                 "all": summarize(all_rows), "compute_host": socket.gethostname()}
-    write_json(MANIFEST, manifest)
+    write_json(args.manifest, manifest)
     print(json.dumps({"output_rows": len(all_rows), "summary": manifest["all"]}), flush=True)
 
 

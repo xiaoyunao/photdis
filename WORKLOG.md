@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Repaired ranking job 60484858 completed on allocated CPU in 68 s with
+  2.01 GiB peak RSS. DESI-first selection yields 5,173 qualified
+  4200–5000 K `logg−σ_logg>4.2`, calibrated `[Fe/H]<−1.5` targets with
+  Gaia source IDs at −40≤Dec<35; 1,949 also have |b|≥30 and MWS EBV<0.03,
+  including 137 raw Gaia parallax S/N≥20. Registered four available DR11
+  10°×10° sweep fields from that ranking: two development and two reserved
+  validation, with expected 8/8/6/4 low-dust high-lat raw-S/N20 DESI targets.
+  Files: ranking script/manifest, four field configs, targeted field and
+  joint-inventory Slurm wrappers; next: run DR11 measured-photometry joins on
+  allocated CPUs and quantify the actual overlap.
+
 - DESI-targeted field-ranking job 60484807 caught a row-alignment error before
   writing output: the projected MWS pool contains only PRIMARY RVTAB rows,
   while the Gaia/FIBERMAP HDUs retain every source row. Reconstructed the

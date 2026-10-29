@@ -1,0 +1,10 @@
+{
+  "purpose": "DESI-selected metal-poor main-sequence DR11 measured-photometry follow-up",
+  "selection_manifest": "manifests/desi_target_field_ranking.json",
+  "fields": [
+    {"config": "configs/field_targeted_ra180_190_dec_p000_p010.json", "role": "development"},
+    {"config": "configs/field_targeted_ra180_190_dec_m010_p000.json", "role": "development"},
+    {"config": "configs/field_targeted_ra190_200_dec_p020_p030.json", "role": "reserved_validation"},
+    {"config": "configs/field_targeted_ra020_030_dec_p000_p010.json", "role": "reserved_validation"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "targeted_ra180_190_dec_m010_p000",
+  "bounds_deg": [180, -10, 190, 0],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-180m010-185m005.fits", "sweep-180m005-185p000.fits", "sweep-185m010-190m005.fits", "sweep-185m005-190p000.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_targeted_ra180_190_dec_m010_p000_v1",
+  "figure_dir": "figures/field_targeted_ra180_190_dec_m010_p000",
+  "manifest_path": "manifests/field_targeted_ra180_190_dec_m010_p000.json"
+}

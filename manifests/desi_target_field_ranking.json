@@ -1,0 +1,960 @@
+{
+  "selection": "DESI RVS quality, 4200<=Teff<5000, logg-error>4.2, calibrated FeH<-1.5, Gaia source ID>0",
+  "ranking_domain": "complete four-sweep DR11 10x10 cells; prioritize |b|>=30 and MWS EBV<0.03",
+  "qualified_poor_core_all_dec_minus40_plus35": 5173,
+  "high_lat_low_dust": 1949,
+  "high_lat_low_dust_raw_parallax_snr20": 137,
+  "candidates": [
+    {
+      "bounds_deg": [
+        180,
+        0,
+        190,
+        10
+      ],
+      "sweep_files": [
+        "sweep-180p000-185p005.fits",
+        "sweep-180p005-185p010.fits",
+        "sweep-185p000-190p005.fits",
+        "sweep-185p005-190p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 119,
+      "high_lat_low_dust": 115,
+      "high_lat_low_dust_raw_parallax_snr10": 28,
+      "high_lat_low_dust_raw_parallax_snr20": 8
+    },
+    {
+      "bounds_deg": [
+        180,
+        -10,
+        190,
+        0
+      ],
+      "sweep_files": [
+        "sweep-180m010-185m005.fits",
+        "sweep-180m005-185p000.fits",
+        "sweep-185m010-190m005.fits",
+        "sweep-185m005-190p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 143,
+      "high_lat_low_dust": 89,
+      "high_lat_low_dust_raw_parallax_snr10": 20,
+      "high_lat_low_dust_raw_parallax_snr20": 8
+    },
+    {
+      "bounds_deg": [
+        190,
+        -10,
+        200,
+        0
+      ],
+      "sweep_files": [
+        "sweep-190m010-195m005.fits",
+        "sweep-190m005-195p000.fits",
+        "sweep-195m010-200m005.fits",
+        "sweep-195m005-200p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 164,
+      "high_lat_low_dust": 108,
+      "high_lat_low_dust_raw_parallax_snr10": 16,
+      "high_lat_low_dust_raw_parallax_snr20": 8
+    },
+    {
+      "bounds_deg": [
+        190,
+        20,
+        200,
+        30
+      ],
+      "sweep_files": [
+        "sweep-190p020-195p025.fits",
+        "sweep-190p025-195p030.fits",
+        "sweep-195p020-200p025.fits",
+        "sweep-195p025-200p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 125,
+      "high_lat_low_dust": 120,
+      "high_lat_low_dust_raw_parallax_snr10": 21,
+      "high_lat_low_dust_raw_parallax_snr20": 6
+    },
+    {
+      "bounds_deg": [
+        170,
+        0,
+        180,
+        10
+      ],
+      "sweep_files": [
+        "sweep-170p000-175p005.fits",
+        "sweep-170p005-175p010.fits",
+        "sweep-175p000-180p005.fits",
+        "sweep-175p005-180p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 100,
+      "high_lat_low_dust": 75,
+      "high_lat_low_dust_raw_parallax_snr10": 14,
+      "high_lat_low_dust_raw_parallax_snr20": 6
+    },
+    {
+      "bounds_deg": [
+        190,
+        0,
+        200,
+        10
+      ],
+      "sweep_files": [
+        "sweep-190p000-195p005.fits",
+        "sweep-190p005-195p010.fits",
+        "sweep-195p000-200p005.fits",
+        "sweep-195p005-200p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 148,
+      "high_lat_low_dust": 86,
+      "high_lat_low_dust_raw_parallax_snr10": 16,
+      "high_lat_low_dust_raw_parallax_snr20": 5
+    },
+    {
+      "bounds_deg": [
+        170,
+        -10,
+        180,
+        0
+      ],
+      "sweep_files": [
+        "sweep-170m010-175m005.fits",
+        "sweep-170m005-175p000.fits",
+        "sweep-175m010-180m005.fits",
+        "sweep-175m005-180p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 163,
+      "high_lat_low_dust": 75,
+      "high_lat_low_dust_raw_parallax_snr10": 10,
+      "high_lat_low_dust_raw_parallax_snr20": 5
+    },
+    {
+      "bounds_deg": [
+        200,
+        0,
+        210,
+        10
+      ],
+      "sweep_files": [
+        "sweep-200p000-205p005.fits",
+        "sweep-200p005-205p010.fits",
+        "sweep-205p000-210p005.fits",
+        "sweep-205p005-210p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 169,
+      "high_lat_low_dust": 142,
+      "high_lat_low_dust_raw_parallax_snr10": 18,
+      "high_lat_low_dust_raw_parallax_snr20": 4
+    },
+    {
+      "bounds_deg": [
+        200,
+        20,
+        210,
+        30
+      ],
+      "sweep_files": [
+        "sweep-200p020-205p025.fits",
+        "sweep-200p025-205p030.fits",
+        "sweep-205p020-210p025.fits",
+        "sweep-205p025-210p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 25,
+      "high_lat_low_dust": 25,
+      "high_lat_low_dust_raw_parallax_snr10": 7,
+      "high_lat_low_dust_raw_parallax_snr20": 4
+    },
+    {
+      "bounds_deg": [
+        20,
+        0,
+        30,
+        10
+      ],
+      "sweep_files": [
+        "sweep-020p000-025p005.fits",
+        "sweep-020p005-025p010.fits",
+        "sweep-025p000-030p005.fits",
+        "sweep-025p005-030p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 58,
+      "high_lat_low_dust": 23,
+      "high_lat_low_dust_raw_parallax_snr10": 6,
+      "high_lat_low_dust_raw_parallax_snr20": 4
+    },
+    {
+      "bounds_deg": [
+        10,
+        0,
+        20,
+        10
+      ],
+      "sweep_files": [
+        "sweep-010p000-015p005.fits",
+        "sweep-010p005-015p010.fits",
+        "sweep-015p000-020p005.fits",
+        "sweep-015p005-020p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 51,
+      "high_lat_low_dust": 26,
+      "high_lat_low_dust_raw_parallax_snr10": 5,
+      "high_lat_low_dust_raw_parallax_snr20": 4
+    },
+    {
+      "bounds_deg": [
+        200,
+        -10,
+        210,
+        0
+      ],
+      "sweep_files": [
+        "sweep-200m010-205m005.fits",
+        "sweep-200m005-205p000.fits",
+        "sweep-205m010-210m005.fits",
+        "sweep-205m005-210p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 126,
+      "high_lat_low_dust": 41,
+      "high_lat_low_dust_raw_parallax_snr10": 9,
+      "high_lat_low_dust_raw_parallax_snr20": 3
+    },
+    {
+      "bounds_deg": [
+        180,
+        20,
+        190,
+        30
+      ],
+      "sweep_files": [
+        "sweep-180p020-185p025.fits",
+        "sweep-180p025-185p030.fits",
+        "sweep-185p020-190p025.fits",
+        "sweep-185p025-190p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 21,
+      "high_lat_low_dust": 20,
+      "high_lat_low_dust_raw_parallax_snr10": 6,
+      "high_lat_low_dust_raw_parallax_snr20": 3
+    },
+    {
+      "bounds_deg": [
+        210,
+        20,
+        220,
+        30
+      ],
+      "sweep_files": [
+        "sweep-210p020-215p025.fits",
+        "sweep-210p025-215p030.fits",
+        "sweep-215p020-220p025.fits",
+        "sweep-215p025-220p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 19,
+      "high_lat_low_dust": 14,
+      "high_lat_low_dust_raw_parallax_snr10": 5,
+      "high_lat_low_dust_raw_parallax_snr20": 3
+    },
+    {
+      "bounds_deg": [
+        210,
+        0,
+        220,
+        10
+      ],
+      "sweep_files": [
+        "sweep-210p000-215p005.fits",
+        "sweep-210p005-215p010.fits",
+        "sweep-215p000-220p005.fits",
+        "sweep-215p005-220p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 232,
+      "high_lat_low_dust": 85,
+      "high_lat_low_dust_raw_parallax_snr10": 10,
+      "high_lat_low_dust_raw_parallax_snr20": 2
+    },
+    {
+      "bounds_deg": [
+        30,
+        -10,
+        40,
+        0
+      ],
+      "sweep_files": [
+        "sweep-030m010-035m005.fits",
+        "sweep-030m005-035p000.fits",
+        "sweep-035m010-040m005.fits",
+        "sweep-035m005-040p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 49,
+      "high_lat_low_dust": 35,
+      "high_lat_low_dust_raw_parallax_snr10": 6,
+      "high_lat_low_dust_raw_parallax_snr20": 2
+    },
+    {
+      "bounds_deg": [
+        190,
+        10,
+        200,
+        20
+      ],
+      "sweep_files": [
+        "sweep-190p010-195p015.fits",
+        "sweep-190p015-195p020.fits",
+        "sweep-195p010-200p015.fits",
+        "sweep-195p015-200p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 44,
+      "high_lat_low_dust": 43,
+      "high_lat_low_dust_raw_parallax_snr10": 4,
+      "high_lat_low_dust_raw_parallax_snr20": 2
+    },
+    {
+      "bounds_deg": [
+        140,
+        -10,
+        150,
+        0
+      ],
+      "sweep_files": [
+        "sweep-140m010-145m005.fits",
+        "sweep-140m005-145p000.fits",
+        "sweep-145m010-150m005.fits",
+        "sweep-145m005-150p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 78,
+      "high_lat_low_dust": 12,
+      "high_lat_low_dust_raw_parallax_snr10": 3,
+      "high_lat_low_dust_raw_parallax_snr20": 2
+    },
+    {
+      "bounds_deg": [
+        160,
+        0,
+        170,
+        10
+      ],
+      "sweep_files": [
+        "sweep-160p000-165p005.fits",
+        "sweep-160p005-165p010.fits",
+        "sweep-165p000-170p005.fits",
+        "sweep-165p005-170p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 86,
+      "high_lat_low_dust": 8,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 2
+    },
+    {
+      "bounds_deg": [
+        210,
+        10,
+        220,
+        20
+      ],
+      "sweep_files": [
+        "sweep-210p010-215p015.fits",
+        "sweep-210p015-215p020.fits",
+        "sweep-215p010-220p015.fits",
+        "sweep-215p015-220p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 20,
+      "high_lat_low_dust": 17,
+      "high_lat_low_dust_raw_parallax_snr10": 8,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        140,
+        20,
+        150,
+        30
+      ],
+      "sweep_files": [
+        "sweep-140p020-145p025.fits",
+        "sweep-140p025-145p030.fits",
+        "sweep-145p020-150p025.fits",
+        "sweep-145p025-150p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 12,
+      "high_lat_low_dust": 11,
+      "high_lat_low_dust_raw_parallax_snr10": 5,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        140,
+        0,
+        150,
+        10
+      ],
+      "sweep_files": [
+        "sweep-140p000-145p005.fits",
+        "sweep-140p005-145p010.fits",
+        "sweep-145p000-150p005.fits",
+        "sweep-145p005-150p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 67,
+      "high_lat_low_dust": 23,
+      "high_lat_low_dust_raw_parallax_snr10": 3,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        30,
+        0,
+        40,
+        10
+      ],
+      "sweep_files": [
+        "sweep-030p000-035p005.fits",
+        "sweep-030p005-035p010.fits",
+        "sweep-035p000-040p005.fits",
+        "sweep-035p005-040p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 76,
+      "high_lat_low_dust": 21,
+      "high_lat_low_dust_raw_parallax_snr10": 3,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        150,
+        0,
+        160,
+        10
+      ],
+      "sweep_files": [
+        "sweep-150p000-155p005.fits",
+        "sweep-150p005-155p010.fits",
+        "sweep-155p000-160p005.fits",
+        "sweep-155p005-160p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 139,
+      "high_lat_low_dust": 69,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        20,
+        -10,
+        30,
+        0
+      ],
+      "sweep_files": [
+        "sweep-020m010-025m005.fits",
+        "sweep-020m005-025p000.fits",
+        "sweep-025m010-030m005.fits",
+        "sweep-025m005-030p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 37,
+      "high_lat_low_dust": 17,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        220,
+        10,
+        230,
+        20
+      ],
+      "sweep_files": [
+        "sweep-220p010-225p015.fits",
+        "sweep-220p015-225p020.fits",
+        "sweep-225p010-230p015.fits",
+        "sweep-225p015-230p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 34,
+      "high_lat_low_dust": 17,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        170,
+        -20,
+        180,
+        -10
+      ],
+      "sweep_files": [
+        "sweep-170m020-175m015.fits",
+        "sweep-170m015-175m010.fits",
+        "sweep-175m020-180m015.fits",
+        "sweep-175m015-180m010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 16,
+      "high_lat_low_dust": 2,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "sweep_files": [
+        "sweep-000p000-005p005.fits",
+        "sweep-000p005-005p010.fits",
+        "sweep-005p000-010p005.fits",
+        "sweep-005p005-010p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 27,
+      "high_lat_low_dust": 14,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        150,
+        -10,
+        160,
+        0
+      ],
+      "sweep_files": [
+        "sweep-150m010-155m005.fits",
+        "sweep-150m005-155p000.fits",
+        "sweep-155m010-160m005.fits",
+        "sweep-155m005-160p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 107,
+      "high_lat_low_dust": 5,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        130,
+        0,
+        140,
+        10
+      ],
+      "sweep_files": [
+        "sweep-130p000-135p005.fits",
+        "sweep-130p005-135p010.fits",
+        "sweep-135p000-140p005.fits",
+        "sweep-135p005-140p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 46,
+      "high_lat_low_dust": 4,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        240,
+        20,
+        250,
+        30
+      ],
+      "sweep_files": [
+        "sweep-240p020-245p025.fits",
+        "sweep-240p025-245p030.fits",
+        "sweep-245p020-250p025.fits",
+        "sweep-245p025-250p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 59,
+      "high_lat_low_dust": 1,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 1
+    },
+    {
+      "bounds_deg": [
+        230,
+        20,
+        240,
+        30
+      ],
+      "sweep_files": [
+        "sweep-230p020-235p025.fits",
+        "sweep-230p025-235p030.fits",
+        "sweep-235p020-240p025.fits",
+        "sweep-235p025-240p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 46,
+      "high_lat_low_dust": 14,
+      "high_lat_low_dust_raw_parallax_snr10": 5,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        30,
+        -20,
+        40,
+        -10
+      ],
+      "sweep_files": [
+        "sweep-030m020-035m015.fits",
+        "sweep-030m015-035m010.fits",
+        "sweep-035m020-040m015.fits",
+        "sweep-035m015-040m010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 12,
+      "high_lat_low_dust": 8,
+      "high_lat_low_dust_raw_parallax_snr10": 3,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        20,
+        -20,
+        30,
+        -10
+      ],
+      "sweep_files": [
+        "sweep-020m020-025m015.fits",
+        "sweep-020m015-025m010.fits",
+        "sweep-025m020-030m015.fits",
+        "sweep-025m015-030m010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 10,
+      "high_lat_low_dust": 9,
+      "high_lat_low_dust_raw_parallax_snr10": 2,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        200,
+        10,
+        210,
+        20
+      ],
+      "sweep_files": [
+        "sweep-200p010-205p015.fits",
+        "sweep-200p015-205p020.fits",
+        "sweep-205p010-210p015.fits",
+        "sweep-205p015-210p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 25,
+      "high_lat_low_dust": 20,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        160,
+        -10,
+        170,
+        0
+      ],
+      "sweep_files": [
+        "sweep-160m010-165m005.fits",
+        "sweep-160m005-165p000.fits",
+        "sweep-165m010-170m005.fits",
+        "sweep-165m005-170p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 130,
+      "high_lat_low_dust": 15,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        320,
+        -10,
+        330,
+        0
+      ],
+      "sweep_files": [
+        "sweep-320m010-325m005.fits",
+        "sweep-320m005-325p000.fits",
+        "sweep-325m010-330m005.fits",
+        "sweep-325m005-330p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 42,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        180,
+        10,
+        190,
+        20
+      ],
+      "sweep_files": [
+        "sweep-180p010-185p015.fits",
+        "sweep-180p015-185p020.fits",
+        "sweep-185p010-190p015.fits",
+        "sweep-185p015-190p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 4,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        60,
+        -30,
+        70,
+        -20
+      ],
+      "sweep_files": [
+        "sweep-060m030-065m025.fits",
+        "sweep-060m025-065m020.fits",
+        "sweep-065m030-070m025.fits",
+        "sweep-065m025-070m020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 2,
+      "high_lat_low_dust": 2,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        320,
+        0,
+        330,
+        10
+      ],
+      "sweep_files": [
+        "sweep-320p000-325p005.fits",
+        "sweep-320p005-325p010.fits",
+        "sweep-325p000-330p005.fits",
+        "sweep-325p005-330p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 41,
+      "high_lat_low_dust": 1,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        350,
+        0,
+        360,
+        10
+      ],
+      "sweep_files": [
+        "sweep-350p000-355p005.fits",
+        "sweep-350p005-355p010.fits",
+        "sweep-355p000-360p005.fits",
+        "sweep-355p005-360p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 38,
+      "high_lat_low_dust": 1,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        10,
+        -10,
+        20,
+        0
+      ],
+      "sweep_files": [
+        "sweep-010m010-015m005.fits",
+        "sweep-010m005-015p000.fits",
+        "sweep-015m010-020m005.fits",
+        "sweep-015m005-020p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 9,
+      "high_lat_low_dust": 1,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        0,
+        -20,
+        10,
+        -10
+      ],
+      "sweep_files": [
+        "sweep-000m020-005m015.fits",
+        "sweep-000m015-005m010.fits",
+        "sweep-005m020-010m015.fits",
+        "sweep-005m015-010m010.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 2,
+      "high_lat_low_dust": 1,
+      "high_lat_low_dust_raw_parallax_snr10": 1,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        210,
+        -10,
+        220,
+        0
+      ],
+      "sweep_files": [
+        "sweep-210m010-215m005.fits",
+        "sweep-210m005-215p000.fits",
+        "sweep-215m010-220m005.fits",
+        "sweep-215m005-220p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 174,
+      "high_lat_low_dust": 9,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        160,
+        10,
+        170,
+        20
+      ],
+      "sweep_files": [
+        "sweep-160p010-165p015.fits",
+        "sweep-160p015-165p020.fits",
+        "sweep-165p010-170p015.fits",
+        "sweep-165p015-170p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 10,
+      "high_lat_low_dust": 9,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        350,
+        -10,
+        360,
+        0
+      ],
+      "sweep_files": [
+        "sweep-350m010-355m005.fits",
+        "sweep-350m005-355p000.fits",
+        "sweep-355m010-360m005.fits",
+        "sweep-355m005-360p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 22,
+      "high_lat_low_dust": 7,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        0,
+        -10,
+        10,
+        0
+      ],
+      "sweep_files": [
+        "sweep-000m010-005m005.fits",
+        "sweep-000m005-005p000.fits",
+        "sweep-005m010-010m005.fits",
+        "sweep-005m005-010p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 16,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        170,
+        10,
+        180,
+        20
+      ],
+      "sweep_files": [
+        "sweep-170p010-175p015.fits",
+        "sweep-170p015-175p020.fits",
+        "sweep-175p010-180p015.fits",
+        "sweep-175p015-180p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 12,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        10,
+        20,
+        20,
+        30
+      ],
+      "sweep_files": [
+        "sweep-010p020-015p025.fits",
+        "sweep-010p025-015p030.fits",
+        "sweep-015p020-020p025.fits",
+        "sweep-015p025-020p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 5,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    },
+    {
+      "bounds_deg": [
+        170,
+        20,
+        180,
+        30
+      ],
+      "sweep_files": [
+        "sweep-170p020-175p025.fits",
+        "sweep-170p025-175p030.fits",
+        "sweep-175p020-180p025.fits",
+        "sweep-175p025-180p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_poor_core": 4,
+      "high_lat_low_dust": 3,
+      "high_lat_low_dust_raw_parallax_snr10": 0,
+      "high_lat_low_dust_raw_parallax_snr20": 0
+    }
+  ],
+  "compute_host": "nid004183"
+}
