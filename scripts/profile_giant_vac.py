@@ -14,8 +14,8 @@ import numpy as np
 
 from photdis.stage1 import require_compute, write_json
 
-SOURCE = Path("data/giant_vac_v1/same_star.fits")
-OUT = Path("manifests/giant_vac_profile_v1.json")
+SOURCE = Path("data/giant_vac_v2/same_star.fits")
+OUT = Path("manifests/giant_vac_profile_v2.json")
 
 
 def median_nmad(values):
@@ -41,7 +41,10 @@ def profile(rows, mask):
     snr = rows["desi_snr"]
     snr_bins = {"lt20": snr < 20, "20_60": (snr >= 20) & (snr < 60),
                 "60_100": (snr >= 60) & (snr < 100), "ge100": snr >= 100}
-    return {"n": int(mask.sum()), "specdis": int(spec.sum()),
+    return {"n": int(mask.sum()),
+            "specdis_match": int((mask & rows["specdis_match"]).sum()),
+            "spdist_match": int((mask & rows["spdist_match"]).sum()),
+            "specdis": int(spec.sum()),
             "spdist": int(sp.sum()), "both": int(both.sum()),
             "specdis_by_snr": {name: {"n": int((spec & in_bin).sum()),
                 "fractional_distance_error": median_nmad(

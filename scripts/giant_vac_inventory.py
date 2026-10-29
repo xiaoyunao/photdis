@@ -19,25 +19,24 @@ JOINT = [Path("data/joint_calibration_v1_evidence_v2/same_star.fits"),
          Path("data/joint_calibration_targeted_v1_evidence_v2/same_star.fits")]
 SPEC = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits")
 SP = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits")
-OUT = Path("data/giant_vac_v1/same_star.fits")
-MANIFEST = Path("manifests/giant_vac_v1.json")
+OUT = Path("data/giant_vac_v2/same_star.fits")
+MANIFEST = Path("manifests/giant_vac_v2.json")
 
 
 def exact_pair_join(query_target, query_source, catalog):
     """Map (DESI target, Gaia source) to a unique row; ambiguous pairs stay unmatched."""
-    key = np.rec.fromarrays([catalog["TARGETID"], catalog["SOURCE_ID"]],
-                            names="target,source")
-    order = np.argsort(key, kind="stable")
-    sorted_key = key[order]
-    query = np.rec.fromarrays([query_target, query_source], names="target,source")
-    position = np.searchsorted(sorted_key, query)
-    safe = np.minimum(position, len(sorted_key) - 1)
-    found = (position < len(sorted_key)) & (sorted_key[safe] == query)
-    prior = np.maximum(safe - 1, 0)
-    following = np.minimum(safe + 1, len(sorted_key) - 1)
-    unique = ((safe == 0) | (sorted_key[prior] != query)) & (
-        (safe == len(sorted_key) - 1) | (sorted_key[following] != query))
-    return np.where(found & unique, order[safe], -1)
+    order = np.argsort(catalog["TARGETID"], kind="stable")
+    target = catalog["TARGETID"][order]
+    lower = np.searchsorted(target, query_target, side="left")
+    upper = np.searchsorted(target, query_target, side="right")
+    result = np.full(len(query_target), -1, dtype=np.int64)
+    for i, (lo, hi) in enumerate(zip(lower, upper)):
+        if query_source[i] <= 0 or lo == hi:
+            continue
+        matches = order[lo:hi][catalog["SOURCE_ID"][order[lo:hi]] == query_source[i]]
+        if len(matches) == 1:
+            result[i] = matches[0]
+    return result
 
 
 def giant_mask(rows):
@@ -54,6 +53,8 @@ def summarize(rows):
               "feh_cal_valid": rows["abundance_calibration_valid"]}
     result = {"all": int(len(rows)), "qualified_giant": int(giant.sum()),
               "clean_giant": int(clean.sum()),
+              "specdis_match": int((clean & rows["specdis_match"]).sum()),
+              "spdist_match": int((clean & rows["spdist_match"]).sum()),
               "specdis_valid": int((clean & rows["specdis_valid"]).sum()),
               "spdist_valid": int((clean & rows["spdist_valid"]).sum()),
               "both_valid": int((clean & rows["specdis_valid"] & rows["spdist_valid"]).sum()),
@@ -91,6 +92,11 @@ def main():
         "MG_16", "MG_50", "MG_84", "TEFF_COR", "LOGG_COR"])
     ispec = exact_pair_join(target, sid, spec)
     isp = exact_pair_join(target, sid, sp)
+    for table, index in ((spec, ispec), (sp, isp)):
+        present = index >= 0
+        if not (np.array_equal(table["TARGETID"][index[present]], target[present])
+                and np.array_equal(table["SOURCE_ID"][index[present]], sid[present])):
+            raise AssertionError("Distance VAC identity join is inconsistent")
     dtype = rows.dtype.descr + [
         ("specdis_match", "?"), ("specdis_valid", "?"),
         ("specdis_dist_kpc", "f4"), ("specdis_disterr_kpc", "f4"),
@@ -158,6 +164,7 @@ def main():
     summary = summarize(out)
     manifest = {"input": [str(path) for path in JOINT],
                 "specdis": str(SPEC), "spdist": str(SP),
+                "join_algorithm": "TARGETID range search, unique exact (TARGETID,SOURCE_ID) match; Gaia SOURCE_ID>0",
                 "output": str(OUT), "summary": summary,
                 "compute_host": socket.gethostname()}
     write_json(MANIFEST, manifest)
