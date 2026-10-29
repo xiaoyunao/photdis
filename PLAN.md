@@ -36,6 +36,10 @@ independent whole-system distance modulus, with shared zero-point error.
    identifiable, assess per-system center, scatter and tails. Test
    WISE on the same reliable unblended stars and report its acceptance rate.
    Do not claim photo-only metallicity or phase certainty from two clusters.
+   M53 now supplies 156 clean upper and 253 clean lower candidates, bridging
+   `M_g≈−0.19` to `+2.73`; NGC 7006 has 19 clean upper candidates reserved.
+   The fixed quadratic A/B diagnostic, whole-cluster test and shared-scale
+   sensitivity are registered in `docs/cluster_rgb_experiment_protocol_v1.md`.
 6. Validate, document in reverse-chronological WORKLOG, commit milestone
    changes and sync code, docs, small manifests and selected plots across
    local, GitHub and NERSC; large catalogs stay on NERSC.

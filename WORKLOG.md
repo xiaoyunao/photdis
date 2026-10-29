@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- Completed allocated phase audit 60493436 for M53 and blind NGC 7006
+  quality coverage. M53 has 156/253 clean upper/lower RGB candidates
+  with measured Legacy `M_g` 5–95% −0.19 to +2.73, bridging M3 and
+  NGC 2419; 22 have both clean WISE bands. NGC 7006 has 19 clean
+  upper and 20 lower candidates; its Legacy luminosity/color sequence
+  remains sealed. Registered a fixed cluster-weighted quadratic A/B
+  transfer experiment with NGC 7006 as whole-system test, source-level
+  bootstrap and shared modulus/dust sensitivities before fitting.
+  Files: phase manifests/figure, calibration report, experiment protocol,
+  experiment script/wrapper/tests, PLAN. Commands: Slurm phase array,
+  figure inspection, Python compilation and seven focused tests.
+  Validation: array tasks exit 0, seven tests pass. Next: commit protocol,
+  fit on development clusters, commit model, then score holdout once.
+
 - Completed allocated full-member DR11 extraction for registered M53
   development and NGC 7006 whole-system holdout (Slurm 60493137, both
   exit 0). P>0.9 member/clean-grz counts are 9,512/6,550 and 568/145.

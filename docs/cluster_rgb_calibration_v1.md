@@ -20,6 +20,7 @@ per-star DESI spectrum or SPDist label requirement.
 | Cluster | P>0.9 upper/lower RGB candidates | Clean upper/lower | Clean RGB `M_g` 5–95% | Clean RGB W1+W2 |
 |---|---:|---:|---:|---:|
 | M3 | 387 / 579 | **2 / 422** | +1.14 to +2.76 | 9 |
+| M53 | 357 / 313 | **156 / 253** | −0.19 to +2.73 | 22 |
 | NGC 2419 | 458 / 93 | **391 / 78** | −1.79 to +0.89 | 10 |
 
 The M3 upper RGB loses 385 of 387 high-probability candidates under the
@@ -28,13 +29,19 @@ fraction condition, six the mask condition and two pass both. Within one
 arcminute of M3's center, ten of 141 candidate RGB stars remain clean.
 NGC 2419 retains 391 of 458 upper-RGB candidates, but its lower candidate
 region overlaps the red horizontal branch in the Gaia CMD and is a
-sensitivity layer. The secure upper/lower luminosity ranges therefore
-barely meet. The two clusters alone cannot determine a continuous
-cross-system color–luminosity relation. The [registered roles](cluster_rgb_system_registration_v1.md)
-add M53 as a development bridge and NGC 7006 as a whole-system holdout.
+sensitivity layer. The secure M3 and NGC 2419 luminosity ranges barely
+meet. M53 supplies 156 clean upper and 253 clean lower candidates across
+the gap. Its median map reddening is `E(B−V)=0.02078`.
+The [registered roles](cluster_rgb_system_registration_v1.md) keep
+NGC 7006 as a whole-system holdout. The reserved system has 19 clean
+upper-RGB candidates and 20 lower-region candidates; its Legacy
+luminosities and colors remain sealed until the
+[fixed transfer protocol](cluster_rgb_experiment_protocol_v1.md) and
+development model are committed.
 
 The existing WISE clean counts refer to the same clean RGB candidate stars.
-Nine and ten two-band objects are too few for a standalone WISE RGB relation.
+Nine, 22 and ten two-band objects in M3, M53 and NGC 2419 are too few
+for a standalone WISE RGB relation.
 
 ## Shared scale and dust
 
@@ -56,10 +63,14 @@ agreement is used to assign them.
 ## Evidence
 
 - [`M3 phase manifest`](../manifests/cluster_rgb_m3_phase_v1.json)
+  [`M53 phase manifest`](../manifests/cluster_rgb_m53_phase_v1.json)
   and [`NGC 2419 phase manifest`](../manifests/cluster_rgb_ngc2419_phase_v1.json)
   include member, optical fraction/mask, radius, WISE and color-bin counts.
 - [`M3 phase figure`](../figures/cluster_rgb/02_phase_locus_m3.png)
+  [`M53 phase figure`](../figures/cluster_rgb/02_phase_locus_m53.png)
   and [`NGC 2419 phase figure`](../figures/cluster_rgb/02_phase_locus_ngc2419.png)
   show the measured Legacy loci alongside Gaia phase candidates.
+- [`NGC 7006 phase manifest`](../manifests/cluster_rgb_ngc7006_phase_v1.json)
+  contains only Gaia-CMD candidate and DR11 quality counts.
 - External scales: [M3 RR Lyrae](https://arxiv.org/abs/2008.11745),
   [NGC 2419 RR Lyrae](https://arxiv.org/abs/1011.5398).

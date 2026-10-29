@@ -1,0 +1,363 @@
+{
+  "system": "ngc7006",
+  "role": "reserved_whole_system",
+  "membership_probability_core": ">0.9",
+  "phase_config": "configs/cluster_rgb_phase_regions_v1.json",
+  "phase_definition": {
+    "rgb_bright_max_gaia_g_minus_mu": 0.2,
+    "rgb_lower_max_gaia_g_minus_mu": 1.0,
+    "rgb_color_lower_at_zero": 1.0,
+    "rgb_color_slope_per_mag": -0.05,
+    "hb_gaia_g_minus_mu": [
+      0.2,
+      1.3
+    ],
+    "hb_bp_rp_max": 0.9,
+    "possible_agb_bp_rp_min": 0.7,
+    "main_sequence_gaia_g_minus_mu_min": 3.6
+  },
+  "phase_caveat": "Upper/lower RGB, HB, AGB and main-sequence labels are Gaia CMD candidates. AGB and RGB overlap; possible AGB is never treated as a confirmed AGB. Lower RGB near the turnoff is a separate sensitivity layer. Keep full membership and quality flags.",
+  "external_modulus": {
+    "mu_mag": 18.07448608,
+    "stat_sigma_mag": 0.0737879,
+    "systematic_sigma_mag": 0.0,
+    "url": "https://arxiv.org/abs/2212.05021"
+  },
+  "phase_counts": {
+    "upper_rgb": {
+      "p_gt_0p9": 84,
+      "p_0p5_to_0p9": 3,
+      "grz_base": 27,
+      "fraction_clean": 20,
+      "mask_clean": 23,
+      "grz_clean": 19,
+      "both_fraction_mask_fail": 3,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 65,
+        "median": 17.0787,
+        "nmad": 0.9512361600000006,
+        "p05": 15.6554,
+        "p95": 18.09596
+      },
+      "gaia_g_retained": {
+        "n": 19,
+        "median": 16.7325,
+        "nmad": 0.6351458399999999,
+        "p05": 16.156390000000002,
+        "p95": 18.20893
+      },
+      "radius_arcmin_rejected": {
+        "n": 65,
+        "median": 0.4076260285962204,
+        "nmad": 0.2576345954966512,
+        "p05": 0.1425988993514012,
+        "p95": 1.8965918816190181
+      },
+      "radius_arcmin_retained": {
+        "n": 19,
+        "median": 1.236877298258097,
+        "nmad": 0.38423050533127967,
+        "p05": 0.7535939505779645,
+        "p95": 2.1954689081589143
+      },
+      "ebv_clean": {
+        "n": 19,
+        "median": 0.08223599940538406,
+        "nmad": 0.0029330062463879584,
+        "p05": 0.07899055704474449,
+        "p95": 0.08434869721531868
+      }
+    },
+    "lower_rgb": {
+      "p_gt_0p9": 42,
+      "p_0p5_to_0p9": 2,
+      "grz_base": 20,
+      "fraction_clean": 20,
+      "mask_clean": 20,
+      "grz_clean": 20,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 1,
+      "clean_w1w2": 1,
+      "gaia_g_rejected": {
+        "n": 22,
+        "median": 18.4502,
+        "nmad": 0.1343235599999977,
+        "p05": 18.358340000000002,
+        "p95": 19.033360000000002
+      },
+      "gaia_g_retained": {
+        "n": 20,
+        "median": 18.51435,
+        "nmad": 0.2170526399999998,
+        "p05": 18.323665000000002,
+        "p95": 18.88681
+      },
+      "radius_arcmin_rejected": {
+        "n": 22,
+        "median": 0.527769571092061,
+        "nmad": 0.2691139143939921,
+        "p05": 0.28415405775265495,
+        "p95": 1.423819127890351
+      },
+      "radius_arcmin_retained": {
+        "n": 20,
+        "median": 1.0533595509605722,
+        "nmad": 0.32177057510846624,
+        "p05": 0.609703604727891,
+        "p95": 3.472789005346042
+      },
+      "ebv_clean": {
+        "n": 20,
+        "median": 0.08250632137060165,
+        "nmad": 0.00137885128185153,
+        "p05": 0.07804167345166206,
+        "p95": 0.08392357230186462
+      }
+    },
+    "hb": {
+      "p_gt_0p9": 114,
+      "p_0p5_to_0p9": 5,
+      "grz_base": 45,
+      "fraction_clean": 37,
+      "mask_clean": 45,
+      "grz_clean": 37,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 77,
+        "median": 18.7598,
+        "nmad": 0.07235087999999992,
+        "p05": 18.49718,
+        "p95": 19.04058
+      },
+      "gaia_g_retained": {
+        "n": 37,
+        "median": 18.7623,
+        "nmad": 0.09458988000000076,
+        "p05": 18.63698,
+        "p95": 19.041839999999997
+      },
+      "radius_arcmin_rejected": {
+        "n": 77,
+        "median": 0.46319264414174877,
+        "nmad": 0.1775680760789333,
+        "p05": 0.25636458379438115,
+        "p95": 2.1616628814753915
+      },
+      "radius_arcmin_retained": {
+        "n": 37,
+        "median": 1.364195935633803,
+        "nmad": 0.7120816402829699,
+        "p05": 0.670815745345311,
+        "p95": 3.238323588105731
+      },
+      "ebv_clean": {
+        "n": 37,
+        "median": 0.0811460092663765,
+        "nmad": 0.002485335651040077,
+        "p05": 0.07924866825342178,
+        "p95": 0.08624908924102782
+      }
+    },
+    "possible_agb": {
+      "p_gt_0p9": 7,
+      "p_0p5_to_0p9": 2,
+      "grz_base": 1,
+      "fraction_clean": 1,
+      "mask_clean": 1,
+      "grz_clean": 1,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 6,
+        "median": 17.8141,
+        "nmad": 0.4838465099999995,
+        "p05": 17.234524999999998,
+        "p95": 18.21895
+      },
+      "gaia_g_retained": {
+        "n": 1,
+        "median": 18.129,
+        "nmad": 0.0,
+        "p05": 18.129,
+        "p95": 18.129
+      },
+      "radius_arcmin_rejected": {
+        "n": 6,
+        "median": 0.21042375329151872,
+        "nmad": 0.1427673090415428,
+        "p05": 0.09571973604389383,
+        "p95": 0.3323365424030493
+      },
+      "radius_arcmin_retained": {
+        "n": 1,
+        "median": 3.4191215321311654,
+        "nmad": 0.0,
+        "p05": 3.4191215321311654,
+        "p95": 3.4191215321311654
+      },
+      "ebv_clean": {
+        "n": 1,
+        "median": 0.08073513209819794,
+        "nmad": 0.0,
+        "p05": 0.08073513209819794,
+        "p95": 0.08073513209819794
+      }
+    },
+    "main_sequence": {
+      "p_gt_0p9": 0,
+      "p_0p5_to_0p9": 0,
+      "grz_base": 0,
+      "fraction_clean": 0,
+      "mask_clean": 0,
+      "grz_clean": 0,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 0
+      },
+      "gaia_g_retained": {
+        "n": 0
+      },
+      "radius_arcmin_rejected": {
+        "n": 0
+      },
+      "radius_arcmin_retained": {
+        "n": 0
+      },
+      "ebv_clean": {
+        "n": 0
+      }
+    },
+    "ambiguous": {
+      "p_gt_0p9": 163,
+      "p_0p5_to_0p9": 34,
+      "grz_base": 85,
+      "fraction_clean": 67,
+      "mask_clean": 84,
+      "grz_clean": 66,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 97,
+        "median": 20.0551,
+        "nmad": 0.6879263999999979,
+        "p05": 19.135559999999998,
+        "p95": 20.73906
+      },
+      "gaia_g_retained": {
+        "n": 66,
+        "median": 19.9387,
+        "nmad": 0.5572352099999996,
+        "p05": 18.769375,
+        "p95": 20.7274
+      },
+      "radius_arcmin_rejected": {
+        "n": 97,
+        "median": 0.6798415958592984,
+        "nmad": 0.2836932014012164,
+        "p05": 0.3927781994476466,
+        "p95": 2.098125834833901
+      },
+      "radius_arcmin_retained": {
+        "n": 66,
+        "median": 1.3625083815566656,
+        "nmad": 0.6920033564380985,
+        "p05": 0.7362246918845595,
+        "p95": 2.6332212803440997
+      },
+      "ebv_clean": {
+        "n": 66,
+        "median": 0.0819169208407402,
+        "nmad": 0.0027657442197203635,
+        "p05": 0.0787415374070406,
+        "p95": 0.0857410877943039
+      }
+    },
+    "invalid_gaia_cmd": {
+      "p_gt_0p9": 158,
+      "p_0p5_to_0p9": 26,
+      "grz_base": 13,
+      "fraction_clean": 2,
+      "mask_clean": 13,
+      "grz_clean": 2,
+      "both_fraction_mask_fail": 0,
+      "clean_w1": 0,
+      "clean_w1w2": 0,
+      "gaia_g_rejected": {
+        "n": 156,
+        "median": 19.32275,
+        "nmad": 0.874215090000001,
+        "p05": 17.486025,
+        "p95": 20.668950000000002
+      },
+      "gaia_g_retained": {
+        "n": 2,
+        "median": 19.62605,
+        "nmad": 1.1978666699999998,
+        "p05": 18.898895,
+        "p95": 20.353205000000003
+      },
+      "radius_arcmin_rejected": {
+        "n": 156,
+        "median": 0.32951190962811083,
+        "nmad": 0.15712314436456745,
+        "p05": 0.10986623365178057,
+        "p95": 0.7617144677286761
+      },
+      "radius_arcmin_retained": {
+        "n": 2,
+        "median": 0.6557073630682965,
+        "nmad": 0.10749450685393114,
+        "p05": 0.5904537166575734,
+        "p95": 0.7209610094790195
+      },
+      "ebv_clean": {
+        "n": 2,
+        "median": 0.0827043242752552,
+        "nmad": 9.617400839924811e-05,
+        "p05": 0.0826459426432848,
+        "p95": 0.0827627059072256
+      }
+    }
+  },
+  "rgb_candidate_radius_quality": [
+    {
+      "radius_arcmin": [
+        0,
+        1
+      ],
+      "all": 90,
+      "base": 16,
+      "clean": 13
+    },
+    {
+      "radius_arcmin": [
+        1,
+        2
+      ],
+      "all": 28,
+      "base": 24,
+      "clean": 21
+    },
+    {
+      "radius_arcmin": [
+        2,
+        5
+      ],
+      "all": 8,
+      "base": 7,
+      "clean": 5
+    }
+  ],
+  "data_file": "data/cluster_rgb_ngc7006_v1/members.fits",
+  "figure": "figures/cluster_rgb/01_member_cmd_ngc7006.png",
+  "holdout_state": "Gaia CMD and DR11 quality counts only; Legacy luminosities sealed",
+  "compute_host": "nid004103"
+}
