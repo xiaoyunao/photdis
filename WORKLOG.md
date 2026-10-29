@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- DESI-targeted field-ranking job 60484807 caught a row-alignment error before
+  writing output: the projected MWS pool contains only PRIMARY RVTAB rows,
+  while the Gaia/FIBERMAP HDUs retain every source row. Reconstructed the
+  original PRIMARY indices before sampling those HDUs, and retained an
+  explicit source-ID alignment assertion. Files: `scripts/select_desi_target_fields.py`.
+  Validation: syntax check pending; next: sync and rerun on allocated CPU.
+
 - Started Pro `1acf946` follow-up: read the full referenced review via
   `read_thread`, checked local/GitHub/NERSC heads and NERSC authentication,
   and created a detailed goal. Corrected XD coverage/derivative wording and

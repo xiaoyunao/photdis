@@ -48,10 +48,16 @@ def main():
         & np.isfinite(pool["ra"]) & np.isfinite(pool["dec"])
         & (pool["dec"] >= -40) & (pool["dec"] < 35))
     indices = np.flatnonzero(target)
-    # The projected pool retains MWS row order; sample only selected rows.
+    # The projected pool contains only PRIMARY MWS rows in their original order.
+    # Reconstruct their original row indices before sampling aligned HDUs.
     with fitsio.FITS(str(MWS)) as f:
-        embedded = f["GAIA"].read(columns=["SOURCE_ID", "PARALLAX_OVER_ERROR"], rows=indices)
-        fibermap = f["FIBERMAP"].read(columns=["EBV"], rows=indices)
+        primary = f["RVTAB"].read(columns=["PRIMARY"])["PRIMARY"].astype(bool)
+        original_rows = np.flatnonzero(primary)
+        if len(original_rows) != len(pool):
+            raise ValueError("Projected pool length differs from MWS PRIMARY rows")
+        chosen = original_rows[indices]
+        embedded = f["GAIA"].read(columns=["SOURCE_ID", "PARALLAX_OVER_ERROR"], rows=chosen)
+        fibermap = f["FIBERMAP"].read(columns=["EBV"], rows=chosen)
     if not np.array_equal(embedded["SOURCE_ID"], pool["source_id"][indices]):
         raise ValueError("Projected DESI pool and MWS Gaia rows are not aligned")
     ra = pool["ra"][indices].astype(float)
