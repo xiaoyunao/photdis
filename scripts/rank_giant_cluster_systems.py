@@ -40,7 +40,8 @@ def main():
               & (refs.member_source_id[safe] == gaia["SOURCE_ID"]))
     group = np.zeros(len(mws), np.int64)
     group[member] = refs.member_group[safe[member]]
-    good = (member & mws["PRIMARY"] & (mws["RR_SPECTYPE"] == b"STAR")
+    good = (member & mws["PRIMARY"]
+            & (np.char.strip(mws["RR_SPECTYPE"].astype("U")) == "STAR")
             & (mws["RVS_WARN"] == 0) & mws["SUCCESS"]
             & np.isfinite(mws["SN_R"]) & (mws["SN_R"] >= 10)
             & np.isfinite(mws["VSINI"]) & (mws["VSINI"] >= 0)

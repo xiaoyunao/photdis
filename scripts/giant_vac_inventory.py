@@ -40,8 +40,12 @@ def exact_pair_join(query_target, query_source, catalog):
     return np.where(found & unique, order[safe], -1)
 
 
+def giant_mask(rows):
+    return np.char.strip(rows["class_evidence"].astype("U")) == "conservative_giant"
+
+
 def summarize(rows):
-    giant = rows["class_evidence"] == b"conservative_giant"
+    giant = giant_mask(rows)
     clean = giant & rows["clean_low_dust"] & ~rows["cmd_spectral_conflict"]
     ranges = {"lt4200": rows["desi_teff"] < 4200,
               "4200_5000": (rows["desi_teff"] >= 4200) & (rows["desi_teff"] < 5000),
@@ -70,7 +74,7 @@ def main():
         raise FileExistsError("Giant VAC inventory already exists")
     arrays = [fitsio.read(str(path)) for path in JOINT]
     all_rows = np.concatenate(arrays)
-    giant = all_rows["class_evidence"] == b"conservative_giant"
+    giant = giant_mask(all_rows)
     rows = all_rows[giant]
     # Identity deduplication across fields; the same Gaia star must have one row.
     sid = rows["source_id"]

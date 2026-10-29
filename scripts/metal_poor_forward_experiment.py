@@ -30,7 +30,7 @@ def prepare():
     arrays = [fitsio.read(str(path), columns=COLUMNS) for path in JOINT]
     rows = np.concatenate(arrays)
     valid = rows["trusted_blue_core"] & (rows["source_id"] > 0)
-    valid &= rows["parallax_layer"] != b"unusable"
+    valid &= np.char.strip(rows["parallax_layer"].astype("U")) != "unusable"
     for name in ("gr0", "rz0", "g0", "feh_cal", "p_corr"):
         valid &= np.isfinite(rows[name])
     for name in ("sigma_g", "sigma_r", "sigma_z", "desi_feh_err",
@@ -38,7 +38,7 @@ def prepare():
         valid &= np.isfinite(rows[name]) & (rows[name] > 0)
     rows = rows[valid]
     # Reserved identity takes priority when a star is present in two fields.
-    reserved = rows["role"] == b"reserved_validation"
+    reserved = np.char.strip(rows["role"].astype("U")) == "reserved_validation"
     order = np.lexsort((rows["ls_id"], -np.nan_to_num(rows["desi_snr"], nan=-1),
                         -reserved.astype(int), rows["source_id"]))
     _, first = np.unique(rows["source_id"][order], return_index=True)
@@ -67,14 +67,14 @@ def metrics(data, params, with_feh):
 
 
 def strata(data, params, with_feh):
-    layers = data["parallax_layer"]
+    layers = np.char.strip(data["parallax_layer"].astype("U"))
     return {name: metrics(data[mask], params, with_feh) for name, mask in {
         "all": np.ones(len(data), bool),
         "blue_gr0_lt_0p909": data["gr0"] < .909,
         "poor_feh_lt_m1p5": data["feh_cal"] < -1.5,
         "blue_poor": (data["gr0"] < .909) & (data["feh_cal"] < -1.5),
-        **{layer.decode(): layers == layer for layer in
-           (b"high_ge20", b"mid_10_20", b"weak_0_10", b"negative")}}
+        **{layer: layers == layer for layer in
+           ("high_ge20", "mid_10_20", "weak_0_10", "negative")}}
         .items()}
 
 
@@ -83,8 +83,9 @@ def main():
     if OUT.exists():
         raise FileExistsError(OUT)
     rows, dedup = prepare()
-    dev = rows["role"] == b"development"
-    reserved = rows["role"] == b"reserved_validation"
+    roles = np.char.strip(rows["role"].astype("U"))
+    dev = roles == "development"
+    reserved = roles == "reserved_validation"
     if dev.sum() < 100 or reserved.sum() < 100:
         raise ValueError("Development/reserved role coverage too small")
     baseline, info0 = fit(rows[dev], with_feh=False)

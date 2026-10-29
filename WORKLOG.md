@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Giant VAC job 60486865 finished but its summary was all zeros: FITS string
+  columns read back as Unicode and a byte-string giant comparison selected
+  no rows. The same type error was found in pending metal-poor role/parallax
+  predicates and MWS cluster STAR selection; those jobs were cancelled
+  before execution. Normalized all three predicates to stripped Unicode and
+  added FITS round-trip tests for giant selection and development/reserved
+  deduplication. Files: three experiment scripts and two tests. Validation:
+  six focused tests, Python compilation and diff check pass. Next: archive
+  the empty giant artifact, sync repair and rerun allocated jobs.
+
 - Added a bounded profile of matched giant VAC labels: per-temperature and
   low-gravity counts, per-star label uncertainties, SpecDis–SPDist same-star
   disagreements, and published cluster-member groups with reference
