@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Pair audit Slurm 60498253 completed: on exactly 93 common lower-RGB stars,
+  gr-minus-grz NMAD gain is 0.083 mag with source-bootstrap 95% interval
+  +0.009…+0.140 mag; the grz median residual changes by 0.686 mag between
+  reference `M_g=1–1.5` and `2.5–3` bins. First coherent scale job 60498282
+  failed before writing output because FITS returned Unicode phase labels
+  while the script assumed bytes and called `.decode()`. Fixed decoding for
+  both types; no test criterion or fitted parameter changed. Files: scale
+  script, WORKLOG. Commands: Slurm log inspection. Next: targeted test and
+  rerun the sensitivity job.
+
 - Added a coherent test-cluster scale sensitivity for the frozen grz model:
   vary the registered ±0.01 E(B−V) and ±0.01-mag g/r/z zero points across
   all NGC 5466 stars, retain common IDs, and measure distance-center

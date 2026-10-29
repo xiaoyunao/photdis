@@ -17,10 +17,14 @@ from photdis.cluster_rgb_conditional import RG,RR,RZ
 from photdis.stage1 import require_compute,write_json
 
 
+def phase_name(value):
+    return (value.decode() if isinstance(value,bytes) else str(value)).strip()
+
+
 def score(tab, model, cfg, feh, weight):
     result={}
     for row in tab:
-        stage=row["phase"].decode().strip()
+        stage=phase_name(row["phase"])
         if not (row["pmember"]>.9 and row["grz_clean_same_row"]
                 and stage in ("upper_rgb","lower_rgb")):
             continue

@@ -6,7 +6,7 @@ import numpy as np
 
 sys.path[:0] = [str(Path(__file__).resolve().parents[1]/"scripts")]
 from cluster_rgb_ngc5466_score import describe, score_row
-from cluster_rgb_ngc5466_scale_sensitivity import perturb
+from cluster_rgb_ngc5466_scale_sensitivity import perturb, phase_name
 
 
 def test_score_reports_comparable_distance_density_and_ordered_mu_interval():
@@ -32,3 +32,8 @@ def test_coherent_r_zero_point_moves_shared_colors_in_opposite_directions():
     np.testing.assert_allclose(shifted["g0"],tab["g0"])
     np.testing.assert_allclose(shifted["gr0"],tab["gr0"]-.01)
     np.testing.assert_allclose(shifted["rz0"],tab["rz0"]+.01)
+
+
+def test_phase_name_accepts_fits_bytes_and_unicode():
+    assert phase_name(np.bytes_(b"lower_rgb")) == "lower_rgb"
+    assert phase_name(np.str_("lower_rgb")) == "lower_rgb"
