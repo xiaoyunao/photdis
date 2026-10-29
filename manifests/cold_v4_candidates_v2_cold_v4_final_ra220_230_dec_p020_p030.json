@@ -1,0 +1,26 @@
+{
+  "field": "cold_v4_final_ra220_230_dec_p020_p030",
+  "source": "data/field_cold_v4_ra220_230_v1/field_diagnostics.fits",
+  "output": "data/cold_v4_candidates_v2/cold_v4_final_ra220_230_dec_p020_p030.fits",
+  "output_sha256": "d6383615f3a1059a2aa3fa8b1b06bcab1de5dc0ea47e642393d57c3a80889e31",
+  "input_rows": 336859,
+  "selected_rows": 72866,
+  "tier_counts": {
+    "A_grz": 45597,
+    "B_grzW1": 15185,
+    "C_grzW1W2": 12084
+  },
+  "infrared_fallback_conflict": 9235,
+  "class_evidence_counts": {
+    "unknown": 72233,
+    "other_star_or_transition": 479,
+    "cool_main_sequence": 152,
+    "cool_giant": 0,
+    "nonstellar": 2
+  },
+  "policy_lock_sha256": "a569489a9055ad2acc3aa6e6b623b03e846bd266bd15aea8f8a66dc6d4cfdb1d",
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "distance_semantics": "median conditional on cold-dwarf hypothesis; no calibrated type probability or released deep interval",
+  "depth_state_semantics": "measured r bin only; r18_22 has diagnostic stress tests with undercoverage, r>=22 is beyond them",
+  "compute_host": "nid004134"
+}

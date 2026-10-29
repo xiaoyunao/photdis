@@ -105,3 +105,27 @@ blue and giant branches as separate sample-building tasks. Next, construct a
 then quantify genuine high-S/N and weak/negative-parallax overlap before
 registering any new model or final test. Preserve the three reserved fields
 and source identities when assessing later generalization.
+
+## DESI-first targeted expansion in progress
+
+An allocated scan of the PRIMARY DESI MWS projected pool ranks complete
+DR11 10°×10° cells using qualified 4200–5000 K stars with
+`logg−σ_logg>4.2` and calibrated `[Fe/H]<−1.5`. The full ranking and
+selection details are in
+[`manifests/desi_target_field_ranking.json`](../manifests/desi_target_field_ranking.json).
+There are 5,173 such DESI targets with Gaia IDs and −40≤Dec<35; 1,949
+also meet |b|≥30 and MWS `EBV<0.03`, including 137 with *raw MWS Gaia*
+parallax S/N≥20. These are DESI catalog counts, not yet DR11 clean-photometry
+joint anchors. Four available sweep cells were registered in
+[`configs/joint_targeted_fields.json`](../configs/joint_targeted_fields.json):
+
+| Field RA / Dec | Role | Low-dust, high-lat DESI poor-core targets | Raw Gaia S/N≥20 among them |
+|---|---|---:|---:|
+| 180–190 / 0–10 | Development | 115 | 8 |
+| 180–190 / −10–0 | Development | 89 | 8 |
+| 190–200 / 20–30 | Reserved validation | 120 | 6 |
+| 20–30 / 0–10 | Reserved validation | 23 | 4 |
+
+The next allocated step reads the actual DR11 sweep photometry in those
+fields and reconstructs the same-star quality and corrected-parallax layers.
+The roles are fixed before those outcomes are inspected.

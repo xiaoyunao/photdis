@@ -2,25 +2,26 @@
 
 ## Current Objective
 
-The latest Pro review of `1acf946` starts a bounded joint-calibration round.
+The latest Pro review of `1acf946` is in a bounded joint-calibration round.
 Keep cold-v4 models, routes, registered XD adoption gate and historical test
 identities frozen. Correct the XD physical interpretation and Gaia point-
 reference coverage wording; version the candidate export with existing class
 evidence; build a same-star DESI–Gaia–Legacy feasibility sample in seven
-registered fields. Decide from measured overlap whether a blue metal-poor
+registered fields and four DESI-selected DR11 fields. Decide from measured
+overlap whether a blue metal-poor
 main-sequence relation can be calibrated and identify K giant/cool RGB labels.
 No new distance model or deep interval is adopted in this round.
 
 ## Current Round Milestones
 
-1. Revise XD result interpretation, label raw interval coverage relative to
+1. Complete: revise XD result interpretation, label raw interval coverage relative to
    noisy Gaia point references, and correct blue inventory base versus clean,
    low-dust denominators. Keep the original v4 and XD decision records intact.
-2. Add per-candidate DESI RVS/Redrock evidence availability, source, quality,
+2. Complete: add per-candidate DESI RVS/Redrock evidence availability, source, quality,
    conservative class and conflict flag. Export versioned v2 FITS products on
    allocated NERSC compute, retaining v1 catalogs and photometric distances.
    Unknown spectra remain unknown. Verify schema and counts field by field.
-3. On allocated compute, assemble a bounded same-star DESI–Gaia–Legacy table
+3. Complete: on allocated compute, assemble a bounded same-star DESI–Gaia–Legacy table
    from `configs/joint_calibration_fields.json`. Start with unique,
    unambiguous DESI matches and report measured/clean grz, low dust,
    4200–5000 K calibrated continuous Fe/H and formal error, conservative
@@ -28,27 +29,25 @@ No new distance model or deep interval is adopted in this round.
    white-dwarf candidates. Retain raw/corrected parallax and weak/negative
    values; derive M_g only for quality high-S/N anchors. Reserve separate
    fields for subsequent validation before any model fitting.
-4. Report color, temperature, metallicity, brightness and sky coverage by
+4. In progress: report color, temperature, metallicity, brightness and sky coverage by
    class and parallax layer. Quantify whether the same-star metal-poor core
    supports zero point, color slope and metallicity dependence; otherwise
    state the specific missing overlap. Inventory reliable K giant/cool RGB
    labels and independent luminosity resources for the next science branch.
-5. Run focused validation, write concise scientific report and WORKLOG,
+5. In progress: run focused validation, write concise scientific report and WORKLOG,
    commit milestone(s) and synchronize programs, docs, manifests and selected
    figures through local, GitHub and NERSC. Catalogs remain on NERSC.
 
-Current compute checkpoint: all K=16/32/64 fits converged on frozen training
-identities. The registered equal-field score selected K=32; allocated job
-60482510 completed its same-star comparison. The locked gate failed the g
-and r response requirements in both informative development fields: retain
-frozen v4 and close this XD comparison. All three corrected candidate
-exports completed in allocated jobs 60482344/60482677/60482678, producing
-one FITS table per field and 395,629 total selected rows. Their catalogs stay
-in ignored NERSC data; small manifests and a report are tracked. The first
-invalid multi-extension export is archived. The blue inventory is complete.
-Allocated job 60483193 completed the color-stratified g/r response diagnostic;
-its accepted identities and frozen-comparison hash agree with the original
-result. XD responds more strongly in both occupied color bins and fields.
+Current compute checkpoint: v2 candidate jobs 60484208/209/210 completed
+and allocated validation 60484704 confirms all 14 frozen identity/route/
+distance columns match v1 for 395,629 objects. The seven-field joint study
+60484207 contains 37,214 unique DESI matches, 224 clean low-dust high-S/N
+conservative cool-main-sequence stars and only one `[Fe/H]<−1.5` anchor,
+none blue of the frozen edge. DESI-first ranking 60484858 identified four
+unprocessed DR11 fields with 8/8/6/4 low-dust high-lat metal-poor targets
+at *raw* Gaia S/N≥20. Registered debug array 60485082 is building these
+fields sequentially; dependent 60485094 will summarize true DR11 overlap.
+The cold-v4 and registered XD decisions remain frozen.
 
 ## New Round Milestones
 

@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "rows": 197165,
+      "frozen_columns_equal": 14,
+      "class_counts": {
+        "unknown": 197165
+      },
+      "evidence_available": 0,
+      "class_conflicts_cold_dwarf": 0
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "rows": 125598,
+      "frozen_columns_equal": 14,
+      "class_counts": {
+        "cool_main_sequence": 117,
+        "nonstellar": 2,
+        "other_star_or_transition": 459,
+        "unknown": 125020
+      },
+      "evidence_available": 578,
+      "class_conflicts_cold_dwarf": 2
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "rows": 72866,
+      "frozen_columns_equal": 14,
+      "class_counts": {
+        "cool_main_sequence": 152,
+        "nonstellar": 2,
+        "other_star_or_transition": 479,
+        "unknown": 72233
+      },
+      "evidence_available": 633,
+      "class_conflicts_cold_dwarf": 2
+    }
+  },
+  "all_rows": 395629,
+  "all_evidence_available": 1211,
+  "all_conflicts": 4,
+  "compute_host": "nid004169"
+}

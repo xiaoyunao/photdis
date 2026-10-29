@@ -2,6 +2,22 @@
 
 ## 2026-10-29
 
+- Seven-field joint inventory 60484207 produced 37,214 unique DESI matches;
+  among 3,213 conservative cool-main-sequence labels, 224 have clean,
+  low-dust DR11 photometry and corrected Gaia S/N≥20, one has calibrated
+  `[Fe/H]<−1.5`, and zero jointly satisfy that metallicity and the blue
+  color region. Fifty-nine conservative cool giants include zero high-S/N
+  geometric labels. Three v2 candidate jobs 60484208/209/210 exported
+  395,629 rows: 1,211 carry conservative class evidence, four indicate
+  nonstellar conflict, and 394,418 are unknown. Allocated job 60484704
+  verified 14 frozen v1/v2 columns on every row. Fixed FITS Unicode-versus-
+  bytes comparison in the plot/validation readers; rerendered and inspected
+  the informative joint-overlap plot. Files: joint and candidate reports,
+  manifests, figure, validator and plot script. Validation: manifest count
+  identities pass; 83 Python tests pass with BLAS threads fixed to one (the
+  local Anaconda BLAS teardown exited 139 without that setting). Next:
+  finish the four DESI-ranked DR11 fields and reassess branch feasibility.
+
 - Repaired ranking job 60484858 completed on allocated CPU in 68 s with
   2.01 GiB peak RSS. DESI-first selection yields 5,173 qualified
   4200–5000 K `logg−σ_logg>4.2`, calibrated `[Fe/H]<−1.5` targets with
