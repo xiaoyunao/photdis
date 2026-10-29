@@ -51,6 +51,15 @@ photo-only distance distribution and their median with that reference, using
 actual DR11 color uncertainties. M3 tests an external distance scale at
 roughly 5300 K and does not validate the cooler K giant branch.
 
+A second, cooler system is registered before inspecting DR11 member
+measurements: NGC 2419, RA 110–120°, Dec 35–45°. The published member list
+is matched by exact Gaia source ID to DR11 south sweeps; all four 5° sweep
+tiles are examined on allocated CPU. Its independent RR Lyrae modulus is
+`19.71 ± 0.08` mag. The cluster has E(B−V)≈0.08, so report its measured
+reddening and optical quality per member rather than applying the training
+sample's E(B−V)<0.03 requirement. This system checks cool-giant VAC labels
+and later any cool-giant photo-only model, with the dust difference explicit.
+
 This is a bounded conditional-luminosity experiment, not a type classifier
 or an all-sky giant distance release. Internal SPDist comparisons measure
 agreement with that catalog; the M3 check measures agreement with an
@@ -59,3 +68,4 @@ independent system distance. Report both distinctly.
 Sources: [DESI SPDist documentation](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-spdist/),
 [DESI SpecDis documentation](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-specdis/),
 [M3 RR Lyrae distance study](https://arxiv.org/abs/2008.11745).
+NGC 2419 reference: [Di Criscienzo et al. 2011](https://arxiv.org/abs/1011.5398).
