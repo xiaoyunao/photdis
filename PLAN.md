@@ -40,6 +40,11 @@ independent whole-system distance modulus, with shared zero-point error.
    `M_g≈−0.19` to `+2.73`; NGC 7006 has 19 clean upper candidates reserved.
    The fixed quadratic A/B diagnostic, whole-cluster test and shared-scale
    sensitivity are registered in `docs/cluster_rgb_experiment_protocol_v1.md`.
+   The development fit is frozen in `manifests/cluster_rgb_transfer_model_v1.json`:
+   model A already has M3/NGC 2419 median offsets +0.688/−0.580 mag.
+   It is a transfer diagnostic, not an adopted RGB distance calibration.
+   Commit this model before scoring NGC 7006 once; use the holdout to
+   quantify the failure or limited domain, not to retune the curve.
 6. Validate, document in reverse-chronological WORKLOG, commit milestone
    changes and sync code, docs, small manifests and selected plots across
    local, GitHub and NERSC; large catalogs stay on NERSC.

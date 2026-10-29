@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Completed registered development-only cluster-weighted quadratic A/B
+  RGB fit on allocated Slurm job 60493603. Training counts match the
+  prior phase screens: M3 422 lower, M53 409 upper/lower, NGC 2419 391
+  upper. Model A fitted-system median Δμ is +0.688/−0.051/−0.580 mag
+  respectively, with broad NMADs; B does not remove the discrepancy.
+  Files: frozen model manifest and calibration report. Commands: Slurm
+  train job, manifest/count review. Validation: job exit 0; model artifact
+  reflects precommitted protocol. Next: commit model before opening NGC
+  7006 Legacy photometric labels; then score holdout once.
+
 - Plotted the three development clusters' measured Legacy RGB bin medians
   together; M53 bridges luminosity but the systems' color–luminosity loci
   differ at overlapping magnitudes. Added a compute-side cause audit for

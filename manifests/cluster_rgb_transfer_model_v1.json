@@ -1,0 +1,182 @@
+{
+  "protocol": "docs/cluster_rgb_experiment_protocol_v1.md",
+  "development_regions": {
+    "m3": [
+      "lower_rgb"
+    ],
+    "m53": [
+      "upper_rgb",
+      "lower_rgb"
+    ],
+    "ngc2419": [
+      "upper_rgb"
+    ]
+  },
+  "holdout_system": "ngc7006",
+  "source_identity_sha256": "70e9bf19cf74b06a1622c3e5b7788654cc6abb72b083c9210cbe62e70572e3e1",
+  "counts": {
+    "m3": {
+      "n": 422,
+      "w1_clean": 9,
+      "w1w2_clean": 9
+    },
+    "m53": {
+      "n": 409,
+      "w1_clean": 23,
+      "w1w2_clean": 22
+    },
+    "ngc2419": {
+      "n": 391,
+      "w1_clean": 12,
+      "w1w2_clean": 10
+    }
+  },
+  "models": {
+    "A": {
+      "variant": "A",
+      "coefficients": [
+        0.8676563366234686,
+        -0.9722042786707391,
+        0.004820108857841372
+      ],
+      "color_mean": [
+        0.5904753058404494
+      ],
+      "color_scale": [
+        0.12573684084284256
+      ],
+      "color_p01": [
+        0.40210405349731443
+      ],
+      "color_p99": [
+        1.0383853149414062
+      ],
+      "ridge": 0.001,
+      "total_weight_per_system": 0.3333333333333333,
+      "training_systems": [
+        "m3",
+        "m53",
+        "ngc2419"
+      ]
+    },
+    "B": {
+      "variant": "B",
+      "coefficients": [
+        0.8956710692876669,
+        -1.337700605577117,
+        0.35162226015421916,
+        0.4371675616141223,
+        -0.27694939807068036,
+        -0.20251543575461073
+      ],
+      "color_mean": [
+        0.590475305840449,
+        0.27676575391556396
+      ],
+      "color_scale": [
+        0.1257368408428426,
+        0.09380302626096639
+      ],
+      "color_p01": [
+        0.40210405349731443,
+        0.07646562576293946
+      ],
+      "color_p99": [
+        1.0383853149414062,
+        0.596355400085449
+      ],
+      "ridge": 0.001,
+      "total_weight_per_system": 0.3333333333333333,
+      "training_systems": [
+        "m3",
+        "m53",
+        "ngc2419"
+      ]
+    }
+  },
+  "development_scores": {
+    "A": {
+      "m3": {
+        "n": 422,
+        "delta_mu_median": 0.6877060828832718,
+        "delta_mu_nmad": 0.3610109015952887,
+        "abs_delta_mu_gt_0p5_fraction": 0.6706161137440758
+      },
+      "m53": {
+        "n": 409,
+        "delta_mu_median": -0.051129962856862554,
+        "delta_mu_nmad": 0.4505435591256821,
+        "abs_delta_mu_gt_0p5_fraction": 0.29095354523227385
+      },
+      "ngc2419": {
+        "n": 391,
+        "delta_mu_median": -0.5799189693827786,
+        "delta_mu_nmad": 0.7438641361535377,
+        "abs_delta_mu_gt_0p5_fraction": 0.5933503836317136
+      }
+    },
+    "B": {
+      "m3": {
+        "n": 422,
+        "delta_mu_median": 0.5441747110927013,
+        "delta_mu_nmad": 0.3984914334296896,
+        "abs_delta_mu_gt_0p5_fraction": 0.556872037914692
+      },
+      "m53": {
+        "n": 409,
+        "delta_mu_median": -0.12999867586504488,
+        "delta_mu_nmad": 0.38811763695471524,
+        "abs_delta_mu_gt_0p5_fraction": 0.28361858190709044
+      },
+      "ngc2419": {
+        "n": 391,
+        "delta_mu_median": -0.4946190985361687,
+        "delta_mu_nmad": 0.6098260356797928,
+        "abs_delta_mu_gt_0p5_fraction": 0.5575447570332481
+      }
+    }
+  },
+  "leave_one_system_out_scores": {
+    "A": {
+      "m3": {
+        "n": 422,
+        "delta_mu_median": 1.2013559241909872,
+        "delta_mu_nmad": 0.42593493327827747,
+        "abs_delta_mu_gt_0p5_fraction": 0.9786729857819905
+      },
+      "m53": {
+        "n": 409,
+        "delta_mu_median": -0.02044734691111083,
+        "delta_mu_nmad": 0.4441546989927472,
+        "abs_delta_mu_gt_0p5_fraction": 0.2762836185819071
+      },
+      "ngc2419": {
+        "n": 391,
+        "delta_mu_median": -0.0878840169856927,
+        "delta_mu_nmad": 1.9143812522431773,
+        "abs_delta_mu_gt_0p5_fraction": 0.7493606138107417
+      }
+    },
+    "B": {
+      "m3": {
+        "n": 422,
+        "delta_mu_median": 1.0290605772627857,
+        "delta_mu_nmad": 0.43977863229506803,
+        "abs_delta_mu_gt_0p5_fraction": 0.9052132701421801
+      },
+      "m53": {
+        "n": 409,
+        "delta_mu_median": -0.14673399935926768,
+        "delta_mu_nmad": 0.3809125140067367,
+        "abs_delta_mu_gt_0p5_fraction": 0.29095354523227385
+      },
+      "ngc2419": {
+        "n": 391,
+        "delta_mu_median": -0.10297628659140179,
+        "delta_mu_nmad": 2.1992424193884323,
+        "abs_delta_mu_gt_0p5_fraction": 0.7902813299232737
+      }
+    }
+  },
+  "compute_host": "nid004072"
+}

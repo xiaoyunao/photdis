@@ -76,5 +76,25 @@ agreement is used to assign them.
   displays 0.5-mag bin medians and within-bin color widths for the three
   development systems. At overlapping magnitudes the loci differ, so a
   pooled photo-only curve requires a whole-system transfer check.
+
+## Frozen low-degree transfer diagnostic
+
+The preregistered cluster-balanced quadratic A/B experiment has now been
+fitted to 422 M3 lower, 409 M53 upper/lower and 391 NGC 2419 upper RGB
+candidates. The selected W1+W2 counts are 9, 22 and 10, respectively.
+
+| Frozen model | M3 development `Δμ` median / NMAD | M53 | NGC 2419 |
+|---|---:|---:|---:|
+| A: `(g−r)₀` quadratic | +0.688 / 0.361 | −0.051 / 0.451 | −0.580 / 0.744 |
+| B: `(g−r)₀,(r−z)₀` quadratic | +0.544 / 0.398 | −0.130 / 0.388 | −0.495 / 0.610 |
+
+All quantities are mag and `Δμ=μ_pred−μ_external`. These are fitted-system
+scores, so their large offsets already show a failure of a single
+cluster-independent point relation under the chosen equal-cluster weights.
+The same [frozen model file](../manifests/cluster_rgb_transfer_model_v1.json)
+also records leave-one-system-out checks; for A, omitting M3 changes its
+median offset to +1.201 mag. This model remains a diagnostic and is not a
+field-star distance product. The reserved NGC 7006 result will be scored
+once against this committed model.
 - External scales: [M3 RR Lyrae](https://arxiv.org/abs/2008.11745),
   [NGC 2419 RR Lyrae](https://arxiv.org/abs/1011.5398).
