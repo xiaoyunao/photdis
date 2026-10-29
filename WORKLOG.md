@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Added two frozen-model cause diagnostics: same-star forced A/B/C and
+  complete-input/measurement-error cross-field matching; fixed-tier PS1
+  g/r/z/grz substitutions with separate rerouting and symmetric small
+  perturbations. New code leaves v4 route/model untouched. Python parse,
+  shell syntax and focused decomposition/color-propagation tests pass.
+  Fallback audit 60475742 is queued on NERSC. Next: run the new jobs on
+  allocated CPUs, inspect result manifests, and decide if a candidate rule
+  has enough evidence for separate validation.
+
 - Crossover common-sample audit job 60475661 completed in 14 s; weak-parallax
   v3 job 60475664 completed in 53 s, both on allocated NERSC CPUs. Copied
   small aggregate manifests. Difference-of-medians reaches +0.031 mag in one
