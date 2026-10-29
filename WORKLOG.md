@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Implemented an allocated-compute, cached-table NGC 7006 upper-RGB
+  development audit and figure. It compares the M53 upper branch on gr and
+  grz separately, records local color residuals, quality/radius halves,
+  magnitude overlap and shared-scale perturbation sizes. Files: new Python
+  script and Slurm wrapper. Commands: Python compilation, a focused stage
+  and quality-selection smoke check, git diff check. Validation: all passed.
+  Next: run the job, inspect the curve, then freeze the conditional fit.
+
 - Started the Pro `7256423` follow-up as a registered DECam conditional RGB
   experiment. Read the full review and recovered local/GitHub/NERSC tracked
   heads at `7256423`. Selected NGC 5466 as a new, untouched whole-cluster
