@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Color-response diagnostic job 60483193 remains live in Slurm pending
+  shared-partition resources. The earlier identical-model comparison used
+  548,752 KiB peak RSS, so reduced this pending job from four CPUs/8 GiB
+  to one CPU/2 GiB with `scontrol update`; its code already sets numerical
+  threads to one. Slurm accepted the new request and the job remains
+  pending, without resubmission. Next: inspect its terminal output and
+  color-bin manifest when resources become available.
+
 - Requirement-by-requirement audit found that the frozen XD comparison
   reported residuals by color but g/r perturbation response only by whole
   field. Extended `scripts/cold_v5_xd_compare.py` with color-bin responses
