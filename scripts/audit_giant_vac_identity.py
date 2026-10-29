@@ -13,12 +13,28 @@ import fitsio
 import numpy as np
 
 from photdis.stage1 import require_compute, write_json
-from giant_vac_inventory import exact_pair_join
 
 GIANTS = Path("data/giant_vac_v1/same_star.fits")
 SPEC = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits")
 SP = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits")
 OUT = Path("manifests/giant_vac_identity_audit_v2.json")
+
+
+def legacy_pair_join(query_target, query_source, catalog):
+    """Frozen v1 structured-key implementation for direct comparison."""
+    key = np.rec.fromarrays([catalog["TARGETID"], catalog["SOURCE_ID"]],
+                            names="target,source")
+    order = np.argsort(key, kind="stable")
+    sorted_key = key[order]
+    query = np.rec.fromarrays([query_target, query_source], names="target,source")
+    position = np.searchsorted(sorted_key, query)
+    safe = np.minimum(position, len(sorted_key) - 1)
+    found = (position < len(sorted_key)) & (sorted_key[safe] == query)
+    prior = np.maximum(safe - 1, 0)
+    following = np.minimum(safe + 1, len(sorted_key) - 1)
+    unique = ((safe == 0) | (sorted_key[prior] != query)) & (
+        (safe == len(sorted_key) - 1) | (sorted_key[following] != query))
+    return np.where(found & unique, order[safe], -1)
 
 
 def match_one(query, catalog):
@@ -49,7 +65,7 @@ def main():
         by_source, source_unique = match_one(giant["source_id"], catalog["SOURCE_ID"])
         target_found, source_found = by_target >= 0, by_source >= 0
         both = target_found & (catalog["SOURCE_ID"][np.maximum(by_target, 0)] == giant["source_id"])
-        joined = exact_pair_join(target, giant["source_id"], catalog)
+        joined = legacy_pair_join(target, giant["source_id"], catalog)
         pair_joined = joined >= 0
         disagreement = np.flatnonzero(pair_joined != both)
         sid_only = source_found & source_unique & ~both & (giant["source_id"] > 0)
