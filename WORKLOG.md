@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Conditional development fit completed on NERSC Slurm job 60497547
+  (exit 0). The fixed gr-all/common/grz-common tiers use 1041/850/850
+  development sources. Registered support allows gr-only upper RGB
+  `M_g=-1.5…+0.5`; grz-common upper support is empty under the fixed
+  five-per-cluster-per-bin rule; lower common support is +0.5…+3.0.
+  Files: frozen model manifest and fit report. Commands: allocated fit,
+  manifest/coefficient review. Validation: model and config hash match;
+  no NGC 5466 test data read. Next: commit model before blind extraction.
+
 - Fixed posterior quantiles on disconnected supported-Mg cells: discrete
   CDF indexing now returns an actually supported grid value instead of
   interpolating through an uncalibrated gap. Added a focused regression
