@@ -9,6 +9,12 @@ probabilistic distance candidate with v4 on identical training and development
 identities, and define a separate metal-poor blue branch. The active goal
 records the full scientific and validation criteria.
 
+Current compute checkpoint: the initial K=16 fit exposed an unfinished
+40-iteration optimizer (archived manifest). The revised 200-iteration fits
+K=16/32/64 are NERSC jobs 60482139/60482140/60482141. Blue-side inventory
+retry is 60482142; candidate export remains job 60481110. Inspect each
+terminal job and validate its manifest before selecting or scoring a model.
+
 ## New Round Milestones
 
 1. Reconcile the prior review's interpretation and publish an explicit

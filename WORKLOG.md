@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Validated the optimizer/blue-side repair with seven focused tests and
+  Python compilation. Commit `2fb80a4` synchronized to all three copies.
+  Resubmitted allocated shared-CPU jobs 60482139/140/141 for K=16/32/64
+  and 60482142 for the blue inventory; the old pending candidate export is
+  60481110. Updated the thread heartbeat to follow the new job IDs. Jobs
+  were pending for priority/resources at the last check. Next: inspect
+  terminal outputs and continue with registered selection and comparison.
+
 - NERSC job 60481106 finished K=16 in 66 s with the exact frozen A/B/C
   identities (7,782/7,351/7,341) and positive covariance eigenvalues.
   The 40-iteration cap was active for A and C; their last log-likelihood
