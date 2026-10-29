@@ -52,7 +52,7 @@ def main():
                          vmin=-2, vmax=.4, alpha=.8)
     axes[1].axvline(.909, color="#555", linestyle="--", linewidth=1)
     axes[1].set(xlabel=r"$(g-r)_0$", ylabel=r"$M_g$ from Gaia S/N≥20",
-                xlim=(.35, 1.65), ylim=(10, 2),
+                xlim=(.35, 1.65), ylim=(10.8, 2),
                 title="High-S/N same-star luminosity subset")
     fig.colorbar(p, ax=axes[1], label="DESI calibrated [Fe/H]")
     args.output.parent.mkdir(parents=True, exist_ok=True)

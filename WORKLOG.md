@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Candidate v3 jobs 60486601/60486604/60486605 completed with empty stderr.
+  Joint v2 jobs 60486608/60486609 stopped before writing because the old
+  same-star FITS omitted `desi_spectype`; the new class function requires
+  the original Redrock type. Repaired by joining each source field's
+  diagnostic type back by packed Legacy ID with Gaia ID assertion, not row
+  order. Added a focused reversed-row/identity-mismatch test. Prepared a
+  single-star DR11/Gaia/DESI/PS1 check for the discordant blue anchor and
+  expanded the targeted CMD plot to `M_g=10.8`. Files: joint v2 and star
+  audit scripts, test, plot/wrapper. Commands: `sacct`, error-log read,
+  `python3 -m py_compile`, `bash -n`, focused `pytest` (3 passed).
+  Next: sync repaired code and rerun allocated jobs.
+
 - Started Pro review of `caeb218`: read the full referenced reply via
   `read_thread`, fetched both remotes, confirmed clean and identical heads,
   and created a detailed active goal. Header inspection on the NERSC login

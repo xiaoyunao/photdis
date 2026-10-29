@@ -17,7 +17,8 @@ from photdis.class_evidence import desi_class_evidence_v3
 from photdis.stage1 import require_compute, write_json
 from cold_v4 import sha
 
-EXTRA = [("class_evidence_available", "?"), ("rvs_parameter_quality", "?"),
+EXTRA = [("desi_spectype", "S8"),
+         ("class_evidence_available", "?"), ("rvs_parameter_quality", "?"),
          ("blue_training_eligible", "?"),
          ("abundance_calibration_valid", "?"), ("redrock_type", "S8"),
          ("redrock_quality_state", "S28"),
@@ -57,9 +58,39 @@ def summarize(rows):
     return result
 
 
+def recover_redrock_type(prior, config_path):
+    """Join the retained type from each field diagnostic by exact Legacy ID."""
+    config = json.loads(config_path.read_text())
+    fields = np.char.strip(prior["field"].astype("U"))
+    result = np.full(len(prior), b"", dtype="S8")
+    covered = np.zeros(len(prior), bool)
+    for entry in config["fields"]:
+        field = json.loads(Path(entry["config"]).read_text())
+        use = fields == field["name"]
+        if not use.any():
+            continue
+        path = Path(field["output_dir"]) / "field_diagnostics.fits"
+        source = fitsio.read(str(path), columns=["ls_id", "source_id", "desi_spectype"])
+        order = np.argsort(source["ls_id"])
+        ids = source["ls_id"][order]
+        pos = np.searchsorted(ids, prior["ls_id"][use])
+        if np.any(pos >= len(ids)) or not np.array_equal(
+                ids[np.minimum(pos, len(ids)-1)], prior["ls_id"][use]):
+            raise ValueError(f"Legacy identity mismatch in {field['name']}")
+        selected = source[order[pos]]
+        if not np.array_equal(selected["source_id"], prior["source_id"][use]):
+            raise ValueError(f"Gaia identity mismatch in {field['name']}")
+        result[use] = selected["desi_spectype"]
+        covered[use] = True
+    if not covered.all():
+        raise ValueError(f"Unregistered joint field rows: {int((~covered).sum())}")
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, required=True)
+    parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
     args = parser.parse_args()
@@ -67,10 +98,13 @@ def main():
     if args.output.exists() or args.manifest.exists():
         raise FileExistsError("Joint evidence v2 output already exists")
     prior = fitsio.read(str(args.source))
-    evidence = desi_class_evidence_v3({name: prior[name] for name in prior.dtype.names})
+    spectype = recover_redrock_type(prior, args.config)
+    evidence = desi_class_evidence_v3({**{name: prior[name] for name in prior.dtype.names},
+                                      "desi_spectype": spectype})
     result = np.empty(len(prior), dtype=prior.dtype.descr + EXTRA)
     for name in prior.dtype.names:
         result[name] = prior[name]
+    result["desi_spectype"] = spectype
     for name in UPDATED + tuple(name for name, _ in EXTRA if name in evidence):
         result[name] = evidence[name]
     labels = np.char.strip(result["class_evidence"].astype("U"))

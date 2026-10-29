@@ -16,4 +16,4 @@ export PYTHONPATH="$PWD/src:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 python scripts/plot_joint_calibration.py \
   --source data/joint_calibration_targeted_v1/same_star.fits \
-  --output figures/joint_calibration/02_targeted_color_metallicity_luminosity.png
+  --output figures/joint_calibration/03_targeted_full_cmd.png
