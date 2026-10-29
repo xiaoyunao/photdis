@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Started Pro `1acf946` follow-up: read the full referenced review via
+  `read_thread`, checked local/GitHub/NERSC heads and NERSC authentication,
+  and created a detailed goal. Corrected XD coverage/derivative wording and
+  blue base/clean counts. Added conservative DESI class-evidence fields to a
+  versioned candidate export and prepared a seven-field DESI–Gaia–Legacy
+  same-star inventory with reserved validation fields. Files: XD/blue docs,
+  candidate/class-evidence and joint-inventory code, config, tests, PLAN.
+  Validation so far: Python compilation and three focused candidate/evidence
+  tests passed; joint inventory still needs allocated-run verification.
+  Next: sync this code milestone, submit allocated jobs, inspect results,
+  report branch feasibility and update candidate documentation.
+
 - Color-response job 60483193 completed on allocated CPU in 43 s, exit 0,
   empty stderr and 1.45 GiB peak RSS. Its small manifest matches the
   frozen-comparison SHA256 and reproduces 1,257/6,594 development stars,

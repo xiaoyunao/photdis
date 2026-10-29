@@ -39,7 +39,17 @@ def test_export_preserves_fallback_reason_and_hypothesis():
              "full_high_quality": np.ones(2, bool),
              "valid_w1": np.ones(2, bool), "valid_w2": np.ones(2, bool),
              "w1_clean": np.ones(2, bool), "w2_clean": np.ones(2, bool),
-             "snr_w1": np.full(2, 50.), "snr_w2": np.full(2, 40.)}
+             "snr_w1": np.full(2, 50.), "snr_w2": np.full(2, 40.),
+             "desi_match": np.array([True, False]),
+             "desi_match_ambiguous": np.zeros(2, bool),
+             "desi_snr": np.array([20., np.nan]),
+             "desi_quality": np.array([True, False]),
+             "desi_quality_reason": np.zeros(2, np.uint16),
+             "desi_is_stellar": np.array([True, False]),
+             "desi_known_contaminant": np.zeros(2, bool),
+             "desi_teff": np.array([4600., np.nan]),
+             "desi_logg": np.array([2.5, np.nan]),
+             "desi_logg_err": np.array([.1, np.nan])}
     route = {"optical_low": np.array([0., 0.]),
              "optical_high": np.array([3., 3.]), "neighbors": 2,
              "tiers": {name: {"tree": FixedTree(name != "A_grz"),
@@ -52,6 +62,8 @@ def test_export_preserves_fallback_reason_and_hypothesis():
     assert out["infrared_fallback_conflict"].tolist() == [True, False]
     assert out["support_ratio_b"].tolist() == [2., .5]
     assert out["cold_dwarf_hypothesis"].all()
+    assert out["class_evidence"].tolist() == [b"cool_giant", b"unknown"]
+    assert out["class_conflicts_cold_dwarf"].tolist() == [True, False]
     assert out["depth_state"].tolist() == [b"r_lt_18", b"r18_22_stress_tested"]
 
 

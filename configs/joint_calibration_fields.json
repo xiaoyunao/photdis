@@ -1,0 +1,12 @@
+{
+  "purpose": "Bounded DESI-Gaia-Legacy joint-label feasibility study; no model fitting",
+  "fields": [
+    {"config": "configs/field_dev_cal_ra205_215.json", "role": "development"},
+    {"config": "configs/field_native_ra060_070.json", "role": "development"},
+    {"config": "configs/field_native_ra330_340.json", "role": "development"},
+    {"config": "configs/field_native_ra020_030.json", "role": "development"},
+    {"config": "configs/field_native_ra130_140.json", "role": "reserved_validation"},
+    {"config": "configs/field_cold_v4_ra150_160.json", "role": "reserved_validation"},
+    {"config": "configs/field_cold_v4_ra220_230.json", "role": "reserved_validation"}
+  ]
+}

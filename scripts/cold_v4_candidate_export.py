@@ -14,6 +14,7 @@ import fitsio
 import joblib
 import numpy as np
 
+from photdis.class_evidence import desi_class_evidence
 from photdis.route import FEATURES, LAYER, LEVEL, feature_matrix, route_rows
 from photdis.route_audit import higher_tier_reasons
 from photdis.route_policy import choose_policy
@@ -28,6 +29,10 @@ COLUMNS = sorted(set(("ls_id", "source_id", "ra", "dec", "g0", "r", "ebv",
                       "grz_clean", "grz_high_quality", "grz_w1_high_quality",
                       "full_high_quality", "valid_w1", "valid_w2",
                       "w1_clean", "w2_clean", "snr_w1", "snr_w2",
+                      "desi_match", "desi_match_ambiguous", "desi_snr",
+                      "desi_quality", "desi_quality_reason", "desi_is_stellar",
+                      "desi_known_contaminant", "desi_teff", "desi_logg",
+                      "desi_logg_err",
                       *LAYER.values(),
                       *{name for names in FEATURES.values() for name in names})))
 QUALITY = {"A_grz": "grz_high_quality", "B_grzW1": "grz_w1_high_quality",
@@ -57,6 +62,7 @@ def output_rows(table, route, policy, forests):
     if not use.any():
         return None
     reasons = higher_tier_reasons(table, routed, chosen)
+    evidence = desi_class_evidence(table)
     ratios = support_ratios(table, route, use)
     selected = np.flatnonzero(use)
     dtype = [("ls_id", "i8"), ("source_id", "i8"), ("ra", "f8"),
@@ -66,6 +72,11 @@ def output_rows(table, route, policy, forests):
              ("support_ratio_c", "f4"), ("infrared_fallback_conflict", "?"),
              ("used_tier_high_quality", "?"),
              ("cold_dwarf_hypothesis", "?"),
+             ("class_evidence_available", "?"),
+             ("class_evidence", "S24"),
+             ("class_evidence_source", "S12"),
+             ("class_evidence_quality", "S28"),
+             ("class_conflicts_cold_dwarf", "?"),
              ("depth_state", "S24"), ("mg_median", "f4"),
              ("mu_median", "f4"), ("distance_pc_median", "f4")]
     out = np.empty(len(selected), dtype=dtype)
@@ -79,6 +90,8 @@ def output_rows(table, route, policy, forests):
         out[f"support_ratio_{suffix}"] = ratios[tier][selected]
     out["infrared_fallback_conflict"] = reasons["higher_support_conflict"][selected]
     out["cold_dwarf_hypothesis"] = True
+    for name, values in evidence.items():
+        out[name] = values[selected]
     out["used_tier_high_quality"] = False
     out["mg_median"] = np.nan
     for tier, level in LEVEL.items():
@@ -139,13 +152,15 @@ def main():
                        json.loads(Path(path).read_text())["name"] == args.field)
     field = json.loads(Path(config_path).read_text())
     source = Path(field["output_dir"]) / "field_diagnostics.fits"
-    target = Path("data/cold_v4_candidates") / f"{args.field}.fits"
-    manifest_path = Path("manifests") / f"cold_v4_candidates_{args.field}.json"
+    target = Path("data/cold_v4_candidates_v2") / f"{args.field}.fits"
+    manifest_path = Path("manifests") / f"cold_v4_candidates_v2_{args.field}.json"
     if target.exists() or manifest_path.exists():
         raise FileExistsError("Candidate export already exists")
     target.parent.mkdir(parents=True, exist_ok=True)
     counts = {tier: 0 for tier in FEATURES}
     total = conflict = 0
+    evidence_counts = {name: 0 for name in ("unknown", "other_star_or_transition",
+        "cool_main_sequence", "cool_giant", "nonstellar")}
     with fitsio.FITS(str(source)) as file:
         nrows = file[1].get_nrows()
         for start in range(0, nrows, args.chunk):
@@ -158,12 +173,16 @@ def main():
             append_rows(target, out)
             total += len(out)
             conflict += int(out["infrared_fallback_conflict"].sum())
+            for name in evidence_counts:
+                evidence_counts[name] += int(np.sum(out["class_evidence"] == name.encode()))
             for tier, level in LEVEL.items():
                 counts[tier] += int(np.sum(out["tier"] == level))
             print(json.dumps({"field": args.field, "read_to": start+len(raw),
                               "selected_so_far": total}), flush=True)
     if sum(counts.values()) != total:
         raise ValueError("Tier counts do not sum to candidate count")
+    if sum(evidence_counts.values()) != total:
+        raise ValueError("Class-evidence counts do not sum to candidate count")
     if not total:
         raise ValueError("No candidates were exported")
     with fitsio.FITS(str(target)) as catalog:
@@ -173,6 +192,7 @@ def main():
                 "output": str(target), "output_sha256": sha(target),
                 "input_rows": nrows, "selected_rows": total,
                 "tier_counts": counts, "infrared_fallback_conflict": conflict,
+                "class_evidence_counts": evidence_counts,
                 "policy_lock_sha256": sha(LOCK),
                 "prepared_sha256": sha(PREPARED),
                 "distance_semantics": "median conditional on cold-dwarf hypothesis; no calibrated type probability or released deep interval",

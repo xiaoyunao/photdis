@@ -12,8 +12,15 @@ comparison is `figures/cold_v5/02_xd_same_star_comparison.png`.
 The two registered informative development fields used the unchanged
 `grz_clean` plus WISE20 route, cold-dwarf box and support test. Their
 accepted source identities are identical between models. Residual is
-predicted minus Gaia-reference distance modulus. Intervals below are raw
-model quantiles, without a new interval calibration.
+predicted minus the Gaia point-reference distance modulus. Intervals below
+are raw model quantiles, without a new interval calibration. Their reported
+coverage is empirical coverage of the noisy Gaia point reference, not
+coverage of latent true distance. At parallax S/N=20, first-order propagation
+alone gives approximately 0.109 mag Gaia reference uncertainty. XD attempts
+to deconvolve training-label error whereas the v4 empirical-label distribution
+contains it. The held-out conditional likelihood used to select K already
+includes Gaia label error, and raw coverage did not determine the registered
+adoption gate.
 
 | Field | Same stars | v4 center / NMAD | XD center / NMAD | v4 / XD \|Δμ\|>0.5 | v4 / XD raw 95% coverage |
 |---|---:|---:|---:|---:|---:|
@@ -49,6 +56,20 @@ comparison. The XD posterior is a development diagnostic, not a released
 distance or interval product. No candidate-triggered calibration or new
 final-field scoring follows this failed gate.
 
+XD improved core NMAD by about 0.026 mag in each informative field, but
+responded more strongly to the specified single-band shifts. A smaller
+response is not intrinsically more physical: if locally
+`M_g = a(g−r)+b`, then `μ = (1−a)g + ar−b`, with derivatives `1−a` and
+`a` for g and r. A genuinely steeper color–luminosity relation can increase
+both measured response and predictive accuracy. The aggregate response
+cannot establish whether XD recovered that slope or became too steep.
+The registered gate and resulting v4 decision remain unchanged. Future
+comparisons should assess bias, tails and probabilistic predictions under
+realistic measurement and zero-point errors, retaining band response as an
+error-propagation diagnostic. In particular, forward prediction of observed
+parallax from a latent-distance posterior would put probability scores on a
+common observation scale while respecting validation selection.
+
 The measured-error tertiles have equal source counts within each field.
 Their raw 95% coverage (v4 / XD, ordered low to high measured error) is
 RA205: 92.1/89.5%, 95.5/91.2%, 96.2/88.1%; RA60: 91.5/90.6%,
@@ -76,7 +97,7 @@ modulus, in mag.
 
 Both models respond more strongly in the redder occupied bin, and XD has
 the larger g and r response in each populated field/bin. This reinforces
-the registered rejection. No development stars occupied the 1.6–2.0 or
+the registered rejection under this experiment's gate. No development stars occupied the 1.6–2.0 or
 2.0–4.0 bins; the nine-star RA235 field remains diagnostic only. A new
 cause study of the optical derivative and true color–luminosity relation
 would need its own registered design.

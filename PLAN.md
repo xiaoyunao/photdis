@@ -2,11 +2,40 @@
 
 ## Current Objective
 
-The 2026-10-29 Pro review round from frozen `a18ef9b` is complete. Keep the
-cold-v4 route and locked tests frozen. The bounded error-aware XD comparison
-rejected K=32 under its registered gate; three candidate route exports and
-the separate metal-poor blue-branch definition are documented. Next research
-work is specified under Next Checkpoint below.
+The latest Pro review of `1acf946` starts a bounded joint-calibration round.
+Keep cold-v4 models, routes, registered XD adoption gate and historical test
+identities frozen. Correct the XD physical interpretation and Gaia point-
+reference coverage wording; version the candidate export with existing class
+evidence; build a same-star DESI–Gaia–Legacy feasibility sample in seven
+registered fields. Decide from measured overlap whether a blue metal-poor
+main-sequence relation can be calibrated and identify K giant/cool RGB labels.
+No new distance model or deep interval is adopted in this round.
+
+## Current Round Milestones
+
+1. Revise XD result interpretation, label raw interval coverage relative to
+   noisy Gaia point references, and correct blue inventory base versus clean,
+   low-dust denominators. Keep the original v4 and XD decision records intact.
+2. Add per-candidate DESI RVS/Redrock evidence availability, source, quality,
+   conservative class and conflict flag. Export versioned v2 FITS products on
+   allocated NERSC compute, retaining v1 catalogs and photometric distances.
+   Unknown spectra remain unknown. Verify schema and counts field by field.
+3. On allocated compute, assemble a bounded same-star DESI–Gaia–Legacy table
+   from `configs/joint_calibration_fields.json`. Start with unique,
+   unambiguous DESI matches and report measured/clean grz, low dust,
+   4200–5000 K calibrated continuous Fe/H and formal error, conservative
+   `logg−sigma_logg>4.2` main-sequence core, transitional/evolved and CMD
+   white-dwarf candidates. Retain raw/corrected parallax and weak/negative
+   values; derive M_g only for quality high-S/N anchors. Reserve separate
+   fields for subsequent validation before any model fitting.
+4. Report color, temperature, metallicity, brightness and sky coverage by
+   class and parallax layer. Quantify whether the same-star metal-poor core
+   supports zero point, color slope and metallicity dependence; otherwise
+   state the specific missing overlap. Inventory reliable K giant/cool RGB
+   labels and independent luminosity resources for the next science branch.
+5. Run focused validation, write concise scientific report and WORKLOG,
+   commit milestone(s) and synchronize programs, docs, manifests and selected
+   figures through local, GitHub and NERSC. Catalogs remain on NERSC.
 
 Current compute checkpoint: all K=16/32/64 fits converged on frozen training
 identities. The registered equal-field score selected K=32; allocated job

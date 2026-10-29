@@ -28,26 +28,30 @@ photometric-catalog class fractions.
 
 ## Four-field blue-side inventory
 
-The allocated-NERSC inventory uses the observed dereddened region
-`(g−r)₀<0.9090`, low dust and clean `grz`. Its strict Gaia luminosity anchors
-also require corrected-parallax S/N≥20. Counts below are by field, not a
-spectroscopic estimate of the full photometric candidate composition.
+The allocated-NERSC inventory defines the observed dereddened blue region as
+`(g−r)₀<0.9090`. The strict Gaia luminosity anchors additionally require low
+dust, clean `grz` and corrected-parallax S/N≥20. DESI class counts below show
+both the wider quality-spectrum + measured-`grz` base and its clean,
+low-dust subset. The different denominators must not be combined into a
+photometric contamination fraction.
 
-| Field | Strict blue Gaia anchors | Of these at `18≤r<20` | DESI metal-poor cool dwarfs | DESI cool giants | DESI known nonstars |
+| Field | Strict blue Gaia anchors | Of these at `18≤r<20` | DESI metal-poor cool dwarfs: base / clean | DESI cool giants: base / clean | DESI known nonstars: base / clean |
 |---|---:|---:|---:|---:|---:|
-| RA205–215 | 404 | 12 | 25 | 16 | 1,894 |
-| RA0–10 | 1,037 | 69 | 0 | 0 | 0 |
-| RA150–160 | 1,624 | 47 | 5 | 5 | 1,323 |
-| RA220–230 | 1,142 | 14 | 14 | 7 | 1,584 |
+| RA205–215 | 404 | 12 | 25 / 20 | 16 / 9 | 1,894 / 1,699 |
+| RA0–10 | 1,037 | 69 | 0 / 0 | 0 / 0 | 0 / 0 |
+| RA150–160 | 1,624 | 47 | 5 / 5 | 5 / 4 | 1,323 / 1,205 |
+| RA220–230 | 1,142 | 14 | 14 / 10 | 7 / 3 | 1,584 / 1,456 |
 
 The four fields supply 4,207 strict blue Gaia anchors, including 142 at
 `18≤r<20` and none in the recorded `20≤r<26` bins. None of the 44 DESI
-metal-poor cool dwarfs
+metal-poor cool dwarfs in the wider base (35 in the clean, low-dust subset)
 overlaps those *strict* S/N≥20 anchors; the four with Gaia `M_g` noted above
 meet the looser S/N≥10 diagnostic. The original v4 training fields contain
 78 cold-anchor rows blueward of the later box edge, distributed 12/22/42/2
-across its four training fields. These rows show the available color range;
-they do not define a metal-poor training branch.
+across its four training fields. The frozen edge was set near the training
+color's first percentile, so 78 is approximately the expected 1% of 7,782;
+it does not independently measure scarcity in all available data. These rows
+do not define a metal-poor training branch.
 
 The [color and luminosity figure](../figures/cold_v5/01_blue_inventory.png)
 shows the DESI poor-dwarf locus near the optical boundary and a separate
@@ -64,7 +68,10 @@ DESI counts describe coverage rather than a class absence.
 ## Proposed label and anchor contract
 
 1. **Spectroscopic reference:** retain unique, unambiguous DESI matches with
-   accepted stellar/parameter quality. Use the calibrated abundance only
+   accepted stellar/parameter quality. For a first high-confidence 4200–5000 K
+   main-sequence core, test `log g−σ_logg>4.2` and Gaia CMD consistency;
+   keep subgiants, white dwarfs, other stars and uncertain labels distinct.
+   The wider `log g≥3.5` audit remains a coverage diagnostic. Use the calibrated abundance only
    inside its `T_eff`, `log g` and error validity domain; report raw and
    calibrated abundance separately. `[Fe/H]<−1.5` within this domain
    identifies the first metal-poor diagnostic subset. Keep cool giants,
