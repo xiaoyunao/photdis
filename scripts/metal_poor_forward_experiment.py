@@ -98,7 +98,7 @@ def main():
     field = np.char.strip(rows["field"].astype("U"))
     result = {"sources": [str(p) for p in JOINT], "selection":
               "qualified 4200-5000 K conservative dwarf, calibrated continuous [Fe/H], clean low-dust grz, usable corrected Gaia parallax including negative; Gaia identities deduplicated and reserved identities take precedence",
-              "model": "Mg=a+b(gr-1)+c(rz-0.5)+d(gr-1)^2+beta([Fe/H]+1); 12-node Gauss-Hermite convolution of positive latent parallax with Gaussian Gaia error",
+              "model": "Mg=a+b(gr-1)+c(rz-0.5)+d(gr-1)^2+beta([Fe/H]+1); 24-node posterior-centered Gauss-Hermite convolution of positive latent parallax with Gaussian Gaia error",
               "error_model": "g/r/z shared-band covariance, formal iron error plus 0.1 dex floor, fitted intrinsic Mg scatter; no FeH trial omits beta",
               "deduplication": dedup,
               "counts": {"all": len(rows), "development": int(dev.sum()),

@@ -37,21 +37,42 @@ def effective_mag_variance(params, data, with_feh, feh_floor):
     return photo + iron + scatter
 
 
-def log_probability(params, data, with_feh, feh_floor=0.1, nodes=12):
-    """Integrate the positive lognormal parallax over latent magnitude scatter."""
+def log_probability(params, data, with_feh, feh_floor=0.1, nodes=24):
+    """Convolve positive latent parallax with Gaia noise using local quadrature.
+
+    Recenter the integration proposal at each star's approximate posterior
+    mode. Fixed nodes around the prior miss a narrow high-S/N likelihood peak.
+    """
     p = expected_parallax(params, data, with_feh)
     sigma_mag = np.sqrt(effective_mag_variance(params, data, with_feh, feh_floor))
+    a = LOG_PAR * sigma_mag
+    y = data["p_corr"]
+    sigma = data["gaia_parallax_error"]
+    lower = np.full(len(p), -30.0)
+    upper = np.full(len(p), 30.0)
+    for _ in range(48):
+        middle = (lower + upper) / 2
+        q = p * np.exp(a * middle)
+        grad = -middle + (y - q) * q * a / sigma**2
+        lower = np.where(grad > 0, middle, lower)
+        upper = np.where(grad > 0, upper, middle)
+    mode = (lower + upper) / 2
+    q = p * np.exp(a * mode)
+    curvature = 1 - (y - 2*q) * q * a**2 / sigma**2
+    proposal_sigma = np.clip(1 / np.sqrt(np.maximum(curvature, .1)), .02, 2)
     abscissa, weight = hermgauss(nodes)
-    true_parallax = p[:, None] * np.exp(LOG_PAR * np.sqrt(2) * sigma_mag[:, None]
-                                       * abscissa[None, :])
-    sigma = data["gaia_parallax_error"][:, None]
-    y = data["p_corr"][:, None]
-    logpdf = (-0.5 * ((y - true_parallax) / sigma) ** 2
-              - np.log(sigma) - 0.5 * np.log(2 * np.pi))
-    return logsumexp(logpdf + np.log(weight)[None, :], axis=1) - 0.5 * np.log(np.pi)
+    latent = mode[:, None] + np.sqrt(2) * proposal_sigma[:, None] * abscissa
+    true_parallax = p[:, None] * np.exp(a[:, None] * latent)
+    logpdf = (-0.5 * ((y[:, None] - true_parallax) / sigma[:, None]) ** 2
+              - np.log(sigma[:, None]) - 0.5 * np.log(2 * np.pi))
+    logprior_minus_proposal = (-0.5 * latent**2 + np.log(proposal_sigma[:, None])
+                               + 0.5 * ((latent - mode[:, None]) /
+                                        proposal_sigma[:, None])**2)
+    return (logsumexp(logpdf + logprior_minus_proposal
+                      + np.log(weight)[None, :], axis=1) - 0.5 * np.log(np.pi))
 
 
-def predictive_cdf(params, data, with_feh, feh_floor=0.1, nodes=12):
+def predictive_cdf(params, data, with_feh, feh_floor=0.1, nodes=129):
     p = expected_parallax(params, data, with_feh)
     sigma_mag = np.sqrt(effective_mag_variance(params, data, with_feh, feh_floor))
     abscissa, weight = hermgauss(nodes)

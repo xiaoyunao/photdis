@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Found and fixed a numerical integration failure in the preliminary
+  metal-poor forward likelihood before running it on science data: fixed
+  Gauss–Hermite nodes centered on the prior missed narrow high-S/N Gaia
+  likelihood peaks. The queued job 60486996 was cancelled before starting.
+  Recentered and rescaled each quadrature at its likelihood posterior mode,
+  found by bracketed derivative search. Files: forward model, test and
+  experiment description. Validation: direct dense-grid integrations at
+  positive and negative observed parallax agree to <0.001 log-likelihood;
+  three focused tests, syntax and diff checks pass. Next: sync and resubmit
+  after versioned joint photometry audit jobs 60486994/60486995 finish.
+
 - Prepared an independent-system target ranking from published Vasiliev/
   Baumgardt globular membership and distances, joined to DESI MWS qualified
   giant spectra by exact Gaia source ID on allocated CPU. This will identify

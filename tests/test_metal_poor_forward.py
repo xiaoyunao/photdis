@@ -1,7 +1,9 @@
 import numpy as np
+from scipy.special import logsumexp
 
 from photdis.metal_poor_forward import (effective_mag_variance,
-                                        expected_parallax, log_probability)
+                                        expected_parallax, log_probability,
+                                        LOG_PAR)
 
 
 def sample():
@@ -26,3 +28,22 @@ def test_shared_band_variance_and_iron_term():
     expected = (0 * .01)**2 + (-.5 * .02)**2 + (.5 * .03)**2
     expected += .4**2 * (.1**2 + .1**2) + .2**2
     assert np.isclose(value, expected)
+
+
+def test_posterior_centered_quadrature_resolves_narrow_gaia_likelihood():
+    data = sample()
+    data["g0"][0] = 16
+    data["gaia_parallax_error"][0] = .01
+    params = np.array([6.0, 2.0, .5, 0.0, .3])
+    p = expected_parallax(params, data, False)[0]
+    a = LOG_PAR * np.sqrt(effective_mag_variance(params, data, False, .1)[0])
+    latent = np.linspace(-30, 30, 300001)
+    step = latent[1] - latent[0]
+    for observed in (-.1, .2, 1.0, 2.0):
+        data["p_corr"][0] = observed
+        log_integrand = (-.5 * latent**2
+                         -.5 * ((observed - p * np.exp(a * latent)) / .01)**2
+                         - np.log(2 * np.pi * .01))
+        direct = logsumexp(log_integrand) + np.log(step)
+        computed = log_probability(params, data, False)[0]
+        assert abs(computed - direct) < .001
