@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- Blue inventory 60482142 completed on allocated CPU. Four fields contain
+  4,207 strict blue Gaia luminosity anchors (404/1,037/1,624/1,142);
+  142 have 18≤r<20 and none in the recorded 20≤r<26 bins. The 44 unique
+  quality DESI metal-poor
+  cool dwarfs blue of the v4 box have zero overlap with these stricter
+  S/N≥20 anchors; four retain Gaia M_g at S/N≥10. The same blue region has
+  DESI giant and known-nonstar controls, while its Gaia CMD includes a
+  distinct faint sequence. Updated the independent blue-branch training
+  definition, corrected the figure's distinct S/N thresholds, verified the
+  plot-data SHA256 and visually inspected the rerendered figure. Files:
+  `docs/cold_v5_blue_branch.md`, `manifests/cold_v5_blue_inventory.json`,
+  `figures/cold_v5/01_blue_inventory.png` and its plot script. Next: keep
+  blue branch separate and finish the selected K=32 comparison.
+
 - XD refits 60482139/140/141 completed with converged A/B/C models and
   exact frozen training hashes/counts; minimum latent covariance eigenvalues
   are at or above the registered 1e-4 mag² floor. Copied only small manifests

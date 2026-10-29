@@ -24,9 +24,42 @@ All 44 rejected objects are below the `g−r` edge; 17/25, 2/5 and 8/14
 also fall below the `r−z` edge. Median rejected `(g−r)₀` is approximately
 0.75–0.76. Four of the 44 have a Gaia-derived Legacy `M_g` with parallax
 S/N≥10. The spectral targets are selected by DESI and do not measure
-photometric-catalog class fractions. An inventory of strict Gaia anchors,
-brightness/field coverage, and overlapping giants/nonstars is being run
-separately; its aggregate results will be added here.
+photometric-catalog class fractions.
+
+## Four-field blue-side inventory
+
+The allocated-NERSC inventory uses the observed dereddened region
+`(g−r)₀<0.9090`, low dust and clean `grz`. Its strict Gaia luminosity anchors
+also require corrected-parallax S/N≥20. Counts below are by field, not a
+spectroscopic estimate of the full photometric candidate composition.
+
+| Field | Strict blue Gaia anchors | Of these at `18≤r<20` | DESI metal-poor cool dwarfs | DESI cool giants | DESI known nonstars |
+|---|---:|---:|---:|---:|---:|
+| RA205–215 | 404 | 12 | 25 | 16 | 1,894 |
+| RA0–10 | 1,037 | 69 | 0 | 0 | 0 |
+| RA150–160 | 1,624 | 47 | 5 | 5 | 1,323 |
+| RA220–230 | 1,142 | 14 | 14 | 7 | 1,584 |
+
+The four fields supply 4,207 strict blue Gaia anchors, including 142 at
+`18≤r<20` and none in the recorded `20≤r<26` bins. None of the 44 DESI
+metal-poor cool dwarfs
+overlaps those *strict* S/N≥20 anchors; the four with Gaia `M_g` noted above
+meet the looser S/N≥10 diagnostic. The original v4 training fields contain
+78 cold-anchor rows blueward of the later box edge, distributed 12/22/42/2
+across its four training fields. These rows show the available color range;
+they do not define a metal-poor training branch.
+
+The [color and luminosity figure](../figures/cold_v5/01_blue_inventory.png)
+shows the DESI poor-dwarf locus near the optical boundary and a separate
+faint Gaia sequence in the blue region. The latter requires a white-dwarf
+check before assigning blue Gaia anchors to a cool-dwarf luminosity relation.
+DESI quality-qualified blue giants and known nonstars are present in the same
+color region, especially nonstars at `20≤r<22`. The counted DESI nonstars
+are spectroscopic controls, not a contamination fraction for the photometric
+survey. Detailed field/brightness/color counts and label overlap are in
+`manifests/cold_v5_blue_inventory.json`.
+The RA0–10 field has no DESI class labels in this matched input, so its zero
+DESI counts describe coverage rather than a class absence.
 
 ## Proposed label and anchor contract
 

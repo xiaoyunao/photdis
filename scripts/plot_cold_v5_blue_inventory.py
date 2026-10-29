@@ -49,7 +49,7 @@ def main():
     axes[0].legend(fontsize=7, loc="best")
     for rows, name, color, size, alpha in (
             (blue, "Gaia anchor candidate", "0.5", 6, .3),
-            (poor, "DESI poor dwarf with Gaia Mg", "tab:purple", 28, .9)):
+            (poor, "DESI poor dwarf, parallax S/N≥10", "tab:purple", 28, .9)):
         x, y = coordinates(rows, "gr0", "mg")
         axes[1].scatter(x, y, s=size, c=color, alpha=alpha, label=name,
                         rasterized=True)
@@ -57,7 +57,7 @@ def main():
                     ls="--")
     axes[1].invert_yaxis()
     axes[1].set(xlabel="(g−r)₀", ylabel="Gaia-derived Legacy M_g",
-                title="Available high-S/N parallax anchors")
+                title="Gaia M_g: strict gray anchors require S/N≥20")
     axes[1].legend(fontsize=7)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUTPUT, dpi=170)

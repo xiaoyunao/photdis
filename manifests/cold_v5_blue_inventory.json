@@ -1,0 +1,2455 @@
+{
+  "prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "frozen_gr_lower_edge": 0.9090351295471192,
+  "selection_semantics": "DESI classes conditional on unique quality spectra and grz_base; Gaia anchors are parallax/photometry-quality candidates, not metal-poor labels",
+  "training": {
+    "original_pilot_non_test": {
+      "cold_strict_anchor_rows": 1289,
+      "blue_below_frozen_gr_lower_edge": 12,
+      "blue_clean_low_dust": 12,
+      "blue_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 5
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 7
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ]
+    },
+    "cal_ra140_150_dec_p005_p015": {
+      "cold_strict_anchor_rows": 2077,
+      "blue_below_frozen_gr_lower_edge": 22,
+      "blue_clean_low_dust": 22,
+      "blue_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 13
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 9
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ]
+    },
+    "test_ra190_200_dec_p015_p025": {
+      "cold_strict_anchor_rows": 4145,
+      "blue_below_frozen_gr_lower_edge": 42,
+      "blue_clean_low_dust": 42,
+      "blue_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 23
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 18
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 1
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ]
+    },
+    "test_ra320_330_dec_m025_m015": {
+      "cold_strict_anchor_rows": 271,
+      "blue_below_frozen_gr_lower_edge": 2,
+      "blue_clean_low_dust": 2,
+      "blue_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 1
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 1
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ]
+    }
+  },
+  "fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "field": "dev_cal_ra205_215_dec_m010_p000",
+      "input_rows": 319420,
+      "deduplication": {
+        "matched_unambiguous_rows": 11329,
+        "unique_spectra": 11267,
+        "duplicate_Legacy_rows_removed": 62
+      },
+      "blue_definition": "observed dereddened gr0 < frozen optical lower edge 0.909035; diagnostic region only",
+      "blue_low_dust_grz_clean": 147748,
+      "blue_strict_Gaia_anchors": 404,
+      "blue_strict_Gaia_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 339
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 53
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 12
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ],
+      "labels": {
+        "cool_dwarf": {
+          "qualified_all_colors": 2022,
+          "blue": 491,
+          "blue_grz_clean_low_dust": 387,
+          "blue_gaia_anchor_overlap": 19,
+          "blue_below_rz_lower_edge": 381,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 53
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 269
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 155
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 486
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 548
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 974
+            }
+          ]
+        },
+        "cool_giant": {
+          "qualified_all_colors": 32,
+          "blue": 16,
+          "blue_grz_clean_low_dust": 9,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 9,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 4
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 6
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 13
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 14
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "other_parameterized_star": {
+          "qualified_all_colors": 5445,
+          "blue": 5435,
+          "blue_grz_clean_low_dust": 4132,
+          "blue_gaia_anchor_overlap": 47,
+          "blue_below_rz_lower_edge": 5416,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 694
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 2758
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 1704
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 4540
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 858
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 6
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "known_QSO_or_galaxy": {
+          "qualified_all_colors": 2022,
+          "blue": 1894,
+          "blue_grz_clean_low_dust": 1699,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 1345,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 23
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 466
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1291
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 113
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1413
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 179
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 62
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 45
+            }
+          ]
+        },
+        "other_or_unverified_spectrum": {
+          "qualified_all_colors": 1704,
+          "blue": 1254,
+          "blue_grz_clean_low_dust": 1109,
+          "blue_gaia_anchor_overlap": 18,
+          "blue_below_rz_lower_edge": 1208,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 64
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 812
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 355
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 21
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 926
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 216
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 138
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 296
+            }
+          ]
+        },
+        "calibrated_FeH_lt_minus_1p5_dwarf": {
+          "qualified_all_colors": 40,
+          "blue": 25,
+          "blue_grz_clean_low_dust": 20,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 17,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 10
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 12
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 23
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 15
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "calibrated_domain_cool_dwarf": {
+          "qualified_all_colors": 948,
+          "blue": 488,
+          "blue_grz_clean_low_dust": 386,
+          "blue_gaia_anchor_overlap": 19,
+          "blue_below_rz_lower_edge": 380,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 52
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 269
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 153
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 483
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 442
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    "cold_v4_final_ra000_010_dec_m035_m025": {
+      "field": "cold_v4_final_ra000_010_dec_m035_m025",
+      "input_rows": 1109197,
+      "deduplication": {
+        "matched_unambiguous_rows": 0,
+        "unique_spectra": 0
+      },
+      "blue_definition": "observed dereddened gr0 < frozen optical lower edge 0.909035; diagnostic region only",
+      "blue_low_dust_grz_clean": 649837,
+      "blue_strict_Gaia_anchors": 1037,
+      "blue_strict_Gaia_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 688
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 280
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 69
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ],
+      "labels": {
+        "cool_dwarf": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "cool_giant": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "other_parameterized_star": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "known_QSO_or_galaxy": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "other_or_unverified_spectrum": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "calibrated_FeH_lt_minus_1p5_dwarf": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "calibrated_domain_cool_dwarf": {
+          "qualified_all_colors": 0,
+          "blue": 0,
+          "blue_grz_clean_low_dust": 0,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 0,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        }
+      }
+    },
+    "cold_v4_final_ra150_160_dec_p020_p030": {
+      "field": "cold_v4_final_ra150_160_dec_p020_p030",
+      "input_rows": 694673,
+      "deduplication": {
+        "matched_unambiguous_rows": 4605,
+        "unique_spectra": 4570,
+        "duplicate_Legacy_rows_removed": 35
+      },
+      "blue_definition": "observed dereddened gr0 < frozen optical lower edge 0.909035; diagnostic region only",
+      "blue_low_dust_grz_clean": 372535,
+      "blue_strict_Gaia_anchors": 1624,
+      "blue_strict_Gaia_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 1404
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 173
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 47
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ],
+      "labels": {
+        "cool_dwarf": {
+          "qualified_all_colors": 984,
+          "blue": 152,
+          "blue_grz_clean_low_dust": 106,
+          "blue_gaia_anchor_overlap": 12,
+          "blue_below_rz_lower_edge": 120,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 28
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 88
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 29
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 151
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 233
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 591
+            }
+          ]
+        },
+        "cool_giant": {
+          "qualified_all_colors": 10,
+          "blue": 5,
+          "blue_grz_clean_low_dust": 4,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 4,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "other_parameterized_star": {
+          "qualified_all_colors": 1485,
+          "blue": 1479,
+          "blue_grz_clean_low_dust": 978,
+          "blue_gaia_anchor_overlap": 40,
+          "blue_below_rz_lower_edge": 1472,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 330
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 707
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 300
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1243
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 229
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "known_QSO_or_galaxy": {
+          "qualified_all_colors": 1419,
+          "blue": 1323,
+          "blue_grz_clean_low_dust": 1205,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 938,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 26
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 334
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 888
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 75
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1035
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 128
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 55
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 26
+            }
+          ]
+        },
+        "other_or_unverified_spectrum": {
+          "qualified_all_colors": 649,
+          "blue": 382,
+          "blue_grz_clean_low_dust": 334,
+          "blue_gaia_anchor_overlap": 10,
+          "blue_below_rz_lower_edge": 372,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 4
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 251
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 122
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 4
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 289
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 53
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 46
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 214
+            }
+          ]
+        },
+        "calibrated_FeH_lt_minus_1p5_dwarf": {
+          "qualified_all_colors": 8,
+          "blue": 5,
+          "blue_grz_clean_low_dust": 5,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 2,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 4
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "calibrated_domain_cool_dwarf": {
+          "qualified_all_colors": 352,
+          "blue": 151,
+          "blue_grz_clean_low_dust": 106,
+          "blue_gaia_anchor_overlap": 12,
+          "blue_below_rz_lower_edge": 120,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 28
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 88
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 28
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 150
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 194
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 6
+            }
+          ]
+        }
+      }
+    },
+    "cold_v4_final_ra220_230_dec_p020_p030": {
+      "field": "cold_v4_final_ra220_230_dec_p020_p030",
+      "input_rows": 336859,
+      "deduplication": {
+        "matched_unambiguous_rows": 6534,
+        "unique_spectra": 6456,
+        "duplicate_Legacy_rows_removed": 78
+      },
+      "blue_definition": "observed dereddened gr0 < frozen optical lower edge 0.909035; diagnostic region only",
+      "blue_low_dust_grz_clean": 156298,
+      "blue_strict_Gaia_anchors": 1142,
+      "blue_strict_Gaia_by_r": [
+        {
+          "range": [
+            14,
+            16
+          ],
+          "count": 922
+        },
+        {
+          "range": [
+            16,
+            18
+          ],
+          "count": 206
+        },
+        {
+          "range": [
+            18,
+            20
+          ],
+          "count": 14
+        },
+        {
+          "range": [
+            20,
+            22
+          ],
+          "count": 0
+        },
+        {
+          "range": [
+            22,
+            26
+          ],
+          "count": 0
+        }
+      ],
+      "labels": {
+        "cool_dwarf": {
+          "qualified_all_colors": 1187,
+          "blue": 244,
+          "blue_grz_clean_low_dust": 175,
+          "blue_gaia_anchor_overlap": 18,
+          "blue_below_rz_lower_edge": 198,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 48
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 135
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 51
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 244
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 331
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 602
+            }
+          ]
+        },
+        "cool_giant": {
+          "qualified_all_colors": 12,
+          "blue": 7,
+          "blue_grz_clean_low_dust": 3,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 6,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 6
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "other_parameterized_star": {
+          "qualified_all_colors": 2779,
+          "blue": 2777,
+          "blue_grz_clean_low_dust": 1826,
+          "blue_gaia_anchor_overlap": 72,
+          "blue_below_rz_lower_edge": 2771,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 644
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 1337
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 532
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 2319
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 437
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "known_QSO_or_galaxy": {
+          "qualified_all_colors": 1687,
+          "blue": 1584,
+          "blue_grz_clean_low_dust": 1456,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 1108,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 19
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 384
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 1096
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 85
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 1282
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 166
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 48
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 40
+            }
+          ]
+        },
+        "other_or_unverified_spectrum": {
+          "qualified_all_colors": 735,
+          "blue": 451,
+          "blue_grz_clean_low_dust": 404,
+          "blue_gaia_anchor_overlap": 11,
+          "blue_below_rz_lower_edge": 427,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 9
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 308
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 123
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 4
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 296
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 109
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 58
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 218
+            }
+          ]
+        },
+        "calibrated_FeH_lt_minus_1p5_dwarf": {
+          "qualified_all_colors": 14,
+          "blue": 14,
+          "blue_grz_clean_low_dust": 10,
+          "blue_gaia_anchor_overlap": 0,
+          "blue_below_rz_lower_edge": 8,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 8
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 14
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "calibrated_domain_cool_dwarf": {
+          "qualified_all_colors": 532,
+          "blue": 242,
+          "blue_grz_clean_low_dust": 174,
+          "blue_gaia_anchor_overlap": 18,
+          "blue_below_rz_lower_edge": 196,
+          "blue_by_r": [
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 48
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 135
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 50
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "all_by_gr": [
+            {
+              "range": [
+                0.0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 242
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 277
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "compute_host": "nid004096",
+  "full_plot_data": "data/cold_v5_blue/inventory.json",
+  "full_plot_data_sha256": "55897b3ff4eaa487bf00f4878318d6781a8e279ff8e1afe5442603acb626db5d"
+}

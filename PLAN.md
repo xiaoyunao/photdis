@@ -34,9 +34,10 @@ candidate export 60481110 produced multiple FITS extensions and is archived.
    accepted objects, compare chosen candidate against frozen v4 in bias,
    NMAD, tails, probability quality, g/r perturbation response and error/color
    strata. Decide to reject or lock the candidate before any new final test.
-5. Define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
+5. Complete: define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
    color-boundary failures, CMD position and giant/nonstar confusion. Keep it
-   distinct from the frozen cold-v4 box.
+   distinct from the frozen cold-v4 box. The current four-field inventory
+   and label/anchor contract are in `docs/cold_v5_blue_branch.md`.
 6. Validate, document, commit and synchronize programs, small manifests and
    figures across local, GitHub and NERSC. Keep catalogs and model files on
    NERSC and use allocated CPUs for scans/training.
