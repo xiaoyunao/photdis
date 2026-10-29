@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- Started Pro review of `caeb218`: read the full referenced reply via
+  `read_thread`, fetched both remotes, confirmed clean and identical heads,
+  and created a detailed active goal. Header inspection on the NERSC login
+  node found MWS RVTAB `RR_SPECTYPE`/`RR_Z` but no Redrock `ZWARN` or
+  `DELTACHI2`; SpecDis and SPDist registered files are present. Added a
+  versioned general class-evidence definition separating broad-temperature
+  RVS dwarf/giant status, blue training eligibility, abundance validity and
+  raw Redrock nonstellar type. Prepared versioned candidate and joint-table
+  reconciliation scripts while preserving prior products. Files: PLAN,
+  `src/photdis/class_evidence.py`, new v3/v2 scripts and class test.
+  Validation: focused class tests, Python compilation, shell syntax and
+  diff check passed. Next: allocated re-export and cross-count audit, then
+  anomalous-star and giant-label work.
+
 - Completed the DESI-first DR11 follow-up and scarce-anchor audit on allocated
   NERSC CPUs (array 60485082, inventory 60485094, plot 60485687, anchor
   audit 60485813). Four registered 10°×10° fields yielded 132,530 unique

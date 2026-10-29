@@ -1,5 +1,43 @@
 # PLAN
 
+## Current Objective: Pro review of caeb218
+
+Keep cold-v4/XD models, routes and earlier final-test identities frozen.
+Complete a bounded correction and calibration round with these milestones:
+
+1. Separate general RVS dwarf/giant evidence, cold-dwarf hypothesis conflict,
+   4200–5000 K blue-branch training eligibility and calibrated-abundance
+   validity. Preserve raw Redrock QSO/galaxy type with a separate quality
+   state; the MWS VAC carries `RR_SPECTYPE` and `RR_Z` but no Redrock `ZWARN`
+   or `DELTACHI2`. Record CMD white-dwarf evidence independently from the
+   spectral label, count conflicts and omit unresolved conflicts from the
+   trusted training core. Version the candidate and joint catalogs and
+   verify all frozen distance/route columns against earlier products.
+2. Review Gaia source 3601173023628559616 by identity, neighbors,
+   photometry, image-quality/exposure metadata and available alternate
+   measurements; decide its core eligibility without residual-based cuts.
+   Extend the joint luminosity plot to include `M_g≈10.19` anchors.
+3. Build a targeted giant sample from qualified broad-temperature RVS class
+   evidence and actual SpecDis v2.1 / SPDist v1.0 tables. Preserve each
+   catalog's identity, quality, distance uncertainty, training correlation
+   and applicability; derive Legacy `M_g` from DR11 `g0` and a distance
+   distribution. Stratify cool/warm, `logg<1.8`, abundance-valid and
+   RGB/RC-ambiguous cases. Audit overlap and label disagreements.
+4. Select at least one independent cluster/stream/dwarf system with actual
+   qualified members and DR11 light; keep whole systems out of fitting.
+   Fit and validate a first bounded photo-only giant luminosity relation
+   only where label quality and external scale coverage support one.
+5. Combine the seven-field and four targeted-field main-sequence samples
+   with source identity deduplication. On development-only data, compare a
+   low-dimensional smooth color baseline with and without one continuous
+   [Fe/H] term using a forward parallax likelihood for high, medium, weak
+   and negative observations. Propagate optical, iron and intrinsic scatter;
+   assess parameter/prior sensitivity and reserved-field parallax-space
+   predictions. Keep this a feasibility experiment, not a new all-sky release.
+6. Validate focused code/data results, update reports and WORKLOG, commit
+   coherent milestones and sync programs, manifests and selected figures
+   across local, GitHub and NERSC. Keep large catalogs on NERSC compute.
+
 ## Completed Pro Follow-up Objective
 
 The latest Pro review of `1acf946` is in a bounded joint-calibration round.
