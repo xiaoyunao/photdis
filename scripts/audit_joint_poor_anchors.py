@@ -33,10 +33,11 @@ def main():
     rows = fitsio.read(str(args.source), columns=COLUMNS)
     labels = np.char.strip(rows["class_evidence"].astype("U"))
     layers = np.char.strip(rows["parallax_layer"].astype("U"))
-    poor = ((labels == "cool_main_sequence") & (layers == "high_ge20")
-            & rows["clean_low_dust"] & rows["feh_cal_valid"]
-            & (rows["feh_cal"] < -1.5))
-    selected = rows[poor]
+    roles = np.char.strip(rows["role"].astype("U"))
+    poor = ((labels == "cool_main_sequence") & rows["clean_low_dust"]
+            & rows["feh_cal_valid"] & (rows["feh_cal"] < -1.5))
+    blue = rows["gr0"] < .909
+    selected = rows[poor & (layers == "high_ge20")]
     order = np.argsort(selected["gr0"])
     selected = selected[order]
     result = []
@@ -66,6 +67,17 @@ def main():
         "blue_below_gr0_0p909": sum(item["gr0"] < .909 for item in result),
         "by_role": {role: sum(item["role"] == role for item in result)
                     for role in ("development", "reserved_validation")},
+        "low_metallicity_core_layers": {
+            role: {
+                subset: {layer: int(np.sum(poor & role_mask & color_mask
+                                            & (layers == layer)))
+                         for layer in ("high_ge20", "mid_10_20", "weak_0_10",
+                                       "negative", "unusable")}
+                for subset, color_mask in (("all_colors", np.ones(len(rows), bool)),
+                                           ("blue_gr0_lt_0p909", blue))}
+            for role, role_mask in (("all", np.ones(len(rows), bool)),
+                                    ("development", roles == "development"),
+                                    ("reserved_validation", roles == "reserved_validation"))},
         "objects": result,
         "compute_host": socket.gethostname(),
     }
