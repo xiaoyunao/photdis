@@ -5,6 +5,9 @@ CPU nodes with `scripts/cold_v4_candidate_export.py` and the unchanged
 `clean_wise_snr_20` policy. The source is each field's existing diagnostic
 FITS table. Catalog products remain under ignored NERSC
 `data/cold_v4_candidates/`; only their small manifests are tracked here.
+This table describes the original v1 files. A versioned v2 export adds
+existing spectroscopic class evidence without changing the frozen model,
+route, distances or original files.
 
 | Field | Input rows | Exported | A / B / C | Infrared support conflicts |
 |---|---:|---:|---:|---:|
@@ -31,6 +34,24 @@ the last lies beyond those tests. No deep interval or calibrated stellar
 type probability is included. The input magnitudes and model route retain
 the existing five-band DR11 `MW_TRANSMISSION` correction and low-dust
 validation convention.
+
+The output mix is A/B/C = 63.10%/20.07%/16.82%; strict Gaia comparisons
+used predominantly C-layer stars (93.5% in RA205 and 90.3% in RA60).
+Consequently, their aggregate scatter, interval coverage and XD improvement
+do not measure performance for all 395,629 photometric candidates. Candidate
+count is a route count, not the number of confirmed cold dwarfs. The 47,372
+infrared conflicts (11.97%) are support warnings, not a giant fraction.
+
+The v2 output fields `class_evidence_available`, `class_evidence`,
+`class_evidence_source`, `class_evidence_quality` and
+`class_conflicts_cold_dwarf` carry existing DESI evidence. A qualified
+4200–5000 K RVS star with `logg−σ_logg>4.2` is a cool main-sequence label;
+one with `logg+σ_logg<3.2` is a cool-giant conflict. An unambiguous DESI
+Redrock QSO/galaxy type with S/N≥10 and the retained quality bits is a
+nonstellar conflict. Other qualified stars remain a separate transitional
+or other-star category. No matched qualified evidence is `unknown`, which
+does not imply dwarf status. These are diagnostic flags, not a fitted
+probability or a requirement for applying photometric distances.
 
 The three jobs completed with exit code zero and empty stderr. For each
 product, the FITS metadata check found exactly one binary-table extension

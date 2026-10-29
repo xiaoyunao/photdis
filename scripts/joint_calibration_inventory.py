@@ -141,7 +141,8 @@ def derive(rows):
 def summarize(rows):
     labels = np.unique(rows["class_evidence"])
     result = {"rows": len(rows), "class_counts": {}, "parallax_layers": {},
-              "high_snr_core_by_feh": {}, "core_coverage": {}}
+              "high_snr_core_by_feh": {}, "core_coverage": {},
+              "high_snr_core_feh_by_color": []}
     for name in labels:
         text = name.decode()
         class_mask = rows["class_evidence"] == name
@@ -155,6 +156,13 @@ def summarize(rows):
     core_high = core & (rows["parallax_layer"] == b"high_ge20") & rows["feh_cal_valid"]
     result["high_snr_core_by_feh"] = _bins(core_high, rows["feh_cal"],
                                                [-5, -2, -1.5, -1, -.5, 0, 1])
+    gr_edges = [0, .6, .909, 1.2, 1.6, 3]
+    feh_edges = [-5, -2, -1.5, -1, -.5, 0, 1]
+    result["high_snr_core_feh_by_color"] = [
+        {"gr0_range": [lo, hi], "feh_bins": _bins(
+            core_high & (rows["gr0"] >= lo) & (rows["gr0"] < hi),
+            rows["feh_cal"], feh_edges)}
+        for lo, hi in zip(gr_edges[:-1], gr_edges[1:])]
     for name, values, edges in (("gr0", rows["gr0"], [0, .6, .909, 1.2, 1.6, 3]),
                                 ("r", rows["r"], [12, 14, 16, 18, 20, 22, 26]),
                                 ("teff", rows["desi_teff"], [4200, 4400, 4600, 4800, 5000])):
