@@ -30,7 +30,8 @@ RAW = ("RELEASE", "BRICKID", "OBJID", "WISEMASK_W1", "WISEMASK_W2",
        "FRACFLUX_W1", "FRACFLUX_W2", "NOBS_W1", "NOBS_W2")
 READ = sorted(set(COLS + ["anchor", "grz_base", "valid_w1", "valid_w2",
                           "w1_clean", "w2_clean", "snr_w1", "snr_w2",
-                          "ebv", "g0", "r0", "p_corr", "gaia_bp_rp"]))
+                          "ebv", "g0", "r0", "z0", "w10", "w20",
+                          "p_corr", "gaia_bp_rp"]))
 
 
 def support_ratio(table, route, tier, index):
@@ -85,11 +86,15 @@ def raw_wise_quality(task, requested):
     source = json.loads(Path("configs/stage1.json").read_text())["sweep_root"]
     found = {}
     for name in task["sweep_files"]:
-        raw = fitsio.read(str(Path(source) / name), columns=list(RAW))
-        ids = legacy_ids(raw)
+        path = str(Path(source) / name)
+        identifiers = fitsio.read(path, columns=list(RAW[:3]))
+        ids = legacy_ids(identifiers)
         take = np.flatnonzero(np.isin(ids, requested))
-        for i in take:
-            key = int(ids[i])
+        if not len(take):
+            continue
+        raw = fitsio.read(path, columns=list(RAW[3:]), rows=take)
+        for i, key in enumerate(ids[take]):
+            key = int(key)
             if key in found:
                 raise ValueError(f"Duplicate raw Legacy ID {key}")
             found[key] = {"wisemask_w1": int(raw["WISEMASK_W1"][i]),
@@ -98,6 +103,7 @@ def raw_wise_quality(task, requested):
                           "fracflux_w2": float(raw["FRACFLUX_W2"][i]),
                           "nobs_w1": int(raw["NOBS_W1"][i]),
                           "nobs_w2": int(raw["NOBS_W2"][i])}
+        print(json.dumps({"raw_wise_file": name, "matched_rows": len(take)}), flush=True)
     if len(found) != len(requested):
         raise ValueError(f"Raw WISE quality matched {len(found)}/{len(requested)} IDs")
     return found
