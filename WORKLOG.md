@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Crossover common-sample audit job 60475661 completed in 14 s; weak-parallax
+  v3 job 60475664 completed in 53 s, both on allocated NERSC CPUs. Copied
+  small aggregate manifests. Difference-of-medians reaches +0.031 mag in one
+  crossover cell although its paired-difference median is −0.005 mag; all
+  eight direct-bootstrap center intervals include zero. At r21–22 the
+  common-source NMAD rises 0.391→0.460 and 0.324→0.429 mag across the two
+  templates. Selected-null center tests put the two +0.04 mas weak-parallax
+  statistics at simulation p=0.63 and 0.81. Added report and diagnostic
+  fallback code; next run the fallback audit on allocated compute.
+
 - Recovered the complete latest Pro review after the ChatGPT source login was
   refreshed. Registered the three detailed diagnostic groups as the active
   goal and updated PLAN. Added a saved-row crossover common-acceptance audit
