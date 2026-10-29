@@ -21,6 +21,13 @@ edges of the registered grid; no further search was made after evaluation.
 
 The wide reserved intervals exceed nominal coverage of the **SPDist point
 labels**. This does not measure coverage of true geometric distance.
+The kernel centers are noisy SPDist labels; each component additionally
+contains the reported label uncertainty and an empirical smoothing floor.
+The resulting predictive width mixes label noise, smoothing and population
+mixture. It has not been deconvolved into an intrinsic giant-luminosity
+distribution. Accordingly, the 0.464 mag residual NMAD relative to SPDist
+is not a physical precision floor for `grz`-only giants, and 81.1%/98.6%
+point-label coverage does not validate physical distance uncertainty.
 The color relation mixes distinct evolved populations: reserved `logg<2.5`
 objects have +0.285 mag median residual, while `logg≥2.5` objects have
 −0.227 mag. The 5000–5500 K subset has 0.524 mag NMAD, compared with

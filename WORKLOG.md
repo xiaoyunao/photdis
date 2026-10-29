@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Started Pro `73ad728` cluster-RGB round. Corrected prior blue-branch
+  variance/tail and warm-kernel width interpretations without refitting.
+  Registered full-member M3/NGC 2419 DR11 extraction using 64-bit Gaia IDs,
+  member probability, measured clean/WISE flags and independent RR moduli.
+  Files: PLAN, two reports, cluster inventory script/Slurm wrapper and
+  focused identity tests. Commands: git status/fetch/log, source/header
+  inspection, Python compilation, two tests, diff check. Validation: both
+  tests pass. Next: allocated whole-cluster extraction, inspect Gaia CMDs,
+  then register broad phase regions before Legacy sequence fitting.
+
 - Closed the bounded Pro caeb218 round after ranked K-giant yield and optical
   audits. Files: PLAN, warm/NGC/cool-giant reports, ranked small manifests.
   Commands: focused pytest, JSON cross-count checks, `git diff --check`,

@@ -44,16 +44,25 @@ fields only; reserved fields are scored once with frozen parameters.
 All five reserved fields show a positive mean log-density gain. The fitted
 iron coefficient is `β=−0.6655 mag/dex`: at fixed optical colors, lower
 iron abundance predicts a fainter `M_g` in this restricted spectral sample.
-The fitted intrinsic scatter decreases from 0.2925 to 0.2000 mag. Tight and
-broad reasonable coefficient priors, and a larger iron-error floor, return
-coefficients near −0.665. The poorest blue subset in the development fields
+The fitted residual-scatter parameter decreases from 0.2925 to 0.2000 mag
+under the assumed 0.1 dex iron-error floor. This 0.2000 mag is not an
+independently measured intrinsic luminosity floor: the constant variance
+contains `sigma_residual² + beta² sigma_FeH_floor²`. Increasing the assumed
+iron floor to 0.2 dex gives residual scatter 0.1635 mag, while this combined
+variance remains approximately 0.04444 mag² in both fits. Tight and broad
+coefficient priors, and the larger *random* iron-error floor, return
+coefficients near −0.665; this does not test systematic abundance-scale
+errors varying with temperature or gravity. The poorest blue subset in the development fields
 does *not* improve (`−0.318` to `−0.381` mean log density), so the branch
 must still be assessed by field, color, error and calibration domain.
 
 The reserved all-star one-iron predictive PIT has 6.39% below 0.05 and
 4.06% above 0.95. In the 144 poor-metallicity reserved objects, both tails
-are about 11.1%. These are parallax-space diagnostics of the spectroscopic
-sample, not a calibrated distance interval for purely photometric targets.
+are about 11.1%, so the central nominal 90% **observed-parallax predictive
+interval** covers about 77.8%. The linear iron term improves predictive
+density but does not calibrate the metal-poor tails. These are parallax-space
+diagnostics of the spectroscopic sample, not distance-interval coverage for
+purely photometric targets.
 
 The development iron abundance has `R²=0.358` against the four color-basis
 columns: color and iron are related but the abundance retains variation at

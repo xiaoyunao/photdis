@@ -1,6 +1,42 @@
 # PLAN
 
-## Current Objective: Pro review of caeb218
+## Current Objective: cluster-based Legacy RGB calibration
+
+Follow the Pro review of `73ad728`. Existing cold-v4/XD, forward-parallax,
+warm-giant models and all registered historical test identities stay frozen.
+The new label is each cluster member's measured Legacy `g0` minus an
+independent whole-system distance modulus, with shared zero-point error.
+
+1. Correct the interpretation of the metal-poor forward model's residual
+   scatter and predictive tails, and of the warm giant kernel width. Preserve
+   all existing fitted numbers, decisions and products.
+2. Recover the complete Vasiliev–Baumgardt M3 and NGC 2419 membership tables
+   with their probabilities and Gaia CMD columns. Join every member to actual
+   DR11 Legacy grz on allocated NERSC compute. Report identity uniqueness,
+   `Pmember>0.9` core, lower-probability diagnostic layer, grz base/clean,
+   dust, brightness, position/crowding and usable WISE bands. Spectroscopy is
+   diagnostic, not a per-member eligibility condition.
+3. Register broad Gaia-CMD phase regions before fitting Legacy sequences.
+   Count RGB, HB/RC, AGB, main sequence and ambiguous members separately,
+   include independent spectroscopic stage checks where available, and audit
+   clean-photometry loss by magnitude, cluster radius, mask and fraction.
+   No member selection by model distance or residual.
+4. For credible RGB members, construct per-system `(g-r)0`–`M_g` and
+   `(r-z)0`–`M_g` Legacy empirical sequences and width summaries. Propagate
+   the external modulus and extinction as shared cluster uncertainties;
+   contrast M3 low dust with NGC 2419's E(B−V)≈0.06. Compare existing frozen
+   model outputs as diagnostics only. Make small inspectable figures/manifests.
+5. Use measured RGB number, color/luminosity overlap and label quality to
+   decide whether a minimal low-degree cross-system relation is identifiable.
+   If so, register additional system roles and reserve at least one *whole*
+   system before fitting; assess per-system center, scatter and tails. Test
+   WISE on the same reliable unblended stars and report its acceptance rate.
+   Do not claim photo-only metallicity or phase certainty from two clusters.
+6. Validate, document in reverse-chronological WORKLOG, commit milestone
+   changes and sync code, docs, small manifests and selected plots across
+   local, GitHub and NERSC; large catalogs stay on NERSC.
+
+## Completed Objective: Pro review of caeb218
 
 Keep cold-v4/XD models, routes and earlier final-test identities frozen.
 Complete a bounded correction and calibration round with these milestones:
