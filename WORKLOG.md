@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Completed allocated per-bit DR11 quality-cause audit 60493686. Among
+  M3 upper RGB candidates, 381 have base grz but 373 carry `SATUR_Z`,
+  373 fail `FRACMASKED_Z`, and only two remain clean; causes overlap.
+  M53 upper RGB has 158/354 base records with `SATUR_Z` and 156 clean.
+  NGC 7006 holdout has 84 upper candidates, only 27 base and 19 clean;
+  no holdout Legacy labels were read. Files: quality-cause manifest and
+  cluster report. Commands: Slurm job and JSON count review.
+  Validation: job exit 0; counts agree with phase manifests. Next: await
+  once-only frozen-model NGC 7006 whole-system score.
+
 - Completed registered development-only cluster-weighted quadratic A/B
   RGB fit on allocated Slurm job 60493603. Training counts match the
   prior phase screens: M3 422 lower, M53 409 upper/lower, NGC 2419 391

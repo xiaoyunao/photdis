@@ -27,14 +27,22 @@ The M3 upper RGB loses 385 of 387 high-probability candidates under the
 existing `grz_clean` rule: 381 have base grz, only five pass the optical
 fraction condition, six the mask condition and two pass both. Within one
 arcminute of M3's center, ten of 141 candidate RGB stars remain clean.
+The per-bit audit identifies `SATUR_Z` on 373 of 381 M3 upper-RGB base
+records and `FRACMASKED_Z≥0.4` on 373; causes overlap. For M53 upper
+RGB, 158 of 354 base records carry `SATUR_Z` and 151 fail the z-band
+`FRACMASKED` threshold; 156 remain clean. These counts locate a substantial
+bright-end z-band loss. The [quality-cause manifest](../manifests/cluster_rgb_quality_causes_v1.json)
+also breaks out `SATUR_G/R`, `ALLMASK`, each optical fraction criterion,
+and the reserved system's quality counts.
 NGC 2419 retains 391 of 458 upper-RGB candidates, but its lower candidate
 region overlaps the red horizontal branch in the Gaia CMD and is a
 sensitivity layer. The secure M3 and NGC 2419 luminosity ranges barely
 meet. M53 supplies 156 clean upper and 253 clean lower candidates across
 the gap. Its median map reddening is `E(B−V)=0.02078`.
 The [registered roles](cluster_rgb_system_registration_v1.md) keep
-NGC 7006 as a whole-system holdout. The reserved system has 19 clean
-upper-RGB candidates and 20 lower-region candidates; its Legacy
+NGC 7006 as a whole-system holdout. The reserved system has 84
+high-probability upper-RGB candidates, 27 with base grz, 19 clean,
+and 20 clean lower-region candidates; its Legacy
 luminosities and colors remain sealed until the
 [fixed transfer protocol](cluster_rgb_experiment_protocol_v1.md) and
 development model are committed.
