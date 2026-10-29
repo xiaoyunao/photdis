@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Closed the Pro `73ad728` follow-up as a bounded whole-cluster RGB audit.
+  Corrected blue/warm model interpretations, measured M3/M53/NGC 2419
+  Legacy RGB sequences, quantified z-band bright losses, and ran the
+  precommitted NGC 7006 whole-system test. The pooled curve fails as a
+  general field-star product; next science phase requires more independent
+  clusters with metallicity and luminosity overlap. Files: PLAN and
+  cluster report. Commands: focused tests, GitHub push and NERSC fast-forward.
+  Validation: eight focused tests pass; local/GitHub/NERSC tracked heads
+  synchronized at the final milestone. Remaining: no adopted photo-only
+  giant distance model; larger calibrator set and phase mixture remain.
+
 - Scored the preregistered NGC 7006 whole-system holdout once on allocated
   Slurm job 60493762, after frozen model commit b558f03. All 19 clean
   upper-RGB stars lie inside the development color rectangles. Primary

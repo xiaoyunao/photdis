@@ -2,6 +2,11 @@
 
 ## Current Objective: cluster-based Legacy RGB calibration
 
+Status: completed as a bounded cluster audit and registered transfer
+experiment. The empirical development sequences and once-only whole-cluster
+test are documented in `docs/cluster_rgb_calibration_v1.md`; the tested
+pooled A/B models are not adopted as a field-star distance product.
+
 Follow the Pro review of `73ad728`. Existing cold-v4/XD, forward-parallax,
 warm-giant models and all registered historical test identities stay frozen.
 The new label is each cluster member's measured Legacy `g0` minus an
@@ -53,6 +58,20 @@ independent whole-system distance modulus, with shared zero-point error.
 6. Validate, document in reverse-chronological WORKLOG, commit milestone
    changes and sync code, docs, small manifests and selected plots across
    local, GitHub and NERSC; large catalogs stay on NERSC.
+
+## Next recommended steps
+
+- Add independent low-dust RGB calibrator systems spanning metallicity at
+  *overlapping* luminosities, with separate whole-system tests registered
+  before fitting. Give their external distance and dust-scale errors a
+  shared-cluster treatment.
+- Improve phase evidence for red HB/AGB overlap and quantify per-star image
+  quality at the bright end. Preserve the existing clean-grz rule until a
+  measured recovery layer is validated.
+- Only after those systems exist, test a metallicity-marginalized RGB
+  luminosity distribution and an explicit RGB/HB/AGB mixture for ordinary
+  targets without spectra. Retain the cold-dwarf baseline as a separate
+  conditional product.
 
 ## Completed Objective: Pro review of caeb218
 
