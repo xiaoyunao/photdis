@@ -14,8 +14,8 @@ import numpy as np
 
 from photdis.stage1 import require_compute, write_json
 
-SOURCE = Path("data/giant_vac_v2/same_star.fits")
-OUT = Path("manifests/giant_vac_quality_audit_v2.json")
+SOURCE = Path("data/giant_vac_v3/same_star.fits")
+OUT = Path("manifests/giant_vac_quality_audit_v3.json")
 
 
 def count(mask):

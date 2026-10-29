@@ -19,8 +19,8 @@ JOINT = [Path("data/joint_calibration_v1_evidence_v2/same_star.fits"),
          Path("data/joint_calibration_targeted_v1_evidence_v2/same_star.fits")]
 SPEC = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits")
 SP = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits")
-OUT = Path("data/giant_vac_v2/same_star.fits")
-MANIFEST = Path("manifests/giant_vac_v2.json")
+OUT = Path("data/giant_vac_v3/same_star.fits")
+MANIFEST = Path("manifests/giant_vac_v3.json")
 
 
 def exact_pair_join(query_target, query_source, catalog):
@@ -41,6 +41,18 @@ def exact_pair_join(query_target, query_source, catalog):
 
 def giant_mask(rows):
     return np.char.strip(rows["class_evidence"].astype("U")) == "conservative_giant"
+
+
+def deduplicate_giant_identities(rows):
+    """Choose one row per Gaia star and keep both join keys row-aligned."""
+    source = rows["source_id"]
+    target = np.char.strip(rows["desi_object_id"].astype("U")).astype(np.int64)
+    identity = np.where(source > 0, source, -target)
+    order = np.lexsort((rows["ls_id"],
+                        -np.nan_to_num(rows["desi_snr"], nan=-1), identity))
+    _, first = np.unique(identity[order], return_index=True)
+    selected = rows[order[first]]
+    return selected, np.char.strip(selected["desi_object_id"].astype("U")).astype(np.int64), selected["source_id"]
 
 
 def summarize(rows):
@@ -76,14 +88,7 @@ def main():
     arrays = [fitsio.read(str(path)) for path in JOINT]
     all_rows = np.concatenate(arrays)
     giant = giant_mask(all_rows)
-    rows = all_rows[giant]
-    # Identity deduplication across fields; the same Gaia star must have one row.
-    sid = rows["source_id"]
-    target = np.char.strip(rows["desi_object_id"].astype("U")).astype(np.int64)
-    identity = np.where(sid > 0, sid, -target)
-    order = np.lexsort((rows["ls_id"], -np.nan_to_num(rows["desi_snr"], nan=-1), identity))
-    _, first = np.unique(identity[order], return_index=True)
-    rows, target = rows[order[first]], target[order[first]]
+    rows, target, sid = deduplicate_giant_identities(all_rows[giant])
 
     spec = fitsio.read(str(SPEC), ext="SPECDIS", columns=[
         "TARGETID", "SOURCE_ID", "DIST", "DISTERR", "BINARY_FLAG", "BINARY_POSSIBILITY"])
