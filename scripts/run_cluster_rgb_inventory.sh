@@ -4,7 +4,7 @@
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH -t 00:45:00
-#SBATCH --mem=16G
+#SBATCH --mem=8G
 #SBATCH -o logs/cluster_rgb_inventory_%A_%a.out
 #SBATCH -e logs/cluster_rgb_inventory_%A_%a.err
 

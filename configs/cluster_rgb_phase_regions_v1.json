@@ -1,0 +1,26 @@
+{
+  "method": "Broad candidate regions drawn on Gaia G minus independent RR modulus versus observed BP-RP before fitting any Legacy RGB sequence. They are phase screens, not spectroscopic classifications. No Legacy color or model residual enters selection.",
+  "systems": {
+    "m3": {
+      "rgb_bright_max_gaia_g_minus_mu": 0.35,
+      "rgb_lower_max_gaia_g_minus_mu": 2.4,
+      "rgb_color_lower_at_zero": 1.02,
+      "rgb_color_slope_per_mag": -0.05,
+      "hb_gaia_g_minus_mu": [0.35, 1.4],
+      "hb_bp_rp_max": 0.9,
+      "possible_agb_bp_rp_min": 0.7,
+      "main_sequence_gaia_g_minus_mu_min": 3.6
+    },
+    "ngc2419": {
+      "rgb_bright_max_gaia_g_minus_mu": 0.45,
+      "rgb_lower_max_gaia_g_minus_mu": 1.3,
+      "rgb_color_lower_at_zero": 1.06,
+      "rgb_color_slope_per_mag": -0.05,
+      "hb_gaia_g_minus_mu": [0.45, 1.3],
+      "hb_bp_rp_max": 0.95,
+      "possible_agb_bp_rp_min": 0.7,
+      "main_sequence_gaia_g_minus_mu_min": 3.6
+    }
+  },
+  "stage_caveat": "Upper/lower RGB, HB, AGB and main-sequence labels are Gaia CMD candidates. AGB and RGB overlap; possible AGB is never treated as a confirmed AGB. Lower RGB near the turnoff is a separate sensitivity layer. Keep full membership and quality flags."
+}

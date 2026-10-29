@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Completed allocated whole-member DR11 extraction job 60492519 (both array
+  tasks exit 0). M3 has 25,395 P>=0.5 matched members, 24,778 P>0.9 and
+  17,188 high-probability clean grz; NGC 2419 has 1,563/1,441/882.
+  Initial Gaia CMDs show M3's clean count is dominated by faint members,
+  while NGC 2419 retains a visible upper RGB. Registered broad per-system
+  Gaia CMD phase screens before Legacy sequence fitting; these preserve
+  lower-RGB and AGB ambiguity. Files: extraction manifests/figures, phase
+  config/script/wrapper/tests. Commands: Slurm array with 8 GB per task,
+  figure inspection, Python syntax and four focused tests. Validation: job
+  exit 0, full Gaia ID preservation, four tests pass. Next: run phase audit
+  on compute, quantify actual RGB coverage and quality losses.
+
 - Started Pro `73ad728` cluster-RGB round. Corrected prior blue-branch
   variance/tail and warm-kernel width interpretations without refitting.
   Registered full-member M3/NGC 2419 DR11 extraction using 64-bit Gaia IDs,
