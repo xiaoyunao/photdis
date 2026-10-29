@@ -92,7 +92,7 @@ def sweep_paths(config):
             yield path
 
 
-def matched_sweeps(config, source_ids):
+def matched_sweeps(config, source_ids, *, prefer="grz"):
     parts = []
     input_rows = 0
     for path in sweep_paths(config):
@@ -113,7 +113,9 @@ def matched_sweeps(config, source_ids):
     rows = np.concatenate(parts)
     photo = derive_photometry(rows)
     sid = rows["REF_ID"].astype(np.int64)
-    score = (1000 * photo["grz_clean"] + 100 * photo["grz_base"]
+    if prefer not in ("gr", "grz"):
+        raise ValueError(prefer)
+    score = (1000 * photo[f"{prefer}_clean"] + 100 * photo[f"{prefer}_base"]
              + np.nan_to_num(photo["snr_g"], nan=0, posinf=0) / 10000)
     order = np.lexsort((-score, sid))
     _, first = np.unique(sid[order], return_index=True)

@@ -96,6 +96,8 @@ def derive_photometry(
 
     base = np.ones(size, dtype=bool)
     fraction_clean = np.ones(size, dtype=bool)
+    gr_base = np.ones(size, dtype=bool)
+    gr_fraction_clean = np.ones(size, dtype=bool)
     precise = np.ones(size, dtype=bool)
     for band in ("G", "R", "Z"):
         key = band.lower()
@@ -106,10 +108,22 @@ def derive_photometry(
         fraction_clean &= (np.isfinite(fm) & (fm < fracmasked_max)
                            & np.isfinite(fi) & (fi > fracin_min)
                            & np.isfinite(ff) & (ff < fracflux_max))
+        if band in ("G", "R"):
+            gr_base &= out[f"valid_{key}"] & (out[f"snr_{key}"] >= min_snr)
+            gr_fraction_clean &= (np.isfinite(fm) & (fm < fracmasked_max)
+                                  & np.isfinite(fi) & (fi > fracin_min)
+                                  & np.isfinite(ff) & (ff < fracflux_max))
         precise &= out[f"sigma_{key}"] < optical_sigma_max
 
     reject = sum(1 << int(bit) for bit in set(clean_reject_maskbits))
     mask_clean = (np.asarray(data["MASKBITS"], dtype=np.int64) & reject) == 0
+    gr_reject = sum(1 << int(bit) for bit in set(clean_reject_maskbits)
+                    if bit not in (4, 7))
+    gr_mask_clean = (np.asarray(data["MASKBITS"], dtype=np.int64) & gr_reject) == 0
+    out["gr_base"] = gr_base
+    out["gr_fraction_clean"] = gr_fraction_clean
+    out["gr_mask_clean"] = gr_mask_clean
+    out["gr_clean"] = gr_base & gr_fraction_clean & gr_mask_clean
     out["grz_base"] = base
     out["grz_fraction_clean"] = fraction_clean
     out["grz_mask_clean"] = mask_clean

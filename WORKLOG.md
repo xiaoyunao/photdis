@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Started the Pro `beb15b7` follow-up. Confirmed DR11 sweep north/south
+  samples carry `RELEASE` 11011/11010 and no per-row `PHOTSYS` column;
+  official DR11 documentation assigns north to BASS/MzLS and south to
+  DECam. Added a band-matched `gr_clean` tier and allocated-compute audit
+  that rejoins the full four-cluster member parent, preserves frozen grz
+  rows, separates stage-aligned native-system loci, and measures local
+  residuals with shared-band photometric covariance. Files: photometry,
+  cluster inventory, system audit, Slurm wrapper, tests, PLAN. Commands:
+  small NERSC FITS inspection, Python compile, focused pytest. Validation:
+  12 focused tests pass. Next: run the full rejoin on Slurm, inspect counts
+  and figures, document physical interpretation, then sync the milestone.
+
 - Closed the Pro `73ad728` follow-up as a bounded whole-cluster RGB audit.
   Corrected blue/warm model interpretations, measured M3/M53/NGC 2419
   Legacy RGB sequences, quantified z-band bright losses, and ran the

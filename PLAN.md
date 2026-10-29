@@ -1,6 +1,41 @@
 # PLAN
 
-## Current Objective: cluster-based Legacy RGB calibration
+## Current Objective: native-system, band-matched RGB audit
+
+Status: in progress. Follow the Pro review of `beb15b7` with a bounded
+four-cluster experiment. Keep the frozen pooled A/B fit, NGC 7006 test,
+cold-v4/XD and blue forward-parallax results unchanged.
+
+1. Confirm each member's DR11 `RELEASE` and natural camera system against
+   sweep files and official Legacy documentation. Separate southern DECam
+   from northern BASS/MzLS in all new comparisons. Review the existing
+   `MW_TRANSMISSION` dereddening and quantify common cluster distance/dust
+   uncertainty. Apply a fixed RGB passband conversion only with a reliable
+   source; otherwise leave native systems separate.
+2. Re-read the full matched membership parent on allocated NERSC compute.
+   Build a new `gr_clean` tier with exactly the existing per-band optical
+   requirements on g and r, including their mask bits and BAILOUT, without
+   any z condition. Preserve the grz-qualified frozen rows for same-star
+   comparisons. Report by cluster and Gaia-CMD stage: gr and grz counts,
+   same-row z-only failures, changed crossmatch row, luminosity/color/radius
+   and image-quality distributions; inspect M3's bright upper RGB explicitly.
+3. Recompute and plot empirical loci from exact fitted stage cores: M3 lower,
+   M53 upper plus lower, NGC 2419 upper. Show the NGC 2419 lower/red-HB
+   overlap as a separate diagnostic. Distinguish within-bin 16–84% width
+   from local-curve residuals and propagated photometric errors, including
+   shared-band covariance.
+4. Compare M3 and M53 at the same M_g within their common DECam range using
+   fixed interpolation. Audit residuals against magnitude, cluster radius
+   and measured image-quality quantities. Treat modulus and dust errors as
+   whole-cluster shifts. Inspect NGC 2419 within its own native system.
+5. Document measured results, limits of four-cluster coverage and the minimum
+   additional system/stage/metallicity cells needed for a conditional
+   p(color | M_g, metallicity, RGB, system). Register a new whole-cluster
+   test before any subsequent fit; NGC 7006 has already been used. Keep
+   WISE as an acceptance diagnostic. Run targeted tests and sync code,
+   documentation, small manifests and selected figures local/GitHub/NERSC.
+
+## Completed Objective: first pooled cluster RGB experiment
 
 Status: completed as a bounded cluster audit and registered transfer
 experiment. The empirical development sequences and once-only whole-cluster

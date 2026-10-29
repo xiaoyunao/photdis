@@ -94,6 +94,18 @@ class PhotometryTests(unittest.TestCase):
         np.testing.assert_array_equal(out["photometry_tier"], [1, 0, 2])
         self.assertFalse(out["full_high_quality"].any())
 
+    def test_gr_quality_uses_only_its_input_bands(self):
+        data = catalog(5)
+        data["FLUX_IVAR_Z"][0] = 0
+        data["MASKBITS"][1] = 1 << 4  # z saturation
+        data["FRACMASKED_Z"][2] = 0.8
+        data["MASKBITS"][3] = 1 << 2  # g saturation
+        data["FRACIN_R"][4] = 0.1
+        out = derive_photometry(data)
+        np.testing.assert_array_equal(out["gr_clean"],
+                                      [True, True, True, False, False])
+        self.assertFalse(out["grz_clean"].any())
+
 
 if __name__ == "__main__":
     unittest.main()
