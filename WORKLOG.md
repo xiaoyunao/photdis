@@ -2,9 +2,24 @@
 
 ## 2026-10-29
 
+- Scored the preregistered NGC 7006 whole-system holdout once on allocated
+  Slurm job 60493762, after frozen model commit b558f03. All 19 clean
+  upper-RGB stars lie inside the development color rectangles. Primary
+  A has median Δμ +0.166 mag, NMAD 0.323 mag, 5/19 with |Δμ|>0.5;
+  source-bootstrap median interval −0.072 to +0.223 mag. B gives
+  +0.152/0.293 mag and 4/19; no upper-RGB clean WISE stars. The ±0.074
+  external modulus and dust sensitivity are shared scales; NGC 2419
+  development ±0.020 E(B−V) moves A holdout center by −0.111/+0.076.
+  Files: holdout manifest, cluster report, PLAN. Commands: allocated
+  test job, score/sensitivity review, eight focused tests and Python
+  compilation. Validation: job exit 0, frozen source-ID hash matches
+  training and eight tests pass. Outcome: keep empirical per-cluster
+  loci; do not adopt pooled A/B as a field RGB distance model.
+
 - Completed allocated per-bit DR11 quality-cause audit 60493686. Among
   M3 upper RGB candidates, 381 have base grz but 373 carry `SATUR_Z`,
-  373 fail `FRACMASKED_Z`, and only two remain clean; causes overlap.
+  373 fail the z-band `FRACMASKED` criterion, and only two remain clean;
+  causes overlap.
   M53 upper RGB has 158/354 base records with `SATUR_Z` and 156 clean.
   NGC 7006 holdout has 84 upper candidates, only 27 base and 19 clean;
   no holdout Legacy labels were read. Files: quality-cause manifest and

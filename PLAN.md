@@ -45,6 +45,11 @@ independent whole-system distance modulus, with shared zero-point error.
    It is a transfer diagnostic, not an adopted RGB distance calibration.
    Commit this model before scoring NGC 7006 once; use the holdout to
    quantify the failure or limited domain, not to retune the curve.
+   The once-only NGC 7006 test is complete (19 clean upper-RGB stars,
+   A median Δμ +0.166 mag, NMAD 0.323 mag, 5/19 |Δμ|>0.5). The small
+   holdout and large development-system offsets do not support adopting
+   either pooled quadratic. Preserve the cluster loci and report the
+   shared distance/dust scale sensitivities; do not retune on NGC 7006.
 6. Validate, document in reverse-chronological WORKLOG, commit milestone
    changes and sync code, docs, small manifests and selected plots across
    local, GitHub and NERSC; large catalogs stay on NERSC.
