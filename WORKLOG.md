@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Allocated joint evidence jobs 60486731/60486732 completed, preserving
+  37,214/132,530 rows. The broader qualified RVS rule finds 609/3,085
+  giants, of which 383/2,104 have clean low-dust DR11 photometry. The
+  candidate v3 preservation validator 60486733 completed. Registered a
+  SpecDis v2.1 / SPDist v1.0 exact TARGETID+Gaia-ID giant join with
+  catalog-specific quality, Legacy-g luminosities and uncertainties, and
+  published cluster membership. Files: `scripts/giant_vac_inventory.py`,
+  Slurm wrapper, focused pair-join test, joint v2 manifests. Validation:
+  `py_compile`, one focused pytest and `bash -n` passed. Next: run allocated
+  VAC inventory and inspect label quality and independent-system overlap.
+
 - Candidate v3 jobs 60486601/60486604/60486605 completed with empty stderr.
   Joint v2 jobs 60486608/60486609 stopped before writing because the old
   same-star FITS omitted `desi_spectype`; the new class function requires

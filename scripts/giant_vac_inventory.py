@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Join qualified DESI giants to the two published distance VACs by identity."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+import socket
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(ROOT / "src"), str(ROOT / ".deps")]
+import fitsio
+import numpy as np
+
+from photdis.holdouts import load_reference_catalogs, annotate_holdouts
+from photdis.stage1 import require_compute, write_json
+
+JOINT = [Path("data/joint_calibration_v1_evidence_v2/same_star.fits"),
+         Path("data/joint_calibration_targeted_v1_evidence_v2/same_star.fits")]
+SPEC = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits")
+SP = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits")
+OUT = Path("data/giant_vac_v1/same_star.fits")
+MANIFEST = Path("manifests/giant_vac_v1.json")
+
+
+def exact_pair_join(query_target, query_source, catalog):
+    """Map (DESI target, Gaia source) to a unique row; ambiguous pairs stay unmatched."""
+    key = np.rec.fromarrays([catalog["TARGETID"], catalog["SOURCE_ID"]],
+                            names="target,source")
+    order = np.argsort(key, kind="stable")
+    sorted_key = key[order]
+    query = np.rec.fromarrays([query_target, query_source], names="target,source")
+    position = np.searchsorted(sorted_key, query)
+    safe = np.minimum(position, len(sorted_key) - 1)
+    found = (position < len(sorted_key)) & (sorted_key[safe] == query)
+    prior = np.maximum(safe - 1, 0)
+    following = np.minimum(safe + 1, len(sorted_key) - 1)
+    unique = ((safe == 0) | (sorted_key[prior] != query)) & (
+        (safe == len(sorted_key) - 1) | (sorted_key[following] != query))
+    return np.where(found & unique, order[safe], -1)
+
+
+def summarize(rows):
+    giant = rows["class_evidence"] == b"conservative_giant"
+    clean = giant & rows["clean_low_dust"] & ~rows["cmd_spectral_conflict"]
+    ranges = {"lt4200": rows["desi_teff"] < 4200,
+              "4200_5000": (rows["desi_teff"] >= 4200) & (rows["desi_teff"] < 5000),
+              "5000_7000": (rows["desi_teff"] >= 5000) & (rows["desi_teff"] < 7000),
+              "logg_lt1p8": rows["desi_logg"] < 1.8,
+              "feh_cal_valid": rows["abundance_calibration_valid"]}
+    result = {"all": int(len(rows)), "qualified_giant": int(giant.sum()),
+              "clean_giant": int(clean.sum()),
+              "specdis_valid": int((clean & rows["specdis_valid"]).sum()),
+              "spdist_valid": int((clean & rows["spdist_valid"]).sum()),
+              "both_valid": int((clean & rows["specdis_valid"] & rows["spdist_valid"]).sum()),
+              "giant_cluster_members": int((clean & (rows["cluster_group"] > 0)).sum()),
+              "by_type": {name: {"clean": int((clean & mask).sum()),
+                                  "specdis": int((clean & mask & rows["specdis_valid"]).sum()),
+                                  "spdist": int((clean & mask & rows["spdist_valid"]).sum())}
+                          for name, mask in ranges.items()}}
+    groups, count = np.unique(rows["cluster_group"][clean & (rows["cluster_group"] > 0)],
+                              return_counts=True)
+    result["cluster_groups"] = {str(int(group)): int(n) for group, n in zip(groups, count)}
+    return result
+
+
+def main():
+    require_compute()
+    if OUT.exists() or MANIFEST.exists():
+        raise FileExistsError("Giant VAC inventory already exists")
+    arrays = [fitsio.read(str(path)) for path in JOINT]
+    all_rows = np.concatenate(arrays)
+    giant = all_rows["class_evidence"] == b"conservative_giant"
+    rows = all_rows[giant]
+    # Identity deduplication across fields; the same Gaia star must have one row.
+    sid = rows["source_id"]
+    target = np.char.strip(rows["desi_object_id"].astype("U")).astype(np.int64)
+    identity = np.where(sid > 0, sid, -target)
+    order = np.lexsort((rows["ls_id"], -np.nan_to_num(rows["desi_snr"], nan=-1), identity))
+    _, first = np.unique(identity[order], return_index=True)
+    rows, target = rows[order[first]], target[order[first]]
+
+    spec = fitsio.read(str(SPEC), ext="SPECDIS", columns=[
+        "TARGETID", "SOURCE_ID", "DIST", "DISTERR", "BINARY_FLAG", "BINARY_POSSIBILITY"])
+    sp = fitsio.read(str(SP), ext="SPDIST", columns=[
+        "TARGETID", "SOURCE_ID", "FLAG_GOOD", "QFLAG_INPUT", "G0", "E_GMAG",
+        "MG_16", "MG_50", "MG_84", "TEFF_COR", "LOGG_COR"])
+    ispec = exact_pair_join(target, sid, spec)
+    isp = exact_pair_join(target, sid, sp)
+    dtype = rows.dtype.descr + [
+        ("specdis_match", "?"), ("specdis_valid", "?"),
+        ("specdis_dist_kpc", "f4"), ("specdis_disterr_kpc", "f4"),
+        ("specdis_binary_flag", "i2"), ("specdis_mg_legacy", "f4"),
+        ("specdis_sigma_mg", "f4"),
+        ("spdist_match", "?"), ("spdist_valid", "?"),
+        ("spdist_flag_good", "?"), ("spdist_qflag_input", "?"),
+        ("spdist_mg50_gaia", "f4"), ("spdist_g0_gaia", "f4"),
+        ("spdist_mg_legacy", "f4"), ("spdist_sigma_mg", "f4"),
+        ("spdist_dist_kpc", "f4"), ("cluster_group", "i8")]
+    out = np.empty(len(rows), dtype=dtype)
+    for name in rows.dtype.names:
+        out[name] = rows[name]
+    for name in ("specdis_dist_kpc", "specdis_disterr_kpc", "specdis_mg_legacy",
+                 "specdis_sigma_mg", "spdist_mg50_gaia", "spdist_g0_gaia",
+                 "spdist_mg_legacy", "spdist_sigma_mg", "spdist_dist_kpc"):
+        out[name] = np.nan
+    out["specdis_binary_flag"] = -1
+    out["specdis_match"] = ispec >= 0
+    out["spdist_match"] = isp >= 0
+    out["specdis_valid"] = False
+    out["spdist_valid"] = False
+    out["spdist_flag_good"] = False
+    out["spdist_qflag_input"] = False
+    m = ispec >= 0
+    out["specdis_dist_kpc"][m] = spec["DIST"][ispec[m]]
+    out["specdis_disterr_kpc"][m] = spec["DISTERR"][ispec[m]]
+    out["specdis_binary_flag"][m] = spec["BINARY_FLAG"][ispec[m]]
+    d, de = out["specdis_dist_kpc"].astype(float), out["specdis_disterr_kpc"].astype(float)
+    valid = m & np.isfinite(d) & np.isfinite(de) & (d > 0) & (de > 0) & (de < d)
+    valid &= np.isfinite(rows["g0"]) & np.isfinite(rows["sigma_g"])
+    valid &= out["specdis_binary_flag"] == 1
+    out["specdis_valid"] = valid
+    out["specdis_mg_legacy"][valid] = rows["g0"][valid] - 10 - 5 * np.log10(d[valid])
+    out["specdis_sigma_mg"][valid] = np.hypot(rows["sigma_g"][valid],
+                                                 5 / np.log(10) * de[valid] / d[valid])
+    m = isp >= 0
+    out["spdist_flag_good"][m] = sp["FLAG_GOOD"][isp[m]]
+    out["spdist_qflag_input"][m] = sp["QFLAG_INPUT"][isp[m]]
+    out["spdist_mg50_gaia"][m] = sp["MG_50"][isp[m]]
+    out["spdist_g0_gaia"][m] = sp["G0"][isp[m]]
+    g0, mg50 = out["spdist_g0_gaia"].astype(float), out["spdist_mg50_gaia"].astype(float)
+    mag16 = np.full(len(rows), np.nan)
+    mag84 = np.full(len(rows), np.nan)
+    em = np.full(len(rows), np.nan)
+    mag16[m], mag84[m], em[m] = sp["MG_16"][isp[m]], sp["MG_84"][isp[m]], sp["E_GMAG"][isp[m]]
+    valid = (m & out["spdist_flag_good"] & out["spdist_qflag_input"]
+             & np.isfinite(g0) & np.isfinite(mg50) & np.isfinite(mag16)
+             & np.isfinite(mag84) & np.isfinite(em) & (em >= 0)
+             & (10 < g0) & (g0 < 30) & (-8 < mg50) & (mg50 < 15)
+             & (mag84 >= mag16) & (mag84 - mag16 < 4)
+             & np.isfinite(rows["g0"]) & np.isfinite(rows["sigma_g"]))
+    out["spdist_valid"] = valid
+    mu = g0[valid] - mg50[valid]
+    out["spdist_mg_legacy"][valid] = rows["g0"][valid] - mu
+    out["spdist_dist_kpc"][valid] = 10 ** ((mu - 10) / 5)
+    out["spdist_sigma_mg"][valid] = np.sqrt(
+        rows["sigma_g"][valid] ** 2 + em[valid] ** 2
+        + ((mag84[valid] - mag16[valid]) / 2) ** 2 + 0.167 ** 2)
+    refs = load_reference_catalogs("data/reference")
+    hold = annotate_holdouts(refs, rows["source_id"], rows["ra"], rows["dec"])
+    out["cluster_group"] = hold["cluster_member_group"]
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    fitsio.write(str(OUT), out, extname="GIANTVAC", clobber=False)
+    summary = summarize(out)
+    manifest = {"input": [str(path) for path in JOINT],
+                "specdis": str(SPEC), "spdist": str(SP),
+                "output": str(OUT), "summary": summary,
+                "compute_host": socket.gethostname()}
+    write_json(MANIFEST, manifest)
+    print(json.dumps(summary), flush=True)
+
+
+if __name__ == "__main__":
+    main()
