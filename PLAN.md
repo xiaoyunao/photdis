@@ -27,13 +27,16 @@ Complete a bounded correction and calibration round with these milestones:
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation
    only where label quality and external scale coverage support one.
-5. In progress: combine the seven-field and four targeted-field main-sequence samples
+5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous
    [Fe/H] term using a forward parallax likelihood for high, medium, weak
    and negative observations. Propagate optical, iron and intrinsic scatter;
    assess parameter/prior sensitivity and reserved-field parallax-space
    predictions. Keep this a feasibility experiment, not a new all-sky release.
+   The one-iron model improves reserved parallax log density in five fields;
+   β ranges from −0.679 to −0.654 mag/dex in leave-one-development-field-out
+   fits. Its use for photo-only targets awaits a metallicity population prior.
 6. Validate focused code/data results, update reports and WORKLOG, commit
    coherent milestones and sync programs, manifests and selected figures
    across local, GitHub and NERSC. Keep large catalogs on NERSC compute.

@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Completed the bounded metal-poor forward-parallax comparison on allocated
+  NERSC CPU (jobs 60487276 and 60487474). Five development fields contain
+  6,672 stars and five reserved fields 4,947, including 81/52 negative
+  corrected parallaxes. A continuous iron coefficient improves reserved mean
+  log density by 0.114/star; β=−0.6655 mag/dex, and leave-one-development-field
+  fits give −0.679 to −0.654. Expected negative counts are compatible with
+  observed counts. Files: forward experiment and diagnostic manifests,
+  scientific report, held-out comparison script/figure. Validation: four
+  forward-model tests, Python compilation and manifest arithmetic. Next:
+  giant quality and whole-system tests; no photo-only blue model adopted.
+
 - Completed Pro P0 class/evidence correction and independent blue-anchor audit.
   Versioned joint v3 excludes one DR11 r-band discordant source from the
   trusted blue core while retaining its row; the candidate v3 export preserves

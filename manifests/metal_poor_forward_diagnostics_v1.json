@@ -1,0 +1,83 @@
+{
+  "source": "manifests/metal_poor_forward_v1.json",
+  "sample_counts": {
+    "all": 11619,
+    "development": 6672,
+    "reserved": 4947,
+    "development_negative": 81,
+    "reserved_negative": 52
+  },
+  "feh_explained_by_color_r2_development": 0.35784933508442407,
+  "negative_count": {
+    "no_feh": {
+      "development": {
+        "n": 6672,
+        "observed": 81,
+        "expected": 88.10285417956698,
+        "expected_standard_deviation": 8.876143720408127,
+        "standardized_difference": -0.8002184736189
+      },
+      "reserved": {
+        "n": 4947,
+        "observed": 52,
+        "expected": 52.86620360214211,
+        "expected_standard_deviation": 6.853815878493407,
+        "standardized_difference": -0.12638267754757873
+      }
+    },
+    "one_feh": {
+      "development": {
+        "n": 6672,
+        "observed": 81,
+        "expected": 77.58184216207115,
+        "expected_standard_deviation": 8.349102985547956,
+        "standardized_difference": 0.4094042011274232
+      },
+      "reserved": {
+        "n": 4947,
+        "observed": 52,
+        "expected": 46.50452354368579,
+        "expected_standard_deviation": 6.448095957833291,
+        "standardized_difference": 0.8522634421465425
+      }
+    }
+  },
+  "leave_one_development_field_out": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "fit_n": 6015,
+      "beta": -0.6686077556168172,
+      "intrinsic_scatter_mag": 0.19845440943760645,
+      "reserved_loglike_mean": 0.43964237411919105,
+      "iterations": 28
+    },
+    "native_dev_ra060_070_dec_m035_m025": {
+      "fit_n": 6623,
+      "beta": -0.6651144088432155,
+      "intrinsic_scatter_mag": 0.2006973084944628,
+      "reserved_loglike_mean": 0.4395678512537718,
+      "iterations": 36
+    },
+    "native_final_ra020_030_dec_m025_m015": {
+      "fit_n": 6478,
+      "beta": -0.6660459487354637,
+      "intrinsic_scatter_mag": 0.20049785927476935,
+      "reserved_loglike_mean": 0.4394980591411059,
+      "iterations": 18
+    },
+    "targeted_ra180_190_dec_m010_p000": {
+      "fit_n": 4042,
+      "beta": -0.6535003374250181,
+      "intrinsic_scatter_mag": 0.2074996443453596,
+      "reserved_loglike_mean": 0.4393210168229189,
+      "iterations": 29
+    },
+    "targeted_ra180_190_dec_p000_p010": {
+      "fit_n": 3530,
+      "beta": -0.678918672308554,
+      "intrinsic_scatter_mag": 0.18814969479163615,
+      "reserved_loglike_mean": 0.437341962133385,
+      "iterations": 24
+    }
+  },
+  "compute_host": "nid004094"
+}
