@@ -25,6 +25,18 @@
   "metallicity_reference": "https://arxiv.org/html/2306.01175v1",
   "metallicity_scale": "RRab Fourier Zinn-West transformed to Carretta UVES by -0.413 + 0.130*ZW - 0.356*ZW^2; common source for all four clusters",
   "quality": "Pmember>0.9; Gaia CMD candidate phase; existing gr_clean for gr, existing grz_clean_same_row for grz; no residual-based rejection",
+  "forward_model": {
+    "basis": "1, (Mg-1), (Mg-1)^2, ([Fe/H]UVES+1.7); no Mg-metallicity interaction",
+    "cluster_total_weights": "equal across M3, M53, NGC7006",
+    "ridge_on_metallicity_slope": 4.0,
+    "intrinsic_color_sigma_floor_mag": 0.01,
+    "shared_zero_point_sigma_mag": 0.01,
+    "shared_nuisance_draws": 48,
+    "rng_seed": 5466,
+    "support_mg_bin_edges": [-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    "minimum_each_cluster_per_stage_bin": 5,
+    "posterior_grid_step_mag": 0.02
+  },
   "comparison": "Evaluate gr and grz on identical grz-clean source IDs; report gr-only added coverage separately; score only within development overlap and report unsupported regions explicitly",
   "luminosity_prior": "uniform Mg within predeclared supported stage and magnitude cells, never empirical training histogram",
   "unknown_feh_prior_weights": [[0.5, 0.5], [0.8, 0.2], [0.2, 0.8]],

@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- NGC 7006 development audit completed on Slurm job 60497406 (exit 0):
+  upper RGB has 56 clean gr and 19 same-row grz members. Its gr 5–95%
+  `M_g` range overlaps M53 from −1.007 to +0.471; grz overlap is only
+  −0.296 to +0.513. Local gr color-residual NMAD is 0.073 mag on 50
+  in-curve objects; shared ±0.05 E(B−V) moves gr by ±0.052 mag.
+  Implemented registered forward GLS covariance, common-cluster nuisance
+  draws, stage-specific overlap support, fixed unknown-Fe mixture priors,
+  and a blind extract gated on frozen model existence. Files: source model,
+  fit/extract scripts and Slurm wrappers, config, protocol, audit report,
+  manifest and figure. Commands: Slurm job, Python parse/synthetic check,
+  targeted pytest. Validation: seven targeted tests pass. Next: freeze
+  fitted development model before NGC 5466 extraction.
+
 - Implemented an allocated-compute, cached-table NGC 7006 upper-RGB
   development audit and figure. It compares the M53 upper branch on gr and
   grz separately, records local color residuals, quality/radius halves,
