@@ -22,7 +22,7 @@ from cold_v5_xd_fit import load_training
 
 RESULT = Path("data/cold_v5_blue/inventory.json")
 SUMMARY = Path("manifests/cold_v5_blue_inventory.json")
-READ = sorted(set(COLS + ["anchor", "g0", "mg", "p_corr", "snr_corr", "ebv",
+READ = sorted(set(COLS + ["anchor", "g0", "p_corr", "snr_corr", "ebv",
                           "gaia_bp_rp", "grz_fraction_clean", "grz_mask_clean"]))
 R_BINS = ((14, 16), (16, 18), (18, 20), (20, 22), (22, 26))
 GR_BINS = ((0., .6), (.6, .909), (.909, 1.2), (1.2, 1.6))
@@ -63,6 +63,13 @@ def field_inventory(config, color_low):
     path = Path(task["output_dir"]) / "field_diagnostics.fits"
     raw = fitsio.read(str(path), columns=READ)
     table = {name: raw[name] for name in raw.dtype.names}
+    p = np.asarray(table["p_corr"], float)
+    snr = np.asarray(table["snr_corr"], float)
+    good_mg = (np.isfinite(p) & (p > 0) & np.isfinite(snr) &
+               (snr >= 10) & np.isfinite(table["g0"]))
+    mg = np.full(len(p), np.nan)
+    mg[good_mg] = np.asarray(table["g0"][good_mg], float) - 10 + 5*np.log10(p[good_mg])
+    table["mg"] = mg
     unique, dedup = unique_spectra(table)
     classes = class_masks(table, unique & table["grz_base"])
     calibrated, valid = rvs_metallicity(table["desi_feh"],
