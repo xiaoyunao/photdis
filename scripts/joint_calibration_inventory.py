@@ -78,7 +78,8 @@ def derive(rows):
     color = checked_gaia_color(gaia)
     feh_cal, feh_domain = rvs_metallicity(rows["desi_feh"], rows["desi_teff"],
                                           rows["desi_logg"])
-    feh_valid = (feh_domain & np.isfinite(rows["desi_feh_err"])
+    feh_valid = (feh_domain & rows["desi_quality"] & rows["desi_is_stellar"]
+                 & np.isfinite(rows["desi_feh_err"])
                  & (rows["desi_feh_err"] > 0))
     feh_cal[~feh_valid] = np.nan
     photo = (rows["grz_base"] & rows["grz_clean"] & np.isfinite(rows["ebv"])
