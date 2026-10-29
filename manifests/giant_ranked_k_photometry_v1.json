@@ -1,0 +1,45 @@
+{
+  "source": "data/giant_ranked_vac_v1/same_star.fits",
+  "by_field": {
+    "giant_ranked_ra200_210_dec_p000_p010": {
+      "role": "development",
+      "k_giants": 133,
+      "grz_base": 133,
+      "fraction_clean": 109,
+      "mask_clean": 121,
+      "grz_clean": 109,
+      "fraction_fail_mask_pass": 12,
+      "mask_fail_fraction_pass": 0,
+      "both_fraction_and_mask_fail": 12,
+      "g0_median_clean": 18.035808563232422,
+      "g0_median_rejected": 17.09730815887451
+    },
+    "giant_ranked_ra190_200_dec_p000_p010": {
+      "role": "development",
+      "k_giants": 92,
+      "grz_base": 92,
+      "fraction_clean": 65,
+      "mask_clean": 70,
+      "grz_clean": 64,
+      "fraction_fail_mask_pass": 6,
+      "mask_fail_fraction_pass": 1,
+      "both_fraction_and_mask_fail": 21,
+      "g0_median_clean": 17.72888946533203,
+      "g0_median_rejected": 15.815982341766357
+    },
+    "giant_ranked_ra210_220_dec_p040_p050": {
+      "role": "reserved_validation",
+      "k_giants": 59,
+      "grz_base": 33,
+      "fraction_clean": 11,
+      "mask_clean": 12,
+      "grz_clean": 11,
+      "fraction_fail_mask_pass": 1,
+      "mask_fail_fraction_pass": 0,
+      "both_fraction_and_mask_fail": 47,
+      "g0_median_clean": 18.27652931213379,
+      "g0_median_rejected": 15.526910305023193
+    }
+  },
+  "compute_host": "nid004093"
+}

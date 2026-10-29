@@ -26,7 +26,8 @@ Complete a bounded correction and calibration round with these milestones:
    identity fix yields 2,217/2,044 valid clean SpecDis/SPDist labels;
    both-valid Legacy Mg labels differ by −0.207 mag median. Details:
    `docs/giant_vac_v3.md`.
-4. Select at least one independent cluster/stream/dwarf system with actual
+4. Complete as a bounded, non-adopted model experiment: select independent
+   cluster systems with actual
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation
    only where label quality and external scale coverage support one.
@@ -42,9 +43,13 @@ Complete a bounded correction and calibration round with these milestones:
    untouched complete DR11 north/south 10° cells identified two southern
    development cells and one separated northern reserved cell. Their DR11
    joint samples have 225/59 conservative 4200–5000 K giants and 173/11
-   clean low-dust giants in development/reserved roles; the allocated
-   SpecDis/SPDist validity audit remains pending. The existing eleven fields
-   supply only 42 SPDist labels at 4200–5000 K.
+   clean low-dust giants in development/reserved roles. Only 42/2 retain
+   valid SPDist labels, so a K-giant model is not fitted from this set;
+   `docs/giant_ranked_cool_yield_v1.md` records the selection and label
+   bottlenecks. The existing eleven fields supply another 42 SPDist labels
+   at 4200–5000 K but do not repair the two-object reserved check. The
+   northern reserved optical loss is dominated by bright fraction/mask
+   failures, with rejected/retained median `g0` 15.53/18.28.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous
@@ -55,9 +60,25 @@ Complete a bounded correction and calibration round with these milestones:
    The one-iron model improves reserved parallax log density in five fields;
    β ranges from −0.679 to −0.654 mag/dex in leave-one-development-field-out
    fits. Its use for photo-only targets awaits a metallicity population prior.
-6. Validate focused code/data results, update reports and WORKLOG, commit
-   coherent milestones and sync programs, manifests and selected figures
-   across local, GitHub and NERSC. Keep large catalogs on NERSC compute.
+6. Complete: validate focused code/data results, update reports and WORKLOG,
+   commit coherent milestones and sync programs, manifests and selected
+   figures across local, GitHub and NERSC. Large catalogs remain on NERSC
+   compute.
+
+## Next recommended science steps
+
+- Keep cold-v4 conditional distances and XD non-adoption decision frozen.
+  A global cold-dwarf catalog still needs class probabilities and a
+  metallicity-population prior; the spectroscopic iron coefficient alone
+  cannot be applied to stars without measured abundance.
+- Before another giant fit, identify a low-extinction independent system
+  with enough clean K giants and an external distance scale. Audit the
+  bright-end fraction/mask losses and SPDist K quality there, using PS1
+  only as a photometry cross-check where useful. Preserve RGB, RC and
+  subgiant ambiguity explicitly; do not tune to the five M3 members.
+- If a photo-only giant experiment is resumed, compare actual grz and
+  usable WISE inputs on the same objects, preserve multimodal luminosity
+  distributions, and register a new whole-system test before model choice.
 
 ## Completed Pro Follow-up Objective
 

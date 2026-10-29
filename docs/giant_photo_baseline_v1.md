@@ -59,11 +59,12 @@ The three cells were registered as two development fields and one reserved
 field before inspection. Their DR11 joint samples contain 225/59
 conservative 4200–5000 K giants in development/reserved roles; requiring
 clean grz and low dust leaves **173/11**. No high-S/N Gaia giant anchor
-appears in these fields. The actual SPDist/SpecDis quality-valid overlap is
-being audited separately. The 11-star clean reserved group is already too
-small to support a useful independent K-giant precision claim. Existing
-cold v4 model, XD decision and historical final-test identities remain
-frozen.
+appears in these fields. Of these, valid SPDist K labels number **42/2**
+in development/reserved roles. The 11-star clean reserved group and its
+two valid SPDist labels cannot support an independent K-giant precision
+claim; the [yield audit](giant_ranked_cool_yield_v1.md) records the decision.
+Existing cold v4 model, XD decision and historical final-test identities
+remain frozen.
 
 Evidence: [model manifest](../manifests/giant_photo_baseline_v1.json),
 [field ranking](../manifests/desi_cool_giant_field_ranking_v1.json),

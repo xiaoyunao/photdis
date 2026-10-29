@@ -2,6 +2,36 @@
 
 ## 2026-10-29
 
+- Closed the bounded Pro caeb218 round after ranked K-giant yield and optical
+  audits. Files: PLAN, warm/NGC/cool-giant reports, ranked small manifests.
+  Commands: focused pytest, JSON cross-count checks, `git diff --check`,
+  git fetch/push and NERSC fast-forward pull. Validation: six focused tests
+  pass; manifest totals reconcile; local, GitHub and NERSC tracked commits
+  match. Remaining: no adopted photo-only giant distance model; next, find
+  an independent low-dust K-rich system and examine bright optical losses.
+
+- Completed allocated optical-loss audit 60491554 on the exact 284 ranked
+  K-giant identities. All meet field E(B−V)<0.03. The northern reserved
+  cell falls from 59 K giants to 33 base-grz and 11 clean; 47 fail both
+  fraction and mask conditions. Median rejected/retained g0 is 15.53/18.28,
+  locating the validation shortage at bright image-quality selection.
+  Files: optical audit manifest, cool yield report, PLAN. Commands: allocated
+  Slurm job, manifest and identity validation. Validation: job exit 0 and
+  exact LS-ID/clean-flag joins. Next: final manifest consistency checks,
+  commit and three-end sync; preserve this as a measured negative feasibility
+  result, not a fitted cool-giant model.
+
+- Completed ranked VAC identity job 60490902 and role/field profile jobs
+  60491322/60491401. Of 284 RVS conservative 4200–5000 K giants, 184
+  have clean low-dust DR11 grz; 176 SpecDis and 44 SPDist labels pass
+  catalog quality. Development/reserved SPDist split is only 42/2;
+  SpecDis S/N≥60 has 4/0. The reserved sample cannot validate a K-giant
+  relation, so do not fit one from these fields. Files: ranked VAC and
+  v2 profile manifests, cool yield report, warm report, PLAN. Commands:
+  allocated Slurm jobs, exact-match and role-count checks. Validation:
+  jobs exit 0, profile sums match VAC total. Next: finish per-field optical
+  loss audit and synchronize this final evidence.
+
 - Completed DR11 ranked-field jobs 60488890_0/1 and 60489404_2, joint
   identity job 60489405 and class-evidence job 60489406. The three fields
   provide 131,958 unique DESI–Legacy records; 4200–5000 K conservative
