@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Submitted allocated NERSC jobs 60481106/108/109 for the three XD sizes
+  and 60481110 for one frozen-v4 candidate export; all were pending at the
+  last queue check. Added a bounded blue-side inventory program and plot:
+  it counts unique quality DESI metal-poor dwarfs, giants and nonstars
+  against the v4 optical boundary, with strict Gaia anchor availability
+  by field and brightness. The full sampled plot rows remain in ignored NERSC
+  data; only aggregate counts and a small figure will be tracked. Python
+  compilation, shell syntax and `git diff --check` pass. Next: sync and run
+  this inventory on an allocated CPU, then inspect the fitting/export jobs.
+
 - Read the complete newest Pro review (a18ef9b assessment) through
   `read_thread`; opened a new detailed goal. `git status`, branch, fetch and
   15-commit history confirm clean three-end `a18ef9b` before edits. Registered
