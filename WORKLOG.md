@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- The first warm giant model job 60488385 reached reserved-field prediction
+  after completing the development grid, then failed because FITS exposed
+  `field` as Unicode and the script called `.decode()`. Normalize both
+  byte and Unicode field names, add a direct regression test, and keep the
+  registered split/grid unchanged. Files: giant photo runner and test.
+  Commands: Slurm stderr, Python compilation, four focused tests.
+  Validation: all tests pass. Next: rerun the allocated model job.
+
 - Registered a DESI-first ranking of untouched complete DR11 north/south
   10° cells for 4200–5000 K conservative RVS giants at high Galactic
   latitude and low MWS dust. Source IDs are deduplicated before counting;

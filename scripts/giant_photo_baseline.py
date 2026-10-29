@@ -33,6 +33,11 @@ def features(rows):
     return color, covariance
 
 
+def field_name(value):
+    """FITS readers may expose the same string column as bytes or Unicode."""
+    return (value.decode() if isinstance(value, bytes) else str(value)).strip()
+
+
 def clean_warm_spdist(rows):
     return (rows["clean_low_dust"] & ~rows["cmd_spectral_conflict"]
             & rows["spdist_valid"] & (rows["cluster_group"] == 0)
@@ -69,7 +74,7 @@ def estimate(rows, training, bandwidth, mag_floor):
                            observed_mg=row["spdist_mg_legacy"],
                            observed_sigma_mg=row["spdist_sigma_mg"])
         quantiles = pred["quantiles"]
-        values.append((int(row["source_id"]), row["field"].decode().strip(),
+        values.append((int(row["source_id"]), field_name(row["field"]),
                        row["spdist_mg_legacy"].item(),
                        row["spdist_sigma_mg"].item(),
                        row["specdis_mg_legacy"].item() if row["specdis_valid"] else None,
