@@ -23,10 +23,12 @@ def main():
     require_compute()
     a = fitsio.read(str(SOURCE), columns=["class_evidence", "clean_low_dust",
         "feh_cal_valid", "feh_cal", "gr0", "mg_high_snr", "parallax_layer"])
-    core = ((a["class_evidence"] == b"cool_main_sequence") &
+    labels = np.char.strip(a["class_evidence"].astype("U"))
+    layers = np.char.strip(a["parallax_layer"].astype("U"))
+    core = ((labels == "cool_main_sequence") &
             a["clean_low_dust"] & a["feh_cal_valid"] &
             np.isfinite(a["gr0"]) & np.isfinite(a["feh_cal"]))
-    high = core & (a["parallax_layer"] == b"high_ge20")
+    high = core & (layers == "high_ge20")
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.7), constrained_layout=True)
     axes[0].scatter(a["gr0"][core], a["feh_cal"][core], s=4, alpha=.2,
                     color="#5a8198", rasterized=True, label=f"clean core: {core.sum():,}")

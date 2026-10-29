@@ -43,14 +43,14 @@ def main():
                                   equal_nan=old.dtype[name].kind == "f")
             if not same:
                 raise ValueError(f"Frozen v1/v2 mismatch in {field}: {name}")
+        labels = np.char.strip(new["class_evidence"].astype("U"))
         if not np.array_equal(new["class_evidence_available"],
-                              new["class_evidence"] != b"unknown"):
+                              labels != "unknown"):
             raise ValueError(f"Evidence availability mismatch in {field}")
-        conflicts = np.isin(new["class_evidence"], [b"cool_giant", b"nonstellar"])
+        conflicts = np.isin(labels, ["cool_giant", "nonstellar"])
         if not np.array_equal(new["class_conflicts_cold_dwarf"], conflicts):
             raise ValueError(f"Conflict flag mismatch in {field}")
-        counts = {label.decode(): int(np.sum(new["class_evidence"] == label))
-                  for label in np.unique(new["class_evidence"])}
+        counts = {label: int(np.sum(labels == label)) for label in np.unique(labels)}
         entry = {"rows": len(new), "frozen_columns_equal": len(CHECK),
                  "class_counts": counts,
                  "evidence_available": int(new["class_evidence_available"].sum()),
