@@ -36,6 +36,12 @@ reference because the intervals are broad. M3 catalog medians are much
 closer to the RR scale: SpecDis +0.041 and SPDist +0.078 mag. Thus the
 photo-only color relation, rather than a uniform M3 catalog-distance shift,
 is the main observed discrepancy in this whole-system check.
+The development-label neighborhood at each M3 color has weighted median
+`M_g≈1.19–1.23`, while the five M3 RR-based absolute magnitudes are
+`1.57–2.12`. Roughly 29% of each color neighborhood's training weight is
+at `logg<2.5`. This directly locates the offset in the conditional
+color–luminosity mix; the present experiment cannot assign it uniquely to
+gravity, metallicity, age or the parent catalog's selection.
 
 **Decision:** retain this run as a reproducible diagnostic and do not adopt
 its distance estimates or intervals as a calibrated giant product. Optical
@@ -57,5 +63,6 @@ v4 model, XD decision and historical final-test identities remain frozen.
 Evidence: [model manifest](../manifests/giant_photo_baseline_v1.json),
 [field ranking](../manifests/desi_cool_giant_field_ranking_v1.json),
 [diagnostic figure](../figures/giant_vac/03_warm_photo_baseline.png),
+[M3 color-neighborhood check](../manifests/giant_m3_color_diagnostic_v1.json),
 [M3 system audit](../manifests/giant_m3_reference_v1.json), and
 [NGC 2419 system audit](../manifests/giant_ngc2419_reference_v1.json).

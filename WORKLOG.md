@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Completed allocated M3 color-neighborhood diagnostic 60488901. At each
+  member's dereddened grz color the development-weighted SPDist label median
+  is M_g≈1.19–1.23, while the RR-based M3 magnitudes are 1.57–2.12;
+  about 29% of local training weight has logg<2.5. This locates the
+  whole-system offset in the mixed conditional color–luminosity relation,
+  without attributing it uniquely to one physical driver. Files: M3
+  diagnostic script/manifest and warm report. Commands: allocated Slurm
+  job and manifest check. Validation: all five member weights sum by
+  gravity strata and reproduce the expected local medians. Next: assess
+  actual cool-field VAC yields before planning another model.
+
 - Completed registered warm photo-only giant job 60488582 and DESI-first
   field ranking 60488535. The 1,403/588 development/reserved test yields
   0.464 mag reserved NMAD against SPDist point labels and 98.6% nominal
