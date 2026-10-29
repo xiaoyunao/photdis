@@ -42,12 +42,16 @@ does not yet identify its cause.
 | RA170–180 | RA170–180 | 429/500 | +0.061 / 0.293 | 333/500 | +0.051 / 0.429 |
 
 For the *same accepted template identities*, swapping RA35–45 noise for
-RA170–180 noise changes the median residual by −0.000/−0.005/+0.005/−0.008
+RA170–180 noise has a median paired residual difference of −0.000/−0.005/+0.005/−0.008
 mag across r=18–22 for the first template, and
 +0.001/−0.007/+0.001/−0.011 mag for the second. The paired bootstrap
 95% ranges at r=21–22 are [−0.033,+0.026] and [−0.034,+0.011] mag. The
-noise-field swap increases deep NMAD by 0.097 and 0.092 mag and reduces
-full-route acceptance by 10.4 and 13.2 percentage points, respectively.
+full-flow NMAD differences are 0.097 and 0.092 mag and include selection
+changes. Full-route acceptance falls by 10.4 and 13.2 percentage points.
+The common-source reanalysis in [the latest review](pro_round_v5.md) gives
+differences of medians up to about 0.031 mag, with every direct bootstrap
+interval including zero, and common deepest NMAD increases of 0.070/0.105
+mag. The small paired-change medians do not bound shifts of overall centers.
 
 The deepest selected sources change model tier frequently: 334–387 of
 328–398 paired sources in the four cells. The tier-change term has NMAD
@@ -72,9 +76,11 @@ the identity holds source by source.
 
 ## Decision for the next experiment
 
-The 2×2 swap localizes most of the *median* field difference to the Gaia
-template populations; the noise field controls much of the deep scatter and
-acceptance. Keep the published route and interval status unchanged. The
+The native center difference is attached to the original templates and
+their reference labels. Template photometry, extinction, population and Gaia
+labels all remain possible contributors. The noise environment changes deep
+scatter and acceptance; the corrected center statistics are in
+[the latest review](pro_round_v5.md). Keep the published route and interval status unchanged. The
 outcome-blind color/A_g match confirms a residual offset. Next inspect the
 exact Gaia template parallax, color and quality distributions, then test an
 expanded set of newly registered development/calibration/final fields if

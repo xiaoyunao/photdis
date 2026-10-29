@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Same-star job 60476002 stopped at its algebra invariant: float32 Gaia Mg
+  subtraction lost precision relative to the float64 model terms. Promoted
+  g0 and reference Mg to float64 before pair decomposition; focused test
+  passes. Optical response 60476003 and fallback 60476051 are running.
+  Replaced the old crossover center claim with the correct paired estimand
+  and linked v3 weak-parallax null results. Generated and inspected the
+  selected statistics figure. Full local suite: 68 passed. Next: rerun the
+  same-star job and collect all mechanism results.
+
 - Added two frozen-model cause diagnostics: same-star forced A/B/C and
   complete-input/measurement-error cross-field matching; fixed-tier PS1
   g/r/z/grz substitutions with separate rerouting and symmetric small
