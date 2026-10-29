@@ -42,3 +42,25 @@ def test_xd_fit_scores_heldout_conditional_density():
     assert np.isclose(model.weights_.sum(), 1)
     assert np.linalg.eigvalsh(model.covariances_).min() > 0
     assert np.isfinite(model.conditional_mg_logpdf(x[:8], cov[:8])).all()
+
+
+def test_correlated_distance_posterior_covers_known_gaussian_simulation():
+    rng = np.random.default_rng(17)
+    model = XDMixture(1, batch_size=128)
+    model.weights_ = np.array([1.])
+    model.means_ = np.array([[8., 1.2, .6]])
+    model.covariances_ = np.array([[[.2, .03, 0],
+                                    [.03, .03, 0],
+                                    [0, 0, .02]]])
+    n = 600
+    latent = rng.multivariate_normal(model.means_[0],
+                                     model.covariances_[0], size=n)
+    true_mu = rng.uniform(5, 15, n)
+    error = measurement_covariance(np.tile([.03, .03, .04], (n, 1)))
+    observation = latent + np.array([rng.multivariate_normal(np.zeros(3), s)
+                                      for s in error])
+    observation[:, 0] += true_mu
+    q = model.posterior_mu(observation, error)
+    covered = np.mean((true_mu >= q[:, 0]) & (true_mu <= q[:, 4]))
+    assert abs(np.median(q[:, 2] - true_mu)) < .05
+    assert .92 < covered < .98

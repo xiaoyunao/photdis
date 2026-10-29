@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Four-core, 48 GiB NERSC jobs were pending for priority under exclusive
+  regular QOS. Consulted current NERSC queue policy and changed the five
+  still-pending jobs 60481106/108/109/110/185 to CPU shared QOS, which
+  fits their small resource requests; matching run wrappers now default
+  to shared. Added `docs/cold_v5_blue_branch.md` with the 44 spectroscopic
+  box-rejected metal-poor dwarfs, their sparse Gaia overlap and a separate
+  label/anchor/holdout contract. Added a Gaussian simulation check of
+  correlated distance-posterior coverage; four targeted XD tests pass.
+  Next: wait for allocated jobs, inspect outputs and then update this
+  branch definition with new field/brightness/contaminant counts.
+
 - Added the pre-result method document `docs/cold_v5_xd_protocol.md` and
   comparison/select scripts. The comparison reads the same Gaia strict
   anchors and frozen WISE20 tier, scores v4 and XD distance-modulus center,

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -C cpu
-#SBATCH -q regular
+#SBATCH -q shared
 #SBATCH -N 1
 #SBATCH -c 4
 #SBATCH -t 02:00:00
