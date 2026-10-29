@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Registered a DESI-first ranking of untouched complete DR11 north/south
+  10° cells for 4200–5000 K conservative RVS giants at high Galactic
+  latitude and low MWS dust. Source IDs are deduplicated before counting;
+  ranking excludes already configured cells. Files: ranking Python/Slurm
+  scripts and PLAN. Command: Python compilation. Next: inspect only the
+  top ranked cells, then decide whether a small targeted K-giant extension
+  can improve the 42 existing valid SPDist labels.
+
 - In the registered giant kernel, distant training colors can receive
   numerically zero normalized weights. Taking their logarithm would flood
   the allocated job log with divide-by-zero warnings; score only positive

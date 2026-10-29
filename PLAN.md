@@ -33,7 +33,10 @@ Complete a bounded correction and calibration round with these milestones:
    A registered grz-only warm evolved-star kernel-mixture test is specified
    in `docs/giant_photo_protocol_v1.md`; its SPDist-based label and M3
    whole-system scale check remain pending NERSC execution. The 4200–5000 K
-   and cooler RGB samples are reported separately.
+   and cooler RGB samples are reported separately. A DESI-first ranking of
+   untouched complete DR11 north/south 10° cells is registered to identify
+   a small number of fields rich in qualified clean cool giants, because
+   the existing eleven fields supply only 42 SPDist labels at 4200–5000 K.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous
