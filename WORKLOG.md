@@ -2,6 +2,25 @@
 
 ## 2026-10-29
 
+- Allocated comparison job 60482510 completed for preregistered XD K=32 on
+  1,257 and 6,594 identical development stars. XD reduced distance-modulus
+  NMAD by 0.0263/0.0255 mag, but raw 95% coverage fell from 94.59%/94.34%
+  to 89.58%/91.64%. Its fixed-tier +0.01 mag g/r response was larger in
+  both fields. Ran `scripts/cold_v5_xd_decide.py` against the unchanged
+  configuration: center/NMAD/tail checks passed, both optical response
+  checks failed in both fields; retain frozen v4 and close this model
+  comparison. Files: comparison and decision manifests, XD result report,
+  same-star figure and its plot script. Visually inspected the figure.
+  Next: validate, sync, and finish candidate route exports.
+
+- Corrected candidate export job 60482344 completed on allocated CPU. Its
+  RA150 FITS has one table extension and 125,598 rows (A/B/C:
+  71,472/28,991/25,135); 14,547 carry infrared fallback conflict.
+  Header, columns and few rows were inspected on login, and its small
+  manifest copied locally. Two more allocated exports 60482677/60482678
+  were submitted for RA0/RA220 and remained pending at last check. Full
+  catalogs stay in ignored NERSC `data/cold_v4_candidates/`.
+
 - Blue inventory 60482142 completed on allocated CPU. Four fields contain
   4,207 strict blue Gaia luminosity anchors (404/1,037/1,624/1,142);
   142 have 18≤r<20 and none in the recorded 20≤r<26 bins. The 44 unique

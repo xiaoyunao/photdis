@@ -1,0 +1,39 @@
+{
+  "decision": "retain_frozen_v4",
+  "selected_components": 32,
+  "development_fields": {
+    "dev_cal_ra205_215_dec_m010_p000": {
+      "n": 1257,
+      "checks": {
+        "center": true,
+        "nmad": true,
+        "tail": true,
+        "response_g": false,
+        "response_r": false
+      },
+      "passes": false
+    },
+    "native_dev_ra060_070_dec_m035_m025": {
+      "n": 6594,
+      "checks": {
+        "center": true,
+        "nmad": true,
+        "tail": true,
+        "response_g": false,
+        "response_r": false
+      },
+      "passes": false
+    }
+  },
+  "gate": {
+    "point_nmad_noninferiority_mag": 0.01,
+    "absolute_center_noninferiority_mag": 0.01,
+    "tail_abs_residual_gt_0p5_noninferiority_fraction": 0.01,
+    "median_g_and_r_perturbation_abs_response_reduction_fraction": 0.25,
+    "require_each_informative_development_field": true,
+    "decision_if_gate_fails": "retain frozen v4 and close this limited model comparison"
+  },
+  "configuration_sha256": "28173c21932baaff6cca68be9ef95e9d40328ad1347bf0b622ec0611013ed22e",
+  "selection_manifest_sha256": "4ea4870cb27e9d7faa108ec2a4e5aa6bfa8ab9eb996e1759dce6776d8c44a014",
+  "comparison_manifest_sha256": "dcd82b4c282764a01485994aed97fecfc766a422803a15bfc8bb073524782350"
+}

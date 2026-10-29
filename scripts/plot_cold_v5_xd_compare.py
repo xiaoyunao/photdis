@@ -16,7 +16,9 @@ OUTPUT = Path("figures/cold_v5/02_xd_same_star_comparison.png")
 
 def main():
     report = json.loads(SOURCE.read_text())
-    fields = list(report["fields"].items())
+    fields = [(name, field) for name, field in report["fields"].items()
+              if name in ("dev_cal_ra205_215_dec_m010_p000",
+                          "native_dev_ra060_070_dec_m035_m025")]
     if not fields:
         raise ValueError("No development fields in comparison")
     names = ["RA" + name.split("ra")[-1].split("_")[0] for name, _ in fields]
@@ -49,7 +51,7 @@ def main():
            ylabel="Median absolute Δμ for +0.01 mag (mag)")
     ax.tick_params(axis="x", rotation=30)
     ax.legend(fontsize=7, ncol=2)
-    fig.suptitle(f"Cold-dwarf v4 vs XD K={report['components']}: identical stars")
+    fig.suptitle(f"Cold-dwarf v4 vs XD K={report['components']}: identical development stars")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUTPUT, dpi=170)
     plt.close(fig)

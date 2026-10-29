@@ -9,16 +9,14 @@ probabilistic distance candidate with v4 on identical training and development
 identities, and define a separate metal-poor blue branch. The active goal
 records the full scientific and validation criteria.
 
-Current compute checkpoint: the initial K=16 fit exposed an unfinished
-40-iteration optimizer (archived manifest). The revised 200-iteration fits
-K=16/32/64 are NERSC jobs 60482139/60482140/60482141. Blue-side inventory
-retry is 60482142. Inspect each terminal job and validate its manifest
-before selecting or scoring a model.
-All three sizes converged with the frozen A/B/C training identities.
-The registered equal-field held-out score selects K=32. Run its same-star
-comparison and apply the locked decision gate. Blue inventory 60482142 and
-corrected candidate export 60482344 remain in the compute queue. The first
-candidate export 60481110 produced multiple FITS extensions and is archived.
+Current compute checkpoint: all K=16/32/64 fits converged on frozen training
+identities. The registered equal-field score selected K=32; allocated job
+60482510 completed its same-star comparison. The locked gate failed the g
+and r response requirements in both informative development fields: retain
+frozen v4 and close this XD comparison. The corrected RA150 candidate export
+60482344 produced one 125,598-row FITS table; RA0 and RA220 exports
+60482677/60482678 are pending. The first invalid multi-extension export is
+archived under ignored NERSC data. The blue inventory is complete.
 
 ## New Round Milestones
 
@@ -30,17 +28,18 @@ candidate export 60481110 produced multiple FITS extensions and is archived.
 3. Build a full-covariance heteroscedastic deconvolved Gaussian mixture
    `p(M_g, colors)` on exactly the v4 A/B/C training identities. Use 16/32/64
    components and propagate shared-band and Gaia label uncertainty.
-4. Compare configurations by held-out development sky blocks. On identical
+4. Complete: compare configurations by held-out development sky blocks. On identical
    accepted objects, compare chosen candidate against frozen v4 in bias,
    NMAD, tails, probability quality, g/r perturbation response and error/color
-   strata. Decide to reject or lock the candidate before any new final test.
+   strata. The registered gate rejected XD K=32; no new final test follows.
 5. Complete: define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
    color-boundary failures, CMD position and giant/nonstar confusion. Keep it
    distinct from the frozen cold-v4 box. The current four-field inventory
    and label/anchor contract are in `docs/cold_v5_blue_branch.md`.
 6. Validate, document, commit and synchronize programs, small manifests and
    figures across local, GitHub and NERSC. Keep catalogs and model files on
-   NERSC and use allocated CPUs for scans/training.
+   NERSC and use allocated CPUs for scans/training. Finish two pending
+   candidate exports, record their manifests and verify single-table output.
 
 ## Completed Previous Round Milestones
 
