@@ -14,7 +14,9 @@
 
 - Registered NGC 2419 as an independent cool-giant system before inspecting
   its DR11 rows: exact Gaia member IDs, RA 110–120 / Dec 35–45 sweeps,
-  published RR Lyrae modulus 19.71±0.08 mag. The targeted allocated-CPU
+  published RR Lyrae modulus 19.71±0.08 mag. A direct path check identified
+  those four sweeps in DR11 north; corrected the path and canceled queued
+  job 60488421 before execution. The targeted allocated-CPU
   script reports individual measured grz quality, E(B−V), RVS type and
   SpecDis/SPDist distance overlap. Files: cool-system script/Slurm wrapper,
   giant photo protocol. Command: Python compilation passed. Next: run the

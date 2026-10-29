@@ -53,7 +53,7 @@ roughly 5300 K and does not validate the cooler K giant branch.
 
 A second, cooler system is registered before inspecting DR11 member
 measurements: NGC 2419, RA 110–120°, Dec 35–45°. The published member list
-is matched by exact Gaia source ID to DR11 south sweeps; all four 5° sweep
+is matched by exact Gaia source ID to DR11 north sweeps; all four 5° sweep
 tiles are examined on allocated CPU. Its independent RR Lyrae modulus is
 `19.71 ± 0.08` mag. The cluster has E(B−V)≈0.08, so report its measured
 reddening and optical quality per member rather than applying the training

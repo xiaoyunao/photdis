@@ -20,7 +20,7 @@ from photdis.stage1 import (CORE_COLUMNS, PHOT_COLUMNS, legacy_ids,
                            require_compute, write_json)
 
 MEMBERS = Path("data/reference/vasiliev_baumgardt_2021_members.zip")
-SWEEPS = Path("/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0")
+SWEEPS = Path("/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0")
 MWS = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits")
 OUT = Path("manifests/giant_ngc2419_reference_v1.json")
 FIELD = (110, 35, 120, 45)
