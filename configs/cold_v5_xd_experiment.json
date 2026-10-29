@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-10-29",
+  "parent_commit": "a18ef9b6502c241a019d94404ba61613790f2c63",
+  "v4_prepared_sha256": "092e695e86aa6b72dc5d41c61b34263dfb1367515090dfc0de6a9431333e3763",
+  "v4_policy": "clean_wise_snr_20",
+  "training": "exact A/B/C tier-specific frozen cold-v4 fit source identities and low-extinction cuts",
+  "components": [16, 32, 64],
+  "full_covariance": true,
+  "covariance_floor_mag2": 0.0001,
+  "xd_max_iterations": 40,
+  "xd_relative_tolerance": 0.0001,
+  "distance_modulus_prior": {
+    "kind": "uniform_mu",
+    "minimum": 0,
+    "maximum": 20,
+    "interpretation": "fixed experiment prior, equivalent to p(distance) proportional to 1/distance within bounds"
+  },
+  "configuration_development_fields": [
+    "configs/field_dev_cal_ra205_215.json",
+    "configs/field_native_ra060_070.json"
+  ],
+  "small_diagnostic_field": "configs/field_native_ra235_245.json",
+  "configuration_score": "equal-field mean of held-out conditional negative log density for observed Mg given observed colors and measurement covariance",
+  "comparison": "same Gaia strict anchors accepted by the frozen grz_clean + WISE20 route, preserving chosen A/B/C tier and all support/type-risk states",
+  "candidate_gate": {
+    "point_nmad_noninferiority_mag": 0.01,
+    "absolute_center_noninferiority_mag": 0.01,
+    "tail_abs_residual_gt_0p5_noninferiority_fraction": 0.01,
+    "median_g_and_r_perturbation_abs_response_reduction_fraction": 0.25,
+    "require_each_informative_development_field": true,
+    "decision_if_gate_fails": "retain frozen v4 and close this limited model comparison"
+  },
+  "independent_final_rule": "Only if a single candidate passes the development gate: lock its artifact/hash, then use separately registered calibration and one new final sky field; no previously inspected field is blind."
+}

@@ -2,15 +2,35 @@
 
 ## Current Objective
 
-Implement the latest Pro review on the frozen cold-v4 baseline at `88f7330`.
-First repair crossover and weak-parallax statistics. Then audit A/B/C fallback
-reasons and test a quality-qualified infrared conflict flag on development
-labels and real candidates. Finally compare A/B/C on the same stars, match
-complete model inputs across fields and measure fixed-tier per-band PS1 and
-finite-perturbation responses. Use the results to choose a bounded v5
-candidate or retain v4. The active goal records detailed deliverables.
+Implement the 2026-10-29 Pro review on the three-end synchronized `a18ef9b`
+checkpoint. Keep the cold-v4 route and all locked evaluations frozen. Export
+per-candidate route diagnostics, compare one measurement-error-aware smooth
+probabilistic distance candidate with v4 on identical training and development
+identities, and define a separate metal-poor blue branch. The active goal
+records the full scientific and validation criteria.
 
-## Current Round Milestones
+## New Round Milestones
+
+1. Reconcile the prior review's interpretation and publish an explicit
+   development/selection protocol and candidate-output schema.
+2. Export v4 per-candidate A/B/C choice, higher-tier fallback reasons, support
+   ratios, infrared-conflict marker, cold-dwarf-hypothesis status and validated
+   depth state without changing distances or deleting conflicts.
+3. Build a full-covariance heteroscedastic deconvolved Gaussian mixture
+   `p(M_g, colors)` on exactly the v4 A/B/C training identities. Use 16/32/64
+   components and propagate shared-band and Gaia label uncertainty.
+4. Compare configurations by held-out development sky blocks. On identical
+   accepted objects, compare chosen candidate against frozen v4 in bias,
+   NMAD, tails, probability quality, g/r perturbation response and error/color
+   strata. Decide to reject or lock the candidate before any new final test.
+5. Define the metal-poor blue branch from reliable Gaia/DESI labels: coverage,
+   color-boundary failures, CMD position and giant/nonstar confusion. Keep it
+   distinct from the frozen cold-v4 box.
+6. Validate, document, commit and synchronize programs, small manifests and
+   figures across local, GitHub and NERSC. Keep catalogs and model files on
+   NERSC and use allocated CPUs for scans/training.
+
+## Completed Previous Round Milestones
 
 1. Complete: recompute common-acceptance crossover centers, paired differences,
    directly bootstrapped median differences and common-sample NMAD from the

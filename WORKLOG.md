@@ -2,6 +2,23 @@
 
 ## 2026-10-29
 
+- Read the complete newest Pro review (a18ef9b assessment) through
+  `read_thread`; opened a new detailed goal. `git status`, branch, fetch and
+  15-commit history confirm clean three-end `a18ef9b` before edits. Registered
+  `configs/cold_v5_xd_experiment.json` with frozen v4 identities, 16/32/64
+  components, development fields, fixed modulus prior and a decision gate.
+  Added per-candidate frozen-route export and heteroscedastic full-covariance
+  XD mixture prototype, including correlated band/parallax error propagation
+  and analytic one-dimensional distance-modulus posterior. Focused local
+  tests: 4 passed; Python compilation and shell syntax passed. The complete
+  72-test suite passed with `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+  MKL_NUM_THREADS=1`; without these limits, all assertions pass but the local
+  process exits 139 after pytest teardown when the new sklearn fit test is
+  included. This points to a local threaded-library teardown interaction;
+  NERSC job wrappers already set the same thread limits. Next: run bounded
+  exports and fits on allocated CPUs, compare on identical development
+  stars, then define the metal-poor blue branch.
+
 - Final v5 review: checked the fallback manifest counts and selected plot,
   corrected report wording, and verified the route decision against labeled
   development objects. `PYTHONPATH=src:.deps python3 -m pytest -q` passed
