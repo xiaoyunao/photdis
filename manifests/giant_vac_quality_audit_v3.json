@@ -1,0 +1,71 @@
+{
+  "source": "data/giant_vac_v3/same_star.fits",
+  "n_giants": 3694,
+  "specdis": {
+    "matched": 3636,
+    "matched_clean": 2479,
+    "binary_flag": {
+      "0": 52,
+      "1": 3584
+    },
+    "distance": {
+      "n": 3636,
+      "finite": 3636,
+      "min": 0.02043643221259117,
+      "median": 18.722830772399902,
+      "p90": 46.434417724609375,
+      "max": 189.71192932128906
+    },
+    "distance_error": {
+      "n": 3636,
+      "finite": 3636,
+      "min": 0.008758343756198883,
+      "median": 8.258354663848877,
+      "p90": 30.651137351989746,
+      "max": 323.22955322265625
+    },
+    "fractional_error": {
+      "n": 3636,
+      "finite": 3636,
+      "min": 0.008574015460908413,
+      "median": 0.45015978813171387,
+      "p90": 0.931976318359375,
+      "max": 2.428679943084717
+    },
+    "waterfall_clean": {
+      "matched": 2479,
+      "single": 2464,
+      "finite_positive_distance": 2464,
+      "finite_positive_error": 2464,
+      "error_less_than_distance": 2217,
+      "usable_legacy_g": 2217,
+      "versioned_valid": 2217
+    }
+  },
+  "spdist": {
+    "matched": 3519,
+    "matched_clean": 2341,
+    "flag_good": 3178,
+    "qflag_input": 3128,
+    "both_flags": 3038,
+    "both_flags_clean": 2045,
+    "g0": {
+      "n": 3519,
+      "finite": 3519,
+      "min": 11.687544822692871,
+      "median": 16.713157653808594,
+      "p90": 18.170433807373048,
+      "max": 20.39488410949707
+    },
+    "mg50": {
+      "n": 3519,
+      "finite": 3518,
+      "min": -2.9800424575805664,
+      "median": 0.5184667706489563,
+      "p90": 1.4342443704605106,
+      "max": 8.19408130645752
+    },
+    "versioned_valid": 2044
+  },
+  "compute_host": "nid004097"
+}

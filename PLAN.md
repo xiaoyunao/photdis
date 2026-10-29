@@ -17,12 +17,15 @@ Complete a bounded correction and calibration round with these milestones:
    photometry, image-quality/exposure metadata and available alternate
    measurements; decide its core eligibility without residual-based cuts.
    Extend the joint luminosity plot to include `M_g≈10.19` anchors.
-3. In progress: build a targeted giant sample from qualified broad-temperature RVS class
+3. Complete: build a targeted giant sample from qualified broad-temperature RVS class
    evidence and actual SpecDis v2.1 / SPDist v1.0 tables. Preserve each
    catalog's identity, quality, distance uncertainty, training correlation
    and applicability; derive Legacy `M_g` from DR11 `g0` and a distance
    distribution. Stratify cool/warm, `logg<1.8`, abundance-valid and
-   RGB/RC-ambiguous cases. Audit overlap and label disagreements.
+   RGB/RC-ambiguous cases. Audit overlap and label disagreements. The v3
+   identity fix yields 2,217/2,044 valid clean SpecDis/SPDist labels;
+   both-valid Legacy Mg labels differ by −0.207 mag median. Details:
+   `docs/giant_vac_v3.md`.
 4. Select at least one independent cluster/stream/dwarf system with actual
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation

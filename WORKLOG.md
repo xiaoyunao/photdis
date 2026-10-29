@@ -2,6 +2,16 @@
 
 ## 2026-10-29
 
+- Completed v3 giant VAC quality/profile jobs 60488083/60488085. Clean
+  SpecDis fractional distance error median is 0.491 (first-order Legacy
+  Mg proxy 1.067 mag); valid SPDist Legacy Mg uncertainty median is 0.209
+  mag. The 1,852 both-valid stars have SpecDis−SPDist Mg median −0.207
+  mag; 4200–5000 K has only 30 paired labels. Files: v3 profile/quality
+  manifests and `docs/giant_vac_v3.md`. Commands: allocated jobs, manifest
+  checks. Validation: v3 inventory/quality waterfall matches 2,217/2,044
+  valid clean labels. Next: score registered warm photo-only model and
+  NGC 2419 cooler external system on compute.
+
 - Registered NGC 2419 as an independent cool-giant system before inspecting
   its DR11 rows: exact Gaia member IDs, RA 110–120 / Dec 35–45 sweeps,
   published RR Lyrae modulus 19.71±0.08 mag. The targeted allocated-CPU
