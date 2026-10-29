@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Ranked northern validation field 60488890_2 failed before any sweep read:
+  `pilot_field.py` always used the stage1 south sweep root even when the
+  registered field's four files exist only in DR11 north. Added a field-level
+  `sweep_root` override, leaving all earlier southern field defaults intact.
+  The two southern development fields completed. Files: pilot field runner,
+  northern field config. Commands: Slurm stderr, Python syntax and direct
+  north-path existence check. Next: rerun only array index 2 and replace
+  dependency-blocked downstream jobs.
+
 - Completed allocated M3 color-neighborhood diagnostic 60488901. At each
   member's dereddened grz color the development-weighted SPDist label median
   is M_g≈1.19–1.23, while the RR-based M3 magnitudes are 1.57–2.12;

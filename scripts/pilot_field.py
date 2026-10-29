@@ -202,9 +202,10 @@ def main():
     bounds=task["bounds_deg"]
     names=task["sweep_files"]
     assert len(names)==4 and bounds[2]-bounds[0]==10 and bounds[3]-bounds[1]==10
+    sweep_root=Path(task.get("sweep_root",cfg["sweep_root"]))
     chunks=[]; sources=[]
     for name in names:
-        path=Path(cfg["sweep_root"])/name
+        path=sweep_root/name
         table=fitsio.read(str(path),ext=1,columns=CORE_COLUMNS+PHOT_COLUMNS)
         table=table[field_mask(table["RA"],table["DEC"],bounds)]
         chunks.append(table)
