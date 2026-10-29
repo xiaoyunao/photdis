@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- Blue-anchor audit job 60486734 verified exact Gaia/DR11 identity for
+  source 3601173023628559616 and no DR11 neighbor within 10 arcsec.
+  DR11 minus transformed PS1 is −0.011/+0.463/+0.022 mag in g/r/z;
+  DR11 r-band RCHISQ is 2097 with three exposures. The established
+  `grz_clean` cut did not inspect RCHISQ. Added versioned joint evidence
+  retaining every row but marking this star `r_band_discordant` and removing
+  it from the trusted blue training core based on independent photometry.
+  Pointed the forward experiment at v3. The queued pre-audit forward job
+  60486919 was cancelled before execution. Files: independent audit
+  manifest, joint-v3 script/wrapper and test, forward script. Validation:
+  focused tests (3 passed), syntax and shell checks. Next: run v3 on allocated
+  CPU, then the forward model after both v3 products exist.
+
 - Implemented a registered low-degree color–absolute-magnitude comparison
   with zero versus one continuous calibrated iron term. The likelihood
   integrates positive latent parallax over photometric, abundance and

@@ -17,8 +17,8 @@ from photdis.metal_poor_forward import (fit, log_probability, predictive_cdf,
                                         LOG_PAR)
 from photdis.stage1 import require_compute, write_json
 
-JOINT = [Path("data/joint_calibration_v1_evidence_v2/same_star.fits"),
-         Path("data/joint_calibration_targeted_v1_evidence_v2/same_star.fits")]
+JOINT = [Path("data/joint_calibration_v1_evidence_v3/same_star.fits"),
+         Path("data/joint_calibration_targeted_v1_evidence_v3/same_star.fits")]
 OUT = Path("manifests/metal_poor_forward_v1.json")
 COLUMNS = ["source_id", "ls_id", "field", "role", "trusted_blue_core",
            "parallax_layer", "gr0", "rz0", "g0", "sigma_g", "sigma_r",
