@@ -1,0 +1,10 @@
+{
+  "name": "giant_ranked_ra200_210_dec_p000_p010",
+  "bounds_deg": [200, 0, 210, 10],
+  "base_config": "configs/stage1.json",
+  "sweep_files": ["sweep-200p000-205p005.fits", "sweep-200p005-205p010.fits", "sweep-205p000-210p005.fits", "sweep-205p005-210p010.fits"],
+  "spectroscopy_run_dir": "data/stage1_v1",
+  "output_dir": "data/field_giant_ranked_ra200_210_dec_p000_p010_v1",
+  "figure_dir": "figures/field_giant_ranked_ra200_210_dec_p000_p010",
+  "manifest_path": "manifests/field_giant_ranked_ra200_210_dec_p000_p010.json"
+}

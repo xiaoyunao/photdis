@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- Completed registered warm photo-only giant job 60488582 and DESI-first
+  field ranking 60488535. The 1,403/588 development/reserved test yields
+  0.464 mag reserved NMAD against SPDist point labels and 98.6% nominal
+  95% coverage, but five M3 members are +0.367 mag median above independent
+  RR distance. Distinct logg strata have +0.285 and −0.227 mag residual
+  centers. Do not adopt the grz-only relation. Registered three untouched
+  ranked 10° cells (two development, one separated reserved) to measure
+  actual cool-giant DR11/VAC yield. Files: warm report/figure, ranking and
+  model manifests, field configs, Slurm wrappers, optional-path giant VAC
+  inventory CLI, PLAN. Commands: allocated jobs, JSON/count validation,
+  Python compilation, shell parse, six focused tests. Next: execute field
+  builds and catalog joins; assess whether cool branch has enough labels.
+
 - Completed allocated NGC 2419 DR11-north whole-system audit 60488483.
   All 1,563 probable members match DR11; 15 qualified RVS giants have
   clean grz and measured E(B−V)=0.058–0.061. Thirteen valid SPDist labels

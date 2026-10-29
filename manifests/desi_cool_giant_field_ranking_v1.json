@@ -1,0 +1,809 @@
+{
+  "selection": "MWS primary projected pool; RVS quality, 3500<=Teff<5200, logg+sigma<3.2, Gaia source ID; prioritize 4200-5000 K and |b|>=30, MWS EBV<0.03",
+  "available_dr11": "complete 10x10 four-sweep cells in north or south",
+  "qualified_all": 38190,
+  "high_lat_low_dust": 11450,
+  "candidates": [
+    {
+      "bounds_deg": [
+        200,
+        0,
+        210,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-200p000-205p005.fits",
+        "sweep-200p005-205p010.fits",
+        "sweep-205p000-210p005.fits",
+        "sweep-205p005-210p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 969,
+      "high_lat_low_dust_k4200_5000": 134,
+      "high_lat_low_dust_lt4200": 6,
+      "high_lat_low_dust_all_cool": 794
+    },
+    {
+      "bounds_deg": [
+        190,
+        0,
+        200,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-190p000-195p005.fits",
+        "sweep-190p005-195p010.fits",
+        "sweep-195p000-200p005.fits",
+        "sweep-195p005-200p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 843,
+      "high_lat_low_dust_k4200_5000": 93,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 474
+    },
+    {
+      "bounds_deg": [
+        190,
+        -10,
+        200,
+        0
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-190m010-195m005.fits",
+        "sweep-190m005-195p000.fits",
+        "sweep-195m010-200m005.fits",
+        "sweep-195m005-200p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 619,
+      "high_lat_low_dust_k4200_5000": 91,
+      "high_lat_low_dust_lt4200": 4,
+      "high_lat_low_dust_all_cool": 421
+    },
+    {
+      "bounds_deg": [
+        210,
+        0,
+        220,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-210p000-215p005.fits",
+        "sweep-210p005-215p010.fits",
+        "sweep-215p000-220p005.fits",
+        "sweep-215p005-220p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 1213,
+      "high_lat_low_dust_k4200_5000": 85,
+      "high_lat_low_dust_lt4200": 7,
+      "high_lat_low_dust_all_cool": 445
+    },
+    {
+      "bounds_deg": [
+        210,
+        40,
+        220,
+        50
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-210p040-215p045.fits",
+        "sweep-210p045-215p050.fits",
+        "sweep-215p040-220p045.fits",
+        "sweep-215p045-220p050.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 327,
+      "high_lat_low_dust_k4200_5000": 59,
+      "high_lat_low_dust_lt4200": 7,
+      "high_lat_low_dust_all_cool": 321
+    },
+    {
+      "bounds_deg": [
+        170,
+        0,
+        180,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-170p000-175p005.fits",
+        "sweep-170p005-175p010.fits",
+        "sweep-175p000-180p005.fits",
+        "sweep-175p005-180p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 432,
+      "high_lat_low_dust_k4200_5000": 58,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 316
+    },
+    {
+      "bounds_deg": [
+        170,
+        -10,
+        180,
+        0
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-170m010-175m005.fits",
+        "sweep-170m005-175p000.fits",
+        "sweep-175m010-180m005.fits",
+        "sweep-175m005-180p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 522,
+      "high_lat_low_dust_k4200_5000": 46,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 242
+    },
+    {
+      "bounds_deg": [
+        200,
+        -10,
+        210,
+        0
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-200m010-205m005.fits",
+        "sweep-200m005-205p000.fits",
+        "sweep-205m010-210m005.fits",
+        "sweep-205m005-210p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 767,
+      "high_lat_low_dust_k4200_5000": 46,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 201
+    },
+    {
+      "bounds_deg": [
+        210,
+        30,
+        220,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-210p030-215p035.fits",
+        "sweep-210p035-215p040.fits",
+        "sweep-215p030-220p035.fits",
+        "sweep-215p035-220p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 244,
+      "high_lat_low_dust_k4200_5000": 43,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 243
+    },
+    {
+      "bounds_deg": [
+        220,
+        30,
+        230,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-220p030-225p035.fits",
+        "sweep-220p035-225p040.fits",
+        "sweep-225p030-230p035.fits",
+        "sweep-225p035-230p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 215,
+      "high_lat_low_dust_k4200_5000": 41,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 215
+    },
+    {
+      "bounds_deg": [
+        200,
+        40,
+        210,
+        50
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-200p040-205p045.fits",
+        "sweep-200p045-205p050.fits",
+        "sweep-205p040-210p045.fits",
+        "sweep-205p045-210p050.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 230,
+      "high_lat_low_dust_k4200_5000": 40,
+      "high_lat_low_dust_lt4200": 3,
+      "high_lat_low_dust_all_cool": 226
+    },
+    {
+      "bounds_deg": [
+        240,
+        30,
+        250,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-240p030-245p035.fits",
+        "sweep-240p035-245p040.fits",
+        "sweep-245p030-250p035.fits",
+        "sweep-245p035-250p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 276,
+      "high_lat_low_dust_k4200_5000": 36,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 222
+    },
+    {
+      "bounds_deg": [
+        180,
+        20,
+        190,
+        30
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-180p020-185p025.fits",
+        "sweep-180p025-185p030.fits",
+        "sweep-185p020-190p025.fits",
+        "sweep-185p025-190p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 183,
+      "high_lat_low_dust_k4200_5000": 33,
+      "high_lat_low_dust_lt4200": 0,
+      "high_lat_low_dust_all_cool": 169
+    },
+    {
+      "bounds_deg": [
+        180,
+        30,
+        190,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-180p030-185p035.fits",
+        "sweep-180p035-185p040.fits",
+        "sweep-185p030-190p035.fits",
+        "sweep-185p035-190p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 151,
+      "high_lat_low_dust_k4200_5000": 30,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 150
+    },
+    {
+      "bounds_deg": [
+        180,
+        60,
+        190,
+        70
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-180p060-185p065.fits",
+        "sweep-180p065-185p070.fits",
+        "sweep-185p060-190p065.fits",
+        "sweep-185p065-190p070.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 176,
+      "high_lat_low_dust_k4200_5000": 29,
+      "high_lat_low_dust_lt4200": 7,
+      "high_lat_low_dust_all_cool": 176
+    },
+    {
+      "bounds_deg": [
+        190,
+        50,
+        200,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-190p050-195p055.fits",
+        "sweep-190p055-195p060.fits",
+        "sweep-195p050-200p055.fits",
+        "sweep-195p055-200p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 196,
+      "high_lat_low_dust_k4200_5000": 28,
+      "high_lat_low_dust_lt4200": 4,
+      "high_lat_low_dust_all_cool": 196
+    },
+    {
+      "bounds_deg": [
+        190,
+        30,
+        200,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-190p030-195p035.fits",
+        "sweep-190p035-195p040.fits",
+        "sweep-195p030-200p035.fits",
+        "sweep-195p035-200p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 186,
+      "high_lat_low_dust_k4200_5000": 28,
+      "high_lat_low_dust_lt4200": 3,
+      "high_lat_low_dust_all_cool": 186
+    },
+    {
+      "bounds_deg": [
+        30,
+        0,
+        40,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-030p000-035p005.fits",
+        "sweep-030p005-035p010.fits",
+        "sweep-035p000-040p005.fits",
+        "sweep-035p005-040p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 542,
+      "high_lat_low_dust_k4200_5000": 27,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 152
+    },
+    {
+      "bounds_deg": [
+        230,
+        30,
+        240,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-230p030-235p035.fits",
+        "sweep-230p035-235p040.fits",
+        "sweep-235p030-240p035.fits",
+        "sweep-235p035-240p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 304,
+      "high_lat_low_dust_k4200_5000": 27,
+      "high_lat_low_dust_lt4200": 4,
+      "high_lat_low_dust_all_cool": 234
+    },
+    {
+      "bounds_deg": [
+        190,
+        40,
+        200,
+        50
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-190p040-195p045.fits",
+        "sweep-190p045-195p050.fits",
+        "sweep-195p040-200p045.fits",
+        "sweep-195p045-200p050.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 154,
+      "high_lat_low_dust_k4200_5000": 27,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 154
+    },
+    {
+      "bounds_deg": [
+        150,
+        0,
+        160,
+        10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-150p000-155p005.fits",
+        "sweep-150p005-155p010.fits",
+        "sweep-155p000-160p005.fits",
+        "sweep-155p005-160p010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 332,
+      "high_lat_low_dust_k4200_5000": 26,
+      "high_lat_low_dust_lt4200": 0,
+      "high_lat_low_dust_all_cool": 156
+    },
+    {
+      "bounds_deg": [
+        180,
+        50,
+        190,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-180p050-185p055.fits",
+        "sweep-180p055-185p060.fits",
+        "sweep-185p050-190p055.fits",
+        "sweep-185p055-190p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 153,
+      "high_lat_low_dust_k4200_5000": 25,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 152
+    },
+    {
+      "bounds_deg": [
+        150,
+        30,
+        160,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-150p030-155p035.fits",
+        "sweep-150p035-155p040.fits",
+        "sweep-155p030-160p035.fits",
+        "sweep-155p035-160p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 156,
+      "high_lat_low_dust_k4200_5000": 25,
+      "high_lat_low_dust_lt4200": 3,
+      "high_lat_low_dust_all_cool": 152
+    },
+    {
+      "bounds_deg": [
+        170,
+        60,
+        180,
+        70
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-170p060-175p065.fits",
+        "sweep-170p065-175p070.fits",
+        "sweep-175p060-180p065.fits",
+        "sweep-175p065-180p070.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 137,
+      "high_lat_low_dust_k4200_5000": 24,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 125
+    },
+    {
+      "bounds_deg": [
+        30,
+        -10,
+        40,
+        0
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-030m010-035m005.fits",
+        "sweep-030m005-035p000.fits",
+        "sweep-035m010-040m005.fits",
+        "sweep-035m005-040p000.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 269,
+      "high_lat_low_dust_k4200_5000": 23,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 177
+    },
+    {
+      "bounds_deg": [
+        220,
+        10,
+        230,
+        20
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-220p010-225p015.fits",
+        "sweep-220p015-225p020.fits",
+        "sweep-225p010-230p015.fits",
+        "sweep-225p015-230p020.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 172,
+      "high_lat_low_dust_k4200_5000": 22,
+      "high_lat_low_dust_lt4200": 4,
+      "high_lat_low_dust_all_cool": 119
+    },
+    {
+      "bounds_deg": [
+        170,
+        30,
+        180,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-170p030-175p035.fits",
+        "sweep-170p035-175p040.fits",
+        "sweep-175p030-180p035.fits",
+        "sweep-175p035-180p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 145,
+      "high_lat_low_dust_k4200_5000": 20,
+      "high_lat_low_dust_lt4200": 0,
+      "high_lat_low_dust_all_cool": 144
+    },
+    {
+      "bounds_deg": [
+        160,
+        50,
+        170,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-160p050-165p055.fits",
+        "sweep-160p055-165p060.fits",
+        "sweep-165p050-170p055.fits",
+        "sweep-165p055-170p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 93,
+      "high_lat_low_dust_k4200_5000": 20,
+      "high_lat_low_dust_lt4200": 0,
+      "high_lat_low_dust_all_cool": 93
+    },
+    {
+      "bounds_deg": [
+        160,
+        60,
+        170,
+        70
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-160p060-165p065.fits",
+        "sweep-160p065-165p070.fits",
+        "sweep-165p060-170p065.fits",
+        "sweep-165p065-170p070.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 115,
+      "high_lat_low_dust_k4200_5000": 19,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 110
+    },
+    {
+      "bounds_deg": [
+        220,
+        40,
+        230,
+        50
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-220p040-225p045.fits",
+        "sweep-220p045-225p050.fits",
+        "sweep-225p040-230p045.fits",
+        "sweep-225p045-230p050.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 144,
+      "high_lat_low_dust_k4200_5000": 19,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 135
+    },
+    {
+      "bounds_deg": [
+        260,
+        50,
+        270,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-260p050-265p055.fits",
+        "sweep-260p055-265p060.fits",
+        "sweep-265p050-270p055.fits",
+        "sweep-265p055-270p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 83,
+      "high_lat_low_dust_k4200_5000": 18,
+      "high_lat_low_dust_lt4200": 3,
+      "high_lat_low_dust_all_cool": 54
+    },
+    {
+      "bounds_deg": [
+        200,
+        30,
+        210,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-200p030-205p035.fits",
+        "sweep-200p035-205p040.fits",
+        "sweep-205p030-210p035.fits",
+        "sweep-205p035-210p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 90,
+      "high_lat_low_dust_k4200_5000": 17,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 90
+    },
+    {
+      "bounds_deg": [
+        190,
+        60,
+        200,
+        70
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-190p060-195p065.fits",
+        "sweep-190p065-195p070.fits",
+        "sweep-195p060-200p065.fits",
+        "sweep-195p065-200p070.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 120,
+      "high_lat_low_dust_k4200_5000": 16,
+      "high_lat_low_dust_lt4200": 6,
+      "high_lat_low_dust_all_cool": 120
+    },
+    {
+      "bounds_deg": [
+        160,
+        30,
+        170,
+        40
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-160p030-165p035.fits",
+        "sweep-160p035-165p040.fits",
+        "sweep-165p030-170p035.fits",
+        "sweep-165p035-170p040.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 119,
+      "high_lat_low_dust_k4200_5000": 16,
+      "high_lat_low_dust_lt4200": 3,
+      "high_lat_low_dust_all_cool": 117
+    },
+    {
+      "bounds_deg": [
+        230,
+        20,
+        240,
+        30
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-230p020-235p025.fits",
+        "sweep-230p025-235p030.fits",
+        "sweep-235p020-240p025.fits",
+        "sweep-235p025-240p030.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 377,
+      "high_lat_low_dust_k4200_5000": 16,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 90
+    },
+    {
+      "bounds_deg": [
+        210,
+        50,
+        220,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-210p050-215p055.fits",
+        "sweep-210p055-215p060.fits",
+        "sweep-215p050-220p055.fits",
+        "sweep-215p055-220p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 108,
+      "high_lat_low_dust_k4200_5000": 15,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 108
+    },
+    {
+      "bounds_deg": [
+        230,
+        40,
+        240,
+        50
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-230p040-235p045.fits",
+        "sweep-230p045-235p050.fits",
+        "sweep-235p040-240p045.fits",
+        "sweep-235p045-240p050.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 83,
+      "high_lat_low_dust_k4200_5000": 14,
+      "high_lat_low_dust_lt4200": 2,
+      "high_lat_low_dust_all_cool": 78
+    },
+    {
+      "bounds_deg": [
+        250,
+        50,
+        260,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-250p050-255p055.fits",
+        "sweep-250p055-255p060.fits",
+        "sweep-255p050-260p055.fits",
+        "sweep-255p055-260p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 71,
+      "high_lat_low_dust_k4200_5000": 14,
+      "high_lat_low_dust_lt4200": 1,
+      "high_lat_low_dust_all_cool": 50
+    },
+    {
+      "bounds_deg": [
+        170,
+        -20,
+        180,
+        -10
+      ],
+      "dr11_region": "south",
+      "sweep_files": [
+        "sweep-170m020-175m015.fits",
+        "sweep-170m015-175m010.fits",
+        "sweep-175m020-180m015.fits",
+        "sweep-175m015-180m010.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 398,
+      "high_lat_low_dust_k4200_5000": 14,
+      "high_lat_low_dust_lt4200": 0,
+      "high_lat_low_dust_all_cool": 62
+    },
+    {
+      "bounds_deg": [
+        200,
+        50,
+        210,
+        60
+      ],
+      "dr11_region": "north",
+      "sweep_files": [
+        "sweep-200p050-205p055.fits",
+        "sweep-200p055-205p060.fits",
+        "sweep-205p050-210p055.fits",
+        "sweep-205p055-210p060.fits"
+      ],
+      "already_configured": false,
+      "qualified_cool_lt5200": 103,
+      "high_lat_low_dust_k4200_5000": 13,
+      "high_lat_low_dust_lt4200": 5,
+      "high_lat_low_dust_all_cool": 103
+    }
+  ],
+  "compute_host": "nid004074"
+}

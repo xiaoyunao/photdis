@@ -30,17 +30,19 @@ Complete a bounded correction and calibration round with these milestones:
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation
    only where label quality and external scale coverage support one.
-   A registered grz-only warm evolved-star kernel-mixture test is specified
-   in `docs/giant_photo_protocol_v1.md`; its SPDist-based label and M3
-   whole-system scale check remain pending NERSC job 60488582. A separate
+   The registered grz-only warm evolved-star kernel-mixture test is complete
+   (`docs/giant_photo_baseline_v1.md`): 588 reserved stars yield 0.464 mag
+   NMAD against SPDist point labels, but five M3 stars show +0.367 mag
+   median modulus shift against an independent RR Lyrae reference. Do not
+   adopt this model as a giant distance product. A separate
    NGC 2419 RR Lyrae whole-system audit is complete: 13 valid SPDist giants
    have pooled median offset +0.007 mag, while three <5000 K giants have
    median −0.543 mag, so the cool branch needs further scale validation.
    The 4200–5000 K and cooler RGB samples are reported separately. A DESI-first ranking of
-   untouched complete DR11 north/south 10° cells is running as NERSC job
-   60488535 to identify
-   a small number of fields rich in qualified clean cool giants, because
-   the existing eleven fields supply only 42 SPDist labels at 4200–5000 K.
+   untouched complete DR11 north/south 10° cells identified two southern
+   development cells and one separated northern reserved cell; actual DR11
+   and VAC yield remains to be measured. The existing eleven fields supply
+   only 42 SPDist labels at 4200–5000 K.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous

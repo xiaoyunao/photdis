@@ -2,6 +2,7 @@
 """Join qualified DESI giants to the two published distance VACs by identity."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import socket
@@ -82,10 +83,17 @@ def summarize(rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", type=Path, action="append", default=None,
+                        help="Joint evidence FITS; repeat for multiple inputs")
+    parser.add_argument("--output", type=Path, default=OUT)
+    parser.add_argument("--manifest", type=Path, default=MANIFEST)
+    args = parser.parse_args()
+    sources = args.source if args.source is not None else JOINT
     require_compute()
-    if OUT.exists() or MANIFEST.exists():
+    if args.output.exists() or args.manifest.exists():
         raise FileExistsError("Giant VAC inventory already exists")
-    arrays = [fitsio.read(str(path)) for path in JOINT]
+    arrays = [fitsio.read(str(path)) for path in sources]
     all_rows = np.concatenate(arrays)
     giant = giant_mask(all_rows)
     rows, target, sid = deduplicate_giant_identities(all_rows[giant])
@@ -164,15 +172,15 @@ def main():
     refs = load_reference_catalogs("data/reference")
     hold = annotate_holdouts(refs, rows["source_id"], rows["ra"], rows["dec"])
     out["cluster_group"] = hold["cluster_member_group"]
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    fitsio.write(str(OUT), out, extname="GIANTVAC", clobber=False)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    fitsio.write(str(args.output), out, extname="GIANTVAC", clobber=False)
     summary = summarize(out)
-    manifest = {"input": [str(path) for path in JOINT],
+    manifest = {"input": [str(path) for path in sources],
                 "specdis": str(SPEC), "spdist": str(SP),
                 "join_algorithm": "TARGETID range search, unique exact (TARGETID,SOURCE_ID) match; Gaia SOURCE_ID>0",
-                "output": str(OUT), "summary": summary,
+                "output": str(args.output), "summary": summary,
                 "compute_host": socket.gethostname()}
-    write_json(MANIFEST, manifest)
+    write_json(args.manifest, manifest)
     print(json.dumps(summary), flush=True)
 
 

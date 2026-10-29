@@ -1,0 +1,8 @@
+{
+  "purpose": "Cool giant label-yield feasibility; independent reserved sky cell; no model fitting",
+  "fields": [
+    {"config": "configs/field_giant_ranked_ra200_210_dec_p000_p010.json", "role": "development"},
+    {"config": "configs/field_giant_ranked_ra190_200_dec_p000_p010.json", "role": "development"},
+    {"config": "configs/field_giant_ranked_ra210_220_dec_p040_p050.json", "role": "reserved_validation"}
+  ]
+}
