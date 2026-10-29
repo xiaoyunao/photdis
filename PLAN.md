@@ -32,9 +32,13 @@ Complete a bounded correction and calibration round with these milestones:
    only where label quality and external scale coverage support one.
    A registered grz-only warm evolved-star kernel-mixture test is specified
    in `docs/giant_photo_protocol_v1.md`; its SPDist-based label and M3
-   whole-system scale check remain pending NERSC execution. The 4200–5000 K
-   and cooler RGB samples are reported separately. A DESI-first ranking of
-   untouched complete DR11 north/south 10° cells is registered to identify
+   whole-system scale check remain pending NERSC job 60488582. A separate
+   NGC 2419 RR Lyrae whole-system audit is complete: 13 valid SPDist giants
+   have pooled median offset +0.007 mag, while three <5000 K giants have
+   median −0.543 mag, so the cool branch needs further scale validation.
+   The 4200–5000 K and cooler RGB samples are reported separately. A DESI-first ranking of
+   untouched complete DR11 north/south 10° cells is running as NERSC job
+   60488535 to identify
    a small number of fields rich in qualified clean cool giants, because
    the existing eleven fields supply only 42 SPDist labels at 4200–5000 K.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples

@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Completed allocated NGC 2419 DR11-north whole-system audit 60488483.
+  All 1,563 probable members match DR11; 15 qualified RVS giants have
+  clean grz and measured E(B−V)=0.058–0.061. Thirteen valid SPDist labels
+  give pooled catalog-minus-RR median +0.007 mag, but the three <5000 K
+  giants have median −0.543 mag; five SpecDis labels are much broader.
+  Files: NGC manifest, scale figure/plot script, giant VAC report. Commands:
+  allocated Slurm job, manifest/individual membership audit, plot and Python
+  compilation, `git diff --check`. Validation: figure and counts checked.
+  Next: treat the cool-giant scale as unresolved; compare the registered
+  warm photo-only baseline with M3 after queued compute completes.
+
 - The first warm giant model job 60488385 reached reserved-field prediction
   after completing the development grid, then failed because FITS exposed
   `field` as Unicode and the script called `.decode()`. Normalize both

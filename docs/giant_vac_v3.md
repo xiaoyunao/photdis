@@ -72,9 +72,31 @@ Five qualified DR11 members have an independent RR Lyrae modulus of
 `15.041±0.017(stat)±0.036(sys)` mag. Their median catalog-minus-RR moduli
 are +0.041 mag (SpecDis) and +0.078 mag (SPDist), with five stars in each
 comparison. They are all near 5300 K, so this checks the warm evolved
-regime only. NGC 2419, with 15 qualified DESI spectra cooler than 5200 K
-in the preselected ranking, is registered for a separate DR11 and RR Lyrae
-system test; its higher extinction will be reported per star.
+regime only.
+
+NGC 2419 provides a second, cooler whole-system check against an independent
+RR Lyrae modulus of `19.71±0.08` mag. All 1,563 probable members have DR11
+north-sweep counterparts. Eighteen have qualified RVS giant spectra and 15
+have clean grz; their measured `E(B−V)` is 0.058–0.061, higher than the
+`<0.03` development selection. Thirteen of the clean giants have valid
+SPDist labels and five have valid SpecDis labels. For the 13 SPDist giants,
+the catalog-minus-RR modulus median is +0.007 mag (NMAD 0.216 mag). The
+temperature split is consequential:
+
+| NGC 2419 SPDist subset | Stars | Median `μ_cat−μ_RR` | NMAD |
+|---|---:|---:|---:|
+| `5000≤Teff<5200 K` | 10 | +0.030 mag | 0.194 mag |
+| `Teff<5000 K` | 3 | −0.543 mag | 0.053 mag |
+
+The three cooler members have individual offsets +0.116, −0.543 and
+−0.579 mag; their published membership probabilities are all >0.997.
+The five SpecDis labels have median offset −0.525 mag and NMAD 2.516 mag.
+This is an external scale warning for cool giants, with only three cool
+SPDist members; the pooled 13-star median does not establish a calibrated
+K-giant label. The individual catalog errors, extinction, temperature and
+membership evidence are retained in the manifest. The registered warm
+photo-only experiment will assess M3, and will report NGC 2419 only as an
+out-of-selection diagnostic.
 
 The registered grz-only warm evolved-star experiment is described in
 `docs/giant_photo_protocol_v1.md`. The cold RGB/RC data are tabulated here
@@ -83,8 +105,11 @@ but are not yet a calibrated photo-only K-giant distance relation.
 Evidence: `manifests/giant_vac_v3.json`,
 `manifests/giant_vac_profile_v3.json`,
 `manifests/giant_vac_quality_audit_v3.json`,
-`manifests/giant_m3_reference_v1.json`.
+`manifests/giant_m3_reference_v1.json`,
+`manifests/giant_ngc2419_reference_v1.json` and
+`figures/giant_vac/02_ngc2419_catalog_scale.png`.
 
 Primary catalog descriptions: [DESI SpecDis](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-specdis/)
 and [DESI SPDist](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-spdist/).
 M3 distance: [near-infrared RR Lyrae study](https://arxiv.org/abs/2008.11745).
+NGC 2419 distance: [RR Lyrae study](https://arxiv.org/abs/1011.5398).
