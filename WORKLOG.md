@@ -2,6 +2,19 @@
 
 ## 2026-10-29
 
+- Completed Gaia-CMD phase and DR11 quality audit for full M3/NGC 2419
+  membership on Slurm job 60492970. M3 P>0.9 upper/lower RGB candidates
+  have 387/579 members but only 2/422 clean grz; NGC 2419 has 458/93
+  and 391/78. The NGC lower region overlaps red HB in its CMD. Clean M3
+  RGB is mainly lower (M_g 5–95%: 1.14–2.76); NGC 2419 is mainly upper
+  (−1.79–0.89), so the secure luminosity coverage has a gap. Clean
+  W1+W2 counts are 9 and 10. Files: two phase manifests and figures;
+  system-role registry and M53/NGC 7006 extraction configuration.
+  Commands: Slurm phase array, plot inspection, Python compilation,
+  four focused tests, diff check. Validation: both Slurm tasks exit 0;
+  tests pass. Next: extract preregistered M53 development bridge and
+  NGC 7006 whole-system holdout, inspect only holdout Gaia CMD/quality.
+
 - Completed allocated whole-member DR11 extraction job 60492519 (both array
   tasks exit 0). M3 has 25,395 P>=0.5 matched members, 24,778 P>0.9 and
   17,188 high-probability clean grz; NGC 2419 has 1,563/1,441/882.

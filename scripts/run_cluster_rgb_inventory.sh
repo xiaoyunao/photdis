@@ -18,6 +18,10 @@ if [ "$SLURM_ARRAY_TASK_ID" = 0 ]; then
     python scripts/cluster_rgb_inventory.py m3
 elif [ "$SLURM_ARRAY_TASK_ID" = 1 ]; then
     python scripts/cluster_rgb_inventory.py ngc2419
+elif [ "$SLURM_ARRAY_TASK_ID" = 2 ]; then
+    python scripts/cluster_rgb_inventory.py m53
+elif [ "$SLURM_ARRAY_TASK_ID" = 3 ]; then
+    python scripts/cluster_rgb_inventory.py ngc7006
 else
     echo "Unknown cluster array index: $SLURM_ARRAY_TASK_ID" >&2
     exit 2

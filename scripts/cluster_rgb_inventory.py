@@ -24,6 +24,7 @@ from photdis.stage1 import CORE_COLUMNS, PHOT_COLUMNS, legacy_ids, require_compu
 MEMBERS = Path("data/reference/vasiliev_baumgardt_2021_members.zip")
 SYSTEMS = {
     "m3": {
+        "role": "development_diagnostic",
         "member_file": "catalogues/NGC_5272_M_3.txt",
         "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
         "ra": (200, 205), "dec": (25, 30), "center": (205.548, 28.377),
@@ -32,12 +33,31 @@ SYSTEMS = {
         "mu_reference": "https://arxiv.org/abs/2008.11745",
     },
     "ngc2419": {
+        "role": "development_diagnostic",
         "member_file": "catalogues/NGC_2419.txt",
         "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0",
         "ra": (110, 115), "dec": (35, 40), "center": (114.535, 38.882),
         "sweep_ra": (110, 115), "sweep_dec": (35, 40),
         "mu": 19.71, "mu_stat": 0.08, "mu_sys": 0.0,
         "mu_reference": "https://arxiv.org/abs/1011.5398",
+    },
+    "m53": {
+        "role": "development_bridge",
+        "member_file": "catalogues/NGC_5024_M_53.txt",
+        "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+        "ra": (195, 200), "dec": (15, 20), "center": (198.23, 18.168),
+        "sweep_ra": (195, 200), "sweep_dec": (15, 20),
+        "mu": 16.403, "mu_stat": 0.024, "mu_sys": 0.033,
+        "mu_reference": "https://arxiv.org/abs/2012.13495",
+    },
+    "ngc7006": {
+        "role": "reserved_whole_system",
+        "member_file": "catalogues/NGC_7006.txt",
+        "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+        "ra": (310, 315), "dec": (10, 15), "center": (315.373, 16.188),
+        "sweep_ra": (310, 315), "sweep_dec": (10, 15),
+        "mu": 18.07448608, "mu_stat": 0.07378790, "mu_sys": 0.0,
+        "mu_reference": "https://arxiv.org/abs/2212.05021",
     },
 }
 
@@ -108,10 +128,13 @@ def separation_arcmin(ra, dec, center):
     return np.rad2deg(np.arccos(np.clip(cosang, -1, 1))) * 60
 
 
-def make_figure(path, tab, mu, system):
+def make_figure(path, tab, mu, system, *, reserved=False):
     high = tab["pmember"] > .9
     clean = high & tab["grz_clean"]
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4.7), constrained_layout=True)
+    fig, axes = plt.subplots(1, 1 if reserved else 3,
+                             figsize=(5.6 if reserved else 15, 4.7), constrained_layout=True)
+    if reserved:
+        axes = [axes]
     gaia_ok = high & np.isfinite(tab["bp_rp"]) & np.isfinite(tab["gaia_g"])
     axes[0].scatter(tab["bp_rp"][gaia_ok], tab["gaia_g"][gaia_ok]-mu,
                     s=2, alpha=.15, color="0.5", label="P>0.9")
@@ -119,16 +142,18 @@ def make_figure(path, tab, mu, system):
                     s=2, alpha=.4, color="tab:blue", label="clean grz")
     axes[0].set(xlabel="Gaia BP−RP", ylabel="Gaia G − cluster μ", title="Independent Gaia CMD")
     axes[0].legend(markerscale=3, fontsize=8)
-    for ax, color, label in ((axes[1], "gr0", "(g−r)₀"),
-                             (axes[2], "rz0", "(r−z)₀")):
-        good = clean & np.isfinite(tab[color]) & np.isfinite(tab["g0"])
-        ax.scatter(tab[color][good], tab["g0"][good]-mu,
-                   s=3, alpha=.3, color="tab:orange")
-        ax.set(xlabel=label, ylabel="Legacy g₀ − cluster μ")
+    if not reserved:
+        for ax, color, label in ((axes[1], "gr0", "(g−r)₀"),
+                                 (axes[2], "rz0", "(r−z)₀")):
+            good = clean & np.isfinite(tab[color]) & np.isfinite(tab["g0"])
+            ax.scatter(tab[color][good], tab["g0"][good]-mu,
+                       s=3, alpha=.3, color="tab:orange")
+            ax.set(xlabel=label, ylabel="Legacy g₀ − cluster μ")
     for ax in axes:
         ax.set_ylim(9, -4)
         ax.grid(alpha=.15)
-    fig.suptitle(f"{system}: all likely members; phase selection pending")
+    fig.suptitle(f"{system}: member CMD and clean coverage" if reserved else
+                 f"{system}: all likely members; phase selection pending")
     path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=160)
     plt.close(fig)
@@ -171,9 +196,11 @@ def main():
     })
     outdir.mkdir(parents=True, exist_ok=True)
     fitsio.write(str(out), table)
-    make_figure(figure, table, cfg["mu"], args.system)
+    make_figure(figure, table, cfg["mu"], args.system,
+                reserved=cfg["role"] == "reserved_whole_system")
     high = table["pmember"] > .9
-    info = {"system": args.system, "member_source": str(MEMBERS),
+    info = {"system": args.system, "role": cfg["role"],
+            "member_source": str(MEMBERS),
             "membership_reference": "https://zenodo.org/records/4891252",
             "sweep_root": cfg["sweep_root"], "external_modulus": {
                 "mu_mag": cfg["mu"], "stat_sigma_mag": cfg["mu_stat"],

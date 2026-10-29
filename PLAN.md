@@ -28,8 +28,12 @@ independent whole-system distance modulus, with shared zero-point error.
    model outputs as diagnostics only. Make small inspectable figures/manifests.
 5. Use measured RGB number, color/luminosity overlap and label quality to
    decide whether a minimal low-degree cross-system relation is identifiable.
-   If so, register additional system roles and reserve at least one *whole*
-   system before fitting; assess per-system center, scatter and tails. Test
+   M3 has 422 clean lower-RGB and only 2 clean upper-RGB candidates; NGC 2419
+   has 391 clean upper-RGB candidates and a lower region overlapping red HB.
+   Their secure luminosity ranges barely overlap. M53 is preregistered as a
+   development bridge and NGC 7006 as a *whole-system reserved test* before
+   either system's Legacy RGB photometry is inspected. If a relation is
+   identifiable, assess per-system center, scatter and tails. Test
    WISE on the same reliable unblended stars and report its acceptance rate.
    Do not claim photo-only metallicity or phase certainty from two clusters.
 6. Validate, document in reverse-chronological WORKLOG, commit milestone
