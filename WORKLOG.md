@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- Fixed posterior quantiles on disconnected supported-Mg cells: discrete
+  CDF indexing now returns an actually supported grid value instead of
+  interpolating through an uncalibrated gap. Added a focused regression
+  test. Files: conditional model, test. Commands: targeted pytest and diff
+  check. Validation: four conditional tests pass. NERSC fit job 60497547
+  remains queued; this change affects scoring, not fitted coefficients.
+
 - Implemented the registered whole-cluster scoring program before opening
   NGC 5466 Legacy measurements. It checks model/config hash, DECam release
   and zero source-ID overlap; scores stage-specific supported cells for

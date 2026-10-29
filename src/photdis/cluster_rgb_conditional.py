@@ -127,4 +127,4 @@ def posterior_on_grid(models, grid, feh_components, feh_weights, observed,
 
 def quantiles(grid, probability, percentiles=(.025,.16,.5,.84,.975)):
     cdf = np.cumsum(probability)
-    return np.interp(percentiles, cdf, grid)
+    return np.asarray(grid)[np.clip(np.searchsorted(cdf, percentiles),0,len(grid)-1)]

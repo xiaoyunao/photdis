@@ -2,6 +2,7 @@
 import numpy as np
 
 from photdis.cluster_rgb_conditional import (grid_from_bins, posterior_on_grid,
+                                             quantiles,
                                              residual_measurement_cov,
                                              support_bins)
 
@@ -37,3 +38,9 @@ def test_unknown_abundance_prior_changes_posterior_without_training_histogram():
     np.testing.assert_allclose(p1.sum(),1)
     np.testing.assert_allclose(p2.sum(),1)
     assert abs(np.sum(grid*p1)-np.sum(grid*p2)) > .2
+
+
+def test_posterior_quantile_stays_on_disconnected_supported_grid():
+    grid = np.array([0.,.1,1.,1.1])
+    p = np.array([.1,.39,.41,.1])
+    assert quantiles(grid,p,(.5,))[0] == 1.
