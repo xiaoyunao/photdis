@@ -2,6 +2,7 @@
 """Plot the bounded joint-sample color, abundance and luminosity overlap."""
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 import sys
 
@@ -20,8 +21,12 @@ OUTPUT = Path("figures/joint_calibration/01_color_metallicity_luminosity.png")
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", type=Path, default=SOURCE)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    args = parser.parse_args()
     require_compute()
-    a = fitsio.read(str(SOURCE), columns=["class_evidence", "clean_low_dust",
+    a = fitsio.read(str(args.source), columns=["class_evidence", "clean_low_dust",
         "feh_cal_valid", "feh_cal", "gr0", "mg_high_snr", "parallax_layer"])
     labels = np.char.strip(a["class_evidence"].astype("U"))
     layers = np.char.strip(a["parallax_layer"].astype("U"))
@@ -50,10 +55,10 @@ def main():
                 xlim=(.35, 1.65), ylim=(10, 2),
                 title="High-S/N same-star luminosity subset")
     fig.colorbar(p, ax=axes[1], label="DESI calibrated [Fe/H]")
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUTPUT, dpi=180)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(args.output, dpi=180)
     plt.close(fig)
-    print(OUTPUT)
+    print(args.output)
 
 
 if __name__ == "__main__":
