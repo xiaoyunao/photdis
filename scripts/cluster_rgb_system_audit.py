@@ -2,8 +2,10 @@
 """Band-matched RGB quality and native-system sequence audit on Slurm compute."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
+import shutil
 import socket
 import sys
 
@@ -24,6 +26,8 @@ CORE_PHASES = {"m3": ("lower_rgb",), "m53": ("upper_rgb", "lower_rgb"),
 SYSTEM_LABEL = {"m3": "DECam", "m53": "DECam", "ngc2419": "BASS/MzLS",
                 "ngc7006": "DECam"}
 BIN_EDGES = np.arange(-3.5, 4.01, .4)
+RG, RR, RZ = 3.214, 2.165, 1.211
+DUST_SCALE_TRIAL = {"m3": .005, "m53": .010, "ngc2419": .020}
 
 
 def describe(x):
@@ -104,6 +108,15 @@ def audit_cluster(name, phase_cfg):
         raise FileExistsError(out)
     out.parent.mkdir(parents=True, exist_ok=True)
     fitsio.write(str(out), table)
+    return table, original, summarize_cluster(name, table, raw_count)
+
+
+def summarize_cluster(name, table, raw_count):
+    cfg = SYSTEMS[name]
+    mu = cfg["mu"]
+    phase = table["phase"].astype("U")
+    old_path = Path("data")/f"cluster_rgb_{name}_v1"/"members.fits"
+    out = Path("data/cluster_rgb_gr_v2")/f"{name}.fits"
     high = table["pmember"] > .9
     counts = {}
     for group in ("upper_rgb", "lower_rgb", "hb", "possible_agb"):
@@ -133,12 +146,13 @@ def audit_cluster(name, phase_cfg):
             "phase_counts": counts,
             "shared_mu_mag": cfg["mu"], "shared_mu_stat": cfg["mu_stat"],
             "shared_mu_sys": cfg["mu_sys"]}
-    return table, original, info
+    return info
 
 
 def core_loci(name, new, old):
     mu = SYSTEMS[name]["mu"]
-    stage = np.isin(new["phase"], CORE_PHASES[name])
+    phase = new["phase"].astype("U")
+    stage = np.isin(phase, CORE_PHASES[name])
     high = new["pmember"] > .9
     core_a = high & stage & new["gr_clean"] & np.isfinite(new["g0"]+new["gr0"])
     # B is precisely the frozen grz-selected row, including its photometry.
@@ -149,7 +163,7 @@ def core_loci(name, new, old):
                                     ("grz_rz", old, core_b, "rz0")):
         groups = {}
         for p in CORE_PHASES[name]:
-            use = mask & (new["phase"] == p)
+            use = mask & (phase == p)
             groups[p] = {"n": int(use.sum()),
                          "mg": describe(data["g0"][use]-mu),
                          "points": sequence(data["g0"][use]-mu, data[field][use])}
@@ -159,7 +173,7 @@ def core_loci(name, new, old):
     # Separate exclusions for the small M3 upper and NGC 2419 red-HB overlap.
     for p in ("upper_rgb", "lower_rgb"):
         if p not in CORE_PHASES[name]:
-            use = high & (new["phase"] == p) & new["gr_clean"]
+            use = high & (phase == p) & new["gr_clean"]
             out[f"diagnostic_{p}"] = {"n": int(use.sum()),
                 "gr_points": sequence(new["g0"][use]-mu, new["gr0"][use], minimum=3)}
     return out
@@ -168,7 +182,7 @@ def core_loci(name, new, old):
 def residual_audit(name, tab, loci):
     mu = SYSTEMS[name]["mu"]
     use = ((tab["pmember"] > .9) & tab["gr_clean"]
-           & np.isin(tab["phase"], CORE_PHASES[name]))
+           & np.isin(tab["phase"].astype("U"), CORE_PHASES[name]))
     a = tab[use]
     mg = a["g0"].astype(float)-mu
     gr = a["gr0"].astype(float)
@@ -193,7 +207,7 @@ def residual_audit(name, tab, loci):
 def rz_residual_audit(name, new, old, loci):
     mu = SYSTEMS[name]["mu"]
     use = ((new["pmember"] > .9) & old["grz_clean"]
-           & np.isin(new["phase"], CORE_PHASES[name]))
+           & np.isin(new["phase"].astype("U"), CORE_PHASES[name]))
     a = old[use]
     mg = a["g0"].astype(float)-mu
     sg = a["sigma_g"].astype(float)
@@ -221,8 +235,26 @@ def decam_overlap(loci):
         low, high = max(xa[0],xb[0]), min(xa[-1],xb[-1])
         grid = np.arange(np.ceil(low*4)/4, high+1e-8, .25)
         delta = np.interp(grid,xa,ya)-np.interp(grid,xb,yb)
+        dust_color = RG-RR if band == "gr" else RR-RZ
+        common_scale = {}
+        for name, x, y, sign in (("m3",xa,ya,1), ("m53",xb,yb,-1)):
+            cfg = SYSTEMS[name]
+            sigma_mu = float(np.hypot(cfg["mu_stat"],cfg["mu_sys"]))
+            trials = {}
+            for kind, amount in (("mu",sigma_mu),
+                                 ("dust",DUST_SCALE_TRIAL[name])):
+                effects = []
+                for direction in (-1,1):
+                    dmu = direction*amount if kind == "mu" else 0
+                    debv = direction*amount if kind == "dust" else 0
+                    changed = np.interp(grid,x-dmu-RG*debv,y-dust_color*debv)
+                    effects.append(float(np.median(sign*(changed-np.interp(grid,x,y)))))
+                trials[kind] = {"assumed_sigma": amount,
+                                "median_color_difference_shift": effects}
+            common_scale[name] = trials
         out[band] = {"n": len(grid), "mg": grid.tolist(),
-                     "m3_minus_m53_color": delta.tolist(), "summary": describe(delta)}
+                     "m3_minus_m53_color": delta.tolist(), "summary": describe(delta),
+                     "whole_cluster_scale_sensitivity": common_scale}
     return out
 
 
@@ -254,12 +286,29 @@ def plot_loci(path, loci):
 
 def main():
     require_compute()
-    if Path("manifests/cluster_rgb_system_audit_v2.json").exists():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--recompute-from-cache", action="store_true")
+    args = parser.parse_args()
+    manifest = Path("manifests/cluster_rgb_system_audit_v2.json")
+    if manifest.exists() and not args.recompute_from_cache:
         raise FileExistsError("manifests/cluster_rgb_system_audit_v2.json")
     phase_cfg = json.loads(CONFIG.read_text())["systems"]
     tables, originals, inventories, loci, residuals = {}, {}, {}, {}, {}
     for name in SYSTEMS:
-        tab, old, info = audit_cluster(name, phase_cfg)
+        if args.recompute_from_cache:
+            tab = fitsio.read(str(Path("data/cluster_rgb_gr_v2")/f"{name}.fits"))
+            old = fitsio.read(str(Path("data")/f"cluster_rgb_{name}_v1"/"members.fits"))
+            old = old[np.argsort(old["source_id"])]
+            idx = np.searchsorted(old["source_id"],tab["source_id"])
+            if np.any(idx >= len(old)) or np.any(old["source_id"][idx] != tab["source_id"]):
+                raise ValueError(f"Cached member identity mismatch in {name}")
+            old = old[idx]
+            previous = json.loads((Path("manifests")/
+                f"cluster_rgb_{name}_inventory_v1.json").read_text())
+            info = summarize_cluster(name, tab,
+                                     raw_count=previous["counts"]["dr11_matching_rows"])
+        else:
+            tab, old, info = audit_cluster(name, phase_cfg)
         tables[name], originals[name], inventories[name] = tab, old, info
         if name in CORE_PHASES:
             loci[name] = core_loci(name, tab, old)
@@ -273,7 +322,9 @@ def main():
               "local_color_residuals": residuals,
               "decam_m3_m53_same_mg": decam_overlap(loci),
               "figure": str(fig), "compute_host": socket.gethostname()}
-    write_json(Path("manifests/cluster_rgb_system_audit_v2.json"),result)
+    if args.recompute_from_cache and manifest.exists():
+        shutil.copy2(manifest, Path("data/cluster_rgb_gr_v2/pre_stage_fix_manifest.json"))
+    write_json(manifest,result)
     print(json.dumps({"counts": {n:v["phase_counts"] for n,v in inventories.items()},
                       "decam_overlap": result["decam_m3_m53_same_mg"]}),flush=True)
 

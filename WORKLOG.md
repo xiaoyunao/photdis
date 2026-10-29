@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- First four-cluster rejoin on Slurm 60496210 wrote all four new gr tables
+  but stopped before the manifest: FITS storage converted phase labels to
+  bytes, so later Unicode comparisons selected zero stars and produced a
+  NaN split that JSON rejected. Fixed all stage comparisons by decoding
+  phase labels and added a cached-table recomputation path to avoid a second
+  sweep scan. Added a byte-stage regression test and a separate northern
+  PS1 comparison program using the published BASS/MzLS color terms. Files:
+  system audit, tests, PS1 script/wrapper. Commands: Slurm job status/error
+  inspection, focused pytest. Validation: 10 focused tests pass. Next:
+  recompute loci on the four cached FITS tables, then run PS1 check.
+
 - Started the Pro `beb15b7` follow-up. Confirmed DR11 sweep north/south
   samples carry `RELEASE` 11011/11010 and no per-row `PHOTSYS` column;
   official DR11 documentation assigns north to BASS/MzLS and south to
