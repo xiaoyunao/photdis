@@ -13,19 +13,20 @@ Current compute checkpoint: all K=16/32/64 fits converged on frozen training
 identities. The registered equal-field score selected K=32; allocated job
 60482510 completed its same-star comparison. The locked gate failed the g
 and r response requirements in both informative development fields: retain
-frozen v4 and close this XD comparison. The corrected RA150 candidate export
-60482344 produced one 125,598-row FITS table; RA0 and RA220 exports
-60482677/60482678 are pending. The first invalid multi-extension export is
-archived under ignored NERSC data. The blue inventory is complete.
+frozen v4 and close this XD comparison. All three corrected candidate
+exports completed in allocated jobs 60482344/60482677/60482678, producing
+one FITS table per field and 395,629 total selected rows. Their catalogs stay
+in ignored NERSC data; small manifests and a report are tracked. The first
+invalid multi-extension export is archived. The blue inventory is complete.
 
 ## New Round Milestones
 
-1. Reconcile the prior review's interpretation and publish an explicit
+1. Complete: reconcile the prior review's interpretation and publish an explicit
    development/selection protocol and candidate-output schema.
-2. Export v4 per-candidate A/B/C choice, higher-tier fallback reasons, support
+2. Complete: export v4 per-candidate A/B/C choice, higher-tier fallback reasons, support
    ratios, infrared-conflict marker, cold-dwarf-hypothesis status and validated
    depth state without changing distances or deleting conflicts.
-3. Build a full-covariance heteroscedastic deconvolved Gaussian mixture
+3. Complete: build a full-covariance heteroscedastic deconvolved Gaussian mixture
    `p(M_g, colors)` on exactly the v4 A/B/C training identities. Use 16/32/64
    components and propagate shared-band and Gaia label uncertainty.
 4. Complete: compare configurations by held-out development sky blocks. On identical
@@ -38,8 +39,9 @@ archived under ignored NERSC data. The blue inventory is complete.
    and label/anchor contract are in `docs/cold_v5_blue_branch.md`.
 6. Validate, document, commit and synchronize programs, small manifests and
    figures across local, GitHub and NERSC. Keep catalogs and model files on
-   NERSC and use allocated CPUs for scans/training. Finish two pending
-   candidate exports, record their manifests and verify single-table output.
+   NERSC and use allocated CPUs for scans/training. The three candidate
+   exports and single-table checks are complete; finish final validation
+   and three-end synchronization.
 
 ## Completed Previous Round Milestones
 
@@ -237,6 +239,14 @@ the comparison standard. Cold-v4 roles and fixed method are in
 configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
+
+After this bounded round closes, keep frozen v4 as the conditional cold-dwarf
+distance baseline. A new distance-model experiment should target the observed
+g/r optical response and its color–luminosity slope with a separately
+registered development/calibration/final split; faint low-S/N work should
+use a flux likelihood. For the separate metal-poor blue branch, first obtain
+Gaia/DESI overlap and distinguish the faint blue CMD sequence before fitting
+a distance relation.
 
 Review the infrared conflict flag on a separately registered validation set
 before using it to withhold distances or calibrate type probabilities. The

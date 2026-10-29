@@ -47,7 +47,8 @@ the registered same-star development gate rejected the selected K=32 model
 because its g/r response was larger than v4. The v4 route remains the
 distance baseline. A separate [blue-side inventory](docs/cold_v5_blue_branch.md)
 defines the metal-poor branch's label and anchor requirements; no blue
-distance model has been trained. The candidate export
+distance model has been trained. The [candidate export report](docs/cold_v5_candidate_export.md)
+summarizes three field products; the export
 (`scripts/cold_v4_candidate_export.py`) writes per-object v4 tier, fallback
 reason, support ratio, conflict and depth state to ignored NERSC FITS files.
 

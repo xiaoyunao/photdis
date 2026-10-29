@@ -49,9 +49,13 @@ comparison. The XD posterior is a development diagnostic, not a released
 distance or interval product. No candidate-triggered calibration or new
 final-field scoring follows this failed gate.
 
-The error-tertile and optical-color groups are reported in the comparison
-manifest. XD's narrower raw intervals and lower raw coverage make any
-standalone probability-quality claim premature. A separate cause analysis
-could examine why the smooth mixture has a stronger g/r derivative while
+The measured-error tertiles have equal source counts within each field.
+Their raw 95% coverage (v4 / XD, ordered low to high measured error) is
+RA205: 92.1/89.5%, 95.5/91.2%, 96.2/88.1%; RA60: 91.5/90.6%,
+95.5/93.2%, 96.0/91.1%. XD's median 95% widths are shorter in all six
+cells; the full widths, lower/upper misses and optical-color groups are in
+the comparison manifest. These are conditional development diagnostics,
+not calibrated probability performance. A separate cause analysis could
+examine why the smooth mixture has a stronger g/r derivative while
 preserving the observed color–luminosity slope, but that would be a newly
 registered experiment.

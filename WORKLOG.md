@@ -2,6 +2,28 @@
 
 ## 2026-10-29
 
+- Candidate export jobs 60482677/60482678 completed on allocated NERSC CPU
+  nodes with exit code zero and empty stderr. RA0/RA220 contain
+  197,165/72,866 selected rows in one FITS table each; header, columns and
+  first/last rows were checked on the login node. Their small manifests
+  match remote SHA256, and the three valid field manifests total 395,629
+  selected rows (A/B/C: 249,654/79,418/66,557) with 47,372 infrared
+  fallback-conflict flags. The invalid original RA150 product stays
+  archived. Files: two new candidate manifests,
+  `docs/cold_v5_candidate_export.md`, README/PLAN and the expanded XD
+  error-tertile report. Next: run final validation, commit and sync.
+
+- Follow-up completion audit: local/origin/NERSC all at `58e376a` with a
+  clean checkout. Candidate jobs 60482677/60482678 are still pending in
+  shared QOS for resources (8 GiB, four requested CPUs each). Reviewed the
+  XD fit, likelihood, posterior and same-star comparison code against the
+  registered covariance/selection logic; no new implementation fault found.
+  Added measured-error-tertile interval coverage to
+  `docs/cold_v5_xd_result.md` so the raw probability diagnostics are visible
+  alongside the failed optical-response gate. Next: inspect both allocated
+  export products when Slurm starts them, then commit this documentation
+  and synchronize the three copies.
+
 - Allocated comparison job 60482510 completed for preregistered XD K=32 on
   1,257 and 6,594 identical development stars. XD reduced distance-modulus
   NMAD by 0.0263/0.0255 mag, but raw 95% coverage fell from 94.59%/94.34%
