@@ -1,0 +1,20 @@
+{
+  "n_common": 93,
+  "nmad_gr": 0.31428740093994045,
+  "nmad_grz": 0.231251643356323,
+  "nmad_gr_minus_grz": 0.08303575758361745,
+  "source_bootstrap_95_nmad_gain": [
+    0.009263710604095596,
+    0.14047948889694273
+  ],
+  "median_gr": -0.10879768371582088,
+  "median_grz": -0.011281661987304403,
+  "median_paired_gr_minus_grz": -0.08000000000000007,
+  "low_mg_1_to_1p5_n": 34,
+  "low_mg_median": -0.1311630630493168,
+  "high_mg_2p5_to_3_n": 9,
+  "high_mg_median": 0.5545054626464854,
+  "high_minus_low_median": 0.6856685256958022,
+  "interpretation": "source bootstrap measures within this single test cluster; the external distance modulus is one shared scale parameter",
+  "compute_host": "nid004119"
+}

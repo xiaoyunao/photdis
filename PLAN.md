@@ -1,8 +1,22 @@
 # PLAN
 
-## Current Objective: registered DECam conditional RGB experiment
+## Current Objective: next RGB luminosity-information test
 
-Status: active. Follow the Pro review of `7256423` and the frozen protocol in
+Status: planning only. The registered DECam conditional RGB transfer is
+complete; see `docs/cluster_rgb_conditional_result_v1.md`. Keep its frozen
+fit, NGC 5466 identity and blind score as the comparison baseline. The next
+experiment should first register its development/whole-cluster test split and
+choose additional observables only if they exist for the same RGB members.
+Test luminosity information by phase and magnitude bin, propagate coherent
+cluster dust and photometric scales, and compare against the current gr/grz
+result on identical stars. Add explicit RGB/HB/AGB and abundance mixtures only
+with external stage evidence; require a new untouched whole-cluster test and
+independent field validation before claiming a field giant-distance product.
+
+## Completed Objective: registered DECam conditional RGB experiment
+
+Status: completed as a bounded model and once-only whole-cluster transfer
+test. Followed the Pro review of `7256423` and the frozen protocol in
 `docs/cluster_rgb_conditional_protocol_v1.md`; parameters and whole-cluster
 identity are recorded in `configs/cluster_rgb_conditional_v1.json`.
 
@@ -24,8 +38,16 @@ identity are recorded in `configs/cluster_rgb_conditional_v1.json`.
    WORKLOG, commit milestone and synchronize tracked code/docs/small figures
    across local, GitHub and NERSC. Large catalogs remain on NERSC.
 
-Outstanding: NGC 5466 may have too few clean stars in overlap; if so,
-complete the registered coverage audit and retain only supported conclusions.
+Measured outcome: NGC 5466 supplies 93 supported lower-RGB stars on the exact
+gr/grz common set. Adding z improves distance-modulus NMAD from 0.314 to
+0.231 mag (paired-bootstrap improvement 95% interval +0.009…+0.140 mag).
+The grz median residual swings by 0.686 mag between the registered bright
+and faint lower-RGB bins; its 68% interval spans a median 1.50 mag and covers
+95.7% of point references. There is no registered grz upper-RGB support.
+The model remains a conditional diagnostic and is not a field giant-distance
+product. Unknown-abundance priors shift its median residual. A coherent
+0.01 change in cluster E(B−V) changes the median residual by 0.152 mag in
+the sensitivity experiment. See the result report, manifests and figures.
 
 ## Completed Objective: native-system, band-matched RGB audit
 

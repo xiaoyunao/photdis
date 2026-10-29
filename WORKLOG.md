@@ -2,6 +2,23 @@
 
 ## 2026-10-29
 
+- Completed the registered DECam RGB conditional-model transfer. The frozen
+  gr/grz-common fit has no supported upper-RGB cell; the NGC 5466 whole-cluster
+  test has 93 identical supported lower-RGB sources. grz versus gr reduces
+  NMAD 0.314→0.231 mag, paired 95% bootstrap gain +0.009…+0.140 mag,
+  while grz center changes by +0.686 mag across the 1–1.5 and 2.5–3.0
+  reference-Mg bins. Its median 68% interval width is 1.50 mag. Fixed
+  abundance-mixture weights change the center, so it is not adopted as a
+  field giant-distance product. Shared scale perturbations on Slurm job
+  60498350 completed (exit 0); ±0.01 E(B−V) shifts the median by ∓0.152 mag
+  on the same 93 IDs. Files: final report, five small result manifests, two
+  selected figures, README, PLAN, WORKLOG. Commands: Slurm jobs 60497406,
+  60497547, 60497743, 60497876, 60498139, 60498253, 60498350; paired
+  and scale audits; targeted tests and JSON/diff checks. Validation: model
+  frozen before test extraction, paired IDs exact, all jobs exit 0, no
+  unsupported grz upper-RGB claim. Next: register a new study testing extra
+  luminosity observables and stage/abundance mixtures before refitting.
+
 - Pair audit Slurm 60498253 completed: on exactly 93 common lower-RGB stars,
   gr-minus-grz NMAD gain is 0.083 mag with source-bootstrap 95% interval
   +0.009…+0.140 mag; the grz median residual changes by 0.686 mag between

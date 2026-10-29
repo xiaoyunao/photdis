@@ -47,7 +47,11 @@ the registered same-star development gate rejected the selected K=32 model
 because its g/r response was larger than v4. The v4 route remains the
 distance baseline. A separate [blue-side inventory](docs/cold_v5_blue_branch.md)
 defines the metal-poor branch's label and anchor requirements; no blue
-distance model has been trained. The [candidate export report](docs/cold_v5_candidate_export.md)
+distance product has been released. A subsequent
+[metal-poor forward-parallax experiment](docs/metal_poor_forward_v1.md)
+found abundance information beyond the two optical colors in a bounded
+spectroscopic sample; it is not a purely photometric blue-star model. The
+[candidate export report](docs/cold_v5_candidate_export.md)
 summarizes three field products; the export
 (`scripts/cold_v4_candidate_export.py`) writes per-object v4 tier, fallback
 reason, support ratio, conflict and depth state to ignored NERSC FITS files.
@@ -60,8 +64,13 @@ Four DESI-ranked DR11 fields raise the low-metallicity high-S/N overlap to
 18, with only five blue of the old color edge and one in a reserved
 validation field. The targeted sample retains weak and negative parallaxes
 for a future forward-likelihood analysis. K giant/cool RGB luminosity
-calibration is a separate next branch; the targeted sample provides class
-labels but no high-S/N geometric giant anchors.
+calibration now uses independent globular-cluster distances and whole-member
+Legacy photometry. The first pooled RGB model was rejected; see the
+[native-system audit](docs/cluster_rgb_native_system_v2.md). A registered
+[DECam conditional RGB experiment](docs/cluster_rgb_conditional_result_v1.md)
+tests a frozen forward color model on NGC 5466. Its grz lower-RGB transfer
+improves over gr on the same stars, but strong magnitude-dependent residuals
+and broad intervals prevent adoption as a field giant-distance product.
 
 ## Locations
 

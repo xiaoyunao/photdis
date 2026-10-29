@@ -1,0 +1,88 @@
+{
+  "baseline_n": 93,
+  "cases": {
+    "dust_-1": {
+      "delta": -0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": 0.15214073181152443,
+      "p05_p95_delta_mu_change": [
+        0.11214073181152173,
+        0.172140731811524
+      ]
+    },
+    "dust_+1": {
+      "delta": 0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": -0.15214073181152266,
+      "p05_p95_delta_mu_change": [
+        -0.17214073181152473,
+        -0.09214073181152216
+      ]
+    },
+    "g_zero_-1": {
+      "delta": -0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": -0.050000228881835085,
+      "p05_p95_delta_mu_change": [
+        -0.07000022888183466,
+        -0.010000228881835938
+      ]
+    },
+    "g_zero_+1": {
+      "delta": 0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": 0.050000228881835085,
+      "p05_p95_delta_mu_change": [
+        0.010000228881835938,
+        0.07000022888183643
+      ]
+    },
+    "r_zero_-1": {
+      "delta": -0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": -0.08000000000000007,
+      "p05_p95_delta_mu_change": [
+        -0.10000000000000142,
+        -0.019999999999999574
+      ]
+    },
+    "r_zero_+1": {
+      "delta": 0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": 0.040000000000000924,
+      "p05_p95_delta_mu_change": [
+        0.019999999999999574,
+        0.08000000000000007
+      ]
+    },
+    "z_zero_-1": {
+      "delta": -0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": 0.08000000000000007,
+      "p05_p95_delta_mu_change": [
+        0.052000000000000324,
+        0.10000000000000142
+      ]
+    },
+    "z_zero_+1": {
+      "delta": 0.01,
+      "n_common": 93,
+      "n_support_changed": 0,
+      "median_delta_mu_change": -0.09999999999999964,
+      "p05_p95_delta_mu_change": [
+        -0.120000000000001,
+        -0.05999999999999872
+      ]
+    }
+  },
+  "external_mu_shared_sigma": 0.09,
+  "note": "all perturbations are coherent across the test cluster; no model refit",
+  "compute_host": "nid004138"
+}

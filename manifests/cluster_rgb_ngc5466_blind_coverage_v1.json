@@ -1,0 +1,40 @@
+{
+  "role": "registered_whole_cluster_test",
+  "registration": "configs/cluster_rgb_conditional_v1.json",
+  "frozen_model": "manifests/cluster_rgb_conditional_model_v1.json",
+  "member_source": "data/reference/vasiliev_baumgardt_2021_members.zip",
+  "raw_match_count": 4918,
+  "unique_members": 4918,
+  "release_counts": {
+    "11010": 4918
+  },
+  "phase_counts": {
+    "upper_rgb": {
+      "members": 83,
+      "gr_clean": 52,
+      "grz_clean": 32
+    },
+    "lower_rgb": {
+      "members": 108,
+      "gr_clean": 96,
+      "grz_clean": 93
+    },
+    "hb": {
+      "members": 85,
+      "gr_clean": 72,
+      "grz_clean": 65
+    },
+    "possible_agb": {
+      "members": 9,
+      "gr_clean": 8,
+      "grz_clean": 8
+    },
+    "ambiguous": {
+      "members": 975,
+      "gr_clean": 857,
+      "grz_clean": 820
+    }
+  },
+  "data_file": "data/cluster_rgb_gr_v2/ngc5466.fits",
+  "compute_host": "nid004089"
+}
