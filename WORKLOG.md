@@ -2,6 +2,13 @@
 
 ## 2026-10-29
 
+- Added a development-only residual audit for the already frozen conditional
+  model, by cluster, Gaia stage and input tier. This will test whether the
+  simple four-term color curve actually follows each measured DECam branch
+  before interpreting the independent test. Files: audit Python/Slurm
+  scripts. Commands: Python compilation and diff check. Validation: pass.
+  Next: allocated audit job; no model refit or threshold change.
+
 - Conditional development fit completed on NERSC Slurm job 60497547
   (exit 0). The fixed gr-all/common/grz-common tiers use 1041/850/850
   development sources. Registered support allows gr-only upper RGB
