@@ -76,7 +76,8 @@ def selected_field(item, references, route, forests, policy, published):
     rows = {name: np.asarray(values)[selected] for name, values in table.items()
             if name in set(EXTRA) | set(FEATURES["C_grzW1W2"]) | {"g0", "p_corr", "ra", "dec"}}
     rows["level"] = level[selected]
-    rows["mg_gaia"] = np.asarray(mg)[selected]
+    rows["mg_gaia"] = np.asarray(mg, dtype=float)[selected]
+    rows["g0"] = np.asarray(rows["g0"], dtype=float)
     rows["mg_model"] = np.full(len(selected), np.nan)
     for tier, number in LEVEL.items():
         take = rows["level"] == number
