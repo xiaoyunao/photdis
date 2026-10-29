@@ -15,19 +15,25 @@ import numpy as np
 from photdis.stage1 import require_compute, write_json
 
 SOURCE = Path("data/giant_ranked_vac_v1/same_star.fits")
-OUTPUT = Path("manifests/giant_ranked_vac_profile_v1.json")
+OUTPUT = Path("manifests/giant_ranked_vac_profile_v2.json")
 
 
 def stats(rows):
     clean = rows["clean_low_dust"] & ~rows["cmd_spectral_conflict"]
     teff = rows["desi_teff"]
-    k = clean & (teff >= 4200) & (teff < 5000)
+    k_all = (teff >= 4200) & (teff < 5000)
+    k = clean & k_all
     spec = k & rows["specdis_valid"]
     sp = k & rows["spdist_valid"]
     high_spec = spec & (rows["desi_snr"] >= 60)
     result = {
         "all_giants": int(len(rows)),
         "clean_low_dust_giants": int(clean.sum()),
+        "k_4200_5000_all": int(k_all.sum()),
+        "k_grz_clean": int((k_all & rows["grz_clean"]).sum()),
+        "k_ebv_lt0p03": int((k_all & np.isfinite(rows["ebv"])
+                              & (rows["ebv"] < .03)).sum()),
+        "k_cmd_spectral_conflict": int((k_all & rows["cmd_spectral_conflict"]).sum()),
         "k_4200_5000_clean": int(k.sum()),
         "k_specdis_valid": int(spec.sum()),
         "k_specdis_snr_ge60": int(high_spec.sum()),
