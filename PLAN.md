@@ -1,6 +1,33 @@
 # PLAN
 
-## Current Objective: native-system, band-matched RGB audit
+## Current Objective: registered DECam conditional RGB experiment
+
+Status: active. Follow the Pro review of `7256423` and the frozen protocol in
+`docs/cluster_rgb_conditional_protocol_v1.md`; parameters and whole-cluster
+identity are recorded in `configs/cluster_rgb_conditional_v1.json`.
+
+1. Register NGC 5466 as a new whole-cluster DECam test before inspecting its
+   Legacy photometry. Use its independent RR Lyrae distance and a common
+   RRab-to-UVES metallicity scale. Keep its source IDs out of all development.
+2. Audit NGC 7006 as a new development system: gr and grz upper RGB locus,
+   local color residual, magnitude/radius/image-quality dependence, shared
+   distance/dust sensitivity and actual overlap with M53. M3 lower and M53
+   upper/lower remain other development stages; M3 upper edge diagnostic only.
+3. Fit low-parameter forward gr and grz conditional RGB relations only on
+   observed shared magnitude ranges. Propagate shared-band covariance and
+   whole-cluster scale uncertainties. Keep existing per-band optical quality.
+4. Freeze new model and fixed priors, then extract/score NGC 5466 with an
+   allocated NERSC job. Compare bands on identical grz-clean stars and report
+   gr-only added coverage. Evaluate known-abundance and three fixed unknown
+   abundance mixture priors, by magnitude bin and with the registered metrics.
+5. Write the physical result and limitations, run focused validation, update
+   WORKLOG, commit milestone and synchronize tracked code/docs/small figures
+   across local, GitHub and NERSC. Large catalogs remain on NERSC.
+
+Outstanding: NGC 5466 may have too few clean stars in overlap; if so,
+complete the registered coverage audit and retain only supported conclusions.
+
+## Completed Objective: native-system, band-matched RGB audit
 
 Status: completed as a bounded observational audit. Followed the Pro review of `beb15b7` with a bounded
 four-cluster experiment. Keep the frozen pooled A/B fit, NGC 7006 test,
@@ -42,9 +69,8 @@ upper has a `0.090 mag` local gr residual NMAD with a strong radius trend;
 only 25 quality PS1 counterparts pass the northern-system cross-check.
 See `docs/cluster_rgb_native_system_v2.md` and two new manifests.
 
-Next: design the smallest independent north/south cluster set with
-overlapping metallicity, `M_g` and RGB stage, and register new whole-cluster
-blind tests before another pooled fit. Do not re-use NGC 7006 as untouched.
+Next: the new experiment above registers NGC 5466 for its own whole-cluster
+test and records NGC 7006's changed role. The old test remains frozen.
 
 ## Completed Objective: first pooled cluster RGB experiment
 

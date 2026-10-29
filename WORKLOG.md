@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Started the Pro `7256423` follow-up as a registered DECam conditional RGB
+  experiment. Read the full review and recovered local/GitHub/NERSC tracked
+  heads at `7256423`. Selected NGC 5466 as a new, untouched whole-cluster
+  test using an independent RR Lyrae modulus and a common RRab-to-UVES iron
+  scale; registered its identity, phase screen, fixed priors and scoring
+  before opening its Legacy photometry. NGC 7006 is development only for
+  the new experiment; the historical test stays frozen. Files: conditional
+  config/protocol, PLAN, WORKLOG. Commands: git fetch/status/log, NERSC
+  archive filename inspection, primary-paper review. Validation: member
+  filename exists; no new fit or test score yet. Next: commit registration,
+  audit NGC 7006, build and freeze new forward model, then run new test.
+
 - Completed the bounded Pro `beb15b7` native-system RGB audit on allocated
   Slurm finalize/PS1 jobs 60496669/60496671. All four cached member tables
   map to the expected DR11 `RELEASE`; M3 upper RGB has 97 clean gr versus

@@ -1,0 +1,33 @@
+{
+  "experiment": "decam_conditional_rgb_v1",
+  "registration_state": "frozen_before_ngc5466_legacy_photometry",
+  "development": {
+    "m3": {"phases": ["lower_rgb"], "feh_uves_rrab": -1.46, "feh_sigma": 0.20, "dust_scale_sigma_ebv": 0.005},
+    "m53": {"phases": ["upper_rgb", "lower_rgb"], "feh_uves_rrab": -2.00, "feh_sigma": 0.10, "dust_scale_sigma_ebv": 0.010},
+    "ngc7006": {"phases": ["upper_rgb"], "feh_uves_rrab": -1.40, "feh_sigma": 0.16, "dust_scale_sigma_ebv": 0.050}
+  },
+  "whole_cluster_test": {
+    "ngc5466": {
+      "phases": ["lower_rgb", "upper_rgb"],
+      "member_file": "catalogues/NGC_5466.txt",
+      "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+      "ra": [210, 215], "dec": [25, 30],
+      "center": [211.36, 28.53],
+      "sweep_ra": [205, 210, 215], "sweep_dec": [25, 30],
+      "external_mu": 16.02, "external_mu_sigma": 0.09,
+      "external_mu_reference": "https://arxiv.org/abs/0711.4027",
+      "feh_uves_rrab": -2.16, "feh_sigma": 0.23,
+      "feh_rrc_alternative": -1.89,
+      "dust_scale_sigma_ebv": 0.010,
+      "phase_screen": "copy_m53_v1_before_reading_legacy"
+    }
+  },
+  "metallicity_reference": "https://arxiv.org/html/2306.01175v1",
+  "metallicity_scale": "RRab Fourier Zinn-West transformed to Carretta UVES by -0.413 + 0.130*ZW - 0.356*ZW^2; common source for all four clusters",
+  "quality": "Pmember>0.9; Gaia CMD candidate phase; existing gr_clean for gr, existing grz_clean_same_row for grz; no residual-based rejection",
+  "comparison": "Evaluate gr and grz on identical grz-clean source IDs; report gr-only added coverage separately; score only within development overlap and report unsupported regions explicitly",
+  "luminosity_prior": "uniform Mg within predeclared supported stage and magnitude cells, never empirical training histogram",
+  "unknown_feh_prior_weights": [[0.5, 0.5], [0.8, 0.2], [0.2, 0.8]],
+  "unknown_feh_components_uves": [-1.46, -2.00],
+  "blind_metrics": ["n_by_mg_bin", "delta_mu_median", "delta_mu_nmad", "abs_delta_mu_gt_0p5_fraction", "coverage_68", "coverage_95", "mean_log_predictive_density"]
+}
