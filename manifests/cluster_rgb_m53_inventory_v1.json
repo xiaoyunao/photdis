@@ -1,0 +1,29 @@
+{
+  "system": "m53",
+  "role": "development_bridge",
+  "member_source": "data/reference/vasiliev_baumgardt_2021_members.zip",
+  "membership_reference": "https://zenodo.org/records/4891252",
+  "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+  "external_modulus": {
+    "mu_mag": 16.403,
+    "stat_sigma_mag": 0.024,
+    "systematic_sigma_mag": 0.033,
+    "url": "https://arxiv.org/abs/2012.13495"
+  },
+  "counts": {
+    "member_catalog_all": 11051,
+    "member_catalog_p_ge_0p5": 9826,
+    "member_catalog_p_gt_0p9": 9512,
+    "dr11_matching_rows": 9826,
+    "dr11_unique_members": 9826,
+    "dr11_p_gt_0p9": 9512,
+    "grz_base_p_gt_0p9": 9455,
+    "grz_clean_p_gt_0p9": 6550,
+    "grz_clean_p_0p5_to_0p9": 221,
+    "w1_clean_grz_p_gt_0p9": 171,
+    "w2_clean_grz_p_gt_0p9": 101
+  },
+  "data_file": "data/cluster_rgb_m53_v1/members.fits",
+  "figure": "figures/cluster_rgb/01_member_cmd_m53.png",
+  "compute_host": "nid004090"
+}

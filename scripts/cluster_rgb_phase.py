@@ -150,7 +150,7 @@ def plot_phase(path, tab, phase, mu, system, loci):
 def main():
     require_compute()
     parser = argparse.ArgumentParser()
-    parser.add_argument("system", choices=("m3", "ngc2419"))
+    parser.add_argument("system", choices=json.loads(CONFIG.read_text())["systems"])
     args = parser.parse_args()
     cfg_all = json.loads(CONFIG.read_text())
     cfg = cfg_all["systems"][args.system]
@@ -164,6 +164,22 @@ def main():
     mu = inventory["external_modulus"]["mu_mag"]
     phase = classify(tab["gaia_g"]-mu, tab["bp_rp"], cfg)
     counts = {name: phase_counts(tab, phase == name) for name in PHASES}
+    if inventory["role"] == "reserved_whole_system":
+        out = {"system": args.system, "role": inventory["role"],
+               "membership_probability_core": ">0.9",
+               "phase_config": str(CONFIG), "phase_definition": cfg,
+               "phase_caveat": cfg_all["stage_caveat"],
+               "external_modulus": inventory["external_modulus"],
+               "phase_counts": counts,
+               "rgb_candidate_radius_quality": radial_quality(
+                   tab, np.isin(phase, ("upper_rgb", "lower_rgb"))),
+               "data_file": str(inp), "figure": inventory["figure"],
+               "holdout_state": "Gaia CMD and DR11 quality counts only; Legacy luminosities sealed",
+               "compute_host": socket.gethostname()}
+        write_json(manifest, out)
+        print(json.dumps({"phase_counts": {k:v["grz_clean"] for k,v in counts.items()}}),
+              flush=True)
+        return
     rgb = np.isin(phase, ("upper_rgb", "lower_rgb")) & (tab["pmember"] > .9)
     core = rgb & tab["grz_clean"] & np.isfinite(tab["g0"])
     mg = tab["g0"][core] - mu
@@ -177,14 +193,18 @@ def main():
                   "a_g_over_ebv": summary(ag[normal]/ebv[normal]),
                   "a_r_over_ebv": summary(ar[normal]/ebv[normal]),
                   "a_z_over_ebv": summary(az[normal]/ebv[normal])}
-    source_spectrum = json.loads((Path("manifests")/("giant_m3_reference_v1.json" if args.system == "m3"
-                                            else "giant_ngc2419_reference_v1.json")).read_text())
-    spectral_rows = source_spectrum.get("members", source_spectrum.get("stars", []))
-    sid_phase = {int(sid): str(p) for sid,p in zip(tab["source_id"],phase)}
-    spectral = {"qualified_giant_phases": {name: sum(
-        sid_phase.get(int(s["source_id"])) == name for s in spectral_rows)
-        for name in PHASES}}
-    out = {"system": args.system, "membership_probability_core": ">0.9",
+    spectral = None
+    source_file = {"m3": "giant_m3_reference_v1.json",
+                   "ngc2419": "giant_ngc2419_reference_v1.json"}.get(args.system)
+    if source_file:
+        source_spectrum = json.loads((Path("manifests")/source_file).read_text())
+        spectral_rows = source_spectrum.get("members", source_spectrum.get("stars", []))
+        sid_phase = {int(sid): str(p) for sid,p in zip(tab["source_id"],phase)}
+        spectral = {"qualified_giant_phases": {name: sum(
+            sid_phase.get(int(s["source_id"])) == name for s in spectral_rows)
+            for name in PHASES}}
+    out = {"system": args.system, "role": inventory["role"],
+           "membership_probability_core": ">0.9",
            "phase_config": str(CONFIG), "phase_definition": cfg,
            "phase_caveat": cfg_all["stage_caveat"],
            "external_modulus": inventory["external_modulus"],

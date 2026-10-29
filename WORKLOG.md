@@ -2,6 +2,18 @@
 
 ## 2026-10-29
 
+- Completed allocated full-member DR11 extraction for registered M53
+  development and NGC 7006 whole-system holdout (Slurm 60493137, both
+  exit 0). P>0.9 member/clean-grz counts are 9,512/6,550 and 568/145.
+  Examined the M53 Gaia/Legacy overview and only the NGC 7006 Gaia CMD
+  and quality coverage; holdout Legacy luminosities remain unread.
+  Registered broad Gaia-only phase boundaries before fitting an M53
+  sequence. Files: two inventory manifests and plots, phase config/script,
+  Slurm wrapper, cluster report and registry. Commands: allocated job,
+  targeted Python compilation and four tests. Validation: exact membership
+  joins, array tasks exit 0. Next: run the phase audit and decide whether
+  M53 fills the secure luminosity gap.
+
 - Completed Gaia-CMD phase and DR11 quality audit for full M3/NGC 2419
   membership on Slurm job 60492970. M3 P>0.9 upper/lower RGB candidates
   have 387/579 members but only 2/422 clean grz; NGC 2419 has 458/93

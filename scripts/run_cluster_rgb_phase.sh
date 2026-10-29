@@ -4,7 +4,7 @@
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH -t 00:20:00
-#SBATCH --mem=4G
+#SBATCH --mem=2G
 #SBATCH -o logs/cluster_rgb_phase_%A_%a.out
 #SBATCH -e logs/cluster_rgb_phase_%A_%a.err
 
@@ -18,6 +18,10 @@ if [ "$SLURM_ARRAY_TASK_ID" = 0 ]; then
     python scripts/cluster_rgb_phase.py m3
 elif [ "$SLURM_ARRAY_TASK_ID" = 1 ]; then
     python scripts/cluster_rgb_phase.py ngc2419
+elif [ "$SLURM_ARRAY_TASK_ID" = 2 ]; then
+    python scripts/cluster_rgb_phase.py m53
+elif [ "$SLURM_ARRAY_TASK_ID" = 3 ]; then
+    python scripts/cluster_rgb_phase.py ngc7006
 else
     echo "Unknown cluster array index: $SLURM_ARRAY_TASK_ID" >&2
     exit 2
