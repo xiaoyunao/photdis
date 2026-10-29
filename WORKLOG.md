@@ -2,6 +2,26 @@
 
 ## 2026-10-29
 
+- Completed the DESI-first DR11 follow-up and scarce-anchor audit on allocated
+  NERSC CPUs (array 60485082, inventory 60485094, plot 60485687, anchor
+  audit 60485813). Four registered 10°×10° fields yielded 132,530 unique
+  DESI–Gaia–Legacy matches, 9,709 clean low-dust conservative cool-MS
+  labels, 1,180 high-S/N geometric anchors, 18 with calibrated
+  `[Fe/H]<−1.5`, and five blue of the old color edge (4 development,
+  1 reserved validation). Among the low-metallicity clean core, 42 have
+  corrected S/N 10–20, 228 have S/N 0–10 and three negative parallaxes.
+  One blue high-S/N object's `g-r` disagrees with its `r-z`, Gaia color and
+  DESI temperature; record for individual photometric review. The sample
+  has 230 conservative cool giants, 103 clean low-dust, zero high-S/N
+  geometric labels. Files: targeted field/inventory/anchor manifests,
+  targeted joint figure, audit scripts, `docs/joint_calibration_v1.md`,
+  PLAN. Commands: Slurm `sbatch` for field/inventory/plot/audit jobs,
+  `scp` for small manifests and figure, `python3 -m py_compile`, `bash -n`,
+  `git diff --check` and `python3 -m pytest -q`. Validation: all four field
+  predicate checks pass; plot visually inspected; 83 local Python tests pass.
+  Next science step: build giant luminosity labels and a forward-parallax method for the
+  metal-poor weak-parallax population; no new distance model this round.
+
 - Seven-field joint inventory 60484207 produced 37,214 unique DESI matches;
   among 3,213 conservative cool-main-sequence labels, 224 have clean,
   low-dust DR11 photometry and corrected Gaia S/N≥20, one has calibrated

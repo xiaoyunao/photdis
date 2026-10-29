@@ -49,8 +49,8 @@ The v2 output fields `class_evidence_available`, `class_evidence`,
 one with `logg+σ_logg<3.2` is a cool-giant conflict. An unambiguous DESI
 Redrock QSO/galaxy type with S/N≥10 and the retained quality bits is a
 nonstellar conflict. Other qualified stars remain a separate transitional
-or other-star category. No matched qualified evidence is `unknown`, which
-does not imply dwarf status. These are diagnostic flags, not a fitted
+or other-star category. Objects without qualified evidence remain `unknown`,
+which does not imply dwarf status. These are diagnostic flags, not a fitted
 probability or a requirement for applying photometric distances.
 
 The three jobs completed with exit code zero and empty stderr. For each

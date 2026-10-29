@@ -96,17 +96,7 @@ independently checked spectral distances) while retaining class/metallicity
 uncertainty for no-spectrum application targets. DESI BHB distances are a
 different stellar-type resource, not a cool-RGB calibration.
 
-## Decision
-
-Retain frozen v4 as a conditional cold-dwarf distance baseline. Keep the
-blue and giant branches as separate sample-building tasks. Next, construct a
-**DESI-targeted** DR11 match outside these seven boxes, prioritizing
-4200–5000 K low-metallicity main-sequence spectra and qualified K giants,
-then quantify genuine high-S/N and weak/negative-parallax overlap before
-registering any new model or final test. Preserve the three reserved fields
-and source identities when assessing later generalization.
-
-## DESI-first targeted expansion in progress
+## DESI-first targeted expansion
 
 An allocated scan of the PRIMARY DESI MWS projected pool ranks complete
 DR11 10°×10° cells using qualified 4200–5000 K stars with
@@ -115,8 +105,8 @@ selection details are in
 [`manifests/desi_target_field_ranking.json`](../manifests/desi_target_field_ranking.json).
 There are 5,173 such DESI targets with Gaia IDs and −40≤Dec<35; 1,949
 also meet |b|≥30 and MWS `EBV<0.03`, including 137 with *raw MWS Gaia*
-parallax S/N≥20. These are DESI catalog counts, not yet DR11 clean-photometry
-joint anchors. Four available sweep cells were registered in
+parallax S/N≥20. These are DESI catalog counts, rather than DR11
+clean-photometry joint anchors. Four available sweep cells were registered in
 [`configs/joint_targeted_fields.json`](../configs/joint_targeted_fields.json):
 
 | Field RA / Dec | Role | Low-dust, high-lat DESI poor-core targets | Raw Gaia S/N≥20 among them |
@@ -126,6 +116,68 @@ joint anchors. Four available sweep cells were registered in
 | 190–200 / 20–30 | Reserved validation | 120 | 6 |
 | 20–30 / 0–10 | Reserved validation | 23 | 4 |
 
-The next allocated step reads the actual DR11 sweep photometry in those
-fields and reconstructs the same-star quality and corrected-parallax layers.
-The roles are fixed before those outcomes are inspected.
+Jobs 60485082/60485094 read the actual DR11 sweep photometry, matched it to
+DESI and Gaia, and applied the same clean-photometry, low-dust, class and
+corrected-parallax definitions as the seven-field study. The roles were
+fixed before those outcomes were inspected. The
+[targeted manifest](../manifests/joint_calibration_targeted_v1.json) contains
+the four field and role cross-tabulations; the full 132,530-row FITS stays
+at NERSC `data/joint_calibration_targeted_v1/same_star.fits`.
+The [targeted figure](../figures/joint_calibration/02_targeted_color_metallicity_luminosity.png)
+shows the color–abundance and color–luminosity overlap. It plots the 9,702
+clean core and 1,179 high-S/N core objects with valid calibrated abundance;
+the table below includes seven and one additional objects, respectively,
+without such an abundance.
+
+| Same-star quantity in four targeted fields | Count |
+|---|---:|
+| Unambiguous DESI–Legacy matches | 132,530 |
+| Conservative 4200–5000 K main-sequence core | 12,943 |
+| Core with clean low-dust `grz` | 9,709 |
+| Core with clean photometry and corrected Gaia S/N≥20 | 1,180 |
+| High-S/N core with calibrated `[Fe/H]<−1.5` | **18** |
+| Above, blue of frozen `(g−r)₀=0.909` edge | **5** |
+| Conservative cool giants / clean low-dust / high-S/N | 230 / 103 / **0** |
+
+The 18 metal-poor high-S/N anchors split 11 development / 7 reserved
+validation; the five blue-side anchors split **4 / 1**. One development
+blue-side object at `(g−r)₀=0.351` has `(r−z)₀=0.923`, Gaia
+`BP−RP=1.303` and DESI `T_eff=4331 K`. Its optical colors are discordant
+and its photometry merits individual review before any fit. The other four
+blue-side anchors span only `(g−r)₀=0.728–0.832`.
+
+The [individual-anchor audit](../manifests/joint_targeted_poor_anchors.json)
+also records the low-metallicity clean core's parallax layers:
+
+| Color domain | S/N≥20 | S/N 10–20 | S/N 0–10 | Negative | Unusable |
+|---|---:|---:|---:|---:|---:|
+| All colors | 18 | 42 | 228 | 3 | 8 |
+| `(g−r)₀<0.909` | 5 | 17 | 127 | 1 | 2 |
+
+These weaker and negative measurements retain raw parallax and uncertainty
+for a later forward-likelihood analysis. Their inverse parallax is not used
+as a direct luminosity label. The high-S/N overlap now supports an initial
+descriptive color–luminosity check, but four development and one reserved
+blue metal-poor anchors cannot separately validate a blue-branch zero point,
+color slope and metallicity term. No blue distance model is fit or released.
+
+Across these targeted fields, 230 conservative cool giants have DESI class
+evidence, 103 have clean low-dust optical photometry, and none has corrected
+Gaia S/N≥20. The next branch is therefore a **giant classification and
+luminosity-label study**: target bright nearby Gaia giants, cluster members
+and independently checked spectroscopic-distance resources, with an identity
+and quality audit before any calibration. The DESI-targeted cool-main-sequence
+fields alone do not provide that geometric giant anchor set.
+
+## Decision
+
+Retain frozen v4 as the conditional cold-dwarf distance baseline and the
+XD result as a research comparison. The targeted sample improves low-metallicity
+same-star overlap from one to 18 high-S/N anchors, while preserving 42
+intermediate, 228 weak and three negative-parallax low-metallicity core
+objects. The five blue-side anchors include one discordant-color object and
+only one reserved-validation object, so the current data do not support a
+new calibrated blue metal-poor distance relation. Continue with a targeted
+giant label and luminosity resource audit and a forward-parallax method for
+the metal-poor weak-parallax population. Keep their physical branches and
+validation identities separate from the frozen v4 result.

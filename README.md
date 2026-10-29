@@ -56,7 +56,12 @@ frozen distance columns. A bounded
 [DESI–Gaia–Legacy same-star inventory](docs/joint_calibration_v1.md) finds
 only one calibrated `[Fe/H]<−1.5` star among 224 conservative high-S/N
 cool-main-sequence anchors and none in the blue-side metal-poor intersection.
-K giant/cool RGB luminosity calibration is a separate next branch.
+Four DESI-ranked DR11 fields raise the low-metallicity high-S/N overlap to
+18, with only five blue of the old color edge and one in a reserved
+validation field. The targeted sample retains weak and negative parallaxes
+for a future forward-likelihood analysis. K giant/cool RGB luminosity
+calibration is a separate next branch; the targeted sample provides class
+labels but no high-S/N geometric giant anchors.
 
 ## Locations
 

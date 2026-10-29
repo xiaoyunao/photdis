@@ -1,0 +1,4046 @@
+{
+  "scope": "DESI-selected metal-poor main-sequence DR11 measured-photometry follow-up",
+  "config_sha256": "5dd2e54bba31f3aca9e948b31078b6e6497a2935f62824b26d40614f45427ab8",
+  "output": "data/joint_calibration_targeted_v1/same_star.fits",
+  "output_sha256": "2e1b1243f50b3cc93ab7405a9847911d6a45546ab790a00ba8b356bc4f4afc6e",
+  "output_rows": 132530,
+  "fields": {
+    "targeted_ra180_190_dec_p000_p010": {
+      "role": "development",
+      "input_rows": 1185251,
+      "desi_matched_rows": 51587,
+      "deduplication": {
+        "matched_unambiguous_rows": 51587,
+        "unique_desi_objects": 51368,
+        "unique_source_rows": 51368
+      },
+      "summary": {
+        "rows": 51368,
+        "class_counts": {
+          "cool_giant": {
+            "all": 132,
+            "clean_low_dust": 63,
+            "high_snr": 0,
+            "calibrated_feh": 109
+          },
+          "cool_main_sequence": {
+            "all": 4518,
+            "clean_low_dust": 3262,
+            "high_snr": 522,
+            "calibrated_feh": 4511
+          },
+          "nonstellar": {
+            "all": 477,
+            "clean_low_dust": 418,
+            "high_snr": 1,
+            "calibrated_feh": 0
+          },
+          "other_star_or_transition": {
+            "all": 29741,
+            "clean_low_dust": 20639,
+            "high_snr": 2267,
+            "calibrated_feh": 21897
+          },
+          "unknown": {
+            "all": 16500,
+            "clean_low_dust": 14631,
+            "high_snr": 177,
+            "calibrated_feh": 0
+          }
+        },
+        "parallax_layers": {
+          "high_ge20": 2967,
+          "mid_10_20": 4001,
+          "weak_0_10": 21455,
+          "negative": 3856,
+          "unusable": 19089
+        },
+        "high_snr_core_by_feh": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 6
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 19
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 167
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 287
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 41
+          }
+        ],
+        "core_coverage": {
+          "gr0": {
+            "all": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 1589
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 1590
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 83
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 190
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 307
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 24
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "r": {
+            "all": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 392
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 2172
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 698
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 340
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 181
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "teff": {
+            "all": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 416
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 734
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 1023
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 1089
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 89
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 113
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 160
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 159
+              }
+            ]
+          }
+        },
+        "high_snr_core_feh_by_color": [
+          {
+            "gr0_range": [
+              0,
+              0.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.6,
+              0.909
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 2
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 6
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 60
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 107
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 15
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.909,
+              1.2
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 4
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 13
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 104
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 161
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 24
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.2,
+              1.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 3
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 19
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 2
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.6,
+              3
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "targeted_ra180_190_dec_m010_p000": {
+      "role": "development",
+      "input_rows": 608979,
+      "desi_matched_rows": 37334,
+      "deduplication": {
+        "matched_unambiguous_rows": 37334,
+        "unique_desi_objects": 37147,
+        "unique_source_rows": 37147
+      },
+      "summary": {
+        "rows": 37147,
+        "class_counts": {
+          "cool_giant": {
+            "all": 55,
+            "clean_low_dust": 22,
+            "high_snr": 0,
+            "calibrated_feh": 38
+          },
+          "cool_main_sequence": {
+            "all": 3584,
+            "clean_low_dust": 2723,
+            "high_snr": 299,
+            "calibrated_feh": 3578
+          },
+          "nonstellar": {
+            "all": 296,
+            "clean_low_dust": 246,
+            "high_snr": 2,
+            "calibrated_feh": 0
+          },
+          "other_star_or_transition": {
+            "all": 22996,
+            "clean_low_dust": 16889,
+            "high_snr": 1385,
+            "calibrated_feh": 16203
+          },
+          "unknown": {
+            "all": 10215,
+            "clean_low_dust": 8893,
+            "high_snr": 70,
+            "calibrated_feh": 0
+          },
+          "wd_cmd_candidate": {
+            "all": 1,
+            "clean_low_dust": 0,
+            "high_snr": 0,
+            "calibrated_feh": 1
+          }
+        },
+        "parallax_layers": {
+          "high_ge20": 1756,
+          "mid_10_20": 2887,
+          "weak_0_10": 17338,
+          "negative": 2903,
+          "unusable": 12263
+        },
+        "high_snr_core_by_feh": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 2
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 2
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 16
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 121
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 133
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 25
+          }
+        ],
+        "core_coverage": {
+          "gr0": {
+            "all": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 1356
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 1308
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 58
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 109
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 178
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 11
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "r": {
+            "all": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 183
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 1626
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 914
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 161
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 138
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "teff": {
+            "all": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 343
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 591
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 885
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 904
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 63
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 58
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 85
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 93
+              }
+            ]
+          }
+        },
+        "high_snr_core_feh_by_color": [
+          {
+            "gr0_range": [
+              0,
+              0.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.6,
+              0.909
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 7
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 40
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 50
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 11
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.909,
+              1.2
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 9
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 77
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 77
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 13
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.2,
+              1.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 4
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 6
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 1
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.6,
+              3
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "targeted_ra190_200_dec_p020_p030": {
+      "role": "reserved_validation",
+      "input_rows": 770466,
+      "desi_matched_rows": 27256,
+      "deduplication": {
+        "matched_unambiguous_rows": 27256,
+        "unique_desi_objects": 27064,
+        "unique_source_rows": 27064
+      },
+      "summary": {
+        "rows": 27064,
+        "class_counts": {
+          "cool_giant": {
+            "all": 28,
+            "clean_low_dust": 14,
+            "high_snr": 0,
+            "calibrated_feh": 22
+          },
+          "cool_main_sequence": {
+            "all": 3076,
+            "clean_low_dust": 2400,
+            "high_snr": 262,
+            "calibrated_feh": 3074
+          },
+          "nonstellar": {
+            "all": 237,
+            "clean_low_dust": 206,
+            "high_snr": 0,
+            "calibrated_feh": 0
+          },
+          "other_star_or_transition": {
+            "all": 17224,
+            "clean_low_dust": 13110,
+            "high_snr": 1593,
+            "calibrated_feh": 10163
+          },
+          "unknown": {
+            "all": 6499,
+            "clean_low_dust": 5716,
+            "high_snr": 96,
+            "calibrated_feh": 0
+          }
+        },
+        "parallax_layers": {
+          "high_ge20": 1951,
+          "mid_10_20": 2776,
+          "weak_0_10": 12336,
+          "negative": 1427,
+          "unusable": 8574
+        },
+        "high_snr_core_by_feh": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 3
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 11
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 111
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 114
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 22
+          }
+        ],
+        "core_coverage": {
+          "gr0": {
+            "all": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 1153
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 1206
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 41
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 65
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 182
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 15
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "r": {
+            "all": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 104
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 1523
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 770
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 3
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 89
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 173
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "teff": {
+            "all": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 374
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 553
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 747
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 726
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 69
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 72
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 70
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 51
+              }
+            ]
+          }
+        },
+        "high_snr_core_feh_by_color": [
+          {
+            "gr0_range": [
+              0,
+              0.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.6,
+              0.909
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 31
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 28
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 5
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.909,
+              1.2
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 3
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 10
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 78
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 76
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 14
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.2,
+              1.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 2
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 10
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 3
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.6,
+              3
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "targeted_ra020_030_dec_p000_p010": {
+      "role": "reserved_validation",
+      "input_rows": 498581,
+      "desi_matched_rows": 17000,
+      "deduplication": {
+        "matched_unambiguous_rows": 17000,
+        "unique_desi_objects": 16951,
+        "unique_source_rows": 16951
+      },
+      "summary": {
+        "rows": 16951,
+        "class_counts": {
+          "cool_giant": {
+            "all": 15,
+            "clean_low_dust": 4,
+            "high_snr": 0,
+            "calibrated_feh": 14
+          },
+          "cool_main_sequence": {
+            "all": 1765,
+            "clean_low_dust": 1324,
+            "high_snr": 97,
+            "calibrated_feh": 1761
+          },
+          "nonstellar": {
+            "all": 124,
+            "clean_low_dust": 113,
+            "high_snr": 0,
+            "calibrated_feh": 0
+          },
+          "other_star_or_transition": {
+            "all": 9966,
+            "clean_low_dust": 7178,
+            "high_snr": 737,
+            "calibrated_feh": 6453
+          },
+          "unknown": {
+            "all": 5081,
+            "clean_low_dust": 4905,
+            "high_snr": 58,
+            "calibrated_feh": 0
+          }
+        },
+        "parallax_layers": {
+          "high_ge20": 892,
+          "mid_10_20": 1665,
+          "weak_0_10": 7367,
+          "negative": 1239,
+          "unusable": 5788
+        },
+        "high_snr_core_by_feh": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 2
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 38
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 48
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 8
+          }
+        ],
+        "core_coverage": {
+          "gr0": {
+            "all": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 565
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 718
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 41
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  0,
+                  0.6
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0.6,
+                  0.909
+                ],
+                "count": 26
+              },
+              {
+                "range": [
+                  0.909,
+                  1.2
+                ],
+                "count": 63
+              },
+              {
+                "range": [
+                  1.2,
+                  1.6
+                ],
+                "count": 8
+              },
+              {
+                "range": [
+                  1.6,
+                  3
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "r": {
+            "all": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 44
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 938
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 342
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  12,
+                  14
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  14,
+                  16
+                ],
+                "count": 35
+              },
+              {
+                "range": [
+                  16,
+                  18
+                ],
+                "count": 62
+              },
+              {
+                "range": [
+                  18,
+                  20
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  20,
+                  22
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  22,
+                  26
+                ],
+                "count": 0
+              }
+            ]
+          },
+          "teff": {
+            "all": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 187
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 326
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 423
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 388
+              }
+            ],
+            "high_snr_with_feh": [
+              {
+                "range": [
+                  4200,
+                  4400
+                ],
+                "count": 24
+              },
+              {
+                "range": [
+                  4400,
+                  4600
+                ],
+                "count": 26
+              },
+              {
+                "range": [
+                  4600,
+                  4800
+                ],
+                "count": 24
+              },
+              {
+                "range": [
+                  4800,
+                  5000
+                ],
+                "count": 23
+              }
+            ]
+          }
+        },
+        "high_snr_core_feh_by_color": [
+          {
+            "gr0_range": [
+              0,
+              0.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.6,
+              0.909
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 9
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 14
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 2
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              0.909,
+              1.2
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 1
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 25
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 31
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 5
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.2,
+              1.6
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 4
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 3
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 1
+              }
+            ]
+          },
+          {
+            "gr0_range": [
+              1.6,
+              3
+            ],
+            "feh_bins": [
+              {
+                "range": [
+                  -5,
+                  -2
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -2,
+                  -1.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1.5,
+                  -1
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -1,
+                  -0.5
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  -0.5,
+                  0
+                ],
+                "count": 0
+              },
+              {
+                "range": [
+                  0,
+                  1
+                ],
+                "count": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "by_role": {
+    "development": {
+      "rows": 88515,
+      "class_counts": {
+        "cool_giant": {
+          "all": 187,
+          "clean_low_dust": 85,
+          "high_snr": 0,
+          "calibrated_feh": 147
+        },
+        "cool_main_sequence": {
+          "all": 8102,
+          "clean_low_dust": 5985,
+          "high_snr": 821,
+          "calibrated_feh": 8089
+        },
+        "nonstellar": {
+          "all": 773,
+          "clean_low_dust": 664,
+          "high_snr": 3,
+          "calibrated_feh": 0
+        },
+        "other_star_or_transition": {
+          "all": 52737,
+          "clean_low_dust": 37528,
+          "high_snr": 3652,
+          "calibrated_feh": 38100
+        },
+        "unknown": {
+          "all": 26715,
+          "clean_low_dust": 23524,
+          "high_snr": 247,
+          "calibrated_feh": 0
+        },
+        "wd_cmd_candidate": {
+          "all": 1,
+          "clean_low_dust": 0,
+          "high_snr": 0,
+          "calibrated_feh": 1
+        }
+      },
+      "parallax_layers": {
+        "high_ge20": 4723,
+        "mid_10_20": 6888,
+        "weak_0_10": 38793,
+        "negative": 6759,
+        "unusable": 31352
+      },
+      "high_snr_core_by_feh": [
+        {
+          "range": [
+            -5,
+            -2
+          ],
+          "count": 3
+        },
+        {
+          "range": [
+            -2,
+            -1.5
+          ],
+          "count": 8
+        },
+        {
+          "range": [
+            -1.5,
+            -1
+          ],
+          "count": 35
+        },
+        {
+          "range": [
+            -1,
+            -0.5
+          ],
+          "count": 288
+        },
+        {
+          "range": [
+            -0.5,
+            0
+          ],
+          "count": 420
+        },
+        {
+          "range": [
+            0,
+            1
+          ],
+          "count": 66
+        }
+      ],
+      "core_coverage": {
+        "gr0": {
+          "all": [
+            {
+              "range": [
+                0,
+                0.6
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 2945
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 2898
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 141
+            },
+            {
+              "range": [
+                1.6,
+                3
+              ],
+              "count": 0
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                0,
+                0.6
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 299
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 485
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 35
+            },
+            {
+              "range": [
+                1.6,
+                3
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "r": {
+          "all": [
+            {
+              "range": [
+                12,
+                14
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 575
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 3798
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 1612
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                12,
+                14
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 501
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 319
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "teff": {
+          "all": [
+            {
+              "range": [
+                4200,
+                4400
+              ],
+              "count": 759
+            },
+            {
+              "range": [
+                4400,
+                4600
+              ],
+              "count": 1325
+            },
+            {
+              "range": [
+                4600,
+                4800
+              ],
+              "count": 1908
+            },
+            {
+              "range": [
+                4800,
+                5000
+              ],
+              "count": 1993
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                4200,
+                4400
+              ],
+              "count": 152
+            },
+            {
+              "range": [
+                4400,
+                4600
+              ],
+              "count": 171
+            },
+            {
+              "range": [
+                4600,
+                4800
+              ],
+              "count": 245
+            },
+            {
+              "range": [
+                4800,
+                5000
+              ],
+              "count": 252
+            }
+          ]
+        }
+      },
+      "high_snr_core_feh_by_color": [
+        {
+          "gr0_range": [
+            0,
+            0.6
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 0
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            0.6,
+            0.909
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 13
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 100
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 157
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 26
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            0.909,
+            1.2
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 5
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 22
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 181
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 238
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 37
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            1.2,
+            1.6
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 7
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 25
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 3
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            1.6,
+            3
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    "reserved_validation": {
+      "rows": 44015,
+      "class_counts": {
+        "cool_giant": {
+          "all": 43,
+          "clean_low_dust": 18,
+          "high_snr": 0,
+          "calibrated_feh": 36
+        },
+        "cool_main_sequence": {
+          "all": 4841,
+          "clean_low_dust": 3724,
+          "high_snr": 359,
+          "calibrated_feh": 4835
+        },
+        "nonstellar": {
+          "all": 361,
+          "clean_low_dust": 319,
+          "high_snr": 0,
+          "calibrated_feh": 0
+        },
+        "other_star_or_transition": {
+          "all": 27190,
+          "clean_low_dust": 20288,
+          "high_snr": 2330,
+          "calibrated_feh": 16616
+        },
+        "unknown": {
+          "all": 11580,
+          "clean_low_dust": 10621,
+          "high_snr": 154,
+          "calibrated_feh": 0
+        }
+      },
+      "parallax_layers": {
+        "high_ge20": 2843,
+        "mid_10_20": 4441,
+        "weak_0_10": 19703,
+        "negative": 2666,
+        "unusable": 14362
+      },
+      "high_snr_core_by_feh": [
+        {
+          "range": [
+            -5,
+            -2
+          ],
+          "count": 2
+        },
+        {
+          "range": [
+            -2,
+            -1.5
+          ],
+          "count": 5
+        },
+        {
+          "range": [
+            -1.5,
+            -1
+          ],
+          "count": 11
+        },
+        {
+          "range": [
+            -1,
+            -0.5
+          ],
+          "count": 149
+        },
+        {
+          "range": [
+            -0.5,
+            0
+          ],
+          "count": 162
+        },
+        {
+          "range": [
+            0,
+            1
+          ],
+          "count": 30
+        }
+      ],
+      "core_coverage": {
+        "gr0": {
+          "all": [
+            {
+              "range": [
+                0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 1718
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 1924
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 82
+            },
+            {
+              "range": [
+                1.6,
+                3
+              ],
+              "count": 0
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                0,
+                0.6
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0.6,
+                0.909
+              ],
+              "count": 91
+            },
+            {
+              "range": [
+                0.909,
+                1.2
+              ],
+              "count": 245
+            },
+            {
+              "range": [
+                1.2,
+                1.6
+              ],
+              "count": 23
+            },
+            {
+              "range": [
+                1.6,
+                3
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "r": {
+          "all": [
+            {
+              "range": [
+                12,
+                14
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 148
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 2461
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 1112
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 3
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                12,
+                14
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                14,
+                16
+              ],
+              "count": 124
+            },
+            {
+              "range": [
+                16,
+                18
+              ],
+              "count": 235
+            },
+            {
+              "range": [
+                18,
+                20
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                20,
+                22
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                22,
+                26
+              ],
+              "count": 0
+            }
+          ]
+        },
+        "teff": {
+          "all": [
+            {
+              "range": [
+                4200,
+                4400
+              ],
+              "count": 561
+            },
+            {
+              "range": [
+                4400,
+                4600
+              ],
+              "count": 879
+            },
+            {
+              "range": [
+                4600,
+                4800
+              ],
+              "count": 1170
+            },
+            {
+              "range": [
+                4800,
+                5000
+              ],
+              "count": 1114
+            }
+          ],
+          "high_snr_with_feh": [
+            {
+              "range": [
+                4200,
+                4400
+              ],
+              "count": 93
+            },
+            {
+              "range": [
+                4400,
+                4600
+              ],
+              "count": 98
+            },
+            {
+              "range": [
+                4600,
+                4800
+              ],
+              "count": 94
+            },
+            {
+              "range": [
+                4800,
+                5000
+              ],
+              "count": 74
+            }
+          ]
+        }
+      },
+      "high_snr_core_feh_by_color": [
+        {
+          "gr0_range": [
+            0,
+            0.6
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 0
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            0.6,
+            0.909
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 1
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 40
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 42
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 7
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            0.909,
+            1.2
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 2
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 4
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 10
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 103
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 107
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 19
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            1.2,
+            1.6
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 6
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 13
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 4
+            }
+          ]
+        },
+        {
+          "gr0_range": [
+            1.6,
+            3
+          ],
+          "feh_bins": [
+            {
+              "range": [
+                -5,
+                -2
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -2,
+                -1.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1.5,
+                -1
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -1,
+                -0.5
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                -0.5,
+                0
+              ],
+              "count": 0
+            },
+            {
+              "range": [
+                0,
+                1
+              ],
+              "count": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "all": {
+    "rows": 132530,
+    "class_counts": {
+      "cool_giant": {
+        "all": 230,
+        "clean_low_dust": 103,
+        "high_snr": 0,
+        "calibrated_feh": 183
+      },
+      "cool_main_sequence": {
+        "all": 12943,
+        "clean_low_dust": 9709,
+        "high_snr": 1180,
+        "calibrated_feh": 12924
+      },
+      "nonstellar": {
+        "all": 1134,
+        "clean_low_dust": 983,
+        "high_snr": 3,
+        "calibrated_feh": 0
+      },
+      "other_star_or_transition": {
+        "all": 79927,
+        "clean_low_dust": 57816,
+        "high_snr": 5982,
+        "calibrated_feh": 54716
+      },
+      "unknown": {
+        "all": 38295,
+        "clean_low_dust": 34145,
+        "high_snr": 401,
+        "calibrated_feh": 0
+      },
+      "wd_cmd_candidate": {
+        "all": 1,
+        "clean_low_dust": 0,
+        "high_snr": 0,
+        "calibrated_feh": 1
+      }
+    },
+    "parallax_layers": {
+      "high_ge20": 7566,
+      "mid_10_20": 11329,
+      "weak_0_10": 58496,
+      "negative": 9425,
+      "unusable": 45714
+    },
+    "high_snr_core_by_feh": [
+      {
+        "range": [
+          -5,
+          -2
+        ],
+        "count": 5
+      },
+      {
+        "range": [
+          -2,
+          -1.5
+        ],
+        "count": 13
+      },
+      {
+        "range": [
+          -1.5,
+          -1
+        ],
+        "count": 46
+      },
+      {
+        "range": [
+          -1,
+          -0.5
+        ],
+        "count": 437
+      },
+      {
+        "range": [
+          -0.5,
+          0
+        ],
+        "count": 582
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "count": 96
+      }
+    ],
+    "core_coverage": {
+      "gr0": {
+        "all": [
+          {
+            "range": [
+              0,
+              0.6
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              0.6,
+              0.909
+            ],
+            "count": 4663
+          },
+          {
+            "range": [
+              0.909,
+              1.2
+            ],
+            "count": 4822
+          },
+          {
+            "range": [
+              1.2,
+              1.6
+            ],
+            "count": 223
+          },
+          {
+            "range": [
+              1.6,
+              3
+            ],
+            "count": 0
+          }
+        ],
+        "high_snr_with_feh": [
+          {
+            "range": [
+              0,
+              0.6
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              0.6,
+              0.909
+            ],
+            "count": 390
+          },
+          {
+            "range": [
+              0.909,
+              1.2
+            ],
+            "count": 730
+          },
+          {
+            "range": [
+              1.2,
+              1.6
+            ],
+            "count": 58
+          },
+          {
+            "range": [
+              1.6,
+              3
+            ],
+            "count": 0
+          }
+        ]
+      },
+      "r": {
+        "all": [
+          {
+            "range": [
+              12,
+              14
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              14,
+              16
+            ],
+            "count": 723
+          },
+          {
+            "range": [
+              16,
+              18
+            ],
+            "count": 6259
+          },
+          {
+            "range": [
+              18,
+              20
+            ],
+            "count": 2724
+          },
+          {
+            "range": [
+              20,
+              22
+            ],
+            "count": 3
+          },
+          {
+            "range": [
+              22,
+              26
+            ],
+            "count": 0
+          }
+        ],
+        "high_snr_with_feh": [
+          {
+            "range": [
+              12,
+              14
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              14,
+              16
+            ],
+            "count": 625
+          },
+          {
+            "range": [
+              16,
+              18
+            ],
+            "count": 554
+          },
+          {
+            "range": [
+              18,
+              20
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              20,
+              22
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              22,
+              26
+            ],
+            "count": 0
+          }
+        ]
+      },
+      "teff": {
+        "all": [
+          {
+            "range": [
+              4200,
+              4400
+            ],
+            "count": 1320
+          },
+          {
+            "range": [
+              4400,
+              4600
+            ],
+            "count": 2204
+          },
+          {
+            "range": [
+              4600,
+              4800
+            ],
+            "count": 3078
+          },
+          {
+            "range": [
+              4800,
+              5000
+            ],
+            "count": 3107
+          }
+        ],
+        "high_snr_with_feh": [
+          {
+            "range": [
+              4200,
+              4400
+            ],
+            "count": 245
+          },
+          {
+            "range": [
+              4400,
+              4600
+            ],
+            "count": 269
+          },
+          {
+            "range": [
+              4600,
+              4800
+            ],
+            "count": 339
+          },
+          {
+            "range": [
+              4800,
+              5000
+            ],
+            "count": 326
+          }
+        ]
+      }
+    },
+    "high_snr_core_feh_by_color": [
+      {
+        "gr0_range": [
+          0,
+          0.6
+        ],
+        "feh_bins": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gr0_range": [
+          0.6,
+          0.909
+        ],
+        "feh_bins": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 1
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 3
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 14
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 140
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 199
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 33
+          }
+        ]
+      },
+      {
+        "gr0_range": [
+          0.909,
+          1.2
+        ],
+        "feh_bins": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 4
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 9
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 32
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 284
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 345
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 56
+          }
+        ]
+      },
+      {
+        "gr0_range": [
+          1.2,
+          1.6
+        ],
+        "feh_bins": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 13
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 38
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 7
+          }
+        ]
+      },
+      {
+        "gr0_range": [
+          1.6,
+          3
+        ],
+        "feh_bins": [
+          {
+            "range": [
+              -5,
+              -2
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -2,
+              -1.5
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1.5,
+              -1
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -1,
+              -0.5
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              -0.5,
+              0
+            ],
+            "count": 0
+          },
+          {
+            "range": [
+              0,
+              1
+            ],
+            "count": 0
+          }
+        ]
+      }
+    ]
+  },
+  "compute_host": "nid004404"
+}

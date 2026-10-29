@@ -1,6 +1,6 @@
 # PLAN
 
-## Current Objective
+## Completed Pro Follow-up Objective
 
 The latest Pro review of `1acf946` is in a bounded joint-calibration round.
 Keep cold-v4 models, routes, registered XD adoption gate and historical test
@@ -29,12 +29,12 @@ No new distance model or deep interval is adopted in this round.
    white-dwarf candidates. Retain raw/corrected parallax and weak/negative
    values; derive M_g only for quality high-S/N anchors. Reserve separate
    fields for subsequent validation before any model fitting.
-4. In progress: report color, temperature, metallicity, brightness and sky coverage by
+4. Complete: report color, temperature, metallicity, brightness and sky coverage by
    class and parallax layer. Quantify whether the same-star metal-poor core
    supports zero point, color slope and metallicity dependence; otherwise
    state the specific missing overlap. Inventory reliable K giant/cool RGB
    labels and independent luminosity resources for the next science branch.
-5. In progress: run focused validation, write concise scientific report and WORKLOG,
+5. Complete: run focused validation, write concise scientific report and WORKLOG,
    commit milestone(s) and synchronize programs, docs, manifests and selected
    figures through local, GitHub and NERSC. Catalogs remain on NERSC.
 
@@ -45,8 +45,14 @@ distance columns match v1 for 395,629 objects. The seven-field joint study
 conservative cool-main-sequence stars and only one `[Fe/H]<−1.5` anchor,
 none blue of the frozen edge. DESI-first ranking 60484858 identified four
 unprocessed DR11 fields with 8/8/6/4 low-dust high-lat metal-poor targets
-at *raw* Gaia S/N≥20. Registered debug array 60485082 is building these
-fields sequentially; dependent 60485094 will summarize true DR11 overlap.
+at *raw* Gaia S/N≥20. Array 60485082 built those fields; dependent job
+60485094 found 132,530 unique matches, including 18 high-S/N metal-poor
+main-sequence core stars. Five lie blue of the v4 edge (4 development,
+1 reserved). The clean metal-poor core has another 42 at S/N 10–20, 228
+at S/N 0–10 and 3 negative corrected parallaxes. One blue high-S/N object
+has discordant optical and Gaia/spectral colors. Targeted fields include
+230 conservative cool giants, 103 clean low-dust, but zero direct high-S/N
+geometric giant anchors. No new model is adopted.
 The cold-v4 and registered XD decisions remain frozen.
 
 ## New Round Milestones
@@ -270,21 +276,20 @@ are in configs/next_fields.json. The strict optical and Gaia criteria remain
 the comparison standard. Cold-v4 roles and fixed method are in
 configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
-## Next Checkpoint
+## Next Recommended Objective
 
-After this bounded round closes, keep frozen v4 as the conditional cold-dwarf
-distance baseline. A new distance-model experiment should target the observed
-g/r optical response and its color–luminosity slope with a separately
-registered development/calibration/final split; faint low-S/N work should
-use a flux likelihood. For the separate metal-poor blue branch, first obtain
-Gaia/DESI overlap and distinguish the faint blue CMD sequence before fitting
-a distance relation.
+Keep frozen v4 as the conditional cold-dwarf distance baseline. Build a
+targeted K-giant/cool-RGB class and luminosity sample from qualified DESI
+spectra, nearby high-S/N Gaia giants, clusters and independently audited
+spectroscopic-distance resources. Register development and final identities
+before fitting or evaluating a new giant relation. Keep class and metallicity
+uncertainty explicit for no-spectrum application targets.
 
-Review the infrared conflict flag on a separately registered validation set
-before using it to withhold distances or calibrate type probabilities. The
-photometric center discrepancy persists in A/B/C on identical stars and in
-same-tier, complete-input matched C pairs; further cause work needs an
-independent optical reference or a new population/label calibration design.
-Retain the frozen distance route and its prior final tests. For any fitted
-center or support change, register new calibration and final fields before
-scoring their residuals. The metal-poor blue extension remains its own branch.
+For the metal-poor main-sequence extension, the targeted DR11 sample supplies
+18 high-S/N anchors below `[Fe/H]=−1.5`, five blue of the old edge and only
+one blue in reserved validation. Audit the discordant-color case and seek
+more clean geometric anchors before fitting a blue color–luminosity relation.
+Develop a forward-parallax likelihood for the 42 intermediate, 228 weak and
+three negative-parallax clean metal-poor core objects; preserve the spectral
+selection model and source identities. The XD comparison remains a research
+candidate under its registered gate, with no change to v4 output.
