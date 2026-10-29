@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Candidate export 60481110 finished but wrote seven FITS table extensions
+  (18,017/17,905/18,343/17,735/18,061/18,434/17,103 rows) because
+  `fitsio.write(..., append=True)` ignores `append`. The manifest total was
+  125,598, so first-extension readers would see only 18,017. Archived the
+  invalid product and manifest under ignored NERSC data. Replaced the writer
+  with `FITS(..., "rw")[1].append` and a single-extension/row-count check;
+  the two-chunk targeted test passes. Field FITS sizes 154–534 MiB support
+  8 GiB requests; updated four pending jobs and future wrappers. Revised
+  K=16 fit 60482139 completed with all three tiers converged in 64/30/51
+  iterations. Next: sync, rerun candidate export, inspect remaining fits.
+
 - Validated the optimizer/blue-side repair with seven focused tests and
   Python compilation. Commit `2fb80a4` synchronized to all three copies.
   Resubmitted allocated shared-CPU jobs 60482139/140/141 for K=16/32/64

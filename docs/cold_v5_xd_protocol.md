@@ -85,6 +85,10 @@ tested. A giant probability, a north/south constant offset, and a simple
 ## Per-candidate frozen route output
 
 `scripts/cold_v4_candidate_export.py` writes ignored FITS catalogs on NERSC.
+Its chunked writer appends rows to one binary-table extension and verifies
+the final row count against the manifest. An initial seven-extension export
+was archived on NERSC after identifying that `fitsio.write` ignores its
+deprecated `append` keyword; it is excluded from the candidate product.
 Each accepted row carries the frozen tier, reasons B/C were not used,
 actual A/B/C tenth-neighbor radius ratios, an infrared fallback-conflict
 marker, used-tier high-quality state, the cold-dwarf-hypothesis median

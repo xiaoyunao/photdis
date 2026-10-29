@@ -4,7 +4,7 @@
 #SBATCH -N 1
 #SBATCH -c 4
 #SBATCH -t 02:00:00
-#SBATCH --mem=16G
+#SBATCH --mem=8G
 #SBATCH -o logs/cold_v5_xd_%j.out
 #SBATCH -e logs/cold_v5_xd_%j.err
 

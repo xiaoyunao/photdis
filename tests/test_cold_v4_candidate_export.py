@@ -3,6 +3,7 @@ from pathlib import Path
 import sys
 
 import numpy as np
+import fitsio
 
 
 class FixedTree:
@@ -52,3 +53,20 @@ def test_export_preserves_fallback_reason_and_hypothesis():
     assert out["support_ratio_b"].tolist() == [2., .5]
     assert out["cold_dwarf_hypothesis"].all()
     assert out["depth_state"].tolist() == [b"r_lt_18", b"r18_22_stress_tested"]
+
+
+def test_chunked_export_appends_rows_to_one_table(tmp_path):
+    path = Path(__file__).resolve().parents[1] / "scripts/cold_v4_candidate_export.py"
+    sys.path.insert(0, str(path.parent))
+    spec = importlib.util.spec_from_file_location("candidate_export_chunks", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    target = tmp_path / "candidates.fits"
+    first = np.array([(1, 1.5)], dtype=[("id", "i8"), ("r", "f4")])
+    second = np.array([(2, 2.5), (3, 3.5)], dtype=first.dtype)
+    module.append_rows(target, first)
+    module.append_rows(target, second)
+    with fitsio.FITS(str(target)) as catalog:
+        assert len(catalog) == 2
+        assert catalog[1].get_nrows() == 3
+        assert catalog[1].read(columns=["id"])["id"].tolist() == [1, 2, 3]

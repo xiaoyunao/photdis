@@ -12,8 +12,11 @@ records the full scientific and validation criteria.
 Current compute checkpoint: the initial K=16 fit exposed an unfinished
 40-iteration optimizer (archived manifest). The revised 200-iteration fits
 K=16/32/64 are NERSC jobs 60482139/60482140/60482141. Blue-side inventory
-retry is 60482142; candidate export remains job 60481110. Inspect each
-terminal job and validate its manifest before selecting or scoring a model.
+retry is 60482142. Inspect each terminal job and validate its manifest
+before selecting or scoring a model.
+K=16 job 60482139 has completed with converged A/B/C fits. The first
+candidate export 60481110 produced multiple FITS extensions and is archived;
+resubmit it with the corrected single-table append writer.
 
 ## New Round Milestones
 

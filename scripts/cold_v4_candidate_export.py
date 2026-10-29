@@ -99,6 +99,17 @@ def output_rows(table, route, policy, forests):
     return out
 
 
+def append_rows(path, rows):
+    """Append to the single catalog table, never create another FITS HDU."""
+    if not path.exists():
+        fitsio.write(str(path), rows)
+    else:
+        with fitsio.FITS(str(path), "rw") as catalog:
+            if len(catalog) != 2:
+                raise ValueError("Candidate catalog has multiple table extensions")
+            catalog[1].append(rows)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--field", required=True, choices=[
@@ -144,7 +155,7 @@ def main():
             out = output_rows(table, route, lock["chosen_policy"], forests)
             if out is None:
                 continue
-            fitsio.write(str(target), out, append=target.exists())
+            append_rows(target, out)
             total += len(out)
             conflict += int(out["infrared_fallback_conflict"].sum())
             for tier, level in LEVEL.items():
@@ -153,6 +164,11 @@ def main():
                               "selected_so_far": total}), flush=True)
     if sum(counts.values()) != total:
         raise ValueError("Tier counts do not sum to candidate count")
+    if not total:
+        raise ValueError("No candidates were exported")
+    with fitsio.FITS(str(target)) as catalog:
+        if len(catalog) != 2 or catalog[1].get_nrows() != total:
+            raise ValueError("Candidate FITS table row count differs from manifest")
     manifest = {"field": args.field, "source": str(source),
                 "output": str(target), "output_sha256": sha(target),
                 "input_rows": nrows, "selected_rows": total,
