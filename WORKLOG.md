@@ -2,6 +2,21 @@
 
 ## 2026-10-29
 
+- Registered NGC 5466 extraction completed on Slurm 60497743 (exit 0):
+  4,918 unique DECam release-11010 matches, with 52/32 upper and 96/93
+  lower gr/grz-clean high-probability Gaia-CMD candidates. Development-only
+  residual audit completed on Slurm 60497876. Blind score completed on
+  Slurm 60498139: common lower-RGB n=93, grz median Δμ −0.011 mag,
+  NMAD 0.231 mag, but strong brightness-conditioned bias. Added a fixed
+  source-paired bootstrap audit of the gr-to-grz NMAD change and the low/
+  high luminosity contrast; no model refit. Files: blind coverage/score
+  manifests, test and development figures, development audit manifest,
+  pair-audit script and wrapper. Commands: allocated extract, development
+  and score jobs; score manifest/figure review; Python compilation and
+  synthetic paired-identity check. Validation: all three jobs exit 0;
+  same-source gr/grz identity enforced. Next: run pair audit, document
+  scientific interpretation and sync final products.
+
 - Before blind scoring, corrected the registered predictive score to the
   held-out distance-modulus density (same units for gr and grz). Keep the
   color-space likelihood separately as a diagnostic; its different input
