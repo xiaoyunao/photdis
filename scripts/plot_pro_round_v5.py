@@ -41,6 +41,47 @@ def main():
                 title="Observed centers within selected-model null")
     fig.savefig(OUT / "01_statistics.png", dpi=160)
     plt.close(fig)
+    optical_path = Path("manifests/cold_v4_optical_response.json")
+    if optical_path.exists():
+        optical = json.loads(optical_path.read_text())
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)
+        for name, field in optical["fields"].items():
+            short = "RA" + name.split("ra")[1].split("_")[0]
+            baseline = field["baseline"]["baseline_residual"]
+            centers = [baseline["median"]]
+            scatter = [baseline["nmad"]]
+            for band in ("g", "r", "z", "grz"):
+                row = field["ps1_substitutions"][band]["fixed_tier"]["shifted_residual"]
+                centers.append(row["median"]); scatter.append(row["nmad"])
+            axes[0].plot(range(5), centers, "o-", label=short)
+            axes[1].plot(range(5), scatter, "o-", label=short)
+        for ax in axes:
+            ax.set_xticks(range(5), ["Legacy", "g only", "r only", "z only", "grz"])
+            ax.set_xlabel("PS1 substitution at fixed original model tier")
+            ax.legend(fontsize=8)
+        axes[0].axhline(0, color="grey", lw=.7)
+        axes[0].set_ylabel("Median distance-modulus residual (mag)")
+        axes[1].set_ylabel("Residual NMAD (mag)")
+        fig.savefig(OUT / "02_optical_response.png", dpi=160)
+        plt.close(fig)
+    tiers_path = Path("manifests/cold_v4_same_star_tiers.json")
+    if tiers_path.exists():
+        tiers = json.loads(tiers_path.read_text())
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)
+        for name, field in tiers["fields"].items():
+            short = "RA" + name.split("ra")[1].split("_")[0]
+            rows = list(field["by_tier"].values())
+            axes[0].plot(range(3), [x["gaia_residual"]["median"] for x in rows], "o-", label=short)
+            axes[1].plot(range(3), [x["gaia_residual"]["nmad"] for x in rows], "o-", label=short)
+        for ax in axes:
+            ax.set_xticks(range(3), ["A: grz", "B: +W1", "C: +W2"])
+            ax.set_xlabel("Forced model on identical stars within each field")
+            ax.legend(fontsize=8)
+        axes[0].axhline(0, color="grey", lw=.7)
+        axes[0].set_ylabel("Median distance-modulus residual (mag)")
+        axes[1].set_ylabel("Residual NMAD (mag)")
+        fig.savefig(OUT / "03_same_star_tiers.png", dpi=160)
+        plt.close(fig)
 
 
 if __name__ == "__main__":

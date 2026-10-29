@@ -2,6 +2,15 @@
 
 ## 2026-10-29
 
+- Optical-response job 60476003 completed (3m44s); same-star rerun 60476083
+  completed (1m12s). Copied aggregate manifests and plotted/inspected both.
+  The north/south center sign appears in A/B/C on identical stars; g-only
+  PS1 replacement drives most center response, with worse RA20 scatter.
+  Fallback 60476051 exposed missing z0/W10/W20 input columns for magnitude
+  perturbations after raw WISE reads; added those saved columns and changed
+  raw reads to identity scan plus selected rows. Compile passes. Next:
+  rerun fallback audit, interpret label losses, finish method decision.
+
 - Same-star job 60476002 stopped at its algebra invariant: float32 Gaia Mg
   subtraction lost precision relative to the float64 model terms. Promoted
   g0 and reference Mg to float64 before pair decomposition; focused test

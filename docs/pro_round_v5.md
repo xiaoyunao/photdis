@@ -62,3 +62,63 @@ candidate until separate validation.
 Next: force A/B/C on identical supported native-field stars, improve
 cross-field matching of complete inputs, and measure fixed-tier optical
 band responses on qualified PS1 counterparts.
+
+## 4. Fixed-tier optical response
+
+Job 60476003 completed in 3m44s. PS1 quality selects 1,623/2,734/1,495
+frozen accepted stars in RA330/RA20/RA130. Each band experiment uses the
+same stars and original selected model tier. Here the residual is predicted
+minus Gaia distance modulus, and scatter is NMAD in mag.
+
+| Field | Legacy center / NMAD | g-only PS1 center / NMAD | grz PS1 center / NMAD |
+|---|---:|---:|---:|
+| RA330 | −0.0135 / 0.2070 | +0.0383 / 0.2042 | +0.0341 / 0.1990 |
+| RA20 | −0.0474 / 0.2022 | −0.0126 / 0.2174 | −0.0139 / 0.2202 |
+| RA130 | +0.0322 / 0.2064 | +0.0121 / 0.2046 | +0.0120 / 0.2041 |
+
+The g-only substitution reproduces most of the center response. r-only
+centers are −0.0111/−0.0453/+0.0338 mag and z-only centers are
+−0.0109/−0.0461/+0.0312 mag. Scatter and tails are retained for every band
+in `manifests/cold_v4_optical_response.json`; RA20's scatter increases.
+The paired grz shift medians are only +0.0119/+0.0054/−0.0069 mag, while
+their NMAD is 0.066/0.060/0.055 mag. Thus shifts of population centers
+cannot be reconstructed from the paired-shift median alone.
+
+For +0.01 mag imposed in g, median fixed-tier modulus responses are
+−0.0199/−0.0207/−0.0215 mag; the response NMAD is 0.044/0.046/0.047 mag.
+The g term acts both directly in modulus and through shared input colors.
+Corresponding +0.01 mag z responses have median +0.0015/+0.0023/+0.0032
+mag. The manifest includes both signs at 0.005/0.01/0.02 mag, color and
+support-edge strata, and all fixed-tier and rerouted comparisons. These
+diagnostic perturbations are not adopted photometric corrections.
+
+## 5. Same-star A/B/C and complete-input matching
+
+Job 60476083 completed in 1m12s. All three tiers are quality-qualified and
+supported for 5,072/6,175/2,590 native stars in RA330/RA20/RA130, representing
+87.8%/87.0%/88.1% of frozen accepted stars in each field.
+
+| Field | A center / NMAD | B center / NMAD | C center / NMAD | Median paired μA−μC |
+|---|---:|---:|---:|---:|
+| RA330 | −0.0463 / 0.2706 | −0.0488 / 0.2477 | −0.0170 / 0.2216 | −0.0208 |
+| RA20 | −0.0699 / 0.2640 | −0.0751 / 0.2291 | −0.0543 / 0.2063 | −0.0093 |
+| RA130 | +0.0737 / 0.2709 | +0.0950 / 0.2546 | +0.0684 / 0.2157 | +0.0056 |
+
+All entries are mag. The northern positive center and southern negative
+centers occur in A as well as C. Adding infrared changes the response and
+reduces scatter, while the field contrast already exists in optical A.
+
+The outcome-blind match now requires identical selected tier, each actual
+input color within 0.02 mag, and each used-band log error ratio within 0.5.
+It leaves 1,445 and 1,177 C pairs for north versus RA330 and RA20. Their
+median north-minus-south residual differences are +0.1078/+0.0634 mag;
+reference Mg differences have medians +0.0930/+0.0438 mag, while model Mg
+differences have medians −0.0007/−0.0044 mag. These are separate medians;
+the exact additive decomposition holds pair by pair. A has 94/83 pairs,
+while B has only 6/2. Parallax and brightness strata and achieved color
+differences are in `manifests/cold_v4_same_star_tiers.json`.
+
+The matched reference-label distribution remains different close to the
+same complete inputs. Optical measurement/transform effects, Gaia labels,
+extinction and population differences remain mechanisms to distinguish;
+the experiment does not justify a constant north/south correction.

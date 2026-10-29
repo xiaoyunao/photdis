@@ -12,10 +12,10 @@ candidate or retain v4. The active goal records detailed deliverables.
 
 ## Current Round Milestones
 
-1. Recompute common-acceptance crossover centers, paired differences,
+1. Complete: recompute common-acceptance crossover centers, paired differences,
    directly bootstrapped median differences and common-sample NMAD from the
    existing per-source arrays. Keep full-flow acceptance and NMAD visible.
-2. Correct the weak-parallax subgroup PIT for each observed-SNR truncation
+2. Complete: correct the weak-parallax subgroup PIT for each observed-SNR truncation
    interval; simulate the same selected statistic to calibrate its center.
 3. Record each tier fallback reason and complete WISE quality evidence.
    Compare a conflict marker and a conservative hold policy on development
@@ -32,9 +32,9 @@ candidate or retain v4. The active goal records detailed deliverables.
    results, update reports/worklog, and sync committed programs, manifests
    and selected figures to local, GitHub and NERSC.
 
-## Current Diagnostic Round
+## Previous Diagnostic Round (through 88f7330)
 
-The latest Pro-review requirements are complete: the frozen model and route
+The preceding Pro-review requirements are complete: the frozen model and route
 were held fixed; extinction algebra, selection-aware weak-parallax PIT,
 WISE20 wide-binary and DESI boundary checks, and the same-source 2×2
 noise/template crossover are documented in `docs/pro_latest_round.md`.
