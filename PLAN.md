@@ -27,6 +27,10 @@ Complete a bounded correction and calibration round with these milestones:
    qualified members and DR11 light; keep whole systems out of fitting.
    Fit and validate a first bounded photo-only giant luminosity relation
    only where label quality and external scale coverage support one.
+   A registered grz-only warm evolved-star kernel-mixture test is specified
+   in `docs/giant_photo_protocol_v1.md`; its SPDist-based label and M3
+   whole-system scale check remain pending NERSC execution. The 4200–5000 K
+   and cooler RGB samples are reported separately.
 5. Complete as a bounded spectroscopy-conditioned experiment: combine the seven-field and four targeted-field main-sequence samples
    with source identity deduplication. On development-only data, compare a
    low-dimensional smooth color baseline with and without one continuous

@@ -1,0 +1,52 @@
+{
+  "input": [
+    "data/joint_calibration_v1_evidence_v2/same_star.fits",
+    "data/joint_calibration_targeted_v1_evidence_v2/same_star.fits"
+  ],
+  "specdis": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits",
+  "spdist": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits",
+  "join_algorithm": "TARGETID range search, unique exact (TARGETID,SOURCE_ID) match; Gaia SOURCE_ID>0",
+  "output": "data/giant_vac_v3/same_star.fits",
+  "summary": {
+    "all": 3694,
+    "qualified_giant": 3694,
+    "clean_giant": 2487,
+    "specdis_match": 2479,
+    "spdist_match": 2341,
+    "specdis_valid": 2217,
+    "spdist_valid": 2044,
+    "both_valid": 1852,
+    "giant_cluster_members": 13,
+    "by_type": {
+      "lt4200": {
+        "clean": 17,
+        "specdis": 12,
+        "spdist": 0
+      },
+      "4200_5000": {
+        "clean": 135,
+        "specdis": 108,
+        "spdist": 42
+      },
+      "5000_7000": {
+        "clean": 2335,
+        "specdis": 2097,
+        "spdist": 2002
+      },
+      "logg_lt1p8": {
+        "clean": 62,
+        "specdis": 36,
+        "spdist": 8
+      },
+      "feh_cal_valid": {
+        "clean": 2381,
+        "specdis": 2140,
+        "spdist": 2020
+      }
+    },
+    "cluster_groups": {
+      "3650": 13
+    }
+  },
+  "compute_host": "nid004077"
+}

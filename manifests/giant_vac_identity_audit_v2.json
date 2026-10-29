@@ -1,0 +1,82 @@
+{
+  "giants": 3694,
+  "clean": 2487,
+  "catalogs": {
+    "specdis": {
+      "catalog_rows": 4140838,
+      "target_found": 3636,
+      "target_unique": 3636,
+      "source_found": 3636,
+      "source_unique": 2980,
+      "exact_pair": 3636,
+      "original_exact_pair_join": 3636,
+      "join_disagreement_examples": [],
+      "unique_source_different_target": 0,
+      "unique_source_different_target_clean": 0,
+      "source_only_examples": []
+    },
+    "spdist": {
+      "catalog_rows": 6272510,
+      "target_found": 3687,
+      "target_unique": 3519,
+      "source_found": 3687,
+      "source_unique": 2975,
+      "exact_pair": 3687,
+      "original_exact_pair_join": 3519,
+      "join_disagreement_examples": [
+        {
+          "targetid": 39628511287183022,
+          "source_id": 711991473282863616,
+          "target_match_index": 5730428,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628427900229019,
+          "source_id": 1460675255898306432,
+          "target_match_index": 5800895,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628433277323435,
+          "source_id": 1460746517995841408,
+          "target_match_index": 5981517,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628433260546403,
+          "source_id": 1463722792893116544,
+          "target_match_index": 5830708,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628433252158228,
+          "source_id": 1463740556878158208,
+          "target_match_index": 5830676,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628449249233635,
+          "source_id": 1463977368489798656,
+          "target_match_index": 5830815,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628449257621149,
+          "source_id": 1463993586286379776,
+          "target_match_index": 6062093,
+          "original_join_index": -1
+        },
+        {
+          "targetid": 39628454559222808,
+          "source_id": 1464038082147505152,
+          "target_match_index": 6062152,
+          "original_join_index": -1
+        }
+      ],
+      "unique_source_different_target": 0,
+      "unique_source_different_target_clean": 0,
+      "source_only_examples": []
+    }
+  },
+  "compute_host": "nid004110"
+}

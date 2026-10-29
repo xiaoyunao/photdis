@@ -2,6 +2,29 @@
 
 ## 2026-10-29
 
+- Corrected v3 giant VAC job 60488080 completed on allocated CPU: among
+  2,487 clean low-dust RVS giants, unique exact catalog joins yield 2,479
+  SpecDis and 2,341 SPDist matches; 2,217/2,044 pass published quality
+  and finite-error criteria. The warm 5000–7000 K group has 2,002 SPDist
+  labels; 4200–5000 K has only 42, and <4200 K has none. Registered a
+  grz-only conditional-luminosity kernel-mixture experiment on the warm
+  group with the eleven fields' existing roles and independent M3 system.
+  Files: `giant_vac_v3` manifest, giant kernel and runner, protocol and
+  focused tests. Commands: Slurm 60488080, Python compilation, two kernel
+  tests and one summary smoke test. Validation: identity counts and tests
+  pass. Next: obtain quality/profile manifests, execute the registered
+  model on allocated NERSC CPU, then report reserved-field and M3 results.
+
+- Root cause of the apparent giant VAC shortage: after source-ID deduplication,
+  `giant_vac_inventory.py` reordered giant rows and TARGETIDs but joined to
+  the pre-reorder Gaia source-ID array. Direct ID audits found 3,636 exact
+  SpecDis and 3,687 exact SPDist pairs among 3,694 giants, while v1/v2
+  mislabeled only 1/0. The new `deduplicate_giant_identities` returns aligned
+  rows and both keys, with an end-to-end regression test. Files: giant VAC
+  inventory, profile, quality audit, test; v3 results pending allocated job
+  60488080. Validation: four focused tests and Python compilation passed.
+  Next: check v3 matched/valid labels before fitting any giant baseline.
+
 - Completed the bounded metal-poor forward-parallax comparison on allocated
   NERSC CPU (jobs 60487276 and 60487474). Five development fields contain
   6,672 stars and five reserved fields 4,947, including 81/52 negative

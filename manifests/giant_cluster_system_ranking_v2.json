@@ -1,0 +1,316 @@
+{
+  "source": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits",
+  "reference": "data/reference",
+  "membership_definition": "VasilievBaumgardt2021 memberprob>=0.5, direct archive, ambiguous cross-cluster Gaia IDs dropped",
+  "ambiguous_membership_rows_dropped": 0,
+  "qualified_giant_members": 120,
+  "systems": [
+    {
+      "group": 100012,
+      "name": "NGC_2419",
+      "qualified_giant_spectra": 18,
+      "unique_gaia_members": 18,
+      "cool_lt5200": 15,
+      "ra": 114.535,
+      "dec": 38.882,
+      "distance_kpc": 88.47,
+      "distance_error_kpc": 2.4,
+      "member_source_id_examples": [
+        899259670953772416,
+        899259709611049088,
+        899281936064215424,
+        899281940361749760,
+        899282176582394368,
+        899282352678538112,
+        899282524477222656,
+        899282726338523648,
+        899282966856683648,
+        899283039870660608
+      ]
+    },
+    {
+      "group": 100043,
+      "name": "Pal_5",
+      "qualified_giant_spectra": 15,
+      "unique_gaia_members": 15,
+      "cool_lt5200": 8,
+      "ra": 229.019,
+      "dec": -0.121,
+      "distance_kpc": 21.94,
+      "distance_error_kpc": 0.51,
+      "member_source_id_examples": [
+        4418725954001029760,
+        4418731829516302848,
+        4418732104394214272,
+        4418913906065459840,
+        4418914730699187328,
+        4418914833778403712,
+        4418919712861243264,
+        4418919712861244416,
+        4418919712861244544,
+        4418920159537849856
+      ]
+    },
+    {
+      "group": 100045,
+      "name": "NGC_5904_M_5",
+      "qualified_giant_spectra": 17,
+      "unique_gaia_members": 17,
+      "cool_lt5200": 3,
+      "ra": 229.638,
+      "dec": 2.081,
+      "distance_kpc": 7.48,
+      "distance_error_kpc": 0.06,
+      "member_source_id_examples": [
+        4421477039469820928,
+        4421478684439928064,
+        4421523833136764544,
+        4421525074384092032,
+        4421525830298334976,
+        4421526483133364352,
+        4421527239047615616,
+        4421527513925524864,
+        4421569982565299200,
+        4421572147224073216
+      ]
+    },
+    {
+      "group": 100030,
+      "name": "NGC_5024_M_53",
+      "qualified_giant_spectra": 12,
+      "unique_gaia_members": 12,
+      "cool_lt5200": 1,
+      "ra": 198.23,
+      "dec": 18.168,
+      "distance_kpc": 18.5,
+      "distance_error_kpc": 0.18,
+      "member_source_id_examples": [
+        3937264999201777920,
+        3937267236882161280,
+        3937269191089937536,
+        3937270256241867008,
+        3938011773756452480,
+        3938013526102144768,
+        3938021089542137600,
+        3938022253478651392,
+        3938026651522460928,
+        3939527386110983424
+      ]
+    },
+    {
+      "group": 100037,
+      "name": "NGC_5466",
+      "qualified_giant_spectra": 10,
+      "unique_gaia_members": 10,
+      "cool_lt5200": 1,
+      "ra": 211.364,
+      "dec": 28.534,
+      "distance_kpc": 16.12,
+      "distance_error_kpc": 0.16,
+      "member_source_id_examples": [
+        1452577185257342848,
+        1452625391968624000,
+        1452626147884528000,
+        1452628690505833728,
+        1452630545931126784,
+        1452631297548834304,
+        1452631950384289280,
+        1452632023399784320,
+        1452635425013940992,
+        1452637379222670464
+      ]
+    },
+    {
+      "group": 100064,
+      "name": "NGC_6218_M_12",
+      "qualified_giant_spectra": 3,
+      "unique_gaia_members": 3,
+      "cool_lt5200": 1,
+      "ra": 251.809,
+      "dec": -1.949,
+      "distance_kpc": 5.11,
+      "distance_error_kpc": 0.05,
+      "member_source_id_examples": [
+        4379061763524884992,
+        4379063859468922368,
+        4379073480195714944
+      ]
+    },
+    {
+      "group": 100051,
+      "name": "Pal_14",
+      "qualified_giant_spectra": 1,
+      "unique_gaia_members": 1,
+      "cool_lt5200": 1,
+      "ra": 242.752,
+      "dec": 14.958,
+      "distance_kpc": 73.58,
+      "distance_error_kpc": 1.63,
+      "member_source_id_examples": [
+        4464703441466064512
+      ]
+    },
+    {
+      "group": 100038,
+      "name": "NGC_5634",
+      "qualified_giant_spectra": 10,
+      "unique_gaia_members": 10,
+      "cool_lt5200": 0,
+      "ra": 217.405,
+      "dec": -5.976,
+      "distance_kpc": 25.96,
+      "distance_error_kpc": 0.62,
+      "member_source_id_examples": [
+        3641354225092768384,
+        3641354877927854464,
+        3641355294540955136,
+        3641355840001111808,
+        3641355943079791104,
+        3641355981734239104,
+        3641358764874530944,
+        3641358936672003712,
+        3641359039752589056,
+        3641359177190278528
+      ]
+    },
+    {
+      "group": 100062,
+      "name": "NGC_6205_M_13",
+      "qualified_giant_spectra": 8,
+      "unique_gaia_members": 8,
+      "cool_lt5200": 0,
+      "ra": 250.422,
+      "dec": 36.46,
+      "distance_kpc": 7.42,
+      "distance_error_kpc": 0.08,
+      "member_source_id_examples": [
+        1328026054260346240,
+        1328028871757592960,
+        1328029623368412672,
+        1328058077530125568,
+        1328059348846146432,
+        1328059451918371712,
+        1328059555004596096,
+        1328064159208958464
+      ]
+    },
+    {
+      "group": 100031,
+      "name": "NGC_5053",
+      "qualified_giant_spectra": 7,
+      "unique_gaia_members": 7,
+      "cool_lt5200": 0,
+      "ra": 199.113,
+      "dec": 17.7,
+      "distance_kpc": 17.54,
+      "distance_error_kpc": 0.23,
+      "member_source_id_examples": [
+        3938492883108232960,
+        3938493398504321280,
+        3938494016980202752,
+        3938500751488324096,
+        3938500992006493568,
+        3938682995540541440,
+        3938688802336342912
+      ]
+    },
+    {
+      "group": 100165,
+      "name": "NGC_7089_M_2",
+      "qualified_giant_spectra": 6,
+      "unique_gaia_members": 6,
+      "cool_lt5200": 0,
+      "ra": 323.363,
+      "dec": -0.823,
+      "distance_kpc": 11.69,
+      "distance_error_kpc": 0.11,
+      "member_source_id_examples": [
+        2686827155493259008,
+        2686845297434516480,
+        2686845885849204096,
+        2686847736976800512,
+        2686849077006600704,
+        2686850558774056832
+      ]
+    },
+    {
+      "group": 100034,
+      "name": "NGC_5272_M_3",
+      "qualified_giant_spectra": 5,
+      "unique_gaia_members": 5,
+      "cool_lt5200": 0,
+      "ra": 205.548,
+      "dec": 28.377,
+      "distance_kpc": 10.18,
+      "distance_error_kpc": 0.08,
+      "member_source_id_examples": [
+        1454782668147411712,
+        1454892481868641920,
+        1454893409581586304,
+        1454893890617925632,
+        1454895986561961216
+      ]
+    },
+    {
+      "group": 100077,
+      "name": "NGC_6341_M_92",
+      "qualified_giant_spectra": 3,
+      "unique_gaia_members": 3,
+      "cool_lt5200": 0,
+      "ra": 259.281,
+      "dec": 43.136,
+      "distance_kpc": 8.5,
+      "distance_error_kpc": 0.07,
+      "member_source_id_examples": [
+        1360398906392598016,
+        1360407324528224512,
+        1360408905076366208
+      ]
+    },
+    {
+      "group": 100164,
+      "name": "NGC_7078_M_15",
+      "qualified_giant_spectra": 3,
+      "unique_gaia_members": 3,
+      "cool_lt5200": 0,
+      "ra": 322.493,
+      "dec": 12.167,
+      "distance_kpc": 10.71,
+      "distance_error_kpc": 0.1,
+      "member_source_id_examples": [
+        1745945334432206336,
+        1745950316593127552,
+        1745953069672081280
+      ]
+    },
+    {
+      "group": 100005,
+      "name": "Pal_1",
+      "qualified_giant_spectra": 1,
+      "unique_gaia_members": 1,
+      "cool_lt5200": 0,
+      "ra": 53.333,
+      "dec": 79.581,
+      "distance_kpc": 11.18,
+      "distance_error_kpc": 0.32,
+      "member_source_id_examples": [
+        555987334694982400
+      ]
+    },
+    {
+      "group": 100024,
+      "name": "NGC_4147",
+      "qualified_giant_spectra": 1,
+      "unique_gaia_members": 1,
+      "cool_lt5200": 0,
+      "ra": 182.526,
+      "dec": 18.543,
+      "distance_kpc": 18.54,
+      "distance_error_kpc": 0.21,
+      "member_source_id_examples": [
+        3950102420227606016
+      ]
+    }
+  ],
+  "compute_host": "nid004109"
+}
