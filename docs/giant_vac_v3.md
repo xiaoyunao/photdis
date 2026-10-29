@@ -38,6 +38,13 @@ Its first-order uncertainty proxy is
 those distance errors are often large, the Gaussian/linearized proxy is
 only a quality summary, not a full posterior transformation.
 
+| DESI spectral S/N | Valid clean SpecDis giants | Median `DISTERR/DIST` |
+|---|---:|---:|
+| <20 | 645 | 0.594 |
+| 20–60 | 1,421 | 0.471 |
+| 60–100 | 123 | 0.281 |
+| ≥100 | 28 | 0.140 |
+
 SPDist v1.0 predicts Gaia `M_G` using spectroscopic atmospheric parameters,
 iron abundance and Gaia colors. Require its `FLAG_GOOD` and `QFLAG_INPUT`
 plus finite `G0`, `MG_16`, `MG_50`, `MG_84`. For a Legacy-band label use

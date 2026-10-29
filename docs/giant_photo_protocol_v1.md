@@ -42,7 +42,11 @@ per-field median `M_g` residual, NMAD, `|residual|>1` mag fraction, 68/95%
 interval coverage of catalog point labels, log density and local training
 support. The support flag requires the query to be inside the development
 color convex hull with effective kernel sample size at least 20. Report all
-rows and the supported subset separately.
+rows and the supported subset separately. Also show the reserved results
+separately at 5000–5500/5500–7000 K, `logg<2.5`/higher gravity, and
+calibrated `[Fe/H]<−1.5`/higher abundance; count unavailable calibrated
+abundances. On same stars compare the photo-only median with SpecDis as a
+method disagreement check, not an independent truth test.
 
 M3 (NGC 5272) is a whole-system holdout outside those eleven fields. Its
 five qualified warm evolved members have a near-infrared RR Lyrae reference

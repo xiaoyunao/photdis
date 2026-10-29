@@ -81,7 +81,10 @@ def estimate(rows, training, bandwidth, mag_floor):
                        row["specdis_sigma_mg"].item() if row["specdis_valid"] else None,
                        *quantiles.tolist(), pred["effective_n"],
                        pred["log_density"],
-                       bool(inside[i] and pred["effective_n"] >= 20)))
+                       bool(inside[i] and pred["effective_n"] >= 20),
+                       float(row["desi_teff"]), float(row["desi_logg"]),
+                       float(row["feh_cal"]),
+                       bool(row["abundance_calibration_valid"])))
     return values
 
 
@@ -106,6 +109,19 @@ def summarize(values):
             "median_effective_training_n": float(np.median(records[:, 11].astype(float))),
             "mean_log_predictive_density_catalog": float(np.mean(records[:, 12].astype(float))),
             "supported_n": int(np.sum(records[:, 13].astype(bool)))}
+
+
+def specdis_crosscheck(values):
+    paired = [v for v in values if v[4] is not None]
+    if not paired:
+        return {"n": 0}
+    predicted = np.array([v[8] for v in paired], float)
+    reference = np.array([v[4] for v in paired], float)
+    residual = predicted - reference
+    center = np.median(residual)
+    return {"n": len(paired), "median_pred_minus_specdis_mg": float(center),
+            "nmad_pred_minus_specdis_mg": float(
+                1.4826 * np.median(np.abs(residual - center)))}
 
 
 def m3_external(training, bandwidth, mag_floor):
@@ -182,6 +198,13 @@ def main():
     train = rows[development]
     evaluation = rows[reserved]
     values = estimate(evaluation, train, best["bandwidth"], best["magnitude_floor"])
+    groups = {"teff_5000_5500": lambda v: v[14] < 5500,
+              "teff_5500_7000": lambda v: v[14] >= 5500,
+              "logg_lt2p5": lambda v: v[15] < 2.5,
+              "logg_ge2p5": lambda v: v[15] >= 2.5,
+              "feh_lt_minus1p5": lambda v: v[17] and v[16] < -1.5,
+              "feh_ge_minus1p5": lambda v: v[17] and v[16] >= -1.5,
+              "feh_calibration_unavailable": lambda v: not v[17]}
     result = {"source": str(SOURCE), "model": "grz conditional label-error Gaussian kernel mixture",
               "label": "SPDist v1.0 Legacy g0 - (Gaia G0 - MG_50)",
               "selection": "RVS conservative giant, clean grz, E(B-V)<0.03, 5000<=Teff<7000 K, SPDist quality, non-cluster",
@@ -190,6 +213,10 @@ def main():
               "parameter_search": search, "chosen": best,
               "reserved_summary": summarize(values),
               "reserved_supported_summary": summarize([v for v in values if v[13]]),
+              "reserved_by_physical_stratum": {
+                  name: summarize([v for v in values if criterion(v)])
+                  for name, criterion in groups.items()},
+              "reserved_specdis_crosscheck": specdis_crosscheck(values),
               "reserved_by_field": {field: summarize([v for v in values if v[1] == field])
                                     for field in np.unique(fields[reserved])},
               "m3_external": m3_external(train, best["bandwidth"],
