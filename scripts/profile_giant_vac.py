@@ -38,8 +38,16 @@ def profile(rows, mask):
                     - rows["spdist_mg_legacy"][both])
     combined = np.hypot(rows["specdis_sigma_mg"][both],
                         rows["spdist_sigma_mg"][both])
+    snr = rows["desi_snr"]
+    snr_bins = {"lt20": snr < 20, "20_60": (snr >= 20) & (snr < 60),
+                "60_100": (snr >= 60) & (snr < 100), "ge100": snr >= 100}
     return {"n": int(mask.sum()), "specdis": int(spec.sum()),
             "spdist": int(sp.sum()), "both": int(both.sum()),
+            "specdis_by_snr": {name: {"n": int((spec & in_bin).sum()),
+                "fractional_distance_error": median_nmad(
+                    rows["specdis_disterr_kpc"][spec & in_bin] /
+                    rows["specdis_dist_kpc"][spec & in_bin])}
+                for name, in_bin in snr_bins.items()},
             "specdis_fractional_distance_error": median_nmad(
                 rows["specdis_disterr_kpc"][spec] / rows["specdis_dist_kpc"][spec]),
             "specdis_sigma_legacy_mg": median_nmad(rows["specdis_sigma_mg"][spec]),
