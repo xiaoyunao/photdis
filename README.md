@@ -35,6 +35,12 @@ north–south center contrast. A registered
 [PS1 relative optical audit](docs/cold_v4_ps1_relative_audit.md) finds a
 field-dependent g-band difference on a restricted matched subset and
 quantifies how the frozen Legacy-trained route responds to replacing grz.
+The [latest Pro mechanism review](docs/pro_round_v5.md) corrects the
+crossover and weak-parallax statistics, compares A/B/C on identical stars,
+decomposes PS1 optical-band response, and audits WISE fallback reasons.
+The current choice is to retain the frozen v4 distance and expose a
+quality-qualified infrared support-conflict type-risk flag. It is not a
+calibrated class probability or a hard exclusion rule.
 
 ## Locations
 

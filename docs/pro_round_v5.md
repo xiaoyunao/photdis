@@ -5,6 +5,12 @@ native final identities and deep-interval decisions remain frozen. This round
 uses already inspected fields for diagnosis and development fields for any new
 route rule. New final validation is required before replacing v4.
 
+Extinction is already applied in every modeled band through the catalog
+transmission: `m0 = 22.5 - 2.5 log10(flux) + 2.5 log10(MW_TRANSMISSION)`.
+The input colors and Gaia-derived Mg reference use these corrected values.
+The current low-extinction validation cut remains E(B−V)<0.03. PS1
+substitutions retain the same source extinction correction.
+
 ## 1. Common-sample crossover correction
 
 The existing crossover arrays were reanalysed without new noise draws. The
@@ -48,20 +54,18 @@ statistic is ordinary under this selected null. The full-sample conditional
 low-PIT fractions remain 5.4%, 5.9% and 7.2% across populated fields. See
 `manifests/cold_v4_weak_parallax_v3.json`.
 
-## 3. Next diagnostics
+## 3. Diagnostic design
 
-The fallback audit records WISE missing/invalid measurements, low S/N,
-WISE quality failure and reliable high-dimensional support conflict as
-different reasons. It will compare a conflict marker and a temporary hold
-rule on development labels and ordinary clean candidates, including Gaia
-cold anchors, DESI cold dwarfs/giants and calibrated metal-poor dwarfs.
-Support-boundary stability is measured by perturbing native five-band
-magnitudes with their reported errors. The rule remains a diagnostic
-candidate until separate validation.
+The fallback audit separates WISE missing/invalid measurements, low S/N,
+WISE quality failure and reliable high-dimensional support conflict. It
+compares a conflict marker and a temporary hold on development labels and
+ordinary clean candidates, including Gaia cold anchors, DESI cold
+dwarfs/giants and calibrated metal-poor dwarfs. Native five-band magnitude
+perturbations test support-boundary stability. Section 6 reports the result.
 
-Next: force A/B/C on identical supported native-field stars, improve
-cross-field matching of complete inputs, and measure fixed-tier optical
-band responses on qualified PS1 counterparts.
+Sections 4–5 compare A/B/C on identical supported native-field stars, match
+complete inputs across fields, and measure fixed-tier optical responses on
+qualified PS1 counterparts.
 
 ## 4. Fixed-tier optical response
 
@@ -122,3 +126,41 @@ The matched reference-label distribution remains different close to the
 same complete inputs. Optical measurement/transform effects, Gaia labels,
 extinction and population differences remain mechanisms to distinguish;
 the experiment does not justify a constant north/south correction.
+
+## 6. Fallback reason and type-risk experiment
+
+Job 60476326 completed on a NERSC CPU in 24m30s. Its development fields are
+RA205, RA60 and RA235; none of the native final fields was used to choose a
+rule. The audit distinguishes missing/invalid WISE measurements, low S/N,
+WISE quality failure, and good-quality measurements outside the next cold-
+dwarf support domain. Raw WISE masks, contamination fractions and observation
+counts were retrieved for all flagged objects and accepted cold giants.
+
+| Development field | Clean v4 candidates | Infrared conflicts | Share flagged | Gaia cold anchors lost by hard hold | DESI cold dwarfs lost by hard hold |
+|---|---:|---:|---:|---:|---:|
+| RA205 | 71,460 | 7,808 | 10.9% | 44/1,257 (3.5%) | 149/1,116 (13.4%) |
+| RA60 | 147,122 | 17,724 | 12.0% | 272/6,594 (4.1%) | 21/143 (14.7%) |
+| RA235 | 363 | 50 | 13.8% | 0/9 | 1/5 |
+
+In RA205, a hard hold would also remove 10/12 accepted DESI cold giants,
+9/18 known DESI nonstars, and 4/12 calibrated metal-poor cold dwarfs. The
+other development fields have no accepted cold giants, so this giant contrast
+is based on 12 objects. Of the 12 RA205 giant records, 11 have high-S/N W1
+that is outside B support; 10 of those actually fell back to A, while the
+other retained C support. Their W1/W2 masks are zero and their WISE
+contamination fractions are below one. The remaining A giant fails the WISE
+quality condition. The per-object mask, contamination and support values are
+in `manifests/cold_v4_fallback_development.json`.
+
+Independent perturbations of the measured g/r/z/W1/W2 magnitudes propagate
+their shared-color covariance. Of 5,000 conflicts sampled in each of RA205 and RA60,
+49.9% and 48.7% respectively remain outside the relevant support domain in
+at least 90% of 64 draws. Thus a hard rejection at the current radius
+boundary would discard many cold dwarfs and include many noise-sensitive
+border cases. The selected next method is to **retain the frozen v4
+distance and add an infrared-support-conflict/type-risk flag**. A hard hold
+and any revised support threshold need separate development and independent
+validation. The flag does not assign a giant probability.
+
+The v4 box still misses the previously identified bluer metal-poor dwarfs.
+That extension remains a separate branch requiring its own training coverage.

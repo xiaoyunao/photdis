@@ -2,6 +2,27 @@
 
 ## 2026-10-29
 
+- Final v5 review: checked the fallback manifest counts and selected plot,
+  corrected report wording, and verified the route decision against labeled
+  development objects. `PYTHONPATH=src:.deps python3 -m pytest -q` passed
+  68 tests; `python3 -m py_compile scripts/plot_pro_round_v5.py` and
+  `git diff --check` passed. Files changed: `PLAN.md`, `README.md`, this
+  worklog, `docs/pro_round_v5.md`, `scripts/plot_pro_round_v5.py`, the
+  fallback manifest and tradeoff figure. Next: commit, synchronize all
+  three checkouts, then obtain independent validation before any route change.
+
+- Fallback audit 60476326 completed on allocated CPU in 24m30s. Development
+  clean candidates with reliable higher-tier support conflict number
+  7,808/71,460 (RA205), 17,724/147,122 (RA60) and 50/363 (RA235). A hard
+  hold removes 10/12 accepted DESI cold giants in RA205, but also 149/1,116
+  DESI cold dwarfs and 44/1,257 strict Gaia cold anchors; RA60 losses are
+  21/143 and 272/6,594. Ten A-tier giants with conflict have WISE masks zero
+  and contamination fraction <1. Only about half the sampled conflicts remain
+  outside support in >=90% of 64 photometric-error draws. Decision: retain
+  frozen v4 distances and add a type-risk conflict marker; no hard hold or
+  center correction. Copied aggregate manifest, made/inspected tradeoff
+  figure, updated report/PLAN/README. Next: final tests and three-end sync.
+
 - Optical-response job 60476003 completed (3m44s); same-star rerun 60476083
   completed (1m12s). Copied aggregate manifests and plotted/inspected both.
   The north/south center sign appears in A/B/C on identical stars; g-only

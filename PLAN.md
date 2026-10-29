@@ -17,20 +17,24 @@ candidate or retain v4. The active goal records detailed deliverables.
    existing per-source arrays. Keep full-flow acceptance and NMAD visible.
 2. Complete: correct the weak-parallax subgroup PIT for each observed-SNR truncation
    interval; simulate the same selected statistic to calibrate its center.
-3. Record each tier fallback reason and complete WISE quality evidence.
+3. Complete: record each tier fallback reason and complete WISE quality evidence.
    Compare a conflict marker and a conservative hold policy on development
    dwarf, giant, metal-poor and unlabeled candidate samples. Assess boundary
    stability under reported measurement errors.
-4. Force A/B/C on identical supported stars in the three native fields;
+4. Complete: force A/B/C on identical supported stars in the three native fields;
    report Gaia residuals and within-star tier differences. Match same-tier
    complete inputs and photometric quality across fields; separate label and
    model-prediction contributions, with parallax/brightness strata.
-5. Measure fixed-tier PS1 g/r/z/grz substitutions and ±0.005/0.01/0.02 mag
+5. Complete: measure fixed-tier PS1 g/r/z/grz substitutions and ±0.005/0.01/0.02 mag
    band responses on the same qualified stars, plus optional rerouting.
    Report center, scatter, tails, support-edge and color dependence.
-6. Decide the next candidate method and validation design, validate code and
-   results, update reports/worklog, and sync committed programs, manifests
-   and selected figures to local, GitHub and NERSC.
+6. Decision: retain v4 distance routing and add a diagnostic infrared support
+   conflict/type-risk flag. A hard rejection loses 3.5%–4.1% of strict Gaia
+   cold anchors and 13.4%–14.7% of quality-qualified DESI cold dwarfs in the
+   two useful development fields. A future hard-hold or fitted correction
+   needs separate calibration and independent final validation.
+7. Complete: validate code/results, update reports/worklog, and sync committed
+   programs, manifests and selected figures to local, GitHub and NERSC.
 
 ## Previous Diagnostic Round (through 88f7330)
 
@@ -203,8 +207,11 @@ configs/cold_v4_fields.json. The full-footprint scan remains stopped.
 
 ## Next Checkpoint
 
-Interpret the registered PS1 relative-optical audit alongside the dust,
-Gaia-label, kinematic and sky-census evidence. Report which cause classes
-remain plausible and the exact data needed for a causal test. Keep the frozen
-cold-v4 route and the previous final tests unchanged until a new method has
-independent calibration and validation fields.
+Review the infrared conflict flag on a separately registered validation set
+before using it to withhold distances or calibrate type probabilities. The
+photometric center discrepancy persists in A/B/C on identical stars and in
+same-tier, complete-input matched C pairs; further cause work needs an
+independent optical reference or a new population/label calibration design.
+Retain the frozen distance route and its prior final tests. For any fitted
+center or support change, register new calibration and final fields before
+scoring their residuals. The metal-poor blue extension remains its own branch.

@@ -82,6 +82,29 @@ def main():
         axes[1].set_ylabel("Residual NMAD (mag)")
         fig.savefig(OUT / "03_same_star_tiers.png", dpi=160)
         plt.close(fig)
+    fallback_path = Path("manifests/cold_v4_fallback_development.json")
+    if fallback_path.exists():
+        fallback = json.loads(fallback_path.read_text())
+        labels = ["RA205", "RA060", "RA235"]
+        fields = list(fallback["fields"].values())
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)
+        axes[0].bar(labels, [100*f["candidate_conflict_fraction"] for f in fields],
+                    color="tab:blue")
+        axes[0].set(ylabel="Flagged clean candidates (%)",
+                    title="Reliable infrared conflicts")
+        classes = ["Gaia cold", "DESI dwarf", "DESI giant", "Metal-poor dwarf"]
+        keys = ["gaia_strict_cold_dwarf", "cool_dwarf", "cool_giant",
+                "calibrated_metal_poor_cool_dwarf"]
+        field = fields[0]
+        before = [field["labels"][k]["v4_accepted"] for k in keys]
+        held = [field["labels"][k]["conflict_flagged"] for k in keys]
+        axes[1].bar(classes, [100*h/n if n else 0 for h, n in zip(held, before)],
+                    color=["tab:blue", "tab:blue", "tab:orange", "tab:blue"])
+        axes[1].set(ylabel="Share flagged among v4 accepted (%)",
+                    title="RA205 labeled development field")
+        axes[1].tick_params(axis="x", rotation=20)
+        fig.savefig(OUT / "04_fallback_tradeoff.png", dpi=160)
+        plt.close(fig)
 
 
 if __name__ == "__main__":
