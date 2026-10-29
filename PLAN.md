@@ -2,38 +2,49 @@
 
 ## Current Objective: native-system, band-matched RGB audit
 
-Status: in progress. Follow the Pro review of `beb15b7` with a bounded
+Status: completed as a bounded observational audit. Followed the Pro review of `beb15b7` with a bounded
 four-cluster experiment. Keep the frozen pooled A/B fit, NGC 7006 test,
 cold-v4/XD and blue forward-parallax results unchanged.
 
-1. Confirm each member's DR11 `RELEASE` and natural camera system against
+1. Complete: confirmed each member's DR11 `RELEASE` and natural camera system against
    sweep files and official Legacy documentation. Separate southern DECam
    from northern BASS/MzLS in all new comparisons. Review the existing
    `MW_TRANSMISSION` dereddening and quantify common cluster distance/dust
    uncertainty. Apply a fixed RGB passband conversion only with a reliable
    source; otherwise leave native systems separate.
-2. Re-read the full matched membership parent on allocated NERSC compute.
+2. Complete: re-read the full matched membership parent on allocated NERSC compute.
    Build a new `gr_clean` tier with exactly the existing per-band optical
    requirements on g and r, including their mask bits and BAILOUT, without
    any z condition. Preserve the grz-qualified frozen rows for same-star
    comparisons. Report by cluster and Gaia-CMD stage: gr and grz counts,
    same-row z-only failures, changed crossmatch row, luminosity/color/radius
    and image-quality distributions; inspect M3's bright upper RGB explicitly.
-3. Recompute and plot empirical loci from exact fitted stage cores: M3 lower,
+3. Complete: recomputed and plotted empirical loci from exact fitted stage cores: M3 lower,
    M53 upper plus lower, NGC 2419 upper. Show the NGC 2419 lower/red-HB
    overlap as a separate diagnostic. Distinguish within-bin 16–84% width
    from local-curve residuals and propagated photometric errors, including
    shared-band covariance.
-4. Compare M3 and M53 at the same M_g within their common DECam range using
+4. Complete: compared M3 and M53 at the same M_g within their common DECam range using
    fixed interpolation. Audit residuals against magnitude, cluster radius
    and measured image-quality quantities. Treat modulus and dust errors as
    whole-cluster shifts. Inspect NGC 2419 within its own native system.
-5. Document measured results, limits of four-cluster coverage and the minimum
+5. Complete: documented measured results, limits of four-cluster coverage and the minimum
    additional system/stage/metallicity cells needed for a conditional
    p(color | M_g, metallicity, RGB, system). Register a new whole-cluster
    test before any subsequent fit; NGC 7006 has already been used. Keep
-   WISE as an acceptance diagnostic. Run targeted tests and sync code,
-   documentation, small manifests and selected figures local/GitHub/NERSC.
+   WISE as an acceptance diagnostic. Targeted tests passed; code, report,
+   small manifests and the selected figure are ready for milestone sync.
+
+Measured outcome: M3 upper RGB has 97 clean gr vs 2 clean grz candidates,
+but remains confined near `M_g≈+0.4…+0.9`; M3–M53 same-DECam lower loci
+have `+0.0275 mag` median `(g-r)₀` difference at common `M_g`. NGC 2419
+upper has a `0.090 mag` local gr residual NMAD with a strong radius trend;
+only 25 quality PS1 counterparts pass the northern-system cross-check.
+See `docs/cluster_rgb_native_system_v2.md` and two new manifests.
+
+Next: design the smallest independent north/south cluster set with
+overlapping metallicity, `M_g` and RGB stage, and register new whole-cluster
+blind tests before another pooled fit. Do not re-use NGC 7006 as untouched.
 
 ## Completed Objective: first pooled cluster RGB experiment
 

@@ -2,6 +2,20 @@
 
 ## 2026-10-29
 
+- Completed the bounded Pro `beb15b7` native-system RGB audit on allocated
+  Slurm finalize/PS1 jobs 60496669/60496671. All four cached member tables
+  map to the expected DR11 `RELEASE`; M3 upper RGB has 97 clean gr versus
+  two grz candidates, but recovered `M_g` 5–95% is only +0.42…+0.86.
+  At common DECam `M_g`, M3 minus M53 lower-RGB median gr and rz offsets
+  are +0.0275/+0.0232 mag. NGC 2419 local gr residual NMAD is 0.090 mag
+  with an inner/outer center shift; 25 quality PS1 matches show a median
+  Legacy-minus-transformed-PS1 gr offset of −0.025 mag. Files: v2 aggregate
+  manifest and figure, PS1 manifest, native-system report, PLAN.
+  Commands: Slurm cached finalize and PS1 cross-check, manifest/figure review,
+  focused tests. Validation: both jobs exit 0; all four identities and
+  camera releases verified. Remaining: no adopted giant-distance model;
+  need new overlapping north/south cluster calibrators and blind systems.
+
 - First four-cluster rejoin on Slurm 60496210 wrote all four new gr tables
   but stopped before the manifest: FITS storage converted phase labels to
   bytes, so later Unicode comparisons selected zero stars and produced a
