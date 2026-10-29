@@ -13,11 +13,12 @@ import fitsio
 import numpy as np
 
 from photdis.stage1 import require_compute, write_json
+from giant_vac_inventory import exact_pair_join
 
 GIANTS = Path("data/giant_vac_v1/same_star.fits")
 SPEC = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits")
 SP = Path("/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits")
-OUT = Path("manifests/giant_vac_identity_audit.json")
+OUT = Path("manifests/giant_vac_identity_audit_v2.json")
 
 
 def match_one(query, catalog):
@@ -48,6 +49,9 @@ def main():
         by_source, source_unique = match_one(giant["source_id"], catalog["SOURCE_ID"])
         target_found, source_found = by_target >= 0, by_source >= 0
         both = target_found & (catalog["SOURCE_ID"][np.maximum(by_target, 0)] == giant["source_id"])
+        joined = exact_pair_join(target, giant["source_id"], catalog)
+        pair_joined = joined >= 0
+        disagreement = np.flatnonzero(pair_joined != both)
         sid_only = source_found & source_unique & ~both & (giant["source_id"] > 0)
         examples = []
         for i in np.flatnonzero(sid_only)[:8]:
@@ -63,6 +67,12 @@ def main():
             "source_found": int((source_found & (giant["source_id"] > 0)).sum()),
             "source_unique": int((source_found & source_unique & (giant["source_id"] > 0)).sum()),
             "exact_pair": int(both.sum()),
+            "original_exact_pair_join": int(pair_joined.sum()),
+            "join_disagreement_examples": [{"targetid": int(target[i]),
+                 "source_id": int(giant["source_id"][i]),
+                 "target_match_index": int(by_target[i]),
+                 "original_join_index": int(joined[i])}
+                for i in disagreement[:8]],
             "unique_source_different_target": int(sid_only.sum()),
             "unique_source_different_target_clean": int((sid_only & giant["clean_low_dust"]).sum()),
             "source_only_examples": examples}
