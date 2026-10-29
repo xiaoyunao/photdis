@@ -2,6 +2,17 @@
 
 ## 2026-10-29
 
+- Implemented the registered whole-cluster scoring program before opening
+  NGC 5466 Legacy measurements. It checks model/config hash, DECam release
+  and zero source-ID overlap; scores stage-specific supported cells for
+  known RRab iron abundance (including its shared uncertainty), the RRc
+  abundance sensitivity and three fixed unknown-abundance mixtures. It
+  reports magnitude-bin residuals, tails, coverage and predictive density,
+  saving per-star output only on NERSC. Files: blind score Python/Slurm
+  scripts. Commands: Python compilation and focused pytest. Validation:
+  three conditional-model tests pass. Next: run only after frozen fit and
+  blind extraction.
+
 - NGC 7006 development audit completed on Slurm job 60497406 (exit 0):
   upper RGB has 56 clean gr and 19 same-row grz members. Its gr 5–95%
   `M_g` range overlaps M53 from −1.007 to +0.471; grz overlap is only
