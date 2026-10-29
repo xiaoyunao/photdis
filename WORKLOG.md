@@ -2,6 +2,14 @@
 
 ## 2026-10-29
 
+- Prepared an independent-system target ranking from published Vasiliev/
+  Baumgardt globular membership and distances, joined to DESI MWS qualified
+  giant spectra by exact Gaia source ID on allocated CPU. This will identify
+  an actual whole-cluster holdout before any giant photo-only fit. Files:
+  `scripts/rank_giant_cluster_systems.py` and Slurm wrapper. Validation:
+  Python compilation and shell syntax passed. Next: rank systems, select
+  DR11-covered members and evaluate actual Legacy photometry overlap.
+
 - Blue-anchor audit job 60486734 verified exact Gaia/DR11 identity for
   source 3601173023628559616 and no DR11 neighbor within 10 arcsec.
   DR11 minus transformed PS1 is −0.011/+0.463/+0.022 mag in g/r/z;
