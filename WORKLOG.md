@@ -6,7 +6,8 @@
   after completing the development grid, then failed because FITS exposed
   `field` as Unicode and the script called `.decode()`. Normalize both
   byte and Unicode field names, add a direct regression test, and keep the
-  registered split/grid unchanged. Files: giant photo runner and test.
+  registered split/grid unchanged. Also cast NumPy Boolean counts from the
+  M3 check to JSON-safe Python integers. Files: giant photo runner and test.
   Commands: Slurm stderr, Python compilation, four focused tests.
   Validation: all tests pass. Next: rerun the allocated model job.
 

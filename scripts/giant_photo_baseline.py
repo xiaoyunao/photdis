@@ -140,10 +140,10 @@ def m3_external(training, bandwidth, mag_floor):
     return {"reference_mu_mag": mu_rr, "members": predictions,
             "median_photo_mu_mag": float(np.median(medians)),
             "median_photo_minus_rr_mag": float(np.median(medians) - mu_rr),
-            "n_68_cover_rr": sum(row["mu_68"][0] <= mu_rr <= row["mu_68"][1]
-                                 for row in predictions),
-            "n_95_cover_rr": sum(row["mu_95"][0] <= mu_rr <= row["mu_95"][1]
-                                 for row in predictions)}
+            "n_68_cover_rr": int(sum(row["mu_68"][0] <= mu_rr <= row["mu_68"][1]
+                                     for row in predictions)),
+            "n_95_cover_rr": int(sum(row["mu_95"][0] <= mu_rr <= row["mu_95"][1]
+                                     for row in predictions))}
 
 
 def main():
