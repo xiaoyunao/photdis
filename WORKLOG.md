@@ -2,6 +2,13 @@
 
 ## 2026-10-30
 
+- Shared-distance first results: NGC4147/5466 completed at 512 draws, but
+  grz nuisance ESS ~17 and nested median changes .040/.032 mag indicate
+  quadrature noise. Invoke the protocol's bounded refinement: 2048 nested
+  draws for grz on all four systems, preserving 512 products and all priors.
+  Added explicit numerical-only CLI override and separate output tags; syntax
+  checked. This changes integration resolution, not models or scientific choices.
+
 - Completed fixed four-cluster responses (60537329, 64s, MaxRSS 174776K).
   Exact counts 422/250/93/42 and frozen hashes verified. NGC4147 center
   -.205 -> +.102 (paper CCM) or -.124 (map-proxy coupled RR); perpendicular

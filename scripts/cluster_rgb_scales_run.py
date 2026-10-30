@@ -124,7 +124,7 @@ def responses(cfg, fits):
     write_json(OUT/'responses.json',results)
 
 
-def shared_distance(cfg,fits,name):
+def shared_distance(cfg,fits,name,only_model=None,tag=''):
     s = cfg['clusters'][name]; setup = cfg['joint']
     tab, meta = read_cluster(name,s)
     g = tab['g0'].astype(float)
@@ -137,7 +137,8 @@ def shared_distance(cfg,fits,name):
     half = len(u)//2
     rband = filters_and_extinction(s,.001)/.001
     results, curves = {}, {'mu':mu}
-    for key in ('prior_only','robust_gr','robust_grz'):
+    keys = (only_model,) if only_model else ('prior_only','robust_gr','robust_grz')
+    for key in keys:
         nc = 1 if key=='robust_gr' else 2
         joint = np.zeros((len(u),len(counts),len(mu)))
         individual = np.full((len(g),len(mu)),-np.inf)
@@ -184,21 +185,32 @@ def shared_distance(cfg,fits,name):
         print('summary',name,key,result[str(len(g))],flush=True)
     meta.update(results=results,mu_prior=setup['mu_prior'],rr_mu_comparison_only=s['mu'],
                 n_shared_draws=len(u),frozen_model_target_scale_independence=True,
+                config_sha256=hashlib.sha256(CFG.read_bytes()).hexdigest(),
+                runtime_quadrature=dict(power=setup['qmc_power'],seed=setup['qmc_seed'],tag=tag),
                 selection_role='conditional_on_reference_selected_Mg_range',
                 compute_host=socket.gethostname())
-    write_json(OUT/f'{name}_joint.json',meta)
-    np.savez(OUT/f'{name}_joint.npz',**curves)
+    suffix = '_'+tag if tag else ''
+    write_json(OUT/f'{name}_joint{suffix}.json',meta)
+    np.savez(OUT/f'{name}_joint{suffix}.npz',**curves)
 
 
 def main():
     require_compute()
     parser=argparse.ArgumentParser();parser.add_argument('task',choices=['response','joint'])
-    parser.add_argument('--cluster');args=parser.parse_args()
+    parser.add_argument('--cluster')
+    parser.add_argument('--only-model',choices=['prior_only','robust_gr','robust_grz'])
+    parser.add_argument('--qmc-power',type=int)
+    args=parser.parse_args()
     cfg=json.loads(CFG.read_text());verify_hashes(cfg['model_sha256'])
     fits=json.loads(Path('manifests/cluster_rgb_lower_robust_v2.json').read_text())['results']
     OUT.mkdir(parents=True,exist_ok=True)
     if args.task=='response': responses(cfg,fits)
-    else: shared_distance(cfg,fits,args.cluster)
+    else:
+        tag=''
+        if args.qmc_power is not None:
+            cfg['joint']['qmc_power']=args.qmc_power
+            tag=f'qmc{2**args.qmc_power}'
+        shared_distance(cfg,fits,args.cluster,args.only_model,tag)
 
 
 if __name__=='__main__': main()
