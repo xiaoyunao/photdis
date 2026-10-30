@@ -2,13 +2,15 @@
 
 ## Current Objective: constrain external scales for conditional RGB distances
 
-Next experiment to register after review of the completed NGC 4147 test:
-compare independent reddening/photometric zero points and FeH reference
-scales on existing systems. Keep the frozen candidate and test outcomes.
-The .01 E(B-V) response (~.21 mag) is large relative to the measured
--.205-mag NGC 4147 center. Determine those scales from external evidence,
-then assess population priors or shared-distance member inference.
-No new regression search or broad cluster expansion is currently needed.
+Active goal: docs/cluster_rgb_scales_protocol_v1.md and configs/cluster_rgb_scales_v1.json.
+Four existing clusters only; preserve model hashes, source identities and nominal
+bins. Primary-source constraint audit and corrected coordinate interpretation are
+registered. Execute frozen coupled-scale responses, two-color projections, finite
+reference-budget correlation cases, then shared-distance inference with nuisance
+integration after member products and a no-color selection control. Compare 256/512
+shared draws, inspect numerical convergence, report residual external ambiguity.
+Validation: 26 focused tests passed. Pending allocated runs, figures/report and
+milestone synchronization. No model adoption or residual-driven scale choice.
 
 ## Completed Objective: independent NGC 4147 lower-RGB validation
 

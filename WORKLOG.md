@@ -2,6 +2,15 @@
 
 ## 2026-10-30
 
+- Registered Pro b18518b four-system external-scale goal before new scores.
+  Read full conversation and original RR/Legacy sources. Added explicit CCM
+  passband integration, coupled RR response scenarios, covariance geometry,
+  exact piecewise-linear shared-member likelihood and no-color support control.
+  Fixed samples/models remain unchanged; no new fit is justified by a unique
+  external reference. Tests: 26 focused checks pass, including numerical
+  quadrature agreement and analytic shared-systematic floor. Next: NERSC runs,
+  numerical convergence, science figures, result decision and three-way sync.
+
 - Completed independent NGC 4147 transfer and target-matched generators.
   Slurm 60535316 exited 0 in 2m02s; 42 unchanged IDs, all frozen hashes
   verified. Primary median -.205 mag, NMAD .187, coverage 29/42 and 37/42;

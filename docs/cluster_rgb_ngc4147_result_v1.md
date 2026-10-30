@@ -143,16 +143,21 @@ On the same IDs, the independently registered reference changes give:
 | Nominal RRc/Legacy references | −0.205 |
 | Alternative I-band RRc distance 18.89 kpc | −0.187 |
 | Compilation RRc distance 18.7 kpc | −0.165 |
-| Additional E(B−V)=−0.01 / +0.01 | +0.007 / −0.425 |
+| Additional raw-SFD EBV coordinate −0.01 / +0.01 | +0.007 / −0.425 |
 | Coherent g zero point −0.01 / +0.01 mag | −0.313 / −0.114 |
 | Coherent r zero point −0.01 / +0.01 mag | −0.199 / −0.225 |
 | Coherent z zero point −0.01 / +0.01 mag | −0.125 / −0.285 |
-| Shift Legacy median E(B−V)=0.02574 to 0.01 | +0.119 |
-| Shift Legacy median E(B−V)=0.02574 to 0.02 | −0.087 |
+| Shift Legacy raw-SFD median EBV=0.02574 to 0.01 | +0.119 |
+| Shift Legacy raw-SFD median EBV=0.02574 to 0.02 | −0.087 |
 
-The final two cases retain differential reddening and shift the whole
-cluster median to the predeclared literature values. They show leverage
-of the reference scale, not which reddening estimate is correct. The 2018
+The final two cases retain differential raw-SFD EBV and change its numerical
+median while keeping the original Legacy coefficients and RR distance fixed.
+They are coordinate sensitivities, **not adoption of the literature physical
+reddening**. Legacy coefficients already include the SF11 calibration;
+0.86 times the raw median is about 0.0221, close to the paper's SF11 map
+value 0.022. Physical changes also require the appropriate band extinctions
+and a coupled RR reference-distance response. These frozen numbers are retained;
+the four-system follow-up is registered in cluster_rgb_scales_protocol_v1.md. The 2018
 I-band estimate uses the same RRc stars; it is not combined as an independent
 distance constraint. The [2023 compilation](https://arxiv.org/html/2306.01175v1)
 has E(B−V)=0.01 in the abundance table and 0.02 in the distance table.

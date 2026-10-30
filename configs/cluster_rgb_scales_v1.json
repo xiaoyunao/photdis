@@ -1,0 +1,105 @@
+{
+  "experiment": "four_cluster_scales_v1",
+  "base_revision": "b18518b",
+  "model_sha256": {
+    "manifests/cluster_rgb_lower_model_v2.json": "c7318508af286317524a305be45b72d97fa54d15e7d4068c5d607b9c1a62f66b",
+    "manifests/cluster_rgb_lower_robust_v2.json": "1f733ddfef10df88e09aac9aa41484d0cbf00926f578c5ac353ccf4a0197a241"
+  },
+  "scope": [
+    "m3",
+    "m53",
+    "ngc5466",
+    "ngc4147"
+  ],
+  "scenarios": [
+    "legacy",
+    "paper_ccm",
+    "sf11_proxy_ccm",
+    "sf11_proxy_ccm_feh_plus_0p1",
+    "paper_ccm_spectroscopic_4147"
+  ],
+  "selection": "frozen nominal lower RGB, P>0.9, same-row clean grz, Mg in [0.5,3); fixed bins",
+  "passbands": "speclite decam2014; photon-weighted Planck SED 4500 K; 4000/5000 K coefficient checks; CCM89",
+  "sf11_proxy_factor": 0.86,
+  "joint": {
+    "mu_prior": [
+      10,
+      22
+    ],
+    "step": 0.01,
+    "qmc_power": 9,
+    "qmc_seed": 103014,
+    "subsample_sizes": [
+      10,
+      20
+    ],
+    "physical_ebv_sigma": 0.005,
+    "zero_point_sigma": 0.01,
+    "reference_distance_in_prior": false
+  },
+  "clusters": {
+    "m3": {
+      "mu": 15.041,
+      "feh": -1.46,
+      "feh_sigma": 0.2,
+      "paper_ebv": 0.013,
+      "rv": 3.23,
+      "rr_extinction_response_components": [
+        0.6923076923076923,
+        0.38461538461538464
+      ],
+      "rr_dmu_dfeh": -0.18,
+      "mu_stat": 0.017,
+      "mu_sys": 0.036,
+      "reference": "https://arxiv.org/abs/2008.11745",
+      "expected_n": 422
+    },
+    "m53": {
+      "mu": 16.403,
+      "feh": -2,
+      "feh_sigma": 0.1,
+      "paper_ebv": 0.02,
+      "rv": 3.1,
+      "rr_extinction_response_components": [
+        0.9,
+        0.55,
+        0.35
+      ],
+      "rr_dmu_dfeh": -0.18,
+      "mu_stat": 0.024,
+      "mu_sys": 0.033,
+      "reference": "https://arxiv.org/abs/2012.13495",
+      "expected_n": 250
+    },
+    "ngc5466": {
+      "mu": 16.02,
+      "feh": -2.16,
+      "feh_sigma": 0.23,
+      "paper_ebv": 0,
+      "rv": 3.1,
+      "rr_extinction_response_components": [
+        3.1
+      ],
+      "rr_dmu_dfeh": 0,
+      "mu_stat": 0.09,
+      "mu_sys": 0,
+      "reference": "https://arxiv.org/abs/0711.4027",
+      "expected_n": 93
+    },
+    "ngc4147": {
+      "mu": 16.39947490005819,
+      "feh": -1.6897904,
+      "feh_sigma": 0.203196,
+      "paper_ebv": 0.01,
+      "rv": 3.1,
+      "rr_extinction_response_components": [
+        3.1
+      ],
+      "rr_dmu_dfeh": 0,
+      "mu_stat": 0.05243450437677056,
+      "mu_sys": 0,
+      "reference": "https://arxiv.org/abs/1803.05313",
+      "expected_n": 42
+    }
+  }
+}
