@@ -114,7 +114,8 @@ def summarize(grid, prob, reference_mg, bin_reference=None):
                     cover68=float(np.mean((ref[mask]>=q[mask,1])&(ref[mask]<=q[mask,3]))),
                     cover95=float(np.mean((ref[mask]>=q[mask,0])&(ref[mask]<=q[mask,4]))),
                     width68=float(np.median(q[mask,3]-q[mask,1])),
-                    log_density=float(np.mean(logp[mask])))
+                    log_density=None if np.any(outside[mask]) else float(np.mean(logp[mask])),
+                    log_density_interior=float(np.mean(logp[mask & ~outside])) if np.any(mask & ~outside) else None)
     bins = ref if bin_reference is None else np.asarray(bin_reference)
     return dict(overall=stat(np.ones(len(ref),bool)),
                 bins={f'{lo:.1f}_{lo+.5:.1f}':stat((bins>=lo)&(bins<lo+.5))

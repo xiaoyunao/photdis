@@ -54,3 +54,12 @@ def test_robust_mixture_keeps_outlier_with_finite_likelihood():
     assert abs(mean(mod,np.array([1.5]),-1.7)[0,0]-(.7-.08*1.5))<.03
     p=probabilities([mod],np.arange(.51,3,.02),[-1.7],[1],[[1.0]],[[.003]*3])
     np.testing.assert_allclose(p.sum(),1)
+
+
+def test_outside_support_log_density_is_not_a_finite_score():
+    grid=np.arange(.51,3,.02)
+    p=np.full((2,len(grid)),1/len(grid))
+    stats,_,_=summarize(grid,p,[.49,1.5])
+    assert stats['overall']['outside_support_n']==1
+    assert stats['overall']['log_density'] is None
+    np.testing.assert_allclose(stats['overall']['log_density_interior'],-np.log(2.5))

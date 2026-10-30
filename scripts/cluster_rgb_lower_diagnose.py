@@ -14,7 +14,7 @@ from photdis.cluster_rgb_conditional import grid_from_bins
 from photdis.stage1 import require_compute, write_json
 
 MODEL=Path('manifests/cluster_rgb_lower_model_v2.json')
-OUT=Path('manifests/cluster_rgb_lower_diagnostic_v2.json')
+OUT=Path('manifests/cluster_rgb_lower_diagnostic_v2r1.json')
 
 
 def prior_exact(ref):
@@ -127,10 +127,10 @@ def main():
         pair[kind]={'gain':float(nmad(a)-nmad(b)),
                     'source_bootstrap95':np.quantile(nmad(a[ix])-nmad(b[ix]),[.025,.975]).tolist()}
     ax[0].axhline(0,color='k',lw=.7);ax[0].set(xlabel='Reference Mg',ylabel='Predicted minus reference modulus')
-    ax[1].plot([.5,3],[.5,3],'k--',lw=.7);ax[1].set(xlabel='Reference Mg',ylabel='Posterior median Mg')
+    ax[1].axhline(1.75,color='0.6',ls=':',label='prior only');ax[1].plot([.5,3],[.5,3],'k--',lw=.7);ax[1].set(xlabel='Reference Mg',ylabel='Posterior median Mg')
     ax[2].set(xlabel='Mg',ylabel='Mean g-r at FeH=-1.7')
     for a in ax:a.legend(fontsize=6);a.grid(alpha=.2)
-    figure=Path('figures/cluster_rgb/07_lower_rgb_controls_v2.png');fig.savefig(figure,dpi=160);plt.close(fig)
+    figure=Path('figures/cluster_rgb/07_lower_rgb_controls_v2r1.png');fig.savefig(figure,dpi=160);plt.close(fig)
     data=Path('data/cluster_rgb_lower_v2');data.mkdir(exist_ok=True,parents=True)
     np.savez(data/'ngc5466_diagnostic.npz',source_id=t['source_id'],mg_ref=ref,**rows)
     write_json(OUT,dict(role='post_unblinding_explanation_not_independent_validation',

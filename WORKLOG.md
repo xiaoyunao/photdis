@@ -2,6 +2,18 @@
 
 ## 2026-10-30
 
+- Robust development job 60534268 and explanatory job 60534327 completed
+  (exit 0). On the unchanged 93 NGC 5466 stars, grz NMAD is .125/.130/.110
+  mag for lower quadratic/monotone/robust, versus v1 .231. The 68% coverage
+  remains ~96%. Internal full-generator coverage is ~68%; model-sample
+  differences remain. Found a reporting issue in internal simulation:
+  occasional noisy g values shift a point reference beyond bounded support,
+  where a numerical log floor dominated the mean log score. Corrected to
+  return undefined full log density and report interior density/count
+  explicitly; no fitted model/selection/seed changes. Added edge regression
+  test (13 focused tests pass). Rerun diagnostic as v2r1 and retain the
+  original NERSC output for provenance. Next: final interpretation/report.
+
 - Reviewed the lower-RGB development derivative/residual figure. Both
   registered forms follow decreasing color; the bright M3 bin has only
   five objects and a ~0.02-mag gr median residual. Robust Slurm job
