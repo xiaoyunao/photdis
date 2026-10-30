@@ -2,6 +2,12 @@
 
 ## 2026-10-30
 
+- Initial posterior checks expose slow distance/color-ridge mixing, strongest
+  in NGC5466 (full-sample Rhat 1.065, ESS 60). Add a symmetric reversible
+  unit-Jacobian RGB shear proposal; equality/reversibility tests pass. Extend
+  only failed frozen subsets to 48000 steps, using separate tags; all original
+  chains/priors remain. This is a bounded numerical integration refinement.
+
 - Submitted four posterior sampling checks (60538303/304/305/307).
   Aggregate preserves initial/refined quadrature and clearly labels posterior
   integration as primary grz; wrong-independent control remains separate.

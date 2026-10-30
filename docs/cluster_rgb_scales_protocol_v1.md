@@ -125,3 +125,11 @@ occupancies and per-chain distance summaries as additional diagnostics. If a
 run fails, extend only its numerical sampling, preserving the failed diagnostic.
 The interpretation of the selected luminosity support and the no-color control
 stays the same. [Diagnostic method](https://arxiv.org/abs/1903.08008).
+
+The first posterior runs show slow movement along distance/color ridges
+(NGC5466 full-sample Rhat 1.065, bulk ESS 60). A numerical proposal refinement
+adds a symmetric N(0,.3 mag) distance shift and the reversible color shear
+f(median(g)-theta_new)-f(median(g)-theta_old). Its Jacobian is one, and its
+inverse is tested. Proposal probabilities are 55% local, 25% model, 20% shear.
+Run failed subsets with 48000 production steps per chain, separate tagged output;
+retain initial traces/results. No posterior parameter, prior or target likelihood changes.

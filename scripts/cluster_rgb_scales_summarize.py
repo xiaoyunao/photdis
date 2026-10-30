@@ -45,6 +45,14 @@ def main():
             if sample['ids_sha256'] != joint[n]['ids_sha256']:
                 raise ValueError('Sampling identity mismatch')
             sampling[n]=sample
+            extended_path=DATA/f'{n}_joint_mcmc48000.json'
+            if extended_path.exists():
+                extended=json.loads(extended_path.read_text())
+                if extended['ids_sha256'] != sample['ids_sha256']:
+                    raise ValueError('Extended sampling identity mismatch')
+                sampling[n]['initial_12000_results']=json.loads(json.dumps(sample['results']))
+                sample['results']['robust_grz'].update(extended['results']['robust_grz'])
+                sampling[n]['extended_sampling']=extended
             for count,row in sample['results']['robust_grz'].items():
                 row['wrong_independent']=joint[n]['results']['robust_grz'][count]['wrong_independent']
             joint[n]['results']['robust_grz']=sample['results']['robust_grz']
@@ -109,6 +117,8 @@ def main():
         if refined_path.exists(): curves.update(dict(np.load(refined_path)))
         sample_path=DATA/f'{n}_joint_mcmc.npz'
         if sample_path.exists(): curves.update(dict(np.load(sample_path)))
+        extended_path=DATA/f'{n}_joint_mcmc48000.npz'
+        if extended_path.exists(): curves.update(dict(np.load(extended_path)))
         step=mu[1]-mu[0]
         for key,color,linestyle,label in [('prior_only','#888888','-','Shared, no color'),
             ('robust_gr','#168b77','-','Shared gr'),('robust_grz','#485db5','-','Shared grz'),

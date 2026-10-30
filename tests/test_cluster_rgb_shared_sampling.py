@@ -52,3 +52,16 @@ def test_fixed_postwarmup_sampler_recovers_correlated_gaussian():
     grid=np.arange(14,18,.002)
     p=conditional_density(grid,np.full(100,16.),np.full(100,.2),bounds=(14,18))
     np.testing.assert_allclose(np.sum((grid-16.)**2*p),.04,atol=1e-5)
+
+
+def test_curve_following_proposal_is_reversible_with_unit_jacobian():
+    from photdis.cluster_rgb_shared_sampling import CollapsedTarget
+    cov=effective_covariance(MODEL,np.array([3.57,2.58,1.45]),.005,.01,.2)
+    target=CollapsedTarget([MODEL],np.array([17.,18.]),np.array([[.8,.4],[.7,.3]]),
+                           np.full((2,3),.02),-1.7,[cov],2)
+    x=np.array([16.,.01,-.02]);shift=.35
+    y=target.distance_proposal(x,shift,0)
+    np.testing.assert_allclose(target.distance_proposal(y,-shift,0),x,atol=1e-14)
+    eps=1e-6
+    jac=np.column_stack([(target.distance_proposal(x+eps*v,shift,0)-y)/eps for v in np.eye(3)])
+    np.testing.assert_allclose(np.linalg.det(jac),1.,atol=1e-8)

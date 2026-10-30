@@ -60,6 +60,7 @@ class PreparedLikelihood:
 class CollapsedTarget:
     def __init__(self, models, g, colors, errors, feh, covariances, n, mu_bounds=(10.,22.)):
         self.models=models;self.n=n;self.bounds=mu_bounds
+        self.pivot_g=float(np.median(g[:n]));self.feh=feh
         self.likelihoods=[PreparedLikelihood(m,g,colors,errors,feh) for m in models]
         self.pivot=np.array([mean(m,np.array([1.75]),feh)[0] for m in models])
         self.inv=[];self.logdet=[];self.gain=[];self.conditional_sigma=[]
@@ -89,6 +90,14 @@ class CollapsedTarget:
         center=x[...,0]+np.sum(self.gain[k]*x[...,1:],axis=-1)
         return center,self.conditional_sigma[k]
 
+    def distance_proposal(self,x,shift,k):
+        """Reversible unit-Jacobian shear along the RGB distance/color ridge."""
+        proposed=x.copy();proposed[0]+=shift
+        m=np.array([self.pivot_g-x[0],self.pivot_g-proposed[0]])
+        predicted=mean(self.models[k],m,self.feh)
+        proposed[1:]+=predicted[1]-predicted[0]
+        return proposed
+
 
 def metropolis_chains(target,start,model_count,*,chains=4,warmup=3000,draws=12000,seed=103015):
     dim=len(start);samples=np.empty((chains,draws,dim));indices=np.empty((chains,draws),int)
@@ -98,11 +107,14 @@ def metropolis_chains(target,start,model_count,*,chains=4,warmup=3000,draws=1200
         x=np.asarray(start,float).copy();x[0]+=(chain-(chains-1)/2)*.15
         k=chain*model_count//chains;lp=target(x,k)
         cov=np.diag(np.r_[.07,np.full(dim-1,.012)]**2)
-        chol=np.linalg.cholesky(cov);history=[];accepted=np.zeros(2);attempts=np.zeros(2)
+        chol=np.linalg.cholesky(cov);history=[];accepted=np.zeros(3);attempts=np.zeros(3)
         for j in range(warmup+draws):
-            kind=int(rng.random()<.25)
-            if kind:
+            u=rng.random()
+            kind=1 if u<.25 else (2 if u<.45 and hasattr(target,'distance_proposal') else 0)
+            if kind==1:
                 kk=int(rng.integers(model_count));xx=target.model_proposal(x,k,kk)
+            elif kind==2:
+                kk=k;xx=target.distance_proposal(x,rng.normal(0,.3),k)
             else:
                 kk=k;xx=x+chol@rng.normal(size=dim)
             ll=target(xx,kk)
@@ -119,7 +131,7 @@ def metropolis_chains(target,start,model_count,*,chains=4,warmup=3000,draws=1200
             else:
                 attempts[kind]+=1
                 samples[chain,j-warmup]=x;indices[chain,j-warmup]=k;logps[chain,j-warmup]=lp
-        accept.append((accepted/attempts).tolist())
+        accept.append(np.divide(accepted,attempts,out=np.zeros(3),where=attempts>0).tolist())
     return samples,indices,logps,accept
 
 
