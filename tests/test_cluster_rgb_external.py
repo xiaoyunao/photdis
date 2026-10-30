@@ -3,7 +3,7 @@ import pytest
 
 from photdis.cluster_rgb_external import (
     observe, matched_errors, cluster_bands, identity_hash, abundance_conditions,
-    prior_only, verify_hashes)
+    prior_only, verify_hashes, paired_bin_contrast)
 from photdis.cluster_rgb_conditional import RG, RR, RZ
 
 
@@ -55,3 +55,10 @@ def test_prior_only_analytic_bounds_and_outside_score():
     np.testing.assert_allclose(q[0],[.5625,.9,1.75,2.6,2.9375])
     np.testing.assert_allclose(stats['overall']['log_density'],-np.log(2.5))
     assert prior_only([.49])[0]['overall']['log_density'] is None
+
+
+def test_paired_luminosity_contrast_cancels_common_cluster_offset():
+    simulations=[{'bins':{'1.0_1.5':{'n':5,'median':shift},
+                         '2.5_3.0':{'n':8,'median':shift+.2}}}
+                 for shift in (-3., 0., 4.)]
+    np.testing.assert_allclose(paired_bin_contrast(simulations)['interval95'], [.2]*3)

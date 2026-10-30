@@ -104,6 +104,15 @@ def cluster_bands(per_cluster):
     return out
 
 
+def paired_bin_contrast(per_cluster, bright='1.0_1.5', faint='2.5_3.0'):
+    """Difference within each simulated cluster retains bin covariance."""
+    values = [p['bins'][faint]['median']-p['bins'][bright]['median']
+              for p in per_cluster
+              if p['bins'][bright]['n'] and p['bins'][faint]['n']]
+    return dict(n_clusters=len(values), values=values,
+                interval95=np.quantile(values, [.025,.5,.975]).tolist() if values else None)
+
+
 def target_recovery(models, grid, cfg, observed_mg, errors):
     """A grid shrinkage control and two fully shared cluster generators."""
     sim = cfg['simulation']

@@ -2,6 +2,21 @@
 
 ## 2026-10-30
 
+- Completed independent NGC 4147 transfer and target-matched generators.
+  Slurm 60535316 exited 0 in 2m02s; 42 unchanged IDs, all frozen hashes
+  verified. Primary median -.205 mag, NMAD .187, coverage 29/42 and 37/42;
+  color score gain +.371/star, z gain CI includes zero. Shared-cluster
+  prediction allows center and .330-mag faint/bright contrast; reference
+  dust/FeH changes strongly affect scale. Added correlated-bin summary
+  from saved draws, report, two reviewed figures, earlier precision/mixture
+  interpretation corrections, PLAN and README. Validation: 21 focused tests pass;
+  manifest counts/hashes, JSON and diff checks pass; data remain on NERSC.
+  Sync first rejected an identical untracked coverage manifest; verified
+  its hash and archived the remote generated copy under ignored provenance,
+  then normal fast-forward synchronization succeeded. Next: independent
+  reference-scale evidence before population-prior/shared-member inference.
+
+
 - NGC 4147 eligibility extraction Slurm 60535204 exited 0: 1,210 matched
   DECam members, 42 common lower-RGB stars in bins 6/12/10/6/8; zero
   development-ID overlap. Locked data/source/model hashes before scores.

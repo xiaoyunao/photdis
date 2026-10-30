@@ -4,6 +4,13 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
+Latest RGB result: [independent NGC 4147 test](docs/cluster_rgb_ngc4147_result_v1.md)
+of the frozen lower-RGB candidate is complete. The 42-star same-band test
+has median modulus residual −0.205 mag and NMAD 0.187 mag. It retains
+color information over a uniform luminosity prior, while shared reference
+scales and abundance priors substantially affect the distance center.
+The report includes fixed-model controls and matched whole-cluster simulations.
+
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),
 [external/depth follow-up](docs/followup_validation.md), and

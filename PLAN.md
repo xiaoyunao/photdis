@@ -1,14 +1,28 @@
 # PLAN
 
-## Current Objective: independent validation of a lower RGB candidate
+## Current Objective: constrain external scales for conditional RGB distances
 
-Status: registered NGC 4147 independent transfer. Detailed requirements and
-acceptance questions are in docs/cluster_rgb_ngc4147_protocol_v1.md and
-configs/cluster_rgb_ngc4147_v1.json. Primary frozen robust monotone grz;
-all existing controls retained. First extract identity/coverage only, then
-commit eligible IDs before fixed scoring and target-matched simulations.
-Deliver scale compatibility, luminosity trend versus shrinkage, prior gain,
-and abundance-prior sensitivity. Keep all earlier fits/results frozen.
+Next experiment to register after review of the completed NGC 4147 test:
+compare independent reddening/photometric zero points and FeH reference
+scales on existing systems. Keep the frozen candidate and test outcomes.
+The .01 E(B-V) response (~.21 mag) is large relative to the measured
+-.205-mag NGC 4147 center. Determine those scales from external evidence,
+then assess population priors or shared-distance member inference.
+No new regression search or broad cluster expansion is currently needed.
+
+## Completed Objective: independent NGC 4147 lower-RGB validation
+
+Followed docs/cluster_rgb_ngc4147_protocol_v1.md and the complete Pro
+c1f5c59 review. Registered primary robust monotone grz and all frozen
+controls before extraction; locked 42 common DECam sources before scores.
+All five Mg bins populated, 14 stars at Mg>=2, zero training overlap.
+Slurm extraction/scoring jobs 60535204/60535316 completed successfully.
+Primary center -.205 mag, NMAD .187, cover68=29/42 and cover95=37/42.
+Color score gain over uniform prior +.371/star; paired z NMAD gain .022
+has 95% interval [-.047,+.134]. The matched 48-cluster shared generator
+allows the measured center and .330-mag faint/bright contrast, with broad
+predictive ranges. Unknown-FeH weights shift center by .240 mag. Full
+results and decision: docs/cluster_rgb_ngc4147_result_v1.md.
 
 ## Completed Objective: lower RGB scope, shape and prior controls
 

@@ -29,7 +29,7 @@ selection available to unknown-distance stars. Keep the 2–3 mag results.
 [2018 RRc study](https://arxiv.org/abs/1803.05313) supplies 19.05±0.46 kpc
 and E(B−V)=0.01. RRab amplitude modulation makes their Fourier parameters
 unsuitable here. Transform its ZW −1.72±0.15 using the same polynomial as
-development: UVES −1.689±0.203 dex (linear propagated uncertainty).
+development: UVES −1.690±0.203 dex (linear propagated uncertainty).
 Use three quadrature nodes (center±sqrt(2) sigma, center), weights .25/.5/.25,
 as in the frozen implementation. Also show the exact-center sensitivity.
 

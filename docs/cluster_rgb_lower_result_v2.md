@@ -53,6 +53,13 @@ The single external reference has its shared 0.09-mag uncertainty.
 | Robust monotone gr | +0.064 | 0.173 | 3.2% | 95.7% | 98.9% | 1.06 | -0.336 |
 | Robust monotone grz | +0.043 | 0.110 | 3.2% | 96.8% | 98.9% | 0.84 | -0.089 |
 
+The 0.110-mag NMAD is within-system point scatter in an exposed test with
+reference abundance, not a universal 5% RGB distance error. Its 0.84-mag
+68% width corresponds to a distance-endpoint ratio of 1.47; the faint-bin
++0.245-mag center is a roughly 12% distance offset. Shared system scales
+are not represented by within-cluster NMAD. The 5% broad residual mixture
+weight is prescribed, not a measured HB/AGB/nonmember/binary fraction.
+
 Magnitude units apply to center, NMAD and width. The exact prior-only model
 has median Mg=1.75 and central 68% width=1.70. Its 88.2% coverage already
 shows this selected cluster sample is not uniformly distributed in Mg.
