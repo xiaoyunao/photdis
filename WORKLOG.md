@@ -2,6 +2,12 @@
 
 ## 2026-10-30
 
+- Remote NumPy has removed trapz; eager evaluation of the compatibility fallback
+  raised before scoring. Use SciPy trapezoid (already a required dependency)
+  across local/NERSC versions. Added a known-support-only information test.
+  Six scale/shared-likelihood tests pass; retain failed startup logs, resubmit
+  response and change only pending own-job dependencies after the fix.
+
 - DESI environment lacked the optional speclite import. Registered an allocated
   project-local speclite==0.20 installation (job 60536997), with scientific jobs
   dependent on setup success. Local pinned-package passband integration checked:

@@ -74,7 +74,8 @@ def main():
         # All points stay in arrays/metrics; annotate count outside plot limits.
         outside=np.sum((abs(base[:,0])>.14)|(abs(base[:,1])>.12))
         ax.text(.02,.03,f'{outside} individual points outside displayed axes',transform=ax.transAxes,fontsize=8)
-    fig.tight_layout();fig.savefig(FIG/'02_color_residuals.png',dpi=160);plt.close(fig)
+    fig.legend(*axes[-1,-1].get_legend_handles_labels(),loc='lower center',ncol=3,fontsize=8)
+    fig.tight_layout(rect=(0,.1,1,1));fig.savefig(FIG/'02_color_residuals.png',dpi=160);plt.close(fig)
 
     fig,axes=plt.subplots(2,2,figsize=(11,8))
     for ax,n in zip(axes.flat,names):
@@ -87,6 +88,8 @@ def main():
             p=curves[f'{key}_{count}{suffix}']
             ax.plot(mu,p/step,color=color,ls=linestyle,label=label)
         rr=joint[n]['rr_mu_comparison_only'];ax.axvline(rr,color='k',ls=':',label='RR comparison only')
+        rr_sigma=np.hypot(cfg['clusters'][n]['mu_stat'],cfg['clusters'][n]['mu_sys'])
+        ax.axvspan(rr-rr_sigma,rr+rr_sigma,color='k',alpha=.06,label='RR quoted uncertainty')
         ax.set_xlim(rr-.6,rr+.6);ax.set_title(f'{n.upper()} — {count} selected members')
         ax.set_xlabel(r'Common distance modulus $\mu$');ax.set_ylabel('Conditional density / mag')
     fig.legend(*axes[0,0].get_legend_handles_labels(),loc='lower center',ncol=3,fontsize=9)

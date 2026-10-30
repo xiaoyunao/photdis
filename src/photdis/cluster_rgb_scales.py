@@ -1,5 +1,6 @@
 """Explicit physical extinctions and fixed-model scale diagnostics."""
 import numpy as np
+from scipy.integrate import trapezoid
 from photdis.cluster_rgb_lower import mean, slope
 from photdis.cluster_rgb_conditional import residual_measurement_cov
 
@@ -26,8 +27,7 @@ def band_extinction(wave, throughput, ebv, rv=3.1, temperature=4500):
     wave = np.asarray(wave, float)
     # B_lambda times lambda (photon weighting); arbitrary normalization cancels.
     weight = np.asarray(throughput)*wave**-4/np.expm1(1.438776877e8/(wave*temperature))
-    integrate = getattr(np, 'trapezoid', np.trapz)
-    ratio = integrate(weight*10**(-.4*ebv*ccm_r(wave,rv)),wave)/integrate(weight,wave)
+    ratio = trapezoid(weight*10**(-.4*ebv*ccm_r(wave,rv)),wave)/trapezoid(weight,wave)
     return float(-2.5*np.log10(ratio))
 
 

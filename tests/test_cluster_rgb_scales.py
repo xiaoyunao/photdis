@@ -3,7 +3,8 @@ from scipy.integrate import quad
 from scipy.stats import multivariate_normal, norm
 from photdis.cluster_rgb_scales import ccm_r, change_scale, reference_covariance
 from photdis.cluster_rgb_shared_distance import (
-    member_log_likelihood, log_normal_interval, marginalize_members)
+    member_log_likelihood, log_normal_interval, marginalize_members,
+    prior_member_log_likelihood, posterior_summary)
 
 
 def test_physical_shift_changes_color_label_and_reference_together():
@@ -58,3 +59,12 @@ def test_shared_offset_floor_and_wrong_order():
 def test_normal_interval_far_tails():
     np.testing.assert_allclose(log_normal_interval(9.,10.),log_normal_interval(-10.,-9.))
     assert np.isfinite(log_normal_interval(100.,101.))
+
+
+def test_known_luminosity_endpoints_can_constrain_distance_without_colors():
+    grid = np.arange(15.9,16.1,.0001)
+    # Known Mg interval and two endpoint members alone imply mu in [15.99,16.01].
+    ll = prior_member_log_likelihood(grid,np.array([16.51,18.99]),np.full(2,.001))
+    result,_ = posterior_summary(grid,ll.sum(axis=0))
+    assert abs(result['q'][2]-16) < .001
+    assert result['width68'] < .02
