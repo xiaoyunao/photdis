@@ -2,6 +2,12 @@
 
 ## 2026-10-30
 
+- Submitted four posterior sampling checks (60538303/304/305/307).
+  Aggregate preserves initial/refined quadrature and clearly labels posterior
+  integration as primary grz; wrong-independent control remains separate.
+  All 28 focused lower-RGB, external, conditional, scale and sampling tests pass;
+  syntax and diff whitespace checks pass. Await numerical results before final figures.
+
 - Added exact Gaussian collapse and posterior-directed integration cross-check
   because initial primary QMC ESS reaches only 2.6 for M53. Physical nuisance
   and collapsed likelihood equality, cached quadrature, covariance propagation,

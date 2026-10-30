@@ -7,14 +7,16 @@ Four existing clusters only; preserve model hashes, source identities and nomina
 bins. Primary-source constraint audit and corrected coordinate interpretation are
 registered. Execute frozen coupled-scale responses, two-color projections, finite
 reference-budget correlation cases, then shared-distance inference with nuisance
-integration after member products and a no-color selection control. Compare 256/512
-shared draws, inspect numerical convergence, report residual external ambiguity.
+integration after member products and a no-color selection control. Initial 512
+prior draws were insufficient; retain the 2048-draw comparison and cross-check
+with exact Gaussian collapse plus four posterior chains, with unchanged priors.
 Frozen responses completed in Slurm 60537329 (64s, 175 MB); all identities and
 model hashes verified. NGC4147 center changes from -.205 to +.102 or -.124 mag
 under the two coherent scenarios; perpendicular mismatch persists. Scale audit
-ends with external ambiguity and no refit. Shared-distance jobs 60537031/634/637/639
-are running; next: convergence, figures, report completion and final sync.
-Six new core tests and both synthetic pipeline smoke runs pass.
+ends with external ambiguity and no refit. Initial shared-distance jobs completed;
+refined quadrature jobs 60537803/806/807/808 and posterior sampling jobs
+60538303/304/305/307 provide numerical checks. Next: convergence, figures,
+report completion and final sync. All 28 focused RGB/scales/sampling tests pass.
 
 ## Completed Objective: independent NGC 4147 lower-RGB validation
 
