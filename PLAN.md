@@ -1,22 +1,28 @@
 # PLAN
 
-## Current Objective: constrain external scales for conditional RGB distances
+## Completed Objective: external scales and shared-member RGB distance
 
-Active goal: docs/cluster_rgb_scales_protocol_v1.md and configs/cluster_rgb_scales_v1.json.
-Four existing clusters only; preserve model hashes, source identities and nominal
-bins. Primary-source constraint audit and corrected coordinate interpretation are
-registered. Execute frozen coupled-scale responses, two-color projections, finite
-reference-budget correlation cases, then shared-distance inference with nuisance
-integration after member products and a no-color selection control. Initial 512
-prior draws were insufficient; retain the 2048-draw comparison and cross-check
-with exact Gaussian collapse plus four posterior chains, with unchanged priors.
-Frozen responses completed in Slurm 60537329 (64s, 175 MB); all identities and
-model hashes verified. NGC4147 center changes from -.205 to +.102 or -.124 mag
-under the two coherent scenarios; perpendicular mismatch persists. Scale audit
-ends with external ambiguity and no refit. Initial shared-distance jobs completed;
-refined quadrature jobs 60537803/806/807/808 and posterior sampling jobs
-60538303/304/305/307 provide numerical checks. Next: convergence, figures,
-report completion and final sync. All 28 focused RGB/scales/sampling tests pass.
+Detailed goal: docs/cluster_rgb_scales_protocol_v1.md; final results:
+docs/cluster_rgb_scales_result_v1.md and manifests/cluster_rgb_scales_v1.json.
+Fixed 422/250/93/42 members, frozen curves and nominal bins retained. Completed
+primary-source constraint table, coherent RR/reddening/FeH scenarios, two-color
+geometry, finite common/differential reference budgets, shared-member inference,
+no-color support control and wrong-independent comparison. External evidence
+leaves scale ambiguity, so no reference refit or new regression is adopted.
+
+Numerical endpoint: all 10/20-member subsets pass; full M3/NGC4147 pass.
+Full M53/NGC5466 distance parameters pass, but log-target Rhat=1.0107/1.0122
+misses the registered threshold. Retain those flags and end the bounded
+refinement at 48000 steps/chain. Shared NGC4147 W68=.184 versus .038 for the
+wrong-independent calculation and .197 for no color; selection is informative.
+29 focused tests pass; four scientific figures inspected; all final Slurm jobs
+completed. Programs/docs/small results/figures synchronize; catalogs/chains stay
+on NERSC. No active compute or further automatic model search is required.
+
+Next review: evaluate the selection/stage likelihood and externally constrained
+reference covariance before treating pooled distances as calibration results.
+The current output is a conditional prototype; existing distance products and
+scientific quality cuts remain frozen.
 
 ## Completed Objective: independent NGC 4147 lower-RGB validation
 

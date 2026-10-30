@@ -45,6 +45,9 @@ def main():
             if sample['ids_sha256'] != joint[n]['ids_sha256']:
                 raise ValueError('Sampling identity mismatch')
             sampling[n]=sample
+            sample['draws_per_chain_by_subset']={k:sample['draws_per_chain']
+                for k in sample['results']['robust_grz']}
+            sample['initial_draws_per_chain']=sample.pop('draws_per_chain')
             extended_path=DATA/f'{n}_joint_mcmc48000.json'
             if extended_path.exists():
                 extended=json.loads(extended_path.read_text())
@@ -52,11 +55,16 @@ def main():
                     raise ValueError('Extended sampling identity mismatch')
                 sampling[n]['initial_12000_results']=json.loads(json.dumps(sample['results']))
                 sample['results']['robust_grz'].update(extended['results']['robust_grz'])
+                sample['draws_per_chain_by_subset'].update({k:extended['draws_per_chain']
+                    for k in extended['results']['robust_grz']})
                 sampling[n]['extended_sampling']=extended
             for count,row in sample['results']['robust_grz'].items():
                 row['wrong_independent']=joint[n]['results']['robust_grz'][count]['wrong_independent']
             joint[n]['results']['robust_grz']=sample['results']['robust_grz']
             joint[n]['primary_integration_method']=sample['method']
+            joint[n]['primary_draws_per_chain_by_subset']=sample['draws_per_chain_by_subset']
+            if 'draws_by_model' in joint[n]:
+                joint[n]['control_quadrature_draws_by_model']=joint[n].pop('draws_by_model')
     for n in names:
         if joint[n]['ids_sha256'] != response['clusters'][n]['ids_sha256']:
             raise ValueError('Response/joint identity mismatch')

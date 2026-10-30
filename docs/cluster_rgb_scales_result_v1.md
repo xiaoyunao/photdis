@@ -1,6 +1,6 @@
 # Four-cluster external scales and shared-member distance
 
-Status: four-cluster frozen responses completed; shared-distance calculations running.
+Status: completed bounded audit and shared-distance prototype; numerical limits retained below.
 Protocol: [registered experiment](cluster_rgb_scales_protocol_v1.md).
 
 ## What changes and what remains a frozen reference
@@ -207,5 +207,83 @@ below .00005 mag for all four systems. The gr control has .0018–.0061-mag
 changes and nuisance ESS 45–140; it remains a quadrature comparison, separate
 from the primary grz convergence assessment.
 
-Final shared-distance tables and numerical checks follow after the allocated
-posterior calculations finish.
+### Full-member common-distance prototype
+
+All moduli and widths are in mag. Intervals are conditional model intervals,
+not externally calibrated coverage statements. RR values enter only this comparison.
+M3/M53 are in-sample development controls; NGC5466/4147 are exposed external diagnostics.
+
+| Cluster | N | Shared grz median | 16–84% interval | Offset from RR | No-color W68 | Shared grz W68 | Wrong-independent W68 |
+|---|---:|---:|---|---:|---:|---:|---:|
+| M3 | 422 | 15.255 | 15.131–15.334 | +0.214 | 0.338 | 0.203 | 0.042 |
+| M53 | 250 | 16.432 | 16.403–16.470 | +0.029 | 0.087 | 0.068 | 0.034 |
+| NGC5466 | 93 | 15.986 | 15.911–16.124 | -0.034 | 0.281 | 0.213 | 0.086 |
+| NGC4147 | 42 | 16.414 | 16.333–16.517 | +0.015 | 0.197 | 0.184 | 0.038 |
+
+For NGC4147, using shared parameters gives W68=.184 mag; incorrectly
+independently marginalizing each star gives .038 mag, a factor of 4.8 narrower.
+Its no-color control already has W68=.197 mag. This close control is direct
+evidence that the reference-selected luminosity range supplies much of the
+common-distance constraint. NGC5466 narrows from .281 to .213 mag with colors.
+The pooled M3 center remains +.214 mag from its reference: pooling members
+does not establish a corrected external distance scale. Its reference lies
+inside the model 95% interval, but outside its 68% interval.
+
+M3/M53 reuse training members and the original calibration ensemble. The
+ensemble and the target reference priors are not a reconstructed joint
+hierarchy of training and target scales; these two rows are numerical and
+development diagnostics, not independent validation of their uncertainties.
+
+### Numerical endpoint
+
+| Cluster (all members) | Max parameter Rhat | Log-target Rhat | Minimum bulk/tail ESS, all checks | Chain-median range | Full registered check |
+|---|---:|---:|---:|---:|---|
+| M3 | 1.0044 | 1.0029 | 534 | 0.0149 | pass |
+| M53 | 1.0029 | 1.0107 | 447 | 0.0025 | not passed |
+| NGC5466 | 1.0011 | 1.0122 | 434 | 0.0082 | not passed |
+| NGC4147 | 1.0004 | 1.0009 | 2513 | 0.0049 | pass |
+
+All 10/20-member subsets pass after the registered numerical refinement.
+The full M53 and NGC5466 distance/color parameters pass, but the log-target
+Rhat remains 1.0107 and 1.0122, above the registered 1.01 threshold. Their
+full joint distributions therefore remain numerically provisional. We retain
+the failed flags, raw chains and occupancy checks, and end the bounded run
+after this refinement; we do not relax the threshold or report complete convergence.
+Across full samples the four chain-median ranges are .0025–.0149 mag.
+
+The member-count experiment uses nested source-ID subsets, so different N
+also means a different apparent-luminosity spread. It is not a pure N-scaling
+law. The exact Gaussian benchmark demonstrates the asymptotic shared-error
+floor; in the real model the residual conditional common-g sigma remains
+.0117–.0205 mag across sampled calibration realizations. This analytic shared
+component remains in every posterior and is never divided by sqrt(N).
+
+### Decision and deliverables
+
+The bounded external-scale audit is complete. Existing sources do not select
+a unique coherent change of both training and target references. Keep the
+frozen RGB relation and the explicit scenario spread. The shared-distance
+algorithm and its negative controls are implemented; its results remain a
+selection-conditional prototype with the numerical flags above. No new
+field-star product, reference offset, membership cut or regression is adopted.
+
+Before treating a pooled cluster distance as a calibration result, the next
+scientific requirement is a specified membership/stage/selection likelihood
+and externally constrained reference covariance. More members alone cannot
+remove the measured selection and shared-scale dependence. This round ends
+here for review rather than expanding the sample or tuning the exposed clusters.
+
+- [Coupled external-scale response](../figures/cluster_rgb_scales_v1/01_scale_response.png)
+- [Two-color residuals](../figures/cluster_rgb_scales_v1/02_color_residuals.png)
+- [Shared distance and controls](../figures/cluster_rgb_scales_v1/03_shared_distance.png)
+- [Member count and common uncertainty](../figures/cluster_rgb_scales_v1/04_member_count.png)
+- [Full small result manifest](../manifests/cluster_rgb_scales_v1.json)
+
+Validation: 29 focused tests pass, including exact likelihood integration,
+Gaussian collapse, covariance propagation, shared-vs-independent error floors,
+negative support control, sampler recovery and reversible proposal Jacobian.
+Four figures visually inspected. Science runs used allocated NERSC nodes.
+Final numerical jobs 60538646/648/772/787 and summary 60538545 all completed
+with exit code 0; large arrays and chains stay in NERSC data/cluster_rgb_scales_v1.
+Initial and refined numerical results remain in the aggregate with input/model
+identity hashes and DECam throughput provenance.

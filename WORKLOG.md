@@ -2,6 +2,21 @@
 
 ## 2026-10-30
 
+- Completed Pro b18518b goal: coherent four-cluster scale audit and shared-member
+  inference on fixed 422/250/93/42 stars. Report: cluster_rgb_scales_result_v1.md;
+  manifest + four figures under cluster_rgb_scales_v1. No uniquely justified
+  scale refit; NGC4147 centers -.205 / +.102 / -.124 mag across fixed scenarios.
+  Shared NGC4147 mu=16.414, W68=.184 vs wrong .038 and no-color .197.
+  Full M3/NGC4147 numerical checks pass; M53/NGC5466 retain log-target Rhat
+  1.0107/1.0122 flags despite stable distance parameters. Bounded refinement
+  ends with these explicit numerical limits, not changed acceptance thresholds.
+  Jobs 60538646/648/772/787 and summary 60538545 completed. 29 targeted tests
+  and syntax checks pass; all four figures visually checked. Aggregate metadata
+  separates per-subset chain lengths from control quadrature draws; this
+  metadata-only clarification leaves all scientific arrays/statistics unchanged.
+  Large chains/catalogs remain on NERSC. Final milestone: sync code/docs/figures;
+  next is review of selection likelihood/reference covariance, not extra fields.
+
 - Initial integration completed for all four systems. Refine only failed
   subsets: NGC4147 N=20/42 (60538646), NGC5466 N=10/20/93 (60538648),
   M53 N=250 (60538772), M3 N=422 (60538787). All four are allocated/running.
