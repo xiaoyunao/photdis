@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-10-30
+
+- Read the complete Pro review of 73b023a and registered a detailed active
+  goal. Confirmed fit-before-support selection and unpaired tier seeds in
+  v1 source. Added stage-restricted quadratic/monotone GLS, shared training
+  draws and a development-only runner; protocol fixes support, knots and
+  residual floor before fitting. Files: lower RGB module, runner, protocol,
+  full review, targeted tests, PLAN. NERSC fetch initially failed due to
+  expired authentication; user renewed it and HEAD 73b023a is verified.
+  Validation: compile and targeted regression tests. Next: fit on allocated
+  compute, inspect development tail influence, then freeze for diagnosis.
+
 ## 2026-10-29
 
 - Completed the registered DECam RGB conditional-model transfer. The frozen

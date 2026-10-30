@@ -1,17 +1,26 @@
 # PLAN
 
-## Current Objective: next RGB luminosity-information test
+## Current Objective: lower RGB scope, shape and prior controls
 
-Status: planning only. The registered DECam conditional RGB transfer is
-complete; see `docs/cluster_rgb_conditional_result_v1.md`. Keep its frozen
-fit, NGC 5466 identity and blind score as the comparison baseline. The next
-experiment should first register its development/whole-cluster test split and
-choose additional observables only if they exist for the same RGB members.
-Test luminosity information by phase and magnitude bin, propagate coherent
-cluster dust and photometric scales, and compare against the current gr/grz
-result on identical stars. Add explicit RGB/HB/AGB and abundance mixtures only
-with external stage evidence; require a new untouched whole-cluster test and
-independent field validation before claiming a field giant-distance product.
+Status: active; detailed requirements in docs/cluster_rgb_lower_protocol_v2.md
+and the saved full Pro review docs/pro_73b023a_review.md. The goal is to
+separate model-induced weak luminosity constraints from physical degeneracy.
+
+1. Reproduce v1 training-domain leakage, derivative reversals and paired-draw
+   mismatch; correct interpretation of residual covariance and discrete FeH priors.
+2. Fit only M3/M53 common-support lower RGB, with the same grz-clean IDs for
+   gr/grz. Compare quadratic and fixed-knot monotone curves with identical
+   48 cluster-scale draws. Freeze before explanatory NGC 5466 scoring.
+3. Audit development curvature and extreme-point covariance contribution;
+   use a fixed robust likelihood control if the registered trigger is met.
+4. Add prior-only on the original 93 sources and three-tier internal
+   generation/recovery, including cluster-coherent shared uncertainties.
+5. Evaluate the now-unblinded NGC 5466 diagnostic by Mg; report information
+   relative to the prior and distinguish model limitations from physics.
+6. Validate, commit and sync code/reports/figures across all three endpoints.
+
+NGC 5466 is no longer a new independent test. No new field or passband is a
+prerequisite. NERSC auth renewed by user on October 30; connection verified.
 
 ## Completed Objective: registered DECam conditional RGB experiment
 
