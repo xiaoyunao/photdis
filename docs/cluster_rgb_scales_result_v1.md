@@ -1,7 +1,6 @@
 # Four-cluster external scales and shared-member distance
 
-Status: allocated calculations pending; this file records the interpretation
-framework and will receive the measured results before the milestone closes.
+Status: four-cluster frozen responses completed; shared-distance calculations running.
 Protocol: [registered experiment](cluster_rgb_scales_protocol_v1.md).
 
 ## What changes and what remains a frozen reference
@@ -102,6 +101,91 @@ N=20 their standard deviations are .2012 versus .0500 mag; the correct N→infin
 limit is .2 mag. This analytic demonstration is separate from the selected RGB
 samples' N-dependent posterior widths.
 
-## Measured results and decision
+## Measured fixed-model responses
 
-Pending allocated response and four shared-distance calculations.
+All centers below are median predicted minus reference distance modulus (mag).
+Coverage counts inclusion of each scenario's reference point.
+The paper-CCM cases use uniform cluster reddening; the Legacy baseline retains
+its per-object map pattern. Thus these are fully stated reference scenarios,
+not pure zero-point translations. No scenario is selected by these scores.
+
+| Cluster | N | Legacy center | Paper CCM center | SF11-proxy coupled center | Proxy +.1 dex center |
+|---|---:|---:|---:|---:|---:|
+| M3 | 422 | +0.0392 | +0.0242 | +0.0571 | +0.0186 |
+| M53 | 250 | -0.0323 | -0.0437 | -0.0033 | -0.0440 |
+| NGC5466 | 93 | +0.0435 | +0.3664 | +0.1194 | +0.0648 |
+| NGC4147 | 42 | -0.2051 | +0.1018 | -0.1239 | -0.1818 |
+
+The M53 proxy cases move one fixed member's reference beyond the trained [.5,3]
+range. That member stays in the counts, tails and coverage; the all-star log score
+is undefined for those cases. Interior-only scores and all fixed-bin metrics are
+explicitly separate in the manifest.
+
+The actual extinction and coupled distance values are:
+
+| Cluster | Scenario | Ag | Ar | Az | RR modulus |
+|---|---|---:|---:|---:|---:|
+| M3 | legacy | 0.04323 | 0.02912 | 0.01629 | 15.04100 |
+| M3 | paper_ccm | 0.04816 | 0.03513 | 0.01998 | 15.04100 |
+| M3 | sf11_proxy_ccm | 0.04285 | 0.03126 | 0.01778 | 15.04177 |
+| M53 | legacy | 0.06675 | 0.04497 | 0.02515 | 16.40300 |
+| M53 | paper_ccm | 0.07146 | 0.05166 | 0.02902 | 16.40300 |
+| M53 | sf11_proxy_ccm | 0.06382 | 0.04614 | 0.02592 | 16.40428 |
+| NGC5466 | legacy | 0.05499 | 0.03704 | 0.02072 | 16.02000 |
+| NGC5466 | paper_ccm | -0.00000 | -0.00000 | -0.00000 | 16.02000 |
+| NGC5466 | sf11_proxy_ccm | 0.05258 | 0.03801 | 0.02135 | 15.97438 |
+| NGC4147 | legacy | 0.08274 | 0.05574 | 0.03118 | 16.39947 |
+| NGC4147 | paper_ccm | 0.03574 | 0.02583 | 0.01451 | 16.39947 |
+| NGC4147 | sf11_proxy_ccm | 0.07910 | 0.05719 | 0.03213 | 16.36184 |
+
+M3's paper and map proxy produce only small reference-distance changes because
+its RR distance uses H/Ks. The NGC5466 proxy changes the V reference by -0.0456
+mag relative to its published zero-reddening assumption; NGC4147 changes by
+-0.0376 mag relative to E=.01. This distinction was missing from the old
+coordinate-only comparison. Band-weight brackets, SED responses and FeH offsets
+are retained in the result manifest, rather than folded into a falsely precise
+single conversion.
+
+### NGC4147: same 42 members
+
+| Scenario | gr center | grz center | grz NMAD | grz tail >.5 | grz 68/95 cover | grz W68 | grz mean log density |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| legacy | -0.1405 | -0.2051 | 0.1874 | 19.0% | 69.0%/88.1% | 0.66 | -0.5456 |
+| paper_ccm | +0.1404 | +0.1018 | 0.1352 | 9.5% | 81.0%/92.9% | 0.66 | -0.3312 |
+| sf11_proxy_ccm | -0.0192 | -0.1239 | 0.1808 | 14.3% | 73.8%/92.9% | 0.66 | -0.3942 |
+| sf11_proxy_ccm_feh_plus_0p1 | -0.0877 | -0.1818 | 0.1919 | 19.0% | 69.0%/88.1% | 0.68 | -0.4494 |
+| paper_ccm_spectroscopic_4147 | +0.2534 | +0.1916 | 0.1361 | 9.5% | 66.7%/92.9% | 0.61 | -0.4108 |
+
+The paper-reddening case changes the center's sign. Its better exposed-sample
+NMAD does not establish its physical correctness. The spectroscopic-abundance
+alternative changes that center again to +.192 mag. The fixed faint-minus-bright
+contrast changes from .330 mag (Legacy) to .216 (paper CCM) or .310 (map proxy):
+reference changes do not erase the luminosity dependence.
+
+### Two-color geometry
+
+The median signed perpendicular projections (narrow-model plus measurement
+covariance units) are:
+
+| Cluster | Legacy | Paper CCM | SF11 proxy | Proxy +.1 dex |
+|---|---:|---:|---:|---:|
+| M3 | +0.020 | +0.196 | +0.166 | +0.180 |
+| M53 | -0.030 | +0.212 | +0.161 | +0.197 |
+| NGC5466 | -0.089 | -0.251 | +0.068 | +0.098 |
+| NGC4147 | +0.604 | +0.540 | +0.837 | +0.877 |
+
+For NGC4147, the map-proxy case improves the one-dimensional center but increases
+the perpendicular median from .604 to .837. Its median color residual is
+approximately (+.0006,-.0157) mag: a favorable distance change does not simultaneously
+align both colors. The paper and spectroscopy variants give perpendicular
+medians .540 and .504. These standardized diagnostics are not Gaussian significance
+estimates for the whole cluster, and no sqrt(N) reduction of reference errors is used.
+
+The existing external information therefore does **not identify a unique joint
+revision** of both training systems and the targets. We retain the frozen model,
+report the scenario dependence, and end the scale audit here. No residual-selected
+reddening, common offset, new quality cut or new regression is adopted.
+
+## Shared-distance measured results
+
+Pending the four allocated shared-distance jobs and numerical convergence checks.

@@ -2,6 +2,14 @@
 
 ## 2026-10-30
 
+- Completed fixed four-cluster responses (60537329, 64s, MaxRSS 174776K).
+  Exact counts 422/250/93/42 and frozen hashes verified. NGC4147 center
+  -.205 -> +.102 (paper CCM) or -.124 (map-proxy coupled RR); perpendicular
+  median .604 -> .540/.837. One M53 reference crosses support and stays counted.
+  Report records all scenarios, actual extinctions, bins and remaining ambiguity;
+  no uniquely justified training-reference refit. Both synthetic full pipelines
+  passed. Shared jobs 60537031/634/637/639 running with 2 GB allocations.
+
 - Remote NumPy has removed trapz; eager evaluation of the compatibility fallback
   raised before scoring. Use SciPy trapezoid (already a required dependency)
   across local/NERSC versions. Added a known-support-only information test.

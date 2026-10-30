@@ -3,7 +3,7 @@
 #SBATCH -q shared
 #SBATCH -N 1
 #SBATCH -c 1
-#SBATCH --mem=8G
+#SBATCH --mem=2G
 #SBATCH -t 00:30:00
 #SBATCH -J rgb_scales
 #SBATCH -o logs/rgb_scales_%j.out

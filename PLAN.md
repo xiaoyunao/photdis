@@ -9,8 +9,12 @@ registered. Execute frozen coupled-scale responses, two-color projections, finit
 reference-budget correlation cases, then shared-distance inference with nuisance
 integration after member products and a no-color selection control. Compare 256/512
 shared draws, inspect numerical convergence, report residual external ambiguity.
-Validation: 26 focused tests passed. Pending allocated runs, figures/report and
-milestone synchronization. No model adoption or residual-driven scale choice.
+Frozen responses completed in Slurm 60537329 (64s, 175 MB); all identities and
+model hashes verified. NGC4147 center changes from -.205 to +.102 or -.124 mag
+under the two coherent scenarios; perpendicular mismatch persists. Scale audit
+ends with external ambiguity and no refit. Shared-distance jobs 60537031/634/637/639
+are running; next: convergence, figures, report completion and final sync.
+Six new core tests and both synthetic pipeline smoke runs pass.
 
 ## Completed Objective: independent NGC 4147 lower-RGB validation
 
