@@ -71,6 +71,11 @@ Legacy photometry. The first pooled RGB model was rejected; see the
 tests a frozen forward color model on NGC 5466. Its grz lower-RGB transfer
 improves over gr on the same stars, but strong magnitude-dependent residuals
 and broad intervals prevent adoption as a field giant-distance product.
+The [lower-RGB controls](docs/cluster_rgb_lower_result_v2.md) subsequently
+corrected training-domain leakage: restricting to M3/M53 lower support
+removes quadratic reversals, and same-star grz scatter improves substantially.
+NGC 5466 is now an exposed diagnostic; a new independently registered system
+is the next validation step.
 
 ## Locations
 

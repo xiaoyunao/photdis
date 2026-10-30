@@ -2,6 +2,20 @@
 
 ## 2026-10-30
 
+- Completed the registered lower-RGB controls. Slurm 60534138 (scope/shape),
+  60534268 (robust), 60534327 (initial diagnostics) and 60534463 (boundary
+  score clarification) all exit 0. Restricted quadratic already removes
+  reversals; known-FeH NGC 5466 grz NMAD is .125/.130/.110 mag for
+  quadratic/monotone/robust, versus prior-only .583 and frozen v1 .231.
+  Robust bright/faint contrast is .241 mag; coverage on the exposed cluster
+  remains 96.8% for nominal 68%. Full internal generators yield near-nominal
+  coverage with cluster uncertainty explicit. Files: final report, v2r1
+  manifest and figure, PLAN, README. Validation: 13 focused tests pass;
+  all 24 observed model/prior comparisons unchanged after the score-only
+  fix; source identities/model hash verified, figures reviewed, diff clean.
+  Data remain on NERSC. Next: a newly registered independent DECam lower-RGB
+  system for the frozen candidate, with stage/abundance and faint-end checks.
+
 - Robust development job 60534268 and explanatory job 60534327 completed
   (exit 0). On the unchanged 93 NGC 5466 stars, grz NMAD is .125/.130/.110
   mag for lower quadratic/monotone/robust, versus v1 .231. The 68% coverage
