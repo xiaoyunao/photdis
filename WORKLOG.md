@@ -2,6 +2,15 @@
 
 ## 2026-10-30
 
+- Read complete Pro c1f5c59 review and registered the new independent-system
+  goal. NGC 4147 previously appeared only in spectral system ranking; no
+  named RGB product or fit was found. Member ZIP and southern sweep exist.
+  Fixed primary robust grz, model hashes, RRc distance/FeH and reference
+  alternatives before extraction. Files: protocol/config/full review,
+  identity/coverage extractor, PLAN. Validation: compile; NERSC auth valid.
+  Next: allocated coverage extraction, lock IDs, once-only comparisons.
+
+
 - Completed the registered lower-RGB controls. Slurm 60534138 (scope/shape),
   60534268 (robust), 60534327 (initial diagnostics) and 60534463 (boundary
   score clarification) all exit 0. Restricted quadratic already removes

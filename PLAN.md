@@ -2,13 +2,13 @@
 
 ## Current Objective: independent validation of a lower RGB candidate
 
-Status: next experiment to register. The bounded scope/shape/prior controls
-are complete; see docs/cluster_rgb_lower_result_v2.md. Keep all v1/v2
-fits and NGC 5466 diagnostics frozen. Register one new DECam lower-RGB
-system with comparable abundance and actual Mg support before inspecting
-new scores. Include prior-only, the three frozen controls, phase evidence,
-cluster-scale scenarios and magnitude bins. Check the remaining faint-end
-trend and abundance dependence before extending bands or populations.
+Status: registered NGC 4147 independent transfer. Detailed requirements and
+acceptance questions are in docs/cluster_rgb_ngc4147_protocol_v1.md and
+configs/cluster_rgb_ngc4147_v1.json. Primary frozen robust monotone grz;
+all existing controls retained. First extract identity/coverage only, then
+commit eligible IDs before fixed scoring and target-matched simulations.
+Deliver scale compatibility, luminosity trend versus shrinkage, prior gain,
+and abundance-prior sensitivity. Keep all earlier fits/results frozen.
 
 ## Completed Objective: lower RGB scope, shape and prior controls
 

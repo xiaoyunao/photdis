@@ -1,0 +1,131 @@
+{
+  "experiment": "ngc4147_lower_rgb_external_v1",
+  "base_revision": "c1f5c59",
+  "primary": "robust_grz",
+  "controls": [
+    "quadratic_gr",
+    "quadratic_grz",
+    "monotone_gr",
+    "monotone_grz",
+    "robust_gr",
+    "prior_only"
+  ],
+  "model_sha256": {
+    "manifests/cluster_rgb_lower_model_v2.json": "c7318508af286317524a305be45b72d97fa54d15e7d4068c5d607b9c1a62f66b",
+    "manifests/cluster_rgb_lower_robust_v2.json": "1f733ddfef10df88e09aac9aa41484d0cbf00926f578c5ac353ccf4a0197a241"
+  },
+  "member_file": "catalogues/NGC_4147.txt",
+  "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+  "ra": [
+    180,
+    185
+  ],
+  "dec": [
+    15,
+    20
+  ],
+  "sweep_ra": [
+    180
+  ],
+  "sweep_dec": [
+    15
+  ],
+  "center": [
+    182.526,
+    18.543
+  ],
+  "distance_kpc": 19.05,
+  "distance_sigma_kpc": 0.46,
+  "external_mu": 16.39947490005819,
+  "external_mu_sigma": 0.05243450437677056,
+  "external_mu_reference": "https://arxiv.org/abs/1803.05313",
+  "feh": -1.6897903999999997,
+  "feh_sigma": 0.20319599999999996,
+  "feh_definition": "2018 RRc ZW=-1.72 +/-0.15 transformed by same Carretta polynomial as development; propagated sigma, not divided by sqrt(member count)",
+  "feh_alternatives": {
+    "rrc_compilation": [
+      -1.68,
+      0.3522064
+    ],
+    "spectroscopic": [
+      -1.84,
+      0.10198039027185571
+    ]
+  },
+  "spectroscopic_sigma_definition": ".02 dex mean statistical error plus assumed .10 dex scale floor in quadrature; cross-scale sensitivity, not exact UVES conversion",
+  "reference_ebv": 0.01,
+  "dust_scale_sigma_ebv": 0.01,
+  "zero_point_sigma_mag": 0.01,
+  "distance_alternatives_kpc": {
+    "rrc_i_pl": 18.89,
+    "rrc_compilation": 18.7
+  },
+  "phase_screen": {
+    "rgb_bright_max_gaia_g_minus_mu": 0.3,
+    "rgb_lower_max_gaia_g_minus_mu": 2.6,
+    "rgb_color_lower_at_zero": 0.98,
+    "rgb_color_slope_per_mag": -0.025,
+    "hb_gaia_g_minus_mu": [
+      0.3,
+      1.2
+    ],
+    "hb_bp_rp_max": 0.8,
+    "possible_agb_bp_rp_min": 0.7,
+    "main_sequence_gaia_g_minus_mu_min": 3.6
+  },
+  "quality": "Pmember>0.9; lower_rgb Gaia screen; existing gr_clean or grz_clean_same_row; RELEASE=11010; reference Mg in [0.5,3); no residual selection",
+  "support": [
+    0.5,
+    3.0
+  ],
+  "mg_bins": [
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    3
+  ],
+  "unknown_feh_components": [
+    -1.46,
+    -2.0
+  ],
+  "unknown_weights": {
+    "equal": [
+      0.5,
+      0.5
+    ],
+    "rich": [
+      0.8,
+      0.2
+    ],
+    "poor": [
+      0.2,
+      0.8
+    ]
+  },
+  "simulation": {
+    "seed": 414730,
+    "clusters": 48,
+    "grid_mg": [
+      0.625,
+      0.875,
+      1.125,
+      1.375,
+      1.625,
+      1.875,
+      2.125,
+      2.375,
+      2.625,
+      2.875
+    ],
+    "repeats_per_grid": 8,
+    "shared_nuisance": "One generator calibration draw, FeH, reference-modulus error, dust error and three band zero points per synthetic cluster; actual errors sampled within reference-Mg bin, nearest occupied bin fallback; both grid and observed-Mg distributions. No sqrtN shrink."
+  },
+  "references": [
+    "https://arxiv.org/abs/1803.05313",
+    "https://arxiv.org/abs/1605.03408",
+    "https://arxiv.org/html/2306.01175v1",
+    "https://zenodo.org/records/4891252"
+  ]
+}
