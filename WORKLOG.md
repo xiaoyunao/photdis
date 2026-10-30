@@ -2,6 +2,15 @@
 
 ## 2026-10-30
 
+- Reviewed the lower-RGB development derivative/residual figure. Both
+  registered forms follow decreasing color; the bright M3 bin has only
+  five objects and a ~0.02-mag gr median residual. Robust Slurm job
+  60534268 submitted after the development trigger. Added robust paired
+  band statistics to the explanatory scorer. Files: development figure
+  and plotting script, diagnostic runner. Validation: visual inspection;
+  12 focused tests passed for covariance, monotonicity, prior normalization
+  and robust outlier treatment. Next: robust fit then dependent diagnostics.
+
 - Slurm 60534138 completed (exit 0). Training restricted before fitting to
   422 M3 + 250 M53 lower-RGB members. Both quadratic and monotone models
   have zero positive-slope realizations across 48 paired draws. Monotone

@@ -118,7 +118,8 @@ def main():
         x=np.linspace(.5,3,200)
         ax[2].plot(x,mean(result['models'][0],x,-1.7)[:,0],label=name)
         print(name,results[name]['known']['overall'],flush=True)
-    for kind in ('quadratic','monotone'):
+    for kind in ('quadratic','monotone','robust'):
+        if kind+'_gr' not in rows:continue
         a,b=rows[kind+'_gr'],rows[kind+'_grz']
         rng=np.random.default_rng(734)
         ix=rng.integers(len(a),size=(1000,len(a)))
