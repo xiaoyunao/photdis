@@ -2,6 +2,12 @@
 
 ## 2026-10-30
 
+- Queued allocated response/shared-distance jobs 60536634/635/637/638/639.
+  Added exact prior-file identity checks for NGC5466, frozen development
+  catalog hashes, DECam release assertion and four small-figure aggregation.
+  Run commands and optional speclite dependency documented in README.
+  Validation: syntax checks passed; numerical core previously passed 26 tests.
+
 - Registered Pro b18518b four-system external-scale goal before new scores.
   Read full conversation and original RR/Legacy sources. Added explicit CCM
   passband integration, coupled RR response scenarios, covariance geometry,

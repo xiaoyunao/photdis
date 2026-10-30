@@ -39,6 +39,16 @@ def read_cluster(name, settings):
     if name == 'ngc4147':
         locked = json.loads(Path('manifests/cluster_rgb_ngc4147_blind_coverage_v1.json').read_text())
         if ids != locked['common_ids_sha256']: raise ValueError('NGC4147 identity changed')
+    elif name == 'ngc5466':
+        old = np.load('data/cluster_rgb_lower_v2/ngc5466_diagnostic.npz')
+        if ids != identity_hash(old['source_id']):
+            raise ValueError('NGC5466 diagnostic identity changed')
+    else:
+        frozen = json.loads(Path('manifests/cluster_rgb_lower_model_v2.json').read_text())
+        if hashlib.sha256(path.read_bytes()).hexdigest() != frozen['input_sha256'][name]:
+            raise ValueError('Development source catalog changed')
+    if np.any(tab['release'] != 11010):
+        raise ValueError('Unexpected natural photometric system')
     return tab, dict(n=len(tab),ids_sha256=ids,input_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
 
 

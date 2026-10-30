@@ -11,6 +11,19 @@ color information over a uniform luminosity prior, while shared reference
 scales and abundance priors substantially affect the distance center.
 The report includes fixed-model controls and matched whole-cluster simulations.
 
+The bounded [four-cluster external-scale experiment](docs/cluster_rgb_scales_protocol_v1.md)
+uses the existing members and frozen curves. Its optional passband integration
+uses `speclite` from the NERSC DESI environment; core likelihood tests need only
+NumPy/SciPy. Submit from the NERSC checkout:
+
+```bash
+sbatch scripts/run_cluster_rgb_scales_v1.sh response
+sbatch scripts/run_cluster_rgb_scales_v1.sh joint --cluster ngc4147
+# Repeat joint for m3, m53, ngc5466; all large outputs stay in data/cluster_rgb_scales_v1.
+# Within an allocated environment after all four finish:
+python scripts/cluster_rgb_scales_summarize.py
+```
+
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),
 [external/depth follow-up](docs/followup_validation.md), and
