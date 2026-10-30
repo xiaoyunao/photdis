@@ -25,12 +25,23 @@ def main():
     display=['Legacy / paper distance','Paper E, CCM','SF11 proxy E, coupled RR',
              'SF11 proxy + 0.1 dex','Paper E, spectroscopic NGC4147']
     joint={n:json.loads((DATA/f'{n}_joint.json').read_text()) for n in names}
+    initial=json.loads(json.dumps(joint))
+    for n in names:
+        refined_path=DATA/f'{n}_joint_qmc2048.json'
+        if refined_path.exists():
+            refined=json.loads(refined_path.read_text())
+            if refined['ids_sha256'] != joint[n]['ids_sha256']:
+                raise ValueError('Refined identity mismatch')
+            joint[n]['results'].update(refined['results'])
+            joint[n]['initial_shared_draws']=joint[n].pop('n_shared_draws')
+            joint[n]['draws_by_model']={'prior_only':512,'robust_gr':512,'robust_grz':2048}
+            joint[n]['refined_runtime_quadrature']=refined['runtime_quadrature']
     for n in names:
         if joint[n]['ids_sha256'] != response['clusters'][n]['ids_sha256']:
             raise ValueError('Response/joint identity mismatch')
-    manifest=dict(responses=response,joint=joint,
+    manifest=dict(responses=response,joint=joint,initial_shared_512=initial,
         decision='retain frozen model; external scales ambiguous; joint inference conditional on selected Mg support',
-        numerical_rule='review 256/512 quantile differences and nuisance ESS before quoting interval precision',
+        numerical_rule='grz: 1024/2048 comparison; controls: 256/512; review nuisance ESS and retained initial results',
         product_status='diagnostic prototype, not field-star distances',
         source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest()
                       for p in DATA.glob('*.json')})
@@ -79,7 +90,9 @@ def main():
 
     fig,axes=plt.subplots(2,2,figsize=(11,8))
     for ax,n in zip(axes.flat,names):
-        curves=np.load(DATA/f'{n}_joint.npz');mu=curves['mu'];count=joint[n]['n']
+        curves=dict(np.load(DATA/f'{n}_joint.npz'));mu=curves['mu'];count=joint[n]['n']
+        refined_path=DATA/f'{n}_joint_qmc2048.npz'
+        if refined_path.exists(): curves.update(dict(np.load(refined_path)))
         step=mu[1]-mu[0]
         for key,color,linestyle,label in [('prior_only','#888888','-','Shared, no color'),
             ('robust_gr','#168b77','-','Shared gr'),('robust_grz','#485db5','-','Shared grz'),

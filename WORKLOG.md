@@ -2,6 +2,14 @@
 
 ## 2026-10-30
 
+- Added exact Gaussian collapse and posterior-directed integration cross-check
+  because initial primary QMC ESS reaches only 2.6 for M53. Physical nuisance
+  and collapsed likelihood equality, cached quadrature, covariance propagation,
+  Gaussian recovery, shared-grey floor and rank/folded diagnostics tested (4 pass).
+  Protocol registers four chains, discarded adaptation, fixed production proposal,
+  unchanged 48-model prior and analytic common-grey integration. No RR prior.
+  2048-draw QMC jobs 60537803/806/807/808 retain the original numerical comparison.
+
 - Shared-distance first results: NGC4147/5466 completed at 512 draws, but
   grz nuisance ESS ~17 and nested median changes .040/.032 mag indicate
   quadrature noise. Invoke the protocol's bounded refinement: 2048 nested

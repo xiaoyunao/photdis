@@ -93,3 +93,35 @@ before running, inspect numerical convergence, and retain unresolved limitations
 Deliver a four-cluster scale table, fixed response/geometry figure, shared-distance
 and selection control figure, machine-readable results, tests and final decision.
 Compute in NERSC allocation; synchronize only code/docs/small manifests/figures.
+
+## Numerical integration addendum (after the 512-draw diagnostic)
+
+The initial primary integrals have nuisance ESS 2.6–17.6; M53's median changes
+by .082 mag between 256 and 512 draws. Invoke the registered bounded refinement
+to 2048 nested draws, retaining separate 512 files. This is numerical resolution,
+not a revision of the prior, sample or model.
+
+Also cross-check the integral using an exact Gaussian collapse and posterior
+sampling. Let the common band correction be b and abundance displacement dz.
+The equivalent Gaussian variables are dg=b_g and
+d=(b_g-b_r,b_r-b_z)-beta_Z dz. Write theta=mu-dg. The likelihood becomes
+L(theta,d,k) for frozen realization k. Conditional dg|d,k is Gaussian; integrate
+it analytically, including the [10,22] mu-prior bounds. The remaining target is
+the member-product likelihood times N(d|0,Scc,k), the conditional prior-bound
+mass and the uniform discrete realization prior. This identity is checked
+against the original full-nuisance likelihood before use.
+
+Use four independent Metropolis chains, 3000 discarded warmup steps with proposal
+covariance adaptation, then 12000 steps per chain with fixed proposals. Continuous
+proposals are symmetric; discrete model proposals are uniform with a reversible,
+unit-Jacobian color translation at Mg=1.75. The same target priors and all 48
+frozen realizations remain. Starting distance uses median(g)-1.75, not RR distance.
+Marginal mu densities average the exact conditional Gaussian dg distributions;
+the common grey uncertainty is never reduced by member count.
+
+Check rank-normalized and folded split Rhat (<1.01), bulk/tail ESS (>400) for
+theta, both color shifts, conditional mu mean and log target; report model
+occupancies and per-chain distance summaries as additional diagnostics. If a
+run fails, extend only its numerical sampling, preserving the failed diagnostic.
+The interpretation of the selected luminosity support and the no-color control
+stays the same. [Diagnostic method](https://arxiv.org/abs/1903.08008).
