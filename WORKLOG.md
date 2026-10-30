@@ -2,6 +2,16 @@
 
 ## 2026-10-30
 
+- NGC 4147 eligibility extraction Slurm 60535204 exited 0: 1,210 matched
+  DECam members, 42 common lower-RGB stars in bins 6/12/10/6/8; zero
+  development-ID overlap. Locked data/source/model hashes before scores.
+  Legacy E(B−V) median .02574 differs from external .01/.02; registered
+  those coherent reference alternatives before evaluating distances.
+  Added frozen-model scoring and target-matched cluster generators, with
+  shared scales and same-g error propagation. Validation: 17 focused tests
+  pass, syntax/diff checks clean. Next: allocated fixed comparison job.
+
+
 - Read complete Pro c1f5c59 review and registered the new independent-system
   goal. NGC 4147 previously appeared only in spectral system ranking; no
   named RGB product or fit was found. Member ZIP and southern sweep exist.

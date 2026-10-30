@@ -93,3 +93,16 @@ coverage/score/simulation manifests, exact identity and file hashes, two
 scientific figures and a concise decision report. Validate sign/shared-band
 noise, immutable model hashes, sample identity and simulation clustering.
 Update PLAN/WORKLOG and synchronize tracked milestones to all three sites.
+
+## Eligibility lock (before any scoring)
+
+Slurm 60535204 extracted 1,210 Gaia-linked members, all RELEASE=11010.
+The unchanged core supplies 42 common grz stars (6/12/10/6/8 per bin),
+including 14 with Mg>=2, and six additional gr-only stars. The identity hash
+is recorded in `manifests/cluster_rgb_ngc4147_blind_coverage_v1.json`;
+reconstructed development IDs match the frozen hash and have zero overlap.
+NGC 4147 qualifies for the proposed test; no substitute target is needed.
+The median Legacy E(B−V) is 0.02574. Before scoring, add explicit *coherent*
+shifts of this median to literature values 0.01 and 0.02, retaining measured
+differential reddening. These are reference-system sensitivities, selected
+from the already registered literature rather than from distance residuals.

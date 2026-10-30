@@ -127,5 +127,9 @@
     "https://arxiv.org/abs/1605.03408",
     "https://arxiv.org/html/2306.01175v1",
     "https://zenodo.org/records/4891252"
+  ],
+  "dust_reference_alternatives": [
+    0.01,
+    0.02
   ]
 }
