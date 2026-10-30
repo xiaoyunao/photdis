@@ -84,15 +84,16 @@ def probabilities(models, grid, z, zw, colors, errors):
         s = slope(model,grid)
         v = residual_measurement_cov(errors[:,0,None],errors[:,1,None],
                                      errors[:,2,None],s[None,:,:],nc)
-        v += np.asarray(model['intrinsic'])
+        mixture = model.get('contamination', {'weights':[1.], 'scales':[1.]})
         for zz, weight in zip(z,zw):
             r = colors[:,None,:]-mean(model,grid,zz)[None,:,:]
-            ll = log_gaussian(r,v)+np.log(weight/len(models))
-            total = np.logaddexp(total,ll)
+            for cw,scale in zip(mixture['weights'],mixture['scales']):
+                ll = log_gaussian(r,v+scale*np.asarray(model['intrinsic']))+np.log(cw*weight/len(models))
+                total = np.logaddexp(total,ll)
     return np.exp(total-logsumexp(total,axis=1)[:,None])
 
 
-def summarize(grid, prob, reference_mg):
+def summarize(grid, prob, reference_mg, bin_reference=None):
     """Point-reference diagnostics; delta_mu = reference_Mg - median_Mg."""
     cdf = np.cumsum(prob,axis=1)
     q = np.array([[grid[min(np.searchsorted(row,t),len(grid)-1)]
@@ -102,16 +103,58 @@ def summarize(grid, prob, reference_mg):
     step = grid[1]-grid[0]
     nearest = np.argmin(abs(ref[:,None]-grid),axis=1)
     logp = np.log(np.maximum(prob[np.arange(len(ref)),nearest]/step,1e-300))
+    outside = (ref < grid[0]-step/2) | (ref >= grid[-1]+step/2)
+    logp[outside] = np.log(1e-300)
     def stat(mask):
         r = residual[mask]
         if not len(r): return {'n':0}
-        return dict(n=len(r),median=float(np.median(r)),
+        return dict(n=len(r),outside_support_n=int(outside[mask].sum()),median=float(np.median(r)),
                     nmad=float(1.4826*np.median(abs(r-np.median(r)))),
                     tail=float(np.mean(abs(r)>.5)),
                     cover68=float(np.mean((ref[mask]>=q[mask,1])&(ref[mask]<=q[mask,3]))),
                     cover95=float(np.mean((ref[mask]>=q[mask,0])&(ref[mask]<=q[mask,4]))),
                     width68=float(np.median(q[mask,3]-q[mask,1])),
                     log_density=float(np.mean(logp[mask])))
+    bins = ref if bin_reference is None else np.asarray(bin_reference)
     return dict(overall=stat(np.ones(len(ref),bool)),
-                bins={f'{lo:.1f}_{lo+.5:.1f}':stat((ref>=lo)&(ref<lo+.5))
+                bins={f'{lo:.1f}_{lo+.5:.1f}':stat((bins>=lo)&(bins<lo+.5))
                       for lo in np.arange(.5,3,.5)}),q,residual
+
+
+def fit_contamination(a, nc, floor=.01, ridge=4.):
+    """Exact fixed 95% narrow + 5% broad Gaussian residual likelihood.
+
+    Broad covariance is 25 times narrow intrinsic covariance; measurement
+    covariance is added separately to both. Every source remains in the fit.
+    """
+    initial=fit(a,nc,'monotone',floor=floor,ridge=ridge)
+    x=design(a['mg'],a['feh'],'monotone');d=x.shape[1]
+    y=a['color'][:,:nc]
+    _,ix,counts=np.unique(a['cluster'],return_inverse=True,return_counts=True)
+    w=1./(len(counts)*counts[ix])
+    cov=np.asarray(initial['intrinsic'])
+    l=np.linalg.cholesky(stable_cov(cov-floor**2*np.eye(nc),1e-5))
+    ij=np.tril_indices(nc)
+    start=np.r_[np.asarray(initial['beta']).ravel(),l[ij]]
+    c=np.zeros((3*nc,len(start)))
+    for k in range(nc):
+        for j in range(3):c[3*k+j,d*k+j]=-1;c[3*k+j,d*k+j+1]=1
+    def unpack(theta):
+        b=theta[:nc*d].reshape(nc,d)
+        chol=np.zeros((nc,nc));chol[ij]=theta[nc*d:]
+        return b,chol@chol.T+floor**2*np.eye(nc)
+    def objective(theta):
+        b,s=unpack(theta)
+        mod=dict(kind='monotone',beta=b)
+        v=residual_measurement_cov(a['sg'],a['sr'],a['sz'],slope(mod,a['mg']),nc)
+        r=y-x@b.T
+        ll=np.logaddexp(np.log(.95)+log_gaussian(r,v+s),
+                        np.log(.05)+log_gaussian(r,v+25*s))
+        return -w@ll+.5*ridge*np.sum(b[:,-1]**2)
+    opt=minimize(objective,start,method='SLSQP',constraints=[LinearConstraint(c,-np.inf,0)],
+                 options={'ftol':1e-9,'maxiter':400})
+    if not opt.success:raise RuntimeError('contamination fit: '+opt.message)
+    b,s=unpack(opt.x)
+    return dict(kind='monotone',beta=b.tolist(),intrinsic=s.tolist(),
+                contamination={'weights':[.95,.05],'scales':[1.,25.]},
+                optimization_iterations=int(opt.nit),objective=float(opt.fun))

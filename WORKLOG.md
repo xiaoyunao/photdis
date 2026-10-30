@@ -2,6 +2,26 @@
 
 ## 2026-10-30
 
+- Slurm 60534138 completed (exit 0). Training restricted before fitting to
+  422 M3 + 250 M53 lower-RGB members. Both quadratic and monotone models
+  have zero positive-slope realizations across 48 paired draws. Monotone
+  grz top-1% trace fraction=0.30285 exceeds the registered 0.20 trigger;
+  proceed with the fixed robust-mixture likelihood. Files: frozen v2 model.
+  Validation: exact source/draw hashes and supported counts recorded. Next:
+  freeze this result, run robust development control and unblinded diagnosis.
+
+- Reproduced frozen v1 audit: 672 of 850 common training members in lower
+  support, upper base weight 46.05%, gr/rz derivative reversals in 48/45
+  nuisance realizations. Added exact prior-only and post-unblinding scorer,
+  three internal generation/recovery regimes with cluster-level nuisance
+  realizations, and a preregistered fixed contamination-mixture control
+  triggered solely by development residual influence. No sources removed.
+  Literature check confirms NGC 7006 .05 E(B-V) is noisy RRab estimator
+  uncertainty, used by v1 as a conservative stress scenario. Files: scope
+  manifest, lower diagnostics/robust runner, module/tests, v1 interpretation
+  correction. Validation: 12 targeted tests pass, Slurm fit 60534138 submitted.
+  Next: freeze development fits and execute the explanatory comparisons.
+
 - Read the complete Pro review of 73b023a and registered a detailed active
   goal. Confirmed fit-before-support selection and unpaired tier seeds in
   v1 source. Added stage-restricted quadratic/monotone GLS, shared training

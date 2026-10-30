@@ -38,3 +38,19 @@ def test_batch_posterior_matches_frozen_v1():
     p=probabilities([model],grid,[-1.7],[1],[[.5,.25]],[[.01,.02,.03]])[0]
     expected=posterior_on_grid([model],grid,[-1.7],[1],[.5,.25],.01,.02,.03)
     np.testing.assert_allclose(p,expected,atol=1e-12)
+
+
+def test_robust_mixture_keeps_outlier_with_finite_likelihood():
+    from photdis.cluster_rgb_lower import fit_contamination
+    rng=np.random.default_rng(38)
+    m=np.tile(np.linspace(.51,2.99,50),2)
+    z=np.repeat([-2.,-1.46],50)
+    y=.7-.08*m+.025*(z+1.7)+rng.normal(0,.01,len(m));y[5]+=.3
+    a=dict(mg=m,feh=z,color=y[:,None],sg=np.full(100,.003),sr=np.full(100,.003),
+           sz=np.full(100,.003),cluster=np.repeat(['a','b'],50))
+    mod=fit_contamination(a,1)
+    assert mod['contamination']['weights']==[.95,.05]
+    assert np.max(slope(mod,np.linspace(.5,3,50)))<1e-7
+    assert abs(mean(mod,np.array([1.5]),-1.7)[0,0]-(.7-.08*1.5))<.03
+    p=probabilities([mod],np.arange(.51,3,.02),[-1.7],[1],[[1.0]],[[.003]*3])
+    np.testing.assert_allclose(p.sum(),1)

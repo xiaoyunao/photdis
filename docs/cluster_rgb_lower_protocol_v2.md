@@ -66,3 +66,21 @@ before the post-unblinding diagnostic. Keep data on NERSC; sync code, protocol,
 summary figures/results and final report. No new external system is needed for
 these explanatory comparisons. A future claim of external predictive validity
 requires a newly registered independent system.
+
+### Fixed robust addendum (before viewing new development fits)
+
+If the >20%-of-trace trigger is met, fit one contamination-mixture control:
+95% narrow Gaussian and 5% Gaussian with 25 times the narrow residual
+covariance, plus the actual measurement covariance in BOTH components.
+Fit monotone means and positive-definite residual covariance jointly by
+likelihood; keep the .01-mag eigenvalue floor, fixed mixture weights/scales,
+FeH ridge and all 48 paired nuisance realizations. This is an exact declared
+Gaussian-mixture working likelihood, not a Student-t approximation. Keep all
+stars. No mixture-weight or broad-scale search. In synthetic recovery, draw
+independent star mixture identities with those same fixed weights.
+
+In shared-calibration recovery, draw one fitted calibration realization per
+synthetic cluster: each realization already contains coherent developer
+mu/E/FeH/g/r/z scale draws. The inference averages the same declared ensemble.
+This tests uncertainty in the calibrated color relation, not an additional
+unmodeled target-cluster dust systematic. Report this scope explicitly.

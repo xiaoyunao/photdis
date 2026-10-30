@@ -41,3 +41,24 @@ The coherent [test-cluster scale perturbations](../manifests/cluster_rgb_ngc5466
 The development-only [residual audit](../manifests/cluster_rgb_conditional_development_audit_v1.json) found grz color-residual centers near zero within M3 lower, M53 upper/lower, and NGC 7006 upper, yet the new whole-cluster test reveals large magnitude-dependent distance errors after inversion. Small forward color residuals do not establish accurate inverse distances. NGC 7006 contributes 56 gr versus 19 grz upper-RGB stars and the registered grz support criterion leaves the upper RGB untested. The same-source model and new cluster test therefore support a narrow statement: adding z helped this lower-RGB sample, while the current two-color relation and abundance prior cannot yet support a general giant-distance product.
 
 Decision: retain this as a frozen conditional RGB diagnostic, **do not publish it as a field-star giant distance model**. The next study should first test whether extra observables supply luminosity information on the same RGB members while estimating coherent dust/zero-point uncertainties; then add an explicit RGB/HB/AGB and abundance mixture with another whole-cluster test and independent field validation. Preserve the existing cold-dwarf v4 as its separate conditional baseline.
+
+## Interpretation correction after the Pro review (2026-10-30)
+
+The frozen v1 results above remain unchanged. Its fit used all 850 grz
+members before the support check: upper-RGB objects contributed about 46%
+of the pre-covariance cluster-balanced weight despite empty upper support.
+Only 672 members are in the declared lower common cells. The fitted gr and
+rz curves reverse inside lower support in 48/48 and 45/48 realizations.
+These implementation/model effects must be tested before interpreting weak
+luminosity constraints as a grz physical limit. The residual covariance is
+an effective model residual covariance, not a measured stellar intrinsic width.
+
+The v1 gr/grz realizations used different random nuisance draws. Its 0.083-mag
+bootstrap improvement describes those frozen implementations; it does not
+isolate the z contribution exactly. NGC 5466 at FeH=-2.16 includes mild
+extrapolation from nominal developer FeH=-2.00…-1.40. The unknown-FeH
+components -1.46/-2.00 omit its nominal center, so their sensitivity combines
+abundance degeneracy with prior mismatch and extrapolation. It is not a
+universal penalty for missing spectra. The next experiment is the
+[registered lower-RGB scope/shape control](cluster_rgb_lower_protocol_v2.md),
+using NGC 5466 only as a post-unblinding diagnostic.
