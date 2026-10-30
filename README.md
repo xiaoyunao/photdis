@@ -13,7 +13,7 @@ The report includes fixed-model controls and matched whole-cluster simulations.
 
 The bounded [four-cluster external-scale experiment](docs/cluster_rgb_scales_protocol_v1.md)
 uses the existing members and frozen curves. Its optional passband integration
-uses `speclite` from the NERSC DESI environment; core likelihood tests need only
+uses project-local `speclite==0.20` (install with `python -m pip install --no-deps --target .deps speclite==0.20` in the allocated DESI environment); core likelihood tests need only
 NumPy/SciPy. Submit from the NERSC checkout:
 
 ```bash

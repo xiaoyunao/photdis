@@ -7,6 +7,8 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import speclite
+from speclite.filters import load_filters
 from photdis.stage1 import require_compute, write_json
 
 DATA=Path('data/cluster_rgb_scales_v1')
@@ -32,6 +34,9 @@ def main():
         product_status='diagnostic prototype, not field-star distances',
         source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest()
                       for p in DATA.glob('*.json')})
+    manifest['passband_provenance'] = dict(speclite_version=speclite.__version__,
+        filters={f.name:hashlib.sha256(np.column_stack([f.wavelength,f.response]).astype('<f8').tobytes()).hexdigest()
+                 for f in load_filters('decam2014-g','decam2014-r','decam2014-z')})
     write_json(Path('manifests/cluster_rgb_scales_v1.json'),manifest)
     fig,axes=plt.subplots(1,2,figsize=(12,4.5))
     for j,(label,color) in enumerate(zip(labels,colors)):

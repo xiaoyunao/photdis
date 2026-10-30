@@ -2,6 +2,12 @@
 
 ## 2026-10-30
 
+- DESI environment lacked the optional speclite import. Registered an allocated
+  project-local speclite==0.20 installation (job 60536997), with scientific jobs
+  dependent on setup success. Local pinned-package passband integration checked:
+  CCM89 Rv3.1/4500K coefficients 3.57442, 2.58360, 1.45123. Added passband
+  array hashes/version to aggregate provenance. No global environment changes.
+
 - First batch startup failed before Python: DESI environment setup reads an
   unset DESI_ROOT under shell nounset. Enable nounset after sourcing the
   supported environment, and resubmit only these new jobs with 30-minute
