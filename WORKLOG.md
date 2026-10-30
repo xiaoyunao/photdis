@@ -2,6 +2,11 @@
 
 ## 2026-10-30
 
+- First batch startup failed before Python: DESI environment setup reads an
+  unset DESI_ROOT under shell nounset. Enable nounset after sourcing the
+  supported environment, and resubmit only these new jobs with 30-minute
+  allocations. Scientific inputs/outputs were untouched. Shell syntax checked.
+
 - Queued allocated response/shared-distance jobs 60536634/635/637/638/639.
   Added exact prior-file identity checks for NGC5466, frozen development
   catalog hashes, DECam release assertion and four small-figure aggregation.
