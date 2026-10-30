@@ -2,6 +2,13 @@
 
 ## 2026-10-30
 
+- Initial integration completed for all four systems. Refine only failed
+  subsets: NGC4147 N=20/42 (60538646), NGC5466 N=10/20/93 (60538648),
+  M53 N=250 (60538772), M3 N=422 (60538787). All four are allocated/running.
+  Preserve 512/2048 quadrature and 12000-step chains. No-color nested median
+  changes <.00005 mag; gr control .0018–.0061 mag. Final summary job 60538545
+  depends on numerical runs; plots label primary Rhat/pass status. 29 tests pass.
+
 - Initial posterior checks expose slow distance/color-ridge mixing, strongest
   in NGC5466 (full-sample Rhat 1.065, ESS 60). Add a symmetric reversible
   unit-Jacobian RGB shear proposal; equality/reversibility tests pass. Extend

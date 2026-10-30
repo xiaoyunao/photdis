@@ -188,4 +188,24 @@ reddening, common offset, new quality cut or new regression is adopted.
 
 ## Shared-distance measured results
 
-Pending the four allocated shared-distance jobs and numerical convergence checks.
+The registered prior-draw integration is difficult for a whole cluster: the
+512-draw primary grz nuisance ESS is only 2.6–17.6. A nested 2048-draw check
+raises full-sample ESS to 13.6–59.6 but still shifts some medians and widths.
+Those products remain available as a numerical diagnostic.
+
+The primary integral therefore also uses an exactly equivalent Gaussian
+collapse, followed by posterior-directed sampling. The common grey shift is
+integrated analytically after conditioning on the color shifts, so its variance
+persists as member count grows. Four independent chains use discarded warmup
+and fixed production proposals, with rank/folded Rhat and bulk/tail ESS checks.
+The first runs expose slow distance/color-ridge mixing; a reversible
+unit-Jacobian proposal and a bounded 48000-step refinement address the failed
+subsets without changing the scientific target. [Diagnostic method](https://arxiv.org/abs/1903.08008)
+
+The no-color control is numerically stable: its 256-to-512 median changes are
+below .00005 mag for all four systems. The gr control has .0018–.0061-mag
+changes and nuisance ESS 45–140; it remains a quadrature comparison, separate
+from the primary grz convergence assessment.
+
+Final shared-distance tables and numerical checks follow after the allocated
+posterior calculations finish.

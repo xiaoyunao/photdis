@@ -20,9 +20,19 @@ NumPy/SciPy. Submit from the NERSC checkout:
 sbatch scripts/run_cluster_rgb_scales_v1.sh response
 sbatch scripts/run_cluster_rgb_scales_v1.sh joint --cluster ngc4147
 # Repeat joint for m3, m53, ngc5466; all large outputs stay in data/cluster_rgb_scales_v1.
+sbatch scripts/run_cluster_rgb_scales_v1.sh joint --cluster ngc4147 --qmc-power 11 --only-model robust_grz
+sbatch scripts/run_cluster_rgb_shared_sample.sh --cluster ngc4147
+# Numerical refinement of failed frozen subsets, preserving initial outputs:
+sbatch scripts/run_cluster_rgb_shared_sample.sh --cluster ngc4147 --counts 20 42 --draws 48000 --tag mcmc48000
 # Within an allocated environment after all four finish:
 python scripts/cluster_rgb_scales_summarize.py
 ```
+
+The [scale and shared-distance report](docs/cluster_rgb_scales_result_v1.md)
+records the completed scientific comparisons and numerical checks. Shared
+posterior inference uses the same frozen likelihood and priors, with exact
+Gaussian collapse and four chains; the no-color/support control quantifies
+distance information already supplied by the selected luminosity range.
 
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),

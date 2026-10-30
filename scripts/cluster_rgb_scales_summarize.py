@@ -130,6 +130,11 @@ def main():
         rr_sigma=np.hypot(cfg['clusters'][n]['mu_stat'],cfg['clusters'][n]['mu_sys'])
         ax.axvspan(rr-rr_sigma,rr+rr_sigma,color='k',alpha=.06,label='RR quoted uncertainty')
         ax.set_xlim(rr-.6,rr+.6);ax.set_title(f'{n.upper()} — {count} selected members')
+        check=joint[n]['results']['robust_grz'][str(count)]
+        if 'diagnostics' in check:
+            max_rhat=max(v['rhat'] for v in check['diagnostics'].values())
+            ax.text(.02,.95,f'grz max Rhat={max_rhat:.3f}; numerical pass={check["numerical_pass"]}',
+                    transform=ax.transAxes,va='top',fontsize=8)
         ax.set_xlabel(r'Common distance modulus $\mu$');ax.set_ylabel('Conditional density / mag')
     fig.legend(*axes[0,0].get_legend_handles_labels(),loc='lower center',ncol=3,fontsize=9)
     fig.suptitle('Prototype: known lower-RGB range supplies substantial distance information',fontsize=12)
