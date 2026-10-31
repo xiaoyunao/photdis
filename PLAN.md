@@ -1,5 +1,17 @@
 # PLAN
 
+## Current objective: local conditional color information
+
+Follow docs/pro_review_4c203ca.md and the registered local-color protocol.
+Use fixed delta-mu +/-0.5 and nominal Mg 1.1–2.4 on the four existing
+clusters. Compare the ratio of marginalized joint and brightness likelihoods
+for gr/grz, no colors, reference/three unknown-FeH priors and two dust widths.
+Quantify boundary/prior sensitivity; keep prior models, cuts and failed flags.
+No old-chain extension, extra clusters or full selection-model engineering.
+Milestones: registration, tested conditional likelihood, allocated computation,
+numerical and figure verification, bounded scientific decision, three-way sync.
+
+
 ## Completed Objective: external scales and shared-member RGB distance
 
 Detailed goal: docs/cluster_rgb_scales_protocol_v1.md; final results:
@@ -19,8 +31,8 @@ wrong-independent calculation and .197 for no color; selection is informative.
 completed. Programs/docs/small results/figures synchronize; catalogs/chains stay
 on NERSC. No active compute or further automatic model search is required.
 
-Next review: evaluate the selection/stage likelihood and externally constrained
-reference covariance before treating pooled distances as calibration results.
+Next task narrowed by Pro 4c203ca: first quantify local conditional-color
+information; defer the full selection/stage likelihood and reference hierarchy.
 The current output is a conditional prototype; existing distance products and
 scientific quality cuts remain frozen.
 

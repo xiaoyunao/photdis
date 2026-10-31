@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-10-31
+
+- Recovered clean matching local/origin/NERSC main at 4c203ca; read full Pro
+  review (7999 characters) through read_thread. Created detailed new goal.
+  Registered one fixed interior/local-window design and conditional-after-
+  marginalization ratio. Reuse frozen models and unknown FeH mixture atoms;
+  two dust widths only. Old scale audit/chains remain closed. Next: implement
+  and test inference, then run in NERSC allocations and report information limits.
+
 ## 2026-10-30
 
 - Completed Pro b18518b goal: coherent four-cluster scale audit and shared-member

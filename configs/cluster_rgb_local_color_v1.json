@@ -1,0 +1,80 @@
+{
+  "experiment": "cluster_rgb_local_color_v1",
+  "base_revision": "4c203ca",
+  "model_sha256": {
+    "manifests/cluster_rgb_lower_model_v2.json": "c7318508af286317524a305be45b72d97fa54d15e7d4068c5d607b9c1a62f66b",
+    "manifests/cluster_rgb_lower_robust_v2.json": "1f733ddfef10df88e09aac9aa41484d0cbf00926f578c5ac353ccf4a0197a241"
+  },
+  "base_scale_config_sha256": "575fb4fa09d11dafd5acf403ef641f14faeaed3d873e7f2810fe78e44c8f3eff",
+  "clusters": [
+    "m3",
+    "m53",
+    "ngc5466",
+    "ngc4147"
+  ],
+  "delta_mu_bounds": [
+    -0.5,
+    0.5
+  ],
+  "nominal_interior_mg": [
+    1.1,
+    2.4
+  ],
+  "latent_mg_support": [
+    0.5,
+    3.0
+  ],
+  "grid_step": 0.005,
+  "grid_check_step": 0.0025,
+  "unknown_feh_components": [
+    -1.46,
+    -2.0
+  ],
+  "unknown_weights": {
+    "equal": [
+      0.5,
+      0.5
+    ],
+    "rich": [
+      0.8,
+      0.2
+    ],
+    "poor": [
+      0.2,
+      0.8
+    ]
+  },
+  "physical_ebv_sigmas": [
+    0.005,
+    0.01
+  ],
+  "zero_point_sigma": 0.01,
+  "models": [
+    "robust_gr",
+    "robust_grz"
+  ],
+  "priors": [
+    "reference",
+    "unknown"
+  ],
+  "chains": 4,
+  "warmup": 3000,
+  "draws": 24000,
+  "refinement_draws": 48000,
+  "seed": 103101,
+  "diagnostics": {
+    "rhat_max": 1.01,
+    "ess_min": 400,
+    "brightness_log_range_flag": 0.05,
+    "edge_strip_mag": 0.05,
+    "edge_mass_flag": 0.15,
+    "grid_quantile_tolerance_mag": 0.005,
+    "denominator_log_tolerance": 1e-05
+  },
+  "gh_orders": [
+    64,
+    128
+  ],
+  "minimum_fit_n": 5,
+  "scope": "exposed local conditional-color experiment; fixed interior window, frozen model/quality; not distance-blind recovery"
+}
