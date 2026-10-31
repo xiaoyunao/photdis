@@ -2,6 +2,20 @@
 
 ## 2026-10-31
 
+- Completed local conditional-color experiment: 278/163/69/25 interior stars;
+  all 32 fits and 12 registered refinements finished. Report and aggregate:
+  docs/cluster_rgb_local_color_result_v1.md, manifests/cluster_rgb_local_color_v1.json;
+  four figures visually inspected. B variation <=0.4%; reference-FeH grz W68
+  .370/.473 for NGC5466/4147, while unknown atom weights move NGC4147 by .171 mag.
+  M3 endpoint sensitivity and two log-target sampling flags remain explicit;
+  30/32 numerical combinations pass. No further extension of this experiment.
+  Validation: 34 targeted tests, syntax/diff checks, source/identity hashes,
+  adaptive quadrature and no-color uniform checks pass. Final Slurm 60598989
+  completed 0:0 (3m48s); all fitting jobs completed 0:0. Source catalogs/chains
+  stay on NERSC; hash-verified generated small artifacts archived there before
+  committing/synchronizing code, report and figures. PLAN records the bounded
+  endpoint and the next abundance/phase evidence question.
+
 - All four initial jobs completed; twelve failed sampling combinations receive
   one refinement in jobs 60598666/60598710/60598805. Initial aggregation 60598213
   confirms adaptive brightness log ranges <=.003924 and quadrature agreement

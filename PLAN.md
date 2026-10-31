@@ -1,16 +1,27 @@
 # PLAN
 
-## Current objective: local conditional color information
+## Completed objective: local conditional color information
 
-Follow docs/pro_review_4c203ca.md and the registered local-color protocol.
-Use fixed delta-mu +/-0.5 and nominal Mg 1.1–2.4 on the four existing
-clusters. Compare the ratio of marginalized joint and brightness likelihoods
-for gr/grz, no colors, reference/three unknown-FeH priors and two dust widths.
-Quantify boundary/prior sensitivity; keep prior models, cuts and failed flags.
-No old-chain extension, extra clusters or full selection-model engineering.
-Milestones: registration, tested conditional likelihood, allocated computation,
-numerical and figure verification, bounded scientific decision, three-way sync.
+Followed the full Pro 4c203ca review and fixed preregistered protocol.
+Results: docs/cluster_rgb_local_color_result_v1.md and
+manifests/cluster_rgb_local_color_v1.json. Interior N=278/163/69/25;
+shared-nuisance marginal ratio, gr/grz/no-color, reference/three atom-weight
+priors and two reddening widths completed. B varies by at most ~0.4%;
+no-color posterior exactly recovers the local uniform prior. At reference FeH,
+NGC5466/4147 grz W68=.370/.473 versus prior .680 mag; unknown FeH weights
+move NGC4147 center by .171 mag. M3 retains endpoint sensitivity.
 
+Numerical endpoint: 32 fits, 12 bounded refinements, 30/32 pass. M3 grz
+reference E=.005 and unknown E=.01 retain log-target Rhat=1.01086/1.01638;
+flags remain in tables, manifest and figures. Adaptive brightness integration
+replaces inadequate GH quadrature while retaining originals. 34 focused tests
+pass; all four final figures inspected; final job 60598989 completed 0:0.
+
+Decision: retain the conditional RGB prototype and close this information
+experiment. Next scientific milestone is to specify an RGB target population
+and establish abundance/phase evidence before its luminosity and observation-
+selection model. Actual calibration evidence is required for a broader support
+range. No further automatic field expansion, curve search or chain extension.
 
 ## Completed Objective: external scales and shared-member RGB distance
 

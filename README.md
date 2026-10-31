@@ -34,7 +34,7 @@ posterior inference uses the same frozen likelihood and priors, with exact
 Gaussian collapse and four chains; the no-color/support control quantifies
 distance information already supplied by the selected luminosity range.
 
-The next [local conditional-color experiment](docs/cluster_rgb_local_color_protocol_v1.md)
+The [local conditional-color experiment](docs/cluster_rgb_local_color_protocol_v1.md)
 uses the fixed interior members and delta-mu window, and conditions on observed
 g after shared nuisance integration. From NERSC, submit one allocated job per
 cluster; outputs stay under `data/cluster_rgb_local_color_v1`:
@@ -44,6 +44,11 @@ sbatch scripts/run_cluster_rgb_local_color.sh --cluster ngc4147
 # Repeat for m3, m53, ngc5466. After all complete, inside an allocation:
 python scripts/cluster_rgb_local_color_summarize.py
 ```
+
+The [local information report](docs/cluster_rgb_local_color_result_v1.md) separates
+brightness-boundary cancellation, posterior edge behavior, and abundance-prior
+sensitivity. Aggregation uses checked adaptive brightness integration and retains
+original quadrature and sampling diagnostics.
 
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),
