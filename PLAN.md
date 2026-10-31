@@ -1,10 +1,11 @@
 # PLAN
 
-## Active objective: existing-field giant selection and abundance information
+## Blocked objective: existing-field giant selection and abundance information
 
 Full source: docs/pro_review_a7b5c5d.md. Detailed registered scope and end
 criteria: docs/giant_information_protocol_v1.md; config:
-configs/giant_information_v1.json. The goal is active, not completed.
+configs/giant_information_v1.json. The goal is blocked on NERSC authentication,
+not completed. Scope and completion criteria remain unchanged.
 
 - Completed locally: uniform-control mode/edge metadata corrected without
   resampling; all non-control manifest values exactly unchanged. README and
@@ -18,6 +19,9 @@ configs/giant_information_v1.json. The goal is active, not completed.
   Tiny FITS integration also verifies the zero-label case, cross-field linked
   identities and FeH-independent class labels; histogram tails are accounted for.
 - Pending real data: NERSC SSH authentication expired (Permission denied).
+  Revalidated on three consecutive goal turns; local independent preparation is
+  complete. No remaining scientific computation can proceed without access to
+  the NERSC-only source catalogs and an allocated compute node.
   User has already been asked to run sshproxy -u yunao. No new Slurm job was
   submitted and no real class/FeH result has been claimed this turn.
 - After authentication: safely synchronize the committed checkpoint to

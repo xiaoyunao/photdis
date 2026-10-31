@@ -2,6 +2,14 @@
 
 ## 2026-10-31
 
+- Blocked audit: NERSC SSH again exits 255 with Permission denied, the same
+  external authentication blocker on three consecutive goal turns. Local and
+  origin checkpoint 931663f agree; worktree clean; real experiment manifest
+  absent. Independent preparation/tests are complete, but catalog extraction,
+  allocated training, real scientific interpretation/figures and NERSC sync
+  remain unperformed. Mark goal blocked pending sshproxy password/OTP renewal;
+  preserve its full scope and resume from the registered Slurm stages afterward.
+
 - While waiting for NERSC credentials, exercised the actual FITS extraction
   and serialization path on 14 tiny synthetic fields. Found and fixed the
   zero-spectral-record identity-group indexing failure; empty label inventories
