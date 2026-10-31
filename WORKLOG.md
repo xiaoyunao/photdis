@@ -2,6 +2,15 @@
 
 ## 2026-10-31
 
+- Implemented local conditional-color likelihood by dividing the shared-nuisance
+  joint marginal by a separately integrated shared brightness marginal. Unknown
+  FeH atoms stay shared across members and posterior reweighting retains atom
+  evidence. Added reversible distance/color model jumps and stable truncated
+  Gaussian bin integration. Four new mathematical tests and 11 existing core
+  tests pass; synthetic reference/unknown full runners produce normalized outputs.
+  Registered-window endpoint checks use exact endpoints. Next: allocated four-
+  cluster execution, conditional information report and numerical checks.
+
 - Recovered clean matching local/origin/NERSC main at 4c203ca; read full Pro
   review (7999 characters) through read_thread. Created detailed new goal.
   Registered one fixed interior/local-window design and conditional-after-
