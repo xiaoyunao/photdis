@@ -2,6 +2,32 @@
 
 ## 2026-10-31
 
+- Pro a7b5c5d follow-up registered from the complete 10,308-character review
+  (docs/pro_review_a7b5c5d.md). Created detailed active goal and fixed
+  docs/giant_information_protocol_v1.md / configs/giant_information_v1.json.
+  Prepared existing-14-field extraction, identity/native-camera audit, fixed
+  A/B/C class selection, hidden-FeH likelihood comparison, Slurm wrapper and
+  small-result report/figure generator. No new target fields or RGB retraining.
+  Local validation: 22 focused tests across new models/drivers, uniform control,
+  class evidence and photometry; Python syntax and shell syntax checks pass.
+  Synthetic tests check shared-color covariance, identity isolation, label-error
+  convolution, same-star comparison, missing-WISE behavior and insufficient
+  camera/empty-result handling. Normalized abundance optimizer objective to
+  avoid a near-stationary L-BFGS line-search failure found by the synthetic test.
+  NERSC authentication expired at session recovery; SSH still returns Permission
+  denied. User notification sent; real extraction/training/summarization and
+  NERSC synchronization await renewed credentials. Do not interpret synthetic
+  validation as survey results. Next: run the registered three allocated stages.
+
+- Fixed strictly uniform local-color control metadata: null mode prevents an
+  arbitrary argmax bin from setting edge_flag, while outer-strip mass and all
+  nonflat rules remain unchanged. Eight stored controls corrected by
+  scripts/correct_local_color_control.py; original manifest/script hashes kept.
+  Programmatic comparison confirms every non-control result unchanged; six
+  local-color tests pass. Updated README's stale next-cluster instruction and
+  report's two-atom FeH scope (NGC5466 reference -2.16 lies outside atoms),
+  shared-cluster width interpretation and prohibition on duplicate color use.
+
 - Completed local conditional-color experiment: 278/163/69/25 interior stars;
   all 32 fits and 12 registered refinements finished. Report and aggregate:
   docs/cluster_rgb_local_color_result_v1.md, manifests/cluster_rgb_local_color_v1.json;

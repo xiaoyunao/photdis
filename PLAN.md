@@ -1,5 +1,35 @@
 # PLAN
 
+## Active objective: existing-field giant selection and abundance information
+
+Full source: docs/pro_review_a7b5c5d.md. Detailed registered scope and end
+criteria: docs/giant_information_protocol_v1.md; config:
+configs/giant_information_v1.json. The goal is active, not completed.
+
+- Completed locally: uniform-control mode/edge metadata corrected without
+  resampling; all non-control manifest values exactly unchanged. README and
+  limited two-atom abundance interpretation corrected.
+- Implemented: existing 14-field base/clean/WISE census, native RELEASE split,
+  connected identity deduplication, class-v3 reuse, fixed quadratic logistic
+  A/B/C and hidden-FeH Gaussian baselines, whole-field held-out scoring,
+  covariance/error propagation, field bootstrap, figures/report generator.
+  Tests include synthetic fitting, no identity/FeH leakage, missing WISE,
+  insufficient-camera handling and empty-result reporting.
+- Pending real data: NERSC SSH authentication expired (Permission denied).
+  User has already been asked to run sshproxy -u yunao. No new Slurm job was
+  submitted and no real class/FeH result has been claimed this turn.
+- After authentication: safely synchronize the committed checkpoint to
+  /pscratch/sd/y/yunao/photdis_pipeline; submit run_giant_information.sh extract,
+  then fit and summarize with afterok dependencies. Inspect actual cutflows,
+  identity/source hashes, fit convergence, native-system sample sufficiency,
+  figures, paired rates/densities and calibration limitations.
+- End point: finite 14-field comparison; report insufficient evidence where
+  thresholds fail; no additional fields/cuts/regressors to force improvement.
+  Determine useful candidate depth/phase/abundance domain, not field distances.
+- Completion requires real aggregate results/report, visual inspection,
+  milestone validation, and local/GitHub/NERSC synchronization. Large catalogs,
+  scores and fitted objects remain on NERSC.
+
 ## Completed objective: local conditional color information
 
 Followed the full Pro 4c203ca review and fixed preregistered protocol.

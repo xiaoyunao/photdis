@@ -4,12 +4,13 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest RGB result: [independent NGC 4147 test](docs/cluster_rgb_ngc4147_result_v1.md)
-of the frozen lower-RGB candidate is complete. The 42-star same-band test
-has median modulus residual −0.205 mag and NMAD 0.187 mag. It retains
-color information over a uniform luminosity prior, while shared reference
-scales and abundance priors substantially affect the distance center.
-The report includes fixed-model controls and matched whole-cluster simulations.
+Latest completed RGB result: the [local conditional-color experiment](docs/cluster_rgb_local_color_result_v1.md)
+finds color information after removing the dominant brightness-boundary effect.
+Its joint-cluster widths are not individual field-star distance errors, and the
+two-point abundance priors are a limited sensitivity test. The next task is the
+[existing-field giant selection and abundance experiment](docs/giant_information_protocol_v1.md),
+using observable photometry and whole-field evaluation. Low-gravity evidence
+does not establish lower-RGB phase; no field-giant distance product is released.
 
 The bounded [four-cluster external-scale experiment](docs/cluster_rgb_scales_protocol_v1.md)
 uses the existing members and frozen curves. Its optional passband integration
@@ -120,8 +121,10 @@ and broad intervals prevent adoption as a field giant-distance product.
 The [lower-RGB controls](docs/cluster_rgb_lower_result_v2.md) subsequently
 corrected training-domain leakage: restricting to M3/M53 lower support
 removes quadratic reversals, and same-star grz scatter improves substantially.
-NGC 5466 is now an exposed diagnostic; a new independently registered system
-is the next validation step.
+This historical stage was followed by the independent NGC 4147 test, the
+external-scale comparison, and the completed local conditional-color experiment.
+NGC 5466 remains an exposed diagnostic. The current next step is giant selection
+and abundance information using existing fields, as described above.
 
 ## Locations
 

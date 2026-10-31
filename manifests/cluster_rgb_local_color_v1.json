@@ -5206,8 +5206,8 @@
           "kl_nats": -1.5987211556157232e-16,
           "edge_mass_left": 0.04999999999999999,
           "edge_mass_right": 0.04999999999999999,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 8.586881206085195e-17
         },
         "0.010": {
@@ -5223,8 +5223,8 @@
           "kl_nats": -1.5987211556157232e-16,
           "edge_mass_left": 0.04999999999999999,
           "edge_mass_right": 0.04999999999999999,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 8.586881206085195e-17
         }
       },
@@ -9541,8 +9541,8 @@
           "kl_nats": 4.096722960395615e-16,
           "edge_mass_left": 0.050000000000000024,
           "edge_mass_right": 0.050000000000000024,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 5.637851296924623e-17
         },
         "0.010": {
@@ -9558,8 +9558,8 @@
           "kl_nats": 4.096722960395615e-16,
           "edge_mass_left": 0.050000000000000024,
           "edge_mass_right": 0.050000000000000024,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 5.637851296924623e-17
         }
       },
@@ -13876,8 +13876,8 @@
           "kl_nats": -3.384449941669707e-26,
           "edge_mass_left": 0.049999999999999996,
           "edge_mass_right": 0.049999999999999996,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 2.0816681711721685e-17
         },
         "0.010": {
@@ -13893,8 +13893,8 @@
           "kl_nats": -3.384449941669707e-26,
           "edge_mass_left": 0.049999999999999996,
           "edge_mass_right": 0.049999999999999996,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 2.0816681711721685e-17
         }
       },
@@ -17683,8 +17683,8 @@
           "kl_nats": -4.709341831988396e-26,
           "edge_mass_left": 0.049999999999999996,
           "edge_mass_right": 0.049999999999999996,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 2.6020852139652106e-18
         },
         "0.010": {
@@ -17700,8 +17700,8 @@
           "kl_nats": -4.709341831988396e-26,
           "edge_mass_left": 0.049999999999999996,
           "edge_mass_right": 0.049999999999999996,
-          "mode": -0.4974999999999996,
-          "edge_flag": true,
+          "mode": null,
+          "edge_flag": false,
           "maximum_mass_error": 2.6020852139652106e-18
         }
       },
@@ -17849,5 +17849,11 @@
   },
   "interpretation": "local prior updates on exposed interior RGB members; widths/KL are not accuracy",
   "aggregation_code_sha256": "854a6f6206168986d52ec6a0b9272851521ea2312b4e73c2bbab7440da69c306",
-  "adaptive_integral_code_sha256": "39889a5be033ef142dccb19a15965c01bca4fabd3abac72998bdab3f13d4ffde"
+  "adaptive_integral_code_sha256": "39889a5be033ef142dccb19a15965c01bca4fabd3abac72998bdab3f13d4ffde",
+  "uniform_control_correction": {
+    "original_manifest_sha256": "68c56339f9ef6bbd8d69a03eea9c53e904415d7cc78e0a37dac1ab956677c7f9",
+    "script_sha256": "5dd904c2bc350710870e064872d3de993f463bd41f656e92b4d9b47780f9d3c1",
+    "changed_controls": 8,
+    "method": "Only uniform-control mode/edge metadata changed; all posterior values and original run provenance retained."
+  }
 }

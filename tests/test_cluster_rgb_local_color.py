@@ -24,6 +24,17 @@ def test_ratio_after_marginalization_and_no_color_identity():
     stats=summarize_local(edges,no_color)
     np.testing.assert_allclose([stats['q'][2],stats['width68'],stats['width95'],stats['kl_nats']],
                                [0,.68,.95,0],atol=1e-12)
+    assert stats['mode'] is None
+    assert not stats['edge_flag']
+
+
+def test_nonuniform_edge_mode_and_edge_mass_are_preserved():
+    edges=np.linspace(-.5,.5,201)
+    p=np.ones(200);p[0]=1.01
+    result=summarize_local(edges,p)
+    assert result['mode']==(edges[0]+edges[1])/2
+    assert result['edge_flag']
+    assert result['edge_mass_left']<.15
 
 
 def test_brightness_shared_integral_matches_adaptive_quadrature():

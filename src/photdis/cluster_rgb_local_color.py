@@ -91,8 +91,11 @@ def summarize_local(edges,p):
     q=np.interp([.025,.16,.5,.84,.975],np.r_[0.,np.cumsum(p)],edges)
     prior=np.diff(edges)/(edges[-1]-edges[0]);positive=p>0
     left=float(p[centers<edges[0]+.05].sum());right=float(p[centers>edges[-1]-.05].sum())
-    mode=float(centers[np.argmax(p)])
+    # Compare density, not bin mass: a uniform density has no unique mode.
+    flat=np.allclose(p/prior,1.,rtol=0.,atol=1e-12)
+    mode=None if flat else float(centers[np.argmax(p)])
     return dict(q=q.tolist(),width68=float(q[3]-q[1]),width95=float(q[4]-q[0]),
         kl_nats=float(np.sum(p[positive]*np.log(p[positive]/prior[positive]))),
         edge_mass_left=left,edge_mass_right=right,mode=mode,
-        edge_flag=bool(max(left,right)>.15 or mode<edges[0]+.05 or mode>edges[-1]-.05))
+        edge_flag=bool(max(left,right)>.15 or (mode is not None and
+                       (mode<edges[0]+.05 or mode>edges[-1]-.05))))

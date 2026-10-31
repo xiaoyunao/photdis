@@ -209,3 +209,20 @@ That evidence can then support an explicit luminosity distribution and joint
 observation/selection model. A wider calibrated luminosity range requires actual
 calibration evidence. The present results identify these missing inputs; another
 polynomial search or another arbitrary audit field does not supply them.
+
+## Interpretation update after Pro a7b5c5d
+
+The eight strictly uniform no-color controls now have `mode=null` and
+`edge_flag=false`: an arbitrary first-bin argmax is not a unique mode. This is
+a metadata-only correction. All posterior values, numerical flags for the
+nonuniform fits, and original run provenance remain unchanged; no chains were
+rerun. The correction script and original manifest hash are recorded.
+
+The two atoms at [Fe/H] = -1.46 and -2.00 provide only a bounded prior-pressure
+test. NGC 5466's reference -2.16 is outside that interval. Its 0.061-mag center
+span does not demonstrate general abundance robustness; NGC 4147's 0.171-mag
+span is not an upper bound on field-star abundance uncertainty. Equal-prior
+poor-atom occupancies of roughly 65/56/42/64 percent show limited discrimination.
+The reported widths describe a shared cluster distance, not individual stellar errors,
+and cannot be divided by sqrt(N). A later q(FeH | colors) must not be multiplied
+as an independent prior by a likelihood reusing the same colors.
