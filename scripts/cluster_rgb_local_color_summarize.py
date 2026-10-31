@@ -141,6 +141,13 @@ def main():
         fig.legend(*axes[0,0].get_legend_handles_labels(),loc='lower center',ncol=3,fontsize=9)
         fig.tight_layout(rect=(0,.09,1,.95));fig.savefig(FIG/filename,dpi=160);plt.close(fig)
 
+    def mark_numerical_flags(ax,name,cases):
+        failed=[label for key,weight,label in cases
+                if not results[name]['fits'][key]['stats'][weight]['numerical_pass']]
+        if failed:
+            ax.text(.02,.025,'Numerical flag: '+', '.join(failed),transform=ax.transAxes,
+                fontsize=8,color='#983d34',bbox=dict(facecolor='white',alpha=.9,edgecolor='none'))
+
     fig,axes=panels('Brightness boundary check, before conditional cancellation')
     for ax,name in zip(axes.flat,cfg['clusters']):
         if name not in curves:continue
@@ -161,6 +168,8 @@ def main():
             ax.plot(x,a['reference']/np.diff(edges),color=color,label=model.replace('robust_',''))
         ax.axhline(1,color='.5',ls='--',label='No color = local uniform prior')
         ax.axvline(0,c='.7',ls=':');ax.set_ylabel('Conditional density / mag')
+        mark_numerical_flags(ax,name,[(f'{m}__reference__e0.005','reference',m.replace('robust_',''))
+                                      for m in cfg['models']])
     finish(fig,axes,'02_reference_color_information.png')
 
     fig,axes=panels('grz conditional posterior — common abundance prior comparison')
@@ -172,6 +181,8 @@ def main():
         known=curves[name]['robust_grz__reference__e0.005']['reference']
         ax.plot(x,known/np.diff(edges),color='k',ls='--',label='Reference FeH')
         ax.axhline(1,c='.6',ls=':',label='Local uniform prior');ax.set_ylabel('Conditional density / mag')
+        mark_numerical_flags(ax,name,[('robust_grz__reference__e0.005','reference','reference FeH'),
+                                      ('robust_grz__unknown__e0.005','equal','unknown FeH')])
     finish(fig,axes,'03_abundance_prior_sensitivity.png')
 
     fig,axes=panels('grz conditional posterior — shared reddening sensitivity')
@@ -182,6 +193,8 @@ def main():
                 a=curves[name][f'robust_grz__{prior}__e{se:.3f}'];edges=a['edges'];x=(edges[:-1]+edges[1:])/2
                 ax.plot(x,a[weight]/np.diff(edges),c=color,ls=style,label=f'{prior} FeH, sigma(E)={se}')
         ax.axhline(1,c='.6',ls=':',label='Local uniform prior');ax.set_ylabel('Conditional density / mag')
+        mark_numerical_flags(ax,name,[(f'robust_grz__{p}__e{s:.3f}',w,f'{p}, E={s}')
+            for p,w in [('reference','reference'),('unknown','equal')] for s in cfg['physical_ebv_sigmas']])
     finish(fig,axes,'04_reddening_sensitivity.png')
     print('Wrote local-color manifest and four figures',flush=True)
 

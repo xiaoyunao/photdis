@@ -2,6 +2,13 @@
 
 ## 2026-10-31
 
+- All four initial jobs completed; twelve failed sampling combinations receive
+  one refinement in jobs 60598666/60598710/60598805. Initial aggregation 60598213
+  confirms adaptive brightness log ranges <=.003924 and quadrature agreement
+  <5e-13. Final aggregation 60598989 depends on all refinements. M3 reference
+  grz at sigma_E=.005 retains log-target Rhat=1.0109 after refinement; added
+  visible numerical flags to affected figures. No further chain extension.
+
 - Initial .01-reddening denominators fail the GH64/128 convergence check.
   Added bounded adaptive one-dimensional integration (1e-9/1e-11 tolerances),
   retaining original quadratures and reusing saved joint numerator masses.
