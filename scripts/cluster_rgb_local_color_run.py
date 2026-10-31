@@ -50,9 +50,10 @@ def fit_case(cfg,settings,g,colors,errors,models,rband,name,modelname,prior,se,d
     diagnostics={key:chain_diagnostics(a) for key,a in traces.items()}
     atom=labels[k];atom_mixing=True
     if prior=='unknown':
-        if np.ptp(atom)==0:
+        if np.all(np.ptp(atom,axis=1)==0):
             atom_mixing=False
-            diagnostics['atom']={'constant':True,'value':int(atom.flat[0]),'rhat':None,'bulk_ess':None,'tail_ess':None}
+            diagnostics['atom']={'constant_within_each_chain':True,'chain_values':atom[:,0].tolist(),
+                                 'rhat':None,'bulk_ess':None,'tail_ess':None}
         else:diagnostics['atom']=chain_diagnostics(atom)
     finite=[v for v in diagnostics.values() if v.get('rhat') is not None]
     sampling_pass=atom_mixing and all(v['rhat']<cfg['diagnostics']['rhat_max'] and
