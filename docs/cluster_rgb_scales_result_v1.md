@@ -3,6 +3,18 @@
 Status: completed bounded audit and shared-distance prototype; numerical limits retained below.
 Protocol: [registered experiment](cluster_rgb_scales_protocol_v1.md).
 
+## Interpretation update after Pro review (2026-10-31)
+
+Three distinct results remain separate: correct propagation of shared errors;
+common-distance distributions conditional on the selected member/stage/range;
+and the color information still to be isolated by the new local experiment.
+NGC4147's +.015-mag common center is not a demonstrated 1% photometric accuracy.
+The ratio .184/.197 of two interval widths is not an additive information fraction.
+The retained grey-error scale follows working priors and the old 48-model ensemble;
+it is not an externally established physical uncertainty floor. The two old
+log-target convergence flags remain, and their chains are not extended.
+See [the bounded next experiment](cluster_rgb_local_color_protocol_v1.md).
+
 ## What changes and what remains a frozen reference
 
 The previous NGC4147 EBV replacements kept the Legacy coefficients and RR distance

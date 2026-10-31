@@ -2,6 +2,14 @@
 
 ## 2026-10-31
 
+- Submitted allocated local-color jobs 60598037/038/039/040 for M3/M53/
+  NGC5466/NGC4147. Added small-result aggregation and four information figures.
+  Prior report now explicitly separates shared-error implementation, selected-
+  sample distance distributions and color-only information; width ratios are
+  not information fractions. Old convergence flags/chains stay frozen.
+  15 core tests plus reference/unknown synthetic full-run smoke checks pass.
+  Next: inspect results, refine only failed new fits once, then finish report/sync.
+
 - Implemented local conditional-color likelihood by dividing the shared-nuisance
   joint marginal by a separately integrated shared brightness marginal. Unknown
   FeH atoms stay shared across members and posterior reweighting retains atom

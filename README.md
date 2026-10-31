@@ -34,6 +34,17 @@ posterior inference uses the same frozen likelihood and priors, with exact
 Gaussian collapse and four chains; the no-color/support control quantifies
 distance information already supplied by the selected luminosity range.
 
+The next [local conditional-color experiment](docs/cluster_rgb_local_color_protocol_v1.md)
+uses the fixed interior members and delta-mu window, and conditions on observed
+g after shared nuisance integration. From NERSC, submit one allocated job per
+cluster; outputs stay under `data/cluster_rgb_local_color_v1`:
+
+```bash
+sbatch scripts/run_cluster_rgb_local_color.sh --cluster ngc4147
+# Repeat for m3, m53, ngc5466. After all complete, inside an allocation:
+python scripts/cluster_rgb_local_color_summarize.py
+```
+
 Current state: the 10°×10° pilot, [photometry audit](docs/pilot_audit.md),
 [cold-main-sequence baseline](docs/cold_baseline.md),
 [external/depth follow-up](docs/followup_validation.md), and
