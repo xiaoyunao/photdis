@@ -37,7 +37,12 @@ def availability(table, select, cfg):
     bins = {key: cfg[key+'_bins'] for key in values}
     return {'total': {k: int(m.sum()) for k, m in masks.items()},
             'histograms': {key: {k: np.histogram(value[m], bins=bins[key])[0].tolist()
-                                 for k, m in masks.items()} for key, value in values.items()}}
+                                 for k, m in masks.items()} for key, value in values.items()},
+            'outside_histograms': {key: {k: {
+                'below': int((m & (value<bins[key][0])).sum()),
+                'above': int((m & (value>bins[key][-1])).sum()),
+                'nonfinite': int((m & ~np.isfinite(value)).sum())}
+                for k, m in masks.items()} for key, value in values.items()}}
 
 
 def add_counts(destination, addition):
@@ -120,6 +125,8 @@ def main():
     order = np.argsort(groups, kind='stable')
     blocks = np.split(order, np.flatnonzero(np.diff(groups[order]))+1)
     for positions in blocks:
+        if not len(positions):
+            continue
         group = groups[positions[0]]
         owner = int(t['field_index'][positions].min())
         known = np.unique(t['label'][positions][t['label'][positions]>=0])
@@ -133,6 +140,7 @@ def main():
                            'class_conflict': bool(conflict[positions[0]])})
     t['identity_conflict'] = conflict
     t['representative'] = np.zeros(len(t['label']), bool)
+    representatives = np.asarray(representatives, dtype=np.int64)
     t['representative'][representatives] = True
     t['feh_corrected'], _ = rvs_metallicity(t['desi_feh'], t['desi_teff'], t['desi_logg'])
     t['feh_sigma'], t['feh_sigma_random'] = abundance_error(

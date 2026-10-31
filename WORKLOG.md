@@ -2,6 +2,18 @@
 
 ## 2026-10-31
 
+- While waiting for NERSC credentials, exercised the actual FITS extraction
+  and serialization path on 14 tiny synthetic fields. Found and fixed the
+  zero-spectral-record identity-group indexing failure; empty label inventories
+  now remain explicit insufficient-data outcomes. Verified cross-field Gaia
+  links, missing-FeH giant class retention, unassessed/nonstellar labels and
+  photometric versus physical-identity counts. Added histogram below/above/
+  nonfinite accounting so WISE availability bins cannot silently omit tails.
+  Validation: five extraction/driver tests pass (24 unique focused tests passed
+  cumulatively with the previous checkpoint). SSH was rechecked and still
+  returns Permission denied; no survey extraction/job or new scientific result.
+  Next action remains authenticated NERSC sync and allocated extract/fit/summary.
+
 - Pro a7b5c5d follow-up registered from the complete 10,308-character review
   (docs/pro_review_a7b5c5d.md). Created detailed active goal and fixed
   docs/giant_information_protocol_v1.md / configs/giant_information_v1.json.

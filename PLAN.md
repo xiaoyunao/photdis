@@ -15,6 +15,8 @@ configs/giant_information_v1.json. The goal is active, not completed.
   covariance/error propagation, field bootstrap, figures/report generator.
   Tests include synthetic fitting, no identity/FeH leakage, missing WISE,
   insufficient-camera handling and empty-result reporting.
+  Tiny FITS integration also verifies the zero-label case, cross-field linked
+  identities and FeH-independent class labels; histogram tails are accounted for.
 - Pending real data: NERSC SSH authentication expired (Permission denied).
   User has already been asked to run sshproxy -u yunao. No new Slurm job was
   submitted and no real class/FeH result has been claimed this turn.
