@@ -7,11 +7,39 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from photdis.cluster_rgb_local_color import conditional_mass,summarize_local
+from photdis.cluster_rgb_local_color import conditional_mass,summarize_local,weighted_joint
+from photdis.cluster_rgb_local_conditioning import adaptive_brightness
+from cluster_rgb_scales_run import read_cluster
+from photdis.cluster_rgb_external import identity_hash
 from photdis.stage1 import require_compute,write_json
 
 DATA=Path('data/cluster_rgb_local_color_v1')
 FIG=Path('figures/cluster_rgb_local_color_v1')
+
+
+def revise_conditioning(row, arrays, denominator, cfg):
+    """Reuse joint numerator masses; update only the brightness division."""
+    row['original_gh_conditioned_stats']=row['stats']
+    weights=cfg['unknown_weights'] if row['abundance']=='unknown' else {'reference':[1.]}
+    total=arrays['chain_component_mass'].mean(axis=0);stats={}
+    for key,w in weights.items():
+        fine=conditional_mass(weighted_joint(total,w),denominator['fine'])
+        coarse_joint=weighted_joint(total,w).reshape(-1,2).sum(axis=1)
+        p=conditional_mass(coarse_joint,denominator['coarse'])
+        s=summarize_local(arrays['edges'],p)
+        fine_s=summarize_local(arrays['fine_edges'],fine)
+        chains=[summarize_local(arrays['edges'],conditional_mass(
+            weighted_joint(m,w).reshape(-1,2).sum(axis=1),denominator['coarse']))
+            for m in arrays['chain_component_mass']]
+        change=float(np.max(abs(np.array(s['q'])-fine_s['q'])))
+        s.update(grid_max_quantile_change=change,chain_summaries=chains,
+            max_chain_median_spread=float(np.ptp([c['q'][2] for c in chains])),
+            reweight_ess_fraction=row['stats'][key]['reweight_ess_fraction'],
+            numerical_pass=bool(row['sampling_pass'] and
+                change<cfg['diagnostics']['grid_quantile_tolerance_mag'] and
+                denominator['pass']))
+        stats[key]=s;arrays[key]=p
+    row['stats']=stats;arrays['log_brightness']=denominator['coarse']
 
 
 def main():
@@ -24,6 +52,33 @@ def main():
         hashes[str(selection_path)]=hashlib.sha256(selection_path.read_bytes()).hexdigest()
         if selection['n']<cfg['minimum_fit_n']:continue
         brightness[name]=dict(np.load(DATA/f'{name}_selection.npz'))
+        base=json.loads(Path('configs/cluster_rgb_scales_v1.json').read_text())
+        parent,_=read_cluster(name,base['clusters'][name])
+        mg=parent['g0']-selection['mu_reference_for_local_design']
+        tab=parent[(mg>=cfg['nominal_interior_mg'][0])&(mg<=cfg['nominal_interior_mg'][1])]
+        assert identity_hash(tab['source_id'])==selection['ids_sha256']
+        fine_edges=np.linspace(*cfg['delta_mu_bounds'],401)
+        coarse=(fine_edges[::2][:-1]+fine_edges[::2][1:])/2
+        fine=(fine_edges[:-1]+fine_edges[1:])/2
+        points=np.r_[fine_edges[0],coarse,fine_edges[-1],fine]
+        denominators={}
+        for se in cfg['physical_ebv_sigmas']:
+            old=selection['brightness_checks'][f'{se:.3f}']
+            args=(points+selection['mu_reference_for_local_design'],
+                  np.asarray(tab['g0'],float),np.asarray(tab['sigma_g'],float),old['shared_g_sigma'])
+            low,_=adaptive_brightness(*args,tolerance=1e-9)
+            high,err=adaptive_brightness(*args,tolerance=1e-11)
+            delta=float(np.max(abs(high-low)))
+            denominators[se]={'coarse':high[1:201],'fine':high[202:],
+                'pass':max(delta,err)<cfg['diagnostics']['denominator_log_tolerance']}
+            selection.setdefault('adaptive_brightness_checks',{})[f'{se:.3f}']=dict(
+                tolerance_log_delta=delta,relative_error_bound=err,
+                original_gh64_128_delta=old['quadrature_order_delta'],
+                gh128_adaptive_max_log_delta=float(np.max(abs(high[1:201]-brightness[name][f'log_B_{se:.3f}']))),
+                log_range=float(np.ptp(high[:202])),
+                boundary_flag=float(np.ptp(high[:202]))>cfg['diagnostics']['brightness_log_range_flag'],
+                numerical_pass=denominators[se]['pass'])
+            brightness[name][f'log_B_{se:.3f}']=high[1:201]
         curves[name]={}
         for se in cfg['physical_ebv_sigmas']:
             for model in cfg['models']:
@@ -38,9 +93,12 @@ def main():
                         first=json.loads(initial.read_text())
                         row['initial_numerical_results']={'diagnostics':first['diagnostics'],'stats':first['stats']}
                         hashes[str(initial)]=hashlib.sha256(initial.read_bytes()).hexdigest()
+                    arrays=dict(np.load(path.with_suffix('.npz')))
+                    revise_conditioning(row,arrays,denominators[se],cfg)
                     results[name]['fits'][key]=row
-                    curves[name][key]=dict(np.load(path.with_suffix('.npz')))
+                    curves[name][key]=arrays
                     hashes[str(path)]=hashlib.sha256(path.read_bytes()).hexdigest()
+                    hashes[str(path.with_suffix('.npz'))]=hashlib.sha256(path.with_suffix('.npz').read_bytes()).hexdigest()
         edges=next(iter(curves[name].values()))['edges']
         no_color={}
         for se in cfg['physical_ebv_sigmas']:
@@ -66,7 +124,8 @@ def main():
     write_json(Path('manifests/cluster_rgb_local_color_v1.json'),dict(
         config=cfg,clusters=results,input_hashes=hashes,
         interpretation='local prior updates on exposed interior RGB members; widths/KL are not accuracy',
-        aggregation_code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()))
+        aggregation_code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        adaptive_integral_code_sha256=hashlib.sha256(Path('src/photdis/cluster_rgb_local_conditioning.py').read_bytes()).hexdigest()))
 
     def panels(title):
         fig,axes=plt.subplots(2,2,figsize=(11,8))

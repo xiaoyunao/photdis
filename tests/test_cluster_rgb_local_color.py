@@ -38,6 +38,21 @@ def test_brightness_shared_integral_matches_adaptive_quadrature():
             return np.prod(p/2.5)*np.exp(-t*t/2)/np.sqrt(2*np.pi)
         expected.append(np.log(quad(f,-10,10,epsabs=1e-12)[0]))
     np.testing.assert_allclose(got,expected,atol=1e-9)
+    from photdis.cluster_rgb_local_conditioning import adaptive_brightness
+    adaptive,error=adaptive_brightness(mu,g,sg,tau)
+    np.testing.assert_allclose(adaptive,expected,atol=1e-9)
+    assert error<1e-9
+
+
+def test_adaptive_sharp_boundary_matches_gaussian_convolution():
+    from scipy.special import ndtr
+    from photdis.cluster_rgb_local_conditioning import adaptive_brightness
+    mu=np.linspace(15.,15.5,31);g=np.array([16.1]);sg=np.array([.001]);tau=.04
+    got,error=adaptive_brightness(mu,g,sg,tau)
+    sigma=np.hypot(sg[0],tau)
+    expected=np.log((ndtr((3.-g[0]+mu)/sigma)-ndtr((.5-g[0]+mu)/sigma))/2.5)
+    np.testing.assert_allclose(got,expected,atol=1e-10)
+    assert error<1e-9
 
 
 def test_abundance_is_shared_atom_and_model_jump_is_reversible():

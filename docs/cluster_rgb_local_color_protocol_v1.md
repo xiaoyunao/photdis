@@ -95,3 +95,17 @@ reddening information; endpoint-dominated constraints require physically support
 calibration-range expansion. Do not extrapolate the relation or launch those
 follow-up projects automatically. Allocate NERSC CPUs for scientific calculations;
 sync code, docs, small aggregate results and inspected figures only.
+
+## Numerical integration addendum (after initial quadrature checks)
+
+The .01-reddening runs exposed a failed 64/128-node denominator convergence
+check. Preserve both original quadratures and all numerator chains. Recalculate
+only the one-dimensional shared brightness integral with adaptive quadrature,
+factoring out the constant (1/2.5)^N and integrating the bounded probability
+integrand over a common standard-normal shift [-12,12]. Its discarded tail is
+<3.6e-33. Compare absolute/relative tolerances 1e-9 and 1e-11 against the same
+registered 1e-5 log-likelihood criterion. Recompute conditional curves and grid
+checks from saved component bin masses. This changes numerical evaluation only;
+no sample, model, distance window, prior or scientific acceptance rule changes.
+Initial GH and sampling diagnostics remain in the final manifest. Only failed
+sampling checks trigger the single registered 48000-step chain refinement.

@@ -2,6 +2,14 @@
 
 ## 2026-10-31
 
+- Initial .01-reddening denominators fail the GH64/128 convergence check.
+  Added bounded adaptive one-dimensional integration (1e-9/1e-11 tolerances),
+  retaining original quadratures and reusing saved joint numerator masses.
+  No priors, support or sampled likelihood changed. Sharp-boundary analytic
+  convolution and all 34 focused tests pass. Held summary job 60598213 while
+  finishing numerical checks; M53 sampling refinement submitted as 60598666.
+  Next: finish failed-fit refinements and aggregate with checked denominators.
+
 - Submitted allocated local-color jobs 60598037/038/039/040 for M3/M53/
   NGC5466/NGC4147. Added small-result aggregation and four information figures.
   Prior report now explicitly separates shared-error implementation, selected-
