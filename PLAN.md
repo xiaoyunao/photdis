@@ -1,40 +1,32 @@
 # PLAN
 
-## Blocked objective: existing-field giant selection and abundance information
+## Completed objective: existing-field giant selection and abundance information
 
-Full source: docs/pro_review_a7b5c5d.md. Detailed registered scope and end
-criteria: docs/giant_information_protocol_v1.md; config:
-configs/giant_information_v1.json. The goal is blocked on NERSC authentication,
-not completed. Scope and completion criteria remain unchanged.
+Full source: docs/pro_review_a7b5c5d.md; frozen scope:
+docs/giant_information_protocol_v1.md; conclusions:
+docs/giant_information_decision_v1.md. All bounded tasks completed, including
+uniform-control metadata, existing-field census, native-camera/identity isolation,
+class and hidden-FeH experiments, whole-field comparisons, figures and interpretation.
 
-- Completed locally: uniform-control mode/edge metadata corrected without
-  resampling; all non-control manifest values exactly unchanged. README and
-  limited two-atom abundance interpretation corrected.
-- Implemented: existing 14-field base/clean/WISE census, native RELEASE split,
-  connected identity deduplication, class-v3 reuse, fixed quadratic logistic
-  A/B/C and hidden-FeH Gaussian baselines, whole-field held-out scoring,
-  covariance/error propagation, field bootstrap, figures/report generator.
-  Tests include synthetic fitting, no identity/FeH leakage, missing WISE,
-  insufficient-camera handling and empty-result reporting.
-  Tiny FITS integration also verifies the zero-label case, cross-field linked
-  identities and FeH-independent class labels; histogram tails are accounted for.
-- Pending real data: NERSC SSH authentication expired (Permission denied).
-  Revalidated on three consecutive goal turns; local independent preparation is
-  complete. No remaining scientific computation can proceed without access to
-  the NERSC-only source catalogs and an allocated compute node.
-  User has already been asked to run sshproxy -u yunao. No new Slurm job was
-  submitted and no real class/FeH result has been claimed this turn.
-- After authentication: safely synchronize the committed checkpoint to
-  /pscratch/sd/y/yunao/photdis_pipeline; submit run_giant_information.sh extract,
-  then fit and summarize with afterok dependencies. Inspect actual cutflows,
-  identity/source hashes, fit convergence, native-system sample sufficiency,
-  figures, paired rates/densities and calibration limitations.
-- End point: finite 14-field comparison; report insufficient evidence where
-  thresholds fail; no additional fields/cuts/regressors to force improvement.
-  Determine useful candidate depth/phase/abundance domain, not field distances.
-- Completion requires real aggregate results/report, visual inspection,
-  milestone validation, and local/GitHub/NERSC synchronization. Large catalogs,
-  scores and fitted objects remain on NERSC.
+- Allocated jobs 60634820/60634824/60634834 completed 0:0 on 2026-11-01.
+  14 fields: 9,390,518 clean photometric records; 319 K giants / 21,555 dwarfs.
+- Same-star DECam WISE>=5: A/C giant recall 74.8/87.9%, dwarf leakage
+  25.0/9.3%. Northern camera has no other native training field. No giant
+  validation labels at r>=20; scores are not full-catalog class probabilities.
+- Optical FeH information passes the bounded marginal-baseline comparison;
+  extra WISE information and the high-S/N panel lack stable cross-field evidence.
+  Do not double-use colors as an independent FeH prior in distance inference.
+- Validation: 24 focused tests, nine real-result consistency checks, four plots
+  inspected. Machine-readable results include code/source hashes. Original
+  compute summary preserved under ignored remote data before tracking small outputs.
+- Deliver code, reports, aggregate manifests and figures through the repository;
+  source catalogs, row scores and fitted objects stay on NERSC. No new fields,
+  quality-cut tuning or RGB refit is required to complete this goal.
+
+Next scientific milestone: independent phase, abundance and luminosity evidence
+for the actual, mostly warmer K-giant candidates at r~16–18; quantify unknown
+classes and selection before constructing a field-star distance model. This is
+a new calibration task, not an automatic continuation of diagnostic field expansion.
 
 ## Completed objective: local conditional color information
 

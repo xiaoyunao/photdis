@@ -1,5 +1,37 @@
 # WORKLOG
 
+## 2026-11-01
+
+- Completed bounded giant-information experiment after renewed authentication.
+  Slurm 60634820/60634824/60634834 all COMPLETED 0:0 (54s/177s/17s).
+  Added aggregate decision script/manifest and Chinese scientific decision report;
+  corrected empty native-camera panels and marked sparse FeH fields, without
+  changing frozen numerical results. README/PLAN now describe the completed stage.
+  Same-star WISE C versus optical A: giant recall 87.9 vs 74.8%, dwarf leakage
+  9.3 vs 25.0%; grz has limited FeH information but extra WISE FeH gain is uncertain.
+  Faint r>=20 giant validation absent; northern cross-field training insufficient.
+  Commands: allocated extract/fit/summary, giant_information_decision.py,
+  targeted pytest (24 passed), sacct, visual inspection of all four figures.
+  Nine real-result consistency checks pass. Preserve raw summary in ignored NERSC
+  provenance before repository delivery; large scores/models remain on NERSC.
+  Remaining scientific gap: phase/abundance/luminosity calibration of the actual
+  candidate population, not another iteration on these fixed experiments.
+
+- Extraction 60634820 completed its 14 fields: 9,390,518 clean photometric
+  records / unique LS measurements; 232,454 unambiguous spectral records and
+  connected identities, no cross-field duplicates or conflicting labels.
+  Conservative 4200–5000 K labels: 319 giants and 21,555 dwarfs. This reconciles
+  the earlier 135+184 giant counts without requiring a distance label. The
+  exposure/run is on an allocated nid node; fitting and summary remain pending.
+
+- User renewed NERSC authentication; fetch and scripts/sync.py push succeeded.
+  Verified local/origin/NERSC all at 8e63fac. Resumed registered giant-information
+  objective; submitted allocated extraction 60634820, dependent fitting
+  60634824 and dependent summary 60634834. Extraction initially pending Priority;
+  no duplicate job submitted. All 14 configured sky rectangles are disjoint.
+  Existing unrelated untracked remote products preserved. Next: inspect actual
+  extraction counts, fits and dependent summary, then complete scientific audit.
+
 ## 2026-10-31
 
 - Blocked audit: NERSC SSH again exits 255 with Permission denied, the same

@@ -1,0 +1,41 @@
+{
+  "training_code_commit": "8e63fac8b487cb3eff1b0c330e26563cbea4258d",
+  "jobs": [
+    {
+      "id": 60634820,
+      "stage": "extract",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 54,
+      "node": "nid004113"
+    },
+    {
+      "id": 60634824,
+      "stage": "fit",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 177,
+      "node": "nid004093"
+    },
+    {
+      "id": 60634834,
+      "stage": "summarize",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 17,
+      "node": "nid004115"
+    }
+  ],
+  "original_summary_sha256": {
+    "manifests/giant_information_v1.json": "ce10ca69e11b39e8e870b9bcc79f651a8da139e895532c32475aeea578cf892b",
+    "docs/giant_information_result_v1.md": "d652b6809cd2eb7f2af8da8f864bea62744749a0a8961d818c056665d7622a5b",
+    "figures/giant_information_v1/01_wise_availability.png": "b1519cd5f3b39e5f5b7446951920c6d8eb1b24ae030604643e9859f98e00cb82",
+    "figures/giant_information_v1/02_class_transfer.png": "d106195a288e9ab54077c8cc33214d1b68605d2ae4ac504ade39781ea84b37b9",
+    "figures/giant_information_v1/03_purity_prior.png": "29c164b5b9f57b7f5f132ee89baa4fa326f7f59e7388f5a9c420c10458099a86",
+    "figures/giant_information_v1/04_feh_information.png": "9a84b99aa274deba1a10c36e9a07aba9a53515553190dc749c644a6537bf378f"
+  },
+  "original_summary_archive": "/pscratch/sd/y/yunao/photdis_pipeline/data/giant_information_v1/provenance/summary_60634834",
+  "tests_passed": 24,
+  "aggregate_checks_passed": 9,
+  "presentation_change": "Aggregate-only rerender for insufficient-camera labels and sparse FeH markers; numerical outputs unchanged."
+}

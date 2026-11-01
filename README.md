@@ -4,13 +4,19 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed RGB result: the [local conditional-color experiment](docs/cluster_rgb_local_color_result_v1.md)
-finds color information after removing the dominant brightness-boundary effect.
-Its joint-cluster widths are not individual field-star distance errors, and the
-two-point abundance priors are a limited sensitivity test. The next task is the
-[existing-field giant selection and abundance experiment](docs/giant_information_protocol_v1.md),
-using observable photometry and whole-field evaluation. Low-gravity evidence
-does not establish lower-RGB phase; no field-giant distance product is released.
+Latest completed result: the [existing-field giant selection and abundance experiment](docs/giant_information_decision_v1.md)
+uses 14 existing fields with whole-field validation. On matched DECam K-star
+labels, adding WISE raises giant recall from 74.8% to 87.9% and reduces dwarf
+leakage from 25.0% to 9.3%. Optical colors show limited abundance information;
+additional WISE abundance gains are not stable across fields. These are selection
+scores, not calibrated full-catalog probabilities. Faint targets and the northern
+camera system lack validation. The next calibration gap is independent evolutionary
+phase and luminosity evidence for the actual candidate population.
+
+The completed [local conditional-color RGB experiment](docs/cluster_rgb_local_color_result_v1.md)
+finds color information after controlling brightness boundaries. Its joint-cluster
+widths are not single-star errors. Low gravity does not establish lower-RGB phase;
+no field-giant distance product is released.
 
 The bounded [four-cluster external-scale experiment](docs/cluster_rgb_scales_protocol_v1.md)
 uses the existing members and frozen curves. Its optional passband integration

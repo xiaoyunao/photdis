@@ -46,6 +46,12 @@ def figures(result, folder):
     for col, system in enumerate(systems):
         for row, cls in enumerate(('giants', 'dwarfs')):
             ax = axes[row, col]
+            if not any(c['system']==system and c['models'] for c in folds):
+                ax.set_title(system)
+                ax.text(.5, .5, 'Insufficient same-system training fields\nNo cross-field score',
+                        transform=ax.transAxes, ha='center', va='center')
+                ax.set_axis_off()
+                continue
             for model in ('A', 'B', 'C'):
                 for cell in folds:
                     if cell['system']!=system or cell['panel']!='common5' or model not in cell['models']:
@@ -66,6 +72,12 @@ def figures(result, folder):
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.8))
     pi = result['config']['purity_giant_fractions']
     for ax, system in zip(axes, systems):
+        if not any(c['system']==system and c['models'] for c in folds):
+            ax.set_title(system)
+            ax.text(.5, .5, 'Insufficient same-system training fields\nPurity rates not estimated',
+                    transform=ax.transAxes, ha='center', va='center')
+            ax.set_axis_off()
+            continue
         for cell in folds:
             if cell['system']!=system or cell['panel']!='common5' or 'C' not in cell['models']:
                 continue
@@ -80,14 +92,22 @@ def figures(result, folder):
 
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.8))
     for ax, system in zip(axes, systems):
+        if not any(c['system']==system and c['abundance'] for c in folds):
+            ax.set_title(system)
+            ax.text(.5, .5, 'Insufficient same-system training fields\nNo abundance validation',
+                    transform=ax.transAxes, ha='center', va='center')
+            ax.set_axis_off()
+            continue
         ax.axhline(0, color='gray', lw=1)
         for model in ('A', 'B', 'C'):
             cells = [c for c in folds if c['system']==system and c['panel']=='common5' and model in c['abundance']]
-            ax.plot([c['field_index'] for c in cells],
-                    [c['abundance'][model]['paired_log_gain'] for c in cells], 'o', color=colors[model], label=model)
+            for cell in cells:
+                ax.plot(cell['field_index'], cell['abundance'][model]['paired_log_gain'], 'o',
+                        color=colors[model], markerfacecolor=colors[model] if cell['abundance_test_n']>=10 else 'none')
+            ax.plot([], [], 'o', color=colors[model], label=model)
         ax.set(title=system, xlabel='Held-out field index', ylabel='Mean log-density gain / star vs marginal')
         ax.legend()
-    fig.suptitle('Hidden FeH; matched stars; spectral errors convolved once')
+    fig.suptitle('Hidden FeH; matched stars; hollow markers: fewer than 10 test giants')
     fig.tight_layout(); fig.savefig(folder/'04_feh_information.png'); plt.close(fig)
     return [str(p) for p in sorted(folder.glob('*.png'))]
 
