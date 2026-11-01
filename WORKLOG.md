@@ -2,6 +2,22 @@
 
 ## 2026-11-01
 
+- Implemented candidate application using retained broad spectral records, frozen
+  original scoring, one W1-only A/B fit and three inner whole-field groups for
+  train-only low-FPR thresholds. Added observed-T/logg FeH mechanism contrast,
+  same identities and original label-error budget; fixed original results remain.
+  Files: giant_candidate module/runner, config/protocol, Slurm wrapper and tests.
+  Validation: syntax/shell checks and 12 focused tests passed, including outer
+  label mutation isolation, W2-missing acceptance and tied-score FPR accounting.
+  Next: allocated run, aggregate broad population/ROC/FeH results and inspect plots.
+
+- Read the full latest Pro review of 8e26f78 (9,343 characters) through
+  read_thread; created detailed goal and candidate protocol/config before scoring.
+  Verified clean main, fetched both remotes (all at 8e26f78), recovered logs/plan.
+  Official DR11 description/release/sweep pages confirm north11011 products;
+  no release migration or new north fields this round. Next: broaden held-out
+  evaluation, fixed W1-only A/B, nested low-FPR thresholds, T/logg FeH contrast.
+
 - Completed bounded giant-information experiment after renewed authentication.
   Slurm 60634820/60634824/60634834 all COMPLETED 0:0 (54s/177s/17s).
   Added aggregate decision script/manifest and Chinese scientific decision report;

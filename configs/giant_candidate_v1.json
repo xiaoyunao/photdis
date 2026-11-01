@@ -1,0 +1,16 @@
+{
+  "version": "giant_candidate_v1",
+  "review": "docs/pro_review_8e26f78.md",
+  "parent_config": "configs/giant_information_v1.json",
+  "parent_directory": "data/giant_information_v1",
+  "output_directory": "data/giant_candidate_v1",
+  "system_release": 11010,
+  "seed": 20261101,
+  "target_fpr": [0.01, 0.001],
+  "inner_field_groups": 3,
+  "working_threshold": 0.5,
+  "candidate_support": "training_color_minmax_box",
+  "mechanism_panels": ["optical", "common5", "common20"],
+  "mechanism_basis": "x=log10(T/5000)/0.1; x,x^2,logg; plus original colors",
+  "mechanism_conditioning": "observed spectral T and logg fixed diagnostic covariates; original corrected-label errors retained; no claim of latent physical abundance calibration"
+}

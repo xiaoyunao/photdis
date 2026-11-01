@@ -1,5 +1,17 @@
 # PLAN
 
+## Active objective: observable DECam giant candidate application
+
+Follow full docs/pro_review_8e26f78.md and frozen
+docs/giant_candidate_protocol_v1.md / configs/giant_candidate_v1.json.
+Milestones: broad-reference frozen-model scoring; W1-only matched A/B outer
+validation and train-only low-FPR thresholds; one T/logg-conditioned FeH contrast;
+actual candidate composition/domain decision, tests/figures, three-endpoint sync.
+Preserve old results, no new fields/cuts/regression search. NERSC auth is valid.
+North remains unsupported across fields; distinguish sky names from RELEASE.
+Completion requires real allocated runs and calibrated wording, not a successful
+high-purity catalog or a new field-star distance product.
+
 ## Completed objective: existing-field giant selection and abundance information
 
 Full source: docs/pro_review_a7b5c5d.md; frozen scope:
