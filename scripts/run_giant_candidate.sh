@@ -13,4 +13,8 @@ source /global/common/software/desi/desi_environment.sh main
 set -u
 export PYTHONPATH="$PWD/src:$PWD/.deps:$PWD/scripts"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-python scripts/giant_candidate_run.py
+case "${1:-fit}" in
+  fit) python scripts/giant_candidate_run.py ;;
+  summarize) python scripts/giant_candidate_summarize.py ;;
+  *) echo "Usage: run_giant_candidate.sh fit|summarize"; exit 2 ;;
+esac

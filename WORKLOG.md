@@ -2,6 +2,12 @@
 
 ## 2026-11-01
 
+- Submitted candidate fit job 60635993 after three-endpoint sync at 3d00cc4;
+  pending scheduler Priority, no duplicate work. Added aggregate/ROC/figure
+  generator and dependent-summary entry point. Five candidate tests pass, including
+  retaining unknown/nonstellar reference objects in the composition denominator.
+  Threshold curves are labeled descriptive; train-only thresholds reported separately.
+
 - Implemented candidate application using retained broad spectral records, frozen
   original scoring, one W1-only A/B fit and three inner whole-field groups for
   train-only low-FPR thresholds. Added observed-T/logg FeH mechanism contrast,

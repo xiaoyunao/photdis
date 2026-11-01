@@ -55,3 +55,23 @@ def test_mechanism_conditions_on_spectrum_preserves_color_covariance():
     np.testing.assert_allclose(v[:,3,4],-t['sigma_r']**2)
     old=x.copy();t['feh_corrected'][:]=100
     np.testing.assert_array_equal(mechanism_features(t,bands,errors,2)[0],old)
+
+
+def test_population_aggregation_retains_unknown_and_nonstellar():
+    from photdis.giant_candidate import selection_summary
+    from giant_candidate_summarize import aggregate
+    t=synthetic_table();t['class_evidence']=np.where(t['label']==1,'conservative_giant','conservative_dwarf')
+    t['redrock_nonstellar_evidence']=np.zeros(180,bool)
+    t['label'][0]=-1;t['class_evidence'][0]='unknown'
+    t['label'][1]=-1;t['redrock_nonstellar_evidence'][1]=True
+    rows=np.arange(60);score=np.ones(60)*.8;outside=np.zeros(60,bool)
+    summ=selection_summary(t,rows,score,outside,np.ones(180,bool),.5)
+    assert summ['strata']['all']['unknown']['success']==1
+    assert summ['strata']['all']['raw_nonstellar_unassessed']['success']==1
+    cfg=json.loads(Path('configs/giant_information_v1.json').read_text())
+    result={'parent_config':cfg,'config':{'target_fpr':[.01,.001],'mechanism_panels':['optical']},
+            'application':[{'field_index':0,'training_fields':[1,2],'panel':'w1','n_reference':60,
+                            'models':{n:{'fixed_half':summ,'inside_half':summ} for n in ['A','B']}}], 'mechanism':[]}
+    output=aggregate(result)
+    assert all(output['validation'].values())
+    assert output['panels']['w1']['models']['B']['fixed_half']['all']['reference_total']['n']==60
