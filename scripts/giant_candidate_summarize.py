@@ -158,7 +158,12 @@ def main():
     summary['source_results_sha256']=hashlib.sha256((folder/'results.json').read_bytes()).hexdigest()
     summary['summary_code_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     summary['figures']=figures(result,summary,Path('figures/giant_candidate_v1'))
-    write_json(Path('manifests/giant_candidate_v1.json'),result)
+    # Compact aggregate encoding stays below the repository's 5 MiB source limit.
+    manifest=Path('manifests/giant_candidate_v1.json')
+    manifest.parent.mkdir(parents=True,exist_ok=True)
+    temporary=manifest.with_suffix('.json.tmp')
+    temporary.write_text(json.dumps(result,separators=(',',':'),allow_nan=False)+'\n')
+    temporary.replace(manifest)
     write_json(Path('manifests/giant_candidate_summary_v1.json'),summary)
     print(json.dumps(summary['validation']),flush=True)
 

@@ -4,14 +4,18 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed result: the [existing-field giant selection and abundance experiment](docs/giant_information_decision_v1.md)
-uses 14 existing fields with whole-field validation. On matched DECam K-star
-labels, adding WISE raises giant recall from 74.8% to 87.9% and reduces dwarf
-leakage from 25.0% to 9.3%. Optical colors show limited abundance information;
-additional WISE abundance gains are not stable across fields. These are selection
-scores, not calibrated full-catalog probabilities. Faint targets and the northern
-camera system lack validation. The next calibration gap is independent evolutionary
-phase and luminosity evidence for the actual candidate population.
+Latest completed result: the [DECam giant candidate application experiment](docs/giant_candidate_result_v1.md)
+keeps the prior K-star models fixed and evaluates wider spectral references.
+W1 helps within the K population, but warm-dwarf leakage makes the current
+selector unsuitable for a general high-purity catalog. Train-only low-FPR
+thresholds retain few K giants. Colors retain predictive FeH information after
+conditioning on observed spectral temperature/gravity, within a limited model
+family. The next task is an observable candidate definition covering the actual
+temperature/class population before phase and luminosity calibration.
+
+The [preceding information experiment](docs/giant_information_decision_v1.md)
+remains frozen. DR11 includes north RELEASE=11011 products; its native-system
+cross-field validation is still insufficient. No release migration is needed.
 
 The completed [local conditional-color RGB experiment](docs/cluster_rgb_local_color_result_v1.md)
 finds color information after controlling brightness boundaries. Its joint-cluster

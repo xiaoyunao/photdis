@@ -1,0 +1,45 @@
+{
+  "source_result_sha256": "2014695045e5ec3aeb15bbc8f0b24cb85de16db41924311f02ecc46d3c9e5095",
+  "tracked_result_sha256": "df3228922748022166e433b5b2a9546fd4b9720bb3a7ba4c09ae60f83040be8c",
+  "encoding": "Whitespace-only compact JSON; parsed value exactly unchanged. Original pretty aggregate remains on NERSC.",
+  "science_submission_commit": "3d00cc45acecda61843891f1258caaa504128654",
+  "successful_summary_commit": "c888c25844f304fe308e65aabbd7dc8f62fa8715",
+  "jobs": [
+    {
+      "id": 60635993,
+      "stage": "fit",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "seconds": 175,
+      "node": "nid004096"
+    },
+    {
+      "id": 60636037,
+      "stage": "summary first attempt",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "seconds": 11,
+      "reason": "plotting Wilson endpoint floating roundoff; frozen fits unaffected"
+    },
+    {
+      "id": 60636273,
+      "stage": "corrected summary",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "seconds": 14,
+      "node": "nid004131"
+    }
+  ],
+  "focused_tests_passed": 18,
+  "aggregate_checks_passed": 5,
+  "figures_inspected": 4,
+  "original_output_archive": "/pscratch/sd/y/yunao/photdis_pipeline/data/giant_candidate_v1/provenance/summary_60636273",
+  "archived_original_sha256": {
+    "manifests/giant_candidate_v1.json": "2014695045e5ec3aeb15bbc8f0b24cb85de16db41924311f02ecc46d3c9e5095",
+    "manifests/giant_candidate_summary_v1.json": "a6e918b7fe8598e802055281e0fef49dbdc808c22647bb9b9e26b57010392760",
+    "figures/giant_candidate_v1/01_low_fpr_roc.png": "df120b4d9800f4cf952c0cbdee64242d01d8a4aeaf36fef3d56bf7c48b232c07",
+    "figures/giant_candidate_v1/02_selected_composition.png": "1b22823ca6fbcb5e22b451342e5be1fcdd30df584f25e62a7e6fbb646f529bf7",
+    "figures/giant_candidate_v1/03_nested_transfer.png": "ae63bbad2e253328a1db21330b3c412e505ffd0b56b9fcebc0d4236a510534c0",
+    "figures/giant_candidate_v1/04_feh_mechanism.png": "f8dffd1e8d040de0586cbf9ced7b46aac1a48986af74ac15439472e76be83f5c"
+  }
+}

@@ -2,6 +2,28 @@
 
 ## 2026-11-01
 
+- Final delivery: archived six original remote summary artifacts with SHA256
+  guards under data/giant_candidate_v1/provenance/summary_60636273. Whitespace-only
+  compact JSON reduces the detailed 14.2 MB aggregate to 5.0 MB under repository
+  sync limit; parsed equality verified, original/result hashes in execution
+  manifest. Final five candidate tests pass after plot/serialization fixes;
+  science fits and all numerical outputs unchanged. Ready for milestone sync.
+
+- Completed Pro 8e26f78 bounded candidate experiment. Corrected summary
+  60636273 COMPLETED 0:0 in 14 s on nid004131; fit 60635993 unchanged.
+  Reports/manifests/four figures downloaded and visually inspected; result SHA
+  matches source aggregate, five isolation/count/budget checks pass.
+  Broad W1 B inside-box .5 admits 20.4% of qualified dwarfs; nested 1%/.1%
+  targets retain only 31/289 and 6/289 K giants (actual FPR 2.32%/.132%).
+  W2-failing layer adds only seven K giants; no faint K validation.
+  FeH grz adds +.490 log-score/star beyond observed T/logg on six informative
+  fields, CI [.294,.750]; sparse failures/tail undercoverage remain explicit.
+  No high-purity catalog or field-giant distances adopted. README/PLAN updated;
+  next task is observable temperature/class coverage before luminosity calibration.
+  Validation: 18 focused tests, plotting smoke with real aggregates, source hashes,
+  real allocated run, four plot inspections. Preserve remote originals in ignored
+  provenance before tracking small outputs; synchronize code/reports/summaries.
+
 - Fit 60635993 completed 0:0 in 175 s on nid004096; retained frozen results.
   Broad DECam references N=205699; W1 N=180306, including all temperature and
   unknown evidence categories. Low-FPR and abundance comparisons calculated.

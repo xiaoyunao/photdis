@@ -1,16 +1,33 @@
 # PLAN
 
-## Active objective: observable DECam giant candidate application
+## Completed objective: observable DECam giant candidate application
 
-Follow full docs/pro_review_8e26f78.md and frozen
-docs/giant_candidate_protocol_v1.md / configs/giant_candidate_v1.json.
-Milestones: broad-reference frozen-model scoring; W1-only matched A/B outer
-validation and train-only low-FPR thresholds; one T/logg-conditioned FeH contrast;
-actual candidate composition/domain decision, tests/figures, three-endpoint sync.
-Preserve old results, no new fields/cuts/regression search. NERSC auth is valid.
-North remains unsupported across fields; distinguish sky names from RELEASE.
-Completion requires real allocated runs and calibrated wording, not a successful
-high-purity catalog or a new field-star distance product.
+Followed docs/pro_review_8e26f78.md and frozen giant_candidate_protocol_v1.md.
+Report: docs/giant_candidate_result_v1.md. Existing 14 fields only, original
+models unchanged; broad DECam reference N=205699, W1 N=180306, common5 N=159103.
+
+- Completed original-model broad scoring, W1-only matched A/B, temperature/class/
+  support/brightness/W2 splits, descriptive ROC and nested train-only thresholds.
+- W1 B inside-box score>=.5 retains 244/289 K giants but admits 20104/98536
+  broad dwarfs. Train-side 1%/.1% FPR targets retain 31/289 and 6/289 K giants;
+  actual outer FPR 2.32%/.132%. Do not promote this classifier as a high-purity
+  field catalog. Only seven additional K giants lack W2: coverage remains weakly
+  validated, no r>=20 K-giant performance claim.
+- Observed T/logg-conditioned FeH comparison: common5 grz gain +.490 per star
+  on six informative fields, CI [.294,.750], all positive; limited predictive
+  evidence, not physical abundance calibration or independent distance prior.
+- DR11 north11011 exists; sky-north naming is not camera identity. Northern
+  expansion deferred until adequate same-camera fields are available.
+- Allocated fit 60635993 and corrected summary 60636273 completed 0:0. First
+  summary 60636037 failed on Wilson plotting roundoff only; fixed error lengths,
+  preserved fit outputs. 18 focused tests, aggregate checks and figure inspection.
+  Code/reports/aggregate manifests/plots delivered via git; row scores/models stay
+  NERSC. No further threshold/model search in this completed round.
+
+Next milestone: a separately registered observable temperature/class coverage
+scheme that addresses warm dwarfs, intermediate gravity and unknown/nonstellar
+risks. Then align phase/FeH/luminosity references to the selected population.
+Current lower-RGB relation is not a field-giant distance product.
 
 ## Completed objective: existing-field giant selection and abundance information
 
