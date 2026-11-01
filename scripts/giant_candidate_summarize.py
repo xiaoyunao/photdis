@@ -134,7 +134,7 @@ def figures(result,summary,folder):
                 if not s:continue
                 v=s['strata']['all'][cls]
                 if v['rate'] is None:continue
-                ax.errorbar(r['field_index']+offset,v['rate'],yerr=[[v['rate']-v['interval95'][0]],[v['interval95'][1]-v['rate']]],fmt='o',color='C0' if name=='A' else 'C1',ms=4)
+                ax.errorbar(r['field_index']+offset,v['rate'],yerr=[[max(0.,v['rate']-v['interval95'][0])],[max(0.,v['interval95'][1]-v['rate'])]],fmt='o',color='C0' if name=='A' else 'C1',ms=4)
             ax.plot([],[],'o',color='C0' if name=='A' else 'C1',label=name)
             ax.set(xlabel='Outer held-out field',ylabel=cls+' selected fraction');ax.legend()
     axes[1].axhline(.01,color='gray',ls=':');fig.suptitle('Train-only 1% FPR thresholds applied outside training fields');fig.tight_layout();fig.savefig(folder/'03_nested_transfer.png');plt.close(fig)

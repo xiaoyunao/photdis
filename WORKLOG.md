@@ -2,6 +2,15 @@
 
 ## 2026-11-01
 
+- Fit 60635993 completed 0:0 in 175 s on nid004096; retained frozen results.
+  Broad DECam references N=205699; W1 N=180306, including all temperature and
+  unknown evidence categories. Low-FPR and abundance comparisons calculated.
+  Summary 60636037 failed only at plotting: Wilson endpoints at rate 0/1 can
+  differ by floating roundoff, creating a tiny negative matplotlib yerr. Clamp
+  plot error lengths to zero (statistics unchanged). Real aggregate rendering
+  smoke passes all four figures; rerun summary only, not scientific fits.
+  Current validation: 18 focused tests and five aggregate checks pass.
+
 - Submitted candidate fit job 60635993 after three-endpoint sync at 3d00cc4;
   pending scheduler Priority, no duplicate work. Added aggregate/ROC/figure
   generator and dependent-summary entry point. Five candidate tests pass, including
