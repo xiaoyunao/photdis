@@ -41,10 +41,29 @@ def main():
     fig.suptitle('Complete development-test references; no true type supplied; all support states')
     save(fig,'03_distance_references.png')
     truth=truth_mu(t,'chosen')[ix];good=np.isfinite(truth);gr=t['g0'][ix]-t['r0'][ix];mgref=t['g0'][ix]-truth;mgphot=t['g0'][ix]-mu[:,2]
-    fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained')
-    for a,v,title in zip(ax,[mgref,mgphot],['Gaia-first / SPECDIS reference','Photometric median (model compression)']):
+    fig,ax=plt.subplots(2,2,figsize=(12,10),layout='constrained')
+    train=(t['split']==0)&t['fit_eligible']
+    for a,source,title in zip(ax[0],[1,2],['Training: Gaia anchors','Training: supplementary SPECDIS']):
+        mask=train&(t['label_source']==source)
+        density(a,(t['g0']-t['r0'])[mask],t['Mg'][mask],title,'(g-r)0','Mg');a.set(xlim=(-.5,2),ylim=(17,-6))
+    for a,v,title in zip(ax[1],[mgref,mgphot],['Same test sources: reference','Same test sources: photometric median']):
         density(a,gr[good],v[good],title,'(g-r)0','Mg');a.set(xlim=(-.5,2),ylim=(17,-6))
     save(fig,'04_same_source_cmd.png')
+    result['training_population']={}
+    for name,entry in fit['models'].items():
+        tier=name[-1] if '_on_' in name else name
+        mask=train&(np.ones(n,bool) if tier=='A' else t[tier])
+        result['training_population'][name]=dict(n=int(mask.sum()),classes={str(k):int((mask&(t['class_label']==k)).sum()) for k in [-1,0,1,2]},Mg_percentiles=np.percentile(t['Mg'][mask],[0,1,50,99,100]).tolist(),sigma_mu_median=float(np.median(t['sigma_mu'][mask])))
+    fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained')
+    stages=['Optical records','Unique sources','Reference candidates','Training core A']
+    values=[prep['n_parent_records'],prep['n_unique_parent'],prep['n_reference'],fit['models']['A']['n_train']]
+    ax[0].barh(stages,values);ax[0].set(xscale='log',xlabel='Source / record count',title='Existing 14-field sample flow');ax[0].invert_yaxis()
+    for y,v in enumerate(values):ax[0].text(v,y,f' {v:,}',va='center',fontsize=9)
+    for j,source in enumerate([1,2]):
+        counts=[int(((t['split']==split)&(t['label_source']==source)).sum()) for split in range(4)]
+        ax[1].bar(np.arange(4)+j*.35,counts,width=.35,label=['Gaia','SPECDIS supplement'][j])
+    ax[1].set(xticks=np.arange(4)+.175,xticklabels=['train area','cal area','test area','north'],ylabel='References (before precision cut)',yscale='log');ax[1].legend()
+    save(fig,'00_sample_flow.png')
     fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained')
     for j,(tag,names) in enumerate([('W1',['A_on_B','B']),('W1W2',['A_on_C','B_on_C','C'])]):
         for ref,marker in [('Gaia','o'),('specdis','s')]:

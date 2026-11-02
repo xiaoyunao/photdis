@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-02 — allocated broad-data integration started
+
+- Debug60681406 replaces pending60681227; all14 parent projections created.
+- Six fixed models queued60681423; full application array follows by dependency.
+- Added frozen evaluation resume checks (identity/model hashes), training/test
+  CMD panels and source-flow plot; no cut or algorithm retuning.
+- Input sky/quality configurations agree across all14 existing fields.
+
 ## 2026-11-02 — unified reporting and application accounting
 
 - Added complete-test reference distances, residuals, CMD, same-star band gain,

@@ -35,6 +35,7 @@ def strata(t,ix):
 
 def main():
     require_compute();t=load();result={'models':{},'same_star':{},'source':'development spatial holdout; not blind final test'}
+    previous=json.load(open(OUT/'fit_progress.json')) if (OUT/'fit_progress.json').exists() else {'models':{}}
     pred={};train=(t['split']==0)&t['fit_eligible'];seen=set()
     for name,(dim,tier) in MODELS.items():
         start=time.time();fit=train&available(t,tier);ids=t['identity'][fit];assert len(ids)>=100
@@ -44,6 +45,18 @@ def main():
         if name=='A':train_ids={}
         train_ids[name]=ids
         model_path=OUT/(name+'.joblib')
+        entry=previous.get('models',{}).get(name)
+        evaluation_path=OUT/(name+'_evaluation.npz')
+        identity_hash=__import__('hashlib').sha256(ids.tobytes()).hexdigest()
+        if entry and evaluation_path.exists() and model_path.exists():
+            assert entry['train_identity_sha256']==identity_hash
+            assert entry['model_sha256']==sha(model_path)
+            with np.load(evaluation_path) as saved:pred[name]={k:saved[k] for k in saved.files}
+            expected=np.flatnonzero(np.isin(t['split'],[1,2])&available(t,tier))
+            assert np.array_equal(expected,pred[name]['rows'])
+            result['models'][name]=entry
+            print(name,'reused completed frozen evaluation',flush=True)
+            continue
         if model_path.exists():model=joblib.load(model_path)
         else:
             model=HistogramQRF(dim,seed=CFG['seed'],n_estimators=CFG['n_estimators'],min_samples_leaf=CFG['min_samples_leaf'],max_depth=CFG['max_depth'],bin_width=CFG['distribution_bin_mag']).fit(np.column_stack([t[k][fit] for k in BANDS]),t['Mg'][fit],t['class_label'][fit]);joblib.dump(model,model_path)
