@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-02 — v0 fixed distribution baseline implemented
+
+- Histogram-compressed QRF preserves exact leaf weights at0.1mag resolution.
+- Three tests pass: exact forest histogram comparison, shared-band covariance
+  and chunk-invariant noise, correct direct-g distance-modulus propagation.
+- Added six-model training/evaluation, cal-only routing/CQR and full-parent
+  array application. Preparation60681227 submitted; waiting for allocated CPU.
+- No historical code/model changed; next data integration smoke and batch fit.
+
+
 ## 2026-11-02 — unified baseline v0 registered
 
 - Read complete Pro60f65d5 review; user explicitly reprioritized full pipeline.
