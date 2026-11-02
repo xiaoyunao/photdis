@@ -1,0 +1,123 @@
+{
+  "member_Pge0p5": 394,
+  "member_Pgt0p9": 372,
+  "raw_matches": 394,
+  "unique_matches": 394,
+  "missing_member_ids": [],
+  "release_counts": {
+    "11010": 394
+  },
+  "spectroscopic_K_in_all_members": 0,
+  "phase": "unknown; no RGB/RC/HB assignment from color or low gravity",
+  "reference": {
+    "mu": 16.3,
+    "sigma_mu": 0.1,
+    "method": "model-dependent CMD fitting; only feasibility",
+    "url": "https://arxiv.org/abs/1709.08509"
+  },
+  "tiers": {
+    "matched": {
+      "n": 394,
+      "Mg_lt0p5": 7,
+      "r16_18": 24,
+      "Mg_min_median_max": [
+        -1.1811151504516602,
+        4.002506256103516,
+        4.704566955566406
+      ],
+      "ebv_min_median_max": [
+        0.03537677600979805,
+        0.03669903054833412,
+        0.03802448511123657
+      ]
+    },
+    "core": {
+      "n": 372,
+      "Mg_lt0p5": 7,
+      "r16_18": 24,
+      "Mg_min_median_max": [
+        -1.1811151504516602,
+        3.986802101135254,
+        4.704566955566406
+      ],
+      "ebv_min_median_max": [
+        0.03550669178366661,
+        0.03670833446085453,
+        0.03802448511123657
+      ]
+    },
+    "core_gr_clean": {
+      "n": 309,
+      "Mg_lt0p5": 5,
+      "r16_18": 22,
+      "Mg_min_median_max": [
+        -0.5944604873657227,
+        3.9254837036132812,
+        4.704566955566406
+      ],
+      "ebv_min_median_max": [
+        0.03550669178366661,
+        0.03670305758714676,
+        0.03802448511123657
+      ]
+    },
+    "core_grz_clean": {
+      "n": 300,
+      "Mg_lt0p5": 1,
+      "r16_18": 22,
+      "Mg_min_median_max": [
+        0.2260112762451172,
+        3.9271726608276367,
+        4.704566955566406
+      ],
+      "ebv_min_median_max": [
+        0.03550669178366661,
+        0.03670521453022957,
+        0.03802448511123657
+      ]
+    },
+    "core_clean_low_dust": {
+      "n": 0,
+      "Mg_lt0p5": 0,
+      "r16_18": 0,
+      "Mg_min_median_max": [],
+      "ebv_min_median_max": []
+    },
+    "core_clean_low_dust_w1": {
+      "n": 0,
+      "Mg_lt0p5": 0,
+      "r16_18": 0,
+      "Mg_min_median_max": [],
+      "ebv_min_median_max": []
+    },
+    "core_spectroscopic_K": {
+      "n": 0,
+      "Mg_lt0p5": 0,
+      "r16_18": 0,
+      "Mg_min_median_max": [],
+      "ebv_min_median_max": []
+    },
+    "core_qualified_K": {
+      "n": 0,
+      "Mg_lt0p5": 0,
+      "r16_18": 0,
+      "Mg_min_median_max": [],
+      "ebv_min_median_max": []
+    }
+  },
+  "core_failures_overlapping": {
+    "satur_g": 0,
+    "satur_r": 2,
+    "satur_z": 6,
+    "fracmasked_g": 2,
+    "fracmasked_r": 2,
+    "fracmasked_z": 6,
+    "ebv_ge0p03": 372
+  },
+  "source_sha256": {
+    "data/reference/vasiliev_baumgardt_2021_members.zip": "9eafa2e10afc031790cfe36ed8545aa6336cc87c317fab167e9cea9dacbd0748",
+    "/pscratch/sd/y/yunao/photdis_pipeline/scripts/kgiant_pal12_feasibility.py": "f9f103518f804a6dde4c5df447d752241eafc045570e982d2dea0894f161a029",
+    "docs/kgiant_pal12_feasibility_v1.md": "f465674a92a5ddbe9fcb15f03ff22a6b2c20181ffa49f4148441c4e14f802b0c"
+  },
+  "figure_sha256": "184ad165657bd11da812151bcd1c7f3a0976110fbd7a1354a3fd4781e4b33303"
+}

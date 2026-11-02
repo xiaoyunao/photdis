@@ -4,17 +4,27 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed result: the [controlled broad-dwarf comparison and distance plots](docs/giant_wide_result_v1.md)
-expands the negative class while matching preprocessing, regularization and
-whole-field train/calibration/test identities. At the calibration-side 1% FPR
-working point, grzW1 B-wide retains 190/289 K giants versus 28/289 for B-K;
-held-out dwarf FPR is 1010/98536 (1.025%). Gains concentrate at r=16–18.
-This is a scoped DECam enrichment/ranking recipe, not a high-purity catalog;
-there is no calibrated global class probability or universal deployment threshold.
-The [registered protocol](docs/giant_wide_protocol_v1.md) and fixed model family
-are complete. Next: independent phase and luminosity evidence for the selected,
-mostly more metal-rich and brighter K giants, using matched distance teachers.
-The old poor-metal lower-RGB relation does not cover this population.
+Latest completed experiment: [actual K-giant conditional distances](docs/kgiant_distance_result_v1.md)
+uses all 289 W1-qualified K giants with available teacher labels (77 SPDist,
+258 SPECDIS), with whole-field paired grz/grzW1/no-color predictions. On the
+frozen selected subset, colors improve teacher-scale predictive scores; the W1
+increment is small and does not establish stable scatter improvement. The 39
+common selected teachers differ by a median -0.274 mag; the actual 189 SPECDIS
+fractional errors have median 29.2%. Full mixtures preserve uncertainty, but are
+not calibrated true-distance posteriors or a released field-giant product.
+[Protocol](docs/kgiant_distance_protocol_v1.md),
+[paired evidence](manifests/kgiant_selected190_evidence_v1.json), and
+[independent-reference feasibility](docs/kgiant_pal12_feasibility_v1.md) define
+what is supported. Large mixtures remain on NERSC in data/kgiant_distance_v1.
+
+The preceding [controlled broad-dwarf comparison](docs/giant_wide_result_v1.md)
+remains frozen: B-wide retains 190/289 K giants versus 28/289 for B-K at the
+calibration-side 1% FPR working point; held-out dwarf FPR is 1010/98536.
+It is a scoped DECam enrichment/ranking recipe, not a high-purity catalog or a
+calibrated global class probability. The old poor-metal lower-RGB relation does
+not cover the selected population. Next progress requires independent distances
+and phase evidence in the brighter, more metal-rich K population, rather than
+another classifier or kernel-bandwidth search.
 
 Requested distance density plots reproduce frozen held-out predictions:
 [cold phot-d / Gaia-d](figures/distance_comparison_v1/01_cold_phot_vs_gaia.png),

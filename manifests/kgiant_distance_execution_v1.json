@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-02",
+  "baseline_commit": "1689ec2161f8dd37d6d84b11ba8c7ea074a6e17f",
+  "protocol_registration_commit": "bd73ab4",
+  "model_implementation_commit": "b332392",
+  "summary_implementation_commit": "60ce54a",
+  "pal12_registration_commit": "21277b4",
+  "jobs": [
+    {
+      "job_id": 60678131,
+      "stage": "inventory",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:43"
+    },
+    {
+      "job_id": 60678224,
+      "stage": "whole-field mixtures",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:09"
+    },
+    {
+      "job_id": 60678244,
+      "stage": "summary and figures",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:22"
+    },
+    {
+      "job_id": 60678349,
+      "stage": "Pal12 registered feasibility",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:05:51"
+    }
+  ],
+  "unit_tests": {
+    "command": "PYTHONPATH=src:.deps python -m pytest -q tests/test_kgiant_distance.py tests/test_giant_kernel.py",
+    "passed": 6
+  },
+  "real_checks": {
+    "status": "passed",
+    "checks": [
+      "frozen selection reproduces190",
+      "teacher common intersection explicitly counted",
+      "SP method floor accounted once",
+      "same A/B/prior tests and no repeated held-out identity",
+      "saved mixtures normalized and finite",
+      "field and linked-identity separation",
+      "known members excluded from all training",
+      "frozen source and protocol hashes unchanged"
+    ]
+  },
+  "copied_artifact_checks": {
+    "status": "passed",
+    "checks": [
+      "190 unique Gaia evidence identities",
+      "39 common-valid evidence rows",
+      "five copied figure SHA256 match remote summary",
+      "per-field totals match all-test counts",
+      "selected subsets bounded by all tests"
+    ]
+  },
+  "visual_review": "All six figures inspected: labels and legends visible, full samples displayed, limitations explicit.",
+  "large_products": "/pscratch/sd/y/yunao/photdis_pipeline/data/kgiant_distance_v1",
+  "file_sha256": {
+    "figures/kgiant_distance_v1/01_teacher_pairs.png": "a9bd4ab0293c0b411024d31a1458f974c840d4fc348007e7b00f2525bbb737fb",
+    "figures/kgiant_distance_v1/04_distance_scatter.png": "1d5bbe4c31f6c351a526c49d562e78413c847e32ca42d934d97c52abce9f9036",
+    "figures/kgiant_distance_v1/05_predictive_distributions.png": "b2bc66e535325cff2c97d48fa02ea90789adce210134dc95fad742059619cd50",
+    "figures/kgiant_distance_v1/02_teacher_coverage.png": "228db17ea6161060082b24364e1513348513ed87b8aa67092641a699da40463f",
+    "figures/kgiant_distance_v1/03_distance_metrics.png": "8e133354d6844f180371da011329517d5eae5b8669f02408cd3d9d1f70ba7137",
+    "manifests/kgiant_distance_inventory_v1.json": "53d0ff75ce5865eed4d6359fcc9d4808d41426436f0dfef0c8984d80759800e0",
+    "manifests/kgiant_distance_comparison_v1.json": "7fe438278b06d3e5ce6c9cbdf1a1ba84bd96b4924e048641e0eb067d603cdda1",
+    "figures/kgiant_distance_v1/06_pal12_cmd.png": "184ad165657bd11da812151bcd1c7f3a0976110fbd7a1354a3fd4781e4b33303",
+    "manifests/kgiant_pal12_feasibility_v1.json": "2d43100e28b731e5e5e47a8352982858e45c9c083e99fee6624638b103053e85",
+    "docs/kgiant_distance_result_v1.md": "3814bd94a057c0ac839c5960bf8aadafb5bf53ce5add76ec19123be3d3ba1f58",
+    "manifests/kgiant_selected190_evidence_v1.json": "58b5de43c7a3263e0eea4f6d2d7d1a418710ced8d58eba0e26b579ba74ce2481"
+  },
+  "pal12_checks": {
+    "status": "passed",
+    "checks": [
+      "394 unique exact member matches",
+      "372 high-probability core members",
+      "zero current qualified K references",
+      "copied figure SHA256 matches remote output"
+    ]
+  },
+  "evidence_csv_packaging": {
+    "remote_original_sha256": "5a6a571905ebde328ea29285408a234cce6bb10fc42d7f51c1e6d7588dfbafc9",
+    "change": "Remote original CSV packaged as small selected-result JSON for existing sync policy; IDs are strings, missing numeric values null, valid data unchanged."
+  }
+}

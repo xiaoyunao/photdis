@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-02 — K-giant scientific goal delivered
+
+- Report: docs/kgiant_distance_result_v1.md; evidence190 JSON, inventory/comparison
+  JSONs, five main figures and Pal12 CMD; all suggestions mapped to deliverables.
+- Whole-field all-K teacher evaluation77 SPDist/258 SPECDIS; selected39/189.
+  Colors improve predictive scores, W1 gain small; no stable NMAD gain established.
+  Raw68% coverage87.2%/85.7% for selected B is not calibrated true-distance coverage.
+- Pal12 allocated60678349 COMPLETED0:0 in5m51s:394 exact DR11 members,372 P>.9,
+  300 clean grz; all core EBV>.03, no qualified MWS K giant. Independent scope gap
+  measured; no model scoring, reference tuning, additional fields or relaxed cuts.
+- Validation: py_compile and shell syntax pass; six focused pytest tests pass;
+  eight real-output checks and five copied-artifact checks pass. Figures inspected.
+- Sync preflight rejects CSV by policy; packaged the small190-row evidence as
+  JSON with integer IDs preserved as strings, missing values as null. Amended
+  only the unpushed delivery commit; no source-data or sync-policy changes.
+- Source/figure hashes and job provenance in kgiant_distance_execution_v1.json.
+  Large mixture products remain NERSC; public small evidence table intentionally tracked.
+- Updated README/AGENTS/PLAN to completed scope; milestone delivery uses
+  scripts/sync.py push with identical local/origin/NERSC hashes required. Future
+  work needs independent bright more-metal-rich K references, not unbounded
+  model optimization. No remaining scientific computation in this round.
+
 ## 2026-11-02 — K-giant results and targeted reference feasibility
 
 - Allocated inventory60678131, fit60678224, summary60678244 completed0:0.

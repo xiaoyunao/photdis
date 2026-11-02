@@ -1,6 +1,6 @@
 # PLAN
 
-## Active objective: actual K-giant teacher audit and conditional distances
+## Completed objective: actual K-giant teacher audit and conditional distances
 
 Source: docs/pro_review_1689ec2.md; detailed frozen scope and acceptance:
 docs/kgiant_distance_protocol_v1.md. Preserve all previous components.
@@ -8,12 +8,28 @@ docs/kgiant_distance_protocol_v1.md. Preserve all previous components.
 - [x] Read complete review; create detailed Goal; update AGENTS checkpoint,
   cold distance ranges and warm catastrophic-tail table.
 - [x] Register finite teacher/independent-reference/conditional-mixture experiment.
-- [ ] Exact selected190 evidence, common teachers, errors/flags/coverage/parameter trends.
-- [ ] Independent member/phase/luminosity support census; scoped external decision.
-- [ ] All-qualified K teacher training; whole-field A/B/no-color distributions,
+- [x] Exact selected190 evidence, common teachers, errors/flags/coverage/parameter trends.
+- [x] Independent member/phase/luminosity support census; scoped external decision.
+- [x] All-qualified K teacher training; whole-field A/B/no-color distributions,
   paired selected evaluation, shared-g errors, SPECDIS width sensitivity.
-- [ ] Validate formulas/identity isolation/real summaries; inspect figures.
-- [ ] Final report, decision, provenance, commits and three-endpoint sync.
+- [x] Validate formulas/identity isolation/real summaries; inspect five main figures.
+- [x] Registered Pal12 feasibility completed60678349:372 high-probability members,
+  300 clean grz; zero current low-dust K references. No model scoring or relaxed cuts.
+- [x] Final report, decision and provenance: docs/kgiant_distance_result_v1.md.
+- [x] Final milestone delivered through scripts/sync.py push; verify identical
+  local/origin/NERSC commit hashes at the end of delivery.
+
+Current decision: retain teacher-scale conditional mixtures as research prototypes.
+Selected common teachers39, median SP−SPEC modulus−.274mag; actual189 SPECDIS
+median fractional error29.2%. Selected grz/grzW1 NMAD.511/.479mag (SPECDIS);
+W1 score gain small, scatter improvement not robust across fields. No independent
+absolute calibration, no field-giant distance product; raw coverage is not truth.
+
+Next bounded evidence requirement: DECam K giants4200–5000K near FeH−1..−.5,
+Mg<.5, with independent distance/phase evidence and usable bright photometry.
+A different extinction regime or membership/phase proxy must be separately
+registered, not quietly added to force Pal12 through this experiment. Keep the
+multi-population project scope and all historical models frozen.
 
 ## Completed objective: controlled negative coverage, distances and matched-source CMDs
 
@@ -40,10 +56,9 @@ Selected190:170 valid FeH (median−.85),39 SPDist/189 SPECDIS teacher matches;
 34/39 and179/189 teacher Mg lie above the old lower-RGB luminosity range
 (Mg<.5). Independent phase is unknown. No automatic lower-RGB extrapolation.
 
-Next bounded task: on the selected population, compare the same-star teacher
-intersection and secure independent phase/luminosity references for brighter,
-more metal-rich K giants before a new distance calibration. Do not repeat the
-completed FeH mechanism or enlarge sky coverage without a specific evidence gap.
+The above classifier-era next task has now been completed as the K-giant
+teacher experiment at the top of this plan; consult its measured reference gap.
+Do not repeat the completed FeH mechanism or widen fields without an evidence gap.
 
 ## Completed objective: observable DECam giant candidate application
 
