@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-02 — matched-source CMD supplement
+
+- User requested CMDs for the sources used in the distance plots. Added
+  scripts/distance_comparison_cmd.py and allocated batch `cmd` entry point.
+- Exact source-ID cache joins, unchanged quality/support masks; compare (g-r)0
+  against Mg derived separately from reference and photometric distances.
+- No new cuts or fits. Three figure groups retain every prior distance panel.
+- Syntax, identity reorder, kpc-to-Mg normalization and synthetic render smoke pass.
+- NERSC authentication renewed. Next: allocated real run, count/hash checks,
+  visual inspection and synchronized report delivery.
+
 ## 2026-11-02 — final remote sync awaits authentication
 
 - Final results committed as6bcf02f and pushed to GitHub. NERSC push failed
