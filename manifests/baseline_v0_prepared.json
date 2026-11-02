@@ -1,0 +1,152 @@
+{
+  "fields": [
+    {
+      "index": 0,
+      "name": "dev_cal_ra205_215_dec_m010_p000",
+      "config": "configs/field_dev_cal_ra205_215.json",
+      "input": "data/field_dev_cal_ra205_215_v1/field_diagnostics.fits",
+      "input_size": 161017920,
+      "parent_records": 275998,
+      "unique_parent": 275998
+    },
+    {
+      "index": 1,
+      "name": "native_dev_ra060_070_dec_m035_m025",
+      "config": "configs/field_native_ra060_070.json",
+      "input": "data/field_native_ra060_070_v1/field_diagnostics.fits",
+      "input_size": 389802240,
+      "parent_records": 695479,
+      "unique_parent": 695479
+    },
+    {
+      "index": 2,
+      "name": "native_final_ra330_340_dec_m035_m025",
+      "config": "configs/field_native_ra330_340.json",
+      "input": "data/field_native_ra330_340_v1/field_diagnostics.fits",
+      "input_size": 585731520,
+      "parent_records": 947518,
+      "unique_parent": 947518
+    },
+    {
+      "index": 3,
+      "name": "native_final_ra020_030_dec_m025_m015",
+      "config": "configs/field_native_ra020_030.json",
+      "input": "data/field_native_ra020_030_v1/field_diagnostics.fits",
+      "input_size": 711336960,
+      "parent_records": 1285115,
+      "unique_parent": 1285115
+    },
+    {
+      "index": 4,
+      "name": "native_north_final_ra130_140_dec_p025_p035",
+      "config": "configs/field_native_ra130_140.json",
+      "input": "data/field_native_ra130_140_v1/field_diagnostics.fits",
+      "input_size": 254730240,
+      "parent_records": 423308,
+      "unique_parent": 423308
+    },
+    {
+      "index": 5,
+      "name": "cold_v4_final_ra150_160_dec_p020_p030",
+      "config": "configs/field_cold_v4_ra150_160.json",
+      "input": "data/field_cold_v4_ra150_160_v1/field_diagnostics.fits",
+      "input_size": 350144640,
+      "parent_records": 605103,
+      "unique_parent": 605103
+    },
+    {
+      "index": 6,
+      "name": "cold_v4_final_ra220_230_dec_p020_p030",
+      "config": "configs/field_cold_v4_ra220_230.json",
+      "input": "data/field_cold_v4_ra220_230_v1/field_diagnostics.fits",
+      "input_size": 169807680,
+      "parent_records": 290836,
+      "unique_parent": 290836
+    },
+    {
+      "index": 7,
+      "name": "targeted_ra180_190_dec_p000_p010",
+      "config": "configs/field_targeted_ra180_190_dec_p000_p010.json",
+      "input": "data/field_targeted_ra180_190_dec_p000_p010_v1/field_diagnostics.fits",
+      "input_size": 602138880,
+      "parent_records": 1037316,
+      "unique_parent": 1037316
+    },
+    {
+      "index": 8,
+      "name": "targeted_ra180_190_dec_m010_p000",
+      "config": "configs/field_targeted_ra180_190_dec_m010_p000.json",
+      "input": "data/field_targeted_ra180_190_dec_m010_p000_v1/field_diagnostics.fits",
+      "input_size": 309392640,
+      "parent_records": 527873,
+      "unique_parent": 527873
+    },
+    {
+      "index": 9,
+      "name": "targeted_ra190_200_dec_p020_p030",
+      "config": "configs/field_targeted_ra190_200_dec_p020_p030.json",
+      "input": "data/field_targeted_ra190_200_dec_p020_p030_v1/field_diagnostics.fits",
+      "input_size": 391426560,
+      "parent_records": 676024,
+      "unique_parent": 676024
+    },
+    {
+      "index": 10,
+      "name": "targeted_ra020_030_dec_p000_p010",
+      "config": "configs/field_targeted_ra020_030_dec_p000_p010.json",
+      "input": "data/field_targeted_ra020_030_dec_p000_p010_v1/field_diagnostics.fits",
+      "input_size": 253310400,
+      "parent_records": 455715,
+      "unique_parent": 455715
+    },
+    {
+      "index": 11,
+      "name": "giant_ranked_ra200_210_dec_p000_p010",
+      "config": "configs/field_giant_ranked_ra200_210_dec_p000_p010.json",
+      "input": "data/field_giant_ranked_ra200_210_dec_p000_p010_v1/field_diagnostics.fits",
+      "input_size": 558492480,
+      "parent_records": 961065,
+      "unique_parent": 961065
+    },
+    {
+      "index": 12,
+      "name": "giant_ranked_ra190_200_dec_p000_p010",
+      "config": "configs/field_giant_ranked_ra190_200_dec_p000_p010.json",
+      "input": "data/field_giant_ranked_ra190_200_dec_p000_p010_v1/field_diagnostics.fits",
+      "input_size": 415543680,
+      "parent_records": 717984,
+      "unique_parent": 717984
+    },
+    {
+      "index": 13,
+      "name": "giant_ranked_ra210_220_dec_p040_p050",
+      "config": "configs/field_giant_ranked_ra210_220_dec_p040_p050.json",
+      "input": "data/field_giant_ranked_ra210_220_dec_p040_p050_v1/field_diagnostics.fits",
+      "input_size": 293670720,
+      "parent_records": 491184,
+      "unique_parent": 491184
+    }
+  ],
+  "n_reference": 1689160,
+  "n_unique_parent": 9390518,
+  "n_parent_records": 9390518,
+  "label_counts": {
+    "0": 1442185,
+    "1": 89005,
+    "2": 157970
+  },
+  "split_counts": {
+    "0": 1145960,
+    "1": 206189,
+    "2": 224941,
+    "3": 112070
+  },
+  "train_core_counts": {
+    "A": 163600,
+    "B": 149743,
+    "C": 136078
+  },
+  "identity_conflicts": 0,
+  "config_sha256": "4f2cd973dcdeee9eff42e1a64ed514a4f20b4ad0de243b25e909d72736f1baa2",
+  "code_sha256": "6cd3fc22a21616b722d8f6ab5f184af4ee8d42a9fb7c6f1c7ebc294b5f62ea79"
+}
