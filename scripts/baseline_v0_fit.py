@@ -62,7 +62,7 @@ def main():
         # Class scores conditional on known reference labels: empirical, not population probabilities.
         cl=p['class_weights'];den=cl[:,:3].sum(axis=1);known=test&(t['class_label'][rows]>=0)&(den>0)
         cls=np.argmax(cl[:,:3],axis=1);matrix=np.zeros((3,3),int);np.add.at(matrix,(t['class_label'][rows][known],cls[known]),1)
-        entry=dict(n_train=int(fit.sum()),train_identity_sha256=__import__('hashlib').sha256(ids.tobytes()).hexdigest(),train_label_counts={str(k):int((fit&(t['label_source']==k)).sum()) for k in (1,2)},n_evaluation=len(rows),n_test=int(test.sum()),n_cal_supported=int(cal.sum()),cqr_expand68_95=corrections,metrics=scores,calibrated_test_chosen=metrics(p['mu_cal'][test],truth[test]),class_confusion=matrix.tolist(),class_known_fraction=float(np.median(den[test])),class_test_n=int(known.sum()),model_sha256=sha(model_path),elapsed_seconds=time.time()-start)
+        entry=dict(n_train=int(fit.sum()),n_train_without_W1=int((fit&~t['B']).sum()),train_identity_sha256=__import__('hashlib').sha256(ids.tobytes()).hexdigest(),train_label_counts={str(k):int((fit&(t['label_source']==k)).sum()) for k in (1,2)},n_evaluation=len(rows),n_test=int(test.sum()),n_cal_supported=int(cal.sum()),cqr_expand68_95=corrections,metrics=scores,calibrated_test_chosen=metrics(p['mu_cal'][test],truth[test]),class_confusion=matrix.tolist(),class_known_fraction=float(np.median(den[test])),class_test_n=int(known.sum()),model_sha256=sha(model_path),elapsed_seconds=time.time()-start)
         result['models'][name]=entry;write_json(OUT/'fit_progress.json',result);print(name,'train',fit.sum(),'eval',len(rows),'seconds',time.time()-start,flush=True)
         del model
     # Honest paired tests use equal training IDs and exact same test positions.

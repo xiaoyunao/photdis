@@ -4,6 +4,22 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
+Active main task: **unified multi-population baseline v0**.
+[Full review](docs/pro_review_60f65d5.md) · [protocol](docs/baseline_v0_protocol.md).
+Application uses all clean optical objects; Gaia/spectroscopy are reference
+labels, WISE is optional. Internal uncalibrated field predictions are allowed.
+
+| Stage | v0 scope | State |
+|---|---|---|
+| Parent and references | Existing14 fields, DECam main; Gaia-first/SPECDIS supplementary | Allocated preparation submitted |
+| Training | Broad QRF A/B/C plus same-training controls | Implemented; unit checks passed |
+| Development validation | Whole fields, complete references, raw/calibrated distributions | Implemented; awaiting data |
+| Internal application | Every unique optical parent, all available bands and risk flags | Implemented; awaiting frozen models |
+| Unified results | Coverage, distance density, CMD, ambiguity and population scorecard | In progress |
+
+Cluster and64-warm-member follow-ups are retained evidence, not prerequisites
+for this baseline. Historical models/results below remain frozen.
+
 Latest completed follow-up: [Pal14 parameter sources and fixed giant coverage](docs/giant_parameter_audit_result_v1.md).
 120 reliable spectra are120 unique members. The64 additional quality-qualified
 DECam warm members do not overlap the current K-target color ranges; the four

@@ -19,21 +19,24 @@ def main():
     fit=json.load(open(OUT/'fit_result.json'));north=field in CFG['north_fields']
     models={} if north else {k:joblib.load(OUT/(k+'.joblib')) for k in ('A','B','C')}
     dtype=[(k,t[k].dtype) for k in ['identity','ls_id','source_id','ra','dec','ebv','r','g0','r0','z0','w10','w20','sigma_g','sigma_r','sigma_z','sigma_w1','sigma_w2','B','C','release','optical_error','nonstellar_risk']]
-    dtype += [('field','i2'),('route','i1'),('supported','?'),('ambiguous','?'),('internal_uncalibrated','?'),('unvalidated_error_domain','?'),('mu','f4',(5,)),('distance_kpc','f4',(5,)),('mu_cal','f4',(5,))]
+    dtype += [('field','i2'),('route','i1'),('supported','?'),('ambiguous','?'),('internal_uncalibrated','?'),('outside_train_precision','?'),('mu','f4',(5,)),('distance_kpc','f4',(5,)),('mu_cal','f4',(5,))]
     for k in ('A','B','C'):dtype += [(k+'_mu','f4',(5,)),(k+'_modes_mu','f4',(4,)),(k+'_class_weights','f4',(4,)),(k+'_supported','?'),(k+'_ambiguous','?')]
     totals=dict(n_unique=n,n_input_records=len(owner),n_no_native_model=n if north else 0,n_recommended_supported=0,n_ambiguous=0,routes={str(k):0 for k in (-1,0,1,2)})
     # App histograms are actual unique optical objects, not spectroscopy selection.
     hist={}
     for key,value,edges in [('r',t['r'],[12,16,18,20,22,25]),('gr',t['g0']-t['r0'],[-5,.4,.8,1.2,1.6,5]),('error',t['optical_error'],[0,.03,.06,.12,.25])]:
         hist[key]=dict(edges=edges,counts={k:np.histogram(value[m],edges)[0].tolist() for k,m in [('A',np.ones(n,bool)),('B',t['B']),('C',t['C'])]})
+    totals['error_cumulative']={str(cut):int((t['optical_error']<cut).sum()) for cut in [.03,.06,.12,.25]}
     totals['availability']={'A':n,'B':int(t['B'].sum()),'C':int(t['C'].sum())};totals['histograms']=hist
+    if n == 0:
+        fitsio.write(str(path),np.zeros(0,dtype=dtype),extname='BASELINE_V0')
     for j in range(0,n,CFG['chunk_size']):
         ix=slice(j,min(j+CFG['chunk_size'],n));size=len(t['g0'][ix]);out=np.zeros(size,dtype=dtype)
         for k in out.dtype.names:
             if out[k].dtype.kind=='f':out[k]=np.nan
         for k in t:
             if k in out.dtype.names:out[k]=t[k][ix]
-        out['field']=field;out['route']=-1;out['internal_uncalibrated']=True;out['unvalidated_error_domain']=out['optical_error']>=.03
+        out['field']=field;out['route']=-1;out['internal_uncalibrated']=True;out['outside_train_precision']=out['optical_error']>=.03
         mags=np.column_stack([t[k][ix] for k in BANDS]);errors=np.column_stack([t[k][ix] for k in ERR])
         for code,k in enumerate(('A','B','C')):
             if north:continue

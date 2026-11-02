@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — unified reporting and application accounting
+
+- Added complete-test reference distances, residuals, CMD, same-star band gain,
+  empirical class confusion, weak-parallax and distribution figures.
+- Application retains every unique optical row, including empty fields and
+  north/no-model status; optical precision coverage uses full parent counts.
+- Python parse, shell syntax and three mathematical tests pass. Preparation
+  60681227 remains queued; next allocated integration and dependent batch jobs.
+
 ## 2026-11-02 — v0 fixed distribution baseline implemented
 
 - Histogram-compressed QRF preserves exact leaf weights at0.1mag resolution.
