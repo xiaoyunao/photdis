@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-02 — first external predictions obtained
+
+- Inventory60678961 COMPLETED0:0 in8m20s; prediction60678998 in28s;
+  validation60679064 in24s, ten actual-artifact checks pass.
+- Terzan7 1272/1282/1515 uniquely matched, clean grz/W1;18 fixed predictions.
+  Pal12 type linkage missing;1665 cool and r/z quality failed;1708 two matches.
+- Corrected unknown (ambiguous identity) quality labels to unassigned, not failed;
+  final presentation adds full501-point PDF/CDF grids, no scientific retuning.
+  Preserve original remote products; revised outputs go into a separate directory.
+- Found published Terzan7 μ17.05 and d25.3 differ by.0344mag on conversion;
+  retain preregistered μ and disclose alternate reference shift in result report.
+  Next: revised export/validation, figure inspection, final three-endpoint delivery.
+
 ## 2026-11-02 — external implementation and interpretation
 
 - Recomputed common39 Teff4873–4999K,34≥4950K; SPEC error40.1% versus28.0%.

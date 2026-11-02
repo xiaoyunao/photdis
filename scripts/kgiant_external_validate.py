@@ -5,12 +5,13 @@ import sys,json,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'src'),str(ROOT/'scripts'),str(ROOT/'.deps')]
 import numpy as np
+from scipy.integrate import trapezoid
 from photdis.stage1 import require_compute,write_json
 from photdis.giant_kernel import mixture_quantiles
 from kgiant_distance_inventory import sha
 
 def main():
-    require_compute();out=Path('data/kgiant_external_v1')
+    require_compute();out=Path(sys.argv[1]) if len(sys.argv)>1 else Path('data/kgiant_external_v1')
     inv=json.load(open(out/'inventory.json'));p=json.load(open(out/'predictions.json'));tr=json.load(open(out/'training.json'))
     checks=[]
     def check(name,ok):
@@ -39,6 +40,9 @@ def main():
         assert [str(i) for i in m['train_source_id']]==tr[r['teacher']]['source_ids']
         assert np.isclose(r['delta_mu_median'],r['quantiles_mu'][2]-r['reference_mu'])
         assert np.allclose(np.array(r['distance_kpc_quantiles']),10**((np.array(r['quantiles_mu'])-10)/5))
+        assert r['distribution_cdf'][0]<1e-5 and r['distribution_cdf'][-1]>1-1e-5
+        assert np.all(np.diff(r['distribution_cdf'])>=-1e-12)
+        assert abs(trapezoid(r['distribution_pdf'],r['distribution_grid_mu'])-1)<.001
     checks.append('all_scored_distributions_normalized_quantiles_ids_and_distance_units_reproduced' if p['rows'] else 'zero_predictions_consistent_with_independent_failures')
     for path,digest in p['source_sha256'].items():assert sha(Path(path))==digest,path
     checks.append('prediction_source_hashes_match')

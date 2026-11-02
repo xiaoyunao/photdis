@@ -45,7 +45,7 @@ def main():
     data=[]
     for r,a in zip(inv,pred['audit']):
         assert r['name']==a['name']
-        data.append([1 if r['cluster']=='Pal12' else int(r['identity_status']=='unique_position_match'),int(r.get('grz_quality',False)),int(r.get('w1_quality',False)),int(r.get('old_dust_scope',False)),
+        data.append([1 if r['cluster']=='Pal12' else int(r['identity_status']=='unique_position_match'),int(r['grz_quality']) if 'grz_quality' in r else -1,int(r['w1_quality']) if 'w1_quality' in r else -1,int(r['old_dust_scope']) if 'old_dust_scope' in r else -1,
             -1 if r['cluster']=='Pal12' else int(r.get('nominal_K',False)),int(a['eligible'])])
     fig,ax=plt.subplots(figsize=(11,4),layout='constrained')
     from matplotlib.colors import ListedColormap,BoundaryNorm
@@ -63,6 +63,17 @@ def main():
             labels.append(r['name']+' '+r['teacher']+' '+r['model'])
         ax.set_yticks(np.arange(len(labels)),labels,fontsize=8);ax.axvline(0,color='k',ls='--');ax.set(xlabel='mu_phot - mu_reference [mag]',title='Individual empirical teacher distributions | no population accuracy claim')
         fig.savefig(out/'03_external_intervals.png',dpi=160);plt.close(fig)
+        fig,axes=plt.subplots(2,3,figsize=(14,7),layout='constrained',sharex=True)
+        for i,teacher in enumerate(('spdist','specdis')):
+            for j,name in enumerate(('1272','1282','1515')):
+                ax=axes[i,j]
+                for model,color in [('prior','.6'),('A_grz','#0072b2'),('B_grzW1','#d55e00')]:
+                    r=next(r for r in pred['rows'] if r['name']==name and r['teacher']==teacher and r['model']==model)
+                    ax.plot(np.array(r['distribution_grid_mu'])-r['reference_mu'],r['distribution_pdf'],color=color,label=model)
+                ax.axvline(0,color='k',ls='--');ax.set(xlim=(-4,4),xlabel='mu - 17.05 [mag]',ylabel='Density',title=teacher+' | '+name)
+                ax.legend(fontsize=8)
+        fig.suptitle('External teacher-scale mixtures | SPDist cool-temperature extrapolation | no calibration claim')
+        fig.savefig(out/'04_external_distributions.png',dpi=160);plt.close(fig)
     print('Evidence, identity/order checks and figures complete')
 
 if __name__=='__main__':main()

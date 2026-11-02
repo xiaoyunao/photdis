@@ -1,1 +1,56 @@
-{"metadata":[{"name":"id","description":"Identifier","datatype":"CHAR","arraysize":"*","ucd":"meta.id"},{"name":"ra","description":"Right ascension","datatype":"DOUBLE","unit":"deg","ucd":"pos.eq.ra;meta.main","utype":"mango:EpochPosition.longitude[CS.spaceSys=ICRS CT.epoch=J2000]"},{"name":"dec","description":"Declination","datatype":"DOUBLE","unit":"deg","ucd":"pos.eq.dec;meta.main","utype":"mango:EpochPosition.latitude[CS.spaceSys=ICRS CT.epoch=J2000]"}],"data":[["Cl* Palomar   12    SVB    1118",null,null],["Cl* Palomar   12    SVB    1305",null,null],["Cl* Palomar   12    SVB    1128",null,null]]}
+{
+  "metadata": [
+    {
+      "name": "id",
+      "description": "Identifier",
+      "datatype": "CHAR",
+      "arraysize": "*",
+      "ucd": "meta.id"
+    },
+    {
+      "name": "ra",
+      "description": "Right ascension",
+      "datatype": "DOUBLE",
+      "unit": "deg",
+      "ucd": "pos.eq.ra;meta.main",
+      "utype": "mango:EpochPosition.longitude[CS.spaceSys=ICRS CT.epoch=J2000]"
+    },
+    {
+      "name": "dec",
+      "description": "Declination",
+      "datatype": "DOUBLE",
+      "unit": "deg",
+      "ucd": "pos.eq.dec;meta.main",
+      "utype": "mango:EpochPosition.latitude[CS.spaceSys=ICRS CT.epoch=J2000]"
+    }
+  ],
+  "data": [
+    [
+      "Cl* Palomar   12    SVB    1118",
+      null,
+      null
+    ],
+    [
+      "Cl* Palomar   12    SVB    1305",
+      null,
+      null
+    ],
+    [
+      "Cl* Palomar   12    SVB    1128",
+      null,
+      null
+    ]
+  ],
+  "retrieval": {
+    "endpoint": "https://simbad.cfa.harvard.edu/simbad/sim-tap/sync",
+    "date": "2026-11-02",
+    "query": "SELECT id,ra,dec FROM basic JOIN ident ON oid=oidref WHERE id LIKE '%Palomar%12%' AND (id LIKE '%1305%' OR id LIKE '%1128%' OR id LIKE '%1118%')",
+    "target_cone": {
+      "ra_deg": 326.62588,
+      "dec_deg": -21.267698,
+      "radius_deg": 0.001,
+      "rows": 0
+    },
+    "interpretation": "historical labels have no supplied coordinate; this does not prove absent spectra"
+  }
+}
