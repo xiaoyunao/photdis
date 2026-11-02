@@ -4,7 +4,8 @@
 
 Full review: docs/pro_review_60f65d5.md; execution: docs/baseline_v0_protocol.md.
 - [x] Recover endpoints, read complete review, detailed Goal and protocol.
-- [ ] Unified optical parent, broad labels and identity-safe spatial split.
+- [x] Unified optical parent, broad labels and identity-safe spatial split.
+  9,390,518 unique parents; training A/B/C163600/149743/136078.
 - [ ] Fixed QRF A/B/C plus same-training controls; cal-only routing/intervals.
 - [ ] Whole-test validation and full existing-field internal predictions.
 - [ ] Six main figure groups, results, checks and three-endpoint delivery.

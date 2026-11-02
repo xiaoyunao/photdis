@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-02 — complete optical parent and broad references
+
+- Preparation60681406 completed:9,390,518 records/unique objects,13 DECam
+  fields8,899,334 plus north491,184. References1,689,160; Gaia labels89,005,
+  supplementary SPECDIS157,970; zero conflicting DESI/Gaia identities.
+- Training core A/B/C163,600/149,743/136,078; A has13,857 without eligibleW1.
+- Fit60681423, application60681483 and final report60681485 are dependent jobs.
+- Added catalog schema and retained WISE clean/SNR columns. Actual reference
+  split uniqueness asserted; full outputs and performance checks still pending.
+
 ## 2026-11-02 — allocated broad-data integration started
 
 - Debug60681406 replaces pending60681227; all14 parent projections created.

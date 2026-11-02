@@ -18,7 +18,7 @@ def main():
     if path.exists():raise FileExistsError(path)
     fit=json.load(open(OUT/'fit_result.json'));north=field in CFG['north_fields']
     models={} if north else {k:joblib.load(OUT/(k+'.joblib')) for k in ('A','B','C')}
-    dtype=[(k,t[k].dtype) for k in ['identity','ls_id','source_id','ra','dec','ebv','r','g0','r0','z0','w10','w20','sigma_g','sigma_r','sigma_z','sigma_w1','sigma_w2','B','C','release','optical_error','nonstellar_risk']]
+    dtype=[(k,t[k].dtype) for k in ['identity','ls_id','source_id','ra','dec','ebv','r','g0','r0','z0','w10','w20','sigma_g','sigma_r','sigma_z','sigma_w1','sigma_w2','B','C','w1_clean','w2_clean','snr_w1','snr_w2','release','optical_error','nonstellar_risk']]
     dtype += [('field','i2'),('route','i1'),('supported','?'),('ambiguous','?'),('internal_uncalibrated','?'),('outside_train_precision','?'),('mu','f4',(5,)),('distance_kpc','f4',(5,)),('mu_cal','f4',(5,))]
     for k in ('A','B','C'):dtype += [(k+'_mu','f4',(5,)),(k+'_modes_mu','f4',(4,)),(k+'_class_weights','f4',(4,)),(k+'_supported','?'),(k+'_ambiguous','?')]
     totals=dict(n_unique=n,n_input_records=len(owner),n_no_native_model=n if north else 0,n_recommended_supported=0,n_ambiguous=0,routes={str(k):0 for k in (-1,0,1,2)})
