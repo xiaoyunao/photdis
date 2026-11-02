@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-02 — broad-negative experiment and distance figures completed
+
+- Delivered docs/giant_wide_result_v1.md, six PNGs, selected result projection,
+  aggregate/validation/execution manifests; README and PLAN reflect completed scope.
+- B-wide same-model 1% calibration:190/289 K giants,1010/98536 dwarfs;
+  B-K28/289,942/98536. Bright-end gains do not establish catalog purity.
+- Selected K population has FeH median−.85; teacher Mg<.5 for34/39 SPDist
+  and179/189 SPECDIS. Independent phase remains the next calibration gap.
+- Final allocated finish60669734 COMPLETED0:0 in35s: luminosity census,
+  cached distance render and11 real checks over180306 unique held-out identities.
+  13 focused tests passed; six final figures inspected. No distance refit.
+- Cold Gaia comparisons reproduce5776/7097/2941 final anchors; warm supported
+  SPDist/SPECDIS comparisons576/527. Teacher agreement is not geometric truth.
+- Verified downloaded source/summary/render SHA256. Full5.3MB result remains
+  NERSC; tracked2.2MB projection explicitly lists strata and raw provenance.
+- Commands: sbatch scripts/run_giant_wide.sh finish; local provenance/link checks;
+  git milestone commit and scripts/sync.py push. Job history includes superseded
+  pending jobs and the corrected summary variable-shadowing failure.
+- Decision: close finite classifier family as a bright DECam enrichment recipe.
+  Next: same-star teacher/phase/luminosity evidence for actual selected K stars.
+
 ## 2026-11-02 — controlled negative coverage registered
 
 - Read latest full Pro reviews through read_thread; source saved in docs/pro_review_20261102.md.

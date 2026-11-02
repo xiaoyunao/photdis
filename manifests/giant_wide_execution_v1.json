@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-02",
+  "code_commit": "7d28f2b86f8c17f6c9621586fd564795271979de",
+  "remote_checkout": "/pscratch/sd/y/yunao/photdis_pipeline",
+  "jobs": [
+    {
+      "id": 60668827,
+      "task": "fit",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 203
+    },
+    {
+      "id": 60668960,
+      "task": "distance predictions and initial plots",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 40
+    },
+    {
+      "id": 60668962,
+      "task": "first summary",
+      "state": "FAILED",
+      "reason": "VAC pairs variable shadowed paired-bootstrap result during serialization; corrected without refitting"
+    },
+    {
+      "id": 60669081,
+      "task": "dependent validation",
+      "state": "CANCELLED",
+      "reason": "superseded"
+    },
+    {
+      "id": 60669349,
+      "task": "corrected summary",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 19
+    },
+    {
+      "id": 60669425,
+      "task": "render",
+      "state": "CANCELLED",
+      "reason": "pending job replaced by combined finish"
+    },
+    {
+      "id": 60669426,
+      "task": "validation",
+      "state": "CANCELLED",
+      "reason": "pending job replaced by combined finish"
+    },
+    {
+      "id": 60669734,
+      "task": "final luminosity census, cached plot render, real validation",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 35,
+      "max_rss_kib": 536320
+    }
+  ],
+  "validation": {
+    "focused_unit_tests_passed": 13,
+    "real_data_checks_passed": 11,
+    "unique_test_identities": 180306,
+    "final_figures_visually_inspected": 6
+  },
+  "raw_input_sha256": {
+    "data/giant_wide_v1/results.json": "75e10e0b2617558baad61ca6b7270c356b26052b2e21aef9dd108dbc94e612a3",
+    "data/giant_wide_v1/summary.json": "44c0dad8e9c6d2ed3efc5f5a3fe9a4f77af1fd61c42c68e3d13a7e8be6524301",
+    "data/distance_comparison_v1/summary.json": "e08e6be3db24927d136106fd2ab333e0978191f3f0c3c3411f35af44a4681494"
+  },
+  "tracked_projection_sha256": "d07841b08dad6bc8d831fcb9f294f3fc99dfa63458742ee8f9ec92f9bbf0e594",
+  "distance_render_manifest_sha256": "d4bef627128261f60ed3664fdf7c51d8788b63d093de1d35e103642928b605ad",
+  "large_products": "Rows, fitted models, full raw result and cached predictions remain under remote data/giant_wide_v1 and data/distance_comparison_v1; tracked projection identifies retained strata."
+}

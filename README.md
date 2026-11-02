@@ -4,15 +4,24 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed result: the [DECam giant candidate application experiment](docs/giant_candidate_result_v1.md)
-keeps the prior K-star models fixed and evaluates wider spectral references.
-W1 helps within the K population, but warm-dwarf leakage makes the current
-selector unsuitable for a general high-purity catalog. Train-only low-FPR
-thresholds retain few K giants. Colors retain predictive FeH information after
-conditioning on observed spectral temperature/gravity, within a limited model
-family. The registered [negative-coverage comparison](docs/giant_wide_protocol_v1.md)
-compares B-K, A-wide and B-wide with matched regularization and frozen-model
-threshold calibration, then identifies phase/luminosity reference gaps.
+Latest completed result: the [controlled broad-dwarf comparison and distance plots](docs/giant_wide_result_v1.md)
+expands the negative class while matching preprocessing, regularization and
+whole-field train/calibration/test identities. At the calibration-side 1% FPR
+working point, grzW1 B-wide retains 190/289 K giants versus 28/289 for B-K;
+held-out dwarf FPR is 1010/98536 (1.025%). Gains concentrate at r=16–18.
+This is a scoped DECam enrichment/ranking recipe, not a high-purity catalog;
+there is no calibrated global class probability or universal deployment threshold.
+The [registered protocol](docs/giant_wide_protocol_v1.md) and fixed model family
+are complete. Next: independent phase and luminosity evidence for the selected,
+mostly more metal-rich and brighter K giants, using matched distance teachers.
+The old poor-metal lower-RGB relation does not cover this population.
+
+Requested distance density plots reproduce frozen held-out predictions:
+[cold phot-d / Gaia-d](figures/distance_comparison_v1/01_cold_phot_vs_gaia.png),
+[warm phot-d / SPDist and SPECDIS](figures/distance_comparison_v1/02_warm_phot_vs_spectral.png),
+and [all warm reserved objects](figures/distance_comparison_v1/03_warm_all_reserved.png).
+Spectral comparisons test teacher/catalog agreement, not independent geometric
+accuracy; the warm 5000–7000 K sample differs from the selected K population.
 
 The [preceding information experiment](docs/giant_information_decision_v1.md)
 remains frozen. DR11 includes north RELEASE=11011 products; its native-system

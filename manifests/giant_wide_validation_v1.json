@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    "unique held-out source groups across folds",
+    "train/cal/test role isolation",
+    "matched B scaling",
+    "constant total/class weights",
+    "serialized model unchanged across calibration/test",
+    "threshold calibration budgets",
+    "real-score selection counts",
+    "aggregate counts equal field sums",
+    "distance modulus to kpc normalization",
+    "frozen warm reserved summary reproduced",
+    "cold figure row counts and residuals"
+  ],
+  "n_checks": 11,
+  "n_test_identities": 180306,
+  "input_sha256": {
+    "data/giant_wide_v1/results.json": "75e10e0b2617558baad61ca6b7270c356b26052b2e21aef9dd108dbc94e612a3",
+    "data/giant_wide_v1/summary.json": "44c0dad8e9c6d2ed3efc5f5a3fe9a4f77af1fd61c42c68e3d13a7e8be6524301",
+    "data/distance_comparison_v1/summary.json": "e08e6be3db24927d136106fd2ab333e0978191f3f0c3c3411f35af44a4681494"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "cached_only": true,
+  "script_sha256": "8e754fbf5bcdf0b38bb8809d060ef78195bda6d291652956d80c3a80a400c747",
+  "unchanged_scientific_summary_sha256": "e08e6be3db24927d136106fd2ab333e0978191f3f0c3c3411f35af44a4681494",
+  "figure_sha256": {
+    "data/distance_comparison_v1/figures/01_cold_phot_vs_gaia.png": "18132463ec8328c3ed441cef0004d4e5f56f427f076971ac1cee69938c8b9786",
+    "data/distance_comparison_v1/figures/02_warm_phot_vs_spectral.png": "d6f04888ea074bfa418fd16bbc7543f3964e04114f806f36dd8134d5ff794500",
+    "data/distance_comparison_v1/figures/03_warm_all_reserved.png": "ac01e3522171322e194a06db05e5e72206f7abd270e94df44788d882bfe2f5f8"
+  }
+}

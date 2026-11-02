@@ -1,18 +1,30 @@
 # PLAN
 
-## Active objective: controlled negative coverage and distance comparison figures
+## Completed objective: controlled negative coverage and distance comparison figures
 
-Full requirements: docs/pro_review_20261102.md; fixed implementation and endpoint:
-docs/giant_wide_protocol_v1.md.
+Full requirements: docs/pro_review_20261102.md; frozen protocol:
+docs/giant_wide_protocol_v1.md; final report: docs/giant_wide_result_v1.md.
 
-- [x] Recover all endpoints, read full Pro reviews; preserve source and register protocol.
+- [x] Recover endpoints, read full Pro reviews, save source and register protocol.
 - [x] Correct denominator/score-gain/current-step wording; implement controlled fits.
-- [ ] Run allocated NERSC three-model whole-field train/cal/test experiment.
-- [ ] Aggregate same-star rates, paired field uncertainty, selected K calibration gaps.
-- [ ] Plot frozen phot-d versus Gaia-d / SPDist / SPECDIS with matched identities.
-- [ ] Inspect figures, validate real results, decide scoped use and close fixed family.
-- [ ] Update report/worklog, commit and synchronize tracked deliverables.
+- [x] Run allocated NERSC three-model whole-field train/cal/test experiment.
+- [x] Aggregate same-star rates, paired field uncertainty and K calibration gaps.
+- [x] Plot frozen phot-d versus Gaia-d / SPDist / SPECDIS with matched identities.
+- [x] Inspect six figures and pass 13 focused tests plus 11 real-data checks.
+- [x] Deliver report, result provenance and milestone through three-endpoint git sync.
 
+B-wide at same-model 1% calibration retains190/289 K giants versus B-K28/289;
+actual dwarf FPR1010/98536. Bright r16–18 recall168/229 versus6/40 at r18–20.
+Freeze the scoped DECam enrichment recipe; do not claim a high-purity catalog,
+calibrated probabilities, or a single global threshold. End fixed model search.
+Selected190:170 valid FeH (median−.85),39 SPDist/189 SPECDIS teacher matches;
+34/39 and179/189 teacher Mg lie above the old lower-RGB luminosity range
+(Mg<.5). Independent phase is unknown. No automatic lower-RGB extrapolation.
+
+Next bounded task: on the selected population, compare the same-star teacher
+intersection and secure independent phase/luminosity references for brighter,
+more metal-rich K giants before a new distance calibration. Do not repeat the
+completed FeH mechanism or enlarge sky coverage without a specific evidence gap.
 
 ## Completed objective: observable DECam giant candidate application
 
