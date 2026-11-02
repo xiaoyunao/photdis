@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.ticker import LogLocator, FuncFormatter, NullFormatter
 from photdis.stage1 import require_compute
 from photdis.holdouts import load_reference_catalogs
 from photdis.route import LEVEL, feature_matrix, route_rows
@@ -47,7 +48,14 @@ def panel(axes,x,y,label,title):
     if len(x)>=40:ax.hexbin(x,residual,gridsize=45,mincnt=1,bins='log',xscale='log',cmap='viridis',linewidths=0)
     else:ax.scatter(x,residual,s=14,alpha=.7)
     ax.axhline(0,color='#d95f02',ls='--',lw=1);ax.set(xscale='log',xlabel=label+' [kpc]',ylabel=r'$d_{phot}/d_{ref}-1$')
-    for ax in axes:ax.grid(alpha=.12)
+    for ax in axes:
+        ax.grid(alpha=.12)
+        ax.xaxis.set_major_locator(LogLocator(base=10,subs=(1,2,5)))
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda value,_:f'{value:g}'))
+        ax.xaxis.set_minor_formatter(NullFormatter())
+    axes[0].yaxis.set_major_locator(LogLocator(base=10,subs=(1,2,5)))
+    axes[0].yaxis.set_major_formatter(FuncFormatter(lambda value,_:f'{value:g}'))
+    axes[0].yaxis.set_minor_formatter(NullFormatter())
     return {'n':len(x),'invalid_pairs':n_rejected,'relative_median':med,'relative_nmad':nmad,
             'fraction_abs_relative_gt_0p5':float(np.mean(abs(residual)>.5)),
             'reference_range_kpc':[float(x.min()),float(x.max())]}
@@ -122,4 +130,29 @@ def main():
     result={'cold':cold(),'warm':warm(),'distance_unit':'kpc','uncertainty':'descriptive matched point-distance comparisons; no coverage or truth claim','script_sha256':sha(__file__)}
     (OUT/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
 
-if __name__=='__main__':main()
+def render_cached():
+    require_compute()
+    summary=json.loads((OUT/'summary.json').read_text())
+    fig,axes=plt.subplots(2,3,figsize=(16,9),gridspec_kw={'height_ratios':[3,1.7]},layout='constrained')
+    for j,item in enumerate(summary['cold']):
+        with np.load(OUT/f'cold_{j}.npz') as f:
+            panel(axes[:,j],f['gaia_kpc'],f['phot_kpc'],'Gaia inverse corrected parallax',item['field'].split('_dec')[0].replace('native_',''))
+    fig.suptitle('Frozen cold-v4 | strict cold dwarfs, Gaia S/N >= 20, clean + WISE20 fallback\nNative held-out fields; conditional on cold-dwarf identity',fontsize=13)
+    fig.savefig(FIG/'01_cold_phot_vs_gaia.png',dpi=170);plt.close(fig)
+    with np.load(OUT/'warm.npz') as f:t={k:f[k] for k in f.files}
+    for supported,filename in [(True,'02_warm_phot_vs_spectral.png'),(False,'03_warm_all_reserved.png')]:
+        fig,axes=plt.subplots(2,2,figsize=(12,9),gridspec_kw={'height_ratios':[3,1.7]},layout='constrained')
+        for j,(key,label) in enumerate([('spdist','SPDist v1.0'),('specdis','SPECDIS v2.1')]):
+            take=np.ones(len(t['source_id']),bool) if key=='spdist' else t['specdis_valid'].copy()
+            if supported:take &= t['supported']
+            panel(axes[:,j],t[key+'_kpc'][take],t['phot_kpc'][take],label,label+(' | supported reserved fields' if supported else ' | all qualified reserved stars'))
+        fig.suptitle('Warm-giant grz photometric prototype (5000–7000 K)\nSPDist teacher comparison; SPECDIS cross-catalog check; neither is geometric truth',fontsize=12)
+        fig.savefig(FIG/filename,dpi=170);plt.close(fig)
+    (OUT/'render.json').write_text(json.dumps({'cached_only':True,'script_sha256':sha(__file__),
+        'unchanged_scientific_summary_sha256':sha(OUT/'summary.json'),
+        'figure_sha256':{str(p):sha(p) for p in sorted(FIG.glob('*.png'))}},indent=2)+'\n')
+
+
+if __name__=='__main__':
+    render_cached() if '--render-only' in sys.argv else main()
+

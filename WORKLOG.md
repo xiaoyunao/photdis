@@ -14,7 +14,8 @@
 - Added real-output validator for identities, paired scalers/weights, immutable model hashes, calibration budgets, selected counts, aggregate sums and distance normalization/reproduction.
 - Fit 60668827 completed in 203s; same-model 1% calibration B-wide retains 190/289 K giants vs B-K 28/289; actual FPR 1010/98536 vs942/98536.
 - Distance plots job60668960 wrote summary. Summary60668962 failed serializing a shadowed `pairs` variable (VAC structured rows replaced bootstrap dict); renamed VAC local, scientific fits unchanged.
-- Next: rerun summary only, validate real outputs, inspect figures and report.
+- Three distance figures inspected: scientific values correct, warm-panel log tick labels crowded; added cached-row render-only mode and sparse numeric log ticks, without recomputing predictions.
+- Next: rerun summary only (60669349), validate real outputs, inspect corrected figures and report.
 
 ## 2026-11-01
 
