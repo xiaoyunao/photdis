@@ -58,10 +58,12 @@ def main():
             for model,offset,color in [('A_grz',-.12,'#0072b2'),('B_grzW1',.12,'#d55e00')]:
                 common={r['source_id'] for r in rows if r['system']==s and r['teacher']==t and r['model']=='B_grzW1'}
                 rr=[r for r in rows if r['system']==s and r['teacher']==t and r['model']==model and r['source_id'] in common]
-                if not rr:continue
+                if not rr:
+                    if model=='A_grz':ax.text(i,.02,'No W1 pair',ha='center',fontsize=8,transform=ax.get_xaxis_transform())
+                    continue
                 median=np.median([r['delta_mu_median'] for r in rr]);ax.errorbar(i+offset,median,yerr=np.array([[rr[0]['reference_mu_plus']],[rr[0]['reference_mu_minus']]]),fmt='o',c=color)
                 ax.text(i+offset,median+.025,str(len(rr)),fontsize=7,ha='center')
-        ax.axhline(0,c='black',ls='--');ax.set(xticks=range(len(systems)),xticklabels=systems,ylabel='Median member delta mu [mag]',title=t+' | identical A/B members');ax.tick_params(axis='x',rotation=35)
+        ax.axhline(0,c='black',ls='--');ax.set(xticks=range(len(systems)),xticklabels=systems,ylabel='Median member delta mu [mag]',title=t+' | identical A/B members');ax.tick_params(axis='x',rotation=35);ax.set_xlim(-.5,len(systems)-.5)
     axes[0].plot([],[],'o',c='#0072b2',label='A grz');axes[0].plot([],[],'o',c='#d55e00',label='B grzW1');axes[0].legend()
     fig.suptitle('Descriptive system centers; bars show shared reference error ONLY; numbers are stars')
     fig.savefig(FIG/'05_system_centers.png',dpi=160);plt.close(fig)

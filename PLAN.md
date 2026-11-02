@@ -1,6 +1,6 @@
 # PLAN
 
-## Current objective: fixed BV21 multi-system external reference batch
+## Completed objective: fixed BV21 multi-system external reference batch
 
 Source: docs/pro_review_35009d2.md. Detailed protocol:
 docs/kgiant_reference_batch_protocol_v1.md. Goal registered; no model retuning.
@@ -10,10 +10,16 @@ docs/kgiant_reference_batch_protocol_v1.md. Goal registered; no model retuning.
 - [x] Prior-result latitude/support/quality/reference-scale addendum.
 - [x] Fixed three-star image or independent-photometry check.
 - [x] Member-first full DESI type audit, directed DR11 photometry, freeze coverage.
-- [ ] Fixed A/prior and same-star A/B scoring, per-system uncertainty and limits.
-- [ ] Validate, inspect figures, final report, checkpoint and three-endpoint sync.
+- [x] Fixed A/prior and same-star A/B scoring, per-system uncertainty and limits.
+- [x] Validate, inspect figures, final report, checkpoint and three-endpoint sync.
 
-Stop after this fixed resource batch even if fewer than three comparable systems.
+Result: docs/kgiant_reference_batch_result_v1.md. Fixed parent complete;
+one new Pal14 optical-only member plus three historical Terzan7 members,
+22 configurations /4 stars /2 systems. Pal14 grz centers55.68/48.22kpc
+versus73.579kpc reference. No new W1 pair; no field calibration claim.
+Next evidence need: joint color/luminosity/phase/reference coverage and usable
+bright photometry, not automatic new clusters or model tuning. Final milestone
+is delivered through scripts/sync.py push with identical endpoint hashes.
 
 ## Completed objective: fixed six-object external K-giant check
 

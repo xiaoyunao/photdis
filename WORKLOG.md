@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-02 — fixed reference batch scored and closed
+
+- Result: docs/kgiant_reference_batch_result_v1.md; Pal14 new grz centers
+  55.68/48.22kpc vs73.579kpc, explicit color/support and population limits.
+- Total22 configurations /4 stars /2 systems; no new W1 pairs; all18 historical
+  quantiles preserved. Six tests and11 actual checks pass; seven figures inspected.
+- Allocated inventory60679723 completed4m51s; score/validation60680017 completed
+  1m32s, both0:0. Public predictions/training/validation copied with hashes.
+- Report/checkpoints updated; final milestone synchronized via scripts/sync.py.
+- Fixed parent endpoint reached, three-system coverage aim not met. Next requires
+  new joint coverage/phase/bright-photometry evidence, not model or cut tuning.
+
 ## 2026-11-02 — member-first coverage frozen before scores
 
 - Inventory60679723 completed fixed parent:1,078,216 probable member entries,

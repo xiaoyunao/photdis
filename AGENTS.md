@@ -3,13 +3,16 @@
 - Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
   The broad-dwarf classifier comparison and matched distance/CMD plots are
   complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
-  Latest Pro review: docs/pro_review_35009d2.md. Current task is the registered
+  Latest Pro review: docs/pro_review_35009d2.md. Completed task is the registered
   fixed BV21 multi-system reference batch: docs/kgiant_reference_batch_protocol_v1.md.
   Prior six-target result remains frozen; new scope/reference/image addendum:
   docs/kgiant_external_addendum_v1.md. Batch uses162 fixed distance systems,
   170 membership systems (159 linked), member-first full DESI type audit and
-  directed DR11 measurements. Freeze inventory before scoring, grz main/W1 paired.
-  Finish this fixed mother table without iterative new targets or model search.
+  directed DR11 measurements. Inventory frozen at9c023fa before scoring, grz main/W1 paired.
+  Result: docs/kgiant_reference_batch_result_v1.md. One new Pal14 grz-only
+  star plus3 historical Terzan7:22 predictions,2 systems,11 checks pass.
+  Pal14 centers55.68/48.22kpc vs73.579kpc reference; absolute calibration fails
+  to gain sufficient coverage. Fixed batch closed; do not restart searches.
   Coverage must be judged jointly in colors, luminosity, abundance, phase and
   quality, not by source-dependent temperature labels alone. No field product.
   Do not restart the original cold-main-sequence follow-up. Maintain the

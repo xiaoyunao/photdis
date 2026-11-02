@@ -4,7 +4,18 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed follow-up: [fixed six-target external K-giant check](docs/kgiant_external_result_v1.md).
+Latest completed follow-up: [fixed multi-system reference batch](docs/kgiant_reference_batch_result_v1.md).
+BV21's162-system distance table and170 member archives were linked before a
+member-first full DESI audit. Eight new K members yield one eligible DECam Pal14
+star; five are northern-system objects and two fail frozen optical quality.
+Pal14 grz distances55.68/48.22kpc versus73.579kpc reference expose transfer offsets.
+Including historical Terzan7, this is4 stars /2 systems /22 configurations,
+not22 independent validations. Six focused tests and11 artifact checks pass.
+[Scope, reference and local support addendum](docs/kgiant_external_addendum_v1.md)
+and seven figures preserve limitations. Fixed parent is complete; no new W1
+pair or calibrated field-giant product. No further automatic cluster search.
+
+Previous completed follow-up: [fixed six-target external K-giant check](docs/kgiant_external_result_v1.md).
 Three Terzan7 members support18 fixed teacher predictions; Pal12 lacks a secure
 external temperature linkage,1665 fails temperature/photometry,1708 has ambiguous
 matching. All scored stars lie outside the old low-dust scope. Distributions,

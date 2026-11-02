@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "fixed_parent_completeness": true,
+    "reference_units_and_asymmetric_errors": true,
+    "system_reference_identity_join": true,
+    "frozen_selection_fully_scored": true,
+    "quality_and_latitude_dust_flags": true,
+    "all_system_training_identity_isolation": true,
+    "A_not_W1_gated_and_B_pairing": true,
+    "full_mixture_quantiles_weights_and_distance_units": true,
+    "paired_AB_counts": true,
+    "frozen_source_hashes": true,
+    "all18_historical_predictions_unchanged": true
+  },
+  "passed": 11,
+  "n_stars": 4,
+  "n_systems": 2,
+  "n_predictions": 22,
+  "source_sha256": {
+    "data/kgiant_reference_batch_v1/inventory.json": "df0ac87502f7f08e7065d215a2084ebf0df3da055dbe0d9da3eea3c93560ba74",
+    "data/kgiant_reference_batch_v1/predictions.json": "294d9f14f57f16ed8b21ce263b497e6622b302ca82980b9751951c1a409f78fc",
+    "data/kgiant_reference_batch_v1/training.json": "6e9b48bcf80a57783ae2426a8055723dd665fc848485a55052d9499b02b4e3b2",
+    "/pscratch/sd/y/yunao/photdis_pipeline/scripts/kgiant_reference_validate.py": "620833e490f37c2d14640577fbde51a6afae8cbd06f1e09f6c39c06359ed23a9"
+  }
+}
