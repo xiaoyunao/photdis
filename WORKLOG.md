@@ -6,7 +6,10 @@
 - Added giant_wide module, runner, protocol, batch wrapper and focused weight/split/scale tests.
 - Fixed prior denominator clarification, field4 gain label and stale README next step.
 - Protocol: 13-field cyclic roles, fixed Nref/class weights, shared K-side scaling, no calibration refit.
-- Next: allocated training, aggregate comparison and requested geometric/spectroscopic distance plots.
+- Validation: 3 new controlled-weight/role/shared-scale tests passed; fit job 60668827 submitted.
+- Added aggregate/field-bootstrap/K-population summary and frozen-model distance-density plotting; syntax checks passed.
+- PS1 pair-median versus difference-of-medians wording already correct in pro_followup_v2; retained.
+- Next: allocated summaries/figures, real-result checks and scientific decision.
 
 ## 2026-11-01
 
