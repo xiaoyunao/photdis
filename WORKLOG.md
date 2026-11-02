@@ -5,14 +5,16 @@
 - Read latest full Pro reviews through read_thread; source saved in docs/pro_review_20261102.md.
 - Added giant_wide module, runner, protocol, batch wrapper and focused weight/split/scale tests.
 - Fixed prior denominator clarification, field4 gain label and stale README next step.
-- Protocol: 13-field cyclic roles, fixed Nref/class weights, shared K-side scaling, no calibration refit.
+- Protocol: cyclic available-field roles (12 nonempty DECam W1 reference fields), fixed Nref/class weights, shared K-side scaling, no calibration refit.
 - Validation: 3 new controlled-weight/role/shared-scale tests passed; fit job 60668827 submitted.
 - Added aggregate/field-bootstrap/K-population summary and frozen-model distance-density plotting; syntax checks passed.
 - PS1 pair-median versus difference-of-medians wording already correct in pro_followup_v2; retained.
 - Extended K-population summary with exact Gaia/DESI-pair matches to existing audited SPDist/SPECDIS joins; phase remains unknown, teacher labels not truth.
 - Validation: 13 focused tests passed. Distance job 60668960 and dependent summary 60668962 submitted.
 - Added real-output validator for identities, paired scalers/weights, immutable model hashes, calibration budgets, selected counts, aggregate sums and distance normalization/reproduction.
-- Next: allocated summaries/figures, real-result checks and scientific decision.
+- Fit 60668827 completed in 203s; same-model 1% calibration B-wide retains 190/289 K giants vs B-K 28/289; actual FPR 1010/98536 vs942/98536.
+- Distance plots job60668960 wrote summary. Summary60668962 failed serializing a shadowed `pairs` variable (VAC structured rows replaced bootstrap dict); renamed VAC local, scientific fits unchanged.
+- Next: rerun summary only, validate real outputs, inspect figures and report.
 
 ## 2026-11-01
 

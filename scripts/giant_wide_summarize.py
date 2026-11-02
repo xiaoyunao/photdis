@@ -86,13 +86,13 @@ def main():
             if col=='feh_corrected':good &= t['abundance_calibration_valid'][ids]
             v=t[col][ids][good];params[col]={'n_valid':len(v),'q16_50_84':np.quantile(v,[.16,.5,.84]).tolist() if len(v) else None}
         valid=t['abundance_calibration_valid'][ids]&np.isfinite(t['feh_corrected'][ids])
-        pairs=[vac.get((int(t['source_id'][i]),identity_text(t['desi_object_id'][i]))) for i in ids
+        vac_pairs=[vac.get((int(t['source_id'][i]),identity_text(t['desi_object_id'][i]))) for i in ids
                if (int(t['source_id'][i]),identity_text(t['desi_object_id'][i])) not in ambiguous]
-        pairs=[row for row in pairs if row is not None]
-        teacher={kind:{'valid_n':int(sum(row[kind+'_valid'] for row in pairs)),
-                       'dist_kpc_q16_50_84':np.quantile([row[kind+'_dist_kpc'] for row in pairs if row[kind+'_valid']],[.16,.5,.84]).tolist() if any(row[kind+'_valid'] for row in pairs) else None}
+        vac_pairs=[row for row in vac_pairs if row is not None]
+        teacher={kind:{'valid_n':int(sum(row[kind+'_valid'] for row in vac_pairs)),
+                       'dist_kpc_q16_50_84':np.quantile([row[kind+'_dist_kpc'] for row in vac_pairs if row[kind+'_valid']],[.16,.5,.84]).tolist() if any(row[kind+'_valid'] for row in vac_pairs) else None}
                  for kind in ('spdist','specdis')}
-        candidates[key]={'vac_unique_pair_matches':len(pairs),'spectroscopic_teachers':teacher,
+        candidates[key]={'vac_unique_pair_matches':len(vac_pairs),'spectroscopic_teachers':teacher,
             'vac_source_hashes':vac_hashes,'n':len(ids),'fields':{str(f):int((t['field_index'][ids]==f).sum()) for f in np.unique(t['field_index'][ids])},'parameters':params,
             'feh_lt_minus1p5':int((valid&(t['feh_corrected'][ids]<-1.5)).sum()),
             'feh_ge_minus1p5':int((valid&(t['feh_corrected'][ids]>=-1.5)).sum()),
