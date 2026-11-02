@@ -6,6 +6,8 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'src'),str(ROOT/'.deps')]
 import numpy as np
+import fitsio
+import hashlib
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -13,6 +15,10 @@ from photdis.giant_information import wilson
 from photdis.stage1 import require_compute
 OUT=Path('data/giant_wide_v1');FIG=OUT/'figures'
 NAMES=['B-K','A-wide','B-wide'];COLORS=['#999999','#e69f00','#0072b2']
+
+
+def identity_text(value):
+    return (value.decode() if isinstance(value, bytes) else str(value)).strip()
 
 
 def sum_counts(parts):
@@ -56,6 +62,16 @@ def main():
             pairs[key][cat]={f'{a}_to_{b}':paired_bootstrap(folds,'common_K',key,cat,'all',a,b) for a,b in [('B-K','B-wide'),('A-wide','B-wide')]}
     # Population evidence for actual held-out selected K giants, not all selected giants.
     with np.load('data/giant_information_v1/labels.npz') as f:t={k:f[k] for k in f.files}
+    # Reuse identity-audited small VAC joins; never infer distance from class score.
+    vac_paths=[Path('data/giant_vac_v3/same_star.fits'),Path('data/giant_ranked_vac_v1/same_star.fits')]
+    vac={};ambiguous=set();vac_hashes={}
+    for path in vac_paths:
+        if not path.exists():continue
+        vac_hashes[str(path)]=hashlib.sha256(path.read_bytes()).hexdigest()
+        for row in fitsio.read(str(path),columns=['source_id','desi_object_id','specdis_valid','spdist_valid','specdis_dist_kpc','spdist_dist_kpc']):
+            key=(int(row['source_id']),identity_text(row['desi_object_id']))
+            if key in vac:ambiguous.add(key)
+            else:vac[key]=row
     candidates={}
     for key in ('0.5','0.01','0.001'):
         selected=[]
@@ -70,7 +86,14 @@ def main():
             if col=='feh_corrected':good &= t['abundance_calibration_valid'][ids]
             v=t[col][ids][good];params[col]={'n_valid':len(v),'q16_50_84':np.quantile(v,[.16,.5,.84]).tolist() if len(v) else None}
         valid=t['abundance_calibration_valid'][ids]&np.isfinite(t['feh_corrected'][ids])
-        candidates[key]={'n':len(ids),'fields':{str(f):int((t['field_index'][ids]==f).sum()) for f in np.unique(t['field_index'][ids])},'parameters':params,
+        pairs=[vac.get((int(t['source_id'][i]),identity_text(t['desi_object_id'][i]))) for i in ids
+               if (int(t['source_id'][i]),identity_text(t['desi_object_id'][i])) not in ambiguous]
+        pairs=[row for row in pairs if row is not None]
+        teacher={kind:{'valid_n':int(sum(row[kind+'_valid'] for row in pairs)),
+                       'dist_kpc_q16_50_84':np.quantile([row[kind+'_dist_kpc'] for row in pairs if row[kind+'_valid']],[.16,.5,.84]).tolist() if any(row[kind+'_valid'] for row in pairs) else None}
+                 for kind in ('spdist','specdis')}
+        candidates[key]={'vac_unique_pair_matches':len(pairs),'spectroscopic_teachers':teacher,
+            'vac_source_hashes':vac_hashes,'n':len(ids),'fields':{str(f):int((t['field_index'][ids]==f).sum()) for f in np.unique(t['field_index'][ids])},'parameters':params,
             'feh_lt_minus1p5':int((valid&(t['feh_corrected'][ids]<-1.5)).sum()),
             'feh_ge_minus1p5':int((valid&(t['feh_corrected'][ids]>=-1.5)).sum()),
             'phase_confirmed_n':None,'phase_status':'Gravity evidence does not identify RGB/RC/HB; no independent phase label in this dataset.'}
