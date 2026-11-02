@@ -15,6 +15,7 @@ export PYTHONPATH="$PWD/src:$PWD/.deps:$PWD/scripts"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 case "${1:-inventory}" in
  inventory) python scripts/kgiant_reference_batch.py ;;
- score) python scripts/kgiant_reference_score.py ;;
+ score) python scripts/kgiant_reference_score.py; python scripts/kgiant_reference_validate.py ;;
+ validate) python scripts/kgiant_reference_validate.py ;;
  *) exit 2 ;;
 esac

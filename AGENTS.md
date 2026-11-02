@@ -3,15 +3,15 @@
 - Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
   The broad-dwarf classifier comparison and matched distance/CMD plots are
   complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
-  Latest Pro review: docs/pro_review_a399c3e.md. Fixed six-target external check
-  is complete: docs/kgiant_external_result_v1.md. Three Terzan7 members yielded
-  18 frozen predictions; Pal12 temperature linkage and1708 matching unresolved,
-  1665 outside temperature/quality scope. These are closed bounded failures,
-  not instructions to expand or retune. All scored stars exceed old dust scope;
-  SPDist cool-temperature/box extrapolation is explicit. No field product.
-  Preserve original and revised remote products; latest numerical validation
-  job60679109 passed. Next evidence need remains warmer K giants in other
-  independent systems, with type/phase and reliable bright photometry.
+  Latest Pro review: docs/pro_review_35009d2.md. Current task is the registered
+  fixed BV21 multi-system reference batch: docs/kgiant_reference_batch_protocol_v1.md.
+  Prior six-target result remains frozen; new scope/reference/image addendum:
+  docs/kgiant_external_addendum_v1.md. Batch uses162 fixed distance systems,
+  170 membership systems (159 linked), member-first full DESI type audit and
+  directed DR11 measurements. Freeze inventory before scoring, grz main/W1 paired.
+  Finish this fixed mother table without iterative new targets or model search.
+  Coverage must be judged jointly in colors, luminosity, abundance, phase and
+  quality, not by source-dependent temperature labels alone. No field product.
   Do not restart the original cold-main-sequence follow-up. Maintain the
   project's multi-population scope and distinguish teacher agreement from
   independently calibrated distance accuracy.
