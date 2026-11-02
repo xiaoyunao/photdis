@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-02 — BV21 reference batch registered
+
+- Recovered clean35009d2 on all endpoints; read and archived full Pro review.
+- Detailed Goal and protocol fix162-system distance parent/170 member systems,
+  member-first DESI association, directed DR11, pre-score freeze and fixed models.
+- Historical18 predictions remain unchanged; grz main, W1 paired increment.
+- Next: reference provenance, scope addendum, allocated batch inventory.
+
 ## 2026-11-02 — fixed external K-giant experiment completed
 
 - Result: docs/kgiant_external_result_v1.md; six registered targets audited,

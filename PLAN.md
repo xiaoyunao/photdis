@@ -1,5 +1,20 @@
 # PLAN
 
+## Current objective: fixed BV21 multi-system external reference batch
+
+Source: docs/pro_review_35009d2.md. Detailed protocol:
+docs/kgiant_reference_batch_protocol_v1.md. Goal registered; no model retuning.
+
+- [x] Read full review and freeze task boundaries.
+- [ ] Versioned162-system distances/methods and170-system membership linkage.
+- [ ] Prior-result latitude/support/quality/reference-scale addendum.
+- [ ] Fixed three-star image or independent-photometry check.
+- [ ] Member-first full DESI type audit, directed DR11 photometry, freeze coverage.
+- [ ] Fixed A/prior and same-star A/B scoring, per-system uncertainty and limits.
+- [ ] Validate, inspect figures, final report, checkpoint and three-endpoint sync.
+
+Stop after this fixed resource batch even if fewer than three comparable systems.
+
 ## Completed objective: fixed six-object external K-giant check
 
 Full review: docs/pro_review_a399c3e.md; preregistration:
