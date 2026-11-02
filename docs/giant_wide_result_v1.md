@@ -157,6 +157,28 @@ NMAD为21.80%/23.01%。另图保留这部分，以显示支持筛选影响而非
 
 ![全部预留对象](../figures/distance_comparison_v1/03_warm_all_reserved.png)
 
+### 同一批源的 CMD 补充
+
+按距离图缓存中的 `source_id` 一一匹配原测光，全部样本身份、质量与支持域条件保持一致。
+横轴为 `(g-r)0`，纵轴为 `Mg = g0−10−5log10(d/kpc)`；每张图共用坐标范围和计数色标，
+亮星在上方。上排使用 Gaia 或光谱参考距离，下排使用同一对象的 phot-d。
+
+![冷主序同源 CMD](../figures/distance_comparison_cmd_v1/01_cold_cmd.png)
+
+![暖巨星支持域内同源 CMD](../figures/distance_comparison_cmd_v1/02_warm_supported_cmd.png)
+
+![暖巨星全部预留对象 CMD](../figures/distance_comparison_cmd_v1/03_warm_all_cmd.png)
+
+冷主序三个场仍为5776/7097/2941颗；暖巨星支持域内SPDist/SPECDIS为576/527颗，
+全部预留有效配对为588/538颗。图没有按CMD再次删星，也没有重新拟合距离。
+phot-d推导出的序列明显较窄，尤其是暖巨星，这体现点预测对颜色—光度关系的压缩；
+**不能把这条窄序列解释成真实光度散布更小或测距更准确**。光谱距离CMD仍受教师标度影响，
+不能仅凭它确认RGB、RC或HB阶段。
+
+原数据、缓存和图的哈希及计数见[CMD清单](../manifests/distance_comparison_cmd_v1.json)。
+复现：在NERSC提交 `sbatch --mem=4G --time=00:02:00 scripts/run_giant_wide.sh cmd`；
+输出保存在 `data/distance_comparison_cmd_v1/`，已存在的最终结果不会被覆盖。
+
 ## 6. 可复现入口
 
 - NERSC：`sbatch scripts/run_giant_wide.sh fit`，已完成的输出禁止覆盖。

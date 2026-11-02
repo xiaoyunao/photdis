@@ -1,6 +1,6 @@
 # PLAN
 
-## Active objective: matched-source CMD supplement and final delivery
+## Completed objective: controlled negative coverage, distances and matched-source CMDs
 
 Full requirements: docs/pro_review_20261102.md; frozen protocol:
 docs/giant_wide_protocol_v1.md; final report: docs/giant_wide_result_v1.md.
@@ -13,8 +13,9 @@ docs/giant_wide_protocol_v1.md; final report: docs/giant_wide_result_v1.md.
 - [x] Inspect six figures and pass 13 focused tests plus 11 real-data checks.
 - [x] Deliver report, result provenance and milestone to local/GitHub (`6bcf02f`).
 - [x] NERSC authentication renewed; scientific distance results already complete.
-- [ ] Add three CMD figure groups using the exact cold/warm cached identities and masks.
-- [ ] Validate counts, inspect reference/model CMDs, update report and synchronize all endpoints.
+- [x] Add three CMD figure groups using the exact cold/warm cached identities and masks.
+- [x] Validate counts, inspect reference/model CMDs and deliver through three-endpoint sync.
+  CMD job60670802 completed0:0 in17s; no new cuts or model fitting.
 
 B-wide at same-model 1% calibration retains190/289 K giants versus B-K28/289;
 actual dwarf FPR1010/98536. Bright r16–18 recall168/229 versus6/40 at r18–20.

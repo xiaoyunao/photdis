@@ -20,6 +20,8 @@ Requested distance density plots reproduce frozen held-out predictions:
 [cold phot-d / Gaia-d](figures/distance_comparison_v1/01_cold_phot_vs_gaia.png),
 [warm phot-d / SPDist and SPECDIS](figures/distance_comparison_v1/02_warm_phot_vs_spectral.png),
 and [all warm reserved objects](figures/distance_comparison_v1/03_warm_all_reserved.png).
+[Matched-source CMDs](docs/giant_wide_result_v1.md#同一批源的-cmd-补充) show reference-distance
+and photometric-distance absolute magnitudes for these exact samples.
 Spectral comparisons test teacher/catalog agreement, not independent geometric
 accuracy; the warm 5000–7000 K sample differs from the selected K population.
 

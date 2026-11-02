@@ -1,0 +1,122 @@
+{
+  "cold": [
+    {
+      "label": "final_ra330_340",
+      "n": 5776,
+      "gr0_range": [
+        0.9096794128417969,
+        1.5953693389892578
+      ],
+      "reference_mg_range": [
+        6.743650913238525,
+        14.520806312561035
+      ]
+    },
+    {
+      "label": "final_ra020_030",
+      "n": 7097,
+      "gr0_range": [
+        0.9092693328857422,
+        1.5975265502929688
+      ],
+      "reference_mg_range": [
+        6.758003234863281,
+        14.458710670471191
+      ]
+    },
+    {
+      "label": "north_final_ra130_140",
+      "n": 2941,
+      "gr0_range": [
+        0.9091358184814453,
+        1.5972671508789062
+      ],
+      "reference_mg_range": [
+        6.876802444458008,
+        14.617612838745117
+      ]
+    }
+  ],
+  "warm_supported": [
+    {
+      "label": "SPDist | supported",
+      "n": 576,
+      "gr0_range": [
+        0.13605117797851562,
+        0.9295558929443359
+      ],
+      "reference_mg_range": [
+        -1.5669641494750977,
+        2.963939666748047
+      ]
+    },
+    {
+      "label": "SPECDIS | supported",
+      "n": 527,
+      "gr0_range": [
+        0.13605117797851562,
+        0.8707828521728516
+      ],
+      "reference_mg_range": [
+        -1.7381954193115234,
+        4.162627696990967
+      ]
+    }
+  ],
+  "warm_all": [
+    {
+      "label": "SPDist | all reserved",
+      "n": 588,
+      "gr0_range": [
+        -0.2053680419921875,
+        1.0226421356201172
+      ],
+      "reference_mg_range": [
+        -1.5669641494750977,
+        2.963939666748047
+      ]
+    },
+    {
+      "label": "SPECDIS | all reserved",
+      "n": 538,
+      "gr0_range": [
+        -0.07634353637695312,
+        1.0226421356201172
+      ],
+      "reference_mg_range": [
+        -1.7381954193115234,
+        4.162627696990967
+      ]
+    }
+  ],
+  "input_sha256": {
+    "data/distance_comparison_v1/summary.json": "e08e6be3db24927d136106fd2ab333e0978191f3f0c3c3411f35af44a4681494",
+    "data/distance_comparison_v1/cold_0.npz": "c90f59f7094b2bb745fcba3bffa719aaae8e1eab81f2aacb032482e8a8cb6309",
+    "data/field_native_ra330_340_v1/field_diagnostics.fits": "6d75e395a2d8322d33dc0eeae5517e4ba2e5509253634f83644a3c1c251fec97",
+    "data/distance_comparison_v1/cold_1.npz": "34cba06322a8a55e135c41130f986d7f1f5b8de5ebce5587b48af4c1e606f591",
+    "data/field_native_ra020_030_v1/field_diagnostics.fits": "1dd4aa7e331d0e3676b0f93e50d43a0249d66e8ba93f0737e41857d07a08f5c2",
+    "data/distance_comparison_v1/cold_2.npz": "eac91d4fd0122f5a8a0da0b97b640c69918681bdd9e26e9adc3b97d7b5a0034b",
+    "data/field_native_ra130_140_v1/field_diagnostics.fits": "6b6ad0f97c840e2d71b7fb2038bb66da9b341e5c472f8385410222bee9ed48aa",
+    "data/giant_vac_v3/same_star.fits": "5600bb29326cbe058c899d4d25ec61c3ac7b43ff5dee36e480c6884e9101a012",
+    "data/distance_comparison_v1/warm.npz": "95472c29d951d961c5efd04aa2a556fcf24500d9c9c97359afb6dad2001807c1"
+  },
+  "script_sha256": "72edf685a7d2638a03fdc36a965ad0dadb18df940fc0e4417a6480fff55b9993",
+  "selection": "Exact cached distance-panel identities and masks; no new cuts.",
+  "magnitude": "Mg = g0 - 10 - 5 log10(distance/kpc)",
+  "interpretation": "Phot-d CMDs are model-derived, not independent phase confirmation.",
+  "figure_sha256": {
+    "data/distance_comparison_cmd_v1/figures/01_cold_cmd.png": "28c2c0a4222163ade3d8c13b2bcae0f7cdb9c4a78e624e9de29a98700ddcd7a3",
+    "data/distance_comparison_cmd_v1/figures/02_warm_supported_cmd.png": "fead21cb8eef153293c64c67cfe93f7096966a9bc191247f9f55a6406509ef8b",
+    "data/distance_comparison_cmd_v1/figures/03_warm_all_cmd.png": "9164d90688023ad59772cf55c46a19b4943a59347db9ad60b9c6a73537121291"
+  },
+  "execution": {
+    "job_id": 60670802,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 17,
+    "exact_identity_and_mask_counts_verified": true,
+    "source_hashes_verified": true,
+    "figures_visually_inspected": 3,
+    "local_smoke": "identity reorder, kpc-to-Mg normalization, rendering passed"
+  }
+}

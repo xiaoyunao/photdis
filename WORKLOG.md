@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-02 — CMD supplement completed
+
+- Allocated job60670802 COMPLETED0:0 in17s. Three CMD figures compare
+  reference-derived and phot-d-derived Mg at identical (g-r)0 and identities.
+- Exact counts match previous panels: cold5776/7097/2941; warm supported
+  576/527; all reserved588/538. Source/cache/script/figure SHA256 verified.
+- Three plots visually inspected; no clipping or sample reselection. Narrow
+  model-derived sequences are not independent precision/phase evidence.
+- Updated giant_wide report, README, PLAN; added CMD manifest and figures.
+- NERSC auth restored and prior delivery synchronized at a4c110e. Final
+  CMD milestone uses scripts/sync.py push; no remaining computation.
+
 ## 2026-11-02 — matched-source CMD supplement
 
 - User requested CMDs for the sources used in the distance plots. Added
