@@ -15,7 +15,10 @@
 - Fit 60668827 completed in 203s; same-model 1% calibration B-wide retains 190/289 K giants vs B-K 28/289; actual FPR 1010/98536 vs942/98536.
 - Distance plots job60668960 wrote summary. Summary60668962 failed serializing a shadowed `pairs` variable (VAC structured rows replaced bootstrap dict); renamed VAC local, scientific fits unchanged.
 - Three distance figures inspected: scientific values correct, warm-panel log tick labels crowded; added cached-row render-only mode and sparse numeric log ticks, without recomputing predictions.
-- Next: rerun summary only (60669349), validate real outputs, inspect corrected figures and report.
+- Summary60669349 passed; paired field bootstrap recall improvement +56.1pp [43.6,63.5], classification figures inspected.
+- Selected190 K giants:170 valid FeH (median -.85),39 SPDist and189 SPECDIS labels; phase unconfirmed. Added teacher-Mg support census for the remaining luminosity-gap requirement.
+- Fixed overly compressed symlog brightness axis to explicit log range; finite operating points unchanged.
+- Next: combined final summary/render/validation, corrected figure inspection and delivery.
 
 ## 2026-11-01
 

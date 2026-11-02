@@ -19,5 +19,8 @@ case "${1:-fit}" in
  distances) python scripts/distance_comparison_plot.py ;;
  validate) python scripts/giant_wide_validate.py ;;
  render) python scripts/distance_comparison_plot.py --render-only ;;
+ finish) python scripts/giant_wide_summarize.py
+         python scripts/distance_comparison_plot.py --render-only
+         python scripts/giant_wide_validate.py ;;
  *) exit 2 ;;
 esac

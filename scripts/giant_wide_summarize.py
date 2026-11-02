@@ -92,6 +92,13 @@ def main():
         teacher={kind:{'valid_n':int(sum(row[kind+'_valid'] for row in vac_pairs)),
                        'dist_kpc_q16_50_84':np.quantile([row[kind+'_dist_kpc'] for row in vac_pairs if row[kind+'_valid']],[.16,.5,.84]).tolist() if any(row[kind+'_valid'] for row in vac_pairs) else None}
                  for kind in ('spdist','specdis')}
+        g0_by_pair={(int(t['source_id'][i]),identity_text(t['desi_object_id'][i])):float(t['g0'][i]) for i in ids}
+        for kind in teacher:
+            mg=np.array([g0_by_pair[(int(row['source_id']),identity_text(row['desi_object_id']))]-10-5*np.log10(row[kind+'_dist_kpc']) for row in vac_pairs if row[kind+'_valid']])
+            teacher[kind]['Mg_teacher_q16_50_84']=np.quantile(mg,[.16,.5,.84]).tolist() if len(mg) else None
+            teacher[kind]['Mg_below_0p5']=int((mg<.5).sum())
+            teacher[kind]['Mg_0p5_to_3']=int(((mg>=.5)&(mg<=3)).sum())
+            teacher[kind]['Mg_above_3']=int((mg>3).sum())
         candidates[key]={'vac_unique_pair_matches':len(vac_pairs),'spectroscopic_teachers':teacher,
             'vac_source_hashes':vac_hashes,'n':len(ids),'fields':{str(f):int((t['field_index'][ids]==f).sum()) for f in np.unique(t['field_index'][ids])},'parameters':params,
             'feh_lt_minus1p5':int((valid&(t['feh_corrected'][ids]<-1.5)).sum()),
@@ -129,7 +136,7 @@ def main():
             values=[aggregate['common_K'][key][name]['strata'][stratum] for key in ('0.5','0.01','0.001')]
             x=[v['all_dwarf_total']['rate'] for v in values];y=[v['K_giant_total']['rate'] for v in values]
             ax.plot(x,y,'-o',color=color,label=name)
-        ax.set(xscale='symlog',xlim=(-.0001,1),ylim=(-.02,1.02),xlabel='Actual dwarf FPR (symlog)',ylabel='K giant recall',title=stratum);ax.grid(alpha=.2)
+        ax.set(xscale='log',xlim=(.0001,.5),ylim=(-.02,1.02),xlabel='Actual dwarf FPR (log scale)',ylabel='K giant recall',title=stratum);ax.grid(alpha=.2)
     axes[0].legend();fig.suptitle('Fixed operating points by observed r | not a test-optimized ROC')
     fig.savefig(FIG/'03_brightness_tradeoff.png',dpi=170);plt.close(fig)
 
