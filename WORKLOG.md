@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — first complete optical holdout result
+
+- A completes431,130 cal/test predictions in194s including training; B
+  completes353,788 in185s. Six-model run remains fixed, no retuning.
+- A Gaia test N14,267:NMAD0.265mag; SPECDIS low-gravity N298 has
+  median residual−4.597mag. Population failure must remain prominent.
+- Report separates quality/coverage curves by reference source and labels
+  density counts explicitly; README no longer implies warm-member prerequisite.
+
 ## 2026-11-02 — complete optical parent and broad references
 
 - Preparation60681406 completed:9,390,518 records/unique objects,13 DECam

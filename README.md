@@ -11,7 +11,7 @@ labels, WISE is optional. Internal uncalibrated field predictions are allowed.
 
 | Stage | v0 scope | State |
 |---|---|---|
-| Parent and references | Existing14 fields, DECam main; Gaia-first/SPECDIS supplementary | Allocated preparation submitted |
+| Parent and references | Existing14 fields, DECam main; Gaia-first/SPECDIS supplementary | Complete:9,390,518 unique objects |
 | Training | Broad QRF A/B/C plus same-training controls | Implemented; unit checks passed |
 | Development validation | Whole fields, complete references, raw/calibrated distributions | Implemented; awaiting data |
 | Internal application | Every unique optical parent, all available bands and risk flags | Implemented; awaiting frozen models |
@@ -27,8 +27,8 @@ warm northern color/luminosity overlaps are all metal-poor NGC2419. Pal14's stro
 identity association coexists with unresolved literature/DESI parameter conflict.
 All22 historical predictions are unchanged. The evaluated DESI channel covers
 18/159 linked systems, not the entire reference resource. Current K absolute
-calibration remains evidence-insufficient; the next defined direction is phase
-and support definition for the existing warm-evolved branch, before new fitting.
+calibration remains evidence-insufficient; phase/support definition for the existing warm-evolved branch is retained as
+a deferred local direction; unified baseline v0 now takes priority.
 Four figures, the full member evidence and five actual checks are preserved.
 
 Previous completed follow-up: [fixed multi-system reference batch](docs/kgiant_reference_batch_result_v1.md).

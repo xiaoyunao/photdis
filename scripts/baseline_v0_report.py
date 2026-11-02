@@ -15,7 +15,9 @@ FIG=Path('figures/baseline_v0');FIG.mkdir(exist_ok=True,parents=True)
 def save(fig,name):fig.savefig(FIG/name,dpi=150);plt.close(fig)
 def density(ax,x,y,title,xlabel,ylabel,limits=None):
     good=np.isfinite(x)&np.isfinite(y);x=x[good];y=y[good]
-    if len(x):ax.hexbin(x,y,gridsize=65,mincnt=1,bins='log',cmap='viridis')
+    if len(x):
+        h=ax.hexbin(x,y,gridsize=65,mincnt=1,bins='log',cmap='viridis')
+        ax.figure.colorbar(h,ax=ax,fraction=.045,pad=.02,label='Sources / hexagon')
     ax.set(title=f'{title}: N={len(x):,}',xlabel=xlabel,ylabel=ylabel)
     if limits:ax.set(xlim=limits,ylim=limits);ax.plot(limits,limits,'r--',lw=.8)
 
@@ -31,6 +33,8 @@ def main():
             evaluation[k]={x:p[x][test] for x in ['mu','rows','supported','class_weights']}
     assert np.isfinite(mu).all()
     layer=strata(t,ix);layer.update(supported=support,outside=~support,ambiguous=amb)
+    for lo,hi in [(-5,.4),(.4,.8),(.8,1.2),(1.2,1.6),(1.6,5)]:
+        color=t['g0'][ix]-t['r0'][ix];layer[f'gr_{lo}_{hi}']=(color>=lo)&(color<hi)
     scores={ref:{k:metrics(mu[m],truth_mu(t,ref)[ix][m]) for k,m in layer.items()} for ref in ['chosen','Gaia','specdis','spdist']}
     result=dict(preparation=prep,fit=fit,recommended_test=scores,calibrated_test={k:metrics(muc,truth_mu(t,k)[ix]) for k in ['chosen','Gaia','specdis','spdist']},n_test_references=len(ix),supported_fraction=float(support.mean()),ambiguous_fraction=float(amb.mean()),routes={str(k):int((route==k).sum()) for k in range(3)})
     fig,ax=plt.subplots(2,3,figsize=(15,9),layout='constrained')
@@ -107,10 +111,15 @@ def main():
         limits=[.03,.06,.12,.25];curve=[]
         for limit in limits:
             mask=t['optical_error'][ix]<limit
-            curve.append(dict(error_limit=limit,test=metrics(mu[mask],truth[mask]),n_test_retained=int(mask.sum()),n_parent_retained=sum(c['error_cumulative'][str(limit)] for c in south)))
+            curve.append(dict(error_limit=limit,test=metrics(mu[mask],truth[mask]),n_test_retained=int(mask.sum()),n_parent_retained=sum(c['error_cumulative'][str(limit)] for c in south),references={ref:metrics(mu[mask],truth_mu(t,ref)[ix][mask]) for ref in ['Gaia','specdis']}))
         result['precision_coverage']=curve
-        fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained');ax[0].plot([c['n_parent_retained']/sum(p['n_unique'] for p in south) for c in curve],[c['test'].get('nmad_mag',np.nan) for c in curve],'o-');ax[0].set(xlabel='Full optical parent retained fraction',ylabel='Test reference NMAD [mag]',title='Optical-error thresholds; mixed reference labels')
-        for c in curve:ax[0].annotate(str(c['error_limit']), (c['n_parent_retained']/sum(p['n_unique'] for p in south),c['test'].get('nmad_mag',np.nan)))
+        fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained')
+        fractions=[c['n_parent_retained']/sum(p['n_unique'] for p in south) for c in curve]
+        for ref in ['Gaia','specdis']:
+            values=[c['references'][ref].get('nmad_mag',np.nan) for c in curve]
+            ax[0].plot(fractions,values,'o-',label=ref)
+            for c,x,y in zip(curve,fractions,values):ax[0].annotate(str(c['error_limit']), (x,y),fontsize=8)
+        ax[0].set(xlabel='Full optical parent retained fraction',ylabel='Test reference NMAD [mag]',title='Maximum optical-error cuts [mag]');ax[0].legend()
         for k in ['A','B','C']:ax[1].plot([c['field'] for c in south],[c['availability'][k] for c in south],'o-',label=k)
         ax[1].set(yscale='log',xlabel='Field',ylabel='Available unique sources');ax[1].legend();save(fig,'05_precision_coverage.png')
         result['complete_application']=True
