@@ -7,7 +7,9 @@
 - Application retains every unique optical row, including empty fields and
   north/no-model status; optical precision coverage uses full parent counts.
 - Python parse, shell syntax and three mathematical tests pass. Preparation
-  60681227 remains queued; next allocated integration and dependent batch jobs.
+  60681227 remained queued; submitted short debug replacement60681406
+  with dependency to avoid concurrent writers. Added allocated whole-catalog
+  identity/count/finite-output/hash checks; next integration and batch fit.
 
 ## 2026-11-02 — v0 fixed distribution baseline implemented
 
