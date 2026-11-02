@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — bounded external K-giant goal registered
+
+- Recovered clean a399c3e at all three endpoints; read full latest Pro review.
+- Created detailed Goal; archived review and fixed six-target protocol/config.
+- Pal12 cache identifies Gaia6817950249538781952, clean grz but invalid W1.
+- Verified Terzan7 five coordinates/Teff in Sbordone2005 Table1;1665 out of K scope.
+- Added allocated inventory runner with unique2arcsec matching and independent flags.
+- Syntax passed; next run actual DR11 audit and resolve Pal12 literature identity.
+
 ## 2026-11-02 — K-giant scientific goal delivered
 
 - Report: docs/kgiant_distance_result_v1.md; evidence190 JSON, inventory/comparison
