@@ -1,0 +1,21 @@
+{
+  "passed": [
+    "fixed_six_identities",
+    "distinct_quality_scope_flags",
+    "Pal12_optical_not_blocked_by_W1",
+    "no_external_system_member_in_either_teacher",
+    "frozen_training_counts",
+    "no_residual_based_eligibility",
+    "optical_and_paired_model_completeness",
+    "cold_control_not_scored",
+    "all_scored_distributions_normalized_quantiles_ids_and_distance_units_reproduced",
+    "prediction_source_hashes_match"
+  ],
+  "n_checks": 10,
+  "n_predictions": 18,
+  "hashes": {
+    "data/kgiant_external_v1/revised/inventory.json": "6c1bba2374abe1e5af4da7ce486567febc6f2c204d50bd924df7e96465f2d8d9",
+    "data/kgiant_external_v1/revised/predictions.json": "1095595f0c39557c89c307fcaddb318cc81dd92369a38f089b7d969b672bbe87",
+    "data/kgiant_external_v1/revised/training.json": "22c3b9fa4a47d58b6e62382e97ecb5a8a98ef77a262908cfaa6e2564bfa1d6cd"
+  }
+}

@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-02 — fixed external K-giant experiment completed
+
+- Result: docs/kgiant_external_result_v1.md; six registered targets audited,
+  three Terzan7 stars scored with18 fixed teacher/model distributions.
+- Pal12 temperature identity remains unverified;1665 fails type and optical
+  quality;1708 has ambiguous counterparts. No forced matches or relaxed cuts.
+- Revised allocated job60679109 COMPLETED0:0 in27s; all18 numerical predictions
+  unchanged. Six focused pytest tests and ten actual-artifact checks pass.
+- Four figures rendered and visually inspected; public PDF/CDF grids, execution
+  hashes, reference-conversion discrepancy and shared-scale sensitivity saved.
+- Files: external result/manifests/figures, report generator, README/PLAN/AGENTS.
+  Commands: py_compile, focused pytest, allocated inventory/predict/validate,
+  local report rendering; final delivery uses python scripts/sync.py push.
+- Retain empirical teacher-scale prototype; three stars in one cluster do not
+  establish field-giant accuracy. Next evidence: warmer K giants in independent
+  systems with phase evidence and reliable bright photometry, without retuning.
+
 ## 2026-11-02 — first external predictions obtained
 
 - Inventory60678961 COMPLETED0:0 in8m20s; prediction60678998 in28s;

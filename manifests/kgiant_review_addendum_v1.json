@@ -22,6 +22,7 @@
     "variance_ratio": 2.0,
     "nominal_central_mass": 0.68,
     "noisy_point_coverage": 0.8403874451789697,
-    "scope": "infinite equal-error Gaussian example, not actual error decomposition"
-  }
+    "scope": "ideal equal-error Gaussian example, not actual error decomposition"
+  },
+  "evidence_sha256": "58b5de43c7a3263e0eea4f6d2d7d1a418710ced8d58eba0e26b579ba74ce2481"
 }

@@ -41,7 +41,7 @@ def main():
     inv=json.load(open('manifests/kgiant_external_inventory_v1.json'))['rows']
     pred=json.load(open('manifests/kgiant_external_predictions_v1.json'))
     assert len(inv)==6 and len(pred['audit'])==6
-    flags=['Unique identity','grz quality','W1 quality','Old dust scope','Known K type','Distance eligible']
+    flags=['Unique identity','grz quality','W1 quality','Old dust scope','Literature K scope','Distance eligible']
     data=[]
     for r,a in zip(inv,pred['audit']):
         assert r['name']==a['name']
@@ -61,7 +61,7 @@ def main():
         for i,r in enumerate(pred['rows']):
             q=np.array(r['quantiles_mu'])-r['reference_mu'];ax.plot(q[[0,4]],[i,i],color='.6');ax.plot(q[[1,3]],[i,i],lw=3,color='#0072b2');ax.plot(q[2],i,'o',color='#d55e00')
             labels.append(r['name']+' '+r['teacher']+' '+r['model'])
-        ax.set_yticks(np.arange(len(labels)),labels,fontsize=8);ax.axvline(0,color='k',ls='--');ax.set(xlabel='mu_phot - mu_reference [mag]',title='Individual empirical teacher distributions | no population accuracy claim')
+        ax.set_yticks(np.arange(len(labels)),labels,fontsize=8);ax.axvline(0,color='k',ls='--');ax.set(xlabel='mu_phot - mu_reference [mag]',title='Individual empirical teacher distributions | no population accuracy claim\nGray: central95% | blue: central68% | orange: median')
         fig.savefig(out/'03_external_intervals.png',dpi=160);plt.close(fig)
         fig,axes=plt.subplots(2,3,figsize=(14,7),layout='constrained',sharex=True)
         for i,teacher in enumerate(('spdist','specdis')):

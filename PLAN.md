@@ -1,16 +1,18 @@
 # PLAN
 
-## Active objective: fixed six-object external K-giant check
+## Completed objective: fixed six-object external K-giant check
 
 Full review: docs/pro_review_a399c3e.md; preregistration:
 docs/kgiant_external_protocol_v1.md. Preserve historical results.
 
 - [x] Read full review, create detailed Goal, register six-object scope.
-- [ ] Correct190-object coverage and empirical interval interpretation.
-- [ ] Resolve literature identities; independently audit grz/W1/dust/type flags.
-- [ ] Allocated DR11 five-position match; fixed external mixtures if eligible.
-- [ ] Shared-scale sensitivities, per-star distributions or explicit failures.
-- [ ] Focused validation, figures, report, checkpoint and three-endpoint delivery.
+- [x] Correct190-object coverage and empirical interval interpretation.
+- [x] Resolve literature identities or record unverified links; independent flags.
+- [x] Allocated DR11 five-position match; three accepted stars,18 fixed mixtures.
+- [x] Shared-scale sensitivities, per-star distributions and explicit failures.
+- [x] Six focused tests, ten actual checks, four inspected figures and result report.
+- [x] Final report, provenance and milestone prepared for three-endpoint delivery
+  through scripts/sync.py push; verify endpoint hashes at delivery completion.
 
 No classifier/bandwidth tuning, no expansion beyond Pal12 one + Terzan7 five.
 

@@ -4,7 +4,14 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed experiment: [actual K-giant conditional distances](docs/kgiant_distance_result_v1.md)
+Latest completed follow-up: [fixed six-target external K-giant check](docs/kgiant_external_result_v1.md).
+Three Terzan7 members support18 fixed teacher predictions; Pal12 lacks a secure
+external temperature linkage,1665 fails temperature/photometry,1708 has ambiguous
+matching. All scored stars lie outside the old low-dust scope. Distributions,
+support flags and common-scale sensitivities are preserved; no calibrated field
+product. Teacher coverage and empirical interval interpretation are clarified.
+
+Previous completed experiment: [actual K-giant conditional distances](docs/kgiant_distance_result_v1.md)
 uses all 289 W1-qualified K giants with available teacher labels (77 SPDist,
 258 SPECDIS), with whole-field paired grz/grzW1/no-color predictions. On the
 frozen selected subset, colors improve teacher-scale predictive scores; the W1

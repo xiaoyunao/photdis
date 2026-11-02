@@ -1,0 +1,73 @@
+{
+  "initial_prediction_scientific_rows_sha256": "260c993a45a4aa66185f9ed1e601f3fd365a4f73604d7b7a4f78deba39851977",
+  "initial_predictions_sha256": "b087773482e2d6454a27172017cecb4805e72781c7638c5747efd0995d2aff1f",
+  "protocol_commit": "374c8ef3a8093918c4f72aa4cc3c9db13212c92d",
+  "final_prediction_source_commit": "e409e34e423a8cfbaa90a98339b198361161bc5d",
+  "frozen_parent": "a399c3e12e1fbe1ac10b250a273b90d76ed3a626",
+  "jobs": [
+    {
+      "id": 60678961,
+      "stage": "inventory",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 500
+    },
+    {
+      "id": 60678998,
+      "stage": "first_predictions",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 28
+    },
+    {
+      "id": 60679064,
+      "stage": "first_validation",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 24
+    },
+    {
+      "id": 60679109,
+      "stage": "final_density_export_and_validation",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "seconds": 27
+    }
+  ],
+  "n_targets": 6,
+  "n_scored_stars": 3,
+  "n_prediction_distributions": 18,
+  "focused_tests_passed": 6,
+  "real_checks_passed": 10,
+  "numerical_revision_unchanged": true,
+  "copied_artifact_hashes_verified": true,
+  "figures_visually_inspected": true,
+  "reference_conversion": {
+    "published_mu": 17.05,
+    "published_d_kpc": 25.3,
+    "distance_from_primary_mu_kpc": 25.703957827688647,
+    "mu_from_published_distance": 17.01560260587909,
+    "alternate_delta_mu_shift": 0.03439739412091
+  },
+  "file_sha256": {
+    "docs/kgiant_external_protocol_v1.md": "8397d432d8d50e904228da1095739ea624c28035eccf5055b2e8b48703ef8282",
+    "docs/kgiant_external_result_v1.md": "c4908c1673fa8331d14a097bad026db1c279b29cddc8cd9b2653210c25872c53",
+    "docs/kgiant_distance_result_v1.md": "d5e1aa2dde7a240254f4d31fdc5b9a47efa7dc2f8b487cc06d2f1d734ade3f9c",
+    "configs/kgiant_external_v1.json": "57b66239da453d3dbe5ac4f02a0cb71582798e048ed0f3ed7d74d3c7231ea0ec",
+    "scripts/kgiant_external_inventory.py": "5020d4dbcbed486f3321006806eea012f2c5bf08e44e55a0c89935a1a927d884",
+    "scripts/kgiant_external_predict.py": "5a6a3dee996af90539bfd4af57ce158d26072a7f7d182e4ca65bde6137116472",
+    "scripts/kgiant_external_validate.py": "079f48fe2c8f6061ecf62920b992823cb0839dabbc0bc7a5430d6287b9184103",
+    "scripts/kgiant_external_report.py": "56b5fc34c744c898e9e63d6b3dfd710ee1b15d45cb3576947f2396c7eff8b5ee",
+    "src/photdis/kgiant_distance.py": "043f58690ac38b65a9624a40943d7507f3e3d6847a8ffadee78eb0d7fe1790f8",
+    "manifests/kgiant_external_inventory_v1.json": "6c1bba2374abe1e5af4da7ce486567febc6f2c204d50bd924df7e96465f2d8d9",
+    "manifests/kgiant_external_predictions_v1.json": "1095595f0c39557c89c307fcaddb318cc81dd92369a38f089b7d969b672bbe87",
+    "manifests/kgiant_external_validation_v1.json": "1bfe2e74e44c4efc0e496be5450443df0ba77382ed92e170767afd7581751b75",
+    "manifests/kgiant_review_addendum_v1.json": "77a224199e6f0fa48e97074ab9f28b1efe7bfd8a0ceda6d8380476a270f9972e"
+  },
+  "figure_sha256": {
+    "figures/kgiant_external_v1/01_teacher_scope_and_width.png": "e029b8f361a6e4f5fef69082fbb1c33a1a159e51a7352bce0f45ea642800cc2f",
+    "figures/kgiant_external_v1/02_external_quality_and_scope.png": "f0a7e9ae9b76927f072f116ea96bfc2df2409a91d0343bdae0a9ec973022060e",
+    "figures/kgiant_external_v1/03_external_intervals.png": "503a3f0797e646c4d7993f18e5de7cc0a86dc81b1eece9d1d03a363fa92d9797",
+    "figures/kgiant_external_v1/04_external_distributions.png": "5dffcd694dd0eb0df324d2e0672d19470984093c7c4dc31e68be70c14cf202ca"
+  }
+}
