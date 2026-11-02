@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-02 — six fixed models and held-out figures complete
+
+- Fit60681423 completed17m01s; partial report60681532 completed34s.
+- Same-training/test W1W2 Gaia NMAD:A0.2660/B0.2422/C0.2181mag.
+  Cal-only B and C upgrades both accepted; no test-based parameter changes.
+- Initial distance-density and reference/predicted CMD figures inspected.
+- Shared array0/1 running; pending2–13 held while preparing one allocated
+  multi-field CPU run. It executes the identical per-field program; no model
+  or noise changes. Final report waits for all14 field outputs.
+
 ## 2026-11-02 — first complete optical holdout result
 
 - A completes431,130 cal/test predictions in194s including training; B
