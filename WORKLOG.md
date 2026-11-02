@@ -9,8 +9,12 @@
 - Added exact-pair teacher inventory and batch runner; syntax/shell validation pass.
 - Checked official SPDist/SPECDIS error definitions; .167mag floor included once,
   two teachers kept separate and never treated as independent measurements.
-- Next: allocated evidence audit, finite full-distribution implementation and
-  independent reference support check. No old-model refits or classifier tuning.
+- Inventory job60678131 submitted in allocated shared CPU resources.
+- Added joint (colors, Mg+g-error) kernel mixture and whole-field paired runner.
+  Six focused math tests pass, including direct Gaussian conditioning, no-color
+  normalization and unused-W1 handling; full mixtures are saved per fold.
+- Next: evidence results, all-K fit, independent reference support and final plots.
+  No old-model refits or classifier tuning.
 
 ## 2026-11-02 — CMD supplement completed
 
