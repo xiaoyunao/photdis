@@ -32,7 +32,7 @@ def main():
     fig.savefig(FIG/'01_frozen_coverage.png',dpi=160);plt.close(fig)
     fig,ax=plt.subplots(1,2,figsize=(12,5),layout='constrained')
     sc=[170,159,len({r['member_system'] for r in inv['rows'] if not r['historical_diagnostic']}),len(systems)]
-    ax[0].barh(['Member archive','Published distance linked','With DESI K members','Scored incl. prior Terzan7'],sc,color=['.7','.6','#56b4e9','#0072b2']);ax[0].set_xlabel('Systems');ax[0].invert_yaxis()
+    ax[0].barh(['Member archive','Published distance linked','With DESI K members','Eligible incl. prior Terzan7'],sc,color=['.7','.6','#56b4e9','#0072b2']);ax[0].set_xlabel('Systems');ax[0].set_xlim(0,190);ax[0].invert_yaxis()
     for i,n in enumerate(sc):ax[0].text(n+1,i,str(n),va='center')
     for r in inv['rows']:
         if 'selected_measurement' not in r:continue

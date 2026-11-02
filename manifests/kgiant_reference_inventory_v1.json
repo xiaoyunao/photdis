@@ -1,0 +1,2490 @@
+{
+  "rows": [
+    {
+      "name": "899259709611049088",
+      "source_id": "899259709611049088",
+      "member_system": "NGC_2419",
+      "reference_name": "NGC 2419",
+      "pmember": 0.99775,
+      "ra": 114.420604,
+      "dec": 38.851537,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39633052627898669",
+      "teff": 4942.205697179026,
+      "teff_error": 15.194072133921345,
+      "logg": 1.9781543741510927,
+      "snr": 71.41998291015625,
+      "feh_raw": -1.7891102527136646,
+      "feh_error": 0.025287522037108115,
+      "feh_corrected": -2.0280824765290055,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11011,
+          "brickid": 537757,
+          "objid": 5054,
+          "grz_quality": true,
+          "w1_quality": true,
+          "ebv": 0.058179356157779694,
+          "ra": 114.42060416881604,
+          "dec": 38.85153725014155,
+          "photometry": {
+            "g0": 18.25322723388672,
+            "r0": 17.309459686279297,
+            "z0": 16.778648376464844,
+            "w10": 17.592422485351562,
+            "sigma_g": 0.0015950239030644298,
+            "sigma_r": 0.001066400669515133,
+            "sigma_z": 0.0013640053803101182,
+            "sigma_w1": 0.0075918762013316154,
+            "g": 18.440216064453125,
+            "r": 17.43541717529297,
+            "z": 16.849103927612305,
+            "w1": 17.60312843322754,
+            "snr_w1": 143.0128936767578
+          },
+          "quality_raw": {
+            "MASKBITS": 67584,
+            "RCHISQ_G": 5.0277910232543945,
+            "RCHISQ_R": 17.47368812561035,
+            "RCHISQ_Z": 5.032697677612305,
+            "FRACMASKED_G": 0.03811610862612724,
+            "FRACMASKED_R": 0.016145197674632072,
+            "FRACMASKED_Z": 0.004325222223997116
+          }
+        }
+      ],
+      "galactic_b": 25.147310199351736,
+      "old_latitude_scope": false,
+      "unique_decam": false,
+      "eligible": false,
+      "reasons": [
+        "no_unique_DECam_measurement"
+      ]
+    },
+    {
+      "name": "899282726338523648",
+      "source_id": "899282726338523648",
+      "member_system": "NGC_2419",
+      "reference_name": "NGC 2419",
+      "pmember": 0.99991,
+      "ra": 114.573389,
+      "dec": 38.884709,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39633057350681671",
+      "teff": 4945.373680333478,
+      "teff_error": 45.09139625579679,
+      "logg": 1.2312442070799405,
+      "snr": 26.95122528076172,
+      "feh_raw": -2.4088679222218623,
+      "feh_error": 0.08309428361329146,
+      "feh_corrected": null,
+      "abundance_calibration_valid": false,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11011,
+          "brickid": 538883,
+          "objid": 1152,
+          "grz_quality": true,
+          "w1_quality": false,
+          "ebv": 0.06113370880484581,
+          "ra": 114.57338903581892,
+          "dec": 38.88470929105091,
+          "photometry": {
+            "g0": 19.432968139648438,
+            "r0": 18.770475387573242,
+            "z0": 18.45831871032715,
+            "w10": null,
+            "sigma_g": 0.003822897793725133,
+            "sigma_r": 0.0030536679551005363,
+            "sigma_z": 0.0037435810081660748,
+            "sigma_w1": null,
+            "g": 19.629451751708984,
+            "r": 18.902830123901367,
+            "z": 18.532352447509766,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 73984,
+            "RCHISQ_G": 2.6775543689727783,
+            "RCHISQ_R": 5.659798622131348,
+            "RCHISQ_Z": 1.4723505973815918,
+            "FRACMASKED_G": 0.0,
+            "FRACMASKED_R": 0.0,
+            "FRACMASKED_Z": 0.0
+          }
+        }
+      ],
+      "galactic_b": 25.27080592119225,
+      "old_latitude_scope": false,
+      "unique_decam": false,
+      "eligible": false,
+      "reasons": [
+        "no_unique_DECam_measurement"
+      ]
+    },
+    {
+      "name": "899283069935903360",
+      "source_id": "899283069935903360",
+      "member_system": "NGC_2419",
+      "reference_name": "NGC 2419",
+      "pmember": 0.99982,
+      "ra": 114.482437,
+      "dec": 38.870393,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39633052632089009",
+      "teff": 4991.779958032357,
+      "teff_error": 118.8885533251677,
+      "logg": 2.1169175484785154,
+      "snr": 10.684478759765625,
+      "feh_raw": -2.0445986951156963,
+      "feh_error": 0.19367006165188388,
+      "feh_corrected": -2.247402095052181,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11011,
+          "brickid": 537758,
+          "objid": 458,
+          "grz_quality": true,
+          "w1_quality": false,
+          "ebv": 0.059947311878204346,
+          "ra": 114.482437167169,
+          "dec": 38.870393144374006,
+          "photometry": {
+            "g0": 19.21430778503418,
+            "r0": 18.451274871826172,
+            "z0": 18.042749404907227,
+            "w10": null,
+            "sigma_g": 0.0033493121154606342,
+            "sigma_r": 0.0024770856834948063,
+            "sigma_z": 0.0026793822180479765,
+            "sigma_w1": null,
+            "g": 19.406978607177734,
+            "r": 18.5810604095459,
+            "z": 18.115345001220703,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 75776,
+            "RCHISQ_G": 9.438291549682617,
+            "RCHISQ_R": 7.3912506103515625,
+            "RCHISQ_Z": 1.3346785306930542,
+            "FRACMASKED_G": 0.00043454248225316405,
+            "FRACMASKED_R": 7.875847950344905e-05,
+            "FRACMASKED_Z": 0.0
+          }
+        }
+      ],
+      "galactic_b": 25.19875171377602,
+      "old_latitude_scope": false,
+      "unique_decam": false,
+      "eligible": false,
+      "reasons": [
+        "no_unique_DECam_measurement"
+      ]
+    },
+    {
+      "name": "899283898866760960",
+      "source_id": "899283898866760960",
+      "member_system": "NGC_2419",
+      "reference_name": "NGC 2419",
+      "pmember": 0.99957,
+      "ra": 114.501694,
+      "dec": 38.944794,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39633057346490448",
+      "teff": 4881.875218854604,
+      "teff_error": 15.799114767188051,
+      "logg": 1.7686870706877769,
+      "snr": 80.24723052978516,
+      "feh_raw": -1.7128277593945263,
+      "feh_error": 0.02551425276074744,
+      "feh_corrected": null,
+      "abundance_calibration_valid": false,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11011,
+          "brickid": 538882,
+          "objid": 4764,
+          "grz_quality": true,
+          "w1_quality": false,
+          "ebv": 0.061111509799957275,
+          "ra": 114.50169389728035,
+          "dec": 38.944794025172584,
+          "photometry": {
+            "g0": 18.111858367919922,
+            "r0": 17.12644386291504,
+            "z0": 16.634180068969727,
+            "w10": null,
+            "sigma_g": 0.0016623144038021564,
+            "sigma_r": 0.0011197227286174893,
+            "sigma_z": 0.0010359113803133368,
+            "sigma_w1": null,
+            "g": 18.308269500732422,
+            "r": 17.258750915527344,
+            "z": 16.70818519592285,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 73728,
+            "RCHISQ_G": 14.8986177444458,
+            "RCHISQ_R": 33.657508850097656,
+            "RCHISQ_Z": 9.475924491882324,
+            "FRACMASKED_G": 1.1035808711312711e-05,
+            "FRACMASKED_R": 0.03884446620941162,
+            "FRACMASKED_Z": 0.00010349513468099758
+          }
+        }
+      ],
+      "galactic_b": 25.233101498691738,
+      "old_latitude_scope": false,
+      "unique_decam": false,
+      "eligible": false,
+      "reasons": [
+        "no_unique_DECam_measurement"
+      ]
+    },
+    {
+      "name": "899284444325230336",
+      "source_id": "899284444325230336",
+      "member_system": "NGC_2419",
+      "reference_name": "NGC 2419",
+      "pmember": 0.99854,
+      "ra": 114.602472,
+      "dec": 38.939822,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39633057350682106",
+      "teff": 4942.068812178142,
+      "teff_error": 30.778806845289125,
+      "logg": 2.163494601459064,
+      "snr": 31.31995391845703,
+      "feh_raw": -1.599225449903353,
+      "feh_error": 0.05085226085224013,
+      "feh_corrected": -1.838300350702566,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11011,
+          "brickid": 538883,
+          "objid": 1636,
+          "grz_quality": true,
+          "w1_quality": true,
+          "ebv": 0.06138506531715393,
+          "ra": 114.60247234674611,
+          "dec": 38.93982177038788,
+          "photometry": {
+            "g0": 18.25848388671875,
+            "r0": 17.29269790649414,
+            "z0": 16.751150131225586,
+            "w10": 17.572166442871094,
+            "sigma_g": 0.0018145089270547032,
+            "sigma_r": 0.0012369313044473529,
+            "sigma_z": 0.001104985480196774,
+            "sigma_w1": 0.007556681986898184,
+            "g": 18.45577621459961,
+            "r": 17.425596237182617,
+            "z": 16.82548713684082,
+            "w1": 17.583459854125977,
+            "snr_w1": 143.678955078125
+          },
+          "quality_raw": {
+            "MASKBITS": 0,
+            "RCHISQ_G": 4.268317222595215,
+            "RCHISQ_R": 15.828709602355957,
+            "RCHISQ_Z": 12.772290229797363,
+            "FRACMASKED_G": 0.030594458803534508,
+            "FRACMASKED_R": 0.058628201484680176,
+            "FRACMASKED_Z": 0.0005986132309772074
+          }
+        }
+      ],
+      "galactic_b": 25.307316189733427,
+      "old_latitude_scope": false,
+      "unique_decam": false,
+      "eligible": false,
+      "reasons": [
+        "no_unique_DECam_measurement"
+      ]
+    },
+    {
+      "name": "4418919712861243264",
+      "source_id": "4418919712861243264",
+      "member_system": "Pal_5",
+      "reference_name": "Pal 5",
+      "pmember": 1.0,
+      "ra": 229.036076,
+      "dec": -0.134247,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "2305843042134799640",
+      "teff": 4977.94111911632,
+      "teff_error": 13.487270171694826,
+      "logg": 2.4797940824108604,
+      "snr": 73.18223571777344,
+      "feh_raw": -0.9229105743413661,
+      "feh_error": 0.018081075066623886,
+      "feh_corrected": -1.1356080013663825,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11010,
+          "brickid": 329844,
+          "objid": 1208,
+          "grz_quality": false,
+          "w1_quality": false,
+          "ebv": 0.05621984973549843,
+          "ra": 229.03607605934977,
+          "dec": -0.1342466092134488,
+          "photometry": {
+            "g0": 16.191598892211914,
+            "r0": 15.365242958068848,
+            "z0": 14.900551795959473,
+            "w10": null,
+            "sigma_g": 0.0006778682582080364,
+            "sigma_r": 0.00032649171771481633,
+            "sigma_z": 0.0006878017447888851,
+            "sigma_w1": null,
+            "g": 16.372289657592773,
+            "r": 15.486959457397461,
+            "z": 14.968633651733398,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 75792,
+            "RCHISQ_G": 14.889891624450684,
+            "RCHISQ_R": 20.93284797668457,
+            "RCHISQ_Z": 7.952117919921875,
+            "FRACMASKED_G": 0.19699425995349884,
+            "FRACMASKED_R": 0.020437099039554596,
+            "FRACMASKED_Z": 0.5563795566558838
+          }
+        }
+      ],
+      "galactic_b": 45.834424711456734,
+      "old_latitude_scope": true,
+      "unique_decam": true,
+      "eligible": false,
+      "reasons": [
+        "fixed_grz_quality_failed"
+      ],
+      "selected_measurement": {
+        "release": 11010,
+        "brickid": 329844,
+        "objid": 1208,
+        "grz_quality": false,
+        "w1_quality": false,
+        "ebv": 0.05621984973549843,
+        "ra": 229.03607605934977,
+        "dec": -0.1342466092134488,
+        "photometry": {
+          "g0": 16.191598892211914,
+          "r0": 15.365242958068848,
+          "z0": 14.900551795959473,
+          "w10": null,
+          "sigma_g": 0.0006778682582080364,
+          "sigma_r": 0.00032649171771481633,
+          "sigma_z": 0.0006878017447888851,
+          "sigma_w1": null,
+          "g": 16.372289657592773,
+          "r": 15.486959457397461,
+          "z": 14.968633651733398,
+          "w1": null,
+          "snr_w1": null
+        },
+        "quality_raw": {
+          "MASKBITS": 75792,
+          "RCHISQ_G": 14.889891624450684,
+          "RCHISQ_R": 20.93284797668457,
+          "RCHISQ_Z": 7.952117919921875,
+          "FRACMASKED_G": 0.19699425995349884,
+          "FRACMASKED_R": 0.020437099039554596,
+          "FRACMASKED_Z": 0.5563795566558838
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": -0.5146831949443751
+    },
+    {
+      "name": "4418920846732620416",
+      "source_id": "4418920846732620416",
+      "member_system": "Pal_5",
+      "reference_name": "Pal 5",
+      "pmember": 0.99999,
+      "ra": 228.995352,
+      "dec": -0.088137,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "2305843042134800546",
+      "teff": 4957.401469038988,
+      "teff_error": 10.576340895641684,
+      "logg": 2.3671896233053915,
+      "snr": 90.91460418701172,
+      "feh_raw": -1.049041201573607,
+      "feh_error": 0.015063453297018001,
+      "feh_corrected": -1.2767118726772237,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11010,
+          "brickid": 331283,
+          "objid": 8725,
+          "grz_quality": false,
+          "w1_quality": false,
+          "ebv": 0.05478920415043831,
+          "ra": 228.99535159141982,
+          "dec": -0.08813693105526771,
+          "photometry": {
+            "g0": 15.858489036560059,
+            "r0": 14.996720314025879,
+            "z0": 14.514793395996094,
+            "w10": null,
+            "sigma_g": 0.00042113562813028693,
+            "sigma_r": 0.0002711770648602396,
+            "sigma_z": 0.0007064843084663153,
+            "sigma_w1": null,
+            "g": 16.034582138061523,
+            "r": 15.115338325500488,
+            "z": 14.58114242553711,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 75792,
+            "RCHISQ_G": 34.491092681884766,
+            "RCHISQ_R": 25.390235900878906,
+            "RCHISQ_Z": 25.518077850341797,
+            "FRACMASKED_G": 0.04398307204246521,
+            "FRACMASKED_R": 0.021319327875971794,
+            "FRACMASKED_Z": 0.6074109077453613
+          }
+        }
+      ],
+      "galactic_b": 45.8954184389591,
+      "old_latitude_scope": true,
+      "unique_decam": true,
+      "eligible": false,
+      "reasons": [
+        "fixed_grz_quality_failed"
+      ],
+      "selected_measurement": {
+        "release": 11010,
+        "brickid": 331283,
+        "objid": 8725,
+        "grz_quality": false,
+        "w1_quality": false,
+        "ebv": 0.05478920415043831,
+        "ra": 228.99535159141982,
+        "dec": -0.08813693105526771,
+        "photometry": {
+          "g0": 15.858489036560059,
+          "r0": 14.996720314025879,
+          "z0": 14.514793395996094,
+          "w10": null,
+          "sigma_g": 0.00042113562813028693,
+          "sigma_r": 0.0002711770648602396,
+          "sigma_z": 0.0007064843084663153,
+          "sigma_w1": null,
+          "g": 16.034582138061523,
+          "r": 15.115338325500488,
+          "z": 14.58114242553711,
+          "w1": null,
+          "snr_w1": null
+        },
+        "quality_raw": {
+          "MASKBITS": 75792,
+          "RCHISQ_G": 34.491092681884766,
+          "RCHISQ_R": 25.390235900878906,
+          "RCHISQ_Z": 25.518077850341797,
+          "FRACMASKED_G": 0.04398307204246521,
+          "FRACMASKED_R": 0.021319327875971794,
+          "FRACMASKED_Z": 0.6074109077453613
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": -0.8477930505962306
+    },
+    {
+      "name": "4464703441466064512",
+      "source_id": "4464703441466064512",
+      "member_system": "Pal_14",
+      "reference_name": "Pal 14",
+      "pmember": 0.99999,
+      "ra": 242.774135,
+      "dec": 14.962464,
+      "type_source": "DESI DR1 MWS RVS",
+      "targetid": "39628147343232961",
+      "teff": 4874.7362800537485,
+      "teff_error": 27.119787370801987,
+      "logg": 2.279899134692556,
+      "snr": 33.417816162109375,
+      "feh_raw": -0.8032818525232137,
+      "feh_error": 0.034884798459867646,
+      "feh_corrected": -1.0947790130803583,
+      "abundance_calibration_valid": true,
+      "phase": "unknown",
+      "n_qualified_spectra": 1,
+      "historical_diagnostic": false,
+      "measurements": [
+        {
+          "release": 11010,
+          "brickid": 416822,
+          "objid": 4387,
+          "grz_quality": true,
+          "w1_quality": false,
+          "ebv": 0.03441719338297844,
+          "ra": 242.77413539714485,
+          "dec": 14.962464220882792,
+          "photometry": {
+            "g0": 17.796106338500977,
+            "r0": 16.693262100219727,
+            "z0": 16.081052780151367,
+            "w10": null,
+            "sigma_g": 0.001348397578112781,
+            "sigma_r": 0.0009300847304984927,
+            "sigma_z": 0.0005906102596782148,
+            "sigma_w1": null,
+            "g": 17.906723022460938,
+            "r": 16.76777458190918,
+            "z": 16.122732162475586,
+            "w1": null,
+            "snr_w1": null
+          },
+          "quality_raw": {
+            "MASKBITS": 73728,
+            "RCHISQ_G": 8.45704460144043,
+            "RCHISQ_R": 8.382019996643066,
+            "RCHISQ_Z": 4.670882701873779,
+            "FRACMASKED_G": 0.0005355393514037132,
+            "FRACMASKED_R": 0.0011095827212557197,
+            "FRACMASKED_Z": 0.001149393618106842
+          }
+        }
+      ],
+      "galactic_b": 42.17416464597092,
+      "old_latitude_scope": true,
+      "unique_decam": true,
+      "eligible": true,
+      "reasons": [],
+      "selected_measurement": {
+        "release": 11010,
+        "brickid": 416822,
+        "objid": 4387,
+        "grz_quality": true,
+        "w1_quality": false,
+        "ebv": 0.03441719338297844,
+        "ra": 242.77413539714485,
+        "dec": 14.962464220882792,
+        "photometry": {
+          "g0": 17.796106338500977,
+          "r0": 16.693262100219727,
+          "z0": 16.081052780151367,
+          "w10": null,
+          "sigma_g": 0.001348397578112781,
+          "sigma_r": 0.0009300847304984927,
+          "sigma_z": 0.0005906102596782148,
+          "sigma_w1": null,
+          "g": 17.906723022460938,
+          "r": 16.76777458190918,
+          "z": 16.122732162475586,
+          "w1": null,
+          "snr_w1": null
+        },
+        "quality_raw": {
+          "MASKBITS": 73728,
+          "RCHISQ_G": 8.45704460144043,
+          "RCHISQ_R": 8.382019996643066,
+          "RCHISQ_Z": 4.670882701873779,
+          "FRACMASKED_G": 0.0005355393514037132,
+          "FRACMASKED_R": 0.0011095827212557197,
+          "FRACMASKED_Z": 0.001149393618106842
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": -1.537663067053316
+    },
+    {
+      "name": "1272",
+      "source_id": "6743705314561613568",
+      "member_system": "Terzan_7",
+      "reference_name": "Ter 7",
+      "pmember": 0.99989,
+      "ra": 289.4047014019609,
+      "dec": -34.653451823444975,
+      "teff": 4421,
+      "type_source": "Sbordone2005 B-V temperature; low gravity/RV",
+      "phase": "unknown",
+      "historical_diagnostic": true,
+      "measurements": [
+        {
+          "release": 11010,
+          "grz_quality": true,
+          "w1_quality": true,
+          "ebv": 0.08620594441890717,
+          "photometry": {
+            "g": 17.216554641723633,
+            "r": 16.17524528503418,
+            "z": 15.631705284118652,
+            "w1": 16.24156379699707,
+            "g0": 16.939489364624023,
+            "r0": 15.988608360290527,
+            "z0": 15.52730941772461,
+            "w10": 16.2257022857666,
+            "sigma_g": 0.0007888267864473164,
+            "sigma_r": 0.0006151789566501975,
+            "sigma_z": 0.00044177015661261976,
+            "sigma_w1": 0.003447894938290119
+          },
+          "quality_raw": {
+            "MASKBITS": 65536,
+            "NOBS_G": 4,
+            "NOBS_R": 3,
+            "NOBS_Z": 7,
+            "FRACMASKED_G": 5.3846673836233094e-05,
+            "FRACMASKED_R": 2.9644001187989488e-05,
+            "FRACMASKED_Z": 0.2691234350204468,
+            "FRACIN_G": 0.9998857378959656,
+            "FRACIN_R": 0.9998849034309387,
+            "FRACIN_Z": 0.9997920393943787,
+            "FRACFLUX_G": 0.0006342097767628729,
+            "FRACFLUX_R": 0.00037981109926477075,
+            "FRACFLUX_Z": 2.357793528062757e-05,
+            "RCHISQ_G": 12.08303165435791,
+            "RCHISQ_R": 70.0989990234375,
+            "RCHISQ_Z": 14.400872230529785,
+            "WISEMASK_W1": 0,
+            "FRACFLUX_W1": 0.03803432360291481
+          }
+        }
+      ],
+      "galactic_b": -20.043217105923418,
+      "old_latitude_scope": false,
+      "unique_decam": true,
+      "eligible": true,
+      "reasons": [],
+      "selected_measurement": {
+        "release": 11010,
+        "grz_quality": true,
+        "w1_quality": true,
+        "ebv": 0.08620594441890717,
+        "photometry": {
+          "g": 17.216554641723633,
+          "r": 16.17524528503418,
+          "z": 15.631705284118652,
+          "w1": 16.24156379699707,
+          "g0": 16.939489364624023,
+          "r0": 15.988608360290527,
+          "z0": 15.52730941772461,
+          "w10": 16.2257022857666,
+          "sigma_g": 0.0007888267864473164,
+          "sigma_r": 0.0006151789566501975,
+          "sigma_z": 0.00044177015661261976,
+          "sigma_w1": 0.003447894938290119
+        },
+        "quality_raw": {
+          "MASKBITS": 65536,
+          "NOBS_G": 4,
+          "NOBS_R": 3,
+          "NOBS_Z": 7,
+          "FRACMASKED_G": 5.3846673836233094e-05,
+          "FRACMASKED_R": 2.9644001187989488e-05,
+          "FRACMASKED_Z": 0.2691234350204468,
+          "FRACIN_G": 0.9998857378959656,
+          "FRACIN_R": 0.9998849034309387,
+          "FRACIN_Z": 0.9997920393943787,
+          "FRACFLUX_G": 0.0006342097767628729,
+          "FRACFLUX_R": 0.00037981109926477075,
+          "FRACFLUX_Z": 2.357793528062757e-05,
+          "RCHISQ_G": 12.08303165435791,
+          "RCHISQ_R": 70.0989990234375,
+          "RCHISQ_Z": 14.400872230529785,
+          "WISEMASK_W1": 0,
+          "FRACFLUX_W1": 0.03803432360291481
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": 0.013424829201749588
+    },
+    {
+      "name": "1282",
+      "source_id": "6743705108403179904",
+      "member_system": "Terzan_7",
+      "reference_name": "Ter 7",
+      "pmember": 0.99998,
+      "ra": 289.4139960965265,
+      "dec": -34.65180113234525,
+      "teff": 4203,
+      "type_source": "Sbordone2005 B-V temperature; low gravity/RV",
+      "phase": "unknown",
+      "historical_diagnostic": true,
+      "measurements": [
+        {
+          "release": 11010,
+          "grz_quality": true,
+          "w1_quality": true,
+          "ebv": 0.08703003078699112,
+          "photometry": {
+            "g": 16.70892333984375,
+            "r": 15.503040313720703,
+            "z": 14.84464168548584,
+            "w1": 15.255958557128906,
+            "g0": 16.429208755493164,
+            "r0": 15.314620018005371,
+            "z0": 14.739249229431152,
+            "w10": 15.239944458007812,
+            "sigma_g": 0.00061370141338557,
+            "sigma_r": 0.0004341178573668003,
+            "sigma_z": 0.0002927608438767493,
+            "sigma_w1": 0.001967919524759054
+          },
+          "quality_raw": {
+            "MASKBITS": 67584,
+            "NOBS_G": 4,
+            "NOBS_R": 3,
+            "NOBS_Z": 7,
+            "FRACMASKED_G": 0.0,
+            "FRACMASKED_R": 0.0,
+            "FRACMASKED_Z": 0.24775679409503937,
+            "FRACIN_G": 0.9999999403953552,
+            "FRACIN_R": 1.0000001192092896,
+            "FRACIN_Z": 1.0,
+            "FRACFLUX_G": 0.0009971903637051582,
+            "FRACFLUX_R": 0.00044426953536458313,
+            "FRACFLUX_Z": 0.0014638268621638417,
+            "RCHISQ_G": 36.09923553466797,
+            "RCHISQ_R": 123.6772232055664,
+            "RCHISQ_Z": 25.936750411987305,
+            "WISEMASK_W1": 0,
+            "FRACFLUX_W1": 0.03581242263317108
+          }
+        }
+      ],
+      "galactic_b": -20.049855816205792,
+      "old_latitude_scope": false,
+      "unique_decam": true,
+      "eligible": true,
+      "reasons": [],
+      "selected_measurement": {
+        "release": 11010,
+        "grz_quality": true,
+        "w1_quality": true,
+        "ebv": 0.08703003078699112,
+        "photometry": {
+          "g": 16.70892333984375,
+          "r": 15.503040313720703,
+          "z": 14.84464168548584,
+          "w1": 15.255958557128906,
+          "g0": 16.429208755493164,
+          "r0": 15.314620018005371,
+          "z0": 14.739249229431152,
+          "w10": 15.239944458007812,
+          "sigma_g": 0.00061370141338557,
+          "sigma_r": 0.0004341178573668003,
+          "sigma_z": 0.0002927608438767493,
+          "sigma_w1": 0.001967919524759054
+        },
+        "quality_raw": {
+          "MASKBITS": 67584,
+          "NOBS_G": 4,
+          "NOBS_R": 3,
+          "NOBS_Z": 7,
+          "FRACMASKED_G": 0.0,
+          "FRACMASKED_R": 0.0,
+          "FRACMASKED_Z": 0.24775679409503937,
+          "FRACIN_G": 0.9999999403953552,
+          "FRACIN_R": 1.0000001192092896,
+          "FRACIN_Z": 1.0,
+          "FRACFLUX_G": 0.0009971903637051582,
+          "FRACFLUX_R": 0.00044426953536458313,
+          "FRACFLUX_Z": 0.0014638268621638417,
+          "RCHISQ_G": 36.09923553466797,
+          "RCHISQ_R": 123.6772232055664,
+          "RCHISQ_Z": 25.936750411987305,
+          "WISEMASK_W1": 0,
+          "FRACFLUX_W1": 0.03581242263317108
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": -0.4968557799291098
+    },
+    {
+      "name": "1515",
+      "source_id": "6743705108403181312",
+      "member_system": "Terzan_7",
+      "reference_name": "Ter 7",
+      "pmember": 0.99994,
+      "ra": 289.409044987143,
+      "dec": -34.654766388859635,
+      "teff": 4468,
+      "type_source": "Sbordone2005 B-V temperature; low gravity/RV",
+      "phase": "unknown",
+      "historical_diagnostic": true,
+      "measurements": [
+        {
+          "release": 11010,
+          "grz_quality": true,
+          "w1_quality": true,
+          "ebv": 0.08683763444423676,
+          "photometry": {
+            "g": 17.337383270263672,
+            "r": 16.31361198425293,
+            "z": 15.789849281311035,
+            "w1": 16.216995239257812,
+            "g0": 17.058286666870117,
+            "r0": 16.1256103515625,
+            "z0": 15.684688568115234,
+            "w10": 16.201017379760742,
+            "sigma_g": 0.0008367107948288321,
+            "sigma_r": 0.0006494427798315883,
+            "sigma_z": 0.000477022462291643,
+            "sigma_w1": 0.0031929167453199625
+          },
+          "quality_raw": {
+            "MASKBITS": 65536,
+            "NOBS_G": 4,
+            "NOBS_R": 3,
+            "NOBS_Z": 7,
+            "FRACMASKED_G": 8.164507016772404e-05,
+            "FRACMASKED_R": 4.4429780245991424e-05,
+            "FRACMASKED_Z": 0.21658432483673096,
+            "FRACIN_G": 0.9999929070472717,
+            "FRACIN_R": 0.9999958872795105,
+            "FRACIN_Z": 0.9999908208847046,
+            "FRACFLUX_G": 0.0006077035213820636,
+            "FRACFLUX_R": 0.00023240876907948405,
+            "FRACFLUX_Z": 0.0017199984285980463,
+            "RCHISQ_G": 14.326604843139648,
+            "RCHISQ_R": 63.67632293701172,
+            "RCHISQ_Z": 11.295748710632324,
+            "WISEMASK_W1": 0,
+            "FRACFLUX_W1": 0.18673141300678253
+          }
+        }
+      ],
+      "galactic_b": -20.047024169621835,
+      "old_latitude_scope": false,
+      "unique_decam": true,
+      "eligible": true,
+      "reasons": [],
+      "selected_measurement": {
+        "release": 11010,
+        "grz_quality": true,
+        "w1_quality": true,
+        "ebv": 0.08683763444423676,
+        "photometry": {
+          "g": 17.337383270263672,
+          "r": 16.31361198425293,
+          "z": 15.789849281311035,
+          "w1": 16.216995239257812,
+          "g0": 17.058286666870117,
+          "r0": 16.1256103515625,
+          "z0": 15.684688568115234,
+          "w10": 16.201017379760742,
+          "sigma_g": 0.0008367107948288321,
+          "sigma_r": 0.0006494427798315883,
+          "sigma_z": 0.000477022462291643,
+          "sigma_w1": 0.0031929167453199625
+        },
+        "quality_raw": {
+          "MASKBITS": 65536,
+          "NOBS_G": 4,
+          "NOBS_R": 3,
+          "NOBS_Z": 7,
+          "FRACMASKED_G": 8.164507016772404e-05,
+          "FRACMASKED_R": 4.4429780245991424e-05,
+          "FRACMASKED_Z": 0.21658432483673096,
+          "FRACIN_G": 0.9999929070472717,
+          "FRACIN_R": 0.9999958872795105,
+          "FRACIN_Z": 0.9999908208847046,
+          "FRACFLUX_G": 0.0006077035213820636,
+          "FRACFLUX_R": 0.00023240876907948405,
+          "FRACFLUX_Z": 0.0017199984285980463,
+          "RCHISQ_G": 14.326604843139648,
+          "RCHISQ_R": 63.67632293701172,
+          "RCHISQ_Z": 11.295748710632324,
+          "WISEMASK_W1": 0,
+          "FRACFLUX_W1": 0.18673141300678253
+        }
+      },
+      "old_dust_scope": false,
+      "Mg_ref": 0.13222213144784334
+    }
+  ],
+  "systems": {
+    "NGC_104_47Tuc": {
+      "probable_members": 110299,
+      "core_members": 107056,
+      "reference_name": "NGC 104",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_288": {
+      "probable_members": 10966,
+      "core_members": 10591,
+      "reference_name": "NGC 288",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_362": {
+      "probable_members": 14239,
+      "core_members": 13499,
+      "reference_name": "NGC 362",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Whiting_1": {
+      "probable_members": 41,
+      "core_members": 36,
+      "reference_name": "Whiting 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_1261": {
+      "probable_members": 4889,
+      "core_members": 4422,
+      "reference_name": "NGC 1261",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_1": {
+      "probable_members": 126,
+      "core_members": 108,
+      "reference_name": "Pal 1",
+      "mws_member_spectra": 1,
+      "reliable_giant_spectra": 1,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "AM_1": {
+      "probable_members": 58,
+      "core_members": 57,
+      "reference_name": "AM 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Eridanus": {
+      "probable_members": 44,
+      "core_members": 43,
+      "reference_name": "Eridanus",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_2": {
+      "probable_members": 469,
+      "core_members": 377,
+      "reference_name": "Pal 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_1851": {
+      "probable_members": 10540,
+      "core_members": 9943,
+      "reference_name": "NGC 1851",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_1904_M_79": {
+      "probable_members": 6610,
+      "core_members": 6163,
+      "reference_name": "NGC 1904",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_2298": {
+      "probable_members": 3291,
+      "core_members": 3165,
+      "reference_name": "NGC 2298",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_2419": {
+      "probable_members": 1563,
+      "core_members": 1441,
+      "reference_name": "NGC 2419",
+      "mws_member_spectra": 35,
+      "reliable_giant_spectra": 18,
+      "K_spectra": 5,
+      "unique_K_members": 5
+    },
+    "Ko_2": {
+      "probable_members": 7,
+      "core_members": 6,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pyxis": {
+      "probable_members": 130,
+      "core_members": 114,
+      "reference_name": "Pyxis",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_2808": {
+      "probable_members": 19088,
+      "core_members": 17475,
+      "reference_name": "NGC 2808",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "E_3": {
+      "probable_members": 459,
+      "core_members": 425,
+      "reference_name": "E 3",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_3": {
+      "probable_members": 61,
+      "core_members": 60,
+      "reference_name": "Pal 3",
+      "mws_member_spectra": 2,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_3201": {
+      "probable_members": 32493,
+      "core_members": 32198,
+      "reference_name": "NGC 3201",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "ESO_93-8": {
+      "probable_members": 207,
+      "core_members": 78,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_4": {
+      "probable_members": 96,
+      "core_members": 95,
+      "reference_name": "Pal 4",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Crater": {
+      "probable_members": 16,
+      "core_members": 14,
+      "reference_name": "Crater",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Bliss_1": {
+      "probable_members": 10,
+      "core_members": 9,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Ko_1": {
+      "probable_members": 6,
+      "core_members": 6,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_4147": {
+      "probable_members": 1210,
+      "core_members": 1129,
+      "reference_name": "NGC 4147",
+      "mws_member_spectra": 2,
+      "reliable_giant_spectra": 1,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_4372": {
+      "probable_members": 22644,
+      "core_members": 19749,
+      "reference_name": "NGC 4372",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Rup_106": {
+      "probable_members": 824,
+      "core_members": 687,
+      "reference_name": "Rup 106",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_4590_M_68": {
+      "probable_members": 8491,
+      "core_members": 8094,
+      "reference_name": "NGC 4590",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "BH_140": {
+      "probable_members": 6126,
+      "core_members": 5706,
+      "reference_name": "BH 140",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_4833": {
+      "probable_members": 13279,
+      "core_members": 8769,
+      "reference_name": "NGC 4833",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5024_M_53": {
+      "probable_members": 9826,
+      "core_members": 9512,
+      "reference_name": "NGC 5024",
+      "mws_member_spectra": 145,
+      "reliable_giant_spectra": 12,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5053": {
+      "probable_members": 2750,
+      "core_members": 2694,
+      "reference_name": "NGC 5053",
+      "mws_member_spectra": 66,
+      "reliable_giant_spectra": 7,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Kim_3": {
+      "probable_members": 9,
+      "core_members": 8,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5139_oCen": {
+      "probable_members": 161656,
+      "core_members": 156530,
+      "reference_name": "NGC 5139",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5272_M_3": {
+      "probable_members": 25395,
+      "core_members": 24778,
+      "reference_name": "NGC 5272",
+      "mws_member_spectra": 143,
+      "reliable_giant_spectra": 5,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5286": {
+      "probable_members": 6777,
+      "core_members": 6067,
+      "reference_name": "NGC 5286",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "AM_4": {
+      "probable_members": 8,
+      "core_members": 4,
+      "reference_name": "AM 4",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5466": {
+      "probable_members": 4918,
+      "core_members": 4761,
+      "reference_name": "NGC 5466",
+      "mws_member_spectra": 50,
+      "reliable_giant_spectra": 10,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5634": {
+      "probable_members": 1403,
+      "core_members": 1349,
+      "reference_name": "NGC 5634",
+      "mws_member_spectra": 39,
+      "reliable_giant_spectra": 10,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5694": {
+      "probable_members": 642,
+      "core_members": 600,
+      "reference_name": "NGC 5694",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "IC_4499": {
+      "probable_members": 2407,
+      "core_members": 2188,
+      "reference_name": "IC 4499",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Munoz_1": {
+      "probable_members": 6,
+      "core_members": 4,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5824": {
+      "probable_members": 1876,
+      "core_members": 1597,
+      "reference_name": "NGC 5824",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_5": {
+      "probable_members": 490,
+      "core_members": 423,
+      "reference_name": "Pal 5",
+      "mws_member_spectra": 65,
+      "reliable_giant_spectra": 15,
+      "K_spectra": 2,
+      "unique_K_members": 2
+    },
+    "NGC_5897": {
+      "probable_members": 6893,
+      "core_members": 6524,
+      "reference_name": "NGC 5897",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5904_M_5": {
+      "probable_members": 24602,
+      "core_members": 24260,
+      "reference_name": "NGC 5904",
+      "mws_member_spectra": 931,
+      "reliable_giant_spectra": 17,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5927": {
+      "probable_members": 9093,
+      "core_members": 2616,
+      "reference_name": "NGC 5927",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5946": {
+      "probable_members": 1538,
+      "core_members": 668,
+      "reference_name": "NGC 5946",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "BH_176": {
+      "probable_members": 355,
+      "core_members": 130,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_5986": {
+      "probable_members": 5930,
+      "core_members": 3931,
+      "reference_name": "NGC 5986",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "FSR_1716": {
+      "probable_members": 534,
+      "core_members": 320,
+      "reference_name": "FSR 1716",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_14": {
+      "probable_members": 95,
+      "core_members": 85,
+      "reference_name": "Pal 14",
+      "mws_member_spectra": 5,
+      "reliable_giant_spectra": 1,
+      "K_spectra": 1,
+      "unique_K_members": 1
+    },
+    "Lynga_7_BH184": {
+      "probable_members": 1849,
+      "core_members": 728,
+      "reference_name": "Lynga 7",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6093_M_80": {
+      "probable_members": 4734,
+      "core_members": 3849,
+      "reference_name": "NGC 6093",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Ryu_059_RLGC1": {
+      "probable_members": 80,
+      "core_members": 68,
+      "reference_name": "RLGC 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6121_M_4": {
+      "probable_members": 26352,
+      "core_members": 26109,
+      "reference_name": "NGC 6121",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6101": {
+      "probable_members": 7836,
+      "core_members": 7272,
+      "reference_name": "NGC 6101",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6144": {
+      "probable_members": 3852,
+      "core_members": 3168,
+      "reference_name": "NGC 6144",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6139": {
+      "probable_members": 2725,
+      "core_members": 1727,
+      "reference_name": "NGC 6139",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_3": {
+      "probable_members": 2152,
+      "core_members": 1444,
+      "reference_name": "Ter 3",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6171_M107": {
+      "probable_members": 8503,
+      "core_members": 7999,
+      "reference_name": "NGC 6171",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "ESO452_SC11": {
+      "probable_members": 271,
+      "core_members": 189,
+      "reference_name": "ESO 452",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6205_M_13": {
+      "probable_members": 32244,
+      "core_members": 31035,
+      "reference_name": "NGC 6205",
+      "mws_member_spectra": 695,
+      "reliable_giant_spectra": 8,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6229": {
+      "probable_members": 1170,
+      "core_members": 1046,
+      "reference_name": "NGC 6229",
+      "mws_member_spectra": 1,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6218_M_12": {
+      "probable_members": 17758,
+      "core_members": 16974,
+      "reference_name": "NGC 6218",
+      "mws_member_spectra": 29,
+      "reliable_giant_spectra": 3,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "FSR_1735": {
+      "probable_members": 174,
+      "core_members": 110,
+      "reference_name": "FSR 1735",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6235": {
+      "probable_members": 1803,
+      "core_members": 1448,
+      "reference_name": "NGC 6235",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6254_M_10": {
+      "probable_members": 22441,
+      "core_members": 20982,
+      "reference_name": "NGC 6254",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6256": {
+      "probable_members": 800,
+      "core_members": 441,
+      "reference_name": "NGC 6256",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_15": {
+      "probable_members": 152,
+      "core_members": 119,
+      "reference_name": "Pal 15",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6266_M_62": {
+      "probable_members": 12752,
+      "core_members": 4354,
+      "reference_name": "NGC 6266",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6273_M_19": {
+      "probable_members": 9886,
+      "core_members": 7700,
+      "reference_name": "NGC 6273",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6284": {
+      "probable_members": 1494,
+      "core_members": 766,
+      "reference_name": "NGC 6284",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6287": {
+      "probable_members": 2999,
+      "core_members": 2161,
+      "reference_name": "NGC 6287",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6293": {
+      "probable_members": 2042,
+      "core_members": 1070,
+      "reference_name": "NGC 6293",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6304": {
+      "probable_members": 1703,
+      "core_members": 845,
+      "reference_name": "NGC 6304",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6316": {
+      "probable_members": 766,
+      "core_members": 345,
+      "reference_name": "NGC 6316",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6341_M_92": {
+      "probable_members": 15282,
+      "core_members": 14447,
+      "reference_name": "NGC 6341",
+      "mws_member_spectra": 244,
+      "reliable_giant_spectra": 3,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6325": {
+      "probable_members": 1036,
+      "core_members": 840,
+      "reference_name": "NGC 6325",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6333_M_9": {
+      "probable_members": 6191,
+      "core_members": 2335,
+      "reference_name": "NGC 6333",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6342": {
+      "probable_members": 1856,
+      "core_members": 810,
+      "reference_name": "NGC 6342",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6356": {
+      "probable_members": 2241,
+      "core_members": 936,
+      "reference_name": "NGC 6356",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6355": {
+      "probable_members": 1038,
+      "core_members": 645,
+      "reference_name": "NGC 6355",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6352": {
+      "probable_members": 8376,
+      "core_members": 4651,
+      "reference_name": "NGC 6352",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "IC_1257": {
+      "probable_members": 133,
+      "core_members": 118,
+      "reference_name": "IC 1257",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_2_HP_3": {
+      "probable_members": 312,
+      "core_members": 161,
+      "reference_name": "Ter 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6366": {
+      "probable_members": 9305,
+      "core_members": 8362,
+      "reference_name": "NGC 6366",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_4_HP_4": {
+      "probable_members": 238,
+      "core_members": 103,
+      "reference_name": "Ter 4",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "HP_1_BH_229": {
+      "probable_members": 522,
+      "core_members": 454,
+      "reference_name": "HP 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "FSR_1758": {
+      "probable_members": 2024,
+      "core_members": 1640,
+      "reference_name": "FSR 1758",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6362": {
+      "probable_members": 16155,
+      "core_members": 15176,
+      "reference_name": "NGC 6362",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Liller_1": {
+      "probable_members": 83,
+      "core_members": 41,
+      "reference_name": "Liller 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6380_Ton1": {
+      "probable_members": 961,
+      "core_members": 598,
+      "reference_name": "NGC 6380",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_1_HP_2": {
+      "probable_members": 722,
+      "core_members": 314,
+      "reference_name": "Ter 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Ton2_Pismis26": {
+      "probable_members": 807,
+      "core_members": 707,
+      "reference_name": "Ton 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6388": {
+      "probable_members": 5150,
+      "core_members": 2209,
+      "reference_name": "NGC 6388",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6402_M_14": {
+      "probable_members": 9341,
+      "core_members": 7491,
+      "reference_name": "NGC 6402",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6401": {
+      "probable_members": 646,
+      "core_members": 450,
+      "reference_name": "NGC 6401",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6397": {
+      "probable_members": 35807,
+      "core_members": 35247,
+      "reference_name": "NGC 6397",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "VVV_CL002": {
+      "probable_members": 14,
+      "core_members": 14,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_6": {
+      "probable_members": 479,
+      "core_members": 355,
+      "reference_name": "Pal 6",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6426": {
+      "probable_members": 682,
+      "core_members": 556,
+      "reference_name": "NGC 6426",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Djorg_1": {
+      "probable_members": 211,
+      "core_members": 90,
+      "reference_name": "Djor 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_5_11": {
+      "probable_members": 1191,
+      "core_members": 463,
+      "reference_name": "Ter 5",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6440": {
+      "probable_members": 1301,
+      "core_members": 703,
+      "reference_name": "NGC 6440",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6441": {
+      "probable_members": 2955,
+      "core_members": 1278,
+      "reference_name": "NGC 6441",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_6_HP_5": {
+      "probable_members": 239,
+      "core_members": 96,
+      "reference_name": "Ter 6",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6453": {
+      "probable_members": 433,
+      "core_members": 228,
+      "reference_name": "NGC 6453",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "UKS_1": {
+      "probable_members": 109,
+      "core_members": 19,
+      "reference_name": "UKS 1",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "VVV_CL001": {
+      "probable_members": 24,
+      "core_members": 8,
+      "reference_name": "VVV-CL001",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Gran_1": {
+      "probable_members": 78,
+      "core_members": 45,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pfleiderer_2": {
+      "probable_members": 155,
+      "core_members": 72,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6496": {
+      "probable_members": 3490,
+      "core_members": 2737,
+      "reference_name": "NGC 6496",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_9": {
+      "probable_members": 427,
+      "core_members": 216,
+      "reference_name": "Ter 9",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Djorg_2_ESO456": {
+      "probable_members": 63,
+      "core_members": 23,
+      "reference_name": "Djor 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6517": {
+      "probable_members": 1373,
+      "core_members": 873,
+      "reference_name": "NGC 6517",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_10": {
+      "probable_members": 245,
+      "core_members": 155,
+      "reference_name": "Ter 10",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6522": {
+      "probable_members": 553,
+      "core_members": 402,
+      "reference_name": "NGC 6522",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6535": {
+      "probable_members": 1250,
+      "core_members": 995,
+      "reference_name": "NGC 6535",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6528": {
+      "probable_members": 235,
+      "core_members": 114,
+      "reference_name": "NGC 6528",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6539": {
+      "probable_members": 2240,
+      "core_members": 1949,
+      "reference_name": "NGC 6539",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6540_Djorg": {
+      "probable_members": 116,
+      "core_members": 57,
+      "reference_name": "NGC 6540",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6544": {
+      "probable_members": 9379,
+      "core_members": 9097,
+      "reference_name": "NGC 6544",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6541": {
+      "probable_members": 11471,
+      "core_members": 9399,
+      "reference_name": "NGC 6541",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "ESO280_SC06": {
+      "probable_members": 127,
+      "core_members": 67,
+      "reference_name": "ESO 280",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6553": {
+      "probable_members": 2758,
+      "core_members": 1469,
+      "reference_name": "NGC 6553",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6558": {
+      "probable_members": 296,
+      "core_members": 119,
+      "reference_name": "NGC 6558",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "IC_1276_Pal_7": {
+      "probable_members": 5776,
+      "core_members": 2714,
+      "reference_name": "IC 1276",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_12": {
+      "probable_members": 444,
+      "core_members": 373,
+      "reference_name": "Ter 12",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6569": {
+      "probable_members": 1439,
+      "core_members": 857,
+      "reference_name": "NGC 6569",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "BH_261_AL_3": {
+      "probable_members": 123,
+      "core_members": 77,
+      "reference_name": "BH 261",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6584": {
+      "probable_members": 3312,
+      "core_members": 2614,
+      "reference_name": "NGC 6584",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Mercer_5": {
+      "probable_members": 41,
+      "core_members": 21,
+      "reference_name": "Mercer 5",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6624": {
+      "probable_members": 1444,
+      "core_members": 723,
+      "reference_name": "NGC 6624",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6626_M_28": {
+      "probable_members": 5054,
+      "core_members": 3395,
+      "reference_name": "NGC 6626",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6638": {
+      "probable_members": 688,
+      "core_members": 326,
+      "reference_name": "NGC 6638",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6637_M_69": {
+      "probable_members": 2640,
+      "core_members": 1700,
+      "reference_name": "NGC 6637",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6642": {
+      "probable_members": 640,
+      "core_members": 322,
+      "reference_name": "NGC 6642",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6652": {
+      "probable_members": 1680,
+      "core_members": 1323,
+      "reference_name": "NGC 6652",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6656_M_22": {
+      "probable_members": 36333,
+      "core_members": 35296,
+      "reference_name": "NGC 6656",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_8": {
+      "probable_members": 892,
+      "core_members": 438,
+      "reference_name": "Pal 8",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6681_M_70": {
+      "probable_members": 3759,
+      "core_members": 2544,
+      "reference_name": "NGC 6681",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Ryu_879_RLGC2": {
+      "probable_members": 37,
+      "core_members": 14,
+      "reference_name": "RLGC 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6712": {
+      "probable_members": 2884,
+      "core_members": 2465,
+      "reference_name": "NGC 6712",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6715_M_54": {
+      "probable_members": 5594,
+      "core_members": 4187,
+      "reference_name": "NGC 6715",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6717_Pal9": {
+      "probable_members": 1377,
+      "core_members": 889,
+      "reference_name": "NGC 6717",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6723": {
+      "probable_members": 8818,
+      "core_members": 7487,
+      "reference_name": "NGC 6723",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6749": {
+      "probable_members": 2497,
+      "core_members": 1018,
+      "reference_name": "NGC 6749",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6752": {
+      "probable_members": 41180,
+      "core_members": 39286,
+      "reference_name": "NGC 6752",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6760": {
+      "probable_members": 2508,
+      "core_members": 1068,
+      "reference_name": "NGC 6760",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6779_M_56": {
+      "probable_members": 6573,
+      "core_members": 6031,
+      "reference_name": "NGC 6779",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_7": {
+      "probable_members": 392,
+      "core_members": 297,
+      "reference_name": "Ter 7",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_10": {
+      "probable_members": 759,
+      "core_members": 459,
+      "reference_name": "Pal 10",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Arp_2": {
+      "probable_members": 285,
+      "core_members": 232,
+      "reference_name": "Arp 2",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6809_M_55": {
+      "probable_members": 24521,
+      "core_members": 23845,
+      "reference_name": "NGC 6809",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Terzan_8": {
+      "probable_members": 597,
+      "core_members": 511,
+      "reference_name": "Ter 8",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_11": {
+      "probable_members": 628,
+      "core_members": 438,
+      "reference_name": "Pal 11",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6838_M_71": {
+      "probable_members": 9275,
+      "core_members": 6828,
+      "reference_name": "NGC 6838",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6864_M_75": {
+      "probable_members": 2164,
+      "core_members": 1893,
+      "reference_name": "NGC 6864",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6934": {
+      "probable_members": 3261,
+      "core_members": 2521,
+      "reference_name": "NGC 6934",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_6981_M_72": {
+      "probable_members": 2996,
+      "core_members": 2783,
+      "reference_name": "NGC 6981",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_7006": {
+      "probable_members": 640,
+      "core_members": 568,
+      "reference_name": "NGC 7006",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Laevens_3": {
+      "probable_members": 22,
+      "core_members": 16,
+      "reference_name": "Laevens 3",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Segue_3": {
+      "probable_members": 23,
+      "core_members": 19,
+      "reference_name": null,
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_7078_M_15": {
+      "probable_members": 15698,
+      "core_members": 14167,
+      "reference_name": "NGC 7078",
+      "mws_member_spectra": 82,
+      "reliable_giant_spectra": 3,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_7089_M_2": {
+      "probable_members": 9685,
+      "core_members": 8863,
+      "reference_name": "NGC 7089",
+      "mws_member_spectra": 177,
+      "reliable_giant_spectra": 6,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_7099_M_30": {
+      "probable_members": 8460,
+      "core_members": 8057,
+      "reference_name": "NGC 7099",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_12": {
+      "probable_members": 394,
+      "core_members": 372,
+      "reference_name": "Pal 12",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "Pal_13": {
+      "probable_members": 72,
+      "core_members": 70,
+      "reference_name": "Pal 13",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    },
+    "NGC_7492": {
+      "probable_members": 468,
+      "core_members": 458,
+      "reference_name": "NGC 7492",
+      "mws_member_spectra": 0,
+      "reliable_giant_spectra": 0,
+      "K_spectra": 0,
+      "unique_K_members": 0
+    }
+  },
+  "sweeps": [
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225m005-230p000.fits",
+      "size": 1365747840,
+      "matched_rows": 2
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-240p010-245p015.fits",
+      "size": 1236761280,
+      "matched_rows": 1
+    },
+    {
+      "path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-110p035-115p040.fits",
+      "size": 773386560,
+      "matched_rows": 5
+    }
+  ],
+  "reference_sha256": "21009dd8d48bafeaaa021e6e11c1ec61ee82d7093a26bb218296d7b46bc628ea",
+  "typed_candidates_sha256": "91181f280a5926453aae7adaa936aedb999bcb04c9b30acf9bc89130ac57a42b",
+  "n_scored_systems_design_aim": 3,
+  "host": "nid004073",
+  "phase": "inventory_frozen_before_prediction"
+}

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-02 — member-first coverage frozen before scores
+
+- Inventory60679723 completed fixed parent:1,078,216 probable member entries,
+  2712 DESI member spectra,120 reliable giant spectra,8 K members in3 systems.
+- DR11:5 NGC2419 members have BASS/MzLS;2 Pal5 fail optical masks;1 Pal14
+  member passes grz, lacks W1 and is slightly outside old dust scope.
+- Primary new scoring list is1 Pal14 star, plus3 historical Terzan7 diagnostic
+  members. Expected22 configurations; only Terzan7 permits paired A/B.
+- Published typed/inventory hashes and two inspected pre-score coverage plots;
+  no residuals inspected for Pal14. Three-system design aim not reached.
+- Next: score exactly this frozen list, preserve failures and stop parent search.
+
 ## 2026-11-02 — fixed reference scale and scope additions
 
 - Normalized162 BV21 Table2 distances from versioned author manuscript;159 map
