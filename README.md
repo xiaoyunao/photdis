@@ -4,23 +4,34 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Active main task: **unified multi-population baseline v0**.
-[Full review](docs/pro_review_60f65d5.md) · [protocol](docs/baseline_v0_protocol.md).
+Current baseline: **unified multi-population baseline v0, complete**.
+[Results and nine figures](docs/baseline_v0_result.md) ·
+[catalog and runbook](docs/baseline_v0_catalog.md) ·
+[full review](docs/pro_review_60f65d5.md) · [protocol](docs/baseline_v0_protocol.md).
 Application uses all clean optical objects; Gaia/spectroscopy are reference
 labels, WISE is optional. Internal uncalibrated field predictions are allowed.
 
 | Stage | v0 scope | State |
 |---|---|---|
 | Parent and references | Existing14 fields, DECam main; Gaia-first/SPECDIS supplementary | Complete:9,390,518 unique objects |
-| Training | Broad QRF A/B/C plus same-training controls | Implemented; unit checks passed |
-| Development validation | Whole fields, complete references, raw/calibrated distributions | Implemented; awaiting data |
-| Internal application | Every unique optical parent, all available bands and risk flags | Implemented; awaiting frozen models |
-| Unified results | Coverage, distance density, CMD, ambiguity and population scorecard | In progress |
+| Training | Broad QRF A/B/C plus same-training controls | Complete: six fixed models |
+| Development validation | Whole fields, complete references, raw/calibrated intervals | Complete:27,212 preferred test labels |
+| Internal application | Every unique optical parent, all available bands and risk flags | Complete:8,899,334 DECam predictions;491,184 northern status rows |
+| Unified results | Coverage, distance density, CMD, ambiguity and population scorecard | Complete:9 figures,206 artifact checks,3 mathematical tests |
+
+W1 and W1W2 cover31.7% and17.8% of the DECam optical parent. On matched
+Gaia references with identical training identities, A/B/C NMAD is
+0.266/0.242/0.218mag. The recommended workflow's Gaia relative NMAD is10.4%,
+but this is dwarf-dominated:81.9% of298 low-gravity SPECDIS test objects have
+|delta-mu|>1mag, and faint/low-precision objects lack adequate validation.
+The internal catalog preserves these failures and support flags; it is not
+a calibrated all-population science release. Next global work concerns
+population degeneracy/reference composition and depth validation.
 
 Cluster and64-warm-member follow-ups are retained evidence, not prerequisites
 for this baseline. Historical models/results below remain frozen.
 
-Latest completed follow-up: [Pal14 parameter sources and fixed giant coverage](docs/giant_parameter_audit_result_v1.md).
+Previous completed follow-up: [Pal14 parameter sources and fixed giant coverage](docs/giant_parameter_audit_result_v1.md).
 120 reliable spectra are120 unique members. The64 additional quality-qualified
 DECam warm members do not overlap the current K-target color ranges; the four
 warm northern color/luminosity overlaps are all metal-poor NGC2419. Pal14's strong

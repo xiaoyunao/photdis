@@ -1,10 +1,14 @@
 # Project instructions
 
-- Current checkpoint: unified multi-population baseline v0 is the active main task.
-  Read docs/pro_review_60f65d5.md and docs/baseline_v0_protocol.md, WORKLOG/PLAN.
-  Deliver broad optical-parent training/test/application, optional WISE, Gaia-first
-  and SPECDIS supplementary labels, same-star band tests and internal catalog.
-  Internal field predictions with uncalibrated/support flags are authorized.
+- Current checkpoint: unified multi-population baseline v0 is complete.
+  Read docs/baseline_v0_result.md, docs/baseline_v0_catalog.md, WORKLOG/PLAN.
+  All14 fields have9,390,518 unique catalog rows;8,899,334 DECam predictions,
+  north491,184 no-native-model rows. Six fixed models,9 figures,206 artifact
+  checks and3 mathematical tests complete. Large products remain on NERSC.
+  Preserve this internal uncalibrated baseline and all status flags. WISE improves
+  matched-reference scatter, but evolved-star luminosity solutions often fail
+  and faint/low-precision reference coverage is inadequate. Next priorities are
+  population degeneracy/reference composition and depth validation at global scope.
   Do not make cluster checks or64-warm-member phase evidence prerequisites.
   Preserve all old cold-v4/RGB/classifier/K-giant models and historical predictions.
   Distinguish teacher agreement, development validation and absolute accuracy.

@@ -1,14 +1,31 @@
 # PLAN
 
-## Active objective: unified multi-population baseline v0
+## Completed objective: unified multi-population baseline v0
 
 Full review: docs/pro_review_60f65d5.md; execution: docs/baseline_v0_protocol.md.
 - [x] Recover endpoints, read complete review, detailed Goal and protocol.
 - [x] Unified optical parent, broad labels and identity-safe spatial split.
   9,390,518 unique parents; training A/B/C163600/149743/136078.
-- [ ] Fixed QRF A/B/C plus same-training controls; cal-only routing/intervals.
-- [ ] Whole-test validation and full existing-field internal predictions.
-- [ ] Six main figure groups, results, checks and three-endpoint delivery.
+- [x] Fixed QRF A/B/C plus same-training controls; cal-only routing/intervals.
+- [x] Whole-test validation and full existing-field internal predictions.
+- [x] Nine figures, final scorecard,3 mathematical tests and206 artifact checks.
+- [x] Final milestone prepared for scripts/sync.py push; endpoint hashes verified
+  by that delivery command before completing the Goal.
+
+Result: docs/baseline_v0_result.md; schema/runbook: docs/baseline_v0_catalog.md.
+8,899,334 DECam internal predictions;491,184 north rows marked no-native-model.
+Matched Gaia NMAD A/B/C=.266/.242/.218mag; W1/W1W2 coverage31.7%/17.8%.
+Recommended Gaia relative NMAD10.4% is dwarf-dominated. Low-gravity SPECDIS
+subset298 has81.9% |delta-mu|>1mag; r>=22 validation is inadequate.
+
+## Next global priorities (not started)
+
+- Investigate population degeneracy and reference composition using the fixed
+  split; report evolved/transition failures separately from overall scatter.
+- Establish validation for low-precision/no-WISE objects that dominate the
+  optical parent, before choosing scientific-product quality thresholds.
+- Preserve v0 artifacts and version any follow-up. Do not automatically resume
+  cluster searches, model-family searches or treat northern rows as predictions.
 
 This supersedes the64-warm-member phase task as the project main line.
 Internal uncalibrated field catalogs are authorized. Historical models remain frozen.

@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-02 — unified baseline v0 completed
+
+- Full result: docs/baseline_v0_result.md; reproducible report generator and
+  final manifests published. README/PLAN/AGENTS now point to the complete baseline.
+- Fit60681423 completed17m01s. Application60681483_0/_1 completed3m19s/7m58s;
+  remaining fields2–13 ran in allocation60681817,10m07s. Pending duplicates
+  canceled before execution. Final validation/report60681820 completed58s,0:0.
+- All14 FITS catalogs:9,390,518 unique rows;8,899,334 DECam predictions and
+  491,184 north/no-native-model rows. Full scan passed206 artifact checks;
+  3 earlier mathematical tests passed. All9 final figures visually inspected.
+- W1/W1W2 coverage31.7%/17.8%; matched Gaia A/B/C NMAD.266/.242/.218mag.
+  Recommended Gaia relative NMAD10.4% is dwarf-dominated; low-gravity SPECDIS
+  subset298 has81.9% absolute residuals>1mag. Only13/27,212 test references have
+  maximum optical error>=.03mag. These population/depth gaps remain explicit.
+- Commands: allocated baseline apply/validate/report; local report generator,
+  Python parse, Markdown table/link checks, git diff review; final milestone
+  delivery uses python scripts/sync.py push with three-endpoint hash checks.
+- Large data/models stay in NERSC data/baseline_v0; historical results untouched.
+  Next global priorities: population degeneracy/reference composition and
+  faint/no-WISE validation, not another local cluster or model-family search.
+
 ## 2026-11-02 — figures inspected and application dispatch
 
 - Inspected first7 generated figures: sample flow, same-star gain, distance
