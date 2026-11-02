@@ -1,5 +1,20 @@
 # PLAN
 
+## Active objective: actual K-giant teacher audit and conditional distances
+
+Source: docs/pro_review_1689ec2.md; detailed frozen scope and acceptance:
+docs/kgiant_distance_protocol_v1.md. Preserve all previous components.
+
+- [x] Read complete review; create detailed Goal; update AGENTS checkpoint,
+  cold distance ranges and warm catastrophic-tail table.
+- [x] Register finite teacher/independent-reference/conditional-mixture experiment.
+- [ ] Exact selected190 evidence, common teachers, errors/flags/coverage/parameter trends.
+- [ ] Independent member/phase/luminosity support census; scoped external decision.
+- [ ] All-qualified K teacher training; whole-field A/B/no-color distributions,
+  paired selected evaluation, shared-g errors, SPECDIS width sensitivity.
+- [ ] Validate formulas/identity isolation/real summaries; inspect figures.
+- [ ] Final report, decision, provenance, commits and three-endpoint sync.
+
 ## Completed objective: controlled negative coverage, distances and matched-source CMDs
 
 Full requirements: docs/pro_review_20261102.md; frozen protocol:

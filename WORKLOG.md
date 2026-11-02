@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-02 — K-giant distance goal registered
+
+- Read full new Pro conversation6ae7ee86; saved docs/pro_review_1689ec2.md.
+- All endpoints clean/matching1689ec2; NERSC authentication valid.
+- Created detailed Goal and preregistered kgiant_distance_protocol_v1.md.
+- Updated AGENTS stale checkpoint; added Gaia distance ranges and warm >50% tails.
+- Added exact-pair teacher inventory and batch runner; syntax/shell validation pass.
+- Checked official SPDist/SPECDIS error definitions; .167mag floor included once,
+  two teachers kept separate and never treated as independent measurements.
+- Next: allocated evidence audit, finite full-distribution implementation and
+  independent reference support check. No old-model refits or classifier tuning.
+
 ## 2026-11-02 — CMD supplement completed
 
 - Allocated job60670802 COMPLETED0:0 in17s. Three CMD figures compare

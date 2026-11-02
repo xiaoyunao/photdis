@@ -1,11 +1,14 @@
 # Project instructions
 
-- Current checkpoint: user approved the latest Pro follow-up after the first
-  cold-main-sequence baseline. Freeze the c3637cb baseline/test identity,
-  reconcile recovery and spectral quality criteria, diagnose the bright-star
-  offset, and use configs/followup_fields.json for one external calibration
-  and two independent final-test fields. Compare direct frozen-model transfer
-  before interval calibration. Keep explanations direct and factual.
+- Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
+  The broad-dwarf classifier comparison and matched distance/CMD plots are
+  complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
+  Latest Pro review: docs/pro_review_1689ec2.md. Current task: actual K-giant
+  teacher intersection/error audit, independent luminosity/phase support, and
+  a bounded grz versus grzW1 conditional-distance development experiment.
+  Do not restart the original cold-main-sequence follow-up. Maintain the
+  project's multi-population scope and distinguish teacher agreement from
+  independently calibrated distance accuracy.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,
