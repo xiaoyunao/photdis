@@ -25,6 +25,7 @@
 | `catalog_XX.fits` | 逐场全部唯一母样本内部预测，扩展名 `BASELINE_V0` |
 | `catalog_XX.json` | 实际行数、可用性、覆盖统计、路由与文件哈希 |
 | `fit_result.json` | 训练/验证成绩、同星对照、cal 确定的推荐路由 |
+| `figures/` | 本轮计算生成的图；审核后将小图复制到Git的`figures/baseline_v0/` |
 | `report.json`, `validation.json` | 统一成绩单与实际产物核验 |
 
 北方场13保留相同目录结构、WISE覆盖与身份，但 `route=-1`、距离为NaN。当前没有足够同系统天区建立独立的 BASS/MzLS 验证流程；不套用 DECam 模型冒充已验证的北天结果。

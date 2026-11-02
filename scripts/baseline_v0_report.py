@@ -11,7 +11,7 @@ from photdis.stage1 import require_compute
 from photdis.baseline_v0 import metrics
 from baseline_v0_fit import truth_mu,strata,load,OUT,CFG
 from kgiant_distance_inventory import write_json,sha
-FIG=Path('figures/baseline_v0');FIG.mkdir(exist_ok=True,parents=True)
+FIG=OUT/'figures';FIG.mkdir(exist_ok=True,parents=True)
 def save(fig,name):fig.savefig(FIG/name,dpi=150);plt.close(fig)
 def density(ax,x,y,title,xlabel,ylabel,limits=None):
     good=np.isfinite(x)&np.isfinite(y);x=x[good];y=y[good]
@@ -77,7 +77,7 @@ def main():
     fig,ax=plt.subplots(1,3,figsize=(15,4),layout='constrained')
     for a,k in zip(ax,('A','B','C')):
         matrix=np.array(fit['models'][k]['class_confusion']);rates=matrix/np.maximum(matrix.sum(axis=1)[:,None],1);a.imshow(rates,vmin=0,vmax=1,cmap='Blues')
-        for (i,j),v in np.ndenumerate(matrix):a.text(j,i,str(v),ha='center',va='center',fontsize=9)
+        for (i,j),v in np.ndenumerate(matrix):a.text(j,i,str(v),ha='center',va='center',fontsize=9,color='white' if rates[i,j]>.6 else 'black')
         a.set(title=k+' available test references',xticks=range(3),yticks=range(3),xticklabels=['dwarf','evolved','transition'],yticklabels=['dwarf','evolved','transition'],xlabel='Empirical type score maximum',ylabel='DESI evidence')
     save(fig,'06_coarse_type_confusion.png')
     # Weak/negative observations retained in parallax space; descriptive only.

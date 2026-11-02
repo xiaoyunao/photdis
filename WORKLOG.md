@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — figures inspected and application dispatch
+
+- Inspected first7 generated figures: sample flow, same-star gain, distance
+  densities, training/test CMD, coarse classes, weak parallaxes, multimodal PDFs.
+- Remote untracked generated figures blocked safe Git checkout; preserved
+  them in data/baseline_v0/figures_report_initial before successful sync.
+- Future report figures go to ignored data output, then explicit reviewed
+  publication. Improved dark heatmap text contrast; no numerical changes.
+
 ## 2026-11-02 — six fixed models and held-out figures complete
 
 - Fit60681423 completed17m01s; partial report60681532 completed34s.
