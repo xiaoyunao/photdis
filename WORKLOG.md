@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-02 — external implementation and interpretation
+
+- Recomputed common39 Teff4873–4999K,34≥4950K; SPEC error40.1% versus28.0%.
+- Added ideal noisy-center variance2σ² /84.04% explanation, preserving metrics.
+- Inventory60678961 runs on allocated nid004075; only five literature positions.
+- Harvard SIMBAD resolves Cohen/SVB labels but supplies no coordinates/aliases;
+  cached Pal12 member has no SIMBAD counterpart within3.6arcsec. Temperature unknown.
+- Added fixed external prediction/support runner and public-evidence plot script.
+- py_compile and six existing mixture tests pass; corrected parse-only typos
+  before program execution. Next: inventory outcome, eligible-only predictions.
+
 ## 2026-11-02 — bounded external K-giant goal registered
 
 - Recovered clean a399c3e at all three endpoints; read full latest Pro review.

@@ -3,12 +3,13 @@
 - Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
   The broad-dwarf classifier comparison and matched distance/CMD plots are
   complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
-  Latest Pro review: docs/pro_review_1689ec2.md. Its K-giant teacher audit and
-  bounded grz/grzW1 conditional-distance experiment are complete; result:
-  docs/kgiant_distance_result_v1.md. Preserve the fixed mixtures and measured
-  independent-reference gap (including Pal12); no calibrated field-giant product.
-  Next evidence need: independent distances and phase coverage for brighter,
-  more metal-rich DECam K giants, not another classifier/bandwidth search.
+  Latest Pro review: docs/pro_review_a399c3e.md. The previous teacher experiment
+  is frozen. Active bounded task: docs/kgiant_external_protocol_v1.md, one Pal12
+  cached bright member plus five published Terzan7 stars. Separate measurement
+  quality, dust scope, type evidence and color support; optical checks need no W1.
+  No classifier/bandwidth search or extra targets. Deliver per-star external
+  distributions only when identity/quality qualify; explicit failures also close
+  this finite task. Teacher agreement remains distinct from independent accuracy.
   Do not restart the original cold-main-sequence follow-up. Maintain the
   project's multi-population scope and distinguish teacher agreement from
   independently calibrated distance accuracy.
