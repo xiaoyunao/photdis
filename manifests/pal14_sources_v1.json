@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "name": "Jordi2009",
+      "url": "https://arxiv.org/html/0903.4448v1",
+      "sha256": "c43798868ab44bce975bee839eecf0a4c961e9e38f9cf5107a561b9c837b59a4",
+      "tables_used": [
+        "1 star1"
+      ]
+    },
+    {
+      "name": "Caliskan2012",
+      "url": "https://arxiv.org/html/1110.5151v1",
+      "sha256": "9e50a07b1dfc1de23776e3dd3fbe78c0e7096dadd759b0479757d3e5c2a2d343",
+      "tables_used": [
+        "1 star1",
+        "2 star1",
+        "section3 parameter methods"
+      ]
+    },
+    {
+      "name": "MIST_DECam_BC_v1",
+      "url": "https://mist.science/BC_tables/v1/DECam.txz",
+      "sha256": "6da654fed0e5bcf26fb196411e94c4c8b4306abc05f1dfddfab697848c3d41a7",
+      "role": "conditional consistency only"
+    }
+  ]
+}

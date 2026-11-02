@@ -1,0 +1,14 @@
+{
+  "member_systems": 170,
+  "linked_systems": 159,
+  "linked_member_entries": 1077346,
+  "systems_with_DESI": 18,
+  "systems_without_DESI": 141,
+  "member_spectra": 2712,
+  "reliable_giant_systems": 16,
+  "reliable_giant_spectra": 120,
+  "unique_stars": 120,
+  "K_unique": 8,
+  "below4200": 0,
+  "above_or_equal5000": 112
+}

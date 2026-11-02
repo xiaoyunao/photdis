@@ -1,14 +1,31 @@
 # PLAN
 
-## Current objective: Pal14 parameters and fixed120-spectrum observational coverage
+## Completed objective: Pal14 parameters and fixed120-spectrum observational coverage
 
 Full review: docs/pro_review_68eb2f3.md; protocol: docs/giant_parameter_audit_protocol_v1.md.
-- [x] Read full review, register bounded Goal and retain22 predictions.
-- [ ] Same-star literature/DESI/Gaia/DECam and image evidence; provenance conflict.
-- [ ] Recover exact120 reliable spectra, deduplicate, directed photometry and coverage.
-- [ ] Correct channel denominators and interpretation; choose evidence-based route.
-- [ ] Validate, inspect figures, report and synchronize milestone.
-No window changes, outside-window scoring,141-system expansion or model tuning.
+Result: docs/giant_parameter_audit_result_v1.md.
+- [x] Full review, bounded Goal and unchanged22 predictions.
+- [x] Literature/DESI/Gaia/DECam, images and conditional MIST evidence.
+- [x] Exact120 spectra/120 stars, directed DR11 and complete coverage census.
+- [x] Scope/denominator corrections and evidence-based route decision.
+- [x] Five actual checks, syntax checks and four inspected figures; final milestone.
+
+Pal14 identity association is strong; temperature/gravity provenance conflict
+remains unresolved. DESI member spectra exist in18/159 linked systems only.
+Outside K window112 stars are5000–7000K;64 core grz DECam stars in10 systems
+have zero overlap with either registered target color range. Four northern
+warm color/luminosity overlaps are all metal-poor NGC2419, not DECam K anchors.
+Current K absolute calibration remains evidence-insufficient; close this census.
+No new scores,141-system expansion, changed window or model tuning.
+
+## Next evidence-based direction
+
+Register the64 DECam warm members as resources for the existing5000–7000K
+warm-evolved branch. Before any new distance fit, define independent phase
+evidence, actual target support and system-level development/test roles; retain
+historically unblinded systems as such. Do not silently broaden the K branch.
+Preserve cold-v4, blue/metal-poor main-sequence and all prior RGB results.
+Final milestone delivery uses scripts/sync.py push and endpoint hash verification.
 
 ## Completed objective: fixed BV21 multi-system external reference batch
 

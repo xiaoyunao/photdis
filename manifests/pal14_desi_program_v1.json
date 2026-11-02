@@ -1,0 +1,10 @@
+{
+  "source": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits",
+  "extension": "RVTAB",
+  "row_index": 2863324,
+  "TARGETID": "39628147343232961",
+  "HEALPIX": 31723,
+  "SURVEY": "main",
+  "PROGRAM": "bright",
+  "method": "Direct fitsio one-row read; stored field order TARGETID, HEALPIX, SURVEY, PROGRAM"
+}

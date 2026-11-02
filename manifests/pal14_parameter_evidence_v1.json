@@ -1,0 +1,302 @@
+{
+  "source_id": "4464703441466064512",
+  "targetid": "39628147343232961",
+  "jordi2009": {
+    "star": "1",
+    "ra_hms": "16:11:05.81",
+    "dec_dms": "14:57:45.1",
+    "V": 17.37,
+    "B_minus_V": 1.39,
+    "RV_kms": 72.53,
+    "RV_error_kms": 0.07,
+    "member": "Y",
+    "table": "1",
+    "url": "https://arxiv.org/html/0903.4448v1"
+  },
+  "caliskan2012": {
+    "star": "1",
+    "teff": 4100,
+    "logg": 0.7,
+    "temperature_method": "VRI/2MASS JHK empirical color calibrations, assumed FeH=-1.5 and E(B-V)=.033",
+    "gravity_method": "Yale-Yonsei 10/11Gyr isochrones, FeH=-1.5 alpha=.3; not ionization equilibrium",
+    "error_note": "100K/.5dex are abundance-sensitivity perturbations, not an independent precise parameter posterior",
+    "url": "https://arxiv.org/html/1110.5151v1"
+  },
+  "desi": {
+    "name": "4464703441466064512",
+    "source_id": "4464703441466064512",
+    "member_system": "Pal_14",
+    "reference_name": "Pal 14",
+    "pmember": 0.99999,
+    "ra": 242.774135,
+    "dec": 14.962464,
+    "type_source": "DESI DR1 MWS RVS",
+    "targetid": "39628147343232961",
+    "teff": 4874.7362800537485,
+    "teff_error": 27.119787370801987,
+    "logg": 2.279899134692556,
+    "snr": 33.417816162109375,
+    "feh_raw": -0.8032818525232137,
+    "feh_error": 0.034884798459867646,
+    "feh_corrected": -1.0947790130803583,
+    "abundance_calibration_valid": true,
+    "phase": "unknown",
+    "n_qualified_spectra": 1,
+    "historical_diagnostic": false,
+    "measurements": [
+      {
+        "release": 11010,
+        "brickid": 416822,
+        "objid": 4387,
+        "grz_quality": true,
+        "w1_quality": false,
+        "ebv": 0.03441719338297844,
+        "ra": 242.77413539714485,
+        "dec": 14.962464220882792,
+        "photometry": {
+          "g0": 17.796106338500977,
+          "r0": 16.693262100219727,
+          "z0": 16.081052780151367,
+          "w10": null,
+          "sigma_g": 0.001348397578112781,
+          "sigma_r": 0.0009300847304984927,
+          "sigma_z": 0.0005906102596782148,
+          "sigma_w1": null,
+          "g": 17.906723022460938,
+          "r": 16.76777458190918,
+          "z": 16.122732162475586,
+          "w1": null,
+          "snr_w1": null
+        },
+        "quality_raw": {
+          "MASKBITS": 73728,
+          "RCHISQ_G": 8.45704460144043,
+          "RCHISQ_R": 8.382019996643066,
+          "RCHISQ_Z": 4.670882701873779,
+          "FRACMASKED_G": 0.0005355393514037132,
+          "FRACMASKED_R": 0.0011095827212557197,
+          "FRACMASKED_Z": 0.001149393618106842
+        }
+      }
+    ],
+    "galactic_b": 42.17416464597092,
+    "old_latitude_scope": true,
+    "unique_decam": true,
+    "eligible": true,
+    "reasons": [],
+    "selected_measurement": {
+      "release": 11010,
+      "brickid": 416822,
+      "objid": 4387,
+      "grz_quality": true,
+      "w1_quality": false,
+      "ebv": 0.03441719338297844,
+      "ra": 242.77413539714485,
+      "dec": 14.962464220882792,
+      "photometry": {
+        "g0": 17.796106338500977,
+        "r0": 16.693262100219727,
+        "z0": 16.081052780151367,
+        "w10": null,
+        "sigma_g": 0.001348397578112781,
+        "sigma_r": 0.0009300847304984927,
+        "sigma_z": 0.0005906102596782148,
+        "sigma_w1": null,
+        "g": 17.906723022460938,
+        "r": 16.76777458190918,
+        "z": 16.122732162475586,
+        "w1": null,
+        "snr_w1": null
+      },
+      "quality_raw": {
+        "MASKBITS": 73728,
+        "RCHISQ_G": 8.45704460144043,
+        "RCHISQ_R": 8.382019996643066,
+        "RCHISQ_Z": 4.670882701873779,
+        "FRACMASKED_G": 0.0005355393514037132,
+        "FRACMASKED_R": 0.0011095827212557197,
+        "FRACMASKED_Z": 0.001149393618106842
+      }
+    },
+    "old_dust_scope": false,
+    "Mg_ref": -1.537663067053316,
+    "in_original_K_window": true,
+    "logg_error": 0.08773235098795784,
+    "rv": 71.06909868208618,
+    "rv_error": 0.5372420628365672,
+    "desi_row_index": 2863324,
+    "desi_diagnostics": {
+      "VRAD": 71.06909868208618,
+      "VRAD_ERR": 0.5372420628365672,
+      "LOGG": 2.279899134692556,
+      "TEFF": 4874.7362800537485,
+      "FEH": -0.8032818525232137,
+      "LOGG_ERR": 0.08773235098795784,
+      "TEFF_ERR": 27.119787370801987,
+      "FEH_ERR": 0.034884798459867646,
+      "VSINI": 0.01,
+      "CHISQ_TOT": 16910.368455676457,
+      "CHISQ_C_TOT": 31016.58755807463,
+      "RVS_WARN": 0,
+      "REF_ID": 4464703441466064512,
+      "REF_CAT": "G2",
+      "TARGET_RA": 242.77413546627153,
+      "TARGET_DEC": 14.962464284026535,
+      "TARGETID": 39628147343232961,
+      "SN_B": 19.797910690307617,
+      "SN_R": 33.417816162109375,
+      "SN_Z": 41.99419021606445,
+      "SUCCESS": true,
+      "RR_SPECTYPE": "STAR",
+      "PRIMARY": true
+    },
+    "gaia": {
+      "SOURCE_ID": 4464703441466064512,
+      "REF_EPOCH": 2016.0,
+      "RA": 242.77413539714485,
+      "DEC": 14.962464220882792,
+      "PMRA": -0.42145389758880913,
+      "PMDEC": -0.3577718527512044,
+      "RUWE": 1.004575490951538,
+      "PHOT_G_MEAN_MAG": 16.885311126708984,
+      "PHOT_BP_MEAN_MAG": 17.631961822509766,
+      "PHOT_RP_MEAN_MAG": 16.060638427734375,
+      "BP_RP": 1.5713233947753906
+    },
+    "qualified_spectra": [
+      {
+        "row_index": 2863324,
+        "values": {
+          "VRAD": 71.06909868208618,
+          "VRAD_ERR": 0.5372420628365672,
+          "LOGG": 2.279899134692556,
+          "TEFF": 4874.7362800537485,
+          "FEH": -0.8032818525232137,
+          "LOGG_ERR": 0.08773235098795784,
+          "TEFF_ERR": 27.119787370801987,
+          "FEH_ERR": 0.034884798459867646,
+          "VSINI": 0.01,
+          "CHISQ_TOT": 16910.368455676457,
+          "CHISQ_C_TOT": 31016.58755807463,
+          "RVS_WARN": 0,
+          "REF_ID": 4464703441466064512,
+          "REF_CAT": "G2",
+          "TARGET_RA": 242.77413546627153,
+          "TARGET_DEC": 14.962464284026535,
+          "TARGETID": 39628147343232961,
+          "SN_B": 19.797910690307617,
+          "SN_R": 33.417816162109375,
+          "SN_Z": 41.99419021606445,
+          "SUCCESS": true,
+          "RR_SPECTYPE": "STAR",
+          "PRIMARY": true
+        }
+      }
+    ]
+  },
+  "desi_program": {
+    "source": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits",
+    "extension": "RVTAB",
+    "row_index": 2863324,
+    "TARGETID": "39628147343232961",
+    "HEALPIX": 31723,
+    "SURVEY": "main",
+    "PROGRAM": "bright",
+    "method": "Direct fitsio one-row read; stored field order TARGETID, HEALPIX, SURVEY, PROGRAM"
+  },
+  "position_separations_from_literature_arcsec": {
+    "member": 0.3431707997985839,
+    "Gaia": 0.3416123836957329,
+    "DESI_target": 0.34128160592800233,
+    "DECam": 0.3416123836957329
+  },
+  "position_separations_from_Gaia_arcsec": {
+    "member": 0.0015937852331942845,
+    "Gaia": 0.0,
+    "DESI_target": 0.0003308690923152915,
+    "DECam": 0.0
+  },
+  "position_caveat": "Raw published J2000 coordinates vs catalog coordinates; equinox does not specify observing epoch. No precision astrometric epoch inference.",
+  "RV_difference_kms": -1.460901317913823,
+  "RV_formal_combined_sigma_kms": 0.5417831984114033,
+  "teff_difference_K": 774.7362800537485,
+  "logg_difference_dex": 1.5798991346925562,
+  "parameter_consistency": "cross_source_conflict_unresolved",
+  "DESI_in_frozen_temperature_window": true,
+  "literature_in_frozen_temperature_window": false,
+  "photometry_note": "Gaia G/BP/RP, DECam AB grz, Johnson V/B-V are different passbands; no direct zero-point differences inferred.",
+  "MIST": {
+    "url": "https://mist.science/BC_tables/v1/DECam.txz",
+    "AB": true,
+    "AV": 0,
+    "RV": 3.1,
+    "BC_grz": [
+      -0.6567892068886867,
+      -0.0007443027502575658,
+      0.3258172551719438
+    ],
+    "nodes_T_logg_feh": [
+      [
+        4750.0,
+        5000.0
+      ],
+      [
+        2.0,
+        2.5
+      ],
+      [
+        -1.25,
+        -1.0
+      ]
+    ],
+    "predicted_gr_rz": [
+      0.6560449041384291,
+      0.3265615579222014
+    ],
+    "observed_gr_rz": [
+      1.10284423828125,
+      0.6122093200683594
+    ],
+    "conditional_logg_mass07_09": [
+      1.2158163432771958,
+      1.324960812702264
+    ],
+    "solar": {
+      "Teff": 5772,
+      "logg": 4.438,
+      "Mbol": 4.74
+    },
+    "caveat": "Atmosphere-grid consistency diagnostic at DESI parameters; gravity inferred with BC held at those parameters and assumed mass, not an independent truth or self-consistent isochrone fit"
+  },
+  "reference_cdf_from_public_grid": [
+    {
+      "teacher": "spdist",
+      "model": "prior",
+      "reference_cdf": 0.9756622839046308
+    },
+    {
+      "teacher": "spdist",
+      "model": "A_grz",
+      "reference_cdf": 0.787176796298865
+    },
+    {
+      "teacher": "specdis",
+      "model": "prior",
+      "reference_cdf": 0.8809227420540342
+    },
+    {
+      "teacher": "specdis",
+      "model": "A_grz",
+      "reference_cdf": 0.8338171459155959
+    }
+  ],
+  "status": "Strong positional/member association; cross-source atmospheric parameters unresolved; preserve original selection and all22 predictions",
+  "source_sha256": {
+    "jordi.html": "c43798868ab44bce975bee839eecf0a4c961e9e38f9cf5107a561b9c837b59a4",
+    "caliskan.html": "9e50a07b1dfc1de23776e3dd3fbe78c0e7096dadd759b0479757d3e5c2a2d343",
+    "DECam.txz": "6da654fed0e5bcf26fb196411e94c4c8b4306abc05f1dfddfab697848c3d41a7",
+    "giant_parameter_typed_v1.json": "5ca97ca998ec26ce9116d0c5f7e00ed7287b5094aff8796d81499cb092c27b77",
+    "kgiant_reference_inventory_v1.json": "df0ac87502f7f08e7065d215a2084ebf0df3da055dbe0d9da3eea3c93560ba74",
+    "kgiant_reference_predictions_v1.json": "294d9f14f57f16ed8b21ce263b497e6622b302ca82980b9751951c1a409f78fc"
+  }
+}

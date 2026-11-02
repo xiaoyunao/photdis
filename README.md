@@ -4,7 +4,18 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed follow-up: [fixed multi-system reference batch](docs/kgiant_reference_batch_result_v1.md).
+Latest completed follow-up: [Pal14 parameter sources and fixed giant coverage](docs/giant_parameter_audit_result_v1.md).
+120 reliable spectra are120 unique members. The64 additional quality-qualified
+DECam warm members do not overlap the current K-target color ranges; the four
+warm northern color/luminosity overlaps are all metal-poor NGC2419. Pal14's strong
+identity association coexists with unresolved literature/DESI parameter conflict.
+All22 historical predictions are unchanged. The evaluated DESI channel covers
+18/159 linked systems, not the entire reference resource. Current K absolute
+calibration remains evidence-insufficient; the next defined direction is phase
+and support definition for the existing warm-evolved branch, before new fitting.
+Four figures, the full member evidence and five actual checks are preserved.
+
+Previous completed follow-up: [fixed multi-system reference batch](docs/kgiant_reference_batch_result_v1.md).
 BV21's162-system distance table and170 member archives were linked before a
 member-first full DESI audit. Eight new K members yield one eligible DECam Pal14
 star; five are northern-system objects and two fail frozen optical quality.

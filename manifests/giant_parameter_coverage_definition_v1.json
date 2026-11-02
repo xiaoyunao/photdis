@@ -1,0 +1,26 @@
+{
+  "target_n": 189,
+  "bounds": {
+    "gr": [
+      0.717350752,
+      1.12678432
+    ],
+    "rz": [
+      0.372398376,
+      0.60300504
+    ],
+    "r": [
+      15.7086146,
+      17.919171600000002
+    ],
+    "Mg": [
+      -1.5907481832998633,
+      0.759952392626592
+    ],
+    "feh": [
+      -1.5016086680648204,
+      -0.48508269388282294
+    ]
+  },
+  "caveat": "Marginal5\u201395percentile boxes describe coverage, not joint support or validation eligibility"
+}

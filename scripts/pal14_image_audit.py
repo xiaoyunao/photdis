@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fixed three-star DR11 image/model/residual audit (same imaging, not independent)."""
+"""Fixed Pal14-star1 DR11 image/model/residual audit (same imaging, not independent)."""
 from pathlib import Path
 import json,sys,hashlib,time
 from concurrent.futures import ThreadPoolExecutor

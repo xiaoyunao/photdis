@@ -1,0 +1,79 @@
+{
+  "downloads": [
+    {
+      "name": "Pal14_star1",
+      "kind": "image",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=242.77413539714485&dec=14.962464220882792&layer=ls-dr11&pixscale=0.262&bands=grz&size=80",
+      "sha256": "d072020b45ad30b2490445358c9c780ff6186a1abaec63877c9503b13f3d58af",
+      "available": true
+    },
+    {
+      "name": "Pal14_star1",
+      "kind": "model",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=242.77413539714485&dec=14.962464220882792&layer=ls-dr11-model&pixscale=0.262&bands=grz&size=80",
+      "sha256": "e364a1be0091266dca5d3fc9cfad504756ba45c10694f4408e8c8c74958f893c",
+      "available": true
+    },
+    {
+      "name": "Pal14_star1",
+      "kind": "resid",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=242.77413539714485&dec=14.962464220882792&layer=ls-dr11-resid&pixscale=0.262&bands=grz&size=80",
+      "sha256": "ec6dc396901980021b4276a936f4af6594095b6abcdeb2d5a1942fdb408dafd3",
+      "available": true
+    }
+  ],
+  "aperture_diagnostics": [
+    {
+      "name": "Pal14_star1",
+      "band": "g",
+      "rchisq": 8.45704460144043,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.0011890218941138972,
+          "absolute_residual_sum_over_model": 0.04191639175854194
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.004479900233700994,
+          "absolute_residual_sum_over_model": 0.05613587922697774
+        }
+      ]
+    },
+    {
+      "name": "Pal14_star1",
+      "band": "r",
+      "rchisq": 8.382019996643066,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.001376385183019826,
+          "absolute_residual_sum_over_model": 0.017139620246076025
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.003642495208958746,
+          "absolute_residual_sum_over_model": 0.024981013208681357
+        }
+      ]
+    },
+    {
+      "name": "Pal14_star1",
+      "band": "z",
+      "rchisq": 4.670882701873779,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.0008787092594733221,
+          "absolute_residual_sum_over_model": 0.01204031575526403
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.005216553279485648,
+          "absolute_residual_sum_over_model": 0.02028418082380182
+        }
+      ]
+    }
+  ],
+  "limitation": "Same coadds and model, not independent photometry. Aperture residual/model ratios include PSF/neighbor/sky effects; not total-flux corrections. No quality cuts or predictions changed."
+}

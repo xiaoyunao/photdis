@@ -1,0 +1,47 @@
+{
+  "job": {
+    "id": 60680467,
+    "state": "COMPLETED",
+    "elapsed": "00:17:49",
+    "exit_code": "0:0",
+    "source": "sacct"
+  },
+  "actual_checks": {
+    "120_spectra_complete_and_deduplicated": true,
+    "same_spectral_eligibility_and_original8_photometry": true,
+    "per_system_parent_counts_unchanged": true,
+    "all22_predictions_byte_unchanged": true,
+    "registered_coverage_boxes_recomputed": true
+  },
+  "all120_observations_unchanged": true,
+  "predictions_baseline_commit": "68eb2f3",
+  "predictions_sha256": "294d9f14f57f16ed8b21ce263b497e6622b302ca82980b9751951c1a409f78fc",
+  "syntax": {
+    "python_scripts": 5,
+    "batch_shell": true
+  },
+  "literature_rows_asserted": true,
+  "figures_visually_inspected": 4,
+  "local_and_NERSC_raw_source_hashes_verified": true,
+  "metadata_note": "Per-camera counts retain dual-system measurements; unique-star totals and plots prefer DECam. Two dual-system north measurements fail grz quality.",
+  "artifact_sha256": {
+    "manifests/giant_parameter_channel_counts_v1.json": "1387cc1343aac793aed473fe20a785c0c37181bb3799202df505cdadda20d1ff",
+    "manifests/giant_parameter_inventory_v1.json": "26d736b9a768849424bf775e59cc865199164bdc67ca88a441b9390f88dd6fbe",
+    "manifests/giant_parameter_typed_v1.json": "5ca97ca998ec26ce9116d0c5f7e00ed7287b5094aff8796d81499cb092c27b77",
+    "manifests/giant_parameter_coverage_definition_v1.json": "158153455bfc427d9dda798c37ddb43db2fb747e1f13da7834b11a261d01d4ae",
+    "manifests/giant_parameter_summary_v1.json": "0fb902416cf640e1ad1e0aa702e4bc35c8a8e82a7617c44ac704bb3c8f37f2c3",
+    "manifests/pal14_desi_program_v1.json": "00df6cc58eeab51cb08fec120c92969c7b78b4d09a50329dfac6a5a1aa54909c",
+    "manifests/pal14_sources_v1.json": "657bd25e5ad5a4fda2a2377c22318d8a2ad36ebdf9a1a6b280b3c03963da7243",
+    "manifests/pal14_image_audit_v1.json": "3068a6e0f0ff7e221803d2e7794ccff4c902dd1255703f9f93c6fd79efebba17",
+    "manifests/pal14_parameter_evidence_v1.json": "4ef10fc59386205a7614f0f474cbf56139e7e60359a44c10d1cdbee7a76c95ee",
+    "figures/giant_parameter_audit_v1/04_pal14_parameter_sources.png": "49204814a4528c7c09ce10d6c12a55cb6b1655c6df7fe510b41d14f2f19a3f40",
+    "figures/giant_parameter_audit_v1/01_observable_coverage.png": "3642052bb9371d390aebba4aa6164b99fb3af36abfbccd10b3f57337322f1e38",
+    "figures/giant_parameter_audit_v1/03_image_Pal14_star1.png": "fb5fce66da5982e0b9bff23ac1a518ca0baa690c334824e97573dcbdf6f6dc75",
+    "figures/giant_parameter_audit_v1/02_temperature_channel.png": "47d4f8ffd4b4428f43ce26accabfccabf380fec11eb43c6dee1bf20911c0a375",
+    "scripts/giant_parameter_finalize.py": "bf4ad86d4178452f858f68828ab5716f427eeb89330c984ed31631e8fa53f5bd",
+    "scripts/giant_parameter_report.py": "33ae85cd206686db5c4229f5c767c4ce4034ecaac3d86e5657269bd4e02f5abd",
+    "scripts/giant_parameter_audit.py": "3ac290ded6659638c50a46623b9a6f37bcb29b92f0c2bfd86c45e0b02ee2694f",
+    "scripts/pal14_parameter_evidence.py": "202ced2f3cfcc118bf4a1c99604d7ea528fcb5c8ec4002f379d9975f19c6ef9c",
+    "scripts/pal14_image_audit.py": "bc2b3b877ee135d7872343bc677c44771729d52557583bc1850ca653a36f18e2"
+  }
+}

@@ -3,10 +3,16 @@
 - Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
   The broad-dwarf classifier comparison and matched distance/CMD plots are
   complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
-  Latest Pro review: docs/pro_review_68eb2f3.md. Active bounded task:
-  docs/giant_parameter_audit_protocol_v1.md, Pal14 same-star parameter evidence
-  and exact120 reliable DESI spectra observational coverage. Preserve22 predictions;
-  no new temperature window, no scoring outside it, no141-system expansion.
+  Latest Pro review: docs/pro_review_68eb2f3.md, completed in
+  docs/giant_parameter_audit_result_v1.md. Pal14 identity strong but parameters
+  conflict. Fixed120 spectra are120 stars;64 warm DECam core grz members have
+  no overlap with the registered K-target color ranges. Four warm northern
+  color/luminosity overlaps are metal-poor NGC2419, not new DECam K anchors.
+  Only18/159 distance-member systems have DESI spectra;141 were not evaluated.
+  Preserve22 predictions; no new window, outside-window scores or automatic search.
+  Current K absolute calibration remains evidence-insufficient. Next: define
+  phase/support/system roles for existing5000–7000K warm branch using the64
+  new resource members before considering any new fit; retain historical roles.
   Previous completed task is the registered
   fixed BV21 multi-system reference batch: docs/kgiant_reference_batch_protocol_v1.md.
   Prior six-target result remains frozen; new scope/reference/image addendum:

@@ -1,0 +1,471 @@
+{
+  "groups": {
+    "DECam_cold": {
+      "n_parent": 0,
+      "n_measured": 0,
+      "n_core_grz": 0,
+      "n_systems": 0,
+      "n_W1": 0,
+      "n_low_dust": 0,
+      "n_high_latitude": 0,
+      "n_both_old_scopes": 0,
+      "historical_roles": {},
+      "phase_counts": {},
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 0,
+        "rz": 0,
+        "r": 0,
+        "Mg": 0,
+        "feh": 0
+      },
+      "systems": {},
+      "overlap_source_ids": []
+    },
+    "DECam_K": {
+      "n_parent": 8,
+      "n_measured": 3,
+      "n_core_grz": 1,
+      "n_systems": 1,
+      "n_W1": 0,
+      "n_low_dust": 0,
+      "n_high_latitude": 1,
+      "n_both_old_scopes": 0,
+      "historical_roles": {
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 1
+      },
+      "phase_counts": {
+        "unknown": 1
+      },
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 1,
+        "rz": 0,
+        "r": 1,
+        "Mg": 1,
+        "feh": 1
+      },
+      "systems": {
+        "Pal_14": 1
+      },
+      "overlap_source_ids": []
+    },
+    "DECam_warm": {
+      "n_parent": 112,
+      "n_measured": 87,
+      "n_core_grz": 64,
+      "n_systems": 10,
+      "n_W1": 15,
+      "n_low_dust": 26,
+      "n_high_latitude": 61,
+      "n_both_old_scopes": 26,
+      "historical_roles": {
+        "historical_unblinded_test": 7,
+        "historical_RGB_training": 12,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 45
+      },
+      "phase_counts": {
+        "unknown": 64
+      },
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 0,
+        "rz": 0,
+        "r": 51,
+        "Mg": 19,
+        "feh": 22
+      },
+      "systems": {
+        "NGC_5466": 6,
+        "NGC_5272_M_3": 5,
+        "NGC_7078_M_15": 3,
+        "NGC_7089_M_2": 6,
+        "NGC_5634": 10,
+        "NGC_5024_M_53": 7,
+        "NGC_5053": 7,
+        "NGC_4147": 1,
+        "Pal_5": 13,
+        "NGC_5904_M_5": 6
+      },
+      "overlap_source_ids": []
+    },
+    "DECam_all": {
+      "n_parent": 120,
+      "n_measured": 90,
+      "n_core_grz": 65,
+      "n_systems": 11,
+      "n_W1": 15,
+      "n_low_dust": 26,
+      "n_high_latitude": 62,
+      "n_both_old_scopes": 26,
+      "historical_roles": {
+        "historical_unblinded_test": 7,
+        "historical_RGB_training": 12,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 46
+      },
+      "phase_counts": {
+        "unknown": 65
+      },
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 1,
+        "rz": 0,
+        "r": 52,
+        "Mg": 20,
+        "feh": 23
+      },
+      "systems": {
+        "NGC_5466": 6,
+        "NGC_5272_M_3": 5,
+        "NGC_7078_M_15": 3,
+        "NGC_7089_M_2": 6,
+        "NGC_5634": 10,
+        "NGC_5024_M_53": 7,
+        "NGC_5053": 7,
+        "NGC_4147": 1,
+        "Pal_5": 13,
+        "NGC_5904_M_5": 6,
+        "Pal_14": 1
+      },
+      "overlap_source_ids": []
+    },
+    "BASS/MzLS_cold": {
+      "n_parent": 0,
+      "n_measured": 0,
+      "n_core_grz": 0,
+      "n_systems": 0,
+      "n_W1": 0,
+      "n_low_dust": 0,
+      "n_high_latitude": 0,
+      "n_both_old_scopes": 0,
+      "historical_roles": {},
+      "phase_counts": {},
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 0,
+        "rz": 0,
+        "r": 0,
+        "Mg": 0,
+        "feh": 0
+      },
+      "systems": {},
+      "overlap_source_ids": []
+    },
+    "BASS/MzLS_K": {
+      "n_parent": 8,
+      "n_measured": 5,
+      "n_core_grz": 5,
+      "n_systems": 1,
+      "n_W1": 2,
+      "n_low_dust": 0,
+      "n_high_latitude": 0,
+      "n_both_old_scopes": 0,
+      "historical_roles": {
+        "historical_north_RGB_audit": 5
+      },
+      "phase_counts": {
+        "unknown": 5
+      },
+      "n_color_luminosity": 3,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 4,
+        "rz": 4,
+        "r": 3,
+        "Mg": 4,
+        "feh": 0
+      },
+      "systems": {
+        "NGC_2419": 5
+      },
+      "overlap_source_ids": [
+        "899259709611049088",
+        "899283069935903360",
+        "899284444325230336"
+      ]
+    },
+    "BASS/MzLS_warm": {
+      "n_parent": 112,
+      "n_measured": 26,
+      "n_core_grz": 11,
+      "n_systems": 2,
+      "n_W1": 1,
+      "n_low_dust": 1,
+      "n_high_latitude": 1,
+      "n_both_old_scopes": 1,
+      "historical_roles": {
+        "historical_north_RGB_audit": 10,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 1
+      },
+      "phase_counts": {
+        "unknown": 11
+      },
+      "n_color_luminosity": 4,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 4,
+        "rz": 5,
+        "r": 2,
+        "Mg": 10,
+        "feh": 1
+      },
+      "systems": {
+        "NGC_2419": 10,
+        "NGC_6205_M_13": 1
+      },
+      "overlap_source_ids": [
+        "899281940361749760",
+        "899282352678538112",
+        "899282524477222656",
+        "899295714319431936"
+      ]
+    },
+    "BASS/MzLS_all": {
+      "n_parent": 120,
+      "n_measured": 31,
+      "n_core_grz": 16,
+      "n_systems": 2,
+      "n_W1": 3,
+      "n_low_dust": 1,
+      "n_high_latitude": 1,
+      "n_both_old_scopes": 1,
+      "historical_roles": {
+        "historical_north_RGB_audit": 15,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 1
+      },
+      "phase_counts": {
+        "unknown": 16
+      },
+      "n_color_luminosity": 7,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 8,
+        "rz": 9,
+        "r": 5,
+        "Mg": 14,
+        "feh": 1
+      },
+      "systems": {
+        "NGC_2419": 15,
+        "NGC_6205_M_13": 1
+      },
+      "overlap_source_ids": [
+        "899259709611049088",
+        "899281940361749760",
+        "899282352678538112",
+        "899282524477222656",
+        "899283069935903360",
+        "899284444325230336",
+        "899295714319431936"
+      ]
+    },
+    "all_cold": {
+      "n_parent": 0,
+      "n_measured": 0,
+      "n_core_grz": 0,
+      "n_systems": 0,
+      "n_W1": 0,
+      "n_low_dust": 0,
+      "n_high_latitude": 0,
+      "n_both_old_scopes": 0,
+      "historical_roles": {},
+      "phase_counts": {},
+      "n_color_luminosity": 0,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 0,
+        "rz": 0,
+        "r": 0,
+        "Mg": 0,
+        "feh": 0
+      },
+      "systems": {},
+      "overlap_source_ids": []
+    },
+    "all_K": {
+      "n_parent": 8,
+      "n_measured": 8,
+      "n_core_grz": 6,
+      "n_systems": 2,
+      "n_W1": 2,
+      "n_low_dust": 0,
+      "n_high_latitude": 1,
+      "n_both_old_scopes": 0,
+      "historical_roles": {
+        "historical_north_RGB_audit": 5,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 1
+      },
+      "phase_counts": {
+        "unknown": 6
+      },
+      "n_color_luminosity": 3,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 5,
+        "rz": 4,
+        "r": 4,
+        "Mg": 5,
+        "feh": 1
+      },
+      "systems": {
+        "NGC_2419": 5,
+        "Pal_14": 1
+      },
+      "overlap_source_ids": [
+        "899259709611049088",
+        "899283069935903360",
+        "899284444325230336"
+      ]
+    },
+    "all_warm": {
+      "n_parent": 112,
+      "n_measured": 111,
+      "n_core_grz": 75,
+      "n_systems": 12,
+      "n_W1": 16,
+      "n_low_dust": 27,
+      "n_high_latitude": 62,
+      "n_both_old_scopes": 27,
+      "historical_roles": {
+        "historical_north_RGB_audit": 10,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 46,
+        "historical_unblinded_test": 7,
+        "historical_RGB_training": 12
+      },
+      "phase_counts": {
+        "unknown": 75
+      },
+      "n_color_luminosity": 4,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 4,
+        "rz": 5,
+        "r": 53,
+        "Mg": 29,
+        "feh": 23
+      },
+      "systems": {
+        "NGC_2419": 10,
+        "NGC_6205_M_13": 1,
+        "NGC_5466": 6,
+        "NGC_5272_M_3": 5,
+        "NGC_7078_M_15": 3,
+        "NGC_7089_M_2": 6,
+        "NGC_5634": 10,
+        "NGC_5024_M_53": 7,
+        "NGC_5053": 7,
+        "NGC_4147": 1,
+        "Pal_5": 13,
+        "NGC_5904_M_5": 6
+      },
+      "overlap_source_ids": [
+        "899281940361749760",
+        "899282352678538112",
+        "899282524477222656",
+        "899295714319431936"
+      ]
+    },
+    "all_all": {
+      "n_parent": 120,
+      "n_measured": 119,
+      "n_core_grz": 81,
+      "n_systems": 13,
+      "n_W1": 18,
+      "n_low_dust": 27,
+      "n_high_latitude": 63,
+      "n_both_old_scopes": 27,
+      "historical_roles": {
+        "historical_north_RGB_audit": 15,
+        "first_in_this_DESI_coverage_audit_not_claimed_globally_untouched": 47,
+        "historical_unblinded_test": 7,
+        "historical_RGB_training": 12
+      },
+      "phase_counts": {
+        "unknown": 81
+      },
+      "n_color_luminosity": 7,
+      "n_color_luminosity_feh": 0,
+      "n_each": {
+        "gr": 9,
+        "rz": 9,
+        "r": 57,
+        "Mg": 34,
+        "feh": 24
+      },
+      "systems": {
+        "NGC_2419": 15,
+        "NGC_6205_M_13": 1,
+        "NGC_5466": 6,
+        "NGC_5272_M_3": 5,
+        "NGC_7078_M_15": 3,
+        "NGC_7089_M_2": 6,
+        "NGC_5634": 10,
+        "NGC_5024_M_53": 7,
+        "NGC_5053": 7,
+        "NGC_4147": 1,
+        "Pal_5": 13,
+        "NGC_5904_M_5": 6,
+        "Pal_14": 1
+      },
+      "overlap_source_ids": [
+        "899259709611049088",
+        "899281940361749760",
+        "899282352678538112",
+        "899282524477222656",
+        "899283069935903360",
+        "899284444325230336",
+        "899295714319431936"
+      ]
+    }
+  },
+  "n_spectra": 120,
+  "n_unique": 120,
+  "n_systems": 16,
+  "unmatched_ids": [
+    "555987334694982400"
+  ],
+  "checks": {
+    "120_spectra_complete_and_deduplicated": true,
+    "same_spectral_eligibility_and_original8_photometry": true,
+    "per_system_parent_counts_unchanged": true,
+    "all22_predictions_byte_unchanged": true,
+    "registered_coverage_boxes_recomputed": true
+  },
+  "camera_counting": "Per-camera counts include both measurements when present; all and plots prefer unique DECam, then BASS/MzLS, avoiding duplicate stars",
+  "dual_camera_ids": [
+    "2686827155493259008",
+    "2686849077006600704"
+  ],
+  "bounds": {
+    "gr": [
+      0.717350752,
+      1.12678432
+    ],
+    "rz": [
+      0.372398376,
+      0.60300504
+    ],
+    "r": [
+      15.7086146,
+      17.919171600000002
+    ],
+    "Mg": [
+      -1.5907481832998633,
+      0.759952392626592
+    ],
+    "feh": [
+      -1.5016086680648204,
+      -0.48508269388282294
+    ]
+  },
+  "source_sha256": {
+    "giant_parameter_inventory_v1.json": "26d736b9a768849424bf775e59cc865199164bdc67ca88a441b9390f88dd6fbe",
+    "giant_parameter_coverage_definition_v1.json": "158153455bfc427d9dda798c37ddb43db2fb747e1f13da7834b11a261d01d4ae",
+    "kgiant_reference_predictions_v1.json": "294d9f14f57f16ed8b21ce263b497e6622b302ca82980b9751951c1a409f78fc"
+  }
+}
