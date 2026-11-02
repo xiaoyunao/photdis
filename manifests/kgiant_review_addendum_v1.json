@@ -1,0 +1,27 @@
+{
+  "common_n": 39,
+  "remaining_specdis_n": 150,
+  "common_teff_min_max": [
+    4873.138,
+    4999.4775
+  ],
+  "common_teff_ge4950": 34,
+  "common_specdis_fractional_error_median": 0.4005575,
+  "remaining_specdis_fractional_error_median": 0.28028213999999996,
+  "outside_training_box": {
+    "spdist": {
+      "A_grz": 0,
+      "B_grzW1": 3
+    },
+    "specdis": {
+      "A_grz": 0,
+      "B_grzW1": 0
+    }
+  },
+  "ideal_noisy_centers": {
+    "variance_ratio": 2.0,
+    "nominal_central_mass": 0.68,
+    "noisy_point_coverage": 0.8403874451789697,
+    "scope": "infinite equal-error Gaussian example, not actual error decomposition"
+  }
+}
