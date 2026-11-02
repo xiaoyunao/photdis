@@ -13,6 +13,8 @@
 - Added joint (colors, Mg+g-error) kernel mixture and whole-field paired runner.
   Six focused math tests pass, including direct Gaussian conditioning, no-color
   normalization and unused-W1 handling; full mixtures are saved per fold.
+- Added paired metrics/field bootstrap and five evidence/distribution figures;
+  real-result validation checks mixture normalization, member exclusion and hashes.
 - Next: evidence results, all-K fit, independent reference support and final plots.
   No old-model refits or classifier tuning.
 
