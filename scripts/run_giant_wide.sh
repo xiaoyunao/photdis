@@ -17,5 +17,6 @@ case "${1:-fit}" in
  fit) python scripts/giant_wide_run.py ;;
  summarize) python scripts/giant_wide_summarize.py ;;
  distances) python scripts/distance_comparison_plot.py ;;
+ validate) python scripts/giant_wide_validate.py ;;
  *) exit 2 ;;
 esac

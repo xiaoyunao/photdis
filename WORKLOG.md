@@ -11,6 +11,7 @@
 - PS1 pair-median versus difference-of-medians wording already correct in pro_followup_v2; retained.
 - Extended K-population summary with exact Gaia/DESI-pair matches to existing audited SPDist/SPECDIS joins; phase remains unknown, teacher labels not truth.
 - Validation: 13 focused tests passed. Distance job 60668960 and dependent summary 60668962 submitted.
+- Added real-output validator for identities, paired scalers/weights, immutable model hashes, calibration budgets, selected counts, aggregate sums and distance normalization/reproduction.
 - Next: allocated summaries/figures, real-result checks and scientific decision.
 
 ## 2026-11-01
