@@ -1,5 +1,18 @@
 # PLAN
 
+## Active objective: unified multi-population baseline v0
+
+Full review: docs/pro_review_60f65d5.md; execution: docs/baseline_v0_protocol.md.
+- [x] Recover endpoints, read complete review, detailed Goal and protocol.
+- [ ] Unified optical parent, broad labels and identity-safe spatial split.
+- [ ] Fixed QRF A/B/C plus same-training controls; cal-only routing/intervals.
+- [ ] Whole-test validation and full existing-field internal predictions.
+- [ ] Six main figure groups, results, checks and three-endpoint delivery.
+
+This supersedes the64-warm-member phase task as the project main line.
+Internal uncalibrated field catalogs are authorized. Historical models remain frozen.
+
+
 ## Completed objective: Pal14 parameters and fixed120-spectrum observational coverage
 
 Full review: docs/pro_review_68eb2f3.md; protocol: docs/giant_parameter_audit_protocol_v1.md.
@@ -18,7 +31,7 @@ warm color/luminosity overlaps are all metal-poor NGC2419, not DECam K anchors.
 Current K absolute calibration remains evidence-insufficient; close this census.
 No new scores,141-system expansion, changed window or model tuning.
 
-## Next evidence-based direction
+## Deferred local evidence direction (superseded as main task)
 
 Register the64 DECam warm members as resources for the existing5000–7000K
 warm-evolved branch. Before any new distance fit, define independent phase

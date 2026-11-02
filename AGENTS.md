@@ -1,33 +1,13 @@
 # Project instructions
 
-- Current checkpoint: recover current status from WORKLOG.md and PLAN.md.
-  The broad-dwarf classifier comparison and matched distance/CMD plots are
-  complete at 1689ec2. Preserve cold-v4, prior RGB and classifier results.
-  Latest Pro review: docs/pro_review_68eb2f3.md, completed in
-  docs/giant_parameter_audit_result_v1.md. Pal14 identity strong but parameters
-  conflict. Fixed120 spectra are120 stars;64 warm DECam core grz members have
-  no overlap with the registered K-target color ranges. Four warm northern
-  color/luminosity overlaps are metal-poor NGC2419, not new DECam K anchors.
-  Only18/159 distance-member systems have DESI spectra;141 were not evaluated.
-  Preserve22 predictions; no new window, outside-window scores or automatic search.
-  Current K absolute calibration remains evidence-insufficient. Next: define
-  phase/support/system roles for existing5000–7000K warm branch using the64
-  new resource members before considering any new fit; retain historical roles.
-  Previous completed task is the registered
-  fixed BV21 multi-system reference batch: docs/kgiant_reference_batch_protocol_v1.md.
-  Prior six-target result remains frozen; new scope/reference/image addendum:
-  docs/kgiant_external_addendum_v1.md. Batch uses162 fixed distance systems,
-  170 membership systems (159 linked), member-first full DESI type audit and
-  directed DR11 measurements. Inventory frozen at9c023fa before scoring, grz main/W1 paired.
-  Result: docs/kgiant_reference_batch_result_v1.md. One new Pal14 grz-only
-  star plus3 historical Terzan7:22 predictions,2 systems,11 checks pass.
-  Pal14 centers55.68/48.22kpc vs73.579kpc reference; absolute calibration fails
-  to gain sufficient coverage. Fixed batch closed; do not restart searches.
-  Coverage must be judged jointly in colors, luminosity, abundance, phase and
-  quality, not by source-dependent temperature labels alone. No field product.
-  Do not restart the original cold-main-sequence follow-up. Maintain the
-  project's multi-population scope and distinguish teacher agreement from
-  independently calibrated distance accuracy.
+- Current checkpoint: unified multi-population baseline v0 is the active main task.
+  Read docs/pro_review_60f65d5.md and docs/baseline_v0_protocol.md, WORKLOG/PLAN.
+  Deliver broad optical-parent training/test/application, optional WISE, Gaia-first
+  and SPECDIS supplementary labels, same-star band tests and internal catalog.
+  Internal field predictions with uncalibrated/support flags are authorized.
+  Do not make cluster checks or64-warm-member phase evidence prerequisites.
+  Preserve all old cold-v4/RGB/classifier/K-giant models and historical predictions.
+  Distinguish teacher agreement, development validation and absolute accuracy.
 - NERSC: `yunao@perlmutter.nersc.gov`; canonical checkout:
   `/pscratch/sd/y/yunao/photdis_pipeline`.
 - Small header/column/few-row inspections may use login nodes. Full scans,

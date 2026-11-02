@@ -1,0 +1,21 @@
+{
+  "version": "baseline_v0",
+  "seed": 20261102,
+  "registries": ["configs/joint_calibration_fields.json", "configs/joint_targeted_fields.json", "configs/joint_giant_ranked_fields.json"],
+  "train_fields": [0,1,2,3,7,8,11,12],
+  "cal_fields": [4,9],
+  "test_fields": [5,6,10],
+  "north_fields": [13],
+  "abs_b_min": 30.0,
+  "ebv_max": 0.03,
+  "gaia_snr_min": 20.0,
+  "train_optical_error_max": 0.03,
+  "wise_snr_min": 5.0,
+  "n_estimators": 128,
+  "min_samples_leaf": 32,
+  "max_depth": 20,
+  "distribution_bin_mag": 0.1,
+  "photometry_draws": 8,
+  "chunk_size": 10000,
+  "output_dir": "data/baseline_v0"
+}

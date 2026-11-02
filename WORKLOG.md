@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — unified baseline v0 registered
+
+- Read complete Pro60f65d5 review; user explicitly reprioritized full pipeline.
+- Recovered clean60f65d5; transient GitHub TLS error resolved on retry. NERSC valid.
+- Archived review, fixed protocol/config and detailed Goal; internal field catalog
+  authorized, old local cluster prerequisites deferred. Header schemas verified.
+- Next: allocated broad Gaia/SPECDIS labels and optical parent, QRF controls.
+
+
 ## 2026-11-02 — Pal14 parameter and fixed giant coverage audit completed
 
 - Result: docs/giant_parameter_audit_result_v1.md; full120-star evidence and4 figures.
