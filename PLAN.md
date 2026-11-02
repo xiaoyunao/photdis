@@ -1,5 +1,19 @@
 # PLAN
 
+## Active objective: controlled negative coverage and distance comparison figures
+
+Full requirements: docs/pro_review_20261102.md; fixed implementation and endpoint:
+docs/giant_wide_protocol_v1.md.
+
+- [x] Recover all endpoints, read full Pro reviews; preserve source and register protocol.
+- [x] Correct denominator/score-gain/current-step wording; implement controlled fits.
+- [ ] Run allocated NERSC three-model whole-field train/cal/test experiment.
+- [ ] Aggregate same-star rates, paired field uncertainty, selected K calibration gaps.
+- [ ] Plot frozen phot-d versus Gaia-d / SPDist / SPECDIS with matched identities.
+- [ ] Inspect figures, validate real results, decide scoped use and close fixed family.
+- [ ] Update report/worklog, commit and synchronize tracked deliverables.
+
+
 ## Completed objective: observable DECam giant candidate application
 
 Followed docs/pro_review_8e26f78.md and frozen giant_candidate_protocol_v1.md.

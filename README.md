@@ -10,8 +10,9 @@ W1 helps within the K population, but warm-dwarf leakage makes the current
 selector unsuitable for a general high-purity catalog. Train-only low-FPR
 thresholds retain few K giants. Colors retain predictive FeH information after
 conditioning on observed spectral temperature/gravity, within a limited model
-family. The next task is an observable candidate definition covering the actual
-temperature/class population before phase and luminosity calibration.
+family. The registered [negative-coverage comparison](docs/giant_wide_protocol_v1.md)
+compares B-K, A-wide and B-wide with matched regularization and frozen-model
+threshold calibration, then identifies phase/luminosity reference gaps.
 
 The [preceding information experiment](docs/giant_information_decision_v1.md)
 remains frozen. DR11 includes north RELEASE=11011 products; its native-system
@@ -133,8 +134,8 @@ corrected training-domain leakage: restricting to M3/M53 lower support
 removes quadratic reversals, and same-star grz scatter improves substantially.
 This historical stage was followed by the independent NGC 4147 test, the
 external-scale comparison, and the completed local conditional-color experiment.
-NGC 5466 remains an exposed diagnostic. The current next step is giant selection
-and abundance information using existing fields, as described above.
+NGC 5466 remains an exposed diagnostic. The selection and abundance-information experiment has completed. The current
+negative-coverage comparison is described above.
 
 ## Locations
 

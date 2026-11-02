@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-02 — controlled negative coverage registered
+
+- Read latest full Pro reviews through read_thread; source saved in docs/pro_review_20261102.md.
+- Added giant_wide module, runner, protocol, batch wrapper and focused weight/split/scale tests.
+- Fixed prior denominator clarification, field4 gain label and stale README next step.
+- Protocol: 13-field cyclic roles, fixed Nref/class weights, shared K-side scaling, no calibration refit.
+- Next: allocated training, aggregate comparison and requested geometric/spectroscopic distance plots.
+
 ## 2026-11-01
 
 - Final delivery: archived six original remote summary artifacts with SHA256
