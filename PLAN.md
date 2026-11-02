@@ -1,5 +1,15 @@
 # PLAN
 
+## Current objective: Pal14 parameters and fixed120-spectrum observational coverage
+
+Full review: docs/pro_review_68eb2f3.md; protocol: docs/giant_parameter_audit_protocol_v1.md.
+- [x] Read full review, register bounded Goal and retain22 predictions.
+- [ ] Same-star literature/DESI/Gaia/DECam and image evidence; provenance conflict.
+- [ ] Recover exact120 reliable spectra, deduplicate, directed photometry and coverage.
+- [ ] Correct channel denominators and interpretation; choose evidence-based route.
+- [ ] Validate, inspect figures, report and synchronize milestone.
+No window changes, outside-window scoring,141-system expansion or model tuning.
+
 ## Completed objective: fixed BV21 multi-system external reference batch
 
 Source: docs/pro_review_35009d2.md. Detailed protocol:

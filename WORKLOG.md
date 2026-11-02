@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-02 — Pal14 and temperature-channel audit registered
+
+- Recovered clean68eb2f3 at all endpoints; full Pro review archived.
+- New bounded Goal: fixed Pal14 identity/parameter sources and exact120 reliable
+  spectra before K window, with directed observations; no new predictions.
+- Protocol sets descriptive target5–95percentile coverage before looking at
+  outside-window photometry. NERSC authentication valid; header columns verified.
+- New scripts pass parse and shell syntax; next allocated inventory and literature.
+
 ## 2026-11-02 — fixed reference batch scored and closed
 
 - Result: docs/kgiant_reference_batch_result_v1.md; Pal14 new grz centers
