@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-02 — final remote sync awaits authentication
+
+- Final results committed as6bcf02f and pushed to GitHub. NERSC push failed
+  Permission denied; direct BatchMode SSH retry also failed. No data lost.
+- Requested `sshproxy -u yunao` renewal per project login instructions.
+- Goal remains active solely for final NERSC synchronization. All scientific
+  results, six figures and real validation are already delivered locally/GitHub.
+
 ## 2026-11-02 — broad-negative experiment and distance figures completed
 
 - Delivered docs/giant_wide_result_v1.md, six PNGs, selected result projection,
