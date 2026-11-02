@@ -17,5 +17,6 @@ case "${1:-inventory}" in
  inventory) python scripts/kgiant_distance_inventory.py ;;
  fit) python scripts/kgiant_distance_fit.py ;;
  summary) python scripts/kgiant_distance_summary.py ;;
+ pal12) python scripts/kgiant_pal12_feasibility.py ;;
  *) exit 2 ;;
 esac
