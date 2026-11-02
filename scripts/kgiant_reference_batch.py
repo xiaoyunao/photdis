@@ -7,10 +7,10 @@ sys.path[:0]=[str(ROOT/'src'),str(ROOT/'scripts'),str(ROOT/'.deps')]
 import numpy as np
 import fitsio
 from photdis.holdouts import GC_ARCHIVE_ALIASES
-from photdis.stage1 import require_compute,write_json,CORE_COLUMNS,PHOT_COLUMNS,tile_bounds,galactic
+from photdis.stage1 import require_compute,CORE_COLUMNS,PHOT_COLUMNS,tile_bounds,galactic
 from photdis.photometry import derive_photometry
 from photdis.audit import rvs_metallicity
-from kgiant_distance_inventory import sha
+from kgiant_distance_inventory import sha,write_json
 from giant_ngc2419_reference import MWS
 
 OUT=Path('data/kgiant_reference_batch_v1')
@@ -56,7 +56,7 @@ def main():
           pmember=float(prob[j]),ra=float(coords[j,0]),dec=float(coords[j,1]),type_source='DESI DR1 MWS RVS',
           targetid=str(int(rv['TARGETID'][i])),teff=float(rv['TEFF'][i]),teff_error=float(rv['TEFF_ERR'][i]),logg=float(rv['LOGG'][i]),
           snr=float(rv['SN_R'][i]),feh_raw=float(rv['FEH'][i]),feh_error=float(rv['FEH_ERR'][i]),feh_corrected=float(metal[0]),
-          phase='unknown',n_qualified_spectra=len(ii),historical_diagnostic=False))
+          abundance_calibration_valid=bool(valid[0]),phase='unknown',n_qualified_spectra=len(ii),historical_diagnostic=False))
     for c in systems:
         g=c['group'];ix=member&(groups[pos]==g)
         counts[c['member_name']].update(mws_member_spectra=int(ix.sum()),reliable_giant_spectra=int((ix&good).sum()),K_spectra=int((ix&k).sum()),

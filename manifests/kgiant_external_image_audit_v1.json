@@ -1,0 +1,223 @@
+{
+  "downloads": [
+    {
+      "name": "1272",
+      "kind": "image",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4047014019609&dec=-34.653451823444975&layer=ls-dr11&pixscale=0.262&bands=grz&size=80",
+      "sha256": "28c6ec9276b07b8fa067ff13f21dff67d21b22f153faf8f671d0a57ba618a2fd",
+      "available": true
+    },
+    {
+      "name": "1272",
+      "kind": "model",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4047014019609&dec=-34.653451823444975&layer=ls-dr11-model&pixscale=0.262&bands=grz&size=80",
+      "sha256": "a58c11eb59c72f1d3698142e24215f1cf42efbddaeae3542c8ee4aa64728db1d",
+      "available": true
+    },
+    {
+      "name": "1272",
+      "kind": "resid",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4047014019609&dec=-34.653451823444975&layer=ls-dr11-resid&pixscale=0.262&bands=grz&size=80",
+      "sha256": "619b7497c632ba13e57871829fce50193d89bcc6b6e60897314bfa6e535174b1",
+      "available": true
+    },
+    {
+      "name": "1282",
+      "kind": "image",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4139960965265&dec=-34.65180113234525&layer=ls-dr11&pixscale=0.262&bands=grz&size=80",
+      "sha256": "70dc0cc6df0dd5a87aaa516281c04db3da664bd4e0a69f0a172bb7a9d6393bd6",
+      "available": true
+    },
+    {
+      "name": "1282",
+      "kind": "model",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4139960965265&dec=-34.65180113234525&layer=ls-dr11-model&pixscale=0.262&bands=grz&size=80",
+      "sha256": "6a1ffce03c4c8550506fd46c6a4590646e9075af04fd62a0f9cd99b4c3f5daa8",
+      "available": true
+    },
+    {
+      "name": "1282",
+      "kind": "resid",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.4139960965265&dec=-34.65180113234525&layer=ls-dr11-resid&pixscale=0.262&bands=grz&size=80",
+      "sha256": "2511788b05bda35aaeef9f61d5bd3d850693904862a6d934b03efbe8cbd1c269",
+      "available": true
+    },
+    {
+      "name": "1515",
+      "kind": "image",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.409044987143&dec=-34.654766388859635&layer=ls-dr11&pixscale=0.262&bands=grz&size=80",
+      "sha256": "88820326952a16eb90b12725f8c8db7d35d39061a4a67ed00dfe95ce2a889115",
+      "available": true
+    },
+    {
+      "name": "1515",
+      "kind": "model",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.409044987143&dec=-34.654766388859635&layer=ls-dr11-model&pixscale=0.262&bands=grz&size=80",
+      "sha256": "bb2272d5d8cc436ea06ddf1752d1f4f7ca42b6bff767a56dc56b0cf44f95720d",
+      "available": true
+    },
+    {
+      "name": "1515",
+      "kind": "resid",
+      "url": "https://www.legacysurvey.org/viewer/fits-cutout?ra=289.409044987143&dec=-34.654766388859635&layer=ls-dr11-resid&pixscale=0.262&bands=grz&size=80",
+      "sha256": "69a10fb4a6f668cd5115efd3149e06bc28e1d4d09f52159f27c0752519c76fd8",
+      "available": true
+    }
+  ],
+  "aperture_diagnostics": [
+    {
+      "name": "1272",
+      "band": "g",
+      "rchisq": 12.08303165435791,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": -0.003674770838784358,
+          "absolute_residual_sum_over_model": 0.014824280499324794
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": -0.004979279796071836,
+          "absolute_residual_sum_over_model": 0.019239262446573015
+        }
+      ]
+    },
+    {
+      "name": "1272",
+      "band": "r",
+      "rchisq": 70.0989990234375,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.001046984481859827,
+          "absolute_residual_sum_over_model": 0.022825140859007536
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.001477922602995199,
+          "absolute_residual_sum_over_model": 0.026358082747121085
+        }
+      ]
+    },
+    {
+      "name": "1272",
+      "band": "z",
+      "rchisq": 14.400872230529785,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.006343203125305663,
+          "absolute_residual_sum_over_model": 0.015736382446237155
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.00525130021956107,
+          "absolute_residual_sum_over_model": 0.021936483619643607
+        }
+      ]
+    },
+    {
+      "name": "1282",
+      "band": "g",
+      "rchisq": 36.09923553466797,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": -0.0020121315107180003,
+          "absolute_residual_sum_over_model": 0.02424542382844451
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.0013591144058697152,
+          "absolute_residual_sum_over_model": 0.031300944548971706
+        }
+      ]
+    },
+    {
+      "name": "1282",
+      "band": "r",
+      "rchisq": 123.6772232055664,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": -0.0019234600944923437,
+          "absolute_residual_sum_over_model": 0.03019700616937278
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.00030429800455679406,
+          "absolute_residual_sum_over_model": 0.03445323923749032
+        }
+      ]
+    },
+    {
+      "name": "1282",
+      "band": "z",
+      "rchisq": 25.936750411987305,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": -0.0004510657167844249,
+          "absolute_residual_sum_over_model": 0.013980720688540359
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": -0.0010508410241001468,
+          "absolute_residual_sum_over_model": 0.018868600932124863
+        }
+      ]
+    },
+    {
+      "name": "1515",
+      "band": "g",
+      "rchisq": 14.326604843139648,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": -0.003054421935166422,
+          "absolute_residual_sum_over_model": 0.019955177585377532
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": -0.0019776685556499476,
+          "absolute_residual_sum_over_model": 0.02480751953095233
+        }
+      ]
+    },
+    {
+      "name": "1515",
+      "band": "r",
+      "rchisq": 63.67632293701172,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.00391561925635688,
+          "absolute_residual_sum_over_model": 0.02876289150650236
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.005733453675210487,
+          "absolute_residual_sum_over_model": 0.03327941836648509
+        }
+      ]
+    },
+    {
+      "name": "1515",
+      "band": "z",
+      "rchisq": 11.295748710632324,
+      "apertures": [
+        {
+          "radius_arcsec": 1.5,
+          "residual_sum_over_model": 0.00271873768014594,
+          "absolute_residual_sum_over_model": 0.014673606836357142
+        },
+        {
+          "radius_arcsec": 3.0,
+          "residual_sum_over_model": 0.0017137697494706886,
+          "absolute_residual_sum_over_model": 0.020002875097795518
+        }
+      ]
+    }
+  ],
+  "limitation": "Same coadds and model, not independent photometry. Aperture residual/model ratios include PSF/neighbor/sky effects; not total-flux corrections. No quality cuts or predictions changed."
+}

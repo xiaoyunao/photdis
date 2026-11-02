@@ -1,0 +1,484 @@
+{
+  "reference": {
+    "name": "Ter 7",
+    "methods": {
+      "gaia_parallax": null,
+      "gaia_kinematic": null,
+      "hst_kinematic": null,
+      "subdwarf": null,
+      "star_count": null,
+      "literature": {
+        "distance_kpc": 24.277,
+        "minus_kpc": 0.487,
+        "plus_kpc": 0.497,
+        "raw": "\\,\\,\\,24.277^{+0.497}_{-0.487}"
+      },
+      "combined": {
+        "distance_kpc": 24.278,
+        "minus_kpc": 0.487,
+        "plus_kpc": 0.496,
+        "raw": "\\,\\,\\,24.278^{+0.496}_{-0.487}"
+      }
+    },
+    "n_publication": 5,
+    "mu": 16.926064535422274,
+    "mu_minus": 0.04400105046618885,
+    "mu_plus": 0.04391613086945418,
+    "displayed_methods": [
+      "literature"
+    ],
+    "dependency_flags": {
+      "gaia_possible": true,
+      "stellar_model_possible": true,
+      "dynamical_model": false,
+      "shared_calibration": true,
+      "method_covariance": "not supplied; do not independently combine columns"
+    }
+  },
+  "registered_mu": 17.05,
+  "residual_shift": 0.12393546457772686,
+  "targets": [
+    {
+      "name": "6817950249538781952",
+      "cluster": "Pal12",
+      "galactic_b": -47.65421900691743,
+      "old_latitude_scope": true,
+      "old_dust_scope": false,
+      "quality_raw": null,
+      "photometry": {
+        "g": 16.6444091796875,
+        "r": 15.86471176147461,
+        "z": 15.47600269317627,
+        "w1": null,
+        "g0": 16.526010513305664,
+        "r0": 15.784956932067871,
+        "z0": 15.431391716003418,
+        "w10": null,
+        "sigma_g": 0.0007335732225328684,
+        "sigma_r": 0.00046885412302799523,
+        "sigma_z": 0.0006202802760526538,
+        "sigma_w1": null,
+        "gaia_g": 15.974,
+        "bp_rp": 1.2068
+      }
+    },
+    {
+      "name": "1272",
+      "cluster": "Terzan7",
+      "galactic_b": -20.04307944599418,
+      "old_latitude_scope": false,
+      "old_dust_scope": false,
+      "quality_raw": {
+        "MASKBITS": 65536,
+        "NOBS_G": 4,
+        "NOBS_R": 3,
+        "NOBS_Z": 7,
+        "FRACMASKED_G": 5.3846673836233094e-05,
+        "FRACMASKED_R": 2.9644001187989488e-05,
+        "FRACMASKED_Z": 0.2691234350204468,
+        "FRACIN_G": 0.9998857378959656,
+        "FRACIN_R": 0.9998849034309387,
+        "FRACIN_Z": 0.9997920393943787,
+        "FRACFLUX_G": 0.0006342097767628729,
+        "FRACFLUX_R": 0.00037981109926477075,
+        "FRACFLUX_Z": 2.357793528062757e-05,
+        "RCHISQ_G": 12.08303165435791,
+        "RCHISQ_R": 70.0989990234375,
+        "RCHISQ_Z": 14.400872230529785,
+        "WISEMASK_W1": 0,
+        "FRACFLUX_W1": 0.03803432360291481
+      },
+      "photometry": {
+        "g": 17.216554641723633,
+        "r": 16.17524528503418,
+        "z": 15.631705284118652,
+        "w1": 16.24156379699707,
+        "g0": 16.939489364624023,
+        "r0": 15.988608360290527,
+        "z0": 15.52730941772461,
+        "w10": 16.2257022857666,
+        "sigma_g": 0.0007888267864473164,
+        "sigma_r": 0.0006151789566501975,
+        "sigma_z": 0.00044177015661261976,
+        "sigma_w1": 0.003447894938290119
+      }
+    },
+    {
+      "name": "1282",
+      "cluster": "Terzan7",
+      "galactic_b": -20.049983165748323,
+      "old_latitude_scope": false,
+      "old_dust_scope": false,
+      "quality_raw": {
+        "MASKBITS": 67584,
+        "NOBS_G": 4,
+        "NOBS_R": 3,
+        "NOBS_Z": 7,
+        "FRACMASKED_G": 0.0,
+        "FRACMASKED_R": 0.0,
+        "FRACMASKED_Z": 0.24775679409503937,
+        "FRACIN_G": 0.9999999403953552,
+        "FRACIN_R": 1.0000001192092896,
+        "FRACIN_Z": 1.0,
+        "FRACFLUX_G": 0.0009971903637051582,
+        "FRACFLUX_R": 0.00044426953536458313,
+        "FRACFLUX_Z": 0.0014638268621638417,
+        "RCHISQ_G": 36.09923553466797,
+        "RCHISQ_R": 123.6772232055664,
+        "RCHISQ_Z": 25.936750411987305,
+        "WISEMASK_W1": 0,
+        "FRACFLUX_W1": 0.03581242263317108
+      },
+      "photometry": {
+        "g": 16.70892333984375,
+        "r": 15.503040313720703,
+        "z": 14.84464168548584,
+        "w1": 15.255958557128906,
+        "g0": 16.429208755493164,
+        "r0": 15.314620018005371,
+        "z0": 14.739249229431152,
+        "w10": 15.239944458007812,
+        "sigma_g": 0.00061370141338557,
+        "sigma_r": 0.0004341178573668003,
+        "sigma_z": 0.0002927608438767493,
+        "sigma_w1": 0.001967919524759054
+      }
+    },
+    {
+      "name": "1515",
+      "cluster": "Terzan7",
+      "galactic_b": -20.047087860739577,
+      "old_latitude_scope": false,
+      "old_dust_scope": false,
+      "quality_raw": {
+        "MASKBITS": 65536,
+        "NOBS_G": 4,
+        "NOBS_R": 3,
+        "NOBS_Z": 7,
+        "FRACMASKED_G": 8.164507016772404e-05,
+        "FRACMASKED_R": 4.4429780245991424e-05,
+        "FRACMASKED_Z": 0.21658432483673096,
+        "FRACIN_G": 0.9999929070472717,
+        "FRACIN_R": 0.9999958872795105,
+        "FRACIN_Z": 0.9999908208847046,
+        "FRACFLUX_G": 0.0006077035213820636,
+        "FRACFLUX_R": 0.00023240876907948405,
+        "FRACFLUX_Z": 0.0017199984285980463,
+        "RCHISQ_G": 14.326604843139648,
+        "RCHISQ_R": 63.67632293701172,
+        "RCHISQ_Z": 11.295748710632324,
+        "WISEMASK_W1": 0,
+        "FRACFLUX_W1": 0.18673141300678253
+      },
+      "photometry": {
+        "g": 17.337383270263672,
+        "r": 16.31361198425293,
+        "z": 15.789849281311035,
+        "w1": 16.216995239257812,
+        "g0": 17.058286666870117,
+        "r0": 16.1256103515625,
+        "z0": 15.684688568115234,
+        "w10": 16.201017379760742,
+        "sigma_g": 0.0008367107948288321,
+        "sigma_r": 0.0006494427798315883,
+        "sigma_z": 0.000477022462291643,
+        "sigma_w1": 0.0031929167453199625
+      }
+    },
+    {
+      "name": "1665",
+      "cluster": "Terzan7",
+      "galactic_b": -20.065694275927036,
+      "old_latitude_scope": false,
+      "old_dust_scope": false,
+      "quality_raw": {
+        "MASKBITS": 67800,
+        "NOBS_G": 4,
+        "NOBS_R": 3,
+        "NOBS_Z": 7,
+        "FRACMASKED_G": 0.03867879509925842,
+        "FRACMASKED_R": 0.8714708685874939,
+        "FRACMASKED_Z": 0.8323003053665161,
+        "FRACIN_G": 1.0,
+        "FRACIN_R": 1.0,
+        "FRACIN_Z": 1.0,
+        "FRACFLUX_G": 0.0025263100396841764,
+        "FRACFLUX_R": 0.0005965931923128664,
+        "FRACFLUX_Z": 0.0011893698247149587,
+        "RCHISQ_G": 110.32704162597656,
+        "RCHISQ_R": 30.660293579101562,
+        "RCHISQ_Z": 79.19512176513672,
+        "WISEMASK_W1": 0,
+        "FRACFLUX_W1": 0.04403575882315636
+      },
+      "photometry": {
+        "g": 15.787123680114746,
+        "r": 14.429591178894043,
+        "z": 13.77338981628418,
+        "w1": 13.794382095336914,
+        "g0": 15.497968673706055,
+        "r0": 14.23481273651123,
+        "z0": 13.66443920135498,
+        "w10": 13.777828216552734,
+        "sigma_g": 0.00040423747850582004,
+        "sigma_r": 0.0008954273071140051,
+        "sigma_z": 0.0005799956270493567,
+        "sigma_w1": 0.0009539590682834387
+      }
+    },
+    {
+      "name": "1708",
+      "cluster": "Terzan7",
+      "galactic_b": -20.063773299447615,
+      "old_latitude_scope": false,
+      "old_dust_scope": null,
+      "quality_raw": null,
+      "photometry": null
+    }
+  ],
+  "rows": [
+    {
+      "name": "1272",
+      "teacher": "spdist",
+      "model": "prior",
+      "effective_n": 77.00000000000001,
+      "delta_mu_median": -0.35828734968935194,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": -0.23435188511162508,
+      "W68": 1.8238315088349655,
+      "box_excursions": []
+    },
+    {
+      "name": "1272",
+      "teacher": "spdist",
+      "model": "A_grz",
+      "effective_n": 42.84827508178643,
+      "delta_mu_median": 0.20773206648168951,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.3316675310594164,
+      "W68": 1.4805125098048286,
+      "box_excursions": []
+    },
+    {
+      "name": "1272",
+      "teacher": "spdist",
+      "model": "B_grzW1",
+      "effective_n": 27.32979967845244,
+      "delta_mu_median": 0.38970786057905826,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.5136433251567851,
+      "W68": 1.28059948164994,
+      "box_excursions": [
+        {
+          "color": "zw1",
+          "direction": "above",
+          "magnitude": 0.008112907409667969
+        }
+      ]
+    },
+    {
+      "name": "1272",
+      "teacher": "specdis",
+      "model": "prior",
+      "effective_n": 258.0,
+      "delta_mu_median": 0.16673451742138923,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.2906699819991161,
+      "W68": 2.312813396548096,
+      "box_excursions": []
+    },
+    {
+      "name": "1272",
+      "teacher": "specdis",
+      "model": "A_grz",
+      "effective_n": 182.13291219753563,
+      "delta_mu_median": 0.2675811602458431,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.39151662482356997,
+      "W68": 1.7469051562287206,
+      "box_excursions": []
+    },
+    {
+      "name": "1272",
+      "teacher": "specdis",
+      "model": "B_grzW1",
+      "effective_n": 144.8237649157002,
+      "delta_mu_median": 0.3274459393293192,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.45138140390704606,
+      "W68": 1.6708099693118363,
+      "box_excursions": []
+    },
+    {
+      "name": "1282",
+      "teacher": "spdist",
+      "model": "prior",
+      "effective_n": 77.00000000000001,
+      "delta_mu_median": -0.8685680414610459,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": -0.7446325768833191,
+      "W68": 1.8238312352901218,
+      "box_excursions": []
+    },
+    {
+      "name": "1282",
+      "teacher": "spdist",
+      "model": "A_grz",
+      "effective_n": 13.434694293256785,
+      "delta_mu_median": 0.2830701592330449,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.40700562381077177,
+      "W68": 1.5117700760607953,
+      "box_excursions": [
+        {
+          "color": "gr",
+          "direction": "above",
+          "magnitude": 0.0831155776977539
+        },
+        {
+          "color": "rz",
+          "direction": "above",
+          "magnitude": 0.006478309631347656
+        }
+      ]
+    },
+    {
+      "name": "1282",
+      "teacher": "spdist",
+      "model": "B_grzW1",
+      "effective_n": 4.4111373839551,
+      "delta_mu_median": 0.39531015987151363,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.5192456244492405,
+      "W68": 0.8210342740264203,
+      "box_excursions": [
+        {
+          "color": "gr",
+          "direction": "above",
+          "magnitude": 0.0831155776977539
+        },
+        {
+          "color": "rz",
+          "direction": "above",
+          "magnitude": 0.006478309631347656
+        },
+        {
+          "color": "zw1",
+          "direction": "above",
+          "magnitude": 0.205810546875
+        }
+      ]
+    },
+    {
+      "name": "1282",
+      "teacher": "specdis",
+      "model": "prior",
+      "effective_n": 258.0,
+      "delta_mu_median": -0.3435460862048565,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": -0.21961062162712963,
+      "W68": 2.3128130704981036,
+      "box_excursions": []
+    },
+    {
+      "name": "1282",
+      "teacher": "specdis",
+      "model": "A_grz",
+      "effective_n": 112.685827589843,
+      "delta_mu_median": -0.017585771902616898,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.10634969267510996,
+      "W68": 1.751674507346518,
+      "box_excursions": []
+    },
+    {
+      "name": "1282",
+      "teacher": "specdis",
+      "model": "B_grzW1",
+      "effective_n": 57.34923129510807,
+      "delta_mu_median": 0.0845898554993596,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.20852532007708646,
+      "W68": 1.6843316360747664,
+      "box_excursions": []
+    },
+    {
+      "name": "1515",
+      "teacher": "spdist",
+      "model": "prior",
+      "effective_n": 77.00000000000001,
+      "delta_mu_median": -0.2394900212541593,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": -0.11555455667643244,
+      "W68": 1.8238315955222628,
+      "box_excursions": []
+    },
+    {
+      "name": "1515",
+      "teacher": "spdist",
+      "model": "A_grz",
+      "effective_n": 46.03839593971564,
+      "delta_mu_median": 0.2378302117947726,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.36176567637249946,
+      "W68": 1.5020821764411671,
+      "box_excursions": []
+    },
+    {
+      "name": "1515",
+      "teacher": "spdist",
+      "model": "B_grzW1",
+      "effective_n": 15.363808214696487,
+      "delta_mu_median": 0.654382686601636,
+      "spdist_temperature_extrapolation": true,
+      "delta_mu_BV21": 0.7783181511793629,
+      "W68": 1.138376440211573,
+      "box_excursions": [
+        {
+          "color": "zw1",
+          "direction": "above",
+          "magnitude": 0.19017696380615234
+        }
+      ]
+    },
+    {
+      "name": "1515",
+      "teacher": "specdis",
+      "model": "prior",
+      "effective_n": 258.0,
+      "delta_mu_median": 0.2855318179230366,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.4094672825007635,
+      "W68": 2.3128134998744088,
+      "box_excursions": []
+    },
+    {
+      "name": "1515",
+      "teacher": "specdis",
+      "model": "A_grz",
+      "effective_n": 183.53056282439658,
+      "delta_mu_median": 0.35455262188175496,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.4784880864594818,
+      "W68": 1.7657983298520037,
+      "box_excursions": []
+    },
+    {
+      "name": "1515",
+      "teacher": "specdis",
+      "model": "B_grzW1",
+      "effective_n": 108.47882439718506,
+      "delta_mu_median": 0.5050815686845311,
+      "spdist_temperature_extrapolation": false,
+      "delta_mu_BV21": 0.629017033262258,
+      "W68": 1.585228960775403,
+      "box_excursions": []
+    }
+  ],
+  "interpretation": "3 stars, 1 external system, 18 configurations; no independent-error combination of literature scales",
+  "source_sha256": {
+    "manifests/kgiant_external_inventory_v1.json": "6c1bba2374abe1e5af4da7ce486567febc6f2c204d50bd924df7e96465f2d8d9",
+    "manifests/kgiant_external_predictions_v1.json": "1095595f0c39557c89c307fcaddb318cc81dd92369a38f089b7d969b672bbe87",
+    "manifests/kgiant_bv21_reference_v1.json": "21009dd8d48bafeaaa021e6e11c1ec61ee82d7093a26bb218296d7b46bc628ea"
+  }
+}

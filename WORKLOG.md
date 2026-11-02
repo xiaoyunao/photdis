@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-02 — fixed reference scale and scope additions
+
+- Normalized162 BV21 Table2 distances from versioned author manuscript;159 map
+  to170 member systems,11 member-only and3 distance-only entries retained.
+- Allocated inventory60679575 uses full member-first DESI audit and directed
+  DR11 reads; pre-score inventory will be frozen before any new residuals.
+- Existing18 predictions unchanged: BV21 residual shift+.123935mag; latitude,
+  effective components, signed box excursions and formal-error caveats exported.
+- Three fixed image audits complete; initial HTTP429 resolved by serial retrieval.
+- Inventory60679575 stopped before photometry: undefined calibrated FeH serialized
+  asNaN. Reused existing null-safe writer and preserved calibration-valid flag;
+  no scientific eligibility change. Retry same fixed batch after patch.
+- py_compile and six fixed-mixture tests pass. Next: frozen coverage and scoring.
+
 ## 2026-11-02 — BV21 reference batch registered
 
 - Recovered clean35009d2 on all endpoints; read and archived full Pro review.
