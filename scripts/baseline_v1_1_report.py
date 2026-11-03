@@ -55,8 +55,9 @@ def main():
         for i,v in enumerate(('wide','evidence')):
             p=load(OUT/f'routed_{v}_evaluation.npz');rows=p['rows'];truth=truth_mu(t,source)[rows]
             use=(t['split'][rows]==2)&np.isfinite(truth);x=(truth[use]-10)/5;y=(p['mu'][use,2]-10)/5
-            ax=axes[i,j];im=ax.hexbin(x,y,gridsize=65,extent=(-2,2,-2,2),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
-            ax.plot([-2,2],[-2,2],'r--',lw=1);ax.set(xlim=(-2,2),ylim=(-2,2),xlabel='log10 reference distance [kpc]',ylabel='log10 photometric distance [kpc]',title=f'{source} / {v}, N={use.sum()}')
+            outside=np.sum((x< -2)|(x>3)|(y< -2)|(y>3))
+            ax=axes[i,j];im=ax.hexbin(x,y,gridsize=65,extent=(-2,3,-2,3),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
+            ax.plot([-2,3],[-2,3],'r--',lw=1);ax.set(xlim=(-2,3),ylim=(-2,3),xlabel='log10 reference distance [kpc]',ylabel='log10 photometric distance [kpc]',title=f'{source} / {v}, N={use.sum()}, outside={outside}')
     fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.7);fig.subplots_adjust(right=.85,wspace=.25,hspace=.35)
     fig.savefig(FIG/'04_distance_density.png',dpi=150);plt.close(fig)
 
@@ -65,8 +66,9 @@ def main():
     mg=[t['g0'][rows][use]-a for a in (truth[use],p['mu'][use,2],new['mu'][use,2])]
     fig,axes=plt.subplots(1,3,figsize=(14,4),sharex=True,sharey=True)
     for ax,y,title in zip(axes,mg,('Reference','Wide QRF','Evidence gate')):
+        outside=np.sum((color<-.5)|(color>2.5)|(y< -5)|(y>15))
         im=ax.hexbin(color,y,gridsize=65,extent=(-.5,2.5,-5,15),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
-        ax.set(xlim=(-.5,2.5),ylim=(15,-5),xlabel='(g-r)0',ylabel='Mg [mag]',title=f'{title}; same {use.sum()} sources')
+        ax.set(xlim=(-.5,2.5),ylim=(15,-5),xlabel='(g-r)0',ylabel='Mg [mag]',title=f'{title}; N={use.sum()}, outside={outside}')
     fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.75);fig.subplots_adjust(right=.86,wspace=.25)
     fig.savefig(FIG/'05_same_source_cmd.png',dpi=150);plt.close(fig)
 

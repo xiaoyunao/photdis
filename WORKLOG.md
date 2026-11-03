@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — first actual optical result
+
+- All six gates converged. A evaluation completed59,901 references; inspected
+  saved small score JSON locally, without rerunning source data.
+- A chosen-reference evolved testN292: oracle tail14.04%, full fallback15.07%,
+  learned gate99.32%. This partial result points primarily to gate failure, not
+  the fallback chain; remaining configurations/adoption are still pending.
+- Density/CMD renderer now labels out-of-axis counts so displayed limits do not
+  silently hide extreme distance predictions. Syntax validation passes.
+
 ## 2026-11-03 — preserve disagreement and multimodal diagnostics
 
 - Routed reference outputs now retain the available A/B/C median-distance
