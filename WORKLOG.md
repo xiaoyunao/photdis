@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-03 — calibration decisions frozen
+
+- All six families retain wide QRF: natural gates worsen evolved-star tails;
+  balanced-prior gates violate dwarf/overall catastrophic-error guards.
+- B and C upgrades pass fixed class-aware cal comparisons. None of144 fixed
+  observable cuts qualifies as an all-class research-quality subset.
+- Depth input60721230 completed:1067 sources,8536 observations,7587 accepted.
+  Finalize60721523 scores depth; one application60721565 and report60721672
+  follow by afterok dependencies. No test-based tuning or repeated application.
+- Added diagnostic-only fixed-cut cal/test bias, width and coverage, with actual
+  whole-parent retention computed from compact histograms after application.
+  All288 float32/float64 boundary comparisons match direct masks; parse passes.
+- Next inspect depth, full catalogs and eight final figures, then publish report.
+
 ## 2026-11-03 — reference evaluation and deployment checks
 
 - Six reference evaluations60721364 completed; same-training controls retained.

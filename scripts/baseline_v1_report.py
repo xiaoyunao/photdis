@@ -10,6 +10,46 @@ FIG=OUT/'figures'
 def save(fig,name):
     fig.tight_layout();fig.savefig(FIG/(name+'.png'),dpi=150,bbox_inches='tight');plt.close(fig)
 
+def quality_histogram(width,weight,disagreement,error,supported):
+    """Bins preserve the registered <=, >=, <=, < threshold conventions."""
+    valid=supported&np.isfinite(width+weight+disagreement+error)
+    bins=[np.searchsorted(np.asarray(c,dtype=x.dtype),x[valid],side=side) for c,x,side in
+          [([1,2,4,8],width,'left'),([.5,.7,.9],weight,'right'),
+           ([.25,.5,1],disagreement,'left'),([.03,.06,.12,.25],error,'right')]]
+    return np.bincount(np.ravel_multi_index(bins,(5,4,4,5)),minlength=400).reshape(5,4,4,5)
+
+def histogram_count(hist,cuts):
+    i=[1,2,4,8].index(cuts['width95']);j=[.5,.7,.9].index(cuts['weight'])
+    k=[.25,.5,1].index(cuts['disagreement']);l=[.03,.06,.12,.25].index(cuts['error'])
+    return int(hist[:i+1,j+1:,:k+1,:l+1].sum())
+
+def quality_diagnostics(t,p,candidates):
+    """Describe fixed cuts on cal/test and the parent; never change selection."""
+    import fitsio
+    from baseline_v1_select import quality_mask
+    hist=np.zeros((5,4,4,5),dtype=np.int64);nparent=0
+    for field in range(13):
+        with fitsio.FITS(str(OUT/f'catalog_{field:02}.fits')) as f:
+            n=f[1].get_nrows();nparent+=n
+            for start in range(0,n,100000):
+                a=f[1].read(rows=np.arange(start,min(start+100000,n)),
+                    columns=['mu','branch_weights','disagreement','optical_error','supported'])
+                hist+=quality_histogram(a['mu'][:,4]-a['mu'][:,0],np.max(a['branch_weights'][:,:3],axis=1),
+                                        a['disagreement'],a['optical_error'],a['supported'])
+    result=[];rows=p['rows'];truth=truth_mu(t,'chosen')[rows]
+    for candidate in candidates:
+        use=quality_mask(t,rows,p,candidate['cuts']);record=dict(candidate)
+        record['parent_count']=histogram_count(hist,candidate['cuts'])
+        record['parent_fraction']=record['parent_count']/nparent
+        for split,name in [(1,'cal'),(2,'test')]:
+            mask=use&(t['split'][rows]==split)
+            record[name]={label:dict(raw=metrics(p['mu'][m],truth[m]),
+                                    calibrated=metrics(p['mu_cal'][m],truth[m]))
+                for label,m in [('all',mask)]+[(f'class{k}',mask&(t['class_label'][rows]==k)) for k in range(3)]}
+        result.append(record)
+    return dict(parent_n=nparent,candidates=result,
+        note='Fixed predeclared cuts; no selection or refit after test/parent inspection. Parent counts use stored float32 summaries.')
+
 def main():
     require_compute();FIG.mkdir(exist_ok=True);t=load(OLD/'references.npz')
     numer=json.load(open(OUT/'numerical.json'));selection=json.load(open(OUT/'selection.json'))
@@ -51,12 +91,18 @@ def main():
         ax.set(xticks=range(3),xticklabels=['grz','grzW1','grzW1W2'],ylabel='Distance-modulus NMAD [mag]',title=source+': identical training/test identities')
     axes[0].legend();save(fig,'03_same_star_information');result['same_star']=same
 
-    candidates=selection['quality_candidates'];ncal=model_scores['A']['variants']['wide']['cal']['chosen']['all']['n']
-    fig,ax=plt.subplots(figsize=(7,4))
-    for eligible,color in [(False,'gray'),(True,'tab:green')]:
-        use=[c for c in candidates if c['eligible']==eligible and min(c['class_counts'])>=30]
-        ax.scatter([c['n']/ncal for c in use],[max(c['class_tail']) for c in use],s=15,alpha=.6,c=color,label='passes guards' if eligible else 'fails guards')
-    ax.axhline(.1,c='r',ls='--');ax.set(xlabel='Fraction of calibration distance references retained',ylabel='Worst coarse-class catastrophic fraction',title='Observable quality grid; each class N >= 30');ax.legend();save(fig,'04_quality_retention')
+    p=load(OUT/'recommended_evaluation.npz')
+    quality=quality_diagnostics(t,p,selection['quality_candidates']);result['quality_diagnostics']=quality
+    candidates=quality['candidates'];ncal=model_scores['A']['variants']['wide']['cal']['chosen']['all']['n']
+    fig,axes=plt.subplots(1,2,figsize=(12,4))
+    for ax,parent in zip(axes,(False,True)):
+        for eligible,color in [(False,'gray'),(True,'tab:green')]:
+            use=[c for c in candidates if c['eligible']==eligible and min(c['class_counts'])>=30]
+            ax.scatter([c['parent_fraction'] if parent else c['n']/ncal for c in use],
+                       [max(c['class_tail']) for c in use],s=15,alpha=.6,c=color,label='passes guards' if eligible else 'fails guards')
+        ax.axhline(.1,c='r',ls='--');ax.set(xlabel='Fraction retained: '+('complete DECam parent' if parent else 'calibration distance references'),
+            ylabel='Worst coarse-class cal catastrophic fraction',title='Same fixed cuts; each cal class N >= 30');ax.legend()
+    save(fig,'04_quality_retention')
 
     fig,axes=plt.subplots(2,3,figsize=(14,8));x=np.arange(4)
     for i,cl in enumerate((0,1,2)):
