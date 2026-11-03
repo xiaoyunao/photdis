@@ -65,6 +65,11 @@ def main():
             for row,metric in enumerate(('tail_1','coverage95')):
                 vals=[depth['groups'][k]['models'][name]['metrics'].get(metric,np.nan) for k in keys]
                 axes[row,i].plot(x,vals,'o-',label=name)
+                cis=[depth['groups'][k]['models'][name]['source_cluster_ci'] for k in keys]
+                ci_index=2 if row==0 else 4
+                lower=[c['ci95'][ci_index][0] if c else np.nan for c in cis]
+                upper=[c['ci95'][ci_index][1] if c else np.nan for c in cis]
+                axes[row,i].fill_between(x,lower,upper,alpha=.10)
                 axes[row,i].set(xticks=x,xticklabels=[f'{lo}-{hi}' for lo,hi in CFG['depth_r_bins']],ylim=(0,1),xlabel='Final measured r',ylabel=metric,title=['dwarf','evolved','transition'][i])
         axes[0,i].legend()
     save(fig,'05_flux_depth_stress')

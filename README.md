@@ -4,7 +4,12 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Current baseline: **unified multi-population baseline v0, complete**.
+Active development: **bounded baseline v1** — [protocol](docs/baseline_v1_protocol.md),
+[artifact schema and replay](docs/baseline_v1_catalog.md). This compares population
+branches, propagation convergence and fixed flux-depth stress on the existing
+split, followed by one full-parent application. No cluster expansion.
+
+Completed baseline: **unified multi-population baseline v0**.
 [Results and nine figures](docs/baseline_v0_result.md) ·
 [catalog and runbook](docs/baseline_v0_catalog.md) ·
 [full review](docs/pro_review_60f65d5.md) · [protocol](docs/baseline_v0_protocol.md).

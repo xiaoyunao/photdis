@@ -4,12 +4,15 @@
 
 Full review: docs/pro_review_494b12c.md; fixed protocol: docs/baseline_v1_protocol.md.
 - [x] Recover clean494b12c, read full review, create detailed Goal and protocol.
-- [ ] Stratified convergence sample and analytical error-propagation correction.
+- [x] Stratified convergence sample and analytical error-propagation correction.
+  3000 sources; Sobol128 improves tails but fails strict layer tolerances; flags retained.
 - [ ] Whole-reference branch-mass audit, conditional/oracle/photometric models.
 - [ ] Cal-only selection, same-training comparisons, fixed flux-depth experiment.
 - [ ] One final full-parent application, checks, figures/report and endpoint sync.
 
 Preserve v0 and use data/baseline_v1; no cluster or algorithm-family search.
+Six branch families and reference evaluation completed. Cal decisions and
+fixed-depth scoring wait for the raw-sweep experiment input60721230.
 
 ## Completed objective: unified multi-population baseline v0
 

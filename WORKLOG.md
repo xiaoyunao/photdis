@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — reference evaluation and deployment checks
+
+- Six reference evaluations60721364 completed; same-training controls retained.
+  Finalization60721523 waits for fixed raw-flux inputs60721230.
+- Added no-WISE deployment smoke test: optical output retained, unavailable
+  B/C remain NaN, CQR contains raw and failed numerical-layer flag is preserved.
+- Eight focused tests now pass, including existing shared-flux noise-budget tests.
+- Report depth figures include original-source cluster confidence intervals;
+  validation checks accepted/rejected rows and CQR order/containment.
+- README and PLAN distinguish activev1 from completedv0; next cal-only freeze
+  and one new full-parent application, retaining all historical predictions.
+
 ## 2026-11-03 — v1 artifact schema and integration checks
 
 - Documented versioned outputs, gate/oracle distinction, numerical flags,
