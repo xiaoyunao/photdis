@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-03 — long full-parent integration checkpoint
+
+- Numerical, six-family/oracle, v0 mass audit, cal lock and fixed-depth tasks
+  are complete. Frozen six variants choosewide; B/C upgrades accepted; no
+  fixed all-class quality rule passes. All current source commits synchronized.
+- Full application60721565 RUNNING on nid005443 (4-hour limit,128 CPU request,
+  96 workers). Header-only check:839787 written rows, of which348603 south and
+  491184 north. No error; integration is substantially slower thanv0's8 draws.
+- Do not restart/overwrite running shards. Wait for this job; report60721672
+  depends afterok and validates full identities/hashes before eight figures.
+- Remaining: fetch small report/validation/application JSON and figures;
+  visually inspect8PNG; run scripts/baseline_v1_publish.py; update final
+  README/AGENTS/PLAN, commit and scripts/sync.py push, then complete Goal.
+- Large products stay NERSC data/baseline_v1; local review JSON is ignored
+  data/baseline_v1_review. Goal remainsactive, notblocked orcomplete.
+
 ## 2026-11-03 — complete application running
 
 - Application60721565 started on nid005443 with128 requested CPUs; final
