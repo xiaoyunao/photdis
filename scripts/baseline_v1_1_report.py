@@ -110,6 +110,13 @@ def main():
         '| 分布 | N | 中位Δμ [mag] | 严重错误率 | 95%宽度 [mag] |','|---|---:|---:|---:|---:|']
     for v in variants:
         d=report['C']['scores'][v]['chosen']['test']['class_evolved'];lines.append(f"| {v} | {d['n']} | {fmt(d.get('bias_mag'))} | {fmt(d.get('tail_1'))} | {fmt(d.get('width95'))} |")
+    ce=report['C']['scores']
+    tail=lambda v:ce[v]['chosen']['test']['class_evolved']['tail_1']
+    lines+=['',f"C演化星：支持回退相对直接oracle改变{100*(tail('oracle_support')-tail('oracle')):+.2f}百分点；",
+        f"完整回退相对直接oracle改变{100*(tail('oracle_full')-tail('oracle')):+.2f}百分点；",
+        f"新门控相对宽模型改变{100*(tail('evidence')-tail('wide')):+.2f}百分点（正值为严重错误增加）。",
+        '本轮应据这些同星差值判断回退的实际影响，不能将oracle与纯测光流程的全部差距归因于标签缺失。',
+        '联合光度监督仍受到训练人群组成和固定门控表达能力的影响；失败不等于已经证明颜色的物理信息极限。']
     lines+=['','直接oracle→支持回退→完整回退使用完全相同的对象和测光扰动。差值用于定位机制，',
         '不把它们强行解释为可相加的因果百分比。unknown_fraction是缺类别标签份额；',
         '新门控第四分量是宽经验分布权重，两者均不是第四种恒星类别概率。','',
@@ -139,6 +146,10 @@ def main():
     for n in 'ABC':
         for v in ('wide','evidence'):
             d=par['results'][n][v]['all'];lines.append(f"| {n} | {v} | {d['n']} | {fmt(d.get('low05'))} | {fmt(d.get('high95'))} | {fmt(d.get('mean_center_residual_mas'))} |")
+    lines+=['', '| 配置/分布 | 选择概率数值下溢数 | 8/16点PIT最大差（固定子集） |', '|---|---:|---:|']
+    for n in 'ABC':
+        for v in ('wide','evidence'):
+            d=par['results'][n][v];lines.append(f"| {n}/{v} | {d['selection_underflow_rows']} | {fmt(d['quadrature_pit_max_difference'],6)} |")
     lines+=['','![条件化观测视差PIT](../figures/baseline_v1_1/07_observed_parallax.png)','',
         '## 验证与复现','',
         f"实际产物核验{valid['n_checks']}项通过。训练证据来自四折空间留出，不含自身训练标签；",

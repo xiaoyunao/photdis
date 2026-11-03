@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — completed training; C confirms gate failure
+
+- Accounting confirms60727000 COMPLETED0:0 in12m34s. All six model comparisons
+  complete. Changed pending checks60727226 to debug/30min without duplication.
+- C chosen evolvedN266: direct oracle13.91%, support13.91%, full15.04%,
+  new gate98.87% versus wide80.08%. This rejects fallback as the dominant
+  explanation on these references; retain the distinction from physical limits.
+- Added measured fallback differences and quadrature/underflow table to report
+  renderer. No fitted parameter, split or adoption threshold changed.
+
 ## 2026-11-03 — bind numerical artifacts to acceptance
 
 - Validation now hashes every v1.1 NPZ, fitted gate and JSON artifact, alongside
