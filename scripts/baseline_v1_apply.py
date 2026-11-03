@@ -40,6 +40,7 @@ def worker(task):
     return dict(field=field,start=start,stop=stop,n=stop-start,path=str(path),sha256=sha(path),seconds=time.time()-tick)
 
 def main():
+    global _LOCK,_MODELS
     require_compute();(OUT/'shards').mkdir(exist_ok=True)
     tasks=[]
     for field in range(14):
@@ -48,7 +49,11 @@ def main():
     if (OUT/'application.json').exists():raise FileExistsError('v1 application exists')
     # One run, many independent shards: no repeated full-parent scoring or shared writers.
     records=[]
-    with ProcessPoolExecutor(max_workers=int(os.environ.get('BASELINE_WORKERS','32'))) as pool:
+    # Fork shares large read-only forest tables rather than reading them per worker.
+    _LOCK,_MODELS=load_selected()
+    import multiprocessing as mp
+    with ProcessPoolExecutor(max_workers=int(os.environ.get('BASELINE_WORKERS','32')),
+                             mp_context=mp.get_context('fork')) as pool:
         futures=[pool.submit(worker,task) for task in tasks]
         for future in as_completed(futures):
             records.append(future.result());write_json(OUT/'application_progress.json',records)

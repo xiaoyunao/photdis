@@ -46,7 +46,7 @@ def main():
             n_research_quality=int((use&quality).sum()),routes={str(k):int((use&(route1==k)).sum()) for k in range(3)},
             branch_agreement=float(np.mean(branch[known]==t['class_label'][known])) if known.any() else None,
             models={name:dict(metrics=metrics(mu[use],t['truth_mu'][use]),source_cluster_ci=bootstrap(t,mu,use)) for name,mu in [('v0',v0),('v1',v1),('v1_cal',v1cal)]})
-    write_json(OUT/'depth_result.json',dict(groups=result,failures=dict(no_grz_snr=int((~t['grz_base']).sum()),no_grz_clean=int((~t['grz_clean']).sum()),
+    write_json(OUT/'depth_result.json',dict(groups=result,non_dimming_pairs=int((t['shift']<=0).sum()),failures=dict(no_grz_snr=int((~t['grz_base']).sum()),no_grz_clean=int((~t['grz_clean']).sum()),
         missing_template_wise=int((~t['template_wise_finite']).sum())),
         template_noise_exceeds_target=np.nanmean(t['template_noise_ratio']>1,axis=0).tolist(),
         selection_sha256=sha(OUT/'selection.json'),inputs_sha256=sha(OUT/'depth_input.npz'),
