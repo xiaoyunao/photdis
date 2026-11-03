@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — v1 artifact schema and integration checks
+
+- Documented versioned outputs, gate/oracle distinction, numerical flags,
+  full-parent shard assembly and replay commands in baseline_v1_catalog.md.
+- Seven focused mathematical/flux-noise tests pass; actual output validation
+  implemented for all model variants, split IDs, shifts and every catalog row.
+- Application workers share read-only forest tables within one CPU allocation.
+  No changes to frozen training identities, noise sequences or selection rules.
+
 ## 2026-11-03 — numerical selection fixed before reference scoring
 
 - Numerical60721158 completed:3000-source audit compares IID8/32/128 and
