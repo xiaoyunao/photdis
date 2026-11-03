@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — bind numerical artifacts to acceptance
+
+- Validation now hashes every v1.1 NPZ, fitted gate and JSON artifact, alongside
+  the frozen v1 catalog hashes, so saved distributions have an explicit record.
+- Latest queue snapshot no longer lists training60727000; dependent60727226
+  is queued with dependency cleared. Confirm accounting and inspect its log.
+- GitHub SSL interruption recurred during push; retry committed three-endpoint
+  sync before delivery. NERSC calculations are independent of that network path.
+
 ## 2026-11-03 — first actual optical result
 
 - All six gates converged. A evaluation completed59,901 references; inspected

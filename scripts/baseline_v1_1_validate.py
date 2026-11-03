@@ -70,7 +70,8 @@ def main():
     app=json.load(open(ROOT/'manifests/baseline_v1_application.json'))
     check('v1:application_manifest',sha(EXPERT/'application.json')==sha(ROOT/'manifests/baseline_v1_application.json'))
     for f in app['fields']:check(f"v1:catalog{f['field']}:unchanged",sha(EXPERT/f"catalog_{f['field']:02}.fits")==f['sha256'])
-    hashes={p.name:sha(p) for p in OUT.glob('*.json') if p.name!='validation.json'}
+    hashes={p.name:sha(p) for p in OUT.iterdir()
+            if p.is_file() and p.suffix in ('.json','.npz','.joblib') and p.name not in ('validation.json','report.json')}
     write_json(OUT/'validation.json',dict(n_checks=len(checks),all_passed=True,checks=checks,product_hashes=hashes))
     print('Actual validation checks passed',len(checks),flush=True)
 if __name__=='__main__':main()
