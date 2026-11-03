@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — implement v1.1 gate and fallback core
+
+- Added baseline_v1_1.py: weighted joint luminosity/class objective, four-way
+  quadratic softmax, mass-preserving support transfer and three oracle modes.
+- Added shared Sobol128 integration, original natural/balanced definitions and
+  explicit missing-label/support diagnostics. New gate conditions on observed
+  colors consistently in fitting and evaluation; protocol records distinction.
+- Analytic objective gradient agrees with finite differences; explicit fallback
+  mass example and Python parse pass. Actual models remain unscored.
+- Next build training-only fold evidence runner, reference decomposition and
+  focused regression tests before allocated execution.
+
 ## 2026-11-03 — begin bounded v1.1 follow-up
 
 - Recovered clean97c2775 at local/origin/NERSC; authentication valid.
