@@ -75,7 +75,7 @@ def main():
     fig,ax=plt.subplots(1,2,figsize=(12,4))
     analytic=numer['analytic'];keys=list(analytic)
     ax[0].bar(np.arange(len(keys)),[analytic[k]['mean_probability95'] for k in keys]);ax[0].axhline(.95,c='r',ls='--')
-    ax[0].set(xticks=np.arange(len(keys)),xticklabels=keys,ylim=(.7,1),ylabel='Analytic probability within numerical 95% interval',title='Constant-luminosity counterexample')
+    ax[0].set(xticks=np.arange(len(keys)),xticklabels=keys,ylim=(0,1),ylabel='Analytic mass inside 95% interval',title='Constant luminosity: interpolated CDF')
     ax[0].tick_params(axis='x',rotation=25)
     for layer in ('low','high'):
         keys=['iid_8_0','iid_32_0','iid_128_0','sobol_32_0','sobol_128_0']
@@ -115,10 +115,11 @@ def main():
     for ax,parent in zip(axes[0],parents):
         for eligible,color in [(False,'gray'),(True,'tab:green')]:
             use=[c for c in candidates if c['eligible']==eligible and min(c['class_counts'])>=30]
+            label=('passes guards' if eligible else 'fails guards')+f' ({len(use)} cuts)'
             ax.scatter([c['parent_fraction'] if parent else c['n']/ncal for c in use],
-                       [max(c['class_tail']) for c in use],s=15,alpha=.6,c=color,label='passes guards' if eligible else 'fails guards')
-        ax.axhline(.1,c='r',ls='--');ax.set(xlabel='Fraction retained: '+('complete DECam parent' if parent else 'calibration distance references'),
-            ylabel='Worst coarse-class cal catastrophic fraction',title='Same fixed cuts; each cal class N >= 30');ax.legend()
+                       [max(c['class_tail']) for c in use],s=15,alpha=.6,c=color,label=label)
+        ax.axhline(.1,c='r',ls='--');ax.set(xlim=(0,1),ylim=(0,1),xlabel='Fraction retained: '+('complete DECam parent' if parent else 'calibration distance references'),
+            ylabel='Worst-class cal fraction |delta mu| > 1 mag',title='Same fixed cuts; each cal class N >= 30');ax.legend()
     save(fig,'04_quality_retention')
 
     fig,axes=plt.subplots(2,3,figsize=(14,8));x=np.arange(4)
@@ -126,15 +127,17 @@ def main():
         keys=[f'class{cl}_observed_r_{lo}_{hi}' for lo,hi in CFG['depth_r_bins']]
         for name in ('v0','v1','v1_cal'):
             for row,metric in enumerate(('tail_1','coverage95')):
+                if row==0 and name=='v1_cal':continue  # CQR never changes the median.
                 vals=[depth['groups'][k]['models'][name]['metrics'].get(metric,np.nan) for k in keys]
-                axes[row,i].plot(x,vals,'o-',label=name)
+                axes[row,i].plot(x,vals,'s--' if name=='v1_cal' else 'o-',label=name)
                 cis=[depth['groups'][k]['models'][name]['source_cluster_ci'] for k in keys]
                 ci_index=2 if row==0 else 4
                 lower=[c['ci95'][ci_index][0] if c else np.nan for c in cis]
                 upper=[c['ci95'][ci_index][1] if c else np.nan for c in cis]
                 axes[row,i].fill_between(x,lower,upper,alpha=.10)
-                axes[row,i].set(xticks=x,xticklabels=[f'{lo}-{hi}' for lo,hi in CFG['depth_r_bins']],ylim=(0,1),xlabel='Final measured r',ylabel=metric,title=['dwarf','evolved','transition'][i])
+                axes[row,i].set(xticks=x,xticklabels=[f'{lo}-{hi}' for lo,hi in CFG['depth_r_bins']],ylim=(0,1),xlabel='Final measured r',ylabel='Fraction |delta mu| > 1 mag' if row==0 else '95% interval coverage',title=['dwarf','evolved','transition'][i])
         axes[0,i].legend()
+        axes[1,i].axhline(.95,c='gray',ls=':',lw=1);axes[1,i].legend()
     save(fig,'05_flux_depth_stress')
 
     p=load(OUT/'recommended_evaluation.npz');rows=p['rows'];test=t['split'][rows]==2
@@ -143,13 +146,20 @@ def main():
         truth=truth_mu(t,source)[rows];use=test&np.isfinite(truth);xx=(truth[use]-10)/5;yy=(p['mu'][use,2]-10)/5
         hb=axes[0,j].hexbin(xx,yy,gridsize=65,bins='log',mincnt=1);fig.colorbar(hb,ax=axes[0,j],label='Count per hexagon (log scale)')
         lim=[min(xx.min(),yy.min()),max(xx.max(),yy.max())];axes[0,j].plot(lim,lim,'r--');axes[0,j].set(xlabel=source+' log10(d/kpc)',ylabel='Photometric log10(d/kpc)',title=f'N={use.sum():,}')
-        residual=p['mu'][use,2]-truth[use];axes[1,j].hist(residual,bins=np.linspace(-8,8,100),histtype='step');axes[1,j].axvline(0,c='r');axes[1,j].set(xlabel='Delta mu [mag]',ylabel='Number',title=f'Outside plotted range: {np.sum(abs(residual)>8)}')
+        axes[0,j].set_aspect('equal',adjustable='box')
+        residual=p['mu'][use,2]-truth[use];axes[1,j].hist(residual,bins=np.linspace(-8,8,100),histtype='step',log=True);axes[1,j].axvline(0,c='r');axes[1,j].set(xlabel='Delta mu [mag]',ylabel='Number (log scale)',title=f'Outside plotted range: {np.sum(abs(residual)>8)}')
     save(fig,'06_distance_references')
 
     truth=truth_mu(t,'chosen')[rows];use=test&np.isfinite(truth);color=t['g0'][rows][use]-t['r0'][rows][use]
-    fig,axes=plt.subplots(1,2,figsize=(11,5))
-    for ax,y,title in zip(axes,[t['g0'][rows][use]-truth[use],t['g0'][rows][use]-p['mu'][use,2]],['Reference CMD','Photometric median CMD']):
-        h=ax.hexbin(color,y,gridsize=65,bins='log',mincnt=1);fig.colorbar(h,ax=ax,label='Count per hexagon (log scale)');ax.set(xlabel='(g-r)0',ylabel='Mg',title=title+f'; same N={use.sum():,}');ax.invert_yaxis()
+    fig,axes=plt.subplots(1,2,figsize=(11,5),sharex=True,sharey=True)
+    ys=[t['g0'][rows][use]-truth[use],t['g0'][rows][use]-p['mu'][use,2]]
+    extent=(color.min(),color.max(),min(y.min() for y in ys),max(y.max() for y in ys));handles=[]
+    for ax,y,title in zip(axes,ys,['Reference CMD','Photometric median CMD']):
+        h=ax.hexbin(color,y,gridsize=65,bins='log',mincnt=1,extent=extent);handles.append(h)
+        ax.set(xlabel='(g-r)0',ylabel='Mg',title=title+f'; same N={use.sum():,}',ylim=(extent[3]+.3,extent[2]-.3))
+    maximum=max(h.get_array().max() for h in handles)
+    for ax,h in zip(axes,handles):
+        h.set_clim(1,maximum);fig.colorbar(h,ax=ax,label='Count per hexagon (log scale)')
     save(fig,'07_same_source_cmd')
 
     result['complete_application']=not preview and (OUT/'application.json').exists()

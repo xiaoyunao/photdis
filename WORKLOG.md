@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — experiment figure review
+
+- Preview60722526 completed23s,0:0. Visually inspected all7 PNGs from actual
+  saved experimental outputs; full application remains running independently.
+- Corrected CMD comparison to shared axes, identical hexbin grid and density
+  normalization; quality-retention axes now show full0–1 fractions and cut counts.
+- Distance residual histograms expose tails on a log-count axis; depth labels
+  and nominal95% line clarify coverage. Removed duplicate CQR median curve.
+- Changes affect presentation only. Re-render previews once to verify layout;
+  final mother-retention/application plots await complete catalogs.
+
 ## 2026-11-03 — inspect finished experiments during catalog integration
 
 - Added an explicit experiments-only preview path to the report renderer:
