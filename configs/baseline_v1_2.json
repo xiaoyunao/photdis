@@ -1,0 +1,17 @@
+{
+  "version": "baseline_v1_2",
+  "baseline_commit": "dbeac6594175812b4ef88eabd395b206493af4ae",
+  "output_dir": "data/baseline_v1_2",
+  "seed": 20261103,
+  "draws": 128,
+  "chunk_size": 1000,
+  "workers": 8,
+  "logistic_C": 1.0,
+  "forest": {"n_estimators": 256, "min_samples_leaf": 32, "max_depth": 20, "max_features": 1.0},
+  "false_positive_budgets": [0.01, 0.02, 0.05],
+  "confidence_grid": [0.5, 0.7, 0.8, 0.9, 0.95],
+  "margin_grid": [0.0, 0.2, 0.4],
+  "single_max_tail": 0.05,
+  "single_class_tail_guard": 0.02,
+  "single_min_class": 30
+}

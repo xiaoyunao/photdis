@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — register v1.2 from latest full Pro review
+
+- Retrieved full7648-character review of dbeac65 (preview was stale).
+- Created detailed Goal and frozen protocol/config for color ranking, two fixed
+  balanced classifiers, distance decisions and complete Gaia prediction checks.
+- Local/origin/NERSC clean and equal at dbeac65; auth valid. No new scores yet.
+- Next implement/test bounded runners, commit protocol before allocated execution.
+
+
 ## 2026-11-03 — baseline v1.1 final delivery
 
 - All six gates reject on cal; retain v1 deployment and all frozen catalogs.

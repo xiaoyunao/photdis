@@ -1,5 +1,17 @@
 # PLAN
 
+## Active objective: baseline v1.2 color separability and distance decisions
+
+Source:docs/pro_review_dbeac65.md; protocol:docs/baseline_v1_2_protocol.md.
+- [x] Read latest full review and register detailed Goal/config/protocol.
+- [ ] Reuse old scores; train only balanced quadratic and fixed forest classifiers.
+- [ ] Fixed cal FPR workpoints, same-training ROC/PR and all-source distance decisions.
+- [ ] Fixed-parent weighted coverage and complete observed-parallax validation.
+- [ ] Actual checks, figures/report, checkpoint and three-endpoint delivery.
+
+Preserve v1 deployment and all historical artifacts; no full catalog or new search.
+
+
 ## Completed objective: baseline v1.1 fallback and learned weights
 
 Source:docs/pro_review_97c2775.md; protocol:docs/baseline_v1_1_protocol.md.

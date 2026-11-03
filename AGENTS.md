@@ -1,5 +1,10 @@
 # Project instructions
 
+- Active task: baseline v1.2 per docs/baseline_v1_2_protocol.md. Freeze distance
+  experts; only two fixed balanced classifiers, cal-only selection/decisions and
+  complete Gaia parallax checks on existing reference/probability samples.
+  No subagents or full-catalog rerun. Detailed Goal and PLAN govern scope.
+
 - Latest completed experiment: baseline v1.1; docs/baseline_v1_1_result.md.
   Six gates reject on cal; retain deployed v1. Fixed C evolved oracle/full
   fallback tails13.91%/15.04%, new gate98.87% versus wide80.08%.
