@@ -47,7 +47,7 @@ def main():
             x=parent['fraction'];ax.errorbar(x,cal['tail_1'],xerr=1.96*parent['se'],fmt='o',color='tab:blue')
             if test['n']:ax.plot([x,x],[cal['tail_1'],test['tail_1']],c='gray',alpha=.5);ax.scatter(x,test['tail_1'],marker='x',color='tab:orange')
         ax.plot([],[],'o',color='tab:blue',label='cal');ax.plot([],[],'x',color='tab:orange',label='development test')
-        ax.set(xlim=(0,1),ylim=(0,1),xlabel='Estimated fraction of optical parent',ylabel='All-reference severe-error rate',title=name+'; fixed prediction cuts');ax.legend(fontsize=8)
+        ax.set(xlim=(0,1),ylim=(.001,1),yscale='log',xlabel='Estimated fraction of optical parent',ylabel='All-reference severe-error fraction (log)',title=name+'; fixed prediction cuts');ax.legend(fontsize=8)
     save(fig,'03_risk_retention')
 
     fig,axes=plt.subplots(2,3,figsize=(14,8),sharex=True,sharey=True,layout='constrained')
@@ -72,18 +72,19 @@ def main():
     fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.75)
     fig.savefig(FIG/'05_same_source_cmd.png',dpi=150);plt.close(fig)
 
-    fig,axes=plt.subplots(1,3,figsize=(14,4))
+    fig,axes=plt.subplots(1,3,figsize=(14,4),layout='constrained')
     for ax,name in zip(axes,'ABC'):
         p=load(OUT/f'{name}_evidence_evaluation.npz');rows=p['rows'];use=t['split'][rows]==2
-        im=ax.hexbin(p['unknown_fraction'][use],p['weights'][use,3],gridsize=35,extent=(0,1,0,1),mincnt=1,bins='log')
+        im=ax.hexbin(p['unknown_fraction'][use],p['weights'][use,3],gridsize=35,extent=(0,1,0,1),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
         ax.plot([0,1],[0,1],'r--');ax.set(xlim=(0,1),ylim=(0,1),xlabel='Leaf missing-class fraction',ylabel='New final broad-component weight',title=name+'; different quantities')
-    save(fig,'06_missing_labels_vs_residual')
+    fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.75)
+    fig.savefig(FIG/'06_missing_labels_vs_residual.png',dpi=150);plt.close(fig)
 
     fig,axes=plt.subplots(1,3,figsize=(14,4))
     for ax,name in zip(axes,'ABC'):
         for v in ('wide','evidence'):
             d=par['results'][name][v]['all'];ax.step(np.linspace(.05,.95,10),d['pit_histogram'],where='mid',label=f"{v}, N={d['n']}")
-        ax.axhline(.1,c='gray',ls='--');ax.set(xlim=(0,1),xlabel='Observed-SNR-conditioned PIT',ylabel='Design-weighted fraction per bin',title=name+' / quality Gaia test sample');ax.legend(fontsize=8)
+        ax.axhline(.1,c='gray',ls='--');ax.set(xlim=(0,1),ylim=(0,.15),xlabel='Observed-SNR-conditioned PIT',ylabel='Design-weighted fraction per bin',title=name+' / quality Gaia test sample');ax.legend(fontsize=8)
     save(fig,'07_observed_parallax')
 
     sample=load(OUT/'parent_sample.npz');fig,axes=plt.subplots(1,2,figsize=(11,4))
@@ -102,11 +103,11 @@ def main():
     lines=['# baseline v1.1：分支回退与联合监督实验','',
         '本轮是冻结v1专家、原空间切分和Sobol128后的有限比较。没有重算完整目录；',
         'test是已使用过的发展验证，区间和得分主要检查带噪教师相容性，不代表独立绝对距离校准。','',
-        '## 采用决定','', '| 配置 | cal采用新门控 | 三类宏平均严重错误改善 | 未通过的条件 |','|---|---|---:|---|']
-    for n,d in selection['models'].items():lines.append(f"| {n} | {d['adopt']} | {fmt(d['macro_tail_gain'])} | {', '.join(k for k,v in d['checks'].items() if not v) or '无'} |")
+        '## 采用决定','', '| 配置 | cal采用新门控 | 三类宏平均严重错误改善 [百分点] | 未通过的条件 |','|---|---|---:|---|']
+    for n,d in selection['models'].items():lines.append(f"| {n} | {d['adopt']} | {fmt(None if d['macro_tail_gain'] is None else 100*d['macro_tail_gain'],2)} | {', '.join(k for k,v in d['checks'].items() if not v) or '无'} |")
     adopted=[k for k,v in selection['models'].items() if v['adopt']]
     lines+=['',f"通过预登记cal门槛的配置：{', '.join(adopted) or '无'}。本轮仅给出采用建议，v1内部目录保持原样。",'',
-        '## 同对象回退分解','', 'C配置、chosen参照的演化星发展测试；oracle只用于诊断。',
+        '## 同对象回退分解','', 'C配置、chosen参照的演化星发展测试；oracle只用于诊断。','',
         '| 分布 | N | 中位Δμ [mag] | 严重错误率 | 95%宽度 [mag] |','|---|---:|---:|---:|---:|']
     for v in variants:
         d=report['C']['scores'][v]['chosen']['test']['class_evolved'];lines.append(f"| {v} | {d['n']} | {fmt(d.get('bias_mag'))} | {fmt(d.get('tail_1'))} | {fmt(d.get('width95'))} |")
@@ -136,7 +137,15 @@ def main():
         '固定筛选组包含其混入的所有真实星族；cal少于30参照者不作可靠性判定。',
         '没有参照的母样本对象不能被计为预测正确。加权只修正此次抽样，不修正Gaia/光谱目标选择；',
         '参照风险不能直接当作整个光学母样本的真实纯度。详细联合状态、来源和污染计数见risk清单。','',
-        '![风险与母样本保留率](../figures/baseline_v1_1/03_risk_retention.png)','',
+        '![风险与母样本保留率；纵轴为对数比例](../figures/baseline_v1_1/03_risk_retention.png)','']
+    lines+=['固定中间切选示例：最大权重>=0.8、W68<=1mag且名义支持；并非按测试结果另选最佳点。','',
+        '| 配置 | 母样本估计保留率（95%抽样区间） | 测试参照N | 新门控严重错误率 | 同星旧宽模型 | 混入的已知演化星数 |',
+        '|---|---|---:|---:|---:|---:|']
+    for n in 'ABC':
+        d=risk[n]['groups']['cut_conf0.8_width1.0'];a=d['chosen']['test'];e=d['parent'];ci=e['ci95']
+        lines.append(f"| {n} | {100*e['fraction']:.2f}%（{100*ci[0]:.2f}–{100*ci[1]:.2f}%） | {a['n']} | {100*a['tail_1']:.2f}% | {100*a['wide_same_objects']['tail_1']:.2f}% | {a['class_counts']['1']} |")
+    lines+=['','这些预测组在现有参照上的总体风险较低，但旧宽模型的同星结果相近。',
+        '它们并不证明新门控更优，也不能据此把母样本中无参照对象宣布为可靠恒星。','',
         '![母样本波段覆盖与名义支持](../figures/baseline_v1_1/08_parent_coverage.png)','',
         '## 真实观测视差检查','',
         f"质量与零点有效的Gaia测试母集{samples['parallax']['eligible']:,}颗，分层抽样{samples['parallax']['n']:,}颗，其中负视差{samples['parallax']['negative']:,}颗。",
@@ -150,7 +159,7 @@ def main():
     lines+=['', '| 配置/分布 | 选择概率数值下溢数 | 8/16点PIT最大差（固定子集） |', '|---|---:|---:|']
     for n in 'ABC':
         for v in ('wide','evidence'):
-            d=par['results'][n][v];lines.append(f"| {n}/{v} | {d['selection_underflow_rows']} | {fmt(d['quadrature_pit_max_difference'],6)} |")
+            d=par['results'][n][v];lines.append(f"| {n}/{v} | {d['selection_underflow_rows']} | {d['quadrature_pit_max_difference']:.2e} |")
     lines+=['','![条件化观测视差PIT](../figures/baseline_v1_1/07_observed_parallax.png)','',
         '## 验证与复现','',
         f"实际产物核验{valid['n_checks']}项通过。训练证据来自四折空间留出，不含自身训练标签；",

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — actual acceptance and visual review
+
+- Finish60727969 passed470 actual checks and rendered8 figures. All8 inspected.
+- Revised risk plot to logarithmic error fraction so low-risk groups are visible;
+  added shared count scale for label/fallback densities and common PIT axes.
+- Added fixed-cut coverage/contaminant table and exact scientific notation for
+  sub-nanolevel quadrature differences. These change presentation only.
+- Next rerender only, inspect changed figures, publish actual manifest/MD/images,
+  close PLAN/AGENTS and verify three endpoints before Goal completion.
+
 ## 2026-11-03 — reproduction difference explained quantitatively
 
 - Read-only audit60727875 completed all24 old-variant comparisons. Wide exact;
