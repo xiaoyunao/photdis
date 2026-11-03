@@ -1,6 +1,6 @@
 # PLAN
 
-## Active objective: baseline v1 branch, numerical and depth comparison
+## Completed objective: baseline v1 branch, numerical and depth comparison
 
 Full review: docs/pro_review_494b12c.md; fixed protocol: docs/baseline_v1_protocol.md.
 - [x] Recover clean494b12c, read full review, create detailed Goal and protocol.
@@ -8,13 +8,16 @@ Full review: docs/pro_review_494b12c.md; fixed protocol: docs/baseline_v1_protoc
   3000 sources; Sobol128 improves tails but fails strict layer tolerances; flags retained.
 - [x] Whole-reference branch-mass audit, conditional/oracle/photometric models.
 - [x] Cal-only selection, same-training comparisons, fixed flux-depth experiment.
-- [ ] One final full-parent application, checks, figures/report and endpoint sync.
+- [x] One full-parent application,321 actual checks,8 reviewed figures and report.
+- [x] Final milestone prepared for three-endpoint sync; verify hashes before Goal completion.
 
 Preserve v0 and use data/baseline_v1; no cluster or algorithm-family search.
-Six branch families and reference evaluation completed. Cal retains wide QRF,
-accepts B/C upgrades; no all-class quality cut passes. Depth scoring60721523,
-application60721565 (running, 4h limit) and validation/report60721672 form the
-remaining chain. Do not restart existing shards or mark the Goal complete early.
+Six branch families, reference evaluations and fixed flux-depth experiment complete.
+Cal retains wide QRF and B/C upgrades; no all-class quality cut passes. One full
+application60721565 produced9,390,518 rows; validation/report60721672 passed321
+checks. Result:docs/baseline_v1_result.md. All eight final figures inspected.
+Preserve numerical-convergence and research-quality failures as actual findings.
+Final delivery uses scripts/sync.py push with identical endpoint hashes.
 
 ## Completed objective: unified multi-population baseline v0
 

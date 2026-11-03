@@ -1,0 +1,1292 @@
+{
+  "n_checks": 321,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "sample:identity_hash",
+      "passed": true
+    },
+    {
+      "name": "sample:unique_count",
+      "passed": true
+    },
+    {
+      "name": "sample:config_hash",
+      "passed": true
+    },
+    {
+      "name": "selection:config_hash",
+      "passed": true
+    },
+    {
+      "name": "A:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "A:training_identity",
+      "passed": true
+    },
+    {
+      "name": "A:model_hash",
+      "passed": true
+    },
+    {
+      "name": "A:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "Awide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Awide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Awide:pdf",
+      "passed": true
+    },
+    {
+      "name": "Awide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Awide:weights",
+      "passed": true
+    },
+    {
+      "name": "Anatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Anatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Anatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "Anatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Anatural:weights",
+      "passed": true
+    },
+    {
+      "name": "Abalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Abalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Abalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "Abalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Abalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "Aoracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Aoracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Aoracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "Aoracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Aoracle:weights",
+      "passed": true
+    },
+    {
+      "name": "B:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "B:training_identity",
+      "passed": true
+    },
+    {
+      "name": "B:model_hash",
+      "passed": true
+    },
+    {
+      "name": "B:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "Bwide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Bwide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Bwide:pdf",
+      "passed": true
+    },
+    {
+      "name": "Bwide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Bwide:weights",
+      "passed": true
+    },
+    {
+      "name": "Bnatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Bnatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Bnatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "Bnatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Bnatural:weights",
+      "passed": true
+    },
+    {
+      "name": "Bbalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Bbalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Bbalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "Bbalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Bbalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "Boracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Boracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Boracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "Boracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Boracle:weights",
+      "passed": true
+    },
+    {
+      "name": "C:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "C:training_identity",
+      "passed": true
+    },
+    {
+      "name": "C:model_hash",
+      "passed": true
+    },
+    {
+      "name": "C:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "Cwide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Cwide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Cwide:pdf",
+      "passed": true
+    },
+    {
+      "name": "Cwide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Cwide:weights",
+      "passed": true
+    },
+    {
+      "name": "Cnatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Cnatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Cnatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "Cnatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Cnatural:weights",
+      "passed": true
+    },
+    {
+      "name": "Cbalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Cbalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Cbalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "Cbalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Cbalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "Coracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "Coracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "Coracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "Coracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "Coracle:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:model_hash",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bwide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bwide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bwide:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bwide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bwide:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bnatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bnatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bnatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bnatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bnatural:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bbalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bbalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bbalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bbalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Bbalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Boracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Boracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Boracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Boracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Boracle:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:model_hash",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cwide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cwide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cwide:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cwide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cwide:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cnatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cnatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cnatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cnatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cnatural:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cbalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cbalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cbalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cbalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Cbalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_Coracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "A_on_Coracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "A_on_Coracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "A_on_Coracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "A_on_Coracle:weights",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:v0_model_unchanged",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:training_identity",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:model_hash",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:deployable_variant",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cwide:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cwide:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cwide:pdf",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cwide:quantiles",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cwide:weights",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cnatural:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cnatural:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cnatural:pdf",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cnatural:quantiles",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cnatural:weights",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cbalanced:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cbalanced:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cbalanced:pdf",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cbalanced:quantiles",
+      "passed": true
+    },
+    {
+      "name": "B_on_Cbalanced:weights",
+      "passed": true
+    },
+    {
+      "name": "B_on_Coracle:only_heldout",
+      "passed": true
+    },
+    {
+      "name": "B_on_Coracle:no_training_identity",
+      "passed": true
+    },
+    {
+      "name": "B_on_Coracle:pdf",
+      "passed": true
+    },
+    {
+      "name": "B_on_Coracle:quantiles",
+      "passed": true
+    },
+    {
+      "name": "B_on_Coracle:weights",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:same_training",
+      "passed": true
+    },
+    {
+      "name": "A_on_B:same_evaluation",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:same_training",
+      "passed": true
+    },
+    {
+      "name": "A_on_C:same_evaluation",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:same_training",
+      "passed": true
+    },
+    {
+      "name": "B_on_C:same_evaluation",
+      "passed": true
+    },
+    {
+      "name": "depth:test_templates_only",
+      "passed": true
+    },
+    {
+      "name": "depth:consistent_shift",
+      "passed": true
+    },
+    {
+      "name": "depth:no_identity_cross",
+      "passed": true
+    },
+    {
+      "name": "depth:actual_input_hash",
+      "passed": true
+    },
+    {
+      "name": "depth:scored_input_hash",
+      "passed": true
+    },
+    {
+      "name": "depth:frozen_selection_hash",
+      "passed": true
+    },
+    {
+      "name": "depth:accepted_predictions",
+      "passed": true
+    },
+    {
+      "name": "depth:rejected_preserved",
+      "passed": true
+    },
+    {
+      "name": "recommended:ordered_calibration",
+      "passed": true
+    },
+    {
+      "name": "recommended:calibration_contains_raw",
+      "passed": true
+    },
+    {
+      "name": "application:frozen_selection_hash",
+      "passed": true
+    },
+    {
+      "name": "field0:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field0:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field0:row_count",
+      "passed": true
+    },
+    {
+      "name": "field0:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field0:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field0:state",
+      "passed": true
+    },
+    {
+      "name": "field0:availability",
+      "passed": true
+    },
+    {
+      "name": "field0:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field0:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field0:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field0:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field1:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field1:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field1:row_count",
+      "passed": true
+    },
+    {
+      "name": "field1:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field1:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field1:state",
+      "passed": true
+    },
+    {
+      "name": "field1:availability",
+      "passed": true
+    },
+    {
+      "name": "field1:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field1:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field1:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field1:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field2:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field2:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field2:row_count",
+      "passed": true
+    },
+    {
+      "name": "field2:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field2:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field2:state",
+      "passed": true
+    },
+    {
+      "name": "field2:availability",
+      "passed": true
+    },
+    {
+      "name": "field2:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field2:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field2:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field2:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field3:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field3:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field3:row_count",
+      "passed": true
+    },
+    {
+      "name": "field3:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field3:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field3:state",
+      "passed": true
+    },
+    {
+      "name": "field3:availability",
+      "passed": true
+    },
+    {
+      "name": "field3:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field3:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field3:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field3:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field4:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field4:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field4:row_count",
+      "passed": true
+    },
+    {
+      "name": "field4:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field4:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field4:state",
+      "passed": true
+    },
+    {
+      "name": "field4:availability",
+      "passed": true
+    },
+    {
+      "name": "field4:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field4:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field4:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field4:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field5:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field5:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field5:row_count",
+      "passed": true
+    },
+    {
+      "name": "field5:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field5:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field5:state",
+      "passed": true
+    },
+    {
+      "name": "field5:availability",
+      "passed": true
+    },
+    {
+      "name": "field5:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field5:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field5:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field5:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field6:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field6:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field6:row_count",
+      "passed": true
+    },
+    {
+      "name": "field6:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field6:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field6:state",
+      "passed": true
+    },
+    {
+      "name": "field6:availability",
+      "passed": true
+    },
+    {
+      "name": "field6:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field6:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field6:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field6:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field7:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field7:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field7:row_count",
+      "passed": true
+    },
+    {
+      "name": "field7:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field7:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field7:state",
+      "passed": true
+    },
+    {
+      "name": "field7:availability",
+      "passed": true
+    },
+    {
+      "name": "field7:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field7:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field7:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field7:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field8:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field8:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field8:row_count",
+      "passed": true
+    },
+    {
+      "name": "field8:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field8:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field8:state",
+      "passed": true
+    },
+    {
+      "name": "field8:availability",
+      "passed": true
+    },
+    {
+      "name": "field8:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field8:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field8:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field8:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field9:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field9:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field9:row_count",
+      "passed": true
+    },
+    {
+      "name": "field9:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field9:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field9:state",
+      "passed": true
+    },
+    {
+      "name": "field9:availability",
+      "passed": true
+    },
+    {
+      "name": "field9:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field9:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field9:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field9:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field10:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field10:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field10:row_count",
+      "passed": true
+    },
+    {
+      "name": "field10:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field10:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field10:state",
+      "passed": true
+    },
+    {
+      "name": "field10:availability",
+      "passed": true
+    },
+    {
+      "name": "field10:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field10:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field10:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field10:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field11:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field11:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field11:row_count",
+      "passed": true
+    },
+    {
+      "name": "field11:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field11:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field11:state",
+      "passed": true
+    },
+    {
+      "name": "field11:availability",
+      "passed": true
+    },
+    {
+      "name": "field11:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field11:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field11:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field11:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field12:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field12:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field12:row_count",
+      "passed": true
+    },
+    {
+      "name": "field12:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field12:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field12:state",
+      "passed": true
+    },
+    {
+      "name": "field12:availability",
+      "passed": true
+    },
+    {
+      "name": "field12:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field12:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field12:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field12:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "field13:v0_catalog_unchanged",
+      "passed": true
+    },
+    {
+      "name": "field13:v1_catalog_hash",
+      "passed": true
+    },
+    {
+      "name": "field13:row_count",
+      "passed": true
+    },
+    {
+      "name": "field13:identity_order",
+      "passed": true
+    },
+    {
+      "name": "field13:distance_units",
+      "passed": true
+    },
+    {
+      "name": "field13:state",
+      "passed": true
+    },
+    {
+      "name": "field13:availability",
+      "passed": true
+    },
+    {
+      "name": "field13:weights_or_no_model",
+      "passed": true
+    },
+    {
+      "name": "field13:selected_model",
+      "passed": true
+    },
+    {
+      "name": "field13:expanded_intervals",
+      "passed": true
+    },
+    {
+      "name": "field13:frozen_policy_flags",
+      "passed": true
+    },
+    {
+      "name": "complete_parent_count",
+      "passed": true
+    },
+    {
+      "name": "unique_parent",
+      "passed": true
+    }
+  ],
+  "n_application_rows": 9390518,
+  "application_sha256": "6df4105c0a4d8aae38d00223519595f6ce19e1edb9bd17919ceb3028c2ad9dc7"
+}

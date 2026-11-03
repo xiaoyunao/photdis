@@ -152,7 +152,7 @@ def main():
         *[[f'推荐{k}',f"{sum(x['routes'][str(i)] for x in south):,}"] for i,k in enumerate('ABC')],
         *[[k,f"{sum(x[k] for x in south):,}"] for k in ('supported','ambiguous','research_quality','numerical_converged')]])
     add('仅在cal规则冻结后完整运行一次，按不重叠分块写入，再按身份原顺序组装。'
-        '数据、六套条件模型、逐源分布及FITS留在NERSC的`/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1/`；'
+        '数据、六套条件模型、参照评价PDF、降深逐源结果及全量FITS留在NERSC的`/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1/`；'
         'Git仅保存代码、配置、结果清单和八张图。目录字段、分支权重含义和复现命令见[运行说明](baseline_v1_catalog.md)。\n')
     figure('08_application_states','完整母样本路由和独立状态标记；这些状态不是互斥类别。')
     add(f"实际全产物核验通过{r['validation']['n_checks']}项：v0模型/目录哈希不变，训练与评价身份隔离，"

@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-03 — complete baseline v1 delivery
+
+- Full application60721565 completed the one frozen run:9,390,518 unique rows,
+  including8,899,334 south predictions and491,184 north no-model rows.
+- Validation/report60721672 passed321 actual checks and generated8 figures.
+  Six match visually reviewed previews byte-for-byte; final04/08 also inspected.
+- A/B/C routes7,181,693/609,151/1,108,490. Supported4,392,686; ambiguous180,152.
+  No numerical error layer or all-class quality cut passed; flags remainFalse.
+- Added actual report/validation/application manifests and generated result MD;
+  updated README/AGENTS/PLAN. Earlier8 focused tests and288 boundary cases pass.
+- Goal acceptance: archived review/protocol; v0 frozen; numerical+independent
+  repeats; all-reference mass audit+oracle; same-training/source evaluations;
+  fixed flux-depth with source bootstrap; cal-only lock; full output; figures
+  and reproducible hashes complete. Final commit/sync verifies all3 endpoints.
+- Remaining science: photometric branch weights and real faint/no-WISE validation;
+  internal v1 is not an independently calibrated all-population release.
+
 ## 2026-11-03 — revised figures and provenance acceptance
 
 - Preview60722818 completed27s, exit0; inspected the five changed figures.
