@@ -2,10 +2,25 @@
 """One fixed population family per band/control; no test-dependent fitting."""
 from baseline_v1_common import *
 import joblib,time
+from concurrent.futures import ProcessPoolExecutor
 from photdis.stage1 import require_compute
 from photdis.baseline_v1 import PopulationModel,integrate
 
 VARIANTS=('wide','natural','balanced','oracle')
+_EVAL_MODEL=None;_EVAL_T=None;_EVAL_POLICY=None
+
+def evaluate_chunk(ix):
+    m,e,ids=arrays(_EVAL_T,ix);low=_EVAL_T['optical_error'][ix]<.03
+    chunk={};used_draws=np.zeros(len(ix),np.int16)
+    for label,mask in [('low',low),('high',~low)]:
+        if not mask.any():continue
+        draws=_EVAL_POLICY[label]['draws'];used_draws[mask]=draws
+        values=integrate(_EVAL_MODEL,m[mask],e[mask],ids[mask],draws,
+            variants=VARIANTS,oracle_labels=_EVAL_T['class_label'][ix][mask])
+        for v,p in values.items():
+            if v not in chunk:chunk[v]={k:np.empty((len(ix),)+a.shape[1:],a.dtype) for k,a in p.items()}
+            for k,a in p.items():chunk[v][k][mask]=a
+    return chunk,used_draws
 
 def train(name):
     require_compute();OUT.mkdir(exist_ok=True,parents=True)
@@ -26,25 +41,22 @@ def train(name):
     print('Trained',name,int(use.sum()),time.time()-start,flush=True)
 
 def evaluate(name):
+    global _EVAL_MODEL,_EVAL_T,_EVAL_POLICY
     require_compute();t=load(OLD/'references.npz');model=joblib.load(OUT/(name+'.joblib'))
     policy=json.load(open(OUT/'numerical.json'))['selection'];tier=MODELS[name][1]
     valid=(t['label_source']>0)|t['specdis_valid']|t['spdist_valid']
     rows=np.flatnonzero(np.isin(t['split'],[1,2])&valid&available(t,tier))
     chunks={v:[] for v in VARIANTS};all_draws=np.zeros(len(rows),np.int16);start=time.time()
-    # Keep global order; low/high numerical policy is independent of true class.
-    for j in range(0,len(rows),CFG['chunk_size']):
-        ix=rows[j:j+CFG['chunk_size']];m,e,ids=arrays(t,ix);low=t['optical_error'][ix]<.03
-        chunk={}
-        for label,mask in [('low',low),('high',~low)]:
-            if not mask.any():continue
-            draws=policy[label]['draws'];all_draws[j:j+len(ix)][mask]=draws
-            values=integrate(model,m[mask],e[mask],ids[mask],draws,
-                variants=VARIANTS,oracle_labels=t['class_label'][ix][mask])
-            for v,p in values.items():
-                if v not in chunk:chunk[v]={k:np.empty((len(ix),)+a.shape[1:],a.dtype) for k,a in p.items()}
-                for k,a in p.items():chunk[v][k][mask]=a
-        for v in VARIANTS:chunks[v].append(chunk[v])
-        print('Evaluate',name,j+len(ix),len(rows),'seconds',time.time()-start,flush=True)
+    # Forked workers share read-only models/references. Ordered map preserves IDs.
+    _EVAL_MODEL=model;_EVAL_T=t;_EVAL_POLICY=policy
+    batches=[rows[j:j+CFG['chunk_size']] for j in range(0,len(rows),CFG['chunk_size'])]
+    import multiprocessing as mp
+    with ProcessPoolExecutor(max_workers=8,mp_context=mp.get_context('fork')) as pool:
+        offset=0
+        for chunk,draws in pool.map(evaluate_chunk,batches):
+            all_draws[offset:offset+len(draws)]=draws;offset+=len(draws)
+            for v in VARIANTS:chunks[v].append(chunk[v])
+            print('Evaluate',name,offset,len(rows),'seconds',time.time()-start,flush=True)
     summaries={}
     for v in VARIANTS:
         p=concat(chunks[v]);p.update(rows=rows,draws=all_draws,centers=model.centers)

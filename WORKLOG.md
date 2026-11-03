@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — fixed experimental inputs and cal-only deployment
+
+- Numerical sample60721158 contains3000 unique sources; six branch fits60721229
+  completed, and raw-flux depth preparation60721230 is running in allocations.
+- Implemented cal-only population/tail safeguards, fixed quality grid, complete
+  v0 branch-mass audit and one full-parent application in disjoint FITS shards.
+- Reference prediction uses ordered compute workers with identical IDs/draws;
+  this changes throughput only. All new scripts pass Python/shell parse checks.
+- Next: freeze numerical settings, evaluate the six model families, score fixed
+  flux degradations and select solely on cal before the catalog run.
+
 ## 2026-11-03 — population and depth implementation
 
 - Added versioned conditional QRFs with photometric logistic gate, wide-model
