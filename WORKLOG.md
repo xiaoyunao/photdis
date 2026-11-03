@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — fixed workpoints show limited selection precision
+
+- C final-score2% cal budget: test evolved recall35–46%, known-reference
+  precision39–42%; main-branch distances do not generally lower selected risk.
+- Classification denominators include any valid reference, so differ from chosen
+  distance denominators (e.g. C287 classified evolved versus266 chosen labels).
+- Report now labels denominators and separately exposes evolved-star risk inside
+  cal-passing single-output groups; overall low error alone is not sufficient.
+- Stable-likelihood finish60731028 submitted afterany60730632. No fit repeated.
+
+
 ## 2026-11-03 — stable complete Gaia likelihood for main-branch failures
 
 - Actual checks reveal17 A/evidence main-branch linear-density underflows.

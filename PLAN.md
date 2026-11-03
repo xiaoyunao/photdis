@@ -10,8 +10,10 @@ Source:docs/pro_review_dbeac65.md; protocol:docs/baseline_v1_2_protocol.md.
 - [ ] Actual checks, figures/report, checkpoint and three-endpoint delivery.
 
 Preserve v1 deployment and all historical artifacts; no full catalog or new search.
-Training/cache60730324 finished; checks60730632 RUNNING. Fifteen focused tests
-pass; no actual scientific score or acceptance claimed yet. Inspect jobs on recovery.
+Training/cache60730324 finished; score60730632 finished reference workpoints and
+continues original Gaia diagnostics. Stable-log-likelihood finish60731028 queued
+afterany;16 focused tests pass. Actual final acceptance/figures remain pending.
+Inspect jobs on recovery; do not repeat fits or reference scores.
 
 
 ## Completed objective: baseline v1.1 fallback and learned weights

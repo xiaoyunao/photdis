@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Compact result tables and ten inspectable scientific figures."""
 from baseline_v1_2_run import *
+from photdis.baseline_v1_2 import single_mask
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -60,7 +61,7 @@ def main():
             points=[scores[name][v]['working_points'][f'final_class1_budget{b}'] for b in CFG['false_positive_budgets']]
             ax.plot([p['parent']['fraction'] for p in points],[p['test']['recall'] for p in points],'-o',color=COLORS[v],label=LABELS[v])
             for p in points:ax.errorbar(p['parent']['fraction'],p['test']['recall'],xerr=1.96*p['parent']['se'],color=COLORS[v],capsize=2)
-        ax.set(title=f'{name}: fixed evolved-score working points',xlabel='Weighted fraction of optical parent',ylabel='Known evolved test recall',xlim=(0,1),ylim=(0,1))
+        ax.set(title=f'{name}: fixed evolved-score working points',xlabel='Weighted fraction of optical parent',ylabel='Known evolved test recall',xlim=(1e-4,1),xscale='log',ylim=(0,1))
     axes[0].legend(fontsize=8);save(fig,'05_recall_parent_coverage.png')
     fig,axes=plt.subplots(2,3,figsize=(15,8),layout='constrained');x=np.arange(.05,1,.1)
     pitymax=max(.15,1.1*max(max(e['groups']['all'][kind+'_pit_histogram']) for vv in par['results'].values() for e in vv.values() for kind in ('full','conditional')))
@@ -118,6 +119,20 @@ def main():
                 working_points={k:{**{z:c[z] for z in ('threshold','budget','target','score_state','cal','test','parent') if z in c},'distances':{'chosen':c['distances']['chosen']}} for k,c in e['working_points'].items()},
                 single_selected=e['single_grid'].get(e['cal_single_rule']),
                 strata_at_2pct={k:c['strata'] for k,c in e['working_points'].items() if k=='final_class1_budget0.02' and v in ('quadratic','forest')})
+    for name,variants in compact.items():
+        for v,e in variants.items():
+            rule=e['cal_single_rule']
+            if not rule:continue
+            confidence=float(rule.split('_')[0].replace('confidence',''));margin=float(rule.split('_')[1].replace('margin',''))
+            psel=load(OUT/f'reference_{name}_{v}.npz');rs=psel['rows']
+            selected=single_mask(psel['weights'],psel['branch_support'],psel['supported'],confidence,margin)
+            truth=truth_mu(t,'chosen')[rs];old=load(PREV/f'{name}_wide_evaluation.npz')
+            e['single_selected_by_class']={}
+            for tag,sp in [('cal',1),('test',2)]:
+                e['single_selected_by_class'][tag]={}
+                for k in (-1,0,1,2):
+                    take=selected&(t['split'][rs]==sp)&(t['class_label'][rs]==k)
+                    e['single_selected_by_class'][tag][str(k)]={label:metrics(mu[take],truth[take]) for label,mu in [('main',psel['main_mu']),('mixture',psel['mu']),('wide',old['mu'])]}
     report=dict(models=compact,parallax=par,validation={k:val[k] for k in ('n_checks','all_passed')},fit={n:json.load(open(OUT/f'{n}_fit.json')) for n in MODELS})
     write_json(OUT/'report.json',report)
     write_json(OUT/'source_workpoints.json',{n:{v:{k:q['distances'] for k,q in e['working_points'].items() if k.startswith('final')} for v,e in variants.items()} for n,variants in scores.items()})
@@ -127,15 +142,16 @@ def main():
         '本轮只处理现有参照及固定概率样本，保留v1部署，没有更新完整目录。','',
         '## 固定误入预算下能找回多少星族？','',
         '下表是cal矮星误入预算2%、回退后权重的固定工作点。测试误入率不被强制为2%。','',
-        '| 配置 | 分类器 | 目标 | test召回 | test矮星误入 | 选中矮/演化/过渡/未知 | 已知参照精度 | 母样本保留 |',
-        '|---|---|---|---:|---:|---|---:|---:|']
+        '| 配置 | 分类器 | 目标 | test目标/矮星分母 | test召回 | test矮星误入 | 选中矮/演化/过渡/未知 | 已知参照精度 | 母样本保留 |',
+        '|---|---|---|---|---:|---:|---|---:|---:|']
     fmt=lambda x:'—' if x is None else f'{100*x:.2f}%'
     for name in 'ABC':
         for v in VARS:
             for target in (1,2):
                 q=scores[name][v]['working_points'][f'final_class{target}_budget0.02'];z=q['test'];c=z['class_counts']
-                lines.append(f"| {name} | {v} | {target} | {fmt(z['recall'])} | {fmt(z['dwarf_fpr'])} | {c['0']}/{c['1']}/{c['2']}/{c['-1']} | {fmt(z['known_precision'])} | {fmt(q['parent']['fraction'])} |")
-    lines+=['','目标1=演化星，2=过渡类；未知类保留，不能算作分类正确。1%/2%/5%、raw/final、',
+                lines.append(f"| {name} | {v} | {target} | {z['n_target']}/{z['n_dwarf']} | {fmt(z['recall'])} | {fmt(z['dwarf_fpr'])} | {c['0']}/{c['1']}/{c['2']}/{c['-1']} | {fmt(z['known_precision'])} | {fmt(q['parent']['fraction'])} |")
+    lines+=['','目标1=演化星，2=过渡类；分类分母包括有任一种有效参照的可靠类别对象，与chosen距离分母不同。',
+        '未知类保留，不能算作分类正确。1%/2%/5%、raw/nominal/final、',
         '同训练波段对照及Wilson计数区间见机器清单；完整细分统计在NERSC逐模型scores.json。','',
         'ROC/PR采用同一观测颜色下、回退前的nominal分数；raw扰动平均与final回退权重工作点另存。','',
         '![同训练ROC](../figures/baseline_v1_2/01_matched_roc.png)','',
@@ -150,6 +166,14 @@ def main():
         for v in VARS:
             q=scores[name][v]['working_points']['final_class1_budget0.02']['distances']['chosen']
             lines.append(f"| {name} | {v} | {q['main']['n']} | {fmt(q['mixture'].get('tail_1'))} | {fmt(q['main'].get('tail_1'))} | {fmt(q['wide'].get('tail_1'))} | {scores[name][v]['cal_single_rule'] or '无通过规则'} |")
+    lines+=['','通过cal单值条件的组仍是待验证工作点，不是全星族可靠产品。下表专门列出其演化星代价：','',
+        '| 配置/分类器 | cal规则 | test总体严重错误 | test演化星N | test演化星严重错误 | 同星旧模型 | 母样本保留 |',
+        '|---|---|---:|---:|---:|---:|---:|']
+    for name in 'ABC':
+        for v,e in compact[name].items():
+            if not e['cal_single_rule']:continue
+            q=e['single_selected'];evo=e['single_selected_by_class']['test']['1']
+            lines.append(f"| {name}/{v} | {e['cal_single_rule']} | {fmt(q['test']['chosen']['main'].get('tail_1'))} | {evo['main']['n']} | {fmt(evo['main'].get('tail_1'))} | {fmt(evo['wide'].get('tail_1'))} | {fmt(q['parent']['fraction'])} |")
     lines+=['','严重错误为|Δμ|>1mag；按Gaia/SPECDIS/SPDist分别的区间、偏差和散布保留于清单。',
         '固定confidence×margin网格要求三类cal各至少30个参照、整体错误<=5%且各类不显著劣于同星旧模型。',
         '未通过时仅保留多解，不将主分支强行写成可靠单值。完整混合和条件PDF均保存在NERSC。','',
