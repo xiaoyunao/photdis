@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — strict oracle reproduction check needs diagnosis
+
+- Checks60727226 finished predictions/risk/parallax, then stopped at
+  Aoracle:v1_reproduction (3e-5mag quantile tolerance). No final validation
+  or report claimed. Training, selection and all sample predictions are saved.
+- Added read-only distribution/CDF/quantile comparison to locate discrepancy
+  across all original variants; run on debug allocation before any repair.
+- Next distinguish floating histogram-quantile sensitivity from a substantive
+  change; do not relax acceptance or retrain without evidence.
+
 ## 2026-11-03 — cal rejects all six new gates
 
 - Checks60727226 running on debug allocation. All six cal decisions retain wide:
