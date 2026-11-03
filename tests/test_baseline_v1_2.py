@@ -39,3 +39,14 @@ def test_parallax_full_density_and_bin_partition():
         np.testing.assert_allclose(a['conditional_density']*a['selection_probability'],full['conditional_density'],rtol=1e-12)
     np.testing.assert_allclose(np.sum(prob,axis=0),1,atol=1e-14)
     assert np.all((full['pit']>=0)&(full['pit']<=1))
+
+
+def test_complete_log_density_preserves_extreme_branch_failures():
+    from photdis.baseline_v1_2 import full_parallax_log_density
+    p=np.array([[.2,.5,.3],[1.,0.,0.]])
+    edges=np.linspace(0,3,4);g=np.array([16.,16.]);y=np.array([.2,100.]);e=np.array([.1,.01])
+    logp=full_parallax_log_density(p,edges,g,y,e)
+    a=parallax_check(p,edges,g,y,e,np.full(2,-np.inf),np.full(2,np.inf))
+    np.testing.assert_allclose(np.exp(logp[0]),a['conditional_density'][0],rtol=1e-12)
+    assert a['conditional_density'][1]==0
+    assert np.isfinite(logp[1]) and logp[1]<-10000

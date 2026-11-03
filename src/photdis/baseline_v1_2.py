@@ -88,3 +88,19 @@ def nominal_old_weights(model,mags,variant):
     if variant=='balanced':p=p/np.maximum(model.frequencies,1e-10)
     p=p/p.sum(axis=1)[:,None]
     return np.column_stack([p,np.zeros(len(p))])
+
+
+def full_parallax_log_density(pdf,edges,g,observed,error,order=8):
+    """Stable Gaussian-convolved histogram log density, even far in a tail."""
+    from numpy.polynomial.legendre import leggauss
+    from scipy.special import logsumexp
+    node,weight=leggauss(order);weight=weight/2
+    absolute=(edges[:-1,None]+edges[1:,None])/2+np.diff(edges)[:,None]*node/2
+    p=np.asarray(pdf,float);p=p/p.sum(axis=1)[:,None]
+    logp=np.full_like(p,-np.inf);np.log(p,out=logp,where=p>0)
+    terms=[]
+    for j in range(order):
+        par=10**(2-(g[:,None]-absolute[:,j])/5)
+        z=(observed[:,None]-par)/error[:,None]
+        terms.append(logsumexp(logp+np.log(weight[j])-.5*z*z-np.log(np.sqrt(2*np.pi)*error[:,None]),axis=1))
+    return logsumexp(np.stack(terms,axis=1),axis=1)

@@ -2,6 +2,7 @@
 """Complete and SNR-conditional probability checks on the frozen Gaia sample."""
 from baseline_v1_2_run import *
 from photdis.baseline_parallax import parallax_check
+from photdis.baseline_v1_2 import full_parallax_log_density
 SNR=np.array([-np.inf,0,5,10,20,np.inf])
 
 
@@ -25,6 +26,8 @@ def summarize(t,rows,a,mask):
 
 
 def evaluate(t,rows,pdf,edges):
+    # Stored float32 bin masses are normalized before probability factorization.
+    pdf=np.asarray(pdf,float);pdf=pdf/pdf.sum(axis=1)[:,None]
     parts=[]
     for start in range(0,len(rows),200):
         j=np.arange(start,min(start+200,len(rows)));r=rows[j];n=len(r)
@@ -33,11 +36,12 @@ def evaluate(t,rows,pdf,edges):
         cond=parallax_check(*args,t['snr_lo'][r],t['snr_hi'][r])
         bins=np.column_stack([parallax_check(*args,np.full(n,lo),np.full(n,hi))['selection_probability'] for lo,hi in zip(SNR[:-1],SNR[1:])])
         density=full['conditional_density'];prob=cond['selection_probability'];cd=cond['conditional_density']
+        logdensity=full_parallax_log_density(*args)
         # Save underflows rather than allowing a floor to hide them.
         a=dict(full_pit=full['pit'],conditional_pit=cond['pit'],full_mean=full['conditional_mean'],
             conditional_mean=cond['conditional_mean'],full_density=density,conditional_density=cd,
             observed_bin_probability=prob,bin_probability=bins,
-            full_log_density=np.log(np.maximum(density,1e-300)),conditional_log_density=np.log(np.maximum(cd,1e-300)),
+            full_log_density=logdensity,conditional_log_density=logdensity-np.log(np.maximum(prob,1e-300)),
             bin_log_probability=np.log(np.maximum(prob,1e-300)))
         parts.append(a)
     a=concat(parts);j=np.arange(min(256,len(rows)));r=rows[j]

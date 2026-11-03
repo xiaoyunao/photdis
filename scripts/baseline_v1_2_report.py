@@ -168,10 +168,10 @@ def main():
         for variant,e in par['results'][name].items():
             q=e['groups']['all'];lines.append(f"| {name} | {variant} | {q['n']} | {fmt(q['full_low05'])}/{fmt(q['full_high95'])} | {q['mean_log_density']:.3f} | {q['mean_observed_bin_log_probability']:.3f} |")
     lines+=['','完整log密度=条件log密度+实际箱log概率（无下溢时）。各预测对象都保留，',
-        '数值下溢及8/16点积分差异另列在机器清单，不把箱内PIT相似等同于完整分布相容。','',
+        '极小密度用log-sum-exp计算，不作概率下限裁剪；线性密度下溢及8/16点积分差异另列在机器清单，不把箱内PIT相似等同于完整分布相容。','',
         '![完整与条件PIT](../figures/baseline_v1_2/06_full_and_conditional_pit.png)','',
         '![跨信噪比箱概率](../figures/baseline_v1_2/07_snr_bin_probability.png)','',
-        '## 核验与复现','',f"实际产物检查{val['n_checks']}项通过。15项数学/回归测试通过；十张图交付前逐张检查。",
+        '## 核验与复现','',f"实际产物检查{val['n_checks']}项通过。16项数学/回归测试通过；十张图交付前逐张检查。",
         '训练身份与类总权重、原专家哈希、同训练身份、cal阈值、全类别计数、PDF质量及冻结目录均核验。',
         '运行：run_baseline_v1_2_fit.sh → run_baseline_v1_2_checks.sh。大产物在NERSC data/baseline_v1_2。',
         '[预登记协议](baseline_v1_2_protocol.md) · [完整评审](pro_review_dbeac65.md)。']

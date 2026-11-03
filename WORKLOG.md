@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — stable complete Gaia likelihood for main-branch failures
+
+- Actual checks reveal17 A/evidence main-branch linear-density underflows.
+  Added exact log-sum-exp Gaussian/histogram likelihood rather than clipping
+  such failures at log(1e-300). Predictions and thresholds remain unchanged.
+- Normalize stored float32 masses in float64 before bin/density factorization;
+  prior ~3e-8 discrepancies were stored mass roundoff, not scientific shifts.
+- Add extreme-tail mathematical test. Rerun only Gaia/acceptance/render after
+  current check job; preserve all classifier fits and reference scores.
+
+
 ## 2026-11-03 — v1.2 training/cache complete, scoring running
 
 -60730324 finished all six configurations; A reference/parent/Gaia508s total.
