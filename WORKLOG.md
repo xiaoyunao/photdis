@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-03 — complete application running
+
+- Application60721565 started on nid005443 with128 requested CPUs; final
+  validation/report60721672 follows after success. Model/selection stays frozen.
+- Report now compares the two already-saved independent Sobol128 replicates
+  directly, alongside each comparison to512; no new integration or tuning.
+- Renderer and report parse checks pass. Next actual product/figure review.
+
 ## 2026-11-03 — fixed depth experiment completed
 
 - Finalization60721523 completed3m43s, exit0. Frozen wide model plus Sobol128

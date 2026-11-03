@@ -59,6 +59,16 @@ def main():
         v0_branch_audit=branch_audit,depth=depth,depth_input=json.load(open(OUT/'depth_input.json')),
         recommended=json.load(open(OUT/'recommended_scores.json')),
         training={n:json.load(open(OUT/(n+'_train.json'))) for n in MODELS})
+    sample=load(OUT/'sample.npz');repeat={}
+    for name in 'ABC':
+        c=load(OUT/f'convergence_{name}.npz');repeat[name]={}
+        delta=np.abs(c['sobol_128_0_mu'][:,[0,2,4]]-c['sobol_128_1_mu'][:,[0,2,4]])
+        for layer,mask in [('low',sample['optical_error'][c['rows']]<.03),
+                           ('high',sample['optical_error'][c['rows']]>=.03)]:
+            repeat[name][layer]=dict(n=int(mask.sum()),p50_abs_mag=np.median(delta[mask],axis=0).tolist(),
+                p95_abs_mag=np.quantile(delta[mask],.95,axis=0).tolist(),
+                ambiguity_flip=float(np.mean(c['sobol_128_0_ambiguous'][mask]!=c['sobol_128_1_ambiguous'][mask])))
+    result['independent_sobol128_repeat']=repeat
     fig,ax=plt.subplots(1,2,figsize=(12,4))
     analytic=numer['analytic'];keys=list(analytic)
     ax[0].bar(np.arange(len(keys)),[analytic[k]['mean_probability95'] for k in keys]);ax[0].axhline(.95,c='r',ls='--')

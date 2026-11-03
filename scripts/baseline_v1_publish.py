@@ -69,6 +69,9 @@ def main():
             v=r['numerical']['convergence']['A']['comparisons'][method][layer]
             rows.append([layer,method,v['n'],*[num(x) for x in v['p95_abs_mag']],pct(v['ambiguity_flip'])])
     table(['A误差层','积分','N','95下端差P95','中位数差P95','95上端差P95','多解状态变化'],rows)
+    table(['独立128重复','误差层','N','95下端差P95','中位数差P95','95上端差P95','多解状态变化'],
+          [[name,layer,v['n'],*[num(x) for x in v['p95_abs_mag']],pct(v['ambiguity_flip'])]
+           for name,values in r['independent_sobol128_repeat'].items() for layer,v in values.items()])
     add('从母样本按误差、可用波段、支持和多解状态固定抽取3000个源，比较基准是独立数字移位Sobol512。'
         '低/高误差界为最大grz误差0.03mag。预设端点/中位容差为0.10/0.03/0.10mag，且各可用配置都须通过。'
         '**两层均未全部通过，所以按协议采用128次并保留numerical_converged=False。**'
