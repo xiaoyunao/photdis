@@ -1,5 +1,16 @@
 # PLAN
 
+## Active objective: baseline v1 branch, numerical and depth comparison
+
+Full review: docs/pro_review_494b12c.md; fixed protocol: docs/baseline_v1_protocol.md.
+- [x] Recover clean494b12c, read full review, create detailed Goal and protocol.
+- [ ] Stratified convergence sample and analytical error-propagation correction.
+- [ ] Whole-reference branch-mass audit, conditional/oracle/photometric models.
+- [ ] Cal-only selection, same-training comparisons, fixed flux-depth experiment.
+- [ ] One final full-parent application, checks, figures/report and endpoint sync.
+
+Preserve v0 and use data/baseline_v1; no cluster or algorithm-family search.
+
 ## Completed objective: unified multi-population baseline v0
 
 Full review: docs/pro_review_60f65d5.md; execution: docs/baseline_v0_protocol.md.

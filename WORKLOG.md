@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — baseline v1 registered
+
+- Recovered clean494b12c at local/origin/NERSC; authentication valid.
+- Read full7922-character Pro review, archived docs/pro_review_494b12c.md.
+- Detailed Goal and fixed baseline_v1 protocol/config registered before results.
+- Scope: propagation convergence, explicit population branches/oracle diagnosis,
+  cal-only selection, flux-depth stress, then one complete internal application.
+- Preserve every v0 artifact; next implement numerical module and sample job.
+
 ## 2026-11-02 — unified baseline v0 completed
 
 - Full result: docs/baseline_v0_result.md; reproducible report generator and

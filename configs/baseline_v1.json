@@ -1,0 +1,23 @@
+{
+  "version": "baseline_v1",
+  "baseline_commit": "494b12cac88cb9fe87557f1f353344bd4061b568",
+  "input_dir": "data/baseline_v0",
+  "output_dir": "data/baseline_v1",
+  "seed": 20261103,
+  "convergence_per_cell": 20,
+  "convergence_draws": [8, 32, 128],
+  "convergence_reference_draws": 512,
+  "quantile_p95_tolerance_mag": [0.10, 0.03, 0.10],
+  "branch_flip_tolerance": 0.05,
+  "gate_C": 1.0,
+  "branch_min_train": 100,
+  "cal_min_class": 30,
+  "cal_dwarf_tail_guard": 0.02,
+  "cal_overall_tail_guard": 0.02,
+  "cal_median_error_guard_mag": 0.05,
+  "depth_templates_per_class_field": 100,
+  "depth_r_bins": [[18,20],[20,22],[22,23],[23,24]],
+  "depth_repeats": 2,
+  "bootstrap_sources": 200,
+  "chunk_size": 1500
+}

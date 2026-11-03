@@ -1,5 +1,9 @@
 # Project instructions
 
+- Current task: bounded baseline v1; docs/pro_review_494b12c.md and
+  docs/baseline_v1_protocol.md define convergence, population branches and depth
+  experiments. Use existing identities/splits; cal-only selection; v1 outputs
+  separately. One full application after selecting the version. No subagents.
 - Current checkpoint: unified multi-population baseline v0 is complete.
   Read docs/baseline_v0_result.md, docs/baseline_v0_catalog.md, WORKLOG/PLAN.
   All14 fields have9,390,518 unique catalog rows;8,899,334 DECam predictions,
