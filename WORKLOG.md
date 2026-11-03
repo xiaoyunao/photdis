@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — full-catalog acceptance strengthened
+
+- Continued from7ddff78 after clean endpoint recovery; application60721565
+  verified RUNNING, report60721672 remains dependent. Prior turn made progress
+  and ended with a verified wait; no restart is needed.
+- Whole-row acceptance now also verifies selected-band equality, normalized
+  available weights, CQR containment, exact frozen draw/numerical flags and
+  absent northern-model predictions. This does not change the running outputs.
+- Python parse and diff checks pass; actual assertions await complete catalogs.
+
 ## 2026-11-03 — long full-parent integration checkpoint
 
 - Numerical, six-family/oracle, v0 mass audit, cal lock and fixed-depth tasks

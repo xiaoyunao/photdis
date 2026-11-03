@@ -48,18 +48,44 @@ def main():
         with fitsio.FITS(str(path)) as f,fitsio.FITS(str(old)) as g:
             n=f[1].get_nrows();check(f'field{field}:row_count',n==g[1].get_nrows()==app['fields'][field]['n'])
             valid_identity=True;valid_units=True;valid_state=True;valid_available=True
+            valid_weights=True;valid_routing=True;valid_intervals=True;valid_policy=True
             for start in range(0,n,100000):
-                rows=np.arange(start,min(start+100000,n));a=f[1].read(rows=rows,columns=['identity','route','mu','distance_kpc','internal_uncalibrated','version','B','C','A_mu','B_mu','C_mu','draws'])
+                rows=np.arange(start,min(start+100000,n));a=f[1].read(rows=rows,columns=[
+                    'identity','route','mu','mu_cal','distance_kpc','internal_uncalibrated','version','B','C',
+                    'A_mu','B_mu','C_mu','draws','branch_weights','supported','ambiguous','optical_error',
+                    'numerical_converged','research_quality','A_weights','B_weights','C_weights',
+                    'A_supported','B_supported','C_supported','A_ambiguous','B_ambiguous','C_ambiguous'])
                 b=g[1].read(rows=rows,columns=['identity']);ids.append(a['identity'])
                 valid_identity &= np.array_equal(a['identity'],b['identity'])
                 valid_state &= np.all(a['version']==1)&np.all(a['internal_uncalibrated'])
-                if field==13:valid_units &= np.all(a['route']==-1)&np.isnan(a['mu']).all()
+                if field==13:
+                    valid_units &= np.all(a['route']==-1)&np.isnan(a['mu']).all()&np.isnan(a['distance_kpc']).all()
+                    valid_policy &= not np.any(a['supported']|a['research_quality']|a['numerical_converged']) and np.all(a['draws']==0)
+                    valid_weights &= np.isnan(a['branch_weights']).all()
+                    valid_routing &= all(np.isnan(a[k+'_mu']).all() for k in 'ABC')
+                    valid_intervals &= np.isnan(a['mu_cal']).all()
                 else:
                     valid_units &= np.isfinite(a['mu']).all()&np.all(np.diff(a['mu'],axis=1)>=0)&np.allclose(a['distance_kpc'],10**((a['mu'].astype(float)-10)/5),rtol=3e-6)
                     valid_state &= np.all(np.isin(a['route'],[0,1,2]))&np.all(np.isin(a['draws'],[32,128]))
                     for name in 'BC':valid_available &= np.isfinite(a[name+'_mu'][a[name]]).all()&np.isnan(a[name+'_mu'][~a[name]]).all()
+                    for code,name in enumerate('ABC'):
+                        use=np.ones(len(a),bool) if name=='A' else a[name]
+                        w=a[name+'_weights'][use]
+                        valid_weights &= np.isfinite(w).all() and np.all(w>=0) and np.allclose(w.sum(axis=1),1,atol=3e-6)
+                        selected=a['route']==code
+                        valid_routing &= np.all(use[selected]) and np.array_equal(a['mu'][selected],a[name+'_mu'][selected])
+                        valid_routing &= np.array_equal(a['branch_weights'][selected],a[name+'_weights'][selected])
+                        valid_routing &= np.array_equal(a['supported'][selected],a[name+'_supported'][selected])
+                        valid_routing &= np.array_equal(a['ambiguous'][selected],a[name+'_ambiguous'][selected])
+                    valid_intervals &= np.all(np.diff(a['mu_cal'],axis=1)>=0) and np.all(a['mu_cal'][:,[0,1]]<=a['mu'][:,[0,1]]) and np.all(a['mu_cal'][:,[3,4]]>=a['mu'][:,[3,4]])
+                    for layer,mask in [('low',a['optical_error']<.03),('high',a['optical_error']>=.03)]:
+                        valid_policy &= np.all(a['draws'][mask]==lock['numerical'][layer]['draws'])
+                        valid_policy &= np.all(a['numerical_converged'][mask]==lock['numerical'][layer]['converged'])
+                    if lock['quality_rule'] is None:valid_policy &= not np.any(a['research_quality'])
             check(f'field{field}:identity_order',valid_identity);check(f'field{field}:distance_units',valid_units)
             check(f'field{field}:state',valid_state);check(f'field{field}:availability',valid_available)
+            check(f'field{field}:weights_or_no_model',valid_weights);check(f'field{field}:selected_model',valid_routing)
+            check(f'field{field}:expanded_intervals',valid_intervals);check(f'field{field}:frozen_policy_flags',valid_policy)
         print('Validated',field,n,flush=True)
     ids=np.concatenate(ids);check('complete_parent_count',len(ids)==9390518);check('unique_parent',len(np.unique(ids))==len(ids))
     write_json(OUT/'validation.json',dict(n_checks=len(checks),all_passed=all(c['passed'] for c in checks),checks=checks,n_application_rows=len(ids),application_sha256=sha(OUT/'application.json')))
