@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — begin bounded v1.1 follow-up
+
+- Recovered clean97c2775 at local/origin/NERSC; authentication valid.
+- Read complete latest Pro review via read_thread, archived8063 characters.
+- Established detailed Goal: fallback-oracle decomposition, one luminosity/class
+  supervised gate, prediction-state risk/retention and parallax-space checks.
+- Inspectedv1 integration: unknown-label fraction scales actual gate, while
+  oracle bypasses both this factor and nominal branch-support fallback.
+- Registered fixed training-only spatial folds, evidence subsampling/weights,
+  objective, cal guards and bounded parent sample before computing new scores.
+- Next implement cross-fit evidence and shared-noise evaluation on allocation.
+
 ## 2026-11-03 — complete baseline v1 delivery
 
 - Full application60721565 completed the one frozen run:9,390,518 unique rows,

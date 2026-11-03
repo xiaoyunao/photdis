@@ -1,0 +1,41 @@
+{
+  "version": "baseline_v1_1",
+  "baseline_commit": "97c2775d6394f7e3143c4b927be02dcaab20497d",
+  "input_dir": "data/baseline_v0",
+  "expert_dir": "data/baseline_v1",
+  "output_dir": "data/baseline_v1_1",
+  "seed": 20261103,
+  "draws": 128,
+  "inner_folds": [
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      3,
+      12
+    ]
+  ],
+  "evidence_per_field_class": 1000,
+  "gate_l2": 0.001,
+  "gate_class_loss_weight": 1.0,
+  "gate_maxiter": 1000,
+  "parent_sample_per_field": 2000,
+  "bootstrap_sources": 200,
+  "cal_min_class": 30,
+  "cal_macro_tail_improvement": 0.02,
+  "cal_tail_guard": 0.02,
+  "cal_median_error_guard": 0.05,
+  "cal_coverage95_guard": 0.02,
+  "cal_width95_ratio_guard": 1.1,
+  "cal_logscore_guard": 0.02,
+  "chunk_size": 1000
+}

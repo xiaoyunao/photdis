@@ -1,5 +1,19 @@
 # PLAN
 
+## Active objective: baseline v1.1 fallback and learned weights
+
+Source:docs/pro_review_97c2775.md; protocol:docs/baseline_v1_1_protocol.md.
+- [x] Recover97c2775, archive complete review and establish detailed Goal.
+- [ ] Fixed same-fallback oracle decomposition on existing references.
+- [ ] Training-only spatial cross-fit evidence and one jointly supervised gate.
+- [ ] Cal-only adoption; same-source/same-training development scorecards.
+- [ ] Prediction-state risk/retention and observed-parallax validation.
+- [ ] Actual checks, figures/report, checkpoint and three-endpoint sync.
+
+Preserve v0/v1 catalogs and Sobol128; use data/baseline_v1_1. No full catalog
+application in this bounded experiment. No subagents or model-family search.
+
+
 ## Completed objective: baseline v1 branch, numerical and depth comparison
 
 Full review: docs/pro_review_494b12c.md; fixed protocol: docs/baseline_v1_protocol.md.

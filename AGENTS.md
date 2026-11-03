@@ -1,5 +1,10 @@
 # Project instructions
 
+- Active task: baseline v1.1, docs/baseline_v1_1_protocol.md. Separate missing
+  labels from fallback; train one gate from training-only cross-fit evidence.
+  Cal decides; test is development validation. Preserve all v0/v1 products.
+  No full-parent rerun or subagents. Current detailed Goal/PLAN govern scope.
+
 - Latest completed checkpoint: baseline v1; docs/baseline_v1_result.md and
   docs/baseline_v1_catalog.md. Fixed branch/oracle, numerical and depth experiments
   plus one full9,390,518-row application are complete;321 actual checks and8
