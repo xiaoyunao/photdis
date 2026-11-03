@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — v1.2 execution and complete scoring prepared
+
+- Submitted60730324; changed pending allocation to debug/30min without duplication.
+- Added cal-only tied-score thresholds, all-class distance decisions and weighted
+  coverage. Added full/conditional Gaia PIT, log densities and SNR-bin masses.
+- Fifteen focused tests pass; runners parse. Actual products remain pending.
+- Next submit dependent score/acceptance/report after renderer is ready.
+
+
 ## 2026-11-03 — register v1.2 from latest full Pro review
 
 - Retrieved full7648-character review of dbeac65 (preview was stale).
