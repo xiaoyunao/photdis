@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-03 — allocated v1.2 calculation running
+
+-60730324 is RUNNING on allocated CPU node; dependent checks60730632 queued.
+- Added data-aware common limits for fixed-budget and PIT plots; no model changes.
+- Next inspect actual products, then acceptance and visual QA; no duplicate jobs.
+
+
 ## 2026-11-03 — v1.2 execution and complete scoring prepared
 
 - Submitted60730324; changed pending allocation to debug/30min without duplication.

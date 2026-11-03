@@ -34,13 +34,14 @@ def main():
                     xlabel='One-vs-rest FPR' if mode=='roc' else 'Recall',ylabel='Recall' if mode=='roc' else 'Known-reference precision')
         axes[0,0].legend(fontsize=8);save(fig,'01_matched_roc.png' if mode=='roc' else '02_matched_pr.png')
     fig,axes=plt.subplots(2,3,figsize=(15,8),layout='constrained')
+    maxfpr=max(q['test']['dwarf_fpr'] or 0 for name in 'ABC' for v in VARS for key,q in scores[name][v]['working_points'].items() if key.startswith('final'))
     for col,name in enumerate('ABC'):
         for row,target in enumerate((1,2)):
             ax=axes[row,col]
             for v in VARS:
                 points=[scores[name][v]['working_points'][f'final_class{target}_budget{b}']['test'] for b in CFG['false_positive_budgets']]
                 ax.plot([p['dwarf_fpr'] for p in points],[p['recall'] for p in points],'-o',color=COLORS[v],label=LABELS[v],ms=4)
-            ax.set(title=f'{name}: '+('evolved' if target==1 else 'transition'),xlabel='Test dwarf FPR at fixed cal thresholds',ylabel='Test recall',ylim=(0,1),xlim=(0,.12))
+            ax.set(title=f'{name}: '+('evolved' if target==1 else 'transition'),xlabel='Test dwarf FPR at fixed cal thresholds',ylabel='Test recall',ylim=(0,1),xlim=(0,min(1,max(.06,maxfpr*1.1))))
             ax.axvline(.02,ls=':',color='grey')
     axes[0,0].legend(fontsize=8);save(fig,'03_fixed_budget_recall.png')
     fig,axes=plt.subplots(1,3,figsize=(15,4),layout='constrained')
@@ -62,12 +63,13 @@ def main():
         ax.set(title=f'{name}: fixed evolved-score working points',xlabel='Weighted fraction of optical parent',ylabel='Known evolved test recall',xlim=(0,1),ylim=(0,1))
     axes[0].legend(fontsize=8);save(fig,'05_recall_parent_coverage.png')
     fig,axes=plt.subplots(2,3,figsize=(15,8),layout='constrained');x=np.arange(.05,1,.1)
+    pitymax=max(.15,1.1*max(max(e['groups']['all'][kind+'_pit_histogram']) for vv in par['results'].values() for e in vv.values() for kind in ('full','conditional')))
     for col,name in enumerate('ABC'):
         for row,kind in enumerate(('full','conditional')):
             for v in ('wide','evidence','quadratic','forest'):
                 q=par['results'][name][v+'_mixture']['groups']['all'];c=COLORS.get(v,'black')
                 axes[row,col].step(x,q[kind+'_pit_histogram'],where='mid',label=v,color=c)
-            axes[row,col].axhline(.1,color='grey',ls='--');axes[row,col].set(title=f'{name}: {kind} PIT',xlabel='PIT',ylabel='Design-weighted fraction per bin',xlim=(0,1),ylim=(0,.3))
+            axes[row,col].axhline(.1,color='grey',ls='--');axes[row,col].set(title=f'{name}: {kind} PIT',xlabel='PIT',ylabel='Design-weighted fraction per bin',xlim=(0,1),ylim=(0,pitymax))
     axes[0,0].legend();save(fig,'06_full_and_conditional_pit.png')
     fig,axes=plt.subplots(1,3,figsize=(15,4),layout='constrained')
     for ax,name in zip(axes,'ABC'):
