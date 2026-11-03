@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — numerical selection fixed before reference scoring
+
+- Numerical60721158 completed:3000-source audit compares IID8/32/128 and
+  Sobol32/128 against independent512 integration. Sobol improves stability,
+  but neither error layer passes every preregistered tolerance. Use128 with
+  explicit unconverged-layer flags; do not claim universal tail convergence.
+- Six branch fits60721229 completed in1m05s. Evaluation60721364 submitted
+  after numerical completion. Depth60721230 uses existing test-source identities.
+- Implemented whole-product validation and eight integrated figure groups;
+  reference and population results determine the scientific scope, not completion.
+
 ## 2026-11-03 — fixed experimental inputs and cal-only deployment
 
 - Numerical sample60721158 contains3000 unique sources; six branch fits60721229
