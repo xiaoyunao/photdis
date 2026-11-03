@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — fixed samples complete; training running
+
+- Sampling60727153 completed:26,000 unique parent objects;7,672 Gaia test
+  samples from220,667 eligible matches, including1,800 negative parallaxes.
+- Training60727000 now RUNNING; submitted dependent checks60727226 afterok
+  training+sampling. Do not restart these jobs on a model/context switch.
+- Eleven focused tests pass. Added explicit raw gate/entropy diagnostics and
+  raw-to-support-transferred mass acceptance. Wide QRF is100% broad distribution;
+  its leaf missing-label fraction is no longer mislabeled as mixture fallback.
+- Next inspect training logs, repair only actual execution issues if any, then
+  inspect all final figures and publish/sync actual results. Goal remains active.
+
 ## 2026-11-03 — final evaluation and rendering prepared
 
 - Added frozen-v1 routing comparison for wide, evidence, cal-selected variants.

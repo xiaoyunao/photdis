@@ -13,6 +13,11 @@ Source:docs/pro_review_97c2775.md; protocol:docs/baseline_v1_1_protocol.md.
 Preserve v0/v1 catalogs and Sobol128; use data/baseline_v1_1. No full catalog
 application in this bounded experiment. No subagents or model-family search.
 
+Live execution: training60727000 RUNNING; sampling60727153 completed
+(26,000 parent /7,672 Gaia incl1,800 negative); checks60727226 depends on both.
+Eleven focused tests pass. Do not resubmit training on recovery; inspect squeue
+and logs first. Actual adoption, validation and figures are still pending.
+
 
 ## Completed objective: baseline v1 branch, numerical and depth comparison
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate real v1.1 products and the frozen baseline provenance."""
 from baseline_v1_1_common import *
-from baseline_v1_1_score import adoption
+from photdis.baseline_v1_1 import transfer_unsupported
 from photdis.stage1 import require_compute
 import joblib
 
@@ -41,6 +41,9 @@ def main():
                 old=load(EXPERT/f'{name}_{variant}_evaluation.npz');pos=np.searchsorted(old['rows'],r)
                 check(name+variant+':v1_identical_rows',np.array_equal(old['rows'][pos],r))
                 check(name+variant+':v1_reproduction',np.allclose(old['mu'][pos],p['mu'],atol=3e-5,rtol=0))
+        diag=load(OUT/f'{name}_weight_diagnostics.npz');ep=load(OUT/f'{name}_evidence_evaluation.npz')
+        w,lost=transfer_unsupported(diag['raw_weights'],ep['branch_support'])
+        check(name+':raw_to_final_mass',np.allclose(w,ep['weights'],atol=2e-6) and np.allclose(lost,ep['support_fallback'],atol=2e-6))
         check(name+':adoption_guards',lock['models'][name]['adopt']==all(lock['models'][name]['checks'].values()))
     for a,b in [('A_on_B','B'),('A_on_C','C'),('B_on_C','C')]:
         x=load(OUT/f'{a}_evidence.npz');y=load(OUT/f'{b}_evidence.npz')

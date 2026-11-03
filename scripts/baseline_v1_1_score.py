@@ -2,6 +2,7 @@
 """Reference scores, matched fallback decomposition, and cal-only adoption."""
 from baseline_v1_1_common import *
 from scipy.special import ndtr
+import joblib
 from photdis.stage1 import require_compute
 
 def source_sigma(t,source):
@@ -36,7 +37,7 @@ def extended_scores(t,p):
         result[source]=by_split
     return result
 
-def decomposition(t,p):
+def decomposition(t,p,variant):
     rows=p['rows'];result={};labels=t['class_label'][rows]
     for source in ('chosen','Gaia','specdis','spdist'):
         truth=truth_mu(t,source)[rows]
@@ -50,8 +51,8 @@ def decomposition(t,p):
                     branch_support_failure_fraction=np.mean(~bs,axis=0).tolist(),
                     true_branch_support_failure_fraction=float(np.mean(~bs[:,cl])) if cl>=0 else None,
                     mean_support_fallback=float(np.mean(p['support_fallback'][use])),
-                    mean_residual_weight=float(np.mean(w[:,3])),
-                    predicted_component_counts=np.bincount(np.argmax(w,axis=1),minlength=4).tolist(),
+                    mean_residual_weight=1. if variant=='wide' else float(np.mean(w[:,3])),
+                    predicted_component_counts=([0,0,0,int(use.sum())] if variant=='wide' else np.bincount(np.argmax(w,axis=1),minlength=4).tolist()),
                     metrics=metrics(p['mu'][use],truth[use]))
     return result
 
@@ -100,9 +101,15 @@ def main():
         scored={};parts={}
         for variant in VARIANTS:
             p=load(OUT/f'{name}_{variant}_evaluation.npz')
-            scored[variant]=extended_scores(t,p);parts[variant]=decomposition(t,p)
+            scored[variant]=extended_scores(t,p);parts[variant]=decomposition(t,p,variant)
             if variant=='wide':old=p
-            if variant=='evidence':new=p
+            if variant=='evidence':
+                new=p;raw=joblib.load(OUT/f'{name}_gate.joblib').predict_proba(arrays(t,p['rows'])[0])
+                entropy=-np.sum(raw*np.log(np.maximum(raw,1e-300)),axis=1)
+                np.savez_compressed(OUT/f'{name}_weight_diagnostics.npz',rows=p['rows'],identity=p['identity'],raw_weights=raw,
+                    gate_entropy=entropy,final_weights=p['weights'],support_fallback=p['support_fallback'],
+                    label_missing_fraction=p['unknown_fraction'],known_label_condition_defined=p['unknown_fraction']<1-1e-7,
+                    known_label_conditional_max=p['known_condmax'],known_label_conditional_entropy=p['known_entropy'])
         train=json.load(open(OUT/f'{name}_train.json'))
         choice=adoption(scored['wide']['chosen']['cal'],scored['evidence']['chosen']['cal'],train['optimization'])
         rows=old['rows'];truth=truth_mu(t,'chosen')[rows]
