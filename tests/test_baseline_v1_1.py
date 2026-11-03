@@ -79,3 +79,17 @@ def test_parent_coverage_uses_field_size_weights():
     result=estimate(t,np.array([1,1,0,0],bool))
     assert np.isclose(result['fraction'],100/110)
     assert result['se']==0  # both SRS strata are constant
+
+
+def test_cal_adoption_requires_gain_without_dwarf_damage():
+    from baseline_v1_1_score import adoption
+    classes=('class_dwarf','class_evolved','class_transition','all')
+    old={k:dict(n=100,tail_1=.2,coverage95=.94,width95=3.,mean_log_density=-1.) for k in classes}
+    equal={k:dict(v) for k,v in old.items()}
+    assert not adoption(old,equal,{'success':True})['adopt']
+    good={k:dict(v,tail_1=.1) for k,v in old.items()}
+    assert adoption(old,good,{'success':True})['adopt']
+    good['class_dwarf']['tail_1']=.25
+    assert not adoption(old,good,{'success':True})['adopt']
+    good['class_dwarf']['tail_1']=.1
+    assert not adoption(old,good,{'success':False})['adopt']

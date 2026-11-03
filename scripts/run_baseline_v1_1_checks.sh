@@ -25,3 +25,5 @@ for pid in "${pids[@]}"; do wait "$pid" || failed=1; done
 if [[ "$failed" != 0 ]]; then exit 1; fi
 python scripts/baseline_v1_1_risk.py
 python scripts/baseline_v1_1_parallax.py
+python scripts/baseline_v1_1_validate.py
+python scripts/baseline_v1_1_report.py

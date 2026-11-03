@@ -22,7 +22,9 @@ def logscore(t,rows,p,source):
 def extended_scores(t,p):
     rows=p['rows'];layers=strata(t,rows);result={}
     for source in ('chosen','Gaia','specdis','spdist'):
-        truth=truth_mu(t,source)[rows];ls=logscore(t,rows,p,source);by_split={}
+        truth=truth_mu(t,source)[rows];ls=p.get('log_'+source)
+        if ls is None:ls=logscore(t,rows,p,source)
+        by_split={}
         for sp,tag in [(1,'cal'),(2,'test')]:
             out={}
             for layer,mask in layers.items():
@@ -66,6 +68,32 @@ def adoption(old,new,optimization):
     else:gain=None
     return dict(adopt=all(checks.values()),checks=checks,macro_tail_gain=gain)
 
+def route_scores(t,selection):
+    # Keep the v1 band policy and nominal support decisions fixed for all variants.
+    lock=json.load(open(EXPERT/'selection.json'));base=load(OUT/'A_wide_evaluation.npz')
+    rows=base['rows'];route=np.zeros(len(rows),int);supported=base['supported'].copy();positions={}
+    for code,name in enumerate('BC',1):
+        p=load(OUT/f'{name}_wide_evaluation.npz');pos=np.searchsorted(rows,p['rows']);positions[name]=pos
+        assert np.array_equal(rows[pos],p['rows'])
+        use=p['supported']&(lock['route'][name]['adopt']|~supported[pos])
+        route[pos[use]]=code;supported[pos[use]]=p['supported'][use]
+    result={}
+    for variant in ('wide','evidence','selected'):
+        v=selection['A']['variant'] if variant=='selected' else variant
+        p=load(OUT/f'A_{v}_evaluation.npz')
+        out={k:a.copy() for k,a in p.items() if k not in ('pdf','centers','edges')}
+        for source in ('chosen','Gaia','specdis','spdist'):out['log_'+source]=logscore(t,rows,p,source)
+        for code,name in enumerate('BC',1):
+            v=selection[name]['variant'] if variant=='selected' else variant
+            p=load(OUT/f'{name}_{v}_evaluation.npz');pos=positions[name];use=route[pos]==code
+            for k in out:
+                if not k.startswith('log_'):out[k][pos[use]]=p[k][use]
+            for source in ('chosen','Gaia','specdis','spdist'):out['log_'+source][pos[use]]=logscore(t,p['rows'],p,source)[use]
+        out['route']=route;np.savez_compressed(OUT/f'routed_{variant}_evaluation.npz',**out)
+        result[variant]=extended_scores(t,out)
+    write_json(OUT/'routed_scores.json',dict(scores=result,route_counts=np.bincount(route,minlength=3).tolist(),policy='v1 frozen band route and support; no new routing optimization'))
+
+
 def main():
     require_compute();t=load(OLD/'references.npz');result={};selection={}
     for name in MODELS:
@@ -88,5 +116,6 @@ def main():
     write_json(OUT/'selection.json',dict(models=selection,source='cal only; no test-based tuning',
         config_sha256=sha(ROOT/'configs/baseline_v1_1.json'),frozen_v1_selection_sha256=sha(EXPERT/'selection.json')))
     write_json(OUT/'reference_scores.json',result)
+    route_scores(t,selection)
 
 if __name__=='__main__':main()

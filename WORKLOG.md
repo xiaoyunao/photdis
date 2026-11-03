@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — final evaluation and rendering prepared
+
+- Added frozen-v1 routing comparison for wide, evidence, cal-selected variants.
+- Added actual-product validator (fold/evidence isolation, hashes, PDF/mass,
+  reproduction, samples, baseline catalogs) and eight-figure report renderer.
+- Sampling job60727153 submitted; training60727000 remains queued at last check.
+- Report is generated only after successful actual validation; no result claims
+  from code tests. Next synchronize runners and submit dependent check job.
+
 ## 2026-11-03 — bounded score and validation pipeline
 
 - Submitted cross-fit job60727000; latest observed state PENDING/Priority.
