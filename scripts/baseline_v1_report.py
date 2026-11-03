@@ -51,6 +51,9 @@ def quality_diagnostics(t,p,candidates):
         note='Fixed predeclared cuts; no selection or refit after test/parent inspection. Parent counts use stored float32 summaries.')
 
 def main():
+    global FIG
+    preview='--experiments-only' in sys.argv
+    if preview:FIG=OUT/'preview_figures'
     require_compute();FIG.mkdir(exist_ok=True);t=load(OLD/'references.npz')
     numer=json.load(open(OUT/'numerical.json'));selection=json.load(open(OUT/'selection.json'))
     model_scores={n:json.load(open(OUT/(n+'_scores.json'))) for n in MODELS}
@@ -102,10 +105,14 @@ def main():
     axes[0].legend();save(fig,'03_same_star_information');result['same_star']=same
 
     p=load(OUT/'recommended_evaluation.npz')
-    quality=quality_diagnostics(t,p,selection['quality_candidates']);result['quality_diagnostics']=quality
-    candidates=quality['candidates'];ncal=model_scores['A']['variants']['wide']['cal']['chosen']['all']['n']
-    fig,axes=plt.subplots(1,2,figsize=(12,4))
-    for ax,parent in zip(axes,(False,True)):
+    if preview:
+        candidates=selection['quality_candidates'];parents=(False,)
+    else:
+        quality=quality_diagnostics(t,p,selection['quality_candidates']);result['quality_diagnostics']=quality
+        candidates=quality['candidates'];parents=(False,True)
+    ncal=model_scores['A']['variants']['wide']['cal']['chosen']['all']['n']
+    fig,axes=plt.subplots(1,len(parents),figsize=(6*len(parents),4),squeeze=False)
+    for ax,parent in zip(axes[0],parents):
         for eligible,color in [(False,'gray'),(True,'tab:green')]:
             use=[c for c in candidates if c['eligible']==eligible and min(c['class_counts'])>=30]
             ax.scatter([c['parent_fraction'] if parent else c['n']/ncal for c in use],
@@ -145,7 +152,7 @@ def main():
         h=ax.hexbin(color,y,gridsize=65,bins='log',mincnt=1);fig.colorbar(h,ax=ax,label='Count per hexagon (log scale)');ax.set(xlabel='(g-r)0',ylabel='Mg',title=title+f'; same N={use.sum():,}');ax.invert_yaxis()
     save(fig,'07_same_source_cmd')
 
-    result['complete_application']=(OUT/'application.json').exists()
+    result['complete_application']=not preview and (OUT/'application.json').exists()
     if result['complete_application']:
         app=json.load(open(OUT/'application.json'));result['application']=app
         fig,axes=plt.subplots(1,2,figsize=(11,4));fields=app['fields'][:13];den=sum(f['n'] for f in fields)
@@ -153,7 +160,8 @@ def main():
         axes[0].bar(list('ABC'),values);axes[0].set(ylabel='Fraction of complete DECam parent',title='Frozen recommended route')
         keys=['supported','ambiguous','research_quality','numerical_converged'];vals=[sum(f[k] for f in fields)/den for k in keys]
         axes[1].bar(range(4),vals);axes[1].set(xticks=range(4),xticklabels=keys,ylabel='Fraction of complete DECam parent',title='Independent flags; not disjoint populations');axes[1].tick_params(axis='x',rotation=25);save(fig,'08_application_states')
-    if (OUT/'validation.json').exists():result['validation']=json.load(open(OUT/'validation.json'))
-    write_json(OUT/'report.json',result)
+    if not preview and (OUT/'validation.json').exists():result['validation']=json.load(open(OUT/'validation.json'))
+    result['experiments_only_preview']=preview
+    write_json(OUT/('preview_report.json' if preview else 'report.json'),result)
     print('Report complete; application:',result['complete_application'],flush=True)
 if __name__=='__main__':main()

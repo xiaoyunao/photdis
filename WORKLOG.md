@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-03 — inspect finished experiments during catalog integration
+
+- Added an explicit experiments-only preview path to the report renderer:
+  separate preview_figures/preview_report.json, always complete_application=False,
+  no parent-quality counts or final-validation claims. Final delivery unchanged.
+- This allows distance/CMD/population/depth visual review in allocated compute
+  while the same full-parent job continues. No predictions are rerun.
+- Added cal class-specific width/coverage table to the Markdown renderer;
+  fixed selection criteria remain unchanged. Python parse/diff checks pass.
+
+## 2026-11-03 — early actual shard readback
+
+- Five rows from completed field05_00600000.fits (56 columns) pass independent
+  selected-band equality, weight normalization, CQR containment, distance-unit
+  and frozen128-draw/unconverged/no-quality checks. Includes A and C routes.
+- This is an early write-path smoke check only; full14-field assertions remain
+  pending after application60721565. Header monitoring confirms continued growth.
+- No prediction, selection or run configuration changed. Keep Goal active.
+
 ## 2026-11-03 — full-catalog acceptance strengthened
 
 - Continued from7ddff78 after clean endpoint recovery; application60721565

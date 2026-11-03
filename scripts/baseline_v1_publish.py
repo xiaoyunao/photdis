@@ -119,6 +119,16 @@ def main():
     add('cal按各粗类严重错误的宏平均比较，同时限制矮星及整体严重错误增加≤2百分点、整体绝对残差中位数增加≤0.05mag。'
         '六组配置均保留wide。B/A与C/B在共同支持的cal对象上通过升级规则，仍用C→B→A；全域外时保留A并标域外。'
         'test与降深结果均未用于重训、调整阈值或事后挑选模型。\n')
+    rows=[]
+    for name in 'ABC':
+        for variant in ('wide','natural','balanced'):
+            s=r['model_scores'][name]['variants'][variant]['cal']['chosen']
+            d=s['class_dwarf'];e=s['class_evolved']
+            rows.append([name,variant,pct(d['tail_1']),pct(e['tail_1']),num(e['width68']),num(e['width95']),
+                         pct(e['coverage68']),pct(e['coverage95'])])
+    table(['cal配置','候选','矮星严重错误','演化严重错误','演化W68','演化W95','演化覆盖68','演化覆盖95'],rows)
+    add('上表并列保留cal的错误率、区间宽度与覆盖诊断。预登记采纳护栏以类别错误和中心误差为决策量；'
+        'CQR另行在cal扩展区间。不能因分布变宽而把覆盖提升解释为光度分支已经选对。\n')
     q=r['quality_diagnostics'];qc=q['candidates']
     assert r['selection']['quality_rule'] is None
     add(f"预登记{len(qc)}组预测宽度、最大已知类权重、跨配置分歧和光学误差组合；"
