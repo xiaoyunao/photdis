@@ -2,6 +2,7 @@
 #SBATCH -C cpu
 #SBATCH -q regular
 #SBATCH -N 1
+#SBATCH -c 128
 #SBATCH -t 04:00:00
 #SBATCH -J baseline_v1_apply
 #SBATCH -o logs/baseline_v1_apply_%j.out

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — fixed depth experiment completed
+
+- Finalization60721523 completed3m43s, exit0. Frozen wide model plus Sobol128
+  scores all7587 accepted observations; no refit after this diagnostic.
+- Faintest target-depth sample: severe error36.3%v0 versus34.6%v1; evolved
+  failures remain dominant. Source-stratified sampling is not a parent error rate.
+- Added report renderer with population, numerical, same-star, depth, retained
+  quality, distance/CMD and full-artifact sections; Python parse passes.
+- Application waits for regular allocation; explicitly request128 CPUs for
+  the96 workers. Only this pending job's resource request changes, no data rule.
+- Next complete the one application and inspect actual validation/report output.
+
 ## 2026-11-03 — calibration decisions frozen
 
 - All six families retain wide QRF: natural gates worsen evolved-star tails;
