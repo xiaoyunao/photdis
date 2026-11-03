@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — preserve frozen mixture summaries exactly
+
+-60730632 stopped at A/evidence quantile reproduction after CDF tolerance passed.
+  Cache recombination/float32 serialization changes sparse inverse-CDF endpoints.
+- Fix is exact reuse of saved old PDF/weights/quantiles, as frozen-comparison
+  protocol requires. Keep recomputed artifacts and per-case differences in an
+  allocated audit; no relaxed acceptance, classifier or expert refit.
+- Stable Gaia finish60731028 runs first; then reuse/audit, reference rescore and
+  acceptance/render only. Gaia files use original wide/evidence already.
+
+
 ## 2026-11-03 — fixed workpoints show limited selection precision
 
 - C final-score2% cal budget: test evolved recall35–46%, known-reference

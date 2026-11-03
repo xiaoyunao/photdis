@@ -75,9 +75,16 @@ def main(name):
                 raw=(evidence if variant=='evidence' else classifiers[variant]).predict_proba(m)
                 pdf,weights,_=mix_cached(cache['branch_pdf'],raw,cache['branch_support'])
                 if raw.shape[1]==3:raw=np.column_stack([raw,np.zeros(len(raw))])
+            # Frozen comparison artifacts are authoritative, including their
+            # original quantile calculation before float32 serialization.
+            oldpath=PREV/(f'{name}_{variant}_evaluation.npz' if kind=='reference' else f'{kind}_{name}_{variant}.npz')
+            frozen=None
+            if variant in ('natural','balanced','evidence') and oldpath.exists():
+                frozen=load(oldpath);assert np.array_equal(rows,frozen['rows'])
+                pdf=frozen['pdf'];weights=frozen['weights']
             main,index=main_component(cache['branch_pdf'],weights)
             p=dict(rows=rows,identity=_T['identity'][rows],edges=_MODEL.edges,pdf=pdf.astype('f4'),
-                mu=distance_summary(pdf,_MODEL.edges,g),main_mu=distance_summary(main,_MODEL.edges,g),
+                mu=frozen['mu'] if frozen is not None else distance_summary(pdf,_MODEL.edges,g),main_mu=distance_summary(main,_MODEL.edges,g),
                 main_index=index,raw_weights=raw,weights=weights,supported=cache['supported'],branch_support=cache['branch_support'])
             np.savez_compressed(OUT/f'{kind}_{name}_{variant}.npz',**p)
         records[kind]=dict(n=len(rows),identity_sha256=identity_hash(_T['identity'][rows]))
