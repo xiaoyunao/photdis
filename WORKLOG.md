@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-03 — cross-fit execution prepared
+
+- Added v1.1 common/fit runners and allocated full-node launcher. Each of six
+  configurations uses four training-field folds; held identities and hashes
+  saved. Same-training controls share sampled evidence identities and weights.
+- Luminosity likelihood uses bin-integrated Gaussian reference errors after
+  shared-g propagation; stable survival tails avoid CDF cancellation. Empty
+  machine-tail evidence is floored neutrally and counted, not dropped.
+- Seven focused tests pass: objective finite differences/rescaling, fallback
+  conservation, v1 reproduction and diagnostic-label isolation; parse/bash pass.
+- Next submit one training/evaluation job, then add cal decisions, risk-state
+  retention and observed-parallax checks while it runs.
+
 ## 2026-11-03 — implement v1.1 gate and fallback core
 
 - Added baseline_v1_1.py: weighted joint luminosity/class objective, four-way
