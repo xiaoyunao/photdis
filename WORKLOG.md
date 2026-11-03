@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — population and depth implementation
+
+- Added versioned conditional QRFs with photometric logistic gate, wide-model
+  unknown/support fallback, natural and equal-prior sensitivity; oracle isolated.
+- Three new tests pass: interpolated CDF, digital-shift integration and chunk
+  identity, no oracle-label influence on deployed mixtures. Python/shell parse pass.
+- Fixed parent convergence job60721158 submitted; training uses frozen v0 IDs.
+- Flux-depth preparation reuses verified raw sweep and difference-noise methods,
+  with source-cluster IDs, actual donor variance/quality and shifted reference mu.
+- Next: allocated branch fits and fixed depth inputs; cal-only decisions after
+  numerical settings are frozen, before full-parent reapplication.
+
 ## 2026-11-03 — baseline v1 registered
 
 - Recovered clean494b12c at local/origin/NERSC; authentication valid.
