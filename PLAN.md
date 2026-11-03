@@ -1,24 +1,29 @@
 # PLAN
 
-## Active objective: baseline v1.1 fallback and learned weights
+## Completed objective: baseline v1.1 fallback and learned weights
 
 Source:docs/pro_review_97c2775.md; protocol:docs/baseline_v1_1_protocol.md.
+Result:docs/baseline_v1_1_result.md; detailed risk and actual validation in manifests.
 - [x] Recover97c2775, archive complete review and establish detailed Goal.
 - [x] Fixed same-fallback oracle decomposition on existing references.
 - [x] Training-only spatial cross-fit evidence and one jointly supervised gate.
-- [x] Cal-only adoption; same-source/same-training development scorecards.
-  All six gates fail; retain wide v1. Full fallback changes C evolved oracle
-  tail13.91% to15.04%, while actual new gate98.87% exceeds wide80.08%.
-- [ ] Prediction-state risk/retention and observed-parallax validation.
-- [ ] Actual checks, figures/report, checkpoint and three-endpoint sync.
+- [x] Cal-only adoption and same-source/same-training development scorecards.
+- [x] Prediction-state risk/retention and observed-parallax validation.
+- [x] 470 actual checks,11 focused tests,8 inspected figures and final report.
+- [x] Final milestone prepared for scripts/sync.py push; verify identical three
+  endpoint hashes before completing Goal.
 
-Preserve v0/v1 catalogs and Sobol128; use data/baseline_v1_1. No full catalog
-application in this bounded experiment. No subagents or model-family search.
+All six gates fail; retain deployed wide v1. C evolved oracle tail13.91% becomes
+15.04% with full fallback; new gate98.87% versus wide80.08%. A fixed high-weight,
+narrow-width prediction group does not improve on the old model's same sources.
+Preserve v0/v1 catalogs and Sobol128. No full-catalog rerun occurred.
 
-Live execution: training60727000 COMPLETED0:0; sampling60727153 completed
-(26,000 parent /7,672 Gaia incl1,800 negative); checks60727226 RUNNING (debug30min).
-Eleven focused tests pass. Do not resubmit training on recovery; inspect squeue
-and logs first. Cal decisions are complete; parent/parallax, actual validation and figures remain pending.
+Training60727000, sampling60727153, acceptance/render60727969 and final
+report-only render60728246 completed. Fixed samples:26,000 parent/7,672 Gaia,
+including1,800 negative parallaxes. No Gaia validation at r>=22. Reference-risk
+and weighted sampling coverage do not establish the unlabeled parent purity.
+Reproduction audit60727875 bounds CDF rounding below4.02e-7; wide is exact.
+Next global priorities below remain unstarted; do not launch another local audit.
 
 
 ## Completed objective: baseline v1 branch, numerical and depth comparison

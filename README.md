@@ -4,6 +4,20 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
+Latest completed experiment: **v1.1 — fallback decomposition and learned branch weights**.
+[Results and eight figures](docs/baseline_v1_1_result.md) ·
+[protocol](docs/baseline_v1_1_protocol.md) ·
+[actual validation](manifests/baseline_v1_1_validation.json).
+All six jointly supervised gates fail the cal-only adoption criteria; **deployed
+baseline remains v1**. On the same266 evolved C-test references, full fallback
+changes oracle severe-error rate from13.91% to15.04%; the new gate reaches98.87%
+versus80.08% for wide QRF. This localizes the remaining branch-weight problem
+without establishing a physical color-information limit.
+470 actual checks and11 focused tests pass. The fixed26,000-object parent sample
+and7,672 Gaia objects (including1,800 negative parallaxes) quantify coverage and
+observed-parallax behavior. Gaia validation has no objects at r>=22; reference
+risk is not whole-parent purity. No full catalog was rerun.
+
 Latest completed baseline: **v1 — population branches, numerical propagation and depth**.
 [Results and eight figures](docs/baseline_v1_result.md) ·
 [protocol](docs/baseline_v1_protocol.md) · [catalog and replay](docs/baseline_v1_catalog.md).

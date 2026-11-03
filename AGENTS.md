@@ -1,9 +1,13 @@
 # Project instructions
 
-- Active task: baseline v1.1, docs/baseline_v1_1_protocol.md. Separate missing
-  labels from fallback; train one gate from training-only cross-fit evidence.
-  Cal decides; test is development validation. Preserve all v0/v1 products.
-  No full-parent rerun or subagents. Current detailed Goal/PLAN govern scope.
+- Latest completed experiment: baseline v1.1; docs/baseline_v1_1_result.md.
+  Six gates reject on cal; retain deployed v1. Fixed C evolved oracle/full
+  fallback tails13.91%/15.04%, new gate98.87% versus wide80.08%.
+  470 actual checks,11 focused tests and8 inspected figures complete; fixed
+  samples26,000 parent/7,672 Gaia incl1,800 negative. No Gaia r>=22 validation.
+  Preserve all v0/v1 products and v1.1 negative findings. No automatic full-parent
+  rerun, cluster expansion, model-family search or subagents. Next global issues
+  are branch weights/reference composition and real faint/no-WISE validation.
 
 - Latest completed checkpoint: baseline v1; docs/baseline_v1_result.md and
   docs/baseline_v1_catalog.md. Fixed branch/oracle, numerical and depth experiments

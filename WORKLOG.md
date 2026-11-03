@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-03 — baseline v1.1 final delivery
+
+- All six gates reject on cal; retain v1 deployment and all frozen catalogs.
+  C evolved tails: oracle13.91%, full fallback15.04%, wide80.08%, new98.87%.
+- Completed470 actual checks,11 focused tests and eight inspected figures;
+  report-only60728246 COMPLETED0:0. Only03/06/07 changed in final visual pass;
+  other five images are hash-identical to the inspected versions.
+- Published result MD, report/risk/validation/reproduction JSON and eight PNGs;
+  updated README/AGENTS/PLAN. Actual risk/audit hashes match acceptance manifest.
+- Samples26,000 parent/7,672 Gaia incl1,800 negative; no r>=22 Gaia validation.
+  Preserve teacher/selection limits; no additional fit or full-parent inference.
+- Validation: selected JSON parse, report links, file-size limits and diff checks;
+  final milestone delivered with scripts/sync.py push and endpoint verification.
+- Remaining science: branch weights/reference composition and real faint coverage.
+  This finite Goal closes after sync; no automatic cluster or parameter search.
+
+
 ## 2026-11-03 — actual acceptance and visual review
 
 - Finish60727969 passed470 actual checks and rendered8 figures. All8 inspected.
