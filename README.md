@@ -4,7 +4,17 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed experiment: **v1.1 — fallback decomposition and learned branch weights**.
+Latest completed experiment: **v1.2 — color separability and distance decisions**.
+[Results and ten figures](docs/baseline_v1_2_result.md) ·
+[protocol](docs/baseline_v1_2_protocol.md) ·
+[delivery audit](manifests/baseline_v1_2_delivery.json).
+2364 actual checks and16 focused tests pass. At the cal2% dwarf budget, C evolved
+recall is35–46% and known-reference precision39–42%. Complete Gaia likelihood
+favors the old wide model over new mixtures; hard branches worsen tails.
+Cal-passing single groups can still fail minority populations. Retain deployed v1,
+full PDFs and all historical artifacts. No full-catalog rerun; no Gaia r>=22 validation.
+
+Previous completed experiment: **v1.1 — fallback decomposition and learned branch weights**.
 [Results and eight figures](docs/baseline_v1_1_result.md) ·
 [protocol](docs/baseline_v1_1_protocol.md) ·
 [actual validation](manifests/baseline_v1_1_validation.json).

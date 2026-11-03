@@ -1,19 +1,24 @@
 # PLAN
 
-## Active objective: baseline v1.2 color separability and distance decisions
+## Completed objective: baseline v1.2 color separability and distance decisions
 
 Source:docs/pro_review_dbeac65.md; protocol:docs/baseline_v1_2_protocol.md.
-- [x] Read latest full review and register detailed Goal/config/protocol.
-- [ ] Reuse old scores; train only balanced quadratic and fixed forest classifiers.
-- [ ] Fixed cal FPR workpoints, same-training ROC/PR and all-source distance decisions.
-- [ ] Fixed-parent weighted coverage and complete observed-parallax validation.
-- [ ] Actual checks, figures/report, checkpoint and three-endpoint delivery.
+- [x] Recover frozen protocol, classifiers, cal workpoints and same-training controls.
+- [x] Fixed-parent coverage and full observed-parallax checks completed.
+- [x] Job60731324 COMPLETED0:0;2364 actual checks pass;16 focused tests rerun.
+- [x] Inspect ten figures, publish compact evidence and final result.
+- [x] Final checkpoint prepared; scripts/sync.py push verifies identical local/GitHub/NERSC
+  hashes before the continuation Goal closes.
 
-Preserve v1 deployment and all historical artifacts; no full catalog or new search.
-Training/cache60730324 finished; score60730632 finished reference workpoints and
-continues original Gaia diagnostics. Stable-log-likelihood finish60731028 queued
-afterany;16 focused tests pass. Actual final acceptance/figures remain pending.
-Inspect jobs on recovery; do not repeat fits or reference scores.
+Resumed2026-11-03 in chat01a1a092-2ca6-7512-922b-ac73315e6657.
+Old chat01a18087-3d26-7e63-824a-fb325571b692 archived/interrupted; old Goal paused.
+Recovered clean three-endpoint1de42a4. No new training/scoring/full-catalog run.
+Preserve v1 deployment. C evolved recall35–46%, known-reference precision39–42%
+at cal2% dwarf budget. Complete Gaia evidence disfavors hard main-branch distances.
+Cal-passing single groups are not uniformly reliable: A/evidence evolved failure
+is100%; B/forest has9.52% evolved failures on63 selected test references.
+Outstanding scientific limits: reference composition and real faint/no-WISE
+validation; no Gaia r>=22 objects. Do not launch additional experiments.
 
 
 ## Completed objective: baseline v1.1 fallback and learned weights

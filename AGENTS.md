@@ -1,11 +1,15 @@
 # Project instructions
 
-- Active task: baseline v1.2 per docs/baseline_v1_2_protocol.md. Freeze distance
-  experts; only two fixed balanced classifiers, cal-only selection/decisions and
-  complete Gaia parallax checks on existing reference/probability samples.
-  No subagents or full-catalog rerun. Detailed Goal and PLAN govern scope.
+- Latest completed experiment: baseline v1.2; docs/baseline_v1_2_result.md.
+  2364 actual checks,16 focused tests and10 inspected figures. Fixed classifiers
+  and cal workpoints complete; retain v1 deployment. C evolved recall35–46%,
+  known-reference precision39–42% at cal2% dwarf budget. Full Gaia scores favor
+  wide; C main-branch high PIT tail9.75% vs wide5.69%. Cal-passing groups can
+  still fail minority evolved stars. No Gaia r>=22 validation. Preserve all
+  frozen artifacts and negative findings; no new models/full-catalog rerun or
+  subagents. Next work requires explicit scope on reference composition/faint data.
 
-- Latest completed experiment: baseline v1.1; docs/baseline_v1_1_result.md.
+- Previous completed experiment: baseline v1.1; docs/baseline_v1_1_result.md.
   Six gates reject on cal; retain deployed v1. Fixed C evolved oracle/full
   fallback tails13.91%/15.04%, new gate98.87% versus wide80.08%.
   470 actual checks,11 focused tests and8 inspected figures complete; fixed

@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-03",
+  "source_commit": "1de42a4",
+  "job": {
+    "id": 60731324,
+    "state": "COMPLETED",
+    "exit_code": "0:0"
+  },
+  "actual_checks": 2364,
+  "focused_tests": {
+    "command": "PYTHONPATH=src:scripts:.deps python -m pytest -q tests/test_baseline_v1.py tests/test_baseline_v1_1.py tests/test_baseline_v1_2.py",
+    "passed": 16
+  },
+  "source_directory": "/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1_2",
+  "source_sha256": {
+    "report.json": "d0413317748501c5486886011fa49bb2f4c39d4ca62740f64f27240d54014597",
+    "source_workpoints.json": "785f390bb654c8a4c36e55e11459b951198a2d9f96ccbf88104d7fdb2526346d",
+    "validation.json": "e1356fa3c64c10f8d18e4f551b9443c48450a773ae86410b67b119a1886c5969",
+    "frozen_reuse_audit.json": "5d2636d09574c5ea83353e716778b9196d886095e63a52801d84f061cbe0aa64",
+    "result.md": "81ff28c1099ddefd333654f22c264a0ac305cc5f164c36625c62ae24806d50d2",
+    "figures/01_matched_roc.png": "f55215a5c918482dda5b44abed2a74bc2d06f6cd424d7b8f1a887abf1411f89a",
+    "figures/02_matched_pr.png": "004a754011011c4484a2040217363e3c83ea49b0390287d7f09eaee9a49d20cd",
+    "figures/03_fixed_budget_recall.png": "335fd763f6dba62c727e0a6cce2cca08837e575f480b191898ef0a7e5f33678f",
+    "figures/04_distance_decisions.png": "287d9929d42065a76012acfbec88846d517fa728ed3e89279fab2f4662d76e45",
+    "figures/05_recall_parent_coverage.png": "661725bac9d8327e703a3f0e6b95de1c1836206f798d7d9656545c874d14d8a0",
+    "figures/06_full_and_conditional_pit.png": "0ff51f83136a201653b87362eb08f4f5ac90fd46117301ce115add4308d1a262",
+    "figures/07_snr_bin_probability.png": "d5d9ba02e39b0dfa2cec9c6ddca1d166fad85e5d79b9d733f269764c9c207a54",
+    "figures/08_distance_density.png": "a3e753b6f9e54f4a61edb771d520ba26e90962988d46da80fb32b6dd7593d7ef",
+    "figures/09_same_source_cmd.png": "e659a670c90a2defbf890e49faf7ede948f052f08dfd31058eed142fa8f6411d",
+    "figures/10_single_distance_risk.png": "647c5d597b8a9f8ecdb05d0afa76d0f7e82d462fdfd0a6c198781b03cc3d02aa"
+  },
+  "all_15_source_hashes_verified": true,
+  "all_final_chosen_workpoints_match_report": true,
+  "visual_review": {
+    "inspected_figures": 10,
+    "result": "All figures inspected; labels and legends readable; density/CMD out-of-range counts explicit; no rerender needed."
+  },
+  "note": "Source workpoints generated after acceptance; its absent original hash is supplied here. Final result text regenerated from compact evidence using current renderer text block, with delivery and scientific caveats appended. No fits or scores rerun.",
+  "files": {
+    "docs/baseline_v1_2_result.md": {
+      "sha256": "af76965e989eb65cb9a9a29d0e90899447470fa594d34c2296feb44fa43768c1",
+      "bytes": 13223
+    },
+    "figures/baseline_v1_2/01_matched_roc.png": {
+      "sha256": "f55215a5c918482dda5b44abed2a74bc2d06f6cd424d7b8f1a887abf1411f89a",
+      "bytes": 302315
+    },
+    "figures/baseline_v1_2/02_matched_pr.png": {
+      "sha256": "004a754011011c4484a2040217363e3c83ea49b0390287d7f09eaee9a49d20cd",
+      "bytes": 393813
+    },
+    "figures/baseline_v1_2/03_fixed_budget_recall.png": {
+      "sha256": "335fd763f6dba62c727e0a6cce2cca08837e575f480b191898ef0a7e5f33678f",
+      "bytes": 263163
+    },
+    "figures/baseline_v1_2/04_distance_decisions.png": {
+      "sha256": "287d9929d42065a76012acfbec88846d517fa728ed3e89279fab2f4662d76e45",
+      "bytes": 121370
+    },
+    "figures/baseline_v1_2/05_recall_parent_coverage.png": {
+      "sha256": "661725bac9d8327e703a3f0e6b95de1c1836206f798d7d9656545c874d14d8a0",
+      "bytes": 148558
+    },
+    "figures/baseline_v1_2/06_full_and_conditional_pit.png": {
+      "sha256": "0ff51f83136a201653b87362eb08f4f5ac90fd46117301ce115add4308d1a262",
+      "bytes": 183918
+    },
+    "figures/baseline_v1_2/07_snr_bin_probability.png": {
+      "sha256": "d5d9ba02e39b0dfa2cec9c6ddca1d166fad85e5d79b9d733f269764c9c207a54",
+      "bytes": 150575
+    },
+    "figures/baseline_v1_2/08_distance_density.png": {
+      "sha256": "a3e753b6f9e54f4a61edb771d520ba26e90962988d46da80fb32b6dd7593d7ef",
+      "bytes": 446702
+    },
+    "figures/baseline_v1_2/09_same_source_cmd.png": {
+      "sha256": "e659a670c90a2defbf890e49faf7ede948f052f08dfd31058eed142fa8f6411d",
+      "bytes": 232723
+    },
+    "figures/baseline_v1_2/10_single_distance_risk.png": {
+      "sha256": "647c5d597b8a9f8ecdb05d0afa76d0f7e82d462fdfd0a6c198781b03cc3d02aa",
+      "bytes": 103797
+    },
+    "manifests/baseline_v1_2_frozen_reuse_audit.json": {
+      "sha256": "5d2636d09574c5ea83353e716778b9196d886095e63a52801d84f061cbe0aa64",
+      "bytes": 10383
+    },
+    "manifests/baseline_v1_2_report.json": {
+      "sha256": "d0413317748501c5486886011fa49bb2f4c39d4ca62740f64f27240d54014597",
+      "bytes": 5036987
+    },
+    "manifests/baseline_v1_2_source_workpoints.json": {
+      "sha256": "785f390bb654c8a4c36e55e11459b951198a2d9f96ccbf88104d7fdb2526346d",
+      "bytes": 1197204
+    },
+    "manifests/baseline_v1_2_validation.json": {
+      "sha256": "e1356fa3c64c10f8d18e4f551b9443c48450a773ae86410b67b119a1886c5969",
+      "bytes": 150066
+    }
+  }
+}

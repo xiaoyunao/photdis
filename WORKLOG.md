@@ -1,5 +1,33 @@
 # WORKLOG
 
+## 2026-11-03 — v1.2 final evidence and visual review
+
+- All ten figures inspected: readable labels/legends, explicit out-of-range CMD
+  counts, common comparison axes; retain actual poor outcomes without clipping.
+- Remote report/source-workpoints/validation/reuse audit/MD/ten PNG hashes retrieved.
+  Source-workpoints has no original validation hash (created afterward), not a mismatch.
+- Rendered current report text from compact evidence; added same-training W1/W2
+  interpretation and minority-failure caveat. Updated README/AGENTS/PLAN.
+-2364 true checks and16 passing tests already verified; no new model calculation.
+- Validation:15 source hashes match NERSC; all final chosen workpoint distances
+  match compact report; report links/JSON/file sizes/diff checks pass.
+- Delivery manifest records source and final hashes and ten visual reviews.
+  Final milestone uses scripts/sync.py push and verifies three endpoint hashes.
+- Remaining science: reference composition and real faint/no-WISE evidence;
+  no further experiment starts automatically.
+
+## 2026-11-03 — recover stalled chat and finish existing v1.2 artifacts
+
+- User requested stopping old chat/Goal and continuing here. Archive confirmed
+  interrupted/notLoaded; persisted old Goal paused. New continuation Goal active.
+- Recovered clean local/origin/NERSC1de42a4 via status/fetch/log, WORKLOG/PLAN.
+- sacct60731324 COMPLETED0:0; log records2364 actual checks and ten rendered figures.
+- Local PYTHONPATH=src:scripts:.deps pytest on v1/v1.1/v1.2:16 passed. Initial
+  invocation lacked src path and failed collection; corrected invocation passed.
+- Fetch selected JSON/MD/PNG only; one scp stalled and was terminated/retried
+  with keepalives. No training, scoring or catalog application repeated.
+- Changed PLAN/WORKLOG; remaining: image QA, final documentation and sync.
+
 ## 2026-11-03 — complete Gaia check disfavors hard branch distances
 
 - Stable full likelihood finished: wide mean log scores A/B/C=-.431/-.306/-.198;
