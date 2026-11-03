@@ -47,12 +47,18 @@ def risk(t,p,wide,mask,sp,source):
     use=mask&pool;known=t['class_label'][rows];res=p['mu'][:,2]-truth
     n=int(use.sum());m=metrics(p['mu'][use],truth[use]);m.update(retention=n/int(pool.sum()) if pool.any() else None,
         class_counts={str(k):int((use&(known==k)).sum()) for k in (-1,0,1,2)},
+        ambiguous_fraction=float(np.mean(p['ambiguous'][use])) if n else None,
         tail_1_ci95=wilson(int((use&(abs(res)>1)).sum()),n),wide_same_objects=metrics(wide['mu'][use],truth[use]))
     return m
 
 
 def main():
     require_compute();t=load(OLD/'references.npz');sample=load(OUT/'parent_sample.npz');out={}
+    mids=np.full((len(sample['identity']),3),np.nan)
+    for j,name in enumerate('ABC'):
+        ps=load(OUT/f'parent_{name}_evidence.npz');mids[ps['rows'],j]=ps['mu'][:,2]
+    disagreement=np.nanmax(mids,axis=1)-np.nanmin(mids,axis=1)
+    np.savez_compressed(OUT/'parent_disagreement.npz',identity=sample['identity'],evidence_median_mu=mids,disagreement=disagreement)
     for name in 'ABC':
         p=load(OUT/f'{name}_evidence_evaluation.npz');wide=load(OUT/f'{name}_wide_evaluation.npz')
         ps=load(OUT/f'parent_{name}_evidence.npz');groups=states(p);parentgroups=states(ps);entries={}
@@ -66,7 +72,10 @@ def main():
             expanded=np.zeros(len(sample['identity']),bool);expanded[ps['rows']]=parentgroups[group]
             domain=np.zeros(len(expanded),bool);domain[ps['rows']]=True
             entry['parent']=estimate(sample,expanded)
-            entry['parent_given_band']=estimate(sample,expanded,domain);entries[group]=entry
+            entry['parent_given_band']=estimate(sample,expanded,domain)
+            entry['parent_mean_configuration_disagreement']=float(np.average(disagreement[expanded],weights=sample['sample_weight'][expanded])) if expanded.any() else None
+            entry['parent_ambiguous']=estimate(sample,expanded&np.isin(np.arange(len(expanded)),ps['rows'][ps['ambiguous']]))
+            entries[group]=entry
         rows=p['rows'];matrix=np.zeros((3,4),int);known=(t['class_label'][rows]>=0)&(t['split'][rows]==2)
         np.add.at(matrix,(t['class_label'][rows][known],p['weights'][known].argmax(axis=1)),1)
         out[name]=dict(groups=entries,test_confusion=matrix.tolist(),

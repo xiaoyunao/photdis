@@ -83,13 +83,16 @@ def route_scores(t,selection):
         v=selection['A']['variant'] if variant=='selected' else variant
         p=load(OUT/f'A_{v}_evaluation.npz')
         out={k:a.copy() for k,a in p.items() if k not in ('pdf','centers','edges')}
+        mids=np.full((len(rows),3),np.nan);mids[:,0]=p['mu'][:,2]
         for source in ('chosen','Gaia','specdis','spdist'):out['log_'+source]=logscore(t,rows,p,source)
         for code,name in enumerate('BC',1):
             v=selection[name]['variant'] if variant=='selected' else variant
             p=load(OUT/f'{name}_{v}_evaluation.npz');pos=positions[name];use=route[pos]==code
+            mids[pos,code]=p['mu'][:,2]
             for k in out:
                 if not k.startswith('log_'):out[k][pos[use]]=p[k][use]
             for source in ('chosen','Gaia','specdis','spdist'):out['log_'+source][pos[use]]=logscore(t,p['rows'],p,source)[use]
+        out['disagreement']=np.nanmax(mids,axis=1)-np.nanmin(mids,axis=1)
         out['route']=route;np.savez_compressed(OUT/f'routed_{variant}_evaluation.npz',**out)
         result[variant]=extended_scores(t,out)
     write_json(OUT/'routed_scores.json',dict(scores=result,route_counts=np.bincount(route,minlength=3).tolist(),policy='v1 frozen band route and support; no new routing optimization'))

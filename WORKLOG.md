@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-03 — preserve disagreement and multimodal diagnostics
+
+- Routed reference outputs now retain the available A/B/C median-distance
+  disagreement; fixed parent sample retains the same three medians and range.
+- Prediction-state tables include multimodal fractions and weighted parent
+  disagreement, alongside support/label/width diagnostics. No selection changed.
+- Eleven focused tests and syntax checks pass; training continues normally.
+
 ## 2026-11-03 — fixed samples complete; training running
 
 - Sampling60727153 completed:26,000 unique parent objects;7,672 Gaia test
