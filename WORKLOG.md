@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-03 — reproduction difference explained quantitatively
+
+- Read-only audit60727875 completed all24 old-variant comparisons. Wide exact;
+  max CDF4.019e-7, max quantile0.00041025mag, worst P99<5.97e-7mag.
+- Root cause: old partial float32 mixing/CDF accumulation versus new float64
+  mass transfer; sparse CDF sections amplify tiny rounding in a few endpoints.
+- Reproduction acceptance now bounds CDF<=1e-6 AND max quantile<=0.001mag AND
+  P99<=1e-5mag, with wide exact. Science/adoption thresholds unchanged.
+- Gaia checks: no selection underflow;8/16-point PIT differences<8e-10.
+- Next rerun validation/render only; all existing predictions remain untouched.
+
 ## 2026-11-03 — strict oracle reproduction check needs diagnosis
 
 - Checks60727226 finished predictions/risk/parallax, then stopped at

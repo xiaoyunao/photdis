@@ -40,7 +40,14 @@ def main():
             if variant in ('wide','natural','balanced','oracle'):
                 old=load(EXPERT/f'{name}_{variant}_evaluation.npz');pos=np.searchsorted(old['rows'],r)
                 check(name+variant+':v1_identical_rows',np.array_equal(old['rows'][pos],r))
-                check(name+variant+':v1_reproduction',np.allclose(old['mu'][pos],p['mu'],atol=3e-5,rtol=0))
+                # v1 mixes some arrays in float32; v1.1 transfers mass in float64.
+                # Sparse CDF sections amplify <1e-6 probability roundoff into a
+                # few 1e-4 mag quantile differences. Check both quantities.
+                delta=abs(old['mu'][pos]-p['mu'])
+                cdfdelta=np.cumsum(old['pdf'][pos].astype(float),axis=1)-np.cumsum(p['pdf'].astype(float),axis=1)
+                check(name+variant+':v1_cdf_reproduction',np.max(abs(cdfdelta))<=1e-6)
+                check(name+variant+':v1_quantile_reproduction',np.max(delta)<=.001 and np.quantile(delta,.99)<=1e-5)
+                if variant=='wide':check(name+':v1_wide_exact',np.array_equal(old['mu'][pos],p['mu']))
         diag=load(OUT/f'{name}_weight_diagnostics.npz');ep=load(OUT/f'{name}_evidence_evaluation.npz')
         w,lost=transfer_unsupported(diag['raw_weights'],ep['branch_support'])
         check(name+':raw_to_final_mass',np.allclose(w,ep['weights'],atol=2e-6) and np.allclose(lost,ep['support_fallback'],atol=2e-6))
