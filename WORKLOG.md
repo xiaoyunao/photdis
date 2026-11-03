@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-03 — revised figures and provenance acceptance
+
+- Preview60722818 completed27s, exit0; inspected the five changed figures.
+  Common CMD axes/density, distance tails, full retention axes and depth
+  coverage labels now render correctly. Other two figures were unchanged.
+- Final acceptance additionally binds the fixed sample identities/config,
+  selection config, depth inputs and application to their recorded hashes.
+  Python parse/diff checks pass; actual product assertions remain queued.
+- Full application60721565 remains healthy; dependent60721672 will execute
+  updated validation. No model, sample, prediction or selection is rerun.
+- Next: wait for complete application, inspect final parent plots and all
+  actual assertions, publish the report, then synchronize the final milestone.
+
 ## 2026-11-03 — experiment figure review
 
 - Preview60722526 completed23s,0:0. Visually inspected all7 PNGs from actual

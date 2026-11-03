@@ -10,6 +10,11 @@ def main():
         passed=bool(value);checks.append(dict(name=name,passed=passed))
         if not passed:raise AssertionError(name)
     sample=json.load(open(OUT/'sample.json'));lock=json.load(open(OUT/'selection.json'));t=load(OLD/'references.npz')
+    fixed=load(OUT/'sample.npz');config_hash=sha(ROOT/'configs/baseline_v1.json')
+    check('sample:identity_hash',identity_hash(fixed['identity'])==sample['identity_sha256'])
+    check('sample:unique_count',len(fixed['identity'])==sample['n']==len(np.unique(fixed['identity'])))
+    check('sample:config_hash',sample['config_sha256']==config_hash)
+    check('selection:config_hash',lock['config_sha256']==config_hash)
     for name in MODELS:
         check(name+':v0_model_unchanged',sha(OLD/(name+'.joblib'))==sample['v0_models'][name])
         train=json.load(open(OUT/(name+'_train.json')));tier=MODELS[name][1]
@@ -34,6 +39,9 @@ def main():
     check('depth:consistent_shift',np.allclose(depth['truth_mu'],truth_mu(t,'chosen')[depth['source_row']]+depth['shift']))
     check('depth:no_identity_cross',not np.intersect1d(depth['identity'],t['identity'][t['split']==0]).size)
     check('depth:actual_input_hash',sha(OUT/'depth_input.npz')==json.load(open(OUT/'depth_input.json'))['input_sha256'])
+    depth_result=json.load(open(OUT/'depth_result.json'))
+    check('depth:scored_input_hash',depth_result['inputs_sha256']==sha(OUT/'depth_input.npz'))
+    check('depth:frozen_selection_hash',depth_result['selection_sha256']==sha(OUT/'selection.json'))
     dp=load(OUT/'depth_predictions.npz')
     check('depth:accepted_predictions',np.isfinite(dp['v1_mu'][depth['accepted']]).all())
     check('depth:rejected_preserved',np.isnan(dp['v1_mu'][~depth['accepted']]).all())
@@ -41,6 +49,7 @@ def main():
     check('recommended:ordered_calibration',np.all(np.diff(rec['mu_cal'],axis=1)>=0))
     check('recommended:calibration_contains_raw',np.all(rec['mu_cal'][:,[0,1]]<=rec['mu'][:,[0,1]]) and np.all(rec['mu_cal'][:,[3,4]]>=rec['mu'][:,[3,4]]))
     app=json.load(open(OUT/'application.json'));v0app=json.load(open('manifests/baseline_v0_report.json'))['application'];ids=[]
+    check('application:frozen_selection_hash',app['selection_sha256']==sha(OUT/'selection.json'))
     for field in range(14):
         path=OUT/f'catalog_{field:02}.fits';old=OLD/f'catalog_{field:02}.fits'
         check(f'field{field}:v0_catalog_unchanged',sha(old)==v0app[field]['catalog_sha256'])
