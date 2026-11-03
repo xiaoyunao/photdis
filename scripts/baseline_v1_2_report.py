@@ -140,6 +140,12 @@ def main():
         '冻结距离专家与原空间切分，仅新增类别平衡二次分类器和固定森林。工作点由cal确定；',
         'test仍为发展验证。分类分数不是场星类别概率，参考精度不等于母样本纯度。',
         '本轮只处理现有参照及固定概率样本，保留v1部署，没有更新完整目录。','',
+        '## 本轮结论','',
+        '本轮得到的是受限的分类排序能力，而不是可直接发布的巨星距离。类别平衡训练和固定森林',
+        '没有一致胜过既有分数；在固定误入预算下，少数演化星仍承受明显的矮星/过渡类混入。',
+        '主分支距离也没有普遍降低整个选中组的错误，不能用正确分类子集替代完整流程评价。',
+        '在各自相同Gaia样本内，原宽模型的完整对数预测得分高于本轮新混合；主分支硬决策的尾部更差。',
+        '因此保留v1部署和多解信息。本次是现有数据/模型下的界限，不是颜色的普适物理极限。','',
         '## 固定误入预算下能找回多少星族？','',
         '下表是cal矮星误入预算2%、回退后权重的固定工作点。测试误入率不被强制为2%。','',
         '| 配置 | 分类器 | 目标 | test目标/矮星分母 | test召回 | test矮星误入 | 选中矮/演化/过渡/未知 | 已知参照精度 | 母样本保留 |',
@@ -150,6 +156,14 @@ def main():
             for target in (1,2):
                 q=scores[name][v]['working_points'][f'final_class{target}_budget0.02'];z=q['test'];c=z['class_counts']
                 lines.append(f"| {name} | {v} | {target} | {z['n_target']}/{z['n_dwarf']} | {fmt(z['recall'])} | {fmt(z['dwarf_fpr'])} | {c['0']}/{c['1']}/{c['2']}/{c['-1']} | {fmt(z['known_precision'])} | {fmt(q['parent']['fraction'])} |")
+    lines+=['','下面单独比较同训练、同测试对象的W1/W2信息增益，仍用cal2%预算和演化目标：','',
+        '| 同星组 | 模型 | 分类器 | test目标/矮星分母 | 召回 | 矮星误入 | 已知参照精度 |',
+        '|---|---|---|---|---:|---:|---:|']
+    for group,names in [('W1',('A_on_B','B')),('W1W2',('A_on_C','B_on_C','C'))]:
+        for name in names:
+            for v in ('balanced','quadratic','forest'):
+                z=scores[name][v]['working_points']['final_class1_budget0.02']['test']
+                lines.append(f"| {group} | {name} | {v} | {z['n_target']}/{z['n_dwarf']} | {fmt(z['recall'])} | {fmt(z['dwarf_fpr'])} | {fmt(z['known_precision'])} |")
     lines+=['','目标1=演化星，2=过渡类；分类分母包括有任一种有效参照的可靠类别对象，与chosen距离分母不同。',
         '未知类保留，不能算作分类正确。1%/2%/5%、raw/nominal/final、',
         '同训练波段对照及Wilson计数区间见机器清单；完整细分统计在NERSC逐模型scores.json。','',
@@ -197,6 +211,7 @@ def main():
         '![跨信噪比箱概率](../figures/baseline_v1_2/07_snr_bin_probability.png)','',
         '## 核验与复现','',f"实际产物检查{val['n_checks']}项通过。16项数学/回归测试通过；十张图交付前逐张检查。",
         '训练身份与类总权重、原专家哈希、同训练身份、cal阈值、全类别计数、PDF质量及冻结目录均核验。',
+        '旧混合PDF/权重/分位点直接复用冻结产物；缓存重组舍入差异及原重组版本另行保留，没有放宽复现标准。',
         '运行：run_baseline_v1_2_fit.sh → run_baseline_v1_2_checks.sh。大产物在NERSC data/baseline_v1_2。',
         '[预登记协议](baseline_v1_2_protocol.md) · [完整评审](pro_review_dbeac65.md)。']
     (OUT/'result.md').write_text('\n'.join(lines)+'\n');print('Report and ten figures complete',flush=True)

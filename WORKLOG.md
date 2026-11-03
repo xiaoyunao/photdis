@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — complete Gaia check disfavors hard branch distances
+
+- Stable full likelihood finished: wide mean log scores A/B/C=-.431/-.306/-.198;
+  forest mixtures=-.614/-.535/-.249; forest main=-1.456/-1.008/-.632.
+- C high PIT tail: wide5.69%, forest main9.75%. Comparisons are within each
+  configuration, not between different Gaia band-availability samples.
+- Reuse/acceptance60731324 running after stable likelihood; added matched-budget
+  table and concise interpretation to renderer. No new fit or threshold change.
+
+
 ## 2026-11-03 — preserve frozen mixture summaries exactly
 
 -60730632 stopped at A/evidence quantile reproduction after CDF tolerance passed.
