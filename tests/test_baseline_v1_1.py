@@ -43,3 +43,39 @@ def test_original_variants_reproduced_and_diagnostic_labels_isolated():
     for p in b.values():
         assert np.allclose(p['weights'].sum(axis=1),1,atol=2e-6)
         assert np.all(p['weights']>=0) and np.allclose(p['pdf'].sum(axis=1),1)
+
+
+def test_observed_parallax_truncation_and_negative_measurement():
+    from scipy.stats import truncnorm,norm
+    from photdis.baseline_parallax import parallax_check
+    # Effectively point-mass M=0, g=15 gives a true parallax of 0.1 mas.
+    # Observed negative parallax remains a legitimate negative-SNR test object.
+    edges=np.array([-1e-8,1e-8]);g=np.array([15.,15.]);y=np.array([-.1,.3]);s=np.array([.2,.2])
+    lo=np.array([-np.inf,0.]);hi=np.array([0.,5.])
+    p=parallax_check(np.ones((2,1)),edges,g,y,s,lo,hi)
+    for i in range(2):
+        a=lo[i]-.5;b=hi[i]-.5;dist=truncnorm(a,b,loc=.1,scale=.2)
+        assert abs(p['pit'][i]-dist.cdf(y[i]))<1e-9
+        assert abs(p['conditional_mean'][i]-dist.mean())<1e-9
+        assert abs(p['conditional_variance'][i]-dist.var())<1e-9
+        assert abs(p['conditional_density'][i]-dist.pdf(y[i]))<1e-9
+    allp=parallax_check(np.ones((2,1)),edges,g,y,s,np.full(2,-np.inf),np.full(2,np.inf))
+    assert np.allclose(allp['pit'],norm.cdf((y-.1)/s))
+    assert np.allclose(allp['selection_probability'],1.)
+
+
+def test_selection_simulation_respects_negative_snr_and_expected_center():
+    from photdis.baseline_parallax import simulate_selected,parallax_check
+    args=(np.ones((1,1)),np.array([-1e-8,1e-8]),np.array([15.]),np.array([.2]),np.array([-np.inf]),np.array([0.]))
+    sim=simulate_selected(*args,np.random.default_rng(919),repeats=20000)
+    assert np.all(sim<0)
+    mean=parallax_check(args[0],args[1],args[2],np.array([-.1]),*args[3:])['conditional_mean'][0]
+    assert abs(sim.mean()-mean)<.003
+
+
+def test_parent_coverage_uses_field_size_weights():
+    from baseline_v1_1_risk import estimate
+    t=dict(field=np.array([0,0,1,1]),sample_weight=np.array([50.,50.,5.,5.]))
+    result=estimate(t,np.array([1,1,0,0],bool))
+    assert np.isclose(result['fraction'],100/110)
+    assert result['se']==0  # both SRS strata are constant

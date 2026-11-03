@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-03 — bounded score and validation pipeline
+
+- Submitted cross-fit job60727000; latest observed state PENDING/Priority.
+- Added cal-only score/adoption and oracle decomposition, uniform parent and
+  stratified Gaia samples, prediction-state risk with weighted coverage SE.
+- Added observed-parallax convolution, explicit SNR conditioning and truncated
+  mixture simulations, preserving negative measurements; fixed design recorded.
+- Ten focused tests pass, including analytic truncated-normal moments, negative
+  simulated measurements, and field-weighted coverage. Python parse passes.
+- New scientific scores are not yet available. Next run bounded sampling and
+  dependent evaluation, validate products, and render the final report.
+
 ## 2026-11-03 — cross-fit execution prepared
 
 - Added v1.1 common/fit runners and allocated full-node launcher. Each of six
