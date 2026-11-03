@@ -115,11 +115,12 @@ def main():
         for v,e in variants.items():
             compact[name][v]=dict(all_distances=e['all_distances'],test_by_class=e['test_by_class'],cal_single_rule=e['cal_single_rule'],
                 curves={k:{s:{z:c[z] for z in ('n','auc','average_precision') if z in c} for s,c in item.items()} for k,item in e['curves'].items()},
-                working_points={k:{z:c[z] for z in ('threshold','budget','target','score_state','cal','test','distances','parent') if z in c} for k,c in e['working_points'].items()},
+                working_points={k:{**{z:c[z] for z in ('threshold','budget','target','score_state','cal','test','parent') if z in c},'distances':{'chosen':c['distances']['chosen']}} for k,c in e['working_points'].items()},
                 single_selected=e['single_grid'].get(e['cal_single_rule']),
                 strata_at_2pct={k:c['strata'] for k,c in e['working_points'].items() if k=='final_class1_budget0.02' and v in ('quadratic','forest')})
     report=dict(models=compact,parallax=par,validation={k:val[k] for k in ('n_checks','all_passed')},fit={n:json.load(open(OUT/f'{n}_fit.json')) for n in MODELS})
     write_json(OUT/'report.json',report)
+    write_json(OUT/'source_workpoints.json',{n:{v:{k:q['distances'] for k,q in e['working_points'].items() if k.startswith('final')} for v,e in variants.items()} for n,variants in scores.items()})
     lines=['# baseline v1.2：颜色可分性与距离决策','',
         '冻结距离专家与原空间切分，仅新增类别平衡二次分类器和固定森林。工作点由cal确定；',
         'test仍为发展验证。分类分数不是场星类别概率，参考精度不等于母样本纯度。',

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-03 — v1.2 training/cache complete, scoring running
+
+-60730324 finished all six configurations; A reference/parent/Gaia508s total.
+-60730632 RUNNING on allocated CPU; fixed-workpoint scores pending.
+- Fifteen focused tests pass after nominal-score control. Split compact report
+  and source-specific workpoints for reviewable repository-size artifacts.
+- One SSH status connection stalled; bounded replacement succeeded; no auth issue.
+- Next inspect scores, actual acceptance, then figures and final interpretation.
+
+
 ## 2026-11-03 — isolate classification from gate smoothing
 
 - Added nominal-color old-score ranking control before scoring; old natural/

@@ -10,7 +10,7 @@ Source:docs/pro_review_dbeac65.md; protocol:docs/baseline_v1_2_protocol.md.
 - [ ] Actual checks, figures/report, checkpoint and three-endpoint delivery.
 
 Preserve v1 deployment and all historical artifacts; no full catalog or new search.
-Training/cache60730324 RUNNING; dependent checks60730632 submitted. Fifteen tests
+Training/cache60730324 finished; checks60730632 RUNNING. Fifteen focused tests
 pass; no actual scientific score or acceptance claimed yet. Inspect jobs on recovery.
 
 
