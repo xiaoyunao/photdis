@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — isolate classification from gate smoothing
+
+- Added nominal-color old-score ranking control before scoring; old natural/
+  balanced gates marginalize per draw while new fixed classifiers use observed
+  colors. No new fit, selection budget or distance mixture changed.
+- ROC/PR now compares common nominal inputs; raw/final workpoints remain.
+- Syntax passes; training60730324 continues, checks60730632 awaits success.
+
+
 ## 2026-11-03 — allocated v1.2 calculation running
 
 -60730324 is RUNNING on allocated CPU node; dependent checks60730632 queued.

@@ -27,7 +27,7 @@ def main():
             for row,target in enumerate((1,2)):
                 ax=axes[row,col]
                 for v in VARS:
-                    c=scores[name][v]['curves'][f'final_class{target}']['test']
+                    c=scores[name][v]['curves'][f'nominal_class{target}']['test']
                     if mode=='roc':ax.plot(c['fpr'],c['tpr'],color=COLORS[v],label=LABELS[v])
                     else:ax.plot(c['recall'],c['precision'],color=COLORS[v],label=LABELS[v])
                 ax.set(title=f'{name}: '+('evolved' if target==1 else 'transition'),xlim=(0,1),ylim=(0,1),
@@ -136,6 +136,7 @@ def main():
                 lines.append(f"| {name} | {v} | {target} | {fmt(z['recall'])} | {fmt(z['dwarf_fpr'])} | {c['0']}/{c['1']}/{c['2']}/{c['-1']} | {fmt(z['known_precision'])} | {fmt(q['parent']['fraction'])} |")
     lines+=['','目标1=演化星，2=过渡类；未知类保留，不能算作分类正确。1%/2%/5%、raw/final、',
         '同训练波段对照及Wilson计数区间见机器清单；完整细分统计在NERSC逐模型scores.json。','',
+        'ROC/PR采用同一观测颜色下、回退前的nominal分数；raw扰动平均与final回退权重工作点另存。','',
         '![同训练ROC](../figures/baseline_v1_2/01_matched_roc.png)','',
         '![同训练PR](../figures/baseline_v1_2/02_matched_pr.png)','',
         '![固定工作点](../figures/baseline_v1_2/03_fixed_budget_recall.png)','',

@@ -80,3 +80,11 @@ def fraction_interval(k,n):
     p=k/n;z=1.959963984540054;den=1+z*z/n
     center=(p+z*z/(2*n))/den;half=z*np.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
     return [max(0.,center-half),min(1.,center+half)]
+
+
+def nominal_old_weights(model,mags,variant):
+    """Unmarginalized old scores for a common observed-color ranking control."""
+    p=model.gate.predict_proba(features(mags,model.dim))
+    if variant=='balanced':p=p/np.maximum(model.frequencies,1e-10)
+    p=p/p.sum(axis=1)[:,None]
+    return np.column_stack([p,np.zeros(len(p))])

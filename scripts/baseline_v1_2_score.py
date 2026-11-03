@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cal-fixed ranking workpoints and distance-decision risk, with all contaminants."""
 from baseline_v1_2_run import *
-from photdis.baseline_v1_2 import conservative_threshold,single_mask,fraction_interval
+from photdis.baseline_v1_2 import conservative_threshold,single_mask,fraction_interval,nominal_old_weights
 from baseline_v1_1_risk import estimate
 from sklearn.metrics import roc_curve,precision_recall_curve,roc_auc_score,average_precision_score
 
@@ -58,15 +58,19 @@ def curves(labels,scores,target,mask):
 
 def score_model(name):
     require_compute();t=load(OLD/'references.npz');sample=load(PREV/'parent_sample.npz')
-    wide=load(PREV/f'{name}_wide_evaluation.npz');results={}
+    wide=load(PREV/f'{name}_wide_evaluation.npz');results={};model=joblib.load(EXPERT/f'{name}.joblib')
     for variant in VARS:
         p=load(OUT/f'reference_{name}_{variant}.npz');rows=p['rows'];assert np.array_equal(rows,wide['rows'])
         labels=t['class_label'][rows];cal=t['split'][rows]==1;test=t['split'][rows]==2
         parent=load(OUT/f'parent_{name}_{variant}.npz') if name in 'ABC' else None
         entry=dict(working_points={},curves={},single_grid={},all_distances=distances(t,rows,p,wide,test))
-        for state in ('raw','final'):
-            weights=p['raw_weights' if state=='raw' else 'weights']
-            parentw=parent['raw_weights' if state=='raw' else 'weights'] if parent is not None else None
+        for state in ('raw','nominal','final'):
+            keyw='weights' if state=='final' else 'raw_weights'
+            weights=p[keyw]
+            parentw=parent[keyw] if parent is not None else None
+            if state=='nominal' and variant in ('natural','balanced'):
+                weights=nominal_old_weights(model,arrays(t,rows)[0],variant)
+                if parent is not None:parentw=nominal_old_weights(model,arrays(sample,parent['rows'])[0],variant)
             for target in (1,2):
                 score=weights[:,target];key=f'{state}_class{target}'
                 entry['curves'][key]={tag:curves(labels,score,target,mask) for tag,mask in [('cal',cal),('test',test)]}

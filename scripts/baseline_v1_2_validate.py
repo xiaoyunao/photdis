@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Acceptance on actual saved products, not synthetic success declarations."""
 from baseline_v1_2_run import *
-from photdis.baseline_v1_2 import conservative_threshold,single_mask
+from photdis.baseline_v1_2 import conservative_threshold,single_mask,nominal_old_weights
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
         check(name+':classifiers_same_weights',fit['quadratic']['weight_sha256']==fit['forest']['weight_sha256'])
         check(name+':quadratic_converged',max(fit['quadratic']['iterations'])<2000)
         check(name+':frozen_expert',fit['expert_sha256']==sha(EXPERT/f'{name}.joblib'))
-        scores=json.load(open(OUT/f'{name}_scores.json'))
+        scores=json.load(open(OUT/f'{name}_scores.json'));model=joblib.load(EXPERT/f'{name}.joblib')
         for kind in (('reference','parent','parallax') if name in 'ABC' else ('reference',)):
             table=t if kind=='reference' else load(PREV/f'{kind}_sample.npz')
             cache=load(OUT/f'{kind}_{name}_cache.npz');rows=cache['rows']
@@ -45,8 +45,11 @@ def main():
                     check(tag+':frozen_cdf',diff<=1e-6);check(tag+':frozen_quantiles',qdiff<=.001)
                 if kind=='reference':
                     label=t['class_label'][rows];cal=t['split'][rows]==1
+                    nominal=nominal_old_weights(model,arrays(t,rows)[0],variant) if variant in ('natural','balanced') else p['raw_weights']
                     for key,v in scores[variant]['working_points'].items():
-                        raw=p['raw_weights' if v['score_state']=='raw' else 'weights'][:,v['target']]
+                        raw=p['weights' if v['score_state']=='final' else 'raw_weights'][:,v['target']]
+                        if v['score_state']=='nominal' and variant in ('natural','balanced'):
+                            raw=nominal[:,v['target']]
                         threshold=conservative_threshold(raw[cal&(label==0)],v['budget'])
                         actual=v['threshold'] if v['threshold'] is not None else np.inf
                         check(name+variant+key+':threshold_cal_only',threshold==actual)

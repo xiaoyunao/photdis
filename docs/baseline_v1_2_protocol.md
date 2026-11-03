@@ -28,6 +28,11 @@ mixtures retain their per-draw weights and original missing-label fallback.
 Raw natural/balanced scores average the existing per-draw class scores before
 missing-label/support fallback; report both raw scores and final four weights.
 The fourth component is a broad distribution, not a fourth stellar population.
+Also retain nominal observed-color old scores as a common-input ranking control:
+natural/balanced use per-draw gates historically, while the two new classifiers
+condition on observed colors. This control prevents attributing a smoothing change
+to training balance. It adds no fitted model or tuned decision; original mixtures
+and raw/final working points remain unchanged.
 
 For evolved and transition separately, cal sets score>=threshold working points
 with dwarf false-positive budgets1%,2%,5%. Choose the lowest threshold satisfying
