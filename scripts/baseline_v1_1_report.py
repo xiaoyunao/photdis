@@ -50,7 +50,7 @@ def main():
         ax.set(xlim=(0,1),ylim=(0,1),xlabel='Estimated fraction of optical parent',ylabel='All-reference severe-error rate',title=name+'; fixed prediction cuts');ax.legend(fontsize=8)
     save(fig,'03_risk_retention')
 
-    fig,axes=plt.subplots(2,3,figsize=(14,8),sharex=True,sharey=True)
+    fig,axes=plt.subplots(2,3,figsize=(14,8),sharex=True,sharey=True,layout='constrained')
     for j,source in enumerate(('Gaia','specdis','spdist')):
         for i,v in enumerate(('wide','evidence')):
             p=load(OUT/f'routed_{v}_evaluation.npz');rows=p['rows'];truth=truth_mu(t,source)[rows]
@@ -58,18 +58,18 @@ def main():
             outside=np.sum((x< -2)|(x>3)|(y< -2)|(y>3))
             ax=axes[i,j];im=ax.hexbin(x,y,gridsize=65,extent=(-2,3,-2,3),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
             ax.plot([-2,3],[-2,3],'r--',lw=1);ax.set(xlim=(-2,3),ylim=(-2,3),xlabel='log10 reference distance [kpc]',ylabel='log10 photometric distance [kpc]',title=f'{source} / {v}, N={use.sum()}, outside={outside}')
-    fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.7);fig.subplots_adjust(right=.85,wspace=.25,hspace=.35)
+    fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.7)
     fig.savefig(FIG/'04_distance_density.png',dpi=150);plt.close(fig)
 
     p=load(OUT/'routed_wide_evaluation.npz');new=load(OUT/'routed_evidence_evaluation.npz');rows=p['rows'];truth=truth_mu(t,'chosen')[rows]
     use=(t['split'][rows]==2)&np.isfinite(truth);color=t['g0'][rows][use]-t['r0'][rows][use]
     mg=[t['g0'][rows][use]-a for a in (truth[use],p['mu'][use,2],new['mu'][use,2])]
-    fig,axes=plt.subplots(1,3,figsize=(14,4),sharex=True,sharey=True)
+    fig,axes=plt.subplots(1,3,figsize=(14,4),sharex=True,sharey=True,layout='constrained')
     for ax,y,title in zip(axes,mg,('Reference','Wide QRF','Evidence gate')):
         outside=np.sum((color<-.5)|(color>2.5)|(y< -5)|(y>15))
         im=ax.hexbin(color,y,gridsize=65,extent=(-.5,2.5,-5,15),mincnt=1,norm=LogNorm(vmin=1,vmax=1000),cmap='viridis')
         ax.set(xlim=(-.5,2.5),ylim=(15,-5),xlabel='(g-r)0',ylabel='Mg [mag]',title=f'{title}; N={use.sum()}, outside={outside}')
-    fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.75);fig.subplots_adjust(right=.86,wspace=.25)
+    fig.colorbar(im,ax=axes.ravel().tolist(),label='Sources per bin',shrink=.75)
     fig.savefig(FIG/'05_same_source_cmd.png',dpi=150);plt.close(fig)
 
     fig,axes=plt.subplots(1,3,figsize=(14,4))

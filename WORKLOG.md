@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-03 — cal rejects all six new gates
+
+- Checks60727226 running on debug allocation. All six cal decisions retain wide:
+  macro-tail, evolved coverage and log-density guards fail; dwarf95% widths
+  also exceed registered relative guard. No post-test tuning or full rerun.
+- Preserve v1 deployment. Fixed parent/Gaia inference, actual hash acceptance
+  and eight-figure report remain running. Shared-colorbar plots use constrained
+  layout to avoid collisions; renderer parses successfully.
+
 ## 2026-11-03 — completed training; C confirms gate failure
 
 - Accounting confirms60727000 COMPLETED0:0 in12m34s. All six model comparisons

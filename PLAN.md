@@ -4,19 +4,21 @@
 
 Source:docs/pro_review_97c2775.md; protocol:docs/baseline_v1_1_protocol.md.
 - [x] Recover97c2775, archive complete review and establish detailed Goal.
-- [ ] Fixed same-fallback oracle decomposition on existing references.
-- [ ] Training-only spatial cross-fit evidence and one jointly supervised gate.
-- [ ] Cal-only adoption; same-source/same-training development scorecards.
+- [x] Fixed same-fallback oracle decomposition on existing references.
+- [x] Training-only spatial cross-fit evidence and one jointly supervised gate.
+- [x] Cal-only adoption; same-source/same-training development scorecards.
+  All six gates fail; retain wide v1. Full fallback changes C evolved oracle
+  tail13.91% to15.04%, while actual new gate98.87% exceeds wide80.08%.
 - [ ] Prediction-state risk/retention and observed-parallax validation.
 - [ ] Actual checks, figures/report, checkpoint and three-endpoint sync.
 
 Preserve v0/v1 catalogs and Sobol128; use data/baseline_v1_1. No full catalog
 application in this bounded experiment. No subagents or model-family search.
 
-Live execution: training60727000 RUNNING; sampling60727153 completed
-(26,000 parent /7,672 Gaia incl1,800 negative); checks60727226 depends on both.
+Live execution: training60727000 COMPLETED0:0; sampling60727153 completed
+(26,000 parent /7,672 Gaia incl1,800 negative); checks60727226 RUNNING (debug30min).
 Eleven focused tests pass. Do not resubmit training on recovery; inspect squeue
-and logs first. Actual adoption, validation and figures are still pending.
+and logs first. Cal decisions are complete; parent/parallax, actual validation and figures remain pending.
 
 
 ## Completed objective: baseline v1 branch, numerical and depth comparison
