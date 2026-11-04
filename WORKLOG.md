@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-04 — enable monitoring only after measured allocated progress
+
+-60778259 confirmed RUNNING nid004181 at5:08; cumulative read5,257,554,509bytes,
+  ~3.8GB RSS, freeze.json present. No runtime errors observed; still MWS input.
+- Two actual sstat samples45.25s apart rose3,874,712,141→4,348,389,965bytes:
+  input-stage throughput~10.47MB/s. Three reference FITS total16.16GB;1600 native
+  south sweeps remain. This establishes substantial ongoing work, not a precise ETA.
+- Only now re-enabled photdis-v1-4 heartbeat ACTIVE every30minutes. Prompt includes
+  current job/node and measured evidence, NERSC date handling and30min debug limit.
+- If debug ends TIMEOUT, first audit logs/checkpoints and exclude active duplicates,
+  then resume on regular4h allocation if no program error. Do not repeat original
+  cancelled60778125 or treat raw extraction as final scientific delivery.
+- Code c7b009c verified identical across three endpoints;20 focused tests passed.
+
 ## 2026-11-04 — actual allocated startup and optical model interface
 
 - Confirmed regular job60778125 submitted, but PENDING(Resources) with no start

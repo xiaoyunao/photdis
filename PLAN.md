@@ -10,13 +10,14 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
 - [x] Syntax/shell checks and13 focused tests pass.
 - [x] Code48574dc synced and verified on all three endpoints;13 tests pass.
-- [x] Premature heartbeat photdis-v1-4 PAUSED at user correction.
-- [ ] Enable30-minute checks ONLY after a confirmed RUNNING job and observed
-  progress/timing demonstrate genuinely slow remaining work. Unknown submission
-  or queue waiting does not satisfy this condition.
+- [x] Premature heartbeat was PAUSED; re-enabled ONLY after60778259 RUNNING
+  and observed45.25s/473.68MB input throughput (~10.47MB/s), with1600 sweeps
+  still to scan. Unknown submission/queue waiting never satisfies this condition.
 - [x] Earlier uncertain attempt absent from queue/accounting/logs. Confirmed
   regular60778125 was pending, cancelled; debug60778259 now RUNNING on nid004181.
-- [ ] Finish startup/speed verification; heartbeat remains PAUSED pending evidence.
+- [x] Startup/rate verified; heartbeat photdis-v1-4 ACTIVE every30minutes.
+  Debug60778259 has30min limit: inspect TIMEOUT/checkpoints before resuming on
+  regular4h allocation; never submit while a duplicate job is active.
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [ ] Finish allocated extraction (no raw/scientific result available yet).
 - [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.

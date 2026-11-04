@@ -1,19 +1,19 @@
 {
   "version": "baseline_v1_4",
-  "code_commit": "48574dcaec6e8f413b3a7c524f2edfa68d1cddb4",
+  "code_commit": "c7b009c19d40234991e8c220104de05649c84e12",
   "code_sync": "local_origin_nersc_verified_equal",
-  "submission_status": "RUNNING_startup_benchmark",
+  "submission_status": "RUNNING_verified_slow_input_stage",
   "job_id": "60778259",
   "job_name": "baseline_v1_4_extract",
   "submission_attempts": 3,
   "remote_command": "cd /pscratch/sd/y/yunao/photdis_pipeline && sbatch --parsable scripts/run_baseline_v1_4_extract.sh",
   "transport_stopped": "Only local unresponsive SSH PID32258 terminated; no remote job cancelled. Must query queue/accounting/logs before resubmission.",
   "heartbeat_id": "photdis-v1-4",
-  "heartbeat_status": "PAUSED",
+  "heartbeat_status": "ACTIVE",
   "interval_minutes": 30,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
   "updated_utc": "2026-11-04T03:03:13.259299+00:00",
-  "next": "Measure actual processing speed and inspect first outputs before deciding whether to enable30-minute checks.",
+  "next": "30-minute follow-up now justified by observed RUNNING/I/O progress and workload. On debug TIMEOUT inspect logs/checkpoints, confirm no active duplicate, then resume with regular4h script if no program error.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60778125",
@@ -22,6 +22,17 @@
   },
   "active_command": "sbatch --parsable -q debug -t 00:30:00 scripts/run_baseline_v1_4_extract.sh",
   "compute_node": "nid004181",
-  "observed_elapsed": "00:01:38",
-  "observed_disk_read_bytes": 2029234765
+  "observed_elapsed": "00:05:08",
+  "observed_disk_read_bytes": 5257554509,
+  "startup_code_commit": "843eead1fa7418c751af3377df279e7276316cef",
+  "measured_rate": {
+    "start_epoch": 1793763053.486624,
+    "end_epoch": 1793763098.7352786,
+    "start_bytes": 3874712141,
+    "end_bytes": 4348389965,
+    "bytes_per_second": 10468329.45964685,
+    "scope": "initial MWS input reading; not a whole-pipeline ETA"
+  },
+  "reference_input_bytes": 16156310400,
+  "south_sweep_files": 1600
 }
