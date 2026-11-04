@@ -17,6 +17,15 @@
   implements historical Gaia/native/target identity exclusion, VAC-only provenance,
   independent labels and fixed26000 weighted i/WISE coverage. Zero-ID candidate
   admission includes qualified distance evidence independently of class evidence.
+- Native job remained PENDING(Resources); updated the same pending60798395 to
+  debug/30min (scontrol success), no cancellation or duplicate submission.
+- Fixed experiment runner now handles frozen A/B/C first, old+new training with
+  same evaluation IDs, then matched grz/griz classifications and distance PDFs.
+  Sobol128 retained; full signed Gaia PIT/log-density/SNR probabilities and
+  per-source distance coverage/tails computed. Atomic distance/class chunks.
+-23 focused tests pass, including end-to-end synthetic assembly, independent
+  class qualification, historical exclusion, cal-only threshold and full Gaia
+  probability checks. No scientific performance claims before real execution.
 
 ## 2026-11-04 — raw sweep extraction completed
 

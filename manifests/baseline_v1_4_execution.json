@@ -96,7 +96,10 @@
   "native_job": {
     "id": "60798395",
     "state": "PENDING",
-    "reason": "Resources",
-    "command": "sbatch --parsable scripts/run_baseline_v1_4_native.sh"
+    "reason": "None",
+    "command": "sbatch --parsable scripts/run_baseline_v1_4_native.sh",
+    "qos": "debug",
+    "timelimit": "00:30:00",
+    "note": "Same pending job updated from regular4h to debug30min; no duplicate submission"
   }
 }
