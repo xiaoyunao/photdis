@@ -70,6 +70,9 @@ def main():
     for name in ['native_photometry','zero_match']:
         assert sha(OUT/(name+'.npz'))==json.loads((OUT/(name+'.json')).read_text())['sha256']
     assert sha(OUT/'zero_photometry.npz')==json.loads((OUT/'zero_match.json').read_text())['photometry_sha256']
+    zero_raw=json.loads((OUT/'zero_candidates_raw.json').read_text())
+    assert sha(OUT/'zero_candidates_raw.npz')==zero_raw['sha256']
+    assert sha(OUT/'zero_photometry.npz')==zero_raw['candidate_sha256']
     native=load(OUT/'native_photometry.npz');extra=load(OUT/'zero_photometry.npz');zm=load(OUT/'zero_match.npz')
     new=~np.isin(extra['ls_id'],native['ls_id']);native={k:np.concatenate([v,extra[k][new]]) for k,v in native.items()}
     parent=parent_coverage(native)
@@ -208,6 +211,8 @@ def main():
         new_split_counts={str(k):int((t['split']==k).sum()) for k in range(4)},
         coverage={str(k):audit_cells(t,t['split']==k) for k in range(4)},checks=checks,
         matching=json.loads((OUT/'zero_match.json').read_text()),
+        positional_raw=zero_raw,
+        positional_coverage_audit=json.loads((OUT/'zero_audit.json').read_text()),
         limitation='Reference-selected sky, not representative population fractions. Unknown epoch matches flagged. No model scores yet;22–25 validation limited to actual evidence.',
         class_training='Independent of distance, FeH and precise optical errors; photometric quality still required',
         historical_reference_sha256=sha(ROOT/'data/baseline_v0/references.npz'))
