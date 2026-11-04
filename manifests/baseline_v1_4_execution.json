@@ -13,7 +13,7 @@
   "interval_minutes": null,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
   "updated_utc": "2026-11-04T12:05:25.758386+00:00",
-  "next": "Complete running60798530 native recovery/assembly; inspect actual eligibility, then execute frozen scores, fixed new-data and matched grz/griz experiments. No scheduled monitoring.",
+  "next": "Preparation60798530 active; frozen evaluation60798619 depends on its success. Inspect assembled qualifications, then fixed expanded/matched experiments after frozen scores. No periodic automation.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60779401",
@@ -110,5 +110,13 @@
     "node": "nid004458",
     "qos": "debug",
     "timelimit": "00:30:00"
+  },
+  "frozen_evaluation_job": {
+    "id": "60798619",
+    "submission": "accepted",
+    "dependency": "afterok:60798530",
+    "qos": "debug",
+    "timelimit": "00:30:00",
+    "command": "scripts/run_baseline_v1_4_experiments.sh frozen"
   }
 }

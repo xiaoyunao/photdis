@@ -110,12 +110,21 @@ def distance_chunk(task):
     for k in ['full_pit','full_log_density','full_mean','conditional_pit','observed_bin_probability','bin_probability']:
         result[k]=np.full((len(rows),5) if k=='bin_probability' else len(rows),np.nan)
         if good.any():result[k][good]=values[k]
-    if number==0 and good.any():
+    result['quadrature_check_difference']=np.full(len(rows),np.nan)
+    result['quadrature_log_difference']=np.full(len(rows),np.nan)
+    if good.any():
         # Check independent higher-order quadrature on a bounded first batch.
-        r=rows[good][:32];pp=pdf[good][:32]
+        gidx=np.flatnonzero(good)
+        # Strong observed SNR is the demanding quadrature case; inspect every
+        # chunk rather than accidentally skipping all checks if chunk0 has no Gaia.
+        pick=gidx[np.argsort(_T['p_corr'][rows[gidx]]/_T['gaia_parallax_error'][rows[gidx]])[-8:]]
+        r=rows[pick];pp=pdf[pick]
         hi=parallax_check(pp,_MODEL.edges,_T['g0'][r],_T['p_corr'][r],_T['gaia_parallax_error'][r],np.full(len(r),-np.inf),np.full(len(r),np.inf),order=16)
         result['quadrature_check_difference']=np.full(len(rows),np.nan)
-        result['quadrature_check_difference'][np.flatnonzero(good)[:len(r)]]=abs(hi['pit']-values['full_pit'][:len(r)])
+        result['quadrature_check_difference'][pick]=abs(hi['pit']-result['full_pit'][pick])
+        highlog=full_parallax_log_density(pp,_MODEL.edges,_T['g0'][r],_T['p_corr'][r],_T['gaia_parallax_error'][r],order=16)
+        result['quadrature_log_difference']=np.full(len(rows),np.nan)
+        result['quadrature_log_difference'][pick]=abs(highlog-result['full_log_density'][pick])
     atomic_npz(path,**result);write_json(marker,dict(sha256=sha(path),n=len(rows)))
     return path
 
@@ -167,6 +176,10 @@ def evaluate_distance(name,model,t,rows,mode,reference_hash):
         gaia_log_density_finite=bool(np.isfinite(p['full_log_density'][ga]).all()),
         gaia_bin_mass=bool(np.allclose(p['bin_probability'][ga].sum(axis=1),1,atol=2e-5)),
         gaia_negative_retained=int((ga&(t['p_corr'][rows]<0)).sum()))
+    for column in ['quadrature_check_difference','quadrature_log_difference']:
+        finite=p[column][np.isfinite(p[column])]
+        checks[column+'_n']=len(finite)
+        checks[column+'_max']=float(finite.max()) if len(finite) else None
     assert checks['mu_finite'] and checks['mu_ordered'] and checks['gaia_log_density_finite'] and checks['gaia_bin_mass']
     atomic_npz(dest/'evaluation.npz',**p)
     report=dict(n=len(rows),checks=checks,groups=score_distance(subset(t,rows),p),fingerprint=fingerprint,

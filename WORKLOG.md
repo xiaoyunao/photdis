@@ -17,6 +17,10 @@
   in preceding minute.9009 useful zero-ID identities,8681 known source epochs.
   Added hash checks to classifier chunks/final score files before production;
   focused classifier/negative-Gaia/distance resume tests pass.
+- Frozen evaluation60798619 accepted, verified PENDING(Dependency), afterok60798530.
+  No new fits may start until frozen_complete.json. Added higher-order Gaia
+  PIT/log-density checks on strong-SNR objects in every chunk, avoiding an empty
+  Gaia first-chunk blind spot;3 focused experiment tests pass.
 
 ## 2026-11-04 — continue native identity assembly after extraction
 
