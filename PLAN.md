@@ -25,7 +25,9 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [x] Fixed balanced optical classifier uses the same explicit bands/noise and
   prior class-weight recipe;16 focused tests pass. No production fit yet.
 - [ ] Finish1600-sweep extraction (119 markers at13:35 Beijing; no science scores).
-- [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
+- [x] Independent source-evidence audit implementation and16 focused tests ready;
+  class/Gaia/VAC eligibility remains separate from photometric admission.
+- [ ] Run allocated source audit; then finish native coverage/identity assembly.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
 - [ ] One fixed-algorithm new-data comparison, same evaluation identities.

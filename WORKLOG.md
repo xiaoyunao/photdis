@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-04 — prepare independent evidence audit while extraction runs
+
+-14:05 Beijing:60779401 RUNNING58:37 on nid005050;220/1600 sweep markers,
+ 99 completed in preceding30minutes; latest marker1.6s old. No error detected.
+- Added source_evidence_v1_4.py adapters for unchanged RVS class, Gaia boolean
+  decoding and exact positive unique VAC pairs/frozen distance quality recipes.
+  Unknown class is not negative; missing FeH/distance does not erase class evidence.
+- Added allocated baseline_v1_4_source_audit.py: input hashes, repeated-identity
+  class conflicts, target/Gaia conflicts, historical identity overlap, separate
+  Gaia anchor/weak/negative and SpecDis/SPDist eligibility. Reads frozen inputs
+  and writes a new sidecar, without modifying running extraction or sky split.
+- Validation: syntax/import and16 focused source/reference/Gaia/class tests pass.
+  Next run this source-only audit in the existing allocation; no production fits
+  until complete references and native photometric admission have been audited.
+
 ## 2026-11-04 — confirm resumed extraction and prepare matched classifier
 
 - At13:35 Beijing,60779401 RUNNING28:28 on nid005050;119/1600 sweep markers,
