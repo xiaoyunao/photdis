@@ -9,6 +9,7 @@ from scipy.special import ndtri
 from scipy.stats import qmc
 from .baseline_v0 import HistogramQRF, summaries
 from .baseline_v1 import quantiles_interpolated, shift_pdf
+from .baseline_v1_2 import DirectClassifier, balanced_weights
 from .reference_v1_4 import optical_features, FEATURE_VERSION, FEATURE_BANDS
 
 
@@ -30,6 +31,63 @@ def optical_noise(ids, draw, replicate=0):
         x ^= x >> 31
     u = ((x >> 32).astype(np.uint32) ^ optical_sobol_bits()[draw]).astype(float)
     return ndtri((u + .5) / 2**32)
+
+
+class OpticalClassifier:
+    """Fixed balanced forest with the same four-band contract as OpticalQRF."""
+    def __init__(self, variant, seed=20261103, **forest):
+        if variant not in ('grz', 'griz'):
+            raise ValueError(variant)
+        self.variant = variant
+        self.feature_version = FEATURE_VERSION
+        self.band_order = FEATURE_BANDS
+        self.color_definitions = (('g-r', 'r-z') if variant == 'grz'
+                                  else ('g-r', 'r-i', 'i-z'))
+        self.class_order = (0, 1, 2)
+        parameters = dict(n_estimators=256, min_samples_leaf=32,
+                          max_depth=20, max_features=1.0)
+        parameters.update(forest)
+        self.classifier = DirectClassifier(len(self.color_definitions), 'forest',
+                                           dict(seed=seed, forest=parameters))
+
+    def _selected(self, mags):
+        mags = np.asarray(mags, float)
+        optical_features(mags, self.variant)
+        if not np.isfinite(mags).all():
+            raise ValueError('Matched optical classification requires all four measured bands')
+        return mags[:, [0, 1, 3]] if self.variant == 'grz' else mags
+
+    def fit(self, mags, labels, weight=None):
+        selected = self._selected(mags)
+        labels = np.asarray(labels)
+        if labels.shape != (len(selected),) or not np.isin(labels, self.class_order).all():
+            raise ValueError('Aligned reliable three-class labels required; unknown is not negative')
+        labels = labels.astype(int)
+        balanced = balanced_weights(labels)  # Also requires all three classes.
+        weight = balanced if weight is None else np.asarray(weight, float)
+        if weight.shape != labels.shape or not np.isfinite(weight).all() or (weight <= 0).any():
+            raise ValueError('Aligned positive finite training weights required')
+        self.training_class_counts = np.bincount(labels, minlength=3)
+        self.classifier.fit(selected, labels, weight)
+        return self
+
+    def predict_proba(self, mags):
+        return self.classifier.predict_proba(self._selected(mags))
+
+    def predict_marginalized(self, mags, errors, ids, draws=128, replicate=0):
+        mags, errors, ids = np.asarray(mags, float), np.asarray(errors, float), np.asarray(ids)
+        self._selected(mags)
+        if errors.shape != mags.shape or ids.shape != (len(mags),):
+            raise ValueError('Expected aligned four-band errors and identities')
+        if not np.isfinite(errors).all() or (errors < 0).any():
+            raise ValueError('Invalid measured magnitude errors')
+        if draws not in (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024):
+            raise ValueError('Sobol draw count must be a power of two up to1024')
+        probabilities = np.zeros((len(mags), 3), float)
+        for draw in range(draws):
+            delta = optical_noise(ids, draw, replicate) * errors
+            probabilities += self.predict_proba(mags + delta)
+        return probabilities / draws
 
 
 class OpticalQRF(HistogramQRF):

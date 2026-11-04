@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-04 — confirm resumed extraction and prepare matched classifier
+
+- At13:35 Beijing,60779401 RUNNING28:28 on nid005050;119/1600 sweep markers,
+  latest marker13s before observation. Queue contains one extraction job, no errors
+  in log; source/VAC hashes passed before scanning. Existing sweeps are hash-checked
+  individually when encountered by resumed workers.
+- Recovery started from52 markers and added67; no submission or queue changes.
+- Added OpticalClassifier in optical_v1_4.py, reusing unchanged DirectClassifier
+  forest and balanced_weights; explicit[G,R,I,Z], class order0/1/2, optional shared
+ 4D Sobol marginalization, rejects unknown/missing classes and invalid weights.
+- Validation: py_compile then16 focused optical_v1_4/baseline_v1_2/reference_v1_4
+  tests passed. New checks compare the frozen forest recipe, serialization/order
+  invariance, probability mass and grz blindness to i perturbations.
+- Frozen extraction files unchanged; production training remains pending complete
+  references. Updated PLAN/execution state. Continue allocated extraction quietly.
+
 ## 2026-11-04 — preserve debug checkpoints and submit long continuation
 
 - Recovered clean three-endpointa842f7d. NERSC authentication works. squeue empty;

@@ -48,3 +48,44 @@ def test_optical_fit_prediction_roundtrip_and_no_row_order_effect():
         assert np.array_equal(p['pdf'], q['pdf'][::-1])
         with pytest.raises(ValueError):
             saved.predict(mags[:5], np.full((5, 4), np.nan), ids)
+
+
+def test_classifier_matches_fixed_forest_and_preserves_class_semantics():
+    from photdis.optical_v1_4 import OpticalClassifier
+    from photdis.baseline_v1_2 import DirectClassifier, balanced_weights
+    rng = np.random.default_rng(91)
+    mags = rng.normal(size=(60, 4)) + [20, 19, 18.5, 18]
+    labels = np.array([0] * 30 + [1] * 10 + [2] * 20)
+    forest = dict(n_estimators=3, min_samples_leaf=3, max_depth=4, max_features=1.0)
+    for variant, dim in [('grz', 2), ('griz', 3)]:
+        model = OpticalClassifier(variant, **forest).fit(mags, labels)
+        selected = mags[:, [0, 1, 3]] if variant == 'grz' else mags
+        control = DirectClassifier(dim, 'forest', dict(seed=20261103, forest=forest))
+        control.fit(selected, labels, balanced_weights(labels))
+        assert np.allclose(model.predict_proba(mags), control.predict_proba(selected), atol=1e-14)
+        assert model.training_class_counts.tolist() == [30, 10, 20]
+        with pytest.raises(ValueError, match='unknown is not negative'):
+            model.fit(mags, np.where(labels == 1, -1, labels))
+        with pytest.raises(ValueError, match='All three classes'):
+            model.fit(mags, np.where(labels == 1, 0, labels))
+
+
+def test_classifier_marginalization_is_serializable_and_i_blind_for_grz():
+    from photdis.optical_v1_4 import OpticalClassifier
+    rng = np.random.default_rng(94)
+    mags = rng.normal(size=(60, 4)) + [20, 19, 18.5, 18]
+    labels = np.arange(60) % 3
+    model = OpticalClassifier('grz', n_estimators=3, min_samples_leaf=3, max_depth=3).fit(mags, labels)
+    saved = pickle.loads(pickle.dumps(model))
+    ids, errors = np.arange(5), np.full((5, 4), .05)
+    p = model.predict_marginalized(mags[:5], errors, ids, draws=4)
+    q = saved.predict_marginalized(mags[:5][::-1], errors, ids[::-1], draws=4)
+    assert np.allclose(p, q[::-1], atol=1e-14)
+    assert np.allclose(p.sum(axis=1), 1) and np.all(p >= 0)
+    altered = mags[:5].copy()
+    altered[:, 2] += 100
+    errors[:, 2] = 10
+    assert np.allclose(p, saved.predict_marginalized(altered, errors, ids, draws=4), atol=1e-14)
+    zero = saved.predict_marginalized(mags[:5], np.zeros_like(errors), ids, draws=4)
+    assert np.allclose(zero, saved.predict_proba(mags[:5]), atol=1e-14)
+    assert saved.band_order == ('G', 'R', 'I', 'Z') and saved.class_order == (0, 1, 2)

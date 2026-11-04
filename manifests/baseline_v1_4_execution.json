@@ -2,7 +2,7 @@
   "version": "baseline_v1_4",
   "code_commit": "a842f7d1aea82783e24228cd6c882e411c33f2fb",
   "code_sync": "local_origin_nersc_verified_equal",
-  "submission_status": "PENDING_Resources_checkpoint_resume",
+  "submission_status": "RUNNING_checkpoint_resume",
   "job_id": "60779401",
   "job_name": "baseline_v1_4_extract",
   "submission_attempts": 4,
@@ -12,8 +12,8 @@
   "heartbeat_status": "ACTIVE",
   "interval_minutes": 30,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
-  "updated_utc": "2026-11-04T04:08:13.590767+00:00",
-  "next": "Wait for60779401; do not duplicate submit. Allocated resume verifies hashes and skips completed source/VAC/sweep checkpoints, then continues remaining sweeps. After extraction audit eligibility/identity and continue registered experiments.",
+  "updated_utc": "2026-11-04T05:37:44.919415+00:00",
+  "next": "Keep60779401 running; its allocated hash checks passed and new sweep checkpoints advance. After all1600, audit identities/eligibility and perform frozen-model scoring before fixed-data and matched-color fits.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60778259",
@@ -28,9 +28,8 @@
     "spdist_raw_rows": 6272510
   },
   "active_command": "sbatch --parsable scripts/run_baseline_v1_4_extract.sh",
-  "compute_node": null,
-  "observed_elapsed": "00:00:00",
-  "observed_disk_read_bytes": 5257554509,
+  "compute_node": "nid005050",
+  "observed_elapsed": "00:28:28",
   "startup_code_commit": "843eead1fa7418c751af3377df279e7276316cef",
   "measured_rate": {
     "start_epoch": 1793763053.486624,
@@ -41,5 +40,10 @@
     "scope": "initial MWS input reading; not a whole-pipeline ETA"
   },
   "reference_input_bytes": 16156310400,
-  "south_sweep_files": 1600
+  "south_sweep_files": 1600,
+  "observation_epoch": 1793770514.9891186,
+  "completed_sweep_markers": 119,
+  "remaining_sweeps": 1481,
+  "latest_checkpoint_epoch": 1793770501.0,
+  "initial_debug_observed_disk_read_bytes": 5257554509
 }

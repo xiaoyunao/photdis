@@ -17,12 +17,14 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
   regular60778125 was pending, cancelled; debug60778259 ran then hit30min limit.
 - [x] Startup/rate verified; heartbeat photdis-v1-4 ACTIVE every30minutes.
   Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
-  and52/1600 sweep markers. Unique regular4h resume60779401 is PENDING(Resources);
-  do not duplicate it. Resume checks content hashes on allocated compute.
+  and52/1600 sweep markers. Unique regular4h resume60779401 now RUNNING on
+  nid005050;119/1600 markers at13:35 Beijing, after allocated checkpoint checks.
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
   rows persisted. These are raw inputs, not qualified reference counts.
-- [ ] Finish1600-sweep extraction (52 markers at first follow-up; no science scores).
+- [x] Fixed balanced optical classifier uses the same explicit bands/noise and
+  prior class-weight recipe;16 focused tests pass. No production fit yet.
+- [ ] Finish1600-sweep extraction (119 markers at13:35 Beijing; no science scores).
 - [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
