@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-04 — raw sweep extraction completed
+
+- Manual20:04 Beijing check:60787983 COMPLETED0:0, elapsed2:09:16;
+  started17:31:17 and ended19:40:33 Beijing. Queue empty; no resubmission.
+- All1600 sweep JSON checkpoints and extraction_complete.json present; completion
+  reports3561828221 scanned rows and3590389 selected records. Selected records
+  are not deduplicated qualified references or scientific validation results.
+- Commands: bounded SSH squeue/sacct, checkpoint metadata and log-tail reads.
+  Verified completion agrees with successful Slurm exit; latest checkpoint19:40:29.
+  No new large-table scans or scientific tests during this status check.
+- Updated AGENTS/PLAN/execution manifest and archived small completion metadata.
+  Next on requested continuation: native identity/coverage and VAC-only audit,
+  zero-ID positional/epoch matching, independent eligibility assembly, then
+  frozen model scores and registered fixed-data/grz/griz experiments.
+- Both automations remain deleted; deployed v1 and extraction freeze unchanged.
+
 ## 2026-11-04 — requested one-time checkpoint continuation
 
 - User explicitly scheduled one resume at17:10 Beijing, an exception to manual

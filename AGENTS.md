@@ -9,8 +9,8 @@
   User switched to manual follow-up2026-11-04: heartbeat photdis-v1-4 was deleted.
   Wait for explicit user progress checks; do not recreate monitoring or automatically
   resubmit jobs. Explicit one-time17:10 resume completed:60779401 TIMEOUT with879
-  sweeps;60787983 submitted and verified PENDING(Priority). Single-use task deleted.
-  Resume project
+  sweeps;60787983 COMPLETED0:0 at19:40 Beijing with all1600 sweeps and3590389
+  selected raw records. Single-use task deleted. Resume assembly/evaluation
   milestones when the user requests continuation; raw inventory is not completion.
 
 - Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent

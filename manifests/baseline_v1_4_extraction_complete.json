@@ -1,0 +1,8 @@
+{
+  "sweeps": 1600,
+  "scanned_rows": 3561828221,
+  "selected_records": 3590389,
+  "source_sha256": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc",
+  "status": "raw_extraction_complete_not_scientific_validation",
+  "next": "audit identity/coverage, resolve unmatched sources, assemble independent eligibility, then frozen scores"
+}
