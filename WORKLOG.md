@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-04 — register v1.4 new-reference/new-sky/i scope
+
+- User authorizes latest Pro advice and30-minute follow-up for long NERSC jobs.
+- Recovered clean main5cf8f6d, identical origin/NERSC; read latest linked review.
+- NERSC headers confirm6,372,607 MWS rows,4,140,838 SpecDis and6,272,510
+  SPDist rows; actual DR11 south has i and raw WISE quality columns. Header-only
+  inspections on login; no full scans there. Targeting flags include MWS/SCND.
+- Added configs/baseline_v1_4.json, registered protocol and archived Pro review;
+  new reference_v1_4 module preserves old BANDS. Added resumable extraction,
+  atomic per-sweep checkpoints/content hashes and one-writer lock.
+- Tests: py_compile, bash -n and pytest reference_v1_4/baseline_v1_3/photometry:
+  13 passed. No scientific scores yet.
+- Extraction smoke test also verifies recovered-Gaia parent selection via original
+  Legacy ID, negative WISE preservation and verified checkpoint reuse.
+- Next: submit4h allocated extraction, follow every30minutes, audit exact-ID and
+  zero-ID/VAC-only cases before new-sky scoring and fixed matched experiments.
+
 ## 2026-11-04 — final training-weight and freeze audit
 
 - Allocated audit60776085 produced24 passing checks, per-object weights and hashes.

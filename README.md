@@ -4,6 +4,11 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
+Active phase: **v1.4 — broader DESI references, unseen sky and optional i**.
+[Registered protocol](docs/baseline_v1_4_protocol.md). Raw input extraction and
+fixed matched experiments are in progress; no new performance claim or deployment
+change. Large inputs and outputs remain on NERSC under data/baseline_v1_4.
+
 Latest completed experiment: **v1.3 — independent label eligibility and fixed candidate**.
 [Results and three figures](docs/baseline_v1_3_result.md) ·
 [protocol](docs/baseline_v1_3_protocol.md) · [actual evidence](manifests/baseline_v1_3_result.json).

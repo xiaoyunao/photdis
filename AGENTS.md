@@ -1,5 +1,14 @@
 # Project instructions
 
+- Active authorized scope2026-11-04: v1.4; read PLAN and
+  docs/baseline_v1_4_protocol.md, latest docs/pro_review_5cf8f6d.md. Full DESI
+  reference expansion, frozen genuinely new sky, fixed new-data comparison and
+  matched grz/griz classification+distance test. This explicitly supersedes
+  historical no-new-fit limits for these experiments only. Preserve deployed v1;
+  no family search, full-catalog prediction rerun, threshold retuning or subagents.
+  Long allocated NERSC work may be followed every30minutes; resume milestones
+  after extraction. Raw inventory alone does not complete the objective.
+
 - Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
   class entry releases6287 A training labels incl395 evolved/508 no-W1.
   Six fixed forest data comparisons show small mixed changes;93 actual checks,

@@ -1,0 +1,41 @@
+{
+  "version": "baseline_v1_4",
+  "output_dir": "data/baseline_v1_4",
+  "seed": 20261104,
+  "cell_degrees": 10,
+  "train_cal_test_fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "mws_path": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws/iron/v1.0/mwsall-pix-iron.fits",
+  "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+  "parent_sample": "data/baseline_v1_1/parent_sample.npz",
+  "scan_workers": 4,
+  "feature_version": "griz_v1",
+  "feature_bands": [
+    "G",
+    "R",
+    "I",
+    "Z"
+  ],
+  "classifier": {
+    "n_estimators": 256,
+    "min_samples_leaf": 32,
+    "max_depth": 20,
+    "max_features": 1.0,
+    "seed": 20261103
+  },
+  "distance": {
+    "n_estimators": 128,
+    "min_samples_leaf": 32,
+    "max_depth": 20,
+    "bin_width": 0.1,
+    "sobol_draws": 128,
+    "seed": 20261102,
+    "max_features": 0.75,
+    "bootstrap": false
+  },
+  "deployment": "preserve_v1",
+  "no_full_catalog_prediction": true
+}

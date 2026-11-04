@@ -1,5 +1,29 @@
 # PLAN
 
+## Active objective: v1.4 broader references and native i experiment
+
+Authorized2026-11-04 by latest GPT Pro review; see docs/pro_review_5cf8f6d.md
+and docs/baseline_v1_4_protocol.md. New scope supersedes historical no-new-fit
+restrictions ONLY for registered fixed-data/griz experiments; retain v1.
+
+- [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
+- [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
+- [x] Syntax/shell checks and13 focused tests pass.
+- [ ] Sync and submit allocated extraction; record job ID and30-minute heartbeat.
+- [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
+- [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
+- [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
+- [ ] One fixed-algorithm new-data comparison, same evaluation identities.
+- [ ] Fixed26000 parent i coverage with original sample weights.
+- [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.
+- [ ] Actual artifact checks, inspected figures, final result, git/sync; stop heartbeat.
+
+No scientific improvement has been established yet. Raw extraction is not final
+validation. Whole legacy-overlapping10-degree cells are excluded from new cal/test.
+Preserve unknown/negative evidence and all raw i/WISE fluxes. Prioritize18–20 and
+available20–22; absent22–25 truth stays explicitly unvalidated. No family search,
+full-catalog predictions, candidate retuning or subagents.
+
 ## Completed objective: v1.3 independent label entry and fixed evolved candidate
 
 Source:docs/pro_review_ebf37f8.md; protocol:docs/baseline_v1_3_protocol.md.
