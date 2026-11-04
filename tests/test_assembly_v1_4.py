@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from photdis.assembly_v1_4 import epoch_positions,positional_join,representative_rows
+from photdis.assembly_v1_4 import epoch_positions,positional_join,representative_rows,uppercase_fields
 
 
 def coords(ra,dec=None,epoch=2016,pmra=None):
@@ -9,6 +9,13 @@ def coords(ra,dec=None,epoch=2016,pmra=None):
 
 
 class AssemblyTests(unittest.TestCase):
+    def test_lowercase_fits_schema_preserves_data(self):
+        t=np.zeros(2,dtype=[("ra","f8"),("dec","f8"),("flux","f4",(3,))])
+        t["ra"]=[1,2];t["flux"]=3
+        u=uppercase_fields(t)
+        np.testing.assert_array_equal(u["RA"],[1,2])
+        self.assertEqual(u["FLUX"].shape,(2,3));self.assertTrue(np.shares_memory(t,u))
+
     def test_wrap_and_motion(self):
         s=coords([359.999],epoch=2000,pmra=[450.])
         c=coords([.001])

@@ -14,7 +14,7 @@ sys.path[:0]=[str(ROOT/'src'),str(ROOT/'scripts'),str(ROOT/'.deps')]
 import fitsio
 import numpy as np
 from scipy.spatial import cKDTree
-from photdis.assembly_v1_4 import epoch_positions,unit_vectors,positional_join,representative_rows
+from photdis.assembly_v1_4 import epoch_positions,unit_vectors,positional_join,representative_rows,uppercase_fields
 from photdis.photometry import derive_photometry
 from photdis.reference_v1_4 import optional_photometry
 from photdis.source_evidence_v1_4 import vac_evidence
@@ -70,15 +70,15 @@ def brick_candidates(task):
     if marker.exists():
         saved=json.loads(marker.read_text());assert sha(destination)==saved['sha256'];return destination
     with fitsio.FITS(path) as f:
-        names=f[1].get_colnames()
+        names=[k.upper() for k in f[1].get_colnames()]
         cols=['RA','DEC','REF_EPOCH','PMRA','PMDEC']+(['BRICK_PRIMARY'] if 'BRICK_PRIMARY' in names else [])
-        pos=f[1].read(columns=cols)
+        pos=uppercase_fields(f[1].read(columns=cols))
         vector,_=epoch_positions(*[pos[k] for k in ['RA','DEC','REF_EPOCH','PMRA','PMDEC']])
         good=np.isfinite(vector).all(axis=1)
         if 'BRICK_PRIMARY' in names:good &= pos['BRICK_PRIMARY']
         q=np.flatnonzero(good);dist=cKDTree(_TARGET_VECTORS[indices]).query(vector[q])[0]
         q=q[dist<2*np.sin(np.deg2rad(3/3600)/2)]
-        raw=f[1].read(columns=RAW_COLUMNS,rows=q)
+        raw=uppercase_fields(f[1].read(columns=RAW_COLUMNS,rows=q))
     d=projected(raw) if len(raw) else {'REF_ID':np.empty(0,'i8')}
     atomic_npz(destination,**d)
     write_json(marker,dict(path=path,rows=len(raw),sha256=sha(destination)))
@@ -111,7 +111,7 @@ def recover_zero():
     good=np.isfinite(_TARGET_VECTORS).all(axis=1)&(abs(q['dec'])<=90)
     # Do not interpret bad coordinates as absence of southern imaging.
     if not good.all():raise RuntimeError('Invalid qualified zero-ID coordinates require explicit handling')
-    bricks=fitsio.read(str(SOUTH/'survey-bricks-dr11-south.fits.gz'),columns=['BRICKNAME','RA','DEC'])
+    bricks=uppercase_fields(fitsio.read(str(SOUTH/'survey-bricks-dr11-south.fits.gz'),columns=['BRICKNAME','RA','DEC']))
     # Centers within0.4deg cover the 0.25deg native bricks, including boundaries.
     neighbors=cKDTree(unit_vectors(bricks['RA'],bricks['DEC'])).query_ball_point(_TARGET_VECTORS,2*np.sin(np.deg2rad(.4)/2))
     owners={}

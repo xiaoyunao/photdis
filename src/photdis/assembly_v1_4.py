@@ -60,3 +60,13 @@ def representative_rows(identity, primary, snr):
 def duplicate_mask(key):
     u,c=np.unique(key,return_counts=True)
     return np.isin(key,u[c>1])
+
+
+def uppercase_fields(table):
+    """Zero-copy FITS schema normalization, preserving field offsets and shapes."""
+    names=table.dtype.names
+    dtype=np.dtype(dict(names=[k.upper() for k in names],
+                        formats=[table.dtype.fields[k][0] for k in names],
+                        offsets=[table.dtype.fields[k][1] for k in names],
+                        itemsize=table.dtype.itemsize))
+    return table.view(dtype)

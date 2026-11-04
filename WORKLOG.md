@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-04 — fix native FITS field-name case after allocated execution
+
+-60798395 FAILED1:0 after27s on actual compute: all1600 hashes verified and
+  native_photometry.npz3590389 records written, then brick index returned lowercase
+  ra/dec, causing ValueError on uppercase lookup. Original extraction untouched.
+- Normalize brick/tractor structured field names with a zero-copy view preserving
+  offsets/shapes; column selection itself is case-insensitive in fitsio.
+- Added regression test for lowercase coordinates and vector fields. Resume only
+  after confirmed terminal state/no duplicate; reuse consolidated output hash.
+
 ## 2026-11-04 — continue native identity assembly after extraction
 
 - User clarified to continue all GPT Pro milestones without stopping at status/logs.
