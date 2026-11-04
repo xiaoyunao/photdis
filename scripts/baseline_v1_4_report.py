@@ -68,6 +68,31 @@ def main():
             c=d['assembly']['coverage'][split][group]
             lines.append(f"| {label} | {group} | {sum(c['classes'].values())} | {c['classes']['1']} | {c['distance']} | {c['specdis']} | {c['spdist']} | {c['gaia']} |")
     lines+=['','Zero-count cells are unvalidated. Sparse counts are descriptive evidence, not a general accuracy guarantee.','']
+    lines+=['## Priority same-star comparisons','',
+            '| Model | Group | Known class N | Evolved N | AP | Recall | Known contamination | Distance N | Tail >1mag | Coverage68 |',
+            '|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+    for group in ['r18_20:no_W1','r20_22','r20_22:no_W1','r22_25']:
+        for n in ['frozen_A','expanded_A','matched_grz','matched_griz']:
+            variant='marginalized' if n.startswith('matched') else 'nominal'
+            c=m[n]['classification'][variant]['groups'][group];r=m[n]['distance'][group]['chosen']
+            lines.append(f"| {n} | {group} | {c['known']} | {c['evolved']} | {fmt(c['average_precision'])} | {fmt(c['recall'])} | {fmt(c['known_contamination'])} | {r['n']} | {fmt(r.get('tail_1'))} | {fmt(r.get('coverage68'))} |")
+    lines+=['','## Separate distance evidence','',
+            '| Model | Evidence | N | Bias (mag) | Scatter (mag) | Tail >1mag | Coverage68 | Coverage95 |',
+            '|---|---|---:|---:|---:|---:|---:|---:|']
+    for n in names:
+        for kind in ['Gaia','specdis','spdist']:
+            v=m[n]['distance']['all'][kind]
+            lines.append(f"| {n} | {kind} | {v['n']} | {fmt(v.get('bias_mag'))} | {fmt(v.get('nmad_mag'))} | {fmt(v.get('tail_1'))} | {fmt(v.get('coverage68'))} | {fmt(v.get('coverage95'))} |")
+    lines+=['','## Weighted WISE measurement states','',
+            'Original26000 DECam probability sample; all original weights retained. Low-SNR fluxes were preserved but not passed to Gaussian magnitude models.',
+            'States: -1 unmatched; 0 no observation; 1 invalid measurement; 2 quality failure; 3 low S/N including negative flux; 4 usable S/N>=5 color.','',
+            '| Band | State | N | Weighted fraction |','|---|---|---:|---:|']
+    for band in ['w1','w2']:
+        for state,v in coverage['all']['wise'][band].items():
+            lines.append(f"| {band} | {state} | {v['n']} | {fmt(v['weighted_fraction'])} |")
+    lines+=['','## Identity and coverage exclusions','',
+            f"Zero-ID recovery: {d['assembly']['matching']['matched']} accepted matches from {d['assembly']['matching']['identities']} source identities; ambiguous and unmatched sources remain excluded. Raw fluxes and candidate metadata are retained separately.",
+            f"Historical identity exclusions: {d['assembly']['historical_rows']}; native collision rows: {d['assembly']['native_collision_rows']}; source/native geometry disagreements: {d['assembly']['geometry_disagreement_rows']}.",'']
     (ROOT/'docs/baseline_v1_4_result.md').write_text('\n'.join(lines))
 
 if __name__=='__main__':main()

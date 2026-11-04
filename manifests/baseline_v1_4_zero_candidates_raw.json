@@ -1,0 +1,22 @@
+{
+  "rows": 3575,
+  "bricks": 2246,
+  "sha256": "8f3d4d2152f98bc5c305ba0b391a8f94b8c58c19073aa2f7be4451134af1ab95",
+  "candidate_sha256": "3b107feae1286e7daa57147ef1a6258203eccc63e271aebb9e73108ebb50051f",
+  "type_counts": {
+    "DEV": 182,
+    "DUP": 2,
+    "EXP": 200,
+    "PSF": 2412,
+    "REX": 295,
+    "SER": 484
+  },
+  "type_grz_base": {
+    "DEV": 162,
+    "DUP": 0,
+    "EXP": 168,
+    "PSF": 2173,
+    "REX": 239,
+    "SER": 472
+  }
+}

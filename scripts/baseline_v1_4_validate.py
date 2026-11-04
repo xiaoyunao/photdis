@@ -47,7 +47,8 @@ def main():
             classification=json.loads((e/(prefix+'_classification.json')).read_text())
             for variant,v in classification.items():
                 checks[prefix+':'+variant+':cal_budget']=v['cal_dwarf_fpr'] is None or v['cal_dwarf_fpr']<=.02+1e-12
-            models[prefix]=dict(classification=classification,distance=score)
+            models[prefix]=dict(classification=classification,distance=score,
+                training=completion['models'][name]['metadata'])
     for name in 'ABC':
         f=load(e/('frozen_'+name+'_identities.npz'));x=load(e/('expanded_'+name+'_identities.npz'))
         for kind in ['class','distance']:checks[name+':same_eval_'+kind]=np.array_equal(f[kind+'_eval_identity'],x[kind+'_eval_identity'])
@@ -62,7 +63,8 @@ def main():
     compact={}
     for name,m in models.items():
         compact[name]=dict(classification={variant:dict(v,groups={k:g for k,g in v['groups'].items() if not k.startswith('cell')}) for variant,v in m['classification'].items()},
-            distance={k:v for k,v in m['distance']['groups'].items() if not k.startswith('cell')},n_distance=m['distance']['n'])
+            distance={k:v for k,v in m['distance']['groups'].items() if not k.startswith('cell')},n_distance=m['distance']['n'],
+            numerical_checks=m['distance']['checks'],training=m['training'])
     save_json(OUT/'result.json',dict(assembly=assembly,parent_coverage=json.loads((OUT/'parent_coverage.json').read_text()),
         models=compact,validation=dict(n_checks=len(checks),all_passed=True),
         deployment='Preserve v1. Fixed validation only; no model search or full-catalog rerun.',

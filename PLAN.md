@@ -17,8 +17,9 @@ Do not resubmit completed extraction or recreate scheduled monitoring.
 Native consolidation and17992 targeted bricks complete. Preparation60798530
 reached30min TIMEOUT during assembly; no code failure. Diagnostic60798891
 shows6036/9009 zero-ID targets outside nearby southern imaging. Raw-candidate
-recovery60799112 submitted to preserve fluxes and inspect duplicate candidates.
-Frozen evaluation60798619 held after failed dependency; no model scores yet.
+recovery60799112 completed:3575 rows, only2 DUP placeholders; retain conservative
+520 matches. Assembly60799167 running, frozen60799198 afterok dependency.
+Old pending/admin-held60798619 safely cancelled; no model scores yet.
 Finish identity audit/assembly, then frozen scores, expanded and matched fits.
 24 focused tests pass; fixed26000 weighted i coverage measured (87.01% overall).
 

@@ -1,0 +1,15 @@
+{
+  "qualified_rows": 9009,
+  "class_qualified_rows": 9009,
+  "identities": 9009,
+  "matched": 520,
+  "ambiguous": 781,
+  "unmatched": 8489,
+  "matched_unknown_epoch": 515,
+  "known_source_epochs": 8681,
+  "bricks": 17992,
+  "missing_bricks": 0,
+  "policy": "unique native object within2arcsec; accept<=1arcsec both epochs known else<=0.5arcsec static, flagged; one-to-one",
+  "sha256": "4f94dd79e2cbef0188efb238b1f9ba76d22226cb5f16ffa89795f1e042c16de2",
+  "photometry_sha256": "3b107feae1286e7daa57147ef1a6258203eccc63e271aebb9e73108ebb50051f"
+}

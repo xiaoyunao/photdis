@@ -16,6 +16,16 @@
   a different source; inspect measured counts before any explicit match migration.
   Source: https://www.legacysurvey.org/dr11/description/
 - Continue actual frozen/new-data/matched experiments; no timers or deployment.
+- Raw recovery60799112 COMPLETED0:0 in30s:3575 candidates from2246 bricks,
+  exact IDs verified; only2 DUP placeholders, both fail grz base. Preserve the
+  original conservative520 matches; no threshold change or match migration.
+- Assembly60799167 RUNNING on nid004142. All24 focused tests pass. Old pending
+  frozen60798619 could not be released (Slurm administrative hold); after
+  confirming PENDING, cancelled it and submitted unique replacement60799198
+  afterok60799167, verified PENDING(Dependency). No old model scores existed.
+- WISE parent sample has no missing/invalid measurements under state definition;
+  quality-failed weighted W1/W2 fractions60.99%/57.29%, low-SNR7.50%/23.72%.
+  Weak measured fluxes preserved; current Gaussian-color routing unchanged.
 
 ## 2026-11-04 — fix native FITS field-name case after allocated execution
 

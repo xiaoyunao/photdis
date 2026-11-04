@@ -1,0 +1,1470 @@
+{
+  "groups": {
+    "all": {
+      "n": 26000,
+      "weight_sum": 8899334.0,
+      "matched": 26000,
+      "i_count": 21893,
+      "weighted_i_fraction": 0.8701026200949402,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 15576,
+            "weighted_fraction": 0.6099043898678252
+          },
+          "3": {
+            "n": 1892,
+            "weighted_fraction": 0.07494621367171968
+          },
+          "4": {
+            "n": 8532,
+            "weighted_fraction": 0.3151493964604548
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 14699,
+            "weighted_fraction": 0.572846734766895
+          },
+          "3": {
+            "n": 6196,
+            "weighted_fraction": 0.23718959755864852
+          },
+          "4": {
+            "n": 5105,
+            "weighted_fraction": 0.1899636676744575
+          }
+        }
+      }
+    },
+    "no_W1": {
+      "n": 17468,
+      "weight_sum": 6094714.261000001,
+      "matched": 17468,
+      "i_count": 14715,
+      "weighted_i_fraction": 0.8687973797037699,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 15576,
+            "weighted_fraction": 0.8905656017759591
+          },
+          "3": {
+            "n": 1892,
+            "weighted_fraction": 0.10943439822403836
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 13361,
+            "weighted_fraction": 0.764076365039621
+          },
+          "3": {
+            "n": 3839,
+            "weighted_fraction": 0.2203448309453078
+          },
+          "4": {
+            "n": 268,
+            "weighted_fraction": 0.015578804015074724
+          }
+        }
+      }
+    },
+    "r:0:18": {
+      "n": 1242,
+      "weight_sum": 400443.661,
+      "matched": 1242,
+      "i_count": 985,
+      "weighted_i_fraction": 0.8162771416676269,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 83,
+            "weighted_fraction": 0.06947861137449743
+          },
+          "3": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "4": {
+            "n": 1159,
+            "weighted_fraction": 0.9305213886255024
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 91,
+            "weighted_fraction": 0.07427089100556394
+          },
+          "3": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "4": {
+            "n": 1151,
+            "weighted_fraction": 0.9257291089944361
+          }
+        }
+      }
+    },
+    "r:0:18:no_W1": {
+      "n": 83,
+      "weight_sum": 27822.2695,
+      "matched": 83,
+      "i_count": 61,
+      "weighted_i_fraction": 0.7656715603304755,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 83,
+            "weighted_fraction": 0.9999999999999999
+          },
+          "3": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 77,
+            "weighted_fraction": 0.9319826694943055
+          },
+          "3": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "4": {
+            "n": 6,
+            "weighted_fraction": 0.06801733050569438
+          }
+        }
+      }
+    },
+    "r:18:20": {
+      "n": 2419,
+      "weight_sum": 806235.1165000001,
+      "matched": 2419,
+      "i_count": 2078,
+      "weighted_i_fraction": 0.8877271621546885,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 373,
+            "weighted_fraction": 0.14945852584926447
+          },
+          "3": {
+            "n": 8,
+            "weighted_fraction": 0.003557245202181664
+          },
+          "4": {
+            "n": 2038,
+            "weighted_fraction": 0.8469842289485537
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 538,
+            "weighted_fraction": 0.21989238979024298
+          },
+          "3": {
+            "n": 304,
+            "weighted_fraction": 0.1305736643635765
+          },
+          "4": {
+            "n": 1577,
+            "weighted_fraction": 0.6495339458461802
+          }
+        }
+      }
+    },
+    "r:18:20:no_W1": {
+      "n": 381,
+      "weight_sum": 123366.688,
+      "matched": 381,
+      "i_count": 321,
+      "weighted_i_fraction": 0.8602532800426642,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 373,
+            "weighted_fraction": 0.9767524276893936
+          },
+          "3": {
+            "n": 8,
+            "weighted_fraction": 0.023247572310606254
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 347,
+            "weighted_fraction": 0.9116551827994279
+          },
+          "3": {
+            "n": 20,
+            "weighted_fraction": 0.05945113805762542
+          },
+          "4": {
+            "n": 14,
+            "weighted_fraction": 0.028893679142946598
+          }
+        }
+      }
+    },
+    "r:20:22": {
+      "n": 5586,
+      "weight_sum": 1897656.4875000003,
+      "matched": 5586,
+      "i_count": 4867,
+      "weighted_i_fraction": 0.894546838525221,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 2568,
+            "weighted_fraction": 0.4706379204471278
+          },
+          "3": {
+            "n": 322,
+            "weighted_fraction": 0.06135643187634611
+          },
+          "4": {
+            "n": 2696,
+            "weighted_fraction": 0.46800564767652714
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 2689,
+            "weighted_fraction": 0.48774369180976496
+          },
+          "3": {
+            "n": 1339,
+            "weighted_fraction": 0.23952543781978858
+          },
+          "4": {
+            "n": 1558,
+            "weighted_fraction": 0.2727308703704467
+          }
+        }
+      }
+    },
+    "r:20:22:no_W1": {
+      "n": 2890,
+      "weight_sum": 1009542.5340000001,
+      "matched": 2890,
+      "i_count": 2541,
+      "weighted_i_fraction": 0.8991519266686002,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 2568,
+            "weighted_fraction": 0.884667136768703
+          },
+          "3": {
+            "n": 322,
+            "weighted_fraction": 0.11533286323129797
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 2254,
+            "weighted_fraction": 0.7754121615840707
+          },
+          "3": {
+            "n": 553,
+            "weighted_fraction": 0.19648516017850115
+          },
+          "4": {
+            "n": 83,
+            "weighted_fraction": 0.02810267823742828
+          }
+        }
+      }
+    },
+    "r:22:25": {
+      "n": 16701,
+      "weight_sum": 5770964.867000001,
+      "matched": 16701,
+      "i_count": 13934,
+      "weighted_i_fraction": 0.8647234511919989,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 12504,
+            "weighted_fraction": 0.7561421667895962
+          },
+          "3": {
+            "n": 1558,
+            "weighted_fraction": 0.09465991131288574
+          },
+          "4": {
+            "n": 2639,
+            "weighted_fraction": 0.14919792189752057
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 11343,
+            "weighted_fraction": 0.6841587967511715
+          },
+          "3": {
+            "n": 4541,
+            "weighted_fraction": 0.2677329751797987
+          },
+          "4": {
+            "n": 817,
+            "weighted_fraction": 0.04810822806903079
+          }
+        }
+      }
+    },
+    "r:22:25:no_W1": {
+      "n": 14062,
+      "weight_sum": 4909948.9015,
+      "matched": 14062,
+      "i_count": 11763,
+      "weighted_i_fraction": 0.8649779638648661,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 12504,
+            "weighted_fraction": 0.8887403853972703
+          },
+          "3": {
+            "n": 1558,
+            "weighted_fraction": 0.11125961460273244
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 10645,
+            "weighted_fraction": 0.7573431194699382
+          },
+          "3": {
+            "n": 3254,
+            "weighted_fraction": 0.230410256337777
+          },
+          "4": {
+            "n": 163,
+            "weighted_fraction": 0.012246624192286415
+          }
+        }
+      }
+    },
+    "r:25:inf": {
+      "n": 52,
+      "weight_sum": 24033.867999999995,
+      "matched": 52,
+      "i_count": 29,
+      "weighted_i_fraction": 0.5372727977036407,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 48,
+            "weighted_fraction": 0.9421250878135804
+          },
+          "3": {
+            "n": 4,
+            "weighted_fraction": 0.057874912186419616
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 38,
+            "weighted_fraction": 0.7115703972410933
+          },
+          "3": {
+            "n": 12,
+            "weighted_fraction": 0.2472253737933487
+          },
+          "4": {
+            "n": 2,
+            "weighted_fraction": 0.041204228965558115
+          }
+        }
+      }
+    },
+    "r:25:inf:no_W1": {
+      "n": 52,
+      "weight_sum": 24033.867999999995,
+      "matched": 52,
+      "i_count": 29,
+      "weighted_i_fraction": 0.5372727977036407,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 48,
+            "weighted_fraction": 0.9421250878135804
+          },
+          "3": {
+            "n": 4,
+            "weighted_fraction": 0.057874912186419616
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 38,
+            "weighted_fraction": 0.7115703972410933
+          },
+          "3": {
+            "n": 12,
+            "weighted_fraction": 0.2472253737933487
+          },
+          "4": {
+            "n": 2,
+            "weighted_fraction": 0.041204228965558115
+          }
+        }
+      }
+    },
+    "optical_error:0:0.03": {
+      "n": 6685,
+      "weight_sum": 2241767.9620000003,
+      "matched": 6685,
+      "i_count": 5736,
+      "weighted_i_fraction": 0.8831650121958512,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 1723,
+            "weighted_fraction": 0.2631478587434642
+          },
+          "3": {
+            "n": 178,
+            "weighted_fraction": 0.0290779233644878
+          },
+          "4": {
+            "n": 4784,
+            "weighted_fraction": 0.7077742178920489
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 2004,
+            "weighted_fraction": 0.3055565139261276
+          },
+          "3": {
+            "n": 911,
+            "weighted_fraction": 0.1384850293439959
+          },
+          "4": {
+            "n": 3770,
+            "weighted_fraction": 0.555958456729877
+          }
+        }
+      }
+    },
+    "optical_error:0:0.03:no_W1": {
+      "n": 1901,
+      "weight_sum": 655102.3960000002,
+      "matched": 1901,
+      "i_count": 1667,
+      "weighted_i_fraction": 0.8951301622166549,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 1723,
+            "weighted_fraction": 0.9004950105540438
+          },
+          "3": {
+            "n": 178,
+            "weighted_fraction": 0.09950498944595522
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 1565,
+            "weighted_fraction": 0.8214605591215076
+          },
+          "3": {
+            "n": 265,
+            "weighted_fraction": 0.14321736200763333
+          },
+          "4": {
+            "n": 71,
+            "weighted_fraction": 0.03532207887085792
+          }
+        }
+      }
+    },
+    "optical_error:0.03:0.1": {
+      "n": 6333,
+      "weight_sum": 2183276.0895000002,
+      "matched": 6333,
+      "i_count": 5582,
+      "weighted_i_fraction": 0.9057077453510942,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3907,
+            "weighted_fraction": 0.6290330412653026
+          },
+          "3": {
+            "n": 478,
+            "weighted_fraction": 0.07841682544107756
+          },
+          "4": {
+            "n": 1948,
+            "weighted_fraction": 0.2925501332936206
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3800,
+            "weighted_fraction": 0.606916500561988
+          },
+          "3": {
+            "n": 1751,
+            "weighted_fraction": 0.27401830711067265
+          },
+          "4": {
+            "n": 782,
+            "weighted_fraction": 0.11906519232733984
+          }
+        }
+      }
+    },
+    "optical_error:0.03:0.1:no_W1": {
+      "n": 4385,
+      "weight_sum": 1544558.3785,
+      "matched": 4385,
+      "i_count": 3906,
+      "weighted_i_fraction": 0.9111320915993477,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3907,
+            "weighted_fraction": 0.8891556432031629
+          },
+          "3": {
+            "n": 478,
+            "weighted_fraction": 0.11084435679683827
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3373,
+            "weighted_fraction": 0.7665094615263199
+          },
+          "3": {
+            "n": 934,
+            "weighted_fraction": 0.21569515962455402
+          },
+          "4": {
+            "n": 78,
+            "weighted_fraction": 0.017795378849126485
+          }
+        }
+      }
+    },
+    "optical_error:0.1:inf": {
+      "n": 12982,
+      "weight_sum": 4474289.948500001,
+      "matched": 12982,
+      "i_count": 10575,
+      "weighted_i_fraction": 0.8461840381554352,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 9946,
+            "weighted_fraction": 0.7743069125775958
+          },
+          "3": {
+            "n": 1236,
+            "weighted_fraction": 0.09623423056084036
+          },
+          "4": {
+            "n": 1800,
+            "weighted_fraction": 0.12945885686156478
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 8895,
+            "weighted_fraction": 0.6901433236429425
+          },
+          "3": {
+            "n": 3534,
+            "weighted_fraction": 0.268672916560316
+          },
+          "4": {
+            "n": 553,
+            "weighted_fraction": 0.041183759796741735
+          }
+        }
+      }
+    },
+    "optical_error:0.1:inf:no_W1": {
+      "n": 11182,
+      "weight_sum": 3895053.4865000006,
+      "matched": 11182,
+      "i_count": 9142,
+      "weighted_i_fraction": 0.8475809565753971,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 9946,
+            "weighted_fraction": 0.8894547014585664
+          },
+          "3": {
+            "n": 1236,
+            "weighted_fraction": 0.11054529854143497
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 8423,
+            "weighted_fraction": 0.753460186662831
+          },
+          "3": {
+            "n": 2640,
+            "weighted_fraction": 0.23516056549022202
+          },
+          "4": {
+            "n": 119,
+            "weighted_fraction": 0.011379247846947375
+          }
+        }
+      }
+    },
+    "gr:-inf:0.5": {
+      "n": 8899,
+      "weight_sum": 3154922.6965000005,
+      "matched": 8899,
+      "i_count": 7427,
+      "weighted_i_fraction": 0.8589278578857884,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 6252,
+            "weighted_fraction": 0.7095143262886598
+          },
+          "3": {
+            "n": 810,
+            "weighted_fraction": 0.09463804464408365
+          },
+          "4": {
+            "n": 1837,
+            "weighted_fraction": 0.19584762906725614
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 5620,
+            "weighted_fraction": 0.63585076021846
+          },
+          "3": {
+            "n": 2191,
+            "weighted_fraction": 0.2475681454466344
+          },
+          "4": {
+            "n": 1088,
+            "weighted_fraction": 0.11658109433490511
+          }
+        }
+      }
+    },
+    "gr:-inf:0.5:no_W1": {
+      "n": 7062,
+      "weight_sum": 2537038.5665,
+      "matched": 7062,
+      "i_count": 5919,
+      "weighted_i_fraction": 0.8600280615797247,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 6252,
+            "weighted_fraction": 0.8823132927727215
+          },
+          "3": {
+            "n": 810,
+            "weighted_fraction": 0.1176867072272785
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 5316,
+            "weighted_fraction": 0.7500196822490829
+          },
+          "3": {
+            "n": 1636,
+            "weighted_fraction": 0.2342734688183935
+          },
+          "4": {
+            "n": 110,
+            "weighted_fraction": 0.01570684893252292
+          }
+        }
+      }
+    },
+    "gr:0.5:1": {
+      "n": 7948,
+      "weight_sum": 2729113.7865000004,
+      "matched": 7948,
+      "i_count": 6631,
+      "weighted_i_fraction": 0.865289403351889,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 5470,
+            "weighted_fraction": 0.6971909939820305
+          },
+          "3": {
+            "n": 664,
+            "weighted_fraction": 0.08446151554406796
+          },
+          "4": {
+            "n": 1814,
+            "weighted_fraction": 0.21834749047390062
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 4961,
+            "weighted_fraction": 0.6301017581261631
+          },
+          "3": {
+            "n": 2014,
+            "weighted_fraction": 0.25123666037366954
+          },
+          "4": {
+            "n": 973,
+            "weighted_fraction": 0.11866158150016728
+          }
+        }
+      }
+    },
+    "gr:0.5:1:no_W1": {
+      "n": 6134,
+      "weight_sum": 2133218.64,
+      "matched": 6134,
+      "i_count": 5126,
+      "weighted_i_fraction": 0.8671071405038909,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 5470,
+            "weighted_fraction": 0.8919449313924982
+          },
+          "3": {
+            "n": 664,
+            "weighted_fraction": 0.108055068607501
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 4644,
+            "weighted_fraction": 0.7583840995782789
+          },
+          "3": {
+            "n": 1427,
+            "weighted_fraction": 0.23124324659004458
+          },
+          "4": {
+            "n": 63,
+            "weighted_fraction": 0.010372653831676626
+          }
+        }
+      }
+    },
+    "gr:1:inf": {
+      "n": 9153,
+      "weight_sum": 3015297.517,
+      "matched": 9153,
+      "i_count": 7835,
+      "weighted_i_fraction": 0.8861512278425027,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3854,
+            "weighted_fraction": 0.4266797757920885
+          },
+          "3": {
+            "n": 418,
+            "weighted_fraction": 0.04573034177310338
+          },
+          "4": {
+            "n": 4881,
+            "weighted_fraction": 0.527589882434809
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 4118,
+            "weighted_fraction": 0.45510435562767104
+          },
+          "3": {
+            "n": 1991,
+            "weighted_fraction": 0.213616617222187
+          },
+          "4": {
+            "n": 3044,
+            "weighted_fraction": 0.33127902715014285
+          }
+        }
+      }
+    },
+    "gr:1:inf:no_W1": {
+      "n": 4272,
+      "weight_sum": 1424457.0545,
+      "matched": 4272,
+      "i_count": 3670,
+      "weighted_i_fraction": 0.8869472761630396,
+      "wise": {
+        "w1": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3854,
+            "weighted_fraction": 0.9031977934579429
+          },
+          "3": {
+            "n": 418,
+            "weighted_fraction": 0.0968022065420576
+          },
+          "4": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          }
+        },
+        "w2": {
+          "-1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "0": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "1": {
+            "n": 0,
+            "weighted_fraction": 0.0
+          },
+          "2": {
+            "n": 3401,
+            "weighted_fraction": 0.7976366559529722
+          },
+          "3": {
+            "n": 776,
+            "weighted_fraction": 0.17921604108283062
+          },
+          "4": {
+            "n": 95,
+            "weighted_fraction": 0.02314730296419758
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": "edf6c1e7bf083658d572e2549c0af971f944ef5ad100d508ac70af5c6cbf3499",
+  "output_sha256": "7320fa2c8f2fa0b145e0f1c29acf89ab8125462bf23b55e1463fe5b392a1e8a5"
+}

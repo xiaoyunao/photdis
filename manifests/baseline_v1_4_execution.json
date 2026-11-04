@@ -119,8 +119,8 @@
     "qos": "debug",
     "timelimit": "00:30:00",
     "command": "scripts/run_baseline_v1_4_experiments.sh frozen",
-    "state": "PENDING_HELD",
-    "reason": "prepare dependency TIMEOUT; held for zero-ID audit; no scores"
+    "state": "CANCELLED_WHILE_PENDING",
+    "reason": "Slurm admin hold prevented release; replacement60799198"
   },
   "zero_audit_job": {
     "job_id": 60798891,
@@ -129,6 +129,17 @@
   },
   "zero_raw_job": {
     "job_id": 60799112,
-    "state": "SUBMITTED"
+    "state": "COMPLETED",
+    "exit_code": "0:0"
+  },
+  "assembly_job": {
+    "job_id": 60799167,
+    "state": "RUNNING",
+    "node": "nid004142"
+  },
+  "frozen_evaluation_replacement": {
+    "job_id": 60799198,
+    "state": "PENDING",
+    "dependency": "afterok:60799167"
   }
 }
