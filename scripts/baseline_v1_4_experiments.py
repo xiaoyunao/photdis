@@ -131,7 +131,8 @@ def distance_chunk(task):
 
 def score_distance(t,p):
     report={};test=t['split']==2
-    for name,mask in groups(t).items():
+    layers=groups(t);layers.update(supported=p['supported'],outside_support=~p['supported'],ambiguous=p['ambiguous'])
+    for name,mask in layers.items():
         use=test&mask;ga=use&t['parallax_eligible'];v={}
         for kind in ['Gaia','specdis','spdist','chosen']:
             tr=truth(t,kind);v[kind]=metrics(p['mu'][use],tr[use])

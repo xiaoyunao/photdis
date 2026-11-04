@@ -199,6 +199,10 @@ def main():
         class_independent_distance=np.array_equal(t['class_eligible'],t['class_train_eligible']),
         parent_all26000=parent['n']==26000 and parent['matched']==26000,
         has_new_cal=bool(np.any(t['class_eligible']&(t['split']==1))),has_new_test=bool(np.any(t['class_eligible']&(t['split']==2))))
+    for kind in ['specdis','spdist']:
+        good=t[kind+'_valid']
+        checks[kind+'_finite_positive_distance_error']=bool(np.all(np.isfinite(t[kind+'_distance'][good])&(t[kind+'_distance'][good]>0)&np.isfinite(t[kind+'_sigma_mu'][good])&(t[kind+'_sigma_mu'][good]>0)))
+    checks['signed_gaia_finite_error']=bool(np.all(np.isfinite(t['p_corr'][t['parallax_eligible']])&(t['gaia_parallax_error'][t['parallax_eligible']]>0)))
     report=dict(candidate_rows=n,unique_reference_rows=len(first),matched_mws=nsource,unmatched_mws_identities=int((match<0).sum()),ambiguous_native_gaia_ids=len(native_multi_source_ids),vac_only_native=len(xs),native_collision_rows=int(native_collision.sum()),
         geometry_disagreement_rows=int(bad_geometry.sum()),historical_rows=int(historical.sum()),vac_audit=vacstats,parent=parent,
         new_split_counts={str(k):int((t['split']==k).sum()) for k in range(4)},
