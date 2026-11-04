@@ -37,7 +37,7 @@ def main():
     fig.savefig(out/'gaia.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(11,4),layout='constrained')
     coverage=d['parent_coverage']['groups'];bins=['r:0:18','r:18:20','r:20:22','r:22:25']
-    for suffix,label in [('', 'All parent'),(':no_W1','No usable W1')]:
+    for suffix,label in [('', 'DECam parent'),(':no_W1','No usable W1')]:
         axes[0].plot(range(4),[coverage[k+suffix]['weighted_i_fraction'] for k in bins],'o-',label=label)
     axes[0].set(xticks=range(4),xticklabels=['<18','18–20','20–22','22–25'],ylim=(0,1),ylabel='Original-weight i availability',xlabel='r magnitude');axes[0].legend()
     cov=d['assembly']['coverage']['2'];bins=['bright:all','18_20:all','20_22:all','22_25:all']
@@ -56,10 +56,18 @@ def main():
         lines.append(f"| {n} | {fmt(c['average_precision'])} | {fmt(c['recall'])} | {fmt(c['known_contamination'])} | {v['n']} | {fmt(v.get('tail_1'))} | {fmt(v.get('coverage68'))} | {r['full_Gaia']['n']} |")
     lines+=['','Classification: old/new comparisons are nominal scores; matched grz/griz uses shared four-band Sobol128 marginalization. Each workpoint is fixed by cal at the same2% dwarf budget; no test tuning.',
             '','Expanded training adds only new train identities to historical training. Each old/new pair has identical new evaluation identities. Matched grz/griz has identical training/evaluation identities and hyperparameters.',
+            '', 'A/B/C use different WISE-availability subsets: compare scores within each old/new pair, not across these subsets. The matched grz/griz pair uses exactly the same stars.',
+            '', 'The original26000 probability sample covers the southern DECam parent; northern rows are outside this i-band coverage estimate.',
             '', '## Validation limits','',d['validation_limits'],
             '', 'Gaia, SpecDis and SPDist scores are retained separately in the result manifest. The chosen training-distance recipe remains Gaia anchors then SpecDis; SPDist is a separate check.',
             '', 'Reference-selected population fractions do not estimate parent purity. Zero-ID associations with unknown epochs are flagged, use a0.5arcsec threshold and2arcsec ambiguity veto; systematic matching risk remains.',
             '', 'Figures: classification.png, distance.png, gaia.png, coverage.png under figures/baseline_v1_4. Scientific interpretation and visual inspection must be completed before final delivery.','']
+    lines+=['## Actual faint reference support','', '| Split | r / WISE | Class labels | Evolved | Chosen distance | SpecDis | SPDist | Gaia likelihood |', '|---|---|---:|---:|---:|---:|---:|---:|']
+    for split,label in [('1','cal'),('2','test')]:
+        for group in ['18_20:no_W1','20_22:all','22_25:all']:
+            c=d['assembly']['coverage'][split][group]
+            lines.append(f"| {label} | {group} | {sum(c['classes'].values())} | {c['classes']['1']} | {c['distance']} | {c['specdis']} | {c['spdist']} | {c['gaia']} |")
+    lines+=['','Zero-count cells are unvalidated. Sparse counts are descriptive evidence, not a general accuracy guarantee.','']
     (ROOT/'docs/baseline_v1_4_result.md').write_text('\n'.join(lines))
 
 if __name__=='__main__':main()
