@@ -9,11 +9,11 @@
   "remote_command": "cd /pscratch/sd/y/yunao/photdis_pipeline && sbatch --parsable scripts/run_baseline_v1_4_extract.sh",
   "transport_stopped": "Only local unresponsive SSH PID32258 terminated; no remote job cancelled. Must query queue/accounting/logs before resubmission.",
   "heartbeat_id": "photdis-v1-4",
-  "heartbeat_status": "ACTIVE",
-  "interval_minutes": 30,
+  "heartbeat_status": "DELETED",
+  "interval_minutes": null,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
-  "updated_utc": "2026-11-04T06:18:07.226946+00:00",
-  "next": "Continue unique60779401 extraction. Source evidence sidecar is complete; do not overwrite or rerun it. Assemble native references with zero-ID positional/epoch matching, conflict exclusion, VAC-only and Legacy identity audit before any frozen-model scoring or new training.",
+  "updated_utc": "2026-11-04T06:37:48.053844+00:00",
+  "next": "Wait for explicit user check/continuation. Do not recreate heartbeat or automatically resubmit. Existing60779401 continues until completion/time limit; on next user request inspect terminal state/checkpoints before any resume.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60778259",
@@ -29,7 +29,7 @@
   },
   "active_command": "sbatch --parsable scripts/run_baseline_v1_4_extract.sh",
   "compute_node": "nid005050",
-  "observed_elapsed": "00:28:28",
+  "observed_elapsed": "01:29:31",
   "startup_code_commit": "843eead1fa7418c751af3377df279e7276316cef",
   "measured_rate": {
     "start_epoch": 1793763053.486624,
@@ -41,10 +41,10 @@
   },
   "reference_input_bytes": 16156310400,
   "south_sweep_files": 1600,
-  "observation_epoch": 1793772980.0845428,
-  "completed_sweep_markers": 261,
-  "remaining_sweeps": 1339,
-  "latest_checkpoint_epoch": 1793770501.0,
+  "observation_epoch": 1793774177.064172,
+  "completed_sweep_markers": 342,
+  "remaining_sweeps": 1258,
+  "latest_checkpoint_epoch": 1793774169.0,
   "initial_debug_observed_disk_read_bytes": 5257554509,
   "source_audit": {
     "step": "60779401.0",
@@ -56,5 +56,18 @@
     "qualified_class_no_gaia_rows": 9009,
     "class_conflict_identities": 113,
     "target_multi_gaia_identities": 1
-  }
+  },
+  "previous_interval_minutes": 30,
+  "manual_follow_up": true,
+  "recent_sweep_counts": {
+    "10_minutes": 37,
+    "30_minutes": 118,
+    "60_minutes": 218
+  },
+  "remaining_processing_hours_estimate": [
+    5.3,
+    5.8
+  ],
+  "estimate_scope": "Sweep extraction only; recent30/60min count throughput, excluding queue delays and later scientific work.",
+  "current_allocation_expected_limit_beijing": "2026-11-04T17:06:47+08:00"
 }

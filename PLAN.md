@@ -6,6 +6,11 @@ Authorized2026-11-04 by latest GPT Pro review; see docs/pro_review_5cf8f6d.md
 and docs/baseline_v1_4_protocol.md. New scope supersedes historical no-new-fit
 restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 
+Follow-up mode: MANUAL at user request2026-11-04. Heartbeat photdis-v1-4
+DELETED; wait for user checks, do not recreate scheduling or auto-resubmit.
+Existing60779401 remains running; current4h allocation ends approximately17:07
+Beijing. After that, inspect terminal state/checkpoints when the user asks.
+
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
 - [x] Syntax/shell checks and13 focused tests pass.
@@ -15,16 +20,16 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
   still to scan. Unknown submission/queue waiting never satisfies this condition.
 - [x] Earlier uncertain attempt absent from queue/accounting/logs. Confirmed
   regular60778125 was pending, cancelled; debug60778259 ran then hit30min limit.
-- [x] Startup/rate verified; heartbeat photdis-v1-4 ACTIVE every30minutes.
+- [x] Startup/rate verified; former heartbeat now deleted by user request.
   Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
   and52/1600 sweep markers. Unique regular4h resume60779401 now RUNNING on
-  nid005050;261/1600 markers at14:16 Beijing; existing checkpoints reused.
+  nid005050;342/1600 markers at14:36 Beijing; existing checkpoints reused.
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
   rows persisted. These are raw inputs, not qualified reference counts.
 - [x] Fixed balanced optical classifier uses the same explicit bands/noise and
   prior class-weight recipe;16 focused tests pass. No production fit yet.
-- [ ] Finish1600-sweep extraction (261 markers at14:16 Beijing; no model scores).
+- [ ] Finish1600-sweep extraction (342 markers at14:36 Beijing; no model scores).
 - [x] Independent source-evidence audit implementation and16 focused tests ready;
   class/Gaia/VAC eligibility remains separate from photometric admission.
 - [x] Source audit step60779401.0 COMPLETED0:0 in79s;8 actual checks pass.
@@ -36,7 +41,7 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [ ] One fixed-algorithm new-data comparison, same evaluation identities.
 - [ ] Fixed26000 parent i coverage with original sample weights.
 - [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.
-- [ ] Actual artifact checks, inspected figures, final result, git/sync; stop heartbeat.
+- [ ] Actual artifact checks, inspected figures, final result and git/sync (heartbeat already deleted).
 
 No scientific improvement has been established yet. Raw extraction is not final
 validation. Whole legacy-overlapping10-degree cells are excluded from new cal/test.

@@ -6,9 +6,10 @@
   matched grz/griz classification+distance test. This explicitly supersedes
   historical no-new-fit limits for these experiments only. Preserve deployed v1;
   no family search, full-catalog prediction rerun, threshold retuning or subagents.
-  Only after confirming RUNNING and measuring slow progress may NERSC work be
-  followed every30minutes. Unknown submission/queue waiting is insufficient. Resume milestones
-  after extraction. Raw inventory alone does not complete the objective.
+  User switched to manual follow-up2026-11-04: heartbeat photdis-v1-4 was deleted.
+  Wait for explicit user progress checks; do not recreate monitoring or automatically
+  resubmit jobs. Existing60779401 continues through its allocation. Resume project
+  milestones when the user requests continuation; raw inventory is not completion.
 
 - Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
   class entry releases6287 A training labels incl395 evolved/508 no-W1.

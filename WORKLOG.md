@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-04 — user stops scheduling; manual progress snapshot
+
+- User requested deletion of scheduled checks and future manual follow-up only.
+  automation_update(mode=delete,id=photdis-v1-4) returned deleteStatus=deleted.
+  Existing NERSC computation continues; no Slurm cancellation or submission.
+-14:36:17 Beijing:60779401 RUNNING1:29:31 on nid005050,342/1600 markers
+  (21.4%), latest marker8s old. No error in log tail. Recent10/30/60minutes
+  produced37/118/218 sweeps;1258 remain. Rough remaining sweep-only processing
+  estimate5.3–5.8h, excluding queue delays and later training/validation.
+- Current4h allocation reaches limit about17:06:47 Beijing. After expiry there
+  is no automatic resubmission; wait for the user to request a check/continuation.
+- Updated AGENTS/PLAN/execution manifest to make manual control persistent.
+  Validation: actual automation deletion and queue/accounting/checkpoint reads;
+  documentation/state-only change, no new scientific tests or model changes.
+
 ## 2026-11-04 — allocated source evidence audit complete
 
 - Ran srun step60779401.0 inside existing nid005050 allocation,2CPUs with overlap;
