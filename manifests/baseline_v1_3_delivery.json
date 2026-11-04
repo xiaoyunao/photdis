@@ -7,10 +7,13 @@
   "focused_tests": 18,
   "inspected_figures": 3,
   "files": {
-    "docs/baseline_v1_3_result.md": "f8bbd04fa0826bf2b1eabcbbf5081aeda84f267f64ea34b7c086d4b70e1ef392",
+    "docs/baseline_v1_3_result.md": "c3f77310b681dbfa5301d77d1468de16d3767b3179762e86ec5bbcce45420277",
     "manifests/baseline_v1_3_result.json": "01c5c771815178e9f613926be6289a3ab9fd112f4ef5c04c6ac5e61acfdd3107",
     "figures/baseline_v1_3/03_candidate_risk.png": "01b93f87a630593a4b7614275c1ce971addfb2427d1c37ee6dbd4b4ecd80aa49",
     "figures/baseline_v1_3/01_label_coverage.png": "a1374a58450c38eef10e30956a99082b9a42df5f5e7b58d13e3bbe50f70ca88b",
-    "figures/baseline_v1_3/02_fixed_forest_ap.png": "bc41191e25176603486bb0557bf5f88e4e9f38ea5c7bf456776ea014bdeafb03"
-  }
+    "figures/baseline_v1_3/02_fixed_forest_ap.png": "bc41191e25176603486bb0557bf5f88e4e9f38ea5c7bf456776ea014bdeafb03",
+    "manifests/baseline_v1_3_audit.json": "1f17d9625a6ddfcbf908c0899c6d42b7df26ddf13915f2c94984e343be6ced30"
+  },
+  "weight_frozen_audit_checks": 24,
+  "weight_audit_job": 60776085
 }

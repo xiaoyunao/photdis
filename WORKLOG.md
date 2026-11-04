@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-04 — final training-weight and freeze audit
+
+- Allocated audit60776085 produced24 passing checks, per-object weights and hashes.
+  All six old experts/forests match frozen v1.2 fit manifests; no old model changed.
+- Local result SHA matches audit source SHA; cal budgets and selected class totals
+  independently checked. Updated candidate source-specific table (Gaia25,
+  SPECDIS122,SPDist132), preserving different reference selection limitations.
+- One NERSC status connection timed out; bounded replacement retrieved completed
+  audit JSON successfully. No repeated fit or duplicate job.
+- Final sync includes audited weights metadata; large artifacts stay on NERSC.
+
 ## 2026-11-04 — v1.3 actual results and delivery
 
 - Allocated60775835 COMPLETED0:0;93 checks pass. A/B/C add6287/5779/5232

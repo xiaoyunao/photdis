@@ -64,6 +64,9 @@ def main():
     lines+=['','完整chosen参照147颗：主分支/混合严重错误59.18%，同星wide49.66%。',
       '该候选未通过相对比较条件；目前不推荐替代wide，保留完整PDF与状态，结束这个固定阈值尝试。',
       '这与真实演化星子集中的局部改善可以同时成立，因为应用筛选仍包含误入对象。']
+    lines+=['','|距离参照|N|wide严重错误|混合严重错误|主分支严重错误|','|---|---:|---:|---:|---:|']
+    for ref in ['Gaia','specdis','spdist']:
+        e=d['distances'][ref];lines.append(f"|{ref}|{e['main']['n']}|{fmt(e['wide'].get('tail_1'))}|{fmt(e['mixture'].get('tail_1'))}|{fmt(e['main'].get('tail_1'))}|")
     lines+=['','同一预测组包含误入的矮星、其他合格恒星／过渡类、未知对象；Gaia/SPECDIS/SPDist分别评分。',
       '完整PDF与多解继续保留，混合分布的区间覆盖见机器结果；本轮没有后验调阈值。',
       '![候选风险](../figures/baseline_v1_3/03_candidate_risk.png)','', '### 同组完整Gaia检验','',
@@ -75,6 +78,8 @@ def main():
       '“收益小”仅指2%工作点（114到115颗），不能概括W2无用。','',
       f"本轮实际检查{r['validation']['n_checks']}项通过；本地18项聚焦测试通过。模型、身份与新参照表哈希记录于机器清单。",
       '[协议](baseline_v1_3_protocol.md) · [完整Pro建议](pro_review_ebf37f8.md) · [机器结果](../manifests/baseline_v1_3_result.json)']
+    lines+=['','补充权重与冻结模型审计24项通过：逐对象训练权重另存NERSC，旧六套距离专家与旧森林哈希均未改变。',
+      '[权重与冻结审计](../manifests/baseline_v1_3_audit.json)。']
     (ROOT/'docs/baseline_v1_3_result.md').write_text('\n'.join(lines)+'\n')
 
 if __name__=='__main__':main()
