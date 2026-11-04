@@ -6,7 +6,8 @@
   matched grz/griz classification+distance test. This explicitly supersedes
   historical no-new-fit limits for these experiments only. Preserve deployed v1;
   no family search, full-catalog prediction rerun, threshold retuning or subagents.
-  Long allocated NERSC work may be followed every30minutes; resume milestones
+  Only after confirming RUNNING and measuring slow progress may NERSC work be
+  followed every30minutes. Unknown submission/queue waiting is insufficient. Resume milestones
   after extraction. Raw inventory alone does not complete the objective.
 
 - Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent

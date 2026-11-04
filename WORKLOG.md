@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-04 — correct premature scheduling
+
+- User correctly rejected enabling a heartbeat before confirmed execution.
+- automation_update returned PAUSED for photdis-v1-4. No scheduled continuation
+  remains active for this experiment. Updated PLAN/AGENTS/execution state.
+- Activation now requires a confirmed RUNNING job and measured progress/timing
+  showing slow remaining work; unknown submission or queue waiting is insufficient.
+- Direct recheck: queue empty, sacct from NERSC-local2026-11-03 has no matching
+  job; no extraction log or output directory exists. Prior submission did not
+  leave evidence of scheduler acceptance. Fixed query start date (Asia date was
+  in the future relative to NERSC). Proceed with one confirmed submission.
+
 ## 2026-11-04 — v1.4 code synced; submission response unavailable
 
 - Code48574dc verified identical local/origin/NERSC by scripts/sync.py push.

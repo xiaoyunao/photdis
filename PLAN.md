@@ -10,7 +10,10 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
 - [x] Syntax/shell checks and13 focused tests pass.
 - [x] Code48574dc synced and verified on all three endpoints;13 tests pass.
-- [x] ACTIVE30-minute heartbeat photdis-v1-4 attached to this chat.
+- [x] Premature heartbeat photdis-v1-4 PAUSED at user correction.
+- [ ] Enable30-minute checks ONLY after a confirmed RUNNING job and observed
+  progress/timing demonstrate genuinely slow remaining work. Unknown submission
+  or queue waiting does not satisfy this condition.
 - [ ] Confirm first submission: SSH backend became unresponsive; job ID UNKNOWN.
   Inspect squeue/sacct/logs before any resubmission; see execution manifest.
 - [ ] Finish allocated extraction (no raw/scientific result available yet).
