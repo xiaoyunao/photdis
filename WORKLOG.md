@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-04 — actual allocated startup and optical model interface
+
+- Confirmed regular job60778125 submitted, but PENDING(Resources) with no start
+  estimate. Cancelled only while pending; submitted debug60778259 with30min limit
+  for startup/rate measurement, using the same resumable extraction code.
+-60778259 RUNNING on nid004181. At elapsed1:38, sstat records2,029,234,765bytes
+  read and~2GB RSS; freeze.json exists. No completed source/sweep checkpoint yet.
+  Heartbeat remains PAUSED: this is startup evidence, not a speed estimate.
+- Added optical_v1_4.py: explicit[G,R,I,Z] model metadata, matched colors, shared
+ 4D Sobol128 and shared g error in effective luminosity; old5D APIs unchanged.
+- py_compile and20 focused tests pass, including color covariance, identity/chunk
+  invariance, model serialization, normalized PDFs and legacy photometry/model tests.
+- Next: verify completed extraction artifacts/rate, then choose monitoring based
+  on observed remaining work. Full reference assembly/scientific results pending.
+
 ## 2026-11-04 — correct premature scheduling
 
 - User correctly rejected enabling a heartbeat before confirmed execution.

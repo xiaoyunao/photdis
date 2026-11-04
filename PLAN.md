@@ -14,8 +14,10 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [ ] Enable30-minute checks ONLY after a confirmed RUNNING job and observed
   progress/timing demonstrate genuinely slow remaining work. Unknown submission
   or queue waiting does not satisfy this condition.
-- [ ] Confirm first submission: SSH backend became unresponsive; job ID UNKNOWN.
-  Inspect squeue/sacct/logs before any resubmission; see execution manifest.
+- [x] Earlier uncertain attempt absent from queue/accounting/logs. Confirmed
+  regular60778125 was pending, cancelled; debug60778259 now RUNNING on nid004181.
+- [ ] Finish startup/speed verification; heartbeat remains PAUSED pending evidence.
+- [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [ ] Finish allocated extraction (no raw/scientific result available yet).
 - [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.

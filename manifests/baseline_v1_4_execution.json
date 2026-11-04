@@ -2,10 +2,10 @@
   "version": "baseline_v1_4",
   "code_commit": "48574dcaec6e8f413b3a7c524f2edfa68d1cddb4",
   "code_sync": "local_origin_nersc_verified_equal",
-  "submission_status": "no_prior_job_found_queue_accounting_logs",
-  "job_id": null,
+  "submission_status": "RUNNING_startup_benchmark",
+  "job_id": "60778259",
   "job_name": "baseline_v1_4_extract",
-  "submission_attempts": 1,
+  "submission_attempts": 3,
   "remote_command": "cd /pscratch/sd/y/yunao/photdis_pipeline && sbatch --parsable scripts/run_baseline_v1_4_extract.sh",
   "transport_stopped": "Only local unresponsive SSH PID32258 terminated; no remote job cancelled. Must query queue/accounting/logs before resubmission.",
   "heartbeat_id": "photdis-v1-4",
@@ -13,6 +13,15 @@
   "interval_minutes": 30,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
   "updated_utc": "2026-11-04T03:03:13.259299+00:00",
-  "next": "Confirm scheduler acceptance without duplicate submit, resume allocated extraction, then protocol milestones; raw extraction alone is not completion.",
-  "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04."
+  "next": "Measure actual processing speed and inspect first outputs before deciding whether to enable30-minute checks.",
+  "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
+  "previous_confirmed_job": {
+    "id": "60778125",
+    "state": "CANCELLED_WHILE_PENDING",
+    "reason": "regular queue had no start estimate; replaced with short debug validation"
+  },
+  "active_command": "sbatch --parsable -q debug -t 00:30:00 scripts/run_baseline_v1_4_extract.sh",
+  "compute_node": "nid004181",
+  "observed_elapsed": "00:01:38",
+  "observed_disk_read_bytes": 2029234765
 }
