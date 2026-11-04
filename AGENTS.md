@@ -1,5 +1,10 @@
 # Project instructions
 
+- Active authorized follow-up: v1.3 per docs/baseline_v1_3_protocol.md. Separate
+  label eligibility, inventory actual coverage, conditional fixed-forest data
+  comparison and frozen B/forest predicted-evolved candidate. No subagents,
+  distance refit, full-catalog inference or parameter search.
+
 - Latest completed experiment: baseline v1.2; docs/baseline_v1_2_result.md.
   2364 actual checks,16 focused tests and10 inspected figures. Fixed classifiers
   and cal workpoints complete; retain v1 deployment. C evolved recall35–46%,

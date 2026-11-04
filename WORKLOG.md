@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-04 — register Pro follow-up on independent label entry
+
+- Read complete latest8853-character review of ebf37f8; archived original text.
+- Recovered clean local/origin/NERSC ebf37f8; NERSC authentication valid.
+- Inspected preparation/classification/score/Gaia code: v0 reference entrance
+  includes DESI matches before distance eligibility, enabling a direct audit.
+- Added v1.3 protocol; updated PLAN/AGENTS. Keep distance experts and cal/test
+  geography fixed; only fixed forest data comparison if added labels exist.
+- Next implement allocated inventory and frozen prediction-defined candidate.
+
 ## 2026-11-03 — v1.2 final evidence and visual review
 
 - All ten figures inspected: readable labels/legends, explicit out-of-range CMD

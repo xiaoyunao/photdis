@@ -1,5 +1,17 @@
 # PLAN
 
+## Active objective: v1.3 independent label entry and fixed evolved candidate
+
+Source:docs/pro_review_ebf37f8.md; protocol:docs/baseline_v1_3_protocol.md.
+- [ ] Version independent classification/distance eligibility and count added evidence.
+- [ ] Map actual parent/reference coverage and remaining faint/no-WISE gaps.
+- [ ] Conditional fixed-forest data-only comparison on matched cal/test IDs.
+- [ ] Frozen B/forest predicted-evolved candidate, all contaminants and Gaia checks.
+- [ ] Actual validation, report/figures, memory and three-endpoint sync.
+
+No new distance experts/full-catalog predictions; preserve all historical results.
+
+
 ## Completed objective: baseline v1.2 color separability and distance decisions
 
 Source:docs/pro_review_dbeac65.md; protocol:docs/baseline_v1_2_protocol.md.
