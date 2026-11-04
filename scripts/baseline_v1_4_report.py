@@ -64,9 +64,9 @@ def main():
             '', 'Figures: classification.png, distance.png, gaia.png, coverage.png under figures/baseline_v1_4. Scientific interpretation and visual inspection must be completed before final delivery.','']
     lines+=['## Actual faint reference support','', '| Split | r / WISE | Class labels | Evolved | Chosen distance | SpecDis | SPDist | Gaia likelihood |', '|---|---|---:|---:|---:|---:|---:|---:|']
     for split,label in [('1','cal'),('2','test')]:
-        for group in ['18_20:no_W1','20_22:all','22_25:all']:
-            c=d['assembly']['coverage'][split][group]
-            lines.append(f"| {label} | {group} | {sum(c['classes'].values())} | {c['classes']['1']} | {c['distance']} | {c['specdis']} | {c['spdist']} | {c['gaia']} |")
+        for group in ['r18_20:no_W1','r20_22','r22_25']:
+            c=d['eligibility']['groups'][split][group]
+            lines.append(f"| {label} | {group} | {sum(c['classes'].values())} | {c['classes']['1']} | {c['chosen_distance']} | {c['specdis']} | {c['spdist']} | {c['parallax']} |")
     lines+=['','Zero-count cells are unvalidated. Sparse counts are descriptive evidence, not a general accuracy guarantee.','']
     lines+=['## Priority same-star comparisons','',
             '| Model | Group | Known class N | Evolved N | AP | Recall | Known contamination | Distance N | Tail >1mag | Coverage68 |',

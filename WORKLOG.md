@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-04 — frozen references and convergence-controlled Gaia scores
+
+- Assembly60799167 COMPLETED0:0 in6:19;3565499 unique candidates,11
+  actual checks pass.355 VAC-only native identities,8 collision rows excluded.
+  Reference hash cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78.
+- Frozen evaluation60799198 RUNNING. Independent allocated eligibility step
+  completed: new train138080 class labels/153403 distance training; test42964
+  class labels and49327 Gaia including4139 negative. Counts distinguish raw
+  VAC-quality coverage from final photometric/identity admission.
+- Frozen A scores show16-vs8-order PIT maxdifference0.000340, but log-density
+  maxdifference1.718 on demanding checks. Added separate resumable Gaia numeric
+  refinement:16/32/64/128 convergence plus adaptive integral for unresolved
+  densities and analytic-parallax-CDF Gaussian convolution for unresolved PIT.
+  Absolute precision target1e-5. Original models/predictions/results untouched.
+- Tests cover negative observations, S/N10000 uniform-M analytic limit, and
+  multibin distributions against adaptive integrals. Refine every stage with
+  the same method before final scientific comparisons; retain correction sizes.
+- Continue fixed new-data and matched experiments after frozen stage and Gaia
+  numeric validation; no scheduling, model search or deployment change.
+
 ## 2026-11-04 — diagnose zero-ID coverage and continue scientific assembly
 
 - Preparation60798530 TIMEOUT at20:57:20 Beijing after all17992 targeted

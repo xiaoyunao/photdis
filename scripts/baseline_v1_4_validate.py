@@ -6,6 +6,8 @@ from baseline_v1_4_experiments import *
 def main():
     require_compute();checks={}
     assembly=json.loads((OUT/'assembly.json').read_text())
+    eligibility=json.loads((OUT/'eligibility.json').read_text())
+    checks['eligibility_reference_hash']=eligibility['reference_sha256']==assembly['reference_sha256']
     checks.update({'assembly:'+k:bool(v) for k,v in assembly['checks'].items()})
     checks['reference_hash']=sha(OUT/'references.npz')==assembly['reference_sha256']
     with np.load(OUT/'references.npz') as z:
@@ -65,7 +67,7 @@ def main():
         compact[name]=dict(classification={variant:dict(v,groups={k:g for k,g in v['groups'].items() if not k.startswith('cell')}) for variant,v in m['classification'].items()},
             distance={k:v for k,v in m['distance']['groups'].items() if not k.startswith('cell')},n_distance=m['distance']['n'],
             numerical_checks=m['distance']['checks'],training=m['training'])
-    save_json(OUT/'result.json',dict(assembly=assembly,parent_coverage=json.loads((OUT/'parent_coverage.json').read_text()),
+    save_json(OUT/'result.json',dict(assembly=assembly,eligibility=eligibility,parent_coverage=json.loads((OUT/'parent_coverage.json').read_text()),
         models=compact,validation=dict(n_checks=len(checks),all_passed=True),
         deployment='Preserve v1. Fixed validation only; no model search or full-catalog rerun.',
         validation_limits='New geometric reference-selected sky.22–25 claims require actual truth counts; unrepresented cells remain unvalidated.'))

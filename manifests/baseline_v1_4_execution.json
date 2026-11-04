@@ -134,12 +134,20 @@
   },
   "assembly_job": {
     "job_id": 60799167,
-    "state": "RUNNING",
-    "node": "nid004142"
+    "state": "COMPLETED",
+    "node": "nid004142",
+    "elapsed": "00:06:19",
+    "exit_code": "0:0"
   },
   "frozen_evaluation_replacement": {
     "job_id": 60799198,
-    "state": "PENDING",
-    "dependency": "afterok:60799167"
+    "state": "RUNNING",
+    "dependency": "afterok:60799167",
+    "node": "nid004142"
+  },
+  "eligibility_audit": {
+    "allocation_job": 60799198,
+    "state": "COMPLETED",
+    "reference_sha256": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78"
   }
 }
