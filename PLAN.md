@@ -1,67 +1,34 @@
 # PLAN
 
-## Active objective: v1.4 broader references and native i experiment
+## Completed objective: v1.4 broader references and native i experiment
 
-Authorized2026-11-04 by latest GPT Pro review; see docs/pro_review_5cf8f6d.md
-and docs/baseline_v1_4_protocol.md. New scope supersedes historical no-new-fit
-restrictions ONLY for registered fixed-data/griz experiments; retain v1.
+Scope: docs/pro_review_5cf8f6d.md and docs/baseline_v1_4_protocol.md.
+Result: docs/baseline_v1_4_result.md; delivery: manifests/baseline_v1_4_delivery.json.
 
-Follow-up mode: MANUAL at user request2026-11-04. Heartbeat photdis-v1-4
-DELETED; wait for user checks, do not recreate scheduling or auto-resubmit.
-User explicitly authorized one17:10 scheduled resume; this single-use task is
-now deleted.60779401 ended TIMEOUT at17:06:53 with879/1600 checkpoints.
-Continuation60787983 COMPLETED0:0 at19:40:33 Beijing, all1600 sweeps complete.
-Raw extraction reports3590389 selected records; scientific assembly remains pending.
-User now explicitly requests continuing all GPT Pro milestones autonomously.
-Do not resubmit completed extraction or recreate scheduled monitoring.
-Assembly60799167 completed;3565499 unique reference candidates,11 actual
-checks pass. New train138080 class labels/153403 distance training; new test
-42964 class labels. Frozen60799198 COMPLETED0:0 in11:25; refinement60799493
-COMPLETED0:0 in11:07. Gaia numerical convergence audit
-found a few log-density discrepancies; separate refinement sidecars preserve
-original PDFs and all predictions. Apply the same refinement to all models.
-Unique controls60799511 RUNNING on nid006837, regular4h: expanded then
-matched, each with refinement, then final validation. Expanded/refinement done;
-matched grz done and griz running. Continue through actual final delivery.
+- [x] Full MWS/SpecDis/SPDist and1600 southern sweeps; original extraction hashes retained.
+- [x] Exact IDs, zero IDs, duplicates/conflicts, VAC-only and targeted epoch-aware matching.
+- [x] Independent class/distance/weak-parallax eligibility; new geometry and historical identity isolation.
+- [x] Original26000 parent i/WISE coverage with original weights and raw flux provenance.
+- [x] Frozen v1/v1.3 ABC scores on genuinely new sky before any new fit.
+- [x] One fixed-algorithm historical-plus-new-data ABC comparison, same evaluation identities.
+- [x] Same-ID grz/griz class and distance experiments with shared4D Sobol128 errors.
+- [x] Convergence-controlled full signed Gaia scores in separate immutable sidecars.
+- [x]3331 actual artifact checks,26 focused tests and5 visually inspected scientific figures.
+- [x] Scientific interpretation, persistent memory and final milestone prepared for safe three-endpoint sync.
 
-- [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
-- [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
-- [x] Syntax/shell checks and13 focused tests pass.
-- [x] Code48574dc synced and verified on all three endpoints;13 tests pass.
-- [x] Premature heartbeat was PAUSED; re-enabled ONLY after60778259 RUNNING
-  and observed45.25s/473.68MB input throughput (~10.47MB/s), with1600 sweeps
-  still to scan. Unknown submission/queue waiting never satisfies this condition.
-- [x] Earlier uncertain attempt absent from queue/accounting/logs. Confirmed
-  regular60778125 was pending, cancelled; debug60778259 ran then hit30min limit.
-- [x] Startup/rate verified; former heartbeat now deleted by user request.
-  Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
-  and52/1600 sweep markers.60779401 then reached4h TIMEOUT with879 markers;
-  single requested continuation60787983 completed all1600 sweeps.
-- [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
-- [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
-  rows persisted. These are raw inputs, not qualified reference counts.
-- [x] Fixed balanced optical classifier uses the same explicit bands/noise and
-  prior class-weight recipe;16 focused tests pass. No production fit yet.
-- [x] Finish1600-sweep raw extraction:1600 markers and completion JSON verified;
-  3561828221 scanned rows/3590389 selected records, no final labels/model scores.
-- [x] Independent source-evidence audit implementation and16 focused tests ready;
-  class/Gaia/VAC eligibility remains separate from photometric admission.
-- [x] Source audit step60779401.0 COMPLETED0:0 in79s;8 actual checks pass.
-  Sidecar/manifest source_evidence retained.9009 qualified-class rows lack Gaia ID;
-  113 class-conflicting identities and1 multi-Gaia target require assembly handling.
-- [x] Finish native coverage/identity assembly, zero-ID matching and VAC-only audit.
-- [x] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
-- [x] Evaluate frozen v1 and fixed classifier on genuinely new sky (Gaia numerical refinement complete).
-- [x] One fixed-algorithm new-data comparison, same evaluation identities.
-- [x] Fixed26000 parent i coverage with original sample weights.
-- [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.
-- [ ] Actual artifact checks, inspected figures, final result and git/sync (heartbeat already deleted).
+Controls60799511 COMPLETED0:0 in34:36; final execution/validation manifest records
+all job outcomes. Local/GitHub/NERSC commit equality is checked by scripts/sync.py
+at delivery. Large catalogs, models and predictions remain on NERSC.
 
-No scientific improvement has been established yet. Raw extraction is not final
-validation. Whole legacy-overlapping10-degree cells are excluded from new cal/test.
-Preserve unknown/negative evidence and all raw i/WISE fluxes. Prioritize18–20 and
-available20–22; absent22–25 truth stays explicitly unvalidated. No family search,
-full-catalog predictions, candidate retuning or subagents.
+New train138080 class labels and153403 distance objects; new test42964 class
+labels. New data gives modest/mixed gains. Matched i improves AP0.2729 to0.2823
+and overall tails9.71% to9.57%, but evolved distance tails remain96.52% on1064
+same objects.18–20/no-W1 AP worsens; broad22–25 validation remains absent.
+Retain deployed v1. No model family search, candidate retuning, full-parent rerun,
+subagents or automatic deployment. Both automations remain deleted.
+
+Next scientific step: review these fixed results and authorize a new scope if
+needed; do not automatically extend experiments or resubmit completed jobs.
 
 ## Completed objective: v1.3 independent label entry and fixed evolved candidate
 

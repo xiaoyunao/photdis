@@ -161,7 +161,7 @@
   },
   "fixed_controls_job": {
     "job_id": 60799511,
-    "state": "RUNNING",
+    "state": "COMPLETED",
     "dependency": "afterok:60799493",
     "qos": "regular",
     "time_limit": "04:00:00",
@@ -173,12 +173,23 @@
       "validate"
     ],
     "reason": null,
-    "node": "nid006837"
+    "node": "nid006837",
+    "elapsed": "00:34:36",
+    "exit_code": "0:0",
+    "started_beijing": "2026-11-04T21:48:30+08:00"
   },
   "zero_vac_quality_audit": {
     "allocation_job": 60799511,
     "state": "COMPLETED",
     "qualified_zero_id_specdis": 0,
     "qualified_zero_id_spdist": 0
-  }
+  },
+  "phase_status": "COMPLETE",
+  "final_validation": {
+    "actual_checks": 3331,
+    "all_passed": true,
+    "focused_tests_passed": 26,
+    "inspected_figures": 5
+  },
+  "scheduled_monitoring": "disabled"
 }

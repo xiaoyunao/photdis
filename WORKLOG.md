@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-04 — v1.4 scientific delivery complete
+
+- Controls60799511 COMPLETED0:0 in34:36 on nid006837. Frozen, expanded and
+  matched class/distance experiments and signed-Gaia refinements all finished.
+- Final allocated validation:3331 actual artifact/identity/numerical checks pass;
+  26 focused tests pass. Same train/test controls and historical isolation hold.
+- Matched grz/griz: AP0.2729/0.2823; chosen tails9.71%/9.57% on43706 stars.
+ 18–20/no-W1 AP0.2247/0.2148; evolved distance tails97.46%/96.52% on1064.
+  Full Gaia45117 test incl3839 negatives: log density0.0198/0.0273, PIT extreme
+  fraction11.99%/12.18%. Modest/mixed gains; minority distance failure persists.
+- Saved result/validation/delivery manifests and docs/baseline_v1_4_result.md.
+  Generated and visually inspected5 figures; repaired count-axis padding,
+  explained absent no-W1 tiers, aligned paired colors, verified final image hashes.
+- README/AGENTS/PLAN updated to completed scope. Deployed v1, original freeze
+  and large remote products retained. No full-parent rerun, retuning or timers.
+- Commands: allocated controls/validation; bounded SSH sacct/log/result reads;
+  local report rendering, py_compile and diff checks. Final source commit uses
+  scripts/sync.py push with three-endpoint equality verification at delivery.
+- Remaining scientific limitations: zero-ID/epoch conservative exclusions,
+  reference-selection bias, sparse20–22 truth and absent broad22–25 validation.
+  Further experiments require a new authorized review; current scope is complete.
+
 ## 2026-11-04 — expanded controls completed; matched optical comparison running
 
 -60799511 completed all expanded A/B/C scores and convergence-controlled Gaia

@@ -4,12 +4,22 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Active phase: **v1.4 — broader DESI references, unseen sky and optional i**.
-[Registered protocol](docs/baseline_v1_4_protocol.md). Raw input extraction and
-fixed matched experiments are in progress; no new performance claim or deployment
-change. Large inputs and outputs remain on NERSC under data/baseline_v1_4.
+Latest completed experiment: **v1.4 — broader DESI references, unseen sky and optional i**.
+[Results and five inspected figures](docs/baseline_v1_4_result.md) ·
+[protocol](docs/baseline_v1_4_protocol.md) ·
+[actual results](manifests/baseline_v1_4_result.json) ·
+[delivery audit](manifests/baseline_v1_4_delivery.json).
+All 1600 sweeps are assembled with independent eligibility and new held-out sky.
+New train has 138,080 class labels and 153,403 distance-training objects; new test
+has 42,964 class labels. Fixed data controls give modest, mixed improvements.
+Matched grz/griz AP is 0.2729/0.2823 and severe distance tails 9.71%/9.57%, but
+same-star evolved tails remain 97.46%/96.52%. Preserve deployed v1.
+3331 actual artifact checks, 26 focused tests and five inspected figures complete.
+Large references, models and predictions remain on NERSC under data/baseline_v1_4.
+No full-parent prediction rerun or automatic deployment change; broad22–25
+validation remains absent. Further experiments require a new authorized scope.
 
-Latest completed experiment: **v1.3 — independent label eligibility and fixed candidate**.
+Previous completed experiment: **v1.3 — independent label eligibility and fixed candidate**.
 [Results and three figures](docs/baseline_v1_3_result.md) ·
 [protocol](docs/baseline_v1_3_protocol.md) · [actual evidence](manifests/baseline_v1_3_result.json).
 Independent class training releases6287 A labels (395 evolved,508 without W1).

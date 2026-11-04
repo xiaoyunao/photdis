@@ -23,17 +23,17 @@ def main():
         ax.set_xticks(np.arange(len(names)),labels,rotation=55,ha='right');ax.set_title(title);ax.set_ylim(0,1)
     fig.savefig(out/'classification.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(14,4),layout='constrained')
-    fig.suptitle('Chosen-distance agreement; compare within pairs, not across WISE tiers',fontsize=11)
+    fig.suptitle('Chosen-distance agreement; compare within pairs, not across WISE tiers\nOrange bars absent in B/C: these tiers require W1',fontsize=10)
     for ax,key,title in zip(axes,['tail_1','coverage68','coverage95'],['Distance |error| > 1 mag','Distance 68% coverage','Distance 95% coverage']):
         for group,offset,col in [('all',-.18,'#2878b5'),('no_W1',.18,'#e1812c')]:
             vals=[m[n]['distance'][group]['chosen'].get(key,np.nan) for n in names]
-            ax.bar(np.arange(len(names))+offset,vals,width=.34,label=group,color=col)
+            ax.bar(np.arange(len(names))+offset,vals,width=.34,label='all references' if group=='all' else 'no usable W1',color=col)
         ax.set_xticks(np.arange(len(names)),labels,rotation=55,ha='right');ax.set_title(title);ax.set_ylim(0,1)
     axes[0].legend();fig.savefig(out/'distance.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(11,4),layout='constrained')
     fig.suptitle('Gaia likelihood comparisons use identical stars within each pair',fontsize=11)
     for name,label in [('matched_grz','grz'),('matched_griz','griz')]:
-        ga=m[name]['distance']['all']['full_Gaia'];h=np.array(ga['pit_histogram']);axes[0].stairs(h/max(1,h.sum()),np.linspace(0,1,11),label=label)
+        ga=m[name]['distance']['all']['full_Gaia'];h=np.array(ga['pit_histogram']);axes[0].stairs(h/max(1,h.sum()),np.linspace(0,1,11),label=label,color='#888888' if name=='matched_grz' else '#2878b5')
     axes[0].axhline(.1,color='gray',ls='--');axes[0].set(xlabel='Full observed-parallax PIT',ylabel='Fraction',title='Matched Gaia evidence; negative parallaxes retained');axes[0].legend()
     v=[m[n]['distance']['all']['full_Gaia']['mean_log_density'] for n in names]
     axes[1].bar(np.arange(len(names)),v,color=colors);axes[1].set_xticks(np.arange(len(names)),labels,rotation=55,ha='right');axes[1].set_title('Mean full Gaia log predictive density (higher better)')
@@ -68,7 +68,7 @@ def main():
         for i,(value,count) in enumerate(zip(numeric,counts)):
             ax.text(i,(value if np.isfinite(value) else 0)+.025,count,ha='center',fontsize=8)
         ax.set_xticks(range(4),focus_labels,rotation=35,ha='right');ax.set_title(title);ax.set_ylim(0,1)
-    fig.suptitle('Each adjacent pair uses the same stars;20–22 has no held-out evolved labels',fontsize=11)
+    fig.suptitle('Each adjacent pair uses the same stars; 20–22 has no held-out evolved labels',fontsize=11)
     fig.savefig(out/'priority.png',dpi=170);plt.close(fig)
     lines=['# Baseline v1.4 results','', '## Scope and evidence','',
            f"All1600 sweeps extracted. Assembled {d['assembly']['unique_reference_rows']:,} unique reference rows before scientific eligibility; raw counts are not qualified labels.",
@@ -101,7 +101,7 @@ def main():
         v=m[n]['training'];c=v['class_train']+v.get('legacy_class_train',0);r=v['distance_train']+v.get('legacy_distance_train',0)
         composition='frozen historical' if n.startswith('frozen') else 'historical plus new' if n.startswith('expanded') else 'new only, matched i-usable'
         lines.append(f"| {n} | {c} | {r} | {composition} |")
-    lines+=['## Priority same-star comparisons','',
+    lines+=['','## Priority same-star comparisons','',
             '| Model | Group | Known class N | Evolved N | AP | Recall | Known contamination | Distance N | Tail >1mag | Coverage68 |',
             '|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
     for group in ['r18_20:no_W1','r20_22','r20_22:no_W1','r22_25']:
@@ -143,6 +143,53 @@ def main():
     for kind,v in d['zero_vac_quality'].items():
         lines.append(f"{kind}: {v['zero_id_rows']:,} raw rows without valid Gaia IDs; {v['quality_passing']} pass the fixed distance-quality recipe. These raw rows are retained; none supplies a lost qualified distance label.")
     lines.append('')
-    (ROOT/'docs/baseline_v1_4_result.md').write_text('\n'.join(lines))
+    lines+=['## Full observed-parallax checks','',
+            '| Model | Test N | Negative N | Mean log density | PIT <.05 | PIT >.95 | S/N-bin Brier |',
+            '|---|---:|---:|---:|---:|---:|---:|']
+    for n in names:
+        v=m[n]['distance']['all']['full_Gaia']
+        lines.append(f"| {n} | {v['n']} | {v['negative']} | {fmt(v['mean_log_density'])} | {fmt(v['low05'])} | {fmt(v['high95'])} | {fmt(v['snr_brier'])} |")
+    lines+=['','Signed observed parallaxes are never inverted into weak-distance labels. Observed and predicted S/N fractions (negative,0–5,5–10,10–20,>=20), selection-conditioned PIT, full predictive mean and per-object scores remain in the NERSC artifacts. Full PIT and likelihood are diagnostics on reference-selected sky; they do not establish an unbiased population calibration.','']
+    a=m['matched_grz'];b=m['matched_griz']
+    ac=a['classification']['marginalized']['groups'];bc=b['classification']['marginalized']['groups']
+    ad=a['distance'];bd=b['distance'];priority='r18_20:no_W1';faint='r20_22:no_W1'
+    def pct(x):return f'{100*x:.2f}%'
+    ca=ac['all'];cb=bc['all'];da=ad['all']['chosen'];db=bd['all']['chosen']
+    old_ap='/'.join(fmt(m['frozen_'+n]['classification']['nominal']['groups']['all']['average_precision']) for n in 'ABC')
+    new_ap='/'.join(fmt(m['expanded_'+n]['classification']['nominal']['groups']['all']['average_precision']) for n in 'ABC')
+    old_tail='/'.join(pct(m['frozen_'+n]['distance']['all']['chosen']['tail_1']) for n in 'ABC')
+    new_tail='/'.join(pct(m['expanded_'+n]['distance']['all']['chosen']['tail_1']) for n in 'ABC')
+    faintest=d['eligibility']['groups']['2']['r22_25']
+    summary=['## Main findings','',
+        '**Retain deployed v1.** The registered broader-reference and optional-i experiments are complete. The fixed tests establish modest and mixed changes, with severe unresolved evolved-star distance failures; they do not justify a general reliability claim or an automatic deployment change.','',
+        f"The new geometry supplies {d['eligibility']['groups']['0']['all']['class_labels']:,} class-training labels and {d['eligibility']['groups']['0']['all']['distance_training']:,} distance-training objects. New test has {d['eligibility']['groups']['2']['all']['class_labels']:,} class labels in frozen sky outside the historical fields.",'',
+        f'Adding the new training data with fixed algorithms raises A/B/C classification AP from {old_ap} to {new_ap}; chosen-distance severe tails decrease only modestly, from {old_tail} to {new_tail}. The priority18–20/no-W1 interval coverage does not improve in this data-only control.','',
+        f"On the matched i-usable stars, adding i changes marginalized class AP from{fmt(ca['average_precision'])} to{fmt(cb['average_precision'])}, evolved recall from{pct(ca['recall'])} to{pct(cb['recall'])}, and known-label contamination from{pct(ca['known_contamination'])} to{pct(cb['known_contamination'])}. On the same {da['n']:,} distance references, severe tails change from{pct(da['tail_1'])} to{pct(db['tail_1'])};68% coverage is {pct(da['coverage68'])} versus {pct(db['coverage68'])}.",'',
+        f"The matched full Gaia comparison retains {ad['all']['full_Gaia']['n']:,} test objects, including {ad['all']['full_Gaia']['negative']:,} negative parallaxes. Mean log predictive density rises from{fmt(ad['all']['full_Gaia']['mean_log_density'])} to{fmt(bd['all']['full_Gaia']['mean_log_density'])}, but the combined PIT<.05/>.95 fraction rises slightly from{pct(ad['all']['full_Gaia']['low05']+ad['all']['full_Gaia']['high95'])} to{pct(bd['all']['full_Gaia']['low05']+bd['all']['full_Gaia']['high95'])}. The likelihood and tail diagnostics therefore do not show a uniform improvement.",'',
+        f"The priority18–20/no-W1 comparison has {ac[priority]['evolved']} evolved class labels: AP changes from{fmt(ac[priority]['average_precision'])} to{fmt(bc[priority]['average_precision'])}, while distance tails change from{pct(ad[priority]['chosen']['tail_1'])} to{pct(bd[priority]['chosen']['tail_1'])}. On the {ad[faint]['chosen']['n']} matched20–22/no-W1 distance references, the severe-error count changes from{round(ad[faint]['chosen']['tail_1']*ad[faint]['chosen']['n'])} to{round(bd[faint]['chosen']['tail_1']*bd[faint]['chosen']['n'])}; this sparse descriptive improvement is not a broad faint-star accuracy guarantee.",'',
+        f"Most importantly, on {ad['class1']['chosen']['n']} same-star evolved distance references, grz/griz severe tails remain {pct(ad['class1']['chosen']['tail_1'])}/{pct(bd['class1']['chosen']['tail_1'])}, with68% coverage only {pct(ad['class1']['chosen']['coverage68'])}/{pct(bd['class1']['chosen']['coverage68'])}. Overall averages obscure this failure. Adding one optical color has not resolved the luminosity-branch problem in the fixed algorithm.",'',
+        f"Weighted i availability is {pct(coverage['all']['weighted_i_fraction'])} overall and {pct(coverage['no_W1']['weighted_i_fraction'])} without usable W1. Coverage is sufficient for the experiment, but is not evidence of distance accuracy. New20–22 cal/test has no evolved class labels;22–25 test has {faintest['class_labels']} reliable class labels and only{faintest['chosen_distance']} chosen-distance/{faintest['parallax']} Gaia references. Broad22–25 validation remains absent.",'',
+        'Stop this registered experiment here. Preserve the new frozen references, selection/provenance fields, raw weak fluxes and all negative results for the next scientific review. Do not launch another model family, tune candidate cuts, rerun the parent catalog or replace v1 automatically.','']
+    lines[2:2]=summary
+    delivery_path=ROOT/'manifests/baseline_v1_4_delivery.json'
+    if delivery_path.exists():
+        import hashlib
+        delivery=json.loads(delivery_path.read_text())
+        verified=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==h for p,h in delivery['inspected_figure_sha256'].items())
+        if verified:
+            lines=[line.replace('Scientific interpretation and visual inspection must be completed before final delivery.',
+                                'All five figures were visually inspected; exact image hashes and validation evidence are recorded in manifests/baseline_v1_4_delivery.json.') for line in lines]
+    lines+=['## Figures','']
+    for name,caption in [('coverage','Weighted parent i availability and actual new-test evidence'),
+                         ('classification','Classification comparisons within each fixed pair'),
+                         ('distance','Same-star chosen-distance errors and interval coverage'),
+                         ('gaia','Signed-parallax PIT and full predictive likelihood'),
+                         ('priority','Priority faint/no-WISE comparisons with actual sample counts')]:
+        lines += [f'![{caption}](../figures/baseline_v1_4/{name}.png)','',caption+'.','']
+    import re
+    text='\n'.join(lines)
+    text=re.sub(r'\b(from|to|with|only|same|New|new|matched|priority|All|all)(?=\d)',r'\1 ',text)
+    text=re.sub(r';\s*','; ',text)
+    (ROOT/'docs/baseline_v1_4_result.md').write_text(text)
 
 if __name__=='__main__':main()

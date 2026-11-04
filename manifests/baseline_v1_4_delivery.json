@@ -1,0 +1,42 @@
+{
+  "phase": "baseline_v1_4",
+  "status": "complete",
+  "control_job": {
+    "job_id": 60799511,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:34:36"
+  },
+  "reference_sha256": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+  "actual_artifact_checks": 3331,
+  "focused_tests_passed": 26,
+  "test_command": "PYTHONPATH=src:scripts:.deps python3 -m pytest -q tests/test_assembly_v1_4.py tests/test_assembly_pipeline_v1_4.py tests/test_experiments_v1_4.py tests/test_source_evidence_v1_4.py tests/test_reference_v1_4.py tests/test_optical_v1_4.py tests/test_gaia_numerics_v1_4.py",
+  "result_manifest_sha256": "ad06a6c6721dc382d4eed49038dc8859e16073019e55c5ac8758bb3a4060d29a",
+  "validation_manifest_sha256": "2f752c2136d30acf7f6015559bdde08d2d942e9b696fd62eb8e54c9d42c37cab",
+  "inspected_figure_sha256": {
+    "figures/baseline_v1_4/classification.png": "79f7418683e388bc795575a0e63f4ad052fda188563030f05aeabc2b829d54bb",
+    "figures/baseline_v1_4/distance.png": "071084f4db7d98027fa8f0ec6830a01484c010ac0ccf28b81a1f5a59e7c8835c",
+    "figures/baseline_v1_4/gaia.png": "2f4bbc9a333778ab6ff9e298b025c4ff66d7575e42f2b427e6dbfa1c734b398e",
+    "figures/baseline_v1_4/coverage.png": "436dbab63ff6c912532e831ab37a4552b1aa4e324e44f8fe2e61ab03696b263a",
+    "figures/baseline_v1_4/priority.png": "9d81a6ffc011ce489fbf560dd5e84865fb59bb6bbafaaa95edb966f302db7b81"
+  },
+  "inspection": "All five figures visually checked. Repaired nonnegative coverage count axis; clarified absent no-W1 groups; aligned paired model colors; verified labels and sample counts.",
+  "deployment": "Retain v1; no full-parent prediction rerun, family search or threshold retuning.",
+  "conclusion": "Data expansion and i give modest/mixed changes. Matched evolved distance severe tails remain96.52%; broad22\u201325 accuracy remains unvalidated.",
+  "raw_products": "NERSC /pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1_4",
+  "scheduled_monitoring": "disabled; no new automation",
+  "original_extraction_freeze": {
+    "hashes": {
+      "configs/baseline_v1_4.json": "3ceef9cace6b547ba190a82e190f13a7148b18722b81c7a1a5bc42b8b25f45d3",
+      "docs/baseline_v1_4_protocol.md": "101da3015a337bb0ee2bdfc98c89d7299c74719340a06573f858e55aaa9baf03",
+      "src/photdis/reference_v1_4.py": "7f3c5f673249dec5cc7fff98f4dabb2a4ef850b39ee6b4cf9a1055865ca401af",
+      "scripts/baseline_v1_4_extract.py": "0228c4317d3b7c38303543dc419becf52f7b9b0b605b5c7a4de0f13e78382bf4"
+    },
+    "checks": {
+      "configs/baseline_v1_4.json": true,
+      "docs/baseline_v1_4_protocol.md": true,
+      "src/photdis/reference_v1_4.py": true,
+      "scripts/baseline_v1_4_extract.py": true
+    }
+  }
+}

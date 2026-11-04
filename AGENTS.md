@@ -1,20 +1,22 @@
 # Project instructions
 
-- Active authorized scope2026-11-04: v1.4; read PLAN and
-  docs/baseline_v1_4_protocol.md, latest docs/pro_review_5cf8f6d.md. Full DESI
-  reference expansion, frozen genuinely new sky, fixed new-data comparison and
-  matched grz/griz classification+distance test. This explicitly supersedes
-  historical no-new-fit limits for these experiments only. Preserve deployed v1;
-  no family search, full-catalog prediction rerun, threshold retuning or subagents.
-  User switched to manual follow-up2026-11-04: heartbeat photdis-v1-4 was deleted.
-  Wait for explicit user progress checks; do not recreate monitoring or automatically
-  resubmit jobs. Explicit one-time17:10 resume completed:60779401 TIMEOUT with879
-  sweeps;60787983 COMPLETED0:0 at19:40 Beijing with all1600 sweeps and3590389
-  selected raw records. Single-use task deleted. User explicitly requested continued
-  assembly/evaluation and all GPT Pro milestones; proceed without stopping at logs
-  or raw inventory. Keep periodic monitoring disabled.
+- Latest completed experiment: v1.4, docs/baseline_v1_4_result.md and
+  manifests/baseline_v1_4_delivery.json. Full1600-sweep/MWS/VAC assembly,
+  independent eligibility, new sky, frozen ABC, fixed new-data ABC and matched
+  grz/griz classification+distance are complete.3331 actual artifact checks,
+  26 focused tests and5 inspected figures. Controls60799511 COMPLETED0:0.
+  New train138080 class labels/153403 distance objects; new test42964 classes.
+  i covers87.01% of weighted parent. Matched AP0.2729/0.2823 and distance
+  tails9.71%/9.57%, but evolved tails97.46%/96.52% on1064 same stars.
+  Priority18–20/no-W1 AP worsens0.2247 to0.2148;20–22 has no evolved
+  cal/test labels;22–25 remains broadly unvalidated. Preserve deployed v1,
+  immutable new references, raw weak fluxes and all negative findings.
+  No active automatic continuation: both timers were deleted at user request.
+  Do not recreate monitoring, rerun completed stages, search model families,
+  retune candidates, rerun full catalogs or deploy replacements automatically.
+  No subagents. Further scientific work requires new user-authorized scope.
 
-- Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
+- Previous completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
   class entry releases6287 A training labels incl395 evolved/508 no-W1.
   Six fixed forest data comparisons show small mixed changes;93 actual checks,
   18 tests and3 inspected figures complete. Fixed predicted-evolved candidate
