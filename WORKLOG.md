@@ -13,6 +13,10 @@
   RUNNING on nid004458. It chains targeted matching then reference assembly.
  24 focused tests now pass. Added allocated final artifact validation and small
   local scientific figure/report rendering; production model scores still pending.
+- Native recovery at6:29 runtime:2627/17992 targeted brick checkpoints,1239
+  in preceding minute.9009 useful zero-ID identities,8681 known source epochs.
+  Added hash checks to classifier chunks/final score files before production;
+  focused classifier/negative-Gaia/distance resume tests pass.
 
 ## 2026-11-04 — continue native identity assembly after extraction
 

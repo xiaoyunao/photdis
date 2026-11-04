@@ -14,8 +14,10 @@ Continuation60787983 COMPLETED0:0 at19:40:33 Beijing, all1600 sweeps complete.
 Raw extraction reports3590389 selected records; scientific assembly remains pending.
 User now explicitly requests continuing all GPT Pro milestones autonomously.
 Do not resubmit completed extraction or recreate scheduled monitoring.
-Native consolidation/targeted zero-ID matching implementation passes4 focused tests;
-next allocate/run it while completing independent reference assembly.
+Native consolidation completed3590389 records; recovery/assembly60798530 runs on
+nid004458 (debug30min), after fixing lowercase native FITS columns.24 focused
+tests pass. Frozen/expanded/matched model execution and result checks implemented;
+next verify actual assembled eligibility and run frozen scores before new fits.
 
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.

@@ -270,16 +270,22 @@ def main(stage):
                 marginal=[]
                 for j in range(0,len(rows),4096):
                     chunkpath=OUT/'experiments'/(prefix+f'_class_chunk_{j:07}.npz')
-                    if chunkpath.exists():
+                    chunkmarker=chunkpath.with_suffix('.json')
+                    if chunkmarker.exists():
+                        assert sha(chunkpath)==json.loads(chunkmarker.read_text())['sha256']
                         chunk=load(chunkpath);assert np.array_equal(chunk['identity'],ids[j:j+4096])
                         marginal.append(chunk['probability'])
                     else:
                         value=clf.predict_marginalized(m[j:j+4096],e[j:j+4096],ids[j:j+4096],128)
-                        atomic_npz(chunkpath,identity=ids[j:j+4096],probability=value);marginal.append(value)
+                        atomic_npz(chunkpath,identity=ids[j:j+4096],probability=value)
+                        write_json(chunkmarker,dict(sha256=sha(chunkpath)))
+                        marginal.append(value)
                     if j%40960==0:print(prefix,'classification marginal',j,len(rows),flush=True)
                 marginal=np.concatenate(marginal);payload['marginalized']=marginal
                 classification['marginalized']=class_scores(subset(t,rows),marginal)
-            atomic_npz(OUT/'experiments'/(prefix+'_class_scores.npz'),**payload);save_json(scorepath,classification)
+            atomic_npz(OUT/'experiments'/(prefix+'_class_scores.npz'),**payload)
+            save_json(OUT/'experiments'/(prefix+'_class_integrity.json'),dict(sha256=sha(OUT/'experiments'/(prefix+'_class_scores.npz')),reference_sha256=reference_hash))
+            save_json(scorepath,classification)
         distance=evaluate_distance(prefix+'_distance',model,t,drows,'optical' if optical else 'wide',reference_hash)
         result[name]=dict(metadata=metadata,classification=classification,distance_score_file=str(OUT/'experiments'/(prefix+'_distance')/'scores.json'),n_distance=distance['n'])
         print('completed',prefix,flush=True)

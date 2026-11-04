@@ -41,6 +41,9 @@ def main():
                 if isinstance(v,bool):checks[prefix+':'+k]=v
             for marker in sorted(p.glob('[0-9]*.json')):
                 checks[prefix+':chunk:'+marker.stem]=sha(marker.with_suffix('.npz'))==json.loads(marker.read_text())['sha256']
+            integrity=json.loads((e/(prefix+'_class_integrity.json')).read_text())
+            checks[prefix+':class_score_hash']=sha(e/(prefix+'_class_scores.npz'))==integrity['sha256']
+            checks[prefix+':class_score_reference']=integrity['reference_sha256']==assembly['reference_sha256']
             classification=json.loads((e/(prefix+'_classification.json')).read_text())
             for variant,v in classification.items():
                 checks[prefix+':'+variant+':cal_budget']=v['cal_dwarf_fpr'] is None or v['cal_dwarf_fpr']<=.02+1e-12
