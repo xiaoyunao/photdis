@@ -18,16 +18,19 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [x] Startup/rate verified; heartbeat photdis-v1-4 ACTIVE every30minutes.
   Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
   and52/1600 sweep markers. Unique regular4h resume60779401 now RUNNING on
-  nid005050;119/1600 markers at13:35 Beijing, after allocated checkpoint checks.
+  nid005050;261/1600 markers at14:16 Beijing; existing checkpoints reused.
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
   rows persisted. These are raw inputs, not qualified reference counts.
 - [x] Fixed balanced optical classifier uses the same explicit bands/noise and
   prior class-weight recipe;16 focused tests pass. No production fit yet.
-- [ ] Finish1600-sweep extraction (119 markers at13:35 Beijing; no science scores).
+- [ ] Finish1600-sweep extraction (261 markers at14:16 Beijing; no model scores).
 - [x] Independent source-evidence audit implementation and16 focused tests ready;
   class/Gaia/VAC eligibility remains separate from photometric admission.
-- [ ] Run allocated source audit; then finish native coverage/identity assembly.
+- [x] Source audit step60779401.0 COMPLETED0:0 in79s;8 actual checks pass.
+  Sidecar/manifest source_evidence retained.9009 qualified-class rows lack Gaia ID;
+  113 class-conflicting identities and1 multi-Gaia target require assembly handling.
+- [ ] Finish native coverage/identity assembly, zero-ID matching and VAC-only audit.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
 - [ ] One fixed-algorithm new-data comparison, same evaluation identities.

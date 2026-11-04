@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-04 — allocated source evidence audit complete
+
+- Ran srun step60779401.0 inside existing nid005050 allocation,2CPUs with overlap;
+  COMPLETED0:0 in79s, MaxRSS~7GB. Concurrent extraction untouched,261/1600 sweep
+  markers by14:16 Beijing. No second extraction submission.
+- Eight actual checks pass: row/split consistency, no historical-reference IDs in
+  new cal/test, class qualification, unique valid VAC matches and positive finite
+  distance/error. Verified all frozen code/config/protocol and3 raw input hashes.
+- Source-row counts before photometric admission:2902088 dwarfs/74242 evolved/
+ 697658 other/2698619 unknown.9009 qualified-class rows lack Gaia ID. Found113
+  class-conflicting identities and1 target linked to multiple Gaia IDs.
+- Gaia quality:683041 anchor rows,2760892 weak rows incl448368 negative corrected
+  parallaxes. SpecDis/SPDist quality-passing source rows4082016/3503304; repeated
+  source rows can share one VAC entry. These are NOT final deduplicated references.
+- Saved data/baseline_v1_4/source_evidence.npz/.json on NERSC and small manifest
+  locally; local code hashes/count totals agree. Updated PLAN/execution/heartbeat.
+- Next: complete extraction, match zero-ID sources with coordinates/epochs, resolve
+  identities, inventory VAC-only/DR11 coverage, then frozen scores and fixed fits.
+
 ## 2026-11-04 — prepare independent evidence audit while extraction runs
 
 -14:05 Beijing:60779401 RUNNING58:37 on nid005050;220/1600 sweep markers,

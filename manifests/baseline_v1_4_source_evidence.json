@@ -1,0 +1,103 @@
+{
+  "rows": 6372607,
+  "identities": 5932894,
+  "metrics": {
+    "class_rows": {
+      "-1": 2698619,
+      "0": 2902088,
+      "1": 74242,
+      "2": 697658
+    },
+    "qualified_class_no_gaia_rows": 9009,
+    "class_conflict_identities": 113,
+    "target_multi_gaia_identities": 1,
+    "gaia_anchor_rows": 683041,
+    "weak_parallax_quality_rows": 2760892,
+    "negative_parallax_quality_rows": 448368
+  },
+  "split_counts": {
+    "0": {
+      "rows": 3220146,
+      "identities": 3030009,
+      "class_rows": {
+        "-1": 1298387,
+        "0": 1514790,
+        "1": 33933,
+        "2": 373036
+      },
+      "gaia_anchor": 366879,
+      "weak_parallax": 1378546,
+      "specdis_valid": 2088215,
+      "spdist_valid": 1830383
+    },
+    "1": {
+      "rows": 632777,
+      "identities": 595174,
+      "class_rows": {
+        "-1": 261347,
+        "0": 293841,
+        "1": 7116,
+        "2": 70473
+      },
+      "gaia_anchor": 77247,
+      "weak_parallax": 254972,
+      "specdis_valid": 397827,
+      "spdist_valid": 347872
+    },
+    "2": {
+      "rows": 951512,
+      "identities": 883884,
+      "class_rows": {
+        "-1": 407386,
+        "0": 431107,
+        "1": 12002,
+        "2": 101017
+      },
+      "gaia_anchor": 86069,
+      "weak_parallax": 433727,
+      "specdis_valid": 612010,
+      "spdist_valid": 516626
+    },
+    "3": {
+      "rows": 1568172,
+      "identities": 1423827,
+      "class_rows": {
+        "-1": 731499,
+        "0": 662350,
+        "1": 21191,
+        "2": 153132
+      },
+      "gaia_anchor": 152846,
+      "weak_parallax": 693647,
+      "specdis_valid": 983964,
+      "spdist_valid": 808423
+    }
+  },
+  "checks": {
+    "row_alignment": true,
+    "identity_split_consistent": true,
+    "new_cal_test_excludes_historical_references": true,
+    "unknown_class_not_qualified": true,
+    "specdis_valid_has_unique_match": true,
+    "specdis_valid_has_finite_positive_distance_and_error": true,
+    "spdist_valid_has_unique_match": true,
+    "spdist_valid_has_finite_positive_distance_and_error": true
+  },
+  "input_sha256": {
+    "sources.npz": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc",
+    "specdis_raw.npz": "bf4e59a4772d555f0db413ccfdfdeb01a07dfb62e77ed47d6785efb5d88bc62b",
+    "spdist_raw.npz": "65b943423df93aca52a4b874f1c6355cdac89ef2a3b033eca1189ac852b0550d"
+  },
+  "output_sha256": "74602dc463fd676bd88fb2e04ce4c3a07baf27651a9c3aca5f500bacc5f879ca",
+  "code_sha256": {
+    "scripts/baseline_v1_4_source_audit.py": "fa8f07286fe6780d913903b0cf7bc40269cdbaa754a0006960df3284373dfb85",
+    "src/photdis/source_evidence_v1_4.py": "a50ae294fbeb490d810e14ca0a2e1c614b9b0b55398f075532b5eed1feb544ba"
+  },
+  "git_commit": "6ea9a856d75d9d4ecb7f5b5ac2121a6649c07282",
+  "job_id": "60779401",
+  "hostname": "nid005050",
+  "limitation": "Raw source-row evidence, not deduplicated DR11-qualified train/cal/test references. Photometry, zero-ID/VAC-only completeness, conflicts and final eligibility still require assembly. No model scores.",
+  "step_accounting": "JobID|State|Elapsed|ExitCode|MaxRSS\n60779401.0|COMPLETED|00:01:19|0:0|7153.50M",
+  "observation_epoch": 1793772980.0845428,
+  "completed_sweep_markers_at_observation": 261
+}

@@ -12,8 +12,8 @@
   "heartbeat_status": "ACTIVE",
   "interval_minutes": 30,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
-  "updated_utc": "2026-11-04T05:37:44.919415+00:00",
-  "next": "Keep60779401 running; its allocated hash checks passed and new sweep checkpoints advance. After all1600, audit identities/eligibility and perform frozen-model scoring before fixed-data and matched-color fits.",
+  "updated_utc": "2026-11-04T06:18:07.226946+00:00",
+  "next": "Continue unique60779401 extraction. Source evidence sidecar is complete; do not overwrite or rerun it. Assemble native references with zero-ID positional/epoch matching, conflict exclusion, VAC-only and Legacy identity audit before any frozen-model scoring or new training.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60778259",
@@ -41,9 +41,20 @@
   },
   "reference_input_bytes": 16156310400,
   "south_sweep_files": 1600,
-  "observation_epoch": 1793770514.9891186,
-  "completed_sweep_markers": 119,
-  "remaining_sweeps": 1481,
+  "observation_epoch": 1793772980.0845428,
+  "completed_sweep_markers": 261,
+  "remaining_sweeps": 1339,
   "latest_checkpoint_epoch": 1793770501.0,
-  "initial_debug_observed_disk_read_bytes": 5257554509
+  "initial_debug_observed_disk_read_bytes": 5257554509,
+  "source_audit": {
+    "step": "60779401.0",
+    "state": "COMPLETED",
+    "elapsed": "00:01:19",
+    "exit_code": "0:0",
+    "actual_checks": 8,
+    "manifest": "manifests/baseline_v1_4_source_evidence.json",
+    "qualified_class_no_gaia_rows": 9009,
+    "class_conflict_identities": 113,
+    "target_multi_gaia_identities": 1
+  }
 }
