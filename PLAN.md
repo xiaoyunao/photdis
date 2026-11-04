@@ -14,10 +14,13 @@ Continuation60787983 COMPLETED0:0 at19:40:33 Beijing, all1600 sweeps complete.
 Raw extraction reports3590389 selected records; scientific assembly remains pending.
 User now explicitly requests continuing all GPT Pro milestones autonomously.
 Do not resubmit completed extraction or recreate scheduled monitoring.
-Native consolidation completed3590389 records; recovery/assembly60798530 runs on
-nid004458 (debug30min), after fixing lowercase native FITS columns.24 focused
-tests pass. Frozen/expanded/matched model execution and result checks implemented;
-next verify actual assembled eligibility and run frozen scores before new fits.
+Native consolidation and17992 targeted bricks complete. Preparation60798530
+reached30min TIMEOUT during assembly; no code failure. Diagnostic60798891
+shows6036/9009 zero-ID targets outside nearby southern imaging. Raw-candidate
+recovery60799112 submitted to preserve fluxes and inspect duplicate candidates.
+Frozen evaluation60798619 held after failed dependency; no model scores yet.
+Finish identity audit/assembly, then frozen scores, expanded and matched fits.
+24 focused tests pass; fixed26000 weighted i coverage measured (87.01% overall).
 
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
@@ -48,7 +51,7 @@ next verify actual assembled eligibility and run frozen scores before new fits.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
 - [ ] One fixed-algorithm new-data comparison, same evaluation identities.
-- [ ] Fixed26000 parent i coverage with original sample weights.
+- [x] Fixed26000 parent i coverage with original sample weights.
 - [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.
 - [ ] Actual artifact checks, inspected figures, final result and git/sync (heartbeat already deleted).
 

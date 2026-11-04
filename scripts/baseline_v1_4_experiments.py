@@ -208,8 +208,9 @@ def main(stage):
     clean=t['photometric_eligible']&~t['identity_conflict']&~t['nonstellar_risk']
     evaluation=np.isin(t['split'],[1,2])&clean
     distance_evidence=(t['label_source']>0)|t['specdis_valid']|t['spdist_valid']|t['parallax_eligible']
-    if stage!='frozen':assert (OUT/'experiments/frozen_complete.json').exists()
-    if stage=='matched':assert (OUT/'experiments/expanded_complete.json').exists()
+    for previous in ([] if stage=='frozen' else ['frozen'] if stage=='expanded' else ['frozen','expanded']):
+        completion=json.loads((OUT/'experiments'/(previous+'_complete.json')).read_text())
+        assert completion['reference_sha256']==reference_hash
     names=['grz','griz'] if stage=='matched' else ['A','B','C']
     for name in names:
         optical=stage=='matched';tier=np.ones(len(clean),bool) if name in ['A','grz','griz'] else t[name]
@@ -251,6 +252,9 @@ def main(stage):
                 oldtier=np.ones(len(old['identity']),bool) if name=='A' else old[name]
                 oc=np.flatnonzero((old['split']==0)&old['class_train_eligible']&oldtier)
                 od=np.flatnonzero((old['split']==0)&old['fit_eligible']&oldtier)
+                frozen_ids=load(OUT/'experiments'/('frozen_'+name+'_identities.npz'))
+                assert np.array_equal(np.sort(old['identity'][oc]),np.sort(frozen_ids['class_train_identity']))
+                assert np.array_equal(np.sort(old['identity'][od]),np.sort(frozen_ids['distance_train_identity']))
                 assert not np.intersect1d(old['identity'][np.r_[oc,od]],t['identity'][rows]).size
                 assert not np.intersect1d(old['identity'][np.r_[oc,od]],t['identity'][np.r_[cltrain,dtrain]]).size
                 atomic_npz(OUT/'experiments'/(prefix+'_legacy_training.npz'),class_train_identity=old['identity'][oc],distance_train_identity=old['identity'][od])

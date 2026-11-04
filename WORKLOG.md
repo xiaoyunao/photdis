@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-04 — diagnose zero-ID coverage and continue scientific assembly
+
+- Preparation60798530 TIMEOUT at20:57:20 Beijing after all17992 targeted
+  bricks and zero-ID matching completed; assembly had started, no program error.
+- Diagnostic60798891 COMPLETED0:0 in25s. Of9009 zero-ID sources,6036 lack
+  a southern brick within0.4deg;2973 are near southern imaging.520 conservative
+  matches,781 ambiguous. Inspect actual candidate types before final assembly.
+- Frozen60798619 remains held/PENDING after failed dependency, never scored.
+  Raw-candidate recovery60799112 submitted once for3575 selected native rows;
+  preserves measured griz/WISE fluxes, masks and epochs with exact LSID checks.
+- Parent26000 exact identities all match; original weighted i availability87.01%,
+  no-W1 86.88%,20–22 no-W1 89.92%. Photometric coverage is not truth accuracy.
+- Official DR11 description identifies TYPE=DUP as Gaia placeholders fitted by
+  a different source; inspect measured counts before any explicit match migration.
+  Source: https://www.legacysurvey.org/dr11/description/
+- Continue actual frozen/new-data/matched experiments; no timers or deployment.
+
 ## 2026-11-04 — fix native FITS field-name case after allocated execution
 
 -60798395 FAILED1:0 after27s on actual compute: all1600 hashes verified and

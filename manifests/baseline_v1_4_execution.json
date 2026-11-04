@@ -106,10 +106,11 @@
   },
   "prepare_job": {
     "id": "60798530",
-    "state": "RUNNING",
+    "state": "TIMEOUT",
     "node": "nid004458",
     "qos": "debug",
-    "timelimit": "00:30:00"
+    "timelimit": "00:30:00",
+    "ended_beijing": "2026-11-04T20:57:20+08:00"
   },
   "frozen_evaluation_job": {
     "id": "60798619",
@@ -117,6 +118,17 @@
     "dependency": "afterok:60798530",
     "qos": "debug",
     "timelimit": "00:30:00",
-    "command": "scripts/run_baseline_v1_4_experiments.sh frozen"
+    "command": "scripts/run_baseline_v1_4_experiments.sh frozen",
+    "state": "PENDING_HELD",
+    "reason": "prepare dependency TIMEOUT; held for zero-ID audit; no scores"
+  },
+  "zero_audit_job": {
+    "job_id": 60798891,
+    "state": "COMPLETED",
+    "exit_code": "0:0"
+  },
+  "zero_raw_job": {
+    "job_id": 60799112,
+    "state": "SUBMITTED"
   }
 }
