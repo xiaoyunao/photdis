@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-04 — continue native identity assembly after extraction
+
+- User clarified to continue all GPT Pro milestones without stopping at status/logs.
+  Manual scheduling remains in force; milestone execution is now explicitly resumed.
+- Added allocated native consolidation with all1600 checkpoint hashes checked and
+  targeted tractor recovery for qualified zero-Gaia-ID identities. Uses2016 epoch
+  propagation,2arcsec ambiguity veto,1arcsec known-epoch or0.5arcsec static match;
+  unknown epochs retained as flags, and many-to-one associations rejected.
+- Added assembly helpers and4 actual focused tests: RA wrap/proper motion, nearby
+  ambiguity, many-to-one collision, unknown epoch and deterministic representation.
+  py_compile and bash syntax pass. Frozen extraction files unchanged.
+- New output/checkpoints separate from original inputs. Next execute native recovery
+  on allocated NERSC, assemble independent eligibility and frozen evaluation sets.
+
 ## 2026-11-04 — raw sweep extraction completed
 
 - Manual20:04 Beijing check:60787983 COMPLETED0:0, elapsed2:09:16;

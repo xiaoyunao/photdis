@@ -10,8 +10,9 @@
   Wait for explicit user progress checks; do not recreate monitoring or automatically
   resubmit jobs. Explicit one-time17:10 resume completed:60779401 TIMEOUT with879
   sweeps;60787983 COMPLETED0:0 at19:40 Beijing with all1600 sweeps and3590389
-  selected raw records. Single-use task deleted. Resume assembly/evaluation
-  milestones when the user requests continuation; raw inventory is not completion.
+  selected raw records. Single-use task deleted. User explicitly requested continued
+  assembly/evaluation and all GPT Pro milestones; proceed without stopping at logs
+  or raw inventory. Keep periodic monitoring disabled.
 
 - Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
   class entry releases6287 A training labels incl395 evolved/508 no-W1.
