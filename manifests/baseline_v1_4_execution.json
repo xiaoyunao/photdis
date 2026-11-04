@@ -154,12 +154,14 @@
   },
   "frozen_gaia_refinement": {
     "job_id": 60799493,
-    "state": "RUNNING",
-    "node": "nid004142"
+    "state": "COMPLETED",
+    "node": "nid004142",
+    "elapsed": "00:11:07",
+    "exit_code": "0:0"
   },
   "fixed_controls_job": {
     "job_id": 60799511,
-    "state": "SUBMITTED",
+    "state": "PENDING",
     "dependency": "afterok:60799493",
     "qos": "regular",
     "time_limit": "04:00:00",
@@ -169,6 +171,7 @@
       "matched",
       "matched_gaia_refine",
       "validate"
-    ]
+    ],
+    "reason": "Resources"
   }
 }

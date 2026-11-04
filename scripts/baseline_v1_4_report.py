@@ -31,6 +31,7 @@ def main():
         ax.set_xticks(np.arange(len(names)),labels,rotation=55,ha='right');ax.set_title(title);ax.set_ylim(0,1)
     axes[0].legend();fig.savefig(out/'distance.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(11,4),layout='constrained')
+    fig.suptitle('Gaia likelihood comparisons use identical stars within each pair',fontsize=11)
     for name,label in [('matched_grz','grz'),('matched_griz','griz')]:
         ga=m[name]['distance']['all']['full_Gaia'];h=np.array(ga['pit_histogram']);axes[0].stairs(h/max(1,h.sum()),np.linspace(0,1,11),label=label)
     axes[0].axhline(.1,color='gray',ls='--');axes[0].set(xlabel='Full observed-parallax PIT',ylabel='Fraction',title='Matched Gaia evidence; negative parallaxes retained');axes[0].legend()
@@ -45,7 +46,10 @@ def main():
     cov=d['assembly']['coverage']['2'];bins=['bright:all','18_20:all','20_22:all','22_25:all']
     for key,label in [('classes','Reliable classes'),('distance','Chosen distance'),('gaia','Gaia likelihood')]:
         y=[sum(cov[b][key].values()) if key=='classes' else cov[b][key] for b in bins];axes[1].plot(range(4),y,'o-',label=label)
-    axes[1].set(xticks=range(4),xticklabels=['<18','18–20','20–22','22–25'],yscale='symlog',ylabel='New test reference count',xlabel='r magnitude');axes[1].legend()
+    axes[1].set(xticks=range(4),xticklabels=['<18','18–20','20–22','22–25'],ylabel='New test reference count',xlabel='r magnitude')
+    axes[1].set_yscale('symlog',linthresh=1)
+    top=max(max(sum(cov[b]['classes'].values()),cov[b]['distance'],cov[b]['gaia']) for b in bins)
+    axes[1].set_ylim(0,top*1.8);axes[1].legend()
     fig.savefig(out/'coverage.png',dpi=170);plt.close(fig)
     focus=['frozen_A','expanded_A','matched_grz','matched_griz']
     focus_labels=['old grz','new-data grz','matched grz','matched griz']
@@ -76,7 +80,7 @@ def main():
         c=m[n]['classification']['marginalized' if n.startswith('matched') else 'nominal']['groups']['all'];r=m[n]['distance']['all'];v=r['chosen']
         lines.append(f"| {n} | {fmt(c['average_precision'])} | {fmt(c['recall'])} | {fmt(c['known_contamination'])} | {v['n']} | {fmt(v.get('tail_1'))} | {fmt(v.get('coverage68'))} | {r['full_Gaia']['n']} |")
     lines+=['','Classification: old/new comparisons are nominal scores; matched grz/griz uses shared four-band Sobol128 marginalization. Each workpoint is fixed by cal at the same2% dwarf budget; no test tuning.',
-            '','Expanded training adds only new train identities to historical training. Each old/new pair has identical new evaluation identities. Matched grz/griz has identical training/evaluation identities and hyperparameters.',
+            '','Expanded training adds only new train identities to historical training. Each old/new pair has identical new evaluation identities. Matched grz/griz uses only the new i-usable train identities, with identical training/evaluation identities and hyperparameters between the two controls.',
             '', 'A/B/C use different WISE-availability subsets: compare scores within each old/new pair, not across these subsets. The matched grz/griz pair uses exactly the same stars.',
             '', 'The original26000 probability sample covers the southern DECam parent; northern rows are outside this i-band coverage estimate.',
             '', '## Validation limits','',d['validation_limits'],
@@ -89,6 +93,13 @@ def main():
             c=d['eligibility']['groups'][split][group]
             lines.append(f"| {label} | {group} | {sum(c['classes'].values())} | {c['classes']['1']} | {c['chosen_distance']} | {c['specdis']} | {c['spdist']} | {c['parallax']} |")
     lines+=['','Zero-count cells are unvalidated. Sparse counts are descriptive evidence, not a general accuracy guarantee.','']
+    lines+=['## Actual training composition','',
+            '| Model | Class training N | Distance training N | Composition |',
+            '|---|---:|---:|---|']
+    for n in names:
+        v=m[n]['training'];c=v['class_train']+v.get('legacy_class_train',0);r=v['distance_train']+v.get('legacy_distance_train',0)
+        composition='frozen historical' if n.startswith('frozen') else 'historical plus new' if n.startswith('expanded') else 'new only, matched i-usable'
+        lines.append(f"| {n} | {c} | {r} | {composition} |")
     lines+=['## Priority same-star comparisons','',
             '| Model | Group | Known class N | Evolved N | AP | Recall | Known contamination | Distance N | Tail >1mag | Coverage68 |',
             '|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
@@ -111,6 +122,13 @@ def main():
     for n in names:
         v=m[n]['gaia_refinement']
         lines.append(f"| {n} | {v['n']} | {fmt(v['log_abs_difference_max'])} | {fmt(v['log_difference_mean'])} | {fmt(v['pit_abs_difference_max'])} |")
+    lines+=['','## Distance tails by known class','',
+            'Chosen-distance agreement; unknown classes are retained separately and are not counted as dwarfs.','',
+            '| Model | Dwarf N / tail | Evolved N / tail | Other N / tail | Unknown N / tail |',
+            '|---|---|---|---|---|']
+    for n in names:
+        values=[m[n]['distance']['class'+str(k)]['chosen'] for k in [0,1,2,-1]]
+        lines.append('| '+n+' | '+' | '.join(f"{v['n']} / {fmt(v.get('tail_1'))}" for v in values)+' |')
     lines+=['','## Weighted WISE measurement states','',
             'Original26000 DECam probability sample; all original weights retained. Low-SNR fluxes were preserved but not passed to Gaussian magnitude models.',
             'States: -1 unmatched; 0 no observation; 1 invalid measurement; 2 quality failure; 3 low S/N including negative flux; 4 usable S/N>=5 color.','',

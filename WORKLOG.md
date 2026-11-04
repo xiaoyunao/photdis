@@ -26,6 +26,13 @@
   and both writer locks; no scheduling, model search or deployment change.
 - Unique controls60799511 submitted regular4h afterok60799493. This is the
   authorized experiment continuation, not a recreated timer or full-catalog run.
+- Frozen Gaia refinement60799493 COMPLETED0:0 in11:07. A/B/C mean log-density
+  corrections1.70e-5/-2.10e-6/1.39e-5; only17/14/14 rows exceed0.001 correction.
+  All primary distance quantiles reproduced within1e-6. Frozen compact scientific
+  scores archived; controls60799511 PENDING(Resources), no duplicate submission.
+- Rendered and visually inspected actual parent/new-test coverage figure. Fixed
+  nonnegative count axis to remove misleading negative symlog ticks. Remaining
+  model comparison figures await actual fixed-control outputs.
 
 ## 2026-11-04 — diagnose zero-ID coverage and continue scientific assembly
 
