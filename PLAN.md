@@ -21,7 +21,8 @@ COMPLETED0:0 in11:07. Gaia numerical convergence audit
 found a few log-density discrepancies; separate refinement sidecars preserve
 original PDFs and all predictions. Apply the same refinement to all models.
 Unique controls60799511 RUNNING on nid006837, regular4h: expanded then
-matched, each with refinement, then final validation. Continue through delivery.
+matched, each with refinement, then final validation. Expanded/refinement done;
+matched grz done and griz running. Continue through actual final delivery.
 
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
@@ -51,7 +52,7 @@ matched, each with refinement, then final validation. Continue through delivery.
 - [x] Finish native coverage/identity assembly, zero-ID matching and VAC-only audit.
 - [x] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [x] Evaluate frozen v1 and fixed classifier on genuinely new sky (Gaia numerical refinement complete).
-- [ ] One fixed-algorithm new-data comparison, same evaluation identities.
+- [x] One fixed-algorithm new-data comparison, same evaluation identities.
 - [x] Fixed26000 parent i coverage with original sample weights.
 - [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.
 - [ ] Actual artifact checks, inspected figures, final result and git/sync (heartbeat already deleted).

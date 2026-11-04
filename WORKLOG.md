@@ -1,8 +1,24 @@
 # WORKLOG
 
+## 2026-11-04 — expanded controls completed; matched optical comparison running
+
+-60799511 completed all expanded A/B/C scores and convergence-controlled Gaia
+  sidecars; same evaluation IDs and historical training controls verified.
+  AP0.27238/0.37402/0.42182; chosen tails9.6805%/8.6968%/7.2182%.
+  Compact expanded manifest archived; these overall changes are modest.
+- Priority A18–20/no-W1: tails17.55% to17.39%,68% coverage62.11% to61.04%;
+ 20–22/no-W1 still30.10% severe tails (289 references). No evolved cal/test
+  class labels at20–22. Do not turn these results into faint accuracy claims.
+- Evolved chosen-reference severe tails remain96.56%/85.02%/83.02% in
+ 1163/1075/1019 A/B/C test objects. Overall averages hide minority failures.
+- Matched grz completed; griz running. Same85138 class and95101 distance
+  training identities; shared4D Sobol128. No threshold retuning or deployment.
+- Next finish griz and numerical sidecars, artifact checks, remaining figures
+  and final scientific interpretation.
+
 ## 2026-11-04 — fixed new-data controls executing
 
-- Controls60799511 RUNNING on nid006837 from21:48:28 Beijing. No duplicate
+- Controls60799511 RUNNING on nid006837 from21:48:30 Beijing. No duplicate
   job or timer. Expanded A trained237784 class/317003 distance objects; both
   historical training identity checks pass. Same new test47756 chosen-distance
   objects: tail9.8249% to9.6805%; class AP0.26071 to0.27238. These are interim
