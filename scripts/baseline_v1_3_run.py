@@ -73,7 +73,7 @@ def main():
     # Fixed prediction-selected subgroup; truth labels never enter selection.
     p=load(V12/'reference_B_forest.npz');wide=load(PREV/'B_wide_evaluation.npz');rows=p['rows'];sel=evolved_candidate(p)
     checks['candidate_reference_identity']=np.array_equal(rows,wide['rows'])
-    candidate=dict(status='candidate_only',relative_comparison_pass=True,relative_comparison_scope='Inherited parent single-rule cal pass; NOT recomputed or claimed for evolved-only subgroup',absolute_risk_acceptance=None,definition='B/forest supported confidence>=0.9 margin>=0.4 main_index==1',reference={})
+    candidate=dict(status='candidate_only',parent_rule_relative_comparison_pass=True,relative_comparison_scope='Same pre-existing guards evaluated on the evolved-only cal subgroup; no threshold selection',absolute_risk_acceptance=None,definition='B/forest supported confidence>=0.9 margin>=0.4 main_index==1',reference={})
     for tag,sp in [('cal',1),('test',2)]:
         use=sel&(t['split'][rows]==sp);d=distances(t,rows,p,wide,use)
         perclass={}
@@ -84,6 +84,10 @@ def main():
                 for method,mu in [('main',p['main_mu']),('mixture',p['mu']),('wide',wide['mu'])]:
                     dd[method]['tail_1_ci95']=wilson(int((abs(mu[valid,2]-truth[valid])>1).sum()),int(valid.sum()))
         candidate['reference'][tag]=dict(counts=counts(t['class_label'][rows],sel,1,t['split'][rows]==sp),distances=d,by_class=perclass)
+    cc=candidate['reference']['cal']
+    candidate['relative_comparison_pass']=bool(cc['distances']['chosen']['main'].get('tail_1',1)<=.05 and all(
+        cc['by_class'][str(k)]['chosen']['main']['n']>=30 and
+        cc['by_class'][str(k)]['chosen']['main'].get('tail_1',1)<=cc['by_class'][str(k)]['chosen']['wide'].get('tail_1',0)+.02 for k in range(3)))
     np.savez_compressed(OUT/'candidate_reference.npz',identity=t['identity'][rows][sel],rows=rows[sel],split=t['split'][rows][sel])
     sample=load(PREV/'parent_sample.npz');pp=load(V12/'parent_B_forest.npz');psel=evolved_candidate(pp);expanded=np.zeros(len(sample['identity']),bool);expanded[pp['rows']]=psel
     candidate['parent']=estimate(sample,expanded)
