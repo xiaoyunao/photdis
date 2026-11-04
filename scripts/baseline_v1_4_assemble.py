@@ -64,6 +64,9 @@ def main():
     require_compute()
     if (OUT/'assembly.json').exists():raise FileExistsError('Frozen assembly exists; do not overwrite')
     for p,h in json.loads((OUT/'freeze.json').read_text())['hashes'].items():assert sha(ROOT/p)==h
+    for name,key in [('sources','source_sha256'),('specdis_raw','sha256'),('spdist_raw','sha256')]:
+        assert sha(OUT/(name+'.npz'))==json.loads((OUT/(name+'.json')).read_text())[key]
+    assert sha(OUT/'source_evidence.npz')==json.loads((OUT/'source_evidence.json').read_text())['output_sha256']
     for name in ['native_photometry','zero_match']:
         assert sha(OUT/(name+'.npz'))==json.loads((OUT/(name+'.json')).read_text())['sha256']
     assert sha(OUT/'zero_photometry.npz')==json.loads((OUT/'zero_match.json').read_text())['photometry_sha256']

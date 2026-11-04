@@ -30,6 +30,8 @@ def test_independent_labels_and_historical_identity_in_full_assembly(tmp_path,mo
     np.savez(out/'specdis_raw.npz',targetid=target[:1],source_id=sid[:1],dist=np.array([2.]),disterr=np.array([.3]),binary_flag=np.ones(1))
     np.savez(out/'spdist_raw.npz',targetid=target[:1],source_id=sid[:1],flag_good=np.ones(1,bool),qflag_input=np.ones(1,bool),g0=np.array([19.]),e_gmag=np.array([.03]),mg_16=np.array([3.]),mg_50=np.array([4.]),mg_84=np.array([5.]))
     np.savez(old/'references.npz',identity=sid[:1],ls_id=native['ls_id'][:1],desi_match=np.ones(1,bool),desi_match_ambiguous=np.zeros(1,bool),desi_object_id=target[:1].astype('U'))
+    for name,key in [('sources','source_sha256'),('specdis_raw','sha256'),('spdist_raw','sha256'),('source_evidence','output_sha256')]:
+        (out/(name+'.json')).write_text(json.dumps({key:a.sha(out/(name+'.npz'))}))
     # Only code-provenance hashing is mocked; all artifact hashes remain real.
     original_sha=a.sha
     monkeypatch.setattr(a,'sha',lambda path:'test-code' if str(path).endswith(('.py',)) else original_sha(path))
