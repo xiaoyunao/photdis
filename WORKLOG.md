@@ -24,6 +24,8 @@
 - Added one allocated controls chain: expanded, its refinement, matched, its
   refinement, final artifact validation. It requires frozen refinement completion
   and both writer locks; no scheduling, model search or deployment change.
+- Unique controls60799511 submitted regular4h afterok60799493. This is the
+  authorized experiment continuation, not a recreated timer or full-catalog run.
 
 ## 2026-11-04 — diagnose zero-ID coverage and continue scientific assembly
 

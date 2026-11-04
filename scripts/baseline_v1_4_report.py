@@ -16,12 +16,14 @@ def main():
     labels=['old A','new A','old B','new B','old C','new C','grz matched','griz matched']
     colors=['#888888','#2878b5']*4
     fig,axes=plt.subplots(1,3,figsize=(14,4),layout='constrained')
+    fig.suptitle('Compare within each pair; A/B/C and matched samples differ',fontsize=11)
     for ax,key,title in zip(axes,['average_precision','recall','known_contamination'],['Evolved average precision','Evolved recall at cal 2% dwarf budget','Known-label contamination']):
         values=[m[n]['classification']['marginalized' if n.startswith('matched') else 'nominal']['groups']['all'][key] for n in names]
         ax.bar(np.arange(len(names)),[np.nan if v is None else v for v in values],color=colors)
         ax.set_xticks(np.arange(len(names)),labels,rotation=55,ha='right');ax.set_title(title);ax.set_ylim(0,1)
     fig.savefig(out/'classification.png',dpi=170);plt.close(fig)
     fig,axes=plt.subplots(1,3,figsize=(14,4),layout='constrained')
+    fig.suptitle('Chosen-distance agreement; compare within pairs, not across WISE tiers',fontsize=11)
     for ax,key,title in zip(axes,['tail_1','coverage68','coverage95'],['Distance |error| > 1 mag','Distance 68% coverage','Distance 95% coverage']):
         for group,offset,col in [('all',-.18,'#2878b5'),('no_W1',.18,'#e1812c')]:
             vals=[m[n]['distance'][group]['chosen'].get(key,np.nan) for n in names]
@@ -45,6 +47,25 @@ def main():
         y=[sum(cov[b][key].values()) if key=='classes' else cov[b][key] for b in bins];axes[1].plot(range(4),y,'o-',label=label)
     axes[1].set(xticks=range(4),xticklabels=['<18','18–20','20–22','22–25'],yscale='symlog',ylabel='New test reference count',xlabel='r magnitude');axes[1].legend()
     fig.savefig(out/'coverage.png',dpi=170);plt.close(fig)
+    focus=['frozen_A','expanded_A','matched_grz','matched_griz']
+    focus_labels=['old grz','new-data grz','matched grz','matched griz']
+    fig,axes=plt.subplots(1,3,figsize=(14,4.8),layout='constrained')
+    for ax,group,kind,title in zip(axes,['r18_20:no_W1','r18_20:no_W1','r20_22:no_W1'],
+            ['class','distance','distance'],['18–20, no W1: evolved AP','18–20, no W1: distance tails','20–22, no W1: distance tails']):
+        vals=[];counts=[]
+        for n in focus:
+            if kind=='class':
+                variant='marginalized' if n.startswith('matched') else 'nominal'
+                v=m[n]['classification'][variant]['groups'][group];vals.append(v['average_precision']);counts.append(f"{v['known']} known\n{v['evolved']} evolved")
+            else:
+                v=m[n]['distance'][group]['chosen'];vals.append(v.get('tail_1'));counts.append(f"N={v['n']}")
+        numeric=[np.nan if v is None else v for v in vals]
+        ax.bar(range(4),numeric,color=['#888888','#2878b5']*2)
+        for i,(value,count) in enumerate(zip(numeric,counts)):
+            ax.text(i,(value if np.isfinite(value) else 0)+.025,count,ha='center',fontsize=8)
+        ax.set_xticks(range(4),focus_labels,rotation=35,ha='right');ax.set_title(title);ax.set_ylim(0,1)
+    fig.suptitle('Each adjacent pair uses the same stars;20–22 has no held-out evolved labels',fontsize=11)
+    fig.savefig(out/'priority.png',dpi=170);plt.close(fig)
     lines=['# Baseline v1.4 results','', '## Scope and evidence','',
            f"All1600 sweeps extracted. Assembled {d['assembly']['unique_reference_rows']:,} unique reference rows before scientific eligibility; raw counts are not qualified labels.",
            f"Actual artifact checks: {d['validation']['n_checks']}; all passed. Deployed v1 remains unchanged.",'',
@@ -61,7 +82,7 @@ def main():
             '', '## Validation limits','',d['validation_limits'],
             '', 'Gaia, SpecDis and SPDist scores are retained separately in the result manifest. The chosen training-distance recipe remains Gaia anchors then SpecDis; SPDist is a separate check.',
             '', 'Reference-selected population fractions do not estimate parent purity. Zero-ID associations with unknown epochs are flagged, use a0.5arcsec threshold and2arcsec ambiguity veto; systematic matching risk remains.',
-            '', 'Figures: classification.png, distance.png, gaia.png, coverage.png under figures/baseline_v1_4. Scientific interpretation and visual inspection must be completed before final delivery.','']
+            '', 'Figures: classification.png, distance.png, gaia.png, coverage.png, priority.png under figures/baseline_v1_4. Scientific interpretation and visual inspection must be completed before final delivery.','']
     lines+=['## Actual faint reference support','', '| Split | r / WISE | Class labels | Evolved | Chosen distance | SpecDis | SPDist | Gaia likelihood |', '|---|---|---:|---:|---:|---:|---:|---:|']
     for split,label in [('1','cal'),('2','test')]:
         for group in ['r18_20:no_W1','r20_22','r22_25']:

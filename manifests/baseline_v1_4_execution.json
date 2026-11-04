@@ -156,5 +156,19 @@
     "job_id": 60799493,
     "state": "RUNNING",
     "node": "nid004142"
+  },
+  "fixed_controls_job": {
+    "job_id": 60799511,
+    "state": "SUBMITTED",
+    "dependency": "afterok:60799493",
+    "qos": "regular",
+    "time_limit": "04:00:00",
+    "stages": [
+      "expanded",
+      "expanded_gaia_refine",
+      "matched",
+      "matched_gaia_refine",
+      "validate"
+    ]
   }
 }

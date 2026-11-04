@@ -20,6 +20,8 @@ checks pass. New train138080 class labels/153403 distance training; new test
 running. Gaia numerical convergence audit
 found a few log-density discrepancies; separate refinement sidecars preserve
 original PDFs and all predictions. Apply the same refinement to all models.
+Unique controls60799511 submitted regular4h afterok60799493: expanded then
+matched, each with refinement, then final validation. Continue through delivery.
 
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
