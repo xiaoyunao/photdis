@@ -38,8 +38,8 @@
   "note": "Source workpoints generated after acceptance; its absent original hash is supplied here. Final result text regenerated from compact evidence using current renderer text block, with delivery and scientific caveats appended. No fits or scores rerun.",
   "files": {
     "docs/baseline_v1_2_result.md": {
-      "sha256": "af76965e989eb65cb9a9a29d0e90899447470fa594d34c2296feb44fa43768c1",
-      "bytes": 13223
+      "sha256": "4bc3ac900d28a774a11669992599fc971228b196a951aabb8e4a876b4afea170",
+      "bytes": 13351
     },
     "figures/baseline_v1_2/01_matched_roc.png": {
       "sha256": "f55215a5c918482dda5b44abed2a74bc2d06f6cd424d7b8f1a887abf1411f89a",
@@ -97,5 +97,10 @@
       "sha256": "e1356fa3c64c10f8d18e4f551b9443c48450a773ae86410b67b119a1886c5969",
       "bytes": 150066
     }
+  },
+  "post_delivery_text_correction": {
+    "date": "2026-11-04",
+    "reason": "Pro review: qualify W2 at the 2% workpoint, retain AP and 1% gains; clarify class2 name",
+    "previous_sha256": "af76965e989eb65cb9a9a29d0e90899447470fa594d34c2296feb44fa43768c1"
   }
 }

@@ -1,11 +1,15 @@
 # Project instructions
 
-- Active authorized follow-up: v1.3 per docs/baseline_v1_3_protocol.md. Separate
-  label eligibility, inventory actual coverage, conditional fixed-forest data
-  comparison and frozen B/forest predicted-evolved candidate. No subagents,
-  distance refit, full-catalog inference or parameter search.
+- Latest completed follow-up: v1.3, docs/baseline_v1_3_result.md. Independent
+  class entry releases6287 A training labels incl395 evolved/508 no-W1.
+  Six fixed forest data comparisons show small mixed changes;93 actual checks,
+  18 tests and3 inspected figures complete. Fixed predicted-evolved candidate
+  has59.18% chosen distance tails vs wide49.66% on147 same sources: do not adopt.
+  Faint classification validation remains absent at22–25; only2 train labels.
+  Next evidence acquisition must target faint/no-WISE labels with new held-out
+  sky; no automatic model search or full-catalog rerun. Preserve v1 deployment.
 
-- Latest completed experiment: baseline v1.2; docs/baseline_v1_2_result.md.
+- Previous completed experiment: baseline v1.2; docs/baseline_v1_2_result.md.
   2364 actual checks,16 focused tests and10 inspected figures. Fixed classifiers
   and cal workpoints complete; retain v1 deployment. C evolved recall35–46%,
   known-reference precision39–42% at cal2% dwarf budget. Full Gaia scores favor

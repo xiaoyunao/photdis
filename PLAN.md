@@ -1,15 +1,21 @@
 # PLAN
 
-## Active objective: v1.3 independent label entry and fixed evolved candidate
+## Completed objective: v1.3 independent label entry and fixed evolved candidate
 
 Source:docs/pro_review_ebf37f8.md; protocol:docs/baseline_v1_3_protocol.md.
-- [ ] Version independent classification/distance eligibility and count added evidence.
-- [ ] Map actual parent/reference coverage and remaining faint/no-WISE gaps.
-- [ ] Conditional fixed-forest data-only comparison on matched cal/test IDs.
-- [ ] Frozen B/forest predicted-evolved candidate, all contaminants and Gaia checks.
-- [ ] Actual validation, report/figures, memory and three-endpoint sync.
+- [x] Version independent eligibility; A adds6287 training labels,395 evolved.
+- [x]135-cell owned-parent/reference coverage; no22–25 cal/test class evidence.
+- [x] Six fixed forests on expanded labels; matched train/evaluation identities.
+- [x] Frozen predicted-evolved B/forest candidate, contaminants and Gaia reuse.
+- [x] Job60775835 COMPLETED0:0;93 actual checks,18 tests,3 inspected figures.
+- [x] Report and memory ready for final scripts/sync.py push endpoint verification.
 
-No new distance experts/full-catalog predictions; preserve all historical results.
+Result:docs/baseline_v1_3_result.md. Model change is small/mixed. Candidate
+chosen-risk59.18% vs same-star wide49.66%; no replacement. Large files remain
+on NERSC data/baseline_v1_3; no distance refit/full-catalog prediction rerun.
+Next: acquire labels in identified faint/no-WISE/large-error cells, retaining
+new unseen sky for validation. Existing-field label release does not fill that
+observational gap. End this fixed candidate attempt; no threshold retuning.
 
 
 ## Completed objective: baseline v1.2 color separability and distance decisions

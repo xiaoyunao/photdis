@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-04 — v1.3 actual results and delivery
+
+- Allocated60775835 COMPLETED0:0;93 checks pass. A/B/C add6287/5779/5232
+  class-training identities with no removed old rows; all six fixed forests fit.
+- A additions:4648 dwarf/395 evolved/1244 other;508 no-W1.22–25 class
+  evidence only2 train objects, no cal/test. Data release does not fill faint gap.
+- Prediction-only evolved candidate:162 test entrance rows,147 chosen distances;
+  main/mixture tails59.18%, wide49.66%;48 Gaia rows, main logscore-3.735 vs
+  wide-.163. Relative subgroup guards fail; retain candidate_only and v1.
+-18 focused tests pass; inspected3 figures, adjusted risk y-limit to show1.0 points.
+- Updated report/README/AGENTS/PLAN, corrected historical W2 wording and recorded
+  its changed document hash without changing numerical evidence.
+- Verified cell/count totals, fixed-model counts, all actual booleans and links.
+  Final milestone uses scripts/sync.py push; remaining work is new-label acquisition.
+
+## 2026-11-04 — allocated v1.3 evidence run submitted
+
+- Three endpoints equal9bc5900; submitted CPU job60775835 using debug allocation.
+-18 focused v1/v1.1/v1.2/v1.3 tests pass; only existing SciPy deprecation warnings.
+- Candidate relative-comparison flag recomputed on evolved subgroup; parent
+  cal pass retained separately, absolute scientific acceptance left undefined.
+- Compact report renderer prepared with coverage, fixed-forest AP and full
+  prediction-group risk figures. Await actual evidence before conclusions.
+
 ## 2026-11-04 — implement independent label inventory and candidate audit
 
 - Added v1.3 eligibility/candidate helpers, allocated runner and two focused tests.

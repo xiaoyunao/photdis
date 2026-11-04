@@ -4,7 +4,17 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
-Latest completed experiment: **v1.2 — color separability and distance decisions**.
+Latest completed experiment: **v1.3 — independent label eligibility and fixed candidate**.
+[Results and three figures](docs/baseline_v1_3_result.md) ·
+[protocol](docs/baseline_v1_3_protocol.md) · [actual evidence](manifests/baseline_v1_3_result.json).
+Independent class training releases6287 A labels (395 evolved,508 without W1).
+Fixed forest data controls show small, mixed changes; faint class coverage remains
+insufficient. The fixed predicted-evolved B/forest group has59.18% severe chosen
+reference error versus49.66% for wide on the same147 objects; retain v1 deployment.
+93 actual checks and18 focused tests pass. Large reference/model/prediction files
+remain under NERSC data/baseline_v1_3. No full-catalog prediction rerun.
+
+Previous completed experiment: **v1.2 — color separability and distance decisions**.
 [Results and ten figures](docs/baseline_v1_2_result.md) ·
 [protocol](docs/baseline_v1_2_protocol.md) ·
 [delivery audit](manifests/baseline_v1_2_delivery.json).
