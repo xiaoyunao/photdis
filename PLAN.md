@@ -9,7 +9,11 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
 - [x] Syntax/shell checks and13 focused tests pass.
-- [ ] Sync and submit allocated extraction; record job ID and30-minute heartbeat.
+- [x] Code48574dc synced and verified on all three endpoints;13 tests pass.
+- [x] ACTIVE30-minute heartbeat photdis-v1-4 attached to this chat.
+- [ ] Confirm first submission: SSH backend became unresponsive; job ID UNKNOWN.
+  Inspect squeue/sacct/logs before any resubmission; see execution manifest.
+- [ ] Finish allocated extraction (no raw/scientific result available yet).
 - [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.

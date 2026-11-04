@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-04 — v1.4 code synced; submission response unavailable
+
+- Code48574dc verified identical local/origin/NERSC by scripts/sync.py push.
+- One sbatch request for baseline_v1_4_extract failed to return a job ID. Two
+  independent bounded read-only queue queries could not recover status; latest
+  SSH explicitly reports server perlmutter.nersc.gov not responding after login
+  gateway routing. This is NOT an observed scientific/Slurm job failure.
+- Stopped only hung local SSH PID32258; no remote jobs cancelled. Submission
+  state remains UNKNOWN. Never blindly repeat sbatch; first inspect squeue,
+  sacct and logs/baseline_v1_4_extract_*.out for this attempt.
+- Created and verified ACTIVE heartbeat photdis-v1-4, every30minutes in current
+  thread01a1a092-2ca6-7512-922b-ac73315e6657. It must continue all protocol
+  milestones after extraction, stay quiet on unchanged running state and stop
+  only after full scientific delivery (or explicitly report an access blocker).
+- Execution state: manifests/baseline_v1_4_execution.json. No new result claim.
+
 ## 2026-11-04 — register v1.4 new-reference/new-sky/i scope
 
 - User authorizes latest Pro advice and30-minute follow-up for long NERSC jobs.
