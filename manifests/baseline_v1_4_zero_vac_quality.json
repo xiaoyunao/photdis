@@ -1,0 +1,14 @@
+{
+  "specdis": {
+    "zero_id_rows": 160,
+    "quality_passing": 0,
+    "positive_target_valid": 0,
+    "passing_target_in_mws": 0
+  },
+  "spdist": {
+    "zero_id_rows": 1202772,
+    "quality_passing": 0,
+    "positive_target_valid": 0,
+    "passing_target_in_mws": 0
+  }
+}

@@ -85,6 +85,7 @@ def main():
             '', 'The original26000 probability sample covers the southern DECam parent; northern rows are outside this i-band coverage estimate.',
             '', '## Validation limits','',d['validation_limits'],
             '', 'Gaia, SpecDis and SPDist scores are retained separately in the result manifest. The chosen training-distance recipe remains Gaia anchors then SpecDis; SPDist is a separate check.',
+            '', 'SpecDis/SPDist error and interval-coverage scores measure agreement with published point estimates; their retained reference uncertainties are not convolved into these point-reference metrics. These are not universal absolute-accuracy claims. The full Gaia likelihood instead convolves the predicted distribution with the signed observed-parallax uncertainty.',
             '', 'Reference-selected population fractions do not estimate parent purity. Zero-ID associations with unknown epochs are flagged, use a0.5arcsec threshold and2arcsec ambiguity veto; systematic matching risk remains.',
             '', 'Figures: classification.png, distance.png, gaia.png, coverage.png, priority.png under figures/baseline_v1_4. Scientific interpretation and visual inspection must be completed before final delivery.','']
     lines+=['## Actual faint reference support','', '| Split | r / WISE | Class labels | Evolved | Chosen distance | SpecDis | SPDist | Gaia likelihood |', '|---|---|---:|---:|---:|---:|---:|---:|']
@@ -139,6 +140,9 @@ def main():
     lines+=['','## Identity and coverage exclusions','',
             f"Zero-ID recovery: {d['assembly']['matching']['matched']} accepted matches from {d['assembly']['matching']['identities']} source identities; ambiguous and unmatched sources remain excluded. Raw fluxes and candidate metadata are retained separately.",
             f"Historical identity exclusions: {d['assembly']['historical_rows']}; native collision rows: {d['assembly']['native_collision_rows']}; source/native geometry disagreements: {d['assembly']['geometry_disagreement_rows']}.",'']
+    for kind,v in d['zero_vac_quality'].items():
+        lines.append(f"{kind}: {v['zero_id_rows']:,} raw rows without valid Gaia IDs; {v['quality_passing']} pass the fixed distance-quality recipe. These raw rows are retained; none supplies a lost qualified distance label.")
+    lines.append('')
     (ROOT/'docs/baseline_v1_4_result.md').write_text('\n'.join(lines))
 
 if __name__=='__main__':main()

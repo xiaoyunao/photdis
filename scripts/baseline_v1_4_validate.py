@@ -8,6 +8,10 @@ def main():
     assembly=json.loads((OUT/'assembly.json').read_text())
     eligibility=json.loads((OUT/'eligibility.json').read_text())
     checks['eligibility_reference_hash']=eligibility['reference_sha256']==assembly['reference_sha256']
+    zero_vac=json.loads((OUT/'zero_vac_quality_audit.json').read_text())
+    for kind,v in zero_vac.items():
+        checks[kind+':zero_vac_inventory']=v['zero_id_rows']==assembly['vac_audit'][kind]['zero_or_invalid_id_rows']
+        checks[kind+':no_qualified_zero_vac_lost']=v['quality_passing']==0
     checks.update({'assembly:'+k:bool(v) for k,v in assembly['checks'].items()})
     checks['reference_hash']=sha(OUT/'references.npz')==assembly['reference_sha256']
     with np.load(OUT/'references.npz') as z:
@@ -82,7 +86,7 @@ def main():
         compact[name]=dict(classification={variant:dict(v,groups={k:g for k,g in v['groups'].items() if not k.startswith('cell')}) for variant,v in m['classification'].items()},
             distance={k:v for k,v in m['distance']['groups'].items() if not k.startswith('cell')},n_distance=m['distance']['n'],
             numerical_checks=m['distance']['checks'],gaia_refinement=m['gaia_refinement'],training=m['training'])
-    save_json(OUT/'result.json',dict(assembly=assembly,eligibility=eligibility,parent_coverage=json.loads((OUT/'parent_coverage.json').read_text()),
+    save_json(OUT/'result.json',dict(assembly=assembly,eligibility=eligibility,zero_vac_quality=zero_vac,parent_coverage=json.loads((OUT/'parent_coverage.json').read_text()),
         models=compact,validation=dict(n_checks=len(checks),all_passed=True),
         deployment='Preserve v1. Fixed validation only; no model search or full-catalog rerun.',
         validation_limits='New geometric reference-selected sky.22–25 claims require actual truth counts; unrepresented cells remain unvalidated.'))

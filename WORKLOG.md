@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-04 — fixed new-data controls executing
+
+- Controls60799511 RUNNING on nid006837 from21:48:28 Beijing. No duplicate
+  job or timer. Expanded A trained237784 class/317003 distance objects; both
+  historical training identity checks pass. Same new test47756 chosen-distance
+  objects: tail9.8249% to9.6805%; class AP0.26071 to0.27238. These are interim
+  A results, not a global benefit claim; other controls and Gaia checks continue.
+- Allocated independent zero-VAC audit (60799511 step): all160 zero-ID SpecDis
+  and1202772 zero-ID SPDist rows fail fixed distance quality;0 qualified labels
+  lost through zero-ID VAC exclusion. Original raw catalogs remain unchanged.
+- Last sync updated origin/NERSC but its final NERSC query timed out. Subsequent
+  read-only SSH verified NERSC6ceac296 matches local/origin; authentication valid.
+- Next finish expanded/refinement then matched/refinement, actual validation,
+  five inspected scientific figures and result interpretation. Preserve v1.
+
 ## 2026-11-04 — frozen references and convergence-controlled Gaia scores
 
 - Assembly60799167 COMPLETED0:0 in6:19;3565499 unique candidates,11
