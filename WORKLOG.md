@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-04 — requested one-time checkpoint continuation
+
+- User explicitly scheduled one resume at17:10 Beijing, an exception to manual
+  follow-up.60779401 ended TIMEOUT at17:06:53 after4:00:06,879/1600 sweep
+  markers (54.9%). Log contains only expected Slurm time-limit error, no Python
+  exception. Extraction completion marker absent;721 sweeps remain.
+- First read-only SSH timed out after login; second succeeded. Authentication is
+  valid. Confirmed no active same-name job and all four frozen hashes unchanged.
+- Rechecked terminal/queue state immediately before one sbatch submission:
+ 60787983 accepted at17:12:24 Beijing; verified PENDING(Priority),4h allocation.
+  Existing checkpoints retained; source/VAC/sweep content verification executes
+  inside its future allocation. No scientific code, data or frozen protocol edit.
+- Deleted single-use automation photdis-17-10 (deleteStatus=deleted). Periodic
+  automation stays deleted; return to manual user checks, no further auto-resume.
+- Updated AGENTS/PLAN/execution manifest. Validation: actual sacct/squeue/log,
+  frozen-code hashes, submission response and manifest parse/diff checks. Remote
+  pre-existing untracked figures/manifests preserved. No new scientific tests.
+- Next: on user request check60787983 and extraction; then continue reference
+  assembly/evaluation milestones. Raw extraction alone is not scientific completion.
+
 ## 2026-11-04 — user stops scheduling; manual progress snapshot
 
 - User requested deletion of scheduled checks and future manual follow-up only.

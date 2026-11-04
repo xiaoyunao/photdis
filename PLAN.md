@@ -8,8 +8,10 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
 
 Follow-up mode: MANUAL at user request2026-11-04. Heartbeat photdis-v1-4
 DELETED; wait for user checks, do not recreate scheduling or auto-resubmit.
-Existing60779401 remains running; current4h allocation ends approximately17:07
-Beijing. After that, inspect terminal state/checkpoints when the user asks.
+User explicitly authorized one17:10 scheduled resume; this single-use task is
+now deleted.60779401 ended TIMEOUT at17:06:53 with879/1600 checkpoints.
+Unique continuation60787983 submitted17:12:24 Beijing, verified PENDING(Priority),
+4h limit. Return to manual checks; do not submit another job automatically.
 
 - [x] Archive advice; register geometry, eligibility, matched controls and endpoints.
 - [x] Implement resumable full MWS/VAC/native DR11 extraction and separate i API.
@@ -22,14 +24,14 @@ Beijing. After that, inspect terminal state/checkpoints when the user asks.
   regular60778125 was pending, cancelled; debug60778259 ran then hit30min limit.
 - [x] Startup/rate verified; former heartbeat now deleted by user request.
   Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
-  and52/1600 sweep markers. Unique regular4h resume60779401 now RUNNING on
-  nid005050;342/1600 markers at14:36 Beijing; existing checkpoints reused.
+  and52/1600 sweep markers.60779401 then reached4h TIMEOUT with879 markers;
+  single requested continuation60787983 verified PENDING(Priority).
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
 - [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
   rows persisted. These are raw inputs, not qualified reference counts.
 - [x] Fixed balanced optical classifier uses the same explicit bands/noise and
   prior class-weight recipe;16 focused tests pass. No production fit yet.
-- [ ] Finish1600-sweep extraction (342 markers at14:36 Beijing; no model scores).
+- [ ] Finish1600-sweep extraction (879 markers at17:12 Beijing; no model scores).
 - [x] Independent source-evidence audit implementation and16 focused tests ready;
   class/Gaia/VAC eligibility remains separate from photometric admission.
 - [x] Source audit step60779401.0 COMPLETED0:0 in79s;8 actual checks pass.
