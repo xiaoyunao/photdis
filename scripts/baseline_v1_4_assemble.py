@@ -77,6 +77,7 @@ def main():
     sid=source['source_id'][rep]
     # Ambiguous multiple native objects with a single Gaia ID are quarantined.
     positive_native=np.flatnonzero(native['source_id']>0)
+    native_multi_source_ids=np.unique(native['source_id'][positive_native][duplicate_mask(native['source_id'][positive_native])])
     match=unique_join(sid,native['source_id'][positive_native]);ok=match>=0
     match[ok]=positive_native[match[ok]];match[sid<=0]=-1
     zjoin=unique_join(source['identity'][rep],zm['identity']);zok=(zjoin>=0)&(sid<=0)
@@ -195,7 +196,7 @@ def main():
         class_independent_distance=np.array_equal(t['class_eligible'],t['class_train_eligible']),
         parent_all26000=parent['n']==26000 and parent['matched']==26000,
         has_new_cal=bool(np.any(t['class_eligible']&(t['split']==1))),has_new_test=bool(np.any(t['class_eligible']&(t['split']==2))))
-    report=dict(candidate_rows=n,unique_reference_rows=len(first),matched_mws=nsource,unmatched_mws_identities=int((match<0).sum()),ambiguous_native_gaia_ids=int(np.unique(t['source_id'][duplicate_mask(t['source_id'])&(t['source_id']>0)]).size),vac_only_native=len(xs),native_collision_rows=int(native_collision.sum()),
+    report=dict(candidate_rows=n,unique_reference_rows=len(first),matched_mws=nsource,unmatched_mws_identities=int((match<0).sum()),ambiguous_native_gaia_ids=len(native_multi_source_ids),vac_only_native=len(xs),native_collision_rows=int(native_collision.sum()),
         geometry_disagreement_rows=int(bad_geometry.sum()),historical_rows=int(historical.sum()),vac_audit=vacstats,parent=parent,
         new_split_counts={str(k):int((t['split']==k).sum()) for k in range(4)},
         coverage={str(k):audit_cells(t,t['split']==k) for k in range(4)},checks=checks,

@@ -9,6 +9,10 @@
   offsets/shapes; column selection itself is case-insensitive in fitsio.
 - Added regression test for lowercase coordinates and vector fields. Resume only
   after confirmed terminal state/no duplicate; reuse consolidated output hash.
+- Submitted preparation60798530 after terminal/no-duplicate checks; verified
+  RUNNING on nid004458. It chains targeted matching then reference assembly.
+ 24 focused tests now pass. Added allocated final artifact validation and small
+  local scientific figure/report rendering; production model scores still pending.
 
 ## 2026-11-04 — continue native identity assembly after extraction
 
