@@ -13,7 +13,7 @@
   "interval_minutes": null,
   "thread_id": "01a1a092-2ca6-7512-922b-ac73315e6657",
   "updated_utc": "2026-11-04T12:05:25.758386+00:00",
-  "next": "Raw extraction complete. Wait for requested continuation of identity/coverage/VAC-only/zero-ID matching and reference assembly, then frozen evaluations and registered experiments. Do not resubmit extraction or recreate monitoring.",
+  "next": "Continue authorized assembly and frozen evaluations. Native job60798395 submitted once; do not duplicate it. No scheduled monitoring.",
   "heartbeat_activation_condition": "Confirmed RUNNING job plus observed timing/progress showing genuinely long remaining work; user correction2026-11-04.",
   "previous_confirmed_job": {
     "id": "60779401",
@@ -92,5 +92,11 @@
     "source_sha256": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc",
     "status": "raw_extraction_complete_not_scientific_validation",
     "next": "audit identity/coverage, resolve unmatched sources, assemble independent eligibility, then frozen scores"
+  },
+  "native_job": {
+    "id": "60798395",
+    "state": "PENDING",
+    "reason": "Resources",
+    "command": "sbatch --parsable scripts/run_baseline_v1_4_native.sh"
   }
 }

@@ -13,6 +13,10 @@
   py_compile and bash syntax pass. Frozen extraction files unchanged.
 - New output/checkpoints separate from original inputs. Next execute native recovery
   on allocated NERSC, assemble independent eligibility and frozen evaluation sets.
+- Submitted unique native job60798395; verified PENDING(Resources). Assembly now
+  implements historical Gaia/native/target identity exclusion, VAC-only provenance,
+  independent labels and fixed26000 weighted i/WISE coverage. Zero-ID candidate
+  admission includes qualified distance evidence independently of class evidence.
 
 ## 2026-11-04 — raw sweep extraction completed
 

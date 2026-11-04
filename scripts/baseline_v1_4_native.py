@@ -17,6 +17,8 @@ from scipy.spatial import cKDTree
 from photdis.assembly_v1_4 import epoch_positions,unit_vectors,positional_join,representative_rows
 from photdis.photometry import derive_photometry
 from photdis.reference_v1_4 import optional_photometry
+from photdis.source_evidence_v1_4 import vac_evidence
+from baseline_v1_4_source_audit import VAC_COLUMNS
 from photdis.stage1 import require_compute,write_json,legacy_ids
 from baseline_v1_4_extract import sha,atomic_npz,RAW_COLUMNS
 
@@ -90,6 +92,16 @@ def recover_zero():
         assert sha(output)==json.loads(marker.read_text())['sha256'];return
     with np.load(OUT/'source_evidence.npz') as z:
         ids=z['identity'];qualified=(z['source_id']<=0)&(z['class_label']>=0)
+    class_rows=int(qualified.sum())
+    with np.load(OUT/'sources.npz') as z:targets=z['rvs_targetid'];source_ids=z['source_id']
+    # Zero-Gaia distance evidence can exist without qualified class labels.
+    for kind,columns in VAC_COLUMNS.items():
+        with np.load(OUT/(kind+'_raw.npz')) as z:
+            zero=(z['source_id']<=0)|(z['source_id']==999999)
+            v={k:z[k][zero] for k in columns}
+        q=np.arange(len(v['targetid']),dtype='i8')+1
+        valid=vac_evidence(q,q,dict(v,targetid=q,source_id=q),kind)[kind+'_valid']
+        qualified|=(source_ids<=0)&np.isin(targets,v['targetid'][valid&(v['targetid']>0)])
     with np.load(OUT/'sources.npz') as z:
         cols=['identity','source_id','original_row','target_target_ra','target_target_dec','target_ref_epoch','target_pmra','target_pmdec','rvs_primary','rvs_sn_r']
         s={k:z[k][qualified] for k in cols}
@@ -131,7 +143,7 @@ def recover_zero():
     match,sep,unknown,amb=positional_join(q,c)
     atomic_npz(OUT/'zero_photometry.npz',**d)
     atomic_npz(output,identity=s['identity'],source_row=s['original_row'],candidate_row=match,separation_arcsec=sep,unknown_epoch=unknown,ambiguous=amb)
-    write_json(marker,dict(qualified_rows=int(qualified.sum()),identities=len(ix),matched=int((match>=0).sum()),
+    write_json(marker,dict(qualified_rows=int(qualified.sum()),class_qualified_rows=class_rows,identities=len(ix),matched=int((match>=0).sum()),
         ambiguous=int(amb.sum()),unmatched=int((match<0).sum()),matched_unknown_epoch=int((unknown&(match>=0)).sum()),
         known_source_epochs=int(epoch_known.sum()),bricks=len(tasks),missing_bricks=missing,
         policy='unique native object within2arcsec; accept<=1arcsec both epochs known else<=0.5arcsec static, flagged; one-to-one',
