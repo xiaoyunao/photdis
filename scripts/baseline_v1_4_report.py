@@ -83,6 +83,13 @@ def main():
         for kind in ['Gaia','specdis','spdist']:
             v=m[n]['distance']['all'][kind]
             lines.append(f"| {n} | {kind} | {v['n']} | {fmt(v.get('bias_mag'))} | {fmt(v.get('nmad_mag'))} | {fmt(v.get('tail_1'))} | {fmt(v.get('coverage68'))} | {fmt(v.get('coverage95'))} |")
+    lines+=['','## Gaia numerical convergence','',
+            'Full Gaia log density and PIT use separately frozen convergence-controlled numerical scores of the unchanged PDFs. The original8-order results remain on NERSC.16/32/64/128-order checks escalate unresolved cases to adaptive integration; target absolute precision1e-5.','',
+            '| Model | Gaia cal+test N | Max log-density correction | Mean correction | Max PIT correction |',
+            '|---|---:|---:|---:|---:|']
+    for n in names:
+        v=m[n]['gaia_refinement']
+        lines.append(f"| {n} | {v['n']} | {fmt(v['log_abs_difference_max'])} | {fmt(v['log_difference_mean'])} | {fmt(v['pit_abs_difference_max'])} |")
     lines+=['','## Weighted WISE measurement states','',
             'Original26000 DECam probability sample; all original weights retained. Low-SNR fluxes were preserved but not passed to Gaussian magnitude models.',
             'States: -1 unmatched; 0 no observation; 1 invalid measurement; 2 quality failure; 3 low S/N including negative flux; 4 usable S/N>=5 color.','',

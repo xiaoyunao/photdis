@@ -16,7 +16,8 @@ User now explicitly requests continuing all GPT Pro milestones autonomously.
 Do not resubmit completed extraction or recreate scheduled monitoring.
 Assembly60799167 completed;3565499 unique reference candidates,11 actual
 checks pass. New train138080 class labels/153403 distance training; new test
-42964 class labels. Frozen60799198 running. Gaia numerical convergence audit
+42964 class labels. Frozen60799198 COMPLETED0:0 in11:25; refinement60799493
+running. Gaia numerical convergence audit
 found a few log-density discrepancies; separate refinement sidecars preserve
 original PDFs and all predictions. Apply the same refinement to all models.
 
@@ -47,7 +48,7 @@ original PDFs and all predictions. Apply the same refinement to all models.
   113 class-conflicting identities and1 multi-Gaia target require assembly handling.
 - [x] Finish native coverage/identity assembly, zero-ID matching and VAC-only audit.
 - [x] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
-- [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.
+- [x] Evaluate frozen v1 and fixed classifier on genuinely new sky (Gaia refinement in progress).
 - [ ] One fixed-algorithm new-data comparison, same evaluation identities.
 - [x] Fixed26000 parent i coverage with original sample weights.
 - [ ] Same-ID grz/griz classification AND distance experiments, shared band noise.

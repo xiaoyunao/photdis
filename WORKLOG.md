@@ -17,8 +17,13 @@
 - Tests cover negative observations, S/N10000 uniform-M analytic limit, and
   multibin distributions against adaptive integrals. Refine every stage with
   the same method before final scientific comparisons; retain correction sizes.
-- Continue fixed new-data and matched experiments after frozen stage and Gaia
-  numeric validation; no scheduling, model search or deployment change.
+- Frozen60799198 COMPLETED0:0 in11:25. Test AP A/B/C0.2607/0.3642/0.4025
+  on their distinct WISE subsets; do not interpret across-tier as same-star gain.
+  Refinement60799493 RUNNING, original quantiles reproduced within1e-6 before
+  each separate likelihood correction. Full26 focused tests now pass.
+- Added one allocated controls chain: expanded, its refinement, matched, its
+  refinement, final artifact validation. It requires frozen refinement completion
+  and both writer locks; no scheduling, model search or deployment change.
 
 ## 2026-11-04 — diagnose zero-ID coverage and continue scientific assembly
 
