@@ -14,12 +14,15 @@ restrictions ONLY for registered fixed-data/griz experiments; retain v1.
   and observed45.25s/473.68MB input throughput (~10.47MB/s), with1600 sweeps
   still to scan. Unknown submission/queue waiting never satisfies this condition.
 - [x] Earlier uncertain attempt absent from queue/accounting/logs. Confirmed
-  regular60778125 was pending, cancelled; debug60778259 now RUNNING on nid004181.
+  regular60778125 was pending, cancelled; debug60778259 ran then hit30min limit.
 - [x] Startup/rate verified; heartbeat photdis-v1-4 ACTIVE every30minutes.
-  Debug60778259 has30min limit: inspect TIMEOUT/checkpoints before resuming on
-  regular4h allocation; never submit while a duplicate job is active.
+  Debug60778259 ended TIMEOUT with no program exception, preserving raw sources
+  and52/1600 sweep markers. Unique regular4h resume60779401 is PENDING(Resources);
+  do not duplicate it. Resume checks content hashes on allocated compute.
 - [x] Explicit4D shared-noise grz/griz distance interface;20 focused tests pass.
-- [ ] Finish allocated extraction (no raw/scientific result available yet).
+- [x] Raw MWS6372607 rows/5932894 identities, SpecDis4140838 and SPDist6272510
+  rows persisted. These are raw inputs, not qualified reference counts.
+- [ ] Finish1600-sweep extraction (52 markers at first follow-up; no science scores).
 - [ ] Audit raw sources/VAC pairs/zero-ID cases/DR11 coverage/identity conflicts.
 - [ ] Assemble independent labels and Gaia likelihood evidence; freeze new splits.
 - [ ] Evaluate frozen v1 and fixed classifier on genuinely new sky.

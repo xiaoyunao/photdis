@@ -1,0 +1,322 @@
+{
+  "freeze.json": {
+    "hashes": {
+      "configs/baseline_v1_4.json": "3ceef9cace6b547ba190a82e190f13a7148b18722b81c7a1a5bc42b8b25f45d3",
+      "docs/baseline_v1_4_protocol.md": "101da3015a337bb0ee2bdfc98c89d7299c74719340a06573f858e55aaa9baf03",
+      "src/photdis/reference_v1_4.py": "7f3c5f673249dec5cc7fff98f4dabb2a4ef850b39ee6b4cf9a1055865ca401af",
+      "scripts/baseline_v1_4_extract.py": "0228c4317d3b7c38303543dc419becf52f7b9b0b605b5c7a4de0f13e78382bf4"
+    },
+    "legacy_bounds": [
+      [
+        0,
+        -35,
+        10,
+        -25
+      ],
+      [
+        0,
+        15,
+        10,
+        25
+      ],
+      [
+        10,
+        -35,
+        20,
+        -25
+      ],
+      [
+        20,
+        -25,
+        30,
+        -15
+      ],
+      [
+        20,
+        0,
+        30,
+        10
+      ],
+      [
+        35,
+        -35,
+        45,
+        -25
+      ],
+      [
+        50,
+        -30,
+        60,
+        -20
+      ],
+      [
+        60,
+        -35,
+        70,
+        -25
+      ],
+      [
+        130,
+        25,
+        140,
+        35
+      ],
+      [
+        140,
+        5,
+        150,
+        15
+      ],
+      [
+        140,
+        25,
+        150,
+        35
+      ],
+      [
+        150,
+        20,
+        160,
+        30
+      ],
+      [
+        160,
+        -25,
+        170,
+        -15
+      ],
+      [
+        170,
+        15,
+        180,
+        25
+      ],
+      [
+        180,
+        -25,
+        190,
+        -15
+      ],
+      [
+        180,
+        -10,
+        190,
+        0
+      ],
+      [
+        180,
+        0,
+        190,
+        10
+      ],
+      [
+        180,
+        25,
+        190,
+        35
+      ],
+      [
+        190,
+        0,
+        200,
+        10
+      ],
+      [
+        190,
+        15,
+        200,
+        25
+      ],
+      [
+        190,
+        20,
+        200,
+        30
+      ],
+      [
+        200,
+        0,
+        210,
+        10
+      ],
+      [
+        200,
+        25,
+        210,
+        35
+      ],
+      [
+        205,
+        -10,
+        215,
+        0
+      ],
+      [
+        210,
+        40,
+        220,
+        50
+      ],
+      [
+        220,
+        20,
+        230,
+        30
+      ],
+      [
+        230,
+        5,
+        240,
+        15
+      ],
+      [
+        230,
+        25,
+        240,
+        35
+      ],
+      [
+        235,
+        0,
+        245,
+        10
+      ],
+      [
+        250,
+        25,
+        260,
+        35
+      ],
+      [
+        310,
+        -35,
+        320,
+        -25
+      ],
+      [
+        320,
+        -25,
+        330,
+        -15
+      ],
+      [
+        330,
+        -35,
+        340,
+        -25
+      ],
+      [
+        340,
+        -15,
+        350,
+        -5
+      ],
+      [
+        340,
+        5,
+        350,
+        15
+      ]
+    ],
+    "git_commit": "843eead1fa7418c751af3377df279e7276316cef",
+    "hostname": "nid004181",
+    "note": "Frozen before reading any model scores"
+  },
+  "sources.json": {
+    "rows": 6372607,
+    "identities": 5932894,
+    "primary": 5930124,
+    "spatial_conflict_rows": 0,
+    "unique_split_counts": {
+      "0": 3030009,
+      "1": 595174,
+      "2": 883884,
+      "3": 1423827
+    },
+    "targeting_columns": [
+      "FA_TARGET",
+      "CMX_TARGET",
+      "DESI_TARGET",
+      "BGS_TARGET",
+      "MWS_TARGET",
+      "SCND_TARGET",
+      "SV1_DESI_TARGET",
+      "SV1_BGS_TARGET",
+      "SV1_MWS_TARGET",
+      "SV1_SCND_TARGET",
+      "SV2_DESI_TARGET",
+      "SV2_BGS_TARGET",
+      "SV2_MWS_TARGET",
+      "SV2_SCND_TARGET",
+      "SV3_DESI_TARGET",
+      "SV3_BGS_TARGET",
+      "SV3_MWS_TARGET",
+      "SV3_SCND_TARGET"
+    ],
+    "source_sha256": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc"
+  },
+  "specdis_raw.json": {
+    "path": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-specdis/v2.1/iron-yr1-v2.1.fits",
+    "rows": 4140838,
+    "columns": [
+      "TARGETID",
+      "SOURCE_ID",
+      "RA",
+      "DEC",
+      "PMRA",
+      "PMRA_ERR",
+      "PMDEC",
+      "PMDEC_ERR",
+      "VRAD",
+      "DIST",
+      "DISTERR",
+      "MG_NN",
+      "MG_GEO",
+      "PARALLAX",
+      "PARALLAX_ERR",
+      "PARALLAX_ZPC",
+      "EBV",
+      "A_G",
+      "RUWE",
+      "APS",
+      "NEUIA",
+      "P_COLOUR",
+      "ECL_LAT",
+      "BINARY_FLAG",
+      "BINARY_POSSIBILITY"
+    ],
+    "sha256": "bf4e59a4772d555f0db413ccfdfdeb01a07dfb62e77ed47d6785efb5d88bc62b"
+  },
+  "spdist_raw.json": {
+    "path": "/global/cfs/cdirs/desi/public/dr1/vac/dr1/mws-spdist/v1.0/mws-iron-SPDist-240613.fits",
+    "rows": 6272510,
+    "columns": [
+      "CAT_ID",
+      "REF_ID",
+      "TARGETID",
+      "SOURCE_ID",
+      "FLAG_GOOD",
+      "TEFF_COR",
+      "LOGG_COR",
+      "E_GMAG",
+      "E_BPMAG",
+      "E_RPMAG",
+      "G0",
+      "BP0",
+      "RP0",
+      "MG_PEAK",
+      "MG_5",
+      "MG_16",
+      "MG_50",
+      "MG_84",
+      "MG_95",
+      "QFLAG_INPUT",
+      "QFLAG_COMMENTS"
+    ],
+    "sha256": "65b943423df93aca52a4b874f1c6355cdac89ef2a3b033eca1189ac852b0550d"
+  },
+  "observed_epoch": 1793765272.6187356,
+  "completed_sweep_markers": 52,
+  "planned_sweeps": 1600,
+  "qualification": "Raw input counts only; no independent whole-output validation or scientific scores yet"
+}

@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-04 — preserve debug checkpoints and submit long continuation
+
+- Recovered clean three-endpointa842f7d. NERSC authentication works. squeue empty;
+  sacct confirms60778259 TIMEOUT at30:27, not a program exception. Log ends with
+  Slurm time-limit cancellation after successful source/VAC writes and52 sweeps.
+- Raw sources6372607 rows/5932894 identities (PRIMARY5930124); spatial splits
+  train3030009/cal595174/test883884/quarantine1423827. Not qualified-label counts.
+  Full SpecDis4140838 and SPDist6272510 rows persisted. No scientific scores.
+- Confirmed no same-name active job, then submitted exactly one regular4h resume
+ 60779401; verified PENDING(Resources). Frozen code/protocol unchanged. Completed
+  source/VAC/sweep SHA checks run inside its allocation before checkpoint reuse.
+- Archived small provenance JSON in manifests/baseline_v1_4_extraction_progress.json;
+  updated execution state/PLAN and heartbeat to point at60779401. No repeated fits
+  or full-catalog predictions; no new tests needed for state-only update.
+- Next: let scheduled checks follow this continuation, then audit complete native
+  photometry/independent labels and execute the registered new-sky/griz experiments.
+
 ## 2026-11-04 — enable monitoring only after measured allocated progress
 
 -60778259 confirmed RUNNING nid004181 at5:08; cumulative read5,257,554,509bytes,
