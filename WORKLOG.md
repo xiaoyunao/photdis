@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-04 — implement independent label inventory and candidate audit
+
+- Added v1.3 eligibility/candidate helpers, allocated runner and two focused tests.
+- Class supervision now independent of Mg/distance, retaining identity/nonstellar
+  exclusions; fixed-forest training keeps0.03mag quality for controlled comparison.
+- Runner records full parent coverage cells, class2 physical summaries, optional
+  same-ID old/new forest comparisons and all-contaminant fixed evolved candidate.
+- Gaia candidate reuses saved row-level complete diagnostics without integration rerun.
+- Syntax and runner parse pass; focused tests verify missing-distance admission
+  and prediction/support-only candidate selection. Next run on allocated NERSC CPU.
+
 ## 2026-11-04 — register Pro follow-up on independent label entry
 
 - Read complete latest8853-character review of ebf37f8; archived original text.
