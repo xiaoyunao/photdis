@@ -195,6 +195,7 @@ def distance(q,group='all',section='main'):
     use=np.ones(len(q['identity']),bool) if group=='all' else strata(q)[group]
     t=subset(q,use)
     fig,axes=plt.subplots(2,3,figsize=(15.6,9.5),layout='constrained')
+    density_artists=[]
     for j,kind in enumerate(('Gaia','specdis','spdist')):
         ref=t['ref_'+kind]
         good=np.isfinite(ref)
@@ -207,6 +208,7 @@ def distance(q,group='all',section='main'):
         lo,hi=limits(np.log10(np.r_[x,y]))
         ed=10**np.linspace(lo,hi,45)
         im=density(axes[0,j],x,y,ed,ed,kind)
+        density_artists.append(im)
         fig.colorbar(im,ax=axes[0,j],label='Objects',shrink=.7)
         axes[0,j].plot(ed,ed,'--',c=ORANGE,lw=1.5)
         axes[0,j].set(xscale='log',yscale='log',xlim=(ed[0],ed[-1]),ylim=(ed[0],ed[-1]),
@@ -229,6 +231,9 @@ def distance(q,group='all',section='main'):
             ROWS.append(row)
         stats=percent_metrics(t['mu'][good],ref[good])
         ax.text(.02,.97,f'N={stats["n"]:,}\nbias={stats["median_pct"]:+.1f}% · NMAD={stats["nmad_pct"]:.1f}%\n1 mag tail={stats["tail1mag"]:.1%}',va='top',transform=ax.transAxes,fontsize=10,bbox=dict(fc='white',alpha=.85,ec='none'))
+    if density_artists:
+        norm=LogNorm(1,max(2,max(im.get_array().max() for im in density_artists)))
+        for im in density_artists:im.set_norm(norm)
     save(fig,'03_distance_'+group,f'expanded_A, {group}, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, ±20%, ±50%. Black marks show median and 16–84% object spread, not confidence limits.',section=section,reference='Gaia/specdis/spdist')
 
 
@@ -439,7 +444,7 @@ def experiments():
             if not p['n']:continue
             x=100*p['tail_difference'];lo,hi=p['tail_ci95'];y=i+(j-1)*.22
             c=[BLUE,GREEN,ORANGE][j]
-            if lo is not None:axes[0].hlines(y,100*lo,100*hi,c=c,lw=1.2)
+            if lo is not None:axes[0].hlines(y,100*lo,100*hi,colors=c,lw=1.2)
             axes[0].plot(x,y,'o',c=c,label=label if i==0 else None)
             ROWS.append(dict(panel=label,group=key,**p))
     axes[0].set(yticks=range(5),yticklabels=keys,xlabel='Tail-rate change [pp]',title='Separate fixed matched comparisons')

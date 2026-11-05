@@ -10,6 +10,8 @@ from baseline_v0_fit import truth_mu
 
 
 def export(name,q,train_ids,reference='new spatial split'):
+    q['model_id']=np.full(len(q['identity']),name,'U40')
+    atomic_npz(DEST/f'training_{name}.npz',identity=train_ids)
     assert not np.intersect1d(q['identity'],train_ids).size
     q['in_model_training']=np.isin(q['identity'],train_ids)
     q['outside_train_precision']=q['optical_error']>=.03
@@ -30,13 +32,28 @@ def export(name,q,train_ids,reference='new spatial split'):
     atomic_npz(DEST/f'sources_{name}.npz',chosen_view_row=np.asarray(sr),source=np.asarray(sc),
                identity=q['identity'][sr])
     return dict(model=name,chosen_view=f'data/v2_0/chosen_{name}.npz',train_n=len(train_ids),
-                split_definition=reference,n=len(q['identity']))
+                split_definition=reference,n=len(q['identity']),
+                training_identity_file=f'data/v2_0/training_{name}.npz',
+                training_identity_sha256=__import__('hashlib').sha256(train_ids.tobytes()).hexdigest())
 
 
 def main():
     require_compute()
     snap=json.loads((TABLES/'snapshot.json').read_text())
     snap['models']=[m for m in snap['models'] if m['model'] in CFG['models']]
+    for item in snap['models']:
+        name=item['model']
+        model_ids=load(OUT/'experiments'/f'{name}_identities.npz')
+        train_ids=model_ids['distance_train_identity']
+        legacy_path=OUT/'experiments'/f'{name}_legacy_training.npz'
+        if legacy_path.exists():
+            train_ids=np.r_[train_ids,load(legacy_path)['distance_train_identity']]
+        atomic_npz(DEST/f'training_{name}.npz',identity=train_ids)
+        item['training_identity_file']=f'data/v2_0/training_{name}.npz'
+        item['training_identity_sha256']=__import__('hashlib').sha256(train_ids.tobytes()).hexdigest()
+        saved=load(DEST/f'chosen_{name}.npz')
+        saved['model_id']=np.full(len(saved['identity']),name,'U40')
+        atomic_npz(DEST/f'chosen_{name}.npz',**saved)
     q=load(DEST/'chosen_expanded_A.npz')
     ids=load(OUT/'experiments/expanded_A_identities.npz')
     legacy=load(OUT/'experiments/expanded_A_legacy_training.npz')
