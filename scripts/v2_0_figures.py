@@ -8,6 +8,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm, Normalize
 from matplotlib.patches import Rectangle
+from matplotlib.ticker import LogLocator, NullFormatter, FuncFormatter
 import numpy as np
 from scipy.stats import binned_statistic_2d
 
@@ -235,6 +236,12 @@ def distance(q,group='all',section='main'):
                 ax.vlines(center,v[0],v[2],color='black',alpha=.4,lw=1)
                 row.update(p16=v[0],median=v[1],p84=v[2])
             ROWS.append(row)
+        for axis in (axes[0,j].xaxis,axes[0,j].yaxis,ax.xaxis):
+            low,high=axis.get_view_interval()
+            subs=(1,) if np.log10(high/low)>2 else (1,2,5)
+            axis.set_major_locator(LogLocator(base=10,subs=subs,numticks=7))
+            axis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:g}'))
+            axis.set_minor_formatter(NullFormatter())
         stats=percent_metrics(t['mu'][good],ref[good])
         ax.text(.02,.97,f'N={stats["n"]:,}\nbias={stats["median_pct"]:+.1f}% · NMAD={stats["nmad_pct"]:.1f}%\n1 mag tail={stats["tail1mag"]:.1%}',va='top',transform=ax.transAxes,fontsize=10,bbox=dict(fc='white',alpha=.85,ec='none'))
     if density_artists:
@@ -370,6 +377,7 @@ def uncertainty(q):
         axes[1].plot(s['width95_mag'],s['coverage95'],'o',c=color,label=label)
         ROWS.append(dict(panel=label,**s))
     for ax,level in zip(axes,[.68,.95]):
+        ax.set_title(f'{int(level*100)}% intervals')
         ax.axhline(level,c=GRAY,ls=':');ax.set(xlabel='Median interval width [mag]',ylabel='Reference-point coverage',ylim=(0,1));ax.legend(fontsize=10)
     save(fig,'08a_coverage_width','Raw expanded_A intervals relative to chosen catalog point estimates. Catalog uncertainties and common upstream information are not removed.')
     begin()
@@ -609,6 +617,10 @@ def pdf_examples(q):
 
 def main():
     require_compute()
+    import argparse
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--polish',action='store_true')
+    args=parser.parse_args()
     completion=json.loads((DEST/'collection_complete.json').read_text())
     assert sha(TABLES/'snapshot.json')==completion['snapshot_sha256']
     plt.rcParams.update(STYLE)
@@ -617,6 +629,15 @@ def main():
     global PRIMARY
     PRIMARY=q
     assert np.isfinite(q['ref_chosen']).sum()==47756
+    if args.polish:
+        REGISTRY.update(json.loads((TABLES/'figure_registry.json').read_text()))
+        distance(q)
+        for group in ('dwarf','evolved','other','unknown'):
+            distance(q,group,'appendix')
+        uncertainty(q)
+        save_json(TABLES/'figure_registry.json',REGISTRY)
+        print('COMPLETE polished distance axes and interval titles',flush=True)
+        return
     scope();coverage(q);distance(q);cmd(q);color_map(q);physical(q);conditions(q)
     uncertainty(q);availability();joint_states();experiments();appendix(q);reused_appendices();pdf_examples(q)
     save_json(TABLES/'figure_registry.json',REGISTRY)

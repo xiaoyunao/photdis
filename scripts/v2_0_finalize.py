@@ -32,6 +32,15 @@ def main():
                     q[key]=provenance[key][index]
         elif 'desi_object_id' in q:
             q['targetid_text']=q['desi_object_id']
+        if 'pdf_source_row' not in q:
+            suffix='recommended_evaluation.npz' if name=='baseline_v1_recommended' else name.removeprefix('baseline_v1_')+'_wide_evaluation.npz'
+            original=ROOT/'data/baseline_v1'/suffix
+            with np.load(original) as z:
+                q['pdf_source_row']=z['rows']
+                q['pdf_evaluation_row']=np.arange(len(q['identity']))
+                q['cached_full_pdf']=np.full(len(q['identity']),'pdf' in z.files)
+            item['original_evaluation']=str(original.relative_to(ROOT))
+            item['full_pdf_location']='original evaluation PDF indexed by pdf_evaluation_row, if cached_full_pdf; otherwise frozen model reconstruction'
         check(name+'_ordered',np.all(np.diff(q['mu'],axis=1)>=0))
         check(name+'_raw_quantiles',np.array_equal(q['mu'],q.get('mu_raw',q['mu'])))
         for source in ('chosen','Gaia','specdis','spdist'):
@@ -45,7 +54,7 @@ def main():
         key=np.rec.fromarrays([source_view['identity'],source_view['source']])
         check(name+'_source_unique',len(np.unique(key))==len(key))
         path=TABLES/f'performance_{name}.csv'
-        with open(path) as f:rows=list(csv.DictReader(f))
+        with open(path) as f:rows=[r for r in csv.DictReader(f) if r.get('interval')!='calibrated_interval']
         for record in rows:
             record['interval']='raw'
         if 'mu_cal' in q:
@@ -77,6 +86,7 @@ def main():
                               chosen='one object/model row',sources='normalized FK view, multiple sources per star',
                               pdf='explicit availability, source row or cached chunk locator',
                               unknown='class_label=-1, kept separate')
+    snap['report_code_hashes'].update({str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'scripts/v2_0_figures.py',ROOT/'scripts/v2_0_finalize.py']})
     save_json(TABLES/'snapshot.json',snap)
     save_json(TABLES/'figure_registry.json',registry)
     save_json(TABLES/'validation.json',dict(checks=CHECKS,n=len(CHECKS)))

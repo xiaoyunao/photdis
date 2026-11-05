@@ -17,5 +17,6 @@ case "${1:?collect, render or finalize}" in
  collect) python -u scripts/v2_0_collect.py ;;
  render) python -u scripts/v2_0_extend.py; python -u scripts/v2_0_figures.py ;;
  finalize) python -u scripts/v2_0_finalize.py ;;
+ polish) python -u scripts/v2_0_figures.py --polish; python -u scripts/v2_0_finalize.py ;;
  *) exit 2 ;;
 esac
