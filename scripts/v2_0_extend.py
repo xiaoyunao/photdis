@@ -46,7 +46,10 @@ def main():
     rs=json.loads((r0path/'result.json').read_text())
     assert sha(r0path/'evaluation.npz')==rs['evaluation_sha256']
     assert np.array_equal(rp['identity'],q['identity'])
-    new=dict(q,mu=rp['mu'],supported=rp['supported'],ambiguous=rp['ambiguous'])
+    new=dict(q,mu=rp['mu'],mu_raw=rp['mu'],supported=rp['supported'],ambiguous=rp['ambiguous'])
+    ga=q['parallax_eligible']
+    for key in ('full_pit','full_log_density'):
+        new[key]=np.full(len(ga),np.nan);new[key][ga]=rp[key]
     for kind in ('chosen','Gaia','specdis','spdist'):
         new['delta_mu_'+kind]=rp['mu'][:,2]-q['ref_'+kind]
         new['epsilon_pct_'+kind]=100*np.expm1(np.log(10)*new['delta_mu_'+kind]/5)
@@ -58,7 +61,12 @@ def main():
     assert sha(wp/'evaluation.npz')==result['evaluation_sha256']
     assert np.array_equal(pred['identity'],q['identity'])
     for i,name in enumerate(('weak_optical','weak_w1','weak_w1w2')):
-        new=dict(q,mu=pred['mu'][:,i],cached_full_pdf=np.ones(len(q['identity']),bool))
+        new=dict(q,mu=pred['mu'][:,i],mu_raw=pred['mu'][:,i],cached_full_pdf=np.ones(len(q['identity']),bool))
+        for key in ('supported','ambiguous'):
+            new[key]=np.zeros(len(q['identity']),bool)
+            new[key+'_available']=np.zeros(len(q['identity']),bool)
+        for key,source in [('full_pit','pit'),('full_log_density','log_density')]:
+            new[key]=np.full(len(ga),np.nan);new[key][ga]=pred[source][:,i]
         new['pdf_chunk_start']=np.arange(len(q['identity']))//192*192
         new['pdf_chunk_row']=np.arange(len(q['identity']))%192
         new['pdf_arm']=np.full(len(q['identity']),i,'i1')

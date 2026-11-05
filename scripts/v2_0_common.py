@@ -49,7 +49,7 @@ def strata(t):
     for lo,hi in [(0,.03),(.03,.1),(.1,np.inf)]:
         out[f'error{lo}_{hi}']=(t['optical_error']>=lo)&(t['optical_error']<hi)
     for name in ('supported','ambiguous','outside_train_precision'):
-        if name in t:
+        if name in t and (name+'_available' not in t or t[name+'_available'].any()):
             out[name]=t[name]
             out['not_'+name]=~t[name]
     if 'TYPE' in t:
