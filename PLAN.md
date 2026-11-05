@@ -1,5 +1,16 @@
 # PLAN
 
+## Active objective: v1.4 scientific diagnostics (2026-11-05)
+
+Authorized latest Pro review: docs/pro_review_46cb68a.md. Protocol:
+docs/baseline_v1_4_diagnostics_protocol.md. Freeze all models and primary scores.
+
+- [ ] Identity-safe per-star joins and refined Gaia reconciliation.
+- [ ] Distance, CMD, color and spatial scientific figures, then spectral/PDF diagnostics.
+- [ ] Paired gain/loss with sky-cell bootstrap; parent support and joint WISE cuts.
+- [ ] Actual checks, focused tests, visual review and scientific interpretation.
+- [ ] Report and safe three-endpoint delivery; no timers, new fit or deployment.
+
 ## Completed objective: v1.4 broader references and native i experiment
 
 Scope: docs/pro_review_5cf8f6d.md and docs/baseline_v1_4_protocol.md.

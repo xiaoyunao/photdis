@@ -1,5 +1,11 @@
 # Project instructions
 
+- Active user-authorized scope2026-11-05: eight v1.4 scientific diagnostic groups
+  from docs/pro_review_46cb68a.md; registered protocol
+  docs/baseline_v1_4_diagnostics_protocol.md. Frozen models/primary outputs; no fit,
+  full-catalog rerun, automation or subagents. Small frozen PDF case predictions
+  and allocated per-star joins/statistics/plots are authorized.
+
 - Latest completed experiment: v1.4, docs/baseline_v1_4_result.md and
   manifests/baseline_v1_4_delivery.json. Full1600-sweep/MWS/VAC assembly,
   independent eligibility, new sky, frozen ABC, fixed new-data ABC and matched

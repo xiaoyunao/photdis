@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-05 — begin authorized scientific diagnostics
+
+- Read latest Pro message3d109805 in referenced chat; archived full review of46cb68a.
+- Clean main and local/origin/NERSC46cb68a confirmed after fetch; SSH valid, queue empty.
+- Registered eight diagnostic groups, same-star pairing, whole-cell bootstrap,
+  refined Gaia scores and deterministic small PDF sample before result inspection.
+- Implemented allocated per-star joins, original-score reconciliation, paired cell
+  bootstrap, independent WISE cross-cuts and fixed20 forward-PDF evaluations.
+- Syntax validation and4 focused synthetic tests pass (units, transitions/cluster
+  resampling, solid angle, deterministic examples and overlapping WISE failures).
+- Large joins and plotting run in Slurm. Preserve primary artifacts and deployed v1;
+  no new training, monitoring or model search. Next implement and run diagnostics.
+
 ## 2026-11-04 — v1.4 scientific delivery complete
 
 - Controls60799511 COMPLETED0:0 in34:36 on nid006837. Frozen, expanded and
