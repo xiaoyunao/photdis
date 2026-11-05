@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-05 — fixed weak WISE development experiment complete
+
+- Read GPT Pro 0001fd8 review and closed r0 interpretation, including 44/47
+  failures in the priority evolved no-W1 layer and interval-width comparison.
+- Raw60836217 completed in28s. Exact native IDs matched all251108 rows in
+  181 contributing sweeps with original states reproduced; no zero fallback.
+- Fit60836294 completed in70s, 509 chunks, 122217 shared templates and97705
+  aligned evaluation objects. Verified normalized PDFs, exact fallback,
+  immutable input hashes, finite signed Gaia results and monotone quantiles.
+- At18–20, weak W1 errors27→36/69; weak W2 with valid W1 errors620→630/3010;
+  weak W2-only40→44/100. All28 evolved in strict weak-W2 layer still fail.
+  49327 Gaia test rows including4139 negative. Adaptive quadrature warnings
+  are documented; paired distance/PIT support the negative conclusion.
+- Weighted either-band measurement coverage32.58%→50.41%. Measurement
+  coverage is reported apart from reference performance.
+- Five focused tests; compact-result transition and histogram reconciliation.
+  Rendered and inspected three 300dpi Pal5-style figures from compact scores.
+  Raw and full PDFs retained on NERSC. No additional fitting in this scope.
+
+
 ## 2026-11-05 — r0 contrast and coverage erratum complete
 
 - Slurm 60835019 completed in 3:11 with 191 chunks. One added r0 QRF,

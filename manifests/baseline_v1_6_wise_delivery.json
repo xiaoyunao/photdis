@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "raw_job": {
+    "id": 60836217,
+    "state": "COMPLETED",
+    "elapsed": "00:00:28",
+    "exit_code": "0:0"
+  },
+  "evaluation_job": {
+    "id": 60836294,
+    "state": "COMPLETED",
+    "elapsed": "00:01:10",
+    "exit_code": "0:0",
+    "chunks": 509
+  },
+  "reconciliation_checks": 11529,
+  "focused_tests_passed": 5,
+  "result_sha256": "043f318c76f02b86548efc709c5298e75e49a7d852ba7d03f107584e5766d8d0",
+  "report_sha256": "ed44c8bc5615a4184a456f695d8378fb378b40e1123e49b13a341bfa4c4a5980",
+  "inspected_figure_sha256": {
+    "figures/baseline_v1_6_wise/weak_flux_coverage.png": "70eea7621af9184bbe3fa80058b1b020eba22690b9e4438785d38de49b13c4d9",
+    "figures/baseline_v1_6_wise/weak_flux_gaia.png": "341b4f98ea6d966ad07bbd0668a986d1c8cd8fa711b861fd6f1161dc6c7484ef",
+    "figures/baseline_v1_6_wise/weak_flux_paired.png": "71852ccc32ac06af8a37c552b6ab8a6e5271d6765c63b7cc8f5dc158188564a8"
+  },
+  "numerical_note": "Adaptive Gaia integration emitted roundoff/subdivision warnings; all outputs finite and PIT in [0,1].",
+  "conclusion": "Fixed weak WISE template prototype did not show benefit in targeted development strata."
+}

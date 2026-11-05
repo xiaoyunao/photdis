@@ -1,5 +1,13 @@
 # PLAN
 
+## Completed objective: fixed weak WISE flux contrast
+
+Result: docs/baseline_v1_6_wise_result.md. Exact native signed flux, 122217
+shared templates and 97705 matched cal/test rows. Three real-weak primary
+contrasts show net losses; 28 evolved stars with valid W1 and weak W2 remain
+severe failures. Weighted either-band measurement coverage is 50.41%. Close
+this prototype with its negative evidence and three inspected figures.
+
 ## Completed objective: expanded A apparent-magnitude contrast
 
 Result: docs/baseline_v1_5_r0_result.md. One fixed QRF contrast, 317003 train and

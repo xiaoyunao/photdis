@@ -1,5 +1,11 @@
 # Project instructions
 
+- Latest completed experiment: docs/baseline_v1_6_wise_result.md. Shared
+  joint templates and raw signed WISE flux; real weak W1/W2 do not improve
+  priority 18–20 development strata. Weak-W1 evolved labels absent; weak-W2
+  with valid W1 has 28/28 severe failures. Preserve full PDF chunks and v1.
+  No automatic continuation or additional experiment without scope.
+
 - Latest fixed development contrast: docs/baseline_v1_5_r0_result.md.
   Same expanded A identities and QRF settings with added r0; evolved tail
   96.56% to 89.85%, dwarf 1.95% to 2.16%, overall Gaia PIT tails worsen.
