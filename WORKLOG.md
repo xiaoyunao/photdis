@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-05 — actual per-star diagnostics and first scientific render
+
+- Diagnostics60832510 COMPLETED0:0 in39s,1943 actual checks pass. Render60832787
+  COMPLETED0:0 in45s;29 figures generated from real frozen tables.
+- Same-star grz→griz:282 rescued,219 harmed, net63; whole-cell bootstrap tail
+  change−0.144pp,95%[−0.337,−0.043]pp, only9 test cells. Evolved improvement
+  interval reaches0; new-data ABC worsens evolved tails by1.12/1.12/2.75pp.
+- Original26000 exact raw WISE matches from51 retained sweeps, no duplicates:
+  W1 low-SNR56.92%, including49.42% both low-SNR/quality-failed. Of quality
+  failures81.03% are low-SNR (W2:94.03%). Old sequential7.49% was not total depth loss.
+- Reviewed all29 first-render figures in contact sheets, plus full CMD/distance/
+  paired pages. Repair dense log ticks, distinguish blank cells from zero bias,
+  show small paired changes with explicit symlog. Add actual historical training
+  coverage to avoid using new-training distribution as the expanded model's union.
+- Next re-render affected presentation and training-coverage panels on allocated
+  compute, inspect, write scientific interpretation and synchronize delivery.
+
 ## 2026-11-05 — begin authorized scientific diagnostics
 
 - Read latest Pro message3d109805 in referenced chat; archived full review of46cb68a.
