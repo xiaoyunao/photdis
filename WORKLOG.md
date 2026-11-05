@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-05 — final scientific figure axis review
+
+- Render60833212 COMPLETED0:0 in50s. Historical/new training union contains
+  331926 identities; actual old/new disjointness and exact joins verified.
+- Inspected revised coverage, gray missing-data cells, paired symlog trends and
+  contact sheets. Broad-distance panels still had dense logarithmic ticks;
+  restrict them to decades when the displayed range exceeds two decades.
+- Syntax validation passes; re-render only presentation outputs on allocated
+  compute. Completed1943-check diagnostics and frozen predictions remain intact.
+
 ## 2026-11-05 — actual per-star diagnostics and first scientific render
 
 - Diagnostics60832510 COMPLETED0:0 in39s,1943 actual checks pass. Render60832787

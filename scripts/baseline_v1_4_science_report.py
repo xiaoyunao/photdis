@@ -100,7 +100,9 @@ def distance_figures(name,t):
                 ar.text(.5,.5,'Unvalidated',ha='center',transform=ar.transAxes)
             if s['n']:
                 for axis in [ax.xaxis,ax.yaxis,ar.xaxis]:
-                    axis.set_major_locator(LogLocator(base=10,subs=(1,2,5),numticks=7))
+                    low,high=axis.get_view_interval()
+                    subs=(1,) if np.log10(high/low)>2 else (1,2,5)
+                    axis.set_major_locator(LogLocator(base=10,subs=subs,numticks=7))
                     axis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:g}'))
                     axis.set_minor_formatter(NullFormatter())
             ax.set(title=LABELS[kind],xlabel='Reference distance (kpc)',ylabel='Predicted median distance (kpc)')
