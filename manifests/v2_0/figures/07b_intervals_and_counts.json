@@ -1,0 +1,85 @@
+{
+  "name": "07b_intervals_and_counts",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Width and coverage are displayed together. Sparse faint layers retain actual N and do not imply broad validation.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Unknown",
+      "eligible": 8708,
+      "finite": 8708,
+      "missing": 0,
+      "plotted": 8708,
+      "outside": 0
+    },
+    {
+      "panel": "Unknown",
+      "eligible": 8708,
+      "finite": 8708,
+      "missing": 0,
+      "plotted": 8708,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 34461,
+      "missing": 0,
+      "plotted": 34461,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 34461,
+      "missing": 0,
+      "plotted": 34461,
+      "outside": 0
+    },
+    {
+      "panel": "Evolved",
+      "eligible": 1269,
+      "finite": 1269,
+      "missing": 0,
+      "plotted": 1269,
+      "outside": 0
+    },
+    {
+      "panel": "Evolved",
+      "eligible": 1269,
+      "finite": 1269,
+      "missing": 0,
+      "plotted": 1269,
+      "outside": 0
+    },
+    {
+      "panel": "Other / transition",
+      "eligible": 6821,
+      "finite": 6821,
+      "missing": 0,
+      "plotted": 6821,
+      "outside": 0
+    },
+    {
+      "panel": "Other / transition",
+      "eligible": 6821,
+      "finite": 6821,
+      "missing": 0,
+      "plotted": 6821,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 56,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/07b_intervals_and_counts.png",
+  "pdf": "figures/v2_0/main/07b_intervals_and_counts.pdf",
+  "csv": "manifests/v2_0/figures/07b_intervals_and_counts.csv",
+  "png_sha256": "f6a2988d348056b52a78d472151d83668a88b1c265a15cc640792fe42a7450e2",
+  "pdf_sha256": "720a5404222f238737340a93b329bfad0363a3cdc0f6f9be4ae132726daa02cf"
+}

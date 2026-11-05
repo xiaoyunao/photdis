@@ -1,0 +1,81 @@
+{
+  "name": "04_cmd_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Same 32,719 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Reference CMD",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        0.04960722103714943,
+        1.7965364456176758
+      ],
+      "y_range": [
+        0.6048716873810687,
+        16.738462068746976
+      ]
+    },
+    {
+      "panel": "Predicted CMD",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        0.04960722103714943,
+        1.7965364456176758
+      ],
+      "y_range": [
+        0.6048716873810687,
+        16.738462068746976
+      ]
+    },
+    {
+      "panel": "Median signed residual [%]",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 215,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 197
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 215,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 197
+    }
+  ],
+  "statistics_records": 1387,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/04_cmd_dwarf.png",
+  "pdf": "figures/v2_0/appendix/04_cmd_dwarf.pdf",
+  "csv": "manifests/v2_0/figures/04_cmd_dwarf.csv",
+  "png_sha256": "5b310383156dfd3b792668526a7798794d26d4da56b84144027602a6bad13902",
+  "pdf_sha256": "ad73bd46f64eb79066369a8399a32153da96f0e4aaed2b6b048c1fce84db8d9a"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_grW1_evolved",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grW1 coordinates, evolved; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 1163,
+      "finite": 1075,
+      "missing": 88,
+      "plotted": 1075,
+      "outside": 0,
+      "x_range": [
+        -0.10619272291660309,
+        1.4932833909988403
+      ],
+      "y_range": [
+        -2.0568471963112938,
+        -0.3398308877188097
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 1163,
+      "finite": 1075,
+      "missing": 88,
+      "plotted": 1075,
+      "outside": 0,
+      "low_occupancy_cells": 144,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 1
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 1163,
+      "finite": 1075,
+      "missing": 88,
+      "plotted": 1075,
+      "outside": 0,
+      "low_occupancy_cells": 144,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 1
+    }
+  ],
+  "statistics_records": 480,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_grW1_evolved.png",
+  "pdf": "figures/v2_0/appendix/05_colors_grW1_evolved.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_grW1_evolved.csv",
+  "png_sha256": "62fa90654b94e71a4f5ca3ce79e9fb85465a4d2a77f62864ea4872fa4b7aeab4",
+  "pdf_sha256": "b5dc6809b0d78cc0caf3540b395d52b52b2cde9fbcdffb54190acbef5c581539"
+}

@@ -1,5 +1,35 @@
 # WORKLOG
 
+## 2026-11-05 — v2.0 stage report delivered
+
+- Recovered full long GPT Pro review46bca023 of8b6f744; registered exhaustive
+  requirements and report/model version distinction. Verified official DR11
+  unique-source and PSF counts against the release-description table.
+- Collect60837616 COMPLETED0:0 in1:11. Exact native morphology recovered for
+  all assembled candidates and parent sample, including516 zero-candidate
+  fallback identities. Expanded-A chosen PSF47740/47756, tail9.665%.
+- Unified19 model/route/experiment views and model-specific training identities,
+  normalized multi-reference views, signed Gaia provenance, raw/cal interval
+  distinction and explicit full-PDF cache availability/locators.
+- Four table families include weighted ranges, disjoint/sequential flow,
+  all14 application fields/configurations and per-star percentage performance.
+  Actual FITS counts and original application hashes verified on allocated CPU.
+- Render60837878 failed at hlines color keyword;60838047 failed at quality
+  CSV cut/metric width95 collision. Both presentation/export issues repaired.
+  Synthetic all-population and compact frozen-result figure smoke passed.
+- Final render60838159 COMPLETED0:0 in2:14,55 figures. Four fixed PDF cases
+  reproduced original expanded-A quantiles within1e-6. Audit60838218 passed.
+  Polish/audit60838343 COMPLETED0:0 in56s,391 checks; adaptive log ticks
+  fixed and68/95% interval panels labeled.
+- Inspected55 PNGs via contact sheets; rendered representative final PDFs with
+  Poppler and validated all55 PDFs/pages,300dpi PNGs and all CSV/JSON hashes.
+- Published scope/methods/status/atlas and checked requirements. Baseline_v1
+  application remains identified separately from expanded-A diagnostics.
+  Denominator with full Photdis cuts and masked effective area explicitly null.
+- Final source/artifact milestone uses safe three-endpoint Git synchronization.
+  Further model experiments await stage review; no monitoring or retraining.
+
+
 ## 2026-11-05 — fixed weak WISE development experiment complete
 
 - Read GPT Pro 0001fd8 review and closed r0 interpretation, including 44/47

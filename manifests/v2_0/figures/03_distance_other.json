@@ -1,0 +1,69 @@
+{
+  "name": "03_distance_other",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "expanded_A, other, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, \u00b120%, \u00b150%. Black marks show median and 16\u201384% object spread, not confidence limits.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 98,
+      "finite": 98,
+      "missing": 0,
+      "plotted": 98,
+      "outside": 0,
+      "x_range": [
+        0.14722405361890598,
+        2.0032902586231662
+      ],
+      "y_range": [
+        0.14722405361890598,
+        2.0032902586231662
+      ]
+    },
+    {
+      "panel": "specdis",
+      "eligible": 6399,
+      "finite": 6399,
+      "missing": 0,
+      "plotted": 6399,
+      "outside": 0,
+      "x_range": [
+        0.06944538915970468,
+        211.13544869153992
+      ],
+      "y_range": [
+        0.06944538915970468,
+        211.13544869153992
+      ]
+    },
+    {
+      "panel": "spdist",
+      "eligible": 5117,
+      "finite": 5117,
+      "missing": 0,
+      "plotted": 5117,
+      "outside": 0,
+      "x_range": [
+        0.07136258283630106,
+        82.88880380979958
+      ],
+      "y_range": [
+        0.07136258283630106,
+        82.88880380979958
+      ]
+    }
+  ],
+  "statistics_records": 919,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/03_distance_other.png",
+  "pdf": "figures/v2_0/appendix/03_distance_other.pdf",
+  "csv": "manifests/v2_0/figures/03_distance_other.csv",
+  "png_sha256": "60ee1e4d0da5f1b9b4820a60ed40f365942b7920cc843ab2c6666ba6c3a45313",
+  "pdf_sha256": "3fde6cc23f1fe950a552b869d9a8d5cac7a8fb125c659295ac024f550e934f2c"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "03_distance_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "expanded_A, dwarf, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, \u00b120%, \u00b150%. Black marks show median and 16\u201384% object spread, not confidence limits.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2898,
+      "outside": 0,
+      "x_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ],
+      "y_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ]
+    },
+    {
+      "panel": "specdis",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32391,
+      "outside": 0,
+      "x_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ],
+      "y_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ]
+    },
+    {
+      "panel": "spdist",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26313,
+      "outside": 0,
+      "x_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ],
+      "y_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ]
+    }
+  ],
+  "statistics_records": 1126,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/03_distance_dwarf.png",
+  "pdf": "figures/v2_0/appendix/03_distance_dwarf.pdf",
+  "csv": "manifests/v2_0/figures/03_distance_dwarf.csv",
+  "png_sha256": "a05f12e22da8365399c2193f3915f6d17f376ceadf9f23e8ba076455f986b956",
+  "pdf_sha256": "2fb322d182ced0e0e67ee12cc80143f2c5ce4e17473b45886daff40be73eafc9"
+}

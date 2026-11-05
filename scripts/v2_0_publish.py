@@ -133,8 +133,39 @@ NERSC data/v2_0/chosen_<model>.npz保存每模型每身份一行。sources_<mode
          f"{float(r['min']):.3f}—{float(r['max']):.3f}" if r['min'] else '缺失']
         for r in ranges_rows if r['sample'] in ('parent_weighted','distance_train','class_train','test_chosen') and r['variable'] in ('r','optical_error','rvs_teff')])
     methods+='\n\n[完整范围表B](../manifests/v2_0/B_sample_ranges.csv) · [选样表A](../manifests/v2_0/A_selection_flow.csv) · [独立代码和数据哈希](../manifests/v2_0/snapshot.json)\n'
+    methods += '''
+## 报告复现入口
+
+在NERSC规范checkout提交下列阶段，后一步依赖前一步成功。报告阶段只读取冻结产物、构造派生表和图，固定PDF个例的小量前向复现由render阶段执行。
+
+```bash
+sbatch scripts/run_v2_0.sh collect
+sbatch --dependency=afterok:COLLECT_JOB scripts/run_v2_0.sh render
+sbatch --dependency=afterok:RENDER_JOB scripts/run_v2_0.sh finalize
+```
+
+将NERSC `data/v2_0/manifests/` 与 `data/v2_0/figures/` 分别同步到本地 `manifests/v2_0/` 与 `figures/v2_0/`，然后执行下列发布入口。它从已核对的紧凑表生成scope、methods、status、atlas。
+
+```bash
+python3 scripts/v2_0_publish.py
+```
+
+每张图的CSV与JSON位于 `manifests/v2_0/figures/`；PNG/PDF位于 `figures/v2_0/main/` 或 `appendix/`。统一逐星表及完整PDF保留在NERSC的 `data/v2_0/` 或原冻结目录。
+'''
     (D/'v2_0_methods.md').write_text(methods)
 
+    field_configs={row['field']:json.loads((ROOT/row['config']).read_text()) for row in app}
+    (M/'field_configurations.json').write_text(json.dumps(field_configs,ensure_ascii=False,indent=2)+chr(10))
+    keys=[];index=[]
+    for file in sorted(M.glob('performance_*.csv')):
+        values=read_csv(file.name)
+        index.append(dict(model=file.stem.removeprefix('performance_'),file=file.name,rows=len(values)))
+        keys.extend(row for row in values if row['split']=='development_test' and row['reference']=='chosen'
+                    and row['group'] in ('all','dwarf','evolved','other','unknown','TYPE_PSF'))
+    for filename,rows in [('D_performance_index.csv',index),('D_performance_key.csv',keys)]:
+        columns=list(dict.fromkeys(k for row in rows for k in row))
+        with open(M/filename,'w',newline='') as f:
+            writer=csv.DictWriter(f,fieldnames=columns);writer.writeheader();writer.writerows(rows)
     performance=read_csv('performance_expanded_A.csv')
     main_rows=[r for r in performance if r['split']=='development_test' and r['reference']=='chosen']
     by={r['group']:r for r in main_rows}

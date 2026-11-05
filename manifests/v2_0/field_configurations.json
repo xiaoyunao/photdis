@@ -1,0 +1,283 @@
+{
+  "0": {
+    "name": "dev_cal_ra205_215_dec_m010_p000",
+    "bounds_deg": [
+      205,
+      -10,
+      215,
+      0
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-205m010-210m005.fits",
+      "sweep-205m005-210p000.fits",
+      "sweep-210m010-215m005.fits",
+      "sweep-210m005-215p000.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_dev_cal_ra205_215_v1",
+    "figure_dir": "figures/field_dev_cal_ra205_215",
+    "manifest_path": "manifests/field_dev_cal_ra205_215.json"
+  },
+  "1": {
+    "name": "native_dev_ra060_070_dec_m035_m025",
+    "bounds_deg": [
+      60,
+      -35,
+      70,
+      -25
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-060m035-065m030.fits",
+      "sweep-060m030-065m025.fits",
+      "sweep-065m035-070m030.fits",
+      "sweep-065m030-070m025.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_native_ra060_070_v1",
+    "figure_dir": "figures/field_native_ra060_070",
+    "manifest_path": "manifests/field_native_ra060_070.json"
+  },
+  "2": {
+    "name": "native_final_ra330_340_dec_m035_m025",
+    "bounds_deg": [
+      330,
+      -35,
+      340,
+      -25
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-330m035-335m030.fits",
+      "sweep-330m030-335m025.fits",
+      "sweep-335m035-340m030.fits",
+      "sweep-335m030-340m025.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_native_ra330_340_v1",
+    "figure_dir": "figures/field_native_ra330_340",
+    "manifest_path": "manifests/field_native_ra330_340.json"
+  },
+  "3": {
+    "name": "native_final_ra020_030_dec_m025_m015",
+    "bounds_deg": [
+      20,
+      -25,
+      30,
+      -15
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-020m025-025m020.fits",
+      "sweep-020m020-025m015.fits",
+      "sweep-025m025-030m020.fits",
+      "sweep-025m020-030m015.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_native_ra020_030_v1",
+    "figure_dir": "figures/field_native_ra020_030",
+    "manifest_path": "manifests/field_native_ra020_030.json"
+  },
+  "4": {
+    "name": "native_north_final_ra130_140_dec_p025_p035",
+    "bounds_deg": [
+      130,
+      25,
+      140,
+      35
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-130p025-135p030.fits",
+      "sweep-130p030-135p035.fits",
+      "sweep-135p025-140p030.fits",
+      "sweep-135p030-140p035.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_native_ra130_140_v1",
+    "figure_dir": "figures/field_native_ra130_140",
+    "manifest_path": "manifests/field_native_ra130_140.json"
+  },
+  "5": {
+    "name": "cold_v4_final_ra150_160_dec_p020_p030",
+    "bounds_deg": [
+      150,
+      20,
+      160,
+      30
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-150p020-155p025.fits",
+      "sweep-150p025-155p030.fits",
+      "sweep-155p020-160p025.fits",
+      "sweep-155p025-160p030.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_cold_v4_ra150_160_v1",
+    "figure_dir": "figures/field_cold_v4_ra150_160",
+    "manifest_path": "manifests/field_cold_v4_ra150_160.json"
+  },
+  "6": {
+    "name": "cold_v4_final_ra220_230_dec_p020_p030",
+    "bounds_deg": [
+      220,
+      20,
+      230,
+      30
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-220p020-225p025.fits",
+      "sweep-220p025-225p030.fits",
+      "sweep-225p020-230p025.fits",
+      "sweep-225p025-230p030.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_cold_v4_ra220_230_v1",
+    "figure_dir": "figures/field_cold_v4_ra220_230",
+    "manifest_path": "manifests/field_cold_v4_ra220_230.json"
+  },
+  "7": {
+    "name": "targeted_ra180_190_dec_p000_p010",
+    "bounds_deg": [
+      180,
+      0,
+      190,
+      10
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-180p000-185p005.fits",
+      "sweep-180p005-185p010.fits",
+      "sweep-185p000-190p005.fits",
+      "sweep-185p005-190p010.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_targeted_ra180_190_dec_p000_p010_v1",
+    "figure_dir": "figures/field_targeted_ra180_190_dec_p000_p010",
+    "manifest_path": "manifests/field_targeted_ra180_190_dec_p000_p010.json"
+  },
+  "8": {
+    "name": "targeted_ra180_190_dec_m010_p000",
+    "bounds_deg": [
+      180,
+      -10,
+      190,
+      0
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-180m010-185m005.fits",
+      "sweep-180m005-185p000.fits",
+      "sweep-185m010-190m005.fits",
+      "sweep-185m005-190p000.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_targeted_ra180_190_dec_m010_p000_v1",
+    "figure_dir": "figures/field_targeted_ra180_190_dec_m010_p000",
+    "manifest_path": "manifests/field_targeted_ra180_190_dec_m010_p000.json"
+  },
+  "9": {
+    "name": "targeted_ra190_200_dec_p020_p030",
+    "bounds_deg": [
+      190,
+      20,
+      200,
+      30
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-190p020-195p025.fits",
+      "sweep-190p025-195p030.fits",
+      "sweep-195p020-200p025.fits",
+      "sweep-195p025-200p030.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_targeted_ra190_200_dec_p020_p030_v1",
+    "figure_dir": "figures/field_targeted_ra190_200_dec_p020_p030",
+    "manifest_path": "manifests/field_targeted_ra190_200_dec_p020_p030.json"
+  },
+  "10": {
+    "name": "targeted_ra020_030_dec_p000_p010",
+    "bounds_deg": [
+      20,
+      0,
+      30,
+      10
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-020p000-025p005.fits",
+      "sweep-020p005-025p010.fits",
+      "sweep-025p000-030p005.fits",
+      "sweep-025p005-030p010.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_targeted_ra020_030_dec_p000_p010_v1",
+    "figure_dir": "figures/field_targeted_ra020_030_dec_p000_p010",
+    "manifest_path": "manifests/field_targeted_ra020_030_dec_p000_p010.json"
+  },
+  "11": {
+    "name": "giant_ranked_ra200_210_dec_p000_p010",
+    "bounds_deg": [
+      200,
+      0,
+      210,
+      10
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-200p000-205p005.fits",
+      "sweep-200p005-205p010.fits",
+      "sweep-205p000-210p005.fits",
+      "sweep-205p005-210p010.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_giant_ranked_ra200_210_dec_p000_p010_v1",
+    "figure_dir": "figures/field_giant_ranked_ra200_210_dec_p000_p010",
+    "manifest_path": "manifests/field_giant_ranked_ra200_210_dec_p000_p010.json"
+  },
+  "12": {
+    "name": "giant_ranked_ra190_200_dec_p000_p010",
+    "bounds_deg": [
+      190,
+      0,
+      200,
+      10
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_files": [
+      "sweep-190p000-195p005.fits",
+      "sweep-190p005-195p010.fits",
+      "sweep-195p000-200p005.fits",
+      "sweep-195p005-200p010.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_giant_ranked_ra190_200_dec_p000_p010_v1",
+    "figure_dir": "figures/field_giant_ranked_ra190_200_dec_p000_p010",
+    "manifest_path": "manifests/field_giant_ranked_ra190_200_dec_p000_p010.json"
+  },
+  "13": {
+    "name": "giant_ranked_ra210_220_dec_p040_p050",
+    "bounds_deg": [
+      210,
+      40,
+      220,
+      50
+    ],
+    "base_config": "configs/stage1.json",
+    "sweep_root": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0",
+    "sweep_files": [
+      "sweep-210p040-215p045.fits",
+      "sweep-210p045-215p050.fits",
+      "sweep-215p040-220p045.fits",
+      "sweep-215p045-220p050.fits"
+    ],
+    "spectroscopy_run_dir": "data/stage1_v1",
+    "output_dir": "data/field_giant_ranked_ra210_220_dec_p040_p050_v1",
+    "figure_dir": "figures/field_giant_ranked_ra210_220_dec_p040_p050",
+    "manifest_path": "manifests/field_giant_ranked_ra210_220_dec_p040_p050.json"
+  }
+}

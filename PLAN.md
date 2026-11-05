@@ -1,5 +1,14 @@
 # PLAN
 
+## Completed objective: Photdis v2.0 stage freeze
+
+Scope/methods/status/atlas and docs/v2_0_requirements.md cover the long Pro
+review. Four base statistics table families,19 normalized views,55 figures
+with per-figure CSV and metadata. Full TYPE and PSF audit complete; percentage
+metrics recomputed per star.391 actual checks; focused metrics test and
+synthetic/compact figure smoke pass. All55 PNGs reviewed, PDFs parsed and
+representative PDF pages rendered. Next step is group-review discussion.
+
 ## Completed objective: fixed weak WISE flux contrast
 
 Result: docs/baseline_v1_6_wise_result.md. Exact native signed flux, 122217

@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_grz_other",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grz coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "x_range": [
+        -0.39944571256637573,
+        1.556540608406067
+      ],
+      "y_range": [
+        -0.526978075504303,
+        2.0641655921936035
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "low_occupancy_cells": 118,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 41
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "low_occupancy_cells": 118,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 41
+    }
+  ],
+  "statistics_records": 456,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_grz_other.png",
+  "pdf": "figures/v2_0/appendix/05_colors_grz_other.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_grz_other.csv",
+  "png_sha256": "5c84986bf9a6e6f20170a4e557678fa0a13a7c403835813b7e268c8e4a5140ce",
+  "pdf_sha256": "8f3daa4c5e66628878d9f85c10be242b3d0722dfebbc988aa51438cf1a8acb32"
+}

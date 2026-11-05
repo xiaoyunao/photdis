@@ -1,0 +1,81 @@
+{
+  "name": "04_cmd_all",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Same 47,756 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Reference CMD",
+      "eligible": 47756,
+      "finite": 47756,
+      "missing": 0,
+      "plotted": 47756,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.18995681428162,
+        20.663812025140352
+      ]
+    },
+    {
+      "panel": "Predicted CMD",
+      "eligible": 47756,
+      "finite": 47756,
+      "missing": 0,
+      "plotted": 47756,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.18995681428162,
+        20.663812025140352
+      ]
+    },
+    {
+      "panel": "Median signed residual [%]",
+      "eligible": 47756,
+      "finite": 47756,
+      "missing": 0,
+      "plotted": 47756,
+      "outside": 0,
+      "low_occupancy_cells": 354,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 477
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 47756,
+      "finite": 47756,
+      "missing": 0,
+      "plotted": 47756,
+      "outside": 0,
+      "low_occupancy_cells": 354,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 477
+    }
+  ],
+  "statistics_records": 1710,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/04_cmd_all.png",
+  "pdf": "figures/v2_0/main/04_cmd_all.pdf",
+  "csv": "manifests/v2_0/figures/04_cmd_all.csv",
+  "png_sha256": "202372ae6ad9999143baea4337c0ce138e6f73e432259c0ed106bf3baf2edaf0",
+  "pdf_sha256": "af727cbfcc91217a924f28e4e6244f7d82ff9a6ab77f1e8ede8f84b29aeb1d5e"
+}

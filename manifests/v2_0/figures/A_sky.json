@@ -1,0 +1,20 @@
+{
+  "name": "A_sky",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Chosen test selection only. Sparse cells hatched. Per-cell solid-angle area is retained for density comparisons. No interpolation.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 9,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/A_sky.png",
+  "pdf": "figures/v2_0/appendix/A_sky.pdf",
+  "csv": "manifests/v2_0/figures/A_sky.csv",
+  "png_sha256": "1599c1ece3c43a5510b5ba974695a0a834555303f0044ced2cfbc62cfbcaf43c",
+  "pdf_sha256": "4f7f6bdb23700384aa3d2bd9a0672dc4d9ae500039937d76dfc0344c82527d59"
+}

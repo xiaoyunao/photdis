@@ -1,0 +1,20 @@
+{
+  "name": "A_quality_retention",
+  "section": "appendix",
+  "model": "baseline_v1",
+  "reference": "chosen",
+  "split": "old cal/test",
+  "caption": "Existing fixed v1 quality grid; no re-optimization. All-class adoption failed. Raw/calibrated intervals remain distinct in the original source.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 288,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/A_quality_retention.png",
+  "pdf": "figures/v2_0/appendix/A_quality_retention.pdf",
+  "csv": "manifests/v2_0/figures/A_quality_retention.csv",
+  "png_sha256": "4934e64c24ec4aabd997de283b228c528606280129b5e0da28fe4452f160f478",
+  "pdf_sha256": "03d70e54f1e16b4f0e1306c514860b5717409592b2dec6c9b2ee42442b24c3e3"
+}

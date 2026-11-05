@@ -1,0 +1,141 @@
+{
+  "name": "07_conditions_ref_distance",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Unknown",
+      "eligible": 8708,
+      "finite": 7466,
+      "missing": 1242,
+      "plotted": 7466,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 32719,
+      "missing": 1742,
+      "plotted": 32719,
+      "outside": 0
+    },
+    {
+      "panel": "Evolved",
+      "eligible": 1269,
+      "finite": 1163,
+      "missing": 106,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other / transition",
+      "eligible": 6821,
+      "finite": 6408,
+      "missing": 413,
+      "plotted": 6408,
+      "outside": 0
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 4970,
+      "missing": 658,
+      "plotted": 4970,
+      "outside": 0
+    },
+    {
+      "panel": "Unknown",
+      "eligible": 8708,
+      "finite": 7466,
+      "missing": 1242,
+      "plotted": 7466,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 32719,
+      "missing": 1742,
+      "plotted": 32719,
+      "outside": 0
+    },
+    {
+      "panel": "Evolved",
+      "eligible": 1269,
+      "finite": 1163,
+      "missing": 106,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other / transition",
+      "eligible": 6821,
+      "finite": 6408,
+      "missing": 413,
+      "plotted": 6408,
+      "outside": 0
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 4970,
+      "missing": 658,
+      "plotted": 4970,
+      "outside": 0
+    },
+    {
+      "panel": "Unknown",
+      "eligible": 8708,
+      "finite": 7466,
+      "missing": 1242,
+      "plotted": 7466,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 32719,
+      "missing": 1742,
+      "plotted": 32719,
+      "outside": 0
+    },
+    {
+      "panel": "Evolved",
+      "eligible": 1269,
+      "finite": 1163,
+      "missing": 106,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other / transition",
+      "eligible": 6821,
+      "finite": 6408,
+      "missing": 413,
+      "plotted": 6408,
+      "outside": 0
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 4970,
+      "missing": 658,
+      "plotted": 4970,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 150,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/07_conditions_ref_distance.png",
+  "pdf": "figures/v2_0/appendix/07_conditions_ref_distance.pdf",
+  "csv": "manifests/v2_0/figures/07_conditions_ref_distance.csv",
+  "png_sha256": "11abec68907acce1d5e5c86573895c8a265be691f803916ba77ef0dceaf71ac9",
+  "pdf_sha256": "5903718d759db8c2810ae433a46516116868a0ab4c9058d994bd561f00e370e2"
+}

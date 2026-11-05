@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_WISE_unknown",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in WISE coordinates, unknown; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 7466,
+      "finite": 3402,
+      "missing": 4064,
+      "plotted": 3402,
+      "outside": 0,
+      "x_range": [
+        -2.884104942111802,
+        1.8732411933666753
+      ],
+      "y_range": [
+        -1.5850659963564777,
+        1.9692976537208022
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 7466,
+      "finite": 3402,
+      "missing": 4064,
+      "plotted": 3402,
+      "outside": 0,
+      "low_occupancy_cells": 219,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 63
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 7466,
+      "finite": 3402,
+      "missing": 4064,
+      "plotted": 3402,
+      "outside": 0,
+      "low_occupancy_cells": 219,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 63
+    }
+  ],
+  "statistics_records": 783,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_WISE_unknown.png",
+  "pdf": "figures/v2_0/appendix/05_colors_WISE_unknown.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_WISE_unknown.csv",
+  "png_sha256": "1bbbc6395b4d8f0a33dc4a6d3e99256b4ec781788f422a87401ee741960592ee",
+  "pdf_sha256": "96abbae9240f4dfa509fa2985544992bef516d7da5da1b26281d0eaf7870e7a0"
+}

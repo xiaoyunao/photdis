@@ -1,0 +1,20 @@
+{
+  "name": "02a_brightness_coverage",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "independent eligibility",
+  "split": "cal/test + parent",
+  "caption": "Parent retains original probability weights. No common reference mask is used for class, chosen or signed Gaia evidence.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 67,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/02a_brightness_coverage.png",
+  "pdf": "figures/v2_0/main/02a_brightness_coverage.pdf",
+  "csv": "manifests/v2_0/figures/02a_brightness_coverage.csv",
+  "png_sha256": "1794dcf9574ef81aed05ae7af54a71d0d446c1694b6b9cd080e214d7db45bfae",
+  "pdf_sha256": "8b1c8bcd0088c8ef85e49d742e97a463570bf4c8ce0a17151b71cffd2f7e5368"
+}

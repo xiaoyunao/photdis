@@ -1,0 +1,81 @@
+{
+  "name": "04_cmd_evolved",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Same 1,163 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Reference CMD",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        -0.1070835292339325,
+        1.5238678455352783
+      ],
+      "y_range": [
+        -3.599687586671889,
+        12.372755531339326
+      ]
+    },
+    {
+      "panel": "Predicted CMD",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        -0.1070835292339325,
+        1.5238678455352783
+      ],
+      "y_range": [
+        -3.599687586671889,
+        12.372755531339326
+      ]
+    },
+    {
+      "panel": "Median signed residual [%]",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "low_occupancy_cells": 215,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 2
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "low_occupancy_cells": 215,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 2
+    }
+  ],
+  "statistics_records": 807,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/04_cmd_evolved.png",
+  "pdf": "figures/v2_0/appendix/04_cmd_evolved.pdf",
+  "csv": "manifests/v2_0/figures/04_cmd_evolved.csv",
+  "png_sha256": "05c83d57e258a513d1057fcbfe826f8f8599aef7ed5e0d1c912af30efef0bcda",
+  "pdf_sha256": "97a7ce5e4e43a8f68027cc441f70849c5f11a444e0506e9d9c4e9bf8b0c2b70e"
+}

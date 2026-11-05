@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_griz_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in griz coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "x_range": [
+        -0.3302969853849847,
+        2.12390979867334
+      ],
+      "y_range": [
+        -0.1432544451280794,
+        0.9628596067344798
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "low_occupancy_cells": 129,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 174
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "low_occupancy_cells": 129,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 174
+    }
+  ],
+  "statistics_records": 594,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_griz_dwarf.png",
+  "pdf": "figures/v2_0/appendix/05_colors_griz_dwarf.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_griz_dwarf.csv",
+  "png_sha256": "6edde7aee52fe19ae45352f59d86e7d5a64fc457289da86a1d92ebe1a8a100bd",
+  "pdf_sha256": "fd63d862f31f29d8e80f26b6d7b11bbdbda89373f125c9c52c5848b0bef7dc6b"
+}

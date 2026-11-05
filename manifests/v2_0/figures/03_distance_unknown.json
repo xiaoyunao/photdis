@@ -1,0 +1,69 @@
+{
+  "name": "03_distance_unknown",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "expanded_A, unknown, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, \u00b120%, \u00b150%. Black marks show median and 16\u201384% object spread, not confidence limits.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 211,
+      "finite": 211,
+      "missing": 0,
+      "plotted": 211,
+      "outside": 0,
+      "x_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ],
+      "y_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ]
+    },
+    {
+      "panel": "specdis",
+      "eligible": 7382,
+      "finite": 7382,
+      "missing": 0,
+      "plotted": 7382,
+      "outside": 0,
+      "x_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ],
+      "y_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ]
+    },
+    {
+      "panel": "spdist",
+      "eligible": 4861,
+      "finite": 4861,
+      "missing": 0,
+      "plotted": 4861,
+      "outside": 0,
+      "x_range": [
+        0.16997398677995798,
+        257.4900736290773
+      ],
+      "y_range": [
+        0.16997398677995798,
+        257.4900736290773
+      ]
+    }
+  ],
+  "statistics_records": 947,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/03_distance_unknown.png",
+  "pdf": "figures/v2_0/appendix/03_distance_unknown.pdf",
+  "csv": "manifests/v2_0/figures/03_distance_unknown.csv",
+  "png_sha256": "2d5e8f22ac90f75a494a6793507b603a5b4e1fca4853c4d1baa37cffd61e1a74",
+  "pdf_sha256": "669273ee39f4e0f2e8be5101e6514928ce69dd578e12fb50c70557e1d9243e8a"
+}

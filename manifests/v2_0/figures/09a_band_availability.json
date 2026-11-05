@@ -1,0 +1,20 @@
+{
+  "name": "09a_band_availability",
+  "section": "main",
+  "model": "measurement states",
+  "reference": "none",
+  "split": "weighted parent",
+  "caption": "Original26000 probability sample, original DECam weights. High S/N and signed valid measurements separated. Exact application route counts are a different population statistic.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 30,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/09a_band_availability.png",
+  "pdf": "figures/v2_0/main/09a_band_availability.pdf",
+  "csv": "manifests/v2_0/figures/09a_band_availability.csv",
+  "png_sha256": "f45b11ed3e1a0bde7568d24a09d918ff8e35e2f0e52403b3b6d303469535c4ba",
+  "pdf_sha256": "2c701488680444edbf833c6a3b1819c7d9a9066126d902c131ab0aed88338268"
+}

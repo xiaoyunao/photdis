@@ -1,0 +1,69 @@
+{
+  "name": "03_distance_all",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "expanded_A, all, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, \u00b120%, \u00b150%. Black marks show median and 16\u201384% object spread, not confidence limits.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0,
+      "x_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ],
+      "y_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ]
+    },
+    {
+      "panel": "specdis",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 47335,
+      "outside": 0,
+      "x_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ],
+      "y_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ]
+    },
+    {
+      "panel": "spdist",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37317,
+      "outside": 0,
+      "x_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ],
+      "y_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ]
+    }
+  ],
+  "statistics_records": 1233,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/03_distance_all.png",
+  "pdf": "figures/v2_0/main/03_distance_all.pdf",
+  "csv": "manifests/v2_0/figures/03_distance_all.csv",
+  "png_sha256": "57de5ab9fec3367916396f73ee3cdab64b47c8364f171b930bbaf9a296fa5d38",
+  "pdf_sha256": "e63032561ce4eaaf5954350ab929ce0676959e84811a6cf5a5525b0a282ae2da"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "A_fixed_pdf_examples",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "One object per preregistered group, fixed hash order. Four forward calls to frozen expanded_A, same Sobol128, quantiles reproduced within1e-6. Shading shows catalog reference error; examples do not estimate mechanism frequency.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 1280,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/A_fixed_pdf_examples.png",
+  "pdf": "figures/v2_0/appendix/A_fixed_pdf_examples.pdf",
+  "csv": "manifests/v2_0/figures/A_fixed_pdf_examples.csv",
+  "png_sha256": "26defa6b9502570436fe0d15c973cc3cd080f05b8569f5450ccafb0b660499d8",
+  "pdf_sha256": "3805f473c94678d0f8efe3c5240c657266e0a99046057dfb389e36697943a29a"
+}

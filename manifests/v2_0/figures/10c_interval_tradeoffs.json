@@ -1,0 +1,20 @@
+{
+  "name": "10c_interval_tradeoffs",
+  "section": "main",
+  "model": "paired experiments",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Paired data/i/r0 effects on reference-point coverage and width are displayed together. Each has its own fixed sample.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [],
+  "statistics_records": 15,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/main/10c_interval_tradeoffs.png",
+  "pdf": "figures/v2_0/main/10c_interval_tradeoffs.pdf",
+  "csv": "manifests/v2_0/figures/10c_interval_tradeoffs.csv",
+  "png_sha256": "a00a75045a0ec544c2efad4917b0544862b721ac0a41a9b87d7128cf39854a0e",
+  "pdf_sha256": "9b271dac71041319d81f7220e47de0dc79fd6950d693f9e3c21acc075d7c17d1"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_grz_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grz coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        0.04960722103714943,
+        1.7965364456176758
+      ],
+      "y_range": [
+        -0.20690616965293884,
+        3.1809003353118896
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 110,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 197
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 110,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 197
+    }
+  ],
+  "statistics_records": 684,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_grz_dwarf.png",
+  "pdf": "figures/v2_0/appendix/05_colors_grz_dwarf.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_grz_dwarf.csv",
+  "png_sha256": "c447bed4f30c0e8f44053630b83e65095b6c78d5be7b751c5714184dcdf31a44",
+  "pdf_sha256": "713c43551e1291206ee8671c37f1fd9e3eaf2e0d615db3bb53cb17d5a29ae5d9"
+}

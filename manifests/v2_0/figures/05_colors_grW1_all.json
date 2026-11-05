@@ -1,0 +1,65 @@
+{
+  "name": "05_colors_grW1_all",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grW1 coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "x_range": [
+        -0.6255237460136414,
+        2.3348209857940674
+      ],
+      "y_range": [
+        -3.1747976612666036,
+        1.8817079715944849
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "low_occupancy_cells": 255,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "residual_beyond_color": 351
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "low_occupancy_cells": 255,
+      "display_color_limits": [
+        0,
+        100
+      ],
+      "residual_beyond_color": 351
+    }
+  ],
+  "statistics_records": 1026,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/05_colors_grW1_all.png",
+  "pdf": "figures/v2_0/appendix/05_colors_grW1_all.pdf",
+  "csv": "manifests/v2_0/figures/05_colors_grW1_all.csv",
+  "png_sha256": "ef5ec785ba405270ad2dec0ebf748f28077f4e0492b894ac7603da70daf1470e",
+  "pdf_sha256": "7a5ea68b1534a7ecfce8815462ecbe37585294f267b840cf91919a5c6b28bd2c"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "03_distance_evolved",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "expanded_A, evolved, all eligible source-specific objects. Full residuals retained with symlog. Lines at 0, \u00b120%, \u00b150%. Black marks show median and 16\u201384% object spread, not confidence limits.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; cream background indicates no evidence",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 1269,
+      "finite": 0,
+      "missing": 1269,
+      "plotted": 0,
+      "outside": 0
+    },
+    {
+      "panel": "specdis",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ],
+      "y_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ]
+    },
+    {
+      "panel": "spdist",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        0.057788035156758885,
+        107.143187834303
+      ],
+      "y_range": [
+        0.057788035156758885,
+        107.143187834303
+      ]
+    }
+  ],
+  "statistics_records": 509,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0/appendix/03_distance_evolved.png",
+  "pdf": "figures/v2_0/appendix/03_distance_evolved.pdf",
+  "csv": "manifests/v2_0/figures/03_distance_evolved.csv",
+  "png_sha256": "726b05f299fa8dbaeb679634ce315e9d6f89c0c580452f7a49892b4d551e240e",
+  "pdf_sha256": "6e1895f42820c1a969d153e9af67526e9b409bfd6463a75b92fe6f0bf94e23d7"
+}

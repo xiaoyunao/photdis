@@ -1,5 +1,14 @@
 # Project instructions
 
+- Latest completed stage report: Photdis v2.0. Read docs/v2_0_scope.md,
+  docs/v2_0_methods.md, docs/v2_0_status.md and docs/v2_0_figure_atlas.md.
+  10 main figure groups (19 plates),36 appendix plates;55 sets of PNG300dpi,
+  PDF,CSV,JSON.19 normalized model/route/experiment views on NERSC.391 checks.
+  Main diagnostic expanded_A; actual application baseline_v1. Full-reference
+  morphology audit and PSF subset complete (47740/47756 chosen test PSF).
+  Same-selection DR11 denominator and effective masked area remain null.
+  No automatic modeling or application expansion; next scope follows review.
+
 - Latest completed experiment: docs/baseline_v1_6_wise_result.md. Shared
   joint templates and raw signed WISE flux; real weak W1/W2 do not improve
   priority 18–20 development strata. Weak-W1 evolved labels absent; weak-W2
