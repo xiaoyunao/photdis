@@ -26,6 +26,9 @@
 - Published scope/methods/status/atlas and checked requirements. Baseline_v1
   application remains identified separately from expanded-A diagnostics.
   Denominator with full Photdis cuts and masked effective area explicitly null.
+- Delivery audit caught the global CSV ignore rule; whitelisted only compact
+  v2 report tables. Normalized LF serialization and checked every recorded
+  report-table hash against the exact Git blob, including all55 figure CSVs.
 - Final source/artifact milestone uses safe three-endpoint Git synchronization.
   Further model experiments await stage review; no monitoring or retraining.
 
