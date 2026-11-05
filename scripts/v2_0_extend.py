@@ -77,7 +77,9 @@ def main():
     for kind in ('chosen','Gaia','specdis','spdist'):
         new['delta_mu_'+kind]=rp['mu'][:,2]-q['ref_'+kind]
         new['epsilon_pct_'+kind]=100*np.expm1(np.log(10)*new['delta_mu_'+kind]/5)
-    snap['models'].append(export('expanded_A_r0',new,train))
+    item=export('expanded_A_r0',new,train)
+    item.update(original_model_id='expanded_A + grz_r0',model_path='data/baseline_v1_5_r0/model.joblib',model_sha256=rs['model_sha256'],protocol='docs/baseline_v1_5_r0_protocol.md')
+    snap['models'].append(item)
     audited(r0path/'model.joblib',rs['model_sha256'])
     wp=ROOT/'data/baseline_v1_6_wise'
     pred=load(audited(wp/'evaluation.npz'))
@@ -97,7 +99,9 @@ def main():
         for kind in ('chosen','Gaia','specdis','spdist'):
             new['delta_mu_'+kind]=new['mu'][:,2]-q['ref_'+kind]
             new['epsilon_pct_'+kind]=100*np.expm1(np.log(10)*new['delta_mu_'+kind]/5)
-        snap['models'].append(export(name,new,pred['train_identity']))
+        item=export(name,new,pred['train_identity'])
+        item.update(original_model_id=('optical','w1','w1w2')[i],representation='joint empirical templates, no serialized forest',protocol='docs/baseline_v1_6_wise_protocol.md',source_evaluation_sha256=result['evaluation_sha256'])
+        snap['models'].append(item)
     oldpath=ROOT/'data/baseline_v0/references.npz'
     old=load(audited(oldpath))
     old['cell']=old['field']
@@ -172,6 +176,9 @@ def main():
                     gaia_n=int((use&pop['parallax_eligible']).sum())))
     csv_rows(TABLES/'evidence_by_r_wise.csv',evidence)
 
+    for filename in ('configs/baseline_v0.json','configs/baseline_v1.json','configs/baseline_v1_4.json','configs/v2_0_snapshot.json','data/baseline_v1/selection.json'):
+        audited(ROOT/filename)
+    snap['units']=dict(distance='kpc',parallax='mas',distance_modulus='mag',percentage_residual='percent',flux='nanomaggies')
     snap['inputs'].update(INPUTS)
     snap['report_code_hashes']={str(p.relative_to(ROOT)):sha(p) for p in [
         ROOT/'scripts/v2_0_collect.py',ROOT/'scripts/v2_0_extend.py',ROOT/'scripts/v2_0_figures.py',
