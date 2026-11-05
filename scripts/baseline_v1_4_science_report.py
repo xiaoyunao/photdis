@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm,Normalize,LinearSegmentedColormap
 from matplotlib.patches import Rectangle
 from matplotlib.ticker import LogLocator,NullFormatter,FuncFormatter
-from photdis.reference_v1_4 import unique_join
 from scipy.stats import binned_statistic_2d
 from photdis.stage1 import require_compute
 from photdis.diagnostics_v1_4 import CLASS_NAMES,residual_stats,distance_kpc,cell_area
@@ -350,54 +349,11 @@ def paired_figures(stats):
 
 
 def coverage_figures():
-    p=load(BASE/'parent.npz');t=load(BASE/'reference_population.npz')
-    xe=np.linspace(-1,3,33);ye=np.array([14,15,16,17,18,19,20,21,22,23,24,25.])
-    fig,axes=plt.subplots(3,3,figsize=(17,13),layout='constrained')
-    samples=[('Weighted old DECam parent',p,np.ones(len(p['identity']),bool),p['sample_weight'])]
-    for split,label in [(0,'New training'),(1,'New calibration'),(2,'New test')]:
-        m=(t['split']==split)&(t['class_train_eligible']|t['fit_eligible']);samples.append((label,t,m,np.ones(len(t['identity']))))
-    # Historical training is required to interpret the actual expanded model's
-    # support; new-train coverage alone must not stand in for all training.
-    oldpath=ROOT/'data/baseline_v1_3/references.npz'
-    idpath=ROOT/'data/baseline_v1_4/experiments/expanded_A_legacy_training.npz'
-    original_hashes={str(path.relative_to(ROOT)):sha(path) for path in [oldpath,idpath]}
-    ids=load(idpath);selected=np.unique(np.r_[ids['class_train_identity'],ids['distance_train_identity']])
-    with np.load(oldpath) as z:
-        index=unique_join(selected,z['identity']);assert (index>=0).all()
-        old={k:z[k][index] for k in ['identity','g0','r0','r']}
-    newmask=(t['split']==0)&(t['class_train_eligible']|t['fit_eligible'])
-    assert not np.intersect1d(old['identity'],t['identity'][newmask]).size
-    combined={k:np.r_[old[k],t[k][newmask]] for k in old}
-    samples.insert(1,('Historical training',old,np.ones(len(selected),bool),np.ones(len(selected))))
-    samples.insert(3,('Expanded A training',combined,np.ones(len(combined['identity']),bool),np.ones(len(combined['identity']))))
-    EXTRA['training_coverage_checks']=dict(historical_join_complete=True,old_new_disjoint=True,
-        historical_class=len(ids['class_train_identity']),historical_distance=len(ids['distance_train_identity']),
-        historical_union=len(selected),expanded_union=len(combined['identity']),inputs=original_hashes)
-    for path,h in original_hashes.items():assert sha(ROOT/path)==h
-    for ax,(label,data,m,w) in zip(axes.flat[:6],samples):
-        x=data['g0']-data['r0'];y=data['r'];h=np.histogram2d(x[m],y[m],bins=[xe,ye],weights=w[m])[0];total=w[m].sum();z=h/total
-        BINS['population_'+label]=dict(xedges=xe,yedges=ye,weight=h,total_weight=float(total),outside_fraction=float(1-h.sum()/total),n=int(m.sum()))
-        im=ax.pcolormesh(xe,ye,np.ma.masked_equal(z.T,0),cmap='viridis',norm=LogNorm(1e-5,1));fig.colorbar(im,ax=ax,label='Fraction of own sample per bin')
-        ax.set(xlabel='$(g-r)_0$',ylabel='r magnitude',title=label+f' (N={m.sum():,}; outside={1-h.sum()/total:.1%})');ax.invert_yaxis()
-    for ax,key,edges,label in [(axes.flat[6],'r',ye,'r magnitude'),(axes.flat[7],'gr',xe,'$(g-r)_0$')]:
-        x=p['r'] if key=='r' else p['g0']-p['r0'];w=p['sample_weight'];records=[]
-        for band,c in [('w1_usable','#2475a8'),('w2_usable','#ce4b37'),('i_usable','#a07812')]:
-            xx=[];yy=[]
-            for lo,hi in zip(edges[:-1],edges[1:]):
-                m=(x>=lo)&(x<hi);fraction=float(np.average(p[band][m],weights=w[m])) if m.any() else np.nan
-                records.append(dict(band=band,lo=lo,hi=hi,n=int(m.sum()),weight=float(w[m].sum()),fraction=fraction));xx.append((lo+hi)/2);yy.append(fraction)
-            ax.plot(xx,yy,'o-',c=c,label=band,ms=3)
-        BINS['availability_'+key]=records;ax.set(xlabel=label,ylabel='Weighted usable fraction',ylim=(0,1));ax.legend()
-    # These are fixed-bin coverage diagnostics, not the model's support flag.
-    parenthist=np.asarray(BINS['population_Weighted old DECam parent']['weight'])
-    missing=[]
-    for label in ['New training','Expanded A training','New test']:
-        refhist=np.asarray(BINS['population_'+label]['weight']);fraction=float(parenthist[refhist==0].sum()/p['sample_weight'].sum())
-        EXTRA['parent_fraction_no_'+label]=fraction;missing.append(fraction)
-    ax=axes.flat[8];ax.bar(range(3),missing,color=['#777777','#2475a8','#ce4b37']);ax.set_xticks(range(3),['New train','Expanded train','New test']);ax.set(ylim=(0,1),ylabel='Weighted parent fraction',title='Parent in bins with zero reference rows')
-    for j,v in enumerate(missing):ax.text(j,v+.015,f'{v:.1%}',ha='center')
-    fig.suptitle('Application support — actual old+new training; parent weights retained',fontsize=14)
-    save(fig,'application_coverage','Original26000 probability sample represents the old southern DECam parent only. Historical training is joined to the saved expanded_A legacy training identities; old/new unions are disjoint. New cal/test panels use the union of qualified class/distance rows. Each panel normalized separately. Fixed color-magnitude-bin absence is distinct from model support, and nonempty bins do not prove accuracy. W2 availability is independent of W1.')
+    from baseline_v1_4_coverage import application_coverage
+    fig, coverage = application_coverage()
+    EXTRA['application_coverage'] = coverage
+    save(fig, 'application_coverage',
+         'Actual expanded A class and distance training identities, and separate cal/test eligibility. Distance evidence includes qualified point estimates and signed Gaia parallaxes. Empty-bin fractions use the original weighted DECam parent.')
     fig,axes=plt.subplots(1,2,figsize=(14,5),layout='constrained')
     stats=json.loads((BASE/'statistics.json').read_text())
     for ax,band in zip(axes,['W1','W2']):
