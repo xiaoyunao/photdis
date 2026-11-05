@@ -41,11 +41,20 @@ def summaries(pdf,centers):
     return q,modes,ambiguity
 
 class HistogramQRF:
-    def __init__(self,dim,seed=20261102,n_estimators=128,min_samples_leaf=32,max_depth=20,bin_width=.1):
+    def __init__(self,dim,seed=20261102,n_estimators=128,min_samples_leaf=32,max_depth=20,bin_width=.1,feature_schema='adjacent_colors'):
+        if feature_schema not in ('adjacent_colors', 'grz_r0') or (feature_schema == 'grz_r0' and dim != 3):
+            raise ValueError('grz_r0 requires three features')
+        self.feature_schema=feature_schema
         self.dim=dim;self.bin_width=bin_width
         self.forest=RandomForestRegressor(n_estimators=n_estimators,min_samples_leaf=min_samples_leaf,max_depth=max_depth,max_features=.75,bootstrap=False,n_jobs=1,random_state=seed)
+    def feature_matrix(self,mags):
+        # Earlier serialized forests predate the explicit schema.
+        if getattr(self,'feature_schema','adjacent_colors') == 'grz_r0':
+            return np.column_stack((features(mags,2),mags[:,1]))
+        return features(mags,self.dim)
+
     def fit(self,mags,y,labels):
-        x=features(mags,self.dim);self.forest.fit(x,y)
+        x=self.feature_matrix(mags);self.forest.fit(x,y)
         self.edges=np.arange(np.floor(np.min(y))-3,np.ceil(np.max(y))+3+self.bin_width,self.bin_width);self.centers=(self.edges[1:]+self.edges[:-1])/2
         bins=np.searchsorted(self.edges,y,side='right')-1;self.tables=[];self.types=[];self.maps=[]
         nbin=len(self.centers);classes=np.where(labels<0,3,labels)
@@ -68,7 +77,7 @@ class HistogramQRF:
         n=len(mags);pdf=np.zeros((n,len(self.centers)),np.float32);cl=np.zeros((n,4),np.float32)
         for d in range(draws):
             delta=band_noise(ids,d)*np.nan_to_num(errors,nan=0,posinf=0)
-            p,c=self.distribution(features(mags+delta,self.dim))
+            p,c=self.distribution(self.feature_matrix(mags+delta))
             # Effective M=M-delta_g preserves the same g error in colors and mu.
             # Interpolate the CDF instead of PDF; preserve mass at finite grid ends.
             cumulative=np.column_stack([np.zeros(n),np.cumsum(p,axis=1)])
@@ -80,7 +89,7 @@ class HistogramQRF:
             shifted=np.maximum(np.diff(cc,axis=1),0);shifted/=shifted.sum(axis=1)[:,None]
             pdf+=shifted;cl+=c
         pdf/=draws;cl/=draws
-        x=features(mags,self.dim);dist=self.nn.kneighbors((x-self.mean)/self.scale,n_neighbors=10)[0][:,-1]
+        x=self.feature_matrix(mags);dist=self.nn.kneighbors((x-self.mean)/self.scale,n_neighbors=10)[0][:,-1]
         supported=(dist<=self.radius)&np.all((x>=self.lo)&(x<=self.hi),axis=1)
         q,modes,amb=summaries(pdf,self.centers)
         return dict(q_Meffective=q,modes_Meffective=modes,ambiguous=amb,supported=supported,support_distance=dist,class_weights=cl,pdf=pdf)

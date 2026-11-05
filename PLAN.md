@@ -1,5 +1,11 @@
 # PLAN
 
+## Active objective: one expanded A apparent-magnitude contrast
+
+Use docs/baseline_v1_5_r0_protocol.md and docs/pro_review_63cdbaa.md. Run the
+fixed model and paired development checks, correct the coverage and physical
+interpretation, and deliver figures using the Pal 5 New style.
+
 ## Completed objective: v1.4 scientific diagnostics (2026-11-05)
 
 Authorized latest Pro review: docs/pro_review_46cb68a.md. Protocol:

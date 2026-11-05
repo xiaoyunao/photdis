@@ -39,7 +39,7 @@ def qmc_noise(ids, draw, replicate=0):
 
 
 def support(model,mags):
-    x=features(mags,model.dim)
+    x=model.feature_matrix(mags)
     dist=model.nn.kneighbors((x-model.mean)/model.scale,n_neighbors=10)[0][:,-1]
     return (dist<=model.radius)&np.all((x>=model.lo)&(x<=model.hi),axis=1)
 
@@ -102,7 +102,7 @@ def integrate(model,mags,errors,ids,draws=128,method='sobol',replicate=0,
     err=np.nan_to_num(errors,nan=0,posinf=0)
     for d in range(draws):
         z=band_noise(ids,d) if method=='iid' else qmc_noise(ids,d,replicate)
-        delta=z*err;x=features(mags+delta,wide.dim)
+        delta=z*err;x=wide.feature_matrix(mags+delta)
         broad,cl=wide.distribution(x)
         candidates={'wide':broad};cw={'wide':cl}
         if need_branch:

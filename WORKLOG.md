@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-05 — register and implement the expanded A r0 contrast
+
+- Recovered latest GPT Pro review of 63cdbaa and Pal 5 New Step 5 style.
+- Implemented explicit grz_r0 schema with shared Sobol propagation, original
+  expanded A identity and model checks, and refined signed Gaia scoring.
+- Existing baseline v1/v1.1/diagnostic tests: 15 pass. Next run one Slurm
+  contrast and correct coverage/report panels against actual evaluation masks.
+
 ## 2026-11-05 — preserve generated figures during final source sync
 
 - GitHub accepted7de2ec2; NERSC safely rejected the update because the29
