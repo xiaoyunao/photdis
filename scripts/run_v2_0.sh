@@ -15,6 +15,6 @@ exec 9>data/.photdis_v2.lock
 flock -n 9
 case "${1:?collect or render}" in
  collect) python -u scripts/v2_0_collect.py ;;
- render) python -u scripts/v2_0_figures.py ;;
+ render) python -u scripts/v2_0_extend.py; python -u scripts/v2_0_figures.py ;;
  *) exit 2 ;;
 esac
