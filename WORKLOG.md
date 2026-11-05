@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-05 — r0 contrast and coverage erratum complete
+
+- Slurm 60835019 completed in 3:11 with 191 chunks. One added r0 QRF,
+  317003 aligned train and 97705 cal/test rows. Signed Gaia 94305 across
+  both splits. Verified source SHA256, ordered IDs, fixed forest settings,
+  PDF mass, ordered quantiles, refined PIT and log scores.
+- Test evolved severe tail 96.56% to 89.85% on 1163, rescued85/harmed7.
+  Dwarf 1.95% to 2.16%; corrected metal-poor dwarf median bias remains +0.427mag.
+  Overall Gaia PIT extremes rise from11.58% to12.36%.
+- Corrected actual cal/test eligibility and separated class, distance and
+  parallax-only coverage. Seven faint chosen test references; 66.04% of
+  weighted parent in bins lacking any test evidence. Compared raw and
+  corrected RVS cuts; clarified optical model provenance in W1 space.
+- Pal 5 New Step5 style from qc_dm_track and plotting source. Five reviewed
+  figures, Slurm renders60835116 and60835223. Titles resized around colorbars.
+- 15 focused existing tests and explicit shared-r perturbation smoke pass.
+  1404 report reconciliation assertions passed. Git sync uses committed
+  figures and compact manifests; raw artifacts stay on NERSC.
+- The r0 effect is useful development evidence, with residual evolved failure
+  and tradeoffs. Adoption would require independent evidence; no further fit
+  belongs to this fixed contrast.
+
+
 ## 2026-11-05 — register and implement the expanded A r0 contrast
 
 - Recovered latest GPT Pro review of 63cdbaa and Pal 5 New Step 5 style.

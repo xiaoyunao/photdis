@@ -1,10 +1,14 @@
 # PLAN
 
-## Active objective: one expanded A apparent-magnitude contrast
+## Completed objective: expanded A apparent-magnitude contrast
 
-Use docs/baseline_v1_5_r0_protocol.md and docs/pro_review_63cdbaa.md. Run the
-fixed model and paired development checks, correct the coverage and physical
-interpretation, and deliver figures using the Pal 5 New style.
+Result: docs/baseline_v1_5_r0_result.md. One fixed QRF contrast, 317003 train and
+97705 aligned cal/test objects. Refined signed Gaia and paired spatial analyses
+complete. Evolved severe tails 96.56% to 89.85%; dwarf 1.95% to 2.16%.
+Metal-poor dwarf bias persists. Coverage uses actual class and distance
+eligibility and separates reference types. Five reviewed figures use Pal 5 New
+Step 5 styling. Current development evidence does not support adoption.
+Further work requires a separate authorized experiment and independent test.
 
 ## Completed objective: v1.4 scientific diagnostics (2026-11-05)
 

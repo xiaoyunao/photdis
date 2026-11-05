@@ -1,5 +1,11 @@
 # Project instructions
 
+- Latest fixed development contrast: docs/baseline_v1_5_r0_result.md.
+  Same expanded A identities and QRF settings with added r0; evolved tail
+  96.56% to 89.85%, dwarf 1.95% to 2.16%, overall Gaia PIT tails worsen.
+  Coverage erratum and five Pal 5 New-style figures delivered. Keep experiment
+  outputs isolated from deployment. Independent validation needs new scope.
+
 - Latest completed scientific diagnostics2026-11-05: eight groups from
   docs/pro_review_46cb68a.md; results docs/baseline_v1_4_science_result.md and
   full29-figure atlas docs/baseline_v1_4_science_atlas.md.1943 actual checks and

@@ -4,6 +4,8 @@ Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.
 
+Latest development experiment: [expanded A apparent-magnitude contrast and revised coverage](docs/baseline_v1_5_r0_result.md). Five Pal 5 New-style figures accompany the matched reference, population and Gaia comparisons.
+
 Latest scientific diagnostics: [interpretation and key figures](docs/baseline_v1_4_science_result.md)
 and [complete 29-figure atlas](docs/baseline_v1_4_science_atlas.md), with
 [reproducibility audit](manifests/baseline_v1_4_science_delivery.json).
