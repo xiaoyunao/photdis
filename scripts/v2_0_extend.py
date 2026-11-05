@@ -36,6 +36,7 @@ def export(name,q,train_ids,reference='new spatial split'):
 def main():
     require_compute()
     snap=json.loads((TABLES/'snapshot.json').read_text())
+    snap['models']=[m for m in snap['models'] if m['model'] in CFG['models']]
     q=load(DEST/'chosen_expanded_A.npz')
     ids=load(OUT/'experiments/expanded_A_identities.npz')
     legacy=load(OUT/'experiments/expanded_A_legacy_training.npz')
@@ -112,6 +113,33 @@ def main():
             row['field_diagnostics_rows']=h[1].get_nrows()
         row['input_parent_records']=item['parent_records']
     csv_rows(TABLES/'C_application_fields.csv',app)
+    # Keep actual training r distributions and independent evidence counts.
+    with np.load(OUT/'references.npz') as z:
+        nt={k:z[k] for k in ('identity','r')}
+    with np.load(ROOT/'data/baseline_v1_3/references.npz') as z:
+        ot={k:z[k] for k in ('identity','r')}
+    hist=[]
+    edges=np.array([14,15,16,17,18,19,20,21,22,23,24,25.])
+    for family,key in [('distance','distance_train_identity'),('class','class_train_identity')]:
+        a=unique_join(ids[key],nt['identity']);b=unique_join(legacy[key],ot['identity'])
+        assert (a>=0).all() and (b>=0).all()
+        values=np.r_[nt['r'][a],ot['r'][b]]
+        count=np.histogram(values,edges)[0]
+        for lo,hi,n in zip(edges[:-1],edges[1:],count):
+            hist.append(dict(family=family,lo=lo,hi=hi,n=int(n)))
+    csv_rows(TABLES/'training_brightness_hist.csv',hist)
+    pop=load(DEST/'population.npz')
+    evidence=[]
+    for split in (0,1,2):
+        for lo,hi in [(-np.inf,18),(18,20),(20,22),(22,25)]:
+            for name,mask in [('no_W1',~pop['B']),('W1_only',pop['B']&~pop['C']),('W1W2',pop['C'])]:
+                use=(pop['split']==split)&(pop['r']>=lo)&(pop['r']<hi)&mask
+                evidence.append(dict(split=split,rlo=lo,rhi=hi,WISE=name,n=int(use.sum()),
+                    class_n=int((use&pop['class_eligible']).sum()),
+                    chosen_n=int((use&(pop['label_source']>0)).sum()),
+                    gaia_n=int((use&pop['parallax_eligible']).sum())))
+    csv_rows(TABLES/'evidence_by_r_wise.csv',evidence)
+
     snap['inputs'].update(INPUTS)
     snap['report_code_hashes']={str(p.relative_to(ROOT)):sha(p) for p in [
         ROOT/'scripts/v2_0_collect.py',ROOT/'scripts/v2_0_extend.py',ROOT/'scripts/v2_0_figures.py',

@@ -159,6 +159,15 @@ def coverage(q):
             axes[0].stairs(h/h.sum(),edges,label=label+('' if split is None else f' split {split}'),color=color,ls=style,lw=2)
             for lo,hi,n in zip(edges[:-1],edges[1:],h):
                 ROWS.append(dict(panel=label,split=split,lo=lo,hi=hi,count_or_weight=n))
+    import csv
+    with open(TABLES/'training_brightness_hist.csv') as stream:
+        records=list(csv.DictReader(stream))
+    for family,color in [('distance',ORANGE),('class',GREEN)]:
+        chosen=[row for row in records if row['family']==family]
+        counts=np.array([int(row['n']) for row in chosen])
+        e=np.r_[[float(row['lo']) for row in chosen],float(chosen[-1]['hi'])]
+        axes[0].stairs(counts/counts.sum(),e,color=color,label=family+' train',lw=2)
+        ROWS.extend(dict(panel=family+' train',**row) for row in chosen)
     pop=load(DEST/'population.npz')
     bins=np.array([14,18,20,22,25])
     for key,label,color in [('class_eligible','Class',GREEN),('label_source','Chosen',ORANGE),('parallax_eligible','Gaia parallax',BLUE)]:
@@ -397,6 +406,23 @@ def availability():
     save(fig,'09b_wise_states','Five states retain missing, invalid and quality failure apart from signed weak and high-S/N measurements. Joint W1-only/W2-only/both/neither in CSV.',model='measurement states',reference='none',split='weighted parent')
 
 
+def joint_states():
+    p=load(DEST/'parent.npz')
+    begin()
+    fig,axes=plt.subplots(1,2,figsize=(13,5.5),layout='constrained')
+    for ax,threshold,title in [(axes[0],4,'High S/N'),(axes[1],3,'Quality valid incl. weak')]:
+        valid=np.column_stack([p[b+'_measurement_state']>=threshold for b in ('w1','w2')])
+        fractions=[]
+        labels=['W1-only','W2-only','Both','Neither']
+        for x,y,label in zip([1,0,1,0],[0,1,1,0],labels):
+            m=(valid[:,0]==x)&(valid[:,1]==y)
+            f=np.average(m,weights=p['sample_weight']);fractions.append(f)
+            ROWS.append(dict(panel=title,state=label,n=int(m.sum()),fraction=f,weight=p['sample_weight'][m].sum()))
+        ax.bar(range(4),fractions,color=[BLUE,ORANGE,GREEN,GRAY])
+        ax.set(title=title,xticks=range(4),xticklabels=labels,ylabel='Weighted parent fraction',ylim=(0,1))
+    save(fig,'09c_joint_states','Independent per-band measurement availability; quality failures remain excluded. Original weighted parent, not exact deployment routing.',model='measurement states',reference='none',split='weighted parent')
+
+
 def experiments():
     science=json.loads((ROOT/'manifests/baseline_v1_4_science.json').read_text())
     r0=json.loads((ROOT/'manifests/baseline_v1_5_r0_result.json').read_text())['scores']['development_test']
@@ -559,7 +585,7 @@ def main():
     PRIMARY=q
     assert np.isfinite(q['ref_chosen']).sum()==47756
     scope();coverage(q);distance(q);cmd(q);color_map(q);physical(q);conditions(q)
-    uncertainty(q);availability();experiments();appendix(q);reused_appendices();pdf_examples(q)
+    uncertainty(q);availability();joint_states();experiments();appendix(q);reused_appendices();pdf_examples(q)
     save_json(TABLES/'figure_registry.json',REGISTRY)
     print('COMPLETE figures',len(REGISTRY),flush=True)
 
