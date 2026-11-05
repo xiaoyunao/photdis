@@ -41,6 +41,8 @@ def main():
     require_compute()
     snap=json.loads((TABLES/'snapshot.json').read_text())
     snap['models']=[m for m in snap['models'] if m['model'] in CFG['models']]
+    with np.load(OUT/'references.npz') as z:
+        exact_photometry={k:z[k] for k in ('identity','g0','r0','z0','r','w10','w20','i0')}
     for item in snap['models']:
         name=item['model']
         model_ids=load(OUT/'experiments'/f'{name}_identities.npz')
@@ -52,8 +54,13 @@ def main():
         item['training_identity_file']=f'data/v2_0/training_{name}.npz'
         item['training_identity_sha256']=__import__('hashlib').sha256(train_ids.tobytes()).hexdigest()
         saved=load(DEST/f'chosen_{name}.npz')
-        saved['model_id']=np.full(len(saved['identity']),name,'U40')
-        atomic_npz(DEST/f'chosen_{name}.npz',**saved)
+        exact_rows=unique_join(saved['identity'],exact_photometry['identity'])
+        assert (exact_rows>=0).all()
+        for key in ('g0','r0','z0','r','w10','w20','i0'):
+            saved[key]=exact_photometry[key][exact_rows]
+        saved['gr']=saved['g0']-saved['r0'];saved['rz']=saved['r0']-saved['z0']
+        export(name,saved,train_ids)
+
     q=load(DEST/'chosen_expanded_A.npz')
     ids=load(OUT/'experiments/expanded_A_identities.npz')
     legacy=load(OUT/'experiments/expanded_A_legacy_training.npz')

@@ -35,6 +35,10 @@ def save(fig,name,caption,section='main',model='expanded_A',reference='chosen',s
     folder.mkdir(parents=True,exist_ok=True)
     meta_folder=TABLES/'figures'
     meta_folder.mkdir(exist_ok=True)
+    provenance=f'{model} · {split} · {reference}'
+    existing=fig._suptitle.get_text() if fig._suptitle is not None else ''
+    fig.suptitle((existing+'
+' if existing else '')+provenance,fontsize=15)
     fig.savefig(folder/(name+'.png'),dpi=300,bbox_inches='tight')
     fig.savefig(folder/(name+'.pdf'),dpi=300,bbox_inches='tight')
     plt.close(fig)
@@ -43,7 +47,8 @@ def save(fig,name,caption,section='main',model='expanded_A',reference='chosen',s
                 caption=caption,units='distance kpc; distance residual percent; modulus mag',
                 binning='edges and counts in CSV',minimum_performance_bin=20,
                 sparse='gray crosses indicate 1–19 objects; cream background indicates no evidence',
-                panels=list(PANELS),
+                panels=list(PANELS),statistics_records=len(ROWS),
+                count_source='Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.',
                 png=f'figures/v2_0/{section}/{name}.png',pdf=f'figures/v2_0/{section}/{name}.pdf',
                 csv=f'manifests/v2_0/figures/{name}.csv')
     for key in ('png','pdf'):
@@ -174,6 +179,8 @@ def coverage(q):
         use=(pop['split']==2)&(pop[key]>0)
         counts=np.histogram(pop['r'][use],bins)[0]
         axes[1].plot((bins[:-1]+bins[1:])/2,counts,'o-',color=color,label=label)
+        for x,n in zip(((bins[:-1]+bins[1:])/2)[-2:],counts[-2:]):
+            axes[1].annotate(str(n),(x,n),xytext=(4,5),textcoords='offset points',color=color,fontsize=10)
         for lo,hi,n in zip(bins[:-1],bins[1:],counts):
             ROWS.append(dict(panel=label,lo=lo,hi=hi,n=int(n)))
     axes[0].set(xlabel='Observed r [mag]',ylabel='Fraction of each sample',title='Parent and spatial evaluation samples')
@@ -332,6 +339,7 @@ def conditions(q,key='r',section='main'):
             trend(ax,t,t[key],edges,metric,name,color)
         t=subset(q,~q['B']);trend(ax,t,t[key],edges,metric,'No W1','#9467bd')
         ax.set(xlabel='Observed r [mag]' if key=='r' else key,ylabel=label)
+        if key=='r':ax.set_xlim(14,25)
         if metric=='tail1mag':ax.set_ylim(0,1)
         ax.legend(fontsize=10)
     save(fig,'07_conditions_'+key,'expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.',section=section)
@@ -343,11 +351,12 @@ def conditions(q,key='r',section='main'):
         trend(axes[0],t,t['r'],edges,'coverage68',label,color)
         trend(axes[1],t,t['r'],edges,'width68_mag',label,color)
         h=np.histogram(t['r'][np.isfinite(t['ref_chosen'])],edges)[0]
-        axes[2].stairs(h,edges,label=label,color=color,lw=2)
+        axes[2].stairs(h,edges,label=f'{label} · {h[-2]}/{h[-1]}',color=color,lw=2)
     axes[0].axhline(.68,c=GRAY,ls=':');axes[0].set(ylim=(0,1),ylabel='68% reference-point coverage')
     axes[1].set_ylabel('Median 68% width [mag]')
     axes[2].set(ylabel='Reference count',yscale='symlog')
     for ax in axes:ax.set_xlabel('Observed r [mag]');ax.legend(fontsize=10)
+    axes[2].legend(title='N in 20–22 / 22–25',fontsize=9,title_fontsize=10)
     save(fig,'07b_intervals_and_counts','Width and coverage are displayed together. Sparse faint layers retain actual N and do not imply broad validation.')
 
 
@@ -459,6 +468,26 @@ def experiments():
     axes[1].set(yticks=[0,1],yticklabels=['Weak W1','Weak W2 + W1'],xlabel='Same-star transitions',title='18–20 real weak measurements');axes[1].legend()
     save(fig,'10a_experiment_tradeoffs','Each experiment has its own matched identities, training controls and N in CSV. These are not a continuous version ranking. r0 preserves max_features0.75, changing realized split candidates1→2.',model='paired experiments',reference='chosen')
 
+    begin()
+    fig,axes=plt.subplots(1,2,figsize=(13,5.5),layout='constrained')
+    source_models=science['models']
+    classes=['all','dwarf','evolved','other_transition','unknown']
+    for j,(label,oldname,newname) in enumerate([('Data','frozen_A','expanded_A'),('i','matched_grz','matched_griz')]):
+        a,b=source_models[oldname]['chosen'],source_models[newname]['chosen']
+        for i,key in enumerate(classes):
+            old,new=a[key],b[key]
+            for ax,change in [(axes[0],100*(new['coverage68']-old['coverage68'])),
+                              (axes[1],new['width68']-old['width68'])]:
+                ax.plot(i+(j-1)*.12,change,'o',color=[BLUE,GREEN][j],label=label if i==0 else None)
+            ROWS.append(dict(panel=label,group=key,n=old['n'],old_coverage=old['coverage68'],new_coverage=new['coverage68'],old_width=old['width68'],new_width=new['width68']))
+    for i,(key,label) in enumerate(zip(['all','class0','class1','class2','class-1'],classes)):
+        d=r0[key]['chosen'];a,b=d['old'],d['new']
+        axes[0].plot(i+.12,100*(b['coverage68']-a['coverage68']),'o',c=ORANGE,label='r0' if i==0 else None)
+        axes[1].plot(i+.12,b['width68']-a['width68'],'o',c=ORANGE,label='r0' if i==0 else None)
+        ROWS.append(dict(panel='r0',group=label,n=a['n'],old_coverage=a['coverage68'],new_coverage=b['coverage68'],old_width=a['width68'],new_width=b['width68']))
+    for ax,label in zip(axes,['68% coverage change [pp]','68% width change [mag]']):
+        ax.axhline(0,c=GRAY,ls='--');ax.set(xticks=range(5),xticklabels=classes,ylabel=label);ax.tick_params(axis='x',rotation=25);ax.legend()
+    save(fig,'10c_interval_tradeoffs','Paired data/i/r0 effects on reference-point coverage and width are displayed together. Each has its own fixed sample.',model='paired experiments')
     old=json.loads((ROOT/'manifests/baseline_v1_report.json').read_text())
     begin()
     fig,axes=plt.subplots(1,2,figsize=(13,5.5),layout='constrained')
@@ -528,7 +557,7 @@ def reused_appendices():
             v=d[split]['all']['raw']
             if v['n']:
                 ax.plot(f,v['tail_1'],'o',color=color,alpha=.3,ms=3)
-            ROWS.append(dict(panel=split,parent_fraction=f,**d['cuts'],**v))
+            ROWS.append(dict(panel=split,parent_fraction=f,**{'cut_'+k:v for k,v in d['cuts'].items()},**v))
     for ax,label in zip(axes,['Cal','Old development test']):
         ax.set(xlabel='Exact parent retention fraction',ylabel='Raw severe-error fraction',title=label)
     save(fig,'A_quality_retention','Existing fixed v1 quality grid; no re-optimization. All-class adoption failed. Raw/calibrated intervals remain distinct in the original source.','appendix',model='baseline_v1',split='old cal/test')
@@ -540,7 +569,7 @@ def reused_appendices():
         labels.append(name);v0.append(d['models']['v0']['metrics']['tail_1']);v1.append(d['models']['v1']['metrics']['tail_1'])
         ROWS.append(dict(panel=name,n_sources=d['n_sources'],n_accepted=d['n_accepted'],v0_tail=v0[-1],v1_tail=v1[-1]))
     for ax,values,title in [(axes[0],v0,'v0'),(axes[1],v1,'v1')]:
-        ax.bar(range(len(labels)),values,color=BLUE);ax.set(xticks=range(len(labels)),xticklabels=labels,ylabel='Severe-error fraction',title=title)
+        ax.bar(range(len(labels)),values,color=BLUE);ax.set(xticks=range(len(labels)),xticklabels=[x.replace('observed_r_','r ') for x in labels],ylabel='Severe-error fraction',title=title);ax.tick_params(axis='x',rotation=25)
     save(fig,'A_flux_depth_stress','Existing fixed real-template artificial flux degradation. Stress-test sources are reused; it does not supply new faint-population truth.','appendix',model='baseline_v0/v1',split='existing depth stress')
 
 
