@@ -46,7 +46,7 @@ def distance_figure(t, a, b):
             artists.append(artist)
             ax.plot(10**np.array([lo,hi]),10**np.array([lo,hi]),'--',color=ORANGE,lw=1.8)
             ax.set(xlabel='Reference distance [kpc]',ylabel='Predicted distance [kpc]',
-                   title=f'{title} · {label}\nN={len(x):,}',aspect='equal')
+                   title=f'{title}\n{label} · N={len(x):,}',aspect='equal')
         norm = LogNorm(1,max(2,max(h.get_array().max() for h in artists)))
         for h in artists:
             h.set_norm(norm)

@@ -84,7 +84,8 @@ def render_coverage():
         for j, (name,(h,n)) in enumerate(zip(['Training','Calibration','Development test'],data)):
             ax=axes[i,j]
             mesh=ax.pcolormesh(xe,ye,np.ma.masked_equal(h.T/n,0),cmap='Blues',norm=norm)
-            ax.set(title=f'{name} · {family}\nN={n:,}',xlabel=r'$(g-r)_0$',ylabel=r'$r$ [mag]',ylim=(25,14))
+            short = 'Class' if family == 'Classification' else 'Distance'
+            ax.set(title=f'{name}\n{short} · N={n:,}',xlabel=r'$(g-r)_0$',ylabel=r'$r$ [mag]',ylim=(25,14))
     ax=axes[0,3]
     ax.pcolormesh(xe,ye,np.ma.masked_equal(parent_hist.T/parent_total,0),cmap='Blues',norm=norm)
     ax.set(title='Weighted DECam parent\nN=26,000',xlabel=r'$(g-r)_0$',ylabel=r'$r$ [mag]',ylim=(25,14))
