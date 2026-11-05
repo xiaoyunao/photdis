@@ -1,5 +1,31 @@
 # WORKLOG
 
+## 2026-11-05 — eight-group scientific diagnostics delivered
+
+- Completed frozen per-star diagnosis,29 scientific figures and Chinese
+  interpretation: docs/baseline_v1_4_science_result.md plus full science_atlas.
+  Compact manifests retain source hashes, per-model sky values, bins and PDFs.
+- Diagnostics60832510 COMPLETED0:0,1943 actual checks pass;4 focused tests
+  passed. Rendering60832787/60833212/60833703 completed in45/50/48s;
+  final axes retain full tails and use readable logarithmic ticks.
+- Evolved matched_griz median residual−5.340mag;96.52% severe tails.
+  Failures persist inside support and across populated sky cells. Metal-poor
+  dwarfs: median distance ratio1.194,68% coverage49.93% (2858 objects).
+- Same-star i:282 rescued/219 harmed; small overall gain, evolved bootstrap
+  interval reaches0. Only9 chosen test cells; no whole-sky accuracy claim.
+- W1 total weighted low-SNR56.92%;81.03% of quality failures are also low-SNR.
+  Historical+new training331926 unique identities; original4 frozen code/
+  protocol hashes unchanged. Deployed v1 and all original products retained.
+- Commands: allocated report; bounded SSH sacct/log checks; rsync selected
+  PNGs/compact JSON; publisher validates all figure hashes; syntax, links and
+  diff checks. Visually reviewed all29 figures, with full-size checks and
+  corrected CMD arrows, missing-cell colors, paired scales and distance ticks.
+- Updated AGENTS/PLAN/README and delivery manifest. Final source commit is
+  synchronized with scripts/sync.py push and three-endpoint equality check.
+- Remaining limits: correlated reference estimates, sparse sky/faint evidence,
+  no broad22–25 validation. Next model changes require a new scoped experiment
+  and independent final test; no timers, automatic fits or deployment changes.
+
 ## 2026-11-05 — final scientific figure axis review
 
 - Render60833212 COMPLETED0:0 in50s. Historical/new training union contains

@@ -1,0 +1,121 @@
+{
+  "phase": "v1.4 frozen per-star scientific diagnostics",
+  "status": "complete",
+  "date": "2026-11-05 Asia/Shanghai",
+  "diagnostic_job": {
+    "id": 60832510,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:00:39"
+  },
+  "render_jobs": [
+    {
+      "id": 60832787,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:45"
+    },
+    {
+      "id": 60833212,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:50"
+    },
+    {
+      "id": 60833703,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:00:48"
+    }
+  ],
+  "source_commit_for_final_render": "a7170c2892edecb1deb11e67f1e1b50e63eec9f2",
+  "actual_artifact_checks": 1943,
+  "training_coverage_checks": {
+    "historical_join_complete": true,
+    "old_new_disjoint": true,
+    "historical_class": 99704,
+    "historical_distance": 163600,
+    "historical_union": 169887,
+    "expanded_union": 331926,
+    "inputs": {
+      "data/baseline_v1_3/references.npz": "c0542f51791d8f7145dd07480b290ba71e24132d275450af2445c67879f88a4a",
+      "data/baseline_v1_4/experiments/expanded_A_legacy_training.npz": "06270de83f3e54a550649a41e76d13c50f67a9bb0d372b17acefb50b62d3f543"
+    }
+  },
+  "focused_tests_passed": 4,
+  "test_command": "PYTHONPATH=src python3 -m pytest -q tests/test_diagnostics_v1_4.py",
+  "statistics_sha256": "f60d3a1e09bde06e15cd61452feaa11039af144da599a62eb1b3ba0c1c6ef92d",
+  "figure_count": 29,
+  "inspected_figure_sha256": {
+    "figures/baseline_v1_4_science/distance_expanded_A_dwarf.png": "43109d27d2d844db5c0f726aacde9bba2d25d47c18fbcb3ba3e702f93914d5a9",
+    "figures/baseline_v1_4_science/distance_expanded_A_evolved.png": "0bea2d4ea4c3ba9a10c5b40785040bc291fca7743fc6cf739dc6037275883f55",
+    "figures/baseline_v1_4_science/distance_expanded_A_other_transition.png": "6aee2ccdcc475c311fdeb980824fc84517b0bb83b41a0c2d246617f4f4b681b3",
+    "figures/baseline_v1_4_science/distance_expanded_A_unknown.png": "bf3324dec50bc9debdb93b0ab0d376b3b7e5db9aa8e3c5110ae8ed7f8bc20f42",
+    "figures/baseline_v1_4_science/cmd_expanded_A.png": "45b0fdc10682adfb132cfee185968706b16c6119f69bd4ea5a66f41bcbfc36ca",
+    "figures/baseline_v1_4_science/distance_matched_griz_dwarf.png": "5325a1bd3de83a1cdbff77b36278ecbff17d8c2bb80e2afeb9cf3d2d34d26a98",
+    "figures/baseline_v1_4_science/distance_matched_griz_evolved.png": "0758bdc4ffecdad14e56d44058d470c18b235bf65b54339205a10bbb62445c70",
+    "figures/baseline_v1_4_science/distance_matched_griz_other_transition.png": "a6d755132480664024763b8eea9412011ccbf0473ccb631a81075db6d55a4725",
+    "figures/baseline_v1_4_science/distance_matched_griz_unknown.png": "12ba14257471fe10d8086afc2ad016213486895de9b8212c9939ac87882583d6",
+    "figures/baseline_v1_4_science/cmd_matched_griz.png": "09c307d754bcc57fd479b09b50ef54f9f459bee8fe3f01ef85e375552e4cf0c5",
+    "figures/baseline_v1_4_science/colors_gr_rz.png": "9f130a2e2e096bce0364de675026537ff546fc365cf34bdef67ee5b67b515800",
+    "figures/baseline_v1_4_science/colors_gr_zW1.png": "e330099aeb46025f178e4c20e1c3273c42165f2bb65cf0e7c3c70c52285463b6",
+    "figures/baseline_v1_4_science/colors_ri_iz.png": "de3c63d38adf71c9d2ad6dd7f43571ac45e3df5a5fde5f53b0cf98db2bd7c65d",
+    "figures/baseline_v1_4_science/sky_class.png": "0ba8de9c66955882faeb7428079533364028479a2924bf136f6cc544cce0eda6",
+    "figures/baseline_v1_4_science/sky_source.png": "26d1a8e47b6015980e0f44589eea4702012c0635f7066b89a37bc114e05add85",
+    "figures/baseline_v1_4_science/sky_brightness.png": "d5c99f7785b79cfbcba54506cfc026530591dbb9d54c67fdfe383e636422ffd1",
+    "figures/baseline_v1_4_science/footprint.png": "2d237e3727a0d98b4aac04cf9443b1909fc97237fe0cfb0a494e31e157f25aaa",
+    "figures/baseline_v1_4_science/sky_density.png": "c43b5e6a7f28a6db87da4168d6e370125258a765592019165ea3a52dfcdc849b",
+    "figures/baseline_v1_4_science/kiel.png": "f71c4487ff60e7fd4f7f86865379e14d4e8201816909c9ed2113d77f41f35e3e",
+    "figures/baseline_v1_4_science/metallicity.png": "ec90a7813134c24d4817f84e79526699d46fa063a869206d5691b3260a740d67",
+    "figures/baseline_v1_4_science/observing_conditions.png": "ccb85b209d5371404acbe514d8a03f16225c66966bd4d70e13ba463cf214c8ab",
+    "figures/baseline_v1_4_science/intervals.png": "bdf7a949834fae2ea19fbce41a1d3037eff22d264da36f0ada96d8f18a7c7e83",
+    "figures/baseline_v1_4_science/gaia_flags.png": "c29aa98bf1abb2be138b08cfaee235cbde3918815284f5d1898f94e672a17184",
+    "figures/baseline_v1_4_science/pdf_examples_1.png": "d31c70001ae96dae77d68b90c0448af03151ca55767377f7fb9a5d8d0739aaa9",
+    "figures/baseline_v1_4_science/pdf_examples_2.png": "34485a69d903f713ce112715f5d0c30939393dba4fc917a67de3aeb424a5f8f4",
+    "figures/baseline_v1_4_science/paired_physics.png": "076401364f90a2af2b474dfcc2a856bbfb2aab7a2842a0e972e1dbc931fc2e62",
+    "figures/baseline_v1_4_science/paired_uncertainty.png": "235af4672263f45330a0fca5b319d2310cf5bf1473c3dd233e875cce9b5ee5af",
+    "figures/baseline_v1_4_science/application_coverage.png": "33042d28ceff29cc28892ad384398923fe2e60238db6243c216966b56cca29cf",
+    "figures/baseline_v1_4_science/wise_joint.png": "b0aca780cfc0ecaf69ad828d0afbe0d8c44cfa8f289a05e107ee7acee2cdd087"
+  },
+  "inspection": "All29 actual-data figures reviewed in contact sheets; full CMD, evolved/unknown distances, paired uncertainty/physics and coverage inspected. Repaired CMD arrows, shared scales, blank-cell colors, symlog paired changes and broad logarithmic ticks. Re-inspected all8 final distance panels after render60833703.",
+  "artifact_sha256": {
+    "manifests/baseline_v1_4_science.json": "1fa6caffa60a137d09bff42b3f56f198c4a3167564ff0dceb8e22d0ed10df9b7",
+    "manifests/baseline_v1_4_science_plot_data.json": "f03bcb42fdfdd70cec7f1740e04c268455eee20b30d24a5eb14cbdea6fa83984",
+    "manifests/baseline_v1_4_science_sky_expanded_A.json": "fe0e8ea59ab0817fb5f2b00cf09cee870338aa3c35f5dea5a232ee17d94d063b",
+    "manifests/baseline_v1_4_science_sky_expanded_B.json": "9ae266b882b672e1dc14194eaca916dbdfc3ffa2296c86242b1a5e5e02585426",
+    "manifests/baseline_v1_4_science_sky_expanded_C.json": "d0819398218e122c0f8678750ca731ee6a52728156a9668faab3ef1f071157a1",
+    "manifests/baseline_v1_4_science_sky_frozen_A.json": "f918a66a41ccac86e846f14d21305a2f8ad29297c546883e3bf442634ba133d6",
+    "manifests/baseline_v1_4_science_sky_frozen_B.json": "c0a8d334a10d757a06cc49ca6ee9c8a4891943da50fa105b8b5fa910cfa98c59",
+    "manifests/baseline_v1_4_science_sky_frozen_C.json": "95844222cb026868f78ada24ead93d54ef4c8567eeca6a7933ec26f4ba190e66",
+    "manifests/baseline_v1_4_science_sky_matched_griz.json": "3f3f9a67b0d792c76b98c2f231df64323ea99d60bfb7716bfc1d89d377916797",
+    "manifests/baseline_v1_4_science_sky_matched_grz.json": "b13ebfc7f5f8e86f1a2900957f054568795863cb571c96207c55e49c6817f7ba",
+    "manifests/baseline_v1_4_science_validation.json": "d0455e41aa287fa98e118e94352845b361df107325b5ef8c3d866522a7920c9e",
+    "docs/baseline_v1_4_science_result.md": "b7f819a501124c265c0da02b71175423a42d6510d5241a8a330c858d7120d827",
+    "docs/baseline_v1_4_science_atlas.md": "86d8e8cef0bb8cea443bbc60254aed5a25feb87cac56a08884909e2b2392a0ec",
+    "docs/baseline_v1_4_diagnostics_protocol.md": "3453311036bc994428588abf7333355767c2256f95b04c379e5e1eece4e1f6e6",
+    "docs/pro_review_46cb68a.md": "fe302dac658cb137203c643aa1cbab70417a7255ecfdc9454b1bac8c3b331d5c"
+  },
+  "original_extraction_freeze": {
+    "hashes": {
+      "configs/baseline_v1_4.json": "3ceef9cace6b547ba190a82e190f13a7148b18722b81c7a1a5bc42b8b25f45d3",
+      "docs/baseline_v1_4_protocol.md": "101da3015a337bb0ee2bdfc98c89d7299c74719340a06573f858e55aaa9baf03",
+      "src/photdis/reference_v1_4.py": "7f3c5f673249dec5cc7fff98f4dabb2a4ef850b39ee6b4cf9a1055865ca401af",
+      "scripts/baseline_v1_4_extract.py": "0228c4317d3b7c38303543dc419becf52f7b9b0b605b5c7a4de0f13e78382bf4"
+    },
+    "checks": {
+      "configs/baseline_v1_4.json": true,
+      "docs/baseline_v1_4_protocol.md": true,
+      "src/photdis/reference_v1_4.py": true,
+      "scripts/baseline_v1_4_extract.py": true
+    }
+  },
+  "deployment": "Preserve deployed v1; no training, threshold tuning or full-catalog application.",
+  "raw_products": "NERSC /pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1_4/diagnostics",
+  "scheduled_monitoring": "None; no timer created.",
+  "limitations": [
+    "Only9 occupied chosen-distance test cells; paired sky-bootstrap generalization limited.",
+    "Reference point estimates overlap and have selection effects; VAC coverage does not convolve reference uncertainty.",
+    "Broad22–25 validation remains absent.",
+    "New model choices informed by this diagnostic test need independent final validation."
+  ]
+}

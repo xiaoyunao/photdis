@@ -1,15 +1,25 @@
 # PLAN
 
-## Active objective: v1.4 scientific diagnostics (2026-11-05)
+## Completed objective: v1.4 scientific diagnostics (2026-11-05)
 
 Authorized latest Pro review: docs/pro_review_46cb68a.md. Protocol:
 docs/baseline_v1_4_diagnostics_protocol.md. Freeze all models and primary scores.
 
-- [ ] Identity-safe per-star joins and refined Gaia reconciliation.
-- [ ] Distance, CMD, color and spatial scientific figures, then spectral/PDF diagnostics.
-- [ ] Paired gain/loss with sky-cell bootstrap; parent support and joint WISE cuts.
-- [ ] Actual checks, focused tests, visual review and scientific interpretation.
-- [ ] Report and safe three-endpoint delivery; no timers, new fit or deployment.
+- [x] Identity-safe per-star joins and refined Gaia reconciliation.
+- [x] Distance, CMD, color and spatial scientific figures, then spectral/PDF diagnostics.
+- [x] Paired gain/loss with sky-cell bootstrap; parent support and joint WISE cuts.
+- [x]1943 actual checks,4 focused tests,29 figures and scientific interpretation.
+- [x] Report and delivery manifest prepared for safe three-endpoint synchronization.
+
+Result: docs/baseline_v1_4_science_result.md; complete atlas:
+docs/baseline_v1_4_science_atlas.md. Delivery metadata records final rendering
+and inspected figure hashes. Source sync verifies local/origin/NERSC equality.
+Evolved distance failures persist inside support and across populated cells;
+metal-poor dwarf distances are biased high. Overall paired gains are small and
+limited to9 test cells; WISE quality/depth losses strongly overlap.
+Next scientific scope should target branch allocation and metal-poor dwarf
+residuals with an independent final test. Do not automatically train, change
+deployment, rerun completed stages or create timers; await new authorization.
 
 ## Completed objective: v1.4 broader references and native i experiment
 
