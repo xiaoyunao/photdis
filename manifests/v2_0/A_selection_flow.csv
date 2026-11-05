@@ -1,0 +1,8 @@
+stage,input,pass_n,sequential_loss,independent_failure,definition
+photometric,3565499,634606,2930893,2930893,independent failures overlap
+no_identity_conflict,634606,634585,21,90,independent failures overlap
+no_nonstellar_risk,634585,515055,119530,557106,independent failures overlap
+new_geometry,515055,267336,247719,1031186,independent failures overlap
+class_eligible,3565499,219452,,3143442,parallel independent eligibility
+fit_eligible,3565499,244161,,3095413,parallel independent eligibility
+parallax_eligible,3565499,254389,,3075383,parallel independent eligibility

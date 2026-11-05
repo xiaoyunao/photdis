@@ -1,0 +1,68 @@
+panel,split,lo,hi,count_or_weight,family,n
+Weighted parent,,14.0,15.0,1511.075,,
+Weighted parent,,15.0,16.0,56469.55950000008,,
+Weighted parent,,16.0,17.0,138100.68300000022,,
+Weighted parent,,17.0,18.0,204362.34350000106,,
+Weighted parent,,18.0,19.0,316508.5624999871,,
+Weighted parent,,19.0,20.0,489726.5540000021,,
+Weighted parent,,20.0,21.0,762801.8655001142,,
+Weighted parent,,21.0,22.0,1134854.6220000822,,
+Weighted parent,,22.0,23.0,1855522.3484997852,,
+Weighted parent,,23.0,24.0,2878558.254499087,,
+Weighted parent,,24.0,25.0,1036884.263999288,,
+Distance evaluation,1,14.0,15.0,49,,
+Distance evaluation,1,15.0,16.0,2241,,
+Distance evaluation,1,16.0,17.0,8579,,
+Distance evaluation,1,17.0,18.0,13951,,
+Distance evaluation,1,18.0,19.0,16709,,
+Distance evaluation,1,19.0,20.0,4323,,
+Distance evaluation,1,20.0,21.0,550,,
+Distance evaluation,1,21.0,22.0,36,,
+Distance evaluation,1,22.0,23.0,8,,
+Distance evaluation,1,23.0,24.0,0,,
+Distance evaluation,1,24.0,25.0,0,,
+Distance evaluation,2,14.0,15.0,31,,
+Distance evaluation,2,15.0,16.0,1062,,
+Distance evaluation,2,16.0,17.0,9413,,
+Distance evaluation,2,17.0,18.0,14826,,
+Distance evaluation,2,18.0,19.0,19548,,
+Distance evaluation,2,19.0,20.0,5529,,
+Distance evaluation,2,20.0,21.0,770,,
+Distance evaluation,2,21.0,22.0,73,,
+Distance evaluation,2,22.0,23.0,7,,
+Distance evaluation,2,23.0,24.0,0,,
+Distance evaluation,2,24.0,25.0,0,,
+distance train,,14.0,15.0,,distance,734
+distance train,,15.0,16.0,,distance,22325
+distance train,,16.0,17.0,,distance,65253
+distance train,,17.0,18.0,,distance,95169
+distance train,,18.0,19.0,,distance,106406
+distance train,,19.0,20.0,,distance,24554
+distance train,,20.0,21.0,,distance,2545
+distance train,,21.0,22.0,,distance,17
+distance train,,22.0,23.0,,distance,0
+distance train,,23.0,24.0,,distance,0
+distance train,,24.0,25.0,,distance,0
+class train,,14.0,15.0,,class,312
+class train,,15.0,16.0,,class,11864
+class train,,16.0,17.0,,class,52576
+class train,,17.0,18.0,,class,84338
+class train,,18.0,19.0,,class,84374
+class train,,19.0,20.0,,class,4175
+class train,,20.0,21.0,,class,131
+class train,,21.0,22.0,,class,4
+class train,,22.0,23.0,,class,7
+class train,,23.0,24.0,,class,3
+class train,,24.0,25.0,,class,0
+Class,,14,18,,,25357
+Class,,18,20,,,17500
+Class,,20,22,,,107
+Class,,22,25,,,0
+Chosen,,14,18,,,24062
+Chosen,,18,20,,,23069
+Chosen,,20,22,,,618
+Chosen,,22,25,,,7
+Gaia parallax,,14,18,,,24794
+Gaia parallax,,18,20,,,23905
+Gaia parallax,,20,22,,,625
+Gaia parallax,,22,25,,,3

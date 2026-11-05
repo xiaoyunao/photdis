@@ -38,6 +38,10 @@ archives/
 *.csv
 *.tsv
 
+# Compact, audited v2.0 report tables and figure bins.
+!manifests/v2_0/*.csv
+!manifests/v2_0/figures/*.csv
+
 # Temporary files
 *.tmp
 *.swp
