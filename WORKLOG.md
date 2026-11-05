@@ -6,6 +6,9 @@
 - Clean main and local/origin/NERSC46cb68a confirmed after fetch; SSH valid, queue empty.
 - Registered eight diagnostic groups, same-star pairing, whole-cell bootstrap,
   refined Gaia scores and deterministic small PDF sample before result inspection.
+- Submitted unique diagnostics60832510, verified PENDING(Priority); no duplicate.
+- Implemented eight-group scientific renderer; full tails, separate reference
+  sources/classes, refined Gaia, raw-count versus solid-angle maps and PDF examples.
 - Implemented allocated per-star joins, original-score reconciliation, paired cell
   bootstrap, independent WISE cross-cuts and fixed20 forward-PDF evaluations.
 - Syntax validation and4 focused synthetic tests pass (units, transitions/cluster
