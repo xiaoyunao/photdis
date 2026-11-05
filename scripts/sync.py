@@ -17,7 +17,7 @@ BLOCKED_DIRS = {
 }
 SOURCE_SUFFIXES = {
     ".py", ".sh", ".md", ".toml", ".yaml", ".yml", ".json", ".txt",
-    ".rst", ".ini", ".cfg", ".ipynb",
+    ".rst", ".ini", ".cfg", ".ipynb", ".csv",
 }
 FIGURE_SUFFIXES = {".svg", ".png", ".pdf", ".jpg", ".jpeg", ".webp"}
 SPECIAL_NAMES = {".gitignore", ".gitattributes", ".gitkeep", "LICENSE", "Makefile"}

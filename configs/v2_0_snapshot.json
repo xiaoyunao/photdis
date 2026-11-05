@@ -1,0 +1,53 @@
+{
+  "report_version": "Photdis v2.0 stage freeze",
+  "baseline_commit": "8b6f744abf7d2bd2abfe08ae13ba85dbb47ebaa5",
+  "main_model": "expanded_A",
+  "application_model": "baseline_v1",
+  "dr11_denominators": {
+    "unique_sources": 3920661806,
+    "unique_psf": 2198481904,
+    "source": "https://www.legacysurvey.org/dr11/description/#morphological-classification",
+    "photdis_selected_denominator": null,
+    "effective_masked_area_sqdeg": null
+  },
+  "models": [
+    "frozen_A",
+    "frozen_B",
+    "frozen_C",
+    "expanded_A",
+    "expanded_B",
+    "expanded_C",
+    "matched_grz",
+    "matched_griz"
+  ],
+  "percent_residual": "100*(10**(delta_mu/5)-1)",
+  "min_performance_cell": 20,
+  "colors": {
+    "bias_limits": [
+      -100,
+      100
+    ]
+  },
+  "percentiles": [
+    0,
+    1,
+    5,
+    50,
+    95,
+    99,
+    100
+  ],
+  "magnitude_edges": [
+    14,
+    16,
+    18,
+    20,
+    22,
+    25
+  ],
+  "output_dir": "data/v2_0",
+  "figure_dir": "figures/v2_0",
+  "manifest_dir": "manifests/v2_0",
+  "style_source": "scripts/photdis_figure_style.py",
+  "representation": "Historical model names retained; raw point-reference intervals distinct from calibrated application mu_cal"
+}
