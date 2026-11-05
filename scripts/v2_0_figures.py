@@ -37,8 +37,7 @@ def save(fig,name,caption,section='main',model='expanded_A',reference='chosen',s
     meta_folder.mkdir(exist_ok=True)
     provenance=f'{model} · {split} · {reference}'
     existing=fig._suptitle.get_text() if fig._suptitle is not None else ''
-    fig.suptitle((existing+'
-' if existing else '')+provenance,fontsize=15)
+    fig.suptitle((existing+'\n' if existing else '')+provenance,fontsize=15)
     fig.savefig(folder/(name+'.png'),dpi=300,bbox_inches='tight')
     fig.savefig(folder/(name+'.pdf'),dpi=300,bbox_inches='tight')
     plt.close(fig)
