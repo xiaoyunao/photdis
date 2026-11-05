@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import LogNorm,Normalize,TwoSlopeNorm
+from matplotlib.colors import LogNorm,Normalize,LinearSegmentedColormap
 from matplotlib.patches import ConnectionPatch,Rectangle
 from scipy.stats import binned_statistic_2d
 from photdis.stage1 import require_compute
@@ -110,16 +110,22 @@ def cmd_figure(name,t):
     xl=full_limits(gr[use]);yl=full_limits(np.r_[mr[use],mp[use]])
     for col,cls in enumerate([0,1,2,-1]):
         q=use&(t['class_label']==cls)
+        artists=[]
+        cmap=LinearSegmentedColormap.from_list('visible_class',plt.get_cmap('Blues' if cls==0 else 'Reds' if cls==1 else 'Greys')(np.linspace(.25,1,256)))
         for row,y in enumerate([mr,mp]):
             ax=axes[row,col]
-            if q.any():ax.hexbin(gr[q],y[q],gridsize=45,mincnt=1,bins='log',cmap='Blues' if cls==0 else 'Reds' if cls==1 else 'Greys')
+            if q.any():artists.append(ax.hexbin(gr[q],y[q],gridsize=45,mincnt=1,cmap=cmap))
             ax.set(xlim=xl,ylim=yl[::-1],xlabel=r'$(g-r)_0$',ylabel='Legacy $M_g$ (mag)',title=f'{DISPLAY[cls]}: N={int(q.sum()):,} — '+('reference' if row==0 else 'prediction'))
+        if artists:
+            norm=LogNorm(1,max(2,max(h.get_array().max() for h in artists)))
+            for ax,h in zip(axes[:,col],artists):
+                h.set_norm(norm);fig.colorbar(h,ax=ax,label='Stars / hexagon',shrink=.6)
         ids=np.flatnonzero(q);ids=ids[np.argsort(t['identity'][ids])][:4]
         for i in ids:
-            con=ConnectionPatch(xyA=(gr[i],mr[i]),xyB=(gr[i],mp[i]),coordsA='data',coordsB='data',axesA=axes[0,col],axesB=axes[1,col],arrowstyle='->',color=COLORS[cls],lw=.8,alpha=.7)
-            fig.add_artist(con)
+            axes[0,col].annotate('',xy=(gr[i],mp[i]),xytext=(gr[i],mr[i]),arrowprops=dict(arrowstyle='->',color=COLORS[cls],lw=1))
+            axes[0,col].scatter([gr[i]],[mp[i]],s=20,facecolors='none',edgecolors=COLORS[cls])
     fig.suptitle(name+' — same-star reference and predicted color–absolute-magnitude diagrams',fontsize=14)
-    save(fig,'cmd_'+name,'Same Legacy g definition and same objects in each column; chosen Gaia-then-SpecDis reference. Four lowest-ID objects per class linked as fixed illustrative examples. A plausible predicted sequence does not establish correct distances.')
+    save(fig,'cmd_'+name,'Same Legacy g definition and same objects in each column; chosen Gaia-then-SpecDis reference. Four lowest-ID objects per class have within-panel arrows from reference to prediction in the top row; open endpoints mark predicted positions. Color scales match vertically within each class. A plausible predicted sequence does not establish correct distances.')
 
 
 def grid_values(x,y,delta,xe,ye):
