@@ -31,7 +31,7 @@ def csv_rows(path,rows):
         rows=[dict(status='no rows')]
     keys=list(dict.fromkeys(k for row in rows for k in row))
     with open(path,'w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=keys)
+        writer=csv.DictWriter(f,fieldnames=keys,lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

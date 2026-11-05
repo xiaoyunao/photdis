@@ -165,7 +165,7 @@ python3 scripts/v2_0_publish.py
     for filename,rows in [('D_performance_index.csv',index),('D_performance_key.csv',keys)]:
         columns=list(dict.fromkeys(k for row in rows for k in row))
         with open(M/filename,'w',newline='') as f:
-            writer=csv.DictWriter(f,fieldnames=columns);writer.writeheader();writer.writerows(rows)
+            writer=csv.DictWriter(f,fieldnames=columns,lineterminator="\n");writer.writeheader();writer.writerows(rows)
     performance=read_csv('performance_expanded_A.csv')
     main_rows=[r for r in performance if r['split']=='development_test' and r['reference']=='chosen']
     by={r['group']:r for r in main_rows}
