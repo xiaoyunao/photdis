@@ -13,8 +13,9 @@ export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 exec 9>data/.photdis_v2.lock
 flock -n 9
-case "${1:?collect or render}" in
+case "${1:?collect, render or finalize}" in
  collect) python -u scripts/v2_0_collect.py ;;
  render) python -u scripts/v2_0_extend.py; python -u scripts/v2_0_figures.py ;;
+ finalize) python -u scripts/v2_0_finalize.py ;;
  *) exit 2 ;;
 esac
