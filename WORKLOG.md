@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-05 — preserve generated figures during final source sync
+
+- GitHub accepted7de2ec2; NERSC safely rejected the update because the29
+  generated PNGs were still untracked in the checkout. No files overwritten.
+- Verified all29 remote PNGs match final delivery hashes, exact directory
+  membership and no tracked/staged edits. Moved the directory intact to
+  data/baseline_v1_4/diagnostics/render_backup_60833703 before retrying source sync.
+- Preserves original allocated render while permitting Git to track its selected
+  deliverables. No scientific artifacts changed; final sync verifies all heads.
+
 ## 2026-11-05 — eight-group scientific diagnostics delivered
 
 - Completed frozen per-star diagnosis,29 scientific figures and Chinese

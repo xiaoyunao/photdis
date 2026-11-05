@@ -117,5 +117,7 @@
     "Reference point estimates overlap and have selection effects; VAC coverage does not convolve reference uncertainty.",
     "Broad22–25 validation remains absent.",
     "New model choices informed by this diagnostic test need independent final validation."
-  ]
+  ],
+  "nersc_render_backup": "data/baseline_v1_4/diagnostics/render_backup_60833703",
+  "backup_validation": "29 remote PNG hashes and directory membership exactly matched final figures before the reversible move; tracked and staged files were clean."
 }
