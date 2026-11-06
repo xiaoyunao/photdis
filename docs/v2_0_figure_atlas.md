@@ -449,4 +449,4 @@ One object per preregistered group, fixed hash order. Four forward calls to froz
 ## 已有外部证据索引
 
 - [早期统一基线](baseline_v0_result.md)、[当前应用目录范围](baseline_v1_catalog.md)和历次cluster_rgb文档保留其开发身份。外部目标未被纳入当前主模型的独立绝对精度证明。
-- 固定PDF附图包含普通矮星、校正域贫金属矮星、演化星失败和宽/多峰，身份由固定哈希规则选取。
+- 固定PDF附图包含普通矮星、校正域贫金属矮星、巨星参考子样本失败和宽/多峰，身份由固定哈希规则选取。

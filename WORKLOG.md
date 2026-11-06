@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-06 — implement revised v2.0 atlas, awaiting NERSC authentication
+
+- Read full newest Pro message d86d4b7e of6ee0df1,including user issues0–8
+  and requirementsA–H; archived docs/pro_review_6ee0df1.md.
+- Modified report naming/methods,transparent color maps and corrected faint
+  legend. Added exhaustive975-combination renderer,linear residual panels,
+  temperature/Kiel views,two-flow diagram and fixed49 Gaia-object audit.
+- Audit exports exact ID strings/JSON,guards source_row=-1,reads raw native
+  quality fields,compares Gaia at native epoch and reproduces four frozen PDFs.
+  Evidence classes are explicitly heuristic,not WD confirmations.
+- Persisted future TYPE=PSF admission/export rule in AGENTS and methods.
+- Commands: py_compile for all changed/new Python,bash -n runner,
+  PYTHONPATH=src:scripts:.deps python3 -m pytest -q tests/test_report_v2.py.
+  Two tests passed; synthetic normal/empty combinations rendered and count
+  conservation checked. Synthetic distance,15 physical and compact paired
+  figure paths also passed; transparent PNG/300dpi verified. Inspected
+  synthetic CMD and residual panels,then limited crowded narrow-log ticks.
+  These smoke figures are not scientific results.
+- GitHub fetch succeeded on retry; remote main initially equals6ee0df1.
+  NERSC SSH authentication expired,Permission denied on both checks.
+  Requested user run sshproxy -u yunao with password/OTP. No Slurm revision
+  job submitted,no actual49-object/975-figure results yet.
+- Next: authenticate,safely synchronize source,check queue,submit allocated
+  run once,inspect real results and publish complete bounded atlas volumes.
+
 ## 2026-11-05 — v2.0 stage report delivered
 
 - Recovered full long GPT Pro review46bca023 of8b6f744; registered exhaustive

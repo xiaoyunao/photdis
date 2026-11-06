@@ -1,5 +1,32 @@
 # PLAN
 
+## Current objective: v2.0 revised atlas and Gaia anomaly audit
+
+User authorized the newest full Pro review of6ee0df1. Requirements and
+execution protocol: docs/v2_0_revision_protocol.md. Archived full review:
+docs/pro_review_6ee0df1.md. Programs implement975 exhaustive band/color
+plates,55 refreshed existing plates,15 temperature plots,one two-flow
+figure and4 fixed49-object anomaly figures, planned1050 sets.
+
+- [x] Archive review, correct terminology/methods and persist strict future PSF rule.
+- [x] Implement transparent shared logarithmic color scales, linear distance
+  residual density/histograms, per-band eligibility and cross-class edges.
+- [x] Implement safe raw-row/ID audit, spectral failure decoding, native epoch
+  comparison and four frozen PDF checks for the fixed Gaia anomaly list.
+- [x] Syntax,2 targeted tests,normal/empty combination plotting smoke.
+- [ ] Restore NERSC SSH authentication. Current response Permission denied.
+  User asked to run sshproxy -u yunao and enter password/OTP.
+- [ ] Inspect remote git/queue, sync source safely,submit exactly once using
+  scripts/run_v2_0_revision.sh. No revision job submitted yet.
+- [ ] Run actual frozen per-star rebinning/anomaly audit on allocated CPU,
+  verify47756/3207/1163/49 and1050 figure sets/count conservation.
+- [ ] Transfer compact outputs,run scripts/v2_0_revision_publish.py,inspect
+  new figures/PDFs,record real results,commit and synchronize all endpoints.
+
+Original frozen references/models/predictions stay authoritative. New plots
+are historical v2.0 diagnostic views and retain the16 nonPSF exceptions.
+No production results or anomaly identifications are claimed before execution.
+
 ## Completed objective: Photdis v2.0 stage freeze
 
 Scope/methods/status/atlas and docs/v2_0_requirements.md cover the long Pro

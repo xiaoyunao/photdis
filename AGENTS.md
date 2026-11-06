@@ -1,5 +1,11 @@
 # Project instructions
 
+- All newly constructed scientific samples must explicitly require Legacy DR11
+  TYPE=PSF at admission and export, including training, calibration, testing,
+  reference comparisons, external validation and application. Missing or
+  unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
+  Frozen v2.0 historical exceptions remain available only for baseline audit.
+
 - Latest completed stage report: Photdis v2.0. Read docs/v2_0_scope.md,
   docs/v2_0_methods.md, docs/v2_0_status.md and docs/v2_0_figure_atlas.md.
   10 main figure groups (19 plates),36 appendix plates;55 sets of PNG300dpi,

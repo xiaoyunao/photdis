@@ -14,3 +14,14 @@ def test_percentage_metrics_are_computed_per_star_and_keep_tails():
     np.testing.assert_allclose(result['tail1mag'],2/3)
     assert ranges([1,np.nan,3])['missing']==1
     assert ranges([1,10],[99,1])['p50']<2
+
+
+def test_revision_source_lookup_never_wraps_missing_row(tmp_path):
+    from v2_0_anomalies import selected_columns
+    path = tmp_path / 'source.npz'
+    np.savez(path, exact_id=np.array([11, 9223372036854775806], dtype='i8'),
+             parameter=np.array([4., 9.]), text=np.array(['first', 'last']))
+    result = selected_columns(path, np.array([-1, 0, 1]), ['exact_id', 'parameter', 'text'])
+    assert result['exact_id'].tolist() == [-1, 11, 9223372036854775806]
+    assert np.isnan(result['parameter'][0])
+    assert result['text'][0] == ''

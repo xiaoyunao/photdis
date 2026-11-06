@@ -40,6 +40,8 @@ def main():
 
 ## 规模与分母
 
+参考检索与应用分别统计。1,600个south sweep用于检索参考对象，约939万对象来自预先配置的14个应用天区。它们不是从全部sweep逐级筛选得到的一条保留率流程。增加处理天区和放宽应用质量条件是两个独立问题。
+
 """
     scope+=table(['项目','数量','解释'],[
         ['应用天区','14','13个DECam、1个北方BASS/MzLS'],
@@ -71,6 +73,10 @@ def main():
 
 ## 数据及流程
 
+主模型按颜色标定绝对星等分布 p(M_g | (g-r)_0,(r-z)_0)，再用目标的视星等求 μ=g₀−M_g 和 d/kpc=10^((μ−10)/5)。在无噪声且消光修正正确时，各波段同时变暗5等会使距离增大10倍，颜色和预测绝对星等分布相同。亮端参考能够标定这一关系。暗端限制指目标误差、缺测、路由和星族混合条件下的验证不足，不能仅凭视星等较暗判定A模型在颜色特征空间外推。现有共享波段误差传播已纳入测光误差，历史降深实验使用原模板星族。
+
+后续所有新建科学样本入口和输出必须核实 Legacy DR11 TYPE=PSF，缺失或无法核实不通过。新样本记录非PSF和TYPE缺失排除数。冻结v2.0的历史例外仅作基线审计。
+
 应用使用 Legacy DR11 DECam grz 测光，WISE 为可选测量。参考标签分别来自 Gaia DR3 高精度锚、DESI DR1 MWS RVS v1.0、SpecDis v2.1 与 SPDist v1.0。冻结配置和输入 SHA256 见快照。native LS ID、Gaia source ID 和 DESI target ID 分开保存，原始配对、唯一ID回退和位置／历元恢复保留为字段。与历史训练身份、历史天区及冲突身份重合的对象隔离。粗类别与距离资格各自判断。
 
 ## 光学和形态入口
@@ -95,7 +101,7 @@ SpecDis 使用唯一匹配、BINARY_FLAG=1、DIST和DISTERR有限正、DISTERR<D
 
 ## 类别和丰度
 
-可靠 RVS 参数入口核对 desi_quality_reasons 和 desi_class_evidence_v3。要求STAR、RVS_WARN=0、SUCCESS/PRIMARY、SN_R≥10、0≤vsini<30 km/s，温度与重力及其正误差有效。分类不要求有效丰度。dwarf 为 Teff<7000 K 且 logg−sigma_logg>4.2，evolved 为 Teff<7000 K 且 logg+sigma_logg<3.2，其余合格恒星为 other/transition。Unknown 显式保留。当前样本包含宽温度范围，粗类别并未细分RGB/RC/HB/AGB。
+可靠 RVS 参数入口核对 desi_quality_reasons 和 desi_class_evidence_v3。要求STAR、RVS_WARN=0、SUCCESS/PRIMARY、SN_R≥10、0≤vsini<30 km/s，温度与重力及其正误差有效。分类不要求有效丰度。dwarf 为 Teff<7000 K 且 logg−sigma_logg>4.2，巨星参考子样本（内部字段 evolved）为 Teff<7000 K 且 logg+sigma_logg<3.2，其余合格恒星为其他合格光谱星。Unknown 表示未获得可靠光谱类别，可能已有未通过质量条件的光谱。当前样本包含宽温度范围，粗类别并未细分RGB/RC/HB/AGB。
 
 贫金属诊断分别用原始RVS、限制校正域后的原始RVS、同域校正RVS。校正域为4200≤Teff<6600 K、1.8≤logg<5.5，贫金属门槛为FeH<−1.5。域外校正值保持缺失。
 
@@ -116,6 +122,8 @@ SpecDis 使用唯一匹配、BINARY_FLAG=1、DIST和DISTERR有限正、DISTERR<D
 WISE质量使用有效观测/ivar/transmission、WISEMASK=0、FRACFLUX<1；五种状态分别为缺测、无效、质量失败、合格弱测量、S/N≥5。i使用自己的掩膜和污染条件，见代码。应用mu和mu_cal分别表示原始QRF分位数与cal扩展区间，后者没有产生新的PDF。expanded模型和后续实验的分位数保持raw标识。
 
 ## 统一统计和逐星视图
+
+带符号图统计每格 median(ε_d)，绝对值图统计 median(|ε_d|)，单位都为百分比。后者衡量误差幅度，两者不能互相替代。参考CMD使用M=m₀−μ_ref，预测CMD使用M=m₀−μ_phot；两张残差图均在参考坐标上。CMD与残差共享距离变量，其关联不能独自确立物理原因。
 
 epsilon_d=100×(10^(delta_mu/5)−1)。百分比NMAD直接由逐星epsilon计算。主表含N、中位epsilon、NMAD、绝对误差中位数、P16/P84、20/50%尾率、1mag尾率及68/95%覆盖和全宽。1mag门槛等价于低估超过36.90%或高估超过58.49%。
 
@@ -179,10 +187,10 @@ python3 scripts/v2_0_publish.py
     status+=table(['人群','N','中位距离偏差','百分比NMAD','中位绝对误差','1mag严重尾率','68%覆盖'],[
         [label,by[key]['n'],f"{float(by[key]['median_pct']):+.2f}%",f"{float(by[key]['nmad_pct']):.2f}%",
          f"{float(by[key]['median_abs_pct']):.2f}%",f"{float(by[key]['tail1mag']):.2%}",f"{float(by[key]['coverage68']):.2%}"]
-        for key,label in [('all','全体'),('dwarf','矮星'),('evolved','演化星'),('other','其他/过渡'),('unknown','未知')]])
+        for key,label in [('all','全体'),('dwarf','矮星'),('evolved','巨星参考子样本'),('other','其他合格光谱星'),('unknown','未获得可靠光谱类别')]])
     status+="""
 
-总体偏差接近零时，演化星仍有−91.30%的中位距离偏差。其6.49% NMAD是围绕这一巨大偏差的散布。可靠矮星的1.95%严重错误率是对象比例，中位绝对百分比误差约7.41%。未知类中位偏差接近零但约五分之一严重失败。
+总体偏差接近零时，巨星参考子样本仍有−91.30%的中位距离偏差。其6.49% NMAD是围绕这一巨大偏差的散布。可靠矮星的1.95%严重错误率是对象比例，中位绝对百分比误差约7.41%。未知类中位偏差接近零但约五分之一严重失败。
 
 ## 新增形态审计
 
@@ -194,24 +202,24 @@ python3 scripts/v2_0_publish.py
         [k,index.get(('assembled',k),'0'),index.get(('train:fit_eligible',k),'0'),
          index.get(('cal:chosen',k),'0'),index.get(('test:chosen',k),'0')] for k in kinds])
     psf=by['TYPE_PSF']
-    status+=f"\n\nPSF子集chosen测试有{int(psf['n']):,}颗，严重尾率{float(psf['tail1mag']):.3%}，中位距离偏差{float(psf['median_pct']):+.3f}%。与全体的差别很小，扩展参考入口的非PSF少数对象不能解释演化星的大规模失败。形态audit保留全部旧成绩和训练身份。\n"
+    status+=f"\n\nPSF子集chosen测试有{int(psf['n']):,}颗，严重尾率{float(psf['tail1mag']):.3%}，中位距离偏差{float(psf['median_pct']):+.3f}%。与全体的差别很小，扩展参考入口的非PSF少数对象不能解释巨星参考子样本的大规模失败。形态audit保留全部旧成绩和训练身份。\n"
     status+="""
 ## 固定实验结论
 
-- 扩充训练数据，A总体尾率9.82%→9.68%，演化星95.44%→96.56%。
-- matched grz/griz同星总体9.71%→9.57%，演化星仍97.46%→96.52%。
-- r₀使演化星尾率96.56%→89.85%，但距离仍约十一分之一；矮星尾率1.95%→2.16%。18–20无W1的47颗演化星无净收益。
-- 真实弱WISE固定原型在主目标层净损伤，弱W1 39.13%→52.17%，弱W2与合格W1 20.60%→20.93%；后者28颗演化星仍全部严重错误。
+- 扩充训练数据，A总体尾率9.82%→9.68%，巨星参考子样本95.44%→96.56%。
+- matched grz/griz同星总体9.71%→9.57%，巨星参考子样本仍97.46%→96.52%。
+- r₀使巨星参考子样本尾率96.56%→89.85%，但距离仍约十一分之一；矮星尾率1.95%→2.16%。18–20无W1的47颗巨星参考子样本无净收益。
+- 真实弱WISE固定原型在主目标层净损伤，弱W1 39.13%→52.17%，弱W2与合格W1 20.60%→20.93%；后者28颗巨星参考子样本仍全部严重错误。
 - 既有高S/N WISE匹配训练对照保留于主图10b。信息增益与测量覆盖分别统计，每个实验使用自己的匹配身份。
 - 贫金属矮星在校正域中仍有约+23%偏差、约43%的68%覆盖。原始/同域原始/校正丰度三种定义分别显示。
 
 ## 限制和未完成范围
 
 """
-    status+=f"- 当前v1应用的名义颜色支持域比例为{supported/predicted:.2%}，域内也存在演化星失败。预设数值层级和全星族研究质量条件未全部通过。\n"
+    status+=f"- 当前v1应用的名义颜色支持域比例为{supported/predicted:.2%}，域内也存在巨星参考子样本失败。预设数值层级和全星族研究质量条件未全部通过。\n"
     status+="""
 - 新chosen测试只有九个天区格，最大格占45.7%，这些是开发证据。天区bootstrap反映当前选择下的波动。
-- 20–22等只有618个chosen参考且无可靠演化星标签；22–25等只有7个chosen、3个合格Gaia视差、0个可靠类别参考。
+- 20–22等只有618个chosen参考且无可靠巨星参考子样本标签；22–25等只有7个chosen、3个合格Gaia视差、0个可靠类别参考。
 - 目录参考点覆盖、潜在真实距离覆盖与数值积分收敛各自保留不同名称。光谱距离目录存在选择效应和相关上游信息。
 - 全DR11同口径完成率和掩膜有效面积未统计，北方491184行具有明确未预测状态。
 - 旧星团与星流证据来自历次特定模型/开发核查，索引保留在原文档。它们不足以充当当前expanded_A全星族独立检验。本次整理不补做局部目标实验。
@@ -230,7 +238,7 @@ python3 scripts/v2_0_publish.py
                       f'[PDF](../{record["pdf"]}) · [CSV](../{record["csv"]}) · [元数据](../manifests/v2_0/figures/{name}.json)','']
     atlas += ['## 已有外部证据索引','',
               '- [早期统一基线](baseline_v0_result.md)、[当前应用目录范围](baseline_v1_catalog.md)和历次cluster_rgb文档保留其开发身份。外部目标未被纳入当前主模型的独立绝对精度证明。',
-              '- 固定PDF附图包含普通矮星、校正域贫金属矮星、演化星失败和宽/多峰，身份由固定哈希规则选取。','']
+              '- 固定PDF附图包含普通矮星、校正域贫金属矮星、巨星参考子样本失败和宽/多峰，身份由固定哈希规则选取。','']
     (D/'v2_0_figure_atlas.md').write_text('\n'.join(atlas))
     print('Published scope, methods, status and atlas',len(registry))
 

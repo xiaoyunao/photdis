@@ -10,3 +10,8 @@ STYLE = {
     'figure.facecolor': 'white', 'savefig.facecolor': 'white',
     'axes.grid': True, 'grid.alpha': .22, 'axes.axisbelow': True,
 }
+
+# Report maps retain empty cells and the page background as transparent.
+TRANSPARENT_STYLE = {**STYLE, 'figure.facecolor': 'none',
+                     'axes.facecolor': 'none', 'savefig.facecolor': 'none',
+                     'savefig.transparent': True}

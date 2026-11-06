@@ -2,6 +2,10 @@
 
 ## 数据及流程
 
+主模型按颜色标定绝对星等分布 p(M_g | (g-r)_0,(r-z)_0)，再用目标的视星等求 μ=g₀−M_g 和 d/kpc=10^((μ−10)/5)。在无噪声且消光修正正确时，各波段同时变暗5等会使距离增大10倍，颜色和预测绝对星等分布相同。亮端参考能够标定这一关系。暗端限制指目标误差、缺测、路由和星族混合条件下的验证不足，不能仅凭视星等较暗判定A模型在颜色特征空间外推。现有共享波段误差传播已纳入测光误差，历史降深实验使用原模板星族。
+
+后续所有新建科学样本入口和输出必须核实 Legacy DR11 TYPE=PSF，缺失或无法核实不通过。新样本记录非PSF和TYPE缺失排除数。冻结v2.0的历史例外仅作基线审计。
+
 应用使用 Legacy DR11 DECam grz 测光，WISE 为可选测量。参考标签分别来自 Gaia DR3 高精度锚、DESI DR1 MWS RVS v1.0、SpecDis v2.1 与 SPDist v1.0。冻结配置和输入 SHA256 见快照。native LS ID、Gaia source ID 和 DESI target ID 分开保存，原始配对、唯一ID回退和位置／历元恢复保留为字段。与历史训练身份、历史天区及冲突身份重合的对象隔离。粗类别与距离资格各自判断。
 
 ## 光学和形态入口
@@ -26,7 +30,7 @@ SpecDis 使用唯一匹配、BINARY_FLAG=1、DIST和DISTERR有限正、DISTERR<D
 
 ## 类别和丰度
 
-可靠 RVS 参数入口核对 desi_quality_reasons 和 desi_class_evidence_v3。要求STAR、RVS_WARN=0、SUCCESS/PRIMARY、SN_R≥10、0≤vsini<30 km/s，温度与重力及其正误差有效。分类不要求有效丰度。dwarf 为 Teff<7000 K 且 logg−sigma_logg>4.2，evolved 为 Teff<7000 K 且 logg+sigma_logg<3.2，其余合格恒星为 other/transition。Unknown 显式保留。当前样本包含宽温度范围，粗类别并未细分RGB/RC/HB/AGB。
+可靠 RVS 参数入口核对 desi_quality_reasons 和 desi_class_evidence_v3。要求STAR、RVS_WARN=0、SUCCESS/PRIMARY、SN_R≥10、0≤vsini<30 km/s，温度与重力及其正误差有效。分类不要求有效丰度。dwarf 为 Teff<7000 K 且 logg−sigma_logg>4.2，巨星参考子样本（内部字段 evolved）为 Teff<7000 K 且 logg+sigma_logg<3.2，其余合格恒星为其他合格光谱星。Unknown 表示未获得可靠光谱类别，可能已有未通过质量条件的光谱。当前样本包含宽温度范围，粗类别并未细分RGB/RC/HB/AGB。
 
 贫金属诊断分别用原始RVS、限制校正域后的原始RVS、同域校正RVS。校正域为4200≤Teff<6600 K、1.8≤logg<5.5，贫金属门槛为FeH<−1.5。域外校正值保持缺失。
 
@@ -47,6 +51,8 @@ SpecDis 使用唯一匹配、BINARY_FLAG=1、DIST和DISTERR有限正、DISTERR<D
 WISE质量使用有效观测/ivar/transmission、WISEMASK=0、FRACFLUX<1；五种状态分别为缺测、无效、质量失败、合格弱测量、S/N≥5。i使用自己的掩膜和污染条件，见代码。应用mu和mu_cal分别表示原始QRF分位数与cal扩展区间，后者没有产生新的PDF。expanded模型和后续实验的分位数保持raw标识。
 
 ## 统一统计和逐星视图
+
+带符号图统计每格 median(ε_d)，绝对值图统计 median(|ε_d|)，单位都为百分比。后者衡量误差幅度，两者不能互相替代。参考CMD使用M=m₀−μ_ref，预测CMD使用M=m₀−μ_phot；两张残差图均在参考坐标上。CMD与残差共享距离变量，其关联不能独自确立物理原因。
 
 epsilon_d=100×(10^(delta_mu/5)−1)。百分比NMAD直接由逐星epsilon计算。主表含N、中位epsilon、NMAD、绝对误差中位数、P16/P84、20/50%尾率、1mag尾率及68/95%覆盖和全宽。1mag门槛等价于低估超过36.90%或高估超过58.49%。
 

@@ -41,6 +41,8 @@ archives/
 # Compact, audited v2.0 report tables and figure bins.
 !manifests/v2_0/*.csv
 !manifests/v2_0/figures/*.csv
+!manifests/v2_0_revision/*.csv
+!manifests/v2_0_revision/figures/*.csv
 
 # Temporary files
 *.tmp

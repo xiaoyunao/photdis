@@ -6,7 +6,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import LogNorm, Normalize
+from matplotlib.colors import LogNorm, Normalize, SymLogNorm
 from matplotlib.patches import Rectangle
 from matplotlib.ticker import LogLocator, NullFormatter, FuncFormatter
 import numpy as np
@@ -22,8 +22,10 @@ from photdis.baseline_v1 import integrate
 REGISTRY={}
 ROWS=[]
 PANELS=[]
-CLASSES=[(-1,'Unknown',GRAY),(0,'Dwarf',BLUE),(1,'Evolved',ORANGE),(2,'Other / transition',GREEN)]
+CLASSES=[(-1,'No reliable spectral class',GRAY),(0,'Dwarf',BLUE),(1,'Giant reference',ORANGE),(2,'Other qualified spectral stars',GREEN)]
 PRIMARY=None
+FIGURE_PREFIX='figures/v2_0'
+TABLE_PREFIX='manifests/v2_0'
 
 
 def begin():
@@ -39,18 +41,19 @@ def save(fig,name,caption,section='main',model='expanded_A',reference='chosen',s
     provenance=f'{model} · {split} · {reference}'
     existing=fig._suptitle.get_text() if fig._suptitle is not None else ''
     fig.suptitle((existing+'\n' if existing else '')+provenance,fontsize=15)
-    fig.savefig(folder/(name+'.png'),dpi=300,bbox_inches='tight')
-    fig.savefig(folder/(name+'.pdf'),dpi=300,bbox_inches='tight')
+    fig.savefig(folder/(name+'.png'),dpi=300,bbox_inches='tight',transparent=True)
+    fig.savefig(folder/(name+'.pdf'),dpi=300,bbox_inches='tight',transparent=True)
     plt.close(fig)
     csv_rows(meta_folder/(name+'.csv'),ROWS)
+    caption=caption.replace('evolved','giant reference').replace('unknown','no reliable spectral class').replace('other/transition','other qualified spectral stars')
     record=dict(name=name,section=section,model=model,reference=reference,split=split,
                 caption=caption,units='distance kpc; distance residual percent; modulus mag',
                 binning='edges and counts in CSV',minimum_performance_bin=20,
-                sparse='gray crosses indicate 1–19 objects; cream background indicates no evidence',
+                sparse='gray crosses indicate 1–19 objects; empty cells are transparent',
                 panels=list(PANELS),statistics_records=len(ROWS),
                 count_source='Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.',
-                png=f'figures/v2_0/{section}/{name}.png',pdf=f'figures/v2_0/{section}/{name}.pdf',
-                csv=f'manifests/v2_0/figures/{name}.csv')
+                png=f'{FIGURE_PREFIX}/{section}/{name}.png',pdf=f'{FIGURE_PREFIX}/{section}/{name}.pdf',
+                csv=f'{TABLE_PREFIX}/figures/{name}.csv')
     for key in ('png','pdf'):
         record[key+'_sha256']=sha(folder/(name+'.'+key))
     save_json(meta_folder/(name+'.json'),record)
@@ -78,7 +81,7 @@ def density(ax,x,y,xe,ye,label,weight=None):
     h=np.histogram2d(x[ok],y[ok],bins=[xe,ye],weights=None if weight is None else weight[ok])[0]
     count=np.histogram2d(x[ok],y[ok],bins=[xe,ye])[0]
     cm=plt.get_cmap('Blues').copy()
-    cm.set_bad('white')
+    cm.set_bad((0,0,0,0))
     im=ax.pcolormesh(xe,ye,np.ma.masked_equal(h.T,0),cmap=cm,norm=LogNorm(1,max(2,h.max())))
     panel(label,len(x),ok.sum(),int(count.sum()),x_range=[xe[0],xe[-1]],y_range=[ye[0],ye[-1]])
     for i,j in zip(*np.where(count>0)):
@@ -90,18 +93,21 @@ def map_error(ax,x,y,error,xe,ye,label,absolute=False):
     ok=np.isfinite(x)&np.isfinite(y)&np.isfinite(error)
     v=abs(error[ok]) if absolute else error[ok]
     count=np.histogram2d(x[ok],y[ok],bins=[xe,ye])[0]
-    z=binned_statistic_2d(x[ok],y[ok],v,statistic='median',bins=[xe,ye])[0]
-    ax.set_facecolor('#f4ebd9')
+    z=(binned_statistic_2d(x[ok],y[ok],v,statistic='median',bins=[xe,ye])[0]
+       if ok.any() else np.full((len(xe)-1,len(ye)-1),np.nan))
+    ax.set_facecolor((0,0,0,0))
     cm=plt.get_cmap('Oranges' if absolute else 'coolwarm').copy()
     cm.set_bad((0,0,0,0))
-    im=ax.pcolormesh(xe,ye,np.ma.masked_where(count.T<20,z.T),cmap=cm,
-                     norm=Normalize(0,100) if absolute else Normalize(-100,100))
+    im=ax.pcolormesh(xe,ye,np.ma.masked_where(count.T<20,np.maximum(z.T,1) if absolute else z.T),cmap=cm,
+                     norm=LogNorm(1,100,clip=True) if absolute else SymLogNorm(linthresh=1,base=10,vmin=-100,vmax=100))
     low=(count>0)&(count<20)
     i,j=np.where(low)
     ax.scatter((xe[i]+xe[i+1])/2,(ye[j]+ye[j+1])/2,s=6,c=GRAY,marker='x',linewidths=.4)
     panel(label,len(x),ok.sum(),int(count.sum()),low_occupancy_cells=int(low.sum()),
-          display_color_limits=[0,100] if absolute else [-100,100],
-          residual_beyond_color=int((abs(v)>100).sum()))
+          display_color_limits=[1,100] if absolute else [-100,100],
+          color_normalization='LogNorm; <=1% lowest color' if absolute else 'SymLogNorm linthresh=1%, base10',
+          residual_beyond_color=int((abs(v)>100).sum()),
+          zero_residuals=int((v==0).sum()),below_absolute_scale=int((abs(v)<1).sum()))
     for i,j in zip(*np.where(count>0)):
         ROWS.append(dict(panel=label,xlo=xe[i],xhi=xe[i+1],ylo=ye[j],yhi=ye[j+1],n=int(count[i,j]),
                          value=z[i,j],low_occupancy=bool(count[i,j]<20)))
@@ -184,13 +190,13 @@ def coverage(q):
         for lo,hi,n in zip(bins[:-1],bins[1:],counts):
             ROWS.append(dict(panel=label,lo=lo,hi=hi,n=int(n)))
     axes[0].set(xlabel='Observed r [mag]',ylabel='Fraction of each sample',title='Parent and spatial evaluation samples')
-    axes[1].set(xlabel='Observed r [mag]',ylabel='Test evidence objects',yscale='symlog',title='Three independent evidence qualifications')
+    axes[1].set(xlabel='Observed r [mag]',ylabel='Test evidence objects',yscale='symlog',title='Independent distance-evidence test qualifications')
     for ax in axes:ax.legend()
     save(fig,'02a_brightness_coverage','Parent retains original probability weights. No common reference mask is used for class, chosen or signed Gaia evidence.',reference='independent eligibility',split='cal/test + parent')
     begin()
     fig,axes=plt.subplots(1,2,figsize=(13,5.5),layout='constrained')
     xe=np.linspace(-1,3,33);ye=np.arange(14.,26)
-    for ax,t,label,w in [(axes[0],p,'Weighted parent',p['sample_weight']),(axes[1],subset(q,q['split']==2),'Development test',None)]:
+    for ax,t,label,w in [(axes[0],p,'Weighted parent',p['sample_weight']),(axes[1],subset(q,q['split']==2),'Distance-evidence test (chosen subset distinct)',None)]:
         im=density(ax,t['gr'],t['r'],xe,ye,label,w)
         fig.colorbar(im,ax=ax,label='Parent weight' if w is not None else 'Reference objects')
         ax.set(xlabel='$(g-r)_0$',ylabel='Observed r [mag]',ylim=(25,14),title=label)
@@ -336,7 +342,7 @@ def conditions(q,key='r',section='main'):
     edges={'r':np.array([14,16,18,19,20,21,22,25.]),'optical_error':np.array([0,.01,.03,.1,.3,1.]),
            'EBV':np.linspace(0,.03,8),'snr_w1':np.array([-10,0,2,5,10,20,50,100,1000.]),
            'ref_distance':np.array([0,.25,.5,1,2,5,10,20,50,200,2000.])}[key]
-    metrics=[('median_pct','Median bias [%]'),('nmad_pct','NMAD [%]'),('tail1mag','Severe-error fraction')]
+    metrics=[('median_pct','Median bias [%]'),('nmad_pct','NMAD [%]'),('tail1mag',r'$|\Delta\mu|>1$ mag fraction')]
     begin()
     fig,axes=plt.subplots(1,3,figsize=(16,5.2),layout='constrained')
     for ax,(metric,label) in zip(axes,metrics):
@@ -357,7 +363,7 @@ def conditions(q,key='r',section='main'):
         trend(axes[0],t,t['r'],edges,'coverage68',label,color)
         trend(axes[1],t,t['r'],edges,'width68_mag',label,color)
         h=np.histogram(t['r'][np.isfinite(t['ref_chosen'])],edges)[0]
-        axes[2].stairs(h,edges,label=f'{label} · {h[-2]}/{h[-1]}',color=color,lw=2)
+        axes[2].stairs(h,edges,label=f'{label} · {np.count_nonzero((t["r"]>=20)&(t["r"]<22)&np.isfinite(t["ref_chosen"]))}/{h[-1]}',color=color,lw=2)
     axes[0].axhline(.68,c=GRAY,ls=':');axes[0].set(ylim=(0,1),ylabel='68% reference-point coverage')
     axes[1].set_ylabel('Median 68% width [mag]')
     axes[2].set(ylabel='Reference count',yscale='symlog')
@@ -463,7 +469,7 @@ def experiments():
             if lo is not None:axes[0].hlines(y,100*lo,100*hi,colors=c,lw=1.2)
             axes[0].plot(x,y,'o',c=c,label=label if i==0 else None)
             ROWS.append(dict(panel=label,group=key,**p))
-    axes[0].set(yticks=range(5),yticklabels=keys,xlabel='Tail-rate change [pp]',title='Separate fixed matched comparisons')
+    axes[0].set(yticks=range(5),yticklabels=['All','Dwarf','Giant reference','Other qualified','No reliable class'],xlabel='Tail-rate change [pp]',title='Separate fixed matched comparisons')
     axes[0].axvline(0,c=GRAY,ls='--');axes[0].legend(fontsize=10);axes[0].invert_yaxis()
     for j,(group,a,b,title) in enumerate([('r18_20:w1_weak','optical','w1','Weak W1'),
                                          ('r18_20:w2_weak_given_w1','w1','w1w2','Weak W2 with W1')]):
@@ -493,7 +499,7 @@ def experiments():
         axes[1].plot(i+.12,b['width68']-a['width68'],'o',c=ORANGE,label='r0' if i==0 else None)
         ROWS.append(dict(panel='r0',group=label,n=a['n'],old_coverage=a['coverage68'],new_coverage=b['coverage68'],old_width=a['width68'],new_width=b['width68']))
     for ax,label in zip(axes,['68% coverage change [pp]','68% width change [mag]']):
-        ax.axhline(0,c=GRAY,ls='--');ax.set(xticks=range(5),xticklabels=classes,ylabel=label);ax.tick_params(axis='x',rotation=25);ax.legend()
+        ax.axhline(0,c=GRAY,ls='--');ax.set(xticks=range(5),xticklabels=['All','Dwarf','Giant reference','Other qualified','No reliable class'],ylabel=label);ax.tick_params(axis='x',rotation=25);ax.legend()
     save(fig,'10c_interval_tradeoffs','Paired data/i/r0 effects on reference-point coverage and width are displayed together. Each has its own fixed sample.',model='paired experiments')
     old=json.loads((ROOT/'manifests/baseline_v1_report.json').read_text())
     begin()
@@ -508,7 +514,7 @@ def experiments():
             d=refs['chosen']['all'];labels.append(name);values.append(d['tail_1'])
             ROWS.append(dict(panel=key,model=name,**d))
         ax.bar(range(len(values)),values,color=[BLUE,GREEN,ORANGE][:len(values)])
-        ax.set(xticks=range(len(labels)),xticklabels=labels,ylabel='Severe-error fraction',title='High-S/N matched '+key)
+        ax.set(xticks=range(len(labels)),xticklabels=labels,ylabel=r'$|\Delta\mu|>1$ mag fraction',title='High-S/N matched '+key)
     save(fig,'10b_high_snr_information','Existing v1 A_on_B/B and A_on_C/B_on_C/C matched training and source controls. Original specific model identifiers retained.',model='baseline_v1 matched bands',reference='chosen',split='old development test')
 
 
@@ -528,7 +534,7 @@ def appendix(q):
             use=mask&(q['class_label']==code)
             s=percent_metrics(q['mu'][use],q['ref_chosen'][use]);ROWS.append(dict(panel=name,group=label,**s));stats.append(s.get('tail1mag',np.nan))
         ax=axes[['supported','ambiguous','outside_train_precision'].index(name)]
-        ax.bar(range(4),stats,color=color);ax.set(xticks=range(4),xticklabels=[r[1] for r in CLASSES],ylim=(0,1),ylabel='Severe-error fraction',title=name);ax.tick_params(axis='x',rotation=25)
+        ax.bar(range(4),stats,color=color);ax.set(xticks=range(4),xticklabels=[r[1] for r in CLASSES],ylim=(0,1),ylabel=r'$|\Delta\mu|>1$ mag fraction',title=name);ax.tick_params(axis='x',rotation=25)
     save(fig,'A_flags','Model-state groups do not define a reliable single-distance catalog. Rows may overlap; all counts and risks retained.','appendix')
     begin()
     fig,axes=plt.subplots(1,3,figsize=(16,5.2),layout='constrained')
@@ -543,10 +549,10 @@ def appendix(q):
             ra=cell//18*10;dec=cell%18*10-90
             value=s[key] if key=='n' or s['n']>=20 else np.nan
             if np.isfinite(value):
-                norm=LogNorm(1,max(r['n'] for _,r in groups0)) if key=='n' else Normalize(-100,100) if key=='median_pct' else Normalize(0,1)
+                norm=LogNorm(1,max(r['n'] for _,r in groups0)) if key=='n' else SymLogNorm(linthresh=1,base=10,vmin=-100,vmax=100) if key=='median_pct' else Normalize(0,1)
                 cmap=plt.get_cmap('Blues' if key=='n' else 'coolwarm' if key=='median_pct' else 'Oranges')
                 ax.add_patch(Rectangle((ra,dec),10,10,fc=cmap(norm(value)),ec=GRAY,lw=.3))
-            else:ax.add_patch(Rectangle((ra,dec),10,10,fc='#f4ebd9',hatch='xx',ec=GRAY))
+            else:ax.add_patch(Rectangle((ra,dec),10,10,fc='none',hatch='xx',ec=GRAY))
         im=plt.cm.ScalarMappable(norm=norm,cmap=cmap)
         fig.colorbar(im,ax=ax,label=label)
         ax.set(xlim=(360,0),ylim=(-90,90),xlabel='RA [deg]',ylabel='Dec [deg]',title=label)
@@ -576,7 +582,7 @@ def reused_appendices():
         labels.append(name);v0.append(d['models']['v0']['metrics']['tail_1']);v1.append(d['models']['v1']['metrics']['tail_1'])
         ROWS.append(dict(panel=name,n_sources=d['n_sources'],n_accepted=d['n_accepted'],v0_tail=v0[-1],v1_tail=v1[-1]))
     for ax,values,title in [(axes[0],v0,'v0'),(axes[1],v1,'v1')]:
-        ax.bar(range(len(labels)),values,color=BLUE);ax.set(xticks=range(len(labels)),xticklabels=[x.replace('observed_r_','r ') for x in labels],ylabel='Severe-error fraction',title=title);ax.tick_params(axis='x',rotation=25)
+        ax.bar(range(len(labels)),values,color=BLUE);ax.set(xticks=range(len(labels)),xticklabels=[x.replace('observed_r_','r ') for x in labels],ylabel=r'$|\Delta\mu|>1$ mag fraction',title=title);ax.tick_params(axis='x',rotation=25)
     save(fig,'A_flux_depth_stress','Existing fixed real-template artificial flux degradation. Stress-test sources are reused; it does not supply new faint-population truth.','appendix',model='baseline_v0/v1',split='existing depth stress')
 
 
@@ -607,7 +613,7 @@ def pdf_examples(q):
         err=q['sigma_mu'][row]
         ax.axvspan(ref[row]-err,ref[row]+err,color=ORANGE,alpha=.2)
         ax.axvline(q['mu'][row,2],c=GREEN,ls='--',label='Median')
-        ax.set(title=f'{name}\nID={q["identity"][row]}',xlabel='Distance modulus [mag]',ylabel='Density [1/mag]')
+        ax.set(title=f'{name.replace("evolved","giant")}\nID={q["identity"][row]}',xlabel='Distance modulus [mag]',ylabel='Density [1/mag]')
         ax.legend(fontsize=10)
         for lo,hi,d in zip(edges[:-1],edges[1:],p):ROWS.append(dict(panel=name,identity=int(q['identity'][row]),lo=lo,hi=hi,density=d,reference=ref[row],reference_sigma=err))
         payload[name+'_edges']=edges;payload[name+'_pdf']=prediction['pdf'][0,::-1]
