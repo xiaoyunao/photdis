@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-07 — implement requested distance-panel replacement
+
+- Added five-plate-only rendering mode and short Slurm runner. Main/residual
+  share x axis with4:1 height; central2percentage-point histogram retained.
+- Simultaneous one-pass3sigma selection on linear x/y distance,independent
+  by population/reference. Exclusion counts and thresholds exported; original
+  metrics and49-object anomaly audit unchanged. English-only styling retained.
+- Syntax,shell validation,three focused tests and normal/empty render smoke.
+  Next: allocated production run,replace old files in place,inspect and sync.
+
 ## 2026-11-07 — revised v2.0 atlas and fixed anomaly audit delivered
 
 - Production60941065 COMPLETED0:0,24:06,nid004940,source39ddedb.

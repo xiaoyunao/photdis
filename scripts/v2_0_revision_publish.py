@@ -51,14 +51,14 @@ def main():
     summary=['# v2.0 本轮图件与异常审计','',
              '逐项依据见[完整审查](pro_review_6ee0df1.md)及[执行协议](v2_0_revision_protocol.md)。', '',
              '975张六波段组合图、既有55组重绘、15张温度诊断、参考／应用流程图与4张异常诊断，共1050张。', '',
-             'chosen测试47,756，Gaia点距离3,207，保守巨星1,163，固定异常区49。3687个统计面板均通过图内、图外和缺失数守恒检查。', '',
+             f"chosen测试47,756，Gaia点距离3,207，保守巨星1,163，固定异常区49。{sum(len(r['panels']) for r in registry.values())}个统计面板／选择计数均通过图内、图外和缺失数守恒检查。", '',
              '所有图内文字均为英文，保持Pal 5 New配色与字体风格。1050组PNG均为透明RGBA、300dpi；PDF均为单页且无中文文本。270张代表图经联系表目视检查，另放大检查距离残差、CMD、流程及异常图。', '',
              '本轮使用冻结历史样本，保留16个非PSF例外供审计；49颗异常对象全为PSF。新建科学样本仍须显式TYPE=PSF。未知光谱类别的温度图为空，表示没有通过质量筛选的温度证据，并非没有此类对象。', '',
              '异常对象的证据分组如下，数目由逐星结果产生。', '']
     summary += [f'- {k}，{v}颗。' for k,v in audit['categories'].items()]
     with open(M/'figures/03_distance_all.csv') as stream:
         bins=list(csv.DictReader(stream))
-    summary += ['', '线性残差零附近核对如下，采用等宽2个百分点分箱。', '']
+    summary += ['', '距离对比已按用户要求替换为主图＋紧贴下方的窄残差图（−100%至100%）＋中心直方图。每个星族与参考来源独立对线性距离x、y作一次均值±3σ联合筛选（ddof=0），不迭代；三个面板使用同一批保留对象。剔除数与阈值见逐图CSV/JSON。该显示筛选不改变原始科学性能与49颗异常审计。', '', '以下为筛选后线性残差零附近计数，采用等宽2个百分点分箱。', '']
     for source in ('Gaia','specdis','spdist'):
         near=[r for r in bins if r['panel']==source+'_Central 2 percentage-point histogram'
               and float(r['lo']) in (-2.,0.)]

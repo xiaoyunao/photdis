@@ -26,3 +26,19 @@ def test_revision_source_lookup_never_wraps_missing_row(tmp_path):
     assert np.isnan(result['parameter'][0])
     assert result['text'][0] == ''
     assert result['flags'].tolist() == [0,1,2]
+
+
+def test_distance_display_clip_is_simultaneous_and_handles_empty_constant():
+    from v2_0_revision import distance_clip
+    x = np.r_[np.ones(100), 100, 1, 100, np.nan]
+    y = np.r_[np.full(100, 2.), 2, 200, 200, 2]
+    keep, stats = distance_clip(x, y)
+    assert keep.sum() == 100
+    assert not keep[100:].any()
+    assert stats['x_rejected'] == stats['y_rejected'] == 2
+    assert stats['both_rejected'] == 1 and stats['clipped_n'] == 3
+    assert stats['invalid_n'] == 1
+    np.testing.assert_allclose(stats['y_mean_kpc'], np.mean(y[:103]))
+    assert distance_clip([1, 1], [2, 2])[0].all()
+    assert not distance_clip([np.nan, -1], [2, 2])[0].any()
+    assert distance_clip([], [])[1]['retained_n'] == 0

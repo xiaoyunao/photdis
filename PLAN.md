@@ -1,5 +1,15 @@
 # PLAN
 
+## Current objective: replace five distance comparison plates
+
+User requests main plot + narrow attached residual (-100 to100 percent) and
+central histogram; remove obsolete full-range panels. Single-pass simultaneous
+mean +/-3 population sigma on x/y linear kpc per population/reference pair.
+Display selection only; preserve original scientific metrics and anomaly audit.
+Renderer and targeted smoke/test prepared. Next: allocated NERSC rendering,
+replace existing five PNG/PDF/CSV/JSON sets,refresh atlas and hashes,inspect
+all five plates and synchronize. No full atlas/scientific pipeline rerun.
+
 ## Completed objective: v2.0 revised atlas and Gaia anomaly audit
 
 Latest Pro review of6ee0df1: docs/pro_review_6ee0df1.md.

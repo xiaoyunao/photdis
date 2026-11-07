@@ -155,66 +155,129 @@ def combination(task):
     return records
 
 
+def distance_clip(x, y):
+    """One simultaneous mean +/- 3 population-sigma cut in linear kpc."""
+    x, y = np.asarray(x), np.asarray(y)
+    valid = np.isfinite(x) & np.isfinite(y) & (x > 0) & (y > 0)
+    stats = dict(input_n=len(x), valid_n=int(valid.sum()))
+    keep = valid.copy()
+    rejected = []
+    for label, values in (('x', x), ('y', y)):
+        mean = float(np.mean(values[valid])) if valid.any() else None
+        sigma = float(np.std(values[valid], ddof=0)) if valid.any() else None
+        low, high = (mean - 3*sigma, mean + 3*sigma) if valid.any() else (None, None)
+        axis_keep = valid & (values >= low) & (values <= high) if valid.any() else valid.copy()
+        rejected.append(valid & ~axis_keep)
+        keep &= axis_keep
+        stats.update({label+'_mean_kpc':mean, label+'_sigma_kpc':sigma,
+                      label+'_low_kpc':low, label+'_high_kpc':high,
+                      label+'_rejected':int((valid & ~axis_keep).sum())})
+    stats.update(retained_n=int(keep.sum()), clipped_n=int((valid & ~keep).sum()),
+                 invalid_n=int((~valid).sum()), both_rejected=int((rejected[0] & rejected[1]).sum()))
+    return keep, stats
+
+
 def distance(q, group='all', section='main'):
     f.begin()
     group = 'giant' if group == 'evolved' else group
     t = subset(q, group_mask(q, group))
-    fig, axes = plt.subplots(5, 3, figsize=(16.5, 22), layout='constrained')
+    fig = plt.figure(figsize=(17, 10.5))
+    outer = fig.add_gridspec(2, 3, height_ratios=[5, 1.8], hspace=.42, wspace=.48,
+                            top=.87, bottom=.08, left=.065, right=.96)
+    selections = {}
     for j, source in enumerate(('Gaia', 'specdis', 'spdist')):
-        valid = np.isfinite(t['ref_' + source])
-        x = 10 ** ((t['ref_' + source][valid] - 10) / 5)
-        y = t['distance_kpc'][valid, 2]
-        error = t['epsilon_pct_' + source][valid]
+        upper = outer[0, j].subgridspec(2, 2, height_ratios=[4, 1],
+                                      width_ratios=[1, .045], hspace=.045, wspace=.055)
+        main = fig.add_subplot(upper[0, 0])
+        residual = fig.add_subplot(upper[1, 0], sharex=main)
+        cax = fig.add_subplot(upper[:, 1])
+        hist = fig.add_subplot(outer[1, j])
+        raw_x = 10 ** ((t['ref_' + source] - 10) / 5)
+        raw_y = t['distance_kpc'][:, 2]
+        keep, selection = distance_clip(raw_x, raw_y)
+        selections[source] = selection
+        f.panel(source+'_3sigma_selection', len(raw_x), selection['valid_n'], selection['retained_n'], **selection)
+        f.ROWS.append(dict(panel=source+'_3sigma_selection', **selection))
+        x, y = raw_x[keep], raw_y[keep]
+        error = 100 * (y / x - 1)
         if not len(x):
-            for ax in axes[:, j]:
-                ax.text(.5, .5, 'No eligible reference', ha='center', transform=ax.transAxes)
+            for ax in (main, residual, hist, cax):
                 ax.set_axis_off()
-            axes[0,j].set_title(source+' · N=0')
-            f.panel(source, len(valid), 0)
+            main.text(.5, .5, 'No eligible reference', ha='center', transform=main.transAxes)
+            main.set_title(source+' · N=0')
             continue
         edges = np.geomspace(*10 ** np.array(f.limits(np.log10(np.r_[x, y]))), 46)
-        im = f.density(axes[0, j], x, y, edges, edges, source + '_distance')
-        fig.colorbar(im, ax=axes[0, j], label='Objects/bin')
-        axes[0, j].plot(edges, edges, '--', c=ORANGE)
-        axes[0, j].set(xscale='log', yscale='log', xlabel='Reference distance [kpc]', ylabel='Predicted distance [kpc]', title=source)
-        for axis in (axes[0,j].xaxis, axes[0,j].yaxis):
-            axis.set_major_locator(FixedLocator(np.geomspace(edges[0],edges[-1],4)))
-            axis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:.3g}'))
-            axis.set_minor_locator(NullLocator())
-        full = np.linspace(*f.limits(np.r_[error, 0]), 102)
         center = np.arange(-100., 102., 2.)
-        for k, bins, label in ((1, full, 'Full linear residual'), (2, center, 'Central linear residual')):
-            im = f.density(axes[k, j], x, error, edges, bins, source + '_' + label)
-            fig.colorbar(im, ax=axes[k, j], label='Objects/bin')
-            outside = int(((error < bins[0]) | (error > bins[-1])).sum())
-            axes[k, j].set(xscale='log', ylim=(bins[0], bins[-1]), xlabel='Reference distance [kpc]', ylabel='Relative distance residual [%]', title=f'{label} · outside {outside}/{len(error)}')
-            axes[k, j].axhline(0, c=GRAY, lw=.8)
-            axes[k,j].xaxis.set_major_locator(FixedLocator(np.geomspace(edges[0],edges[-1],4)))
-            axes[k,j].xaxis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:.3g}'))
-            axes[k,j].xaxis.set_minor_locator(NullLocator())
-        for k, bins, label in ((3, full, 'Full equal-width histogram'), (4, center, 'Central 2 percentage-point histogram')):
-            counts = np.histogram(error, bins)[0]
-            axes[k, j].stairs(counts, bins, color=BLUE)
-            axes[k, j].set(xlabel='Relative distance residual [%]', ylabel='Objects/bin', title=label)
-            axes[k, j].axvline(0, c=GRAY, lw=.8)
-            axes[k,j].yaxis.set_major_locator(MaxNLocator(nbins=5,integer=True))
-            f.panel(source + '_' + label, len(error), len(error), int(counts.sum()))
-            for lo, hi, n in zip(bins[:-1], bins[1:], counts):
-                f.ROWS.append(dict(panel=source + '_' + label, lo=lo, hi=hi, n=int(n)))
+        im = f.density(main, x, y, edges, edges, source+'_distance')
+        rim = f.density(residual, x, error, edges, center, source+'_Attached residual')
+        norm = LogNorm(1, max(2, im.norm.vmax, rim.norm.vmax))
+        im.set_norm(norm); rim.set_norm(norm)
+        fig.colorbar(im, cax=cax, label='Objects/bin')
+        main.plot(edges, edges, '--', c=ORANGE, lw=1)
+        main.set(xscale='log', yscale='log', xlim=(edges[0], edges[-1]),
+                 ylim=(edges[0], edges[-1]), ylabel='Predicted distance [kpc]',
+                 title=f'{source} · N={len(x):,}\n3σ clipped: {selection["clipped_n"]:,}')
+        main.tick_params(axis='x', which='both', labelbottom=False)
+        main.yaxis.set_major_locator(FixedLocator(np.geomspace(edges[0],edges[-1],4)[1:]))
+        main.yaxis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:.3g}'))
+        main.yaxis.set_minor_locator(NullLocator())
+        residual.set(ylim=(-100, 100), yticks=[-100, 0, 100],
+                     xlabel='Reference distance [kpc]', ylabel='Residual [%]')
+        residual.set_ylabel('Residual [%]', fontsize=12)
+        residual.axhline(0, c=GRAY, lw=.8)
+        residual.xaxis.set_major_locator(FixedLocator(np.geomspace(edges[0],edges[-1],4)))
+        residual.xaxis.set_major_formatter(FuncFormatter(lambda value,pos: f'{value:.3g}'))
+        residual.xaxis.set_minor_locator(NullLocator())
+        counts = np.histogram(error, center)[0]
+        outside = len(error) - int(counts.sum())
+        hist.stairs(counts, center, color=BLUE)
+        hist.set(xlim=(-100,100), xlabel='Relative distance residual [%]', ylabel='Objects/bin',
+                 title=f'Central 2 percentage-point histogram\nOutside ±100%: {outside:,}/{len(error):,}')
+        hist.axvline(0, c=GRAY, lw=.8)
+        hist.yaxis.set_major_locator(MaxNLocator(nbins=4,integer=True))
+        label = source+'_Central 2 percentage-point histogram'
+        f.panel(label, len(error), len(error), int(counts.sum()))
+        for lo, hi, n in zip(center[:-1], center[1:], counts):
+            f.ROWS.append(dict(panel=label, lo=lo, hi=hi, n=int(n)))
         for lo, hi in zip(edges[:-1], edges[1:]):
             selected = (x >= lo) & (x < hi)
-            row = dict(panel=source + '_spread', xlo=lo, xhi=hi, n=int(selected.sum()))
+            row = dict(panel=source+'_spread', xlo=lo, xhi=hi, n=int(selected.sum()))
             if selected.sum() >= 20:
                 p16, median, p84 = np.quantile(error[selected], [.16, .5, .84])
-                axes[2, j].plot(np.sqrt(lo*hi), median, 'o', ms=2, c='black')
-                axes[2, j].vlines(np.sqrt(lo*hi), p16, p84, color='black', lw=.6)
+                residual.plot(np.sqrt(lo*hi), median, 'o', ms=2, c='black')
+                residual.vlines(np.sqrt(lo*hi), p16, p84, color='black', lw=.6)
                 row.update(p16=p16, median=median, p84=p84)
             f.ROWS.append(row)
     fig.suptitle(GROUP_NAMES[group], fontsize=17)
-    original_group = 'evolved' if group == 'giant' else group
-    f.save(fig, '03_distance_' + original_group,
-           'Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16–P84 object spread, not median confidence intervals. Complete sample retained.',
+    name = '03_distance_' + ('evolved' if group == 'giant' else group)
+    f.save(fig, name,
+           'Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.',
            section=section, reference='Gaia/specdis/spdist')
+    record = f.REGISTRY[name]
+    record.update(distance_layout='main + attached residual (height ratio 4:1) + central histogram',
+                  clipping=dict(method='simultaneous single-pass mean +/- 3*std(ddof=0)',
+                                space='linear distance in kpc', independent_per='population/reference pair',
+                                sources=selections), residual_limits_pct=[-100,100])
+    save_json(f.TABLES/'figures'/(name+'.json'), record)
+
+
+def distance_only():
+    """Replace only the five distance plates, preserving all other products."""
+    source = DEST/'chosen_expanded_A.npz'
+    before = sha(source)
+    expected = json.loads((ROOT/'manifests/v2_0_revision/revision_validation.json').read_text())['source_sha256']
+    assert before == expected
+    f.REGISTRY.clear()
+    q = data()
+    for group in GROUPS:
+        distance(q, group)
+    for record in f.REGISTRY.values():
+        for p in record['panels']:
+            assert p['plotted']+p['outside']+p['missing']==p['eligible']
+    assert sha(source) == before
+    save_json(f.TABLES/'distance_replacement.json', dict(source_sha256=before,
+        job_id=os.environ.get('SLURM_JOB_ID'), figures=f.REGISTRY))
+    print('COMPLETE distance replacement: 5 plates', flush=True)
 
 
 def physical(q):
@@ -374,7 +437,7 @@ def finalize():
 def main():
     require_compute()
     parser = argparse.ArgumentParser()
-    parser.add_argument('stage', choices=['base', 'combinations', 'finalize'])
+    parser.add_argument('stage', choices=['base', 'combinations', 'finalize', 'distance'])
     parser.add_argument('--workers', type=int, default=8)
     args = parser.parse_args()
     configure()
@@ -382,6 +445,8 @@ def main():
         legacy_figures()
     elif args.stage == 'finalize':
         finalize()
+    elif args.stage == 'distance':
+        distance_only()
     else:
         global Q
         Q = data()
