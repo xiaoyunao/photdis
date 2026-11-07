@@ -1,0 +1,213 @@
+{
+  "name": "03_distance_all",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Gaia_distance",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0,
+      "x_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ],
+      "y_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ]
+    },
+    {
+      "panel": "Gaia_Full linear residual",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0,
+      "x_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ],
+      "y_range": [
+        -436.4071207979115,
+        12893.289916392272
+      ]
+    },
+    {
+      "panel": "Gaia_Central linear residual",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3150,
+      "outside": 57,
+      "x_range": [
+        0.027378993002471038,
+        20.119117544527406
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "Gaia_Full equal-width histogram",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0
+    },
+    {
+      "panel": "Gaia_Central 2 percentage-point histogram",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3150,
+      "outside": 57
+    },
+    {
+      "panel": "specdis_distance",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 47335,
+      "outside": 0,
+      "x_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ],
+      "y_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ]
+    },
+    {
+      "panel": "specdis_Full linear residual",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 47335,
+      "outside": 0,
+      "x_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ],
+      "y_range": [
+        -566.9212933149894,
+        15949.601724043383
+      ]
+    },
+    {
+      "panel": "specdis_Central linear residual",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 46900,
+      "outside": 435,
+      "x_range": [
+        0.03081089673947909,
+        1629.8716786935804
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "specdis_Full equal-width histogram",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 47335,
+      "outside": 0
+    },
+    {
+      "panel": "specdis_Central 2 percentage-point histogram",
+      "eligible": 47335,
+      "finite": 47335,
+      "missing": 0,
+      "plotted": 46900,
+      "outside": 435
+    },
+    {
+      "panel": "spdist_distance",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37317,
+      "outside": 0,
+      "x_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ],
+      "y_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ]
+    },
+    {
+      "panel": "spdist_Full linear residual",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37317,
+      "outside": 0,
+      "x_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ],
+      "y_range": [
+        -124.96472591522502,
+        775.9679394218017
+      ]
+    },
+    {
+      "panel": "spdist_Central linear residual",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37042,
+      "outside": 275,
+      "x_range": [
+        0.05627811556774531,
+        265.9146863459424
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "spdist_Full equal-width histogram",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37317,
+      "outside": 0
+    },
+    {
+      "panel": "spdist_Central 2 percentage-point histogram",
+      "eligible": 37317,
+      "finite": 37317,
+      "missing": 0,
+      "plotted": 37042,
+      "outside": 275
+    }
+  ],
+  "statistics_records": 6810,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/03_distance_all.png",
+  "pdf": "figures/v2_0_revision/main/03_distance_all.pdf",
+  "csv": "manifests/v2_0_revision/figures/03_distance_all.csv",
+  "png_sha256": "f82b57150a5f018e9c6411ce7fb7ad3ca696e1a5e987598bac47f8f054615780",
+  "pdf_sha256": "4ecd7751cae5751cbc56587202e1f3b0179a3bf0df63fbb82db587f0a4f1485b"
+}

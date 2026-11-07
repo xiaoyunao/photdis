@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_WISE_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in WISE coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 32719,
+      "finite": 28687,
+      "missing": 4032,
+      "plotted": 28687,
+      "outside": 0,
+      "x_range": [
+        -2.1740872859816203,
+        0.7857991249684554
+      ],
+      "y_range": [
+        -1.6552612128349973,
+        0.9846572097997176
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 32719,
+      "finite": 28687,
+      "missing": 4032,
+      "plotted": 28687,
+      "outside": 0,
+      "low_occupancy_cells": 246,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 149,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2232
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 32719,
+      "finite": 28687,
+      "missing": 4032,
+      "plotted": 28687,
+      "outside": 0,
+      "low_occupancy_cells": 246,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 149,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2232
+    }
+  ],
+  "statistics_records": 1140,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_WISE_dwarf.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_WISE_dwarf.csv",
+  "png_sha256": "24a6128f127d10029220dc5512bec25555e7c9bd7f9ec2f605b584729c0a7fd0",
+  "pdf_sha256": "1997358b0c50b35e37f86400cc6eb7a245a1b0f332930abe597b60c55958fa8c"
+}

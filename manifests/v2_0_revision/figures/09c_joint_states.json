@@ -1,0 +1,20 @@
+{
+  "name": "09c_joint_states",
+  "section": "main",
+  "model": "measurement states",
+  "reference": "none",
+  "split": "weighted parent",
+  "caption": "Independent per-band measurement availability; quality failures remain excluded. Original weighted parent, not exact deployment routing.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 8,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/09c_joint_states.png",
+  "pdf": "figures/v2_0_revision/main/09c_joint_states.pdf",
+  "csv": "manifests/v2_0_revision/figures/09c_joint_states.csv",
+  "png_sha256": "8332c27f7f637065f53e15c25b6d09a36d9f98564e71d9a7d1e12339622205a9",
+  "pdf_sha256": "f50a535baa2b5cce64f4bd428706c9f3b69f924adeb9446fc7357f9c01064c49"
+}

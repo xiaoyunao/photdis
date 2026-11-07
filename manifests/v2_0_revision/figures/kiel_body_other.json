@@ -1,0 +1,71 @@
+{
+  "name": "kiel_body_other",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6341,
+      "outside": 67,
+      "x_range": [
+        3000.0,
+        8000.0
+      ],
+      "y_range": [
+        0.0,
+        5.5
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6341,
+      "outside": 67,
+      "low_occupancy_cells": 260,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 41,
+      "zero_residuals": 0,
+      "below_absolute_scale": 187
+    },
+    {
+      "panel": "absolute",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6341,
+      "outside": 67,
+      "low_occupancy_cells": 260,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 41,
+      "zero_residuals": 0,
+      "below_absolute_scale": 187
+    }
+  ],
+  "statistics_records": 1029,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_body_other.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_body_other.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_body_other.csv",
+  "png_sha256": "6765303f23270eee2c75c754c992f19a630443ed8b80d3bb47ad8e3766f5b1f6",
+  "pdf_sha256": "a780cdbb7683b44314e9b0b211a07da5ae4ef15ee37f9e4c03f8c04abe937ff6"
+}

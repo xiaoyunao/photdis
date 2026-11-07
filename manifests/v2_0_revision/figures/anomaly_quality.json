@@ -1,0 +1,45 @@
+{
+  "name": "anomaly_quality",
+  "section": "anomalies",
+  "model": "expanded_A",
+  "reference": "Gaia + RVS quality",
+  "split": "development_test",
+  "caption": "Class reasons follow frozen v3 quality, including Teff/logg validity independently of FeH. Finite but unqualified spectral parameters are not physical labels. Sky distribution does not imply population.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Gaia RUWE",
+      "eligible": 49,
+      "finite": 49,
+      "missing": 0,
+      "plotted": 49,
+      "outside": 0
+    },
+    {
+      "panel": "Gaia IPD multi-peak [%]",
+      "eligible": 49,
+      "finite": 49,
+      "missing": 0,
+      "plotted": 49,
+      "outside": 0
+    },
+    {
+      "panel": "Gaia-reference sky",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 3310,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/anomalies/anomaly_quality.png",
+  "pdf": "figures/v2_0_revision/anomalies/anomaly_quality.pdf",
+  "csv": "manifests/v2_0_revision/figures/anomaly_quality.csv",
+  "png_sha256": "1422426b5818d36d0a8b315c91e9748187ca0e9dc50aea5c16231bace23f5b38",
+  "pdf_sha256": "229ffe86dc8b8e88d79bf3adace0f29a2f38dbb2b3093fffd6c60a063dad404e"
+}

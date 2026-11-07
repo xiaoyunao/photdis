@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-07 — revised v2.0 atlas and fixed anomaly audit delivered
+
+- Production60941065 COMPLETED0:0,24:06,nid004940,source39ddedb.
+  Frozen source hashes verified;1050 figure sets and3687 conserved panels.
+- Downloaded compact artifacts; published27 atlas volumes,per-figureCSV/JSON,
+ 49 exact-ID anomaly records,PDF audit and spectral boundary tables.
+- 49/49 PSF anomalies support low-luminosity/WD candidate CMD evidence;
+  no external WD confirmation. Native/Gaia near-identical epoch positions may
+  inherit Gaia astrometry; internal consistency is not independent match proof.
+- Four reproduced PDFs retain only14.84%,2.062%,0.3753%,0.02867% mass near
+  Gaia reference modulus±0.5mag. RVS failures explain absent reliable classes.
+- Equal-width central residual bins show no strong zero-centered deficit.
+  Combination qualification retains34496–47756 objects,depending on bands.
+- Validation:2 focused tests,Python compilation,1050 transparent300dpiRGBA
+  PNGs/single-page English PDFs,all panel counts and artifact hashes checked.
+  Visually reviewed270 representative figures via14 contact sheets plus
+  enlarged distance/CMD/flow/anomaly figures. Corrected application flow
+  arrows to parallel outputs using only compact local tables.
+- Updated publisher,protocol,PLAN,AGENTS,README and execution manifest.
+  Final Git milestone uses safe scripts/sync.py push and endpoint SHA verification.
+- Remaining scientific limits: WD identity unconfirmed; faint truth,full-DR11
+  same-cut denominator and effective masked area remain unresolved. Await
+  review/new scope; no automatic new model runs or monitoring.
+
 ## 2026-11-07 — resume authorized atlas revision
 
 - Job60940195 started and failed on NumPy unsigned flag missing-fill -1.

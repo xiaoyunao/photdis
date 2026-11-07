@@ -1,0 +1,71 @@
+{
+  "name": "kiel_body_all",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40201,
+      "outside": 89,
+      "x_range": [
+        3000.0,
+        8000.0
+      ],
+      "y_range": [
+        0.0,
+        5.5
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40201,
+      "outside": 89,
+      "low_occupancy_cells": 429,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 240,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2677
+    },
+    {
+      "panel": "absolute",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40201,
+      "outside": 89,
+      "low_occupancy_cells": 429,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 240,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2677
+    }
+  ],
+  "statistics_records": 2121,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_body_all.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_body_all.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_body_all.csv",
+  "png_sha256": "0a5a3a1898b78330dc0fa78884e2b748fa7c693e1911a24394e5533ced925659",
+  "pdf_sha256": "feb462528e0b19c20feb3fcc11326ad1e25eac2fa861af99f61087e4d86773d8"
+}

@@ -1,0 +1,34 @@
+# v2.0 本轮图件与异常审计
+
+逐项依据见[完整审查](pro_review_6ee0df1.md)及[执行协议](v2_0_revision_protocol.md)。
+
+975张六波段组合图、既有55组重绘、15张温度诊断、参考／应用流程图与4张异常诊断，共1050张。
+
+chosen测试47,756，Gaia点距离3,207，保守巨星1,163，固定异常区49。3687个统计面板均通过图内、图外和缺失数守恒检查。
+
+所有图内文字均为英文，保持Pal 5 New配色与字体风格。1050组PNG均为透明RGBA、300dpi；PDF均为单页且无中文文本。270张代表图经联系表目视检查，另放大检查距离残差、CMD、流程及异常图。
+
+本轮使用冻结历史样本，保留16个非PSF例外供审计；49颗异常对象全为PSF。新建科学样本仍须显式TYPE=PSF。未知光谱类别的温度图为空，表示没有通过质量筛选的温度证据，并非没有此类对象。
+
+异常对象的证据分组如下，数目由逐星结果产生。
+
+- low_luminosity_WD_candidate_support，49颗。
+
+线性残差零附近核对如下，采用等宽2个百分点分箱。
+
+- Gaia，[-2%,0%)与[0%,2%)分别为180、189个对象。
+- specdis，[-2%,0%)与[0%,2%)分别为2970、3032个对象。
+- spdist，[-2%,0%)与[0%,2%)分别为1973、2090个对象。
+
+这些计数未显示原symlog散点图所暗示的明显零附近缺口。
+
+49颗异常对象均为PSF，均因具体RVS质量条件未通过而没有可靠光谱类别。低光度CMD位置支持白矮星候选解释，但尚未与外部白矮星目录确认。异常RVS参数不可直接当作物理参数。
+
+四个固定PDF个例在Gaia参考距离模数±0.5mag内的概率质量为14.84%、2.062%、0.3753%、0.02867%。部分近距离解存在但权重很低。
+
+Gaia与Legacy原生坐标的历元传播后一致到数值精度。原生位置可能沿用Gaia信息，因此该一致性只核对关联内部一致性，独立错配排除仍有限。
+
+
+Heuristic CMD support, no WD catalog identification. Gaia and Legacy M share Gaia distance. Missing catalog fields remain missing. No point excluded from primary metrics.
+
+[49颗完整逐星CSV](../manifests/v2_0_revision/gaia_anomalies.csv) · [精确字符串ID JSON](../manifests/v2_0_revision/gaia_anomalies.json) · [完整图集](v2_0_revision_atlas.md)

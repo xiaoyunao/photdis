@@ -1,0 +1,101 @@
+{
+  "name": "cmd_w2_r_z_giant",
+  "section": "combinations",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Each panel uses only its required valid bands. Reference M=m0-mu_chosen, predicted M=m0-mu50. Residual statistics are in reference coordinates. Signed=median(epsilon), absolute=median(abs(epsilon)), both percent. N>=20 performance cells, sparse gray crosses, zero cells transparent. Shared edges and density scale across classes. Frozen historical TYPE exceptions retained for audit.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference coordinates",
+      "eligible": 1163,
+      "finite": 1026,
+      "missing": 137,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        -0.8983608484268188,
+        4.4139790534973145
+      ],
+      "y_range": [
+        -3.473445882798101,
+        17.099127245395866
+      ]
+    },
+    {
+      "panel": "Predicted coordinates",
+      "eligible": 1163,
+      "finite": 1026,
+      "missing": 137,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        -0.8983608484268188,
+        4.4139790534973145
+      ],
+      "y_range": [
+        -3.473445882798101,
+        17.099127245395866
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 1163,
+      "finite": 1026,
+      "missing": 137,
+      "plotted": 1026,
+      "outside": 0,
+      "low_occupancy_cells": 44,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 1,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    },
+    {
+      "panel": "absolute",
+      "eligible": 1163,
+      "finite": 1026,
+      "missing": 137,
+      "plotted": 1026,
+      "outside": 0,
+      "low_occupancy_cells": 44,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 1,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    }
+  ],
+  "statistics_records": 203,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/combinations/cmd_w2_r_z_giant.png",
+  "pdf": "figures/v2_0_revision/combinations/cmd_w2_r_z_giant.pdf",
+  "csv": "manifests/v2_0_revision/figures/cmd_w2_r_z_giant.csv",
+  "png_sha256": "746b59aa790ca5b1f7ac08e638943833c306a000fc2a0bb1a29aff91f6299481",
+  "pdf_sha256": "f29eef43a6b48d46ea2bb7c953d178b0f378f1380c3e4a99236a0af8c0366a7d",
+  "group": "giant",
+  "combination_kind": "cmd",
+  "x_bands": [
+    "r",
+    "z"
+  ],
+  "y_band_or_color": "w2",
+  "input_n": 1163,
+  "valid_n": 1026,
+  "missing_n": 137,
+  "status": "rendered",
+  "data_reason": "",
+  "origin": "new_combination",
+  "common_edges_across_classes": true
+}

@@ -1,0 +1,53 @@
+{
+  "name": "02b_color_magnitude_coverage",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Same displayed bins; white cells have no evidence. Counts and out-of-range objects are saved. Parent density represents old DECam scope.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Weighted parent",
+      "eligible": 26000,
+      "finite": 26000,
+      "missing": 0,
+      "plotted": 25947,
+      "outside": 53,
+      "x_range": [
+        -1.0,
+        3.0
+      ],
+      "y_range": [
+        14.0,
+        25.0
+      ]
+    },
+    {
+      "panel": "Distance-evidence test (chosen subset distinct)",
+      "eligible": 51259,
+      "finite": 51259,
+      "missing": 0,
+      "plotted": 51259,
+      "outside": 0,
+      "x_range": [
+        -1.0,
+        3.0
+      ],
+      "y_range": [
+        14.0,
+        25.0
+      ]
+    }
+  ],
+  "statistics_records": 322,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/02b_color_magnitude_coverage.png",
+  "pdf": "figures/v2_0_revision/main/02b_color_magnitude_coverage.pdf",
+  "csv": "manifests/v2_0_revision/figures/02b_color_magnitude_coverage.csv",
+  "png_sha256": "c7fc7a9014917117c9ee0828643d603d4cf9bab346c79b6487a15c6ed09e4148",
+  "pdf_sha256": "42876fd9bf85e87e912a559bce78e654a596edbb63b68359021ac0ae51da1d40"
+}

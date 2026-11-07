@@ -1,0 +1,101 @@
+{
+  "name": "cmd_r_g_r_dwarf",
+  "section": "combinations",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Each panel uses only its required valid bands. Reference M=m0-mu_chosen, predicted M=m0-mu50. Residual statistics are in reference coordinates. Signed=median(epsilon), absolute=median(abs(epsilon)), both percent. N>=20 performance cells, sparse gray crosses, zero cells transparent. Shared edges and density scale across classes. Frozen historical TYPE exceptions retained for audit.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference coordinates",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.461105610363163,
+        18.355107763360568
+      ]
+    },
+    {
+      "panel": "Predicted coordinates",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.461105610363163,
+        18.355107763360568
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 74,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    },
+    {
+      "panel": "absolute",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 74,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    }
+  ],
+  "statistics_records": 532,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/combinations/cmd_r_g_r_dwarf.png",
+  "pdf": "figures/v2_0_revision/combinations/cmd_r_g_r_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/cmd_r_g_r_dwarf.csv",
+  "png_sha256": "23fca8d2c589352850bc2cb3066d17bb45c249f4524f9edca8f7f38e6c8eb051",
+  "pdf_sha256": "420f891579f9574e148fcf0e6e73efa68722e78fbe3c80b1533463a2bd709311",
+  "group": "dwarf",
+  "combination_kind": "cmd",
+  "x_bands": [
+    "g",
+    "r"
+  ],
+  "y_band_or_color": "r",
+  "input_n": 32719,
+  "valid_n": 32719,
+  "missing_n": 0,
+  "status": "rendered",
+  "data_reason": "",
+  "origin": "new_combination",
+  "common_edges_across_classes": true
+}

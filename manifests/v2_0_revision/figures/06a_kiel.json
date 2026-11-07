@@ -1,0 +1,54 @@
+{
+  "name": "06a_kiel",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Qualified continuous RVS parameters, expanded_A. Fixed display ranges and excluded counts retained; coarse giant reference/other labels do not assign RGB/RC/HB phases.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40287,
+      "outside": 3,
+      "x_range": [
+        2500.0,
+        12000.0
+      ],
+      "y_range": [
+        -1.0,
+        6.0
+      ]
+    },
+    {
+      "panel": "Kiel residual",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40287,
+      "outside": 3,
+      "low_occupancy_cells": 212,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 240,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2677
+    }
+  ],
+  "statistics_records": 706,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/06a_kiel.png",
+  "pdf": "figures/v2_0_revision/main/06a_kiel.pdf",
+  "csv": "manifests/v2_0_revision/figures/06a_kiel.csv",
+  "png_sha256": "0e255f85631ea924479cafd5dc270d82ee9daffb4bd21c61606fde9eea0b8922",
+  "pdf_sha256": "3729177cf17ca6fe16dd003e3248bf4a1ab3502bbff64980738b587bd944f23c"
+}

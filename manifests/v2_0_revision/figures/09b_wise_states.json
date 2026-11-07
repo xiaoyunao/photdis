@@ -1,0 +1,20 @@
+{
+  "name": "09b_wise_states",
+  "section": "main",
+  "model": "measurement states",
+  "reference": "none",
+  "split": "weighted parent",
+  "caption": "Five states retain missing, invalid and quality failure apart from signed weak and high-S/N measurements. Joint W1-only/W2-only/both/neither in CSV.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 14,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/09b_wise_states.png",
+  "pdf": "figures/v2_0_revision/main/09b_wise_states.pdf",
+  "csv": "manifests/v2_0_revision/figures/09b_wise_states.csv",
+  "png_sha256": "30822848babe91037de7f3b617f0c21454b5135f347eb92d421f7c1b0418cdae",
+  "pdf_sha256": "ab8ba9c28b72b7532666dd4733d2905d9e7d76e05dd9212c5377254663b93a06"
+}

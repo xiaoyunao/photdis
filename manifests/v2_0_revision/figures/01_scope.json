@@ -1,0 +1,20 @@
+{
+  "name": "01_scope",
+  "section": "main",
+  "model": "baseline_v1 + expanded references",
+  "reference": "all candidates",
+  "split": "all",
+  "caption": "Application rectangles are configuration boundaries, not masked effective area. Reference cells show selection footprint; counts and stars/deg\u00b2 are in CSV.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 221,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/01_scope.png",
+  "pdf": "figures/v2_0_revision/main/01_scope.pdf",
+  "csv": "manifests/v2_0_revision/figures/01_scope.csv",
+  "png_sha256": "93bc31fa340ac545617dd384f2dca697778a208970d44b7acd8480ba2ac993db",
+  "pdf_sha256": "76eb801a61cd9a3543117d4f15b97e3fb762f1fc15eafc04eea783fc9602dad2"
+}

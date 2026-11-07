@@ -1,0 +1,20 @@
+{
+  "name": "anomaly_pdf_examples",
+  "section": "anomalies",
+  "model": "expanded_A",
+  "reference": "Gaia point anchors",
+  "split": "development_test",
+  "caption": "Four lowest Gaia IDs from the fixed 49-object list. Frozen expanded_A and shared Sobol128; all original quantiles reproduced within1e-6. Reference-window mass is descriptive, not class probability.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 1280,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/anomalies/anomaly_pdf_examples.png",
+  "pdf": "figures/v2_0_revision/anomalies/anomaly_pdf_examples.pdf",
+  "csv": "manifests/v2_0_revision/figures/anomaly_pdf_examples.csv",
+  "png_sha256": "664459242909c3af1fdaddc95e97c790a2102d544ac3291d0a578fba5b5acdee",
+  "pdf_sha256": "15f0d9a6885704feedd66c806565793fd11dabdf24af3cbb65956fc2fc71b45d"
+}

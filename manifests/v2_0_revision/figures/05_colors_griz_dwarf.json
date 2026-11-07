@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_griz_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in griz coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "x_range": [
+        -0.3302969853849847,
+        2.12390979867334
+      ],
+      "y_range": [
+        -0.1432544451280794,
+        0.9628596067344798
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "low_occupancy_cells": 129,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 174,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2313
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 32719,
+      "finite": 29865,
+      "missing": 2854,
+      "plotted": 29865,
+      "outside": 0,
+      "low_occupancy_cells": 129,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 174,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2313
+    }
+  ],
+  "statistics_records": 594,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_griz_dwarf.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_griz_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_griz_dwarf.csv",
+  "png_sha256": "cf1860846ff27cd0e2ed105227680c2cb48b026554a2bbbc068595e3875aeae2",
+  "pdf_sha256": "106acb1e431e46a680d2594c694bc7d8174e9f257e8d2d08e907906903ccc35f"
+}

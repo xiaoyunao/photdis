@@ -1,0 +1,20 @@
+{
+  "name": "A_flux_depth_stress",
+  "section": "appendix",
+  "model": "baseline_v0/v1",
+  "reference": "chosen",
+  "split": "existing depth stress",
+  "caption": "Existing fixed real-template artificial flux degradation. Stress-test sources are reused; it does not supply new faint-population truth.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 5,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/A_flux_depth_stress.png",
+  "pdf": "figures/v2_0_revision/appendix/A_flux_depth_stress.pdf",
+  "csv": "manifests/v2_0_revision/figures/A_flux_depth_stress.csv",
+  "png_sha256": "088b574b194eb510ec170d54d4b8ff1cc5877e00bb4d4a3021a25f8710c9b92f",
+  "pdf_sha256": "e205f264043ddaba4e82b45554a9ccf2a6fbd02e38a73249791f8782e1d6ead3"
+}

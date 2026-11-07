@@ -1,0 +1,157 @@
+{
+  "name": "03_distance_evolved",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Gaia",
+      "eligible": 1269,
+      "finite": 0,
+      "missing": 1269,
+      "plotted": 0,
+      "outside": 0
+    },
+    {
+      "panel": "specdis_distance",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ],
+      "y_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ]
+    },
+    {
+      "panel": "specdis_Full linear residual",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ],
+      "y_range": [
+        -107.09213439142763,
+        162.13393433442934
+      ]
+    },
+    {
+      "panel": "specdis_Central linear residual",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1161,
+      "outside": 2,
+      "x_range": [
+        0.05560956100914578,
+        400.8067987785408
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "specdis_Full equal-width histogram",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "specdis_Central 2 percentage-point histogram",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1161,
+      "outside": 2
+    },
+    {
+      "panel": "spdist_distance",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        0.057788035156758885,
+        107.143187834303
+      ],
+      "y_range": [
+        0.057788035156758885,
+        107.143187834303
+      ]
+    },
+    {
+      "panel": "spdist_Full linear residual",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        0.057788035156758885,
+        107.143187834303
+      ],
+      "y_range": [
+        -102.99666778499187,
+        21.731276950463712
+      ]
+    },
+    {
+      "panel": "spdist_Central linear residual",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0,
+      "x_range": [
+        0.057788035156758885,
+        107.143187834303
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "spdist_Full equal-width histogram",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0
+    },
+    {
+      "panel": "spdist_Central 2 percentage-point histogram",
+      "eligible": 1026,
+      "finite": 1026,
+      "missing": 0,
+      "plotted": 1026,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 1979,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/03_distance_evolved.png",
+  "pdf": "figures/v2_0_revision/appendix/03_distance_evolved.pdf",
+  "csv": "manifests/v2_0_revision/figures/03_distance_evolved.csv",
+  "png_sha256": "666fc4916b3f7537565bd07fec26d5b0ef6323fc44ae3794d25a976fd563be67",
+  "pdf_sha256": "05323741a29d5f683e9f775085e0cd075dd7b64a4252631dea87383a4d6ca7f7"
+}

@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_grW1_all",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grW1 coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "x_range": [
+        -0.6255237460136414,
+        2.3348209857940674
+      ],
+      "y_range": [
+        -3.1747976612666036,
+        1.8817079715944849
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "low_occupancy_cells": 255,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 351,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2689
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 47756,
+      "finite": 42786,
+      "missing": 4970,
+      "plotted": 42786,
+      "outside": 0,
+      "low_occupancy_cells": 255,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 351,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2689
+    }
+  ],
+  "statistics_records": 1026,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_grW1_all.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_all.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_grW1_all.csv",
+  "png_sha256": "10e0ae0b2e1c96cadef4e38fa90fd76b6c499286a598535ec44057abbfac0898",
+  "pdf_sha256": "17895827c923d59ce04a08ca44ac6dadf0def8cd1d34ee158c445b4f194b0dd6"
+}

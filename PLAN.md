@@ -1,30 +1,27 @@
 # PLAN
 
-## Current objective: v2.0 revised atlas and Gaia anomaly audit
+## Completed objective: v2.0 revised atlas and Gaia anomaly audit
 
-User authorized the newest full Pro review of6ee0df1. Requirements and
-execution protocol: docs/v2_0_revision_protocol.md. Archived full review:
-docs/pro_review_6ee0df1.md. Programs implement975 exhaustive band/color
-plates,55 refreshed existing plates,15 temperature plots,one two-flow
-figure and4 fixed49-object anomaly figures, planned1050 sets.
+Latest Pro review of6ee0df1: docs/pro_review_6ee0df1.md.
+Result: docs/v2_0_revision_result.md. All1050 figure sets embedded in27
+volumes via docs/v2_0_revision_atlas.md. English-only transparent figures.
 
-- [x] Archive review, correct terminology/methods and persist strict future PSF rule.
-- [x] Implement transparent shared logarithmic color scales, linear distance
-  residual density/histograms, per-band eligibility and cross-class edges.
-- [x] Implement safe raw-row/ID audit, spectral failure decoding, native epoch
-  comparison and four frozen PDF checks for the fixed Gaia anomaly list.
-- [x] Syntax,2 targeted tests,normal/empty combination plotting smoke.
-- [x] NERSC authentication restored2026-11-07. English-only figure text required.
-- [ ] Inspect remote git/queue, sync source safely,submit exactly once using
-  scripts/run_v2_0_revision.sh. No revision job submitted yet.
-- [ ] Run actual frozen per-star rebinning/anomaly audit on allocated CPU,
-  verify47756/3207/1163/49 and1050 figure sets/count conservation.
-- [ ] Transfer compact outputs,run scripts/v2_0_revision_publish.py,inspect
-  new figures/PDFs,record real results,commit and synchronize all endpoints.
+- [x] Terminology/methods,975 band combinations,55 refreshed existing figures,
+  15 temperature/Kiel views,one parallel reference/application flow,4 anomaly figures.
+- [x] Job60941065 COMPLETED0:0 in24:06 on nid004940; source39ddedb.
+  Previous60940195 unsigned missing-fill failure diagnosed and regression tested.
+- [x] Counts47756/3207/1163/49,3687 panel conservation checks,frozen inputs retained.
+- [x] All1050 PNG/PDF format checks;270 contact-sheet visual reviews plus detailed
+  primary views. Local compact-only flow polish shows parallel application outputs.
+- [x] Complete linked CSV/JSON/PNG/PDF delivery and updated result/protocol/memory.
+  Final milestone synchronization uses scripts/sync.py push and endpoint SHA checks.
 
-Original frozen references/models/predictions stay authoritative. New plots
-are historical v2.0 diagnostic views and retain the16 nonPSF exceptions.
-No production results or anomaly identifications are claimed before execution.
+49 anomalies support a low-luminosity/WD candidate explanation,not confirmed
+classifications. Gaia/native position agreement is not independent matching
+validation. Equal-width residual bins show no marked zero-centered hole.
+Original frozen references/models/predictions and16 historical nonPSF exceptions
+remain intact. No new training,full-catalog prediction,monitoring or subagents.
+Next: group-review discussion; further scientific work needs new scope.
 
 ## Completed objective: Photdis v2.0 stage freeze
 

@@ -1,0 +1,71 @@
+{
+  "name": "kiel_body_giant",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "x_range": [
+        3000.0,
+        8000.0
+      ],
+      "y_range": [
+        0.0,
+        5.5
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "low_occupancy_cells": 121,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 2,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    },
+    {
+      "panel": "absolute",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0,
+      "low_occupancy_cells": 121,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 2,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    }
+  ],
+  "statistics_records": 423,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_body_giant.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_body_giant.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_body_giant.csv",
+  "png_sha256": "95e32ea269e06e0993c3f7bec98bc0bbc1bfc199439084aae5b4145628fdebce",
+  "pdf_sha256": "0febe8ec1d4b208711918140508b2b13bc4b6a2bd473634e80dd8cdb22816e6d"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "color_g_r__g_w2_all",
+  "section": "combinations",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Each panel uses only its required valid bands. Reference M=m0-mu_chosen, predicted M=m0-mu50. Residual statistics are in reference coordinates. Signed=median(epsilon), absolute=median(abs(epsilon)), both percent. N>=20 performance cells, sparse gray crosses, zero cells transparent. Shared edges and density scale across classes. Frozen historical TYPE exceptions retained for audit.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference coordinates",
+      "eligible": 47756,
+      "finite": 38132,
+      "missing": 9624,
+      "plotted": 38132,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -4.690034866333008,
+        7.418525695800781
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 47756,
+      "finite": 38132,
+      "missing": 9624,
+      "plotted": 38132,
+      "outside": 0,
+      "low_occupancy_cells": 180,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 243,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2535
+    },
+    {
+      "panel": "absolute",
+      "eligible": 47756,
+      "finite": 38132,
+      "missing": 9624,
+      "plotted": 38132,
+      "outside": 0,
+      "low_occupancy_cells": 180,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 243,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2535
+    }
+  ],
+  "statistics_records": 795,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/combinations/color_g_r__g_w2_all.png",
+  "pdf": "figures/v2_0_revision/combinations/color_g_r__g_w2_all.pdf",
+  "csv": "manifests/v2_0_revision/figures/color_g_r__g_w2_all.csv",
+  "png_sha256": "7e50d97ecd8a32c5f5e60ef480180bfb577dd02cdf9eda7e5e28af8e8ac87dd0",
+  "pdf_sha256": "0a9361afc14be1f55119c62677dd5d2ddbf2101780f67c7e85505cafb2ae9acf",
+  "group": "all",
+  "combination_kind": "color",
+  "x_bands": [
+    "g",
+    "r"
+  ],
+  "y_band_or_color": [
+    "g",
+    "w2"
+  ],
+  "input_n": 47756,
+  "valid_n": 38132,
+  "missing_n": 9624,
+  "status": "rendered",
+  "data_reason": "",
+  "origin": "new_combination",
+  "common_edges_across_classes": true
+}

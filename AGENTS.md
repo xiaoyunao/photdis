@@ -9,6 +9,15 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Latest completed revision2026-11-07: docs/v2_0_revision_result.md and
+  docs/v2_0_revision_atlas.md.1050 English-only figure sets in27 volumes,
+  including975 exhaustive band combinations;3687 panel conservation checks.
+  Job60941065 COMPLETED0:0. All formats checked,270 representative images
+  visually reviewed.49 fixed PSF anomalies support WD candidates,not confirmed
+  classifications; native/Gaia position agreement is not independent proof.
+  Preserve frozen v2.0 inputs and16 historical nonPSF audit exceptions.
+  No automatic additional modeling,application expansion,monitoring or subagents.
+
 - Latest completed stage report: Photdis v2.0. Read docs/v2_0_scope.md,
   docs/v2_0_methods.md, docs/v2_0_status.md and docs/v2_0_figure_atlas.md.
   10 main figure groups (19 plates),36 appendix plates;55 sets of PNG300dpi,

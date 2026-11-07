@@ -1,0 +1,71 @@
+{
+  "name": "kiel_full_dwarf",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        0.670051259676019,
+        6.382863993219779
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 72,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    },
+    {
+      "panel": "absolute",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 72,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    }
+  ],
+  "statistics_records": 486,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_full_dwarf.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_full_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_full_dwarf.csv",
+  "png_sha256": "ce65bc0e2dd53c6ad2c00b7fb665e14ca0b3bb1c16dfefa2307ff445d817dfe5",
+  "pdf_sha256": "7649dd4393aef77c3fa2ef021c8b104b4c5710bebdf4c8303427f7f3b2c4291d"
+}

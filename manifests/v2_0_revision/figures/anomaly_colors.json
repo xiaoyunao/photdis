@@ -1,0 +1,53 @@
+{
+  "name": "anomaly_colors",
+  "section": "anomalies",
+  "model": "expanded_A",
+  "reference": "Gaia point anchors",
+  "split": "development_test",
+  "caption": "Legacy magnitudes extinction corrected. WISE colors require their own state4. Model remains expanded_A grz. Highlight is a residual-selected diagnostic set, not a WD classification.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Optical model in color coordinates",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0
+    },
+    {
+      "panel": "Optical model in color coordinates",
+      "eligible": 3207,
+      "finite": 2987,
+      "missing": 220,
+      "plotted": 2987,
+      "outside": 0
+    },
+    {
+      "panel": "Optical model in color coordinates",
+      "eligible": 3207,
+      "finite": 2913,
+      "missing": 294,
+      "plotted": 2913,
+      "outside": 0
+    },
+    {
+      "panel": "Extinction-corrected Legacy CMD",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 12314,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/anomalies/anomaly_colors.png",
+  "pdf": "figures/v2_0_revision/anomalies/anomaly_colors.pdf",
+  "csv": "manifests/v2_0_revision/figures/anomaly_colors.csv",
+  "png_sha256": "385fb48e1690c1bf481e0f23bf4dc15a65fe61895d702162014e10c21aa95985",
+  "pdf_sha256": "ea44ed87546d5c32d752481aafbbee021e32b80c8d7091cb1f34da5fbc32605a"
+}

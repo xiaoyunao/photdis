@@ -1,0 +1,141 @@
+{
+  "name": "07_conditions_snr_w1",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "No reliable spectral class",
+      "eligible": 8708,
+      "finite": 8708,
+      "missing": 0,
+      "plotted": 8683,
+      "outside": 25
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 34460,
+      "missing": 1,
+      "plotted": 34457,
+      "outside": 3
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1269,
+      "finite": 1269,
+      "missing": 0,
+      "plotted": 1269,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6821,
+      "finite": 6821,
+      "missing": 0,
+      "plotted": 6816,
+      "outside": 5
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 5627,
+      "missing": 1,
+      "plotted": 5594,
+      "outside": 33
+    },
+    {
+      "panel": "No reliable spectral class",
+      "eligible": 8708,
+      "finite": 8708,
+      "missing": 0,
+      "plotted": 8683,
+      "outside": 25
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 34460,
+      "missing": 1,
+      "plotted": 34457,
+      "outside": 3
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1269,
+      "finite": 1269,
+      "missing": 0,
+      "plotted": 1269,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6821,
+      "finite": 6821,
+      "missing": 0,
+      "plotted": 6816,
+      "outside": 5
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 5627,
+      "missing": 1,
+      "plotted": 5594,
+      "outside": 33
+    },
+    {
+      "panel": "No reliable spectral class",
+      "eligible": 8708,
+      "finite": 8708,
+      "missing": 0,
+      "plotted": 8683,
+      "outside": 25
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 34461,
+      "finite": 34460,
+      "missing": 1,
+      "plotted": 34457,
+      "outside": 3
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1269,
+      "finite": 1269,
+      "missing": 0,
+      "plotted": 1269,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6821,
+      "finite": 6821,
+      "missing": 0,
+      "plotted": 6816,
+      "outside": 5
+    },
+    {
+      "panel": "No W1",
+      "eligible": 5628,
+      "finite": 5627,
+      "missing": 1,
+      "plotted": 5594,
+      "outside": 33
+    }
+  ],
+  "statistics_records": 120,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/07_conditions_snr_w1.png",
+  "pdf": "figures/v2_0_revision/appendix/07_conditions_snr_w1.pdf",
+  "csv": "manifests/v2_0_revision/figures/07_conditions_snr_w1.csv",
+  "png_sha256": "046c9673f1f9fd471ce431bf07d34f5910e53d05add88a3d0d71a513dcfcc289",
+  "pdf_sha256": "5f35888070aae7a61aaab7c9cc92a0261a55d42f2179c95821509fd166e15ae2"
+}

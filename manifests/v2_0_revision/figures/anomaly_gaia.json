@@ -1,0 +1,37 @@
+{
+  "name": "anomaly_gaia",
+  "section": "anomalies",
+  "model": "expanded_A",
+  "reference": "Gaia point anchors",
+  "split": "development_test",
+  "caption": "Exactly predeclared d_Gaia<0.2 kpc and d_phot,50>2 kpc. Gaia M_G uses corrected-parallax distance modulus but observed G, without extinction correction. No anomaly removed.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "All 3,207 Gaia point references",
+      "eligible": 3207,
+      "finite": 3207,
+      "missing": 0,
+      "plotted": 3207,
+      "outside": 0
+    },
+    {
+      "panel": "Gaia observational CMD",
+      "eligible": 3207,
+      "finite": 3206,
+      "missing": 1,
+      "plotted": 3206,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 6413,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/anomalies/anomaly_gaia.png",
+  "pdf": "figures/v2_0_revision/anomalies/anomaly_gaia.pdf",
+  "csv": "manifests/v2_0_revision/figures/anomaly_gaia.csv",
+  "png_sha256": "6dc35049e72ac415cd7a8246fc09908a9fc4042368b98257dd3e84a34fca96b4",
+  "pdf_sha256": "597b5663a16443128fb0cc6c7427f141e83fd43337ee3edb7fb092ece9ffd928"
+}

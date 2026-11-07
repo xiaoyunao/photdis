@@ -1,0 +1,20 @@
+{
+  "name": "08b_gaia_pit",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "signed Gaia",
+  "split": "development_test",
+  "caption": "All signed eligible Gaia parallaxes from refined sidecars. Negative observations retained. Class-conditional PIT is diagnostic and does not alone prove unconditional mixture weights wrong.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 50,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/08b_gaia_pit.png",
+  "pdf": "figures/v2_0_revision/main/08b_gaia_pit.pdf",
+  "csv": "manifests/v2_0_revision/figures/08b_gaia_pit.csv",
+  "png_sha256": "43f45dc8658b58d97901a23a17fcfc19f178e5565086b8c5f15a7c29e84ddff7",
+  "pdf_sha256": "802854091eb33520ce47e73dbe90bea6b1cc4f8aab20e75f67458211aca92f8c"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "separate_reference_application_flows",
+  "section": "main",
+  "model": "reference assembly + baseline_v1 application",
+  "reference": "distinct populations",
+  "split": "all",
+  "caption": "Two distinct pipelines. The DR11 scale ratios are not same-cut retention fractions. Class/fit/parallax qualifications are parallel, and their counts overlap. Full-DR11 same-cut denominator and effective masked area remain uncomputed.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 8,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/separate_reference_application_flows.png",
+  "pdf": "figures/v2_0_revision/main/separate_reference_application_flows.pdf",
+  "csv": "manifests/v2_0_revision/figures/separate_reference_application_flows.csv",
+  "png_sha256": "c42cc5fa93bd1382e9a7bb233b744856d6d57e6ac88d1ce8f3fc0e4faed3f3c3",
+  "pdf_sha256": "e406aa406f0802676758ca7cd0e632d32da7bc5ac58b3117cccfed065425180f"
+}

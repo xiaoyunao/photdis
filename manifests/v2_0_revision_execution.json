@@ -1,8 +1,22 @@
 {
-  "job_id": "60940195",
+  "job_id": "60941065",
   "submission": "acknowledged",
-  "source_commit": "8a7577b",
+  "source_commit": "39ddedb",
   "date": "2026-11-07",
-  "status": "awaiting_queue_check",
-  "english_only_figures": true
+  "status": "COMPLETED",
+  "english_only_figures": true,
+  "previous_jobs": [
+    {
+      "job_id": "60940195",
+      "state": "FAILED",
+      "reason": "unsigned missing-fill corrected"
+    }
+  ],
+  "node": "nid004940",
+  "qos": "debug",
+  "time_limit": "00:30:00",
+  "elapsed": "00:24:06",
+  "exit_code": "0:0",
+  "figure_sets": 1050,
+  "local_postprocessing": "Compact-table-only application flow corrected to parallel branches; final per-figure hashes in figure_registry.json and delivery.json"
 }

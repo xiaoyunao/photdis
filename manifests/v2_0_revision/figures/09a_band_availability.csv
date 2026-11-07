@@ -1,0 +1,31 @@
+panel,band,lo,hi,n,fraction
+High-S/N usable,i,14.0,16.0,177,0.4749264256499298
+High-S/N usable,i,16.0,18.0,1065,0.8740694566629369
+High-S/N usable,i,18.0,20.0,2419,0.8877271621546888
+High-S/N usable,i,20.0,22.0,5586,0.8945468385252207
+High-S/N usable,i,22.0,25.0,16701,0.8647234511919963
+"Quality valid, signed weak allowed",i,14.0,16.0,177,0.4749264256499298
+"Quality valid, signed weak allowed",i,16.0,18.0,1065,0.8740694566629369
+"Quality valid, signed weak allowed",i,18.0,20.0,2419,0.8877271621546888
+"Quality valid, signed weak allowed",i,20.0,22.0,5586,0.8945468385252207
+"Quality valid, signed weak allowed",i,22.0,25.0,16701,0.8647234511919963
+High-S/N usable,W1,14.0,16.0,177,0.9355634681783278
+High-S/N usable,W1,16.0,18.0,1065,0.9296677403509427
+High-S/N usable,W1,18.0,20.0,2419,0.8469842289485537
+High-S/N usable,W1,20.0,22.0,5586,0.4680056476765266
+High-S/N usable,W1,22.0,25.0,16701,0.14919792189752035
+"Quality valid, signed weak allowed",W1,14.0,16.0,177,0.9355634681783278
+"Quality valid, signed weak allowed",W1,16.0,18.0,1065,0.9296677403509427
+"Quality valid, signed weak allowed",W1,18.0,20.0,2419,0.8505414741507354
+"Quality valid, signed weak allowed",W1,20.0,22.0,5586,0.5293620795528727
+"Quality valid, signed weak allowed",W1,22.0,25.0,16701,0.24385783321040616
+High-S/N usable,W2,14.0,16.0,177,0.9355634681783278
+High-S/N usable,W2,16.0,18.0,1065,0.924064104771322
+High-S/N usable,W2,18.0,20.0,2419,0.6495339458461803
+High-S/N usable,W2,20.0,22.0,5586,0.2727308703704468
+High-S/N usable,W2,22.0,25.0,16701,0.04810822806903079
+"Quality valid, signed weak allowed",W2,14.0,16.0,177,0.9355634681783278
+"Quality valid, signed weak allowed",W2,16.0,18.0,1065,0.924064104771322
+"Quality valid, signed weak allowed",W2,18.0,20.0,2419,0.7801076102097568
+"Quality valid, signed weak allowed",W2,20.0,22.0,5586,0.5122563081902356
+"Quality valid, signed weak allowed",W2,22.0,25.0,16701,0.31584120324882925

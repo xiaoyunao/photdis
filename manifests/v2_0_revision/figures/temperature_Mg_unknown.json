@@ -1,0 +1,87 @@
+{
+  "name": "temperature_Mg_unknown",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference absolute g",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        -3.7305219596459875,
+        16.864735670116698
+      ]
+    },
+    {
+      "panel": "Predicted absolute g",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        -3.7305219596459875,
+        16.864735670116698
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "low_occupancy_cells": 0,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 0,
+      "zero_residuals": 0,
+      "below_absolute_scale": 0
+    },
+    {
+      "panel": "absolute",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "low_occupancy_cells": 0,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 0,
+      "zero_residuals": 0,
+      "below_absolute_scale": 0
+    }
+  ],
+  "statistics_records": 0,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/temperature_Mg_unknown.png",
+  "pdf": "figures/v2_0_revision/physical/temperature_Mg_unknown.pdf",
+  "csv": "manifests/v2_0_revision/figures/temperature_Mg_unknown.csv",
+  "png_sha256": "4ca0a6203baa467f279a561d385a6ce2d6cf40f9ce0f1fb8f1a773815a2ab399",
+  "pdf_sha256": "3e691dad9c2294e5dd0ad1c31238912e0f917363558db4e4b0434f2a00b62b11"
+}

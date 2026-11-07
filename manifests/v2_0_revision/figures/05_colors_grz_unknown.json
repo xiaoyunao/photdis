@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_grz_unknown",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grz coordinates, no reliable spectral class; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -0.8983608484268188,
+        4.4139790534973145
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "low_occupancy_cells": 125,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 237,
+      "zero_residuals": 0,
+      "below_absolute_scale": 266
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "low_occupancy_cells": 125,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 237,
+      "zero_residuals": 0,
+      "below_absolute_scale": 266
+    }
+  ],
+  "statistics_records": 549,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_grz_unknown.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_grz_unknown.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_grz_unknown.csv",
+  "png_sha256": "81533ed0118580aee5342c6dfe74c8460e198db8b813ba3709bd41d553daddac",
+  "pdf_sha256": "2e655ed207b4c58e6465bcfde016d71155d41fcedaeb640dc8ae306547c78c42"
+}

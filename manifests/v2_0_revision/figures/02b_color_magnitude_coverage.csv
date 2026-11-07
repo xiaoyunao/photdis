@@ -1,0 +1,323 @@
+panel,xlo,xhi,ylo,yhi,n,weight
+Weighted parent,-1.0,-0.875,20.0,21.0,1,473.759
+Weighted parent,-0.875,-0.75,15.0,16.0,1,211.654
+Weighted parent,-0.875,-0.75,23.0,24.0,1,263.9365
+Weighted parent,-0.75,-0.625,19.0,20.0,1,137.999
+Weighted parent,-0.625,-0.5,19.0,20.0,1,263.9365
+Weighted parent,-0.625,-0.5,20.0,21.0,1,480.5325
+Weighted parent,-0.625,-0.5,21.0,22.0,2,439.51149999999996
+Weighted parent,-0.625,-0.5,22.0,23.0,1,227.8575
+Weighted parent,-0.625,-0.5,23.0,24.0,1,338.012
+Weighted parent,-0.5,-0.375,19.0,20.0,2,401.93550000000005
+Weighted parent,-0.5,-0.375,20.0,21.0,3,1040.247
+Weighted parent,-0.5,-0.375,21.0,22.0,1,473.759
+Weighted parent,-0.5,-0.375,22.0,23.0,2,611.676
+Weighted parent,-0.5,-0.375,23.0,24.0,2,856.6700000000001
+Weighted parent,-0.5,-0.375,24.0,25.0,1,227.8575
+Weighted parent,-0.375,-0.25,15.0,16.0,1,480.5325
+Weighted parent,-0.375,-0.25,20.0,21.0,1,145.418
+Weighted parent,-0.375,-0.25,21.0,22.0,6,2072.7895
+Weighted parent,-0.375,-0.25,22.0,23.0,7,2489.2375
+Weighted parent,-0.375,-0.25,23.0,24.0,7,2008.5770000000002
+Weighted parent,-0.375,-0.25,24.0,25.0,9,3024.813
+Weighted parent,-0.25,-0.125,15.0,16.0,1,145.418
+Weighted parent,-0.25,-0.125,18.0,19.0,3,1023.068
+Weighted parent,-0.25,-0.125,19.0,20.0,2,527.873
+Weighted parent,-0.25,-0.125,20.0,21.0,9,2788.4105
+Weighted parent,-0.25,-0.125,21.0,22.0,6,2010.0815
+Weighted parent,-0.25,-0.125,22.0,23.0,10,3227.8720000000008
+Weighted parent,-0.25,-0.125,23.0,24.0,47,15704.864999999998
+Weighted parent,-0.25,-0.125,24.0,25.0,65,23271.780499999983
+Weighted parent,-0.125,0.0,16.0,17.0,1,263.9365
+Weighted parent,-0.125,0.0,17.0,18.0,3,1156.5565000000001
+Weighted parent,-0.125,0.0,18.0,19.0,2,856.6700000000001
+Weighted parent,-0.125,0.0,19.0,20.0,9,2606.2715000000007
+Weighted parent,-0.125,0.0,20.0,21.0,18,7749.540000000002
+Weighted parent,-0.125,0.0,21.0,22.0,22,8024.7345
+Weighted parent,-0.125,0.0,22.0,23.0,39,13034.42
+Weighted parent,-0.125,0.0,23.0,24.0,191,66891.56650000013
+Weighted parent,-0.125,0.0,24.0,25.0,145,57778.360999999975
+Weighted parent,0.0,0.125,17.0,18.0,2,877.6500000000001
+Weighted parent,0.0,0.125,18.0,19.0,6,2139.2775
+Weighted parent,0.0,0.125,19.0,20.0,17,6249.330499999999
+Weighted parent,0.0,0.125,20.0,21.0,32,9990.052999999998
+Weighted parent,0.0,0.125,21.0,22.0,35,12205.810000000001
+Weighted parent,0.0,0.125,22.0,23.0,86,28692.284499999972
+Weighted parent,0.0,0.125,23.0,24.0,419,146744.66400000016
+Weighted parent,0.0,0.125,24.0,25.0,327,123177.3449999998
+Weighted parent,0.125,0.25,15.0,16.0,2,999.1905
+Weighted parent,0.125,0.25,16.0,17.0,3,1141.5865000000001
+Weighted parent,0.125,0.25,17.0,18.0,11,3148.4635000000007
+Weighted parent,0.125,0.25,18.0,19.0,18,6629.123000000001
+Weighted parent,0.125,0.25,19.0,20.0,51,18197.703499999985
+Weighted parent,0.125,0.25,20.0,21.0,65,22169.280499999986
+Weighted parent,0.125,0.25,21.0,22.0,110,41834.735999999975
+Weighted parent,0.125,0.25,22.0,23.0,202,71576.8370000001
+Weighted parent,0.125,0.25,23.0,24.0,717,243763.32950000023
+Weighted parent,0.125,0.25,24.0,25.0,405,157898.0700000006
+Weighted parent,0.25,0.375,14.0,15.0,1,518.658
+Weighted parent,0.25,0.375,15.0,16.0,19,5451.501500000001
+Weighted parent,0.25,0.375,16.0,17.0,54,16734.527000000002
+Weighted parent,0.25,0.375,17.0,18.0,78,26532.475999999984
+Weighted parent,0.25,0.375,18.0,19.0,100,36207.65249999998
+Weighted parent,0.25,0.375,19.0,20.0,191,64472.54000000012
+Weighted parent,0.25,0.375,20.0,21.0,364,127170.25649999978
+Weighted parent,0.25,0.375,21.0,22.0,425,153706.2604999996
+Weighted parent,0.25,0.375,22.0,23.0,428,156806.58599999986
+Weighted parent,0.25,0.375,23.0,24.0,801,270166.2610000006
+Weighted parent,0.25,0.375,24.0,25.0,444,173262.90000000084
+Weighted parent,0.375,0.5,14.0,15.0,1,473.759
+Weighted parent,0.375,0.5,15.0,16.0,60,19774.35049999998
+Weighted parent,0.375,0.5,16.0,17.0,95,28696.349999999962
+Weighted parent,0.375,0.5,17.0,18.0,93,31042.55099999999
+Weighted parent,0.375,0.5,18.0,19.0,97,31164.541499999978
+Weighted parent,0.375,0.5,19.0,20.0,113,36903.44149999997
+Weighted parent,0.375,0.5,20.0,21.0,199,67534.69050000016
+Weighted parent,0.375,0.5,21.0,22.0,332,117443.00349999998
+Weighted parent,0.375,0.5,22.0,23.0,458,160649.64749999982
+Weighted parent,0.375,0.5,23.0,24.0,954,326609.91800000024
+Weighted parent,0.375,0.5,24.0,25.0,406,158172.22850000058
+Weighted parent,0.5,0.625,14.0,15.0,1,518.658
+Weighted parent,0.5,0.625,15.0,16.0,36,12143.801999999998
+Weighted parent,0.5,0.625,16.0,17.0,64,18701.992499999997
+Weighted parent,0.5,0.625,17.0,18.0,77,24561.644499999973
+Weighted parent,0.5,0.625,18.0,19.0,70,22985.960499999986
+Weighted parent,0.5,0.625,19.0,20.0,100,35421.60349999998
+Weighted parent,0.5,0.625,20.0,21.0,130,45242.13399999998
+Weighted parent,0.5,0.625,21.0,22.0,226,77634.6015000002
+Weighted parent,0.5,0.625,22.0,23.0,443,149002.96000000008
+Weighted parent,0.5,0.625,23.0,24.0,1023,345573.7519999973
+Weighted parent,0.5,0.625,24.0,25.0,313,118652.03649999987
+Weighted parent,0.625,0.75,15.0,16.0,17,4887.316500000002
+Weighted parent,0.625,0.75,16.0,17.0,44,15130.097999999996
+Weighted parent,0.625,0.75,17.0,18.0,52,17388.712499999994
+Weighted parent,0.625,0.75,18.0,19.0,75,24983.004499999974
+Weighted parent,0.625,0.75,19.0,20.0,59,18986.25649999999
+Weighted parent,0.625,0.75,20.0,21.0,71,25202.707999999984
+Weighted parent,0.625,0.75,21.0,22.0,161,55054.084500000085
+Weighted parent,0.625,0.75,22.0,23.0,440,144868.3275000001
+Weighted parent,0.625,0.75,23.0,24.0,1017,345889.78849999834
+Weighted parent,0.625,0.75,24.0,25.0,227,92541.45999999996
+Weighted parent,0.75,0.875,15.0,16.0,9,2765.0025000000005
+Weighted parent,0.75,0.875,16.0,17.0,26,8291.425000000001
+Weighted parent,0.75,0.875,17.0,18.0,33,10982.075499999999
+Weighted parent,0.75,0.875,18.0,19.0,51,17748.40549999999
+Weighted parent,0.75,0.875,19.0,20.0,52,15806.783000000003
+Weighted parent,0.75,0.875,20.0,21.0,37,11986.952499999998
+Weighted parent,0.75,0.875,21.0,22.0,132,45092.3405
+Weighted parent,0.75,0.875,22.0,23.0,400,133514.61749999976
+Weighted parent,0.75,0.875,23.0,24.0,924,315308.4269999998
+Weighted parent,0.75,0.875,24.0,25.0,148,64333.8795
+Weighted parent,0.875,1.0,15.0,16.0,10,3729.4975000000004
+Weighted parent,0.875,1.0,16.0,17.0,34,11995.1765
+Weighted parent,0.875,1.0,17.0,18.0,36,12368.490000000002
+Weighted parent,0.875,1.0,18.0,19.0,46,14129.255499999997
+Weighted parent,0.875,1.0,19.0,20.0,51,18813.536999999982
+Weighted parent,0.875,1.0,20.0,21.0,56,18784.408499999998
+Weighted parent,0.875,1.0,21.0,22.0,96,31581.94499999996
+Weighted parent,0.875,1.0,22.0,23.0,349,112739.78899999987
+Weighted parent,0.875,1.0,23.0,24.0,736,251669.9560000004
+Weighted parent,0.875,1.0,24.0,25.0,76,32100.921499999957
+Weighted parent,1.0,1.125,15.0,16.0,10,2856.8150000000005
+Weighted parent,1.0,1.125,16.0,17.0,32,10148.174499999997
+Weighted parent,1.0,1.125,17.0,18.0,33,10216.250499999996
+Weighted parent,1.0,1.125,18.0,19.0,40,12434.354999999998
+Weighted parent,1.0,1.125,19.0,20.0,54,16387.144999999997
+Weighted parent,1.0,1.125,20.0,21.0,53,17326.5375
+Weighted parent,1.0,1.125,21.0,22.0,92,30854.65399999997
+Weighted parent,1.0,1.125,22.0,23.0,285,97737.23750000015
+Weighted parent,1.0,1.125,23.0,24.0,535,178594.94550000023
+Weighted parent,1.0,1.125,24.0,25.0,51,23997.559499999985
+Weighted parent,1.125,1.25,15.0,16.0,4,1698.8594999999998
+Weighted parent,1.125,1.25,16.0,17.0,24,8072.1455
+Weighted parent,1.125,1.25,17.0,18.0,39,11699.803
+Weighted parent,1.125,1.25,18.0,19.0,58,19081.558
+Weighted parent,1.125,1.25,19.0,20.0,86,27434.772000000004
+Weighted parent,1.125,1.25,20.0,21.0,107,36026.04599999998
+Weighted parent,1.125,1.25,21.0,22.0,158,54102.67150000004
+Weighted parent,1.125,1.25,22.0,23.0,338,112252.6409999999
+Weighted parent,1.125,1.25,23.0,24.0,408,130738.40249999988
+Weighted parent,1.125,1.25,24.0,25.0,10,4831.603
+Weighted parent,1.25,1.375,15.0,16.0,3,1180.2015
+Weighted parent,1.25,1.375,16.0,17.0,33,10305.654499999997
+Weighted parent,1.25,1.375,17.0,18.0,78,23425.848499999993
+Weighted parent,1.25,1.375,18.0,19.0,139,44576.30300000004
+Weighted parent,1.25,1.375,19.0,20.0,238,79021.11150000004
+Weighted parent,1.25,1.375,20.0,21.0,359,118648.84949999992
+Weighted parent,1.25,1.375,21.0,22.0,471,151983.51249999972
+Weighted parent,1.25,1.375,22.0,23.0,555,170010.4535000003
+Weighted parent,1.25,1.375,23.0,24.0,285,90425.89600000008
+Weighted parent,1.25,1.375,24.0,25.0,6,2970.8909999999996
+Weighted parent,1.375,1.5,15.0,16.0,1,145.418
+Weighted parent,1.375,1.5,16.0,17.0,27,8619.6165
+Weighted parent,1.375,1.5,17.0,18.0,84,27767.55399999997
+Weighted parent,1.375,1.5,18.0,19.0,220,74089.11400000006
+Weighted parent,1.375,1.5,19.0,20.0,373,125489.40299999985
+Weighted parent,1.375,1.5,20.0,21.0,564,189376.0979999998
+Weighted parent,1.375,1.5,21.0,22.0,681,223314.56100000022
+Weighted parent,1.375,1.5,22.0,23.0,662,216712.07250000033
+Weighted parent,1.375,1.5,23.0,24.0,211,71091.55450000004
+Weighted parent,1.375,1.5,24.0,25.0,1,642.5575
+Weighted parent,1.5,1.625,17.0,18.0,9,3194.2680000000005
+Weighted parent,1.5,1.625,18.0,19.0,26,8460.273999999998
+Weighted parent,1.5,1.625,19.0,20.0,64,21417.84549999999
+Weighted parent,1.5,1.625,20.0,21.0,158,54631.29200000004
+Weighted parent,1.5,1.625,21.0,22.0,274,88060.00950000013
+Weighted parent,1.5,1.625,22.0,23.0,500,165289.83000000007
+Weighted parent,1.5,1.625,23.0,24.0,141,47198.77699999999
+Weighted parent,1.625,1.75,19.0,20.0,3,1049.067
+Weighted parent,1.625,1.75,20.0,21.0,15,5045.4745
+Weighted parent,1.625,1.75,21.0,22.0,84,29661.637999999977
+Weighted parent,1.625,1.75,22.0,23.0,218,70725.93250000007
+Weighted parent,1.625,1.75,23.0,24.0,52,18206.342499999995
+Weighted parent,1.75,1.875,19.0,20.0,1,137.999
+Weighted parent,1.75,1.875,20.0,21.0,1,211.654
+Weighted parent,1.75,1.875,21.0,22.0,19,6622.5415
+Weighted parent,1.75,1.875,22.0,23.0,98,31477.403499999993
+Weighted parent,1.75,1.875,23.0,24.0,25,9018.461
+Weighted parent,1.875,2.0,20.0,21.0,1,227.8575
+Weighted parent,1.875,2.0,21.0,22.0,3,1472.9495000000002
+Weighted parent,1.875,2.0,22.0,23.0,38,12065.289999999995
+Weighted parent,1.875,2.0,23.0,24.0,3,1128.296
+Weighted parent,2.0,2.125,20.0,21.0,1,338.012
+Weighted parent,2.0,2.125,21.0,22.0,2,565.8695
+Weighted parent,2.0,2.125,22.0,23.0,4,1062.8605
+Weighted parent,2.0,2.125,23.0,24.0,1,137.999
+Weighted parent,2.125,2.25,21.0,22.0,1,642.5575
+Weighted parent,2.125,2.25,22.0,23.0,1,518.658
+Weighted parent,2.25,2.375,22.0,23.0,1,227.8575
+Weighted parent,2.5,2.625,20.0,21.0,1,211.654
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,15.0,16.0,1,1.0
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,16.0,17.0,1,1.0
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,17.0,18.0,3,3.0
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,18.0,19.0,4,4.0
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,19.0,20.0,7,7.0
+Distance-evidence test (chosen subset distinct),-0.625,-0.5,20.0,21.0,2,2.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,15.0,16.0,2,2.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,16.0,17.0,2,2.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,17.0,18.0,13,13.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,18.0,19.0,16,16.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,19.0,20.0,38,38.0
+Distance-evidence test (chosen subset distinct),-0.5,-0.375,20.0,21.0,14,14.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,15.0,16.0,2,2.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,16.0,17.0,6,6.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,17.0,18.0,19,19.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,18.0,19.0,35,35.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,19.0,20.0,72,72.0
+Distance-evidence test (chosen subset distinct),-0.375,-0.25,20.0,21.0,21,21.0
+Distance-evidence test (chosen subset distinct),-0.25,-0.125,16.0,17.0,23,23.0
+Distance-evidence test (chosen subset distinct),-0.25,-0.125,17.0,18.0,35,35.0
+Distance-evidence test (chosen subset distinct),-0.25,-0.125,18.0,19.0,48,48.0
+Distance-evidence test (chosen subset distinct),-0.25,-0.125,19.0,20.0,76,76.0
+Distance-evidence test (chosen subset distinct),-0.25,-0.125,20.0,21.0,14,14.0
+Distance-evidence test (chosen subset distinct),-0.125,0.0,16.0,17.0,13,13.0
+Distance-evidence test (chosen subset distinct),-0.125,0.0,17.0,18.0,26,26.0
+Distance-evidence test (chosen subset distinct),-0.125,0.0,18.0,19.0,43,43.0
+Distance-evidence test (chosen subset distinct),-0.125,0.0,19.0,20.0,75,75.0
+Distance-evidence test (chosen subset distinct),-0.125,0.0,20.0,21.0,18,18.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,15.0,16.0,4,4.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,16.0,17.0,35,35.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,17.0,18.0,38,38.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,18.0,19.0,62,62.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,19.0,20.0,29,29.0
+Distance-evidence test (chosen subset distinct),0.0,0.125,20.0,21.0,15,15.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,14.0,15.0,1,1.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,15.0,16.0,30,30.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,16.0,17.0,210,210.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,17.0,18.0,442,442.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,18.0,19.0,718,718.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,19.0,20.0,229,229.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,20.0,21.0,45,45.0
+Distance-evidence test (chosen subset distinct),0.125,0.25,21.0,22.0,1,1.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,14.0,15.0,7,7.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,15.0,16.0,228,228.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,16.0,17.0,1878,1878.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,17.0,18.0,2650,2650.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,18.0,19.0,3634,3634.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,19.0,20.0,1245,1245.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,20.0,21.0,196,196.0
+Distance-evidence test (chosen subset distinct),0.25,0.375,21.0,22.0,1,1.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,14.0,15.0,16,16.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,15.0,16.0,332,332.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,16.0,17.0,2284,2284.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,17.0,18.0,2306,2306.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,18.0,19.0,1997,1997.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,19.0,20.0,884,884.0
+Distance-evidence test (chosen subset distinct),0.375,0.5,20.0,21.0,124,124.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,14.0,15.0,6,6.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,15.0,16.0,207,207.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,16.0,17.0,1506,1506.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,17.0,18.0,1873,1873.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,18.0,19.0,1805,1805.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,19.0,20.0,742,742.0
+Distance-evidence test (chosen subset distinct),0.5,0.625,20.0,21.0,74,74.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,15.0,16.0,100,100.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,16.0,17.0,863,863.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,17.0,18.0,1341,1341.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,18.0,19.0,1319,1319.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,19.0,20.0,335,335.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,20.0,21.0,40,40.0
+Distance-evidence test (chosen subset distinct),0.625,0.75,21.0,22.0,1,1.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,14.0,15.0,1,1.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,15.0,16.0,52,52.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,16.0,17.0,548,548.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,17.0,18.0,881,881.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,18.0,19.0,831,831.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,19.0,20.0,83,83.0
+Distance-evidence test (chosen subset distinct),0.75,0.875,20.0,21.0,13,13.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,15.0,16.0,47,47.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,16.0,17.0,431,431.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,17.0,18.0,672,672.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,18.0,19.0,842,842.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,19.0,20.0,104,104.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,20.0,21.0,16,16.0
+Distance-evidence test (chosen subset distinct),0.875,1.0,21.0,22.0,1,1.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,15.0,16.0,23,23.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,16.0,17.0,369,369.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,17.0,18.0,614,614.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,18.0,19.0,923,923.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,19.0,20.0,119,119.0
+Distance-evidence test (chosen subset distinct),1.0,1.125,20.0,21.0,14,14.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,15.0,16.0,15,15.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,16.0,17.0,404,404.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,17.0,18.0,712,712.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,18.0,19.0,1062,1062.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,19.0,20.0,156,156.0
+Distance-evidence test (chosen subset distinct),1.125,1.25,20.0,21.0,17,17.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,15.0,16.0,16,16.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,16.0,17.0,531,531.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,17.0,18.0,1438,1438.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,18.0,19.0,2574,2574.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,19.0,20.0,431,431.0
+Distance-evidence test (chosen subset distinct),1.25,1.375,20.0,21.0,44,44.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,15.0,16.0,3,3.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,16.0,17.0,306,306.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,17.0,18.0,1664,1664.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,18.0,19.0,3298,3298.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,19.0,20.0,742,742.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,20.0,21.0,66,66.0
+Distance-evidence test (chosen subset distinct),1.375,1.5,21.0,22.0,24,24.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,16.0,17.0,3,3.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,17.0,18.0,95,95.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,18.0,19.0,319,319.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,19.0,20.0,145,145.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,20.0,21.0,23,23.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,21.0,22.0,19,19.0
+Distance-evidence test (chosen subset distinct),1.5,1.625,22.0,23.0,1,1.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,17.0,18.0,4,4.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,18.0,19.0,18,18.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,19.0,20.0,14,14.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,20.0,21.0,7,7.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,21.0,22.0,11,11.0
+Distance-evidence test (chosen subset distinct),1.625,1.75,22.0,23.0,1,1.0
+Distance-evidence test (chosen subset distinct),1.75,1.875,19.0,20.0,3,3.0
+Distance-evidence test (chosen subset distinct),1.75,1.875,20.0,21.0,6,6.0
+Distance-evidence test (chosen subset distinct),1.75,1.875,21.0,22.0,7,7.0
+Distance-evidence test (chosen subset distinct),1.75,1.875,22.0,23.0,2,2.0
+Distance-evidence test (chosen subset distinct),1.875,2.0,21.0,22.0,4,4.0
+Distance-evidence test (chosen subset distinct),1.875,2.0,22.0,23.0,2,2.0
+Distance-evidence test (chosen subset distinct),2.0,2.125,21.0,22.0,1,1.0
+Distance-evidence test (chosen subset distinct),2.125,2.25,20.0,21.0,1,1.0
+Distance-evidence test (chosen subset distinct),2.125,2.25,21.0,22.0,2,2.0
+Distance-evidence test (chosen subset distinct),2.125,2.25,22.0,23.0,1,1.0
+Distance-evidence test (chosen subset distinct),2.25,2.375,21.0,22.0,1,1.0

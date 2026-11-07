@@ -1,0 +1,20 @@
+{
+  "name": "10b_high_snr_information",
+  "section": "main",
+  "model": "baseline_v1 matched bands",
+  "reference": "chosen",
+  "split": "old development test",
+  "caption": "Existing v1 A_on_B/B and A_on_C/B_on_C/C matched training and source controls. Original specific model identifiers retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 5,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/10b_high_snr_information.png",
+  "pdf": "figures/v2_0_revision/main/10b_high_snr_information.pdf",
+  "csv": "manifests/v2_0_revision/figures/10b_high_snr_information.csv",
+  "png_sha256": "ae583601e843a5a986c4373b173812d642c9bfea326127abdf9b2443cf89b412",
+  "pdf_sha256": "a8957ad40a71407dc29cd253ed2c86714ab4cbfd1f7c571cdc383c031d7ca103"
+}

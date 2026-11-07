@@ -327,9 +327,16 @@ def separate_flows():
     for ax, sequence in zip(axes, lines):
         ax.axis('off')
         for i, (label, value) in enumerate(sequence):
-            y = .88 - i*.235
-            ax.text(.5, y, label+'\n'+value, ha='center', va='center', transform=ax.transAxes, fontsize=12, bbox=dict(boxstyle='round,pad=.5', fc='none', ec=BLUE))
-            if i < len(sequence)-1:
+            application = ax is axes[1]
+            x, y = (.5, .88 - i*.235)
+            if application and i >= 2:
+                x, y = (.24 if i == 2 else .76), .30
+                label = 'DECam prediction' if i == 2 else 'North\nNo prediction'
+                value = value.replace(' · ', '\n')
+            ax.text(x, y, label+'\n'+value, ha='center', va='center', transform=ax.transAxes, fontsize=10 if application and i >= 2 else 12, bbox=dict(boxstyle='round,pad=.5', fc='none', ec=BLUE))
+            if application and i >= 2:
+                ax.annotate('', xy=(x,.39), xytext=(.5,.59), xycoords='axes fraction', arrowprops=dict(arrowstyle='->', color=GRAY))
+            elif i < len(sequence)-1 and not (application and i == 1):
                 ax.annotate('', xy=(.5,y-.14), xytext=(.5,y-.08), xycoords='axes fraction', arrowprops=dict(arrowstyle='->', color=GRAY))
             f.ROWS.append(dict(panel='reference' if ax is axes[0] else 'application', stage=label, value=value))
     f.save(fig, 'separate_reference_application_flows', 'Two distinct pipelines. The DR11 scale ratios are not same-cut retention fractions. Class/fit/parallax qualifications are parallel, and their counts overlap. Full-DR11 same-cut denominator and effective masked area remain uncomputed.', section='main', model='reference assembly + baseline_v1 application', reference='distinct populations', split='all')

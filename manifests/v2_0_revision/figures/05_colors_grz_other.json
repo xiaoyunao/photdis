@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_grz_other",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in grz coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "x_range": [
+        -0.39944571256637573,
+        1.556540608406067
+      ],
+      "y_range": [
+        -0.526978075504303,
+        2.0641655921936035
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "low_occupancy_cells": 118,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 41,
+      "zero_residuals": 0,
+      "below_absolute_scale": 187
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0,
+      "low_occupancy_cells": 118,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 41,
+      "zero_residuals": 0,
+      "below_absolute_scale": 187
+    }
+  ],
+  "statistics_records": 456,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_grz_other.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_grz_other.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_grz_other.csv",
+  "png_sha256": "3755677b7f6e4439344df3cbdd2c7766ae9e9d140c4aa60b92e7ca95c3f1373a",
+  "pdf_sha256": "4564386384fcaab38046a61124fc3a327b0532b65c28f9c94d04b94400181d21"
+}

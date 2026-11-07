@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_WISE_other",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in WISE coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 6408,
+      "finite": 4644,
+      "missing": 1764,
+      "plotted": 4644,
+      "outside": 0,
+      "x_range": [
+        -2.538859172332841,
+        0.42614584819349155
+      ],
+      "y_range": [
+        -1.5430347518931535,
+        0.8080802107900001
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 6408,
+      "finite": 4644,
+      "missing": 1764,
+      "plotted": 4644,
+      "outside": 0,
+      "low_occupancy_cells": 273,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 23,
+      "zero_residuals": 0,
+      "below_absolute_scale": 138
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 6408,
+      "finite": 4644,
+      "missing": 1764,
+      "plotted": 4644,
+      "outside": 0,
+      "low_occupancy_cells": 273,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 23,
+      "zero_residuals": 0,
+      "below_absolute_scale": 138
+    }
+  ],
+  "statistics_records": 987,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_WISE_other.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_other.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_WISE_other.csv",
+  "png_sha256": "ef89a7a13cdc987015f4fab7ac121e2838002ecdc437b66fd73ee9c61bb4df97",
+  "pdf_sha256": "12dfd00142f8525d4591bd3010b0427ed1c70afc6b84953e1dcfd2a6a520f89b"
+}

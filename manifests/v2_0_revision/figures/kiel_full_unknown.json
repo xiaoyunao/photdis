@@ -1,0 +1,71 @@
+{
+  "name": "kiel_full_unknown",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        0.670051259676019,
+        6.382863993219779
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "low_occupancy_cells": 0,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 0,
+      "zero_residuals": 0,
+      "below_absolute_scale": 0
+    },
+    {
+      "panel": "absolute",
+      "eligible": 0,
+      "finite": 0,
+      "missing": 0,
+      "plotted": 0,
+      "outside": 0,
+      "low_occupancy_cells": 0,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 0,
+      "zero_residuals": 0,
+      "below_absolute_scale": 0
+    }
+  ],
+  "statistics_records": 0,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_full_unknown.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_full_unknown.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_full_unknown.csv",
+  "png_sha256": "60cef68abba5a6bd4180a10112df69837d8175f4031aa76ea506dfd0eb9cdd15",
+  "pdf_sha256": "cf3ad808cb8000608e153033418d16b51b166acd56bb05c2e8fa517e24df533f"
+}

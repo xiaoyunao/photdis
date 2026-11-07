@@ -1,0 +1,20 @@
+{
+  "name": "10a_experiment_tradeoffs",
+  "section": "main",
+  "model": "paired experiments",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Each experiment has its own matched identities, training controls and N in CSV. These are not a continuous version ranking. r0 preserves max_features0.75, changing realized split candidates1\u21922.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 17,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/10a_experiment_tradeoffs.png",
+  "pdf": "figures/v2_0_revision/main/10a_experiment_tradeoffs.pdf",
+  "csv": "manifests/v2_0_revision/figures/10a_experiment_tradeoffs.csv",
+  "png_sha256": "5ee6fe1e943b5599187526a62a4b961261cc859f95c9b447640d33350e1ed625",
+  "pdf_sha256": "23e85a8fbc300e05a19b976f22d8d4f6edd4d57c42a4dd281e083f7d0b5f117e"
+}

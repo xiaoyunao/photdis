@@ -1,0 +1,71 @@
+{
+  "name": "kiel_full_all",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Kiel density",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40290,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        0.670051259676019,
+        6.382863993219779
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40290,
+      "outside": 0,
+      "low_occupancy_cells": 241,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 240,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2677
+    },
+    {
+      "panel": "absolute",
+      "eligible": 40290,
+      "finite": 40290,
+      "missing": 0,
+      "plotted": 40290,
+      "outside": 0,
+      "low_occupancy_cells": 241,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 240,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2677
+    }
+  ],
+  "statistics_records": 1161,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/kiel_full_all.png",
+  "pdf": "figures/v2_0_revision/physical/kiel_full_all.pdf",
+  "csv": "manifests/v2_0_revision/figures/kiel_full_all.csv",
+  "png_sha256": "d1b99d707779c7ca306254a5df38478146388c598e920c0f860d7bd27a3af224",
+  "pdf_sha256": "d8ca8173cfd9455eb0720489934d4e291c9f4f40411134196528986c5d0d9f0f"
+}

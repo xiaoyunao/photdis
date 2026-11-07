@@ -1,0 +1,20 @@
+{
+  "name": "08a_coverage_width",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Raw expanded_A intervals relative to chosen catalog point estimates. Catalog uncertainties and common upstream information are not removed.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 4,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/08a_coverage_width.png",
+  "pdf": "figures/v2_0_revision/main/08a_coverage_width.pdf",
+  "csv": "manifests/v2_0_revision/figures/08a_coverage_width.csv",
+  "png_sha256": "17f00861da6ec10c4628f622586ccf95e32fc7dc87f013006230e49fed9b48b1",
+  "pdf_sha256": "cc96b586878ddfc731dc404b3971cb6fc403a6c2d3a605288f382d6bd9656b2c"
+}

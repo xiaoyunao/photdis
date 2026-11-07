@@ -1,0 +1,71 @@
+{
+  "name": "05_colors_WISE_evolved",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "expanded_A optical residuals in WISE coordinates, giant reference; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "density",
+      "eligible": 1163,
+      "finite": 1019,
+      "missing": 144,
+      "plotted": 1019,
+      "outside": 0,
+      "x_range": [
+        -1.8571351582961142,
+        -0.34564774319498
+      ],
+      "y_range": [
+        -1.3477369114093287,
+        0.030267157351176764
+      ]
+    },
+    {
+      "panel": "Median residual [%]",
+      "eligible": 1163,
+      "finite": 1019,
+      "missing": 144,
+      "plotted": 1019,
+      "outside": 0,
+      "low_occupancy_cells": 257,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 1,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 1163,
+      "finite": 1019,
+      "missing": 144,
+      "plotted": 1019,
+      "outside": 0,
+      "low_occupancy_cells": 257,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 1,
+      "zero_residuals": 0,
+      "below_absolute_scale": 1
+    }
+  ],
+  "statistics_records": 786,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/05_colors_WISE_evolved.png",
+  "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_evolved.pdf",
+  "csv": "manifests/v2_0_revision/figures/05_colors_WISE_evolved.csv",
+  "png_sha256": "b7af4309aaec74b034d7e2cb5cb8fd769a0535bb5d931f164e3e86c7fba993fb",
+  "pdf_sha256": "fe8f5ac55f655efbe91d922feb90b88aa249cbd90a50365447d0559a6955857e"
+}

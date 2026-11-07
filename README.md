@@ -2,6 +2,8 @@
 
 Current stage report: **Photdis v2.0**. [Scope](docs/v2_0_scope.md) · [Methods](docs/v2_0_methods.md) · [Status](docs/v2_0_status.md) · [55-figure atlas](docs/v2_0_figure_atlas.md) · [Requirement checklist](docs/v2_0_requirements.md). Original model identifiers and application baseline_v1 are retained in the report.
 
+Latest revision: [1050-figure complete atlas](docs/v2_0_revision_atlas.md) · [Gaia anomaly audit and results](docs/v2_0_revision_result.md). All figure text is English; PNG300dpi, PDF, CSV and metadata are linked per figure.
+
 Photometric stellar distances from Legacy Survey DR11 `grzW1W2`, following the
 GPT Pro restart plan in conversation
 `6ae164f5-1a74-83e9-a2c0-768b28e09d1b`.

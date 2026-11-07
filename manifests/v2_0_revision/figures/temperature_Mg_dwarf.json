@@ -1,0 +1,87 @@
+{
+  "name": "temperature_Mg_dwarf",
+  "section": "physical",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference absolute g",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        -3.7305219596459875,
+        16.864735670116698
+      ]
+    },
+    {
+      "panel": "Predicted absolute g",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "x_range": [
+        2582.239439506806,
+        14839.58929709336
+      ],
+      "y_range": [
+        -3.7305219596459875,
+        16.864735670116698
+      ]
+    },
+    {
+      "panel": "signed",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 84,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    },
+    {
+      "panel": "absolute",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0,
+      "low_occupancy_cells": 84,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 197,
+      "zero_residuals": 0,
+      "below_absolute_scale": 2489
+    }
+  ],
+  "statistics_records": 576,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/physical/temperature_Mg_dwarf.png",
+  "pdf": "figures/v2_0_revision/physical/temperature_Mg_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/temperature_Mg_dwarf.csv",
+  "png_sha256": "ce12db5377ad3c9df7619529b1669ea1d1edcbf2d5a73547134e29a59c9415e5",
+  "pdf_sha256": "c41cf5504788706987010b6e68c121707344517814606a659ae6d0b796fa92be"
+}

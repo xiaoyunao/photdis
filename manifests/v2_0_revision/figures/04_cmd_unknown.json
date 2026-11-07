@@ -1,0 +1,87 @@
+{
+  "name": "04_cmd_unknown",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Same 7,466 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Reference CMD",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.18995681428162,
+        20.663812025140352
+      ]
+    },
+    {
+      "panel": "Predicted CMD",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "x_range": [
+        -0.6633122563362122,
+        2.3359215259552
+      ],
+      "y_range": [
+        -6.18995681428162,
+        20.663812025140352
+      ]
+    },
+    {
+      "panel": "Median signed residual [%]",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "low_occupancy_cells": 340,
+      "display_color_limits": [
+        -100,
+        100
+      ],
+      "color_normalization": "SymLogNorm linthresh=1%, base10",
+      "residual_beyond_color": 237,
+      "zero_residuals": 0,
+      "below_absolute_scale": 266
+    },
+    {
+      "panel": "Median absolute residual [%]",
+      "eligible": 7466,
+      "finite": 7466,
+      "missing": 0,
+      "plotted": 7466,
+      "outside": 0,
+      "low_occupancy_cells": 340,
+      "display_color_limits": [
+        1,
+        100
+      ],
+      "color_normalization": "LogNorm; <=1% lowest color",
+      "residual_beyond_color": 237,
+      "zero_residuals": 0,
+      "below_absolute_scale": 266
+    }
+  ],
+  "statistics_records": 1471,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/04_cmd_unknown.png",
+  "pdf": "figures/v2_0_revision/appendix/04_cmd_unknown.pdf",
+  "csv": "manifests/v2_0_revision/figures/04_cmd_unknown.csv",
+  "png_sha256": "6b72cd8ff1627bc8b4ee31cf7f8912d0f833083b5f0e122f541b5f8f16089149",
+  "pdf_sha256": "d36ae6b2a33fe0055870d642c2dc204c2e020e0cf4121d4ebe3e9b7c851fceb3"
+}

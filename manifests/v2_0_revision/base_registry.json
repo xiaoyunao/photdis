@@ -1,0 +1,5390 @@
+{
+  "01_scope": {
+    "name": "01_scope",
+    "section": "main",
+    "model": "baseline_v1 + expanded references",
+    "reference": "all candidates",
+    "split": "all",
+    "caption": "Application rectangles are configuration boundaries, not masked effective area. Reference cells show selection footprint; counts and stars/deg\u00b2 are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 221,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/01_scope.png",
+    "pdf": "figures/v2_0_revision/main/01_scope.pdf",
+    "csv": "manifests/v2_0_revision/figures/01_scope.csv",
+    "png_sha256": "93bc31fa340ac545617dd384f2dca697778a208970d44b7acd8480ba2ac993db",
+    "pdf_sha256": "76eb801a61cd9a3543117d4f15b97e3fb762f1fc15eafc04eea783fc9602dad2"
+  },
+  "02a_brightness_coverage": {
+    "name": "02a_brightness_coverage",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "independent eligibility",
+    "split": "cal/test + parent",
+    "caption": "Parent retains original probability weights. No common reference mask is used for class, chosen or signed Gaia evidence.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 67,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/02a_brightness_coverage.png",
+    "pdf": "figures/v2_0_revision/main/02a_brightness_coverage.pdf",
+    "csv": "manifests/v2_0_revision/figures/02a_brightness_coverage.csv",
+    "png_sha256": "8073f6b79f908ac83a53cd8c41bca8279d00909a18aa673545e1490768adf914",
+    "pdf_sha256": "50516336bae683c01bba379f4e6d59ca84fb9bb1ef1c4496c940d84731acb473"
+  },
+  "02b_color_magnitude_coverage": {
+    "name": "02b_color_magnitude_coverage",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same displayed bins; white cells have no evidence. Counts and out-of-range objects are saved. Parent density represents old DECam scope.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Weighted parent",
+        "eligible": 26000,
+        "finite": 26000,
+        "missing": 0,
+        "plotted": 25947,
+        "outside": 53,
+        "x_range": [
+          -1.0,
+          3.0
+        ],
+        "y_range": [
+          14.0,
+          25.0
+        ]
+      },
+      {
+        "panel": "Distance-evidence test (chosen subset distinct)",
+        "eligible": 51259,
+        "finite": 51259,
+        "missing": 0,
+        "plotted": 51259,
+        "outside": 0,
+        "x_range": [
+          -1.0,
+          3.0
+        ],
+        "y_range": [
+          14.0,
+          25.0
+        ]
+      }
+    ],
+    "statistics_records": 322,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/02b_color_magnitude_coverage.png",
+    "pdf": "figures/v2_0_revision/main/02b_color_magnitude_coverage.pdf",
+    "csv": "manifests/v2_0_revision/figures/02b_color_magnitude_coverage.csv",
+    "png_sha256": "c7fc7a9014917117c9ee0828643d603d4cf9bab346c79b6487a15c6ed09e4148",
+    "pdf_sha256": "42876fd9bf85e87e912a559bce78e654a596edbb63b68359021ac0ae51da1d40"
+  },
+  "03_distance_all": {
+    "name": "03_distance_all",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "Gaia/specdis/spdist",
+    "split": "development_test",
+    "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Gaia_distance",
+        "eligible": 3207,
+        "finite": 3207,
+        "missing": 0,
+        "plotted": 3207,
+        "outside": 0,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ]
+      },
+      {
+        "panel": "Gaia_Full linear residual",
+        "eligible": 3207,
+        "finite": 3207,
+        "missing": 0,
+        "plotted": 3207,
+        "outside": 0,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          -436.4071207979115,
+          12893.289916392272
+        ]
+      },
+      {
+        "panel": "Gaia_Central linear residual",
+        "eligible": 3207,
+        "finite": 3207,
+        "missing": 0,
+        "plotted": 3150,
+        "outside": 57,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "Gaia_Full equal-width histogram",
+        "eligible": 3207,
+        "finite": 3207,
+        "missing": 0,
+        "plotted": 3207,
+        "outside": 0
+      },
+      {
+        "panel": "Gaia_Central 2 percentage-point histogram",
+        "eligible": 3207,
+        "finite": 3207,
+        "missing": 0,
+        "plotted": 3150,
+        "outside": 57
+      },
+      {
+        "panel": "specdis_distance",
+        "eligible": 47335,
+        "finite": 47335,
+        "missing": 0,
+        "plotted": 47335,
+        "outside": 0,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ]
+      },
+      {
+        "panel": "specdis_Full linear residual",
+        "eligible": 47335,
+        "finite": 47335,
+        "missing": 0,
+        "plotted": 47335,
+        "outside": 0,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          -566.9212933149894,
+          15949.601724043383
+        ]
+      },
+      {
+        "panel": "specdis_Central linear residual",
+        "eligible": 47335,
+        "finite": 47335,
+        "missing": 0,
+        "plotted": 46900,
+        "outside": 435,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "specdis_Full equal-width histogram",
+        "eligible": 47335,
+        "finite": 47335,
+        "missing": 0,
+        "plotted": 47335,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_Central 2 percentage-point histogram",
+        "eligible": 47335,
+        "finite": 47335,
+        "missing": 0,
+        "plotted": 46900,
+        "outside": 435
+      },
+      {
+        "panel": "spdist_distance",
+        "eligible": 37317,
+        "finite": 37317,
+        "missing": 0,
+        "plotted": 37317,
+        "outside": 0,
+        "x_range": [
+          0.05627811556774531,
+          265.9146863459424
+        ],
+        "y_range": [
+          0.05627811556774531,
+          265.9146863459424
+        ]
+      },
+      {
+        "panel": "spdist_Full linear residual",
+        "eligible": 37317,
+        "finite": 37317,
+        "missing": 0,
+        "plotted": 37317,
+        "outside": 0,
+        "x_range": [
+          0.05627811556774531,
+          265.9146863459424
+        ],
+        "y_range": [
+          -124.96472591522502,
+          775.9679394218017
+        ]
+      },
+      {
+        "panel": "spdist_Central linear residual",
+        "eligible": 37317,
+        "finite": 37317,
+        "missing": 0,
+        "plotted": 37042,
+        "outside": 275,
+        "x_range": [
+          0.05627811556774531,
+          265.9146863459424
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "spdist_Full equal-width histogram",
+        "eligible": 37317,
+        "finite": 37317,
+        "missing": 0,
+        "plotted": 37317,
+        "outside": 0
+      },
+      {
+        "panel": "spdist_Central 2 percentage-point histogram",
+        "eligible": 37317,
+        "finite": 37317,
+        "missing": 0,
+        "plotted": 37042,
+        "outside": 275
+      }
+    ],
+    "statistics_records": 6810,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/03_distance_all.png",
+    "pdf": "figures/v2_0_revision/main/03_distance_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/03_distance_all.csv",
+    "png_sha256": "f82b57150a5f018e9c6411ce7fb7ad3ca696e1a5e987598bac47f8f054615780",
+    "pdf_sha256": "4ecd7751cae5751cbc56587202e1f3b0179a3bf0df63fbb82db587f0a4f1485b"
+  },
+  "04_cmd_all": {
+    "name": "04_cmd_all",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same 47,756 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference CMD",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -6.18995681428162,
+          20.663812025140352
+        ]
+      },
+      {
+        "panel": "Predicted CMD",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -6.18995681428162,
+          20.663812025140352
+        ]
+      },
+      {
+        "panel": "Median signed residual [%]",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "low_occupancy_cells": 354,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 477,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2943
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "low_occupancy_cells": 354,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 477,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2943
+      }
+    ],
+    "statistics_records": 1710,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/04_cmd_all.png",
+    "pdf": "figures/v2_0_revision/main/04_cmd_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/04_cmd_all.csv",
+    "png_sha256": "4f49a935946ee5f5ac1ee11b8bb2913a856f7a5658a750186fcbb5e396da8f37",
+    "pdf_sha256": "a33c85960a95d1473325393f936a1d03e252045381a69df2a4254901ffa612a7"
+  },
+  "05_colors_grz_all": {
+    "name": "05_colors_grz_all",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grz coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -0.8983608484268188,
+          4.4139790534973145
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "low_occupancy_cells": 135,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 477,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2943
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 47756,
+        "finite": 47756,
+        "missing": 0,
+        "plotted": 47756,
+        "outside": 0,
+        "low_occupancy_cells": 135,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 477,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2943
+      }
+    ],
+    "statistics_records": 627,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/05_colors_grz_all.png",
+    "pdf": "figures/v2_0_revision/main/05_colors_grz_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grz_all.csv",
+    "png_sha256": "d0d529ffbb5a76e8a73d9c79c8ed9d95066bb78322478ad4a565a2e161733d0a",
+    "pdf_sha256": "e8be2c4de1e28127efeb7afa56576114e3c59b0a4fa2f61f7509f70ee87b90b2"
+  },
+  "06a_kiel": {
+    "name": "06a_kiel",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Qualified continuous RVS parameters, expanded_A. Fixed display ranges and excluded counts retained; coarse giant reference/other labels do not assign RGB/RC/HB phases.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40287,
+        "outside": 3,
+        "x_range": [
+          2500.0,
+          12000.0
+        ],
+        "y_range": [
+          -1.0,
+          6.0
+        ]
+      },
+      {
+        "panel": "Kiel residual",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40287,
+        "outside": 3,
+        "low_occupancy_cells": 212,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      }
+    ],
+    "statistics_records": 706,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/06a_kiel.png",
+    "pdf": "figures/v2_0_revision/main/06a_kiel.pdf",
+    "csv": "manifests/v2_0_revision/figures/06a_kiel.csv",
+    "png_sha256": "0e255f85631ea924479cafd5dc270d82ee9daffb4bd21c61606fde9eea0b8922",
+    "pdf_sha256": "3729177cf17ca6fe16dd003e3248bf4a1ab3502bbff64980738b587bd944f23c"
+  },
+  "06b_metallicity": {
+    "name": "06b_metallicity",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "RVS abundance correction restricted to 4200<=Teff<6600 and 1.8<=logg<5.5. Raw/domain/raw-corrected comparisons use finite FeH and positive formal error. Metal-poor is not halo membership.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Dwarf",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 22558,
+        "finite": 22558,
+        "missing": 0,
+        "plotted": 22558,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1137,
+        "finite": 1137,
+        "missing": 0,
+        "plotted": 1137,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 5709,
+        "finite": 5709,
+        "missing": 0,
+        "plotted": 5709,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 22558,
+        "finite": 22558,
+        "missing": 0,
+        "plotted": 22558,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1137,
+        "finite": 1137,
+        "missing": 0,
+        "plotted": 1137,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 5709,
+        "finite": 5709,
+        "missing": 0,
+        "plotted": 5709,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 63,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/06b_metallicity.png",
+    "pdf": "figures/v2_0_revision/main/06b_metallicity.pdf",
+    "csv": "manifests/v2_0_revision/figures/06b_metallicity.csv",
+    "png_sha256": "37f60b8bfa93adde7dc2124a57ef07c906d5fb90c5f1ebab1ac83f9c1e7296db",
+    "pdf_sha256": "3bdcdd38ead30a279f67f5aa708f173cff95aa42e7066efbd906a130ccd9517d"
+  },
+  "06c_spectral_trends": {
+    "name": "06c_spectral_trends",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "RVS-qualified sources, N>=20 bins. Per-class counts and full percentage metrics in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Dwarf",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32718,
+        "outside": 1
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6406,
+        "outside": 2
+      }
+    ],
+    "statistics_records": 99,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/06c_spectral_trends.png",
+    "pdf": "figures/v2_0_revision/main/06c_spectral_trends.pdf",
+    "csv": "manifests/v2_0_revision/figures/06c_spectral_trends.csv",
+    "png_sha256": "8c4e5b3a61477c7b1958661bafc8b6c1da38c9459bef0912cf340d3893797995",
+    "pdf_sha256": "a96420647f1a6b70bf53393276fc9b7c5a5d0a08ff08e3e77a3c1c27260c0599"
+  },
+  "07_conditions_r": {
+    "name": "07_conditions_r",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 105,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/07_conditions_r.png",
+    "pdf": "figures/v2_0_revision/main/07_conditions_r.pdf",
+    "csv": "manifests/v2_0_revision/figures/07_conditions_r.csv",
+    "png_sha256": "40091736624ff08dd73c7e6946e491e577b8dee287a1398b8f7d4616ac41b72d",
+    "pdf_sha256": "bfd3e0b103ac307179203f68312a5eddfe97a56a8b534ef887c53ed1f8730521"
+  },
+  "07b_intervals_and_counts": {
+    "name": "07b_intervals_and_counts",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Width and coverage are displayed together. Sparse faint layers retain actual N and do not imply broad validation.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 56,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/07b_intervals_and_counts.png",
+    "pdf": "figures/v2_0_revision/main/07b_intervals_and_counts.pdf",
+    "csv": "manifests/v2_0_revision/figures/07b_intervals_and_counts.csv",
+    "png_sha256": "a3583682003cc91d255448863b80d3660a0e2863d25505a113e0026e94528136",
+    "pdf_sha256": "46a249714d2bb9fc193664e671595e4f807301acf56f7565f8bd8023fcaf4188"
+  },
+  "08a_coverage_width": {
+    "name": "08a_coverage_width",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Raw expanded_A intervals relative to chosen catalog point estimates. Catalog uncertainties and common upstream information are not removed.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 4,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/08a_coverage_width.png",
+    "pdf": "figures/v2_0_revision/main/08a_coverage_width.pdf",
+    "csv": "manifests/v2_0_revision/figures/08a_coverage_width.csv",
+    "png_sha256": "17f00861da6ec10c4628f622586ccf95e32fc7dc87f013006230e49fed9b48b1",
+    "pdf_sha256": "cc96b586878ddfc731dc404b3971cb6fc403a6c2d3a605288f382d6bd9656b2c"
+  },
+  "08b_gaia_pit": {
+    "name": "08b_gaia_pit",
+    "section": "main",
+    "model": "expanded_A",
+    "reference": "signed Gaia",
+    "split": "development_test",
+    "caption": "All signed eligible Gaia parallaxes from refined sidecars. Negative observations retained. Class-conditional PIT is diagnostic and does not alone prove unconditional mixture weights wrong.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 50,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/08b_gaia_pit.png",
+    "pdf": "figures/v2_0_revision/main/08b_gaia_pit.pdf",
+    "csv": "manifests/v2_0_revision/figures/08b_gaia_pit.csv",
+    "png_sha256": "43f45dc8658b58d97901a23a17fcfc19f178e5565086b8c5f15a7c29e84ddff7",
+    "pdf_sha256": "802854091eb33520ce47e73dbe90bea6b1cc4f8aab20e75f67458211aca92f8c"
+  },
+  "09a_band_availability": {
+    "name": "09a_band_availability",
+    "section": "main",
+    "model": "measurement states",
+    "reference": "none",
+    "split": "weighted parent",
+    "caption": "Original26000 probability sample, original DECam weights. High S/N and signed valid measurements separated. Exact application route counts are a different population statistic.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 30,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/09a_band_availability.png",
+    "pdf": "figures/v2_0_revision/main/09a_band_availability.pdf",
+    "csv": "manifests/v2_0_revision/figures/09a_band_availability.csv",
+    "png_sha256": "8d4a6beef9d6ecc84653eb09efa39dd53c039108bab7f67ce004965aac1c87e9",
+    "pdf_sha256": "1f26f5d8c4686617e4412ba01ee7556730d4516d227da3650ddd214a08e7497c"
+  },
+  "09b_wise_states": {
+    "name": "09b_wise_states",
+    "section": "main",
+    "model": "measurement states",
+    "reference": "none",
+    "split": "weighted parent",
+    "caption": "Five states retain missing, invalid and quality failure apart from signed weak and high-S/N measurements. Joint W1-only/W2-only/both/neither in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 14,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/09b_wise_states.png",
+    "pdf": "figures/v2_0_revision/main/09b_wise_states.pdf",
+    "csv": "manifests/v2_0_revision/figures/09b_wise_states.csv",
+    "png_sha256": "30822848babe91037de7f3b617f0c21454b5135f347eb92d421f7c1b0418cdae",
+    "pdf_sha256": "ab8ba9c28b72b7532666dd4733d2905d9e7d76e05dd9212c5377254663b93a06"
+  },
+  "09c_joint_states": {
+    "name": "09c_joint_states",
+    "section": "main",
+    "model": "measurement states",
+    "reference": "none",
+    "split": "weighted parent",
+    "caption": "Independent per-band measurement availability; quality failures remain excluded. Original weighted parent, not exact deployment routing.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 8,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/09c_joint_states.png",
+    "pdf": "figures/v2_0_revision/main/09c_joint_states.pdf",
+    "csv": "manifests/v2_0_revision/figures/09c_joint_states.csv",
+    "png_sha256": "8332c27f7f637065f53e15c25b6d09a36d9f98564e71d9a7d1e12339622205a9",
+    "pdf_sha256": "f50a535baa2b5cce64f4bd428706c9f3b69f924adeb9446fc7357f9c01064c49"
+  },
+  "10a_experiment_tradeoffs": {
+    "name": "10a_experiment_tradeoffs",
+    "section": "main",
+    "model": "paired experiments",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Each experiment has its own matched identities, training controls and N in CSV. These are not a continuous version ranking. r0 preserves max_features0.75, changing realized split candidates1\u21922.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 17,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/10a_experiment_tradeoffs.png",
+    "pdf": "figures/v2_0_revision/main/10a_experiment_tradeoffs.pdf",
+    "csv": "manifests/v2_0_revision/figures/10a_experiment_tradeoffs.csv",
+    "png_sha256": "5ee6fe1e943b5599187526a62a4b961261cc859f95c9b447640d33350e1ed625",
+    "pdf_sha256": "23e85a8fbc300e05a19b976f22d8d4f6edd4d57c42a4dd281e083f7d0b5f117e"
+  },
+  "10c_interval_tradeoffs": {
+    "name": "10c_interval_tradeoffs",
+    "section": "main",
+    "model": "paired experiments",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Paired data/i/r0 effects on reference-point coverage and width are displayed together. Each has its own fixed sample.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 15,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/10c_interval_tradeoffs.png",
+    "pdf": "figures/v2_0_revision/main/10c_interval_tradeoffs.pdf",
+    "csv": "manifests/v2_0_revision/figures/10c_interval_tradeoffs.csv",
+    "png_sha256": "d0fc58777958c0735d39bd201a1cb22884f71c8925ca46da4019bdc4f191fc63",
+    "pdf_sha256": "470600ee1250a58cde5cb52a5ca4f6770a98e2825dc8b6e8936d136936b72efd"
+  },
+  "10b_high_snr_information": {
+    "name": "10b_high_snr_information",
+    "section": "main",
+    "model": "baseline_v1 matched bands",
+    "reference": "chosen",
+    "split": "old development test",
+    "caption": "Existing v1 A_on_B/B and A_on_C/B_on_C/C matched training and source controls. Original specific model identifiers retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 5,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/10b_high_snr_information.png",
+    "pdf": "figures/v2_0_revision/main/10b_high_snr_information.pdf",
+    "csv": "manifests/v2_0_revision/figures/10b_high_snr_information.csv",
+    "png_sha256": "ae583601e843a5a986c4373b173812d642c9bfea326127abdf9b2443cf89b412",
+    "pdf_sha256": "a8957ad40a71407dc29cd253ed2c86714ab4cbfd1f7c571cdc383c031d7ca103"
+  },
+  "03_distance_dwarf": {
+    "name": "03_distance_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "Gaia/specdis/spdist",
+    "split": "development_test",
+    "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Gaia_distance",
+        "eligible": 2898,
+        "finite": 2898,
+        "missing": 0,
+        "plotted": 2898,
+        "outside": 0,
+        "x_range": [
+          0.04992903858932285,
+          5.1809857431982635
+        ],
+        "y_range": [
+          0.04992903858932285,
+          5.1809857431982635
+        ]
+      },
+      {
+        "panel": "Gaia_Full linear residual",
+        "eligible": 2898,
+        "finite": 2898,
+        "missing": 0,
+        "plotted": 2898,
+        "outside": 0,
+        "x_range": [
+          0.04992903858932285,
+          5.1809857431982635
+        ],
+        "y_range": [
+          -67.41413134541699,
+          480.5976124346945
+        ]
+      },
+      {
+        "panel": "Gaia_Central linear residual",
+        "eligible": 2898,
+        "finite": 2898,
+        "missing": 0,
+        "plotted": 2894,
+        "outside": 4,
+        "x_range": [
+          0.04992903858932285,
+          5.1809857431982635
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "Gaia_Full equal-width histogram",
+        "eligible": 2898,
+        "finite": 2898,
+        "missing": 0,
+        "plotted": 2898,
+        "outside": 0
+      },
+      {
+        "panel": "Gaia_Central 2 percentage-point histogram",
+        "eligible": 2898,
+        "finite": 2898,
+        "missing": 0,
+        "plotted": 2894,
+        "outside": 4
+      },
+      {
+        "panel": "specdis_distance",
+        "eligible": 32391,
+        "finite": 32391,
+        "missing": 0,
+        "plotted": 32391,
+        "outside": 0,
+        "x_range": [
+          0.04361105849076354,
+          44.96011496296207
+        ],
+        "y_range": [
+          0.04361105849076354,
+          44.96011496296207
+        ]
+      },
+      {
+        "panel": "specdis_Full linear residual",
+        "eligible": 32391,
+        "finite": 32391,
+        "missing": 0,
+        "plotted": 32391,
+        "outside": 0,
+        "x_range": [
+          0.04361105849076354,
+          44.96011496296207
+        ],
+        "y_range": [
+          -111.05500049654407,
+          804.9650642752905
+        ]
+      },
+      {
+        "panel": "specdis_Central linear residual",
+        "eligible": 32391,
+        "finite": 32391,
+        "missing": 0,
+        "plotted": 32196,
+        "outside": 195,
+        "x_range": [
+          0.04361105849076354,
+          44.96011496296207
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "specdis_Full equal-width histogram",
+        "eligible": 32391,
+        "finite": 32391,
+        "missing": 0,
+        "plotted": 32391,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_Central 2 percentage-point histogram",
+        "eligible": 32391,
+        "finite": 32391,
+        "missing": 0,
+        "plotted": 32196,
+        "outside": 195
+      },
+      {
+        "panel": "spdist_distance",
+        "eligible": 26313,
+        "finite": 26313,
+        "missing": 0,
+        "plotted": 26313,
+        "outside": 0,
+        "x_range": [
+          0.18656465857629762,
+          28.167273423438772
+        ],
+        "y_range": [
+          0.18656465857629762,
+          28.167273423438772
+        ]
+      },
+      {
+        "panel": "spdist_Full linear residual",
+        "eligible": 26313,
+        "finite": 26313,
+        "missing": 0,
+        "plotted": 26313,
+        "outside": 0,
+        "x_range": [
+          0.18656465857629762,
+          28.167273423438772
+        ],
+        "y_range": [
+          -88.96777906337101,
+          774.9194846591264
+        ]
+      },
+      {
+        "panel": "spdist_Central linear residual",
+        "eligible": 26313,
+        "finite": 26313,
+        "missing": 0,
+        "plotted": 26133,
+        "outside": 180,
+        "x_range": [
+          0.18656465857629762,
+          28.167273423438772
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "spdist_Full equal-width histogram",
+        "eligible": 26313,
+        "finite": 26313,
+        "missing": 0,
+        "plotted": 26313,
+        "outside": 0
+      },
+      {
+        "panel": "spdist_Central 2 percentage-point histogram",
+        "eligible": 26313,
+        "finite": 26313,
+        "missing": 0,
+        "plotted": 26133,
+        "outside": 180
+      }
+    ],
+    "statistics_records": 6949,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/03_distance_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/03_distance_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/03_distance_dwarf.csv",
+    "png_sha256": "f38c1696edef9868a55b28b90a98e65fe032510caeaaab0393d3ba5450bc6a41",
+    "pdf_sha256": "539d4ab3691f4baff91886891a797cd5751d3d6e77ba9a533f42190ecd8e8213"
+  },
+  "04_cmd_dwarf": {
+    "name": "04_cmd_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same 32,719 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference CMD",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          0.04960722103714943,
+          1.7965364456176758
+        ],
+        "y_range": [
+          0.6048716873810687,
+          16.738462068746976
+        ]
+      },
+      {
+        "panel": "Predicted CMD",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          0.04960722103714943,
+          1.7965364456176758
+        ],
+        "y_range": [
+          0.6048716873810687,
+          16.738462068746976
+        ]
+      },
+      {
+        "panel": "Median signed residual [%]",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 215,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 215,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      }
+    ],
+    "statistics_records": 1387,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/04_cmd_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/04_cmd_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/04_cmd_dwarf.csv",
+    "png_sha256": "73159a361a012dfdb216b62e80d00701c66e3b7f62423ae84902b057402e4550",
+    "pdf_sha256": "746a3ccb2e86d8db718f46d6ebc48ebbec0983fcb732dfc16b2a383b6d376566"
+  },
+  "03_distance_evolved": {
+    "name": "03_distance_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "Gaia/specdis/spdist",
+    "split": "development_test",
+    "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Gaia",
+        "eligible": 1269,
+        "finite": 0,
+        "missing": 1269,
+        "plotted": 0,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_distance",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          0.05560956100914578,
+          400.8067987785408
+        ],
+        "y_range": [
+          0.05560956100914578,
+          400.8067987785408
+        ]
+      },
+      {
+        "panel": "specdis_Full linear residual",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          0.05560956100914578,
+          400.8067987785408
+        ],
+        "y_range": [
+          -107.09213439142763,
+          162.13393433442934
+        ]
+      },
+      {
+        "panel": "specdis_Central linear residual",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1161,
+        "outside": 2,
+        "x_range": [
+          0.05560956100914578,
+          400.8067987785408
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "specdis_Full equal-width histogram",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_Central 2 percentage-point histogram",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1161,
+        "outside": 2
+      },
+      {
+        "panel": "spdist_distance",
+        "eligible": 1026,
+        "finite": 1026,
+        "missing": 0,
+        "plotted": 1026,
+        "outside": 0,
+        "x_range": [
+          0.057788035156758885,
+          107.143187834303
+        ],
+        "y_range": [
+          0.057788035156758885,
+          107.143187834303
+        ]
+      },
+      {
+        "panel": "spdist_Full linear residual",
+        "eligible": 1026,
+        "finite": 1026,
+        "missing": 0,
+        "plotted": 1026,
+        "outside": 0,
+        "x_range": [
+          0.057788035156758885,
+          107.143187834303
+        ],
+        "y_range": [
+          -102.99666778499187,
+          21.731276950463712
+        ]
+      },
+      {
+        "panel": "spdist_Central linear residual",
+        "eligible": 1026,
+        "finite": 1026,
+        "missing": 0,
+        "plotted": 1026,
+        "outside": 0,
+        "x_range": [
+          0.057788035156758885,
+          107.143187834303
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "spdist_Full equal-width histogram",
+        "eligible": 1026,
+        "finite": 1026,
+        "missing": 0,
+        "plotted": 1026,
+        "outside": 0
+      },
+      {
+        "panel": "spdist_Central 2 percentage-point histogram",
+        "eligible": 1026,
+        "finite": 1026,
+        "missing": 0,
+        "plotted": 1026,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 1979,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/03_distance_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/03_distance_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/03_distance_evolved.csv",
+    "png_sha256": "666fc4916b3f7537565bd07fec26d5b0ef6323fc44ae3794d25a976fd563be67",
+    "pdf_sha256": "05323741a29d5f683e9f775085e0cd075dd7b64a4252631dea87383a4d6ca7f7"
+  },
+  "04_cmd_evolved": {
+    "name": "04_cmd_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same 1,163 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference CMD",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          -0.1070835292339325,
+          1.5238678455352783
+        ],
+        "y_range": [
+          -3.599687586671889,
+          12.372755531339326
+        ]
+      },
+      {
+        "panel": "Predicted CMD",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          -0.1070835292339325,
+          1.5238678455352783
+        ],
+        "y_range": [
+          -3.599687586671889,
+          12.372755531339326
+        ]
+      },
+      {
+        "panel": "Median signed residual [%]",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 215,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 215,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 807,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/04_cmd_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/04_cmd_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/04_cmd_evolved.csv",
+    "png_sha256": "c0f92dbba0cc81bed33b203d47331bc4ec6b326922c1bb64aa752ae23552fa33",
+    "pdf_sha256": "248f61b343c2afd439077dc33a8ad8780a0ec0c89b375547e1aaf3bf2358eead"
+  },
+  "03_distance_other": {
+    "name": "03_distance_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "Gaia/specdis/spdist",
+    "split": "development_test",
+    "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Gaia_distance",
+        "eligible": 98,
+        "finite": 98,
+        "missing": 0,
+        "plotted": 98,
+        "outside": 0,
+        "x_range": [
+          0.14722405361890598,
+          2.0032902586231662
+        ],
+        "y_range": [
+          0.14722405361890598,
+          2.0032902586231662
+        ]
+      },
+      {
+        "panel": "Gaia_Full linear residual",
+        "eligible": 98,
+        "finite": 98,
+        "missing": 0,
+        "plotted": 98,
+        "outside": 0,
+        "x_range": [
+          0.14722405361890598,
+          2.0032902586231662
+        ],
+        "y_range": [
+          -45.615055527000344,
+          56.40244205220922
+        ]
+      },
+      {
+        "panel": "Gaia_Central linear residual",
+        "eligible": 98,
+        "finite": 98,
+        "missing": 0,
+        "plotted": 98,
+        "outside": 0,
+        "x_range": [
+          0.14722405361890598,
+          2.0032902586231662
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "Gaia_Full equal-width histogram",
+        "eligible": 98,
+        "finite": 98,
+        "missing": 0,
+        "plotted": 98,
+        "outside": 0
+      },
+      {
+        "panel": "Gaia_Central 2 percentage-point histogram",
+        "eligible": 98,
+        "finite": 98,
+        "missing": 0,
+        "plotted": 98,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_distance",
+        "eligible": 6399,
+        "finite": 6399,
+        "missing": 0,
+        "plotted": 6399,
+        "outside": 0,
+        "x_range": [
+          0.06944538915970468,
+          211.13544869153992
+        ],
+        "y_range": [
+          0.06944538915970468,
+          211.13544869153992
+        ]
+      },
+      {
+        "panel": "specdis_Full linear residual",
+        "eligible": 6399,
+        "finite": 6399,
+        "missing": 0,
+        "plotted": 6399,
+        "outside": 0,
+        "x_range": [
+          0.06944538915970468,
+          211.13544869153992
+        ],
+        "y_range": [
+          -119.58880749910321,
+          606.8618605316706
+        ]
+      },
+      {
+        "panel": "specdis_Central linear residual",
+        "eligible": 6399,
+        "finite": 6399,
+        "missing": 0,
+        "plotted": 6358,
+        "outside": 41,
+        "x_range": [
+          0.06944538915970468,
+          211.13544869153992
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "specdis_Full equal-width histogram",
+        "eligible": 6399,
+        "finite": 6399,
+        "missing": 0,
+        "plotted": 6399,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_Central 2 percentage-point histogram",
+        "eligible": 6399,
+        "finite": 6399,
+        "missing": 0,
+        "plotted": 6358,
+        "outside": 41
+      },
+      {
+        "panel": "spdist_distance",
+        "eligible": 5117,
+        "finite": 5117,
+        "missing": 0,
+        "plotted": 5117,
+        "outside": 0,
+        "x_range": [
+          0.07136258283630106,
+          82.88880380979958
+        ],
+        "y_range": [
+          0.07136258283630106,
+          82.88880380979958
+        ]
+      },
+      {
+        "panel": "spdist_Full linear residual",
+        "eligible": 5117,
+        "finite": 5117,
+        "missing": 0,
+        "plotted": 5117,
+        "outside": 0,
+        "x_range": [
+          0.07136258283630106,
+          82.88880380979958
+        ],
+        "y_range": [
+          -118.6397904520273,
+          583.7789583057414
+        ]
+      },
+      {
+        "panel": "spdist_Central linear residual",
+        "eligible": 5117,
+        "finite": 5117,
+        "missing": 0,
+        "plotted": 5083,
+        "outside": 34,
+        "x_range": [
+          0.07136258283630106,
+          82.88880380979958
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "spdist_Full equal-width histogram",
+        "eligible": 5117,
+        "finite": 5117,
+        "missing": 0,
+        "plotted": 5117,
+        "outside": 0
+      },
+      {
+        "panel": "spdist_Central 2 percentage-point histogram",
+        "eligible": 5117,
+        "finite": 5117,
+        "missing": 0,
+        "plotted": 5083,
+        "outside": 34
+      }
+    ],
+    "statistics_records": 4907,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/03_distance_other.png",
+    "pdf": "figures/v2_0_revision/appendix/03_distance_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/03_distance_other.csv",
+    "png_sha256": "852520288283b53886c6124786e5cee90a81aa56361c8e08d5d72e02027f7e01",
+    "pdf_sha256": "b9a57e9ffec30e6b7fc707805bee83395aabd7ca85f688f64ce6df3ea075575d"
+  },
+  "04_cmd_other": {
+    "name": "04_cmd_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same 6,408 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference CMD",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          -0.39944571256637573,
+          1.556540608406067
+        ],
+        "y_range": [
+          -1.9715871900446469,
+          13.18569558945902
+        ]
+      },
+      {
+        "panel": "Predicted CMD",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          -0.39944571256637573,
+          1.556540608406067
+        ],
+        "y_range": [
+          -1.9715871900446469,
+          13.18569558945902
+        ]
+      },
+      {
+        "panel": "Median signed residual [%]",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 347,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 347,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      }
+    ],
+    "statistics_records": 1443,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/04_cmd_other.png",
+    "pdf": "figures/v2_0_revision/appendix/04_cmd_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/04_cmd_other.csv",
+    "png_sha256": "0d1dbd66b727c43a59fde4305ff33c7f6b4287d820193924b503cf5f111893c8",
+    "pdf_sha256": "0c4f92fb43956cbf7694f50efc714b93f45df23d6b0d4c62b7f8eeeb250e57d0"
+  },
+  "03_distance_unknown": {
+    "name": "03_distance_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "Gaia/specdis/spdist",
+    "split": "development_test",
+    "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Gaia_distance",
+        "eligible": 211,
+        "finite": 211,
+        "missing": 0,
+        "plotted": 211,
+        "outside": 0,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ]
+      },
+      {
+        "panel": "Gaia_Full linear residual",
+        "eligible": 211,
+        "finite": 211,
+        "missing": 0,
+        "plotted": 211,
+        "outside": 0,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          -436.4071207979115,
+          12893.289916392272
+        ]
+      },
+      {
+        "panel": "Gaia_Central linear residual",
+        "eligible": 211,
+        "finite": 211,
+        "missing": 0,
+        "plotted": 158,
+        "outside": 53,
+        "x_range": [
+          0.027378993002471038,
+          20.119117544527406
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "Gaia_Full equal-width histogram",
+        "eligible": 211,
+        "finite": 211,
+        "missing": 0,
+        "plotted": 211,
+        "outside": 0
+      },
+      {
+        "panel": "Gaia_Central 2 percentage-point histogram",
+        "eligible": 211,
+        "finite": 211,
+        "missing": 0,
+        "plotted": 158,
+        "outside": 53
+      },
+      {
+        "panel": "specdis_distance",
+        "eligible": 7382,
+        "finite": 7382,
+        "missing": 0,
+        "plotted": 7382,
+        "outside": 0,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ]
+      },
+      {
+        "panel": "specdis_Full linear residual",
+        "eligible": 7382,
+        "finite": 7382,
+        "missing": 0,
+        "plotted": 7382,
+        "outside": 0,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          -566.7611009266867,
+          15949.597058245665
+        ]
+      },
+      {
+        "panel": "specdis_Central linear residual",
+        "eligible": 7382,
+        "finite": 7382,
+        "missing": 0,
+        "plotted": 7185,
+        "outside": 197,
+        "x_range": [
+          0.03081089673947909,
+          1629.8716786935804
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "specdis_Full equal-width histogram",
+        "eligible": 7382,
+        "finite": 7382,
+        "missing": 0,
+        "plotted": 7382,
+        "outside": 0
+      },
+      {
+        "panel": "specdis_Central 2 percentage-point histogram",
+        "eligible": 7382,
+        "finite": 7382,
+        "missing": 0,
+        "plotted": 7185,
+        "outside": 197
+      },
+      {
+        "panel": "spdist_distance",
+        "eligible": 4861,
+        "finite": 4861,
+        "missing": 0,
+        "plotted": 4861,
+        "outside": 0,
+        "x_range": [
+          0.16997398677995798,
+          257.4900736290773
+        ],
+        "y_range": [
+          0.16997398677995798,
+          257.4900736290773
+        ]
+      },
+      {
+        "panel": "spdist_Full linear residual",
+        "eligible": 4861,
+        "finite": 4861,
+        "missing": 0,
+        "plotted": 4861,
+        "outside": 0,
+        "x_range": [
+          0.16997398677995798,
+          257.4900736290773
+        ],
+        "y_range": [
+          -121.27148996739558,
+          699.7897867619336
+        ]
+      },
+      {
+        "panel": "spdist_Central linear residual",
+        "eligible": 4861,
+        "finite": 4861,
+        "missing": 0,
+        "plotted": 4800,
+        "outside": 61,
+        "x_range": [
+          0.16997398677995798,
+          257.4900736290773
+        ],
+        "y_range": [
+          -100.0,
+          100.0
+        ]
+      },
+      {
+        "panel": "spdist_Full equal-width histogram",
+        "eligible": 4861,
+        "finite": 4861,
+        "missing": 0,
+        "plotted": 4861,
+        "outside": 0
+      },
+      {
+        "panel": "spdist_Central 2 percentage-point histogram",
+        "eligible": 4861,
+        "finite": 4861,
+        "missing": 0,
+        "plotted": 4800,
+        "outside": 61
+      }
+    ],
+    "statistics_records": 5047,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/03_distance_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/03_distance_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/03_distance_unknown.csv",
+    "png_sha256": "f178ada35f06fae4816c41f24ab1d77f916f5efee2526032f00f8ef3cf5b2c0b",
+    "pdf_sha256": "635cd2b49cc5163a19aa11833b7ab5c3c22d261b05597095f5d5bc5bbf51a9dc"
+  },
+  "04_cmd_unknown": {
+    "name": "04_cmd_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Same 7,466 objects, expanded_A chosen references. Mg_phot-Mg_ref=-delta_mu. Both CMD coordinates and residuals share distance estimates; associations do not establish physical causes.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference CMD",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -6.18995681428162,
+          20.663812025140352
+        ]
+      },
+      {
+        "panel": "Predicted CMD",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -6.18995681428162,
+          20.663812025140352
+        ]
+      },
+      {
+        "panel": "Median signed residual [%]",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "low_occupancy_cells": 340,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 237,
+        "zero_residuals": 0,
+        "below_absolute_scale": 266
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "low_occupancy_cells": 340,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 237,
+        "zero_residuals": 0,
+        "below_absolute_scale": 266
+      }
+    ],
+    "statistics_records": 1471,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/04_cmd_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/04_cmd_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/04_cmd_unknown.csv",
+    "png_sha256": "6b72cd8ff1627bc8b4ee31cf7f8912d0f833083b5f0e122f541b5f8f16089149",
+    "pdf_sha256": "d36ae6b2a33fe0055870d642c2dc204c2e020e0cf4121d4ebe3e9b7c851fceb3"
+  },
+  "05_colors_grz_dwarf": {
+    "name": "05_colors_grz_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grz coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          0.04960722103714943,
+          1.7965364456176758
+        ],
+        "y_range": [
+          -0.20690616965293884,
+          3.1809003353118896
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 110,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 110,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      }
+    ],
+    "statistics_records": 684,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grz_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grz_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grz_dwarf.csv",
+    "png_sha256": "dde51c7e25cf991ebd00313703232078721d871b5fc55ed642bcd7eb831b4c5a",
+    "pdf_sha256": "2a9b632532615b238201d48febdcae6e4b917a99408b78e10987a3fd57cc4a16"
+  },
+  "05_colors_grz_evolved": {
+    "name": "05_colors_grz_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grz coordinates, giant reference; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          -0.1070835292339325,
+          1.5238678455352783
+        ],
+        "y_range": [
+          -0.45905670523643494,
+          1.3437002897262573
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 73,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 73,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 267,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grz_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grz_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grz_evolved.csv",
+    "png_sha256": "f8731562a4883b8060bead0c4877c387549a9cfdd8a1f4b2321b81d3e49bf777",
+    "pdf_sha256": "6dab0ea891851c22ddb29609c9d69f2eaf1df0df1a7cc23b88d04b93ede53b31"
+  },
+  "05_colors_grz_other": {
+    "name": "05_colors_grz_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grz coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          -0.39944571256637573,
+          1.556540608406067
+        ],
+        "y_range": [
+          -0.526978075504303,
+          2.0641655921936035
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 118,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 118,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      }
+    ],
+    "statistics_records": 456,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grz_other.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grz_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grz_other.csv",
+    "png_sha256": "3755677b7f6e4439344df3cbdd2c7766ae9e9d140c4aa60b92e7ca95c3f1373a",
+    "pdf_sha256": "4564386384fcaab38046a61124fc3a327b0532b65c28f9c94d04b94400181d21"
+  },
+  "05_colors_grz_unknown": {
+    "name": "05_colors_grz_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grz coordinates, no reliable spectral class; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "x_range": [
+          -0.6633122563362122,
+          2.3359215259552
+        ],
+        "y_range": [
+          -0.8983608484268188,
+          4.4139790534973145
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "low_occupancy_cells": 125,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 237,
+        "zero_residuals": 0,
+        "below_absolute_scale": 266
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 7466,
+        "finite": 7466,
+        "missing": 0,
+        "plotted": 7466,
+        "outside": 0,
+        "low_occupancy_cells": 125,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 237,
+        "zero_residuals": 0,
+        "below_absolute_scale": 266
+      }
+    ],
+    "statistics_records": 549,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grz_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grz_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grz_unknown.csv",
+    "png_sha256": "81533ed0118580aee5342c6dfe74c8460e198db8b813ba3709bd41d553daddac",
+    "pdf_sha256": "2e655ed207b4c58e6465bcfde016d71155d41fcedaeb640dc8ae306547c78c42"
+  },
+  "05_colors_grW1_all": {
+    "name": "05_colors_grW1_all",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grW1 coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 47756,
+        "finite": 42786,
+        "missing": 4970,
+        "plotted": 42786,
+        "outside": 0,
+        "x_range": [
+          -0.6255237460136414,
+          2.3348209857940674
+        ],
+        "y_range": [
+          -3.1747976612666036,
+          1.8817079715944849
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 47756,
+        "finite": 42786,
+        "missing": 4970,
+        "plotted": 42786,
+        "outside": 0,
+        "low_occupancy_cells": 255,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 351,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2689
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 47756,
+        "finite": 42786,
+        "missing": 4970,
+        "plotted": 42786,
+        "outside": 0,
+        "low_occupancy_cells": 255,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 351,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2689
+      }
+    ],
+    "statistics_records": 1026,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grW1_all.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grW1_all.csv",
+    "png_sha256": "10e0ae0b2e1c96cadef4e38fa90fd76b6c499286a598535ec44057abbfac0898",
+    "pdf_sha256": "17895827c923d59ce04a08ca44ac6dadf0def8cd1d34ee158c445b4f194b0dd6"
+  },
+  "05_colors_grW1_dwarf": {
+    "name": "05_colors_grW1_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grW1 coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 32719,
+        "finite": 30266,
+        "missing": 2453,
+        "plotted": 30266,
+        "outside": 0,
+        "x_range": [
+          0.05091562494635582,
+          1.796498417854309
+        ],
+        "y_range": [
+          -2.381900568956171,
+          0.7918519390356753
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 32719,
+        "finite": 30266,
+        "missing": 2453,
+        "plotted": 30266,
+        "outside": 0,
+        "low_occupancy_cells": 252,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 165,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2306
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 32719,
+        "finite": 30266,
+        "missing": 2453,
+        "plotted": 30266,
+        "outside": 0,
+        "low_occupancy_cells": 252,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 165,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2306
+      }
+    ],
+    "statistics_records": 1119,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grW1_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grW1_dwarf.csv",
+    "png_sha256": "44032d9eb7f7ae84de1d6210653b29d4267503b6386bc17042c5b019a15d035e",
+    "pdf_sha256": "d093cc9366348aec9d03202f7fc1269df4c3670d9f2e76939ac6e2fefb93bed3"
+  },
+  "05_colors_grW1_evolved": {
+    "name": "05_colors_grW1_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grW1 coordinates, giant reference; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 1163,
+        "finite": 1075,
+        "missing": 88,
+        "plotted": 1075,
+        "outside": 0,
+        "x_range": [
+          -0.10619272291660309,
+          1.4932833909988403
+        ],
+        "y_range": [
+          -2.0568471963112938,
+          -0.3398308877188097
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 1163,
+        "finite": 1075,
+        "missing": 88,
+        "plotted": 1075,
+        "outside": 0,
+        "low_occupancy_cells": 144,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 1163,
+        "finite": 1075,
+        "missing": 88,
+        "plotted": 1075,
+        "outside": 0,
+        "low_occupancy_cells": 144,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 480,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grW1_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grW1_evolved.csv",
+    "png_sha256": "720853e37e5413a8c1631e4b04ffd1826a46ab3d9976ee467db2b62b3c94fe69",
+    "pdf_sha256": "0dd9a9531e48a0596d1e7572db01da2050ba983c1f111f2b43974e2b17427bce"
+  },
+  "05_colors_grW1_other": {
+    "name": "05_colors_grW1_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grW1 coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 6408,
+        "finite": 5717,
+        "missing": 691,
+        "plotted": 5717,
+        "outside": 0,
+        "x_range": [
+          -0.39944571256637573,
+          1.556540608406067
+        ],
+        "y_range": [
+          -2.590355597254299,
+          0.42764574406499034
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 6408,
+        "finite": 5717,
+        "missing": 691,
+        "plotted": 5717,
+        "outside": 0,
+        "low_occupancy_cells": 212,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 27,
+        "zero_residuals": 0,
+        "below_absolute_scale": 167
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 6408,
+        "finite": 5717,
+        "missing": 691,
+        "plotted": 5717,
+        "outside": 0,
+        "low_occupancy_cells": 212,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 27,
+        "zero_residuals": 0,
+        "below_absolute_scale": 167
+      }
+    ],
+    "statistics_records": 777,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grW1_other.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grW1_other.csv",
+    "png_sha256": "a3c90a11977f43ac09b0aa4ed351f27dbd1ed213620ca21fe8a4f344e7ea30d4",
+    "pdf_sha256": "e315efa04fa7004270899f6969996c92de4bc4b1412bed80ccc04b11e927d8f7"
+  },
+  "05_colors_grW1_unknown": {
+    "name": "05_colors_grW1_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in grW1 coordinates, no reliable spectral class; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 7466,
+        "finite": 5728,
+        "missing": 1738,
+        "plotted": 5728,
+        "outside": 0,
+        "x_range": [
+          -0.6255237460136414,
+          2.3348209857940674
+        ],
+        "y_range": [
+          -3.1747976612666036,
+          1.8817079715944849
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 7466,
+        "finite": 5728,
+        "missing": 1738,
+        "plotted": 5728,
+        "outside": 0,
+        "low_occupancy_cells": 251,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 158,
+        "zero_residuals": 0,
+        "below_absolute_scale": 215
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 7466,
+        "finite": 5728,
+        "missing": 1738,
+        "plotted": 5728,
+        "outside": 0,
+        "low_occupancy_cells": 251,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 158,
+        "zero_residuals": 0,
+        "below_absolute_scale": 215
+      }
+    ],
+    "statistics_records": 933,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_grW1_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_grW1_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_grW1_unknown.csv",
+    "png_sha256": "4b1061b4d1c5c36ddacf907cff19af851ce4fb99522404673bc7b4f4da7b4219",
+    "pdf_sha256": "0109eb59f985cb673c22da77d95d6d9a76c139b8e668a81587e1aaf0131177ab"
+  },
+  "05_colors_WISE_all": {
+    "name": "05_colors_WISE_all",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in WISE coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 47756,
+        "finite": 37752,
+        "missing": 10004,
+        "plotted": 37752,
+        "outside": 0,
+        "x_range": [
+          -2.884104942111802,
+          1.8732411933666753
+        ],
+        "y_range": [
+          -1.6840240103934805,
+          1.9721799259743074
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 47756,
+        "finite": 37752,
+        "missing": 10004,
+        "plotted": 37752,
+        "outside": 0,
+        "low_occupancy_cells": 232,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 236,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2511
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 47756,
+        "finite": 37752,
+        "missing": 10004,
+        "plotted": 37752,
+        "outside": 0,
+        "low_occupancy_cells": 232,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 236,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2511
+      }
+    ],
+    "statistics_records": 987,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_WISE_all.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_WISE_all.csv",
+    "png_sha256": "1cea7ef2c487a3fd5f3bf53f8c73288c6ebc006a55a7afa34826ec24016974d4",
+    "pdf_sha256": "262479a434ec0bb46eba06265db55f3695630fe9230a027a448f7c710f9e0b70"
+  },
+  "05_colors_WISE_dwarf": {
+    "name": "05_colors_WISE_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in WISE coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 32719,
+        "finite": 28687,
+        "missing": 4032,
+        "plotted": 28687,
+        "outside": 0,
+        "x_range": [
+          -2.1740872859816203,
+          0.7857991249684554
+        ],
+        "y_range": [
+          -1.6552612128349973,
+          0.9846572097997176
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 32719,
+        "finite": 28687,
+        "missing": 4032,
+        "plotted": 28687,
+        "outside": 0,
+        "low_occupancy_cells": 246,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 149,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2232
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 32719,
+        "finite": 28687,
+        "missing": 4032,
+        "plotted": 28687,
+        "outside": 0,
+        "low_occupancy_cells": 246,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 149,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2232
+      }
+    ],
+    "statistics_records": 1140,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_WISE_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_WISE_dwarf.csv",
+    "png_sha256": "24a6128f127d10029220dc5512bec25555e7c9bd7f9ec2f605b584729c0a7fd0",
+    "pdf_sha256": "1997358b0c50b35e37f86400cc6eb7a245a1b0f332930abe597b60c55958fa8c"
+  },
+  "05_colors_WISE_evolved": {
+    "name": "05_colors_WISE_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in WISE coordinates, giant reference; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 1163,
+        "finite": 1019,
+        "missing": 144,
+        "plotted": 1019,
+        "outside": 0,
+        "x_range": [
+          -1.8571351582961142,
+          -0.34564774319498
+        ],
+        "y_range": [
+          -1.3477369114093287,
+          0.030267157351176764
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 1163,
+        "finite": 1019,
+        "missing": 144,
+        "plotted": 1019,
+        "outside": 0,
+        "low_occupancy_cells": 257,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 1163,
+        "finite": 1019,
+        "missing": 144,
+        "plotted": 1019,
+        "outside": 0,
+        "low_occupancy_cells": 257,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 786,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_WISE_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_WISE_evolved.csv",
+    "png_sha256": "b7af4309aaec74b034d7e2cb5cb8fd769a0535bb5d931f164e3e86c7fba993fb",
+    "pdf_sha256": "fe8f5ac55f655efbe91d922feb90b88aa249cbd90a50365447d0559a6955857e"
+  },
+  "05_colors_WISE_other": {
+    "name": "05_colors_WISE_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in WISE coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 6408,
+        "finite": 4644,
+        "missing": 1764,
+        "plotted": 4644,
+        "outside": 0,
+        "x_range": [
+          -2.538859172332841,
+          0.42614584819349155
+        ],
+        "y_range": [
+          -1.5430347518931535,
+          0.8080802107900001
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 6408,
+        "finite": 4644,
+        "missing": 1764,
+        "plotted": 4644,
+        "outside": 0,
+        "low_occupancy_cells": 273,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 23,
+        "zero_residuals": 0,
+        "below_absolute_scale": 138
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 6408,
+        "finite": 4644,
+        "missing": 1764,
+        "plotted": 4644,
+        "outside": 0,
+        "low_occupancy_cells": 273,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 23,
+        "zero_residuals": 0,
+        "below_absolute_scale": 138
+      }
+    ],
+    "statistics_records": 987,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_WISE_other.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_WISE_other.csv",
+    "png_sha256": "ef89a7a13cdc987015f4fab7ac121e2838002ecdc437b66fd73ee9c61bb4df97",
+    "pdf_sha256": "12dfd00142f8525d4591bd3010b0427ed1c70afc6b84953e1dcfd2a6a520f89b"
+  },
+  "05_colors_WISE_unknown": {
+    "name": "05_colors_WISE_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in WISE coordinates, no reliable spectral class; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 7466,
+        "finite": 3402,
+        "missing": 4064,
+        "plotted": 3402,
+        "outside": 0,
+        "x_range": [
+          -2.884104942111802,
+          1.8732411933666753
+        ],
+        "y_range": [
+          -1.5850659963564777,
+          1.9692976537208022
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 7466,
+        "finite": 3402,
+        "missing": 4064,
+        "plotted": 3402,
+        "outside": 0,
+        "low_occupancy_cells": 219,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 63,
+        "zero_residuals": 0,
+        "below_absolute_scale": 140
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 7466,
+        "finite": 3402,
+        "missing": 4064,
+        "plotted": 3402,
+        "outside": 0,
+        "low_occupancy_cells": 219,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 63,
+        "zero_residuals": 0,
+        "below_absolute_scale": 140
+      }
+    ],
+    "statistics_records": 783,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_WISE_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_WISE_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_WISE_unknown.csv",
+    "png_sha256": "87ac83d082c1e766d1937a26172b0962df527e2eb47f95013c0d385d37317823",
+    "pdf_sha256": "5311e3a4bc31a34bfc4c7d058622c9853777244bf11433653ed2a113b801adac"
+  },
+  "05_colors_griz_all": {
+    "name": "05_colors_griz_all",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in griz coordinates, all; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 47756,
+        "finite": 43706,
+        "missing": 4050,
+        "plotted": 43706,
+        "outside": 0,
+        "x_range": [
+          -0.5050209937379488,
+          2.9690077996821067
+        ],
+        "y_range": [
+          -0.47544189247726343,
+          1.5746289944062217
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 47756,
+        "finite": 43706,
+        "missing": 4050,
+        "plotted": 43706,
+        "outside": 0,
+        "low_occupancy_cells": 132,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 427,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2740
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 47756,
+        "finite": 43706,
+        "missing": 4050,
+        "plotted": 43706,
+        "outside": 0,
+        "low_occupancy_cells": 132,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 427,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2740
+      }
+    ],
+    "statistics_records": 558,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_griz_all.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_griz_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_griz_all.csv",
+    "png_sha256": "707283a623938916cc2896b4d45c9f01139d4a8aec5185cd4a120eed2c75948d",
+    "pdf_sha256": "4e2209bb5e213548df8d4809773dde62149a90146a1fb3fa76f7de44bc191e2f"
+  },
+  "05_colors_griz_dwarf": {
+    "name": "05_colors_griz_dwarf",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in griz coordinates, dwarf; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 32719,
+        "finite": 29865,
+        "missing": 2854,
+        "plotted": 29865,
+        "outside": 0,
+        "x_range": [
+          -0.3302969853849847,
+          2.12390979867334
+        ],
+        "y_range": [
+          -0.1432544451280794,
+          0.9628596067344798
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 32719,
+        "finite": 29865,
+        "missing": 2854,
+        "plotted": 29865,
+        "outside": 0,
+        "low_occupancy_cells": 129,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 174,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2313
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 32719,
+        "finite": 29865,
+        "missing": 2854,
+        "plotted": 29865,
+        "outside": 0,
+        "low_occupancy_cells": 129,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 174,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2313
+      }
+    ],
+    "statistics_records": 594,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_griz_dwarf.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_griz_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_griz_dwarf.csv",
+    "png_sha256": "cf1860846ff27cd0e2ed105227680c2cb48b026554a2bbbc068595e3875aeae2",
+    "pdf_sha256": "106acb1e431e46a680d2594c694bc7d8174e9f257e8d2d08e907906903ccc35f"
+  },
+  "05_colors_griz_evolved": {
+    "name": "05_colors_griz_evolved",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in griz coordinates, giant reference; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 1163,
+        "finite": 1064,
+        "missing": 99,
+        "plotted": 1064,
+        "outside": 0,
+        "x_range": [
+          -0.3177744402201905,
+          0.8906153064025619
+        ],
+        "y_range": [
+          -0.22240724069259732,
+          0.6259715985376765
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 1163,
+        "finite": 1064,
+        "missing": 99,
+        "plotted": 1064,
+        "outside": 0,
+        "low_occupancy_cells": 63,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 1163,
+        "finite": 1064,
+        "missing": 99,
+        "plotted": 1064,
+        "outside": 0,
+        "low_occupancy_cells": 63,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 1,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 228,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_griz_evolved.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_griz_evolved.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_griz_evolved.csv",
+    "png_sha256": "bea1a227587ce1ecf1ed9e44d2396444bdb7b25aee8ad545d71450e4512fd601",
+    "pdf_sha256": "c28bcb86ee9b336a156833c53f989d0f4ad14f4d9c216382a5536b37aab3f508"
+  },
+  "05_colors_griz_other": {
+    "name": "05_colors_griz_other",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in griz coordinates, other; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 6408,
+        "finite": 5873,
+        "missing": 535,
+        "plotted": 5873,
+        "outside": 0,
+        "x_range": [
+          -0.3375386249052598,
+          1.4521560401850553
+        ],
+        "y_range": [
+          -0.44788002591612275,
+          0.6283382424737264
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 6408,
+        "finite": 5873,
+        "missing": 535,
+        "plotted": 5873,
+        "outside": 0,
+        "low_occupancy_cells": 108,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 37,
+        "zero_residuals": 0,
+        "below_absolute_scale": 177
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 6408,
+        "finite": 5873,
+        "missing": 535,
+        "plotted": 5873,
+        "outside": 0,
+        "low_occupancy_cells": 108,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 37,
+        "zero_residuals": 0,
+        "below_absolute_scale": 177
+      }
+    ],
+    "statistics_records": 408,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_griz_other.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_griz_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_griz_other.csv",
+    "png_sha256": "5e687b10f070990aefdd28bc920d823dee4b4810b8663fb9e29445f96f9b0074",
+    "pdf_sha256": "3d133c218c6464a78aa08e34cf0c442b8fca1edce8db7806877093af7021355b"
+  },
+  "05_colors_griz_unknown": {
+    "name": "05_colors_griz_unknown",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A optical residuals in griz coordinates, no reliable spectral class; WISE colors require state4, i colors require usable i. No negative flux-to-magnitude conversion. Full coordinate extents, N>=20 performance cells.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "density",
+        "eligible": 7466,
+        "finite": 6904,
+        "missing": 562,
+        "plotted": 6904,
+        "outside": 0,
+        "x_range": [
+          -0.5050209937379488,
+          2.9690077996821067
+        ],
+        "y_range": [
+          -0.41294152586524485,
+          1.5728085953786872
+        ]
+      },
+      {
+        "panel": "Median residual [%]",
+        "eligible": 7466,
+        "finite": 6904,
+        "missing": 562,
+        "plotted": 6904,
+        "outside": 0,
+        "low_occupancy_cells": 123,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 215,
+        "zero_residuals": 0,
+        "below_absolute_scale": 249
+      },
+      {
+        "panel": "Median absolute residual [%]",
+        "eligible": 7466,
+        "finite": 6904,
+        "missing": 562,
+        "plotted": 6904,
+        "outside": 0,
+        "low_occupancy_cells": 123,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 215,
+        "zero_residuals": 0,
+        "below_absolute_scale": 249
+      }
+    ],
+    "statistics_records": 495,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/05_colors_griz_unknown.png",
+    "pdf": "figures/v2_0_revision/appendix/05_colors_griz_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/05_colors_griz_unknown.csv",
+    "png_sha256": "200be7ddabfe838605c865da8af3277741b1957cab543ab52204978b2b651bcc",
+    "pdf_sha256": "ad1882b8cfc1641362e0b881ff1801c589c3b9914eaee8c7e48d2baecf7dd2a3"
+  },
+  "07_conditions_ref_distance": {
+    "name": "07_conditions_ref_distance",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 7466,
+        "missing": 1242,
+        "plotted": 7466,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 32719,
+        "missing": 1742,
+        "plotted": 32719,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1163,
+        "missing": 106,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6408,
+        "missing": 413,
+        "plotted": 6408,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 4970,
+        "missing": 658,
+        "plotted": 4970,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 7466,
+        "missing": 1242,
+        "plotted": 7466,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 32719,
+        "missing": 1742,
+        "plotted": 32719,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1163,
+        "missing": 106,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6408,
+        "missing": 413,
+        "plotted": 6408,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 4970,
+        "missing": 658,
+        "plotted": 4970,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 7466,
+        "missing": 1242,
+        "plotted": 7466,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 32719,
+        "missing": 1742,
+        "plotted": 32719,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1163,
+        "missing": 106,
+        "plotted": 1163,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6408,
+        "missing": 413,
+        "plotted": 6408,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 4970,
+        "missing": 658,
+        "plotted": 4970,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 150,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/07_conditions_ref_distance.png",
+    "pdf": "figures/v2_0_revision/appendix/07_conditions_ref_distance.pdf",
+    "csv": "manifests/v2_0_revision/figures/07_conditions_ref_distance.csv",
+    "png_sha256": "583fb60832e04f9613006f124048ced62867e56018a26518890c8dfb3952670e",
+    "pdf_sha256": "4f7ab28c1d080ecb773f297601d16cd1ee25957410ab03a37e1b460e24460a63"
+  },
+  "07_conditions_optical_error": {
+    "name": "07_conditions_optical_error",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 75,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/07_conditions_optical_error.png",
+    "pdf": "figures/v2_0_revision/appendix/07_conditions_optical_error.pdf",
+    "csv": "manifests/v2_0_revision/figures/07_conditions_optical_error.csv",
+    "png_sha256": "ba421734aeb4e78fe18eedd1950cfbb193a34cc64f5ec152277a7e79fb7b5c6f",
+    "pdf_sha256": "81ca22a7dc62d4aeed64e3c08593bd713e29bd7f7d5a3f7f53d459cfc2a5a0ec"
+  },
+  "07_conditions_snr_w1": {
+    "name": "07_conditions_snr_w1",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8683,
+        "outside": 25
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34460,
+        "missing": 1,
+        "plotted": 34457,
+        "outside": 3
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6816,
+        "outside": 5
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5627,
+        "missing": 1,
+        "plotted": 5594,
+        "outside": 33
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8683,
+        "outside": 25
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34460,
+        "missing": 1,
+        "plotted": 34457,
+        "outside": 3
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6816,
+        "outside": 5
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5627,
+        "missing": 1,
+        "plotted": 5594,
+        "outside": 33
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8683,
+        "outside": 25
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34460,
+        "missing": 1,
+        "plotted": 34457,
+        "outside": 3
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6816,
+        "outside": 5
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5627,
+        "missing": 1,
+        "plotted": 5594,
+        "outside": 33
+      }
+    ],
+    "statistics_records": 120,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/07_conditions_snr_w1.png",
+    "pdf": "figures/v2_0_revision/appendix/07_conditions_snr_w1.pdf",
+    "csv": "manifests/v2_0_revision/figures/07_conditions_snr_w1.csv",
+    "png_sha256": "046c9673f1f9fd471ce431bf07d34f5910e53d05add88a3d0d71a513dcfcc289",
+    "pdf_sha256": "5f35888070aae7a61aaab7c9cc92a0261a55d42f2179c95821509fd166e15ae2"
+  },
+  "07_conditions_EBV": {
+    "name": "07_conditions_EBV",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "expanded_A by class and no-W1 group. Separate markers show occupied bins; sparse layers not interpolated. Complete bin counts and percentage metrics are in CSV.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      },
+      {
+        "panel": "No reliable spectral class",
+        "eligible": 8708,
+        "finite": 8708,
+        "missing": 0,
+        "plotted": 8708,
+        "outside": 0
+      },
+      {
+        "panel": "Dwarf",
+        "eligible": 34461,
+        "finite": 34461,
+        "missing": 0,
+        "plotted": 34461,
+        "outside": 0
+      },
+      {
+        "panel": "Giant reference",
+        "eligible": 1269,
+        "finite": 1269,
+        "missing": 0,
+        "plotted": 1269,
+        "outside": 0
+      },
+      {
+        "panel": "Other qualified spectral stars",
+        "eligible": 6821,
+        "finite": 6821,
+        "missing": 0,
+        "plotted": 6821,
+        "outside": 0
+      },
+      {
+        "panel": "No W1",
+        "eligible": 5628,
+        "finite": 5628,
+        "missing": 0,
+        "plotted": 5628,
+        "outside": 0
+      }
+    ],
+    "statistics_records": 105,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/07_conditions_EBV.png",
+    "pdf": "figures/v2_0_revision/appendix/07_conditions_EBV.pdf",
+    "csv": "manifests/v2_0_revision/figures/07_conditions_EBV.csv",
+    "png_sha256": "f39ede5a9c153531fcfa07fc2d4cef040ade2bd7de3493714e15f5c78c5a67ee",
+    "pdf_sha256": "79015b2dfa0d087317c1a89c1cff2e625c9bcad6dce876f5767295bdccbc8dc9"
+  },
+  "A_flags": {
+    "name": "A_flags",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Model-state groups do not define a reliable single-distance catalog. Rows may overlap; all counts and risks retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 12,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/A_flags.png",
+    "pdf": "figures/v2_0_revision/appendix/A_flags.pdf",
+    "csv": "manifests/v2_0_revision/figures/A_flags.csv",
+    "png_sha256": "77c2ef46a17bbcb7e2a1b62a76f6d2cbc67ee3ef2ff5c531c9321d5daf78aaad",
+    "pdf_sha256": "1fe062ca2c703c3fbd7838de7207b515840120d95f5e22ac17ca9360fd608f9f"
+  },
+  "A_sky": {
+    "name": "A_sky",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Chosen test selection only. Sparse cells hatched. Per-cell solid-angle area is retained for density comparisons. No interpolation.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 9,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/A_sky.png",
+    "pdf": "figures/v2_0_revision/appendix/A_sky.pdf",
+    "csv": "manifests/v2_0_revision/figures/A_sky.csv",
+    "png_sha256": "c48841fffce84b72c9030971199b79bfb5a7b312150a9a4b052e0a251f59905c",
+    "pdf_sha256": "a4575708b2c45c6487a1efef415d92ef29742956e6ab060296249eec821baed5"
+  },
+  "A_quality_retention": {
+    "name": "A_quality_retention",
+    "section": "appendix",
+    "model": "baseline_v1",
+    "reference": "chosen",
+    "split": "old cal/test",
+    "caption": "Existing fixed v1 quality grid; no re-optimization. All-class adoption failed. Raw/calibrated intervals remain distinct in the original source.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 288,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/A_quality_retention.png",
+    "pdf": "figures/v2_0_revision/appendix/A_quality_retention.pdf",
+    "csv": "manifests/v2_0_revision/figures/A_quality_retention.csv",
+    "png_sha256": "e38f183f696f59b837519e785a1eb42d37ff6ba38ea9ae36d3a7805b3f97e1e3",
+    "pdf_sha256": "d148428b111a2a3b683c2776c279c7275a64656a74a0364f524888789465e6be"
+  },
+  "A_flux_depth_stress": {
+    "name": "A_flux_depth_stress",
+    "section": "appendix",
+    "model": "baseline_v0/v1",
+    "reference": "chosen",
+    "split": "existing depth stress",
+    "caption": "Existing fixed real-template artificial flux degradation. Stress-test sources are reused; it does not supply new faint-population truth.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 5,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/A_flux_depth_stress.png",
+    "pdf": "figures/v2_0_revision/appendix/A_flux_depth_stress.pdf",
+    "csv": "manifests/v2_0_revision/figures/A_flux_depth_stress.csv",
+    "png_sha256": "088b574b194eb510ec170d54d4b8ff1cc5877e00bb4d4a3021a25f8710c9b92f",
+    "pdf_sha256": "e205f264043ddaba4e82b45554a9ccf2a6fbd02e38a73249791f8782e1d6ead3"
+  },
+  "A_fixed_pdf_examples": {
+    "name": "A_fixed_pdf_examples",
+    "section": "appendix",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Existing four frozen PDF cases, original bin values and reference unchanged. User-visible giant terminology updated.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 1280,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/appendix/A_fixed_pdf_examples.png",
+    "pdf": "figures/v2_0_revision/appendix/A_fixed_pdf_examples.pdf",
+    "csv": "manifests/v2_0_revision/figures/A_fixed_pdf_examples.csv",
+    "png_sha256": "36f4396ae1132771517337a5bdc0669950ffe2cadd447530cdb69900a19469f6",
+    "pdf_sha256": "fb7895f89d603986004142406a326332b5989b3d7918d5796d687f288625ba58"
+  },
+  "kiel_full_all": {
+    "name": "kiel_full_all",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          0.670051259676019,
+          6.382863993219779
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "low_occupancy_cells": 241,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      },
+      {
+        "panel": "absolute",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "low_occupancy_cells": 241,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      }
+    ],
+    "statistics_records": 1161,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_full_all.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_full_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_full_all.csv",
+    "png_sha256": "d1b99d707779c7ca306254a5df38478146388c598e920c0f860d7bd27a3af224",
+    "pdf_sha256": "d8ca8173cfd9455eb0720489934d4e291c9f4f40411134196528986c5d0d9f0f"
+  },
+  "kiel_body_all": {
+    "name": "kiel_body_all",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40201,
+        "outside": 89,
+        "x_range": [
+          3000.0,
+          8000.0
+        ],
+        "y_range": [
+          0.0,
+          5.5
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40201,
+        "outside": 89,
+        "low_occupancy_cells": 429,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      },
+      {
+        "panel": "absolute",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40201,
+        "outside": 89,
+        "low_occupancy_cells": 429,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      }
+    ],
+    "statistics_records": 2121,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_body_all.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_body_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_body_all.csv",
+    "png_sha256": "0a5a3a1898b78330dc0fa78884e2b748fa7c693e1911a24394e5533ced925659",
+    "pdf_sha256": "feb462528e0b19c20feb3fcc11326ad1e25eac2fa861af99f61087e4d86773d8"
+  },
+  "temperature_Mg_all": {
+    "name": "temperature_Mg_all",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference absolute g",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "Predicted absolute g",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "low_occupancy_cells": 185,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      },
+      {
+        "panel": "absolute",
+        "eligible": 40290,
+        "finite": 40290,
+        "missing": 0,
+        "plotted": 40290,
+        "outside": 0,
+        "low_occupancy_cells": 185,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 240,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2677
+      }
+    ],
+    "statistics_records": 1062,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/temperature_Mg_all.png",
+    "pdf": "figures/v2_0_revision/physical/temperature_Mg_all.pdf",
+    "csv": "manifests/v2_0_revision/figures/temperature_Mg_all.csv",
+    "png_sha256": "80ecc455d00328b281ea39aa1bd7418f9d009d56581cb827ed816024ec635226",
+    "pdf_sha256": "5cb7597a5643b6a3df14752ca9080eb35792e5b2484f3e0409ec70b8d77e2998"
+  },
+  "kiel_full_dwarf": {
+    "name": "kiel_full_dwarf",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          0.670051259676019,
+          6.382863993219779
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 72,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      },
+      {
+        "panel": "absolute",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 72,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      }
+    ],
+    "statistics_records": 486,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_full_dwarf.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_full_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_full_dwarf.csv",
+    "png_sha256": "ce65bc0e2dd53c6ad2c00b7fb665e14ca0b3bb1c16dfefa2307ff445d817dfe5",
+    "pdf_sha256": "7649dd4393aef77c3fa2ef021c8b104b4c5710bebdf4c8303427f7f3b2c4291d"
+  },
+  "kiel_body_dwarf": {
+    "name": "kiel_body_dwarf",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32697,
+        "outside": 22,
+        "x_range": [
+          3000.0,
+          8000.0
+        ],
+        "y_range": [
+          0.0,
+          5.5
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32697,
+        "outside": 22,
+        "low_occupancy_cells": 141,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      },
+      {
+        "panel": "absolute",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32697,
+        "outside": 22,
+        "low_occupancy_cells": 141,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      }
+    ],
+    "statistics_records": 984,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_body_dwarf.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_body_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_body_dwarf.csv",
+    "png_sha256": "c62f99344785cac08e8c764b3bdc8d1645c49f04ec99527f53bacc320cacf8ce",
+    "pdf_sha256": "bf49871fb947b996fc818214e0bc25bbe04069233723b654973570a309bd33c0"
+  },
+  "temperature_Mg_dwarf": {
+    "name": "temperature_Mg_dwarf",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference absolute g",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "Predicted absolute g",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 84,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      },
+      {
+        "panel": "absolute",
+        "eligible": 32719,
+        "finite": 32719,
+        "missing": 0,
+        "plotted": 32719,
+        "outside": 0,
+        "low_occupancy_cells": 84,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 197,
+        "zero_residuals": 0,
+        "below_absolute_scale": 2489
+      }
+    ],
+    "statistics_records": 576,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/temperature_Mg_dwarf.png",
+    "pdf": "figures/v2_0_revision/physical/temperature_Mg_dwarf.pdf",
+    "csv": "manifests/v2_0_revision/figures/temperature_Mg_dwarf.csv",
+    "png_sha256": "ce12db5377ad3c9df7619529b1669ea1d1edcbf2d5a73547134e29a59c9415e5",
+    "pdf_sha256": "c41cf5504788706987010b6e68c121707344517814606a659ae6d0b796fa92be"
+  },
+  "kiel_full_giant": {
+    "name": "kiel_full_giant",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          0.670051259676019,
+          6.382863993219779
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 65,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "absolute",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 65,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 237,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_full_giant.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_full_giant.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_full_giant.csv",
+    "png_sha256": "efc3155dbc6b133e9d4a7ba95fed48f452f432271c00fc1525264b13a0ca2f44",
+    "pdf_sha256": "d4d53ba3525ff0293851fa79ecb4dd6615fd07fb1244e1e382a326c5b3017bcc"
+  },
+  "kiel_body_giant": {
+    "name": "kiel_body_giant",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          3000.0,
+          8000.0
+        ],
+        "y_range": [
+          0.0,
+          5.5
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 121,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "absolute",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 121,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 423,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_body_giant.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_body_giant.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_body_giant.csv",
+    "png_sha256": "95e32ea269e06e0993c3f7bec98bc0bbc1bfc199439084aae5b4145628fdebce",
+    "pdf_sha256": "0febe8ec1d4b208711918140508b2b13bc4b6a2bd473634e80dd8cdb22816e6d"
+  },
+  "temperature_Mg_giant": {
+    "name": "temperature_Mg_giant",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference absolute g",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "Predicted absolute g",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 73,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      },
+      {
+        "panel": "absolute",
+        "eligible": 1163,
+        "finite": 1163,
+        "missing": 0,
+        "plotted": 1163,
+        "outside": 0,
+        "low_occupancy_cells": 73,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 2,
+        "zero_residuals": 0,
+        "below_absolute_scale": 1
+      }
+    ],
+    "statistics_records": 335,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/temperature_Mg_giant.png",
+    "pdf": "figures/v2_0_revision/physical/temperature_Mg_giant.pdf",
+    "csv": "manifests/v2_0_revision/figures/temperature_Mg_giant.csv",
+    "png_sha256": "e11b0e3a5a42bc645de3aef44852f5deb84675559a039a4b85811b4312ed8937",
+    "pdf_sha256": "52d40a6cac127aba6df5bf7484afe5b029f8fd84d20c0ae78ce625e23fd1393e"
+  },
+  "kiel_full_other": {
+    "name": "kiel_full_other",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          0.670051259676019,
+          6.382863993219779
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 156,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      },
+      {
+        "panel": "absolute",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 156,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      }
+    ],
+    "statistics_records": 633,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_full_other.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_full_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_full_other.csv",
+    "png_sha256": "e039af9462064986370ac17611246cdbd6000d127a661cf5ca902788fa741152",
+    "pdf_sha256": "3f8dda120d2cc37d04b4e6feb9797d7b8e46bc438bf5cece296bf5935826a909"
+  },
+  "kiel_body_other": {
+    "name": "kiel_body_other",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6341,
+        "outside": 67,
+        "x_range": [
+          3000.0,
+          8000.0
+        ],
+        "y_range": [
+          0.0,
+          5.5
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6341,
+        "outside": 67,
+        "low_occupancy_cells": 260,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      },
+      {
+        "panel": "absolute",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6341,
+        "outside": 67,
+        "low_occupancy_cells": 260,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      }
+    ],
+    "statistics_records": 1029,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_body_other.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_body_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_body_other.csv",
+    "png_sha256": "6765303f23270eee2c75c754c992f19a630443ed8b80d3bb47ad8e3766f5b1f6",
+    "pdf_sha256": "a780cdbb7683b44314e9b0b211a07da5ae4ef15ee37f9e4c03f8c04abe937ff6"
+  },
+  "temperature_Mg_other": {
+    "name": "temperature_Mg_other",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference absolute g",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "Predicted absolute g",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 166,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      },
+      {
+        "panel": "absolute",
+        "eligible": 6408,
+        "finite": 6408,
+        "missing": 0,
+        "plotted": 6408,
+        "outside": 0,
+        "low_occupancy_cells": 166,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 41,
+        "zero_residuals": 0,
+        "below_absolute_scale": 187
+      }
+    ],
+    "statistics_records": 787,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/temperature_Mg_other.png",
+    "pdf": "figures/v2_0_revision/physical/temperature_Mg_other.pdf",
+    "csv": "manifests/v2_0_revision/figures/temperature_Mg_other.csv",
+    "png_sha256": "6273ff840c50c70a72accb1a64f89663d91da5d47b12237def69929fc36213aa",
+    "pdf_sha256": "bb793de792fab9a2164563086050ea9ff3ca88962e15131049c82954734702e9"
+  },
+  "kiel_full_unknown": {
+    "name": "kiel_full_unknown",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          0.670051259676019,
+          6.382863993219779
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      },
+      {
+        "panel": "absolute",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      }
+    ],
+    "statistics_records": 0,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_full_unknown.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_full_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_full_unknown.csv",
+    "png_sha256": "60cef68abba5a6bd4180a10112df69837d8175f4031aa76ea506dfd0eb9cdd15",
+    "pdf_sha256": "cf3ad808cb8000608e153033418d16b51b166acd56bb05c2e8fa517e24df533f"
+  },
+  "kiel_body_unknown": {
+    "name": "kiel_body_unknown",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Reliable RVS only. Full range retains every finite parameter, body is an explicit zoom. Low-gravity points remain visible irrespective of performance-cell N. No post-hoc point rejection.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Kiel density",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "x_range": [
+          3000.0,
+          8000.0
+        ],
+        "y_range": [
+          0.0,
+          5.5
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      },
+      {
+        "panel": "absolute",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      }
+    ],
+    "statistics_records": 0,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/kiel_body_unknown.png",
+    "pdf": "figures/v2_0_revision/physical/kiel_body_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/kiel_body_unknown.csv",
+    "png_sha256": "b25871c3a1b07aef835b3bf2c4fbb6bf2034aa3103842aca0c9889ae1b33beac",
+    "pdf_sha256": "478260cb6171d4c7aafd2e839dfcea38cffd18eb819432c7bf31eb8836e91029"
+  },
+  "temperature_Mg_unknown": {
+    "name": "temperature_Mg_unknown",
+    "section": "physical",
+    "model": "expanded_A",
+    "reference": "chosen",
+    "split": "development_test",
+    "caption": "Temperature versus absolute Legacy g, not bolometric luminosity. Reference M=g0-mu_chosen; predicted M=g0-mu50. Reliable RVS parameter gate retained.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [
+      {
+        "panel": "Reference absolute g",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "Predicted absolute g",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "x_range": [
+          2582.239439506806,
+          14839.58929709336
+        ],
+        "y_range": [
+          -3.7305219596459875,
+          16.864735670116698
+        ]
+      },
+      {
+        "panel": "signed",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          -100,
+          100
+        ],
+        "color_normalization": "SymLogNorm linthresh=1%, base10",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      },
+      {
+        "panel": "absolute",
+        "eligible": 0,
+        "finite": 0,
+        "missing": 0,
+        "plotted": 0,
+        "outside": 0,
+        "low_occupancy_cells": 0,
+        "display_color_limits": [
+          1,
+          100
+        ],
+        "color_normalization": "LogNorm; <=1% lowest color",
+        "residual_beyond_color": 0,
+        "zero_residuals": 0,
+        "below_absolute_scale": 0
+      }
+    ],
+    "statistics_records": 0,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/physical/temperature_Mg_unknown.png",
+    "pdf": "figures/v2_0_revision/physical/temperature_Mg_unknown.pdf",
+    "csv": "manifests/v2_0_revision/figures/temperature_Mg_unknown.csv",
+    "png_sha256": "4ca0a6203baa467f279a561d385a6ce2d6cf40f9ce0f1fb8f1a773815a2ab399",
+    "pdf_sha256": "3e691dad9c2294e5dd0ad1c31238912e0f917363558db4e4b0434f2a00b62b11"
+  },
+  "separate_reference_application_flows": {
+    "name": "separate_reference_application_flows",
+    "section": "main",
+    "model": "reference assembly + baseline_v1 application",
+    "reference": "distinct populations",
+    "split": "all",
+    "caption": "Two distinct pipelines. The DR11 scale ratios are not same-cut retention fractions. Class/fit/parallax qualifications are parallel, and their counts overlap. Full-DR11 same-cut denominator and effective masked area remain uncomputed.",
+    "units": "distance kpc; distance residual percent; modulus mag",
+    "binning": "edges and counts in CSV",
+    "minimum_performance_bin": 20,
+    "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+    "panels": [],
+    "statistics_records": 8,
+    "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+    "png": "figures/v2_0_revision/main/separate_reference_application_flows.png",
+    "pdf": "figures/v2_0_revision/main/separate_reference_application_flows.pdf",
+    "csv": "manifests/v2_0_revision/figures/separate_reference_application_flows.csv",
+    "png_sha256": "c42cc5fa93bd1382e9a7bb233b744856d6d57e6ac88d1ce8f3fc0e4faed3f3c3",
+    "pdf_sha256": "e406aa406f0802676758ca7cd0e632d32da7bc5ac58b3117cccfed065425180f"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "06b_metallicity",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "RVS abundance correction restricted to 4200<=Teff<6600 and 1.8<=logg<5.5. Raw/domain/raw-corrected comparisons use finite FeH and positive formal error. Metal-poor is not halo membership.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Dwarf",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 22558,
+      "finite": 22558,
+      "missing": 0,
+      "plotted": 22558,
+      "outside": 0
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1137,
+      "finite": 1137,
+      "missing": 0,
+      "plotted": 1137,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 5709,
+      "finite": 5709,
+      "missing": 0,
+      "plotted": 5709,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 22558,
+      "finite": 22558,
+      "missing": 0,
+      "plotted": 22558,
+      "outside": 0
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1137,
+      "finite": 1137,
+      "missing": 0,
+      "plotted": 1137,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 5709,
+      "finite": 5709,
+      "missing": 0,
+      "plotted": 5709,
+      "outside": 0
+    }
+  ],
+  "statistics_records": 63,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/06b_metallicity.png",
+  "pdf": "figures/v2_0_revision/main/06b_metallicity.pdf",
+  "csv": "manifests/v2_0_revision/figures/06b_metallicity.csv",
+  "png_sha256": "37f60b8bfa93adde7dc2124a57ef07c906d5fb90c5f1ebab1ac83f9c1e7296db",
+  "pdf_sha256": "3bdcdd38ead30a279f67f5aa708f173cff95aa42e7066efbd906a130ccd9517d"
+}

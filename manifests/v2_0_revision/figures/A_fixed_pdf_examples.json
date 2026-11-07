@@ -1,0 +1,20 @@
+{
+  "name": "A_fixed_pdf_examples",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Existing four frozen PDF cases, original bin values and reference unchanged. User-visible giant terminology updated.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 1280,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/A_fixed_pdf_examples.png",
+  "pdf": "figures/v2_0_revision/appendix/A_fixed_pdf_examples.pdf",
+  "csv": "manifests/v2_0_revision/figures/A_fixed_pdf_examples.csv",
+  "png_sha256": "36f4396ae1132771517337a5bdc0669950ffe2cadd447530cdb69900a19469f6",
+  "pdf_sha256": "fb7895f89d603986004142406a326332b5989b3d7918d5796d687f288625ba58"
+}

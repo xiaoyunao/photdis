@@ -1,0 +1,69 @@
+{
+  "name": "06c_spectral_trends",
+  "section": "main",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "RVS-qualified sources, N>=20 bins. Per-class counts and full percentage metrics in CSV.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Dwarf",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32718,
+      "outside": 1
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6408,
+      "outside": 0
+    },
+    {
+      "panel": "Dwarf",
+      "eligible": 32719,
+      "finite": 32719,
+      "missing": 0,
+      "plotted": 32719,
+      "outside": 0
+    },
+    {
+      "panel": "Giant reference",
+      "eligible": 1163,
+      "finite": 1163,
+      "missing": 0,
+      "plotted": 1163,
+      "outside": 0
+    },
+    {
+      "panel": "Other qualified spectral stars",
+      "eligible": 6408,
+      "finite": 6408,
+      "missing": 0,
+      "plotted": 6406,
+      "outside": 2
+    }
+  ],
+  "statistics_records": 99,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/main/06c_spectral_trends.png",
+  "pdf": "figures/v2_0_revision/main/06c_spectral_trends.pdf",
+  "csv": "manifests/v2_0_revision/figures/06c_spectral_trends.csv",
+  "png_sha256": "8c4e5b3a61477c7b1958661bafc8b6c1da38c9459bef0912cf340d3893797995",
+  "pdf_sha256": "a96420647f1a6b70bf53393276fc9b7c5a5d0a08ff08e3e77a3c1c27260c0599"
+}

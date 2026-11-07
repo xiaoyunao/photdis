@@ -1,0 +1,213 @@
+{
+  "name": "03_distance_dwarf",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "Gaia/specdis/spdist",
+  "split": "development_test",
+  "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [
+    {
+      "panel": "Gaia_distance",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2898,
+      "outside": 0,
+      "x_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ],
+      "y_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ]
+    },
+    {
+      "panel": "Gaia_Full linear residual",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2898,
+      "outside": 0,
+      "x_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ],
+      "y_range": [
+        -67.41413134541699,
+        480.5976124346945
+      ]
+    },
+    {
+      "panel": "Gaia_Central linear residual",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2894,
+      "outside": 4,
+      "x_range": [
+        0.04992903858932285,
+        5.1809857431982635
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "Gaia_Full equal-width histogram",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2898,
+      "outside": 0
+    },
+    {
+      "panel": "Gaia_Central 2 percentage-point histogram",
+      "eligible": 2898,
+      "finite": 2898,
+      "missing": 0,
+      "plotted": 2894,
+      "outside": 4
+    },
+    {
+      "panel": "specdis_distance",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32391,
+      "outside": 0,
+      "x_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ],
+      "y_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ]
+    },
+    {
+      "panel": "specdis_Full linear residual",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32391,
+      "outside": 0,
+      "x_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ],
+      "y_range": [
+        -111.05500049654407,
+        804.9650642752905
+      ]
+    },
+    {
+      "panel": "specdis_Central linear residual",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32196,
+      "outside": 195,
+      "x_range": [
+        0.04361105849076354,
+        44.96011496296207
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "specdis_Full equal-width histogram",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32391,
+      "outside": 0
+    },
+    {
+      "panel": "specdis_Central 2 percentage-point histogram",
+      "eligible": 32391,
+      "finite": 32391,
+      "missing": 0,
+      "plotted": 32196,
+      "outside": 195
+    },
+    {
+      "panel": "spdist_distance",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26313,
+      "outside": 0,
+      "x_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ],
+      "y_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ]
+    },
+    {
+      "panel": "spdist_Full linear residual",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26313,
+      "outside": 0,
+      "x_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ],
+      "y_range": [
+        -88.96777906337101,
+        774.9194846591264
+      ]
+    },
+    {
+      "panel": "spdist_Central linear residual",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26133,
+      "outside": 180,
+      "x_range": [
+        0.18656465857629762,
+        28.167273423438772
+      ],
+      "y_range": [
+        -100.0,
+        100.0
+      ]
+    },
+    {
+      "panel": "spdist_Full equal-width histogram",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26313,
+      "outside": 0
+    },
+    {
+      "panel": "spdist_Central 2 percentage-point histogram",
+      "eligible": 26313,
+      "finite": 26313,
+      "missing": 0,
+      "plotted": 26133,
+      "outside": 180
+    }
+  ],
+  "statistics_records": 6949,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/03_distance_dwarf.png",
+  "pdf": "figures/v2_0_revision/appendix/03_distance_dwarf.pdf",
+  "csv": "manifests/v2_0_revision/figures/03_distance_dwarf.csv",
+  "png_sha256": "f38c1696edef9868a55b28b90a98e65fe032510caeaaab0393d3ba5450bc6a41",
+  "pdf_sha256": "539d4ab3691f4baff91886891a797cd5751d3d6e77ba9a533f42190ecd8e8213"
+}

@@ -1,0 +1,17 @@
+panel,stage,value
+reference,Reference retrieval,"1,600 south sweeps
+3,561,828,221 input rows"
+reference,Assembled identities,"3,565,499 objects"
+reference,Sequential reference gates,"photometric: 634,606
+no_identity_conflict: 634,585
+no_nonstellar_risk: 515,055
+new_geometry: 267,336"
+reference,Independent qualification,"class_eligible: 219,452
+fit_eligible: 244,161
+parallax_eligible: 254,389"
+application,Application footprint,14 preselected fields
+application,Unique application objects,"9,390,518"
+application,DECam prediction,"8,899,334
+baseline_v1"
+application,"North
+No prediction","491,184"

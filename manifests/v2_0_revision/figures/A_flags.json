@@ -1,0 +1,20 @@
+{
+  "name": "A_flags",
+  "section": "appendix",
+  "model": "expanded_A",
+  "reference": "chosen",
+  "split": "development_test",
+  "caption": "Model-state groups do not define a reliable single-distance catalog. Rows may overlap; all counts and risks retained.",
+  "units": "distance kpc; distance residual percent; modulus mag",
+  "binning": "edges and counts in CSV",
+  "minimum_performance_bin": 20,
+  "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
+  "panels": [],
+  "statistics_records": 12,
+  "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
+  "png": "figures/v2_0_revision/appendix/A_flags.png",
+  "pdf": "figures/v2_0_revision/appendix/A_flags.pdf",
+  "csv": "manifests/v2_0_revision/figures/A_flags.csv",
+  "png_sha256": "77c2ef46a17bbcb7e2a1b62a76f6d2cbc67ee3ef2ff5c531c9321d5daf78aaad",
+  "pdf_sha256": "1fe062ca2c703c3fbd7838de7207b515840120d95f5e22ac17ca9360fd608f9f"
+}
