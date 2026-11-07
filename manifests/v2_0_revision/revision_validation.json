@@ -2,5 +2,7 @@
   "figures": 1050,
   "exhaustive_combinations": 975,
   "count_conservation": true,
-  "source_sha256": "66c2d6fd806bbc0dcaf78c2eb86cbf870ad90576c76fa5f415d3f0033b7878b7"
+  "source_sha256": "66c2d6fd806bbc0dcaf78c2eb86cbf870ad90576c76fa5f415d3f0033b7878b7",
+  "distance_replacement_job": "60947091",
+  "panel_and_selection_checks": 3673
 }

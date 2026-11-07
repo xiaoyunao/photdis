@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-07 — five real distance plates replaced and verified
+
+-60947091 COMPLETED0:0,29s,nid006606,source6cd82f7. Previous60946901
+  was cancelled while pending and produced no output. No repeated active jobs.
+- Replaced all/dwarf/evolved/other/unknown at existing PNG/PDF/CSV/JSON paths.
+  Main and narrow residual share x axis; ±100% residual and central histogram.
+  One independently computed x/y distance3sigma mask per population/reference,
+  shared within its three panels,as finally clarified by user.
+- Real all counts: Gaia3207→3123,SpecDis47335→45892,SPDist37317→35820.
+  Verified distinct actual reference means/thresholds,within-comparison masks,
+  exclusion intersections and count conservation. Frozen source hash unchanged.
+- Three targeted tests passed; all five PDFs/300dpi transparent PNGs and real
+  images reviewed. Fixed sparse Gaia colorbar overlap using exact CSV bins
+  via scripts/v2_0_distance_from_bins.py; byte-identical CSV assertion passed.
+- Refreshed atlas,report,execution/validation/hash manifests and current plan.
+  Still1050 figure sets,3673 panel/selection checks; remaining1045 unchanged.
+  Final milestone prepared for safe local/GitHub/NERSC synchronization.
+- No scientific performance recalculation,model fitting or new monitoring.
+
+
 ## 2026-11-07 — user clarified comparison-level clipping and smoke provenance
 
 - Final scope: each population/reference comparison computes its own x/y

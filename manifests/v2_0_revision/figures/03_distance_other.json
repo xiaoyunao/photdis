@@ -4,182 +4,190 @@
   "model": "expanded_A",
   "reference": "Gaia/specdis/spdist",
   "split": "development_test",
-  "caption": "Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16\u2013P84 object spread, not median confidence intervals. Complete sample retained.",
+  "caption": "Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.",
   "units": "distance kpc; distance residual percent; modulus mag",
   "binning": "edges and counts in CSV",
   "minimum_performance_bin": 20,
   "sparse": "gray crosses indicate 1\u201319 objects; empty cells are transparent",
   "panels": [
     {
+      "panel": "Gaia_3sigma_selection",
+      "eligible": 6821,
+      "finite": 98,
+      "missing": 6723,
+      "plotted": 94,
+      "outside": 4,
+      "input_n": 6821,
+      "valid_n": 98,
+      "x_mean_kpc": 0.3591378927230835,
+      "x_sigma_kpc": 0.2703329026699066,
+      "x_low_kpc": -0.45186081528663635,
+      "x_high_kpc": 1.1701366007328033,
+      "x_rejected": 4,
+      "y_mean_kpc": 0.36210111351388585,
+      "y_sigma_kpc": 0.23405463822800038,
+      "y_low_kpc": -0.3400628011701152,
+      "y_high_kpc": 1.064265028197887,
+      "y_rejected": 3,
+      "retained_n": 94,
+      "clipped_n": 4,
+      "invalid_n": 6723,
+      "both_rejected": 3
+    },
+    {
       "panel": "Gaia_distance",
-      "eligible": 98,
-      "finite": 98,
+      "eligible": 94,
+      "finite": 94,
       "missing": 0,
-      "plotted": 98,
+      "plotted": 94,
       "outside": 0,
       "x_range": [
-        0.14722405361890598,
-        2.0032902586231662
+        0.151811486488338,
+        0.6985904353011007
       ],
       "y_range": [
-        0.14722405361890598,
-        2.0032902586231662
+        0.151811486488338,
+        0.6985904353011007
       ]
     },
     {
-      "panel": "Gaia_Full linear residual",
-      "eligible": 98,
-      "finite": 98,
+      "panel": "Gaia_Attached residual",
+      "eligible": 94,
+      "finite": 94,
       "missing": 0,
-      "plotted": 98,
+      "plotted": 94,
       "outside": 0,
       "x_range": [
-        0.14722405361890598,
-        2.0032902586231662
-      ],
-      "y_range": [
-        -45.615055527000344,
-        56.40244205220922
-      ]
-    },
-    {
-      "panel": "Gaia_Central linear residual",
-      "eligible": 98,
-      "finite": 98,
-      "missing": 0,
-      "plotted": 98,
-      "outside": 0,
-      "x_range": [
-        0.14722405361890598,
-        2.0032902586231662
+        0.151811486488338,
+        0.6985904353011007
       ],
       "y_range": [
         -100.0,
         100.0
       ]
-    },
-    {
-      "panel": "Gaia_Full equal-width histogram",
-      "eligible": 98,
-      "finite": 98,
-      "missing": 0,
-      "plotted": 98,
-      "outside": 0
     },
     {
       "panel": "Gaia_Central 2 percentage-point histogram",
-      "eligible": 98,
-      "finite": 98,
+      "eligible": 94,
+      "finite": 94,
       "missing": 0,
-      "plotted": 98,
+      "plotted": 94,
       "outside": 0
+    },
+    {
+      "panel": "specdis_3sigma_selection",
+      "eligible": 6821,
+      "finite": 6399,
+      "missing": 422,
+      "plotted": 6206,
+      "outside": 193,
+      "input_n": 6821,
+      "valid_n": 6399,
+      "x_mean_kpc": 7.217430313079565,
+      "x_sigma_kpc": 7.369794543980745,
+      "x_low_kpc": -14.891953318862669,
+      "x_high_kpc": 29.326813945021797,
+      "x_rejected": 111,
+      "y_mean_kpc": 5.092763029239953,
+      "y_sigma_kpc": 3.6529598449926604,
+      "y_low_kpc": -5.866116505738028,
+      "y_high_kpc": 16.051642564217936,
+      "y_rejected": 103,
+      "retained_n": 6206,
+      "clipped_n": 193,
+      "invalid_n": 422,
+      "both_rejected": 21
     },
     {
       "panel": "specdis_distance",
-      "eligible": 6399,
-      "finite": 6399,
+      "eligible": 6206,
+      "finite": 6206,
       "missing": 0,
-      "plotted": 6399,
+      "plotted": 6206,
       "outside": 0,
       "x_range": [
-        0.06944538915970468,
-        211.13544869153992
+        0.07319239075386792,
+        34.752661059165405
       ],
       "y_range": [
-        0.06944538915970468,
-        211.13544869153992
+        0.07319239075386792,
+        34.752661059165405
       ]
     },
     {
-      "panel": "specdis_Full linear residual",
-      "eligible": 6399,
-      "finite": 6399,
+      "panel": "specdis_Attached residual",
+      "eligible": 6206,
+      "finite": 6206,
       "missing": 0,
-      "plotted": 6399,
-      "outside": 0,
+      "plotted": 6172,
+      "outside": 34,
       "x_range": [
-        0.06944538915970468,
-        211.13544869153992
-      ],
-      "y_range": [
-        -119.58880749910321,
-        606.8618605316706
-      ]
-    },
-    {
-      "panel": "specdis_Central linear residual",
-      "eligible": 6399,
-      "finite": 6399,
-      "missing": 0,
-      "plotted": 6358,
-      "outside": 41,
-      "x_range": [
-        0.06944538915970468,
-        211.13544869153992
+        0.07319239075386792,
+        34.752661059165405
       ],
       "y_range": [
         -100.0,
         100.0
       ]
-    },
-    {
-      "panel": "specdis_Full equal-width histogram",
-      "eligible": 6399,
-      "finite": 6399,
-      "missing": 0,
-      "plotted": 6399,
-      "outside": 0
     },
     {
       "panel": "specdis_Central 2 percentage-point histogram",
-      "eligible": 6399,
-      "finite": 6399,
+      "eligible": 6206,
+      "finite": 6206,
       "missing": 0,
-      "plotted": 6358,
-      "outside": 41
+      "plotted": 6172,
+      "outside": 34
+    },
+    {
+      "panel": "spdist_3sigma_selection",
+      "eligible": 6821,
+      "finite": 5117,
+      "missing": 1704,
+      "plotted": 4946,
+      "outside": 171,
+      "input_n": 6821,
+      "valid_n": 5117,
+      "x_mean_kpc": 6.599608665531328,
+      "x_sigma_kpc": 5.573081089871586,
+      "x_low_kpc": -10.11963460408343,
+      "x_high_kpc": 23.318851935146085,
+      "x_rejected": 119,
+      "y_mean_kpc": 4.869386275444332,
+      "y_sigma_kpc": 3.129628351436386,
+      "y_low_kpc": -4.519498778864826,
+      "y_high_kpc": 14.25827132975349,
+      "y_rejected": 72,
+      "retained_n": 4946,
+      "clipped_n": 171,
+      "invalid_n": 1704,
+      "both_rejected": 20
     },
     {
       "panel": "spdist_distance",
-      "eligible": 5117,
-      "finite": 5117,
+      "eligible": 4946,
+      "finite": 4946,
       "missing": 0,
-      "plotted": 5117,
+      "plotted": 4946,
       "outside": 0,
       "x_range": [
-        0.07136258283630106,
-        82.88880380979958
+        0.07368931207086464,
+        27.548451726889386
       ],
       "y_range": [
-        0.07136258283630106,
-        82.88880380979958
+        0.07368931207086464,
+        27.548451726889386
       ]
     },
     {
-      "panel": "spdist_Full linear residual",
-      "eligible": 5117,
-      "finite": 5117,
+      "panel": "spdist_Attached residual",
+      "eligible": 4946,
+      "finite": 4946,
       "missing": 0,
-      "plotted": 5117,
-      "outside": 0,
+      "plotted": 4922,
+      "outside": 24,
       "x_range": [
-        0.07136258283630106,
-        82.88880380979958
-      ],
-      "y_range": [
-        -118.6397904520273,
-        583.7789583057414
-      ]
-    },
-    {
-      "panel": "spdist_Central linear residual",
-      "eligible": 5117,
-      "finite": 5117,
-      "missing": 0,
-      "plotted": 5083,
-      "outside": 34,
-      "x_range": [
-        0.07136258283630106,
-        82.88880380979958
+        0.07368931207086464,
+        27.548451726889386
       ],
       "y_range": [
         -100.0,
@@ -187,27 +195,86 @@
       ]
     },
     {
-      "panel": "spdist_Full equal-width histogram",
-      "eligible": 5117,
-      "finite": 5117,
-      "missing": 0,
-      "plotted": 5117,
-      "outside": 0
-    },
-    {
       "panel": "spdist_Central 2 percentage-point histogram",
-      "eligible": 5117,
-      "finite": 5117,
+      "eligible": 4946,
+      "finite": 4946,
       "missing": 0,
-      "plotted": 5083,
-      "outside": 34
+      "plotted": 4922,
+      "outside": 24
     }
   ],
-  "statistics_records": 4907,
+  "statistics_records": 3774,
   "count_source": "Per-object eligible/finite/plotted in panels; per-bin or paired N in linked CSV.",
   "png": "figures/v2_0_revision/appendix/03_distance_other.png",
   "pdf": "figures/v2_0_revision/appendix/03_distance_other.pdf",
   "csv": "manifests/v2_0_revision/figures/03_distance_other.csv",
-  "png_sha256": "852520288283b53886c6124786e5cee90a81aa56361c8e08d5d72e02027f7e01",
-  "pdf_sha256": "b9a57e9ffec30e6b7fc707805bee83395aabd7ca85f688f64ce6df3ea075575d"
+  "png_sha256": "6c33be90710ed828f007389513b4955bf834b70a8928f7ed2d953775034ad910",
+  "pdf_sha256": "17fba07de10f80b3b41761e37b75e95cea11dc094465d28a736ef98cfdfed389",
+  "distance_layout": "main + attached residual (height ratio 4:1) + central histogram",
+  "clipping": {
+    "method": "simultaneous single-pass mean +/- 3*std(ddof=0)",
+    "space": "linear distance in kpc",
+    "independent_per": "population/reference pair",
+    "sources": {
+      "Gaia": {
+        "input_n": 6821,
+        "valid_n": 98,
+        "x_mean_kpc": 0.3591378927230835,
+        "x_sigma_kpc": 0.2703329026699066,
+        "x_low_kpc": -0.45186081528663635,
+        "x_high_kpc": 1.1701366007328033,
+        "x_rejected": 4,
+        "y_mean_kpc": 0.36210111351388585,
+        "y_sigma_kpc": 0.23405463822800038,
+        "y_low_kpc": -0.3400628011701152,
+        "y_high_kpc": 1.064265028197887,
+        "y_rejected": 3,
+        "retained_n": 94,
+        "clipped_n": 4,
+        "invalid_n": 6723,
+        "both_rejected": 3
+      },
+      "specdis": {
+        "input_n": 6821,
+        "valid_n": 6399,
+        "x_mean_kpc": 7.217430313079565,
+        "x_sigma_kpc": 7.369794543980745,
+        "x_low_kpc": -14.891953318862669,
+        "x_high_kpc": 29.326813945021797,
+        "x_rejected": 111,
+        "y_mean_kpc": 5.092763029239953,
+        "y_sigma_kpc": 3.6529598449926604,
+        "y_low_kpc": -5.866116505738028,
+        "y_high_kpc": 16.051642564217936,
+        "y_rejected": 103,
+        "retained_n": 6206,
+        "clipped_n": 193,
+        "invalid_n": 422,
+        "both_rejected": 21
+      },
+      "spdist": {
+        "input_n": 6821,
+        "valid_n": 5117,
+        "x_mean_kpc": 6.599608665531328,
+        "x_sigma_kpc": 5.573081089871586,
+        "x_low_kpc": -10.11963460408343,
+        "x_high_kpc": 23.318851935146085,
+        "x_rejected": 119,
+        "y_mean_kpc": 4.869386275444332,
+        "y_sigma_kpc": 3.129628351436386,
+        "y_low_kpc": -4.519498778864826,
+        "y_high_kpc": 14.25827132975349,
+        "y_rejected": 72,
+        "retained_n": 4946,
+        "clipped_n": 171,
+        "invalid_n": 1704,
+        "both_rejected": 20
+      }
+    }
+  },
+  "residual_limits_pct": [
+    -100,
+    100
+  ],
+  "layout_postprocess": "Re-rendered exact exported cells and trend quantiles; compact low-count colorbar ticks; CSV byte-identical."
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "60947091",
+  "source_commit": "6cd82f7",
+  "status": "COMPLETED",
+  "date": "2026-11-07",
+  "scope": "Replace five distance plates in place; independent clipping per population/reference comparison, shared within its main/residual/histogram.",
+  "previous_job": {
+    "job_id": "60946901",
+    "status": "CANCELLED",
+    "elapsed": "00:00:00",
+    "reason": "Cancelled pending during clarification; no scientific output produced"
+  },
+  "elapsed": "00:00:29",
+  "exit_code": "0:0",
+  "node": "nid006606",
+  "figure_sets": 5,
+  "local_postprocess": "Exact exported CSV cells and quantiles re-rendered to compact low-count colorbar tick labels; CSV bytes unchanged."
+}

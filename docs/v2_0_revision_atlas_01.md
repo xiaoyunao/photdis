@@ -38,7 +38,7 @@ Class reasons follow frozen v3 quality, including Teff/logg validity independent
 
 ![03_distance_dwarf](../figures/v2_0_revision/appendix/03_distance_dwarf.png)
 
-Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16–P84 object spread, not median confidence intervals. Complete sample retained.
+Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.
 
 [PNG](../figures/v2_0_revision/appendix/03_distance_dwarf.png) · [PDF](../figures/v2_0_revision/appendix/03_distance_dwarf.pdf) · [CSV](../manifests/v2_0_revision/figures/03_distance_dwarf.csv) · [元数据](../manifests/v2_0_revision/figures/03_distance_dwarf.json)
 
@@ -46,7 +46,7 @@ Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cann
 
 ![03_distance_evolved](../figures/v2_0_revision/appendix/03_distance_evolved.png)
 
-Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16–P84 object spread, not median confidence intervals. Complete sample retained.
+Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.
 
 [PNG](../figures/v2_0_revision/appendix/03_distance_evolved.png) · [PDF](../figures/v2_0_revision/appendix/03_distance_evolved.pdf) · [CSV](../manifests/v2_0_revision/figures/03_distance_evolved.csv) · [元数据](../manifests/v2_0_revision/figures/03_distance_evolved.json)
 
@@ -54,7 +54,7 @@ Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cann
 
 ![03_distance_other](../figures/v2_0_revision/appendix/03_distance_other.png)
 
-Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16–P84 object spread, not median confidence intervals. Complete sample retained.
+Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.
 
 [PNG](../figures/v2_0_revision/appendix/03_distance_other.png) · [PDF](../figures/v2_0_revision/appendix/03_distance_other.pdf) · [CSV](../manifests/v2_0_revision/figures/03_distance_other.csv) · [元数据](../manifests/v2_0_revision/figures/03_distance_other.json)
 
@@ -62,7 +62,7 @@ Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cann
 
 ![03_distance_unknown](../figures/v2_0_revision/appendix/03_distance_unknown.png)
 
-Frozen expanded_A. Source-specific same-star overlaps are allowed; source N cannot be summed as independent stars. Every residual y-axis and histogram count axis is linear. Center window uses 2 percentage-point bins. Trend bars are P16–P84 object spread, not median confidence intervals. Complete sample retained.
+Frozen expanded_A. Display-only simultaneous 3-sigma selection on reference x and predicted y distances in linear kpc: arithmetic mean +/- 3 population standard deviations (ddof=0), one pass, independently for each population/reference pair. All three panels use the same retained objects. Narrow attached residual axis is linear from -100% to 100%; its x-axis is shared with the main distance panel. Central histogram uses 2 percentage-point bins. Out-of-window and sigma-exclusion counts are retained in CSV/JSON. Trend bars are P16-P84 object spread, not median confidence intervals. Original uncut scientific metrics and anomaly audit remain unchanged. Reference-source samples overlap.
 
 [PNG](../figures/v2_0_revision/appendix/03_distance_unknown.png) · [PDF](../figures/v2_0_revision/appendix/03_distance_unknown.pdf) · [CSV](../manifests/v2_0_revision/figures/03_distance_unknown.csv) · [元数据](../manifests/v2_0_revision/figures/03_distance_unknown.json)
 

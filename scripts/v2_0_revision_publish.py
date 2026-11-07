@@ -56,6 +56,16 @@ def main():
              '本轮使用冻结历史样本，保留16个非PSF例外供审计；49颗异常对象全为PSF。新建科学样本仍须显式TYPE=PSF。未知光谱类别的温度图为空，表示没有通过质量筛选的温度证据，并非没有此类对象。', '',
              '异常对象的证据分组如下，数目由逐星结果产生。', '']
     summary += [f'- {k}，{v}颗。' for k,v in audit['categories'].items()]
+    if (M/'distance_replacement_validation.json').exists():
+        checks=json.loads((M/'distance_replacement_validation.json').read_text())
+        counts=checks['summary']['03_distance_all']
+        summary += ['', '本次距离图替换的真实 all 样本数量：', '',
+                    '| 参考来源 | 原有效配对 | 3σ保留 | 剔除 |',
+                    '| --- | ---: | ---: | ---: |']
+        for source, row in counts.items():
+            summary.append(f"| {source} | {row['valid_n']:,} | {row['retained_n']:,} | {row['clipped_n']:,} |")
+        summary += ['', '各星族独立计算阈值，因此分类别保留数之和不要求等于all保留数。', '']
+
     with open(M/'figures/03_distance_all.csv') as stream:
         bins=list(csv.DictReader(stream))
     summary += ['', '距离对比已按用户要求替换为主图＋紧贴下方的窄残差图（−100%至100%）＋中心直方图。每个星族与参考来源独立对线性距离x、y作一次均值±3σ联合筛选（ddof=0），不迭代；三个面板使用同一批保留对象。剔除数与阈值见逐图CSV/JSON。该显示筛选不改变原始科学性能与49颗异常审计。', '', '以下为筛选后线性残差零附近计数，采用等宽2个百分点分箱。', '']

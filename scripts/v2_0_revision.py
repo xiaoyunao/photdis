@@ -212,7 +212,11 @@ def distance(q, group='all', section='main'):
         rim = f.density(residual, x, error, edges, center, source+'_Attached residual')
         norm = LogNorm(1, max(2, im.norm.vmax, rim.norm.vmax))
         im.set_norm(norm); rim.set_norm(norm)
-        fig.colorbar(im, cax=cax, label='Objects/bin')
+        cb = fig.colorbar(im, cax=cax, label='Objects/bin')
+        if norm.vmax < 10:
+            cb.set_ticks(np.arange(1, int(norm.vmax)+1))
+            cb.ax.yaxis.set_major_formatter(FuncFormatter(lambda value, pos: f'{value:g}'))
+            cb.ax.yaxis.set_minor_locator(NullLocator())
         main.plot(edges, edges, '--', c=ORANGE, lw=1)
         main.set(xscale='log', yscale='log', xlim=(edges[0], edges[-1]),
                  ylim=(edges[0], edges[-1]), ylabel='Predicted distance [kpc]',

@@ -9,9 +9,17 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Distance plates revised2026-11-07: five original files replaced with main,
+  attached narrow residual(-100..100%) and central histogram. Per-population,
+  per-reference x/y linear-distance3sigma masks,shared within each comparison.
+  Job60947091 COMPLETED0:0. All retained Gaia3123,SpecDis45892,SPDist35820.
+  Three targeted tests and all five visual/format/count checks pass. Sparse
+  colorbar labels polished from unchanged compact CSV bins. Original scientific
+  metrics/anomaly audit unchanged. See manifests/v2_0_revision/distance_replacement_validation.json.
+
 - Latest completed revision2026-11-07: docs/v2_0_revision_result.md and
   docs/v2_0_revision_atlas.md.1050 English-only figure sets in27 volumes,
-  including975 exhaustive band combinations;3687 panel conservation checks.
+  including975 exhaustive band combinations;3673 panel/selection checks.
   Job60941065 COMPLETED0:0. All formats checked,270 representative images
   visually reviewed.49 fixed PSF anomalies support WD candidates,not confirmed
   classifications; native/Gaia position agreement is not independent proof.

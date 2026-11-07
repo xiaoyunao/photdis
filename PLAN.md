@@ -1,16 +1,19 @@
 # PLAN
 
-## Current objective: replace five distance comparison plates
+## Completed objective: replace five distance comparison plates
 
-User requests main plot + narrow attached residual (-100 to100 percent) and
-central histogram; remove obsolete full-range panels. Single-pass simultaneous
-mean +/-3 population sigma on linear reference/predicted distances separately
-for each population/reference pair. Its main/residual/histogram share that mask.
-Gaia,SpecDis,SPDist and different populations never share clipping thresholds.
-Display selection only; preserve original scientific metrics and anomaly audit.
-Renderer and targeted smoke/test prepared. Next: allocated NERSC rendering,
-replace existing five PNG/PDF/CSV/JSON sets,refresh atlas and hashes,inspect
-all five plates and synchronize. No full atlas/scientific pipeline rerun.
+Job60947091 COMPLETED0:0 in29s,nid006606. Five existing PNG/PDF/CSV/JSON
+sets replaced at their original main/appendix paths. Main + attached4:1
+residual (-100 to100 percent) + central histogram; obsolete full panels removed.
+Each population/reference comparison has its own one-pass x/y distance3sigma
+mask,shared by its three panels. Final user clarification is authoritative.
+Real all counts: Gaia3207→3123,SpecDis47335→45892,SPDist37317→35820.
+Three focused tests,source hashes,per-comparison mask/count checks,formats and
+all five visual reviews pass. Layout-only compact-bin re-render fixed sparse
+colorbar tick overlap without changing any CSV byte. Atlas still1050 figures,
+now3673 panel/selection conservation checks. Current delivery hashes updated.
+Original scientific scores and49-object anomaly audit remain unchanged.
+Next: user/group review; no new scientific computation or monitoring scheduled.
 
 ## Completed objective: v2.0 revised atlas and Gaia anomaly audit
 

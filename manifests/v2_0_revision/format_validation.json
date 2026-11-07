@@ -3,5 +3,12 @@
   "all_single_page_pdfs": true,
   "all_png_rgba_300dpi": true,
   "transparent_corner": true,
-  "no_chinese_pdf_text": true
+  "no_chinese_pdf_text": true,
+  "replacement_figures_revalidated": [
+    "03_distance_all",
+    "03_distance_dwarf",
+    "03_distance_evolved",
+    "03_distance_other",
+    "03_distance_unknown"
+  ]
 }

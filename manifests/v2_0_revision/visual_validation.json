@@ -4,11 +4,11 @@
     "01_scope": "93bc31fa340ac545617dd384f2dca697778a208970d44b7acd8480ba2ac993db",
     "02a_brightness_coverage": "8073f6b79f908ac83a53cd8c41bca8279d00909a18aa673545e1490768adf914",
     "02b_color_magnitude_coverage": "c7fc7a9014917117c9ee0828643d603d4cf9bab346c79b6487a15c6ed09e4148",
-    "03_distance_all": "f82b57150a5f018e9c6411ce7fb7ad3ca696e1a5e987598bac47f8f054615780",
-    "03_distance_dwarf": "f38c1696edef9868a55b28b90a98e65fe032510caeaaab0393d3ba5450bc6a41",
-    "03_distance_evolved": "666fc4916b3f7537565bd07fec26d5b0ef6323fc44ae3794d25a976fd563be67",
-    "03_distance_other": "852520288283b53886c6124786e5cee90a81aa56361c8e08d5d72e02027f7e01",
-    "03_distance_unknown": "f178ada35f06fae4816c41f24ab1d77f916f5efee2526032f00f8ef3cf5b2c0b",
+    "03_distance_all": "2adfff9491329019868fd7e56890f2a3999a9b205bb989363f6c7678497b76d2",
+    "03_distance_dwarf": "11e89da085bb691da18a11ddf4b3d5a57a7d7399bbbe6c667156600f91edebed",
+    "03_distance_evolved": "1c411c2e7de6ad9a856abb31e302a53a25d26cd10b92a3ad62a7bdb84f597d9e",
+    "03_distance_other": "6c33be90710ed828f007389513b4955bf834b70a8928f7ed2d953775034ad910",
+    "03_distance_unknown": "31e865c9eb987143756f6d11072fc0c296b69bd098b6e43407a859444589b0c7",
     "04_cmd_all": "4f49a935946ee5f5ac1ee11b8bb2913a856f7a5658a750186fcbb5e396da8f37",
     "04_cmd_dwarf": "73159a361a012dfdb216b62e80d00701c66e3b7f62423ae84902b057402e4550",
     "04_cmd_evolved": "c0f92dbba0cc81bed33b203d47331bc4ec6b326922c1bb64aa752ae23552fa33",
@@ -278,5 +278,12 @@
     "separate_reference_application_flows",
     "anomaly_gaia"
   ],
-  "findings": "No material clipping or missing render observed; application outputs corrected to parallel branches. Empty unknown spectral panels correctly reflect absent qualified parameters."
+  "findings": "No material clipping or missing render observed; application outputs corrected to parallel branches. Empty unknown spectral panels correctly reflect absent qualified parameters.",
+  "distance_replacement_review": {
+    "03_distance_all": "2adfff9491329019868fd7e56890f2a3999a9b205bb989363f6c7678497b76d2",
+    "03_distance_dwarf": "11e89da085bb691da18a11ddf4b3d5a57a7d7399bbbe6c667156600f91edebed",
+    "03_distance_evolved": "1c411c2e7de6ad9a856abb31e302a53a25d26cd10b92a3ad62a7bdb84f597d9e",
+    "03_distance_other": "6c33be90710ed828f007389513b4955bf834b70a8928f7ed2d953775034ad910",
+    "03_distance_unknown": "31e865c9eb987143756f6d11072fc0c296b69bd098b6e43407a859444589b0c7"
+  }
 }
