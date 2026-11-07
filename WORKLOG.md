@@ -2,6 +2,10 @@
 
 ## 2026-11-07 — resume authorized atlas revision
 
+- Job60940195 started and failed on NumPy unsigned flag missing-fill -1.
+  Fixed unsigned placeholder0 with explicit source_row validity; added
+  unsigned flag regression. Raw native fill follows the same rule.
+
 - NERSC authentication restored; no active user jobs on initial queue check.
 - User requires English-only figure text; persisted rule and render guard.
 - Local/GitHub1501649, NERSC6ee0df1 with unrelated untracked old artifacts.

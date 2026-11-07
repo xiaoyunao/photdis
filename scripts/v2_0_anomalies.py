@@ -30,7 +30,7 @@ def selected_columns(path, rows, keys):
             values = z[key]
             assert not good.any() or rows[good].max() < len(values)
             shape = (len(rows),) + values.shape[1:]
-            fill = '' if values.dtype.kind in 'SU' else np.nan if values.dtype.kind == 'f' else False if values.dtype.kind == 'b' else -1
+            fill = '' if values.dtype.kind in 'SU' else np.nan if values.dtype.kind == 'f' else False if values.dtype.kind == 'b' else 0 if values.dtype.kind == 'u' else -1
             result[key] = np.full(shape, fill, dtype=values.dtype)
             # Missing -1 is never allowed to address the final catalog row.
             result[key][good] = values[rows[good]]
@@ -67,7 +67,7 @@ def native_rows(t):
                 for key in raw.dtype.names:
                     if key not in payload:
                         a = raw[key]
-                        fill = '' if a.dtype.kind in 'SU' else np.nan if a.dtype.kind == 'f' else -1
+                        fill = '' if a.dtype.kind in 'SU' else np.nan if a.dtype.kind == 'f' else 0 if a.dtype.kind in 'ub' else -1
                         payload[key] = np.full((n,) + a.shape[1:], fill, dtype=a.dtype)
                     payload[key][use] = raw[key]
             payload['raw_sweep'][use] = str(original)

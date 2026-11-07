@@ -20,8 +20,9 @@ def test_revision_source_lookup_never_wraps_missing_row(tmp_path):
     from v2_0_anomalies import selected_columns
     path = tmp_path / 'source.npz'
     np.savez(path, exact_id=np.array([11, 9223372036854775806], dtype='i8'),
-             parameter=np.array([4., 9.]), text=np.array(['first', 'last']))
-    result = selected_columns(path, np.array([-1, 0, 1]), ['exact_id', 'parameter', 'text'])
+             parameter=np.array([4., 9.]), text=np.array(['first', 'last']), flags=np.array([1,2],dtype='u2'))
+    result = selected_columns(path, np.array([-1, 0, 1]), ['exact_id', 'parameter', 'text', 'flags'])
     assert result['exact_id'].tolist() == [-1, 11, 9223372036854775806]
     assert np.isnan(result['parameter'][0])
     assert result['text'][0] == ''
+    assert result['flags'].tolist() == [0,1,2]
