@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-07 — resume authorized atlas revision
+
+- NERSC authentication restored; no active user jobs on initial queue check.
+- User requires English-only figure text; persisted rule and render guard.
+- Local/GitHub1501649, NERSC6ee0df1 with unrelated untracked old artifacts.
+  Safe source fast-forward precedes one Slurm submission.
+
+
 ## 2026-11-06 — implement revised v2.0 atlas, awaiting NERSC authentication
 
 - Read full newest Pro message d86d4b7e of6ee0df1,including user issues0–8

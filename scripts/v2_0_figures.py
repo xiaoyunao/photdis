@@ -41,6 +41,11 @@ def save(fig,name,caption,section='main',model='expanded_A',reference='chosen',s
     provenance=f'{model} · {split} · {reference}'
     existing=fig._suptitle.get_text() if fig._suptitle is not None else ''
     fig.suptitle((existing+'\n' if existing else '')+provenance,fontsize=15)
+    import re
+    from matplotlib.text import Text
+    for artist in fig.findobj(match=Text):
+        if re.search(r'[\u3400-\u9fff]', artist.get_text()):
+            raise ValueError('Figure text must be English: '+artist.get_text())
     fig.savefig(folder/(name+'.png'),dpi=300,bbox_inches='tight',transparent=True)
     fig.savefig(folder/(name+'.pdf'),dpi=300,bbox_inches='tight',transparent=True)
     plt.close(fig)

@@ -14,8 +14,7 @@ figure and4 fixed49-object anomaly figures, planned1050 sets.
 - [x] Implement safe raw-row/ID audit, spectral failure decoding, native epoch
   comparison and four frozen PDF checks for the fixed Gaia anomaly list.
 - [x] Syntax,2 targeted tests,normal/empty combination plotting smoke.
-- [ ] Restore NERSC SSH authentication. Current response Permission denied.
-  User asked to run sshproxy -u yunao and enter password/OTP.
+- [x] NERSC authentication restored2026-11-07. English-only figure text required.
 - [ ] Inspect remote git/queue, sync source safely,submit exactly once using
   scripts/run_v2_0_revision.sh. No revision job submitted yet.
 - [ ] Run actual frozen per-star rebinning/anomaly audit on allocated CPU,

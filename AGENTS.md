@@ -1,5 +1,8 @@
 # Project instructions
 
+- Figure titles, axes, legends, annotations and colorbars must be English only.
+  Chinese narrative documents are allowed.
+
 - All newly constructed scientific samples must explicitly require Legacy DR11
   TYPE=PSF at admission and export, including training, calibration, testing,
   reference comparisons, external validation and application. Missing or
