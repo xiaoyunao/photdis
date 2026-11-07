@@ -268,9 +268,10 @@ def distance_only():
     expected = json.loads((ROOT/'manifests/v2_0_revision/revision_validation.json').read_text())['source_sha256']
     assert before == expected
     f.REGISTRY.clear()
-    q = data()
+    q = load(source)
+    q = subset(q, q['split'] == 2)
     for group in GROUPS:
-        distance(q, group)
+        distance(q, group, section='main' if group == 'all' else 'appendix')
     for record in f.REGISTRY.values():
         for p in record['panels']:
             assert p['plotted']+p['outside']+p['missing']==p['eligible']

@@ -4,7 +4,9 @@
 
 User requests main plot + narrow attached residual (-100 to100 percent) and
 central histogram; remove obsolete full-range panels. Single-pass simultaneous
-mean +/-3 population sigma on x/y linear kpc per population/reference pair.
+mean +/-3 population sigma on linear reference/predicted distances separately
+for each population/reference pair. Its main/residual/histogram share that mask.
+Gaia,SpecDis,SPDist and different populations never share clipping thresholds.
 Display selection only; preserve original scientific metrics and anomaly audit.
 Renderer and targeted smoke/test prepared. Next: allocated NERSC rendering,
 replace existing five PNG/PDF/CSV/JSON sets,refresh atlas and hashes,inspect

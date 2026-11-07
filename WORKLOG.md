@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-07 — user clarified comparison-level clipping and smoke provenance
+
+- Final scope: each population/reference comparison computes its own x/y
+  distance3sigma mask; main,residual,histogram within that comparison share it.
+  Gaia,SpecDis,SPDist use their actual distinct source arrays and thresholds.
+- User's apparent identical-source plots were synthetic layout smoke,where
+  the same example arrays were reused. Explained this was not scientific output.
+- Reverted the intermediate per-panel interpretation before any production run.
+  Earlier60946901 remains cancelled; verify terminal state before new submission.
+- Retained regression coverage and main/appendix destination fix. Only real
+  scientific renders will be shown to user going forward.
+
+
+## 2026-11-07 — correct clipping scope to each individual panel
+
+- User clarified that main,residual,histogram must clip independently.
+  Replaced shared masks with independent main(kpc/kpc),residual(kpc/percent),
+  histogram(percent) cuts,each starting from original valid data.
+- Cancelled pending60946901 before execution. No old-scope output delivered.
+- Four focused tests include a constructed case where all three masks differ;
+  all pass. Re-run populated/empty rendering smoke before corrected submission.
+- Preserve existing main/appendix file locations; replace exactly five plates.
+
+
 ## 2026-11-07 — implement requested distance-panel replacement
 
 - Added five-plate-only rendering mode and short Slurm runner. Main/residual
