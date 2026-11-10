@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-10 — fixed information controls implemented; joint job queued
+
+- Submitted unique regular4h61067590 after confirming no same-name active job;
+  latest checked PENDING. No timer or duplicate submission.
+- Implemented one fixed forest probability framework across four matched bands,
+  identical PSF labels/evaluation identities, common cal-only probability transform,
+  no-color baseline and frozen-partition same-label diagnostic. Explicitly retain
+  original tree-training provenance confound; do not call this a physical bound.
+- Added full adjacent-color covariance neighbors and fixed-template target-noise
+  degradation with shared band perturbations/identities and common route subset.
+- Nonstellar audit finds existing MWS SPECTYPE lacks assessed Redrock quality;
+  code will record this gap rather than promote raw labels to reliable controls.
+- Five focused mathematical/regression tests pass; new runner parse/shell pass.
+  Information production and signed-flux/systematic extensions remain pending.
+
 ## 2026-11-10 — allocated near-selection audit completed; joint production prepared
 
 - Slurm61067510 COMPLETED0:0 in25s. Unified cal/development PSF admission
