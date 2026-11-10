@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — held-out noise and far-shape programs
+- Added `v2_2_noise.py`: up to256 balanced development templates, no distance/probe training overlap, actual weighted parent color/WISE/error matching, common dimming and four shared-band repeats, full Sobol128 PDFs and frozen point/marginal class probes.
+- Added `v2_2_far.py`: per-reference10–20/20–50kpc conditional shapes and windows, explicit shared-teacher limitation, common-color train/cal/dev/application selection comparison. No refit.
+- Both programs pass syntax validation; production and artifact validation pending.
+
 ## 2026-11-10 — v2.2 first compute audit
 - Job61070873 emitted AUDIT COMPLETE; endpoint conservation, selected-distance tables, branch support and unused-identity inventory generated without refitting frozen models.
 - Added `scripts/v2_2_application.py` and Slurm wrapper: full PDFs for fixed26000PSF sample, exact frozen catalog input/route reproduction, same expanded_A application/development comparison, weighted evidence occupancy. Syntax checked.
