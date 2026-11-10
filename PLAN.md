@@ -1,5 +1,22 @@
 # PLAN
 
+## Active objective: v2.1 near-selection and joint-reference probability audit
+
+User corrected review to「评估发表进展」on2026-11-10. Full source:
+docs/pro_review_602727c_near_probability.md; requirement matrix:
+docs/v2_1_protocol.md. Follow A→B→C→conditional D; retain full distances.
+
+- [x] Recover three-endpoint602727c; read complete corrected latest review.
+- [ ] A: strict PSF sample, near/far migration, boundary errors, weighted application.
+- [ ] B: frozen leaf joint reference contributions and full Sobol128 PDF checks.
+- [ ] C: bounded color/probability experiment, matched controls, nonstellar/sky audit.
+- [ ] D: evidence-based candidate/science-validation decision and six-group delivery.
+
+Every requirement retains its own acceptance evidence; partial diagnostics do not
+complete the scope. Existing test is development. No display clipping in scores.
+New final validation must be demonstrably unused; quarantined rows are not a
+shortcut. No agents, timers, full-catalog rerun or deployment changes.
+
 ## Completed objective: replace five distance comparison plates
 
 Job60947091 COMPLETED0:0 in29s,nid006606. Five existing PNG/PDF/CSV/JSON

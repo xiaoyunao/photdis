@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-10 — corrected Pro review and near-probability audit implementation
+
+- Read full latest「评估发表进展」reply, archived verbatim in
+  docs/pro_review_602727c_near_probability.md; prior linked review superseded.
+- Added docs/v2_1_protocol.md requirement matrix A–D and active PLAN.
+- Implemented isolated strict-PSF near/far statistics, boundary-error layers,
+  observed Gaia scores and weighted existing-application row reads (no rerun).
+- Added frozen-tree class/Mg and source/Mg reconstruction with shared-g Sobol
+  propagation. Synthetic regression validates PDF/class/source marginals and
+  demonstrates why multiplying near/class marginals is wrong.
+- Validation: Python parse, bash syntax,3 focused tests pass. Real computation
+  next on Slurm; no scientific results claimed yet. Existing test remains
+  development; quarantined identities cannot serve as fresh final validation.
+
 ## 2026-11-07 — five real distance plates replaced and verified
 
 -60947091 COMPLETED0:0,29s,nid006606,source6cd82f7. Previous60946901
