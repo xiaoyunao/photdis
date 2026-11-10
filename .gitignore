@@ -49,3 +49,6 @@ archives/
 # Temporary files
 *.tmp
 *.swp
+
+!manifests/v2_2/*.csv
+!manifests/v2_2/figures/*.csv

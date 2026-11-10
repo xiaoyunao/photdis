@@ -5,15 +5,15 @@
 Latest review archived in docs/pro_review_fbb8ea0.md; prespecified scope
 docs/v2_2_protocol.md. User authorizes continuation2026-11-10.
 
-- [ ] Repair probability endpoints after inspecting real caches; conserve every reliability denominator.
+- [x] Repair probability endpoints after inspecting real caches; conserve every reliability denominator.
 - [ ] Same frozen expanded_A and actual baseline_v1 routes on26000 weighted application objects.
-- [ ] Selected-distance/FeH/quality risk, population shift and separate unused-identity/new-sky inventory.
+- [x] Selected-distance/FeH/quality risk, population shift and separate unused-identity/new-sky inventory.
 - [ ] Held-out template, matched-target-error, four shared-replicate full-PDF transfer experiment.
 - [ ] Far branch/selection/unlabeled support diagnostics; evidence-based decision, no automatic new candidate.
 - [ ] English figures, full requirement evidence/limits, validation and safe three-endpoint delivery.
 
 Frozen v2.1 source/models/cache unchanged. Six new endpoint tests pass.
-NERSC authentication valid; initial queue empty. Full work requires Slurm.
+Audit61070873 COMPLETED0:0 in33s. Actual q max1+4.44e-16;758 endpoint repairs across full cache. Identity-only unused42076 versus buffered-sky5. Full work requires Slurm.
 No agents, timer, full-catalog rerun or deployment.
 
 ## Completed objective: v2.1 near-selection and joint-reference probability audit

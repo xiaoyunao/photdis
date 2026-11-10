@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — v2.2 first compute audit
+- Job61070873 emitted AUDIT COMPLETE; endpoint conservation, selected-distance tables, branch support and unused-identity inventory generated without refitting frozen models.
+- Added `scripts/v2_2_application.py` and Slurm wrapper: full PDFs for fixed26000PSF sample, exact frozen catalog input/route reproduction, same expanded_A application/development comparison, weighted evidence occupancy. Syntax checked.
+- Next: run application audit and disjoint-template replicated noise transfer; scientific delivery remains in progress.
+
 ## 2026-11-10 — new Pro review recovered; v2.2 scope and endpoint repair prepared
 
 - Read complete latest11898-character review of fbb8ea0 from corrected chat;
