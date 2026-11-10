@@ -1,9 +1,9 @@
 {
   "correction": "61081256",
-  "correction_status": "RUNNING; candidate prediction completed, diagnostics pending",
+  "correction_status": "COMPLETED0:0,9:32;8124actual checks pass",
   "audit": "61081403",
   "audit_dependency": "afterok:61081256",
-  "audit_status": "PENDING",
+  "audit_status": "FAILED1:0,15s; missing fields in projected population; exact-owner join repair committed",
   "no_refit": true,
   "no_timers": true
 }

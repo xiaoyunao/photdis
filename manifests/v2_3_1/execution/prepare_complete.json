@@ -1,0 +1,34 @@
+{
+  "job": "61078415",
+  "frozen": {
+    "data/baseline_v1_3/references.npz": "c0542f51791d8f7145dd07480b290ba71e24132d275450af2445c67879f88a4a",
+    "data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "data/v2_1/frozen_training_audit.npz": "7d9b96544200bc4997a77cbee548589e45daace2fc28a7829d5805ffb3204115",
+    "data/v2_2/identity_unused_reservation.npz": "5526fa4adf051226ace6c22c949c2df80cdb65476958be0374e2a73326a9645a",
+    "docs/v2_3_protocol.md": "0dbe0affa818f151060547f6f2631c5da8e81c309ddb185b3ae46c6845cfe060",
+    "scripts/v2_3_prepare.py": "7520d70ada976a70b408993a671bd3b4892cddfde0e10ce02c321cf2b25a8426"
+  },
+  "reserved": 42076,
+  "training": 266774,
+  "training_morphology": {
+    "total": 317003,
+    "admitted": 266774,
+    "missing_type": 50206,
+    "non_psf": 23
+  },
+  "reserved_morphology": {
+    "total": 42076,
+    "admitted": 42076,
+    "missing_type": 0,
+    "non_psf": 0
+  },
+  "unavailable_error_excluded": 0,
+  "unlabeled_training": 43914,
+  "luminosity_min": -5.983980414244886,
+  "luminosity_max": 19.110735489735532,
+  "roles": "All reserved identities evaluation only, no calibration or fitting; no predictions read",
+  "outputs": {
+    "training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "reserved_inputs.npz": "ac138ac775aa2183bafce45f92c8a8b58b549733ba82bbf5caf8347aa60ed256"
+  }
+}

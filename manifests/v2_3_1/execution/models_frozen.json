@@ -1,0 +1,24 @@
+{
+  "inputs": {
+    "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "data/v2_3/reserved_inputs.npz": "ac138ac775aa2183bafce45f92c8a8b58b549733ba82bbf5caf8347aa60ed256",
+    "docs/v2_3_protocol.md": "0dbe0affa818f151060547f6f2631c5da8e81c309ddb185b3ae46c6845cfe060",
+    "docs/v2_3_1_protocol.md": "c23cfcfb32381663f8d11f40f8fd74aeff9ec39bedac93e1baabdc5289b4d750",
+    "src/photdis/density_v2_3.py": "9f46e43f60cefa18c6d7eb653c93102c2ba65c8791a91800a468d2e2f5410903",
+    "scripts/v2_3_run.py": "6fa14bb4b08c8428c9a84468bda19094bb1ee7d6b09e19f279816292fcb3ad53",
+    "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "src/photdis/baseline_v1_2.py": "e6bdb38174d8f03e38d2350f55fd3526a10b1c76b38386bf076b2b5d604d7e8a",
+    "src/photdis/baseline_parallax.py": "469f7e0e495415be16ffcfb968ad07f6110c015449c0ebded7f68e03b1aba2e3"
+  },
+  "models": {
+    "control": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+    "candidate": "a20c85f59ff8c92a6e4b36905b81bb0f71d06eff9a8db43cbbe498c3dbd43a84"
+  },
+  "job": "61078462",
+  "reserved_outcomes_opened": false,
+  "roles": "All reserved identities evaluation only; no calibration",
+  "numerical_migration": "c8518ab44754d14783b3e0d69187957d314bcc027553f850a6762218d22ad239",
+  "grid_migration": "667f66c63fec30c1fe7029f37a14b0ae87df0cd2d23b9056e58f38ab79d2715f",
+  "inference_correction": "688a451dc38147898332841321dda9121ebbae6e3cf8a22afcde674cd7a24b0a"
+}

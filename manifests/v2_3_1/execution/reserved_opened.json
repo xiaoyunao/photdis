@@ -1,0 +1,9 @@
+{
+  "models": {
+    "control": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+    "candidate": "a20c85f59ff8c92a6e4b36905b81bb0f71d06eff9a8db43cbbe498c3dbd43a84"
+  },
+  "input_sha256": "ac138ac775aa2183bafce45f92c8a8b58b549733ba82bbf5caf8347aa60ed256",
+  "role": "Previously inspected same-sky identities; corrected frozen experiment, not a new blind test",
+  "job": "61081256"
+}
