@@ -22,8 +22,21 @@ ARCHIVE=DEST/'inference_minus_g_archive'
 def inventory():
     keys=['identity','TYPE','photometric_eligible','split','historical_identity','class_eligible','fit_eligible','nonstellar_risk','identity_conflict','optical_error','astro_quality','zpt_valid','specdis_valid','p_corr','gaia_parallax_error','r']
     path=ROOT/'data/v2_0/population.npz'
-    with np.load(path) as z:t={k:z[k] for k in keys}
-    old=json.loads((ROOT/'data/v2_1/final_validation_reservation.json').read_text());used=[];sources={str(path.relative_to(ROOT)):sha(path)}
+    with np.load(path) as z:t={k:z[k] for k in keys if k in z.files}
+    # The frozen report population is a deliberately projected inventory, not
+    # the full scientific source table. Enrich only missing fields by exact ID.
+    source_path=ROOT/'data/baseline_v1_4/references.npz'
+    with np.load(source_path) as z:
+        joined=unique_join(t['identity'],z['identity']);found=joined>=0
+        needed=(t['TYPE']=='PSF')&t['photometric_eligible']&(t['split']==0)&~t['historical_identity']
+        assert found[needed].all(), 'Unmatched original owner for selection audit'
+        for key in keys:
+            if key in t:continue
+            a=z[key];fill=np.nan if a.dtype.kind=='f' else False
+            t[key]=np.full(len(joined),fill,dtype=a.dtype);t[key][found]=a[joined[found]]
+        for key in ('photometric_eligible','class_eligible','fit_eligible','split'):
+            assert np.array_equal(t[key][needed],z[key][joined[needed]]),key
+    old=json.loads((ROOT/'data/v2_1/final_validation_reservation.json').read_text());used=[];sources={str(path.relative_to(ROOT)):sha(path),str(source_path.relative_to(ROOT)):sha(source_path)}
     for path in old['inputs']:
         with np.load(ROOT/path) as z:used.extend(z[k] for k in z.files if 'identity' in k)
         sources[path]=sha(ROOT/path)

@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — inference verified; supplemental inventory schema repaired
+-61081256 COMPLETED0:0 in9:32;8124actual checks pass. Original cal guards still reject corrected candidate on raw full-Gaia and near contamination; no adoption.
+-61081403 FAILED1:0 before analysis (15s): historical v2.0 population is a projected inventory and lacks nonstellar/astrometry/error fields. Source schema inspected read-only; fix missing fields via exact-ID original v1.4 reference join, asserting admission/split/fit flags and every eligible owner match.
+- Preserve corrected PDFs and all QRF/model files. Retry only supplemental audit after failed terminal state and empty queue verified; no prediction rerun.
+
 ## 2026-11-10 — corrected predictions running; dependent audit queued
 -61081256 RUNNING: development/reserved/application candidate predictions complete at5:55; original-guard diagnostics in progress.1336old candidate/derived files archived with hashes; no fitted/QRF changes.
 -61081403 PENDING afterok:61081256 for selection replay/forward checks, error strata, full-PDF far mass, pair retention and coverage definitions. Supplemental code/tests frozen before dependency starts.
