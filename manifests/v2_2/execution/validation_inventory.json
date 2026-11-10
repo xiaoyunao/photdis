@@ -1,0 +1,18 @@
+{
+  "identity_only_unused": 42076,
+  "buffered_new_sky_original": 5,
+  "morphology": {
+    "total": 3565499,
+    "admitted": 3417121,
+    "missing_type": 0,
+    "non_psf": 148378
+  },
+  "reservation_sha256": "5526fa4adf051226ace6c22c949c2df80cdb65476958be0374e2a73326a9645a",
+  "purpose": "New identities in existing sky, pending reference/selection/system-membership evidence; no outcome predictions inspected",
+  "limitations": [
+    "No new distance-scale independence certified",
+    "Shared systems require membership audit",
+    "Existing inspected cal/test not repurposed",
+    "Original five-ID novel-sky reservation unchanged"
+  ]
+}

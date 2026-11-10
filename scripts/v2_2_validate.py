@@ -8,6 +8,7 @@ import numpy as np
 from v2_1_near import ROOT, DEST as OLD, load, sha, save_json
 from v2_2_application import DEST
 from photdis.stage1 import require_compute
+from photdis.probability_v2_1 import near_mass
 
 
 def main():
@@ -40,6 +41,7 @@ def main():
     app = load(DEST/'application_inputs.npz')
     check('parent_count_weight', len(app['identity']) == 26000 and np.isclose(app['sample_weight'].sum(), 8899334))
     check('app_PSF', (app['TYPE'] == 'PSF').all())
+    grids = load(DEST/'application_grids.npz')
     for model in ('expanded_A', 'baseline_v1'):
         combined = load(DEST/(model+'_application.npz')); ids = []
         for path in sorted((DEST/'application_chunks').glob(model+'_*.npz')):
@@ -47,6 +49,12 @@ def main():
             check(path.stem+':sha', sha(path) == json.loads(path.with_suffix('.json').read_text())['sha256'])
             check(path.stem+':PSF_PDF', (p['TYPE'] == 'PSF').all() and np.isfinite(p['pdf']).all() and (p['pdf'] >= 0).all() and np.allclose(p['pdf'].sum(axis=1), 1, atol=2e-6))
             check(path.stem+':class_mass', np.allclose(p['weights'].sum(axis=1), 1, atol=2e-6))
+            start = int(path.stem.rsplit('_', 1)[1]); rows = np.arange(start, start+len(p['identity']))
+            for code in np.unique(p['route']):
+                use = p['route'] == code; edges = grids['expanded_A' if model == 'expanded_A' else 'ABC'[code]]
+                bins = len(edges)-1
+                check(path.stem+':native_q_'+str(code), np.allclose(p['qnear'][use], near_mass(p['pdf'][use, :bins], edges, app['g0'][rows][use]), atol=1e-7))
+                check(path.stem+':padding_'+str(code), (p['pdf'][use, bins:] == 0).all())
             check(path.stem+':q_range', ((p['qnear'] >= 0) & (p['qnear'] <= 1)).all())
         check(model+':exact_once', np.array_equal(ids, app['identity']))
         check(model+':combined_order', np.array_equal(combined['identity'], app['identity']))

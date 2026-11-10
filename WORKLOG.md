@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — native-grid writer correction
+- Application61071166 reached all26000 expanded_A rows, then failed on first mixed-ABC chunk: frozen A/B/C histogram lengths differ (320vs310). No baseline_v1 checkpoint was committed by the failed block.
+- Corrected storage to zero-pad only, recording native grids and per-row valid bins; probabilities/quantiles still computed on original grids. Explicit one-version migration checks prior runner hash and every expanded_A checkpoint before reuse; no resampling or changed scientific model. Validator recomputes q with each native grid.
+- Far61071274 dependency must be moved to the confirmed recovery job; validation61071628 remains downstream.
+
 ## 2026-11-10 — evidence checks and initial plates
 - Noise61071273 emitted NOISE COMPLETE:256templates,759matched source-target pairs,4replicas plus shifted clean control, all fullPDFs saved. Added paired source bootstrap and retained extreme-Gaia local luminosity-support audit.
 - First three English plates generated and visually inspected: endpoint reliability, actual selected-distance quality and evidence limitations. No clipping of scientific statistics.

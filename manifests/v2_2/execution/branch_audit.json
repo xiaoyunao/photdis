@@ -1,0 +1,10 @@
+{
+  "training_morphology": {
+    "total": 317003,
+    "admitted": 266774,
+    "missing_type": 50206,
+    "non_psf": 23
+  },
+  "interpretation": "Known-class conditioning is explicit; reference-selected frequencies are not target-population truth. No class/far reweighting fitted.",
+  "independent_distance_evidence": "Existing Gaia/SpecDis/SPDist are shared teachers; no new independent far shape confirmation"
+}

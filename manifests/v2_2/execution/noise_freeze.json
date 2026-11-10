@@ -1,0 +1,10 @@
+{
+  "data/baseline_v1_4/experiments/expanded_A_distance.joblib": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+  "data/v2_1/probe_broad_grz.joblib": "3fe9532bfa3097f6ba28a444f3113df7fa4e28dbbc36141fd89ec074632a1909",
+  "data/v2_1/optical_probe_complete.json": "8b86eb580a25f2315a38836b3c2a9e66090d57bb0cf981cd3fc6ee5cfcd2f787",
+  "data/v2_1/application_psf.npz": "202d25f160f0218c137fcffc790c8a95491be64bb93cd905c32105110d4e6afa",
+  "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+  "data/v2_2/noise_design.npz": "f7cf1dfbb9f5a7ddbf02934927556769a450ae24083efe030502db7de34ee13f",
+  "scripts/v2_2_noise.py": "d98052d8b1c6eec8b4cadfee2bd4a9d430a5ee7843d2c0b2babe73945a93d268",
+  "docs/v2_2_protocol.md": "986ac1636b4e0c10e0ac0d6a93f4ecae0fe6c9c52b1ca5f8e8b67519a1b33310"
+}

@@ -58,9 +58,20 @@ def main():
     freeze = {str(p.relative_to(ROOT)): sha(p) for p in inputs}
     frozen_path = DEST/'application_freeze.json'
     if frozen_path.exists():
-        assert json.loads(frozen_path.read_text()) == freeze, 'Explicit checkpoint migration required'
+        previous = json.loads(frozen_path.read_text())
+        if previous != freeze:
+            changed = [k for k in freeze if previous.get(k) != freeze[k]]
+            assert changed == ['scripts/v2_2_application.py'], 'Explicit checkpoint migration required'
+            assert not list((DEST/'application_chunks').glob('baseline_v1_*.npz'))
+            assert previous[changed[0]] == 'f06f0d8077c1c6c5333c0bcccaafc9ce7043eb0717c4d01bb6827f4235f09e2a', 'Only the documented failed mixed-grid writer may migrate'
+            for path in (DEST/'application_chunks').glob('expanded_A_*.npz'):
+                assert sha(path) == json.loads(path.with_suffix('.json').read_text())['sha256']
+            save_json(DEST/'application_freeze_initial.json', previous)
+            save_json(DEST/'application_grid_migration.json', dict(changed=changed, previous=previous[changed[0]], current=freeze[changed[0]], reason='Native ABC PDF lengths differ; zero-pad storage only, retain original edges and valid bin counts. expanded_A cache unchanged.'))
+            save_json(frozen_path, freeze)
     else:
         save_json(frozen_path, freeze)
+    atomic_npz(DEST/'application_grids.npz', expanded_A=expanded.edges, **{k: deployed[k].edges for k in 'ABC'})
     summaries = {}
     for name in ('expanded_A', 'baseline_v1'):
         pieces = []
@@ -82,9 +93,16 @@ def main():
                     value = integrate(model, m[use], e[use], ids[use], 128, keep_pdf=True)['wide']
                     value['qnear'] = canonical_probability(near_mass(value['pdf'], model.edges, m[use, 0]))
                     for k, v in value.items():
-                        if k not in p:
-                            p[k] = np.empty((len(ix),)+v.shape[1:], dtype=v.dtype)
-                        p[k][use] = v
+                        if k == 'pdf' and name == 'baseline_v1':
+                            if k not in p:
+                                p[k] = np.zeros((len(ix), max(len(x.centers) for x in deployed.values())), dtype=v.dtype)
+                                p['pdf_bins'] = np.zeros(len(ix), dtype=int)
+                            p[k][use, :v.shape[1]] = v
+                            p['pdf_bins'][use] = v.shape[1]
+                        else:
+                            if k not in p:
+                                p[k] = np.empty((len(ix),)+v.shape[1:], dtype=v.dtype)
+                            p[k][use] = v
                 atomic_npz(path, **p)
                 save_json(meta, dict(sha256=sha(path), n=len(ix)))
             assert np.array_equal(p['identity'], app['identity'][ix]) and (p['TYPE'] == 'PSF').all()

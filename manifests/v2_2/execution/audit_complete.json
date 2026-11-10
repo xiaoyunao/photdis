@@ -1,0 +1,12 @@
+{
+  "job_id": "61070873",
+  "frozen_inputs": {
+    "data/v2_1/probability.npz": "b5785b2ce2e5e398384efdab9759090008e26554f81d2512c8c05502a3d21f4d",
+    "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+    "docs/v2_1_protocol.md": "73dc52e31d974302e01e06355ee1c84c5ded8157bc786db875f0dfe1026de849",
+    "scripts/v2_1_joint.py": "4b304d44d84d3001f56145441556884df18095fcfb8b13186f798258ab4ed9e6",
+    "src/photdis/probability_v2_1.py": "7400e0bb938c3b40cde6c58250bec945fc40cf451467701cfc6e06d63f870758"
+  },
+  "old_outputs_unchanged": true,
+  "no_refit": true
+}
