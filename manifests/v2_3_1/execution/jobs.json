@@ -1,0 +1,9 @@
+{
+  "correction": "61081256",
+  "correction_status": "RUNNING; candidate prediction completed, diagnostics pending",
+  "audit": "61081403",
+  "audit_dependency": "afterok:61081256",
+  "audit_status": "PENDING",
+  "no_refit": true,
+  "no_timers": true
+}

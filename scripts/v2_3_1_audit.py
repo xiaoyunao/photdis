@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Correction deltas, exact inventory replay, and qualified selection evidence."""
+import csv
 import json
 import os
 import concurrent.futures
@@ -222,6 +223,20 @@ def validate():
     for path in (DEST/'chunks').glob('*_candidate_*.json'):check('inference_version:'+path.stem,json.loads(path.read_text())['inference']==candidate_inference_stamp())
     check('production_validation',json.loads((DEST/'validation.json').read_text())['all_passed'])
     for name in ('selection_replay','inference_plus_g_migration'):check(name,(DEST/(name+'.json')).exists())
+    with open(TABLES/'metal_poor_pair_retention.csv') as f:
+        for i,row in enumerate(csv.DictReader(f)):
+            check('pair_conservation:'+str(i),sum(int(row[k]) for k in ('both','poor_only','ordinary_only','neither'))==int(row['pairs']))
+    with open(TABLES/'selection_simulation_checks.csv') as f:
+        for row in csv.DictReader(f):
+            check('forward_probability:'+row['model'],abs(float(row['mean_probability_difference']))<.01)
+            check('forward_observed_CDF:'+row['model'],float(row['median_abs_observed_pit_difference'])<.03)
+    conditions=load(DEST/'selection_conditions.npz');u=conditions['supported']
+    for name in ('control','candidate'):
+        p=load(DEST/f'reserved_{name}_selection.npz')
+        check('selected_CDF_valid:'+name,np.all(np.isfinite(p['conditional_pit'][u])) and np.all((p['conditional_pit'][u]>=0)&(p['conditional_pit'][u]<=1)))
+        check('selected_log_valid:'+name,np.isfinite(p['conditional_log'][u]).all())
+    replay=json.loads((DEST/'selection_replay.json').read_text())
+    check('replay_exact',replay['replay_exact'] and replay['fit_rule_exact'])
     save_json(DEST/'correction_validation.json',dict(actual_checks=len(checks),all_passed=all(checks.values()),checks=checks,job=os.getenv('SLURM_JOB_ID')))
     print('CORRECTION VALIDATION',len(checks),flush=True)
 

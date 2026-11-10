@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — corrected predictions running; dependent audit queued
+-61081256 RUNNING: development/reserved/application candidate predictions complete at5:55; original-guard diagnostics in progress.1336old candidate/derived files archived with hashes; no fitted/QRF changes.
+-61081403 PENDING afterok:61081256 for selection replay/forward checks, error strata, full-PDF far mass, pair retention and coverage definitions. Supplemental code/tests frozen before dependency starts.
+- Added16English corrected/evidence plates generator, with no new scientific fitting. Final production/audit validation and artifact delivery remain pending.
+
 ## 2026-11-10 — selection and paired-evidence audit implemented
 - Added exact historical identity inventory replay, counterfactual distance-fit eligibility and explicitly scoped SNR conditioning; raw scores retained. Direct forward simulations reapply error/source-dependent admission, rather than globally imposing SNR<20.
 - Added same-ID inference changes by error, class-independent far-PDF mass, preserved2055metal-poor pairs with pair-retention counts, and development-only versus cal+development coverage counts.
