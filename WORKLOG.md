@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-10 — v2.2 execution and validation tooling
+- Application61071166 RUNNING, checkpointed fixed256-row chunks; noise61071273 submitted; far61071274 submitted with afterok dependency on application. No duplicate submissions.
+- Added source-cluster bootstrap and actual-artifact validator; seven English figure plates from compact CSVs. Syntax checks and six endpoint tests pass; production checks still pending.
+
 ## 2026-11-10 — held-out noise and far-shape programs
 - Added `v2_2_noise.py`: up to256 balanced development templates, no distance/probe training overlap, actual weighted parent color/WISE/error matching, common dimming and four shared-band repeats, full Sobol128 PDFs and frozen point/marginal class probes.
 - Added `v2_2_far.py`: per-reference10–20/20–50kpc conditional shapes and windows, explicit shared-teacher limitation, common-color train/cal/dev/application selection comparison. No refit.
