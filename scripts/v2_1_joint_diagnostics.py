@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Per-star branch attribution and fixed, explicitly selected PDF illustrations."""
 import json
+import csv
 import numpy as np
 from v2_1_near import ROOT, DEST, TABLES, DISTANCES, CLASSES, load, subset, csv_rows, save_json, sha, atomic_npz
 from v2_1_information import sample_indices
@@ -93,6 +94,22 @@ def main():
             summary.append(row)
     csv_rows(TABLES/'branch_attribution.csv', summary)
     csv_rows(TABLES/'pdf_examples.csv', examples)
+    # Per-star conditional export stays on NERSC. Only finite reference targets
+    # enter conditional performance; missing-reference placeholder flags do not.
+    with open(TABLES/'class_conditional.csv') as stream:
+        conditional = list(csv.DictReader(stream))
+    conditional_summary = []
+    for split in (1, 2):
+        for label in ('dwarf', 'evolved', 'other'):
+            rr = [r for r in conditional if int(r['split']) == split and r['group'] == label
+                  and np.isfinite(float(r['reference_mu']))]
+            delta = np.array([float(r['mu50'])-float(r['reference_mu']) for r in rr])
+            conditional_summary.append(dict(split=split, group=label, n=len(rr),
+                median_delta_mu=float(np.median(delta)) if len(rr) else None,
+                severe_fraction=float(np.mean(abs(delta) > 1)) if len(rr) else None,
+                coverage68=float(np.mean([r['coverage68'] == 'True' for r in rr])) if rr else None,
+                median_width68=float(np.median([float(r['width68']) for r in rr])) if rr else None))
+    csv_rows(TABLES/'class_conditional_summary.csv', conditional_summary)
     save_json(DEST/'joint_diagnostics_complete.json', dict(examples={str(t['identity'][row]): category for row, category in chosen.items()},
         example_selection='One deterministic identity-hash choice per declared outcome stratum; illustrative, not representative validation',
         checks_n=len(checks), max_pdf_error=max(r['pdf_error'] for r in checks),

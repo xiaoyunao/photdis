@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-10 — real joint reconstruction passed; full probability run advancing
+
+-61068459 started regular4h on nid006320 before requested pending-only QoS
+  adjustment; guard skipped change. No cancellation or replacement occurred.
+- All317003 original training positions match frozen NN design exactly.
+  Integer-count rebuild passed: PDF/class/source max errors5.96e-8/1.19e-7/
+  5.96e-8. Native audit266774 verified PSF,23 nonPSF,50206 unverified;
+  unverified/nonPSF retained only in frozen reconstruction, excluded new probe.
+- At4m33 runtime,384/763 joint chunks completed; measured~16chunks/10s.
+  Quality61068418 COMPLETED0:0 in44s. Optical/reservation61068700 submitted;
+  reservation output5 unused identities in2 buffered tiles, pending system audit.
+- Controls61068421 completed28,425,963-row zcatalog scan and matched91599
+  raw control targets; quality admission/predictions require final status check.
+- Added bounded4000-same-star frozen band probability comparison and actual
+  artifact conservation/spatial-bootstrap validator. Preserve WISE training-pool
+  confound; no new distance fit or full-catalog application.
+
 ## 2026-11-10 — joint recovery and additional coverage audits
 
 - Confirmed61067590 FAILED1:0 in31s and queue empty for joint before submitting

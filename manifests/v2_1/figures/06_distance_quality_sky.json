@@ -1,11 +1,12 @@
 {
   "name": "06_distance_quality_sky",
-  "caption": "Observed reference strata only. Metallicity is diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.",
+  "caption": "Observed reference strata only. Corrected FeH uses author domain and positive formal errors; diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.",
   "selection": "Verified DR11 PSF; development test; no display clipping",
   "rows": 59,
   "model": "expanded_A",
   "inputs": {
     "distance_class": "6e7ae59941ffcd70523a7ce4f1c74aae3313605859081b63739f8301cf46bc9b",
-    "migration": "e3ce14a731eb32c3b5eb6fe4ed524901923a82e1a8fe7fe3cf0d7eb9f3502968"
+    "migration": "e3ce14a731eb32c3b5eb6fe4ed524901923a82e1a8fe7fe3cf0d7eb9f3502968",
+    "metallicity_quality": "a5e3dd46df655a05538b3291d3d815617d5e6606e2c935b209d16723d3c749a6"
   }
 }

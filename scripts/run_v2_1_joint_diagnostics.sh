@@ -12,3 +12,4 @@ source /global/common/software/desi/desi_environment.sh main
 export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 python -u scripts/v2_1_joint_diagnostics.py
+python -u scripts/v2_1_validate.py
