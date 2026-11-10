@@ -5,7 +5,7 @@
 Latest full review: docs/pro_review_83e1fe8.md. Frozen prospective protocol:
 docs/v2_3_protocol.md. Cache corrections/inventory first; one same-PSF control
 and error-aware multimodal candidate frozen before reserved outcomes.
-- [ ] Noise baseline correction and outcome-blind evaluation-reference inventory.
+- [x] Noise baseline correction and outcome-blind evaluation-reference inventory:173chosen,2952weak/644SNR>=5Gaia;42076reserved.
 - [ ] Freeze near scope, prepare full PSF distance support, validate XD mathematics.
 - [ ] Fit/freeze one candidate and same-identity QRF; then evaluate reserved IDs.
 - [ ] Selected-distance, poor-metal, far/reference, target-coverage diagnostics.
@@ -31,9 +31,9 @@ Earlier writer failures61071166(native grid),61071786(sky field) explicitly
 migrated with hashes; predictions reused. No active jobs, timers or agents.
 
 Scientific gaps remain: high-q application53.25%weight has<20references per
-observable cell; high-q nearby metal-poor dwarfs remain biased.42076unused
-identities have no current qualified class/distance labels (3596weak-parallax
-eligible); only5buffered-sky identities, membership/scale checks pending.
+observable cell; high-q nearby metal-poor dwarfs remain biased.Corrected in v2.3:42076unused
+identities have173chosen distance-evaluation labels (3596signed-parallax
+eligible, not all weak); only5buffered-sky identities, membership/scale checks pending.
 No independent final-validation claim, new candidate, calibration, deployment
 or full-catalog rerun. Next work follows user/Pro review and new target evidence.
 

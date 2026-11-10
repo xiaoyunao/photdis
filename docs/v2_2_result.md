@@ -1,5 +1,7 @@
 # Photdis v2.2：近端选样、应用覆盖与误差迁移审计
 
+> 2026-11-10勘误：v2.3缓存复核确认，原库存 distance_eligible 实为训练资格；42076保留身份有173个chosen距离评价对象，3596个合格视差中2952个S/N<5、644个S/N>=5。噪声分类正增益受参考先验与平衡模板比例失配影响，不能解释为恢复暗端信息；新增均匀和设计先验见[修正统计](../manifests/v2_3/noise_baselines.csv)与[资格统计](../manifests/v2_3/reference_inventory.csv)。原始缓存保留不变。
+
 依据 [Pro 最新审查](pro_review_fbb8ea0.md) 和 [执行协议](v2_2_protocol.md)。
 本轮修正统计端点，补上实际应用与开发参考之间的完整概率对照；模型、超参数、
 旧输出与部署均冻结。`expanded_A` 是研究基线，`baseline_v1` 是原目录对照。

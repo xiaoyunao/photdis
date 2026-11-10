@@ -9,6 +9,13 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Active v2.3 scope: docs/v2_3_protocol.md and pro_review_83e1fe8.md. One
+  full-support error-deconvolved32component candidate versus same-PSF QRF;
+  freeze both before reserved outcomes. No deployment, catalog expansion,
+  monitoring or subagents. Cache correction:173chosen evaluation references,
+  2952SNR<5 and644SNR>=5 among3596signed Gaia; prior noise gain is composition-
+  confounded. Training owner/TYPE provenance must remain exact.
+
 - Latest completed audit2026-11-10: v2.2, docs/v2_2_result.md and
   docs/v2_2_atlas.md; full ledger docs/v2_2_requirements_result.md; review fbb8ea0.
   All1280 reliability strata conserve endpoints; q decisions unchanged.
