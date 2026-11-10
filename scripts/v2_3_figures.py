@@ -26,7 +26,7 @@ def corrections():
         r=sel(data,W1=wise)[:4]
         for i,(key,label,color) in enumerate(keys):ax.bar(np.arange(4)+(i-1.5)*.18,[val(x,key) for x in r],width=.18,color=color,label=label)
         ax.set(xticks=np.arange(4),xticklabels=['<18','18–20','20–22','22–25'],ylabel='Reserved-identity count',xlabel='Observed r magnitude',yscale='symlog',title='No qualified W1' if wise=='False' else 'Qualified W1')
-    axes[0].legend(fontsize=9);fig.suptitle('New identities: fitting and evaluation qualifications differ')
+    axes[0].legend(fontsize=8,loc='upper left');fig.suptitle('New identities: fitting and evaluation qualifications differ')
     save(fig,'02_reference_inventory',['reference_inventory'],'42076 strict-PSF new identities in existing sky.173 chosen evaluation references,3596 signed Gaia observations. Source-valid VAC counts in CSV include exclusions and are not interchangeable with clean chosen labels. No new-scale or independent-sky claim.')
 
 

@@ -6,8 +6,8 @@ Latest full review: docs/pro_review_83e1fe8.md. Frozen prospective protocol:
 docs/v2_3_protocol.md. Cache corrections/inventory first; one same-PSF control
 and error-aware multimodal candidate frozen before reserved outcomes.
 - [x] Noise baseline correction and outcome-blind evaluation-reference inventory:173chosen,2952weak/644SNR>=5Gaia;42076reserved.
-- [ ] Freeze near scope, prepare full PSF distance support, validate XD mathematics.
-- [ ] Fit/freeze one candidate and same-identity QRF; then evaluate reserved IDs.
+- [x] Freeze near scope, exact-owner266774PSF distance support/43914unlabeled;6math/scoring tests.
+- [ ] Fit/freeze one candidate and same-identity QRF; job61078462(debug30min) submitted after owner repair; then evaluate reserved IDs.
 - [ ] Selected-distance, poor-metal, far/reference, target-coverage diagnostics.
 - [ ] English figures, actual artifact checks, explicit evidence limits, safe sync.
 No deployment, full catalog, monitoring or subagents.

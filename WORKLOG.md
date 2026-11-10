@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — original-owner preparation verified
+- Preparation61078415 COMPLETED0:0. Exact owner/photometry equality checks pass; all266774verified PSF training objects now have valid original-source errors, including43914unlabeled. Earlier266772count superseded.
+- Cancelled61078245 whilePENDING (confirmedCANCELLED, no fit files); next single debug run uses fixed model protocol and hashed checkpoints. No reserved outcomes opened.
+- Added selected-distance/Gaia/reference-convolved scoring, metal-poor matching, far class-oracle diagnostics, PSF risk controls and actual-artifact validator. Six focused math/scoring tests pass.
+- Two English cache-correction plates visually inspected; inventory legend moved clear of data. No frozen historical arrays/protocol changed.
+
+
 ## 2026-11-10 — preserve original training owner before fitting
 - Cache preparation61078191 COMPLETED0:0; noise baseline and42076identity inventory recovered.173chosen evaluation references;3596signed Gaia observations split2952SNR<5/644SNR>=5.
 - Pre-fit inspection found new-reference preference could replace legacy training owner photometry while retaining original TYPE. Fixed training preparation to preserve original audited owner arrays exactly and join sigma_mu from corresponding old/new source; explicit source-hash migration requires no fit/model file.

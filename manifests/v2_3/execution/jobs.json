@@ -1,0 +1,8 @@
+{
+  "prepare": "61078191",
+  "cancelled_before_fit": "61078245",
+  "owner_repair": "61078415",
+  "model": "61078462",
+  "model_status": "submitted; inspect Slurm before any recovery",
+  "timers": false
+}
