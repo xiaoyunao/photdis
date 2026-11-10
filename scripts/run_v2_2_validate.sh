@@ -14,4 +14,5 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 exec 9>data/v2_2/.validate.lock
 flock -n 9
 python -u scripts/v2_2_noise_summary.py
+python -u scripts/v2_2_extremes.py
 python -u scripts/v2_2_validate.py

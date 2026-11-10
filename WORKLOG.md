@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — evidence checks and initial plates
+- Noise61071273 emitted NOISE COMPLETE:256templates,759matched source-target pairs,4replicas plus shifted clean control, all fullPDFs saved. Added paired source bootstrap and retained extreme-Gaia local luminosity-support audit.
+- First three English plates generated and visually inspected: endpoint reliability, actual selected-distance quality and evidence limitations. No clipping of scientific statistics.
+- Validation inventory42076new IDs has zero currently qualified class/distance labels;weak-parallax eligibilities counted separately. No independent-validation claim.
+
 ## 2026-11-10 — v2.2 execution and validation tooling
 - Application61071166 RUNNING, checkpointed fixed256-row chunks; noise61071273 submitted; far61071274 submitted with afterok dependency on application. No duplicate submissions.
 - Added source-cluster bootstrap and actual-artifact validator; seven English figure plates from compact CSVs. Syntax checks and six endpoint tests pass; production checks still pending.

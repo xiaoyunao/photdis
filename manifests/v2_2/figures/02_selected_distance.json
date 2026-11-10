@@ -1,0 +1,8 @@
+{
+  "name": "02_selected_distance",
+  "caption": "All selected objects, including far contaminants. Severe=|delta mu|>1mag. Low contamination is not precise individual distance. Unknown/other retained. Metal-poor means correctedFeH<\u22121.5 within the established quality/domain cuts.",
+  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "sources": {
+    "selected_distance": "3a6dee27393e3cb3e154572e882084c702faac699909dadcc04fa3fe6d01377b"
+  }
+}

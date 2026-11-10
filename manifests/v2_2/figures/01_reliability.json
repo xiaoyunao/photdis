@@ -1,0 +1,9 @@
+{
+  "name": "01_reliability",
+  "caption": "Tolerance-only endpoint repair restores308cal and379development chosen rows. Every stratum conserves its denominator. Threshold decisions unchanged; sky-bootstrap intervals are in the table.",
+  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "sources": {
+    "reliability": "462c18ad591afb6dcd9c22ac5edc0a65be2dece515590faf92c9a0b3e97b310c",
+    "selection_risk": "eb9f1006efc255284dc514ac8970422353bff276c6fd8fa74e427ad874131caf"
+  }
+}
