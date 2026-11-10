@@ -81,6 +81,7 @@ def main():
     check('noise_four_plus_control', len(list((DEST/'noise_chunks').glob('*.npz'))) == 5)
     far = load(DEST/'far_shape.npz'); check('far_ids_PSF', np.array_equal(far['identity'], t['identity']) and (far['TYPE'] == 'PSF').all())
     reservation = load(DEST/'identity_unused_reservation.npz')
+    check('reservation_no_application', not np.intersect1d(reservation['identity'], app['identity']).size)
     check('reservation_no_old_evaluation', not np.intersect1d(reservation['identity'], t['identity']).size)
     check('reservation_no_expanded_training', not np.intersect1d(reservation['identity'], train['identity']).size)
     check('reservation_PSF', (reservation['TYPE'] == 'PSF').all())

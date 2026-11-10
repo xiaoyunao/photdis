@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-10 — final identity separation guard
+- Added explicit validation that newly reserved identities do not overlap the already inspected26000application sample, in addition to train and development separation.
+- This guard fails closed; scientific inventory may not be promoted to independent validation until all provenance and system-membership evidence is established.
+
 ## 2026-11-10 — recovery and scientific interpretation
 - Confirmed61071166 FAILED1:0 at6m43s, no same-name active job; submitted recovery61071786 once. Far61071274 dependency updated to this recovery; downstream validator61071628 retained, not duplicated.
 - Added source-PDF format/provenance/link delivery validator and explicit zero-nonPSF/missing admission counts. Noise results show point vs marginalized classification diverge; conditional experiment is not new faint truth.
