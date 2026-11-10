@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-10 — preserve original training owner before fitting
+- Cache preparation61078191 COMPLETED0:0; noise baseline and42076identity inventory recovered.173chosen evaluation references;3596signed Gaia observations split2952SNR<5/644SNR>=5.
+- Pre-fit inspection found new-reference preference could replace legacy training owner photometry while retaining original TYPE. Fixed training preparation to preserve original audited owner arrays exactly and join sigma_mu from corresponding old/new source; explicit source-hash migration requires no fit/model file.
+- Model61078245 was PENDING; cancellation requested before any fitting. No reserved predictions read. Preparation needs rerun; first training count superseded pending exact-owner audit.
+
+
 ## 2026-11-10 — fixed error-aware density implementation
 - Added density_v2_3: one32component heteroscedastic XD mixture with shared g/r covariance, reference-error deconvolution, analytic noisy-color/effective-M conditioning and auxiliary missing-class support. Reference method Bovy/Hogg/Roweis2011.
 - Added single-fit model hash firewall, same-identity PSF QRF control, checkpointed full PDFs, reserved evaluation after freeze, and separate weighted application inference. No new catalog.

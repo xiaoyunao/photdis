@@ -79,7 +79,13 @@ def main():
     freeze = {str(p.relative_to(ROOT)): sha(p) for p in inputs}
     marker = DEST/'prepare_freeze.json'
     if marker.exists():
-        assert json.loads(marker.read_text()) == freeze
+        previous = json.loads(marker.read_text())
+        if previous != freeze:
+            assert previous['scripts/v2_3_prepare.py'] == '1a30a729a649daea46b9e07fbbb2cbee89fb7bc226138360f6ff09c4aed9475c'
+            assert all(previous[k] == v for k, v in freeze.items() if k != 'scripts/v2_3_prepare.py')
+            assert not (DEST/'fit_inputs.json').exists() and not (DEST/'models_frozen.json').exists()
+            save_json(DEST/'prepare_owner_migration.json', dict(previous=previous, replacement=freeze, reason='Reference errors must use original old/new training owner, not new-table preference; no fit or reserved prediction occurred'))
+            save_json(marker, freeze)
     else:
         save_json(marker, freeze)
     noise()
@@ -112,8 +118,19 @@ def main():
     csv_rows(TABLES/'reference_inventory.csv', rows)
     original = load(ROOT/'data/v2_1/frozen_training_audit.npz')
     psf, audit = psf_admission(original['TYPE'])
-    train = qualify(references(original['identity'][psf], paths))
-    train['TYPE'] = original['TYPE'][psf]
+    train = subset(original, psf)
+    legacy = load(ROOT/'data/baseline_v1_4/experiments/expanded_A_legacy_training.npz')['distance_train_identity']
+    old_member = np.isin(train['identity'], legacy)
+    train['sigma_mu'] = np.full(len(train['identity']), np.nan)
+    for member, source in [(old_member, paths[0]), (~old_member, paths[1])]:
+        if not member.any(): continue
+        joined = references(train['identity'][member], [source])
+        for key in ['ls_id', 'Mg', 'label_source', 'g0', 'r0', 'z0', 'sigma_g', 'sigma_r', 'sigma_z']:
+            if key in ('ls_id', 'label_source'): assert np.array_equal(train[key][member], joined[key])
+            else: np.testing.assert_allclose(train[key][member], joined[key], rtol=0, atol=0, equal_nan=True)
+        train['sigma_mu'][member] = joined['sigma_mu']
+    # Native TYPE and all training photometry remain from the original audited
+    # owner row. Only reference uncertainty is added from that SAME source.
     # No reliable class requirement. Reject only unavailable measurement errors,
     # identically for control and candidate; retain every supported luminosity.
     valid = np.isfinite(train['Mg']) & np.isfinite(train['sigma_mu']) & (train['sigma_mu'] > 0)
