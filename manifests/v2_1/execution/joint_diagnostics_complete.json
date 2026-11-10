@@ -1,0 +1,16 @@
+{
+  "examples": {
+    "2507041546764390016": "near_dwarf_success",
+    "2502309283078094592": "far_giant_median_failure",
+    "2487236456130027136": "far_giant_recovered",
+    "3654231469054466688": "poor_metal_dwarf",
+    "3670319660631088000": "no_WISE_multimodal",
+    "3654428930175557504": "unlabeled"
+  },
+  "example_selection": "One deterministic identity-hash choice per declared outcome stratum; illustrative, not representative validation",
+  "checks_n": 763,
+  "max_pdf_error": 2.1653249859809875e-07,
+  "max_class_error": 3.357125679670503e-07,
+  "max_mu_error": 0.0003660937132252684,
+  "terminology": "Joint reference contribution; unknown denotes missing class evidence; no Galactic prior or physical posterior calibration implied"
+}

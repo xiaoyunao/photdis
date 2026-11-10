@@ -1,0 +1,6 @@
+scope,bands,n,cells,mean_log_gain,positive_cells,spatial_bootstrap_low,spatial_bootstrap_high,interpretation
+broad_grz,grz,42950,9,-0.001455697817377742,4,-0.005416400303446695,0.0007543166231746443,Paired resampling of existing development sky; not new independent sky
+matched,grz,33251,9,-0.0021390527951812843,2,-0.006062184046841904,-8.140762115102939e-05,Paired resampling of existing development sky; not new independent sky
+matched,griz,33251,9,0.004769419403928953,5,-8.176922379555659e-05,0.012353675040517096,Paired resampling of existing development sky; not new independent sky
+matched,grzW1,33251,9,0.012374247507758297,7,0.00808122997320285,0.017133685052573018,Paired resampling of existing development sky; not new independent sky
+matched,grzW1W2,33251,9,0.007769843674261974,8,0.005536189253353273,0.012638985499308879,Paired resampling of existing development sky; not new independent sky

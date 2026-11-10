@@ -1,0 +1,47 @@
+{
+  "job_id": "61068927",
+  "checks": {
+    "matched_grz": {
+      "mu_max_error": 0.0,
+      "model_sha256": "504dd3e1a35005c1ed27ddb2aacd14cdef72c0efc3b5a04d6fa952df39005783",
+      "n": 4000
+    },
+    "matched_griz": {
+      "mu_max_error": 0.0,
+      "model_sha256": "7560fe1b58e499e25d5f591196f5b0360724e9cccd357512809187a5e961ab57",
+      "n": 4000
+    },
+    "expanded_A": {
+      "mu_max_error": 0.0,
+      "model_sha256": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+      "n": 4000
+    },
+    "expanded_B": {
+      "mu_max_error": 0.0,
+      "model_sha256": "87dfbf77e4c619ffde6387bbfb06349b7d4bfbc2a88dee32528e46d2533308c8",
+      "n": 4000
+    },
+    "expanded_C": {
+      "mu_max_error": 0.0,
+      "model_sha256": "0a06f59ea79369b054490887b78d2ea83a2a544906da42731037c8b88d28ed3e",
+      "n": 4000
+    }
+  },
+  "pairings": [
+    [
+      "matched_grz",
+      "matched_griz"
+    ],
+    [
+      "expanded_A",
+      "expanded_B"
+    ],
+    [
+      "expanded_B",
+      "expanded_C"
+    ]
+  ],
+  "sampling": "Identity-hash4000 development objects with i,W1,W2, verified PSF; all pairs identical objects",
+  "propagation": "Shared grz Sobol draws within each declared pair;128draws",
+  "interpretation": "Matched grz/griz has identical original training IDs. Expanded A/B/C have different training-band eligibility: distance contrasts mix band and training-pool effects. The separate classification probe controls training IDs. No new distance model fitted."
+}

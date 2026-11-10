@@ -12,7 +12,7 @@
   "weighted_psf_predictable": 8899334.0,
   "weighted_predicted_near": 3550633.3810000005,
   "retention": 0.3989774269625121,
-  "scope": "Existing fixed14-field stratified parent sample; PSF and finite deployed-route predictions only; not full DR11.",
+  "scope": "Fixed26000-row stratified sample of13 DECam fields; weighted parent8899334. Northern no-model field excluded. Not all DR11.",
   "catalogs": [
     {
       "field": 0,

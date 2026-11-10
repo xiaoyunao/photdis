@@ -117,7 +117,9 @@ def movement():
 
 def conditions():
     rows = select(read('distance_class'), split='development_test', reference='chosen')
-    fig, axes = plt.subplots(1, 3, figsize=(16, 5), constrained_layout=True)
+    extra = all((TABLES/(name+'.csv')).exists() for name in ['systematic_sensitivity', 'weak_flux_probability', 'nonstellar_near'])
+    fig, axes = plt.subplots(2 if extra else 1, 3, figsize=(16, 10 if extra else 5), constrained_layout=True)
+    axes = axes.ravel()
     selected = []
     corrected = (TABLES/'metallicity_quality.csv').exists()
     metal = select(read('metallicity_quality'), split='development_test', abundance='corrected') if corrected else []
@@ -152,8 +154,34 @@ def conditions():
     for r in sky:
         axes[2].annotate(r['group'].replace('cell_', ''), (number(r, 'n'), 100*number(r, 'far_contamination')), fontsize=9)
     axes[2].set(xlabel='Chosen references per sky cell', ylabel='Selected far contamination (%)', title='Development sky variation', xscale='log')
+    sources = ['distance_class', 'migration']+(['metallicity_quality'] if corrected else [])
+    if extra:
+        stress = read('systematic_sensitivity')
+        nominal = select(stress, scenario='nominal')[0]
+        altered = [r for r in stress if r['scenario'] != 'nominal']
+        selected += stress
+        axes[3].barh(np.arange(len(altered)), [number(r, 'gaia_observation_log_score')-number(nominal, 'gaia_observation_log_score') for r in altered], color=BLUE)
+        axes[3].set_yticks(np.arange(len(altered)), [r['scenario'].replace('_', ' ')+' '+r['sign'] for r in altered], fontsize=9)
+        axes[3].axvline(0, color=GRAY, lw=1)
+        axes[3].set(xlabel='Change in observed-parallax log score', title='Prespecified systematic stress')
+        weak = select(read('weak_flux_probability'), split='development_test', population='all', threshold='0.95')
+        for group, label, color in [('W1_weak:r18_20', 'Weak W1 (N=69)', BLUE), ('W2_weak_given_W1:r18_20', 'Weak W2, W1 measured (N=3010)', ORANGE)]:
+            rr = [select(weak, group=group, model=model)[0] for model in ['optical', 'signed_W1', 'signed_W1W2']]
+            selected += rr
+            axes[4].plot(np.arange(3), [number(r, 'brier') for r in rr], 'o-', color=color, label=label)
+        axes[4].set_xticks(np.arange(3), ['Optical', '+ signed W1', '+ signed W2'], rotation=15)
+        axes[4].set(ylabel='Near-event Brier score', title='18–20 mag: frozen weak-flux prototype')
+        axes[4].legend(fontsize=9)
+        control = select(read('nonstellar_near'), split='2')
+        for kind, color in [('GALAXY', ORANGE), ('QSO', BLUE)]:
+            rr = select(control, spectype=kind)
+            selected += rr
+            axes[5].plot([number(r, 'threshold') for r in rr], [100*number(r, 'false_near_fraction') for r in rr], 'o-', color=color, label=kind+f" (N={rr[0]['predicted_n']})")
+        axes[5].set(xlabel='Near-probability threshold', ylabel='False near selection (%)', title='Quality-assessed PSF nonstellar controls')
+        axes[5].legend(fontsize=9)
+        sources += ['systematic_sensitivity', 'weak_flux_probability', 'nonstellar_near']
     fig.suptitle('Full PSF development strata · no display clipping · crosses: N<20', fontsize=17)
-    save(fig, '06_distance_quality_sky', selected, ['distance_class', 'migration']+(['metallicity_quality'] if corrected else []),
+    save(fig, '06_distance_quality_sky', selected, sources,
          'Observed reference strata only. Corrected FeH uses author domain and positive formal errors; diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.')
 
 
@@ -221,7 +249,8 @@ def information():
     rows = select(read('information_scores'), split='development_test', group='all', raw_or_calibrated='calibrated')
     neighbors = read('color_neighbors')
     degraded = read('template_degradation')
-    fig, axes = plt.subplots(2, 2, figsize=(13, 9), constrained_layout=True)
+    broad = (TABLES/'optical_probe.csv').exists() and (TABLES/'probe_spatial_bootstrap.csv').exists()
+    fig, axes = plt.subplots(3 if broad else 2, 2, figsize=(13, 13 if broad else 9), constrained_layout=True)
     names = ['grz', 'griz', 'grzW1', 'grzW1W2']
     selected = list(rows)+degraded
     for method, label, color in [('frozen_partitions_same_labels', 'Frozen partitions, common labels', BLUE),
@@ -251,8 +280,29 @@ def information():
     axes[1, 1].legend(fontsize=10)
     for ax in axes.ravel():
         ax.set_xticks(np.arange(4), names)
+    sources = ['information_scores', 'color_neighbors', 'template_degradation']
+    if broad:
+        rr = select(read('optical_probe'), split='development_test')
+        gg = ['all', 'no_W1', 'r18_20:no_W1']
+        for method, label, color in [('frozen_partitions_same_labels', 'Frozen partitions, common labels', BLUE), ('fixed_forest', 'Fixed classification forest', ORANGE)]:
+            data = [select(rr, method=method, group=g)[0] for g in gg]
+            selected += data
+            axes[2, 0].plot(np.arange(3), [number(r, 'log_gain_over_prior') for r in data], 'o-', color=color, label=label)
+        axes[2, 0].set_xticks(np.arange(3), ['All grz', 'No W1', '18–20, no W1'])
+        axes[2, 0].set(ylabel='Log score gain over prior', title='Broad optical probe, identical label pool')
+        axes[2, 0].legend(fontsize=9)
+        rr = read('probe_spatial_bootstrap')
+        selected += rr
+        mid = np.array([number(r, 'mean_log_gain') for r in rr])
+        lo = np.array([number(r, 'spatial_bootstrap_low') for r in rr])
+        hi = np.array([number(r, 'spatial_bootstrap_high') for r in rr])
+        axes[2, 1].errorbar(np.arange(len(rr)), mid, yerr=[np.maximum(mid-lo, 0), np.maximum(hi-mid, 0)], fmt='o', color=BLUE, capsize=4)
+        axes[2, 1].axhline(0, color=GRAY, ls='--')
+        axes[2, 1].set_xticks(np.arange(len(rr)), [r['scope']+' '+r['bands'] for r in rr], rotation=20, ha='right', fontsize=10)
+        axes[2, 1].set(ylabel='Classifier minus QRF log score', title='Paired development-sky resampling')
+        sources += ['optical_probe', 'probe_spatial_bootstrap']
     fig.suptitle('Matched PSF band controls · identical labels and objects\nFixed forest calibration uses cal only; original QRF partition training differs', fontsize=15)
-    save(fig, '03_color_information', selected, ['information_scores', 'color_neighbors', 'template_degradation'],
+    save(fig, '03_color_information', selected, sources,
          'Single fixed classifier framework. Information gain is reference/model conditional, not a physical upper bound. Common i+W1+W2 sample has narrower coverage than optical parent. Degraded training templates are not independent validation.')
 
 

@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-10 — full probability audit complete; one candidate prespecified
+
+-61068459/61068927/61068929 all COMPLETED0:0 (8m31s/1m28s/31s).
+ Joint97650 rows,763 checkpoints;3846 actual conservation/identity checks pass.
+- Chosen PSF development q>0.95:34186 true-near retained,307 far admitted;
+ completeness78.565%, contamination0.890%. Cal-selected q>0.5 fails dev5%
+ contamination target (6.056%); do not retune from development results.
+- W1 paired probe gain0.012374 nats in7/9cells motivates one prespecified
+ class-partition candidate and fair same68004-PSF-identity regression control.
+ Fixed complexity/natural leaf mass; six cal guards; no deployment or search.
+- Added candidate core/runner/protocol and regression test;7 focused tests pass,
+ Python/shell syntax pass. Candidate production not yet submitted.
+- Broad neighbor code reached NERSC after previous diagnostics started; run
+ broad-only extension once. New figure groups04/05 prepared; final visual QA pending.
+
 ## 2026-11-10 — broad optical and nonstellar results completed
 
 -61068700 COMPLETED0:0 in48s; broad grz probe222860 verified-PSF known-label

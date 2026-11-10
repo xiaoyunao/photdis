@@ -2,11 +2,14 @@
   "name": "06_distance_quality_sky",
   "caption": "Observed reference strata only. Corrected FeH uses author domain and positive formal errors; diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.",
   "selection": "Verified DR11 PSF; development test; no display clipping",
-  "rows": 59,
+  "rows": 83,
   "model": "expanded_A",
   "inputs": {
     "distance_class": "6e7ae59941ffcd70523a7ce4f1c74aae3313605859081b63739f8301cf46bc9b",
     "migration": "e3ce14a731eb32c3b5eb6fe4ed524901923a82e1a8fe7fe3cf0d7eb9f3502968",
-    "metallicity_quality": "a5e3dd46df655a05538b3291d3d815617d5e6606e2c935b209d16723d3c749a6"
+    "metallicity_quality": "a5e3dd46df655a05538b3291d3d815617d5e6606e2c935b209d16723d3c749a6",
+    "systematic_sensitivity": "3e147633f4aca830dee00076662cb101b9f17cc4befac02ae5753b5796f1ae3f",
+    "weak_flux_probability": "3f0978837ebae48207c8968150db23cbb83bffb2cddfeba969a6a8e224af6510",
+    "nonstellar_near": "165bb1df4e9245f95152bd07ba3f6b20410a81d182aee2961dda6d4178dd3b73"
   }
 }

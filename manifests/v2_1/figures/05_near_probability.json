@@ -1,0 +1,11 @@
+{
+  "name": "05_near_probability",
+  "caption": "Thresholds fixed at0.5/0.8/0.95; cal selects rule, development test evaluates. Class strata are diagnostics, not an equal-per-class calibration requirement. Stress multipliers are not real-population prior estimates. Boundary-safe rows tabulated separately.",
+  "selection": "Verified DR11 PSF; development test; no display clipping",
+  "rows": 61,
+  "model": "expanded_A",
+  "inputs": {
+    "reliability": "ce360481511cb72f5c31c6adbeb87388241fa0cc55cedd69a600e9c3819edc0f",
+    "risk_retention": "a7ac4143a9b228b6ecf6b49728cf9721370f54d65754b6ec114e8c58f159aa3d"
+  }
+}

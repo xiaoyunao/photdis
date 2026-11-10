@@ -14,10 +14,12 @@ def broad_neighbors():
     from v2_1_information import design
     import joblib
     probe = load(DEST/'optical_probe.npz')
+    assert (probe['TYPE'] == 'PSF').all()
     raw = load(DEST/'frozen_training_audit.npz')
     j = unique_join(probe['train_identity'], raw['identity'])
     assert (j >= 0).all()
     train = subset(raw, j)
+    assert (train['TYPE'] == 'PSF').all()
     with np.load(ROOT/'data/baseline_v1_4/references.npz') as z:
         j = unique_join(probe['identity'], z['identity'])
         assert (j >= 0).all()
@@ -30,7 +32,7 @@ def broad_neighbors():
     local = local_neighbors(tm, te, train['class_label'], train['Mg'], em[rows], ee[rows], query['class_label'][rows])
     output = []
     for i, row in enumerate(rows):
-        output.append(dict(identity=int(query['identity'][row]), TYPE='PSF', class_label=int(query['class_label'][row]),
+        output.append(dict(identity=int(query['identity'][row]), TYPE=str(probe['TYPE'][row]), class_label=int(query['class_label'][row]),
             cell=int(query['cell'][row]), r=query['r'][row], optical_error=query['optical_error'][row],
             W1=bool(query['B'][row]), W2=bool(query['C'][row]),
             **{key: value[i] for key, value in local.items() if value.ndim == 1}))
@@ -167,4 +169,12 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--broad-only', action='store_true')
+    args = parser.parse_args()
+    if args.broad_only:
+        require_compute()
+        broad_neighbors()
+    else:
+        main()

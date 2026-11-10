@@ -1,0 +1,6 @@
+{
+  "cal_selected_threshold": 0.5,
+  "target_reference_contamination": 0.05,
+  "minimum_selected": 100,
+  "claim": "Reference-development rule only; not independent validation or application contamination guarantee"
+}
