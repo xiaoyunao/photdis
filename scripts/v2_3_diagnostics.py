@@ -13,7 +13,7 @@ from photdis.stage1 import require_compute
 from photdis.baseline_v0 import metrics
 from photdis.audit import rvs_metallicity
 from photdis.probability_v2_1 import interval_score, migration
-from photdis.selection_v2_2 import reliability_bins, evidence_cells
+from photdis.selection_v2_2 import reliability_bins, evidence_cells, wilson
 from photdis.baseline_v1_2 import full_parallax_log_density
 
 
@@ -233,15 +233,37 @@ def posterior_examples(t):
         ids=np.flatnonzero(dev&mask&np.isfinite(t['ref_chosen']))
         if not len(ids):continue
         row=int(ids[np.argmin(t['identity'][ids])])
+        saved={}
         for name in ('control','candidate'):
             start=row//256*256;p=load(DEST/'chunks'/f'development_{name}_{start:07}.npz');j=row-start
             assert p['identity'][j]==t['identity'][row] and p['TYPE'][j]=='PSF'
-            edges=load(DEST/(name+'_grid.npz'))['edges'];mu=t['g0'][row]-(edges[:-1]+edges[1:])/2
-            for x,prob,width in zip(mu,p['pdf'][j],np.diff(edges)):
+            saved[name]=(p,j,load(DEST/(name+'_grid.npz'))['edges'])
+        ref=float(t['ref_chosen'][row])
+        lo=min(ref-2,min(p['mu'][j,0] for p,j,e in saved.values()))-1
+        hi=max(ref+2,max(p['mu'][j,4] for p,j,e in saved.values()))+1
+        for name,(p,j,edges) in saved.items():
+            mu=t['g0'][row]-(edges[:-1]+edges[1:])/2;visible=(mu>=lo)&(mu<=hi)
+            mass=float(p['pdf'][j,visible].sum())
+            for x,prob,width in zip(mu[visible],p['pdf'][j,visible],np.diff(edges)[visible]):
                 records.append(dict(group=group,identity=int(t['identity'][row]),TYPE='PSF',model=name,mu=float(x),density=float(prob/width),bin_width=float(width),
-                    ref_mu=float(t['ref_chosen'][row]),ref_sigma=float(t['sigma_mu'][row]),qnear=float(p['qnear'][j]),
-                    mu025=float(p['mu'][j,0]),mu975=float(p['mu'][j,4]),selection='Smallest identity in reference-defined development stratum, independent of model outcomes'))
+                    ref_mu=ref,ref_sigma=float(t['sigma_mu'][row]),qnear=float(p['qnear'][j]),display_mass=mass,
+                    mu025=float(p['mu'][j,0]),mu975=float(p['mu'][j,4]),selection='Lowest identity per reference stratum; display bins only, no density renormalization; full PDF retained on NERSC'))
     csv_rows(TABLES/'posterior_examples.csv',records)
+
+
+def branch_frequencies(t):
+    cell=evidence_cells(t);rows=[]
+    for name in ('control','candidate'):
+        p=load(DEST/f'development_{name}.npz');known=p['weights'][:,:3].sum(axis=1)
+        prob=np.divide(p['weights'][:,1],known,out=np.full(len(known),np.nan),where=known>0)
+        for split,role in [(1,'cal'),(2,'development_test')]:
+            for c in [-1]+list(np.unique(cell[t['split']==split])):
+                base=(t['split']==split)&(np.ones(len(cell),bool) if c==-1 else cell==c)
+                use=base&np.isin(t['class_label'],[0,1,2])&np.isfinite(prob);n=int(use.sum());ng=int((use&(t['class_label']==1)).sum());lo,hi=wilson(ng,n)
+                rows.append(dict(model=name,role=role,observable_cell=int(c),known_n=n,observed_evolved=ng/n if n else None,
+                    mean_evolved_known_conditional=float(prob[use].mean()) if n else None,wilson_low=lo,wilson_high=hi,
+                    mean_unlabeled_contribution=float(p['weights'][base,3].mean()) if base.any() else None))
+    csv_rows(TABLES/'branch_frequency.csv',rows)
 
 
 def decision(distance,gaia,risk):
@@ -262,7 +284,7 @@ def decision(distance,gaia,risk):
 def main():
     require_compute();TABLES.mkdir(exist_ok=True)
     t=load(ROOT/'data/v2_1/development.npz');a,g,r=compare('development',t)
-    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);posterior_examples(t);decision(a,g,r)
+    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);posterior_examples(t);branch_frequencies(t);decision(a,g,r)
     save_json(DEST/'diagnostics_complete.json',dict(job=os.getenv('SLURM_JOB_ID'),models=json.loads((DEST/'models_frozen.json').read_text()),
         tables={p.name:sha(p) for p in TABLES.glob('*.csv')},
         source_sha256=sha(ROOT/'scripts/v2_3_diagnostics.py'),new_scale_validation=False))

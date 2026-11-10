@@ -8,5 +8,9 @@
   "owner_repair_status": "COMPLETED0:0",
   "diagnostics": "61078869",
   "diagnostics_dependency": "afterok:61079083",
-  "recovery": "61079083"
+  "recovery": "61079083",
+  "recovery_status": "COMPLETED0:0",
+  "diagnostics_status": "FAILED only artifact near-mass validation; tables archived as unverified coarse-grid results",
+  "precision_audit": "61079479",
+  "fine_grid": "61079683"
 }

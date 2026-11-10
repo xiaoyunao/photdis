@@ -85,7 +85,7 @@ def additional_results():
                 ax.set(xticks=[0,1],xticklabels=['10–20','20–50'],xlabel='Reference distance (kpc)',ylabel=label)
     axes[0].axhline(0,color=GRAY,ls=':');axes[2].axhline(68,color=GRAY,ls=':');axes[1].legend(fontsize=9)
     fig.suptitle('Far branches: reference class is an oracle diagnostic only')
-    save(fig,'06_far_branches',['far_conditional','far_reference_disagreement'],'Known evolved class only used after prediction. Source differences and shapes are distinct from branch weights; no independent distance-scale evidence.')
+    save(fig,'06_far_branches',['far_conditional','far_reference_disagreement','branch_frequency'],'Known evolved class only used after prediction. Source differences and shapes are distinct from branch weights; no independent distance-scale evidence.')
     data=read('metal_poor_matching');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     for model,color in [('control',BLUE),('candidate',ORANGE)]:
         for group,ls in [('metal_poor','-'),('matched_ordinary','--')]:
