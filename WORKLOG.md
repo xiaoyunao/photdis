@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — selection and paired-evidence audit implemented
+- Added exact historical identity inventory replay, counterfactual distance-fit eligibility and explicitly scoped SNR conditioning; raw scores retained. Direct forward simulations reapply error/source-dependent admission, rather than globally imposing SNR<20.
+- Added same-ID inference changes by error, class-independent far-PDF mass, preserved2055metal-poor pairs with pair-retention counts, and development-only versus cal+development coverage counts.
+- Two focused selection/forward tests pass;8density/scoring tests passed at preceding milestone. Actual allocated correction and supplemental audit pending; no refit or new blind claim.
+
 ## 2026-11-10 — Pro review confirms shared-g inference sign bug
 - Read full latest review569d6ff, archived docs/pro_review_569d6ff.md. Reproduce forward model T=Mg+epsilon_g, not Mg−epsilon_g. Training covariance is unchanged; previous test incorrectly repeated the same sign.
 - Correct conditional covariance; independent band-space known-SED and general Gaussian-mixture tests now cover means, variances, weights, PDF and qnear. Added explicit inference migration, stale-cache version check and candidate-only rerun.
