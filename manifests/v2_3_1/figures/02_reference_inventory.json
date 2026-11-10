@@ -1,0 +1,8 @@
+{
+  "name": "02_reference_inventory",
+  "caption": "42076 strict-PSF new identities in existing sky.173 chosen evaluation references,3596 signed Gaia observations. Source-valid VAC counts in CSV include exclusions and are not interchangeable with clean chosen labels. No new-scale or independent-sky claim.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "reference_inventory": "de669c487cf98b26397237cb001c32bdb069a719aef29db7fc04a5eec3b0a417"
+  }
+}

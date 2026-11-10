@@ -1,0 +1,3 @@
+model,n,mean_probability_difference,rms_probability_difference,median_abs_observed_pit_difference,draws_per_object
+control,3596,1.2392059598283984e-05,0.0020296046802655656,0.005027750586388487,2048
+candidate,3596,3.5367871590318726e-05,0.0017032666436187665,0.004816952323899004,2048

@@ -1,0 +1,8 @@
+{
+  "name": "07_metal_poor",
+  "caption": "Same poor-metal identities across models; matched controls with replacement, matching calipers fixed before outcomes. Descriptive evidence, not causal identification. No true metallicity application cut.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "metal_poor_matching": "c5619d07687d6b8670605bc226379f34453aa7d65e6733b33f969f17993351a5"
+  }
+}

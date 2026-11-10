@@ -38,7 +38,7 @@ def corrections():
     save(fig,'02_reference_inventory',['reference_inventory'],'42076 strict-PSF new identities in existing sky.173 chosen evaluation references,3596 signed Gaia observations. Source-valid VAC counts in CSV include exclusions and are not interchangeable with clean chosen labels. No new-scale or independent-sky claim.')
 
 
-def model_results():
+def model_results(reserved_title=None):
     data=read('development_distance');fig,axes=plt.subplots(2,2,figsize=(14,10),constrained_layout=True)
     groups=['all','dwarf','evolved','other','unknown','metal_poor_dwarf','low_luminosity'];labels=['All','Dwarf','Giant ref.','Other','Unlabeled','Metal-poor\ndwarf','Low\nluminosity']
     for model,color in [('control',BLUE),('candidate',ORANGE)]:
@@ -55,7 +55,7 @@ def model_results():
             rr=sel(data,model=model,group=group,selection='all');n=sum(int(x['n']) for x in rr)
             ax.stairs([val(x,'n')/max(n,1) for x in rr],np.linspace(0,1,11),color=color,label=f'{model}: N={n:,}')
         ax.axhline(.1,color=GRAY,ls='--');ax.set(xlabel='Full observed-parallax PIT',ylabel='Fraction',title={'all':'All','no_W1':'No qualified W1','r_20_22':'20 ≤ r < 22'}[group]);ax.legend(fontsize=9)
-    fig.suptitle('Reserved identities opened after model freeze · negative parallaxes retained')
+    fig.suptitle(reserved_title or 'Reserved identities opened after model freeze · negative parallaxes retained')
     save(fig,'04_reserved_parallax',['reserved_pit','reserved_gaia'],'Same-sky new identities; actual signed observations and errors. Does not certify independent distance scale, true population composition or new sky.')
     data=read('application_scope');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     for j,model in enumerate(['control','candidate']):

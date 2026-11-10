@@ -1,0 +1,9 @@
+{
+  "name": "03_model_comparison",
+  "caption": "One fixed XD32 candidate versus same-identity PSF QRF. Unknown-class distance labels retained; no clipping. Cal decision independent of plotted development outcomes. Point-reference interval coverage is not intrinsic-distance calibration when reference errors are deconvolved; compare reference-convolved scores and observed Gaia likelihoods.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "development_distance": "39f8ab980cc1d6fdceb374420cce396cbc92d6af81efdd655ef0a5fd7a2ff221",
+    "paired_spatial_uncertainty": "c58fc5cc3d5fb41afe1bd972b00db4ae154780928e23a14d7e819148389e574a"
+  }
+}

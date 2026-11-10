@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Corrected experiment plus explicit inference/selection evidence, English only."""
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 import v2_3_figures as original
@@ -71,4 +72,5 @@ def corrections():
 
 if __name__=='__main__':
     plt.rcParams.update(STYLE)
-    original.corrections();original.model_results();original.additional_results();original.posterior_examples();corrections()
+    original.corrections();original.model_results('Previously inspected identities · corrected experiment · signed parallaxes');original.additional_results();original.posterior_examples();corrections()
+    path=original.f.TABLES/'figures/07_metal_poor.json';meta=json.loads(path.read_text());meta['caption']+=' Distance/near masks here apply separately to each side, so stratified groups need not remain paired; see plate15 and pair-conserving CSV.';path.write_text(json.dumps(meta,indent=2)+'\n')

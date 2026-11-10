@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — selection replay completed; numerical orders aligned
+-61081616 COMPLETED0:0 in1:13;3316correction checks pass.42076reserved IDs exactly reproduced, with zero unexplained clean/unknown historical membership; forward-selected CDF checks pass.
+- Final review aligns supplemental raw/conditional PIT at the same32-point quadrature using F_raw=F_conditional*P(selection), instead of comparing original8-point raw PIT to32-point conditional PIT. Original frozen raw metrics remain untouched; log scores already use32points. Quantify original8→32CDF difference explicitly.
+- Repeat only supplemental audit after this evaluation-consistency correction, preserving all model and prediction bytes. Existing completed tables remain in Git history; no refit or selection retuning.
+
 ## 2026-11-10 — inference verified; supplemental inventory schema repaired
 -61081256 COMPLETED0:0 in9:32;8124actual checks pass. Original cal guards still reject corrected candidate on raw full-Gaia and near contamination; no adoption.
 -61081403 FAILED1:0 before analysis (15s): historical v2.0 population is a projected inventory and lacks nonstellar/astrometry/error fields. Source schema inspected read-only; fix missing fields via exact-ID original v1.4 reference join, asserting admission/split/fit flags and every eligible owner match.

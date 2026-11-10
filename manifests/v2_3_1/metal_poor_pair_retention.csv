@@ -1,0 +1,17 @@
+model,low_kpc,high_kpc,selected,pairs,both,poor_only,ordinary_only,neither,unique_controls_both
+control,0,2,False,2055,87,144,131,1693,59
+control,0,2,True,2055,41,64,141,1809,25
+control,2,5,False,2055,768,380,430,477,187
+control,2,5,True,2055,507,250,565,733,91
+control,5,10,False,2055,259,374,313,1109,17
+control,5,10,True,2055,45,141,336,1533,8
+control,0,inf,False,2055,2055,0,0,0,354
+control,0,inf,True,2055,926,127,709,293,159
+candidate,0,2,False,2055,87,144,131,1693,59
+candidate,0,2,True,2055,46,66,139,1804,29
+candidate,2,5,False,2055,768,380,430,477,187
+candidate,2,5,True,2055,566,303,518,668,99
+candidate,5,10,False,2055,259,374,313,1109,17
+candidate,5,10,True,2055,218,315,347,1175,11
+candidate,0,inf,False,2055,2055,0,0,0,354
+candidate,0,inf,True,2055,1480,64,354,157,185

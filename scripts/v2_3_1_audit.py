@@ -103,7 +103,7 @@ def selection_chunk(task):
     from photdis.baseline_v1_2 import full_parallax_log_density
     raw=full_parallax_log_density(pdf,_EDGES[name],g,obs,error,order=32)
     probability=check['selection_probability'];assert np.all(probability>0)
-    output=dict(raw_log32=raw,conditional_log=raw-np.log(probability),conditional_pit=check['pit'],selection_probability=probability)
+    output=dict(raw_log32=raw,raw_pit32=check['pit']*probability,conditional_log=raw-np.log(probability),conditional_pit=check['pit'],selection_probability=probability)
     # Independent direct forward draws; all source/covariate branches of the
     # reconstructed distance-fit rule are reapplied, including SpecDis/error.
     draws=draw_observed_parallax(pdf,_EDGES[name],g,error,np.random.default_rng(20261110+int(r[0])),repeats=2048)
@@ -131,7 +131,7 @@ def selection_scores():
     _EDGES={n:load(DEST/(n+'_grid.npz'))['edges'] for n in ('control','candidate')}
     records=[];hists=[];simrows=[];simchecks=[]
     for name in ('control','candidate'):
-        output={k:np.full(len(_T['identity']),np.nan) for k in ('raw_log32','conditional_log','conditional_pit','selection_probability','simulation_probability','simulation_observed_pit')}
+        output={k:np.full(len(_T['identity']),np.nan) for k in ('raw_log32','raw_pit32','conditional_log','conditional_pit','selection_probability','simulation_probability','simulation_observed_pit')}
         simulations=[];paths=sorted((DEST/'chunks').glob('reserved_'+name+'_*.npz'))
         with concurrent.futures.ProcessPoolExecutor(max_workers=16,mp_context=mp.get_context('fork')) as pool:
             for r,values,sim in pool.map(selection_chunk,[(name,p) for p in paths]):
@@ -143,7 +143,7 @@ def selection_scores():
         for group,base in groups.items():
             for selection,sel in [('all',np.ones(len(supported),bool)),('near_scope',p['near_scope'])]:
                 u=base&sel&supported;key=dict(model=name,group=group,selection=selection,n=int(u.sum()))
-                for kind,log,pit in [('raw',output['raw_log32'],p['gaia_pit']),('conditional',output['conditional_log'],output['conditional_pit'])]:
+                for kind,log,pit in [('raw',output['raw_log32'],output['raw_pit32']),('conditional',output['conditional_log'],output['conditional_pit'])]:
                     x=pit[u];records.append(dict(**key,score=kind,log_mean=float(log[u].mean()) if u.any() else None,pit_low=float((x<.05).mean()) if len(x) else None,pit_high=float((x>.95).mean()) if len(x) else None,negative=int((u&(_T['p_corr']<0)).sum()),mean_selection_probability=float(output['selection_probability'][u].mean()) if u.any() else None))
                     hist=np.histogram(x,np.linspace(0,1,11))[0];assert hist.sum()==u.sum()
                     hists.extend(dict(**key,score=kind,low=i/10,high=(i+1)/10,count=int(v)) for i,v in enumerate(hist))
@@ -151,7 +151,7 @@ def selection_scores():
                 simrows.append(dict(**key,draws=total,**{k:sum(r[k] for r in ss)/total if total else None for k in ('raw_low','raw_high','conditional_low','conditional_high')}))
         diff=output['simulation_probability'][supported]-output['selection_probability'][supported]
         pitdiff=output['simulation_observed_pit'][supported]-output['conditional_pit'][supported]
-        simchecks.append(dict(model=name,n=int(supported.sum()),mean_probability_difference=float(np.mean(diff)),rms_probability_difference=float(np.sqrt(np.mean(diff**2))),median_abs_observed_pit_difference=float(np.nanmedian(abs(pitdiff))),draws_per_object=2048))
+        simchecks.append(dict(model=name,n=int(supported.sum()),mean_probability_difference=float(np.mean(diff)),rms_probability_difference=float(np.sqrt(np.mean(diff**2))),median_abs_observed_pit_difference=float(np.nanmedian(abs(pitdiff))),draws_per_object=2048,max_original_order8_vs32_PIT_difference=float(np.max(abs(output['raw_pit32'][supported]-p['gaia_pit'][supported])))))
     csv_rows(TABLES/'reserved_selection_scores.csv',records);csv_rows(TABLES/'reserved_selection_pit.csv',hists);csv_rows(TABLES/'selection_forward_simulation.csv',simrows);csv_rows(TABLES/'selection_simulation_checks.csv',simchecks)
     print('SELECTION SCORES COMPLETE',flush=True)
 
