@@ -1,0 +1,20 @@
+{
+  "job_id": "61067835",
+  "train_n": 68004,
+  "evaluation_n": 60759,
+  "parent_morphology": {
+    "total": 26000,
+    "admitted": 26000,
+    "missing_type": 0,
+    "non_psf": 0
+  },
+  "covariance": "Adjacent independent colors; full shared-band covariance in local neighbors",
+  "limitations": [
+    "Candidate-limited64-neighbor search is not an information upper bound",
+    "Matched i+WISE controls exclude faint/no-WISE objects; report coverage",
+    "Frozen tree partition provenance differs; controlled labels do not undo original tree fitting",
+    "Template noise comparison is conditional on bright training templates, not independent validation",
+    "Weak signed flux inventory alone does not measure weak-flux predictive information"
+  ],
+  "status": "Fixed matched-band probe complete; additional quality/signed-flux probability audits tracked separately"
+}

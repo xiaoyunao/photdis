@@ -1,0 +1,23 @@
+{
+  "job_id": "61067510",
+  "input_sha256": "66c2d6fd806bbc0dcaf78c2eb86cbf870ad90576c76fa5f415d3f0033b7878b7",
+  "application_sha256": "9ecb5aeffd0428a26b941483f263b1910c78b017060be18ac48d197d4d86b227",
+  "morphology": {
+    "total": 97705,
+    "admitted": 97650,
+    "missing_type": 0,
+    "non_psf": 55
+  },
+  "historical_reproduction": {
+    "n": 47756,
+    "near_selected": 42985,
+    "near_rejected": 540,
+    "far_selected": 2773,
+    "far_rejected": 1458,
+    "completeness": 0.9875933371625503,
+    "far_contamination": 0.06060142488745138
+  },
+  "display_clipping": false,
+  "exported_psf": true,
+  "tables": 6560
+}

@@ -1,0 +1,42 @@
+{
+  "job_id": "61068700",
+  "model_sha256": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+  "training_morphology": {
+    "total": 317003,
+    "admitted": 266774,
+    "missing_type": 50206,
+    "non_psf": 23
+  },
+  "evaluation_morphology": {
+    "total": 3565499,
+    "admitted": 3417121,
+    "missing_type": 0,
+    "non_psf": 148378
+  },
+  "train_n": 222860,
+  "eval_n": 81337,
+  "calibration": {
+    "no_color": [
+      -0.05227648493733889,
+      -0.03333482760137574,
+      0.04074996048773758
+    ],
+    "frozen_partitions_same_labels": [
+      0.07538945502492227,
+      -0.3102879190296864,
+      -0.088296282721943
+    ],
+    "fixed_forest": [
+      0.13233686129387048,
+      -3.297908280600036,
+      -1.460590088703232
+    ],
+    "historical_QRF_known_conditional": [
+      0.07606273479217644,
+      -0.3140880287026854,
+      -0.08914188627179799
+    ]
+  },
+  "interpretation": "Primary broad optical same-label probability probe; historical_QRF is explicitly a different-label-pool baseline audit, not the fair probe comparator",
+  "tree_structure": "Original expanded A trees contain all historical training members; identical probe labels control evidence pool but do not erase original partition provenance"
+}

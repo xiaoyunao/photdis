@@ -1,0 +1,57 @@
+{
+  "reserved_identities": 5,
+  "status": "reserved_pending_evidence_and_system_audit",
+  "native_psf_verified": true,
+  "training_and_evaluation_identity_disjoint": true,
+  "one_degree_tiles": [
+    27108,
+    27466
+  ],
+  "exclusion_buffer": "Occupied one-degree tiles and their eight neighbors",
+  "inputs": {
+    "data/v2_0/training_baseline_v1_A.npz": "1f433feef9e2ace6b965f4b00306e1a5f794ebd4247c489901ec6681a6d2cee9",
+    "data/v2_0/training_baseline_v1_A_on_B.npz": "660b2c26d1de39a1e9623d1a88e314955876e00640c38028e202fda349e9ece3",
+    "data/v2_0/training_baseline_v1_A_on_C.npz": "ba34cb9a4aaddd3c4394746cb1e8f9c472a45e0f935c740e02fa7a278e44438c",
+    "data/v2_0/training_baseline_v1_B.npz": "660b2c26d1de39a1e9623d1a88e314955876e00640c38028e202fda349e9ece3",
+    "data/v2_0/training_baseline_v1_B_on_C.npz": "ba34cb9a4aaddd3c4394746cb1e8f9c472a45e0f935c740e02fa7a278e44438c",
+    "data/v2_0/training_baseline_v1_C.npz": "ba34cb9a4aaddd3c4394746cb1e8f9c472a45e0f935c740e02fa7a278e44438c",
+    "data/v2_0/training_baseline_v1_recommended.npz": "1f433feef9e2ace6b965f4b00306e1a5f794ebd4247c489901ec6681a6d2cee9",
+    "data/v2_0/training_expanded_A.npz": "4504155a0938127b7b967f98fbc827fa126fa366c9898c078a0f78b6bd098f1e",
+    "data/v2_0/training_expanded_A_r0.npz": "4504155a0938127b7b967f98fbc827fa126fa366c9898c078a0f78b6bd098f1e",
+    "data/v2_0/training_expanded_B.npz": "acf39f13c91d4b0543b1998aa715348b85c05221c7ae191ad02252cb337e432e",
+    "data/v2_0/training_expanded_C.npz": "b63a1b99df5c6ed8820c68bd7a90ad4b00cf8cdc5385e82544c92ec079bfa539",
+    "data/v2_0/training_frozen_A.npz": "1f433feef9e2ace6b965f4b00306e1a5f794ebd4247c489901ec6681a6d2cee9",
+    "data/v2_0/training_frozen_B.npz": "660b2c26d1de39a1e9623d1a88e314955876e00640c38028e202fda349e9ece3",
+    "data/v2_0/training_frozen_C.npz": "ba34cb9a4aaddd3c4394746cb1e8f9c472a45e0f935c740e02fa7a278e44438c",
+    "data/v2_0/training_matched_griz.npz": "23ffd786807132235207f9ac88d47c889471451556076dcd7b5c03799d70125e",
+    "data/v2_0/training_matched_grz.npz": "23ffd786807132235207f9ac88d47c889471451556076dcd7b5c03799d70125e",
+    "data/v2_0/training_weak_optical.npz": "2283f565eaf160433d41885194099d8ec14a4f32c8747872685d5adda2ff0f3b",
+    "data/v2_0/training_weak_w1.npz": "2283f565eaf160433d41885194099d8ec14a4f32c8747872685d5adda2ff0f3b",
+    "data/v2_0/training_weak_w1w2.npz": "2283f565eaf160433d41885194099d8ec14a4f32c8747872685d5adda2ff0f3b",
+    "data/baseline_v1_4/experiments/expanded_A_identities.npz": "d8e8a3c3f86ab8f18a10a8f6d1da398ab305726f353fd0274a85705e2e19a2cb",
+    "data/baseline_v1_4/experiments/expanded_B_identities.npz": "6d3a6d341c0e19c89133990f4528c8cd08e9bf97a135ec57d5f916cba239567b",
+    "data/baseline_v1_4/experiments/expanded_C_identities.npz": "d48150c744e35d5c03da5b65c3a995718e09da396fb7fd5c3aec6e7f5288fa81",
+    "data/baseline_v1_4/experiments/frozen_A_identities.npz": "070ae670c385e39f5efc6f48e14927fc97bef805fa15cfa7f8523d8daf772775",
+    "data/baseline_v1_4/experiments/frozen_B_identities.npz": "4f3e56f3a6261a15aa29332022eec0ca768f4ed44b5df83d1ad15c00d311b2ff",
+    "data/baseline_v1_4/experiments/frozen_C_identities.npz": "ae977115615bb72b75d7cd3154550c01e98189fe88a4e4a1f95478fad20a11cf",
+    "data/baseline_v1_4/experiments/matched_griz_identities.npz": "f306b8e38cfdbfa191fd8be3b857593883c96426a70acce4d5d077c6234f7db4",
+    "data/baseline_v1_4/experiments/matched_grz_identities.npz": "f306b8e38cfdbfa191fd8be3b857593883c96426a70acce4d5d077c6234f7db4",
+    "data/baseline_v1_4/experiments/expanded_A_legacy_training.npz": "06270de83f3e54a550649a41e76d13c50f67a9bb0d372b17acefb50b62d3f543",
+    "data/baseline_v1_4/experiments/expanded_B_legacy_training.npz": "56466d9c92d623be159a34cb873bb5d8fdbc5aa1fe03b5c1215c092f3e5518a7",
+    "data/baseline_v1_4/experiments/expanded_C_legacy_training.npz": "e803c96123ca2c4c89c394d72a5aaa3e307b4b54a02014643e536f9f7fc26920"
+  },
+  "reservation_sha256": "ac289dbdd0ba5262f868548a903beec1ab38c3ea00d91333f40c54f3229bc950",
+  "morphology": {
+    "total": 3565499,
+    "admitted": 3417121,
+    "missing_type": 0,
+    "non_psf": 148378
+  },
+  "remaining": [
+    "Verify system/cluster membership with independent membership catalogs before final scientific use",
+    "Acquire adequate independent reference labels/observations where absent",
+    "Keep reserved identities and every future noise replica out of model training/calibration",
+    "No current candidate/final performance has been inspected on this reservation"
+  ],
+  "note": "Spatial buffering reduces spatial leakage but cannot certify unprovided system membership; no final-validation claim until that audit passes. Existing development test stays development."
+}

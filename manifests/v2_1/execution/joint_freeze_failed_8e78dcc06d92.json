@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "model": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+    "development": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+    "old": "c0542f51791d8f7145dd07480b290ba71e24132d275450af2445c67879f88a4a",
+    "new": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "identities": "d8e8a3c3f86ab8f18a10a8f6d1da398ab305726f353fd0274a85705e2e19a2cb",
+    "legacy": "06270de83f3e54a550649a41e76d13c50f67a9bb0d372b17acefb50b62d3f543",
+    "core": "927b731ec73cc48c0e97dd28b38806687e5e9e1d6503f64307569b3a9d051646",
+    "runner": "f49b255e838b9ac7358a55b268f59676a0fbdb67f85fcea9b89fab3a72677eb5",
+    "protocol": "73dc52e31d974302e01e06355ee1c84c5ded8157bc786db875f0dfe1026de849"
+  },
+  "draws": 128,
+  "chunk_size": 128,
+  "model": "expanded_A",
+  "class_channels": [
+    "dwarf",
+    "evolved",
+    "other",
+    "unlabeled"
+  ]
+}

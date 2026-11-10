@@ -1,0 +1,23 @@
+{
+  "status": "acquisition_required",
+  "reserved_identities": 0,
+  "reason": "Existing train/cal/test roles are used; split3 is legacy/identity/geometry quarantine.",
+  "requirements": [
+    "New sky outside all historical train/cal/test and application-development footprints",
+    "Exact Gaia/DESI/Legacy identity exclusion before scoring",
+    "System membership and noise replicas kept in one role",
+    "Verified DR11 PSF and independent label/observation provenance"
+  ],
+  "existing_role_counts": {
+    "0": 1536009,
+    "1": 318403,
+    "2": 576601,
+    "3": 986108
+  },
+  "morphology": {
+    "total": 3565499,
+    "admitted": 3417121,
+    "missing_type": 0,
+    "non_psf": 148378
+  }
+}

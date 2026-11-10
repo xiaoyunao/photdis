@@ -1,0 +1,27 @@
+{
+  "morphology": {
+    "total": 3565499,
+    "admitted": 3417121,
+    "missing_type": 0,
+    "non_psf": 148378
+  },
+  "training_n": 68004,
+  "class_evaluation_before_matched_bands": 81337,
+  "class_evaluation_matched": 60759,
+  "class_evaluation_matched_fraction": 0.7470032088717312,
+  "inputs": {
+    "data/baseline_v1_4/experiments/matched_grz_identities.npz": "f306b8e38cfdbfa191fd8be3b857593883c96426a70acce4d5d077c6234f7db4",
+    "data/baseline_v1_4/experiments/matched_griz_identities.npz": "f306b8e38cfdbfa191fd8be3b857593883c96426a70acce4d5d077c6234f7db4",
+    "data/baseline_v1_4/experiments/expanded_B_identities.npz": "6d3a6d341c0e19c89133990f4528c8cd08e9bf97a135ec57d5f916cba239567b",
+    "data/baseline_v1_4/experiments/expanded_C_identities.npz": "d48150c744e35d5c03da5b65c3a995718e09da396fb7fd5c3aec6e7f5288fa81"
+  },
+  "reference_sha256": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+  "control_labels": {
+    "raw_psf_nonstellar": 91599,
+    "confirmed_nonstellar": 0,
+    "status": "MWS projection lacks Redrock ZWARN/DELTACHI2; raw SPECTYPE is not a reliable negative control.",
+    "next_requirement": "Acquire assessed Redrock/external QSO/galaxy labels before scientific contamination claim"
+  },
+  "WD": "49 anomalies remain candidates; none used as confirmed WD labels",
+  "fairness": "All four probe arms and controlled leaf-label arms use identical verified-PSF training and evaluation IDs. Frozen partitions were originally fit on different broader distance pools; retain this structural confound."
+}

@@ -1,0 +1,12 @@
+{
+  "job_id": "61068418",
+  "n_systematics": 512,
+  "selection": "Identity hash, development test only; no residual-based selection",
+  "scopes": {
+    "metallicity": "Raw, matched domain, author-corrected FeH; finite positive formal error",
+    "weak_flux": "Frozen legacy template audit on strict PSF evaluation, raw signed flux retained",
+    "systematic": "Prespecified stress amplitudes, not measured sky-error distribution or calibration"
+  },
+  "no_new_model": true,
+  "no_final_validation": true
+}

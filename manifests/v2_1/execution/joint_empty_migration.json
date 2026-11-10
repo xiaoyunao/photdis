@@ -1,0 +1,6 @@
+{
+  "previous": "joint_freeze_failed_8e78dcc06d92.json",
+  "reason": "Failed pre-prediction marginal audit: normalize coalesced integer leaf counts, not accumulated float32 fractions",
+  "prediction_checkpoints": 0,
+  "previous_job": "61067590"
+}

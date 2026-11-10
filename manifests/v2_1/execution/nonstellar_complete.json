@@ -1,0 +1,62 @@
+{
+  "job_id": "61068421",
+  "raw_psf": 91599,
+  "primary_unique_matched": 91599,
+  "duplicate_query_target_excluded": 0,
+  "assessed_controls": 86109,
+  "sampled_for_prediction": 1595,
+  "sampling": [
+    {
+      "split": 1,
+      "spectype": "GALAXY",
+      "pool_n": 301,
+      "predicted_n": 301
+    },
+    {
+      "split": 1,
+      "spectype": "QSO",
+      "pool_n": 9245,
+      "predicted_n": 512
+    },
+    {
+      "split": 2,
+      "spectype": "GALAXY",
+      "pool_n": 270,
+      "predicted_n": 270
+    },
+    {
+      "split": 2,
+      "spectype": "QSO",
+      "pool_n": 9319,
+      "predicted_n": 512
+    }
+  ],
+  "criteria": "Primary TGT; SPECTYPE GALAXY/QSO; ZWARN0; fiberstatus0; DELTACHI2>100; Z>0.02 and5ZERR; position<1arcsec; verified DR11 PSF; no training identity",
+  "sources": [
+    "https://data.desi.lbl.gov/doc/releases/dr1/",
+    "https://data.desi.lbl.gov/doc/releases/dr1/known-issues/"
+  ],
+  "limitation": "Conservative pipeline-quality controls, not visually confirmed labels or full nonstellar completeness; Redrock can be overconfident. DELTACHI2 and redshift guards are prespecified here, not universal DESI cuts.",
+  "WD": "49 WD candidates remain unconfirmed and unused as labels",
+  "fingerprint": {
+    "path": "/global/cfs/cdirs/desi/public/dr1/spectro/redux/iron/zcatalog/v1/zall-pix-iron.fits",
+    "size": 22371272640,
+    "mtime_ns": 1783719573926898200,
+    "query_sha256": "d140ddc4772e96f0ee61689b6cf068bb44350b2ec252244bc865bb17c58e3b01",
+    "code_sha256": "e23f9ee3b1b55a818fd138065b55534894b93672278772531098da10b55f8771",
+    "columns": [
+      "TARGETID",
+      "ZCAT_PRIMARY",
+      "OBJTYPE",
+      "SPECTYPE",
+      "Z",
+      "ZERR",
+      "ZWARN",
+      "DELTACHI2",
+      "COADD_FIBERSTATUS",
+      "TARGET_RA",
+      "TARGET_DEC"
+    ],
+    "block": 500000
+  }
+}

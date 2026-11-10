@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-10 — broad optical and nonstellar results completed
+
+-61068700 COMPLETED0:0 in48s; broad grz probe222860 verified-PSF known-label
+ training objects,81337 independently class-qualified cal/development objects.
+ Matched and broad probes remain distinct scopes with common internal labels.
+-61068421 COMPLETED0:0 in10m25s. Matched all91599 raw PSF targets to primary
+ DR1 redshifts,86109 pass fixed conservative quality/position/no-training cuts.
+ Predicted1595 fixed cal/test controls (all571 galaxies,1024 sampled QSOs).
+- Submitted unique61068927 frozen band-probability comparison and61068929
+ postprocessing/validation with afterok:61068459. Dependencies are Slurm stages,
+ not new monitoring automations. Added broad no-WISE local/noise diagnostics.
+- Downloaded compact tables and execution provenance only; large per-star
+ class_conditional.csv and NPZ/PDF caches remain on NERSC.
+
 ## 2026-11-10 — real joint reconstruction passed; full probability run advancing
 
 -61068459 started regular4h on nid006320 before requested pending-only QoS

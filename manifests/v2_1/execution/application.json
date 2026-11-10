@@ -1,0 +1,84 @@
+{
+  "model": "baseline_v1_recommended",
+  "morphology": {
+    "total": 26000,
+    "admitted": 26000,
+    "missing_type": 0,
+    "non_psf": 0
+  },
+  "sample_n": 26000,
+  "psf_predictable_n": 26000,
+  "near_sample_n": 10798,
+  "weighted_psf_predictable": 8899334.0,
+  "weighted_predicted_near": 3550633.3810000005,
+  "retention": 0.3989774269625121,
+  "scope": "Existing fixed14-field stratified parent sample; PSF and finite deployed-route predictions only; not full DR11.",
+  "catalogs": [
+    {
+      "field": 0,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_00.fits"
+    },
+    {
+      "field": 1,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_01.fits"
+    },
+    {
+      "field": 2,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_02.fits"
+    },
+    {
+      "field": 3,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_03.fits"
+    },
+    {
+      "field": 4,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_04.fits"
+    },
+    {
+      "field": 5,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_05.fits"
+    },
+    {
+      "field": 6,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_06.fits"
+    },
+    {
+      "field": 7,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_07.fits"
+    },
+    {
+      "field": 8,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_08.fits"
+    },
+    {
+      "field": 9,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_09.fits"
+    },
+    {
+      "field": 10,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_10.fits"
+    },
+    {
+      "field": 11,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_11.fits"
+    },
+    {
+      "field": 12,
+      "n": 2000,
+      "path": "data/baseline_v1/catalog_12.fits"
+    }
+  ],
+  "interpretation": "Predicted count, not true near-star or class population count"
+}
