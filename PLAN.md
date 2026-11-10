@@ -1,20 +1,28 @@
 # PLAN
 
-## Active objective: v2.2 selected-distance and real-application audit
+## Completed objective: v2.2 selected-distance and actual-application audit
 
-Latest review archived in docs/pro_review_fbb8ea0.md; prespecified scope
-docs/v2_2_protocol.md. User authorizes continuation2026-11-10.
+Latest review: docs/pro_review_fbb8ea0.md; frozen protocol: docs/v2_2_protocol.md.
+Results docs/v2_2_result.md; seven-plate atlas docs/v2_2_atlas.md;
+full evidence/limits ledger docs/v2_2_requirements_result.md.
 
-- [x] Repair probability endpoints after inspecting real caches; conserve every reliability denominator.
-- [ ] Same frozen expanded_A and actual baseline_v1 routes on26000 weighted application objects.
-- [x] Selected-distance/FeH/quality risk, population shift and separate unused-identity/new-sky inventory.
-- [ ] Held-out template, matched-target-error, four shared-replicate full-PDF transfer experiment.
-- [ ] Far branch/selection/unlabeled support diagnostics; evidence-based decision, no automatic new candidate.
-- [ ] English figures, full requirement evidence/limits, validation and safe three-endpoint delivery.
+- [x] Endpoint repair: actual max1+4.44e-16; all1280 reliability denominators conserved; chosen308cal/379dev restored, thresholds unchanged.
+- [x] Same expanded_A and actual baseline_v1 ABC routes on26000PSF application objects;204full-PDF chunks, native grids retained; max catalog-mu error9.54e-7mag.
+- [x] Selected distance/FeH/quality/sky, full weak/negative Gaia, population shift, unused-identity versus new-sky audit.
+- [x]256unfitted development templates,759matched targets,4shared-noise repeats plus clean control; full Sobol128 PDFs, paired source-cluster uncertainty.
+- [x] Far10–20/20–50 per-reference shapes, conditional class frequencies, training/app selection, missing-label luminosity support and retained Gaia extremes.
+- [x]3559actual compute checks,6targeted tests;7EnglishPNG/PDF plates inspected; 107compact/format/link checks and final three-endpoint sync.
 
-Frozen v2.1 source/models/cache unchanged. Six new endpoint tests pass.
-Audit61070873 COMPLETED0:0 in33s. Actual q max1+4.44e-16;758 endpoint repairs across full cache. Identity-only unused42076 versus buffered-sky5. Full work requires Slurm.
-No agents, timer, full-catalog rerun or deployment.
+Successful jobs61070873/61071273/61072326/61071274/61071628.
+Earlier writer failures61071166(native grid),61071786(sky field) explicitly
+migrated with hashes; predictions reused. No active jobs, timers or agents.
+
+Scientific gaps remain: high-q application53.25%weight has<20references per
+observable cell; high-q nearby metal-poor dwarfs remain biased.42076unused
+identities have no current qualified class/distance labels (3596weak-parallax
+eligible); only5buffered-sky identities, membership/scale checks pending.
+No independent final-validation claim, new candidate, calibration, deployment
+or full-catalog rerun. Next work follows user/Pro review and new target evidence.
 
 ## Completed objective: v2.1 near-selection and joint-reference probability audit
 

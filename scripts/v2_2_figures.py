@@ -98,7 +98,7 @@ def application():
             ax.plot(np.arange(4), [val(r, 'weighted_n')/total*100 for r in rr], 'o-', color=color, label=pop)
             ax.set(xticks=np.arange(4), xticklabels=labels, ylabel='High-q population share (%)'); ax.legend(fontsize=10)
     axes[1, 0].set_xlabel('Observed r magnitude'); axes[1, 1].set_xlabel('Maximum optical magnitude error')
-    fig.suptitle('Fixed 26,000-object weighted PSF application sample\nq > 0.95; cell occupancy measures evidence availability, not accuracy')
+    fig.suptitle('Fixed 26,000-object weighted PSF application sample\nOther panels: q > 0.95; cell occupancy measures evidence availability')
     save(fig, '03_application', ['application_summary'], 'expanded_A is shared by development/application. baseline_v1 reproduces actual catalog routes. Counts refer to13DECam fields, not wholeDR11. Evidence cells fix magnitude/colors/error/WISE; no spatial independence is implied.')
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.5), constrained_layout=True)
     groups = ['all', 'no_W1', 'W1_only', 'W1W2']
@@ -131,7 +131,7 @@ def far():
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.8), constrained_layout=True)
     for kind, color in zip(['chosen', 'Gaia', 'specdis', 'spdist'], COLORS):
         rr = [sel(data, reference=kind, low_kpc=lo)[0] for lo in (10, 20)]
-        for ax, key, label in zip(axes, ['mean_reference_window_mass', 'conditional_coverage68', 'conditional_median_relative'], ['Mean mass within reference ±1 mag', 'Oracle-class 68% coverage', 'Oracle-class median relative residual']):
+        for ax, key, label in zip(axes, ['mean_reference_window_mass', 'conditional_coverage68', 'conditional_median_relative'], ['Mass within reference ±1 mag', 'Oracle 68% coverage', 'Oracle median relative residual']):
             ax.plot([0, 1], [val(r, key) for r in rr], 'o-', color=color, label=kind+' (N='+str(int(val(rr[0], 'n')))+'/'+str(int(val(rr[1], 'n')))+')')
             ax.set(xticks=[0, 1], xticklabels=['10–20', '20–50'], xlabel='Reference distance (kpc)', ylabel=label)
     axes[0].legend(fontsize=10); axes[1].axhline(.68, color=GRAY, ls='--'); axes[2].axhline(0, color=GRAY, ls='--')

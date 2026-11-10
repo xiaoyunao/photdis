@@ -1,0 +1,7 @@
+{
+  "rows": 64,
+  "radius_mag": 0.3,
+  "space": "Observed gr,rz,z-W1 Euclidean colors; luminosity only evaluated after neighbor selection",
+  "interpretation": "Diagnostic support availability, not a causal retraining experiment. Gaia implied luminosity is conditional on corrected positive parallax, not certified truth. Match/reference anomalies still require external evidence; no failure removed.",
+  "original_quadrature": "v2_1/final_validation.json already checks worst32 with32vs64 nodes; results retained unchanged"
+}

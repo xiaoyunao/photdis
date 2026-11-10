@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-10",
+  "review": "fbb8ea0",
+  "status": "programs_statistics_figures_complete",
+  "jobs": [
+    {
+      "job_id": "61070873",
+      "stage": "audit",
+      "state": "COMPLETED",
+      "elapsed": "00:00:33"
+    },
+    {
+      "job_id": "61071166",
+      "stage": "application_grid_writer",
+      "state": "FAILED",
+      "elapsed": "00:06:43"
+    },
+    {
+      "job_id": "61071273",
+      "stage": "noise",
+      "state": "COMPLETED",
+      "elapsed": "00:01:18"
+    },
+    {
+      "job_id": "61071786",
+      "stage": "application_sky_summary",
+      "state": "FAILED",
+      "elapsed": "00:11:25"
+    },
+    {
+      "job_id": "61072326",
+      "stage": "application_recovery",
+      "state": "COMPLETED",
+      "elapsed": "00:00:29"
+    },
+    {
+      "job_id": "61071274",
+      "stage": "far",
+      "state": "COMPLETED",
+      "elapsed": "00:00:22"
+    },
+    {
+      "job_id": "61071628",
+      "stage": "validate",
+      "state": "COMPLETED",
+      "elapsed": "00:00:25"
+    }
+  ],
+  "actual_compute_checks": 3559,
+  "focused_tests": 6,
+  "figure_sets": 7,
+  "visual_review": {
+    "all_seven_PNG": true,
+    "representative_PDFs": [
+      "02_selected_distance",
+      "03_application"
+    ],
+    "far_label_overlap_repaired": true
+  },
+  "active_jobs": [],
+  "timers_created": false,
+  "new_models_fitted": false,
+  "deployment_changed": false,
+  "scientific_limits": [
+    "No independently validated target-population contamination",
+    "No new independent far-distance scale",
+    "No confirmed system-membership audit of unused IDs",
+    "Noise simulation does not provide faint population truth"
+  ],
+  "figures": {
+    "figures/v2_2/02_selected_distance.pdf": "51370be20a802641d65c34c9494ba17212bd2629dd1dbd30947740fd476ef21b",
+    "figures/v2_2/02_selected_distance.png": "d593a8048f34aecd0882b0582f018d6143a98ce3f95c7145f82d5fcd667159a6",
+    "figures/v2_2/06_evidence_limits.pdf": "e08837be89e0745a1f171219bfd77f90ded97ed92f7867de2f366cda8712d51b",
+    "figures/v2_2/04_noise_transfer.png": "833bc89f50ccc3bfabe50f95410a5b649a521d080554d25f02be8d6a95d14365",
+    "figures/v2_2/06_evidence_limits.png": "87dfab4e12170abd9819ed0a28115000b62090f9868acedf744363a8f8087cea",
+    "figures/v2_2/04_noise_transfer.pdf": "a938aad5517111970d8b41cd587a32aed81b1ba512ac71c2ea7f044f4cc47547",
+    "figures/v2_2/03b_pdf_structure.pdf": "54904519566139b5c5efc8600f05bdb5563302a06af10410dc32f865e4a8282a",
+    "figures/v2_2/03b_pdf_structure.png": "b64a7c3161ce0d6f6f6f334ca4ed63c69ccc3f81a02a6f4cbd387960e7601986",
+    "figures/v2_2/01_reliability.pdf": "aae2babfc9eb0f61b65b951ca2c5d99ab86485e50c6df57de6d52802ebe5fdcd",
+    "figures/v2_2/05_far_shape.png": "ba06d83e7e67065d18dc3a89ccd5db05bedf63a9fa0c9721070b5e1e7d317325",
+    "figures/v2_2/01_reliability.png": "f6ff0dcb7b34db306a7fd89a0ee0963d2cc815cbdd8c8ad30f36bde70f7e8133",
+    "figures/v2_2/05_far_shape.pdf": "747f9efdeb936f2da38ba7427e43488a63960d3d5489d09db5aa815601e30a21",
+    "figures/v2_2/03_application.pdf": "c7d3c952a97ea4396d5aac472c0cc31dfe58e031d17cb92292496b293aa8790c",
+    "figures/v2_2/03_application.png": "95d585020a2247cfd4f6deafad9c43eb0b2c9d79c03473b75c83405bfcde691e"
+  },
+  "compact_format_link_checks": 107,
+  "additional_allocated_steps": {
+    "parent_job": "61071786",
+    "operations": [
+      "first-block native-grid/catalog parity",
+      "noise source-cluster bootstrap",
+      "retained extreme Gaia support",
+      "selected full-Gaia observations"
+    ]
+  }
+}

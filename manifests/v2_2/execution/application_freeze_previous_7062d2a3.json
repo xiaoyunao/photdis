@@ -1,0 +1,11 @@
+{
+  "data/v2_1/application_psf.npz": "202d25f160f0218c137fcffc790c8a95491be64bb93cd905c32105110d4e6afa",
+  "data/baseline_v1_4/experiments/expanded_A_distance.joblib": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+  "data/baseline_v1/selection.json": "586c6ed20088a968ff48e57abe4dff1eb7a5dfd09d4edfe2497f97a026dad15b",
+  "docs/v2_2_protocol.md": "986ac1636b4e0c10e0ac0d6a93f4ecae0fe6c9c52b1ca5f8e8b67519a1b33310",
+  "scripts/v2_2_application.py": "7062d2a36f53fd901f5f3f72702efff37a2e1a5181d84ea0b20d50e9ef63b853",
+  "src/photdis/selection_v2_2.py": "73d39cc0798f974a284dc48c10cdf02417cb84cba05a5795328124eb364134e6",
+  "data/baseline_v0/A.joblib": "2f777c9490f9f3fe1c54eebebb3645d6960db0ff7d3b9c500f36749158a6ea3e",
+  "data/baseline_v0/B.joblib": "805fac2c7beb329ee7a14e8818421cd8193d988e6a37def370e4da8923cfcbfe",
+  "data/baseline_v0/C.joblib": "7bbaa2e4d8a695c3544bba03d620c4a6e7b88570772097de13e66efbca596e70"
+}

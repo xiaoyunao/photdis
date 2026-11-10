@@ -1,0 +1,35 @@
+{
+  "job_id": "61072326",
+  "frozen_inputs": {
+    "data/v2_1/application_psf.npz": "202d25f160f0218c137fcffc790c8a95491be64bb93cd905c32105110d4e6afa",
+    "data/baseline_v1_4/experiments/expanded_A_distance.joblib": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+    "data/baseline_v1/selection.json": "586c6ed20088a968ff48e57abe4dff1eb7a5dfd09d4edfe2497f97a026dad15b",
+    "docs/v2_2_protocol.md": "986ac1636b4e0c10e0ac0d6a93f4ecae0fe6c9c52b1ca5f8e8b67519a1b33310",
+    "scripts/v2_2_application.py": "76d77ff70ef24b15f35c890f8d76d1e91cde0b7da29d959562a4218932399a59",
+    "src/photdis/selection_v2_2.py": "73d39cc0798f974a284dc48c10cdf02417cb84cba05a5795328124eb364134e6",
+    "data/baseline_v0/A.joblib": "2f777c9490f9f3fe1c54eebebb3645d6960db0ff7d3b9c500f36749158a6ea3e",
+    "data/baseline_v0/B.joblib": "805fac2c7beb329ee7a14e8818421cd8193d988e6a37def370e4da8923cfcbfe",
+    "data/baseline_v0/C.joblib": "7bbaa2e4d8a695c3544bba03d620c4a6e7b88570772097de13e66efbca596e70"
+  },
+  "n": 26000,
+  "parent_weight": 8899334.0,
+  "max_catalog_mu_difference": 9.536563112533258e-07,
+  "input_representation_delta": {
+    "g0": 9.536427647560686e-07,
+    "r0": 9.536479019800481e-07,
+    "z0": 9.536685858790861e-07,
+    "w10": 9.535403364679951e-07,
+    "w20": 9.536141263311038e-07,
+    "sigma_g": 0.0,
+    "sigma_r": 0.0,
+    "sigma_z": 0.0,
+    "sigma_w1": 0.0,
+    "sigma_w2": 0.0
+  },
+  "routes": {
+    "0": 20810,
+    "1": 1827,
+    "2": 3363
+  },
+  "interpretation": "Exact original catalog photometry for both models. expanded_A development/app is same model; baseline_v1 is an application control. Counts are predicted membership, not true population counts. Cell occupancy is evidence availability, not reliability certification."
+}

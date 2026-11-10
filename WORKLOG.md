@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-10 — v2.2 complete, science limits retained
+- Delivered docs/v2_2_result.md, v2_2_atlas.md, v2_2_requirements_result.md;7EnglishPNG300dpi/PDF/CSV/JSON plates. Updated README/PLAN/AGENTS and delivery manifest.
+- Successful jobs: audit61070873(33s), noise61071273(1m18s), application recovery61072326(29s), far61071274(22s), validator61071628(25s), all0:0. Earlier native-grid/sky-summary failures preserved;204PDFchunks reused with explicit hash migration. Queue empty.
+- Actual validation:3559compute artifact/identity/PDF/route/count checks;6endpoint tests;107compact format/provenance/link checks. All7PNGs and representative02/03PDF renders inspected. Shortened far-axis labels after overlap review. Local PDF extraction uses existing pypdf because pdftotext is absent.
+- Application: expanded_A q>.95 predicts2.440million in13fields;32.95%weight has0development references per fixed observable cell and20.29%has1–19. Do not transfer0.890%reference contamination to this population. Actual full v1 catalog-mu parity max9.54e-7mag.
+- Selected poor-metal0–2kpc dwarfs retain+41.02%bias/11.30%coverage; full selectedGaia keeps808negative parallaxes. Noise template experiment is conditional, not faint truth. All32extreme Gaia rows have low-luminosity support only among locally missing-class labels in the full PSF distance pool; no tails removed.
+- Far branch conditional shapes are useful but10–20kpc retains24.45%oracle severe errors; no new independent distance scale.42076unused IDs currently lack qualified class/distance labels,3596weak-parallax eligible; new buffered sky remains5. No candidate, calibration, deployment, timer or agent created.
+- Commands: allocated Slurm scripts and srun steps; py_compile; targeted pytest; v2_2_figures.py; v2_2_validate_delivery.py; pdftoppm/PDF+PNG review; git diff/status and safe sync. Next: user/Pro review and target-population evidence acquisition under new scope.
+
 ## 2026-11-10 — sky-summary interface correction
 - Recovery61071786 completed all204PDFchunks (26000objects×2models), passed full catalog-mu reproduction, then FAILED1:0 at11m25s because development stores sky `cell`, not application `field`.
 - Corrected conditions() to retain the proper named sky key. Explicit second writer migration checks the exact previous hash and all204chunk hashes; no prediction recalculation. Far/validator dependencies will follow one summary-only recovery.

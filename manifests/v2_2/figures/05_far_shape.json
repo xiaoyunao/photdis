@@ -1,0 +1,10 @@
+{
+  "name": "05_far_shape",
+  "caption": "Separate Gaia/SpecDis/SPDist denominators and uncertainty windows. No new independent distance-scale confirmation. Conditional class distributions and their relative weights remain distinct questions; no fitted reweighting.",
+  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "sources": {
+    "far_shape": "a9d10022a511cdcd93defe74652f6ccb655b8b212894dea1d16143bcbb398fd6",
+    "observable_branch_frequency": "5694de41377e065f690a95948af96547d4bfc3c857ffdfe0a8bd8eb63de090f3",
+    "color_selection": "5074b171c0fe06a0bf9e19b2e937fb4bd50a3ed563f995fb0a8a4b5b4cc92bfd"
+  }
+}

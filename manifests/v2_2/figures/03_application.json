@@ -1,0 +1,8 @@
+{
+  "name": "03_application",
+  "caption": "expanded_A is shared by development/application. baseline_v1 reproduces actual catalog routes. Counts refer to13DECam fields, not wholeDR11. Evidence cells fix magnitude/colors/error/WISE; no spatial independence is implied.",
+  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "sources": {
+    "application_summary": "e74836d891d9e54f1a5b16610b717ab99fc95bb0f7a62df9c8496cb6f03232c9"
+  }
+}

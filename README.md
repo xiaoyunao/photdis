@@ -1,6 +1,19 @@
 # photdis
 
-Latest completed audit: **Photdis v2.1 near-selection and joint-reference probability**.
+Latest completed audit: **Photdis v2.2 selected-distance and actual-application evidence**.
+[Results](docs/v2_2_result.md) · [Seven English plates](docs/v2_2_atlas.md) ·
+[Requirement evidence and limits](docs/v2_2_requirements_result.md) ·
+[Delivery manifest](manifests/v2_2/delivery.json).
+Reliability endpoints are repaired; two frozen full-PDF models are compared on
+26000 weighted PSF application objects, with selected-distance, repeated-noise
+and far-branch audits. Original deployment remains unchanged. Application
+coverage and independent-validation gaps are quantified, not assumed solved.
+Local v2.2 figure/format checks use the existing Matplotlib, Pillow and pypdf
+environment plus Poppler `pdfinfo`; `python3 scripts/v2_2_validate_delivery.py`
+checks the committed compact artifacts. Large-cache programs require allocated
+NERSC resources and the established DESI environment.
+
+Previous completed audit: **Photdis v2.1 near-selection and joint-reference probability**.
 [Scientific results](docs/v2_1_result.md) · [Six-group/eight-plate atlas](docs/v2_1_atlas.md) ·
 [Review requirement ledger](docs/v2_1_requirements_result.md) · [Delivery checks](manifests/v2_1/delivery.json).
 Full frozen PDFs and one same-PSF-identity partition candidate were evaluated.

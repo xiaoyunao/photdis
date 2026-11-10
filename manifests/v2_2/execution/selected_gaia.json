@@ -1,0 +1,6 @@
+{
+  "input_sha256": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+  "probability_sha256": "95950035d0f743ae56a97a783babb59766e2ab16adee68e5b3335dad1e7a59ab",
+  "strata": 264,
+  "interpretation": "Frozen expanded_A full parallax likelihood/PIT; no parallax inversion cut, weak and negative eligible observations retained. Not independent of shared Gaia training scale."
+}

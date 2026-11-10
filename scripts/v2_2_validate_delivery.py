@@ -7,6 +7,7 @@ import hashlib
 import subprocess
 from pathlib import Path
 from PIL import Image
+from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 TABLES = ROOT/'manifests/v2_2'
@@ -26,7 +27,7 @@ def main():
             check(name+':PNG300dpi', im.format == 'PNG' and abs(im.info['dpi'][0]-300) < .1 and min(im.size) > 1000)
         info = subprocess.check_output(['pdfinfo', str(pdf)], text=True)
         check(name+':PDFpage', re.search(r'Pages:\s+1\b', info) is not None)
-        text = subprocess.check_output(['pdftotext', str(pdf), '-'], text=True)
+        text = '\n'.join(page.extract_text() or '' for page in PdfReader(pdf).pages)
         check(name+':English_text', bool(text.strip()) and not re.search(r'[\u3400-\u9fff]', text))
         meta = json.loads((TABLES/'figures'/(name+'.json')).read_text())
         expected = 0

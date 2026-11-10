@@ -1,0 +1,14 @@
+{
+  "job_id": "61071274",
+  "checked_chunks": 763,
+  "reference_types": [
+    "chosen",
+    "Gaia",
+    "specdis",
+    "spdist"
+  ],
+  "class_conditioning": "Oracle diagnostic only; unknown is missing-label channel, not a stellar species",
+  "independent_far_truth": false,
+  "reason": "Existing Gaia/SpecDis/SPDist share training/reference provenance; per-source agreement does not certify independent branch truth",
+  "action": "No branch reweighting or retraining; target class frequencies and independent distance-scale evidence remain missing"
+}

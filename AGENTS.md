@@ -9,7 +9,21 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
-- Latest completed audit2026-11-10: docs/v2_1_result.md, docs/v2_1_atlas.md,
+- Latest completed audit2026-11-10: v2.2, docs/v2_2_result.md and
+  docs/v2_2_atlas.md; full ledger docs/v2_2_requirements_result.md; review fbb8ea0.
+  All1280 reliability strata conserve endpoints; q decisions unchanged.
+  Two frozen models on26000PSF application rows/204PDFchunks; preserve native
+  ABC grids.3559compute/107delivery checks,6tests and7English plates; writer failures safely
+  recovered by61072326, far61071274/validator61071628 COMPLETED0:0.
+  expanded_A high-q predicted2.440million but53.25%weight has<20references
+  per observable cell; never transfer0.890%reference contamination to application.
+  Noise256held-out templates/759target pairs×4repeats is conditional, not faint
+  truth. High-q0–2kpc metal-poor dwarf bias+41%; missing-class training retains
+  extreme low-luminosity support.42076unusedIDs have no qualified class/distance
+  labels;3596weak-parallax eligible; buffered-sky reservation remains5. No new
+  final-validation claim, candidate, timer, deployment, full run or subagents.
+
+- Previous completed audit2026-11-10: docs/v2_1_result.md, docs/v2_1_atlas.md,
   docs/v2_1_requirements_result.md. Corrected review: pro_review_602727c_near_probability.md.
   Frozen joint97650 PSF eval rows/763 chunks; six groups/eight English plates.
   One W1 class-partition candidate68004 PSF train/67207 eval rejected by cal
