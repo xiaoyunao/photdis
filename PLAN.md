@@ -1,5 +1,18 @@
 # PLAN
 
+## Active objective: v2.3 targeted full-support density experiment
+
+Latest full review: docs/pro_review_83e1fe8.md. Frozen prospective protocol:
+docs/v2_3_protocol.md. Cache corrections/inventory first; one same-PSF control
+and error-aware multimodal candidate frozen before reserved outcomes.
+- [ ] Noise baseline correction and outcome-blind evaluation-reference inventory.
+- [ ] Freeze near scope, prepare full PSF distance support, validate XD mathematics.
+- [ ] Fit/freeze one candidate and same-identity QRF; then evaluate reserved IDs.
+- [ ] Selected-distance, poor-metal, far/reference, target-coverage diagnostics.
+- [ ] English figures, actual artifact checks, explicit evidence limits, safe sync.
+No deployment, full catalog, monitoring or subagents.
+
+
 ## Completed objective: v2.2 selected-distance and actual-application audit
 
 Latest review: docs/pro_review_fbb8ea0.md; frozen protocol: docs/v2_2_protocol.md.

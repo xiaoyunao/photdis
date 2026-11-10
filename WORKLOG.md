@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — v2.3 review and prospective scope
+- Read complete latest Pro review of83e1fe8, archived verbatim; user preview was older. Existing v2.2 remains frozen.
+- Added outcome-blind reference-qualification and cached noise-baseline correction runner; protocol fixes one XD32 candidate, same-PSF QRF control, near scope and reserved-role firewall.
+- NERSC authentication valid; queue empty; remote tracked tree at83e1fe8. Transient origin fetch failed once then succeeded. Historical untracked remote figures untouched.
+- Validation: prepare runner py_compile passes. No reserved predictions opened, no fit submitted. Next: execute cache preparation and test analytic error treatment.
+
+
 ## 2026-11-10 — v2.2 complete, science limits retained
 - Delivered docs/v2_2_result.md, v2_2_atlas.md, v2_2_requirements_result.md;7EnglishPNG300dpi/PDF/CSV/JSON plates. Updated README/PLAN/AGENTS and delivery manifest.
 - Successful jobs: audit61070873(33s), noise61071273(1m18s), application recovery61072326(29s), far61071274(22s), validator61071628(25s), all0:0. Earlier native-grid/sky-summary failures preserved;204PDFchunks reused with explicit hash migration. Queue empty.

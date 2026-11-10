@@ -52,3 +52,6 @@ archives/
 
 !manifests/v2_2/*.csv
 !manifests/v2_2/figures/*.csv
+
+!manifests/v2_3/*.csv
+!manifests/v2_3/figures/*.csv
