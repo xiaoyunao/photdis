@@ -3,6 +3,7 @@
   "cancelled_before_fit": "61078245",
   "owner_repair": "61078415",
   "model": "61078462",
-  "model_status": "submitted; inspect Slurm before any recovery",
-  "timers": false
+  "model_status": "RUNNING on nid004472; same-PSF QRF fitted, XD training; reserved outcomes still closed at last inspection",
+  "timers": false,
+  "owner_repair_status": "COMPLETED0:0"
 }

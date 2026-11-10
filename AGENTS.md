@@ -26,8 +26,8 @@
   per observable cell; never transfer0.890%reference contamination to application.
   Noise256held-out templates/759target pairs×4repeats is conditional, not faint
   truth. High-q0–2kpc metal-poor dwarf bias+41%; missing-class training retains
-  extreme low-luminosity support.42076unusedIDs have no qualified class/distance
-  labels;3596weak-parallax eligible; buffered-sky reservation remains5. No new
+  extreme low-luminosity support.v2.3 corrects the old inventory:42076unusedIDs have173chosen distance-evaluation
+  references;3596signed-parallax eligible includes644SNR>=5; buffered-sky reservation remains5. No new
   final-validation claim, candidate, timer, deployment, full run or subagents.
 
 - Previous completed audit2026-11-10: docs/v2_1_result.md, docs/v2_1_atlas.md,

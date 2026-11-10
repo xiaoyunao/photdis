@@ -461,3 +461,10 @@ Normalized references and their source hashes are listed in
 Local regression checks use `python -m pytest -q` with
 NumPy, fitsio, healpy and SciPy available. They exercise synthetic measurements
 and identities; only the allocated NERSC run produces scientific sample counts.
+
+### Active v2.3 experiment
+
+See [requirements and execution status](docs/v2_3_requirements_result.md) and
+[frozen protocol](docs/v2_3_protocol.md). One same-PSF QRF/XD32 comparison is in
+progress; cached noise priors and reserved-reference eligibility are corrected.
+No deployment or full-catalog expansion.
