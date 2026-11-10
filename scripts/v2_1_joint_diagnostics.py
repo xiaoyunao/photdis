@@ -6,10 +6,59 @@ import numpy as np
 from v2_1_near import ROOT, DEST, TABLES, DISTANCES, CLASSES, load, subset, csv_rows, save_json, sha, atomic_npz
 from v2_1_information import sample_indices
 from photdis.stage1 import require_compute
+from photdis.reference_v1_4 import unique_join
+
+
+def broad_neighbors():
+    from photdis.information_v2_1 import local_neighbors, calibrated, class_score
+    from v2_1_information import design
+    import joblib
+    probe = load(DEST/'optical_probe.npz')
+    raw = load(DEST/'frozen_training_audit.npz')
+    j = unique_join(probe['train_identity'], raw['identity'])
+    assert (j >= 0).all()
+    train = subset(raw, j)
+    with np.load(ROOT/'data/baseline_v1_4/references.npz') as z:
+        j = unique_join(probe['identity'], z['identity'])
+        assert (j >= 0).all()
+        query = {k: z[k][j] for k in ['identity', 'split', 'cell', 'class_label', 'r', 'B', 'C',
+                 'optical_error', 'g0', 'r0', 'z0', 'sigma_g', 'sigma_r', 'sigma_z']}
+    rows = np.flatnonzero(query['split'] == 2)
+    rows = rows[sample_indices(query['identity'][rows], 2000)]
+    tm, te = design(train, ('g', 'r', 'z'))
+    em, ee = design(query, ('g', 'r', 'z'))
+    local = local_neighbors(tm, te, train['class_label'], train['Mg'], em[rows], ee[rows], query['class_label'][rows])
+    output = []
+    for i, row in enumerate(rows):
+        output.append(dict(identity=int(query['identity'][row]), TYPE='PSF', class_label=int(query['class_label'][row]),
+            cell=int(query['cell'][row]), r=query['r'][row], optical_error=query['optical_error'][row],
+            W1=bool(query['B'][row]), W2=bool(query['C'][row]),
+            **{key: value[i] for key, value in local.items() if value.ndim == 1}))
+    csv_rows(TABLES/'color_neighbors_broad.csv', output)
+    parent = load(DEST/'application_psf.npz')
+    clf = joblib.load(DEST/'probe_broad_grz.joblib')
+    cal = json.loads((DEST/'optical_probe_complete.json').read_text())['calibration']
+    high = np.flatnonzero(np.max(te, axis=1) < .02)
+    high = high[sample_indices(train['identity'][high], 2000)]
+    rng = np.random.default_rng(20261110)
+    target = rng.choice(len(parent['identity']), len(high), p=parent['sample_weight']/parent['sample_weight'].sum())
+    _, errors = design(parent, ('g', 'r', 'z'))
+    noisy = tm[high]+rng.normal(size=(len(high), 3))*errors[target]
+    prior = np.bincount(train['class_label'].astype(int), minlength=3)/len(train['identity'])
+    result = []
+    for condition, mags in [('original_templates', tm[high]), ('target_noise', noisy)]:
+        prob = calibrated(clf.predict_proba(mags), cal['fixed_forest'])
+        prior_prob = calibrated(np.broadcast_to(prior, prob.shape), cal['no_color'])
+        for group, mask in dict(all=np.ones(len(high), bool), no_W1=~parent['B'][target],
+                               r18_20_no_W1=(parent['r'][target] >= 18) & (parent['r'][target] < 20) & ~parent['B'][target]).items():
+            result.append(dict(condition=condition, group=group,
+                **class_score(prob[mask], train['class_label'][high][mask].astype(int), prior_prob[mask])))
+    csv_rows(TABLES/'template_degradation_broad.csv', result)
 
 
 def main():
     require_compute()
+    broad_neighbors()
     t = load(DEST/'development.npz')
     edges = load(DEST/'joint_grid.npz')['edges']
     source_codes = load(DEST/'joint_grid.npz')['source_codes']
