@@ -25,8 +25,9 @@ def conditions(t):
                                ('rz', t['r0']-t['z0'], [-np.inf, 0, .3, .6, 1, 1.5, np.inf])]:
         for lo, hi in zip(edges[:-1], edges[1:]):
             groups[f'{key}_{lo}_{hi}'] = (values >= lo) & (values < hi)
-    for f in np.unique(t['field']):
-        groups[f'field_{f}'] = t['field'] == f
+    sky_key = 'field' if 'field' in t else 'cell'
+    for f in np.unique(t[sky_key]):
+        groups[f'{sky_key}_{f}'] = t[sky_key] == f
     return groups
 
 
@@ -62,12 +63,21 @@ def main():
         if previous != freeze:
             changed = [k for k in freeze if previous.get(k) != freeze[k]]
             assert changed == ['scripts/v2_2_application.py'], 'Explicit checkpoint migration required'
-            assert not list((DEST/'application_chunks').glob('baseline_v1_*.npz'))
-            assert previous[changed[0]] == 'f06f0d8077c1c6c5333c0bcccaafc9ce7043eb0717c4d01bb6827f4235f09e2a', 'Only the documented failed mixed-grid writer may migrate'
-            for path in (DEST/'application_chunks').glob('expanded_A_*.npz'):
+            initial = 'f06f0d8077c1c6c5333c0bcccaafc9ce7043eb0717c4d01bb6827f4235f09e2a'
+            summary_writer = '7062d2a36f53fd901f5f3f72702efff37a2e1a5181d84ea0b20d50e9ef63b853'
+            assert previous[changed[0]] in (initial, summary_writer), 'Unrecognized writer migration'
+            if previous[changed[0]] == initial:
+                assert not list((DEST/'application_chunks').glob('baseline_v1_*.npz'))
+                migration_name = 'grid'
+                reason = 'Zero-pad storage only; preserve native ABC grids and scientific outputs'
+            else:
+                assert len(list((DEST/'application_chunks').glob('*.npz'))) == 204
+                migration_name = 'summary'
+                reason = 'Development sky uses cell while application uses field; both full prediction caches reused unchanged'
+            for path in (DEST/'application_chunks').glob('*.npz'):
                 assert sha(path) == json.loads(path.with_suffix('.json').read_text())['sha256']
-            save_json(DEST/'application_freeze_initial.json', previous)
-            save_json(DEST/'application_grid_migration.json', dict(changed=changed, previous=previous[changed[0]], current=freeze[changed[0]], reason='Native ABC PDF lengths differ; zero-pad storage only, retain original edges and valid bin counts. expanded_A cache unchanged.'))
+            save_json(DEST/('application_freeze_previous_'+previous[changed[0]][:8]+'.json'), previous)
+            save_json(DEST/('application_'+migration_name+'_migration.json'), dict(changed=changed, previous=previous[changed[0]], current=freeze[changed[0]], reason=reason))
             save_json(frozen_path, freeze)
     else:
         save_json(frozen_path, freeze)

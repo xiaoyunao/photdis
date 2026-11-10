@@ -56,6 +56,14 @@ q>0.95远端混入率0.890%，Wilson95%区间0.796–0.995%；按9个开发天�
 占比替换cal占比、固定cal条件接收率，会得到5.689%，说明人口组成变化解释了
 一部分差异；剩余差异仍涉及条件接收率、空间和参考选样。
 
+选中后的完整Gaia观测空间检查另外保留弱与负视差：q>0.5/0.8/0.95分别有
+46881/41766/34621个合格观测，其中负校正视差3263/1946/808个。q>0.95的
+PIT低/高5%尾部为5.85%/5.56%，平均/中位log density为0.1614/0.3855，
+无非有限log值。这里使用冻结的观测似然，不用正视差距离反演筛样；总体PIT
+接近标称不能替代贫金属等条件层的距离校准，也不是独立Gaia尺度验证。
+[完整观测评分](../manifests/v2_2/selected_gaia_observation.csv)与
+[PIT守恒分箱](../manifests/v2_2/selected_gaia_pit.csv)保留所有分层。
+
 [逐层距离表](../manifests/v2_2/selected_distance.csv)、
 [风险与组成分解](../manifests/v2_2/selection_risk.csv)、
 [选中后距离图](../figures/v2_2/02_selected_distance.png)。

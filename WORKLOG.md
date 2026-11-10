@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-10 — sky-summary interface correction
+- Recovery61071786 completed all204PDFchunks (26000objects×2models), passed full catalog-mu reproduction, then FAILED1:0 at11m25s because development stores sky `cell`, not application `field`.
+- Corrected conditions() to retain the proper named sky key. Explicit second writer migration checks the exact previous hash and all204chunk hashes; no prediction recalculation. Far/validator dependencies will follow one summary-only recovery.
+
 ## 2026-11-10 — selected full-parallax completeness
 - Added cache-only full-Gaia likelihood/PIT checks after each qselection, retaining weak/negative eligible parallaxes separately from positive-anchor distance comparisons. PIT bins conserve every selected group.
 - Extended extreme-support output to distinguish missing-class local luminosity support; no tails deleted. Noise/selected figures inspected.
