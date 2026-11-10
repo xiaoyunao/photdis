@@ -10,6 +10,7 @@
 |应用人数与可观测条件|application_summary/distribution/evidence_cells|加权预测人数不等于真近端人数；颜色、亮度、误差、WISE、场分别列出|
 |参考支持与PDF结构|固定observable cells；0/1–19/20+reference；宽度/多峰/未知类贡献|占格不保证校准/精度，也不是独立天空证据|
 |选择后的完整距离指标|selected_distance.csv，3threshold×4reference×人群/条件/距离分层|标签和校正丰度只作诊断，不用于应用过滤|
+|选中后完整Gaia检查|selected_gaia_observation与PIT分箱；原观测空间likelihood|弱/负视差保留；不通过正视差距离反演筛掉失败|
 |不确定度与人口迁移|Wilson与2000天区bootstrap；固定cal条件接收率替换远端占比|有限9个dev天区；不能宣称独立最终验证|
 |新验证集清点|身份未用42076与缓冲天空5分别保留；逐星身份导出PSF|42076暂无合格类别/距离标签；3596弱视差资格；待成员/外部证据|
 |目标优先层|18–22无W1库存；近端贫金属、远巨星、真实PSF非恒星缺口明确|旧光谱控制不是目标目录污染率，未知类别保留|

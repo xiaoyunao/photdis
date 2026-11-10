@@ -86,6 +86,12 @@ def main():
     check('reservation_no_expanded_training', not np.intersect1d(reservation['identity'], train['identity']).size)
     check('reservation_PSF', (reservation['TYPE'] == 'PSF').all())
     check('reservation_old5_unchanged', sha(OLD/'future_validation_reservation.npz') == json.loads((OLD/'final_validation_reservation.json').read_text())['reservation_sha256'])
+    pit_counts = defaultdict(int)
+    for row in read('selected_gaia_pit'):
+        pit_counts[(row['split'], row['threshold'], row['group'])] += int(row['n'])
+    for row in read('selected_gaia_observation'):
+        key = (row['split'], row['threshold'], row['group'])
+        check('selected_Gaia:'+str(key), pit_counts[key] == int(row['n']) and int(row['negative']) <= int(row['n']))
     save_json(DEST/'validation.json', dict(job_id=os.getenv('SLURM_JOB_ID'), actual_checks=len(checks), all_passed=all(checks.values()), checks=checks, morphology=dict(application=dict(total=len(app['identity']), admitted=len(app['identity']), non_psf=0, missing_type=0), noise_pairs=dict(total=len(d['identity']), admitted=len(d['identity']), non_psf=0, missing_type=0), unused_reservation=dict(total=len(reservation['identity']), admitted=len(reservation['identity']), non_psf=0, missing_type=0))))
     print('VALIDATION', len(checks), 'checks passed', flush=True)
 

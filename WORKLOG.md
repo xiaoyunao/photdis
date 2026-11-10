@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-10 — selected full-parallax completeness
+- Added cache-only full-Gaia likelihood/PIT checks after each qselection, retaining weak/negative eligible parallaxes separately from positive-anchor distance comparisons. PIT bins conserve every selected group.
+- Extended extreme-support output to distinguish missing-class local luminosity support; no tails deleted. Noise/selected figures inspected.
+
 ## 2026-11-10 — final identity separation guard
 - Added explicit validation that newly reserved identities do not overlap the already inspected26000application sample, in addition to train and development separation.
 - This guard fails closed; scientific inventory may not be promoted to independent validation until all provenance and system-membership evidence is established.
