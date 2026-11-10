@@ -87,15 +87,20 @@ class JointReferenceForest:
                 raise ValueError('Missing frozen leaf members; wrong training identities')
             row = np.r_[leaf, leaf]
             col = np.r_[classes*nb+bins, (4+source_index)*nb+bins]
-            table = csr_matrix((np.r_[1/count[leaf], 1/count[leaf]], (row, col)),
-                               shape=(len(original), self.nchannel*nb), dtype=np.float32)
+            # Coalesce integer counts BEFORE division. Summing float32 1/N for
+            # repeated members of a large leaf drifts from the frozen histogram.
+            table = csr_matrix((np.ones(len(row), dtype=np.int64), (row, col)),
+                               shape=(len(original), self.nchannel*nb))
+            table = table.astype(np.float64)
+            table.data /= np.repeat(count, np.diff(table.indptr))
+            table = table.astype(np.float32)
             # Audit one tree at a time, keeping temporary dense allocation bounded.
             dense = table.toarray().reshape(len(original), self.nchannel, nb)
             dp = float(np.max(abs(dense[:, :4].sum(axis=1)-original)))
             dc = float(np.max(abs(dense[:, :4].sum(axis=2)-types)))
             ds = float(np.max(abs(dense[:, 4:].sum(axis=1)-original)))
             if max(dp, dc, ds) > 2e-6:
-                raise ValueError('Frozen joint marginals do not reproduce original tables')
+                raise ValueError(f'Frozen joint marginal errors: PDF={dp}, class={dc}, source={ds}')
             checks.append([dp, dc, ds])
             self.tables.append(table)
         self.reconstruction_max_errors = np.max(checks, axis=0)

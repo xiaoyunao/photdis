@@ -42,3 +42,15 @@ def test_migration_psf_and_covariance():
     assert keep.tolist() == [True, False, False, True]
     assert counts == dict(total=4, admitted=2, non_psf=1, missing_type=1)
     np.testing.assert_allclose(color_covariance([[1, 2, 3]])[0], [[5, -4], [-4, 13]])
+
+
+def test_large_leaf_accumulates_counts_before_float_normalization():
+    from types import SimpleNamespace
+    n = 50000
+    tree = SimpleNamespace(apply=lambda x: np.zeros(len(x), dtype=int))
+    model = SimpleNamespace(feature_matrix=lambda x: x, edges=np.array([0., 1.]), centers=np.array([.5]),
+                            forest=SimpleNamespace(estimators_=[tree]), maps=[np.array([0])],
+                            tables=[np.ones((1, 1), dtype='f4')], types=[np.array([[1., 0, 0, 0]], dtype='f4')])
+    joint = JointReferenceForest(model, np.zeros((n, 2)), np.full(n, .5),
+                                  np.zeros(n, int), np.ones(n, int))
+    np.testing.assert_array_equal(joint.reconstruction_max_errors, [0., 0., 0.])

@@ -14,4 +14,4 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 mkdir -p data/v2_1
 exec 9>data/v2_1/.joint.lock
 flock -n 9
-python -u scripts/v2_1_joint.py --workers 16
+python -u scripts/v2_1_joint.py --workers 16 "$@"

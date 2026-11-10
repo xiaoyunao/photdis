@@ -99,13 +99,26 @@ def chunk(rows):
     return str(path)
 
 
-def run(workers):
+def run(workers, migrate_empty=False):
     global _J, _T
     require_compute()
     paths, fingerprint = inputs()
     freeze = DEST/'joint_freeze.json'
     if freeze.exists():
-        assert json.loads(freeze.read_text()) == fingerprint, 'Changed inputs/code: explicit migration required'
+        previous = json.loads(freeze.read_text())
+        if previous != fingerprint and migrate_empty:
+            assert not list((DEST/'joint_chunks').glob('*.npz')), 'Cannot migrate populated prediction checkpoints'
+            assert all(previous['inputs'][k] == value for k, value in fingerprint['inputs'].items()
+                       if k not in ('core', 'runner')), 'Input/model/protocol change is not an empty-code migration'
+            archive = DEST/('joint_freeze_failed_'+sha(freeze)[:12]+'.json')
+            assert not archive.exists()
+            freeze.rename(archive)
+            save_json(freeze, fingerprint)
+            save_json(DEST/'joint_empty_migration.json', dict(previous=str(archive.name),
+                       reason='Failed pre-prediction marginal audit: normalize coalesced integer leaf counts, not accumulated float32 fractions',
+                       prediction_checkpoints=0, previous_job='61067590'))
+        else:
+            assert previous == fingerprint, 'Changed inputs/code: explicit migration required'
     else:
         save_json(freeze, fingerprint)
     _T = load(paths['development'])
@@ -222,5 +235,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--workers', type=int, default=16)
     parser.add_argument('--summarize', action='store_true')
+    parser.add_argument('--migrate-empty', action='store_true')
     args = parser.parse_args()
-    summarize() if args.summarize else run(args.workers)
+    summarize() if args.summarize else run(args.workers, args.migrate_empty)

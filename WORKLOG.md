@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-10 — joint marginal guard caught large-leaf accumulation drift
+
+-61067590 stopped before predictions at frozen-leaf marginal audit. No partial
+ probability products accepted. Diagnosis: sparse constructor summed repeated
+ float32(1/N_leaf), unlike frozen integer counts normalized once.
+- Changed reconstruction to coalesce int64 counts, divide in float64 and cast
+ once. Added50000-member single-leaf regression, exact marginals now pass.
+ All6 focused tests pass; real reconstruction must still confirm diagnosis.
+- Added explicit empty-checkpoint migration: archive old freeze, require every
+ data/model/protocol hash unchanged and no prediction chunks. Never silently
+ reuses an incompatible checkpoint. Confirm failed terminal state before restart.
+
 ## 2026-11-10 — information production complete; quality/control extensions ready
 
 -61067835 COMPLETED0:0 in61s. Fixed same-label/band probe:68004 training,
