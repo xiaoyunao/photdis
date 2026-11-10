@@ -43,6 +43,7 @@ def main():
                 row[name+'_Mg_min'] = float(mg.min()) if len(mg) else None
                 row[name+'_Mg_max'] = float(mg.max()) if len(mg) else None
                 row[name+'_within1mag_n'] = int((abs(mg-implied) < 1).sum()) if np.isfinite(implied) else None
+                row[name+'_within1mag_unlabeled_n'] = int(((abs(catalog['Mg'][neighbors]-implied) < 1) & (catalog['class_label'][neighbors] == -1)).sum()) if np.isfinite(implied) else None
             records.append(row)
     csv_rows(DEST/'tables/extreme_gaia_support.csv', records)
     save_json(DEST/'extreme_support.json', dict(rows=len(records), radius_mag=.3,

@@ -1,0 +1,9 @@
+{
+  "name": "04_noise_transfer",
+  "caption": "Templates disjoint from fitting; matched observed colors, WISE state and target errors. Same identity retains role. Shifted reference distances are conditional simulations, not new faint truth. Paired source-cluster intervals provided inCSV.",
+  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "sources": {
+    "noise_transfer": "e5566965bb0aeb14f13a7fe8124a92c268f61811b407b38e738e610f6eeead53",
+    "noise_cluster_bootstrap": "8c5c61e7c229da0843d9787ebec0cf7da64977fce7537d2dfbd7239994bd2c41"
+  }
+}
