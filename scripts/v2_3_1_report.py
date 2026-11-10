@@ -24,8 +24,8 @@ def main():
         '## 修正前后：错误究竟影响了多少结果',
         '以下为相同身份配对，按最大grz测光误差分层。选样变化与预测数值变化分开，不把不同入选对象称为同星改善。']
     delta=select(read('inference_correction_by_error'),role='development_test')
-    parts.append(table(delta,[('error_low','误差下界mag',1),('error_high','上界mag',1),('version','推断',1),('n','N',1),('distance_tail_1','距离严重错误%',100),('gaia_log','原始Gaia log↑',1),('changed_scope','入选变化N',1),('median_abs_mu_change','中位绝对mu变化',1),('mean_abs_q_change','平均绝对q变化',1)]))
-    parts+=['这批开发对象主要处于小测光误差区，因此总体数值变化小；符号错误仍必须纠正。误差≥0.1mag层仅6个开发对象，不能把这层修正效果外推成暗端人口成绩。',
+    parts.append(table(delta,[('error_low','误差下界mag',1),('error_high','上界mag',1),('version','推断',1),('n','预测N',1),('distance_n','距离参考N',1),('gaia_n','Gaia N',1),('distance_tail_1','距离严重错误%',100),('gaia_log','原始Gaia log↑',1),('changed_scope','入选变化N',1),('median_abs_mu_change','中位绝对mu变化',1),('mean_abs_q_change','平均绝对q变化',1)]))
+    parts+=['这批开发对象主要处于小测光误差区，因此总体数值变化小；符号错误仍必须纠正。误差≥0.1mag层仅6个开发对象，不能把这层修正效果外推成暗端人口成绩。实际26000应用抽样的中位绝对mu变化约0.0383mag，误差≥0.1mag的12982个对象为约0.0928mag；这一高误差层被预定near_scope排除，应用近端入选身份因此未变化。',
         '[全部cal/开发/保留/应用误差分层](../manifests/v2_3_1/inference_correction_by_error.csv)',
         '## 正确推断后的主要科学结果','chosen开发参考，未按预测删选；所有值相对有误差参考。qnear指日心d<10kpc。']
     rr=[]
@@ -66,12 +66,12 @@ def main():
     parts.append(table(rr,[('model','模型',1),('selection','选样',1),('score','评分口径',1),('n','N',1),('negative','负视差',1),('log_mean','平均log↑',1),('pit_low','PIT低尾%',100),('pit_high','PIT高尾%',100),('mean_selection_probability','平均保留概率',1)]))
     parts+=['直接从完整距离PDF采样并加入实际Gaia误差，再按源资格/误差/锚点规则重新选择；每对象2048次，独立两半用于CDF估计和检验。模拟检验是否重现选择效应，是方法检查，不是新的天体真值或真实校准证据。条件化评分为raw log−log P(selection)，不能拿它与另一条件下的raw数值直接判模型优劣。',
         table(read('selection_simulation_checks'),[('model','模型',1),('n','N',1),('mean_probability_difference','模拟−解析平均保留概率',1),('rms_probability_difference','保留概率差RMS',1),('median_abs_observed_pit_difference','观测条件CDF差中位绝对值',1)]),
-        '补充分析的raw与conditional PIT统一使用32阶积分；另记录与原8阶raw PIT的最大差。模拟尾率按可模拟对象等权平均，另存按模拟样本数加权的值和实际模拟对象数。',
+        '补充分析的raw与conditional PIT统一使用32阶积分；与原8阶raw PIT的最大差分别为QRF 1.97e−8、XD 6.66e−16，不影响本次解释。模拟尾率按可模拟对象等权平均，另存按模拟样本数加权的值和实际模拟对象数。',
         '原来的cal raw-Gaia验收规则保持不动；新增条件分析仅作补充。保留身份已在v2.3被看过，本次不重新包装成新盲测。',
         '在这一固定协变量选择模型下，条件化后近端PIT低尾仍明显高于5%；历史锚点截断只能解释一部分现象，剩余偏斜不能据此视为已经解决。其他源选样/相关误差尚未建模，不能直接全归因于距离模型。',
         '## 远端：完整PDF与辅助类别标记分开']
-    parts.append(table(far,[('model','模型/版本',1),('reference','参考',1),('low_kpc','下界kpc',1),('high_kpc','上界kpc',1),('n','同星N',1),('mean_mass_within1','平均P(|Δmu|<1)',1),('median_mass_within1','中位概率质量',1),('reference_convolved_log','卷积log↑',1)]))
-    parts+=['上述积分来自完整PDF，不用成分级类别频率。QRF叶内类别—光度联合分布与XD每成分固定类别比例并不等价；后者假设成分内类别不随颜色/光度变。辅助巨星条件结果见far_conditional，不能单独解释成完整PDF丢掉远端支。两参考仍非独立尺度。',
+    parts.append(table(far,[('model','模型/版本',1),('reference','参考',1),('low_kpc','下界kpc',1),('high_kpc','上界kpc',1),('n','同星N',1),('mean_mass_within1','参考±1mag平均质量',1),('median_mass_within1','中位概率质量',1),('reference_convolved_log','卷积log↑',1)]))
+    parts+=['上述积分来自完整PDF，不用成分级类别频率。QRF叶内类别—光度联合分布与XD每成分固定类别比例并不等价；后者假设成分内类别不随颜色/光度变。辅助巨星条件结果见far_conditional，不能单独解释成完整PDF丢掉远端支。同一700个20–50kpc SpecDis巨星的平均参考邻域概率质量由0.1285升到0.1446，但中位值由0.0944降到0.0755，不能表述为普遍改善。两参考仍非独立尺度。',
         '## 贫金属配对与应用证据分母',
         '保留原2055对（354唯一普通对照），新增both/poor-only/ordinary-only/neither计数。both-in-stratum在两侧同时满足距离/选样时才保留配对；poor-side-defined用贫金属侧条件选整对。原每侧独立分层仍保留，但不冒称配对结果。总体配对的重复对照不能视为独立样本，也不能作因果归因。']
     rr=[]

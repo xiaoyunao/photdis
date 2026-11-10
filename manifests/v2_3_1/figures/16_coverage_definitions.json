@@ -1,0 +1,8 @@
+{
+  "name": "16_coverage_definitions",
+  "caption": "Identical model selections and observable cells. v2.2 used development-only; v2.3 combined cal+development. Coverage differences do not measure accuracy or prove population reliability.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "application_coverage_definitions": "f3050c31fe5f85380aac1ce249945b4176009fafd469d89ed09cfd30497cfffa"
+  }
+}

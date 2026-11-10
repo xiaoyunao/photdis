@@ -1,0 +1,9 @@
+{
+  "name": "15_pair_retention",
+  "caption": "Each column partitions the same2055pairs.354 unique ordinary controls reused; not independent pairs. Both-in-stratum and poor-side-defined paired estimates exported; former per-side statistics not pair-conserving.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "metal_poor_pair_retention": "b2ac8a6b134f417793b1bfc934a42522c4659bde513739d88c3ae685f990ea12",
+    "metal_poor_pair_conserving": "82ef85464106ee1e9e31b99ec3f4a8d0d1ba7a3644360ba1c45dcc8b3c8963b3"
+  }
+}

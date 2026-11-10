@@ -1,6 +1,15 @@
 # photdis
 
-Latest completed audit: **Photdis v2.2 selected-distance and actual-application evidence**.
+Latest completed correction: **Photdis v2.3.1 frozen-model inference and selection audit**.
+[Results](docs/v2_3_1_result.md) · [16 English plates](docs/v2_3_1_atlas.md) ·
+[Requirements and limits](docs/v2_3_1_requirements_result.md).
+Corrected the shared-g prediction covariance without refitting models; exact
+historical selection replay, forward checks and paired evidence are complete.
+The corrected XD32 still fails the original calibration guards; deployment is
+unchanged. Compact-artifact verification: `python3 scripts/v2_3_1_delivery.py`.
+Large predictions and immutable pre-correction archives remain on NERSC.
+
+Previous completed audit: **Photdis v2.2 selected-distance and actual-application evidence**.
 [Results](docs/v2_2_result.md) · [Seven English plates](docs/v2_2_atlas.md) ·
 [Requirement evidence and limits](docs/v2_2_requirements_result.md) ·
 [Delivery manifest](manifests/v2_2/delivery.json).

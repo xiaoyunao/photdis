@@ -1,0 +1,9 @@
+{
+  "name": "13_far_full_pdf",
+  "caption": "Old and corrected candidate curves nearly overlap; exact changes remain in CSV. Same reference identities per panel; full-PDF probability and convolved score do not use auxiliary class frequencies. QRF leaf-joint and XD fixed-component class oracles are structurally different.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "far_full_pdf_mass": "a6558c269703925ec6ec0fd79f5f0c95d275c66d6db0a7a9cfefc1e7a76db814",
+    "far_conditional": "b85ae1f54270e249ec0fd0ce537d564e2b39fef56345d960a8640c61419e1ff8"
+  }
+}

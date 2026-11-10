@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-10 — v2.3.1 correction and scientific re-evaluation completed
+- Final supplemental61081737 COMPLETED0:0(1:05),3316checks; correction61081256 COMPLETED0:0(9:32),8124checks. Bounded final SSH confirms empty user queue, remote tracked tree clean at4750216 before delivery.
+- Same fitted179EM/QRF bytes and original training identities retained; all candidate-dependent products corrected. Original cal still rejects on full-Gaia and near contamination; no adoption. Development near far-contamination0.839%control vs1.828%candidate; median high-error application |delta mu|0.0928mag, no application near-selection changes.
+- Exact42076reserved replay;3502upperSNR20/94untruncated Gaia. Equal-object forward validation and same32-order raw/conditional PIT; original8-to32 maxdifference1.97e-8. QRF selected low-PIT tail22.08%raw→20.68%conditional: selection only partly explains skew. SPDist399near QRF references show16.86%NMAD, with shared-teacher limits.
+- Delivered scripts/v2_3_1_{report,figures,delivery}.py,16English PNG300dpi/PDF/CSV/JSON plates, result/atlas/requirements, refreshed execution manifests, AGENTS/PLAN/README. Full far PDF versus auxiliary class, original2055pairs and split-pair accounting, dev-only/cal+dev coverage explicitly distinguished.
+- Validation:10focused independent math/scoring/selection tests at implementation milestones;8124production+3316audit+176delivery checks pass; final scripts py_compile and git diff --check pass. All16PNGs inspected, representative PDF13 rendered with pdftoppm; corrected long labels and blank zero-evidence plot, final visual hashes recorded.
+- Commands: compact rsync; python3 scripts/v2_3_1_report.py; python3 scripts/v2_3_1_delivery.py; final bounded SSH; git milestone commit and scripts/sync.py push for three-endpoint delivery.
+- Remaining scientific limits: already-inspected reserve is not new blind evidence; incomplete population/source selection, poor-metal scale, far branch weights and independent application validation. No pending authorized computation, new model, deployment, full catalog, timer or subagent; further science follows new review scope.
+
 ## 2026-11-10 — selection replay completed; numerical orders aligned
 -61081616 COMPLETED0:0 in1:13;3316correction checks pass.42076reserved IDs exactly reproduced, with zero unexplained clean/unknown historical membership; forward-selected CDF checks pass.
 - Final review aligns supplemental raw/conditional PIT at the same32-point quadrature using F_raw=F_conditional*P(selection), instead of comparing original8-point raw PIT to32-point conditional PIT. Original frozen raw metrics remain untouched; log scores already use32points. Quantify original8→32CDF difference explicitly. Simulation tail summaries now weight objects equally, matching observed-row denominators; retain accepted-draw weighting and finite-MC object counts separately.

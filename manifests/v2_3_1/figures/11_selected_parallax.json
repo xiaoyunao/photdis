@@ -1,0 +1,10 @@
+{
+  "name": "11_selected_parallax",
+  "caption": "Condition on replayed distance-admission rule with fixed source/error/class/spatial covariates. Does not model spectroscopic targeting, correlated reference selection or full application population. Original raw cal guards remain separate.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "reserved_selection_pit": "88166dc17bf380c2e7f3e9ffe4deb78e7c81962bdcd29d2ae12c342c08d797ea",
+    "reserved_selection_scores": "7b6b8aaa56f638fa585c40f8a5ec0ffdda88a7041d444c632f79682cf60c5fb9",
+    "selection_qualification": "d9955071c40cabd6d6ba8990e7e081a7d41d68d38d923e33f1fc10f07a788db9"
+  }
+}

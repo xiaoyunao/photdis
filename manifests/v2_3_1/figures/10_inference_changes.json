@@ -1,0 +1,8 @@
+{
+  "name": "10_inference_changes",
+  "caption": "Same identities before/after correction. Old-minus-g predictions are archived and scientifically superseded. Empty strata remain missing; no clipping or refit.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "inference_correction_by_error": "67340b7c337e4c0b7fd3142dcda287b9aff807ed7a4bdd0756671a54898d088f"
+  }
+}

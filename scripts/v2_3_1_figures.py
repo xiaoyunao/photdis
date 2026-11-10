@@ -14,7 +14,7 @@ def corrections():
     data=read('inference_correction_by_error');fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
     for role,color in [('development_test',BLUE),('reserved',ORANGE),('application',GREEN)]:
         rr=[sel(data,role=role,error_low=lo,error_high=hi,version='plus_g_corrected')[0] for lo,hi in [(0,.01),(.01,.03),(.03,.1),(.1,'inf')]]
-        for ax,key,label in zip(axes,['median_abs_mu_change','mean_abs_q_change','changed_scope'],['Median absolute change in mu (mag)','Mean absolute change in near probability','Changed near-scope selection (%)']):
+        for ax,key,label in zip(axes,['median_abs_mu_change','mean_abs_q_change','changed_scope'],['Median absolute Δμ (mag)','Mean absolute Δq','Changed near selections (%)']):
             y=[val(r,key)/(val(r,'n') or np.nan)*100 if key=='changed_scope' else val(r,key) for r in rr]
             ax.plot(range(4),y,'o-',color=color,label=role.replace('_',' '));ax.set(xticks=range(4),xticklabels=['<0.01','0.01–0.03','0.03–0.1','≥0.1'],xlabel='Maximum grz error (mag)',ylabel=label)
     axes[0].legend(fontsize=9);fig.suptitle('Shared-g inference correction · fitted model unchanged')
@@ -41,9 +41,9 @@ def corrections():
         rr=[sel(data,model=model,reference=ref,low_kpc=lo)[0] for ref in ('specdis','spdist') for lo in (10,20)]
         axes[0].plot(range(4),[val(r,'mean_mass_within1') for r in rr],'o',ls=ls,color=color,label=model.replace('_',' '))
         axes[1].plot(range(4),[val(r,'reference_convolved_log') for r in rr],'o',ls=ls,color=color)
-    for ax,label in zip(axes,['Mean full-PDF mass within 1 mag','Reference-convolved log score (nats)']):ax.set(xticks=range(4),xticklabels=labels,ylabel=label,xlabel='Reference / distance (kpc)')
+    for ax,label in zip(axes,['Mean mass within ±1 mag','Convolved log score (nats)']):ax.set(xticks=range(4),xticklabels=labels,ylabel=label,xlabel='Reference / distance (kpc)')
     axes[0].legend(fontsize=9);fig.suptitle('Far giant references · full PDF without auxiliary class conditioning')
-    save(fig,'13_far_full_pdf',['far_full_pdf_mass','far_conditional'],'Same reference identities per panel; full-PDF probability and convolved score do not use auxiliary class frequencies. QRF leaf-joint and XD fixed-component class oracles are structurally different.')
+    save(fig,'13_far_full_pdf',['far_full_pdf_mass','far_conditional'],'Old and corrected candidate curves nearly overlap; exact changes remain in CSV. Same reference identities per panel; full-PDF probability and convolved score do not use auxiliary class frequencies. QRF leaf-joint and XD fixed-component class oracles are structurally different.')
     data=read('reserved_distance');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     for j,(model,color) in enumerate([('control',BLUE),('candidate',ORANGE)]):
         r=sel(data,model=model,group='all',selection='near_scope',reference='spdist',low_kpc=0,high_kpc='inf')[0]
@@ -66,6 +66,8 @@ def corrections():
         rr=[sel(data,model=model,evidence=evidence,selection='near_scope')[0] for model in ('control','candidate')]
         for ax,key in zip(axes,['zero_weight','sparse1_19_weight']):ax.bar(np.arange(2)+(j-.5)*.3,[100*val(r,key)/val(r,'weight') for r in rr],width=.3,color=color,label=evidence.replace('_',' '))
     for ax,label in zip(axes,['Weight with zero references (%)','Weight with 1–19 references (%)']):ax.set(xticks=[0,1],xticklabels=['QRF control','Corrected XD32'],ylabel=label)
+    axes[0].set_ylim(0,1);axes[1].set_ylim(0,1)
+    for i in range(2):axes[0].text(i,.05,'0% in both definitions',ha='center',fontsize=10)
     axes[0].legend(fontsize=9);fig.suptitle('Same near selections · two explicit reference-count definitions')
     save(fig,'16_coverage_definitions',['application_coverage_definitions'],'Identical model selections and observable cells. v2.2 used development-only; v2.3 combined cal+development. Coverage differences do not measure accuracy or prove population reliability.')
 

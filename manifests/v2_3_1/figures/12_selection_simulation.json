@@ -1,0 +1,9 @@
+{
+  "name": "12_selection_simulation",
+  "caption": "Independent simulation halves estimate unselected/selected CDFs. Plot weights eligible simulated objects equally; Monte Carlo object counts and draw-weighted alternatives are in CSV. Reproduce selection effect under the model, not evidence of real population calibration. Fixed seed;2048 draws/object; real observed metrics separate.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "selection_forward_simulation": "c98ccf7174f6f86a2e833fd6cce48de80829a9f2f15dd0d0f3176dfdfa378667",
+    "selection_simulation_checks": "e3cde2ec32310b386e8af9634a09c71b98194f0c1ce3cd0d7ee90bf0e99e0284"
+  }
+}

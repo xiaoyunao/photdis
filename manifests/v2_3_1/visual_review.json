@@ -1,0 +1,25 @@
+{
+  "png_sha256": {
+    "01_noise_benchmarks.png": "13609ae1475eb4fba8ffdd0e90fa4d89322194905e8bd80bcd3a84c8ca254b16",
+    "02_reference_inventory.png": "bf048d1fafeb11c90d111e310cb1dc7d7de549c498e74e5e0299c47c4d018c46",
+    "03_model_comparison.png": "b5f45c81e1ab79372fbfa900bb3b3cd83df0e517b9d1d597a3e5f2151eb5780c",
+    "04_reserved_parallax.png": "1002185ed3cf124578d2c26bb026aa458a3c179ea60c4e110dc0a562c524bdad",
+    "05_near_scope.png": "2f99d2caed552925e8af9782c85312ed481ebdf8f7c4cc16234e1fff85c9196d",
+    "06_far_branches.png": "a85373cb147f603ef8f683f8654d4597283f9254c261e8ffc23cb0004be05703",
+    "07_metal_poor.png": "bec5465b038d5167bcb0c8f39530d7d82334320c36139c8a833e4db1c4e0a0ba",
+    "08_selected_quality.png": "2c5d427e7f2afbe6a31804aac8d47e01e4b711aa17dc4400ec1a10b1faa0477f",
+    "09_posterior_examples.png": "2db34f4d5575b149eced67e1b88dd99920acc44e5e868325fb0f142092b450af",
+    "10_inference_changes.png": "88d367c0f3b728d764a8f5f2ff1e3a91c5b8e1a72420fad01cea386d90a05291",
+    "11_selected_parallax.png": "e7b6ac1e7044854385091aaa03aa57ef01ce1c6c7b5d2ece03ad99271542a86e",
+    "12_selection_simulation.png": "236741f68de685296ef1b07f6d3dadb852a75de909af1997bf60f9464b392d6b",
+    "13_far_full_pdf.png": "ac4aa6ff6801902c0e89abdcc2f69c3f83d66bb3c8d72b8cffa11c234d25ea58",
+    "14_spdist_near.png": "da44d4dd8fc7be177d9fd7e5e7323383c1aaf68b48a56448d8f65b846d26294f",
+    "15_pair_retention.png": "822f5526605d03791401b9b904757a661791432b337baa58fbb00041601a7b20",
+    "16_coverage_definitions.png": "6facd5065b60135f68267c11865d0f18654e417258d4a1ee7665d38136f71af5"
+  },
+  "representative_pdf_rendered_and_reviewed": true,
+  "representative_pdf": "13_far_full_pdf.pdf",
+  "representative_pdf_sha256": "1377be6b0b408308c83586a0d7f51af29169833f01751ea350aa141514fc7c55",
+  "review": "All sixteen PNGs inspected: base contact sheet plus individual supplementary plates; final 04/10/13/16 rechecked. PDF13 rendered with pdftoppm. Shortened long labels; explicit zero-evidence annotations; all figures English.",
+  "date": "2026-11-10"
+}

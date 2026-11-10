@@ -33,6 +33,10 @@ def main():
     for name,h in visual['png_sha256'].items():
         check(name+':visual_version',hashlib.sha256((F/name).read_bytes()).hexdigest()==h)
     check('representative_PDF_reviewed',visual['representative_pdf_rendered_and_reviewed'])
+    check('all_PNGs_reviewed',set(visual['png_sha256'])=={p.name for p in F.glob('*.png')})
+    check('PDF_visual_version',hashlib.sha256((F/visual['representative_pdf']).read_bytes()).hexdigest()==visual['representative_pdf_sha256'])
+    correction=json.loads((M/'execution/correction_validation.json').read_text())
+    check('real_correction_audit',correction['all_passed'])
     actual=M/'execution/validation.json'
     compute=json.loads(actual.read_text()) if actual.exists() else None
     if compute is not None:check('real_compute',compute['all_passed'])

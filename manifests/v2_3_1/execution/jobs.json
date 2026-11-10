@@ -5,5 +5,10 @@
   "audit_dependency": "afterok:61081256",
   "audit_status": "FAILED1:0,15s; missing fields in projected population; exact-owner join repair committed",
   "no_refit": true,
-  "no_timers": true
+  "no_timers": true,
+  "audit_repaired": "61081616",
+  "audit_repaired_status": "COMPLETED0:0,1:13;3316checks",
+  "audit_final": "61081737",
+  "audit_final_status": "COMPLETED0:0,1:05;3316checks; same-order PIT and equal-object simulation tails",
+  "active_jobs": false
 }

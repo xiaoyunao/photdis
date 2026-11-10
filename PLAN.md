@@ -1,14 +1,18 @@
 # PLAN
 
-## Active objective: v2.3.1 inference correction and selection-aware reassessment
+## v2.3.1 correction completed
 
-Review docs/pro_review_569d6ff.md; amendment docs/v2_3_1_protocol.md.
-- [x] Confirm shared-g sign error and implement independent three-band forward tests.
-- [ ] Preserve fitted XD/QRF files; archive stale candidate caches, stamp inference version; recompute candidate predictions and original guards.
-- [ ] Replay reserved membership/anchor selection; raw and justified conditional Gaia scores, forward simulation.
-- [ ] Far full-PDF probability mass, explicit SPDist evidence, pair-conserving metal-poor strata and equal-definition application coverage.
-- [ ] Actual artifact validation, English figures, report erratum and safe sync.
-No refit/search/deployment or fresh-blind-evaluation claim.
+Review docs/pro_review_569d6ff.md; frozen amendment docs/v2_3_1_protocol.md.
+- [x] Correct shared-g sign; independent known-SED and non-diagonal band-space mixture tests,10focused tests total.
+- [x] Preserve fitted179EM XD/QRF files and all QRF outputs; archive1336old candidate/derived files; candidate version/hash invalidation; recompute original guards.
+- [x]61081256 COMPLETED0:0;8124production checks. Corrected candidate still fails full-Gaia/near-contamination guards; no adoption.
+- [x] Replay42076reserved IDs and distance qualification exactly; no unexplained clean/unknown use.3502upper20/94untruncated eligible Gaia. Supplemental raw/conditional scores at32quadrature; forward simulation uses equal-object tails.
+- [x]61081737 COMPLETED0:0;3316correction checks. Far full-PDF mass, SPDist evidence, original2055pairs and split-pair counts, dev-only/cal+dev coverage.
+- [x]16English plots/report completed and visually reviewed; final source/format validation and three-endpoint synchronization recorded in WORKLOG.
+No new blind claim, refit/search/deployment, timer or full-catalog run. Near
+PIT low tail persists after specified selection correction; independent source
+scales and representative target population remain unresolved. Preserve original
+cal rules separately from supplemental selection analysis.
 
 ## Previous v2.3 delivery — candidate inference superseded by sign correction
 

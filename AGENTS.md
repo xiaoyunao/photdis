@@ -9,12 +9,17 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
-- Active correctionv2.3.1: docs/pro_review_569d6ff.md and v2_3_1_protocol.md.
-  Shared-g inference cross covariance must be PLUS; original v2.3 candidate
-  predictions contain a confirmed sign error. Preserve fitted179EM/model files
-  and QRF; explicit inference-cache migration/recompute only. Independently test
-  band-space forward model; audit reserved selection, SPDist, far full PDF,
-  matching and coverage definitions. Already-viewed reserve is not fresh blind.
+- Completed correctionv2.3.1: docs/v2_3_1_result.md and v2_3_1_atlas.md.
+  Shared-g cross covariance corrected to PLUS; independent native-band tests.
+  Same179EM/model/QRF bytes retained;1336old candidate/derived files archived.
+  Jobs61081256/61081737 COMPLETED0:0;8124production+3316audit checks,
+  10focused tests,16English plates. Original cal still rejects fixed XD32;
+  no adoption. Exact42076reserved replay; selection correction only partly
+  explains near PIT low tails. SPDist399QRF near references provide limited
+  shared-teacher evidence. Full far PDF/class tagging,2055pair retention and
+  dev-only/cal+dev coverage now distinct. Already-viewed reserve is not blind.
+  Preserve corrected and original audit artifacts; no new models, deployment,
+  full-catalog runs, monitoring or subagents without new scope.
 
 - Previous delivered experiment2026-11-10 (candidate inference superseded): v2.3, docs/v2_3_result.md and
   docs/v2_3_atlas.md; full ledger docs/v2_3_requirements_result.md. Same266774

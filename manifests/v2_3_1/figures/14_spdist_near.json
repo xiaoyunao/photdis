@@ -1,0 +1,9 @@
+{
+  "name": "14_spdist_near",
+  "caption": "SPDist is shared-teacher evidence, not independent truth. Selected identities may differ between models; no known reliable class labels. Point-reference interval coverage alone is not intrinsic calibration.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "reserved_distance": "d0da8305d4243b248de6076fcc81629a2c2b01e10503eca073a428e026bb0588",
+    "reserved_risk": "db16bddef7d926c9e9d6520fcf50cd84bb6d24113579cc873eda67fc0b9af537"
+  }
+}
