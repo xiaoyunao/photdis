@@ -34,7 +34,7 @@ def corrections():
             ax.bar(np.arange(2)+(j-.5)*.25,[100*val(r,score+'_low'),100*val(r,score+'_high')],width=.25,color=color,label=score)
         ax.axhline(5,color=GRAY,ls='--');ax.set(title=model,xticks=[0,1],xticklabels=['PIT < 0.05','PIT > 0.95'],ylabel='Selected simulated fraction (%)');ax.legend()
     fig.suptitle('Forward-drawn observations after historical distance admission')
-    save(fig,'12_selection_simulation',['selection_forward_simulation','selection_simulation_checks'],'Independent simulation halves estimate unselected/selected CDFs. Reproduce selection effect under the model, not evidence of real population calibration. Fixed seed;2048 draws/object; real observed metrics separate.')
+    save(fig,'12_selection_simulation',['selection_forward_simulation','selection_simulation_checks'],'Independent simulation halves estimate unselected/selected CDFs. Plot weights eligible simulated objects equally; Monte Carlo object counts and draw-weighted alternatives are in CSV. Reproduce selection effect under the model, not evidence of real population calibration. Fixed seed;2048 draws/object; real observed metrics separate.')
     data=read('far_full_pdf_mass');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     labels=['SpecDis\n10–20','SpecDis\n20–50','SPDist\n10–20','SPDist\n20–50']
     for model,color,ls in [('control',BLUE,'-'),('candidate_old',GRAY,'--'),('candidate_corrected',ORANGE,'-')]:

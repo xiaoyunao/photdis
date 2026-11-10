@@ -2,7 +2,7 @@
 
 ## 2026-11-10 — selection replay completed; numerical orders aligned
 -61081616 COMPLETED0:0 in1:13;3316correction checks pass.42076reserved IDs exactly reproduced, with zero unexplained clean/unknown historical membership; forward-selected CDF checks pass.
-- Final review aligns supplemental raw/conditional PIT at the same32-point quadrature using F_raw=F_conditional*P(selection), instead of comparing original8-point raw PIT to32-point conditional PIT. Original frozen raw metrics remain untouched; log scores already use32points. Quantify original8→32CDF difference explicitly.
+- Final review aligns supplemental raw/conditional PIT at the same32-point quadrature using F_raw=F_conditional*P(selection), instead of comparing original8-point raw PIT to32-point conditional PIT. Original frozen raw metrics remain untouched; log scores already use32points. Quantify original8→32CDF difference explicitly. Simulation tail summaries now weight objects equally, matching observed-row denominators; retain accepted-draw weighting and finite-MC object counts separately.
 - Repeat only supplemental audit after this evaluation-consistency correction, preserving all model and prediction bytes. Existing completed tables remain in Git history; no refit or selection retuning.
 
 ## 2026-11-10 — inference verified; supplemental inventory schema repaired

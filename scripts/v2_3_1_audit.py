@@ -148,7 +148,7 @@ def selection_scores():
                     hist=np.histogram(x,np.linspace(0,1,11))[0];assert hist.sum()==u.sum()
                     hists.extend(dict(**key,score=kind,low=i/10,high=(i+1)/10,count=int(v)) for i,v in enumerate(hist))
                 ss=[r for r in simulations if u[r['row']]];total=sum(r['n'] for r in ss)
-                simrows.append(dict(**key,draws=total,**{k:sum(r[k] for r in ss)/total if total else None for k in ('raw_low','raw_high','conditional_low','conditional_high')}))
+                simrows.append(dict(**key,draws=total,simulation_objects=len(ss),**{k:float(np.mean([r[k]/r['n'] for r in ss])) if ss else None for k in ('raw_low','raw_high','conditional_low','conditional_high')},**{'draw_weighted_'+k:sum(r[k] for r in ss)/total if total else None for k in ('raw_low','raw_high','conditional_low','conditional_high')}))
         diff=output['simulation_probability'][supported]-output['selection_probability'][supported]
         pitdiff=output['simulation_observed_pit'][supported]-output['conditional_pit'][supported]
         simchecks.append(dict(model=name,n=int(supported.sum()),mean_probability_difference=float(np.mean(diff)),rms_probability_difference=float(np.sqrt(np.mean(diff**2))),median_abs_observed_pit_difference=float(np.nanmedian(abs(pitdiff))),draws_per_object=2048,max_original_order8_vs32_PIT_difference=float(np.max(abs(output['raw_pit32'][supported]-p['gaia_pit'][supported])))))
