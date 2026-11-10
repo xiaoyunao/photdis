@@ -67,7 +67,7 @@ def main():
                     caveat='Risk-flagged PSF controls, not confirmed nonstellar truth or representative contamination estimate'))
     csv_rows(TABLES/'psf_nonstellar_controls.csv',controls)
     save_json(DEST/'far_complete.json',dict(models=json.loads((DEST/'models_frozen.json').read_text())['models'],
-        oracle_rows=len(rows),class_conditioning='Diagnostic only; missing label is not a fourth physical class',
+        source_sha256=sha(ROOT/'scripts/v2_3_far.py'),oracle_rows=len(rows),class_conditioning='Diagnostic only; missing label is not a fourth physical class',
         independent_scale=False,source='Existing chosen/Gaia/SpecDis/SPDist only'))
     print('FAR COMPLETE',len(rows),flush=True)
 

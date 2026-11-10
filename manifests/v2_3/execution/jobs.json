@@ -5,5 +5,7 @@
   "model": "61078462",
   "model_status": "RUNNING on nid004472; same-PSF QRF fitted, XD training; reserved outcomes still closed at last inspection",
   "timers": false,
-  "owner_repair_status": "COMPLETED0:0"
+  "owner_repair_status": "COMPLETED0:0",
+  "diagnostics": "61078869",
+  "diagnostics_dependency": "afterok:61078462"
 }

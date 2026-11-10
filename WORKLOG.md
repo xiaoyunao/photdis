@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-10 — downstream validation wired to fixed run
+- Submitted61078869 with afterok:61078462; one dependent diagnostics/far/artifact job, no timer. Repoint dependency only after a confirmed timeout/recovery; no duplicate submission.
+- Added likelihood/covariance normalization checks and diagnostic source hashes. Production results and cal acceptance remain pending.
+
+
 ## 2026-11-10 — fixed model actually running
 -61078462 RUNNING on nid004472; same-PSF QRF fit completed and XD likelihood increased monotonically through first34iterations. Reserved predictions remain closed until convergence and model hashes.
 - Added historical-admission contrast, far/metal-poor/selected-quality figures, full source/format checks and a resume wrapper that preserves original model-freeze metadata.

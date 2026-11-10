@@ -230,7 +230,8 @@ def main():
     t=load(ROOT/'data/v2_1/development.npz');a,g,r=compare('development',t)
     compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);decision(a,g,r)
     save_json(DEST/'diagnostics_complete.json',dict(job=os.getenv('SLURM_JOB_ID'),models=json.loads((DEST/'models_frozen.json').read_text()),
-        tables={p.name:sha(p) for p in TABLES.glob('*.csv')},new_scale_validation=False))
+        tables={p.name:sha(p) for p in TABLES.glob('*.csv')},
+        source_sha256=sha(ROOT/'scripts/v2_3_diagnostics.py'),new_scale_validation=False))
     print('DIAGNOSTICS COMPLETE',flush=True)
 
 

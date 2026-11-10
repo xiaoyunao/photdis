@@ -3,6 +3,7 @@
 import csv
 import json
 import numpy as np
+import joblib
 from v2_3_prepare import ROOT,DEST,TABLES
 from v2_1_near import load,sha,save_json
 from photdis.stage1 import require_compute
@@ -18,6 +19,12 @@ def main():
     freeze=json.loads((DEST/'models_frozen.json').read_text());tr=load(DEST/'training.npz');old=load(ROOT/'data/v2_1/frozen_training_audit.npz')
     for path,digest in freeze['inputs'].items():check('frozen:'+path,sha(ROOT/path)==digest)
     for name,h in freeze['models'].items():check('model:'+name,sha(DEST/(name+'.joblib'))==h)
+    candidate=joblib.load(DEST/'candidate.joblib')
+    check('candidate_converged',candidate.converged)
+    check('covariances_positive',np.all(np.linalg.eigvalsh(candidate.covariances)>0))
+    check('mixture_normalized',np.isclose(candidate.weights.sum(),1) and np.all(candidate.weights>0))
+    check('auxiliary_class_normalized',np.allclose(candidate.class_frequency.sum(axis=1),1))
+    check('likelihood_nondecreasing',np.min(np.diff(candidate.history))>-1e-5)
     check('strict_training',np.all(tr['TYPE']=='PSF'))
     check('unlabeled_support_retained',np.sum(tr['class_label']<0)==43914)
     check('finite_reference_errors',np.all(np.isfinite(tr['sigma_mu'])&(tr['sigma_mu']>0)))
