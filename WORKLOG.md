@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-10 — allocated near-selection audit completed; joint production prepared
+
+- Slurm61067510 COMPLETED0:0 in25s. Unified cal/development PSF admission
+  97705→97650,55 nonPSF excluded,0 missing TYPE. Chosen test47740 PSF.
+- Historical pre-PSF check reproduces43525 near/4231 far,2773 far objects
+  selected by d50<10. Strict PSF strata are in data/v2_1/tables, not inferred
+  from these historical numbers. No display clipping used.
+- Read26000 exact existing application catalog rows: weighted DECam parent
+  8899334; predicted-near3550633.381 (39.8977%). This is13-field model-selected
+  count, not measured true near population or full DR11 coverage.
+- Added bounded full joint-PDF runner,128-row atomic checkpoints, frozen
+  fingerprints and per-chunk scalar/marginal reproduction checks; syntax passes.
+- Existing data cannot honestly be relabeled a new independent final set;
+  reservation manifest explicitly records acquisition and leakage requirements.
+- Next: run joint reconstruction/full probability audit, then fixed information
+  probe and six-group figures. Overall requested scope remains active.
+
 ## 2026-11-10 — corrected Pro review and near-probability audit implementation
 
 - Read full latest「评估发表进展」reply, archived verbatim in

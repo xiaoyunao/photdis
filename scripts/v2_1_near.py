@@ -144,7 +144,7 @@ def build():
                        weighted_psf_predictable=float(weight[predictable].sum()),
                        weighted_predicted_near=float(weight[near].sum()),
                        retention=float(weight[near].sum()/weight[predictable].sum()),
-                       scope='Existing fixed14-field stratified parent sample; PSF and finite deployed-route predictions only; not full DR11.',
+                       scope='Existing fixed26000-row stratified sample of13 DECam application fields; weighted parent8899334; northern no-model field excluded; not full DR11.',
                        catalogs=catalog_rows,
                        interpretation='Predicted count, not true near-star or class population count')
     atomic_npz(DEST/'application_psf.npz', **subset(app, ag))
