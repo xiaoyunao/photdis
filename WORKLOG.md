@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-10 — recovery and scientific interpretation
+- Confirmed61071166 FAILED1:0 at6m43s, no same-name active job; submitted recovery61071786 once. Far61071274 dependency updated to this recovery; downstream validator61071628 retained, not duplicated.
+- Added source-PDF format/provenance/link delivery validator and explicit zero-nonPSF/missing admission counts. Noise results show point vs marginalized classification diverge; conditional experiment is not new faint truth.
+
 ## 2026-11-10 — native-grid writer correction
 - Application61071166 reached all26000 expanded_A rows, then failed on first mixed-ABC chunk: frozen A/B/C histogram lengths differ (320vs310). No baseline_v1 checkpoint was committed by the failed block.
 - Corrected storage to zero-pad only, recording native grids and per-row valid bins; probabilities/quantiles still computed on original grids. Explicit one-version migration checks prior runner hash and every expanded_A checkpoint before reuse; no resampling or changed scientific model. Validator recomputes q with each native grid.
