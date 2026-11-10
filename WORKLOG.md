@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-10 — Pro review confirms shared-g inference sign bug
+- Read full latest review569d6ff, archived docs/pro_review_569d6ff.md. Reproduce forward model T=Mg+epsilon_g, not Mg−epsilon_g. Training covariance is unchanged; previous test incorrectly repeated the same sign.
+- Correct conditional covariance; independent band-space known-SED and general Gaussian-mixture tests now cover means, variances, weights, PDF and qnear. Added explicit inference migration, stale-cache version check and candidate-only rerun.
+- Freeze amendmentv2_3_1: no refit, preserve QRF/model bytes and old predictions; already-inspected reserve is not fresh blind data. Reassess raw/selection-aware Gaia, far full PDF, SPDist, paired matching and coverage denominators.
+- Validation:8focused math/scoring tests pass; Python parse checks pass. Actual correction predictions/diagnostics pending NERSC allocated run.
+
 ## 2026-11-10 — v2.3 completed; fixed candidate rejected
 - Final fine-grid61079683 COMPLETED0:0(4:58), diagnostics/far/validator61079765 COMPLETED0:0(4:32); empty squeue confirmed. Same266774original-owner PSF training identities/43914unlabeled; XD32 converged179iterations. Models remain byte-identical across numerical migrations.
 - Delivered scripts/v2_3_report.py, final compact manifests and9English PNG/PDF/CSV/JSON plates, docs/v2_3_result.md/atlas/requirements ledger; updated AGENTS/PLAN/README. Full PDFs, mixture parameters and coarse archives remain NERSC.

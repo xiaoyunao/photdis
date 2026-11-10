@@ -93,10 +93,11 @@ class ErrorDeconvolvedMixture:
         return self
 
     def conditional(self, mags, errors):
-        """Mixture of effective M=Mg-error_g given observed colors.
+        """Mixture of effective T=Mg+error_g given observed colors.
 
-        Cov(effective_M, observed_colors)=V_Mc-(sigma_g²,0). This minus
-        sign retains the SAME g perturbation in color and distance modulus.
+        With observed minus true errors, g_obs=Mg+mu+error_g, so
+        mu=g_obs-T. Cov(T, observed_colors)=V_Mc+(sigma_g²,0).
+        Tests verify this against the independent three-band forward model.
         """
         m=np.asarray(mags,float);e=np.asarray(errors,float)[:,:3]**2
         color=np.column_stack((m[:,0]-m[:,1],m[:,1]-m[:,2]))
@@ -107,7 +108,7 @@ class ErrorDeconvolvedMixture:
             if np.any(det<=0): raise ValueError('Invalid color covariance')
             delta=color-mu[:2]
             solved=np.column_stack((d*delta[:,0]-b*delta[:,1],a*delta[:,1]-b*delta[:,0]))/det[:,None]
-            cross=np.column_stack((v[2,0]-e[:,0],np.full(len(e),v[2,1])))
+            cross=np.column_stack((v[2,0]+e[:,0],np.full(len(e),v[2,1])))
             mean=mu[2]+np.sum(cross*solved,axis=1)
             variance=v[2,2]+e[:,0]-(d*cross[:,0]**2-2*b*cross[:,0]*cross[:,1]+a*cross[:,1]**2)/det
             if np.any(variance<=0): raise ValueError('Non-positive conditional variance')

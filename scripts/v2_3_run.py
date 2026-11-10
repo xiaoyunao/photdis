@@ -20,11 +20,16 @@ from photdis.probability_v2_1 import near_mass
 from photdis.selection_v2_2 import canonical_probability
 
 _T = _MODEL = _CONTROL = _NAME = _ROLE = _HASH = None
+INFERENCE_VERSION = "v2.3.1-forward-shared-g-plus"
+
+
+def candidate_inference_stamp():
+    return dict(version=INFERENCE_VERSION,density=sha(ROOT/"src/photdis/density_v2_3.py"),runner=sha(ROOT/"scripts/v2_3_run.py"))
 
 
 def freeze_inputs():
     paths=['data/v2_3/training.npz','data/v2_3/reserved_inputs.npz','docs/v2_3_protocol.md',
-           'src/photdis/density_v2_3.py','scripts/v2_3_run.py','src/photdis/baseline_v0.py',
+           'docs/v2_3_1_protocol.md','src/photdis/density_v2_3.py','scripts/v2_3_run.py','src/photdis/baseline_v0.py',
            'src/photdis/baseline_v1.py','src/photdis/baseline_v1_2.py','src/photdis/baseline_parallax.py']
     return {p:sha(ROOT/p) for p in paths}
 
@@ -67,6 +72,7 @@ def chunk(rows):
     path=DEST/'chunks'/f'{_ROLE}_{_NAME}_{rows[0]:07}.npz';marker=path.with_suffix('.json')
     if marker.exists():
         a=json.loads(marker.read_text());assert a['model']==_HASH and sha(path)==a['sha256']
+        if _NAME=='candidate':assert a.get('inference')==candidate_inference_stamp(), 'Stale candidate inference cache'
         assert np.array_equal(load(path)['identity'],_T['identity'][rows])
         return str(path)
     m,e,ids=arrays(_T,rows)
@@ -90,11 +96,11 @@ def chunk(rows):
     np.testing.assert_allclose(p['pdf'].sum(axis=1),1,atol=2e-6)
     atomic_npz(path,identity=ids,TYPE=_T['TYPE'][rows],rows=rows,mu=p['mu'],pdf=p['pdf'].astype('f8' if _NAME=='candidate' else 'f4'),
         qnear=q,weights=p['weights'],supported=supported,near_scope=scope,gaia_log=log,gaia_pit=pit,**extra)
-    save_json(marker,dict(sha256=sha(path),model=_HASH))
+    save_json(marker,dict(sha256=sha(path),model=_HASH,**({'inference':candidate_inference_stamp()} if _NAME=='candidate' else {})))
     return str(path)
 
 
-def evaluate(role):
+def evaluate(role, names=('control','candidate')):
     global _T,_MODEL,_CONTROL,_NAME,_ROLE,_HASH
     freeze=json.loads((DEST/'models_frozen.json').read_text())
     assert freeze['inputs']==freeze_inputs()
@@ -107,9 +113,9 @@ def evaluate(role):
     if role!='application': assert not np.intersect1d(ids,_T['identity']).size
     if role=='reserved':
         save_json(DEST/'reserved_opened.json',dict(models=freeze['models'],input_sha256=sha(input_path),
-            role='Same-sky new identities, predictions opened only after both models frozen',job=os.getenv('SLURM_JOB_ID')))
+            role='Previously inspected same-sky identities; corrected frozen experiment, not a new blind test',job=os.getenv('SLURM_JOB_ID')))
     _CONTROL=joblib.load(DEST/'control.joblib');(DEST/'chunks').mkdir(exist_ok=True)
-    for name in ('control','candidate'):
+    for name in names:
         _NAME=name;_HASH=freeze['models'][name];_MODEL=_CONTROL if name=='control' else joblib.load(DEST/'candidate.joblib')
         edges=_MODEL.edges if name=='control' else np.arange(-30,40.0001,.01)
         atomic_npz(DEST/(name+'_grid.npz'),edges=edges)
@@ -130,6 +136,6 @@ def evaluate(role):
 
 
 if __name__=='__main__':
-    require_compute();parser=argparse.ArgumentParser();parser.add_argument('task',choices=['fit','development','reserved','application']);a=parser.parse_args()
+    require_compute();parser=argparse.ArgumentParser();parser.add_argument('task',choices=['fit','development','reserved','application']);parser.add_argument('--candidate-only',action='store_true');a=parser.parse_args()
     if a.task=='fit':fit()
-    else:evaluate(a.task)
+    else:evaluate(a.task,('candidate',) if a.candidate_only else ('control','candidate'))

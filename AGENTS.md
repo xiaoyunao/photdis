@@ -9,7 +9,14 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
-- Latest completed experiment2026-11-10: v2.3, docs/v2_3_result.md and
+- Active correctionv2.3.1: docs/pro_review_569d6ff.md and v2_3_1_protocol.md.
+  Shared-g inference cross covariance must be PLUS; original v2.3 candidate
+  predictions contain a confirmed sign error. Preserve fitted179EM/model files
+  and QRF; explicit inference-cache migration/recompute only. Independently test
+  band-space forward model; audit reserved selection, SPDist, far full PDF,
+  matching and coverage definitions. Already-viewed reserve is not fresh blind.
+
+- Previous delivered experiment2026-11-10 (candidate inference superseded): v2.3, docs/v2_3_result.md and
   docs/v2_3_atlas.md; full ledger docs/v2_3_requirements_result.md. Same266774
   original-owner PSF distance labels incl43914unlabeled; one XD32 converged179
   iterations. Fixed cal rejects: full signed Gaia/near contamination worsen.

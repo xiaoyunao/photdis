@@ -1,6 +1,16 @@
 # PLAN
 
-## Completed objective: v2.3 full-support error-aware density experiment
+## Active objective: v2.3.1 inference correction and selection-aware reassessment
+
+Review docs/pro_review_569d6ff.md; amendment docs/v2_3_1_protocol.md.
+- [x] Confirm shared-g sign error and implement independent three-band forward tests.
+- [ ] Preserve fitted XD/QRF files; archive stale candidate caches, stamp inference version; recompute candidate predictions and original guards.
+- [ ] Replay reserved membership/anchor selection; raw and justified conditional Gaia scores, forward simulation.
+- [ ] Far full-PDF probability mass, explicit SPDist evidence, pair-conserving metal-poor strata and equal-definition application coverage.
+- [ ] Actual artifact validation, English figures, report erratum and safe sync.
+No refit/search/deployment or fresh-blind-evaluation claim.
+
+## Previous v2.3 delivery — candidate inference superseded by sign correction
 
 Full review: docs/pro_review_83e1fe8.md; immutable protocol: docs/v2_3_protocol.md.
 Results: docs/v2_3_result.md; nine-plate atlas: docs/v2_3_atlas.md;
