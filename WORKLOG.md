@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-10 — broad no-WISE diagnostics completed; final validation prepared
+
+-61069325 COMPLETED0:0 in34s;2000 real broad optical neighborhoods and
+2000 fixed-template target-noise diagnostics exported, including no-W1.
+ Template gain changes0.19199 to-0.05252 nats under weighted target noise;
+ no-W1 subset1351,18–20/no-W1 only23: conditional simulation, not validation.
+-61069324 observed RUNNING with128/263 control prediction chunks; no retry.
+- Added final candidate identity/PDF/hash/parameter/quadrature checks and
+ source-decomposition plus candidate figure panels. Parse/shell checks pass.
+
+## 2026-11-10 — single candidate and broad diagnostics submitted
+
+- Source87b6484 confirmed identical local/origin/NERSC. Empty queue checked.
+ Submitted unique61069324 class-partition candidate and61069325 broad-only
+ diagnostics. Responses received; no duplicate or automation.
+- Prior61068459/61068927/61068929 terminal statuses confirmed COMPLETED0:0.
+
 ## 2026-11-10 — full probability audit complete; one candidate prespecified
 
 -61068459/61068927/61068929 all COMPLETED0:0 (8m31s/1m28s/31s).

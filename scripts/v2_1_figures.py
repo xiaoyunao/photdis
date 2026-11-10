@@ -52,6 +52,13 @@ def save(fig, name, rows, sources, caption):
     metadata = dict(name=name, caption=caption, selection='Verified DR11 PSF; development test; no display clipping',
                     rows=len(rows), model='expanded_A',
                     inputs={p: hashlib.sha256((TABLES/(p+'.csv')).read_bytes()).hexdigest() for p in sources})
+    if name.startswith('03'):
+        metadata.update(model='Fixed same-label class probes and named frozen partition controls',
+                        selection='Matched or broad PSF development sets as labeled; template simulations use training identities, never independent validation')
+    if name == '03b_optical_candidate':
+        metadata['model'] = 'Broad grz probe; one same-identity regression versus class-partition distance candidate'
+    if name.startswith('06'):
+        metadata['model'] = 'expanded_A; isolated frozen weak-flux prototype and PSF nonstellar control samples in labeled panels'
     (dest/(name+'.json')).write_text(json.dumps(metadata, indent=2)+'\n')
 
 
@@ -185,7 +192,7 @@ def conditions():
          'Observed reference strata only. Corrected FeH uses author domain and positive formal errors; diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.')
 
 
-def pdf_examples():
+def pdf_examples(by_source=False):
     rows = read('pdf_examples')
     ids = list(dict.fromkeys(r['identity'] for r in rows))
     fig, axes = plt.subplots(2, 3, figsize=(16, 9), constrained_layout=True)
@@ -193,7 +200,8 @@ def pdf_examples():
         data = select(rows, identity=identity)
         x = np.array([(number(r, 'mu_low')+number(r, 'mu_high'))/2 for r in data])
         total = np.array([number(r, 'total_density') for r in data])
-        for key, label, color in zip(CLASSES, LABELS, COLORS):
+        channels = [('source_1', 'Gaia label contribution', BLUE), ('source_2', 'SpecDis label contribution', ORANGE)] if by_source else list(zip(CLASSES, LABELS, COLORS))
+        for key, label, color in channels:
             field = 'unlabeled' if key == 'unknown' else key
             ax.plot(x, [number(r, field) for r in data], color=color, label=label)
         ax.plot(x, total, color='black', lw=1.4, label='Total with noise')
@@ -208,8 +216,8 @@ def pdf_examples():
                title=data[0]['category'].replace('_', ' ')+f"\nq(near)={number(data[0], 'qnear'):.3f}")
         ax.set_title(ax.get_title(), fontsize=12)
     axes[0, 0].legend(fontsize=8)
-    fig.suptitle('Frozen QRF joint reference contributions · illustrative PSF development cases\nClass channels sum to the original PDF; unlabeled is not a physical population', fontsize=15)
-    save(fig, '04_joint_reference_pdf', rows, ['pdf_examples'],
+    fig.suptitle('Frozen QRF joint reference contributions · illustrative PSF development cases\n'+('Source channels sum to the original PDF; training labels, not independent truth' if by_source else 'Class channels sum to the original PDF; unlabeled is not a physical population'), fontsize=15)
+    save(fig, '04b_joint_source_pdf' if by_source else '04_joint_reference_pdf', rows, ['pdf_examples'],
          'Deterministic identity-hash examples within stated outcome strata. Full exported grid retained despite display limits. Solid class curves include shared-g Sobol128 noise. Reference contribution is not calibrated physical class-distance posterior.')
 
 
@@ -229,7 +237,7 @@ def near_probability():
         axes[1].plot([number(r, 'completeness') for r in data], [number(r, 'far_contamination') for r in data], 'o-', color=color, label=label)
         if name == 'all':
             for r in data:
-                axes[1].annotate('q>'+r['threshold'], (number(r, 'completeness'), number(r, 'far_contamination')), fontsize=9)
+                axes[1].annotate('q>'+r['threshold'], (number(r, 'completeness'), number(r, 'far_contamination')), xytext=(-8, 10), textcoords='offset points', ha='right', fontsize=9)
     axes[0].plot([0, 1], [0, 1], ls='--', color=GRAY)
     axes[0].set(xlim=(0, 1), ylim=(0, 1), xlabel='Mean predicted near probability', ylabel='Observed reference-near fraction', title='Reference-event reliability')
     axes[0].legend(fontsize=9)
@@ -306,6 +314,49 @@ def information():
          'Single fixed classifier framework. Information gain is reference/model conditional, not a physical upper bound. Common i+W1+W2 sample has narrower coverage than optical parent. Degraded training templates are not independent validation.')
 
 
+def optical_candidate():
+    neighbors = read('color_neighbors_broad')
+    degradation = read('template_degradation_broad')
+    candidate = select(read('partition_candidate'), split='development_test')
+    fig, axes = plt.subplots(2, 2, figsize=(13, 9), constrained_layout=True)
+    selected = degradation+candidate
+    for kind, label, color in [(0, 'Dwarf', BLUE), (1, 'Giant reference', ORANGE), (2, 'Other stellar', GREEN)]:
+        means = []
+        for name in ('all', 'no_W1', 'r18_20_no_W1'):
+            rr = select(neighbors, class_label=kind)
+            if name != 'all':
+                rr = [r for r in rr if r['W1'] == 'False']
+            if name == 'r18_20_no_W1':
+                rr = [r for r in rr if 18 <= number(r, 'r') < 20]
+            values = np.array([number(r, 'same_class_mass') for r in rr])
+            values = values[np.isfinite(values)]
+            means.append(values.mean() if len(values) else np.nan)
+            selected.append(dict(panel='broad_neighbors', group=name, class_label=kind, n=len(values), mean=means[-1]))
+        axes[0, 0].plot(np.arange(3), means, 'o-', label=label, color=color)
+    groups = ['all', 'no_W1', 'r18_20_no_W1']
+    for condition, label, color in [('original_templates', 'Original templates', GREEN), ('target_noise', 'Same templates + target noise', GRAY)]:
+        rr = [select(degradation, condition=condition, group=g)[0] for g in groups]
+        axes[0, 1].plot(np.arange(3), [number(r, 'log_gain_over_prior') for r in rr], 'o-', color=color, label=label)
+    for ax in axes[0]:
+        ax.set_xticks(np.arange(3), ['All grz', 'No W1', '18–20, no W1'])
+        ax.legend(fontsize=9)
+    axes[0, 0].set(ylabel='Local same-class reference mass', ylim=(0, 1), title='Broad optical covariance neighborhoods')
+    axes[0, 1].set(ylabel='Template-conditional log score gain', title='Actual target noise, optical-only routes')
+    for model, label, color in [('control', 'Regression partitions', BLUE), ('candidate', 'Class partitions', ORANGE)]:
+        rr = [select(candidate, model=model, group=g)[0] for g in ['all', 'dwarf', 'evolved', 'other', 'unknown']]
+        axes[1, 0].plot(np.arange(5), [100*number(r, 'tail_1') for r in rr], 'o-', color=color, label=label)
+        axes[1, 1].plot(np.arange(5), [number(r, 'gaia_log') for r in rr], 'o-', color=color, label=label)
+    for ax in axes[1]:
+        ax.set_xticks(np.arange(5), ['All', 'Dwarf', 'Giant ref.', 'Other', 'Unlabeled'])
+        ax.legend(fontsize=9)
+    axes[1, 0].set(ylabel='Severe distance error (%)', title='Single candidate: same training and test IDs')
+    axes[1, 1].set(ylabel='Observed-parallax log score', title='Full histogram prediction; higher is better')
+    fig.suptitle('Broad optical evidence and one prespecified W1 partition candidate\nDevelopment evidence; no independent final-validation claim', fontsize=15)
+    save(fig, '03b_optical_candidate', selected,
+         ['color_neighbors_broad', 'template_degradation_broad', 'partition_candidate'],
+         'Top: broad optical pool and conditional degradation of training templates. Bottom: single W1 candidate and fair refit control, identical68004 PSF members, fixed complexity, natural histogram mass. Cal guards decide; development scores are reported without tuning.')
+
+
 if __name__ == '__main__':
     plt.rcParams.update(STYLE)
     distance()
@@ -315,5 +366,8 @@ if __name__ == '__main__':
         information()
     if (TABLES/'pdf_examples.csv').exists():
         pdf_examples()
+        pdf_examples(by_source=True)
     if (TABLES/'reliability.csv').exists():
         near_probability()
+    if (TABLES/'partition_candidate.csv').exists():
+        optical_candidate()
