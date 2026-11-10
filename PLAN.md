@@ -1,30 +1,33 @@
 # PLAN
 
-## Active objective: v2.1 near-selection and joint-reference probability audit
+## Completed objective: v2.1 near-selection and joint-reference probability audit
 
-User corrected review to「评估发表进展」on2026-11-10. Full source:
-docs/pro_review_602727c_near_probability.md; requirement matrix:
-docs/v2_1_protocol.md. Follow A→B→C→conditional D; retain full distances.
+Corrected Pro review from「评估发表进展」on2026-11-10 archived in
+pro_review_602727c_near_probability.md. Result: docs/v2_1_result.md;
+six-group/eight-plate atlas: docs/v2_1_atlas.md; full acceptance ledger:
+docs/v2_1_requirements_result.md. Frozen protocol remains unchanged.
 
-- [x] Recover three-endpoint602727c; read complete corrected latest review.
-- [x] A: strict PSF sample, near/far migration, boundary errors, weighted application.
-- [x] B: frozen leaf joint reference contributions and full Sobol128 PDF checks.
-- [x] C: bounded color/probability experiment, matched controls, nonstellar/sky audit.
-- [ ] D: evidence-based candidate/science-validation decision and six-group delivery.
+- [x] A: strict PSF independent qualifications, full near/far/boundary statistics,
+  weighted actual baseline_v1 application sample (13 DECam fields).
+- [x] B: exact frozen leaf class/source contributions,97650 full PDFs/763chunks,
+  shared-g Sobol128, original marginal/quantile and hash reproduction.
+- [x] C: matched+broad classification probes, covariance neighborhoods, target-noise,
+  weak signed flux, near reliability/full probability, FeH/sky/nonstellar controls.
+- [x] D: one prespecified same-PSF-identity W1 class-partition candidate, cal rejects;
+  no second candidate or deployment. Report full development harms as well as gains.
+- [x]6511 compute artifact checks,12926 compact/figure/link checks,7 focused tests;
+  all eight PNGs visually reviewed and representative PDF rendered/inspected.
 
-A/B/C production complete. Single D candidate61069324 COMPLETED0:0;
-cal rejects all/evolved-tail guards. No second candidate or adoption.
-Final validation61069409 completed6509 actual checks. Bounded worst-log-score
-quadrature extension remains, plus final figure format/visual/link QA and delivery.
-All candidate/control predictions use same68004 PSF training and67207 evaluation
-identities. Six figure groups/eight plates; detailed result and requirement ledger
-written. Independent final validation remains unavailable (5 provisional IDs,
-system-membership and new-reference audit pending), explicitly not claimed.
+Final candidate61069324 COMPLETED0:0; final extreme-tail quadrature/artifact
+validator61069709 COMPLETED0:0. No active jobs or timers. Final milestone source
+sync verifies local/origin/NERSC equality. Keep all large caches on NERSC.
 
-Every requirement retains its own acceptance evidence; partial diagnostics do not
-complete the scope. Existing test is development. No display clipping in scores.
-New final validation must be demonstrably unused; quarantined rows are not a
-shortcut. No agents, timers, full-catalog rerun or deployment changes.
+Outstanding SCIENTIFIC evidence: independent final validation is NOT achieved.
+Reservation leaves5 unused IDs/2tiles, pending system/cluster membership and
+independent-reference audit. Faint/no-WISE evolved, nearby metal-poor dwarfs,
+far giants and representative PSF nonstellar/application contamination require
+new evidence. Current development test never becomes a final test by relabeling.
+Next: user/Pro review of these results; no automatic further modeling/application.
 
 ## Completed objective: replace five distance comparison plates
 

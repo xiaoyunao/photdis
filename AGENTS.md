@@ -9,6 +9,21 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Latest completed audit2026-11-10: docs/v2_1_result.md, docs/v2_1_atlas.md,
+  docs/v2_1_requirements_result.md. Corrected review: pro_review_602727c_near_probability.md.
+  Frozen joint97650 PSF eval rows/763 chunks; six groups/eight English plates.
+  One W1 class-partition candidate68004 PSF train/67207 eval rejected by cal
+  all/evolved tail guards. Jobs61069324/61069709 COMPLETED0:0;6511 compute,
+  12926 compact/figure checks and7 focused tests pass. All eight PNGs reviewed.
+  q>0.95 reference-near completeness78.565%, far contamination0.890%; cal-picked
+  q>0.5 fails dev5% goal. Never equate reference contamination to application.
+  Frozen training23nonPSF/50206unverified retained only for exact audit; all new
+  probes strictly PSF. Only5 provisional unused IDs/2tiles; system-member and
+  independent-reference evidence pending, no final-validation claim. Candidate
+  Gaia mean sensitive to extreme unlabeled rows; bounded16/32/64-node audit
+  recorded. Preserve v1/v2.0 deployment/products. No additional candidate,
+  full-catalog run, monitoring or subagents without new user scope.
+
 - Distance plates revised2026-11-07: five original files replaced with main,
   attached narrow residual(-100..100%) and central histogram. Per-population,
   per-reference x/y linear-distance3sigma masks,shared within each comparison.

@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-10 — v2.1 delivered; single candidate rejected, scientific gaps explicit
+
+- Final6511-check validator61069709 COMPLETED0:0 in30s; queue empty.
+ Worst32 negative Gaia scores explicitly checked16/32/64 nodes:16vs64 max
+0.0368/0.1494 nats,32vs64<5.41e-6. Extreme logs~−1.4e5 remain real PDF
+ failures relative to observations; mean sensitive, frozen16-node scores retained.
+- Added docs/v2_1_result.md, atlas and per-requirement evidence ledger; README,
+ AGENTS and PLAN updated. Candidate cal rejects; independent final holdout not
+ established. No extra candidate, catalog rerun, replacement or automation.
+- Six groups/eight PNG300dpi/PDF/CSV/JSON sets finalized. All eight PNGs and
+ representative rendered PDF visually reviewed. Long labels/overlapping ticks
+ polished; metadata distinguishes model and template simulation scopes.
+-7 focused tests passed;12926 compact row-conservation/format/source/link
+ checks pass via scripts/v2_1_delivery_validate.py. No frozen protocol changes.
+- Final git milestone and safe three-endpoint sync follow; next step user review,
+ with specified new-reference/system-membership gaps rather than more tuning.
+
 ## 2026-11-10 — single candidate rejected; principal artifact checks passed
 
 -61069324 COMPLETED0:0 in4m46s,67207 same evaluation rows/263chunks per arm.

@@ -1,5 +1,12 @@
 # photdis
 
+Latest completed audit: **Photdis v2.1 near-selection and joint-reference probability**.
+[Scientific results](docs/v2_1_result.md) · [Six-group/eight-plate atlas](docs/v2_1_atlas.md) ·
+[Review requirement ledger](docs/v2_1_requirements_result.md) · [Delivery checks](manifests/v2_1/delivery.json).
+Full frozen PDFs and one same-PSF-identity partition candidate were evaluated.
+The candidate fails cal guards; deployed baseline_v1 remains unchanged.
+Independent final validation is not established; evidence gaps are explicit.
+
 Current stage report: **Photdis v2.0**. [Scope](docs/v2_0_scope.md) · [Methods](docs/v2_0_methods.md) · [Status](docs/v2_0_status.md) · [55-figure atlas](docs/v2_0_figure_atlas.md) · [Requirement checklist](docs/v2_0_requirements.md). Original model identifiers and application baseline_v1 are retained in the report.
 
 Latest revision: [1050-figure complete atlas](docs/v2_0_revision_atlas.md) · [Gaia anomaly audit and results](docs/v2_0_revision_result.md). All figure text is English; PNG300dpi, PDF, CSV and metadata are linked per figure.

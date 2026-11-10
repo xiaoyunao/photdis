@@ -203,7 +203,7 @@ def pdf_examples(by_source=False):
         channels = [('source_1', 'Gaia label contribution', BLUE), ('source_2', 'SpecDis label contribution', ORANGE)] if by_source else list(zip(CLASSES, LABELS, COLORS))
         for key, label, color in channels:
             field = 'unlabeled' if key == 'unknown' else key
-            ax.plot(x, [number(r, field) for r in data], color=color, lw=3 if by_source else 1.2, label=label)
+            ax.plot(x, [number(r, field) for r in data], color=color, lw=3 if by_source else plt.rcParams['lines.linewidth'], label=label)
         ax.plot(x, total, color='black', lw=.8 if by_source else 1.4, label='Total with noise')
         ax.plot(x, [number(r, 'nominal_density') for r in data], color='black', lw=1, ls='--', label='Total, nominal colors')
         ref = number(data[0], 'reference_mu')
