@@ -1,5 +1,21 @@
 # PLAN
 
+## Active objective: v2.2 selected-distance and real-application audit
+
+Latest review archived in docs/pro_review_fbb8ea0.md; prespecified scope
+docs/v2_2_protocol.md. User authorizes continuation2026-11-10.
+
+- [ ] Repair probability endpoints after inspecting real caches; conserve every reliability denominator.
+- [ ] Same frozen expanded_A and actual baseline_v1 routes on26000 weighted application objects.
+- [ ] Selected-distance/FeH/quality risk, population shift and separate unused-identity/new-sky inventory.
+- [ ] Held-out template, matched-target-error, four shared-replicate full-PDF transfer experiment.
+- [ ] Far branch/selection/unlabeled support diagnostics; evidence-based decision, no automatic new candidate.
+- [ ] English figures, full requirement evidence/limits, validation and safe three-endpoint delivery.
+
+Frozen v2.1 source/models/cache unchanged. Six new endpoint tests pass.
+NERSC authentication valid; initial queue empty. Full work requires Slurm.
+No agents, timer, full-catalog rerun or deployment.
+
 ## Completed objective: v2.1 near-selection and joint-reference probability audit
 
 Corrected Pro review from「评估发表进展」on2026-11-10 archived in

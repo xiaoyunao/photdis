@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-10 — new Pro review recovered; v2.2 scope and endpoint repair prepared
+
+- Read complete latest11898-character review of fbb8ea0 from corrected chat;
+ archived docs/pro_review_fbb8ea0.md. All three git endpoints clean/equal.
+- Scope: endpoint leak repair, same-model application PDF, selected-distance
+ quality, new-identity inventory, held-out noise transfer and far branch audit.
+- Added selection_v2_2 endpoint/wilson/evidence-grid functions and6 targeted
+ tests, all pass; v2_2_audit runner parses and shell validates. No frozen v2.1
+ files altered. Real raw-q bounds must be verified before accepting correction.
+- NERSC auth valid and queue empty. First allocated cache audit not yet submitted.
+
 ## 2026-11-10 — v2.1 delivered; single candidate rejected, scientific gaps explicit
 
 - Final6511-check validator61069709 COMPLETED0:0 in30s; queue empty.
