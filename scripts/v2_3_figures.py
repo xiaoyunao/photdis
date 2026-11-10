@@ -120,7 +120,7 @@ def posterior_examples():
         ax.axvspan(ref-sig,ref+sig,color=GRAY,alpha=.2);ax.axvline(ref,color=GRAY,ls='--')
         for model,color in [('control',BLUE),('candidate',ORANGE)]:
             rr=sorted(sel(base,model=model),key=lambda x:val(x,'mu'));x=np.array([val(r,'mu') for r in rr]);y=np.array([val(r,'density') for r in rr]);visible=(x>=lo)&(x<=hi)
-            mass=float(y[visible].sum()*.1)
+            mass=float(np.sum(y[visible]*np.array([val(r,'bin_width') for r in rr])[visible]))
             ax.plot(x,y,color=color,label=f'{model}: q={val(rr[0],"qnear"):.3f}; shown={mass:.3f}')
         ax.set(xlabel='Distance modulus (mag)',ylabel='Probability density',title=group.replace('_',' '),xlim=(lo,hi));ax.legend(fontsize=8);ax.title.set_fontsize(14)
     fig.suptitle('Fixed-identity posterior examples · no selection by model success')

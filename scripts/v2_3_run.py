@@ -74,7 +74,7 @@ def chunk(rows):
         p=integrate(_MODEL,m,e,ids,draws=128)['wide'];edges=_MODEL.edges
         p['qnear']=near_mass(p['pdf'],edges,m[:,0]);extra={}
     else:
-        edges=np.arange(-30,40.0001,.1);p=_MODEL.predict(m,e,edges)
+        edges=np.arange(-30,40.0001,.01);p=_MODEL.predict(m,e,edges)
         p['mu']=distance_quantiles(m[:,0],quantiles_interpolated(p['pdf'],edges))[0]
         extra={k:p[k] for k in ('mixture_weight','mixture_mean','mixture_sigma','escaped_mass')}
     q=canonical_probability(p['qnear'])
@@ -111,7 +111,7 @@ def evaluate(role):
     _CONTROL=joblib.load(DEST/'control.joblib');(DEST/'chunks').mkdir(exist_ok=True)
     for name in ('control','candidate'):
         _NAME=name;_HASH=freeze['models'][name];_MODEL=_CONTROL if name=='control' else joblib.load(DEST/'candidate.joblib')
-        edges=_MODEL.edges if name=='control' else np.arange(-30,40.0001,.1)
+        edges=_MODEL.edges if name=='control' else np.arange(-30,40.0001,.01)
         atomic_npz(DEST/(name+'_grid.npz'),edges=edges)
         tasks=[np.arange(i,min(i+256,len(_T['identity']))) for i in range(0,len(_T['identity']),256)]
         with concurrent.futures.ProcessPoolExecutor(max_workers=16,mp_context=mp.get_context('fork')) as pool:

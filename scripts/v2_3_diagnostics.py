@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Frozen-model comparisons, prospective scope and target-evidence limits."""
 import json
+import concurrent.futures
+import multiprocessing as mp
 import os
 import numpy as np
 from scipy.special import logsumexp, log_ndtr
@@ -58,21 +60,31 @@ def teacher_log(pdf,edges,target,sigma):
     return logsumexp(lp+lm,axis=1)
 
 
+_SCORE_T = _SCORE_EDGES = None
+
+
+def score_chunk(path):
+    t=_SCORE_T;edges=_SCORE_EDGES;p=load(path);r=p['rows'];out={}
+    assert sha(path)==json.loads(path.with_suffix('.json').read_text())['sha256']
+    for kind in ('chosen','Gaia','specdis','spdist'):
+        ref,sigma=references(subset(t,r),kind);use=np.isfinite(ref);value=np.full(len(r),np.nan)
+        value[use]=teacher_log(p['pdf'][use],edges,t['g0'][r][use]-ref[use],sigma[use]);out[kind]=value
+    ga=t['parallax_eligible'][r];check=None
+    if ga.any():
+        log32=full_parallax_log_density(p['pdf'][ga],edges,t['g0'][r][ga],t['p_corr'][r][ga],t['gaia_parallax_error'][r][ga],order=32)
+        check=dict(first_row=int(r[0]),n=int(ga.sum()),max_log16_32=float(np.max(abs(log32-p['gaia_log'][ga]))),mean_log16_32=float(np.mean(log32-p['gaia_log'][ga])))
+    return r,out,check
+
+
 def cached_scores(role,name,t):
-    edges=load(DEST/(name+'_grid.npz'))['edges'];out={k:np.full(len(t['identity']),np.nan) for k in ['chosen','Gaia','specdis','spdist']}
-    checks=[]
-    for path in sorted((DEST/'chunks').glob(f'{role}_{name}_*.npz')):
-        p=load(path);r=p['rows']
-        assert sha(path)==json.loads(path.with_suffix('.json').read_text())['sha256']
-        for kind in out:
-            ref,sigma=references(subset(t,r),kind);use=np.isfinite(ref)
-            out[kind][r[use]]=teacher_log(p['pdf'][use],edges,t['g0'][r][use]-ref[use],sigma[use])
-        ga=t['parallax_eligible'][r]
-        if ga.any():
-            #16/32-node comparison on ALL signed-parallax rows; no extreme-tail deletion.
-            log32=full_parallax_log_density(p['pdf'][ga],edges,t['g0'][r][ga],t['p_corr'][r][ga],t['gaia_parallax_error'][r][ga],order=32)
-            checks.append(dict(role=role,model=name,first_row=int(r[0]),n=int(ga.sum()),
-                max_log16_32=float(np.max(abs(log32-p['gaia_log'][ga]))),mean_log16_32=float(np.mean(log32-p['gaia_log'][ga]))))
+    global _SCORE_T,_SCORE_EDGES
+    _SCORE_T=t;_SCORE_EDGES=load(DEST/(name+'_grid.npz'))['edges']
+    out={k:np.full(len(t['identity']),np.nan) for k in ('chosen','Gaia','specdis','spdist')};checks=[]
+    paths=sorted((DEST/'chunks').glob(f'{role}_{name}_*.npz'))
+    with concurrent.futures.ProcessPoolExecutor(max_workers=16,mp_context=mp.get_context('fork')) as pool:
+        for r,part,check in pool.map(score_chunk,paths):
+            for k in out:out[k][r]=part[k]
+            if check is not None:checks.append(dict(role=role,model=name,**check))
     atomic_npz(DEST/f'{role}_{name}_teacher.npz',identity=t['identity'],TYPE=t['TYPE'],**out)
     return out,checks
 
@@ -225,8 +237,8 @@ def posterior_examples(t):
             start=row//256*256;p=load(DEST/'chunks'/f'development_{name}_{start:07}.npz');j=row-start
             assert p['identity'][j]==t['identity'][row] and p['TYPE'][j]=='PSF'
             edges=load(DEST/(name+'_grid.npz'))['edges'];mu=t['g0'][row]-(edges[:-1]+edges[1:])/2
-            for x,prob in zip(mu,p['pdf'][j]):
-                records.append(dict(group=group,identity=int(t['identity'][row]),TYPE='PSF',model=name,mu=float(x),density=float(prob/.1),
+            for x,prob,width in zip(mu,p['pdf'][j],np.diff(edges)):
+                records.append(dict(group=group,identity=int(t['identity'][row]),TYPE='PSF',model=name,mu=float(x),density=float(prob/width),bin_width=float(width),
                     ref_mu=float(t['ref_chosen'][row]),ref_sigma=float(t['sigma_mu'][row]),qnear=float(p['qnear'][j]),
                     mu025=float(p['mu'][j,0]),mu975=float(p['mu'][j,4]),selection='Smallest identity in reference-defined development stratum, independent of model outcomes'))
     csv_rows(TABLES/'posterior_examples.csv',records)

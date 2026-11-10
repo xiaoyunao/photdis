@@ -34,7 +34,7 @@ def main():
         values['control']['mu'][rr[good]]=distance_quantiles(m[good,0],quantiles_interpolated(p[good]/mass[good,None],control.edges))[0]
         w,mean,sigma=candidate.conditional(m,e);w*=candidate.class_frequency[None,:,1];mass=w.sum(axis=1)
         values['candidate']['mass'][rr]=mass;good=mass>0;w=w[good]/mass[good,None]
-        edges=np.arange(-30,40.0001,.1);pdf=np.zeros((good.sum(),len(edges)-1))
+        edges=np.arange(-30,40.0001,.01);pdf=np.zeros((good.sum(),len(edges)-1))
         for k in range(candidate.components):
             z=(edges[None,:]-mean[good,k,None])/sigma[good,k,None]
             pdf+=w[:,k,None]*normal_interval(z[:,:-1],z[:,1:])

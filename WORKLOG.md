@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — measured fine-grid recovery
+- Precision audit61079479 finished:0.1mag max q error0.041248;0.01mag maxima0.000482development/0.000327reserved/0.000219application. Smallest conditional component sigma0.05635mag.
+- Fix candidate numerical grid to0.01mag and require analytic-q/histogram agreement<1e-3; fitted parameters, training, class structure and prospective selection unchanged. Archive coarse outputs/derived tables with hashes; do not delete or mix them.
+- Parallelized independent PDF-score chunks across16workers to keep finer-grid verification practical; teacher-score formula unchanged. Posterior-example densities now use actual bin widths.
+- Scientific result delivery remains blocked until fine-grid actual-artifact validation passes. No score-based retuning.
+
+
 ## 2026-11-10 — production numerical validation blocks delivery
 - Recovery61079083 COMPLETED0:0 in1m48s; both fitted models unchanged, all development/reserved/application predictions complete after stable-tail repair.
 -61078869 finished diagnostic/far tables (1794far oracle rows), then validator failed candidate analytic-q versus0.1mag histogram mass on first development chunk. Do not relax check or publish candidate result as verified.

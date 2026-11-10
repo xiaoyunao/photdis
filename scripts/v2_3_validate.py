@@ -47,7 +47,7 @@ def main():
                 check(key+':PSF',np.all(q['TYPE']=='PSF'))
                 check(key+':pdf',np.isfinite(q['pdf']).all() and np.all(q['pdf']>=0) and np.allclose(q['pdf'].sum(axis=1),1,atol=2e-6))
                 check(key+':ids',np.array_equal(q['identity'],t['identity'][r]))
-                check(key+':near_mass',np.max(abs(near_mass(q['pdf'],grid,t['g0'][r])-q['qnear']))<(1e-2 if name=='candidate' else 2e-6))
+                check(key+':near_mass',np.max(abs(near_mass(q['pdf'],grid,t['g0'][r])-q['qnear']))<(1e-3 if name=='candidate' else 2e-6))
                 if name=='candidate':check(key+':escaped_mass',np.max(q['escaped_mass'])<=1e-6)
                 count+=len(r)
             check(role+name+':complete_rows',count==len(t['identity']))
