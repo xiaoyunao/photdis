@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — fixed error-aware density implementation
+- Added density_v2_3: one32component heteroscedastic XD mixture with shared g/r covariance, reference-error deconvolution, analytic noisy-color/effective-M conditioning and auxiliary missing-class support. Reference method Bovy/Hogg/Roweis2011.
+- Added single-fit model hash firewall, same-identity PSF QRF control, checkpointed full PDFs, reserved evaluation after freeze, and separate weighted application inference. No new catalog.
+- Four actual mathematical tests pass (covariance, posterior/inverse, full PDF and synthetic deconvolution); Python parse checks pass. Cache preparation61078191 submitted; queue/log verification pending.
+- No reserved outcomes read; fit not yet submitted. Next: inspect preparation and launch fixed run.
+
+
 ## 2026-11-10 — v2.3 review and prospective scope
 - Read complete latest Pro review of83e1fe8, archived verbatim; user preview was older. Existing v2.2 remains frozen.
 - Added outcome-blind reference-qualification and cached noise-baseline correction runner; protocol fixes one XD32 candidate, same-PSF QRF control, near scope and reserved-role firewall.
