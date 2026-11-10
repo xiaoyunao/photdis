@@ -196,6 +196,20 @@ def application():
     csv_rows(TABLES/'application_scope.csv',records);csv_rows(TABLES/'application_coverage.csv',cells)
 
 
+def admission_effect(t):
+    control=load(DEST/'development_control.npz');oldq=load(ROOT/'data/v2_2/probability_canonical.npz')['qnear'];rows=[]
+    for split,role in [(1,'cal'),(2,'development_test')]:
+        for group,mask in masks(t).items():
+            if group not in ('all','dwarf','evolved','unknown','metal_poor_dwarf','low_luminosity'):continue
+            for name,mu,q,log in [('historical_expanded_A',t['mu'],oldq,t['full_log_density']),('same_PSF_QRF',control['mu'],control['qnear'],control['gaia_log'])]:
+                base=(t['split']==split)&mask;use=base&np.isfinite(t['ref_chosen']);ga=base&t['parallax_eligible']
+                rows.append(dict(role=role,group=group,model=name,**metrics(mu[use],t['ref_chosen'][use]),
+                    interval68=float(interval_score(mu[use],t['ref_chosen'][use]).mean()) if use.any() else None,
+                    full_gaia_log=float(log[ga].mean()) if ga.any() else None,
+                    q95_selected=int((use&(q>.95)).sum())))
+    csv_rows(TABLES/'admission_effect.csv',rows)
+
+
 def decision(distance,gaia,risk):
     def d(model,group):return next(x for x in distance if x['role']=='cal' and x['model']==model and x['group']==group and x['selection']=='all' and x['reference']=='chosen' and x['low_kpc']==0 and np.isinf(x['high_kpc']))
     def g(model):return next(x for x in gaia if x['role']=='cal' and x['model']==model and x['group']=='all' and x['selection']=='all')
@@ -214,7 +228,7 @@ def decision(distance,gaia,risk):
 def main():
     require_compute();TABLES.mkdir(exist_ok=True)
     t=load(ROOT/'data/v2_1/development.npz');a,g,r=compare('development',t)
-    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();decision(a,g,r)
+    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);decision(a,g,r)
     save_json(DEST/'diagnostics_complete.json',dict(job=os.getenv('SLURM_JOB_ID'),models=json.loads((DEST/'models_frozen.json').read_text()),
         tables={p.name:sha(p) for p in TABLES.glob('*.csv')},new_scale_validation=False))
     print('DIAGNOSTICS COMPLETE',flush=True)

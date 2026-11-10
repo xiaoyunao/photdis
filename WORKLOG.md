@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-10 — fixed model actually running
+-61078462 RUNNING on nid004472; same-PSF QRF fit completed and XD likelihood increased monotonically through first34iterations. Reserved predictions remain closed until convergence and model hashes.
+- Added historical-admission contrast, far/metal-poor/selected-quality figures, full source/format checks and a resume wrapper that preserves original model-freeze metadata.
+- Cache delivery:2English PNG/PDF plates visually checked;8actual format/source checks pass. Six math/scoring tests pass. Model/evaluation validation not yet complete.
+
+
 ## 2026-11-10 — original-owner preparation verified
 - Preparation61078415 COMPLETED0:0. Exact owner/photometry equality checks pass; all266774verified PSF training objects now have valid original-source errors, including43914unlabeled. Earlier266772count superseded.
 - Cancelled61078245 whilePENDING (confirmedCANCELLED, no fit files); next single debug run uses fixed model protocol and hashed checkpoints. No reserved outcomes opened.

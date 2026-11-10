@@ -65,3 +65,40 @@ if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--models',action='store_true');a=p.parse_args();plt.rcParams.update(STYLE)
     corrections()
     if a.models:model_results()
+
+
+def additional_results():
+    data=read('far_conditional');fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
+    for model,color in [('control',BLUE),('candidate',ORANGE)]:
+        for reference,ls in [('specdis','-'),('spdist','--')]:
+            rr=[sel(data,model=model,role='development_test',reference=reference,low_kpc=lo)[0] for lo in (10,20)]
+            for ax,key,label in zip(axes,['median_relative','tail_1','coverage68'],['Conditional distance residual (%)','Conditional severe fraction (%)','Conditional 68% coverage (%)']):
+                ax.plot([0,1],[100*val(x,key) for x in rr],marker='o',ls=ls,color=color,label=model+' / '+reference)
+                ax.set(xticks=[0,1],xticklabels=['10–20','20–50'],xlabel='Reference distance (kpc)',ylabel=label)
+    axes[0].axhline(0,color=GRAY,ls=':');axes[2].axhline(68,color=GRAY,ls=':');axes[1].legend(fontsize=9)
+    fig.suptitle('Far branches: reference class is an oracle diagnostic only')
+    save(fig,'06_far_branches',['far_conditional','far_reference_disagreement'],'Known evolved class only used after prediction. Source differences and shapes are distinct from branch weights; no independent distance-scale evidence.')
+    data=read('metal_poor_matching');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
+    for model,color in [('control',BLUE),('candidate',ORANGE)]:
+        for group,ls in [('metal_poor','-'),('matched_ordinary','--')]:
+            rr=[sel(data,model=model,group=group,selected=False,low_kpc=lo,high_kpc=hi)[0] for lo,hi in [(0,2),(2,5),(5,10)]]
+            for ax,key,label in zip(axes,['median_relative','coverage68'],['Median distance residual (%)','68% interval coverage (%)']):
+                ax.plot([0,1,2],[100*val(x,key) for x in rr],'o',ls=ls,color=color,label=model+' / '+group.replace('_',' '))
+                ax.set(xticks=[0,1,2],xticklabels=['0–2','2–5','5–10'],xlabel='Reference distance (kpc)',ylabel=label)
+    axes[0].axhline(0,color=GRAY,ls=':');axes[1].axhline(68,color=GRAY,ls=':');axes[1].legend(fontsize=8)
+    fig.suptitle('Metal-poor dwarfs: matched colors, temperature, source and errors')
+    save(fig,'07_metal_poor',['metal_poor_matching'],'Same poor-metal identities across models; matched controls with replacement, matching calipers fixed before outcomes. Descriptive evidence, not causal identification. No true metallicity application cut.')
+    data=read('development_distance');fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
+    groups=['all','dwarf','evolved','unknown','metal_poor_dwarf'];labels=['All','Dwarf','Giant ref.','Unlabeled','Metal-poor\ndwarf']
+    for model,color in [('control',BLUE),('candidate',ORANGE)]:
+        rr=[sel(data,role='development_test',model=model,group=g,selection='near_scope',reference='chosen',low_kpc=0,high_kpc='inf')[0] for g in groups]
+        axes[0].plot(np.arange(5),[100*val(r,'tail_1') for r in rr],'o-',color=color,label=model)
+        axes[1].plot(np.arange(5),[100*val(r,'median_relative') for r in rr],'o-',color=color)
+        axes[2].plot(np.arange(5),[100*val(r,'n')/val(r,'eligible') for r in rr],'o-',color=color)
+    for ax,label in zip(axes,['Severe error fraction (%)','Median distance residual (%)','Retained reference fraction (%)']):ax.set(xticks=np.arange(5),xticklabels=labels,ylabel=label);ax.tick_params(axis='x',labelsize=10)
+    axes[0].legend();axes[1].axhline(0,color=GRAY,ls=':');fig.suptitle('Distance quality AFTER prospective near selection')
+    save(fig,'08_selected_quality',['development_distance','development_risk'],'Selection retention is explicit. Low far contamination is not precise individual distance. Different model-selected groups cannot be called matched-object improvement.')
+
+
+if __name__=='__main__' and a.models:
+    additional_results()

@@ -1,0 +1,16 @@
+{
+  "actual_checks": 8,
+  "all_passed": true,
+  "checks": {
+    "01_noise_benchmarks:PNG300dpi": true,
+    "01_noise_benchmarks:PDFEnglish": true,
+    "01_noise_benchmarks:source:noise_baselines": true,
+    "01_noise_benchmarks:source_rows": true,
+    "02_reference_inventory:PNG300dpi": true,
+    "02_reference_inventory:PDFEnglish": true,
+    "02_reference_inventory:source:reference_inventory": true,
+    "02_reference_inventory:source_rows": true
+  },
+  "compute_validation": false,
+  "note": "Format/provenance checks; visual review recorded separately. No whole-stage completion claim when compute_validation=false."
+}
