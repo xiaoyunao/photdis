@@ -43,6 +43,8 @@ archives/
 !manifests/v2_0/figures/*.csv
 !manifests/v2_0_revision/*.csv
 !manifests/v2_0_revision/figures/*.csv
+!manifests/v2_1/*.csv
+!manifests/v2_1/figures/*.csv
 
 # Temporary files
 *.tmp

@@ -1,0 +1,6 @@
+split,group,reference,selection,n,near_selected,near_rejected,far_selected,far_rejected,completeness,far_contamination,boundary_crossing,boundary_selected,unknown_reference_error
+development_test,all,chosen,median_lt10,47740,42973,540,2770,1457,0.9875899156573897,0.060555713442493934,5208,4269,0
+development_test,dwarf,chosen,median_lt10,32717,32459,99,115,44,0.9969592726825972,0.0035304230367777982,1116,1054,0
+development_test,evolved,chosen,median_lt10,1163,55,5,1039,64,0.9166666666666666,0.9497257769652651,157,142,0
+development_test,other,chosen,median_lt10,6408,5302,48,791,267,0.9910280373831776,0.1298211061874282,2101,1988,0
+development_test,unknown,chosen,median_lt10,7452,5157,388,825,1082,0.9300270513976555,0.137913741223671,1834,1085,0

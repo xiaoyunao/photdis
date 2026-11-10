@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-10 — information production complete; quality/control extensions ready
+
+-61067835 COMPLETED0:0 in61s. Fixed same-label/band probe:68004 training,
+ 60759 cal+development evaluation;33251 development test,74.7003% of81337
+ independently qualified class cal/test rows. All native PSF.
+- Frozen-partition versus fixed-forest log gains over prior in grz:
+ 0.13623/0.13409 nats; matched griz0.13448/0.13924; W1.13515/.14752;
+ W1W2.14252/.15029. No inference of a physical information limit.
+- Joint61067590 now genuinely RUNNING on nid005375; full real marginal
+ verification proceeds before probability conclusions. No duplicate/timer.
+- Added weak signed-flux cached-PDF near scores, corrected/domain/raw FeH
+ diagnostics and bounded shared-noise zero-point/dust/error stress programs.
+- Located DR1 primary zcatalog with real ZWARN/DELTACHI2, verified header
+ only on login. Added allocated checkpointed exact-target/position quality
+ controls; full scan and scoring not yet run. DESI official DR1/known-issues
+ references recorded; guarded pipeline labels are not visual confirmations.
+- Three real PSF count/migration/strata PNGs visually inspected; English-only
+ with CSV/JSON/PDF. Additional figures/results still pending, not final delivery.
+
 ## 2026-11-10 — fixed information controls implemented; joint job queued
 
 - Submitted unique regular4h61067590 after confirming no same-name active job;

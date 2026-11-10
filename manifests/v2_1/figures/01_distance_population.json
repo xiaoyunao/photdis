@@ -1,0 +1,10 @@
+{
+  "name": "01_distance_population",
+  "caption": "Reference-conditioned performance, not actual selected-near sample or independent accuracy. Sparse bins are descriptive.",
+  "selection": "Verified DR11 PSF; development test; no display clipping",
+  "rows": 24,
+  "model": "expanded_A",
+  "inputs": {
+    "distance_class": "6e7ae59941ffcd70523a7ce4f1c74aae3313605859081b63739f8301cf46bc9b"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "02_near_far_migration",
+  "caption": "Row percentages and counts. Far contamination denominator is all selected objects within each stated reference class. Reference point boundaries; uncertainty separately tabulated.",
+  "selection": "Verified DR11 PSF; development test; no display clipping",
+  "rows": 5,
+  "model": "expanded_A",
+  "inputs": {
+    "migration": "e3ce14a731eb32c3b5eb6fe4ed524901923a82e1a8fe7fe3cf0d7eb9f3502968"
+  }
+}

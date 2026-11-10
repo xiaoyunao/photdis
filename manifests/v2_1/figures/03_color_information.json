@@ -1,0 +1,12 @@
+{
+  "name": "03_color_information",
+  "caption": "Single fixed classifier framework. Information gain is reference/model conditional, not a physical upper bound. Common i+W1+W2 sample has narrower coverage than optical parent. Degraded training templates are not independent validation.",
+  "selection": "Verified DR11 PSF; development test; no display clipping",
+  "rows": 32,
+  "model": "expanded_A",
+  "inputs": {
+    "information_scores": "b025d479dd57e6c0f7f0ea92f3ebffb8248c16691177f28ddbffa1298451db22",
+    "color_neighbors": "f7e5f33cb3f2a987b4c95ec7e5a5939993e3a3c42b4040bd11a83a07ea4dd9b0",
+    "template_degradation": "872f2787fb14547c9bb3a9bc0529c343c8f9dc6ee41e554674bd32d0fc3e371c"
+  }
+}
