@@ -1,0 +1,23 @@
+{
+  "eligible": 2518,
+  "matched": 2055,
+  "unique_controls": 354,
+  "color_scales": [
+    0.1,
+    0.1
+  ],
+  "temperature_scale_K": 500,
+  "optical_error_scale": 0.03,
+  "reference_sigma_scale": 0.2,
+  "max_dimension_difference": 1,
+  "reference_source_exact": true,
+  "with_replacement": true,
+  "claim": "Descriptive conditional comparison, not causal attribution; repeated matched controls are not independent",
+  "median_abs_differences": [
+    0.02051544189453125,
+    0.015596389770507812,
+    0.06896968365251954,
+    0.0007714613748248667,
+    0.028353438089368188
+  ]
+}

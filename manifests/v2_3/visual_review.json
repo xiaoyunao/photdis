@@ -1,0 +1,19 @@
+{
+  "all_nine_inspected": true,
+  "png_sha256": {
+    "01_noise_benchmarks.png": "13609ae1475eb4fba8ffdd0e90fa4d89322194905e8bd80bcd3a84c8ca254b16",
+    "02_reference_inventory.png": "bf048d1fafeb11c90d111e310cb1dc7d7de549c498e74e5e0299c47c4d018c46",
+    "03_model_comparison.png": "777c716070bca9f1358188529d8a7245fe2783d5ab2760dedb152615baa28596",
+    "04_reserved_parallax.png": "454cc6eaa83b0e790140bcab899b8eb7fb716471404935da64d5ba028ead8111",
+    "05_near_scope.png": "2f99d2caed552925e8af9782c85312ed481ebdf8f7c4cc16234e1fff85c9196d",
+    "06_far_branches.png": "7ea5195d2d257d18dc822a7949c9a17bfc0d1926e1b8e1f872e72d0fa3b1a63d",
+    "07_metal_poor.png": "a86148adbe550a3e82e23acc4e8bb1deb5860b9e83ab12bbc12ec7858ae04f0e",
+    "08_selected_quality.png": "a88a1f832256bfe049cb40f472312104a8c522c02d02bbda6c0e60000c8a2b5f",
+    "09_posterior_examples.png": "76a1a132c2567d98575d8c11454bc4b74ac841f9cb518fb6aebf6e9214b8a9b8"
+  },
+  "representative_pdf": "09_posterior_examples.pdf",
+  "representative_pdf_sha256": "098def0fe33f99098f66563230eda4586e15ac17ad53111b37b1f60c9fdcb224",
+  "representative_pdf_rendered_and_reviewed": true,
+  "render_command": "pdftoppm -scale-to 1800 -singlefile -png figures/v2_3/09_posterior_examples.pdf /tmp/photdis_v23_posterior_review",
+  "review": "English text, axes, legend placement, counts, source-specific curves and PDF mass display checked. Repaired long evidence ylabel and posterior legend/peak overlap; included Other population. No change to scientific scores."
+}

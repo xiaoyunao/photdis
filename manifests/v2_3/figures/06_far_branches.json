@@ -1,0 +1,10 @@
+{
+  "name": "06_far_branches",
+  "caption": "Known evolved class only used after prediction. Source differences and shapes are distinct from branch weights; no independent distance-scale evidence.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "far_conditional": "7bd1706ed48be760e011071fa08715a3434dc0d49cea38e96c401830efb80647",
+    "far_reference_disagreement": "76803b50e5dd64b8556c3c7ef420365b0adc89a7f654666fad4fb623d7c69518",
+    "branch_frequency": "80bb48f1823216cfb97280caba416f8398d11a1541c938da0d02f0c699c20014"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "08_selected_quality",
+  "caption": "Selection retention is explicit. Low far contamination is not precise individual distance. Different model-selected groups cannot be called matched-object improvement.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "development_distance": "e27516f3d8e2dc872cc24af0cceb4a960bf319f374b69351b271e0e4860df40d",
+    "development_risk": "53e14418d4fcb631cc88dd11798c352e1133bb945307026ca18bccf858bed8b2"
+  }
+}

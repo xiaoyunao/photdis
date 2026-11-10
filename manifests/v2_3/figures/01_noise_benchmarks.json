@@ -1,7 +1,7 @@
 {
   "name": "01_noise_benchmarks",
   "caption": "Positive gain over a mismatched prior is not recovered faint-color information. Design prior uses known template composition; macro scores assign equal class weight. Four cached noisy repeats; paired source-cluster changes remain in v2.2.",
-  "selection": "Verified DR11 PSF; original scientific denominators; no display clipping; no independent final validation",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
   "sources": {
     "noise_baselines": "1158fcdb681a71da7d9df9aed577f311d5912da9fe235a1ae073a7d95a756dfc"
   }

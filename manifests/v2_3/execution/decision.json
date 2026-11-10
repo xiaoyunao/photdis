@@ -1,0 +1,14 @@
+{
+  "guards": {
+    "all_tail": true,
+    "evolved_tail": true,
+    "dwarf_tail": true,
+    "full_gaia": false,
+    "near_contamination": false,
+    "near_completeness": true,
+    "metal_poor": true
+  },
+  "cal_pass": false,
+  "deployment": "unchanged",
+  "interpretation": "No automatic adoption; new identity evaluation cannot reopen tuning."
+}

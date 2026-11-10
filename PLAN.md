@@ -1,16 +1,25 @@
 # PLAN
 
-## Active objective: v2.3 targeted full-support density experiment
+## Completed objective: v2.3 full-support error-aware density experiment
 
-Latest full review: docs/pro_review_83e1fe8.md. Frozen prospective protocol:
-docs/v2_3_protocol.md. Cache corrections/inventory first; one same-PSF control
-and error-aware multimodal candidate frozen before reserved outcomes.
-- [x] Noise baseline correction and outcome-blind evaluation-reference inventory:173chosen,2952weak/644SNR>=5Gaia;42076reserved.
-- [x] Freeze near scope, exact-owner266774PSF distance support/43914unlabeled;6math/scoring tests.
-- [ ] Fit/freeze one candidate and same-identity QRF; Models fitted/frozen by61078462; stopped for Gaussian-tail numerical repair. Recovery61079083 completed; diagnostics61078869 rejected0.1mag PDF precision. Fine-grid61079683 uses unchanged models with0.01mag PDF and1e-3 mass tolerance; follow-up validation pending.
-- [ ] Selected-distance, poor-metal, far/reference, target-coverage diagnostics.
-- [ ] English figures, actual artifact checks, explicit evidence limits, safe sync.
-No deployment, full catalog, monitoring or subagents.
+Full review: docs/pro_review_83e1fe8.md; immutable protocol: docs/v2_3_protocol.md.
+Results: docs/v2_3_result.md; nine-plate atlas: docs/v2_3_atlas.md;
+requirements and remaining scientific limits: docs/v2_3_requirements_result.md.
+
+- [x] Cache-only noise baseline correction and outcome-blind inventory:173chosen,2952weak/644SNR>=5Gaia,42076reserved IDs.
+- [x] Fixed near scope and original-owner266774PSF distance support,43914unlabeled;7math/scoring tests.
+- [x] Fit/freeze one XD32 candidate and same-identity QRF before reserved outcomes;179iterations. Numerical tail/grid migrations preserve fitted model files.
+- [x] Selected-distance, source-convolved likelihood, full signed Gaia, matched poor-metal, far branch/reference and weighted target-coverage diagnostics.
+- [x] Final61079683/61079765 COMPLETED0:0;8123actual artifact checks,9English PNG/PDF/CSV/JSON plates and visual QA.
+- [x] Fixed cal rejects candidate: full-Gaia score and near-contamination guards fail. Existing deployment unchanged.
+
+No active scientific jobs, full catalog, monitoring or subagents. Scientific
+validation remains incomplete: r<20 reserve has only1broad-error chosen
+reference; independent poor-metal scale, far-giant membership and faint/noWISE
+population evidence remain unresolved. Next work requires new user/Pro scope;
+do not search additional models or reinterpret reference contamination as the
+application population rate. Final delivery validation and sync are recorded
+in WORKLOG and manifests/v2_3.
 
 
 ## Completed objective: v2.2 selected-distance and actual-application audit

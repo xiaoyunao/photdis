@@ -9,12 +9,18 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
-- Active v2.3 scope: docs/v2_3_protocol.md and pro_review_83e1fe8.md. One
-  full-support error-deconvolved32component candidate versus same-PSF QRF;
-  freeze both before reserved outcomes. No deployment, catalog expansion,
-  monitoring or subagents. Cache correction:173chosen evaluation references,
-  2952SNR<5 and644SNR>=5 among3596signed Gaia; prior noise gain is composition-
-  confounded. Training owner/TYPE provenance must remain exact.
+- Latest completed experiment2026-11-10: v2.3, docs/v2_3_result.md and
+  docs/v2_3_atlas.md; full ledger docs/v2_3_requirements_result.md. Same266774
+  original-owner PSF distance labels incl43914unlabeled; one XD32 converged179
+  iterations. Fixed cal rejects: full signed Gaia/near contamination worsen.
+  Development chosen tails9.65%→9.45%, near contamination0.839%→1.828%; do not
+  adopt.8123compute checks,7focused tests,9English plates;61079683/61079765
+  COMPLETED0:0. Stable-tail/fine-grid numerical migrations preserve model bytes;
+  full PDFs and mixture parameters stay NERSC.173chosen new-ID references,
+  3596signed Gaia incl2952SNR<5/644SNR>=5; only1r<20chosen with broad error.
+  Noise prior gain is composition-confounded. No independent final-validation
+  claim, extra model, deployment, full catalog, monitoring or subagents.
+  Further work follows new user/Pro scope; preserve original owner/TYPE.
 
 - Latest completed audit2026-11-10: v2.2, docs/v2_2_result.md and
   docs/v2_2_atlas.md; full ledger docs/v2_2_requirements_result.md; review fbb8ea0.

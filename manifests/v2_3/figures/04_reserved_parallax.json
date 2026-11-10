@@ -1,0 +1,9 @@
+{
+  "name": "04_reserved_parallax",
+  "caption": "Same-sky new identities; actual signed observations and errors. Does not certify independent distance scale, true population composition or new sky.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "reserved_pit": "29272383d41bab940e82ced5d6a1df017e30ca1f8bfe11c6672595372a67e01f",
+    "reserved_gaia": "4faf7e156216e27cf35219f1980af4b9e4e635463529088acc2d444bd753b925"
+  }
+}

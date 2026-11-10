@@ -1,0 +1,8 @@
+{
+  "name": "09_posterior_examples",
+  "caption": "Lowest identity per reference-defined development stratum. Gray dashed line and shaded band denote reference mu and its one-sigma uncertainty. Display bounds include both95% intervals and reference; displayed mass explicit, scientific metrics untrimmed. Full numerical distributions and mixture parameters retained.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "posterior_examples": "b56ba64305998862296aef420fa165f0849e24dcb58dc7491ef2747723da5729"
+  }
+}

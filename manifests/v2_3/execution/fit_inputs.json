@@ -1,0 +1,11 @@
+{
+  "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+  "data/v2_3/reserved_inputs.npz": "ac138ac775aa2183bafce45f92c8a8b58b549733ba82bbf5caf8347aa60ed256",
+  "docs/v2_3_protocol.md": "0dbe0affa818f151060547f6f2631c5da8e81c309ddb185b3ae46c6845cfe060",
+  "src/photdis/density_v2_3.py": "70fe5b3fe6d6f059b64de41aff769a1170c7f24daf16d28cd9346973b80658dc",
+  "scripts/v2_3_run.py": "9e12d5c595a8995ee0d8c304f5e205dc8ca1e891c6eb2b7e40508578ac1d6ff4",
+  "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+  "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+  "src/photdis/baseline_v1_2.py": "e6bdb38174d8f03e38d2350f55fd3526a10b1c76b38386bf076b2b5d604d7e8a",
+  "src/photdis/baseline_parallax.py": "469f7e0e495415be16ffcfb968ad07f6110c015449c0ebded7f68e03b1aba2e3"
+}

@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_design.npz": "f7cf1dfbb9f5a7ddbf02934927556769a450ae24083efe030502db7de34ee13f",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_chunks/replica_-1.npz": "a679dfa87723a4a34d3fac0b93566b47eb001704b225b78d7be3eef450329ad5",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_chunks/replica_0.npz": "20dbc0998aa6d6309b09cf0c543b34e1547f4430973728e20d08136d10b49ca5",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_chunks/replica_1.npz": "c82f0f8a5db9f0317f0f7f828a72cea3a710cacfa7ec44876fd6c6584f4286a9",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_chunks/replica_2.npz": "6f9f4c4c0f66364253541f15ce414e3b7e471af3d87f68f2a69626358feab2cc",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_2/noise_chunks/replica_3.npz": "976fdbda020334cfe3f8fd24c8e0d82c6be1189085e23d54201d4ca1100a3632"
+  },
+  "simulation_rerun": false,
+  "paired_changes_preserved": "manifests/v2_2/noise_cluster_bootstrap.csv",
+  "design_baseline": "Known realized template class composition before scoring; descriptive design baseline, not estimated target-population prior",
+  "conclusion": "Gain against a mismatched reference prior is not recovered faint color information."
+}

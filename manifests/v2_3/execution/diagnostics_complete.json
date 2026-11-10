@@ -1,0 +1,50 @@
+{
+  "job": "61079765",
+  "models": {
+    "inputs": {
+      "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+      "data/v2_3/reserved_inputs.npz": "ac138ac775aa2183bafce45f92c8a8b58b549733ba82bbf5caf8347aa60ed256",
+      "docs/v2_3_protocol.md": "0dbe0affa818f151060547f6f2631c5da8e81c309ddb185b3ae46c6845cfe060",
+      "src/photdis/density_v2_3.py": "aa4ab6a5f5133de3dbd3f018d6b6d252b2fea910dde7eb8032de39095ce92697",
+      "scripts/v2_3_run.py": "ae6d1dc1425f3e6ad03b13709e17dc3cb6d63a57a585e06351600fcc6428cd4d",
+      "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+      "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+      "src/photdis/baseline_v1_2.py": "e6bdb38174d8f03e38d2350f55fd3526a10b1c76b38386bf076b2b5d604d7e8a",
+      "src/photdis/baseline_parallax.py": "469f7e0e495415be16ffcfb968ad07f6110c015449c0ebded7f68e03b1aba2e3"
+    },
+    "models": {
+      "control": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+      "candidate": "a20c85f59ff8c92a6e4b36905b81bb0f71d06eff9a8db43cbbe498c3dbd43a84"
+    },
+    "job": "61078462",
+    "reserved_outcomes_opened": false,
+    "roles": "All reserved identities evaluation only; no calibration",
+    "numerical_migration": "c8518ab44754d14783b3e0d69187957d314bcc027553f850a6762218d22ad239",
+    "grid_migration": "667f66c63fec30c1fe7029f37a14b0ae87df0cd2d23b9056e58f38ab79d2715f"
+  },
+  "tables": {
+    "metal_poor_matching.csv": "3905b63014ca1d4a4b7fb589267cfaaca4e0caa77acb08fe9e10ca8a10a58390",
+    "reserved_quadrature.csv": "ed0dff0829b6439ee0062a08f64d778dc0823ad3e2d79f7d6bcea5b6dac83637",
+    "reserved_distance.csv": "8d34a7d6c98b4a46fe308bfe4b35a175dcc85d7c3de7512f50e40158854e2ec9",
+    "reserved_gaia.csv": "4faf7e156216e27cf35219f1980af4b9e4e635463529088acc2d444bd753b925",
+    "admission_effect.csv": "ea4d90bcd64bd85938aedb6b29dce3a95c30865cad609b09895ee547043873fb",
+    "development_pit.csv": "0a9afbab8959bd148c49f4f022ef9504e7a56f924c31ca23f1d56c20c185d069",
+    "paired_spatial_uncertainty.csv": "d78d9a41c3e126c676a80ec5a69321deb14f71efb991ace1292d35664d41db4b",
+    "development_distance.csv": "e27516f3d8e2dc872cc24af0cceb4a960bf319f374b69351b271e0e4860df40d",
+    "development_gaia.csv": "ba817003fa57ce39cbc6b957d8eea267cdff57505c3ae00fa89e65ae2dd7f6ca",
+    "application_scope.csv": "1eb00761ddaa4a571cbb4a55c9588410bfbff512653678539e0750c532984d4f",
+    "development_reliability.csv": "c943a45912638739809b37967c6c37bac7ce0547195765bdbca18a55b5e0bc1b",
+    "noise_baselines.csv": "1158fcdb681a71da7d9df9aed577f311d5912da9fe235a1ae073a7d95a756dfc",
+    "reserved_pit.csv": "29272383d41bab940e82ced5d6a1df017e30ca1f8bfe11c6672595372a67e01f",
+    "branch_frequency.csv": "80bb48f1823216cfb97280caba416f8398d11a1541c938da0d02f0c699c20014",
+    "application_coverage.csv": "eefad0c150a3b59ebc1ba747fee7ba418b7db5fd58469179b076707861230676",
+    "development_quadrature.csv": "f2dc9958047fabfd148b4beb7c39e340cd7f9e5b6daf88a8b08d55057bca6c29",
+    "reference_inventory.csv": "de669c487cf98b26397237cb001c32bdb069a719aef29db7fc04a5eec3b0a417",
+    "development_risk.csv": "53e14418d4fcb631cc88dd11798c352e1133bb945307026ca18bccf858bed8b2",
+    "reserved_risk.csv": "db16bddef7d926c9e9d6520fcf50cd84bb6d24113579cc873eda67fc0b9af537",
+    "posterior_examples.csv": "b56ba64305998862296aef420fa165f0849e24dcb58dc7491ef2747723da5729",
+    "reserved_reliability.csv": "debb2a57f9af68d7267499de0c065f8d1f5ba719958378e1862f3d42d28d3cf3"
+  },
+  "source_sha256": "b01efac383262b7a36e67f6af05f9aed141b694fc6cc7584274c2491a6abbda7",
+  "new_scale_validation": false
+}

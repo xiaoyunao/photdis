@@ -12,5 +12,12 @@
   "recovery_status": "COMPLETED0:0",
   "diagnostics_status": "FAILED only artifact near-mass validation; tables archived as unverified coarse-grid results",
   "precision_audit": "61079479",
-  "fine_grid": "61079683"
+  "fine_grid": "61079683",
+  "fine_grid_status": "COMPLETED0:0",
+  "fine_grid_elapsed": "00:04:58",
+  "final_diagnostics": "61079765",
+  "final_diagnostics_status": "COMPLETED0:0",
+  "final_diagnostics_elapsed": "00:04:32",
+  "active_jobs": [],
+  "decision": "candidate rejected; deployment unchanged"
 }

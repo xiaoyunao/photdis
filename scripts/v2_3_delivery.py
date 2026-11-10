@@ -23,6 +23,16 @@ def main():
             path=M/(source+'.csv');check(name+':source:'+source,hashlib.sha256(path.read_bytes()).hexdigest()==h)
             with open(path) as f:expected+=len(list(csv.DictReader(f)))
         with open(meta.with_suffix('.csv')) as f:check(name+':source_rows',len(list(csv.DictReader(f)))==expected)
+    check('nine_figure_sets',len(list((M/'figures').glob('*.json')))==9)
+    for name in ('v2_3_result','v2_3_atlas','v2_3_requirements_result'):
+        doc=ROOT/'docs'/(name+'.md')
+        for i,target in enumerate(re.findall(r'\]\(([^)]+)\)',doc.read_text())):
+            if '://' not in target:
+                check(name+':link:'+str(i),(doc.parent/target.split('#')[0]).exists())
+    visual=json.loads((M/'visual_review.json').read_text())
+    for name,h in visual['png_sha256'].items():
+        check(name+':visual_version',hashlib.sha256((F/name).read_bytes()).hexdigest()==h)
+    check('representative_PDF_reviewed',visual['representative_pdf_rendered_and_reviewed'])
     actual=M/'execution/validation.json'
     compute=json.loads(actual.read_text()) if actual.exists() else None
     if compute is not None:check('real_compute',compute['all_passed'])

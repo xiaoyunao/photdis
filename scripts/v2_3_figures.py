@@ -40,21 +40,21 @@ def corrections():
 
 def model_results():
     data=read('development_distance');fig,axes=plt.subplots(2,2,figsize=(14,10),constrained_layout=True)
-    groups=['all','dwarf','evolved','unknown','metal_poor_dwarf','low_luminosity'];labels=['All','Dwarf','Giant ref.','Unlabeled','Metal-poor\ndwarf','Low\nluminosity']
+    groups=['all','dwarf','evolved','other','unknown','metal_poor_dwarf','low_luminosity'];labels=['All','Dwarf','Giant ref.','Other','Unlabeled','Metal-poor\ndwarf','Low\nluminosity']
     for model,color in [('control',BLUE),('candidate',ORANGE)]:
         rr=[sel(data,role='development_test',model=model,group=g,selection='all',reference='chosen',low_kpc=0,high_kpc='inf')[0] for g in groups]
         for ax,key,label in zip(axes.ravel(),['median_relative','tail_1','coverage68','interval68'],['Median relative residual (%)','Severe error fraction (%)','68% interval coverage (%)','68% interval score (mag)']):
-            ax.plot(np.arange(6),[val(r,key)*(1 if key=='interval68' else 100) for r in rr],'o-',color=color,label=model)
-            ax.set(xticks=np.arange(6),xticklabels=labels,ylabel=label);ax.tick_params(axis='x',labelsize=10)
+            ax.plot(np.arange(len(groups)),[val(r,key)*(1 if key=='interval68' else 100) for r in rr],'o-',color=color,label=model)
+            ax.set(xticks=np.arange(len(groups)),xticklabels=labels,ylabel=label);ax.tick_params(axis='x',labelsize=10)
     axes[0,0].axhline(0,color=GRAY,ls='--');axes[1,0].axhline(68,color=GRAY,ls='--');axes[0,1].legend()
     fig.suptitle('Same PSF training identities · complete grz distance distributions')
-    save(fig,'03_model_comparison',['development_distance','paired_spatial_uncertainty'],'One fixed XD32 candidate versus same-identity PSF QRF. Unknown-class distance labels retained; no clipping. Cal decision independent of plotted development outcomes.')
+    save(fig,'03_model_comparison',['development_distance','paired_spatial_uncertainty'],'One fixed XD32 candidate versus same-identity PSF QRF. Unknown-class distance labels retained; no clipping. Cal decision independent of plotted development outcomes. Point-reference interval coverage is not intrinsic-distance calibration when reference errors are deconvolved; compare reference-convolved scores and observed Gaia likelihoods.')
     data=read('reserved_pit');fig,axes=plt.subplots(1,3,figsize=(15,4.5),constrained_layout=True)
     for ax,group in zip(axes,['all','no_W1','r_20_22']):
         for model,color in [('control',BLUE),('candidate',ORANGE)]:
             rr=sel(data,model=model,group=group,selection='all');n=sum(int(x['n']) for x in rr)
             ax.stairs([val(x,'n')/max(n,1) for x in rr],np.linspace(0,1,11),color=color,label=f'{model}: N={n:,}')
-        ax.axhline(.1,color=GRAY,ls='--');ax.set(xlabel='Full observed-parallax PIT',ylabel='Fraction',title=group.replace('_',' '));ax.legend(fontsize=9)
+        ax.axhline(.1,color=GRAY,ls='--');ax.set(xlabel='Full observed-parallax PIT',ylabel='Fraction',title={'all':'All','no_W1':'No qualified W1','r_20_22':'20 ≤ r < 22'}[group]);ax.legend(fontsize=9)
     fig.suptitle('Reserved identities opened after model freeze · negative parallaxes retained')
     save(fig,'04_reserved_parallax',['reserved_pit','reserved_gaia'],'Same-sky new identities; actual signed observations and errors. Does not certify independent distance scale, true population composition or new sky.')
     data=read('application_scope');fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
@@ -62,9 +62,9 @@ def model_results():
         rr=sel(data,model=model,selection='near_scope',r_low='-inf',r_high=20,WISE='all')[0]
         total=val(rr,'weight');axes[0].bar(j,total/1e6,color=[BLUE,ORANGE][j])
         absent=val(rr,'no_new_parallax_weight')/total*100 if total else 0
-        axes[1].bar(j,absent,color=[BLUE,ORANGE][j])
+        axes[1].bar(j,absent,color=[BLUE,ORANGE][j]);axes[1].text(j,absent+2,f'{absent:.2f}%',ha='center',fontsize=11)
     axes[0].set(xticks=[0,1],xticklabels=['PSF QRF','XD32'],ylabel='Weighted selected count (million)')
-    axes[1].set(xticks=[0,1],xticklabels=['PSF QRF','XD32'],ylabel='Weight without new parallax evidence (%)',ylim=(0,100))
+    axes[1].set(xticks=[0,1],xticklabels=['PSF QRF','XD32'],ylabel='Selected weight without\nnew parallax evidence (%)',ylim=(0,100))
     fig.suptitle('Prospective near scope: r < 20, q > 0.95, optical quality and common support')
     save(fig,'05_near_scope',['application_scope','application_coverage','reserved_distance','reserved_risk'],'Only13existing DECam fields. Weights are predicted selection estimates, not validated nearby-star counts. Evidence occupancy is not a quality flag.')
 
@@ -97,13 +97,13 @@ def additional_results():
     fig.suptitle('Metal-poor dwarfs: matched colors, temperature, source and errors')
     save(fig,'07_metal_poor',['metal_poor_matching'],'Same poor-metal identities across models; matched controls with replacement, matching calipers fixed before outcomes. Descriptive evidence, not causal identification. No true metallicity application cut.')
     data=read('development_distance');fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
-    groups=['all','dwarf','evolved','unknown','metal_poor_dwarf'];labels=['All','Dwarf','Giant ref.','Unlabeled','Metal-poor\ndwarf']
+    groups=['all','dwarf','evolved','other','unknown','metal_poor_dwarf'];labels=['All','Dwarf','Giant ref.','Other','Unlabeled','Metal-poor\ndwarf']
     for model,color in [('control',BLUE),('candidate',ORANGE)]:
         rr=[sel(data,role='development_test',model=model,group=g,selection='near_scope',reference='chosen',low_kpc=0,high_kpc='inf')[0] for g in groups]
-        axes[0].plot(np.arange(5),[100*val(r,'tail_1') for r in rr],'o-',color=color,label=model)
-        axes[1].plot(np.arange(5),[100*val(r,'median_relative') for r in rr],'o-',color=color)
-        axes[2].plot(np.arange(5),[100*val(r,'n')/val(r,'eligible') for r in rr],'o-',color=color)
-    for ax,label in zip(axes,['Severe error fraction (%)','Median distance residual (%)','Retained reference fraction (%)']):ax.set(xticks=np.arange(5),xticklabels=labels,ylabel=label);ax.tick_params(axis='x',labelsize=10)
+        axes[0].plot(np.arange(len(groups)),[100*val(r,'tail_1') for r in rr],'o-',color=color,label=model)
+        axes[1].plot(np.arange(len(groups)),[100*val(r,'median_relative') for r in rr],'o-',color=color)
+        axes[2].plot(np.arange(len(groups)),[100*val(r,'n')/val(r,'eligible') for r in rr],'o-',color=color)
+    for ax,label in zip(axes,['Severe error fraction (%)','Median distance residual (%)','Retained reference fraction (%)']):ax.set(xticks=np.arange(len(groups)),xticklabels=labels,ylabel=label);ax.tick_params(axis='x',labelsize=10)
     axes[0].legend();axes[1].axhline(0,color=GRAY,ls=':');fig.suptitle('Distance quality AFTER prospective near selection')
     save(fig,'08_selected_quality',['development_distance','development_risk'],'Selection retention is explicit. Low far contamination is not precise individual distance. Different model-selected groups cannot be called matched-object improvement.')
 
@@ -122,9 +122,9 @@ def posterior_examples():
             rr=sorted(sel(base,model=model),key=lambda x:val(x,'mu'));x=np.array([val(r,'mu') for r in rr]);y=np.array([val(r,'density') for r in rr]);visible=(x>=lo)&(x<=hi)
             mass=float(np.sum(y[visible]*np.array([val(r,'bin_width') for r in rr])[visible]))
             ax.plot(x,y,color=color,label=f'{model}: q={val(rr[0],"qnear"):.3f}; shown={mass:.3f}')
-        ax.set(xlabel='Distance modulus (mag)',ylabel='Probability density',title=group.replace('_',' '),xlim=(lo,hi));ax.legend(fontsize=8);ax.title.set_fontsize(14)
+        ax.set(xlabel='Distance modulus (mag)',ylabel='Probability density',title={'near_dwarf':'Nearby dwarf','poor_metal_dwarf':'Metal-poor dwarf','giant_10_20':'Giant: 10–20 kpc','giant_20_50':'Giant: 20–50 kpc','unlabeled_low_luminosity':'Unlabeled, low luminosity','near_boundary':'Near 10 kpc boundary'}.get(group,group.replace('_',' ')),xlim=(lo,hi));ax.set_ylim(0,ax.get_ylim()[1]*1.25);ax.legend(fontsize=8,loc='upper right');ax.title.set_fontsize(14)
     fig.suptitle('Fixed-identity posterior examples · no selection by model success')
-    save(fig,'09_posterior_examples',['posterior_examples'],'Lowest identity per reference-defined development stratum. Display bounds include both95% intervals and reference; displayed mass explicit, scientific metrics untrimmed. Full numerical distributions and mixture parameters retained.')
+    save(fig,'09_posterior_examples',['posterior_examples'],'Lowest identity per reference-defined development stratum. Gray dashed line and shaded band denote reference mu and its one-sigma uncertainty. Display bounds include both95% intervals and reference; displayed mass explicit, scientific metrics untrimmed. Full numerical distributions and mixture parameters retained.')
 
 
 if __name__=='__main__' and a.models:

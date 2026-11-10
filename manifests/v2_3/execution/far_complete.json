@@ -1,0 +1,11 @@
+{
+  "models": {
+    "control": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+    "candidate": "a20c85f59ff8c92a6e4b36905b81bb0f71d06eff9a8db43cbbe498c3dbd43a84"
+  },
+  "source_sha256": "20d231a977369e405ddc1c45c84a686acfc1dafe2067cf0834034c5abcdec46f",
+  "oracle_rows": 1794,
+  "class_conditioning": "Diagnostic only; missing label is not a fourth physical class",
+  "independent_scale": false,
+  "source": "Existing chosen/Gaia/SpecDis/SPDist only"
+}

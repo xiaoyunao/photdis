@@ -462,9 +462,12 @@ Local regression checks use `python -m pytest -q` with
 NumPy, fitsio, healpy and SciPy available. They exercise synthetic measurements
 and identities; only the allocated NERSC run produces scientific sample counts.
 
-### Active v2.3 experiment
+### Completed v2.3 experiment
 
-See [requirements and execution status](docs/v2_3_requirements_result.md) and
-[frozen protocol](docs/v2_3_protocol.md). One same-PSF QRF/XD32 comparison is in
-progress; cached noise priors and reserved-reference eligibility are corrected.
-No deployment or full-catalog expansion.
+See [results](docs/v2_3_result.md), [nine-plate atlas](docs/v2_3_atlas.md),
+[requirements and evidence limits](docs/v2_3_requirements_result.md) and
+[frozen protocol](docs/v2_3_protocol.md). Same-PSF QRF/XD32 comparison completed;
+the candidate fails full-Gaia and near-contamination guards. Cache noise priors
+and reserved-reference eligibility are corrected. Existing deployment retained.
+All8123production checks and7focused tests pass; actual PDFs remain on NERSC.
+No whole-catalog expansion or automatic further modeling.

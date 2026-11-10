@@ -1,0 +1,11 @@
+{
+  "name": "05_near_scope",
+  "caption": "Only13existing DECam fields. Weights are predicted selection estimates, not validated nearby-star counts. Evidence occupancy is not a quality flag.",
+  "selection": "Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation",
+  "sources": {
+    "application_scope": "1eb00761ddaa4a571cbb4a55c9588410bfbff512653678539e0750c532984d4f",
+    "application_coverage": "eefad0c150a3b59ebc1ba747fee7ba418b7db5fd58469179b076707861230676",
+    "reserved_distance": "8d34a7d6c98b4a46fe308bfe4b35a175dcc85d7c3de7512f50e40158854e2ec9",
+    "reserved_risk": "db16bddef7d926c9e9d6520fcf50cd84bb6d24113579cc873eda67fc0b9af537"
+  }
+}

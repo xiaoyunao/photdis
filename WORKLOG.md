@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-10 — v2.3 completed; fixed candidate rejected
+- Final fine-grid61079683 COMPLETED0:0(4:58), diagnostics/far/validator61079765 COMPLETED0:0(4:32); empty squeue confirmed. Same266774original-owner PSF training identities/43914unlabeled; XD32 converged179iterations. Models remain byte-identical across numerical migrations.
+- Delivered scripts/v2_3_report.py, final compact manifests and9English PNG/PDF/CSV/JSON plates, docs/v2_3_result.md/atlas/requirements ledger; updated AGENTS/PLAN/README. Full PDFs, mixture parameters and coarse archives remain NERSC.
+- Fixed cal rejects on full Gaia and near contamination. Development tails9.654%→9.447%, but prospective near far-contamination0.839%→1.828%, completeness77.11%→85.04%; new-ID Gaia meanlog−0.875888→−0.924684. Poor-metal bias persists;20–50conditional tails worsen. Deconvolved point-reference coverage is not alone intrinsic calibration evidence; proper source-convolved scores reported separately.
+- Actual validation:8123production checks,7focused math/scoring tests from model milestone,119delivery/format/source/link/visual-version checks. All9PNGs visually inspected, representative PDF rendered with pdftoppm and checked; fixed label/legend overlap. Figures retain English Pal5 styling and untrimmed scientific denominators.
+- Commands: bounded SSH squeue/sacct; rsync compact outputs; python3 scripts/v2_3_figures.py --models; python3 scripts/v2_3_report.py; python3 scripts/v2_3_delivery.py; py_compile; git diff --check. No additional model/threshold fit. Report documents finite-order Gaia quadrature difference bound and numerical limitations.
+- Scope limits: reserved173chosen references include only1r<20broad-error distance; independent poor-metal scale, far-giant membership and representative faint/nonstellar evidence remain outstanding. Near scope is prospective, not validated population accuracy.
+- Final milestone to be committed and safely synchronized to origin/NERSC using scripts/sync.py push. Preserve existing deployed v1. No active jobs, timers or subagents; further scientific work follows next user/Pro review.
+
 ## 2026-11-10 — measured fine-grid recovery
 - Precision audit61079479 finished:0.1mag max q error0.041248;0.01mag maxima0.000482development/0.000327reserved/0.000219application. Smallest conditional component sigma0.05635mag.
 - Fix candidate numerical grid to0.01mag and require analytic-q/histogram agreement<1e-3; fitted parameters, training, class structure and prospective selection unchanged. Archive coarse outputs/derived tables with hashes; do not delete or mix them.
