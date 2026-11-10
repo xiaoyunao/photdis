@@ -88,7 +88,7 @@ def chunk(rows):
         pit[ga]=parallax_check(*args,np.full(ga.sum(),-np.inf),np.full(ga.sum(),np.inf))['pit']
     assert np.isfinite(p['pdf']).all() and np.all(p['pdf']>=0)
     np.testing.assert_allclose(p['pdf'].sum(axis=1),1,atol=2e-6)
-    atomic_npz(path,identity=ids,TYPE=_T['TYPE'][rows],rows=rows,mu=p['mu'],pdf=p['pdf'].astype('f4'),
+    atomic_npz(path,identity=ids,TYPE=_T['TYPE'][rows],rows=rows,mu=p['mu'],pdf=p['pdf'].astype('f8' if _NAME=='candidate' else 'f4'),
         qnear=q,weights=p['weights'],supported=supported,near_scope=scope,gaia_log=log,gaia_pit=pit,**extra)
     save_json(marker,dict(sha256=sha(path),model=_HASH))
     return str(path)

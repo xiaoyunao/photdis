@@ -6,6 +6,7 @@ Bovy, Hogg & Roweis (2011), arXiv:0905.2979, identity projection case.
 import numpy as np
 from scipy.special import logsumexp, ndtr
 from sklearn.mixture import GaussianMixture
+from .baseline_parallax import normal_interval
 
 
 def observation_covariance(errors, reference_sigma):
@@ -120,9 +121,9 @@ class ErrorDeconvolvedMixture:
         pdf=np.zeros((len(mags),len(edges)-1));class_mass=w@self.class_frequency
         escaped=np.zeros(len(mags));q=np.zeros(len(mags))
         for k in range(self.components):
-            cdf=ndtr((edges[None,:]-mean[:,k,None])/sigma[:,k,None])
-            pdf+=w[:,k,None]*np.diff(cdf,axis=1)
-            escaped+=w[:,k]*(cdf[:,0]+1-cdf[:,-1])
+            z=(edges[None,:]-mean[:,k,None])/sigma[:,k,None]
+            pdf+=w[:,k,None]*normal_interval(z[:,:-1],z[:,1:])
+            escaped+=w[:,k]*(ndtr(z[:,0])+ndtr(-z[:,-1]))
             q+=w[:,k]*ndtr((mean[:,k]-(mags[:,0]-15))/sigma[:,k])
         if np.any(escaped>1e-6): raise ValueError('PDF grid tail loss >1e-6; preserve mixture, do not silently truncate')
         pdf/=pdf.sum(axis=1)[:,None]

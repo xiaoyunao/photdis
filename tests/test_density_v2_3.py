@@ -40,3 +40,13 @@ def test_deconvolution_recovers_latent_variance():
     np.testing.assert_allclose(np.diag(model.covariances[0]),np.diag(true),atol=.04)
     assert model.class_frequency[0,3]==1
     assert np.min(np.diff(model.history))>-1e-7
+
+
+def test_tiny_right_tail_is_retained():
+    from scipy.special import ndtr
+    model=ErrorDeconvolvedMixture(1);model.weights=np.ones(1);model.means=np.zeros((1,3));model.covariances=np.array([np.eye(3)]);model.class_frequency=np.array([[0.,0.,0.,1.]])
+    # Direct CDF subtraction returns zero here; Gaussian survival CDF does not.
+    p=model.predict(np.zeros((1,3)),np.zeros((1,3)),np.arange(-40.,41.))
+    expected=ndtr(-10.)-ndtr(-11.)
+    assert expected>0
+    np.testing.assert_allclose(p['pdf'][0,50],expected,rtol=1e-12)

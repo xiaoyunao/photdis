@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — Gaussian-tail numerical repair, models retained
+- XD converged at179iterations; both fitted models frozen before any evaluation. At19m22,development predictions complete and reserved control generation had begun; no predictive scores/aggregates inspected.
+- Analytic regression test exposed direct Gaussian CDF subtraction losing right-tail mass (10–11sigma); fixed survival-CDF subtraction and candidate float64 PDF storage. Seven tests now pass. Fit/conditional-mixture AST and both model files must stay identical.
+- Requested stop61078462 for numerical repair; retain all QRF checkpoints, archive prior candidate outputs and original freeze, rerun candidate PDF evaluation only.61078869dependency will be repointed after confirmed cancellation and unique recovery submission.
+- New explicit migration validates old/new source hashes and unchanged fit functions, records that reserved generation had started but no scores were used to alter models. No scientific retuning.
+
+
 ## 2026-11-10 — downstream validation wired to fixed run
 - Submitted61078869 with afterok:61078462; one dependent diagnostics/far/artifact job, no timer. Repoint dependency only after a confirmed timeout/recovery; no duplicate submission.
 - Added likelihood/covariance normalization checks and diagnostic source hashes. Production results and cal acceptance remain pending.

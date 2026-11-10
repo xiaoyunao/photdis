@@ -4,6 +4,7 @@ import json
 import joblib
 import numpy as np
 from scipy.special import ndtr
+from photdis.baseline_parallax import normal_interval
 from v2_3_prepare import ROOT, DEST, TABLES
 from v2_3_diagnostics import references
 from v2_1_near import load, subset, csv_rows, save_json, sha
@@ -34,7 +35,9 @@ def main():
         w,mean,sigma=candidate.conditional(m,e);w*=candidate.class_frequency[None,:,1];mass=w.sum(axis=1)
         values['candidate']['mass'][rr]=mass;good=mass>0;w=w[good]/mass[good,None]
         edges=np.arange(-30,40.0001,.1);pdf=np.zeros((good.sum(),len(edges)-1))
-        for k in range(candidate.components):pdf+=w[:,k,None]*np.diff(ndtr((edges[None,:]-mean[good,k,None])/sigma[good,k,None]),axis=1)
+        for k in range(candidate.components):
+            z=(edges[None,:]-mean[good,k,None])/sigma[good,k,None]
+            pdf+=w[:,k,None]*normal_interval(z[:,:-1],z[:,1:])
         pdf/=pdf.sum(axis=1)[:,None]
         values['candidate']['mu'][rr[good]]=distance_quantiles(m[good,0],quantiles_interpolated(pdf,edges))[0]
     results=[]
