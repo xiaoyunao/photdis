@@ -3,7 +3,7 @@
   "caption": "Observed reference strata only. Corrected FeH uses author domain and positive formal errors; diagnostic, never application input. Sparse and selection-dependent evidence; no final-validation claim.",
   "selection": "Verified DR11 PSF; development test; no display clipping",
   "rows": 83,
-  "model": "expanded_A",
+  "model": "expanded_A; isolated frozen weak-flux prototype and PSF nonstellar control samples in labeled panels",
   "inputs": {
     "distance_class": "6e7ae59941ffcd70523a7ce4f1c74aae3313605859081b63739f8301cf46bc9b",
     "migration": "e3ce14a731eb32c3b5eb6fe4ed524901923a82e1a8fe7fe3cf0d7eb9f3502968",

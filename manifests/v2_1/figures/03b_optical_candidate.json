@@ -1,0 +1,12 @@
+{
+  "name": "03b_optical_candidate",
+  "caption": "Top: broad optical pool and conditional degradation of training templates. Bottom: single W1 candidate and fair refit control, identical68004 PSF members, fixed complexity, natural histogram mass. Cal guards decide; development scores are reported without tuning.",
+  "selection": "Matched or broad PSF development sets as labeled; template simulations use training identities, never independent validation",
+  "rows": 25,
+  "model": "Broad grz probe; one same-identity regression versus class-partition distance candidate",
+  "inputs": {
+    "color_neighbors_broad": "5245f33ec27e370d3c07fb433cb26dec464e0163bdbb63f1c802ce9f7a936f12",
+    "template_degradation_broad": "7d660757883b5209dd65ee175c53080e52fa8e8d00ab8253d3b6f3b5a9ec81f7",
+    "partition_candidate": "b415220deb13f95c6a25c42cc447a47f7517ec0ecc99b979754fa533bc3ea8c1"
+  }
+}

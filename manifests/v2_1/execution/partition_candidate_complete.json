@@ -1,0 +1,24 @@
+{
+  "job_id": "61069324",
+  "guards": {
+    "gaia_log": true,
+    "all_tail": false,
+    "evolved_tail": false,
+    "dwarf_tail": true,
+    "near_contamination": true,
+    "near_completeness": true
+  },
+  "cal_pass": false,
+  "n_train": 68004,
+  "n_evaluation": 67207,
+  "frozen_training": {
+    "data/v2_1/information_train.npz": "6feb1bc7788304d3bc7ed04039c3895cf1319dd93865a30db137bf5a13365b21",
+    "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+    "docs/v2_1_partition_candidate.md": "7f861e66b057d844f056ba1aa7c93b03e772d26a856903d936919d90896f7d13",
+    "src/photdis/partition_v2_1.py": "c4c3a6fbad55fa0bae733e21876212cf30d3d7060bf3b35c86bb69bcb40ce565",
+    "scripts/v2_1_partition_candidate.py": "30142af73f6b54f0836f832f9e1f0fc7bb462cb7f1a56adbb960837926fb1684"
+  },
+  "candidate": "Balanced class split loss, natural leaf distance histogram",
+  "deployment": "unchanged",
+  "independent_validation": "not established"
+}

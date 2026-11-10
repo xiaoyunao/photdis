@@ -61,6 +61,28 @@ def main():
                                         mean_difference=float(delta.mean()), comparison='16 versus32 nodes, first identity block')
                 check(name+'_bounded_quadrature', delta.max() < .001)
         check(name+'_exactly_once', (covered == 1).all())
+        # The mean log score is dominated by unlabeled extreme observations.
+        # Check their integration explicitly; a first-block check alone cannot
+        # establish numerical stability of that tail.
+        valid = np.flatnonzero(t['parallax_eligible'])
+        extreme = valid[np.argsort(combined['gaia_log'][valid])[:32]]
+        tail16, tail32, tail64 = [], [], []
+        for block in np.unique(extreme//256):
+            q = load(out/f'{name}_{block*256:07}.npz')
+            selected = np.isin(q['rows'], extreme)
+            rows = q['rows'][selected]
+            tail16.extend(q['gaia_log'][selected])
+            for order, dest in [(32, tail32), (64, tail64)]:
+                dest.extend(full_parallax_log_density(q['pdf'][selected], model.edges, t['g0'][rows],
+                    t['p_corr'][rows], t['gaia_parallax_error'][rows], order=order))
+        delta16 = abs(np.asarray(tail16)-tail64)
+        delta32 = abs(np.asarray(tail32)-tail64)
+        quadrature[name]['worst32'] = dict(n=len(extreme), max_16_64=float(delta16.max()),
+            max_32_64=float(delta32.max()), minimum_log=float(combined['gaia_log'][extreme].min()),
+            mean_log=float(combined['gaia_log'][valid].mean()),
+            worst32_share_negative_log=float(np.minimum(combined['gaia_log'][extreme], 0).sum()/np.minimum(combined['gaia_log'][valid], 0).sum()))
+        # Record the accuracy of16 nodes; do not silently rewrite frozen scores.
+        check(name+'_extreme_quadrature32_64', delta32.max() < .001)
     for filename in ('color_neighbors_broad', 'template_degradation_broad', 'partition_candidate'):
         with open(TABLES/(filename+'.csv')) as stream:
             rows = list(csv.DictReader(stream))

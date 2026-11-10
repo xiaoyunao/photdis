@@ -1,0 +1,10 @@
+{
+  "name": "04b_joint_source_pdf",
+  "caption": "Deterministic identity-hash examples within stated outcome strata. Full exported grid retained despite display limits. Solid class curves include shared-g Sobol128 noise. Reference contribution is not calibrated physical class-distance posterior.",
+  "selection": "Verified DR11 PSF; development test; no display clipping",
+  "rows": 1920,
+  "model": "expanded_A",
+  "inputs": {
+    "pdf_examples": "669b1d1369c6adcb6b92819214e2f6e07ef0ed3fba76e06c5426b95fd591f346"
+  }
+}

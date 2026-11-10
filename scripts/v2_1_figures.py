@@ -203,8 +203,8 @@ def pdf_examples(by_source=False):
         channels = [('source_1', 'Gaia label contribution', BLUE), ('source_2', 'SpecDis label contribution', ORANGE)] if by_source else list(zip(CLASSES, LABELS, COLORS))
         for key, label, color in channels:
             field = 'unlabeled' if key == 'unknown' else key
-            ax.plot(x, [number(r, field) for r in data], color=color, label=label)
-        ax.plot(x, total, color='black', lw=1.4, label='Total with noise')
+            ax.plot(x, [number(r, field) for r in data], color=color, lw=3 if by_source else 1.2, label=label)
+        ax.plot(x, total, color='black', lw=.8 if by_source else 1.4, label='Total with noise')
         ax.plot(x, [number(r, 'nominal_density') for r in data], color='black', lw=1, ls='--', label='Total, nominal colors')
         ref = number(data[0], 'reference_mu')
         ax.axvline(ref, color='#9467bd', ls=':', label='Chosen reference')
@@ -237,7 +237,7 @@ def near_probability():
         axes[1].plot([number(r, 'completeness') for r in data], [number(r, 'far_contamination') for r in data], 'o-', color=color, label=label)
         if name == 'all':
             for r in data:
-                axes[1].annotate('q>'+r['threshold'], (number(r, 'completeness'), number(r, 'far_contamination')), xytext=(-8, 10), textcoords='offset points', ha='right', fontsize=9)
+                axes[1].annotate('q>'+r['threshold'], (number(r, 'completeness'), number(r, 'far_contamination')), xytext=(-14, 20), textcoords='offset points', ha='right', fontsize=9, arrowprops=dict(arrowstyle='-', color='black', lw=.6))
     axes[0].plot([0, 1], [0, 1], ls='--', color=GRAY)
     axes[0].set(xlim=(0, 1), ylim=(0, 1), xlabel='Mean predicted near probability', ylabel='Observed reference-near fraction', title='Reference-event reliability')
     axes[0].legend(fontsize=9)
@@ -267,7 +267,7 @@ def information():
         axes[0, 0].plot(np.arange(4), [number(r, 'log_gain_over_prior') for r in data], 'o-', color=color, label=label)
         axes[0, 1].plot(np.arange(4), [number(r, 'brier') for r in data], 'o-', color=color, label=label)
     axes[0, 0].axhline(0, color=GRAY, ls='--')
-    axes[0, 0].set(ylabel='Log score gain over no-color prior (nats)', title='Held-out development class information')
+    axes[0, 0].set(ylabel='Log score gain over prior\n(nats per object)', title='Held-out development class information')
     axes[0, 0].legend(fontsize=10)
     axes[0, 1].set(ylabel='Multiclass Brier score', title='Calibrated probabilities; lower is better')
     for c, label, color in [(0, 'Dwarf', BLUE), (1, 'Giant reference', ORANGE), (2, 'Other stellar', GREEN)]:
@@ -284,7 +284,7 @@ def information():
     for condition, label, color in [('high_quality', 'Original bright templates', GREEN), ('target_noise', 'Same templates + target noise', GRAY)]:
         data = [select(degraded, bands=name, condition=condition)[0] for name in names]
         axes[1, 1].plot(np.arange(4), [number(r, 'log_gain_over_prior') for r in data], 'o-', color=color, label=label)
-    axes[1, 1].set(ylabel='Template-conditional log score gain', title='Shared band noise and common target routes')
+    axes[1, 1].set(ylabel='Template-conditional\nlog score gain', title='Shared band noise and common target routes')
     axes[1, 1].legend(fontsize=10)
     for ax in axes.ravel():
         ax.set_xticks(np.arange(4), names)
@@ -341,7 +341,8 @@ def optical_candidate():
         ax.set_xticks(np.arange(3), ['All grz', 'No W1', '18–20, no W1'])
         ax.legend(fontsize=9)
     axes[0, 0].set(ylabel='Local same-class reference mass', ylim=(0, 1), title='Broad optical covariance neighborhoods')
-    axes[0, 1].set(ylabel='Template-conditional log score gain', title='Actual target noise, optical-only routes')
+    axes[0, 1].set(ylabel='Template-conditional\nlog score gain', title='Actual target noise, optical-only routes')
+    axes[0, 1].set_xticks(np.arange(3), ['All grz\nN=2000', 'No W1\nN=1351', '18–20, no W1\nN=23'])
     for model, label, color in [('control', 'Regression partitions', BLUE), ('candidate', 'Class partitions', ORANGE)]:
         rr = [select(candidate, model=model, group=g)[0] for g in ['all', 'dwarf', 'evolved', 'other', 'unknown']]
         axes[1, 0].plot(np.arange(5), [100*number(r, 'tail_1') for r in rr], 'o-', color=color, label=label)
@@ -350,7 +351,9 @@ def optical_candidate():
         ax.set_xticks(np.arange(5), ['All', 'Dwarf', 'Giant ref.', 'Other', 'Unlabeled'])
         ax.legend(fontsize=9)
     axes[1, 0].set(ylabel='Severe distance error (%)', title='Single candidate: same training and test IDs')
-    axes[1, 1].set(ylabel='Observed-parallax log score', title='Full histogram prediction; higher is better')
+    axes[1, 1].set(ylabel='Observed-parallax log score\n(symmetric-log scale)', title='Full histogram prediction; higher is better')
+    axes[1, 1].set_yscale('symlog', linthresh=.5)
+    axes[1, 1].set_yticks([-100, -10, -1, 0, 1], ['-100', '-10', '-1', '0', '1'])
     fig.suptitle('Broad optical evidence and one prespecified W1 partition candidate\nDevelopment evidence; no independent final-validation claim', fontsize=15)
     save(fig, '03b_optical_candidate', selected,
          ['color_neighbors_broad', 'template_degradation_broad', 'partition_candidate'],

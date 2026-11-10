@@ -9,19 +9,17 @@ docs/v2_1_protocol.md. Follow A→B→C→conditional D; retain full distances.
 - [x] Recover three-endpoint602727c; read complete corrected latest review.
 - [x] A: strict PSF sample, near/far migration, boundary errors, weighted application.
 - [x] B: frozen leaf joint reference contributions and full Sobol128 PDF checks.
-- [ ] C: bounded color/probability experiment, matched controls, nonstellar/sky audit.
+- [x] C: bounded color/probability experiment, matched controls, nonstellar/sky audit.
 - [ ] D: evidence-based candidate/science-validation decision and six-group delivery.
 
-A and B complete; joint61068459, band probabilities61068927 and validator
-61068929 COMPLETED0:0.3846 actual artifact checks. Broad grz/nonstellar/quality
-and full probability diagnostics complete. Broad local/noise extension remains
-to run; six-group figure QA and integrated report pending.
-
-W1 information gain motivates exactly one prespecified class-partition candidate
-versus same-identity PSF regression control (docs/v2_1_partition_candidate.md).
-Seven focused tests pass; submit once after safe source sync, evaluate six fixed
-cal guards and unchanged development outcomes. Final validation remains absent:
-only5 reserved identities in2tiles, with system-membership audit still required.
+A/B/C production complete. Single D candidate61069324 COMPLETED0:0;
+cal rejects all/evolved-tail guards. No second candidate or adoption.
+Final validation61069409 completed6509 actual checks. Bounded worst-log-score
+quadrature extension remains, plus final figure format/visual/link QA and delivery.
+All candidate/control predictions use same68004 PSF training and67207 evaluation
+identities. Six figure groups/eight plates; detailed result and requirement ledger
+written. Independent final validation remains unavailable (5 provisional IDs,
+system-membership and new-reference audit pending), explicitly not claimed.
 
 Every requirement retains its own acceptance evidence; partial diagnostics do not
 complete the scope. Existing test is development. No display clipping in scores.

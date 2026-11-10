@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-10 — single candidate rejected; principal artifact checks passed
+
+-61069324 COMPLETED0:0 in4m46s,67207 same evaluation rows/263chunks per arm.
+ Cal all/evolved severe-tail guards fail; no adoption or second candidate.
+ Dev all tails7.625→8.158%, evolved87.996→89.603%; interval score worsens.
+-61069409 COMPLETED0:0 in31s;6509 actual checks pass. First-block Gaia
+ quadrature16vs32 differs<2.3e-15. Mean Gaia log score is dominated by unlabeled
+ extremes; add worst32 integration check before final interpretation.
+- Six-group/eight-plate rendering and comprehensive A–D result/ledger drafted.
+ English-only labels enforced; final visual/format delivery QA pending.
+
 ## 2026-11-10 — broad no-WISE diagnostics completed; final validation prepared
 
 -61069325 COMPLETED0:0 in34s;2000 real broad optical neighborhoods and
