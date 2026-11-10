@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-10 — joint recovery and additional coverage audits
+
+- Confirmed61067590 FAILED1:0 in31s and queue empty for joint before submitting
+  unique61068459 with --migrate-empty. Frozen data unchanged; recovery pending
+  real leaf/PDF checks. Quality61068418 and controls61068421 also submitted.
+- Added broad grz same-label probe so the74.7%-coverage matched i/WISE test
+  is not mistaken for full optical/no-WISE evidence. Independent class entry.
+- Added real unused-identity/sky reservation audit across all frozen model and
+  evaluation IDs, excluding old/quarantined roles and occupied1-degree cells
+  plus neighbors. Output remains provisional until independent system-membership
+  and reference-evidence checks; it replaces the preliminary availability note.
+- Added full-PDF branch-window attribution and six deterministic diagnostic
+  examples. New code parse/shell checks pass; these jobs not yet submitted.
+
 ## 2026-11-10 — joint marginal guard caught large-leaf accumulation drift
 
 -61067590 stopped before predictions at frozen-leaf marginal audit. No partial

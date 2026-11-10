@@ -7,10 +7,18 @@ docs/pro_review_602727c_near_probability.md; requirement matrix:
 docs/v2_1_protocol.md. Follow A→B→C→conditional D; retain full distances.
 
 - [x] Recover three-endpoint602727c; read complete corrected latest review.
-- [ ] A: strict PSF sample, near/far migration, boundary errors, weighted application.
+- [x] A: strict PSF sample, near/far migration, boundary errors, weighted application.
 - [ ] B: frozen leaf joint reference contributions and full Sobol128 PDF checks.
 - [ ] C: bounded color/probability experiment, matched controls, nonstellar/sky audit.
 - [ ] D: evidence-based candidate/science-validation decision and six-group delivery.
+
+A completed61067510; matched information probe completed61067835. Joint first
+61067590 failed guarded pre-prediction float32 accumulation audit; corrected
+integer-count normalization tested, unique recovery61068459 submitted with
+explicit empty-checkpoint migration. Quality61068418 and controls61068421
+submitted; verify latest queue/logs before any retry. No duplicate submission.
+Broad optical/no-WISE probe, true unused-identity/sky reservation audit and joint
+attribution exporters are implemented; production status must be verified.
 
 Every requirement retains its own acceptance evidence; partial diagnostics do not
 complete the scope. Existing test is development. No display clipping in scores.
