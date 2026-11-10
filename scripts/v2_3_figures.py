@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
 """Compact English plates; cache corrections first, model plates when ready."""
 import argparse
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 import v2_2_figures as f
 from photdis_figure_style import STYLE,BLUE,ORANGE,GREEN,GRAY
 f.TABLES=f.ROOT/'manifests/v2_3';f.FIG=f.ROOT/'figures/v2_3'
-read,sel,val,save=f.read,f.sel,f.val,f.save
+read,sel,val=f.read,f.sel,f.val
+
+
+def save(fig,name,sources,caption):
+    f.save(fig,name,sources,caption)
+    path=f.TABLES/'figures'/(name+'.json');meta=json.loads(path.read_text())
+    meta['selection']='Verified DR11 PSF; scientific denominators and scores untrimmed; posterior example display bounds report retained mass; no independent final validation'
+    path.write_text(json.dumps(meta,indent=2)+'\n')
 
 
 def corrections():
@@ -102,3 +110,22 @@ def additional_results():
 
 if __name__=='__main__' and a.models:
     additional_results()
+
+
+def posterior_examples():
+    data=read('posterior_examples');groups=list(dict.fromkeys(r['group'] for r in data));fig,axes=plt.subplots(2,3,figsize=(16,9),constrained_layout=True)
+    for ax,group in zip(axes.ravel(),groups):
+        base=sel(data,group=group);ref=val(base[0],'ref_mu');sig=val(base[0],'ref_sigma')
+        lo=min(ref-2,min(val(x,'mu025') for x in base))-1;hi=max(ref+2,max(val(x,'mu975') for x in base))+1
+        ax.axvspan(ref-sig,ref+sig,color=GRAY,alpha=.2);ax.axvline(ref,color=GRAY,ls='--')
+        for model,color in [('control',BLUE),('candidate',ORANGE)]:
+            rr=sorted(sel(base,model=model),key=lambda x:val(x,'mu'));x=np.array([val(r,'mu') for r in rr]);y=np.array([val(r,'density') for r in rr]);visible=(x>=lo)&(x<=hi)
+            mass=float(y[visible].sum()*.1)
+            ax.plot(x,y,color=color,label=f'{model}: q={val(rr[0],"qnear"):.3f}; shown={mass:.3f}')
+        ax.set(xlabel='Distance modulus (mag)',ylabel='Probability density',title=group.replace('_',' '),xlim=(lo,hi));ax.legend(fontsize=8);ax.title.set_fontsize(14)
+    fig.suptitle('Fixed-identity posterior examples · no selection by model success')
+    save(fig,'09_posterior_examples',['posterior_examples'],'Lowest identity per reference-defined development stratum. Display bounds include both95% intervals and reference; displayed mass explicit, scientific metrics untrimmed. Full numerical distributions and mixture parameters retained.')
+
+
+if __name__=='__main__' and a.models:
+    posterior_examples()

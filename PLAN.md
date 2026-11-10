@@ -7,7 +7,7 @@ docs/v2_3_protocol.md. Cache corrections/inventory first; one same-PSF control
 and error-aware multimodal candidate frozen before reserved outcomes.
 - [x] Noise baseline correction and outcome-blind evaluation-reference inventory:173chosen,2952weak/644SNR>=5Gaia;42076reserved.
 - [x] Freeze near scope, exact-owner266774PSF distance support/43914unlabeled;6math/scoring tests.
-- [ ] Fit/freeze one candidate and same-identity QRF; job61078462(debug30min) submitted after owner repair; then evaluate reserved IDs.
+- [ ] Fit/freeze one candidate and same-identity QRF; Models fitted/frozen by61078462; stopped for Gaussian-tail numerical repair. Recovery61079083 reuses fitted models and QRF chunks; diagnostics61078869 now depends on recovery.
 - [ ] Selected-distance, poor-metal, far/reference, target-coverage diagnostics.
 - [ ] English figures, actual artifact checks, explicit evidence limits, safe sync.
 No deployment, full catalog, monitoring or subagents.

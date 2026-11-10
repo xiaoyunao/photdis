@@ -3,9 +3,10 @@
   "cancelled_before_fit": "61078245",
   "owner_repair": "61078415",
   "model": "61078462",
-  "model_status": "RUNNING on nid004472; same-PSF QRF fitted, XD training; reserved outcomes still closed at last inspection",
+  "model_status": "61078462 CANCELLED at20:13 for numerical PDF-tail repair; models converged and frozen",
   "timers": false,
   "owner_repair_status": "COMPLETED0:0",
   "diagnostics": "61078869",
-  "diagnostics_dependency": "afterok:61078462"
+  "diagnostics_dependency": "afterok:61079083",
+  "recovery": "61079083"
 }

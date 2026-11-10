@@ -210,6 +210,28 @@ def admission_effect(t):
     csv_rows(TABLES/'admission_effect.csv',rows)
 
 
+def posterior_examples(t):
+    groups=masks(t);d=10**((t['ref_chosen']-10)/5);dev=t['split']==2
+    choices={'near_dwarf':groups['dwarf']&(d<2),'poor_metal_dwarf':groups['metal_poor_dwarf']&(d<5),
+        'giant_10_20':groups['evolved']&(d>=10)&(d<20),'giant_20_50':groups['evolved']&(d>=20)&(d<50),
+        'unlabeled_low_luminosity':groups['unknown']&groups['low_luminosity'],
+        'near_boundary':(d>=8)&(d<12)}
+    records=[]
+    for group,mask in choices.items():
+        ids=np.flatnonzero(dev&mask&np.isfinite(t['ref_chosen']))
+        if not len(ids):continue
+        row=int(ids[np.argmin(t['identity'][ids])])
+        for name in ('control','candidate'):
+            start=row//256*256;p=load(DEST/'chunks'/f'development_{name}_{start:07}.npz');j=row-start
+            assert p['identity'][j]==t['identity'][row] and p['TYPE'][j]=='PSF'
+            edges=load(DEST/(name+'_grid.npz'))['edges'];mu=t['g0'][row]-(edges[:-1]+edges[1:])/2
+            for x,prob in zip(mu,p['pdf'][j]):
+                records.append(dict(group=group,identity=int(t['identity'][row]),TYPE='PSF',model=name,mu=float(x),density=float(prob/.1),
+                    ref_mu=float(t['ref_chosen'][row]),ref_sigma=float(t['sigma_mu'][row]),qnear=float(p['qnear'][j]),
+                    mu025=float(p['mu'][j,0]),mu975=float(p['mu'][j,4]),selection='Smallest identity in reference-defined development stratum, independent of model outcomes'))
+    csv_rows(TABLES/'posterior_examples.csv',records)
+
+
 def decision(distance,gaia,risk):
     def d(model,group):return next(x for x in distance if x['role']=='cal' and x['model']==model and x['group']==group and x['selection']=='all' and x['reference']=='chosen' and x['low_kpc']==0 and np.isinf(x['high_kpc']))
     def g(model):return next(x for x in gaia if x['role']=='cal' and x['model']==model and x['group']=='all' and x['selection']=='all')
@@ -228,7 +250,7 @@ def decision(distance,gaia,risk):
 def main():
     require_compute();TABLES.mkdir(exist_ok=True)
     t=load(ROOT/'data/v2_1/development.npz');a,g,r=compare('development',t)
-    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);decision(a,g,r)
+    compare('reserved',load(DEST/'reserved_inputs.npz'));poor_metal(t);bootstrap(t);application();admission_effect(t);posterior_examples(t);decision(a,g,r)
     save_json(DEST/'diagnostics_complete.json',dict(job=os.getenv('SLURM_JOB_ID'),models=json.loads((DEST/'models_frozen.json').read_text()),
         tables={p.name:sha(p) for p in TABLES.glob('*.csv')},
         source_sha256=sha(ROOT/'scripts/v2_3_diagnostics.py'),new_scale_validation=False))

@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-10 — production numerical validation blocks delivery
+- Recovery61079083 COMPLETED0:0 in1m48s; both fitted models unchanged, all development/reserved/application predictions complete after stable-tail repair.
+-61078869 finished diagnostic/far tables (1794far oracle rows), then validator failed candidate analytic-q versus0.1mag histogram mass on first development chunk. Do not relax check or publish candidate result as verified.
+- Added allocation-only precision audit over stored mixture parameters at fixed finer grids to diagnose required numerical resolution. This is representation accuracy, not model/hyperparameter tuning; no refit.
+- Added deterministic lowest-ID posterior examples; production examples pending. Current source changes preserve trained methods/params.
+
+
 ## 2026-11-10 — Gaussian-tail numerical repair, models retained
 - XD converged at179iterations; both fitted models frozen before any evaluation. At19m22,development predictions complete and reserved control generation had begun; no predictive scores/aggregates inspected.
 - Analytic regression test exposed direct Gaussian CDF subtraction losing right-tail mass (10–11sigma); fixed survival-CDF subtraction and candidate float64 PDF storage. Seven tests now pass. Fit/conditional-mixture AST and both model files must stay identical.
