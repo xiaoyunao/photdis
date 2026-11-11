@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — explicit candidate transfer semantics and actual sample scores
+-Add native conditional population-transfer driver withshared globaldrawIDs,
+ exactnativeCDF/count integration, modes/photometric system/prior-sensitivity flags.
+ It is explicitlymodular, notfull-catalog generative refitting; exactsamplejoint
+ counts, design totals andconditionalcandidatecounts remainseparate. Actualpilot
+ ispending; no productionprecisionclaim fromcode. Scope documented.
+-Same26000nominal targetprior Gaiaevaluation: nearobservable nonSEDfitN2563,
+ weightedPITtails4.32%/10.34%; high-tail miscalibration remains.
+-Prospectivephotometry3250/2048/8192 completed, identityisolated; pureprediction
+ and first45882objectcandidatefield submitted. No referenceoutcomes opened.
+
 ## 2026-11-11 — actual prospective method freeze completed
 -61142743COMPLETED14s: method freeze SHA14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528.
  Models/priors/core/metrics/output definitions locked; numerical integration
