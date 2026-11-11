@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — production recovery driver and full-update uncertainty sensitivity
+-Three62880object development prediction logs reached completion; application26000
+and hyper11709completed calculations. Selection numerical refinement61138349
+running;QRF scoring61138351submitted. Terminal/artifact checks follow.
+-Add112x128continuous mock catalogs:12independent empirical transfer scenarios
+plus known-model and same-library controls. Known control uses the actual
+continuous radial family; transfer includes off-family/narrow/class-correlated
+distances. Measurement/teacher uncertainties and reused source identities explicit.
+-Add atomic checkpointed converged shared-bootstrap EM sensitivity (same fitted
+family/hyperparameters/source draws, no family search). It will compare fixed
+draws0/16 against one-update responses before deciding uncertainty adequacy.
+-44tests pass and new drivers parse/static-check. All final real outcomes closed.
+
 ## 2026-11-11 — stable Gaussian entry integration and continuous transfer core
 -Submit unique development grz61138101/griz61138107/multiband61138109, original
 application61138112, hyper61138114, QRF61138119 and selection audit61138122.

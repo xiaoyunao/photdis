@@ -20,6 +20,7 @@ STAGES = {
     'selection': 'v3_0_selection.py', 'target': 'v3_0_target.py',
     'qrf': 'v3_0_qrf_predict.py', 'evaluate': 'v3_0_evaluate.py',
     'selection-audit': 'v3_0_selection_audit.py',
+    'simulate': 'v3_0_simulate.py', 'uncertainty-refit': 'v3_0_uncertainty_refit.py',
 }
 
 

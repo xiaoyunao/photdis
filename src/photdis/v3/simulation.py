@@ -36,7 +36,7 @@ def empirical_library(bank, seed=302501):
                 feh=bank['corrected_feh'], feh_valid=bank['corrected_feh_valid'])
 
 
-def draw_transfer(library, contexts, scenario, n=128, seed=302502, first_identity=0):
+def draw_transfer(library, contexts, scenario, n=128, seed=302502, first_identity=0, known_distance=False):
     """Observed-catalog experiment, with distances continuous before selection."""
     settings = SCENARIOS[scenario]; rng = np.random.default_rng(seed)
     populations = []
@@ -66,6 +66,10 @@ def draw_transfer(library, contexts, scenario, n=128, seed=302502, first_identit
         # Three overlapping continuous components; never the reporting-bin nodes.
         component = rng.choice(3, size=size, p=[.45, .4, .15])
         mu = rng.normal(np.array([11., 13., 16.5])[component], np.array([1.5, 1., 2.])[component])
+        if known_distance:
+            from .inference import DISTANCE_BASIS_MEAN, DISTANCE_BASIS_SIGMA
+            component = rng.integers(len(DISTANCE_BASIS_MEAN), size=size)
+            mu = rng.normal(DISTANCE_BASIS_MEAN[component], DISTANCE_BASIS_SIGMA[component])
         if settings.get('correlated'): mu += np.where(label == 1, 3., np.where(label == 2, 1., 0.))
         if settings.get('narrow'): mu = rng.normal(10+5*np.log10(4.), .08, size)
         binary = rng.random(size) < settings.get('binary_fraction', .1)
@@ -99,4 +103,24 @@ def draw_transfer(library, contexts, scenario, n=128, seed=302502, first_identit
     result['ls_id'] = result['identity'].copy()
     return result, truth, dict(attempted=attempts, accepted_before_cap=accepted_before_cap,
         generated_class_weights=class_weights.tolist(), absent_classes=np.flatnonzero(absent).tolist(),
-        common_library_seed=302501, model='empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth')
+        common_library_seed=302501, known_distance_family=known_distance, model='empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth')
+
+
+def model_library(model, n=65536, seed=302599):
+    """Known generative-model control, including audited Gaussian flux support.
+
+    This mathematical control does not claim that negative intrinsic SED flux is
+    physical. Fresh libraries per realization avoid treating repeated templates
+    as independent observed calibrators.
+    """
+    rng = np.random.default_rng(seed)
+    component = rng.choice(len(model.weights), size=n, p=model.weights)
+    values = np.empty((n, 7)); labels = np.empty(n, 'i1')
+    for k in range(len(model.weights)):
+        rows = np.flatnonzero(component == k)
+        values[rows] = rng.multivariate_normal(model.means[k], model.covariances[k], size=len(rows))
+        labels[rows] = rng.choice(3, size=len(rows), p=model.classes[k])
+    return dict(flux=values[:, :6], mask=np.ones((n, 6), bool),
+        identity=-(800000000000000000+seed*100000+np.arange(n, dtype='i8')),
+        class_label=labels, feh=values[:, 6], feh_valid=np.ones(n, bool),
+        reference_shift=np.zeros(n))
