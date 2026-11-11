@@ -1,5 +1,29 @@
 # PLAN
 
+## Active v3.0 unified research system
+Full review: docs/pro_review_b59e18b.md (14,327-character complete latest reply).
+Detailed active goal in this chat; development contract: docs/v3_0_protocol.md.
+This user-authorized stage supersedes previous restrictions on new modeling,
+opening the 3250 reservation after freeze, and existing-field candidate catalogs.
+Historical outputs and actual deployment remain immutable. No timers or agents.
+
+- [ ] A — exact-identity PSF data, native six-band likelihood inputs, source dependence,
+  untruncated SpecDis binary flag, missing labels / contiguous FeH, isolated roles.
+- [ ] B — continuous distance / empirical SED forward likelihood, multiple branches,
+  native weak/negative flux, censored/missing bands, dust / systems / binaries.
+- [ ] C — source calibration and target population with shared uncertainty;
+  reference-prior and population-prior joint posteriors, counts and covariance.
+- [ ] D — fixed matched method/band/prior contrasts, information probe, continuous
+  independent-SED recovery and transfer; full conditional PDF and count metrics.
+- [ ] E — freeze model/priors/metrics/tolerances, once-only reserved real validation,
+  photometric-first new sky, independent scale; supported/limited/unverified domains.
+- [ ] F — actual benchmark, existing-field qualified candidate catalog, joint near/far
+  counts, real marginalization example, English figures, reports, delivery audit.
+
+Immediate: prepare allocated reference inventory and native-flux data contract;
+implement and independently test continuous likelihood / covariance calculations.
+Do not label any milestone complete from code or planning alone. No deployment.
+
 ## Completed v2.6 observed-catalog inference
 Full requirements: docs/pro_review_39e6e4f.md; results docs/v2_6_result.md.
 - [x] A: same192catalog per-star joint probabilities and correlated latent counts.

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — v3.0 authorization, complete review and active goal
+- Read latest Pro reply to b59e18b in full (14,327 characters); archive verbatim in
+  docs/pro_review_b59e18b.md; create detailed active goal covering actual A–F delivery.
+- Recovered clean main / fetched all remotes; three endpoints initially b59e18b.
+  NERSC authentication valid and metadata query completed; no v3 jobs submitted yet.
+- Verified official SpecDis v2.1 binary flag is Gaia-residual-derived; historical
+  flag=1 selection must be retained only as baseline. Full raw VAC row links exist.
+- Native six-band flux/TYPE for the entire reference pool exist in v2_0/native_report;
+  original application parent caches omit TYPE/raw flux and need native recovery.
+- Next: allocated data/role inventory, independent continuous native-flux tests,
+  then staged implementation, production and prospective validation before delivery.
+
 ## 2026-11-11 — v2.6 complete: observed-catalog inference and scientific delivery
 -61129359populationCOMPLETED0:0(2:28),61129363luminosityinitialCOMPLETED0:0(1:25),61129820numericrefinementCOMPLETED0:0(1:08);final61130114COMPLETED0:0(0:46),1648actualchecks. Earlierwriterfailure/migration andinitialvalidation preserved.
 - Same192catalogs/24576observations now have20-componentper-star jointprobabilities,8192shared-parameter latent-count draws andcovariances.Three restrictedcontrols support response-migration explanation; nested256/768/2048sources andevidence-weighted16responseprior draws improve counts butnot fully calibratedintervals.
