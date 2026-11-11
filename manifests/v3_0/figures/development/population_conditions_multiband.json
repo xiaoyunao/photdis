@@ -1,0 +1,12 @@
+{
+  "model": "multiband",
+  "source": "primary",
+  "caveat": "Seen reference selection; CMD uses reference distance only after inference. FeH is an evaluation coordinate, not an application feature.",
+  "png_sha256": "49383c1f5b79ffb33642416393fa29b66b15e71565908b90c1fefbfc9395aadc",
+  "pdf_sha256": "7e071f0caaaba8424f490dd40c5a28dcaee85699dda2d68b62a190e655f0a1ed",
+  "csv_sha256": "ae20252db9f7c002e569b7d15a3d71fcf6973329237d418148f69b389828bd1a",
+  "png_dpi": 300,
+  "english_text_verified": true,
+  "stage": "Seen development, reference-prior prediction; not final independent acceptance",
+  "job": "61139229"
+}

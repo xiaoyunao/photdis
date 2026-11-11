@@ -1,0 +1,52 @@
+{
+  "model": "griz_fit",
+  "population": "evolved",
+  "selections": {
+    "primary": {
+      "valid": 1248,
+      "x_mean_kpc": 32.69402957707675,
+      "x_sigma_kpc": 20.152189678369954,
+      "y_mean_kpc": 4.83957005113722,
+      "y_sigma_kpc": 5.69231331988146,
+      "kept": 1208,
+      "clipped": 40
+    },
+    "gaia_precise": {
+      "valid": 1,
+      "x_mean_kpc": 0.3295008944881359,
+      "x_sigma_kpc": 0.0,
+      "y_mean_kpc": 2.251286304428279,
+      "y_sigma_kpc": 0.0,
+      "kept": 1,
+      "clipped": 0
+    },
+    "specdis": {
+      "valid": 1171,
+      "x_mean_kpc": 32.686160721891554,
+      "x_sigma_kpc": 20.52665951704793,
+      "y_mean_kpc": 4.693815997972554,
+      "y_sigma_kpc": 5.577820621596046,
+      "kept": 1130,
+      "clipped": 41
+    },
+    "spdist": {
+      "valid": 1026,
+      "x_mean_kpc": 28.734927223168995,
+      "x_sigma_kpc": 12.489999425069081,
+      "y_mean_kpc": 4.9396456357311145,
+      "y_sigma_kpc": 5.7326479362474245,
+      "kept": 994,
+      "clipped": 32
+    }
+  },
+  "residual_definition": "100*(d_phot/d_reference - 1)",
+  "display_cut": "single simultaneous mean +/-3 population sigma in linear kpc, each population/model/reference independently",
+  "metrics": "Scientific tables remain un-clipped; primary references follow availability hierarchy",
+  "png_sha256": "1a31f4b3178f3ce2f6075f892fadca91d7464425b3ee96ce131120c96119de7f",
+  "pdf_sha256": "1d331dbaa94a29c9407eb5c01fc4dcca6cb848f976d754de1eeb19493bc418a1",
+  "csv_sha256": "097ac6189da88fd21fdbf5c0940b64d61cfcd71ef4f0a94b0e80b900e7814297",
+  "png_dpi": 300,
+  "english_text_verified": true,
+  "stage": "Seen development, reference-prior prediction; not final independent acceptance",
+  "job": "61139229"
+}

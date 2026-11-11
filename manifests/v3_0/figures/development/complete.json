@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "qrf": "6dc2d960847019a9def66682762e0114c55d7c89d536d23845acca3d8b944cf4",
+    "grz_fit": "6916781e33c9e6ce9bd5a8038d258b843506937993eed9d75c5e6232fc550a86",
+    "griz_fit": "98b6c8afe2cab146dae94fd461a87a406c329dda79247f4efc83313cd993bcb8",
+    "multiband_fit": "e1c2af9f79083d262a2eafe1975dc9e1862812fb11c5763db082aa17611df36e",
+    "photometric_coordinates": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db"
+  },
+  "figures": 21,
+  "job": "61139229"
+}

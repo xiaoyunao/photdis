@@ -1,0 +1,52 @@
+{
+  "model": "grz_fit",
+  "population": "other",
+  "selections": {
+    "primary": {
+      "valid": 6649,
+      "x_mean_kpc": 7.173075226873405,
+      "x_sigma_kpc": 7.362817995031321,
+      "y_mean_kpc": 4.904698005523249,
+      "y_sigma_kpc": 3.462554436462505,
+      "kept": 6449,
+      "clipped": 200
+    },
+    "gaia_precise": {
+      "valid": 298,
+      "x_mean_kpc": 0.9665886054256336,
+      "x_sigma_kpc": 0.7521925962828448,
+      "y_mean_kpc": 0.898813528075901,
+      "y_sigma_kpc": 0.8450860500608138,
+      "kept": 297,
+      "clipped": 1
+    },
+    "specdis": {
+      "valid": 6439,
+      "x_mean_kpc": 7.107321868174759,
+      "x_sigma_kpc": 7.289160599847054,
+      "y_mean_kpc": 4.892899912418825,
+      "y_sigma_kpc": 3.458348716173377,
+      "kept": 6251,
+      "clipped": 188
+    },
+    "spdist": {
+      "valid": 5117,
+      "x_mean_kpc": 6.583745182524589,
+      "x_sigma_kpc": 5.5596850717673485,
+      "y_mean_kpc": 4.706120832533392,
+      "y_sigma_kpc": 2.961432764998952,
+      "kept": 4944,
+      "clipped": 173
+    }
+  },
+  "residual_definition": "100*(d_phot/d_reference - 1)",
+  "display_cut": "single simultaneous mean +/-3 population sigma in linear kpc, each population/model/reference independently",
+  "metrics": "Scientific tables remain un-clipped; primary references follow availability hierarchy",
+  "png_sha256": "b49f8b69bf6c97aeb3f7b9c4823fa08ece13df87bf84f1d3bdf1f3ac00c56ce5",
+  "pdf_sha256": "78e68cee2aab599837289a37738e05c27932ca35e1eb3a0a00cbb2ac19244704",
+  "csv_sha256": "ebec235fdf7caee48aaeb2b132a0e092f8e629f2cb0a2be594503af790e0a071",
+  "png_dpi": 300,
+  "english_text_verified": true,
+  "stage": "Seen development, reference-prior prediction; not final independent acceptance",
+  "job": "61139229"
+}
