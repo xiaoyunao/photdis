@@ -1,0 +1,23 @@
+{
+  "full_rows": 3565499,
+  "native_missing": 0,
+  "nonPSF": 148378,
+  "missing_TYPE": 0,
+  "photometry_failure": 2930893,
+  "identity_conflict": 90,
+  "admitted": 612114,
+  "output_sha256": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+  "specdis_without_flag": 402468,
+  "specdis_flag_not1": 10298,
+  "primary_channels": {
+    "0": 103983,
+    "1": 402468,
+    "2": 66644,
+    "3": 39019
+  },
+  "native_source": "v2_0 all-reference native_report, exact ls_id",
+  "primary_policy": "SpecDis then SPDist then signed Gaia; alternatives not multiplied",
+  "prospective_outcomes_opened": false,
+  "job": "61131782",
+  "remaining": "No new-sky/application sample yet; no fitted v3 model; source errors not calibrated."
+}

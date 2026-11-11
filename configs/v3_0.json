@@ -1,0 +1,22 @@
+{
+  "version": "v3.0-development",
+  "seed": 301111,
+  "bands": ["G", "R", "I", "Z", "W1", "W2"],
+  "main_system": "DECam_DR11",
+  "other_system": "BASS_MzLS_DR9",
+  "distance_bins_kpc": [0, 2, 5, 10, 20, 50, null],
+  "calibration_max_sources": 8192,
+  "calibration_bootstrap_draws": 32,
+  "reference_mu_nodes": 24,
+  "reference_gaia_prior": {"name": "EDSD", "scale_kpc": 1.35},
+  "reference_vac_prior": "flat_distance_modulus",
+  "sed_training_max_sources": 32768,
+  "sed_components": 128,
+  "sed_max_iter": 64,
+  "probability_refinement_tolerance": 0.005,
+  "quantile_refinement_tolerance_mag": 0.01,
+  "boundary_mass_tolerance": 0.00001,
+  "chunk_size": 1024,
+  "prospective_opened": false,
+  "deployment": false
+}

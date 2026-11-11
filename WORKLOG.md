@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — v3 reference reconstruction completed; source calibration implemented
+-61131782 COMPLETED0:0 in56s.612114 admitted nativePSF imaging/identity references;
+  402468 untruncated SpecDis, including10298 binaryflag!=1 objects. Full3,565,499
+  rows audited,148378nonPSF,0missingTYPE. Counts are reference inventory, not accuracy.
+- Roles:317297training (85866missingclass),46041sourcecal,11709hyperparameters,
+  62880seen-development;174187historical/quarantined. No reserved outcomes opened.
+- Add explicit source-dependent signed-Gaia calibration and shared-sky bootstrap;
+  direct numerical integral tests, negative-parallax and sub-grid precise-Gaia nodes.
+- Primary source policy/no-source objects/missing labels retained. Scientific domain,
+  new-sky selection, actual fittedSED and application benchmarks still outstanding.
+
 ## 2026-11-11 — v3 preparation submitted and independent numerical core tested
 - 3a426e9 synchronized to local/origin/NERSC; queue confirmed empty, submitted
   unique preparation61131782. Raw source/PSF inventory runs on Slurm; no reservation outcomes.
