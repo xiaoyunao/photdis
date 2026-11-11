@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — single-use field hierarchy and posterior sampling
+-61137407COMPLETED0:0 in44s. First32object chunk21.31s/5.69MBjoint, all32
+ converged; benchmark model only.61137636independent photometry and61137637
+ selection benchmark submitted once after empty-name check.
+-Implement global hypermean plus field deviations; each datum occurs once in its
+ own field likelihood. Metropolis-corrected HMC adapts only in warmup; splitRhat,
+ ESS, divergence and final joint-marginal precision gates prevent Hessian-only
+ intervals being reported as validated. Shared-draw contractions retain joint
+ class/distance covariance and int64 catalog realizations.
+-41focused tests, syntax/static checks pass, including finite-difference hierarchy
+ gradient, correlated-Gaussian sampling, and batched/separate joint agreement.
+-Target driver now joins the actual compressed posteriors and certified selection
+ tables. Production sampler and response-ensemble propagation still pending.
+
 ## 2026-11-11 — conditional selection interpolation and joint benchmark
 -61137407completed prediction calculation for64application objects, retaining
  jointCDF and full marginal log-density; terminal/hash/size audit follows.

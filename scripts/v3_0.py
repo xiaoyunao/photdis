@@ -17,7 +17,7 @@ STAGES = {
     'controls': 'v3_0_controls.py', 'cohorts': 'v3_0_cohorts.py',
     'uncertainty': 'v3_0_uncertainty.py', 'benchmark': 'v3_0_response.py',
     'predict': 'v3_0_predict.py', 'independent': 'v3_0_independent.py',
-    'selection': 'v3_0_selection.py',
+    'selection': 'v3_0_selection.py', 'target': 'v3_0_target.py',
 }
 
 

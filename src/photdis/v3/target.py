@@ -105,3 +105,24 @@ def joint_distance_probability(response_bins, model, theta, beta):
     total = joint.sum(axis=(1, 2))
     if (total <= 0).any(): raise ValueError('Zero joint target support')
     return joint/total[:, None, None]
+
+
+def joint_coefficients(model, theta, beta):
+    """Shared draw x component x radial basis x class coefficients."""
+    features, _ = sed_tilt_features(model)
+    logprior = np.log(model.weights)[None, :, None]+np.log(model.classes)[None]
+    logprior = logprior+np.einsum('kf,sf->sk', features, beta)[:, :, None]
+    prior = softmax(logprior, axis=1)
+    return np.einsum('skc,scd->skdc', prior, theta)
+
+
+def joint_draw_probabilities(response_bins, coefficients):
+    """Batched exact joint integration; retain shared draw ordering across chunks."""
+    r = np.asarray(response_bins); coef = np.asarray(coefficients)
+    n, k, d, b = r.shape; s, _, _, c = coef.shape
+    matrix = r.transpose(0, 3, 1, 2).reshape(n*b, k*d)
+    weights = coef.transpose(1, 2, 0, 3).reshape(k*d, s*c)
+    joint = (matrix@weights).reshape(n, b, s, c).transpose(2, 0, 3, 1)
+    norm = joint.sum(axis=(2, 3), keepdims=True)
+    if (norm <= 0).any(): raise ValueError('Zero shared joint support')
+    return joint/norm

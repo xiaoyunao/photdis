@@ -94,7 +94,9 @@ def main():
         selected = np.argsort(stable_rank(_TABLE['identity'], 302001))[:args.limit]
         _TABLE = {k: v[selected] for k, v in _TABLE.items()}
     assert (_TABLE['TYPE'] == 'PSF').all()
-    fitted = joblib.load(model_path); _MODEL = inference_model(fitted); _CONTROL = joblib.load(control_path)
+    fitted = joblib.load(model_path)
+    if args.model == 'fit' and not fitted.converged: raise RuntimeError('Unconverged full SED cannot enter production')
+    _MODEL = inference_model(fitted); _CONTROL = joblib.load(control_path)
     if args.cohort != 'application': assert not np.intersect1d(_TABLE['identity'], fitted.training_identity).size
     _BANDS = np.array([1, 1, 0, 1, 0, 0], bool) if args.view == 'grz' else np.array([1, 1, 1, 1, 0, 0], bool) if args.view == 'griz' else np.ones(6, bool)
     paths = [input_path, model_path, control_path, ROOT/'scripts/v3_0_predict.py',

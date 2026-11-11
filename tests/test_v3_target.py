@@ -26,3 +26,14 @@ def test_component_response_recovers_direct_joint_population_posterior():
     direct, _ = target_posterior(m, o, p.mu, theta)
     expected = direct.distance_bins().reshape(2, 2, 3, 6).sum(axis=(0, 1))
     np.testing.assert_allclose(got, expected, atol=5e-4)
+
+
+def test_batched_joint_draws_equal_separate_exact_contractions():
+    from photdis.v3.target import joint_coefficients, joint_draw_probabilities
+    rng = np.random.default_rng(333); m = model()
+    response = rng.uniform(.01, 1, (7, 2, 5, 6))
+    theta = rng.dirichlet(np.ones(15), size=9).reshape(9, 3, 5)
+    beta = rng.normal(0, .2, (9, 2))
+    batched = joint_draw_probabilities(response, joint_coefficients(m, theta, beta))
+    expected = np.array([joint_distance_probability(response, m, t, b) for t, b in zip(theta, beta)])
+    np.testing.assert_allclose(batched, expected, atol=2e-15)
