@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — scope manifest byte normalization
+-NewsmallscopeCSV useddefaultCRLF whileGit enforcesLF. Normalizebytes and
+ recomputeprovenancehash; valuesunchanged. Existing36figureCSV working/HEAD
+ bytesverifiedidentical; productioncsv_rows alreadyusesexplicitLF.
+
 ## 2026-11-11 — explicit candidate footprint and completed milestones
 -Derive14fieldbounds/parent/native/candidate counts fromcheckedregistry and
  auditmanifests; sums9390518parent/1183990candidateverified. Existing-parent
