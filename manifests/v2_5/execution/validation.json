@@ -1,5 +1,5 @@
 {
-  "actual_checks": 1958,
+  "actual_checks": 1966,
   "all_passed": true,
   "checks": {
     "freeze:scripts/v2_5_diagnostics.py": true,
@@ -14,6 +14,14 @@
     "freeze:data/v2_1/development.npz": true,
     "original_model:control": true,
     "original_model:candidate": true,
+    "numerical_freeze:scripts/v2_5_refine.py": true,
+    "numerical_freeze:docs/v2_5_numerical_amendment.md": true,
+    "numerical_freeze:scripts/v2_5_population.py": true,
+    "numerical_freeze:src/photdis/population_v2_5.py": true,
+    "numerical_freeze:data/v2_5/catalogs.npz": true,
+    "numerical_freeze:data/v2_5/cal_templates.npz": true,
+    "numerical_freeze:data/v2_5/test_templates.npz": true,
+    "numeric_only_catalog_preserved": true,
     "cal_test_disjoint": true,
     "cal:PSF": true,
     "cal:no_fit_overlap": true,
@@ -1961,5 +1969,5 @@
     "retained_weak_parallax": true,
     "reservation_still_unopened": true
   },
-  "job": "61127009"
+  "job": "61127630"
 }

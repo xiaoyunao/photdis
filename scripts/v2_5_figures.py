@@ -75,11 +75,11 @@ def main():
     for regime,color,label in [('0',BLUE,'Photometric entrance'),('1',ORANGE,'Complement stress')]:
         coverage=[];cor=[];grid=[]
         for d in designs:
-            q=sel(r,design=d,regime=regime,method='parameter');coverage.append(np.mean([val(t,'coverage') for t in q])*100)
+            q=sel(r,design=d,regime=regime,method='parameter',bin=1);coverage.append(np.mean([val(t,'coverage') for t in q])*100)
             q=sel(di,design=d,regime=regime);cor.append(np.mean([val(t,'max_correlation') for t in q]));grid.append(max(val(t,'grid_max_delta') for t in q))
         for a,y in zip(ax,[coverage,cor,grid]):a.plot(range(8),y,'o-',color=color,label=label)
     for a in ax:a.set(xticks=range(8),xticklabels=['Ref','Giant','Poor','Dist','Ord','G-rich','P-rich','Bal']);a.tick_params(axis='x',labelsize=9)
-    ax[0].axhline(95,color=GRAY,ls='--');ax[0].set(ylabel='Mean parameter coverage (%)',ylim=(-2,102));ax[1].set_ylabel('Maximum |parameter correlation|');ax[2].set_ylabel('Max fraction change: doubled grid');ax[0].legend(fontsize=9)
+    ax[0].axhline(95,color=GRAY,ls='--');ax[0].set(ylabel='2–5 kpc parameter coverage (%)',ylim=(-2,102));ax[1].set_ylabel('Mean max |parameter correlation|');ax[2].set_ylabel('Max fraction change: doubled grid');ax[0].legend(fontsize=9)
     fig.suptitle('Coverage and identifiability · numerical limitations are retained')
     save(fig,'06_coverage_identifiability',['recovery_summary','identifiability'],'12independent catalogs per design; Wilson intervals for each distance bin in CSV. Parameter intervals and replicate-count intervals are separate. Boundary mass, quadrature ESS and grid convergence retained; high correlation or narrow wrong intervals prohibit adoption.')
     r=read('uncertainty_sources');fig,ax=plt.subplots(1,2,figsize=(14,5),constrained_layout=True)

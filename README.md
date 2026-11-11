@@ -1,6 +1,18 @@
 # photdis
 
-Latest completed audit: **Photdis v2.4 frozen-posterior scientific use**.
+Latest completed prototype: **Photdis v2.5 target-population inference**.
+[Results](docs/v2_5_result.md) · [Eight English plates](docs/v2_5_atlas.md) ·
+[Requirements and limits](docs/v2_5_requirements_result.md).
+Outcome-blind red controls and signed-Gaia metal pairs are complete. A four-
+parameter, selection-normalized empirical response improves distance-distribution
+means in192independent mock catalogs, but composition and interval coverage fail
+parts of acceptance. No deployment or physical-population calibration claim.
+1966actual compute checks,4focused tests and80delivery checks pass. Verify with
+`python3 scripts/v2_5_delivery.py`. Source-separated256cal/224test templates,
+large posterior caches and initial numerical archive remain on NERSC.
+3250prospective nativePSF identities stay unopened pending suitable validation.
+
+Previous completed audit: **Photdis v2.4 frozen-posterior scientific use**.
 [Results](docs/v2_4_result.md) · [11 English figure sets](docs/v2_4_atlas.md) ·
 [Requirements and scientific limits](docs/v2_4_requirements_result.md).
 Fixed-identity Gaia/SPDist anomalies, source-separated metal-poor scales, joint

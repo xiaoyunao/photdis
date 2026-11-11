@@ -9,6 +9,22 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Completed v2.5 target-population prototype: docs/v2_5_result.md and
+  docs/v2_5_atlas.md; full requirements ledger retained.1966compute checks,
+  4math tests,80delivery checks,8English plates visually inspected. Final
+  61127630 COMPLETED0:0 after numerical-only2^18/2^17refinement; alljobsended.
+  Red711->702matches/338controls; red raw low29.73%historical versus3.12%app,
+  but app high10.60%persists.2050signedGaia pairs/353controls, poor high-tail
+  excess10.73pp[8.66,12.89]; nofitoverlap, no weak-parallax inversion.
+  Selection-normalized4parameter response uses256cal (32missingclass) versus
+  224independenttestSEDs;192freshcatalogs/24576objects. Distance mean recovery
+  improves but2–5kpccoverage and other/dwarfcomposition fail; no adoption.
+  Maxquadshift0.001452, minESS106; correlated/boundary-weighted solutions and
+  sparsebrightnoise support remain explicit. Initialtables/posteriors archived.
+  Preserve allQRF/XD/v2.4outputs and3250unopened prospective IDs. Newmodel or
+  prospective outcome opening needs an appropriate pre-frozen scientific scope;
+  no automatic search, monitoring, fullcatalog expansion, deployment or agents.
+
 - Completed v2.4 scientific-use audit: docs/v2_4_result.md and v2_4_atlas.md;
   full ledger docs/v2_4_requirements_result.md.1898compute+167delivery checks,
   4focused tests,11English plates. Final61125423 COMPLETED0:0.

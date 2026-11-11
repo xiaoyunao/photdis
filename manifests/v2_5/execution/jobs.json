@@ -15,14 +15,31 @@
       "job": "61127009",
       "role": "afterok production artifact validation",
       "dependency": "afterok:61127456",
-      "initial_state": "PENDING"
+      "initial_state": "PENDING",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:01:16"
     },
     {
       "job": "61127456",
       "role": "recovery-only resume",
       "initial_state": "submitted",
-      "reused_QRF_chunks": 384
+      "reused_QRF_chunks": 384,
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:01:03"
+    },
+    {
+      "job": "61127630",
+      "role": "numeric-only quadrature refinement and validation",
+      "initial_state": "submitted",
+      "no_new_predictions": true,
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:01:10",
+      "actual_checks": 1966
     }
   ],
-  "no_automation": true
+  "no_automation": true,
+  "all_task_jobs_terminal": true
 }

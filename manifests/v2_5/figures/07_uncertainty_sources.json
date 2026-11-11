@@ -1,0 +1,8 @@
+{
+  "name": "07_uncertainty_sources",
+  "caption": "First reference-like catalog only;16identity-level Bayesian bootstrap responses, coherent\u00b11teacher-sigma calibration-template shifts and labeled-only response. Sensitivity envelopes are not combined calibrated uncertainty.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "uncertainty_sources": "62bae8f10037a0b7f827a247d2f7bfb28580f62a0ee79f17651a317b4fc4bb8d"
+  }
+}

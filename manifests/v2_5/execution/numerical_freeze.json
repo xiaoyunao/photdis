@@ -1,0 +1,9 @@
+{
+  "scripts/v2_5_refine.py": "0fcf361bbe316f0fdae1423931d028a843ce62c981ee8c369dbc5ce3a0274546",
+  "docs/v2_5_numerical_amendment.md": "84e120ca092a827a0566e14f34b35ea2fc234c16c60522a220697fd94f55a710",
+  "scripts/v2_5_population.py": "2672e0dc201bcfb37a2b6534e28f1a7fbf3c87711049977c181b77b9681cd9d9",
+  "src/photdis/population_v2_5.py": "693cfa0b5d43e4a35110ee789f58cc885e2d38b1aeb3ee543eecb0a9d9c4601b",
+  "data/v2_5/catalogs.npz": "f18739bd60478aef298af2e03a12aef590d14918454955cf71b58c68950a42ad",
+  "data/v2_5/cal_templates.npz": "8e1c6328f3c144b769ce669b79ff9ad3f2087fe44024722cac629412a7c59ee6",
+  "data/v2_5/test_templates.npz": "9c0842e687e39f9de35d7c88f6259c4f2f56865e99b5b90f4a1f86918833e563"
+}

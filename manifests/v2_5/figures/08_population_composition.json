@@ -1,0 +1,8 @@
+{
+  "name": "08_population_composition",
+  "caption": "Mean over12catalogs in the fixed photometric entrance. New population model marginalizes missing template labels; QRF retains its unlabeled-reference channel separately. No-label is not a true physical population and has no injected truth bar.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "group_comparison": "32c89551c604ba2b3b395836fb998f0a871984f95cb23c49c5a979bcc58ea4ab"
+  }
+}

@@ -1,12 +1,18 @@
 # PLAN
 
-## Active v2.5 target-population inference
+## Completed v2.5 target-population inference
 Review docs/pro_review_de4904b.md; frozen scope docs/v2_5_protocol.md.
-- [ ] Outcome-blind red controls, signed-Gaia original metal pairs, class band gains.
-- [ ] Independent-template selection-normalized four-parameter response prototype.
-- [ ] Same-catalog point/PDF/population recovery and uncertainty/support audits.
-- [ ] Keep3250prospective outcomes closed pending model/selection acceptance.
-- [ ] Tests, allocated production, English figures, report and safe sync.
+- [x] Outcome-blind red controls, signed-Gaia original metal pairs, class band gains.
+- [x] Independent-template selection-normalized four-parameter response prototype.
+- [x] Same-catalog point/PDF/population recovery and uncertainty/support audits; numeric-only2^18/2^17refinement completed.
+- [x] Keep3250prospective outcomes closed pending model/selection acceptance.
+- [x]4tests,1966allocatedcomputechecks,8inspectedEnglishfigures,80deliverychecks and report complete; final safe sync recorded inWORKLOG.
+
+Final61127630 COMPLETED0:0; allstagejobs ended. Distance-fraction mean recovery
+improves, but2–5kpcinterval undercoverage and physicalcomposition errors reject
+use as calibrated population counts. Models/deployment unchanged;3250outcomes
+stillclosed. Numerical-only refinement preserved catalogs and QRF bytes. Further
+scientific development follows user/Pro review; no automatic next model or timer.
 
 ## Completed v2.4 frozen-model scientific-use audit
 

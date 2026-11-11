@@ -1,0 +1,17 @@
+{
+  "png_sha256": {
+    "01_red_migration.png": "b321da7fcc425756d8c6d15e515df110d5b2a7a56965d7f4583cfe70badf82d9",
+    "02_metal_signed_gaia.png": "554ae92675bec1060e74b931eef01e4555e7c05a3db73bebcb50e5243f1be9ee",
+    "03_band_gains_by_class.png": "b6174e1bec11151fd5db96db678ddbe698a8d68cdd5f5425e1298003d1fd0622",
+    "04_population_recovery.png": "b00f387f45d9e72a69afcb5255d303ebbe8288208b24ee9f0d77cd9c14f6aa47",
+    "05_recovery_distance_shapes.png": "8db1759b5b3423643d4ac7f440cf0b3992a6ef1ea4a2639320bdb0987c636ab2",
+    "06_coverage_identifiability.png": "547c04379b14e52f77e74779717a47add497b77145d8031318f57986925acc76",
+    "07_uncertainty_sources.png": "2ebc36f15c22bbb9004a35683116b330217526e809009c9e35d2065cf2253909",
+    "08_population_composition.png": "6ca68cd2577b0151232cc4b5694276871e16b3480a989fee108f1ee1234b6bc3"
+  },
+  "all_PNGs_visually_reviewed": true,
+  "representative_pdf_rendered_and_reviewed": true,
+  "representative_pdf": "04_population_recovery.pdf",
+  "representative_pdf_sha256": "763e00cb0959f2bca9930ba40d4abe68ee7df0f6bd3e087893291215b82a069a",
+  "notes": "First3PNGs byte-identical to inspected diagnostic plates; all5population plates viewed, refined correlation label rechecked. PDF04 rendered with pdftoppm and inspected. English legends/axes, readable sizes, error bars and failure panels retained."
+}

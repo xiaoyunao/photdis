@@ -1,0 +1,9 @@
+{
+  "name": "06_coverage_identifiability",
+  "caption": "12independent catalogs per design; Wilson intervals for each distance bin in CSV. Parameter intervals and replicate-count intervals are separate. Boundary mass, quadrature ESS and grid convergence retained; high correlation or narrow wrong intervals prohibit adoption.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "recovery_summary": "cdab776963ed77ad6ca86e383374e451fad9e4c5d57c3e8387df80c0d4a6b8c5",
+    "identifiability": "0df521997954d1200df6bcf95e7f9693e55aa784886e06425db05357ee4b7266"
+  }
+}

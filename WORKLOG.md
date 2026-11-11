@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-11 — v2.5 completed: controlled population inference and checked delivery
+-61127630 COMPLETED0:0(1:10),1966actualchecks;61127456resume1:03 and61127009initialvalidator1:16complete. Original61126775writerfailure preserved;384QRFchunks/24576observations reused. Noactivejobs/timers/agents.
+- Four-parameter selection-normalizedresponse,256cal/224independenttestSEDs,32missingclassmarginalized;192freshcatalogs. Refined2^18/2^17: maxmeanchange0.001452,minESS106.03; initialtables/posteriors archivedwithoutrefit.
+- Distancefraction means improve inall8entrance designs versusPDF stacking;2–5kpccoverage andother/dwarfcomposition fail. Keep empiricalteacher, sparsebrightnoise, factorization/priorbounds and actualsupport limits. Noadoption or physicalpopulationcountclaim.
+- Outcome-blindred481/253controls: historicallow29.73%versusapp3.12%,apphigh10.60%retained.2050signedGaia pairs/353controls: poorhigh-tail excess10.73pp[8.66,12.89].
+- EightEnglishPNG300dpi/PDF/CSV/JSONplates checked, allPNGs inspected andrepresentativePDF rendered. Fourfocusedtests and80deliverychecks pass. Fullresults/atlas/requirements,README/AGENTS/PLAN updated;3250newIDoutcomesremainunopened withprospectiveestimand/metricsfrozen.
+- Commands: boundedSSH/sacct, compactrsync, v2_5_figures/report/delivery, pdftoppm, py_compile, focusedpytest, gitdiff/check andsafe3endpointmilestonesync. LargeproductsstayNERSC.
+
 ## 2026-11-11 — initial recovery complete; refine numerical integration
 -61127456reused384QRFchunks and completed192catalogs;61127009passed1958actualchecks.256caltemplates (32missingclass),224independenttesttemplates.
 - Newpopulation reduces distancefractionL1 in all8entrance scenarios versus frozenPDF; intervals still under-cover some bins. InitialESSmin5.94/maxgridshift0.01470,7catalogs>0.01.

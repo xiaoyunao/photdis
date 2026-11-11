@@ -1,0 +1,9 @@
+{
+  "name": "04_population_recovery",
+  "caption": "Same128objects/catalog for all three methods. L1 includes six distance bins, including QRF mass beyond50kpc; model truth has five fixed nodes. Bars across independent catalogs, errorbars their SD. Empirical templates/teachers and noise law are not real-sky truth.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "recovery_summary": "cdab776963ed77ad6ca86e383374e451fad9e4c5d57c3e8387df80c0d4a6b8c5",
+    "recovery_beyond50": "e2fa04899a27548a1296855f8d6a0e66190574144ea30b242f3bac5e6403e80a"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "05_recovery_distance_shapes",
+  "caption": "Means across12independent catalogs; shaded region is mean parameter-interval endpoints, NOT an interval on the average curve. True selected distribution from separate test-library forward Monte Carlo; no response fitting on test identities.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "recovery_distance": "bc9d9a82d215128a3ba22a1c717a69fce772a8a232b198bafaa86c89c6e940b2"
+  }
+}
