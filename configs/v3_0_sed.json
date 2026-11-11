@@ -1,0 +1,18 @@
+{
+  "family": "projected_error_deconvolved_native_flux_SED",
+  "latent_coordinates": ["G_at_1kpc", "R_at_1kpc", "I_at_1kpc", "Z_at_1kpc", "W1_at_1kpc", "W2_at_1kpc", "FeH"],
+  "components": 128,
+  "max_training_sources": 32768,
+  "max_iter": 64,
+  "relative_likelihood_tolerance": 0.0001,
+  "workers": 8,
+  "reference_mu_nodes": 24,
+  "binary_brightness_factor": 2.0,
+  "binary_reference_fraction": 0.1,
+  "dust_sigma_ebv_floor": 0.003,
+  "dust_fractional_sigma": 0.1,
+  "benchmark_sources": 1024,
+  "benchmark_iterations": 2,
+  "seed": 301211,
+  "notes": "Gaussian local intrinsic-flux approximation; negative latent support is audited and is not a claim of physical negative SEDs. Native observed negative flux is always legal. Fixed family, no model search."
+}

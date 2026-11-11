@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — v3 SED implementation and photometric-first validation preparation
+- Unique source-calibration job61132403 submitted after empty-queue check.
+- Implement projected heteroscedastic SED EM with continuous reference-mu
+  quadrature, native-flux Jacobian, corrected/uncertain FeH, missing-label
+  marginalization and constrained brighter binary branch in both fit/inference.
+- Fixed128component/32768source design;1024source/2iteration benchmark only.
+ 16 focused tests pass; no prospective predictions/outcomes or model adoption.
+- Add native sequential-FITS preparation with independent CFITSIO spot checks,
+  existing-parent exact identity recovery and two proposed unused southern blocks.
+  New-sky samples freeze photometric rank before any reference association.
+- Next: inspect calibration convergence; actual allocated SED/native benchmark,
+  then full fitting and population/selection/uncertainty integration. A–F incomplete.
+
 ## 2026-11-11 — v3 reference reconstruction completed; source calibration implemented
 -61131782 COMPLETED0:0 in56s.612114 admitted nativePSF imaging/identity references;
   402468 untruncated SpecDis, including10298 binaryflag!=1 objects. Full3,565,499
