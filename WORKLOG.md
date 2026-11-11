@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — fixed controls completed; development inputs and larger transfer bank
+-61135917COMPLETED0:0(24s): matchedQRF32768IDs,27115known-class probe train,
+ 7537hyper-temperature and42950development labels. Calibrated class log scores:
+ no-color -0.51869,grz -0.40564,griz -0.40503,multiband -0.40065. Same identities;
+ not an information fraction and not yet a v3 class/distance comparison.
+-61136440submitted once with afterok:61135482; shared response cannot start until
+ fullfit exits successfully and additionally refuses an unconverged model.
+-Add separate photometric development inputs/evaluation evidence, original26000
+ application-native recovery and up-to8192independent empiricalSED transfer bank.
+ The bank retains teacher/flux uncertainty and seen-development status; original
+3250/new-sky outcomes remain closed. All33focusedtests pass at prior milestone.
+-Next: run cohort preparation; finish common inference/population/validation CLI.
+
 ## 2026-11-11 — numerical benchmark and shared reference response implementation
 -61135629COMPLETED0:0(3:11):32fixedPSF reference/application objects all meet
  adaptive convergence; median0.1368s/star on unconverged benchmark model. Exact

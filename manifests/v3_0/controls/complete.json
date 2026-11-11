@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56",
+    "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+    "scripts/v3_0_controls.py": "6b95fc51865213e87acb4c6fed346820811b524a3f3e4923e306640199d2ad66"
+  },
+  "outputs": {
+    "probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "training.npz": "c6c079e1a1e94a60e0d07d589cbf188b70b4318a7416169034d6054f1fc2284e",
+    "inputs.json": "16a1ee4500cecb4e8e81341d55b519583c1c93382132ad7535d2be4691da6e42",
+    "qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "probe_reliability.csv": "bef8c985afb0d95dcbb438851000173f34394d44eae5f1a1047a14f2ee2f136c",
+    "probe_metrics.csv": "e87d750d3755f2afa4539a4a6a8c42ad7d2298907c98ef37252f6228f057f576",
+    "probe_development.npz": "39cb69e48d4e51eb22d20f3dc47727ee8a74e9679f5e3cd3efd13aea7283a3d0"
+  },
+  "train_sources": 32768,
+  "classifier_training_sources": 27115,
+  "missing_class_distance_sources": 5653,
+  "temperature_calibration_sources": 7537,
+  "development_sources": 42950,
+  "qrf_evidence": "same primary-channel posterior mean mu, point-label QRF; fixed historical hyperparameters",
+  "probe": "one fixed HistGradientBoosting family; no-color/grz/griz/multiband, common train and evaluation identities",
+  "class_weighting": "unweighted empirical reference composition, class-specific metrics separate",
+  "prospective_outcomes_opened": false,
+  "elapsed_seconds": 10.512595460982993,
+  "job": "61135917"
+}
