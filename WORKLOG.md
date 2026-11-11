@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — production recovery and shared target evidence pipeline
+-Confirm61138714CANCELLED before unique cached target61139580 (4x2048draws).
+ Arrays61139581multi/61139582grz each14batchesx8fixedcatalogs, four active nodes
+ perarray, started after50tests/actual pilot. Original outputs remain archived.
+-Add shared-model selection using the identical target-relative calibration/dust
+ errors as prediction, and chunk-checkpointed joint responses, field HMC and
+ proper-prior bridge evidence. No equal-weight normalized-posterior shortcut.
+-Actual32response integration remains pending full-update sensitivity and evidence
+ overlap/precision checks; no calibrated count claim from implementation.
+
 ## 2026-11-11 — verified22x target objective speed migration
 -61139519real26000object audit:0.633soriginal versus0.0283scached; values
  identical, maximumgradientdifference5.12e-13. Cancel slow61138714onlyafter
