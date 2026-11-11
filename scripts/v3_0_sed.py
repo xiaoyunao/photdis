@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build error-aware SED training quadrature and benchmark/fit on allocated CPUs."""
 import argparse
+import hashlib
+import inspect
 import json
 import os
 import resource
@@ -20,7 +22,8 @@ def cloud():
     cfg = json.loads((ROOT/'configs/v3_0_sed.json').read_text())
     marker = D/'sed_cloud.json'
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in [D/'references.npz', D/'calibration.npz',
-        ROOT/'configs/v3_0_sed.json', ROOT/'scripts/v3_0_sed.py', ROOT/'src/photdis/v3/calibration.py']}
+        ROOT/'configs/v3_0_sed.json', ROOT/'src/photdis/v3/calibration.py']}
+    inputs['cloud_function_sha256'] = hashlib.sha256(inspect.getsource(cloud).encode()).hexdigest()
     if marker.exists():
         record = json.loads(marker.read_text()); assert record['inputs'] == inputs
         assert sha(D/'sed_cloud.npz') == record['sha256']; return

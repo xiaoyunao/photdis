@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — continuous joint inference and frozen photometric-only new sky
+- Newsky100/101 each1024PSF identities, four observed-r strata256each;
+  represented parent counts261184/309171. All historical config/cell/ID exclusions
+  pass; reference outcomes/predictions still unopened. Field0all275998parents admitted.
+- Add reference-prior continuous class/binary/distance posterior and reconstructable
+  target class×smooth-radial-basis prior. Same-color near/far test preserves both
+  luminosity branches; basis evidence equals explicit joint integration.
+- Separate cloud-function hashing from fit driver changes before first successful
+  cloud artifact, avoiding needless invalidation when later inference code changes.
+-19focusedtests pass. Native inventory and calibration artifacts preserved. Next
+  sole corrected SED benchmark and remaining original-field native recovery.
+
 ## 2026-11-11 — source calibration/new sky complete; benchmark boundary repair
 -61132403 COMPLETED0:0(5:23):8192objects/source,32common eight-sky-block
   calibration bootstrap draws. Full signed Gaia includes427/594negative observations;

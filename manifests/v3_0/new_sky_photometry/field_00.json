@@ -1,0 +1,46 @@
+{
+  "field": 100,
+  "bounds_deg": [
+    10.0,
+    -45.0,
+    15.0,
+    -40.0
+  ],
+  "n": 1024,
+  "strata": [
+    {
+      "r_low": 0,
+      "r_high": 18,
+      "parent": 8023,
+      "selected": 256
+    },
+    {
+      "r_low": 18,
+      "r_high": 20,
+      "parent": 17675,
+      "selected": 256
+    },
+    {
+      "r_low": 20,
+      "r_high": 22,
+      "parent": 35440,
+      "selected": 256
+    },
+    {
+      "r_low": 22,
+      "r_high": null,
+      "parent": 200046,
+      "selected": 256
+    }
+  ],
+  "sha256": "f0e1f60e0b80856768c0f3d30a74ee65fb241503d4681f30c3ba5592cd044176",
+  "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m045-015m040.fits",
+  "native_sha256": "40493d4a85924d3cd806b2c61f8c2b3be620fbe838ed3bcd16b9a1eb0be52306",
+  "historical_reference_identity_overlap": 0,
+  "historical_reference_cell_overlap": 0,
+  "all_field_config_overlap": 0,
+  "reference_outcomes_read": false,
+  "predictions_generated": false,
+  "program_sha256": "459d8ce9091755b202a935f7473fce45b75853e51bb519ca3afcbf45ebe53297",
+  "job": "61132867"
+}
