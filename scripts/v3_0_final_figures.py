@@ -49,7 +49,7 @@ def recovery(name='all32_native_precision1'):
     for j,(method,label,color) in enumerate([('qrf_pdf','Matched QRF PDF',GRAY),('v3_reference','Nominal reference prior',GREEN),('v3_target','Nominal target prior',BLUE),('shared_target','Shared-response target',ORANGE)]):
         value=[next(r['L1'] for r in rows if r['scenario']==s and r['method']==method and r['axis']=='distance') for s in scenarios]
         ax.plot(100*np.array(value),np.arange(len(value))+(j-1.5)*.14,'o',color=color,label=label,ms=5)
-    ax.set(yticks=range(len(labels)),yticklabels=labels,xlabel='Distance-count L1 error (%)',title='Shared uncertainty does not guarantee unbiased population recovery')
+    ax.set(yticks=range(len(labels)),yticklabels=labels,xlabel='Distance-count L1 error (%)',title='Population recovery with shared uncertainty')
     ax.invert_yaxis();ax.tick_params(axis='y',labelsize=11);ax.legend(frameon=False,fontsize=10,loc='lower right');ax.grid(axis='x',alpha=.15)
     fig.subplots_adjust(left=.28,right=.98,top=.91,bottom=.1)
     save(fig,'shared_recovery_L1',rows,[base/'complete.json',base/'counts.csv',nominal],f"Eight 128-object continuous realizations per scenario; shared templates, not newly independent stars. {record['numerically_passed']}/112 final numerical passes. L1 is count error, not per-star precision; every case retained.")
@@ -72,8 +72,8 @@ def recovery(name='all32_native_precision1'):
     fig,axes=plt.subplots(1,2,figsize=(12,4.8))
     x=np.arange(len(numeric));delta=np.array([float(r['final_marginal_half_delta']) for r in numeric]);ess=np.array([float(r['response_ess']) for r in numeric])
     axes[0].semilogy(x,delta,'o',ms=3,color=BLUE);axes[0].axhline(.005,color=ORANGE,ls='--',label='Frozen tolerance');axes[0].legend(frameon=False,fontsize=11)
-    axes[0].set(ylabel='Maximum final joint half-chain difference',xlabel='Simulated catalog',title='Marginal Monte Carlo precision')
-    axes[1].plot(x,ess,'o',ms=3,color=GREEN);axes[1].set(ylabel='Finite-response effective sample size',xlabel='Simulated catalog',title='Reference-support concentration')
+    axes[0].set(ylabel='Joint half-chain error',xlabel='Simulated catalog',title='Marginal Monte Carlo precision')
+    axes[1].plot(x,ess,'o',ms=3,color=GREEN);axes[1].set(ylabel='Response ESS',xlabel='Simulated catalog',title='Reference-support concentration')
     fig.subplots_adjust(left=.09,right=.98,bottom=.17,top=.86,wspace=.32)
     save(fig,'shared_recovery_numerics',numeric,[base/'numerical.csv'],'Numerical precision and finite-response support are distinct. Small response ESS is a remaining modeling/integration limitation, not strong scientific confidence.')
 
@@ -96,7 +96,7 @@ def population():
     counts=load(base/'counts.npz');cov=counts['covariance'];sd=np.sqrt(np.maximum(np.diag(cov),0));corr=np.divide(cov,sd[:,None]*sd[None,:],out=np.zeros_like(cov),where=(sd[:,None]*sd[None,:])>0)
     fig,ax=plt.subplots(figsize=(9,8));im=ax.imshow(corr,vmin=-1,vmax=1,cmap='RdBu_r');fig.colorbar(im,ax=ax,label='Posterior count correlation',fraction=.045,pad=.04)
     ticks=np.arange(18);labels=[f'{c}: {b}' for c in ['D','E','O'] for b in BINS]
-    ax.set(xticks=ticks,xticklabels=labels,yticks=ticks,yticklabels=labels,title='Shared calibration and population parameters correlate counts')
+    ax.set(xticks=ticks,xticklabels=labels,yticks=ticks,yticklabels=labels,title='Correlated class–distance counts')
     ax.tick_params(axis='both',labelsize=9);plt.setp(ax.get_xticklabels(),rotation=90)
     for v in [5.5,11.5]:ax.axhline(v,color='black',lw=.5);ax.axvline(v,color='black',lw=.5)
     fig.subplots_adjust(left=.14,right=.94,bottom=.18,top=.92)
@@ -118,11 +118,11 @@ def catalog():
     fig,axes=plt.subplots(1,2,figsize=(13,5));valid=[r for r in fields if int(r['candidate'])>0];x=np.arange(len(valid))
     axes[0].bar(x,[int(r['candidate']) for r in valid],color=GRAY,label='Qualified input')
     axes[0].bar(x,[int(r['near95_selected']) for r in valid],color=BLUE,label='Near probability >0.95')
-    axes[0].set(xticks=x,xticklabels=[r['field'] for r in valid],xlabel='Existing DECam field index',ylabel='Objects',title='Actual coverage and probabilistic near selection');axes[0].legend(frameon=False,fontsize=11)
+    axes[0].set(xticks=x,xticklabels=[r['field'] for r in valid],xlabel='Existing DECam field index',ylabel='Objects',title='Candidate coverage and near selection');axes[0].legend(frameon=False,fontsize=11)
     for label,key,color in [('Nominal reference','nominal_reference_mean',GRAY),('Matched response reference','matched_response_reference_mean',GREEN),('Target population','target_mean',ORANGE)]:
         values=[sum(float(r[key]) for r in prior if int(r['distance_bin'])==b) for b in range(6)]
         axes[1].plot(range(6),values,'o-',label=label,color=color)
-    axes[1].set(xticks=range(6),xticklabels=BINS,xlabel='Distance bin (kpc)',ylabel='Expected observed count',title='Response change and prior change are separated');axes[1].legend(frameon=False,fontsize=10)
+    axes[1].set(xticks=range(6),xticklabels=BINS,xlabel='Distance bin (kpc)',ylabel='Expected observed count',title='Reference and target-prior counts');axes[1].legend(frameon=False,fontsize=10)
     fig.subplots_adjust(left=.08,right=.98,bottom=.15,top=.86,wspace=.3)
     save(fig,'catalog_scope_prior',prior,[base/'fields.csv',base/'prior_comparison.csv'],'Qualifiedparent1,183,990 ofhistorical9,390,518 rows; north remainsunmodeled. Nearselectionmodel leakage is not measured real contamination. Allposteriorfar tails retained.')
 
@@ -140,7 +140,7 @@ def scale():
         ax.axvline(mu,color=BLUE,ls='--',label='Independent dynamical scale');ax.set(title=title,xlim=(8,22),xlabel='Distance modulus (mag)',ylabel='Expected objects per 0.05 mag');ax.legend(frameon=False,fontsize=9)
     fig.suptitle('NGC 288 field: distance marginalization and foreground mixture',fontsize=17)
     fig.subplots_adjust(left=.06,right=.99,bottom=.15,top=.8,wspace=.32)
-    save(fig,'ngc288_prior_comparison',rows,[base/'reference/complete.json',base/name/'complete.json'],'One shared9.03kpc dynamicalscale with-0.56/+0.48kpc errors; membershipGaia-conditioned afterpurephotometricpredictions. Curves are posterior expectations, not independent-star Poisson uncertainty or intrinsic density.')
+    save(fig,'ngc288_prior_comparison',rows,[base/'reference/complete.json',base/name/'complete.json'],'One shared9.03kpc dynamicalscale with-0.56/+0.48kpc errors; membershipGaia-conditioned afterpurephotometricpredictions. Curves are posterior expectations, not independent-star Poisson uncertainty or intrinsic density. Nominal-reference versus target is not an isolated prior-only contrast; matched-response comparisons are reported separately.')
 
 
 def main():

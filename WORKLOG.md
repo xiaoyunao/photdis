@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — final shared recovery and scientific failures retained
+-61145396:112/112response-marginal catalogs pass; maxhalf0.004964. Actual
+ finite-responseESS1.00–3.95 remains a supportlimitation. Sharedrecovery L1:
+ reference-like11.05%,dwarf8.35%,evolved18.85%,poor8.92%,narrow39.02%.
+-2–5kpc narrowstructurecoverage remains0/8; jointclass-distanceL1 generally
+ exceeds distance-onlyL1. ReportupdatedfromactualCSV, notnumericalpassclaims.
+-61145658 produced3figures; visualreviewfoundclippedlongtitle/ylabels in2.
+ Layoutfixprepared; coverageplotpassed. Statisticaldataunchanged.
+-Uniqueensemble61145617/plan61145619 dependon12nativeproducts andverified
+ evidence, includingexactparallel26bridge61145589. No catalogtransfer bypass.
+
 ## 2026-11-11 — reject divergent extended response26 and preserve exact bridge math
 -Extendedresponse26s2048 hasRhat1.016/ESS738 butfailszero-divergence gate;
  no downstreamproduct accepted. Original512chain remainsverified. Need stronger
