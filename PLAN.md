@@ -28,10 +28,14 @@ C: original32 target posterior fits complete. Longer numerical-only chains for
  responses1/12/17 passsampler;26extendedchainrejectedfordivergence. Preserve
  originalverified26s512;131072proposal bridge61145589 stillfails0.2078>0.2.
  Conservative1024draw/.99run61146086 failsRhat1.214/ESS14.55;87/88 reject.
- Pending89/90 canceled; diagnosis61146730 identifies .107step/8steptrajectories
- versus original~.42. New numerical-only4096draw/.95/16step trajectory refinement
- preservesphysicalresponse/MAP; waitsfor3h allocation aftermaintenance.
- Existingplan/catalog/prospective dependencies will be rebound, notduplicated.
+ Pending89/90 canceled; diagnosis61146730 identifies short trajectories.
+ Numerical-only4096draw/.95/16step refinement61146827 is PENDING due to
+ maintenance. Evidence61146828/native61146829/products61146830 feed
+ ensemble61146831, then existing plan61145619; all downstream jobs retained.
+ Scheduler maintenance reservation: Nov11 22:00–Nov18 22:00 Beijing (planned
+ reservation, not guaranteed actual outage length). No active compute jobs.
+ Read manifests/v3_0/execution_checkpoint.json and query actual queue before
+ any further submission; the final v3.0 goal remains incomplete.
  Exact26000-object response ensemble, design summary and catalog transfer await
  final weighted marginal precision. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.

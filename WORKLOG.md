@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — queued numerical repair; maintenance blocks production
+- Verified old jobs terminal using sacct after squeue dropped them; initial
+ submission guard stopped before sbatch. Unique new pipeline: 61146827 target,
+ 61146828 evidence, 61146829 native response, 61146830 products, 61146831 ensemble.
+- Existing transfer-plan 61145619 now depends on 61146831. Existing full-catalog,
+ prospective, scale and figure jobs preserved; no duplicate catalog submission.
+- Actual queue: target PENDING, ReqNodeNotAvail/Reserved for maintenance.
+ Reservation maintenance_20261111 spans Nov11 22:00 to Nov18 22:00 Beijing.
+ This is resource availability, not authentication failure; actual reopening unknown.
+- 71 mathematical/unit tests passed; new wrapper/tests do not modify frozen
+ source entries. Final C/E/F outputs, six figures and delivery audit still pending.
+- Resume: query recorded jobs and logs, assess frozen numerical gates, then
+ validate actual products. Do not mark complete, relax gates or create timers.
+
 ## 2026-11-11 — diagnose failed conservative target mixing
 -61146086 completed26:59 but fails Rhat1.21444/minESS14.55; dependent87/88
  correctlyreject unverifiedsampler. Cancelonlypending89/90; retainallfailedoutputs.

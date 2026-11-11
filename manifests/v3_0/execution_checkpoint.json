@@ -1,0 +1,61 @@
+{
+  "checked_beijing": "2026-11-11T21:36:27+08:00",
+  "goal_status": "incomplete",
+  "blocking_condition": "NERSC maintenance reservation prevents required Slurm allocation",
+  "consecutive_goal_turns_with_terminal_block": 1,
+  "maintenance": {
+    "name": "maintenance_20261111",
+    "start_beijing": "2026-11-11T22:00:00+08:00",
+    "end_beijing": "2026-11-18T22:00:00+08:00",
+    "scope": "Scheduler reservation, not guarantee of actual outage duration"
+  },
+  "first_job": {
+    "id": 61146827,
+    "state": "PENDING",
+    "reason": "ReqNodeNotAvail, Reserved for maintenance",
+    "stage": "trajectory-target --draw 26 --draws 4096"
+  },
+  "target_pipeline": [
+    61146827,
+    61146828,
+    61146829,
+    61146830,
+    61146831,
+    61145619
+  ],
+  "existing_catalog_jobs": [
+    61145915,
+    61145916,
+    61145917,
+    61145918
+  ],
+  "existing_validation_jobs": [
+    61145919,
+    61145920,
+    61145921,
+    61145922,
+    61145923,
+    61145924
+  ],
+  "other_jobs": [
+    61145925,
+    61145926,
+    61146319,
+    61146320
+  ],
+  "completed": {
+    "reference_inventory": 612114,
+    "qualified_reference_predictions": 1183990,
+    "shared_recovery_numerical_cases": 112,
+    "inspected_figure_sets": 36,
+    "unit_tests": 71
+  },
+  "outstanding": [
+    "Verified 32-response target ensemble",
+    "Paired target-prior prospective and independent-scale results",
+    "Full conditional candidate predictions and joint counts/exports",
+    "Six final figure sets and visual QA",
+    "Final result/atlas/ledger and actual delivery audit"
+  ],
+  "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents."
+}

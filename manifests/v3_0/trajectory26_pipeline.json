@@ -1,0 +1,124 @@
+{
+  "previous_failed_pipeline": "conservative26_pipeline.json",
+  "confirmed_previous_terminal_states": {
+    "61146086": "COMPLETED",
+    "61146087": "FAILED",
+    "61146088": "FAILED",
+    "61146089": "CANCELLED by 106645",
+    "61146090": "CANCELLED by 106645"
+  },
+  "sampler_diagnosis": "manifests/v3_0/sampler26_diagnosis.json",
+  "refinement_map": "data/v3_0/execution/ensemble_refinements_trajectory26.json",
+  "jobs": {
+    "target": {
+      "job": "61146827",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "8",
+        "-t",
+        "03:00:00",
+        "-J",
+        "v3_trajectory26",
+        "scripts/run_v3_0_stage.sh",
+        "trajectory-target",
+        "--draw",
+        "26",
+        "--draws",
+        "4096"
+      ]
+    },
+    "evidence": {
+      "job": "61146828",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "64",
+        "-t",
+        "00:30:00",
+        "-J",
+        "v3_bridge26_trajectory",
+        "--dependency=afterok:61146827",
+        "scripts/run_v3_0_stage.sh",
+        "evidence-parallel",
+        "--draw",
+        "26",
+        "--draws",
+        "4096",
+        "--proposals",
+        "32768"
+      ]
+    },
+    "native": {
+      "job": "61146829",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "64",
+        "-t",
+        "00:20:00",
+        "-J",
+        "v3_native26_trajectory",
+        "--dependency=afterok:61146827",
+        "scripts/run_v3_0_stage.sh",
+        "native-response",
+        "--draw",
+        "26",
+        "--draws",
+        "4096",
+        "--workers",
+        "64"
+      ]
+    },
+    "products": {
+      "job": "61146830",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "64",
+        "-t",
+        "00:30:00",
+        "-J",
+        "v3_products26_trajectory",
+        "--dependency=afterok:61146829",
+        "scripts/run_v3_0_stage.sh",
+        "shared-products",
+        "--draw",
+        "26",
+        "--draws",
+        "4096",
+        "--native-response",
+        "--workers",
+        "64"
+      ]
+    },
+    "ensemble": {
+      "job": "61146831",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "64",
+        "-t",
+        "00:30:00",
+        "-J",
+        "v3_final_ensemble_trajectory",
+        "--dependency=afterok:61146828:61146830",
+        "scripts/run_v3_0_stage.sh",
+        "ensemble-products",
+        "--refinement-map",
+        "data/v3_0/execution/ensemble_refinements_trajectory26.json",
+        "--name",
+        "all32_native_refined",
+        "--workers",
+        "64"
+      ]
+    }
+  },
+  "existing_transfer_plan_job": "61145619",
+  "transfer_plan_dependency": "61146831"
+}
