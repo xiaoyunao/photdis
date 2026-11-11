@@ -116,30 +116,35 @@ class EmpiricalSED:
             self.classes[k] = counts/counts.sum()
             self.initialization_audit.append(dict(component=k, n=int(rows.sum()), **audit))
 
-    def fit(self, y, noise, mask, node_logweight, labels, features, workers=1, callback=None, initial_node=None):
+    def fit(self, y, noise, mask, node_logweight, labels, features, workers=1, callback=None, initial_node=None, resume=False):
         global _CONTEXT
         y, noise, mask = np.asarray(y), np.asarray(noise), np.asarray(mask, bool)
         labels = np.asarray(labels, int)
         if not np.isin(labels, [-1, 0, 1, 2]).all(): raise ValueError('Invalid reference class')
         if not np.isfinite(y[mask[:, None, :].repeat(y.shape[1], axis=1)]).all():
             raise ValueError('Nonfinite observed training coordinate')
-        self.initialize(y, noise, mask, features, labels, initial_node=initial_node)
-        self.history = []; self.converged = False
+        if not resume:
+            self.initialize(y, noise, mask, features, labels, initial_node=initial_node)
+            self.history = []
+        elif not hasattr(self, 'history'):
+            raise ValueError('Resume requires a fitted checkpoint')
+        self.converged = False
         def run(statistics):
             tasks = [(k, statistics) for k in range(self.components)]
             if workers == 1: return [_component(x) for x in tasks]
             # Read-only clouds/parameters inherited, not serialized per component.
             with mp.get_context('fork').Pool(workers) as pool:
                 return pool.map(_component, tasks, chunksize=1)
-        for iteration in range(self.max_iter):
+        for iteration in range(len(self.history), self.max_iter):
             _CONTEXT = (y, noise, mask, node_logweight, labels, self.weights,
                         self.means, self.covariances, self.classes, None)
             logcomponent = np.array(run(False)).T
             norm = logsumexp(logcomponent, axis=1)
             likelihood = float(norm.mean()); self.history.append(likelihood)
-            if callback: callback(iteration, likelihood)
             if iteration > 3 and abs(self.history[-1]-self.history[-2]) < self.tol*(1+abs(likelihood)):
-                self.converged = True; break
+                self.converged = True
+                if callback: callback(iteration, likelihood)
+                break
             _CONTEXT = (*_CONTEXT[:-1], norm)
             statistics = run(True)
             counts = np.array([x[0] for x in statistics])
@@ -154,9 +159,31 @@ class EmpiricalSED:
                 self.covariances[k] = normalized*scale[:, None]*scale[None, :]
                 self.classes[k] = (classes+.5)/(classes.sum()+1.5)
             self.weights = counts/counts.sum()
+            if callback: callback(iteration, likelihood)
         _CONTEXT = None
         # A Gaussian flux kernel can be an inadequate approximation in broad,
         # low-support branches. Record this instead of pretending physical support.
         from scipy.special import ndtr
         self.negative_intrinsic_flux_probability = ndtr(-self.means[:, :6]/np.sqrt(np.diagonal(self.covariances[:, :6, :6], axis1=1, axis2=2)))
         return self
+
+
+    def training_responsibilities(self, y, noise, mask, node_logweight, labels, workers=1):
+        """Identity-level, reference-integrated responsibilities for provenance.
+
+        No repeated distance/binary quadrature node is counted as an independent
+        reference star. Called only on the frozen fitting identities.
+        """
+        global _CONTEXT
+        _CONTEXT = (y, noise, mask, node_logweight, labels, self.weights,
+                    self.means, self.covariances, self.classes, None)
+        tasks = [(k, False) for k in range(self.components)]
+        if workers == 1:
+            values = [_component(x) for x in tasks]
+        else:
+            with mp.get_context('fork').Pool(workers) as pool:
+                values = pool.map(_component, tasks, chunksize=1)
+        logp = np.array(values).T
+        result = np.exp(logp-logsumexp(logp, axis=1)[:, None])
+        _CONTEXT = None
+        return result

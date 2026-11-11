@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "src/photdis/v3/sed.py": "7920eb0dbf3234240144ee7bcdd6a733ab15063a399d5024b68d9cc48bc65ed6",
+    "configs/v3_0_sed.json": "dbd537c87226de9f606e03c68346953f6d538ffda7c4cdd8f755279e566e7947"
+  },
+  "sha256": "3f61488a47b05b7079012d561dce37256d541fef7cc49216b51106546b5b9215",
+  "stage": "benchmark",
+  "sources": 1024,
+  "components": 128,
+  "iterations": 2,
+  "converged": false,
+  "elapsed_seconds": 14.424528838135302,
+  "peak_process_rss_kib": 2084708,
+  "output_bytes": 81627,
+  "source_nodes": 49152,
+  "positivity_flagged_components": 40,
+  "job": "61133617",
+  "not_for_application": true
+}

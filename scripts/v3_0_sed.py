@@ -102,19 +102,50 @@ def main():
     n = cfg['benchmark_sources'] if args.stage == 'benchmark' else len(t['identity'])
     iterations = cfg['benchmark_iterations'] if args.stage == 'benchmark' else cfg['max_iter']
     path = D/('sed_'+args.stage+'.joblib'); marker = path.with_suffix('.json')
-    inputs = {str(p.relative_to(ROOT)): sha(p) for p in [D/'sed_cloud.npz', ROOT/'src/photdis/v3/sed.py', ROOT/'configs/v3_0_sed.json']}
+    inputs = {str(p.relative_to(ROOT)): sha(p) for p in [D/'sed_cloud.npz', ROOT/'src/photdis/v3/sed.py', ROOT/'configs/v3_0_sed.json', Path(__file__)]}
+    from photdis.v3.likelihood import intrinsic_covariance
+    inputs['intrinsic_covariance_function_sha256'] = hashlib.sha256(inspect.getsource(intrinsic_covariance).encode()).hexdigest()
     if marker.exists():
         record = json.loads(marker.read_text()); assert record['inputs'] == inputs
         assert sha(path) == record['sha256']; return
     model = EmpiricalSED(cfg['components'], max_iter=iterations, tol=cfg['relative_likelihood_tolerance'], seed=cfg['seed'])
-    def progress(iteration, value): print('SED ITERATION', iteration, value, 'elapsed', time.monotonic()-start, flush=True)
-    model.fit(t['y'][:n], t['noise'][:n], t['mask'][:n], t['logweight'][:n], t['labels'][:n], t['features'][:n], workers=cfg['workers'], callback=progress, initial_node=cfg['reference_mu_nodes']//2)
+    checkpoint_dir = D/('sed_'+args.stage+'_checkpoints')
+    checkpoint_dir.mkdir(exist_ok=True)
+    checkpoints = sorted(checkpoint_dir.glob('iteration_*.json'))
+    resume = bool(checkpoints)
+    if resume:
+        last = checkpoints[-1]; record = json.loads(last.read_text())
+        assert record['inputs'] == inputs, 'Explicit fit checkpoint migration required'
+        checkpoint = last.with_suffix('.joblib')
+        assert sha(checkpoint) == record['sha256']
+        model = joblib.load(checkpoint)
+        print('RESUME SED', len(model.history), flush=True)
+    def progress(iteration, value):
+        print('SED ITERATION', iteration, value, 'elapsed', time.monotonic()-start, flush=True)
+        checkpoint = checkpoint_dir/f'iteration_{iteration+1:04}.joblib'
+        temp = checkpoint.with_suffix('.tmp.joblib')
+        joblib.dump(model, temp); temp.replace(checkpoint)
+        save_json(checkpoint.with_suffix('.json'), dict(inputs=inputs, sha256=sha(checkpoint),
+            iteration=iteration+1, phase='after_m_step_or_converged', likelihood=value,
+            job=os.getenv('SLURM_JOB_ID')))
+
+    model.fit(t['y'][:n], t['noise'][:n], t['mask'][:n], t['logweight'][:n], t['labels'][:n], t['features'][:n], workers=int(os.environ.get('PHOTDIS_V3_WORKERS', cfg['workers'])), callback=progress, initial_node=cfg['reference_mu_nodes']//2, resume=resume)
     model.training_identity = t['identity'][:n]; model.system = 'DECam_DR11'
+    if args.stage == 'fit':
+        responsibility = model.training_responsibilities(t['y'][:n], t['noise'][:n], t['mask'][:n],
+            t['logweight'][:n], t['labels'][:n], workers=int(os.environ.get('PHOTDIS_V3_WORKERS', cfg['workers'])))
+        mass = responsibility.sum(axis=0)
+        model.effective_reference_sources = mass**2/np.sum(responsibility**2, axis=0)
+        model.reference_source_fraction = np.array([responsibility[t['channel'][:n] == c].sum(axis=0)/mass for c in (1, 2, 3)]).T
+        model.missing_class_reference_fraction = responsibility[t['labels'][:n] < 0].sum(axis=0)/mass
+        atomic_npz(D/'sed_training_responsibilities.npz', identity=t['identity'][:n],
+            TYPE=t['TYPE'][:n], rows=t['rows'][:n], responsibility=responsibility.astype('f4'))
+
     model.binary_reference_fraction = cfg['binary_reference_fraction']; model.binary_brightness_factor = cfg['binary_brightness_factor']
     joblib.dump(model, path.with_suffix('.tmp.joblib')); path.with_suffix('.tmp.joblib').replace(path)
     elapsed = time.monotonic()-start
     save_json(marker, dict(inputs=inputs, sha256=sha(path), stage=args.stage, sources=n, components=cfg['components'],
-        iterations=len(model.history), converged=model.converged, elapsed_seconds=elapsed,
+        iterations=len(model.history), workers=int(os.environ.get('PHOTDIS_V3_WORKERS', cfg['workers'])), converged=model.converged, elapsed_seconds=elapsed,
         peak_process_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
         output_bytes=path.stat().st_size, source_nodes=n*t['y'].shape[1],
         positivity_flagged_components=int((model.negative_intrinsic_flux_probability.max(axis=1) > .01).sum()),

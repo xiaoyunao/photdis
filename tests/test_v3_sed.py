@@ -29,3 +29,39 @@ def test_missing_label_not_a_physical_class_and_error_deconvolution():
     assert model.classes.shape == (1, 3) and model.classes[0, 0] > .99
     np.testing.assert_allclose(model.means[0], latent_mean, atol=.12)
     np.testing.assert_allclose(np.diag(model.covariances[0]), np.diag(v), atol=.07)
+
+
+def test_native_reference_quadrature_includes_flux_jacobian():
+    from scipy.integrate import quad
+    from numpy.polynomial.hermite import hermgauss
+    from scipy.stats import norm
+    from scipy.special import logsumexp
+    mean = np.array([10., 20., 15.]); cov = np.diag([1., 2., 1.5])
+    flux = np.array([1., 2., 1.5]); error = np.array([.2, .2, .2])
+    x, w = hermgauss(64); mu = 12.5+np.sqrt(2)*.15*x
+    amplitude = 10**(-.4*(mu-10))
+    y = flux[None, :]/amplitude[:, None]
+    noise = np.eye(3)[None, :, :]*(error[None, :]/amplitude[:, None])[:, :, None]**2
+    _, _, likelihood = projected_conditionals(y, noise, [1, 1, 1], mean, cov)
+    integral = np.exp(logsumexp(likelihood-3*np.log(amplitude)+np.log(w/np.sqrt(np.pi))))
+    def direct(m):
+        a = 10**(-.4*(m-10))
+        return norm.pdf(m, 12.5, .15)*multivariate_normal.pdf(flux, a*mean, a*a*cov+np.diag(error**2))
+    expected = quad(direct, 11, 14, epsabs=1e-11)[0]
+    np.testing.assert_allclose(integral, expected, rtol=1e-7)
+
+
+def test_checkpoint_resume_reproduces_uninterrupted_em():
+    import copy
+    rng = np.random.default_rng(12); n = 100
+    y = rng.normal(size=(n, 1, 7))+np.array([5]*6+[0])
+    noise = np.broadcast_to(np.eye(7)*.1, (n, 1, 7, 7))
+    mask = np.ones((n, 7), bool); labels = np.zeros(n, int)
+    args = (y, noise, mask, np.zeros((n, 1)), labels, y[:, 0, :3])
+    complete = EmpiricalSED(1, max_iter=4).fit(*args)
+    partial = EmpiricalSED(1, max_iter=2).fit(*args)
+    partial.max_iter = 4
+    partial.fit(*args, resume=True)
+    np.testing.assert_allclose(partial.means, complete.means, atol=1e-12)
+    np.testing.assert_allclose(partial.covariances, complete.covariances, atol=1e-12)
+    np.testing.assert_allclose(partial.history, complete.history, atol=1e-12)

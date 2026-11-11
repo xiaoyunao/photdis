@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-11 — measured SED cost and resumable full-fit preparation
+-61133617 benchmarkCOMPLETED0:0(42s total); actual1024-source/128-component,
+  two-iteration fit14.42s, parent peakRSS~1.99GiB, output81627bytes. Benchmark
+  is deliberately unconverged and is not an application model.40components have
+  >1%Gaussian negative-flux support; full-fit/domain checks remain mandatory.
+-61133866 sole serial existing-parent recovery submitted after rejected array;
+  field checkpoints are reused, no repeated field0 scan or prediction expansion.
+- Add atomic per-EM-iteration checkpoints/resume and independent equality test;
+  native-flux/reference-quadrature Jacobian matches direct continuous integration.
+ 22focusedtests pass. Full fit uses16workers/32allocatedCPUs with4h wall limit.
+- Final fit exports identity-level responsibilities/effective source counts,
+  reference-channel contributions and missing-class fractions for uncertainty audit.
+- Next: launch one full32768-source fit after safe sync; continue selection,
+  shared uncertainty and fixed development tests while it runs. No blind outcomes.
+
 ## 2026-11-11 — corrected benchmark running; input expansion respects scheduler limit
 - Confirmed failed61132862terminal and no active same-name job; sole corrected
   SED benchmark61133617 submitted fromc4dfc2c. No previous cloud/model to migrate.
