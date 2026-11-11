@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — complete diagnostic tables and11English figures
+-61124175 diagnostic step completed cal-only supported priors and fixed711identity summaries. Fine-cell100%unseen; coarse4.21%fallback. grz color probe gain versus global0.134081nats; r/sky prior itself is slightly worse, not a positive location-information claim.
+- All60low-PIT/SPDist intersections also low under same-ID XD. Missing RUWE values now have explicit available denominators instead of making an otherwise defined median NaN.
+- All11PNG figures visually inspected; representative recoveryPDF rendered/inspected. Repaired sparse Gaia-axis clipping, long labels and identity text over peaks. Visual hashes recorded;4focused tests already pass.
+- Native reservation has completed7of13fields at11min; pending61123659will run full hash/identity/chunk validation after completion. Final report and delivery validation await that result.
+
 ## 2026-11-11 — population recovery negative result and staged diagnostics
 -224held-out PSF templates,4480translated/noisy rows,4fixed population mixtures completed in61123779.2. No fitting-identity overlap. Target-noise PDF count L1 ordinary122.36 versuspoint89.74; metal-poor148.79versus126.73. Giant-rich424.17versus462.55still large.
 - Giant-rich near selection: injected near598.44/PDF608.25 hides injected giant243.91/reference giant contribution31.93. Conditional interval failure prevents a reliable general population-count claim.

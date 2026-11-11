@@ -34,8 +34,10 @@ def diagnostic_summaries():
     consistency=[]
     for low in (False,True):
         q=[r for r in a if (r['low_pit']=='True')==low and r['SPDist_qualified']=='True'];v=np.array([float(r['Gaia_minus_SPDist_sigma']) for r in q])
+        ruwe=np.array([float(r['RUWE']) for r in q]);valid=np.isfinite(ruwe)
         consistency.append(dict(low_pit=low,n=len(q),median_Gaia_SPDist_standardized=float(np.median(v)),below_minus3=int((v< -3).sum()),
-            median_RUWE=float(np.median([float(r['RUWE']) for r in q])),same_direction_XD=int(sum(float(r['candidate_conditional_pit'])<.05 for r in q))))
+            RUWE_available=int(valid.sum()),median_RUWE=float(np.median(ruwe[valid])) if valid.any() else None,
+            same_direction_XD=int(sum(float(r['candidate_conditional_pit'])<.05 for r in q))))
     csv_rows(TABLES/'anomaly_reference_consistency.csv',consistency)
 
 

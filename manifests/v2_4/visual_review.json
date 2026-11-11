@@ -1,0 +1,19 @@
+{
+  "png_sha256": {
+    "01_anomaly_conditions.png": "18dacc36d003ceb672d6f5db16b8208a6a3a602d3a9280043df58660c901cd6a",
+    "02_reference_conflict.png": "377fe49085b0ee8bd66ae0be771e1f2124460e72f074135a8143f2585ee6bd25",
+    "03_same_identity_pdfs.png": "5dcca34248158e6eaa73825816575ca8bf773d078482ca5dd29c7d484c2cd8ae",
+    "04_metal_source_scales.png": "d165941dbba92940fc5dd54bcab735b982e18f0151e3cad58b7a6101005b2e88",
+    "05_metal_pdf_support.png": "5dbb84137ed126bf0d373a32110bd7e43c6a9eaaf5707e2bc86652a0eeb083a9",
+    "06_information_gains.png": "efc1cec2896a82b957cf7af20114a38893a97c89e999990424af7edae8995c6f",
+    "07_joint_population_counts.png": "0388fc546f1e49c97a9e899d5e6f25d703dfc1ec32d165000186abbe9b65e4c8",
+    "08_count_dependence_coverage.png": "ffae81c1c5e9cec92692b3e0efd0bb867de4f7dc910be23410a7824442fe462f",
+    "09_population_recovery.png": "d9d251584061834f162cdc1c2b788995b4d8689084595d67b321bbd5cf1367de",
+    "10_recovery_noise_selection.png": "cf229d3a499a2d44b4d952aff572cf9ae62df67750954dd0e0ed905c60c6d403",
+    "11_count_interval_stress.png": "0686049b3cb2829bdd42295d4f5e9ae61ced3cbd169db0c93039126e37d5f2ab"
+  },
+  "representative_pdf": "09_population_recovery.pdf",
+  "representative_pdf_sha256": "fbacc5c2171615e78f57970142028e56d2c368cb3c99d08983d8b410abe865bb",
+  "representative_pdf_rendered_and_reviewed": true,
+  "review": "All11PNGs inspected using contact sheets and detailed primary views; recoveryPDF rendered with pdftoppm and visually inspected. Fixed long vertical labels, sparse Gaia x-axis clipping, and posterior identity text covering peaks. English labels; scientific denominators and display limits recorded in source metadata."
+}

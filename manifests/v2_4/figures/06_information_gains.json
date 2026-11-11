@@ -1,0 +1,10 @@
+{
+  "name": "06_information_gains",
+  "caption": "33251same development identities,9sky clusters. r/sky prior fitted only on cal labels; no model refit. Error treatment held at original cache settings. Bars are sky-cluster intervals, not a physical information bound; matched i+WISE coverage is restricted.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "information_population": "37e4b3f9356e9de260213dd668a2d66103ac214c403859931a1a22170664f796",
+    "information_paired_bands": "afbbfcc382158eacf57ea7f2fd22213e57674ce1b186fcde1d5632113117407d",
+    "information_uncertainty": "ca7535eb4e54172ec8e5414c74a0f7ac4507b52672494d47cabcd69757953871"
+  }
+}

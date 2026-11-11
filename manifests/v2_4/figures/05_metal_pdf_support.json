@@ -1,0 +1,8 @@
+{
+  "name": "05_metal_pdf_support",
+  "caption": "Sources use different pair subsets. Cross-source persistence is descriptive evidence, not an independent causal metallicity effect. Gaia only10pairs; SpecDis/SPDist share inputs/teacher limitations.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "metal_source_pairs": "0f09e7bd12b56f8ec003086c31d0f0e1aa0da99f887ab76841a2d7e3565fd010"
+  }
+}

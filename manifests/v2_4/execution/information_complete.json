@@ -15,5 +15,17 @@
     "data/v2_1/information_eval.npz": "be7e59bd8f528175c09c7ddfc2716f7fa5ba2edb45bd8ef3fe274c897fdd1841",
     "data/v2_1/information_probabilities.npz": "781f25f1e4282d48a5fb3d1427c221a3cbea1c5d3d2d73236d1e5db7e38172d1"
   },
-  "job": "61123419"
+  "job": "61124175",
+  "coarse_unseen_fraction": 0.04207392258879432,
+  "fine_unseen_fraction": 1.0,
+  "r_unseen_fraction": 0.0,
+  "sky": "60degreeRA\u00d7north/southDec; empty cells fallback r-only; fixed30shrinkage",
+  "class_stress": "All methods retargeted by uniform/global-cal class prior; label-shift assumption explicit; original raw macro scores archived",
+  "amendment_sha256": "f70ce9325bba1bdd03d6114b32e5df76cbffbc6ade159d2d6443ff88711c2c0d",
+  "source_sha256": "caebfb1002525b8aff632a2a5b5bec6d504cb51d0acb250146949291317c5db2",
+  "table_sha256": {
+    "information_population.csv": "37e4b3f9356e9de260213dd668a2d66103ac214c403859931a1a22170664f796",
+    "information_reliability.csv": "c4599eb567a61ac6f561481255a599ba5e403cafc6f2adf40a449bd1f6a2e628",
+    "information_uncertainty.csv": "ca7535eb4e54172ec8e5414c74a0f7ac4507b52672494d47cabcd69757953871"
+  }
 }

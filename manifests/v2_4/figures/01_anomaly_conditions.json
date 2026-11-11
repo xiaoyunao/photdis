@@ -1,0 +1,9 @@
+{
+  "name": "01_anomaly_conditions",
+  "caption": "Full711objects;147conditional low-PIT flags are diagnostic, not a new selection. Only finite coordinates plotted; panel counts give low-PIT/other shown. QRF and XD are compared on these exact identities. W1 is a population marker, not an input to either grz model.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "anomaly_objects": "674d0ade77f7d26977fa94a330c5dff61799abc03ad9ac9f7497713fc31c0949",
+    "anomaly_strata": "322957829837c6dd7ebb14b68d767bd4316b3462195e0fd2c02fbea5e3deab50"
+  }
+}

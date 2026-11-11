@@ -1,0 +1,8 @@
+{
+  "name": "04_metal_source_scales",
+  "caption": "Original2055pairs; both sides must qualify for each reference and distance range. N=pairs,U=unique ordinary controls. Bars:1000control-ID-cluster bootstrap95%interval; separate sky-pair intervals retained in CSV. Very small Gaia strata cannot establish an independent scale.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "metal_source_pairs": "0f09e7bd12b56f8ec003086c31d0f0e1aa0da99f887ab76841a2d7e3565fd010"
+  }
+}

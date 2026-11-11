@@ -14,4 +14,11 @@ Scope: [full latest review](pro_review_0f9c412.md), [frozen protocol](v2_4_proto
 | Recover population distance distributions using independent templates | [Recovery](../manifests/v2_4/population_recovery.csv), [template uncertainty](../manifests/v2_4/population_recovery_uncertainty.csv), [teacher sensitivity](../manifests/v2_4/population_teacher_sensitivity.csv) | No training-ID overlap and no samples from the tested posterior. Fixed composition/distance designs, shared band noise, point/PDF/joint estimates before and after selection. Empirical SED teachers and conditional intervals remain limitations. |
 | Preserve the completed sign correction and rejected-XD conclusion | [Compute validation](../manifests/v2_4/execution/validation.json) | Frozen model/input/source hashes and native chunks checked. No refit, extra candidate, deployment or whole-catalog expansion. |
 
+The four scientific endpoints have different outcomes:
+
+- Anomaly/source audit: concrete reference conflicts and persistent source-separated offsets are identified; a unique physical cause is not established.
+- Target population: joint counts, direct-reference availability and missing-label contributions are quantified; representative final validation remains unachieved.
+- Information: matched-band score increments and model differences are measured under explicit population baselines; observational degeneracy, reference selection and model approximation are not completely identifiable separately.
+- Population recovery: the tested empirical-SED populations expose failure. Full-PDF counts do not uniformly improve over point counts; apparently good total near counts can hide large class-count errors. This is a measured negative result, not an unfinished search for a favorable model.
+
 See [results](v2_4_result.md) for measured outcomes and [English atlas](v2_4_atlas.md) for figures. The completion record distinguishes executed diagnostics from unresolved scientific questions: target-population calibration, independent metal-poor distance scale, far-branch weights, new-sky/system independence, and real faint-population truth.

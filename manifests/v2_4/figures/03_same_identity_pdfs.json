@@ -1,0 +1,8 @@
+{
+  "name": "03_same_identity_pdfs",
+  "caption": "First two identity-ranked examples per group, not hand-picked posterior shapes. Rebinning for display only; native full PDF used for scientific metrics. Display5<mu<22; complete compact bins\u22125to30 are in CSV.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "anomaly_pdf_examples": "946faaa9c46287d71dafada046054019f26f0e5f069a4afc8c07778f288b4864"
+  }
+}

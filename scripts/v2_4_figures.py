@@ -24,8 +24,10 @@ def diagnostics():
         xx=np.array([val(a,x) for a in r]);yy=np.array([val(a,y) for a in r])
         ax.scatter(xx[~bad],yy[~bad],s=10,alpha=.4,color=GRAY,label='Other near Gaia: 564')
         ax.scatter(xx[bad],yy[bad],s=16,alpha=.8,color=ORANGE,label='Conditional PIT < 0.05: 147');ax.set(xlabel=xlabel,ylabel=ylabel)
+        finite=np.isfinite(xx)&np.isfinite(yy)
+        ax.text(.98,.98,f"Finite shown: {int((finite&bad).sum())} / {int((finite&~bad).sum())}",transform=ax.transAxes,ha='right',va='top',fontsize=9)
     axes[0].legend(fontsize=9);fig.suptitle('Fixed QRF near sample · 711 identical Gaia objects')
-    save(fig,'01_anomaly_conditions',['anomaly_objects','anomaly_strata'],'Full711objects;147conditional low-PIT flags are diagnostic, not a new selection. QRF and XD are compared on these exact identities. W1 is a population marker, not an input to either grz model.')
+    save(fig,'01_anomaly_conditions',['anomaly_objects','anomaly_strata'],'Full711objects;147conditional low-PIT flags are diagnostic, not a new selection. Only finite coordinates plotted; panel counts give low-PIT/other shown. QRF and XD are compared on these exact identities. W1 is a population marker, not an input to either grz model.')
     fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     for flag,color,label in [('False',BLUE,'Other overlap: 136'),('True',ORANGE,'Low-PIT overlap: 60')]:
         q=sel(r,low_pit=flag,SPDist_qualified=True);x=np.array([val(z,'Gaia_minus_SPDist_sigma') for z in q]);delta=np.array([val(z,'SPDist_mu')-val(z,'control_mu50') for z in q])
@@ -43,7 +45,7 @@ def diagnostics():
         for model,color in [('control',BLUE),('candidate',ORANGE)]:
             q=sel(r,identity=identity,model=model);x=np.array([val(a,'mu') for a in q]);y=np.array([val(a,'density') for a in q]);ax.plot(x,y,color=color,label='QRF' if model=='control' else 'Corrected XD')
         if np.isfinite(val(q[0],'SPDist_mu')):ax.axvline(val(q[0],'SPDist_mu'),color=GREEN,ls='--',label='SPDist')
-        ax.set(xlim=(5,22),xlabel='Distance modulus (mag)',ylabel='Density per mag',title=group.replace('_',' '));ax.text(.02,.95,identity,transform=ax.transAxes,va='top',fontsize=8)
+        ax.set(xlim=(5,22),xlabel='Distance modulus (mag)',ylabel='Density per mag',title={'low_SPDist':'Low PIT + SPDist','low_no_SPDist':'Low PIT, no SPDist','not_low_SPDist':'Other PIT + SPDist'}[group]);ax.text(.98,.65,identity,transform=ax.transAxes,ha='right',va='top',fontsize=8,bbox=dict(facecolor='white',edgecolor='none',alpha=.85))
     axes[0,0].legend(fontsize=9);fig.suptitle('Deterministic identity examples · full posterior structure')
     save(fig,'03_same_identity_pdfs',['anomaly_pdf_examples'],'First two identity-ranked examples per group, not hand-picked posterior shapes. Rebinning for display only; native full PDF used for scientific metrics. Display5<mu<22; complete compact bins−5to30 are in CSV.')
     r=read('metal_source_pairs');fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
@@ -55,17 +57,17 @@ def diagnostics():
             ax.vlines(x,[val(a,'control_low') for a in q],[val(a,'control_high') for a in q],color=color,lw=2)
             if j==0:
                 for xx,a in zip(x,q):ax.text(xx,.98,'N='+a['n']+'\nU='+a['unique_controls'],transform=ax.get_xaxis_transform(),ha='center',va='top',fontsize=9)
-        ax.axhline(0,color=GRAY,ls='--');ax.set(xticks=range(3),xticklabels=['0–2','2–5','5–10'],xlabel='Both reference distances (kpc)',ylabel='Mean paired residual difference (mag)',title=reference)
+        ax.axhline(0,color=GRAY,ls='--');ax.set(xticks=range(3),xticklabels=['0–2','2–5','5–10'],xlabel='Both reference distances (kpc)',ylabel='Paired residual difference (mag)',title={'Gaia':'Gaia','specdis':'SpecDis','spdist':'SPDist'}[reference],xlim=(-.4,2.4))
     axes[0].legend(fontsize=9,loc='lower right');fig.suptitle('Metal-poor minus ordinary · repeated-control cluster intervals')
     save(fig,'04_metal_source_scales',['metal_source_pairs'],'Original2055pairs; both sides must qualify for each reference and distance range. N=pairs,U=unique ordinary controls. Bars:1000control-ID-cluster bootstrap95%interval; separate sky-pair intervals retained in CSV. Very small Gaia strata cannot establish an independent scale.')
     fig,axes=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
     refs=['Gaia','specdis','spdist']
     for model,color in [('control',BLUE),('candidate',ORANGE)]:
         q=[sel(r,model=model,reference=ref,low_kpc=0,high_kpc='inf')[0] for ref in refs]
-        axes[0].plot(range(3),[100*val(a,'poor_median_relative') for a in q],'o-',color=color,label=model+' poor')
-        axes[0].plot(range(3),[100*val(a,'ordinary_median_relative') for a in q],'s--',color=color,label=model+' ordinary')
-        axes[1].plot(range(3),[val(a,'poor_mean_mass1') for a in q],'o-',color=color,label=model+' poor')
-        axes[1].plot(range(3),[val(a,'ordinary_mean_mass1') for a in q],'s--',color=color,label=model+' ordinary')
+        axes[0].plot(range(3),[100*val(a,'poor_median_relative') for a in q],'o-',color=color,label=('QRF' if model=='control' else 'XD')+': metal-poor')
+        axes[0].plot(range(3),[100*val(a,'ordinary_median_relative') for a in q],'s--',color=color,label=('QRF' if model=='control' else 'XD')+': ordinary')
+        axes[1].plot(range(3),[val(a,'poor_mean_mass1') for a in q],'o-',color=color,label=('QRF' if model=='control' else 'XD')+': metal-poor')
+        axes[1].plot(range(3),[val(a,'ordinary_mean_mass1') for a in q],'s--',color=color,label=('QRF' if model=='control' else 'XD')+': ordinary')
     for ax in axes:ax.set(xticks=range(3),xticklabels=refs,xlabel='Qualified reference source')
     axes[0].set_ylabel('Median distance residual (%)');axes[1].set(ylabel='Mean probability within ±1 mag',ylim=(0,1));axes[0].legend(fontsize=9)
     fig.suptitle('Source-separated scale offset and full-PDF support')

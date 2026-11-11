@@ -1,0 +1,10 @@
+{
+  "name": "02_reference_conflict",
+  "caption": "196of711have qualified SPDist;60are low-PIT. Combined errors use a first-order SPDist parallax propagation and do not model cross-source covariance. Histogram display\u00b18; all objects retained in CSV and statistics.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "anomaly_objects": "674d0ade77f7d26977fa94a330c5dff61799abc03ad9ac9f7497713fc31c0949",
+    "anomaly_overlap": "e347897882e67690dafae98363077da017320e3036510862e74be0a8645050f5",
+    "anomaly_reference_consistency": "0e06196f6c6e8609d2fe40ec0c53f412c74f351fd19c4f2bfd12bda7635b73e0"
+  }
+}
