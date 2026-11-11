@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — v2.6 production submitted
+- Confirmed61129243FAILED1:0at40s and empty user queue; sole corrected population run61129359 and independent luminosity run61129363submitted. No duplicate or periodic monitoring.
+- Full frozen scope A–D implemented.8population tests and12combined numerical/luminosity tests passed; original model/data hashes retained.
+- Add actual-artifact checks and same-realized-catalog estimand summaries; validate only after both stages succeed.
+
 ## 2026-11-11 — directory writer repair and luminosity preflight
 -61129243failed before first posterior save: atomic_npz requires its parent directory. Create observed/uncertain_observed explicitly; migrate only source hash and require no completed posterior products.
 -12targeted tests pass including native-band shared-g tests and independent signed-parallax adaptive convolution. Fixed quadrature now integrates the narrower Gaussian coordinate for precise Gaia.
