@@ -203,9 +203,18 @@ def uncertain(test,base,bins,curve,cat):
 
 def main():
     require_compute();T.mkdir(parents=True,exist_ok=True)
+    for name in ('observed','uncertain_observed'):(D/name).mkdir(exist_ok=True)
     files=[ROOT/'docs/v2_6_protocol.md',ROOT/'scripts/v2_6_population.py',ROOT/'src/photdis/population_v2_6.py',OLD/'catalogs.npz',OLD/'posterior_regime0.npz',OLD/'posterior_regime1.npz',ROOT/'data/v2_4/prospective_identity_reservation.npz']
     freeze={str(p.relative_to(ROOT)):sha(p) for p in files};marker=D/'population_freeze.json'
-    if marker.exists():assert json.loads(marker.read_text())==freeze
+    if marker.exists():
+        previous=json.loads(marker.read_text())
+        if previous!=freeze:
+            key='scripts/v2_6_population.py'
+            assert previous[key]=='2734e3c4f9610071d97c38a518cd4e59712ee190989bdd84facf938accd8f6c6'
+            assert all(previous[k]==v for k,v in freeze.items() if k!=key)
+            assert not list((D/'observed').glob('*.npz')) and not (D/'cached_complete.json').exists()
+            save_json(D/'directory_writer_migration.json',dict(previous=previous,replacement=freeze,reason='Create output directories before atomic_npz; first run failed before writing any posterior product. No inference changes.'))
+            save_json(marker,freeze)
     else:save_json(marker,freeze)
     meta=json.loads((OLD/'templates.json').read_text());base=np.array(meta['base']);bins=np.array(meta['noise_bins']);curve=np.array(meta['noise_curve'])
     cat=load(OLD/'catalogs.npz');c=load(OLD/'cal_templates.npz');test=load(OLD/'test_templates.npz');assert (cat['TYPE']=='PSF').all()

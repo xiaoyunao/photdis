@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — directory writer repair and luminosity preflight
+-61129243failed before first posterior save: atomic_npz requires its parent directory. Create observed/uncertain_observed explicitly; migrate only source hash and require no completed posterior products.
+-12targeted tests pass including native-band shared-g tests and independent signed-parallax adaptive convolution. Fixed quadrature now integrates the narrower Gaussian coordinate for precise Gaia.
+- Source-conditioned luminosity design frozen before production; cal/evaluation source and reused-control identity separation explicit. No SNR admission cut or weak-parallax inversion.
+- Next: confirm terminal/emptyqueue, single population resume and independent luminosity batch.
+
 ## 2026-11-11 — v2.6 scope and posterior implementation
 - Read full Pro review of39e6e4f; archive and freeze A–D requirements in v2_6_protocol. Existing completed stages preserved.
 - Implement observed-cell responsibilities, shared-theta latent counts, evidence-weighted response prior; restricted known/same/transfer controls and nested real-source libraries.
