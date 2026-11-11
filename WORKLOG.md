@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — prospective numerical results and bounded response transfer
+-Newsky247preciseGaia:medianrelative+6.14%,NMAD12.72%,68/95coverage48.58/85.83%;
+ signed1070GaiaweightedPITtails4.19/8.47%. Theseareactualundercoveragefindings,
+ notscientificacceptance. Allreferencequalification andmetricsremainfrozen.
+-Independent-scaleexample61143913completed for8192photometric/1442members;
+ common9.03kpcdynamicaluncertaintykeptshared,notdividedbysqrtN.
+-Add5Englishprospective/sciencefigures andboundedglobalresponsecompressionplan.
+ Neitherphysicalbranches norSEDkernelsarepruned; lostresponsemass givesexplicit
+ probability/count/covariancebounds. Twoindependentcorrelated-counttestspass;
+ productiontransferstillrequiresfinalensemblegate.
+
 ## 2026-11-11 — first field passed and prospective outcomes opened once
 -61143679:45882/45882reference predictions numerically converge;12909structural
  checks pass,3.927GBactual output,437.96s64-worker elapsed. Expandremaining
