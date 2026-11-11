@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — population began before optional concurrency wrapper
+-61126775completed diagnostics and enteredpopulation at~9min. Recorded sourcehash4ad00fe is f9bca2fimplementation, including correct selected-cell smoothing.
+-Optional lock/reuse wrapper arrived after interpreterstart; no secondstep launched. Revert unused wrapper to match actual frozenproduction bytes; no science changes or checkpoint migration.
+- Existing61127009dependency remains solevalidator.
+
 ## 2026-11-11 — protect resumable population computation
 -61127009submitted once with afterok:61126775 foractual-artifact checks. Production still inCPU-intensivefullparallaxdiagnostic phase.
 - Add exclusive population lock and completed-stage reuse before population starts, enabling independent recovery to share currently idle allocated CPUs safely. Scientific design unchanged; preserve single-writer output.
