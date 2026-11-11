@@ -31,3 +31,23 @@ def combine_star_means(means, half_a, half_b, log_evidence):
     mean = np.einsum('r,rik->ik', weights, means)
     a = np.einsum('r,rik->ik', weights, half_a); b = np.einsum('r,rik->ik', weights, half_b)
     return mean, float(abs(a-b).max())
+
+
+def merge_chunk_counts(records):
+    """Merge disjoint object chunks before taking shared-parameter covariance."""
+    first=records[0]; ids=first['draw_ids']; weights=first['draw_weights']
+    for r in records:
+        if not np.array_equal(ids,r['draw_ids']) or not np.array_equal(weights,r['draw_weights']):
+            raise ValueError('Every chunk must use identical global parameter draws')
+    n=sum(int(r['n']) for r in records)
+    means=sum(r['conditional_means'] for r in records)
+    conditional=sum(r['conditional_covariance'] for r in records)
+    mean=weights@means; delta=means-mean
+    shared=(delta.T*weights)@delta
+    realized=sum(r['count_draws'] for r in records)
+    if realized.dtype != np.int64 or not (realized.sum(axis=1)==n).all():
+        raise ValueError('Invalid chunk count totals')
+    return dict(n=n,mean=mean,covariance=conditional+shared,conditional_covariance=conditional,
+        shared_covariance=shared,conditional_means=means,count_draws=realized,
+        draw_ids=ids,draw_weights=weights,
+        marginal_half_delta=max(float(r['marginal_half_delta']) for r in records))

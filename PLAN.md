@@ -27,18 +27,19 @@ Fullfit61135482COMPLETED/converged43iterations;27negative-support flags need
 posterior audit. Shared32draw response61136440COMPLETED; full-model128object benchmark61137836
 COMPLETED. Shared response approximation requires recovery validation. FixedQRF/probes61135917COMPLETED; response
 benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
-50targeted tests pass. Cohort preparation61137072completed; shared native inference,
+54targeted tests pass. Cohort preparation61137072completed; shared native inference,
 CDF joint compression and unified CLI implemented;64object benchmark61137407
 completed calculation, detailed artifact audit pending. Selection tables implemented.
 C: original target61138714checkpointed/cancelled after verified22x algebraic
  speedup; cached2048draw target61139580running. Selection267profiles passed
  maxerror0.002774.
-32influence responses complete; full weightedEM draws0/16 running61138675.
-Shared-response/evidence and marginal convergence remain.
+32influence responses complete but rejected for uncertainty; fullweightedEM0/16converged, remaining30array61139809running.
+Sharedresponse16target61140148running; sharedselection0refinement61140140.
+Shared-response/evidence and final marginal convergence remain.
 D: actual three-band development61138101/107/109 and app61138112/hyper61138114
 completed and scored;QRF61138119complete. Continuous empirical simulations implemented,
-224matched continuous recovery runs(112grz+112multi) now running arrays
-61139581/582; first512drawpilot passed chains but failed finalMC0.005, preserved.
+224matched continuous recoveries complete;56passfullnumericgate. Refined16384draw
+recovery61140145/147/195/196running, originalfailurespreserved.
 Full same-ID distance/class/Gaia scores and21inspected figures delivered; shared
 response recovery and calibrated applicability remain.
 E: outcomes still closed; independent HST dynamical NGC288 scale identified for

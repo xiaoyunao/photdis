@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — continuous marginalized products and numerical refinement
+-Actualpilot61140145/147progressedthroughchains after Path repair; submit remaining
+ fine arrays61140195/196(1–13%4), retain accepted originalcases. Sharedselection0
+ refined61140140andsharedtarget16pilot61140148running; no outcome opening.
+-Add analytic Gaussian-ratio integration ofcompressedCDF, verified against native
+ forward likelihood. Add shared product exporter with identical global chain IDs,
+ chunk covariance merged throughconditionalmeans, fullclassCDF andjointcoefficients.
+-Observed-band support proxy audit complete:26000application/62880development,
+ no numerical failures; proxy>0.1 for196/1809 respectively. This is prior Gaussian
+ tail risk weightedbycomponent, not a physicalnegative-flux probability.
+-Generated recovery artifacts onNERSC hashmatchedlocal, reversiblyarchived before
+ gitpush6c504d2. No differing file overwritten. 54tests pass; sharedproducts await actual pilot.
+
 ## 2026-11-11 — numerical refinement failures preserved and repaired
 -Refinedarrays61139834/838allFAILED before sampling: path suffix expression
  added string toPath. Correct construction and execute actual AST path statements
