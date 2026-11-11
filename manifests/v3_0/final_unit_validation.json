@@ -1,9 +1,9 @@
 {
   "command": "PYTHONPATH=src:scripts:.deps python3 -m pytest -q tests/test_v3*.py",
-  "passed": 70,
+  "passed": 71,
   "failed": 0,
-  "elapsed_seconds": 3.75,
-  "date": "2026-11-11 21:08:03.746569+08:00",
+  "elapsed_seconds": 4.18,
+  "date": "2026-11-11 21:33:48.703234+08:00",
   "scope": "Mathematical and unit tests, not a substitute for production or scientific acceptance",
   "test_hashes": {
     "tests/test_v3_calibration.py": "a7ba9a8c1df06002f572151c3596fc9c00cfd46d244a0096fd83af6f67a78da1",
@@ -17,7 +17,7 @@
     "tests/test_v3_evidence.py": "9f91814064f90e5c8093fbf09ae4694c0fbf4299cf6c61f3928d1938ab428c63",
     "tests/test_v3_fast.py": "52c0390cf7a3afdfdd3d31aa96e5fd762543b42977003bb16f91f6a254901563",
     "tests/test_v3_fast_hierarchy.py": "15480cc4f2eae740217aea26bfa35923f84471ba523db62d3af0bbc7a8a7e903",
-    "tests/test_v3_hierarchy.py": "54f3026a2dfdb4418380855d50170e9ea11ae5c83825279d2790524e08e17e61",
+    "tests/test_v3_hierarchy.py": "1c792718c6d623c2cf801aeb962fb4fe395dc24679ae15cefe1590f6700f824d",
     "tests/test_v3_inference.py": "3e65f0db6d02e5a35521d3f5bb5a9b8e0855d95f2eac4fc2ad738b1ba43aae29",
     "tests/test_v3_likelihood.py": "c4a32b61ce87a97bf8f21084b833de3e7f2408f56341feed23ea885d7bf0f555",
     "tests/test_v3_marginal.py": "e33b1c47675204a10da3e167cb48e5e9655abbfd2a67f845a5c6d7eaf3836041",

@@ -27,10 +27,11 @@ A/B: 612114 strict native-PSF reference identities; isolated roles and untruncat
 C: original32 target posterior fits complete. Longer numerical-only chains for
  responses1/12/17 passsampler;26extendedchainrejectedfordivergence. Preserve
  originalverified26s512;131072proposal bridge61145589 stillfails0.2078>0.2.
- Conservative same-model1024draw/1024warmup/.99acceptance61146086, then
- evidence61146087/native61146088/products61146089/ensemble61146090. Existing
- plan61145619 anddownstream jobs rebound, notduplicated. Maintenanceprevents
-2hallocations; pending smalljoblimits shortenedfromactualbenchmarks.
+ Conservative1024draw/.99run61146086 failsRhat1.214/ESS14.55;87/88 reject.
+ Pending89/90 canceled; diagnosis61146730 identifies .107step/8steptrajectories
+ versus original~.42. New numerical-only4096draw/.95/16step trajectory refinement
+ preservesphysicalresponse/MAP; waitsfor3h allocation aftermaintenance.
+ Existingplan/catalog/prospective dependencies will be rebound, notduplicated.
  Exact26000-object response ensemble, design summary and catalog transfer await
  final weighted marginal precision. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.

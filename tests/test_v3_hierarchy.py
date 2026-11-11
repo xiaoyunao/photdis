@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 from scipy.optimize import approx_fprime
 from test_v3_inference import model
 from photdis.v3.hierarchy import FieldPopulation
@@ -20,13 +21,14 @@ def test_field_shrinkage_gradient_and_single_use_likelihood():
     np.testing.assert_allclose(g, x, atol=1e-12)
 
 
-def test_hmc_recovers_correlated_gaussian_and_chain_diagnostics_detect_stuck():
+@pytest.mark.parametrize("acceptance,steps", [(.8,8), (.95,16)])
+def test_hmc_recovers_correlated_gaussian_and_chain_diagnostics_detect_stuck(acceptance,steps):
     mean = np.array([1., -2.]); covariance = np.array([[2., .7], [.7, 1.]])
     precision = np.linalg.inv(covariance)
     def objective(x):
         d = x-mean
         return .5*d@precision@d, precision@d
-    records = [hmc(objective, mean, covariance, draws=1200, warmup=200, seed=i) for i in range(4)]
+    records = [hmc(objective, mean, covariance, draws=1200, warmup=200, seed=i, target_acceptance=acceptance, leapfrog_steps=steps) for i in range(4)]
     samples = np.array([r['samples'] for r in records])
     np.testing.assert_allclose(samples.mean(axis=(0, 1)), mean, atol=.08)
     np.testing.assert_allclose(np.cov(samples.reshape(-1, 2).T), covariance, atol=.15)

@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — diagnose failed conservative target mixing
+-61146086 completed26:59 but fails Rhat1.21444/minESS14.55; dependent87/88
+ correctlyreject unverifiedsampler. Cancelonlypending89/90; retainallfailedoutputs.
+-Allocateddiagnostic61146730: .99acceptance reducessteps0.42to0.107 with
+ unchanged8leapfrogsteps, causing shorttrajectories. Original2048hasESS739
+ butone divergence, so neitherproduct is accepted.
+-Newnumerical-only trajectory-target uses .95acceptance/16steps/1024warmup/
+ 4096draws, sameimmutable response/MAP; separate namespace and diagnosis hash.
+-Validation: parse and analytic correlated-Gaussian tests for both integrators;
+ physicalfreeze/criteria unchanged.
+
 ## 2026-11-11 — exact class and abundance interpretation
 -Document actual DESI class-quality/logg/Teff cuts and continuous RVS FeH
  correction/domain from existing source; no frozen-code or admission changes.
