@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — target-count and independent-SED recovery programs implemented
+- Audit61123419 submitted uniquely after empty same-name queue check; status/log inspection in progress.
+- Added v2_4_population.py: observable target before reference join, original-parent signed Gaia, exact frozen joint marginal checks, weighted class-distance reference contributions and evidence support. Reserve up to250new IDs/field, exact native TYPE from original sweeps; no new reservation reference outcomes/predictions opened.
+- Added v2_4_recovery.py: held-out empirical SEDs with zero fit-ID overlap,5fixed distances,4measurement cases,4fixed population mixtures. Shared-band target noise; point/PDF/joint counts, repeated-template uncertainty and coherent teacher-scale sensitivity. No fit and no self-PDF-generated truth.
+- Python parse and git diff --check pass; production and final validation remain pending. Conditional count-interval coverage explicitly separated from real-population calibration.
+
 ## 2026-11-11 — fixed-identity audit implementation validated
 - Added science_v2_4 math helpers and3independent focused tests (joint vs marginal products, clustered repeats/cal-only priors, PDF peak/reference diagnostics); all pass, Python parse passes.
 - Added v2_4_audit.py: preserve711/147denominator,399SPDist exact intersections, Gaia original-row quality, source-specific2055pairs and repeated-control/sky-pair bootstrap, same-ID information scores against cal-only global/r-sky priors. No refit or old prediction writes.
