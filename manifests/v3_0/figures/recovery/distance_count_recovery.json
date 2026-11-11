@@ -1,0 +1,10 @@
+{
+  "caption": "Eight 128-object realizations per scenario. L1 is the sum of absolute distance-bin fraction errors, not per-star distance precision. All 224 conditional numerical cases passed after explicit refinements.",
+  "source_sha256": "f3398da87ed2449cb76dc7e09e3f01047499f58a66cc2676c9701f73c44a874d",
+  "png_sha256": "86ca9d0b824df20ec355064c1ed4f4f6e9fe0be415bd5f558d89aeeb838b684c",
+  "pdf_sha256": "acd38c6cf92a56a5f967043459f0d46c58c239eb4ae8624ee2654d3a87577707",
+  "csv_sha256": "f3398da87ed2449cb76dc7e09e3f01047499f58a66cc2676c9701f73c44a874d",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Continuous simulated observed catalogs; conditional on nominal fitted SED, not final response-marginal recovery."
+}

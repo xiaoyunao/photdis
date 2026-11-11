@@ -1,0 +1,10 @@
+{
+  "caption": "Signed count bias for the predeclared 2\u20135 kpc failure stratum; no scenarios removed after inspecting results.",
+  "source_sha256": "c6bd7c2e7f7d5d9d4606d9d5eadc509b8e95ff18e3375233e8a9344619f6a38a",
+  "png_sha256": "34bcb9b55106bf0798605c42f1a80f7b015769e0bb37f0afcc8521932925b93f",
+  "pdf_sha256": "17779b4286a5d6ee8f2a98120040c1dd31fdb27cc05f138705c9a1a56ae10fb8",
+  "csv_sha256": "d036c858182a9859f5bd675dbcb60fcdce988191b042d42bfa4223bc1ca80f8c",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Continuous simulated observed catalogs; conditional on nominal fitted SED, not final response-marginal recovery."
+}

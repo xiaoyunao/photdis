@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-11 — complete conditional recovery and native shared pilot
+-Report61142276 verifies224/224 conditional simulations; max final halfdelta
+0.004939. Three English recovery plates visually inspected,18artifact checks.
+-Nominal native26000 product61142267 passes integral1.0e-7, joint2.1e-8,
+ finalhalfdelta0.004679. Draw16native61142275 integrationpasses butconditional
+ halfdelta0.03224 remains visible pending finalresponseweighting.
+-Native shared pilot61142329 passes8/8 sampler/bridge/integration checks;
+111remaining batches forreadydraws0,1,2,3,7,9,10,16 submitted61142412.
+-Observed stale Slurm aftercorr dependencies for predecessors already finished;
+ verified required completion records, cleared only affected pending dependencies,
+ retained same jobs. Execution audit stored on NERSC.
+-Add independently enumerated catalog-conditioning math: new photometry updates
+ common global weights once; fitted identities cannot count twice. Expose ESS
+ collapse rather than pretending transferred fixed weights are full joint inference.
+
 ## 2026-11-11 — numerical recovery refinements and native response correction
 -Three remaining conditional recoveries61141807/808/809 all pass: full224-case
  report now chooses explicit65536/a99 refinements before16384/a90/original.

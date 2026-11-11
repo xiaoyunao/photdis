@@ -1,0 +1,9 @@
+{
+  "figures": 3,
+  "inputs_sha256": "bec2c82bbf41ed1c8a9c8e245bdcec2fae6172086f9084cbfb94c0f07a7b9597",
+  "files": {
+    "distance_count_recovery.json": "c5847ee84318010f4046dcf7c33349729277f365e16c37cdbedff323918ba0a3",
+    "middle_distance_bias.json": "94312238d65e0079079d2a7c228c90ee2a250b3f9a2a4b50c838a4c11a4cb6a0",
+    "distance_count_coverage.json": "7e5931ff91cf87df0cd187e7cec21f1b8d7365b6583d524efa42b9b4aa4e9ea1"
+  }
+}

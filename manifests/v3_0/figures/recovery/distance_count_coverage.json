@@ -1,0 +1,10 @@
+{
+  "caption": "Realized latent counts with shared population uncertainty, conditional on nominal response. Coverage is discrete in steps of 12.5%; repeated realizations share a template library. Zero-true-count cells are retained.",
+  "source_sha256": "c6bd7c2e7f7d5d9d4606d9d5eadc509b8e95ff18e3375233e8a9344619f6a38a",
+  "png_sha256": "5e6ba2dffd95445fef6014700df80ddcb2dd12279d443fbeaf03805214e98b8f",
+  "pdf_sha256": "70835aa7283a66e1d76b6befd02e64b38b557e9a00a5c58e1e286c13c4a9c83c",
+  "csv_sha256": "2875a92eb393d48216e13ab4fbe8aaac44bcd426c1b6ebdbc8322b000602e954",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Continuous simulated observed catalogs; conditional on nominal fitted SED, not final response-marginal recovery."
+}

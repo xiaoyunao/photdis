@@ -59,7 +59,8 @@ def evaluate_chunk(path):
         pdf = summary['pdf'][:, ::-1]
         qnear = np.sum(pdf*np.clip((15-edges[:, :-1])/np.diff(edges), 0, 1), axis=1)
     else:
-        density = load(path.with_name(path.stem+'_joint.npz')); qnear = summary['qnear']
+        density = summary if _ARGS.target_product else load(path.with_name(path.stem+'_joint.npz'))
+        qnear = summary['qnear']
     for i in range(n):
         if density is not None:
             lo, hi = density['full_grid_offset'][i:i+2]
@@ -82,8 +83,8 @@ def evaluate_chunk(path):
         mu=summary['mu'], qnear=qnear, supported=summary['supported'], gaia_pit=gp, gaia_logscore=gs)
     if density is not None:
         out.update(class_probability=summary['class_distance'].sum(axis=2),
-            class_distance=summary['class_distance'], negative_intrinsic_support=summary['negative_intrinsic_support'],
-            discrepancy_probability=summary['discrepancy_probability'], converged=summary['converged'])
+            class_distance=summary['class_distance'], negative_intrinsic_support=summary.get('negative_intrinsic_support',np.full(n,np.nan)),
+            discrepancy_probability=summary['discrepancy_probability'], converged=summary.get('converged',summary.get('reference_numerical_converged')))
     for name, (mu, error, valid, _) in views.items():
         out[name+'_mu'] = mu; out[name+'_error'] = error; out[name+'_valid'] = valid; out[name+'_logscore'] = scores[name]
     atomic_npz(output, **out)
@@ -96,6 +97,7 @@ def main():
     require_compute(); parser = argparse.ArgumentParser()
     parser.add_argument('cohort', choices=['hyper', 'development', 'application', 'reservation', 'new_sky', 'independent_scale'])
     parser.add_argument('--view', choices=['qrf', 'grz', 'griz', 'multiband'], default='multiband')
+    parser.add_argument('--target-product', default='', help='Verified native shared product folder; application cohort only')
     parser.add_argument('--limit', type=int, default=0); parser.add_argument('--workers', type=int, default=32)
     args = _ARGS = parser.parse_args()
     folder = f'{args.cohort}_qrf_{args.limit}' if args.view == 'qrf' else f'{args.cohort}_{args.view}_fit_{args.limit}'
@@ -111,6 +113,13 @@ def main():
         folder = 'final_'+folder
     else:
         prediction = D/'predictions'/folder; evidence_path = D/'evaluation'/(args.cohort+'.npz'); source_path = D/'cohorts'/(args.cohort+'.npz')
+    if args.target_product:
+        assert args.cohort == 'application' and args.view == 'multiband' and args.limit == 0
+        product = D/'shared_products'/args.target_product
+        product_record = json.loads((product/'complete.json').read_text())
+        assert product_record['integration_passed']
+        prediction = product
+        folder = 'application_target_'+args.target_product
     assert (prediction/'complete.json').exists(), 'All prediction chunks required'
     paths = [prediction/'complete.json', evidence_path,
         source_path, D/'calibration.npz', ROOT/'scripts/v3_0_evaluate.py',
@@ -122,11 +131,15 @@ def main():
     else: save_json(freeze, _FROZEN)
     _EVIDENCE = load(paths[1]); _SOURCE = load(paths[2]); _CAL = load(paths[3])
     np.testing.assert_array_equal(_EVIDENCE['identity'], _SOURCE['identity'])
-    chunks = [p for p in sorted(prediction.glob('chunk_*.npz')) if not p.name.endswith('_joint.npz')]
+    chunk_dir = prediction/'chunks' if args.target_product else prediction
+    chunks = [p for p in sorted(chunk_dir.glob('chunk_*.npz')) if not p.name.endswith(('_joint.npz','_counts.npz'))]
     for path in chunks:
         meta = json.loads(path.with_suffix('.json').read_text())
-        assert sha(path) == meta['sha256' if args.view == 'qrf' else 'summary_sha256']
-        if args.view != 'qrf': assert sha(path.with_name(path.stem+'_joint.npz')) == meta['joint_sha256']
+        if args.target_product:
+            assert sha(path) == meta['outputs'][path.name]
+        else:
+            assert sha(path) == meta['sha256' if args.view == 'qrf' else 'summary_sha256']
+            if args.view != 'qrf': assert sha(path.with_name(path.stem+'_joint.npz')) == meta['joint_sha256']
     with concurrent.futures.ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
         outputs = list(pool.map(evaluate_chunk, chunks))
     records = [load(p) for p in outputs]

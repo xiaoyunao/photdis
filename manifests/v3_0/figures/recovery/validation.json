@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "figures/v3_0/recovery/distance_count_recovery.png",
+    "figures/v3_0/recovery/distance_count_recovery.pdf",
+    "dimensions:distance_count_recovery",
+    "dpi:distance_count_recovery",
+    "English:distance_count_recovery",
+    "table:distance_count_recovery",
+    "figures/v3_0/recovery/middle_distance_bias.png",
+    "figures/v3_0/recovery/middle_distance_bias.pdf",
+    "dimensions:middle_distance_bias",
+    "dpi:middle_distance_bias",
+    "English:middle_distance_bias",
+    "table:middle_distance_bias",
+    "figures/v3_0/recovery/distance_count_coverage.png",
+    "figures/v3_0/recovery/distance_count_coverage.pdf",
+    "dimensions:distance_count_coverage",
+    "dpi:distance_count_coverage",
+    "English:distance_count_coverage",
+    "table:distance_count_coverage"
+  ],
+  "passed": 18,
+  "visual_review": [
+    "distance_count_recovery",
+    "distance_count_coverage",
+    "middle_distance_bias"
+  ],
+  "fix": "Coverage colorbar moved inside canvas after visual inspection; WISE labels capitalized."
+}
