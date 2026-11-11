@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-11 — full candidate reference predictions complete
+- All13DECamfields/1183990qualified objects have referenceprediction completion;
+ fullhash/identity/probability audit61144231 progressing. No fullDR11 claim.
+- Sharedrecovery sampler refinements all24pass; finaljoint numericpass92/112.
+ Selector61144598 identified20actualweighted-contribution cases;8192draw
+ refinement61144714 andaggregate61144716 submitted, oldreports retained.
+- Add candidateuserguide, explicitrequest-to-evidence ledger and68-test record.
+
 ## 2026-11-11 — joint Monte Carlo precision remains a separate gate
 - Original32-response recovery summary passes78/112catalogs. Some failures are
  finalweightedmarginal differences, notdivergences; numerical-only selection

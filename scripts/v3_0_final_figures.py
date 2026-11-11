@@ -29,8 +29,8 @@ def save(fig,name,rows,inputs,caption):
         english_text_verified=True,png_dpi=300,job=os.getenv('SLURM_JOB_ID')))
 
 
-def recovery():
-    base=D/'shared_recovery_summary/all32_native_refined';record=json.loads((base/'complete.json').read_text())
+def recovery(name='all32_native_precision1'):
+    base=D/'shared_recovery_summary'/name;record=json.loads((base/'complete.json').read_text())
     count=read(base/'counts.csv');cov=read(base/'coverage.csv');numeric=read(base/'numerical.csv')
     nominal=ROOT/'manifests/v3_0/recovery_final/summary.csv';old=read(nominal)
     scenarios=sorted({r['scenario'] for r in count});labels=[s.replace('_',' ').capitalize().replace('wise','WISE').replace('4kpc','4 kpc') for s in scenarios]
@@ -144,9 +144,10 @@ def scale():
 
 
 def main():
-    require_compute();p=argparse.ArgumentParser();p.add_argument('stage',choices=['recovery','population','catalog','scale']);a=p.parse_args()
+    require_compute();p=argparse.ArgumentParser();p.add_argument('stage',choices=['recovery','population','catalog','scale']);p.add_argument('--recovery-name',default='all32_native_precision1');a=p.parse_args()
     plt.rcParams.update(STYLE)
-    dict(recovery=recovery,population=population,catalog=catalog,scale=scale)[a.stage]()
+    if a.stage=='recovery': recovery(a.recovery_name)
+    else: dict(population=population,catalog=catalog,scale=scale)[a.stage]()
     print('FINAL FIGURES',a.stage,flush=True)
 
 
