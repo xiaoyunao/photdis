@@ -1,5 +1,14 @@
 # PLAN
 
+## Active v2.6 observed-catalog inference
+Full requirements: docs/pro_review_39e6e4f.md; frozen docs/v2_6_protocol.md.
+- [ ] A: same192catalog per-star joint probabilities and correlated latent counts.
+- [ ] B: three restricted response controls, endpoint convergence and reachable range.
+- [ ] C: nested independent sources, response MC and evidence-weighted uncertainty.
+- [ ] D: cal-only source-conditioned poor luminosity shift/scatter and latent grz application.
+- [ ] Actual checks, inspected English figures, result/limitations and safe synchronization.
+3250prospective outcomes stay closed; no W1/full-catalog/deployment/timer/agents.
+
 ## Completed v2.5 target-population inference
 Review docs/pro_review_de4904b.md; frozen scope docs/v2_5_protocol.md.
 - [x] Outcome-blind red controls, signed-Gaia original metal pairs, class band gains.

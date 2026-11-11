@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — v2.6 scope and posterior implementation
+- Read full Pro review of39e6e4f; archive and freeze A–D requirements in v2_6_protocol. Existing completed stages preserved.
+- Implement observed-cell responsibilities, shared-theta latent counts, evidence-weighted response prior; restricted known/same/transfer controls and nested real-source libraries.
+- NERSC authentication valid; queue empty; tracked endpoints aligned. No prospective outcomes, timers, subagents or model replacement.
+- Next: focused mathematical tests, allocated population run and source-conditioned luminosity calibration.
+
 ## 2026-11-11 — v2.5 completed: controlled population inference and checked delivery
 -61127630 COMPLETED0:0(1:10),1966actualchecks;61127456resume1:03 and61127009initialvalidator1:16complete. Original61126775writerfailure preserved;384QRFchunks/24576observations reused. Noactivejobs/timers/agents.
 - Four-parameter selection-normalizedresponse,256cal/224independenttestSEDs,32missingclassmarginalized;192freshcatalogs. Refined2^18/2^17: maxmeanchange0.001452,minESS106.03; initialtables/posteriors archivedwithoutrefit.
