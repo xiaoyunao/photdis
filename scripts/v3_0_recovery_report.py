@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Aggregate all frozen recovery catalogs without hiding failed numerical cases."""
 import csv
+import argparse
 import json
 import os
 import numpy as np
@@ -10,10 +11,13 @@ D = ROOT/'data/v3_0'
 
 
 def main():
-    require_compute(); rows = []; metrics = []; numeric = []; inputs = {}
+    require_compute(); parser = argparse.ArgumentParser(); parser.add_argument('--refined', action='store_true'); args = parser.parse_args()
+    rows = []; metrics = []; numeric = []; inputs = {}
     for view in ('grz', 'multiband'):
         for catalog in range(112):
             folder = D/'recovery'/view/f'catalog_{catalog:03}_s2048_cached'
+            finer = folder.with_name(f'catalog_{catalog:03}_s16384_cached_a90')
+            if args.refined and (finer/'complete.json').exists(): folder = finer
             path = folder/'complete.json'; record = json.loads(path.read_text())
             inputs[str(path.relative_to(ROOT))] = sha(path)
             for name, digest in record['outputs'].items(): assert sha(folder/name) == digest
@@ -24,7 +28,7 @@ def main():
             for name, dest in [('recovery.csv', rows), ('distance.csv', metrics)]:
                 with (folder/name).open() as stream:
                     dest.extend(dict(**tag, **r) for r in csv.DictReader(stream))
-    out = ROOT/'manifests/v3_0/recovery'; out.mkdir(parents=True, exist_ok=True)
+    out = ROOT/'manifests/v3_0'/('recovery_refined' if args.refined else 'recovery'); out.mkdir(parents=True, exist_ok=True)
     csv_rows(out/'counts.csv', rows); csv_rows(out/'distance.csv', metrics); csv_rows(out/'numerical.csv', numeric)
     summary = []
     for view in ('grz', 'multiband'):

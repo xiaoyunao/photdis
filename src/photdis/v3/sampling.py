@@ -3,7 +3,8 @@ import numpy as np
 
 
 def hmc(objective, initial, metric, *, draws=512, warmup=512, seed=302301,
-        step_size=.1, leapfrog_steps=8):
+        step_size=.1, leapfrog_steps=8, target_acceptance=.8):
+    if not 0 < target_acceptance < 1: raise ValueError('Interior target acceptance required')
     rng = np.random.default_rng(seed)
     initial = np.asarray(initial, float); factor = np.linalg.cholesky(metric)
     # z = initial + factor @ y; sample unit momentum in whitened coordinates.
@@ -35,7 +36,7 @@ def hmc(objective, initial, metric, *, draws=512, warmup=512, seed=302301,
         if rng.random() < probability: y, value, grad = trial, trial_value, trial_grad
         if iteration < warmup:
             t = iteration+1; eta = 1/(t+10)
-            hbar = (1-eta)*hbar+eta*(.8-probability)
+            hbar = (1-eta)*hbar+eta*(target_acceptance-probability)
             running_log_eps = mu-np.sqrt(t)/.05*hbar
             running_log_eps = np.clip(running_log_eps, -12, 1)
             eta_bar = t**(-.75)

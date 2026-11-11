@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — one-update reference approximation rejected on actual sensitivity
+-On128sameapplicationIDs, fullrefits change qnear95thpercentile by0.034–0.038
+ and maximum0.286/0.551; even supportedstarsmax0.058/0.086. Therefore retain
+ one-update ensemble only as approximation audit and submit remaining30full
+ same-family sharedbootstrap fits. No new model family/hyperparameter search.
+-Recovery Rhatmax1.0084/ESSmin446; directnormalizationmax0.000822 and omitted
+ bound<1e-4pass. Eightcatalogs/view have HMC divergences, mostneedmoreMC.
+ Numerical refinement: targetacceptance0.9 and16384draws/chain onlyforfailed
+ cases, separate namespaces; accepted2048draw cases retained. Originalrecords
+ stay visible and conditional-scope limitations remain.
+
 ## 2026-11-11 — shared sky-key integer overflow diagnosed
 -Sharedselection61139689/691failed before construction: NumPy2rejects adding
 100000to int16development/simulation cells. Promote field/cell toint64 before
