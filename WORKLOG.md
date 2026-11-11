@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — application hierarchy converged and full uncertainty pipeline chained
+-61139580COMPLETED35m42s: Rhat1.000938,minimumESS3032.87, finaljointMC gatepassed.
+ Fine recovery pilot61140145/147completed; manyremainingcasespass, failuresretained.
+ Sharedselection0refined61140140passes0.002877. Sharedtarget0submitted61140662;
+ remainingdrawselection/prediction/target61140663/664/665 use aftercorr prerequisites.
+-Add evidence-weighted response aggregator, sameidentity information/score-tail/
+ nearselection diagnostics, and native log-density reconstruction for proper scores.
+ ContinuousCDF alone is not used for tiny-tail log scores. Independent native
+ mixture oracle and full55focusedtests pass; actualproduct/diagnostic pilots next.
+
 ## 2026-11-11 — continuous marginalized products and numerical refinement
 -Actualpilot61140145/147progressedthroughchains after Path repair; submit remaining
  fine arrays61140195/196(1–13%4), retain accepted originalcases. Sharedselection0

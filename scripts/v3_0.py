@@ -30,6 +30,8 @@ STAGES = {
     'recovery-batch': 'v3_0_recovery_batch.py',
     'recovery': 'v3_0_recovery.py',
     'development-figures': 'v3_0_development_figures.py',
+    'diagnostics': 'v3_0_diagnostics.py',
+    'ensemble-products': 'v3_0_ensemble.py',
     'shared-products': 'v3_0_shared_products.py',
     'shared-selection': 'v3_0_shared_selection.py', 'shared-target': 'v3_0_shared_target.py',
     'shared-predict': 'v3_0_shared_predict.py', 'application-evidence': 'v3_0_application_evidence.py',

@@ -21,9 +21,11 @@ from photdis.v3.hierarchy import FieldPopulation
 from photdis.v3.population import SharedCounts
 from photdis.v3.marginal import marginal_coefficients
 from photdis.v3.marginal_cdf import cdf_product
+from photdis.v3.marginal_density import native_marginal
+from v3_0_response import observation
 from photdis.v3.ensemble_counts import merge_chunk_counts
 D=ROOT/'data/v3_0'
-_MODEL=_SOURCE=_RESPONSE=_THETA=_BETA=_FIELDS=_OUT=_PRED=_INPUTS=_DRAW_IDS=None
+_MODEL=_SOURCE=_RESPONSE=_THETA=_BETA=_FIELDS=_OUT=_PRED=_INPUTS=_DRAW_IDS=_CALIBRATION=None
 
 
 def chunk(path):
@@ -51,9 +53,16 @@ def chunk(path):
         probability[use]=counts.add(p.reshape(len(_DRAW_IDS),len(use),18),_DRAW_IDS).reshape(-1,3,6)
         half_a[use]=p[::2].mean(axis=0);half_b[use]=p[1::2].mean(axis=0)
         coefficients[use],_=marginal_coefficients(r,coef)
-    records=[];grids=[];cdfs=[];offset=[0]
+    records=[];grids=[];cdfs=[];offset=[0];native_grids=[];native_logpdf=[];native_offset=[0]
     for j in range(len(rows)):
-        result=cdf_product(unpack(packed,j),_MODEL,coefficients[j])
+        compact=unpack(packed,j)
+        result=cdf_product(compact,_MODEL,coefficients[j])
+        lo,hi=packed['full_grid_offset'][j:j+2]
+        grid=np.unique(np.r_[packed['full_mu'][lo:hi],np.linspace(-20.,50.,1401)])
+        lp,lognorm=native_marginal(_MODEL,observation(_SOURCE,source_rows[j]),grid,coefficients[j],
+            compact['source_log_evidence'],calibration_mag=_CALIBRATION[source_rows[j]])
+        result['native_log_normalization']=lognorm
+        native_grids.append(grid);native_logpdf.append(lp);native_offset.append(native_offset[-1]+len(grid))
         grids.append(result.pop('grid'));cdfs.append(result.pop('class_cdf'))
         offset.append(offset[-1]+len(grids[-1]))
         result['discrepancy_probability']=float(result.pop('component_probability')@_MODEL.discrepancy_channel)
@@ -63,6 +72,7 @@ def chunk(path):
     payload.update(identity=s['identity'],TYPE=s['TYPE'],ls_id=s['ls_id'],field=fields,
         probability=probability,half_a=half_a,half_b=half_b,supported=s['supported'],
         reference_numerical_converged=s['converged'],band_mask=s['band_mask'],
+        full_mu=np.concatenate(native_grids),full_logpdf=np.concatenate(native_logpdf),full_grid_offset=np.asarray(native_offset,'i8'),
         coefficient=coefficients.astype('f4'),cdf_grid=np.concatenate(grids).astype('f4'),
         class_cdf=np.concatenate(cdfs,axis=1).astype('f4'),cdf_offset=np.asarray(offset,'i8'))
     assert (payload['TYPE']=='PSF').all()
@@ -70,6 +80,7 @@ def chunk(path):
     count_path=output.with_name(output.stem+'_counts.npz');atomic_npz(count_path,**counts.result())
     save_json(marker,dict(inputs=_INPUTS,n=len(rows),outputs={output.name:sha(output),count_path.name:sha(count_path)},
         source_joint=str(compact_path.relative_to(ROOT)),source_joint_sha256=sha(compact_path),
+        maximum_native_integral_error=float(abs(np.expm1(payload['native_log_normalization'])).max()),
         maximum_integral_error=float(abs(payload['integral']-1).max()),
         maximum_joint_delta=float(payload['joint_integration_delta'].max()),
         maximum_omitted_bound=float(payload['omitted_posterior_bound'].max())))
@@ -77,7 +88,7 @@ def chunk(path):
 
 
 def main():
-    global _MODEL,_SOURCE,_RESPONSE,_THETA,_BETA,_FIELDS,_OUT,_PRED,_INPUTS,_DRAW_IDS
+    global _MODEL,_SOURCE,_RESPONSE,_THETA,_BETA,_FIELDS,_OUT,_PRED,_INPUTS,_DRAW_IDS,_CALIBRATION
     require_compute();p=argparse.ArgumentParser()
     p.add_argument('--draw',type=int,default=-1);p.add_argument('--draws',type=int,default=512)
     p.add_argument('--workers',type=int,default=32);p.add_argument('--limit-chunks',type=int,default=0)
@@ -94,6 +105,10 @@ def main():
     response_path=target/'component_response.npz'
     if nominal and not response_path.exists():response_path=D/'targets/application_fit_0/component_response.npz'
     _RESPONSE=load(response_path)
+    _CALIBRATION=np.zeros((len(_SOURCE['identity']),6))
+    if not nominal:
+        system=load(_PRED/'shared_system.npz')
+        np.testing.assert_array_equal(system['identity'],_SOURCE['identity']);_CALIBRATION=system['calibration_mag']
     np.testing.assert_array_equal(_SOURCE['identity'][_RESPONSE['rows']],_RESPONSE['identity'])
     _FIELDS=np.unique(_SOURCE['field'][_RESPONSE['rows']])
     # Decode has no data dependence beyond field labels; do not duplicate a GB
@@ -107,7 +122,7 @@ def main():
     if a.limit_chunks:name+=f'_pilot{a.limit_chunks}'
     _OUT=D/'shared_products'/name;(_OUT/'chunks').mkdir(parents=True,exist_ok=True)
     paths=[model_path,target/'complete.json',target/'chains.npz',response_path,_PRED/'complete.json',D/'cohorts/application.npz',ROOT/'scripts/v3_0_shared_products.py']
-    paths += [ROOT/'src/photdis/v3'/x for x in ('marginal_cdf.py','marginal.py','target.py','population.py','ensemble_counts.py')]
+    paths += [ROOT/'src/photdis/v3'/x for x in ('marginal_density.py','marginal_cdf.py','marginal.py','target.py','population.py','ensemble_counts.py')]
     _INPUTS={str(x.relative_to(ROOT)):sha(x) for x in paths};_INPUTS.update(vars(a))
     freeze=_OUT/'inputs.json'
     if freeze.exists():assert json.loads(freeze.read_text())==_INPUTS
@@ -122,7 +137,7 @@ def main():
     records=[load(_OUT/'chunks'/(__import__('pathlib').Path(x).stem+'_counts.npz')) for x in markers]
     counts=merge_chunk_counts(records);atomic_npz(_OUT/'counts.npz',**counts)
     metadata=[json.loads(__import__('pathlib').Path(x).read_text()) for x in markers]
-    errors={k:max(x[k] for x in metadata) for k in ('maximum_integral_error','maximum_joint_delta','maximum_omitted_bound')}
+    errors={k:max(x[k] for x in metadata) for k in ('maximum_native_integral_error','maximum_integral_error','maximum_joint_delta','maximum_omitted_bound')}
     # Per-response MC errors are diagnostics; final response-marginal precision
     # is tested after evidence-weighted combination, not max over conditional runs.
     numerical=all(v<.001 for v in errors.values())

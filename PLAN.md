@@ -27,14 +27,15 @@ Fullfit61135482COMPLETED/converged43iterations;27negative-support flags need
 posterior audit. Shared32draw response61136440COMPLETED; full-model128object benchmark61137836
 COMPLETED. Shared response approximation requires recovery validation. FixedQRF/probes61135917COMPLETED; response
 benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
-54targeted tests pass. Cohort preparation61137072completed; shared native inference,
+55targeted tests pass. Cohort preparation61137072completed; shared native inference,
 CDF joint compression and unified CLI implemented;64object benchmark61137407
 completed calculation, detailed artifact audit pending. Selection tables implemented.
 C: original target61138714checkpointed/cancelled after verified22x algebraic
- speedup; cached2048draw target61139580running. Selection267profiles passed
+ speedup; cached2048draw target61139580COMPLETED/passed. Selection267profiles passed
  maxerror0.002774.
 32influence responses complete but rejected for uncertainty; fullweightedEM0/16converged, remaining30array61139809running.
-Sharedresponse16target61140148running; sharedselection0refinement61140140.
+Sharedresponse16target61140148and0target61140662running; sharedselection0
+61140140passed. Other30drawspipeline61140663/664/665dependsontheirfullrefits.
 Shared-response/evidence and final marginal convergence remain.
 D: actual three-band development61138101/107/109 and app61138112/hyper61138114
 completed and scored;QRF61138119complete. Continuous empirical simulations implemented,
