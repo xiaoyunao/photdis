@@ -31,7 +31,7 @@ STAGES = {
     'recovery': 'v3_0_recovery.py',
     'development-figures': 'v3_0_development_figures.py',
     'population-projection': 'v3_0_projection.py', 'transfer-plan': 'v3_0_transfer_plan.py',
-    'planned-projection': 'v3_0_planned_projection.py', 'catalog-summary': 'v3_0_catalog_summary.py',
+    'planned-projection': 'v3_0_planned_projection.py', 'catalog-summary': 'v3_0_catalog_summary.py', 'design-summary': 'v3_0_design_summary.py',
     'validation-figures': 'v3_0_validation_figures.py',
     'population-quadrature': 'v3_0_population_quadrature.py',
     'native-response': 'v3_0_native_response.py',
