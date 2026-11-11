@@ -84,14 +84,18 @@ def main():
     global _DIRS,_WEIGHTS,_LOGZ,_OUT,_INPUTS
     require_compute();p=argparse.ArgumentParser();p.add_argument('--draw-ids',default=','.join(map(str,range(32))))
     p.add_argument('--draws',type=int,default=512);p.add_argument('--workers',type=int,default=32)
-    p.add_argument('--name',default='all32_native');p.add_argument('--product-suffix',default='_native')
+    p.add_argument('--refinement-map',default='');p.add_argument('--name',default='all32_native');p.add_argument('--product-suffix',default='_native')
     a=p.parse_args();start=time.monotonic()
     ids=list(map(int,a.draw_ids.split(',')));assert len(set(ids))==len(ids) and len(ids)>=2
-    _DIRS=[D/'shared_products'/(f'refit_{i:02}_s{a.draws}'+a.product_suffix) for i in ids]
+    refinements=json.loads(Path(a.refinement_map).read_text()) if a.refinement_map else {}
+    resolved={i:int(refinements.get(str(i),a.draws)) for i in ids}
+    assert all(n>=a.draws for n in resolved.values())
+    _DIRS=[D/'shared_products'/(f'refit_{i:02}_s{resolved[i]}'+a.product_suffix) for i in ids]
     logs=[];inputs={};counts=[];rows=[]
+    if a.refinement_map:inputs['refinement_map_sha256']=sha(Path(a.refinement_map))
     for draw,directory in zip(ids,_DIRS):
         product=json.loads((directory/'complete.json').read_text())
-        target=D/'shared_targets'/f'refit_{draw:02}_s{a.draws}'
+        target=D/'shared_targets'/f'refit_{draw:02}_s{resolved[draw]}'
         fit=json.loads((target/'complete.json').read_text())
         assert fit['sampler_passed'],'Unverified sampler'
         candidates=sorted(target.glob('evidence_structured_*/complete.json'),key=lambda p:int(p.parent.name.split('_')[-1]),reverse=True)
@@ -104,7 +108,7 @@ def main():
             inputs[str(refined.relative_to(ROOT))]=sha(refined)
         correction=0.
         if a.product_suffix.startswith('_native'):
-            native=D/'native_responses'/f'refit_{draw:02}_s{a.draws}'/'complete.json'
+            native=D/'native_responses'/f'refit_{draw:02}_s{resolved[draw]}'/'complete.json'
             nr=json.loads(native.read_text());assert nr['passed'] and nr['source_target_sha256']==sha(target/'complete.json')
             correction=nr['evidence_log_correction'];inputs[str(native.relative_to(ROOT))]=sha(native)
         assert product['integration_passed'],'Unverified native per-star integration'
@@ -112,7 +116,7 @@ def main():
         assert sha(directory/'counts.npz')==product['counts_sha256']
         counts.append(load(directory/'counts.npz'));logs.append(evidence['bridge']['log_evidence']+correction)
         for path in (directory/'complete.json',target/'complete.json'):inputs[str(path.relative_to(ROOT))]=sha(path)
-        rows.append(dict(global_response_draw=draw,log_evidence=logs[-1],
+        rows.append(dict(global_response_draw=draw,chain_draws=resolved[draw],log_evidence=logs[-1],
             native_evidence_correction=correction,bridge_half_difference=evidence['bridge']['half_log_integral_difference'],
             bridge_proposal_ess=evidence['bridge']['proposal_bridge_ess']))
     _LOGZ=np.array(logs);_WEIGHTS=softmax(_LOGZ)

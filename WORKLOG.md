@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — actual first field and prospective evidence association
+-61143137 completed45882candidate reference predictions; structural/fulloutput audit added.
+-61143363 conditional128object transfer pilot:41.71s,24.64MB, per-process peak
+ RSS1.20GB; native integration1.8e-15, no branch omission. Conditional halfdelta
+0.03098 remains flagged; not final marginal convergence.
+-Prospective purepredictions and reference association completed: reservation3250
+ haszeroqualifiedreferences; newsky1070signedGaia/2048, independent2202/8192.
+ Added allocated evidence-availability audit; no replacement ofunvalidatedobjects.
+-61143367 membership association failed because ZIP contains bothcatalogues and
+ profiles namedNGC_288.txt. Restrict to documented per-star catalogues directory;
+ thresholds/model unchanged. Config/method/prediction checks strengthened.
+-Add explicit per-response chain-refinement map to final ensemble; source compiles
+ and pyflakes clean. Draw12 longer-chain61143362 running, no acceptance claim.
+
 ## 2026-11-11 — independent latent catalog draws and numerical refinement reuse
 -Projection fields now have distinct deterministic latent random namespaces while
  keepingidenticalshared parameterIDs. Independent regressiontestpasses; shared

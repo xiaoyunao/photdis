@@ -44,10 +44,12 @@ recovery61140145/147/195/196complete; final3a99 refinements61141807/808/809pass,
 Full same-ID distance/class/Gaia scores and21inspected figures delivered; shared
 response recovery and calibrated applicability remain.
 E: physical method/priors/metrics/output frozen by61142743, hash14d3ff1d;
- photometric preparation underway for3250reservation/2048newsky/8192independent;
- outcomes still closed; independent HST dynamical NGC288 scale identified for
-identity audit passed61137636;8192photometric-only IDs frozen, membership unopened. F: actual full-model/catalog benchmark,
-qualified candidate catalog, scientific example, English figures/report remain.
+ purephotometry predictions and once-only association complete for3250/2048/8192;
+ reservation haszeroqualifiedreferences (availability audit pending), newsky1070
+ andindependent2202signedGaia. Final scoring/membership loading repair pending; independent HST dynamical NGC288 scale identified for
+identity audit passed61137636;8192photometric-only IDs frozen, membership unopened. F: firstfull45882fieldreference prediction completed61143137; fulloutputaudit
+ pending.128object conditionaltransferpilot completed61143363 (41.71s/24.64MB);
+ allqualified fields, finalsharedprecision, scienceexample/report remain.
 Do not label any milestone complete from code or planning alone. No deployment.
 
 ## Completed v2.6 observed-catalog inference

@@ -61,9 +61,12 @@ def main():
             catalog_sha256=sha(catalog_path), job=os.getenv('SLURM_JOB_ID')))
         print('INDEPENDENT PHOTOMETRY', len(rows), 'of', int(admitted.sum()), 'no memberships/predictions opened', flush=True)
         return
+    from v3_0_validation_inputs import check_freeze
     method = D/'method_freeze.json'
-    if not method.exists(): raise RuntimeError('Final method freeze required before independent membership evaluation')
+    check_freeze()
+    assert (D/'validation/independent_scale/predictions/complete.json').exists()
     t = load(output); record = json.loads(marker.read_text()); assert sha(output) == record['sha256']
+    assert record['config_sha256'] == sha(cfg_path)
     association = destination/'association.json'
     if association.exists():
         old = json.loads(association.read_text())
@@ -72,7 +75,10 @@ def main():
         return
     archive_path = source/'vasiliev_baumgardt_2021_members.zip'
     with zipfile.ZipFile(archive_path) as archive:
-        paths = [p for p in archive.namelist() if p.split('/')[-1].replace('_', '').replace('.txt', '') == cfg['system']]
+        # The archive also has profiles/NGC_288.txt: those are radial profiles,
+        # not the per-star astrometric membership catalogue.
+        paths = [p for p in archive.namelist() if p.startswith('catalogues/') and
+                 p.split('/')[-1].replace('_', '').replace('.txt', '') == cfg['system']]
         assert len(paths) == 1
         with archive.open(paths[0]) as stream:
             records = [line.split() for line in io.TextIOWrapper(stream) if line.strip() and not line.startswith('#')]
