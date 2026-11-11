@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — independent-scale findings and shared-count export
+-61143913 actual1442member results:medianrelative+12.56%,NMAD24.26%,
+68/95coverage60.47/99.17%; severe10.89%. Sharedscale shiftsgivebias+6.88to20.01%.
+-61144003 producedfiveEnglish figures. Allfivevisuallyinspected; twohave
+ labelcrowding,layoutfixpreparedbeforefinaldelivery. Scientificstatisticsunchanged.
+-Add fullqualifiedcatalog common-draw covariance/count aggregation and frozen
+ transfer-planexecution. Separate nominalreference andmatched-response reference
+ contrasts; do notattribute response/calibration changes solelytopopulationprior.
+-Add numerical-onlyrecoverywrapper (sameimplementation/physicalinputs) for
+ actualdivergentHMCcases; higheracceptance/longerchains innewnamespace, originals
+ retained. Full32x112recovery stillrunning; no blanketing numericalpassclaim.
+
 ## 2026-11-11 — prospective numerical results and bounded response transfer
 -Newsky247preciseGaia:medianrelative+6.14%,NMAD12.72%,68/95coverage48.58/85.83%;
  signed1070GaiaweightedPITtails4.19/8.47%. Theseareactualundercoveragefindings,

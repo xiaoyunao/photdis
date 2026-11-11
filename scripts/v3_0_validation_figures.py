@@ -62,9 +62,12 @@ def main():
     ax.set(xlim=(0,limit),ylim=(0,limit),ylabel='Photometric distance (kpc)',title='New sky: Gaia S/N > 10')
     ax.text(.04,.94,f'N = {len(x)} / {audit["valid"]}',transform=ax.transAxes,fontsize=12)
     ar.set(xlabel='Gaia reference distance (kpc)',ylabel='Residual (%)',ylim=(-100,100),yticks=[-100,0,100]);plt.setp(ax.get_xticklabels(),visible=False)
-    fig.colorbar(im,cax=cb,label='Objects per bin');hh,_=np.histogram(res,redges);hist.stairs(hh,redges,color=BLUE,fill=True,alpha=.4)
+    colorbar=fig.colorbar(im,cax=cb,label='Objects per bin');colorbar.ax.yaxis.label.set_size(12)
+    hh,_=np.histogram(res,redges);hist.stairs(hh,redges,color=BLUE,fill=True,alpha=.4)
     hist.set(xlabel='Distance residual (%)',ylabel='Objects',xlim=(-100,100));hist.axvline(0,color='black',ls='--',lw=1)
-    fig.subplots_adjust(left=.09,right=.97,bottom=.11,top=.92)
+    hist.yaxis.tick_right();hist.yaxis.set_label_position('right');hist.xaxis.label.set_size(13);hist.yaxis.label.set_size(14)
+    ar.yaxis.label.set_size(13);ar.xaxis.label.set_size(15);ax.yaxis.label.set_size(15)
+    fig.subplots_adjust(left=.09,right=.91,bottom=.11,top=.92)
     rows=[dict(panel='main',x=edges[i],y=edges[j],count=h[i,j]) for i in range(len(edges)-1) for j in range(len(edges)-1)]
     rows += [dict(panel='residual',x=edges[i],y=redges[j],count=hr[i,j]) for i in range(len(edges)-1) for j in range(len(redges)-1)]
     rows += [dict(panel='histogram',x=redges[i],y=0,count=hh[i]) for i in range(len(hh))]
@@ -87,7 +90,7 @@ def main():
     np.testing.assert_array_equal(phot['identity'],r['identity']);color=mag[:,0]-mag[:,1];Mr=mag[:,1]-m;relative=100*(10**((r['mu'][:,2]-10)/5)/d-1)
     fig,axes=plt.subplots(1,2,figsize=(11,5));norm=TwoSlopeNorm(vmin=-100,vcenter=0,vmax=100)
     sc=axes[0].scatter(color[member],Mr[member],c=relative[member],norm=norm,cmap='coolwarm',s=6,rasterized=True)
-    axes[0].set(xlabel='Dereddened g - r (mag)',ylabel='M_r at the common dynamical distance (mag)',title='Selected members');axes[0].invert_yaxis()
+    axes[0].set(xlabel='Dereddened g - r (mag)',ylabel='Reference M_r (mag)',title='Selected members');axes[0].invert_yaxis()
     axes[1].scatter(r['RA'][~member],r['DEC'][~member],s=1,color=GRAY,alpha=.2,rasterized=True)
     axes[1].scatter(r['RA'][member],r['DEC'][member],c=relative[member],norm=norm,cmap='coolwarm',s=6,rasterized=True)
     axes[1].set(xlabel='Right ascension (deg)',ylabel='Declination (deg)',title='Photometric-first field');axes[1].invert_xaxis()

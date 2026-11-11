@@ -1,0 +1,16 @@
+{
+  "caption": "Photometric sample frozen before Gaia-conditioned membership. Green band is one shared dynamical-scale uncertainty, not reduced by sqrt(N). Stacked PDFs show expectations, not calibrated intrinsic counts; foreground stars are not assigned cluster truth.",
+  "inputs": {
+    "data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz": "2c8bae8aff1fe1746cc2bfa469c2eb4bec516ecc9b97eacc1f28cb6d85c84423",
+    "data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz": "b5b65b03f0213f489e711af2b3906b50fa94c667d8969014cfd7dbc14d4acd8d",
+    "data/v3_0/scale_example/reference/per_star.npz": "18bfebcd46941abc816aac7187d6a1a4167a4a66e5254bf628cf599047e05210",
+    "data/v3_0/scale_example/reference/distance_distribution.csv": "af67766e0db484ee797cafdc2d012db5f22a771a89a28815fc383d2268cbef14"
+  },
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "outputs": {
+    "figures/v3_0/validation/ngc288_distance_distribution.png": "2f536e5d08691a21fdeab5bfd8aa981dd284964bf063615d9eeb36c3b45c3f38",
+    "figures/v3_0/validation/ngc288_distance_distribution.pdf": "c8fe4d0b79ac6e26040707db630ba06846701707e08205495fbb3d6e60eda40e",
+    "manifests/v3_0/figures/validation/ngc288_distance_distribution.csv": "af67766e0db484ee797cafdc2d012db5f22a771a89a28815fc383d2268cbef14"
+  }
+}

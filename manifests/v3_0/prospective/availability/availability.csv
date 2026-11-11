@@ -1,0 +1,4 @@
+cohort,n,positive_native_Gaia_ID,positive_identity,exact_Gaia_matches,missing_Gaia_tiles,signed_Gaia_eligible,negative_Gaia,specdis_valid,spdist_valid,precise_Gaia,reliable_class,no_reference_reasons
+reservation,3250,3231,3231,3231,0,0,0,0,0,0,0,"{""no_native_Gaia_ID"": 19, ""reference_quality_failed"": 3231}"
+new_sky,2048,1318,1318,1318,0,1070,108,0,0,247,0,"{""no_native_Gaia_ID"": 730, ""qualified_reference"": 1070, ""reference_quality_failed"": 248}"
+independent_scale,8192,2957,2957,2957,0,2202,702,0,0,131,0,"{""no_native_Gaia_ID"": 5235, ""qualified_reference"": 2202, ""reference_quality_failed"": 755}"

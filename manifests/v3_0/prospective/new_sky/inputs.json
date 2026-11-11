@@ -1,0 +1,9 @@
+{
+  "data/v3_0/validation/new_sky/predictions/complete.json": "1c4518f51ec09ae7920e39ce3b1a962e8030caa24cf97f068a81fe2229ceb395",
+  "data/v3_0/validation/new_sky/evidence.npz": "762d2dd5b9991d23a64c81873f1e44ba91808961a0a1b84adbda7926cdac8460",
+  "data/v3_0/validation/new_sky/photometry.npz": "0c9ca86d9393a2551788feb4118bd6cff0187dd7c798ef2e0f6b941e109ddb77",
+  "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+  "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba",
+  "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+  "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56"
+}

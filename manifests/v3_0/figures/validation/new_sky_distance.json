@@ -1,0 +1,14 @@
+{
+  "caption": "Display-only independent x/y linear-distance 3sigma clip, shared between main/residual/histogram within this Gaia comparison. Scientific metrics use all247 qualified stars, no clipping. {\"valid\": 247, \"x_mean_kpc\": 0.8808972676219567, \"x_sigma_kpc\": 0.5041159535483691, \"y_mean_kpc\": 0.9738758423695182, \"y_sigma_kpc\": 0.7046130428282285, \"kept\": 244, \"clipped\": 3}",
+  "inputs": {
+    "data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz": "2c8bae8aff1fe1746cc2bfa469c2eb4bec516ecc9b97eacc1f28cb6d85c84423",
+    "data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz": "b5b65b03f0213f489e711af2b3906b50fa94c667d8969014cfd7dbc14d4acd8d"
+  },
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "outputs": {
+    "figures/v3_0/validation/new_sky_distance.png": "fb067aad4c1299f2f8016d96885bce843c44ec956cd7cc2cd36ebdf06df3c75e",
+    "figures/v3_0/validation/new_sky_distance.pdf": "9d3a7dc91f85840279ba4fa078810d530029065da2f3f30c0c720aa864c3beb6",
+    "manifests/v3_0/figures/validation/new_sky_distance.csv": "f378be3d7fc0c729a09ff6cd1d9065a27641ee6481d12b90cb2e83ccafaf3567"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "inputs": {
+    "data/v3_0/validation/reservation/photometry.npz": "5faf9123981613e967a07c3448a81c4cc68647c0f977422ce1913762a03b32a5",
+    "data/v3_0/validation/reservation/evidence.npz": "490e4f856a94e0895a30a77cdb77e87c6db7fac104a4d4cef8c62a2dddb8cc9b",
+    "data/v3_0/validation/reservation/gaia_payload.npz": "f5c1a9669225f8bb48bd3dd1e757b6e56078dce528d8214bfa33d056f31d1a07",
+    "data/v3_0/validation/reservation/evidence.json": "266835b38a2adabd3430f29b370473191fd678e5741b176fe727c450c5c2f940",
+    "data/v3_0/validation/new_sky/photometry.npz": "0c9ca86d9393a2551788feb4118bd6cff0187dd7c798ef2e0f6b941e109ddb77",
+    "data/v3_0/validation/new_sky/evidence.npz": "762d2dd5b9991d23a64c81873f1e44ba91808961a0a1b84adbda7926cdac8460",
+    "data/v3_0/validation/new_sky/gaia_payload.npz": "1d51edbb53176737afdf6bc17f0b82c3f6bcc30fee292451a81a6473d3a44ec2",
+    "data/v3_0/validation/new_sky/evidence.json": "d2fa77c31c32b44b1d847929f19e682db04ff0cb8b9976078160b32da9664eed",
+    "data/v3_0/validation/independent_scale/photometry.npz": "0074af58a0e1407726863b2e681c503942a663034512ea9ae644144ba81cd26a",
+    "data/v3_0/validation/independent_scale/evidence.npz": "fbc7b074b080e0f505ebe808a5cd992c07e1aef24ea8f4ab405ec34427e6eb2d",
+    "data/v3_0/validation/independent_scale/gaia_payload.npz": "de6b256f2877821ff85342c4d5c6554dc4f540aa1cd9b954806f811833c24e61",
+    "data/v3_0/validation/independent_scale/evidence.json": "3fc0df04de8fa3c2f360247735eac39aa76b3085b569b78d24665a4178863cdf"
+  },
+  "rows": [
+    {
+      "cohort": "reservation",
+      "n": 3250,
+      "positive_native_Gaia_ID": 3231,
+      "positive_identity": 3231,
+      "exact_Gaia_matches": 3231,
+      "missing_Gaia_tiles": 0,
+      "signed_Gaia_eligible": 0,
+      "negative_Gaia": 0,
+      "specdis_valid": 0,
+      "spdist_valid": 0,
+      "precise_Gaia": 0,
+      "reliable_class": 0,
+      "no_reference_reasons": "{\"no_native_Gaia_ID\": 19, \"reference_quality_failed\": 3231}"
+    },
+    {
+      "cohort": "new_sky",
+      "n": 2048,
+      "positive_native_Gaia_ID": 1318,
+      "positive_identity": 1318,
+      "exact_Gaia_matches": 1318,
+      "missing_Gaia_tiles": 0,
+      "signed_Gaia_eligible": 1070,
+      "negative_Gaia": 108,
+      "specdis_valid": 0,
+      "spdist_valid": 0,
+      "precise_Gaia": 247,
+      "reliable_class": 0,
+      "no_reference_reasons": "{\"no_native_Gaia_ID\": 730, \"qualified_reference\": 1070, \"reference_quality_failed\": 248}"
+    },
+    {
+      "cohort": "independent_scale",
+      "n": 8192,
+      "positive_native_Gaia_ID": 2957,
+      "positive_identity": 2957,
+      "exact_Gaia_matches": 2957,
+      "missing_Gaia_tiles": 0,
+      "signed_Gaia_eligible": 2202,
+      "negative_Gaia": 702,
+      "specdis_valid": 0,
+      "spdist_valid": 0,
+      "precise_Gaia": 131,
+      "reliable_class": 0,
+      "no_reference_reasons": "{\"no_native_Gaia_ID\": 5235, \"qualified_reference\": 2202, \"reference_quality_failed\": 755}"
+    }
+  ],
+  "job": "61143680",
+  "outputs": {
+    "availability.csv": "a775ec1c5441f798b154d40ca5452a3009f93e01e4cd8282e2a42ec633be7222"
+  },
+  "reservation_selection": "Original reservation explicitly excluded all identities in baseline_v0, v1_3, v1_4 reference inventories and the 26000 application sample; no replacement after seeing outcomes.",
+  "scope": "Zero reference availability is lack of validation evidence, never successful distance validation. Native Gaia IDs and exact original reservation ownership checked independently."
+}

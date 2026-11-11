@@ -1,0 +1,14 @@
+{
+  "caption": "Frozen pure-photometry reference prior. Negative parallaxes retained. Weighted counts do not increase independent validation sample size; dashed line is nominal uniform PIT. These cohorts have different selection, not a before/after performance comparison.",
+  "inputs": {
+    "data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz": "2c8bae8aff1fe1746cc2bfa469c2eb4bec516ecc9b97eacc1f28cb6d85c84423",
+    "data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz": "b5b65b03f0213f489e711af2b3906b50fa94c667d8969014cfd7dbc14d4acd8d"
+  },
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "outputs": {
+    "figures/v3_0/validation/independent_scale_gaia_pit.png": "780778c1a03af94dd421e21149d611c35f250e844406581b0ee8e73c7b576dda",
+    "figures/v3_0/validation/independent_scale_gaia_pit.pdf": "60f92b45808a3cd16c8ad8533f09a0f22e84921e58e7742faa17f80ae96b4a88",
+    "manifests/v3_0/figures/validation/independent_scale_gaia_pit.csv": "eff66cf4f0a07dfc2126c7396e6159f8a6cb9b92466857e97e3f3d3e8cc5406f"
+  }
+}

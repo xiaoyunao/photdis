@@ -1,0 +1,9 @@
+{
+  "data/v3_0/validation/independent_scale/predictions/complete.json": "330a6eaedd7060a3892057eeca62535fdb3d078ac6f0eacf08b655bf0c8a7740",
+  "data/v3_0/validation/independent_scale/evidence.npz": "fbc7b074b080e0f505ebe808a5cd992c07e1aef24ea8f4ab405ec34427e6eb2d",
+  "data/v3_0/validation/independent_scale/photometry.npz": "0074af58a0e1407726863b2e681c503942a663034512ea9ae644144ba81cd26a",
+  "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+  "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba",
+  "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+  "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56"
+}

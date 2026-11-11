@@ -1,0 +1,9 @@
+{
+  "data/v3_0/validation/reservation/predictions/complete.json": "635262daed9de7ae4d0ca9fe0450f52e395db8b5bc10d1dc0a46ea510e4098df",
+  "data/v3_0/validation/reservation/evidence.npz": "490e4f856a94e0895a30a77cdb77e87c6db7fac104a4d4cef8c62a2dddb8cc9b",
+  "data/v3_0/validation/reservation/photometry.npz": "5faf9123981613e967a07c3448a81c4cc68647c0f977422ce1913762a03b32a5",
+  "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+  "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba",
+  "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+  "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56"
+}

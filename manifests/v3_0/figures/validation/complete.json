@@ -1,0 +1,16 @@
+{
+  "figures": 5,
+  "inputs": {
+    "data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz": "2c8bae8aff1fe1746cc2bfa469c2eb4bec516ecc9b97eacc1f28cb6d85c84423",
+    "data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz": "b5b65b03f0213f489e711af2b3906b50fa94c667d8969014cfd7dbc14d4acd8d",
+    "data/v3_0/scale_example/reference/per_star.npz": "18bfebcd46941abc816aac7187d6a1a4167a4a66e5254bf628cf599047e05210",
+    "data/v3_0/scale_example/reference/distance_distribution.csv": "af67766e0db484ee797cafdc2d012db5f22a771a89a28815fc383d2268cbef14"
+  },
+  "outputs": {
+    "ngc288_distance_distribution.json": "f415fedc5c700e81b5b100b9ba999b424e55f680bc15e831e4694102c5b9151f",
+    "new_sky_distance.json": "8c7b816ab3014a3490dce8c99ba8462712210b2922a2d2fd66e7daaec0331f6d",
+    "ngc288_cmd_sky.json": "6f8fa234baf6869937140574cb04ce60c35779ca5d1893491fc13eba36c17bf0",
+    "new_sky_gaia_pit.json": "9f46e06b02e10ca018c13fbf5593cdd2743a08b7b31ed1dfd167f965bb41ce50",
+    "independent_scale_gaia_pit.json": "4a7dd4c7a5c047db37205fa07f0576e55cc3af5317dd4e2861a4cc0d5eac0c7d"
+  }
+}
