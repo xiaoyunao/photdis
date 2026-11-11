@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "job": "61126775",
+      "role": "diagnostics and independent response recovery",
+      "initial_state": "RUNNING",
+      "node": "nid004263",
+      "submitted_once": true
+    }
+  ],
+  "no_automation": true
+}

@@ -30,3 +30,11 @@ def test_selection_changes_conditional_component_counts():
     np.testing.assert_allclose(p.sum(axis=1),1)
     raw=component_weights(t,base)
     assert np.max(abs(raw-s))>.01
+
+
+def test_response_floor_never_leaks_outside_selection():
+    from photdis.population_v2_5 import NCELL,response_from_draws
+    allowed=np.zeros(NCELL,bool);allowed[3:5]=True
+    r=response_from_draws(np.array([3,3,4,4]),np.array([0,0,1,1]),np.ones(4,bool),ncomponent=2,allowed_cells=allowed)
+    assert np.all(r[:,~allowed]==0)
+    np.testing.assert_allclose(r.sum(axis=1),1)

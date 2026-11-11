@@ -11,7 +11,7 @@ from v2_4_population import joint_model,DISTANCE_EDGES
 from baseline_v1_4_experiments import arrays
 from photdis.stage1 import require_compute
 from photdis.audit import rvs_metallicity
-from photdis.population_v2_5 import (DISTANCES,DISTANCE_PRIOR,NCELL,observation_cell,
+from photdis.population_v2_5 import (DISTANCES,DISTANCE_PRIOR,NCELL,COLOR_EDGES,observation_cell,
     response_from_draws,posterior_grid,summarize_posterior)
 from photdis.science_v2_4 import distance_bin_mass
 D=ROOT/'data/v2_5';T=D/'tables';_J=_CAT=None
@@ -82,7 +82,9 @@ def response(c,bins,curve,seed=20261111,weights=None,teacher=0):
     comp=np.repeat(np.arange(20),2048);group=comp//5;dist=comp%5
     m,e,sel,ix=draw(c,group,dist,np.random.default_rng(seed),bins,curve,weights,teacher)
     cell=observation_cell(m)
-    return [response_from_draws(cell,comp,sel),response_from_draws(cell,comp,~sel)]
+    rindex=np.unravel_index(np.arange(NCELL),tuple(len(e)-1 for e in COLOR_EDGES))[-1]
+    allowed=(COLOR_EDGES[-1][rindex]>=14)&(COLOR_EDGES[-1][rindex+1]<=20)
+    return [response_from_draws(cell,comp,sel,allowed_cells=allowed),response_from_draws(cell,comp,~sel)]
 
 
 def populations(base):
@@ -171,7 +173,7 @@ def evaluate(c,test,base,bins,curve,cat,p):
 def main():
     global _J,_CAT
     require_compute();T.mkdir(parents=True,exist_ok=True);(D/'qrf_chunks').mkdir(exist_ok=True)
-    files=[ROOT/'scripts/v2_5_population.py',ROOT/'src/photdis/population_v2_5.py',ROOT/'docs/v2_5_protocol.md',ROOT/'data/v2_3/control.joblib',ROOT/'data/v2_4/recovery_design.npz',ROOT/'data/v2_1/development.npz']
+    files=[ROOT/'scripts/v2_5_population.py',ROOT/'src/photdis/population_v2_5.py',ROOT/'docs/v2_5_protocol.md',ROOT/'docs/v2_5_response_support_amendment.md',ROOT/'data/v2_3/control.joblib',ROOT/'data/v2_4/recovery_design.npz',ROOT/'data/v2_1/development.npz']
     freeze={str(x.relative_to(ROOT)):sha(x) for x in files};marker=D/'population_freeze.json'
     if marker.exists():assert json.loads(marker.read_text())==freeze,'Explicit migration required'
     else:save_json(marker,freeze)

@@ -60,13 +60,16 @@ def summarize_posterior(theta, selected, weight):
         max_abs_correlation=float(np.max(abs(cor-np.eye(4)))),correlation=cor)
 
 
-def response_from_draws(cells, component, selected, ncomponent=20, floor=1e-4):
+def response_from_draws(cells, component, selected, ncomponent=20, floor=1e-4, allowed_cells=None):
     response=np.zeros((ncomponent,NCELL));alpha=np.zeros(ncomponent)
+    allowed=np.ones(NCELL,bool) if allowed_cells is None else np.asarray(allowed_cells,bool)
+    if not allowed.any():raise ValueError("No allowed observational cells")
+    smoothing=allowed/allowed.sum()
     for j in range(ncomponent):
         u=component==j;n=u.sum()
         if not n:raise ValueError('Empty component')
         alpha[j]=np.mean(selected[u])
         response[j]=np.bincount(cells[u&selected],minlength=NCELL)/n
         # Conditional contamination floor preserves each measured selection rate.
-        response[j]=(1-floor)*response[j]+floor*alpha[j]/NCELL
+        response[j]=(1-floor)*response[j]+floor*alpha[j]*smoothing
     return response
