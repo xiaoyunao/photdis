@@ -1,9 +1,9 @@
 {
   "command": "PYTHONPATH=src:scripts:.deps python3 -m pytest -q tests/test_v3*.py",
-  "passed": 68,
+  "passed": 69,
   "failed": 0,
-  "elapsed_seconds": 3.36,
-  "date": "2026-11-11 20:03:56.647824+08:00",
+  "elapsed_seconds": 3.02,
+  "date": "2026-11-11 20:31:05.448588+08:00",
   "scope": "Mathematical and unit tests, not a substitute for production or scientific acceptance",
   "test_hashes": {
     "tests/test_v3_calibration.py": "a7ba9a8c1df06002f572151c3596fc9c00cfd46d244a0096fd83af6f67a78da1",
@@ -25,6 +25,7 @@
     "tests/test_v3_metrics.py": "cad22d497ce1080cc18b8c8a35e21e3a3414e0fa571e1abb18f0b10148ae3a7d",
     "tests/test_v3_model.py": "826d2ab149d861f665796c7935382914baa21d633c4f0bdb2c2f64709131a82c",
     "tests/test_v3_native_response.py": "e58aac3fe713c9b4cdec906c04d5b6f2ef311038f5b48daa54eea2a467119b34",
+    "tests/test_v3_parallel_bridge.py": "875f02eb6f7cf3562f7bfea9f40564806fa26eaa9b0cbd4efa790ea627b18e0d",
     "tests/test_v3_population.py": "c9583278be5d649d2b7a95025ec049751a1270fed114a83337af1cf2cde4bfb5",
     "tests/test_v3_population_quadrature.py": "173fa79164ffd96183bfae6c0b1a9e7276e63ac0d7eb76125cef85738bff62ce",
     "tests/test_v3_projection.py": "89ecd46d0a4c6d2ab2b0e79587b18c7e3577f58f5d2f670536183618f5c51fb1",

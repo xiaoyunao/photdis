@@ -25,13 +25,16 @@ A/B: 612114 strict native-PSF reference identities; isolated roles and untruncat
  binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
  refits complete. Core likelihood/selection/compression/identity tests passed.
 C: original32 target posterior fits complete. Longer numerical-only chains for
- responses1/12/17/26 and verified bridge/native products are in progress.
+ responses1/12/17 passsampler;26extendedchainrejectedfordivergence. Preserve
+ originalverified26s512 andrefinebridgeexactlyinparallel61145589. Finalensemble
+ pipelinewaitsforpassedsourceevidence/nativeproducts;physicalmodelunchanged.
  Exact26000-object response ensemble, design summary and catalog transfer await
  final weighted marginal precision. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
  response/catalog cases completed;24original numeric failures,22refined pass,
- finaltwo61144482 running. Original/refined reports61144483/484 queued/running.
+ all24divergencecasesrefined. Finaljointprecision1passes110/112; two32768draw
+ refinements61145395 andfinalreport61145396 followactualfailures.
  Same-ID distance/class/Gaia diagnostics and25English figures inspected.
 E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  predictions and once-only associations/scores complete for3250/2048/8192.
@@ -41,8 +44,8 @@ E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  Fiveprospective/sciencefigures pass40checks andvisualreview. Target-prior
  same-response comparisons remain; no changes to physicalmethod after opening.
 F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
- audit12909checks passed,437.96s/3.927GB64workers. Other12reference fields
- array61143751 nearingcompletion; audit61144231 depends oncompletion.
+ audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
+ oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.

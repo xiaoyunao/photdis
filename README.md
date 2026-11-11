@@ -1,5 +1,17 @@
 # photdis
 
+Current development: **Photdis v3.0 continuous SED and population research system**.
+The physical method is frozen and prospective outcomes have been opened once.
+Full qualified-catalog reference predictions are complete; shared population
+products and final delivery checks are still running.
+[Method](docs/v3_0_methods.md) · [Results in progress](docs/v3_0_result.md) ·
+[Scope/evidence ledger](docs/v3_0_requirements_result.md) ·
+[Candidate product interface](docs/v3_0_catalog.md).
+Use `python scripts/v3_0.py status` for local small-manifest status; all production
+stages run on allocated NERSC compute resources through `run_v3_0_stage.sh`.
+The existing deployed v1 catalog remains unchanged. Historical statements below
+about closed prospective outcomes describe those earlier checkpoints.
+
 Latest completed revision: **Photdis v2.6 observed-catalog posterior inference**.
 [Results](docs/v2_6_result.md) · [Nine English plates](docs/v2_6_atlas.md) ·
 [Requirement ledger](docs/v2_6_requirements_result.md).
