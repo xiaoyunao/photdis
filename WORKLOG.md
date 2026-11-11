@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — shared sky-key integer overflow diagnosed
+-Sharedselection61139689/691failed before construction: NumPy2rejects adding
+100000to int16development/simulation cells. Promote field/cell toint64 before
+ key arithmetic; narrow/wide integer equivalence regression passes. Preserve
+ failed directories and explicitly migrate only after terminal confirmation.
+-224recovery jobs finished, but only56pass allnumeric gates at2048draws; final
+ halfdelta max0.0173. Inspect diagnostics and refine sampling, do not relabel
+ these as accepted final uncertainties. Candidate observable scope1183990objects
+ across13DECam fields; north0candidate, all9390518parent statuses retained.
+
 ## 2026-11-11 — final-validation workflow prepared without opening outcomes
 -Full-bootstrapdraws0/16 converged at26iterations (2209/2175seconds). Submit
  same128star refit predictions61139688/690 and coherent selection61139689/691.

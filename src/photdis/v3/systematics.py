@@ -10,7 +10,7 @@ import numpy as np
 def calibration_vectors(table, draws, draw_id):
     matches = np.flatnonzero(draws['draw_id'] == draw_id)
     if len(matches) != 1: raise ValueError('Unique shared draw ID required')
-    j = matches[0]; field = np.asarray(table['field']); cell = np.asarray(table['cell'])
+    j = matches[0]; field = np.asarray(table['field'], dtype='i8'); cell = np.asarray(table['cell'], dtype='i8')
     dust = np.empty(len(field))
     known = {int(f): float(d) for f, d in zip(draws['field_ids'], draws['field_dust_offset'][j])}
     # Existing named fields use the original stored shared draw. Development and

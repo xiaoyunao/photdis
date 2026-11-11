@@ -13,3 +13,15 @@ def test_shared_calibration_is_chunk_and_identity_order_invariant():
     np.testing.assert_array_equal(np.concatenate(pieces), full[order])
     assert dust[0] == dust[1] == -.001 and dust[2] == dust[3]
     assert dust[2] != dust[4]
+
+
+def test_native_small_integer_sky_cells_promote_before_shared_offset():
+    from photdis.v3.systematics import calibration_vectors
+    table = dict(field=np.array([-1, 2], dtype='i2'), cell=np.array([100, 200], dtype='i2'),
+                 EBV=np.full(2, .02), transmission=np.full((2, 6), .95), band_mask=np.ones((2, 6), bool))
+    draws = dict(draw_id=np.array([0]), field_ids=np.array([2]), field_dust_offset=np.array([[.001]]),
+                 global_band_zero_point_mag=np.zeros((1, 6)))
+    a, dust = calibration_vectors(table, draws, 0)
+    wide = dict(table, field=table['field'].astype('i8'), cell=table['cell'].astype('i8'))
+    b, expected = calibration_vectors(wide, draws, 0)
+    np.testing.assert_array_equal(a, b); np.testing.assert_array_equal(dust, expected)
