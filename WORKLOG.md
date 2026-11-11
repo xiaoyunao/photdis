@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — distinguish chain convergence from final Monte Carlo precision
+-Pilot61139393COMPLETED110s: Rhat1.0031/ESS1177, direct normalization
+ error0.000278 and omitted-support bound6.70e-6; final joint halfdelta0.00996
+ fails frozen0.005precision despite converged chains. Do not accept as final.
+-Enforce all numerical gates in recovery completion; increase planned production
+ draws512to2048without changing model/prior/scientific design. Add explicit cached
+ target namespace and input-hash-verified response/MAP reuse; old run preserved.
+-Real objective timing61139519 and14field inventory61139520submitted; current
+ target still running pending timing evidence before any performance migration.
+
 ## 2026-11-11 — first continuous recovery passes numerical sampling
 -61139393complete log: fourchains/splitRhat1.00310; source-normalized observed
  catalog count recovery now runs end-to-end. Full metadata/direct-integration

@@ -156,10 +156,11 @@ def main():
         logscore=target_logscore, gaia_pit=[r['pit'] for r in target_gaia], gaia_logscore=[r['log_score'] for r in target_gaia],
         reference_gaia_pit=[r['pit'] for r in reference_gaia], reference_gaia_logscore=[r['log_score'] for r in reference_gaia],
         direct_normalization_error=direct_error, omitted_bound=[r['omitted_posterior_bound'] for r in target])
-    passed = diagnostics['max_rhat'] < 1.05 and diagnostics['minimum_ess'] >= 100 and not sum(x['divergent'] for x in records)
+    sampler_passed = diagnostics['max_rhat'] < 1.05 and diagnostics['minimum_ess'] >= 100 and not sum(x['divergent'] for x in records)
+    passed = sampler_passed and count_result['marginal_half_delta'] < .005 and max(direct_error) < .005 and max(r['omitted_posterior_bound'] for r in target) < .001
     save_json(out/'complete.json', dict(inputs=inputs, catalog=args.catalog, scenario=str(truth['scenario'][0]),
         n=len(use), shared_response_scope='Conditional on fitted SED; shared response comparison is a separate required artifact',
-        max_rhat=diagnostics['max_rhat'], minimum_ess=diagnostics['minimum_ess'], passed=bool(passed),
+        max_rhat=diagnostics['max_rhat'], minimum_ess=diagnostics['minimum_ess'], sampler_passed=bool(sampler_passed), passed=bool(passed),
         marginal_half_delta=count_result['marginal_half_delta'], max_direct_normalization_error=float(max(direct_error)),
         max_omitted_bound=max(r['omitted_posterior_bound'] for r in target),
         outputs={p.name: sha(p) for p in out.iterdir() if p.suffix in ('.npz', '.joblib', '.csv')},

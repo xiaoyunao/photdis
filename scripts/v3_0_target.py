@@ -14,6 +14,7 @@ from photdis.v3.model import inference_model
 from photdis.v3.compression import unpack
 from photdis.v3.target import component_response, joint_coefficients, joint_draw_probabilities
 from photdis.v3.hierarchy import FieldPopulation
+from photdis.v3.fast_hierarchy import FastFieldPopulation
 from photdis.v3.sampling import hmc, chain_diagnostics
 from photdis.v3.selection import effective_errors
 from photdis.v3.selection_table import SelectionTable
@@ -32,6 +33,8 @@ def main():
     global _HIERARCHY, _FIT, _ARGS
     require_compute(); parser = argparse.ArgumentParser()
     parser.add_argument('cohort', choices=['application', 'development'])
+    parser.add_argument('--engine', choices=['original', 'cached'], default='original')
+    parser.add_argument('--reuse-response', action='store_true')
     parser.add_argument('--model', choices=['benchmark', 'fit'], default='fit')
     parser.add_argument('--limit', type=int, default=0)
     parser.add_argument('--profiles', type=int, default=64)
@@ -48,12 +51,21 @@ def main():
     table = SelectionTable(**load(table_path))
     model_path = D/f'sed_{args.model}.joblib'; model = inference_model(joblib.load(model_path))
     source = load(D/'cohorts'/(args.cohort+'.npz'))
-    output = D/'targets'/f'{args.cohort}_{args.model}_{args.limit}'; output.mkdir(parents=True, exist_ok=True)
+    base_output = D/'targets'/f'{args.cohort}_{args.model}_{args.limit}'
+    output = base_output if args.engine == 'original' else base_output.with_name(base_output.name+f'_cached_s{args.draws}')
+    output.mkdir(parents=True, exist_ok=True)
     paths = [prediction/'complete.json', table_path, model_path, D/'cohorts'/(args.cohort+'.npz'),
         ROOT/'scripts/v3_0_target.py']
-    paths += [ROOT/'src/photdis/v3'/x for x in ('target.py', 'hierarchy.py', 'sampling.py', 'compression.py', 'population.py')]
+    paths += [ROOT/'src/photdis/v3'/x for x in ('target.py', 'hierarchy.py', 'fast_hierarchy.py', 'sampling.py', 'compression.py', 'population.py')]
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in paths}
-    inputs.update(draws=args.draws, warmup=args.warmup, chains=args.chains)
+    inputs.update(draws=args.draws, warmup=args.warmup, chains=args.chains, engine=args.engine, reuse_response=args.reuse_response)
+    if args.reuse_response:
+        assert args.engine == 'cached'
+        original_inputs = json.loads((base_output/'inputs.json').read_text())
+        for p in [prediction/'complete.json', table_path, model_path, D/'cohorts'/(args.cohort+'.npz')]:
+            assert original_inputs[str(p.relative_to(ROOT))] == sha(p)
+        for p in [base_output/'component_response.npz', base_output/'map.joblib']:
+            inputs[str(p.relative_to(ROOT))] = sha(p)
     freeze = output/'inputs.json'
     if freeze.exists(): assert json.loads(freeze.read_text()) == inputs, 'Explicit target-run migration required'
     else: save_json(freeze, inputs)
@@ -63,7 +75,7 @@ def main():
         for name, digest in record['outputs'].items(): assert sha(output/name) == digest
         if not record['passed']: raise RuntimeError('Cached target sampler failed; explicit refinement required')
         return
-    response_path = output/'component_response.npz'
+    response_path = (base_output if args.reuse_response else output)/'component_response.npz'
     if not response_path.exists():
         responses = []; rows = []; identities = []; evidence = []
         order = np.argsort(source['identity'])
@@ -87,9 +99,15 @@ def main():
             identity=np.asarray(identities), rows=rows, reference_log_evidence=evidence)
     r = load(response_path); rows = r['rows']; response = r['response']; selection = r['selection']
     assert (source['TYPE'][rows] == 'PSF').all()
-    _HIERARCHY = FieldPopulation(response.sum(axis=3), selection, model, source['field'][rows], source['design_weight'][rows])
+    hierarchy_type = FastFieldPopulation if args.engine == 'cached' else FieldPopulation
+    _HIERARCHY = hierarchy_type(response.sum(axis=3), selection, model, source['field'][rows], source['design_weight'][rows])
     fit_path = output/'map.joblib'
     if fit_path.exists(): _FIT = joblib.load(fit_path)
+    elif args.reuse_response:
+        _FIT = joblib.load(base_output/'map.joblib')
+        value, grad = _HIERARCHY.objective(_FIT['map'])
+        assert abs(value-_FIT['objective']) < 1e-6 and abs(grad).max() < .001
+        joblib.dump(_FIT, fit_path)
     else:
         _FIT = _HIERARCHY.fit(); joblib.dump(_FIT, fit_path)
     print('TARGET MAP', _FIT['objective'], _FIT['gradient_max'], _HIERARCHY.dimension, flush=True)
