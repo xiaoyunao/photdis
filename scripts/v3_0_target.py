@@ -134,7 +134,9 @@ def main():
         marginal_half_delta=result['marginal_half_delta'], passed=passed,
         case_weight_sum=_HIERARCHY.case_weight_sum, effective_case_count=_HIERARCHY.effective_case_count,
         conditional_scope='Fixed SED/reference calibration; shared response ensemble still required',
-        evidence_constant=float(np.sum(r['reference_log_evidence'])),
+        evidence_constant=float((source['design_weight'][rows]/source['design_weight'][rows].mean())@r['reference_log_evidence']),
+        unit_weight_evidence_constant=float(np.sum(r['reference_log_evidence'])),
+        weight_scope='Design-rescaled generalized likelihood, sum of weights equals observed sample size; not expanded parent independent evidence',
         outputs={p.name: sha(p) for p in output.iterdir() if p.suffix in ('.npz', '.joblib')},
         elapsed_seconds=time.monotonic()-start, job=os.getenv('SLURM_JOB_ID')))
     print('TARGET COMPLETE', passed, diagnostic['max_rhat'], diagnostic['minimum_ess'], flush=True)
