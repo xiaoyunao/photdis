@@ -38,6 +38,7 @@ def main():
             directory=D/'catalog'/f'field_{field:02}'/'population_transfer'/f'refit_{response["draw"]:02}_s{response["draws"]}'
             marker=directory/'complete.json';record=json.loads(marker.read_text())
             assert record['rows']==n and record['integration_passed']
+            assert record['inputs']['method_freeze']==method
             assert sha(directory/'counts.npz')==record['counts_sha256']
             inputs[str(marker.relative_to(ROOT))]=sha(marker)
             field_counts.append(load(directory/'counts.npz'))
@@ -45,10 +46,12 @@ def main():
     with np.errstate(divide='ignore'):logweights=np.log(response_weight)
     combined=combine_counts(global_records,logweights);combined['response_draw_ids']=np.array([r['draw'] for r in plan['responses']],'i8')
     assert int(combined['n'])==plan['qualified_parent'];atomic_npz(out/'counts.npz',**combined);counts_rows+=count_rows(combined,'all_qualified_fields')
-    half_delta=0.;rows_total=0
+    half_delta=0.;rows_total=0;identities=[];mc_failures=0
     for field,n in enumerate(plan['field_counts']):
         base=D/'catalog'/f'field_{field:02}';prep=json.loads((base/'prepared.json').read_text())
         status=load(base/'parent_status.npz');assert len(status['status'])==prep['original_parent']
+        assert sha(base/'inputs.npz')==prep['outputs']['inputs.npz']
+        original=load(base/'inputs.npz');assert (original['TYPE']=='PSF').all();identities.append(original['identity'])
         assert int((status['status']==0).sum())==n
         inputs[str((base/'prepared.json').relative_to(ROOT))]=sha(base/'prepared.json')
         if not n:
@@ -58,7 +61,7 @@ def main():
         directories=[base/'population_transfer'/f'refit_{r["draw"]:02}_s{r["draws"]}' for r in plan['responses']]
         count=combine_counts([load(p/'counts.npz') for p in directories],logweights);counts_rows+=count_rows(count,f'field_{field:02}')
         atomic_npz(out/f'field_{field:02}_counts.npz',**count)
-        field_selected=0;field_leakage=0.;field_near=0.;flags=dict(multimodal=0,prior_sensitive=0)
+        field_selected=0;field_leakage=0.;field_near=0.;field_mc_failures=0;flags=dict(multimodal=0,prior_sensitive=0)
         files=sorted(p.name for p in (directories[0]/'chunks').glob('chunk_*.npz') if not p.stem.endswith('_counts'))
         for name in files:
             pieces=[]
@@ -67,6 +70,7 @@ def main():
             for p in pieces:np.testing.assert_array_equal(p['identity'],pieces[0]['identity']);assert (p['TYPE']=='PSF').all()
             prob=sum(w*p['probability'] for w,p in zip(response_weight,pieces));ha=sum(w*p['half_a'] for w,p in zip(response_weight,pieces));hb=sum(w*p['half_b'] for w,p in zip(response_weight,pieces))
             half_delta=max(half_delta,float(abs(ha-hb).max()));q=prob[:,:,:3].sum(axis=(1,2));selected=q>.95
+            field_mc_failures+=int((abs(ha-hb).max(axis=(1,2))+2*plan['discarded_response_mass']>=.005).sum())
             field_selected+=int(selected.sum());field_leakage+=float((1-q[selected]).sum());field_near+=float(q.sum())
             selected_near+=float(q[selected].sum());rows_total+=len(q)
             # Descriptive union flags remain conservative if multiple responses survive.
@@ -77,15 +81,16 @@ def main():
         for weight,directory in zip(response_weight,directories):
             for p in sorted((directory/'reference_prediction').glob('chunk_*.npz')):
                 if not p.stem.endswith('_joint'):matched_reference_mean+=weight*load(p)['class_distance'].sum(axis=0)
-        selected_n+=field_selected;selected_far+=field_leakage;expected_near+=field_near
+        selected_n+=field_selected;selected_far+=field_leakage;expected_near+=field_near;mc_failures+=field_mc_failures
         field_rows.append(dict(field=field,parent=prep['original_parent'],candidate=n,reference_converged=audit['numerically_converged'],system='DECam_DR11',
-            near95_selected=field_selected,model_expected_far_leakage=field_leakage,model_expected_near=field_near,**flags))
+            target_mc_failures=field_mc_failures,near95_selected=field_selected,model_expected_far_leakage=field_leakage,model_expected_near=field_near,**flags))
     assert rows_total==plan['qualified_parent'];assert abs(combined['mean'].sum()-rows_total)<1e-6
+    assert len(np.unique(np.concatenate(identities)))==rows_total
     assert abs(combined['covariance'].sum())<1e-4*max(1,float(np.diag(combined['covariance']).sum()))
     csv_rows(out/'fields.csv',field_rows);csv_rows(out/'joint_counts.csv',counts_rows)
     csv_rows(out/'prior_comparison.csv',[dict(class_index=c,distance_bin=b,nominal_reference_mean=float(reference_mean[c,b]),matched_response_reference_mean=float(matched_reference_mean[c,b]),target_mean=float(combined['mean'].reshape(3,6)[c,b])) for c in range(3) for b in range(6)])
     save_json(out/'complete.json',dict(method_freeze=method,inputs=inputs,qualified=rows_total,parent=sum(x['parent'] for x in field_rows),
-        final_marginal_half_delta=half_delta,passed=half_delta+2*plan['discarded_response_mass']<.005,
+        final_marginal_half_delta=half_delta,target_mc_failures=mc_failures,passed=half_delta+2*plan['discarded_response_mass']<.005,
         selected_near95=selected_n,model_expected_far_leakage=selected_far,model_expected_far_fraction=selected_far/selected_n,
         model_expected_near_retention=selected_near/expected_near,independently_measured_application_contamination=None,
         missing_contamination_reason='No representative independent distance truth across qualified parent; new-sky and member-conditioned results are separate evidence.',

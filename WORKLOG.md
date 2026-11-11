@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — prospective atlas verified and logarithmic tail preservation
+-Fiveactualprospective/scienceplots nowpass40format/hash/languagechecks and
+ visualreview;61144230layoutpolish leavesallscientificstatisticsunchanged.
+-Syncguardprotectednewremote-generatedfigures; verifiedbyte-identicalfiles
+ archivedbeforeGitadoption. No scientificdataremovedorremoteeditsdiscarded.
+-Add independenttestfor responseweight exp(-1000) dominatingaconflicting
+ densitytail. Ensemble/recovery scoringnowkeepsresponseweightsinlogspace;
+3targetedtestspass. Probability/CDFcompressionboundsareexplicitlynotlogscore
+ bounds. Physicalmodels andper-star likelihoodremainfrozen.
+-61144228refines22actualfailedsharedrecoveriesusingunchangedimplementation,
+8192draws/.99acceptance;61144301extendsdraw26chains afterfailed32768bridge.
+-Methodsdocdistinguishes277897eligible/32768fittedsources, matchedQRFcontrol,
+ conditionalcatalogtransfer, independent sharedscale andunvalidateddomains.
+
 ## 2026-11-11 — independent-scale findings and shared-count export
 -61143913 actual1442member results:medianrelative+12.56%,NMAD24.26%,
 68/95coverage60.47/99.17%; severe10.89%. Sharedscale shiftsgivebias+6.88to20.01%.

@@ -26,6 +26,7 @@ def main():
     p.add_argument('--draws', type=int, default=2048)
     p.add_argument('--catalogs', type=int, default=112)
     p.add_argument('--name', default='all32_native')
+    p.add_argument('--refined', action='store_true')
     a = p.parse_args()
     ids = list(map(int, a.draw_ids.split(',')))
     assert len(ids) == len(set(ids)) and len(ids) >= 2
@@ -36,6 +37,19 @@ def main():
         records, stars, counts = [], [], []
         for draw in ids:
             folder = D/'shared_recovery'/f'refit_{draw:02}'/f'catalog_{catalog:03}_s{a.draws}_native'
+            original = folder
+            if a.refined:
+                candidates = sorted(folder.parent.glob(f'catalog_{catalog:03}_s*_native'),
+                    key=lambda x: int(x.name.split('_s')[1].split('_')[0]), reverse=True)
+                for candidate in candidates:
+                    sidecar = candidate/'numerical_refinement.json'
+                    if sidecar.exists() and (candidate/'complete.json').exists():
+                        refinement = json.loads(sidecar.read_text())
+                        assert refinement['original_sha256'] == sha(original/'complete.json')
+                        assert refinement['physical_changes'] is False
+                        inputs[str(sidecar.relative_to(ROOT))] = sha(sidecar)
+                        folder = candidate
+                        break
             marker = folder/'complete.json'
             record = json.loads(marker.read_text())
             inputs[str(marker.relative_to(ROOT))] = sha(marker)
@@ -68,8 +82,7 @@ def main():
             cdf = sum(w*np.interp(grid, x, y) for w, (x, y) in zip(weight, curves))
             mu.append(np.interp([.025, .16, .5, .84, .975], cdf, grid))
             pit.append(np.interp(stars[0]['truth_mu'][i], grid, cdf))
-            with np.errstate(divide='ignore'):
-                logscore.append(logsumexp(np.log(weight)+densities))
+            logscore.append(logsumexp(logz-logsumexp(logz)+densities))
         mu = np.array(mu)
         truth_mu, truth_class = stars[0]['truth_mu'], stars[0]['truth_class']
         truth_bin = np.searchsorted(DISTANCE_MU_BOUNDARIES, truth_mu, side='right')

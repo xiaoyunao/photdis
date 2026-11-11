@@ -9,8 +9,8 @@
   "english_text_verified": true,
   "png_dpi": 300,
   "outputs": {
-    "figures/v3_0/validation/ngc288_cmd_sky.png": "8e12b8db264c587cd29eb357aa7b9881f0f0855bcc21910d45feacbf4cb16277",
-    "figures/v3_0/validation/ngc288_cmd_sky.pdf": "021957130a0a42a2016bc918a0e872716bfc81cfd09adb69958cd641d0830c4d",
+    "figures/v3_0/validation/ngc288_cmd_sky.png": "cdb66e6c10ee0f1398660fed830cb524534a377d0563c39dda38ae4b801d337e",
+    "figures/v3_0/validation/ngc288_cmd_sky.pdf": "f02d40af26afa639726e865989cd0283ec62390693f2c5074bdf632cbd280146",
     "manifests/v3_0/figures/validation/ngc288_cmd_sky.csv": "288affa0f22e494451ca551e6dc4b63a9dd1a5bad37e6cf18b89a9fbedc8fccb"
   }
 }

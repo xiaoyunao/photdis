@@ -10,7 +10,7 @@
   "png_dpi": 300,
   "outputs": {
     "figures/v3_0/validation/ngc288_distance_distribution.png": "2f536e5d08691a21fdeab5bfd8aa981dd284964bf063615d9eeb36c3b45c3f38",
-    "figures/v3_0/validation/ngc288_distance_distribution.pdf": "c8fe4d0b79ac6e26040707db630ba06846701707e08205495fbb3d6e60eda40e",
+    "figures/v3_0/validation/ngc288_distance_distribution.pdf": "4d3c5bd488c99c191fe2b59c83ff956ca9a388e1275da0cd61a07796ceef2a60",
     "manifests/v3_0/figures/validation/ngc288_distance_distribution.csv": "af67766e0db484ee797cafdc2d012db5f22a771a89a28815fc383d2268cbef14"
   }
 }

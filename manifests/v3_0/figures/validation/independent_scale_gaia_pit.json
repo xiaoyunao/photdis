@@ -8,7 +8,7 @@
   "png_dpi": 300,
   "outputs": {
     "figures/v3_0/validation/independent_scale_gaia_pit.png": "780778c1a03af94dd421e21149d611c35f250e844406581b0ee8e73c7b576dda",
-    "figures/v3_0/validation/independent_scale_gaia_pit.pdf": "60f92b45808a3cd16c8ad8533f09a0f22e84921e58e7742faa17f80ae96b4a88",
+    "figures/v3_0/validation/independent_scale_gaia_pit.pdf": "c301a65361e7f908dcfd197014cf450973c7882c1141855eeb527900700ce20a",
     "manifests/v3_0/figures/validation/independent_scale_gaia_pit.csv": "eff66cf4f0a07dfc2126c7396e6159f8a6cb9b92466857e97e3f3d3e8cc5406f"
   }
 }

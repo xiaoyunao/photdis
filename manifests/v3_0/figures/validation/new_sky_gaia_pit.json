@@ -7,7 +7,7 @@
   "png_dpi": 300,
   "outputs": {
     "figures/v3_0/validation/new_sky_gaia_pit.png": "47a6a18d8951b4b2f20340b788d83ff8daf288701a412f427ab468ecf6cca754",
-    "figures/v3_0/validation/new_sky_gaia_pit.pdf": "0d7b8f1ce58ccb093502dda1b869655ed9b4150aa364614f746961fee903b42d",
+    "figures/v3_0/validation/new_sky_gaia_pit.pdf": "e1277e0acc2416a34a759b1ca8bf6e4969663b53578483fbc5b68cea1a6f6d8c",
     "manifests/v3_0/figures/validation/new_sky_gaia_pit.csv": "bd1dabfd5258506c4bd88edf662215ffa53cf784edf63c3df5515857d0af34f3"
   }
 }

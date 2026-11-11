@@ -7,10 +7,10 @@
     "data/v3_0/scale_example/reference/distance_distribution.csv": "af67766e0db484ee797cafdc2d012db5f22a771a89a28815fc383d2268cbef14"
   },
   "outputs": {
-    "ngc288_distance_distribution.json": "f415fedc5c700e81b5b100b9ba999b424e55f680bc15e831e4694102c5b9151f",
-    "new_sky_distance.json": "8c7b816ab3014a3490dce8c99ba8462712210b2922a2d2fd66e7daaec0331f6d",
-    "ngc288_cmd_sky.json": "6f8fa234baf6869937140574cb04ce60c35779ca5d1893491fc13eba36c17bf0",
-    "new_sky_gaia_pit.json": "9f46e06b02e10ca018c13fbf5593cdd2743a08b7b31ed1dfd167f965bb41ce50",
-    "independent_scale_gaia_pit.json": "4a7dd4c7a5c047db37205fa07f0576e55cc3af5317dd4e2861a4cc0d5eac0c7d"
+    "ngc288_distance_distribution.json": "a6fa2f794d3ae06b4cc42c515286578261f7efe824aae9d457e8455ab3ce04ed",
+    "new_sky_distance.json": "41ae9a3b41d7826cbf9fa306e7f1b5115eb4eff3edf854d9c92fcc225f3a4c57",
+    "ngc288_cmd_sky.json": "1efedd0a967f14b4824810e6219a79f06d213424b013d3e6426ba11222e6eff7",
+    "new_sky_gaia_pit.json": "e96e6f165eb249a4d8499919040a50fe1df3ed8cb2f8a8dc891fe9e8a565d618",
+    "independent_scale_gaia_pit.json": "435bc1a990d0571d666926e6704997ccd44150e589e426605f17aa65befcde5e"
   }
 }

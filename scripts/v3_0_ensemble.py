@@ -17,6 +17,12 @@ D=ROOT/'data/v3_0'
 _DIRS=_WEIGHTS=_LOGZ=_OUT=_INPUTS=None
 
 
+def mixture_log_density(log_density, log_evidence):
+    """Keep tiny response weights in log space for conflicting-observation scores."""
+    logw=np.asarray(log_evidence)-logsumexp(log_evidence)
+    return logsumexp(np.asarray(log_density)+logw[:,None],axis=0)
+
+
 def combine_chunk(name):
     out=_OUT/'chunks'/name;marker=out.with_suffix('.json')
     if marker.exists():
@@ -45,8 +51,7 @@ def combine_chunk(name):
         # All response products explicitly evaluate the same wide [-20,50] tail.
         assert len({float(x[0]) for x,y in native})==1 and len({float(x[-1]) for x,y in native})==1
         native_grid=np.unique(np.concatenate([x for x,y in native]))
-        with np.errstate(divide='ignore'):
-            native_lp=logsumexp(np.array([np.interp(native_grid,x,y) for x,y in native])+np.log(_WEIGHTS)[:,None],axis=0)
+        native_lp=mixture_log_density(np.array([np.interp(native_grid,x,y) for x,y in native]),_LOGZ)
         native_grids.append(native_grid);native_logpdf.append(native_lp);native_offsets.append(native_offsets[-1]+len(native_grid))
         lower=min(x[0] for x,y in curves);upper=max(x[-1] for x,y in curves)
         grid=np.unique(np.r_[np.linspace(lower,upper,int(np.ceil((upper-lower)/.01))+1),DISTANCE_MU_BOUNDARIES])

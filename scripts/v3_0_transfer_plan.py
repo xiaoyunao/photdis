@@ -9,6 +9,7 @@ import csv
 import json
 import os
 import numpy as np
+from scipy.special import logsumexp
 from v2_1_near import ROOT,sha,save_json
 from photdis.stage1 import require_compute
 from v3_0_validation_inputs import check_freeze
@@ -37,10 +38,14 @@ def main():
     counts=[json.loads((D/'catalog'/f'field_{i:02}'/'prepared.json').read_text())['candidate'] for i in range(14)]
     selected=[dict(draw=int(rows[i]['global_response_draw']),draws=int(rows[i]['chain_draws']),
         original_weight=float(rows[i]['posterior_response_weight']),retained_weight=float(w)) for i,w in zip(index,weights)]
+    logz=np.array([float(r['log_evidence']) for r in rows]);omitted=np.ones(len(rows),bool);omitted[index]=False
+    log_discarded=float(logsumexp(logz[omitted])-logsumexp(logz)) if omitted.any() else None
     n=sum(counts);out=D/'catalog/transfer_plan.json'
     if out.exists():raise RuntimeError('Transfer plan immutable; choose explicit migration rather than overwrite')
     save_json(out,dict(method_freeze=method,ensemble=a.ensemble,ensemble_sha256=sha(folder/'complete.json'),
         response_weights_sha256=sha(folder/'response_weights.csv'),responses=selected,discarded_response_mass=discarded,
+        discarded_response_log_mass=log_discarded,
+        density_warning='Total variation bound controls probabilities/CDF/PIT/counts, not relative densities or log scores. Score a pruned mixture only with observation-likelihood bounds or retain every response in log space.',
         tolerance=a.tolerance,qualified_parent=n,field_counts=counts,
         probability_absolute_error_bound=discarded,count_mean_absolute_error_bound=n*discarded,
         count_covariance_element_absolute_error_bound=3*n*n*discarded,

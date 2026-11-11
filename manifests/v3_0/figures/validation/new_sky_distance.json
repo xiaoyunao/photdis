@@ -7,8 +7,8 @@
   "english_text_verified": true,
   "png_dpi": 300,
   "outputs": {
-    "figures/v3_0/validation/new_sky_distance.png": "fb067aad4c1299f2f8016d96885bce843c44ec956cd7cc2cd36ebdf06df3c75e",
-    "figures/v3_0/validation/new_sky_distance.pdf": "9d3a7dc91f85840279ba4fa078810d530029065da2f3f30c0c720aa864c3beb6",
+    "figures/v3_0/validation/new_sky_distance.png": "da187433458688f5cb935336268026490f6fab199dbfc7d6839d095d2eab6396",
+    "figures/v3_0/validation/new_sky_distance.pdf": "3b17327e7c1bade85dc3a83db14fd2599b9f0040b27d2a2849f9818bcc8420aa",
     "manifests/v3_0/figures/validation/new_sky_distance.csv": "f378be3d7fc0c729a09ff6cd1d9065a27641ee6481d12b90cb2e83ccafaf3567"
   }
 }

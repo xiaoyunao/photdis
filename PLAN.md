@@ -27,7 +27,7 @@ Fullfit61135482COMPLETED/converged43iterations;27negative-support flags need
 posterior audit. Shared32draw response61136440COMPLETED; full-model128object benchmark61137836
 COMPLETED. Shared response approximation requires recovery validation. FixedQRF/probes61135917COMPLETED; response
 benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
-63targeted tests pass. Cohort preparation61137072completed; shared native inference,
+63frozen-core tests plus4additionalprojection/response-compression/log-tail tests pass. Cohort preparation61137072completed; shared native inference,
 CDF joint compression and unified CLI implemented;64object benchmark61137407
 completed calculation, detailed artifact audit pending. Selection tables implemented.
 C: original target61138714checkpointed/cancelled after verified22x algebraic
@@ -46,7 +46,9 @@ response recovery and calibrated applicability remain.
 E: physical method/priors/metrics/output frozen by61142743, hash14d3ff1d;
  purephotometry predictions and once-only association complete for3250/2048/8192;
  reservation haszeroqualifiedreferences (availability audit pending), newsky1070
- andindependent2202signedGaia. Final scoring/membership loading repair pending; independent HST dynamical NGC288 scale identified for
+ andindependent2202signedGaia. Finalreference scoring complete; independentmembership1442of8192; zeroqualified
+ reference for3250reserve verifiedasqualityselection, notjoinfailure. FiveEnglish
+ figurespass40artifactchecks/visualreview. Target-prior finalcomparison remains; independent HST dynamical NGC288 scale identified for
 identity audit passed61137636;8192photometric-only IDs frozen, membership unopened. F: firstfull45882fieldreference prediction completed61143137; fulloutputaudit
  pending.128object conditionaltransferpilot completed61143363 (41.71s/24.64MB);
  allqualified fields, finalsharedprecision, scienceexample/report remain.
