@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-11 — source calibration/new sky complete; benchmark boundary repair
+-61132403 COMPLETED0:0(5:23):8192objects/source,32common eight-sky-block
+  calibration bootstrap draws. Full signed Gaia includes427/594negative observations;
+  source offsets -0.0219/-0.00523mag, additional scatter0.0820/0.2007mag.
+  These are Gaia-dependent source-consistency fits, not independent scale validation.
+-61132863_0/_1 new-sky photometric-only samples COMPLETED0:0(1:39/0:42);
+  proposed blocks pass all historical config/reference-cell exclusions. No outcomes.
+-61132864_0 original field0 native recovery COMPLETED0:0(1:12),275998oldparent IDs
+  all recovered with independent CFITSIO spot checks. Model inference not run.
+-61132862 SEDbenchmark FAILED1:0(0:50), before cloud/model output: broad VAC
+  reference distribution exceeded fixed mu bounds. Replace bounded-CDF VAC nodes
+  with explicit core/broad Hermite quadrature; retain tiny mixture tails and >50kpc.
+-Also fix initializer to use single-star reference middle node, not first binary
+  node.17focusedtests pass. Completed calibration/native outputs remain immutable.
+-Next: sole corrected benchmark after terminal/no-active verification; measure
+  full fit cost, then complete continuous inference/population and actual validation.
+
 ## 2026-11-11 — v3 SED implementation and photometric-first validation preparation
 - Unique source-calibration job61132403 submitted after empty-queue check.
 - Implement projected heteroscedastic SED EM with continuous reference-mu

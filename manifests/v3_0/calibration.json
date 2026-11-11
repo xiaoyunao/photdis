@@ -1,0 +1,14 @@
+{
+  "sha256": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+  "elapsed_seconds": 241.61580010107718,
+  "jobs": "61132403",
+  "n_sources": [
+    8192,
+    8192
+  ],
+  "bootstrap_draws": 32,
+  "source_dependence": "Gaia-dependent teachers; empirical consistency calibration, not independent scale proof",
+  "prospective_outcomes_opened": false,
+  "corrected_mu_convention": "mu_corrected=mu_VAC+offset",
+  "quality": "No BINARY_FLAG cut; full signed Gaia with astrometric quality, no parallax SNR selection"
+}

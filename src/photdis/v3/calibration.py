@@ -73,12 +73,14 @@ def reference_nodes(channel, distance, sigma_mu, parallax, parallax_error, *,
     VAC uses a flat-mu reference measure; Gaia-only uses explicit EDSD reference
     prior d^2 exp(-d/L), including Jacobian d dd/dmu. Nodes integrate that
     documented reference posterior, not an unrecorded inverse-parallax point.
-    Equal-probability deterministic quadrature avoids importance-weight collapse.
+    VAC core and broad channels use separate Hermite nodes, including tiny tails.
+    Gaia uses deterministic equal-probability quadrature of its signed likelihood.
     """
     from scipy.special import ndtr
     from .likelihood import trapezoid_weights
     c = np.asarray(channel); n = len(c)
     mu_nodes = np.full((n, nodes), np.nan)
+    node_weights = np.full((n, nodes), 1/nodes)
     quantiles = (np.arange(nodes)+.5)/nodes
     grid = np.linspace(-5, 30, 3501)
     w = trapezoid_weights(grid)
@@ -90,12 +92,23 @@ def reference_nodes(channel, distance, sigma_mu, parallax, parallax_error, *,
             if not len(ii): continue
             center = 10+5*np.log10(np.asarray(distance)[ii])+offset
             ss = np.hypot(np.asarray(sigma_mu)[ii], extra)
-            cdf = (1-outlier)*ndtr((grid[None, :]-center[:, None])/ss[:, None])
-            cdf += outlier*ndtr((grid[None, :]-center[:, None])/np.hypot(sigma_mu[ii], 2.)[:, None])
-            for j, row in enumerate(ii):
-                if cdf[j, 0] > 1e-6 or cdf[j, -1] < 1-1e-6:
-                    raise ValueError('Reference distance nodes require wider bounds')
-                mu_nodes[row] = np.interp(quantiles, cdf[j], grid)
+            if outlier > 0:
+                # Allocate explicit nodes to the broad reference channel even
+                # when its total weight is below one equal-quantile node. Hermite
+                # support follows each source's scale; no fixed mu boundary clips it.
+                core_n = nodes//2
+                broad_n = nodes-core_n
+                x1, w1 = hermgauss(core_n); x2, w2 = hermgauss(broad_n)
+                values = np.c_[center[:, None]+np.sqrt(2)*ss[:, None]*x1,
+                    center[:, None]+np.sqrt(2)*np.hypot(sigma_mu[ii], 2.)[:, None]*x2]
+                mass = np.r_[(1-outlier)*w1/np.sqrt(np.pi), outlier*w2/np.sqrt(np.pi)]
+                order_index = np.argsort(values, axis=1)
+                mu_nodes[ii] = np.take_along_axis(values, order_index, axis=1)
+                node_weights[ii] = np.take_along_axis(np.broadcast_to(mass, values.shape), order_index, axis=1)
+            else:
+                x, hw = hermgauss(nodes)
+                mu_nodes[ii] = center[:, None]+np.sqrt(2)*ss[:, None]*x
+                node_weights[ii] = hw/np.sqrt(np.pi)
         ii = np.flatnonzero(cc == 3)+start
         for row in ii:
             p = float(parallax[row]); e = float(parallax_error[row])
@@ -115,4 +128,4 @@ def reference_nodes(channel, distance, sigma_mu, parallax, parallax_error, *,
             cdf = np.r_[0, np.cumsum(np.diff(local_grid)*(density[1:]+density[:-1])/2)]
             mu_nodes[row] = np.interp(quantiles, cdf/cdf[-1], local_grid)
     if np.isnan(mu_nodes).any(): raise ValueError('No primary distance evidence; retain outside SED-distance fit')
-    return mu_nodes, np.full((n, nodes), 1/nodes)
+    return mu_nodes, node_weights

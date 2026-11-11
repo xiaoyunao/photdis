@@ -35,3 +35,13 @@ def test_precise_gaia_nodes_resolve_sub_grid_likelihood():
     expected = 10-5*np.log10(1.123)
     assert np.median(mu[0]) == pytest.approx(expected, abs=1e-6)
     assert np.std(mu[0]) == pytest.approx(5/np.log(10)*.0001/1.123, rel=.02)
+
+
+def test_tiny_broad_reference_mass_is_not_lost_or_boundary_truncated():
+    mu, w = reference_nodes(np.array([1]), np.array([1000.]), np.array([.1]),
+                           np.array([-.01]), np.array([.1]), nodes=24, outlier=.001)
+    assert mu.max() > 30
+    center = 25.
+    assert (w*mu).sum() == pytest.approx(center, abs=1e-10)
+    expected_variance = .999*.1**2+.001*(2.**2+.1**2)
+    assert (w*(mu-center)**2).sum() == pytest.approx(expected_variance, abs=1e-10)

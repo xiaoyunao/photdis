@@ -1,0 +1,6 @@
+{
+  "configs/v3_0.json": "fc47ed9782de3cab64cd0039dcfb4bb597b65c8cd8c5abe9719a8028e8f1d295",
+  "scripts/v3_0_calibrate.py": "cc88fddebe295975809157b3f932af02fb3d4cb315adc718b3dcd94a61a512bd",
+  "src/photdis/v3/calibration.py": "b8dace52deb51ea073aca1aedda652f064c121e45fba973492297bb31c6986d6",
+  "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769"
+}

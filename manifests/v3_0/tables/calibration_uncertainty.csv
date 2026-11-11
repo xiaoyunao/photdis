@@ -1,0 +1,7 @@
+source,parameter,mean,low,high,uncertainty
+specdis,offset_mag,-0.020859345602198223,-0.03361719101681922,-0.009143626532020483,shared sky Bayesian bootstrap of source consistency fits
+specdis,extra_scatter_mag,0.0843341752382742,0.06555735247180093,0.1066409281791887,shared sky Bayesian bootstrap of source consistency fits
+specdis,broad_fraction,0.011176643055535508,0.009041143275362925,0.014021118481684958,shared sky Bayesian bootstrap of source consistency fits
+spdist,offset_mag,-1.4145442961907952e-05,-0.017366896015851604,0.027878912007382812,shared sky Bayesian bootstrap of source consistency fits
+spdist,extra_scatter_mag,0.20547002379723578,0.19023737482068317,0.21625461803095,shared sky Bayesian bootstrap of source consistency fits
+spdist,broad_fraction,0.008832903263110807,0.004573220870135905,0.011896442607339295,shared sky Bayesian bootstrap of source consistency fits

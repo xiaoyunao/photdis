@@ -79,7 +79,7 @@ class EmpiricalSED:
         self.components = components; self.max_iter = max_iter
         self.tol = tol; self.seed = seed
 
-    def initialize(self, y, noise, mask, features, labels):
+    def initialize(self, y, noise, mask, features, labels, initial_node=None):
         from sklearn.cluster import KMeans
         n, _, d = y.shape
         scale = np.nanstd(features, axis=0); scale[scale < 1e-6] = 1
@@ -87,7 +87,8 @@ class EmpiricalSED:
         # arbitrary filled optional flux cannot determine cluster assignments.
         clusters = KMeans(self.components, random_state=self.seed, n_init=1,
                           max_iter=100).fit_predict(features/scale)
-        middle = y[:, y.shape[1]//2]; nn = noise[:, noise.shape[1]//2]
+        node = y.shape[1]//2 if initial_node is None else initial_node
+        middle = y[:, node]; nn = noise[:, node]
         self.weights = np.bincount(clusters, minlength=self.components).astype(float)
         self.weights /= self.weights.sum()
         self.means = np.zeros((self.components, d)); self.covariances = np.zeros((self.components, d, d))
@@ -115,14 +116,14 @@ class EmpiricalSED:
             self.classes[k] = counts/counts.sum()
             self.initialization_audit.append(dict(component=k, n=int(rows.sum()), **audit))
 
-    def fit(self, y, noise, mask, node_logweight, labels, features, workers=1, callback=None):
+    def fit(self, y, noise, mask, node_logweight, labels, features, workers=1, callback=None, initial_node=None):
         global _CONTEXT
         y, noise, mask = np.asarray(y), np.asarray(noise), np.asarray(mask, bool)
         labels = np.asarray(labels, int)
         if not np.isin(labels, [-1, 0, 1, 2]).all(): raise ValueError('Invalid reference class')
         if not np.isfinite(y[mask[:, None, :].repeat(y.shape[1], axis=1)]).all():
             raise ValueError('Nonfinite observed training coordinate')
-        self.initialize(y, noise, mask, features, labels)
+        self.initialize(y, noise, mask, features, labels, initial_node=initial_node)
         self.history = []; self.converged = False
         def run(statistics):
             tasks = [(k, statistics) for k in range(self.components)]

@@ -105,7 +105,7 @@ def main():
         assert sha(path) == record['sha256']; return
     model = EmpiricalSED(cfg['components'], max_iter=iterations, tol=cfg['relative_likelihood_tolerance'], seed=cfg['seed'])
     def progress(iteration, value): print('SED ITERATION', iteration, value, 'elapsed', time.monotonic()-start, flush=True)
-    model.fit(t['y'][:n], t['noise'][:n], t['mask'][:n], t['logweight'][:n], t['labels'][:n], t['features'][:n], workers=cfg['workers'], callback=progress)
+    model.fit(t['y'][:n], t['noise'][:n], t['mask'][:n], t['logweight'][:n], t['labels'][:n], t['features'][:n], workers=cfg['workers'], callback=progress, initial_node=cfg['reference_mu_nodes']//2)
     model.training_identity = t['identity'][:n]; model.system = 'DECam_DR11'
     model.binary_reference_fraction = cfg['binary_reference_fraction']; model.binary_brightness_factor = cfg['binary_brightness_factor']
     joblib.dump(model, path.with_suffix('.tmp.joblib')); path.with_suffix('.tmp.joblib').replace(path)
