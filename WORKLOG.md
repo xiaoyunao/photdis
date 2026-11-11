@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — first continuous recovery passes numerical sampling
+-61139393complete log: fourchains/splitRhat1.00310; source-normalized observed
+ catalog count recovery now runs end-to-end. Full metadata/direct-integration
+ check and all112catalogs follow; this is not scientific coverage acceptance.
+-Add batch execution with exact cached hierarchy and separate output provenance;
+ original pilot retained. Retrieve same-object source/Gaia/class tables with hashes.
+-All21figure sets/122checks committed; NERSC identical untracked artifacts archived
+ and safe push restored, no overwrite of differing data.
+
 ## 2026-11-11 — candidate scope inventory and generated-artifact sync
 -Add photometry-only full-parent qualification inventory retaining all row statuses
  and separate north system. Existing fixedr<20/error<.1/support criteria remain

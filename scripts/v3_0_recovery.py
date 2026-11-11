@@ -12,6 +12,7 @@ from photdis.v3.model import inference_model
 from photdis.v3.compression import unpack, DISTANCE_MU_BOUNDARIES
 from photdis.v3.target import component_response, joint_coefficients, joint_draw_probabilities
 from photdis.v3.hierarchy import FieldPopulation
+from photdis.v3.fast_hierarchy import FastFieldPopulation
 from photdis.v3.sampling import hmc, chain_diagnostics
 from photdis.v3.selection import effective_errors
 from photdis.v3.selection_table import SelectionTable
@@ -28,6 +29,7 @@ D = ROOT/'data/v3_0'
 def main():
     require_compute(); parser = argparse.ArgumentParser()
     parser.add_argument('--catalog', type=int, required=True)
+    parser.add_argument('--engine', choices=['original', 'cached'], default='cached')
     parser.add_argument('--view', choices=['grz', 'multiband'], default='multiband')
     parser.add_argument('--draws', type=int, default=512); parser.add_argument('--warmup', type=int, default=512)
     parser.add_argument('--chains', type=int, default=4); parser.add_argument('--profiles', type=int, default=256)
@@ -40,9 +42,9 @@ def main():
     selection_record = json.loads(selection_path.with_name('complete.json').read_text())
     assert selection_record['passed'] and selection_record['sha256'] == sha(selection_path)
     paths = [source_path, truth_path, model_path, selection_path, pred/'complete.json', qrf/'complete.json', ROOT/'scripts/v3_0_recovery.py']
-    paths += [ROOT/'src/photdis/v3'/x for x in ('hierarchy.py', 'target.py', 'sampling.py', 'marginal.py', 'population.py', 'metrics.py')]
+    paths += [ROOT/'src/photdis/v3'/x for x in ('hierarchy.py', 'fast_hierarchy.py', 'target.py', 'sampling.py', 'marginal.py', 'population.py', 'metrics.py')]
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in paths}; inputs.update(vars(args))
-    out = D/'recovery'/args.view/f'catalog_{args.catalog:03}_s{args.draws}'
+    out = D/'recovery'/args.view/f'catalog_{args.catalog:03}_s{args.draws}_{args.engine}'
     out.mkdir(parents=True, exist_ok=True)
     if (out/'inputs.json').exists(): assert json.loads((out/'inputs.json').read_text()) == inputs
     else: save_json(out/'inputs.json', inputs)
@@ -80,7 +82,8 @@ def main():
         alpha, audit = table.evaluate(effective_errors(phot))
         if not audit['inside_profile_hull'].all(): raise ValueError('Uncertified simulation selection profile')
         atomic_npz(response_path, response=response, selection=alpha)
-    hierarchy = FieldPopulation(response.sum(axis=3), alpha, model, phot['field'])
+    hierarchy_type = FastFieldPopulation if args.engine == 'cached' else FieldPopulation
+    hierarchy = hierarchy_type(response.sum(axis=3), alpha, model, phot['field'])
     fit_path = out/'map.joblib'
     if fit_path.exists(): fit = joblib.load(fit_path)
     else: fit = hierarchy.fit(); joblib.dump(fit, fit_path)
