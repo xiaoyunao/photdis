@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — v3 preparation submitted and independent numerical core tested
+- 3a426e9 synchronized to local/origin/NERSC; queue confirmed empty, submitted
+  unique preparation61131782. Raw source/PSF inventory runs on Slurm; no reservation outcomes.
+- Add continuous native-flux full-covariance likelihood, conditional upper limits,
+  adaptive continuous distance bounds/integrals/modes and deconvolved covariance initializer.
+- Add selection-normalized population likelihood and streaming shared-draw count
+  moments with int64 realizations and final marginal precision. Frozen v2.6 unchanged.
+- 11 focused tests pass, including independent forward Gaussian/conditional CDF,
+  off-node/far modes, shared reference errors and exact enumerated count covariance.
+- Test caught/fixed empty single-mode minima index dtype. No production model fitted
+  or scientific validity claimed; next inspect preparation and build calibrated SED fit.
+
 ## 2026-11-11 — v3.0 authorization, complete review and active goal
 - Read latest Pro reply to b59e18b in full (14,327 characters); archive verbatim in
   docs/pro_review_b59e18b.md; create detailed active goal covering actual A–F delivery.
