@@ -23,12 +23,21 @@ def kernel_loglike(model, observation, mu, *, bands=None, luminosity_shift=None,
     if luminosity_shift is not None:
         factor = 10.**(.4*np.asarray(luminosity_shift)[indices])
         mean *= factor[:, None]; cov *= factor[:, None, None]**2
+    ebv = float(observation.get('EBV', 0.))
+    sigma_ebv = float(observation.get('dust_sigma_ebv', .1*max(ebv, 0.)))
+    coefficients = np.zeros_like(observation['transmission'], dtype=float)
+    valid_transmission = np.isfinite(observation['transmission']) & (observation['transmission'] > 0)
+    if ebv > 0:
+        coefficients[valid_transmission] = -2.5*np.log10(observation['transmission'][valid_transmission])/ebv
+    elif sigma_ebv > 0:
+        raise ValueError('No measured band extinction coefficient at zero E(B-V)')
     values = []
     for brightness in (1., model.binary_brightness_factor):
         values.append(flux_loglikelihood(observation['flux'], observation['flux_error'], mask,
             observation['transmission'], mean*brightness, cov*brightness**2, mu,
             calibration_mag=calibration_mag, system=str(observation['photometric_system']),
-            template_system=model.system, upper_limit=observation.get('upper_limit')))
+            template_system=model.system, upper_limit=observation.get('upper_limit'),
+            dust_sigma_ebv=sigma_ebv, extinction_coefficients=coefficients))
     return np.stack(values), indices
 
 

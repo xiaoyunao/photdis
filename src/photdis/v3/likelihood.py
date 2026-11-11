@@ -98,7 +98,8 @@ def _censored_logpdf(value, mean, cov, censored):
 
 def flux_loglikelihood(flux, error, mask, transmission, template_flux,
                        template_covariance, mu, *, calibration_mag=None,
-                       upper_limit=None, system='DECam_DR11', template_system='DECam_DR11'):
+                       upper_limit=None, system='DECam_DR11', template_system='DECam_DR11',
+                       dust_sigma_ebv=0., extinction_coefficients=None):
     """Return component x distance log likelihood for one observed star.
 
     Full intrinsic native-flux covariance transforms with distance and dust.
@@ -123,6 +124,14 @@ def flux_loglikelihood(flux, error, mask, transmission, template_flux,
     mean = sed[:, None, :]*factor[None, :, :]
     v = cov[:, None, :, :]*factor[None, :, :, None]*factor[None, :, None, :]
     v = v + np.diag(e**2)[None, None, :, :]
+    if dust_sigma_ebv < 0 or not np.isfinite(dust_sigma_ebv):
+        raise ValueError('Invalid per-object dust uncertainty')
+    if dust_sigma_ebv:
+        if extinction_coefficients is None:
+            raise ValueError('Dust propagation requires explicit band coefficients')
+        coefficient = np.asarray(extinction_coefficients)[mask]
+        perturbation = .4*LOG10*dust_sigma_ebv*mean*coefficient
+        v += perturbation[..., :, None]*perturbation[..., None, :]
     censored = np.zeros(len(f), bool) if upper_limit is None else np.asarray(upper_limit, bool)[mask]
     if censored.any():
         return np.array([[_censored_logpdf(f, m, c, censored) for m, c in zip(mm, vv)]

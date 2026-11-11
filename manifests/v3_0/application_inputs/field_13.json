@@ -1,0 +1,35 @@
+{
+  "field": 13,
+  "original_parent": 491184,
+  "admitted": 491184,
+  "nonPSF": 0,
+  "missing_TYPE": 0,
+  "photometric_or_morphology_excluded": 0,
+  "sha256": "923102f9afd933384c18fca8a63d6062d0dba493e69a45422dd126d7a6060188",
+  "parent_sha256": "c0a96be373bcc45e37c9eb2b8d4b2893d161185a22cd07f5f7cba65fe1ce3661",
+  "native_sources": {
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-210p040-215p045.fits": {
+      "size": 554215680,
+      "mtime_ns": 1780637798000000000,
+      "independently_checked_rows": 16
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-210p045-215p050.fits": {
+      "size": 492618240,
+      "mtime_ns": 1780637802000000000,
+      "independently_checked_rows": 16
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-215p040-220p045.fits": {
+      "size": 565585920,
+      "mtime_ns": 1780637860000000000,
+      "independently_checked_rows": 16
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-215p045-220p050.fits": {
+      "size": 523200960,
+      "mtime_ns": 1780637846000000000,
+      "independently_checked_rows": 16
+    }
+  },
+  "reference_outcomes_read": false,
+  "program_sha256": "459d8ce9091755b202a935f7473fce45b75853e51bb519ca3afcbf45ebe53297",
+  "job": "61133866"
+}

@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — complete native inventory; conditional selection and dust likelihood
+-61133866 COMPLETED0:0(11:45): all14original fields recovered exactly,9390518
+ PSF parents (8899334DECam,491184north); no morphology or quality exclusions.
+ These are inputs, not v3 predictions. Native source spot checks preserved.
+-61134629 FAILED1:0(44s) before training: fit provenance used Path without import.
+ Added import; cloud unchanged, no fit checkpoint created. Confirmed queue empty.
+-Add conditional grz S/N selection response with Sobol intrinsic-SED integration,
+ analytic measurement-noise CDF and photometric-only error contexts. Add per-star
+ dust covariance; field-shared dust floor still requires shared nuisance draws.
+-24focused tests pass; all v3 modules/drivers parse; pyflakes finds no undefined
+ names (four harmless pre-existing unused-variable/import warnings).
+-Next: sole corrected full SED fit; numerical selection refinement and shared
+ uncertainty production. Original3250 and new-sky reference outcomes stay closed.
+
 ## 2026-11-11 — measured SED cost and resumable full-fit preparation
 -61133617 benchmarkCOMPLETED0:0(42s total); actual1024-source/128-component,
   two-iteration fit14.42s, parent peakRSS~1.99GiB, output81627bytes. Benchmark

@@ -74,3 +74,16 @@ def test_reference_distance_error_has_shared_band_covariance():
     samples = rng.multivariate_normal([0, 0], latent+noise, size=100000)
     _, fitted, _ = intrinsic_covariance(samples, np.broadcast_to(noise, (len(samples), 2, 2)))
     np.testing.assert_allclose(fitted, latent, atol=.03)
+
+
+def test_small_dust_uncertainty_keeps_cross_band_covariance():
+    f = np.array([1., 2., 3.]); error = np.array([.1]*3)
+    sed = np.array([[10., 20., 30.]]); cov = np.array([np.eye(3)])
+    coefficient = np.array([3., 2., 1.]); sigma_ebv = .003; mu = 12.5
+    actual = flux_loglikelihood(f, error, [1]*3, [1]*3, sed, cov, [mu],
+                              dust_sigma_ebv=sigma_ebv, extinction_coefficients=coefficient)[0, 0]
+    a = 10**(-.4*(mu-10)); mean = a*sed[0]
+    direction = .4*np.log(10)*sigma_ebv*coefficient*mean
+    variance = a*a*cov[0]+np.diag(error**2)+np.outer(direction, direction)
+    expected = multivariate_normal.logpdf(f, mean, variance)
+    assert actual == pytest.approx(expected, abs=1e-11)
