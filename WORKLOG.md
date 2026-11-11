@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — fixed matched QRF and observable-only probes
+-61135482confirmedRUNNING, first full32768source EM checkpoint at89s.
+ Response numerical/timing benchmark61135629submitted once after empty-name check.
+-Implement same32768identity/primary-reference QRF point-label control with fixed
+ historical settings; unlabelled distance sources remain. Four fixed class probes
+ share known-label training/evaluation IDs and hyper-role-only temperature fit.
+ No-color features use r/sky/dust/flux errors (not g/z SNR); added colors and signed
+ optional flux ratios carry extra information. Missing values remain missing.
+-28focused tests pass; probability endpoints and label exclusion checks pass.
+-Next: execute controls; develop shared response uncertainty and target inference.
+
 ## 2026-11-11 — corrected full fit and exact spectral likelihood acceleration
 -Confirmed61134629terminal and no active fit before sole61135482submission.
  Frozen fit/core/config hashes unchanged during subsequent inference development.
