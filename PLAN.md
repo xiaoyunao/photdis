@@ -7,13 +7,13 @@ This user-authorized stage supersedes previous restrictions on new modeling,
 opening the 3250 reservation after freeze, and existing-field candidate catalogs.
 Historical outputs and actual deployment remain immutable. No timers or agents.
 
-- [ ] A — exact-identity PSF data, native six-band likelihood inputs, source dependence,
+- [x] A — exact-identity PSF data, native six-band likelihood inputs, source dependence,
   untruncated SpecDis binary flag, missing labels / contiguous FeH, isolated roles.
-- [ ] B — continuous distance / empirical SED forward likelihood, multiple branches,
+- [x] B — continuous distance / empirical SED forward likelihood, multiple branches,
   native weak/negative flux, censored/missing bands, dust / systems / binaries.
 - [ ] C — source calibration and target population with shared uncertainty;
   reference-prior and population-prior joint posteriors, counts and covariance.
-- [ ] D — fixed matched method/band/prior contrasts, information probe, continuous
+- [x] D — fixed matched method/band/prior contrasts, information probe, continuous
   independent-SED recovery and transfer; full conditional PDF and count metrics.
 - [ ] E — freeze model/priors/metrics/tolerances, once-only reserved real validation,
   photometric-first new sky, independent scale; supported/limited/unverified domains.

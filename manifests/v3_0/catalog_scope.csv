@@ -1,0 +1,15 @@
+field,name,ra_min,ra_max,dec_min,dec_max,parent,native_admitted,qualified,system,config
+0,dev_cal_ra205_215_dec_m010_p000,205,215,-10,0,275998,275998,45882,DECam_DR11,configs/field_dev_cal_ra205_215.json
+1,native_dev_ra060_070_dec_m035_m025,60,70,-35,-25,695479,695479,79069,DECam_DR11,configs/field_native_ra060_070.json
+2,native_final_ra330_340_dec_m035_m025,330,340,-35,-25,947518,947518,166013,DECam_DR11,configs/field_native_ra330_340.json
+3,native_final_ra020_030_dec_m025_m015,20,30,-25,-15,1285115,1285115,100924,DECam_DR11,configs/field_native_ra020_030.json
+4,native_north_final_ra130_140_dec_p025_p035,130,140,25,35,423308,423308,70002,DECam_DR11,configs/field_native_ra130_140.json
+5,cold_v4_final_ra150_160_dec_p020_p030,150,160,20,30,605103,605103,81105,DECam_DR11,configs/field_cold_v4_ra150_160.json
+6,cold_v4_final_ra220_230_dec_p020_p030,220,230,20,30,290836,290836,46833,DECam_DR11,configs/field_cold_v4_ra220_230.json
+7,targeted_ra180_190_dec_p000_p010,180,190,0,10,1037316,1037316,141803,DECam_DR11,configs/field_targeted_ra180_190_dec_p000_p010.json
+8,targeted_ra180_190_dec_m010_p000,180,190,-10,0,527873,527873,79647,DECam_DR11,configs/field_targeted_ra180_190_dec_m010_p000.json
+9,targeted_ra190_200_dec_p020_p030,190,200,20,30,676024,676024,86415,DECam_DR11,configs/field_targeted_ra190_200_dec_p020_p030.json
+10,targeted_ra020_030_dec_p000_p010,20,30,0,10,455715,455715,43690,DECam_DR11,configs/field_targeted_ra020_030_dec_p000_p010.json
+11,giant_ranked_ra200_210_dec_p000_p010,200,210,0,10,961065,961065,141934,DECam_DR11,configs/field_giant_ranked_ra200_210_dec_p000_p010.json
+12,giant_ranked_ra190_200_dec_p000_p010,190,200,0,10,717984,717984,100673,DECam_DR11,configs/field_giant_ranked_ra190_200_dec_p000_p010.json
+13,giant_ranked_ra210_220_dec_p040_p050,210,220,40,50,491184,491184,0,BASS_MzLS_unmodeled,configs/field_giant_ranked_ra210_220_dec_p040_p050.json

@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-11 — explicit candidate footprint and completed milestones
+-Derive14fieldbounds/parent/native/candidate counts fromcheckedregistry and
+ auditmanifests; sums9390518parent/1183990candidateverified. Existing-parent
+ fractions12.608%overall/13.304%DECam are notall-DR11 fractions/effectivearea.
+-PLANmarks actual A/B/Dcompletion; C/E/Fremain openpending numericalpipeline
+ andfullconditionalproducts. No scientificacceptance inferredfrommilestonechecks.
+
 ## 2026-11-11 — expose exact actual-fit provenance in candidate export
 -Export reference_role separately from actualSED/sourcecalibration/population
  fit flags; missingreference=-1 differsfromexcludedrole0. No prediction/cutchange.
