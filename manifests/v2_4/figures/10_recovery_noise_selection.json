@@ -1,0 +1,8 @@
+{
+  "name": "10_recovery_noise_selection",
+  "caption": "Same empirical templates and design weights across clean/noisy cases. Near selection changes true composition; comparisons retain injected truth after the identical observational and predicted selection.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "population_recovery": "d07d6a1bcbfb3e9502c100020c12227e0ef2141b3021547b4378922161d20e37"
+  }
+}

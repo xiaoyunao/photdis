@@ -1,0 +1,10 @@
+{
+  "name": "11_count_interval_stress",
+  "caption": "Conditional Bernoulli count intervals atN=1000, evaluated over500identity-cluster Bayesian-bootstrap pseudo-populations. Not a real-sky coverage claim. Unlabeled-reference contribution has no injected physical-class counterpart; coherent teacher\u00b11sigma sensitivity is retained.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "population_recovery": "d07d6a1bcbfb3e9502c100020c12227e0ef2141b3021547b4378922161d20e37",
+    "population_recovery_uncertainty": "8de8b2483c2777e9b30ef8d0858b2020df6e814167e3564d600748093bee6989",
+    "population_teacher_sensitivity": "0b836a21556ffdec6c9c2dd693797cff04c59d7b365b652fc63e9ef25af41232"
+  }
+}

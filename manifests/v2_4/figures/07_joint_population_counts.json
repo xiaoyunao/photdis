@@ -1,0 +1,8 @@
+{
+  "name": "07_joint_population_counts",
+  "caption": "Exact frozen QRF leaf-joint marginals, Sobol128 shared errors. Unlabeled denotes missing reference labels, not a physical class. Weighted13field diagnostic sample; conditional uncertainty is not population calibration.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "application_joint_counts": "7bedc2b4842aa19629fdf83bd06145436e5c3af3ac4fb057f2f72bf064b0ee98"
+  }
+}

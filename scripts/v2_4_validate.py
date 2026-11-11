@@ -13,6 +13,32 @@ def read(name):
     with open(TABLES/(name+'.csv')) as f:return list(csv.DictReader(f))
 
 
+def diagnostic_summaries():
+    a=read('anomaly_objects')
+    # Concrete diagnosis summaries preserve full711/147 and explicit missing references.
+    summary=[]
+    for group in ('all','low','remaining'):
+        q=[r for r in a if group=='all' or (r['low_pit']=='True')==(group=='low')]
+        matched=[r for r in q if r['SPDist_qualified']=='True']
+        for model in ('control','candidate'):
+            for category in ('main_near_reference','weak_reference_peak','no_reference_peak','broad_displaced','no_SPDist'):
+                n=0
+                for row in q:
+                    if row['SPDist_qualified']!='True':c='no_SPDist'
+                    else:
+                        delta=abs(float(row[model+'_mode_mu'])-float(row['SPDist_mu']));mass=float(row[model+'_mass_within1']);peak=float(row[model+'_peak_near_reference'])>0
+                        c='main_near_reference' if delta<=1 else ('weak_reference_peak' if peak and mass<.1 else ('no_reference_peak' if not peak and mass<.1 else 'broad_displaced'))
+                    n+=c==category
+                summary.append(dict(group=group,model=model,category=category,n=n,denominator=len(q),matched=len(matched)))
+    csv_rows(TABLES/'anomaly_diagnosis.csv',summary)
+    consistency=[]
+    for low in (False,True):
+        q=[r for r in a if (r['low_pit']=='True')==low and r['SPDist_qualified']=='True'];v=np.array([float(r['Gaia_minus_SPDist_sigma']) for r in q])
+        consistency.append(dict(low_pit=low,n=len(q),median_Gaia_SPDist_standardized=float(np.median(v)),below_minus3=int((v< -3).sum()),
+            median_RUWE=float(np.median([float(r['RUWE']) for r in q])),same_direction_XD=int(sum(float(r['candidate_conditional_pit'])<.05 for r in q))))
+    csv_rows(TABLES/'anomaly_reference_consistency.csv',consistency)
+
+
 def main():
     require_compute()
     from v2_4_information_followup import main as information_support
@@ -71,28 +97,7 @@ def main():
         cl=sum(float(r['expected_count']) for r in q if r['channel'].endswith('_reference'))
         src=sum(float(r['expected_count']) for r in q if r['channel'].endswith('_label'))
         check('joint_source_class_total:'+selection,np.isclose(cl,src,atol=.01))
-    # Concrete diagnosis summaries preserve full711/147 and explicit missing references.
-    summary=[]
-    for group in ('all','low','remaining'):
-        q=[r for r in a if group=='all' or (r['low_pit']=='True')==(group=='low')]
-        matched=[r for r in q if r['SPDist_qualified']=='True']
-        for model in ('control','candidate'):
-            for category in ('main_near_reference','weak_reference_peak','no_reference_peak','broad_displaced','no_SPDist'):
-                n=0
-                for row in q:
-                    if row['SPDist_qualified']!='True':c='no_SPDist'
-                    else:
-                        delta=abs(float(row[model+'_mode_mu'])-float(row['SPDist_mu']));mass=float(row[model+'_mass_within1']);peak=float(row[model+'_peak_near_reference'])>0
-                        c='main_near_reference' if delta<=1 else ('weak_reference_peak' if peak and mass<.1 else ('no_reference_peak' if not peak and mass<.1 else 'broad_displaced'))
-                    n+=c==category
-                summary.append(dict(group=group,model=model,category=category,n=n,denominator=len(q),matched=len(matched)))
-    csv_rows(TABLES/'anomaly_diagnosis.csv',summary)
-    consistency=[]
-    for low in (False,True):
-        q=[r for r in a if (r['low_pit']=='True')==low and r['SPDist_qualified']=='True'];v=np.array([float(r['Gaia_minus_SPDist_sigma']) for r in q])
-        consistency.append(dict(low_pit=low,n=len(q),median_Gaia_SPDist_standardized=float(np.median(v)),below_minus3=int((v< -3).sum()),
-            median_RUWE=float(np.median([float(r['RUWE']) for r in q])),same_direction_XD=int(sum(float(r['candidate_conditional_pit'])<.05 for r in q))))
-    csv_rows(TABLES/'anomaly_reference_consistency.csv',consistency)
+    diagnostic_summaries()
     # Verify all source-side pair counts never exceed original2055; source errors
     # and reusable ordinary controls remain separate axes of evidence.
     for i,row in enumerate(read('metal_source_pairs')):check('pair_unique_counts:'+str(i),0<=int(row['unique_controls'])<=int(row['n'])<=2055)
@@ -100,4 +105,12 @@ def main():
     save_json(DEST/'validation.json',result);print('V2.4 VALIDATION',len(checks),flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--diagnostics-only',action='store_true');args=parser.parse_args()
+    if args.diagnostics_only:
+        require_compute()
+        from v2_4_information_followup import main as information_support
+        information_support();diagnostic_summaries()
+        print('DIAGNOSTIC TABLES COMPLETE; full validation still pending',flush=True)
+    else:main()

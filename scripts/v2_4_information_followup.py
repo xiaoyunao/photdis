@@ -11,7 +11,13 @@ from photdis.science_v2_4 import conditional_prior,weighted_scores,cluster_mean_
 
 
 def main():
-    require_compute();t=load(ROOT/'data/v2_1/information_eval.npz');p=load(ROOT/'data/v2_1/information_probabilities.npz')
+    require_compute()
+    current=json.loads((DEST/'information_complete.json').read_text())
+    if current.get('source_sha256')==sha(ROOT/'scripts/v2_4_information_followup.py') and current.get('amendment_sha256')==sha(ROOT/'docs/v2_4_information_amendment.md') and current.get('table_sha256'):
+        for name,h in current['inputs'].items():assert sha(ROOT/name)==h
+        for name,h in current['table_sha256'].items():assert sha(TABLES/name)==h
+        print('INFORMATION SUPPORT VERIFIED FROM CHECKPOINT',flush=True);return
+    t=load(ROOT/'data/v2_1/information_eval.npz');p=load(ROOT/'data/v2_1/information_probabilities.npz')
     assert (t['TYPE']=='PSF').all() and np.array_equal(t['identity'],p['identity'])
     archive=DEST/'information_initial';archive.mkdir(exist_ok=True)
     for name in ('information_population','information_reliability','information_uncertainty'):
@@ -55,6 +61,7 @@ def main():
         sky='60degreeRA×north/southDec; empty cells fallback r-only; fixed30shrinkage',
         class_stress='All methods retargeted by uniform/global-cal class prior; label-shift assumption explicit; original raw macro scores archived',
         amendment_sha256=sha(ROOT/'docs/v2_4_information_amendment.md'),source_sha256=sha(ROOT/'scripts/v2_4_information_followup.py'),job=os.getenv('SLURM_JOB_ID'))
+    meta['table_sha256']={name+'.csv':sha(TABLES/(name+'.csv')) for name in ('information_population','information_reliability','information_uncertainty')}
     save_json(DEST/'information_complete.json',meta);print('INFORMATION SUPPORT CORRECTED',meta['coarse_unseen_fraction'],flush=True)
 
 

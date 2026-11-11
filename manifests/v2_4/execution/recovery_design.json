@@ -1,0 +1,18 @@
+{
+  "templates": 224,
+  "rows": 4480,
+  "groups": {
+    "0": 64,
+    "1": 64,
+    "2": 48,
+    "3": 48
+  },
+  "train_overlap": 0,
+  "source": "held-out empirical SED estimates, not model posterior draws",
+  "teacher_scale_limit": true,
+  "source_hashes": {
+    "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+    "data/v2_2/application_inputs.npz": "d6f4f44506111ba4d08c2234c663bb31af41551606001add2fc65cee77d0f8f7",
+    "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496"
+  }
+}

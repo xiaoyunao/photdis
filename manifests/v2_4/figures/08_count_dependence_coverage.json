@@ -1,0 +1,9 @@
+{
+  "name": "08_count_dependence_coverage",
+  "caption": "Direct reference flags and observed Gaia are distinct from observable-cell support. Cell counts are descriptive availability, not guarantees of reliability; cells omit sky. Marginal-product discrepancy demonstrates why joint contributions are required.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "application_joint_counts": "7bedc2b4842aa19629fdf83bd06145436e5c3af3ac4fb057f2f72bf064b0ee98",
+    "application_target_coverage": "d5c815f4d56fc098097da2ed0e916cb2f497e54bea0c32b02e90187bced12a71"
+  }
+}

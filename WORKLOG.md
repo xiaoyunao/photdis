@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — population recovery negative result and staged diagnostics
+-224held-out PSF templates,4480translated/noisy rows,4fixed population mixtures completed in61123779.2. No fitting-identity overlap. Target-noise PDF count L1 ordinary122.36 versuspoint89.74; metal-poor148.79versus126.73. Giant-rich424.17versus462.55still large.
+- Giant-rich near selection: injected near598.44/PDF608.25 hides injected giant243.91/reference giant contribution31.93. Conditional interval failure prevents a reliable general population-count claim.
+- Five population English plates generated/reviewed; shortened overlapping axis label, representative recoveryPDF rendered and inspected. Four focused tests pass.
+-61124175 unique native reservation resume is RUNNING debug; existing61123659dependency repointed. Added diagnostic-only table stage (no validation-success marker), information checkpoint verifies code/input/table hashes; full validation waits for all reservation fields.
+
 ## 2026-11-11 — isolate reservation I/O bottleneck, preserve completed recovery
 -61123779.2 completed independent-template recovery in1:28; original batch application and all joint checkpoints intact. Reservation still on first field after13min; process inspection shows native FITS column reads, while sequential128MiB benchmark takes0.477s.
 - Deliberately stop61123779 after recovery completion. Added separate native sequential reader with header/scaling checks, independent CFITSIO spot comparisons and atomic field checkpoints. Selection/ranking unchanged; original population/recovery sources and hashes preserved.

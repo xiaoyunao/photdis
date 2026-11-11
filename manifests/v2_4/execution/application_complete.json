@@ -1,0 +1,16 @@
+{
+  "sample": 26000,
+  "observable_n": 3545,
+  "observable_weight": 1168575.7325,
+  "near_n": 2589,
+  "no_reference_selection": true,
+  "model": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+  "joint_leaf_errors": [
+    5.960464477539063e-08,
+    1.1920928955078125e-07,
+    5.960464477539063e-08
+  ],
+  "max_pdf_error": 2.8265640139579773e-07,
+  "interpretation": "Weighted reference-contribution expectations, not verified physical population counts. Unlabeled is missing training evidence. Observable cells measure support, not representativeness.",
+  "job": "61123779"
+}

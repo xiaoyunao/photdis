@@ -1,0 +1,8 @@
+{
+  "name": "09_population_recovery",
+  "caption": "Held-out template identities, no samples from the tested model PDF. Same empirical SEDs shifted to five known distances; injected class/metal mixtures are stress designs, not Galaxy priors. Teacher-scale errors limit absolute interpretation.",
+  "selection": "Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim",
+  "sources": {
+    "population_recovery": "d07d6a1bcbfb3e9502c100020c12227e0ef2141b3021547b4378922161d20e37"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "templates": 224,
+  "rows": 4480,
+  "population_scenarios": {
+    "ordinary_dominated": [
+      0.8,
+      0.05,
+      0.15,
+      0.1
+    ],
+    "giant_rich": [
+      0.5,
+      0.35,
+      0.15,
+      0.1
+    ],
+    "metal_poor_rich": [
+      0.8,
+      0.05,
+      0.15,
+      0.6
+    ],
+    "balanced": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3
+    ]
+  },
+  "independent_model_fit_ids": true,
+  "intervals": "Conditional Bernoulli predictive variance atN=1000;500identity-cluster Bayesian-bootstrap pseudo-populations hold group composition fixed. Coverage is a conditional stress diagnostic, not certified real-population calibration.",
+  "limitations": "Empirical SEDs and chosen teacher distances share selection/scale errors; matched target noise does not supply new faint truth. +/-1sigma coherent teacher sensitivity retained.",
+  "job": "61123779"
+}

@@ -1,0 +1,7 @@
+{
+  "docs/v2_4_protocol.md": "039fbcb033276630a6df02f18343bfe2eee03514d0e8fefab67ffc6af873be89",
+  "scripts/v2_4_recovery.py": "233ced6ba8ef25fd2c4f8bdcc2c125ffab889486ef643b7e8f3d168689c3c5ae",
+  "scripts/v2_4_population.py": "1dc181320ebc90bf549f840616f59aa44b9fb7897034fa2ea00d36dece45bc44",
+  "src/photdis/science_v2_4.py": "47a276a33c1abc4bc6049e27a5714b8453d16278193d990475dc315414562ff0",
+  "data/v2_3/control.joblib": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057"
+}

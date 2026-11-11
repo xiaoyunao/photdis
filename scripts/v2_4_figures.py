@@ -123,7 +123,7 @@ def population():
         q=sel(r,population=pop,condition='target_noise',selection='all',channel='all');axes[0].plot(range(6),[100*val(a,'template_bootstrap_coverage') for a in q],'o-',color=color,label=pop.replace('_',' '))
         q=sel(r,population=pop,condition='target_noise',selection='near_scope');q=[a for a in q if a['channel']!='all' and val(a,'high_kpc')<=10]
         y=[sum(val(a,'pdf_count')-val(a,'expected_truth') for a in q if a['channel']==c) for c in channels];axes[1].plot(range(4),y,'o-',color=color)
-    axes[0].axhline(95,color='black',ls='--',lw=1);axes[0].set(xticks=range(6),xticklabels=['0–2','2–5','5–10','10–20','20–50','50+'],xlabel='Distance (kpc)',ylabel='Conditional interval coverage (%)',ylim=(-2,102));axes[1].set(xticks=range(4),xticklabels=['Dwarf','Evolved','Other','Unlabeled'],ylabel='Near joint-contribution minus injected count');axes[0].legend(fontsize=9)
+    axes[0].axhline(95,color='black',ls='--',lw=1);axes[0].set(xticks=range(6),xticklabels=['0–2','2–5','5–10','10–20','20–50','50+'],xlabel='Distance (kpc)',ylabel='Conditional interval coverage (%)',ylim=(-2,102));axes[1].set(xticks=range(4),xticklabels=['Dwarf','Evolved','Other','Unlabeled'],ylabel='Near class-count bias');axes[0].legend(fontsize=9)
     fig.suptitle('Conditional count intervals and missing-label contributions')
     save(fig,'11_count_interval_stress',['population_recovery','population_recovery_uncertainty','population_teacher_sensitivity'],'Conditional Bernoulli count intervals atN=1000, evaluated over500identity-cluster Bayesian-bootstrap pseudo-populations. Not a real-sky coverage claim. Unlabeled-reference contribution has no injected physical-class counterpart; coherent teacher±1sigma sensitivity is retained.')
 

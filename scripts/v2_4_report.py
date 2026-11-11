@@ -57,10 +57,12 @@ def main():
             summary.append(dict(population=pop,condition=condition,point_L1=sum(abs(float(r['point_count'])-float(r['expected_truth'])) for r in q),pdf_L1=sum(abs(float(r['bias'])) for r in q),
                 true_near=sum(float(r['expected_truth']) for r in near),pdf_near=sum(float(r['pdf_count']) for r in near),mean_conditional_coverage=sum(float(r['template_bootstrap_coverage']) for r in q)/len(q)))
     parts.append(table(summary,[('population','人口设计',1),('condition','观测',1),('point_L1','点值人数L1误差',1),('pdf_L1','PDF人数L1误差',1),('true_near','注入近端人数',1),('pdf_near','积分近端人数',1),('mean_conditional_coverage','跨距离格条件覆盖均值%',100)]))
-    parts+=['所有数字以1000个设计对象为单位；L1是各距离格绝对计数误差之和，不是单星距离误差。不能仅以总近端人数看似接近就忽略各距离格与星族的相互抵消。完整后验能够保留信息，但只有这些恢复结果支持的范围内才能声称其群体统计有效。',
+    parts+=['**在这组独立模板实验中，完整PDF并未使群体恢复普遍可靠。** 施加目标误差后，普通主导人口的距离格L1误差从点值89.74增至PDF122.36；贫金属富集人口从126.73增至148.79。巨星富集和均衡人口虽分别从462.55/470.86降至424.17/428.50，剩余误差仍大；两组各距离格的条件区间覆盖均为0。这里的0是固定模板压力实验的结果，不是对真实银河系覆盖率的测量。',
+        '近端总数还会掩盖类别之间的抵消：巨星富集人口通过near_scope后，实际注入近端总数598.44，模型积分608.25，看起来只差9.81；但近端巨星注入243.91，演化星参考联合贡献只有31.93，矮星参考贡献则为410.59而注入269.06，另有88.26缺标签贡献。不能以总人数接近宣布巨矮边缘化已经校准。普通主导人口同样需逐距离格验收。',
+        '所有数字以1000个设计对象为单位；L1是各距离格绝对计数误差之和，不是单星距离误差。表中覆盖均值包含六个距离格，其中50+kpc无注入对象；逐格值和500次模板bootstrap记录完整保留。不能仅以总近端人数看似接近就忽略各距离格与星族的相互抵消。完整后验能够保留信息，但当前恢复结果未通过普适人口统计的科学验收。',
         '[全部恢复与覆盖](../manifests/v2_4/population_recovery.csv) · [模板组不确定度](../manifests/v2_4/population_recovery_uncertainty.csv) · [教师尺度敏感性](../manifests/v2_4/population_teacher_sensitivity.csv)',
         '## 验证与当前决策',
-        f'本轮{check["actual_checks"]}项实际产物检查通过；三个独立数学测试通过。核对原模型与推断源码冻结哈希、每块PSF/联合概率守恒、旧预测边缘复现、新预留身份隔离及已知注入人数。英文图件、源表哈希、PDF渲染和交付检查另有记录。',
+        f'本轮{check["actual_checks"]}项实际产物检查通过；三个独立数学测试和一个原生FITS读取测试通过。核对原模型与推断源码冻结哈希、每块PSF/联合概率守恒、旧预测边缘复现、新预留身份隔离及已知注入人数。英文图件、源表哈希、PDF渲染和交付检查另有记录。',
         '没有新增模型候选。近端异常已收敛为具体观测/参考冲突，而非有证据证明统一放大远端权重即可解决；贫金属条件尺度在多个教师来源下持续，但独立Gaia配对稀少。现阶段的联合人数是模型参考贡献，经验后验不能除以一个巨矮比例就变成可自由换银河先验的似然。',
         '最终独立验证尚未完成：新身份结果保持未打开，缺独立新天空/系统成员核验；实际人口代表性、贫金属尺度和远端分支权重仍需要外部证据。本轮交付为诊断及科学恢复实验，不据此扩大应用目录或更换模型。',
         '[全部英文图件](v2_4_atlas.md) · [逐项要求及剩余限制](v2_4_requirements_result.md)']
