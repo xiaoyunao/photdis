@@ -21,7 +21,13 @@ def hmc(objective, initial, metric, *, draws=512, warmup=512, seed=302301,
         trial_value = np.inf
         for j in range(steps):
             trial += eps*p
-            trial_value, trial_grad = evaluate(trial)
+            try:
+                trial_value, trial_grad = evaluate(trial)
+            except (ValueError, FloatingPointError, OverflowError):
+                # Out-of-support proposals are rejected by Metropolis, not
+                # converted into finite density or an accepted stale gradient.
+                trial_value = np.inf
+                break
             if not np.isfinite(trial_value) or not np.isfinite(trial_grad).all(): break
             p -= eps*trial_grad*(.5 if j == steps-1 else 1.)
         energy_error = trial_value+.5*(p@p)-value-.5*(p0@p0)

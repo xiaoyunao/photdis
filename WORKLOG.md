@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — sampler support boundary safety
+-Before first real target sampling, make numerically unsupported HMC proposals
+Metropolis rejections instead of aborting the entire chain or accepting stale
+gradients. Initial invalid states still fail. Truncated-support oracle passes;
+three sampler/hierarchy tests pass. Production target submission follows sync.
+
 ## 2026-11-11 — development predictions and selection refinement completed
 -All five nominal prediction jobs COMPLETED0:0:grz61138101(9:26),griz61138107
 (9:05),multiband61138109(10:06),application61138112(4:29),hyper61138114(2:12).

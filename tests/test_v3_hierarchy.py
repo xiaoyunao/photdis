@@ -34,3 +34,12 @@ def test_hmc_recovers_correlated_gaussian_and_chain_diagnostics_detect_stuck():
     assert diagnostic['max_rhat'] < 1.03 and diagnostic['minimum_ess'] > 300
     samples[0, :, 0] += 4
     assert chain_diagnostics(samples)['max_rhat'] > 1.2
+
+
+def test_hmc_rejects_out_of_domain_proposals():
+    def objective(x):
+        if abs(x[0]) > 1: raise ValueError('Outside posterior support')
+        return .5*(x@x), x
+    result = hmc(objective, np.zeros(1), np.eye(1), warmup=200, draws=500, seed=83)
+    assert np.isfinite(result['samples']).all() and (abs(result['samples']) <= 1).all()
+    assert abs(result['samples'].mean()) < .15
