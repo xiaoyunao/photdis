@@ -38,7 +38,7 @@ def main():
         q=sel(r,design=d,bin=1);scales=sorted({int(t['scale']) for t in q});x=[int(sel(q,scale=s)[0]['sources']) for s in scales]
         ax[0].plot(x,[100*np.mean([val(t,'mean') for t in sel(q,scale=s)]) for s in scales],'o-',color=color,label=label)
         ax[1].plot(x,[100*max(abs(val(t,'mean')-val(t,'mc_half_mean')) for t in sel(q,scale=s)) for s in scales],'o-',color=color,label=label)
-    ax[0].set(xlabel='Independent calibration sources',ylabel='2-5 kpc population fraction (%)');ax[1].set(xlabel='Independent calibration sources',ylabel='Maximum 128 vs 256 noise-draw change (pp)')
+    ax[0].set(xlabel='Independent calibration sources',ylabel='2-5 kpc population fraction (%)');ax[1].set(xlabel='Independent calibration sources',ylabel='128 vs 256 noise-draw change (pp)')
     ax[0].legend(fontsize=10);fig.suptitle('Nested real-source support · separate from noise replication')
     save(fig,'03_template_convergence',['nested_response','uncertain_population'],'Identity-hash nested quotas fixed before results. Noise draws per source are not independent calibration stars. Lines average the same12existing catalogs; no template-scale tuning on test outcomes.')
 
@@ -62,8 +62,8 @@ def main():
     for d,label,color in zip(DESIGNS,LABELS,[BLUE,ORANGE,GREEN]):
         q=sel(u,design=d);ax[1].scatter([val(t,'response_ess') for t in q],[100*val(t,'response_half_max_delta') for t in q],label=label,color=color)
         ax[2].scatter([100*val(t,'theta_half_max_delta') for t in q],[100*val(t,'response_half_max_delta') for t in q],color=color)
-    ax[1].set(xlabel='Response-posterior ESS (maximum 16)',ylabel='8 vs 16 response-draw change (pp)');ax[1].legend(fontsize=9)
-    ax[2].set(xlabel='Theta half-grid mean change (pp)',ylabel='Response half-prior mean change (pp)');fig.suptitle('Integration diagnostics · finite response-prior approximation remains explicit')
+    ax[1].set(xlabel='Response-posterior ESS (maximum 16)',ylabel='Response-prior change (pp)');ax[1].legend(fontsize=9)
+    ax[2].set(xlabel='Theta half-grid mean change (pp)',ylabel='Response-prior change (pp)');fig.suptitle('Integration diagnostics · 8 versus 16 response draws')
     save(fig,'05_integration_limits',['interval_endpoints','response_integration'],'Original2^18versus2^17quantile endpoints. Response joint posterior2^16versus2^15theta mean and8versus16response priors. Evidence weights include target likelihood; low responseESS signals finite-prior sensitivity, not more independent data.')
 
     r=read('luminosity_parameters');q=read('luminosity_changes');fig,ax=plt.subplots(1,3,figsize=(17,5),constrained_layout=True)
@@ -86,6 +86,33 @@ def main():
         a.axhline(0,color='black',ls='--');a.set(xticks=range(4),xticklabels=['VAC poor','VAC ordinary','grz poor','grz ordinary'],ylabel='After minus before: '+metric.replace('_',' '));a.tick_params(axis='x',labelrotation=20,labelsize=10)
     ax[0].legend(fontsize=10);fig.suptitle('Same evaluation objects · reused-control cluster intervals')
     save(fig,'07_predictive_changes',['luminosity_changes'],'Intervals resample reused ordinary-control groups, not individual duplicated pair rows. Coverage is Gaia observation-predictive interval coverage, NOT true-distance coverage. Log-score units nats; coverage changes are fractions. Selection and shared-teacher dependence remain.')
+
+    from pathlib import Path
+    if not (prior.f.TABLES/'template_color_luminosity.csv').exists():return
+    r=read('template_color_luminosity');fig,ax=plt.subplots(2,3,figsize=(16,10),constrained_layout=True)
+    for row,g,name in zip(ax,[1,3],['Poor dwarf','Other reference']):
+        maps=[]
+        for library in ('cal','test'):
+            h=np.zeros((24,28))
+            for t in sel(r,library=library,group=g):h[int(t['gr_bin']),int(t['Mg_bin'])]=val(t,'fraction')
+            maps.append(h)
+        vmax=max(h.max() for h in maps)
+        for a,h,title in zip(row,[maps[0],maps[1],maps[0]-maps[1]],['Calibration','Independent test','Calibration minus test']):
+            diff='minus' in title;v=max(abs((maps[0]-maps[1]).ravel())) if diff else vmax
+            im=a.imshow(h.T,origin='lower',extent=[-.5,2.5,-6,16],aspect='auto',cmap='RdBu_r' if diff else 'viridis',vmin=-v if diff else 0,vmax=v);a.invert_yaxis();a.grid(False)
+            a.set(xlabel='Intrinsic g-r (mag)',ylabel='Teacher Mg (mag)',title=name+' / '+title);a.title.set_fontsize(13);fig.colorbar(im,ax=a,shrink=.75,label='Template mass / cell')
+    fig.suptitle('Finite-source color-luminosity support · source-normalized templates')
+    save(fig,'08_template_color_luminosity',['template_color_luminosity','template_shapes'],'Largest2048-source cal library versus224testSEDs, poor/other separately. Weights include fixed missing-class soft membership. Same bins and within-class normalization; out-of-display mass retained inCSV. Teachers have uncertainty; these are empirical supports, not true Galactic distributions.')
+
+    r=read('response_cell_residuals');fig,ax=plt.subplots(2,3,figsize=(15,9),constrained_layout=True)
+    for row,g,name in zip(ax,[1,3],['Poor dwarf','Other reference']):
+        for a,d,distance in zip(row,[1,2,3],[3.5,7.5,15]):
+            h=np.zeros(270)
+            for t in sel(r,scale=2,group=g,distance_bin=d):h[int(t['cell'])]=val(t,'difference')
+            h=h.reshape(6,5,9).sum(axis=2);v=max(abs(h.ravel()));im=a.imshow(h.T,origin='lower',aspect='auto',cmap='RdBu_r',vmin=-v,vmax=v);a.grid(False)
+            a.set(xlabel='g-r response cell',ylabel='r-z response cell',title=f'{name} / {distance:g} kpc');fig.colorbar(im,ax=a,shrink=.8,label='Cal minus test joint response')
+    fig.suptitle('Observed-cell response transfer · marginalizing selected magnitude cells')
+    save(fig,'09_response_cell_transfer',['response_cell_residuals'],'Difference of P(color cell AND selection|group,distance), summing r cells; not normalized conditional-color density. Colors include infinite end cells. Per-panel symmetric scales; no claim that finite-template Monte Carlo defines exact physical truth.')
 
 
 if __name__=='__main__':main()

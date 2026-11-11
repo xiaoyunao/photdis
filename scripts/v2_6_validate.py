@@ -52,10 +52,18 @@ def main():
     check('response_theta_weights',np.allclose(grid['theta_weight'].sum(axis=2),1))
     prior=load(ROOT/'data/v2_5/cal_templates.npz');last=prior['identity']
     test=load(ROOT/'data/v2_5/test_templates.npz')['identity'];fit=load(ROOT/'data/v2_3/training.npz')['identity']
+    morphology=[]
     for scale in range(3):
         c=load(D/f'templates_{scale}.npz');check(f'scale{scale}:nested',np.isin(last,c['identity']).all());last=c['identity']
         check(f'scale{scale}:PSF',np.all(c['TYPE']=='PSF'));check(f'scale{scale}:no_fit_test',not np.intersect1d(last,np.r_[test,fit]).size)
         check(f'scale{scale}:membership',np.allclose(c['member'].sum(axis=1),1) and np.all(c['member']>=0))
+        if scale==2:
+            for label,library in [('cal',c),('test',load(ROOT/'data/v2_5/test_templates.npz'))]:
+                member=library.get('member',np.eye(4)[library.get('group',np.zeros(len(library['identity']),int))]);gr=library['absolute'][:,0]-library['absolute'][:,1];mg=library['absolute'][:,0]
+                for g in (1,3):
+                    h,xe,ye=np.histogram2d(gr,mg,bins=[np.linspace(-.5,2.5,25),np.linspace(-6,16,29)],weights=member[:,g]);h/=member[:,g].sum()
+                    for i in range(len(xe)-1):
+                        for j in range(len(ye)-1):morphology.append(dict(library=label,group=g,gr_bin=i,Mg_bin=j,gr_low=xe[i],gr_high=xe[i+1],Mg_low=ye[j],Mg_high=ye[j+1],fraction=h[i,j],outside_fraction=float(1-h.sum())))
     for source in ('specdis','spdist'):
         p=load(LD/f'photometric_luminosity_{source}.npz');c=load(LD/f'luminosity_posterior_{source}.npz')
         check(source+':identity_isolation',not np.intersect1d(p['identity'],c['identity']).size);check(source+':PSF',np.all(p['TYPE']=='PSF') and np.all(c['TYPE']=='PSF'))
@@ -82,6 +90,7 @@ def main():
                 if values:summary.append(dict(design=design,regime=regime,method=method,catalogs=len(values),realized_L1=np.mean(values),sd_L1=np.std(values),coverage_2_5=np.mean(cov) if cov else None,width_2_5=np.mean(width) if width else None))
     csv_rows(T/'observed_summary.csv',summary)
     csv_rows(T/'latent_assignment.csv',assignment)
+    csv_rows(T/'template_color_luminosity.csv',morphology)
     bounds=read(T/'reachable_range.csv');reach=[]
     for design in np.unique(cat['design']):
         for regime in (0,1):
