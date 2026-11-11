@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — final-validation workflow prepared without opening outcomes
+-Full-bootstrapdraws0/16 converged at26iterations (2209/2175seconds). Submit
+ same128star refit predictions61139688/690 and coherent selection61139689/691.
+-Add complete224catalog recovery aggregation retaining numeric failures; add E/F
+ frozen-method drivers enforcing photometry before prediction before raw-source
+ and freshsignedGaia association. All no-reference rows and northern status retained.
+-These E/F drivers have only syntax/static validation; no method freeze or final
+3250/newsky/membership outcome opening has occurred. Actual E follows D findings.
+
 ## 2026-11-11 — production recovery and shared target evidence pipeline
 -Confirm61138714CANCELLED before unique cached target61139580 (4x2048draws).
  Arrays61139581multi/61139582grz each14batchesx8fixedcatalogs, four active nodes
