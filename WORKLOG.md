@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — maintenance constraint and numerical-only continuation
+-ExplicitSlurmmaintenance_20261111 reservation06:00Nov11–06:00Nov18NERSC
+ prevents2hstart; this is scheduleravailability, notauthentication/codefailure.
+-61146086new1024warmup/1024draw .99chain; evidence87/native88/products89
+ andensemble90 replacepending61145617. Plan61145619 dependencyupdated;
+ existingdownstreamjobs retained. Smalljoblimits shortenedusingactual18–30min
+ fit/8minproducts benchmarks; fullcatalog remainsproperlyallocated.
+-Report nowincludes explicit0–2/2–5/5–10/10–20/20–50/>50reference-stratified
+ statistics andscientificuseboundaries. Farfailure andlackofindependentfarproof retained.
+
 ## 2026-11-11 — evidence refinement fails frozen split tolerance
 -61145589 exact131072proposal bridge hasESS1089, convergedfixedpoint, but
  splitlogZ difference0.207814 exceeds0.2. Preservefailedresult; ensemble blocked.

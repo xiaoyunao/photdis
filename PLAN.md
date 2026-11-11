@@ -26,8 +26,11 @@ A/B: 612114 strict native-PSF reference identities; isolated roles and untruncat
  refits complete. Core likelihood/selection/compression/identity tests passed.
 C: original32 target posterior fits complete. Longer numerical-only chains for
  responses1/12/17 passsampler;26extendedchainrejectedfordivergence. Preserve
- originalverified26s512 andrefinebridgeexactlyinparallel61145589. Finalensemble
- pipelinewaitsforpassedsourceevidence/nativeproducts;physicalmodelunchanged.
+ originalverified26s512;131072proposal bridge61145589 stillfails0.2078>0.2.
+ Conservative same-model1024draw/1024warmup/.99acceptance61146086, then
+ evidence61146087/native61146088/products61146089/ensemble61146090. Existing
+ plan61145619 anddownstream jobs rebound, notduplicated. Maintenanceprevents
+2hallocations; pending smalljoblimits shortenedfromactualbenchmarks.
  Exact26000-object response ensemble, design summary and catalog transfer await
  final weighted marginal precision. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.
