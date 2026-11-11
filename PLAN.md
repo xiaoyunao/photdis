@@ -1,14 +1,22 @@
 # PLAN
 
-## Active v2.4 scientific-use audit
+## Completed v2.4 frozen-model scientific-use audit
 
-Full review docs/pro_review_0f9c412.md; protocol docs/v2_4_protocol.md.
-- [ ] Same711/147 anomaly audit,399SPDist exact joins, source-separated2055pairs with clustered uncertainty.
-- [ ] Observable photometric target, joint class-distance counts and evidence coverage; reserve new IDs without opening outcomes.
-- [ ] Matched frozen information audit with cal-only population baselines.
-- [ ] Independent-template population recovery under fixed composition shifts.
-- [ ] Allocated production, actual checks, English figures/report, safe three-endpoint sync.
-No new fitted model or deployment; old PDFs and fitting hashes preserved.
+Review: docs/pro_review_0f9c412.md. Results: docs/v2_4_result.md;
+English figures: docs/v2_4_atlas.md; requirement/limit ledger: docs/v2_4_requirements_result.md.
+- [x] Same711/147anomaly audit;196SPDist intersections including60lowPIT, source conflict retained; source-separated2055pairs and repeated-control/sky uncertainty.
+- [x]3545observable/2589near application objects, exact frozen joint counts and reference coverage; fitted identities separated in Gaia diagnostics.
+- [x] Same33251development IDs, cal-only global/r/coarse-sky priors, matched population stress, band gains, reliability and clustered uncertainty.
+- [x]224held-out empiricalSED templates/4480rows;4fixed populations, point/PDF/joint counts, teacher and noise-support limits. Population-count recovery remains unreliable under tested shifts.
+- [x]3250new identities across13existing fields reserved with nativePSF and no historical overlap; reference outcomes/predictions unopened.
+- [x]1898compute checks,4focused tests,167delivery checks;11English PNG300dpi/PDF/CSV/JSON figure sets visually reviewed.
+
+All task jobs ended. Final validation61125423 COMPLETED0:0; first full validation61123659 and reservation61124175 also completed. Earlier writer failure and deliberate I/O migration preserved in execution/jobs.json and WORKLOG.
+No new model, deployment, full-catalog prediction, automation or agents.
+Scientific limits remain: source disagreement, independent metal-poor scale,
+true application composition, bright-template noise/selection extrapolation,
+new-sky/system independence and faint-population evidence. Prospective IDs are
+NOT a completed final validation. Next scientific scope follows user/Pro review.
 
 ## v2.3.1 correction completed
 

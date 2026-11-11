@@ -9,6 +9,21 @@
   unverified TYPE fails admission. Log non-PSF and missing-TYPE exclusions.
   Frozen v2.0 historical exceptions remain available only for baseline audit.
 
+- Completed v2.4 scientific-use audit: docs/v2_4_result.md and v2_4_atlas.md;
+  full ledger docs/v2_4_requirements_result.md.1898compute+167delivery checks,
+  4focused tests,11English plates. Final61125423 COMPLETED0:0.
+  Same711/147Gaia audit:60lowPIT overlapSPDist, all60also low underXD;
+  SPDist stays near photometric distances while Gaia disagrees.2055original
+  metal pairs retained;10Gaia/2054SpecDis/1188SPDist source-qualified pairs.
+  3545observable/2589near targets; joint evolved-reference near contribution
+  263.27versus2340.75marginal product. These are not verified physical counts.
+  224held-outSEDs/4480rows and4population stress designs do not establish
+  reliable population recovery; bright-giant noise extrapolation is explicit.
+  3250nativePSF prospective IDs remain unopened, same existing footprints;
+  system/new-sky independence and real population calibration unresolved.
+  All original fitted models/outputs remain frozen. No active jobs, new model,
+  deployment, monitoring, full-catalog expansion or subagents without new scope.
+
 - Completed correctionv2.3.1: docs/v2_3_1_result.md and v2_3_1_atlas.md.
   Shared-g cross covariance corrected to PLUS; independent native-band tests.
   Same179EM/model/QRF bytes retained;1336old candidate/derived files archived.

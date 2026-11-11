@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — v2.4 completed: scientific-use results and full delivery
+- Final61125423 COMPLETED0:0(0:59),1898actual artifact checks; first61123659 passed1897before late training-overlap source arrived. First validation archived; final run adds exact-ID strata, reuses predictions and verified information checkpoint.
+- Native61124175 COMPLETED0:0(23:21):3250unopened PSF IDs,250each/13existing fields, zero known historical overlap. No missing/nonPSF among32500native candidates. Same-footprint reservation is not independent final validation.
+- Application3545observable/2589near;338near targets are fitting identities,2251are not. Nonfit near Gaia1984objects: weightedPIT low4.97%, high7.23%; still previously viewed/same-footprint, not a final blind score. Exact overlap denominators retained.
+- Full711/147anomaly tables, source-paired scales, actual joint counts, supported population baselines and224template/4480row recovery delivered. Negative population recovery and bright-giant noise/selection extrapolation explicitly reported; no unique physical cause or real-sky population calibration claim.
+-11English PNG300dpi/PDF/CSV/JSON plates inspected; representativePDF rendered.4focused tests,167delivery format/provenance/link/visual-version checks pass. Results/embedded atlas/requirements ledger, README/AGENTS/PLAN updated.
+- Commands: bounded SSH+sacct/logs; rsync compact tables/manifests; v2_4_report.py; v2_4_delivery.py; py_compile; focused pytest; git diff/check and milestone sync. All large products remain NERSC; jobs and I/O/writer migrations retained in execution/jobs.json.
+- Original QRF/XD/model inputs unchanged; existing deployment preserved. No active task jobs, timers or subagents. Further scientific work requires user/Pro scope; pending independent scale/population/system/new-sky validation is not disguised as completed.
+
+
 ## 2026-11-11 — complete diagnostic tables and11English figures
 -61124175 diagnostic step completed cal-only supported priors and fixed711identity summaries. Fine-cell100%unseen; coarse4.21%fallback. grz color probe gain versus global0.134081nats; r/sky prior itself is slightly worse, not a positive location-information claim.
 - All60low-PIT/SPDist intersections also low under same-ID XD. Missing RUWE values now have explicit available denominators instead of making an otherwise defined median NaN.

@@ -1,0 +1,272 @@
+{
+  "n": 3250,
+  "sha256": "122331fa090ce380d10a468af8dd35b0b6db44b893172597a791d6bfe571e498",
+  "native_sources": {
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205m010-210m005.fits": {
+      "size": 1370234880,
+      "mtime_ns": 1780604315000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205m005-210p000.fits": {
+      "size": 1307756160,
+      "mtime_ns": 1780604308000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-210m010-215m005.fits": {
+      "size": 1283909760,
+      "mtime_ns": 1780604468000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-210m005-215p000.fits": {
+      "size": 1194387840,
+      "mtime_ns": 1780604453000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-060m035-065m030.fits": {
+      "size": 1746970560,
+      "mtime_ns": 1780601519000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-060m030-065m025.fits": {
+      "size": 1809907200,
+      "mtime_ns": 1780601537000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-065m035-070m030.fits": {
+      "size": 1712940480,
+      "mtime_ns": 1780601681000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-065m030-070m025.fits": {
+      "size": 1756690560,
+      "mtime_ns": 1780601677000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-330m035-335m030.fits": {
+      "size": 969177600,
+      "mtime_ns": 1780615148000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-330m030-335m025.fits": {
+      "size": 1067636160,
+      "mtime_ns": 1780615181000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-335m035-340m030.fits": {
+      "size": 1041837120,
+      "mtime_ns": 1780615657000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-335m030-340m025.fits": {
+      "size": 1065384000,
+      "mtime_ns": 1780615665000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-020m025-025m020.fits": {
+      "size": 1931051520,
+      "mtime_ns": 1780600501000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-020m020-025m015.fits": {
+      "size": 1923995520,
+      "mtime_ns": 1780600499000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-025m025-030m020.fits": {
+      "size": 2012463360,
+      "mtime_ns": 1780600586000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-025m020-030m015.fits": {
+      "size": 2065115520,
+      "mtime_ns": 1780600666000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-130p025-135p030.fits": {
+      "size": 978799680,
+      "mtime_ns": 1780602856000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-130p030-135p035.fits": {
+      "size": 778835520,
+      "mtime_ns": 1780602844000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-135p025-140p030.fits": {
+      "size": 968212800,
+      "mtime_ns": 1780602926000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-135p030-140p035.fits": {
+      "size": 832438080,
+      "mtime_ns": 1780602911000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-150p020-155p025.fits": {
+      "size": 987612480,
+      "mtime_ns": 1780603179000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-150p025-155p030.fits": {
+      "size": 953429760,
+      "mtime_ns": 1780603164000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-155p020-160p025.fits": {
+      "size": 1008673920,
+      "mtime_ns": 1780603258000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-155p025-160p030.fits": {
+      "size": 920390400,
+      "mtime_ns": 1780603249000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220p020-225p025.fits": {
+      "size": 1039360320,
+      "mtime_ns": 1780604727000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220p025-225p030.fits": {
+      "size": 948922560,
+      "mtime_ns": 1780604721000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225p020-230p025.fits": {
+      "size": 996336000,
+      "mtime_ns": 1780604903000000000,
+      "independent_checked_rows": 16
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225p025-230p030.fits": {
+      "size": 941472000,
+      "mtime_ns": 1780605009000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-180p000-185p005.fits": {
+      "size": 1171569600,
+      "mtime_ns": 1780603724000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-180p005-185p010.fits": {
+      "size": 1114718400,
+      "mtime_ns": 1780603722000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185p000-190p005.fits": {
+      "size": 1126411200,
+      "mtime_ns": 1780603813000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185p005-190p010.fits": {
+      "size": 1139472000,
+      "mtime_ns": 1780603824000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-180m010-185m005.fits": {
+      "size": 1228881600,
+      "mtime_ns": 1780603725000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-180m005-185p000.fits": {
+      "size": 1243088640,
+      "mtime_ns": 1780603723000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185m010-190m005.fits": {
+      "size": 1223046720,
+      "mtime_ns": 1780603819000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185m005-190p000.fits": {
+      "size": 1198419840,
+      "mtime_ns": 1780603819000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190p020-195p025.fits": {
+      "size": 962870400,
+      "mtime_ns": 1780603913000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190p025-195p030.fits": {
+      "size": 976541760,
+      "mtime_ns": 1780603913000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-195p020-200p025.fits": {
+      "size": 979620480,
+      "mtime_ns": 1780604050000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-195p025-200p030.fits": {
+      "size": 961139520,
+      "mtime_ns": 1780604045000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-020p000-025p005.fits": {
+      "size": 1871853120,
+      "mtime_ns": 1780600562000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-020p005-025p010.fits": {
+      "size": 1066288320,
+      "mtime_ns": 1780600436000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-025p000-030p005.fits": {
+      "size": 1846569600,
+      "mtime_ns": 1780600656000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-025p005-030p010.fits": {
+      "size": 1011280320,
+      "mtime_ns": 1780600583000000000,
+      "independent_checked_rows": 21
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-200p000-205p005.fits": {
+      "size": 1189319040,
+      "mtime_ns": 1780604167000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-200p005-205p010.fits": {
+      "size": 1156625280,
+      "mtime_ns": 1780604165000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p000-210p005.fits": {
+      "size": 1220794560,
+      "mtime_ns": 1780604304000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p005-210p010.fits": {
+      "size": 1143374400,
+      "mtime_ns": 1780604301000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190p000-195p005.fits": {
+      "size": 1182545280,
+      "mtime_ns": 1780603908000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190p005-195p010.fits": {
+      "size": 1195099200,
+      "mtime_ns": 1780603934000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-195p000-200p005.fits": {
+      "size": 1186977600,
+      "mtime_ns": 1780604051000000000,
+      "independent_checked_rows": 32
+    },
+    "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-195p005-200p010.fits": {
+      "size": 1160464320,
+      "mtime_ns": 1780604048000000000,
+      "independent_checked_rows": 32
+    }
+  },
+  "reference_outcomes_opened": false,
+  "predictions_generated": false,
+  "known_historical_overlap": 0,
+  "limitations": "Same existing application footprints; not new sky. System membership and independent references still required.",
+  "io_amendment": "Sequential fixed-width native rows; exact original admission/ranking; independent CFITSIO spot checks and field checkpoints.",
+  "job": "61124175"
+}

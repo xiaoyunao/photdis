@@ -1,0 +1,71 @@
+{
+  "jobs": [
+    {
+      "job": "61123419",
+      "stage": "fixed-identity/source/information audit",
+      "state": "COMPLETED",
+      "elapsed": "00:01:13",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61123523",
+      "stage": "initial application joint production",
+      "state": "FAILED",
+      "elapsed": "00:01:01",
+      "exit_code": "1:0",
+      "note": "56joint chunks finished; completion writer treated a string as Path. Explicit migration preserved chunks."
+    },
+    {
+      "job": "61123779",
+      "stage": "application resume and native reservation",
+      "state": "CANCELLED",
+      "elapsed": "00:14:26",
+      "exit_code": "0:0",
+      "note": "Application completed; recovery step also completed. Deliberately stopped remaining slow native column reads; no prediction deletion."
+    },
+    {
+      "job": "61123779.2",
+      "stage": "independent empirical-SED recovery",
+      "state": "COMPLETED",
+      "elapsed": "00:01:28",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61124175",
+      "stage": "checkpointed sequential native reservation",
+      "state": "COMPLETED",
+      "elapsed": "00:23:21",
+      "exit_code": "0:0",
+      "qos": "debug",
+      "note": "Same pending job changed from regular1h to debug30min before running; original selection unchanged."
+    },
+    {
+      "job": "61124175.2",
+      "stage": "supported-prior and compact diagnostic tables",
+      "state": "COMPLETED",
+      "elapsed": "00:00:38",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61123659",
+      "stage": "first complete artifact validation",
+      "state": "COMPLETED",
+      "elapsed": "00:01:12",
+      "exit_code": "0:0",
+      "actual_checks": 1897,
+      "note": "Existing dependency repointed across explicitly diagnosed resumes; no duplicate submission."
+    },
+    {
+      "job": "61125423",
+      "stage": "final validation with exact application fit-overlap strata",
+      "state": "COMPLETED",
+      "elapsed": "00:00:59",
+      "exit_code": "0:0",
+      "actual_checks": 1898,
+      "note": "Previous validation started before latest overlap code synchronization; first result archived. No model/inference rerun."
+    }
+  ],
+  "active_task_jobs": [],
+  "frozen_models_preserved": true,
+  "no_automation": true
+}

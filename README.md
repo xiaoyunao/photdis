@@ -1,6 +1,17 @@
 # photdis
 
-Latest completed correction: **Photdis v2.3.1 frozen-model inference and selection audit**.
+Latest completed audit: **Photdis v2.4 frozen-posterior scientific use**.
+[Results](docs/v2_4_result.md) · [11 English figure sets](docs/v2_4_atlas.md) ·
+[Requirements and scientific limits](docs/v2_4_requirements_result.md).
+Fixed-identity Gaia/SPDist anomalies, source-separated metal-poor scales, joint
+application counts, matched-band information and independent-template population
+recovery are complete. New3250PSF identities remain reserved without opening
+reference outcomes; final independent validation is not yet achieved.
+Frozen models and deployment remain unchanged.1898compute checks,4focused tests
+and167compact delivery checks pass. Local verification:
+`python3 scripts/v2_4_delivery.py`. Large products stay on NERSC; production programs require Slurm allocations.
+
+Previous completed correction: **Photdis v2.3.1 frozen-model inference and selection audit**.
 [Results](docs/v2_3_1_result.md) · [16 English plates](docs/v2_3_1_atlas.md) ·
 [Requirements and limits](docs/v2_3_1_requirements_result.md).
 Corrected the shared-g prediction covariance without refitting models; exact
