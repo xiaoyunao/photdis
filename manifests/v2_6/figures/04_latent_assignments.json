@@ -1,0 +1,9 @@
+{
+  "name": "04_latent_assignments",
+  "caption": "True labels used ONLY after inference. Group matrix averages per-object joint marginals across same12reference-like catalogs; repeated template identities do not add independent real-source evidence.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "latent_assignment": "05552827edfb1a8282c0bb7b0f82b1ec4fda17582b2e49fa68b929d7f9748656",
+    "template_shapes": "326bd2dd46c53edefe780202811f3b5269366d7490028220cd077cf0289a97d5"
+  }
+}

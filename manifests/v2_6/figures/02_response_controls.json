@@ -1,0 +1,9 @@
+{
+  "name": "02_response_controls",
+  "caption": "Fixed-parameter Bayesian interval coverage across12catalogs is a diagnostic, not an exact95%requirement at every true parameter. Same-template truth uses independent response Monte Carlo. Reachability is numerical corner reduction, not an interval-arithmetic proof.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "response_controls": "fe0b8672998c4273fc1819d666a79ae4d1f5cdf95146ac0f9a576735631f8a48",
+    "reachable_truth": "7eb038a10b1792105c6b65105e21d41303e76662f71ac5a2b56f19d89a9041ae"
+  }
+}

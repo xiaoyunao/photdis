@@ -1,0 +1,9 @@
+{
+  "name": "06_luminosity_trial",
+  "caption": "Cal identities disjoint from complete reused-control evaluation groups. Full signed Gaia likelihood; no SNR cut. Positive Mg offset means shorter distance. VAC-dependent scale checks and pure-photometric kernel transfer differ; no QRF retraining or deployment.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "luminosity_parameters": "80283915d9ed8c5f5a7d15ae98ba8ca2d6000f7d98c373638062b170d5b496cd",
+    "luminosity_changes": "a3edfc582745cdbc9bb0889f89d149028995e1a1f654b90aea51858bef616b11"
+  }
+}

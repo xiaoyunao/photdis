@@ -1,0 +1,8 @@
+{
+  "name": "07_predictive_changes",
+  "caption": "Intervals resample reused ordinary-control groups, not individual duplicated pair rows. Coverage is Gaia observation-predictive interval coverage, NOT true-distance coverage. Log-score units nats; coverage changes are fractions. Selection and shared-teacher dependence remain.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "luminosity_changes": "a3edfc582745cdbc9bb0889f89d149028995e1a1f654b90aea51858bef616b11"
+  }
+}

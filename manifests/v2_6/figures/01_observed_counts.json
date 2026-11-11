@@ -1,0 +1,8 @@
+{
+  "name": "01_observed_counts",
+  "caption": "All methods compared with the SAME realized128latent objects/catalog, including QRF beyond50kpc mass.12catalogs/design, entrance only; libraries shared across realizations. Count intervals draw a common population parameter and conditional latent labels, not new catalogs.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "observed_summary": "11f2d9d07fbca33eee4de11c1068248f764e6a824964dc2cbb7d9b9eeb371461"
+  }
+}

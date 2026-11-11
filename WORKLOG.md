@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — actual-count recovery and initial plot review
+- Same-realizedcatalog L1: ordinary population×N16.51%, fixedjoint10.13%, response-marginal8.996%;reference-like13.06%,10.22%,8.51%. Improvement does not prove calibrated intervals.
+- Response-marginal population2–5coverage8/12reference,10/12ordinary,11/12giant; actual-count coverage11/12,10/12,12/12. Distinct targets retained.
+- All80single-bin truth values numerically reachable. ResponseESS2.76–12.14/16;8/16prior change up to1.24pp.
+- Initial firstfive figures visually inspected; shorten long axis labels. Initial luminosity plots retained until61129820numerical refinement finishes.7MB per-objectCSV stays outsideGit; compact tables retained.
+
 ## 2026-11-11 — v2.6 initial results and numeric-only luminosity refinement
 -61129359COMPLETED0:0(2:28),61129363COMPLETED0:0(1:25);61129443validated1639checks.192samecatalogs have full joint outputs; nested256/768/2048source responses completed.
 - Known/same-template2–5coverage12/12forreference/ordinary versus independenttransfer1/12,0/12: response migration drives the observed failure.

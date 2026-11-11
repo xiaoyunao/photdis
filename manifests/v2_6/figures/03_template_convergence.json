@@ -1,0 +1,9 @@
+{
+  "name": "03_template_convergence",
+  "caption": "Identity-hash nested quotas fixed before results. Noise draws per source are not independent calibration stars. Lines average the same12existing catalogs; no template-scale tuning on test outcomes.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "nested_response": "bf87314461a6f25ad8a8162a4156f89fe2841cc0eeb45b777d2eac862827c50d",
+    "uncertain_population": "0abd3016b8ada3393cd10e839419c0966f43b89409dcca60613fe89280d98ea3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "05_integration_limits",
+  "caption": "Original2^18versus2^17quantile endpoints. Response joint posterior2^16versus2^15theta mean and8versus16response priors. Evidence weights include target likelihood; low responseESS signals finite-prior sensitivity, not more independent data.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "interval_endpoints": "b3aeed6a5bfda93bda19cedd37fbe69d784530ff13544a37fa5645ec31155f0b",
+    "response_integration": "89c35d0c372df08365843e41465480a8480e2e086c1486811f2a53a60ba473b4"
+  }
+}
