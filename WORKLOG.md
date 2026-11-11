@@ -9,8 +9,9 @@
  is not sufficient evidence of final per-star precision. Do not promote it.
 -Native production shared recovery and refined-evidence ensemble routing added;
  same physical models and proper prior. Full focused tests run before sync.
--61142217/218 cancelled while PENDING because stage CLI used underscore;
- replacement uses registered shared-products command, no calculation overwritten.
+-61142217/218 failed CLI parsing before calculation because stage used underscore;
+ attempted pending-only cancellation correctly refused after state changed.
+ Replacement uses registered shared-products command; no calculation overwritten.
 
 ## 2026-11-11 — unpruned joint posterior export implemented
 -Add directnativeclassPDF/CDF/modes andweightedsharedcountsusingexactnative

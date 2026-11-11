@@ -34,6 +34,7 @@ STAGES = {
     'native-response': 'v3_0_native_response.py',
     'evidence-refine': 'v3_0_evidence_refine.py',
     'shared-recovery': 'v3_0_shared_recovery.py',
+    'shared-recovery-report': 'v3_0_shared_recovery_report.py',
     'shared-recovery-batch': 'v3_0_shared_recovery_batch.py',
     'dust-selection-audit': 'v3_0_dust_selection_audit.py',
     'diagnostics': 'v3_0_diagnostics.py',

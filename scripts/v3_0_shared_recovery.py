@@ -6,6 +6,7 @@ import os
 import time
 import joblib
 import numpy as np
+from scipy.special import logsumexp
 from v2_1_near import ROOT,load,sha,save_json,atomic_npz
 from photdis.stage1 import require_compute
 from photdis.v3.model import inference_model
@@ -94,13 +95,14 @@ def main():
             lp,meta=native_joint_marginal(model,observation(phot,i),grids[i],c,r['source_log_evidence'],calibration_mag=calibration[i])
             density=np.exp(lp);posterior=ContinuousPosterior(grids[i],density,0.,{})
             cumulative=np.c_[np.zeros(3),np.cumsum((density[:,1:]+density[:,:-1])*np.diff(grids[i])[None]/2,axis=1)]
-            curves.append(dict(grid=grids[i],class_cdf=cumulative,mu=posterior.quantiles(),omitted_posterior_bound=0.,native_normalization_error=abs(np.expm1(meta['log_normalization']))))
+            curves.append(dict(grid=grids[i],class_cdf=cumulative,logpdf=logsumexp(lp,axis=0),mu=posterior.quantiles(),omitted_posterior_bound=0.,native_normalization_error=abs(np.expm1(meta['log_normalization']))))
     else:curves=[cdf_product(r,model,c) for r,c in zip(compact,avg)]
     offset=np.r_[0,np.cumsum([len(r['grid']) for r in curves])]
     atomic_npz(out/'per_star.npz',identity=phot['identity'],TYPE=phot['TYPE'],probability=mean.reshape(128,3,6),
         half_a=prob[::2].mean(axis=0),half_b=prob[1::2].mean(axis=0),truth_mu=truth['mu'],truth_class=truth['class_label'],
         mu=np.array([r['mu'] for r in curves]),cdf_grid=np.concatenate([r['grid'] for r in curves]),
         class_cdf=np.concatenate([r['class_cdf'] for r in curves],axis=1),cdf_offset=offset,
+        full_logpdf=np.concatenate([r.get('logpdf',np.full(len(r['grid']),np.nan)) for r in curves]),
         omitted_bound=np.array([r['omitted_posterior_bound'] for r in curves]))
     def logdensity(x):return -hierarchy.objective(x)[0]-.5*hierarchy.dimension*np.log(2*np.pi)
     bridge=bridge_integral(logdensity,z,proposal_draws=2048,seed=312000+a.draw*1000+a.catalog)
