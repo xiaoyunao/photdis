@@ -1,5 +1,15 @@
 # PLAN
 
+## Active v2.4 scientific-use audit
+
+Full review docs/pro_review_0f9c412.md; protocol docs/v2_4_protocol.md.
+- [ ] Same711/147 anomaly audit,399SPDist exact joins, source-separated2055pairs with clustered uncertainty.
+- [ ] Observable photometric target, joint class-distance counts and evidence coverage; reserve new IDs without opening outcomes.
+- [ ] Matched frozen information audit with cal-only population baselines.
+- [ ] Independent-template population recovery under fixed composition shifts.
+- [ ] Allocated production, actual checks, English figures/report, safe three-endpoint sync.
+No new fitted model or deployment; old PDFs and fitting hashes preserved.
+
 ## v2.3.1 correction completed
 
 Review docs/pro_review_569d6ff.md; frozen amendment docs/v2_3_1_protocol.md.

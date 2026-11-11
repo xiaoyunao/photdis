@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — fixed-identity audit implementation validated
+- Added science_v2_4 math helpers and3independent focused tests (joint vs marginal products, clustered repeats/cal-only priors, PDF peak/reference diagnostics); all pass, Python parse passes.
+- Added v2_4_audit.py: preserve711/147denominator,399SPDist exact intersections, Gaia original-row quality, source-specific2055pairs and repeated-control/sky-pair bootstrap, same-ID information scores against cal-only global/r-sky priors. No refit or old prediction writes.
+- Production audit pending allocated run; additional target/count and independent-template work continues within frozen protocol.
+
+## 2026-11-11 — recover latest Pro review and freeze scientific-use scope
+- Read full latest review of0f9c412 via read_thread, preserved docs/pro_review_0f9c412.md; all three Git endpoints at0f9c412, clean starting tree. Previous shared-g correction accepted; do not repeat fitting.
+- Freeze v2.4 four workstreams:711/147Gaia anomalies joined to399SPDist, source-split poor-metal pairs; photometric target/joint counts and unopened prospective IDs; controlled population information scores; independent-template count recovery.
+- Preserve corrected models and output bytes, require nativePSF, English figures, allocated NERSC compute. No additional model search, deployment, monitoring or agents.
+
 ## 2026-11-10 — v2.3.1 correction and scientific re-evaluation completed
 - Final supplemental61081737 COMPLETED0:0(1:05),3316checks; correction61081256 COMPLETED0:0(9:32),8124checks. Bounded final SSH confirms empty user queue, remote tracked tree clean at4750216 before delivery.
 - Same fitted179EM/QRF bytes and original training identities retained; all candidate-dependent products corrected. Original cal still rejects on full-Gaia and near contamination; no adoption. Development near far-contamination0.839%control vs1.828%candidate; median high-error application |delta mu|0.0928mag, no application near-selection changes.
