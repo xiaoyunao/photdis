@@ -1,5 +1,13 @@
 # PLAN
 
+## Active v2.5 target-population inference
+Review docs/pro_review_de4904b.md; frozen scope docs/v2_5_protocol.md.
+- [ ] Outcome-blind red controls, signed-Gaia original metal pairs, class band gains.
+- [ ] Independent-template selection-normalized four-parameter response prototype.
+- [ ] Same-catalog point/PDF/population recovery and uncertainty/support audits.
+- [ ] Keep3250prospective outcomes closed pending model/selection acceptance.
+- [ ] Tests, allocated production, English figures, report and safe sync.
+
 ## Completed v2.4 frozen-model scientific-use audit
 
 Review: docs/pro_review_0f9c412.md. Results: docs/v2_4_result.md;

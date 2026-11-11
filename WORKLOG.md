@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — implement v2.5 response and empirical diagnostics
+- Four-parameter conditional response, fresh192catalogs/24576objects, separate cal/test templates and missing-label marginalization implemented;3independent math tests pass.
+- Outcome-blind711control matching, signed-Gaia original2055pairs and class-specific band gain programs parse. NERSC auth valid, queue empty; historical untracked artifacts left intact.
+- Freeze protocol/grid/noise/support limits before production. Next: single allocateddebug run, inspect actual results and validation.
+
+## 2026-11-11 — recover de4904b review and begin v2.5
+- Full latest Pro review retrieved via read_thread; three endpoints clean atde4904b. New scope authorizes explicit population inference, not repeatv2.4.
+- Freeze limited4parameter empirical response with selection normalization, independent cal/test template identities, fresh-noise recovery; red/metal Gaia diagnostics and class-specific information gains.
+- Preserve fittedQRF/XD, strictPSF, Englishplots and3250unopened prospective IDs. No agents/timers/deployment.
+- Next: independent math tests, allocated production and inspected result delivery.
+
 ## 2026-11-11 — v2.4 completed: scientific-use results and full delivery
 - Final61125423 COMPLETED0:0(0:59),1898actual artifact checks; first61123659 passed1897before late training-overlap source arrived. First validation archived; final run adds exact-ID strata, reuses predictions and verified information checkpoint.
 - Native61124175 COMPLETED0:0(23:21):3250unopened PSF IDs,250each/13existing fields, zero known historical overlap. No missing/nonPSF among32500native candidates. Same-footprint reservation is not independent final validation.
