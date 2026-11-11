@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — common chunked inference and workflow entry
+-Add v3_0.py shared stage entry and Slurm runner; no duplicated distance/class
+ mathematics. Prediction chunks export exact PSF IDs, joint class/distance mass,
+ modes, discrepancy/binary/support flags and numeric ragged jointCDF products.
+ Every chunk verifies provenance/identities/hashes and actual compression error.
+-Scientific acceptance remains false until D/E/F validation. Original model and
+ native artifacts unchanged; all prospective outcomes remain closed.
+-Independent-scale literature candidate: NGC288 HSTPROMO dynamical distance
+9.03(-0.56,+0.48)kpc, Watkins et al.2015 ApJ812149, arXiv1509.00513; this uses
+ HST proper motions/line-of-sight dynamics, not Gaia parallax/VAC distance scale.
+ Membership and full historical identity audit pending; not yet a validation claim.
+
 ## 2026-11-11 — fixed controls completed; development inputs and larger transfer bank
 -61135917COMPLETED0:0(24s): matchedQRF32768IDs,27115known-class probe train,
  7537hyper-temperature and42950development labels. Calibrated class log scores:

@@ -133,3 +133,31 @@ def reweight(compressed, model, *, theta=None, component_weights=None, classes=N
     return dict(class_distance=joint, mu_quantiles=quantiles,
         qnear=float(joint[:, :3].sum()), binary_probability=float(p[b == 1].sum()),
         log_evidence_ratio=float(logevidence_ratio), maximum_prior_ratio=maximum_ratio)
+
+
+def pack(records):
+    """Ragged numeric arrays; no pickle/object arrays in per-star products."""
+    branches = [0]; knots = [0]
+    result = {key: [] for key in ('component', 'binary', 'mass', 'mu', 'cdf')}
+    for record in records:
+        branches.append(branches[-1]+len(record['component']))
+        knots.extend(record['offsets'][1:]+knots[-1])
+        for key in result: result[key].append(record[key])
+    result = {key: np.concatenate(value) for key, value in result.items()}
+    result['star_branch_offset'] = np.asarray(branches, 'i8')
+    result['branch_knot_offset'] = np.asarray(knots, 'i8')
+    for key in ('omitted_mass', 'weighted_cdf_bound', 'source_log_evidence'):
+        result[key] = np.array([r[key] for r in records])
+    return result
+
+
+def unpack(payload, star):
+    lo, hi = payload['star_branch_offset'][star:star+2]
+    start, stop = payload['branch_knot_offset'][[lo, hi]]
+    result = {key: payload[key][lo:hi] for key in ('component', 'binary', 'mass')}
+    result.update(mu=payload['mu'][start:stop], cdf=payload['cdf'][start:stop],
+        offsets=payload['branch_knot_offset'][lo:hi+1]-start,
+        reference_mu_mean=15., reference_mu_sigma=5.)
+    for key in ('omitted_mass', 'weighted_cdf_bound', 'source_log_evidence'):
+        result[key] = payload[key][star]
+    return result

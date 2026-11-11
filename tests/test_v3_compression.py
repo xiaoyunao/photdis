@@ -2,12 +2,15 @@ import numpy as np
 import pytest
 from test_v3_inference import model, observation
 from photdis.v3.inference import infer_reference, target_posterior
-from photdis.v3.compression import compress, reweight
+from photdis.v3.compression import compress, reweight, pack, unpack
 
 
 def test_joint_compression_retains_far_branch_and_population_reweighting():
     m = model(); o = observation(); result = infer_reference(m, o)
     p = result['posterior']; compact = compress(p, 2)
+    recovered = unpack(pack([compact, compact]), 1)
+    np.testing.assert_array_equal(recovered['mu'], compact['mu'])
+    np.testing.assert_array_equal(recovered['offsets'], compact['offsets'])
     assert compact['weighted_cdf_bound'] < .00021
     assert compact['omitted_mass'] < 1.01e-7
     baseline = reweight(compact, m, reference_prior=True)

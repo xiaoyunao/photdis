@@ -23,10 +23,17 @@ Historical outputs and actual deployment remain immutable. No timers or agents.
 Current execution:612114-reference preparation and shared-source calibration are
 complete; two photometric-first new sky blocks (2048objects) are frozen, outcomes
 closed. All14fields/9390518native parents recovered;61133866COMPLETED.
-Benchmark61133617 complete; fullfit61134629failed pre-training missing Path import,
-now fixed; sole corrected full32768source SED fit with checkpoints is next.
-24targeted numerical tests pass. Population/inference primitives implemented;
-production selection, shared calibration/SED uncertainty, D/E/F still outstanding.
+Fullfit61135482RUNNING with verified per-iteration checkpoints, after startup-only
+61134629failure fixed. Shared32draw response61136440depends on its successful exit
+and refuses an unconverged model. FixedQRF/probes61135917COMPLETED; response
+benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
+33targeted tests pass. Cohort preparation submitted next; shared native inference,
+CDF joint compression and unified CLI implemented, production checks outstanding.
+C: target population/selection production and shared-response convergence remain.
+D: distance/class/count evaluation and continuous empirical simulations remain.
+E: outcomes still closed; independent HST dynamical NGC288 scale identified for
+identity/membership audit before use. F: actual full-model/catalog benchmark,
+qualified candidate catalog, scientific example, English figures/report remain.
 Do not label any milestone complete from code or planning alone. No deployment.
 
 ## Completed v2.6 observed-catalog inference
