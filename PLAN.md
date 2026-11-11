@@ -2,7 +2,8 @@
 
 ## Active v3.0 unified research system
 Full review: docs/pro_review_b59e18b.md (14,327-character complete latest reply).
-Detailed active goal in this chat; development contract: docs/v3_0_protocol.md.
+Detailed goal in this chat is blocked by NERSC maintenance, not complete.
+Development contract: docs/v3_0_protocol.md; preserved job queue in execution checkpoint.
 This user-authorized stage supersedes previous restrictions on new modeling,
 opening the 3250 reservation after freeze, and existing-field candidate catalogs.
 Historical outputs and actual deployment remain immutable. No timers or agents.

@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — verified external block after three goal turns
+- 21:39 Beijing: 61146827 still PENDING/Reserved for maintenance; all downstream
+ jobs await dependencies. Scheduler reservation unchanged. Authentication valid.
+- Target4096, final ensemble, transfer plan, catalog summary and delivery marker
+ verified absent. No remaining independent implementation can substitute for
+ these production results. Goal blocked, not complete; queue/checkpoints retained.
+- Resume after resource availability changes: inspect existing job IDs first,
+ validate results and continue C/E/F. No resubmission, timers or relaxed gates.
+
 ## 2026-11-11 — queued numerical repair; maintenance blocks production
 - Verified old jobs terminal using sacct after squeue dropped them; initial
  submission guard stopped before sbatch. Unique new pipeline: 61146827 target,
