@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — joint target checkpoint and figure review
+-Target61138714built890MBresponse and reached198-dimensional MAP, maximum
+ gradient8.83e-6; actual chains now running. Pilot recovery61139393, application
+ scoring61139394 and matched QRF61139395 submitted; app scoring log complete.
+-All21English development plates inspected via contact sheets; attached residuals
+ and per-reference masks visibly distinct. Independent scientific tables unchanged.
+-Add exact matrix-vector hierarchy implementation; weighted multi-field objective
+ and all gradients match original to1e-11/2e-12 in tests. Real-data timing audit
+ will determine whether an explicit checkpoint-preserving speed migration is useful.
+
 ## 2026-11-11 — continuous recovery and observed-star posterior integration
 -Submit simulation grz61139225/multi61139226/QRF61139227, application evidence
 61139228,21development figures61139229 and influence128benchmarks61139230/231.
