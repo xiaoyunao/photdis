@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — full recovery inputs complete and bounded prospective scoring
+- All3584response/catalog recovery combinations completed.24original numerical
+ failures preserved;22refinedcases pass. Finaltwo refinements61144482 and
+ original/refined aggregate reports61144483/484 submitted exactly once.
+- Add paired same-response prospective prior comparison using frozen metric code.
+ Gaussian observation-density bounds explicitly propagate omitted globalresponse
+ mass; an adversarial exp(-1000) density-tail test passes. No physical retuning.
+- All68v3mathematical/unit tests pass; newcandidate export links exactper-star
+ jointPDFs, sharedparameters, modes, masks andnumericalflags withoutdroppingrows.
+- Code/atlas milestoneb4eefc8 safely synchronized across local/GitHub/NERSC.
+
 ## 2026-11-11 — prospective atlas verified and logarithmic tail preservation
 -Fiveactualprospective/scienceplots nowpass40format/hash/languagechecks and
  visualreview;61144230layoutpolish leavesallscientificstatisticsunchanged.

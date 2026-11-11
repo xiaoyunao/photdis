@@ -20,39 +20,32 @@ Historical outputs and actual deployment remain immutable. No timers or agents.
 - [ ] F — actual benchmark, existing-field qualified candidate catalog, joint near/far
   counts, real marginalization example, English figures, reports, delivery audit.
 
-Current execution:612114-reference preparation and shared-source calibration are
-complete; two photometric-first new sky blocks (2048objects) are frozen, outcomes
-closed. All14fields/9390518native parents recovered;61133866COMPLETED.
-Fullfit61135482COMPLETED/converged43iterations;27negative-support flags need
-posterior audit. Shared32draw response61136440COMPLETED; full-model128object benchmark61137836
-COMPLETED. Shared response approximation requires recovery validation. FixedQRF/probes61135917COMPLETED; response
-benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
-63frozen-core tests plus4additionalprojection/response-compression/log-tail tests pass. Cohort preparation61137072completed; shared native inference,
-CDF joint compression and unified CLI implemented;64object benchmark61137407
-completed calculation, detailed artifact audit pending. Selection tables implemented.
-C: original target61138714checkpointed/cancelled after verified22x algebraic
- speedup; cached2048draw target61139580COMPLETED/passed. Selection267profiles passed
- maxerror0.002774.
-32influence responses complete but rejected for uncertainty; fullweightedEM0/16converged, remaining30array61139809running.
-Sharedresponse16target61140148and0target61140662completed; structured evidence refinements pass; sharedselection0
-61140140passed. Other30drawspipeline61140663/664/665dependsontheirfullrefits.
-Shared-response/evidence and final marginal convergence remain.
-D: actual three-band development61138101/107/109 and app61138112/hyper61138114
-completed and scored;QRF61138119complete. Continuous empirical simulations implemented,
-224matched continuous recoveries complete;56passfullnumericgate. Refined16384draw
-recovery61140145/147/195/196complete; final3a99 refinements61141807/808/809pass, originalfailurespreserved.
-Full same-ID distance/class/Gaia scores and21inspected figures delivered; shared
-response recovery and calibrated applicability remain.
-E: physical method/priors/metrics/output frozen by61142743, hash14d3ff1d;
- purephotometry predictions and once-only association complete for3250/2048/8192;
- reservation haszeroqualifiedreferences (availability audit pending), newsky1070
- andindependent2202signedGaia. Finalreference scoring complete; independentmembership1442of8192; zeroqualified
- reference for3250reserve verifiedasqualityselection, notjoinfailure. FiveEnglish
- figurespass40artifactchecks/visualreview. Target-prior finalcomparison remains; independent HST dynamical NGC288 scale identified for
-identity audit passed61137636;8192photometric-only IDs frozen, membership unopened. F: firstfull45882fieldreference prediction completed61143137; fulloutputaudit
- pending.128object conditionaltransferpilot completed61143363 (41.71s/24.64MB);
- allqualified fields, finalsharedprecision, scienceexample/report remain.
-Do not label any milestone complete from code or planning alone. No deployment.
+Current execution (2026-11-11, after prospective freeze):
+A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
+ binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
+ refits complete. Core likelihood/selection/compression/identity tests passed.
+C: original32 target posterior fits complete. Longer numerical-only chains for
+ responses1/12/17/26 and verified bridge/native products are in progress.
+ Exact26000-object response ensemble, design summary and catalog transfer await
+ final weighted marginal precision. Strong finite-response concentration remains
+ a scientific support limitation regardless of numerical acceptance.
+D: 224conditional recovery cases pass after recorded refinements. All3584 shared
+ response/catalog cases completed;24original numeric failures,22refined pass,
+ finaltwo61144482 running. Original/refined reports61144483/484 queued/running.
+ Same-ID distance/class/Gaia diagnostics and25English figures inspected.
+E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
+ predictions and once-only associations/scores complete for3250/2048/8192.
+ Reserve3231Gaia matches all fail frozen quality,19noID; no qualified distance
+ evidence. Newsky1070signedGaia/247precise, independent2202signed/131precise.
+ NGC2881442members:centralbias+12.56%,68coverage60.47%; sharedscale uncertainty.
+ Fiveprospective/sciencefigures pass40checks andvisualreview. Target-prior
+ same-response comparisons remain; no changes to physicalmethod after opening.
+F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
+ audit12909checks passed,437.96s/3.927GB64workers. Other12reference fields
+ array61143751 nearingcompletion; audit61144231 depends oncompletion.
+ Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
+ Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
+ report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
 
 ## Completed v2.6 observed-catalog inference
 Full requirements: docs/pro_review_39e6e4f.md; results docs/v2_6_result.md.
