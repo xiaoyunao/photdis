@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — stage response-support fix before population phase
+- Remote probe during61126775diagnostics confirmed POPULATION_NOT_STARTED; f9bca2f synchronized before population phase. New population freeze must include selected-cell smoothing amendment.
+- Common SpecDis/SPDist intersection independently reproduces1188originalsamepairs from compactv2.4tables; original files unchanged.
+- Actual-artifact validator and7English figure programs prepared; dependent validation will only run after production success.
+
 ## 2026-11-11 — actual red controls and response support correction
 -61126775 RUNNINGnid004263.702/711matched to338unique nonfit controls;red481matched/253uniquecontrols. Rawhistoricallow29.73%, matchedapplication3.12%; historicalselectionconditional27.65%retained separately. Does not support blanket red correction.
 - Independentresponsefloor audit found smoothing must stay inside hardselectioncells. Added explicit amendment and zero-leakage test;4math tests pass. Check populationphase freeze before deploying; noQRF/data changes.

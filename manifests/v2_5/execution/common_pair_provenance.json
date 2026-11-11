@@ -1,0 +1,7 @@
+{
+  "source": "manifests/v2_4/metal_pair_objects.csv",
+  "sha256": "893f99975da2fdf738cda50862e99487f44ce12fc4094ad3d5e5f320da4f27c7",
+  "pairs": 1188,
+  "model": "control",
+  "identical_pair_intersection": true
+}
