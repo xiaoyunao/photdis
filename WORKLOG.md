@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-11 — exact class and abundance interpretation
+-Document actual DESI class-quality/logg/Teff cuts and continuous RVS FeH
+ correction/domain from existing source; no frozen-code or admission changes.
+-Candidate evolved probabilities follow conservative reference labels, not an
+ independently complete giant census. Missing class/FeH remain marginalized.
+-Validation: source-to-document comparison; numerical production unchanged.
+
 ## 2026-11-11 — scope manifest byte normalization
 -NewsmallscopeCSV useddefaultCRLF whileGit enforcesLF. Normalizebytes and
  recomputeprovenancehash; valuesunchanged. Existing36figureCSV working/HEAD

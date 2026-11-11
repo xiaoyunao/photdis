@@ -36,6 +36,28 @@ The fixed classifier probes use the 27,115 known-class subset and compare on the
 same 42,950 development identities. No reference absolute magnitude, target
 spectroscopic class, FeH or Gaia parallax is a photometric prediction feature.
 
+## Class and abundance definitions
+
+The label source requires an unambiguous DESI match, PRIMARY, RR_SPECTYPE=STAR,
+RVS_WARN=0, SN_R>=10 and VSINI<30 km/s, with finite Teff/logg and positive finite
+uncertainties. A conservative dwarf has Teff<7000 K and logg-sigma_logg>4.2;
+a conservative evolved reference has Teff<7000 K and logg+sigma_logg<3.2.
+Other qualified stellar parameters define `other_star_or_transition`; lack of a
+qualified class label remains missing. Thus the `evolved` branch is tied to this
+conservative reference definition, not an independently complete census of all
+evolutionary stages. Redrock QSO/GALAXY evidence is retained separately and is not
+promoted to a calibrated nonstellar probability.
+
+FeH does not determine class admission. The RVS abundance correction is valid
+for 4200<=Teff<6600 K and 1.8<=logg<5.5. With x=log10(Teff/5000)/0.1, subtract
+0.197-0.809*x+0.441*x^2 from raw FeH at logg<4.3, and
+0.039-0.284*x+0.079*x^2 at logg>=4.3. The SED additionally requires qualified
+RVS parameters, positive finite FeH uncertainty and -5<corrected FeH<1; otherwise
+FeH is marginalized as missing. A poor-metal diagnostic uses corrected FeH<-1.5.
+This continuous abundance coordinate is not a fourth physical class or an
+inference-time requirement on application objects. These exact definitions are
+implemented in `class_evidence.py`, `audit.py` and `v3_0_sed.py`.
+
 ## Reference calibration and empirical SED
 
 For each VAC, 8,192 calibration objects constrain an offset, excess scatter and

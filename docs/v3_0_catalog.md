@@ -58,7 +58,9 @@ multimodal summaries; the full native log-PDF is linked, including distant tails
 `dwarf,evolved,other`; distance bins are 0–2,2–5,5–10,10–20,20–50,>50 kpc.
 `class_probability`, `distance_probability` and `qnear` are integrals of this
 same joint distribution. Do not form a joint probability by multiplying the two
-marginals. Missing spectroscopic class is not an extra physical class.
+marginals. Missing spectroscopic class is not an extra physical class. The
+reference class cuts are documented in [methods](v3_0_methods.md#class-and-abundance-definitions);
+`evolved` is not an independently complete classification of all giant stars.
 
 `reference_mu`, `reference_qnear` and `prior_delta_*` use the **same response and
 calibration draw** as the target product. They isolate prior sensitivity. The
