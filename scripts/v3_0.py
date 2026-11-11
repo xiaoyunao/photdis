@@ -41,6 +41,7 @@ STAGES = {
     'diagnostics': 'v3_0_diagnostics.py',
     'ensemble-products': 'v3_0_ensemble.py',
     'shared-products': 'v3_0_shared_products.py',
+    'refine-target': 'v3_0_refine_target.py',
     'shared-selection': 'v3_0_shared_selection.py', 'shared-target': 'v3_0_shared_target.py',
     'shared-predict': 'v3_0_shared_predict.py', 'application-evidence': 'v3_0_application_evidence.py',
 }

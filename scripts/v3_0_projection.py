@@ -10,8 +10,10 @@ Do not relabel this conditional transfer as a full-catalog Bayesian refit.
 import argparse
 import concurrent.futures
 import json
+import hashlib
 import multiprocessing as mp
 import os
+import resource
 from pathlib import Path
 import time
 import joblib
@@ -24,6 +26,7 @@ from photdis.v3.hierarchy import FieldPopulation
 from photdis.v3.systematics import calibration_vectors
 from photdis.v3.native_response import native_response
 from photdis.v3.ensemble_counts import merge_chunk_counts
+from photdis.v3.population import SharedCounts
 from v3_0_validation_inputs import check_freeze
 from v3_0_response import observation
 import v3_0_predict as predict
@@ -31,6 +34,14 @@ import v3_0_shared_predict as shared
 import v3_0_shared_products as products
 
 D = ROOT/'data/v3_0'
+_LATENT_SEED = None
+
+
+class ProjectionCounts(SharedCounts):
+    def __init__(self, *args, seed=None, **kwargs):
+        # Common parameter IDs induce physical covariance. Independent fields
+        # must not acquire extra covariance from reusing latent random numbers.
+        super().__init__(*args, seed=np.random.SeedSequence([seed or 0, _LATENT_SEED]), **kwargs)
 
 
 def product_chunk(path):
@@ -69,6 +80,7 @@ def product_chunk(path):
 
 
 def main():
+    global _LATENT_SEED
     require_compute()
     p = argparse.ArgumentParser()
     p.add_argument('scope', choices=['catalog', 'validation'])
@@ -130,7 +142,8 @@ def main():
     tasks = [np.arange(i, min(i+32, len(data['identity']))) for i in range(0, len(data['identity']), 32)]
     with concurrent.futures.ProcessPoolExecutor(max_workers=a.workers, mp_context=mp.get_context('fork')) as pool:
         markers = list(pool.map(predict.chunk, tasks))
-    save_json(pred/'complete.json', dict(inputs=inputs, rows=len(data['identity']), chunks={p: sha(p) for p in markers}))
+    reference_converged=sum(json.loads(Path(p).read_text())['converged'] for p in markers)
+    save_json(pred/'complete.json', dict(inputs=inputs, rows=len(data['identity']), reference_converged=reference_converged, chunks={p: sha(p) for p in markers}))
     # Extend field random effects from the frozen hypermean for genuinely new sky.
     original_fields = np.unique(load(D/'cohorts/application.npz')['field'])
     dummy = np.ones((len(original_fields), len(model.weights), 5))
@@ -153,6 +166,8 @@ def main():
     products._THETA, products._BETA, products._WEIGHTS = theta, beta, correction['weights']
     products._DRAW_IDS, products._CALIBRATION, products._NATIVE = correction['draw_ids'], calibration, True
     products._OUT, products._PRED, products._INPUTS = output, pred, inputs
+    _LATENT_SEED = int(hashlib.sha256(f'{a.scope}/{a.name}/{a.draw}'.encode()).hexdigest()[:16],16)
+    products.SharedCounts = ProjectionCounts
     (output/'chunks').mkdir(exist_ok=True)
     paths = sorted(x for x in pred.glob('chunk_*.npz') if not x.stem.endswith('_joint'))
     with concurrent.futures.ProcessPoolExecutor(max_workers=a.workers, mp_context=mp.get_context('fork')) as pool:
@@ -165,13 +180,17 @@ def main():
     metadata = [json.loads(Path(p).read_text()) for p in markers]
     errors = {k: max(x[k] for x in metadata) for k in ('maximum_native_integral_error', 'maximum_integral_error', 'maximum_joint_delta', 'maximum_omitted_bound')}
     save_json(output/'complete.json', dict(inputs=inputs, rows=len(data['identity']), global_response_draw=a.draw,
-        integration_passed=all(v < .001 for v in errors.values()), errors=errors,
+        integration_passed=all(v < .001 for v in errors.values()), reference_converged=reference_converged, errors=errors,
         conditional_marginal_half_delta=counts['marginal_half_delta'],
         counts_sha256=sha(output/'counts.npz'), shared_parameters_sha256=sha(output/'shared_parameters.npz'),
         target_complete_sha256=sha(target/'complete.json'), chunks={p: sha(p) for p in markers},
         scope='Conditional transferred joint distribution q(shared|26000 sampled targets) times per-star conditional posteriors. Shared uncertainty retained, but population is not refitted on these new objects. Not a full-catalog Bayesian update or intrinsic density estimate.',
         numerical_acceptance='Final response-marginal precision must be checked after combining response draws.',
-        elapsed_seconds=time.monotonic()-start, job=os.getenv('SLURM_JOB_ID')))
+        elapsed_seconds=time.monotonic()-start,
+        output_bytes=sum(p.stat().st_size for p in output.rglob('*') if p.is_file()),
+        maximum_process_rss_kib=max(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss),
+        rss_scope='Maximum individual process RSS, not sum of concurrent worker RSS; Slurm accounting is a separate job-level check.',
+        job=os.getenv('SLURM_JOB_ID')))
     print('CONDITIONAL TRANSFER', a.scope, a.name, a.draw, len(data['identity']), errors, flush=True)
 
 

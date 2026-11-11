@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — independent latent catalog draws and numerical refinement reuse
+-Projection fields now have distinct deterministic latent random namespaces while
+ keepingidenticalshared parameterIDs. Independent regressiontestpasses; shared
+ covariance mustnot include accidental commonrandomnumbers acrossfields.
+-Add verifiedreuseofimmutable response/MAP forlonger identical-model chains;
+ physical/source/code hashes checked beforelinking, no overwriteoforiginalruns.
+-Projectionpilot recordsactualtime/outputbytes/per-processRSS andreference
+ convergence, separatefromeventualscientificacceptance.
+
 ## 2026-11-11 — explicit candidate transfer semantics and actual sample scores
 -Add native conditional population-transfer driver withshared globaldrawIDs,
  exactnativeCDF/count integration, modes/photometric system/prior-sensitivity flags.
