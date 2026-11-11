@@ -30,10 +30,12 @@ def main():
     # distinct, rather than reusing one fixed noisy table as observed realizations.
     fingerprints=[sha_bytes(a['mags'][a['catalog']==i]) for i in np.unique(a['catalog'])]
     check('unique_catalog_noise',len(set(fingerprints))==192)
+    qrf_class=np.zeros((len(a['identity']),4))
     for path in sorted((D/'qrf_chunks').glob('*.npz')):
         check('QRFhash:'+path.name,sha(path)==json.loads(path.with_suffix('.json').read_text())['sha256'])
         q=load(path);r=q['rows'];check('QRFids:'+path.name,np.array_equal(q['identity'],a['identity'][r]))
         check('QRFmass:'+path.name,np.allclose(q['joint_mass'][:,:4].sum(axis=(1,2)),1,atol=2e-6))
+        qrf_class[r]=q['joint_mass'][:,:4].sum(axis=2)
     for regime in range(2):
         q=load(D/f'posterior_regime{regime}.npz');check(f'posterior{regime}:norm',np.allclose(q['weights'].sum(axis=1),1))
         check(f'component{regime}:norm',np.allclose(q['selected'].sum(axis=1),1));check(f'response{regime}:alpha',np.all(q['response'].sum(axis=1)<=1+1e-10))
@@ -62,6 +64,16 @@ def main():
         q=[r for r in rows if r['catalog']==i]
         tail.append(dict(catalog=i,design=q[0]['design'],regime=q[0]['regime'],truth=0,point=1-sum(float(r['point']) for r in q),pdf=1-sum(float(r['pdf']) for r in q),population=0))
     csv_rows(T/'recovery_beyond50.csv',tail)
+    with open(T/'recovery_group.csv') as f:group_rows=list(csv.DictReader(f))
+    comparison=[]
+    for i in np.unique(a['catalog']):
+        q={int(r['group']):r for r in group_rows if int(r['catalog'])==i};u=a['catalog']==i
+        for k,(channel,groups) in enumerate([('dwarf',[0,1]),('evolved',[2]),('other',[3]),('unlabeled_reference',[])]):
+            comparison.append(dict(catalog=int(i),design=q[0]['design'],regime=q[0]['regime'],channel=channel,
+                truth=sum(float(q[j]['truth']) for j in groups) if groups else None,
+                population=sum(float(q[j]['population']) for j in groups) if groups else None,
+                QRF_reference=float(qrf_class[u,k].mean())))
+    csv_rows(T/'group_comparison.csv',comparison)
     with open(T/'red_matches.csv') as f:red=list(csv.DictReader(f))
     check('red_full711',len(red)==711)
     check('red_PSF',all(x['TYPE']=='PSF' for x in red))

@@ -133,7 +133,7 @@ def evaluate(c,test,base,bins,curve,cat,p):
         # response enters the likelihood used to fit these same catalogs.
         tr=response(test,bins,curve,seed=251114)[regime]
         for k,i in enumerate(chosen):
-            u=cat['catalog']==i;design=str(cat['design'][u][0]);fraction,tilt=populations(base)[design]
+            u=cat['catalog']==i;design=str(cat['design'][u][0]);fraction,tilt=populations(base)[design];fraction=np.asarray(fraction)
             dp=DISTANCE_PRIOR*(DISTANCES/5)**tilt;dp/=dp.sum();eta=(fraction[:,None]*dp).ravel()
             truth=eta*tr.sum(axis=1);truth/=truth.sum();truth=truth.reshape(4,5)
             mean,interval,diag=summarize_posterior(theta,selected,weights[k]);mean=mean.reshape(4,5)
@@ -175,9 +175,23 @@ def main():
     require_compute();T.mkdir(parents=True,exist_ok=True);(D/'qrf_chunks').mkdir(exist_ok=True)
     files=[ROOT/'scripts/v2_5_population.py',ROOT/'src/photdis/population_v2_5.py',ROOT/'docs/v2_5_protocol.md',ROOT/'docs/v2_5_response_support_amendment.md',ROOT/'data/v2_3/control.joblib',ROOT/'data/v2_4/recovery_design.npz',ROOT/'data/v2_1/development.npz']
     freeze={str(x.relative_to(ROOT)):sha(x) for x in files};marker=D/'population_freeze.json'
-    if marker.exists():assert json.loads(marker.read_text())==freeze,'Explicit migration required'
+    if marker.exists():
+        old=json.loads(marker.read_text())
+        if old!=freeze:
+            key='scripts/v2_5_population.py'
+            assert old[key]=='4ad00fe196184056a885a4739117059def6604a23aed71df7fd30ea13f62c4bb'
+            assert all(old[k]==v for k,v in freeze.items() if k!=key)
+            assert not (D/'population_complete.json').exists()
+            save_json(D/'population_writer_migration.json',dict(previous=old,replacement=freeze,
+                reason='Convert scenario list to ndarray in truth-summary writer; reuse completed templates/catalogs/QRF. No prediction or model change.',
+                catalogs_sha256=sha(D/'catalogs.npz'),cal_sha256=sha(D/'cal_templates.npz'),test_sha256=sha(D/'test_templates.npz')))
+            save_json(marker,freeze)
     else:save_json(marker,freeze)
-    c,test,base,bins,curve=templates();_CAT=load(D/'catalogs.npz') if (D/'catalogs.npz').exists() else catalogs(test,populations(base),bins,curve)
+    if (D/'templates.json').exists():
+        meta=json.loads((D/'templates.json').read_text());c=load(D/'cal_templates.npz');test=load(D/'test_templates.npz')
+        base=np.array(meta['base']);bins=np.array(meta['noise_bins']);curve=np.array(meta['noise_curve'])
+    else:c,test,base,bins,curve=templates()
+    _CAT=load(D/'catalogs.npz') if (D/'catalogs.npz').exists() else catalogs(test,populations(base),bins,curve)
     _J=joint_model();tasks=[np.arange(i,min(i+64,len(_CAT['identity']))) for i in range(0,len(_CAT['identity']),64)]
     with concurrent.futures.ProcessPoolExecutor(max_workers=16,mp_context=mp.get_context('fork')) as pool:paths=list(pool.map(qrf_chunk,tasks))
     parts=[load(x) for x in paths];p={k:np.concatenate([x[k] for x in parts]) for k in parts[0]}

@@ -37,7 +37,7 @@ def main():
     save(fig,'03_band_gains_by_class',['band_gain_by_class'],'Group-specific uncertainty, not borrowed overall intervals. Fixed probes and partitions have different fitting support. Matched bands have no faint evolved references; no physical information-bound claim.')
     r=read('recovery_summary');designs=['reference_like','giant_only','poor_only','distance_only','ordinary_dominated','giant_rich','metal_poor_rich','balanced']
     fig,ax=plt.subplots(2,1,figsize=(15,9),constrained_layout=True)
-    for a,regime,title in zip(ax,['0','1'],['Selected photometric domain','Selection complement: stress only']):
+    for a,regime,title in zip(ax,['0','1'],['Fixed photometric entrance','Selection complement: stress only']):
         for j,(method,color) in enumerate([('point',GRAY),('pdf',BLUE),('population',ORANGE)]):
             q=[sel(r,design=d,regime=regime,method=method)[0] for d in designs];x=np.arange(8)+(j-1)*.23
             a.bar(x,[100*val(t,'mean_L1') for t in q],width=.22,color=color,label={'point':'QRF point','pdf':'QRF PDF','population':'Population posterior'}[method]);a.errorbar(x,[100*val(t,'mean_L1') for t in q],yerr=[100*val(t,'sd_L1') for t in q],fmt='none',color='black',lw=.7)
@@ -55,7 +55,7 @@ def main():
     ax[0,0].legend(fontsize=9);fig.suptitle('One-factor recovery · independent empirical SED templates')
     save(fig,'05_recovery_distance_shapes',['recovery_distance'],'Means across12independent catalogs; shaded region is mean parameter-interval endpoints, NOT an interval on the average curve. True selected distribution from separate test-library forward Monte Carlo; no response fitting on test identities.')
     r=read('recovery_summary');di=read('identifiability');fig,ax=plt.subplots(1,3,figsize=(17,5),constrained_layout=True)
-    for regime,color,label in [('0',BLUE,'Selected domain'),('1',ORANGE,'Complement stress')]:
+    for regime,color,label in [('0',BLUE,'Photometric entrance'),('1',ORANGE,'Complement stress')]:
         coverage=[];cor=[];grid=[]
         for d in designs:
             q=sel(r,design=d,regime=regime,method='parameter');coverage.append(np.mean([val(t,'coverage') for t in q])*100)
@@ -72,9 +72,20 @@ def main():
         q=[x for x in r if x['regime']==regime and x['variant'].startswith('template_bootstrap')]
         boot=np.array([[val(t,'estimate') for t in q if t['bin']==str(b)] for b in range(5)])
         a.fill_between(range(5),np.quantile(boot,.025,axis=1),np.quantile(boot,.975,axis=1),color=GRAY,alpha=.25,label='16 template resamples')
-        a.set(xticks=range(5),xticklabels=['0–2','2–5','5–10','10–20','20–50'],xlabel='Distance (kpc)',ylabel='Population posterior mean fraction',title='Selected domain' if regime=='0' else 'Complement stress')
+        a.set(xticks=range(5),xticklabels=['0–2','2–5','5–10','10–20','20–50'],xlabel='Distance (kpc)',ylabel='Population posterior mean fraction',title='Photometric entrance' if regime=='0' else 'Complement stress')
     ax[0].legend(fontsize=9);fig.suptitle('Separate template, missing-label and teacher-scale sensitivities')
     save(fig,'07_uncertainty_sources',['uncertainty_sources'],'First reference-like catalog only;16identity-level Bayesian bootstrap responses, coherent±1teacher-sigma calibration-template shifts and labeled-only response. Sensitivity envelopes are not combined calibrated uncertainty.')
+
+    r=read('group_comparison');fig,ax=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
+    channels=['dwarf','evolved','other','unlabeled_reference']
+    for a,design in zip(ax,['reference_like','giant_rich','metal_poor_rich']):
+        q=sel(r,design=design,regime=0)
+        for j,(method,color) in enumerate([('truth','GRAY'),('QRF_reference','BLUE'),('population','ORANGE')]):
+            y=[np.nanmean([val(t,method) for t in q if t['channel']==c]) if c!='unlabeled_reference' or method=='QRF_reference' else np.nan for c in channels]
+            a.bar(np.arange(4)+(j-1)*.24,y,width=.23,color={'GRAY':GRAY,'BLUE':BLUE,'ORANGE':ORANGE}[color],label=method.replace('_',' '))
+        a.set(xticks=range(4),xticklabels=['Dwarf','Evolved','Other','No label'],ylabel='Selected population fraction',title=design.replace('_',' '));a.tick_params(axis='x',labelsize=10)
+    ax[0].legend(fontsize=9);fig.suptitle('Composition recovery · QRF reference contributions are not physical labels')
+    save(fig,'08_population_composition',['group_comparison'],'Mean over12catalogs in the fixed photometric entrance. New population model marginalizes missing template labels; QRF retains its unlabeled-reference channel separately. No-label is not a true physical population and has no injected truth bar.')
 
 
 if __name__=='__main__':main()

@@ -23,7 +23,7 @@ def main():
             path=M/(source+'.csv');check(name+':source:'+source,hashlib.sha256(path.read_bytes()).hexdigest()==h)
             with open(path) as f:expected+=len(list(csv.DictReader(f)))
         with open(meta.with_suffix('.csv')) as f:check(name+':source_rows',len(list(csv.DictReader(f)))==expected)
-    check('seven_figure_sets',len(list((M/'figures').glob('*.json')))==7)
+    check('eight_figure_sets',len(list((M/'figures').glob('*.json')))==8)
     for name in ('v2_5_result','v2_5_atlas','v2_5_requirements_result'):
         doc=ROOT/'docs'/(name+'.md')
         for i,target in enumerate(re.findall(r'\]\(([^)]+)\)',doc.read_text())):

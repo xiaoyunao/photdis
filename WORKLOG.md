@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — preserve all fresh predictions after summary writer error
+-61126775finished diagnostics and384QRFchunks/24576objects, then TypeError atfraction[:,None]: four historicalscenariofractions are Pythonlists. No model/measurement computation failure.
+- Convert fractions toarray, explicitly migrate only population writer sourcehash4ad00fe; preserve template/catalog/QRF hashes and reuse all completed caches. Other frozen source/input hashes must match.
+-61127009afterokdependency cannotrun until corrected resume succeeds; repoint samevalidator after terminalstate and noactive same-name job.
+
 ## 2026-11-11 — population began before optional concurrency wrapper
 -61126775completed diagnostics and enteredpopulation at~9min. Recorded sourcehash4ad00fe is f9bca2fimplementation, including correct selected-cell smoothing.
 -Optional lock/reuse wrapper arrived after interpreterstart; no secondstep launched. Revert unused wrapper to match actual frozenproduction bytes; no science changes or checkpoint migration.

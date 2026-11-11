@@ -25,6 +25,8 @@ def main():
     out += ['', '该设计约束迁移解释，而非证明Gaia或光谱距离哪一方正确。匹配重复降低有效证据量；不能用匹配行数当独立对象数。','', '## 贫金属：全有符号Gaia观测', '',
             '| 侧别 | 原配对数 | 合格观测行 | 唯一身份 | 负视差行 | SNR<5行 | 拟合重叠行 |','|---|---:|---:|---:|---:|---:|---:|']
     for r in metal:out.append('| '+' | '.join(r[k] for k in ['side','original_pairs','eligible','unique_eligible','negative','weak','fit_overlap'])+' |')
+    pair=[r for r in read('metal_gaia_pairs') if r['model']=='control' and r['source']=='all' and r['role']=='neither_fitted' and r['metric']=='high_tail' and r['cluster']=='control'][0]
+    out += ['',f"双侧合格配对{pair['n']}，普通侧独立控制{pair['unique_controls']}。贫金属侧相对普通侧的QRF高PIT尾部差为{100*float(pair['mean']):.2f}个百分点，重复控制身份区间[{100*float(pair['low']):.2f},{100*float(pair['high']):.2f}]。高PIT方向对应观测视差比模型更大，与贫金属距离偏远相符；不能据此给所有对象统一乘修正因子。不同误差、原配对和参考选择仍需保留。"]
     out += ['', '不对弱/负视差取倒数。两侧均合格才形成配对差；单侧观测保留在逐对象表。按参考来源、训练身份、重复普通对照与天空配对分别统计完整预测视差log score与PIT尾部。共享教师、原配对选择和误差分布仍限制绝对几何尺度判断。', '',
             '## 总体推断：明确选择归一化与身份隔离', '',
             f"校准模板{templates['cal']}，独立测试模板{templates['test']}；其中校准模板{templates['missing_labels']}缺类别标签，仍以颜色/Mg核的软成员贡献光度信息。缺标签不是物理类别，该软归属尚未独立校准。训练/测试/模型拟合身份隔离。",
@@ -37,7 +39,7 @@ def main():
     for design in dict.fromkeys(r['design'] for r in rec):
         for regime in ['0','1']:
             q={r['method']:r for r in rec if r['design']==design and r['regime']==regime and r['method'] in ['point','pdf','population']}
-            out.append(f"| {design} | {'支持内' if regime=='0' else '补集压力'} | "+' | '.join(f"{100*float(q[k]['mean_L1']):.2f}%" for k in ['point','pdf','population'])+' |')
+            out.append(f"| {design} | {'预定测光入口' if regime=='0' else '补集压力'} | "+' | '.join(f"{100*float(q[k]['mean_L1']):.2f}%" for k in ['point','pdf','population'])+' |')
     out += ['', '## 区间、可辨识性与数值可信度', '',
             f"双倍Sobol积分网格的最大组分比例变化为{max(float(r['grid_max_delta']) for r in diag):.5f}；最小积分有效点数{min(float(r['ess']) for r in diag):.2f}；最大参数相关绝对值{max(float(r['max_correlation']) for r in diag):.4f}。边界质量逐目录保留。积分未稳定或边界堆积的情况不得认作精确人口测量。",
             '', '总体参数区间与重复目录人数预测区间分别保存。前者对设计条件比例评分，后者在每个独立目录的实现人数上作诊断；后者不是逐对象潜在类别后验计数区间。每格只有12次独立目录覆盖试验，Wilson区间必须同时阅读，不能据点估计宣布95%校准。', '',

@@ -21,7 +21,7 @@ manifests and [result report](v2_5_result.md), not this implementation checklist
 | Retain degeneracy | correlations, boundary mass, quadrature ESS/grid differences | Wide or unstable posterior cannot be published as a precise physical ratio |
 | Prospective3250 | outcome hash preserved, equal-field unused-population estimand and metrics frozen | Remains unopened until model/selection suitability; no new-sky/final-validation claim |
 | Existing deployment and morphology | original model hashes checked, PSF admission/export | No full-parent rerun, model search or automatic adoption |
-| English scientific plots | seven source-linked figure groups planned, visual verification recorded separately | Formatting checks do not imply scientific acceptance |
+| English scientific plots | eight source-linked figure groups, visual verification recorded separately | Formatting checks do not imply scientific acceptance |
 
 Progress and actual failed/accepted criteria belong in WORKLOG, execution records,
 and the measured report. No task is called complete solely because code exists.
