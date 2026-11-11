@@ -94,7 +94,9 @@ def main():
         target=D/'shared_targets'/f'refit_{draw:02}_s{a.draws}'
         fit=json.loads((target/'complete.json').read_text())
         assert fit['sampler_passed'],'Unverified sampler'
-        refined=target/'evidence_structured_8192/complete.json'
+        candidates=sorted(target.glob('evidence_structured_*/complete.json'),key=lambda p:int(p.parent.name.split('_')[-1]),reverse=True)
+        verified=[p for p in candidates if json.loads(p.read_text())['passed']]
+        refined=verified[0] if verified else target/'evidence_structured_8192/complete.json'
         evidence=json.loads(refined.read_text()) if refined.exists() else fit
         assert evidence['passed'],'Unverified bridge evidence'
         if refined.exists():
