@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — first field passed and prospective outcomes opened once
+-61143679:45882/45882reference predictions numerically converge;12909structural
+ checks pass,3.927GBactual output,437.96s64-worker elapsed. Expandremaining
+12qualifiedfields witharray61143751; no additionalfootprint.
+-61143680reference audit: original3250 has3231exactGaia matches,all failfrozen
+ quality;19noID. ZeroVAC/classreferences. Preserveunvalidatedstatus. Newsky
+ has1070signedGaia/247precise; independent2202signed/131precise.
+-61143681fixedmembershipI/O completes:1658matches,1442members atfrozenp>=.9.
+61143682/683/684finalcohortscoring completes. Add independent-scaledemonstration
+ withsharedsystemerror sensitivity, not1442independentdistancecalibrators.
+-Bridge1/17stillfailhalf-evidence after32768proposal refinement. Longerunchanged
+ chains submitted61143749/750;61143739arraymissing explicit--drawcancelledwhile
+ pending beforecalculation. Evidence6/9/14/26refinement61143741; priorfailureskept.
+
 ## 2026-11-11 — actual first field and prospective evidence association
 -61143137 completed45882candidate reference predictions; structural/fulloutput audit added.
 -61143363 conditional128object transfer pilot:41.71s,24.64MB, per-process peak

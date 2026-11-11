@@ -24,7 +24,7 @@ STAGES = {
     'simulate': 'v3_0_simulate.py', 'uncertainty-refit': 'v3_0_uncertainty_refit.py',
     'hierarchy-benchmark': 'v3_0_hierarchy_benchmark.py',
     'support-audit': 'v3_0_support_audit.py',
-    'catalog': 'v3_0_catalog.py', 'catalog-audit': 'v3_0_catalog_audit.py',
+    'catalog': 'v3_0_catalog.py', 'catalog-audit': 'v3_0_catalog_audit.py', 'scale-example': 'v3_0_scale_example.py',
     'recovery-report': 'v3_0_recovery_report.py',
     'validation-inputs': 'v3_0_validation_inputs.py', 'validation-audit': 'v3_0_validation_audit.py', 'candidate-predict': 'v3_0_candidate_predict.py',
     'recovery-batch': 'v3_0_recovery_batch.py',
