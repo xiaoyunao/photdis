@@ -119,3 +119,42 @@ def design_count_covariance(probabilities, strata, stratum_population):
         residual = x-x.mean(axis=0)
         covariance += population**2*(1-n/population)/n*(residual.T@residual/(n-1))
     return total, covariance
+
+
+def histogram_reference_score(edges, mass, reference_mu, error, broad_fraction=0., broad_error=2.):
+    """Exact Gaussian-reference convolution of a piecewise-uniform QRF PDF."""
+    edges = np.asarray(edges); mass = np.asarray(mass, float)
+    mass = mass/mass.sum(); density = mass/np.diff(edges)
+    values = []
+    for fraction, sigma in [(1-broad_fraction, error), (broad_fraction, broad_error)]:
+        if fraction == 0: continue
+        lo = (edges[:-1]-reference_mu)/sigma; hi = (edges[1:]-reference_mu)/sigma
+        a = np.where(lo > 0, log_ndtr(-lo), log_ndtr(hi))
+        b = np.where(lo > 0, log_ndtr(-hi), log_ndtr(lo))
+        with np.errstate(divide='ignore', invalid='ignore'):
+            delta = a+np.log(-np.expm1(np.minimum(b-a, 0.)))
+            values.append(np.log(fraction)+logsumexp(np.log(density)+delta))
+    return float(logsumexp(values))
+
+
+def histogram_parallax(edges, mass, parallax, error, order=16):
+    """Native-bin Gaia convolution, including signed/negative observations."""
+    edges = np.asarray(edges); mass = np.asarray(mass, float); mass = mass/mass.sum()
+    nodes, weights = np.polynomial.legendre.leggauss(order)
+    # Split extremely precise positive measurements locally without altering PDF.
+    extra = []
+    if parallax > 5*error:
+        center = 10-5*np.log10(parallax); width = 5/np.log(10)*error/parallax
+        extra = center+width*np.linspace(-12, 12, 49)
+    extra = np.asarray(extra)
+    fine = np.unique(np.r_[edges, extra[(extra > edges[0]) & (extra < edges[-1])]])
+    center = (fine[1:]+fine[:-1])/2; width = np.diff(fine)
+    bin_index = np.clip(np.searchsorted(edges, center)-1, 0, len(mass)-1)
+    integrated = mass[bin_index]/np.diff(edges)[bin_index]*width
+    grid = center[:, None]+width[:, None]*nodes/2
+    p = 10**((10-grid)/5)
+    with np.errstate(divide='ignore'):
+        logweight = np.log(integrated[:, None]*weights[None]/2)
+    score = logsumexp(logweight+norm.logpdf(parallax, p, error))
+    pit = np.sum(np.exp(logweight)*ndtr((parallax-p)/error))
+    return dict(log_score=float(score), pit=float(pit), negative=bool(parallax < 0))

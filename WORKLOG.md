@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — shared response ensemble and full-model inference benchmark
+-61136440COMPLETED0:0(126s):32one-step common-source/sky/calibration responses,
+ full source offset/scatter/heavy-tail quadrature passes. This approximation still
+ needs recovery/full-update sensitivity; do not call it an exact fitted posterior.
+-61137836COMPLETED0:0(46s):128application full-fit robust-model predictions. First
+32object chunk14.86s/5.57MBjoint/all32converged; no final science acceptance yet.
+-Add fixed same-ID QRF Sobol128 control prediction and common source-separated
+ evaluation: full signed Gaia scores, native QRF histogram integrals, un-clipped
+ distance/coverage/width and class reliability by fixed failure strata.
+-42tests pass, including independent native-bin Gaussian/negative-parallax scores.
+Next: full development band contrasts, application/hyper predictions, selection
+error decomposition, shared-response and independent-template recovery.
+
 ## 2026-11-11 — full empirical SED convergence and photometric scale sample
 -61135482COMPLETED0:0:32768sources/128components/43iterations, converged=True,
 3744s. ModelSHAf996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33.
