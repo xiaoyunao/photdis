@@ -46,7 +46,7 @@ def main():
     with np.errstate(divide='ignore'):logweights=np.log(response_weight)
     combined=combine_counts(global_records,logweights);combined['response_draw_ids']=np.array([r['draw'] for r in plan['responses']],'i8')
     assert int(combined['n'])==plan['qualified_parent'];atomic_npz(out/'counts.npz',**combined);counts_rows+=count_rows(combined,'all_qualified_fields')
-    half_delta=0.;rows_total=0;identities=[];mc_failures=0
+    half_delta=0.;rows_total=0;identities=[];mc_failures=0;mask_summary={}
     for field,n in enumerate(plan['field_counts']):
         base=D/'catalog'/f'field_{field:02}';prep=json.loads((base/'prepared.json').read_text())
         status=load(base/'parent_status.npz');assert len(status['status'])==prep['original_parent']
@@ -71,6 +71,12 @@ def main():
             prob=sum(w*p['probability'] for w,p in zip(response_weight,pieces));ha=sum(w*p['half_a'] for w,p in zip(response_weight,pieces));hb=sum(w*p['half_b'] for w,p in zip(response_weight,pieces))
             half_delta=max(half_delta,float(abs(ha-hb).max()));q=prob[:,:,:3].sum(axis=(1,2));selected=q>.95
             field_mc_failures+=int((abs(ha-hb).max(axis=(1,2))+2*plan['discarded_response_mass']>=.005).sum())
+            mask_code=np.sum(pieces[0]['band_mask'].astype('i8')*(1<<np.arange(6))[None,:],axis=1)
+            for code in np.unique(mask_code):
+                use=mask_code==code
+                aggregate=mask_summary.setdefault(int(code),dict(n=0,near95=0,expected_far=0.,joint=np.zeros((3,6))))
+                aggregate['n']+=int(use.sum());aggregate['near95']+=int((use&selected).sum())
+                aggregate['expected_far']+=float((1-q[use&selected]).sum());aggregate['joint']+=prob[use].sum(axis=0)
             field_selected+=int(selected.sum());field_leakage+=float((1-q[selected]).sum());field_near+=float(q.sum())
             selected_near+=float(q[selected].sum());rows_total+=len(q)
             # Descriptive union flags remain conservative if multiple responses survive.
@@ -88,6 +94,15 @@ def main():
     assert len(np.unique(np.concatenate(identities)))==rows_total
     assert abs(combined['covariance'].sum())<1e-4*max(1,float(np.diag(combined['covariance']).sum()))
     csv_rows(out/'fields.csv',field_rows);csv_rows(out/'joint_counts.csv',counts_rows)
+    band_rows=[]
+    for code,record in sorted(mask_summary.items()):
+        label='+'.join(name for i,name in enumerate(['g','r','i','z','W1','W2']) if code&(1<<i))
+        for c in range(3):
+            for b in range(6):
+                band_rows.append(dict(mask_code=code,bands=label,objects=record['n'],near95_selected=record['near95'],
+                    model_expected_far_selected=record['expected_far'],class_index=c,distance_bin=b,expected_count=float(record['joint'][c,b])))
+    assert sum(x['n'] for x in mask_summary.values())==rows_total
+    csv_rows(out/'band_coverage_counts.csv',band_rows)
     csv_rows(out/'prior_comparison.csv',[dict(class_index=c,distance_bin=b,nominal_reference_mean=float(reference_mean[c,b]),matched_response_reference_mean=float(matched_reference_mean[c,b]),target_mean=float(combined['mean'].reshape(3,6)[c,b])) for c in range(3) for b in range(6)])
     save_json(out/'complete.json',dict(method_freeze=method,inputs=inputs,qualified=rows_total,parent=sum(x['parent'] for x in field_rows),
         final_marginal_half_delta=half_delta,target_mc_failures=mc_failures,passed=half_delta+2*plan['discarded_response_mass']<.005,

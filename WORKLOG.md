@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — reject divergent extended response26 and preserve exact bridge math
+-Extendedresponse26s2048 hasRhat1.016/ESS738 butfailszero-divergence gate;
+ no downstreamproduct accepted. Original512chain remainsverified. Need stronger
+ evidenceintegration orconservative sampling; failedextensionretained.
+-Add exactparallel likelihoodcache aroundunchangedstructuredbridge. Independent
+ serial/parallel comparison is bit-identical forratios, evidence anddiagnostics.
+ This changesexecution only, notproposals/seed/priors/likelihood orcriteria.
+-Add exactqualified-catalog bandmask/count coverage summary beforeproduction.
+
 ## 2026-11-11 — isolated quadrature verified and final acceptance driver
 -61144894:singleflaggedreference ID3665494964953709056 passes twofinergrids;
  jointchange5.54e-9,medianmu change-1.79e-8mag. Originalflag/product retained.

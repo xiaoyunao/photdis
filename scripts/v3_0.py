@@ -35,7 +35,7 @@ STAGES = {
     'validation-figures': 'v3_0_validation_figures.py', 'transfer-evaluate': 'v3_0_transfer_evaluate.py',
     'population-quadrature': 'v3_0_population_quadrature.py',
     'native-response': 'v3_0_native_response.py',
-    'evidence-refine': 'v3_0_evidence_refine.py',
+    'evidence-refine': 'v3_0_evidence_refine.py', 'evidence-parallel': 'v3_0_evidence_parallel.py',
     'shared-recovery': 'v3_0_shared_recovery.py', 'shared-recovery-refine': 'v3_0_shared_recovery_refine.py',
     'shared-recovery-report': 'v3_0_shared_recovery_report.py',
     'shared-recovery-batch': 'v3_0_shared_recovery_batch.py',
