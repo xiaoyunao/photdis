@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — completed target counts and prepare recovery interpretation
+-61123779 reused all56checked joint chunks and completed3545observable/2589near targets. Weighted observable1,168,575.7; near844,501.9. Direct qualified-distance coverage and native-parent signed Gaia retained.
+- Near evolved-reference joint contribution263.27 versus2340.75from marginal products; model label contributions are not verified population counts.
+- Added per-group/distance nearest-noise support audit and requirements ledger; figure/report generators parse, diff checks pass. Reservation/recovery and dependent61123659 remain in progress.
+
 ## 2026-11-11 — correct information baseline support before interpretation
 - Found original fine-cell r/sky prior has100%unseen dev sky cells (cal/dev spatial split), so it exactly reproduces the global prior and cannot measure r/sky information.
 - Added explicit amendment: fixed60degRA×hemisphere×r prior with30object shrinkage to r-only, then global; no dev-score grid search. Original fine-cell and raw macro results retained in information_initial archive.

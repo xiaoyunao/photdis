@@ -43,6 +43,17 @@ def main():
             z=load(p);check('chunk_PSF:'+str(p.relative_to(DEST)),(z['TYPE']=='PSF').all())
             check('chunk_mass:'+str(p.relative_to(DEST)),np.allclose(z['joint_mass'][:,:4].sum(axis=(1,2)),1,atol=2e-6))
     d=load(DEST/'recovery_design.npz');train=load(OLD/'training.npz');check('template_not_fit',not np.intersect1d(d['identity'],train['identity']).size)
+    # Audit nearest available noise matches rather than implying new faint truth.
+    noise=[]
+    for group in np.unique(d['group']):
+        for distance in np.unique(d['distance_bin']):
+            u=(d['group']==group)&(d['distance_bin']==distance)&(d['replica']>=0)
+            match=d['target_color_distance'][u]
+            noise.append(dict(template_group=int(group),distance_kpc=[1,3.5,7.5,15,30][distance],n=int(u.sum()),
+                median_match_distance=float(np.median(match)),p95_match_distance=float(np.quantile(match,.95)),
+                fraction_match_gt1=float(np.mean(match>1)),median_r=float(np.median(d['r'][u])),
+                median_max_grz_error=float(np.median(np.max(d['errors'][u,:3],axis=1)))))
+    csv_rows(TABLES/'population_noise_support.csv',noise)
     rows=read('population_recovery')
     for pop in sorted({r['population'] for r in rows}):
         for condition in ('clean','target_noise'):

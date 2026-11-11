@@ -63,7 +63,7 @@ def diagnostics():
     save(fig,'05_metal_pdf_support',['metal_source_pairs'],'Sources use different pair subsets. Cross-source persistence is descriptive evidence, not an independent causal metallicity effect. Gaia only10pairs; SpecDis/SPDist share inputs/teacher limitations.')
     r=read('information_population');pair=read('information_paired_bands');fig,axes=plt.subplots(1,2,figsize=(14,5),constrained_layout=True)
     bands=['grz','griz','grzW1','grzW1W2']
-    for method,color in [('cal_global_prior',GRAY),('cal_r_sky_prior',GREEN),('frozen_partitions',BLUE),('fixed_color_probe',ORANGE)]:
+    for method,color in [('cal_global_prior',GRAY),('cal_r_only_prior','#9C6B9E'),('cal_r_sky_prior',GREEN),('frozen_partitions',BLUE),('fixed_color_probe',ORANGE)]:
         q=[sel(r,bands=b,group='all',population='natural_reference',method=method)[0] for b in bands]
         axes[0].plot(range(4),[val(a,'log_score') for a in q],'o-',color=color,label=method.replace('_',' '))
     for j,(method,color) in enumerate([('fixed_forest',ORANGE),('frozen_partitions_same_labels',BLUE)]):
