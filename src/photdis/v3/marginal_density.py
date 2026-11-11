@@ -21,3 +21,18 @@ def native_marginal(model,observation,grid,coefficient,reference_log_evidence,ca
     logdensity=logsumexp(likelihood+np.log(binary)[:,None,None]+prior[None],axis=(0,1))-reference_log_evidence
     lognorm=logsumexp(logdensity+np.log(trapezoid_weights(grid)))
     return logdensity-lognorm,float(lognorm)
+
+
+def native_joint_marginal(model,observation,grid,coefficient,reference_log_evidence,calibration_mag=None):
+    likelihood,_=kernel_loglike(model,observation,grid,calibration_mag=calibration_mag)
+    radial=norm.logpdf(np.asarray(grid)[None],DISTANCE_BASIS_MEAN[:,None],DISTANCE_BASIS_SIGMA[:,None])
+    with np.errstate(divide='ignore'):
+        prior=logsumexp(np.log(coefficient)[:,:,:,None]+radial[None,:,None,:],axis=1)
+    binary=np.array([1-model.binary_reference_fraction,model.binary_reference_fraction])
+    base=likelihood+np.log(binary)[:,None,None]
+    by_class=np.array([logsumexp(base+prior[None,:,c,:],axis=(0,1)) for c in range(3)])-reference_log_evidence
+    lognorm=logsumexp(by_class+np.log(trapezoid_weights(grid))[None])
+    component=logsumexp(base,axis=0)+logsumexp(prior,axis=1)-reference_log_evidence-lognorm
+    component_probability=np.exp(logsumexp(component+np.log(trapezoid_weights(grid))[None],axis=1))
+    single=logsumexp(base[1]+logsumexp(prior,axis=1)+np.log(trapezoid_weights(grid))[None])-reference_log_evidence-lognorm
+    return by_class-lognorm,dict(log_normalization=float(lognorm),binary_probability=float(np.exp(single)),component_probability=component_probability)

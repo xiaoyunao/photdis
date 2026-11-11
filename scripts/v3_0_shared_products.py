@@ -21,11 +21,13 @@ from photdis.v3.hierarchy import FieldPopulation
 from photdis.v3.population import SharedCounts
 from photdis.v3.marginal import marginal_coefficients
 from photdis.v3.marginal_cdf import cdf_product
-from photdis.v3.marginal_density import native_marginal
+from photdis.v3.marginal_density import native_marginal, native_joint_marginal
+from photdis.v3.likelihood import ContinuousPosterior
+from photdis.v3.compression import DISTANCE_MU_BOUNDARIES
 from v3_0_response import observation
 from photdis.v3.ensemble_counts import merge_chunk_counts
 D=ROOT/'data/v3_0'
-_MODEL=_SOURCE=_RESPONSE=_THETA=_BETA=_FIELDS=_OUT=_PRED=_INPUTS=_DRAW_IDS=_CALIBRATION=None
+_MODEL=_SOURCE=_RESPONSE=_THETA=_BETA=_FIELDS=_OUT=_PRED=_INPUTS=_DRAW_IDS=_CALIBRATION=_WEIGHTS=_NATIVE=None
 
 
 def chunk(path):
@@ -42,7 +44,7 @@ def chunk(path):
     order=np.argsort(_RESPONSE['identity']); rows=order[np.searchsorted(_RESPONSE['identity'][order],s['identity'])]
     np.testing.assert_array_equal(_RESPONSE['identity'][rows],s['identity'])
     source_rows=_RESPONSE['rows'][rows];fields=_SOURCE['field'][source_rows]
-    counts=SharedCounts(_DRAW_IDS,18,seed=308000+int(s['rows'][0]))
+    counts=SharedCounts(_DRAW_IDS,18,draw_weights=_WEIGHTS,seed=308000+int(s['rows'][0]))
     probability=np.zeros((len(rows),3,6)); half_a=np.zeros_like(probability);half_b=np.zeros_like(probability)
     coefficients=np.zeros((len(rows),len(_MODEL.weights),5,3))
     for field in np.unique(fields):
@@ -51,16 +53,31 @@ def chunk(path):
         r=_RESPONSE['response'][rows[use]]
         p=joint_draw_probabilities(r,coef)
         probability[use]=counts.add(p.reshape(len(_DRAW_IDS),len(use),18),_DRAW_IDS).reshape(-1,3,6)
-        half_a[use]=p[::2].mean(axis=0);half_b[use]=p[1::2].mean(axis=0)
-        coefficients[use],_=marginal_coefficients(r,coef)
+        half_a[use]=np.einsum('s,sicb->icb',_WEIGHTS[::2]/_WEIGHTS[::2].sum(),p[::2]);half_b[use]=np.einsum('s,sicb->icb',_WEIGHTS[1::2]/_WEIGHTS[1::2].sum(),p[1::2])
+        coefficients[use],_=marginal_coefficients(r,coef,_WEIGHTS)
     records=[];grids=[];cdfs=[];offset=[0];native_grids=[];native_logpdf=[];native_offset=[0]
     for j in range(len(rows)):
         compact=unpack(packed,j)
-        result=cdf_product(compact,_MODEL,coefficients[j])
         lo,hi=packed['full_grid_offset'][j:j+2]
-        grid=np.unique(np.r_[packed['full_mu'][lo:hi],np.linspace(-20.,50.,1401)])
-        lp,lognorm=native_marginal(_MODEL,observation(_SOURCE,source_rows[j]),grid,coefficients[j],
-            compact['source_log_evidence'],calibration_mag=_CALIBRATION[source_rows[j]])
+        grid=np.unique(np.r_[packed['full_mu'][lo:hi],np.linspace(-20.,50.,1401),DISTANCE_MU_BOUNDARIES])
+        obs=observation(_SOURCE,source_rows[j])
+        if _NATIVE:
+            logjoint,meta=native_joint_marginal(_MODEL,obs,grid,coefficients[j],compact['source_log_evidence'],calibration_mag=_CALIBRATION[source_rows[j]])
+            density=np.exp(logjoint);posterior=ContinuousPosterior(grid,density,0.,{})
+            cumulative=np.c_[np.zeros(3),np.cumsum((density[:,1:]+density[:,:-1])*np.diff(grid)[None]/2,axis=1)]
+            mass=posterior.distance_bins()
+            result=dict(grid=grid,class_cdf=cumulative,mu=posterior.quantiles(),class_distance=mass,
+                qnear=float(mass[:,:3].sum()),binary_probability=meta['binary_probability'],
+                component_probability=meta['component_probability'],integral=float(np.exp(meta['log_normalization'])),
+                omitted_posterior_bound=0.,joint_prior_ratio_bound=np.nan)
+            lognorm=meta['log_normalization'];lp=np.logaddexp.reduce(logjoint,axis=0)
+            positions,masses=posterior.modes();rank=np.argsort(-masses)[:8]
+            mode=np.full(8,np.nan);mode_mass=np.zeros(8);mode[:len(rank)]=positions[rank];mode_mass[:len(rank)]=masses[rank]
+            result.update(modes=mode,mode_mass=mode_mass,minor_mode_mass=float(1-mode_mass.sum()))
+        else:
+            result=cdf_product(compact,_MODEL,coefficients[j])
+            result.update(modes=np.full(8,np.nan),mode_mass=np.zeros(8),minor_mode_mass=1.)
+            lp,lognorm=native_marginal(_MODEL,obs,grid,coefficients[j],compact['source_log_evidence'],calibration_mag=_CALIBRATION[source_rows[j]])
         result['native_log_normalization']=lognorm
         native_grids.append(grid);native_logpdf.append(lp);native_offset.append(native_offset[-1]+len(grid))
         grids.append(result.pop('grid'));cdfs.append(result.pop('class_cdf'))
@@ -88,12 +105,13 @@ def chunk(path):
 
 
 def main():
-    global _MODEL,_SOURCE,_RESPONSE,_THETA,_BETA,_FIELDS,_OUT,_PRED,_INPUTS,_DRAW_IDS,_CALIBRATION
+    global _MODEL,_SOURCE,_RESPONSE,_THETA,_BETA,_FIELDS,_OUT,_PRED,_INPUTS,_DRAW_IDS,_CALIBRATION,_WEIGHTS,_NATIVE
     require_compute();p=argparse.ArgumentParser()
     p.add_argument('--draw',type=int,default=int(os.getenv('SLURM_ARRAY_TASK_ID',-1)));p.add_argument('--draws',type=int,default=512)
+    p.add_argument('--native-response',action='store_true');p.add_argument('--quadrature-draws',type=int,default=0)
     p.add_argument('--workers',type=int,default=32);p.add_argument('--limit-chunks',type=int,default=0)
     a=p.parse_args();start=time.monotonic()
-    nominal=a.draw==-1
+    nominal=a.draw==-1;_NATIVE=a.native_response
     model_path=D/'sed_fit.joblib' if nominal else D/'uncertainty_refit'/f'draw_{a.draw:02}/model.joblib'
     target=D/'targets'/f'application_fit_0_cached_s{a.draws}' if nominal else D/'shared_targets'/f'refit_{a.draw:02}_s{a.draws}'
     _PRED=D/'predictions/application_multiband_fit_0' if nominal else D/'shared_predictions/application_refit_0'/f'draw_{a.draw:02}'
@@ -104,6 +122,12 @@ def main():
     _MODEL=inference_model(joblib.load(model_path));_SOURCE=load(D/'cohorts/application.npz')
     response_path=target/'component_response.npz'
     if nominal and not response_path.exists():response_path=D/'targets/application_fit_0/component_response.npz'
+        # A numerical correction has its own immutable response and chain weights.
+    native_dir=D/'native_responses'/(f'nominal_s{a.draws}' if nominal else f'refit_{a.draw:02}_s{a.draws}')
+    if _NATIVE:
+        native_record=json.loads((native_dir/'complete.json').read_text());assert native_record['passed']
+        response_path=native_dir/'component_response.npz'
+        assert sha(response_path)==native_record['outputs'][response_path.name]
     _RESPONSE=load(response_path)
     _CALIBRATION=np.zeros((len(_SOURCE['identity']),6))
     if not nominal:
@@ -116,12 +140,27 @@ def main():
     dummy=np.ones((len(_FIELDS),len(_MODEL.weights),5))
     hierarchy=FieldPopulation(dummy,dummy,_MODEL,_FIELDS)
     chains=load(target/'chains.npz')['samples'];samples=chains.transpose(1,0,2).reshape(-1,chains.shape[-1])
+    _WEIGHTS=np.ones(len(samples))/len(samples)
+    if _NATIVE:
+        correction=load(native_dir/'chain_correction.npz');np.testing.assert_array_equal(samples,correction['samples']);_WEIGHTS=correction['weights']
+    quadrature_dir=None
+    if a.quadrature_draws:
+        assert _NATIVE and not nominal
+        quadrature_dir=D/'population_quadrature'/f'refit_{a.draw:02}_native_n{a.quadrature_draws}'
+        quadrature_record=json.loads((quadrature_dir/'complete.json').read_text())
+        assert quadrature_record['effective_sample_size']>=100
+        assert sha(quadrature_dir/'samples.npz')==quadrature_record['outputs']['samples.npz']
+        quadrature=load(quadrature_dir/'samples.npz');samples=quadrature['samples'];_WEIGHTS=quadrature['weights']
     decoded=[hierarchy.decode(z)[:2] for z in samples]
     _THETA=np.array([x[0] for x in decoded]);_BETA=np.array([x[1] for x in decoded]);_DRAW_IDS=np.arange(len(samples),dtype='i8')
     name=f'nominal_s{a.draws}' if nominal else f'refit_{a.draw:02}_s{a.draws}'
+    if _NATIVE:name+='_native'
+    if a.quadrature_draws:name+=f'_is{a.quadrature_draws}'
     if a.limit_chunks:name+=f'_pilot{a.limit_chunks}'
     _OUT=D/'shared_products'/name;(_OUT/'chunks').mkdir(parents=True,exist_ok=True)
     paths=[model_path,target/'complete.json',target/'chains.npz',response_path,_PRED/'complete.json',D/'cohorts/application.npz',ROOT/'scripts/v3_0_shared_products.py']
+    if _NATIVE:paths += [native_dir/'complete.json',native_dir/'chain_correction.npz']
+    if quadrature_dir is not None:paths += [quadrature_dir/'complete.json',quadrature_dir/'samples.npz']
     paths += [ROOT/'src/photdis/v3'/x for x in ('marginal_density.py','marginal_cdf.py','marginal.py','target.py','population.py','ensemble_counts.py')]
     _INPUTS={str(x.relative_to(ROOT)):sha(x) for x in paths};_INPUTS.update(vars(a))
     freeze=_OUT/'inputs.json'
@@ -142,7 +181,7 @@ def main():
     # is tested after evidence-weighted combination, not max over conditional runs.
     numerical=all(v<.001 for v in errors.values())
     save_json(_OUT/'complete.json',dict(inputs=_INPUTS,n=int(counts['n']),global_response_draw=a.draw,
-        conditional_marginal_half_delta=float(counts['marginal_half_delta']),integration_passed=bool(numerical),
+        conditional_marginal_half_delta=float(counts['marginal_half_delta']),integration_passed=bool(numerical),parameter_draw_ess=float(1/(_WEIGHTS@_WEIGHTS)),
         errors=errors,chunks={str(x):sha(x) for x in markers},counts_sha256=sha(_OUT/'counts.npz'),
         target_complete_sha256=sha(target/'complete.json'),elapsed_seconds=time.monotonic()-start,job=os.getenv('SLURM_JOB_ID')))
     print('SHARED PRODUCTS COMPLETE',a.draw,numerical,errors,flush=True)

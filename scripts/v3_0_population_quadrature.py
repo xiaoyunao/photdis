@@ -17,13 +17,13 @@ D=ROOT/'data/v3_0'
 
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--draw',type=int,required=True)
+    p.add_argument('--response',choices=['native','compressed'],default='compressed')
     p.add_argument('--draws',type=int,default=32768);p.add_argument('--chain-draws',type=int,default=512)
     a=p.parse_args();start=time.monotonic();target=D/'shared_targets'/f'refit_{a.draw:02}_s{a.chain_draws}'
     native=D/'native_responses'/f'refit_{a.draw:02}_s{a.chain_draws}'
     record=json.loads((target/'complete.json').read_text());assert record['sampler_passed']
-    response_path=native/'component_response.npz'
-    if response_path.exists():assert (native/'complete.json').exists()
-    else:response_path=target/'component_response.npz'
+    response_path=(native if a.response=='native' else target)/'component_response.npz'
+    if a.response=='native':assert (native/'complete.json').exists()
     model_path=D/'uncertainty_refit'/f'draw_{a.draw:02}/model.joblib';source_path=D/'cohorts/application.npz'
     paths=[target/'complete.json',target/'chains.npz',response_path,model_path,source_path,
         ROOT/'scripts/v3_0_population_quadrature.py',ROOT/'src/photdis/v3/population_quadrature.py',ROOT/'src/photdis/v3/batch_hierarchy.py',ROOT/'src/photdis/v3/structured_evidence.py']

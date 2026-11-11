@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-11 — unpruned joint posterior export implemented
+-Add directnativeclassPDF/CDF/modes andweightedsharedcountsusingexactnative
+ responses plus preserved-chainimportanceweights. This removesbranchomission,
+ rather thanloosening bounds. Nativejoint integrals equalindependenttarget
+ responsibilities to1e-12 in focusedtest; full60tests run beforeproduction.
+-Explicitcompressed/native quadrature inputprevents a racewithresponsegeneration.
+ Originalcompressed products remainarchivedinplace; nativeproductsusenewnamespaces.
+
 ## 2026-11-11 — native-response numerical correction and explanatory figures
 -Fullproducts61141578/580complete,but strict integrationfails fewstars:nominal
  omittedupperboundmax0.00299,refit16max0.01408;nativeintegraldifferences0.00108/
