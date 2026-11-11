@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — correct information baseline support before interpretation
+- Found original fine-cell r/sky prior has100%unseen dev sky cells (cal/dev spatial split), so it exactly reproduces the global prior and cannot measure r/sky information.
+- Added explicit amendment: fixed60degRA×hemisphere×r prior with30object shrinkage to r-only, then global; no dev-score grid search. Original fine-cell and raw macro results retained in information_initial archive.
+- Equal-class stress now retargets EVERY baseline and color probability using the same uniform/global-cal prior factor; avoids comparing a uniform evaluation population to a mismatched natural prior. Label-shift assumption explicit.
+- Frozen classifiers/distance models unchanged. Validator applies this compact cached-score correction, then checks actual population products; final reporting/plots in preparation.
+
 ## 2026-11-11 — preserve completed joint chunks after completion-writer failure
 -61123523 reached56application joint checkpoints and summary tables, then failed at completion manifest: returned chunk paths are strings and have no with_suffix. Correct Path conversion; all scientific PDF/class marginal checks already passed.
 - Tighten direct-reference coverage through existing clean source qualification (previous availability flag alone could include risk-flagged references). Explicitly archive prior coverage/count tables and migrate only population writer source hash; preserve56prediction chunks. Reserve/recovery had not started.

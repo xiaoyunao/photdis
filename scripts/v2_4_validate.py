@@ -14,13 +14,19 @@ def read(name):
 
 
 def main():
-    require_compute();checks={}
+    require_compute()
+    from v2_4_information_followup import main as information_support
+    information_support()
+    checks={}
     def check(k,v):checks[k]=bool(v);assert v,k
     freeze=json.loads((OLD/'models_frozen.json').read_text())
     for n,h in freeze['models'].items():check('unchanged_model:'+n,sha(OLD/(n+'.joblib'))==h)
     for n,h in freeze['inputs'].items():check('old_freeze:'+n,sha(ROOT/n)==h)
     for stage in ('audit','population','recovery'):
         for path,h in json.loads((DEST/(stage+'_freeze.json')).read_text()).items():check('new_freeze:'+path,sha(ROOT/path)==h)
+    info=json.loads((DEST/'information_complete.json').read_text())
+    check('information_support_source',sha(ROOT/'scripts/v2_4_information_followup.py')==info['source_sha256'])
+    check('information_support_amendment',sha(ROOT/'docs/v2_4_information_amendment.md')==info['amendment_sha256'])
     a=read('anomaly_objects');check('anomaly_denominator',len(a)==711);check('anomaly_numerator',sum(x['low_pit']=='True' for x in a)==147)
     check('anomaly_unique_identity',len({x['identity'] for x in a})==711)
     check('anomaly_PSF',all(x['TYPE']=='PSF' for x in a))
