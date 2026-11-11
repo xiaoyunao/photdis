@@ -1,0 +1,8 @@
+{
+  "original_pairs": 2055,
+  "unique_controls": 354,
+  "source_rows": 24,
+  "bootstrap": 1000,
+  "uncertainty": "Separate repeated-control and sky-pair cluster bootstrap intervals; no IID independence or causal attribution.",
+  "job": "61123419"
+}

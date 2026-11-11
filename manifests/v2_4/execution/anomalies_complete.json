@@ -1,0 +1,12 @@
+{
+  "n": 711,
+  "low": 147,
+  "SPDist": 399,
+  "intersection": 196,
+  "low_intersection": 60,
+  "identical_QRF_XD_rows": true,
+  "full_denominator": true,
+  "Gaia_quality_rows": 709,
+  "not_independent_distance_truth": true,
+  "job": "61123419"
+}

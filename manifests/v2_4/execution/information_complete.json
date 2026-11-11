@@ -1,0 +1,19 @@
+{
+  "cal_n": 27508,
+  "dev_n": 33251,
+  "global_prior": [
+    0.8351842090914048,
+    0.02073829040876788,
+    0.14407750049982734
+  ],
+  "matched_identity": true,
+  "no_fit": true,
+  "cal_only_population_prior": true,
+  "not_information_bound": true,
+  "limitation": "Frozen probe caches use their original error/calibration treatment; all arms share identities and population. Narrow matched i+WISE reference subset is not optical-parent composition.",
+  "inputs": {
+    "data/v2_1/information_eval.npz": "be7e59bd8f528175c09c7ddfc2716f7fa5ba2edb45bd8ef3fe274c897fdd1841",
+    "data/v2_1/information_probabilities.npz": "781f25f1e4282d48a5fb3d1427c221a3cbea1c5d3d2d73236d1e5db7e38172d1"
+  },
+  "job": "61123419"
+}

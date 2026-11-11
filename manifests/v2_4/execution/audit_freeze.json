@@ -1,0 +1,8 @@
+{
+  "docs/v2_4_protocol.md": "039fbcb033276630a6df02f18343bfe2eee03514d0e8fefab67ffc6af873be89",
+  "scripts/v2_4_audit.py": "1a3693b7a4e0bceb1e727d73c798fbc762768bb6bde1dbd12dd01807b99b82f6",
+  "src/photdis/science_v2_4.py": "47a276a33c1abc4bc6049e27a5714b8453d16278193d990475dc315414562ff0",
+  "data/v2_3/models_frozen.json": "8eacb4fd0f19e57be3cc9bf752557e0510465e891bcf6bd823e7c8f55547598a",
+  "data/v2_3/control.joblib": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+  "data/v2_3/candidate.joblib": "a20c85f59ff8c92a6e4b36905b81bb0f71d06eff9a8db43cbbe498c3dbd43a84"
+}

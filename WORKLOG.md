@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — first real diagnostic results and population job running
+-61123419 COMPLETED0:0(1:13):711Gaia-near identities retain147lowPIT;196overlap399SPDist near references,60of147lowPIT haveSPDist. Those60have medianSPDist-minus-QRF mu−0.030mag; Gaia minusSPDist median−2.66combined sigma. Do not assume both references support distant branches.
+- Source-paired poor-metal results persist for2054SpecDis and1188SPDist pairs; only10both-side Gaia anchors. Separate control-ID/sky-pair bootstrap intervals and unique counts retained.
+- Information audit uses33251same development IDs and9sky cells; fixed-probe log gains forgrz→griz0.00516,grz→W10.01343,W1→W20.00277nats. These are conditional matched-reference gains, not physical information limits.
+-61123523 uniquely submitted and verified RUNNING nid004723 for parent joint counts, unopened reservation and independent-SED recovery. Added actual-artifact validator; no monitoring automation.
+
 ## 2026-11-11 — target-count and independent-SED recovery programs implemented
 - Audit61123419 submitted uniquely after empty same-name queue check; status/log inspection in progress.
 - Added v2_4_population.py: observable target before reference join, original-parent signed Gaia, exact frozen joint marginal checks, weighted class-distance reference contributions and evidence support. Reserve up to250new IDs/field, exact native TYPE from original sweeps; no new reservation reference outcomes/predictions opened.
