@@ -22,6 +22,8 @@ def main():
     for group in ['all','red','blue']:
         q=[r for r in red if r['group']==group and r['weighting']=='matched_identity' and r['tail']=='low' and r['cluster']=='reused_control'];d={r['method']:r for r in q};a=d['application_raw']
         out.append(f"| {group} | {a['matched']}/{a['denominator']} | {a['unique_controls']} | {100*float(d['historical_raw']['value']):.2f}% | {100*float(d['historical_conditional']['value']):.2f}% | {100*float(a['value']):.2f}% | {100*float(a['low']):.2f}–{100*float(a['high']):.2f}% |")
+    high=[r for r in red if r['group']=='red' and r['method']=='application_raw' and r['tail']=='high' and r['weighting']=='matched_identity' and r['cluster']=='reused_control'][0]
+    out += ['',f"应用红端高PIT尾部仍为{100*float(high['value']):.2f}%，控制身份区间[{100*float(high['low']):.2f},{100*float(high['high']):.2f}]%。未重现历史低尾异常不等于全面校准；不能仅报告低尾而隐藏高尾。"]
     out += ['', '该设计约束迁移解释，而非证明Gaia或光谱距离哪一方正确。匹配重复降低有效证据量；不能用匹配行数当独立对象数。','', '## 贫金属：全有符号Gaia观测', '',
             '| 侧别 | 原配对数 | 合格观测行 | 唯一身份 | 负视差行 | SNR<5行 | 拟合重叠行 |','|---|---:|---:|---:|---:|---:|---:|']
     for r in metal:out.append('| '+' | '.join(r[k] for k in ['side','original_pairs','eligible','unique_eligible','negative','weak','fit_overlap'])+' |')
@@ -40,6 +42,11 @@ def main():
         for regime in ['0','1']:
             q={r['method']:r for r in rec if r['design']==design and r['regime']==regime and r['method'] in ['point','pdf','population']}
             out.append(f"| {design} | {'预定测光入口' if regime=='0' else '补集压力'} | "+' | '.join(f"{100*float(q[k]['mean_L1']):.2f}%" for k in ['point','pdf','population'])+' |')
+    support=read('actual_parent_support')
+    out += ['', '### 父样本观测支持审计', '', '| 预定选择 | 总模拟行 | 颜色/星等邻居距离≤1 |', '|---|---:|---:|']
+    for regime in ['0','1']:
+        q=[r for r in support if r['regime']==regime];out.append(f"| {regime} | {sum(int(r['n']) for r in q)} | {sum(int(r['parent_neighbor_within1']) for r in q)} |")
+    out += ['', '邻居距离以(r0,g−r,r−z)/(1,0.3,0.3)度量，按星族和场景的表保留。固定r/误差入口只是一个选择域，不等于完整观测支持；14–15等的噪声标定仅3个父样本对象，14等以下无噪声对象。支持外压力结果不能外推真实目录人数。']
     out += ['', '## 区间、可辨识性与数值可信度', '',
             f"双倍Sobol积分网格的最大组分比例变化为{max(float(r['grid_max_delta']) for r in diag):.5f}；最小积分有效点数{min(float(r['ess']) for r in diag):.2f}；最大参数相关绝对值{max(float(r['max_correlation']) for r in diag):.4f}。边界质量逐目录保留。积分未稳定或边界堆积的情况不得认作精确人口测量。",
             '', '总体参数区间与重复目录人数预测区间分别保存。前者对设计条件比例评分，后者在每个独立目录的实现人数上作诊断；后者不是逐对象潜在类别后验计数区间。每格只有12次独立目录覆盖试验，Wilson区间必须同时阅读，不能据点估计宣布95%校准。', '',

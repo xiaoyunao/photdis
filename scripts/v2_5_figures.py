@@ -1,11 +1,27 @@
 #!/usr/bin/env python3
 """English-only v2.5 scientific evidence from actual compact tables."""
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import v2_2_figures as f
 from photdis_figure_style import STYLE,BLUE,ORANGE,GREEN,GRAY
 f.TABLES=f.ROOT/'manifests/v2_5';f.FIG=f.ROOT/'figures/v2_5'
-read,sel,val,save=f.read,f.sel,f.val,f.save
+read,sel,val=f.read,f.sel,f.val
+
+
+def save(fig,name,sources,caption):
+    import csv,json,hashlib,re
+    from matplotlib.text import Text
+    f.FIG.mkdir(parents=True,exist_ok=True);dest=f.TABLES/'figures';dest.mkdir(exist_ok=True)
+    assert all(not re.search(r'[\u3400-\u9fff]',x.get_text()) for x in fig.findobj(match=Text))
+    fig.savefig(f.FIG/(name+'.png'),dpi=300,bbox_inches='tight');fig.savefig(f.FIG/(name+'.pdf'),dpi=300,bbox_inches='tight');plt.close(fig)
+    rows=[dict(table_source=source,**r) for source in sources for r in read(source)]
+    fields=list(dict.fromkeys(k for r in rows for k in r))
+    with open(dest/(name+'.csv'),'w') as handle:
+        writer=csv.DictWriter(handle,fields,lineterminator='\n');writer.writeheader();writer.writerows(rows)
+    (dest/(name+'.json')).write_text(json.dumps(dict(name=name,caption=caption,
+        selection='Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim',
+        sources={s:hashlib.sha256((f.TABLES/(s+'.csv')).read_bytes()).hexdigest() for s in sources}),indent=2)+'\n')
 
 
 def main():
@@ -35,6 +51,7 @@ def main():
         a.axhline(0,color=GRAY,ls='--');a.set(xticks=range(3),xticklabels=['+ i','+ W1','+ W2'],title=title,ylabel='Paired log-score gain (nats)')
     ax[0].legend(fontsize=10);fig.suptitle('Same matched identities · class-specific sky-cluster intervals')
     save(fig,'03_band_gains_by_class',['band_gain_by_class'],'Group-specific uncertainty, not borrowed overall intervals. Fixed probes and partitions have different fitting support. Matched bands have no faint evolved references; no physical information-bound claim.')
+    if '--diagnostics-only' in sys.argv:return
     r=read('recovery_summary');designs=['reference_like','giant_only','poor_only','distance_only','ordinary_dominated','giant_rich','metal_poor_rich','balanced']
     fig,ax=plt.subplots(2,1,figsize=(15,9),constrained_layout=True)
     for a,regime,title in zip(ax,['0','1'],['Fixed photometric entrance','Selection complement: stress only']):

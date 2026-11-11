@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — initial recovery complete; refine numerical integration
+-61127456reused384QRFchunks and completed192catalogs;61127009passed1958actualchecks.256caltemplates (32missingclass),224independenttesttemplates.
+- Newpopulation reduces distancefractionL1 in all8entrance scenarios versus frozenPDF; intervals still under-cover some bins. InitialESSmin5.94/maxgridshift0.01470,7catalogs>0.01.
+- Freeze numerical-only amendment2^18versus2^17; preserve initialtables/posteriors/validation and all predictions. No scientificmodel/selection change.
+- Actual parent-neighbor support12248/12288entrance versus8034/12288complement; sparsebrightnoise and extrapolation explicit.
+
 ## 2026-11-11 — preserve all fresh predictions after summary writer error
 -61126775finished diagnostics and384QRFchunks/24576objects, then TypeError atfraction[:,None]: four historicalscenariofractions are Pythonlists. No model/measurement computation failure.
 - Convert fractions toarray, explicitly migrate only population writer sourcehash4ad00fe; preserve template/catalog/QRF hashes and reuse all completed caches. Other frozen source/input hashes must match.

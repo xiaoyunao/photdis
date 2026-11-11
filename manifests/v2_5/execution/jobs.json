@@ -5,13 +5,23 @@
       "role": "diagnostics and independent response recovery",
       "initial_state": "RUNNING",
       "node": "nid004263",
-      "submitted_once": true
+      "submitted_once": true,
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:11:03",
+      "reason": "Scenario list indexed as2D in truth summary after all384QRFchunks completed"
     },
     {
       "job": "61127009",
       "role": "afterok production artifact validation",
-      "dependency": "afterok:61126775",
+      "dependency": "afterok:61127456",
       "initial_state": "PENDING"
+    },
+    {
+      "job": "61127456",
+      "role": "recovery-only resume",
+      "initial_state": "submitted",
+      "reused_QRF_chunks": 384
     }
   ],
   "no_automation": true

@@ -16,6 +16,9 @@ def main():
         for path,h in json.loads((D/(stage+'_freeze.json')).read_text()).items():check('freeze:'+path,sha(ROOT/path)==h)
     freeze=json.loads((ROOT/'data/v2_3/models_frozen.json').read_text())
     for name,h in freeze['models'].items():check('original_model:'+name,sha(ROOT/'data/v2_3'/(name+'.joblib'))==h)
+    if (D/'numerical_complete.json').exists():
+        for path,h in json.loads((D/'numerical_freeze.json').read_text()).items():check('numerical_freeze:'+path,sha(ROOT/path)==h)
+        check('numeric_only_catalog_preserved',json.loads((D/'numerical_complete.json').read_text())['unchanged_catalog'])
     c=load(D/'cal_templates.npz');t=load(D/'test_templates.npz');a=load(D/'catalogs.npz');fit=load(ROOT/'data/v2_3/training.npz')['identity']
     check('cal_test_disjoint',not np.intersect1d(c['identity'],t['identity']).size)
     for name,q in [('cal',c),('test',t),('catalog',a)]:
