@@ -72,6 +72,19 @@ def main():
             z=load(p);check('chunk_PSF:'+str(p.relative_to(DEST)),(z['TYPE']=='PSF').all())
             check('chunk_mass:'+str(p.relative_to(DEST)),np.allclose(z['joint_mass'][:,:4].sum(axis=(1,2)),1,atol=2e-6))
     d=load(DEST/'recovery_design.npz');train=load(OLD/'training.npz');check('template_not_fit',not np.intersect1d(d['identity'],train['identity']).size)
+    app=load(ROOT/'data/v2_2/application_inputs.npz');pred=load(OLD/'application_control.npz');joint=load(DEST/'application_joint_summary.npz')
+    overlap=np.isin(joint['identity'],train['identity']);rr=joint['rows'];weights=app['sample_weight'][rr]
+    check('application_overlap_identity_join',np.array_equal(joint['identity'],app['identity'][rr]))
+    overlap_rows=[]
+    for selection,selected in [('observable_parent',np.ones(len(rr),bool)),('near_scope',pred['near_scope'][rr])]:
+        for fitted in (False,True):
+            u=selected&(overlap==fitted);ga=u&np.isfinite(joint['gaia_log']);w=weights[ga];pit=joint['gaia_pit'][ga]
+            overlap_rows.append(dict(selection=selection,in_fitted_training=fitted,n=int(u.sum()),weight=float(weights[u].sum()),
+                Gaia_n=int(ga.sum()),Gaia_weight=float(w.sum()),
+                Gaia_log=float(np.average(joint['gaia_log'][ga],weights=w)) if ga.any() else None,
+                Gaia_low=float(np.average(pit<.05,weights=w)) if ga.any() else None,
+                Gaia_high=float(np.average(pit>.95,weights=w)) if ga.any() else None))
+    csv_rows(TABLES/'application_training_overlap.csv',overlap_rows)
     # Audit nearest available noise matches rather than implying new faint truth.
     noise=[]
     for group in np.unique(d['group']):

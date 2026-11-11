@@ -38,6 +38,8 @@ def main():
         '这些期望不是已确认的真实巨矮人数，不能把缺标签质量分配给任意星族来凑数。条件加权人数方差也不是抽样设计、教师尺度及人口先验全部不确定度的置信区间。',
         table([r for r in read('application_gaia') if r['group']=='all'],[('selection','选择',1),('risk_flag','非恒星风险标记',1),('n','Gaia N',1),('negative','负视差N',1),('log_mean','加权观测log',1),('low','PIT低尾%',100),('high','PIT高尾%',100)]),
         '这批Gaia是从光测目标关联，保留负值，不套用“历史未训练保留身份”的SNR<20条件；但Gaia可获得性/质量门槛及部分身份历史训练重叠仍限制独立评价。',
+        table(read('application_training_overlap'),[('selection','选择',1),('in_fitted_training','属于拟合训练身份',1),('n','目标N',1),('weight','目标权重',1),('Gaia_n','Gaia N',1),('Gaia_log','Gaia加权log',1),('Gaia_low','PIT低尾%',100),('Gaia_high','PIT高尾%',100)]),
+        '上述训练身份交集按原始精确ID核对，包含风险对象而不据参考类别再选样；已在拟合中的对象不能算独立验证，不在拟合中的对象也仍有先前查看和同天区选择限制。[完整身份重叠分层](../manifests/v2_4/application_training_overlap.csv)。',
         f'另从原13场光测父样本预留{reserve["n"]}个新身份，先排除全部已知历史参考/训练及已查看应用身份，再按身份排序与可观测条件选取；逐原生sweep核实TYPE。只保存测光，不打开新参考结果、不生成距离预测。这是同既有天空范围的前瞻身份预留；系统成员身份尚未核实，新天空/独立标尺的最终验证仍需后续获取，不能将这个预留直接称为已完成最终验证。',
         '[预留逐场审计](../manifests/v2_4/reservation_counts.csv) · [预留记录](../manifests/v2_4/execution/reservation.json)',
         '## 4. 波段信息与模型保留能力',
@@ -70,7 +72,7 @@ def main():
     (D/'v2_4_result.md').write_text('\n\n'.join(parts)+'\n')
     atlas=['# v2.4 scientific-use atlas','English-only; Pal5 styling. PNG300dpi, PDF and source CSV/JSON. Scientific samples and denominators are untrimmed.']
     for path in sorted((M/'figures').glob('*.json')):
-        q=json.loads(path.read_text());n=q['name'];atlas+=['## '+n,q['caption'],f'[PNG](../figures/v2_4/{n}.png) · [PDF](../figures/v2_4/{n}.pdf) · [CSV](../manifests/v2_4/figures/{n}.csv) · [JSON](../manifests/v2_4/figures/{n}.json)']
+        q=json.loads(path.read_text());n=q['name'];atlas+=['## '+n,q['caption'],f'![{n}](../figures/v2_4/{n}.png)',f'[PNG](../figures/v2_4/{n}.png) · [PDF](../figures/v2_4/{n}.pdf) · [CSV](../manifests/v2_4/figures/{n}.csv) · [JSON](../manifests/v2_4/figures/{n}.json)']
     (D/'v2_4_atlas.md').write_text('\n\n'.join(atlas)+'\n');print('V2.4 REPORT COMPLETE')
 
 
