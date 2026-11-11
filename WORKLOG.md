@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — v2.6 initial results and numeric-only luminosity refinement
+-61129359COMPLETED0:0(2:28),61129363COMPLETED0:0(1:25);61129443validated1639checks.192samecatalogs have full joint outputs; nested256/768/2048source responses completed.
+- Known/same-template2–5coverage12/12forreference/ordinary versus independenttransfer1/12,0/12: response migration drives the observed failure.
+- Cal source-conditioned correction mixed by VAC source; initial SPDist source-offset interval collapses on.05mag grid. Freeze numerical-only161offset/25scatter refinement in separate directory; preserve all initialproducts.
+- Next: refined likelihood validation, actual-count summary, inspectedEnglishplates and scientific limitations.
+
 ## 2026-11-11 — v2.6 production submitted
 - Confirmed61129243FAILED1:0at40s and empty user queue; sole corrected population run61129359 and independent luminosity run61129363submitted. No duplicate or periodic monitoring.
 - Full frozen scope A–D implemented.8population tests and12combined numerical/luminosity tests passed; original model/data hashes retained.

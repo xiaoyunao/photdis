@@ -1,0 +1,18 @@
+{
+  "eligible": [
+    6595,
+    2136,
+    704,
+    6022,
+    7114
+  ],
+  "sizes": [
+    256,
+    768,
+    2048
+  ],
+  "nonPSF": 0,
+  "missing_TYPE": 0,
+  "fit_overlap": 0,
+  "test_overlap": 0
+}

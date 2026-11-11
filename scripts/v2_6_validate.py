@@ -18,12 +18,16 @@ def read(path):
 
 def main():
     require_compute();checks={}
+    LD=D/'luminosity_refined' if (D/'luminosity_refined/luminosity_complete.json').exists() else D
     def check(k,v):
         checks[k]=bool(v)
         if not v:raise AssertionError(k)
     cat=load(ROOT/'data/v2_5/catalogs.npz');base=np.array(json.loads((ROOT/'data/v2_5/templates.json').read_text())['base'])
     for marker in ('population_freeze','luminosity_freeze'):
         for name,h in json.loads((D/(marker+'.json')).read_text()).items():check(marker+':'+name,sha(ROOT/name)==h)
+    if LD!=D:
+        for marker in ('luminosity_freeze','numerical_freeze'):
+            for name,h in json.loads((LD/(marker+'.json')).read_text()).items():check('refined:'+marker+':'+name,sha(ROOT/name)==h)
     assignment=[]
     for directory,expected in [('observed',192),('uncertain_observed',36)]:
         paths=sorted((D/directory).glob('*.npz'));check(directory+':count',len(paths)==expected)
@@ -53,7 +57,7 @@ def main():
         check(f'scale{scale}:PSF',np.all(c['TYPE']=='PSF'));check(f'scale{scale}:no_fit_test',not np.intersect1d(last,np.r_[test,fit]).size)
         check(f'scale{scale}:membership',np.allclose(c['member'].sum(axis=1),1) and np.all(c['member']>=0))
     for source in ('specdis','spdist'):
-        p=load(D/f'photometric_luminosity_{source}.npz');c=load(D/f'luminosity_posterior_{source}.npz')
+        p=load(LD/f'photometric_luminosity_{source}.npz');c=load(LD/f'luminosity_posterior_{source}.npz')
         check(source+':identity_isolation',not np.intersect1d(p['identity'],c['identity']).size);check(source+':PSF',np.all(p['TYPE']=='PSF') and np.all(c['TYPE']=='PSF'))
         for side in ('before','after'):check(source+':latent_'+side,np.allclose(p['joint_'+side].sum(axis=(1,2)),1))
         check(source+':calibration_weight',np.isclose(c['weight'].sum(),1))
@@ -85,7 +89,7 @@ def main():
                 row=next(r for r in old if r['design']==design and int(r['regime'])==regime and int(r['bin'])==b);bound=next(r for r in bounds if int(r['regime'])==regime and int(r['bin'])==b)
                 truth=float(row['truth']);reach.append(dict(design=design,regime=regime,bin=b,truth=truth,minimum=float(bound['minimum']),maximum=float(bound['maximum']),inside=bool(float(bound['minimum'])<=truth<=float(bound['maximum']))))
     csv_rows(T/'reachable_truth.csv',reach)
-    luminosity=read(T/'luminosity_objects.csv');distance=[];qrf=[]
+    luminosity=read(LD/'tables/luminosity_objects.csv');distance=[];qrf=[]
     oldgaia={int(r['identity']):r for r in read(ROOT/'data/v2_5/tables/metal_gaia_objects.csv') if r['model']=='control'}
     for source in ('specdis','spdist'):
         for side in ('poor','ordinary'):
@@ -100,7 +104,7 @@ def main():
     csv_rows(T/'luminosity_distance_agreement.csv',distance);csv_rows(T/'luminosity_QRF_same_objects.csv',qrf)
     check('controls108',len(load(D/'control_counts.npz')['counts'])==108)
     check('count_summaries_all192',len({r['catalog'] for r in new if r['method']=='fixed_response'})==192)
-    save_json(D/'validation.json',dict(actual_checks=len(checks),all_passed=all(checks.values()),checks=checks,scientific_acceptance=False,reason='Passing implementation checks does not establish response calibration or real-sky validity'))
+    save_json(D/'validation.json',dict(actual_checks=len(checks),all_passed=all(checks.values()),checks=checks,luminosity_version=str(LD.relative_to(ROOT)),scientific_acceptance=False,reason='Passing implementation checks does not establish response calibration or real-sky validity'))
     print('VALIDATED',len(checks),flush=True)
 
 

@@ -1,0 +1,21 @@
+{
+  "previous": {
+    "docs/v2_6_protocol.md": "a90e7d3a00afc5e8d1c0a85fd2394cfaf61da4ac12e1edd414fdbd6040950553",
+    "scripts/v2_6_population.py": "2734e3c4f9610071d97c38a518cd4e59712ee190989bdd84facf938accd8f6c6",
+    "src/photdis/population_v2_6.py": "eb992e9cc7141e41761325b34cbaa88f5e04186a613d689cb304eab681fcb42b",
+    "data/v2_5/catalogs.npz": "f18739bd60478aef298af2e03a12aef590d14918454955cf71b58c68950a42ad",
+    "data/v2_5/posterior_regime0.npz": "a9c658a17a560f39dd395e865e10735d26cadb7304358a422039965213e64d4d",
+    "data/v2_5/posterior_regime1.npz": "e992b44123adc9938f69446b6a9335ba5f6a5c8eab7400df9c03f6e50592f128",
+    "data/v2_4/prospective_identity_reservation.npz": "122331fa090ce380d10a468af8dd35b0b6db44b893172597a791d6bfe571e498"
+  },
+  "replacement": {
+    "docs/v2_6_protocol.md": "a90e7d3a00afc5e8d1c0a85fd2394cfaf61da4ac12e1edd414fdbd6040950553",
+    "scripts/v2_6_population.py": "cd06b333312d42b46d8a1ff2c267a0a968298a9274317ab5e029ab6f8abbfadd",
+    "src/photdis/population_v2_6.py": "eb992e9cc7141e41761325b34cbaa88f5e04186a613d689cb304eab681fcb42b",
+    "data/v2_5/catalogs.npz": "f18739bd60478aef298af2e03a12aef590d14918454955cf71b58c68950a42ad",
+    "data/v2_5/posterior_regime0.npz": "a9c658a17a560f39dd395e865e10735d26cadb7304358a422039965213e64d4d",
+    "data/v2_5/posterior_regime1.npz": "e992b44123adc9938f69446b6a9335ba5f6a5c8eab7400df9c03f6e50592f128",
+    "data/v2_4/prospective_identity_reservation.npz": "122331fa090ce380d10a468af8dd35b0b6db44b893172597a791d6bfe571e498"
+  },
+  "reason": "Create output directories before atomic_npz; first run failed before writing any posterior product. No inference changes."
+}

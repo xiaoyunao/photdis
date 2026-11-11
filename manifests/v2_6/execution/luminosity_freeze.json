@@ -1,0 +1,8 @@
+{
+  "scripts/v2_6_luminosity.py": "06d5e1586946981d3ef425b92b913ecb2d54d432188471ea8ae1a82c25d74e0c",
+  "docs/v2_6_luminosity_design.md": "4fb8ffde3ed96879cb9c21c0472cd4dad22bf98e4c23c8bea72b6de6d014508d",
+  "docs/v2_6_protocol.md": "a90e7d3a00afc5e8d1c0a85fd2394cfaf61da4ac12e1edd414fdbd6040950553",
+  "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133",
+  "data/v2_3/metal_poor_pairs.npz": "2ef1d6697ef72ac8185463d1bf48010d2f78fb11aac26b2fd764abf04d45805e",
+  "data/v2_4/prospective_identity_reservation.npz": "122331fa090ce380d10a468af8dd35b0b6db44b893172597a791d6bfe571e498"
+}
