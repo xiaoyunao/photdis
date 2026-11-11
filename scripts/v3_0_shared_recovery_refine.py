@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Numerical-only HMC refinement through the unchanged recovery implementation."""
 import argparse
+import concurrent.futures
 import json
 import os
 import sys
+import subprocess
 from pathlib import Path
 from v2_1_near import ROOT,sha,save_json
 from photdis.stage1 import require_compute
@@ -14,8 +16,16 @@ D=ROOT/'data/v3_0'
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--manifest',required=True)
     p.add_argument('--index',type=int,default=int(os.getenv('SLURM_ARRAY_TASK_ID',0)))
-    p.add_argument('--draws',type=int,default=8192);a=p.parse_args()
-    path=Path(a.manifest);cases=json.loads(path.read_text())['cases'];case=cases[a.index]
+    p.add_argument('--draws',type=int,default=8192);p.add_argument('--batch',action='store_true');a=p.parse_args()
+    path=Path(a.manifest);cases=json.loads(path.read_text())['cases']
+    if a.batch:
+        def run(index):
+            subprocess.run([sys.executable,str(Path(__file__)),'--manifest',str(path),
+                '--index',str(index),'--draws',str(a.draws)],check=True)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            list(pool.map(run,range(a.index*8,min((a.index+1)*8,len(cases)))))
+        return
+    case=cases[a.index]
     draw,catalog=int(case['draw']),int(case['catalog'])
     original=D/'shared_recovery'/f'refit_{draw:02}'/f'catalog_{catalog:03}_s2048_native'
     record=json.loads((original/'complete.json').read_text())
