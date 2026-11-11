@@ -1,0 +1,12 @@
+{
+  "caption": "Unclipped primary reference, with all distant contaminants retained. Severe error: absolute distance-modulus residual >1 mag. Reference selection does not determine application population composition.",
+  "sources": {
+    "near_selection": "226129cf31c70ba15a87521b61b8c75864f473be2c7a94ff1fdfac919dc9ea53"
+  },
+  "png_sha256": "889351043f66ffa0ae356c73f6de29816b584ea67511dbf8ebe8a59ce01944dd",
+  "pdf_sha256": "231e8e299315bfae314e434e19cf6bc402ee21d1c37a8647b65fa00304417f08",
+  "csv_sha256": "1594bc186b17f10d3b58da7f0710e64fd33266173a79881dd9af5ae363677216",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Seen development; reference-conditioned evidence, not independent truth."
+}

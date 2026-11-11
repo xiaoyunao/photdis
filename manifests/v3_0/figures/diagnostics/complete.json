@@ -1,0 +1,9 @@
+{
+  "figures": 4,
+  "files": {
+    "manifests/v3_0/figures/diagnostics/class_information.json": "8f4f7946f481e4f69679e9389de259fe02962924c58cb37dabd72a0ce46e6290",
+    "manifests/v3_0/figures/diagnostics/class_information_gain.json": "e99c17711e30cdbec038d307dfd959cc7538fde013f967ac8291400d6e3e4193",
+    "manifests/v3_0/figures/diagnostics/near_selection_risk.json": "e086c20a7dd6b7986da15c00f32267bee35ef79bc79c52c188b53062d3512220",
+    "manifests/v3_0/figures/diagnostics/score_tail_sensitivity.json": "db657c9f21ae047b42ac74e319cab4093b1c0e2246ad8bffaea42d9eed4df852"
+  }
+}

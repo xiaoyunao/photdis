@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "scripts/v3_0_diagnostics.py": "81b25c249fd2130c92aa7abe4b53de023e92c1c2878099b7b95b228f477a513e",
+    "data/v3_0/controls/probe_development.npz": "39cb69e48d4e51eb22d20f3dc47727ee8a74e9679f5e3cd3efd13aea7283a3d0",
+    "data/v3_0/evaluation_results/development_grz_fit_0/complete.json": "dec43f7f9789688a2d568319f870991537555565b8034a6ffc4f8c56ff5b2488",
+    "data/v3_0/evaluation_results/development_griz_fit_0/complete.json": "c33ee6f4bffb596c79cb6c6ab1324555c06d3a58939b7b871c6c51e3c6b03e41",
+    "data/v3_0/evaluation_results/development_multiband_fit_0/complete.json": "3c670b286f5388b9bb26efd3868403dc723d1995e52eae0a4164bc256d476756",
+    "data/v3_0/evaluation_results/development_qrf_0/complete.json": "7989a1885f144eac19f4331ac0d162027df37695d74948c3ef9c8fddb6cf95c5"
+  },
+  "n": 62880,
+  "known_labels": 42950,
+  "outputs": {
+    "information.csv": "bc32339b308c8320e741989769a3cd9a9659e7ad114262934b212298ac6aa6fa",
+    "score_tails.csv": "0172f79d0aefd048576c0ba4b51c85f0d30cefee5bd3c41e42965e1899bb03c0",
+    "band_gains.csv": "819fc2721f3747e59795ea3b51a986f972652724dcd33f65a46e88bf9cfde91a",
+    "information_gain.csv": "7532e8ee70e69e0dbbc4d93832dad835be4766bb3a5d0ac7200d18af6642f270",
+    "reliability.csv": "c27e2cb4a3916ce1379462ffa0174a960c74c969fb04dd6e373fb4aec6b3c703",
+    "near_selection.csv": "226129cf31c70ba15a87521b61b8c75864f473be2c7a94ff1fdfac919dc9ea53"
+  },
+  "sky_bootstrap_replicates": 512,
+  "scope": "Identical seen development sources and empirical class composition; paired sky bootstrap, not independent absolute truth or new blind validation.",
+  "job": "61141151"
+}

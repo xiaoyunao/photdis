@@ -30,6 +30,8 @@ STAGES = {
     'recovery-batch': 'v3_0_recovery_batch.py',
     'recovery': 'v3_0_recovery.py',
     'development-figures': 'v3_0_development_figures.py',
+    'population-quadrature': 'v3_0_population_quadrature.py',
+    'native-response': 'v3_0_native_response.py',
     'evidence-refine': 'v3_0_evidence_refine.py',
     'shared-recovery': 'v3_0_shared_recovery.py',
     'shared-recovery-batch': 'v3_0_shared_recovery_batch.py',

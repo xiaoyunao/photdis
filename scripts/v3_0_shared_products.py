@@ -90,7 +90,7 @@ def chunk(path):
 def main():
     global _MODEL,_SOURCE,_RESPONSE,_THETA,_BETA,_FIELDS,_OUT,_PRED,_INPUTS,_DRAW_IDS,_CALIBRATION
     require_compute();p=argparse.ArgumentParser()
-    p.add_argument('--draw',type=int,default=-1);p.add_argument('--draws',type=int,default=512)
+    p.add_argument('--draw',type=int,default=int(os.getenv('SLURM_ARRAY_TASK_ID',-1)));p.add_argument('--draws',type=int,default=512)
     p.add_argument('--workers',type=int,default=32);p.add_argument('--limit-chunks',type=int,default=0)
     a=p.parse_args();start=time.monotonic()
     nominal=a.draw==-1

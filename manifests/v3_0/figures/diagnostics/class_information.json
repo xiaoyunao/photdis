@@ -1,0 +1,12 @@
+{
+  "caption": "Same labels and empirical composition. Missing spectral classes are not a fourth physical category; log score is higher when better.",
+  "sources": {
+    "information": "bc32339b308c8320e741989769a3cd9a9659e7ad114262934b212298ac6aa6fa"
+  },
+  "png_sha256": "d514543e75304012f6c3cb1fa7b0d8489d55261439d3de0d785d5c8cb231114b",
+  "pdf_sha256": "7fd34f2f1a8c24dfcfd61bb5b4e9f6fbf9a5951daf03460069e7a0202831747e",
+  "csv_sha256": "2f51ea1ed61a25040371629e7e3d7ed3919683ba5a2285c8b7d6c45be3a46517",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Seen development; reference-conditioned evidence, not independent truth."
+}

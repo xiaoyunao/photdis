@@ -15,7 +15,7 @@ D=ROOT/'data/v3_0'
 
 
 def main():
-    require_compute();p=argparse.ArgumentParser();p.add_argument('--draw',type=int,required=True)
+    require_compute();p=argparse.ArgumentParser();p.add_argument('--draw',type=int,default=int(os.getenv('SLURM_ARRAY_TASK_ID',0)))
     p.add_argument('--draws',type=int,default=512);p.add_argument('--proposals',type=int,default=8192);a=p.parse_args();start=time.monotonic()
     original=D/'shared_targets'/f'refit_{a.draw:02}_s{a.draws}'
     record=json.loads((original/'complete.json').read_text());assert record['sampler_passed']

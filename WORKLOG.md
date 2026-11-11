@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — native-response numerical correction and explanatory figures
+-Fullproducts61141578/580complete,but strict integrationfails fewstars:nominal
+ omittedupperboundmax0.00299,refit16max0.01408;nativeintegraldifferences0.00108/
+0.00244. Keep flags. Add unpruned native response and exactimportance correction
+ ofsavedchains; no physical refit. Analyticjointposterior andbatchobjective tests pass.
+-Add structured exact-importance benchmark forhigh-dimensional finalMC; known
+ uninformativecatalog recoversproperN(0,I)integral/moments. Actualbenchmarkpending.
+-Sharedrecovery16pilot61141782completes8/8sampler+bridgechecks. Threeconditional
+ cases23grz/45,47multi refined separately65536draw/a99 jobs61141807/808/809.
+-FourEnglish Pal5-style diagnostic figures produced andvisuallychecked,32artifact
+ checks. SameIDsprimarymeanlogscoregain1.3366isdominatedbylargest1% (1.2962);
+ remaining99%mean0.0407. Preserve this crucialtailinterpretation, notuniversalgain.
+
 ## 2026-11-11 — actual continuous products pass; bridge overlap requires refinement
 -Pilot61141149COMPLETED21s/64objects: nativeintegrationerror0.0002351,
  classCDF/jointdifference8.14e-7, omittedbound8.87e-5. Matcheddiagnostics61141151complete.

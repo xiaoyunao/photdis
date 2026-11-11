@@ -1,0 +1,12 @@
+{
+  "caption": "Largest 1% is defined by absolute paired score difference, separately per source. This is an explanatory sensitivity, not removal from primary scientific metrics.",
+  "sources": {
+    "score_tails": "0172f79d0aefd048576c0ba4b51c85f0d30cefee5bd3c41e42965e1899bb03c0"
+  },
+  "png_sha256": "5da6d5e40a202553cc4639db6cf8b147fc94bd14a57a7804b1fd2048910ffb14",
+  "pdf_sha256": "21bc5f26b3cdc194f9f6105007809609a91c443841dc9038f42d4d985eb23ce2",
+  "csv_sha256": "7b94df10c9d85f17e6013414a07527508769eb9ad55b659f91371f0bfdf099f9",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Seen development; reference-conditioned evidence, not independent truth."
+}

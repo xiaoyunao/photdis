@@ -1,0 +1,12 @@
+{
+  "caption": "Paired 512 sky-cell bootstrap intervals; resampled seen cells, not new sky or independent stars.",
+  "sources": {
+    "information_gain": "7532e8ee70e69e0dbbc4d93832dad835be4766bb3a5d0ac7200d18af6642f270"
+  },
+  "png_sha256": "f8af93a3bd0cd9d63889a6aec4f5602ae964c2474ac275ecfaac222feb76592b",
+  "pdf_sha256": "3bdee1eb7e2aab4df4ead0cab14a81a2f4431abbffedc5f4dff837e113045ae0",
+  "csv_sha256": "eedc02c546bde0b0fa40068e8b7fcdff03c03eb2684eb42ba4675d834456b2a6",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "scope": "Seen development; reference-conditioned evidence, not independent truth."
+}
