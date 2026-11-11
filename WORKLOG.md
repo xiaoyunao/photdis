@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — matched development diagnostics and shared-system propagation
+-62880 same-ID predictions scored;47899 primary references. Multiband severe
+ evolved tails77.56% versus QRF98.88%, but all68%coverage62.90% and poor-dwarf
+ median distance bias+19.08% remain failures; no adoption or accuracy claim.
+-Add common-draw reference/dust/target-relative zero-point prediction, independent
+ bridge-integral oracle, original26000 application evidence and English distance
+ plates with separate per-reference3sigma display masks.47focused tests pass;
+ new drivers parse/static-check. Prospective outcomes remain closed.
+-Target61138714RUNNING:19minCPU/5.6GB, constructing joint response; full refit
+61138675_0/16RUNNING at14iterations. No duplicate submissions.
+-Next:112catalog continuous recovery predictions, shared response tests, actual
+ application evidence and inspected development figures; A–F remain incomplete.
+
 ## 2026-11-11 — sampler support boundary safety
 -Before first real target sampling, make numerically unsupported HMC proposals
 Metropolis rejections instead of aborting the entire chain or accepting stale

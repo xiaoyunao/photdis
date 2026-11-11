@@ -94,7 +94,7 @@ def evaluate_chunk(path):
 def main():
     global _EVIDENCE, _CAL, _SOURCE, _ARGS, _DEST, _FROZEN
     require_compute(); parser = argparse.ArgumentParser()
-    parser.add_argument('cohort', choices=['hyper', 'development'])
+    parser.add_argument('cohort', choices=['hyper', 'development', 'application'])
     parser.add_argument('--view', choices=['qrf', 'grz', 'griz', 'multiband'], default='multiband')
     parser.add_argument('--limit', type=int, default=0); parser.add_argument('--workers', type=int, default=32)
     args = _ARGS = parser.parse_args()
@@ -128,14 +128,29 @@ def main():
         intermediate_metallicity=valid_feh & (feh >= -1.5) & (feh < -.5),
         no_W1=~phot['band_mask'][:, 4], weak_W1=phot['band_state'][:, 4] == 3,
         high_error=error.max(axis=1) >= .1)
+    groups['historical_fit'] = t['historical_fit']
+    groups['not_historical_fit'] = ~t['historical_fit']
+    if 'current_SED_fit' in t:
+        groups['current_SED_fit'] = t['current_SED_fit']
+        groups['not_current_SED_fit'] = ~t['current_SED_fit']
     groups.update({name: t['class_label'] == c for c, name in [(-1, 'unknown'), (0, 'dwarf'), (1, 'evolved'), (2, 'other')]})
     r = mag[:, 1]-2.5*np.log10(phot['transmission'][:, 1])
+    groups['observable'] = (r < 20) & (error.max(axis=1) < .1) & result['supported']
+    groups['near_observable'] = groups['observable'] & (result['qnear'] > .95)
+    if 'current_SED_fit' in t:
+        groups['near_observable_not_fit'] = groups['near_observable'] & ~t['current_SED_fit']
     for lo, hi in [(0, 18), (18, 20), (20, 22), (22, 99)]: groups[f'r_{lo}_{hi}'] = (r >= lo) & (r < hi)
     for cell in np.unique(phot['cell']): groups[f'sky_{cell}'] = phot['cell'] == cell
     distance_rows = []; gaia_rows = []; class_rows = []
     for group, use in groups.items():
         gaia = use & np.isfinite(result['gaia_logscore'])
-        gaia_rows.append(dict(group=group, n=int(gaia.sum()), negative=int((gaia & (t['p_corr'] < 0)).sum()),
+        weight = phot['design_weight'][gaia]
+        gaia_rows.append(dict(weight_sum=float(weight.sum()),
+            effective_n=float(weight.sum()**2/(weight@weight)) if gaia.any() else None,
+            weighted_log_score=float(np.average(result['gaia_logscore'][gaia], weights=weight)) if gaia.any() else None,
+            weighted_pit_low=float(np.average(result['gaia_pit'][gaia] < .05, weights=weight)) if gaia.any() else None,
+            weighted_pit_high=float(np.average(result['gaia_pit'][gaia] > .95, weights=weight)) if gaia.any() else None,
+            group=group, n=int(gaia.sum()), negative=int((gaia & (t['p_corr'] < 0)).sum()),
             log_score=float(result['gaia_logscore'][gaia].mean()) if gaia.any() else None,
             pit_low=float((result['gaia_pit'][gaia] < .05).mean()) if gaia.any() else None,
             pit_high=float((result['gaia_pit'][gaia] > .95).mean()) if gaia.any() else None))
@@ -161,7 +176,7 @@ def main():
     save_json(_DEST/'complete.json', dict(inputs=_FROZEN, rows=len(rows),
         group_count=len(groups), chunks=len(chunks), job=os.getenv('SLURM_JOB_ID'),
         outputs={p.name: sha(p) for p in _DEST.iterdir() if p.suffix in ('.npz', '.csv')},
-        scope='Seen development, un-clipped metrics; reference source scales not independent truths; Gaia association includes signed observations.'))
+        scope='Seen development/application, design-weighted Gaia columns describe available evidence only; un-clipped metrics; reference source scales not independent truths; Gaia association includes signed observations.'))
     print('EVALUATION COMPLETE', folder, len(rows), flush=True)
 
 
