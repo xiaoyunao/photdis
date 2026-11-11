@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-11 — full-log-density scoring and limited target SED/radial weights
+-61137072cohort preparation completed calculation:11709hyper,62880development,
+26000original application,8192independent empiricalSED templates; reference
+ outcomes for3250/new sky remain closed. Fullfit61135482at24iterations/36min.
+-Add common signed-Gaia and reference scoring. An extreme negative-parallax
+ test exposed that small-CDF-error compression does not bound proper log-score
+ error; retain full marginal log-density for all validation predictions. Native
+ Gaia quadrature and analytic Gaussian convolution now pass independent tests.
+-Add class-specific continuous radial weights plus two regularized within-class
+ SED tilts (componentFeH/color), selection-normalized analytic gradients and
+ identified-curvature checks. Joint count integration matches full posterior.
+-37focused tests pass. Next: actual robust-model compression benchmark, full-model
+ development predictions and shared-response/target selection production.
+
 ## 2026-11-11 — common chunked inference and workflow entry
 -Add v3_0.py shared stage entry and Slurm runner; no duplicated distance/class
  mathematics. Prediction chunks export exact PSF IDs, joint class/distance mass,

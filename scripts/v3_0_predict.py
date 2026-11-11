@@ -13,7 +13,8 @@ from photdis.stage1 import require_compute
 from photdis.baseline_v1 import support
 from photdis.v3.controls import optical_magnitudes
 from photdis.v3.data import stable_rank
-from photdis.v3.inference import infer_reference
+from photdis.v3.inference import infer_reference, reference_log_density
+from scipy.special import logsumexp
 from photdis.v3.model import inference_model
 from photdis.v3.compression import compress, pack, reweight
 from v3_0_response import observation
@@ -29,7 +30,7 @@ def chunk(rows):
         old = json.loads(marker.read_text()); assert old['inputs'] == _FROZEN
         assert sha(output) == old['summary_sha256'] and sha(compact_path) == old['joint_sha256']
         return str(marker)
-    start = time.monotonic(); result = []; compact = []
+    start = time.monotonic(); result = []; compact = []; full_mu = []; full_logpdf = []; full_offsets = [0]
     data = {key: _TABLE[key][rows] for key in ('flux', 'flux_error', 'transmission', 'band_mask')}
     mag, _ = optical_magnitudes(data); supported = support(_CONTROL, mag)
     for j, row in enumerate(rows):
@@ -43,6 +44,10 @@ def chunk(rows):
         error = float(abs(checked['class_distance']-p['class_distance']).max())
         if error > .001: raise RuntimeError('Joint compression failed at identity '+str(_TABLE['identity'][row]))
         compact.append(record)
+        grid = p['posterior'].mu
+        full_mu.append(grid)
+        full_logpdf.append(logsumexp(reference_log_density(_MODEL, o, grid, bands=_BANDS), axis=0)-p['posterior'].log_evidence)
+        full_offsets.append(full_offsets[-1]+len(grid))
         mode_order = np.argsort(-p['mode_mass'])[:8]
         modes = np.full(8, np.nan); mode_mass = np.zeros(8)
         modes[:len(mode_order)] = p['modes'][mode_order]; mode_mass[:len(mode_order)] = p['mode_mass'][mode_order]
@@ -62,7 +67,10 @@ def chunk(rows):
         field=_TABLE['field'][rows], cell=_TABLE['cell'][rows])
     assert (payload['TYPE'] == 'PSF').all()
     np.testing.assert_allclose(payload['class_distance'].sum(axis=(1, 2)), 1., atol=1e-10)
-    atomic_npz(output, **payload); atomic_npz(compact_path, **pack(compact))
+    joint = pack(compact)
+    joint.update(full_mu=np.concatenate(full_mu), full_logpdf=np.concatenate(full_logpdf),
+                 full_grid_offset=np.asarray(full_offsets, 'i8'))
+    atomic_npz(output, **payload); atomic_npz(compact_path, **joint)
     save_json(marker, dict(inputs=_FROZEN, n=len(rows), summary_sha256=sha(output),
         joint_sha256=sha(compact_path), elapsed_seconds=time.monotonic()-start,
         joint_bytes=compact_path.stat().st_size, summary_bytes=output.stat().st_size,

@@ -63,7 +63,7 @@ def compress(posterior, n_components, *, tolerance=2e-4, tail_budget=1e-7):
         reference_mu_mean=15., reference_mu_sigma=5.)
 
 
-def quadrature(compressed, order=3, luminosity_shift=None):
+def quadrature(compressed, order=3, luminosity_shift=None, extra_knots=()):
     """Gauss-Legendre integration within each stored conditional-CDF interval."""
     roots, weights = np.polynomial.legendre.leggauss(order)
     output = {k: [] for k in ('mu', 'mass', 'component', 'binary')}
@@ -71,7 +71,7 @@ def quadrature(compressed, order=3, luminosity_shift=None):
         lo, hi = compressed['offsets'][j:j+2]
         x = compressed['mu'][lo:hi].astype(float); cdf = compressed['cdf'][lo:hi].astype(float)
         shift = 0. if luminosity_shift is None else np.asarray(luminosity_shift)[k]
-        boundaries = DISTANCE_MU_BOUNDARIES-shift
+        boundaries = np.r_[DISTANCE_MU_BOUNDARIES, extra_knots]-shift
         boundaries = boundaries[(boundaries > x[0]) & (boundaries < x[-1])]
         newx = np.unique(np.r_[x, boundaries])
         cdf = np.interp(newx, x, cdf); x = newx
