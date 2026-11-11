@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 """English, source-linked scientific-use figures from compact actual tables."""
 import argparse
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 import v2_2_figures as f
 from photdis_figure_style import STYLE,BLUE,ORANGE,GREEN,GRAY
 f.TABLES=f.ROOT/'manifests/v2_4';f.FIG=f.ROOT/'figures/v2_4'
-read,sel,val,save=f.read,f.sel,f.val,f.save
+read,sel,val=f.read,f.sel,f.val
+
+
+def save(fig,name,sources,caption):
+    f.save(fig,name,sources,caption)
+    path=f.TABLES/'figures'/(name+'.json')
+    meta=json.loads(path.read_text())
+    meta['selection']='Verified DR11 PSF; original scientific denominators; display limits documented in caption; no independent final-validation claim'
+    path.write_text(json.dumps(meta,indent=2)+'\n')
 
 
 def diagnostics():

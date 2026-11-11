@@ -24,6 +24,7 @@ def main():
     for n,h in freeze['inputs'].items():check('old_freeze:'+n,sha(ROOT/n)==h)
     for stage in ('audit','population','recovery'):
         for path,h in json.loads((DEST/(stage+'_freeze.json')).read_text()).items():check('new_freeze:'+path,sha(ROOT/path)==h)
+    for path,h in json.loads((DEST/'reservation_io_freeze.json').read_text()).items():check('reservation_io_freeze:'+path,sha(ROOT/path)==h)
     info=json.loads((DEST/'information_complete.json').read_text())
     check('information_support_source',sha(ROOT/'scripts/v2_4_information_followup.py')==info['source_sha256'])
     check('information_support_amendment',sha(ROOT/'docs/v2_4_information_amendment.md')==info['amendment_sha256'])

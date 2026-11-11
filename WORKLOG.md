@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — isolate reservation I/O bottleneck, preserve completed recovery
+-61123779.2 completed independent-template recovery in1:28; original batch application and all joint checkpoints intact. Reservation still on first field after13min; process inspection shows native FITS column reads, while sequential128MiB benchmark takes0.477s.
+- Deliberately stop61123779 after recovery completion. Added separate native sequential reader with header/scaling checks, independent CFITSIO spot comparisons and atomic field checkpoints. Selection/ranking unchanged; original population/recovery sources and hashes preserved.
+- Explicit docs/v2_4_reservation_io_amendment.md; new reader synthetic big-endian/PSF/nonPSF/missingTYPE test passes; parse/shell/diff checks pass. Resume reservation only after confirmed terminal state, repoint existing61123659validator.
+
 ## 2026-11-11 — completed target counts and prepare recovery interpretation
 -61123779 reused all56checked joint chunks and completed3545observable/2589near targets. Weighted observable1,168,575.7; near844,501.9. Direct qualified-distance coverage and native-parent signed Gaia retained.
 - Near evolved-reference joint contribution263.27 versus2340.75from marginal products; model label contributions are not verified population counts.
