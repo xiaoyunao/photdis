@@ -22,7 +22,8 @@ def read(path):return list(csv.DictReader(path.open()))
 def save(fig,name,rows,inputs,caption):
     OUT.mkdir(parents=True,exist_ok=True);TABLE.mkdir(parents=True,exist_ok=True)
     assert not any(any('\u4e00'<=c<='\u9fff' for c in t.get_text()) for t in fig.findobj(matplotlib.text.Text))
-    fig.savefig(OUT/(name+'.png'),dpi=300);fig.savefig(OUT/(name+'.pdf'));plt.close(fig)
+    fig.savefig(OUT/(name+'.png'),dpi=300,bbox_inches='tight',pad_inches=.12)
+    fig.savefig(OUT/(name+'.pdf'),bbox_inches='tight',pad_inches=.12);plt.close(fig)
     csv_rows(TABLE/(name+'.csv'),rows)
     save_json(TABLE/(name+'.json'),dict(caption=caption,inputs={str(x.relative_to(ROOT)):sha(x) for x in inputs},
         png_sha256=sha(OUT/(name+'.png')),pdf_sha256=sha(OUT/(name+'.pdf')),csv_sha256=sha(TABLE/(name+'.csv')),

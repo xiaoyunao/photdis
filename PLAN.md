@@ -33,8 +33,8 @@ C: original32 target posterior fits complete. Longer numerical-only chains for
  a scientific support limitation regardless of numerical acceptance.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
  response/catalog cases completed;24original numeric failures,22refined pass,
- all24divergencecasesrefined. Finaljointprecision1passes110/112; two32768draw
- refinements61145395 andfinalreport61145396 followactualfailures.
+ all24divergencecasesrefined. Finaljointprecision passes112/112 aftertwo32768draw
+ refinements61145395 andfinalreport61145396; scientificnarrow-structure failure retained.
  Same-ID distance/class/Gaia diagnostics and25English figures inspected.
 E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  predictions and once-only associations/scores complete for3250/2048/8192.

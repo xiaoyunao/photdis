@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — final figure bounding-box correction
+-61145799 corrected longtitle; visualreview stillfound logarithmic-axis label
+ clipped. Tight saved bounds now include all labels; source statistics unchanged.
+-61145828 benchmarks actualdraw12s4096 on128objects before fulltransfer;
+ evidence61145589 and ensemble61145617 remain unique activepipeline.
+
 ## 2026-11-11 — final shared recovery and scientific failures retained
 -61145396:112/112response-marginal catalogs pass; maxhalf0.004964. Actual
  finite-responseESS1.00–3.95 remains a supportlimitation. Sharedrecovery L1:
