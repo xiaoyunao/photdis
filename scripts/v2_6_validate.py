@@ -8,6 +8,7 @@ from v2_1_near import ROOT,load,sha,save_json,csv_rows
 from photdis.stage1 import require_compute
 from photdis.population_v2_6 import responsibilities
 from photdis.population_v2_5 import component_weights,observation_cell
+from photdis.science_v2_4 import cluster_mean_interval
 D=ROOT/'data/v2_6';T=D/'tables'
 
 
@@ -23,6 +24,7 @@ def main():
     cat=load(ROOT/'data/v2_5/catalogs.npz');base=np.array(json.loads((ROOT/'data/v2_5/templates.json').read_text())['base'])
     for marker in ('population_freeze','luminosity_freeze'):
         for name,h in json.loads((D/(marker+'.json')).read_text()).items():check(marker+':'+name,sha(ROOT/name)==h)
+    assignment=[]
     for directory,expected in [('observed',192),('uncertain_observed',36)]:
         paths=sorted((D/directory).glob('*.npz'));check(directory+':count',len(paths)==expected)
         for path in paths:
@@ -31,6 +33,11 @@ def main():
             check(pre+':finite',np.isfinite(p['joint']).all() and np.all(p['joint']>=0));check(pre+':normalization',np.allclose(p['joint'].sum(axis=1),1,atol=1e-12))
             check(pre+':joint_count_size',np.all(p['count_draws'].sum(axis=1)==128));check(pre+':covariance_PSD',np.linalg.eigvalsh(p['count_covariance']).min()>-1e-8)
             check(pre+':count_mean_MC',abs(p['count_draws'].mean(axis=0)-p['joint'].sum(axis=0)).max()<3)
+            for g in range(4):
+                select=cat['group'][u]==g
+                if select.any():
+                    mass=p['joint'][select].reshape(-1,4,5).sum(axis=2).mean(axis=0)
+                    for h in range(4):assignment.append(dict(method=directory,catalog=i,design=str(cat['design'][u][0]),regime=int(cat['regime'][u][0]),true_group=g,inferred_group=h,n=int(select.sum()),mean_probability=mass[h]))
     for regime in (0,1):
         old=load(ROOT/f'data/v2_5/posterior_regime{regime}.npz');i=int(old['catalog'][0]);p=load(D/'observed'/f'{i:03}.npz');u=cat['catalog']==i
         eta=component_weights(old['theta'][p['theta_index']],base);total=np.zeros_like(p['joint'])
@@ -70,6 +77,7 @@ def main():
                     values.append(value)
                 if values:summary.append(dict(design=design,regime=regime,method=method,catalogs=len(values),realized_L1=np.mean(values),sd_L1=np.std(values),coverage_2_5=np.mean(cov) if cov else None,width_2_5=np.mean(width) if width else None))
     csv_rows(T/'observed_summary.csv',summary)
+    csv_rows(T/'latent_assignment.csv',assignment)
     bounds=read(T/'reachable_range.csv');reach=[]
     for design in np.unique(cat['design']):
         for regime in (0,1):
@@ -77,6 +85,19 @@ def main():
                 row=next(r for r in old if r['design']==design and int(r['regime'])==regime and int(r['bin'])==b);bound=next(r for r in bounds if int(r['regime'])==regime and int(r['bin'])==b)
                 truth=float(row['truth']);reach.append(dict(design=design,regime=regime,bin=b,truth=truth,minimum=float(bound['minimum']),maximum=float(bound['maximum']),inside=bool(float(bound['minimum'])<=truth<=float(bound['maximum']))))
     csv_rows(T/'reachable_truth.csv',reach)
+    luminosity=read(T/'luminosity_objects.csv');distance=[];qrf=[]
+    oldgaia={int(r['identity']):r for r in read(ROOT/'data/v2_5/tables/metal_gaia_objects.csv') if r['model']=='control'}
+    for source in ('specdis','spdist'):
+        for side in ('poor','ordinary'):
+            for method in ('teacher_before','teacher_after','grz_before','grz_after'):
+                rows=[r for r in luminosity if r['source']==source and r['side']==side and r['method']==method]
+                dm=np.array([float(r['mu50'])-float(r['teacher_mu']) for r in rows]);rel=10**(dm/5)-1
+                distance.append(dict(source=source,side=side,method=method,n=len(rows),median_relative=float(np.median(rel)),NMAD=float(1.4826*np.median(abs(rel-np.median(rel)))),severe=float(np.mean(abs(dm)>1)),
+                    teacher_point_coverage68=float(np.mean([float(r['mu16'])<=float(r['teacher_mu'])<=float(r['mu84']) for r in rows])),interpretation='Agreement with source-conditioned VAC teacher, not intrinsic accuracy'))
+            rows=[r for r in luminosity if r['source']==source and r['side']==side and r['method']=='grz_after'];matched=[oldgaia[int(r['identity'])] for r in rows]
+            for metric,values in [('log_score',[float(r['log_score']) for r in matched]),('low_tail',[float(r['pit'])<.05 for r in matched]),('high_tail',[float(r['pit'])>.95 for r in matched])]:
+                qrf.append(dict(source=source,side=side,metric=metric,n=len(rows),**cluster_mean_interval(np.array(values,float),np.array([int(r['control_identity']) for r in rows]))))
+    csv_rows(T/'luminosity_distance_agreement.csv',distance);csv_rows(T/'luminosity_QRF_same_objects.csv',qrf)
     check('controls108',len(load(D/'control_counts.npz')['counts'])==108)
     check('count_summaries_all192',len({r['catalog'] for r in new if r['method']=='fixed_response'})==192)
     save_json(D/'validation.json',dict(actual_checks=len(checks),all_passed=all(checks.values()),checks=checks,scientific_acceptance=False,reason='Passing implementation checks does not establish response calibration or real-sky validity'))
