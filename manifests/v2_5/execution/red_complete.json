@@ -1,0 +1,11 @@
+{
+  "denominator": 711,
+  "matched": 702,
+  "unmatched": 9,
+  "application_pool": 2758,
+  "unique_controls": 338,
+  "selection_uses_PIT": false,
+  "nonPSF_excluded": 0,
+  "missingTYPE_excluded": 0,
+  "interpretation": "Controls matched to full711, not low147. Parent-sampling and matched-identity estimands differ; historical conditional vs application raw PIT are NOT same selection."
+}

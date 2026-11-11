@@ -1,0 +1,12 @@
+{
+  "catalogs": 192,
+  "rows": 24576,
+  "cal_templates": 256,
+  "test_templates": 224,
+  "job": "61127456",
+  "template_overlap": 0,
+  "fit_overlap": 0,
+  "PSF": true,
+  "selection": "14<=observed dereddened r<20, maximum assigned error<.1; complementary stress separate",
+  "caveats": "Discrete distances; factorized four-parameter population; teacher-scaled SEDs; empirical noise law; no detector selection;12independent catalogs per scenario; finite test-library MC truth. No adoption or physical application counts."
+}

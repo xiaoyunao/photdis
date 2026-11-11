@@ -1,0 +1,24 @@
+{
+  "previous": {
+    "scripts/v2_5_population.py": "4ad00fe196184056a885a4739117059def6604a23aed71df7fd30ea13f62c4bb",
+    "src/photdis/population_v2_5.py": "693cfa0b5d43e4a35110ee789f58cc885e2d38b1aeb3ee543eecb0a9d9c4601b",
+    "docs/v2_5_protocol.md": "89d1ff003f925909ef5931c30e2f32674d1a59badc74ca6d0f43d711ade7bc19",
+    "docs/v2_5_response_support_amendment.md": "02bbfd5483e2b4e0e31361188cba80b67ea9a2f9e5f243b4a612e0ac60722914",
+    "data/v2_3/control.joblib": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+    "data/v2_4/recovery_design.npz": "9737555363300ed82d7a00caa38ab11c0c81224f11a685d4111b3ed1ef039b49",
+    "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133"
+  },
+  "replacement": {
+    "scripts/v2_5_population.py": "2672e0dc201bcfb37a2b6534e28f1a7fbf3c87711049977c181b77b9681cd9d9",
+    "src/photdis/population_v2_5.py": "693cfa0b5d43e4a35110ee789f58cc885e2d38b1aeb3ee543eecb0a9d9c4601b",
+    "docs/v2_5_protocol.md": "89d1ff003f925909ef5931c30e2f32674d1a59badc74ca6d0f43d711ade7bc19",
+    "docs/v2_5_response_support_amendment.md": "02bbfd5483e2b4e0e31361188cba80b67ea9a2f9e5f243b4a612e0ac60722914",
+    "data/v2_3/control.joblib": "0d6a75b7b295bf453a45d688f02289841d8ae687b3b26f113992c24add5b1057",
+    "data/v2_4/recovery_design.npz": "9737555363300ed82d7a00caa38ab11c0c81224f11a685d4111b3ed1ef039b49",
+    "data/v2_1/development.npz": "ea7c5acac26a0d7b47222f49af90612acc00dbab46b1c9242c9922ad1d25c133"
+  },
+  "reason": "Convert scenario list to ndarray in truth-summary writer; reuse completed templates/catalogs/QRF. No prediction or model change.",
+  "catalogs_sha256": "f18739bd60478aef298af2e03a12aef590d14918454955cf71b58c68950a42ad",
+  "cal_sha256": "8e1c6328f3c144b769ce669b79ff9ad3f2087fe44024722cac629412a7c59ee6",
+  "test_sha256": "9c0842e687e39f9de35d7c88f6259c4f2f56865e99b5b90f4a1f86918833e563"
+}

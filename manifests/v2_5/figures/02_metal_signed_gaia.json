@@ -1,0 +1,9 @@
+{
+  "name": "02_metal_signed_gaia",
+  "caption": "Both sides eligible for paired differences; no SNR cut or weak-parallax inversion. NativePSF, clean references, neither identity fitted. Original2055denominator and one-sided availability in CSV; bars resample reused ordinary IDs. Source selection and shared teachers limit causality.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "metal_gaia_pairs": "34848a6608b1bf54dbcbd86ee68993e6a88d061b1eb7c137942c963dbaa09057",
+    "metal_gaia_availability": "0e64a4011dd70d1efb2f08fb5b8029a09802bacbd419ea7b4fc6e39c71faaf31"
+  }
+}

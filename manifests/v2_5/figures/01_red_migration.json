@@ -1,0 +1,9 @@
+{
+  "name": "01_red_migration",
+  "caption": "Match full711historical objects without PIT. With-replacement controls exclude fitting identities and known nonstellar risks. Bars resample reused control IDs. Raw and historical conditional PIT have different selection meanings; weighted and field intervals remain in CSV.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "red_migration": "72d0d732a1a91294cd026779a8f8b1647d2cc117212d1a92dae64b9d8be91174",
+    "red_matches": "70fd186efb1dad5926498ea129e5d6590cac83051bc8bebad601fff780576173"
+  }
+}

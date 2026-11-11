@@ -1,0 +1,8 @@
+{
+  "name": "03_band_gains_by_class",
+  "caption": "Group-specific uncertainty, not borrowed overall intervals. Fixed probes and partitions have different fitting support. Matched bands have no faint evolved references; no physical information-bound claim.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "band_gain_by_class": "ac3b43174a8cf4aadcad3a1b537cdd68feb9c32a2808ee1b396932ed5dc9b8b4"
+  }
+}
