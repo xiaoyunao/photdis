@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — corrected full fit and exact spectral likelihood acceleration
+-Confirmed61134629terminal and no active fit before sole61135482submission.
+ Frozen fit/core/config hashes unchanged during subsequent inference development.
+-Add exact whitened spectral Gaussian evaluation: one eigendecomposition/kernel,
+ retaining all128SED components and both binary states at continuous distances.
+ Independent direct native Gaussian/dust/weak-flux and censoring tests pass.
+-26focused tests pass; response benchmark driver compares direct likelihood,
+ adaptive posterior timing and 128/512/2048Sobol selection refinement on fixed
+ PSF reference/application identities. Benchmark model is not scientific output.
+-Next: execute benchmark while full fit runs; complete shared uncertainty and
+ matched development production before any prospective outcomes.
+
 ## 2026-11-11 — complete native inventory; conditional selection and dust likelihood
 -61133866 COMPLETED0:0(11:45): all14original fields recovered exactly,9390518
  PSF parents (8899334DECam,491184north); no morphology or quality exclusions.

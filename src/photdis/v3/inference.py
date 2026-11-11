@@ -2,7 +2,8 @@
 import numpy as np
 from scipy.special import logsumexp
 from scipy.stats import norm
-from .likelihood import flux_loglikelihood, adaptive_posterior, trapezoid_weights, normalize_joint
+from .likelihood import adaptive_posterior, trapezoid_weights, normalize_joint
+from .fast import spectral_flux_loglikelihood
 
 # Smooth overlapping continuous-distance bases, distinct from reporting bins.
 DISTANCE_BASIS_MEAN = np.array([8., 11.5, 14., 16.5, 20.5])
@@ -33,7 +34,7 @@ def kernel_loglike(model, observation, mu, *, bands=None, luminosity_shift=None,
         raise ValueError('No measured band extinction coefficient at zero E(B-V)')
     values = []
     for brightness in (1., model.binary_brightness_factor):
-        values.append(flux_loglikelihood(observation['flux'], observation['flux_error'], mask,
+        values.append(spectral_flux_loglikelihood(observation['flux'], observation['flux_error'], mask,
             observation['transmission'], mean*brightness, cov*brightness**2, mu,
             calibration_mag=calibration_mag, system=str(observation['photometric_system']),
             template_system=model.system, upper_limit=observation.get('upper_limit'),
