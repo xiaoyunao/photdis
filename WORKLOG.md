@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — shared recovery and dust-selection sensitivity prepared
+-Add same112continuouscatalog shared-reference recovery driver, same globally
+ perturbedlikelihood/selection and proper-prior bridge evidence; conditional
+ half-errors retained forfinalresponse-weighted precision ratherthanrejectedperdraw.
+-Add development-only per-objectdust selection covariance sensitivity atactual
+ andEBV=.03envelope. Neither driverhasproducedresultsyet.
+-Pilotproducts61141149andmatcheddiagnostics61141151pendingmaintenance-window
+ reservation; shortenrequestedtime30minwithoutcancel/resubmit. Sharedpipeline
+ selection/prediction/targetlimits1h, no new timer or outcome opening.
+
 ## 2026-11-11 — application hierarchy converged and full uncertainty pipeline chained
 -61139580COMPLETED35m42s: Rhat1.000938,minimumESS3032.87, finaljointMC gatepassed.
  Fine recovery pilot61140145/147completed; manyremainingcasespass, failuresretained.
