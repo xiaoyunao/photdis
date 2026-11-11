@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — actual prospective method freeze completed
+-61142743COMPLETED14s: method freeze SHA14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528.
+ Models/priors/core/metrics/output definitions locked; numerical integration
+ refinements allowed only underfixed criteria. Localfreeze manifest archived.
+-61142625COMPLETED22s: same26000application target-prior evaluation; primary
+ references/Gaia are outcomes, not predictioninputs.
+-Add array fieldargument toexisting catalog predictiondriver, no physicschange.
+ Prospective purephotometry preparation starts; reference outcomes remainclosed.
+
 ## 2026-11-11 — additional selection quadrature refinements
 -Draws23/28coarse selection residuals0.00638/0.00651 exceedfixed0.005gate;
  do not release target jobs. Use same numerical1024profile/512quadrature

@@ -18,8 +18,9 @@ D = ROOT/'data/v3_0'
 
 def main():
     require_compute(); p = argparse.ArgumentParser()
-    p.add_argument('scope', choices=['validation', 'catalog']); p.add_argument('name')
+    p.add_argument('scope', choices=['validation', 'catalog']); p.add_argument('name', nargs='?', default=os.getenv('SLURM_ARRAY_TASK_ID'))
     p.add_argument('--workers', type=int, default=64); a = p.parse_args(); start = time.monotonic()
+    if a.name is None: raise ValueError('Explicit validation name or catalog array field required')
     method = check_freeze()
     if a.scope == 'validation':
         if a.name not in ('reservation', 'new_sky', 'independent_scale'): raise ValueError('Unknown frozen validation layer')
