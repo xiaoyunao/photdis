@@ -70,6 +70,21 @@ def main():
     check('signed_metal_PSF',all(x['TYPE']=='PSF' for x in metal))
     check('signed_metal_scores_finite',all(np.isfinite(float(x['log_score'])) and 0<=float(x['pit'])<=1 for x in metal))
     check('retained_weak_parallax',any(float(x['parallax'])/float(x['error'])<5 for x in metal))
+    # Audit actual parent-color/magnitude support rather than equating r cuts
+    # with complete observational support. This table does not change selection.
+    from scipy.spatial import cKDTree
+    app=load(ROOT/'data/v2_2/application_inputs.npz')
+    parent=np.column_stack((app['r0'],app['g0']-app['r0'],app['r0']-app['z0']))
+    feature=np.column_stack((a['mags'][:,1],a['mags'][:,0]-a['mags'][:,1],a['mags'][:,1]-a['mags'][:,2]))
+    good=(app['TYPE']=='PSF')&np.isfinite(parent).all(axis=1)
+    distance=cKDTree(parent[good]/[1,.3,.3]).query(feature/[1,.3,.3])[0]
+    support=[]
+    for design in np.unique(a['design']):
+        for regime in range(2):
+            for group in range(4):
+                u=(a['design']==design)&(a['regime']==regime)&(a['group']==group)
+                if u.any():support.append(dict(design=design,regime=regime,group=group,n=int(u.sum()),parent_neighbor_within1=int(np.sum(distance[u]<=1)),median_distance=float(np.median(distance[u])),max_distance=float(distance[u].max())))
+    csv_rows(T/'actual_parent_support.csv',support)
     meta=json.loads((ROOT/'data/v2_4/reservation.json').read_text());check('reservation_still_unopened',not meta['reference_outcomes_opened'] and not meta['predictions_generated'])
     save_json(D/'validation.json',dict(actual_checks=len(checks),all_passed=all(checks.values()),checks=checks,job=os.getenv('SLURM_JOB_ID')))
     print('VALIDATION',len(checks),flush=True)

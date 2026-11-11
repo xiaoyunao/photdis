@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — protect resumable population computation
+-61127009submitted once with afterok:61126775 foractual-artifact checks. Production still inCPU-intensivefullparallaxdiagnostic phase.
+- Add exclusive population lock and completed-stage reuse before population starts, enabling independent recovery to share currently idle allocated CPUs safely. Scientific design unchanged; preserve single-writer output.
+- Add actual parent color/magnitude nearest-support audit; fixedr/errorselection is not automatically complete observational support.
+
 ## 2026-11-11 — stage response-support fix before population phase
 - Remote probe during61126775diagnostics confirmed POPULATION_NOT_STARTED; f9bca2f synchronized before population phase. New population freeze must include selected-cell smoothing amendment.
 - Common SpecDis/SPDist intersection independently reproduces1188originalsamepairs from compactv2.4tables; original files unchanged.

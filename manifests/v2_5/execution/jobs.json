@@ -6,6 +6,12 @@
       "initial_state": "RUNNING",
       "node": "nid004263",
       "submitted_once": true
+    },
+    {
+      "job": "61127009",
+      "role": "afterok production artifact validation",
+      "dependency": "afterok:61126775",
+      "initial_state": "PENDING"
     }
   ],
   "no_automation": true

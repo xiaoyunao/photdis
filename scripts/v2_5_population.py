@@ -173,10 +173,14 @@ def evaluate(c,test,base,bins,curve,cat,p):
 def main():
     global _J,_CAT
     require_compute();T.mkdir(parents=True,exist_ok=True);(D/'qrf_chunks').mkdir(exist_ok=True)
+    import fcntl
+    lock=open(D/'.population.lock','a');fcntl.flock(lock,fcntl.LOCK_EX)
     files=[ROOT/'scripts/v2_5_population.py',ROOT/'src/photdis/population_v2_5.py',ROOT/'docs/v2_5_protocol.md',ROOT/'docs/v2_5_response_support_amendment.md',ROOT/'data/v2_3/control.joblib',ROOT/'data/v2_4/recovery_design.npz',ROOT/'data/v2_1/development.npz']
     freeze={str(x.relative_to(ROOT)):sha(x) for x in files};marker=D/'population_freeze.json'
     if marker.exists():assert json.loads(marker.read_text())==freeze,'Explicit migration required'
     else:save_json(marker,freeze)
+    if (D/'population_complete.json').exists():
+        print('POPULATION CHECKPOINT COMPLETE; validator checks artifacts',flush=True);return
     c,test,base,bins,curve=templates();_CAT=load(D/'catalogs.npz') if (D/'catalogs.npz').exists() else catalogs(test,populations(base),bins,curve)
     _J=joint_model();tasks=[np.arange(i,min(i+64,len(_CAT['identity']))) for i in range(0,len(_CAT['identity']),64)]
     with concurrent.futures.ProcessPoolExecutor(max_workers=16,mp_context=mp.get_context('fork')) as pool:paths=list(pool.map(qrf_chunk,tasks))
