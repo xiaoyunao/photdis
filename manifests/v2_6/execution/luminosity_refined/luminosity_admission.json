@@ -1,0 +1,32 @@
+[
+  {
+    "source": "specdis",
+    "cal": 1024,
+    "evaluation_pairs": 2049,
+    "unique_controls": 352,
+    "identity_overlap": 0,
+    "group_overlap": 0,
+    "nonPSF": 0,
+    "missing_TYPE": 0,
+    "cal_evaluation_excluded": 0,
+    "cal_negative": 64,
+    "evaluation_negative": 178,
+    "unknown_metallicity_latent": true,
+    "limits": "VAC-conditioned selection; source/Gaia dependence not modeled; no universal correction or deployment; source nuisance calibrated with ordinary stars."
+  },
+  {
+    "source": "spdist",
+    "cal": 1024,
+    "evaluation_pairs": 1185,
+    "unique_controls": 261,
+    "identity_overlap": 0,
+    "group_overlap": 0,
+    "nonPSF": 0,
+    "missing_TYPE": 0,
+    "cal_evaluation_excluded": 0,
+    "cal_negative": 63,
+    "evaluation_negative": 113,
+    "unknown_metallicity_latent": true,
+    "limits": "VAC-conditioned selection; source/Gaia dependence not modeled; no universal correction or deployment; source nuisance calibrated with ordinary stars."
+  }
+]

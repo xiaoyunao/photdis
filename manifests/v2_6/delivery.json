@@ -1,0 +1,50 @@
+{
+  "stage": "v2.6",
+  "science_accepted_for_deployment": false,
+  "actual_checks": 1648,
+  "focused_tests": 16,
+  "delivery_checks": 104,
+  "figure_sets": 9,
+  "original_catalogs": 192,
+  "original_observations": 24576,
+  "cal_template_sizes": [
+    256,
+    768,
+    2048
+  ],
+  "response_prior_draws": 16,
+  "prospective_outcomes_opened": false,
+  "new_automations": false,
+  "subagents": false,
+  "large_products": "NERSC:/pscratch/sd/y/yunao/photdis_pipeline/data/v2_6",
+  "luminosity_final_version": "luminosity_refined",
+  "sources": {
+    "interval_endpoints.csv": "b3aeed6a5bfda93bda19cedd37fbe69d784530ff13544a37fa5645ec31155f0b",
+    "latent_assignment.csv": "05552827edfb1a8282c0bb7b0f82b1ec4fda17582b2e49fa68b929d7f9748656",
+    "luminosity_QRF_same_objects.csv": "4522ee08fb19f72b71635cc472d290187a260be380ed531a61974b73144829f0",
+    "luminosity_changes.csv": "5fb9d58de61f0cd52372dd96dc3fddde78db8981c4c782e11513ab9e96e179be",
+    "luminosity_distance_agreement.csv": "ed46ccef5e7b4ba1dfaeb37831445ffb79165e25efe86c1a280029018939c4e2",
+    "luminosity_parameters.csv": "671f9827c5b1e1863794f46a6dffd3e3094ae04eb563eb9548024cfe2240f4c5",
+    "luminosity_quadrature_spdist.csv": "2984433ac395b67fae7cb5147bfbcd553b24657fcd10e60bf6e6b8da04f7de22",
+    "luminosity_quadrature_specdis.csv": "ab65b0dd0c25343c7e053db2270dcceeba4e5b1530f3d572d19cdd8ecdccf529",
+    "nested_response.csv": "bf87314461a6f25ad8a8162a4156f89fe2841cc0eeb45b777d2eac862827c50d",
+    "observed_counts.csv": "20f250109b8573fcc9354d11767a4775d3b19482716a9e88a5801b94363ad237",
+    "observed_summary.csv": "11f2d9d07fbca33eee4de11c1068248f764e6a824964dc2cbb7d9b9eeb371461",
+    "reachable_range.csv": "c9244bb84bd0b2be71dba0e7522f995bd677d3a2bb6d7cc3002ee8ca8f48273f",
+    "reachable_truth.csv": "7eb038a10b1792105c6b65105e21d41303e76662f71ac5a2b56f19d89a9041ae",
+    "response_cell_residuals.csv": "fb409add9e748de72c9b8e8a7ec3484a1904b2b8ce924ebe427f409736954267",
+    "response_controls.csv": "fe0b8672998c4273fc1819d666a79ae4d1f5cdf95146ac0f9a576735631f8a48",
+    "response_integration.csv": "89c35d0c372df08365843e41465480a8480e2e086c1486811f2a53a60ba473b4",
+    "template_color_luminosity.csv": "c476fb23e93f0d4a17dda232016fe74c72c7c867025733be115c934437db98eb",
+    "template_shapes.csv": "326bd2dd46c53edefe780202811f3b5269366d7490028220cd077cf0289a97d5",
+    "uncertain_counts.csv": "18436890e467ec4f09578743df952f56a571c88a0b14e0eacc8b106d5f957326",
+    "uncertain_population.csv": "0abd3016b8ada3393cd10e839419c0966f43b89409dcca60613fe89280d98ea3"
+  },
+  "limitations": [
+    "Residual interval undercoverage",
+    "Finite response-prior approximation",
+    "Empirical teacher/selection transfer",
+    "Source-dependent luminosity effects",
+    "Five discrete distance nodes; no new blind validation"
+  ]
+}

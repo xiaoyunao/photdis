@@ -1,13 +1,17 @@
 # PLAN
 
-## Active v2.6 observed-catalog inference
-Full requirements: docs/pro_review_39e6e4f.md; frozen docs/v2_6_protocol.md.
-- [ ] A: same192catalog per-star joint probabilities and correlated latent counts.
-- [ ] B: three restricted response controls, endpoint convergence and reachable range.
-- [ ] C: nested independent sources, response MC and evidence-weighted uncertainty.
-- [ ] D: cal-only source-conditioned poor luminosity shift/scatter and latent grz application.
-- [ ] Actual checks, inspected English figures, result/limitations and safe synchronization.
-3250prospective outcomes stay closed; no W1/full-catalog/deployment/timer/agents.
+## Completed v2.6 observed-catalog inference
+Full requirements: docs/pro_review_39e6e4f.md; results docs/v2_6_result.md.
+- [x] A: same192catalog per-star joint probabilities and correlated latent counts.
+- [x] B: known/same/transfer controls, interval endpoints and numerical reachability.
+- [x] C: nested256/768/2048sources; finite-noise checks and evidence-weighted response uncertainty.
+- [x] D: cal-only source-conditioned signed-Gaia luminosity offset/scatter; same-identity latent grz transfer. Initial/fine grids preserved.
+- [x]1648actual checks,16focused tests; nineEnglish figure sets and requirement ledger.
+Final validation61130114COMPLETED0:0. No active science jobs or timers.
+Results improve observed counts but response-transfer/coverage and source-dependent
+calibration limitations remain; no adoption or calibrated-real-population claim.
+3250prospective outcomes stay closed. Next scope requires new user/Pro direction;
+no automatic W1, model family search, full-catalog expansion or deployment.
 
 ## Completed v2.5 target-population inference
 Review docs/pro_review_de4904b.md; frozen scope docs/v2_5_protocol.md.

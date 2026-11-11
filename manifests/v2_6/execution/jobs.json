@@ -4,5 +4,14 @@
   "luminosity_initial": 61129363,
   "validation_initial": 61129443,
   "initial_validation_checks": 1639,
-  "no_timers": true
+  "no_timers": true,
+  "luminosity_refinement": 61129820,
+  "validation_final": 61130114,
+  "population_state": "COMPLETED 0:0",
+  "luminosity_initial_state": "COMPLETED 0:0",
+  "luminosity_refinement_state": "COMPLETED 0:0",
+  "validation_final_state": "COMPLETED 0:0",
+  "final_actual_checks": 1648,
+  "focused_tests": 16,
+  "active_jobs": false
 }

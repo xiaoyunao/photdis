@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-11 — v2.6 complete: observed-catalog inference and scientific delivery
+-61129359populationCOMPLETED0:0(2:28),61129363luminosityinitialCOMPLETED0:0(1:25),61129820numericrefinementCOMPLETED0:0(1:08);final61130114COMPLETED0:0(0:46),1648actualchecks. Earlierwriterfailure/migration andinitialvalidation preserved.
+- Same192catalogs/24576observations now have20-componentper-star jointprobabilities,8192shared-parameter latent-count draws andcovariances.Three restrictedcontrols support response-migration explanation; nested256/768/2048sources andevidence-weighted16responseprior draws improve counts butnot fully calibratedintervals.
+- Ordinary actual-countL1:16.51%population*N,10.13%fixedjoint,9.00%response-marginal.2–5parametercoverage8/12reference,10/12ordinary;countcoverage11/12,10/12. Finite-responseESS/convergence limits retained.
+- SignedGaia calibration separatesVACsource nuisance frompooroffset/scatter;1024cal/source,2049SpecDis/1185SPDist evalpairs;whole reused-controlgroups isolated. Finegrid resolvesSPDistzero-width sourceinterval. Puregrz latenttransfer mixed bysource;no adoption/universalcorrection.
+-16focusedtests pass;9EnglishPNG300dpi/PDF/CSV/JSONplates inspected,representativePDF rendered;104deliverychecks pass. Fullresult/atlas/requirements,memory andREADME updated;3250prospective outcomesunopened,models/v1unchanged.
+- Commands:boundedSSH/Slurm,py_compile/pytest,compactrsync,v2_6_figures/report/delivery,pdftoppm,gitdiff/check andsafe3endpoint sync. Noactivejobs/timers/agents. Next scientific work followsnewuser/Proscope.
+
 ## 2026-11-11 — actual-count recovery and initial plot review
 - Same-realizedcatalog L1: ordinary population×N16.51%, fixedjoint10.13%, response-marginal8.996%;reference-like13.06%,10.22%,8.51%. Improvement does not prove calibrated intervals.
 - Response-marginal population2–5coverage8/12reference,10/12ordinary,11/12giant; actual-count coverage11/12,10/12,12/12. Distinct targets retained.

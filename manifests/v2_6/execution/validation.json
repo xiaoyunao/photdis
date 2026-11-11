@@ -1,5 +1,5 @@
 {
-  "actual_checks": 1639,
+  "actual_checks": 1648,
   "all_passed": true,
   "checks": {
     "population_freeze:docs/v2_6_protocol.md": true,
@@ -15,6 +15,15 @@
     "luminosity_freeze:data/v2_1/development.npz": true,
     "luminosity_freeze:data/v2_3/metal_poor_pairs.npz": true,
     "luminosity_freeze:data/v2_4/prospective_identity_reservation.npz": true,
+    "refined:luminosity_freeze:scripts/v2_6_luminosity.py": true,
+    "refined:luminosity_freeze:docs/v2_6_luminosity_design.md": true,
+    "refined:luminosity_freeze:docs/v2_6_protocol.md": true,
+    "refined:luminosity_freeze:data/v2_1/development.npz": true,
+    "refined:luminosity_freeze:data/v2_3/metal_poor_pairs.npz": true,
+    "refined:luminosity_freeze:data/v2_4/prospective_identity_reservation.npz": true,
+    "refined:numerical_freeze:scripts/v2_6_luminosity_refine.py": true,
+    "refined:numerical_freeze:docs/v2_6_luminosity_numerical_amendment.md": true,
+    "refined:numerical_freeze:data/v2_6/luminosity_freeze.json": true,
     "observed:count": true,
     "observed:0:identity": true,
     "observed:0:PSF": true,
@@ -1642,6 +1651,7 @@
     "controls108": true,
     "count_summaries_all192": true
   },
+  "luminosity_version": "data/v2_6/luminosity_refined",
   "scientific_acceptance": false,
   "reason": "Passing implementation checks does not establish response calibration or real-sky validity"
 }

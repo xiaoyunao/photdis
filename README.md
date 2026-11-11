@@ -1,6 +1,18 @@
 # photdis
 
-Latest completed prototype: **Photdis v2.5 target-population inference**.
+Latest completed revision: **Photdis v2.6 observed-catalog posterior inference**.
+[Results](docs/v2_6_result.md) · [Nine English plates](docs/v2_6_atlas.md) ·
+[Requirement ledger](docs/v2_6_requirements_result.md).
+Per-star joint probabilities and shared-parameter counts reuse192mock catalogs.
+Restricted controls identify template-response transfer failure. Nested2048-source
+response marginalization improves counts, but uncertainty remains uncalibrated.
+Source-conditioned signed-Gaia luminosity calibration has mixed transfer results;
+no deployment change.1648actual artifact checks,16focused tests and104compact
+delivery checks pass; all nine plates visually inspected.
+Large arrays and initial/refined calibration remain on NERSC;3250prospective
+outcomes stay closed. Verify compact delivery with `python3 scripts/v2_6_delivery.py`.
+
+Previous completed prototype: **Photdis v2.5 target-population inference**.
 [Results](docs/v2_5_result.md) · [Eight English plates](docs/v2_5_atlas.md) ·
 [Requirements and limits](docs/v2_5_requirements_result.md).
 Outcome-blind red controls and signed-Gaia metal pairs are complete. A four-

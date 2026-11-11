@@ -1,0 +1,9 @@
+{
+  "name": "08_template_color_luminosity",
+  "caption": "Largest2048-source cal library versus224testSEDs, poor/other separately. Weights include fixed missing-class soft membership. Same bins and within-class normalization; out-of-display mass retained inCSV. Teachers have uncertainty; these are empirical supports, not true Galactic distributions.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "template_color_luminosity": "c476fb23e93f0d4a17dda232016fe74c72c7c867025733be115c934437db98eb",
+    "template_shapes": "326bd2dd46c53edefe780202811f3b5269366d7490028220cd077cf0289a97d5"
+  }
+}

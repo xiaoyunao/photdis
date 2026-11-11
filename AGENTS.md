@@ -1,5 +1,18 @@
 # Project instructions
 
+- Completed v2.6: docs/v2_6_result.md and docs/v2_6_atlas.md.192samecatalog
+  joint posteriors and shared-theta counts; restrictedknown/same/transfer controls
+  isolate response migration.256/768/2048cal-source libraries;16response prior
+  draws evidence-weighted.Ordinary realized-countL1 16.51%population*N ->
+  10.13%fixedjoint ->9.00%marginalized. Parameter2–5coverage8/12reference,
+  10/12ordinary; actualcount11/12,10/12: do not conflate estimands.
+  SignedGaia source-conditioned luminosity trial has mixed source-dependent
+  transfer; no universal correction/adoption. Initial/fine grids preserved;
+  61129820COMPLETED0:0;final61130114validated1648checks,16tests.
+  NineEnglishplates; fullledger and numerical/teacher limitations retained.
+  Keep3250prospective outcomes unopened, frozenQRF/XD/v1 unchanged.
+  Noautomatic nextmodel/W1/fullcatalog/deployment/timer/subagents.
+
 - Figure titles, axes, legends, annotations and colorbars must be English only.
   Chinese narrative documents are allowed.
 

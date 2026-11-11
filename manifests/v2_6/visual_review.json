@@ -1,0 +1,17 @@
+{
+  "png_sha256": {
+    "01_observed_counts.png": "b3bc04a55915b6ed52b3fe2fbc484a81dd8bbbad0d3e799f336f447fee840e32",
+    "02_response_controls.png": "afe9cfb6c1da3af6d67009494b7a89dbc56042347d92fa808d8d18854d2fac1a",
+    "03_template_convergence.png": "75ce6d253a1dff61b8126a44ded73f2b4567dafbcf83b697a35b8d8beadfbcfa",
+    "04_latent_assignments.png": "8254f49344b19e31408f61a10150368426f1ed26db7dfd4effc0c1d25c3af0d5",
+    "05_integration_limits.png": "6b400e052c1926ac8b7cdfeaaab8e164cba71e7939b6aa1607684b24db6be0de",
+    "06_luminosity_trial.png": "8716f84578304b1425fdb12a627a0962ff3aaac55b043427976baeac58bacb03",
+    "07_predictive_changes.png": "37cf2c6449f3ee80b5f6c15721a392543847daebfec031479e1f1e2c790f987f",
+    "08_template_color_luminosity.png": "fb3d3fa569128575e4775755dbcd9249fb531fd1b6a2336bc7c36ad96dd06141",
+    "09_response_cell_transfer.png": "5635deebc13226eadd25bc4a489f5ea1588ccf9275b42a463dbb08342b08dee4"
+  },
+  "representative_pdf_rendered_and_reviewed": true,
+  "representative_pdf": "06_luminosity_trial.pdf",
+  "representative_pdf_sha256": "70c448e182930e802f767b03e4f77c136b1162db52855ffd3eff600e64953954",
+  "review": "All nine final PNGs inspected in contact sheets; physical support plate inspected individually; representative final PDF rendered via pdftoppm. English-only, no title/axis clipping; initial long labels shortened. Source-conditioned and photometric panels explicitly distinguished."
+}

@@ -1,0 +1,3 @@
+source,group,n,mean_abs_log_difference,max_abs_log_difference
+spdist,ordinary,512,4.122570340658882e-15,1.4432899320127035e-12
+spdist,poor,512,6.372940369869795e-16,9.547918011776346e-14

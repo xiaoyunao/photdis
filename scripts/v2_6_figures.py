@@ -38,7 +38,7 @@ def main():
         q=sel(r,design=d,bin=1);scales=sorted({int(t['scale']) for t in q});x=[int(sel(q,scale=s)[0]['sources']) for s in scales]
         ax[0].plot(x,[100*np.mean([val(t,'mean') for t in sel(q,scale=s)]) for s in scales],'o-',color=color,label=label)
         ax[1].plot(x,[100*max(abs(val(t,'mean')-val(t,'mc_half_mean')) for t in sel(q,scale=s)) for s in scales],'o-',color=color,label=label)
-    ax[0].set(xlabel='Independent calibration sources',ylabel='2-5 kpc population fraction (%)');ax[1].set(xlabel='Independent calibration sources',ylabel='128 vs 256 noise-draw change (pp)')
+    ax[0].set(xlabel='Independent calibration sources',ylabel='2-5 kpc population fraction (%)');ax[1].set(xlabel='Independent calibration sources',ylabel='Noise Monte Carlo change (pp)')
     ax[0].legend(fontsize=10);fig.suptitle('Nested real-source support · separate from noise replication')
     save(fig,'03_template_convergence',['nested_response','uncertain_population'],'Identity-hash nested quotas fixed before results. Noise draws per source are not independent calibration stars. Lines average the same12existing catalogs; no template-scale tuning on test outcomes.')
 

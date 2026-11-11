@@ -1,0 +1,8 @@
+{
+  "name": "09_response_cell_transfer",
+  "caption": "Difference of P(color cell AND selection|group,distance), summing r cells; not normalized conditional-color density. Colors include infinite end cells. Per-panel symmetric scales; no claim that finite-template Monte Carlo defines exact physical truth.",
+  "selection": "Native PSF; empirical diagnostic or explicit simulated selection; no independent final-validation claim",
+  "sources": {
+    "response_cell_residuals": "fb409add9e748de72c9b8e8a7ec3484a1904b2b8ce924ebe427f409736954267"
+  }
+}
