@@ -84,22 +84,35 @@ def main():
     global _DIRS,_WEIGHTS,_LOGZ,_OUT,_INPUTS
     require_compute();p=argparse.ArgumentParser();p.add_argument('--draw-ids',default=','.join(map(str,range(32))))
     p.add_argument('--draws',type=int,default=512);p.add_argument('--workers',type=int,default=32)
-    p.add_argument('--name',default='all32');a=p.parse_args();start=time.monotonic()
+    p.add_argument('--name',default='all32_native');p.add_argument('--product-suffix',default='_native')
+    a=p.parse_args();start=time.monotonic()
     ids=list(map(int,a.draw_ids.split(',')));assert len(set(ids))==len(ids) and len(ids)>=2
-    _DIRS=[D/'shared_products'/f'refit_{i:02}_s{a.draws}' for i in ids]
+    _DIRS=[D/'shared_products'/(f'refit_{i:02}_s{a.draws}'+a.product_suffix) for i in ids]
     logs=[];inputs={};counts=[];rows=[]
     for draw,directory in zip(ids,_DIRS):
         product=json.loads((directory/'complete.json').read_text())
         target=D/'shared_targets'/f'refit_{draw:02}_s{a.draws}'
         fit=json.loads((target/'complete.json').read_text())
-        assert fit['passed'],'Unverified sampler or bridge evidence'
+        assert fit['sampler_passed'],'Unverified sampler'
+        refined=target/'evidence_structured_8192/complete.json'
+        evidence=json.loads(refined.read_text()) if refined.exists() else fit
+        assert evidence['passed'],'Unverified bridge evidence'
+        if refined.exists():
+            assert evidence['original_target_sha256']==sha(target/'complete.json')
+            inputs[str(refined.relative_to(ROOT))]=sha(refined)
+        correction=0.
+        if a.product_suffix.startswith('_native'):
+            native=D/'native_responses'/f'refit_{draw:02}_s{a.draws}'/'complete.json'
+            nr=json.loads(native.read_text());assert nr['passed'] and nr['source_target_sha256']==sha(target/'complete.json')
+            correction=nr['evidence_log_correction'];inputs[str(native.relative_to(ROOT))]=sha(native)
+        assert product['integration_passed'],'Unverified native per-star integration'
         assert product['target_complete_sha256']==sha(target/'complete.json')
         assert sha(directory/'counts.npz')==product['counts_sha256']
-        counts.append(load(directory/'counts.npz'));logs.append(fit['bridge']['log_evidence'])
+        counts.append(load(directory/'counts.npz'));logs.append(evidence['bridge']['log_evidence']+correction)
         for path in (directory/'complete.json',target/'complete.json'):inputs[str(path.relative_to(ROOT))]=sha(path)
         rows.append(dict(global_response_draw=draw,log_evidence=logs[-1],
-            bridge_half_difference=fit['bridge']['half_log_integral_difference'],
-            bridge_proposal_ess=fit['bridge']['proposal_bridge_ess']))
+            native_evidence_correction=correction,bridge_half_difference=evidence['bridge']['half_log_integral_difference'],
+            bridge_proposal_ess=evidence['bridge']['proposal_bridge_ess']))
     _LOGZ=np.array(logs);_WEIGHTS=softmax(_LOGZ)
     _OUT=D/'ensemble_products'/a.name;(_OUT/'chunks').mkdir(parents=True,exist_ok=True)
     for path in [ROOT/'scripts/v3_0_ensemble.py',ROOT/'src/photdis/v3/ensemble_counts.py']:

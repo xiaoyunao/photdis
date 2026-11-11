@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-11 — numerical recovery refinements and native response correction
+-Three remaining conditional recoveries61141807/808/809 all pass: full224-case
+ report now chooses explicit65536/a99 refinements before16384/a90/original.
+-Native response61142105/106 pass: importance ESS8190.59/8192 and2046.46/2048;
+ log-evidence corrections−0.46805/−0.51795. Preserve all original arrays.
+-Structured bridge0/16 both pass; exact-importance benchmark16 ESS381/32768
+ is not sufficient evidence of final per-star precision. Do not promote it.
+-Native production shared recovery and refined-evidence ensemble routing added;
+ same physical models and proper prior. Full focused tests run before sync.
+-61142217/218 cancelled while PENDING because stage CLI used underscore;
+ replacement uses registered shared-products command, no calculation overwritten.
+
 ## 2026-11-11 — unpruned joint posterior export implemented
 -Add directnativeclassPDF/CDF/modes andweightedsharedcountsusingexactnative
  responses plus preserved-chainimportanceweights. This removesbranchomission,

@@ -18,6 +18,8 @@ def main():
             folder = D/'recovery'/view/f'catalog_{catalog:03}_s2048_cached'
             finer = folder.with_name(f'catalog_{catalog:03}_s16384_cached_a90')
             if args.refined and (finer/'complete.json').exists(): folder = finer
+            finest = folder.with_name(f'catalog_{catalog:03}_s65536_cached_a99')
+            if args.refined and (finest/'complete.json').exists(): folder = finest
             path = folder/'complete.json'; record = json.loads(path.read_text())
             inputs[str(path.relative_to(ROOT))] = sha(path)
             for name, digest in record['outputs'].items(): assert sha(folder/name) == digest

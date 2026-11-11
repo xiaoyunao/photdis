@@ -34,13 +34,13 @@ C: original target61138714checkpointed/cancelled after verified22x algebraic
  speedup; cached2048draw target61139580COMPLETED/passed. Selection267profiles passed
  maxerror0.002774.
 32influence responses complete but rejected for uncertainty; fullweightedEM0/16converged, remaining30array61139809running.
-Sharedresponse16target61140148and0target61140662running; sharedselection0
+Sharedresponse16target61140148and0target61140662completed; structured evidence refinements pass; sharedselection0
 61140140passed. Other30drawspipeline61140663/664/665dependsontheirfullrefits.
 Shared-response/evidence and final marginal convergence remain.
 D: actual three-band development61138101/107/109 and app61138112/hyper61138114
 completed and scored;QRF61138119complete. Continuous empirical simulations implemented,
 224matched continuous recoveries complete;56passfullnumericgate. Refined16384draw
-recovery61140145/147/195/196running, originalfailurespreserved.
+recovery61140145/147/195/196complete; final3a99 refinements61141807/808/809pass, originalfailurespreserved.
 Full same-ID distance/class/Gaia scores and21inspected figures delivered; shared
 response recovery and calibrated applicability remain.
 E: outcomes still closed; independent HST dynamical NGC288 scale identified for

@@ -20,25 +20,33 @@ from photdis.v3.marginal import marginal_coefficients
 from photdis.v3.marginal_cdf import cdf_product
 from photdis.v3.evidence import bridge_integral
 from photdis.v3.systematics import calibration_vectors
+from photdis.v3.native_response import native_response
+from photdis.v3.marginal_density import native_joint_marginal
+from photdis.v3.likelihood import ContinuousPosterior
+from photdis.v3.compression import DISTANCE_MU_BOUNDARIES
+from v3_0_response import observation
 D=ROOT/'data/v3_0'
 
 
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--draw',type=int,required=True)
+    p.add_argument('--production',action='store_true')
+    p.add_argument('--profiles',type=int);p.add_argument('--quadrature',type=int)
     p.add_argument('--catalog',type=int,required=True);p.add_argument('--draws',type=int,default=2048)
     p.add_argument('--warmup',type=int,default=512);a=p.parse_args();start=time.monotonic()
     pred=D/'shared_predictions/simulations_refit_0'/f'draw_{a.draw:02}'
     model_path=D/'uncertainty_refit'/f'draw_{a.draw:02}/model.joblib'
-    selection=D/'shared_selection'/f'refit_{a.draw:02}_p512_q256/table.npz'
-    if a.draw==16:selection=D/'shared_selection/refit_16_p256/table.npz'
+    profiles=a.profiles or (256 if a.draw==16 else 512);quadrature=a.quadrature or (128 if a.draw==16 else 256)
+    name=f'refit_{a.draw:02}_p{profiles}'+('' if quadrature==128 else f'_q{quadrature}')
+    selection=D/'shared_selection'/name/'table.npz'
     srecord=json.loads(selection.with_name('complete.json').read_text());assert srecord['passed'] and sha(selection)==srecord['sha256']
     mrecord=json.loads(model_path.with_name('complete.json').read_text());assert mrecord['converged'] and sha(model_path)==mrecord['sha256']
     assert (pred/'complete.json').exists()
     source_path=D/'cohorts/simulations.npz';truth_path=D/'simulations/truth.npz';shared_path=D/'uncertainty/shared_draws.npz'
     paths=[source_path,truth_path,model_path,selection,pred/'complete.json',shared_path,ROOT/'scripts/v3_0_shared_recovery.py']
-    paths += [ROOT/'src/photdis/v3'/x for x in ('target.py','fast_hierarchy.py','hierarchy.py','sampling.py','evidence.py','marginal.py','marginal_cdf.py','population.py','systematics.py')]
+    paths += [ROOT/'src/photdis/v3'/x for x in ('native_response.py','marginal_density.py','target.py','fast_hierarchy.py','hierarchy.py','sampling.py','evidence.py','marginal.py','marginal_cdf.py','population.py','systematics.py')]
     inputs={str(x.relative_to(ROOT)):sha(x) for x in paths};inputs.update(vars(a))
-    out=D/'shared_recovery'/f'refit_{a.draw:02}'/f'catalog_{a.catalog:03}_s{a.draws}';out.mkdir(parents=True,exist_ok=True)
+    out=D/'shared_recovery'/f'refit_{a.draw:02}'/(f'catalog_{a.catalog:03}_s{a.draws}'+('_native' if a.production else ''));out.mkdir(parents=True,exist_ok=True)
     if (out/'inputs.json').exists():assert json.loads((out/'inputs.json').read_text())==inputs
     else:save_json(out/'inputs.json',inputs)
     if (out/'complete.json').exists():
@@ -47,15 +55,19 @@ def main():
         return
     source=load(source_path);truth=load(truth_path);use=np.flatnonzero(truth['catalog']==a.catalog);assert len(use)==128
     phot={k:v[use] for k,v in source.items()};truth={k:v[use] for k,v in truth.items()}
-    assert (phot['TYPE']=='PSF').all();compact=[]
+    assert (phot['TYPE']=='PSF').all();compact=[];grids=[]
     for first in range(int(use[0]),int(use[-1])+1,32):
         path=pred/f'chunk_{first:08}.npz';meta=json.loads(path.with_suffix('.json').read_text())
         summary=load(path);joint=path.with_name(path.stem+'_joint.npz');assert sha(path)==meta['summary_sha256'] and sha(joint)==meta['joint_sha256']
         np.testing.assert_array_equal(summary['identity'],source['identity'][first:first+len(summary['identity'])])
         payload=load(joint);compact.extend(unpack(payload,j) for j in range(len(summary['identity'])))
+        for j in range(len(summary['identity'])):
+            lo,hi=payload['full_grid_offset'][j:j+2];grids.append(np.unique(np.r_[payload['full_mu'][lo:hi],np.linspace(-20.,50.,1401),DISTANCE_MU_BOUNDARIES]))
     model=inference_model(joblib.load(model_path));table=SelectionTable(**load(selection))
-    response=np.array([component_response(r,model) for r in compact])
     calibration,_=calibration_vectors(phot,load(shared_path),a.draw)
+    if a.production:
+        response=np.array([native_response(model,observation(phot,i),grids[i],r['source_log_evidence'],calibration_mag=calibration[i]) for i,r in enumerate(compact)])
+    else:response=np.array([component_response(r,model) for r in compact])
     alpha,audit=table.evaluate(effective_errors(phot)*10**(.4*calibration[:,[0,1,3]]));assert audit['inside_profile_hull'].all()
     hierarchy=FastFieldPopulation(response.sum(axis=3),alpha,model,phot['field'])
     if (out/'map.joblib').exists():fit=joblib.load(out/'map.joblib')
@@ -76,7 +88,14 @@ def main():
     counts=SharedCounts(np.arange(len(z)),18,seed=311000+a.catalog+a.draw*1000)
     mean=counts.add(prob.reshape(len(z),128,18),np.arange(len(z)));atomic_npz(out/'counts.npz',**counts.result())
     avg,_=marginal_coefficients(response,coef)
-    curves=[cdf_product(r,model,c) for r,c in zip(compact,avg)]
+    if a.production:
+        curves=[]
+        for i,(r,c) in enumerate(zip(compact,avg)):
+            lp,meta=native_joint_marginal(model,observation(phot,i),grids[i],c,r['source_log_evidence'],calibration_mag=calibration[i])
+            density=np.exp(lp);posterior=ContinuousPosterior(grids[i],density,0.,{})
+            cumulative=np.c_[np.zeros(3),np.cumsum((density[:,1:]+density[:,:-1])*np.diff(grids[i])[None]/2,axis=1)]
+            curves.append(dict(grid=grids[i],class_cdf=cumulative,mu=posterior.quantiles(),omitted_posterior_bound=0.,native_normalization_error=abs(np.expm1(meta['log_normalization']))))
+    else:curves=[cdf_product(r,model,c) for r,c in zip(compact,avg)]
     offset=np.r_[0,np.cumsum([len(r['grid']) for r in curves])]
     atomic_npz(out/'per_star.npz',identity=phot['identity'],TYPE=phot['TYPE'],probability=mean.reshape(128,3,6),
         half_a=prob[::2].mean(axis=0),half_b=prob[1::2].mean(axis=0),truth_mu=truth['mu'],truth_class=truth['class_label'],
@@ -88,10 +107,11 @@ def main():
     bridge.pop('log_ratio_posterior');bridge.pop('log_ratio_proposal')
     bridge['log_evidence']=bridge['log_integral']+sum(r['source_log_evidence'] for r in compact)
     numerical=diagnostic['max_rhat']<1.05 and diagnostic['minimum_ess']>=100 and not sum(r['divergent'] for r in records)
-    passed=numerical and bridge['fixed_point_converged'] and bridge['proposal_bridge_ess']>=100 and bridge['half_log_integral_difference']<.2
+    integration_error=max(r.get('native_normalization_error',0.) for r in curves)
+    passed=numerical and integration_error<.005 and bridge['fixed_point_converged'] and bridge['proposal_bridge_ess']>=100 and bridge['half_log_integral_difference']<.2
     save_json(out/'complete.json',dict(inputs=inputs,catalog=a.catalog,global_response_draw=a.draw,scenario=str(truth['scenario'][0]),
         passed=bool(passed),sampler_passed=bool(numerical),max_rhat=diagnostic['max_rhat'],minimum_ess=diagnostic['minimum_ess'],
-        conditional_half_delta=counts.result()['marginal_half_delta'],max_omitted_bound=max(r['omitted_posterior_bound'] for r in curves),
+        max_native_integral_error=integration_error,conditional_half_delta=counts.result()['marginal_half_delta'],max_omitted_bound=max(r['omitted_posterior_bound'] for r in curves),
         bridge=bridge,outputs={p.name:sha(p) for p in out.glob('*.npz')},elapsed_seconds=time.monotonic()-start,job=os.getenv('SLURM_JOB_ID')))
     print('SHARED RECOVERY',a.draw,a.catalog,passed,flush=True)
 
