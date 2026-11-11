@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-11 — verified22x target objective speed migration
+-61139519real26000object audit:0.633soriginal versus0.0283scached; values
+ identical, maximumgradientdifference5.12e-13. Cancel slow61138714onlyafter
+ response/MAP checkpoints and equivalence evidence; preserve directory and
+ migration record, resume separate cached_s2048 after terminal confirmation.
+-Add same-ID one-update/converged-refit posterior sensitivity driver, fixeddraws
+0/16 and sharedphotometric perturbations. Full bootstrap refits still running.
+
 ## 2026-11-11 — distinguish chain convergence from final Monte Carlo precision
 -Pilot61139393COMPLETED110s: Rhat1.0031/ESS1177, direct normalization
  error0.000278 and omitted-support bound6.70e-6; final joint halfdelta0.00996
