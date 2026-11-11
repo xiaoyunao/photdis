@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-11 — full empirical SED convergence and photometric scale sample
+-61135482COMPLETED0:0:32768sources/128components/43iterations, converged=True,
+3744s. ModelSHAf996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33.
+27components trigger>1%negative intrinsic flux support; actual posterior support
+ audit remains required, not an accepted physical model from EM convergence.
+-61136440RUNNING:32shared responses; reference quadrature maxlog-normalization
+1.00e-7/q99~4.4e-16, zero above0.01.
+-61137636COMPLETED0:0:NGC28848230PSFparent/8192fixedhashsample, zero overlap
+withallfour v3roles. Memberships/outcomes closed.
+-61137637FAILED by deliberate numerical gate:64centers+11hull, all profiles inside,
+maxentry error0.01762>0.005. Add error decomposition (interpolation versus128/512
+Sobol); do not use failed table or silently relax tolerance.
+
 ## 2026-11-11 — single-use field hierarchy and posterior sampling
 -61137407COMPLETED0:0 in44s. First32object chunk21.31s/5.69MBjoint, all32
  converged; benchmark model only.61137636independent photometry and61137637

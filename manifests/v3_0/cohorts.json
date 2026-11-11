@@ -1,0 +1,47 @@
+{
+  "inputs": {
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "data/v2_2/application_inputs.npz": "d6f4f44506111ba4d08c2234c663bb31af41551606001add2fc65cee77d0f8f7",
+    "scripts/v3_0_cohorts.py": "7cde3e300e62bbc36c61743f5ae82639a0affabc7e40954a6405470cb00c7acb",
+    "data/v3_0/application_inputs/field_00.json": "bb1fecf658528e3fddb6ca41388e240ebc32d2772574abfc81faa40d8ce03299",
+    "data/v3_0/application_inputs/field_01.json": "19725e1d5ed3359471dba9eb852202b8db41acbdeae91b4c69f159414979bc96",
+    "data/v3_0/application_inputs/field_02.json": "795867b4948e37f3aeba51b088a388bd2a614ca59027db53de2f77246912a393",
+    "data/v3_0/application_inputs/field_03.json": "4cbfbf16f9bc66e787fe9d7ea404cd6be0d4950445fd979c2c92c022e3fefed4",
+    "data/v3_0/application_inputs/field_04.json": "acb2b7141a2745b1c1833ec9276abe3c9744c7e80fd94127ecaa2c82a99d19b5",
+    "data/v3_0/application_inputs/field_05.json": "2894f71303b00f98f8f7a40952d80ad26b44df0047f209e6d68a8c550e55d52f",
+    "data/v3_0/application_inputs/field_06.json": "12d8cbce6d5bce684c3a06dde8e1226bddbe26ac7c32c41a6713e6c63c66322f",
+    "data/v3_0/application_inputs/field_07.json": "be1d165232377fc63af285a233743fe627fa700d2d7cca6901b027f1e6ede573",
+    "data/v3_0/application_inputs/field_08.json": "77a260de115f499f7bc2ee83cf2cd66a6a99f651e23889e8e91722a948b797f7",
+    "data/v3_0/application_inputs/field_09.json": "e2f24fd7effe5567195ff35cf341b139f6a1007bd178ba0565a664e1da261c32",
+    "data/v3_0/application_inputs/field_10.json": "bad131ec5d91fb127514dfef2f67e7ea7e870d443fef129725a2772f0b1ad447",
+    "data/v3_0/application_inputs/field_11.json": "6d25f8f65a61e8f707a2e1da5c53581db0b0985990b78d1fbacbc79b1e39ab18",
+    "data/v3_0/application_inputs/field_12.json": "5d8dddda7706a916937420775bd2a7e4fdd7830acece6c187511288be95fe632",
+    "data/v3_0/application_inputs/field_13.json": "66843d3e4b5ae143e705ec922efd0f0161a50434b95b863cdae02043ffc0261e"
+  },
+  "outputs": {
+    "cohorts/hyper.npz": "a2b5a6902d0cec0101485da9bf1fbcdb773ad0b737c7cd799e478e01c6953dbf",
+    "evaluation/hyper.npz": "90e35fefedfdfbb780a84ed9e2c52450d45982b615266c32f382a23ee20c833c",
+    "cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "empirical_transfer_bank.npz": "4b701c6a611b65859abaeec0ff6345cb3288303536c20279e66bf280d8d05c0d",
+    "cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac"
+  },
+  "roles": {
+    "hyper": 11709,
+    "development": 62880
+  },
+  "application": 26000,
+  "bank_sources": 8192,
+  "bank_class_population": {
+    "0": 11506,
+    "1": 49,
+    "2": 872,
+    "-1": 1891
+  },
+  "bank_missing_class": 512,
+  "bank_caveat": "Independent source IDs from seen development; teacher distance scale and template flux uncertainty remain. Not blind or exact physical SED truth.",
+  "prospective_outcomes_opened": false,
+  "job": "61137072"
+}

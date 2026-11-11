@@ -1,0 +1,23 @@
+{
+  "config_sha256": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9",
+  "sha256": "9e468df16ca6c4cb1edcb413307d21a7661659a6041bd7092033b5ffd41a87c3",
+  "region_rows": 501372,
+  "admitted": 48230,
+  "sampled": 8192,
+  "nonPSF": 282287,
+  "missing_TYPE": 0,
+  "photometric_failure": 170855,
+  "role_overlaps": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "membership_outcomes_opened": false,
+  "scale_used_in_fitting": false,
+  "center_ra": 13.188,
+  "center_dec": -26.583,
+  "source_sweep": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m030-015m025.fits",
+  "catalog_sha256": "e1c504be3abe9ceb7b582f0ccaacd1b18fc45afc0fa27107a056ec64d86331fa",
+  "job": "61137636"
+}

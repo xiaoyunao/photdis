@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "data/v3_0/sed_benchmark.joblib": "3f61488a47b05b7079012d561dce37256d541fef7cc49216b51106546b5b9215",
+    "scripts/v3_0_selection.py": "03c9967cad06fdb0b5cd67ceaf583523533810d2f0392065b4c2738d7527447a",
+    "src/photdis/v3/model.py": "bad0860dd9a0a02baf7d98469ac1a67761610809126168bd88d1354a42b5c01a",
+    "src/photdis/v3/selection.py": "c908a5c087aedfd97bb3e489df8fab4f453afa095ee5c885b525cfc92a1c0778",
+    "src/photdis/v3/selection_table.py": "1d2cf508f5ea8e9a29eb97a463b21120696e6ea8f834d4f7ca71b0b08cbc625c",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "data/v3_0/cohorts/hyper.npz": "a2b5a6902d0cec0101485da9bf1fbcdb773ad0b737c7cd799e478e01c6953dbf",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "draw": -1,
+    "requested_profiles": 64
+  },
+  "sha256": "d5dd93cbf8bc3e109b9b4d1995584a7de43c7219d8b7e4573c4316557d0bf0e8",
+  "validation_sha256": "bbad5d09f57fb7900a79ca4db6d2df150f640b956fcc0d43521ea23dfb4498b4",
+  "profiles": 75,
+  "construction_objects": 100589,
+  "checked": 37,
+  "all_construction_inside_hull": true,
+  "maximum_component_entry_difference": 0.017615052701927425,
+  "q99_component_entry_difference": 0.014078969486374899,
+  "draws": 128,
+  "validation_draws": 512,
+  "passed": false,
+  "elapsed_seconds": 99.52679563313723,
+  "conditional_scope": "Given native PSF/image/sky/reported error covariates; not an intrinsic Galactic density or effective survey area.",
+  "job": "61137637"
+}
