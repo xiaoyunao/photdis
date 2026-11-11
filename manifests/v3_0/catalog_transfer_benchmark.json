@@ -1,0 +1,51 @@
+{
+  "inputs": {
+    "data/v3_0/catalog/field_00/inputs.npz": "f98360d18ebd7a5d80bb4b42b9fae66dcef64052480c26c12b753ce4547a4ccb",
+    "data/v3_0/catalog/field_00/prepared.json": "7498b5f6d0d14fb69e83bf9a7b85fe64e7f3f5b1b54011a81a09ac214838f324",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/shared_targets/refit_12_s4096/complete.json": "f9b14ca79d3c733c789b3dc5c03996a12ef4bc8b534e19f174a16014bb544dea",
+    "data/v3_0/native_responses/refit_12_s4096/complete.json": "1c5d5efcc992f9ae3a3783dd5fb5eb90c6351b2f76bfaabf2b901c68f589ea03",
+    "data/v3_0/native_responses/refit_12_s4096/chain_correction.npz": "470b0045b84981a31d3ae6483675156003b54fb4625ac281012d6d22e7239f72",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "scripts/v3_0_projection.py": "f6defe17676b2eb2ee4770d794858339af6f41e300ec3ca5913ac2149427515b",
+    "scripts/v3_0_predict.py": "5ce9cf822b54fe6e970f584aeacfc5bb4f798d1639c06337dfff2e12bbe11c2b",
+    "scripts/v3_0_shared_products.py": "a0a73a354870a00ea3f48a052f3bb7d23d36c7039e0eaa954daf8d2044af406e",
+    "scripts/v3_0_shared_predict.py": "dac6505da28857e5f81005f72be0db15ad438417a8376a5b608325f9e0f9f5ed",
+    "scope": "catalog",
+    "name": "0",
+    "draw": 12,
+    "draws": 4096,
+    "limit": 128,
+    "workers": 64,
+    "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528"
+  },
+  "rows": 128,
+  "global_response_draw": 12,
+  "integration_passed": true,
+  "reference_converged": 128,
+  "errors": {
+    "maximum_native_integral_error": 8.881784197001256e-16,
+    "maximum_integral_error": 8.881784197001252e-16,
+    "maximum_joint_delta": 1.021405182655144e-14,
+    "maximum_omitted_bound": 0.0
+  },
+  "conditional_marginal_half_delta": 0.0006080858666011255,
+  "counts_sha256": "0e549ddbb133aafa69176438b12dbc684f9e43ffa7915655d8313dc360632e59",
+  "shared_parameters_sha256": "6bdb03c09566ea3f0272e87d241ecd5e7974b47fc2820266c1b23b650374964d",
+  "target_complete_sha256": "f9b14ca79d3c733c789b3dc5c03996a12ef4bc8b534e19f174a16014bb544dea",
+  "chunks": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/catalog/field_00/population_transfer/refit_12_s4096_pilot128/chunks/chunk_00000000.json": "760aeba042a39e866552a6e3837348400a5873363514cd93bdd7bd4a43c13935",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/catalog/field_00/population_transfer/refit_12_s4096_pilot128/chunks/chunk_00000032.json": "82014f1ff242a78302403832e93a7861748b06c0440b9b395a96d0f790f91219",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/catalog/field_00/population_transfer/refit_12_s4096_pilot128/chunks/chunk_00000064.json": "49f1bda0ee49e05e9f3abd875b35623af15035e228a796e21c653c485da1f1a6",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/catalog/field_00/population_transfer/refit_12_s4096_pilot128/chunks/chunk_00000096.json": "530b5b48cedfd76e2d74c963d2ccc644453ed7bd3010f4740e2000b7ed6e3f70"
+  },
+  "scope": "Conditional transferred joint distribution q(shared|26000 sampled targets) times per-star conditional posteriors. Shared uncertainty retained, but population is not refitted on these new objects. Not a full-catalog Bayesian update or intrinsic density estimate.",
+  "numerical_acceptance": "Final response-marginal precision must be checked after combining response draws.",
+  "elapsed_seconds": 45.67896377807483,
+  "output_bytes": 48049018,
+  "maximum_process_rss_kib": 1760644,
+  "rss_scope": "Maximum individual process RSS, not sum of concurrent worker RSS; Slurm accounting is a separate job-level check.",
+  "job": "61145828"
+}

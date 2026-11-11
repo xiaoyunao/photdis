@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-11 — evidence refinement fails frozen split tolerance
+-61145589 exact131072proposal bridge hasESS1089, convergedfixedpoint, but
+ splitlogZ difference0.207814 exceeds0.2. Preservefailedresult; ensemble blocked.
+-Prepare conservative samephysicaltarget refinement:1024warmup/1024draws,
+ acceptance0.99; reuseverifiedresponse/MAP, newnamespace andwrapperhash.
+-Do not loosen tolerance or acceptdivergent2048chain. Fullcatalog waits.
+
 ## 2026-11-11 — inspected shared recovery atlas and long-chain transfer benchmark
 -61145901:3final recovery figures visually pass after tightbounds; all36 current
  figure sets pass hash/PNG300dpi/PDFEnglish/CSV checks. Atlas indexes actualplates.

@@ -142,7 +142,7 @@ scale is 9.03 kpc with -0.56/+0.48 kpc errors. This is one shared system-scale
 constraint, not 1,442 independent absolute-distance calibrators.
 
 The candidate envelope has 1,183,990 objects in the existing DECam fields:
-native admission plus r<20, maximum grz magnitude error<0.1 and fixed reference
+native admission plus observed r<20, maximum grz magnitude error<0.1 and fixed reference
 color support. There is no Gaia, class, truth-distance or qnear admission cut.
 The full 9,390,518-row historical parent retains explicit statuses; the 491,184
 northern objects remain unmodeled. This is neither full-DR11 prediction nor a

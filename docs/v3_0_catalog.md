@@ -13,8 +13,9 @@ candidate envelope contains 1,183,990 native PSF objects in 13 DECam fields.
 The northern field's 491,184 objects remain explicitly unmodeled. A same-selection
 whole-DR11 denominator and effective masked area are unavailable.
 
-Candidates require the frozen native clean grz/high-latitude/low-extinction
-admission, r<20, maximum grz magnitude error<0.1 mag and reference color support.
+Candidates require verified native TYPE=PSF, clean grz with S/N>=5,
+|b|>30 deg, 0<=E(B-V)<0.03, the DECam DR11 system, observed r<20,
+maximum grz magnitude error<0.1 mag and frozen QRF reference-color support.
 They are not selected using Gaia, spectroscopic class, reference distance or a
 near-probability threshold. Every original row has a `parent_status.npz` entry;
 rows outside the envelope are not silently treated as distance predictions.
