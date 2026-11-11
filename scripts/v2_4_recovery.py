@@ -121,7 +121,7 @@ def summarize(d,p):
 def main():
     global _J,_D
     require_compute();TABLES.mkdir(parents=True,exist_ok=True);(DEST/'recovery_chunks').mkdir(exist_ok=True)
-    freeze={str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'docs/v2_4_protocol.md',ROOT/'scripts/v2_4_recovery.py',ROOT/'src/photdis/science_v2_4.py',OLD/'control.joblib']}
+    freeze={str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'docs/v2_4_protocol.md',ROOT/'scripts/v2_4_recovery.py',ROOT/'scripts/v2_4_population.py',ROOT/'src/photdis/science_v2_4.py',OLD/'control.joblib']}
     marker=DEST/'recovery_freeze.json'
     if marker.exists():assert json.loads(marker.read_text())==freeze
     else:save_json(marker,freeze)

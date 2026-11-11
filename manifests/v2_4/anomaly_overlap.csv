@@ -1,0 +1,7 @@
+group,model,denominator,SPDist_intersection,SPDist_farther,SPDist_farther1mag,median_SPDist_minus_phot,negative
+all711,control,711,196,89,3,-0.02520831908993859,18
+all711,candidate,711,196,90,3,-0.031304250186050986,18
+low147,control,147,60,25,0,-0.030026735632504575,9
+low147,candidate,147,60,28,0,-0.03380268543996756,9
+remaining564,control,564,136,64,3,-0.019066022768109647,9
+remaining564,candidate,564,136,62,3,-0.026474001795589786,9

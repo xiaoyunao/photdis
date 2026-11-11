@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-11 — preserve completed joint chunks after completion-writer failure
+-61123523 reached56application joint checkpoints and summary tables, then failed at completion manifest: returned chunk paths are strings and have no with_suffix. Correct Path conversion; all scientific PDF/class marginal checks already passed.
+- Tighten direct-reference coverage through existing clean source qualification (previous availability flag alone could include risk-flagged references). Explicitly archive prior coverage/count tables and migrate only population writer source hash; preserve56prediction chunks. Reserve/recovery had not started.
+- Continue only after failed terminal state and same-name queue check; existing dependent validator must be repointed rather than duplicated.
+
 ## 2026-11-11 — first real diagnostic results and population job running
 -61123419 COMPLETED0:0(1:13):711Gaia-near identities retain147lowPIT;196overlap399SPDist near references,60of147lowPIT haveSPDist. Those60have medianSPDist-minus-QRF mu−0.030mag; Gaia minusSPDist median−2.66combined sigma. Do not assume both references support distant branches.
 - Source-paired poor-metal results persist for2054SpecDis and1188SPDist pairs; only10both-side Gaia anchors. Separate control-ID/sky-pair bootstrap intervals and unique counts retained.

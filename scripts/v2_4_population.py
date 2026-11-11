@@ -5,6 +5,8 @@ import concurrent.futures
 import multiprocessing as mp
 import json
 import os
+from pathlib import Path
+import shutil
 import joblib
 import numpy as np
 from v2_1_near import ROOT,load,subset,sha,save_json,csv_rows,atomic_npz
@@ -89,7 +91,7 @@ def application():
     np.testing.assert_allclose(out['joint_mass'][:,4:].sum(axis=(1,2)),1,atol=2e-6)
     dev=load(ROOT/'data/v2_1/development.npz');cell=evidence_cells(app);dc=evidence_cells(dev)
     support_count=np.bincount(dc[np.isfinite(dev['ref_chosen'])],minlength=10000)[cell]
-    direct=np.zeros(n,bool);direct[found]=np.isfinite(q['ref_chosen'])|q['spdist_valid']
+    direct=np.zeros(n,bool);direct[found]=np.isfinite(references(q,'chosen')[0])|np.isfinite(references(q,'spdist')[0])
     records=[];coverage=[];gaia=[];groups={'all':np.ones(len(rows),bool),'no_W1':~app['B'][rows],'W1':app['B'][rows]}
     for field in np.unique(app['field']):groups['field_'+str(field)]=app['field'][rows]==field
     for key,val,edges in [('r',app['r'][rows],[-np.inf,18,19,20]),('gr',app['g0'][rows]-app['r0'][rows],[-np.inf,.3,.8,1.3,np.inf]),('error',app['optical_error'][rows],[0,.01,.03,.1])]:
@@ -117,7 +119,7 @@ def application():
     csv_rows(TABLES/'application_joint_counts.csv',records);csv_rows(TABLES/'application_target_coverage.csv',coverage);csv_rows(TABLES/'application_gaia.csv',gaia)
     save_json(DEST/'application_complete.json',dict(sample=26000,observable_n=len(rows),observable_weight=float(w.sum()),near_n=int(p['near_scope'].sum()),
         no_reference_selection=True,model=sha(OLD/'control.joblib'),joint_leaf_errors=_J.reconstruction_max_errors,
-        max_pdf_error=max(json.loads(x.with_suffix('.json').read_text())['pdf_max_error'] for x in paths),
+        max_pdf_error=max(json.loads(Path(x).with_suffix('.json').read_text())['pdf_max_error'] for x in paths),
         interpretation='Weighted reference-contribution expectations, not verified physical population counts. Unlabeled is missing training evidence. Observable cells measure support, not representativeness.',job=os.getenv('SLURM_JOB_ID')))
     print('APPLICATION JOINT COMPLETE',len(rows),flush=True)
 
@@ -162,6 +164,15 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('task',choices=['application','reserve']);a=parser.parse_args()
     freeze={str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'docs/v2_4_protocol.md',ROOT/'scripts/v2_4_population.py',ROOT/'src/photdis/science_v2_4.py',OLD/'control.joblib',OLD/'training.npz']}
     marker=DEST/'population_freeze.json'
-    if marker.exists():assert json.loads(marker.read_text())==freeze
+    if marker.exists():
+        previous=json.loads(marker.read_text())
+        if previous!=freeze:
+            key='scripts/v2_4_population.py'
+            assert previous[key]=='9e4945ad53353eaca19fa95868181dfae297709416195a630ce6858143753c32' and all(previous[k]==v for k,v in freeze.items() if k!=key), 'Explicit migration required'
+            assert not (DEST/'recovery_design.npz').exists() and not (DEST/'reservation.json').exists()
+            backup=DEST/'population_writer_previous';backup.mkdir(exist_ok=True)
+            for source in TABLES.glob('application_*.csv'):shutil.copy2(source,backup/source.name)
+            save_json(DEST/'population_writer_migration.json',dict(previous=previous,current=freeze,reason='Path conversion in completion writer; qualify direct-distance coverage through existing clean-source rules. All56joint chunks reused unchanged.'))
+            save_json(marker,freeze)
     else:save_json(marker,freeze)
     (application if a.task=='application' else reserve)()

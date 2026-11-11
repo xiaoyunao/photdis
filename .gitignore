@@ -58,3 +58,5 @@ archives/
 
 !manifests/v2_3_1/*.csv
 !manifests/v2_3_1/figures/*.csv
+!manifests/v2_4/*.csv
+!manifests/v2_4/figures/*.csv
