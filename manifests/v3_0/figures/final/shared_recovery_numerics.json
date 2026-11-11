@@ -1,0 +1,12 @@
+{
+  "caption": "Numerical precision and finite-response support are distinct. Small response ESS is a remaining modeling/integration limitation, not strong scientific confidence.",
+  "inputs": {
+    "data/v3_0/shared_recovery_summary/all32_native_final/numerical.csv": "039cc82bd3c177feecc3585fce88154b36c26df0b9474f36d1ad14e4411e0316"
+  },
+  "png_sha256": "61610d4583fbbfb834ac3e1edb29b14716a0b0e9a0e7c7575cf211b03db2814b",
+  "pdf_sha256": "a67976cff2335232ed42feda2e6a937abe58e39b6d80464727a2b3d6ffec500a",
+  "csv_sha256": "039cc82bd3c177feecc3585fce88154b36c26df0b9474f36d1ad14e4411e0316",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145901"
+}

@@ -1,0 +1,12 @@
+{
+  "caption": "Coverage advances in steps of12.5%. Shared population and finite-response variation plus latent membership draws; zero-truth-count cells and numerically flagged cases remain.",
+  "inputs": {
+    "data/v3_0/shared_recovery_summary/all32_native_final/coverage.csv": "b294770b5081c169cb68b3b6534eb4ad982652922af030ff9b1be21c879dfde7"
+  },
+  "png_sha256": "0c464d92fb2d35ccd27446e4b53d886d9cee1d5be949750722cd33b78234677a",
+  "pdf_sha256": "8d95fc3ee07260f0b4225db872624817114ca6d2d0014836dd930b30793410fa",
+  "csv_sha256": "ca43f2285a6dbf1cde724d251c8354c64eed7c48751f9818f8f72d39aa934d69",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145901"
+}

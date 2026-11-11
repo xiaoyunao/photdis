@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "figures": 3,
+  "checks": [
+    "figures/v3_0/final/shared_recovery_L1.png:hash",
+    "figures/v3_0/final/shared_recovery_L1.pdf:hash",
+    "manifests/v3_0/figures/final/shared_recovery_L1.csv:hash",
+    "shared_recovery_L1:PNG",
+    "shared_recovery_L1:300dpi",
+    "shared_recovery_L1:PDFpage",
+    "shared_recovery_L1:English",
+    "shared_recovery_L1:CSV",
+    "figures/v3_0/final/shared_recovery_coverage.png:hash",
+    "figures/v3_0/final/shared_recovery_coverage.pdf:hash",
+    "manifests/v3_0/figures/final/shared_recovery_coverage.csv:hash",
+    "shared_recovery_coverage:PNG",
+    "shared_recovery_coverage:300dpi",
+    "shared_recovery_coverage:PDFpage",
+    "shared_recovery_coverage:English",
+    "shared_recovery_coverage:CSV",
+    "figures/v3_0/final/shared_recovery_numerics.png:hash",
+    "figures/v3_0/final/shared_recovery_numerics.pdf:hash",
+    "manifests/v3_0/figures/final/shared_recovery_numerics.csv:hash",
+    "shared_recovery_numerics:PNG",
+    "shared_recovery_numerics:300dpi",
+    "shared_recovery_numerics:PDFpage",
+    "shared_recovery_numerics:English",
+    "shared_recovery_numerics:CSV"
+  ],
+  "files": {
+    "figures/v3_0/final/shared_recovery_L1.png": "01eb916e6d5dcf7936eccd6520e9e91adae577505fc749d70f228141d3027a31",
+    "figures/v3_0/final/shared_recovery_L1.pdf": "dedbf6a31fb037cf170cdbda5fe5030d03c87d282eac87abfe2b35f094f5eceb",
+    "manifests/v3_0/figures/final/shared_recovery_L1.csv": "e42b3d4dd898a858fd66b3061b50cc04afab551a6fc0a842abeb3620b3890971",
+    "manifests/v3_0/figures/final/shared_recovery_L1.json": "459900d662a08cdcc040949894785dba54fab02eaca8373d63d479e4bdcaf19e",
+    "figures/v3_0/final/shared_recovery_coverage.png": "0c464d92fb2d35ccd27446e4b53d886d9cee1d5be949750722cd33b78234677a",
+    "figures/v3_0/final/shared_recovery_coverage.pdf": "8d95fc3ee07260f0b4225db872624817114ca6d2d0014836dd930b30793410fa",
+    "manifests/v3_0/figures/final/shared_recovery_coverage.csv": "ca43f2285a6dbf1cde724d251c8354c64eed7c48751f9818f8f72d39aa934d69",
+    "manifests/v3_0/figures/final/shared_recovery_coverage.json": "eeb9a46bb26ddd593ff2849ebf051c2d852a83e0e54d985acada28f0573d4402",
+    "figures/v3_0/final/shared_recovery_numerics.png": "61610d4583fbbfb834ac3e1edb29b14716a0b0e9a0e7c7575cf211b03db2814b",
+    "figures/v3_0/final/shared_recovery_numerics.pdf": "a67976cff2335232ed42feda2e6a937abe58e39b6d80464727a2b3d6ffec500a",
+    "manifests/v3_0/figures/final/shared_recovery_numerics.csv": "039cc82bd3c177feecc3585fce88154b36c26df0b9474f36d1ad14e4411e0316",
+    "manifests/v3_0/figures/final/shared_recovery_numerics.json": "8d25f541dc5ca52019dfb5d9da4b13afcc550ddd57dbfd0e53139b0583230537"
+  },
+  "visually_reviewed": [
+    "shared_recovery_L1",
+    "shared_recovery_coverage",
+    "shared_recovery_numerics"
+  ],
+  "review_scope": "Actual human-visible plate inspection recorded at invocation; format checks do not substitute for visual review."
+}

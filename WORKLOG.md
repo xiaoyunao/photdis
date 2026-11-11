@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — inspected shared recovery atlas and long-chain transfer benchmark
+-61145901:3final recovery figures visually pass after tightbounds; all36 current
+ figure sets pass hash/PNG300dpi/PDFEnglish/CSV checks. Atlas indexes actualplates.
+-61145828:128/128reference quadratures pass; native errors~1e-14, finalhalf
+0.0006081,45.68s/48.05MB, maxindividualprocessRSS1.76GB.
+-Unique conditionalcatalog array61145915 and prospective61145919/21/23
+ await verifiedtransferplan61145619. Counts/export/score/figure dependencies
+ registered in data/v3_0/execution/final_catalog_pipeline.json; no duplicates.
+
 ## 2026-11-11 — final figure bounding-box correction
 -61145799 corrected longtitle; visualreview stillfound logarithmic-axis label
  clipped. Tight saved bounds now include all labels; source statistics unchanged.

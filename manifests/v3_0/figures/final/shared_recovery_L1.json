@@ -1,0 +1,14 @@
+{
+  "caption": "Eight 128-object continuous realizations per scenario; shared templates, not newly independent stars. 112/112 final numerical passes. L1 is count error, not per-star precision; every case retained.",
+  "inputs": {
+    "data/v3_0/shared_recovery_summary/all32_native_final/complete.json": "be027e6e25b47aa24d59da6893faf4421fbfd37e6ac22a735aa2efc184b97e97",
+    "data/v3_0/shared_recovery_summary/all32_native_final/counts.csv": "d0391d6c32c35e146e2bd4feb21f09bcea850e4f9b874c15e04efaae67c1c82a",
+    "manifests/v3_0/recovery_final/summary.csv": "f3398da87ed2449cb76dc7e09e3f01047499f58a66cc2676c9701f73c44a874d"
+  },
+  "png_sha256": "01eb916e6d5dcf7936eccd6520e9e91adae577505fc749d70f228141d3027a31",
+  "pdf_sha256": "dedbf6a31fb037cf170cdbda5fe5030d03c87d282eac87abfe2b35f094f5eceb",
+  "csv_sha256": "e42b3d4dd898a858fd66b3061b50cc04afab551a6fc0a842abeb3620b3890971",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145901"
+}

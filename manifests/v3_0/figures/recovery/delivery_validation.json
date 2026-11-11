@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "figures": 3,
+  "checks": [
+    "figures/v3_0/recovery/distance_count_coverage.png:hash",
+    "figures/v3_0/recovery/distance_count_coverage.pdf:hash",
+    "manifests/v3_0/figures/recovery/distance_count_coverage.csv:hash",
+    "distance_count_coverage:PNG",
+    "distance_count_coverage:300dpi",
+    "distance_count_coverage:PDFpage",
+    "distance_count_coverage:English",
+    "distance_count_coverage:CSV",
+    "figures/v3_0/recovery/distance_count_recovery.png:hash",
+    "figures/v3_0/recovery/distance_count_recovery.pdf:hash",
+    "manifests/v3_0/figures/recovery/distance_count_recovery.csv:hash",
+    "distance_count_recovery:PNG",
+    "distance_count_recovery:300dpi",
+    "distance_count_recovery:PDFpage",
+    "distance_count_recovery:English",
+    "distance_count_recovery:CSV",
+    "figures/v3_0/recovery/middle_distance_bias.png:hash",
+    "figures/v3_0/recovery/middle_distance_bias.pdf:hash",
+    "manifests/v3_0/figures/recovery/middle_distance_bias.csv:hash",
+    "middle_distance_bias:PNG",
+    "middle_distance_bias:300dpi",
+    "middle_distance_bias:PDFpage",
+    "middle_distance_bias:English",
+    "middle_distance_bias:CSV"
+  ],
+  "files": {
+    "figures/v3_0/recovery/distance_count_coverage.png": "5e6ba2dffd95445fef6014700df80ddcb2dd12279d443fbeaf03805214e98b8f",
+    "figures/v3_0/recovery/distance_count_coverage.pdf": "70835aa7283a66e1d76b6befd02e64b38b557e9a00a5c58e1e286c13c4a9c83c",
+    "manifests/v3_0/figures/recovery/distance_count_coverage.csv": "2875a92eb393d48216e13ab4fbe8aaac44bcd426c1b6ebdbc8322b000602e954",
+    "manifests/v3_0/figures/recovery/distance_count_coverage.json": "7e5931ff91cf87df0cd187e7cec21f1b8d7365b6583d524efa42b9b4aa4e9ea1",
+    "figures/v3_0/recovery/distance_count_recovery.png": "86ca9d0b824df20ec355064c1ed4f4f6e9fe0be415bd5f558d89aeeb838b684c",
+    "figures/v3_0/recovery/distance_count_recovery.pdf": "acd38c6cf92a56a5f967043459f0d46c58c239eb4ae8624ee2654d3a87577707",
+    "manifests/v3_0/figures/recovery/distance_count_recovery.csv": "f3398da87ed2449cb76dc7e09e3f01047499f58a66cc2676c9701f73c44a874d",
+    "manifests/v3_0/figures/recovery/distance_count_recovery.json": "c5847ee84318010f4046dcf7c33349729277f365e16c37cdbedff323918ba0a3",
+    "figures/v3_0/recovery/middle_distance_bias.png": "34bcb9b55106bf0798605c42f1a80f7b015769e0bb37f0afcc8521932925b93f",
+    "figures/v3_0/recovery/middle_distance_bias.pdf": "17779b4286a5d6ee8f2a98120040c1dd31fdb27cc05f138705c9a1a56ae10fb8",
+    "manifests/v3_0/figures/recovery/middle_distance_bias.csv": "d036c858182a9859f5bd675dbcb60fcdce988191b042d42bfa4223bc1ca80f8c",
+    "manifests/v3_0/figures/recovery/middle_distance_bias.json": "94312238d65e0079079d2a7c228c90ee2a250b3f9a2a4b50c838a4c11a4cb6a0"
+  },
+  "visually_reviewed": [
+    "distance_count_coverage",
+    "distance_count_recovery",
+    "middle_distance_bias"
+  ],
+  "review_scope": "Actual human-visible plate inspection recorded at invocation; format checks do not substitute for visual review."
+}
