@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — conditional selection interpolation and joint benchmark
+-61137407completed prediction calculation for64application objects, retaining
+ jointCDF and full marginal log-density; terminal/hash/size audit follows.
+-61135482RUNNING at56min/37iterations;61136440waiting on successful fit.
+-Add conditional native-error selection tables using exact common-scale distance
+ translation and interpolation of error ratios, with convex-hull/extrapolation
+ flags and direct512draw validation. Failed cached tables cannot enter inference.
+-38focused tests and syntax/static checks pass. Cohort preparation61137072done;
+ independent photometric sample and selection benchmark next.
+
 ## 2026-11-11 — independent-scale photometric protocol
 -Verified Watkins et al.2015 original Table2 and kinematic method from
  https://arxiv.org/pdf/1509.00513. Freeze NGC288scale9.03(-0.56,+0.48)kpc,
