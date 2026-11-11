@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — candidate scope inventory and generated-artifact sync
+-Add photometry-only full-parent qualification inventory retaining all row statuses
+ and separate north system. Existing fixedr<20/error<.1/support criteria remain
+ candidate scope, not scientific acceptance; no outcome or near-probability cut.
+-GitHub figure delivery1ff61cfpassed122format/hash/bin-count checks. NERSCpush
+ blocked on identical untracked generated figures: hash-verify and preserve them
+ in data/v3_0/archive/generated_figures_before_git_1ff61cf before safe push.
+ No remote edits or historical scientific data removed.
+
 ## 2026-11-11 — joint target checkpoint and figure review
 -Target61138714built890MBresponse and reached198-dimensional MAP, maximum
  gradient8.83e-6; actual chains now running. Pilot recovery61139393, application
