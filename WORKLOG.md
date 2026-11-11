@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — full shared-reference production started
+-After sacct-confirmed selection failures, preservefailedint16directories and
+ submit correctedselection61139810/811, fullapplicationdraw0/16 predictions
+61139812/813. Remaining30completeweightedEM draws61139809array%16submitted.
+ Earlierbatchattempt stopped before anysubmission because squeue purgedjobIDs;
+ corrected query uses userqueue plus sacct, no duplicate jobs.
+-Recovery refinement61139834grz/61139838multi16384draws/chain onlyfailedcases;
+ original224report61139814retains allresults. No timers or outcome opening.
+-Add measured/missing-band Gaussian support-risk audit and frozen E evaluation
+ routing; these label approximation risk, not negative physical-flux probabilities.
+
 ## 2026-11-11 — one-update reference approximation rejected on actual sensitivity
 -On128sameapplicationIDs, fullrefits change qnear95thpercentile by0.034–0.038
  and maximum0.286/0.551; even supportedstarsmax0.058/0.086. Therefore retain

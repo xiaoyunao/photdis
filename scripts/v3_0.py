@@ -23,6 +23,7 @@ STAGES = {
     'selection-audit': 'v3_0_selection_audit.py',
     'simulate': 'v3_0_simulate.py', 'uncertainty-refit': 'v3_0_uncertainty_refit.py',
     'hierarchy-benchmark': 'v3_0_hierarchy_benchmark.py',
+    'support-audit': 'v3_0_support_audit.py',
     'catalog': 'v3_0_catalog.py',
     'recovery-report': 'v3_0_recovery_report.py',
     'validation-inputs': 'v3_0_validation_inputs.py', 'candidate-predict': 'v3_0_candidate_predict.py',

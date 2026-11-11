@@ -94,15 +94,26 @@ def evaluate_chunk(path):
 def main():
     global _EVIDENCE, _CAL, _SOURCE, _ARGS, _DEST, _FROZEN
     require_compute(); parser = argparse.ArgumentParser()
-    parser.add_argument('cohort', choices=['hyper', 'development', 'application'])
+    parser.add_argument('cohort', choices=['hyper', 'development', 'application', 'reservation', 'new_sky', 'independent_scale'])
     parser.add_argument('--view', choices=['qrf', 'grz', 'griz', 'multiband'], default='multiband')
     parser.add_argument('--limit', type=int, default=0); parser.add_argument('--workers', type=int, default=32)
     args = _ARGS = parser.parse_args()
     folder = f'{args.cohort}_qrf_{args.limit}' if args.view == 'qrf' else f'{args.cohort}_{args.view}_fit_{args.limit}'
-    prediction = D/'predictions'/folder
+    final = args.cohort in ('reservation', 'new_sky', 'independent_scale')
+    if final:
+        from v3_0_validation_inputs import check_freeze
+        method = check_freeze(); assert args.view == 'multiband' and args.limit == 0
+        validation = D/'validation'/args.cohort
+        evidence_marker = json.loads((validation/'evidence.json').read_text())
+        assert evidence_marker['method_freeze'] == method
+        prediction = validation/'predictions'; evidence_path = validation/'evidence.npz'; source_path = validation/'photometry.npz'
+        assert sha(evidence_path) == evidence_marker['sha256']
+        folder = 'final_'+folder
+    else:
+        prediction = D/'predictions'/folder; evidence_path = D/'evaluation'/(args.cohort+'.npz'); source_path = D/'cohorts'/(args.cohort+'.npz')
     assert (prediction/'complete.json').exists(), 'All prediction chunks required'
-    paths = [prediction/'complete.json', D/'evaluation'/(args.cohort+'.npz'),
-        D/'cohorts'/(args.cohort+'.npz'), D/'calibration.npz', ROOT/'scripts/v3_0_evaluate.py',
+    paths = [prediction/'complete.json', evidence_path,
+        source_path, D/'calibration.npz', ROOT/'scripts/v3_0_evaluate.py',
         ROOT/'src/photdis/v3/metrics.py', ROOT/'src/photdis/v3/controls.py']
     _FROZEN = {str(p.relative_to(ROOT)): sha(p) for p in paths}
     _DEST = D/'evaluation_results'/folder; _DEST.mkdir(parents=True, exist_ok=True)
