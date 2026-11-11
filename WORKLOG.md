@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-11 — numerical benchmark and shared reference response implementation
+-61135629COMPLETED0:0(3:11):32fixedPSF reference/application objects all meet
+ adaptive convergence; median0.1368s/star on unconverged benchmark model. Exact
+ spectral evaluation is7.0x faster than direct Cholesky on701nodes; significant
+ log-likelihood difference <=1.26e-6. Selection512to2048draw changes <=5.68e-5.
+-61135917fixedQRF/probe calculation reached all four completed probe outputs;
+ terminal/artifact audit pending. Fullfit61135482continues checkpointed EM.
+-Implement branch-conditional CDF compression and joint-prior reweighting with
+ omitted-mass guards; direct native luminosity-shift and target-prior tests pass.
+-Implement shared sky/identity one-step EM bootstrap, jointly reweighting all
+ source-calibration offset/scatter/broad parameters. Mathematical test exposed
+ mixture importance underresolution; preserve verified core/broad node membership
+ and reweight augmented channels separately. Independent moment test now passes.
+-Add explicitly constrained1%SED-discrepancy channel, separate from binary/class
+ uncertainty. Shared band/dust priors declared sensitivity assumptions. Production
+ validation/coverage and full-update sensitivity still required before claims.
+
 ## 2026-11-11 — fixed matched QRF and observable-only probes
 -61135482confirmedRUNNING, first full32768source EM checkpoint at89s.
  Response numerical/timing benchmark61135629submitted once after empty-name check.
