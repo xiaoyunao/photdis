@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — plan-linked independent-scale finalization
+-Add planned-scale routing throughimmutable verifiedresponse plan; no guessed
+ response ID, newphysicalfit orreference reopening. Parsechecked.
+-Completes pendingprojection-to-science-example dependency forNGC288; final
+ visualinspection anddelivery audit still requireactualcompleted products.
+
 ## 2026-11-11 — maintenance constraint and numerical-only continuation
 -ExplicitSlurmmaintenance_20261111 reservation06:00Nov11–06:00Nov18NERSC
  prevents2hstart; this is scheduleravailability, notauthentication/codefailure.
