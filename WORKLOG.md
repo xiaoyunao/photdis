@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — continuous recovery and observed-star posterior integration
+-Submit simulation grz61139225/multi61139226/QRF61139227, application evidence
+61139228,21development figures61139229 and influence128benchmarks61139230/231.
+Evidence log26000objects/594reference matches/4640qualified signedGaia. Figures
+reach21plates; terminal/hash/visual audit follows. All prospective outcomes closed.
+-Add observed-star marginalization that averages individually normalized shared
+parameter posteriors; independent native oracle and all-real-mu omitted-branch
+prior-ratio bounds pass.49tests pass. Recovery driver includes actual HMC count
+intervals, continuous distance scores and direct native/compressed normalization
+check; conditional fitted-SED results explicitly require shared-response follow-up.
+
 ## 2026-11-11 — matched development diagnostics and shared-system propagation
 -62880 same-ID predictions scored;47899 primary references. Multiband severe
  evolved tails77.56% versus QRF98.88%, but all68%coverage62.90% and poor-dwarf
