@@ -12,7 +12,7 @@ from v2_1_near import ROOT, sha, load, save_json, atomic_npz
 from photdis.stage1 import require_compute
 from photdis.v3.model import inference_model
 from photdis.v3.data import stable_rank
-from photdis.v3.selection import effective_errors, component_entry
+from photdis.v3.selection import effective_errors, gaussian_component_entry
 from photdis.v3.selection_table import profile_centers, profile_table, SelectionTable
 from photdis.v3.inference import distance_basis
 from photdis.v3.likelihood import trapezoid_weights
@@ -26,7 +26,7 @@ def build_profile(profile): return profile_table(_MODEL, profile, draws=128)
 
 def direct_error(error):
     mu = np.arange(-15., 45.0001, .05)
-    response = component_entry(_MODEL, error, mu, draws=512)
+    response = gaussian_component_entry(_MODEL, error, mu, draws=512)
     curve = (1-_MODEL.binary_reference_fraction)*response[0]+_MODEL.binary_reference_fraction*response[1]
     return (curve*trapezoid_weights(mu))@distance_basis(mu).T
 

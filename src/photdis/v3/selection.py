@@ -77,3 +77,36 @@ def assign_error_context(errors, centers):
     from scipy.spatial import cKDTree
     distance, index = cKDTree(np.log(centers)).query(np.log(errors))
     return index, distance
+
+
+def gaussian_component_entry(model, effective_error, mu, *, draws=128, seed=301501, snr_min=5.):
+    """Sequential Gaussian survival integration of the three native grz cuts.
+
+    Intrinsic Gaussian SED and independent measurement noise sum analytically.
+    Only a two-dimensional smooth truncated-normal integral remains. This avoids
+    almost-hard threshold sampling of the intrinsic SED at the bright end.
+    """
+    from scipy.special import log_ndtr, ndtri_exp
+    if draws < 2 or draws & (draws-1): raise ValueError('Power-of-two quadrature required')
+    error = np.asarray(effective_error, float)
+    if error.shape != (3,) or not np.isfinite(error).all() or (error <= 0).any(): raise ValueError('Positive grz errors required')
+    uniform = qmc.Sobol(2, scramble=True, seed=seed).random_base2(int(np.log2(draws)))
+    logu = np.log(np.clip(uniform, np.finfo(float).eps, 1-np.finfo(float).eps))
+    mean = model.means[:, OPTICAL]; covariance = model.covariances[:, OPTICAL][:, :, OPTICAL]
+    amplitude = 10.**(-.4*(np.asarray(mu)-10.))
+    result = np.zeros((2, len(mean), len(amplitude)))
+    for b, brightness in enumerate((1., model.binary_brightness_factor)):
+        a = amplitude*brightness
+        for start in range(0, len(mean), 8):
+            stop = min(start+8, len(mean))
+            cov = covariance[start:stop, None]*a[None, :, None, None]**2
+            cov += np.diag(error**2)[None, None]
+            chol = np.linalg.cholesky(cov)
+            delta = mean[start:stop, None]*a[None, :, None]-snr_min*error
+            logtail1 = log_ndtr(delta[:, :, 0]/chol[:, :, 0, 0])
+            z1 = -ndtri_exp(logtail1[:, :, None]+logu[None, None, :, 0])
+            logtail2 = log_ndtr((delta[:, :, 1, None]+chol[:, :, 1, 0, None]*z1)/chol[:, :, 1, 1, None])
+            z2 = -ndtri_exp(logtail2+logu[None, None, :, 1])
+            logtail3 = log_ndtr((delta[:, :, 2, None]+chol[:, :, 2, 0, None]*z1+chol[:, :, 2, 1, None]*z2)/chol[:, :, 2, 2, None])
+            result[b, start:stop] = np.exp(logtail1)*np.exp(logtail2+logtail3).mean(axis=2)
+    return result

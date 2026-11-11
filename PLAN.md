@@ -27,12 +27,14 @@ Fullfit61135482COMPLETED/converged43iterations;27negative-support flags need
 posterior audit. Shared32draw response61136440COMPLETED; full-model128object benchmark61137836
 COMPLETED. Shared response approximation requires recovery validation. FixedQRF/probes61135917COMPLETED; response
 benchmark61135629COMPLETED (32objects, median0.1368s, all numerical checks).
-42targeted tests pass. Cohort preparation61137072completed; shared native inference,
+44targeted tests pass. Cohort preparation61137072completed; shared native inference,
 CDF joint compression and unified CLI implemented;64object benchmark61137407
 completed calculation, detailed artifact audit pending. Selection tables implemented.
 C: single-use field hierarchy/HMC implemented; actual target/selection production
 and shared-response convergence remain.
-D: distance/class/count evaluation and continuous empirical simulations remain.
+D: actual three-band development61138101/107/109 and app61138112/hyper61138114
+running;QRF61138119complete. Continuous empirical simulations implemented,
+actual recovery and all matched distance/class/count evaluations remain.
 E: outcomes still closed; independent HST dynamical NGC288 scale identified for
 identity audit passed61137636;8192photometric-only IDs frozen, membership unopened. F: actual full-model/catalog benchmark,
 qualified candidate catalog, scientific example, English figures/report remain.

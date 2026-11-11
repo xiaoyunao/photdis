@@ -8,7 +8,7 @@ from dataclasses import dataclass
 import numpy as np
 from scipy.spatial import Delaunay, ConvexHull, cKDTree
 from scipy.stats import norm
-from .selection import component_entry
+from .selection import gaussian_component_entry
 from .inference import DISTANCE_BASIS_MEAN, DISTANCE_BASIS_SIGMA
 from .likelihood import trapezoid_weights
 
@@ -35,7 +35,7 @@ def profile_table(model, profile, *, draws=128, step=.1, shift_step=.05):
     mu = np.arange(-15., 45.+step/2, step)
     shift = np.arange(-10., 10.+shift_step/2, shift_step)
     errors = np.array([np.exp(profile[0]), 1., np.exp(profile[1])])
-    response = component_entry(model, errors, mu, draws=draws)
+    response = gaussian_component_entry(model, errors, mu, draws=draws)
     curve = (1-model.binary_reference_fraction)*response[0]+model.binary_reference_fraction*response[1]
     radial = norm.pdf(mu[None, None, :],
         DISTANCE_BASIS_MEAN[:, None, None]+shift[None, :, None],
