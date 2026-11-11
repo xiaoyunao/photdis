@@ -7,8 +7,21 @@ from pathlib import Path
 import numpy as np
 from v2_1_near import ROOT,load,sha,save_json,atomic_npz,csv_rows
 from photdis.stage1 import require_compute
+from photdis.reference_v1_4 import unique_join
+from photdis.v3.data import ROLES
 from v3_0_validation_inputs import check_freeze
 D=ROOT/'data/v3_0'
+
+
+def catalog_role_flags(identity, reference_identity, reference_role, fitted, calibrated, targets):
+    """Preserve exact identity roles; absence is distinct from excluded role zero."""
+    index = unique_join(identity, reference_identity)
+    role = np.full(len(identity), -1, dtype='i1')
+    found = index >= 0
+    role[found] = np.asarray(reference_role)[index[found]]
+    return dict(reference_role=role, sed_training_identity=np.isin(identity, fitted),
+                source_calibration_identity=np.isin(identity, calibrated),
+                population_fit_identity=np.isin(identity, targets))
 
 
 def main():
@@ -24,7 +37,17 @@ def main():
     folder=base/'population_transfer'/f'refit_{response["draw"]:02}_s{response["draws"]}'
     complete=json.loads((folder/'complete.json').read_text());assert complete['integration_passed']
     assert complete['inputs']['method_freeze']==method
-    inputs={str(x.relative_to(ROOT)):sha(x) for x in [base/'prepared.json',folder/'complete.json',planpath,Path(__file__)]}
+    role_paths=[D/'references.npz',D/'sed_cloud.npz',D/'calibration_specdis_inputs.npz',
+                D/'calibration_spdist_inputs.npz',D/'cohorts/application.npz']
+    inputs={str(x.relative_to(ROOT)):sha(x) for x in [base/'prepared.json',folder/'complete.json',planpath,Path(__file__),*role_paths]}
+    with np.load(role_paths[0]) as z: reference_identity,reference_role=z['identity'],z['role']
+    with np.load(role_paths[1]) as z: fitted=z['identity']
+    calibration_ids=[]
+    for path in role_paths[2:4]:
+        with np.load(path) as z: calibration_ids.append(z['identity'])
+    with np.load(role_paths[4]) as z: target_ids=z['identity']
+    role_flags=catalog_role_flags(source['identity'],reference_identity,reference_role,fitted,
+                                  np.concatenate(calibration_ids),target_ids)
     output=base/'candidate_v3_0.npz';marker=base/'candidate_v3_0.json'
     if marker.exists():
         old=json.loads(marker.read_text());assert old['inputs']==inputs and old['table_sha256']==sha(output)
@@ -41,6 +64,7 @@ def main():
               'reference_mu','reference_qnear','prior_delta_mu50','prior_delta_qnear',
               'reference_numerical_converged','negative_intrinsic_support','discrepancy_probability','binary_probability']
         part={k:star[k] for k in keys}
+        part.update({k:v[rows] for k,v in role_flags.items()})
         part.update(RA=source['RA'][rows],DEC=source['DEC'][rows],band_state=source['band_state'][rows],
             class_probability=star['probability'].sum(axis=2),distance_probability=star['probability'].sum(axis=1),
             final_half_delta=np.max(abs(star['half_a']-star['half_b']),axis=(1,2))+2*plan['discarded_response_mass'])
@@ -63,6 +87,8 @@ def main():
         shared_parameters_sha256=sha(folder/'shared_parameters.npz'),
         numerical_failed=int((~table['numerically_converged']).sum()),
         near95=int((table['qnear']>.95).sum()),multimodal=int(table['multimodal'].sum()),
+        reference_role_codes={str(i):name for i,name in enumerate(ROLES)}|{'-1':'not in v3 reference inventory'},
+        role_counts={k:int(v.sum()) for k,v in role_flags.items() if k!='reference_role'},
         response=plan['responses'][0],discarded_response_mass=plan['discarded_response_mass'],
         columns={k:dict(dtype=str(v.dtype),shape=list(v.shape)) for k,v in table.items()},
         mu_quantiles=[.025,.16,.5,.84,.975],distance_units='mu=5log10(d/kpc)+10',

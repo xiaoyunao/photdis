@@ -43,6 +43,11 @@ weight does not establish adequate continuous reference-model support.
 `identity` and `ls_id` are exact integer identifiers; `TYPE` is verified `PSF`.
 `RA`, `DEC`, `field`, `photometric_system`, `band_mask` and `band_state` retain
 native provenance and distinguish legal weak flux from unavailable observations.
+`reference_role` records the exact registered reference role (-1 means absent;
+0 means excluded). Separate `sed_training_identity`, `source_calibration_identity`
+and `population_fit_identity` flags identify actual fitted sources, rather than
+treating every eligible training-role object as an actual fitted identity. These
+provenance flags are not used as photometric prediction features or catalog cuts.
 The canonical native band order is G,R,I,Z,W1,W2.
 
 `mu` contains distance-modulus quantiles 0.025,0.16,0.5,0.84,0.975. Convert with

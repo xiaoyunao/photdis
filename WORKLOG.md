@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — expose exact actual-fit provenance in candidate export
+-Export reference_role separately from actualSED/sourcecalibration/population
+ fit flags; missingreference=-1 differsfromexcludedrole0. No prediction/cutchange.
+-Independent adjacent IDs above2^60 test preventsfloatidentitycollapse; full
+ v3 suite70passed. Frozenphysicalcode/criteria unchanged.
+
 ## 2026-11-11 — plan-linked independent-scale finalization
 -Add planned-scale routing throughimmutable verifiedresponse plan; no guessed
  response ID, newphysicalfit orreference reopening. Parsechecked.
