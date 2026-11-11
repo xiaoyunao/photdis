@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-11 — numerical refinement failures preserved and repaired
+-Refinedarrays61139834/838allFAILED before sampling: path suffix expression
+ added string toPath. Correct construction and execute actual AST path statements
+ for bothacceptancevalues;52tests pass. No refined scientific outputs existed.
+-Sharedselectiondraw16 passes0.003557;draw0 fails0.005536>0.005. Preserve both
+ and add explicit512profile/256quadrature namespace with1024direct audit.
+-Original224recovery report hashes verified and retained. Full reference draws
+61139809and sharedapplication0/16 continue; shared-selection retries are numerical
+ integration refinements only, not changed physical priors or tuned science.
+
 ## 2026-11-11 — full shared-reference production started
 -After sacct-confirmed selection failures, preservefailedint16directories and
  submit correctedselection61139810/811, fullapplicationdraw0/16 predictions

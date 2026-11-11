@@ -1,0 +1,57 @@
+{
+  "inputs": {
+    "influence_0": "f616dcfa747216b8d30c811949538d14902702a3140f8dd4ed3fa35df4768351",
+    "refit_0": "2de213c1c108c5685a36605f4da15a099923044b523d80497d2a0fb2957908b2",
+    "influence_16": "99a06f16b4245580018d3cbfeee59400957363b9964ed4e5b109a2ecbb6eff8a",
+    "refit_16": "897abdf4af771efde11be4bd428bd7970ab48d0a29e14e15690abe5390e27186"
+  },
+  "records": [
+    {
+      "draw": 0,
+      "group": "all",
+      "n": 128,
+      "median_abs_delta_mu": 0.021651972214043802,
+      "q95_abs_delta_mu": 0.30421978762758495,
+      "max_delta_qnear": 0.2855099301577262,
+      "q95_delta_qnear": 0.03784680919155625,
+      "mean_joint_L1": 0.11675472987085372,
+      "q95_joint_L1": 0.5875325583522314
+    },
+    {
+      "draw": 0,
+      "group": "supported",
+      "n": 70,
+      "median_abs_delta_mu": 0.02296995989422257,
+      "q95_abs_delta_mu": 0.14237973257571146,
+      "max_delta_qnear": 0.05785880135467092,
+      "q95_delta_qnear": 0.017528372003512628,
+      "mean_joint_L1": 0.09732013085393254,
+      "q95_joint_L1": 0.30002687670877065
+    },
+    {
+      "draw": 16,
+      "group": "all",
+      "n": 128,
+      "median_abs_delta_mu": 0.02838565460308473,
+      "q95_abs_delta_mu": 0.3576687796938848,
+      "max_delta_qnear": 0.5510536413909821,
+      "q95_delta_qnear": 0.034244346209795974,
+      "mean_joint_L1": 0.10777685961097677,
+      "q95_joint_L1": 0.394826214800373
+    },
+    {
+      "draw": 16,
+      "group": "supported",
+      "n": 70,
+      "median_abs_delta_mu": 0.030746325093211624,
+      "q95_abs_delta_mu": 0.143647900003179,
+      "max_delta_qnear": 0.086250616998094,
+      "q95_delta_qnear": 0.021991929536877376,
+      "mean_joint_L1": 0.06902644759343121,
+      "q95_joint_L1": 0.25724403015843966
+    }
+  ],
+  "job": "61139738",
+  "interpretation": "One-update approximation versus converged same-family bootstrap at two fixed shared draws; same star IDs and same zero-point/dust perturbations. Numerical differences are not evidence of scientific truth.",
+  "csv_sha256": "72abd5e7d320e671643311daf012e0ec33a47825350727b18905a429c8e12096"
+}

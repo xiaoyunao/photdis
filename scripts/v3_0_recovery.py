@@ -45,7 +45,9 @@ def main():
     paths = [source_path, truth_path, model_path, selection_path, pred/'complete.json', qrf/'complete.json', ROOT/'scripts/v3_0_recovery.py']
     paths += [ROOT/'src/photdis/v3'/x for x in ('hierarchy.py', 'fast_hierarchy.py', 'target.py', 'sampling.py', 'marginal.py', 'population.py', 'metrics.py')]
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in paths}; inputs.update(vars(args))
-    out = D/'recovery'/args.view/f'catalog_{args.catalog:03}_s{args.draws}_{args.engine}'+('' if args.target_acceptance == .8 else f'_a{int(100*args.target_acceptance)}')
+    name = f'catalog_{args.catalog:03}_s{args.draws}_{args.engine}'
+    if args.target_acceptance != .8: name += f'_a{int(100*args.target_acceptance)}'
+    out = D/'recovery'/args.view/name
     out.mkdir(parents=True, exist_ok=True)
     if (out/'inputs.json').exists(): assert json.loads((out/'inputs.json').read_text()) == inputs
     else: save_json(out/'inputs.json', inputs)

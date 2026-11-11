@@ -57,6 +57,7 @@ def main():
     require_compute(); p = argparse.ArgumentParser()
     p.add_argument('--draw', type=int, default=int(os.getenv('SLURM_ARRAY_TASK_ID', 0)))
     p.add_argument('--ensemble', choices=['influence', 'refit'], default='refit')
+    p.add_argument('--selection-quadrature', type=int, default=128)
     p.add_argument('--draws', type=int, default=512); p.add_argument('--warmup', type=int, default=512)
     p.add_argument('--workers', type=int, default=32); p.add_argument('--profiles', type=int, default=256)
     args = _ARGS = p.parse_args(); start = time.monotonic()
@@ -69,7 +70,8 @@ def main():
         record = json.loads(model_path.with_name('complete.json').read_text())
         assert record['converged'] and sha(model_path) == record['sha256']
     _MODEL = inference_model(fitted)
-    selection_path = D/'shared_selection'/f'{args.ensemble}_{args.draw:02}_p{args.profiles}/table.npz'
+    selection_folder = f'{args.ensemble}_{args.draw:02}_p{args.profiles}'+('' if args.selection_quadrature == 128 else f'_q{args.selection_quadrature}')
+    selection_path = D/'shared_selection'/selection_folder/'table.npz'
     selection_record = json.loads(selection_path.with_name('complete.json').read_text())
     assert selection_record['passed'] and selection_record['sha256'] == sha(selection_path)
     table = SelectionTable(**load(selection_path))
