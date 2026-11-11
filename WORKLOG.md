@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-11 — joint Monte Carlo precision remains a separate gate
+- Original32-response recovery summary passes78/112catalogs. Some failures are
+ finalweightedmarginal differences, notdivergences; numerical-only selection
+ targetsactual contributingresponses, keepingunrefined trianglebound<=0.001.
+- Add finalcount/recovery/sciencefiguredriver andcandidateexport; physicalmodel
+ andfrozenevaluation unchanged. Await actual refinedreports andfullcatalog.
+
 ## 2026-11-11 — full recovery inputs complete and bounded prospective scoring
 - All3584response/catalog recovery combinations completed.24original numerical
  failures preserved;22refinedcases pass. Finaltwo refinements61144482 and

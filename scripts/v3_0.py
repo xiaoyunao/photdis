@@ -25,7 +25,7 @@ STAGES = {
     'hierarchy-benchmark': 'v3_0_hierarchy_benchmark.py',
     'support-audit': 'v3_0_support_audit.py',
     'catalog': 'v3_0_catalog.py', 'catalog-audit': 'v3_0_catalog_audit.py', 'scale-example': 'v3_0_scale_example.py',
-    'recovery-report': 'v3_0_recovery_report.py',
+    'recovery-report': 'v3_0_recovery_report.py', 'recovery-precision': 'v3_0_recovery_precision.py', 'final-figures': 'v3_0_final_figures.py',
     'validation-inputs': 'v3_0_validation_inputs.py', 'validation-audit': 'v3_0_validation_audit.py', 'candidate-predict': 'v3_0_candidate_predict.py',
     'recovery-batch': 'v3_0_recovery_batch.py',
     'recovery': 'v3_0_recovery.py',
