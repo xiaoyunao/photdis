@@ -20,9 +20,10 @@ def selected_log_likelihood(log_response, weights, selection_probability, object
     if (w < 0).any() or not np.isfinite(w).all(): raise ValueError('Invalid sampling weights')
     with np.errstate(divide='ignore'):
         logtheta = np.log(theta)
-    norm = theta@alpha
+    norm = theta@alpha if alpha.ndim == 1 else theta@alpha.T
     if (norm <= 0).any(): raise ValueError('Zero selected population probability')
-    return logsumexp(lr[None, :, :]+logtheta[:, None, :], axis=-1)@w-w.sum()*np.log(norm)
+    correction = w.sum()*np.log(norm) if alpha.ndim == 1 else np.log(norm)@w
+    return logsumexp(lr[None, :, :]+logtheta[:, None, :], axis=-1)@w-correction
 
 
 def joint_responsibilities(log_response, weights):
@@ -103,3 +104,74 @@ class SharedCounts:
             assert self.realized.dtype == np.int64 and (self.realized.sum(axis=1) == self.n).all()
             result['count_draws'] = self.realized.copy()
         return result
+
+
+def fit_population(log_response, selection_probability, reference_weights, *,
+                   object_weights=None, prior_sigma=.7, shrinkage_center=None):
+    """Fixed additive-log-ratio target mixture with a proper shrinkage prior.
+
+    Per-object selection probabilities condition on recorded error/dust/mask
+    covariates. Case weights may be design-rescaled for a sampled development
+    cohort; they are not automatically expanded into millions of observations.
+    """
+    from scipy.optimize import minimize
+    from scipy.special import softmax
+    lr = np.asarray(log_response, float); n, k = lr.shape
+    base = np.asarray(reference_weights, float)
+    if len(base) != k or (base <= 0).any() or not np.isclose(base.sum(), 1):
+        raise ValueError('Strictly positive normalized reference mixture required')
+    alpha = np.broadcast_to(selection_probability, (n, k)).copy()
+    if (alpha < 0).any() or (alpha > 1).any() or (alpha.sum(axis=1) <= 0).any():
+        raise ValueError('Invalid conditional selection response')
+    w = np.ones(n) if object_weights is None else np.asarray(object_weights, float)
+    if (w < 0).any() or not np.isfinite(w).all(): raise ValueError('Invalid case weights')
+    center = np.log(base[:-1]/base[-1]) if shrinkage_center is None else np.asarray(shrinkage_center)
+    with np.errstate(divide='ignore'): la = np.log(alpha)
+    def evaluate(x, hessian=False):
+        logits = np.r_[x, 0.]
+        lognorm = logsumexp(logits)
+        ql = np.exp(lr+logits-logsumexp(lr+logits, axis=1)[:, None])
+        qa = np.exp(la+logits-logsumexp(la+logits, axis=1)[:, None])
+        value = -w@(logsumexp(lr+logits, axis=1)-logsumexp(la+logits, axis=1))
+        value += .5*np.sum(((x-center)/prior_sigma)**2)
+        grad = -w@(ql[:, :-1]-qa[:, :-1])+(x-center)/prior_sigma**2
+        if not hessian: return float(value), grad
+        h = np.diag(w@(qa[:, :-1]-ql[:, :-1]))
+        h += (ql[:, :-1].T*w)@ql[:, :-1]-(qa[:, :-1].T*w)@qa[:, :-1]
+        h += np.eye(k-1)/prior_sigma**2
+        return h
+    result = minimize(evaluate, center, jac=True, method='BFGS', options=dict(gtol=1e-6, maxiter=300))
+    if not result.success and np.linalg.norm(result.jac, ord=np.inf) > 1e-4:
+        raise RuntimeError('Population optimizer failed: '+result.message)
+    hessian = evaluate(result.x, hessian=True)
+    eigen = np.linalg.eigvalsh(hessian)
+    if eigen.min() <= 0: raise RuntimeError('Population posterior not locally identified; no fake inverse-Hessian interval')
+    return dict(logratio_map=result.x, weights=softmax(np.r_[result.x, 0.]),
+                covariance=np.linalg.inv(hessian), hessian=hessian, prior_center=center,
+                prior_sigma=prior_sigma, objective=float(result.fun),
+                gradient_max=float(abs(result.jac).max()), minimum_curvature=float(eigen.min()),
+                effective_case_count=float(w.sum()**2/(w@w)), case_weight_sum=float(w.sum()))
+
+
+def population_draws(fit, log_response, selection_probability, *, object_weights=None,
+                     draws=4096, seed=301401):
+    """Exact likelihood importance correction to a broad Laplace proposal.
+
+    Return weights/ESS; do not silently call low-ESS samples converged. Callers
+    must refine the number of draws and final marginal probabilities/count errors.
+    """
+    from scipy.stats import multivariate_t
+    from scipy.special import softmax
+    rng = np.random.default_rng(seed)
+    proposal = multivariate_t(loc=fit['logratio_map'], shape=fit['covariance'], df=7)
+    x = np.asarray(proposal.rvs(size=draws, random_state=rng)).reshape(draws, len(fit['logratio_map']))
+    theta = softmax(np.c_[x, np.zeros(draws)], axis=1)
+    logweight = np.empty(draws)
+    for start in range(0, draws, 64):
+        stop = min(draws, start+64)
+        lp = selected_log_likelihood(log_response, theta[start:stop], selection_probability, object_weights)
+        lp -= .5*np.sum(((x[start:stop]-fit['prior_center'])/fit['prior_sigma'])**2, axis=1)
+        logweight[start:stop] = lp-proposal.logpdf(x[start:stop])
+    weight = np.exp(logweight-logsumexp(logweight))
+    return dict(weights=theta, posterior_weight=weight, logratio=x,
+                effective_sample_size=float(1/(weight@weight)), draw_ids=np.arange(draws, dtype='i8'))

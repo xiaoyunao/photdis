@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — corrected benchmark running; input expansion respects scheduler limit
+- Confirmed failed61132862terminal and no active same-name job; sole corrected
+  SED benchmark61133617 submitted fromc4dfc2c. No previous cloud/model to migrate.
+- Native13task array was rejected without a job ID by QOSMaxSubmitJobPerUserLimit;
+  no native expansion job started. Replace with one serial checkpoint-reusing job,
+  avoiding queue-limit workarounds or duplicate submissions. Timers remain absent.
+- Add per-object/error-conditioned selection normalization, regularized target
+  mixture optimization and importance-corrected shared parameter draws. Analytic
+  two-efficiency control recovers underlying0.4mixture; fixes one-dimensional
+  multivariate-t return shape.20focusedtests pass.
+
 ## 2026-11-11 — continuous joint inference and frozen photometric-only new sky
 - Newsky100/101 each1024PSF identities, four observed-r strata256each;
   represented parent counts261184/309171. All historical config/cell/ID exclusions

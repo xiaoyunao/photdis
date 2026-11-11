@@ -47,3 +47,21 @@ def test_large_counts_are_int64_and_final_mixture_precision_not_rare_response_ma
     p = np.array([[[1., 0]], [[1., 0]], [[0., 1]], [[1., 0]]])
     acc = SharedCounts(ids, 2, [1, 1, 1e-9, 1]); acc.add(p, ids)
     assert acc.result()['marginal_half_delta'] < 1e-8
+
+
+def test_population_fit_respects_object_specific_entry_probabilities():
+    from photdis.v3.population import fit_population, population_draws
+    # Exactly informative observed class, but two ancillary-error groups have
+    # different entry efficiencies. The underlying fraction is 0.4, not the
+    # fraction of selected rows assigned to class zero.
+    alpha = np.repeat([[.8, .2], [.3, .9]], [200, 200], axis=0)
+    expected = [.4*.8/(.4*.8+.6*.2), .4*.3/(.4*.3+.6*.9)]
+    labels = np.r_[np.r_[np.zeros(round(200*expected[0]), int), np.ones(200-round(200*expected[0]), int)],
+                   np.r_[np.zeros(round(200*expected[1]), int), np.ones(200-round(200*expected[1]), int)]]
+    lr = np.full((400, 2), -50.)
+    lr[np.arange(400), labels] = 0
+    fit = fit_population(lr, alpha, [.5, .5], prior_sigma=3.)
+    assert abs(fit['weights'][0]-.4) < .01
+    posterior = population_draws(fit, lr, alpha, draws=2048)
+    assert posterior['effective_sample_size'] > 1000
+    assert abs(posterior['posterior_weight']@posterior['weights'][:, 0]-.4) < .01
