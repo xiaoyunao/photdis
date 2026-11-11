@@ -30,6 +30,7 @@ STAGES = {
     'recovery-batch': 'v3_0_recovery_batch.py',
     'recovery': 'v3_0_recovery.py',
     'development-figures': 'v3_0_development_figures.py',
+    'evidence-refine': 'v3_0_evidence_refine.py',
     'shared-recovery': 'v3_0_shared_recovery.py',
     'shared-recovery-batch': 'v3_0_shared_recovery_batch.py',
     'dust-selection-audit': 'v3_0_dust_selection_audit.py',

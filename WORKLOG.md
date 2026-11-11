@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-11 — actual continuous products pass; bridge overlap requires refinement
+-Pilot61141149COMPLETED21s/64objects: nativeintegrationerror0.0002351,
+ classCDF/jointdifference8.14e-7, omittedbound8.87e-5. Matcheddiagnostics61141151complete.
+-Sharedtarget16chainsconvergeRhat1.01391/ESS188.54, but originalt7bridge fails
+ overlapESS1.61/halfdifference0.921/nonconvergence. Preserve result, do not useweights.
+-Add quadrature-only structuredconditional-field Gaussian proposal with5%broadt7
+ support, dampedbridge iteration and exactproposaldensity.58-dimensional known-
+ normalizer independenttestpasses; actual saved-chain evidence refinement pending.
+
 ## 2026-11-11 — shared recovery and dust-selection sensitivity prepared
 -Add same112continuouscatalog shared-reference recovery driver, same globally
  perturbedlikelihood/selection and proper-prior bridge evidence; conditional
