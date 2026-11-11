@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-11 — actual full reference catalog audit
+-13fields:1183990rows,333084actualstructuralchecks;1183989numericallyconverged.
+ Onefield11quadratureflag retained; isolatedfiner-grid auditpreparedwithout
+ overwritingoriginal. Totalactualreferenceoutput96,286,789,679bytes.
+- Fullcandidate reference auditmanifestcopiedwithall13sourcehashes. Target
+ populationlayer stillrequiresfinalsharedproduct numericalgate.
+
 ## 2026-11-11 — full candidate reference predictions complete
 - All13DECamfields/1183990qualified objects have referenceprediction completion;
  fullhash/identity/probability audit61144231 progressing. No fullDR11 claim.
