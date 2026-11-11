@@ -1,0 +1,17 @@
+{
+  "system": "NGC288",
+  "photometric_radius_deg": 1.0,
+  "maximum_photometric_sample": 8192,
+  "photometric_sampling_seed": 302101,
+  "membership_probability_minimum": 0.9,
+  "distance_kpc": 9.03,
+  "distance_lower_error_kpc": 0.56,
+  "distance_upper_error_kpc": 0.48,
+  "reference": "Watkins, van der Marel, Bellini & Anderson (2015), ApJ 812,149, Table 2",
+  "reference_url": "https://arxiv.org/abs/1509.00513",
+  "doi": "10.1088/0004-637X/812/2/149",
+  "scale_method": "HST proper-motion and literature line-of-sight velocity-dispersion dynamical distance",
+  "scale_assumptions": "Spherical, isotropic, nonrotating constant mass-to-light dynamical model; reported statistical errors do not guarantee absence of dynamical systematics.",
+  "membership_source": "Vasiliev & Baumgardt 2021 published Gaia EDR3 membership; membership is Gaia-conditioned, scale is not Gaia-parallax calibrated.",
+  "policy": "Freeze photometric sample before membership association. Evaluate only after v3 method freeze and explicit identity/history audit. No predictions or reference-distance residuals used to choose sample."
+}

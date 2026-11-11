@@ -16,7 +16,7 @@ STAGES = {
     'native': 'v3_0_native.py', 'sed': 'v3_0_sed.py',
     'controls': 'v3_0_controls.py', 'cohorts': 'v3_0_cohorts.py',
     'uncertainty': 'v3_0_uncertainty.py', 'benchmark': 'v3_0_response.py',
-    'predict': 'v3_0_predict.py',
+    'predict': 'v3_0_predict.py', 'independent': 'v3_0_independent.py',
 }
 
 

@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-11 — independent-scale photometric protocol
+-Verified Watkins et al.2015 original Table2 and kinematic method from
+ https://arxiv.org/pdf/1509.00513. Freeze NGC288scale9.03(-0.56,+0.48)kpc,
+1degreePSF photometric parent and <=8192identity-hash sample before association.
+ The driver refuses member association until final method_freeze.json exists,
+ requires zero overlap with every v3 fitting/development role, and preserves
+ Gaia-conditioned membership versus non-Gaia-parallax distance-scale distinction.
+-Combined joint benchmark submission with afterok:61137072 was rejected
+ with explicit Job dependency problem and no job ID (completed prerequisite
+ no longer scheduler-active). Verify terminal/empty name before standalone retry.
+
 ## 2026-11-11 — full-log-density scoring and limited target SED/radial weights
 -61137072cohort preparation completed calculation:11709hyper,62880development,
 26000original application,8192independent empiricalSED templates; reference
