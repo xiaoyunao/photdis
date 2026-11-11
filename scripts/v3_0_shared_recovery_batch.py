@@ -16,8 +16,8 @@ def main():
     if not 0<=draw<32:raise ValueError('Only frozen 32 shared draws')
     def run(catalog):
         extra=[]
-        profiles=a.profiles or (1024 if draw in (6,14) else None)
-        quadrature=a.quadrature or (512 if draw in (6,14) else None)
+        profiles=a.profiles or (1024 if draw in (6,14,23,28) else None)
+        quadrature=a.quadrature or (512 if draw in (6,14,23,28) else None)
         if profiles:extra += ['--profiles',str(profiles)]
         if quadrature:extra += ['--quadrature',str(quadrature)]
         subprocess.run([sys.executable,'-u',str(ROOT/'scripts/v3_0_shared_recovery.py'),'--draw',str(draw),'--catalog',str(catalog),'--draws',str(a.draws),'--production',*extra],check=True)

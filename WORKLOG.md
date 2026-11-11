@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-11 — additional selection quadrature refinements
+-Draws23/28coarse selection residuals0.00638/0.00651 exceedfixed0.005gate;
+ do not release target jobs. Use same numerical1024profile/512quadrature
+ refinement as6/14, preserving all physical priors and coarse failures.
+-Method-freeze job submitted; prospective evidence remains closed.
+
 ## 2026-11-11 — prospective method freeze prepared
 -All32fullreference refits converged. Nominalnative26000product passes.
 -Add explicit physical/model/prior/output/metric freeze requiring32modelhashes,
