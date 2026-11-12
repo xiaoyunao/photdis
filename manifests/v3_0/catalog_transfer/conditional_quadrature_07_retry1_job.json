@@ -1,0 +1,26 @@
+{
+  "job": "61160732",
+  "previous_failed_job": 61160696,
+  "utc": "2026-11-12T07:49:36.243965+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-c",
+    "8",
+    "-t",
+    "00:10:00",
+    "-J",
+    "v3_cond_quad07_retry1",
+    "scripts/run_v3_0_stage.sh",
+    "catalog-numeric-audit",
+    "--field",
+    "7",
+    "--draw",
+    "12",
+    "--draws",
+    "4096"
+  ],
+  "repair": "Missing pathlib.Path import fixed; same physical model and frozen output preserved."
+}

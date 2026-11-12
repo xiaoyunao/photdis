@@ -54,14 +54,13 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
- Conditional fields00–08 complete811278total; maxfinalhalf0.004882<0.005.
- Field07has1conditionalreferencequadratureflag; separatefiner-gridcheckpending,
- originalflagretained. Summary/delivery distinguishreference/MC/unionfailures. Existing exportarray
- now starts each field after its corresponding prediction succeeds (aftercorr).
- Fields00–06exports complete589828rows,zero numerical failures;
- source/completionhashes verified, fullPDF/reweightingchunklinks retained.
- Pending08–12 predictionlimits2.5h based onseven-fieldworst-ratebenchmark
- (66%margin); actual07/08/09RUNNING, othersnormalresourcequeue.
+ Conditional fields 00–09 and compact exports complete: 897693 objects (75.82%).
+ Field 07 and 09 each retain one original conditional reference quadrature flag.
+ Same-model finer-grid diagnostics 61160732 / 61160854 pass at initial step .025,
+ with maximum joint changes 1.27e-10 / 5.80e-9. Sidecars do not replace rows.
+ Summary, delivery and final figure captions distinguish reference/MC/union flags.
+ Fields 10–12 RUNNING; their existing exports use aftercorr dependencies.
+ Pending final summary/figures retain original jobs; no duplicate submissions.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
 

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-12 — conditional flags refined; ten fields exported
+- Prediction and compact export fields 00–09 complete: 897,693 / 1,183,990
+  qualified objects (75.82%). Export records and prediction/source hashes checked.
+- Field 07 diagnostic 61160732 and field 09 diagnostic 61160854 completed in
+  2:14 / 2:26. The 0.025 initial-step refinements pass; the 0.05 refinements
+  do not pass the complete convergence criterion. Maximum joint changes are
+  1.27e-10 / 5.80e-9. Original production flags remain on both objects.
+- Downloaded original audit JSON/CSV and verified CSV and implementation hashes.
+  Final catalog figure captions now report reference, MC and union flag counts;
+  py_compile passed. No physical model or completed posterior was changed.
+- Existing fields 10–12 are RUNNING; summary and final two figures retain their
+  original dependencies. Next: finish these jobs, inspect figures and run delivery.
+
 ## 2026-11-12 — repair isolated numerical-audit wrapper import
 -Numericdiagnostic61160696FAILED17s: NameError(Path) beforeproducingaudit
  outputs. Addedmissingpathlib import; pycompile/importsmoke pass.

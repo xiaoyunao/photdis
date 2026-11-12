@@ -115,7 +115,8 @@ def catalog():
         ax.set(title=title,xticks=range(6),xticklabels=BINS,xlabel='Distance bin (kpc)',ylabel='Qualified-catalog count');ax.tick_params(axis='x',labelsize=10);ax.ticklabel_format(axis='y',style='sci',scilimits=(0,0))
     fig.suptitle(f"Conditional candidate-catalog counts: {record['qualified']:,} objects",fontsize=18)
     fig.subplots_adjust(left=.07,right=.98,bottom=.15,top=.80,wspace=.38)
-    save(fig,'catalog_joint_counts',rows,[base/'complete.json',base/'joint_counts.csv'],'Unit-weight actual qualified catalog. Means and95%shared latent-count intervals under modular transfer from the26000sample; not full-catalog refit, independently calibrated class census, or intrinsic density.')
+    numeric_note=f" All rows are retained, including {record['target_numerical_failures']} numerical flags ({record['target_reference_numerical_failures']} reference-quadrature and {record['target_mc_failures']} target Monte Carlo failures; categories may overlap)."
+    save(fig,'catalog_joint_counts',rows,[base/'complete.json',base/'joint_counts.csv'],'Unit-weight actual qualified catalog. Means and95%shared latent-count intervals under modular transfer from the26000sample; not full-catalog refit, independently calibrated class census, or intrinsic density.'+numeric_note)
     fig,axes=plt.subplots(1,2,figsize=(13,5));valid=[r for r in fields if int(r['candidate'])>0];x=np.arange(len(valid))
     axes[0].bar(x,[int(r['candidate']) for r in valid],color=GRAY,label='Qualified input')
     axes[0].bar(x,[int(r['near95_selected']) for r in valid],color=BLUE,label='Near probability >0.95')
@@ -125,7 +126,7 @@ def catalog():
         axes[1].plot(range(6),values,'o-',label=label,color=color)
     axes[1].set(xticks=range(6),xticklabels=BINS,xlabel='Distance bin (kpc)',ylabel='Expected observed count',title='Reference and target-prior counts');axes[1].legend(frameon=False,fontsize=10)
     fig.subplots_adjust(left=.08,right=.98,bottom=.15,top=.86,wspace=.3)
-    save(fig,'catalog_scope_prior',prior,[base/'fields.csv',base/'prior_comparison.csv'],'Qualifiedparent1,183,990 ofhistorical9,390,518 rows; north remainsunmodeled. Nearselectionmodel leakage is not measured real contamination. Allposteriorfar tails retained.')
+    save(fig,'catalog_scope_prior',prior,[base/'complete.json',base/'fields.csv',base/'prior_comparison.csv'],'Qualifiedparent1,183,990 ofhistorical9,390,518 rows; north remainsunmodeled. Nearselectionmodel leakage is not measured real contamination. Allposteriorfar tails retained.'+numeric_note)
 
 
 def scale():

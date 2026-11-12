@@ -1,0 +1,62 @@
+{
+  "inputs": {
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/catalog/field_07/inputs.npz": "1ef65f197e63a4637ba3bf2dcab9d12b104f004fd8f5a20c5f4f649881a15412",
+    "scripts/v3_0_catalog_numeric_audit.py": "ca577a204ce15c6356e38e759c9babee051aa241efe67ec4c9a77a7c81de5d61",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/complete.json": "b2546802185ddbd23082b2c90818ade1c9acddcdf413c3cd86b411753f7ab4a6",
+    "data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/reference_prediction/chunk_00022080.json": "bfe75d95e86f2b88599bf6996945ff7b119e5c1dc8d65b8e64d29d5941c7a9d6"
+  },
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "field": 7,
+  "response_draw": 12,
+  "physical_changes": false,
+  "flagged_objects": 1,
+  "checks": [
+    {
+      "identity": 3894834884141893376,
+      "source_row": 22096,
+      "initial_step": 0.05,
+      "original_probability_delta": 2.587339795537269e-10,
+      "original_qnear": 0.9189059189580095,
+      "refined_qnear": 0.9189059189585536,
+      "maximum_joint_change": 1.012371159125891e-10,
+      "median_mu_change": -1.2223292422675058e-07,
+      "probability_delta": 6.455376771324906e-11,
+      "quantile_delta_mag": 2.3642435920123717e-07,
+      "boundary_mass": [
+        7.025294183379592e-34,
+        -1.0007296002871476e-16
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 153601,
+      "converged": false
+    },
+    {
+      "identity": 3894834884141893376,
+      "source_row": 22096,
+      "initial_step": 0.025,
+      "original_probability_delta": 2.587339795537269e-10,
+      "original_qnear": 0.9189059189580095,
+      "refined_qnear": 0.918905918958687,
+      "maximum_joint_change": 1.2655709813458316e-10,
+      "median_mu_change": -1.657029855550718e-07,
+      "probability_delta": 1.614661269272455e-11,
+      "quantile_delta_mag": 8.711354659851622e-08,
+      "boundary_mass": [
+        3.5115591438551023e-34,
+        1.8797391210258168e-15
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 307201,
+      "converged": true
+    }
+  ],
+  "outputs": {
+    "refinements.csv": "2244dc24f6319732734c2d789039e94dc537fafef598da66088dda88c6ca9ca9"
+  },
+  "scope": "Numerical-only same-model quadrature check; original flagged catalog and audit preserved. No automatic replacement of physical model or production rows.",
+  "job": "61160732"
+}

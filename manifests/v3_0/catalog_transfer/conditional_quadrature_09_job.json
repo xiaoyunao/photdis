@@ -1,0 +1,25 @@
+{
+  "job": "61160854",
+  "utc": "2026-11-12T07:54:38.367373+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-c",
+    "8",
+    "-t",
+    "00:10:00",
+    "-J",
+    "v3_cond_quad09",
+    "scripts/run_v3_0_stage.sh",
+    "catalog-numeric-audit",
+    "--field",
+    "9",
+    "--draw",
+    "12",
+    "--draws",
+    "4096"
+  ],
+  "purpose": "Independent same-model/calibration finer-grid audit of the one flagged field09 conditional reference; original rows unchanged."
+}

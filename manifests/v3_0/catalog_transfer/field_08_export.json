@@ -1,0 +1,301 @@
+{
+  "inputs": {
+    "data/v3_0/catalog/field_08/prepared.json": "52130e0decc3497d56f72054fe504505109beab4096fc3df24ecf710fcaa6c62",
+    "data/v3_0/catalog/field_08/population_transfer/refit_12_s4096/complete.json": "46f51feeac76bd40a9cc91bbbc67f46fb241490299acc795f175998d69bff1b6",
+    "data/v3_0/catalog/transfer_plan.json": "db72e8782902e833da0b0a8ecd43d74bf190d9f1b18ca5b83275c7d8d5c32a37",
+    "scripts/v3_0_catalog_export.py": "2c6d5afc5ac42d23bd94395bde7eb96250843dacea5135a51b73659ae26c671d",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "data/v3_0/calibration_specdis_inputs.npz": "cfc6287503aca4416725db77b56e2679211a2b9f975c39663b6df34b16ed064d",
+    "data/v3_0/calibration_spdist_inputs.npz": "371de2c9017718d6af70a84639f1a30874dc9081ef96cc300c483d412714723b",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac"
+  },
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "rows": 79647,
+  "field": 8,
+  "table_sha256": "d16ef1c5f55e03a449be2e827d785c55592ab2ce54fee4764d60b573826dee18",
+  "chunk_index_sha256": "5bb2c522278deae908f78db655e927e65419950b7dd644e79cf1ffb11a1df1ba",
+  "shared_parameters_sha256": "9e05544b2242f42fdbefde7d2f155ece1416188a79e8c43141645cc6039a6984",
+  "numerical_failed": 0,
+  "near95": 65761,
+  "multimodal": 73086,
+  "reference_role_codes": {
+    "0": "excluded",
+    "1": "sed_train",
+    "2": "source_calibration",
+    "3": "hyperparameters",
+    "4": "seen_development",
+    "5": "prospective",
+    "-1": "not in v3 reference inventory"
+  },
+  "role_counts": {
+    "sed_training_identity": 2500,
+    "source_calibration_identity": 0,
+    "population_fit_identity": 334
+  },
+  "response": {
+    "draw": 12,
+    "draws": 4096,
+    "original_weight": 1.0,
+    "retained_weight": 1.0
+  },
+  "discarded_response_mass": 1.0879833316576286e-147,
+  "columns": {
+    "identity": {
+      "dtype": "int64",
+      "shape": [
+        79647
+      ]
+    },
+    "ls_id": {
+      "dtype": "int64",
+      "shape": [
+        79647
+      ]
+    },
+    "TYPE": {
+      "dtype": "<U4",
+      "shape": [
+        79647
+      ]
+    },
+    "field": {
+      "dtype": "int16",
+      "shape": [
+        79647
+      ]
+    },
+    "photometric_system": {
+      "dtype": "<U16",
+      "shape": [
+        79647
+      ]
+    },
+    "band_mask": {
+      "dtype": "bool",
+      "shape": [
+        79647,
+        6
+      ]
+    },
+    "mu": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        5
+      ]
+    },
+    "modes": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        8
+      ]
+    },
+    "mode_mass": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        8
+      ]
+    },
+    "minor_mode_mass": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "qnear": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "probability": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        3,
+        6
+      ]
+    },
+    "supported": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "extrapolation": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "multimodal": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "prior_sensitive": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "reference_mu": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        5
+      ]
+    },
+    "reference_qnear": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "prior_delta_mu50": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "prior_delta_qnear": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "reference_numerical_converged": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "negative_intrinsic_support": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "discrepancy_probability": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "binary_probability": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "reference_role": {
+      "dtype": "int8",
+      "shape": [
+        79647
+      ]
+    },
+    "sed_training_identity": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "source_calibration_identity": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "population_fit_identity": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "RA": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "DEC": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "band_state": {
+      "dtype": "int8",
+      "shape": [
+        79647,
+        6
+      ]
+    },
+    "class_probability": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        3
+      ]
+    },
+    "distance_probability": {
+      "dtype": "float64",
+      "shape": [
+        79647,
+        6
+      ]
+    },
+    "final_half_delta": {
+      "dtype": "float64",
+      "shape": [
+        79647
+      ]
+    },
+    "numerically_converged": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    },
+    "class_ambiguous": {
+      "dtype": "bool",
+      "shape": [
+        79647
+      ]
+    }
+  },
+  "mu_quantiles": [
+    0.025,
+    0.16,
+    0.5,
+    0.84,
+    0.975
+  ],
+  "distance_units": "mu=5log10(d/kpc)+10",
+  "class_order": [
+    "dwarf",
+    "evolved",
+    "other"
+  ],
+  "distance_edges_kpc": [
+    0,
+    2,
+    5,
+    10,
+    20,
+    50,
+    "infinity"
+  ],
+  "flag_definitions": {
+    "class_ambiguous": "max class probability <0.8; descriptive, not a calibrated hard classifier",
+    "prior_sensitive": "abs(target qnear - same-response reference qnear)>0.05",
+    "multimodal": "at least two distance modes with mass>0.05",
+    "numerical_failed": "reference quadrature failed or final joint half-chain difference >=0.005; retained, not silently filtered"
+  },
+  "scope": "Research candidate only; modular target-sample transfer, not full-catalog refit or deployment. Finite-response support and physical calibration remain limited. Shared parameter indices are global; chunk PDFs and reweightable joint coefficients remain linked.",
+  "job": "61155737"
+}

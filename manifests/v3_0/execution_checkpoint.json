@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T15:48:47.422095+08:00",
+  "checked_beijing": "2026-11-12T15:59:04.498873+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,16 +16,12 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      7,
-      8,
-      9
-    ],
-    "pending_tasks": [
       10,
       11,
       12
     ],
-    "pending_reason": "Resources"
+    "pending_tasks": [],
+    "pending_reason": null
   },
   "target_pipeline": [
     61154185,
@@ -84,9 +80,10 @@
       5,
       6,
       7,
-      8
+      8,
+      9
     ],
-    "conditional_candidate_objects": 811278,
+    "conditional_candidate_objects": 897693,
     "candidate_export_fields": [
       0,
       1,
@@ -94,9 +91,12 @@
       3,
       4,
       5,
-      6
+      6,
+      7,
+      8,
+      9
     ],
-    "candidate_export_objects": 589828
+    "candidate_export_objects": 897693
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -138,18 +138,31 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: fields07/08 complete; discovered1conditional reference quadrature flag and fixed summary acceptance omission; sidecar refinement pending",
+  "goal_turn_classification": "progress: ten fields exported; two conditional reference flags retained with converged finer-grid sidecars; last three fields running",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
   "conditional_reference_flags": {
-    "field_07": 1
+    "field_07": 1,
+    "field_09": 1
   },
   "conditional_reference_audit_jobs": [
     {
       "job": 61160696,
       "status": "FAILED",
       "reason": "Missing Path import in new wrapper; fixed before retry"
+    },
+    {
+      "job": 61160732,
+      "status": "COMPLETED",
+      "field": 7,
+      "finest_grid_passed": true
+    },
+    {
+      "job": 61160854,
+      "status": "COMPLETED",
+      "field": 9,
+      "finest_grid_passed": true
     }
   ]
 }

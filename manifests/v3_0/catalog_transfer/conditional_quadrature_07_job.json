@@ -1,0 +1,25 @@
+{
+  "job": "61160696",
+  "utc": "2026-11-12T07:47:11.158455+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-c",
+    "8",
+    "-t",
+    "00:10:00",
+    "-J",
+    "v3_conditional_quadrature_07",
+    "scripts/run_v3_0_stage.sh",
+    "catalog-numeric-audit",
+    "--field",
+    "7",
+    "--draw",
+    "12",
+    "--draws",
+    "4096"
+  ],
+  "purpose": "Numerical-only finer-grid diagnosis of one flagged conditional reference posterior. Same model/calibration and original catalog preserved."
+}
