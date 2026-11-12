@@ -44,6 +44,7 @@ STAGES = {
     'ensemble-products': 'v3_0_ensemble.py',
     'cdf-revision-audit': 'v3_0_cdf_revision_audit.py',
     'transfer-numeric-audit': 'v3_0_transfer_numeric_audit.py',
+    'milestone-audit': 'v3_0_milestone_audit.py',
     'shared-products': 'v3_0_shared_products.py',
     'refine-target': 'v3_0_refine_target.py', 'conservative-target': 'v3_0_conservative_target.py',
     'trajectory-target': 'v3_0_trajectory_target.py',

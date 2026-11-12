@@ -23,6 +23,10 @@ def main():
         for name,digest in record.get('outputs',{}).items():
             check('hash:'+str((base/name).relative_to(ROOT)),sha(base/name)==digest)
     check('immutable physical method',len(method)==64,method)
+    milestone=read(D/'milestone_delivery_audit.json')
+    check('actual A-D milestone evidence',milestone['passed'] and milestone['method_freeze']==method)
+    check('milestone auditor version',milestone['source_sha256']==sha(ROOT/'scripts/v3_0_milestone_audit.py'))
+    for name,digest in milestone['inputs'].items():check('milestone evidence:'+name,sha(ROOT/name)==digest)
     unit=read(ROOT/'manifests/v3_0/final_unit_validation.json');check('mathematical tests',unit['failed']==0 and unit['passed']>=68,unit['passed'])
     for name,digest in unit.get('test_hashes',{}).items():check('test source:'+name,sha(ROOT/name)==digest)
     ensemble=D/'ensemble_products/all32_native_refined';ens=read(ensemble/'complete.json')

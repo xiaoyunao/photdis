@@ -31,7 +31,7 @@ C: all32-response sampler/evidence/native products and shared26000sample
  audit61154186 verifies7329exactarraycomparisons and26000identities.
  Plan61154187 passes; existing catalog/prospective jobs released.
  Design61145925 complete; three population figures61145926 inspected.
- All39current figure sets reviewed; remaining catalog/scale3sets pending.
+ All40current figure sets reviewed; remaining catalog2sets pending.
  Finite-responseESS1 remains a scientific support limitation, not a numerical
  failure or evidence for calibrated real-population counts.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
@@ -48,7 +48,7 @@ E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  same-response comparisons now complete for3250/2048/8192; no physical changes.
  Numerical audit61154955 verifies13490identities: one newsky MC flag retained.
  Target NGC288 members1442 havebias+12.11% and68coverage47.43%; science limited.
- New scale figure generated; legend layout fix pending visual recheck.
+ Scale layout61155200 complete and visually reviewed;7finalplates pass56checks.
 F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.

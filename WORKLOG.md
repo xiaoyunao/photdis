@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-12 — strengthen final A–D evidence verification
+- Final acceptance now requires fresh hashes and actual arrays for referencePSF,
+ exactIDs/roles, non-1SpecDis flags, missinglabels, sameQRF/SEDtraining,32full
+ convergedrefits, fourmatcheddevelopmentoutputs and224recoverycases.
+- New milestone-audit command parses/imports; production verification pending.
+ This audits existing frozen products, not a new fit or scientific selection.
+
+## 2026-11-12 — finish scale plate visual review
+- Layout-only61155200COMPLETED18s. Shared legend no longer obscures curves;
+ revisedPNG individually inspected. Source CSV is byte-identical to old plot.
+- Final group7sets/56format/hash/English checks passes; all40current sets reviewed.
+ Remaining2catalogfigures depend on fullcandidate production; goal incomplete.
+
 ## 2026-11-12 — preserve active four-field pipeline and layout follow-up
 - Fullcandidate61145915 tasks0–3 RUNNING; remaining tasks wait at cap4.
  Original dependencies61145916/17/18 retain counts/export/finalfigure sequence.

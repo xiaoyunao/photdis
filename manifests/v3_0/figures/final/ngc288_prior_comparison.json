@@ -1,0 +1,13 @@
+{
+  "caption": "One shared9.03kpc dynamicalscale with-0.56/+0.48kpc errors; membershipGaia-conditioned afterpurephotometricpredictions. Curves are posterior expectations, not independent-star Poisson uncertainty or intrinsic density. Nominal-reference versus target is not an isolated prior-only contrast; matched-response comparisons are reported separately.",
+  "inputs": {
+    "data/v3_0/scale_example/reference/complete.json": "21a5d2a962e3692b19440a4f1fe6f33e77330e5d5009f70aef9c91a644c85e3b",
+    "data/v3_0/scale_example/refit_12_s4096/complete.json": "09a80b5cdf5ab8acda64370c467916279296b795c3df2ae50ecfed3b3cbb360a"
+  },
+  "png_sha256": "94763232f996610cdb427317c0b51b69404afe955654218999e6f33085c3ebe9",
+  "pdf_sha256": "8b3981b94d55fc9364860d103dfe184f04f760c84d3c809f18aa2c2846877fc9",
+  "csv_sha256": "3776876fd3c25e0ddcf31ff987977b94d5e16faede8b9107accc5f52e30b4aca",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61155200"
+}

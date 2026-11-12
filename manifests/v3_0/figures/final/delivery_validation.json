@@ -1,7 +1,15 @@
 {
   "passed": true,
-  "figures": 6,
+  "figures": 7,
   "checks": [
+    "figures/v3_0/final/ngc288_prior_comparison.png:hash",
+    "figures/v3_0/final/ngc288_prior_comparison.pdf:hash",
+    "manifests/v3_0/figures/final/ngc288_prior_comparison.csv:hash",
+    "ngc288_prior_comparison:PNG",
+    "ngc288_prior_comparison:300dpi",
+    "ngc288_prior_comparison:PDFpage",
+    "ngc288_prior_comparison:English",
+    "ngc288_prior_comparison:CSV",
     "figures/v3_0/final/response_concentration.png:hash",
     "figures/v3_0/final/response_concentration.pdf:hash",
     "manifests/v3_0/figures/final/response_concentration.csv:hash",
@@ -52,6 +60,10 @@
     "shared_recovery_numerics:CSV"
   ],
   "files": {
+    "figures/v3_0/final/ngc288_prior_comparison.png": "94763232f996610cdb427317c0b51b69404afe955654218999e6f33085c3ebe9",
+    "figures/v3_0/final/ngc288_prior_comparison.pdf": "8b3981b94d55fc9364860d103dfe184f04f760c84d3c809f18aa2c2846877fc9",
+    "manifests/v3_0/figures/final/ngc288_prior_comparison.csv": "3776876fd3c25e0ddcf31ff987977b94d5e16faede8b9107accc5f52e30b4aca",
+    "manifests/v3_0/figures/final/ngc288_prior_comparison.json": "eeef6c526d4b93d0c3c1655400780de3de85e947f58e68a32208532d4f74269e",
     "figures/v3_0/final/response_concentration.png": "ce44394ce91bcd0d324ae96c4d4d055aba041aa3f09ce4a090e9697e0cfe4822",
     "figures/v3_0/final/response_concentration.pdf": "6f6cdaf9fa4dd347907f8aaa552f32d155501aee96232963eba41044da2f1b46",
     "manifests/v3_0/figures/final/response_concentration.csv": "782e9f05f9cc35feb4619fe0aa8a3baac2506381d985da3b58efbe6675d8027c",
@@ -83,7 +95,8 @@
     "shared_recovery_numerics",
     "sample_joint_counts",
     "response_concentration",
-    "sample_count_correlation"
+    "sample_count_correlation",
+    "ngc288_prior_comparison"
   ],
   "review_scope": "Actual human-visible plate inspection recorded at invocation; format checks do not substitute for visual review."
 }
