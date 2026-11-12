@@ -23,6 +23,16 @@ def mixture_log_density(log_density, log_evidence):
     return logsumexp(np.asarray(log_density)+logw[:,None],axis=0)
 
 
+def mixture_cdf_grid(curves, boundaries=DISTANCE_MU_BOUNDARIES):
+    """Retain every breakpoint of the piecewise-linear source CDFs.
+
+    A uniform modulus grid can smear narrow branches even when each source CDF
+    is accurate. The union represents their weighted mixture exactly before
+    the separately bounded final compression.
+    """
+    return np.unique(np.concatenate([np.asarray(boundaries), *[x for x, _ in curves]]))
+
+
 def combine_chunk(name):
     out=_OUT/'chunks'/name;marker=out.with_suffix('.json')
     if marker.exists():
@@ -53,8 +63,7 @@ def combine_chunk(name):
         native_grid=np.unique(np.concatenate([x for x,y in native]))
         native_lp=mixture_log_density(np.array([np.interp(native_grid,x,y) for x,y in native]),_LOGZ)
         native_grids.append(native_grid);native_logpdf.append(native_lp);native_offsets.append(native_offsets[-1]+len(native_grid))
-        lower=min(x[0] for x,y in curves);upper=max(x[-1] for x,y in curves)
-        grid=np.unique(np.r_[np.linspace(lower,upper,int(np.ceil((upper-lower)/.01))+1),DISTANCE_MU_BOUNDARIES])
+        grid=mixture_cdf_grid(curves)
         total=np.zeros((3,len(grid)));error=0.
         for weight,(x,y) in zip(_WEIGHTS,curves):
             sampled=np.array([np.interp(grid,x,row,left=0,right=row[-1]) for row in y]);total+=weight*sampled

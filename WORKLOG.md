@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-12 — maintenance cleared; resume through numerical CDF repair
+- User requests continuation only after recovery. Reservation no longer exists;
+ 61146827/28/29/30/31 completed. Goal reactivated by user; no duplicate fit.
+- Trajectory repair passes Rhat1.00160/minESS2310; refined bridge half-logZ
+ difference0.002574. All32-response final MC error0.003597 passes.
+- Transfer plan61145619 rejects ensemble CDF error0.01865>0.001. Root cause:
+ uniform0.01mag mixture grid misses narrow source-CDF breakpoints. Preserve
+ every source knot before bounded compression; physical inputs/counts unchanged.
+- Analytic narrow-branch regression and full v3 suite pass; archive failed
+ ensemble before regenerating, then rewire existing pending dependencies.
+
 ## 2026-11-11 — verified external block after three goal turns
 - 21:39 Beijing: 61146827 still PENDING/Reserved for maintenance; all downstream
  jobs await dependencies. Scheduler reservation unchanged. Authentication valid.

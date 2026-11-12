@@ -2,7 +2,7 @@
 
 ## Active v3.0 unified research system
 Full review: docs/pro_review_b59e18b.md (14,327-character complete latest reply).
-Detailed goal in this chat is blocked by NERSC maintenance, not complete.
+Detailed goal in this chat is active again after maintenance recovery, not complete.
 Development contract: docs/v3_0_protocol.md; preserved job queue in execution checkpoint.
 This user-authorized stage supersedes previous restrictions on new modeling,
 opening the 3250 reservation after freeze, and existing-field candidate catalogs.
@@ -25,20 +25,13 @@ Current execution (2026-11-11, after prospective freeze):
 A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
  binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
  refits complete. Core likelihood/selection/compression/identity tests passed.
-C: original32 target posterior fits complete. Longer numerical-only chains for
- responses1/12/17 passsampler;26extendedchainrejectedfordivergence. Preserve
- originalverified26s512;131072proposal bridge61145589 stillfails0.2078>0.2.
- Conservative1024draw/.99run61146086 failsRhat1.214/ESS14.55;87/88 reject.
- Pending89/90 canceled; diagnosis61146730 identifies short trajectories.
- Numerical-only4096draw/.95/16step refinement61146827 is PENDING due to
- maintenance. Evidence61146828/native61146829/products61146830 feed
- ensemble61146831, then existing plan61145619; all downstream jobs retained.
- Scheduler maintenance reservation: Nov11 22:00–Nov18 22:00 Beijing (planned
- reservation, not guaranteed actual outage length). No active compute jobs.
- Read manifests/v3_0/execution_checkpoint.json and query actual queue before
- any further submission; the final v3.0 goal remains incomplete.
- Exact26000-object response ensemble, design summary and catalog transfer await
- final weighted marginal precision. Strong finite-response concentration remains
+C: all32-response sampler/evidence/native products complete. Draw26 trajectory
+ repair61146827 passes Rhat1.0016/ESS2310; bridge61146828 passes0.002574.
+ Ensemble61146831 passes finalMC0.003597, but fails coarse CDF-grid interpolation
+ error0.018648. Preserve source knots in mixture CDF, archive failed ensemble,
+ rerun only aggregation and rewire existing pending jobs to a new verified plan.
+ Maintenance reservation removed as of Nov12 12:20 Beijing. Goal active; no
+ duplicate fits or catalog arrays. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
  response/catalog cases completed;24original numeric failures,22refined pass,

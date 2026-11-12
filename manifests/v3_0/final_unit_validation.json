@@ -1,9 +1,9 @@
 {
   "command": "PYTHONPATH=src:scripts:.deps python3 -m pytest -q tests/test_v3*.py",
-  "passed": 71,
+  "passed": 72,
   "failed": 0,
-  "elapsed_seconds": 4.18,
-  "date": "2026-11-11 21:33:48.703234+08:00",
+  "elapsed_seconds": 4.12,
+  "date": "2026-11-12 12:22:19.958531+08:00",
   "scope": "Mathematical and unit tests, not a substitute for production or scientific acceptance",
   "test_hashes": {
     "tests/test_v3_calibration.py": "a7ba9a8c1df06002f572151c3596fc9c00cfd46d244a0096fd83af6f67a78da1",
@@ -13,7 +13,7 @@
     "tests/test_v3_controls.py": "f50325edb536600a9250e90f2e989995e1616c2cb6a7b2c1f48f6b8b760c5ed4",
     "tests/test_v3_data.py": "3a187f3df07cfc9ca08d6b6de4fa3ad05a0cc17db8611dd3c62394eee83c8548",
     "tests/test_v3_ensemble_counts.py": "395aa4721cc742d94c3ba54d9a281a8f542f72f498804091c5fb29f666c5cb1b",
-    "tests/test_v3_ensemble_log_tail.py": "cb1db08999df7accba0a5d193fff0a32d9be937c20081110814e01ec8ef6ea91",
+    "tests/test_v3_ensemble_log_tail.py": "8ea0e56e223c1b2dbcacb3452a21d587b67d61d10a4af70b2df9f00f965d6d9f",
     "tests/test_v3_evidence.py": "9f91814064f90e5c8093fbf09ae4694c0fbf4299cf6c61f3928d1938ab428c63",
     "tests/test_v3_fast.py": "52c0390cf7a3afdfdd3d31aa96e5fd762543b42977003bb16f91f6a254901563",
     "tests/test_v3_fast_hierarchy.py": "15480cc4f2eae740217aea26bfa35923f84471ba523db62d3af0bbc7a8a7e903",

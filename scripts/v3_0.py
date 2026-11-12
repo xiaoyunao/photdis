@@ -42,6 +42,7 @@ STAGES = {
     'dust-selection-audit': 'v3_0_dust_selection_audit.py',
     'diagnostics': 'v3_0_diagnostics.py',
     'ensemble-products': 'v3_0_ensemble.py',
+    'cdf-revision-audit': 'v3_0_cdf_revision_audit.py',
     'shared-products': 'v3_0_shared_products.py',
     'refine-target': 'v3_0_refine_target.py', 'conservative-target': 'v3_0_conservative_target.py',
     'trajectory-target': 'v3_0_trajectory_target.py',

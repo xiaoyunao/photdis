@@ -1,18 +1,19 @@
 {
-  "checked_beijing": "2026-11-11T21:39:37+08:00",
-  "goal_status": "blocked, not complete",
-  "blocking_condition": "NERSC maintenance reservation prevents required Slurm allocation",
-  "consecutive_goal_turns_with_terminal_block": 3,
+  "checked_beijing": "2026-11-12T12:20:22+08:00",
+  "goal_status": "active, incomplete",
+  "blocking_condition": null,
+  "consecutive_goal_turns_with_terminal_block": 0,
   "maintenance": {
     "name": "maintenance_20261111",
     "start_beijing": "2026-11-11T22:00:00+08:00",
     "end_beijing": "2026-11-18T22:00:00+08:00",
-    "scope": "Scheduler reservation, not guarantee of actual outage duration"
+    "scope": "Scheduler reservation, not guarantee of actual outage duration",
+    "current_status": "Reservation removed; recorded jobs ran"
   },
   "first_job": {
     "id": 61146827,
-    "state": "PENDING",
-    "reason": "ReqNodeNotAvail, Reserved for maintenance",
+    "state": "COMPLETED",
+    "reason": "Sampler/evidence pass",
     "stage": "trajectory-target --draw 26 --draws 4096"
   },
   "target_pipeline": [
@@ -48,7 +49,7 @@
     "qualified_reference_predictions": 1183990,
     "shared_recovery_numerical_cases": 112,
     "inspected_figure_sets": 36,
-    "unit_tests": 71
+    "unit_tests": 72
   },
   "outstanding": [
     "Verified 32-response target ensemble",
@@ -58,12 +59,13 @@
     "Final result/atlas/ledger and actual delivery audit"
   ],
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",
-  "blocked_audit_passed": true,
+  "blocked_audit_passed": false,
   "remaining_artifacts_verified_missing": [
     "shared_targets/refit_26_s4096/complete.json",
     "ensemble_products/all32_native_refined/complete.json",
     "catalog/transfer_plan.json",
     "catalog/summary/complete.json",
     "delivery.json"
-  ]
+  ],
+  "current_issue": "Final CDF mixture uniform grid error; source-knot-preserving numerical repair in progress"
 }
