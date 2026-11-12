@@ -3,6 +3,8 @@
 Status: final production is in progress. The authoritative complete review is
 [pro_review_b59e18b.md](pro_review_b59e18b.md). This ledger distinguishes implemented
 and executed work from pending output; it is not the final acceptance marker.
+Fresh A–D checks on actual arrays and fitted/evaluated identities: [363-check production audit](../manifests/v3_0/milestone_delivery_audit.json).
+This verifies artifact consistency and coverage, not scientific calibration.
 
 | Requirement | Implementation and actual evidence | Remaining delivery / limitation |
 |---|---|---|

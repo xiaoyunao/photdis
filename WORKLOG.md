@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-12 — actual A–D acceptance evidence passes
+-61155399COMPLETED22s:363checks on actual PSF/role/identity arrays, calibrated
+ sources,32768matched training IDs,32convergedfullrefits,four62880-object
+ evaluation sets and224conditionalrecovery completion artifacts.
+-Local audit/source hash and method freeze verified. Final delivery links these
+ real artifacts rather than treating documentation or file presence as proof.
+-40figure sets complete; onlyfullcandidate products/twofigures/finalaudit remain.
+
 ## 2026-11-12 — strengthen final A–D evidence verification
 - Final acceptance now requires fresh hashes and actual arrays for referencePSF,
  exactIDs/roles, non-1SpecDis flags, missinglabels, sameQRF/SEDtraining,32full

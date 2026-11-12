@@ -25,6 +25,7 @@ Current execution (2026-11-12, after maintenance recovery):
 A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
  binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
  refits complete. Core likelihood/selection/compression/identity tests passed.
+ Fresh A–D production audit61155399 passes363checks on actual arrays/artifacts.
 C: all32-response sampler/evidence/native products and shared26000sample
  posterior complete. Draw26 trajectory repair passesRhat1.0016/ESS2310.
  CDF aggregation61154185 passes finalMC0.003597/CDF0.000173; preservation

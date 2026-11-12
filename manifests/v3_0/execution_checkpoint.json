@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:58:12.376471+08:00",
+  "checked_beijing": "2026-11-12T13:07:28.217274+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -68,7 +68,8 @@
       "C",
       "D",
       "E"
-    ]
+    ],
+    "actual_milestone_checks": 363
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -108,5 +109,25 @@
   ],
   "prospective_numerical_audit_job": 61154955,
   "scale_layout_job": 61155200,
-  "scale_layout_status": "COMPLETED, visually inspected"
+  "scale_layout_status": "COMPLETED, visually inspected",
+  "milestone_audit_job": 61155399,
+  "catalog_partial_chunks": {
+    "0": {
+      "reference": 1434,
+      "target": 653
+    },
+    "1": {
+      "reference": 2471,
+      "target": 194
+    },
+    "2": {
+      "reference": 2127,
+      "target": 0
+    },
+    "3": {
+      "reference": 1903,
+      "target": 0
+    }
+  },
+  "goal_turn_classification": "progress: scale visual delivery and fresh363-check actual A-D audit; remaining catalog jobs verified RUNNING"
 }
