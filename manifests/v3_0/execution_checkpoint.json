@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:45:59.872422+08:00",
+  "checked_beijing": "2026-11-12T12:53:03.112807+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -12,9 +12,13 @@
   },
   "first_job": {
     "id": 61145915,
-    "state": "PENDING",
-    "reason": "Resources",
-    "stage": "qualified candidate conditional transfer array"
+    "state": "RUNNING",
+    "reason": null,
+    "stage": "qualified candidate conditional transfer array",
+    "active_tasks": [
+      0,
+      1
+    ]
   },
   "target_pipeline": [
     61154185,
@@ -49,7 +53,9 @@
     "unit_tests": 72,
     "sample_population_objects": 26000,
     "cdf_preservation_array_checks": 7329,
-    "sampling_design_represented_parent": 8899334
+    "sampling_design_represented_parent": 8899334,
+    "paired_reservation": 3250,
+    "paired_new_sky": 2048
   },
   "outstanding": [
     "Paired target-prior prospective and independent-scale results",
@@ -80,7 +86,13 @@
   "aggregation_repair_complete": true,
   "short_validation_debug_jobs": [
     61145919,
+    61145920,
     61145921,
-    61145923
-  ]
+    61145922,
+    61145923,
+    61145924,
+    61146319,
+    61146320
+  ],
+  "prospective_numerical_audit_job": 61154955
 }

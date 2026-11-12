@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-12 — paired new-sky scores and live full candidate production
+-61145919/20 complete reservation3250 predictions/scores; no eligible real truth.
+-61145921/22 complete newsky2048. Same-response247preciseGaia: bias+5.81→+6.43%,
+ NMAD13.20→13.59%,68coverage44.94→49.39%; weighted Gaia score worsens.
+-CSV hashes verified and results retained. No outcome-based model changes.
+-61145915_0/_1 are RUNNING; independent transfer61145923 has252/256chunks.
+ New numerical audit61154955 waits for paired evaluations; all original jobs
+ retained. Goal active; remaining full catalog/paired independent/scale/audit.
+
 ## 2026-11-12 — expose prospective Monte Carlo flags
 - Newsky61145921 completes2048objects; native integration passes but maximum
  half-chain difference0.005569 exceeds frozen0.005. Do not label all rows passed.

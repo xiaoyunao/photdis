@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "data/v3_0/catalog/transfer_plan.json": "db72e8782902e833da0b0a8ecd43d74bf190d9f1b18ca5b83275c7d8d5c32a37",
+    "data/v3_0/validation/new_sky/population_transfer/refit_12_s4096/complete.json": "f2cf36c75667189bde0c72f846e7bf889ec35d8415f3077182a5fbd905a40aa1",
+    "data/v3_0/validation/new_sky/evidence.json": "d2fa77c31c32b44b1d847929f19e682db04ff0cb8b9976078160b32da9664eed",
+    "data/v3_0/validation/new_sky/photometry.json": "db482f536fdd8d523b0e0915b3ec3c5e8a1173b4fc4091e20b0e628ed7105bbd",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba",
+    "scripts/v3_0_transfer_evaluate.py": "d0b9136a56358778c97b70385202bbfbdd7f6e313f3a22c094f77fe34b701bc1",
+    "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279"
+  },
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "n": 2048,
+  "job": "61145922",
+  "scope": "Once-opened photometric-first prospective cohorts. Modular transfer, not full-catalog population refit. Reference and target use the same retained source/calibration realization.",
+  "pruning": "Gaussian observation score bounded by retained mass and maximum Gaussian likelihood. PIT/CDF absolute error bounded by omitted response mass. Finite-prior support remains unverified.",
+  "omitted_log_mass": -338.39568284197594,
+  "outputs": {
+    "paired.csv": "7f1d6c79c63859c8d220b13a8397b876a8e181be2c04b3710b7254aa496e0a7c",
+    "distance.csv": "64417afdf3d0c75eb96d0a275e479b7cd17f0a0282131571f96e993767e2a4d0",
+    "matched_reference.npz": "6dc86a0a4cae39b1122c5439dc2bd2fd3722efc87b1fd7229a4f79156ec4ecbe",
+    "target.npz": "44f03fe6b262259cb709f1ea49f736b647d1df4bf308ca3ca618839b837081cc",
+    "gaia.csv": "c25d54861fe37d6f33445dbbafa14ea89f19765e5e5c1791a036da9dbec06106"
+  }
+}
