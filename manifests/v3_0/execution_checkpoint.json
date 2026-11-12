@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T16:05:28.402397+08:00",
+  "checked_beijing": "2026-11-12T16:08:27.158952+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -94,9 +94,10 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
-    "candidate_export_objects": 897693
+    "candidate_export_objects": 941383
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -138,7 +139,7 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: eleven predictions, ten exports; three original conditional flags retained with finer-grid diagnostics; last two fields running",
+  "goal_turn_classification": "progress: eleven exports verified; final native-row/shared-draw checks strengthened, actual audit pending remaining fields",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",

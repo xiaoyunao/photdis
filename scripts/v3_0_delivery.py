@@ -68,6 +68,7 @@ def main():
     check('full qualified parent',summary['qualified']==1183990)
     if summary['target_mc_failures']:limitations.append(f"{summary['target_mc_failures']} target candidates fail the frozen final joint Monte Carlo tolerance and remain flagged; no accuracy claim for these rows.")
     total=0;original_numeric_flags=0;export_reference_failures=0;export_mc_failures=0;export_failures=0
+    shared_draw_ids=None;shared_weights=None
     response=plan['responses'][0];target_name=f'refit_{response["draw"]:02}_s{response["draws"]}'
     for field,n in enumerate(plan['field_counts']):
         base=D/'catalog'/f'field_{field:02}';prep=read(base/'prepared.json')
@@ -78,11 +79,26 @@ def main():
         export=read(base/'candidate_v3_0.json');check('candidate export count:'+str(field),export['rows']==n and export['method_freeze']==method)
         check('candidate compact hash:'+str(field),sha(base/'candidate_v3_0.npz')==export['table_sha256'])
         check('candidate joint index hash:'+str(field),sha(base/'candidate_v3_0_chunks.csv')==export['chunk_index_sha256'])
-        table=load(base/'candidate_v3_0.npz')
+        transferbase=base/'population_transfer'/target_name
+        check('candidate shared parameters hash:'+str(field),sha(transferbase/'shared_parameters.npz')==export['shared_parameters_sha256'])
+        shared=load(transferbase/'shared_parameters.npz')
+        if shared_draw_ids is None:
+            shared_draw_ids=shared['draw_ids'];shared_weights=shared['weights']
+        check('common global draw identities:'+str(field),np.array_equal(shared['draw_ids'],shared_draw_ids))
+        check('common global draw weights:'+str(field),np.array_equal(shared['weights'],shared_weights))
+        check('candidate original input hash:'+str(field),sha(base/'inputs.npz')==prep['outputs']['inputs.npz'])
+        source=load(base/'inputs.npz');table=load(base/'candidate_v3_0.npz')
+        source_order=np.argsort(source['identity']);table_order=np.argsort(table['identity'])
+        for key in ['identity','ls_id','TYPE','RA','DEC','field','photometric_system','band_mask','band_state']:
+            check('candidate original '+key+':'+str(field),np.array_equal(table[key][table_order],source[key][source_order]))
+        check('candidate quantile order:'+str(field),table['mu'].shape==(n,5) and np.isfinite(table['mu']).all()
+              and (np.diff(table['mu'],axis=1)>=0).all())
         check('candidate exact identities:'+str(field),table['identity'].dtype==np.int64 and len(np.unique(table['identity']))==n)
         check('candidate PSF:'+str(field),(table['TYPE']=='PSF').all())
         check('candidate joint masses:'+str(field),table['probability'].shape==(n,3,6) and np.isfinite(table['probability']).all()
               and np.allclose(table['probability'].sum(axis=(1,2)),1.,atol=1e-7,rtol=0))
+        check('candidate class marginal:'+str(field),np.allclose(table['class_probability'],table['probability'].sum(axis=2),atol=1e-7,rtol=0))
+        check('candidate distance marginal:'+str(field),np.allclose(table['distance_probability'],table['probability'].sum(axis=1),atol=1e-7,rtol=0))
         check('candidate near mass:'+str(field),np.allclose(table['qnear'],table['probability'][:,:,:3].sum(axis=(1,2)),atol=1e-7,rtol=0))
         ref_failed=~table['reference_numerical_converged'];mc_failed=table['final_half_delta']>=.005;failed=ref_failed|mc_failed
         check('candidate numerical flag union:'+str(field),np.array_equal(~table['numerically_converged'],failed))
@@ -93,6 +109,10 @@ def main():
             numeric_ref=read(auditbase/'complete.json');outputs(auditbase,numeric_ref)
             check('conditional reference refinement:'+str(field),numeric_ref['method_freeze']==method and numeric_ref['physical_changes'] is False
                   and numeric_ref['flagged_objects']==int(ref_failed.sum()))
+            flagged_ids={int(x) for x in table['identity'][ref_failed]}
+            refined_ids={int(x['identity']) for x in numeric_ref['checks']}
+            check('conditional refinement exact flagged identities:'+str(field),flagged_ids==refined_ids)
+            check('conditional refinement same response:'+str(field),numeric_ref['response_draw']==response['draw'])
             for name,digest in numeric_ref['inputs'].items():check('conditional refinement provenance:'+name,sha(ROOT/name)==digest)
         total+=n
     check('candidate total',total==1183990)

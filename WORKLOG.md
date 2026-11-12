@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-12 — complete eleven exports and strengthen final provenance audit
+- Export 61145917_10 COMPLETED 59s; 43690 rows, original one numerical flag.
+  Downloaded completion record and verified linked prediction/source hashes.
+  Eleven exports now contain 941383 objects. Fields 11/12 remain running.
+- Final delivery audit now checks exact exported-to-input identity and native
+  metadata alignment, sorted finite quantiles, both probability marginals,
+  shared parameter hashes and global draw indices/weights across all fields.
+  Numerical sidecars must match the exact flagged identities and response.
+- `python3 -m py_compile scripts/v3_0_delivery.py` passes. New full-array audit
+  checks will execute in the final allocated delivery job after remaining outputs;
+  they are not claimed as passed merely from syntax validation.
+
 ## 2026-11-12 — eleventh field and its isolated quadrature check complete
 - Field 10 completed in 1668s: 43690 objects; total 941383 (79.51%).
   Final half-chain difference 0.003038 passes; one reference flag remains.
