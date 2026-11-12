@@ -1,0 +1,87 @@
+{
+  "archive": "data/v3_0/archive/ensemble_coarse_cdf_20261112",
+  "old_complete_sha256": "50ebcd9de98cb4c5f9c636ecd9856b7c6e41aca8676e0e1d4342071b0e3a1419",
+  "reason": "Preserve source CDF breakpoints; no physical model/count changes",
+  "jobs": {
+    "ensemble": {
+      "job": "61154185",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "64",
+        "-t",
+        "00:30:00",
+        "-J",
+        "v3_cdf_ensemble",
+        "scripts/run_v3_0_stage.sh",
+        "ensemble-products",
+        "--refinement-map",
+        "data/v3_0/execution/ensemble_refinements_trajectory26.json",
+        "--name",
+        "all32_native_refined",
+        "--workers",
+        "64"
+      ]
+    },
+    "audit": {
+      "job": "61154186",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "8",
+        "-t",
+        "00:20:00",
+        "-J",
+        "v3_cdf_preservation",
+        "--dependency=afterok:61154185",
+        "scripts/run_v3_0_stage.sh",
+        "cdf-revision-audit",
+        "--previous",
+        "data/v3_0/archive/ensemble_coarse_cdf_20261112"
+      ]
+    },
+    "plan": {
+      "job": "61154187",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-c",
+        "8",
+        "-t",
+        "00:10:00",
+        "-J",
+        "v3_cdf_transfer_plan",
+        "--dependency=afterok:61154186",
+        "scripts/run_v3_0_stage.sh",
+        "transfer-plan"
+      ]
+    }
+  },
+  "rebound_existing_jobs": [
+    "61145915",
+    "61145919",
+    "61145921",
+    "61145923",
+    "61145925",
+    "61145926"
+  ],
+  "pending_time_limit_adjustments": [
+    {
+      "job": "61154185",
+      "time_limit": "00:05:00",
+      "reason": "Previous aggregation elapsed35seconds; bounded read-only preservation audit"
+    },
+    {
+      "job": "61154186",
+      "time_limit": "00:10:00",
+      "reason": "Previous aggregation elapsed35seconds; bounded read-only preservation audit"
+    },
+    {
+      "job": "61154187",
+      "time_limit": "00:05:00",
+      "reason": "Previous aggregation elapsed35seconds; bounded read-only preservation audit"
+    }
+  ]
+}

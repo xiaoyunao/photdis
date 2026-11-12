@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:20:22+08:00",
+  "checked_beijing": "2026-11-12T12:27:06+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -11,18 +11,15 @@
     "current_status": "Reservation removed; recorded jobs ran"
   },
   "first_job": {
-    "id": 61146827,
-    "state": "COMPLETED",
-    "reason": "Sampler/evidence pass",
-    "stage": "trajectory-target --draw 26 --draws 4096"
+    "id": 61154185,
+    "state": "PENDING",
+    "reason": "Priority",
+    "stage": "ensemble-products source-knot CDF repair"
   },
   "target_pipeline": [
-    61146827,
-    61146828,
-    61146829,
-    61146830,
-    61146831,
-    61145619
+    61154185,
+    61154186,
+    61154187
   ],
   "existing_catalog_jobs": [
     61145915,
@@ -61,11 +58,23 @@
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",
   "blocked_audit_passed": false,
   "remaining_artifacts_verified_missing": [
-    "shared_targets/refit_26_s4096/complete.json",
     "ensemble_products/all32_native_refined/complete.json",
     "catalog/transfer_plan.json",
     "catalog/summary/complete.json",
     "delivery.json"
   ],
-  "current_issue": "Final CDF mixture uniform grid error; source-knot-preserving numerical repair in progress"
+  "current_issue": "Final CDF mixture uniform grid error; source-knot-preserving numerical repair in progress",
+  "target_pipeline_completed": [
+    61146827,
+    61146828,
+    61146829,
+    61146830,
+    61146831
+  ],
+  "aggregation_repair_pipeline": [
+    61154185,
+    61154186,
+    61154187
+  ],
+  "superseded_failed_plan_job": 61145619
 }

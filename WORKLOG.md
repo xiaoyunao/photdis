@@ -8,8 +8,11 @@
 - Transfer plan61145619 rejects ensemble CDF error0.01865>0.001. Root cause:
  uniform0.01mag mixture grid misses narrow source-CDF breakpoints. Preserve
  every source knot before bounded compression; physical inputs/counts unchanged.
-- Analytic narrow-branch regression and full v3 suite pass; archive failed
- ensemble before regenerating, then rewire existing pending dependencies.
+- Analytic narrow-branch regression and full v3 suite72pass. Failed ensemble
+ archived at data/v3_0/archive/ensemble_coarse_cdf_20261112, no deletion.
+- New aggregation61154185, preservation audit61154186, transfer plan61154187;
+ existing catalog/prospective/design/figure jobs rebound. Queue is ordinary
+ priority/dependency, not maintenance. No duplicate fit or catalog array.
 
 ## 2026-11-11 — verified external block after three goal turns
 - 21:39 Beijing: 61146827 still PENDING/Reserved for maintenance; all downstream

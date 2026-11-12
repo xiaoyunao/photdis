@@ -29,7 +29,8 @@ C: all32-response sampler/evidence/native products complete. Draw26 trajectory
  repair61146827 passes Rhat1.0016/ESS2310; bridge61146828 passes0.002574.
  Ensemble61146831 passes finalMC0.003597, but fails coarse CDF-grid interpolation
  error0.018648. Preserve source knots in mixture CDF, archive failed ensemble,
- rerun only aggregation and rewire existing pending jobs to a new verified plan.
+ rerun only aggregation61154185, exact-preservation audit61154186, then new
+ plan61154187; existing pending jobs are rebound, no duplicate catalog array.
  Maintenance reservation removed as of Nov12 12:20 Beijing. Goal active; no
  duplicate fits or catalog arrays. Strong finite-response concentration remains
  a scientific support limitation regardless of numerical acceptance.
