@@ -54,19 +54,14 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
- Conditional fields 00–09 and compact exports complete: 897693 objects (75.82%).
- Field 07 and 09 each retain one original conditional reference quadrature flag.
- Same-model finer-grid diagnostics 61160732 / 61160854 pass at initial step .025,
- with maximum joint changes 1.27e-10 / 5.80e-9. Sidecars do not replace rows.
- Summary, delivery and final figure captions distinguish reference/MC/union flags.
- Field 10 also complete: predictions total 941383 (79.51%); one reference flag
- passes isolated .025-grid diagnostic 61161050 (joint change 1.66e-9), retained
- in original row. Field 12 completed and exported: total 1042056 (88.01%).
- All field12 reference quadratures pass; one MC flag at 0.005028502 remains
- above frozen 0.005 tolerance. Only field 11 remains RUNNING.
- Final delivery checks also verify exact native-row alignment and common shared
- draw indices/weights; these actual-array checks await the final allocated audit.
- Pending final summary/figures retain original jobs; no duplicate submissions.
+ All 13 conditional fields and compact exports complete: 1183990 objects.
+ Six reference flags remain (07/09/10/11:1/1/1/3); first three pass isolated
+ .025-grid diagnostics. Field11 diagnostic61162921 RUNNING. One field12 MC
+ flag at0.005028502 exceeds frozen0.005 and remains present. No filtering.
+ Actual shared-count summary61145916 RUNNING; final2figures61145918 pending.
+ Final audit verifies native row alignment, global shared-draw consistency,
+ exact int64 IDs/counts, fixed totals and joint covariance. Syntax verified;
+ actual full-array acceptance remains pending, distinct from metadata checks.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
 

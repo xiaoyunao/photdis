@@ -101,7 +101,7 @@ def main():
             check('candidate original '+key+':'+str(field),np.array_equal(table[key][table_order],source[key][source_order]))
         check('candidate quantile order:'+str(field),table['mu'].shape==(n,5) and np.isfinite(table['mu']).all()
               and (np.diff(table['mu'],axis=1)>=0).all())
-        check('candidate exact identities:'+str(field),table['identity'].dtype==np.int64 and len(np.unique(table['identity']))==n)
+        check('candidate exact identities:'+str(field),table['identity'].dtype==np.int64 and table['ls_id'].dtype==np.int64 and len(np.unique(table['identity']))==n)
         check('candidate PSF:'+str(field),(table['TYPE']=='PSF').all())
         check('candidate joint masses:'+str(field),table['probability'].shape==(n,3,6) and np.isfinite(table['probability']).all()
               and np.allclose(table['probability'].sum(axis=(1,2)),1.,atol=1e-7,rtol=0))

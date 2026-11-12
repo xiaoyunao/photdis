@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T16:48:35.124941+08:00",
+  "checked_beijing": "2026-11-12T17:24:22.057102+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -12,12 +12,10 @@
   },
   "first_job": {
     "id": 61145915,
-    "state": "RUNNING",
+    "state": "COMPLETED",
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
-    "active_tasks": [
-      11
-    ],
+    "active_tasks": [],
     "pending_tasks": [],
     "pending_reason": null
   },
@@ -81,9 +79,10 @@
       8,
       9,
       10,
+      11,
       12
     ],
-    "conditional_candidate_objects": 1042056,
+    "conditional_candidate_objects": 1183990,
     "candidate_export_fields": [
       0,
       1,
@@ -96,9 +95,10 @@
       8,
       9,
       10,
+      11,
       12
     ],
-    "candidate_export_objects": 1042056
+    "candidate_export_objects": 1183990
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -140,14 +140,15 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: twelve fields exported; field12 one MC flag retained; final audit records exact flagged identities; last field running",
+  "goal_turn_classification": "progress: full1183990 predicted and exported; final numerical sidecar and summary live; figures and delivery still outstanding",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
   "conditional_reference_flags": {
     "field_07": 1,
     "field_09": 1,
-    "field_10": 1
+    "field_10": 1,
+    "field_11": 3
   },
   "conditional_reference_audit_jobs": [
     {
@@ -172,6 +173,11 @@
       "status": "COMPLETED",
       "field": 10,
       "finest_grid_passed": true
+    },
+    {
+      "job": 61162921,
+      "status": "RUNNING",
+      "field": 11
     }
   ],
   "conditional_mc_flags": {

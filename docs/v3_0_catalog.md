@@ -19,6 +19,10 @@ maximum grz magnitude error<0.1 mag and frozen QRF reference-color support.
 They are not selected using Gaia, spectroscopic class, reference distance or a
 near-probability threshold. Every original row has a `parent_status.npz` entry;
 rows outside the envelope are not silently treated as distance predictions.
+The immutable `parent_status.npz` records admission, not current execution status.
+Its original code-0 description refers to preparation time; completed predictions
+are established by `candidate_v3_0.json` and the final delivery audit, not by
+rewriting this frozen input checkpoint.
 
 Each `field_NN/` contains:
 

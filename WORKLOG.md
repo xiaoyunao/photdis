@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-12 — all qualified candidates computed and exported
+- All 13 fields complete: 1183990 predictions and compact exported rows.
+  Export/prediction hashes and exact-int64/joint-shape metadata verified locally;
+  fresh actual-array delivery remains pending. Catalog production manifest added.
+- Six original conditional reference flags (fields07/09/10/11:1/1/1/3) and one
+  field12 MC flag retained. Field11 finer-grid job61162921 RUNNING; actual
+  summary61145916 RUNNING, final figures61145918 wait its dependency.
+- Conditional output records total388212796375bytes; summed field elapsed12.155h
+  is not calendar latency; maximum individual-process RSS24.665GiB is not node RAM.
+- Final audit additionally requires int64 Legacy IDs; catalog guide distinguishes
+  immutable admission status from actual execution completion. Syntax passes.
+- Next: complete shared counts, inspect last2figures, finish reports and execute
+  full actual-array delivery audit. Do not mark the goal complete yet.
+
 ## 2026-11-12 — twelve fields exported; one MC flag retained
 - Field 12 COMPLETED 1:01:34; 100673 rows and all reference quadratures pass.
   Final half-chain delta is 0.005028502, above the frozen 0.005 threshold.
