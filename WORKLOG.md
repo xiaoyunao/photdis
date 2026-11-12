@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-12 — twelve fields exported; one MC flag retained
+- Field 12 COMPLETED 1:01:34; 100673 rows and all reference quadratures pass.
+  Final half-chain delta is 0.005028502, above the frozen 0.005 threshold.
+  Compact export completed with one numerical flag; marker/source hashes checked.
+- Total predictions and exports: 1042056 / 1183990 (88.01%); only field 11
+  remains running. Existing summary/figures retain dependencies.
+- Final delivery audit now emits exact identities, separate reference/MC flags,
+  half-chain deltas and qnear for all flagged catalog rows. No row is dropped,
+  no tolerance changed and no isolated replacement breaks shared draw consistency.
+- py_compile passes. Full actual-array audit and final scientific counts/figures
+  remain pending. This numerical flag is a limitation, not a program exception.
+
 ## 2026-11-12 — full-count acceptance invariants prepared
 - Added direct actual-array checks for full-catalog int64 latent counts, fixed
   1183990 total in every draw, expected-count total and finite symmetric joint

@@ -61,7 +61,9 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  Summary, delivery and final figure captions distinguish reference/MC/union flags.
  Field 10 also complete: predictions total 941383 (79.51%); one reference flag
  passes isolated .025-grid diagnostic 61161050 (joint change 1.66e-9), retained
- in original row. Fields 11/12 RUNNING; export 10 completed (941383 exported).
+ in original row. Field 12 completed and exported: total 1042056 (88.01%).
+ All field12 reference quadratures pass; one MC flag at 0.005028502 remains
+ above frozen 0.005 tolerance. Only field 11 remains RUNNING.
  Final delivery checks also verify exact native-row alignment and common shared
  draw indices/weights; these actual-array checks await the final allocated audit.
  Pending final summary/figures retain original jobs; no duplicate submissions.

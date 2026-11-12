@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T16:08:27.158952+08:00",
+  "checked_beijing": "2026-11-12T16:48:35.124941+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,8 +16,7 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      11,
-      12
+      11
     ],
     "pending_tasks": [],
     "pending_reason": null
@@ -81,9 +80,10 @@
       7,
       8,
       9,
-      10
+      10,
+      12
     ],
-    "conditional_candidate_objects": 941383,
+    "conditional_candidate_objects": 1042056,
     "candidate_export_fields": [
       0,
       1,
@@ -95,9 +95,10 @@
       7,
       8,
       9,
-      10
+      10,
+      12
     ],
-    "candidate_export_objects": 941383
+    "candidate_export_objects": 1042056
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -139,7 +140,7 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: eleven exports verified; final native-row/shared-draw checks strengthened, actual audit pending remaining fields",
+  "goal_turn_classification": "progress: twelve fields exported; field12 one MC flag retained; final audit records exact flagged identities; last field running",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
@@ -172,5 +173,8 @@
       "field": 10,
       "finest_grid_passed": true
     }
-  ]
+  ],
+  "conditional_mc_flags": {
+    "field_12": 1
+  }
 }

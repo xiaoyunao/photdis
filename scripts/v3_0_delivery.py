@@ -76,7 +76,7 @@ def main():
           and abs(covariance.sum())<1e-4*max(1.,float(np.diag(covariance).sum())))
     if summary['target_mc_failures']:limitations.append(f"{summary['target_mc_failures']} target candidates fail the frozen final joint Monte Carlo tolerance and remain flagged; no accuracy claim for these rows.")
     total=0;original_numeric_flags=0;export_reference_failures=0;export_mc_failures=0;export_failures=0
-    shared_draw_ids=None;shared_weights=None
+    shared_draw_ids=None;shared_weights=None;catalog_numeric_rows=[]
     response=plan['responses'][0];target_name=f'refit_{response["draw"]:02}_s{response["draws"]}'
     for field,n in enumerate(plan['field_counts']):
         base=D/'catalog'/f'field_{field:02}';prep=read(base/'prepared.json')
@@ -112,6 +112,10 @@ def main():
         check('candidate numerical flag union:'+str(field),np.array_equal(~table['numerically_converged'],failed))
         check('candidate numerical flag count:'+str(field),int(failed.sum())==export['numerical_failed'])
         export_reference_failures+=int(ref_failed.sum());export_mc_failures+=int(mc_failed.sum());export_failures+=int(failed.sum())
+        for row in np.flatnonzero(failed):
+            catalog_numeric_rows.append(dict(field=field,identity=int(table['identity'][row]),ls_id=int(table['ls_id'][row]),
+                reference_failed=bool(ref_failed[row]),target_mc_failed=bool(mc_failed[row]),
+                final_half_delta=float(table['final_half_delta'][row]),qnear=float(table['qnear'][row])))
         if ref_failed.any():
             auditbase=base/'population_transfer'/target_name/'reference_numeric_audit'
             numeric_ref=read(auditbase/'complete.json');outputs(auditbase,numeric_ref)
@@ -146,7 +150,7 @@ def main():
         'Model-expected near/far contamination is distinct from independently measured application contamination.',
         'Northern system, faint populations and much of the far population remain unvalidated; deployment unchanged.']
     save_json(D/'delivery.json',dict(method_freeze=method,checks=checks,passed=all(x['passed'] for x in checks),
-        check_count=len(checks),inputs=inputs,scientific_limitations=limitations,
+        check_count=len(checks),inputs=inputs,scientific_limitations=limitations,catalog_numerical_flags=catalog_numeric_rows,
         scope='Complete research-system/artifact delivery; not universal scientific acceptance or replacement of deployed v1.',job=os.getenv('SLURM_JOB_ID')))
     print('DELIVERY CHECKS',len(checks),'PASSED; scientific limitations preserved',flush=True)
 
