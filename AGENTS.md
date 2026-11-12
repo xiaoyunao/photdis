@@ -1,5 +1,21 @@
 # Project instructions
 
+- Completed v3.0 research delivery2026-11-12: docs/v3_0_result.md,
+  docs/v3_0_atlas.md, docs/v3_0_catalog.md and requirements ledger.
+  All1183990qualified native-PSF candidates in13DECamfields exported with full
+  joint posterior links/global shared indices/count covariance. Final61163478
+  COMPLETED47s:1309actual checks;73unit tests;42visually inspectedEnglish figure
+  sets/336format checks. Sixconditionalreference flags plusoneMCflag retained;
+  fine-grid sidecars for sixreference flags pass without replacing originalrows.
+  Main near expectation1109714.6; qnear>.95 selects1013855; modelleakage0.27361%
+  is NOT independently measured contamination. Counts condition on26000sample
+  population fit, not fullcatalog generative refit. Finite-responseESS1, narrow
+  4kpc recovery0/8, metal-poor scale and real undercoverage remain limitations.
+  Original3250reserve has noqualifying distance evidence; newsky/NGC288 opened
+  once after freeze. Preserve all products, flags, failed/refined numerics andv1
+  deployment. No automatic newmodel, expansion, rerun, timer, deployment oragents.
+  Future work needs new explicit scope; v3goal has no remaining science jobs.
+
 - Completed v2.6: docs/v2_6_result.md and docs/v2_6_atlas.md.192samecatalog
   joint posteriors and shared-theta counts; restrictedknown/same/transfer controls
   isolate response migration.256/768/2048cal-source libraries;16response prior

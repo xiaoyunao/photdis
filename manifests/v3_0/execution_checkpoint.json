@@ -1,6 +1,6 @@
 {
-  "checked_beijing": "2026-11-12T17:42:22.385330+08:00",
-  "goal_status": "active, incomplete",
+  "checked_beijing": "2026-11-12T17:50:10.758026+08:00",
+  "goal_status": "A\u2013F delivered; close chat goal after final synchronization is verified",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
   "maintenance": {
@@ -64,7 +64,8 @@
       "B",
       "C",
       "D",
-      "E"
+      "E",
+      "F"
     ],
     "actual_milestone_checks": 363,
     "conditional_candidate_fields": [
@@ -101,17 +102,15 @@
     "candidate_export_objects": 1183990,
     "figure_checks": 336,
     "full_catalog_counts": 1183990,
-    "selected_near95": 1013855
+    "selected_near95": 1013855,
+    "final_delivery_checks": 1309,
+    "final_delivery_job": 61163478,
+    "final_delivery_passed": true
   },
-  "outstanding": [
-    "Final actual-array delivery audit",
-    "Final documentation status and three-end sync"
-  ],
+  "outstanding": [],
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",
   "blocked_audit_passed": false,
-  "remaining_artifacts_verified_missing": [
-    "delivery.json"
-  ],
+  "remaining_artifacts_verified_missing": [],
   "current_issue": null,
   "target_pipeline_completed": [
     61146827,
@@ -141,7 +140,7 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: fullcounts and42inspectedfigures/report complete; final actual-array audit remaining",
+  "goal_turn_classification": "complete artifact evidence: full1183990 candidates,42reviewedfigures and1309actual checks; final synchronization precedes goal closure",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
@@ -184,5 +183,7 @@
   ],
   "conditional_mc_flags": {
     "field_12": 1
-  }
+  },
+  "final_delivery_job": 61163478,
+  "final_sync_policy": "Verify current main commit matches local/origin/nersc before goal closure"
 }

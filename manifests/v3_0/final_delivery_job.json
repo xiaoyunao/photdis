@@ -1,0 +1,20 @@
+{
+  "job": "61163478",
+  "utc": "2026-11-12T09:43:14.695772+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-c",
+    "8",
+    "-t",
+    "00:20:00",
+    "-J",
+    "v3_final_delivery",
+    "scripts/run_v3_0_stage.sh",
+    "delivery"
+  ],
+  "commit": "bcfd5cba5af3f2987082832d976325cfe97b5a7f",
+  "purpose": "Final full actual-array/artifact acceptance; scientific and numerical flags must remain explicit."
+}

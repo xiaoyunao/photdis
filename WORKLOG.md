@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-12 — v3.0 final actual delivery accepted
+- Final allocated job61163478 COMPLETED47s, exit0:0;1309actual-array/artifact
+  checks pass. Downloaded immutable delivery/execution records; all1309booleans,
+  10locally available linked hashes and7exact numerical-flag rows verified.
+- Audit covers full1183990compact arrays/native IDs and PSF, joint/marginals,
+  global shared indices/weights, int64 count conservation/covariance, exactflag
+  sidecars, original A–D/E products,42figure hashes/data sources andsixreports.
+- Seven original catalog flags remain (6reference/1MC); allare also inqnear>.95
+  selection. No row removed or tolerance relaxed. Scientific failure domains,
+  finite-responseESS1 and unavailable actual application contamination retained.
+- README/AGENTS/PLAN now identify completed research delivery and no automatic
+  next scope. Final commit must be safely synchronized to origin/NERSC, then
+  close goal. No deployed model replacement, periodic monitor or subagents.
+
 ## 2026-11-12 — full counts, final plates and report assembled
 - Summary61145916 COMPLETED17:26; figures61145918 COMPLETED21s. Full1183990
   shared counts/18-state covariance and band coverage produced. Near expectation

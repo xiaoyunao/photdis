@@ -1,19 +1,27 @@
 # photdis
 
-Current development: **Photdis v3.0 continuous SED and population research system**.
-The physical method is frozen and prospective outcomes have been opened once.
-Full qualified-catalog reference predictions and the shared 26,000-object
-population posterior are complete. Conditional candidate production and final
-delivery checks remain in progress after NERSC recovery. See [execution checkpoint](manifests/v3_0/execution_checkpoint.json).
-[Method](docs/v3_0_methods.md) · [Results in progress](docs/v3_0_result.md) ·
-[Scope/evidence ledger](docs/v3_0_requirements_result.md) ·
-[Candidate product interface](docs/v3_0_catalog.md).
-Use `python scripts/v3_0.py status` for local small-manifest status; all production
-stages run on allocated NERSC compute resources through `run_v3_0_stage.sh`.
-The existing deployed v1 catalog remains unchanged. Historical statements below
-about closed prospective outcomes describe those earlier checkpoints.
+Latest completed research delivery: **Photdis v3.0 continuous SED and population system**.
+All 1,183,990 qualified existing-field candidates, their full joint posterior links,
+shared counts/covariance and 42 English scientific figure sets are delivered.
+Final allocated audit 61163478 passes 1,309 actual-array/artifact checks; 73 focused
+mathematical/unit tests and 336 figure format/hash/text checks pass. All plates
+were visually inspected. Six original reference-quadrature flags and one Monte
+Carlo flag remain, including within high-near-probability selections.
 
-Latest completed revision: **Photdis v2.6 observed-catalog posterior inference**.
+[Results and limitations](docs/v3_0_result.md) · [42-plate atlas](docs/v3_0_atlas.md) ·
+[Method](docs/v3_0_methods.md) · [Requirement evidence](docs/v3_0_requirements_result.md) ·
+[Candidate interface](docs/v3_0_catalog.md) · [Actual final audit](manifests/v3_0/delivery.json).
+Large products remain at NERSC `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/`.
+The candidate posterior transfers the shared fit from 26,000 sampled targets;
+it is not a full-catalog population refit or a calibrated Galactic census.
+Poor-metal scales, evolved branches, interval undercoverage and narrow-structure
+recovery remain scientific limitations. The deployed v1 catalog is unchanged.
+No further modeling, expansion, monitoring or deployment is scheduled.
+Use `python scripts/v3_0.py status` for small-manifest status; actual production
+requires allocated NERSC compute resources through `run_v3_0_stage.sh`.
+Historical statements below about closed prospective outcomes describe earlier stages.
+
+Previous completed revision: **Photdis v2.6 observed-catalog posterior inference**.
 [Results](docs/v2_6_result.md) · [Nine English plates](docs/v2_6_atlas.md) ·
 [Requirement ledger](docs/v2_6_requirements_result.md).
 Per-star joint probabilities and shared-parameter counts reuse192mock catalogs.

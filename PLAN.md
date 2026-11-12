@@ -1,67 +1,38 @@
 # PLAN
 
-## Active v3.0 unified research system
-Full review: docs/pro_review_b59e18b.md (14,327-character complete latest reply).
-Detailed goal in this chat is active again after maintenance recovery, not complete.
-Development contract: docs/v3_0_protocol.md; preserved job queue in execution checkpoint.
-This user-authorized stage supersedes previous restrictions on new modeling,
-opening the 3250 reservation after freeze, and existing-field candidate catalogs.
-Historical outputs and actual deployment remain immutable. No timers or agents.
+## Completed v3.0 research delivery
 
-- [x] A — exact-identity PSF data, native six-band likelihood inputs, source dependence,
-  untruncated SpecDis binary flag, missing labels / contiguous FeH, isolated roles.
-- [x] B — continuous distance / empirical SED forward likelihood, multiple branches,
-  native weak/negative flux, censored/missing bands, dust / systems / binaries.
-- [x] C — source calibration and target population with shared uncertainty;
-  reference-prior and population-prior joint posteriors, counts and covariance.
-- [x] D — fixed matched method/band/prior contrasts, information probe, continuous
-  independent-SED recovery and transfer; full conditional PDF and count metrics.
-- [x] E — freeze model/priors/metrics/tolerances, once-only reserved real validation,
-  photometric-first new sky, independent scale; supported/limited/unverified domains.
-- [ ] F — actual benchmark, existing-field qualified candidate catalog, joint near/far
-  counts, real marginalization example, English figures, reports, delivery audit.
+Full authorized review: docs/pro_review_b59e18b.md (14,327 characters).
+Results: docs/v3_0_result.md;42-plate atlas:docs/v3_0_atlas.md;
+actual final acceptance:manifests/v3_0/delivery.json.
 
-Current execution (2026-11-12, after maintenance recovery):
-A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
- binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
- refits complete. Core likelihood/selection/compression/identity tests passed.
- Fresh A–D production audit61155399 passes363checks on actual arrays/artifacts.
-C: all32-response sampler/evidence/native products and shared26000sample
- posterior complete. Draw26 trajectory repair passesRhat1.0016/ESS2310.
- CDF aggregation61154185 passes finalMC0.003597/CDF0.000173; preservation
- audit61154186 verifies7329exactarraycomparisons and26000identities.
- Plan61154187 passes; existing catalog/prospective jobs released.
- Design61145925 complete; three population figures61145926 inspected.
- All42figure sets produced and visually reviewed;336format/hash/text checks pass.
- Finite-responseESS1 remains a scientific support limitation, not a numerical
- failure or evidence for calibrated real-population counts.
-D: 224conditional recovery cases pass after recorded refinements. All3584 shared
- response/catalog cases completed;24original numeric failures,22refined pass,
- all24divergencecasesrefined. Finaljointprecision passes112/112 aftertwo32768draw
- refinements61145395 andfinalreport61145396; scientificnarrow-structure failure retained.
- Same-ID distance/class/Gaia diagnostics and25English figures inspected.
-E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
- predictions and once-only associations/scores complete for3250/2048/8192.
- Reserve3231Gaia matches all fail frozen quality,19noID; no qualified distance
- evidence. Newsky1070signedGaia/247precise, independent2202signed/131precise.
- NGC2881442members:centralbias+12.56%,68coverage60.47%; sharedscale uncertainty.
- Fiveprospective/sciencefigures pass40checks andvisualreview. Target-prior
- same-response comparisons now complete for3250/2048/8192; no physical changes.
- Numerical audit61154955 verifies13490identities: one newsky MC flag retained.
- Target NGC288 members1442 havebias+12.11% and68coverage47.43%; science limited.
- Scale layout61155200 complete and visually reviewed;7finalplates pass56checks.
-F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
- audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
- oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
- Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
- All13conditional fields and exports complete:1183990objects. Fullsharedcounts
- summary61145916 complete; finalfigures61145918 complete and visually reviewed.
- Sixoriginalreference flags retain sidecars thatpassfinestgrids; oneMCflag
- at0.005028502 remains above0.005. Summarynumericalpassed=False isintentional.
- qnear>.95 selects1013855; modelleakage0.27361%, not observed contamination.
- Fullresults/42-figureatlas/interface/requirements prepared. Final actual-array
- delivery audit is the remaining gate, followed by final three-end sync andgoal
- completion. No further modeling, full-catalog reruns, deployment or timers.
+- [x] A — native PSF/exact identities/roles; full reference sources, independent
+  eligibility and retained non-1 SpecDis flags/missing labels.
+- [x] B — continuous empirical native-flux SED likelihood and multiple branches,
+  weak/negative/missing/censored bands, constrained binary/dust/discrepancy channels.
+- [x] C — source calibration,32full reference refits, selection-aware shared target
+  posterior, reweightable joint products and correlated int64 counts.
+- [x] D — same-identity QRF/band/probe comparisons, continuous recovery and migration,
+  distance/class/PDF/Gaia/count diagnostics with scientific failures preserved.
+- [x] E — once-only post-freeze reservation/new-sky/independent-scale validation,
+  matched-response prior comparisons and NGC288 marginalization example.
+- [x] F — all1183990qualified candidates exported; shared fullcatalog counts,
+  coverage/masks/prior sensitivity,42inspectedEnglish figures and final audit.
+
+Final job61163478 COMPLETED47s andpasses1309actual-array/artifact checks.
+73focused tests,363A–D production checks and336figure checks are separate evidence.
+All7original conditional numerical flags remain:6reference/1MC. Same-model
+refinement sidecars for sixreference flags converge; originals are not replaced.
+One prospective MCflag andone original nominal-reference flag also remain explicit.
+Shared counts are conditional transfers from26000targets; effective responseESS1
+and real/scenario calibration failures preclude universal accuracy claims.
+Near expectation1109714.6; selected qnear>.95 count1013855; expected leakage
+0.27361% is model-based, not independent population contamination.
+
+No outstanding authorized production or scientific deliverables. Preserve the
+frozen outputs and deployed v1. Next scientific changes require a new user scope;
+do not create timers, agents, new models, reruns or deployment replacements.
+Final git synchronization is checked before closing the chat goal.
 
 ## Completed v2.6 observed-catalog inference
 Full requirements: docs/pro_review_39e6e4f.md; results docs/v2_6_result.md.

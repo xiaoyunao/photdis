@@ -1,0 +1,6715 @@
+{
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "checks": [
+    {
+      "name": "immutable physical method",
+      "passed": true,
+      "value": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528"
+    },
+    {
+      "name": "actual A-D milestone evidence",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone auditor version",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/preparation.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/references.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/sed_cloud.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/sed_cloud.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/sed_fit.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/sed_fit.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/calibration.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/calibration.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/calibration_specdis_inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/calibration_spdist_inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_00/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_00/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_01/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_01/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_02/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_02/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_03/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_03/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_04/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_04/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_05/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_05/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_06/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_06/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_07/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_07/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_08/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_08/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_09/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_09/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_10/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_10/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_11/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_11/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_12/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_12/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_13/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_13/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_14/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_14/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_15/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_15/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_16/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_16/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_17/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_17/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_18/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_18/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_19/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_19/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_20/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_20/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_21/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_21/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_22/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_22/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_23/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_23/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_24/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_24/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_25/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_25/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_26/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_26/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_27/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_27/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_28/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_28/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_29/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_29/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_30/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_30/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_31/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/uncertainty_refit/draw_31/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/controls/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/controls/training.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/cohorts/hyper.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/cohorts/development.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/class.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/class_reliability.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_grz_fit_0/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/class.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/class_reliability.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_griz_fit_0/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/class.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/class_reliability.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_multiband_fit_0/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_qrf_0/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_qrf_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_qrf_0/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/evaluation_results/development_qrf_0/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/information.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/score_tails.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/band_gains.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/information_gain.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/reliability.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/diagnostics/near_selection.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:manifests/v3_0/recovery_final/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_000_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_001_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_002_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_003_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_004_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_005_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_006_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_007_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_008_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_009_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_010_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_011_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_012_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_013_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_014_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_015_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_016_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_017_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_018_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_019_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_020_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_021_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_022_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_023_s65536_cached_a99/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_024_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_025_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_026_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_027_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_028_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_029_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_030_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_031_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_032_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_033_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_034_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_035_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_036_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_037_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_038_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_039_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_040_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_041_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_042_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_043_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_044_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_045_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_046_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_047_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_048_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_049_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_050_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_051_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_052_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_053_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_054_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_055_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_056_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_057_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_058_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_059_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_060_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_061_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_062_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_063_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_064_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_065_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_066_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_067_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_068_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_069_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_070_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_071_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_072_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_073_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_074_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_075_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_076_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_077_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_078_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_079_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_080_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_081_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_082_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_083_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_084_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_085_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_086_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_087_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_088_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_089_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_090_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_091_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_092_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_093_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_094_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_095_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_096_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_097_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_098_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_099_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_100_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_101_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_102_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_103_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_104_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_105_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_106_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_107_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_108_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_109_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_110_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/grz/catalog_111_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_000_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_001_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_002_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_003_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_004_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_005_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_006_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_007_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_008_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_009_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_010_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_011_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_012_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_013_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_014_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_015_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_016_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_017_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_018_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_019_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_020_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_021_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_022_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_023_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_024_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_025_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_026_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_027_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_028_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_029_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_030_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_031_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_032_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_033_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_034_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_035_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_036_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_037_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_038_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_039_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_040_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_041_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_042_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_043_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_044_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_045_s65536_cached_a99/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_046_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_047_s65536_cached_a99/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_048_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_049_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_050_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_051_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_052_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_053_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_054_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_055_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_056_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_057_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_058_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_059_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_060_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_061_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_062_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_063_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_064_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_065_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_066_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_067_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_068_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_069_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_070_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_071_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_072_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_073_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_074_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_075_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_076_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_077_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_078_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_079_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_080_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_081_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_082_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_083_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_084_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_085_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_086_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_087_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_088_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_089_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_090_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_091_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_092_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_093_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_094_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_095_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_096_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_097_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_098_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_099_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_100_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_101_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_102_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_103_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_104_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_105_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_106_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_107_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_108_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_109_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_110_s16384_cached_a90/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "milestone evidence:data/v3_0/recovery/multiband/catalog_111_s2048_cached/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "mathematical tests",
+      "passed": true,
+      "value": 73
+    },
+    {
+      "name": "test source:tests/test_v3_calibration.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_catalog_conditioning.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_catalog_numerical_flags.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_catalog_roles.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_compression.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_controls.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_data.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_ensemble_counts.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_ensemble_log_tail.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_evidence.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_fast.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_fast_hierarchy.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_hierarchy.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_inference.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_likelihood.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_marginal.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_marginal_cdf.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_marginal_density.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_metrics.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_model.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_native_response.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_parallel_bridge.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_population.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_population_quadrature.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_projection.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_sed.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_selection.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_selection_table.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_simulation.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_structured_evidence.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_systematics.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_target.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_transfer_plan.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_transfer_score_bounds.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "test source:tests/test_v3_uncertainty.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "sample joint numerical gate",
+      "passed": true,
+      "value": {
+        "final_marginal_half_delta": 0.0035971789498593365,
+        "max_cdf_error": 0.00017299018605776428,
+        "max_joint_error": 7.120090793066858e-07,
+        "max_omitted_bound": 0.0
+      }
+    },
+    {
+      "name": "sample size",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "all32 response prior",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "CDF repair preserves densities and counts",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "CDF repair linked to delivered ensemble",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "sample count hash",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "sample counts int64",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "sample fixed total",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "sample mean total",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/ensemble_products/all32_native_refined/design_diagnostic/sampling_design.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/ensemble_products/all32_native_refined/design_diagnostic/sampling_design.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "design sample identities",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "design parent",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_088_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_001_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_100_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_073_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_070_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_087_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_084_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_067_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_070_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_014_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_015_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_034_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_034_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_028_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_057_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_102_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_011_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_064_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_103_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_052_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_026_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_111_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_078_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_073_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_036_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_038_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_053_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_017_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_035_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_068_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_093_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_021_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_080_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_043_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_045_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_109_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_047_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_110_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_072_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_011_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_066_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_003_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_060_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_069_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_023_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_030_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_049_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_065_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_035_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_109_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_052_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_029_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_051_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_108_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_048_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_025_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_012_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_086_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_102_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_050_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_092_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_106_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_110_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_074_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_017_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_041_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_094_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_082_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_032_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_003_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_008_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_005_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_004_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_007_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_078_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_091_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_044_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_015_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_014_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_107_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_002_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_081_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_081_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_045_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_083_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_059_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_027_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_096_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_086_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_079_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_088_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_023_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_005_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_058_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_059_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_031_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_013_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_103_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_098_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_062_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_089_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_061_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_074_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_002_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_022_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_041_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_090_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_058_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_096_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_111_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_050_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_087_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_032_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_010_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_085_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_104_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_080_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_105_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_024_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_013_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_064_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_037_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_065_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_046_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_095_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_060_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_018_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_107_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_009_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/numerical.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_091_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_019_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_020_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_066_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_008_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_069_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_061_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_063_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_037_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_000_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_033_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_093_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_047_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_084_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_076_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_007_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_083_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_099_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_055_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_016_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_022_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_090_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_075_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_097_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_046_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_082_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_016_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_031_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_077_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_079_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_092_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_040_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_001_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_067_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_006_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_106_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_055_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_042_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_018_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_056_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_024_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_051_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_068_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_019_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_033_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_054_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_040_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_071_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_053_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_000_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_094_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_025_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_021_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_044_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_098_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_056_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_030_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_104_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_027_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_062_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_039_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_076_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_100_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_054_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_009_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_010_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_089_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_012_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_043_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_006_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_108_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_020_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_071_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_105_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_072_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_039_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_085_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_101_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_075_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/response_weights.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_048_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_036_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_004_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_097_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_042_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_049_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_028_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_057_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_063_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_026_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_077_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_099_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_095_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_101_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_029_stars.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/shared_recovery_summary/all32_native_final/catalog_038_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "shared recovery coverage",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "shared recovery numerical gate",
+      "passed": true,
+      "value": 112
+    },
+    {
+      "name": "prospective freeze:reservation",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective source hash:reservation",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective evidence hash:reservation",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective output count:reservation",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/reservation/paired.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/reservation/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/reservation/matched_reference.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/reservation/target.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/reservation/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "paired transfer count:reservation",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective freeze:new_sky",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective source hash:new_sky",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective evidence hash:new_sky",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective output count:new_sky",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/new_sky/paired.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/new_sky/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/new_sky/matched_reference.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/new_sky/target.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/new_sky/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "paired transfer count:new_sky",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective freeze:independent_scale",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective source hash:independent_scale",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective evidence hash:independent_scale",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective output count:independent_scale",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/independent_scale/paired.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/independent_scale/distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/independent_scale/matched_reference.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/independent_scale/target.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/independent_scale/gaia.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "paired transfer count:independent_scale",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/numerical_audit/new_sky.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/numerical_audit/independent_scale.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/numerical_audit/summary.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/transfer_evaluation/numerical_audit/reservation.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical flags",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/catalog/transfer_plan.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/validation/reservation/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/transfer_evaluation/reservation/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/validation/new_sky/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/transfer_evaluation/new_sky/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/validation/independent_scale/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "prospective numerical provenance:data/v3_0/transfer_evaluation/independent_scale/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "plan linked to ensemble",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "global response pruning bound",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_04_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_09_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_08_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_10_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_11_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_07_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/band_coverage_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_02_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_01_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_12_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_06_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_03_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/fields.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_00_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/field_05_counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/counts.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/summary/prior_comparison.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full original parent",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full qualified parent",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full catalog counts int64",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full catalog realized total",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full catalog mean total",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "full catalog joint covariance",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:0",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:1",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:2",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:3",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:4",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:5",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:6",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/reference_numeric_audit/refinements.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional reference refinement:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement exact flagged identities:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement same response:7",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty_refit/draw_12/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_07/inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:scripts/v3_0_catalog_numeric_audit.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty/shared_draws.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/reference_prediction/chunk_00022080.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:8",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/field_09/population_transfer/refit_12_s4096/reference_numeric_audit/refinements.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional reference refinement:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement exact flagged identities:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement same response:9",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty_refit/draw_12/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_09/inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:scripts/v3_0_catalog_numeric_audit.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty/shared_draws.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_09/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_09/population_transfer/refit_12_s4096/reference_prediction/chunk_00053728.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/field_10/population_transfer/refit_12_s4096/reference_numeric_audit/refinements.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional reference refinement:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement exact flagged identities:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement same response:10",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty_refit/draw_12/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_10/inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:scripts/v3_0_catalog_numeric_audit.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty/shared_draws.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_10/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_10/population_transfer/refit_12_s4096/reference_prediction/chunk_00036384.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_numeric_audit/refinements.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional reference refinement:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement exact flagged identities:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement same response:11",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty_refit/draw_12/model.joblib",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_11/inputs.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:scripts/v3_0_catalog_numeric_audit.py",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/uncertainty/shared_draws.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00006816.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00022400.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "conditional refinement provenance:data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00083200.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reference structural audit:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate export count:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate compact hash:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint index hash:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate shared parameters hash:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw identities:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "common global draw weights:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original input hash:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original identity:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original ls_id:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original TYPE:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original RA:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original DEC:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original field:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original photometric_system:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_mask:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate original band_state:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate quantile order:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate exact identities:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate PSF:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate joint masses:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate class marginal:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate distance marginal:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate near mass:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag union:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate numerical flag count:12",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "admission count:13",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "candidate total",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "catalog reference flags agree with exports",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "catalog MC flags agree with exports",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "catalog combined flags agree with exports",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "catalog numerical acceptance includes both tests",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/reference/distance_distribution.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/reference/joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/reference/metrics.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/reference/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "independent scale members:reference",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/refit_12_s4096/distance_distribution.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/refit_12_s4096/joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/refit_12_s4096/metrics.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "hash:data/v3_0/scale_example/refit_12_s4096/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "independent scale members:refit_12_s4096",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure format/hash/English checks",
+      "passed": true,
+      "value": 42
+    },
+    {
+      "name": "figure visual review",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_all.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_all.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_all.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_all.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_dwarf.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_dwarf.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_dwarf.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_dwarf.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_evolved.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_evolved.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_evolved.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_evolved.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_other.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_other.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_other.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_other.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_unknown.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_griz_fit_unknown.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_unknown.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_griz_fit_unknown.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_all.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_all.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_all.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_all.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_dwarf.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_dwarf.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_dwarf.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_dwarf.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_evolved.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_evolved.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_evolved.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_evolved.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_other.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_other.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_other.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_other.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_unknown.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_grz_fit_unknown.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_unknown.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_grz_fit_unknown.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_all.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_all.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_all.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_all.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_dwarf.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_dwarf.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_dwarf.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_dwarf.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_evolved.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_evolved.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_evolved.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_evolved.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_other.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_other.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_other.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_other.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_unknown.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_multiband_fit_unknown.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_unknown.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_multiband_fit_unknown.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_all.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_all.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_all.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_all.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_dwarf.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_dwarf.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_dwarf.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_dwarf.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_evolved.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_evolved.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_evolved.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_evolved.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_other.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_other.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_other.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_other.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_unknown.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/distance_qrf_unknown.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_unknown.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/distance_qrf_unknown.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/population_conditions_multiband.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/development/population_conditions_multiband.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/population_conditions_multiband.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/development/population_conditions_multiband.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/class_information.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/class_information.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/class_information.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/class_information.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/class_information_gain.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/class_information_gain.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/class_information_gain.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/class_information_gain.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/near_selection_risk.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/near_selection_risk.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/near_selection_risk.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/near_selection_risk.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/score_tail_sensitivity.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/diagnostics/score_tail_sensitivity.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/score_tail_sensitivity.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/diagnostics/score_tail_sensitivity.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/distance_count_coverage.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/distance_count_coverage.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/distance_count_coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/distance_count_coverage.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/distance_count_recovery.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/distance_count_recovery.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/distance_count_recovery.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/distance_count_recovery.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/middle_distance_bias.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/recovery/middle_distance_bias.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/middle_distance_bias.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/recovery/middle_distance_bias.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/independent_scale_gaia_pit.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/independent_scale_gaia_pit.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/independent_scale_gaia_pit.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/independent_scale_gaia_pit.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/new_sky_distance.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/new_sky_distance.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/new_sky_distance.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/new_sky_distance.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/new_sky_gaia_pit.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/new_sky_gaia_pit.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/new_sky_gaia_pit.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/new_sky_gaia_pit.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/ngc288_cmd_sky.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/ngc288_cmd_sky.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/ngc288_cmd_sky.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/ngc288_cmd_sky.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/ngc288_distance_distribution.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/validation/ngc288_distance_distribution.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/ngc288_distance_distribution.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/validation/ngc288_distance_distribution.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/catalog_joint_counts.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/catalog_joint_counts.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/catalog_joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/catalog_joint_counts.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/catalog_scope_prior.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/catalog_scope_prior.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/catalog_scope_prior.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/catalog_scope_prior.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/ngc288_prior_comparison.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/ngc288_prior_comparison.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/ngc288_prior_comparison.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/ngc288_prior_comparison.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/response_concentration.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/response_concentration.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/response_concentration.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/response_concentration.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/sample_count_correlation.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/sample_count_correlation.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/sample_count_correlation.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/sample_count_correlation.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/sample_joint_counts.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/sample_joint_counts.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/sample_joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/sample_joint_counts.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_L1.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_L1.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_L1.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_L1.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_coverage.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_coverage.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_coverage.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_numerics.png",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:figures/v3_0/final/shared_recovery_numerics.pdf",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_numerics.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure file:manifests/v3_0/figures/final/shared_recovery_numerics.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/development_qrf_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/development_grz_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/development_griz_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/development_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/cohorts/development.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/diagnostics/information.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/diagnostics/information_gain.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/diagnostics/near_selection.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/diagnostics/score_tails.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/recovery_final/coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/recovery_final/summary.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/recovery_final/coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/reference/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/reference/distance_distribution.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/reference/per_star.npz",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/reference/distance_distribution.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/catalog/summary/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/catalog/summary/joint_counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/catalog/summary/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/catalog/summary/fields.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/catalog/summary/prior_comparison.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/reference/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/scale_example/refit_12_s4096/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/ensemble_products/all32_native_refined/response_weights.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/ensemble_products/all32_native_refined/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/ensemble_products/all32_native_refined/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/ensemble_products/all32_native_refined/count_summary.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/shared_recovery_summary/all32_native_final/complete.json",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/shared_recovery_summary/all32_native_final/counts.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:manifests/v3_0/recovery_final/summary.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/shared_recovery_summary/all32_native_final/coverage.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "figure input:data/v3_0/shared_recovery_summary/all32_native_final/numerical.csv",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_result.md",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_methods.md",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_atlas.md",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_requirements_result.md",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_catalog.md",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "document:v3_0_transfer_scope.md",
+      "passed": true,
+      "value": null
+    }
+  ],
+  "passed": true,
+  "check_count": 1309,
+  "inputs": {
+    "scripts/v3_0_delivery.py": "d651f5d40f3eb8435fa8abd3950e0c9cc1f4c01dd9811c9fc52ac5a6b6706b5a",
+    "data/v3_0/milestone_delivery_audit.json": "5ed4af82c782cfce0cf68fe0ad4830915e02fe427f587cc4b19c19cca8fa55e7",
+    "manifests/v3_0/final_unit_validation.json": "83f1f857d35d86a5551366d645ef50e66883bd8d059d3e5334f3949b486bfac4",
+    "data/v3_0/ensemble_products/all32_native_refined/complete.json": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2",
+    "data/v3_0/ensemble_products/all32_native_refined/cdf_revision_audit.json": "258e78dd2d6bd8664fe1829d14883a882079f2da8a1ff69441b6f1e83133c0b4",
+    "data/v3_0/ensemble_products/all32_native_refined/design_diagnostic/complete.json": "895b978c91a4b9a4b114db3c91cd3f41f7e9d49492d6405c1784a42c4b1fc546",
+    "data/v3_0/shared_recovery_summary/all32_native_final/complete.json": "be027e6e25b47aa24d59da6893faf4421fbfd37e6ac22a735aa2efc184b97e97",
+    "data/v3_0/validation/reservation/photometry.json": "560a4656f5a6e15e6697e61d5e01ffd295b0ac64a42c9aef9e100cdb7b578761",
+    "data/v3_0/validation/reservation/evidence.json": "266835b38a2adabd3430f29b370473191fd678e5741b176fe727c450c5c2f940",
+    "data/v3_0/evaluation_results/final_reservation_multiband_fit_0/complete.json": "6da3033b22d4fa6703ac2b88fe191f73aef78003398da6905ac733a0a9966967",
+    "data/v3_0/transfer_evaluation/reservation/complete.json": "5f15e11e44d4830ebf8180c1b21f97004a673808fc823c633821d6af6a3299ce",
+    "data/v3_0/validation/new_sky/photometry.json": "db482f536fdd8d523b0e0915b3ec3c5e8a1173b4fc4091e20b0e628ed7105bbd",
+    "data/v3_0/validation/new_sky/evidence.json": "d2fa77c31c32b44b1d847929f19e682db04ff0cb8b9976078160b32da9664eed",
+    "data/v3_0/evaluation_results/final_new_sky_multiband_fit_0/complete.json": "9681f4ee1e4f7c4a97fdf86d8b7c88e21bbe1773276cfd4bd71a82a87db0181b",
+    "data/v3_0/transfer_evaluation/new_sky/complete.json": "e535b0edf0c1ef1ee4edf2cb658fed662dedf20e3335e04313b05961c1034565",
+    "data/v3_0/validation/independent_scale/photometry.json": "4e16d030b91d432873b446587436514fdd4720bdedf2fbff10d8c1fc520f6b7d",
+    "data/v3_0/validation/independent_scale/evidence.json": "3fc0df04de8fa3c2f360247735eac39aa76b3085b569b78d24665a4178863cdf",
+    "data/v3_0/evaluation_results/final_independent_scale_multiband_fit_0/complete.json": "9af6cb61279bee07f0a35fe32d13dbedaaefca250240a585a05c6a6e0823aa89",
+    "data/v3_0/transfer_evaluation/independent_scale/complete.json": "176aed72fc7a0809806cc3f7192b689be9ab52a620af522cc07205dd726f16fc",
+    "data/v3_0/transfer_evaluation/numerical_audit/complete.json": "10edfddfde8edc1a918273c8814475786ed99a483cb87e5ba185774997211251",
+    "data/v3_0/catalog/transfer_plan.json": "db72e8782902e833da0b0a8ecd43d74bf190d9f1b18ca5b83275c7d8d5c32a37",
+    "data/v3_0/catalog/summary/complete.json": "2c6c40b55832e40223fbc45789db2b5b1da1367828544304664e28fd9e757d23",
+    "data/v3_0/catalog/field_00/prepared.json": "7498b5f6d0d14fb69e83bf9a7b85fe64e7f3f5b1b54011a81a09ac214838f324",
+    "data/v3_0/catalog/field_00/reference_audit.json": "c3eab75069fa49f2320d583dbe9a6908efc4e36e213cc2037d08e9a06dba1118",
+    "data/v3_0/catalog/field_00/candidate_v3_0.json": "00a13d2505a5a9e975ef020e565d281da9f249671ddc4c3a590e7338f6efdb81",
+    "data/v3_0/catalog/field_01/prepared.json": "bc71c212c80ae3b4a792231c689bb85ca7b0f440ed9392078e463bab392d0293",
+    "data/v3_0/catalog/field_01/reference_audit.json": "508c398bf019bffcf91d0cd09a4a5622c8b5d984626ca12e1c1f9c3bc88fd04f",
+    "data/v3_0/catalog/field_01/candidate_v3_0.json": "dbbb9daae044aff06b39f846f46bfda1048a2b2a96e5647f730d7519265ef6a2",
+    "data/v3_0/catalog/field_02/prepared.json": "8bbca1efaa9709d00f950130525d43b8de049fefb510bd5dff908ba06486fab2",
+    "data/v3_0/catalog/field_02/reference_audit.json": "e7b8764661a9634e7802770cbb6e687b181a1df34090f963ba2f7b2cd62aa1dd",
+    "data/v3_0/catalog/field_02/candidate_v3_0.json": "22ef45e7570f2cd8a671955b3e69d4afa65ed8800ab0ff778cd3a24417ca63fa",
+    "data/v3_0/catalog/field_03/prepared.json": "06e2e25e9c044f5b6de0fc9aa8e8999c2ee0a5ad5e890367c0b9caa19581e967",
+    "data/v3_0/catalog/field_03/reference_audit.json": "b16fcd9166e14f9d61996586736a3a7cfbd0e99b2bfaae9d2c2fc48109c82d1e",
+    "data/v3_0/catalog/field_03/candidate_v3_0.json": "dc691d4c8b2bbd7f1d5715f8cc95bcc2ce333150fea1db22fc832c755b1abe22",
+    "data/v3_0/catalog/field_04/prepared.json": "0852ac295a90a74ad4cab45a0141d061e244eb4d733fb30d9608b6274c81527b",
+    "data/v3_0/catalog/field_04/reference_audit.json": "02c25fefacc97f7a21d656ff985d3408d406b254a4f4f644aa52cf30f25352b6",
+    "data/v3_0/catalog/field_04/candidate_v3_0.json": "bb32e411f74799e35d6296c7de98401f24ca9823bff894dc6f66c521ba2a3e45",
+    "data/v3_0/catalog/field_05/prepared.json": "31ee6206f65ec30abe9a3e4f65dd3dfc15e3855a23145990c5ec35013519ad16",
+    "data/v3_0/catalog/field_05/reference_audit.json": "098c62fd1f172726d7f99b63114a88b3a4c46924162c5b9726c46d75a4ab5cc7",
+    "data/v3_0/catalog/field_05/candidate_v3_0.json": "25b94589989a54314e6af0f81aca68c4ab4d083641a56137dc4e7bc807bef889",
+    "data/v3_0/catalog/field_06/prepared.json": "5286f8d90c0fe4fd903a5dd557c4705c25d2ac2b9c39f1fc9eee2762baf1541a",
+    "data/v3_0/catalog/field_06/reference_audit.json": "ee7df0b4a051c128d2756185cb35eaa00c34cef1bad7ccaccd095cfd72e00ee3",
+    "data/v3_0/catalog/field_06/candidate_v3_0.json": "884a0d541bc484d9e0c2c2acd3336809f3c7d054e892f28bf6c88333d5380242",
+    "data/v3_0/catalog/field_07/prepared.json": "59b41f05a0fae536ae62275e23ab632f6055537b6142c5792cbb6a5b5c3ea0a9",
+    "data/v3_0/catalog/field_07/reference_audit.json": "19483e8be4816ef12cc48bb8e61e54f6a4a031b89bb952545c2cc6c3de50b5b5",
+    "data/v3_0/catalog/field_07/candidate_v3_0.json": "18b57a75406e9b440bae0b5fcc92c527b8e033acff25b73fb90daaaeb4c428da",
+    "data/v3_0/catalog/field_07/population_transfer/refit_12_s4096/reference_numeric_audit/complete.json": "312434e936b9156e3ed7ba472d0cdbe6738a0b518262e5dea63b28c5b8fce70f",
+    "data/v3_0/catalog/field_08/prepared.json": "52130e0decc3497d56f72054fe504505109beab4096fc3df24ecf710fcaa6c62",
+    "data/v3_0/catalog/field_08/reference_audit.json": "3b5cccd95108bf128116330136f0fc2a105f4dabc3561220761b24bc213c8d7f",
+    "data/v3_0/catalog/field_08/candidate_v3_0.json": "0dbdc45bf7c9492b67dd4c9f14b2a64e80ba7a57a6b9a82957cbabe035cb99c5",
+    "data/v3_0/catalog/field_09/prepared.json": "4cf70165d66035eeaf7d0c9bc2484fb1b91a6b92c216e474a6dacf56b4ab6c0d",
+    "data/v3_0/catalog/field_09/reference_audit.json": "32813dd46982d9e1cb455af685372a4fcb0a44da98a20c078f7b6228c25d40c7",
+    "data/v3_0/catalog/field_09/candidate_v3_0.json": "5c46909b415a70a05d47dcb8f6f1a2c86bb328a3e189185cdccf757a9ff45ed3",
+    "data/v3_0/catalog/field_09/population_transfer/refit_12_s4096/reference_numeric_audit/complete.json": "83b528e9276ea5b31ef55db4112ec8bc30ead861e411de88720fb46b5faa1c81",
+    "data/v3_0/catalog/field_10/prepared.json": "e390c8f033bab644ec0180eb2eb960e44f3bb56353c5e1eae5490509fb9c7923",
+    "data/v3_0/catalog/field_10/reference_audit.json": "89a14f0b8ce0a8b726f001b49d327368d8423473bf3e226c792563f5bd0fda7a",
+    "data/v3_0/catalog/field_10/candidate_v3_0.json": "fcc9e0f00c319bd6ad251c36c4b074b4698e2016852b8c80142ca74f3a4d3e9e",
+    "data/v3_0/catalog/field_10/population_transfer/refit_12_s4096/reference_numeric_audit/complete.json": "1fcbb8391ea030595e5497877d4f467e329b5d6ad46820a90979a40886225f34",
+    "data/v3_0/catalog/field_11/prepared.json": "4fa7a2671c6fbf812438984befcfbc883afcae6891a648f0c05615734b8c07ab",
+    "data/v3_0/catalog/field_11/reference_audit.json": "6353bf2945b275201a242a3bc953cac9c15075202a821b05fef9f4fc9041f88b",
+    "data/v3_0/catalog/field_11/candidate_v3_0.json": "815fca64df46871e856b6ebee219441e1644bf56cd90554355f43f4cf41376e2",
+    "data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_numeric_audit/complete.json": "b4aa5ffced9930ccb626a54b5c98d030b875dbeeba0f66314c20320fa7e5500e",
+    "data/v3_0/catalog/field_12/prepared.json": "201895a86c2b4ff1a556138c95a098c694d63fa80e910252b96434e65d4846dd",
+    "data/v3_0/catalog/field_12/reference_audit.json": "3187fef42a0c8b05ab769f762bc69511e606f421753c4c3b1c09f0ef8d90b004",
+    "data/v3_0/catalog/field_12/candidate_v3_0.json": "2683b07d9b7bd20de82a73a12b7d2758e9c575b81c31cabab1df2e0ce7db6abf",
+    "data/v3_0/catalog/field_13/prepared.json": "f496451b8a9d6e3982b78cf5d2ba4ce84954d146343db8c84a5977e40acea893",
+    "data/v3_0/scale_example/reference/complete.json": "21a5d2a962e3692b19440a4f1fe6f33e77330e5d5009f70aef9c91a644c85e3b",
+    "data/v3_0/scale_example/refit_12_s4096/complete.json": "09a80b5cdf5ab8acda64370c467916279296b795c3df2ae50ecfed3b3cbb360a",
+    "manifests/v3_0/figure_delivery_validation.json": "fcacd504bd3caa79f06b6e44b76c089b0148fc9fa152a9e7d620b7e455f21314",
+    "manifests/v3_0/figures/development/complete.json": "b96f661302c3eb12cc4cd5b6e0f563e344dacd0e7e6c92484f5e8d5c74e17e56",
+    "docs/v3_0_result.md": "485669226ed4f1cd9c411001e17c02dcc59830d46409a50a00d0620e9f612eae",
+    "docs/v3_0_methods.md": "d542059ddf42026bb36bb518c880f43224624c4a1e5f12822739bae37eeddaa2",
+    "docs/v3_0_atlas.md": "3560899dcc17ef8e53e13dc8cb99a313a3015dc0af36f6ec7ab3a78839d9e07c",
+    "docs/v3_0_requirements_result.md": "134acfd255d3638ee46de4b0504cdf11cb1f50097e33db3869f193a44fe439a1",
+    "docs/v3_0_catalog.md": "85ab96850cee8d7e42b5c89d0a4a313c34bb4e3555daf3fc525da6b1150a7564",
+    "docs/v3_0_transfer_scope.md": "d669ab1e6cc688c89d588d067bad83abef931796ba91e2d8ba9a0fc45d945bf1"
+  },
+  "scientific_limitations": [
+    "Finite reference-response prior concentrates on too few realizations; continuous calibration/model uncertainty not converged scientifically.",
+    "new_sky: 1 prospective objects carry numerical flags and remain in scientific scores; these rows do not pass the frozen numerical criterion.",
+    "1 target candidates fail the frozen final joint Monte Carlo tolerance and remain flagged; no accuracy claim for these rows.",
+    "6 conditional reference-quadrature flags remain in the exported catalog; isolated same-model refinements are sidecar diagnostics, not silent replacement of original rows.",
+    "1 original reference-prior numerical flag(s) retained; isolated quadrature refinements reported separately.",
+    "Reference and application selection are conditional; no all-DR11 denominator/effective area.",
+    "Original3250reservation has no qualifying real distance evidence; no successful accuracy claim.",
+    "Real interval undercoverage, poor-metal scale and narrow-structure recovery failures remain.",
+    "Candidate population transfer is modular from26000targets, not full-catalog generative refitting.",
+    "Model-expected near/far contamination is distinct from independently measured application contamination.",
+    "Northern system, faint populations and much of the far population remain unvalidated; deployment unchanged."
+  ],
+  "catalog_numerical_flags": [
+    {
+      "field": 7,
+      "identity": 3894834884141893376,
+      "ls_id": 12106000374960082,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 2.3657538216093066e-05,
+      "qnear": 0.9658161528014924
+    },
+    {
+      "field": 9,
+      "identity": 3943851868422051456,
+      "ls_id": 12106100037912420,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 1.2925060892343687e-05,
+      "qnear": 0.9611030058776271
+    },
+    {
+      "field": 10,
+      "identity": 2510823557526262400,
+      "ls_id": 12105974086116415,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 1.3271972626238693e-05,
+      "qnear": 0.9983027122549754
+    },
+    {
+      "field": 11,
+      "identity": 3711220256233751552,
+      "ls_id": 12105979348914639,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 3.0226142061939854e-05,
+      "qnear": 0.9997515918039398
+    },
+    {
+      "field": 11,
+      "identity": 3687153699048384512,
+      "ls_id": 12105971787632286,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 3.2789664203281e-05,
+      "qnear": 0.9919672560439602
+    },
+    {
+      "field": 11,
+      "identity": 3665171605455385088,
+      "ls_id": 12105985400245597,
+      "reference_failed": true,
+      "target_mc_failed": false,
+      "final_half_delta": 4.993681546272555e-06,
+      "qnear": 0.9999812647145809
+    },
+    {
+      "field": 12,
+      "identity": 3710085697673340416,
+      "ls_id": 12106015435654637,
+      "reference_failed": false,
+      "target_mc_failed": true,
+      "final_half_delta": 0.0050285019792699615,
+      "qnear": 0.9999968181572387
+    }
+  ],
+  "scope": "Complete research-system/artifact delivery; not universal scientific acceptance or replacement of deployed v1.",
+  "job": "61163478"
+}
