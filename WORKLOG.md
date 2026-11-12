@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-12 — quarter of conditional candidate catalog complete
+-Field04 adds70002objects; finalhalf0.002729<0.005, allreference quadrature
+ passes. Fourcompletedfields00/01/03/04 total295877/1183990(24.99%).
+-Field03compactexport complete100924rows,zero numericalflags; actual source
+ andcompletionhashes/int64identity/joint[N,3,6] schema locally verified.
+ Field04export61145917_4COMPLETED1:22;70002rows,zero flags andsamechecks.
+ Total exported295877 acrossfields00/01/03/04; nativejoint/PDF links retained.
+-Remaining existingarray jobs continue; no failures or new submissions.
+ Next: remainingpredictions/exports, fullcounts, final2figures and deliveryaudit.
+
 ## 2026-11-12 — third conditional field and second export complete
 -61145915_3(actual61154937)COMPLETED1:03:21;100924objects, allreference
  quadrature checks pass, half0.003925<0.005, jointdelta1.51e-14.
