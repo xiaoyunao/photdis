@@ -1,0 +1,42 @@
+{
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "ensemble": "all32_native_refined",
+  "ensemble_sha256": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2",
+  "response_weights_sha256": "782e9f05f9cc35feb4619fe0aa8a3baac2506381d985da3b58efbe6675d8027c",
+  "responses": [
+    {
+      "draw": 12,
+      "draws": 4096,
+      "original_weight": 1.0,
+      "retained_weight": 1.0
+    }
+  ],
+  "discarded_response_mass": 1.0879833316576286e-147,
+  "discarded_response_log_mass": -338.39568284197594,
+  "density_warning": "Total variation bound controls probabilities/CDF/PIT/counts, not relative densities or log scores. Score a pruned mixture only with observation-likelihood bounds or retain every response in log space.",
+  "tolerance": 1e-10,
+  "qualified_parent": 1183990,
+  "field_counts": [
+    45882,
+    79069,
+    166013,
+    100924,
+    70002,
+    81105,
+    46833,
+    141803,
+    79647,
+    86415,
+    43690,
+    141934,
+    100673,
+    0
+  ],
+  "probability_absolute_error_bound": 1.0879833316576286e-147,
+  "count_mean_absolute_error_bound": 1.2881613848493157e-141,
+  "count_covariance_element_absolute_error_bound": 4.5755105941432236e-135,
+  "scope": "Conditional transfer of finite target-sample response posterior; not full-catalog population refit. All within-response stellar modes/kernels retained.",
+  "reference_response_ESS": 1.0,
+  "scientific_limit": "Low finite response ESS means unresolved reference/calibration prior integration. Tiny discarded discrete weight does not establish continuous-response uncertainty convergence.",
+  "job": "61154187"
+}

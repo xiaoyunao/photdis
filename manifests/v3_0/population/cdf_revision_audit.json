@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "objects": 26000,
+  "exact_array_checks": 7329,
+  "previous_complete_sha256": "50ebcd9de98cb4c5f9c636ecd9856b7c6e41aca8676e0e1d4342071b0e3a1419",
+  "new_complete_sha256": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2",
+  "previous_path": "data/v3_0/archive/ensemble_coarse_cdf_20261112",
+  "old_errors": {
+    "final_marginal_half_delta": 0.0035971789498593365,
+    "max_cdf_error": 0.01864789073827215,
+    "max_joint_error": 7.120090793066858e-07,
+    "max_omitted_bound": 0.0
+  },
+  "new_errors": {
+    "final_marginal_half_delta": 0.0035971789498593365,
+    "max_cdf_error": 0.00017299018605776428,
+    "max_joint_error": 7.120090793066858e-07,
+    "max_omitted_bound": 0.0
+  },
+  "maximum_quantile_modulus_change": 0.0030287782947020503,
+  "interpretation": "Numerical CDF/quantile interpolation repair only. Source model hashes, response evidence, native log densities, per-star joint masses and all count arrays identical.",
+  "job": "61154186"
+}

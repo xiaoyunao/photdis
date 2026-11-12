@@ -4,7 +4,7 @@ Current development: **Photdis v3.0 continuous SED and population research syste
 The physical method is frozen and prospective outcomes have been opened once.
 Full qualified-catalog reference predictions are complete; shared population
 products and final delivery checks are incomplete. NERSC has recovered; a
-CDF aggregation repair is in progress. See [execution checkpoint](manifests/v3_0/execution_checkpoint.json).
+CDF aggregation repair has passed production validation. See [execution checkpoint](manifests/v3_0/execution_checkpoint.json).
 [Method](docs/v3_0_methods.md) · [Results in progress](docs/v3_0_result.md) ·
 [Scope/evidence ledger](docs/v3_0_requirements_result.md) ·
 [Candidate product interface](docs/v3_0_catalog.md).

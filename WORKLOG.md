@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-12 — shared population posterior and CDF repair pass
+-61154185 completes36s: finalMC0.003597/CDF0.000173/joint7.12e-7 pass.
+-61154186 verifies26000objects/7329exact arrays; nativePDF, jointmass and
+ counts unchanged. Maximum numericalquantile shift0.00303mag.
+-61154187 transfers only response12s4096 with discarded globalweight1.088e-147;
+ no stellar mode/kernel removal. Original failures remain archived.
+-Sampleexpected counts now reported: dwarf99.41%, finite-responseESS1, both
+ explicitly model-dependent and not a validated true population census.
+-C milestone complete; candidate/prospective/design/figure jobs pending resources.
+
 ## 2026-11-12 — require actual CDF preservation in final acceptance
 - Final delivery must link the 26000-object native-density/joint-count preservation
  audit to the delivered ensemble hash; repaired-grid unit tests alone are insufficient.

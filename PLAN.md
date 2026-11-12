@@ -12,7 +12,7 @@ Historical outputs and actual deployment remain immutable. No timers or agents.
   untruncated SpecDis binary flag, missing labels / contiguous FeH, isolated roles.
 - [x] B — continuous distance / empirical SED forward likelihood, multiple branches,
   native weak/negative flux, censored/missing bands, dust / systems / binaries.
-- [ ] C — source calibration and target population with shared uncertainty;
+- [x] C — source calibration and target population with shared uncertainty;
   reference-prior and population-prior joint posteriors, counts and covariance.
 - [x] D — fixed matched method/band/prior contrasts, information probe, continuous
   independent-SED recovery and transfer; full conditional PDF and count metrics.
@@ -25,15 +25,13 @@ Current execution (2026-11-11, after prospective freeze):
 A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
  binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
  refits complete. Core likelihood/selection/compression/identity tests passed.
-C: all32-response sampler/evidence/native products complete. Draw26 trajectory
- repair61146827 passes Rhat1.0016/ESS2310; bridge61146828 passes0.002574.
- Ensemble61146831 passes finalMC0.003597, but fails coarse CDF-grid interpolation
- error0.018648. Preserve source knots in mixture CDF, archive failed ensemble,
- rerun only aggregation61154185, exact-preservation audit61154186, then new
- plan61154187; existing pending jobs are rebound, no duplicate catalog array.
- Maintenance reservation removed as of Nov12 12:20 Beijing. Goal active; no
- duplicate fits or catalog arrays. Strong finite-response concentration remains
- a scientific support limitation regardless of numerical acceptance.
+C: all32-response sampler/evidence/native products and shared26000sample
+ posterior complete. Draw26 trajectory repair passesRhat1.0016/ESS2310.
+ CDF aggregation61154185 passes finalMC0.003597/CDF0.000173; preservation
+ audit61154186 verifies7329exactarraycomparisons and26000identities.
+ Plan61154187 passes; existing catalog/prospective/design/figure jobs released.
+ Finite-responseESS1 remains a scientific support limitation, not a numerical
+ failure or evidence for calibrated real-population counts.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
  response/catalog cases completed;24original numeric failures,22refined pass,
  all24divergencecasesrefined. Finaljointprecision passes112/112 aftertwo32768draw
