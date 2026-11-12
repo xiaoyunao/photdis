@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-12 — first conditional candidate field completes
+-61145915_0(actual61154514)COMPLETED28:38;45882objects, allreferencequadrature
+ passes; finalhalf0.003893<0.005, nativejointdelta1.50e-14, omittedstellar mass0.
+-Actual output15,164,322,286bytes; pipeline1698s; maximumindividualprocess RSS
+ 7,495,932KiB(not aggregate node memory). Remaining12fields not yet complete.
+-Existing export61145917 now depends on corresponding prediction task success
+ via aftercorr, cap4unchanged; counts/figure dependencies unchanged. No resubmission.
+ Slurm semantics verified at https://slurm.schedmd.com/job_array.html#dependencies .
+-Existing61145917_0(actual61155729) export COMPLETED57s;45882rows, zero
+ numerical flags. Actual chunk hashes/exactIDs/PSF/probability normalization
+ checked during export; local source/completionhashes and schema verified.
+ Compact table retains723SED-fit/308population-fit identities explicitly.
+ First pending export useddebug20min; remainingexports retainregular1h.
+-Next: remaining12fields, sharedcounts, twofigures and finaldelivery audit.
+
 ## 2026-11-12 — actual A–D acceptance evidence passes
 -61155399COMPLETED22s:363checks on actual PSF/role/identity arrays, calibrated
  sources,32768matched training IDs,32convergedfullrefits,four62880-object

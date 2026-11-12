@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T13:07:28.217274+08:00",
+  "checked_beijing": "2026-11-12T13:26:10.215584+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,7 +16,6 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      0,
       1,
       2,
       3
@@ -69,7 +68,15 @@
       "D",
       "E"
     ],
-    "actual_milestone_checks": 363
+    "actual_milestone_checks": 363,
+    "conditional_candidate_fields": [
+      0
+    ],
+    "conditional_candidate_objects": 45882,
+    "candidate_export_fields": [
+      0
+    ],
+    "candidate_export_objects": 45882
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -113,21 +120,22 @@
   "milestone_audit_job": 61155399,
   "catalog_partial_chunks": {
     "0": {
-      "reference": 1434,
-      "target": 653
+      "target": 1434,
+      "complete": true
     },
     "1": {
-      "reference": 2471,
-      "target": 194
+      "target": 1486,
+      "complete": false
     },
     "2": {
-      "reference": 2127,
-      "target": 0
+      "target": 128,
+      "complete": false
     },
     "3": {
-      "reference": 1903,
-      "target": 0
+      "target": 783,
+      "complete": false
     }
   },
-  "goal_turn_classification": "progress: scale visual delivery and fresh363-check actual A-D audit; remaining catalog jobs verified RUNNING"
+  "goal_turn_classification": "progress: first field prediction and actual compact export complete; remaining existing pipeline active",
+  "catalog_export_dependency": "aftercorr:61145915"
 }

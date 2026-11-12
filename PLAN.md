@@ -54,6 +54,10 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
+ Conditional field00 complete45882, finalhalf0.003893; existing exportarray
+ now starts each field after its corresponding prediction succeeds (aftercorr).
+ Field00export61155729COMPLETED57s;45882rows,zero numerical failures;
+ source/completionhashes verified, fullPDF/reweightingchunklinks retained.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
 
