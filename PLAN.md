@@ -32,7 +32,7 @@ C: all32-response sampler/evidence/native products and shared26000sample
  audit61154186 verifies7329exactarraycomparisons and26000identities.
  Plan61154187 passes; existing catalog/prospective jobs released.
  Design61145925 complete; three population figures61145926 inspected.
- All40current figure sets reviewed; remaining catalog2sets pending.
+ All42figure sets produced and visually reviewed;336format/hash/text checks pass.
  Finite-responseESS1 remains a scientific support limitation, not a numerical
  failure or evidence for calibrated real-population counts.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared
@@ -54,16 +54,14 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
- All 13 conditional fields and compact exports complete: 1183990 objects.
- Six reference flags remain (07/09/10/11:1/1/1/3); first three pass isolated
- .025-grid diagnostics. Field11 diagnostic61162921 RUNNING. One field12 MC
- flag at0.005028502 exceeds frozen0.005 and remains present. No filtering.
- Actual shared-count summary61145916 RUNNING; final2figures61145918 pending.
- Final audit verifies native row alignment, global shared-draw consistency,
- exact int64 IDs/counts, fixed totals and joint covariance. Syntax verified;
- actual full-array acceptance remains pending, distinct from metadata checks.
- Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
- report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
+ All13conditional fields and exports complete:1183990objects. Fullsharedcounts
+ summary61145916 complete; finalfigures61145918 complete and visually reviewed.
+ Sixoriginalreference flags retain sidecars thatpassfinestgrids; oneMCflag
+ at0.005028502 remains above0.005. Summarynumericalpassed=False isintentional.
+ qnear>.95 selects1013855; modelleakage0.27361%, not observed contamination.
+ Fullresults/42-figureatlas/interface/requirements prepared. Final actual-array
+ delivery audit is the remaining gate, followed by final three-end sync andgoal
+ completion. No further modeling, full-catalog reruns, deployment or timers.
 
 ## Completed v2.6 observed-catalog inference
 Full requirements: docs/pro_review_39e6e4f.md; results docs/v2_6_result.md.

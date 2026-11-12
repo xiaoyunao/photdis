@@ -1,0 +1,14 @@
+{
+  "caption": "Qualifiedparent1,183,990 ofhistorical9,390,518 rows; north remainsunmodeled. Nearselectionmodel leakage is not measured real contamination. Allposteriorfar tails retained. All rows are retained, including 7 numerical flags (6 reference-quadrature and 1 target Monte Carlo failures; categories may overlap).",
+  "inputs": {
+    "data/v3_0/catalog/summary/complete.json": "2c6c40b55832e40223fbc45789db2b5b1da1367828544304664e28fd9e757d23",
+    "data/v3_0/catalog/summary/fields.csv": "3e4222599f93ed6fc3df170d9c1962031eb2cc0fd0b4b4dced8d874304ed84b9",
+    "data/v3_0/catalog/summary/prior_comparison.csv": "a694d4975a6bb7c7c30b0a990da1c46cad53ef03d32d32b998e381cb6758f75c"
+  },
+  "png_sha256": "0fb05bae0aeaea9c28a8f5793efca1142b0bd107e3579e680199d876c8b340b9",
+  "pdf_sha256": "cf44d4d5b5f6512be6cf2c95cd602da9610790c3ee97c9a1e797261a6a481e17",
+  "csv_sha256": "a694d4975a6bb7c7c30b0a990da1c46cad53ef03d32d32b998e381cb6758f75c",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145918"
+}

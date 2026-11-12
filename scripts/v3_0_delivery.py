@@ -141,6 +141,24 @@ def main():
     check('figure format/hash/English checks',qa['passed'] and qa['figures']>=42,qa['figures'])
     check('figure visual review',qa['visually_reviewed']==qa['figures'])
     for name,digest in qa['files'].items():check('figure file:'+name,sha(ROOT/name)==digest)
+    provenance_cache={}
+    def figure_source(name,digest):
+        if name not in provenance_cache:provenance_cache[name]=sha(ROOT/name)
+        check('figure input:'+name,provenance_cache[name]==digest)
+    development=read(ROOT/'manifests/v3_0/figures/development/complete.json')
+    for label,digest in development['inputs'].items():
+        name='data/v3_0/cohorts/development.npz' if label=='photometric_coordinates' else f'data/v3_0/evaluation_results/development_{label}_0/per_star.npz'
+        figure_source(name,digest)
+    recovery_sources={'distance_count_recovery':'summary','distance_count_coverage':'coverage','middle_distance_bias':'coverage'}
+    for name in qa['files']:
+        path=ROOT/name
+        if path.suffix!='.json':continue
+        metadata=json.loads(path.read_text())
+        for source,digest in metadata.get('inputs',{}).items():figure_source(source,digest)
+        if path.parent.name=='diagnostics':
+            for label,digest in metadata['sources'].items():figure_source(f'manifests/v3_0/diagnostics/{label}.csv',digest)
+        if path.parent.name=='recovery':
+            figure_source(f'manifests/v3_0/recovery_final/{recovery_sources[path.stem]}.csv',metadata['source_sha256'])
     for name in ['v3_0_result.md','v3_0_methods.md','v3_0_atlas.md','v3_0_requirements_result.md','v3_0_catalog.md','v3_0_transfer_scope.md']:
         path=ROOT/'docs'/name;check('document:'+name,path.exists() and path.stat().st_size>500);inputs[str(path.relative_to(ROOT))]=sha(path)
     limitations += ['Reference and application selection are conditional; no all-DR11 denominator/effective area.',

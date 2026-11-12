@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-12 — full counts, final plates and report assembled
+- Summary61145916 COMPLETED17:26; figures61145918 COMPLETED21s. Full1183990
+  shared counts/18-state covariance and band coverage produced. Near expectation
+  1109714.6; qnear>.95 selects1013855, model leakage2774.0(0.27361%), retention
+  91.1118%. Independent representative contamination remains unavailable.
+- Final field11 quadrature61162921 COMPLETED5:12; all3finest-grid checks pass,
+  maxjointchange6.82e-9. All6originalreference flags and1MC flag retained.
+- Downloaded and hash-verified all small summary/figure artifacts; inspected both
+  new PNG plates. All42sets pass336format/hash/text checks and visual review.
+  Original generated copies preserved by hash in NERSC data archive before git.
+- Updated results with full joint counts/95%intervals, priors, masks, runtime and
+  numerical limitations; refreshed42-plate atlas/interface/requirements ledger.
+- Final actual-array auditor additionally checks underlying figure-source hashes;
+  py_compile passes. Full final delivery job is next, not yet claimed passed.
+
 ## 2026-11-12 — all qualified candidates computed and exported
 - All 13 fields complete: 1183990 predictions and compact exported rows.
   Export/prediction hashes and exact-int64/joint-shape metadata verified locally;

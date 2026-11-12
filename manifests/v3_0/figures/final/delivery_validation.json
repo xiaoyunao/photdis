@@ -1,7 +1,23 @@
 {
   "passed": true,
-  "figures": 7,
+  "figures": 9,
   "checks": [
+    "figures/v3_0/final/catalog_joint_counts.png:hash",
+    "figures/v3_0/final/catalog_joint_counts.pdf:hash",
+    "manifests/v3_0/figures/final/catalog_joint_counts.csv:hash",
+    "catalog_joint_counts:PNG",
+    "catalog_joint_counts:300dpi",
+    "catalog_joint_counts:PDFpage",
+    "catalog_joint_counts:English",
+    "catalog_joint_counts:CSV",
+    "figures/v3_0/final/catalog_scope_prior.png:hash",
+    "figures/v3_0/final/catalog_scope_prior.pdf:hash",
+    "manifests/v3_0/figures/final/catalog_scope_prior.csv:hash",
+    "catalog_scope_prior:PNG",
+    "catalog_scope_prior:300dpi",
+    "catalog_scope_prior:PDFpage",
+    "catalog_scope_prior:English",
+    "catalog_scope_prior:CSV",
     "figures/v3_0/final/ngc288_prior_comparison.png:hash",
     "figures/v3_0/final/ngc288_prior_comparison.pdf:hash",
     "manifests/v3_0/figures/final/ngc288_prior_comparison.csv:hash",
@@ -60,6 +76,14 @@
     "shared_recovery_numerics:CSV"
   ],
   "files": {
+    "figures/v3_0/final/catalog_joint_counts.png": "8caf69467f6f6e785d6b2ebc589bdbb97c8908d9153a3f269dce1c40ebc3bfe9",
+    "figures/v3_0/final/catalog_joint_counts.pdf": "2b850ed69ada1b62c077a32d02b615fbd53dd149b650eb4f264e45f497a8d157",
+    "manifests/v3_0/figures/final/catalog_joint_counts.csv": "980274697689f8e67035df616800f7e67e10e585cc86b65f701b0a7804377393",
+    "manifests/v3_0/figures/final/catalog_joint_counts.json": "2f389aebca75f8dc7978dc95affa1727b55dd7622fb2534ae46b5840a0a07ef4",
+    "figures/v3_0/final/catalog_scope_prior.png": "0fb05bae0aeaea9c28a8f5793efca1142b0bd107e3579e680199d876c8b340b9",
+    "figures/v3_0/final/catalog_scope_prior.pdf": "cf44d4d5b5f6512be6cf2c95cd602da9610790c3ee97c9a1e797261a6a481e17",
+    "manifests/v3_0/figures/final/catalog_scope_prior.csv": "a694d4975a6bb7c7c30b0a990da1c46cad53ef03d32d32b998e381cb6758f75c",
+    "manifests/v3_0/figures/final/catalog_scope_prior.json": "4de246618096ba77b9c06bbbcbfa882dc82fa42e73172cf2e3024eff2c305137",
     "figures/v3_0/final/ngc288_prior_comparison.png": "94763232f996610cdb427317c0b51b69404afe955654218999e6f33085c3ebe9",
     "figures/v3_0/final/ngc288_prior_comparison.pdf": "8b3981b94d55fc9364860d103dfe184f04f760c84d3c809f18aa2c2846877fc9",
     "manifests/v3_0/figures/final/ngc288_prior_comparison.csv": "3776876fd3c25e0ddcf31ff987977b94d5e16faede8b9107accc5f52e30b4aca",
@@ -90,13 +114,15 @@
     "manifests/v3_0/figures/final/shared_recovery_numerics.json": "8d25f541dc5ca52019dfb5d9da4b13afcc550ddd57dbfd0e53139b0583230537"
   },
   "visually_reviewed": [
-    "shared_recovery_L1",
-    "shared_recovery_coverage",
-    "shared_recovery_numerics",
-    "sample_joint_counts",
+    "catalog_joint_counts",
+    "catalog_scope_prior",
+    "ngc288_prior_comparison",
     "response_concentration",
     "sample_count_correlation",
-    "ngc288_prior_comparison"
+    "sample_joint_counts",
+    "shared_recovery_L1",
+    "shared_recovery_coverage",
+    "shared_recovery_numerics"
   ],
   "review_scope": "Actual human-visible plate inspection recorded at invocation; format checks do not substitute for visual review."
 }

@@ -1,0 +1,144 @@
+{
+  "inputs": {
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/catalog/field_11/inputs.npz": "fc255e53236355c08137eb896297d958bc825da0c635b772b9358ebf3ed0edc2",
+    "scripts/v3_0_catalog_numeric_audit.py": "ca577a204ce15c6356e38e759c9babee051aa241efe67ec4c9a77a7c81de5d61",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/complete.json": "260a196d503827d25f1f654122109b9033ae334e2290e03de697bc1df6721116",
+    "data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00006816.json": "a05d79ffcd7fd823d2c3fc4f4fc816b67c843725101094247fa3f06cf410fc7a",
+    "data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00022400.json": "0ae536b41df0a0c845961b15ef377d00851da89a4c26821c62909fcea7506338",
+    "data/v3_0/catalog/field_11/population_transfer/refit_12_s4096/reference_prediction/chunk_00083200.json": "f19940f56c636f0c8391c98680d2c4916a5b97b3a07c02bbd8a27da8c869ceab"
+  },
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "field": 11,
+  "response_draw": 12,
+  "physical_changes": false,
+  "flagged_objects": 3,
+  "checks": [
+    {
+      "identity": 3711220256233751552,
+      "source_row": 6837,
+      "initial_step": 0.05,
+      "original_probability_delta": 1.5515822164406667e-09,
+      "original_qnear": 0.9980338587116504,
+      "refined_qnear": 0.9980338587154128,
+      "maximum_joint_change": 3.3449619116221463e-10,
+      "median_mu_change": -7.846090177565657e-08,
+      "probability_delta": 3.8782038377146305e-10,
+      "quantile_delta_mag": 1.684807351409745e-07,
+      "boundary_mass": [
+        8.917977076356816e-27,
+        -6.046285331922722e-17
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 153601,
+      "converged": true
+    },
+    {
+      "identity": 3711220256233751552,
+      "source_row": 6837,
+      "initial_step": 0.025,
+      "original_probability_delta": 1.5515822164406667e-09,
+      "original_qnear": 0.9980338587116504,
+      "refined_qnear": 0.9980338587154128,
+      "maximum_joint_change": 3.3449619116221463e-10,
+      "median_mu_change": -7.846090177565657e-08,
+      "probability_delta": 3.8782038377146305e-10,
+      "quantile_delta_mag": 1.684807351409745e-07,
+      "boundary_mass": [
+        8.917977076356816e-27,
+        -6.046285331922722e-17
+      ],
+      "extensions": 0,
+      "refinements": 7,
+      "nodes": 153601,
+      "converged": true
+    },
+    {
+      "identity": 3687153699048384512,
+      "source_row": 22430,
+      "initial_step": 0.05,
+      "original_probability_delta": 1.004581766037016e-08,
+      "original_qnear": 0.9472828749811185,
+      "refined_qnear": 0.9472828747149613,
+      "maximum_joint_change": 5.45687761643876e-09,
+      "median_mu_change": -1.6991810625199832e-08,
+      "probability_delta": 2.509637577613466e-09,
+      "quantile_delta_mag": 1.7058279055959247e-07,
+      "boundary_mass": [
+        3.243499509226851e-26,
+        1.3951813692228613e-16
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 153601,
+      "converged": false
+    },
+    {
+      "identity": 3687153699048384512,
+      "source_row": 22430,
+      "initial_step": 0.025,
+      "original_probability_delta": 1.004581766037016e-08,
+      "original_qnear": 0.9472828749811185,
+      "refined_qnear": 0.9472828746484209,
+      "maximum_joint_change": 6.821321840710937e-09,
+      "median_mu_change": -1.9201515044642292e-08,
+      "probability_delta": 6.275256876631108e-10,
+      "quantile_delta_mag": 5.275754944022992e-08,
+      "boundary_mass": [
+        1.6214674521506216e-26,
+        1.5987759288095322e-15
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 307201,
+      "converged": true
+    },
+    {
+      "identity": 3665171605455385088,
+      "source_row": 83218,
+      "initial_step": 0.05,
+      "original_probability_delta": 2.537209531361384e-08,
+      "original_qnear": 0.9999884874044358,
+      "refined_qnear": 0.9999884874044396,
+      "maximum_joint_change": 4.171050727030945e-09,
+      "median_mu_change": -2.859668768451229e-08,
+      "probability_delta": 6.373518268709688e-09,
+      "quantile_delta_mag": 5.5779899454933e-07,
+      "boundary_mass": [
+        7.84895509995827e-40,
+        8.381835814659298e-16
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 153601,
+      "converged": false
+    },
+    {
+      "identity": 3665171605455385088,
+      "source_row": 83218,
+      "initial_step": 0.025,
+      "original_probability_delta": 2.537209531361384e-08,
+      "original_qnear": 0.9999884874044358,
+      "refined_qnear": 0.9999884874044409,
+      "maximum_joint_change": 5.211876041855135e-09,
+      "median_mu_change": -3.811985749280211e-08,
+      "probability_delta": 1.5914011219919644e-09,
+      "quantile_delta_mag": 1.5159369759487618e-07,
+      "boundary_mass": [
+        3.9232645153061344e-40,
+        8.154998490393108e-16
+      ],
+      "extensions": 0,
+      "refinements": 8,
+      "nodes": 307201,
+      "converged": true
+    }
+  ],
+  "outputs": {
+    "refinements.csv": "5bb0af08d8c35b59d06d086795f71a077dbdc60f503ca17f1b170c1cae9ac35a"
+  },
+  "scope": "Numerical-only same-model quadrature check; original flagged catalog and audit preserved. No automatic replacement of physical model or production rows.",
+  "job": "61162921"
+}

@@ -1,8 +1,8 @@
 # v3.0 request-to-evidence ledger
 
-Status: final production is in progress. The authoritative complete review is
+Status: A–F artifacts are produced; final actual-array acceptance is recorded in [delivery.json](../manifests/v3_0/delivery.json). The authoritative complete review is
 [pro_review_b59e18b.md](pro_review_b59e18b.md). This ledger distinguishes implemented
-and executed work from pending output; it is not the final acceptance marker.
+and executed work from scientific limitations; the linked audit is the final acceptance marker.
 Fresh A–D checks on actual arrays and fitted/evaluated identities: [363-check production audit](../manifests/v3_0/milestone_delivery_audit.json).
 This verifies artifact consistency and coverage, not scientific calibration.
 
@@ -25,10 +25,10 @@ This verifies artifact consistency and coverage, not scientific calibration.
 | E: original3250 reservation | All predictions and exactassociation complete;3231Gaia IDs allmatched but failfrozenquality;19noID | Zero qualified distances/VAC/classes: no accuracy conclusion and no sample replacement |
 | E: genuinely new sky | Photometric-first2048;1070signedGaia including108negative,247precise | Same-response paired target transfer complete; interval undercoverage and1/2048 Monte Carlo flag retained |
 | E: independent scale/science |8192photometricNGC288 field;1442post-associated members; shared9.03kpc dynamicalscale;5inspectedfigures | Matched target transfer and1442member science example complete; target68coverage47.43%; membership Gaia-conditioned, one common scale |
-| F: measured scaling/full qualified parent |45882field benchmark437.96s/3.927GB; full1183990candidate reference production | 333084reference checks complete; verified ensemble available; conditional fullcatalog transfer running, counts/export pending |
+| F: measured scaling/full qualified parent |45882field benchmark437.96s/3.927GB; full1183990candidate reference production | 333084reference checks and full1183990conditional predictions/exports complete;6reference+1MCflag retained; finer-grid sidecars preserve originals |
 | F: complete posterior interface | Compact candidate table plus indexed fullPDF/joint support/sharedparameter/count products | No automatic replacement ofv1; output scope and numericalflags preserved |
 | F: coverage and science claims | Parent statuses, newskyavailability, sampledesign diagnostic and fullunitweightcounts separated | No same-selectionallDR11denominator/effectivearea; real population contamination remains unmeasured |
-| F: final scientific delivery | Development/recovery/prospective figure families, methods, transfer scope and catalog guide | Finalcountfigures, inspectedatlas, resultreport andactualdeliveryaudit remain |
+| F: final scientific delivery | Development/recovery/prospective figure families, methods, transfer scope and catalog guide | 42English figure sets inspected; fullcounts/resultreport/atlas complete; actual final audit and all limitations linked above |
 
 Historical known-model, same-template and independent-transfer regressions remain
 preserved, alongside new continuous simulations. There is no model-family search,

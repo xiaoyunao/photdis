@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T17:24:22.057102+08:00",
+  "checked_beijing": "2026-11-12T17:42:22.385330+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -48,7 +48,7 @@
     "reference_inventory": 612114,
     "qualified_reference_predictions": 1183990,
     "shared_recovery_numerical_cases": 112,
-    "inspected_figure_sets": 40,
+    "inspected_figure_sets": 42,
     "unit_tests": 73,
     "sample_population_objects": 26000,
     "cdf_preservation_array_checks": 7329,
@@ -98,17 +98,18 @@
       11,
       12
     ],
-    "candidate_export_objects": 1183990
+    "candidate_export_objects": 1183990,
+    "figure_checks": 336,
+    "full_catalog_counts": 1183990,
+    "selected_near95": 1013855
   },
   "outstanding": [
-    "Full conditional candidate predictions and joint counts/exports",
-    "Two catalog figure sets and visual QA",
-    "Final result/atlas/ledger and actual delivery audit"
+    "Final actual-array delivery audit",
+    "Final documentation status and three-end sync"
   ],
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",
   "blocked_audit_passed": false,
   "remaining_artifacts_verified_missing": [
-    "catalog/summary/complete.json",
     "delivery.json"
   ],
   "current_issue": null,
@@ -140,7 +141,7 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: full1183990 predicted and exported; final numerical sidecar and summary live; figures and delivery still outstanding",
+  "goal_turn_classification": "progress: fullcounts and42inspectedfigures/report complete; final actual-array audit remaining",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
@@ -176,8 +177,9 @@
     },
     {
       "job": 61162921,
-      "status": "RUNNING",
-      "field": 11
+      "status": "COMPLETED",
+      "field": 11,
+      "finest_grid_passed": true
     }
   ],
   "conditional_mc_flags": {

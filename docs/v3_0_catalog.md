@@ -1,8 +1,9 @@
 # Photdis v3.0 candidate-catalog interface
 
-Status: production and validation are in progress. This page defines the candidate
-interface; final quantities and acceptance belong to the delivery audit. Historical
-v1 application products remain unchanged.
+Status: all 1,183,990 compact candidate rows and shared-count products are produced.
+This page defines the delivered interface; final actual-array acceptance is recorded
+in `manifests/v3_0/delivery.json`. Six conditional reference-quadrature flags and
+one Monte Carlo flag remain in the original rows. Historical v1 products remain unchanged.
 
 ## Location and scope
 
