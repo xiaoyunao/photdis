@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-12 — full-count acceptance invariants prepared
+- Added direct actual-array checks for full-catalog int64 latent counts, fixed
+  1183990 total in every draw, expected-count total and finite symmetric joint
+  covariance with fixed-total cancellation. Delivery records its own source hash.
+- py_compile passes; actual full-array acceptance awaits the existing summary.
+  No production prediction/count/model changes. The remaining two field jobs
+  have stayed RUNNING through bounded live checks, not a terminal blocker.
+
 ## 2026-11-12 — complete eleven exports and strengthen final provenance audit
 - Export 61145917_10 COMPLETED 59s; 43690 rows, original one numerical flag.
   Downloaded completion record and verified linked prediction/source hashes.

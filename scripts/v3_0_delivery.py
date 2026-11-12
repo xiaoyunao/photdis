@@ -12,7 +12,7 @@ D=ROOT/'data/v3_0'
 
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--recovery',default='all32_native_final');a=p.parse_args()
-    method=check_freeze();checks=[];inputs={};limitations=[]
+    method=check_freeze();checks=[];inputs={'scripts/v3_0_delivery.py':sha(ROOT/'scripts/v3_0_delivery.py')};limitations=[]
     def check(name,condition,value=None):
         checks.append(dict(name=name,passed=bool(condition),value=value))
         if not condition:raise AssertionError(name)
@@ -66,6 +66,14 @@ def main():
     summary=read(D/'catalog/summary/complete.json');outputs(D/'catalog/summary',summary)
     check('full original parent',summary['parent']==9390518)
     check('full qualified parent',summary['qualified']==1183990)
+    catalog_counts=load(D/'catalog/summary/counts.npz')
+    check('full catalog counts int64',catalog_counts['count_draws'].dtype==np.int64)
+    check('full catalog realized total',(catalog_counts['count_draws'].sum(axis=1)==summary['qualified']).all())
+    check('full catalog mean total',abs(catalog_counts['mean'].sum()-summary['qualified'])<1e-6)
+    covariance=catalog_counts['covariance']
+    check('full catalog joint covariance',covariance.shape==(18,18) and np.isfinite(covariance).all()
+          and np.allclose(covariance,covariance.T,atol=1e-6,rtol=1e-10)
+          and abs(covariance.sum())<1e-4*max(1.,float(np.diag(covariance).sum())))
     if summary['target_mc_failures']:limitations.append(f"{summary['target_mc_failures']} target candidates fail the frozen final joint Monte Carlo tolerance and remain flagged; no accuracy claim for these rows.")
     total=0;original_numeric_flags=0;export_reference_failures=0;export_mc_failures=0;export_failures=0
     shared_draw_ids=None;shared_weights=None
