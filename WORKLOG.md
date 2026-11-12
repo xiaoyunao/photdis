@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-12 — third conditional field and second export complete
+-61145915_3(actual61154937)COMPLETED1:03:21;100924objects, allreference
+ quadrature checks pass, half0.003925<0.005, jointdelta1.51e-14.
+-Conditional total225875/1183990 acrossfields00/01/03; existingtasks2/4/5/6
+ RUNNING, remainingtasks7–12 atcap4. No program failures.
+-Export61145917_1(actual61155730)COMPLETED1:28;79069rows, zero numerical
+ flags. Local source/completionhashes, int64identity andjoint[N,3,6] verified.
+ Total exported124951; field03export dependency cleared, awaitingresources.
+-Measured firstexport57s for45882rows supports20min limit forpendingexports
+ (largest166013rows, >5times linear-duration margin);12existing pending
+ time limits reduced, IDs/QoS/dependencies/concurrency unchanged. Fullrecord
+ manifests/v3_0/catalog_transfer/export_walltime_benchmark.json.
+-Next: existingremainingfields/exports, fullcounts, last2figures and finalaudit.
+
 ## 2026-11-12 — second conditional field completes
 -61145915_1(actual61154515)COMPLETED50:41;79069objects, allreference
  quadrature checks pass, finalhalf0.002591<0.005, nativejointdelta1.67e-14.
