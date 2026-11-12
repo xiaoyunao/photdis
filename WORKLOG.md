@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-12 — benchmark remaining walltime and retain live queue
+-Seven completedfields provide actual elapsed/object measurements. Worst-rate
+ scaling predicts5416s forlargestremaining141934rows; fivependingtasks08–12
+ reducedfrom4h to2.5h(66%margin). Onlypending limits changed; jobs/QoS/cap4/
+ frozenphysicalcode/checkpoints unchanged. Exactrecords andbenchmarks:
+ manifests/v3_0/catalog_transfer/remaining_walltime_benchmark.json.
+-Regular CPU partition observed2949allocated/6idle nodes; pendingResources/
+ Priority is scheduling pressure, not renewedmaintenance or programfailure.
+-Existing08/09 subsequently RUNNING alongside07; nofailedjob states. Counts
+ remain589828computed/295877exported. Threeeligibleexports waitresources.
+-Next: continueexistingqueue, verifyremainingproducts, fullcounts/2figures/audit.
+
 ## 2026-11-12 — seven conditional fields complete, queue continues
 -Fields06/05/02 finished normally in29:14/50:48/1:42:09. Added46833/81105/
 166013objects; halfdeltas0.004178/0.002311/0.004550, allbelowfrozen0.005.

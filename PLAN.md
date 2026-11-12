@@ -58,6 +58,8 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  now starts each field after its corresponding prediction succeeds (aftercorr).
  Fields00/01/03/04exports complete295877rows,zero numerical failures;
  source/completionhashes verified, fullPDF/reweightingchunklinks retained.
+ Pending08–12 predictionlimits2.5h based onseven-fieldworst-ratebenchmark
+ (66%margin); actual07/08/09RUNNING, othersnormalresourcequeue.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.
 

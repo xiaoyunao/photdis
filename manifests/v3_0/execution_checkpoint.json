@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T14:39:03.837314+08:00",
+  "checked_beijing": "2026-11-12T15:08:13.894360+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,16 +16,16 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      7
+      7,
+      8,
+      9
     ],
     "pending_tasks": [
-      8,
-      9,
       10,
       11,
       12
     ],
-    "pending_reason": "Priority"
+    "pending_reason": "Resources"
   },
   "target_pipeline": [
     61154185,
@@ -133,7 +133,8 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: seven conditional fields verified complete; existing task7 live, others waiting scheduler priority",
+  "goal_turn_classification": "progress: pending walltime benchmark applied; existing tasks8 and9 now running; live verified wait for remaining products",
   "catalog_export_dependency": "aftercorr:61145915",
-  "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged"
+  "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
+  "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin"
 }
