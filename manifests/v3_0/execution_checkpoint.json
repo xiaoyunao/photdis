@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:56:04.026882+08:00",
+  "checked_beijing": "2026-11-12T12:58:12.376471+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -17,7 +17,9 @@
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
       0,
-      1
+      1,
+      2,
+      3
     ]
   },
   "target_pipeline": [
@@ -59,7 +61,14 @@
     "paired_independent_scale": 8192,
     "prospective_numeric_objects": 13490,
     "prospective_numeric_flags": 1,
-    "target_scale_members": 1442
+    "target_scale_members": 1442,
+    "milestones": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ]
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -97,5 +106,7 @@
     61146319,
     61146320
   ],
-  "prospective_numerical_audit_job": 61154955
+  "prospective_numerical_audit_job": 61154955,
+  "scale_layout_job": 61155200,
+  "scale_layout_status": "PENDING"
 }

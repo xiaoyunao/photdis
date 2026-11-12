@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-12 — preserve active four-field pipeline and layout follow-up
+- Fullcandidate61145915 tasks0–3 RUNNING; remaining tasks wait at cap4.
+ Original dependencies61145916/17/18 retain counts/export/finalfigure sequence.
+- Layout-only job61155200 submitted once after original four scale artifacts
+ were hash-verified and archived. Last statePENDING; no new model or predictions.
+- A–E execution complete; F remains open. Next checkexistingjobs, inspect revised
+ scaleplate, audit40figures, then finish catalog/counts/exports/twofinalplates
+ andactualdelivery audit. Goalactive; no automation or additional models.
+
 ## 2026-11-12 — complete prospective paired validation and scale example
 -61145923/24 complete8192independent-field predictions/scores;61146319 completes
  1442member target example. Bias+12.11%,NMAD25.13%,68/95coverage47.43/93.27%.
