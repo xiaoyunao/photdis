@@ -59,7 +59,9 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  Same-model finer-grid diagnostics 61160732 / 61160854 pass at initial step .025,
  with maximum joint changes 1.27e-10 / 5.80e-9. Sidecars do not replace rows.
  Summary, delivery and final figure captions distinguish reference/MC/union flags.
- Fields 10–12 RUNNING; their existing exports use aftercorr dependencies.
+ Field 10 also complete: predictions total 941383 (79.51%); one reference flag
+ passes isolated .025-grid diagnostic 61161050 (joint change 1.66e-9), retained
+ in original row. Fields 11/12 RUNNING; export 10 pending Resources.
  Pending final summary/figures retain original jobs; no duplicate submissions.
  Need final sharedcounts, candidateindex/flags, scientificsummaryfigures,
  report/atlas/requirementmapping anddeliveryaudit. No deployment or timers.

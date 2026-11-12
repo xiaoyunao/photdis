@@ -1,0 +1,25 @@
+{
+  "job": "61161050",
+  "utc": "2026-11-12T08:02:16.625235+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-c",
+    "8",
+    "-t",
+    "00:10:00",
+    "-J",
+    "v3_cond_quad10",
+    "scripts/run_v3_0_stage.sh",
+    "catalog-numeric-audit",
+    "--field",
+    "10",
+    "--draw",
+    "12",
+    "--draws",
+    "4096"
+  ],
+  "purpose": "Same-model finer-grid diagnostic for one field10 conditional reference flag; original production retained."
+}

@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T15:59:04.498873+08:00",
+  "checked_beijing": "2026-11-12T16:05:28.402397+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,7 +16,6 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      10,
       11,
       12
     ],
@@ -81,9 +80,10 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
-    "conditional_candidate_objects": 897693,
+    "conditional_candidate_objects": 941383,
     "candidate_export_fields": [
       0,
       1,
@@ -138,13 +138,14 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: ten fields exported; two conditional reference flags retained with converged finer-grid sidecars; last three fields running",
+  "goal_turn_classification": "progress: eleven predictions, ten exports; three original conditional flags retained with finer-grid diagnostics; last two fields running",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
   "conditional_reference_flags": {
     "field_07": 1,
-    "field_09": 1
+    "field_09": 1,
+    "field_10": 1
   },
   "conditional_reference_audit_jobs": [
     {
@@ -162,6 +163,12 @@
       "job": 61160854,
       "status": "COMPLETED",
       "field": 9,
+      "finest_grid_passed": true
+    },
+    {
+      "job": 61161050,
+      "status": "COMPLETED",
+      "field": 10,
       "finest_grid_passed": true
     }
   ]
