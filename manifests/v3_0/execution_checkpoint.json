@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T15:46:14.829817+08:00",
+  "checked_beijing": "2026-11-12T15:48:47.422095+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -144,5 +144,12 @@
   "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
   "conditional_reference_flags": {
     "field_07": 1
-  }
+  },
+  "conditional_reference_audit_jobs": [
+    {
+      "job": 61160696,
+      "status": "FAILED",
+      "reason": "Missing Path import in new wrapper; fixed before retry"
+    }
+  ]
 }

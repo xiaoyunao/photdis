@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-12 — repair isolated numerical-audit wrapper import
+-Numericdiagnostic61160696FAILED17s: NameError(Path) beforeproducingaudit
+ outputs. Addedmissingpathlib import; pycompile/importsmoke pass.
+-Originalconditionalcatalog andrunningprediction/exportjobs unaffected.
+ Confirmedterminalstate; retryonlytheauxiliaryfield07check aftersync.
+
 ## 2026-11-12 — preserve conditional quadrature flag in final acceptance
 -Fields07/08 complete141803/79647; total811278/1183990. TargetMC half
 0.003597/0.004882 passes, butfield07 has1conditionalreferencequadrature
