@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:38:00+08:00",
+  "checked_beijing": "2026-11-12T12:45:59.872422+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -45,15 +45,16 @@
     "reference_inventory": 612114,
     "qualified_reference_predictions": 1183990,
     "shared_recovery_numerical_cases": 112,
-    "inspected_figure_sets": 36,
+    "inspected_figure_sets": 39,
     "unit_tests": 72,
     "sample_population_objects": 26000,
-    "cdf_preservation_array_checks": 7329
+    "cdf_preservation_array_checks": 7329,
+    "sampling_design_represented_parent": 8899334
   },
   "outstanding": [
     "Paired target-prior prospective and independent-scale results",
     "Full conditional candidate predictions and joint counts/exports",
-    "Six final figure sets and visual QA",
+    "Three final catalog/scale figure sets and visual QA",
     "Final result/atlas/ledger and actual delivery audit"
   ],
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",
@@ -76,5 +77,10 @@
     61154187
   ],
   "superseded_failed_plan_job": 61145619,
-  "aggregation_repair_complete": true
+  "aggregation_repair_complete": true,
+  "short_validation_debug_jobs": [
+    61145919,
+    61145921,
+    61145923
+  ]
 }

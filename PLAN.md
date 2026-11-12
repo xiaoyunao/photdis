@@ -21,7 +21,7 @@ Historical outputs and actual deployment remain immutable. No timers or agents.
 - [ ] F — actual benchmark, existing-field qualified candidate catalog, joint near/far
   counts, real marginalization example, English figures, reports, delivery audit.
 
-Current execution (2026-11-11, after prospective freeze):
+Current execution (2026-11-12, after maintenance recovery):
 A/B: 612114 strict native-PSF reference identities; isolated roles and untruncated
  binary flag. Nominal128-component fit converged43iterations; 32full bootstrap
  refits complete. Core likelihood/selection/compression/identity tests passed.
@@ -29,7 +29,9 @@ C: all32-response sampler/evidence/native products and shared26000sample
  posterior complete. Draw26 trajectory repair passesRhat1.0016/ESS2310.
  CDF aggregation61154185 passes finalMC0.003597/CDF0.000173; preservation
  audit61154186 verifies7329exactarraycomparisons and26000identities.
- Plan61154187 passes; existing catalog/prospective/design/figure jobs released.
+ Plan61154187 passes; existing catalog/prospective jobs released.
+ Design61145925 complete; three population figures61145926 inspected.
+ All39current figure sets reviewed; remaining catalog/scale3sets pending.
  Finite-responseESS1 remains a scientific support limitation, not a numerical
  failure or evidence for calibrated real-population counts.
 D: 224conditional recovery cases pass after recorded refinements. All3584 shared

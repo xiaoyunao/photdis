@@ -1,0 +1,12 @@
+{
+  "caption": "All32fullrefit source/calibration realizations. Concentration within this discrete prior does not prove convergence over continuous reference uncertainty.",
+  "inputs": {
+    "data/v3_0/ensemble_products/all32_native_refined/response_weights.csv": "782e9f05f9cc35feb4619fe0aa8a3baac2506381d985da3b58efbe6675d8027c"
+  },
+  "png_sha256": "ce44394ce91bcd0d324ae96c4d4d055aba041aa3f09ce4a090e9697e0cfe4822",
+  "pdf_sha256": "6f6cdaf9fa4dd347907f8aaa552f32d155501aee96232963eba41044da2f1b46",
+  "csv_sha256": "782e9f05f9cc35feb4619fe0aa8a3baac2506381d985da3b58efbe6675d8027c",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145926"
+}

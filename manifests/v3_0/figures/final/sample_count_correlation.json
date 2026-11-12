@@ -1,0 +1,12 @@
+{
+  "caption": "D/E/O mean dwarf/evolved/other; each group contains six distance bins. Counts have fixed total26000; covariance includes negative normalization correlations.",
+  "inputs": {
+    "data/v3_0/ensemble_products/all32_native_refined/complete.json": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2"
+  },
+  "png_sha256": "2a576412a40c0aaa462806265725ee8fa945390cdbcd73a08c0f4b304db92753",
+  "pdf_sha256": "751c387dc839d69df45dfc10d46847d8fe431b65fc9fe8208276a84b232e62da",
+  "csv_sha256": "7cb25719e8aeeab45eb1d84dfce4d346c7aa288b9537bf3c3db53bc468cfcc9d",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145926"
+}

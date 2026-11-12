@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-12 — inspect shared-population figures and design diagnostic
+- Jobs61145925/26 complete27s/18s. Three new English plates individually inspected:
+ sample joint counts, response concentration, correlated class-distance counts.
+ Final group6sets/48checks passes; total39sets inspected,3still pending.
+- Design diagnostic hashes and18cells verified; HT expectation sums8899334.
+ Conditional design covariance is not full posterior or repeated-fit uncertainty.
+- Existing20min prospective jobs61145919/21/23 moved to eligible debug QoS;
+ no resubmission, no physical changes. Full candidate array remains regular/cap4.
+- Remaining: paired validation,1183990conditional products/counts/exports,
+ three figures and actual final delivery audit. Goal active and incomplete.
+
 ## 2026-11-12 — shared population posterior and CDF repair pass
 -61154185 completes36s: finalMC0.003597/CDF0.000173/joint7.12e-7 pass.
 -61154186 verifies26000objects/7329exact arrays; nativePDF, jointmass and

@@ -1,0 +1,13 @@
+{
+  "caption": "Posterior means and95%latent-count intervals including shared parameters. These are sample counts, not survey-expanded totals or intrinsic density. Finite response support remains limited.",
+  "inputs": {
+    "data/v3_0/ensemble_products/all32_native_refined/complete.json": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2",
+    "data/v3_0/ensemble_products/all32_native_refined/count_summary.csv": "ae03214240576bd92b6aec83dcd87ff2d73edc293cb7175d65c20c3ab1932e9f"
+  },
+  "png_sha256": "40e26f4de61e2aba3ae8cc586fea7d85c380f62f5e59e1ba4735fd299d78d9e6",
+  "pdf_sha256": "bec137dfa6afeba9b91aaa6bdbda6de24be0f384b92e13aa44a92369e8dad726",
+  "csv_sha256": "ae03214240576bd92b6aec83dcd87ff2d73edc293cb7175d65c20c3ab1932e9f",
+  "english_text_verified": true,
+  "png_dpi": 300,
+  "job": "61145926"
+}

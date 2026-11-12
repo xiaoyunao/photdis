@@ -1,0 +1,27 @@
+{
+  "ensemble_sha256": "07f7a5af2316a16f197c24587a4c260198d8ea50cd1208fc82d699a3a1af3ae2",
+  "source_sha256": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+  "n": 26000,
+  "represented_parent": 8899334,
+  "stratum_population": {
+    "0": 275998,
+    "1": 695479,
+    "2": 947518,
+    "3": 1285115,
+    "4": 423308,
+    "5": 605103,
+    "6": 290836,
+    "7": 1037316,
+    "8": 527873,
+    "9": 676024,
+    "10": 455715,
+    "11": 961065,
+    "12": 717984
+  },
+  "interpretation": "Horvitz-Thompson plug-in total with SRS finite-population design covariance conditional on fitted marginal probabilities. This is a sampling-design diagnostic, not an independent validation count or a full posterior interval. Dependence of fitted population parameters on survey resampling is not included. The actual qualified full-catalog product uses unit weights and separately retains shared posterior covariance.",
+  "outputs": {
+    "sampling_design.csv": "68699fd0289594545e67420cea6fa4f1967b404c8335295e85513a24c69dfc15",
+    "sampling_design.npz": "09b3582dc85313a04aea2f15ef137b60316cdd8af87b9662aaf9185e08133088"
+  },
+  "job": "61145925"
+}
