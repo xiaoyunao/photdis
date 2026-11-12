@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-12 — expose prospective Monte Carlo flags
+- Newsky61145921 completes2048objects; native integration passes but maximum
+ half-chain difference0.005569 exceeds frozen0.005. Do not label all rows passed.
+- Add independent transfer-numeric-audit, verifying original chunk hashes, exact
+ IDs, response-marginal bounds and all scored objects; keep flagged rows in scores.
+ Final delivery now requires this audit and reports per-cohort limitations.
+- Python parse/diff checks pass. Production audit pending all paired evaluations;
+ no prediction, physical prior, outcome selection or threshold changes.
+
 ## 2026-11-12 — inspect shared-population figures and design diagnostic
 - Jobs61145925/26 complete27s/18s. Three new English plates individually inspected:
  sample joint counts, response concentration, correlated class-distance counts.

@@ -51,6 +51,12 @@ def main():
         check('prospective output count:'+name,reference['rows']==n)
         transferbase=D/'transfer_evaluation'/name;transfer=read(transferbase/'complete.json');outputs(transferbase,transfer)
         check('paired transfer count:'+name,transfer['n']==n and transfer['method_freeze']==method)
+    numericbase=D/'transfer_evaluation/numerical_audit';numeric=read(numericbase/'complete.json');outputs(numericbase,numeric)
+    check('prospective numerical flags',numeric['structurally_passed'] and numeric['rows']==13490)
+    for cohort in numeric['cohorts']:
+        if cohort['combined_failures']:
+            limitations.append(f"{cohort['cohort']}: {cohort['combined_failures']} prospective objects carry numerical flags and remain in scientific scores; these rows do not pass the frozen numerical criterion.")
+    for name,digest in numeric['inputs'].items():check('prospective numerical provenance:'+name,sha(ROOT/name)==digest)
     plan=read(D/'catalog/transfer_plan.json');check('plan linked to ensemble',plan['ensemble_sha256']==sha(ensemble/'complete.json'))
     check('global response pruning bound',plan['discarded_response_mass']<=1e-10)
     summary=read(D/'catalog/summary/complete.json');outputs(D/'catalog/summary',summary)

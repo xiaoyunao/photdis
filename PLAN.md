@@ -46,6 +46,8 @@ E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  NGC2881442members:centralbias+12.56%,68coverage60.47%; sharedscale uncertainty.
  Fiveprospective/sciencefigures pass40checks andvisualreview. Target-prior
  same-response comparisons remain; no changes to physicalmethod after opening.
+ Newsky target transfer complete2048; half-chain max0.005569 exceeds0.005.
+ Independent numerical audit must retain/report flagged rows in paired scores.
 F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
