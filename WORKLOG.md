@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-12 — require actual CDF preservation in final acceptance
+- Final delivery must link the 26000-object native-density/joint-count preservation
+ audit to the delivered ensemble hash; repaired-grid unit tests alone are insufficient.
+- Python parse check passed. Production aggregation61154185 is still in normal
+ Resources queue; no maintenance block, replacement fit or duplicate submission.
+
 ## 2026-11-12 — maintenance cleared; resume through numerical CDF repair
 - User requests continuation only after recovery. Reservation no longer exists;
  61146827/28/29/30/31 completed. Goal reactivated by user; no duplicate fit.
