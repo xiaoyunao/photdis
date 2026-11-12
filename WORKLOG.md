@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-12 — seven conditional fields complete, queue continues
+-Fields06/05/02 finished normally in29:14/50:48/1:42:09. Added46833/81105/
+166013objects; halfdeltas0.004178/0.002311/0.004550, allbelowfrozen0.005.
+-Fields00–06 total589828/1183990(49.82%); allconditionalreferencequadrature
+ passes. Small completion records retained; original fullproducts stayonNERSC.
+-Field07RUNNING;08–12 andcompleted-fieldexports02/05/06 PENDING(Priority).
+ This is a live verifiedwait, not authentication/program failure or terminalblock.
+ Existingjobs retained; no resubmission. Exported countremains295877.
+-Next: remainingexistingpredictions/exports, fullcounts, last2figures/finalaudit.
+
 ## 2026-11-12 — quarter of conditional candidate catalog complete
 -Field04 adds70002objects; finalhalf0.002729<0.005, allreference quadrature
  passes. Fourcompletedfields00/01/03/04 total295877/1183990(24.99%).

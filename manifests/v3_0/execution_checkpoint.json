@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T14:16:30.852557+08:00",
+  "checked_beijing": "2026-11-12T14:39:03.837314+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -16,11 +16,16 @@
     "reason": null,
     "stage": "qualified candidate conditional transfer array",
     "active_tasks": [
-      2,
-      5,
-      6,
       7
-    ]
+    ],
+    "pending_tasks": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "pending_reason": "Priority"
   },
   "target_pipeline": [
     61154185,
@@ -73,10 +78,13 @@
     "conditional_candidate_fields": [
       0,
       1,
+      2,
       3,
-      4
+      4,
+      5,
+      6
     ],
-    "conditional_candidate_objects": 295877,
+    "conditional_candidate_objects": 589828,
     "candidate_export_fields": [
       0,
       1,
@@ -125,7 +133,7 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: fourth prediction and export complete; one quarter of full candidate objects verified",
+  "goal_turn_classification": "progress: seven conditional fields verified complete; existing task7 live, others waiting scheduler priority",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged"
 }
