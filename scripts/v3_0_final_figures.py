@@ -133,14 +133,16 @@ def scale():
     name=f'refit_{r["draw"]:02}_s{r["draws"]}';base=D/'scale_example'
     reference=read(base/'reference/distance_distribution.csv');target=read(base/name/'distance_distribution.csv')
     config=json.loads((ROOT/'configs/v3_0_independent_scale.json').read_text());mu=10+5*np.log10(config['distance_kpc'])
-    fig,axes=plt.subplots(1,3,figsize=(14,4.8));rows=[]
+    fig,axes=plt.subplots(1,3,figsize=(14,5.4));rows=[]
     for ax,group,title in zip(axes,['all','members','nonmembers'],['All photometric objects','Post-associated members','Remaining photometric objects']):
         for data,label,color in [(reference,'Nominal reference prior',GRAY),(target,'Conditional target transfer',ORANGE)]:
             selected=[r for r in data if r['group']==group];ax.plot([float(r['mu']) for r in selected],[float(r['expected_count']) for r in selected],color=color,label=label)
             rows.extend([dict(r,view=label) for r in selected])
-        ax.axvline(mu,color=BLUE,ls='--',label='Independent dynamical scale');ax.set(title=title,xlim=(8,22),xlabel='Distance modulus (mag)',ylabel='Expected objects per 0.05 mag');ax.legend(frameon=False,fontsize=9)
+        ax.axvline(mu,color=BLUE,ls='--',label='Independent dynamical scale');ax.set(title=title,xlim=(8,22),xlabel='Distance modulus (mag)',ylabel='Expected objects per 0.05 mag')
     fig.suptitle('NGC 288 field: distance marginalization and foreground mixture',fontsize=17)
-    fig.subplots_adjust(left=.06,right=.99,bottom=.15,top=.8,wspace=.32)
+    handles,labels=axes[0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.5,.91),ncol=3,frameon=False,fontsize=10)
+    fig.subplots_adjust(left=.06,right=.99,bottom=.15,top=.74,wspace=.32)
     save(fig,'ngc288_prior_comparison',rows,[base/'reference/complete.json',base/name/'complete.json'],'One shared9.03kpc dynamicalscale with-0.56/+0.48kpc errors; membershipGaia-conditioned afterpurephotometricpredictions. Curves are posterior expectations, not independent-star Poisson uncertainty or intrinsic density. Nominal-reference versus target is not an isolated prior-only contrast; matched-response comparisons are reported separately.')
 
 

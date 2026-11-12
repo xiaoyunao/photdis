@@ -1,0 +1,53 @@
+{
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "inputs": {
+    "data/v3_0/catalog/transfer_plan.json": "db72e8782902e833da0b0a8ecd43d74bf190d9f1b18ca5b83275c7d8d5c32a37",
+    "data/v3_0/validation/reservation/population_transfer/refit_12_s4096/complete.json": "ab669f89f17312e27305e0bf3fda072e46317727ee210e82a4e254535ae5ab28",
+    "data/v3_0/transfer_evaluation/reservation/complete.json": "5f15e11e44d4830ebf8180c1b21f97004a673808fc823c633821d6af6a3299ce",
+    "data/v3_0/validation/new_sky/population_transfer/refit_12_s4096/complete.json": "f2cf36c75667189bde0c72f846e7bf889ec35d8415f3077182a5fbd905a40aa1",
+    "data/v3_0/transfer_evaluation/new_sky/complete.json": "e535b0edf0c1ef1ee4edf2cb658fed662dedf20e3335e04313b05961c1034565",
+    "data/v3_0/validation/independent_scale/population_transfer/refit_12_s4096/complete.json": "55217cacc94b1eff82be42df3e76d30fae93d92b561ae6e277756d84de8d117a",
+    "data/v3_0/transfer_evaluation/independent_scale/complete.json": "176aed72fc7a0809806cc3f7192b689be9ab52a620af522cc07205dd726f16fc"
+  },
+  "structurally_passed": true,
+  "rows": 13490,
+  "cohorts": [
+    {
+      "cohort": "reservation",
+      "n": 3250,
+      "reference_failures": 0,
+      "target_mc_failures": 0,
+      "combined_failures": 0,
+      "maximum_final_half_delta": 0.0035761257831713467,
+      "tolerance": 0.005
+    },
+    {
+      "cohort": "new_sky",
+      "n": 2048,
+      "reference_failures": 0,
+      "target_mc_failures": 1,
+      "combined_failures": 1,
+      "maximum_final_half_delta": 0.005568569182525629,
+      "tolerance": 0.005
+    },
+    {
+      "cohort": "independent_scale",
+      "n": 8192,
+      "reference_failures": 0,
+      "target_mc_failures": 0,
+      "combined_failures": 0,
+      "maximum_final_half_delta": 0.0011242477415118746,
+      "tolerance": 0.005
+    }
+  ],
+  "numerically_all_passed": false,
+  "interpretation": "Every prospective object remains in paired scientific scores. These exact-identity flags expose reference quadrature and final response-marginal Monte Carlo limits; no outcome-based exclusion, refit, or threshold relaxation.",
+  "outputs": {
+    "new_sky.npz": "0f7af781551592f072049db43eb16ee5f338e2ee2d2e40760545b4fb13dc0add",
+    "independent_scale.npz": "e653643e19fa6867d3b351587f823949959c31a64117a12415d3cc7772d016ca",
+    "summary.csv": "7f645d7dd0d9b03ec21a4a072f38cf796e151bb39f429c79d0ac0fe2dc871d86",
+    "reservation.npz": "01db2f15725ebb4cf37b085b50727d783c80ca37b7b086f8f1aafd24002cf93c"
+  },
+  "source_sha256": "8a06501c325ed726520e7c29927173d4d76b6462fa82c0b728344830a30d8372",
+  "job": "61154955"
+}

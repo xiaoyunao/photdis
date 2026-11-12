@@ -1,0 +1,24 @@
+{
+  "inputs": {
+    "data/v3_0/validation/independent_scale/population_transfer/refit_12_s4096/complete.json": "55217cacc94b1eff82be42df3e76d30fae93d92b561ae6e277756d84de8d117a",
+    "data/v3_0/independent_scale/membership.npz": "6e4c02994009ea073e2de7664fc9a719c699d6811a699372400f945cb226ab83",
+    "data/v3_0/independent_scale/association.json": "9a27606b01d5d40c1da5cadb1ec8d7d54673e6dc55aa82a268784b2689914521",
+    "configs/v3_0_independent_scale.json": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9",
+    "scripts/v3_0_scale_example.py": "d1593380f8e6ac97aaa6d0e1af562c48be4e99e2c67bd6305a9684ef1a4047e1"
+  },
+  "method_freeze": "14d3ff1d27e044864970237022a16ac834a195d15d079d3bb7677c7af6309528",
+  "n": 8192,
+  "members": 1442,
+  "scope": "Photometric-first 1deg field. Membership selected after prediction at frozen p>=0.9; Gaia-conditioned membership, independently anchored dynamical scale. All-photometric/nonmember scale residuals are foreground diagnostics, not accuracy measures.",
+  "uncertainty": "Shared dynamical distance uncertainty shown by common +/-1sigma shifts. Mean per-star convolved score is descriptive, not product likelihood for the common cluster distance. Stacked probabilities are expectations; shared target count covariance is in the target product, not independent-star error bars.",
+  "distance_kpc": 9.03,
+  "distance_error_lower": 0.56,
+  "distance_error_upper": 0.48,
+  "outputs": {
+    "distance_distribution.csv": "a21c54abbb7a2d43a66bfc08754542e72c07a9a841939fde480d305e9e7f9212",
+    "joint_counts.csv": "145941922095382e03510b22c49b2e282590b38ede7013709023b9a4722c4441",
+    "metrics.csv": "11ecf08e7f17d2e200e326bce02ea314453011613cf497d2253309b35531592b",
+    "per_star.npz": "760d12e365d845d866287c1d864101a8294bbcbd900a749a55f35d212b70f804"
+  },
+  "job": "61146319"
+}

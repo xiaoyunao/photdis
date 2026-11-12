@@ -1,0 +1,4 @@
+cohort,n,reference_failures,target_mc_failures,combined_failures,maximum_final_half_delta,tolerance
+reservation,3250,0,0,0,0.0035761257831713467,0.005
+new_sky,2048,0,1,1,0.005568569182525629,0.005
+independent_scale,8192,0,0,0,0.0011242477415118746,0.005

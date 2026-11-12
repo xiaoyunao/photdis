@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-12 — complete prospective paired validation and scale example
+-61145923/24 complete8192independent-field predictions/scores;61146319 completes
+ 1442member target example. Bias+12.11%,NMAD25.13%,68/95coverage47.43/93.27%.
+-61154955 verifies13490exact identities and paired score retention: reference
+ integral flags0; target MC flags0/1/0 forreservation/newsky/independentfield.
+-CSV hashes verified; E execution complete, scientific calibration not claimed.
+-Scale figure61146320 inspected: center legend overlaps density peak. Move one
+ shared legend above panels; syntax check passes; layout-only rerun pending.
+-Full1183990catalog still running. F/final audit incomplete, goal remainsactive.
+
 ## 2026-11-12 — paired new-sky scores and live full candidate production
 -61145919/20 complete reservation3250 predictions/scores; no eligible real truth.
 -61145921/22 complete newsky2048. Same-response247preciseGaia: bias+5.81→+6.43%,

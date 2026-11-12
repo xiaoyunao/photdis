@@ -1,0 +1,11 @@
+group,n,gaia_mean_logscore_gain,median_abs_mu50_shift,selection
+all,2202,-0.03425699549722058,0.05060179412769106,Same identities selected by named fixed rule; source response/calibration identical
+observable,1569,-0.058700825109181974,0.06315396427879705,Same identities selected by named fixed rule; source response/calibration identical
+target_near95,822,-0.06852297561487584,0.020847369765846224,Same identities selected by named fixed rule; source response/calibration identical
+target_near_observable,658,-0.11260966905135893,0.03006003125649137,Same identities selected by named fixed rule; source response/calibration identical
+reference_near_observable,516,-0.040093621495002243,0.020352716029072404,Same identities selected by named fixed rule; source response/calibration identical
+red,344,-0.014388503832996771,0.01825495918815001,Same identities selected by named fixed rule; source response/calibration identical
+r_0_18,305,-0.24374473291793203,0.035589117576735774,Same identities selected by named fixed rule; source response/calibration identical
+r_18_20,1303,0.001995496167374273,0.06733698735113691,Same identities selected by named fixed rule; source response/calibration identical
+r_20_22,594,-0.006215306483163525,0.026427155922168488,Same identities selected by named fixed rule; source response/calibration identical
+r_22_99,0,,0.05563260653852886,Same identities selected by named fixed rule; source response/calibration identical

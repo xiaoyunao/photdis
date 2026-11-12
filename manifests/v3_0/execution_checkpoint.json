@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T12:53:03.112807+08:00",
+  "checked_beijing": "2026-11-12T12:56:04.026882+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -55,12 +55,15 @@
     "cdf_preservation_array_checks": 7329,
     "sampling_design_represented_parent": 8899334,
     "paired_reservation": 3250,
-    "paired_new_sky": 2048
+    "paired_new_sky": 2048,
+    "paired_independent_scale": 8192,
+    "prospective_numeric_objects": 13490,
+    "prospective_numeric_flags": 1,
+    "target_scale_members": 1442
   },
   "outstanding": [
-    "Paired target-prior prospective and independent-scale results",
     "Full conditional candidate predictions and joint counts/exports",
-    "Three final catalog/scale figure sets and visual QA",
+    "Scale layout refinement and two catalog figure sets; visual QA",
     "Final result/atlas/ledger and actual delivery audit"
   ],
   "resume": "Query squeue/sacct and execution manifests before action. Do not duplicate submissions. Preserve frozen physical assumptions and failed numerical products. No timers or agents.",

@@ -16,7 +16,7 @@ Historical outputs and actual deployment remain immutable. No timers or agents.
   reference-prior and population-prior joint posteriors, counts and covariance.
 - [x] D — fixed matched method/band/prior contrasts, information probe, continuous
   independent-SED recovery and transfer; full conditional PDF and count metrics.
-- [ ] E — freeze model/priors/metrics/tolerances, once-only reserved real validation,
+- [x] E — freeze model/priors/metrics/tolerances, once-only reserved real validation,
   photometric-first new sky, independent scale; supported/limited/unverified domains.
 - [ ] F — actual benchmark, existing-field qualified candidate catalog, joint near/far
   counts, real marginalization example, English figures, reports, delivery audit.
@@ -45,9 +45,10 @@ E: method/priors/output/metric freeze61142743 (SHA14d3ff1d...). Purephotometry
  evidence. Newsky1070signedGaia/247precise, independent2202signed/131precise.
  NGC2881442members:centralbias+12.56%,68coverage60.47%; sharedscale uncertainty.
  Fiveprospective/sciencefigures pass40checks andvisualreview. Target-prior
- same-response comparisons remain; no changes to physicalmethod after opening.
- Newsky target transfer complete2048; half-chain max0.005569 exceeds0.005.
- Independent numerical audit must retain/report flagged rows in paired scores.
+ same-response comparisons now complete for3250/2048/8192; no physical changes.
+ Numerical audit61154955 verifies13490identities: one newsky MC flag retained.
+ Target NGC288 members1442 havebias+12.11% and68coverage47.43%; science limited.
+ New scale figure generated; legend layout fix pending visual recheck.
 F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
