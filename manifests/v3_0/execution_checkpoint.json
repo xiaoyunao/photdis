@@ -1,5 +1,5 @@
 {
-  "checked_beijing": "2026-11-12T15:08:13.894360+08:00",
+  "checked_beijing": "2026-11-12T15:46:14.829817+08:00",
   "goal_status": "active, incomplete",
   "blocking_condition": null,
   "consecutive_goal_turns_with_terminal_block": 0,
@@ -57,7 +57,7 @@
     "qualified_reference_predictions": 1183990,
     "shared_recovery_numerical_cases": 112,
     "inspected_figure_sets": 40,
-    "unit_tests": 72,
+    "unit_tests": 73,
     "sample_population_objects": 26000,
     "cdf_preservation_array_checks": 7329,
     "sampling_design_represented_parent": 8899334,
@@ -82,16 +82,21 @@
       3,
       4,
       5,
-      6
+      6,
+      7,
+      8
     ],
-    "conditional_candidate_objects": 589828,
+    "conditional_candidate_objects": 811278,
     "candidate_export_fields": [
       0,
       1,
+      2,
       3,
-      4
+      4,
+      5,
+      6
     ],
-    "candidate_export_objects": 295877
+    "candidate_export_objects": 589828
   },
   "outstanding": [
     "Full conditional candidate predictions and joint counts/exports",
@@ -133,8 +138,11 @@
   "scale_layout_job": 61155200,
   "scale_layout_status": "COMPLETED, visually inspected",
   "milestone_audit_job": 61155399,
-  "goal_turn_classification": "progress: pending walltime benchmark applied; existing tasks8 and9 now running; live verified wait for remaining products",
+  "goal_turn_classification": "progress: fields07/08 complete; discovered1conditional reference quadrature flag and fixed summary acceptance omission; sidecar refinement pending",
   "catalog_export_dependency": "aftercorr:61145915",
   "pending_export_timelimit": "00:20:00 based on actual57s/45882row benchmark; regularQoS unchanged",
-  "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin"
+  "pending_prediction_timelimit": "02:30:00 for existing tasks8-12; worst measured per-object scaling has66% margin",
+  "conditional_reference_flags": {
+    "field_07": 1
+  }
 }

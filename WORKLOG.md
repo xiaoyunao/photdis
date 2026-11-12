@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-12 — preserve conditional quadrature flag in final acceptance
+-Fields07/08 complete141803/79647; total811278/1183990. TargetMC half
+0.003597/0.004882 passes, butfield07 has1conditionalreferencequadrature
+ flag(141802/141803passed). Originalproductionrow must remainflagged.
+-Summary previously counted onlytargetMC failures; now exportsreference,MC
+ andunionfailurecounts separately andpasses onlyifunionempty. Delivery reads
+ actualcompactPSF/int64/jointarrays, checksunionagainstsummary, andrequires
+ same-model sidecar refinement forconditionalreferenceflags. No modelchange.
+-Extendedcatalog-numeric-audit --draw/--draws usesexactresponse/calibration;
+ originaloutputs protected. Field07allocatedfine-gridcheck pending submission.
+-Pycompile and4targetedtests pass; full73v3tests pass(3.24s). Addedindependent
+ cancellation/reference-failure test. Next: sync/submitonefield07numericcheck,
+ then continueoriginalcatalogqueue/counts/figures/finaldelivery.
+
+## 2026-11-12 — larger-field exports verified
+-61145917_2/_5 COMPLETED2:56/1:35. Exported166013/81105objects,zero
+ numericalflags. Source/completionhashes,int64identity,joint[N,3,6] locally
+ verified fromactualcompletionrecords. Totalexport542995 acrossfields00–05.
+-Field06export alsoverified46833rows,zero flags; total589828across00–06.
+-Computationsremain589828complete;07/08/09RUNNING. Existing06export and
+ predictions10–12 waitresources. Fullcounts/twofinalfigures/deliveryaudit pending.
+
 ## 2026-11-12 — benchmark remaining walltime and retain live queue
 -Seven completedfields provide actual elapsed/object measurements. Worst-rate
  scaling predicts5416s forlargestremaining141934rows; fivependingtasks08–12

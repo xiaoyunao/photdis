@@ -54,9 +54,11 @@ F: qualifiedcandidate count1183990 in13DECamfields. First45882field reference
  audit12909checks passed,437.96s/3.927GB64workers. All13reference fields/audits completed:333084checks,1183989initialnumericpasses;
  oneflagpassesisolatedfinergrid with5.54e-9jointchange,originalpreserved.
  Conditional128objectpilot41.71s/24.64MB; full transfer follows finalC gate.
- Conditional fields00–06 complete589828total; maxfinalhalf0.004550<0.005. Existing exportarray
+ Conditional fields00–08 complete811278total; maxfinalhalf0.004882<0.005.
+ Field07has1conditionalreferencequadratureflag; separatefiner-gridcheckpending,
+ originalflagretained. Summary/delivery distinguishreference/MC/unionfailures. Existing exportarray
  now starts each field after its corresponding prediction succeeds (aftercorr).
- Fields00/01/03/04exports complete295877rows,zero numerical failures;
+ Fields00–06exports complete589828rows,zero numerical failures;
  source/completionhashes verified, fullPDF/reweightingchunklinks retained.
  Pending08–12 predictionlimits2.5h based onseven-fieldworst-ratebenchmark
  (66%margin); actual07/08/09RUNNING, othersnormalresourcequeue.

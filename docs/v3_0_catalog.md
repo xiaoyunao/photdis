@@ -78,6 +78,11 @@ Flags are descriptive, not externally calibrated quality guarantees:
 - `numerically_converged`: reference quadrature and final joint half-chain error
   below0.005, including the global response omission bound.
 
+The summary reports reference-quadrature failures, target Monte Carlo failures
+and their per-object union separately. A passed target Monte Carlo check does
+not clear a reference-quadrature flag. Isolated finer-grid diagnostics preserve
+the original catalog row and its flag.
+
 Numerical failures remain present and flagged. No statement of calibrated
 accuracy follows from numerical convergence alone.
 
