@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-13 — preserve paired estimands and latent-flux distinction
+- Inventory61212144 submitted after579de5d three-end sync. Both initial jobs
+  last observed PENDING(Priority), no program failure. NERSC accounting uses
+  its local date2026-11-12 while user-facing date is2026-11-13 Asia/Shanghai.
+- Added identity-joined/design-weighted sky-block contrasts and actual-output
+  report driver. Two focused tests pass; script/core py_compile passes.
+- Added separate Gaussian conditional latent-flux negativity diagnostic, with
+  any-band union bounds. Analytic test confirms a negative-mean kernel can have
+  negligible negative posterior support after positive observations, and signed
+  negative observations are retained. Censored case explicitly unsupported.
+- The new negativity function is tested but not yet applied to actual data;
+  pilot retains its explicitly named kernel-prior proxy. Fixed archive typo.
+- Next: inspect pilot/inventory, run paired report, apply latent posterior audit,
+  then evidence-supported calibration design and new-test role freeze.
+
+
 ## 2026-11-13 — submit diagnostic pilot and prepare reference availability audit
 - Commit5f2c298 synchronized to local/origin/NERSC; all78v3/v3.1 tests pass.
   Submitted existing-scope pilot61212082, last observed PENDING(Priority).

@@ -15,6 +15,13 @@
         "--workers",
         "16"
       ]
+    },
+    {
+      "job_id": "61212144",
+      "purpose": "reference-availability and target-domain inventory",
+      "last_observed_state": "PENDING",
+      "reason": "Priority",
+      "wrapper": "scripts/run_v3_1_inventory.sh"
     }
   ],
   "local_validation": {

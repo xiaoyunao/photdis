@@ -6,7 +6,7 @@ Retrieved: 2026-11-13 (Asia/Shanghai). Latest assistant message, turn
 packages in section six. The linked DOCX was neither opened nor required.
 This is source review text, not evidence that its proposed work has passed.
 
-+我看了 GitHub 最新的 **[`31f1277`](https://github.com/xiaoyunao/photdis/commit/31f12772fe29c801db7269adf3a8b160e264bb5f)**，提交时间是 **2026 年 11 月 12 日 17:50，北京时间**。这次核对了方法与实现、结果 CSV、运行记录、目录定义和完整图集，并重新汇总了关键比较。
+我看了 GitHub 最新的 **[`31f1277`](https://github.com/xiaoyunao/photdis/commit/31f12772fe29c801db7269adf3a8b160e264bb5f)**，提交时间是 **2026 年 11 月 12 日 17:50，北京时间**。这次核对了方法与实现、结果 CSV、运行记录、目录定义和完整图集，并重新汇总了关键比较。
 
 **我的总体判断是：v3.0 已经完成了主体研究框架，下一轮应集中做科学校准。近端测距有明确的继续推进路径；巨星、远距离和窄结构仍存在核心问题，当前结果还不足以支撑一个“各星族均已校准、可直接用于 10–50 kpc 科学分析”的通用目录。**
 
