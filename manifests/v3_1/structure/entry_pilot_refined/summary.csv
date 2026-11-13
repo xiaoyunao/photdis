@@ -1,0 +1,7 @@
+context,row,identity,TYPE,branch,original_passed,passed,draws,previous_delta,previous_relative,independent_delta,independent_relative,physical,minimum,maximum
+0,273,-12105813617279216,PSF,background,True,True,,,,,,,,
+0,273,-12105813617279216,PSF,structure,True,True,,,,,,,,
+1,436,-12105809585507720,PSF,background,True,True,,,,,,,,
+1,436,-12105809585507720,PSF,structure,True,True,,,,,,,,
+2,224,2344520808917792000,PSF,background,True,True,,,,,,,,
+2,224,2344520808917792000,PSF,structure,False,True,8388608,0.00021237061086143427,0.00028927919623944357,7.509685755191509e-05,9.63055787155657e-05,True,0.6703303734306932,0.9276015096688758

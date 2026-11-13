@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-13 — admit refined structure pilot and preserve matched-response failures
+- Structureentry pilot extension61222758 COMPLETED2m01s: lastnarrow branch now
+  passes same-integrand2^23 comparison; all3contexts/sixbranches accepted and the
+  originalfailed2^21 products retained. Full32response entry61223167 submitted,
+  paired numerical-only refinement61223172 uses aftercorr dependencies.
+- Safely held/confirmed/cancelled only unstarted targetentry shards6–15; grouped
+  unchangedscience jobs61222996(6–9),61222997(10–13),61222998(14–15). Full original
+  states and exactsciencehash retained in entry_resource_migration. Assembly
+  61219399 now depends on original4/5 plus these threegroups. Jointrepack61222999
+  queued. Originalentry0–4 completed; group6–9 running at lastcheck.
+- Added bounded matched-response development sidecars at.005/.0025/.00125 for
+  originalnumericalfailures, retaining all256objects and64responses. Report now
+  requiresall64sidecar inventories and exportsoriginal/unresolved flags separately;
+  targetevidence/entry/weights are unchanged. Newsidecars notyetexecuted.
+- Validation: newsidecar/report compile andimport; wrapper shellsyntax passes.
+  Latest128math tests remainpassed; actualsidecar execution/aggregation pending.
+- Next: sync/submit paireddevelopment sidecars, complete matrices/repack and
+  structure entry; execute population/count fits and finalmatching predictions
+  before opening newreferenceoutcomes. Goal remainsactive.
+
 ## 2026-11-13 — prepare bounded target inference and efficient resource packing
 - Added fixed-kernel conditional-transfer primitive that normalizes every shared
   population draw before mixing; no mean-prior substitution or newdata population

@@ -26,13 +26,16 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry61219182 first3shards all4875rows/5549envelopes pass, remainder queued; no context
-  interpolation. Assembly61219399 waits for complete inputshards. Population
+  Direct entry61219182 first5shards complete; onlyunstarted6–15 nowresourcegroups
+  61222996/61222997/61222998 withunchangedscience. Assembly61219399 dependencies
+  updated; exactjointrepack61222999 queued. No contextinterpolation. Population
   fits/evidence/count drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
   Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
-  with individual refit dependencies. These are not26kpopulation-marginal evidence.
+  with individual refit dependencies. Development numericalsidecar driver now
+  preserves originalfailures andrequiresall64inventories before finalreport.
+  These are not26kpopulation-marginal evidence.
 - [ ] WP3 final scientific validation. Roles frozen:170strictnewsky+356source-new
   seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in
   strictnewsky; no new far-field precision evidence. All3558reference-prior
@@ -45,9 +48,10 @@ Negative findings remain deliverables, never successful calibration claims.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
   analytical baseline withdrawal/entry/math foundation tested; preparation61221747
   complete61221747. Nativepilot7/512initialfailures allpass.005sidecars61222475;
-  remaining31native/refinement states queued. Entrypilot5/6branch-context gates
-  pass; lastnarrowcontext awaits same-integrand2^23extension. Originalfailures
-  preserved. Allstate entry/assembly/posterior drivers await numerical admission.
+  remaining31native/refinement states queued. Entrypilot all6branch-context gates
+  pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
+  All32state entry61223167/refinement61223172 queued; assembly/posterior
+  awaitallstates numerical admission.
   Full scientific counts, final product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 

@@ -29,18 +29,25 @@ def axes(table,evidence=None):
 
 def main():
     require_compute();base=ROOT/'data/v3_1/response_probes';out=base/'report';out.mkdir(exist_ok=True)
-    draws=list(range(32))+list(range(1000,1032));missing=[];completion=[];inventory=[]
+    draws=list(range(32))+list(range(1000,1032));missing=[];completion=[];inventory=[];refinements={}
     paths=[base/'complete.json',base/'target_photometry.npz',base/'development_photometry.npz',base/'development_evidence.npz',
         base/'development_design.json',ROOT/'data/v3_0/sed_fit.joblib',ROOT/'scripts/v3_1_response_probe_report.py',
         ROOT/'docs/v3_1_response_probe_report_protocol.md',ROOT/'src/photdis/v3_1/comparison.py',
-        ROOT/'src/photdis/v3/population.py',ROOT/'src/photdis/v3_1/finite_counts.py']
+        ROOT/'src/photdis/v3/population.py',ROOT/'src/photdis/v3_1/finite_counts.py',
+        ROOT/'docs/v3_1_response_probe_refinement_protocol.md']
     inputs={str(p.relative_to(ROOT)):sha(p) for p in paths}
     for draw in draws:
         p=base/f'draw_{draw:04}/complete.json'
         if not p.exists():missing.append(draw);continue
         d=json.loads(p.read_text());assert d['all_PSF'] and d['global_draw_id']==draw
         inputs[str(p.relative_to(ROOT))]=sha(p);completion.append(d)
+        rp=base/f'development_refined/draw_{draw:04}/complete.json'
+        if not rp.exists():missing.append(f'development_refined/{draw}');continue
+        rd=json.loads(rp.read_text());assert rd['global_draw_id']==draw and rd['all_PSF'] and rd['n']==256
+        assert rd['inputs'][str(p.relative_to(ROOT))]==sha(p)
+        refinements[draw]=rd;inputs[str(rp.relative_to(ROOT))]=sha(rp)
         inventory.append(dict(draw=draw,library=d['library'],target_passed=d['target_passed'],development_passed=d['development_passed'],
+            refined_development_passed=rd['passed'],original_development_failures=rd['original_failures'],unresolved_development=rd['unresolved'],
             target_rows=d['target_rows'],development_rows=d['development_rows'],target_training_overlap=d['target_training_overlap'],
             target_conditional_log_evidence=d['target_conditional_log_evidence']))
     csv_rows(out/'inventory.csv',inventory)
@@ -55,7 +62,7 @@ def main():
     np.testing.assert_array_equal(development['identity'],[r['identity'] for r in design])
     assert (target['TYPE']=='PSF').all() and (development['TYPE']=='PSF').all()
     design_weight=1/np.array([r['inclusion_probability'] for r in design]);cells=development['cell']
-    targets={};devs={};conditional=np.zeros((64,4,128));flags=[]
+    targets={};devs={};conditional=np.zeros((64,4,128));flags=[];original_flags=[]
     for index,(draw,d) in enumerate(zip(draws,completion)):
         folder=base/f'draw_{draw:04}';targets[draw]=[];devs[draw]=[]
         for cohort,table,records in [('target',target,targets[draw]),('development',development,devs[draw])]:
@@ -63,7 +70,16 @@ def main():
             for row,identity in enumerate(table['identity']):
                 name=f'{cohort}/object_{int(identity)}.json';p=folder/name;assert sha(p)==d['objects'][name]
                 r=json.loads(p.read_text());assert r['inputs']==d['inputs'] and r['TYPE']=='PSF' and r['identity']==identity and r['row']==row
-                payload=p.with_suffix('.npz');assert sha(payload)==r['sha256'];records.append(r)
+                payload=p.with_suffix('.npz');assert sha(payload)==r['sha256']
+                if not r['passed']:original_flags.append(dict(draw=draw,cohort=cohort,identity=int(identity),native_passed=r['native_passed'],score_passed=r['score_passed'],entry_passed=r['entry_passed']))
+                if cohort=='development':
+                    rd=refinements[draw];refined_folder=base/f'development_refined/draw_{draw:04}'
+                    name=f'object_{int(identity)}/complete.json';rp=refined_folder/name;assert sha(rp)==rd['objects'][name]
+                    rr=json.loads(rp.read_text());assert rr['inputs']==rd['inputs'] and rr['original_marker_sha256']==sha(p)
+                    assert rr['identity']==identity and rr['row']==row and rr['TYPE']=='PSF' and rr['original_passed']==r['passed']
+                    for output,digest in rr['outputs'].items():assert sha(rp.parent/output)==digest
+                    r=rr['selected_record'];assert r['identity']==identity and r['row']==row and r['TYPE']=='PSF'
+                records.append(r)
                 if not r['passed']:flags.append(dict(draw=draw,cohort=cohort,identity=int(identity),native_passed=r['native_passed'],score_passed=r['score_passed'],entry_passed=r['entry_passed']))
                 if cohort=='target':
                     data=load(payload);last=r['selection']['attempts'][-1]['draws'];previous=r['selection']['attempts'][-2]['draws']
@@ -90,6 +106,7 @@ def main():
             weights.extend(dict(set=label,draw=draws[i],posterior_weight=float(v),log_posterior_weight=float(l),numerically_accepted=bool(good)) for i,v,l in zip(indices,w,lw))
         sets.append(item)
     csv_rows(out/'response_weights.csv',weights);csv_rows(out/'weight_numerics.csv',numerics);save_json(out/'sets.json',sets);save_json(out/'numerical_flags.json',flags)
+    save_json(out/'original_numerical_flags.json',original_flags)
     atomic_npz(out/'conditional_evidence.npz',draw_ids=np.array(draws),identity=target['identity'],TYPE=target['TYPE'],
         variants=np.array(['fine','native_coarse','entry_second_seed','entry_previous_level']),per_object_log_evidence=conditional)
     decomposition=[]
@@ -169,8 +186,8 @@ def main():
                 count_summary.append(dict(set=label,class_index=c,distance_bin=d,n=128,mean=float(result['mean'][k]),lower95=int(lo),median=int(median),upper95=int(hi),
                     variance=float(result['covariance'][k,k]),shared_variance=float(result['shared_covariance'][k,k]),numerically_accepted=bool(accepted and numeric)))
     csv_rows(out/'target_counts.csv',count_summary);csv_rows(out/'target_count_numerics.csv',count_checks)
-    save_json(out/'complete.json',dict(inputs=inputs,outputs={p.name:sha(p) for p in out.iterdir() if p.suffix in ('.csv','.npz') or p.name in ('sets.json','numerical_flags.json')},
-        states=64,target_rows=128,development_rows=256,numerical_flags=len(flags),sets=sets,all_PSF=True,
+    save_json(out/'complete.json',dict(inputs=inputs,outputs={p.name:sha(p) for p in out.iterdir() if p.suffix in ('.csv','.npz') or p.name in ('sets.json','numerical_flags.json','original_numerical_flags.json')},
+        states=64,target_rows=128,development_rows=256,numerical_flags=len(flags),original_numerical_flags=len(original_flags),sets=sets,all_PSF=True,
         job=os.getenv('SLURM_JOB_ID'),scope='Matched fixed-prior conditional probes and seen-development pairs, not26kpopulation response evidence or independent calibration. All64states retained; failed sets have no accepted weights.'))
 
 
