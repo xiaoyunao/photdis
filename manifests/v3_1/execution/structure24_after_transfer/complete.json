@@ -1,0 +1,9 @@
+{
+  "scheduler_change_complete": true,
+  "promoted": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "3a7947061a7123f4365452f59c38ce6b155470bbe65f706ec91a41340f41fae1"
+  },
+  "scope": "Existing sparse32-worker state24 returns todebug30 afterfinaltransfer completed andfreshcapacity proof. No cancellation/resubmission/science changes."
+}

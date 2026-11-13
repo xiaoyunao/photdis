@@ -29,7 +29,7 @@ Negative findings remain deliverables, never successful calibration claims.
   constrained. Full latent2589views plus failure pairing complete: low-negative
   evolved297primary references still87.6635%severe |dmu|>1; negative-flux outliers
   alone do not explain giant failure. Rare unknown/W2 support flags retained.
-- [ ] WP2 target/systematic comparisons remain; full radial experiment/report
+- [x] WP2 target/systematic comparisons complete; full radial experiment/report
   complete. All176catalogs/352arms retained: broad163/local105pass,97bothpass.
   Originaltimeouts andterminalfailures retained. Correctedreport61229960
   COMPLETED45s; exact SharedCounts normalization comparison replaces raw-weight
@@ -194,6 +194,12 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Full102transferreport61231678 COMPLETED1m15,625actualreportchecks/96countgroups;
+  allmain inheritedevidence failures and4mixed-sensitivity failures retained.
+  HoldoutunitjointESS103.872broadpasses/21.669candidatefails; broad→candidate
+  ESS388.104buthalfdelta.8532fails. TwoEnglishplates/12panels visuallyaccepted,
+  158source/formatchecks; now19/22plates. Runupdatedaggregate aftervisualrecordcommit.
+  Existingstructure24andnew25promoteddebug30 afterfreshcap; no newjobs/science.
 - Finaldelivery gate scripts/v3_1_delivery.py prepared: requiresactual102transfer,
   all32structure/assembly/posterior/counts, ninewrittenreports,22visuallyreviewed
   figures, freshunitrecord andcompletehash-boundnarrativereview. Syntaxandactual

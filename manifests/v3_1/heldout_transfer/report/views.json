@@ -1,0 +1,194 @@
+[
+  {
+    "case": "broad",
+    "view": "zero",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "zero",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "point",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "point",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "bootstrap_evidence",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "bootstrap_evidence",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "broad",
+    "view": "bootstrap_cut",
+    "envelope": "broad",
+    "available": true,
+    "accepted": true,
+    "inherited_inputs_passed": true
+  },
+  {
+    "case": "broad",
+    "view": "bootstrap_cut",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": true,
+    "inherited_inputs_passed": true
+  },
+  {
+    "case": "candidate",
+    "view": "zero",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "zero",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "point",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "point",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "bootstrap_evidence",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "bootstrap_evidence",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "bootstrap_cut",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "candidate",
+    "view": "bootstrap_cut",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "zero",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "zero",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "point",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "point",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "bootstrap_evidence",
+    "envelope": "broad",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "bootstrap_evidence",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": false,
+    "inherited_inputs_passed": false
+  },
+  {
+    "case": "holdout",
+    "view": "bootstrap_cut",
+    "envelope": "broad",
+    "available": true,
+    "accepted": true,
+    "inherited_inputs_passed": true
+  },
+  {
+    "case": "holdout",
+    "view": "bootstrap_cut",
+    "envelope": "candidate",
+    "available": true,
+    "accepted": true,
+    "inherited_inputs_passed": true
+  }
+]

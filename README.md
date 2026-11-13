@@ -18,8 +18,8 @@ candidate is response12/calibration12 with the fixed-kernel, candidate-cohort
 population and evidence-weighted luminosity bootstrap; the structure application
 and 64-response probe have separately documented identities.
 The frozen final validation does not support adopting the correction as a
-calibrated distance product. Complete transfer, structure inference and final
-domain adjudication remain required; numerical or artifact checks alone do not
+calibrated distance product. Complete102-state transfer and19reviewed figures
+are delivered; structure inference and final domain adjudication remain required; numerical or artifact checks alone do not
 establish scientific calibration. The integrated report explicitly marks pending
 results, with the live execution state in `PLAN.md` and `WORKLOG.md`.
 

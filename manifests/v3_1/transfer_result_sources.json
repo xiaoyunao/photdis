@@ -1,0 +1,2522 @@
+{
+  "inputs": {
+    "manifests/v3_1/heldout_transfer/report/complete.json": "ebf5f2078f00ec35818e48cadc7f3eca0673fd0048390b4206c2d33cf2b77576",
+    "manifests/v3_1/heldout_transfer/report/inventory.csv": "c2e35cba0c6f8374a23c34861ea8f3401e1d3144e1225d10494382e65a24644d",
+    "manifests/v3_1/heldout_transfer/report/predictive_summary.csv": "249cfe9fbf43d54fcd91b19fde2a886e092956a5d8ada25890694df4670a4cb9",
+    "manifests/v3_1/heldout_transfer/report/counts.csv": "97f91afbb93f526fcf27650ba10a96c060023044b70d6bcb537e1b9d6e1b74b0",
+    "manifests/v3_1/heldout_transfer/report/field_summary.csv": "cb61bb463bd49a92c412ebcb83f40c8588fb64255d11bc94e533852cebadc342",
+    "manifests/v3_1/heldout_transfer/report/checks.csv": "f76dd7dcaa04efc0776bd04291b4b15d223706e85b72b8f85505c701cc5da815",
+    "manifests/v3_1/heldout_transfer/report/paired.csv": "bfca30d7755c6e608d2df7f7ea5208c7c8c4b4d2045fb815cc68faabac503a06",
+    "manifests/v3_1/target_ensemble/broad/complete.json": "f61707d2b049a6409a3840feef2f7d4c04a47e4fd40c6b978fec54547b883889",
+    "manifests/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "manifests/v3_1/target_ensemble/holdout/complete.json": "f89f8be46d04ca77311d2ee86383e62170cdff8395619e882fa7f537cdcb099e",
+    "scripts/v3_1_transfer_result.py": "fa48fcd037eb7f31f106303c647f91633bc3e24f4d098f77cc2652b908819b35"
+  },
+  "report_sha256": "f3d917bfee84d0136edf5fcc99f7d1a2e6c151edacc1fbde8551cafa3452c50c",
+  "checks": [
+    {
+      "check": "complete102PSF_without_references",
+      "passed": true
+    },
+    {
+      "check": "source_hash:inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:counts.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:field_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:checks.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:paired.csv",
+      "passed": true
+    },
+    {
+      "check": "all_registered_states",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:0",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:1",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:2",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:3",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:4",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:5",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:6",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:7",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:8",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:9",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:10",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:11",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:12",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:13",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:14",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:15",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:16",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:17",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:18",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:19",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:20",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:21",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:22",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:23",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:24",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:25",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:26",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:27",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:28",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:29",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:30",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:31",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:32",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:33",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:34",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:35",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:36",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:37",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:38",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:39",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:40",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:41",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:42",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:43",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:44",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:45",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:46",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:47",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:48",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:49",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:50",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:51",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:52",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:53",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:54",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:55",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:56",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:57",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:58",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:59",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:60",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:61",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:62",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:63",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:64",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:65",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:66",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:67",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:68",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:69",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:70",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:71",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:72",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:73",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:74",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:75",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:76",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:77",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:78",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:79",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:80",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:81",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:82",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:83",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:84",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:85",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:86",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:87",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:88",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:89",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:90",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:91",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:92",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:93",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:94",
+      "passed": true
+    },
+    {
+      "check": "fixed_predictive_sample:95",
+      "passed": true
+    },
+    {
+      "check": "frozen_sky_fields",
+      "passed": true
+    },
+    {
+      "check": "ensemble_identity:broad",
+      "passed": true
+    },
+    {
+      "check": "ensemble34:broad",
+      "passed": true
+    },
+    {
+      "check": "ensemble_identity:candidate",
+      "passed": true
+    },
+    {
+      "check": "ensemble34:candidate",
+      "passed": true
+    },
+    {
+      "check": "ensemble_identity:holdout",
+      "passed": true
+    },
+    {
+      "check": "ensemble34:holdout",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:broad/broad",
+      "passed": true
+    },
+    {
+      "check": "main_availability:broad/broad",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:broad/broad",
+      "passed": true
+    },
+    {
+      "check": "support_rule:broad/broad/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:broad/broad/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:broad/candidate",
+      "passed": true
+    },
+    {
+      "check": "main_availability:broad/candidate",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:broad/candidate",
+      "passed": true
+    },
+    {
+      "check": "support_rule:broad/candidate/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:broad/candidate/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:candidate/broad",
+      "passed": true
+    },
+    {
+      "check": "main_availability:candidate/broad",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:candidate/broad",
+      "passed": true
+    },
+    {
+      "check": "support_rule:candidate/broad/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:candidate/broad/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:candidate/candidate",
+      "passed": true
+    },
+    {
+      "check": "main_availability:candidate/candidate",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:candidate/candidate",
+      "passed": true
+    },
+    {
+      "check": "support_rule:candidate/candidate/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:candidate/candidate/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:holdout/broad",
+      "passed": true
+    },
+    {
+      "check": "main_availability:holdout/broad",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:holdout/broad",
+      "passed": true
+    },
+    {
+      "check": "support_rule:holdout/broad/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:holdout/broad/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "unique_main_status:holdout/candidate",
+      "passed": true
+    },
+    {
+      "check": "main_availability:holdout/candidate",
+      "passed": true
+    },
+    {
+      "check": "heldout_role:holdout/candidate",
+      "passed": true
+    },
+    {
+      "check": "support_rule:holdout/candidate/joint",
+      "passed": true
+    },
+    {
+      "check": "support_rule:holdout/candidate/generalized_design_joint",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:broad/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:broad/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:broad/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:broad/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:broad/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:candidate/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:candidate/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:candidate/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:candidate/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:candidate/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/zero/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/point/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_evidence/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/broad/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/broad/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/broad/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/broad/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/candidate/base",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/candidate/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/candidate/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_bins:holdout/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "fixed_count_sample:holdout/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:holdout/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_decomposition:holdout/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "integer_realized_intervals:holdout/bootstrap_cut/candidate/native_fine",
+      "passed": true
+    },
+    {
+      "check": "paired_metrics:broad/broad",
+      "passed": true
+    },
+    {
+      "check": "paired_metrics:broad/candidate",
+      "passed": true
+    },
+    {
+      "check": "paired_metrics:candidate/broad",
+      "passed": true
+    },
+    {
+      "check": "paired_metrics:candidate/candidate",
+      "passed": true
+    }
+  ],
+  "actual_checks": 625,
+  "passed": true,
+  "scientific_acceptance": false,
+  "scope": "Complete actual source authentication and count/support checks; no true-distance calibration claim or visual-review acceptance."
+}

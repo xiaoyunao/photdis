@@ -10,14 +10,16 @@
     "docs/v3_1_final_validation_result.md": "8d548188b80d5378ebf26a9cde0a140b1521d9382af27d533598d48ba50a4cfa",
     "docs/v3_1_candidate_modes_result.md": "65830905891d69945cc06966b72846a2dfdcb8b1a4006150a7a786b045c544c0",
     "docs/v3_1_domain_evidence_result.md": "c28af87096982db084eb59c4e39330d648a77ec0e157b26e4b9b4dd5a5a69ad0",
-    "docs/v3_1_requirements_result.md": "38e9d2805474eb346e3de8f8c82348cbc3a509c1f92edd4f2cefa55704b17fc3",
-    "docs/v3_1_status.md": "6dc9589543ca9c916d8d0758f3877d6505849e65204eff43dbc36514a8b7a425",
-    "docs/v3_1_atlas.md": "2f400f99ae88f86c786f2eb06701a476050185b073db2432914902b094f7f581",
+    "docs/v3_1_requirements_result.md": "5b6bf64ecd454b8625c9b77632f891758f17e7202624b4787a4451389f34dc50",
+    "docs/v3_1_status.md": "cc97eae1c2b8b7e109f344e7d2edf5f5cb553d73939eed87fcf151ff52e664dd",
+    "docs/v3_1_atlas.md": "1d1e5aed0de0659136fe4f94f44a15aa05ae2687312312771786a8ddb5d474e0",
     "manifests/v3_1/structure/initial_entry_inventory.json": "144b8cd352357da980544bf823227903dda0ef915c2377e4a366dc147dd1f0ef",
-    "manifests/v3_1/structure/initial_entry_summary.csv": "836bfded312355b789efb10527dc462178388d419fcb605ca455c35798498b7b"
+    "manifests/v3_1/structure/initial_entry_summary.csv": "836bfded312355b789efb10527dc462178388d419fcb605ca455c35798498b7b",
+    "docs/v3_1_transfer_result.md": "f3d917bfee84d0136edf5fcc99f7d1a2e6c151edacc1fbde8551cafa3452c50c",
+    "manifests/v3_1/transfer_result_sources.json": "3f22398d4fc0331dea7e8bb47220cf5b87ac65a4505ca5dc5d36fdb6cbbbc629"
   },
-  "report_sha256": "9882f05ac5694dbb0a5f246e292850910e00bab1b5ce1ed1fd8c7ef026a5059b",
-  "local_links_checked": 16,
+  "report_sha256": "22316d1870c456fd6e2bdd7999b0d04468c2ea1f88d5227fd7a06b7955efc8ea",
+  "local_links_checked": 17,
   "links": [
     {
       "target": "v3_1_requirements_result.md",
@@ -45,6 +47,10 @@
     },
     {
       "target": "v3_1_response_result.md",
+      "exists": true
+    },
+    {
+      "target": "v3_1_transfer_result.md",
       "exists": true
     },
     {

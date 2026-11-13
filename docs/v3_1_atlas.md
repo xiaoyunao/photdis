@@ -2,11 +2,11 @@
 
 机制诊断与校正的完整科学解释见[v3_1_mechanism_result.md](v3_1_mechanism_result.md)。
 
-整套交付预定22张图，当前已完成17张。统一检查脚本
-`scripts/v3_1_figure_delivery_check.py` 默认要求全部22张；当前显式部分审计
+整套交付预定22张图，当前已完成19张。统一检查脚本
+`scripts/v3_1_figure_delivery_check.py` 默认要求全部22张；此前17张的显式部分审计
 完成240项来源、文件哈希、PNG300dpi、单页英文PDF和已提交目检记录绑定检查。
 [部分审计记录](../manifests/v3_1/figure_delivery_partial_17.json)不是完整验收，
-也不代表重复目检。迁移2张、结构2张、最终适用域1张仍待实际结果。
+也不代表重复目检。新完成迁移2张、158项检查及12面板目检；结构2张、最终适用域1张仍待实际结果。
 
 前两张图是已见开发样本的机制诊断，不是最终独立验证。2026-11-13
 逐张目检PNG；62项哈希、分辨率、PDF、英文文字及源表对应检查通过。
@@ -238,3 +238,26 @@ checks pass. Final scientific use-domain adjudication is still pending.
 [reference PDF](../figures/v3_1/domain_evidence/precise_newsky_references.pdf);
 [gap PDF](../figures/v3_1/domain_evidence/missing_reference_mass.pdf);
 [acceptance](../manifests/v3_1/domain_evidence_figures/acceptance.json).
+
+## Complete sky-transfer counts and predictive support
+
+![Shared class-distance counts](../figures/v3_1/heldout_transfer/heldout_joint_counts.png)
+
+The complete102-state report retains all original failures and all96available
+class-distance count groups. Main broad/candidate/heldout fits are compared on
+identical6000broad or935candidate-selected native-PSF objects. Dots are model
+expectations and lines are shared realized-count95%intervals, not true counts.
+
+![Predictive support](../figures/v3_1/heldout_transfer/heldout_predictive_support.png)
+
+The heldout mixture passes the frozen joint-support rule in the broad selection
+(unitESS103.872), but fails it in the candidate selection(21.669). Broad-fit
+candidate selection fails half-draw stability despiteESS388.104. In-sample
+candidate support does not establish transfer. All main views retain inherited
+absolute-evidence failure. Pointwise photometric scores are not distance truth.
+BothPNG300dpi/PDFplates andall12panels visually inspected after tick repair;
+158actual source-row/format checks pass, andthe written result passes625checks.
+[Full result](v3_1_transfer_result.md);
+[counts PDF](../figures/v3_1/heldout_transfer/heldout_joint_counts.pdf);
+[support PDF](../figures/v3_1/heldout_transfer/heldout_predictive_support.pdf);
+[acceptance](../manifests/v3_1/heldout_transfer_figures/acceptance.json).

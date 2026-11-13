@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — deliver complete sky-transfer comparison and two inspected plates
+- Full102report61231678 COMPLETED1m15; all96countgroups/24view-envelope states
+  retained,4mixed numeric sensitivity failures plus33conditional failures explicit.
+  Actualwrittenreport passes625checks; no survivor-state renormalization.
+- Holdoutmainunitjoint support103.872ESS/.0590halfdeltapassesbroad,21.669ESS
+  failscandidate. Broad→candidate388.104ESS/.8532halfdeltastillfails. Earlier
+  conditional-only failures were not used to infer mixture failure. Allmain
+  absolute-evidence gates stillfail; photometric prediction isnotdistance truth.
+- Rendered2EnglishPNG300dpi/PDFplates/12panels. Fixedpoor defaultsymlog tick
+  labels withshared explicit scale; addeddenominators andcountmarkers. Actual
+  158source/formatchecks andfinalimageinspection pass; acceptance boundtohashes.
+- Existingstructure24returnsdebug30 andnewarray25promotedafterfresh5-jobcap;
+  source/zero-runtime receipts collected. No cancellation/newjob/scientific edits.
+- Updatedresult/atlas/status/ledger/README/AGENTS/PLAN. Total19/22plates;
+  structure22/32, fullposterior/domain/3plates/finalQA stillrequired. e042e9f
+  matchedlocal/origin/NERSC beforethismilestone. Nextaggregate19platecheck
+  mustfollowacceptancerecordcommit; no finaldeliveryclaim.
+
 ## 2026-11-14 — prepare strict final research-delivery closure
 - Added scripts/v3_1_delivery.py: mandatory102transfer/32structure production
   markers, nine source-bound reports,22plate visual provenance, test transcript

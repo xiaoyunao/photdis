@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "manifests/v3_1/heldout_transfer/report/complete.json": "ebf5f2078f00ec35818e48cadc7f3eca0673fd0048390b4206c2d33cf2b77576",
+    "manifests/v3_1/heldout_transfer/report/inventory.csv": "c2e35cba0c6f8374a23c34861ea8f3401e1d3144e1225d10494382e65a24644d",
+    "manifests/v3_1/heldout_transfer/report/predictive_summary.csv": "249cfe9fbf43d54fcd91b19fde2a886e092956a5d8ada25890694df4670a4cb9",
+    "manifests/v3_1/heldout_transfer/report/counts.csv": "97f91afbb93f526fcf27650ba10a96c060023044b70d6bcb537e1b9d6e1b74b0",
+    "manifests/v3_1/heldout_transfer/report/field_summary.csv": "cb61bb463bd49a92c412ebcb83f40c8588fb64255d11bc94e533852cebadc342",
+    "manifests/v3_1/heldout_transfer/report/checks.csv": "f76dd7dcaa04efc0776bd04291b4b15d223706e85b72b8f85505c701cc5da815",
+    "manifests/v3_1/heldout_transfer/report/paired.csv": "bfca30d7755c6e608d2df7f7ea5208c7c8c4b4d2045fb815cc68faabac503a06",
+    "scripts/v3_1_heldout_figures.py": "dbf66334f08cf96b4f1cf2f534d1cd822677f7ca70321458dc55cd5786a03391",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4",
+    "src/photdis/v3/compression.py": "0cf68a06cd4e58ce5de615aa222113c1b7a068151e2cecbab119e21a0023c746",
+    "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1"
+  },
+  "outputs": {
+    "figures/v3_1/heldout_transfer/heldout_joint_counts.png": "b23fc885b970b2472f76542a5234e62692d83a9bf1b41234c1cd5806c7017814",
+    "figures/v3_1/heldout_transfer/heldout_joint_counts.pdf": "d4e7d951e31ee749f5e5dd9169aa02f631cc825fd2b9a4e9cc8351178e5a0a95",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.png": "6ca6d3c54ed06ad829b231006157a71e2efddc7553bd0b8f9dd307baf7110bc9",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.pdf": "ba78ff972134497c3040b2a05520a9d8846fd4408fb069d013f4f902c0339598",
+    "manifests/v3_1/heldout_transfer_figures/plotted.csv": "a520a84b1eecb546606c13de4ac1894fc580a13b14dd596b4fcd23946c0ee88e"
+  },
+  "figures": 2,
+  "panels": 12,
+  "plotted_rows": 126,
+  "states": 102,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_acceptance": false,
+  "scope": "Actual complete-state transfer report only. Main view, all cases, missing and failed states retained. No synthetic fallback or true-distance validation claim."
+}

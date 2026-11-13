@@ -94,7 +94,7 @@ def main():
                 for r in subset:
                     x = int(r['distance_bin']) + (ci - 1) * .22
                     ax.plot([x, x], [float(r['lower95']), float(r['upper95'])], color=color, lw=1.8)
-                    ax.scatter(x, float(r['mean']), color=color, s=22,
+                    ax.scatter(x, float(r['mean']), color=color, marker=['o', 's', '^'][ci], s=22,
                                label=label if int(r['distance_bin']) == 0 else None)
                     plotted.append(dict(figure='heldout_joint_counts', panel=f'{ei}:{c}',
                                         source='counts.csv', **r))
@@ -109,7 +109,7 @@ def main():
                 ax.text(.02, .97, 'Unavailable: ' + ', '.join(absent), transform=ax.transAxes,
                         va='top', fontsize=9, wrap=True)
     fig.suptitle('Fixed sky fields: shared class × distance count transfer', y=.97, fontsize=21)
-    fig.text(.5, .92, 'Fields 12 / 4 / 6 | same native-PSF identities within each selection | main evidence-weighted view', ha='center', fontsize=12)
+    fig.text(.5, .92, 'Fields 12 / 4 / 6 | broad n=6000, candidate n=935 | same native-PSF identities | main evidence-weighted view', ha='center', fontsize=12)
     fig.text(.5, .86, 'Points: model expected counts. Lines: shared realized-count 95% intervals. No true-distance counts supplied.', ha='center', fontsize=12)
     fig.text(.5, .11, 'Only the held-out population fit excludes these fields. The broad and candidate fits include their photometry.', ha='center', fontsize=11)
     fig.text(.5, .06, 'Unavailable conditional states are not renormalized. Inherited ensemble failures remain; counts are model-conditional.', ha='center', fontsize=11)
@@ -122,6 +122,11 @@ def main():
 
     fig, axes = plt.subplots(2, 3, figsize=(21, 13))
     fig.subplots_adjust(left=.075, right=.97, bottom=.23, top=.79, wspace=.38, hspace=.7)
+    half_values = [float(r[prefix + '_half_log_density_delta'])
+                   for r in tables['predictive_summary.csv']
+                   if r['view'] == view and r['variant'] == 'base'
+                   for prefix in ['joint', 'generalized_design_joint']]
+    half_upper = max(1., 1.2 * max(v for v in half_values if np.isfinite(v)))
     status_lines = []
     for ei, (envelope, envelope_label) in enumerate(envelopes):
         flags = []
@@ -152,7 +157,11 @@ def main():
         axes[ei, 0].set(title=envelope_label + ' | Pointwise score', ylabel='Design-weighted mean log density')
         axes[ei, 1].set(title=envelope_label + ' | Shared support', ylabel='Joint predictive effective draws', yscale='log')
         axes[ei, 1].axhline(100, color='.4', ls='--', lw=1)
-        axes[ei, 2].set(title=envelope_label + ' | Half-draw sensitivity', ylabel='Absolute joint log-density difference', yscale='symlog', ylim=(0, None))
+        axes[ei, 2].set(title=envelope_label + ' | Half-draw sensitivity',
+                        ylabel='Absolute joint log-density difference\n(symmetric log scale)', ylim=(0, half_upper))
+        axes[ei, 2].set_yscale('symlog', linthresh=.01)
+        half_ticks = [v for v in [0, .01, .05, .2, 1, 5, 20] if v <= half_upper]
+        axes[ei, 2].set_yticks(half_ticks, [f'{v:g}' for v in half_ticks])
         axes[ei, 2].axhline(.2, color='.4', ls='--', lw=1)
         for ax in axes[ei]:
             ax.set_xticks(range(3), ['Broad\n(in sample)', 'Candidate\n(in sample)', 'Held out'])
@@ -162,7 +171,7 @@ def main():
         ax.yaxis.label.set_fontsize(11)
         ax.tick_params(labelsize=10)
     fig.suptitle('Photometric predictive support across frozen sky fields', y=.97, fontsize=21)
-    fig.text(.5, .92, 'Main evidence-weighted view | matching selection normalization | no distance references read', ha='center', fontsize=12)
+    fig.text(.5, .92, 'Main evidence-weighted view | broad n=6000, candidate n=935 | matching selection normalization | no distance references read', ha='center', fontsize=12)
     fig.text(.5, .86, 'Circles: unit-object joint prediction. Squares: generalized design-weighted joint prediction (not a physical catalog density).', ha='center', fontsize=11)
     for i, line in enumerate(status_lines):
         fig.text(.5, .15 - .035 * i, line, ha='center', fontsize=10)

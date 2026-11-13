@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "965b8b8133c8740ff1398485fc5ca896d2869674cc23cd13f4ee91015c289955",
+  "integrity_sha256": "078d7b5e8421ab698008ed7242b35e613c2ca06006d29056b3ad959052ba52f7",
+  "actual_checks": 158,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 2,
+    "panels": 12,
+    "notes": "Both complete PNG plates visually inspected. Repaired half-draw axes to a shared explicit symlog scale with readable ticks; final full plates rechecked. Counts use shape plus color and fixed offsets; unit versus design joint scores use circle/square plus position. Sample denominators, inherited failures, interval meanings and photometric-only limits visible. Source counts/values unchanged."
+  },
+  "scope": "Actual source/format checks and visual artifact acceptance only. Main scientific/numerical rejection remains."
+}

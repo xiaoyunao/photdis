@@ -14,9 +14,10 @@
   openedafterauthenticatedfreeze; no retuning ontheir residuals. All32original
   structureentry statescomplete,11052originalflags retained; refinements/full
   structureposterior remain. All102conditionaltransfers collected/2042compact
-  checks pass,33originalfailures retained; fullmixturereport pending. CheckliveSLURM and
+  checks pass,33originalfailures retained; fullmixturereport625checks/2plates complete.
+  HoldoutjointESS103.872broad/21.669candidate; allmain evidencegates stillfail. CheckliveSLURM and
   currentPLAN/executionreceipts beforeanyresume; neverrestart fromstalearray
-  parentstatus orrestorecanceleddependencies. Fivefinalplates andfinalQA pending.
+  parentstatus orrestorecanceleddependencies. Threefinalplates andfinalQA pending.
 
 - Completed v3.0 research delivery2026-11-12: docs/v3_0_result.md,
   docs/v3_0_atlas.md, docs/v3_0_catalog.md and requirements ledger.
