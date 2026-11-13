@@ -51,13 +51,15 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. All33 broad conditional states except23 pass2048;
-  original512failures retained. State23 broad requires8192: fitcomplete but
-  group61225864_5 TIMEOUT30m12 duringjointcounts. Onlystate23 exactresume61232648
-  submittedregular2h; existingbroadensemble61225883 andtransferchild5 retargeted.
-  Eightcompletedmarkerhashes retained. Pendingpopulationlimits restoredto2h.
+  mainwithcut orrelax evidence gate. All34broad conditionalstates nowpass:
+  33at2048 andstate23at8192. Original512/2048failures retained; group61225864_5
+  TIMEOUT30m12 duringjointcounts preserved. Exactcount-onlyresume61232648
+  COMPLETED25m13, allthreecachedfits reused andfinal8192sampler/bridge/countpass.
+  Broadensemble61225883 pendingdebug afteroriginaldependencies; compact34state
+  inventory complete, fullpayload authentication remainsin allocatedensemble.
   First16 holdout statescomplete: fifteen2048pass, state1 needs8192 after
-  2048count failure. Otherholdoutstates/ensembles stillpending.
+  2048count failure. Pendingholdoutgroups21–25 now1h afteractualfull8192
+  group27m24 proof (>2x margin); otherholdoutstates/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;

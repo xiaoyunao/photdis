@@ -1,0 +1,246 @@
+{
+  "inputs": {
+    "manifests/v3_1/target_refinement/broad/correction_00/complete.json": "83df90b58c6922969b88b3c0837dd8b29b4bfe8c8942b495d9517f08e826d2e5",
+    "manifests/v3_1/target_refinement/broad/correction_01/complete.json": "ff9dd8efe628c2c409f205135904226b35800c4a6f0554d9de9b403f7fb0ae35",
+    "manifests/v3_1/target_refinement/broad/correction_02/complete.json": "596296e39f4822b5e1a008c971874f988c8df0c29f4edea57668ff6dec906bb2",
+    "manifests/v3_1/target_refinement/broad/correction_03/complete.json": "325eb9f267b5a9e1d2d69bce20fd8993bc44bdcd79959b3a19b596bd25d5b5ef",
+    "manifests/v3_1/target_refinement/broad/correction_04/complete.json": "6a3ec36372dd16a662f33ef52ecad2c62bb2d56d611ea4cdfdcb2aac5d52cd07",
+    "manifests/v3_1/target_refinement/broad/correction_05/complete.json": "6951342a13d726ddfa9ef9a87ea6f78512f6e9ef27c2ba8dd032c6ffe3824332",
+    "manifests/v3_1/target_refinement/broad/correction_06/complete.json": "dc6c409c2cf8604cb80413646b8b2e3252c79c9855f46391578a0d705d7bb81e",
+    "manifests/v3_1/target_refinement/broad/correction_07/complete.json": "c8e51e2dca2b3e156336359e698e714160db7c079e6f7b891d8d82ac128f2e9f",
+    "manifests/v3_1/target_refinement/broad/correction_08/complete.json": "45b669433e01232b8c1716654ce9b57c1799f6e4caf6953a377fa191aaad074e",
+    "manifests/v3_1/target_refinement/broad/correction_09/complete.json": "5e87f94dd7c903da09b6120784b1a8f7bed2a159d409b4ed92b7864082aebab5",
+    "manifests/v3_1/target_refinement/broad/correction_10/complete.json": "400111df6277baa8258a82f5c5fd0b474a63f703fff1dc36d8b411c2e8eeb006",
+    "manifests/v3_1/target_refinement/broad/correction_11/complete.json": "5604e1c9047ce670c94e394eb9c58466a57b755e23c84506cecca2274115e1f1",
+    "manifests/v3_1/target_refinement/broad/correction_12/complete.json": "324fccd670761bb0fe08a4bc85f3349028b7e8b1b09258393302311bd954ce7a",
+    "manifests/v3_1/target_refinement/broad/correction_13/complete.json": "4072e73393d7e55d95871c395a7f4abfb70f0b3fd7ecc0e338812eb57b362702",
+    "manifests/v3_1/target_refinement/broad/correction_14/complete.json": "ce6a3d37fbba3bf7b4ded06cb47b524b72431391d6549609a5e77840700d65db",
+    "manifests/v3_1/target_refinement/broad/correction_15/complete.json": "49e9d74c51c59c48fc579dd72de87811c399967089dd5aa16f1d4ebc7338cf1b",
+    "manifests/v3_1/target_refinement/broad/correction_16/complete.json": "fe4179e4b6724aab109fe70ca969db467363c0f5cb2834d3e7f802c84dd41d41",
+    "manifests/v3_1/target_refinement/broad/correction_17/complete.json": "03b4e349e270e05b03be227bb32d14bbea9cd515f581e59951db3c1ef81cb023",
+    "manifests/v3_1/target_refinement/broad/correction_18/complete.json": "b031a12e2d714332c6d85fbdcea651b60a1eec7ba132e86da03699dc23e9a929",
+    "manifests/v3_1/target_refinement/broad/correction_19/complete.json": "6d7da70476dd3f18bb7906dae8cc672622c85e8d363ff66fe7de7e72444244ce",
+    "manifests/v3_1/target_refinement/broad/correction_20/complete.json": "c7338a616aa3b6f45be8a7e1fcc4e41ef1c9da49f13d473271f80a0d7eaa4cc2",
+    "manifests/v3_1/target_refinement/broad/correction_21/complete.json": "38be7c12d7539e0acde4b867b93b1fc49b0309d50da44a7b71f09878126b93c9",
+    "manifests/v3_1/target_refinement/broad/correction_22/complete.json": "80452d509e548739621fbfb97b0d2666198c21034058204f0188a878a6161f2b",
+    "manifests/v3_1/target_refinement/broad/correction_23/complete.json": "5244097e017d9470c9dc906448c0d5a1934faa55b34961f790daec6e9a997096",
+    "manifests/v3_1/target_refinement/broad/correction_24/complete.json": "bd62c3fb575b7265be50f2c91f98f91a79ea9bd2f5cb552593e574d40fd2e4f4",
+    "manifests/v3_1/target_refinement/broad/correction_25/complete.json": "a29e0915628f97bd131e48ae320977f9bc089c586ed298db3a67dcd5bd1e91f3",
+    "manifests/v3_1/target_refinement/broad/correction_26/complete.json": "5c3dd008ca5e81f8433b3c0aaf205f8705aa2c3f65c2e0309735485cf61ee73c",
+    "manifests/v3_1/target_refinement/broad/correction_27/complete.json": "988a8da4c58f823ad1c15acda069b51172e78f23c5228a1b355a03d7f9355625",
+    "manifests/v3_1/target_refinement/broad/correction_28/complete.json": "639ad2bcde5c1c28260409bb22f340f8e4b5815c7581ce60ca257bc3932881e6",
+    "manifests/v3_1/target_refinement/broad/correction_29/complete.json": "6d2df17f7d347baffa9b0770b4fb4fcbbfc335fc89ddb732357026f570bd09bf",
+    "manifests/v3_1/target_refinement/broad/correction_30/complete.json": "88be368f6990d9c1f5b1d6b6f500ae78c874117624b5c29e6a0160cd613d67af",
+    "manifests/v3_1/target_refinement/broad/correction_31/complete.json": "b879e5fdef1e902764320f67352f7ff501507983881d6f8adf41cb7219301bd7",
+    "manifests/v3_1/target_refinement/broad/correction_32/complete.json": "521a5017660e7afde719cf26fa64a5cfd11bd83b0e81a62dd91e321f56da867e",
+    "manifests/v3_1/target_refinement/broad/correction_33/complete.json": "d1e86c644544a604f99f091d371f1ee75a233fa4757b5bac515454b06040fe0f"
+  },
+  "states": [
+    {
+      "correction": 0,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 1,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 2,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 3,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 4,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 5,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 6,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 7,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 8,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 9,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 10,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 11,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 12,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 13,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 14,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 15,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 16,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 17,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 18,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 19,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 20,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 21,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 22,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 23,
+      "selected_draws": 8192,
+      "passed": true,
+      "attempts": 3
+    },
+    {
+      "correction": 24,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 25,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 26,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 27,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 28,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 29,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 30,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 31,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 32,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    },
+    {
+      "correction": 33,
+      "selected_draws": 2048,
+      "passed": true,
+      "attempts": 2
+    }
+  ],
+  "all34conditional_passed": true,
+  "scope": "Authenticated compact completion identities and frozen refinement driver. Full fit/count payload hashes are checked by allocated ensemble; this is not mixed-evidence or scientific acceptance."
+}

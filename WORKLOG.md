@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — complete every broad conditional state without refitting
+- Exactcount-onlyresume61232648 COMPLETED25m13:state23 final8192sampler,
+  bridge andcounts allpass. Original512bridge/countfail,2048bridgefail and
+  original30m12TIMEOUT retained; logconfirmsallthreefits readfromcache.
+- All34broad compactmarkers nowreconciled:33at2048/state23at8192, allpass;
+  frozenrefinement driverhash andselectedattempt identities checked. Fullpayload
+  authentication andmixed-evidence acceptance remainin queuedensemble61225883.
+- Existingdebugensemble/transfer dependency clears; no newwriter orcompleted
+  scientificstage rerun. PLAN/status/ledger updated. Remainingholdout18states,
+  full102transfer, remainingstructureentry/refinements/posterior andfinalQA.
+
 ## 2026-11-14 — reach sixteen retained holdout states
 - Holdoutgroups61225864_19/20 COMPLETED7m24/7m25; states8–15 collected,
   all2048pass. Total16/34conditionalholdout states nowcomplete:15at2048,
@@ -10,6 +21,12 @@
 - Boundedcompletion-marker inventory confirmsoriginalentry0–6 complete and
   refined0/1/3 complete/allpass. Remainingentry/refinements andall102transfer
   outcomes stillrequired. Broad23count-onlyresume remainslive.
+- Pendingholdoutgroups21–25 limitsreducedto1h onlyafteractualgroup17
+  COMPLETED27m24/8192-count-pass proof (>2x margin); allfive schedulerupdates
+  succeed. Broad/candidate andalreadyrunning limitsleftunchanged; receipt saved.
+- Entry7 COMPLETED13m19 with81originalfailures; marker/checktable collected,
+  registeredrefinement remains pending. Broadensemble61225883 promotedpending
+  debug30min withinfreshcap; originalall-state dependencies unchanged.
 - Validation: smallmarkercollection andregisteredstate/selecteddraw checks;
   no extra model orscientificcut. Next: finishremainingcomputechains, actual
   reportgenerators/Englishfigures/adjudication andfinaldelivery verification.
