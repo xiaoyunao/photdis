@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-13 — prepare exhaustive external score/channel audit
+- Verifiedlive mode61227827_0, SEDresume61227619_7 andregularstructureentry
+  61223167_1; no restartor stopped-job inference fromwaits.
+- Addedv3_1_score_audit.py/wrapper: every3558identity/nineviews, source-qualified
+  channelsets, exactexportedflags, class-distance/near marginals, quantiles,
+  inherited/score gate conjunctions andsource-specific failure rows. Usesactual
+  hash-authenticated score/evidence records onallocatedcompute; no PDFchange,
+  reference reselection or scientificacceptance fromartifactconsistency.
+- Python/shellsyntax pass. Actualauditexecution andchannel-level findings remain
+  pending; currentlyknown72common failures come fromcompleteexported table,
+  whileonly3objectrecords werepreviouslyspotchecked forchannelcause.
+- Next: runaudit, finishexternalsharedreport/figures andallremaining research jobs.
+
 ## 2026-11-13 — complete all external scores with real tail flags preserved
 - Commonscore61226770 COMPLETED5m00:all3032objects/nineviews=27288rows retained.
   27216saved-gridscore/PIT checks pass;72failures on38objects: nominal14,
