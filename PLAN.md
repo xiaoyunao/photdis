@@ -143,11 +143,11 @@ Negative findings remain deliverables, never successful calibration claims.
 - Latest full suite: 179 tests pass (6.06 s). Fourteen English plates have actual
   visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
   photometric occupancy 165 and final external comparison 104 artifact/source
-  checks; radial threeplates1823checks; response twoplates636checks plus349source
+  checks; radial threeplates1823checks; response twoplates636checks plus351source
   checks. Candidate-mode/domain evidence
   figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst3098fullobjects pass;
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot andall3540fullobjects pass; reportstillpending;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
 - External correlated report 61226775 and its two inspected figures are complete;
   domain screens61226777complete4m50:37800comparisons/1350groups,17table checks;

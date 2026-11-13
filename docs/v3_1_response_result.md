@@ -24,6 +24,13 @@ N(15,5)距离模数先验，**不是26000对象总体边缘证据，不是最终
 覆盖了真实系统误差。** 32个新状态仍然只有约1个有效状态，共享教师、同一响应
 模型族和参考组成问题没有由再生成消除。没有人为压平权重或替换最终候选。
 
+按固定状态ID顺序分成前/后各16状态，补充协议要求的有限库半集合支持诊断。
+新集合两半条件log evidence分别−864.847408、−860.078638，相差4.768770 nat；
+ESS分别1.000806、1.006537，主导状态分别1013、1029。此分裂仅诊断有限库支持，
+没有新增数值接受门槛，也没有对半集合重做变体门槛或把它们作为替代科学模型。
+原集合前半含失败状态，保持不归一化；后半也只是固定分裂诊断，不能补齐原集合。
+[四个半集合的完整状态表](../manifests/v3_1/response_summary/library_halves.csv)。
+
 ## 来源、类别与天空块迁移
 
 下表为再生32状态证据混合相对response12的**混合后log分数增益**，不是响应
@@ -94,7 +101,7 @@ seed311302；每行保留合格参考分母。不同来源有重叠，primary包
 - [集合权重](../manifests/v3_1/response_probes/report/response_weights.csv)；[证据分解](../manifests/v3_1/response_probes/report/target_decomposition.csv)。
 - [混合来源分数](../manifests/v3_1/response_summary/mixture_source_summary.csv)：24个实际非空来源/类别组合。
 - [完整条件证据图](../figures/v3_1/response_probes/response_evidence.png)；[来源迁移图](../figures/v3_1/response_probes/response_source_transfer.png)，均有同名PDF。
-- [349项紧凑源表/计数/分解检查](../manifests/v3_1/response_summary/complete.json)通过；[636项图件及逐源行检查](../manifests/v3_1/response_figures/integrity.json)通过。
+- [351项紧凑源表/计数/分解检查](../manifests/v3_1/response_summary/complete.json)通过；[636项图件及逐源行检查](../manifests/v3_1/response_figures/integrity.json)通过。
 - 两张英文PNG300dpi/PDF共7面板实际目检；[验收记录](../manifests/v3_1/response_figures/acceptance.json)。
 
 本地命令（已收集认证的紧凑表后）：

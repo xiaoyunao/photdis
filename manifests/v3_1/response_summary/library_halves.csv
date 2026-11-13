@@ -1,0 +1,5 @@
+library,half,first_draw,last_draw,states,target_inputs_passed,log_evidence,ESS,maximum_weight,top_draw,numerical_variant_checks_computed,scientific_acceptance
+original,0,0,15,16,False,,,,,False,False
+original,1,16,31,16,True,-860.597972177305,1.0498608923175337,0.975661344870934,30,False,False
+new,0,1000,1015,16,True,-864.8474077085828,1.0008056722500804,0.9995973276001425,1013,False,False
+new,1,1016,1031,16,True,-860.0786379872701,1.0065370556226212,0.9967420903603664,1029,False,False

@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — finish mode shards and audit finite response half-libraries
+- All8mode shards nowcomplete:3540objects/fixed3003highq, allper-object numerical
+  gates pass; inheritedmainFalse remains. Lastshard442/373 complete16m39;
+  fullreport61227828 stillrunning. Structure-native group0complete4m47,
+  14originalstage markers preserved; runtime276.198s,maxchildRSS1442212KiB.
+- Addedprotocol-required finite-library halfdiagnostic to compactsummary:
+  deterministicID-order16/16 splits, no failed-state deletion/newacceptancegate.
+  Newhalf logZ−864.847408/−860.078638 (difference4.768770nat),ESS1.000806/1.006537;
+  topstates1013/1029. Originalfirsthalf unnormalized because response9failed.
+  Halfsets have no newvariant-gate acceptance and neverreplacefullset outcomes.
+- Compactchecks now351; source-backed narrative updated,13hashes/10links verified.
+  Figure636checks/7panelvisualacceptance unchanged. Actualfullmode/domain evidence
+  andremainingpopulation/structure/transfer runs stillrequired.
+
 ## 2026-11-14 — complete response evidence, source migration and two inspected plates
 - All64response report61221949 COMPLETED6m49; 18explicit smallCSV/JSONproducts
   collected/hashverified, same128target/256development nativePSF. Original35flags

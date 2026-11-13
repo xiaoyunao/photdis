@@ -3,6 +3,7 @@
 import csv
 import json
 import numpy as np
+from scipy.special import logsumexp,softmax
 from v2_1_near import ROOT,sha,save_json,csv_rows
 from photdis.v3_1.comparison import paired_mean
 
@@ -47,9 +48,25 @@ def main():
                 if not rows:continue
                 summary.append(dict(set=label,reference_class=group,source=channel,all_numerically_accepted=all(r['numerically_accepted']=='True' for r in rows),
                     **paired_mean([float(r['gain_over_response12']) for r in rows],[float(r['design_weight']) for r in rows],[int(r['cell']) for r in rows])))
+    # Deterministic ID-order halves diagnose finite-library support only.
+    # No failed state is removed and no split replaces the registered full set.
+    halves=[]
+    for library in ['original','new']:
+        members=sorted([r for r in inventory if r['library']==library],key=lambda r:int(r['draw']))
+        check('half_inventory:'+library,len(members)==32)
+        for half in range(2):
+            rows=members[16*half:16*(half+1)];passed=all(r['target_passed']=='True' for r in rows)
+            row=dict(library=library,half=half,first_draw=rows[0]['draw'],last_draw=rows[-1]['draw'],states=16,
+                target_inputs_passed=passed,log_evidence=None,ESS=None,maximum_weight=None,top_draw=None,
+                numerical_variant_checks_computed=False,scientific_acceptance=False)
+            if passed:
+                value=np.array([float(r['target_conditional_log_evidence']) for r in rows]);w=softmax(value)
+                row.update(log_evidence=float(logsumexp(value)-np.log(16)),ESS=float(1/(w@w)),maximum_weight=float(w.max()),top_draw=int(rows[int(w.argmax())]['draw']))
+            halves.append(row)
     out=ROOT/'manifests/v3_1/response_summary';out.mkdir(exist_ok=True);csv_rows(out/'mixture_source_summary.csv',summary)
+    csv_rows(out/'library_halves.csv',halves)
     for path in [ROOT/'scripts/v3_1_response_summary.py',ROOT/'src/photdis/v3_1/comparison.py']:inputs[str(path.relative_to(ROOT))]=sha(path)
-    save_json(out/'complete.json',dict(inputs=inputs,outputs={'mixture_source_summary.csv':sha(out/'mixture_source_summary.csv')},checks=checks,actual_checks=len(checks),passed=True,
+    save_json(out/'complete.json',dict(inputs=inputs,outputs={name:sha(out/name) for name in ['mixture_source_summary.csv','library_halves.csv']},checks=checks,actual_checks=len(checks),passed=True,
         mixture_summary_rows=len(summary),sky_bootstrap_repeats=1024,sky_bootstrap_seed=311302,
         scope='Compact source integrity and source-qualified saved-mixture log-score gains on seen development data. Whole-sky bootstrap, original inclusion weights; no new fitting or independent validation.'))
     print(json.dumps(dict(actual_checks=len(checks),passed=True,mixture_summary_rows=len(summary))))

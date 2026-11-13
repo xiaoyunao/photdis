@@ -19,11 +19,12 @@
     "manifests/v3_1/response_probes/report/inventory.csv": "33409f9bc738fbb41aca3eb1c6078ddc08d88b608f58accd6b8213052d2b10f9",
     "manifests/v3_1/response_probes/report/response_weights.csv": "34d25823c7cbb1f4d6b0ba448bfab8e2144929453d42c5a96da2db0bb7e4f4b9",
     "manifests/v3_1/response_probes/report/target_counts.csv": "8f79ed24f16f506439c4c9989e4aae481b7504db11afa4bf45dee23def7bfa88",
-    "scripts/v3_1_response_summary.py": "2625e9452e8b1ebd50c4a2200784763bd4dc39d34b1519efc20032421bd66f14",
+    "scripts/v3_1_response_summary.py": "9c6b00a93b38dd20e15c530f3307dde7ba4c4df05bea8d93fae1cb2e2537a8e3",
     "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
   },
   "outputs": {
-    "mixture_source_summary.csv": "7df6d1f340c4a08055fd945ae228264ed83bcc9e8a4315b4a52396d2aaba6aa7"
+    "mixture_source_summary.csv": "7df6d1f340c4a08055fd945ae228264ed83bcc9e8a4315b4a52396d2aaba6aa7",
+    "library_halves.csv": "41ef0bf0f6be9210e0cdd2ef857d80e3eee8855872988f67853c2e495f324633"
   },
   "checks": [
     {
@@ -1421,9 +1422,17 @@
     {
       "check": "mixture_PSF_identity",
       "passed": true
+    },
+    {
+      "check": "half_inventory:original",
+      "passed": true
+    },
+    {
+      "check": "half_inventory:new",
+      "passed": true
     }
   ],
-  "actual_checks": 349,
+  "actual_checks": 351,
   "passed": true,
   "mixture_summary_rows": 24,
   "sky_bootstrap_repeats": 1024,

@@ -1,0 +1,3 @@
+group,n,numerical_passed,multimodal,mean_binary_probability,original_binary_prior,inherited_ensemble_accepted,different_class,same_class_different_binary,same_class_different_parent
+all,442,442,283,0.12278251684582345,0.1,False,20,238,49
+fixed_main_highq,373,373,256,0.12499510164233467,0.1,False,4,235,35

@@ -194,5 +194,5 @@ primary63/6. Whole-sky intervals and source denominators shown. Regenerated
 mixture primary scores improve while all-qualified signedGaia worsens;
 seen-source agreement does not establish independent distance calibration.
 TwoEnglishPNG300dpi/PDFplates, all7panels visuallyinspected after typography
-repair;636actual artifact/source-rowchecks and349compacttablechecks pass.
+repair;636actual artifact/source-rowchecks and351compacttablechecks pass.
 [Full result](v3_1_response_result.md); [acceptance](../manifests/v3_1/response_figures/acceptance.json).
