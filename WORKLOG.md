@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — complete all external scores with real tail flags preserved
+- Commonscore61226770 COMPLETED5m00:all3032objects/nineviews=27288rows retained.
+  27216saved-gridscore/PIT checks pass;72failures on38objects: nominal14,
+  response12reference14, oldtarget27, candidatezero17. Maincandidate/point/cut/
+  correctedreferenceviews haveno newscore convergencefailure. Originalprobability
+  gridchecks passall27288; proper-score tails adddistinct information.
+- CommonacceptedFalse9151 =9096inheritedviewflags plus55additionalnonoverlap
+  scorenumericalfailures. Field4734scorenumerics allpass,1578inheritedflags.
+  Thusall3558externalobjects nowactuallyscored, notyet scientificcalibration
+  accepted. Threehash-authenticated spotchecks locate Gaia logscorechanges
+  .0256–.0914nat whilecommon-HST channelpasses; do notgeneralize3spotcheckstoall72.
+- Collectedcomplete commonnumericalCSV/marker; alloriginalpredictions/freeze and
+  failedflags preserved. No post-opening retuning, droppingrows orchanginggates.
+- Fullmodes61227827_0 nowrunning; secondchildqueueddebug, other6regular1h,
+  report61227828 waitsall8. Finalexternalsharedreport61226775 awaitsallocation;
+  SED exactresume61227619_7 continues. RemainingWP2/structure/domains required.
+
 ## 2026-11-13 — pass exact candidate-mode pilot and validate all field scores
 - Candidatepilot61227692 complete: all8fixednativePSF identities pass.01mag;
   allhappen tobeinoriginalhighqsubset, notapopulationrepresentativeness claim.
@@ -13,7 +30,9 @@
 - Added8disjointfull-mode resourceshards(0–7%2),32workers,regular1h; total3540
   fixedIDs andoriginal3003highq, cachedpilot identities reused afterhashchecks.
   Sameboundedgrids/states/gates/weights; no newscientificselection. Wrapper shell
-  syntaxpassed. Actualsubmission followscleansync; fullreport waitsall3540.
+  syntaxpassed. Threeends6d19a2c matched; submittedfullarray61227827regular1h,
+  first2pendingchildren promoteddebug30min afterqueuecheck. Inventoryreport
+  61227828 waitsafterokall8shards andauthenticates every3540object.
 - Next: fullmodeinventory, commonfinalscores/sharedreport/actualfigures; finish
   population/radial/64response/structure work. Mathematical174tests stillpass;
   neitherpilot norfieldscore numericalpass erasesmain evidencefailure.

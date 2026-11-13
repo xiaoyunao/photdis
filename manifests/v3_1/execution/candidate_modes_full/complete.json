@@ -1,0 +1,43 @@
+{
+  "array_job": "61227827",
+  "array_command": [
+    "sbatch",
+    "--parsable",
+    "scripts/run_v3_1_candidate_modes_array.sh"
+  ],
+  "report_job": "61227828",
+  "report_command": [
+    "sbatch",
+    "--parsable",
+    "-J",
+    "photdis_v3_1_candidatemodereport",
+    "--dependency=afterok:61227827",
+    "scripts/run_v3_1_candidate_modes.sh",
+    "--report",
+    "--workers",
+    "1"
+  ],
+  "priority_changes": [
+    [
+      "scontrol",
+      "update",
+      "JobId=61227827_0",
+      "QOS=debug",
+      "TimeLimit=00:30:00"
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61227827_1",
+      "QOS=debug",
+      "TimeLimit=00:30:00"
+    ]
+  ],
+  "source_commit": "6d19a2c9e6fd5eafa03a91bdd5d0fbe7288517b8",
+  "n": 3540,
+  "fixed_main_highq": 3003,
+  "shards": 8,
+  "workers_per_shard": 32,
+  "source_pilot_job": "61227692",
+  "scope": "All exact main candidate identities; cached pilot outcomes reused, complete bounded numerical levels and all failures retained. Eight disjoint resource shards; report requires every3540object, not a pilot extrapolation. Original model/state weights and final validation freeze unchanged."
+}

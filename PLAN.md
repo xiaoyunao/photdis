@@ -64,9 +64,7 @@ Negative findings remain deliverables, never successful calibration claims.
   identity computed withretained numericalflag. Both8-ID targetprediction pilots
   numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
   61226371 completes23m53, all3032numericalpass; originalensembleflagretained.
-  Sharedfield checkpointreuse verified. Freeze61226412 complete; evidenceassociation
-  startsinfieldjob61226762; scoresrequireactualcompletedassociation. Oldtargetfield
-  61222759 completes526objects/allpass;
+  Sharedfield checkpointreuse verified. Oldtargetfield61222759 completes526objects/allpass;
   common61224421 completes22m43, all3032pass. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
   checks. Dependency-gated evidence61226762/64,score61226763/70,report61226775,
@@ -75,7 +73,9 @@ Negative findings remain deliverables, never successful calibration claims.
   application3540mask reproduced by61224943(20s). Field519/526 andcommon1732/3032
   in samecandidate domain; others retained outside-domain. Same-ID MWS/VAC channel
   association/scoring implemented; bothassociationscomplete (common2419signedGaia/996negative; oneHSTscale).
-  Fieldscore61226763 complete4m37:all4734scorenumerics pass,1578inheritedflags; commonscore61226770/report61226775queueddebug30min.
+  Fieldscore61226763 complete4m37:all4734scorenumerics pass,1578inheritedflags; commonscore61226770complete5m00:27288rows/72scorenumericalfailures
+  on38objects, allretained; mainperobjectscorenumerics pass. Report61226775
+  queueddebug30min. Bothcohorts scored; scientificaggregate interpretationpending.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
@@ -85,7 +85,8 @@ Negative findings remain deliverables, never successful calibration claims.
   correctedguardusesexisting1e-8normgate withunchangedweights. Originalinputs
   archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
   delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
-  execution andmodefigures remainpending; figureprogramrequiresfullactualtables.
+  array61227827submittedregular1h(indices0/1debug30min); completeinventory
+  report61227828 afterokallshards. Actualfullproducts/figures remainpending.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
