@@ -14,6 +14,8 @@
   with exactidentity/design checks; syntaxpass, execution pending.
 - Native external qualification61214053 scans53004targeted bricks with resumable
   per-brick checksums; about9000 completed at441s. No scientific role freeze yet.
+- Paired report also directly compares class+FeH versus class-only/FeH-only on
+  exactly matched eligible identities, avoiding inference from unmatched gains.
 - Added explicit allowlisted small-record collector; noNPZ/model downloads.
   Downloaded verified coarse/refined summaries andpilot markers. Next: fine
   numerical acceptance, fulltargetprior report, native history/role qualification.

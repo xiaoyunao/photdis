@@ -18,7 +18,7 @@ def main():
         for name,digest in done['objects'].items():
             path=directory/name;assert sha(path)==digest;record=json.loads(path.read_text());assert record['inputs']==done['inputs']
             assert sha(path.with_suffix('.npz'))==record['pdf_sha256']
-            records.extend(r for r in record['results'] if r['control'] in ['nominal','response12','response12_target'])
+            records.extend(r for r in record['results'] if r['control'] in ['nominal','response12','response12_target','class','feh','class_feh'])
     target=[r for r in records if r['control']=='response12_target'];assert len(target)==completed[1]['stars']
     tablepath=ROOT/'data/v3_0/cohorts/development.npz';assert sha(tablepath)==completed[1]['inputs'][str(tablepath.relative_to(ROOT))]
     table=load(tablepath);mag,_=optical_magnitudes(table);apparent=mag[:,1]-2.5*np.log10(table['transmission'][:,1]);color=mag[:,0]-mag[:,1]
@@ -31,13 +31,14 @@ def main():
             optional_bands=''.join(str(int(x)) for x in table['band_mask'][j,[2,4,5]]),sky=str(r['cell']),
             target_field_scope='fitted_field' if r['existing_target_field'] else 'new_cell_hypermean_transfer')
     out=new/'paired_report';out.mkdir(exist_ok=True);outputs={axis:[] for axis in next(iter(axes.values()))};denominators=[]
-    for baseline in ['response12','nominal']:
-        pairs=match_controls(records,'response12_target',baseline)
+    for control,baseline in [('response12_target','response12'),('response12_target','nominal'),
+                             ('class_feh','class'),('class_feh','feh')]:
+        pairs=match_controls(records,control,baseline)
         for axis,output in outputs.items():
             for group in sorted({x[axis] for x in axes.values()}):
                 for label in [None,-1,0,1,2]:
                     rr=[(r,b) for r,b in pairs if axes[r['identity']][axis]==group and (label is None or r['class_label']==label)]
-                    common=dict(control='response12_target',baseline=baseline,axis=axis,group=group,reference_class='all' if label is None else str(label))
+                    common=dict(control=control,baseline=baseline,axis=axis,group=group,reference_class='all' if label is None else str(label))
                     denominators.append(dict(common,n=len(rr),cells=len({r['cell'] for r,b in rr}),design_weight=sum(r['design_weight'] for r,b in rr)))
                     if not rr:continue
                     def add(metric,values,subset=rr,source='none'):
@@ -72,7 +73,7 @@ def main():
     save_json(out/'complete.json',dict(inputs={str(p.relative_to(ROOT)):sha(p) for p in paths},outputs={p.name:sha(p) for p in out.iterdir() if p.name!='complete.json'},
         job=os.getenv('SLURM_JOB_ID'),stage=a.stage,checks=checks,passed=all(checks.values()),stars=len(target),
         paired_contrasts=sum(len(x) for x in outputs.values()),numerical_flags=len(flags),
-        scope='Seen diagnostic sample, original design weights and sky bootstrap. Source-reference-point agreement is not true coverage; model leakage is not independently measured contamination. Target prior is conditional on26000target fit and response12; new cells use sampled hypermean effects.'))
+        scope='Seen diagnostic sample, original design weights and sky bootstrap. Source-reference-point agreement is not true coverage; model leakage is not independently measured contamination. Target prior is conditional on26000target fit and response12; new cells use sampled hypermean effects. class_feh versus class/feh contrasts use exactly matched eligible identities, and are truth-assisted diagnostics only.'))
     assert all(checks.values())
     print('TARGET PRIOR PAIRED COMPLETE',len(target),len(flags),flush=True)
 
