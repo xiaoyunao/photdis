@@ -61,7 +61,7 @@ Four registered views share3540nativePSF objects. Points are conditional expecte
 class–distance counts; intervals are shared realized-count95%intervals. All three
 classes use the same scale, linear below1and logarithmic above. Count-CDF half
 sample discrepancies are explicitly printed. These are not measured physical
-populations or densities; independent external validation remains pending.
+populations or densities; the completed external validation rejects a calibrated-distance claim.
 
 ![Candidate weights and numerics](../figures/v3_1/target_candidate/weights_numerics.png)
 
@@ -145,3 +145,34 @@ hash/PNG300dpi/PDF/75source-row checks pass.
 [Plotted source rows](../manifests/v3_1/final_validation_figures/plotted.csv),
 [acceptance record](../manifests/v3_1/final_validation_figures/acceptance.json),
 [complete stored-score audit](../manifests/v3_1/final_validation/score_audit/complete.json).
+
+## Complete radial recovery and source dependence
+
+![All-scenario paired radial error](../figures/v3_1/radial/paired_radial_error.png)
+
+All22scenarios and176matched catalogs remain. Selected realized-count errors
+and pre-entry population-fraction errors are separate panels. Blue includes
+all numerical failures; orange uses both-arm accepted pairs with explicit
+0–8denominators. Sky intervals condition on the shared source bank. All21
+empirical-source scenarios have onlyone transitive source/field block, so no
+independent source-level interval can be estimated.
+
+![Nonzero-truth class-distance coverage](../figures/v3_1/radial/radial_nonzero_coverage.png)
+
+All18class-distance cells, botharms andbothestimands are displayed. Gray NA is
+no positive truth, not zero coverage. n1–n7 identify smaller denominators;
+structural-zero-inclusive and accepted-only tables remain available. Numerical
+passes are163/176broad versus105/176local, with97both passing.
+
+![Narrow structure parameter recovery](../figures/v3_1/radial/radial_structure_parameters.png)
+
+Allnine designs with defined structure truth show location/width errors and
+95%interval coverage. The other13scenarios receive no fictitious truth. At
+4kpc/0.08mag all8local fits pass, but location covers3/8andwidth0/8despite
+joint-count L1 improving38.08%to24.66%. No independent real-calibration claim.
+
+Allthree PNG300dpi/PDF exports and10panels visually inspected;1823actual
+hash/format/English/source-row checks pass for1788plottedrows.
+[Result and full scenario tables](v3_1_radial_result.md),
+[plotted rows](../manifests/v3_1/radial_figures/plotted.csv),
+[acceptance](../manifests/v3_1/radial_figures/acceptance.json).

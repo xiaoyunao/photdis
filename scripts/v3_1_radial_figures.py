@@ -58,7 +58,7 @@ def main():
     axes[0].plot([],[],'o-',color=ORANGE,label='Both arms numerically accepted')
     handles,legend=axes[0].get_legend_handles_labels();fig.legend(handles,legend,loc='upper center',bbox_to_anchor=(.52,.865),ncol=2,frameon=False,fontsize=11)
     fig.suptitle('Radial flexibility: paired recovery on every registered scenario',y=.975,fontsize=21)
-    fig.text(.5,.925,'176 matched catalogs | 352 arms | 14 original scenarios + 8 narrow position / width designs',ha='center',fontsize=12)
+    fig.text(.5,.925,'176 matched catalogs | 352 arms | 14 original scenarios + 8 narrow position / width designs (widths in mag)',ha='center',fontsize=12)
     fig.text(.5,.89,'Negative values favor the local-structure arm. Parameter and realized-count recovery are different estimands.',ha='center',fontsize=11)
     fig.text(.5,.125,'Intervals resample whole fields, conditional on the shared empirical library. Right labels give accepted pairs and source-or-field blocks.',ha='center',fontsize=10)
     fig.text(.5,.085,'One joint block has no source/context uncertainty interval. Disconnected used-template blocks do not establish independent teacher scales.',ha='center',fontsize=10)
@@ -91,14 +91,47 @@ def main():
             ax.set_title(f'{title} | {arm.capitalize()} arm',fontsize=14);ax.grid(False)
     bar=fig.colorbar(mesh,ax=axes.ravel().tolist(),fraction=.016,pad=.025);bar.set_label('Empirical 95% interval coverage (%)',fontsize=12)
     fig.suptitle('Class-distance recovery: nonzero-truth coverage with all failures retained',y=.975,fontsize=21)
-    fig.text(.5,.94,'D = dwarf; E = evolved; O = other | distance-bin labels in kpc | row brackets show numerical passes',ha='center',fontsize=12)
+    fig.text(.5,.94,'D = dwarf; E = evolved; O = other | distances in kpc; scenario widths in mag | row brackets show numerical passes',ha='center',fontsize=12)
     fig.text(.5,.905,'Each cell uses only catalogs with positive truth in that cell. n1-n7 mark smaller denominators; gray NA means no positive truth.',ha='center',fontsize=11)
     fig.text(.5,.085,'All 176 catalogs remain in the design. Coverage including structural zeros and accepted-only results are separately preserved in source tables.',ha='center',fontsize=11)
     fig.text(.5,.05,'Eight conditional realizations share source libraries. These are descriptive simulation frequencies, not independent real calibration or 18 independent bin trials.',ha='center',fontsize=11)
     finish(fig,'radial_nonzero_coverage')
+    bias=read('median_minus_truth.csv');structure=read('coverage95_defined_structure.csv')
+    defined=[s for s in scenarios if any(r['scenario']==s and int(r['eligible_catalogs'])>0 for r in structure)]
+    assert len(defined)==9
+    fig,axes=plt.subplots(2,2,figsize=(19,13),sharey=True)
+    fig.subplots_adjust(left=.23,right=.89,bottom=.18,top=.78,hspace=.5,wspace=.55)
+    for row,parameter in enumerate(['location_mu','width_mu']):
+        for col,(table,name,scale,xlabel) in enumerate([(bias,'median_minus_truth.csv',1,'Mean posterior-median error (mag)'),
+            (structure,'coverage95_defined_structure.csv',100,'Empirical 95% interval coverage (%)')]):
+            ax=axes[row,col]
+            for i,scenario in enumerate(defined):
+                counts=[]
+                for admission,color,offset in [('all_outcomes',BLUE,-.12),('numerically_accepted',ORANGE,.12)]:
+                    selected=[r for r in table if r['scenario']==scenario and r['estimand']==parameter and r['admission']==admission and r['blocking']=='field']
+                    assert len(selected)==1;r=selected[0];n=int(r['eligible_catalogs']);counts.append(n)
+                    plotted.append(dict(figure='radial_structure_parameters',panel=f'{parameter}/{col}',source=name,**r))
+                    if n:
+                        ax.plot(scale*float(r['mean']),i+offset,'o',color=color,ms=5)
+                        if r['lower95']!='' and r['upper95']!='':ax.plot(scale*np.array([float(r['lower95']),float(r['upper95'])]),[i+offset]*2,color=color,lw=1.3)
+                if col==1:ax.text(1.03,i,f'n={counts[0]}/{counts[1]}',transform=ax.get_yaxis_transform(),fontsize=9,va='center')
+            ax.set_yticks(range(9),[labels[scenarios.index(s)] for s in defined],fontsize=10);ax.set_ylim(8.6,-.6)
+            ax.set_title(('Structure location' if row==0 else 'Structure width')+' | '+('Bias' if col==0 else 'Coverage'),fontsize=14)
+            ax.set_xlabel(xlabel,fontsize=11);ax.axvline(0 if col==0 else 95,color='.4',ls='--',lw=1);ax.grid(axis='y',visible=False)
+            if col==1:ax.set_xlim(-3,103)
+    axes[0,0].plot([],[],'o-',color=BLUE,label='All eight catalogs, failures retained')
+    axes[0,0].plot([],[],'o-',color=ORANGE,label='Local arm numerically accepted')
+    handles,legend=axes[0,0].get_legend_handles_labels();fig.legend(handles,legend,loc='upper center',bbox_to_anchor=(.53,.85),ncol=2,frameon=False,fontsize=11)
+    fig.suptitle('Narrow structures: count-error improvement does not establish parameter recovery',y=.975,fontsize=19)
+    fig.text(.5,.925,'All nine designs with defined location / width truth | widths and parameter errors in distance-modulus mag',ha='center',fontsize=12)
+    fig.text(.5,.885,'No fictitious structure truth is assigned to the other 13 scenarios. Right labels give all / accepted catalog denominators.',ha='center',fontsize=11)
+    fig.text(.5,.12,'Intervals resample whole fields conditional on the shared source bank. Source-overlap blocks collapse to one for these designs: no source-level interval.',ha='center',fontsize=10)
+    fig.text(.5,.075,'The 95% line is nominal; eight correlated simulation realizations cannot establish independently calibrated real-population coverage.',ha='center',fontsize=10)
+    fig.text(.5,.035,'All numerical failures and the original entry-table local-dust approximation remain in the saved products and this comparison.',ha='center',fontsize=10)
+    finish(fig,'radial_structure_parameters')
     csv_rows(meta/'plotted.csv',plotted);outputs[str((meta/'plotted.csv').relative_to(ROOT))]=sha(meta/'plotted.csv')
     for path in [ROOT/'scripts/v3_1_radial_figures.py',ROOT/'scripts/photdis_figure_style.py']:inputs[str(path.relative_to(ROOT))]=sha(path)
-    save_json(meta/'complete.json',dict(inputs=inputs,outputs=outputs,figures=2,panels=6,plotted_rows=len(plotted),
+    save_json(meta/'complete.json',dict(inputs=inputs,outputs=outputs,figures=3,panels=10,plotted_rows=len(plotted),
         english_text_verified=True,visual_review_pending=True,scientific_acceptance=False,
         scope='Complete actual radial summary only. Both estimands, all22scenarios, failed arms and sparse nonzero-truth denominators retained. No synthetic fallback or independent calibration claim.'))
 

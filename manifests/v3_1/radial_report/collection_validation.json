@@ -1,0 +1,168 @@
+{
+  "checks": [
+    {
+      "check": "status_sha256",
+      "passed": true
+    },
+    {
+      "check": "recovery_sha256",
+      "passed": true
+    },
+    {
+      "check": "totals_sha256",
+      "passed": true
+    },
+    {
+      "check": "structure_sha256",
+      "passed": true
+    },
+    {
+      "check": "distance_sha256",
+      "passed": true
+    },
+    {
+      "check": "paired_sha256",
+      "passed": true
+    },
+    {
+      "check": "352_unique_arms",
+      "passed": true
+    },
+    {
+      "check": "176_catalogs",
+      "passed": true
+    },
+    {
+      "check": "268_numerically_passed",
+      "passed": true
+    },
+    {
+      "check": "704_totals",
+      "passed": true
+    },
+    {
+      "check": "12672_recovery_cells",
+      "passed": true
+    },
+    {
+      "check": "352_structure_parameters",
+      "passed": true
+    },
+    {
+      "check": "352_paired_estimands",
+      "passed": true
+    },
+    {
+      "check": "22_scenarios",
+      "passed": true
+    },
+    {
+      "check": "scenario_band_offset",
+      "passed": true
+    },
+    {
+      "check": "scenario_binary_brightening",
+      "passed": true
+    },
+    {
+      "check": "scenario_class_distance_correlated",
+      "passed": true
+    },
+    {
+      "check": "scenario_dust_offset",
+      "passed": true
+    },
+    {
+      "check": "scenario_dwarf_dominated",
+      "passed": true
+    },
+    {
+      "check": "scenario_evolved_rich",
+      "passed": true
+    },
+    {
+      "check": "scenario_known_model",
+      "passed": true
+    },
+    {
+      "check": "scenario_metal_poor",
+      "passed": true
+    },
+    {
+      "check": "scenario_middle_metallicity",
+      "passed": true
+    },
+    {
+      "check": "scenario_missing_WISE",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_16kpc_w0.08",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_16kpc_w0.25",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_2kpc_w0.08",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_2kpc_w0.25",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_4kpc",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_4kpc_w0.08",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_4kpc_w0.25",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_8kpc_w0.08",
+      "passed": true
+    },
+    {
+      "check": "scenario_narrow_8kpc_w0.25",
+      "passed": true
+    },
+    {
+      "check": "scenario_reference_like",
+      "passed": true
+    },
+    {
+      "check": "scenario_same_library",
+      "passed": true
+    },
+    {
+      "check": "scenario_weak_WISE",
+      "passed": true
+    },
+    {
+      "check": "all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "check": "exact_report_source",
+      "passed": true
+    }
+  ],
+  "actual_checks": 38,
+  "passed": true,
+  "source_marker_sha256": "206390e22317169b7d0ead57fd5cf310734d395f69d9516c9b49ea6a91a7a415",
+  "table_rows": {
+    "status": 352,
+    "recovery": 12672,
+    "totals": 704,
+    "structure": 352,
+    "distance": 2112,
+    "paired": 352
+  },
+  "scope": "Compact source/table consistency only; no scientific coverage acceptance. Covariances and full fit archives remain on NERSC."
+}

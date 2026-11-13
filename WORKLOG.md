@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-14 — complete radial science report, correlated summaries and three inspected plates
+- Correctedreport61229960 COMPLETED45s, all176catalogs/352arms,268numericalpass;
+  source tables352status/12672recovery/704totals/352structure/2112scores/352pairs
+  authenticated;38collectionchecks pass. Fullcovariances/posteriors stayNERSC.
+- Summary61228931 COMPLETED16s:29304rows, threefixedfield/source/jointpartitions,
+  all/accepted andbothestimands. All21empirical-source scenarios haveone source
+  component (known_model8); do not manufacture source intervals fromfield CIs.
+- Addedsource-backed docs/v3_1_radial_result.md,22fullscenario comparisons and9
+  definedstructure designs. Narrow4kpc/.08all8bothpass, countL1 38.08%→24.66%,
+  locationcoverage3/8,width0/8; localmetalpoor/missingWISE0/8numericalpass.
+  Preserve selectionlocaldust approximation, sharedteachers andfailedcalibration.
+- Rendered3EnglishPNG300dpi/PDFplates:allscenarioL1,nonzerotruthcoverage and
+  location/widthbias/coverage. All10panels visuallyinspected; widthunits clarified
+  andrechecked;1823actualhash/format/source-rowchecks pass(1788plottedrows).
+- Updatedatlas/status/PLAN/ledger. WP3 frozenexternalevaluation implementation
+  markedcomplete withfailedscience/evidencegaps; overallgoal remainsactive.
+- Exactresponsegroups0/1/2 completed5m55/6m32/6m37; groupeddrivers preserved
+  all68prior complete stagehashes, no scientificcode changes. Group3 andtwofinal
+  mode shards/report remain; structure/population/transfer/domain work required.
+- Broadpopulationresourcegroup3 completed9m16; corrections12–15 compact
+  markers collected, allpass2048 withoriginal512failures preserved.
+
 ## 2026-11-14 — submit corrected radial report and prepare complete response figures
 - After cleanthree-end f157114, verifiedoldreportFAILED/absent andbothresumes
   COMPLETED. Submittedcorrectedreport61229960debug15min; retargetedexisting

@@ -21,15 +21,16 @@ Negative findings remain deliverables, never successful calibration claims.
   constrained. Full latent2589views plus failure pairing complete: low-negative
   evolved297primary references still87.6635%severe |dmu|>1; negative-flux outliers
   alone do not explain giant failure. Rare unknown/W2 support flags retained.
-- [ ] WP2 radial/target/systematic comparisons. All176catalogs prepared; pilots
-  0/48/112botharms pass. Production bounded512/2048/8192 outcomes incomplete;
-  originaltimeouts and terminalnumerical failures retained. Exactresume shards
-  0/1 timedout at2h; exactresume61225052 COMPLETED22m46 withall88catalogs/176arms,
-  broad82/local50pass and47bothpass. Exactresume61225072 COMPLETED28m37,
-  broad81/local55pass and50bothpass. All176catalogs/352arms nowcomplete;
-  overall broad163/local105pass,97bothpass. Report61228930 failed22s onraw/normalizedweight equality; report-only exact
-  SharedCounts normalization check fixed/tested, retry61229960submitted; correlated
-  summary61228931 nowafterok61229960.
+- [ ] WP2 target/systematic comparisons remain; full radial experiment/report
+  complete. All176catalogs/352arms retained: broad163/local105pass,97bothpass.
+  Originaltimeouts andterminalfailures retained. Correctedreport61229960
+  COMPLETED45s; exact SharedCounts normalization comparison replaces raw-weight
+  comparison only (old61228930FAILED22s retained). Correlatedsummary61228931
+  COMPLETED16s/29304rows. All21empirical-source scenarios collapse toone source
+  block; no source interval. ThreeEnglishplates/10panels visuallychecked,
+  1823artifactchecks; fullscience/limitations in docs/v3_1_radial_result.md.
+  Narrow4kpc/.08all8numericalpass butlocation3/8,width0/8coverage despite
+  countL1 38.08%→24.66%; notscientificacceptance.
   Native target26000rows across34corrections complete,258fineaudits allpass.
   Direct entry all16shards complete:26000objects/29540envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
@@ -42,7 +43,7 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad0–11conditionalstatespass2048;
+  mainwithcut orrelax evidence gate. Broad0–15conditionalstatespass2048;
   original512failures retained. Otherbroad/holdout states/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
@@ -58,7 +59,8 @@ Negative findings remain deliverables, never successful calibration claims.
   preserves originalfailures andrequiresall64inventories before finalreport;
   response0all3originalfailures pass.005sidecars, all256objects retained.
   These are not26kpopulation-marginal evidence.
-- [ ] WP3 final scientific validation. Roles frozen:170strictnewsky+356source-new
+- [x] WP3 frozen final evaluation and evidence-gap audit complete; scientific
+  validation fails, no calibrated-distance claim. Roles frozen:170strictnewsky+356source-new
   seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in
   strictnewsky; no new far-field precision evidence. All3558reference-prior
   numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
@@ -130,10 +132,11 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full suite: 179 tests pass (6.06 s). Nine English plates have actual
+- Latest full suite: 179 tests pass (6.06 s). Twelve English plates have actual
   visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
   photometric occupancy 165 and final external comparison 104 artifact/source
-  checks. Candidate-mode/domain evidence figures still require complete sources.
+  checks; radial threeplates1823checks. Candidate-mode/response/domain evidence
+  figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
   3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst2656fullobjects pass;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
@@ -146,20 +149,17 @@ Negative findings remain deliverables, never successful calibration claims.
   evidence 61226776 additionally waits for the complete 64-response report.
 - Pending short response stages replaced by4sequential groups61229862 after
   all60oldpending stages provedcancelled/unstarted;68complete stages retained.
-  Originalall64report61221949 nowafterok61229862; firstgroup live.
+  Originalall64report61221949 nowafterok61229862; groups0–2complete,3running.
 - All 32 independent SED refits are complete (last exact resume 61227619_7).
   Finish registered old/new response probes and refinements. Require all 64 inventories
   before normalization; no dropped response or flattened evidence weight.
 - Complete remaining broad/heldout conditional populations, their all-34-state
   ensembles and frozen sky-transfer comparisons. Native/joint/entry matrices,
   all candidate states and fixed-high-q joint counts are already complete.
-- Both radial exact resumes 61225052/61225072 complete; report all 176 catalogs /
-  352 arms, including terminal numerical failures. Complete source/field/joint
-  whole-catalog summary driver is nowimplemented with5newmath tests; actualrun
-  waitsall352arms. Parameters and realizedcounts remain different estimands;
-  all original scenarios are retained, singleton sourceblocks have no interval.
-  Two-plate radial renderer nowprepared/syntaxchecked; actualcomplete tables and
-  rendering/visualQA remainrequired.
+- Radial implementation, all176/352outcomes, correlatedsummaries andthree
+  visuallycheckedplates complete. Preserve failedscience andalloriginals;
+  sourceblocksmostlysingleton andentrylocal-dust approximation remain explicit.
+  No additional radialrun is required by the current protocol.
 - Finish all 32 structure native/entry/refinement states, including exact entry
   refinement draw0 nowcomplete61228245/all512pass. Replacementarray61229422
   handlesstates2–31 withvalidated32workeradapter, originaldraw1continues8workers.

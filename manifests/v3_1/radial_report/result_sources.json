@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "manifests/v3_1/radial_summary/complete.json": "c4548ec29b0fda430689c04499509fa08d7846a286b39135b60dc2c004b12d41",
+    "manifests/v3_1/radial_summary/local_minus_broad_fraction_L1.csv": "a00dbb3aa923b015eca908c3300fdd07b3ed0048691ac89576af5bcd425eea96",
+    "manifests/v3_1/radial_summary/median_minus_truth.csv": "ea24aa9ea62b9118881b39946093ce5a04590e1a0c8ecbb404dbaa720414fcaa",
+    "manifests/v3_1/radial_summary/coverage95_defined_structure.csv": "fce0151384b4daf28984076e00645180ddda6c0b68760ae45132d44fb8ab2d0a",
+    "manifests/v3_1/radial_summary/source_inventory.csv": "fd86a85f50797682abfa2d12e14c0291dd798a930fd3046c2b58cb6da4c4e19f",
+    "manifests/v3_1/radial_report/complete.json": "206390e22317169b7d0ead57fd5cf310734d395f69d9516c9b49ea6a91a7a415",
+    "manifests/v3_1/radial_report/totals.csv": "d2618a2f81b74005979aba15b0883ccf157dcd1485e3242a9775478d90726dc3",
+    "manifests/v3_1/radial_report/status.csv": "76ef2f5202fc7c6d3e9a9d01e6e5dd790c220cd9a658853c527f449bf4965968",
+    "manifests/v3_1/radial_report/structure.csv": "666fa4607b522b0dfcfe0f9493d97257574e79f303640959c9da86633d37215e"
+  },
+  "document": "docs/v3_1_radial_result.md",
+  "document_sha256": "1f2bc716ae509574eb6b805cbc26dbfdd0c06cedf75ed08bde5975cb5515814c",
+  "scenarios": 22,
+  "defined_structure_scenarios": 9,
+  "scope": "Tables generated from authenticated complete source rows; all outcomes and correlated-uncertainty limitations retained."
+}

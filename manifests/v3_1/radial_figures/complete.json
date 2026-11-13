@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "manifests/v3_1/radial_summary/complete.json": "c4548ec29b0fda430689c04499509fa08d7846a286b39135b60dc2c004b12d41",
+    "manifests/v3_1/radial_summary/local_minus_broad_fraction_L1.csv": "a00dbb3aa923b015eca908c3300fdd07b3ed0048691ac89576af5bcd425eea96",
+    "manifests/v3_1/radial_summary/coverage95_nonzero_truth.csv": "738451e298229bccdcfa9128eed02246a7eedff41efa0876e3e1cf650e56dacc",
+    "manifests/v3_1/radial_summary/source_inventory.csv": "fd86a85f50797682abfa2d12e14c0291dd798a930fd3046c2b58cb6da4c4e19f",
+    "manifests/v3_1/radial_summary/median_minus_truth.csv": "ea24aa9ea62b9118881b39946093ce5a04590e1a0c8ecbb404dbaa720414fcaa",
+    "manifests/v3_1/radial_summary/coverage95_defined_structure.csv": "fce0151384b4daf28984076e00645180ddda6c0b68760ae45132d44fb8ab2d0a",
+    "scripts/v3_1_radial_figures.py": "dadc52d4293ebcb05190493de0f3299b050af6c40fa20de8e042790616097261",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/radial/paired_radial_error.png": "a08c7809acebb29002cbb3ff5b6ec938ef0ae886dcad1e93cbaf2baca4d04ed5",
+    "figures/v3_1/radial/paired_radial_error.pdf": "227b0ddedb032b3b93c66e825a028ad7c75c6eba8e9d705097152b37c2aea34b",
+    "figures/v3_1/radial/radial_nonzero_coverage.png": "5cc2e02828f90c13c66a05832e24fbb85e2fd430d96069541cceca51b145d96b",
+    "figures/v3_1/radial/radial_nonzero_coverage.pdf": "668cee4a0f8c380d4d36ff54162638be684b01503d95854ba90a7ed8d6dfcdf4",
+    "figures/v3_1/radial/radial_structure_parameters.png": "d6071a5f3bd74185f6c4fafb25bd355b1a74758d533dc18ff39b9e54c9aefeff",
+    "figures/v3_1/radial/radial_structure_parameters.pdf": "7c96876c322f9e1d33d4b13a607eb1be5bd7198e5ff9907f836539977abbfaa9",
+    "manifests/v3_1/radial_figures/plotted.csv": "ffa9275d7e663beaf3065b50bf47c76c0263d6812bbee2917510ccea69cd5bad"
+  },
+  "figures": 3,
+  "panels": 10,
+  "plotted_rows": 1788,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_acceptance": false,
+  "scope": "Complete actual radial summary only. Both estimands, all22scenarios, failed arms and sparse nonzero-truth denominators retained. No synthetic fallback or independent calibration claim."
+}

@@ -1,0 +1,111 @@
+{
+  "plan_sha256": "c41b4e7d1eeade5e0f09698194c3ace6656df033be6411de3df288e5da7d5267",
+  "group": 0,
+  "indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "job": "61229895",
+  "original_stage_records": [
+    {
+      "index": 14,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0014/complete.json",
+      "sha256": "475ad42d892a4bd995b76c4d09eb3bcf1580ca14f03c9eda52aa8d66b5678eab"
+    },
+    {
+      "index": 15,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0015/complete.json",
+      "sha256": "f7428a289e2bac9ad3844b45ccaa5825aa6c20d2ba0743711012fdd99f1c0bc7"
+    },
+    {
+      "index": 15,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0015/complete.json",
+      "sha256": "1d4858171f33ab779ca5085e8b76a0b67d183b20e681b9d7c9839bd8021bcdc9"
+    },
+    {
+      "index": 16,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0016/complete.json",
+      "sha256": "ec7bdf8b772324a167c5a16f29ec15f63e01563cfc3c32231ab8ac89a4bafe7a"
+    },
+    {
+      "index": 16,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0016/complete.json",
+      "sha256": "fbbea62f3f6bbd84bdbe8e3b08945a618952b32e2d945c683958c6f013a8295d"
+    },
+    {
+      "index": 17,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0017/complete.json",
+      "sha256": "bf6b648864fb13703e909a42718041de81f41690e565bea0270da45f93e17c24"
+    },
+    {
+      "index": 17,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0017/complete.json",
+      "sha256": "6bba4555e5fd840d290c524619422c6017bffd2b2bc78fdd0d133055e703a2c1"
+    },
+    {
+      "index": 18,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0018/complete.json",
+      "sha256": "1fd27b0f75cc98e05fd16481d104df633d9715c6634115593111e48a9aee31c2"
+    },
+    {
+      "index": 18,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0018/complete.json",
+      "sha256": "3412480313b2c0f50e0a3b078387e3ad014dff33e0ee8124a83d94b8e15b72cd"
+    },
+    {
+      "index": 19,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0019/complete.json",
+      "sha256": "1969a631d2382a82927ed48d78fb78a7150d4eadddeb8865790e3b1ca05b84a8"
+    },
+    {
+      "index": 19,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0019/complete.json",
+      "sha256": "8557f2bdf849690f909770c9c287a92e0601a042029f55e93c3d8d2aa5849ea9"
+    },
+    {
+      "index": 20,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0020/complete.json",
+      "sha256": "f950ad75bd256dd534f0ae838fad0a963437046de11ede60e5ea6c88abd49c90"
+    },
+    {
+      "index": 20,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0020/complete.json",
+      "sha256": "93933016c27a60ee07140e8f74f49a6bd21a4dae05109931bc05e088ae79a01a"
+    },
+    {
+      "index": 21,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0021/complete.json",
+      "sha256": "9f2e286935616aa2c77fcd6f9e61c9129ad5a0a1affa5ef81dcf34a64b5ffe7a"
+    },
+    {
+      "index": 21,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0021/complete.json",
+      "sha256": "693c081bfff9b950875c974ed4d5b2ba24a057f94f2f0476796a472ba374b26e"
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Sequential unchanged original response drivers, at most32workers. No new scientific input, seed, grid, numerical gate, normalization or completed-product rewrite.",
+  "elapsed_seconds": 336.36480650800513,
+  "maximum_child_RSS_KiB": 925432
+}

@@ -1,0 +1,117 @@
+{
+  "plan_sha256": "c41b4e7d1eeade5e0f09698194c3ace6656df033be6411de3df288e5da7d5267",
+  "group": 1,
+  "indices": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "job": "61229897",
+  "original_stage_records": [
+    {
+      "index": 22,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0022/complete.json",
+      "sha256": "85900af966ec44c5f171d110f9a35bb9b58c185ecb83baa8cc1961b6c2dc45f2"
+    },
+    {
+      "index": 22,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0022/complete.json",
+      "sha256": "b07c67debeb1b7b50c714725318ccfdacc9ef333355bcc97a0fda176d6b44113"
+    },
+    {
+      "index": 23,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0023/complete.json",
+      "sha256": "abe90fd2fbb983d2fa3be9427166276f4c370246b37087a6248b34c057579ec1"
+    },
+    {
+      "index": 23,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0023/complete.json",
+      "sha256": "0809cae2fef62f0c69c9fe1b9f7f53ea1b17e280146aea6c3e713aa07024a0c6"
+    },
+    {
+      "index": 24,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0024/complete.json",
+      "sha256": "5f4b89c1c46beeb45213b82d6b46372d2921940e04ae22d0fa3c3854b6c1bff1"
+    },
+    {
+      "index": 24,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0024/complete.json",
+      "sha256": "b634434da601235d5a603fc34c03ff462a14d0e7e598b8d5ebe46360abb518fe"
+    },
+    {
+      "index": 25,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0025/complete.json",
+      "sha256": "b3a61c48bb9bbaefe70e042cf3d64bc88b77051bb0412ff851ac920579f44be8"
+    },
+    {
+      "index": 25,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0025/complete.json",
+      "sha256": "7078bf6cfbdff67d7a52c4d0142374bdfde66cebb001af76d397ed89bec8fdb0"
+    },
+    {
+      "index": 26,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0026/complete.json",
+      "sha256": "12fbbf9b8f2ef6ccb6f85965173efb86c808abb26a8877e44047f77ed56082b3"
+    },
+    {
+      "index": 26,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0026/complete.json",
+      "sha256": "5b0a00f8fdb5defb088964bf8692541462993b8ad558cdac4db95226a72b39c7"
+    },
+    {
+      "index": 27,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0027/complete.json",
+      "sha256": "50eb73fa12c2eab81ce18d1fdb076a2fa34089d8cc657f0c7415e270fddca2ff"
+    },
+    {
+      "index": 27,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0027/complete.json",
+      "sha256": "bcb0a60bcf2503985318008f0b59b14205d873f9e6c8d88b199886285a698006"
+    },
+    {
+      "index": 28,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0028/complete.json",
+      "sha256": "24b077eb26832d0632281ed9d44b456030dd8a5865740700f1a2dca65e4c8c78"
+    },
+    {
+      "index": 28,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0028/complete.json",
+      "sha256": "68241f1eed195fe3fa628e1b4b9cd63323d4e66a88ca20490a51c1e38356805f"
+    },
+    {
+      "index": 29,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_0029/complete.json",
+      "sha256": "3f3cbd5c1cbb5e477d887bd7069074cb94691f7ef16129bd9e84daa84e128059"
+    },
+    {
+      "index": 29,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_0029/complete.json",
+      "sha256": "f3c13b41b33e5d877ed0292013b504f32b503198b718e57558052ee3e7d0af79"
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Sequential unchanged original response drivers, at most32workers. No new scientific input, seed, grid, numerical gate, normalization or completed-product rewrite.",
+  "elapsed_seconds": 380.47392679500626,
+  "maximum_child_RSS_KiB": 940480
+}

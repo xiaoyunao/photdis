@@ -1,0 +1,37 @@
+{
+  "inputs": {
+    "data/v3_1/radial_report/complete.json": "206390e22317169b7d0ead57fd5cf310734d395f69d9516c9b49ea6a91a7a415",
+    "data/v3_1/radial_catalogs/complete.json": "af044458452fc8bcff009b9ee3e6653437bea3edf5a113fff1e78391c8bc6d38",
+    "scripts/v3_1_radial_summary.py": "2000efd66ac3bd9f49bb272c11183cefd675065dda96382709620992c9b8886a",
+    "src/photdis/v3_1/catalog_blocks.py": "8d595ffe77abf15a391c1b532399f1b71b87ac21e0d6312de0c14d20aeb26569",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd",
+    "docs/v3_1_radial_summary_protocol.md": "2d2b39f7124ff74930c9a68e4d5c3aa33d6b2be17e5129a238303027968c02b4",
+    "data/v3_1/radial_report/status.csv": "76ef2f5202fc7c6d3e9a9d01e6e5dd790c220cd9a658853c527f449bf4965968",
+    "data/v3_1/radial_report/recovery.csv": "62521fafd314214cbaf2f30f23b8af84f525bd2d017bfccf45ae3a0d5e6aed92",
+    "data/v3_1/radial_report/totals.csv": "d2618a2f81b74005979aba15b0883ccf157dcd1485e3242a9775478d90726dc3",
+    "data/v3_1/radial_report/paired.csv": "c17f1ccbede43b16ae6c26d678b2e61292632585abc1f68fb162262a341f42a6",
+    "data/v3_1/radial_report/structure.csv": "666fa4607b522b0dfcfe0f9493d97257574e79f303640959c9da86633d37215e",
+    "data/v3_1/radial_catalogs/catalogs.json": "43f0f4bdac4007ee4733fec7569ba0df7682962bcff88d361d8088b6906d01aa",
+    "data/v3_1/radial_catalogs/truth.npz": "bfa024f030a1b786e9699416c70783c43c68ea3c55b9e5606204486d426f3285",
+    "data/v3_1/radial_catalogs/photometry.npz": "4adbc7ada058c6ae6c23e22e410d6fcad76ab71705fdacbef2b03a9bead227c5"
+  },
+  "outputs": {
+    "source_inventory.csv": "fd86a85f50797682abfa2d12e14c0291dd798a930fd3046c2b58cb6da4c4e19f",
+    "coverage95_all_bins.csv": "f182347cca8fb2d09f300b27a9e354dc631e86823bbdcd98251997a0de0c5575",
+    "coverage95_defined_structure.csv": "fce0151384b4daf28984076e00645180ddda6c0b68760ae45132d44fb8ab2d0a",
+    "coverage95_nonzero_truth.csv": "738451e298229bccdcfa9128eed02246a7eedff41efa0876e3e1cf650e56dacc",
+    "local_minus_broad_fraction_L1.csv": "a00dbb3aa923b015eca908c3300fdd07b3ed0048691ac89576af5bcd425eea96",
+    "mean_minus_truth.csv": "a030d2ceeb23b619a7dc3404847f9a759048a04e7dd777ebb52fd61f4f4a5b4d",
+    "median_minus_truth.csv": "ea24aa9ea62b9118881b39946093ce5a04590e1a0c8ecbb404dbaa720414fcaa"
+  },
+  "catalogs": 176,
+  "arms": 352,
+  "scenarios": 22,
+  "rows": 29304,
+  "all_PSF": true,
+  "all_outcomes_retained": true,
+  "shared_library_uncertainty_measured": false,
+  "scientific_acceptance": false,
+  "job": "61228931",
+  "scope": "Equal-catalog conditional summaries; field, transitive used-source and joint blocks separately. No interval for one block. All/accepted and zero/nonzero-truth denominators separate. No independent library, source-teacher scale or real population calibration claim. Original selection approximation and numerical failures remain."
+}
