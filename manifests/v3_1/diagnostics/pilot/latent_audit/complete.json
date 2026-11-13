@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "data/v3_1/diagnostics/pilot/complete.json": "96f37fabd4447b7ceaa3f5d2e63a4628223cdbe33ba57bc3995614fb9a34708b",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_latent_audit.py": "54d97a862aac25e2c4c376c7ffa618f70825fa84a63c575da20581f92c1e88e9",
+    "src/photdis/v3_1/latent_flux.py": "5fac447d27a836824d9e4ce29fc575368c6ad607e2030f9426faa25e83817179",
+    "src/photdis/v3_1/diagnostics.py": "7ba8b429aefe3d92d7d056f0ff57943db1665ad2361c627a262301417321ff31"
+  },
+  "output_sha256": "15d4a76d3b656fc3e9d9eaa2ea7886a0ea49e73d2916b242491c018c5cd69e63",
+  "views": 50,
+  "max_quantile_reproduction_delta": 0.0,
+  "scope": "Pilot diagnostic only; Gaussian conditional under frozen mean-linearized dust, any-band event bounded without independence assumption. Negative observed flux remains legal. No model refit or positivity correction.",
+  "job": "61212377"
+}

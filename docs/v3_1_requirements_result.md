@@ -9,7 +9,7 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
 | B1 | Same-star class and FeH conditional diagnostics | Pilot computed; analysis pending | Analytic Gaussian conditioning and frozen-reference identities tested; no production labels |
 | B2 | Fixed response/prior/band/error contrasts | Pending | Match identities and final product identity |
-| B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Pending | Retain sampling probabilities and full denominators |
+| B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Latent pilot complete; broader audit pending | 50views, max any-negative upper0.0003423; kernel-prior proxy kept distinct; no global claim |
 | B4 | Binary/class/component mode attribution | Pilot computed; analysis pending | Basin responsibilities conserve mass; analytic binary peak separation tested |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |
 | C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Pending | Distinguish actual-count/parameter recovery and coverage |
@@ -22,9 +22,9 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | E2 | High-q joint counts and model versus measured contamination | Pending | Exact joint, no marginal product |
 | E3 | Usable/extrapolated/unvalidated domain map and reweight support | Pending | Independent evidence and finite response uncertainty |
 | E4 | Structure-prior replacement and full-posterior application | Pending | Shared parameters/selection; matched baseline |
-| F1 | Reproducible programs, configs, job records, artifact verification | In progress | Local foundation only |
+| F1 | Reproducible programs, configs, job records, artifact verification | In progress | Tested diagnostic foundation; actual pilot/report/latent evidence and execution manifest |
 | F2 | English figures, source tables, visual inspection and complete report | Pending | Not just format checks |
-| F3 | README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync | In progress | Initial scope checkpoint pending |
+| F3 | README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync | In progress | Milestones synchronized through0c9f022; ongoing work recorded in WORKLOG |
 
 Negative scientific results remain deliverables, but do not satisfy calibration
 or independent validation claims. Unavailable evidence needs an actual inventory

@@ -15,14 +15,15 @@ Protocol: `docs/v3_1_protocol.md`; evidence ledger:
 - [ ] WP4: product-matched evaluation, joint counts, domain map, reweighting and structure example.
 - [ ] Complete scientific/numerical/visual acceptance, reports and safe three-end sync.
 
-NERSC authentication renewed and read-only recovery succeeded. Local, origin and
-NERSC tracked HEAD match31f1277; historical untracked remote figures/manifests
-are preserved. Pilot32stars/354views completes with zero nonconvergence; availability inventory
-completed27s. Paired report61212314 completes21s with all6actual checks passing
-and roundoff-only nominal reproduction. Registered1542-source diagnostic
-61212409 and pilot latent-sign audit61212377 are submitted. Do not duplicate.
-Next: finish these jobs, inspect paired mechanisms/negative support and qualify
-prospective reference evidence before correction fitting.
+NERSC authentication renewed; three-end tracked checkpoint0c9f022 verified.
+Historical remote untracked artifacts are preserved. Pilot32stars/354views and
+availability inventory completed. Paired report has6passing actual checks and
+roundoff-only nominal reproduction. Latent audit61212377 completed50views:
+max any-negative upper0.0003423; insufficient to motivate positivity refitting.
+Registered1542-source diagnostic61212409 now debug30min, same job ID, pending.
+Added native-cache qualification census; syntax checked, actual run pending.
+Next: finish full diagnostic and native feasibility census, freeze available
+prospective evidence roles, then correction/radial/transfer work packages.
 No automatic million-object products, deployment, timers or subagents.
 
 

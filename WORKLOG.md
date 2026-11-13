@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-13 — latent posterior audit and native-reference feasibility
+- Latent job61212377 COMPLETED74s exit0:0;50views, exact quantile reproduction.
+  Downloaded/hash-verified CSV and marker. Maximum any-negative union upper
+  0.0003423; kernel-prior negativity does not measure posterior negative support.
+  Pilot evidence does not establish a global bound or justify positivity refit.
+- Added v3_1_qualify_inventory.py/wrapper: verify1600cached native hashes,
+  exact positive source identities, duplicate/conflict rejection, actualTYPE,
+  historical IDs/cells/field footprints and photometric/reference availability.
+  No residuals, final roles or new scientific claims. Syntax validation passes;
+  allocated run still pending. Zero-Gaia/positional and QRF support are explicit limits.
+- Pending1542diagnostic samejob61212409 moved to debug30min based46s pilot
+  and48workers; before/after scheduler state retained. No duplicate submission.
+- Next: actual full paired diagnostics and native census; freeze new evidence
+  before any correction training; complete remaining four-package scope.
+
 ## 2026-11-13 — verify pilot fidelity and advance registered diagnostic sample
 - Accounting confirms61212082 COMPLETED46s and61212314 COMPLETED21s, exit0:0.
  32stars/354views,996paired contrasts, zero numeric failures;6actual report
