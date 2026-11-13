@@ -1,0 +1,37 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/entry_refined/draw_13/complete.json": "120d492fb2c36a4588ec578d36829d60ea14571e5a9ed3d17c5b425ad0b37b69",
+    "manifests/v3_1/structure/resource_execution/draw_13/job_61244889.json": "f06d317f241ee906bd2ddfd2717591e13784beaf343eae5dc33016a012f9bca3",
+    "manifests/v3_1/execution/structure_refine64_pilot/accounting.json": "8826d4e752d5578c78576a6847b25102b772f8333311b79f1160c75eb091fbaf",
+    "scripts/run_v3_1_structure_entry_resume64_array.sh": "09000705aae72a37976fcc78f51173c344684a9cca8c387c06ac871e32fe34ef",
+    "scripts/v3_1_structure_entry_resume64.py": "1eb3693b3457f3fd4a6fafabf071175fa24e3feaed7641e03480eae0128654ef",
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d"
+  },
+  "proposed_states": [
+    15,
+    16,
+    17,
+    18,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "maximum_array_concurrency": 3,
+  "original_sparse_states_retained": [
+    14,
+    20,
+    24
+  ],
+  "maximum_combined_structure_nodes": 6,
+  "workers_per_node": 64,
+  "time_limit_minutes": 30,
+  "measured_pilot_seconds": 1310,
+  "planning_memory_GiB": 320,
+  "shell_syntax_passed": true,
+  "submitted": false,
+  "source_commit_required_before_launch": true,
+  "scope": "Resource-only continuation after full512flag64-worker pilot completed21m50/all512pass. At launch replace only source-verified zero-runtime pending original writers; retain any running/completed original states. Max3newnodes plus3retained sparse nodes <=6. Preserve all contexts/seeds/integrands/gates and any runtime failures; held submission and exact dependency replacement before release."
+}

@@ -210,15 +210,17 @@ Negative findings remain deliverables, never successful calibration claims.
   Refined11/23 complete10m36/2m06/all512pass, original134/3flags/10checks each;
   refined21also complete8m32/all512pass, original103flags/10checks retained.
   Refined9/22complete25m51/10m38, original512/133flags retained.
-  Refined19complete11m01/original153flags. Total17/32refinements
-  authenticate372groupedchecks withnewreproducible
-  refinementcompactchecker;4848originalfailedcontexts/0unresolved preserved.
+  Refined19complete11m01/original153flags;13/26complete21m50/10m53,
+  original512/149flags. Total19/32refinements authenticate416groupedchecks withnewreproducible
+  refinementcompactchecker;5509originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
   heldsubmission/dependencyrepair/release. 320GiBguard, unchangedoriginal
-  function/seed/inputs; no completed64measurement orwiderrolloutyet. Existing
-  sparse19/26and14/20promoteddebug30 underfreshcap.64pilotnowrunning.
+  function/seed/inputs. Pilotcompleted21m50/Python1293.38s/all512pass; batch
+  199.7GiB/maxchild<4.1GiB. Preparedsameexecutorarrayforpending15–18/25/27–31,
+  max3newnodes+3originalsparse14/20/24<=6; freshsource/zero-runtime/absence/
+  dependencyproof required aftercommit/sync. Noarraylaunchedyet.
   Originaltransfer5complete;17promoteddebug30afteractualmatchedworkload.
   Sparse24temporarilyreturnedregular30toprioritizefull102report; no cancellation.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original

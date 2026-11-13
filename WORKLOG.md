@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — measure full 64-worker refinement and prepare bounded remaining array
+- Pilot13/61244889 COMPLETED21m50: all512 pass, original512 failures retained.
+  Python1293.378s, maxchild4155588KiB, batch209379848KiB (~199.7GiB), actual
+  node540164235264bytes. Existing320GiB planningguard and <4.1GiB child bound
+  hold; same original function/input dictionary/2^23 integrals/seeds/gates.
+- Refined26/raw61232997 COMPLETED10m53: all512pass/original149 flags retained;
+  Python638.994s,maxchild4165480KiB,batch114266068KiB. Source audits collected.
+  Unified19-state compact check passes416checks/19456branchrows, retaining
+  5509 original failed contexts/0unresolved. Prior18-state audit also preserved.
+- Added array shell wrapper for unchanged64-worker adapter; bash -n passes.
+  Proposed states15–18/25/27–31 only if still zero-runtime pending at launch.
+  Max3 newnodes plus3 retained sparse originals14/20/24 <=6 structure nodes;
+  reduce new concurrency for any original target already running. Same30min
+  allowance supported by full512-context21m50 measurement; preserve any timeout.
+- Preparation manifest binds pilot/timing/source hashes. No array submitted yet;
+  source/terminal/absence/dependency preflight follows clean milestone sync.
+  Full19/32 is not final posterior acceptance; remaining science/figures unchanged.
+
 ## 2026-11-14 — complete broad transfer and prioritize last heldout group from measured runtime
 - Originalgroup5/raw61231567 COMPLETED17m34: broad20–23 allconditionalgates
   pass, includingselected8192state23. Allbroad34 nowcomplete;98totaltransfer

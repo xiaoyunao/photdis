@@ -1,0 +1,13 @@
+{
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=15",
+    "yunao@perlmutter.nersc.gov",
+    "sacct -S 2026-11-12 -n -P -j 61244889,61232997 -o JobID,JobIDRaw,State,ExitCode,Elapsed,MaxRSS"
+  ],
+  "stdout": "61229422_26|61232997|COMPLETED|0:0|00:10:53|\n61229422_26.batch|61232997.batch|COMPLETED|0:0|00:10:53|114266068K\n61229422_26.extern|61232997.extern|COMPLETED|0:0|00:10:53|\n61244889|61244889|COMPLETED|0:0|00:21:50|\n61244889.batch|61244889.batch|COMPLETED|0:0|00:21:50|209379848K\n61244889.extern|61244889.extern|COMPLETED|0:0|00:21:50|\n",
+  "exit_code": 0
+}
