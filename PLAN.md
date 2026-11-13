@@ -193,6 +193,11 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Refined6 COMPLETE34m21/all512pass/10compactchecks,original512flags retained;
+  initial27complete/512flags. Existing32-workerrefinementarraythrottle now6
+  basedonactualfull512state34m41/34m21timings;1hlimits unchanged. Parentupdate
+  returnedfinishedchild6error butread-only13/14/31 confirmeffective6; original
+  failure/poststate receiptsretained, norepeatupdate or48-workerrollout.
 - Refined5 COMPLETE34m41/all512pass,original512flags/10compactchecks retained.
   Initial25/26 flags512/149; two-stateinitialpilot61239060 COMPLETE16m13,
   original30/31 flags512/420,20compactchecks pass,batch49.612GiB. Remaining

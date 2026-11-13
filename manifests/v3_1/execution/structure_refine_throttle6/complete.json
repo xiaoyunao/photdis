@@ -1,0 +1,11 @@
+{
+  "scheduler_state_verified": true,
+  "initial_command_succeeded": false,
+  "effective_array_throttle": 6,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "820a5b8abf5e489ad0d6516f029b4a79c18b1c36a83b525a337564e0daaa25bf",
+    "poststate.json": "0dd895ad30cd5f6e1fdbdc60a070bdaf1259e163d74d14d22ad4776e5104e2a9"
+  },
+  "scope": "Read-only recovery after partial scheduler update: original command returned error for completedchild6, but live array controllers report sharedthrottle6. Preserve original nonzero receipt; do not repeat update or submit jobs."
+}

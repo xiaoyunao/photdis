@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify second full refinement and effective six-node concurrency
+- Refined6/61229437 COMPLETED34m21:512originalflags retained,512pass/0unresolved;
+  10actualcompactchecks pass. Initial27complete/512originalflags retained.
+- Two full512flag32-worker refinements5/6 complete34m41/34m21 within1h.
+  Source/accounting/freshqueue preflight supports existingarraythrottle3→6,
+  shorteningwaitwithoutadditionaljobs orchangedinputs/integrands/seeds/gates.
+- scontrol parentupdate returnednonzero foralreadyfinishedchild6, butread-only
+  controllers13/14/31 eachverifyArrayTaskThrottle6. Originaljournal preserved;
+  separatepoststate receipt records effect. No repeatedmutation orresubmission.
+  48-workerpilot remainsoneuncompletedtrial; no wider48-workeradoption.
+- Initialpairpilot actual16m13 andintegratedprogressreport committed91e9565,
+  local/origin/NERSC allmatch. Fulltransfer/structure/domain andfiveplates remain.
+
 ## 2026-11-14 — integrate completed work packages without premature delivery acceptance
 - Added docs/v3_1_result.md as explicitlyin-progress cross-package synthesis:
   exactproduct identities, mechanism/correction failure, radialcoverage and
