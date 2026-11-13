@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "manifests/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "manifests/v3_1/luminosity_fit_refined/parameters.csv": "e7fb51bd56402efb043d179212898a86e5949c2b7bcead5fe627951b83629ba5",
+    "manifests/v3_1/luminosity_guard/complete.json": "9ce3fabf900601d1249e243aaf043b52e9047d28226a8e234a36576aea308ff4",
+    "manifests/v3_1/luminosity_guard/comparisons.csv": "4cb321725049c4abcf731b8a4bf6aba7f6293fa9931b7a2e615885d2ce67f7ad",
+    "scripts/v3_1_calibration_figure.py": "cbc873f7cfe6a3158c903980acab92bd569132d00308862c6a5f72e850e0445a",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/calibration/luminosity_correction.png": "7e98b6c996c8448ac753e76b2228c8795bbe6988dbb040daf4e987b171e9eec1",
+    "figures/v3_1/calibration/luminosity_correction.pdf": "b00bdcb1fc0d51f1935fe5efef19e1f6dc4a66f9f1992b537c072d085b535f65",
+    "manifests/v3_1/calibration_figure/plotted.csv": "8474dfd1c29f476c83b5dc10f0a296eb9314d5c3a8c8d7bad476cb497091fa0a"
+  },
+  "plotted_rows": 18,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scope": "Rendering of compact computed tables only. No catalog scan or new sample; calibration guards, not final validation."
+}

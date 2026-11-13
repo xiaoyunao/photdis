@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-13 — prepare full radial reporting and inspect calibration plate
+- Added all176catalog/352arm report with paired recovery, fine-weighted discrete
+  count/parameter intervals, sharedcovariance conservation and explicitfailedarms.
+  Missingarms blockfinalreport; coarseproper scores remainlabeled. Two focused
+  quantiletests pass; initial fixture wronglyplaced97.5% belowCDF.97 corrected.
+- Full105tests pass2.86s; newreport/figure syntax andwrapper checks pass.
+- Calibration six-panel Englishplate generated fromhashverified compacttables;
+  18source rows checked, PNG300dpi/PDFverified andallpanels visuallyinspected.
+  Sparse3fit/2guard evolvedsky blocks and pendingfinalvalidation explicit.
+- Validationprediction61217449(field)/61217450(common) queuedregular.
+  Full latent61216915 movedwhilepending fromregular todebug, unchanged30min.
+  Radialwidejobs active; matchedentry/dustaudit andresponses awaitingresources.
+- Next: completeallocatedpredictions/audits, exactradialresume andallscenarios,
+  response library and selection-matched targettransfer; finaloutcomes unopened.
+
 ## 2026-11-13 — prepare outcome-unopened validation predictions
 - Registered full frozen526field/3032common photometry-only reference-prior
   prediction protocol; nominal/response12/pointcorrection/shared32bootstrap views.

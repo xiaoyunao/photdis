@@ -1,0 +1,19 @@
+panel,source,reference_class,parameter,point,lower95,median,upper95,variant,metric,n,cells,mean,effective_n,lo95,hi95,limit,lower_bound,sufficient,passed
+A | Luminosity shift (mag),fit,0,delta_mu,-0.05419370005701221,-0.06193363010655493,-0.05473626512536685,-0.05291555263851085,,,,,,,,,,,,
+A | Luminosity shift (mag),fit,1,delta_mu,0.04283418178573365,0.029996193195535776,0.04338660483063639,0.15498557855918316,,,,,,,,,,,,
+A | Luminosity shift (mag),fit,2,delta_mu,0.10175563835658517,0.09595327450942308,0.10122663939524323,0.20473570243567352,,,,,,,,,,,,
+B | Extra luminosity dispersion (mag),fit,0,sigma_mu,0.15032198628445104,0.10668225521880473,0.14838547534371224,0.15693617838412205,,,,,,,,,,,,
+B | Extra luminosity dispersion (mag),fit,1,sigma_mu,0.8904660866945754,0.0,0.8635188765731531,0.9458044515803146,,,,,,,,,,,,
+B | Extra luminosity dispersion (mag),fit,2,sigma_mu,0.17650102719274197,0.1210318400930909,0.1772008298203545,0.1964990810494336,,,,,,,,,,,,
+C | Predictive log-score change,guard,0,,,,,,bootstrap,fit_channel_logscore,512,3,0.024607297604815736,512.0,0.0032755813788085675,0.034928206737977065,-0.02,True,True,True
+C | Predictive log-score change,guard,1,,,,,,bootstrap,fit_channel_logscore,39,2,0.04170681874805471,39.0,0.014789387798987752,0.04478309657080522,-0.02,True,True,True
+C | Predictive log-score change,guard,2,,,,,,bootstrap,fit_channel_logscore,380,2,0.0049246199788415615,380.0,0.004909855652944049,0.004955469017505469,-0.02,True,True,True
+D | 68% reference-point agreement,guard,0,,,,,,bootstrap,coverage68,511,3,0.11937377690802348,511.0,0.0,0.12162162162162163,-0.01,True,True,True
+D | 68% reference-point agreement,guard,1,,,,,,bootstrap,coverage68,39,2,0.02564102564102564,39.0,0.0,0.02857142857142857,-0.01,True,True,True
+D | 68% reference-point agreement,guard,2,,,,,,bootstrap,coverage68,374,2,0.07754010695187166,374.0,0.04878048780487805,0.09163346613545817,-0.01,True,True,True
+E | 95% reference-point agreement,guard,0,,,,,,bootstrap,coverage95,511,3,0.06653620352250489,511.0,0.0,0.07657657657657657,-0.01,True,True,True
+E | 95% reference-point agreement,guard,1,,,,,,bootstrap,coverage95,39,2,0.1282051282051282,39.0,0.0,0.14285714285714285,-0.01,True,True,True
+E | 95% reference-point agreement,guard,2,,,,,,bootstrap,coverage95,374,2,0.0427807486631016,374.0,0.04065040650406504,0.043824701195219126,-0.01,True,True,True
+F | Signed-Gaia PIT tails,guard,0,,,,,,bootstrap,gaia_tail,501,3,-0.02594810379241517,501.0,-0.028268551236749116,0.0,0.01,False,True,True
+F | Signed-Gaia PIT tails,guard,1,,,,,,bootstrap,gaia_tail,39,2,0.0,39.0,0.0,0.0,0.01,False,True,True
+F | Signed-Gaia PIT tails,guard,2,,,,,,bootstrap,gaia_tail,376,2,0.0,376.0,0.0,0.0,0.01,False,True,True

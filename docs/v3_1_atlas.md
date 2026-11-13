@@ -26,3 +26,14 @@
 
 [实际检查记录](../manifests/v3_1/paired_figures/delivery_validation.json)。
 其余工作包图件与最终适用域图仍在推进。
+
+## Constrained luminosity correction
+
+![Calibration correction](../figures/v3_1/calibration/luminosity_correction.png)
+
+Six panels show class-specific shift/scatter and held-out sky changes in
+proper score, reference-point agreement and signed-Gaia PIT tails. All15
+bootstrap guards and96numerical checks pass. Evolved scatter remains poorly
+constrained by only3fit/2guard sky blocks; this is not independent calibration.
+Source rows and actual image/PDF checks: `manifests/v3_1/calibration_figure/`.
+PNG300dpi/PDF and all six panels visually inspected.

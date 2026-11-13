@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "check": "inputs:manifests/v3_1/luminosity_fit_refined/complete.json",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/luminosity_fit_refined/parameters.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/luminosity_guard/complete.json",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/luminosity_guard/comparisons.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/v3_1_calibration_figure.py",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/calibration/luminosity_correction.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/calibration/luminosity_correction.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:manifests/v3_1/calibration_figure/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "PNG_dimensions",
+      "passed": true
+    },
+    {
+      "check": "PNG_300dpi",
+      "passed": true
+    },
+    {
+      "check": "PDF_one_page",
+      "passed": true
+    },
+    {
+      "check": "English_PDF",
+      "passed": true
+    },
+    {
+      "check": "source_row_0",
+      "passed": true
+    },
+    {
+      "check": "source_row_1",
+      "passed": true
+    },
+    {
+      "check": "source_row_2",
+      "passed": true
+    },
+    {
+      "check": "source_row_3",
+      "passed": true
+    },
+    {
+      "check": "source_row_4",
+      "passed": true
+    },
+    {
+      "check": "source_row_5",
+      "passed": true
+    },
+    {
+      "check": "source_row_6",
+      "passed": true
+    },
+    {
+      "check": "source_row_7",
+      "passed": true
+    },
+    {
+      "check": "source_row_8",
+      "passed": true
+    },
+    {
+      "check": "source_row_9",
+      "passed": true
+    },
+    {
+      "check": "source_row_10",
+      "passed": true
+    },
+    {
+      "check": "source_row_11",
+      "passed": true
+    },
+    {
+      "check": "source_row_12",
+      "passed": true
+    },
+    {
+      "check": "source_row_13",
+      "passed": true
+    },
+    {
+      "check": "source_row_14",
+      "passed": true
+    },
+    {
+      "check": "source_row_15",
+      "passed": true
+    },
+    {
+      "check": "source_row_16",
+      "passed": true
+    },
+    {
+      "check": "source_row_17",
+      "passed": true
+    },
+    {
+      "check": "18_plotted_rows",
+      "passed": true
+    }
+  ],
+  "actual_checks": 32,
+  "passed": true,
+  "visual_review": true,
+  "visual_note": "All six panels, English labels, intervals and footer inspected; no clipping or overlap.",
+  "figure_sha256": {
+    "figures/v3_1/calibration/luminosity_correction.png": "7e98b6c996c8448ac753e76b2228c8795bbe6988dbb040daf4e987b171e9eec1",
+    "figures/v3_1/calibration/luminosity_correction.pdf": "b00bdcb1fc0d51f1935fe5efef19e1f6dc4a66f9f1992b537c072d085b535f65",
+    "manifests/v3_1/calibration_figure/plotted.csv": "8474dfd1c29f476c83b5dc10f0a296eb9314d5c3a8c8d7bad476cb497091fa0a"
+  }
+}
