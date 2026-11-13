@@ -14,14 +14,16 @@
         "pilot",
         "--workers",
         "16"
-      ]
+      ],
+      "qos": "debug"
     },
     {
       "job_id": "61212144",
       "purpose": "reference-availability and target-domain inventory",
       "last_observed_state": "PENDING",
       "reason": "Priority",
-      "wrapper": "scripts/run_v3_1_inventory.sh"
+      "wrapper": "scripts/run_v3_1_inventory.sh",
+      "qos": "debug"
     }
   ],
   "local_validation": {

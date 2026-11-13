@@ -4,7 +4,7 @@ import argparse
 import json
 import os
 import numpy as np
-from v2_1_near import ROOT,sha,save_json,csv_rows
+from v2_1_near import ROOT,sha,save_json,csv_rows,load
 from photdis.stage1 import require_compute
 from photdis.v3_1.comparison import match_controls,paired_mean
 
@@ -67,11 +67,25 @@ def main():
                 inclusion_probability=r['inclusion_probability'],cell=r['cell']))
     csv_rows(out/'paired.csv',rows);csv_rows(out/'mode_attribution.csv',modes);csv_rows(out/'reference_scores.csv',scores)
     save_json(out/'numerical_flags.json',flags)
+    frozen_path=ROOT/'data/v3_0/evaluation_results/development_multiband_fit_0/per_star.npz'
+    frozen_marker=json.loads(frozen_path.with_name('complete.json').read_text())
+    assert sha(frozen_path)==frozen_marker['outputs'][frozen_path.name]
+    frozen=load(frozen_path); index={int(v):i for i,v in enumerate(frozen['identity'])}
+    fidelity=[]
+    for r in records:
+        if r['control']!='nominal':continue
+        j=index[r['identity']]
+        fidelity.append(dict(identity=r['identity'],
+            max_mu_quantile_change=float(np.max(abs(np.asarray(r['mu'])-frozen['mu'][j]))),
+            qnear_change=float(abs(r['qnear']-frozen['qnear'][j])),
+            max_joint_change=float(np.max(abs(np.asarray(r['class_distance'])-frozen['class_distance'][j])))))
+    csv_rows(out/'frozen_nominal_fidelity.csv',fidelity)
     checks=dict(exact_views=len(records)==completion['views'],native_psf=all(r['TYPE']=='PSF' for r in records),
         joint_normalization=all(abs(np.sum(r['class_distance'])-1)<1e-10 for r in records),
         mode_conservation=all(abs(m['mode_mass_sum']-1)<1e-10 for m in modes),
-        flags_retained=len(flags)==completion['nonconverged'])
-    save_json(out/'complete.json',dict(inputs={str(x.relative_to(ROOT)):sha(x) for x in [base/'complete.json',ROOT/'scripts/v3_1_diagnostic_report.py',ROOT/'src/photdis/v3_1/comparison.py']},
+        flags_retained=len(flags)==completion['nonconverged'],
+        frozen_nominal_fidelity=all(r['max_mu_quantile_change']<=.03 and r['qnear_change']<=.003 and r['max_joint_change']<=.003 for r in fidelity))
+    save_json(out/'complete.json',dict(inputs={str(x.relative_to(ROOT)):sha(x) for x in [base/'complete.json',frozen_path,ROOT/'scripts/v3_1_diagnostic_report.py',ROOT/'src/photdis/v3_1/comparison.py']},
         outputs={x.name:sha(x) for x in out.iterdir() if x.name!='complete.json'},checks=checks,passed=all(checks.values()),
         job=os.getenv('SLURM_JOB_ID'),stage=a.stage,
         interpretation='Seen, stratified mechanism contrasts. Sky-block bootstrap is conditional on source selection; small pilots cannot establish calibrated domains. Truth-assisted improvements are not production performance. Reference-point agreement is not latent true-distance coverage; model leakage is not measured population contamination.'))

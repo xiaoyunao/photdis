@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-13 — add actual frozen-posterior fidelity gate
+- Report now verifies every nominal pilot identity against stored frozen v3.0
+  quantiles/qnear/joint probabilities before interpreting controlled differences.
+  Existing numeric limits registered: .03mag quantiles/.003 probabilities;
+  mismatches stop report acceptance, no silent tuning or removal. Syntax passes.
+- Read scheduler limits: debug30min/max2jobs and current partition allows allQoS.
+  Switched the two still-pending bounded20/30min jobs to debug without changing
+  IDs, requested resources, compute scope or time limits. Both updates succeed;
+  full before/after records preserved in manifests/v3_1/initial_debug_qos.json.
+- Next: actual pilot/inventory completion and paired artifact report.
+
+
 ## 2026-11-13 — preserve paired estimands and latent-flux distinction
 - Inventory61212144 submitted after579de5d three-end sync. Both initial jobs
   last observed PENDING(Priority), no program failure. NERSC accounting uses
