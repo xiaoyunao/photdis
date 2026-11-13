@@ -200,9 +200,10 @@
     {
       "job_id": "61214053",
       "purpose": "exact G3/native DR11 PSF external qualification",
-      "last_observed_state": "SUBMITTED",
+      "last_observed_state": "TIMEOUT",
       "wrapper": "scripts/run_v3_1_external_native.sh",
-      "qos": "regular"
+      "qos": "regular",
+      "elapsed_seconds": 1800
     },
     {
       "job_id": "61214075",
@@ -249,14 +250,43 @@
     {
       "job_id": "61214439",
       "purpose": "remaining radial pilots48/112",
-      "last_observed_state": "RUNNING",
-      "qos": "debug"
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 527,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214440",
       "purpose": "shared-target-prior and matched class/FeH paired report",
-      "last_observed_state": "PENDING",
-      "qos": "debug"
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 58,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61214816",
+      "purpose": "exact per-brick native resume after61214053 timeout",
+      "last_observed_state": "RUNNING"
+    },
+    {
+      "job_id": "61214835",
+      "purpose": "catalog48 broad numerical extension",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61214836",
+      "purpose": "catalog48 local numerical extension",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61214837",
+      "purpose": "catalog112 broad numerical extension",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61214838",
+      "purpose": "catalog112 local numerical extension",
+      "last_observed_state": "PENDING"
     }
   ],
   "local_validation": {

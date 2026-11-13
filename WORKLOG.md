@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — quantify target-prior regression and audit prospective ancestry
+- Pairedreport61214440 COMPLETED58s:11882contrasts,5actual checks pass,
+  one numericflag retained (identity2507286355604739968, quantiledelta.16235mag).
+  Added same-parameter bounded-grid sidecar; original record/report unchanged.
+- Same304evolved stars target versus response12/reference: absolute muerror
+  +.84507mag, sky95%CI[.38174,1.38187]; 68%reference-point agreement−.11533.
+  On same275eligibleevolved, class+FeH versus FeH gives−3.11889mag,
+  while class+FeH versusclass gives+.22063mag CI[−.05674,.56963]. These are
+  seen-development diagnostics, not independent calibration or true coverage.
+- Native61214053 TIMEOUT1800s; exact resumable61214816 nowrunning, preserving
+  original log/checkpoints. Remaining pilots61214439 COMPLETED527s; bounded
+  extensions61214835/36/37/38 submitted for48broad/local,112broad/local.
+- Added historical upstream-population, allconfig-footprint (including original
+  pilot), whole-system and strict published-membership availability audit.
+  Raw source-pool inventory remains distinct from fitted/scored exposure;
+  no final roles assigned or prediction residuals opened. Syntax checks pass.
+- Next: execute ancestry audit afternative completion, freeze actualnewroles,
+  finish numerical pilots and selection-matched response migration.
+
 ## 2026-11-13 — complete shared-target-prior diagnostic and first radial fine audit
 - Full1542 shared-target-prior job61214214 COMPLETED392s; one numericalflag
   retained, all1542new-cell transfers and zero target-observation overlaps.

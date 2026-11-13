@@ -1,0 +1,11 @@
+[
+  {
+    "identity": 2507286355604739968,
+    "converged": false,
+    "probability_delta": 0.00019852399969810808,
+    "quantile_delta": 0.1623478357490704,
+    "joint_delta": 1.1102230246251565e-15,
+    "log_normalization": 0.0,
+    "marginal_half_delta": 0.0003360474344950015
+  }
+]
