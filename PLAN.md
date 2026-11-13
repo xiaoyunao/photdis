@@ -26,7 +26,7 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry61219182 shard0 all1625rows/1842envelopes pass, remainder running/queued; no context
+  Direct entry61219182 first3shards all4875rows/5549envelopes pass, remainder queued; no context
   interpolation. Assembly61219399 waits for complete inputshards. Population
   fits/evidence/count drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
   Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
@@ -44,12 +44,13 @@ Negative findings remain deliverables, never successful calibration claims.
   foundations implemented/tested. Joint response61220368 shard0 passes6500rows.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
   analytical baseline withdrawal/entry/math foundation tested; preparation61221747
-  and entrypilot61221765 queued. Nativepilot driver ready, actualexecution pending.
+  and entrypilot61221765 queued. Nativepilot61221947_12 queued; allstate entry/
+  assembly/posterior drivers ready with shared-count tests, actualexecution pending.
   Full scientific counts, final product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full124tests pass; four English plates visually inspected (paired62,
+- Latest full127tests pass; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

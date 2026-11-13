@@ -10,6 +10,8 @@ from photdis.stage1 import require_compute
 from photdis.v3.model import inference_model
 from photdis.v3.controls import optical_magnitudes
 from photdis.v3_1.comparison import paired_mean
+from photdis.v3.population import SharedCounts
+from photdis.v3_1.finite_counts import finite_count_marginals
 from photdis.audit import rvs_metallicity
 
 
@@ -30,7 +32,8 @@ def main():
     draws=list(range(32))+list(range(1000,1032));missing=[];completion=[];inventory=[]
     paths=[base/'complete.json',base/'target_photometry.npz',base/'development_photometry.npz',base/'development_evidence.npz',
         base/'development_design.json',ROOT/'data/v3_0/sed_fit.joblib',ROOT/'scripts/v3_1_response_probe_report.py',
-        ROOT/'docs/v3_1_response_probe_report_protocol.md',ROOT/'src/photdis/v3_1/comparison.py']
+        ROOT/'docs/v3_1_response_probe_report_protocol.md',ROOT/'src/photdis/v3_1/comparison.py',
+        ROOT/'src/photdis/v3/population.py',ROOT/'src/photdis/v3_1/finite_counts.py']
     inputs={str(p.relative_to(ROOT)):sha(p) for p in paths}
     for draw in draws:
         p=base/f'draw_{draw:04}/complete.json'
@@ -145,6 +148,27 @@ def main():
                 pit=float(np.exp(lw)@np.array([v['gaia']['pit'] for v in fine]))
                 mixture_scores.append(dict(**common,source='signed_gaia',logscore=score,gain_over_response12=score-baseline[row]['fine']['gaia']['log_score'],pit=pit))
     csv_rows(out/'mixture_objects.csv',mixture_objects);csv_rows(out/'mixture_scores.csv',mixture_scores)
+    count_summary=[];count_checks=[]
+    for label,(indices,lw,accepted) in mixtures.items():
+        p=np.array([[r['fine']['class_distance'] for r in targets[draws[i]]] for i in indices]).reshape(len(indices),128,18)
+        identifiers=np.array(draws)[indices];w=np.exp(lw);acc=SharedCounts(identifiers,18,w);mean_prob=acc.add(p,identifiers);result=acc.result()
+        marginal=finite_count_marginals(p,w);x=np.arange(129);mean=marginal@x;var=marginal@(x*x)-mean**2
+        np.testing.assert_allclose(mean,result['mean'],atol=1e-10,rtol=0)
+        np.testing.assert_allclose(var,np.diag(result['covariance']),atol=1e-9,rtol=0)
+        assert abs(result['covariance'].sum(axis=1)).max()<1e-8 and np.linalg.eigvalsh(result['covariance']).min()>-1e-8
+        numeric=True
+        for j,name in enumerate(['native_coarse','entry_second_seed','entry_previous_level'],1):
+            alternative=softmax(log_evidence[indices,j]);probs=p if j>1 else np.array([[r['coarse']['class_distance'] for r in targets[draws[i]]] for i in indices]).reshape(len(indices),128,18)
+            alt=np.einsum('s,snk->nk',alternative,probs);pd=float(abs(alt-mean_prob).max());cd=float(abs(alt.sum(axis=0)-result['mean']).max());good=pd<.003 and cd<.5;numeric&=good
+            count_checks.append(dict(set=label,alternative=name,maximum_probability_delta=pd,maximum_mean_count_delta=cd,passed=bool(good)))
+        atomic_npz(out/f'{label}_target_counts.npz',**result,identity=target['identity'],TYPE=target['TYPE'],
+            per_object_joint_probability=mean_prob,conditional_joint_probability=p,marginal_count_support=x,marginal_count_probability=marginal)
+        for c in range(3):
+            for d in range(6):
+                k=c*6+d;cdf=np.cumsum(marginal[k]);cdf[-1]=1;lo,median,hi=np.searchsorted(cdf,[.025,.5,.975])
+                count_summary.append(dict(set=label,class_index=c,distance_bin=d,n=128,mean=float(result['mean'][k]),lower95=int(lo),median=int(median),upper95=int(hi),
+                    variance=float(result['covariance'][k,k]),shared_variance=float(result['shared_covariance'][k,k]),numerically_accepted=bool(accepted and numeric)))
+    csv_rows(out/'target_counts.csv',count_summary);csv_rows(out/'target_count_numerics.csv',count_checks)
     save_json(out/'complete.json',dict(inputs=inputs,outputs={p.name:sha(p) for p in out.iterdir() if p.suffix in ('.csv','.npz') or p.name in ('sets.json','numerical_flags.json')},
         states=64,target_rows=128,development_rows=256,numerical_flags=len(flags),sets=sets,all_PSF=True,
         job=os.getenv('SLURM_JOB_ID'),scope='Matched fixed-prior conditional probes and seen-development pairs, not26kpopulation response evidence or independent calibration. All64states retained; failed sets have no accepted weights.'))

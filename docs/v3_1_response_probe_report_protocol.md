@@ -27,3 +27,14 @@ One shared response state applies to the entire catalog. Mixture source/Gaia
 log scores are log-sums of conditional scores, not averaged log scores; class
 and distance probabilities are linear mixtures. Mixture quantiles cannot be
 inferred from averaging per-response quantiles and will not be reported here.
+
+Compare class-by-distance counts on the same128target identities across the
+original/new/pooled sets, with one global response state shared by allstars.
+Compute exact categorical conditional covariance plus response covariance and
+exact response-mixture Poisson-binomial marginals for each count component.
+Marginal count intervals are not independent; deliver the full covariance.
+Check actual numerical variants for per-object joint-probability change<.003
+and mean-count change<.5. These are conditional128-object probe counts, never
+an expanded target population or a new26kpopulation fit. Retain finite-response
+ESS and half-library discrepancies as support diagnostics, not MC convergence
+of an imagined continuous response model.

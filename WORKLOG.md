@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — extend exact shared-count checks and structure posterior implementation
+- Targetentry61219182 shards1/2 COMPLETED17m24s/16m28s:1866/1841envelopes
+  allpass. Togetherfirst3shards4875objects/5549envelopes pass; all13remaining
+  pendingentry requests reducedto30min from actual completed timings, no scientific
+  input changes. True-distancejoint shards1/2 runningdebug, shard3 promoteddebug.
+- Added exact finite-shared-response Poisson-binomial count marginals; analytic
+  test confirms shared-state mixing gives(.41,.18,.41), not independent-star
+  (.25,.5,.25), and matches fullcategorical covariance. Matched-response report
+  now compares128-object jointcounts/intervals/covariance acrossoriginal/new/pooled
+  sets and all actual numerical variants. This is not expandedpopulation inference.
+- Structure nativepilot61221947_12 queuedafterpreparation; response report61221949
+  dependencies verified afterok for allseven remainingresponse arrays. Report
+  additions are unexecuted and will be synced before dependencies are ready.
+- Added gated32response/all512context structureentry, authenticated matrixassembly,
+  globalresponse/common-distance/odds quadrature, exact member/background first
+  andsecondmoments, sharedcovariance and fine/entry/quadrature acceptance checks.
+  These drivers have notyetexecuted and do notconstitute a scientific result.
+- Validation: twoindependent Bayes-identity tests show response odds updateonce
+  for thewholecatalog; allimports/syntax pass. Full127tests pass3.36s.
+- Next: inspect structureentry/native pilots; complete targetentry/joint/refits/
+  radial controls; execute gated fits/counts and frozen validation/domain delivery.
+
 ## 2026-11-13 — prepare all-state response report and structure likelihood pilot
 - Structure sample freeze61221747 queueddebug; observed-context entrypilot61221765
   waits afterok. Neither has yet produced a structure likelihood or validation score.
