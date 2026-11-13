@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-13 — prepare native radial selection and detailed mechanism evidence
+- Full diagnostic61212409 COMPLETED491s exit0:0;17386views, zero numerical
+  failures. Paired report61212562 artifact passes6checks/1089contrasts;
+  accounting to verify. Downloaded/hash-verified small evidence (large raw
+  reference-score table stays NERSC).
+  Native qualification61212560 still running. Checkpoint26ecf21 synchronized
+  at allthree endpoints. Full v3/v3.1 regression now86tests pass in4.39s.
+- Added resumable radial selection driver: original profile geometry, independent
+  Sobol seed311701/256draws, fixedSED/binary/zero-tilt class entry curves and
+  prespecified broad-basis reproduction check. Protocol records exact settings.
+- Added separate stratified report: exact paired identities, class×FeH/color/r/
+  optional-bands/sky, sky-block uncertainty and baseline-high-q denominators;
+  dominant-mode parent effective reference support distinguished from posterior
+  source ESS. Scripts py_compile and shellsyntax pass; actual runs pending.
+-304evolved primary references/8sky cells: class-oracle absolute mu error
+  decreases3.647mag, sky bootstrap95%[-4.291,-2.275]mag; FeH-only275sources
+  decrease.337mag. Oracle evidence isolates branch ambiguity, not a deployable
+  gain; full stratification/target-prior comparison still required.
+- Next: actual full diagnostics/evidence census, selection and stratified jobs,
+  radial recovery driver; new role freeze before correction fitting.
+
 ## 2026-11-13 — register matched radial flexibility comparison
 - Checkpoint51440cb verified local/origin/NERSC. Full diagnostic61212409 RUNNING;
   native feasibility61212560 RUNNING; full paired report61212562 waits afterok.

@@ -20,8 +20,9 @@ Historical remote untracked artifacts are preserved. Pilot32stars/354views and
 availability inventory completed. Paired report has6passing actual checks and
 roundoff-only nominal reproduction. Latent audit61212377 completed50views:
 max any-negative upper0.0003423; insufficient to motivate positivity refitting.
-Registered1542-source diagnostic61212409 now debug30min, same job ID, running.
-Native-cache qualification census61212560 running; paired report61212562 dependent.
+Registered1542-source diagnostic61212409 completed491s:17386views, no numeric
+failures. Paired report has1089contrasts and all6checks passing.
+Native-cache qualification census61212560 running; paired report61212562 artifact complete (accounting to verify).
 Radial protocol and objective/selection foundation registered;5new tests pass.
 Actual radial likelihood/selection preparation and recovery remain pending.
 Next: finish full diagnostic and native feasibility census, freeze available

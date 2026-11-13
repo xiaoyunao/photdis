@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "data/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "data/v3_0/evaluation_results/development_multiband_fit_0/per_star.npz": "e1c2af9f79083d262a2eafe1975dc9e1862812fb11c5763db082aa17611df36e",
+    "scripts/v3_1_diagnostic_report.py": "5d58444a0c9455ae68f620b39e2b1804393c84728a4c8ae829ca72772301c837",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
+  },
+  "outputs": {
+    "frozen_nominal_fidelity.csv": "0da5e641ec5e5e0ddaad483a54c8b9f43c5927e0f4e14116b4f2cde634ceb828",
+    "paired.csv": "e688f6707e805bad81fd8bbccb630c75dff6b054adf99b6676ca90975b611096",
+    "mode_attribution.csv": "1c841defd1bdf913e419d652c71ff6ec31df2b8d1e2d9c321c7f4aaa1b58faeb",
+    "numerical_flags.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "reference_scores.csv": "f194e53f272696f2413f6f34fbc7d99873c0db8645ea5304f8a28b358d6dc0fd"
+  },
+  "checks": {
+    "exact_views": true,
+    "native_psf": true,
+    "joint_normalization": true,
+    "mode_conservation": true,
+    "flags_retained": true,
+    "frozen_nominal_fidelity": true
+  },
+  "passed": true,
+  "job": "61212562",
+  "stage": "diagnostic",
+  "interpretation": "Seen, stratified mechanism contrasts. Sky-block bootstrap is conditional on source selection; small pilots cannot establish calibrated domains. Truth-assisted improvements are not production performance. Reference-point agreement is not latent true-distance coverage; model leakage is not measured population contamination."
+}

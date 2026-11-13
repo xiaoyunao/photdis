@@ -46,7 +46,10 @@ and output remains mandatory, including simulated samples' source provenance.
 Use a mu grid covering[-15,45]mag with at most.02mag spacing where local structure
 can have mass. Check finer.01mag quadrature on pilot and flagged catalogs;
 require probability changes<.003 and count means<.5star before acceptance.
-Selection profile interpolation must retain hull flags and compare against
+Entry tables use the frozen256-profile geometry, mu[-25,55] at.05mag,
+256Sobol draws with independent seed311701; fixed24profile×3shift broad-basis
+comparisons must differ by<.003 from the frozen table. A512draw or finer-grid
+sidecar is numerical refinement only. Selection profile interpolation must retain hull flags and compare against
 direct Gaussian entry integration on a fixed pilot subset. Do not normalize
 away missing tail support. Retain original and refined numerical artifacts.
 

@@ -58,9 +58,11 @@
       ],
       "requested_cpus": 64,
       "timelimit": "00:30:00",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "scheduling_change_record": "manifests/v3_1/diagnostic_debug_qos.json"
+      "scheduling_change_record": "manifests/v3_1/diagnostic_debug_qos.json",
+      "exit_code": "0:0",
+      "elapsed_seconds": 491
     },
     {
       "job_id": "61212560",
@@ -79,13 +81,13 @@
         "--stage",
         "diagnostic"
       ],
-      "last_observed_state": "PENDING(Dependency)"
+      "last_observed_state": "completion_artifact_passed; accounting pending"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts python3 -m pytest -q tests/test_v3*.py",
-    "passed": 78,
-    "seconds": 3.81
+    "passed": 86,
+    "seconds": 4.39
   },
   "science_acceptance": false,
   "pilot_actual_checks": {
@@ -103,5 +105,15 @@
     "max_quantile_reproduction_delta": 0.0,
     "max_any_negative_probability_upper": 0.0003422565682340643,
     "interpretation": "conditional Gaussian latent flux; pilot only, no global exclusion"
+  },
+  "diagnostic_actual_checks": {
+    "stars": 1542,
+    "views": 17386,
+    "numerical_failures": 0,
+    "paired_contrasts": 1089,
+    "passed_checks": 6,
+    "max_mu_quantile_change": 0.004724881874967224,
+    "qnear_change": 0.0003750134562249263,
+    "max_joint_change": 0.00044147455572229877
   }
 }
