@@ -34,8 +34,8 @@ Negative findings remain deliverables, never successful calibration claims.
   2048retained passesallsampler/bridge/count/numericalgates. Remaining101states
   running/queued61225864; skipbatchindex34 preservespilot. Ensemblejobs broad
   61225883/candidate61225884/holdout61225886 waitforexactgroups0–8/8–16/17–25.
-  Candidatebootstrap2–9 allpass2048retained(9/34candidate states includingzero);
-  groups8/11/12next. No contextinterpolation. Population
+  Candidatecorrections0–25 allpass2048retained atlastmetadataaudit;
+  groups15/16finishing. Candidateensemble61225884 promoteddebug. No contextinterpolation. Population
   fit/count pilotcomplete; fullensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
@@ -55,7 +55,7 @@ Negative findings remain deliverables, never successful calibration claims.
   identity nowregistered. Four-view finalcandidate predictiondriver ready with
   sharednewfield offsets andseparate8objectpilot; actualfit/predictions/fullfreeze
   stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
-  common61224421 pending. Finalfreeze/evidence/nine-view score drivers andprotocol
+  common61224421 runningdebug30min. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
   checks, notexecuted. Shared-scale/sky aggregate report nowimplemented; strict
   candidate admission/primary versusoutside-domain report protocol added, exact
@@ -78,13 +78,16 @@ Negative findings remain deliverables, never successful calibration claims.
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
   implemented/tested; photometry-onlypreparation61225647 completes8s/allPSF,
-  nooutcomesread. Post-freeze evidence remainsunrun. Availability isnot calibration; finalscientific
+  nooutcomesread. Post-freeze evidence remainsunrun. Source/role-specific cell
+  reference screens nowregistered/implemented/tested beforeopening; originalmean
+  guardmargins andcorrelated uncertainty distinct, sparse/numericalfailures retained.
+  Availability andrelativeguards are notcalibration; finalscientific
   adjudication andEnglishfigures remainrequired. Full scientific counts, final
   product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full156tests pass4.65s; four English plates visually inspected (paired62,
+- Latest full160tests pass5.34s; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

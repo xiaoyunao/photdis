@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — register product-matched observable-cell reference screens
+- Added domainassessment protocol/math/driver beforefinaltest opening: sameIDs,
+  frozen75cells/candidate membership, mainbootstrap_evidence versuscandidatezero,
+  separate newsky/sourcenew roles andindependentdistance/classchannels. Original
+  .02/.01meanmargins, >=20pairs/>=2skycells and1024whole-sky intervals staydistinct.
+- Retain numerical/nonfinite qualifiedscores infulldenominators; aNaN score isnot
+  missingreference. Sparse/no-reference cells cannotpass. Per-cell reference screens
+  do notestablishabsolute calibration orreplacefinalscientificadjudication using
+  common-scale/radial/finite-support evidence. Finalfreeze pinsnewcode/protocol.
+- Beforeunrun targetpredictionpilot, changedsharedfield assignment checkpoint to
+  verify/reuse existingbytes ratherthanrewrite onfull/resume invocation. No scientific
+  model, seed, photometric admission orreference outcome changed.
+- Validation:160tests pass5.34s;4newtests cover sparse/single-sky insufficiency,
+  meanpasswithmargin-crossingCI, nonfinite/flaggedpair retention, independentclass
+  channels and exactcandidate denominators. Syntax/shell/diffchecks pass.
+- Runtime: candidatecorrections0–25allpass2048retained atlastmetadataaudit;
+  group15finishing,16queued. Candidateensemble61225884 promoteddebug withall
+  prerequisites intact. Oldtargetcommon61224421 nowrunningdebug30min. No new
+  finalreference association orcalibrated-domain claim; othercohorts/jobs required.
+- Next: commit/sync, finishall34candidate states/ensemble and runregistered8-ID
+  predictionpilots, while completing radial/SED/structure/otherpopulation evidence.
+
 ## 2026-11-13 — complete eight bootstrap states and recover structure allocation
 - Populationgroups61225864_9/_10 COMPLETED2m05/2m13. Candidatecorrections2–9
   allpassat2048retained, eachpreserves512initialattempt; eightcompactfinalmarkers

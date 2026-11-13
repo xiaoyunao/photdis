@@ -124,7 +124,12 @@ def main():
     if freeze.exists():assert json.loads(freeze.read_text())==_INPUTS
     else:save_json(freeze,_INPUTS)
     assignment=_OUT/'shared_field_assignment.npz'
-    atomic_npz(assignment,identity=_TABLE['identity'],TYPE=_TABLE['TYPE'],assigned_field=_ASSIGNED,existing_target_field=_EXISTING,seed_prefix=np.array([320401]))
+    assignment_values=dict(identity=_TABLE['identity'],TYPE=_TABLE['TYPE'],assigned_field=_ASSIGNED,
+        existing_target_field=_EXISTING,seed_prefix=np.array([320401]))
+    if assignment.exists():
+        saved=load(assignment); assert set(saved)==set(assignment_values)
+        for key,value in assignment_values.items():np.testing.assert_array_equal(saved[key],value)
+    else:atomic_npz(assignment,**assignment_values)
     rows=list(range(len(_TABLE['identity'])))
     if a.pilot:rows=sorted(rows,key=lambda row:hashlib.sha256(f'320411:{int(_TABLE["identity"][row])}'.encode()).digest())[:8]
     with concurrent.futures.ProcessPoolExecutor(max_workers=a.workers,mp_context=mp.get_context('fork')) as pool:records=list(pool.map(one,rows))

@@ -33,6 +33,8 @@ def main():
                  'data/baseline_v1_4/specdis_raw.npz', 'data/baseline_v1_4/spdist_raw.npz',
                  'scripts/v3_1_domain_prepare.py', 'scripts/v3_1_domain_evidence.py',
                  'src/photdis/v3_1/use_domains.py', 'docs/v3_1_use_domain_protocol.md',
+                 'scripts/v3_1_domain_assessment.py', 'src/photdis/v3_1/domain_assessment.py',
+                 'docs/v3_1_domain_assessment_protocol.md',
                  'src/photdis/v3/metrics.py', 'src/photdis/v3_1/comparison.py',
                  'src/photdis/gaia.py', 'src/photdis/spectroscopy.py',
                  'docs/v3_1_final_validation_protocol.md', 'docs/v3_1_validation_roles.md',

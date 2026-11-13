@@ -11,7 +11,7 @@ cd /pscratch/sd/y/yunao/photdis_pipeline
 source /global/common/software/desi/desi_environment.sh main
 export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-stage="${1:?admission, domain-prepare, freeze, evidence, score, report or domain-evidence required}"
+stage="${1:?admission, domain-prepare, freeze, evidence, score, report, domain-evidence or domain-assessment required}"
 shift
 case "$stage" in
   admission) python -u scripts/v3_1_validation_admission.py "$@" ;;
@@ -21,5 +21,6 @@ case "$stage" in
   score) python -u scripts/v3_1_validation_score.py "$@" ;;
   report) python -u scripts/v3_1_validation_report.py "$@" ;;
   domain-evidence) python -u scripts/v3_1_domain_evidence.py "$@" ;;
+  domain-assessment) python -u scripts/v3_1_domain_assessment.py "$@" ;;
   *) echo 'Unknown validation stage' >&2; exit 2 ;;
 esac
