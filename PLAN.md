@@ -29,8 +29,8 @@ Negative findings remain deliverables, never successful calibration claims.
   Direct entry all16shards complete:26000objects/29540envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
   (6–9)/61223978(10–13), unstarted14–15group replaced61223886. Alloriginals
-  preserved. Assembly61219399 running; jointrepack61222999 passes.
-  Candidatezero boundedfit/countpilot61224010 waitsafterassembly. No contextinterpolation. Population
+  preserved. Assembly61219399 COMPLETED28m10/allpass; jointrepack61222999 passes.
+  Candidatezero boundedfit/countpilot61224010 dependenciesclear/promoteddebug30min. No contextinterpolation. Population
   fit/count/ensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
@@ -67,15 +67,17 @@ Negative findings remain deliverables, never successful calibration claims.
   remaining31native/refinement states queued. Entrypilot all6branch-context gates
   pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
   All32state entry61223167/refinement61223172 queued; assembly/posterior
-  awaitallstates numerical admission.
+  awaitallstates numerical admission. Separate shared realizedcount/seen-Gaia
+  comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
-  implemented/tested, notrun. Availability isnot calibration; finalscientific
+  implemented/tested; photometry-onlypreparation61225647 completes8s/allPSF,
+  nooutcomesread. Post-freeze evidence remainsunrun. Availability isnot calibration; finalscientific
   adjudication andEnglishfigures remainrequired. Full scientific counts, final
   product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full153tests pass4.03s; four English plates visually inspected (paired62,
+- Latest full156tests pass4.65s; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

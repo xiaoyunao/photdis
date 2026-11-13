@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-13 — complete target matrices and observable grid; add shared structure count report
+- Targetassembly61219399 COMPLETED28m10:26000objects/3540candidate/34corrections,
+  258fineaudit rows,0numericalfailures, allPSF/allrows retained. Compactcomplete
+  collected; originalobject/entry/fine files unchanged. Candidatezero fitpilot
+  61224010 dependency nowclear, promoteddebug30min toexercise boundedfits/counts.
+- Domainpreparation61225647 COMPLETED8s:75fixed cells, exact3540application/
+  519field/1732common candidate memberships. Photometry-only; no newreference
+  outcomes read. Hash-verifiedcells.csv/complete collected.
+- Added separate structure-report protocol/helper/driver aftertheunchanged
+  originalposterior: oneglobalstate perrealized512-objectcatalog, int64member/
+  backgroundcounts,65536/262144boundedMCchecks andoriginalnumericalflags. Existing
+  seen-system Gaia probability association occurs onlyafterbothposteriors complete;
+  missingmembership staysmissing. No newdata/threshold/modelselection.
+- Validation:2analytic counttests plusend-to-end512synthetic report test verify
+  shared bimodality, binomialmoments, exactlargeIDs, missingmembership andretained
+  failedbranches. All156tests pass4.65s, syntax/shell/diffchecks pass. Actual
+  structureposterior/report remainpending; code completion isnot scientificresult.
+- Response0–11 originals progressing; registeredrefinements2/3/4completed. No64
+  ensemble normalization or externalvalidation yet. Next: candidatepilot→full
+  registeredstates, remainingradial/response/structurejobs andmatchedfinalscores.
+
 ## 2026-11-13 — freeze observable evidence domains without certifying calibration
 - Added photometry-only75-cell preparation for26000application/526field/3032common,
   exactcandidate admission, observedr/dereddenedcolor/signedW1 andemptycells.
