@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-13 — complete full field prediction and common old-target control
+- Candidatefield61226370 COMPLETED4m28: all526nativePSF, fullinventory numerical
+  pass, inheritedensembleacceptedFalse. Oldtargetcommon61224421 COMPLETED22m43:
+  all3032PSF pass,0failures. Compactmarkers/summaryhashes collected; nopilot/full
+  confusion and no referenceoutcomes opened.
+- Commoncandidate61226371 running; broad61225864_0running, _1pending. Afterfull
+  queueinspection, existingbroad_2 anddependentfreeze61226412 promoteddebug30min;
+  no newwriter or dependencyremoved. Priorregular1hfreeze submissionrecord retained.
+- Remainingfinalfreeze prerequisite: full3032candidatecommon. Actualfreeze,
+  evidence association/scoring andscientificadjudication notyetcomplete.
+
 ## 2026-11-13 — queue complete prediction freeze and document fixed-highq counts
 - Candidate diagnostic milestone e889983 synchronized local/origin/NERSC.
 - Dependency-gated freeze61226412 regular1h waitsafterok61226370/61226371/

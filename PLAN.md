@@ -57,10 +57,11 @@ Negative findings remain deliverables, never successful calibration claims.
   numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
   Originalflags retained. Referenceoutcomes remainunopened; final target-prior
   identity computed withretained numericalflag. Both8-ID targetprediction pilots
-  numericalpass; fullfield/common61226370/61226371 submitteddebug30minworkers32.
+  numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
+  61226371 runningdebug30minworkers32.
   Sharedfield checkpointreuse verified; freeze61226412 waitsafterokfullfield/common
-  andoldtargetcommon. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
-  common61224421 runningdebug30min. Finalfreeze/evidence/nine-view score drivers andprotocol
+  andoldtargetcommon; freeze nowdebug30min. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
+  common61224421 completes22m43, all3032pass. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
   checks, notexecuted. Shared-scale/sky aggregate report nowimplemented; strict
   candidate admission/primary versusoutside-domain report protocol added, exact
