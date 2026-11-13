@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-14 — complete third candidate-mode shard and prepare radial figures
+- Candidate array child 61227827_2 completed in 17m39 (actual job 61228343):
+  443 native PSF objects, 371 fixed high-q, all mode numerics pass. Compact
+  marker/summary/overview/histograms authenticated and collected. First three
+  shards total 1329 objects / 1114 fixed high-q; inherited evidence flag remains.
+- Verified both exact radial resumes 61225052/61225072 running on allocated
+  nodes; progress markers showed 84/29 completed catalogs with no execution
+  failures at that snapshot. Counts describe replay progress, not final recovery.
+  Structure exact resource pilot 61228245 and mode child3 remain live.
+- After full unrolled queue check, promoted only pending response probe
+  61221623_13 to debug 30m; unchanged source, dependencies, seeds and identity.
+- Added v3_1_radial_figures.py, requiring actual complete 176-catalog/352-arm
+  summaries. Two planned English plates retain all22scenarios, both estimands,
+  all/accepted paired errors, field intervals with source-block limits, and all
+  18 class-distance nonzero-truth coverage denominators including empty cells.
+  Python syntax and git diff checks pass; no figures rendered or visually accepted.
+- Next: finish resource pilot and remaining science, then render/inspect actual
+  radial figures. Prior179tests remain latest full suite; no new scientific model.
+
 ## 2026-11-13 — implement required source/field correlated radial summaries
 - Inspectionfound originalradialreport exportscompletepercatalog outcomes butno
   source/fieldclustered aggregateuncertainty required byradialprotocol. Added

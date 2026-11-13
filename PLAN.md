@@ -92,8 +92,8 @@ Negative findings remain deliverables, never successful calibration claims.
   archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
   delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
   array61227827submittedregular1h(indices0/1debug30min); completeinventory
-  report61227828 afterokallshards. Shards0/1complete16m14/16m23, all886
-  numericalpass; remaining6required. Children2/3promoteddebug30min.
+  report61227828 afterokallshards. Shards0/1/2 complete16m14/16m23/17m39, all1329
+  numericalpass; remaining5required. Child3running,4queueddebug30min.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -129,7 +129,7 @@ Negative findings remain deliverables, never successful calibration claims.
   photometric occupancy 165 and final external comparison 104 artifact/source
   checks. Candidate-mode/domain evidence figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot passes;
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst1329fullobjects pass;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
 - External correlated report 61226775 and its two inspected figures are complete;
   finish source-qualified domain screens and scientific adjudication. Both cohorts and all nine views are already frozen and
@@ -147,6 +147,8 @@ Negative findings remain deliverables, never successful calibration claims.
   whole-catalog summary driver is nowimplemented with5newmath tests; actualrun
   waitsall352arms. Parameters and realizedcounts remain different estimands;
   all original scenarios are retained, singleton sourceblocks have no interval.
+  Two-plate radial renderer nowprepared/syntaxchecked; actualcomplete tables and
+  rendering/visualQA remainrequired.
 - Finish all 32 structure native/entry/refinement states, including exact entry
   refinement resource pilot 61228245, then actual shared-posterior/count inference
   and the fair prior-withdrawn baseline. Other31refinements keep3h limits until
