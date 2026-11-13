@@ -1,0 +1,23 @@
+{
+  "scientific_inputs": {
+    "data/v3_1/structure/entry/draw_11/complete.json": "987afe9604e5204d11db074dbbbff38c14b596ecbac163d306e4914c3b248b00",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_11/model.joblib": "b1939273844953a2f1c0d966f2499bdbbe09dfdfdb205694b19fe92ead540113",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "docs/v3_1_structure_entry_refinement_protocol.md": "6a7b106816f954851cc322aec9b84b26c77168dd04e5ef66a6130545151d882d",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4"
+  },
+  "scientific_source_sha256": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+  "execution_source_sha256": "745ac9cbdafba0afc4d7db01848bb596a815f255bf15afe50e531600210618f5",
+  "workers": 32,
+  "memory_limit_bytes": 540164263936,
+  "planning_bound_per_worker_GiB": 6,
+  "job": "61229442",
+  "scope": "Original per-context function, same input dictionary/outputs/integrand/seeds. Only process count changes; original checkpoints and failures retained.",
+  "elapsed_seconds": 624.5719707749959,
+  "maximum_child_RSS_KiB": 4174264,
+  "execution_complete": true
+}

@@ -8,7 +8,14 @@
   fitting, deliver product-matched evaluation/domain map/structure example.
   v3.0 and deployed v1 remain frozen. No fullcatalog rerun before representative
   acceptance; no timers or subagents. Seen v3 validation is regression, not blind.
-
+- v3.1 partial checkpoint2026-11-14: docs/v3_1_result.md is explicitlyincomplete.
+  Mechanism/radial/response/frozenexternal/mode/evidence-map reports complete;
+  finalcandidate calibration fails andmustnotbe adopted. Finalreferences already
+  openedafterauthenticatedfreeze; no retuning ontheir residuals. All32original
+  structureentry statescomplete,11052originalflags retained; refinements/full
+  structureposterior andcomplete102state transfer remain. CheckliveSLURM and
+  currentPLAN/executionreceipts beforeanyresume; neverrestart fromstalearray
+  parentstatus orrestorecanceleddependencies. Fivefinalplates andfinalQA pending.
 
 - Completed v3.0 research delivery2026-11-12: docs/v3_0_result.md,
   docs/v3_0_atlas.md, docs/v3_0_catalog.md and requirements ledger.

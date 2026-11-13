@@ -4,6 +4,7 @@ Active development: **v3.1 scientific calibration and use domains**, authorized
 2026-11-13 from the [latest Pro review](docs/pro_review_31f1277.md).
 [Four-package protocol](docs/v3_1_protocol.md) ·
 [Integrated methods and estimands](docs/v3_1_methods.md) ·
+[Integrated results — delivery in progress](docs/v3_1_result.md) ·
 [Evidence and remaining-work ledger](docs/v3_1_requirements_result.md) ·
 [Registered radial comparison](docs/v3_1_radial_protocol.md) ·
 [Current evidence and status](docs/v3_1_status.md).
@@ -16,8 +17,11 @@ failures stay explicit and do not authorize retuning on final outcomes. The main
 candidate is response12/calibration12 with the fixed-kernel, candidate-cohort
 population and evidence-weighted luminosity bootstrap; the structure application
 and 64-response probe have separately documented identities.
-
-
+The frozen final validation does not support adopting the correction as a
+calibrated distance product. Complete transfer, structure inference and final
+domain adjudication remain required; numerical or artifact checks alone do not
+establish scientific calibration. The integrated report explicitly marks pending
+results, with the live execution state in `PLAN.md` and `WORKLOG.md`.
 
 Latest completed research delivery: **Photdis v3.0 continuous SED and population system**.
 All 1,183,990 qualified existing-field candidates, their full joint posterior links,

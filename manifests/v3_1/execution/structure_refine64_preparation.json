@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "scripts/v3_1_structure_entry_resume64.py": "1eb3693b3457f3fd4a6fafabf071175fa24e3feaed7641e03480eae0128654ef",
+    "scripts/run_v3_1_structure_entry_resume64.sh": "fda3c0c08664d7322081149717e6f0a978ee62ba54710a3d5340d79a5bcb9746",
+    "scripts/v3_1_structure_entry_resume48.py": "808d421d630b1bb9e282bff7f04d523ad0a879d4fe629701ac043f7d2f7dd0c9",
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "manifests/v3_1/structure/entry_refined/draw_10/complete.json": "706b04845cfc65f57dba6c97307475d69ef88f01513ee7e4550ab709a0cf40f1",
+    "manifests/v3_1/structure/resource_execution/draw_10/job_61240361.json": "c33d3e8fc4c4f9c158726fed8555dcf02f2a2efd53e903258dddd2b5c4fbeacc"
+  },
+  "target_draw": 13,
+  "workers": 64,
+  "planning_bound_per_worker_GiB": 5,
+  "total_planning_GiB": 320,
+  "measured48worker_child_RSS_KiB": 4158760,
+  "measured48worker_batch_MaxRSS_KiB": 166810212,
+  "prior_node_memory_bytes": 540164288512,
+  "parse_import_shell_checks_passed": true,
+  "memory_planning_check_passed": true,
+  "submitted": false,
+  "execution_complete": false,
+  "scope": "One bounded resource pilot prepared only. Original context function, input dictionary, integrand, seed and2^23schedule unchanged. Per-worker5GiB bound exceeds observed maximum child RSS (<4.1GiB); fresh70%memory/affinity guards on actualallocation. No wider64-worker adoption before measurement; pending/source/absence/dependency proofs required before replacingstate13."
+}

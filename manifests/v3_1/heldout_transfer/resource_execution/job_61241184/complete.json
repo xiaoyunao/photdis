@@ -1,0 +1,134 @@
+{
+  "plan_sha256": "4ad5c613b2da5c35585a1a463042b2cbcdc097d3b3f06b7cf2fffc4f7c65714a",
+  "resource_script_sha256": "16760ed519b36bc12d31d71303ce544b9477fe3b8e5b18d9781341135491c9f9",
+  "job": "61241184",
+  "workers": 12,
+  "memory_limit_bytes": 540164263936,
+  "planning_bound_per_worker_GiB": 24,
+  "results": [
+    {
+      "case": "holdout",
+      "correction": 14,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_14.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_14/complete.json",
+      "marker_sha256": "582c5a29e052d8e27882f234f179eea1c001d24fe9110bfe4f4e2b01b8aa49a7",
+      "numerically_passed": true
+    },
+    {
+      "case": "holdout",
+      "correction": 13,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_13.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_13/complete.json",
+      "marker_sha256": "7cdf1a63b8b6d50fd50489a9fb3a790c12b70149fd4d52f90de36d41c8ebb012",
+      "numerically_passed": true
+    },
+    {
+      "case": "holdout",
+      "correction": 9,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_09.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_09/complete.json",
+      "marker_sha256": "1b741ffbc40e326ca669baf5ca5db6da7ddccd2d1483005a39f1cf03917011dc",
+      "numerically_passed": true
+    },
+    {
+      "case": "candidate",
+      "correction": 33,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_candidate_33.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_33/complete.json",
+      "marker_sha256": "50e04abf19d70caa545dfde97654cb4582a2928d6579a246f7c0c26aa4bb3fc5",
+      "numerically_passed": false
+    },
+    {
+      "case": "candidate",
+      "correction": 32,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_candidate_32.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_32/complete.json",
+      "marker_sha256": "c5a14bdaecbae84b92a1ed51e1f4b7ea6c454e8d5f8954c9134dea6c9b1c85d8",
+      "numerically_passed": false
+    },
+    {
+      "case": "holdout",
+      "correction": 11,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_11.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_11/complete.json",
+      "marker_sha256": "1046be99f29e4a3b3424c309d49f928466ad549bd700c7022691522d523455c1",
+      "numerically_passed": true
+    },
+    {
+      "case": "holdout",
+      "correction": 12,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_12.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_12/complete.json",
+      "marker_sha256": "53ee660dece7ab7e13526977014b4fcc753a26283ea022bd49e73d71259b3b52",
+      "numerically_passed": true
+    },
+    {
+      "case": "candidate",
+      "correction": 30,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_candidate_30.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_30/complete.json",
+      "marker_sha256": "c7e9a6b9748b63cda07a16043141685326ddfc0ef207b08758c1843694082fb2",
+      "numerically_passed": false
+    },
+    {
+      "case": "holdout",
+      "correction": 15,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_15.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_15/complete.json",
+      "marker_sha256": "e196c2dc4f3808dea3ff28b912110f82c5fdef87b31fe0d2895717cbf15b1f13",
+      "numerically_passed": true
+    },
+    {
+      "case": "holdout",
+      "correction": 8,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_08.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_08/complete.json",
+      "marker_sha256": "791457a479b37cee05cce15ec22b1daf6790b386b1837bd090a759b6f48b8689",
+      "numerically_passed": true
+    },
+    {
+      "case": "holdout",
+      "correction": 10,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_holdout_10.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/holdout/correction_10/complete.json",
+      "marker_sha256": "f5c618c698de12cbd3bd7029737b983d913bdc44367caff954a0acbbf7cbdab3",
+      "numerically_passed": true
+    },
+    {
+      "case": "candidate",
+      "correction": 31,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61241184_candidate_31.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_31/complete.json",
+      "marker_sha256": "441e20fd7f1d4d165f48ffae6cd5a00bcd071e0e671071fc86903d066bc81c26",
+      "numerically_passed": false
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Resource grouping only, unchanged frozen CLI per state. All original outcomes retained; no scientific selection, weight, numerical gate or state normalization change.",
+  "elapsed_seconds": 1048.3410017360002,
+  "maximum_single_child_RSS_KiB": 1586748
+}

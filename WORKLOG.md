@@ -1,5 +1,32 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate94 transfer states and retain conditional support failures
+- Pack3/raw61241184 COMPLETED17m42:4candidate30–33retainbroad-entry_level
+  countgatefailures;8holdout8–15pass. Pack4/raw61238249 COMPLETED18m08:
+  holdout16–27 all12pass/96checks. All94states authenticate1881compactchecks;
+  33originalnumericfailures retained, allcandidateexcept20. Originalgroups5/17
+  remainrequired forlast8states; nopartial102-state mixture accepted.
+- Completecandidate34 conditionalbase support: bothjoint/generalized rules
+  0/34broad versus34/34candidate. UnitESS1–1.982 versus848.225–1005.644.
+  All30collectedholdout conditionalstates numericalpass but0/30support for
+  bothscores/envelopes; unitESS3.221–14.237broad/1.059–12.923candidate.
+  Frozenrules/sourcehashesverified; correlatedstateinventory, notindependent
+  repetitions orcompleteevidence-mixture inference. Prior18holdout summary kept.
+- Refined11/23 COMPLETE10m36/2m06, all512pass, original134/3flags retained;
+ 10compactchecks eachpass. Total13/32refinementmarkers complete. Existing
+  sparse21/22 promoteddebug30 after134flag10m36measurement/fresh5-jobcap;
+  same32-worker writers, nocancellation ornewscience.
+- Preparedone64-worker resourcepilot adapter frommeasured48-worker25m36/
+  159.083GiB batch:5GiBperworker/320GiBguard<=70%actualallocation, observed
+  childRSS<4.1GiB. Originalfunction/inputdictionary/seed/2^23schedule unchanged.
+  Parse/import/bashsyntax andpriornode memorybudgetcheck pass; notlaunched,
+  no measured64-workerresult orwideradoption. Targetpending13 onlywithfresh
+  source/zero-runtime/absence/dependencyproof andaftercommit/sync.
+- README linksintegratedprogressreport; AGENTS recordsactualpartialcheckpoint
+  andonce-opened finalreferences. RequirementsC2/E4 nowconcisecurrentevidence,
+  fulljobhistory remainsWORKLOG/executionreceipts/git. Finaltransfer/structure/
+  domain/fiveplates stillrequired; no scienceacceptance ornewmodel/deployment.
+
 ## 2026-11-14 — complete all original structure entry states and measure48-worker refinement
 - Initial29 COMPLETED13m09; all32initialstates nowcollected. Added reproducible
   scripts/v3_1_structure_entry_compact_check.py:448actualgroupedchecks over32768

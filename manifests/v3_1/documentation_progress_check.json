@@ -8,8 +8,8 @@
     "manifests/v3_1/response_figures/acceptance.json": "e69fb9a6fb5252f8e70bdbc75d450446007663a0fb66525e385bcb1a486b199a",
     "docs/v3_1_atlas.md": "66b0b3b134cad5b65a75c1ed7c88ea5791f829377a00b3657b9d1fe360961bef",
     "docs/v3_1_methods.md": "85f69f8ed00944630483fe91fd2e59551a26df3fdea50fb2a4b2970d970ae0a6",
-    "docs/v3_1_status.md": "a939b18d409148c332642226ff8b3219cd6f02da51f52c0bf070fe5aef39efef",
-    "docs/v3_1_requirements_result.md": "ada11cae8103cede73a7a537610e771c0f21acadadb6ea4b779755bc30e271d5",
+    "docs/v3_1_status.md": "e26df2a6845a898c223c0c84f74a38a7cda36f3f452f648d637f2d8c6650885d",
+    "docs/v3_1_requirements_result.md": "271cc47c3cf0688c7f956046ce7450a9f61db356ae301aacaae7af639c263480",
     "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
     "docs/v3_1_radial_result.md": "1f2bc716ae509574eb6b805cbc26dbfdd0c06cedf75ed08bde5975cb5515814c",
     "docs/v3_1_response_result.md": "82aaee5acf16fd16e499562af3ba1b97caac8d0b304bd0d1812ec52226a7c357",
@@ -18,7 +18,7 @@
     "docs/v3_1_domain_evidence_result.md": "c28af87096982db084eb59c4e39330d648a77ec0e157b26e4b9b4dd5a5a69ad0"
   },
   "documents": 10,
-  "local_links_checked": 140,
+  "local_links_checked": 143,
   "links": [
     {
       "document": "docs/v3_1_atlas.md",
@@ -458,6 +458,21 @@
     {
       "document": "docs/v3_1_status.md",
       "target": "v3_1_radial_result.md",
+      "exists": true
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/compact_inventory_94_states.json",
+      "exists": true
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/candidate34_holdout30_support.json",
+      "exists": true
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/structure/initial_entry_inventory.json",
       "exists": true
     },
     {

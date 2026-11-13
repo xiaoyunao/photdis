@@ -194,6 +194,16 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- All94/102conditionaltransfers authenticate1881compactchecks;33original
+  numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
+  support passesonlysamecandidateenvelope; all30collectedheldout conditional
+  supportgatesfail. Lastoriginalgroups5/17 required; no mixtureacceptance.
+  Refined11/23 complete10m36/2m06/all512pass, original134/3flags/10checks each;
+  total13/32refinements. Sparse21/22 promoteddebug30 afterfreshcap.
+- One64-worker resourceadapter prepared, notlaunched:320GiBplanningguard,
+  measured48-workerchildRSS<4.1GiB, sameoriginalfunction/seed/inputs. Parse/
+  import/shell checks pass. Target13 onlyifstillpending/sourceproof andafter
+  commit/sync; no wider64-workeruse untilactualcompletionmeasurement.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original
   numericfailures; candidate20passesall, other11newstates failbroadcountgate.
   Refined8 complete34m58/all512pass/10checks, original512flags retained.
@@ -223,8 +233,8 @@ Negative findings remain deliverables, never successful calibration claims.
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes
   3613 and domain evidence 1309 artifact/source checks; response compact 351.
-- Reproducible scripts/v3_1_transfer_compact_check.py validates70states with
-  1401checks, preserves29failures; default102guardrejectspartialinventory.
+- Reproducible scripts/v3_1_transfer_compact_check.py validates94states with
+  1881checks, preserves33failures; default102guardrejectspartialinventory.
   Standalone48-worker exactrefinementadapter prepared (288GiBplanningbound,
   sameoriginalcontextfunction); replacementpilot10/61240361running after
   zero-runtimecancellation/sourceproof/dependencyrepair; nowCOMPLETE25m36/all512pass.
