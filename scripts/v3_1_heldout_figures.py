@@ -123,7 +123,7 @@ def main():
         for ci, (case, label, color) in enumerate(cases):
             rows = select('predictive_summary.csv', case, envelope)
             state = status[case, envelope]
-            flags.append(f"{case}: available={state['available']}, accepted={state['accepted']}")
+            flags.append(f"{case}: available={state['available']}, conditional numeric={state['accepted']}")
             if not rows:
                 for ax in axes[ei]:
                     ax.text(ci, .5, 'Unavailable', rotation=90, transform=ax.get_xaxis_transform(), ha='center', va='center', fontsize=9)

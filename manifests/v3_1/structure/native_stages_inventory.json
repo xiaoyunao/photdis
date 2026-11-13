@@ -1,0 +1,807 @@
+{
+  "records": [
+    {
+      "stage": "native",
+      "draw": 0,
+      "path": "data/v3_1/structure/native/draw_00/complete.json",
+      "sha256": "83874f9c2cd64821e2ce47f61b208fcc4b3a316d60dc97ae39d5f369e1019948",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 16
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 1,
+      "path": "data/v3_1/structure/native/draw_01/complete.json",
+      "sha256": "487481fa35e3b0a66348145e70981982e072b483c74b41db89360789e8ba9f5e",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 30
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 2,
+      "path": "data/v3_1/structure/native/draw_02/complete.json",
+      "sha256": "235a24a8365eecf20d45502607e294e9d30c29235270722d34351caef90d11ea",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 25
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 3,
+      "path": "data/v3_1/structure/native/draw_03/complete.json",
+      "sha256": "2f0cd00c2f4cb09800cf3faa0a7df0d19f34f31b6ff62080613eb65968e152da",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 6
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 4,
+      "path": "data/v3_1/structure/native/draw_04/complete.json",
+      "sha256": "31a7a233ee9dfac47c95ab1db76dbdac1c35d67540c8af24f45b6f54ef974c89",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 22
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 5,
+      "path": "data/v3_1/structure/native/draw_05/complete.json",
+      "sha256": "819564bbebaa7438f2aec9545b7cd4cc9b4dd89aaaaf267068c31c33c5dc1576",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 16
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 6,
+      "path": "data/v3_1/structure/native/draw_06/complete.json",
+      "sha256": "21b79d64f144fe9af0f53311056fca4406c7041c83ede5f8c1ea9368a496743d",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 12
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 7,
+      "path": "data/v3_1/structure/native/draw_07/complete.json",
+      "sha256": "d34c870e2b2623faa0549bdec79ec5ce9aae41340732ddca2e029f8da52bbd3f",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 42
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 8,
+      "path": "data/v3_1/structure/native/draw_08/complete.json",
+      "sha256": "3f74dcf7ce7485fbb54beac414b933616e99fe9d2a61d9b60c28022369b5631f",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 18
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 9,
+      "path": "data/v3_1/structure/native/draw_09/complete.json",
+      "sha256": "fcf03c418b211ce3e76bafae2c4775d27d941f9912fe5739704f23c4b6373055",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 9
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 10,
+      "path": "data/v3_1/structure/native/draw_10/complete.json",
+      "sha256": "3f26e836ef09b765ce6d90ea2e3c4a9eac90aad074d7c5b0116f6b2b1d5457de",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 4
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 11,
+      "path": "data/v3_1/structure/native/draw_11/complete.json",
+      "sha256": "c9b6c6a5cdc8384a423ee09150e6a8c0804a52d74e633ec1212aaa8989d4d889",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 19
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 12,
+      "path": "data/v3_1/structure/native/draw_12/complete.json",
+      "sha256": "200a605138856e80a958def79672bfa21966cbc36a028179a1abe2ff9756e624",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 7
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 13,
+      "path": "data/v3_1/structure/native/draw_13/complete.json",
+      "sha256": "03ca4852a76bc115cfb8ae3213b66c64a42ea32a9701720463b0a32259a6c203",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 3
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 14,
+      "path": "data/v3_1/structure/native/draw_14/complete.json",
+      "sha256": "0ac95705245bc16ed00181a424bd3938be53da5081fe7d1b717617c8e06cba71",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 13
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 15,
+      "path": "data/v3_1/structure/native/draw_15/complete.json",
+      "sha256": "0158536f86477ee35967df0dbdefcdd09cdcd379a63e096a1871c38ce911b77e",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 12
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 16,
+      "path": "data/v3_1/structure/native/draw_16/complete.json",
+      "sha256": "21dde9a4d4f3d20de613af266bbbffd3cd457dca74971211b2be86f2c29f5d85",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 40
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 17,
+      "path": "data/v3_1/structure/native/draw_17/complete.json",
+      "sha256": "f040ba84089e6b9653f8e83e8754ec3856a94c69d1d2214254627cf9ec262d7f",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 14
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 18,
+      "path": "data/v3_1/structure/native/draw_18/complete.json",
+      "sha256": "40ef2d4c84e92178ab476cab86855a515671e35f45632a14dcb23443c94644f2",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 12
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 19,
+      "path": "data/v3_1/structure/native/draw_19/complete.json",
+      "sha256": "a65b68ccea9091b60338e31e1c2c644fa8cdcf17f1b746ca81c724e4428f99b0",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 4
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 20,
+      "path": "data/v3_1/structure/native/draw_20/complete.json",
+      "sha256": "bb9b96f138d8e1385078ed880730ec15fe6a81040208af775c8e76bf95630da5",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 10
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 21,
+      "path": "data/v3_1/structure/native/draw_21/complete.json",
+      "sha256": "5f6159badb37809e78cd98d36d030843c7b357edb1d4bbf0950969f06821498d",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 7
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 22,
+      "path": "data/v3_1/structure/native/draw_22/complete.json",
+      "sha256": "c111fc3e18c86d7cb1ce68a265ada37869dff0c5385b80408a132d2ed10da6fc",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 16
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 23,
+      "path": "data/v3_1/structure/native/draw_23/complete.json",
+      "sha256": "672261c765183aea74424b8383ba90428c64dc66518319a282f44b87c6a0ce2a",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 8
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 24,
+      "path": "data/v3_1/structure/native/draw_24/complete.json",
+      "sha256": "3be8cb42bb0a391886a74f539027d0d5e026fd970a3e854c3de6647feedfc63f",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 10
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 25,
+      "path": "data/v3_1/structure/native/draw_25/complete.json",
+      "sha256": "989d084300e34af170acac8ae864ebe7f9f3ed0d5fa44221e3e771f871dad888",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 14
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 26,
+      "path": "data/v3_1/structure/native/draw_26/complete.json",
+      "sha256": "bff8f5704cd436b5bcf791553cd158de9906376905d88d7c4f9d5a95bbcdba22",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 12
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 27,
+      "path": "data/v3_1/structure/native/draw_27/complete.json",
+      "sha256": "f1679f76fa99ea0d3145e57d87b3fb26bf2a2b9e44adaadbcf2f239914b19529",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 13
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 28,
+      "path": "data/v3_1/structure/native/draw_28/complete.json",
+      "sha256": "905590a5d249f8c18dafe54794e9f776d6f726bc3fe7d2ea728f6d18d629b443",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 2
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 29,
+      "path": "data/v3_1/structure/native/draw_29/complete.json",
+      "sha256": "d16b32f94e6844b597be00c9d13fc68c6b8998622a9e3516616f8713d3e7920b",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 29
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 30,
+      "path": "data/v3_1/structure/native/draw_30/complete.json",
+      "sha256": "c21053fe8df2570701c14fc158e61488120ec439d805931988b2910a25b56f02",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 33
+      }
+    },
+    {
+      "stage": "native",
+      "draw": 31,
+      "path": "data/v3_1/structure/native/draw_31/complete.json",
+      "sha256": "82cfc3f05f999ba931ef9e0bf61468806f91e0270f7e42a2869ccdfbb7973c22",
+      "n": 512,
+      "all_PSF": true,
+      "passed": false,
+      "failure_fields": {
+        "failures": 12
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 0,
+      "path": "data/v3_1/structure/native_refined/draw_00/complete.json",
+      "sha256": "39a1b8483cfef538bf452b7a5114b3a03c77f3689086628dbe78b28bfe60baa8",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 16,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 1,
+      "path": "data/v3_1/structure/native_refined/draw_01/complete.json",
+      "sha256": "278474c5ccbd066152ed445b45c563c8ba27e57b0077300c09ccbfc4562106ee",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 30,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 2,
+      "path": "data/v3_1/structure/native_refined/draw_02/complete.json",
+      "sha256": "033e5dc627bdaaeb69fdf1bdb0552861babf542bb6b9de3455d65812b0690475",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 25,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 3,
+      "path": "data/v3_1/structure/native_refined/draw_03/complete.json",
+      "sha256": "8fc8865b87827b3ae701b97cf49157ac51ce47fc246fdb0b71f5f4c29c030bcf",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 6,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 4,
+      "path": "data/v3_1/structure/native_refined/draw_04/complete.json",
+      "sha256": "7ef9f52d7d582a0d09469209e0529e9ca17773f2f8189410e24118a857ee13c5",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 22,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 5,
+      "path": "data/v3_1/structure/native_refined/draw_05/complete.json",
+      "sha256": "9b5abc92e868fdcd8e106ae984d0c06c4f13b772ba2d7c49de98ee2b89209745",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 16,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 6,
+      "path": "data/v3_1/structure/native_refined/draw_06/complete.json",
+      "sha256": "a383ce7c6402751b86a5b6f94f9dae671f7541bd46bd3fe1f6d28b595d4a852f",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 12,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 7,
+      "path": "data/v3_1/structure/native_refined/draw_07/complete.json",
+      "sha256": "8635338a597c359bf0737b314b7b0af0b9d544d895e8e59b8355422e9d424101",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 42,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 8,
+      "path": "data/v3_1/structure/native_refined/draw_08/complete.json",
+      "sha256": "d5419eb00dad5cc2adac758a1c59e89f71b4976559c935991e1c4bb2a74a652e",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 18,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 9,
+      "path": "data/v3_1/structure/native_refined/draw_09/complete.json",
+      "sha256": "e13fa64cfe6e7e35e616f7fe4a49ebaf5c50cfe1530893bf136a82b3954f5275",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 9,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 10,
+      "path": "data/v3_1/structure/native_refined/draw_10/complete.json",
+      "sha256": "9f3671c584d5d61fb1e4d5861f4c1cf8bd90ccb02558bfce47383b25e06de2e9",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 4,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 11,
+      "path": "data/v3_1/structure/native_refined/draw_11/complete.json",
+      "sha256": "9eb6a331d2f14464587b105aa4767b5c300fc7ae74ecec6ad73390e69ca7f0b5",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 19,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 12,
+      "path": "data/v3_1/structure/native_refined/draw_12/complete.json",
+      "sha256": "59b05686d1e6b97d2eb540d99e8772e34e57c7a5a6441a537fae7bfb3ebf2223",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 7,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 13,
+      "path": "data/v3_1/structure/native_refined/draw_13/complete.json",
+      "sha256": "7ab2cc773292a2769ecf31c37a764577b5d33c2e5f71297db8dcb489ebe2bf38",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 3,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 14,
+      "path": "data/v3_1/structure/native_refined/draw_14/complete.json",
+      "sha256": "e26e5edc1d0c9f6a0e45d8d118127cd52d5fdbd5a207ee7a47493a6b61c7c2de",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 13,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 15,
+      "path": "data/v3_1/structure/native_refined/draw_15/complete.json",
+      "sha256": "7c8d36ecf567cb84edb8d9b1d4b30ab3976cc173fb31fb10d4ee1c89b83cad19",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 12,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 16,
+      "path": "data/v3_1/structure/native_refined/draw_16/complete.json",
+      "sha256": "fcbecaa26576112f6afca993d55381a569df4ca713b762b3db2f55cfe8210ceb",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 40,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 17,
+      "path": "data/v3_1/structure/native_refined/draw_17/complete.json",
+      "sha256": "40e3e2c28be0b0f8fc12a66906acf65252cfc31a204ded3113e61133c573f7cb",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 14,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 18,
+      "path": "data/v3_1/structure/native_refined/draw_18/complete.json",
+      "sha256": "4a68a35bbf8874ab3e6aeb11db4d2378134cbb0e679242db2e98c027eda6d081",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 12,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 19,
+      "path": "data/v3_1/structure/native_refined/draw_19/complete.json",
+      "sha256": "ee9acc999722db1813120ff97cb95edd4f647ecc3ad5e376d82eb9f543d86e8a",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 4,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 20,
+      "path": "data/v3_1/structure/native_refined/draw_20/complete.json",
+      "sha256": "0448a50d0d276f2cd8f63c1e68362db2be90db16c6022ddc21a67a2c80e09895",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 10,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 21,
+      "path": "data/v3_1/structure/native_refined/draw_21/complete.json",
+      "sha256": "47ebb82060886f1db2a581360e04b4cabb7b305c5b98393e83d3215d68ac5dd9",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 7,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 22,
+      "path": "data/v3_1/structure/native_refined/draw_22/complete.json",
+      "sha256": "da0be7ec4d8c112204705347111555e17f4d21d7ee695cc3bdaa7dabd80a3ea2",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 16,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 23,
+      "path": "data/v3_1/structure/native_refined/draw_23/complete.json",
+      "sha256": "7999bc2032e526628da071b874a23dd0b1f2428af62657585fa079c22848ceb5",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 8,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 24,
+      "path": "data/v3_1/structure/native_refined/draw_24/complete.json",
+      "sha256": "0f3cbd4bb4e9a71c6bfb06464450079cba5b68138e9a98b9b560662ac2666552",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 10,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 25,
+      "path": "data/v3_1/structure/native_refined/draw_25/complete.json",
+      "sha256": "e54ce3f511e447a597dfe9060ee7499997358b69d0cd92132790f5618df266ee",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 14,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 26,
+      "path": "data/v3_1/structure/native_refined/draw_26/complete.json",
+      "sha256": "58646bdd68aeff00e09fc264e0cacdae88360336921f2495e73c93b42fe41bf4",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 12,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 27,
+      "path": "data/v3_1/structure/native_refined/draw_27/complete.json",
+      "sha256": "8ca4844d3f706dc0dc5a89cf4556b05334e5540678f89e3fb5a2fb887c19fe62",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 13,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 28,
+      "path": "data/v3_1/structure/native_refined/draw_28/complete.json",
+      "sha256": "3c27febc8e03ba2b801bf8ee93219758c9e71110d934c117395ade0fc0c13eae",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 2,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 29,
+      "path": "data/v3_1/structure/native_refined/draw_29/complete.json",
+      "sha256": "aed172a0a5c8c5880560a5484a184bff3abbe62b2de0dfea8ec1f85ea76b1ff6",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 29,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 30,
+      "path": "data/v3_1/structure/native_refined/draw_30/complete.json",
+      "sha256": "76624c483a9e9ea13cccdd82f38e7b95e384f6c2fbaf5c173ae7b5cdf5e3eb70",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 33,
+        "unresolved": 0
+      }
+    },
+    {
+      "stage": "native_refined",
+      "draw": 31,
+      "path": "data/v3_1/structure/native_refined/draw_31/complete.json",
+      "sha256": "c4022060e6adc97668a57e7199f16cbb940690f98bf4f0d5304e5a00a790d401",
+      "n": 512,
+      "all_PSF": true,
+      "passed": true,
+      "failure_fields": {
+        "original_failures": 12,
+        "unresolved": 0
+      }
+    }
+  ],
+  "states": 32,
+  "stages": 2,
+  "scope": "Bounded completion-marker inventory only; full per-object payload authentication remains in allocated structure assembly."
+}

@@ -1,0 +1,506 @@
+{
+  "inputs": {
+    "manifests/v3_1/heldout_transfer/broad/correction_00/complete.json": "9e8cef038580d28ca8246828154e78f29b28a1f41a1b07e25048dbb7f7ba79a2",
+    "manifests/v3_1/heldout_transfer/broad/correction_00/checks.csv": "1295b6e30af9fa277a35dea68c11e8e2e9c8917747c188eecdd7f71480dc4115",
+    "manifests/v3_1/heldout_transfer/broad/correction_00/predictive_summary.csv": "c9dc4d0029a6c0030c8e3ec49c51712fcf65464b9feabe20d06307f0e56263c3",
+    "manifests/v3_1/heldout_transfer/broad/correction_01/complete.json": "f1994c726f03e5f429775ff5befccb5a24d08ee7eaca15f1fd25ed8b4338b0fb",
+    "manifests/v3_1/heldout_transfer/broad/correction_01/checks.csv": "395dd5fe37587771b16a2ec20e65de01aa74a064be4215bf0d00728a94f6d5fa",
+    "manifests/v3_1/heldout_transfer/broad/correction_01/predictive_summary.csv": "4bddb1db7844d7757483acae1c4aa21fe181d27f354a6c408f4708ebdc51844b",
+    "manifests/v3_1/heldout_transfer/broad/correction_02/complete.json": "d629886021a8030eea8251b2f58c3a84afb58c37551ae8ceff2eeaef5ebd41cf",
+    "manifests/v3_1/heldout_transfer/broad/correction_02/checks.csv": "0fd46906701c543b368b8578e4bb977e80eaf6e57f0786cd7aca058f1c1d5ecb",
+    "manifests/v3_1/heldout_transfer/broad/correction_02/predictive_summary.csv": "3ebca880d0285f7b16478f9e51a3ad3d810115cb1a02f257c6337d0f626ccd9c",
+    "manifests/v3_1/heldout_transfer/broad/correction_03/complete.json": "81780b8dc0147c1207467e7620011eea4654d72a00ad96f0a8e18aafc220da70",
+    "manifests/v3_1/heldout_transfer/broad/correction_03/checks.csv": "46dad67cf9065c83545ee1798dcae3b64dd313760d5b119992af3ef35262ee79",
+    "manifests/v3_1/heldout_transfer/broad/correction_03/predictive_summary.csv": "abff8dd5693bcfd21b921771b0b8c6c42f2ea394495f5e0d552043a38e406f28"
+  },
+  "checks": [
+    {
+      "check": "state_0",
+      "passed": true
+    },
+    {
+      "check": "cohorts_0",
+      "passed": true
+    },
+    {
+      "check": "hash_0_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_0_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_broad_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_0_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "hash_0_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_0_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_broad_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_0_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "state_1",
+      "passed": true
+    },
+    {
+      "check": "cohorts_1",
+      "passed": true
+    },
+    {
+      "check": "hash_1_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_1_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_broad_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_1_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "hash_1_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_1_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_broad_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_1_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "state_2",
+      "passed": true
+    },
+    {
+      "check": "cohorts_2",
+      "passed": true
+    },
+    {
+      "check": "hash_2_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_2_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_broad_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_2_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "hash_2_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_2_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_broad_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_2_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "state_3",
+      "passed": true
+    },
+    {
+      "check": "cohorts_3",
+      "passed": true
+    },
+    {
+      "check": "hash_3_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_3_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_broad_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "conditional_gate_3_candidate_native_fine",
+      "passed": true
+    },
+    {
+      "check": "hash_3_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "8variants_3_predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_broad_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_broad_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_broad_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_broad_native_fine",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_candidate_base",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_candidate_entry_seed",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_candidate_entry_level",
+      "passed": true
+    },
+    {
+      "check": "predictive_n_3_candidate_native_fine",
+      "passed": true
+    }
+  ],
+  "actual_checks": 88,
+  "passed": true,
+  "states": 4,
+  "case": "broad",
+  "population_fit_excludes_heldout": false,
+  "predictive_support": [
+    {
+      "correction": 0,
+      "envelope": "broad",
+      "score": "joint",
+      "importance_ess": 1394.5844301651964,
+      "half_log_density_delta": 0.04341710082371719,
+      "supported": true
+    },
+    {
+      "correction": 0,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "importance_ess": 1584.0643151372606,
+      "half_log_density_delta": 0.036200025817379355,
+      "supported": true
+    },
+    {
+      "correction": 0,
+      "envelope": "candidate",
+      "score": "joint",
+      "importance_ess": 4.57477453376599,
+      "half_log_density_delta": 1.4533540390384587,
+      "supported": false
+    },
+    {
+      "correction": 0,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "importance_ess": 8.681468728620532,
+      "half_log_density_delta": 1.1975786881102977,
+      "supported": false
+    },
+    {
+      "correction": 1,
+      "envelope": "broad",
+      "score": "joint",
+      "importance_ess": 1266.738423171758,
+      "half_log_density_delta": 0.08379905893525574,
+      "supported": true
+    },
+    {
+      "correction": 1,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "importance_ess": 1539.7197871034684,
+      "half_log_density_delta": 0.04401012464950327,
+      "supported": true
+    },
+    {
+      "correction": 1,
+      "envelope": "candidate",
+      "score": "joint",
+      "importance_ess": 14.959445709144738,
+      "half_log_density_delta": 1.188782002447624,
+      "supported": false
+    },
+    {
+      "correction": 1,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "importance_ess": 20.308544545677655,
+      "half_log_density_delta": 0.8717067356119514,
+      "supported": false
+    },
+    {
+      "correction": 2,
+      "envelope": "broad",
+      "score": "joint",
+      "importance_ess": 1289.0564335246743,
+      "half_log_density_delta": 0.0694419092615135,
+      "supported": true
+    },
+    {
+      "correction": 2,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "importance_ess": 1518.0458006524404,
+      "half_log_density_delta": 0.05067469493224053,
+      "supported": true
+    },
+    {
+      "correction": 2,
+      "envelope": "candidate",
+      "score": "joint",
+      "importance_ess": 25.94818337308034,
+      "half_log_density_delta": 0.6765414234232594,
+      "supported": false
+    },
+    {
+      "correction": 2,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "importance_ess": 37.03972889641475,
+      "half_log_density_delta": 0.8720259591627837,
+      "supported": false
+    },
+    {
+      "correction": 3,
+      "envelope": "broad",
+      "score": "joint",
+      "importance_ess": 1240.0710134669039,
+      "half_log_density_delta": 0.07539377667853842,
+      "supported": true
+    },
+    {
+      "correction": 3,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "importance_ess": 1506.4461440787522,
+      "half_log_density_delta": 0.061413169794832356,
+      "supported": true
+    },
+    {
+      "correction": 3,
+      "envelope": "candidate",
+      "score": "joint",
+      "importance_ess": 20.22551052716215,
+      "half_log_density_delta": 0.9753868433417665,
+      "supported": false
+    },
+    {
+      "correction": 3,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "importance_ess": 27.243871198979026,
+      "half_log_density_delta": 0.8167363311858935,
+      "supported": false
+    }
+  ],
+  "scope": "First4 conditional broad-fit states only, not full102state/ensemble transfer or independent distance validation. Conditional numerical gates and whole-catalog predictive support are distinct."
+}

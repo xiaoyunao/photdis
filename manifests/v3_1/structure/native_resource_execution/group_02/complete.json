@@ -1,0 +1,104 @@
+{
+  "plan_sha256": "98bffe675ab3a140499e016228c8cafb002190bca2c2bf3e0d57a820d28e85c6",
+  "group": 2,
+  "indices": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "job": "61232598",
+  "original_stage_records": [
+    {
+      "index": 18,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_18/complete.json",
+      "sha256": "40ef2d4c84e92178ab476cab86855a515671e35f45632a14dcb23443c94644f2"
+    },
+    {
+      "index": 18,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_18/complete.json",
+      "sha256": "4a68a35bbf8874ab3e6aeb11db4d2378134cbb0e679242db2e98c027eda6d081"
+    },
+    {
+      "index": 19,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_19/complete.json",
+      "sha256": "a65b68ccea9091b60338e31e1c2c644fa8cdcf17f1b746ca81c724e4428f99b0"
+    },
+    {
+      "index": 19,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_19/complete.json",
+      "sha256": "ee9acc999722db1813120ff97cb95edd4f647ecc3ad5e376d82eb9f543d86e8a"
+    },
+    {
+      "index": 20,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_20/complete.json",
+      "sha256": "bb9b96f138d8e1385078ed880730ec15fe6a81040208af775c8e76bf95630da5"
+    },
+    {
+      "index": 20,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_20/complete.json",
+      "sha256": "0448a50d0d276f2cd8f63c1e68362db2be90db16c6022ddc21a67a2c80e09895"
+    },
+    {
+      "index": 21,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_21/complete.json",
+      "sha256": "5f6159badb37809e78cd98d36d030843c7b357edb1d4bbf0950969f06821498d"
+    },
+    {
+      "index": 21,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_21/complete.json",
+      "sha256": "47ebb82060886f1db2a581360e04b4cabb7b305c5b98393e83d3215d68ac5dd9"
+    },
+    {
+      "index": 22,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_22/complete.json",
+      "sha256": "c111fc3e18c86d7cb1ce68a265ada37869dff0c5385b80408a132d2ed10da6fc"
+    },
+    {
+      "index": 22,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_22/complete.json",
+      "sha256": "da0be7ec4d8c112204705347111555e17f4d21d7ee695cc3bdaa7dabd80a3ea2"
+    },
+    {
+      "index": 23,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_23/complete.json",
+      "sha256": "672261c765183aea74424b8383ba90428c64dc66518319a282f44b87c6a0ce2a"
+    },
+    {
+      "index": 23,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_23/complete.json",
+      "sha256": "7999bc2032e526628da071b874a23dd0b1f2428af62657585fa079c22848ceb5"
+    },
+    {
+      "index": 24,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_24/complete.json",
+      "sha256": "3be8cb42bb0a391886a74f539027d0d5e026fd970a3e854c3de6647feedfc63f"
+    },
+    {
+      "index": 24,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_24/complete.json",
+      "sha256": "0f3cbd4bb4e9a71c6bfb06464450079cba5b68138e9a98b9b560662ac2666552"
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Sequential unchanged original structure-native drivers, at most32workers. No new scientific input, seed, grid, numerical gate, normalization or completed-product rewrite.",
+  "elapsed_seconds": 393.39655983200646,
+  "maximum_child_RSS_KiB": 1442948
+}

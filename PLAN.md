@@ -49,7 +49,7 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad0–22/24–27 conditional states pass2048;
+  mainwithcut orrelax evidence gate. All33 broad conditional states except23 pass2048;
   original512failures retained. State23 broad requires8192: fitcomplete but
   group61225864_5 TIMEOUT30m12 duringjointcounts. Onlystate23 exactresume61232648
   submittedregular2h; existingbroadensemble61225883 andtransferchild5 retargeted.
@@ -113,7 +113,7 @@ Negative findings remain deliverables, never successful calibration claims.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
   analytical baseline withdrawal/entry/math foundation tested; preparation61221747
   complete61221747. Nativepilot7/512initialfailures allpass.005sidecars61222475;
-  remaining31native/refinement states queued. Entrypilot all6branch-context gates
+  all32native/refinement states nowcomplete, originalfailures retained. Entrypilot all6branch-context gates
   pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
   All32state entry61223167/refinement61223172 underway; queuedrefinementindices
   extendedto3h. Originalrefinement0 TIMEOUT30m27; terminal/absence/sourcehashverified,
@@ -121,12 +121,14 @@ Negative findings remain deliverables, never successful calibration claims.
   afterterminal/absence/hashchecks. PilotCOMPLETED26m06:all512contexts/1024
   branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
   same32workerexecution nowarray61229422for30states2–31 aftercorr61223167;
-  originalstate1running remainsuntouched. Keep3h limits/max3new+1old nodes.
+  originalstate1nowcomplete1h58m16/all512pass. Pendingstates2–31 now1h
+  (>2x exact32-worker pilot), max3nodes; native/refinedall32complete,490original
+  nativefailures retained and32/32refined markerpass. Fullpayloadcheckinassembly.
   Complete-state chain submitted: assemble61232760 -> infer61232761 ->
   report61232762. Assembly requires61231239/61223167/61223172_1/61229422;
   completedrefinementdraw0 authenticated. Allstates/numerical gates mandatory. Pendingentry1–31limits now30min basedon
-  13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
-  improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
+  13m37pilot; pendingrefinements now1h (>2x exact32-worker pilot). Pending
+  populationgroups restored2h afterbroad23timeout; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
   implemented/tested; photometry-onlypreparation61225647 completes8s/allPSF,
@@ -161,7 +163,10 @@ Negative findings remain deliverables, never successful calibration claims.
   original/pooledfailed normalization andnewESS1.023628; no addedresponse search.
 - Complete remaining broad/heldout conditional populations, their all-34-state
   ensembles and frozen sky-transfer comparisons61231554/report61231678.
-  Twoactual-source transferplates prepared; notrendered/accepted.
+  Firsttransfergroup61231554_0 complete17m47/fourbroad states,6000/935PSF;
+  88compactchecks. CandidatecutjointESS4.57–25.95 fails support despite conditional
+  numericpass; these arein-sample, notheldoutfitresults. Twoactual-source
+  transferplates prepared; notrendered/accepted.
   Historicalcompleteddependencies repaired with52actualstate hashes; preserve
   initialrejectedreportdependencyjournal. Native/joint/entry matrices,
   all candidate states and fixed-high-q joint counts are already complete.
@@ -171,13 +176,17 @@ Negative findings remain deliverables, never successful calibration claims.
   No additional radialrun is required by the current protocol.
 - Finish all 32 structure native/entry/refinement states, including exact entry
   refinement draw0 nowcomplete61228245/all512pass. Replacementarray61229422
-  handlesstates2–31 withvalidated32workeradapter, originaldraw1continues8workers.
-  Keep3h limits/max4totalnodes. Existingdependentchain61232760/61/62 nowqueued
+  handlesstates2–31 withvalidated32workeradapter, originaldraw1completedall512pass.
+  Pendingrefinementlimits1h/max3nodes basedon1548.72s exactpilot; native/refined
+  all32complete,490originalfailures/0refinedunresolved. Entrystate3 has24initialfailures. Existingdependentchain61232760/61/62 nowqueued
   foractualshared-posterior/count inference andfairprior-withdrawn baseline;
   initialsubmissionreceipts alone are notscientificcompletion.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.
+- Complete-evidence domainjoin andone6-panel status/ambiguity figure prepared;
+  actualexecution requiresfull102transfer andfull32structure reports. No new
+  gates/model/labels; failedmain cannotbe promotedby stablemode sidecars.
 - Complete scientific use-domain adjudication, source tables, English figures,
   visual QA, result/ledger/README/AGENTS and safe milestone sync. No deployment,
   million-object rerun, timers or subagents; large scientific products stay NERSC.

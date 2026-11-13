@@ -1,0 +1,33 @@
+{
+  "case": "broad",
+  "correction": 32,
+  "attempts": [
+    {
+      "draws": 512,
+      "fit": "data/v3_1/target_fits/broad/correction_32_s512/complete.json",
+      "fit_sha256": "c2bfeb9b6d15f37532ac62518d2ba2d13cb1821012a86849fb370d09e89dea79",
+      "sampler_passed": true,
+      "bridge_passed": false,
+      "passed": false,
+      "counts": "data/v3_1/target_fits/broad/correction_32_s512/joint_counts/complete.json",
+      "counts_sha256": "1f20bff0d86fca764465fd9ad84069a879cac025dbf4b41b4cc34cc905ea2052",
+      "counts_passed": false
+    },
+    {
+      "draws": 2048,
+      "fit": "data/v3_1/target_fits/broad/correction_32_s2048/complete.json",
+      "fit_sha256": "f3abb5338aa2f4e9c79f56c995155d6f22d311a52d8f18937b7243cc5443667b",
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "passed": true,
+      "counts": "data/v3_1/target_fits/broad/correction_32_s2048/joint_counts/complete.json",
+      "counts_sha256": "6b0c3adfa1d283fdd9b229d6233b438bd4866a3bc5a53914bc14dc6b988d97e2",
+      "counts_passed": true
+    }
+  ],
+  "selected_draws": 2048,
+  "passed": true,
+  "script_sha256": "12154f579d6d0a523abc5d7793b7ae48436570d6dd7d0114d720d5c5d819ea78",
+  "job": "61225932",
+  "scope": "Registered512/2048/8192retained schedule,4chains/fixed512warmup/seeds/priors/selection. All originals and terminal numerical failures retained; no science outcome enters selection."
+}

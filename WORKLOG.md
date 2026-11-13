@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-14 — complete native structure sidecars and first actual sky-transfer group
+- All32structure native/refined states complete; boundedmarker inventory retains
+  490original native failures,32/32refined markerspass/0unresolved. Lastresource
+  groups61231239_2/3 complete6m50/5m11. Fullpayload authentication stillinassembly.
+- Original8-worker entryrefinement1 completes1h58m16:all512pass,509original
+  failures retained. Entrystate3 completes13m03 with24originalfailures; its
+  registeredrefinement pending. Pending32-worker states2–31 limitsnow1h (>2x
+  actualpilot1548.72s), max3nodesunchanged; originalrunningtasks untouched.
+- Broadconditionalstates33/34 nowcompactverified/all2048pass; onlystate23
+  final8192jointcounts remain. Exactresume61232648 promotedpendingdebug30min
+  afteractualcount-stage84s/392s at512/2048 support~26mincount-only expectation;
+  allthreefitmarkers reused. OriginalTIMEOUT30m12 remains, no sciencechange.
+- Transfergroup61231554_0 COMPLETED17m47:fourbroad states each6000/935PSF,
+  allconditionalnumericgatespass;88actualcompactchecks. In-sample broad joint
+  ESS1240–1395/halfdelta.043–.084, candidatecutESS4.57–25.95/halfdelta.677–1.453
+  failsjointsupport. No full102state, independentvalidation orensemble claim.
+- Preparedcomplete-evidence domainjoin andoneEnglish6-panel status/ambiguity
+  renderer. Requiresactual102transfer/full32structure reports; mainfailure,
+  sparse/source/sky evidence andconditionalmultimodality remainseparate.
+  Pythonparse/shellsyntax/gitdiffcheck pass; notexecuted/rendered/accepted.
+- Pendingentry6 QOSdemotionattempt rejectedbyNERSC policy; no taskcanceled or
+  replacementsubmitted, originalreceipt retained. Refinement3 staysqueued.
+- Next: submitdomainjoin aftersync withbothpendingreport dependencies; complete
+  remainingentry/refinement/holdout/transfer runs, writtenadjudication andfinalQA.
+
 ## 2026-11-14 — register complete-state structure posterior dependency chain
 - Submittedexistingfrozen assemble61232760 -> infer61232761 -> report61232762.
   Assembly waits nativegroups61231239, originalentry61223167, survivingold
