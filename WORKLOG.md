@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — register matched hard-selection and exact pilot-cache resumption
+- Registered local-dust matched hard-support integration on same3contexts:
+  own512baseline then2048/8192/32768, twofixedseeds, unchanged.003/.025gridgates.
+  Shared old tested kernel worker/backend;64workers and per-kernel checkpointing.
+  Correction operator still must match bothlikelihood andselection before fitting.
+- Dust audit61217300 queueddebug. Wideproduction0/48failed exactcacheidentity:
+  existing .01pilot inputs have audit_selection=True; batch requestedFalse.
+  Addedseparate resumed coordinator that preservesTrue forbothpilotgrids and
+  usesnewsummary directories; originalscientificdrivers/checkpoints unchanged.
+  Currentwidejobs continue; resume must run onlyafterbothallocations end.
+- Newdrivers py_compile/bash-n pass; reviewedcoordinator diff onlyauditflag,
+  driveridentity/summarypath. Ledger updated; no finaloutcomes opened.
+- Next: run dustaudit/matchedentry, finishall176scenarios andresponse refits.
+
 ## 2026-11-13 — pass calibration guards and expose entry covariance mismatch
 - Luminosity guard61216786 COMPLETED122s:947objects,96numericalchecks pass;
   all15bootstrap class guards pass. Evolved39stars/2cells: score+.04171nat,
