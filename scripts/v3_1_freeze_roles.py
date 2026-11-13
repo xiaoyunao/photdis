@@ -70,7 +70,9 @@ def main():
     for cohort, t in tables.items():
         use = masks[cohort]; roles = field_role if cohort == 'field' else np.full(len(use), 'new_common_scale')
         payload = {k:v[use] for k,v in t.items()}
-        payload.update(role=roles[use], field=t['cell'][use], design_weight=np.ones(int(use.sum())))
+        # New sky cells must not collide with the original named field IDs.
+        payload.update(role=roles[use], field=np.full(int(use.sum()), -1, dtype='i8'),
+                       design_weight=np.ones(int(use.sum())))
         atomic_npz(out/f'{cohort}_photometry.npz', **payload)
         for role in np.unique(roles):
             keep = use & (roles == role)
