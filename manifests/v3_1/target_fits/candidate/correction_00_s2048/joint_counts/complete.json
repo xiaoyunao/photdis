@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "data/v3_1/target_fits/candidate/correction_00_s2048/complete.json": "d7859abbb97b8d1497789819d863b5b772579a42fdc5cfb13c45ed7b466cf530",
+    "data/v3_1/target_fits/candidate/correction_00_s2048/population.npz": "f01c74cac0c6b05aa089713e6bc1652254c9d62f6bead761f358807cd627812e",
+    "data/v3_1/target_matrices/complete.json": "c6ad2c8ec5785057c91b623e7c766e864a78d2a56d4a8fbf787a0cf6a8530cd8",
+    "data/v3_1/target_matrices/matrices.npz": "917c59a025e17b916c634bb0a019c077d165986c28cb12ac83286eb6108cf110",
+    "scripts/v3_1_target_counts.py": "96c78a1d4def95d387baa8a548b0500087e3cbe5da027be544e4e11deff9e53c",
+    "src/photdis/v3/population.py": "4025d3a15e5e11461985160b44fbc67e0a0562f86d20b034b485bf70cd778e48",
+    "docs/v3_1_target_counts_protocol.md": "1c62af805ca4bbcccb6aafea872eb3089e98084ee59c5a4e148b5364ea9a46bc",
+    "docs/v3_1_target_numerical_transfer.md": "599b1a780f82913a8a18b44181c3c99e9e446131ec4638fed3ce6e0c1a256446",
+    "data/v3_1/target_joint_matrices/complete.json": "d1dba37147365dca1cbb8b897880fdee9a3052f2f1c227155215c648e5540cc1",
+    "data/v3_1/target_joint_matrices/metadata.npz": "759cd047a1d25a2aea84384f0d8139443ea97326f84c85a12457cc04c4281a54",
+    "data/v3_1/target_joint_matrices/correction_00.npz": "ef4790251ae2cb40b547e89688a0c84bdd6b3adfa065bf7d89efc05b71658f7f"
+  },
+  "outputs": {
+    "native_fine_counts.npz": "d2603bcd8bcd637c7878c9927b71081f7a558d422ad2d24eb58c1a79776af910",
+    "checks.csv": "6577eca0f4d1dbbfe675016f14f4b50dfb5fffb129b2ec4afe92a9a3d4c8b5c3",
+    "entry_level_counts.npz": "bcf031d13017ff48f73591df29305d69d2328acae7f0581ee5dffbdb62ad8a7e",
+    "numerical_weights.npz": "dfd8a3b1baa2754c31d8cfe0a7a4c1d5ddc07fe7d04184072fc50367c9d2cc22",
+    "base_counts.npz": "12ecb8a3bad02cca4985704f3d32098dd1b254f0f55d5c00218932b09fd4f0aa",
+    "per_star.npz": "d2c630648c31eb9831d8ec3e33dab4097ebe62c386fea3ad4e44883ff6940747",
+    "source_markers.json": "3778a7e27ff4066c7a9feeac15df7827f655ea6fd96b9ce89ee341c6a1d3962e",
+    "entry_seed_counts.npz": "f771c928ccba186ecf5e1199c05eb2f3ac5ec72264d76caff615682050716276"
+  },
+  "case": "candidate",
+  "correction": 0,
+  "draws": 2048,
+  "objects": 3540,
+  "fine_audited": 36,
+  "all_PSF": true,
+  "sampler_passed": true,
+  "bridge_passed": true,
+  "passed": true,
+  "checks": [
+    {
+      "variant": "base",
+      "maximum_probability_delta": 0.0,
+      "maximum_count_mean_delta": 0.0,
+      "marginal_half_delta": 0.003494264706678324,
+      "count_covariance_conserved": true,
+      "passed": true
+    },
+    {
+      "variant": "entry_seed",
+      "maximum_probability_delta": 0.0005357102484609411,
+      "maximum_count_mean_delta": 0.09411392678845942,
+      "marginal_half_delta": 0.0034724576035414234,
+      "count_covariance_conserved": true,
+      "importance_ess": 8191.400602989931,
+      "draws": 8192,
+      "half_log_normalizer_delta": 0.00024447780871739155,
+      "passed": true,
+      "physical_entries": true
+    },
+    {
+      "variant": "entry_level",
+      "maximum_probability_delta": 0.0020497939156101652,
+      "maximum_count_mean_delta": 0.348845358143528,
+      "marginal_half_delta": 0.00361398782721567,
+      "count_covariance_conserved": true,
+      "importance_ess": 8181.751678820451,
+      "draws": 8192,
+      "half_log_normalizer_delta": 0.0008556738378739936,
+      "passed": true,
+      "physical_entries": true
+    },
+    {
+      "variant": "native_fine",
+      "maximum_probability_delta": 5.8591870338187135e-05,
+      "maximum_count_mean_delta": 6.898374999764201e-05,
+      "marginal_half_delta": 0.00349426381511983,
+      "count_covariance_conserved": true,
+      "importance_ess": 8191.9999999745,
+      "draws": 8192,
+      "half_log_normalizer_delta": 4.661978181275117e-08,
+      "passed": true,
+      "physical_entries": true
+    }
+  ],
+  "job": "61224010",
+  "scope": "Conditional observed-sample shared class x true-distance counts. Native fine transfer audits only the registered subset; seed/level entry transfers use all fitted objects. Conditional categorical/shared covariance separate. No parent expansion, final response ensemble, high-q selection, or new-field validation claimed."
+}

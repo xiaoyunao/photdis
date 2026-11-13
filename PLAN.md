@@ -30,8 +30,10 @@ Negative findings remain deliverables, never successful calibration claims.
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
   (6–9)/61223978(10–13), unstarted14–15group replaced61223886. Alloriginals
   preserved. Assembly61219399 COMPLETED28m10/allpass; jointrepack61222999 passes.
-  Candidatezero boundedfit/countpilot61224010 dependenciesclear/promoteddebug30min. No contextinterpolation. Population
-  fit/count/ensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
+  Candidatezero61224010 COMPLETED1m49:512countMCfailure retained,
+  2048retained passesallsampler/bridge/count/numericalgates. Remaining101states
+  readyafter sync; skipbatchindex34 preservespilot. No contextinterpolation. Population
+  fit/count pilotcomplete; fullensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits:28complete(groups0–6 includingexact

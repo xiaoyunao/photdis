@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — verify the first conditional population/count fit
+- Candidatezero61224010 COMPLETED1m49. Fourchains512retained passsampler/bridge
+  butcount marginalhalfdelta.007580 fails.005; registered2048retained refinement
+  passesallsampler/evidence/shared-count/numerical-transfer gates. Original512
+  fit/count products retained, compactbothattemptmarkers/CSV collected.
+- Initial512seed/level transfers have maxprobabilitydelta.000543/.002052 and
+  maxcountmeandelta.0963/.3454, allwithin thresholds; original failure wasMC
+  stability, notchangedscience. Noexternalreference outcomes read.
+- Fullregistered102conditionalstates ready tolaunch aftersync. Batchwrapper now
+  accepts PHOTDIS_SKIP_TARGET_INDEX=34 toleave the separately completed candidate
+  zero pilot marker/job provenance intact; no fittingcode/model/seeds changed.
+- Structureentry-refinement0 stillrunning at23min under30min allocation, with
+  many2^23contexts unfinished. Queuedremaining31indices extendedto3h; scheduler
+  deniedrunningchild extension(Access/permission denied). Preserveactivewriter;
+  ifterminaltimeout, inspectabsence/checkpoints andexactresume with3h, no duplicate.
+- Validation: wrapperbashsyntax/diffcheckpass;156previousmathtests unchanged.
+  Next: commit/sync then submitremaining101states, completeallensembles/validation;
+  retainallscientific/numericalfailures andcheckstructuretimeout before recovery.
+
 ## 2026-11-13 — complete target matrices and observable grid; add shared structure count report
 - Targetassembly61219399 COMPLETED28m10:26000objects/3540candidate/34corrections,
   258fineaudit rows,0numericalfailures, allPSF/allrows retained. Compactcomplete
