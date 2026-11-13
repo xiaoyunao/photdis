@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-13 — prepare paired mechanism plates and record scheduler limits
+- Candidate normalization mediancontext pilot submitted61215145 regular1h;
+  independent finite-context quadrature results still pending.
+- Implemented twoEnglish paired diagnostic plates preserving sourceCSV rows,
+  denominators/skyintervals and1originalnumericflag. Syntax/shell checks pass;
+  actual generation/format/visual checks pending. Added explicit hashverified
+  PNG/PDF collection to separate figures/ from small manifest records.
+- Scheduler accepted catalog48local61214836 debug30min and lowerpriority to
+  let short ancestry/flagchecks proceed. QoS update for61214837 was rejected
+  by the scheduler's submit limit;61214837/38 remain regular. Corrected ledger;
+  this is a resource limit, not scientific failure or approval rejection.
+- Native resume has readall53004bricks and is assembling admissions. Catalog48
+  broad8192 coarseacceptance passes, fineaudit inprogress. No final rolefreeze.
+- Next: inspect actualnativeadmissions/history, finish numerical refinements,
+  render/review pairedplates and execute selection-matched population work.
+
 ## 2026-11-13 — match candidate selection to observed brightness and QRF support
 - Added conditional nativegrz Gaussian survival integration with original
   r<20, allmagerr<.1 and exactQRFsupport. Calibration transforms likelihood

@@ -271,7 +271,7 @@
     {
       "job_id": "61214835",
       "purpose": "catalog48 broad numerical extension",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "RUNNING",
       "qos": "debug",
       "timelimit": "00:30:00"
     },
@@ -280,21 +280,24 @@
       "purpose": "catalog48 local numerical extension",
       "last_observed_state": "PENDING",
       "qos": "debug",
-      "timelimit": "00:30:00"
+      "timelimit": "00:30:00",
+      "nice": 10000
     },
     {
       "job_id": "61214837",
       "purpose": "catalog112 broad numerical extension",
       "last_observed_state": "PENDING",
-      "qos": "debug",
-      "timelimit": "00:30:00"
+      "qos": "regular",
+      "timelimit": "01:00:00",
+      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted."
     },
     {
       "job_id": "61214838",
       "purpose": "catalog112 local numerical extension",
       "last_observed_state": "PENDING",
-      "qos": "debug",
-      "timelimit": "00:30:00"
+      "qos": "regular",
+      "timelimit": "01:00:00",
+      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted."
     },
     {
       "job_id": "61214982",
@@ -309,6 +312,17 @@
       "dependency": "afterok:61214816",
       "last_observed_state": "PENDING",
       "qos": "debug"
+    },
+    {
+      "job_id": "61215145",
+      "purpose": "median candidate-envelope exact selection numerical pilot",
+      "qos": "regular",
+      "timelimit": "01:00:00",
+      "last_observed_state": "PENDING",
+      "args": [
+        "--context",
+        "1"
+      ]
     }
   ],
   "local_validation": {
