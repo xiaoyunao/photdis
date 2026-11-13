@@ -578,6 +578,44 @@
       "last_observed_state": "COMPLETED",
       "elapsed_seconds": 56,
       "numerical_passed": true
+    },
+    {
+      "job_id": "61218976",
+      "purpose": "All34 correction shared numerical proposal pilot",
+      "wrapper": "scripts/run_v3_1_gaussian_importance_pilot.sh",
+      "args": [],
+      "qos": "debug",
+      "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61218977",
+      "purpose": "All526 field validation numerical sidecars",
+      "wrapper": "scripts/run_v3_1_validation_refine.sh",
+      "args": [
+        "field"
+      ],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61218978",
+      "purpose": "All3032 common-scale validation numerical sidecars",
+      "wrapper": "scripts/run_v3_1_validation_refine.sh",
+      "args": [
+        "common"
+      ],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61218979",
+      "purpose": "Exact resume response draws1000 through1003 after original timeout",
+      "wrapper": "scripts/run_v3_1_response_refit.sh",
+      "args": [
+        "--array=0"
+      ],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
     }
   ],
   "local_validation": {

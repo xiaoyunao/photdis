@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — launch full numerical sidecars and native target pilot implementation
+- Submitted61218976debug sharedproposal/all34state pilot;61218977field and
+  61218978common regular2h fullvalidation numericalsidecars. Reference outcomes
+  remain unopened; original coarse/fine flags are retained.
+- Confirmed61216483_0 TIMEOUT30m29s; exact fourdraw resume61218979 submitted
+  regular2h after originalallocation ended. Other responsearray tasks continue.
+- Implemented registered131-object native targetresponsepilot: allkernels,
+  originaladaptive grids unitedwith.02/.01, same34correction states andone
+  commonlogscale perobject. Freezes3540candidate flags/threehashedheldoutfields.
+- Validation: Pythoncompile andshellsyntax pass. Actualallocatednativepilot
+  pending; no targetfit or successfulscientific calibration claim.
+- Next: sync/submittargetpilot; inspectsharedproposal/validationresults and
+  finishradial/responsejobs before population/evidence/count inference.
+
 ## 2026-11-13 — pass joint-entry audit and retain common-scale numerical failures
 - Jointentry61217972 COMPLETED56s:all17tasks pass at524288, two-seed/level guards;
   independentold-grid classintegrals differ.00023998(reference)/.00022654(point).

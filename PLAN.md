@@ -46,6 +46,9 @@ Matched shared-target-prior contrasts complete with evolved-star regression; ret
 Candidate-envelope normalization includes brightness/error/QRFsupport;3math checks
 and outcome-blind contextpilot registered. Medianpilot fails QMC gates; bounded2048/8192 independentseed refinement registered before matched refitting.
 Finish radial pilots then all176catalogs and response/systematics work. Independent32response draws complete61216457; fullrefits61216483 pending. Exactentrybackend check passes; median8192QMC refinement fails .007913/.003009; local-dust18context audit maxclassdelta6.89e-6; matchedhardcuts stillrequire ownchecks. Exact supportcertificate realaudit passes; Gaussian-basis jointintegration17tasks pass. Sharedproposal/all34state pilot registered. Frozenfield526prediction finechecks pass; common3032has2flaggedIDs/6views, full3558numericalsidecar registered beforefinalscores.
+Sharedproposal61218976/fullvalidation61218977–78 submitted; responsegroup0 timeout
+resumed61218979. Registered native131object targetpilot implemented, allocated
+execution pending. No targetfit/evidence/count result yet.
 No automatic million-object products, deployment, timers or subagents.
 
 
