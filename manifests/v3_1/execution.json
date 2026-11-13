@@ -58,9 +58,28 @@
       ],
       "requested_cpus": 64,
       "timelimit": "00:30:00",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "RUNNING",
       "qos": "debug",
       "scheduling_change_record": "manifests/v3_1/diagnostic_debug_qos.json"
+    },
+    {
+      "job_id": "61212560",
+      "purpose": "native PSF/historical-role feasibility census",
+      "wrapper": "scripts/run_v3_1_qualify_inventory.sh",
+      "qos": "debug",
+      "last_observed_state": "RUNNING"
+    },
+    {
+      "job_id": "61212562",
+      "purpose": "full diagnostic paired report",
+      "wrapper": "scripts/run_v3_1_report.sh",
+      "qos": "debug",
+      "dependency": "afterok:61212409",
+      "args": [
+        "--stage",
+        "diagnostic"
+      ],
+      "last_observed_state": "PENDING(Dependency)"
     }
   ],
   "local_validation": {

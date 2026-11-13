@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — register matched radial flexibility comparison
+- Checkpoint51440cb verified local/origin/NERSC. Full diagnostic61212409 RUNNING;
+  native feasibility61212560 RUNNING; full paired report61212562 waits afterok.
+- Registered docs/v3_1_radial_protocol.md before recovery outcomes: fixed SED/
+  binary/within-class tilt, original five broad bases versus shared-location/
+  width local component with three regularized class amplitudes. All112old
+  catalogs plus2/4/8/16kpc×.08/.25mag×8repeats; proper priors and numerical gates.
+- Added isolated radial objective and native selection-curve interpolation.
+  Five focused tests pass: analytic gradients, likelihood/selection cancellation,
+  exact narrow Gaussian convolution, unresolved-grid rejection, error-scale
+  translation and profile hull/support flags. No radial recovery run yet.
+- Next: native likelihood/selection driver and recovery; complete diagnostic
+  strata/prior comparisons; available-reference role freeze before correction.
+
 ## 2026-11-13 — latent posterior audit and native-reference feasibility
 - Latent job61212377 COMPLETED74s exit0:0;50views, exact quantile reproduction.
   Downloaded/hash-verified CSV and marker. Maximum any-negative union upper
