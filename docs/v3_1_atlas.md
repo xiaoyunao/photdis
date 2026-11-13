@@ -255,7 +255,9 @@ The heldout mixture passes the frozen joint-support rule in the broad selection
 (unitESS103.872), but fails it in the candidate selection(21.669). Broad-fit
 candidate selection fails half-draw stability despiteESS388.104. In-sample
 candidate support does not establish transfer. All main views retain inherited
-absolute-evidence failure. Pointwise photometric scores are not distance truth.
+absolute-evidence failure. WeightESS is not autocorrelation-adjusted and doesnot
+count independent bootstrapreplications; passing thefinite support rule doesnot
+prove fullconvergence. Pointwise photometric scores are not distance truth.
 BothPNG300dpi/PDFplates andall12panels visually inspected after tick repair;
 158actual source-row/format checks pass, andthe written result passes625checks.
 [Full result](v3_1_transfer_result.md);

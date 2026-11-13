@@ -10,9 +10,11 @@
     "manifests/v3_1/target_ensemble/broad/complete.json": "f61707d2b049a6409a3840feef2f7d4c04a47e4fd40c6b978fec54547b883889",
     "manifests/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
     "manifests/v3_1/target_ensemble/holdout/complete.json": "f89f8be46d04ca77311d2ee86383e62170cdff8395619e882fa7f537cdcb099e",
-    "scripts/v3_1_transfer_result.py": "fa48fcd037eb7f31f106303c647f91633bc3e24f4d098f77cc2652b908819b35"
+    "scripts/v3_1_transfer_result.py": "3fc37e9f63f918cf28351eb6ab9de46a307d582954850114c4d61655e76495b0",
+    "src/photdis/v3_1/predictive.py": "d009e5702214012f7ae73323096f75a0574cc04eefd0120788be0d70fbaa5496",
+    "scripts/v3_1_target_fit.py": "a0ed3b924cef26596c909cb03132395f791d1c6de5e4e2adf67292b8dff54434"
   },
-  "report_sha256": "f3d917bfee84d0136edf5fcc99f7d1a2e6c151edacc1fbde8551cafa3452c50c",
+  "report_sha256": "15f9ba5dd6137e8985adcd30484e6049c11cf878aefaf641d196099a65b73963",
   "checks": [
     {
       "check": "complete102PSF_without_references",

@@ -155,7 +155,7 @@ def main():
                                     source='predictive_summary.csv', **r))
         status_lines.append(envelope_label + ' — ' + '; '.join(flags))
         axes[ei, 0].set(title=envelope_label + ' | Pointwise score', ylabel='Design-weighted mean log density')
-        axes[ei, 1].set(title=envelope_label + ' | Shared support', ylabel='Joint predictive effective draws', yscale='log')
+        axes[ei, 1].set(title=envelope_label + ' | Shared support', ylabel='Joint predictive weight ESS', yscale='log')
         axes[ei, 1].axhline(100, color='.4', ls='--', lw=1)
         axes[ei, 2].set(title=envelope_label + ' | Half-draw sensitivity',
                         ylabel='Absolute joint log-density difference\n(symmetric log scale)', ylim=(0, half_upper))
@@ -175,8 +175,8 @@ def main():
     fig.text(.5, .86, 'Circles: unit-object joint prediction. Squares: generalized design-weighted joint prediction (not a physical catalog density).', ha='center', fontsize=11)
     for i, line in enumerate(status_lines):
         fig.text(.5, .15 - .035 * i, line, ha='center', fontsize=10)
-    fig.text(.5, .065, 'Support requires effective draws ≥ 100 AND half log-density change < 0.2. Low support is retained, never flattened.', ha='center', fontsize=11)
-    fig.text(.5, .025, 'Photometric prediction does not establish true-distance accuracy, population recovery or independent contamination.', ha='center', fontsize=11)
+    fig.text(.5, .065, 'Support rule: weight ESS ≥ 100 AND half log-density change < 0.2. Weight ESS is not autocorrelation-adjusted.', ha='center', fontsize=11)
+    fig.text(.5, .025, 'Photometric support does not prove full convergence, true-distance accuracy, population recovery or independent contamination.', ha='center', fontsize=11)
     finish(fig, 'heldout_predictive_support')
     csv_rows(meta / 'plotted.csv', plotted)
     outputs[str((meta / 'plotted.csv').relative_to(ROOT))] = sha(meta / 'plotted.csv')

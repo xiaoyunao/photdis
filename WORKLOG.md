@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — distinguish predictive weight support from independent sampling precision
+- Inspectedtarget_fit.py andpredictive.py: targetdraws arefourHMCchains flattened
+  byiteration; jointESS is1/sum(normalized_predictive_weight²), withnoauto-
+  correlation adjustment. Odd/evenhalves comparechains0/2versus1/3; finite
+  bootstrapstates are notindependentdatareplicates. Thislimitsconvergenceclaims.
+- Clarifiedresultgenerator/report/methods/integratedresult andfigureaxis/caption;
+  frozenproductioncode,102outcomes andthresholds unchanged. Actualreport625checks
+  andfigure158checks pass. Supportplate visuallyreinspected; countsPNG andplotted
+  source rows byte-identicaltoc4d2f2a. Prioracceptedversions preservedingit.
+- Current23/32structurestates,19/22plates; queue confirms15/16running andothers
+  pending. Fullposterior/domain/finalclosure remain. No newmodel orsimulation.
+- Next: commitnewvisualprovenance, rerunaggregate19check, continueexistingjobs.
+
 ## 2026-11-14 — authenticate nineteen visual records and twenty-three structure refinements
 - Newarray18/raw61247267 COMPLETED17m49,all512pass/original397flags retained. Python1052.386s,
   maxchild4191348KiB; unified23states pass504checks/23552branchrows, preserving

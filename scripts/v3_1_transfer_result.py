@@ -147,6 +147,13 @@ def main():
 任一失败都保留，不能压平权重或把高逐对象平均分数当作联合支持充分。
 条件数值接受包含原总体混合的数值门槛；逐对象概率稳定不解除原证据失败。
 
+这里的联合预测ESS是归一化预测权重的1/sum(w²)，衡量有限抽样权重集中度，
+不是校正HMC自相关后的有效独立样本数，也不是32个校正自举状态的独立重复次数。
+当前总体抽样把四条链按迭代交错展平，奇偶半样本因此比较链0/2与链1/3；
+该检查补充权重集中度，但不能证明所有链相关误差或系统误差已被覆盖。
+原总体参数的Rhat/链ESS、绝对证据门槛和此处预测权重支持是不同诊断。
+“支持通过”仅指上述冻结的有限权重与半样本规则，不能升级为联合预测已充分收敛。
+
 ## 同对象天空对比与计数
 
 {chr(10).join(contrasts)}
@@ -171,6 +178,8 @@ qnear为P(d<10kpc)。原始类别×距离计数采用0–2、2–5、5–10、10
     output = ROOT / 'docs/v3_1_transfer_result.md'
     output.write_text(text)
     inputs[str(Path(__file__).relative_to(ROOT))] = sha(Path(__file__))
+    for name in ['src/photdis/v3_1/predictive.py', 'scripts/v3_1_target_fit.py']:
+        inputs[name] = sha(ROOT / name)
     save_json(root / 'transfer_result_sources.json', dict(inputs=inputs, report_sha256=sha(output),
         checks=checks, actual_checks=len(checks), passed=True, scientific_acceptance=False,
         scope='Complete actual source authentication and count/support checks; no true-distance calibration claim or visual-review acceptance.'))

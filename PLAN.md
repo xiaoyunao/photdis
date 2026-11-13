@@ -209,18 +209,20 @@ Negative findings remain deliverables, never successful calibration claims.
   Collected52missingnative/refined-native markers (now32each), PSF/state/source
   andoriginal-markerhashlinks checked; largepayloads remainallocatedassembly.
 - Unifiedfigure checker scripts/v3_1_figure_delivery_check.py defaults toall22
-  namedplates; current --completed-only verifies17plates/240source/hash/format
-  andcommittedvisual-provenancechecks. Fullmode missing5guard stoppedwithout
-  finaloutput. Existing17visualreviews authenticated, not repeated. Renderand
-  visuallyreview transfer2/structure2/domain1, commitacceptance provenance, then
-  runfull22check beforefinaldelivery; scientificacceptance staysseparate.
+  namedplates; latestaggregate verifies19plates/270checks. Earlier17plate/240
+  snapshot andmissing5guard retained. Renderandvisuallyreview structure2/domain1,
+  commitacceptance provenance, thenrunfull22check; scientificacceptance separate.
+- PredictiveESS isweight concentration1/sum(w²), notautocorrelation-adjusted;
+  interleaved4chain parity compares0/2versus1/3. Report/figure wording clarified,
+  productionvalues/frozen thresholds unchanged. Reauthenticate19figureprovenance
+  afterthislabel-only visualreviewcommit; no newscience orcalibration acceptance.
 - All102/102conditionaltransfers authenticate2042compactchecks;33original
   numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
   support passesonlysamecandidateenvelope; all30collectedheldout conditional
   supportgatesfail. Original5COMPLETED17m34/all4pass, broad34complete; onlyholdout0–3
   fromoriginal17 werepending; nowCOMPLETED17m33/raw61235900/all4pass.
   Existingreport61231678 promoteddebug30 after108sourcehashes/zero-runtime/
-  dependency-null/freshcapacityproof; no newsubmission, fullmixturepending.
+  dependency-null/freshcapacityproof; no newsubmission, fullmixturenowcomplete625checks/2plates.
   Same2048/8192workload measuredparallel, sodebug30
   fororiginal17 afterpending24returnedregular30. InternalQOSregular_1failed;
   publicregularsucceeded, originalerrorpreserved. No mixtureacceptance.

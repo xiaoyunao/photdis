@@ -1,6 +1,6 @@
 {
-  "figure_manifest_sha256": "965b8b8133c8740ff1398485fc5ca896d2869674cc23cd13f4ee91015c289955",
-  "integrity_sha256": "078d7b5e8421ab698008ed7242b35e613c2ca06006d29056b3ad959052ba52f7",
+  "figure_manifest_sha256": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89",
+  "integrity_sha256": "d04552965348c1c3e53b3267f2602ef166f6b993028cfc0a8ac8a83c39cd8334",
   "actual_checks": 158,
   "passed": true,
   "visual_review": {
@@ -8,7 +8,7 @@
     "date": "2026-11-14",
     "figures": 2,
     "panels": 12,
-    "notes": "Both complete PNG plates visually inspected. Repaired half-draw axes to a shared explicit symlog scale with readable ticks; final full plates rechecked. Counts use shape plus color and fixed offsets; unit versus design joint scores use circle/square plus position. Sample denominators, inherited failures, interval meanings and photometric-only limits visible. Source counts/values unchanged."
+    "notes": "Both complete PNG plates visually inspected. Repaired half-draw axes to a shared explicit symlog scale with readable ticks; final full plates rechecked. Counts use shape plus color and fixed offsets; unit versus design joint scores use circle/square plus position. Sample denominators, inherited failures, interval meanings and photometric-only limits visible. Source counts/values unchanged. Predictive support plate re-inspected after correcting label to weight ESS and stating that it is not autocorrelation-adjusted; counts PNG is byte-identical to its prior inspected c4d2f2a version. Plotted rows and all production values are unchanged."
   },
   "scope": "Actual source/format checks and visual artifact acceptance only. Main scientific/numerical rejection remains."
 }

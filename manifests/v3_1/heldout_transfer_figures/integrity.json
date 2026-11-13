@@ -1,6 +1,6 @@
 {
   "inputs": {
-    "manifests/v3_1/heldout_transfer_figures/complete.json": "965b8b8133c8740ff1398485fc5ca896d2869674cc23cd13f4ee91015c289955",
+    "manifests/v3_1/heldout_transfer_figures/complete.json": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89",
     "manifests/v3_1/heldout_transfer/report/complete.json": "ebf5f2078f00ec35818e48cadc7f3eca0673fd0048390b4206c2d33cf2b77576",
     "manifests/v3_1/heldout_transfer/report/counts.csv": "97f91afbb93f526fcf27650ba10a96c060023044b70d6bcb537e1b9d6e1b74b0",
     "manifests/v3_1/heldout_transfer/report/predictive_summary.csv": "249cfe9fbf43d54fcd91b19fde2a886e092956a5d8ada25890694df4670a4cb9",
