@@ -1,0 +1,17 @@
+{
+  "version": "v3.1-mechanism-controls-1",
+  "baseline_commit": "31f12772fe29c801db7269adf3a8b160e264bb5f",
+  "cohort": "seen_development",
+  "selection": "disjoint reliable-reference-class x corrected-FeH group; stable identity rank; no residual selection",
+  "seed": 311301,
+  "pilot_per_stratum": 2,
+  "diagnostic_per_stratum": 128,
+  "feh_edges": [-1.5, -0.5],
+  "response_draw": 12,
+  "reference_calibration_for_scoring": "frozen v3.0 MAP, identical in all diagnostic views",
+  "controls": ["nominal", "response12", "class", "feh", "class_feh", "grz", "griz", "error_i2", "error_w12", "error_w22", "error_optical2", "single"],
+  "numerical": {"initial_step": 0.1, "probability_tolerance": 0.001},
+  "target_prior_control": "pending shared-draw marginalization; no plug-in mean-theta product",
+  "new_validation_outcomes": "not accessed",
+  "production": false
+}

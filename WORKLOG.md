@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — implement isolated class/FeH/band and mode diagnostics
+- Added src/photdis/v3_1/diagnostics.py and five focused analytic tests.
+  FeH conditioning updates flux covariance/mean and mixture evidence; class
+  oracle remains diagnostic-only. Mode basins conserve class/binary mass.
+- Added configs/v3_1_diagnostics.json and resumable allocated driver/wrapper:
+  stable disjoint class×FeH strata, explicit inclusion probabilities/PSF audit;
+  nominal/response12, class/FeH, grz/griz, band-error and single-star controls.
+- Negative-kernel support is explicitly a proxy, not posterior true-flux
+  negativity. Shared-target-prior marginalization remains pending, not replaced
+  by mean theta. No correction fit or new validation outcome opened.
+- Validation: py_compile passed; five new plus two frozen-inference tests pass.
+  All78 v3/v3.1 tests pass (3.81s); actual NERSC pilot not yet submitted.
+- Previous scope checkpoint b3ee982 synchronized local/origin/NERSC exactly.
+- Next: complete regression, commit/sync, submit bounded pilot and inspect
+  actual scientific outputs; freeze prospective evidence before correction fit.
+
+
 ## 2026-11-13 — authorize complete v3.1 scientific calibration scope
 - Recovered git status/branch/fetch/history, WORKLOG and PLAN; reviewed latest
   full Pro message plus photdis_v1, original project planning and related Pro

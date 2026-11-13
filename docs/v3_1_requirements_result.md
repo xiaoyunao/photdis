@@ -7,10 +7,10 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 |---|---|---|---|
 | A1 | Complete latest review and related project chat recovery | Complete | Latest full message archived; photdis_v1, original planning and three related Pro chats inspected |
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
-| B1 | Same-star class and FeH conditional diagnostics | Pending | Correlated flux/FeH conditioning; no production labels |
+| B1 | Same-star class and FeH conditional diagnostics | Implemented; actual run pending | Analytic Gaussian conditioning and frozen-reference identities tested; no production labels |
 | B2 | Fixed response/prior/band/error contrasts | Pending | Match identities and final product identity |
 | B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Pending | Retain sampling probabilities and full denominators |
-| B4 | Binary/class/component mode attribution | Pending | Cause diagnostics, not universal physical identifications |
+| B4 | Binary/class/component mode attribution | Implemented; actual run pending | Basin responsibilities conserve mass; analytic binary peak separation tested |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |
 | C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Pending | Distinguish actual-count/parameter recovery and coverage |
 | C2 | 26k/qualified-bright/held-out-field transfer | Pending | Matching selection normalization required |
