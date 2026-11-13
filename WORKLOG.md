@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — complete exact candidate modes and source-qualified domain maps
+- Full mode report61227828 COMPLETED6m15, all3540/fixed3003 objects reconciled;
+  allper-object gatespass, inheritedmainFalse retained. Multimodal2241/2013;
+  modelclass/binary/parent categoriesoverlap, no physicalbinary-rate claim.
+- Domain61226776 COMPLETED5m03:75cells/30occupied,2810candidates in cellswithout
+  precise newsky references; meanunsupported modelmass79.5834%. Nineprecise
+  AstroNN references/fivephotometriccells; complementmass notvalidated.
+- Added two source-backed resultdocs and two actualartifact checkers. Mode
+  3613/domain1309checks pass; one4-panel modeplate and two12-panel domainplates
+  visuallyinspected. Modeaxis-label overlap repaired/rechecked. 17plates total.
+- Commands: compact authenticated collection, Pythoncheckers/renderers,
+  sourcehash/link verification, Pythonparse/gitdiffcheck. Updatedatlas/status/
+  requirements/PLAN. No core/evaluator/model changes or newfit.
+- Remaining: broad/holdoutensembles, actualheldouttransfer, full32-state structure
+  posterior and integratedscientificdomain adjudication/finaldelivery.
+
 ## 2026-11-14 — finish mode shards and audit finite response half-libraries
 - All8mode shards nowcomplete:3540objects/fixed3003highq, allper-object numerical
   gates pass; inheritedmainFalse remains. Lastshard442/373 complete16m39;

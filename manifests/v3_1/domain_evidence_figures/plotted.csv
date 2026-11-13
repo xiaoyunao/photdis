@@ -1,0 +1,301 @@
+figure,panel,cell,r_bin,color_bin,wise_bin,value,display
+precise_newsky_references,AstroNN (Gaia-trained teacher),0,0,0,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),3,0,1,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),6,0,2,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),9,0,3,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),12,0,4,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),15,1,0,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),18,1,1,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),21,1,2,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),24,1,3,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),27,1,4,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),30,2,0,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),33,2,1,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),36,2,2,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),39,2,3,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),42,2,4,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),45,3,0,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),48,3,1,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),51,3,2,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),54,3,3,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),57,3,4,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),60,4,0,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),63,4,1,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),66,4,2,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),69,4,3,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),72,4,4,0,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),1,0,0,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),4,0,1,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),7,0,2,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),10,0,3,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),13,0,4,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),16,1,0,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),19,1,1,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),22,1,2,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),25,1,3,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),28,1,4,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),31,2,0,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),34,2,1,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),37,2,2,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),40,2,3,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),43,2,4,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),46,3,0,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),49,3,1,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),52,3,2,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),55,3,3,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),58,3,4,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),61,4,0,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),64,4,1,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),67,4,2,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),70,4,3,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),73,4,4,1,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),2,0,0,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),5,0,1,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),8,0,2,2,3.0,3
+precise_newsky_references,AstroNN (Gaia-trained teacher),11,0,3,2,2.0,2
+precise_newsky_references,AstroNN (Gaia-trained teacher),14,0,4,2,1.0,1
+precise_newsky_references,AstroNN (Gaia-trained teacher),17,1,0,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),20,1,1,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),23,1,2,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),26,1,3,2,2.0,2
+precise_newsky_references,AstroNN (Gaia-trained teacher),29,1,4,2,1.0,1
+precise_newsky_references,AstroNN (Gaia-trained teacher),32,2,0,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),35,2,1,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),38,2,2,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),41,2,3,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),44,2,4,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),47,3,0,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),50,3,1,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),53,3,2,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),56,3,3,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),59,3,4,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),62,4,0,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),65,4,1,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),68,4,2,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),71,4,3,2,0.0,0
+precise_newsky_references,AstroNN (Gaia-trained teacher),74,4,4,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,0,0,0,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,3,0,1,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,6,0,2,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,9,0,3,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,12,0,4,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,15,1,0,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,18,1,1,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,21,1,2,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,24,1,3,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,27,1,4,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,30,2,0,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,33,2,1,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,36,2,2,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,39,2,3,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,42,2,4,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,45,3,0,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,48,3,1,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,51,3,2,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,54,3,3,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,57,3,4,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,60,4,0,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,63,4,1,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,66,4,2,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,69,4,3,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,72,4,4,0,0.0,0
+precise_newsky_references,SpecDis source-qualified,1,0,0,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,4,0,1,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,7,0,2,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,10,0,3,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,13,0,4,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,16,1,0,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,19,1,1,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,22,1,2,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,25,1,3,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,28,1,4,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,31,2,0,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,34,2,1,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,37,2,2,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,40,2,3,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,43,2,4,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,46,3,0,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,49,3,1,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,52,3,2,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,55,3,3,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,58,3,4,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,61,4,0,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,64,4,1,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,67,4,2,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,70,4,3,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,73,4,4,1,0.0,0
+precise_newsky_references,SpecDis source-qualified,2,0,0,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,5,0,1,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,8,0,2,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,11,0,3,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,14,0,4,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,17,1,0,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,20,1,1,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,23,1,2,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,26,1,3,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,29,1,4,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,32,2,0,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,35,2,1,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,38,2,2,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,41,2,3,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,44,2,4,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,47,3,0,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,50,3,1,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,53,3,2,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,56,3,3,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,59,3,4,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,62,4,0,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,65,4,1,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,68,4,2,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,71,4,3,2,0.0,0
+precise_newsky_references,SpecDis source-qualified,74,4,4,2,0.0,0
+precise_newsky_references,SPDist source-qualified,0,0,0,0,0.0,0
+precise_newsky_references,SPDist source-qualified,3,0,1,0,0.0,0
+precise_newsky_references,SPDist source-qualified,6,0,2,0,0.0,0
+precise_newsky_references,SPDist source-qualified,9,0,3,0,0.0,0
+precise_newsky_references,SPDist source-qualified,12,0,4,0,0.0,0
+precise_newsky_references,SPDist source-qualified,15,1,0,0,0.0,0
+precise_newsky_references,SPDist source-qualified,18,1,1,0,0.0,0
+precise_newsky_references,SPDist source-qualified,21,1,2,0,0.0,0
+precise_newsky_references,SPDist source-qualified,24,1,3,0,0.0,0
+precise_newsky_references,SPDist source-qualified,27,1,4,0,0.0,0
+precise_newsky_references,SPDist source-qualified,30,2,0,0,0.0,0
+precise_newsky_references,SPDist source-qualified,33,2,1,0,0.0,0
+precise_newsky_references,SPDist source-qualified,36,2,2,0,0.0,0
+precise_newsky_references,SPDist source-qualified,39,2,3,0,0.0,0
+precise_newsky_references,SPDist source-qualified,42,2,4,0,0.0,0
+precise_newsky_references,SPDist source-qualified,45,3,0,0,0.0,0
+precise_newsky_references,SPDist source-qualified,48,3,1,0,0.0,0
+precise_newsky_references,SPDist source-qualified,51,3,2,0,0.0,0
+precise_newsky_references,SPDist source-qualified,54,3,3,0,0.0,0
+precise_newsky_references,SPDist source-qualified,57,3,4,0,0.0,0
+precise_newsky_references,SPDist source-qualified,60,4,0,0,0.0,0
+precise_newsky_references,SPDist source-qualified,63,4,1,0,0.0,0
+precise_newsky_references,SPDist source-qualified,66,4,2,0,0.0,0
+precise_newsky_references,SPDist source-qualified,69,4,3,0,0.0,0
+precise_newsky_references,SPDist source-qualified,72,4,4,0,0.0,0
+precise_newsky_references,SPDist source-qualified,1,0,0,1,0.0,0
+precise_newsky_references,SPDist source-qualified,4,0,1,1,0.0,0
+precise_newsky_references,SPDist source-qualified,7,0,2,1,0.0,0
+precise_newsky_references,SPDist source-qualified,10,0,3,1,0.0,0
+precise_newsky_references,SPDist source-qualified,13,0,4,1,0.0,0
+precise_newsky_references,SPDist source-qualified,16,1,0,1,0.0,0
+precise_newsky_references,SPDist source-qualified,19,1,1,1,0.0,0
+precise_newsky_references,SPDist source-qualified,22,1,2,1,0.0,0
+precise_newsky_references,SPDist source-qualified,25,1,3,1,0.0,0
+precise_newsky_references,SPDist source-qualified,28,1,4,1,0.0,0
+precise_newsky_references,SPDist source-qualified,31,2,0,1,0.0,0
+precise_newsky_references,SPDist source-qualified,34,2,1,1,0.0,0
+precise_newsky_references,SPDist source-qualified,37,2,2,1,0.0,0
+precise_newsky_references,SPDist source-qualified,40,2,3,1,0.0,0
+precise_newsky_references,SPDist source-qualified,43,2,4,1,0.0,0
+precise_newsky_references,SPDist source-qualified,46,3,0,1,0.0,0
+precise_newsky_references,SPDist source-qualified,49,3,1,1,0.0,0
+precise_newsky_references,SPDist source-qualified,52,3,2,1,0.0,0
+precise_newsky_references,SPDist source-qualified,55,3,3,1,0.0,0
+precise_newsky_references,SPDist source-qualified,58,3,4,1,0.0,0
+precise_newsky_references,SPDist source-qualified,61,4,0,1,0.0,0
+precise_newsky_references,SPDist source-qualified,64,4,1,1,0.0,0
+precise_newsky_references,SPDist source-qualified,67,4,2,1,0.0,0
+precise_newsky_references,SPDist source-qualified,70,4,3,1,0.0,0
+precise_newsky_references,SPDist source-qualified,73,4,4,1,0.0,0
+precise_newsky_references,SPDist source-qualified,2,0,0,2,0.0,0
+precise_newsky_references,SPDist source-qualified,5,0,1,2,0.0,0
+precise_newsky_references,SPDist source-qualified,8,0,2,2,0.0,0
+precise_newsky_references,SPDist source-qualified,11,0,3,2,0.0,0
+precise_newsky_references,SPDist source-qualified,14,0,4,2,0.0,0
+precise_newsky_references,SPDist source-qualified,17,1,0,2,0.0,0
+precise_newsky_references,SPDist source-qualified,20,1,1,2,0.0,0
+precise_newsky_references,SPDist source-qualified,23,1,2,2,0.0,0
+precise_newsky_references,SPDist source-qualified,26,1,3,2,0.0,0
+precise_newsky_references,SPDist source-qualified,29,1,4,2,0.0,0
+precise_newsky_references,SPDist source-qualified,32,2,0,2,0.0,0
+precise_newsky_references,SPDist source-qualified,35,2,1,2,0.0,0
+precise_newsky_references,SPDist source-qualified,38,2,2,2,0.0,0
+precise_newsky_references,SPDist source-qualified,41,2,3,2,0.0,0
+precise_newsky_references,SPDist source-qualified,44,2,4,2,0.0,0
+precise_newsky_references,SPDist source-qualified,47,3,0,2,0.0,0
+precise_newsky_references,SPDist source-qualified,50,3,1,2,0.0,0
+precise_newsky_references,SPDist source-qualified,53,3,2,2,0.0,0
+precise_newsky_references,SPDist source-qualified,56,3,3,2,0.0,0
+precise_newsky_references,SPDist source-qualified,59,3,4,2,0.0,0
+precise_newsky_references,SPDist source-qualified,62,4,0,2,0.0,0
+precise_newsky_references,SPDist source-qualified,65,4,1,2,0.0,0
+precise_newsky_references,SPDist source-qualified,68,4,2,2,0.0,0
+precise_newsky_references,SPDist source-qualified,71,4,3,2,0.0,0
+precise_newsky_references,SPDist source-qualified,74,4,4,2,0.0,0
+missing_reference_mass,Main candidate,0,0,0,0,,—
+missing_reference_mass,Main candidate,3,0,1,0,,—
+missing_reference_mass,Main candidate,6,0,2,0,0.9999999999984167,100%
+missing_reference_mass,Main candidate,9,0,3,0,0.9999999999984172,100%
+missing_reference_mass,Main candidate,12,0,4,0,0.9999999999984178,100%
+missing_reference_mass,Main candidate,15,1,0,0,,—
+missing_reference_mass,Main candidate,18,1,1,0,0.9999999999984167,100%
+missing_reference_mass,Main candidate,21,1,2,0,0.9999999999984168,100%
+missing_reference_mass,Main candidate,24,1,3,0,0.9999999999984168,100%
+missing_reference_mass,Main candidate,27,1,4,0,0.9999999999984169,100%
+missing_reference_mass,Main candidate,30,2,0,0,0.9999999999984166,100%
+missing_reference_mass,Main candidate,33,2,1,0,0.9999999999984167,100%
+missing_reference_mass,Main candidate,36,2,2,0,0.9999999999984169,100%
+missing_reference_mass,Main candidate,39,2,3,0,0.9999999999984168,100%
+missing_reference_mass,Main candidate,42,2,4,0,0.9999999999984173,100%
+missing_reference_mass,Main candidate,45,3,0,0,,—
+missing_reference_mass,Main candidate,48,3,1,0,,—
+missing_reference_mass,Main candidate,51,3,2,0,,—
+missing_reference_mass,Main candidate,54,3,3,0,,—
+missing_reference_mass,Main candidate,57,3,4,0,,—
+missing_reference_mass,Main candidate,60,4,0,0,,—
+missing_reference_mass,Main candidate,63,4,1,0,,—
+missing_reference_mass,Main candidate,66,4,2,0,,—
+missing_reference_mass,Main candidate,69,4,3,0,,—
+missing_reference_mass,Main candidate,72,4,4,0,,—
+missing_reference_mass,Main candidate,1,0,0,1,,—
+missing_reference_mass,Main candidate,4,0,1,1,,—
+missing_reference_mass,Main candidate,7,0,2,1,,—
+missing_reference_mass,Main candidate,10,0,3,1,,—
+missing_reference_mass,Main candidate,13,0,4,1,,—
+missing_reference_mass,Main candidate,16,1,0,1,,—
+missing_reference_mass,Main candidate,19,1,1,1,,—
+missing_reference_mass,Main candidate,22,1,2,1,,—
+missing_reference_mass,Main candidate,25,1,3,1,,—
+missing_reference_mass,Main candidate,28,1,4,1,,—
+missing_reference_mass,Main candidate,31,2,0,1,0.9999999999984167,100%
+missing_reference_mass,Main candidate,34,2,1,1,0.999999999998417,100%
+missing_reference_mass,Main candidate,37,2,2,1,0.9999999999984166,100%
+missing_reference_mass,Main candidate,40,2,3,1,,—
+missing_reference_mass,Main candidate,43,2,4,1,,—
+missing_reference_mass,Main candidate,46,3,0,1,,—
+missing_reference_mass,Main candidate,49,3,1,1,,—
+missing_reference_mass,Main candidate,52,3,2,1,,—
+missing_reference_mass,Main candidate,55,3,3,1,,—
+missing_reference_mass,Main candidate,58,3,4,1,,—
+missing_reference_mass,Main candidate,61,4,0,1,,—
+missing_reference_mass,Main candidate,64,4,1,1,,—
+missing_reference_mass,Main candidate,67,4,2,1,,—
+missing_reference_mass,Main candidate,70,4,3,1,,—
+missing_reference_mass,Main candidate,73,4,4,1,,—
+missing_reference_mass,Main candidate,2,0,0,2,0.999999999998417,100%
+missing_reference_mass,Main candidate,5,0,1,2,0.9999999999984169,100%
+missing_reference_mass,Main candidate,8,0,2,2,0.0032261177921629105,0%
+missing_reference_mass,Main candidate,11,0,3,2,0.024295250307645608,2%
+missing_reference_mass,Main candidate,14,0,4,2,0.00017335985541617276,0%
+missing_reference_mass,Main candidate,17,1,0,2,0.9999999999984168,100%
+missing_reference_mass,Main candidate,20,1,1,2,0.9999999999984167,100%
+missing_reference_mass,Main candidate,23,1,2,2,0.999999999998417,100%
+missing_reference_mass,Main candidate,26,1,3,2,0.01746520310409935,2%
+missing_reference_mass,Main candidate,29,1,4,2,0.00762433827176681,1%
+missing_reference_mass,Main candidate,32,2,0,2,0.9999999999984172,100%
+missing_reference_mass,Main candidate,35,2,1,2,0.9999999999984172,100%
+missing_reference_mass,Main candidate,38,2,2,2,0.9999999999984169,100%
+missing_reference_mass,Main candidate,41,2,3,2,0.9999999999984169,100%
+missing_reference_mass,Main candidate,44,2,4,2,0.9999999999984169,100%
+missing_reference_mass,Main candidate,47,3,0,2,,—
+missing_reference_mass,Main candidate,50,3,1,2,,—
+missing_reference_mass,Main candidate,53,3,2,2,,—
+missing_reference_mass,Main candidate,56,3,3,2,,—
+missing_reference_mass,Main candidate,59,3,4,2,,—
+missing_reference_mass,Main candidate,62,4,0,2,,—
+missing_reference_mass,Main candidate,65,4,1,2,,—
+missing_reference_mass,Main candidate,68,4,2,2,,—
+missing_reference_mass,Main candidate,71,4,3,2,,—
+missing_reference_mass,Main candidate,74,4,4,2,,—

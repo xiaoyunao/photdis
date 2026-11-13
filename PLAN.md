@@ -97,17 +97,13 @@ Negative findings remain deliverables, never successful calibration claims.
   report v3_1_final_validation_result.md documentszero5–10kpcnewskyreferences,
   no precise distancesfor77poornewskygiants, andhighqreference-selection gaps.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
-  Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
-  development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
-  unchanged32bootstrap identity, exactadjoint luminosity integration; pilot8thenfull.
-  Exactluminosity-adjoint andpopulationmode driver implemented;174fulltests pass.
-  Explicitforward-component/deep-log tests pass; 8-IDpilot61227356 failed12s due1.6e-12storedweight-roundoff precondition;
-  correctedguardusesexisting1e-8normgate withunchangedweights. Originalinputs
-  archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
-  delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
-  array61227827submittedregular1h(indices0/1debug30min); completeinventory
-  report61227828 afterokallshards. Shards0–5 complete; first6shards all2656numericalpass. Two shards
-  and fullinventory report remain; inheritedensemblefailure retained.
+  Exact main candidate mode decomposition is complete: all 8 shards / 3540
+  objects / fixed 3003 high-q; report 61227828 completed 6m15. All per-object
+  gates pass, inherited main evidence failure remains. Multimodal 2241 / 2013;
+  overlapping class/binary/parent responsibilities are not physical labels.
+  One English plate / four panels inspected; 3613 actual checks pass. Original
+  pilot roundoff failure and exact retry preserved; full results and modes stay
+  source-linked in docs/v3_1_candidate_modes_result.md.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -128,34 +124,29 @@ Negative findings remain deliverables, never successful calibration claims.
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
   implemented/tested; photometry-onlypreparation61225647 completes8s/allPSF,
-  nooutcomesread. Post-freeze evidence remainsunrun. Source/role-specific cell
-  reference screens nowregistered/implemented/tested beforeopening; originalmean
-  guardmargins andcorrelated uncertainty distinct, sparse/numericalfailures retained.
-  Availability andrelativeguards are notcalibration; finalscientific
-  adjudication andfinalevidence figures remainrequired. Photometricoccupancy map
-  nowcomplete; source-qualifiedreference/gap renderer readybutunrun. Full scientific counts, final
-  product evaluation, use-domain map and structure fit remain.
+  no outcomes read. Post-freeze evidence 61226776 completed 5m03: 30 occupied
+  candidate cells; 2810/3540 candidates lack precise new-sky references in their
+  cell. Mean unsupported model distance mass 79.5834%; complement not validated.
+  Two English plates / 12 panels inspected; 1309 actual checks. All 600 joint
+  count groups conserve objects; nine precise new-sky AstroNN references occupy
+  five photometric cells. Source dependence and inherited main failure remain.
+  Relative screens complete; final scientific adjudication requires remaining
+  population/transfer and structure results. See v3_1_domain_evidence_result.md.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
   Integrated methods nowin docs/v3_1_methods.md, source-linked to protocols, status, ledger and the completed external report;
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full suite: 179 tests pass (6.06 s). Fourteen English plates have actual
-  visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
-  photometric occupancy 165 and final external comparison 104 artifact/source
-  checks; radial threeplates1823checks; response twoplates636checks plus351source
-  checks. Candidate-mode/domain evidence
-  figures still require complete sources.
-- Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot andall3540fullobjects pass; reportstillpending;
-  preserve all grid levels, basin responsibilities and inherited evidence failure.
-- External correlated report 61226775 and its two inspected figures are complete;
-  domain screens61226777complete4m50:37800comparisons/1350groups,17table checks;
-  all75cells perrole retain missing/inherited failure flags,0absolute acceptance.
-  Finish source evidence and scientific adjudication. Both cohorts and all nine views are already frozen and
-  scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
-  cohort score-convergence failures and all inherited ensemble flags. Domain
-  evidence 61226776 additionally waits for the complete 64-response report.
+- Latest full suite: 179 tests pass (6.06 s). Seventeen English plates have
+  actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
+  138, photometry 165, external 104, radial 1823, response 636, candidate modes
+  3613 and domain evidence 1309 artifact/source checks; response compact 351.
+- Candidate mode decomposition/report complete; preserve all grid levels,
+  basin responsibilities and inherited evidence failure. No mode rerun needed.
+- External report, source evidence maps and relative screens complete. Finish
+  scientific domain adjudication using remaining actual transfer/structure
+  outcomes. Do not reopen/reselect or regenerate predictions. Retain all 72
+  common-cohort score failures and all inherited ensemble flags.
 - Pending short response stages replaced by4sequential groups61229862 after
   all60oldpending stages provedcancelled/unstarted;68complete stages retained.
   Originalall64report61221949 nowcomplete; all4resourcegroups complete.

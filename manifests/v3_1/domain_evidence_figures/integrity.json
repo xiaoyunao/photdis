@@ -1,0 +1,5261 @@
+{
+  "inputs": {
+    "manifests/v3_1/domain_evidence/complete.json": "7b5c4d393ee9567f58d51a09e31e176ab632782d8edb57a9c3f0a5ccd93d5180",
+    "manifests/v3_1/domain_evidence_figures/complete.json": "7175a15985bcc8fd6e6640d2d346881ee0740dd0cf3e35cc2ec13b009259325c",
+    "scripts/v3_1_domain_evidence_check.py": "40fd792244c0eff9f1c9d690d1b0d30be0e129177ab54ca690a186cd888739e1"
+  },
+  "checks": [
+    {
+      "check": "source_hash:cells.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:reference_distance_cells.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:conditional_class_distance_cells.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:numerical_support.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:support_scopes.json",
+      "passed": true
+    },
+    {
+      "check": "figure_inputs:manifests/v3_1/domain_evidence/complete.json",
+      "passed": true
+    },
+    {
+      "check": "figure_inputs:manifests/v3_1/domain_evidence/cells.csv",
+      "passed": true
+    },
+    {
+      "check": "figure_inputs:manifests/v3_1/domain_evidence/reference_distance_cells.csv",
+      "passed": true
+    },
+    {
+      "check": "figure_inputs:scripts/v3_1_domain_figures.py",
+      "passed": true
+    },
+    {
+      "check": "figure_inputs:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "figure_outputs:figures/v3_1/domain_evidence/precise_newsky_references.png",
+      "passed": true
+    },
+    {
+      "check": "figure_outputs:figures/v3_1/domain_evidence/precise_newsky_references.pdf",
+      "passed": true
+    },
+    {
+      "check": "figure_outputs:figures/v3_1/domain_evidence/missing_reference_mass.png",
+      "passed": true
+    },
+    {
+      "check": "figure_outputs:figures/v3_1/domain_evidence/missing_reference_mass.pdf",
+      "passed": true
+    },
+    {
+      "check": "figure_outputs:manifests/v3_1/domain_evidence_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "75unique_cells",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:application_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:candidate_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:highq_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:native_fine_audited_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:new_sky_field_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:new_source_seen_sky_field_n",
+      "passed": true
+    },
+    {
+      "check": "cohort_total:common_members",
+      "passed": true
+    },
+    {
+      "check": "reference_inventory",
+      "passed": true
+    },
+    {
+      "check": "nonnegative_reference_counts",
+      "passed": true
+    },
+    {
+      "check": "numerical_support_inventory",
+      "passed": true
+    },
+    {
+      "check": "joint_count_groups",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:all_candidate:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:zero:fixed_main_highq:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:all_candidate:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:point:fixed_main_highq:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:all_candidate:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_evidence:fixed_main_highq:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:all_candidate:74",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:0",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:1",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:2",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:3",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:4",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:5",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:6",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:7",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:8",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:9",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:10",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:11",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:12",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:13",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:14",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:15",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:16",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:17",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:18",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:19",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:20",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:21",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:22",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:23",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:24",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:25",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:26",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:27",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:28",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:29",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:30",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:31",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:32",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:33",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:34",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:35",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:36",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:37",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:38",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:39",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:40",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:41",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:42",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:43",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:44",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:45",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:46",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:47",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:48",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:49",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:50",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:51",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:52",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:53",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:54",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:55",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:56",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:57",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:58",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:59",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:60",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:61",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:62",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:63",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:64",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:65",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:66",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:67",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:68",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:69",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:70",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:71",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:72",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:73",
+      "passed": true
+    },
+    {
+      "check": "joint_count_conservation:bootstrap_cut:fixed_main_highq:74",
+      "passed": true
+    },
+    {
+      "check": "plot_inventory",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:0",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:0",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:1",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:1",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:2",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:2",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:3",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:3",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:4",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:4",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:5",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:5",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:6",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:6",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:7",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:7",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:8",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:8",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:9",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:9",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:10",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:10",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:11",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:11",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:12",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:12",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:13",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:13",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:14",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:14",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:15",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:15",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:16",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:16",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:17",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:17",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:18",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:18",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:19",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:19",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:20",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:20",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:21",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:21",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:22",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:22",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:23",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:23",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:24",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:24",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:25",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:25",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:26",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:26",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:27",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:27",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:28",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:28",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:29",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:29",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:30",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:30",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:31",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:31",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:32",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:32",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:33",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:33",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:34",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:34",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:35",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:35",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:36",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:36",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:37",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:37",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:38",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:38",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:39",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:39",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:40",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:40",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:41",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:41",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:42",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:42",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:43",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:43",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:44",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:44",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:45",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:45",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:46",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:46",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:47",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:47",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:48",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:48",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:49",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:49",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:50",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:50",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:51",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:51",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:52",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:52",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:53",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:53",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:54",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:54",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:55",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:55",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:56",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:56",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:57",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:57",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:58",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:58",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:59",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:59",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:60",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:60",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:61",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:61",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:62",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:62",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:63",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:63",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:64",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:64",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:65",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:65",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:66",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:66",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:67",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:67",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:68",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:68",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:69",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:69",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:70",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:70",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:71",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:71",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:72",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:72",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:73",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:73",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:74",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:74",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:75",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:75",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:76",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:76",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:77",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:77",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:78",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:78",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:79",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:79",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:80",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:80",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:81",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:81",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:82",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:82",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:83",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:83",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:84",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:84",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:85",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:85",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:86",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:86",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:87",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:87",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:88",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:88",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:89",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:89",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:90",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:90",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:91",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:91",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:92",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:92",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:93",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:93",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:94",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:94",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:95",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:95",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:96",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:96",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:97",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:97",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:98",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:98",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:99",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:99",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:100",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:100",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:101",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:101",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:102",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:102",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:103",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:103",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:104",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:104",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:105",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:105",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:106",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:106",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:107",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:107",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:108",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:108",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:109",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:109",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:110",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:110",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:111",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:111",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:112",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:112",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:113",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:113",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:114",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:114",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:115",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:115",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:116",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:116",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:117",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:117",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:118",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:118",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:119",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:119",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:120",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:120",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:121",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:121",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:122",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:122",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:123",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:123",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:124",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:124",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:125",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:125",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:126",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:126",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:127",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:127",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:128",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:128",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:129",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:129",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:130",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:130",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:131",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:131",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:132",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:132",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:133",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:133",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:134",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:134",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:135",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:135",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:136",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:136",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:137",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:137",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:138",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:138",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:139",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:139",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:140",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:140",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:141",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:141",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:142",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:142",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:143",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:143",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:144",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:144",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:145",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:145",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:146",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:146",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:147",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:147",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:148",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:148",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:149",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:149",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:150",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:150",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:151",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:151",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:152",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:152",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:153",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:153",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:154",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:154",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:155",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:155",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:156",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:156",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:157",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:157",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:158",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:158",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:159",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:159",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:160",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:160",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:161",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:161",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:162",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:162",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:163",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:163",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:164",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:164",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:165",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:165",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:166",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:166",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:167",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:167",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:168",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:168",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:169",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:169",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:170",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:170",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:171",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:171",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:172",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:172",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:173",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:173",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:174",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:174",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:175",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:175",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:176",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:176",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:177",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:177",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:178",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:178",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:179",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:179",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:180",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:180",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:181",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:181",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:182",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:182",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:183",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:183",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:184",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:184",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:185",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:185",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:186",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:186",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:187",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:187",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:188",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:188",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:189",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:189",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:190",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:190",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:191",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:191",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:192",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:192",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:193",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:193",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:194",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:194",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:195",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:195",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:196",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:196",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:197",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:197",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:198",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:198",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:199",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:199",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:200",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:200",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:201",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:201",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:202",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:202",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:203",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:203",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:204",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:204",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:205",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:205",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:206",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:206",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:207",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:207",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:208",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:208",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:209",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:209",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:210",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:210",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:211",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:211",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:212",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:212",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:213",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:213",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:214",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:214",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:215",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:215",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:216",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:216",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:217",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:217",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:218",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:218",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:219",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:219",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:220",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:220",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:221",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:221",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:222",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:222",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:223",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:223",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:224",
+      "passed": true
+    },
+    {
+      "check": "plotted_source_value:224",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:225",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:225",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:225",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:226",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:226",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:226",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:227",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:227",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:227",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:228",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:228",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:228",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:229",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:229",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:229",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:230",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:230",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:230",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:231",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:231",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:231",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:232",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:232",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:232",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:233",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:233",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:233",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:234",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:234",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:234",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:235",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:235",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:235",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:236",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:236",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:236",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:237",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:237",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:237",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:238",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:238",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:238",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:239",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:239",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:239",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:240",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:240",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:240",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:241",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:241",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:241",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:242",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:242",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:242",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:243",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:243",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:243",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:244",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:244",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:244",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:245",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:245",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:245",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:246",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:246",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:246",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:247",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:247",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:247",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:248",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:248",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:248",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:249",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:249",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:249",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:250",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:250",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:250",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:251",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:251",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:251",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:252",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:252",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:252",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:253",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:253",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:253",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:254",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:254",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:254",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:255",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:255",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:255",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:256",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:256",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:256",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:257",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:257",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:257",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:258",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:258",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:258",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:259",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:259",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:259",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:260",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:260",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:260",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:261",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:261",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:261",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:262",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:262",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:262",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:263",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:263",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:263",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:264",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:264",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:264",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:265",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:265",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:265",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:266",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:266",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:266",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:267",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:267",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:267",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:268",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:268",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:268",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:269",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:269",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:269",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:270",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:270",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:270",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:271",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:271",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:271",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:272",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:272",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:272",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:273",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:273",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:273",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:274",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:274",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:274",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:275",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:275",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:275",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:276",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:276",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:276",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:277",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:277",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:277",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:278",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:278",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:278",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:279",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:279",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:279",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:280",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:280",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:280",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:281",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:281",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:281",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:282",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:282",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:282",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:283",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:283",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:283",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:284",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:284",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:284",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:285",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:285",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:285",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:286",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:286",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:286",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:287",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:287",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:287",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:288",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:288",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:288",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:289",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:289",
+      "passed": true
+    },
+    {
+      "check": "plotted_gap:289",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:290",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:290",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:290",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:291",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:291",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:291",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:292",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:292",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:292",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:293",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:293",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:293",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:294",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:294",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:294",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:295",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:295",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:295",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:296",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:296",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:296",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:297",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:297",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:297",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:298",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:298",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:298",
+      "passed": true
+    },
+    {
+      "check": "cell_geometry:299",
+      "passed": true
+    },
+    {
+      "check": "gap_figure:299",
+      "passed": true
+    },
+    {
+      "check": "empty_not_zero:299",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/precise_newsky_references.png:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/precise_newsky_references.pdf:one_page",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/precise_newsky_references.pdf:English_text",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/missing_reference_mass.png:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/missing_reference_mass.pdf:one_page",
+      "passed": true
+    },
+    {
+      "check": "figures/v3_1/domain_evidence/missing_reference_mass.pdf:English_text",
+      "passed": true
+    }
+  ],
+  "actual_checks": 1309,
+  "passed": true,
+  "facts": {
+    "candidate_n": 3540,
+    "occupied_cells": 30,
+    "candidates_in_cells_without_precise_newsky_reference": 2810,
+    "candidate_mean_distance_mass_without_precise_newsky_reference": 0.795833888449952,
+    "precise_newsky_references_by_source": {
+      "astronn": 9,
+      "specdis": 0,
+      "spdist": 0
+    }
+  },
+  "visual_review_completed": false,
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Source/geometry/count/format checks and reference-gap summary. No calibrated-domain or validated probability claim."
+}

@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "manifests/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41",
+    "manifests/v3_1/candidate_modes/full_summary.csv": "ed022851685ecde5a695846e173da952ef554ffa06a91f9773ad132c4ce8cb8d",
+    "manifests/v3_1/candidate_modes/full_overview.csv": "3f88cb92e31fc1d37aab20f4c44847d72ed12a2cc3f22758cff9fa99b0bdf604",
+    "manifests/v3_1/candidate_modes/full_histograms.csv": "a0831f8475d8101a3b2b848a57e1ea3bd60ab0b8223c8de82a639ff9acf094e4",
+    "scripts/v3_1_candidate_mode_figures.py": "5230d0a9cf420caa6e4ecddb089c23ea431e8ab34771e3d2881bdeec74efb7ba",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/candidate_modes/mode_responsibilities.png": "54e167c4226e35bbeb4a996826c3e63821e9d14c4095447f3e972986fbe420a1",
+    "figures/v3_1/candidate_modes/mode_responsibilities.pdf": "206abe4cf5d98f329256910a5041cf04b90c7ea13cefc59925597ed025232d5e",
+    "manifests/v3_1/candidate_mode_figures/plotted.csv": "d734bd9f001fbd5804f524ca3db454a326c6dcecad2b3d4c4ad38e7ad610ce23"
+  },
+  "figures": 1,
+  "panels": 4,
+  "n": 3540,
+  "highq_n": 3003,
+  "plotted_rows": 3578,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scope": "Authenticated full candidate mode tables, all failures retained. No pilot extrapolation or new scientific acceptance."
+}

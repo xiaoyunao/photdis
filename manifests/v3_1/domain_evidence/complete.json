@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "data/v3_1/final_validation/freeze.json": "a677031d25b10b4575f3afe2d0627fe6c42d212cda7bb58fcab696b7e91314cc",
+    "data/v3_1/domain_grid/complete.json": "0d949ae2ec32d9ad557af4c172ea77eadfb44f5586a7741d5227b3f8bdff0f53",
+    "data/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "data/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "data/v3_1/target_ensemble/candidate/states.json": "977bc005236ff9e825a4c3e7fe4ef4aed8572115f3ca10ab2e0dea847b16089b",
+    "data/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "scripts/v3_1_domain_evidence.py": "bc4117a170358f3dc3e6d5ab71f917b06bcb9a6130e0cdfa02a22639d2ece850",
+    "src/photdis/v3_1/use_domains.py": "9899c80cbffd61ac3787f59c6634972e5c270935c729f428b72100f9e8b55955",
+    "docs/v3_1_use_domain_protocol.md": "70bae1cbd7c91a3e10d89cf7a43f70fa69d498eb48bb71fc3d6dbfef6f5e1025",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/common/complete.json": "21fb1b0b0c1f2b69405b4e047a94c0be97d083408e828217daf9767f8afc4201",
+    "data/v3_1/final_validation/scores/common/complete.json": "c6a97ff5dcd46ad9bcdb77c423062bc2af7fb3bfbb892477e1c67e9c5566d429"
+  },
+  "outputs": {
+    "candidate_domains.npz": "9d544e73aead5bd1c175ef7e0625d219e639181494be92d51231fb5282089b2c",
+    "cells.csv": "73c8a65387f85a4926bf7c6c0c0fcdf382e05dac570e1e827e1f3379d3ec91f6",
+    "reference_distance_cells.csv": "a91b5292e8ccc32b778ba17f670d5b67490c836cd2df6035c2dfa9ef39ff50dc",
+    "conditional_class_distance_cells.csv": "f3ab9cdb8b97e0c31e53586fe5eeb3c9df980c74022df39616c1e7327c808ab2",
+    "numerical_support.csv": "22a19a672b60971a81338d5befbb5dd422c38844684a085e93a84b1d797fdb21",
+    "support_scopes.json": "48b92b6cf4f306624db7b6a799c5b64733a3848070c481b4d323fcd0b752d3d2"
+  },
+  "all_PSF": true,
+  "candidate_n": 3540,
+  "cells": 75,
+  "job": "61226776",
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Exactcandidate conditional means, source/role availability and actual numerical support. Not a calibration certificate; final scientific domain decisions and English map figures still required."
+}

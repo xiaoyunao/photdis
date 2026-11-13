@@ -196,3 +196,35 @@ seen-source agreement does not establish independent distance calibration.
 TwoEnglishPNG300dpi/PDFplates, all7panels visuallyinspected after typography
 repair;636actual artifact/source-rowchecks and351compacttablechecks pass.
 [Full result](v3_1_response_result.md); [acceptance](../manifests/v3_1/response_figures/acceptance.json).
+
+## Exact candidate mode responsibilities
+
+![Candidate modes](../figures/v3_1/candidate_modes/mode_responsibilities.png)
+
+All 3540 candidate identities and fixed 3003 high-q identities are reconciled.
+Significant multimodes occur in 2241 / 2013 objects. Class, binary-proxy and
+parent-template responsibility categories overlap; they are not physical
+classifications or measured binary fractions. Per-object numerical gates pass;
+the inherited main ensemble failure remains. All four panels visually inspected
+following axis-label repair; 3613 actual artifact/source checks pass.
+[Result](v3_1_candidate_modes_result.md);
+[PDF](../figures/v3_1/candidate_modes/mode_responsibilities.pdf);
+[acceptance](../manifests/v3_1/candidate_mode_figures/acceptance.json).
+
+## Source-qualified domain evidence
+
+![Precise new-sky references](../figures/v3_1/domain_evidence/precise_newsky_references.png)
+
+![Missing reference probability mass](../figures/v3_1/domain_evidence/missing_reference_mass.png)
+
+Candidate objects occupy 30 of 75 photometric cells; 2810 of 3540 objects are
+in cells without precise new-sky distance references. Mean unsupported model
+probability mass is 79.5834%; the complement is not validated mass. Nine
+precise AstroNN references occupy five photometric cells; source dependence,
+empty cells, shared scales and inherited numerical failure remain explicit.
+Both plates / all 12 panels visually inspected; 1309 actual artifact/source
+checks pass. Final scientific use-domain adjudication is still pending.
+[Result](v3_1_domain_evidence_result.md);
+[reference PDF](../figures/v3_1/domain_evidence/precise_newsky_references.pdf);
+[gap PDF](../figures/v3_1/domain_evidence/missing_reference_mass.pdf);
+[acceptance](../manifests/v3_1/domain_evidence_figures/acceptance.json).

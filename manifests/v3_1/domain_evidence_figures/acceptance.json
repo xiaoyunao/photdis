@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "7175a15985bcc8fd6e6640d2d346881ee0740dd0cf3e35cc2ec13b009259325c",
+  "integrity_sha256": "3c83ee03a43c1160b075742176da46cfa60b42720eee5da9592aa93fe83025e8",
+  "actual_checks": 1309,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 2,
+    "panels": 12,
+    "notes": "Both plates/all12panels inspected: allsource cells, sharedcolorbars, sparse/zero counts, missingcandidate dashes and probability-gap caveat legible. Availability remains separate from calibration."
+  },
+  "scope": "Actual artifact/source and visual acceptance, not scientific calibration acceptance."
+}

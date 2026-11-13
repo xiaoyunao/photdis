@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "83835e0364d0b9e15347615e932d05c320230f35333a1bdd09919bed957324b3",
+  "integrity_sha256": "b6a16d5a1ce8c8ef1f4ddc7546725fb49b380b62f3f1fc0d5610d10aa7028480",
+  "actual_checks": 3613,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 1,
+    "panels": 4,
+    "notes": "All4panels inspected; axis-label collision repaired and final plate rechecked. Nonnegative symlog audit axes, inherited failure, exact denominators and model-only attribution caveats legible."
+  },
+  "scope": "Actual artifact/source and visual acceptance, not scientific calibration acceptance."
+}

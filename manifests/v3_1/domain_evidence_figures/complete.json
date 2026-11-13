@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "manifests/v3_1/domain_evidence/complete.json": "7b5c4d393ee9567f58d51a09e31e176ab632782d8edb57a9c3f0a5ccd93d5180",
+    "manifests/v3_1/domain_evidence/cells.csv": "73c8a65387f85a4926bf7c6c0c0fcdf382e05dac570e1e827e1f3379d3ec91f6",
+    "manifests/v3_1/domain_evidence/reference_distance_cells.csv": "a91b5292e8ccc32b778ba17f670d5b67490c836cd2df6035c2dfa9ef39ff50dc",
+    "scripts/v3_1_domain_figures.py": "7fd7681ccb869d1697f39a2e9cc55857f7a1649cae880152bee622b239ea1485",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/domain_evidence/precise_newsky_references.png": "7453d3b5844c240b60bf756578decfc989c1c5c41e441104da035094f8e2147f",
+    "figures/v3_1/domain_evidence/precise_newsky_references.pdf": "d58ad4b46ff793f915687d664cd906a3a5563576ffcfea1485339e49104a7458",
+    "figures/v3_1/domain_evidence/missing_reference_mass.png": "395fb578431d2eccca816c324e1d4bd6a494cc9886bb6b7e4387684f6d291601",
+    "figures/v3_1/domain_evidence/missing_reference_mass.pdf": "2b80580d426798832ad341c059460385259d14eeb0ec9409120506f7e9135fb5",
+    "manifests/v3_1/domain_evidence_figures/plotted.csv": "b81e862cb7c1a5b2a430810568e6591a2a62879790bdd03e6a60833a2a6bbfcc"
+  },
+  "stage": "evidence",
+  "panels": 12,
+  "plotted_rows": 300,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Authenticated compact-table rendering. Occupancy and reference availability do not certify scientific use domains."
+}

@@ -63,6 +63,11 @@ def main():
     ax.axhline(1,color='.3',ls='--',lw=1);ax.axvline(1,color='.3',ls='--',lw=1)
     ax.set(xlabel='Original joint-probability difference / 0.003',ylabel='Same-basin component difference / 0.003')
     ax.set_xscale('symlog',linthresh=.01);ax.set_yscale('symlog',linthresh=.01);ax.legend(frameon=False,fontsize=9)
+    ax.set_xlim(left=0);ax.set_ylim(bottom=0)
+    ax.set_ylabel('Same-basin component difference\n/ 0.003')
+    for axis in axes.flat:
+        axis.xaxis.label.set_fontsize(11);axis.yaxis.label.set_fontsize(11)
+        axis.tick_params(axis='y',labelsize=11)
     plotted.extend(dict(panel='D',source='full_summary.csv',identity=r['identity'],original_probability_delta=r['original_probability_delta'],
         same_basin_joint_mass_delta=r['same_basin_joint_mass_delta'],numerical_passed=r['numerical_passed']) for r in rows)
     fig.suptitle('Distance-mode responsibilities of the frozen main candidate',y=.975,fontsize=19)

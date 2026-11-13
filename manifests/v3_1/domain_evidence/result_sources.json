@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "manifests/v3_1/domain_evidence/complete.json": "7b5c4d393ee9567f58d51a09e31e176ab632782d8edb57a9c3f0a5ccd93d5180",
+    "manifests/v3_1/domain_evidence/cells.csv": "73c8a65387f85a4926bf7c6c0c0fcdf382e05dac570e1e827e1f3379d3ec91f6",
+    "manifests/v3_1/domain_evidence/reference_distance_cells.csv": "a91b5292e8ccc32b778ba17f670d5b67490c836cd2df6035c2dfa9ef39ff50dc",
+    "manifests/v3_1/domain_evidence/conditional_class_distance_cells.csv": "f3ab9cdb8b97e0c31e53586fe5eeb3c9df980c74022df39616c1e7327c808ab2",
+    "manifests/v3_1/domain_evidence/support_scopes.json": "48b92b6cf4f306624db7b6a799c5b64733a3848070c481b4d323fcd0b752d3d2",
+    "manifests/v3_1/domain_evidence_figures/integrity.json": "3c83ee03a43c1160b075742176da46cfa60b42720eee5da9592aa93fe83025e8",
+    "manifests/v3_1/domain_evidence_figures/acceptance.json": "ff42a17ef5c54febb02d3c6bbab2956f3ace7bf9880fe131cd37f61562258a00"
+  },
+  "document_sha256": "c28af87096982db084eb59c4e39330d648a77ec0e157b26e4b9b4dd5a5a69ad0"
+}

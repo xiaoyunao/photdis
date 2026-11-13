@@ -1,0 +1,10 @@
+{
+  "inputs": {
+    "manifests/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41",
+    "manifests/v3_1/candidate_modes/full_summary.csv": "ed022851685ecde5a695846e173da952ef554ffa06a91f9773ad132c4ce8cb8d",
+    "manifests/v3_1/candidate_modes/full_overview.csv": "3f88cb92e31fc1d37aab20f4c44847d72ed12a2cc3f22758cff9fa99b0bdf604",
+    "manifests/v3_1/candidate_mode_figures/integrity.json": "b6a16d5a1ce8c8ef1f4ddc7546725fb49b380b62f3f1fc0d5610d10aa7028480",
+    "manifests/v3_1/candidate_mode_figures/acceptance.json": "46d56430bbf6fa316a99d3d3a7382e0ae9af87bebd299632e2377d7040808858"
+  },
+  "document_sha256": "65830905891d69945cc06966b72846a2dfdcb8b1a4006150a7a786b045c544c0"
+}
