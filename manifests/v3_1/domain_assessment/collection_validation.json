@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "complete.json": "6632bbc637a8cc3d7917e3f5cb6a5726e93004d26d5f52457dc434895dba62d9"
+  },
+  "checks": [
+    "hash:new_sky_field_astronn.csv",
+    "hash:new_sky_field_specdis.csv",
+    "hash:new_sky_field_spdist.csv",
+    "hash:new_sky_field_gaia.csv",
+    "hash:new_sky_field_class.csv",
+    "hash:new_sky_field_mws_class.csv",
+    "hash:new_sky_field_cells.csv",
+    "hash:new_source_seen_sky_field_astronn.csv",
+    "hash:new_source_seen_sky_field_specdis.csv",
+    "hash:new_source_seen_sky_field_spdist.csv",
+    "hash:new_source_seen_sky_field_gaia.csv",
+    "hash:new_source_seen_sky_field_class.csv",
+    "hash:new_source_seen_sky_field_mws_class.csv",
+    "hash:new_source_seen_sky_field_cells.csv",
+    "new_sky_field:complete675groups/denominators/flags",
+    "new_source_seen_sky_field:complete675groups/denominators/flags",
+    "all1350groups/37800screens"
+  ],
+  "actual_checks": 17,
+  "passed": true,
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Full collected table hashes, all role/cell/group denominators and inherited flags; no calibration acceptance."
+}

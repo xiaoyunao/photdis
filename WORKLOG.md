@@ -1,5 +1,37 @@
 # WORKLOG
 
+## 2026-11-14 — retain half of exact candidate modes and first complete radial shard
+- Mode child3 COMPLETED16m04,443objects/387fixedhighq; all4completedshards
+  total1772objects/1501fixedhighq, allmode numerics pass; inheritedmainflag retained.
+  Explicitcompact tables authenticated; children4/5live, remaining4shards required.
+- Radial exactresume61225052 COMPLETED22m46, all88catalogs/176arm outcomes,
+  no executionfailures. Broad82/local50pass,47bothpass; remainingterminalfailures
+  retained. Secondresume61225072live; no partial-sample recovery claim.
+- Commands: collect explicitmarkers/CSV, fresh fullsqueue andsacct, local compact
+  denominator checks; no new scientificcode or model. Prior179tests unchanged.
+- Next: full176catalog report and correlated summary, remainingmode inventory,
+  response comparisons and all32structure states; activegoal not complete.
+
+## 2026-11-14 — replace only pending structure resources and complete domain screens
+- Verified draw0 pilot and immutable core/adapter hashes, all30old states2–31
+  PENDING and no complete products. State-restricted cancellation preserved
+  running olddraw1; replacement61229422 indices2–31%3 aftercorr61223167 uses
+  same32worker adapter,3h limits, max3new+1old nodes. No changed integrals,
+  seeds, gates, model or checkpoints. Per-child input dependencies verified.
+- Submission verification first stopped on compressed accounting rows, then on
+  omitted materialized child11. Expanded accounting plus authoritative scontrol
+  showed child11 CANCELLED/runtime0 and all30unstarted/absent. Submission occurred
+  only after proof; original journal archived and full recovery receipt retained.
+- Domain screen61226777 COMPLETED4m50:37800source-qualified comparisons,
+  1350role/cell/group summaries. All14CSV hashes and complete denominators/flags
+  checked (17checks). Newsky/seen-sky all-groups occupy8/9of75cells, n167/352;
+  other67/66cells sparse/missing. Every occupied cell retains inherited main
+  numerical failure; absolute calibration established for0cells.
+- Collected exact screen tables; this is not final scientific domain adjudication.
+  Full64response support, radial recovery and domain evidence map remain required.
+- Updated PLAN/status/ledger; native32-state assembly and actual structure
+  posterior/counts remain uncomputed until every required state completes.
+
 ## 2026-11-14 — validate exact 32-worker structure refinement for all512contexts
 - Job61228245 COMPLETED26m06; original bounded2^23 integrals/seeds/function
   unchanged. All512nativePSF contexts /1024branch rows pass; original512failed

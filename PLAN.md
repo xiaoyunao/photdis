@@ -24,7 +24,9 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] WP2 radial/target/systematic comparisons. All176catalogs prepared; pilots
   0/48/112botharms pass. Production bounded512/2048/8192 outcomes incomplete;
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
-  0/1 timedout at2h; exactresumes61225052/61225072regular2h. Report61228930 waitsafterokbothresumes for all352arm outcomes; correlated
+  0/1 timedout at2h; exactresume61225052 COMPLETED22m46 withall88catalogs/176arms,
+  broad82/local50pass and47bothpass. Exactresume61225072 remainslive;
+  report61228930 waitsafterokbothresumes for all352arm outcomes; correlated
   summary61228931 waitsafterokreport.
   Native target26000rows across34corrections complete,258fineaudits allpass.
   Direct entry all16shards complete:26000objects/29540envelopes allpass;
@@ -92,8 +94,8 @@ Negative findings remain deliverables, never successful calibration claims.
   archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
   delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
   array61227827submittedregular1h(indices0/1debug30min); completeinventory
-  report61227828 afterokallshards. Shards0/1/2 complete16m14/16m23/17m39, all1329
-  numericalpass; remaining5required. Child3running,4queueddebug30min.
+  report61227828 afterokallshards. Shards0/1/2/3 complete16m14/16m23/17m39/16m04, all1772
+  numericalpass with1501fixedhighq; remaining4required. Children4/5running.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -106,8 +108,8 @@ Negative findings remain deliverables, never successful calibration claims.
   unstartedresume61225943replaced byresource-only32workerpilot61228245debug30min
   afterterminal/absence/hashchecks. PilotCOMPLETED26m06:all512contexts/1024
   branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
-  same32workerexecution for30stillpendingstates2–31; originalstate1running
-  remainsuntouched. Keep3h limits andmax4totalnodes. Assembly/posterior
+  same32workerexecution nowarray61229422for30states2–31 aftercorr61223167;
+  originalstate1running remainsuntouched. Keep3h limits/max3new+1old nodes. Assembly/posterior
   awaitallstates numerical admission. Pendingentry1–31limits now30min basedon
   13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
   improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
@@ -131,10 +133,12 @@ Negative findings remain deliverables, never successful calibration claims.
   photometric occupancy 165 and final external comparison 104 artifact/source
   checks. Candidate-mode/domain evidence figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst1329fullobjects pass;
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst1772fullobjects pass;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
 - External correlated report 61226775 and its two inspected figures are complete;
-  finish source-qualified domain screens and scientific adjudication. Both cohorts and all nine views are already frozen and
+  domain screens61226777complete4m50:37800comparisons/1350groups,17table checks;
+  all75cells perrole retain missing/inherited failure flags,0absolute acceptance.
+  Finish source evidence and scientific adjudication. Both cohorts and all nine views are already frozen and
   scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
   cohort score-convergence failures and all inherited ensemble flags. Domain
   evidence 61226776 additionally waits for the complete 64-response report.
@@ -152,8 +156,8 @@ Negative findings remain deliverables, never successful calibration claims.
   Two-plate radial renderer nowprepared/syntaxchecked; actualcomplete tables and
   rendering/visualQA remainrequired.
 - Finish all 32 structure native/entry/refinement states, including exact entry
-  refinement draw0 nowcomplete61228245/all512pass. Safelyreplaceonlypending
-  states2–31 withvalidated32workeradapter, originaldraw1continues8workers.
+  refinement draw0 nowcomplete61228245/all512pass. Replacementarray61229422
+  handlesstates2–31 withvalidated32workeradapter, originaldraw1continues8workers.
   Keep3h limits/max4totalnodes; then actualshared-posterior/count inference and
   fairprior-withdrawn baseline.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance

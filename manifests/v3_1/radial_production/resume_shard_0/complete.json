@@ -1,0 +1,1616 @@
+{
+  "inputs": {
+    "scripts/v3_1_radial_production_resume.py": "2cbb42f7e20b30e2c7c60345632d76680592b6b75a06b8f5cba39a8f85e93c93",
+    "scripts/v3_1_radial_likelihood.py": "2805690df3ee052eb0e59c715ae7e7e76aac859389428e3153a68350f31fc38f",
+    "scripts/v3_1_radial_recovery.py": "79dc2127a9d345c24c57f0caa592aed8f4c111d25d9cf81510357d03ae4559fc",
+    "scripts/v3_1_radial_refine.py": "783972afbf8ce95b87a06fae1354ceca617ee902a6d23feebce7bf44b82be9d2",
+    "scripts/v3_1_radial_quadrature.py": "4de1812debbb59fc6060df3187360230bc4ce38846582caf5f3df92deee31db5",
+    "docs/v3_1_radial_protocol.md": "873ec98175bfacafbf0fc8c206985fbb1f735c211e9b8a86c41937273bb32e0d",
+    "pilot_acceptance": {
+      "data/v3_1/radial_likelihood/catalog_000_step0.02/complete.json": "6a56b0025b5573b32232d9318664d13ed4994eeb6b8893da40d06da66ac07b93",
+      "data/v3_1/radial_recovery/catalog_000_broad_step0.02_s2048_w512/fine_grid_audit/complete.json": "d58f88217aef4f7d45b6e60c54df6be5cbeab5128c75581d4821ffbe0eed1e34",
+      "data/v3_1/radial_recovery/catalog_000_local_step0.02_s2048_w512/fine_grid_audit/complete.json": "f6a4f8bf53b809e6d76923474a1d1997a02998d81c354c65fe7c7ff8ffcf4904",
+      "data/v3_1/radial_likelihood/catalog_048_step0.02/complete.json": "739175004011d7e6e8ecd212fba6eebcd25c80f4aec0212efb38950704bb652b",
+      "data/v3_1/radial_refinement/catalog_048_broad/complete.json": "b8938cd02602c85bb4d45ce000482b23cfdd81617115371b991ff9a699d91fcd",
+      "data/v3_1/radial_refinement/catalog_048_local/complete.json": "8d7347b07ef9eff3ba64afc694d0869869c8acf71b6cedb592d93e7cdd139b1d",
+      "data/v3_1/radial_likelihood/catalog_112_step0.02/complete.json": "36004ae370dfae6a025563e3338f5cd107cd6e5c9e4bc5afd9a7037c6054ed23",
+      "data/v3_1/radial_refinement/catalog_112_broad/complete.json": "581661415da8a1c93ae415b42d88b76ea4f224421c9ec15717312296f4130dac",
+      "data/v3_1/radial_refinement/catalog_112_local/complete.json": "5eb3ed1c1671202658367750a9586f5bcd93f0ef901fbe7c72321f1d4bd4be75"
+    },
+    "shard": 0,
+    "shards": 2
+  },
+  "job": "61225052",
+  "catalogs": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    76,
+    78,
+    80,
+    82,
+    84,
+    86,
+    88,
+    90,
+    92,
+    94,
+    96,
+    98,
+    100,
+    102,
+    104,
+    106,
+    108,
+    110,
+    112,
+    114,
+    116,
+    118,
+    120,
+    122,
+    124,
+    126,
+    128,
+    130,
+    132,
+    134,
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    148,
+    150,
+    152,
+    154,
+    156,
+    158,
+    160,
+    162,
+    164,
+    166,
+    168,
+    170,
+    172,
+    174
+  ],
+  "results": [
+    {
+      "catalog": 0,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_000_broad/complete.json",
+          "sha256": "bcf8388e65c036966660f658c46623f39558dbb70aadc835e4cedb8e0b9fdf42",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_000_local/complete.json",
+          "sha256": "81e57c6c96f9849c97ed56f134a34174570843ecf47b40444828057df060ac65",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 2,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_002_broad/complete.json",
+          "sha256": "c61f61c96538e7099d20e7cb0927aa7ed75f27c33219c2a3860f93823f6552d9",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_002_local/complete.json",
+          "sha256": "c0abb9841d6dff68319cdb37d2280987ae1f555c4da6af3a217006023dc9f1eb",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 4,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_004_broad/complete.json",
+          "sha256": "01735c475b2259922674c42d59e194e19534ebfb3e97f589987a3439461d3305",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_004_local/complete.json",
+          "sha256": "1ae3eff938581cba49f7f9b303655e9e58f015c0f8db5611cfd38e711bf92e37",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 6,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_006_broad/complete.json",
+          "sha256": "c5a86f477d4ef307c7f5de0c97cad6db0d4305ddc7f9b6d9944de37a5734c23c",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_006_local/complete.json",
+          "sha256": "f275a0ec8b51771b65f4a78e6cdd89cd15b2a2b30efc74e40d6b5a3abbebe7c8",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 8,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_008_broad/complete.json",
+          "sha256": "a66800c9c4c2834ebbc6a8125e6023d3c7c884f769b0348501807b771b008416",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_008_local/complete.json",
+          "sha256": "c9cf4fa94b29fa82d88186c4978fd6f5ca508799f1d2333d6b224660e5e313c3",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 10,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_010_broad/complete.json",
+          "sha256": "810605e4379583b1fd9d486fe0dd6f6de511ada570647b1fb252172dff1ac410",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_010_local/complete.json",
+          "sha256": "9fba61086e187c48f3434308fcfd1c484c92d5a1e81d0730a7510fa0d8864906",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 12,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_012_broad/complete.json",
+          "sha256": "1184497248c10271255f33488f6b325284a999f6f3f49e949e0f7407cdd32530",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_012_local/complete.json",
+          "sha256": "5d49651cb2eeaef4d4ab8b36039f5de69ceee7905b550f23ca48534faf19d657",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 14,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_014_broad/complete.json",
+          "sha256": "86af970c5c2b87a780995ac64833f2459b03cc1f7dae42826c3c97216647e4a5",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_014_local/complete.json",
+          "sha256": "8e62dab3df81326c5d7f2b321a819fb9e17af8d7c6b93333877f501e55737613",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 16,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_016_broad/complete.json",
+          "sha256": "5d294ba8e416eebb5d637896dbf1a757245243aca7c216c530d33b87b0cbec14",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_016_local/complete.json",
+          "sha256": "3fc61ba45ebec5cc4da7ef29a1642a6bef170c40b2dfe66306cbfdf4d390c9dc",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 18,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_018_broad/complete.json",
+          "sha256": "ac585515e6adc84625d9221ac4a8252b0a87e2e7162a9a78fb764308d437f1c5",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_018_local/complete.json",
+          "sha256": "6502335a8c4ab80746587e3e62c228d13033c9abd824a14685c091caac49545e",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 20,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_020_broad/complete.json",
+          "sha256": "5296d6b08f7bf67d6ff6177e290e825d37896d30196c8f48f651da7931fd35ba",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_020_local/complete.json",
+          "sha256": "74cf902f457b7f11f90b20c62a132a2fd89771c77ae1cb50015a250de9c0bf31",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 22,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_022_broad/complete.json",
+          "sha256": "b6a0711368c9988ce642412341099616ee73b4ded44acbea74a63b4de174732a",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_022_local/complete.json",
+          "sha256": "aba75f696d9cfab5f85bfd100d7e64e107d50f0ac05a7129d7e04e4228c5df04",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 24,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_024_broad/complete.json",
+          "sha256": "f2ad9acca041717ace3fb605a79473984cddfbd70d06fec5ff1f5bb9a54a2757",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_024_local/complete.json",
+          "sha256": "49cba59efb6b55e8c2408c4875a64d55c6f085d0d6e216cd78be0c00e356f99e",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 26,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_026_broad/complete.json",
+          "sha256": "b1eb9035e7a4ef4d462767705596d5ee558c5f03437e8620a89575a7d674c02c",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_026_local/complete.json",
+          "sha256": "eaa9b3d5bd905bf32ab91bc8e980e343338cdb8eb707be049d7e1f5455c2329c",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 28,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_028_broad/complete.json",
+          "sha256": "4c12cb958f922092db8a5b653ad67377485fd64d9a4ce4cf230f43ee3a9b78aa",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_028_local/complete.json",
+          "sha256": "a3a9ac9478ffad53449a7debdeb484595f5ded76919e830956022aea9055b9ea",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 30,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_030_broad/complete.json",
+          "sha256": "4eefa1b2963f3a0d3d010d004713bb27cab30636c214616c609e4b11abe75926",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_030_local/complete.json",
+          "sha256": "794b1dd31107017cd090f58472446b47fcd859b53090bbef60c44a548c4bb83a",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 32,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_032_broad/complete.json",
+          "sha256": "94e02a892a6dd4658dfa84fccaf9530fb861d20e6530412a8d41d71f933ead35",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_032_local/complete.json",
+          "sha256": "60819d9ae12ccd9b97e8179fdce4115f711da027d136f0d61dd27e8f3d239fbe",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 34,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_034_broad/complete.json",
+          "sha256": "7abf82f7f9bc85b6cbe4bda610f8fe0fa1631a9b74b770289313653c40969f33",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_034_local/complete.json",
+          "sha256": "5367fa52e944f1d01f1b9f3e6462c0ef354d0002c80f7296ff67aa92a9b9f6c9",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 36,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_036_broad/complete.json",
+          "sha256": "1752a0c9b1b274fb64a5b8b2f823d3bc9ab0f939415799c218edb6fc970938dd",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_036_local/complete.json",
+          "sha256": "ebf3897ba57c0253eb4c42db9d1446468931d30333d7310db87c20b63d686cdf",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 38,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_038_broad/complete.json",
+          "sha256": "771214538cf8ed9b8623f4c9e5fdbf28be43dee28406804729ddb7df334e9867",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_038_local/complete.json",
+          "sha256": "f44d237415e54275d24d475c00eda5dec3e1a9f357a0fbe7b7f784da3d3e9054",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 40,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_040_broad/complete.json",
+          "sha256": "9bd530754999f38d04b494072b114153ff2f298f38d7a941dbb80a4ccdb472d3",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_040_local/complete.json",
+          "sha256": "bd6769ae80d1913264f919011d4310766d4525fa96e7a18b88542e0888582876",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 42,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_042_broad/complete.json",
+          "sha256": "d365f9a7f01600cc69fba2843a827e5c1172a7513474bfd6e2f3eab5224dd0e5",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_042_local/complete.json",
+          "sha256": "fe84f1e830fef336891d965d91b1fdfb7c7baf528a409dfa9e2feeac3936ae0d",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 44,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_044_broad/complete.json",
+          "sha256": "efd63500e3261d8488af48f8821322f31324d178ffce41819e17cf1941207048",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_044_local/complete.json",
+          "sha256": "69b06d1aca070d628e8b73e1bca8c62d979919811137136c6daa5f8490d32ebd",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 46,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_046_broad/complete.json",
+          "sha256": "ed928ab7d336c75a4f79900fa13e622f0787fbc044b0784d6f905b39cba78da2",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_046_local/complete.json",
+          "sha256": "b2b8eedd585ec1d1394c20e48b46744300284cf3fc677e996f298cce98650a51",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 48,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_048_broad/complete.json",
+          "sha256": "b8938cd02602c85bb4d45ce000482b23cfdd81617115371b991ff9a699d91fcd",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_048_local/complete.json",
+          "sha256": "8d7347b07ef9eff3ba64afc694d0869869c8acf71b6cedb592d93e7cdd139b1d",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 50,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_050_broad/complete.json",
+          "sha256": "b0df0aecf2748e7b63348660db9f7f49c0a6ca5088c206d2d978911750160d5c",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_050_local/complete.json",
+          "sha256": "3718b9e9c41c1344edc517b56e11af007e1d63a61f30267aea65e9f1c423293c",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 52,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_052_broad/complete.json",
+          "sha256": "7368dd7074b15012dabae03cfc6f1303b3f030ab157f65c295b833cbe84d3887",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_052_local/complete.json",
+          "sha256": "1983ec4e2fd8da17f81c69fa9b7110a9753366b8385290e5d84bcc0233f6d1ea",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 54,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_054_broad/complete.json",
+          "sha256": "714de7a05669943de4f7c0c3f1b797dd5f5cecdf06b4e69dd3351bae0e8316ee",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_054_local/complete.json",
+          "sha256": "c3df81c58a20b4c37063fc3eae6033be7ca4066a0230dc0857a82ec457ce9ada",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 56,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_056_broad/complete.json",
+          "sha256": "9446065daf9e67d34a84552ef6026626f2e60e6099d86e918f1e27e9f59d0ce1",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_056_local/complete.json",
+          "sha256": "1d5c668ceb067faf50dd53f6c2e3a42204781fbe83539e27014a0809f10e4378",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 58,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_058_broad/complete.json",
+          "sha256": "6845905dde3310ce814ec37e688967ceb17f1c33d34cc4e14da99122d0297e91",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_058_local/complete.json",
+          "sha256": "30122686b54495a31f5011a2ced671e803addc515979c8bf8b2e69ae35710cdb",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 60,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_060_broad/complete.json",
+          "sha256": "0c6662ffd8f81cd8d27fd2e6b9d2c4d748fb62367731f26fc7fc52b00a759724",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_060_local/complete.json",
+          "sha256": "94b446dfa1e822cf1f9b23c1e51f3c99ab2548bef1399ec1f9b948b50e2e67bf",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 62,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_062_broad/complete.json",
+          "sha256": "cb605aa47dddf876607f9d6d24cb38236f96e11760bea897c9a7f56622e0350a",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_062_local/complete.json",
+          "sha256": "7934ab61a9a4b969157d7956115454ae97089101eb0d285910fcb16b07e9c3be",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 64,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_064_broad/complete.json",
+          "sha256": "25e443eb1f653ec83e792e14f8ae7923165435e94d9f24886cf700d2c489b55b",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_064_local/complete.json",
+          "sha256": "0d1b4f4be86c4d34d6f5c88f51a54c2f5c69d745aa1da52abef916b24f6aa9f8",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 66,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_066_broad/complete.json",
+          "sha256": "62f5eeb21a185d92e5fef5abdb7b7cde160266650bfa4ceecb15e0a0d60bd298",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_066_local/complete.json",
+          "sha256": "4b5145460304f4de3c19d43d0a3b6ae96d2917ef23a5dc22cb99c601f61e568f",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 68,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_068_broad/complete.json",
+          "sha256": "cff2597d638c73bac986cc7a6649e6f32c83d460c337ed13d35f8cd2edab09bd",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_068_local/complete.json",
+          "sha256": "de666156d319b13db8f79c23ef8336137c174f1d6da02644cd81168a8382d0db",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 70,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_070_broad/complete.json",
+          "sha256": "f65786067dbfc5404b949d6df6bdac9ec2fa2cfbf47d1efcb7b1c80305465fdc",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_070_local/complete.json",
+          "sha256": "a368880c4aa65e8da758e5ff78410e26ac9b0923637a20729f981e8fdbb34bc6",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 72,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_072_broad/complete.json",
+          "sha256": "2e32c9a46ec47f0a8c9e4ac13c3ca290921b843a2dea1c08593ef38e1584492d",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_072_local/complete.json",
+          "sha256": "aeb7a6bd0089fd515896b00dd82502ef2d9fe323cb01fbda9fb35896effe0f22",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 74,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_074_broad/complete.json",
+          "sha256": "eaa730c49ecb7282c28f7a6aca5d6e6eab928c79dc491dec4c50868aa2cc5cb5",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_074_local/complete.json",
+          "sha256": "0c130b4de201ee73eeaa82eaf53a75ff7f1c7f9a264c5aeae25f9d0af363caf9",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 76,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_076_broad/complete.json",
+          "sha256": "2e92c2eaf264f9cd44a31c88b719368a7ae63b11804fbe2e002a3180141b58ec",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_076_local/complete.json",
+          "sha256": "6dea6c2613093f50049f55c7821a271ac7a870951741fb75bc20785722db5e1c",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 78,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_078_broad/complete.json",
+          "sha256": "e7e8e536e8080477e80b4fdf4be6e38896474236e8c2821262e46adf2612fe62",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_078_local/complete.json",
+          "sha256": "5e2dd646cab9828b8961a1ed882057bd9e1da8eef6ee9748826e4c1548c75498",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 80,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_080_broad/complete.json",
+          "sha256": "dafbc59be14766439fbfba0d0db9f289d01547641605a119b920b1f767fb0c5c",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_080_local/complete.json",
+          "sha256": "4027bfef416e81d14202e3f22dd4f713bfefc304ea07bdfdc5d8bfefbae7d150",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 82,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_082_broad/complete.json",
+          "sha256": "743a59e7eb582ac8f3ca31a815e3c44c8913d9e13b2ba2f972fbcc0d9534323b",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_082_local/complete.json",
+          "sha256": "0b9c56ee68580c81ff61c28e8c715c4db65d617247c60b916e8b0b67958e1fd9",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 84,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_084_broad/complete.json",
+          "sha256": "f2f2e287349bbc6d6b057ac9a1235ef321b5831ffd49d8e6827bff098601d017",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_084_local/complete.json",
+          "sha256": "8503bede619677b61245a7b23644dec94c9585860ef6e6900707276aba7cd85a",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 86,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_086_broad/complete.json",
+          "sha256": "af283a5ea3c309c60747320f6564e467080ba987681cb50ff11ebf2f6e65c88c",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_086_local/complete.json",
+          "sha256": "9fb87f0476ce79d48dda5f3e26bc9bc3b8a6541be3a0ec82ee46ed018851c01c",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 88,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_088_broad/complete.json",
+          "sha256": "958ae2c7bac86ff2188bc09869bd1c79ac543deb449feaed769a2132d742ec94",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_088_local/complete.json",
+          "sha256": "fbb76202e60533b7ab638c98caa057dc8855783718ebb2579ea39b9fe38168e8",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 90,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_090_broad/complete.json",
+          "sha256": "be3f669c2c3d9286693cbc36b2e83e829ee0e045de6df663f95828367f9a1f5b",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_090_local/complete.json",
+          "sha256": "d8e80565b9982e5406a92dbfdfac4c1344a1497b457580e6deab88b983a8f5da",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 92,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_092_broad/complete.json",
+          "sha256": "0ab2d514e445678050d00759d690ec2a4b36c55a210678838569d8f1e553148e",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_092_local/complete.json",
+          "sha256": "6e846aaff425a2fc160dd7a9fb60dd9b4088cd43665c9f8ce8e33aab2a393a1e",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 94,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_094_broad/complete.json",
+          "sha256": "75db779b7dc3e3bb7fec01acb94f302d9e109bb947101f2b0f61912ca5585a94",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_094_local/complete.json",
+          "sha256": "c74aed12e1809c209bfb4240d29196e015b9e3f4c7cd8a5fa7bfbba8194b1fdc",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 96,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_096_broad/complete.json",
+          "sha256": "79c5051ea86d88e36b96017cbc38b7d688046638f816131635d886bd86a2a3bd",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_096_local/complete.json",
+          "sha256": "3fb3b12c9477327b35737dd0d56cc7f1f5ec4e45e20b76e73e06e9211539e69a",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 98,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_098_broad/complete.json",
+          "sha256": "1631819c0257640239db989b3ef8101f6443863da3bec54f2f49f6be6a959506",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_098_local/complete.json",
+          "sha256": "d42d19d5f7dc6e3e20f86e736e6c7d60426cce18ce220578d2c1b6691baa2f79",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 100,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_100_broad/complete.json",
+          "sha256": "5fb375d8fe0a9200407749a5187001b46626c2d11c7531a936188ece0904cd8f",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_100_local/complete.json",
+          "sha256": "18cb4b8cc02b796ecb461f2aa357380c86b5ab56712bd68eda9837cb2e49a33c",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 102,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_102_broad/complete.json",
+          "sha256": "6ee5fb5a686cc812ed3489a7e56947cc3995e4bba5388cead58773954e2336c0",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_102_local/complete.json",
+          "sha256": "d1c99c93aedb67699bbb8da3a162ad57bd2d247abc72eb302b9f4322fbe5e18e",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 104,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_104_broad/complete.json",
+          "sha256": "c7064e42161cb96b411441c2b1a503f3e5f897f1600ecd99ada6b0d0f5c34378",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_104_local/complete.json",
+          "sha256": "ffbc150d07cb5aa052cc4ef832cbd0d36c3867d6984fe57fc8f85c7ce190178f",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 106,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_106_broad/complete.json",
+          "sha256": "e0c7218cb75eb013ed6954d02c292278f7e21c90fdf31e25188c1f58fa02de9d",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_106_local/complete.json",
+          "sha256": "52762f1cfd572b25c3e2f1e6da7126bacb3840f7a3f3d1e8f4d8453b5a52e961",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 108,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_108_broad/complete.json",
+          "sha256": "079d1dcc8471594fde56382df4b28befc1695325f8b3ec01d4109afcf0183e1c",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_108_local/complete.json",
+          "sha256": "689fd86aa106be3b1d46108a6e744b0fae01a2db4f19a104d5099c26c89a815a",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 110,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_110_broad/complete.json",
+          "sha256": "8ca2e44d40a3edbcfca7d88fadbed7e3952289817252337572e7085649161af9",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_110_local/complete.json",
+          "sha256": "3c5f9d88a10750855a4a69ec7f2f0d3e16dce66b65b18ca325fc56edb96918a0",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 112,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_112_broad/complete.json",
+          "sha256": "581661415da8a1c93ae415b42d88b76ea4f224421c9ec15717312296f4130dac",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_112_local/complete.json",
+          "sha256": "5eb3ed1c1671202658367750a9586f5bcd93f0ef901fbe7c72321f1d4bd4be75",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 114,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_114_broad/complete.json",
+          "sha256": "881e850164c73f606a6984306aa32874491acaeedb1e3582959de28aebc1ac49",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_114_local/complete.json",
+          "sha256": "2b76c76ec3a4ec6701a77a1d19bb957dafc932fe4f15b664cf3744c8352cd159",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 116,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_116_broad/complete.json",
+          "sha256": "89166f396694c3a43bc3f9667182cdc350d4f4234ee52a59987c912e701aaa03",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_116_local/complete.json",
+          "sha256": "5d949a31f7d850b83253add4ddd64d09d99ee4a7bafb8ea6c0c73354357e8817",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 118,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_118_broad/complete.json",
+          "sha256": "dab68f79abe06b5957648bf80283051bb099851a87099cae75a8871747902762",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_118_local/complete.json",
+          "sha256": "706de86ecb97177566881e8ae083c732d3ee078464db3aa3200b196bac99f033",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 120,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_120_broad/complete.json",
+          "sha256": "ce371d68b4f267b4186e165eafebb0bd714633e439ed545e56aac3ffdd583b15",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_120_local/complete.json",
+          "sha256": "0f74e270146e6543329ea465ab5d992a6de29db4945abb6973f426846682d7ea",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 122,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_122_broad/complete.json",
+          "sha256": "a54f271a1699591fc8731e8769911388cdf23a2dd552614df23d11851edbbf87",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_122_local/complete.json",
+          "sha256": "7a0f4db48f14e3fe661be8320f3d80796d52f1da1788de7a3555719cfa055b52",
+          "passed": true,
+          "selected_draws": 512
+        }
+      }
+    },
+    {
+      "catalog": 124,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_124_broad/complete.json",
+          "sha256": "bdcdcb15cdf531db631fc762c8296f8b54975998988b4f0a2574945491a1deed",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_124_local/complete.json",
+          "sha256": "e2c10cd9121e71aae1610dd8ae892e5122b5518d97f9a55e241e512d1b0b8889",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 126,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_126_broad/complete.json",
+          "sha256": "374d4755bacf9f5416690ee7848285ecafb434204bc30876dba013a9715bba46",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_126_local/complete.json",
+          "sha256": "ef653f9235abb77fa22c3ece80e005934567f5e1cdf16da162b474fe7f44a562",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 128,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_128_broad/complete.json",
+          "sha256": "b065f748e7af5cfe6217ddc47355b0d7baf3d70ac1223e3f9f492a1688fcdf94",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_128_local/complete.json",
+          "sha256": "76c3869d44f7073c0d4e7d30f31f4ba300487eebd560d3b9c2b6d542a38e4daa",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 130,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_130_broad/complete.json",
+          "sha256": "b5fe178123d77d1172aab3b1eaed4096c9b9028240ee455ff487bb60aee66aef",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_130_local/complete.json",
+          "sha256": "5e29fa25d60929b996a4a7e879ec412824551a9ccf15339761da440129f31df7",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 132,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_132_broad/complete.json",
+          "sha256": "0a50b933566bd25efbb4af94bb2acad76596da20fec9fc39306df3d18abdb94e",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_132_local/complete.json",
+          "sha256": "cce4d7ee72c0e0c7c1cdcbf9aa635ffe36068ab96ff6ad339a058e043fffdec5",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 134,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_134_broad/complete.json",
+          "sha256": "3bc05351e3a92eaf58b0b952b0530de112e25aec89a907110882f04aa945c06c",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_134_local/complete.json",
+          "sha256": "a5cf2b1e0cf916d16c049d5f78514ea15c06a5ec6691510f67cade94e9080047",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 136,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_136_broad/complete.json",
+          "sha256": "c83d8d005f28fc0b5a147bf3f6d65734284dc20251d2502cb41c50a670530b40",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_136_local/complete.json",
+          "sha256": "fde1fd6dc0e4fb6e4fd0ba14c1a151ad3c553cf11991be45b42fdeafd547d5ad",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 138,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_138_broad/complete.json",
+          "sha256": "260669e14745036f2054050bb88e6c221da277926306cc5f63dfcaa57404a1a5",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_138_local/complete.json",
+          "sha256": "43d1542ee5c42f3bfb9c0922f83269425a45cdce155d5efd99fd099d80a2c9ab",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 140,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_140_broad/complete.json",
+          "sha256": "b907ebd90f6cea3753b971a639db28a7cfcb830702e697915be217672975ccc5",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_140_local/complete.json",
+          "sha256": "fe9f15bd9d6f9c1a9299f956b816ad087e99cddb384f2d807265dfab26be8bfd",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 142,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_142_broad/complete.json",
+          "sha256": "84242e3f3f34c8053213120b6e49a849317a9a3f3eff3eec2204f8bda64c6f37",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_142_local/complete.json",
+          "sha256": "09e67321f7b9faca16312063e70340a61fe576c7c22fce311e7cc3281887a141",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 144,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_144_broad/complete.json",
+          "sha256": "00c802f9a58f63b965fa3f64b73d0409c55c4d5d3c11ccb7c03bd6c82b796e0f",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_144_local/complete.json",
+          "sha256": "4fd3314aa409362444a4b6838642a1947825a0cad7a98edfb166030053979a1c",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 146,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_146_broad/complete.json",
+          "sha256": "fef10ab4b2c85dc9ac39a8ac6f6674c88d614d59ee9aa78d0abd9a32b529dcbc",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_146_local/complete.json",
+          "sha256": "e1f3a0753f8dce784c5962bbbd1c3555d58fcb9f6cc72aeec9c8867ff6621adf",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 148,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_148_broad/complete.json",
+          "sha256": "38dd46361b1610ec42278daf083f7949f75538df13a9fcc5cc408c5f53c8aac7",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_148_local/complete.json",
+          "sha256": "f04ac1891e61e086bf89d3c8eddd69e13b1d59db195a7f0b29e0fac9a896ce28",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 150,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_150_broad/complete.json",
+          "sha256": "79b08e52ac5d1ac58fbb05ede1da84447cdb750ec7108f962a1055f1252cd8f0",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_150_local/complete.json",
+          "sha256": "07aa6dca7b4cabe1ebd8e8c8a8c2e3b9466e4af0cd3a0cfd7626bbec4dfc045a",
+          "passed": true,
+          "selected_draws": 512
+        }
+      }
+    },
+    {
+      "catalog": 152,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_152_broad/complete.json",
+          "sha256": "70d620e71ad28a916e039a867c44a47f3e77f2ce2df248c798244842f27fe7d8",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_152_local/complete.json",
+          "sha256": "7848907f658da7ebe5964b87907b6da3be327edf003e8d80e32d0eb10cbf67b0",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 154,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_154_broad/complete.json",
+          "sha256": "4de976d69f7559210198a426e13c796f126693eb4ab1e3ab7fe4ff3fad818798",
+          "passed": true,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_154_local/complete.json",
+          "sha256": "8b9072a2969b0f8ff0d4879c8550fdc1eafc2e7516a22be9442d6ab105d7f055",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 156,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_156_broad/complete.json",
+          "sha256": "f90e31b0299b40163c057aba69632ecc1374639f6a546843c1245682b2095afb",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_156_local/complete.json",
+          "sha256": "10474617bfdb160df917b060f75c94ef3259a1c4dc59084138c61e552eb30c8f",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 158,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_158_broad/complete.json",
+          "sha256": "2f7704fb6e573a62578a6194742ca17d4a9a71ac2510c50a18a26afab1bbf509",
+          "passed": true,
+          "selected_draws": 512
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_158_local/complete.json",
+          "sha256": "337d1b158fdf3c5f65c9f5c262b0f0a5fed0e4068e1715867d177484eb02c3b5",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 160,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_160_broad/complete.json",
+          "sha256": "65de3386b7bdcdab2068201e3673d1bbf9262cfed1c95a26225764527b0d5d01",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_160_local/complete.json",
+          "sha256": "4315e3a10443717e4025973a9b5bf6d08fb2c15c300e07f3964dc9bb2e89dab0",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 162,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_162_broad/complete.json",
+          "sha256": "110ae098e160166ee4b8baf9da45189fc3cdea3dd9594c93a20cc182b7942580",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_162_local/complete.json",
+          "sha256": "1bdd68d73fdb70c19b953506384812ff638797c610e2a044e32549f94f6fce0b",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 164,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_164_broad/complete.json",
+          "sha256": "bb7749352663e5e1e2669689e18652246f773056ea531382ae1f7e53ee89a2aa",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_164_local/complete.json",
+          "sha256": "775393ea8aad953c0ae64aaa2b3f24a5548b745468315ddd8027c81dee53f749",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 166,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_166_broad/complete.json",
+          "sha256": "845f73247e55780645aa521e828461163fd98494a543031c220776dbb2ee6a4a",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_166_local/complete.json",
+          "sha256": "a484eb34eb501da106635d0597a06d2dd652df0a5f1cb72b66d2f5c240c2645b",
+          "passed": true,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 168,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_168_broad/complete.json",
+          "sha256": "e287902b837a351127b3d8b7ec149c9bfecd871902b293cd39ba5c565577a37f",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_168_local/complete.json",
+          "sha256": "370e9c1bd211feca0d280ebf264526fbd8473413409e11fce29837456b4d7bd0",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 170,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_170_broad/complete.json",
+          "sha256": "744a9441e72eb10cd279eb62b832b4defae6f0cfac20a5b22b302f59accd044b",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_170_local/complete.json",
+          "sha256": "c597a1fdec2ab797a435f90a236c680357970be8c89691b13d03343698f739b3",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    },
+    {
+      "catalog": 172,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_172_broad/complete.json",
+          "sha256": "b18cd5f2835eef84779f8f624708d7283102adfa3b66a528c177afc3a7880790",
+          "passed": false,
+          "selected_draws": 8192
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_172_local/complete.json",
+          "sha256": "68e53fc895506b56a0b835a829e5e9a35ce259c30ea8fd42af853e6863b8d5e1",
+          "passed": false,
+          "selected_draws": 8192
+        }
+      }
+    },
+    {
+      "catalog": 174,
+      "arms": {
+        "broad": {
+          "marker": "data/v3_1/radial_refinement/catalog_174_broad/complete.json",
+          "sha256": "a17f42fc8bf7d0c464e7ea9c19af8f1b3eea322264f68cfa0331fa2f55f89dea",
+          "passed": true,
+          "selected_draws": 2048
+        },
+        "local": {
+          "marker": "data/v3_1/radial_refinement/catalog_174_local/complete.json",
+          "sha256": "7e1a9c18e7b297fff1992b153918f46e8a1c26f2ca940004cfdd2e35c29f4496",
+          "passed": true,
+          "selected_draws": 2048
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "execution_complete": true,
+  "numerically_passed": 47,
+  "scope": "All registered scenarios; bounded numerical extensions only. Failed numerical or scientific outcomes retained."
+}
