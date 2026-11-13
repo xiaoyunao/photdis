@@ -271,22 +271,44 @@
     {
       "job_id": "61214835",
       "purpose": "catalog48 broad numerical extension",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "PENDING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61214836",
       "purpose": "catalog48 local numerical extension",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "PENDING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61214837",
       "purpose": "catalog112 broad numerical extension",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "PENDING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61214838",
       "purpose": "catalog112 local numerical extension",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "PENDING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
+    },
+    {
+      "job_id": "61214982",
+      "purpose": "flagged shared-target-prior grid sidecar",
+      "dependency": null,
+      "last_observed_state": "PENDING",
+      "qos": "debug"
+    },
+    {
+      "job_id": "61214983",
+      "purpose": "historical input/footprint/system ancestry availability audit",
+      "dependency": "afterok:61214816",
+      "last_observed_state": "PENDING",
+      "qos": "debug"
     }
   ],
   "local_validation": {

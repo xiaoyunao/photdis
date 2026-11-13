@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-13 — match candidate selection to observed brightness and QRF support
+- Added conditional nativegrz Gaussian survival integration with original
+  r<20, allmagerr<.1 and exactQRFsupport. Calibration transforms likelihood
+  coordinates but not the original selection decision; no missing supportcut.
+- Three new math checks pass: raw/calibrated threshold equivalence, analytic
+  independentGaussian survival, correlatedcolorcut versus independent directQMC.
+  Fullsingle-thread v3/v3.1suite96tests pass3.15s; syntax/shell checks pass.
+- Registered outcome-blind minimum/median/maximum calibratederror contexts from
+  fixed3540candidate subset.128/512Sobol and independentseed plusmedianfinegrid
+  pilot implemented; execution pending, no context-compressed response/refit yet.
+- Target numerical sidecar61214982 and historical-system audit61214983 queued;
+  latter waits for native61214816. Radial pilot extensions remain active/queued;
+  only schedulerQoS/timelimits changed, scientific priors/inputs unchanged.
+- Next: execute candidateentrypilot, complete nativehistory/rolefreeze and all
+  radial numerical gates before production scenario recovery or correctionfit.
+
 ## 2026-11-13 — quantify target-prior regression and audit prospective ancestry
 - Pairedreport61214440 COMPLETED58s:11882contrasts,5actual checks pass,
   one numericflag retained (identity2507286355604739968, quantiledelta.16235mag).

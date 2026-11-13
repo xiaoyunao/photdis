@@ -37,14 +37,16 @@ fix passes2regression tests; corrected61213891 yields190431acquisition IDs
 (98674also newsky), allnativeunverified. Native qualification
 and coarse/fine shared-draw audit drivers implemented, execution pending.
 Shared-target-prior32star pilot complete; full1542 job61214214 completed with1retained numericalflag.
-Full local93tests pass with one BLAS/OpenMP thread; initial native segfault retained.
+Full local96tests pass with one BLAS/OpenMP thread; initial native segfault retained.
 Pilot0 broad/local512 runs retained with halfdelta flags;2048extensions bothpass
 coarse numericalgates. Both catalog0 fine-grid audits pass; remaining2pilot recovery underway. Bounded numerical extensions preserve all originalflags.
 Native qualification53004bricks underway with resumable checkpoints.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
-Implement matched shared-target-prior contrasts and radial recovery on all
-registered catalogs, then selection-matched transfer/response/systematics work.
+Matched shared-target-prior contrasts complete with evolved-star regression; retain1numericflag.
+Candidate-envelope normalization includes brightness/error/QRFsupport;3math checks
+and outcome-blind contextpilot registered. Execute pilot before matched refitting.
+Finish radial pilots then all176catalogs and response/systematics work.
 No automatic million-object products, deployment, timers or subagents.
 
 
