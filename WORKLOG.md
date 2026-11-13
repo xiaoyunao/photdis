@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — add shared heldout-sky transfer and recover resource timeouts
+- Added registered whole-field12/4/6 transfer under broad/candidate/heldout fits,
+  all34corrections/fourviews and matched broad/candidate entry. Onlyheldout fit
+  excludes those objects. Per-object cut predictions/counts remain separate from
+  joint selected photometric scores, generalizeddesign scores andsupport flags.
+- Shared-predictive math tests prove sameglobalstate catalogdensity9 ratherthan
+  independentper-object product25, and verify selectionnormalization/state mixing.
+  Jointimportance ESS100/half-logdensity.2 guards registered before execution.
+  Driver/report ready butnotrun; no newreferences or distance-truth claim.
+- Resourcegroup61222996 TIMEOUT30m15s, allcheckpointfiles retained; confirmed
+  noactivejob before exactsingle-shard resume61223947(6–9), originalsciencehash
+  unchanged. Grouping didnot demonstrate speedup. Unstartedgroup61222998 was
+  safelyheld/cancelled and replaced by61223886(14–15); noactivewriter cancelled.
+  Othergroup61222997 status/recovery andfinalassembly dependency recorded remote.
+- Released obsolete wildcarddependency onlyfor response0refinement61223212_0
+  after verifying parent61221623_0 COMPLETED andfull384object inventory; allother
+  prerequisites retained. This is scheduler recovery, not numerical acceptance.
+- Added one-case targetrefinement wrapper for candidatezero pilot, pending sync
+  anddependency-gated submission. Full132tests pass3.52s; newdrivers import/
+  compile, shellsyntax/diffchecks pass. Scientific transfer/fit results pending.
+- Next: finish resource recovery/repack, run conditionalfit pilot, complete all
+  registered states/counts andmatchingexternalpredictions before reference opening.
+
 ## 2026-11-13 — freeze final-target prediction identity before new outcomes
 - Added protocol/driver for candidate3540 response12/cal12 plus authenticated
   zero/point/32bootstrap-evidence/equal-cut populations. Optional broad-cohort
