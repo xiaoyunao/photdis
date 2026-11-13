@@ -1,0 +1,39 @@
+{
+  "plan_sha256": "3fa9077d2879d9e99892850aa92045b9cb523a4f77131cceb10e6cef3f7d22ab",
+  "resource_source_sha256": "ebb288c74bd2edffa5eac8c54fdbadf79ceee2ef506a175f1435489345b30d5a",
+  "job": "61239060",
+  "draws": [
+    30,
+    31
+  ],
+  "processes_per_state": 32,
+  "total_workers": 64,
+  "memory_limit_bytes": 540164276224,
+  "planning_bound_per_worker_GiB": 3,
+  "results": [
+    {
+      "draw": 31,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_entrypack_61239060_draw_31.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/structure/entry/draw_31/complete.json",
+      "marker_sha256": "c4b78c5a89c8c4313cafe0ddc8cee850cd6c5608ba634544f15bb14968ec7c1d",
+      "numerically_passed": false,
+      "numerical_failures": 420
+    },
+    {
+      "draw": 30,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_entrypack_61239060_draw_30.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/structure/entry/draw_30/complete.json",
+      "marker_sha256": "a50a593373b340c446cba4b72055b4d3341686cbc1ea64839573842dcb19cef9",
+      "numerically_passed": false,
+      "numerical_failures": 512
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Resource grouping of two original entry CLIs only. Original integrands, seeds, all512PSF contexts and failed numerical flags remain unchanged; no refinement or scientific acceptance claim.",
+  "elapsed_seconds": 954.038151153014,
+  "maximum_descendant_RSS_KiB": 1265848
+}

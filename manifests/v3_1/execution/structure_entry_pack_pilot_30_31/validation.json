@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/entry_resource_execution/job_61239060/complete.json": "740c64ee9b8e5af1043559d5aba9a603f751b4df9a1dc66104cde44f42cce023",
+    "manifests/v3_1/execution/structure_entry_pack_pilot_30_31/plan.json": "3fa9077d2879d9e99892850aa92045b9cb523a4f77131cceb10e6cef3f7d22ab",
+    "manifests/v3_1/structure/entry/draw_31/complete.json": "c4b78c5a89c8c4313cafe0ddc8cee850cd6c5608ba634544f15bb14968ec7c1d",
+    "manifests/v3_1/structure/entry/draw_31/checks.csv": "c1055d7143e69b9ed841a23f3dd522a3d1831dc6707d7d858eed7faa3f4725ca",
+    "manifests/v3_1/structure/entry/draw_30/complete.json": "a50a593373b340c446cba4b72055b4d3341686cbc1ea64839573842dcb19cef9",
+    "manifests/v3_1/structure/entry/draw_30/checks.csv": "ff1b0568de6e7f8a80b49e568da52b69f8f590d00f441a5c02b580ff137436c7"
+  },
+  "checks": [
+    {
+      "check": "plan_hash",
+      "passed": true
+    },
+    {
+      "check": "executor_hash",
+      "passed": true
+    },
+    {
+      "check": "two_states_execution",
+      "passed": true
+    },
+    {
+      "check": "unchanged_32_workers_per_state",
+      "passed": true
+    },
+    {
+      "check": "marker_hash:31",
+      "passed": true
+    },
+    {
+      "check": "table_hash:31",
+      "passed": true
+    },
+    {
+      "check": "same_initial_driver:31",
+      "passed": true
+    },
+    {
+      "check": "PSF_and_512:31",
+      "passed": true
+    },
+    {
+      "check": "all_1024_branches:31",
+      "passed": true
+    },
+    {
+      "check": "failed_contexts_preserved:31",
+      "passed": true
+    },
+    {
+      "check": "original_numeric_outcome:31",
+      "passed": true
+    },
+    {
+      "check": "execution_not_numeric_acceptance:31",
+      "passed": true
+    },
+    {
+      "check": "marker_hash:30",
+      "passed": true
+    },
+    {
+      "check": "table_hash:30",
+      "passed": true
+    },
+    {
+      "check": "same_initial_driver:30",
+      "passed": true
+    },
+    {
+      "check": "PSF_and_512:30",
+      "passed": true
+    },
+    {
+      "check": "all_1024_branches:30",
+      "passed": true
+    },
+    {
+      "check": "failed_contexts_preserved:30",
+      "passed": true
+    },
+    {
+      "check": "original_numeric_outcome:30",
+      "passed": true
+    },
+    {
+      "check": "execution_not_numeric_acceptance:30",
+      "passed": true
+    }
+  ],
+  "actual_checks": 20,
+  "execution_verified": true,
+  "scientific_acceptance": false,
+  "job_accounting": "61239060|COMPLETED|0:0|00:16:13\n61239060.batch|COMPLETED|0:0|00:16:13|52022136K",
+  "python_elapsed_seconds": 954.038151153014,
+  "maximum_single_descendant_RSS_KiB": 1265848,
+  "batch_MaxRSS_KiB": 52022136,
+  "scope": "Two originalinitial-entry states executed under same32-worker CLI. Compact identity/source/failure audit only; fullcontextpayloads were checked by allocated executor and remain required in finalassembly. No new wider grouping authorized by this record."
+}

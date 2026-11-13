@@ -193,6 +193,13 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Refined5 COMPLETE34m41/all512pass,original512flags/10compactchecks retained.
+  Initial25/26 flags512/149; two-stateinitialpilot61239060 COMPLETE16m13,
+  original30/31 flags512/420,20compactchecks pass,batch49.612GiB. Remaining
+  initial27–29 andrefinements/fullposterior stillrequired; transferpack2running.
+- Integrated docs/v3_1_result.md now synthesizes completed workpackages with
+  explicitpendingtransfer/structure/domain/fiveplates. Sourcehashes and14local
+  links recorded; notfinalacceptance. Replacependingsectionsonlywithactualresults.
 - Latest full suite: 179 tests pass (6.06 s). Seventeen English plates have
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes

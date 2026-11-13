@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-14 — integrate completed work packages without premature delivery acceptance
+- Added docs/v3_1_result.md as explicitlyin-progress cross-package synthesis:
+  exactproduct identities, mechanism/correction failure, radialcoverage and
+  selectionapproximation, finite-response support, frozenexternal evidence,
+  highq/modes/referencegaps; actualtransfer/structure/domain outcomes leftpending.
+- Re-read Prosection6, protocols andsixcompletedresult reports. Confirmed
+  candidate-selection normalization isdistinctfromthefrozenradial approximation;
+  do not claim exactradialselection or initiateanunregisteredmodelreplacement.
+- Refined5/61229436 COMPLETED34m41:512originalflags retained,512pass/0unresolved;
+  10compactchecks pass. Initial25/26 completedwith512/149originalflags.
+- Initialpairpilot61239060 COMPLETED16m13: original30/31 flags512/420 retained,
+  20compactchecks pass; Python954.04s/singlechild1.207GiB/batch49.612GiB.
+  No widerpacking needed forcompletedentrytail; pendingrefinements unchanged.
+  Existingtransferpack2 nowRUNNING afterslotrelease;48-workerpilotstillrunning.
+- Twelveinspectedsourcefiles hashed;14existinglocalreportlinks verified in
+  integrated_progress_sources.json. version_complete/scientific_acceptance false;
+  no syntheticdata, numericalrerun ornewfigureacceptance. Allfivependingplates
+  andfinalfullinventorychecks remainrequired.
+- Previousgoalturn wasprogress:58stateauthenticatedoutcomes, exactresume and
+  schedulingreceipts, commitc2530f9 synchronizedallthreeends. Livejobsconfirmed
+  thisturn; nextcollectactualcompletion andcompletefinalscientificreports.
+
 ## 2026-11-14 — retain58 transfer outcomes and complete exact structure continuation
 - Pack1/raw61239091 COMPLETED17m41:12states/84of96numericchecks pass;
   candidate6–17 eachfailsbroad-entry_levelcountgate(.57838–.61982>.5).
