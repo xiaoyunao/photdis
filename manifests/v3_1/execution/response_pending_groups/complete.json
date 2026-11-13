@@ -1,0 +1,61 @@
+{
+  "source_commit": "637ed343c314db08191a687f2274dc12baf83b92",
+  "array": "61229862",
+  "groups": [
+    [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    [
+      30,
+      31,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    [
+      43,
+      55,
+      57,
+      58,
+      59,
+      61,
+      62,
+      63
+    ]
+  ],
+  "old_pending_stages": 60,
+  "complete_stages": 68,
+  "report_dependency": "afterok:61229862",
+  "outputs": {
+    "submission.json": "4485ef92ae119bc8d299c9134ae0162802159f4064f1d58af15a1f4a9df0da63",
+    "plan.json": "c41b4e7d1eeade5e0f09698194c3ace6656df033be6411de3df288e5da7d5267",
+    "submission_before_reverification.json": "ecdf5e71d563ac3efe659cb935e54810177b823e124f4f47615887bba076f21b"
+  },
+  "promoted": [
+    "61228930",
+    "61228931",
+    "61229862_0",
+    "61229862_1"
+  ],
+  "scope": "At most8indices per node, sequential unchanged original stages. Completed stages are hash-checked and never rerun. All64states still required by original report."
+}

@@ -1,5 +1,32 @@
 # WORKLOG
 
+## 2026-11-14 — preserve response replacement receipts and fix report-only weight comparison
+- Response replacement61229862 submitted4groups/60originallypendingstages;
+  all68completedstage markers retained. Immediate post-cancel accounting check
+  stopped before submission; later expanded accounting/controller proved all60
+  CANCELLED/runtime0/no allocation. Originaljournal archived, exactplan/receipts
+  collected andhash-checked. Originalall64report61221949 nowafterok61229862.
+  Firstresourcegroup live; source/default32/16workers/integrals/seeds unchanged.
+- Radialreport61228930 FAILED22s: strict raw-versus-normalized weight equality,
+  maxdifference5.421e-20 (relative4.442e-16). SharedCounts intentionally saves
+  w/sum(w), whereas correction.npz stores raww. Report now checks the exact
+  normalized transformation with array_equal and records raw normalization shift.
+  No sourceposterior/data, fittingcode, scientificgate or frozenfinalevaluator change.
+- Pythonparse and4focused tests pass: actualSharedCounts normalization, exact
+  comparison, unchangedquantiles and rejectionofpermutedweights. Originalfailedjob
+  retained; reportretry and existingpending summary dependency update follow sync.
+
+## 2026-11-14 — complete all bounded radial outcomes and fifth candidate-mode shard
+- Exactradialresume61225072 COMPLETED28m37:88catalogs, broad81/local55pass,
+  50bothpass. Combined176catalogs/352arms complete with broad163/local105pass,
+  97bothpass; allboundednumericalfailures retained. Fullreport61228930 and
+  correlatedsummary61228931 stillrequired before scientific comparison.
+- Mode child4 COMPLETED16m27:442objects/383fixedhighq allpass. First5shards
+  total2214objects/1884fixedhighq; originalensemblefailure unchanged. Three
+  remaining shards and fullinventory report required.
+- Explicit smallmarkers/tables collected withdeclaredhash checks; local counts
+  reconciled to bothresume inventories. No new scientificfit or passedcoverage claim.
+
 ## 2026-11-14 — prepare exact sequential batches for pending response stages
 - Observed original response probes complete in51–76s and refinements10–22s;
   many stages remain separately queued. Added metadata-only submission preflight

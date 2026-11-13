@@ -49,16 +49,22 @@ def main():
             weights=count['draw_weights']; fractions=parameters['joint_fractions']; draws=count['count_draws']
             assert len(weights)==len(fractions)==len(draws)
             assert draws.dtype==np.int64 and (draws.sum(axis=1)==128).all()
+            normalization_shift=0.
             if usefine:
                 correction=load(fine_marker.parent/'correction.npz')
                 np.testing.assert_array_equal(correction['identity'],t['identity'])
-                np.testing.assert_array_equal(correction['weights'],weights)
+                # SharedCounts stores w / sum(w); correction.npz retains raw w.
+                # Compare that exact saved transformation, not a looser tolerance.
+                raw_weights=correction['weights']
+                np.testing.assert_array_equal(raw_weights/raw_weights.sum(),weights)
+                normalization_shift=float(abs(raw_weights-weights).max())
                 np.testing.assert_array_equal(correction['draw_ids'],count['draw_ids'])
             covariance=count['covariance']; eigen=np.linalg.eigvalsh(covariance)
             assert abs(covariance.sum(axis=1)).max()<1e-6 and eigen.min()>-1e-6
             assert abs(count['mean'].sum()-128)<1e-8
             state=dict(**base,numerically_passed=accepted,selected_draws=refinement['selected_draws'],
-                fine_weighted=usefine,max_rhat=record['max_rhat'],minimum_ess=record['minimum_ess'],
+                fine_weighted=usefine,fine_weight_normalization_shift=normalization_shift,
+                max_rhat=record['max_rhat'],minimum_ess=record['minimum_ess'],
                 divergent=record['divergent'],marginal_half_delta=count['marginal_half_delta'],
                 covariance_min_eigen=float(eigen.min()),covariance_sum_max=float(abs(covariance.sum(axis=1)).max()))
             status.append(state)
