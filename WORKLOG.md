@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — prepare complete-source domain interpretation
+- Added scripts/v3_1_domain_result.py: requiresactual12-stage join,3540unique
+  PSF/mode/highq identities,75cell totals/flags,source-specificreferencegaps,
+  response/transfer/structure markerclosure andbothactualwrittenreports.
+  No missing-state normalization orpromotion ofnumericallyfailedcandidate.
+- Writtenreview andfigureacceptance remainseparate. Programcannotmarkfinal
+  domaincomplete; sourceCSV/JSON plusfinalvisualrecord stillrequired.
+- Validation: py_compile/import pass; actualmissingjoin raisesFileNotFoundError
+  beforeanyreport/acceptanceoutput. No realresult yet; no fabricatedfixture or
+  scientificoutput claimed. Originaldomain/sciencedrivers unchanged.
+- Entry14 COMPLETED13m13;512contexts/268originalflags authenticatedandcollected.
+  Originalfailures preserved; refinementstillpending.
+- Previousmilestone0706bc1 synchronizedlocal/origin/NERSC. Remainingcompute
+  tasks active/queued; next: collectactualoutcomes, runpendingreport/renderers,
+  visuallyinspectfiveplates andcompletefinalsource-backeddelivery.
+
 ## 2026-11-14 — complete held-out ensemble and repair exact structure continuations
 - All34holdout fits complete:33at2048/state1at8192, lastgroup25 COMPLETED8m00.
   Ensemble61225886 COMPLETED25s,20000PSF/212fineaudits; mainESS30.91517,

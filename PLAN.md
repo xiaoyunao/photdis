@@ -198,8 +198,9 @@ Negative findings remain deliverables, never successful calibration claims.
 - All 32 independent SED refits are complete (last exact resume 61227619_7).
   Registered old/new probes/refinements/report complete. Preserve all64inventories,
   original/pooledfailed normalization andnewESS1.023628; no addedresponse search.
-- Complete lasttwoheldout conditionalstates andtheir all-34-state ensemble,
-  frozen sky-transfer61238249 plusretained61231554_5/_17/_24/_25 andreport61231678.
+- All102conditionalpopulationstates andallthreeensembles complete; allmain
+  evidence gatesfail, threecompactchecks each229pass. Finishfrozen sky-transfer
+  61238249 plusretained61231554_5/_17/_24/_25 andreport61231678.
   Firsttransfergroup61231554_0 complete17m47/fourbroad states,6000/935PSF;
   88compactchecks. CandidatecutjointESS4.57–25.95 fails support despite conditional
   numericpass; these arein-sample, notheldoutfitresults. Twoactual-source
@@ -222,7 +223,11 @@ Negative findings remain deliverables, never successful calibration claims.
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.
 - Complete-evidence domainjoin61233366 submittedafterok61231678/61232762;
-  one6-panel status/ambiguity figure prepared. Actualexecution requiresfull102
+  one6-panel status/ambiguity figure prepared. Writtenreportgenerator
+  scripts/v3_1_domain_result.py nowrequiresall12actualsource markers, per-object
+  mode/identity closure andactualtransfer/structurewrittenreports; missingjoin
+  failsbeforeanyoutput. Onlyparse/import/missing-input guard tested; actual
+  scientificinterpretation/figureacceptance stillpending. Actualexecution requiresfull102
   transfer andfull32structure reports; writtenreview/visualinspection stillpending. No new
   gates/model/labels; failedmain cannotbe promotedby stablemode sidecars.
 - Complete scientific use-domain adjudication, source tables, English figures,
