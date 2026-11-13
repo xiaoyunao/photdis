@@ -28,8 +28,8 @@ Negative findings remain deliverables, never successful calibration claims.
   broad82/local50pass and47bothpass. Exactresume61225072 COMPLETED28m37,
   broad81/local55pass and50bothpass. All176catalogs/352arms nowcomplete;
   overall broad163/local105pass,97bothpass. Report61228930 failed22s onraw/normalizedweight equality; report-only exact
-  SharedCounts normalization check fixed/tested, retryrequired; correlated
-  summary61228931 mustwaitafterokthe corrected report retry.
+  SharedCounts normalization check fixed/tested, retry61229960submitted; correlated
+  summary61228931 nowafterok61229960.
   Native target26000rows across34corrections complete,258fineaudits allpass.
   Direct entry all16shards complete:26000objects/29540envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
@@ -96,8 +96,8 @@ Negative findings remain deliverables, never successful calibration claims.
   archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
   delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
   array61227827submittedregular1h(indices0/1debug30min); completeinventory
-  report61227828 afterokallshards. Shards0–4 complete, all2214numericalpass with1884fixedhighq;
-  fifthshard442objects completes16m27. Remaining3required; child5running.
+  report61227828 afterokallshards. Shards0–5 complete; first6shards all2656numericalpass. Two shards
+  and fullinventory report remain; inheritedensemblefailure retained.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -135,7 +135,7 @@ Negative findings remain deliverables, never successful calibration claims.
   photometric occupancy 165 and final external comparison 104 artifact/source
   checks. Candidate-mode/domain evidence figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst2214fullobjects pass;
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst2656fullobjects pass;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
 - External correlated report 61226775 and its two inspected figures are complete;
   domain screens61226777complete4m50:37800comparisons/1350groups,17table checks;
