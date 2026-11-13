@@ -1,5 +1,34 @@
 # WORKLOG
 
+## 2026-11-14 — retain candidate broad-transfer numerical failures in first packed batch
+- Firstrollout61238249_0/raw61238416 COMPLETED18m31:12states execute/verify,
+  Python1082.27s,singlechild1.486GiB/batch20.04GiB. All36compactfiles collected
+  andauthenticated. Broad28–33pass; candidate0–5eachfailoneofeightchecks:
+  broad-entry_level mean-countdelta.605608–.665536>.5. Othergates pass;
+  90/96checks pass, no new numerical schedule or gate relaxation.
+- Initialcopiedpilotcollector incorrectlyrequiredallnumericpass; assertion
+  stoppedbeforestatefileswritten. Retainedfailure record; correctedcollection
+  validatesoriginalbooleansagainstunchangedgates andpreservesfailures. No
+  scientificfile/model changes. Total40/102conditionaltransfer statescollected.
+- Firstsixcandidatebase support:6000broadunitESS1–1.015;935nestedcandidate
+  ESS848.225–996.181. Registeredjoint+generalizedsupport12/24pass, allcandidate
+  subset; in-sample fit, notnewskyvalidation. Scalarconditionaltables lack
+  mixture supportboolean; diagnosticrulecomputedexplicitly/sourcehashed.
+- Entry15/16 COMPLETE13m35/12m55,512originalflags each. Entry17 collected
+  afterCOMPLETED13m28. Alloriginals preserved. Pendingresume2 promoteddebug30
+  afterterminal/absence/sourceproof and414loggedsuccessfulstructurebranches
+  (notcheckpoint-completionclaim); originaladapterverifiesactualcache oncompute.
+- Clarifiedpreparedtransfercountcaption: unavailableconditionalstates distinct
+  from inheritedensemblefailure. Figuredriverparsepass; no actualrender yet.
+- Holdout28–31/61231554_24 COMPLETED17m34,32numericchecks pass; compact
+  outputs collected. All44collectedstates(30broad/6candidate/8holdout) now
+  pass793actualsource/identity/PSF/gateconsistencychecks; sixnumericfailures
+  remain. Entry17/18original512/397flags collected,13m28/13m01 runtimes.
+- Existinginitialtwo-statepilot61239060 promoteddebug30 after101sourcehashes,
+  fresh5-jobcap and18+actualsingle-state timings (largest13m37). Combined
+  runtime remainsunmeasured; preserve anytimeout/no wideradoption yet.
+- UpdatedPLAN/status/ledger; nextfulltransfer/structure/5actualplates/finalQA.
+
 ## 2026-11-14 — prepare final plate verification and advance sparse entry refinement
 - Added scripts/v3_1_remaining_figure_check.py foractualtransfer2/structure2/
   domain1plates. Verifies allfixedsource tables independentlyofplottedrows,

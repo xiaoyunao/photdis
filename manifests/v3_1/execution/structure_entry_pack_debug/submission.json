@@ -1,0 +1,97 @@
+{
+  "commands": [
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61239061|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61229422_12|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Resources)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(JobArrayTaskLimit)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Resources)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(JobArrayTaskLimit)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Resources)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Resources)\n61223167_29|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_28|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_27|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_26|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_25|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_24|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61223167_23|PENDING|regular_1|0:00|30:00|(JobArrayTaskLimit)\n61238249_1|RUNNING|debug|1:13|30:00|nid005768\n61231554_25|RUNNING|debug|5:08|30:00|nid005803\n61229422_5|RUNNING|regular_1|4:07|1:00:00|nid005826\n61223167_19|RUNNING|regular_1|8:13|30:00|nid005853\n61229422_6|RUNNING|regular_1|1:29|1:00:00|nid005864\n61223167_21|RUNNING|regular_1|0:21|30:00|nid005858\n61223167_22|RUNNING|regular_1|0:21|30:00|nid005885\n61223167_20|RUNNING|regular_1|5:43|30:00|nid005818\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61239060",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61239060 JobName=photdis_v3_1_entrypack UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T12:15:02 EligibleTime=2026-11-13T12:15:11 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:34:45 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login05:1499794 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_pack.sh SubmitLine=sbatch --parsable --hold scripts/run_v3_1_structure_entry_pack.sh data/v3_1/execution/structure_entry_pack_pilot_30_31/plan.json WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_entrypack_61239060.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "sacct",
+        "--array",
+        "-S",
+        "2026-11-12",
+        "-j",
+        "61223167",
+        "-X",
+        "-n",
+        "-P",
+        "-o",
+        "JobID,JobIDRaw,State,Elapsed,ExitCode"
+      ],
+      "code": 0,
+      "stdout": "61223167_0|61224715|COMPLETED|00:13:37|0:0\n61223167_1|61226985|COMPLETED|00:13:08|0:0\n61223167_2|61226986|COMPLETED|00:12:50|0:0\n61223167_3|61226987|COMPLETED|00:13:03|0:0\n61223167_4|61226988|COMPLETED|00:12:59|0:0\n61223167_5|61226989|COMPLETED|00:12:55|0:0\n61223167_6|61226990|COMPLETED|00:13:17|0:0\n61223167_7|61226991|COMPLETED|00:13:19|0:0\n61223167_8|61226992|COMPLETED|00:13:07|0:0\n61223167_9|61226993|COMPLETED|00:13:13|0:0\n61223167_10|61226994|COMPLETED|00:13:22|0:0\n61223167_11|61226995|COMPLETED|00:13:35|0:0\n61223167_12|61226996|COMPLETED|00:13:21|0:0\n61223167_13|61226997|COMPLETED|00:13:07|0:0\n61223167_14|61226998|COMPLETED|00:13:13|0:0\n61223167_15|61226999|COMPLETED|00:13:35|0:0\n61223167_16|61227000|COMPLETED|00:12:55|0:0\n61223167_17|61227001|COMPLETED|00:13:28|0:0\n61223167_18|61227002|COMPLETED|00:13:01|0:0\n61223167_19|61227003|RUNNING|00:08:13|0:0\n61223167_20|61227004|RUNNING|00:05:43|0:0\n61223167_21|61227005|RUNNING|00:00:21|0:0\n61223167_22|61227006|RUNNING|00:00:21|0:0\n61223167_23|61227007|PENDING|00:00:00|0:0\n61223167_24|61227008|PENDING|00:00:00|0:0\n61223167_25|61227009|PENDING|00:00:00|0:0\n61223167_26|61227010|PENDING|00:00:00|0:0\n61223167_27|61227011|PENDING|00:00:00|0:0\n61223167_28|61227012|PENDING|00:00:00|0:0\n61223167_29|61227013|PENDING|00:00:00|0:0\n61223167_30|61227014|CANCELLED by 106645|00:00:00|0:0\n61223167_31|61223167|CANCELLED by 106645|00:00:00|0:0\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61239060",
+        "QOS=debug",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61239060",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61239060 JobName=photdis_v3_1_entrypack UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=69119 Nice=0 Account=desi QOS=debug JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T12:15:02 EligibleTime=2026-11-13T12:15:11 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:34:45 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login05:1499794 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_pack.sh SubmitLine=sbatch --parsable --hold scripts/run_v3_1_structure_entry_pack.sh data/v3_1/execution/structure_entry_pack_pilot_30_31/plan.json WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_entrypack_61239060.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    }
+  ],
+  "actual_initial_timings": {
+    "61223167_0": "00:13:37",
+    "61223167_1": "00:13:08",
+    "61223167_2": "00:12:50",
+    "61223167_3": "00:13:03",
+    "61223167_4": "00:12:59",
+    "61223167_5": "00:12:55",
+    "61223167_6": "00:13:17",
+    "61223167_7": "00:13:19",
+    "61223167_8": "00:13:07",
+    "61223167_9": "00:13:13",
+    "61223167_10": "00:13:22",
+    "61223167_11": "00:13:35",
+    "61223167_12": "00:13:21",
+    "61223167_13": "00:13:07",
+    "61223167_14": "00:13:13",
+    "61223167_15": "00:13:35",
+    "61223167_16": "00:12:55",
+    "61223167_17": "00:13:28",
+    "61223167_18": "00:13:01"
+  },
+  "plan_sha256": "3fa9077d2879d9e99892850aa92045b9cb523a4f77131cceb10e6cef3f7d22ab",
+  "scope": "Existing two-state initial-entry resource pilot only; same32workers perstate on128-CPU node. Original single-state runs about13min, largest observed13m37; doubled reference27m14 below30min. Combined runtime unmeasured; any timeout/checkpoints retained, no wider adoption until measured.",
+  "after": "JobId=61239060 JobName=photdis_v3_1_entrypack UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=69119 Nice=0 Account=desi QOS=debug JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T12:15:02 EligibleTime=2026-11-13T12:15:11 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:34:45 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login05:1499794 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_pack.sh SubmitLine=sbatch --parsable --hold scripts/run_v3_1_structure_entry_pack.sh data/v3_1/execution/structure_entry_pack_pilot_30_31/plan.json WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_entrypack_61239060.out TresPerTask=cpu=128\n",
+  "complete": true
+}

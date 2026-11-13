@@ -1,0 +1,8 @@
+{
+  "stage": "compact collection only",
+  "initial_helper_sha256": "25bc0abc1603765fbaac4ff7896c08f8d43d01499efa58b08da6980cec83d800",
+  "failure": "Copied pilot collector required all conditional numeric checks to pass. Actual first-rollout candidate0\u20135 have preserved numeric failures; execution verified for all12.",
+  "remote_science_changed": false,
+  "local_state_outputs_written_before_failure": false,
+  "next": "Authenticate and preserve both passing and failing original rows; no scientific rerun or gate change."
+}

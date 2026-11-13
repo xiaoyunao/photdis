@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "submission.json": "1a7235b14e433adfc00c83bc3b3b253de91dbae571689cc50d1593c95150b493"
+  },
+  "scope": "Resource scheduling estimate from terminal job log, not checkpoint completeness or scientific acceptance. Existing adapter revalidates each actual checkpoint on compute and resumes missing seed/context only. No new writer."
+}

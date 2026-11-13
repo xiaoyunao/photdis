@@ -1,0 +1,134 @@
+{
+  "plan_sha256": "dc4a9a5a738af18e3c9ed936ff8cef193ae12dc5ce51b03f7f98ada6291de8e3",
+  "resource_script_sha256": "16760ed519b36bc12d31d71303ce544b9477fe3b8e5b18d9781341135491c9f9",
+  "job": "61238416",
+  "workers": 12,
+  "memory_limit_bytes": 540164255744,
+  "planning_bound_per_worker_GiB": 24,
+  "results": [
+    {
+      "case": "candidate",
+      "correction": 1,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_01.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_01/complete.json",
+      "marker_sha256": "6306841f17164bed356e539ee95b8796a8365dd9df0cdd0f004936596d640be5",
+      "numerically_passed": false
+    },
+    {
+      "case": "broad",
+      "correction": 31,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_31.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_31/complete.json",
+      "marker_sha256": "ca4e72055643c739b949e605ce3de5bc3a522193d2cb0ca7d4862184c66ba9b0",
+      "numerically_passed": true
+    },
+    {
+      "case": "candidate",
+      "correction": 2,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_02.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_02/complete.json",
+      "marker_sha256": "694485b5245cf9eb3e9d374c17a43a0af3ce506b662a3e5e2a5e8198869edcfc",
+      "numerically_passed": false
+    },
+    {
+      "case": "candidate",
+      "correction": 5,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_05.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_05/complete.json",
+      "marker_sha256": "0e104fddbf27130be99ce7e7dba92b07c86c16900df9ce951c1ff41737c62fdd",
+      "numerically_passed": false
+    },
+    {
+      "case": "candidate",
+      "correction": 0,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_00.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_00/complete.json",
+      "marker_sha256": "cf3557827798a0167d52582609f21b0534be35b559ba1e30e94800080125b964",
+      "numerically_passed": false
+    },
+    {
+      "case": "broad",
+      "correction": 30,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_30.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_30/complete.json",
+      "marker_sha256": "dce94f9b6b03b8d5ea56e56197feef8e87181a099c5c2246c0fe62c04c4b8c10",
+      "numerically_passed": true
+    },
+    {
+      "case": "broad",
+      "correction": 28,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_28.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_28/complete.json",
+      "marker_sha256": "1c31026325b07f2a6298fcee48b7166b1ec454e0d704d3c7cb328c40178a93ce",
+      "numerically_passed": true
+    },
+    {
+      "case": "broad",
+      "correction": 32,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_32.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_32/complete.json",
+      "marker_sha256": "bc1e027fc5a1a4b38195af83ab7cb85caf76c7ea2048f6392b99adbcd5a7bfb5",
+      "numerically_passed": true
+    },
+    {
+      "case": "broad",
+      "correction": 29,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_29.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_29/complete.json",
+      "marker_sha256": "53937d4acd466326a0985393b106e7f7cf7114aa1b00395ef392378dc746fdb5",
+      "numerically_passed": true
+    },
+    {
+      "case": "candidate",
+      "correction": 3,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_03.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_03/complete.json",
+      "marker_sha256": "b022c4c08a3cc92d46bde8b40445b765a61fbcefdb1b454a55c960b8bdbd3794",
+      "numerically_passed": false
+    },
+    {
+      "case": "candidate",
+      "correction": 4,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_candidate_04.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/candidate/correction_04/complete.json",
+      "marker_sha256": "e03e6fbc6f74df9ad9dba64841850b59ec332123394f84a4d4e946a83c53196c",
+      "numerically_passed": false
+    },
+    {
+      "case": "broad",
+      "correction": 33,
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_transferpack_61238416_broad_33.out",
+      "execution_verified": true,
+      "marker": "data/v3_1/heldout_transfer/broad/correction_33/complete.json",
+      "marker_sha256": "3192490d0be382dc765bce6fc95e14089c679c91b0cb7fb054aa7d4e23d9939d",
+      "numerically_passed": true
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Resource grouping only, unchanged frozen CLI per state. All original outcomes retained; no scientific selection, weight, numerical gate or state normalization change.",
+  "elapsed_seconds": 1082.2657731660001,
+  "maximum_single_child_RSS_KiB": 1558312
+}

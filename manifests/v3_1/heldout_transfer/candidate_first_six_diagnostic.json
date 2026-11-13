@@ -1,0 +1,287 @@
+{
+  "inputs": {
+    "manifests/v3_1/heldout_transfer/candidate/correction_00/complete.json": "cf3557827798a0167d52582609f21b0534be35b559ba1e30e94800080125b964",
+    "src/photdis/v3_1/predictive.py": "d009e5702214012f7ae73323096f75a0574cc04eefd0120788be0d70fbaa5496",
+    "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1",
+    "manifests/v3_1/heldout_transfer/candidate/correction_00/checks.csv": "a3509ae651ee176a356470f1be39de60bdb7d3d5b381852859993f2d7a6f0bed",
+    "manifests/v3_1/heldout_transfer/candidate/correction_00/predictive_summary.csv": "1536b2c59fb669e593c9f5e43ef7026abf99022d64609fb135e1827bf11fa18d",
+    "manifests/v3_1/heldout_transfer/candidate/correction_01/complete.json": "6306841f17164bed356e539ee95b8796a8365dd9df0cdd0f004936596d640be5",
+    "manifests/v3_1/heldout_transfer/candidate/correction_01/checks.csv": "037eb8a9a5dd661c8c777202a6f4a04a19f50bddbe42614ecb45a93eae4637e0",
+    "manifests/v3_1/heldout_transfer/candidate/correction_01/predictive_summary.csv": "3e883ea04da830bb23f38e6998051c805a327cc2c22fc1277a46bf45c1f8b95e",
+    "manifests/v3_1/heldout_transfer/candidate/correction_02/complete.json": "694485b5245cf9eb3e9d374c17a43a0af3ce506b662a3e5e2a5e8198869edcfc",
+    "manifests/v3_1/heldout_transfer/candidate/correction_02/checks.csv": "c42135082e649b6284d7786150e17248a42239a440a696bd425c3fcad97e32de",
+    "manifests/v3_1/heldout_transfer/candidate/correction_02/predictive_summary.csv": "c7c541f0912f4f897cb224134d8c01215a7fd80e9118582c969f6b7e16759b23",
+    "manifests/v3_1/heldout_transfer/candidate/correction_03/complete.json": "b022c4c08a3cc92d46bde8b40445b765a61fbcefdb1b454a55c960b8bdbd3794",
+    "manifests/v3_1/heldout_transfer/candidate/correction_03/checks.csv": "8a05fdd172865814bed53e9258e223100142f2f235d666f8b9bfbdc6f4906c5b",
+    "manifests/v3_1/heldout_transfer/candidate/correction_03/predictive_summary.csv": "f4d9293f0c20790dc6aaaa7b23974384553037dd271becb4ce589d1fcefb666d",
+    "manifests/v3_1/heldout_transfer/candidate/correction_04/complete.json": "e03e6fbc6f74df9ad9dba64841850b59ec332123394f84a4d4e946a83c53196c",
+    "manifests/v3_1/heldout_transfer/candidate/correction_04/checks.csv": "0ca60e58653e941ad3562509c0ad7d32e6ff9f69cbfb620cb4b2e9b53989e30d",
+    "manifests/v3_1/heldout_transfer/candidate/correction_04/predictive_summary.csv": "d8ef478d3a6bc16769ae365d00fdf2110662a4dee9f3d6b9a2b2f89ffdd86da1",
+    "manifests/v3_1/heldout_transfer/candidate/correction_05/complete.json": "0e104fddbf27130be99ce7e7dba92b07c86c16900df9ce951c1ff41737c62fdd",
+    "manifests/v3_1/heldout_transfer/candidate/correction_05/checks.csv": "70cfa3ff3838998baf5d5f03f363bb1f1b91a6b31dc1665b3b4014e216c3838b",
+    "manifests/v3_1/heldout_transfer/candidate/correction_05/predictive_summary.csv": "c7319482fef7ee77a5661b3f3f56a17984d944d0e2ceb3743bef6da12712f315"
+  },
+  "states": 6,
+  "native_PSF": true,
+  "population_fit_excludes_evaluation_fields": false,
+  "objects": 6000,
+  "nested_candidate_objects": 935,
+  "conditional_numeric_checks": 48,
+  "conditional_numeric_failures": [
+    {
+      "correction": 0,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.0018835237990686426",
+      "maximum_pointwise_logscore_delta": "0.007063173257638056",
+      "maximum_count_mean_delta": "0.6655360592976649",
+      "marginal_half_delta": "0.004506374285175585",
+      "passed": "False"
+    },
+    {
+      "correction": 1,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.001729100580515619",
+      "maximum_pointwise_logscore_delta": "0.006750949150180929",
+      "maximum_count_mean_delta": "0.615106259032018",
+      "marginal_half_delta": "0.0025050262455921235",
+      "passed": "False"
+    },
+    {
+      "correction": 2,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.0017686284345364012",
+      "maximum_pointwise_logscore_delta": "0.00679063966236626",
+      "maximum_count_mean_delta": "0.619571331375937",
+      "marginal_half_delta": "0.0022812016085007603",
+      "passed": "False"
+    },
+    {
+      "correction": 3,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.0017319130158399698",
+      "maximum_pointwise_logscore_delta": "0.0068154333192183",
+      "maximum_count_mean_delta": "0.6117835265858957",
+      "marginal_half_delta": "0.003588407925211784",
+      "passed": "False"
+    },
+    {
+      "correction": 4,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.0016963449007195708",
+      "maximum_pointwise_logscore_delta": "0.006650493961860349",
+      "maximum_count_mean_delta": "0.6056084779122557",
+      "marginal_half_delta": "0.002276513508281036",
+      "passed": "False"
+    },
+    {
+      "correction": 5,
+      "envelope": "broad",
+      "variant": "entry_level",
+      "maximum_probability_delta": "0.0017344545862170158",
+      "maximum_pointwise_logscore_delta": "0.0067133192291315424",
+      "maximum_count_mean_delta": "0.6117188926314157",
+      "marginal_half_delta": "0.003111558180840246",
+      "passed": "False"
+    }
+  ],
+  "base_joint_support_checks": [
+    {
+      "correction": 0,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.0,
+      "half_log_density_delta": 58.6299166669196,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 0,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.0,
+      "half_log_density_delta": 82.6659642750019,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 0,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 956.4300302093615,
+      "half_log_density_delta": 0.11702733071615512,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 0,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 1100.930999938123,
+      "half_log_density_delta": 0.12011989930761047,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 1,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.0000000000000004,
+      "half_log_density_delta": 36.230721451596764,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 1,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.000000233109122,
+      "half_log_density_delta": 15.964906339868321,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 1,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 977.2997278568442,
+      "half_log_density_delta": 0.05756026887684129,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 1,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 1067.8774123760436,
+      "half_log_density_delta": 0.056313633927857154,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 2,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.0000000004472303,
+      "half_log_density_delta": 22.22109442349756,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 2,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.0000309232150513,
+      "half_log_density_delta": 11.077150540302682,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 2,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 943.872571022129,
+      "half_log_density_delta": 0.03248740043636644,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 2,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 1042.1706138835327,
+      "half_log_density_delta": 0.021783403331937734,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 3,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.0000000000301452,
+      "half_log_density_delta": 24.918148739772732,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 3,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.000006156547528,
+      "half_log_density_delta": 12.691141584327852,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 3,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 996.1812308569445,
+      "half_log_density_delta": 0.07468410259389202,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 3,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 1064.996210746609,
+      "half_log_density_delta": 0.08827193891193019,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 4,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.015027318481168,
+      "half_log_density_delta": 4.890976222937752,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 4,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.0004718955223597,
+      "half_log_density_delta": 8.351900072702847,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 4,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 848.2250854611609,
+      "half_log_density_delta": 0.02750632721108559,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 4,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 942.1606684812855,
+      "half_log_density_delta": 0.029673128801732673,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 5,
+      "envelope": "broad",
+      "score": "joint",
+      "ESS": 1.0,
+      "half_log_density_delta": 70.72154988437251,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 5,
+      "envelope": "broad",
+      "score": "generalized_design_joint",
+      "ESS": 1.0000000001784408,
+      "half_log_density_delta": 42.03903384176374,
+      "diagnostic_passes_registered_support_rule": false
+    },
+    {
+      "correction": 5,
+      "envelope": "candidate",
+      "score": "joint",
+      "ESS": 908.5629358634882,
+      "half_log_density_delta": 0.07607774289499503,
+      "diagnostic_passes_registered_support_rule": true
+    },
+    {
+      "correction": 5,
+      "envelope": "candidate",
+      "score": "generalized_design_joint",
+      "ESS": 978.0414151203591,
+      "half_log_density_delta": 0.09369339802469767,
+      "diagnostic_passes_registered_support_rule": true
+    }
+  ],
+  "scope": "First six candidate-fitted states on existing frozen fields. Original conditional scalar tables do not store support flags; this summary evaluates registered ESS>=100 and half-log-density delta<0.2 diagnostic rules. Broad-entry previous-level expected-count changes exceed0.5; same candidate subset checks pass. In-sample photometric diagnostic, not complete102-state mixture or distance validation."
+}

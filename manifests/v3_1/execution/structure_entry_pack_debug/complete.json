@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "submission.json": "564e33cd0226cc9e64637d79efe5935a161e1cfb9827ca7110b4b23836edc39c"
+  },
+  "scope": "Existing two-state initial-entry resource pilot only; same32workers perstate on128-CPU node. Original single-state runs about13min, largest observed13m37; doubled reference27m14 below30min. Combined runtime unmeasured; any timeout/checkpoints retained, no wider adoption until measured."
+}

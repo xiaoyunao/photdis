@@ -112,7 +112,7 @@ def main():
     fig.text(.5, .92, 'Fields 12 / 4 / 6 | same native-PSF identities within each selection | main evidence-weighted view', ha='center', fontsize=12)
     fig.text(.5, .86, 'Points: model expected counts. Lines: shared realized-count 95% intervals. No true-distance counts supplied.', ha='center', fontsize=12)
     fig.text(.5, .11, 'Only the held-out population fit excludes these fields. The broad and candidate fits include their photometry.', ha='center', fontsize=11)
-    fig.text(.5, .06, 'Failed or missing states remain unavailable; no survivor normalization. Numerical acceptance is separate from scientific calibration.', ha='center', fontsize=11)
+    fig.text(.5, .06, 'Unavailable conditional states are not renormalized. Inherited ensemble failures remain; counts are model-conditional.', ha='center', fontsize=11)
     for ax in axes.flat:
         ax.title.set_fontsize(13)
         ax.xaxis.label.set_fontsize(11)

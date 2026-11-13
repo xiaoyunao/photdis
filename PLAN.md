@@ -77,7 +77,17 @@ Negative findings remain deliverables, never successful calibration claims.
   sourcehashes and15zero-runtime cancellations (old7–16/19–23). Report61231678
   nowwaitsretainedoriginal5/17/24/25 +replacementarray+holdoutensemble, no
   canceledparent/children; max2packednodes, originalarraythrottle2 retained.
-  Lasttwoholdoutstates task25 promoteddebug30min afteractualsame-case8192timing proof.
+  Firstrollout61238249_0(raw61238416) COMPLETED18m31:12executionsverified,
+  90/96numericchecks pass;6candidate0–5 broad-entry_level countchanges
+  .60561–.66554>.5 retained. Broad28–33pass. Heldout28–31also COMPLETE17m34/32numericchecks pass. Total44/102
+  transfer outcomes;793compactsource/identity/gatechecks pass,6failures retained.
+  Firstsixcandidate in-sampleunitjointESS1–1.015broad versus848.225–996.181
+  candidate;12/24basejointsupportdiagnosticspass, notindependentvalidation.
+  Existinginitialentrypilot61239060 promoteddebug30 after101sourcehashes and
+  >18actualsingle-state timings; combinedruntime unmeasured/no wideradoption.
+  Existingresume61239061 promoteddebug30after414loggedstructurecompletions
+  andfreshcap; actualcacheverification oncompute, no duplicatewriter.
+  Lasttwoholdoutstates task25 andwholeholdoutensemble arealreadycomplete.
   Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
   16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
   Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.
