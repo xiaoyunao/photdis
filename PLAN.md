@@ -200,23 +200,27 @@ Negative findings remain deliverables, never successful calibration claims.
   finaloutput. Existing17visualreviews authenticated, not repeated. Renderand
   visuallyreview transfer2/structure2/domain1, commitacceptance provenance, then
   runfull22check beforefinaldelivery; scientificacceptance staysseparate.
-- All94/102conditionaltransfers authenticate1881compactchecks;33original
+- All98/102conditionaltransfers authenticate1961compactchecks;33original
   numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
   support passesonlysamecandidateenvelope; all30collectedheldout conditional
-  supportgatesfail. Lastoriginalgroups5/17 required; no mixtureacceptance.
+  supportgatesfail. Original5COMPLETED17m34/all4pass, broad34complete; onlyholdout0–3
+  fromoriginal17 remain. Same2048/8192workload measuredparallel, sodebug30
+  fororiginal17 afterpending24returnedregular30. InternalQOSregular_1failed;
+  publicregularsucceeded, originalerrorpreserved. No mixtureacceptance.
   Refined11/23 complete10m36/2m06/all512pass, original134/3flags/10checks each;
   refined21also complete8m32/all512pass, original103flags/10checks retained.
   Refined9/22complete25m51/10m38, original512/133flags retained.
-  Total16/32refinements authenticate350groupedchecks withnewreproducible
-  refinementcompactchecker;4695originalfailedcontexts/0unresolved preserved.
+  Refined19complete11m01/original153flags. Total17/32refinements
+  authenticate372groupedchecks withnewreproducible
+  refinementcompactchecker;4848originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
   heldsubmission/dependencyrepair/release. 320GiBguard, unchangedoriginal
   function/seed/inputs; no completed64measurement orwiderrolloutyet. Existing
   sparse19/26and14/20promoteddebug30 underfreshcap.64pilotnowrunning.
-  Originaltransfer5nowrunningregular;
-  original17stillpending; retainboth andfinishfull102report.
+  Originaltransfer5complete;17promoteddebug30afteractualmatchedworkload.
+  Sparse24temporarilyreturnedregular30toprioritizefull102report; no cancellation.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original
   numericfailures; candidate20passesall, other11newstates failbroadcountgate.
   Refined8 complete34m58/all512pass/10checks, original512flags retained.

@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "8e27d269e4a3e9a5ebab3fb79493762f4a760480bfc08fe11e368e4407ab0a8a"
+  },
+  "scope": "One existing32-worker sparse state297flags, using original30min limits and prior full512flag32-worker measurements34m21 to34m58; sparse runtime is estimated, not measured. Fresh5-debug-jobcap; same30minlimits, originalintegrand/seeds/checkpoints/numericalgates. No new submissions or cancellation."
+}

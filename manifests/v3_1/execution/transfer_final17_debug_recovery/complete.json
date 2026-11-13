@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "fed21a63b1fd196d1e88d68ced55de1a69ef6e0f547072124ce6c6f845bc09e7"
+  },
+  "scope": "Same original four-state parallel transfer writer, after actual identical2048/8192-state mix group5 completed17m34. Earlier2h bound assumed additive state runtimes; shell runs four children concurrently. Last holdout0-3 moved todebug30; if needed pending sparse24 returnedregular30 without cancellation to prioritize full102report. Sources/sample/gates/seed/output identities unchanged; retain any runtime failure."
+}

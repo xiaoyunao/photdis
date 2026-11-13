@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-14 — complete broad transfer and prioritize last heldout group from measured runtime
+- Originalgroup5/raw61231567 COMPLETED17m34: broad20–23 allconditionalgates
+  pass, includingselected8192state23. Allbroad34 nowcomplete;98totaltransfer
+  statespass1961compactchecks,33originalcandidatefailures retained. Lastfour
+  holdout0–3 remain; no partial102mixture/source-support conclusion.
+- Readoriginalshell:4childrenparallel, notsequential. Old2h estimateadded
+  individualruntimes; actualmatched3x2048+1x8192groupcompletes17m34. Verified
+  fullsource/markers/pendingproof andmovedexisting17todebug30. Torespect5job
+  cap, pendingstructure24returnedregular30, nocancel/replacement.
+- FirstQOS=regular_1failedschedulerpolicycheck; journal preserved. Recovery
+  authenticatedpriorjournal andfreshstate; publicQOS=regular(fromoriginal
+  sbatchscript) succeeded,17updateddebug30. Source/model/sample/seed/gates and
+  originalwriters unchanged.
+- Refined19/raw61232988 COMPLETED11m01:512pass/153originalflags retained;
+  Python643.776s,maxchild4157072KiB. Unified17-statecheck372passes over17408
+  branchrows,4848originalfailedcontexts/0unresolved; prior16snapshot retained.
+- RecheckedProsection6againstcurrentfullledger/result: remainingactualtransfer,
+  structureposterior/domain/fiveplates/finalQA unchanged. Updateddocs/PLAN and
+  source-linkproofs;64pilotstillrunning, no wider64adoption.
+
 ## 2026-11-14 — authenticate complete figure inventory and prevent partial final acceptance
 - Added scripts/v3_1_figure_delivery_check.py withfixed22namedplateinventory:
   exactPNG/PDFsets, source/outputhashes,300dpi, singlepageEnglishPDF, persisted
