@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-13 — prepare outcome-unopened validation predictions
+- Registered full frozen526field/3032common photometry-only reference-prior
+  prediction protocol; nominal/response12/pointcorrection/shared32bootstrap views.
+  No referencevalues read, no residual-based admission, no finalscore opening.
+- Implemented native classlikelihood/PDF/shared-index exports, all-object
+  normalizationchecks and64identity-ranked coarse/fine audits percohort.
+  Within-class targettilts require fullcomponent likelihood, explicitly not
+  approximated by these collapsedcurves; fullproductfreeze remains pending.
+- Newdriver py_compile/bash-n pass; allocated predictions notyet executed.
+  Matchedentry jobs queued61217343(median/debug),61217344(min),61217345(max).
+- Next: finish numerical prerequisites, targettransfer and finalpredictionfreeze.
+
 ## 2026-11-13 — register matched hard-selection and exact pilot-cache resumption
 - Registered local-dust matched hard-support integration on same3contexts:
   own512baseline then2048/8192/32768, twofixedseeds, unchanged.003/.025gridgates.

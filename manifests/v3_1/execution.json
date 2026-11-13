@@ -476,6 +476,26 @@
       "job_id": "61216915",
       "purpose": "full1542development latent sign audit",
       "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217300",
+      "purpose": "fixed18context localdust entry audit",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217343",
+      "purpose": "matched median candidate-entry bounded refinement",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217344",
+      "purpose": "matched minimum candidate-entry bounded refinement",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217345",
+      "purpose": "matched maximum candidate-entry bounded refinement",
+      "last_observed_state": "PENDING"
     }
   ],
   "local_validation": {
