@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — gate final domain evidence join on both complete reports
+- Domainjoin61233366 submitted afterok61231678(fullskytransfer)/61232762(full
+  structurecountreport). Ninealreadycompleteinput markers andthreeunchanged
+  sourcehashes authenticated; fullunrolledqueue confirmsno competingwriter.
+- Submissionreceipt collected; script/figure preparation isnotactualadjudication.
+  Written scientificreview andactualmap inspection remain aftercompleteevidence.
+- Firsttrueheldout fitgroup61225864_17 nowrunningregular2h; firsttransfergroup
+  wasbroad in-sample, notthisheldout fit. Otherlive/queuedjobs retain fullscope.
+
 ## 2026-11-14 — complete native structure sidecars and first actual sky-transfer group
 - All32structure native/refined states complete; boundedmarker inventory retains
   490original native failures,32/32refined markerspass/0unresolved. Lastresource

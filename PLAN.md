@@ -184,8 +184,9 @@ Negative findings remain deliverables, never successful calibration claims.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.
-- Complete-evidence domainjoin andone6-panel status/ambiguity figure prepared;
-  actualexecution requiresfull102transfer andfull32structure reports. No new
+- Complete-evidence domainjoin61233366 submittedafterok61231678/61232762;
+  one6-panel status/ambiguity figure prepared. Actualexecution requiresfull102
+  transfer andfull32structure reports; writtenreview/visualinspection stillpending. No new
   gates/model/labels; failedmain cannotbe promotedby stablemode sidecars.
 - Complete scientific use-domain adjudication, source tables, English figures,
   visual QA, result/ledger/README/AGENTS and safe milestone sync. No deployment,

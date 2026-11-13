@@ -1,0 +1,34 @@
+{
+  "source_commit": "d09432a560515e753055c911465186828c426351",
+  "sources": {
+    "scripts/v3_1_domain_adjudication.py": "826c4f169dae787e7563349515c81730c0cdde2ad3e7255ae8760923f6277fe8",
+    "scripts/run_v3_1_domain_adjudication.sh": "13b2839ff04de58500b25b2d27f3bb561883bd83e3eeb1ece3d5d60ff1e72da1",
+    "docs/v3_1_domain_adjudication_notes.md": "bfa50ed7677057957132632803362397c85f09cb4f82edf9c3771ad6fd6145b2"
+  },
+  "completed_inputs": {
+    "data/v3_1/domain_evidence/complete.json": "7b5c4d393ee9567f58d51a09e31e176ab632782d8edb57a9c3f0a5ccd93d5180",
+    "data/v3_1/domain_assessment/complete.json": "6632bbc637a8cc3d7917e3f5cb6a5726e93004d26d5f52457dc434895dba62d9",
+    "data/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41",
+    "data/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "data/v3_1/highq_counts/complete.json": "e0c035596d908a728305e530038ba628fbc23c3da4cf0dd424289d2bf800c2d3",
+    "data/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "data/v3_1/radial_report/complete.json": "206390e22317169b7d0ead57fd5cf310734d395f69d9516c9b49ea6a91a7a415",
+    "data/v3_1/radial_summary/complete.json": "c4548ec29b0fda430689c04499509fa08d7846a286b39135b60dc2c004b12d41",
+    "data/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111"
+  },
+  "parent_states": {
+    "61231678": "JobId=61231678 JobName=photdis_v3_1_heldoutreport UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61231554_*(unfulfilled),afterok:61225883(unfulfilled),afterok:61225886(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:04:54 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:04:54 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login38:2207103 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_report.sh SubmitLine=sbatch --parsable --dependency=afterok:61231554:61225883:61225886 scripts/run_v3_1_heldout_report.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldoutreport_61231678.out TresPerTask=cpu=128\n",
+    "61232762": "JobId=61232762 JobName=photdis_v3_1_structurereport UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61232761(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_report.sh SubmitLine=sbatch --parsable --dependency=afterok:61232761 scripts/run_v3_1_structure_report.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structurereport_61232762.out TresPerTask=cpu=32\n"
+  },
+  "scope": "Actual full102transfer and full32structure reports required; reporting-only join of fixed candidate failed gate, source evidence and model ambiguity. No new sample, fit or scientific threshold; written adjudication stillpending.",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:61231678:61232762",
+    "scripts/run_v3_1_domain_adjudication.sh"
+  ],
+  "returncode": 0,
+  "stdout": "61233366\n",
+  "stderr": "",
+  "job": "61233366"
+}
