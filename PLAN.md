@@ -26,10 +26,10 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry61219182 first5shards complete; onlyunstarted6–15 nowresourcegroups
+  Direct entry61219182 first6shards9750objects/11081envelopes allpass; onlyunstarted6–15 nowresourcegroups
   61222996/61222997/61222998 withunchangedscience. Assembly61219399 dependencies
   updated; exactjointrepack61222999 queued. No contextinterpolation. Population
-  fits/evidence/count drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
+  fit/count/ensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
   Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
@@ -56,7 +56,7 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full128tests pass; four English plates visually inspected (paired62,
+- Latest full129tests pass; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.
@@ -69,7 +69,9 @@ Negative findings remain deliverables, never successful calibration claims.
   adequate importance ESS, sampler Rhat<1.05/ESS>=100/no divergence and bridge
   overlap before accepting any product. Keep all numerical attempts/flags.
 - Freeze final candidate/model/calibration/prior/selection identities, generate
-  matching baseline/candidate predictions, then open/scorereferences once.
+  matching baseline/candidate predictions, then open/scorereferences once. Maincandidate identity nowregistered as candidate
+  cohort response12/cal12+evidenceweighted32luminosity bootstraps; it remains
+  conditional on fixedresponse/calibration and finite bootstrap support.
 - Complete joint high-q counts, supported/extrapolated/unvalidated domains,
   structure-prior withdrawal/fullmarginalization, final figures and report.
 

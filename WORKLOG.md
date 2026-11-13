@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — prepare complete ensemble and fixed high-q covariance products
+- Original targetentry shards0–5 now complete:9750objects/11081envelopes allpass;
+  new3–5compactchecks collected. Resourcegroups6–9/10–13 running;14–15 and
+  exactjointrepack promoteddebug. Resourcegroup speedup notyetestablished.
+- All64development numerical inventories submitted with corresponding original
+  response dependencies:61223210/12/23/24/25/26/27/29. Report61221949 nowdepends
+  on these eightarrays; original0 sidecar promoteddebug but stillqueued.
+- Registered final candidate identity as candidate3540-cohort response12/cal12,
+  fixedkernels and32luminosity-bootstrap evidence mixture; broad/holdout and
+  equal-bootstrap cut remain named comparisons. No newreference outcome reads.
+- Implemented all34-state ensemble inventory, proper evidence/numerical transfers,
+  conditional/within-state/between-state count covariance and int64MCintervals.
+  Failed/missing states cannot be silently removed. Newdrivers notyetexecuted.
+- Added fixed-main-q>.95 subset recount with the sameidentities for allcontrols,
+  allsharedpopulation draws and actual numerical alternatives. Model-expected
+  leakage remains explicitly distinct from independently measuredcontamination.
+- Independent law-of-total-variance test agrees with one fullyjoint categorical
+  mixture and detects missing between-calibration variance. Full129tests pass
+  3.38s; allnewdrivers compile/import andwrapper shellsyntax passes.
+- Next: complete directentry/repack, actualconditional fits/counts andensemble,
+  finalcandidate/heldout predictions before once-onlyreference scoring. Structure,
+  radialrecovery andresponse libraries remaininprogress; no adoption claimed.
+
 ## 2026-11-13 — admit refined structure pilot and preserve matched-response failures
 - Structureentry pilot extension61222758 COMPLETED2m01s: lastnarrow branch now
   passes same-integrand2^23 comparison; all3contexts/sixbranches accepted and the
