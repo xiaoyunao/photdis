@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-13 — verify exact support certificates before quadrature acceleration
+- Added2D standardized-color grid certificates using the1-Lipschitz property of
+  the10thEuclidean-neighbor distance. Onlyprovablyinterior/exterior points skip
+  queries; ambiguous boundaries useeps0 exactqueries withroundoffguard.
+- Two focusedsynthetic tests pass, includingduplicatepoints, exactties and
+  nextafterneighbors. Registeredreal1millionpoint andoriginal128-node fullcurve
+  equivalence audit; no supporttolerance/cut orscientificmodel change.
+- Added nativeclass-collapse equivalence test: fulloriginal binary/kernel/class
+  density agrees1e-10; focusedtest passes. Realcertificate audit notyet executed.
+- Next: runactualcertificate audit before accelerating matchedentry; preserve
+  existing failedQMC levels, then resume allscientificjobs andnewvalidation.
+
 ## 2026-11-13 — prepare full radial reporting and inspect calibration plate
 - Added all176catalog/352arm report with paired recovery, fine-weighted discrete
   count/parameter intervals, sharedcovariance conservation and explicitfailedarms.
