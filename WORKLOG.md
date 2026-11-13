@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate all102 transfer states and release complete mixture reporting
+- Lastholdout group61231554_17/raw61235900 COMPLETED17m33; states0–3 each
+  pass all8 originalnumeric checks. All102markers/summary/check tables collected:
+  default compactchecker passes2042actual checks,33candidate failures retained.
+  Full mixture/support/count report remains required; partial support not promoted.
+- Existing report61231678 promoteddebug30 only after108source hashes, actual
+  dependency-null/zero-runtime andfresh5-jobcap verification. No new submission.
+  execution/fulltransfer_report_debug stores complete scheduler receipt.
+- Earlier15/16 scheduler command returned successfully: both existingchildren
+  promoteddebug, exact journal authenticated; no repeat mutation or auth renewal.
+  Previous c2f858d synchronizedlocal/origin/NERSC, allthreeheads matched.
+- UpdatedAGENTS/PLAN/status/result/requirements andsource-link hashes. Structure
+  refinement still21/32; final102report, posterior/domain/fiveplates/finalQA remain.
+
 ## 2026-11-14 — authenticate twenty-one refined states and continue independent queued writers
 - Original14/raw61232981 COMPLETED19m17 and20/raw61232989 COMPLETED17m06:
   all512pass each, original268/233flags retained. Python1138.959/1014.179s,

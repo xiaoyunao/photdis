@@ -13,7 +13,8 @@
   finalcandidate calibration fails andmustnotbe adopted. Finalreferences already
   openedafterauthenticatedfreeze; no retuning ontheir residuals. All32original
   structureentry statescomplete,11052originalflags retained; refinements/full
-  structureposterior andcomplete102state transfer remain. CheckliveSLURM and
+  structureposterior remain. All102conditionaltransfers collected/2042compact
+  checks pass,33originalfailures retained; fullmixturereport pending. CheckliveSLURM and
   currentPLAN/executionreceipts beforeanyresume; neverrestart fromstalearray
   parentstatus orrestorecanceleddependencies. Fivefinalplates andfinalQA pending.
 

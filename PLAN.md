@@ -200,11 +200,14 @@ Negative findings remain deliverables, never successful calibration claims.
   finaloutput. Existing17visualreviews authenticated, not repeated. Renderand
   visuallyreview transfer2/structure2/domain1, commitacceptance provenance, then
   runfull22check beforefinaldelivery; scientificacceptance staysseparate.
-- All98/102conditionaltransfers authenticate1961compactchecks;33original
+- All102/102conditionaltransfers authenticate2042compactchecks;33original
   numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
   support passesonlysamecandidateenvelope; all30collectedheldout conditional
   supportgatesfail. Original5COMPLETED17m34/all4pass, broad34complete; onlyholdout0–3
-  fromoriginal17 remain. Same2048/8192workload measuredparallel, sodebug30
+  fromoriginal17 werepending; nowCOMPLETED17m33/raw61235900/all4pass.
+  Existingreport61231678 promoteddebug30 after108sourcehashes/zero-runtime/
+  dependency-null/freshcapacityproof; no newsubmission, fullmixturepending.
+  Same2048/8192workload measuredparallel, sodebug30
   fororiginal17 afterpending24returnedregular30. InternalQOSregular_1failed;
   publicregularsucceeded, originalerrorpreserved. No mixtureacceptance.
   Refined11/23 complete10m36/2m06/all512pass, original134/3flags/10checks each;
@@ -225,11 +228,11 @@ Negative findings remain deliverables, never successful calibration claims.
   andqueueabsent; oneheldsubmission, repairedassemblydependencies before
   release.40receiptchecks/19sourcehashes pass. Last31controllerexpiry and
   twofailedrecoveryguards preserved; no repeatcancel/duplicatewriter.
-  Subsequentdebug15/16queueadjustment requiresactualreceiptconfirmation
-  (localprocess/tool session8704stilllive; no remotejournalseen, do not repeat).
+  Subsequentdebug15/16queueadjustment returned successfully, bothpromoted.
+  Collectedhash-verifiedjournal/complete; earlierlivecommand not repeated.
   Disjointnewchildren17/18 promoteddebug30 underfreshcapacity, reserving space
   for15/16 andlastheldoutgroup; no duplicatewriters/newsubmissions. Lastheldout
-  original17nowrunning; originalstructure14/20complete,24retainedregular30.
+  original17nowcomplete; originalstructure14/20complete,24retainedregular30.
   Originaltransfer5complete;17promoteddebug30afteractualmatchedworkload.
   Sparse24temporarilyreturnedregular30toprioritizefull102report; no cancellation.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original
