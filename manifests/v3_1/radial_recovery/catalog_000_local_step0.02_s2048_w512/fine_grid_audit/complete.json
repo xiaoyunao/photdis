@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "data/v3_1/radial_recovery/catalog_000_local_step0.02_s2048_w512/complete.json": "fb9a18c7d6a9cda562470d02e3c32756598e3fc6ab49445106c88c2f82b1e630",
+    "data/v3_1/radial_recovery/catalog_000_local_step0.02_s2048_w512/chains.npz": "bc896af38f175b40a885af0f68fea2cc435217117d1114886c3c6cd05d2aa9ad",
+    "data/v3_1/radial_recovery/catalog_000_local_step0.02_s2048_w512/counts.npz": "89ebb45ae41d45a32c537f9be3dd335c11ebd0ef42d9555fa66175910cb63e1f",
+    "data/v3_1/radial_recovery/catalog_000_local_step0.02_s2048_w512/per_star.npz": "d32218b8a9a558680aa0d1411d3cd71bb5b4cb8dd06c9aff1ab891b57bf13530",
+    "data/v3_1/radial_likelihood/catalog_000_step0.02/curves.npz": "034d525dd1b1c0e404085f0ee8803651bfa0af392d4caa8c1ef5f40a1b8572d4",
+    "data/v3_1/radial_likelihood/catalog_000_step0.02/complete.json": "6a56b0025b5573b32232d9318664d13ed4994eeb6b8893da40d06da66ac07b93",
+    "data/v3_1/radial_likelihood/catalog_000_step0.01/curves.npz": "12dd3cc82417fff61ccee2b7b33687655e4457f86271637f9700a5eb06dd5613",
+    "data/v3_1/radial_likelihood/catalog_000_step0.01/complete.json": "d5b8db7f0302d98b30e46c29acff5a9553413b17002e99c8cd84f6076f2e876d",
+    "scripts/v3_1_radial_quadrature.py": "4de1812debbb59fc6060df3187360230bc4ce38846582caf5f3df92deee31db5",
+    "src/photdis/v3_1/radial.py": "8a90eca430beeffb9666f4653b3fa2686ba58f95ba643b7aa932b5cd291f7d08",
+    "src/photdis/v3_1/radial_products.py": "ffa9a372e957ec9a1daaa945f016052ebcef37d1891551da8c2557bd43787ea2"
+  },
+  "outputs": {
+    "correction.npz": "291e1f23bcd7753475063f64110c7b60356bf54658646ab707f26d27b7bf0dfe",
+    "counts.npz": "2c5def52408ee7e499db8d841ba2c03f046b1298c1964ee63fe1bef939c81632"
+  },
+  "job": "61214438",
+  "elapsed_seconds": 247.7675318469992,
+  "catalog": 0,
+  "arm": "local",
+  "coarse_sampler_passed": true,
+  "coarse_all_checks_passed": true,
+  "correction_ess": 8191.999998360903,
+  "correction_ess_fraction": 0.9999999997999149,
+  "max_probability_delta": 0.0002983467347048574,
+  "max_count_mean_delta": 0.0008717145210539456,
+  "max_same_draw_unweighted_probability_delta": 0.00029848538859977847,
+  "fine_marginal_half_delta": 0.004413656243641428,
+  "passed": true,
+  "scope": "Same shared draws; exact selected-likelihood importance correction from .02 to .01 native grid. Original fit/products retained. Failed correction is not accepted fine-grid inference; numerical refinement required."
+}

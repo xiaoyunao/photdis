@@ -221,7 +221,9 @@
     {
       "job_id": "61214096",
       "purpose": "catalog0 broad2048 fine-grid audit",
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 209,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214124",
@@ -233,7 +235,28 @@
     {
       "job_id": "61214214",
       "purpose": "1542star matched shared-target-prior diagnostic",
-      "last_observed_state": "SUBMITTED"
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 392,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61214438",
+      "purpose": "catalog0 local2048 fine grid audit",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 257,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61214439",
+      "purpose": "remaining radial pilots48/112",
+      "last_observed_state": "RUNNING",
+      "qos": "debug"
+    },
+    {
+      "job_id": "61214440",
+      "purpose": "shared-target-prior and matched class/FeH paired report",
+      "last_observed_state": "PENDING",
+      "qos": "debug"
     }
   ],
   "local_validation": {

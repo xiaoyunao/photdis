@@ -50,3 +50,22 @@ handling, common distance scales and historical system usage require their own
 checks. Previously examined M3/NGC2419/NGC288 and other historical systems cannot
 be made blind by choosing new member rows. Cluster scale uncertainty is shared
 across members, and teacher/photometric membership dependence remains explicit.
+
+
+## Common-scale evidence availability, still unassigned
+
+The [APOGEE GC paper](https://arxiv.org/html/2310.07764v1) defines candidate
+membership from position, proper motion and radial velocity, with a more
+permissive outlier group. It does not certify every local v1.0 row as a member.
+The local7260-row schema differs from the current published catalogue; use an
+independently verified membership source or document version-specific selection.
+No source identity alone establishes a newly blind system.
+
+A potential10–20kpc scale is [Arellano Ferro et al.2024, NGC1851](https://www.astroscu.unam.mx/rmaa/RMxAA..60-2/PDF/RMxAA..60-2_aarellano-XVI.pdf):
+the abstract reports11.9±0.6kpc from member RR Lyrae Fourier light curves.
+Section6 adopts E(B−V)=.032±.002, which may lie outside the fixed application
+EBV<.03 domain; actual native metadata decides admission. Section7 refers its
+absolute-magnitude zero-point calibration to earlier work. That ancestry,
+shared systematic budget, native PSF eligibility and historical-system exposure
+must be verified before registering a scale test. This is an availability lead,
+not an adopted reference, new test outcome or permission to loosen cuts.

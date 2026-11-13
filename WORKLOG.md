@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — complete shared-target-prior diagnostic and first radial fine audit
+- Full1542 shared-target-prior job61214214 COMPLETED392s; one numericalflag
+  retained, all1542new-cell transfers and zero target-observation overlaps.
+  Paired source/sky/class+FeH report61214440 pending; no outcome summary yet.
+- Catalog0 broad/local2048 fine audits61214096/61214438 COMPLETED209s/257s.
+  Both pass: max probabilitydelta.000273/.000298, countmeandelta.000801/.000872,
+  correctionESS approximately8192; original512 failures retained.
+- Remaining pilots61214439 running; catalog48 both sampler gatespass but
+  halfdelta.009888/.014647 fails. Added bounded512/2048/8192 numerical-only
+  extension wrapper, same seeds/priors; syntax checks pass. No scientific tuning.
+- External native qualification61214053 at29750/53004bricks at27m;
+  per-brick provenance permits exact resume after allocation time limit.
+- Recorded common-scale availability leads with primary sources; no scale adopted,
+  no final test roles assigned, and native EBV/domain cuts remain fixed.
+- Next: complete numerical pilot acceptance, paired diagnostic interpretation,
+  native admission/all-history/system audit and pre-correction role freeze.
+
 ## 2026-11-13 — accept refined radial pilot samplers and target-prior pilot
 - Catalog0 broad extension61214075 COMPLETED117s,2048retained/chain: Rhat1.00069,
   ESS6314.6, zero divergences, halfdelta.003687; all coarse numericalgates pass.
