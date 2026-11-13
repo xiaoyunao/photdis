@@ -534,9 +534,11 @@
       "job_id": "61217706",
       "purpose": "radial exactresume shard0",
       "dependency": "afterany:61216913:61216914",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "TIMEOUT",
       "qos": "debug",
-      "note": "Temporary prerequisite scheduling hold released after61217972 completed"
+      "note": "Temporary prerequisite scheduling hold released after61217972 completed",
+      "elapsed_seconds": 1805,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61217707",
@@ -598,8 +600,9 @@
       "args": [
         "field"
       ],
-      "qos": "regular",
-      "last_observed_state": "SUBMITTED"
+      "qos": "debug",
+      "last_observed_state": "SUBMITTED",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61218978",
@@ -629,6 +632,33 @@
       "elapsed_seconds": 43,
       "wrapper": "scripts/run_v3_1_target_native_pilot.sh",
       "qos": "debug"
+    },
+    {
+      "job_id": "61219181",
+      "purpose": "All26000 native target responses, four disjoint shards",
+      "wrapper": "scripts/run_v3_1_target_native.sh",
+      "args": [],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61219182",
+      "purpose": "Direct broad and hard candidate entry,16 disjoint shards",
+      "wrapper": "scripts/run_v3_1_target_entry.sh",
+      "args": [],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61219183",
+      "purpose": "Exact radial shard0 resume after61217706 timeout",
+      "wrapper": "scripts/run_v3_1_radial_production_resume.sh",
+      "args": [
+        "--shard",
+        "0"
+      ],
+      "qos": "regular",
+      "last_observed_state": "SUBMITTED"
     }
   ],
   "local_validation": {

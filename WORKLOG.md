@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — launch target matrices and implement conditional fits/count integrals
+- Submittednative26000fourshards61219181 anddirectentry16shards61219182,
+  max4nodes each. Assembly/fit remain gated oncomplete authenticated inputs.
+- Confirmedradial61217706 TIMEOUT30m05s with20catalogcompletions; exactresume
+  61219183 regular2h submitted. Responsegroup61216483_1 COMPLETED42m25s;
+  fourdraws finished, full32response ensemble stillinprogress. Fieldvalidation
+  61218977 movedto debug30m; common61218978 retainsregular2h.
+- Addedtrue-distance Gaussianconditional binintegrals: effective nativev isnot
+  truemu; shift/scatter mustbe propagated. Threeanalytic mathchecks pass,
+  including extreme logtails andnonuniformbin massconservation.
+- Addedall-row matrixassembly withsourcehashes/failureflags; conditional
+  fixed-kernel populationHMC andproper-prior structure-aware bridge driver.
+  These drivers havenotyetexecuted; count/fine/selectiongates stillmandatory.
+- Addedseen-development latent-sign/failure/mode association report; no causal
+  claim ornewexternal residual. Allocatedreport pending.
+- Validation: newPython/shellsyntax pass;full117tests pass3.17s.
+- Next: submitcompactlatentreport/assemblydependency; inspectmatrixnumerics,
+  completeactivejobs, thenconditional targetfits andproductmatched counts.
+
 ## 2026-11-13 — validate shared entry and native pilot; prepare direct target matrices
 - Sharedproposal61218976 COMPLETED62s: allthreecontexts/all34corrections pass
   at2097152; percontext42–44s, independent/drawlevel andcrossmethodguards pass.

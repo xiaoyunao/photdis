@@ -49,7 +49,9 @@ Finish radial pilots then all176catalogs and response/systematics work. Independ
 Sharedproposal61218976/fullvalidation61218977–78 submitted; responsegroup0 timeout
 resumed61218979. Registered native131object targetpilot implemented, allocated
 execution61219038 complete131allpass. Sharedproposal61218976all3pass; native
-anddirectentry production implemented, submission pending. No targetfit/evidence/count result yet.
+anddirectentry production61219181/61219182 submitted. Assembly/fit drivers
+implemented butnotrun; true-distance integral3mathchecks pass. Radialshard0
+resume61219183 aftertimeout;full117tests pass. No targetfit/evidence/count result yet.
 No automatic million-object products, deployment, timers or subagents.
 
 
