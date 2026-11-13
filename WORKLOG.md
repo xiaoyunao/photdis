@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-14 — retain58 transfer outcomes and complete exact structure continuation
+- Pack1/raw61239091 COMPLETED17m41:12states/84of96numericchecks pass;
+  candidate6–17 eachfailsbroad-entry_levelcountgate(.57838–.61982>.5).
+  Singlechild1.486GiB/batch19.924GiB. Holdout32–33complete17m21/all16pass.
+  All58collectedstates pass1161reproduciblecompactchecks;18failures retained.
+- Resume2/61239061 COMPLETED5m40, original512failures/512refinedpass;
+  refined12 COMPLETED2m15, original12failures/512pass. Both10compactchecks
+  pass; fullcontextpayloadverification remainsallocatedassembly. Initialentry
+  21–24originalflags103/133/3/297 collected. Corrected priorentry20 typo512→233
+  fromunchangedsource; entry19 remains153.
+- Bounded48-worker pilot10/61240361 running, afterzero-runtimecancelold10,
+  sourceproof/dependencyrepair;288GiBplanningguard, unchangedintegrand/seeds.
+  Actualcompletionmeasurement pending; no broader48-workeradoption.
+- Fulloriginaltransferarray has6completed+18previouslycanceled+2pending,
+  zero running butpersistentTaskLimit. UpdatedArrayTaskThrottle2→4 succeeds;
+  onlytwoexistingwriters remain, nocancel/replacement. Rootcauseunconfirmed.
+  Sameexecutor measuredtwo12-statepacks17m41/18m31; remainingexistingpacks
+  2–4 promoteddebug30 underfresh5-jobcap, arraymax2 unchanged. Alljournals retained.
+- UpdatedPLAN/status/ledger. No scientificthreshold/model changes ornewtests
+  needed forcollectedoutcomes. Fulltransfer/structure/fiveplates/finalQA remain.
+
 ## 2026-11-14 — make compact transfer checks reproducible and prepare48-worker resource pilot
 - Added scripts/v3_1_transfer_compact_check.py; same44actualstates pass881
   source/identity/PSF/role/variant/denominator/original-gate consistencychecks,
@@ -12,7 +33,7 @@
 - Parse/import/shell checks pass; actual48-workerpilot notyetlaunched/measured.
   Targetpendingrefinement10 onlyifzero-runtime/terminal/absence/sourceproof;
   assemblydependencyrepair beforeheldreplacementrelease. No wideradoptionyet.
-- Entry19/20 COMPLETED13m00 each;512PSFcontexts with153/512originalfailures
+- Entry19/20 COMPLETED13m00 each;512PSFcontexts with153/233originalfailures
   respectively collected/hashed. No refinement orposterioracceptance implied.
 - Previousgoalturn wasprogress(44transferoutcomes/newfailures). Actualscheduler
   confirmsremainingtransfer/refinement/entryrunning; no blocker,duplicatewriter

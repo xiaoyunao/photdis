@@ -1,0 +1,53 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/entry_refined/draw_02/complete.json": "204059e8ac8c376ddd581d3e478b97711a3593f138dfe4ba3b6dbc121b445d70",
+    "manifests/v3_1/structure/entry_refined/draw_02/summary.csv": "d420fa60d2e105588c5958f38e079ea85344ed7153d77d2959b5316871584990",
+    "manifests/v3_1/structure/resource_execution/draw_02/job_61239061.json": "3ffc65adf6bb7939e32af5dcdce48311a15ac41f66012112befac3e7e4d40a8b",
+    "manifests/v3_1/structure/entry/draw_02/complete.json": "f26aa308264cd68f64485a616f2811975598ac5515e959f0fff7fcb4fa6d7a05"
+  },
+  "checks": [
+    {
+      "check": "audit_hash",
+      "passed": true
+    },
+    {
+      "check": "same_scientific_inputs",
+      "passed": true
+    },
+    {
+      "check": "original_entry_hash",
+      "passed": true
+    },
+    {
+      "check": "table_hash",
+      "passed": true
+    },
+    {
+      "check": "1024unique_branches",
+      "passed": true
+    },
+    {
+      "check": "native_PSF",
+      "passed": true
+    },
+    {
+      "check": "512identities",
+      "passed": true
+    },
+    {
+      "check": "original512_preserved",
+      "passed": true
+    },
+    {
+      "check": "all512_refined_pass",
+      "passed": true
+    },
+    {
+      "check": "scientific_source_unchanged",
+      "passed": true
+    }
+  ],
+  "actual_checks": 10,
+  "passed": true,
+  "scope": "Compact1024branch rows over512nativePSF contexts and resource/source hash closure; full context payload audit remains in allocated structure assembly."
+}

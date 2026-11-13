@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "f2230eac969c0831e053f7ef3964b4654ce18bf427cb3c58caac418f5ed290ad"
+  },
+  "scope": "Only two original tasks remain live and both have no dependency. Refresh array throttle from2to4 to address persistent JobArrayTaskLimit despite zero running members. Maximum actual live writers remains2; same jobs/integrands/inputs/time limits; no cancel, resubmit or scientific change. Scheduler root cause not established."
+}

@@ -1,0 +1,12 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_job": "61240361",
+  "draw": 10,
+  "workers": 48,
+  "outputs": {
+    "preflight.json": "b5212894aa1821e47b6ec5fc96458f79c4b5d3f60b3d95eed9f7711984e7a956",
+    "submission.json": "f7197cefb6d12d891f2fe09a0975d748af1affc166138acf4e3ab617c8a93cc2"
+  },
+  "scope": "One48-worker original context-refinement pilot; no mathematical/seed/threshold/sample/model change. Payload identity and memory/CPU guards enforced by original-function adapter on allocated compute; actualruntime/memory required before wider adoption."
+}

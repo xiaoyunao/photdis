@@ -1,0 +1,121 @@
+{
+  "commands": [
+    {
+      "args": [
+        "sacct",
+        "--array",
+        "-S",
+        "2026-11-12",
+        "-j",
+        "61231554",
+        "-X",
+        "-n",
+        "-P",
+        "-o",
+        "JobID,State,ExitCode,Elapsed"
+      ],
+      "code": 0,
+      "stdout": "61231554_0|COMPLETED|0:0|00:17:47\n61231554_1|COMPLETED|0:0|00:17:36\n61231554_2|COMPLETED|0:0|00:17:31\n61231554_5|PENDING|0:0|00:00:00\n61231554_17|PENDING|0:0|00:00:00\n61231554_18|COMPLETED|0:0|00:17:56\n61231554_24|COMPLETED|0:0|00:17:34\n61231554_25|COMPLETED|0:0|00:17:21\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-j",
+        "61231554",
+        "-o",
+        "%i|%T|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61231554_5|PENDING|0:00|2:00:00|(JobArrayTaskLimit)\n61231554_17|PENDING|0:00|2:00:00|(JobArrayTaskLimit)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_5",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61231567 ArrayJobId=61231554 ArrayTaskId=5 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=JobArrayTaskLimit Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T12:33:46 AccrueTime=2026-11-13T12:56:21 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:59:48 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_5.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_17",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61235900 ArrayJobId=61231554 ArrayTaskId=17 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=JobArrayTaskLimit Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T12:33:46 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:59:48 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_17.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61231554",
+        "ArrayTaskThrottle=4"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_5",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61231567 ArrayJobId=61231554 ArrayTaskId=5 ArrayTaskThrottle=4 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67683 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T12:33:46 AccrueTime=2026-11-13T12:56:21 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:59:48 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_5.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_17",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61235900 ArrayJobId=61231554 ArrayTaskId=17 ArrayTaskThrottle=4 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T12:33:46 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:59:48 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_17.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    }
+  ],
+  "source_receipts": {
+    "execution/transfer_pack_pilot/plan.json": "e1dd5ad76201fa9f6afed27e6b72990b41f926812e70792b9aec8af8d7c57ae8",
+    "execution/transfer_pack_rollout/pack_0.json": "dc4a9a5a738af18e3c9ed936ff8cef193ae12dc5ce51b03f7f98ada6291de8e3"
+  },
+  "cancelled_original_tasks": [
+    "61231554_10",
+    "61231554_11",
+    "61231554_12",
+    "61231554_13",
+    "61231554_14",
+    "61231554_15",
+    "61231554_16",
+    "61231554_19",
+    "61231554_20",
+    "61231554_21",
+    "61231554_22",
+    "61231554_23",
+    "61231554_3",
+    "61231554_4",
+    "61231554_6",
+    "61231554_7",
+    "61231554_8",
+    "61231554_9"
+  ],
+  "scope": "Only two original tasks remain live and both have no dependency. Refresh array throttle from2to4 to address persistent JobArrayTaskLimit despite zero running members. Maximum actual live writers remains2; same jobs/integrands/inputs/time limits; no cancel, resubmit or scientific change. Scheduler root cause not established.",
+  "scheduler_change_succeeded": true
+}

@@ -79,8 +79,9 @@ Negative findings remain deliverables, never successful calibration claims.
   canceledparent/children; max2packednodes, originalarraythrottle2 retained.
   Firstrollout61238249_0(raw61238416) COMPLETED18m31:12executionsverified,
   90/96numericchecks pass;6candidate0–5 broad-entry_level countchanges
-  .60561–.66554>.5 retained. Broad28–33pass. Heldout28–31also COMPLETE17m34/32numericchecks pass. Total44/102
-  transfer outcomes;793compactsource/identity/gatechecks pass,6failures retained.
+  .60561–.66554>.5 retained. Broad28–33pass. Heldout28–31also COMPLETE17m34/32numericchecks pass. Secondpack61238249_1 COMPLETE17m41, candidate6–17eachretainonecountgatefailure;
+  holdout32–33 COMPLETE17m21/16checks pass. Total58/102transferoutcomes,1161
+  reproduciblecompactchecks pass,18originalnumericfailures retained.
   Firstsixcandidate in-sampleunitjointESS1–1.015broad versus848.225–996.181
   candidate;12/24basejointsupportdiagnosticspass, notindependentvalidation.
   Existinginitialentrypilot61239060 promoteddebug30 after101sourcehashes and
@@ -196,11 +197,17 @@ Negative findings remain deliverables, never successful calibration claims.
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes
   3613 and domain evidence 1309 artifact/source checks; response compact 351.
-- Reproducible scripts/v3_1_transfer_compact_check.py validates44states with
-  881checks, preservessixfailures; default102guardrejectspartialinventory.
+- Reproducible scripts/v3_1_transfer_compact_check.py validates58states with
+  1161checks, preserves18failures; default102guardrejectspartialinventory.
   Standalone48-worker exactrefinementadapter prepared (288GiBplanningbound,
-  sameoriginalcontextfunction); pilot10pending/sourcepreflight required,
-  actualtiming/memory notmeasured andno wideradoptionyet.
+  sameoriginalcontextfunction); replacementpilot10/61240361running after
+  zero-runtimecancellation/sourceproof/dependencyrepair; noactualcompletionyet.
+  Resume2/61239061 COMPLETE5m40 andrefined12 COMPLETE2m15:512pass each,
+  original512/12failures retained;10compactchecks eachpass. Entry21–24 complete
+  with103/133/3/297originalflags. Remainingtransferpacks2–4 promoteddebug30
+  frommeasured17m41/18m31, max2packednodes unchanged. Originaltransferarray
+  throttle2→4 afterprovingonly5/17liveandzerorunning;actualmaxwriters2, no
+  resubmission. Schedulerrootcauseunconfirmed; receiptsretained.
 - Prepared scripts/v3_1_remaining_figure_check.py forfivependingplates: exact
   source/panelcoverage andPNG300dpi/EnglishPDF. Onlyparse/import/missing-input
   guards tested; actualfigureintegrityandvisualreview remainrequired.

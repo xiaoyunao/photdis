@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "b5816d995b7b9ba1ae0234578909e509d32e6ade9d4db24b2c36d4fbbc3ded9a"
+  },
+  "scope": "Three existing12-state packs promoted to debug30 after two same-executor batches completed18m31/17m41. Same scientific source/state inventories; array maximum2running unchanged. No cancellation/resubmission; original numerical failures retained."
+}

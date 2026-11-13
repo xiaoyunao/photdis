@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "submission.json": "037802e4f47a3c60c56e0bc8deb391caaab4a1e705ad3b4f26ea110d1d9819b8"
+  },
+  "scope": "One bounded48-worker resource pilot. Prior32-worker full512 pilot26m06; slowstate2 logs414structure contexts in30m04. Scaling to48 is a runtime estimate, not proven completion. Fresh memory/CPU guards and original cached integrand remain; preserve timeout if any, no wideradoption until measurement."
+}
