@@ -1,0 +1,41 @@
+{
+  "recorded_utc": "2026-11-13T11:51:40.478352+00:00",
+  "resource_recovery_registered": true,
+  "scientific_complete": false,
+  "science_script_sha256": "66235ae5c7b414fbfd8e917dc868034b4fa980a0dbe78144f8782c56ff41245d",
+  "replacement_arrays": {
+    "pending_14_15.json": "61223886",
+    "resume_06_09.json": "61223947",
+    "resume_10_13.json": "61223978"
+  },
+  "assembly_job": "61219399",
+  "observed_assembly_dependency": "afterok:61223947_*(unfulfilled),afterok:61223978_*(unfulfilled),afterok:61223886_*(unfulfilled)",
+  "pilot_job": {
+    "job": "61224010",
+    "dependency": "afterok:61219399:61222999",
+    "case": "candidate",
+    "correction": 0,
+    "scope": "Registered bounded512/2048/8192 conditional fit/count numerical pilot; no external references"
+  },
+  "response0_dependency_release": {
+    "timestamp": "2026-11-13T11:32:33.120465+00:00",
+    "records": [
+      {
+        "parent": "61221623_0",
+        "child": "61223212_0",
+        "index": 0,
+        "accounting": "61221623_0|COMPLETED|0:0",
+        "prior_dependency": "aftercorr:61221623_*(unfulfilled)",
+        "marker": "data/v3_1/response_probes/draw_0000/complete.json",
+        "marker_sha256": "2c875abab5f8dcf2c66bd1535c9d74b62b88364f6aa0e6a7b06153737b8c62f7",
+        "action": "Released already-completed antecedent; verified complete full original inventory"
+      }
+    ]
+  },
+  "outputs": {
+    "pending_14_15.json": "dfb642e69e5369a61d12ab5d1629ae98f03004d8d2a341017ac5bec4f51a3cc9",
+    "resume_06_09.json": "c2d47e31ae386b10293ffeaf58effd00f7037fe4d5ecaaf25dfda27bbc9d7c6c",
+    "resume_10_13.json": "1f4c6c4d6a70a57b624a9b155af9803bada880c663c2333eedf6c654e4609feb"
+  },
+  "scope": "Scheduler/resource recovery only. Both timed-out groups terminal before single-shard resumes; unstarted group replaced safely. Original science/seeds/checkpoints retained."
+}

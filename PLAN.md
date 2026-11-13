@@ -27,17 +27,20 @@ Negative findings remain deliverables, never successful calibration claims.
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
   Direct entry61219182 first6shards9750objects/11081envelopes allpass; onlyunstarted6–15 nowresourcegroups
-  initial61222996/61222997 resourcegroups didnot show speedup. FirstTIMEOUT
-  resumed exactly as61223947(6–9); unstarted14–15group replaced61223886.
-  Assembly61219399 dependencies follow recovery; exactjointrepack61222999 running. No contextinterpolation. Population
+  initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
+  (6–9)/61223978(10–13), unstarted14–15group replaced61223886. Alloriginals
+  preserved. Assembly61219399 dependencies updated; jointrepack61222999 passes.
+  Candidatezero boundedfit/countpilot61224010 waitsafterassembly. No contextinterpolation. Population
   fit/count/ensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
-  Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
+  Independently regenerated32SED refits:20complete(groups0–4 includingexact
+  group0resume61218979), group5running and6/7pending.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
-  preserves originalfailures andrequiresall64inventories before finalreport.
+  preserves originalfailures andrequiresall64inventories before finalreport;
+  response0all3originalfailures pass.005sidecars, all256objects retained.
   These are not26kpopulation-marginal evidence.
 - [ ] WP3 final scientific validation. Roles frozen:170strictnewsky+356source-new
   seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in

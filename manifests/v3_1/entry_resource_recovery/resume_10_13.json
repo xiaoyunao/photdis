@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-13T11:46:52.195977+00:00",
+  "original": "61222997",
+  "accounting": "61222997|TIMEOUT|00:30:02|0:0",
+  "shards": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "science_script_sha256": "66235ae5c7b414fbfd8e917dc868034b4fa980a0dbe78144f8782c56ff41245d",
+  "action": "Exact checkpoint resume on original single-shard resources; original timeout retained",
+  "replacement_array": "61223978",
+  "assembly_dependency": "afterok:61223947:61223978:61223886",
+  "promotion10": {
+    "returncode": 0,
+    "message": ""
+  }
+}

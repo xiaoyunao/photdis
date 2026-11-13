@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — verify joint repack and response0 numerical recovery
+- Jointrepack61222999 COMPLETED3m35s:26000nativePSF x34corrections,258fineaudit
+  rows; exactfloat64 copy/conservation passed. Originalindividual sidecars retained.
+- Response0development refinement61223212_0 COMPLETED11s(actual61223213):all3
+  originalfailures pass.005, all256retained, unresolved0. Maxrefscore change
+  amongrefinedobjects.0127391 andmaxGaiaPITchange.00186642; originalfailures intact.
+- Secondresourcegroup61222997 TIMEOUT30m02s; verifiedterminal before exactresume
+  61223978(10–13). Assembly61219399 nowrequires61223947/61223978/61223886;
+  bookkeeping manifests preserveevery cancellation/timeout/checkpoint/unchangedhash.
+  Candidatezero boundedfit/countpilot61224010 waitsafterassembly andjointrepack.
+- NewSEDgroups0–4 complete(20responses; originalgroup0timeout viaexactresume);
+  group5running,6/7pending. Originalgroup0timeout remainsinaccounting. No new
+  terminalfailures inremainingresponse/structure arrays atlatestcheck.
+- Validation: compactmanifest/CSV hashes checked. Full132mathtests remainpassed;
+  no finaltarget population, externalvalidation, structurefit or modeladoption
+  inferred from these numerical/operational successes.
+- Next: complete remainingentry shards, runpilot thenallregisteredconditional
+  states/counts, finalprediction/heldout/structure and once-onlynewreference scoring.
+
 ## 2026-11-13 — add shared heldout-sky transfer and recover resource timeouts
 - Added registered whole-field12/4/6 transfer under broad/candidate/heldout fits,
   all34corrections/fourviews and matched broad/candidate entry. Onlyheldout fit
