@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — make baseline preservation a live final-delivery requirement
+- Found prior tracked-preservation proof referenced older7744d5f, notcurrentHEAD.
+  Added v3_1_preservation_check.py: protect6976 baseline31f1277 files, examine
+  worktree andindex separately, reject new tracked code outside v3.1 namespaces.
+  Onlyproject memory/README/.gitignore maychange. Originalproof retained.
+- Finaldelivery.py authenticates savedproof then reruns currentprotection and
+  requiresnew regression-source hashes. No remote large-product/deployment scan
+  claim; missingstructure/domain artifacts stillblock successful finalclosure.
+- Validation: Pythonparse; four actualtemporary-git regressions pass0.96s,
+  including hiddenstagedmutation/deletion/oldnamespaceaddition. Full183tests
+  pass7.58s with164source hashes; previous179-test transcript/record archived.
+  Actualcurrent missing-input rejection passes; no delivery.json written.
+- Updatedmethods/result/status/ledger/PLAN andlinks. Structure remains25/32;
+  existing24/25 jobs running,27–31 queued. Nextcollectactualremainingstates,
+  finishfullposterior/domain/threefigures andactualcomplete deliverygate.
+
 ## 2026-11-14 — authenticate twenty-five refined structure states
 - State16/raw61247657 produced all512 passing refinements, preserving512 original
   failed contexts.64workers, Python1266.000s/maxchild4168796KiB. Collected actual

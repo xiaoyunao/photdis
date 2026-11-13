@@ -24,7 +24,7 @@ This snapshot takes precedence over the historical execution notes below.
   Python1266.000s. Existing child29 promoteddebug30 under the fresh5-job cap.
 - Required sequence: all32 refinements → existing assembly61232760 → posterior
   61232761 → shared-count report61232762 → domain join61233366. No duplicate jobs.
-- Delivery:19/22 figures accepted;179 actual tests passed. Remaining structure2
+- Delivery:19/22 figures accepted;183 actual tests passed. Remaining structure2
   and domain1 figures require real products, source checks and visual inspection.
 - Closure: finish structure/domain reports, reconcile every Pro requirement,
   update final narrative/README/AGENTS, run full22-figure and final delivery gates,
@@ -212,6 +212,11 @@ This snapshot takes precedence over the historical execution notes below.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Current baseline guard verifies6976 tracked baseline files in worktree AND index,
+  and rejects additions outside v3.1 namespaces. Final delivery repeats it live.
+  Four temporary-repository regressions pass; full183tests pass7.58s/164source
+  hashes. Previous179-test evidence retained. Current missing-input guard passes;
+  complete structure/domain products stillrequired for a successful final gate.
 - Full102transferreport61231678 COMPLETED1m15,625actualreportchecks/96countgroups;
   allmain inheritedevidence failures and4mixed-sensitivity failures retained.
   HoldoutunitjointESS103.872broadpasses/21.669candidatefails; broad→candidate

@@ -14,6 +14,12 @@ Legacy DR11 TYPE=PSF；缺失或未核实形态拒绝入选。原始排除计数
 原因保留。历史 v3.0 产物、原数值失败及精化侧表、已部署 v1 不作替换。
 已查看的 v3 新天空、原保留样本及 NGC288 只能用于已见诊断或回归比较。
 
+最终交付运行 `python3 scripts/v3_1_preservation_check.py`，对基线31f1277中的6976个
+受保护git文件检查当前工作区和暂存区，并拒绝向旧版本命名空间加入新代码。
+仅README/AGENTS/WORKLOG/PLAN及.gitignore允许随本轮更新。最终验收即时重查，
+不把早期提交的保护记录当成当前证明。[当前检查](../manifests/v3_1/baseline_preservation_current.json)
+与旧审计分别保留；这不声称重新扫描远端大文件或检查部署运行态。
+
 角色与统计对象不能互换：
 
 | 对象 | 样本及用途 | 不能推出的结论 |

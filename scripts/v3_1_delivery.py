@@ -5,6 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from v3_1_preservation_check import examine as examine_preservation
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'manifests/v3_1'
@@ -34,7 +36,7 @@ def main():
         'structure/posterior/complete.json',
         'structure/report/complete.json', 'domain_adjudication/complete.json',
         'figure_delivery.json', 'final_unit_validation.json',
-        'final_narrative_review.json',
+        'final_narrative_review.json', 'baseline_preservation_current.json',
     ]]
     missing = [str(p.relative_to(ROOT)) for p in required if not p.exists()]
     if missing:
@@ -59,6 +61,13 @@ def main():
             path = ROOT / name
             check(label + ':' + name, path.is_file() and sha(path) == digest)
             record(path)
+
+    preservation = read('baseline_preservation_current.json')
+    authenticate(preservation['inputs'], 'preservation_source')
+    current_preservation = examine_preservation()
+    check('baseline_preserved_now', preservation['passed'] and current_preservation['passed'] and
+          preservation['baseline_commit'] == current_preservation['baseline_commit'] and
+          preservation['protected_baseline_files'] == current_preservation['protected_baseline_files'])
 
     for stem, (name, key) in REPORTS.items():
         proof = read(name)
@@ -152,7 +161,10 @@ def main():
           all(c['passed'] for c in figures['checks']))
     authenticate(figures['inputs'], 'figure_provenance')
     unit = read('final_unit_validation.json')
-    check('actual_tests_passed', unit['exit_code'] == 0 and unit['failed'] == 0 and unit['passed'] >= 179)
+    check('actual_tests_passed', unit['exit_code'] == 0 and unit['failed'] == 0 and unit['passed'] >= 183)
+    check('preservation_regression_tests', {'scripts/v3_1_preservation_check.py',
+          'tests/test_v3_1_preservation.py'} <= set(unit['inputs']) and
+          'tests/test_v3_1_preservation.py' in unit['command'])
     authenticate(unit['inputs'], 'unit_source')
     check('test_transcript', sha(BASE / 'final_unit_validation.txt') == unit['stdout_sha256'])
     record(BASE / 'final_unit_validation.txt')
@@ -182,6 +194,7 @@ def main():
                   figures=22, transfer_states=102, structure_states=32,
                   original_structure_failures=refined['original_failed_contexts'],
                   unresolved_structure_contexts=refined['unresolved_contexts'],
+                  current_tracked_preservation=current_preservation,
                   scope='Local compact provenance and complete research delivery closure. Existing allocated production audits cover large payloads; no fresh full-payload scan or independent scientific calibration is claimed. Final git synchronization is recorded separately.')
     (BASE / 'delivery.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps({k: result[k] for k in ['actual_checks', 'research_delivery_complete', 'scientific_acceptance']}))

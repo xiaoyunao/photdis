@@ -27,6 +27,7 @@
     "tests/test_v3_1_luminosity_adjoint.py",
     "tests/test_v3_1_luminosity_log.py",
     "tests/test_v3_1_predictive.py",
+    "tests/test_v3_1_preservation.py",
     "tests/test_v3_1_radial.py",
     "tests/test_v3_1_radial_products.py",
     "tests/test_v3_1_radial_report.py",
@@ -85,9 +86,9 @@
     "tests/test_v3_uncertainty.py"
   ],
   "exit_code": 0,
-  "passed": 179,
+  "passed": 183,
   "failed": 0,
-  "elapsed_seconds": 7.3477126667276025,
+  "elapsed_seconds": 7.58,
   "inputs": {
     "scripts/v3_0_catalog_export.py": "2c6d5afc5ac42d23bd94395bde7eb96250843dacea5135a51b73659ae26c671d",
     "scripts/v3_0_catalog_summary.py": "11c11d864dc5d16017b114a75d98d24bc6996d001611db617ab40eaff002b258",
@@ -96,6 +97,7 @@
     "scripts/v3_0_projection.py": "f6defe17676b2eb2ee4770d794858339af6f41e300ec3ca5913ac2149427515b",
     "scripts/v3_0_transfer_evaluate.py": "d0b9136a56358778c97b70385202bbfbdd7f6e313f3a22c094f77fe34b701bc1",
     "scripts/v3_0_transfer_plan.py": "748e51d328d0703dd59d500cf1180b6b5d70e1881f436f216841a9cf570f1bcc",
+    "scripts/v3_1_preservation_check.py": "627e33e432cd876bddc8b84a6b10aa1b25d3ae91d2f1df834a7fa3605c8861ce",
     "scripts/v3_1_radial_report.py": "c0690897f6f5e1fd0fdc896ef0f0926c3865c27e6a9fda2d29e5de82bf0ff03b",
     "scripts/v3_1_structure_report.py": "59f6f9bd89bcada1de47e95eb99476d840a7aa72374caed8c70ef7f45999cab5",
     "scripts/v3_1_target_counts.py": "96c78a1d4def95d387baa8a548b0500087e3cbe5da027be544e4e11deff9e53c",
@@ -195,6 +197,7 @@
     "tests/test_v3_1_luminosity_adjoint.py": "4cf1ab43949f75d5b6f4f62834cdcd524afdc1abc383bf39c461107e3cc01d0f",
     "tests/test_v3_1_luminosity_log.py": "f6f6ecc1b37a69c34b4c6d4db80d3433ddbc6d9a1195f66a0dc6ff7f195ca816",
     "tests/test_v3_1_predictive.py": "eb2c59811b9dad22472ca0cabc388f243be16a3c549330c64398f0897f60580d",
+    "tests/test_v3_1_preservation.py": "45eb119b9406262b5cfe31b731880caa1038735f0986780db091705eb3d58df3",
     "tests/test_v3_1_radial.py": "9c790eda3c20b920352c700c67c86d1dd0603c55529b0eb0dc93e4dfe38669a8",
     "tests/test_v3_1_radial_products.py": "cf94e61e56c6d46349fb735d1afed920c528b212cdefc39533d1345642a045f3",
     "tests/test_v3_1_radial_report.py": "f8a6f945ff74c4baace7976317f511c5ce065a45343d9216107c1388f37ca9e5",
@@ -252,6 +255,6 @@
     "tests/test_v3_transfer_score_bounds.py": "52fb3e3d2b7d104d0c8aa9903ca2fbcf7eefb9acd31c43fee04458fb0c39accc",
     "tests/test_v3_uncertainty.py": "842af77a1adbd631c3fe665ddf586874c2888ae7fa8299e2295e739dbde18fb4"
   },
-  "stdout_sha256": "64054e46acb41db62f9e88e6d6ebe6a4578b379f2bc4cc585578e288b45c900a",
-  "scope": "Actual complete v3 and v3.1 mathematical/regression tests; production numerical and scientific acceptance remain separate."
+  "stdout_sha256": "2402db40cc87e65c74762d19eb64c9808e43701e6d400156e0a22fe92df8d4ee",
+  "scope": "Actual full v3 and v3.1 mathematical/scientific unit suite plus protected-baseline index/worktree regression cases. Does not imply external calibration or final scientific artifact acceptance."
 }

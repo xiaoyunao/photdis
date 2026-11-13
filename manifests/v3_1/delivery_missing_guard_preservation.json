@@ -1,0 +1,12 @@
+{
+  "source_sha256": "a41885e46e9c4e882896568a7266f3771f618d5a10d5e7850481d6461bb4562e",
+  "command": [
+    "python3",
+    "scripts/v3_1_delivery.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 204, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 43, in main\n    raise FileNotFoundError('Complete delivery required; no output written. Missing: ' + ', '.join(missing))\nFileNotFoundError: Complete delivery required; no output written. Missing: manifests/v3_1/structure_result_sources.json, manifests/v3_1/domain_result_sources.json, manifests/v3_1/structure/refined_entry_32_states.json, manifests/v3_1/structure/matrices/complete.json, manifests/v3_1/structure/matrices/status.csv, manifests/v3_1/structure/posterior/complete.json, manifests/v3_1/structure/report/complete.json, manifests/v3_1/domain_adjudication/complete.json, manifests/v3_1/figure_delivery.json, manifests/v3_1/final_narrative_review.json\n",
+  "missing_input_guard_passed": true,
+  "delivery_written": false,
+  "scope": "Actual incomplete-input rejection with current baseline and regression-test requirements. Full success remains untested until actual structure/domain products exist."
+}

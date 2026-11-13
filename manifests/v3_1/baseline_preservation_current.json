@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "31f12772fe29c801db7269adf3a8b160e264bb5f",
+  "examined_commit": "8a5e43cfddb74d944b128cfa7c9330258dc2de77",
+  "protected_baseline_files": 6976,
+  "allowed_project_files": [
+    ".gitignore",
+    "AGENTS.md",
+    "PLAN.md",
+    "README.md",
+    "WORKLOG.md"
+  ],
+  "views": {
+    "worktree": {
+      "changed_paths": 1711,
+      "protected_changes": []
+    },
+    "index": {
+      "changed_paths": 1711,
+      "protected_changes": []
+    }
+  },
+  "passed": true,
+  "scope": "Tracked baseline files and additions outside v3.1 namespaces, in both index and worktree. No remote large-payload or deployment-runtime scan is claimed.",
+  "inputs": {
+    "scripts/v3_1_preservation_check.py": "627e33e432cd876bddc8b84a6b10aa1b25d3ae91d2f1df834a7fa3605c8861ce"
+  }
+}
