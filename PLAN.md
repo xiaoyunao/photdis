@@ -198,7 +198,8 @@ Negative findings remain deliverables, never successful calibration claims.
   allmain inheritedevidence failures and4mixed-sensitivity failures retained.
   HoldoutunitjointESS103.872broadpasses/21.669candidatefails; broad→candidate
   ESS388.104buthalfdelta.8532fails. TwoEnglishplates/12panels visuallyaccepted,
-  158source/formatchecks; now19/22plates. Runupdatedaggregate aftervisualrecordcommit.
+  158source/formatchecks; now19/22plates. Committedreview provenanceaudit
+  nowpasses270checks over19plates; final22guard remains.
   Existingstructure24andnew25promoteddebug30 afterfreshcap; no newjobs/science.
 - Finaldelivery gate scripts/v3_1_delivery.py prepared: requiresactual102transfer,
   all32structure/assembly/posterior/counts, ninewrittenreports,22visuallyreviewed
@@ -229,8 +230,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Refined19complete11m01/original153flags;13/26complete21m50/10m53,
   original512/149flags. Refined14/20also complete19m17/17m06, original268/233
   flags retained. Newarray17/raw61247266 COMPLETED21m29/all512pass,512oldflags.
-  Total22/32refinements authenticate482groupedchecks withnewreproducible
-  refinementcompactchecker;6522originalfailedcontexts/0unresolved preserved.
+  Newarray18/raw61247267all512pass,397oldflags; Python1052.386s.
+  Total23/32refinements authenticate504groupedchecks withnewreproducible
+  refinementcompactchecker;6919originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
