@@ -61,9 +61,11 @@ Negative findings remain deliverables, never successful calibration claims.
   compactchecks pass; candidatecompact also229checks passafterretrieving25
   missinglocalmarkers againstensemblehashes (no rerun). Floatingweight/count roundoff andinitialcheckerfailure
   preserved separately, productiondata/scientificgates unchanged.
-  First32 holdout statescomplete: thirty-one2048pass, state1 needs8192 after
-  2048count failure. Pendingholdoutgroups21–25 now1h afteractualfull8192
-  group27m24 proof (>2x margin); otherholdoutstates/ensembles stillpending.
+  All34 holdout statescomplete:33at2048/state1at8192; originalfailures retained.
+  Lastgroup25 COMPLETED8m00; ensemble61225886 COMPLETED25s. MainESS30.91517,
+  maxweight.0462794; absolute logZseed+.464854/level−5.016593 fail.05gate.
+  All229compactchecks pass, cutnotreplacement. All102conditionalpopulation
+  fits/threeensembles complete; full102state predictive transfer remains.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
@@ -79,10 +81,13 @@ Negative findings remain deliverables, never successful calibration claims.
   Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
   16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
   Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.
-  Entry11completed13m35/134originalflags retained. Two-state initialentry
-  resourcepilot prepared (same32-worker CLIperstate; notrefinement); actual
-  preflight/pilot/dependencyrepair required before adoption.
-  Originalarraythrottle remains2. Entry9original512failures retained; existing
+  Entry12/13completed13m21/13m07 with12/512originalflags retained.
+  Initialentrypilot61239060 nowqueuedfor30/31 (same32workersperstate);
+  101smallsourcehashes authenticated,4payloadhashes checkedoncompute. First
+  proposed13/14abort leftthosewriters intact;30/31 bothcancelledzero-runtime.
+  Controller31expiry recoveredvia fullparentarrayaccounting. Originalentry
+  arraythrottle is4; originaltransferarraythrottle2. Actualpilotmeasurement
+  stillrequired beforewiderpacking. Entry9original512failures retained; existing
   pendingentry10/11/refinement2 promoteddebug afterfreshcap check.
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
@@ -153,8 +158,12 @@ Negative findings remain deliverables, never successful calibration claims.
   (>2x exact32-worker pilot), max3nodes; native/refinedall32complete,490original
   nativefailures retained and32/32refined markerpass. Fullpayloadcheckinassembly.
   Complete-state chain submitted: assemble61232760 -> infer61232761 ->
-  report61232762. Assembly requires61231239/61223167/61223172_1/61229422;
-  completedrefinementdraw0 authenticated. Allstates/numerical gates mandatory. Pendingentry1–31limits now30min basedon
+  report61232762. Assembly nowrequires explicitunfinishedentry14–29, pilot61239060,
+  refinement2resume61239061 andallunfinishedrefinement5/6/8–31 children;
+  completednative/entry/refinedstates authenticated. Canceledparent andtimedout
+  child excludedonlyafter source/accountingproof. Refinement2TIMEOUT30m04
+  retained; sameadapter resumesonlyunfinished per-context/per-seed checkpoints
+  under1h allocation. Ref30/31 dependonpilot beforeassembly. Allstates/numerical gates mandatory. Pendingentry1–31limits now30min basedon
   13m37pilot; pendingrefinements now1h (>2x exact32-worker pilot). Pending
   populationgroups restored2h afterbroad23timeout; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.

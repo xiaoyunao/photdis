@@ -1,0 +1,18 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_job": "61239060",
+  "refinement2_resume_job": "61239061",
+  "draws": [
+    30,
+    31
+  ],
+  "source_hashes": 101,
+  "outputs": {
+    "preflight.json": "3c820db82c4d2eb19b9b335c55a1f66ebe02d15bcc1a90d3e2c05aad26bc9e7f",
+    "plan.json": "3fa9077d2879d9e99892850aa92045b9cb523a4f77131cceb10e6cef3f7d22ab",
+    "submission.json": "9886b72e202a7ad6ecd7094c6c080631e4978d95fff09be7dbd91cf727f6ef00",
+    "accounting_alias_attempt.json": "0aa7f99723b8ec5fe3df64dacd837c7ecd8989d66f50097686d75aabb261c98f"
+  },
+  "scope": "Two originalinitial-entry CLI invocations, each32workers. No refinement, changes to integrands/seeds/numerical gates, replacement of completed files or new sample. Payload hashing is performed on allocated compute."
+}

@@ -1,0 +1,7 @@
+{
+  "preflight_passed": false,
+  "scheduler_mutations_performed": false,
+  "cause": "Initial accounting assertion expected raw61224715 in JobID; Slurm reports arrayalias61223167_0. Matching exact JobID or JobIDRaw with COMPLETED0:0 resolves bookkeeping only.",
+  "accounting": "61223167_0|61224715|COMPLETED|00:13:37|0:0\n",
+  "scientific_job_failed": false
+}

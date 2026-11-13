@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-14 — complete held-out ensemble and repair exact structure continuations
+- All34holdout fits complete:33at2048/state1at8192, lastgroup25 COMPLETED8m00.
+  Ensemble61225886 COMPLETED25s,20000PSF/212fineaudits; mainESS30.91517,
+  maxweight.0462794 butlogZseed+.464854/level−5.016593 fail.05. All229compact
+  checks pass; numerical/scientific failures retained, cutnotreplacement.
+- Entry13 COMPLETED13m07/512originalfailures; entry12 13m21/12flags retained.
+  Proposed13/14pack safelyabortedwhen13started, no scheduler mutation there.
+  Tail30/31 bothcancelledzero-runtime/zeroallocatednodes; controller31expired
+  immediately, originalinterruptedjournal retained andparentarrayaccounting
+  proves terminal/absence. Resumedjournal,101smallsourcehashes authenticated.
+- Two-state initialentrypilot61239060 submittedheld thenreleasedafterdependency
+  repair;4payloadhashes checkedoncompute. Original32workers/CLIperstate, no
+  refinementchange orwideradoption. Originalentryarraythrottle4, transfer2.
+- Refinement2 TIMEOUT30m04/absent/nofinalmarker; immutableinputs verified.
+  Exactcheckpointresume61239061(1h,32workers) reusesoriginalcontext/seed cache.
+  Assembly61232760 nowwaitsallunfinishedexplicitentry14–29/refined5/6/8–31,
+  pilotandresume; refined30/31waitpilot. No canceledparent/timedoutchild in
+  assembly; all32states stillmandatory. Infer/report/domainchains intact.
+- Existingpendingtransferpack1/original24/25 promoteddebug30min onlyafter
+  measured<19min timings,2048source checks andfresh5-jobcap. No newwriters.
+- Validation: actualcompactchecker --case holdout229checks; inventory34 exact
+  sourcehash/schedule reconciliation; source/accounting/dependency assertions.
+  UpdatedPLAN/status/ledger. Next: actualtransfer andstructure completion,
+  fivependingfigures, fulladjudication/finalreport. Goal remainsactive.
+
 ## 2026-11-14 — preserve structure11 flags and prepare two-state entry resource pilot
 - Entry11 COMPLETED13m35;512contexts/134originalfailures compactoutputs
   collected. Existingpendingtransferpack61238249_0 promoteddebug30min after

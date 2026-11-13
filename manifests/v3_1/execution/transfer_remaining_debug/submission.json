@@ -1,0 +1,163 @@
+{
+  "commands": [
+    {
+      "args": [
+        "sacct",
+        "--array",
+        "-S",
+        "2026-11-12",
+        "-j",
+        "61237364,61231554_18,61225864,61225886",
+        "-X",
+        "-n",
+        "-P",
+        "-o",
+        "JobID,JobIDRaw,State,Elapsed,ExitCode"
+      ],
+      "code": 0,
+      "stdout": "61225864_0|61226380|COMPLETED|00:09:09|0:0\n61225864_1|61226381|COMPLETED|00:09:06|0:0\n61225864_2|61226450|COMPLETED|00:09:03|0:0\n61225864_3|61226968|COMPLETED|00:09:16|0:0\n61225864_4|61226970|COMPLETED|00:09:09|0:0\n61225864_5|61226971|TIMEOUT|00:30:12|0:0\n61225864_6|61226972|COMPLETED|00:09:08|0:0\n61225864_7|61226973|COMPLETED|00:09:18|0:0\n61225864_8|61225932|COMPLETED|00:09:03|0:0\n61225864_9|61225865|COMPLETED|00:02:05|0:0\n61225864_10|61225866|COMPLETED|00:02:13|0:0\n61225864_11|61225933|COMPLETED|00:02:05|0:0\n61225864_12|61225934|COMPLETED|00:02:08|0:0\n61225864_13|61225973|COMPLETED|00:02:43|0:0\n61225864_14|61225975|COMPLETED|00:02:03|0:0\n61225864_15|61225976|COMPLETED|00:02:00|0:0\n61225864_16|61226078|COMPLETED|00:02:01|0:0\n61225864_17|61226974|COMPLETED|00:27:24|0:0\n61225864_18|61226975|COMPLETED|00:07:31|0:0\n61225864_19|61226976|COMPLETED|00:07:24|0:0\n61225864_20|61226978|COMPLETED|00:07:25|0:0\n61225864_21|61226979|COMPLETED|00:08:54|0:0\n61225864_22|61226980|COMPLETED|00:08:21|0:0\n61225864_23|61226983|COMPLETED|00:09:56|0:0\n61225864_24|61226984|COMPLETED|00:08:13|0:0\n61225864_25|61225864|COMPLETED|00:08:00|0:0\n61225886|61225886|COMPLETED|00:00:25|0:0\n61231554_18|61235901|COMPLETED|00:17:56|0:0\n61237364|61237364|COMPLETED|00:18:39|0:0\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61223167_17|PENDING|regular_1|0:00|30:00|(Resources)\n61239061|PENDING|regular_1|0:00|1:00:00|(None)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61238249_1|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_25|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_24|PENDING|regular_1|0:00|1:00:00|(Priority)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_28|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_27|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_26|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_25|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_24|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_23|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_22|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_21|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_20|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_19|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_18|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|RUNNING|debug|4:47|30:00|nid004518\n61223167_14|RUNNING|regular_1|12:25|30:00|nid005815\n61223167_15|RUNNING|regular_1|3:20|30:00|nid005870\n61223167_16|RUNNING|regular_1|1:19|30:00|nid005818\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61238249_1",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61238249 ArrayJobId=61238249 ArrayTaskId=1 ArrayTaskThrottle=2 JobName=photdis_v3_1_transferpacks UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T11:47:44 EligibleTime=2026-11-13T11:47:45 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:15:22 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login35:1829543 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_transfer_resource_array.sh SubmitLine=sbatch --parsable --hold --array=0-4%2 scripts/run_v3_1_transfer_resource_array.sh data/v3_1/execution/transfer_pack_rollout WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_transferpacks_61238249_1.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61238249_1",
+        "QOS=debug",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61238249_1|PENDING|debug|0:00|30:00|(None)\n61223167_17|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61239061|PENDING|regular_1|0:00|1:00:00|(None)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61231554_25|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_24|PENDING|regular_1|0:00|1:00:00|(Priority)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_28|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_27|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_26|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_25|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_24|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_23|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_22|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_21|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_20|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_19|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_18|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|RUNNING|debug|4:48|30:00|nid004518\n61223167_14|RUNNING|regular_1|12:26|30:00|nid005815\n61223167_15|RUNNING|regular_1|3:21|30:00|nid005870\n61223167_16|RUNNING|regular_1|1:20|30:00|nid005818\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_24",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61237926 ArrayJobId=61231554 ArrayTaskId=24 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T11:37:39 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:15:21 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_24.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61231554_24",
+        "QOS=debug",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61238249_1|PENDING|debug|0:00|30:00|(None)\n61231554_24|PENDING|debug|0:00|30:00|(None)\n61223167_17|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61239061|PENDING|regular_1|0:00|1:00:00|(None)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61231554_25|PENDING|regular_1|0:00|1:00:00|(Priority)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_28|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_27|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_26|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_25|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_24|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_23|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_22|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_21|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_20|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_19|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_18|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|RUNNING|debug|4:48|30:00|nid004518\n61223167_14|RUNNING|regular_1|12:26|30:00|nid005815\n61223167_15|RUNNING|regular_1|3:21|30:00|nid005870\n61223167_16|RUNNING|regular_1|1:20|30:00|nid005818\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61231554_25",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61231554 ArrayJobId=61231554 ArrayTaskId=25 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T12:11:48 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T12:15:21 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_25.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61231554_25",
+        "QOS=debug",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61238249_1|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61231554_25|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61223167_17|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61239061|PENDING|regular_1|0:00|1:00:00|(None)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_28|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_27|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_26|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_25|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_24|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_23|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_22|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_21|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_20|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_19|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_18|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|RUNNING|debug|4:51|30:00|nid004518\n61231554_24|RUNNING|debug|0:00|30:00|nid004498\n61223167_14|RUNNING|regular_1|12:29|30:00|nid005815\n61223167_15|RUNNING|regular_1|3:24|30:00|nid005870\n61223167_16|RUNNING|regular_1|1:23|30:00|nid005818\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Only existing pending measured2048 transfer tasks; no scientific change or duplicate writer.",
+  "sources": {
+    "data/v3_1/target_refinement/holdout/correction_28/complete.json": "cf93aee0b15cda8b75aa4360badd027d8f671dd765ffb99c319f467259651ac2",
+    "data/v3_1/target_refinement/holdout/correction_29/complete.json": "d87d9298d2feeb06c0954a0657162327363bc536c17f59776d9bc3eccfaffb6f",
+    "data/v3_1/target_refinement/holdout/correction_30/complete.json": "035a588a9b77192d269034d9c7e45881e036219b3ef5964b776c2f4fec95ec46",
+    "data/v3_1/target_refinement/holdout/correction_31/complete.json": "5ffd469ffb3d9b2245406faa51a92c3c48902d4a1ac6bb89b7caa467be63f3ae",
+    "data/v3_1/target_refinement/holdout/correction_32/complete.json": "4152d48a4c15c46a978260f822aba63a3b2d4b3e742e678eaddbc7eb0238cd9f",
+    "data/v3_1/target_refinement/holdout/correction_33/complete.json": "7a6cdf771115c51f0175cb17f048bcdf92cd9045be52095c1f91367f44f7d4b5",
+    "data/v3_1/execution/transfer_pack_rollout/pack_1.json": "bc99bc206224b61bde44f91ed0a1cae06f85ab257000a1ffa4833570414cdfea",
+    "data/v3_1/heldout_transfer/resource_execution/job_61237364/complete.json": "4a5d2be3ac2f37ad8de2c5383c597572d343b39038c729b1330b9278816047f4"
+  },
+  "queue_after": "61238249_1|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61231554_25|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61223167_17|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61239061|PENDING|regular_1|0:00|1:00:00|(None)\n61239060|PENDING|regular_1|0:00|1:00:00|(None)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_28|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_27|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_26|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_25|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_24|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_23|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_22|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_21|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_20|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_19|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_18|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|RUNNING|debug|4:51|30:00|nid004518\n61231554_24|RUNNING|debug|0:00|30:00|nid004498\n61223167_14|RUNNING|regular_1|12:29|30:00|nid005815\n61223167_15|RUNNING|regular_1|3:24|30:00|nid005870\n61223167_16|RUNNING|regular_1|1:23|30:00|nid005818\n",
+  "complete": true
+}
