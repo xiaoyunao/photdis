@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-14 — preserve broad-state timeout and resume only unfinished counts
+- Broad refinement61225864_5 TIMEOUT30m12: states20/21/22 complete2048;
+  state23 needsregistered8192 duebridge failures at512/2048. Its8192fitcomplete,
+  jointcountstage incomplete. Runningtime extension rejectedbyNERSC permissions.
+- Exactresume61232648 regular2h submitsonly broad23 afterterminal/absence/source
+  checks;8completedfit/count/refinement markerhashes preserved. Retargetedexisting
+  broadensemble61225883 andtransferchild61231554_5; no completedstate rerun.
+  Pendingoriginalpopulationlimits restoredto2h after observedlongrefinement.
+- Collectedbroad16–22,24–27: all2048pass, original512failures retained; local
+  compactinventory27broadstates. Structure-nativegroup1 complete4m51,14stages;
+  initialentrydraw2 complete12m50 with512originalfailures, requiresfixedrefinement.
+- Preparedactual-source heldout renderer: twoEnglishplates/12panels, shared
+  realizedcounts andunit/generalizedpredictivesupport separated; unavailable
+  states stay unavailable. Pythonparse/gitdiffcheck pass; no actualrender claim.
+- Existingpendingstructureentry3/4 andnativegroups2/3 promotedwithin freshdebug
+  cap; scientificdrivers unchanged. Original8-workerrefinement1 remainslive.
+- Remaining: broad23resume/remainingbroad andholdout states, all102transfer
+  outcomes, remainingstructureentries/refinements, fullposterior/report/visualQA.
+
 ## 2026-11-14 — complete exact candidate modes and source-qualified domain maps
 - Full mode report61227828 COMPLETED6m15, all3540/fixed3003 objects reconciled;
   allper-object gatespass, inheritedmainFalse retained. Multimodal2241/2013;

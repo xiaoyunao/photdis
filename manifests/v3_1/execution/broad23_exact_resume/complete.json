@@ -1,0 +1,7 @@
+{
+  "job": "61232648",
+  "outputs": {
+    "submission.json": "c06e9b33b407deab58bf5eaad14c5b528a968374392c18e6207ac8e5b532622a"
+  },
+  "scope": "Only incomplete broad correction23; original immutable512/2048/8192 schedule and saved fits retained. No completed refinement rerun. Original TIMEOUT preserved."
+}

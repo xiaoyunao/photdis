@@ -49,8 +49,12 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad0–15conditionalstatespass2048;
-  original512failures retained. Otherbroad/holdout states/ensembles stillpending.
+  mainwithcut orrelax evidence gate. Broad0–22/24–27 conditional states pass2048;
+  original512failures retained. State23 broad requires8192: fitcomplete but
+  group61225864_5 TIMEOUT30m12 duringjointcounts. Onlystate23 exactresume61232648
+  submittedregular2h; existingbroadensemble61225883 andtransferchild5 retargeted.
+  Eightcompletedmarkerhashes retained. Pendingpopulationlimits restoredto2h.
+  Otherbroad/holdout states/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
@@ -155,6 +159,7 @@ Negative findings remain deliverables, never successful calibration claims.
   original/pooledfailed normalization andnewESS1.023628; no addedresponse search.
 - Complete remaining broad/heldout conditional populations, their all-34-state
   ensembles and frozen sky-transfer comparisons61231554/report61231678.
+  Twoactual-source transferplates prepared; notrendered/accepted.
   Historicalcompleteddependencies repaired with52actualstate hashes; preserve
   initialrejectedreportdependencyjournal. Native/joint/entry matrices,
   all candidate states and fixed-high-q joint counts are already complete.
