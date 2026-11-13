@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate twenty-five refined structure states
+- State16/raw61247657 produced all512 passing refinements, preserving512 original
+  failed contexts.64workers, Python1266.000s/maxchild4168796KiB. Collected actual
+  summary/resource hashes; compact checker passes548checks across25states,
+  25600branchrows/7943originalfailedcontexts/0unresolved. Seven states remain.
+- Promoted existing64-worker child29 todebug30 after fresh global5-job cap,
+  zero-runtime check and complete512-context timing proof. No new submission,
+  cancellation, scientific threshold or model change; receipt retained.
+- Added a current PLAN snapshot to distinguish remaining work from historical
+  scheduler notes. Updated status/requirements and actual linked source hashes.
+  Full32 assembly/posterior/counts/domain/threeplates/final closure stillrequired.
+- Validation: actual compact checker and document links; unchanged scientific
+  sources keep the existing179-test result. Next: collect24/25/27–31, then let
+  the original dependency chain produce the full application.
+
 ## 2026-11-14 — authenticate twenty-four refined states and continue the remaining queue
 - State15/raw61246950 COMPLETED21m24: all512pass/original512failures retained.
   Python1273.713s/maxchild4153140KiB. Actual24-state compactcheck526passes,

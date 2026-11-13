@@ -12,6 +12,24 @@ Current objective: finish the science comparisons, final product-matched
 validation, joint counts, use-domain map and one marginalized structure example.
 Negative findings remain deliverables, never successful calibration claims.
 
+### Current execution snapshot
+
+This snapshot takes precedence over the historical execution notes below.
+- Complete: four-package frozen implementation; mechanism, radial, response,
+  external validation, candidate modes, domain evidence and all102-state transfer
+  reports. Scientific failures remain explicit; no model adoption.
+- Structure refinement:25/32 states (0–23 and26),548 compact checks,
+  7943 original failed contexts retained and0 unresolved in completed states.
+  Seven states remain:24,25,27–31. State16/raw61247657 completed with64 workers,
+  Python1266.000s. Existing child29 promoteddebug30 under the fresh5-job cap.
+- Required sequence: all32 refinements → existing assembly61232760 → posterior
+  61232761 → shared-count report61232762 → domain join61233366. No duplicate jobs.
+- Delivery:19/22 figures accepted;179 actual tests passed. Remaining structure2
+  and domain1 figures require real products, source checks and visual inspection.
+- Closure: finish structure/domain reports, reconcile every Pro requirement,
+  update final narrative/README/AGENTS, run full22-figure and final delivery gates,
+  commit and verify local/GitHub/NERSC synchronization. Goal remains active.
+
 ### Milestones and current evidence
 - Resource execution: all4exactresponse groups61229862 completed; full64state
   report61221949completed6m49; fullresponse scientificresult/2plates accepted
@@ -237,8 +255,8 @@ Negative findings remain deliverables, never successful calibration claims.
   flags retained. Newarray17/raw61247266 COMPLETED21m29/all512pass,512oldflags.
   Newarray18/raw61247267all512pass,397oldflags; Python1052.386s.
   Newarray15/raw61246950 COMPLETED21m24/all512pass,512oldflags; Python1273.713s.
-  Total24/32refinements authenticate526groupedchecks withnewreproducible
-  refinementcompactchecker;7431originalfailedcontexts/0unresolved preserved.
+  Total25/32refinements authenticate548groupedchecks withnewreproducible
+  refinementcompactchecker;7943originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
