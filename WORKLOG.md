@@ -1,5 +1,34 @@
 # WORKLOG
 
+## 2026-11-14 — complete all original structure entry states and measure48-worker refinement
+- Initial29 COMPLETED13m09; all32initialstates nowcollected. Added reproducible
+  scripts/v3_1_structure_entry_compact_check.py:448actualgroupedchecks over32768
+  branchrows/16384state-contextpairs, same512PSFidentities;11052originalfailed
+  contexts retained. Draw28/29 flags344/512. Missing29guard stoppedwithout
+  outputs; missinglocaldraw00table retrievedagainstunchangedmarker, no rerun.
+- 48-workerpilot10/61240361 COMPLETED25m36;512refinedpass/0unresolved,
+  original500flags retained. Python1513.19s,maxchild3.966GiB/batch159.083GiB;
+  12compactsource/identity/resourcechecks pass. Originalscience source unchanged.
+- Basedonmeasuredpilot, onlyunstartedstate9 replacedwithsame48-workerexecutor:
+  12sourcehashes, pendingzero-runtime cancellation/absenceproof; held61242565
+  submitteddebug30 underfresh5-jobcap; assemblydependencyrepaired beforerelease.
+  No repeatedcompletedstate, newmodel/gate/sample orbroaderrollout.
+- Existingrefinement23(3originalflags) promoteddebug30 fromactual12/24flag
+  runtimes; samewriter, source/zero-runtime proof retained. Transferpack2/3live;
+  full102mixture/remainingstructure/domain/fiveplates remain required.
+- Thirdtransferpack61238249_2/raw61241183 COMPLETED18m45:12states verified,
+  85/96numericchecks pass. Candidate20passesall; other11retainbroadentry_level
+  countdelta.603585–.623254>.5. All70states nowpass1401compactchecks,29original
+  numericfailures retained;30broad/30candidate/10holdout. Batch19.830GiB.
+- Refined8 COMPLETE34m58/all512pass, original512flags/10checks retained.
+  Existingregularsparse11/14/19/20/21/22/24/26 limits1h→30min afteractual
+  full512timings/source/pendingproof; noQOS/core/seedchanges. State11nowrunning.
+- Gitstaging exposeddefaultCSV CRLF normalization risk; reportwriter nowuses
+  explicitLF, preventingcross-checkout hashdrift. Parseand448actualchecks rerun
+  afterformat-onlyfix; scientificsource/outputrows unchanged.
+- Validation: parsecheck andactualcomplete32statecompactaudit pass. No new
+  scientificcorechanges; wholepayloadverification remainsallocatedassembly.
+
 ## 2026-11-14 — verify second full refinement and effective six-node concurrency
 - Refined6/61229437 COMPLETED34m21:512originalflags retained,512pass/0unresolved;
   10actualcompactchecks pass. Initial27complete/512originalflags retained.

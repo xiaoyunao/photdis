@@ -1,0 +1,353 @@
+{
+  "commands": [
+    {
+      "args": [
+        "sacct",
+        "-S",
+        "2026-11-12",
+        "-X",
+        "-n",
+        "-P",
+        "-j",
+        "61229436,61229437,61229439",
+        "-o",
+        "JobIDRaw,State,ExitCode,Elapsed"
+      ],
+      "code": 0,
+      "stdout": "61229436|COMPLETED|0:0|00:34:41\n61229437|COMPLETED|0:0|00:34:21\n61229439|COMPLETED|0:0|00:34:58\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_11",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61229442 ArrayJobId=61229422 ArrayTaskId=11 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67681 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=2026-11-13T13:23:24 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:33 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_11.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_11",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_11",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61229442 ArrayJobId=61229422 ArrayTaskId=11 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67683 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=2026-11-13T13:23:24 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:33 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_11.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_14",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232981 ArrayJobId=61229422 ArrayTaskId=14 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_14.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_14",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_14",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232981 ArrayJobId=61229422 ArrayTaskId=14 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_14.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_19",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232988 ArrayJobId=61229422 ArrayTaskId=19 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_19.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_19",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_19",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232988 ArrayJobId=61229422 ArrayTaskId=19 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_19.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_20",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232989 ArrayJobId=61229422 ArrayTaskId=20 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_20.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_20",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_20",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232989 ArrayJobId=61229422 ArrayTaskId=20 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_20.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_21",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232990 ArrayJobId=61229422 ArrayTaskId=21 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_21.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_21",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_21",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232990 ArrayJobId=61229422 ArrayTaskId=21 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_21.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_22",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232992 ArrayJobId=61229422 ArrayTaskId=22 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_22.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_22",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_22",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232992 ArrayJobId=61229422 ArrayTaskId=22 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_22.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_24",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232994 ArrayJobId=61229422 ArrayTaskId=24 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_24.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_24",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_24",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232994 ArrayJobId=61229422 ArrayTaskId=24 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:05:42 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_24.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_26",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232997 ArrayJobId=61229422 ArrayTaskId=26 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Resources Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:07:52 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_26.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61229422_26",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61229422_26",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232997 ArrayJobId=61229422 ArrayTaskId=26 ArrayTaskThrottle=6 JobName=photdis_v3_1_structureentryresume UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T08:11:21 EligibleTime=2026-11-13T13:07:52 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T13:26:38 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login11:493323 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_entry_resume_array.sh SubmitLine=sbatch --parsable --array=2-31%3 --dependency=aftercorr:61223167 scripts/run_v3_1_structure_entry_resume_array.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureentryresume_61229422_26.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    }
+  ],
+  "changed": [
+    {
+      "job": "61229422_11",
+      "original_failures": 134
+    },
+    {
+      "job": "61229422_14",
+      "original_failures": 268
+    },
+    {
+      "job": "61229422_19",
+      "original_failures": 153
+    },
+    {
+      "job": "61229422_20",
+      "original_failures": 233
+    },
+    {
+      "job": "61229422_21",
+      "original_failures": 103
+    },
+    {
+      "job": "61229422_22",
+      "original_failures": 133
+    },
+    {
+      "job": "61229422_24",
+      "original_failures": 297
+    },
+    {
+      "job": "61229422_26",
+      "original_failures": 149
+    }
+  ],
+  "left_running": [],
+  "measured_sources": {
+    "data/v3_1/structure/resource_execution/draw_05/job_61229436.json": "a2bcf62d07acf4d4f59bacde1a01bfc5be545e77f76183c2c6c42efee63691f9",
+    "data/v3_1/structure/resource_execution/draw_06/job_61229437.json": "41139bdbff412b977259b9892afca2178732b2fc8da731cdbbe04aebbed2418b",
+    "data/v3_1/structure/resource_execution/draw_08/job_61229439.json": "078cd5e362119c5dfdd16067aa3797569277d0d2aac1483f10c2b03160fc6c4f"
+  },
+  "scope": "Existing sparse32-worker refinement tasks with<=300failedcontexts only, regular queue time limit1h to30min. Three full512failedcontext states completed34m21to34m58; proportional workload estimate is not guaranteed runtime. Same executor/2^23bound/seeds, no new jobs or QOS changes. Preserve any timeout; no live task shortened.",
+  "original_sources": {
+    "data/v3_1/structure/entry/draw_11/complete.json": "987afe9604e5204d11db074dbbbff38c14b596ecbac163d306e4914c3b248b00",
+    "data/v3_1/structure/entry/draw_14/complete.json": "d24ee8ff01d1b888b4d965473e48e59e9ef4a05c0d854faea5715952b433a9ab",
+    "data/v3_1/structure/entry/draw_19/complete.json": "21b463e0f827f7b267dc560ebe67cfb181b6f4aea1e9c2940cdbdf4b9e30cb35",
+    "data/v3_1/structure/entry/draw_20/complete.json": "118076dc8b7ef3109274280a32a6b37ae260a3a4b4a1b505bb4005230cafa526",
+    "data/v3_1/structure/entry/draw_21/complete.json": "533555651621e226ed00342845c3614bb8487f5e21a48fa869ac1a575d366502",
+    "data/v3_1/structure/entry/draw_22/complete.json": "1e1a2200b771243a6883fdf2da3207d4fca87041bcafbb3218586983d3fc92cb",
+    "data/v3_1/structure/entry/draw_24/complete.json": "bbc786c635b288b0b4b248c01be33092fa6caeeb39c78fc9248e1e2e47a86d92",
+    "data/v3_1/structure/entry/draw_26/complete.json": "a90cb0d422f4b9876775aaaca9183b7196e74f2df90fc5cdb5c3e6a3ed997b04"
+  },
+  "scheduler_change_complete": true
+}

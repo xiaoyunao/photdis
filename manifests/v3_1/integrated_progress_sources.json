@@ -10,12 +10,14 @@
     "docs/v3_1_final_validation_result.md": "8d548188b80d5378ebf26a9cde0a140b1521d9382af27d533598d48ba50a4cfa",
     "docs/v3_1_candidate_modes_result.md": "65830905891d69945cc06966b72846a2dfdcb8b1a4006150a7a786b045c544c0",
     "docs/v3_1_domain_evidence_result.md": "c28af87096982db084eb59c4e39330d648a77ec0e157b26e4b9b4dd5a5a69ad0",
-    "docs/v3_1_requirements_result.md": "83356854500736d0b62933f231cc745979a3453a6b8f5f4a325d666d71532007",
-    "docs/v3_1_status.md": "807144a9072fd293c96b63d0de4a587870bcc162d19758bbfd1561ae7bdb0696",
-    "docs/v3_1_atlas.md": "66b0b3b134cad5b65a75c1ed7c88ea5791f829377a00b3657b9d1fe360961bef"
+    "docs/v3_1_requirements_result.md": "ada11cae8103cede73a7a537610e771c0f21acadadb6ea4b779755bc30e271d5",
+    "docs/v3_1_status.md": "a939b18d409148c332642226ff8b3219cd6f02da51f52c0bf070fe5aef39efef",
+    "docs/v3_1_atlas.md": "66b0b3b134cad5b65a75c1ed7c88ea5791f829377a00b3657b9d1fe360961bef",
+    "manifests/v3_1/structure/initial_entry_inventory.json": "144b8cd352357da980544bf823227903dda0ef915c2377e4a366dc147dd1f0ef",
+    "manifests/v3_1/structure/initial_entry_summary.csv": "836bfded312355b789efb10527dc462178388d419fcb605ca455c35798498b7b"
   },
-  "report_sha256": "d5d87c6d9234032e840c3c615a310d269fa0b1699431ba95c639ee1529b4184f",
-  "local_links_checked": 14,
+  "report_sha256": "59bad8809793e498c8497317fb15376270f6ae7d651dad881464c583fbc51e1a",
+  "local_links_checked": 15,
   "links": [
     {
       "target": "v3_1_requirements_result.md",
@@ -59,6 +61,10 @@
     },
     {
       "target": "v3_1_domain_evidence_result.md",
+      "exists": true
+    },
+    {
+      "target": "../manifests/v3_1/structure/initial_entry_summary.csv",
       "exists": true
     },
     {

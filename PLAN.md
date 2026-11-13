@@ -80,8 +80,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Firstrollout61238249_0(raw61238416) COMPLETED18m31:12executionsverified,
   90/96numericchecks pass;6candidate0–5 broad-entry_level countchanges
   .60561–.66554>.5 retained. Broad28–33pass. Heldout28–31also COMPLETE17m34/32numericchecks pass. Secondpack61238249_1 COMPLETE17m41, candidate6–17eachretainonecountgatefailure;
-  holdout32–33 COMPLETE17m21/16checks pass. Total58/102transferoutcomes,1161
-  reproduciblecompactchecks pass,18originalnumericfailures retained.
+  holdout32–33 COMPLETE17m21/16checks pass. Thirdpack61238249_2 COMPLETE18m45/85of96checks pass, candidate20passes
+  all; other11retainbroadentry_levelcountfailures. Total70/102transferoutcomes,
+  1401reproduciblecompactchecks pass,29originalnumericfailures retained.
   Firstsixcandidate in-sampleunitjointESS1–1.015broad versus848.225–996.181
   candidate;12/24basejointsupportdiagnosticspass, notindependentvalidation.
   Existinginitialentrypilot61239060 promoteddebug30 after101sourcehashes and
@@ -193,6 +194,19 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original
+  numericfailures; candidate20passesall, other11newstates failbroadcountgate.
+  Refined8 complete34m58/all512pass/10checks, original512flags retained.
+  Existingregularsparse11/14/19/20/21/22/24/26 now30min(max297flags), noQOS
+  orintegrandchanges; actualfull512timings34m21–34m58, proportionalestimate
+  notguaranteed. No runningjobshortened. State11nowrunning.
+- All32originalentry statescomplete;448groupedcompactchecks/32768branchrows
+  authenticate11052originalfailedcontexts over16384state-contextpairs, same512
+  PSFidentities. Actualmissing29guard anddraw00missinglocaltablerecovery retained.
+  48-workerpilot10 COMPLETE25m36/all512pass, original500flags/12checks retained;
+  batch159.083GiB. Onlyunstartedstate9 replaced61242565(debug30) after12source
+  hashes/zero-runtimecancel/dependencyrepair; no broaderrollout. Existingref23
+  (3flags) promoteddebug30; allotheroriginalfailure/remainingjobs preserved.
 - Refined6 COMPLETE34m21/all512pass/10compactchecks,original512flags retained;
   initial27complete/512flags. Existing32-workerrefinementarraythrottle now6
   basedonactualfull512state34m41/34m21timings;1hlimits unchanged. Parentupdate
@@ -201,7 +215,7 @@ Negative findings remain deliverables, never successful calibration claims.
 - Refined5 COMPLETE34m41/all512pass,original512flags/10compactchecks retained.
   Initial25/26 flags512/149; two-stateinitialpilot61239060 COMPLETE16m13,
   original30/31 flags512/420,20compactchecks pass,batch49.612GiB. Remaining
-  initial27–29 andrefinements/fullposterior stillrequired; transferpack2running.
+  refinements/fullposterior stillrequired; initial32nowcomplete; transferpack2running.
 - Integrated docs/v3_1_result.md now synthesizes completed workpackages with
   explicitpendingtransfer/structure/domain/fiveplates. Sourcehashes and14local
   links recorded; notfinalacceptance. Replacependingsectionsonlywithactualresults.
@@ -209,11 +223,11 @@ Negative findings remain deliverables, never successful calibration claims.
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes
   3613 and domain evidence 1309 artifact/source checks; response compact 351.
-- Reproducible scripts/v3_1_transfer_compact_check.py validates58states with
-  1161checks, preserves18failures; default102guardrejectspartialinventory.
+- Reproducible scripts/v3_1_transfer_compact_check.py validates70states with
+  1401checks, preserves29failures; default102guardrejectspartialinventory.
   Standalone48-worker exactrefinementadapter prepared (288GiBplanningbound,
   sameoriginalcontextfunction); replacementpilot10/61240361running after
-  zero-runtimecancellation/sourceproof/dependencyrepair; noactualcompletionyet.
+  zero-runtimecancellation/sourceproof/dependencyrepair; nowCOMPLETE25m36/all512pass.
   Resume2/61239061 COMPLETE5m40 andrefined12 COMPLETE2m15:512pass each,
   original512/12failures retained;10compactchecks eachpass. Entry21–24 complete
   with103/133/3/297originalflags. Remainingtransferpacks2–4 promoteddebug30

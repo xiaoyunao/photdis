@@ -1,0 +1,43 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "changed": [
+    {
+      "job": "61229422_11",
+      "original_failures": 134
+    },
+    {
+      "job": "61229422_14",
+      "original_failures": 268
+    },
+    {
+      "job": "61229422_19",
+      "original_failures": 153
+    },
+    {
+      "job": "61229422_20",
+      "original_failures": 233
+    },
+    {
+      "job": "61229422_21",
+      "original_failures": 103
+    },
+    {
+      "job": "61229422_22",
+      "original_failures": 133
+    },
+    {
+      "job": "61229422_24",
+      "original_failures": 297
+    },
+    {
+      "job": "61229422_26",
+      "original_failures": 149
+    }
+  ],
+  "left_running": [],
+  "outputs": {
+    "journal.json": "e4e71e32bc5f0f42bc6d20b0af195cac073599d41b80bf5f3eb3ad5aaaa6107a"
+  },
+  "scope": "Existing sparse32-worker refinement tasks with<=300failedcontexts only, regular queue time limit1h to30min. Three full512failedcontext states completed34m21to34m58; proportional workload estimate is not guaranteed runtime. Same executor/2^23bound/seeds, no new jobs or QOS changes. Preserve any timeout; no live task shortened."
+}

@@ -1,0 +1,68 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/entry_refined/draw_10/complete.json": "706b04845cfc65f57dba6c97307475d69ef88f01513ee7e4550ab709a0cf40f1",
+    "manifests/v3_1/structure/entry_refined/draw_10/summary.csv": "ba674ffbc9ff5b7d02b2a5a0b5efaee689d15b9e6b0b90261bff90a012099b04",
+    "manifests/v3_1/structure/resource_execution/draw_10/job_61240361.json": "c33d3e8fc4c4f9c158726fed8555dcf02f2a2efd53e903258dddd2b5c4fbeacc",
+    "manifests/v3_1/structure/entry/draw_10/complete.json": "2813bc2537575663b7d43850e7e75f38ac483e759e5bd614c03978e1ceff0c7d",
+    "scripts/v3_1_structure_entry_resume48.py": "808d421d630b1bb9e282bff7f04d523ad0a879d4fe629701ac043f7d2f7dd0c9"
+  },
+  "checks": [
+    {
+      "check": "audit_hash",
+      "passed": true
+    },
+    {
+      "check": "same_scientific_inputs",
+      "passed": true
+    },
+    {
+      "check": "original_entry_hash",
+      "passed": true
+    },
+    {
+      "check": "table_hash",
+      "passed": true
+    },
+    {
+      "check": "1024unique_branches",
+      "passed": true
+    },
+    {
+      "check": "native_PSF",
+      "passed": true
+    },
+    {
+      "check": "512identities",
+      "passed": true
+    },
+    {
+      "check": "original500_preserved",
+      "passed": true
+    },
+    {
+      "check": "all512_refined_pass",
+      "passed": true
+    },
+    {
+      "check": "scientific_source_unchanged",
+      "passed": true
+    },
+    {
+      "check": "48worker_executor_source",
+      "passed": true
+    },
+    {
+      "check": "actual48worker_memory_guard",
+      "passed": true
+    }
+  ],
+  "actual_checks": 12,
+  "passed": true,
+  "scope": "Compact1024branch rows over512nativePSF contexts and resource/source hash closure; full context payload audit remains in allocated structure assembly.",
+  "resource_measurement": {
+    "elapsed_seconds": 1513.1923508009932,
+    "singlechild_RSS_KiB": 4158760,
+    "batch_MaxRSS_KiB": 166810212,
+    "accounting": "61240361|COMPLETED|0:0|00:25:36"
+  }
+}
