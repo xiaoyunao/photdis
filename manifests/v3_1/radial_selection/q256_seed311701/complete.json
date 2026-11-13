@@ -1,0 +1,32 @@
+{
+  "inputs": {
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/selection/fit_-1_256/table.npz": "099d0ca5c76846c69f7713acfad0d6bb7ad495fd08de7b4c78b7c6e9ba379650",
+    "docs/v3_1_radial_protocol.md": "323d97f0d7dd27bab8ef7b195e61ed98ba277dd7040b7a3ec7a26e29b62acdab",
+    "scripts/v3_1_radial_selection.py": "e80f5a350dd0bde91051fba52cd5f3fefc45c7d111a1e3ef8a960438437b3082",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3/model.py": "bad0860dd9a0a02baf7d98469ac1a67761610809126168bd88d1354a42b5c01a",
+    "src/photdis/v3_1/radial_selection.py": "93b403066499231a5d1824d285ba9495773b406f69b1461df1f47039549611c1",
+    "draws": 256,
+    "seed": 311701,
+    "mu_bounds": [
+      -25,
+      55
+    ],
+    "mu_step": 0.05,
+    "fixed_sed_tilt": [
+      0.0,
+      0.0
+    ]
+  },
+  "profiles": 267,
+  "job": "61212909",
+  "outputs": {
+    "table.npz": "bc208f938ff915b4986aadc7786539d74f51651bdff4a67ae550631e4b04fc21",
+    "broad_entry_reproduction.csv": "e696c05622bb896cd3da1261b01277a72a619bf7514d1e5a49e97ef3541e86bd"
+  },
+  "max_broad_entry_delta": 0.0006064754582076892,
+  "passed": true,
+  "scope": "Fixed nominal SED, binary, zero within-class tilt. Curves allow arbitrary radial densities. Conditional grz entry only; no sky area/morphology detection correction.",
+  "remaining": "Direct per-object profile interpolation and finer radial-grid checks required in recovery pilot."
+}

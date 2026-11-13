@@ -22,9 +22,12 @@ roundoff-only nominal reproduction. Latent audit61212377 completed50views:
 max any-negative upper0.0003423; insufficient to motivate positivity refitting.
 Registered1542-source diagnostic61212409 completed491s:17386views, no numeric
 failures. Paired report has1089contrasts and all6checks passing.
-Native-cache qualification census61212560 running; paired report61212562 artifact complete (accounting to verify).
+Native census61212560 completed: blanket historical-parent exclusion is empty;
+parent inclusion is not fitted/scored use. Separate true eligibility/role audit
+implemented and pending. Paired61212562 and strata61212908 reports completed.
 Radial protocol and objective/selection foundation registered;5new tests pass.
-Actual radial likelihood/selection preparation and recovery remain pending.
+Radial selection61212909 passed (267profiles,max broad delta.0006065);
+actual native likelihood preparation/recovery and target-prior controls remain.
 Next: finish full diagnostic and native feasibility census, freeze available
 prospective evidence roles, then correction/radial/transfer work packages.
 No automatic million-object products, deployment, timers or subagents.

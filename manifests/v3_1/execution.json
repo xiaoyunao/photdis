@@ -69,7 +69,9 @@
       "purpose": "native PSF/historical-role feasibility census",
       "wrapper": "scripts/run_v3_1_qualify_inventory.sh",
       "qos": "debug",
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 906
     },
     {
       "job_id": "61212562",
@@ -103,7 +105,9 @@
         "--workers",
         "32"
       ],
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 231
     }
   ],
   "local_validation": {
@@ -137,5 +141,11 @@
     "max_mu_quantile_change": 0.004724881874967224,
     "qnear_change": 0.0003750134562249263,
     "max_joint_change": 0.00044147455572229877
+  },
+  "radial_selection_actual": {
+    "profiles": 267,
+    "max_broad_entry_delta": 0.0006064754582076892,
+    "passed": true,
+    "remaining": "direct object interpolation and finer radial quadrature/recovery"
   }
 }

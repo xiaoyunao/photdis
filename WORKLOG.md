@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — resolve inventory interpretation and accept radial entry foundation
+- Native census61212560 COMPLETED906s exit0:0:3564628positive exact source
+  matches,148017nonPSF, zero missingTYPE. Every matched ID already occurs in
+  historical assembled parent, so the initial blanket historical-ID exclusion
+  gives zero. Parent inventory inclusion is NOT proof of fitted/scored use.
+- Added separate v3_1_reference_roles.py/wrapper to place actual nativePSF/
+  photometric/identity eligibility before exclusions, then distinguish v3parent
+  roles and v2.3fit identities. Syntax passes; actual role audit pending.
+- Radial selection61212909 COMPLETED231s exit0:0:267profiles, independent
+  Sobol256/seed311701; maximum broad-entry difference0.00060648<0.003.
+  This accepts the selection foundation, not radial recovery or calibration.
+- Local NERSC availability confirmed for DR17allStar, astroNN and APOGEEGC
+  member/parameter catalogs; untouched identities/fields and teacher ancestry
+  still need allocated inspection/nativePSF verification. DR19 listing empty.
+- Next: role audit and mode summary, then real reference-role freeze, full
+  target-prior contrasts and radial recovery. No correction or final test opened.
+
 ## 2026-11-13 — complete stratified mechanism evidence
 - Full paired report61212562 COMPLETED33s; stratified report61212908
   COMPLETED47s, both exit0:0. Six numeric/fidelity gates pass; full-cohort

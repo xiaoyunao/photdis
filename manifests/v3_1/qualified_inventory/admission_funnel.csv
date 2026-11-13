@@ -1,0 +1,9 @@
+stage,native_rows,identities,sky_cells,nonPSF,missing_TYPE,class_labels,evolved,signed_gaia
+native_source_matches,3564628,3564628,178,148017,0,2596745,57310,3135221
+unique_identity,3564628,3564628,178,148017,0,2596745,57310,3135221
+outside_historical_identity,0,0,0,0,0,0,0,0
+outside_historical_identity_and_sky,0,0,0,0,0,0,0,0
+outside_history_without_conflict,0,0,0,0,0,0,0,0
+native_PSF,0,0,0,0,0,0,0,0
+native_PSF_photometric_domain,0,0,0,0,0,0,0,0
+native_PSF_bright_error_domain,0,0,0,0,0,0,0,0
