@@ -8,14 +8,14 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | A1 | Complete latest review and related project chat recovery | Complete | Latest full message archived; photdis_v1, original planning and three related Pro chats inspected |
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
 | B1 | Same-star class and FeH conditional diagnostics | Full diagnostic computed; interpretation in progress | 304evolved class-oracle contrasts across8sky blocks; source/stratum tables retained; no production labels |
-| B2 | Fixed response/prior/band/error contrasts | Band/error contrasts complete; target-prior pending | 1542stars/17386views,1089paired contrasts; response12/target marginalization still required |
+| B2 | Fixed response/prior/band/error contrasts | Band/error contrasts complete; target-prior pending | 1542stars/17386views,1089paired contrasts; shared-target driver+2math tests complete, actual pilot pending |
 | B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Latent pilot complete; broader audit pending | 50views, max any-negative upper0.0003423; kernel-prior proxy kept distinct; no global claim |
 | B4 | Binary/class/component mode attribution | Full diagnostic computed; interpretation in progress | Full per-mode parent support retained remotely; weighted compact summary complete, physical attribution limits retained |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |
-| C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Registered; foundation tested | v3_1_radial_protocol.md;19parameter local model,5tests; actual recovery pending |
+| C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Registered; foundation tested | v3_1_radial_protocol.md;19parameter local model;176catalogs/22528rows prepared; first broad recovery numericalflag retained, pilot acceptance pending |
 | C2 | 26k/qualified-bright/held-out-field transfer | Pending | Matching selection normalization required |
 | C3 | Independent response set and evidence concentration diagnosis | Pending | No artificial flattening; continuous-systematic amendment if supported |
-| D1 | Available-reference/historical-use inventory and frozen new test blocks | Initial inventory complete; role freeze pending | Native/role audits complete:612114eligible equals v3parent; available APOGEE sources need native qualification/role freeze |
+| D1 | Available-reference/historical-use inventory and frozen new test blocks | Initial inventory complete; role freeze pending | Native/role audits complete:612114eligible equals v3parent; corrected APOGEE census190431acquisition IDs; native qualification/role freeze pending; erroneouszero census preserved |
 | D2 | Independent near/class/poor-metal/common-scale/far evidence | Pending | Empty domains explicitly unvalidated |
 | D3 | Once-opened final scores and correlated uncertainty | Pending | Signed Gaia and source ancestry retained |
 | E1 | Final product identity matches main evaluation | Pending | Model/calibration/prior/selection/shared hashes |

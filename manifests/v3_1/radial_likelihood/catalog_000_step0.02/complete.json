@@ -1,0 +1,48 @@
+{
+  "inputs": {
+    "data/v3_1/radial_catalogs/photometry.npz": "4adbc7ada058c6ae6c23e22e410d6fcad76ab71705fdacbef2b03a9bead227c5",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_1/radial_selection/q256_seed311701/table.npz": "bc208f938ff915b4986aadc7786539d74f51651bdff4a67ae550631e4b04fc21",
+    "docs/v3_1_radial_protocol.md": "873ec98175bfacafbf0fc8c206985fbb1f735c211e9b8a86c41937273bb32e0d",
+    "scripts/v3_1_radial_likelihood.py": "2805690df3ee052eb0e59c715ae7e7e76aac859389428e3153a68350f31fc38f",
+    "src/photdis/v3/fast.py": "88ed1fb121c83c321c77e856c32216831c67ddc5024c450a8dc2f3a67a6ce199",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "src/photdis/v3_1/radial_selection.py": "93b403066499231a5d1824d285ba9495773b406f69b1461df1f47039549611c1",
+    "catalog": 0,
+    "step": 0.02,
+    "audit_selection": true
+  },
+  "outputs": {
+    "curves.npz": "034d525dd1b1c0e404085f0ee8803651bfa0af392d4caa8c1ef5f40a1b8572d4"
+  },
+  "job": "61213793",
+  "n": 128,
+  "grid": 3001,
+  "all_PSF": true,
+  "all_profiles_inside": true,
+  "direct_selection_audit": [
+    {
+      "row": 0,
+      "max_absolute_delta": 0.0006664037548419488
+    },
+    {
+      "row": 31,
+      "max_absolute_delta": 0.0006660772100495205
+    },
+    {
+      "row": 63,
+      "max_absolute_delta": 0.00057672493707428
+    },
+    {
+      "row": 95,
+      "max_absolute_delta": 0.0007367694268127778
+    },
+    {
+      "row": 127,
+      "max_absolute_delta": 0.0023900607350957337
+    }
+  ],
+  "direct_selection_audit_performed": true,
+  "selection_passed": true,
+  "scope": "Fixed nominal SED/binary/zero within-class tilt; no truth values or new real validation outcomes read. Native class-conditional log likelihood retains all kernels."
+}

@@ -33,9 +33,12 @@ native likelihood preparation/recovery drivers implemented,89 tests pass.
 External inventory61213407 failed exact-name alignment on1row; preserve failure
 and excluded mismatched astroNN pairing on retry. Retry61213756 is invalid due
 to NaN coordinates poisoning full latitude array; preserved. Finite-only rotation
-fix passes2regression tests; recompute into distinct directory. Native qualification
+fix passes2regression tests; corrected61213891 yields190431acquisition IDs
+(98674also newsky), allnativeunverified. Native qualification
 and coarse/fine shared-draw audit drivers implemented, execution pending.
-Target-prior controls remain.
+Shared-target-prior control implemented with2math tests; actual pilot pending.
+Full local93tests pass with one BLAS/OpenMP thread; initial native segfault retained.
+Pilot0 broad recovery completed but numericalfailed; inspect exactflag before scaling.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
 Implement matched shared-target-prior contrasts and radial recovery on all

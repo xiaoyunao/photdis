@@ -151,16 +151,16 @@
     {
       "job_id": "61213793",
       "purpose": "radial native pilot catalog0",
-      "last_observed_state": "PENDING",
-      "exit_code": null,
-      "elapsed_seconds": 0
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 50
     },
     {
       "job_id": "61213794",
       "purpose": "radial native pilot catalog48",
-      "last_observed_state": "PENDING",
-      "exit_code": null,
-      "elapsed_seconds": 0
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 46
     },
     {
       "job_id": "61213795",
@@ -168,12 +168,48 @@
       "last_observed_state": "PENDING",
       "exit_code": null,
       "elapsed_seconds": 0
+    },
+    {
+      "job_id": "61213891",
+      "purpose": "finite-only sky external inventory",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 127
+    },
+    {
+      "job_id": "61213892",
+      "purpose": "catalog0 broad radial recovery; numericalflag retained",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 38
+    },
+    {
+      "job_id": "61213893",
+      "purpose": "catalog0 local radial recovery",
+      "last_observed_state": "PENDING",
+      "exit_code": null,
+      "elapsed_seconds": 0
+    },
+    {
+      "job_id": "61213894",
+      "purpose": "catalog0 finer native likelihood",
+      "last_observed_state": "PENDING",
+      "exit_code": null,
+      "elapsed_seconds": 0
+    },
+    {
+      "job_id": "61214053",
+      "purpose": "exact G3/native DR11 PSF external qualification",
+      "last_observed_state": "SUBMITTED",
+      "wrapper": "scripts/run_v3_1_external_native.sh",
+      "qos": "regular"
     }
   ],
   "local_validation": {
-    "command": "env PYTHONPATH=src:tests:scripts python3 -m pytest -q tests/test_v3*.py",
-    "passed": 89,
-    "seconds": 3.8
+    "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
+    "passed": 93,
+    "seconds": 2.65,
+    "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,
   "pilot_actual_checks": {
@@ -212,5 +248,14 @@
     "coordinate_regression_tests": 2,
     "passed": true
   },
-  "invalid_external_inventory": "61213756 outputs retained; invalid coordinates poisoned the full latitude array. Corrected finite-only source inventory uses a new directory."
+  "invalid_external_inventory": "61213756 outputs retained; invalid coordinates poisoned the full latitude array. Corrected finite-only source inventory uses a new directory.",
+  "radial_pilot0_initial": {
+    "sampler_passed": true,
+    "max_rhat": 1.0017165633487908,
+    "minimum_ess": 1572.826413086783,
+    "divergent": 0,
+    "marginal_half_delta": 0.008416536589938906,
+    "passed": false,
+    "next": "Numerical-only2048 retained draws per chain; original512 retained"
+  }
 }

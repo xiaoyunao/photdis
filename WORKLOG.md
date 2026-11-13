@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — recover actual external availability and implement shared-prior control
+- Corrected finite-sky inventory61213891 COMPLETED127s:one invalidcoordinate;
+  190431new-ID/outside-field acquisition candidates,98674also outsidev3sky.
+  All remain nativeTYPE-unverified; zero scientific admissions. Small records
+  hashverified; prior erroneouszero inventory retained and explicitly invalidated.
+- Native radial likelihood pilots61213793/94 COMPLETED50s/46s. Five direct
+  entry checks each pass:maximum0.00239006/0.00082461<.003. Catalog112 running.
+  Catalog0 broad61213892 COMPLETED38s but numerical acceptancefalse; investigate
+  before scaling, retain original. Rhat1.00172/ESS1572.8/zero divergences pass,
+  but half-delta0.0084165>.005. Numerical-only2048draw extension is warranted.
+  Local/fine-sidecar jobs61213893/94 and native qualification61214053 submitted.
+- Added matched response12 shared-target-prior protocol and pilot/full driver.
+  All16384shared draws retain individual evidence normalization; geometry assigns
+  actual old fields, disjoint new-cell IDs and shared hypermean variation. Full
+  native tails/mode attribution/coarse-fine products retained. Two math tests pass
+  against explicit average of normalized posteriors and geographic ownership.
+- Local full suite initially segfaulted in unchangedNumPy selection broadcast;
+  targeted6tests then full93tests pass2.65s with BLAS/OpenMP threads1. Root cause
+  of native crash not proven; record both runs, do not label initial run successful.
+  New scientific scripts syntaxpass. Next: nativequalification, sharedpriorpilot,
+  radial numerical diagnosis/fine audit and prospective-role freeze.
+
 ## 2026-11-13 — recover coordinate-poisoning failure and freeze native audit
 - Radial preparation61213752 COMPLETED17s:176catalogs/22528rows, original112
   identities/arrays preserved. Pilots0/48/112 submitted61213793/94/95; catalog0

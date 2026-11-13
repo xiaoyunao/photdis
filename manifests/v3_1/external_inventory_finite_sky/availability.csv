@@ -1,0 +1,6 @@
+stage,n,cells,apogee_fields,dwarfs,giants,poor_giants,spectroscopic_distance,distance_relative_error_lt20percent,native_TYPE_unverified,admitted_science
+unique_inventory,656962,527,2201,135481,318996,6327,607710,451358,656962,0
+qualified_highlat,225786,258,1132,94087,65951,2792,219554,172201,225786,0
+qualified_new_identity,225634,258,1132,93968,65933,2788,219404,172166,225634,0
+qualified_new_identity_outside_fields,190431,244,1036,77645,57433,2236,184944,144657,190431,0
+qualified_new_identity_sky_fields,98674,152,560,36569,35307,1209,95008,71499,98674,0
