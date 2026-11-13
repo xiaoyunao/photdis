@@ -142,6 +142,9 @@ Negative findings remain deliverables, never successful calibration claims.
   scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
   cohort score-convergence failures and all inherited ensemble flags. Domain
   evidence 61226776 additionally waits for the complete 64-response report.
+- Pending short response stages have a prepared sequential resource wrapper and
+  fail-closed metadata-only submission preflight; run dryrun after sync, preserve
+  any live stages and complete marker hashes, then retarget the original all64report.
 - All 32 independent SED refits are complete (last exact resume 61227619_7).
   Finish registered old/new response probes and refinements. Require all 64 inventories
   before normalization; no dropped response or flattened evidence weight.

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — prepare exact sequential batches for pending response stages
+- Observed original response probes complete in51–76s and refinements10–22s;
+  many stages remain separately queued. Added metadata-only submission preflight
+  and sequential max8-index resource wrapper (one unchanged32/16-worker stage
+  at a time,30min/node,max2nodes), preserving every existing complete marker hash.
+- Submission requires same clean sourcecommit,64convergedmodel markers, exact
+  original driver hashes, pending-only cancellation, authoritative cancelled/
+  zero-runtime/no-allocation receipts and no remaining writer before replacement.
+  Any live index stays on its original jobs; original full64report dependency is
+  retargeted only after successful replacement submission. No science changes.
+- Python parse/shellsyntax/gitdiff checks pass. Actual remote dryrun/submission
+  still pending clean three-end sync; do not call this executioncomplete.
+
 ## 2026-11-14 — retain half of exact candidate modes and first complete radial shard
 - Mode child3 COMPLETED16m04,443objects/387fixedhighq; all4completedshards
   total1772objects/1501fixedhighq, allmode numerics pass; inheritedmainflag retained.
