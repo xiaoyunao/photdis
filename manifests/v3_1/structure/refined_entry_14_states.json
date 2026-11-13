@@ -1,0 +1,1319 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/entry_refined/draw_00/complete.json": "d6b17be91d46026d8e5627f9ae585db959375260af344698293636df98e5aed2",
+    "manifests/v3_1/structure/entry/draw_00/complete.json": "8132324337a551cb96ca90d86a366941e8401917b9a346063fcd5d4d2c515ad6",
+    "manifests/v3_1/structure/entry_refined/draw_00/summary.csv": "00055110862db0f6396c70e8a5050bd26dc70ff2f3ff4e10d04702b9a7cd16f1",
+    "manifests/v3_1/structure/entry/draw_00/checks.csv": "936997a8f2d5f28171ae3a99945346d68c0e5536b338b629aaaacb1ec7f1399f",
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "docs/v3_1_structure_entry_refinement_protocol.md": "6a7b106816f954851cc322aec9b84b26c77168dd04e5ef66a6130545151d882d",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4",
+    "manifests/v3_1/structure/resource_execution/draw_00/job_61228245.json": "a65e9f6660b4ae57fb09e89d81b7f96fea161888301182879571968b4ad8267d",
+    "scripts/v3_1_structure_entry_resume.py": "745ac9cbdafba0afc4d7db01848bb596a815f255bf15afe50e531600210618f5",
+    "manifests/v3_1/structure/entry_refined/draw_01/complete.json": "fda3dc4772589bdf6449165497b484cb54109509126cecac0d7fcc6ce9cfc870",
+    "manifests/v3_1/structure/entry/draw_01/complete.json": "2effbc5675eb72fef2b79aec6df78f8ee06011e4f1570dcd08236d5924fb80e1",
+    "manifests/v3_1/structure/entry_refined/draw_01/summary.csv": "e22311935a1d9358f2b08bc72a3fb54d4d9074c33bb9f685cdb37d6401f001a1",
+    "manifests/v3_1/structure/entry/draw_01/checks.csv": "cc40083ded113e06cf0c6749a3ecbdc5c12195591ebb0782c9aaf26357319c3d",
+    "manifests/v3_1/structure/entry_refined/draw_02/complete.json": "204059e8ac8c376ddd581d3e478b97711a3593f138dfe4ba3b6dbc121b445d70",
+    "manifests/v3_1/structure/entry/draw_02/complete.json": "f26aa308264cd68f64485a616f2811975598ac5515e959f0fff7fcb4fa6d7a05",
+    "manifests/v3_1/structure/entry_refined/draw_02/summary.csv": "d420fa60d2e105588c5958f38e079ea85344ed7153d77d2959b5316871584990",
+    "manifests/v3_1/structure/entry/draw_02/checks.csv": "daa66e010556610660b92eb92b8c43ebdcfffbcbf0cbd9c53f19e2735d394ee0",
+    "manifests/v3_1/structure/resource_execution/draw_02/job_61239061.json": "3ffc65adf6bb7939e32af5dcdce48311a15ac41f66012112befac3e7e4d40a8b",
+    "manifests/v3_1/structure/entry_refined/draw_03/complete.json": "a0ad7969c197b98509c38001874d96768e351ac3836a6dd228b612be6d6d2ea9",
+    "manifests/v3_1/structure/entry/draw_03/complete.json": "2f839003656a8df27cbbb950f3a810b386fb297788069bb72e96057e36b95e06",
+    "manifests/v3_1/structure/entry_refined/draw_03/summary.csv": "bb19030d55c66ec582ae6d9481fc031a8400259083519b2e6f5bb00717ed6407",
+    "manifests/v3_1/structure/entry/draw_03/checks.csv": "eabf36d27d60abbf0f2b0335592494298e352769e0e9560a7cdd12bc3c7d6a31",
+    "manifests/v3_1/structure/resource_execution/draw_03/job_61229434.json": "f9de2e352f15e64aefe238690768d071b8c0ebdb33073c39345743d9fb2b2a45",
+    "manifests/v3_1/structure/entry_refined/draw_04/complete.json": "c22a2f595e72738461fbb60941ee04927f20c31cd0e82cd1d2c29f8e0a2a75a7",
+    "manifests/v3_1/structure/entry/draw_04/complete.json": "5aa7e25b875a9a038ca489ae910ef6efbd71404dc34521400d49c47c463525da",
+    "manifests/v3_1/structure/entry_refined/draw_04/summary.csv": "5283c26f901ab7f3b5cf4cb169dcdab55dc61574a85385ac676f1adea2d3ea9d",
+    "manifests/v3_1/structure/entry/draw_04/checks.csv": "45a0dde6bc46302b2a8cdbeeba43c195f1742fa73bd0dd0cb1244300ce76136b",
+    "manifests/v3_1/structure/resource_execution/draw_04/job_61229435.json": "61da75ecc45a683f843d9397a7a06b5d318ead05d43fa6e4a1ecb5d1a052ab09",
+    "manifests/v3_1/structure/entry_refined/draw_05/complete.json": "329abc8949de8d03471e5555e813b307630ca7d04e1b85010e4c71476be43262",
+    "manifests/v3_1/structure/entry/draw_05/complete.json": "54e58a6dc28ceb42ecf592069fc665103fc943ba565cd644a2c27498145e3d5f",
+    "manifests/v3_1/structure/entry_refined/draw_05/summary.csv": "0a80f6b639a3b027057e853d2710b96645026aa7901ed90bf7c30fda9d0f5831",
+    "manifests/v3_1/structure/entry/draw_05/checks.csv": "667fd3df01b65b82bdfbef692f1092331baf8d6893831586ec986778ac64565d",
+    "manifests/v3_1/structure/resource_execution/draw_05/job_61229436.json": "a2bcf62d07acf4d4f59bacde1a01bfc5be545e77f76183c2c6c42efee63691f9",
+    "manifests/v3_1/structure/entry_refined/draw_06/complete.json": "18a96032be2a09afc46ee852169b32b307864e4f39965443bb3b535b2e45d1b0",
+    "manifests/v3_1/structure/entry/draw_06/complete.json": "b55b76e7c84b9a1a46e34f160afb05899ce2a1030adb47b2401eb7b92a426a95",
+    "manifests/v3_1/structure/entry_refined/draw_06/summary.csv": "c859a1380fe0ab45cb6b9c7e367993388785a47d434dd712b30d1688e604db0a",
+    "manifests/v3_1/structure/entry/draw_06/checks.csv": "0b2b79c0229e4d4cea5420da3255866da112be29d0085bc746bbbdb496ad9d7c",
+    "manifests/v3_1/structure/resource_execution/draw_06/job_61229437.json": "41139bdbff412b977259b9892afca2178732b2fc8da731cdbbe04aebbed2418b",
+    "manifests/v3_1/structure/entry_refined/draw_07/complete.json": "0be3c07982d26b00d59f025a51385c6ba92af99d7cbbd8afd353e4ed30b539af",
+    "manifests/v3_1/structure/entry/draw_07/complete.json": "df4883a5967295285e03e1359171201b119898f469d1f2f5eb07b5802344444e",
+    "manifests/v3_1/structure/entry_refined/draw_07/summary.csv": "d38bdbf19941163c600141224dd7da8783f0d099085aa5ded72585f1977248be",
+    "manifests/v3_1/structure/entry/draw_07/checks.csv": "db87fa9cb11d2d7f455d4029d5a105a8d33676529bf97fb534335ac7fa157968",
+    "manifests/v3_1/structure/resource_execution/draw_07/job_61229438.json": "bb3bcb24839c625abe18c757cff2d839aa9da0d995503f60a7343e0c38dd554d",
+    "manifests/v3_1/structure/entry_refined/draw_08/complete.json": "25d462e2fdc031d584462274dd4b78bc1f5b248e6c9fe8373aa915b1c3f34475",
+    "manifests/v3_1/structure/entry/draw_08/complete.json": "cd1aada9e86ba72c285d6b3887ca7cdcfcd1c48ae146c503d165f52ca2e7cdce",
+    "manifests/v3_1/structure/entry_refined/draw_08/summary.csv": "2f3facad4abbf8fa1c3ebb2ae23c3fc4a35686e1a1e1a82d16819eca4cadbb3a",
+    "manifests/v3_1/structure/entry/draw_08/checks.csv": "89e00ca25ef0c87cbf0ffc8cd02c657c0540f2a2b6dfb14b2675f5532232cbc7",
+    "manifests/v3_1/structure/resource_execution/draw_08/job_61229439.json": "078cd5e362119c5dfdd16067aa3797569277d0d2aac1483f10c2b03160fc6c4f",
+    "manifests/v3_1/structure/entry_refined/draw_10/complete.json": "706b04845cfc65f57dba6c97307475d69ef88f01513ee7e4550ab709a0cf40f1",
+    "manifests/v3_1/structure/entry/draw_10/complete.json": "2813bc2537575663b7d43850e7e75f38ac483e759e5bd614c03978e1ceff0c7d",
+    "manifests/v3_1/structure/entry_refined/draw_10/summary.csv": "ba674ffbc9ff5b7d02b2a5a0b5efaee689d15b9e6b0b90261bff90a012099b04",
+    "manifests/v3_1/structure/entry/draw_10/checks.csv": "4f4441a6533298e4c161160fdb0291d9e1b6a51a7d470f8ca488b2309fc84463",
+    "manifests/v3_1/structure/resource_execution/draw_10/job_61240361.json": "c33d3e8fc4c4f9c158726fed8555dcf02f2a2efd53e903258dddd2b5c4fbeacc",
+    "scripts/v3_1_structure_entry_resume48.py": "808d421d630b1bb9e282bff7f04d523ad0a879d4fe629701ac043f7d2f7dd0c9",
+    "manifests/v3_1/structure/entry_refined/draw_11/complete.json": "8e3a1a9fd84bd5b5fae75fe45e1f4ebdd0d68064bfc3948574fa8a4a77a461c4",
+    "manifests/v3_1/structure/entry/draw_11/complete.json": "987afe9604e5204d11db074dbbbff38c14b596ecbac163d306e4914c3b248b00",
+    "manifests/v3_1/structure/entry_refined/draw_11/summary.csv": "876372bd9332889417fc543b7a870097bf74b0901f6f9afbf6ee669f957fe584",
+    "manifests/v3_1/structure/entry/draw_11/checks.csv": "ae8fea006d5ac3422beedd9f400e66a757326f78591b6a3c4fd83585bf3897da",
+    "manifests/v3_1/structure/resource_execution/draw_11/job_61229442.json": "699a47de8880df9b5355055b0cd51814d1046059c3e62528ccc20bb8e0b3dd34",
+    "manifests/v3_1/structure/entry_refined/draw_12/complete.json": "7f89e55c567417766a4e79c7fce0cf0d49e3f5ff8c509ba313157da3350fb795",
+    "manifests/v3_1/structure/entry/draw_12/complete.json": "a468659c5127cd56732da68da097a9529c5b9e8711187f8197978fe12b492153",
+    "manifests/v3_1/structure/entry_refined/draw_12/summary.csv": "8cec24fd377803065c51c0e22844769fc16be7f1057fca2487094350810f140f",
+    "manifests/v3_1/structure/entry/draw_12/checks.csv": "ce27ac11f25d4acc2cfe91904d6aed30fb5d621d2d3d111aaae402bab8f61219",
+    "manifests/v3_1/structure/resource_execution/draw_12/job_61232978.json": "44c8e75013092846e7dbbb5df0232137ec957e68937020e8cfa49ebc908667df",
+    "manifests/v3_1/structure/entry_refined/draw_21/complete.json": "a27b24cb646aaea832fd2de603c9430074f1b043af898b02f4411f01c19301fc",
+    "manifests/v3_1/structure/entry/draw_21/complete.json": "533555651621e226ed00342845c3614bb8487f5e21a48fa869ac1a575d366502",
+    "manifests/v3_1/structure/entry_refined/draw_21/summary.csv": "9b2f2ecafd4e9d84433d7b554b5fe7e9795e0a54f0c2205d1692ad4d081f947d",
+    "manifests/v3_1/structure/entry/draw_21/checks.csv": "f3c1325126156eb44a36cd9bfdb33a0f3fd2d1b51db4f272dccc6c687dd15cfb",
+    "manifests/v3_1/structure/resource_execution/draw_21/job_61232990.json": "28da28bd8cf85ad11a13c37560ed24a53f2fa35a08c895f4b877c3c99bb6756f",
+    "manifests/v3_1/structure/entry_refined/draw_23/complete.json": "63b29b573f86fb64d336d843cc6e22e7aa832271783011b33adbcb151599108f",
+    "manifests/v3_1/structure/entry/draw_23/complete.json": "f5339a9ca3d06e4f1697e4d4e065df62c10c0cd51a5d0b4a969512db51117ddf",
+    "manifests/v3_1/structure/entry_refined/draw_23/summary.csv": "9ba438b4446b6dc9a74b6d5ff39bc739dac3836fc8165888e5ec75d0068dee62",
+    "manifests/v3_1/structure/entry/draw_23/checks.csv": "541d4caa254984be7b4baf1b3daca19179f5c7516e98e85ac03f0a85a1d685ef",
+    "manifests/v3_1/structure/resource_execution/draw_23/job_61232993.json": "1a7b436203d36bdec000cc9c5bafa16f2d5d272d9101772f6cd29ae3fbcf2271",
+    "scripts/v3_1_structure_refinement_compact_check.py": "d15f0816bce6430e500c91362928294139bf9ed7e65486d6a1fc72c232838329"
+  },
+  "outputs": {
+    "refined_entry_14_states.csv": "ed8ddd29a4d7e9e980f01a0527d2489e2c5e2610c352c82978e4d880ec40f46a"
+  },
+  "states": 14,
+  "all32_present": false,
+  "checked_branch_rows": 14336,
+  "original_failed_contexts": 4050,
+  "unresolved_contexts": 0,
+  "actual_checks": 306,
+  "checks": [
+    {
+      "check": "draw_00:state",
+      "passed": true
+    },
+    {
+      "check": "draw_00:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_00:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_00:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_00:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_00:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_00:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_00:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_00:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_00:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_00:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_00:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_00:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_00:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_00:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_00:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_00:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_00:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_00:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_00:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_00:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_00:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_01:state",
+      "passed": true
+    },
+    {
+      "check": "draw_01:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_01:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_01:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_01:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_01:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_01:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_01:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_01:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_01:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_01:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_01:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_01:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_01:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_01:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_01:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_01:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_01:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_01:original_eight_worker_execution",
+      "passed": true
+    },
+    {
+      "check": "draw_02:state",
+      "passed": true
+    },
+    {
+      "check": "draw_02:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_02:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_02:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_02:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_02:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_02:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_02:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_02:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_02:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_02:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_02:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_02:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_02:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_02:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_02:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_02:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_02:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_02:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_02:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_02:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_02:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_03:state",
+      "passed": true
+    },
+    {
+      "check": "draw_03:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_03:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_03:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_03:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_03:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_03:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_03:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_03:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_03:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_03:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_03:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_03:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_03:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_03:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_03:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_03:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_03:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_03:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_03:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_03:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_03:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_04:state",
+      "passed": true
+    },
+    {
+      "check": "draw_04:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_04:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_04:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_04:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_04:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_04:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_04:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_04:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_04:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_04:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_04:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_04:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_04:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_04:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_04:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_04:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_04:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_04:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_04:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_04:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_04:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_05:state",
+      "passed": true
+    },
+    {
+      "check": "draw_05:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_05:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_05:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_05:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_05:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_05:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_05:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_05:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_05:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_05:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_05:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_05:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_05:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_05:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_05:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_05:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_05:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_05:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_05:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_05:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_05:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_06:state",
+      "passed": true
+    },
+    {
+      "check": "draw_06:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_06:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_06:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_06:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_06:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_06:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_06:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_06:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_06:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_06:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_06:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_06:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_06:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_06:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_06:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_06:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_06:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_06:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_06:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_06:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_06:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_07:state",
+      "passed": true
+    },
+    {
+      "check": "draw_07:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_07:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_07:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_07:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_07:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_07:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_07:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_07:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_07:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_07:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_07:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_07:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_07:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_07:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_07:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_07:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_07:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_07:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_07:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_07:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_07:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_08:state",
+      "passed": true
+    },
+    {
+      "check": "draw_08:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_08:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_08:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_08:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_08:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_08:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_08:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_08:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_08:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_08:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_08:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_08:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_08:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_08:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_08:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_08:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_08:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_08:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_08:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_08:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_08:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_10:state",
+      "passed": true
+    },
+    {
+      "check": "draw_10:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_10:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_10:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_10:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_10:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_10:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_10:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_10:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_10:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_10:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_10:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_10:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_10:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_10:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_10:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_10:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_10:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_10:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_10:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_10:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_10:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_11:state",
+      "passed": true
+    },
+    {
+      "check": "draw_11:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_11:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_11:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_11:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_11:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_11:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_11:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_11:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_11:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_11:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_11:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_11:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_11:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_11:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_11:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_11:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_11:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_11:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_11:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_11:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_11:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_12:state",
+      "passed": true
+    },
+    {
+      "check": "draw_12:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_12:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_12:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_12:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_12:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_12:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_12:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_12:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_12:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_12:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_12:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_12:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_12:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_12:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_12:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_12:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_12:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_12:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_12:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_12:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_12:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_21:state",
+      "passed": true
+    },
+    {
+      "check": "draw_21:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_21:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_21:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_21:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_21:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_21:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_21:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_21:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_21:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_21:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_21:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_21:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_21:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_21:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_21:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_21:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_21:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_21:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_21:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_21:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_21:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "draw_23:state",
+      "passed": true
+    },
+    {
+      "check": "draw_23:table_hashes",
+      "passed": true
+    },
+    {
+      "check": "draw_23:original_marker",
+      "passed": true
+    },
+    {
+      "check": "draw_23:unchanged_data_and_model",
+      "passed": true
+    },
+    {
+      "check": "draw_23:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "draw_23:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "draw_23:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "draw_23:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "draw_23:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "draw_23:native_PSF",
+      "passed": true
+    },
+    {
+      "check": "draw_23:all_branches",
+      "passed": true
+    },
+    {
+      "check": "draw_23:same512identities",
+      "passed": true
+    },
+    {
+      "check": "draw_23:complete_contexts",
+      "passed": true
+    },
+    {
+      "check": "draw_23:original_flags_preserved",
+      "passed": true
+    },
+    {
+      "check": "draw_23:passing_branches_unchanged",
+      "passed": true
+    },
+    {
+      "check": "draw_23:bounded_original_gates",
+      "passed": true
+    },
+    {
+      "check": "draw_23:original_failure_count",
+      "passed": true
+    },
+    {
+      "check": "draw_23:refined_outcome",
+      "passed": true
+    },
+    {
+      "check": "draw_23:execution_hash",
+      "passed": true
+    },
+    {
+      "check": "draw_23:execution_identity",
+      "passed": true
+    },
+    {
+      "check": "draw_23:execution_source",
+      "passed": true
+    },
+    {
+      "check": "draw_23:memory_guard",
+      "passed": true
+    },
+    {
+      "check": "unique_state_inventory",
+      "passed": true
+    }
+  ],
+  "compact_consistency_passed": true,
+  "scientific_acceptance": false,
+  "scope": "Compact original/refined tables and execution provenance only. Original failures retained; partial inventory is explicit. Full payload authentication remains in allocated assembly; no posterior or scientific acceptance."
+}

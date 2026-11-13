@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "scripts/v3_1_structure_refinement_compact_check.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_structure_refinement_compact_check.py\", line 146, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_structure_refinement_compact_check.py\", line 26, in main\n    raise ValueError(f'Expected {expected} states; found {len(markers)}. No output written.')\nValueError: Expected 32 states; found 14. No output written.\n",
+  "source_sha256": "d15f0816bce6430e500c91362928294139bf9ed7e65486d6a1fc72c232838329",
+  "missing_states_guard_passed": true,
+  "output_written": false,
+  "scientific_execution_claim": false
+}

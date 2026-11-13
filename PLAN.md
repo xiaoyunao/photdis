@@ -199,11 +199,16 @@ Negative findings remain deliverables, never successful calibration claims.
   support passesonlysamecandidateenvelope; all30collectedheldout conditional
   supportgatesfail. Lastoriginalgroups5/17 required; no mixtureacceptance.
   Refined11/23 complete10m36/2m06/all512pass, original134/3flags/10checks each;
-  total13/32refinements. Sparse21/22 promoteddebug30 afterfreshcap.
-- One64-worker resourceadapter prepared, notlaunched:320GiBplanningguard,
-  measured48-workerchildRSS<4.1GiB, sameoriginalfunction/seed/inputs. Parse/
-  import/shell checks pass. Target13 onlyifstillpending/sourceproof andafter
-  commit/sync; no wider64-workeruse untilactualcompletionmeasurement.
+  refined21also complete8m32/all512pass, original103flags/10checks retained.
+  Total14/32refinements authenticate306groupedchecks withnewreproducible
+  refinementcompactchecker;4050originalfailedcontexts/0unresolved preserved.
+  Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
+  retrievedagainstunchangedmarkerhashes; no scientificrerun.
+- One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
+  heldsubmission/dependencyrepair/release. 320GiBguard, unchangedoriginal
+  function/seed/inputs; no completed64measurement orwiderrolloutyet. Existing
+  sparse19/26promoteddebug30 underfreshcap. Originaltransfer5nowrunningregular;
+  original17stillpending; retainboth andfinishfull102report.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original
   numericfailures; candidate20passesall, other11newstates failbroadcountgate.
   Refined8 complete34m58/all512pass/10checks, original512flags retained.

@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "36cfd6b3b5c0de881c1818df71370966df047120e9d11a7e7b4dbb562aa4099e"
+  },
+  "scope": "Two existing32-worker sparse states153/149flags, basedon134flagstate11 completed10m36. Fresh5-debug-jobcap; same30minlimits, originalintegrand/seeds/checkpoints/numericalgates. No new submissions or cancellation."
+}

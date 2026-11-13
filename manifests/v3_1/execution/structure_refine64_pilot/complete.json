@@ -1,0 +1,12 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_job": "61244889",
+  "draw": 13,
+  "workers": 64,
+  "outputs": {
+    "preflight.json": "6e925a9a749db49655abaec5f96cf1fe815d31d6e29d594b4d4cf0803c7b5a22",
+    "submission.json": "ba91959cba1df0757e0deafd3c23f2d9248aaf84717244eab2653723f0484190"
+  },
+  "scope": "One64-worker resource pilot on unstartedstate13 after48-worker draw10 completed25m36 and all512pass; no mathematical/seed/threshold/sample/model change. Payload identity and memory/CPU guards enforced by original-function adapter on allocated compute; 48-worker executor measured1513.19s and159.1GiB batchRSS/<4.1GiB childRSS;64-worker runtime is unmeasured. 5GiB/worker320GiB planningguard, preserve any timeout/failure; no broader64-worker rollout beforeactualmeasurement."
+}

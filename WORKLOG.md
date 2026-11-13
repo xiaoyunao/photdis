@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-14 — launch bounded64-worker pilot and reconcile14 refined structure states
+- Confirmed61244889 submittedheld/debug30 fororiginalunstarted13; original
+  cancelledzero-runtime/AllocTRESnull/queueabsence,12sourcehashes verified,
+  assembly61232760 dependencyrepaired beforerelease. Receiptscollected; no
+  completed64-worker timing orwideradoptionclaim. Originalscientificsource fixed.
+- Refined21/raw61232990 COMPLETED8m32,512pass/103originalflags retained;
+  Python497.637s,10compactchecks pass. Existing19/26(153/149flags) promoted
+  debug30 afterfresh5-jobcap/source/pendingproof, no newjobs ormathchanges.
+- Added scripts/v3_1_structure_refinement_compact_check.py: original/refined
+  same512PSFidentities/allbranches, unchangedmodel/data/corehashes, original
+  flags, bounded2^23gates andresourceprovenance. Actual14states/14336rows pass
+  306groupedchecks,4050originalfailedcontexts/0unresolved. Partialexplicit;
+  default32guard failswithoutoutput. Thesearecompactconsistency checks,
+  notfullpayload/posterior/scienceacceptance; assemblyremainsallocated.
+- Firstaudit stoppedbecause localresourceaudits3/4/7wereuncollected. Retrieved
+  exactlythosemarkers, authenticatedagainstexistingcompletehashes; rerunpassed.
+  py_compile passed; actualmissing32guard recorded. No scientificreruns.
+- Originaltransfergroup5nowrunningregular;17pending. Updatedstatus/ledger/PLAN
+  andsource/linkrecords. Full102transfer/full32posterior/domain/fiveplates remain.
+
 ## 2026-11-14 — authenticate94 transfer states and retain conditional support failures
 - Pack3/raw61241184 COMPLETED17m42:4candidate30–33retainbroad-entry_level
   countgatefailures;8holdout8–15pass. Pack4/raw61238249 COMPLETED18m08:
