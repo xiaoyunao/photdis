@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-13 — implement guarded final external evaluation without opening outcomes
+- Registered finalvalidation protocol: nine exact reference/oldtarget/candidate
+  identities, same-source comparisons, independent channel eligibility, signed
+  Gaia, shared HST system scale, sky-block uncertainty and explicit nonclaims.
+- Added immutable prediction/hash closure, exact integer-ID/pilot/missing-object
+  checks, post-freeze idempotent evidence association and nine-view scoring driver.
+  All saved prior resolutions enter proper-score/PIT tail checks; endpoint zeros
+  are not floored. Numerical failures retained per view, not silently discarded.
+  Shared-scale individual marginal scores are not a multiplied system likelihood.
+- No finalfreeze/evidence/score job executed: fullcandidate predictions still
+  prerequisite. Shared-scale/sky aggregate report, extra MWS/VAC channel audit,
+  domains and final scientific interpretation remain outstanding.
+- Oldtarget field61222759 COMPLETED4m35:526PSF, all numerical checks pass,
+  no references read. Common3032 counterpart submitted61224421, pending.
+  Collected compact oldtarget summary and entryshards6/7/10/14; total completed
+  shards0–7/10/14:16250objects,18491envelopes, allpass. NewSEDgroup5 completes
+  38m19, bringing24responses complete; groups6/7pending. Entry8/15running,
+  9/11/12promoteddebug within quota. Assembly/pilot prerequisites unchanged.
+- Validation: new freeze/scoring tests8pass, including synthetic nine-view driver,
+  analytic Gaussian score, independent common-distance quadrature, negativeGaia,
+  retained unknownclass and tail convergence failure. Full140tests pass3.82s. Syntax/import and shell checks pass.
+- Next: complete pending response/entry/radial/structure jobs; run actualtarget
+  fit/count pilot and bounded fullstates; finalize paired/shared aggregate report,
+  then freeze matching predictions before once-only reference opening.
+
 ## 2026-11-13 — verify joint repack and response0 numerical recovery
 - Jointrepack61222999 COMPLETED3m35s:26000nativePSF x34corrections,258fineaudit
   rows; exactfloat64 copy/conservation passed. Originalindividual sidecars retained.
