@@ -78,7 +78,9 @@ Negative findings remain deliverables, never successful calibration claims.
   COMPLETED6m05; bothcohorts/nineviews retained. Newsky Gaia main-oldtarget
   -0.8143nat[ -0.9342,-0.6137 ]on166stars/9cells; NGC1261candidate1732median
   distancebias-49.05%, onecommon scale. Exhaustiveaudit61228029passes432132
-  artifactchecks; all72newscorefailuresareGaia. No scientificacceptance.
+  artifactchecks; all72newscorefailuresareGaia. No scientificacceptance. Fullsource-qualified
+  report v3_1_final_validation_result.md documentszero5–10kpcnewskyreferences,
+  no precise distancesfor77poornewskygiants, andhighqreference-selection gaps.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,

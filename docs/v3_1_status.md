@@ -3,6 +3,7 @@
 2026-11-13；完整四工作包 goal 仍在执行，尚未接受新的科学模型。
 协议见 [v3_1_protocol.md](v3_1_protocol.md)，逐项状态见
 [v3_1_requirements_result.md](v3_1_requirements_result.md)。不读取 DOCX。
+完整冻结外部验证及参考缺口见[v3_1_final_validation_result.md](v3_1_final_validation_result.md)。
 
 ## 已实际完成
 

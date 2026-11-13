@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-13 — document complete external evidence gaps and high-q disagreements
+- Added docs/v3_1_final_validation_result.md from11authenticatedsmallsource
+  tables;12inputhashes/6local links verified. Exactmainproduct/freeze/numerics,
+  role/sourcequalifieddenominators,12pairedscorecontrasts,sharedNGC1261scale
+  andhighqteacherdisagreements nowinone durable scientificreport.
+- Newsky candidate167:142giantlabels/0precisegiantdistances;77poor<−1giants
+  have0precisedistances; all9precisereferences unknownclass;5–10kpc0qualified.
+  Highq120:modelexpectedfar1.1365;qualifiedAstroNN62/84farcenters versus0/9
+  precise. Seen-skyhighq323:15/318versus2/113. Preservebothdenominators;
+  neither isindependentfullcandidatecontamination orpermissiontochange selection.
+- UpdatedledgerB5/D2/E2 andstatus/PLAN links: actualfinalcandidate scientific
+  failures distinctfromcalibration-onlyguards, missingevidence explicitlylimited.
+- Authoritativejobs61228245structureexactresume and61227827_2modes running;
+  originalcheckpoints retained, no restartfromobservationtimeout. Domain61226777
+  andmodechildren3/4queueddebug; fullremainingresearch stillrequired.
+- Validation: reportgeneratedfromhashedCSVrows,source/linkchecks andgitdiffcheck.
+  No scientificcode/inputchange;174previousmath tests remainlatestrelevant suite.
+
 ## 2026-11-13 — finish correlated external report and retain scientific rejection evidence
 - Report61226775 COMPLETED6m05: all3558PSF/nineviews retained; strictcandidate
   newsky167/seen-sky352/common1732. Newsky signedGaia166/9cells main-oldtarget

@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "manifests/v3_1/final_validation/report/new_sky_field_availability.csv": "eed253dbd86c5b604df2636ece13a98f344cdbe96bbe90510fbd1abc5d250a5d",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_availability.csv": "8323182e7ae61f0cfe40519c8b04010ed37bcc63b6ba4604076c95bd91c79abc",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_gaia_all_objects.csv": "83345733fd7320cbb189dc799a8892b418aadafd9ef96aabd76ae9bb468cdffc",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_astronn_all_objects.csv": "1f9aefe7d561ea53ec8746af43874cca898630d10b3b34f3e4abfbd9ed550a74",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_class_all_objects.csv": "f9b1d9cd9a934fda271a75ad423d6a5d80f934e936f12f7619f35f0fef8777ef",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_gaia_all_objects.csv": "95a46cf30637196fdc0310d6db6751ec35f3e0bd3d24c259d188af7ce0a0378b",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_astronn_all_objects.csv": "2e345b43780398c20f8a88b170ae1cb5d77b23071a2058e5208e2cbc60c8f839",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_class_all_objects.csv": "c516b66729c79052a3fe5aec939dea65151ae640687cdf0dadbddb7725a988d8",
+    "manifests/v3_1/final_validation/report/new_sky_field_highq.csv": "82a8eade15982c43bb0f244cc042b80ad39c7ffa2a90fcaf5463d09e70a8bceb",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_highq.csv": "88aeaa20a19b0aecb19baaaef5b363b1d098f358e0dcc42100f4b23aadbb0035",
+    "manifests/v3_1/final_validation/report/common_scale_summary.csv": "3ce62c6a594b11a326752b8a02ee2a5e6f6e0168b0ce23e8ed57dfb2e1262568",
+    "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111"
+  },
+  "output": "docs/v3_1_final_validation_result.md",
+  "output_sha256": "8d548188b80d5378ebf26a9cde0a140b1521d9382af27d533598d48ba50a4cfa",
+  "source_tables_verified": 11,
+  "scope": "Compact narrative/table derivation from authenticated completed report. No prediction, sample or scientific gate changed."
+}
