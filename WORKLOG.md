@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-13 — queue real support-equivalence audit and bounded accelerated sidecar
+- Confirmed61217343/44/45 allPENDING then cancelledthoseunstarted integrations;
+  no scientificoutputs lost. Realcertificate audit61217663 queueddebug.
+- Separate certifiedentry driver requires actualauditpassed before running;
+  same512/2048/8192/32768, seeds, covariance, cuts and .003/.025grid gates.
+  Newoutputdirectory preserves priorfailedoriginal/no-dustQMC products.
+- Full108tests pass; originalscientificdrivers andqueuedvalidationinputs remain
+  unchanged. Next: actualaudit, accelerated matchedentry andexactradialresume.
+
 ## 2026-11-13 — verify exact support certificates before quadrature acceleration
 - Added2D standardized-color grid certificates using the1-Lipschitz property of
   the10thEuclidean-neighbor distance. Onlyprovablyinterior/exterior points skip

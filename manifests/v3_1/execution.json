@@ -487,17 +487,20 @@
     {
       "job_id": "61217343",
       "purpose": "matched median candidate-entry bounded refinement",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "CANCELLED",
+      "note": "Confirmed PENDING; replace only after exact certified-query audit. No science started."
     },
     {
       "job_id": "61217344",
       "purpose": "matched minimum candidate-entry bounded refinement",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "CANCELLED",
+      "note": "Confirmed PENDING; replace only after exact certified-query audit. No science started."
     },
     {
       "job_id": "61217345",
       "purpose": "matched maximum candidate-entry bounded refinement",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "CANCELLED",
+      "note": "Confirmed PENDING; replace only after exact certified-query audit. No science started."
     },
     {
       "job_id": "61217449",
@@ -508,11 +511,17 @@
       "job_id": "61217450",
       "purpose": "common frozen-role reference-prior photometric predictions",
       "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217663",
+      "purpose": "real1millionpoint and128node support-certificate equivalence",
+      "last_observed_state": "PENDING",
+      "qos": "debug"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 105,
+    "passed": 108,
     "seconds": 2.86,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
