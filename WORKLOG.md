@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — implement required source/field correlated radial summaries
+- Inspectionfound originalradialreport exportscompletepercatalog outcomes butno
+  source/fieldclustered aggregateuncertainty required byradialprotocol. Added
+  catalog_blocks.py, radial_summary.py/wrapper andreportingsupplement protocol;
+  all176catalogs/352arms/22scenarios required beforeexecution, no newfit/design.
+- Exactused-template overlap forms transitivewholecatalogblocks; also fieldand
+  unionpartitions. Fixedfull-design partitions precedeaccepted-only filtering.
+  2048wholeblockdraws/seed321201; singleblockhasnoCI, disconnectedusedsources
+  stilldo notestablish independentteacherlibrary uncertainty. Alloriginal
+  numericalfailures/selectionapproximation retained; no sourcebootstrapcalibration claim.
+- Reportbothestimands, pairedL1, all18class-distance biases/coverage, allversus
+  nonzerotruth anddefined-onlystructureparameters, explicitfull/eligibledenominators.
+  Hash/identity/PSF/field/scenario/flag checks precedeaggregate normalization.
+- Fivefocused tests pass (transitiveoverlap, fieldbridges, singletonnoCI, wholeblock
+  weighting, missing/emptydata). Full179tests pass6.06s; Python/shellsyntax and
+  gitdiffchecks pass. Actualsummaryrun awaitscomplete radialreport.
+- Updatedintegratedmethods/PLAN/ledger; correctedmethods staleexternalpending
+  wording. Main scientificfailure unchanged; remainingjobs stilllive/queued.
+
 ## 2026-11-13 — document complete external evidence gaps and high-q disagreements
 - Added docs/v3_1_final_validation_result.md from11authenticatedsmallsource
   tables;12inputhashes/6local links verified. Exactmainproduct/freeze/numerics,

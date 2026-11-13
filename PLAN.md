@@ -119,11 +119,11 @@ Negative findings remain deliverables, never successful calibration claims.
   nowcomplete; source-qualifiedreference/gap renderer readybutunrun. Full scientific counts, final
   product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
-  Integrated methods nowin docs/v3_1_methods.md, source-linked to21local files (19protocols plusstatus/ledger);
+  Integrated methods nowin docs/v3_1_methods.md, source-linked to protocols, status, ledger and the completed external report;
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full suite: 174 tests pass (6.39 s). Nine English plates have actual
+- Latest full suite: 179 tests pass (6.06 s). Nine English plates have actual
   visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
   photometric occupancy 165 and final external comparison 104 artifact/source
   checks. Candidate-mode/domain evidence figures still require complete sources.
@@ -142,8 +142,10 @@ Negative findings remain deliverables, never successful calibration claims.
   ensembles and frozen sky-transfer comparisons. Native/joint/entry matrices,
   all candidate states and fixed-high-q joint counts are already complete.
 - Finish radial exact resumes 61225052/61225072 and report all 176 catalogs /
-  352 arms, including terminal numerical failures. Parameters and realized
-  counts remain different estimands; all original scenarios are retained.
+  352 arms, including terminal numerical failures. Complete source/field/joint
+  whole-catalog summary driver is nowimplemented with5newmath tests; actualrun
+  waitsall352arms. Parameters and realizedcounts remain different estimands;
+  all original scenarios are retained, singleton sourceblocks have no interval.
 - Finish all 32 structure native/entry/refinement states, including exact entry
   refinement resource pilot 61228245, then actual shared-posterior/count inference
   and the fair prior-withdrawn baseline. Other31refinements keep3h limits until
