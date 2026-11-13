@@ -23,6 +23,9 @@ def main():
     for name in ['scripts/v3_1_final_freeze.py', 'scripts/v3_1_validation_evidence.py',
                  'scripts/v3_1_validation_score.py', 'src/photdis/v3_1/freeze.py',
                  'src/photdis/v3_1/validation_scores.py', 'src/photdis/reference_v1_4.py',
+                 'scripts/v3_1_validation_report.py', 'src/photdis/v3_1/validation_report.py',
+                 'scripts/v3_1_validation_admission.py', 'src/photdis/v3_1/admission.py',
+                 'docs/v3_1_validation_admission_protocol.md',
                  'src/photdis/v3/metrics.py', 'src/photdis/v3_1/comparison.py',
                  'src/photdis/gaia.py', 'src/photdis/spectroscopy.py',
                  'docs/v3_1_final_validation_protocol.md', 'docs/v3_1_validation_roles.md',
@@ -31,6 +34,8 @@ def main():
         inv.add(name)
     roles = inv.marker(root/'validation_roles/complete.json')
     assert roles['roles_frozen']
+    admission = inv.marker(root/'validation_admission/complete.json')
+    assert admission['photometry_only'] and not admission['references_read'] and admission['original_candidate_reproduced']
     pointers = json.loads((root/'validation_roles/references.json').read_text())
     for value in pointers.values():
         inv.add(value['path'], value['sha256'])

@@ -26,7 +26,7 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry shards0–7/10/14 complete:16250objects/18491envelopes allpass;
+  Direct entry shards0–8/10/14–15 complete:19500objects/22178envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
   (6–9)/61223978(10–13), unstarted14–15group replaced61223886. Alloriginals
   preserved. Assembly61219399 dependencies updated; jointrepack61222999 passes.
@@ -52,7 +52,10 @@ Negative findings remain deliverables, never successful calibration claims.
   stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
   common61224421 pending. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
-  checks, notexecuted. Shared-scale/sky aggregate report andchannel audit pending.
+  checks, notexecuted. Shared-scale/sky aggregate report nowimplemented; strict
+  candidate admission/primary versusoutside-domain report protocol added, exact
+  application3540mask reproduction required. Admission/scoring/report execution
+  andadditional MWS/VAC channel audit pending.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
@@ -67,7 +70,7 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full140tests pass3.82s; four English plates visually inspected (paired62,
+- Latest full146tests pass3.83s; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

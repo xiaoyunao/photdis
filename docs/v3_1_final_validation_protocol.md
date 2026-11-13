@@ -16,6 +16,10 @@ response12/calibration12 beta=0 bootstrap_evidence population, exactly as in
 `v3_1_target_ensemble_protocol.md`. No main identity is selected by final scores.
 All34conditional states must exist; missing/failed states cannot be renormalized
 away. Optional broad-cohort transfer is a separately named secondary experiment.
+Primary validation also requires the identical3540candidate photometric admission
+specified in `v3_1_validation_admission_protocol.md`. All frozen objects remain
+predicted/scored; outside-envelope summaries are explicitly diagnostic. Final
+highq comparisons require this same admission before the qnear>.95 cut.
 
 `v3_1_final_freeze.py` authenticates whole inventories, all stored attempts,
 selected PDFs, shared populations, roles/reference pointers, method protocols

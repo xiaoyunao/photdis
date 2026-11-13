@@ -1,5 +1,33 @@
 # WORKLOG
 
+## 2026-11-13 — complete shared external summaries and exact candidate-domain tagging
+- Added post-freeze report: source-qualified paired field statistics with1024
+  whole-sky-cell resamples; sparse/empty/flagged cells andnonfinite scores stay.
+  HST4096shared distance draws plus.97/1/1.03method scenarios use ONE scale for
+  allmembers. Common intervals are reference-scale sensitivity, not independent
+  star-count uncertainty or a product of member likelihoods.
+- Found missing primary-evaluation distinction in unexecuted report design:
+  external predictions span allfrozen photometry, while maincandidate requires
+  observedr<20/grzerror<.1/originalQRFsupport. Added unchanged photometry-only
+  admission driver/protocol; requires exactreproduction of26000/3540mask before
+  field/common tagging. Domainmembers versus outside/all diagnostics and highq
+  selection now explicit. No oldprediction/sample/model modified.
+- Finalfreeze nowpins reporting/admission code andrequires completeadmission.
+  No admission/freeze/evidence/report execution yet; newoutcomes remainunopened.
+  Extra MWS/VAC channel audit and empirical use-domain map remainpending.
+- Entry8/15 completed, allpass; compactmarkers collected. Total verified
+  shards0–8/10/14–15:19500objects/22178envelopes. Entry9/11running,12/13debug
+  pending. Radial61219183/61220635 stillrunning1h52/1h48 atlastcheck; preserve
+  currentwriters until terminal. Responseprobe52 completes59s; noacceptance
+  of the full64response ensemble yet. Commonoldtarget61224421 pending.
+- Validation:146tests pass3.83s; codeimports/parse andshellsyntax pass. Newtests
+  prove observedr versusr0 distinction, missingTYPE rejection, no shared-scale
+  shrinkage under duplicatedmembers, wholecell bootstrap, retained unknownclass/
+  nonfinite scores and explicit emptysubsets. No realreference results inferred.
+- Next: sync/run admission oncompute; complete finalentry shards/assembly and
+  candidatefitpilot, exactresume radialonlyifterminal, then allremaining scientific
+  fits/structure, frozen external scoring and supporteduse-domain/report figures.
+
 ## 2026-11-13 — implement guarded final external evaluation without opening outcomes
 - Registered finalvalidation protocol: nine exact reference/oldtarget/candidate
   identities, same-source comparisons, independent channel eligibility, signed
