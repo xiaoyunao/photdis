@@ -186,6 +186,9 @@ Negative findings remain deliverables, never successful calibration claims.
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes
   3613 and domain evidence 1309 artifact/source checks; response compact 351.
+- Prepared scripts/v3_1_remaining_figure_check.py forfivependingplates: exact
+  source/panelcoverage andPNG300dpi/EnglishPDF. Onlyparse/import/missing-input
+  guards tested; actualfigureintegrityandvisualreview remainrequired.
 - Candidate mode decomposition/report complete; preserve all grid levels,
   basin responsibilities and inherited evidence failure. No mode rerun needed.
 - External report, source evidence maps and relative screens complete. Finish

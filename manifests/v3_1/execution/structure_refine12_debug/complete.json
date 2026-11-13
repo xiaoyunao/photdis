@@ -1,0 +1,8 @@
+{
+  "scheduler_change_complete": true,
+  "scientific_completion_claim": false,
+  "outputs": {
+    "submission.json": "359145a62c7aea51d53bd8e1f3c2741903a1dcdce741e453cbdb1e0048e2687b"
+  },
+  "scope": "Existing writer only. Twelve original failing contexts; same 32-worker adapter and 2^23 schedule. Comparison state3/24failures completed2m28. No changed scientific gate."
+}

@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — prepare final plate verification and advance sparse entry refinement
+- Added scripts/v3_1_remaining_figure_check.py foractualtransfer2/structure2/
+  domain1plates. Verifies allfixedsource tables independentlyofplottedrows,
+  exactsource/panelmultiplicity (includingmissingwholepanels), sourcehashes,
+  domainempty-versus-zero values,300dpiPNG/one-pageEnglishPDF. No visual or
+  scienceacceptance inferred; actualfigures stillrequired.
+- Parse/import plusallthreeactualmissing-figure guards passed; no integrity
+  record emittedwithoutrealrenderedproducts. No scientificdriver/thresholdchange.
+- Existingrefinement61229422_12 promoteddebug30min afteroriginal12flag/source
+  identity andcompleted24-flagrefinement2m28 evidence; fresh5-jobcap verified.
+  Samewriter/32-workeradapter/2^23schedule; receipt collected. Taskstillpending.
+- Previousgoalturn classifiedprogress: actual34holdoutensemble/229checks,
+  exactstructuredependencyrepair andsourcebackedreportadapter. Currentlive
+  pack0/originaltransfer24 andfourinitialentry tasks confirm ongoingcompute.
+- Next: collectactualcompletedbatch/structuremarkers, preserveallflags; measure
+  two-stateentrypilot beforeanywiderpacking; finishremainingfivefigures and
+  finalintegratedreport. No newmodel, fullcatalog, deployment, timer oragent.
+
 ## 2026-11-14 — prepare complete-source domain interpretation
 - Added scripts/v3_1_domain_result.py: requiresactual12-stage join,3540unique
   PSF/mode/highq identities,75cell totals/flags,source-specificreferencegaps,
