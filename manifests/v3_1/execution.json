@@ -164,10 +164,10 @@
     },
     {
       "job_id": "61213795",
-      "purpose": "radial native pilot catalog112",
-      "last_observed_state": "PENDING",
-      "exit_code": null,
-      "elapsed_seconds": 0
+      "purpose": "catalog112 direct-selection/native likelihood pilot",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 53
     },
     {
       "job_id": "61213891",
@@ -185,17 +185,17 @@
     },
     {
       "job_id": "61213893",
-      "purpose": "catalog0 local radial recovery",
-      "last_observed_state": "PENDING",
-      "exit_code": null,
-      "elapsed_seconds": 0
+      "purpose": "catalog0 local512 recovery; retained halfdelta flag",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 59
     },
     {
       "job_id": "61213894",
-      "purpose": "catalog0 finer native likelihood",
-      "last_observed_state": "PENDING",
-      "exit_code": null,
-      "elapsed_seconds": 0
+      "purpose": "catalog0 fine native curves",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 62
     },
     {
       "job_id": "61214053",
@@ -203,6 +203,37 @@
       "last_observed_state": "SUBMITTED",
       "wrapper": "scripts/run_v3_1_external_native.sh",
       "qos": "regular"
+    },
+    {
+      "job_id": "61214075",
+      "purpose": "catalog0 broad2048 numerical extension",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 117
+    },
+    {
+      "job_id": "61214095",
+      "purpose": "32star shared target-prior pilot",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 37
+    },
+    {
+      "job_id": "61214096",
+      "purpose": "catalog0 broad2048 fine-grid audit",
+      "last_observed_state": "RUNNING"
+    },
+    {
+      "job_id": "61214124",
+      "purpose": "catalog0 local2048 numerical extension",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 157
+    },
+    {
+      "job_id": "61214214",
+      "purpose": "1542star matched shared-target-prior diagnostic",
+      "last_observed_state": "SUBMITTED"
     }
   ],
   "local_validation": {
@@ -257,5 +288,11 @@
     "marginal_half_delta": 0.008416536589938906,
     "passed": false,
     "next": "Numerical-only2048 retained draws per chain; original512 retained"
+  },
+  "target_prior_pilot": {
+    "stars": 32,
+    "nonconverged": 0,
+    "new_target_cells_objects": 32,
+    "target_observation_overlap": 0
   }
 }

@@ -8,7 +8,7 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | A1 | Complete latest review and related project chat recovery | Complete | Latest full message archived; photdis_v1, original planning and three related Pro chats inspected |
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
 | B1 | Same-star class and FeH conditional diagnostics | Full diagnostic computed; interpretation in progress | 304evolved class-oracle contrasts across8sky blocks; source/stratum tables retained; no production labels |
-| B2 | Fixed response/prior/band/error contrasts | Band/error contrasts complete; target-prior pending | 1542stars/17386views,1089paired contrasts; shared-target driver+2math tests complete, actual pilot pending |
+| B2 | Fixed response/prior/band/error contrasts | Band/error contrasts complete; target-prior pending | 1542stars/17386views,1089paired contrasts; shared-target32star pilot passes, full1542 running; paired report pending |
 | B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Latent pilot complete; broader audit pending | 50views, max any-negative upper0.0003423; kernel-prior proxy kept distinct; no global claim |
 | B4 | Binary/class/component mode attribution | Full diagnostic computed; interpretation in progress | Full per-mode parent support retained remotely; weighted compact summary complete, physical attribution limits retained |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |

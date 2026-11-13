@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-13 — accept refined radial pilot samplers and target-prior pilot
+- Catalog0 broad extension61214075 COMPLETED117s,2048retained/chain: Rhat1.00069,
+  ESS6314.6, zero divergences, halfdelta.003687; all coarse numericalgates pass.
+  Local extension61214124 COMPLETED157s: Rhat1.00188,ESS1295.1,zero divergences,
+  halfdelta.004413; passes. Both initial512 numericalflags/products retained.
+- All3 radial pilot direct-entry audits pass; catalog112 max.00070402.
+  Catalog0 .01 native curves61213894 complete62s; same-draw broad quadrature
+  audit61214096 running, local fine audit and remaining2pilot recoveries pending.
+- Shared-target-prior pilot61214095 COMPLETED37s:32stars,0numericalfailures;
+  all32 are genuinely new target cells,0target-observation overlap. Full1542
+  diagnostic submitted61214214. Added paired source/FeH/r/color/band/sky report
+  with exactidentity/design checks; syntaxpass, execution pending.
+- Native external qualification61214053 scans53004targeted bricks with resumable
+  per-brick checksums; about9000 completed at441s. No scientific role freeze yet.
+- Added explicit allowlisted small-record collector; noNPZ/model downloads.
+  Downloaded verified coarse/refined summaries andpilot markers. Next: fine
+  numerical acceptance, fulltargetprior report, native history/role qualification.
+
 ## 2026-11-13 — recover actual external availability and implement shared-prior control
 - Corrected finite-sky inventory61213891 COMPLETED127s:one invalidcoordinate;
   190431new-ID/outside-field acquisition candidates,98674also outsidev3sky.

@@ -36,9 +36,11 @@ to NaN coordinates poisoning full latitude array; preserved. Finite-only rotatio
 fix passes2regression tests; corrected61213891 yields190431acquisition IDs
 (98674also newsky), allnativeunverified. Native qualification
 and coarse/fine shared-draw audit drivers implemented, execution pending.
-Shared-target-prior control implemented with2math tests; actual pilot pending.
+Shared-target-prior32star pilot complete,0numericfailures; full1542 submitted61214214.
 Full local93tests pass with one BLAS/OpenMP thread; initial native segfault retained.
-Pilot0 broad recovery completed but numericalfailed; inspect exactflag before scaling.
+Pilot0 broad/local512 runs retained with halfdelta flags;2048extensions bothpass
+coarse numericalgates. Fine-grid audit running; remaining2pilot recovery pending.
+Native qualification53004bricks underway with resumable checkpoints.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
 Implement matched shared-target-prior contrasts and radial recovery on all
