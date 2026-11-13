@@ -465,7 +465,8 @@
     {
       "job_id": "61216913",
       "purpose": "radial176 whole-node shard0",
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "TIMEOUT",
+      "elapsed_seconds": 1808
     },
     {
       "job_id": "61216914",
@@ -475,14 +476,15 @@
     {
       "job_id": "61216915",
       "purpose": "full1542development latent sign audit",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
       "note": "Pending job QoS update; same30min and science inputs"
     },
     {
       "job_id": "61217300",
       "purpose": "fixed18context localdust entry audit",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 53
     },
     {
       "job_id": "61217343",
@@ -505,7 +507,8 @@
     {
       "job_id": "61217449",
       "purpose": "field frozen-role reference-prior photometric predictions",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "PENDING",
+      "qos": "debug"
     },
     {
       "job_id": "61217450",
@@ -515,14 +518,54 @@
     {
       "job_id": "61217663",
       "purpose": "real1millionpoint and128node support-certificate equivalence",
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 49,
+      "numerical_passed": true
+    },
+    {
+      "job_id": "61217706",
+      "purpose": "radial exactresume shard0",
+      "dependency": "afterany:61216913:61216914",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217707",
+      "purpose": "radial exactresume shard1",
+      "dependency": "afterany:61216913:61216914",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217708",
+      "purpose": "certified matchedentry median",
+      "dependency": "afterok:61217663",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217709",
+      "purpose": "certified matchedentry minimum",
+      "dependency": "afterok:61217663",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61217710",
+      "purpose": "certified matchedentry maximum",
+      "dependency": "afterok:61217663",
+      "last_observed_state": "PENDING"
+    },
+    {
+      "job_id": "61216483_0",
+      "purpose": "independentSEDrefits1000..1003",
       "last_observed_state": "PENDING",
-      "qos": "debug"
+      "qos": "debug",
+      "timelimit": "00:30:00",
+      "note": "Pending array element QoS/time update; iteration checkpoints resume unchanged input"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 108,
-    "seconds": 2.86,
+    "passed": 110,
+    "seconds": 3.31,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,

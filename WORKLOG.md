@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — complete latent and dust audits; register Gaussian-basis joint integration
+- Full latent61216915 complete2589views/1542sources,0unsupported, exactposterior
+  reproduction. response12 weighted any-negative lower/uppermeans .0026746/
+  .0028635; maximum .4153459 dominatedW2 inunknown-class source3672177904001643904.
+  class+FeH1047views meanupper .00007981. Pilot50views didnotboundrareoutliers;
+  retain physicalsupport/unknown-class domainflag and investigatepairedfailures.
+- Dustentry61217300 COMPLETED53s,18contexts: maxcomponentdelta2.5458e-5,
+  maxclassdelta6.8891e-6. Smallforfixedgrzpilot, notproofforhardcuts/allcontexts.
+  Originalradial approximation retainedandnamed; newentry matcheslocalcovariance.
+- Certificate61217663 COMPLETED49s (internal32.6s):1millionrandompoints exact,
+  original128fullcurvemaxdifference0,34.66millioncertified/196570fallbackqueries.
+  Pruningdifference2.19e-15 boundedby7.01e-15. OriginalQMCfailureunchanged.
+- Registered exact Gaussian-convolution withdrawal andjointkernel/radial/flux
+  QMC pilot17tasks,3contexts×5corrections plus2legacycrosschecks. Twoindependent
+  analytic/quadraturetests pass; full110tests pass3.31s; syntax/shellchecks pass.
+  Samecuts/covariance/kernelweights; staged8192..524288 fixednumericgates.
+- Radialwide61216913 time limit; checkpoints retained. Resumes61217706/07 depend
+  afteranybothwideallocations. Certifiedentry61217708/09/10 dependonauditpassed.
+  Fieldprediction61217449 andresponsearrayelement0 promotedwhilepending todebug;
+  sourcecalibration0limited30min with exactiterationcheckpoints, nofitpriorchange.
+- Next: runjointentrypilot, completevalidationpredictions/responsefits/radial
+  recovery, tracefullnegativeoutliers andfinishselection-matchedtargettransfer.
+
 ## 2026-11-13 — queue real support-equivalence audit and bounded accelerated sidecar
 - Confirmed61217343/44/45 allPENDING then cancelledthoseunstarted integrations;
   no scientificoutputs lost. Realcertificate audit61217663 queueddebug.

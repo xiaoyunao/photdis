@@ -18,8 +18,7 @@ Protocol: `docs/v3_1_protocol.md`; evidence ledger:
 NERSC authentication renewed; three-end tracked checkpointe0847a1 verified before current edits.
 Historical remote untracked artifacts are preserved. Pilot32stars/354views and
 availability inventory completed. Paired report has6passing actual checks and
-roundoff-only nominal reproduction. Latent audit61212377 completed50views:
-max any-negative upper0.0003423; insufficient to motivate positivity refitting.
+roundoff-only nominal reproduction. Latent pilot61212377 completed50views, maxupper0.0003423. Full61216915 now2589views: maxupper.41535, response12 weightedmeanupper.002864 mostlyW2; rarephysicalsupport outliers must be retained and paired failures audited.
 Registered1542-source diagnostic61212409 completed491s:17386views, no numeric
 failures. Paired report has1089contrasts and all6checks passing.
 Native census61212560 completed: blanket historical-parent exclusion is empty;
@@ -46,7 +45,7 @@ PSF/new reference blocks; freeze actual prospective roles before correction. Reg
 Matched shared-target-prior contrasts complete with evolved-star regression; retain1numericflag.
 Candidate-envelope normalization includes brightness/error/QRFsupport;3math checks
 and outcome-blind contextpilot registered. Medianpilot fails QMC gates; bounded2048/8192 independentseed refinement registered before matched refitting.
-Finish radial pilots then all176catalogs and response/systematics work. Independent32response draws complete61216457; fullrefits61216483 pending. Exactentrybackend check passes; median8192QMC refinement fails .007913/.003009; new local-dust covariance mismatch requires fixed-context audit before matched fits.
+Finish radial pilots then all176catalogs and response/systematics work. Independent32response draws complete61216457; fullrefits61216483 pending. Exactentrybackend check passes; median8192QMC refinement fails .007913/.003009; local-dust18context audit maxclassdelta6.89e-6; matchedhardcuts stillrequire ownchecks. Exact supportcertificate realaudit passes; Gaussian-basis jointintegration registered to enable fulltargetfits.
 No automatic million-object products, deployment, timers or subagents.
 
 
