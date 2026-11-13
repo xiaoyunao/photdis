@@ -42,5 +42,6 @@ def marginalize_class_population(loglike,grid,theta,weights):
         if w[select].sum()==0:halves=[];break
         halves.append(np.einsum('s,scb->cb',w[select]/w[select].sum(),draw_probability[select]))
     return dict(logpdf=lp,class_logpdf=logjoint,mu=q,class_distance=probability,draw_probability=draw_probability,
-        log_evidence_per_draw=evidence,log_coefficient=coefficient,log_normalization=normalization,
+        log_evidence_per_draw=evidence,log_coefficient=coefficient,log_class_basis_bin_response=logresponse,
+        half_class_distance=np.array(halves),log_normalization=normalization,
         joint_delta=float(abs(probability-mean).max()),marginal_half_delta=float(abs(halves[0]-halves[1]).max()) if halves else np.inf)

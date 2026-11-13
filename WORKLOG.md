@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — freeze final-target prediction identity before new outcomes
+- Added protocol/driver for candidate3540 response12/cal12 plus authenticated
+  zero/point/32bootstrap-evidence/equal-cut populations. Optional broad-cohort
+  transfer is separately named; it cannot replace the mainidentity after scoring.
+- Each population draw is normalized before mixing. Newfield logits use shared
+  globalhypermean+.35normal with seed[320401,correction,field], same offsets for
+  allstars in a field. Reuse authenticatednative curves; preserve full logPDFs,
+  class/bin likelihoods and coefficients to reconstruct shared posterior products.
+- Eight photometry-hash pilot IDs are separate from full526/3032completion.
+  Same bounded coarse/fine schedule and marginal/half gates; allattempts kept.
+  Newreference outcomes remainunopened. No finaltarget fit/prediction yetexecuted.
+- Added independent analytic Gaussian-scale/scatter and varying-population-prior
+  mixture test. Initial1e-9log-tail assertion found6.1e-8difference from registered
+  8sigma convolution cutoff versus unboundedanalytic scatter at50logdensity
+  units; explicit1e-7mathtest tolerance documents that approximation. Scientific
+  admission/score/probability tolerances unchanged. Both targetprediction tests
+  pass; full130tests pass3.55s. Driver imports/compiles andwrapper shellsyntax passes.
+- Running resourcegroups stillinprogress; no speedupclaim. NewSEDgroups4/5,
+  radialresumes continue; probes/refinement/structure jobs remainqueued.
+- Next: complete targetmatrices andrun boundedfit/count pilots, then mainmatching
+  externalprediction pilots/fullfreeze before any newreferenceevaluation.
+
 ## 2026-11-13 — prepare complete ensemble and fixed high-q covariance products
 - Original targetentry shards0–5 now complete:9750objects/11081envelopes allpass;
   new3–5compactchecks collected. Resourcegroups6–9/10–13 running;14–15 and

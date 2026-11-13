@@ -41,7 +41,9 @@ Negative findings remain deliverables, never successful calibration claims.
   strictnewsky; no new far-field precision evidence. All3558reference-prior
   numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
   Originalflags retained. Referenceoutcomes remainunopened; final target-prior
-  identity/prediction freeze stillrequired before scoring.
+  identity nowregistered. Four-view finalcandidate predictiondriver ready with
+  sharednewfield offsets andseparate8objectpilot; actualfit/predictions/fullfreeze
+  stillrequired before scoring.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
@@ -56,7 +58,7 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full129tests pass; four English plates visually inspected (paired62,
+- Latest full130tests pass; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.
