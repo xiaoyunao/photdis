@@ -81,7 +81,29 @@
         "--stage",
         "diagnostic"
       ],
-      "last_observed_state": "completion_artifact_passed; accounting pending"
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 33
+    },
+    {
+      "job_id": "61212908",
+      "purpose": "full diagnostic stratification and mode reference support",
+      "wrapper": "scripts/run_v3_1_stratified_report.sh",
+      "qos": "debug",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 47
+    },
+    {
+      "job_id": "61212909",
+      "purpose": "fixed-SED radial selection curves",
+      "wrapper": "scripts/run_v3_1_radial_selection.sh",
+      "qos": "debug",
+      "args": [
+        "--workers",
+        "32"
+      ],
+      "last_observed_state": "RUNNING"
     }
   ],
   "local_validation": {

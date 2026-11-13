@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — complete stratified mechanism evidence
+- Full paired report61212562 COMPLETED33s; stratified report61212908
+  COMPLETED47s, both exit0:0. Six numeric/fidelity gates pass; full-cohort
+  maxima0.004725mag/0.000375qnear/0.000441joint, not roundoff-only.
+- Retrieved/hash-verified8compact stratified artifacts.45MB complete mode
+  reference-support table stays NERSC; added allocated compact mode-summary
+  driver with design weights/sky bootstrap, syntax checked but not yet run.
+- Class-oracle evolved improvement occurs in all fourFeH categories and both
+  supported r<18/18–20 bins.20+ evolved evidence absent here; no extrapolation
+  claim. Remaining reference-point undercoverage explicitly preserved in
+  docs/v3_1_status.md.
+- Radial selection61212909 running; native feasibility61212560 running.
+  Checkpoint6a4313f verified local/origin/NERSC. No correction training yet.
+- Next: finish native feasibility, compact mode summary and radial selection;
+  native radial recovery and matched shared-target-prior controls; acquire/freeze
+  genuinely available reference roles before calibration.
+
 ## 2026-11-13 — prepare native radial selection and detailed mechanism evidence
 - Full diagnostic61212409 COMPLETED491s exit0:0;17386views, zero numerical
   failures. Paired report61212562 artifact passes6checks/1089contrasts;

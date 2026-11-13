@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "scripts/v3_1_stratified_report.py": "d230e6a3a3beb3b36ad0b380c736b0a07a5972cc9a5b94194f211b8e88524119",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
+  },
+  "outputs": {
+    "feh.csv": "51247e567f03e62d6b3c3ef03c09496b264c3fa0d6832e1480b674dea9e78780",
+    "intrinsic_gr.csv": "d7e246cb7afb2076452efcaf6cea448bc302238bb2766fa4a648c83f4d0331c1",
+    "sky.csv": "37ba28ade3c8fb0c31b4c92879887b826bafe2ef3cfb59ebf39eb99fab61b78f",
+    "apparent_r.csv": "81aa66b9cd2247ed46b2f73ee9da1c1b9e71c66cd26f3f030b95815523c6fdaf",
+    "mode_reference_support.csv": "38dadef00038dd9fb5e6516a2ca14d7d4999660f3b39d7b7a21d5e4fcabfe415",
+    "all.csv": "8a87c1438d37eb3968e9bc7aab35df167927d1ac95eb28854211f6046e1caf1b",
+    "optional_bands.csv": "099c13281342340f8f36335bf26296e55baf7d709f031324d7911d19d680d978",
+    "denominators.csv": "e79b8b8f2e06337491e8e74472c19a25aa392c6264eb84c5af2ab04c39ec05b5"
+  },
+  "stars": 1542,
+  "views": 17386,
+  "job": "61212908",
+  "stage": "diagnostic",
+  "scope": "Seen diagnostic design-weighted paired contrasts, fixed bins, sky-block bootstrap. Single-cell intervals absent. Unknown class separate. Baseline-high-q frequency uses reference-point labels and is not independently measured application contamination.",
+  "support_scope": "Effective training sources of each dominant parent kernel only; not an exact posterior effective source count. Truth-assisted controls remain diagnostic."
+}
