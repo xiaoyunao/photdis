@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — complete all native matrices and validation numerical sidecars
+- Native61219181 fourshards COMPLETED169/192/175/186s:all26000rows prepared,
+  all258fineaudits pass. Compactchecks/allmarkers collected; no targetfit yet.
+- Commonvalidation61218978 COMPLETED978s, all3032pass:2998at.01,26at.005,
+  8at.0025. Togetherwith526field, all3558boundednumericalsidecars pass; original
+  failedattempts retained andexternal referenceoutcomes remainunopened.
+- Responseprobe roles61220366 COMPLETED24s:128target/256seen-development,
+  allnativePSF. Old12/new1004probe pilot61220906 submitted; all64plannedstates
+  retained. Jointresponse61220368 queued; task0promoteddebug30m. Entry61219182_0
+  promoteddebug30m toinspectactualcontext precision; other15retainregular2h.
+- Radialshard1 original61217707 TIMEOUT30m26s; exactresume61220635regular2h
+  submitted afteroriginalended. Shard0resume61219183 stillqueued.
+- Addedactual secondseed/previousentrymatrices toassembly andregistered
+  numericalposterior/count transfer gates. Sharedconditionalcounts driver
+  includestrue-distance bins, exact global indices/covariance, allentry transfers
+  andspecifiednativefine subset. Counts/fitdrivers notyetexecuted.
+- Validation: driverimports/syntax pass;4focusedGaussian/weighttests pass;
+  latestfull118tests pass3.21s. Importanceweight test preserveslargeconstants
+  and rejectsconcentration withoutflattening.
+- Next: completeentry/joint/response/radial jobs; scientific fits/counts/ensemble,
+  finalmethodfreeze andexternal scores; domain/structure example remainrequired.
+
 ## 2026-11-13 — full field numerical pass and latent failure attribution limits
 - Fieldnumerical61218977 COMPLETED182s: all526objects pass at.01, no unresolved
   flags; references remainunopened. Common61218978 nowdebug30m, stillrunning.

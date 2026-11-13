@@ -27,6 +27,8 @@ def main():
     shape=(n,34,3,5);response=np.empty(shape);broad=np.empty(shape);candidate=np.full(shape,np.nan)
     fine=np.full(shape,np.nan);scale=np.empty(n);audited=np.zeros(n,bool);flags=[];source_markers={}
     errors_broad=np.empty(shape);errors_candidate=np.full(shape,np.nan)
+    second_broad=np.empty(shape);second_candidate=np.full(shape,np.nan)
+    previous_broad=np.empty(shape);previous_candidate=np.full(shape,np.nan)
     for row,identity in enumerate(roles['identity']):
         name=f'object_{int(identity)}.json';path=native/name;nd=native_done[row%4]
         assert sha(path)==nd['objects'][name];record=json.loads(path.read_text());assert record['inputs']==nd['inputs']
@@ -42,6 +44,12 @@ def main():
             for filename,digest in r['outputs'].items():assert sha(folder/filename)==digest
             draws=r['selected_draws'];value=load(folder/f'q{draws}_seed319711.npz');difference=load(folder/f'q{draws}_differences.npz')
             dest[row]=value['alpha'];errors[row]=np.maximum(difference['independent'],difference['previous'])+value['pruning_bound']
+            second=second_candidate if label=='candidate' else second_broad
+            previous=previous_candidate if label=='candidate' else previous_broad
+            assert len(r['attempts'])>=2
+            second[row]=load(folder/f'q{draws}_seed319712.npz')['alpha']
+            previous_draws=r['attempts'][-2]['draws']
+            previous[row]=load(folder/f'q{previous_draws}_seed319711.npz')['alpha']
             flags.append(dict(row=row,identity=int(identity),kind=label,passed=r['passed']))
             source_markers[str(marker.relative_to(ROOT))]=sha(marker)
         if row%1024==0:print('ASSEMBLE TARGET',row,flush=True)
@@ -49,6 +57,8 @@ def main():
     assert np.isfinite(candidate[roles['candidate']]).all()
     atomic_npz(out/'matrices.npz',**roles,response=response,fine_response=fine,fine_audited=audited,logscale=scale,
         selection_broad=broad,selection_candidate=candidate,selection_error_broad=errors_broad,selection_error_candidate=errors_candidate,
+        selection_second_broad=second_broad,selection_second_candidate=second_candidate,
+        selection_previous_broad=previous_broad,selection_previous_candidate=previous_candidate,
         correction_ids=np.arange(34))
     csv_rows(out/'status.csv',flags);save_json(out/'source_markers.json',source_markers)
     save_json(out/'complete.json',dict(inputs=inputs,outputs={name:sha(out/name) for name in ['matrices.npz','status.csv','source_markers.json']},

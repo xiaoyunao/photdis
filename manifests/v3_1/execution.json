@@ -544,7 +544,9 @@
       "job_id": "61217707",
       "purpose": "radial exactresume shard1",
       "dependency": "afterany:61216913:61216914",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "TIMEOUT",
+      "elapsed_seconds": 1826,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61217708",
@@ -614,8 +616,10 @@
         "common"
       ],
       "qos": "debug",
-      "last_observed_state": "RUNNING",
-      "timelimit": "00:30:00"
+      "last_observed_state": "COMPLETED",
+      "timelimit": "00:30:00",
+      "elapsed_seconds": 978,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61218979",
@@ -642,8 +646,8 @@
       "wrapper": "scripts/run_v3_1_target_native.sh",
       "args": [],
       "qos": "regular",
-      "last_observed_state": "PARTIAL",
-      "resource_update": "Tasks0/1 completed; all4tasks promoted debug30m. Task2running/task3pending at last inspection."
+      "last_observed_state": "COMPLETED",
+      "resource_update": "All4tasksdebug30m completed; taskelapsed169/192/175/186s.26000objects/all258fineaudits pass."
     },
     {
       "job_id": "61219182",
@@ -651,7 +655,8 @@
       "wrapper": "scripts/run_v3_1_target_entry.sh",
       "args": [],
       "qos": "regular",
-      "last_observed_state": "SUBMITTED"
+      "last_observed_state": "PARTIAL_RUNNING",
+      "resource_update": "Task0promoteddebug30m; allother15retainregular2h. Exact perobject resume."
     },
     {
       "job_id": "61219183",
@@ -680,6 +685,47 @@
       "qos": "regular",
       "last_observed_state": "PENDING",
       "dependency": "afterok:61219181:61219182"
+    },
+    {
+      "job_id": "61220366",
+      "purpose": "Freeze matched128target/256development response probe identities",
+      "wrapper": "scripts/run_v3_1_response_probe_prepare.sh",
+      "args": [],
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 24,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61220368",
+      "purpose": "True-distance joint response sidecars,4shards",
+      "wrapper": "scripts/run_v3_1_target_joint.sh",
+      "args": [],
+      "last_observed_state": "PENDING",
+      "qos": "regular",
+      "dependency": "afterok:61219181",
+      "resource_update": "Task0debug30m; other3regular2h"
+    },
+    {
+      "job_id": "61220635",
+      "purpose": "Exact radial shard1 resume after61217707timeout",
+      "wrapper": "scripts/run_v3_1_radial_production_resume.sh",
+      "args": [
+        "--shard",
+        "1"
+      ],
+      "last_observed_state": "PENDING",
+      "qos": "regular"
+    },
+    {
+      "job_id": "61220906",
+      "purpose": "Matched fixed-prior response pilot old12/new1004",
+      "wrapper": "scripts/run_v3_1_response_probe.sh",
+      "args": [
+        "--array=12,36%1"
+      ],
+      "last_observed_state": "SUBMITTED",
+      "qos": "debug"
     }
   ],
   "local_validation": {

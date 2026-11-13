@@ -2,62 +2,65 @@
 
 ## Active v3.1 — scientific calibration and use domains
 
-User authorized 2026-11-13 the four complete work packages in
-`docs/pro_review_31f1277.md` and explicitly requested a detailed active goal.
-Protocol: `docs/v3_1_protocol.md`; evidence ledger:
-`docs/v3_1_requirements_result.md`. Preserve frozen v3.0 and deployed v1.
+User authorized the four complete work packages in `docs/pro_review_31f1277.md`
+and explicitly requested the detailed active chat goal. Protocol and evidence:
+`docs/v3_1_protocol.md`, `docs/v3_1_requirements_result.md`. Preserve all v3.0
+models/products/failed numerics and deployed v1; no million-object expansion,
+deployment, timers or subagents. Native DR11 TYPE=PSF required at admission/export.
 
-- [x] Read latest full Pro message (no DOCX), related project chats and project memory.
-- [x] Register detailed chat goal, four-package protocol and pending evidence ledger.
-- [ ] WP1: same-identity class/FeH/prior/band diagnostics; mechanism-backed correction.
-- [ ] WP2: regularized radial recovery; selection-matched target transfer; response support.
-- [ ] WP3: freeze reference-available new test roles before correction fitting; final validation.
-- [ ] WP4: product-matched evaluation, joint counts, domain map, reweighting and structure example.
-- [ ] Complete scientific/numerical/visual acceptance, reports and safe three-end sync.
+Current objective: finish the science comparisons, final product-matched
+validation, joint counts, use-domain map and one marginalized structure example.
+Negative findings remain deliverables, never successful calibration claims.
 
-NERSC authentication renewed; three-end tracked checkpointe0847a1 verified before current edits.
-Historical remote untracked artifacts are preserved. Pilot32stars/354views and
-availability inventory completed. Paired report has6passing actual checks and
-roundoff-only nominal reproduction. Latent pilot61212377 completed50views, maxupper0.0003423. Full61216915 now2589views: maxupper.41535, response12 weightedmeanupper.002864 mostlyW2; rarephysicalsupport outliers must be retained and paired failures audited.
-Registered1542-source diagnostic61212409 completed491s:17386views, no numeric
-failures. Paired report has1089contrasts and all6checks passing.
-Native census61212560 completed: blanket historical-parent exclusion is empty;
-parent inclusion is not fitted/scored use. Actual role audit61213095 completed:612114PSF/photometric/unique eligible
-objects exactly match the v3parent; historical pool membership and training
-remain distinct. Mode support61213096 completed. Paired61212562 and strata61212908 reports completed.
-Radial protocol and objective/selection foundation registered;5new tests pass.
-Radial selection61212909 passed (267profiles,max broad delta.0006065);
-native likelihood preparation/recovery drivers implemented,89 tests pass.
-176catalog preparation61213752 complete22528rows; pilots0/48/112 submitted.
-External inventory61213407 failed exact-name alignment on1row; preserve failure
-and excluded mismatched astroNN pairing on retry. Retry61213756 is invalid due
-to NaN coordinates poisoning full latitude array; preserved. Finite-only rotation
-fix passes2regression tests; corrected61213891 yields190431acquisition IDs
-(98674also newsky), allnativeunverified. Native qualification
-and coarse/fine shared-draw audit drivers implemented, execution pending.
-Shared-target-prior32star pilot complete; full1542 job61214214 completed with1retained numericalflag.
-Full local96tests pass with one BLAS/OpenMP thread; initial native segfault retained.
-Pilot0 broad/local512 runs retained with halfdelta flags;2048extensions bothpass
-coarse numericalgates. Catalog0,48,112 botharms pass fine-grid audits; all176production registered; pendinglongarray cancelled, whole-node32catalog concurrency sidecar61216913/14 running. Bounded numerical extensions preserve all originalflags.
-Native53004brick qualification completed:605PSF admissions; history leaves170strictnewsky field stars but only9precisedistances. Common-scale qualification complete:3032NGC1261 admissions, other2systems empty; finalroles/imaging-ID guard complete:170newsky+356sourcenew-seensky field,3032NGC1261.
-Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
-PSF/new reference blocks; freeze actual prospective roles before correction. Registered one6parameter luminosityshift/scatter correction; role3 sky-split curves complete2044;32bootstrapfit61216288 failed atdraw19 gridkink; boundedPowell sidecar61216654 complete, log-space guard61216786 complete:96numerical and15bootstrap class guards pass; not yet adopted.
-Matched shared-target-prior contrasts complete with evolved-star regression; retain1numericflag.
-Candidate-envelope normalization includes brightness/error/QRFsupport;3math checks
-and outcome-blind contextpilot registered. Medianpilot fails QMC gates; bounded2048/8192 independentseed refinement registered before matched refitting.
-Finish radial pilots then all176catalogs and response/systematics work. Independent32response draws complete61216457; fullrefits61216483 pending. Exactentrybackend check passes; median8192QMC refinement fails .007913/.003009; local-dust18context audit maxclassdelta6.89e-6; matchedhardcuts stillrequire ownchecks. Exact supportcertificate realaudit passes; Gaussian-basis jointintegration17tasks pass. Sharedproposal/all34state pilot registered. Frozenfield526prediction finechecks pass; common3032has2flaggedIDs/6views, full3558numericalsidecar registered beforefinalscores.
-Sharedproposal61218976/fullvalidation61218977–78 submitted; responsegroup0 timeout
-resumed61218979. Registered native131object targetpilot implemented, allocated
-execution61219038 complete131allpass. Sharedproposal61218976all3pass; native
-anddirectentry production61219181/61219182 submitted. Assembly/fit drivers
-implemented butnotrun; true-distance integral3mathchecks pass. Radialshard0
-resume61219183 aftertimeout;full117tests pass. No targetfit/evidence/count result yet.
-Field526fullfineaudit passes. Nativefirst13000responses pass; common3032fine
-audit continues. Latentfailurepairing andfourthplate complete1574actualchecks:
-lownegative evolved297primaryreferences still87.6635%severeerror. Matched64response
-probe protocol/driver andtrue-distancejointsidecars implemented, executionpending.
-No automatic million-object products, deployment, timers or subagents.
+### Milestones and current evidence
+- [x] Read latest full Pro review/related chats (noDOCX), register goal/roles/ledger.
+- [ ] WP1 final correction acceptance. Same1542development stars/17386views and
+  pairedclass/FeH/band/prior contrasts complete. Response12 targetprior worsens
+  evolved reference performance. Six-parameter luminosity correction has32shared
+  sky bootstraps;96numerical/15heldout guards pass but evolved scatter is weakly
+  constrained. Full latent2589views plus failure pairing complete: low-negative
+  evolved297primary references still87.6635%severe |dmu|>1; negative-flux outliers
+  alone do not explain giant failure. Rare unknown/W2 support flags retained.
+- [ ] WP2 radial/target/systematic comparisons. All176catalogs prepared; pilots
+  0/48/112botharms pass. Production bounded512/2048/8192 outcomes incomplete;
+  originaltimeouts and terminalnumerical failures retained. Exactresume shards
+  0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
+  Native target26000rows across34corrections complete,258fineaudits allpass.
+  Direct entry61219182 all26000broad+3540candidate is running/queued; no context
+  interpolation. Assembly61219399 waits for complete inputshards. Population
+  fits/evidence/count drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
+  Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
+  Matched64-response fixed-prior probes frozen128target/256seen-development,
+  pilot old12/new1004 queued61220906. These are not26kpopulation-marginal evidence.
+- [ ] WP3 final scientific validation. Roles frozen:170strictnewsky+356source-new
+  seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in
+  strictnewsky; no new far-field precision evidence. All3558reference-prior
+  numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
+  Originalflags retained. Referenceoutcomes remainunopened; final target-prior
+  identity/prediction freeze stillrequired before scoring.
+- [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
+  True-distance Gaussian correction integral and shared count/numerical-transfer
+  foundations implemented/tested. Joint response61220368queued. Full scientific
+  counts, final product evaluation, use-domain map and structure fit remain.
+- [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
+### Validation and next actions
+- Latest full118tests pass; four English plates visually inspected (paired62,
+  calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
+- Finish responseprobe pilots and all64matched response sensitivity comparisons;
+  complete all32new SED fits without dropping failures or flattening weights.
+- Follow direct-entry/native-joint jobs. Assemble only complete matrices; failed
+  objects stay in denominator. Fit26k/candidate/heldout cohorts atzero/point/32
+  shared corrections only after numerical admission passes.
+- Propagate actual independent-seed/previous-resolution entry matrices through
+  posterior weights and shared counts. Nativefine audit is258objects, not an
+  unperformed fullfine26k likelihood. Require probability<.003/countmean<.5,
+  adequate importance ESS, sampler Rhat<1.05/ESS>=100/no divergence and bridge
+  overlap before accepting any product. Keep all numerical attempts/flags.
+- Freeze final candidate/model/calibration/prior/selection identities, generate
+  matching baseline/candidate predictions, then open/scorereferences once.
+- Complete joint high-q counts, supported/extrapolated/unvalidated domains,
+  structure-prior withdrawal/fullmarginalization, final figures and report.
 
 ## Completed v3.0 research delivery
 

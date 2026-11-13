@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "data/v3_1/target_native_pilot/complete.json": "81f5d6240961a6dac9d17234ad4df861951a11bc8b9c5b732e2645ba6ccd1c6d",
+    "data/v3_1/target_native_pilot/roles.npz": "95dc39dc3012b3074fdd245a3ebcbef2ab2a530cb8ef911abbc95b2e26ee1a50",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "scripts/v3_1_response_probe_prepare.py": "e2047a7ae69284b51f77dbbb6078509eaea64dc3a84870273e05a85d4785a5ef",
+    "docs/v3_1_response_probe_protocol.md": "1d7048a41020ea1394dc397054f2663cfb45bd70d94f4316177fb8b2632fd758"
+  },
+  "outputs": {
+    "target_photometry.npz": "943adf4ea354c768afa81db0def042ce26345c6027ce03675888087b9138af48",
+    "development_photometry.npz": "ec6f43175e76eeee243006f8d51525419c52857b7db45db4ffaead1f24b135a9",
+    "development_evidence.npz": "d94fb1bc868af42473994967a83e0e69e9b4e0842eb3df90c571bf99eaf216ee",
+    "development_design.json": "6d9516ea8831f54c47ebf4d4ad115f3e8574863a9b5bba022bba60f78828700b"
+  },
+  "target_rows": 128,
+  "development_rows": 256,
+  "all_PSF": true,
+  "missing_TYPE_excluded": 0,
+  "non_PSF_excluded": 0,
+  "job": "61220366",
+  "response_scores_opened": false,
+  "new_validation_outcomes_opened": false,
+  "scope": "Fixed128target and stratified seen-development response probes. Existing development labels only; no new validation. Probe predictive evidence differs from population-marginal evidence."
+}
