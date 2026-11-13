@@ -1,5 +1,36 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile candidate source inventory and current documentation
+- Candidatecompact audit initially stopped on25not-yet-collected localrefinement
+  markers. Preservedcollection-gap record, retrievedexactsmallmarkers inone
+  boundedarchive, authenticatedagainst completedensemble inputs; no scientific
+  rerun ordatachange. Actualcompactchecker now229checks pass/mainFalse retained.
+  Maximumweighted-count residual4.093e-12; originalnumericalgate unchanged.
+- Correctedtwo stale completed-stage statements inmethods/atlas using actual
+  response/domain figureacceptance hashchains. Checked140local links across10
+  currentdocuments, none missing; limitedscope documented, notfinalacceptance.
+- Comparedtracked HEAD7744d5f toauthorized31f1277:1039changedpaths, no old/shared
+  source, non-v3.1scripts ortrackedv3.0figure/manifest changes. Thisisnot a fresh
+  remote large-data/deployment audit; snapshot scope explicit.
+- Holdoutgroups23/24 COMPLETED9m56/8m13; eightstates24–31 all2048pass,
+  compactmarkers collected. Total32/34complete,31at2048/state1at8192; original
+  levelsretained. Clearedonlyexistingtransfer23/24 after14/15sourcehashes and
+  actualcompletion proof. Existingensemble61225886 promoteddebug withall
+  dependencies intact; entry12 promotedwithin fresh5-jobcap.
+- Entry10 COMPLETED13m22;500original failures collected, refinementpending.
+  Resourcepilot61237364 andentry11 confirmedlive; remainingfulltransfer/
+  structure/figure deliverypending.
+- Transferresourcepilot61237364 COMPLETED18m39:all12states/96conditional
+  checks pass; measuredsinglechild1.485GiB, aggregatebatch19.42GiB,57original
+  sourcehashes rechecked. All36compactfiles authenticated/collected. No truth or
+  sharedjoint-support acceptance implied. Preparedsameexecutor arraywrapper
+  (atmosttwo packednodes); bashsyntax passes, rolloutnotyetsubmitted.
+- Lastoriginalholdout25(two states) promoteddebug30min withinfreshcap, basedon
+  actualsame-case8192group27m24 andremaining2048groups<10min; checkpoints and
+  terminalfailures remainprotected. No duplicatewriter orscientificchange.
+- Commands: sourceSHA archivecollection, ensemble_compact_check --case candidate,
+  doclink/hash checks, gitdiff baseline, bounded sacct/log checks. No coreedits.
+
 ## 2026-11-14 — preserve first true-heldout transfer failures and launch bounded resource pilot
 - Trueholdout transfer61231554_18 COMPLETED17m56:states4–7, same6000PSF and
   nested935candidate objects, fitexcludesfields4/6/12. All32conditional numerical

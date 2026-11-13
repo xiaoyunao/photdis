@@ -1,0 +1,300 @@
+{
+  "completed_states": 32,
+  "remaining_states": [
+    32,
+    33
+  ],
+  "conditional_source_sha256": "12154f579d6d0a523abc5d7793b7ae48436570d6dd7d0114d720d5c5d819ea78",
+  "rows": [
+    {
+      "correction": 0,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_00/complete.json",
+      "sha256": "4821c9d9a8b87389276c1a42720cee8cfec01706b6f5b293dfac7112d5d2a8a5",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_00_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_00_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 1,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_01/complete.json",
+      "sha256": "3d3ca6897d8125e6a455eb1bb621af6941f7de2da8b5eb54a59c3f29cb04687a",
+      "selected_draws": 8192,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_01_s8192/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_01_s8192/joint_counts/complete.json"
+    },
+    {
+      "correction": 2,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_02/complete.json",
+      "sha256": "ba4edbc7f107007fd4fb28ca31572d73a0bcf104aa4582df145d96c8ce28889c",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_02_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_02_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 3,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_03/complete.json",
+      "sha256": "ee5788f996c6051b6c48cc91f792afbe355cf50000a5017eb5e2b6194e4570dd",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_03_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_03_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 4,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_04/complete.json",
+      "sha256": "c6a55c6bf128dfcc0c6ccdd96f2a6dc3c27983f9ef85dda3765c49db0cf98046",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_04_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_04_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 5,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_05/complete.json",
+      "sha256": "d40cfa52cf4ca2178b4fa7c3a9a14973cb166b631123152687edf6dad567b129",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_05_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_05_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 6,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_06/complete.json",
+      "sha256": "da7b68d69fc1cf5386806acd003606db0adce9f1c0c48c089dda21f81ab0087a",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_06_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_06_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 7,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_07/complete.json",
+      "sha256": "7c84a71aa8bbc32fa62c42a8f63c821053e7c3733fa91a127ee211bd4498831c",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_07_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_07_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 8,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_08/complete.json",
+      "sha256": "df0b6f7b34170c4746552b8653b1c973c206415909fff79b6c82c34ca70ac5cc",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_08_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_08_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 9,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_09/complete.json",
+      "sha256": "61fd5232313df1b6bec8d88494202ea0434a36a55d8400ef265eb4cf895eebc3",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_09_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_09_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 10,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_10/complete.json",
+      "sha256": "3afff10bfe444740b529279f5e4df708cfbafab2928e2aee789966fad0e70e4a",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_10_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_10_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 11,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_11/complete.json",
+      "sha256": "3184fb8d1ee943bc282e5f6f06f2ef654f0488746b5ce9a02fae339452533338",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_11_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_11_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 12,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_12/complete.json",
+      "sha256": "f80fe07028976f42e88e4037cc3e292d1886d28cf0cb149bbdac59ce98f455d3",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_12_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_12_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 13,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_13/complete.json",
+      "sha256": "db2c4053bec60c69c225ba532df99768c541faeeb9923955d1f75cdbc8f6e9b5",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_13_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_13_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 14,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_14/complete.json",
+      "sha256": "42174b61aaaf56d8bb3043873414b8a0730b87d746abff39935421bf65abac76",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_14_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_14_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 15,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_15/complete.json",
+      "sha256": "c41e7a459548ca72f34bd7bb96e7b94f456c0b24f85b84ded732bef5e197faea",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_15_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_15_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 16,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_16/complete.json",
+      "sha256": "b548a26c016e65fec020fc0138e9c7c4d3ab8e89144d28e5984879f465002cc1",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_16_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_16_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 17,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_17/complete.json",
+      "sha256": "34d7dfa71193ba9af8113e3dfe244a0a5887fc91f51129406b373d38f139e448",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_17_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_17_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 18,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_18/complete.json",
+      "sha256": "0873caa62b88ade5a61d146bd9caaf8e74407122b7cb22fdfbf017f6083e923e",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_18_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_18_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 19,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_19/complete.json",
+      "sha256": "ae52a8ab9ff304e6d6b05629a3df25341ba51dbbd795d789dc39a3f97992a70a",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_19_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_19_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 20,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_20/complete.json",
+      "sha256": "e5b9ae0a92c72bf01c4b4a18d78cb0071636734338eb6c823483a980eb79e700",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_20_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_20_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 21,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_21/complete.json",
+      "sha256": "ade6a2e971219b7f6f084c9e0accd413d8cc009d7eab061054acb1db216c9180",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_21_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_21_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 22,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_22/complete.json",
+      "sha256": "57f0f1ae870d1cdf59187c5c41040603c2edfcfe171b883e37b31b4c8294ee69",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_22_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_22_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 23,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_23/complete.json",
+      "sha256": "e817b4b0008d6ac9f6b2fb129dcbd787dcde298562e45c2f8af31623766b4df2",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_23_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_23_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 24,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_24/complete.json",
+      "sha256": "ffbfe0d64a67a302eb3ef943dc7e44a87da39a6163665daacd360a330ea2d71a",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_24_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_24_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 25,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_25/complete.json",
+      "sha256": "ef0e690543f1c137a473770575612424921c4c6b9306c0aa1d02c8ab2ed2bfff",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_25_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_25_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 26,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_26/complete.json",
+      "sha256": "f9ee47a27b0dd0feb529aadf81274341c354f8a11c53413ec55c37a438045814",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_26_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_26_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 27,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_27/complete.json",
+      "sha256": "59cda0b609ddad6e5f4215decd0639d000b2d715ab51d10249c88234926a0834",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_27_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_27_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 28,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_28/complete.json",
+      "sha256": "cf93aee0b15cda8b75aa4360badd027d8f671dd765ffb99c319f467259651ac2",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_28_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_28_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 29,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_29/complete.json",
+      "sha256": "d87d9298d2feeb06c0954a0657162327363bc536c17f59776d9bc3eccfaffb6f",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_29_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_29_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 30,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_30/complete.json",
+      "sha256": "035a588a9b77192d269034d9c7e45881e036219b3ef5964b776c2f4fec95ec46",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_30_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_30_s2048/joint_counts/complete.json"
+    },
+    {
+      "correction": 31,
+      "marker": "manifests/v3_1/target_refinement/holdout/correction_31/complete.json",
+      "sha256": "5ffd469ffb3d9b2245406faa51a92c3c48902d4a1ac6bb89b7caa467be63f3ae",
+      "selected_draws": 2048,
+      "passed": true,
+      "selected_fit": "data/v3_1/target_fits/holdout/correction_31_s2048/complete.json",
+      "selected_counts": "data/v3_1/target_fits/holdout/correction_31_s2048/joint_counts/complete.json"
+    }
+  ],
+  "passed": true,
+  "scope": "Collected conditional completion markers and frozen refinement schedule only; full fit/count payload authentication remains with allocated complete-state ensemble. Not a claim of full ensemble or scientific acceptance."
+}

@@ -1,0 +1,33 @@
+{
+  "cause": "Required candidate refinement markers not yet collected locally; missing local artifact, not a science-stage failure.",
+  "missing_corrections": [
+    1,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "command": "PYTHONPATH=src:scripts python3 scripts/v3_1_ensemble_compact_check.py --case candidate",
+  "status": "stopped_before_complete_check",
+  "error": "FileNotFoundError: manifests/v3_1/target_refinement/candidate/correction_01/complete.json"
+}

@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "31f12772fe29c801db7269adf3a8b160e264bb5f",
+  "examined_commit": "7744d5fef217a2d5287d04848d2dcc5f19e853e2",
+  "changed_paths": 1039,
+  "protected_changes": {
+    "src/photdis/v3/": [],
+    "manifests/v3_0/": [],
+    "figures/v3_0/": [],
+    "other_pre_v3_1_source": [],
+    "non_v3_1_scripts": []
+  },
+  "passed": true,
+  "scope": "Git-tracked old/shared source and tracked v3.0 products only. Does not claim a fresh scan of remote large catalogs/model bytes or deployment runtime; those remain separately authenticated by frozen inputs and stage records."
+}

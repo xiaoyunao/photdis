@@ -58,19 +58,23 @@ Negative findings remain deliverables, never successful calibration claims.
   Broadensemble61225883 COMPLETED24s/authenticatesall34payloads; mainESS30.97863
   andmaxweight.0379785 butabsolute logZseed+.600975/previouslevel−6.637352 fail
   .05gate. Zero/point/main rejected; cutpasses butnotreplacement. 229actual
-  compactchecks pass; floatingweight/count roundoff andinitialcheckerfailure
+  compactchecks pass; candidatecompact also229checks passafterretrieving25
+  missinglocalmarkers againstensemblehashes (no rerun). Floatingweight/count roundoff andinitialcheckerfailure
   preserved separately, productiondata/scientificgates unchanged.
-  First24 holdout statescomplete: twenty-three2048pass, state1 needs8192 after
+  First32 holdout statescomplete: thirty-one2048pass, state1 needs8192 after
   2048count failure. Pendingholdoutgroups21–25 now1h afteractualfull8192
   group27m24 proof (>2x margin); otherholdoutstates/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
   Pendingtransfergroups5/17 containing8192states now2h (4x17–18min estimate
-  exceedsold1h). Guarded12-state2048resourcepilot61237364 nowrunning after57
-  sourcehash checks andzero-runtime cancellations ofonlygroups3/4/6. Report
-  61231678 nowwaits20retainedtasks+pilot+holdoutensemble; no canceledparent.
-  Actualpilot runtime/RSS/results requireverification beforewiderpacking.
+  exceedsold1h). Guarded12-state2048resourcepilot61237364 COMPLETED18m39:
+  all12states/96conditionalchecks pass; singlechild1.485GiB/batch19.42GiB,
+  all57originalsources rechecked. Zero-runtimecancelsonlygroups3/4/6; report
+  61231678 waits20retainedtasks+pilot+holdoutensemble, no canceledparent.
+  Sameexecutor arraywrapperprepared/max2packednodes; rolloutrequiresfresh
+  pending/terminal/absence/source checks andexplicitdependencyrepair. Lasttwo
+  holdoutstates task25 promoteddebug30min afteractualsame-case8192timing proof.
   Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
   16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
   Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.

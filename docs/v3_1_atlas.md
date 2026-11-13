@@ -114,8 +114,10 @@ All six panels visually inspected;165actual hash/PNG300dpi/PDF/150source-cell
 checks pass. [PDF](../figures/v3_1/domain_photometry/photometric_occupancy.pdf),
 [plotted cells](../manifests/v3_1/domain_photometry_figures/plotted.csv),
 [acceptance](../manifests/v3_1/domain_photometry_figures/acceptance.json).
-Source-qualified reference and missing-reference-mass rendering code is ready,
-but has not run because the required final evidence products remain incomplete.
+Source-qualified reference and missing-reference-mass maps are complete and
+visually accepted below; their availability flags do not establish calibration.
+The final scientific use-domain adjudication still requires the full remaining
+sky-transfer and structure outcomes.
 
 ## Frozen external field comparisons
 
