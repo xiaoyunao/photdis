@@ -104,8 +104,10 @@ Negative findings remain deliverables, never successful calibration claims.
   All32state entry61223167/refinement61223172 underway; queuedrefinementindices
   extendedto3h. Originalrefinement0 TIMEOUT30m27; terminal/absence/sourcehashverified,
   unstartedresume61225943replaced byresource-only32workerpilot61228245debug30min
-  afterterminal/absence/hashchecks. Sameintegrand/seeds/checkpoints; other31
-  refinementjobs untouchedpendingpilot runtime/memory evidence. Assembly/posterior
+  afterterminal/absence/hashchecks. PilotCOMPLETED26m06:all512contexts/1024
+  branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
+  same32workerexecution for30stillpendingstates2–31; originalstate1running
+  remainsuntouched. Keep3h limits andmax4totalnodes. Assembly/posterior
   awaitallstates numerical admission. Pendingentry1–31limits now30min basedon
   13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
   improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
@@ -150,9 +152,10 @@ Negative findings remain deliverables, never successful calibration claims.
   Two-plate radial renderer nowprepared/syntaxchecked; actualcomplete tables and
   rendering/visualQA remainrequired.
 - Finish all 32 structure native/entry/refinement states, including exact entry
-  refinement resource pilot 61228245, then actual shared-posterior/count inference
-  and the fair prior-withdrawn baseline. Other31refinements keep3h limits until
-  actual pilot runtime/memory/outcomes justify resource-only changes.
+  refinement draw0 nowcomplete61228245/all512pass. Safelyreplaceonlypending
+  states2–31 withvalidated32workeradapter, originaldraw1continues8workers.
+  Keep3h limits/max4totalnodes; then actualshared-posterior/count inference and
+  fairprior-withdrawn baseline.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.

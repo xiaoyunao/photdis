@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — validate exact 32-worker structure refinement for all512contexts
+- Job61228245 COMPLETED26m06; original bounded2^23 integrals/seeds/function
+  unchanged. All512nativePSF contexts /1024branch rows pass; original512failed
+  contexts and30m27timeout retained. Compact summary and resource journal
+  authenticated; journal inputs equal scientific inputs and referenced hash.
+- Actual execution1548.72s after startup; maximum single-child RSS3.967GiB
+  versus6GiB/worker planning bound. Slurm batch MaxRSS sample122109088KiB
+  recorded during execution is a separate job metric, not per-child memory.
+- Prepared array wrapper for only still-pending states2–31,32workers and3h limits,
+  max3newnodes plus already-running original draw1 <=4total. Originaldraw1
+  remains8workers/live; no cancellation or replacement applied yet. Require
+  fresh preflight and state-restricted cancellation after clean source sync.
+- Shell syntax and actual512identity/1024branch/table/journal hash checks pass.
+  Assembly/inference still require every32state native/entry/refined product;
+  this resource success is not a structure posterior or scientific calibration.
+
 ## 2026-11-14 — complete third candidate-mode shard and prepare radial figures
 - Candidate array child 61227827_2 completed in 17m39 (actual job 61228343):
   443 native PSF objects, 371 fixed high-q, all mode numerics pass. Compact
