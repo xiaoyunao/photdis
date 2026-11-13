@@ -75,6 +75,8 @@ Keep original AstroNN/APOGEE distance/class/FeH strata explicitly named; add
 separate SpecDis-distance, SPDist-distance and MWS-class/FeH strata with the same
 distance/metallicity boundaries. An AstroNN-missing row with qualified VAC
 distance must not disappear from that source's distance-domain inventory.
+Retain the original v3.1 FeH<−1.5/−1.5to−.5/>=−.5/unavailable marginal grid in
+parallel with the registered poor<−1 contrast; neither replaces the other.
 
 Common: exact strict-member identities/probabilities and original scales.json.
 For NGC1261 use HST16.775±.872kpc (already includes1.7%); uncertainty is ONE
@@ -120,6 +122,8 @@ test. No independently measured fullcandidate contamination claim is justified.
 Re-evaluate proper scores on the last two saved numerical levels (first reference
 sidecar versus original.02 where necessary): logscore difference<.02 and Gaia
 PIT difference<.003, in addition to prior probability/quantile/MC gates. Preserve
+the same.02logscore guard for each independently qualified class channel; an
+underflowed/zero class probability cannot silently pass that proper-score guard. Preserve
 and report score failures; any subsequent numerical-only refinement must retain
 the frozen model/sample and initial results. Never drop flagged identities or
 retune a scientific parameter after opening. Report accepted-only numbers with

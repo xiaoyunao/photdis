@@ -26,16 +26,16 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 timedout at2h; exactresumes61225052/61225072regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry 15shards(allbut13) complete:24375objects/27704envelopes allpass;
+  Direct entry all16shards complete:26000objects/29540envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
   (6–9)/61223978(10–13), unstarted14–15group replaced61223886. Alloriginals
-  preserved. Assembly61219399 dependencies updated; jointrepack61222999 passes.
+  preserved. Assembly61219399 running; jointrepack61222999 passes.
   Candidatezero boundedfit/countpilot61224010 waitsafterassembly. No contextinterpolation. Population
   fit/count/ensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
-  Independently regenerated32SED refits:24complete(groups0–5 includingexact
-  group0resume61218979), groups6/7pending.
+  Independently regenerated32SED refits:28complete(groups0–6 includingexact
+  group0resume61218979), group7pending.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
@@ -68,11 +68,14 @@ Negative findings remain deliverables, never successful calibration claims.
   pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
   All32state entry61223167/refinement61223172 queued; assembly/posterior
   awaitallstates numerical admission.
-  Full scientific counts, final product evaluation, use-domain map and structure fit remain.
+  Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
+  implemented/tested, notrun. Availability isnot calibration; finalscientific
+  adjudication andEnglishfigures remainrequired. Full scientific counts, final
+  product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full150tests pass4.00s; four English plates visually inspected (paired62,
+- Latest full153tests pass4.03s; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

@@ -31,6 +31,8 @@ def main():
                  'src/photdis/class_evidence.py', 'src/photdis/v3/data.py',
                  'data/baseline_v1_4/sources.npz', 'data/baseline_v1_4/source_evidence.npz',
                  'data/baseline_v1_4/specdis_raw.npz', 'data/baseline_v1_4/spdist_raw.npz',
+                 'scripts/v3_1_domain_prepare.py', 'scripts/v3_1_domain_evidence.py',
+                 'src/photdis/v3_1/use_domains.py', 'docs/v3_1_use_domain_protocol.md',
                  'src/photdis/v3/metrics.py', 'src/photdis/v3_1/comparison.py',
                  'src/photdis/gaia.py', 'src/photdis/spectroscopy.py',
                  'docs/v3_1_final_validation_protocol.md', 'docs/v3_1_validation_roles.md',
@@ -41,6 +43,8 @@ def main():
     assert roles['roles_frozen']
     admission = inv.marker(root/'validation_admission/complete.json')
     assert admission['photometry_only'] and not admission['references_read'] and admission['original_candidate_reproduced']
+    domain = inv.marker(root/'domain_grid/complete.json')
+    assert domain['all_PSF'] and not domain['references_read'] and domain['cells']==75
     pointers = json.loads((root/'validation_roles/references.json').read_text())
     for value in pointers.values():
         inv.add(value['path'], value['sha256'])

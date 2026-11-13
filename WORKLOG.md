@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — freeze observable evidence domains without certifying calibration
+- Added photometry-only75-cell preparation for26000application/526field/3032common,
+  exactcandidate admission, observedr/dereddenedcolor/signedW1 andemptycells.
+  Finalfreeze nowrequires this grid. Preparation andpost-freeze evidence drivers
+  implemented; neither runyet. Source-specific distanceavailability andmissing
+  reference probability mass are not calibrated-probability estimates.
+- Post-freeze domain evidence keeps exact3540candidate/fixedmainhighq cellmeans,
+  numerical flags, actualsampler/bridge/importance support andfinitebootstrapESS;
+  onecommon HSTscale and64SEDprobe evidence remain separate. Actualscientific
+  domain adjudication andEnglishfigures stillrequired; availabilityalone isnot WP4.
+- Restored original FeH−1.5/−.5 grid alongsidepoor<−1 contrasts forboth independent
+  classchannels. Addedclass proper-logscore convergence guard, retainingzero/
+  nonfinite probability failures. No externalreference outcomes opened.
+- Lastentry13 passes:all16shards26000objects/29540envelopes pass; compactmarker
+  collected. Assembly61219399running(24576/26000at27min), candidatepilot61224010
+  stilldependency-gated. NewSED6complete39m15:28/32responses; group7pending.
+  Structureentry0complete13m37, itsrefinementrunning; noallstate acceptance.
+  Registered responseprobes2–5/34–35/45–46complete; remainingjobs maintained.
+- Validation: syntax/shell/diffchecks and153tests pass4.03s;15targeted domain/
+  external-score/report tests pass1.58s. Gitfetch showslocal/origin aligned before
+  this milestone. Next: sync/run domainpreparation, completeassembly/targetpilot,
+  allboundedscience runs, matching predictions andonce-only external validation.
+
 ## 2026-11-13 — verify external candidate eligibility and retain every reference channel
 - Admission61224943 COMPLETED20s: exact26000application/3540candidate mask
   reproduced. Externalfield519/526 admitted(7QRFsupport failures); NGC1261

@@ -95,4 +95,12 @@ def compare_score_levels(previous, selected):
         pd = abs(selected['gaia']['pit']-previous['gaia']['pit'])
         checks.append(dict(channel='gaia',logscore_delta=float(delta),pit_delta=float(pd),
             passed=bool(np.isfinite([delta,pd]).all() and delta<.02 and pd<.003)))
+    for channel in ['class','mws_class']:
+        if (channel in previous)!=(channel in selected):raise ValueError('Numerical levels require the same class channels')
+        if channel not in selected:continue
+        a,b=previous[channel]['log_score'],selected[channel]['log_score']
+        finite=a is not None and b is not None and np.isfinite([a,b]).all()
+        delta=float(abs(b-a)) if finite else None
+        checks.append(dict(channel=channel,logscore_delta=delta,nonfinite_class_score=not finite,
+            passed=bool(finite and delta<.02)))
     return dict(channels_checked=len(checks),checks=checks,passed=all(r['passed'] for r in checks))

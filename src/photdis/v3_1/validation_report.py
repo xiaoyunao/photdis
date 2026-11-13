@@ -16,6 +16,9 @@ def external_strata(photo, evidence):
     metals={'poor':valid & (feh < -1),'not_poor':valid & (feh >= -1),'unavailable':~valid}
     for name,mask in classes.items():masks['class/'+name]=mask
     for name,mask in metals.items():masks['feh/'+name]=mask
+    for lo,hi in [(-np.inf,-1.5),(-1.5,-.5),(-.5,np.inf)]:
+        masks[f'feh_original/{lo}_{hi}']=valid & (feh>=lo) & (feh<hi)
+    masks['feh_original/unavailable']=~valid
     for c,cm in classes.items():
         for f,fm in metals.items():masks[f'class_feh/{c}/{f}']=cm & fm
     valid=evidence['distance_available']; d=evidence['distance_kpc']; distances={}
@@ -37,6 +40,9 @@ def external_strata(photo, evidence):
         mws_metals={'poor':quality & (evidence['rvs_feh'] < -1),'not_poor':quality & (evidence['rvs_feh']>=-1),'unavailable':~quality}
         for name,mask in mws_classes.items():masks['mws_class/'+name]=mask
         for name,mask in mws_metals.items():masks['mws_feh/'+name]=mask
+        for lo,hi in [(-np.inf,-1.5),(-1.5,-.5),(-.5,np.inf)]:
+            masks[f'mws_feh_original/{lo}_{hi}']=quality & (evidence['rvs_feh']>=lo) & (evidence['rvs_feh']<hi)
+        masks['mws_feh_original/unavailable']=~quality
         for c,cm in mws_classes.items():
             for f,fm in mws_metals.items():masks[f'mws_class_feh/{c}/{f}']=cm & fm
     for lo,hi in [(-np.inf,18),(18,20),(20,22),(22,np.inf)]:

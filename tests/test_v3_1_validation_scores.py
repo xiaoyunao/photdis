@@ -60,6 +60,10 @@ def test_multiple_teachers_and_classes_remain_separate():
     metrics,_=metric_arrays([dict(views={'v':result},checks=[dict(view='v',accepted=True)])],'v')
     assert metrics['class/probability'][0]==pytest.approx(.7)
     assert metrics['mws_class/probability'][0]==pytest.approx(.1)
+    altered=copy.deepcopy(result); altered['mws_class']['log_score']+=.03
+    assert not compare_score_levels(result,altered)['passed']
+    altered=copy.deepcopy(result); altered['class']['log_score']=None
+    assert not compare_score_levels(result,altered)['passed']
 
 
 def test_nine_view_driver_reads_original_reference_and_keeps_view_flags(tmp_path,monkeypatch):
