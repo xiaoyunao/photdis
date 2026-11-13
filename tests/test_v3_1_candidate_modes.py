@@ -47,3 +47,14 @@ def test_parent_aggregation_and_weak_modes_are_retained():
     assert len(records)==3 and records[-1]['weak_basin']
     assert pairs==[dict(first=0,second=1,different_class=False,same_class_different_binary=True,same_class_different_parent=False)]
     with pytest.raises(ValueError):describe_basins(np.arange(3.),np.array([2.,4.]),np.arange(7.),masses,np.array([-1,0,1]))
+
+
+def test_saved_evidence_subtraction_roundoff_is_retained_not_reweighted():
+    grid=np.linspace(-20,50,701);native=np.array([norm.logpdf(grid,m,1.) for m in [10,14,17]])
+    theta=np.full((2,2,3,5),1/15);parameters=np.zeros((2,3,2));lw=np.log([.4,.6])-1.6e-12;original=lw.copy()
+    result=population_pdf(native,grid,parameters,theta,lw)
+    reference=population_pdf(native,grid,parameters,theta,np.log([.4,.6]))
+    np.testing.assert_array_equal(lw,original)
+    assert abs(float(result['state_weight_log_normalization'])+1.6e-12)<1e-15
+    np.testing.assert_allclose(result['class_logpdf'],reference['class_logpdf'],atol=1e-12,rtol=0)
+    with pytest.raises(ValueError):population_pdf(native,grid,parameters,theta,lw-1e-6)

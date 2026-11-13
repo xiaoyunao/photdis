@@ -1,0 +1,11 @@
+{
+  "original_job": "61227356",
+  "state": "61227356|FAILED|00:00:12|1:0\n",
+  "original_source_commit": "d653d3ad54bf26e0fd3df151460906c4fe12f745",
+  "archive": "data/v3_1/candidate_modes_failed_61227356_weight_guard",
+  "retained_files": {
+    "inputs.json": "cc7948f59a53fcc1484a53166636c80b8d5926f3a957583dfb08641a9bdce71a"
+  },
+  "original_log": "logs/photdis_v3_1_candidatemodes_61227356.out",
+  "scope": "Initialization succeeded; frozen weight log-sum -1.583067e-12 tripped unregistered 1e-12 precondition. No scientific object products were written. Preserve original inputs/log; align precondition with existing 1e-8 normalization gate, without modifying stored weights, model, grid or scientific acceptance."
+}

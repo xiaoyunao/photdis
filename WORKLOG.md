@@ -1,5 +1,51 @@
 # WORKLOG
 
+## 2026-11-13 — open fixed field evidence and recover mode preflight/refit allocation
+- Fieldassociation61226762 COMPLETED15m37:526nativePSF retained;494qualified
+  signedGaia including40negative,0missing;471available/126precisedistance refs;
+  APOGEEclass44unknown/288dwarf/194giant. MWS/VACraw/qualifiedmatches0, retained
+  explicitly. These arewholefieldcohort counts, notstrictnewskyprecision count.
+  Compactcompletion collected; referenceavailability isnot scoredaccuracy.
+- Candidatepilot61227356 FAILED12s beforeanyobjectproduct: storedstateweights
+  logsum=-1.583067e-12 (absoluteevidences≈59580) exceedednewimplementation's1e-12
+  precondition. No model/stateweight error found. Matchprecondition toexisting
+  registered1e-8normalization gate; preserveweightsbyte-for-byte, recordresidual,
+  retain originalPDF normalization. Addedroundoff/no-mutation/corruptweight test.
+  Full174tests pass6.39s; focused14mode/adjointtests pass0.59s.
+- Confirmedfailedpilot terminal/absent, outputcontainedonlyinputs.json andempty
+  objectdirs; reversiblyarchived asdata/v3_1/candidate_modes_failed_61227356_weight_guard.
+  Originalcommit d653d3a/log/hashreceipt retained. Same8-IDretry requiresnewsync;
+  full3540calculation remainsundone, no scientificgate relaxed.
+- Refit61216483_7 TIMEOUT30m01, allfourstates1028–1031checkpoint17 preserved.
+  Verifiedterminal/absence/smallsourcehashes; exactresume61227619_7 debug30min
+  submitted. Sameoriginalprogram verifiesfulldatahashes oncompute; downstream
+  existingprobe61221630_60–63 dependencies redirectedtoexactresume. No duplicate
+  writer, missingstate normalization orscientificchange.
+- Prepared3futureEnglishplates in2renderers; syntaxonlyvalidated, no fabricated
+  table/figure output. Finalfieldscore/commonassociation queued/running; main
+  evidencefailure andremainingfour-work-package obligations remainexplicit.
+
+## 2026-11-13 — launch exact-mode pilot and prepare final scientific figures
+- Threeends synchronizedtod653d3a; submittedfixed8-IDcandidate modepilot61227356
+  debug30min/8workers. Full3540mode productstillrequiresactualpilot andfullrun;
+  no prediction/model/weights changed. Source/provenance guards includeexact
+  originaldraw12application calibration-vector reproduction.
+- Fieldreference association61226762 passedfreezeverification andwrotestarted
+  2026-11-13T14:50:09UTC; AstroNN/APOGEE same-IDpayload andGaia tileinventory
+  exist, Gaia/MWSassociation andfinalsummary stillpending atlastcheck. Thusfinal
+  outcomesarenowopened underoriginalfreeze, noteligiblefor scientificretuning.
+- Promotedexistingcommonassociation61226764 andfieldscore61226763 todebug30min,
+  keepingdependencies/inputs. Mainmodepilot andthesejobs queuedbehindtwoactive
+  allocations; no duplicatewriters or newreference selection.
+- Preparedactual-table renderers(candidate_mode_figures.py,validation_figures.py):
+  requirefull3540mode completion andfull3558/nine-view externalreport respectively;
+  separatefixedhighq, overlappingmode descriptors, original0.1binaryproxy,
+  same-basin numericalflags, skyblock intervals andone sharedNGC1261scale.
+  Pythonparsechecks pass; scriptsnotrendered, no newfigure/visualacceptanceclaim.
+- Integratedexactadjointformula/per-object normalizers/conservation/basin-boundary
+  checks inmethods§4.1. Actualcomputations/figures, remainingWP2/structure and
+  scientificdomainadjudication arestillrequired; goalremainsactive.
+
 ## 2026-11-13 — freeze all final predictions and implement exact candidate modes
 - Freeze61226412 COMPLETED5m33/0:0:53725artifacts, all3558objects andnineviews
   authenticated beforeoutcomeopening. 8.52MBinventory retainedNERSC; localreceipt

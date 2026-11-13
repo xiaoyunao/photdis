@@ -1,0 +1,20 @@
+{
+  "job": "61227356",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-t",
+    "00:30:00",
+    "scripts/run_v3_1_candidate_modes.sh",
+    "--pilot",
+    "--workers",
+    "8"
+  ],
+  "source_commit": "d653d3ad54bf26e0fd3df151460906c4fe12f745",
+  "pilot_n": 8,
+  "full_candidate_n": 3540,
+  "main_highq_n": 3003,
+  "scope": "Registered exact same candidate decomposition; no references, no model/weight changes."
+}

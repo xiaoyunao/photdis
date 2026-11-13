@@ -45,7 +45,8 @@ Negative findings remain deliverables, never successful calibration claims.
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits:28complete(groups0–6 includingexact
-  group0resume61218979), group7pendingdebug30min withper-iterationcheckpoints.
+  group0resume61218979), group7original61216483_7 TIMEOUT30m01; allfouriteration17checkpoints
+  retained, exactresume61227619_7debug30min; probe60–63dependencies redirected.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
@@ -57,7 +58,9 @@ Negative findings remain deliverables, never successful calibration claims.
   strictnewsky; no new far-field precision evidence. All3558reference-prior
   numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
   Originalflags retained. Allpredictionfreeze61226412 COMPLETED5m33/53725artifacts; fieldreference
-  association61226762 nowrunningdebug30min underimmutablefreeze; final target-prior
+  association61226762 openedreference at14:50:09UTC afterimmutablefreeze;
+  associationcomplete15m37:494signedGaia/40negative,126wholecohortprecise
+  distances;0MWSmatches. Final target-prior
   identity computed withretained numericalflag. Both8-ID targetprediction pilots
   numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
   61226371 completes23m53, all3032numericalpass; originalensembleflagretained.
@@ -71,15 +74,17 @@ Negative findings remain deliverables, never successful calibration claims.
   candidate admission/primary versusoutside-domain report protocol added, exact
   application3540mask reproduced by61224943(20s). Field519/526 andcommon1732/3032
   in samecandidate domain; others retained outside-domain. Same-ID MWS/VAC channel
-  association/scoring implemented; fieldassociationrunning, commonassociation
+  association/scoring implemented; fieldassociationcomplete, commonassociation
   andnine-view scoring/report stillpending.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
   unchanged32bootstrap identity, exactadjoint luminosity integration; pilot8thenfull.
-  Exactluminosity-adjoint andpopulationmode driver implemented;173fulltests pass.
-  Explicitforward-component/deep-log tests pass; actual8-IDpilot/fullproducts
-  andmodefigures remainpending.
+  Exactluminosity-adjoint andpopulationmode driver implemented;174fulltests pass.
+  Explicitforward-component/deep-log tests pass; 8-IDpilot61227356 failed12s due1.6e-12storedweight-roundoff precondition;
+  correctedguardusesexisting1e-8normgate withunchangedweights. Originalinputs
+  archived; same8-IDretry aftersync, fullproducts
+  andmodefigures remainpending. Figureprogramrequiresfullactualtables.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,

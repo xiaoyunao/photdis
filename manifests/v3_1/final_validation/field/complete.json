@@ -1,0 +1,62 @@
+{
+  "inputs": {
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_roles/references.json": "ccb5975a013739a6dd38bc4abcc60a18000933949f4412bb2244b67c50ee2532",
+    "scripts/v3_1_validation_evidence.py": "3a6abd6fdecf7dfe70df0ae794347274d584de9cc7ef0d93456e5e3e423b0756",
+    "src/photdis/gaia.py": "055355969be90820ec3403d98ed18702e0840c2fc4744546a165ae5f7ef4e9ac",
+    "src/photdis/reference_v1_4.py": "7f3c5f673249dec5cc7fff98f4dabb2a4ef850b39ee6b4cf9a1055865ca401af",
+    "data/v3_1/external_native/references.npz": "189c2777474bb8d3864e14dd5e2c106fbfa3baffc5be37434fb75f44beb65b2e",
+    "freeze_sha256": "a677031d25b10b4575f3afe2d0627fe6c42d212cda7bb58fcab696b7e91314cc",
+    "data/baseline_v1_4/sources.npz": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc",
+    "data/baseline_v1_4/source_evidence.npz": "74602dc463fd676bd88fb2e04ce4c3a07baf27651a9c3aca5f500bacc5f879ca",
+    "data/baseline_v1_4/specdis_raw.npz": "bf4e59a4772d555f0db413ccfdfdeb01a07dfb62e77ed47d6785efb5d88bc62b",
+    "data/baseline_v1_4/spdist_raw.npz": "65b943423df93aca52a4b874f1c6355cdac89ef2a3b033eca1189ac852b0550d"
+  },
+  "outputs": {
+    "evidence.npz": "842aee6d4e8232dad9bfc9bbd19fae14fe1db2335d2593bb24c0fe9daeb6eada",
+    "gaia_payload.npz": "dfaa03dd0d3d6c5b1e81a701ec17e37a71c82b66e062fff8349b6d2dcd011066",
+    "gaia_sources.json": "4c345e20ba4fbf9e03250f1e28d31cc42ff1897ce1f2392ddce539ea5e5635ca",
+    "mws_vac_payload.npz": "926f3b726e26d2bae5c65a733ca480fc36f446b8a5e9e7db1b46dc59cbe23702",
+    "astronn_apogee.npz": "63b3a2eb56ccf1ae6b56938204e0b9b8c854e1667e4987f3b687b1a278529fad"
+  },
+  "cohort": "field",
+  "n": 526,
+  "all_PSF": true,
+  "non_PSF_excluded": 0,
+  "missing_TYPE_excluded": 0,
+  "admission_exclusions_retained_upstream": true,
+  "signed_Gaia": 494,
+  "negative_Gaia": 40,
+  "missing_Gaia": 0,
+  "distance_available": 471,
+  "distance_precise": 126,
+  "class_labels": {
+    "-1": 44,
+    "0": 288,
+    "1": 194
+  },
+  "final_outcomes_opened": true,
+  "prediction_residuals_computed": false,
+  "job": "61226762",
+  "MWS_VAC_channel_audit": {
+    "raw_MWS_matches": 0,
+    "identity_conflicts": 0,
+    "ambiguous_MWS_source_ids": 0,
+    "specdis_raw_matches": 0,
+    "specdis_source_only_matches": 0,
+    "specdis_unresolved_duplicate_source": 0,
+    "specdis_qualified": 0,
+    "spdist_raw_matches": 0,
+    "spdist_source_only_matches": 0,
+    "spdist_unresolved_duplicate_source": 0,
+    "spdist_qualified": 0,
+    "specdis_qualified_non1_binary_flag": 0,
+    "mws_class_labels": {
+      "-1": 526,
+      "0": 0,
+      "1": 0,
+      "2": 0
+    }
+  },
+  "scope": "Same frozen PSF identities; source-qualified channels separate. AstroNN is Gaia-trained; common scales are shared; no calibrated fullapplication contamination claim."
+}

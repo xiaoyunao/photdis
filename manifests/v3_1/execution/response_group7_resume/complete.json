@@ -1,0 +1,73 @@
+{
+  "job": "61227619",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-t",
+    "00:30:00",
+    "--array=7",
+    "scripts/run_v3_1_response_refit.sh"
+  ],
+  "original_job": "61216483_7",
+  "original_sacct": "61216483_7|TIMEOUT|00:30:01|0:0\n",
+  "checkpoints": [
+    {
+      "draw": 1028,
+      "latest": "iteration_0017.json",
+      "iterations": 17,
+      "complete": false
+    },
+    {
+      "draw": 1029,
+      "latest": "iteration_0017.json",
+      "iterations": 17,
+      "complete": false
+    },
+    {
+      "draw": 1030,
+      "latest": "iteration_0017.json",
+      "iterations": 17,
+      "complete": false
+    },
+    {
+      "draw": 1031,
+      "latest": "iteration_0017.json",
+      "iterations": 17,
+      "complete": false
+    }
+  ],
+  "dependency_changes": [
+    [
+      "scontrol",
+      "update",
+      "JobId=61221630_60",
+      "Dependency=afterok:61227619_7"
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61221630_61",
+      "Dependency=afterok:61227619_7"
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61221630_62",
+      "Dependency=afterok:61227619_7"
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61221630_63",
+      "Dependency=afterok:61227619_7"
+    ]
+  ],
+  "source_sha256": {
+    "scripts/v3_1_response_refit.py": "92c2e7f6d2d5ac448293aa69896d169d891af5fad0ba2b044c895391f6ae0695",
+    "src/photdis/v3/uncertainty.py": "f9bff14558a4e1da00594deacbe3439f9db88e1c5205c77399d904c13caaf21b",
+    "docs/v3_1_response_protocol.md": "376949eca18301e7e88b85a2c555f58cb45f8d2c5c461f0fdaaf5c790dd66a99"
+  },
+  "scope": "Exact same four SED refits after verified terminal timeout and absence from queue. Preserve all per-iteration checkpoints; original code validates full input hashes before reuse. Existing probe children now wait for the replacement allocation; no scientific change."
+}

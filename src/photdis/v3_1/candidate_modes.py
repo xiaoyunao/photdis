@@ -17,7 +17,10 @@ def population_pdf(native, grid, parameters, theta, log_weights):
     parameters=np.asarray(parameters,float); log_weights=np.asarray(log_weights,float)
     if parameters.shape!=(len(theta),3,2) or log_weights.shape!=(len(theta),):
         raise ValueError('Aligned correction states required')
-    if not np.isclose(logsumexp(log_weights),0,atol=1e-12,rtol=0):
+    # Stored log weights subtract large absolute evidences. Keep those bytes:
+    # their roundoff is covered by the registered 1e-8 normalization gate.
+    weight_normalization=float(logsumexp(log_weights))
+    if not np.isclose(weight_normalization,0,atol=1e-8,rtol=0):
         raise ValueError('Frozen normalized state weights required')
     curves=[]; coefficients=[]; normalizations=[]; probabilities=[]; halves=[]
     for parameter,draws in zip(parameters,theta):
@@ -33,6 +36,7 @@ def population_pdf(native, grid, parameters, theta, log_weights):
     half=np.einsum('s,shcd->hcd',np.exp(log_weights),halves)
     return dict(class_logpdf=joint,logpdf=lp,log_coefficient=np.array(coefficients),
         state_log_normalization=np.array(normalizations),log_normalization=np.array(normalization),
+        state_weight_log_normalization=np.array(weight_normalization),
         class_distance=probability,mu=ContinuousPosterior(grid,np.exp(lp)[None],0.,{}).quantiles(),
         joint_delta=np.array(abs(probability-expected).max()),marginal_half_delta=np.array(abs(half[0]-half[1]).max()))
 
