@@ -3,14 +3,20 @@
 Active development: **v3.1 scientific calibration and use domains**, authorized
 2026-11-13 from the [latest Pro review](docs/pro_review_31f1277.md).
 [Four-package protocol](docs/v3_1_protocol.md) ·
+[Integrated methods and estimands](docs/v3_1_methods.md) ·
 [Evidence and remaining-work ledger](docs/v3_1_requirements_result.md) ·
 [Registered radial comparison](docs/v3_1_radial_protocol.md) ·
 [Current evidence and status](docs/v3_1_status.md).
-The initial mechanism controls are isolated under `src/photdis/v3_1`;
-`sbatch scripts/run_v3_1_diagnostics.sh --stage pilot --workers 16` runs the
-registered small diagnostic cohort on NERSC. Inspect `manifests/v3_1/execution.json`
-before submitting: do not duplicate an active job. New correction fitting waits
-for mechanism evidence and pre-frozen reference-available validation roles.
+Implementation is isolated under `src/photdis/v3_1` and `scripts/v3_1_*.py`;
+NERSC launch wrappers are `scripts/run_v3_1_*.sh`. Scientific execution requires
+allocated compute resources. Inspect the current `PLAN.md`, execution manifests
+and live SLURM jobs before submitting, to avoid duplicate writers. Final reference
+association requires the complete authenticated prediction freeze; numerical
+failures stay explicit and do not authorize retuning on final outcomes. The main
+candidate is response12/calibration12 with the fixed-kernel, candidate-cohort
+population and evidence-weighted luminosity bootstrap; the structure application
+and 64-response probe have separately documented identities.
+
 
 
 Latest completed research delivery: **Photdis v3.0 continuous SED and population system**.

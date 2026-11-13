@@ -96,3 +96,21 @@ Its split-half CDF discrepancy is0.01378. Neither the leakage nor the intervals
 establish independent contamination or complete model uncertainty.
 [All views, numerical alternatives and count moments](../manifests/v3_1/highq_counts/counts.csv);
 [joint far-count source](../manifests/v3_1/highq_counts/model_leakage.csv).
+
+## Frozen photometric occupancy
+
+![Photometric occupancy](../figures/v3_1/domain_photometry/photometric_occupancy.png)
+
+The same75observable cells show raw26000design-sample counts and3540candidate
+counts with one shared log(1+count) color scale. Observed r and extinction-corrected
+g-r are distinct; all empty cells remain explicit zeros. Candidate W1 counts
+are430unavailable,7legal signed weak,3103significant. Thus this admission envelope
+does not represent the full faint/weak-W1 application population. These are
+photometric counts only, not evidence availability or calibrated scientific domains.
+
+All six panels visually inspected;165actual hash/PNG300dpi/PDF/150source-cell
+checks pass. [PDF](../figures/v3_1/domain_photometry/photometric_occupancy.pdf),
+[plotted cells](../manifests/v3_1/domain_photometry_figures/plotted.csv),
+[acceptance](../manifests/v3_1/domain_photometry_figures/acceptance.json).
+Source-qualified reference and missing-reference-mass rendering code is ready,
+but has not run because the required final evidence products remain incomplete.

@@ -1,5 +1,43 @@
 # WORKLOG
 
+## 2026-11-13 — render fixed photometric occupancy without opening references
+- Added v3_1_domain_figures.py withauthenticated photometry/evidence stages;
+  evidence stage requires actualcomplete source tables andremainsunrun. No synthetic
+  scientificvalues or automatic calibrated-domain classification introduced.
+- Ranphotometry stage onfrozen75cell compacttables: oneEnglish PNG300dpi/PDF,
+  sixpanels/150sourcevalues, commonlog(1+count) scale, explicitzeros. Allpanels
+  visuallyinspected;165actualhash/PDF/PNG/sourcecellchecks pass. Syntaxchecked.
+  CandidateW1counts430unavailable/7legalweak/3103significant; thisisnotfullfaint/
+  weak-W1populationcoverage. Atlasupdated; finalreference mapsstillrequired.
+- Broadgroup61225864_0 COMPLETED9m09; collectedcorrections0–3allconditional
+  gatespassat2048, original512countfailures preserved. No broadensembleclaim.
+  At12m06commoncandidate61226371 stillrunning,1527/3032objectcheckpoints.
+  Broadgroup1running,2/lastSEDgroup7queued. Freeddebugslot usedtorestore
+  dependentfreeze61226412debug30min; no scientificinput/dependencychanged.
+- Next: completeactualmainprediction freeze andonce-onlyreference evaluation;
+  finish remainingpopulation/radial/64SED/structure science. Latest160science
+  tests remainpassed; figureacceptance isnot scientificcalibration acceptance.
+
+## 2026-11-13 — integrate methods and prioritize final independent SED refits
+- Added docs/v3_1_methods.md: links18existing frozenprotocols, defines allnine
+  finalview identities, selected generalized populationlikelihood, correction
+  true-mu mapping, fullshared countcovariance, externalrole/qualification rules,
+  distinct32luminosity/64SED/26kresponseESS scopes andseenNGC288 priorwithdrawal.
+  No newscience/prior/gate introduced; pendingexecution andmain evidencefailure
+  explicit. UpdatedREADME stableentry points andremovedobsolete pilot-first status.
+- Cross-checked populationequation against fixed_population.py, mixturecovariance
+  against count_mixture.py, correctionmapping against countprotocol andstructure
+  scale/membership against structure.py. All18relativeprotocol links exist;
+  documentationreview/diffchecks only, no newscientific-validation claim.
+- ExistinglastSEDrefitgroup61216483_7 promoteddebug30min, same4registeredstates
+  andper-iterationcheckpoints. Dependentpredictionfreeze61226412 restoredregular1h
+  torelease onependingdebugslot; exactdependencies retained. Submissionamendment
+  recorded inexecution/resource_priority_61216483_7; no newwriter/model/seed.
+- Runtimeaudit: commoncandidate61226371 RUNNING8m34,1088/3032objectcheckpoints;
+  broadgroup0 RUNNING8m15, groups1/2pending. Finaloutcomes remainunopened.
+- Next: completecommon predictions/freeze, independently qualifiedreferences,
+  otherpopulation/response/radial/structure evidence andfinalreports/figures.
+
 ## 2026-11-13 — complete full field prediction and common old-target control
 - Candidatefield61226370 COMPLETED4m28: all526nativePSF, fullinventory numerical
   pass, inheritedensembleacceptedFalse. Oldtargetcommon61224421 COMPLETED22m43:

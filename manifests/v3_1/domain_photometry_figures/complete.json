@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "manifests/v3_1/domain_grid/complete.json": "0d949ae2ec32d9ad557af4c172ea77eadfb44f5586a7741d5227b3f8bdff0f53",
+    "manifests/v3_1/domain_grid/cells.csv": "78ae28ce680766b706754f40d7b5fe2b91f8c2a726d7c6212aae1b8efde0e1c2",
+    "scripts/v3_1_domain_figures.py": "7fd7681ccb869d1697f39a2e9cc55857f7a1649cae880152bee622b239ea1485",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/domain_photometry/photometric_occupancy.png": "578f63557f0478b43d28ad08fa5e8a0c2a1ff22c105387e8d264acd547c6e13e",
+    "figures/v3_1/domain_photometry/photometric_occupancy.pdf": "47a1bf12e569bd9ad51ae1afa61129c80198058fa15c9d2408524d58cbe48dd3",
+    "manifests/v3_1/domain_photometry_figures/plotted.csv": "b29598b1a3705fb9b488efedf581e4a32e88ddc6515868eb6fb31ccf977865ee"
+  },
+  "stage": "photometry",
+  "panels": 6,
+  "plotted_rows": 150,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Authenticated compact-table rendering. Occupancy and reference availability do not certify scientific use domains."
+}

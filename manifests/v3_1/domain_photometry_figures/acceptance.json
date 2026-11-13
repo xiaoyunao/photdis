@@ -1,0 +1,671 @@
+{
+  "checks": [
+    {
+      "check": "inputs:manifests/v3_1/domain_grid/complete.json",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/domain_grid/cells.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/v3_1_domain_figures.py",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/domain_photometry/photometric_occupancy.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/domain_photometry/photometric_occupancy.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:manifests/v3_1/domain_photometry_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "PNG_dimensions",
+      "passed": true
+    },
+    {
+      "check": "PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "PDF_page",
+      "passed": true
+    },
+    {
+      "check": "PDF_text",
+      "passed": true
+    },
+    {
+      "check": "English",
+      "passed": true
+    },
+    {
+      "check": "150plotted_cells",
+      "passed": true
+    },
+    {
+      "check": "cell_0",
+      "passed": true
+    },
+    {
+      "check": "cell_1",
+      "passed": true
+    },
+    {
+      "check": "cell_2",
+      "passed": true
+    },
+    {
+      "check": "cell_3",
+      "passed": true
+    },
+    {
+      "check": "cell_4",
+      "passed": true
+    },
+    {
+      "check": "cell_5",
+      "passed": true
+    },
+    {
+      "check": "cell_6",
+      "passed": true
+    },
+    {
+      "check": "cell_7",
+      "passed": true
+    },
+    {
+      "check": "cell_8",
+      "passed": true
+    },
+    {
+      "check": "cell_9",
+      "passed": true
+    },
+    {
+      "check": "cell_10",
+      "passed": true
+    },
+    {
+      "check": "cell_11",
+      "passed": true
+    },
+    {
+      "check": "cell_12",
+      "passed": true
+    },
+    {
+      "check": "cell_13",
+      "passed": true
+    },
+    {
+      "check": "cell_14",
+      "passed": true
+    },
+    {
+      "check": "cell_15",
+      "passed": true
+    },
+    {
+      "check": "cell_16",
+      "passed": true
+    },
+    {
+      "check": "cell_17",
+      "passed": true
+    },
+    {
+      "check": "cell_18",
+      "passed": true
+    },
+    {
+      "check": "cell_19",
+      "passed": true
+    },
+    {
+      "check": "cell_20",
+      "passed": true
+    },
+    {
+      "check": "cell_21",
+      "passed": true
+    },
+    {
+      "check": "cell_22",
+      "passed": true
+    },
+    {
+      "check": "cell_23",
+      "passed": true
+    },
+    {
+      "check": "cell_24",
+      "passed": true
+    },
+    {
+      "check": "cell_25",
+      "passed": true
+    },
+    {
+      "check": "cell_26",
+      "passed": true
+    },
+    {
+      "check": "cell_27",
+      "passed": true
+    },
+    {
+      "check": "cell_28",
+      "passed": true
+    },
+    {
+      "check": "cell_29",
+      "passed": true
+    },
+    {
+      "check": "cell_30",
+      "passed": true
+    },
+    {
+      "check": "cell_31",
+      "passed": true
+    },
+    {
+      "check": "cell_32",
+      "passed": true
+    },
+    {
+      "check": "cell_33",
+      "passed": true
+    },
+    {
+      "check": "cell_34",
+      "passed": true
+    },
+    {
+      "check": "cell_35",
+      "passed": true
+    },
+    {
+      "check": "cell_36",
+      "passed": true
+    },
+    {
+      "check": "cell_37",
+      "passed": true
+    },
+    {
+      "check": "cell_38",
+      "passed": true
+    },
+    {
+      "check": "cell_39",
+      "passed": true
+    },
+    {
+      "check": "cell_40",
+      "passed": true
+    },
+    {
+      "check": "cell_41",
+      "passed": true
+    },
+    {
+      "check": "cell_42",
+      "passed": true
+    },
+    {
+      "check": "cell_43",
+      "passed": true
+    },
+    {
+      "check": "cell_44",
+      "passed": true
+    },
+    {
+      "check": "cell_45",
+      "passed": true
+    },
+    {
+      "check": "cell_46",
+      "passed": true
+    },
+    {
+      "check": "cell_47",
+      "passed": true
+    },
+    {
+      "check": "cell_48",
+      "passed": true
+    },
+    {
+      "check": "cell_49",
+      "passed": true
+    },
+    {
+      "check": "cell_50",
+      "passed": true
+    },
+    {
+      "check": "cell_51",
+      "passed": true
+    },
+    {
+      "check": "cell_52",
+      "passed": true
+    },
+    {
+      "check": "cell_53",
+      "passed": true
+    },
+    {
+      "check": "cell_54",
+      "passed": true
+    },
+    {
+      "check": "cell_55",
+      "passed": true
+    },
+    {
+      "check": "cell_56",
+      "passed": true
+    },
+    {
+      "check": "cell_57",
+      "passed": true
+    },
+    {
+      "check": "cell_58",
+      "passed": true
+    },
+    {
+      "check": "cell_59",
+      "passed": true
+    },
+    {
+      "check": "cell_60",
+      "passed": true
+    },
+    {
+      "check": "cell_61",
+      "passed": true
+    },
+    {
+      "check": "cell_62",
+      "passed": true
+    },
+    {
+      "check": "cell_63",
+      "passed": true
+    },
+    {
+      "check": "cell_64",
+      "passed": true
+    },
+    {
+      "check": "cell_65",
+      "passed": true
+    },
+    {
+      "check": "cell_66",
+      "passed": true
+    },
+    {
+      "check": "cell_67",
+      "passed": true
+    },
+    {
+      "check": "cell_68",
+      "passed": true
+    },
+    {
+      "check": "cell_69",
+      "passed": true
+    },
+    {
+      "check": "cell_70",
+      "passed": true
+    },
+    {
+      "check": "cell_71",
+      "passed": true
+    },
+    {
+      "check": "cell_72",
+      "passed": true
+    },
+    {
+      "check": "cell_73",
+      "passed": true
+    },
+    {
+      "check": "cell_74",
+      "passed": true
+    },
+    {
+      "check": "cell_75",
+      "passed": true
+    },
+    {
+      "check": "cell_76",
+      "passed": true
+    },
+    {
+      "check": "cell_77",
+      "passed": true
+    },
+    {
+      "check": "cell_78",
+      "passed": true
+    },
+    {
+      "check": "cell_79",
+      "passed": true
+    },
+    {
+      "check": "cell_80",
+      "passed": true
+    },
+    {
+      "check": "cell_81",
+      "passed": true
+    },
+    {
+      "check": "cell_82",
+      "passed": true
+    },
+    {
+      "check": "cell_83",
+      "passed": true
+    },
+    {
+      "check": "cell_84",
+      "passed": true
+    },
+    {
+      "check": "cell_85",
+      "passed": true
+    },
+    {
+      "check": "cell_86",
+      "passed": true
+    },
+    {
+      "check": "cell_87",
+      "passed": true
+    },
+    {
+      "check": "cell_88",
+      "passed": true
+    },
+    {
+      "check": "cell_89",
+      "passed": true
+    },
+    {
+      "check": "cell_90",
+      "passed": true
+    },
+    {
+      "check": "cell_91",
+      "passed": true
+    },
+    {
+      "check": "cell_92",
+      "passed": true
+    },
+    {
+      "check": "cell_93",
+      "passed": true
+    },
+    {
+      "check": "cell_94",
+      "passed": true
+    },
+    {
+      "check": "cell_95",
+      "passed": true
+    },
+    {
+      "check": "cell_96",
+      "passed": true
+    },
+    {
+      "check": "cell_97",
+      "passed": true
+    },
+    {
+      "check": "cell_98",
+      "passed": true
+    },
+    {
+      "check": "cell_99",
+      "passed": true
+    },
+    {
+      "check": "cell_100",
+      "passed": true
+    },
+    {
+      "check": "cell_101",
+      "passed": true
+    },
+    {
+      "check": "cell_102",
+      "passed": true
+    },
+    {
+      "check": "cell_103",
+      "passed": true
+    },
+    {
+      "check": "cell_104",
+      "passed": true
+    },
+    {
+      "check": "cell_105",
+      "passed": true
+    },
+    {
+      "check": "cell_106",
+      "passed": true
+    },
+    {
+      "check": "cell_107",
+      "passed": true
+    },
+    {
+      "check": "cell_108",
+      "passed": true
+    },
+    {
+      "check": "cell_109",
+      "passed": true
+    },
+    {
+      "check": "cell_110",
+      "passed": true
+    },
+    {
+      "check": "cell_111",
+      "passed": true
+    },
+    {
+      "check": "cell_112",
+      "passed": true
+    },
+    {
+      "check": "cell_113",
+      "passed": true
+    },
+    {
+      "check": "cell_114",
+      "passed": true
+    },
+    {
+      "check": "cell_115",
+      "passed": true
+    },
+    {
+      "check": "cell_116",
+      "passed": true
+    },
+    {
+      "check": "cell_117",
+      "passed": true
+    },
+    {
+      "check": "cell_118",
+      "passed": true
+    },
+    {
+      "check": "cell_119",
+      "passed": true
+    },
+    {
+      "check": "cell_120",
+      "passed": true
+    },
+    {
+      "check": "cell_121",
+      "passed": true
+    },
+    {
+      "check": "cell_122",
+      "passed": true
+    },
+    {
+      "check": "cell_123",
+      "passed": true
+    },
+    {
+      "check": "cell_124",
+      "passed": true
+    },
+    {
+      "check": "cell_125",
+      "passed": true
+    },
+    {
+      "check": "cell_126",
+      "passed": true
+    },
+    {
+      "check": "cell_127",
+      "passed": true
+    },
+    {
+      "check": "cell_128",
+      "passed": true
+    },
+    {
+      "check": "cell_129",
+      "passed": true
+    },
+    {
+      "check": "cell_130",
+      "passed": true
+    },
+    {
+      "check": "cell_131",
+      "passed": true
+    },
+    {
+      "check": "cell_132",
+      "passed": true
+    },
+    {
+      "check": "cell_133",
+      "passed": true
+    },
+    {
+      "check": "cell_134",
+      "passed": true
+    },
+    {
+      "check": "cell_135",
+      "passed": true
+    },
+    {
+      "check": "cell_136",
+      "passed": true
+    },
+    {
+      "check": "cell_137",
+      "passed": true
+    },
+    {
+      "check": "cell_138",
+      "passed": true
+    },
+    {
+      "check": "cell_139",
+      "passed": true
+    },
+    {
+      "check": "cell_140",
+      "passed": true
+    },
+    {
+      "check": "cell_141",
+      "passed": true
+    },
+    {
+      "check": "cell_142",
+      "passed": true
+    },
+    {
+      "check": "cell_143",
+      "passed": true
+    },
+    {
+      "check": "cell_144",
+      "passed": true
+    },
+    {
+      "check": "cell_145",
+      "passed": true
+    },
+    {
+      "check": "cell_146",
+      "passed": true
+    },
+    {
+      "check": "cell_147",
+      "passed": true
+    },
+    {
+      "check": "cell_148",
+      "passed": true
+    },
+    {
+      "check": "cell_149",
+      "passed": true
+    },
+    {
+      "check": "sum_application_n",
+      "passed": true
+    },
+    {
+      "check": "sum_application_candidate",
+      "passed": true
+    }
+  ],
+  "checks_passed": 165,
+  "panels_visually_inspected": 6,
+  "visual_review_passed": true,
+  "review": "Inspected exported PNG: all six heatmaps, 150 cell values, complete English titles/axes/footnotes, shared count scale and explicit zeros; no clipped or overlapping labels.",
+  "evidence_stage_executed": false,
+  "scientific_domain_adjudication_complete": false,
+  "complete_sha256": "125d99ccfbf178df2555fbd76eaa05df754fbf36444a2400f79cc294fbcc3298"
+}

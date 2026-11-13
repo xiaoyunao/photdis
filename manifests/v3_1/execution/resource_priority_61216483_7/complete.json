@@ -1,0 +1,17 @@
+{
+  "changes": [
+    {
+      "job": "61226412",
+      "qos": "regular",
+      "minutes": 60,
+      "dependency_preserved": true
+    },
+    {
+      "job": "61216483_7",
+      "qos": "debug",
+      "minutes": 30
+    }
+  ],
+  "scope": "Promote already-registered final four independent SED refits with per-iteration checkpoints. Same sources, seeds, job and dependencies; no duplicate writer. Freeze still waits for complete common prediction.",
+  "execution_complete": false
+}

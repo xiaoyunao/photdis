@@ -37,14 +37,15 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad/holdout states/ensembles stillpending.
+  mainwithcut orrelax evidence gate. Broad0–3conditionalstatespass2048;
+  original512failures retained. Otherbroad/holdout states/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits:28complete(groups0–6 includingexact
-  group0resume61218979), group7pending.
+  group0resume61218979), group7pendingdebug30min withper-iterationcheckpoints.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
@@ -60,7 +61,7 @@ Negative findings remain deliverables, never successful calibration claims.
   numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
   61226371 runningdebug30minworkers32.
   Sharedfield checkpointreuse verified; freeze61226412 waitsafterokfullfield/common
-  andoldtargetcommon; freeze nowdebug30min. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
+  andoldtargetcommon; freeze again debug30min afterbroadgroup0completion freedslot. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
   common61224421 completes22m43, all3032pass. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
   checks, notexecuted. Shared-scale/sky aggregate report nowimplemented; strict
@@ -88,13 +89,16 @@ Negative findings remain deliverables, never successful calibration claims.
   reference screens nowregistered/implemented/tested beforeopening; originalmean
   guardmargins andcorrelated uncertainty distinct, sparse/numericalfailures retained.
   Availability andrelativeguards are notcalibration; finalscientific
-  adjudication andEnglishfigures remainrequired. Full scientific counts, final
+  adjudication andfinalevidence figures remainrequired. Photometricoccupancy map
+  nowcomplete; source-qualifiedreference/gap renderer readybutunrun. Full scientific counts, final
   product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
+  Integrated methods nowin docs/v3_1_methods.md, source-linked to18frozenprotocols;
+  equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full160tests pass5.34s; six English plates visually inspected (paired62,
-  calibration32, latent1574, candidate138actual artifact/source checks). Large data stayNERSC.
+- Latest full160tests pass5.34s; seven English plates visually inspected (paired62,
+  calibration32, latent1574, candidate138, photometricmap165actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.
 - Follow direct-entry/native-joint jobs. Assemble only complete matrices; failed
