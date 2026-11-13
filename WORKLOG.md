@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — prepare exact pending-only structure native batches
+- Added resource wrapper and metadata-only submission script for at most7
+  native/refined state pairs per node, sequential unchanged32-worker drivers.
+  Preserve all completed hashes, original numerical failures and all32state gate.
+- Preflight requires pending writers, no orphan downstream dependencies and
+  immutable source hashes; cancellation needs zero-runtime/no-allocation proof
+  before replacement submission. Running tasks and entry integrals untouched.
+- Pythoncompile, shellsyntax and gitdiffcheck pass; remote dryrun/execution
+  remains next after clean synchronization. No new scientific fit or model.
+- Response resource array61229862 now all4COMPLETED; finalgroup4m21.
+  All64response report61221949 pending, mode6/7 stilllive atlatestinspection.
+
 ## 2026-11-14 — complete radial science report, correlated summaries and three inspected plates
 - Correctedreport61229960 COMPLETED45s, all176catalogs/352arms,268numericalpass;
   source tables352status/12672recovery/704totals/352structure/2112scores/352pairs

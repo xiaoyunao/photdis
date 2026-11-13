@@ -13,6 +13,9 @@ validation, joint counts, use-domain map and one marginalized structure example.
 Negative findings remain deliverables, never successful calibration claims.
 
 ### Milestones and current evidence
+- Resource execution: all4exactresponse groups61229862 completed; full64state
+  report stillpending. Preparedpending-only structure-native batches (max7pairs,
+  unchanged32workers, max2nodes); dryrun and verifiedsubmission follow sync.
 - [x] Read latest full Pro review/related chats (noDOCX), register goal/roles/ledger.
 - [ ] WP1 final correction acceptance. Same1542development stars/17386views and
   pairedclass/FeH/band/prior contrasts complete. Response12 targetprior worsens
