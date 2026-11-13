@@ -50,6 +50,18 @@ def test_zero_endpoints_are_trimmed_but_interior_zero_holes_rejected():
     with pytest.raises(ValueError,match='endpoint'):finite_pdf(g,lp)
 
 
+def test_multiple_teachers_and_classes_remain_separate():
+    from photdis.v3_1.validation_report import metric_arrays
+    g,lp,q,p,e=inputs(); p=np.repeat((np.array([.7,.2,.1])/6)[:,None],6,axis=1)
+    e.update(class_label=0,mws_class_label=2,specdis_valid=True,specdis_distance=11.,specdis_sigma_mu=.2,
+        spdist_valid=True,spdist_distance=9.,spdist_sigma_mu=.3)
+    result=score_pdf(g,lp,q,p,e)
+    assert set(result['references'])=={'astronn','specdis','spdist'}
+    metrics,_=metric_arrays([dict(views={'v':result},checks=[dict(view='v',accepted=True)])],'v')
+    assert metrics['class/probability'][0]==pytest.approx(.7)
+    assert metrics['mws_class/probability'][0]==pytest.approx(.1)
+
+
 def test_nine_view_driver_reads_original_reference_and_keeps_view_flags(tmp_path,monkeypatch):
     import json
     import v3_1_validation_score as driver

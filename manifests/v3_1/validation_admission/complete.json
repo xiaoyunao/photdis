@@ -1,0 +1,69 @@
+{
+  "inputs": {
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_1/target_native_pilot/roles.npz": "95dc39dc3012b3074fdd245a3ebcbef2ab2a530cb8ef911abbc95b2e26ee1a50",
+    "data/v3_1/target_native_pilot/complete.json": "81f5d6240961a6dac9d17234ad4df861951a11bc8b9c5b732e2645ba6ccd1c6d",
+    "data/v3_1/validation_roles/complete.json": "2f2dca95787364c0a4c5abf0740d34d6d15cf22bf7f437abdd378c6833b8dd4d",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_roles/common_photometry.npz": "c143c777d64e7fe72339488a414d27816246ead59350a321949da0d58226967a",
+    "scripts/v3_1_validation_admission.py": "4e8a566a2c4dbc0546384fd489758a4070b926c3742b87b30d4b8331fc2dcb25",
+    "src/photdis/v3_1/admission.py": "7c54b7264902969136ff2b1af3679b56060b485cab67943e617cecce6dc74ac1",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56",
+    "docs/v3_1_validation_admission_protocol.md": "1d542a3f936749a9e97de3aeecdd803fe6c0ea3b7dce2572c12976e39daac015"
+  },
+  "outputs": {
+    "application.npz": "2df77e89299cba63b9ddd66fb4308e503a3a572c50a03a1d7f855f4da4b18340",
+    "field.npz": "82d656e0e2849e2838d000f2dde22a6fc549a60e490066497c00768c55fc4b46",
+    "common.npz": "66791243d9079229558a47c7d3c57b981490034f4eab676f66ae8d1b3353925a",
+    "summary.csv": "58169925b660f842ef850c79c263c548516ecd5d9b565a2cf032d4c5a46c016e"
+  },
+  "cohorts": [
+    {
+      "cohort": "application",
+      "n": 26000,
+      "candidate": 3540,
+      "outside": 22460,
+      "nonPSF_excluded": 0,
+      "missing_TYPE_excluded": 0,
+      "nonnative": 0,
+      "not_bright": 22339,
+      "optical_precision_failed": 12982,
+      "qrf_support_failed": 13132,
+      "reason_counts_overlap": true
+    },
+    {
+      "cohort": "field",
+      "n": 526,
+      "candidate": 519,
+      "outside": 7,
+      "nonPSF_excluded": 0,
+      "missing_TYPE_excluded": 0,
+      "nonnative": 0,
+      "not_bright": 0,
+      "optical_precision_failed": 0,
+      "qrf_support_failed": 7,
+      "reason_counts_overlap": true
+    },
+    {
+      "cohort": "common",
+      "n": 3032,
+      "candidate": 1732,
+      "outside": 1300,
+      "nonPSF_excluded": 0,
+      "missing_TYPE_excluded": 0,
+      "nonnative": 0,
+      "not_bright": 1255,
+      "optical_precision_failed": 0,
+      "qrf_support_failed": 59,
+      "reason_counts_overlap": true
+    }
+  ],
+  "job": "61224943",
+  "all_PSF": true,
+  "photometry_only": true,
+  "references_read": false,
+  "original_candidate_reproduced": true,
+  "scope": "Exact3540-cohort native observed-r/error/QRF support gate. All frozen validation rows retained and separately tagged. QRF support is a selection proxy, not demonstrated SED or absolute-distance calibration."
+}

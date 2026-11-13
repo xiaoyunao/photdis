@@ -11,6 +11,7 @@ from photdis.stage1 import require_compute
 from photdis.reference_v1_4 import unique_join
 from photdis.gaia import join_gaia, derive_gaia_labels, SOURCE_ID_HEALPIX_FACTOR
 from photdis.v3_1.freeze import verify_freeze
+from v3_1_validation_channels import associate_mws
 
 
 def main():
@@ -27,7 +28,10 @@ def main():
         paths.append(ROOT/pointers['field']['path'])
     else:
         paths += [ROOT/pointers['common']['path'],ROOT/pointers['common']['membership']]
+    mws_base=ROOT/'data/baseline_v1_4'
+    mws_paths=[mws_base/name for name in ['sources.npz','source_evidence.npz','specdis_raw.npz','spdist_raw.npz']]
     inputs = {str(path.relative_to(ROOT)):sha(path) for path in paths}; inputs['freeze_sha256'] = digest
+    inputs.update({str(path.relative_to(ROOT)):sha(path) for path in mws_paths})
     marker = out/'complete.json'
     if marker.exists():
         record = json.loads(marker.read_text()); assert record['inputs'] == inputs
@@ -95,8 +99,11 @@ def main():
         parallax_eligible=labels['astro_quality'] & labels['zpt_valid'] & labels['finite_parallax'],
         gaia_match=gaia['gaia_match'],gaia_file_missing=gaia['gaia_file_missing'],
         nonstellar_risk=labels['contaminant_candidate'])
+    mws,mws_audit=associate_mws(t,mws_base)
+    atomic_npz(out/'mws_vac_payload.npz',identity=t['identity'],TYPE=t['TYPE'],**mws)
+    evidence.update(mws)
     atomic_npz(out/'evidence.npz',**evidence)
-    outputs = ['evidence.npz','gaia_payload.npz','gaia_sources.json']
+    outputs = ['evidence.npz','gaia_payload.npz','gaia_sources.json','mws_vac_payload.npz']
     outputs += ['astronn_apogee.npz'] if a.cohort == 'field' else ['membership.npz','scales.json']
     save_json(marker,dict(inputs=inputs,outputs={name:sha(out/name) for name in outputs},cohort=a.cohort,n=n,
         all_PSF=True,non_PSF_excluded=0,missing_TYPE_excluded=0,admission_exclusions_retained_upstream=True,
@@ -104,7 +111,7 @@ def main():
         missing_Gaia=int((~gaia['gaia_match']).sum()),distance_available=int(evidence['distance_available'].sum()),
         distance_precise=int(evidence['distance_precise'].sum()),class_labels={str(c):int((evidence['class_label']==c).sum()) for c in [-1,0,1]},
         final_outcomes_opened=True,prediction_residuals_computed=False,job=os.getenv('SLURM_JOB_ID'),
-        MWS_VAC_channel_audit='Not performed by this association; no claim of absent additional channels.',
+        MWS_VAC_channel_audit=mws_audit,
         scope='Same frozen PSF identities; source-qualified channels separate. AstroNN is Gaia-trained; common scales are shared; no calibrated fullapplication contamination claim.'))
     print('FINAL EVIDENCE OPENED',a.cohort,n,flush=True)
 

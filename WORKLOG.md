@@ -1,5 +1,32 @@
 # WORKLOG
 
+## 2026-11-13 — verify external candidate eligibility and retain every reference channel
+- Admission61224943 COMPLETED20s: exact26000application/3540candidate mask
+  reproduced. Externalfield519/526 admitted(7QRFsupport failures); NGC1261
+  1732/3032 admitted(1300outside;1255brightness/59support, reasons overlap).
+  All frozenidentities retained, originalsource/nonPSF exclusions preserved;
+  no references read. Maincandidate validation must not pool all3032members.
+- Added post-freeze same-ID rawMWS/SpecDis/SPDist association andindependent
+  per-channel scores/availability/highq contrasts. Exactpositive joins retain
+  unresolvedduplicates, identityconflicts, rawflags andnon-1SpecDis binaries.
+  MWSclass0/1/2 is separate from APOGEE0/1; unknown stays−1. Teacher agreement
+  is not independent absolute truth. Code complete; actualevidence stillunopened.
+- Sharedscale synthetic report integration verifies exported domain denominators
+  andsame-draw pairedcontrasts;150tests pass4.00s includingmultiple-source and
+  >2^53integer-ID/no-float checks. No source data downloaded orscored locally.
+- Bothradialproduction jobs hitwalltime:61219183 TIMEOUT2h00m02 and61220635
+  TIMEOUT2h00m06. Confirmedterminal/empty squeue andunchangedscientificsourcehashes
+  before exactresumes61225052(shard0)/61225072(shard1),regular2h. Original
+  checkpoints/failednumerics retained. Lastpretimeoutprogress80/88 and73/88,
+  notfinal scientificacceptance; recoverymanifests archived.
+- Entry9/11/12 complete/allpass. Totalverified15shards(only13pending/running):
+  24375objects/27704envelopes. Assembly61219399 promoteddebug withunchanged
+  dependencies; candidatezero fitpilot61224010 stillafterassembly. NewSED6 and
+  fullstructureentry0 running; no fullresponse/structureclaim.
+- Next: finishlastentry/assembly/pilot, keepall102conditionaltarget outcomes,
+  complete radial/response/structure jobs, andfinalprediction freeze before any
+  externalassociation/scoring/report. Scientific use-domain map/figures pending.
+
 ## 2026-11-13 — complete shared external summaries and exact candidate-domain tagging
 - Added post-freeze report: source-qualified paired field statistics with1024
   whole-sky-cell resamples; sparse/empty/flagged cells andnonfinite scores stay.

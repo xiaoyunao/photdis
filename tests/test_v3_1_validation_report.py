@@ -41,6 +41,12 @@ def test_strata_keep_missing_evidence_and_negative_W1_as_weak():
     assert not masks['class_feh/giant/poor'].any()
     for prefix in ['class/','feh/','distance/','r0/','W1/']:
         np.testing.assert_array_equal(np.array([m for name,m in masks.items() if name.startswith(prefix)]).sum(axis=0),1)
+    evidence.update(specdis_valid=np.array([True,False,False]),specdis_distance=np.array([14.,np.nan,np.nan]),
+        mws_class_label=np.array([1,-1,-1]),mws_parameter_quality=np.array([True,False,False]),
+        rvs_feh=np.array([-1.5,np.nan,np.nan]),rvs_feh_err=np.array([.1,np.nan,np.nan]))
+    masks=external_strata(photo,evidence)
+    assert masks['distance/unavailable'][0] and masks['specdis_distance/10_20'][0]
+    assert masks['class/unknown'][0] and masks['mws_class_feh/giant/poor'][0]
 
 
 def test_empty_shared_subset_is_explicit_and_invalid_intervals_fail():
@@ -58,3 +64,38 @@ def test_unknown_class_is_missing_and_zero_probability_is_retained():
     values,accepted=metric_arrays([first,second],'v')
     assert np.isnan(values['class/log_score'][0]) and np.isneginf(values['class/log_score'][1])
     np.testing.assert_array_equal(accepted,[True,False])
+
+
+def test_common_report_keeps_primary_domain_and_same_draw_paired_contrasts(tmp_path,monkeypatch):
+    import csv
+    import json
+    import v3_1_validation_report as driver
+    from photdis.v3_1.validation_report import MAIN_VIEW
+    monkeypatch.setattr(driver,'ROOT',tmp_path)
+    root=tmp_path/'data/v3_1'; source=root/'final_validation/common'; source.mkdir(parents=True)
+    (source/'scales.json').write_text(json.dumps([dict(system='NGC_1261',method='hst_kinematic',
+        reference=dict(distance_kpc=16.775,minus_kpc=.872,plus_kpc=.872))]))
+    out=tmp_path/'report'; out.mkdir(); baseline='old_target/old_target'; views=[MAIN_VIEW,baseline]
+    records=[]
+    for i in range(2):
+        main=dict(mu=[14,15,16,17,18],width68=2,width95=4,qnear=.98,references={})
+        other=dict(main,mu=[14.2,15.2,16.2,17.2,18.2])
+        records.append(dict(views={MAIN_VIEW:main,baseline:other},
+            checks=[dict(view=MAIN_VIEW,accepted=True),dict(view=baseline,accepted=i==0)]))
+    metrics={view:metric_arrays(records,view) for view in views}
+    outputs=driver.common_report(root,dict(candidate_admission=np.array([True,False])),
+        dict(scale_system=np.array([0,0])),records,views,metrics,out,{})
+    assert all((out/name).exists() for name in outputs)
+    with (out/'common_scale_paired.csv').open() as stream:
+        pairs=list(csv.DictReader(stream))
+    selected=[r for r in pairs if r['metric']=='median_mu_residual' and r['subset']=='candidate_members']
+    assert len(selected)==6 and all(int(r['n'])==1 for r in selected)
+    for row in selected:
+        for key in ('lower95','median','upper95'):assert float(row[key])==pytest.approx(-.2,abs=1e-13)
+    with (out/'common_scale_summary.csv').open() as stream:
+        summary=list(csv.DictReader(stream))
+    main=[r for r in summary if r['view']==MAIN_VIEW and r['admission']=='all_objects' and r['method_factor']=='1.0'
+          and r['metric']=='median_mu_residual']
+    by_subset={r['subset']:r for r in main}
+    assert int(by_subset['candidate_members']['n'])==1 and int(by_subset['all_members_diagnostic']['n'])==2
+    assert float(by_subset['candidate_members']['lower95'])==float(by_subset['all_members_diagnostic']['lower95'])

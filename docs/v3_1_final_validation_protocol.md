@@ -56,6 +56,25 @@ parallaxes are never inverted. Missing tiles/matches remain unvalidated rows.
 The external AstroNN and Gaia channels are correlated evidence, not independent
 replications. Existing MWS/VAC availability on these same frozen identities is a
 separate channel audit, not permission to change the sample or primary teacher.
+Perform that audit against the existing full MWS source inventory and raw VACs
+on the SAME frozen positive Gaia IDs. Use the existing primary/SNR representative
+selection, exact unique(TARGETID,SOURCE_ID) joins and unique-source fallback;
+record unresolved duplicate keys rather than calling them absent evidence.
+Retain class/target identity conflicts and raw VAC flags. SpecDis uses the frozen
+spectral quality gate with the parameter-only bit excluded and finite0<error<d;
+binary_flag!=1 is retained. SPDist uses its original good/input flags and source
+mu-error including the original.167mag term. Do not re-estimate source calibration
+from this test: score each qualified channel with its reported Gaussian-mu error,
+and state that this is teacher agreement. No primary-channel switch replaces
+AstroNN results. Report independently qualified MWS class0/1/2 separately from
+APOGEE0/1; unknown stays−1 and cross-source disagreement is not reconciled away.
+Preserve each channel in highq disagreement counts and score tables, even if
+one or all channels have zero qualified matches. MWS/VAC evidence can share
+training/teacher ancestry and is not automatically an independent absolute scale.
+Keep original AstroNN/APOGEE distance/class/FeH strata explicitly named; add
+separate SpecDis-distance, SPDist-distance and MWS-class/FeH strata with the same
+distance/metallicity boundaries. An AstroNN-missing row with qualified VAC
+distance must not disappear from that source's distance-domain inventory.
 
 Common: exact strict-member identities/probabilities and original scales.json.
 For NGC1261 use HST16.775±.872kpc (already includes1.7%); uncertainty is ONE

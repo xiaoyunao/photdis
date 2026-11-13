@@ -25,6 +25,20 @@ def external_strata(photo, evidence):
     for name,mask in distances.items():masks['distance/'+name]=mask
     for c,cm in classes.items():
         for d,dm in distances.items():masks[f'class_distance/{c}/{d}']=cm & dm
+    for channel in ['specdis','spdist']:
+        if channel+'_valid' not in evidence:continue
+        valid=evidence[channel+'_valid']; distance=evidence[channel+'_distance']
+        for lo,hi in [(0,2),(2,5),(5,10),(10,20),(20,50),(50,np.inf)]:
+            masks[f'{channel}_distance/{lo}_{hi}']=valid & (distance>=lo) & (distance<hi)
+        masks[channel+'_distance/unavailable']=~valid
+    if 'mws_class_label' in evidence:
+        mws_classes={name:evidence['mws_class_label']==c for c,name in [(-1,'unknown'),(0,'dwarf'),(1,'giant'),(2,'other')]}
+        quality=evidence['mws_parameter_quality'] & np.isfinite(evidence['rvs_feh']) & np.isfinite(evidence['rvs_feh_err']) & (evidence['rvs_feh_err']>=0)
+        mws_metals={'poor':quality & (evidence['rvs_feh'] < -1),'not_poor':quality & (evidence['rvs_feh']>=-1),'unavailable':~quality}
+        for name,mask in mws_classes.items():masks['mws_class/'+name]=mask
+        for name,mask in mws_metals.items():masks['mws_feh/'+name]=mask
+        for c,cm in mws_classes.items():
+            for f,fm in mws_metals.items():masks[f'mws_class_feh/{c}/{f}']=cm & fm
     for lo,hi in [(-np.inf,18),(18,20),(20,22),(22,np.inf)]:
         masks[f'r0/{lo}_{hi}']=(photo['r0']>=lo) & (photo['r0']<hi)
     available=np.isin(photo['band_state'][:,4],[WEAK,SIGNIFICANT])
@@ -51,11 +65,12 @@ def metric_arrays(records, view):
             put(channel+'/absolute_mu_error',i,abs(r['mu_residual']))
         if 'gaia' in value:
             for name in ('log_score','pit','tail'):put('gaia/'+name,i,value['gaia'][name])
-        if 'class' in value:
-            r=value['class']
-            for name in ('probability','brier','zero_probability'):put('class/'+name,i,r[name])
-            put('class/log_score',i,-np.inf if r['zero_probability'] else r['log_score'])
-            put('class/correct',i,r['label']==r['predicted'])
+        for channel in ['class','mws_class']:
+            if channel not in value:continue
+            r=value[channel]
+            for name in ('probability','brier','zero_probability'):put(channel+'/'+name,i,r[name])
+            put(channel+'/log_score',i,-np.inf if r['zero_probability'] else r['log_score'])
+            put(channel+'/correct',i,r['label']==r['predicted'])
     return result,accepted
 
 

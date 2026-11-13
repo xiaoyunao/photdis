@@ -45,6 +45,14 @@ def score_pdf(grid, logpdf, quantiles, probability, evidence, *, common_scale=No
         value.update(log_score=normal_reference_score(g,lp,mu,sigma),sigma_mu=float(sigma),
             precise=bool(evidence['distance_precise']),teacher='Gaia-trained AstroNN',score_unit='inverse_mag')
         result['references']['astronn'] = value
+    for name in ['specdis','spdist']:
+        if not evidence.get(name+'_valid',False):continue
+        distance=float(evidence[name+'_distance']); sigma=float(evidence[name+'_sigma_mu'])
+        if not np.isfinite([distance,sigma]).all() or min(distance,sigma)<=0:raise ValueError('Invalid qualified VAC distance')
+        mu=10+5*np.log10(distance); value=reference_center_agreement(q,mu)
+        value.update(log_score=normal_reference_score(g,lp,mu,sigma),sigma_mu=sigma,
+            score_unit='inverse_mag',teacher=name,scope='Source-qualified teacher agreement, not independent absolute truth.')
+        result['references'][name]=value
     if common_scale is not None:
         distance,error = common_scale
         if min(distance,error)<=0 or not np.isfinite(common_scale).all():
@@ -66,6 +74,12 @@ def score_pdf(grid, logpdf, quantiles, probability, evidence, *, common_scale=No
         result['class'] = dict(label=label,predicted=int(cp.argmax()),probability=float(cp[label]),
             log_score=float(np.log(cp[label])) if cp[label]>0 else None,zero_probability=bool(cp[label]==0),
             brier=float(np.square(cp-np.eye(3)[label]).sum()))
+    mws_label=int(evidence.get('mws_class_label',-1))
+    if mws_label not in (-1,0,1,2):raise ValueError('Invalid independently qualified MWS class')
+    if mws_label>=0:
+        result['mws_class']=dict(label=mws_label,predicted=int(cp.argmax()),probability=float(cp[mws_label]),
+            log_score=float(np.log(cp[mws_label])) if cp[mws_label]>0 else None,zero_probability=bool(cp[mws_label]==0),
+            brier=float(np.square(cp-np.eye(3)[mws_label]).sum()))
     return result
 
 

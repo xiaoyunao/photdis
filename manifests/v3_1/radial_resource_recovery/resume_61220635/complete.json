@@ -1,0 +1,25 @@
+{
+  "original_job": "61220635",
+  "original_accounting": "61220635|TIMEOUT|02:00:06|0:0",
+  "original_active_records": "",
+  "new_job": "61225072",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "regular",
+    "-t",
+    "02:00:00",
+    "scripts/run_v3_1_radial_production_resume.sh",
+    "--shard",
+    "1",
+    "--shards",
+    "2",
+    "--workers",
+    "32"
+  ],
+  "unchanged_scientific_inputs": true,
+  "scientific_complete": false,
+  "outputs": {},
+  "scope": "Exact checkpoint resume after verified terminal walltime and no active writer; all numerical failures retained."
+}

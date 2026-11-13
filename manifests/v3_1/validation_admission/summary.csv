@@ -1,0 +1,4 @@
+cohort,n,candidate,outside,nonPSF_excluded,missing_TYPE_excluded,nonnative,not_bright,optical_precision_failed,qrf_support_failed,reason_counts_overlap
+application,26000,3540,22460,0,0,0,22339,12982,13132,True
+field,526,519,7,0,0,0,0,0,7,True
+common,3032,1732,1300,0,0,0,1255,0,59,True

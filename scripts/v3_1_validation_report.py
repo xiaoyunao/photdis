@@ -50,6 +50,9 @@ def field_report(photo,evidence,records,views,metrics,out):
                 distance=int((mask & evidence['distance_available']).sum()),precise_distance=int((mask & evidence['distance_precise']).sum()),
                 signed_Gaia=int((mask & evidence['parallax_eligible']).sum()),class_dwarf=int((mask & (evidence['class_label']==0)).sum()),
                 class_giant=int((mask & (evidence['class_label']==1)).sum()),feh=int((mask & evidence['feh_valid']).sum()),
+                SpecDis=int((mask & evidence['specdis_valid']).sum()),SPDist=int((mask & evidence['spdist_valid']).sum()),
+                MWS_dwarf=int((mask & (evidence['mws_class_label']==0)).sum()),MWS_giant=int((mask & (evidence['mws_class_label']==1)).sum()),
+                MWS_other=int((mask & (evidence['mws_class_label']==2)).sum()),MWS_identity_conflict=int((mask & evidence['mws_identity_conflict']).sum()),
                 finalcandidate_numerical_failed=int((mask & ~main_ok).sum()),fixed_main_highq=int((mask & selected).sum())))
             for view in views:
                 values,passed=metrics[view]
@@ -77,22 +80,26 @@ def field_report(photo,evidence,records,views,metrics,out):
         fixed=role_mask & selected
         for view in views:
             values,passed=metrics[view]
-            for qualification,qmask in [('available',evidence['distance_available']),('precise',evidence['distance_precise'])]:
+            channels=[('astronn','available',evidence['distance_available'],evidence['distance_kpc']),
+                ('astronn','precise',evidence['distance_precise'],evidence['distance_kpc'])]
+            channels += [(name,'qualified',evidence[name+'_valid'],evidence[name+'_distance']) for name in ['specdis','spdist']]
+            for channel,qualification,qmask,distance in channels:
                 qualified=fixed & qmask; n=int(fixed.sum()); nr=int(qualified.sum())
-                highq.append(dict(role=role,view=view,selection_view=MAIN_VIEW,n=n,reference_qualification=qualification,
+                highq.append(dict(role=role,view=view,selection_view=MAIN_VIEW,n=n,reference_channel=channel,reference_qualification=qualification,
                     model_expected_far=float((1-values['qnear'][fixed]).sum()),
                     model_expected_leakage=float((1-values['qnear'][fixed]).mean()) if n else None,
-                    reference_n=nr,reference_center_far=int((qualified & (evidence['distance_kpc']>=10)).sum()),
-                    reference_center_far_fraction=float((evidence['distance_kpc'][qualified]>=10).mean()) if nr else None,
+                    reference_n=nr,reference_center_far=int((qualified & (distance>=10)).sum()),
+                    reference_center_far_fraction=float((distance[qualified]>=10).mean()) if nr else None,
                     numerical_failed=int((fixed & ~passed).sum()),main_numerical_failed=int((fixed & ~main_ok).sum()),
                     scope='Reference-selected disagreement; not independently measured fullcandidate contamination.'))
-            for label in [0,1]:
-                for predicted in [0,1,2]:
-                    for admission in ['all_objects','numerically_accepted']:
-                        use=role_mask & admit & (evidence['class_label']==label) & (passed if admission=='numerically_accepted' else True)
-                        ids=np.flatnonzero(use)
-                        count=sum(records[i]['views'][view]['class']['predicted']==predicted for i in ids)
-                        confusion.append(dict(role=role,view=view,admission=admission,reference_class=label,predicted_class=predicted,n=count,denominator=len(ids)))
+            for channel,label_key,labels in [('class','class_label',[0,1]),('mws_class','mws_class_label',[0,1,2])]:
+                for label in labels:
+                    for predicted in [0,1,2]:
+                        for admission in ['all_objects','numerically_accepted']:
+                            use=role_mask & admit & (evidence[label_key]==label) & (passed if admission=='numerically_accepted' else True)
+                            ids=np.flatnonzero(use)
+                            count=sum(records[i]['views'][view][channel]['predicted']==predicted for i in ids)
+                            confusion.append(dict(role=role,view=view,admission=admission,class_source=channel,reference_class=label,predicted_class=predicted,n=count,denominator=len(ids)))
     # Keep role files separate so exact sparse-cell tables remain inspectable small artifacts.
     outputs=[]
     for role in ['new_sky_field','new_source_seen_sky_field']:
