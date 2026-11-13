@@ -52,7 +52,7 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full127tests pass; four English plates visually inspected (paired62,
+- Latest full128tests pass; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

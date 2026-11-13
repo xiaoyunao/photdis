@@ -21,29 +21,29 @@ def weight_audit(logratio):
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--case',choices=['broad','candidate','holdout'],required=True)
     p.add_argument('--correction',type=int,required=True);p.add_argument('--draws',type=int,choices=[512,2048,8192],default=512);a=p.parse_args();assert 0<=a.correction<34
-    root=ROOT/'data/v3_1';fit=root/'target_fits'/a.case/f'correction_{a.correction:02}_s{a.draws}';matrix=root/'target_matrices';jointroot=root/'target_joint'
+    root=ROOT/'data/v3_1';fit=root/'target_fits'/a.case/f'correction_{a.correction:02}_s{a.draws}';matrix=root/'target_matrices';jointroot=root/'target_joint_matrices'
     paths=[fit/'complete.json',fit/'population.npz',matrix/'complete.json',matrix/'matrices.npz',
         ROOT/'scripts/v3_1_target_counts.py',ROOT/'src/photdis/v3/population.py',ROOT/'docs/v3_1_target_counts_protocol.md',ROOT/'docs/v3_1_target_numerical_transfer.md']
-    paths += [jointroot/f'shard_{i}/complete.json' for i in range(4)]
+    paths += [jointroot/'complete.json',jointroot/'metadata.npz',jointroot/f'correction_{a.correction:02}.npz']
     inputs={str(p.relative_to(ROOT)):sha(p) for p in paths};fd=json.loads(paths[0].read_text());md=json.loads(paths[2].read_text())
     assert fd['sampler_passed'] and md['passed'] and fd['inputs'][str(paths[3].relative_to(ROOT))]==sha(paths[3])
     assert sha(paths[1])==fd['outputs']['population.npz'] and sha(paths[3])==md['outputs']['matrices.npz']
     data=load(paths[3]);population=load(paths[1]);rows=population['rows'];ids=population['identity'];theta=population['theta'];draw_ids=population['draw_ids'];n=len(rows);s=len(theta)
     np.testing.assert_array_equal(ids,data['identity'][rows]);assert (population['TYPE']=='PSF').all() and (data['TYPE'][rows]=='PSF').all()
-    joint_done=[json.loads(p.read_text()) for p in paths[-4:]];assert all(d['passed'] and d['all_PSF'] for d in joint_done)
+    joint_done=json.loads(paths[-3].read_text());assert joint_done['passed'] and joint_done['all_PSF']
+    for path in paths[-2:]:assert sha(path)==joint_done['outputs'][path.name]
     out=fit/'joint_counts';out.mkdir(exist_ok=True);freeze=out/'inputs.json'
     if freeze.exists():assert json.loads(freeze.read_text())==inputs
     else:save_json(freeze,inputs)
-    basejoint=np.empty((n,3,5,6));finejoint=np.full_like(basejoint,np.nan);source_hashes={}
+    metadata=load(paths[-2]);joint=load(paths[-1]);assert int(joint['correction'])==a.correction
+    np.testing.assert_array_equal(metadata['identity'],data['identity']);np.testing.assert_array_equal(metadata['TYPE'],data['TYPE'])
+    np.testing.assert_array_equal(metadata['logscale'],data['logscale']);np.testing.assert_array_equal(metadata['fine_rows'],np.flatnonzero(data['fine_audited']))
+    basejoint=joint['coarse_joint_response'][rows];finejoint=np.full_like(basejoint,np.nan)
+    fine_index={int(row):j for j,row in enumerate(metadata['fine_rows'])}
     for j,row in enumerate(rows):
-        name=f'object_{int(ids[j])}.json';path=jointroot/name;assert sha(path)==joint_done[row%4]['objects'][name]
-        record=json.loads(path.read_text());assert sha(path.with_suffix('.npz'))==record['sha256'];value=load(path.with_suffix('.npz'))
-        assert value['identity'][0]==ids[j] and value['TYPE'][0]=='PSF' and value['row'][0]==row
-        assert float(value['logscale'])==data['logscale'][row]
-        basejoint[j]=value['coarse_joint_response'][a.correction]
-        if record['fine_audited']:finejoint[j]=value['fine_joint_response'][a.correction]
-        np.testing.assert_allclose(basejoint[j].sum(axis=-1),data['response'][row,a.correction],atol=1e-12,rtol=1e-8)
-        source_hashes[str(path.relative_to(ROOT))]=sha(path)
+        if int(row) in fine_index:finejoint[j]=joint['fine_joint_response'][fine_index[int(row)]]
+    np.testing.assert_allclose(basejoint.sum(axis=-1),data['response'][rows,a.correction],atol=1e-12,rtol=1e-8)
+    source_hashes={str(p.relative_to(ROOT)):sha(p) for p in paths[-3:]}
     fine_mask=data['fine_audited'][rows];assert np.isfinite(finejoint[fine_mask]).all()
     response=data['response'][rows,a.correction];fine_response=data['fine_response'][rows,a.correction]
     label='candidate' if a.case=='candidate' else 'broad'

@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — prepare bounded target inference and efficient resource packing
+- Added fixed-kernel conditional-transfer primitive that normalizes every shared
+  population draw before mixing; no mean-prior substitution or newdata population
+  reweighting. Independent analytic-mixture test retains log-likelihood -20000 and
+  normalized tails below -1000. Synthetic fixture adjusted to actually exercise
+  deep tails and differing class evidences; numerical equivalence tolerances unchanged.
+- Added exact joint-array repack bycorrection to avoid102repeated26000-file scans;
+  counts consume authenticated float64 copies with fullidentity/scale/fine-row
+  equality and bin-conservation checks. Original individual sidecars unchanged.
+- Added registered512/2048/8192 conditionalfit/count coordinator, preserving
+  every original attempt and requiring sampler/bridge/count gates. Nofits yetrun.
+- Added resource-only wrapper for up to4disjoint existing32worker entryshards on
+  one128CPU node. Originalscience program/input hashes/seeds unchanged. Migration
+  may affect only freshly confirmed pending tasks, never activewriters; actual
+  cancellation/replacement/dependency IDs will be recorded after execution.
+- Structureentry extension61222758 and oldtarget fieldcontrol61222759 submitted.
+  Fullstructure native31states61222616 and pairedrefinement61222661 queued.
+- Validation: imports/py_compile, individual shellsyntax anddiff checks pass;
+  full128tests pass3.38s. Actualrepack/resource/coordinator execution pending.
+- Next: safely pack pendingentry tasks; run numericalextension/oldcontrol/repack,
+  then population/count/ensemble andfinalvalidation once required inputs complete.
+
 ## 2026-11-13 — finish all true-distance integrals and preserve structure-entry failure
 - All4targetjoint shards61220368 complete:26000objects pass exact unbinned/bin
   conservation. Compactchecks/manifests collected; posteriorcounts stillpendingfits.
