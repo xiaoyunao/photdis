@@ -56,7 +56,8 @@ Negative findings remain deliverables, never successful calibration claims.
   group61225864_5 TIMEOUT30m12 duringjointcounts. Onlystate23 exactresume61232648
   submittedregular2h; existingbroadensemble61225883 andtransferchild5 retargeted.
   Eightcompletedmarkerhashes retained. Pendingpopulationlimits restoredto2h.
-  Otherbroad/holdout states/ensembles stillpending.
+  Firsteight holdout statescomplete: seven2048pass, state1 needs8192 after
+  2048count failure. Otherholdoutstates/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
@@ -123,7 +124,8 @@ Negative findings remain deliverables, never successful calibration claims.
   afterterminal/absence/hashchecks. PilotCOMPLETED26m06:all512contexts/1024
   branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
   same32workerexecution nowarray61229422for30states2–31 aftercorr61223167;
-  originalstate1nowcomplete1h58m16/all512pass. Pendingstates2–31 now1h
+  originalstate1nowcomplete1h58m16/all512pass; refined3complete2m28/all512pass
+  with24originalfailures retained. Pendingstates2–31 now1h
   (>2x exact32-worker pilot), max3nodes; native/refinedall32complete,490original
   nativefailures retained and32/32refined markerpass. Fullpayloadcheckinassembly.
   Complete-state chain submitted: assemble61232760 -> infer61232761 ->

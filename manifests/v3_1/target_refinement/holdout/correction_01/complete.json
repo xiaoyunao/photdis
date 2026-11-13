@@ -1,0 +1,44 @@
+{
+  "case": "holdout",
+  "correction": 1,
+  "attempts": [
+    {
+      "draws": 512,
+      "fit": "data/v3_1/target_fits/holdout/correction_01_s512/complete.json",
+      "fit_sha256": "d53ea9d2f4745a44053d416955fd108c6bb2e4fc6f11231f8bdcb5fe5e12c9f3",
+      "sampler_passed": true,
+      "bridge_passed": false,
+      "passed": false,
+      "counts": "data/v3_1/target_fits/holdout/correction_01_s512/joint_counts/complete.json",
+      "counts_sha256": "83285620e90f9e9f21f18b293c741639a32f059697df088b9048f57e6350fd7c",
+      "counts_passed": false
+    },
+    {
+      "draws": 2048,
+      "fit": "data/v3_1/target_fits/holdout/correction_01_s2048/complete.json",
+      "fit_sha256": "0abe36edf8b2e897b559d965786a46f0da3b33b9762b9ff6d6ece5b227109135",
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "passed": false,
+      "counts": "data/v3_1/target_fits/holdout/correction_01_s2048/joint_counts/complete.json",
+      "counts_sha256": "0eebaf2d3bd6332c4fa56a46c004c32dc79af7aa9549d090a659c0884182c576",
+      "counts_passed": false
+    },
+    {
+      "draws": 8192,
+      "fit": "data/v3_1/target_fits/holdout/correction_01_s8192/complete.json",
+      "fit_sha256": "f36bf9a43ca8f57aa02735099b54b03dd5621fd1cd6105a3a941d2f6f3d572be",
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "passed": true,
+      "counts": "data/v3_1/target_fits/holdout/correction_01_s8192/joint_counts/complete.json",
+      "counts_sha256": "7010084690087ed4ebaea6356a2ce8e02dd7684a30ffaa02b47bfbd5659bac2d",
+      "counts_passed": true
+    }
+  ],
+  "selected_draws": 8192,
+  "passed": true,
+  "script_sha256": "12154f579d6d0a523abc5d7793b7ae48436570d6dd7d0114d720d5c5d819ea78",
+  "job": "61226974",
+  "scope": "Registered512/2048/8192retained schedule,4chains/fixed512warmup/seeds/priors/selection. All originals and terminal numerical failures retained; no science outcome enters selection."
+}

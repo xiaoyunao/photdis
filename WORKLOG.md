@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-14 — preserve eight held-out fits and prepare final source reports
+- Holdoutfit61225864_17 COMPLETED27m24; allstates0–7 nowcollected. State1
+  requires8192:512bridge/countfail and2048countfail retained; otherseven2048pass.
+  Theseare conditionalfits, notfullensemble/skytransfer acceptance.
+- Structureentry6 COMPLETED13m17,512originalfailures retained. Refinement3
+  COMPLETED2m28:all512pass,24originalfailures/0unresolved; compactmarker and
+  actualsummary authenticated. Firstcollector requestednonexistentchecks.csv;
+  correctedtoexisting summary.csv, no compute failure orproductchange.
+- Existingpendingrefinement4 promoteddebug withinfresh5-job cap;124original
+  flags, same32-worker execution. Receipt retainsactualqueue; no duplicatewriter.
+- Prepared source-backed transfer/structure report generators. Requireactual
+  complete102state and32stateposteriors; unavailable/numerical/support statuses
+  separate, countconservation/sharedvariance andidentity checks. Structureuses
+  suppliedcommonprior, notindependent scale recovery ormaincandidate validation.
+- Pythonparse/gitdiffcheck pass. Generators notyetexecuted becausecomplete
+  sources remainpending; no resultdoc/figure/scientificacceptance fabricated.
+- Next: finishremainingfits/transfers/entryrefinements; actualreports/English
+  figures/visualreview, integrateddomain adjudication andfinaldelivery checks.
+
 ## 2026-11-14 — complete mechanism interpretation and retain first held-out fits
 - Added source-backed mechanism result/generator: all11882stratified contrasts,
   original1089paired rows andfrozen control definitions;76actualchecks/28sources
