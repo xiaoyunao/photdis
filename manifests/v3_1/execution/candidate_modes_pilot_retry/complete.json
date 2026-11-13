@@ -1,0 +1,19 @@
+{
+  "job": "61227692",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-t",
+    "00:30:00",
+    "scripts/run_v3_1_candidate_modes.sh",
+    "--pilot",
+    "--workers",
+    "8"
+  ],
+  "source_commit": "8c54daeef3c7e9dbbcb43ac113490eae0c342b5b",
+  "pilot_n": 8,
+  "original_job": "61227356",
+  "scope": "Same8fixedidentities and unchanged stored state weights; prior no-product preflight failure archived. New guard matches original1e-8 normalization criterion."
+}

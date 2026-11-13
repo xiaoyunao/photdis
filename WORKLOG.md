@@ -1,5 +1,37 @@
 # WORKLOG
 
+## 2026-11-13 — pass exact candidate-mode pilot and validate all field scores
+- Candidatepilot61227692 complete: all8fixednativePSF identities pass.01mag;
+  allhappen tobeinoriginalhighqsubset, notapopulationrepresentativeness claim.
+  Maximum originalprobabilitydifference1.638993e-5, coarse/fineprobability4.631961e-5,
+  muquantile.0010272mag, same-basin fullcomponentmass5.435582e-5;
+  componentconservation2.109424e-15. FullPDFs/statecoefficients/nativekernelcurves/
+  completeparentresponsibilities remainNERSC; compactpilot tablesauthenticated.
+- Fieldscore61226763: all4734object-view saved-gridscore/PIT checks pass.
+  Exactly1578acceptedFalse =526eachcandidatezero/point/main becauseofinherited
+  ensembleflag; no newscorenumericalfailures. Same526objects/nineviews retained.
+- Added8disjointfull-mode resourceshards(0–7%2),32workers,regular1h; total3540
+  fixedIDs andoriginal3003highq, cachedpilot identities reused afterhashchecks.
+  Sameboundedgrids/states/gates/weights; no newscientificselection. Wrapper shell
+  syntaxpassed. Actualsubmission followscleansync; fullreport waitsall3540.
+- Next: fullmodeinventory, commonfinalscores/sharedreport/actualfigures; finish
+  population/radial/64response/structure work. Mathematical174tests stillpass;
+  neitherpilot norfieldscore numericalpass erasesmain evidencefailure.
+
+## 2026-11-13 — finish both evidence associations and start exact-mode retry
+- Commonassociation61226764 COMPLETED4m59:3032nativePSF retained;2419qualified
+  signedGaia/996negative,0missing. Noindividualdistance/class orMWS/VACmatches;
+  NGC1261 sharedHSTscale remainsonecommon reference, not3032independent truths.
+  Completebothcohort evidence nowexists afterimmutablepredictionfreeze.
+- Local/origin/NERSC8c54dae matched; same8-IDmode retry61227692 debug30min/8workers
+  submittedafterguardrepair. At1m41 sevenobjectsfinishedon.01mag andpassedall
+  modechecks(48–66s/object); eighthstillrunning, so pilot/fullmode notyetcomplete.
+- Fieldscore61226763 COMPLETED4m37/0:0; compactscore validation beingcollected.
+  Promotedexistingcommonscore61226770/finalreport61226775 todebug30min withall
+  dependenciesretained. Finalsharedreport andnewscientificfigures stillpending.
+- LastfourSED exactresume61227619_7 running; originaliteration17source/checkpoints
+  retained. Remainingradial/broad/holdout/64response/structure anddomainwork remain.
+
 ## 2026-11-13 — open fixed field evidence and recover mode preflight/refit allocation
 - Fieldassociation61226762 COMPLETED15m37:526nativePSF retained;494qualified
   signedGaia including40negative,0missing;471available/126precisedistance refs;

@@ -1,0 +1,62 @@
+[
+  {
+    "identity": 3697002398360366592,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 1,
+    "second": 2,
+    "different_class": false,
+    "same_class_different_binary": true,
+    "same_class_different_parent": false
+  },
+  {
+    "identity": 6621307577073136640,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 2,
+    "second": 3,
+    "different_class": false,
+    "same_class_different_binary": false,
+    "same_class_different_parent": true
+  },
+  {
+    "identity": 629774593665974784,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 0,
+    "second": 1,
+    "different_class": false,
+    "same_class_different_binary": true,
+    "same_class_different_parent": false
+  },
+  {
+    "identity": 716381960651294592,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 1,
+    "second": 2,
+    "different_class": false,
+    "same_class_different_binary": true,
+    "same_class_different_parent": false
+  },
+  {
+    "identity": 698660581990134400,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 1,
+    "second": 2,
+    "different_class": false,
+    "same_class_different_binary": true,
+    "same_class_different_parent": false
+  },
+  {
+    "identity": 3707332657996478464,
+    "fixed_main_highq": true,
+    "numerical_passed": true,
+    "first": 0,
+    "second": 1,
+    "different_class": false,
+    "same_class_different_binary": true,
+    "same_class_different_parent": false
+  }
+]

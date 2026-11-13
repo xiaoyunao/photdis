@@ -74,8 +74,8 @@ Negative findings remain deliverables, never successful calibration claims.
   candidate admission/primary versusoutside-domain report protocol added, exact
   application3540mask reproduced by61224943(20s). Field519/526 andcommon1732/3032
   in samecandidate domain; others retained outside-domain. Same-ID MWS/VAC channel
-  association/scoring implemented; fieldassociationcomplete, commonassociation
-  andnine-view scoring/report stillpending.
+  association/scoring implemented; bothassociationscomplete (common2419signedGaia/996negative; oneHSTscale).
+  Fieldscore61226763 complete4m37:all4734scorenumerics pass,1578inheritedflags; commonscore61226770/report61226775queueddebug30min.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
@@ -83,8 +83,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Exactluminosity-adjoint andpopulationmode driver implemented;174fulltests pass.
   Explicitforward-component/deep-log tests pass; 8-IDpilot61227356 failed12s due1.6e-12storedweight-roundoff precondition;
   correctedguardusesexisting1e-8normgate withunchangedweights. Originalinputs
-  archived; same8-IDretry aftersync, fullproducts
-  andmodefigures remainpending. Figureprogramrequiresfullactualtables.
+  archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
+  delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
+  execution andmodefigures remainpending; figureprogramrequiresfullactualtables.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
