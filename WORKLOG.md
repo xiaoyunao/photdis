@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — recover active work and prepare independent reference availability
+- Local/origin/NERSC tracked HEADddf814a aligned; no active Slurm jobs. Remote
+  historical untracked files preserved. Previous goal turn made concrete progress.
+- Verified official APOGEE/astroNN producer ancestry: GaiaEDR3-trained distances;
+  dist/dist_error inpc fromfakemag_to_pc; weighted_dist mixes Gaia directly.
+  Local FITS lacksunit keywords. Synspec_rev1/VAC alignment must be explicit.
+- Added external-source protocol and allocated inventory. Class and distance
+  eligibility are independent; retain union, exactIDs/repeats, field/cell/
+  historical use and source-only availability. Zero native-unverified admissions.
+  GC localv1.0 differs from online current counts; membership not yet certified.
+- py_compile/shellsyntax pass. Actual census pending; no correction fitted or
+  final prediction/outcome comparison opened. Next: submit census, build radial
+  catalogs/native likelihood/recovery and qualify newPSF references.
+
 ## 2026-11-13 — finish role and mode support audits
 -61213095 COMPLETED23s exit0:0. Historical parent3565499; nativePSF3417121;
   PSF+photometry612133; after19identity conflicts612114, exactly the v3parent.
