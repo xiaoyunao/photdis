@@ -194,6 +194,12 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Unifiedfigure checker scripts/v3_1_figure_delivery_check.py defaults toall22
+  namedplates; current --completed-only verifies17plates/240source/hash/format
+  andcommittedvisual-provenancechecks. Fullmode missing5guard stoppedwithout
+  finaloutput. Existing17visualreviews authenticated, not repeated. Renderand
+  visuallyreview transfer2/structure2/domain1, commitacceptance provenance, then
+  runfull22check beforefinaldelivery; scientificacceptance staysseparate.
 - All94/102conditionaltransfers authenticate1881compactchecks;33original
   numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
   support passesonlysamecandidateenvelope; all30collectedheldout conditional

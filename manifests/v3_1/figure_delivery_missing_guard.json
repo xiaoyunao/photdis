@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "scripts/v3_1_figure_delivery_check.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_figure_delivery_check.py\", line 127, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_figure_delivery_check.py\", line 42, in main\n    raise FileNotFoundError('All 22 plates required; missing groups: ' + ', '.join(missing))\nFileNotFoundError: All 22 plates required; missing groups: heldout_transfer_figures, structure_figures, domain_adjudication_figures\n",
+  "source_sha256": "255766d515352598312573c321a6ece8686b6fd8fadcd1d39561a609f6a4f3f5",
+  "missing_complete_inventory_guard_passed": true,
+  "final_output_written": false
+}

@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate complete figure inventory and prevent partial final acceptance
+- Added scripts/v3_1_figure_delivery_check.py withfixed22namedplateinventory:
+  exactPNG/PDFsets, source/outputhashes,300dpi, singlepageEnglishPDF, persisted
+  visualreview andbindingtoactualgitcommit containingreview+figuremanifest.
+  Earlyreviewrecords withoutdirectmanifesthash nowauthenticateoriginalbytes
+  viacommitted provenance; no newvisualinspection claimed.
+- Actual --completed-only audit passes240checks across17plates/10groups;
+  full22default refusesmissingtransfer2/structure2/domain1 beforewritingfinal
+  output. Parsecheck andnegativeguard pass, receiptsstored. Remainingfive still
+  needactualdata/render/check/visualreview, not placeholderacceptance.
+- Updatedatlas/status/requirements/PLAN andsource-linkrecords. Frozenproduction
+  renderer v3_1_domain_figures.py unchanged; no scientificcomputation repeated.
+  Runtimeinspection confirms64pilot13, sparse19 andoriginaltransfer5running;
+  otherremainingtasks/dependentreports stillpending. Goalactive.
+
 ## 2026-11-14 — verify half of structure refinements with original failures retained
 - Refined9/61242565 COMPLETED25m51:48workers,Python1532.772s,maxchild4189404KiB,
   batch160935460KiB;512pass/original512flags retained. Secondcomplete48-worker

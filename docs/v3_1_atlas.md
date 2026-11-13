@@ -2,6 +2,12 @@
 
 机制诊断与校正的完整科学解释见[v3_1_mechanism_result.md](v3_1_mechanism_result.md)。
 
+整套交付预定22张图，当前已完成17张。统一检查脚本
+`scripts/v3_1_figure_delivery_check.py` 默认要求全部22张；当前显式部分审计
+完成240项来源、文件哈希、PNG300dpi、单页英文PDF和已提交目检记录绑定检查。
+[部分审计记录](../manifests/v3_1/figure_delivery_partial_17.json)不是完整验收，
+也不代表重复目检。迁移2张、结构2张、最终适用域1张仍待实际结果。
+
 前两张图是已见开发样本的机制诊断，不是最终独立验证。2026-11-13
 逐张目检PNG；62项哈希、分辨率、PDF、英文文字及源表对应检查通过。
 源表均保留原设计权重和天空块bootstrap区间。
