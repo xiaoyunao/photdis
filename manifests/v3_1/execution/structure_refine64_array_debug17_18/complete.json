@@ -1,0 +1,12 @@
+{
+  "scheduler_change_complete": true,
+  "promoted": [
+    17,
+    18
+  ],
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "5311b77bc6826f88795252b41e6aed24443d589dd212edc7333d96c26252bbec"
+  },
+  "scope": "Disjoint existing64-worker children17/18 use debug30, reserving queue capacity for still-live15/16transport. At most5totaldebug jobs includinglastheldoutgroup andallfourchildren; after full512flag21m50measurement andfresh5-jobcap. No new submission/cancellation or scientific changes; array maximum3 nodes unchanged; alreadyrunning/completed originals retained."
+}

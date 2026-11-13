@@ -211,8 +211,9 @@ Negative findings remain deliverables, never successful calibration claims.
   refined21also complete8m32/all512pass, original103flags/10checks retained.
   Refined9/22complete25m51/10m38, original512/133flags retained.
   Refined19complete11m01/original153flags;13/26complete21m50/10m53,
-  original512/149flags. Total19/32refinements authenticate416groupedchecks withnewreproducible
-  refinementcompactchecker;5509originalfailedcontexts/0unresolved preserved.
+  original512/149flags. Refined14/20also complete19m17/17m06, original268/233
+  flags retained. Total21/32refinements authenticate460groupedchecks withnewreproducible
+  refinementcompactchecker;6010originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
@@ -224,7 +225,11 @@ Negative findings remain deliverables, never successful calibration claims.
   andqueueabsent; oneheldsubmission, repairedassemblydependencies before
   release.40receiptchecks/19sourcehashes pass. Last31controllerexpiry and
   twofailedrecoveryguards preserved; no repeatcancel/duplicatewriter.
-  Subsequentdebug15/16queueadjustment requiresactualreceiptconfirmation.
+  Subsequentdebug15/16queueadjustment requiresactualreceiptconfirmation
+  (localprocess/tool session8704stilllive; no remotejournalseen, do not repeat).
+  Disjointnewchildren17/18 promoteddebug30 underfreshcapacity, reserving space
+  for15/16 andlastheldoutgroup; no duplicatewriters/newsubmissions. Lastheldout
+  original17nowrunning; originalstructure14/20complete,24retainedregular30.
   Originaltransfer5complete;17promoteddebug30afteractualmatchedworkload.
   Sparse24temporarilyreturnedregular30toprioritizefull102report; no cancellation.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original

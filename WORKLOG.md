@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate twenty-one refined states and continue independent queued writers
+- Original14/raw61232981 COMPLETED19m17 and20/raw61232989 COMPLETED17m06:
+  all512pass each, original268/233flags retained. Python1138.959/1014.179s,
+  maximumchild4193596/4190820KiB. Unified21-state compact audit passes460checks
+  over21504branchrows, original6010failedcontexts/0unresolved; prior snapshots kept.
+- Lastheldoutgroup61231554_17 nowRUNNING; full102transfer report stillpending.
+  Newarray61246935 remainsmax3. Existingchildren17/18 promoteddebug30 after
+  full51221m50 measurement/freshglobalcapacity proof, leaving allowance for
+  lastheldoutgroup and15/16 iftheir earlier command returns. No new submission,
+  cancellation or repeatedscience; distinct child IDs avoid duplicatewriters.
+- Earlier15/16 promotion command stilllive locally (execsession8704, parent9243/
+  SSH9245 when inspected), withno remotejournal yet. Independentread-only queue
+  andaccounting work. Do not infer terminal state, restart, orrepeatmutation;
+  rechecksamehandle andactualremotejournal/queue first. No auth-renewal request
+  needed fromthisevidence; other currentSSH inspections succeed.
+- UpdatedPLAN/status/ledger/sourcehashes. Scientific completion remainspartial;
+  new full array, original24, transfer/report/domain andfiveplates stillrequired.
+
 ## 2026-11-14 — continue ten unstarted refinements with verified whole-array dependency
 - Submitted61246935 for15,16,17,18,25,27,28,29,30,31%3 using measured64-worker
   executor/30min. Original14/20running and24pending retained. Original10writers
