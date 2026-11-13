@@ -12,7 +12,7 @@ def main():
     require_compute();root=ROOT/'data/v3_1/structure';out=root/'matrices';out.mkdir(exist_ok=True)
     paths=[root/'complete.json',root/'photometry.npz',ROOT/'scripts/v3_1_structure_assemble.py',
         ROOT/'docs/v3_1_structure_protocol.md',ROOT/'docs/v3_1_structure_numerical_protocol.md']
-    paths += [root/f'{kind}/draw_{draw:02}/complete.json' for kind in ('native','entry') for draw in range(32)]
+    paths += [root/f'{kind}/draw_{draw:02}/complete.json' for kind in ('native','native_refined','entry') for draw in range(32)]
     missing=[str(p.relative_to(ROOT)) for p in paths if not p.exists()]
     if missing:
         save_json(out/'progress.json',dict(missing=missing,complete=False,job=os.getenv('SLURM_JOB_ID')))
@@ -24,13 +24,20 @@ def main():
     else:save_json(freeze,inputs)
     logresponse=entry=None;common=means=sigmas=None;flags=[];sources={}
     for draw in range(32):
-        native=root/f'native/draw_{draw:02}';selection=root/f'entry/draw_{draw:02}'
+        native=root/f'native/draw_{draw:02}';selection=root/f'entry/draw_{draw:02}';refined=root/f'native_refined/draw_{draw:02}'
         nd=json.loads((native/'complete.json').read_text());ed=json.loads((selection/'complete.json').read_text())
+        rd=json.loads((refined/'complete.json').read_text());assert rd['n']==512 and rd['all_PSF'] and rd['response_draw']==draw
+        assert rd['inputs'][str((native/'complete.json').relative_to(ROOT))]==sha(native/'complete.json')
         assert nd['n']==ed['n']==512 and nd['all_PSF'] and ed['all_PSF'] and nd['response_draw']==ed['response_draw']==draw
         for row,identity in enumerate(table['identity']):
             name=f'object_{int(identity)}.json';p=native/name;assert sha(p)==nd['objects'][name]
             n=json.loads(p.read_text());assert n['inputs']==nd['inputs'] and n['identity']==identity and n['row']==row and n['TYPE']=='PSF'
-            payload=p.with_suffix('.npz');assert sha(payload)==n['sha256'];a=load(payload)
+            payload=p.with_suffix('.npz');assert sha(payload)==n['sha256']
+            refmarker=refined/f'object_{int(identity)}/complete.json';assert sha(refmarker)==rd['objects'][str(refmarker.relative_to(refined))]
+            refined_record=json.loads(refmarker.read_text());assert refined_record['inputs']==rd['inputs'] and refined_record['identity']==identity and refined_record['TYPE']=='PSF'
+            assert refined_record['source_marker_sha256']==sha(p) and refined_record['source_payload_sha256']==sha(payload)
+            selected=ROOT/refined_record['selected_payload'];assert sha(selected)==refined_record['selected_sha256'];a=load(selected)
+            sources[str(refmarker.relative_to(ROOT))]=sha(refmarker)
             sources[str(p.relative_to(ROOT))]=sha(p)
             if logresponse is None:
                 common=a['common_mu'];means=a['radial_means'];sigmas=a['radial_sigmas']
@@ -49,7 +56,8 @@ def main():
                     path=q.parent/f'{label}_q{count}_seed{seed}.npz';assert sha(path)==e['outputs'][path.name];b=load(path)
                     np.testing.assert_array_equal(b['means'],means[cols]);np.testing.assert_array_equal(b['sigmas'],sigmas[cols])
                     entry[variant,draw,row,cols]=frequency@b['alpha']
-            flags.append(dict(draw=draw,row=row,identity=int(identity),TYPE='PSF',native_passed=n['passed'],entry_passed=e['passed'],passed=n['passed'] and e['passed']))
+            flags.append(dict(draw=draw,row=row,identity=int(identity),TYPE='PSF',original_native_passed=n['passed'],
+                native_passed=refined_record['passed'],entry_passed=e['passed'],passed=refined_record['passed'] and e['passed']))
         print('STRUCTURE ASSEMBLY',draw,flush=True)
     assert np.isfinite(logresponse).all() and np.isfinite(entry).all() and (entry>=0).all()
     atomic_npz(out/'matrices.npz',identity=table['identity'],TYPE=table['TYPE'],radius_deg=table['radius_deg'],response_ids=np.arange(32),

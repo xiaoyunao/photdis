@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-13 — retain seven structure pilot numerical failures
+- Structure preparation61221747 COMPLETED14s,512nativePSF; original admission
+  records retained (282287nonPSF,0missingTYPE,48230eligible/8192originalsample).
+  No Gaia membership or newvalidation outcomes selected these512identities.
+- Nativepilot61221947_12 COMPLETED36s:7/512objects fail initial coarse/fine
+  comparison; max log-response delta.411724, classprobability delta.0456824.
+  All original curves/flags retained. This is not a scientific acceptance.
+- Added bounded numerical-only sidecars: global.005/.0025/.00125 and regional
+  .001/.0005/.00025; both full andGaussian branches mustpass unchanged gates.
+  Assembly now requires all512sidecar inventories perresponse and retains original
+  flags; no deletion/parameter refit. Sidecar actualexecution pending.
+- True-distancejoint61220368 shards1/2 COMPLETED359/362s, all6500each pass;
+  total19500objects conserve. Lastshard running. SEDgroup0 exactresume61218979_0
+  COMPLETED7m56s; groups0/1/2 now12newresponses complete. Radialresumes bothrunning.
+- Validation: newsidecar/assembly imports, py_compile andshellsyntax pass;
+  full127tests unchanged. Latest completed three-end syncfa8abfc.
+- Next: refinepilot, inspect directstructureentry, completeall targetmatrices,
+  continue science fits/counts and unopened product-matched validation.
+
 ## 2026-11-13 — extend exact shared-count checks and structure posterior implementation
 - Targetentry61219182 shards1/2 COMPLETED17m24s/16m28s:1866/1841envelopes
   allpass. Togetherfirst3shards4875objects/5549envelopes pass; all13remaining

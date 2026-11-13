@@ -1,0 +1,43 @@
+{
+  "inputs": {
+    "data/v3_0/independent_scale/photometry.npz": "9e468df16ca6c4cb1edcb413307d21a7661659a6041bd7092033b5ffd41a87c3",
+    "data/v3_0/independent_scale/photometry.json": "8d0961777b020609619c61ba3b5915507a543d168f275eca39139b5fa662dbd9",
+    "configs/v3_0_independent_scale.json": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d",
+    "scripts/v3_1_structure_prepare.py": "98fcf995397f2896ca55d2bb529140e7b9a07d7a9f7331d306b573acaf314449"
+  },
+  "outputs": {
+    "photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40"
+  },
+  "n": 512,
+  "all_PSF": true,
+  "original_admission": {
+    "config_sha256": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9",
+    "sha256": "9e468df16ca6c4cb1edcb413307d21a7661659a6041bd7092033b5ffd41a87c3",
+    "region_rows": 501372,
+    "admitted": 48230,
+    "sampled": 8192,
+    "nonPSF": 282287,
+    "missing_TYPE": 0,
+    "photometric_failure": 170855,
+    "role_overlaps": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "membership_outcomes_opened": false,
+    "scale_used_in_fitting": false,
+    "center_ra": 13.188,
+    "center_dec": -26.583,
+    "source_sweep": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m030-015m025.fits",
+    "catalog_sha256": "e1c504be3abe9ceb7b582f0ccaacd1b18fc45afc0fa27107a056ec64d86331fa",
+    "job": "61137636"
+  },
+  "subset_non_PSF_excluded": 0,
+  "subset_missing_TYPE_excluded": 0,
+  "job": "61221747",
+  "membership_used_for_selection": false,
+  "new_validation_outcomes_opened": false,
+  "scope": "SeenNGC288 photographic-first uniform identity subsample. Existing shared dynamical scale will be a prior, not validation truth; counts concern512observed objects only."
+}

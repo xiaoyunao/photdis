@@ -41,11 +41,12 @@ Negative findings remain deliverables, never successful calibration claims.
   identity/prediction freeze stillrequired before scoring.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   True-distance Gaussian correction integral and shared count/numerical-transfer
-  foundations implemented/tested. Joint response61220368 shard0 passes6500rows.
+  foundations implemented/tested. Joint response61220368 first3shards pass19500rows.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
   analytical baseline withdrawal/entry/math foundation tested; preparation61221747
-  and entrypilot61221765 queued. Nativepilot61221947_12 queued; allstate entry/
-  assembly/posterior drivers ready with shared-count tests, actualexecution pending.
+  complete61221747 and entrypilot61221765 queued. Nativepilot61221947_12 has
+  7/512initialnumericalfailures; bounded sidecarimplementation ready, originals
+  preserved. Allstate entry/assembly/posterior drivers await numerical admission.
   Full scientific counts, final product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
