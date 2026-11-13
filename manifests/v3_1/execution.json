@@ -108,6 +108,24 @@
       "last_observed_state": "COMPLETED",
       "exit_code": "0:0",
       "elapsed_seconds": 231
+    },
+    {
+      "job_id": "61213095",
+      "purpose": "actual native eligibility versus historical roles",
+      "wrapper": "scripts/run_v3_1_reference_roles.sh",
+      "qos": "debug",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 23
+    },
+    {
+      "job_id": "61213096",
+      "purpose": "weighted compact mode attribution and reference support",
+      "wrapper": "scripts/run_v3_1_mode_summary.sh",
+      "qos": "debug",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 28
     }
   ],
   "local_validation": {

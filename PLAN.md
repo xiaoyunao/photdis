@@ -15,7 +15,7 @@ Protocol: `docs/v3_1_protocol.md`; evidence ledger:
 - [ ] WP4: product-matched evaluation, joint counts, domain map, reweighting and structure example.
 - [ ] Complete scientific/numerical/visual acceptance, reports and safe three-end sync.
 
-NERSC authentication renewed; three-end tracked checkpoint0c9f022 verified.
+NERSC authentication renewed; three-end tracked checkpointce0d1e3 verified.
 Historical remote untracked artifacts are preserved. Pilot32stars/354views and
 availability inventory completed. Paired report has6passing actual checks and
 roundoff-only nominal reproduction. Latent audit61212377 completed50views:
@@ -23,13 +23,16 @@ max any-negative upper0.0003423; insufficient to motivate positivity refitting.
 Registered1542-source diagnostic61212409 completed491s:17386views, no numeric
 failures. Paired report has1089contrasts and all6checks passing.
 Native census61212560 completed: blanket historical-parent exclusion is empty;
-parent inclusion is not fitted/scored use. Separate true eligibility/role audit
-implemented and pending. Paired61212562 and strata61212908 reports completed.
+parent inclusion is not fitted/scored use. Actual role audit61213095 completed:612114PSF/photometric/unique eligible
+objects exactly match the v3parent; historical pool membership and training
+remain distinct. Mode support61213096 completed. Paired61212562 and strata61212908 reports completed.
 Radial protocol and objective/selection foundation registered;5new tests pass.
 Radial selection61212909 passed (267profiles,max broad delta.0006065);
 actual native likelihood preparation/recovery and target-prior controls remain.
-Next: finish full diagnostic and native feasibility census, freeze available
-prospective evidence roles, then correction/radial/transfer work packages.
+Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
+PSF/new reference blocks; freeze actual prospective roles before correction.
+Implement matched shared-target-prior contrasts and radial recovery on all
+registered catalogs, then selection-matched transfer/response/systematics work.
 No automatic million-object products, deployment, timers or subagents.
 
 

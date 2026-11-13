@@ -1,0 +1,16 @@
+{
+  "inputs": {
+    "data/v3_1/diagnostics/diagnostic/stratified_report/mode_reference_support.csv": "38dadef00038dd9fb5e6516a2ca14d7d4999660f3b39d7b7a21d5e4fcabfe415",
+    "data/v3_1/diagnostics/diagnostic/stratified_report/complete.json": "f00e0a1e73d33352cdfe152e791a0f0ac7ecd4df7d7316520df445954985d97f",
+    "data/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "scripts/v3_1_mode_summary.py": "90a0d2432f990b864450bdb3bffc0f4cb90f92a07bae0112422f1f5cf11aa25e",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
+  },
+  "outputs": {
+    "summary.csv": "b5cdb78c73841423d2523c7c1cabbae9efea64b94eca0f57962867b61e600bbc"
+  },
+  "raw_mode_rows": 199946,
+  "star_controls": 15844,
+  "job": "61213096",
+  "scope": "Design-weighted per-star summaries; significant mass>.05; weak basins retained, not assumed numerical artifacts. Dominant-kernel source support is not posterior source ESS; binary dominance is model attribution, not an observed binary classification."
+}

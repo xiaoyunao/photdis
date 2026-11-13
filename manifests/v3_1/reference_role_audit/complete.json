@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "data/v2_0/native_report.npz": "6b4cb36e9ea32a4fc3625bd6026bd270350159cb18e84480fccc2522b84c4357",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "scripts/v3_1_reference_roles.py": "58c70ecfef9972e2ab4b79efd79aeff5322ff81be768f3b2e0b45bcbca79d265"
+  },
+  "outputs": {
+    "eligibility.csv": "f68c6c8d3059dfd82e0601c270309a4fb1980c2a92bd0054ccddb0c29faa409f",
+    "roles.csv": "f9f7e6da0ade14581a0fc858a693734bcffdcc820352ecc2c941a195adfecc9b"
+  },
+  "job": "61213095",
+  "native_missing": 0,
+  "admitted_missing_or_nonPSF": 0,
+  "scope": "Historical parent inclusion is not fitted/scored use. Native morphology/photometry eligibility precedes prior-role exclusions. v2.3 fitting and all v3 parent roles separately counted. No new final-test assignment, reference outcome comparison or model fit."
+}

@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-13 — finish role and mode support audits
+-61213095 COMPLETED23s exit0:0. Historical parent3565499; nativePSF3417121;
+  PSF+photometry612133; after19identity conflicts612114, exactly the v3parent.
+  Outside-v3 eligible IDs/sky bothzero;345466eligible objects not in v2.3fit
+  remain in explicit v3roles. Parent inclusion is still not fitted/scored use.
+-61213096 COMPLETED28s exit0:0. Complete-mode table retained; compact weighted
+  summaries downloaded/hash-verified. Response12 significant multimodality
+  95.53% falls to55.83% in single-star control;35.21% have different dominant
+  classes across significant modes. These are model attributions, not measured
+  physical binaries/class truth. Low-effective-source dominant-mode mass0.455%
+  does not bound full posterior source uncertainty.
+- Header-only NERSC inspections archived for733901-row DR17allStar/astroNN and
+  7260GCmembers/72GCparameters. Available FIELD/GaiaID/class/FeH/distance
+  columns support an allocated new-reference availability audit; no science
+  rows newly admitted. AstroNN teacher-scale/weighted-distance ancestry must
+  be checked before using any reference.
+- Downloaded/hash-verified role/mode artifacts; all submitted jobs ended.
+  Goal remains active: new evidence freeze, shared-prior contrasts, radial
+  catalogs/recovery, constrained correction and remaining WP2–4 not complete.
+
 ## 2026-11-13 — resolve inventory interpretation and accept radial entry foundation
 - Native census61212560 COMPLETED906s exit0:0:3564628positive exact source
   matches,148017nonPSF, zero missingTYPE. Every matched ID already occurs in

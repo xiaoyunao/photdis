@@ -1,0 +1,8 @@
+stage,n,identities,sky_cells,missing_TYPE,nonPSF,class_labels,evolved,specdis_historical_flag,spdist,signed_gaia,v2_3_fit
+historical_parent,3565499,3565499,178,0,148378,422057,10353,2702413,2395379,490116,266649
+native_PSF,3417121,3417121,178,0,0,421890,10351,2700049,2392554,490028,266649
+native_PSF_photometric,612133,612133,106,0,0,421890,10351,470057,383326,490028,266649
+native_PSF_photometric_unique,612114,612114,106,0,0,421890,10351,470052,383313,490028,266648
+eligible_outside_v3_parent,0,0,0,0,0,0,0,0,0,0,0
+eligible_outside_v3_sky,0,0,0,0,0,0,0,0,0,0,0
+eligible_not_v2_3_fit,345466,345466,106,0,0,199032,4711,206141,180350,227131,0
