@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-13 — first actual v3.1 pilot and availability inventory
+- Inventory61212144 COMPLETED27s exit0:0. Pilot61212082 writes complete32stars/
+  354views, zero nonconvergence; accounting completion to recheck. Downloaded
+  and hash-verified both completion records, cohort and small CSVs.
+-26k design has3540rows in the final candidate observable envelope; per-field
+  counts148–334. Raw sources outside v3sky and oldreference identities number
+  2480594 across193cells, including31194class-qualified evolved candidates.
+  All remain acquisition inventory with unverified nativeTYPE, not admitted
+  science/independent validation; all-history and native-sample audit required.
+- Paired report/frozen-fidelity job61212314 submitted after pilot dependency.
+  Added actual latent-sign sidecar driver/wrapper; syntax passes, not run yet.
+- Next: inspect paired report, latent-sign audit and representative full diagnostic
+  timing; acquire qualified new evidence and freeze roles before correction fit.
+
+
 ## 2026-11-13 — add actual frozen-posterior fidelity gate
 - Report now verifies every nominal pilot identity against stored frozen v3.0
   quantiles/qnear/joint probabilities before interpreting controlled differences.

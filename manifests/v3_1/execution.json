@@ -6,8 +6,7 @@
     {
       "job_id": "61212082",
       "purpose": "stratified mechanism pilot",
-      "last_observed_state": "PENDING",
-      "reason": "Priority",
+      "last_observed_state": "output_complete; accounting verification pending",
       "wrapper": "scripts/run_v3_1_diagnostics.sh",
       "args": [
         "--stage",
@@ -20,10 +19,17 @@
     {
       "job_id": "61212144",
       "purpose": "reference-availability and target-domain inventory",
-      "last_observed_state": "PENDING",
-      "reason": "Priority",
+      "last_observed_state": "COMPLETED",
       "wrapper": "scripts/run_v3_1_inventory.sh",
       "qos": "debug"
+    },
+    {
+      "job_id": "61212314",
+      "purpose": "pilot paired report and frozen nominal fidelity",
+      "wrapper": "scripts/run_v3_1_report.sh",
+      "dependency": "afterok:61212082",
+      "qos": "debug",
+      "last_observed_state": "submitted"
     }
   ],
   "local_validation": {

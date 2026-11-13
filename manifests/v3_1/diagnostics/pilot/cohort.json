@@ -1,0 +1,165 @@
+{
+  "inputs": {
+    "configs/v3_1_diagnostics.json": "4462aa15413892bf588c1bee67daf46059964cf1640903e81de1b0b09a34adab",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "docs/v3_1_protocol.md": "d16148dc2253f245508b6f723d272039b8fc1405cd302cb8c47b430ff5f0de0d",
+    "scripts/v3_1_diagnostics.py": "8950db3246fbf57c9f91653e21a1ce8c1ca7f7a12a02cf787229c32edfe30d38",
+    "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba",
+    "scripts/v3_0_response.py": "2188f95749506483e9cab50fcd5311587b10fe61fb8a510bf1b666b4079d540d",
+    "src/photdis/audit.py": "fd7b0266624fdc0f09fc58454f5a5d9da3c2334ecfd5a37dc332cf423637470f",
+    "src/photdis/v3_1/diagnostics.py": "7ba8b429aefe3d92d7d056f0ff57943db1665ad2361c627a262301417321ff31",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "src/photdis/v3/likelihood.py": "f31efb508f323239633b02e1f9b888d08b5977ae55cc53c0eab9f6476ed8f3b8",
+    "src/photdis/v3/fast.py": "88ed1fb121c83c321c77e856c32216831c67ddc5024c450a8dc2f3a67a6ce199",
+    "src/photdis/v3/model.py": "bad0860dd9a0a02baf7d98469ac1a67761610809126168bd88d1354a42b5c01a",
+    "src/photdis/v3/systematics.py": "d078d62855df573cd0a3d5cdd403ab15480402c9ee18ca0f4ed0830a407dd74c",
+    "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+    "src/photdis/v3/data.py": "394fa3db0b4a725bc9ff747106bd7ef0ab4a197a75e007f06afe06306432c8c9",
+    "stage": "pilot"
+  },
+  "psf": {
+    "input_rows": 62880,
+    "admitted": 62880,
+    "missing_TYPE": 0,
+    "nonPSF": 0
+  },
+  "strata": [
+    {
+      "stratum": "class-1_feh0",
+      "parent": 30,
+      "selected": 2,
+      "inclusion_probability": 0.06666666666666667
+    },
+    {
+      "stratum": "class-1_feh1",
+      "parent": 44,
+      "selected": 2,
+      "inclusion_probability": 0.045454545454545456
+    },
+    {
+      "stratum": "class-1_feh2",
+      "parent": 3,
+      "selected": 2,
+      "inclusion_probability": 0.6666666666666666
+    },
+    {
+      "stratum": "class-1_feh3",
+      "parent": 19853,
+      "selected": 2,
+      "inclusion_probability": 0.00010074044225054147
+    },
+    {
+      "stratum": "class0_feh0",
+      "parent": 2522,
+      "selected": 2,
+      "inclusion_probability": 0.0007930214115781126
+    },
+    {
+      "stratum": "class0_feh1",
+      "parent": 13999,
+      "selected": 2,
+      "inclusion_probability": 0.00014286734766769056
+    },
+    {
+      "stratum": "class0_feh2",
+      "parent": 6932,
+      "selected": 2,
+      "inclusion_probability": 0.00028851702250432774
+    },
+    {
+      "stratum": "class0_feh3",
+      "parent": 11380,
+      "selected": 2,
+      "inclusion_probability": 0.0001757469244288225
+    },
+    {
+      "stratum": "class1_feh0",
+      "parent": 312,
+      "selected": 2,
+      "inclusion_probability": 0.00641025641025641
+    },
+    {
+      "stratum": "class1_feh1",
+      "parent": 901,
+      "selected": 2,
+      "inclusion_probability": 0.0022197558268590455
+    },
+    {
+      "stratum": "class1_feh2",
+      "parent": 23,
+      "selected": 2,
+      "inclusion_probability": 0.08695652173913043
+    },
+    {
+      "stratum": "class1_feh3",
+      "parent": 34,
+      "selected": 2,
+      "inclusion_probability": 0.058823529411764705
+    },
+    {
+      "stratum": "class2_feh0",
+      "parent": 1621,
+      "selected": 2,
+      "inclusion_probability": 0.0012338062924120913
+    },
+    {
+      "stratum": "class2_feh1",
+      "parent": 4127,
+      "selected": 2,
+      "inclusion_probability": 0.000484613520717228
+    },
+    {
+      "stratum": "class2_feh2",
+      "parent": 355,
+      "selected": 2,
+      "inclusion_probability": 0.005633802816901409
+    },
+    {
+      "stratum": "class2_feh3",
+      "parent": 744,
+      "selected": 2,
+      "inclusion_probability": 0.002688172043010753
+    }
+  ],
+  "identities": [
+    661089165861254144,
+    3666972983459150208,
+    3674057209891423232,
+    3671832653055087104,
+    3654640178141732992,
+    3668086793033176576,
+    2507330748387059584,
+    3673728932655978112,
+    2502072402746816256,
+    1172760783181674752,
+    3822313772937431552,
+    2490737640454838272,
+    3656319166757670016,
+    3670494994080273280,
+    1175461462912091520,
+    3670892330094962048,
+    3668533121739303296,
+    2513755882023001984,
+    3654340007172529280,
+    2501736123987119744,
+    2500422688628167680,
+    2487570978247340160,
+    3670402257148458752,
+    2462546677714930048,
+    1175839656257602048,
+    2491126901930974208,
+    2492814656574903936,
+    2493240957848853504,
+    3674235536933650688,
+    3669817836652063104,
+    1176582651239414400,
+    3669594086035753088
+  ],
+  "role": "seen_development_diagnostic",
+  "selection": "Disjoint class/FeH strata, uniform stable rank; no residual/outcome success selection"
+}

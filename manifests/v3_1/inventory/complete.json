@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/baseline_v1_4/sources.npz": "a8f29ab87e7b93177ea2f797a9f5d6ce9cc7adc53fb847416d5f304141754afc",
+    "data/baseline_v1_4/source_evidence.npz": "74602dc463fd676bd88fb2e04ce4c3a07baf27651a9c3aca5f500bacc5f879ca",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "scripts/v3_1_inventory.py": "60ae6757e3379b8cd3203fb4fd0278c9eaf00acb3523c8b0d3ed36008dcf2a29",
+    "docs/v3_1_protocol.md": "d16148dc2253f245508b6f723d272039b8fc1405cd302cb8c47b430ff5f0de0d"
+  },
+  "outputs": {
+    "historical_coverage.csv": "3e72956fb0cff91420d4b44eca0b2e4b48a4c91f74a8de4d8e46bde3fe6a2047",
+    "target_domain_inventory.csv": "a026da70dc276f2b120665c5e4be8b1fd45f6ca640f4d9c7d5203f379cc173d2",
+    "raw_source_availability.csv": "b8fa8c2357a78914591808d272a9bc2102d16684f4bcf4a8d878282f0d831dea"
+  },
+  "reference_morphology": {
+    "parent_rows": 612114,
+    "nonPSF": 0,
+    "missing_TYPE": 0,
+    "admitted": 612114
+  },
+  "job": "61212144",
+  "prior_validation": "v3 new_sky/NGC288/reservation already opened; seen regression only",
+  "raw_source_limitation": "Outside v3 ID/sky is not all-history independence. No raw acquisition row admitted before native TYPE verification. Source raw tables were inventoried historically; no prediction residuals read.",
+  "next": "Audit all-history source/sky/system use, verify native PSF and reference availability, then freeze new final roles before any correction fit.",
+  "scientific_acceptance": false
+}

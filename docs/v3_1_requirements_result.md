@@ -7,15 +7,15 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 |---|---|---|---|
 | A1 | Complete latest review and related project chat recovery | Complete | Latest full message archived; photdis_v1, original planning and three related Pro chats inspected |
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
-| B1 | Same-star class and FeH conditional diagnostics | Implemented; actual run pending | Analytic Gaussian conditioning and frozen-reference identities tested; no production labels |
+| B1 | Same-star class and FeH conditional diagnostics | Pilot computed; analysis pending | Analytic Gaussian conditioning and frozen-reference identities tested; no production labels |
 | B2 | Fixed response/prior/band/error contrasts | Pending | Match identities and final product identity |
 | B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Pending | Retain sampling probabilities and full denominators |
-| B4 | Binary/class/component mode attribution | Implemented; actual run pending | Basin responsibilities conserve mass; analytic binary peak separation tested |
+| B4 | Binary/class/component mode attribution | Pilot computed; analysis pending | Basin responsibilities conserve mass; analytic binary peak separation tested |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |
 | C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Pending | Distinguish actual-count/parameter recovery and coverage |
 | C2 | 26k/qualified-bright/held-out-field transfer | Pending | Matching selection normalization required |
 | C3 | Independent response set and evidence concentration diagnosis | Pending | No artificial flattening; continuous-systematic amendment if supported |
-| D1 | Available-reference/historical-use inventory and frozen new test blocks | Pending | Must precede correction training |
+| D1 | Available-reference/historical-use inventory and frozen new test blocks | Initial inventory complete; role freeze pending | manifests/v3_1/inventory; native/all-history qualification still required before correction training |
 | D2 | Independent near/class/poor-metal/common-scale/far evidence | Pending | Empty domains explicitly unvalidated |
 | D3 | Once-opened final scores and correlated uncertainty | Pending | Signed Gaia and source ancestry retained |
 | E1 | Final product identity matches main evaluation | Pending | Model/calibration/prior/selection/shared hashes |
