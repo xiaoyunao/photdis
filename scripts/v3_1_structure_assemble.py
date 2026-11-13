@@ -12,7 +12,7 @@ def main():
     require_compute();root=ROOT/'data/v3_1/structure';out=root/'matrices';out.mkdir(exist_ok=True)
     paths=[root/'complete.json',root/'photometry.npz',ROOT/'scripts/v3_1_structure_assemble.py',
         ROOT/'docs/v3_1_structure_protocol.md',ROOT/'docs/v3_1_structure_numerical_protocol.md']
-    paths += [root/f'{kind}/draw_{draw:02}/complete.json' for kind in ('native','native_refined','entry') for draw in range(32)]
+    paths += [root/f'{kind}/draw_{draw:02}/complete.json' for kind in ('native','native_refined','entry','entry_refined') for draw in range(32)]
     missing=[str(p.relative_to(ROOT)) for p in paths if not p.exists()]
     if missing:
         save_json(out/'progress.json',dict(missing=missing,complete=False,job=os.getenv('SLURM_JOB_ID')))
@@ -28,6 +28,9 @@ def main():
         nd=json.loads((native/'complete.json').read_text());ed=json.loads((selection/'complete.json').read_text())
         rd=json.loads((refined/'complete.json').read_text());assert rd['n']==512 and rd['all_PSF'] and rd['response_draw']==draw
         assert rd['inputs'][str((native/'complete.json').relative_to(ROOT))]==sha(native/'complete.json')
+        entry_refined=root/f'entry_refined/draw_{draw:02}';erd=json.loads((entry_refined/'complete.json').read_text())
+        assert erd['n']==512 and erd['all_PSF'] and erd['response_draw']==draw
+        assert erd['inputs'][str((selection/'complete.json').relative_to(ROOT))]==sha(selection/'complete.json')
         assert nd['n']==ed['n']==512 and nd['all_PSF'] and ed['all_PSF'] and nd['response_draw']==ed['response_draw']==draw
         for row,identity in enumerate(table['identity']):
             name=f'object_{int(identity)}.json';p=native/name;assert sha(p)==nd['objects'][name]
@@ -50,14 +53,17 @@ def main():
             q=selection/f'context_{row}/complete.json';assert sha(q)==ed['contexts'][str(q.relative_to(selection))]
             e=json.loads(q.read_text());assert e['inputs']==ed['inputs'] and e['identity']==identity and e['row']==row and e['TYPE']=='PSF'
             sources[str(q.relative_to(ROOT))]=sha(q)
-            for branch in e['results']:
-                label=branch['branch'];last=branch['selected_draws'];previous=branch['attempts'][-2]['draws'];cols=slice(0,5) if label=='background' else slice(5,None)
-                for variant,(count,seed) in enumerate([(last,320211),(last,320212),(previous,320211)]):
-                    path=q.parent/f'{label}_q{count}_seed{seed}.npz';assert sha(path)==e['outputs'][path.name];b=load(path)
+            eq=entry_refined/f'context_{row}/complete.json';assert sha(eq)==erd['contexts'][str(eq.relative_to(entry_refined))]
+            er=json.loads(eq.read_text());assert er['inputs']==erd['inputs'] and er['source_marker_sha256']==sha(q) and er['identity']==identity and er['row']==row and er['TYPE']=='PSF'
+            sources[str(eq.relative_to(ROOT))]=sha(eq)
+            for branch in er['results']:
+                label=branch['branch'];cols=slice(0,5) if label=='background' else slice(5,None)
+                for variant,name in enumerate(('base','second_seed','previous_level')):
+                    selected=branch['selected'][name];path=ROOT/selected['path'];assert sha(path)==selected['sha256'];b=load(path)
                     np.testing.assert_array_equal(b['means'],means[cols]);np.testing.assert_array_equal(b['sigmas'],sigmas[cols])
                     entry[variant,draw,row,cols]=frequency@b['alpha']
             flags.append(dict(draw=draw,row=row,identity=int(identity),TYPE='PSF',original_native_passed=n['passed'],
-                native_passed=refined_record['passed'],entry_passed=e['passed'],passed=refined_record['passed'] and e['passed']))
+                native_passed=refined_record['passed'],original_entry_passed=e['passed'],entry_passed=er['passed'],passed=refined_record['passed'] and er['passed']))
         print('STRUCTURE ASSEMBLY',draw,flush=True)
     assert np.isfinite(logresponse).all() and np.isfinite(entry).all() and (entry>=0).all()
     atomic_npz(out/'matrices.npz',identity=table['identity'],TYPE=table['TYPE'],radius_deg=table['radius_deg'],response_ids=np.arange(32),

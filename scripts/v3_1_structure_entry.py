@@ -17,7 +17,7 @@ from photdis.v3.systematics import calibration_vectors
 def main():
     require_compute();p=argparse.ArgumentParser();p.add_argument('--draw',type=int,default=int(os.getenv('SLURM_ARRAY_TASK_ID',-1)));a=p.parse_args();assert 0<=a.draw<32
     root=ROOT/'data/v3_1/structure';old=ROOT/'data/v3_0';model_dir=old/f'uncertainty_refit/draw_{a.draw:02}'
-    paths=[root/'complete.json',root/'photometry.npz',root/'entry_pilot/complete.json',model_dir/'complete.json',model_dir/'model.joblib',
+    paths=[root/'complete.json',root/'photometry.npz',root/'entry_pilot_refined/complete.json',model_dir/'complete.json',model_dir/'model.joblib',
         old/'uncertainty/shared_draws.npz',ROOT/'scripts/v3_1_structure_entry.py',ROOT/'scripts/v3_1_structure_entry_pilot.py',ROOT/'docs/v3_1_structure_protocol.md']
     paths += [ROOT/'src/photdis/v3_1'/n for n in ['structure.py','structure_entry.py','selection_dust.py','candidate_selection.py']]
     inputs={str(p.relative_to(ROOT)):sha(p) for p in paths};inputs['response_draw']=a.draw

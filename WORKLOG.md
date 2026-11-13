@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — finish all true-distance integrals and preserve structure-entry failure
+- All4targetjoint shards61220368 complete:26000objects pass exact unbinned/bin
+  conservation. Compactchecks/manifests collected; posteriorcounts stillpendingfits.
+- Structure native sidecar61222475_12 completesall512:505retainoriginalpair,
+  all7original failures pass.005; zero unresolved. Originalfailedfiles preserved.
+  Remaining31native states submitted61222616, pairedrefinement aftercorr queued.
+- Directstructureentry61221765 has5/6branch-context passes; maximum-error narrow
+  branch change.000628581 exceeds.0005, while independent.000338608/relative/
+  physical bounds pass. Added separately registered2^23same-seed/proposal extension,
+  retaining originallevels. Fullentry/assembly awaitrefinedpilot andallstate gates.
+- Response0probe61221623_0 target128passes, but3seen-development objects have
+  quantile/source-score/PIT numerical failures. Alloriginalflags retained; these
+  do not authorize deletingresponses or changingmodel. Later numerical sidecars
+  remain needed before accepted ensemble development scores.
+- Added frozen response12/oldtarget prediction control for new3558photometry,
+  retaining old SEDtilts/allsharedposterior draws and newfield hypermean sampling;
+  no reference outcomes read. Corrected fixed-kernel zero is a distinct identity.
+  Driver/protocol/wrapper ready; allocated pilot stillpending.
+- Validation: new/updateddrivers import, compile, shellsyntax anddiff checks pass;
+  full127mathtests retained. No new scientific calibration or finalscore claimed.
+- Next: sync/submit entryextension and oldtarget control, finishdirecttarget
+  matrices/refit/radial controls, then conditionalfits/counts/finalfreeze/scores.
+
 ## 2026-11-13 — retain seven structure pilot numerical failures
 - Structure preparation61221747 COMPLETED14s,512nativePSF; original admission
   records retained (282287nonPSF,0missingTYPE,48230eligible/8192originalsample).

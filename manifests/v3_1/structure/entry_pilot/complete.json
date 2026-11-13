@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "data/v3_1/structure/complete.json": "7a170db2151c5564f2b739b516e508a1b87bd29226d93d53452c2bc9df794d7f",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_structure_entry_pilot.py": "949047fd2fc6052fe0920c7931f1aabc4ac9c10173bc8ad453ec20e16d6c798f",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4"
+  },
+  "outputs": {
+    "summary.csv": "0f2b5bb11ce39d7d86a11299cbd6bb977902fb868edb628f806368ada2ef1572"
+  },
+  "contexts": {
+    "context_0/complete.json": "e66d7b0ad6b05c756333c0225945cd31dd1dd516532f28e6cfde87fbc769590d",
+    "context_1/complete.json": "eb2a7405f9145db043ab6f1a2549a756b8d2b10a3946de4ed281cc27b32e2b97",
+    "context_2/complete.json": "f7181e9a44a77016c39048c754c07c1a185d5e0c52936ccbab8a6984abffefbd"
+  },
+  "rows": [
+    273,
+    436,
+    224
+  ],
+  "passed": false,
+  "job": "61221765",
+  "scope": "Seen-system observed-context direct entry pilot; no structure score or new validation outcomes."
+}
