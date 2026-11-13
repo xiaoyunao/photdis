@@ -1,0 +1,11 @@
+{
+  "scheduler_change_complete": true,
+  "promoted": [
+    28
+  ],
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "36e253b5a075a94b31b4cbf75d24d904e37bc8d8800352d5222769dabd7a9350"
+  },
+  "scope": "Existing64-worker child28 uses debug30 after complete512flag measurement andfresh5-jobcap. No new submission/cancellation or scientific changes; array maximum3 nodes unchanged; alreadyrunning/completed originals retained."
+}

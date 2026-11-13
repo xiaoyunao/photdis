@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Close the complete research delivery without granting scientific acceptance."""
+import csv
 import hashlib
 import json
 from pathlib import Path
@@ -29,7 +30,8 @@ def main():
     required += [BASE / name for name in [
         'heldout_transfer/compact_inventory_102_states.json',
         'structure/refined_entry_32_states.json',
-        'structure/matrices/complete.json', 'structure/posterior/complete.json',
+        'structure/matrices/complete.json', 'structure/matrices/status.csv',
+        'structure/posterior/complete.json',
         'structure/report/complete.json', 'domain_adjudication/complete.json',
         'figure_delivery.json', 'final_unit_validation.json',
         'final_narrative_review.json',
@@ -84,14 +86,54 @@ def main():
     counts = read('structure/report/complete.json')
     for name, value in [('assembly', assembly), ('posterior', posterior), ('counts', counts)]:
         check('complete_structure:' + name, value['states'] == 32 and value['n'] == 512 and value['all_PSF'])
+    state_records = {}
     for kind in ['native', 'native_refined', 'entry', 'entry_refined']:
         for index in range(32):
             name = f'structure/{kind}/draw_{index:02}/complete.json'
             path = BASE / name
             check('assembly_state:' + name, sha(path) == assembly['inputs']['data/v3_1/' + name])
             record(path)
+            state_records[kind, index] = json.loads(path.read_text())
+    status_path = BASE / 'structure/matrices/status.csv'
+    check('assembled_status_hash', sha(status_path) == assembly['outputs']['status.csv'])
+    record(status_path)
+    with status_path.open() as stream:
+        status_rows = list(csv.DictReader(stream))
+    expected = {(draw, row) for draw in range(32) for row in range(512)}
+    check('all16384_state_objects', len(status_rows) == 16384 and
+          {(int(r['draw']), int(r['row'])) for r in status_rows} == expected and
+          all(r['TYPE'] == 'PSF' for r in status_rows))
+    flag_columns = ['original_native_passed', 'original_entry_passed',
+                    'native_passed', 'entry_passed', 'passed']
+    check('explicit_boolean_flags', all(r[k] in ['True', 'False']
+          for r in status_rows for k in flag_columns))
+    identity_by_row = {int(r['row']): r['identity'] for r in status_rows if int(r['draw']) == 0}
+    check('identical_row_order_across_states', all(r['identity'] == identity_by_row[int(r['row'])]
+          for r in status_rows))
+    membership_path = BASE / 'structure/report/membership.csv'
+    check('reported_membership_hash', sha(membership_path) == counts['outputs']['membership.csv'])
+    record(membership_path)
+    with membership_path.open() as stream:
+        member_ids = {r['identity'] for r in csv.DictReader(stream)}
+    check('same512_structure_objects', len(member_ids) == 512 and
+          {r['identity'] for r in status_rows} == member_ids)
+    for draw in range(32):
+        rows = [r for r in status_rows if int(r['draw']) == draw]
+        check('same_identities:' + str(draw), len({r['identity'] for r in rows}) == 512 and
+              {r['identity'] for r in rows} == member_ids)
+        for kind in ['native', 'entry']:
+            old, new = state_records[kind, draw], state_records[kind + '_refined', draw]
+            check('original_flags:' + kind + ':' + str(draw),
+                  sum(r['original_' + kind + '_passed'] == 'False' for r in rows) ==
+                  old['failures'] == new['original_failures'])
+            check('refined_flags:' + kind + ':' + str(draw),
+                  sum(r[kind + '_passed'] == 'False' for r in rows) == new['unresolved'])
+        check('combined_flags:' + str(draw), all((r['passed'] == 'True') ==
+              (r['native_passed'] == r['entry_passed'] == 'True') for r in rows))
+    check('assembled_failure_total', sum(r['passed'] == 'False' for r in status_rows) ==
+          assembly['failed_state_objects'])
     # Production assembly authenticated the large arrays on an allocated node.
-    # This local closure authenticates its marker and downstream linkage only.
+    # This local closure checks compact flags, markers and downstream linkage.
     check('posterior_assembly_identity', posterior['inputs']['data/v3_1/structure/matrices/complete.json'] ==
           sha(BASE / 'structure/matrices/complete.json'))
     check('counts_posterior_identity', counts['inputs']['data/v3_1/structure/posterior/complete.json'] ==

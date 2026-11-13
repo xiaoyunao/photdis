@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate twenty-four refined states and continue the remaining queue
+- State15/raw61246950 COMPLETED21m24: all512pass/original512failures retained.
+  Python1273.713s/maxchild4153140KiB. Actual24-state compactcheck526passes,
+  24576branchrows/7431originalfailedcontexts/0unresolved. Eightstates remain:
+  16/24/25/27–31; full32assembly andposterior stillrequired.
+- Existingnewarray28 promoteddebug30 afterfresh5-jobcap andoriginalcomplete512
+  resource measurement; max3newarraynodes unchanged. No resubmission/science edits.
+- UpdatedPLAN/status/ledger andsource-link hashes. ESSinterpretationreview and
+  strict16384-status finalgate included; actual179testsource hashes unchanged.
+  Remainingfullstructure/domain/threeplates/finalclosure preventgoalcompletion.
+
+## 2026-11-14 — require complete object-level structure status at final closure
+- Extendedfinaldelivery.py torequireactualmatrices/status.csv with16384unique
+  draw/row pairs,512nativePSF IDs, fixedrowordering, boolean original/refined flags,
+  all128state-marker hashbindings andper-state original/unresolved countagreement.
+  Crosslinkfinalmembership identities andproductionassembly failuretotal.
+- Pythonparse andactualmissing-input guard pass; fullsuccess path awaitsreal
+  assembly/posterior. No finalmarker written andno scientificdata altered.
+- Afterlabel-reviewcommiteca7352,19plate aggregateagainpasses270checks against
+  actualcommittedvisualprovenance; correctedESS words do notchange plottedrows.
+- Next: completeexistingstructurejobs, collectactualmatrixstatus/report outputs,
+  thenactualfinalgate. Currentmaincandidate rejection remainsunchanged.
+
 ## 2026-11-14 — distinguish predictive weight support from independent sampling precision
 - Inspectedtarget_fit.py andpredictive.py: targetdraws arefourHMCchains flattened
   byiteration; jointESS is1/sum(normalized_predictive_weight²), withnoauto-

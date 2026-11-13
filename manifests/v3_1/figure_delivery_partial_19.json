@@ -118,8 +118,8 @@
     "figures/v3_1/domain_evidence/missing_reference_mass.png": "395fb578431d2eccca816c324e1d4bd6a494cc9886bb6b7e4387684f6d291601",
     "figures/v3_1/domain_evidence/missing_reference_mass.pdf": "2b80580d426798832ad341c059460385259d14eeb0ec9409120506f7e9135fb5",
     "manifests/v3_1/domain_evidence_figures/plotted.csv": "b81e862cb7c1a5b2a430810568e6591a2a62879790bdd03e6a60833a2a6bbfcc",
-    "manifests/v3_1/heldout_transfer_figures/complete.json": "965b8b8133c8740ff1398485fc5ca896d2869674cc23cd13f4ee91015c289955",
-    "manifests/v3_1/heldout_transfer_figures/acceptance.json": "61f9f904ae37f14c1ec1651c86552ef6605d8fdbad0ac22427f39fd86ff5f812",
+    "manifests/v3_1/heldout_transfer_figures/complete.json": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89",
+    "manifests/v3_1/heldout_transfer_figures/acceptance.json": "7affb5cf2801b15b0c93fbdcfcccfb27a346cef8bcab6a3f349c0b3d0ea7d269",
     "manifests/v3_1/heldout_transfer/report/complete.json": "ebf5f2078f00ec35818e48cadc7f3eca0673fd0048390b4206c2d33cf2b77576",
     "manifests/v3_1/heldout_transfer/report/inventory.csv": "c2e35cba0c6f8374a23c34861ea8f3401e1d3144e1225d10494382e65a24644d",
     "manifests/v3_1/heldout_transfer/report/predictive_summary.csv": "249cfe9fbf43d54fcd91b19fde2a886e092956a5d8ada25890694df4670a4cb9",
@@ -127,13 +127,13 @@
     "manifests/v3_1/heldout_transfer/report/field_summary.csv": "cb61bb463bd49a92c412ebcb83f40c8588fb64255d11bc94e533852cebadc342",
     "manifests/v3_1/heldout_transfer/report/checks.csv": "f76dd7dcaa04efc0776bd04291b4b15d223706e85b72b8f85505c701cc5da815",
     "manifests/v3_1/heldout_transfer/report/paired.csv": "bfca30d7755c6e608d2df7f7ea5208c7c8c4b4d2045fb815cc68faabac503a06",
-    "scripts/v3_1_heldout_figures.py": "dbf66334f08cf96b4f1cf2f534d1cd822677f7ca70321458dc55cd5786a03391",
+    "scripts/v3_1_heldout_figures.py": "6f0f06ed46f10843f537d9a342d6a7ae5c88cd09fb3a21dbb598bafa1bb674ab",
     "src/photdis/v3/compression.py": "0cf68a06cd4e58ce5de615aa222113c1b7a068151e2cecbab119e21a0023c746",
     "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1",
     "figures/v3_1/heldout_transfer/heldout_joint_counts.png": "b23fc885b970b2472f76542a5234e62692d83a9bf1b41234c1cd5806c7017814",
-    "figures/v3_1/heldout_transfer/heldout_joint_counts.pdf": "d4e7d951e31ee749f5e5dd9169aa02f631cc825fd2b9a4e9cc8351178e5a0a95",
-    "figures/v3_1/heldout_transfer/heldout_predictive_support.png": "6ca6d3c54ed06ad829b231006157a71e2efddc7553bd0b8f9dd307baf7110bc9",
-    "figures/v3_1/heldout_transfer/heldout_predictive_support.pdf": "ba78ff972134497c3040b2a05520a9d8846fd4408fb069d013f4f902c0339598",
+    "figures/v3_1/heldout_transfer/heldout_joint_counts.pdf": "cd83042ff82a467b77b47aa1c16528bcbb91425580315bd0b9c13b1cbcfae990",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.png": "ec03bdd9d6a60f5d007946c038b7b9fc2878b6b79d945bedd2598dfee7a259d3",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.pdf": "84d3d57186a3b55de04bd1f7cceb79f289936ba1f73149570fbcbc17a46a7251",
     "manifests/v3_1/heldout_transfer_figures/plotted.csv": "a520a84b1eecb546606c13de4ac1894fc580a13b14dd596b4fcd23946c0ee88e",
     "scripts/v3_1_figure_delivery_check.py": "255766d515352598312573c321a6ece8686b6fd8fadcd1d39561a609f6a4f3f5"
   },
@@ -1335,9 +1335,9 @@
         "heldout_joint_counts",
         "heldout_predictive_support"
       ],
-      "visual_record_commit": "c4d2f2a92245c19ecd2a98b7d0dc8d0a87218973",
-      "visual_record_sha256": "61f9f904ae37f14c1ec1651c86552ef6605d8fdbad0ac22427f39fd86ff5f812",
-      "manifest_sha256": "965b8b8133c8740ff1398485fc5ca896d2869674cc23cd13f4ee91015c289955"
+      "visual_record_commit": "eca73526c278536df0acdf6d1fefc906557c7c53",
+      "visual_record_sha256": "7affb5cf2801b15b0c93fbdcfcccfb27a346cef8bcab6a3f349c0b3d0ea7d269",
+      "manifest_sha256": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89"
     }
   ],
   "figures": 19,

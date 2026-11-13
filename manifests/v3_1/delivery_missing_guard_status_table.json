@@ -1,0 +1,12 @@
+{
+  "source_sha256": "51ffb486cbda56753bbd58f33be329f1059f1de32cbf1edce1c3914523d71b8c",
+  "command": [
+    "python3",
+    "scripts/v3_1_delivery.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 191, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 41, in main\n    raise FileNotFoundError('Complete delivery required; no output written. Missing: ' + ', '.join(missing))\nFileNotFoundError: Complete delivery required; no output written. Missing: manifests/v3_1/structure_result_sources.json, manifests/v3_1/domain_result_sources.json, manifests/v3_1/structure/refined_entry_32_states.json, manifests/v3_1/structure/matrices/complete.json, manifests/v3_1/structure/matrices/status.csv, manifests/v3_1/structure/posterior/complete.json, manifests/v3_1/structure/report/complete.json, manifests/v3_1/domain_adjudication/complete.json, manifests/v3_1/figure_delivery.json, manifests/v3_1/final_narrative_review.json\n",
+  "missing_input_guard_passed": true,
+  "delivery_written": false,
+  "scope": "Actual incomplete-input rejection after requiring complete16384-row structure status; no successful full-delivery claim."
+}

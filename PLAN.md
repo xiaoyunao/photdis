@@ -215,7 +215,10 @@ Negative findings remain deliverables, never successful calibration claims.
 - PredictiveESS isweight concentration1/sum(w²), notautocorrelation-adjusted;
   interleaved4chain parity compares0/2versus1/3. Report/figure wording clarified,
   productionvalues/frozen thresholds unchanged. Reauthenticate19figureprovenance
-  afterthislabel-only visualreviewcommit; no newscience orcalibration acceptance.
+  afterlabel-only visualreviewcommiteca7352:270checks pass, originalrowsunchanged.
+  Finaldelivery gate additionallyrequiresall16384structurestatus rows,512sameIDs,
+  fixedroworder, explicitflags andper-state original/refined marker reconciliation.
+  Syntax/currentmissing-input rejection pass; fullsuccess awaitsactualmatrices.
 - All102/102conditionaltransfers authenticate2042compactchecks;33original
   numericflags (candidateexcept20) retained. Fullcandidate34 conditionalbase
   support passesonlysamecandidateenvelope; all30collectedheldout conditional
@@ -233,8 +236,9 @@ Negative findings remain deliverables, never successful calibration claims.
   original512/149flags. Refined14/20also complete19m17/17m06, original268/233
   flags retained. Newarray17/raw61247266 COMPLETED21m29/all512pass,512oldflags.
   Newarray18/raw61247267all512pass,397oldflags; Python1052.386s.
-  Total23/32refinements authenticate504groupedchecks withnewreproducible
-  refinementcompactchecker;6919originalfailedcontexts/0unresolved preserved.
+  Newarray15/raw61246950 COMPLETED21m24/all512pass,512oldflags; Python1273.713s.
+  Total24/32refinements authenticate526groupedchecks withnewreproducible
+  refinementcompactchecker;7431originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,
