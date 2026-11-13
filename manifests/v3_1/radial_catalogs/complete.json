@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/simulations.npz": "5b6994fd90f7ce90ac0657dc02868bed4e6bd4b31de37df6135eb0c16da5af19",
+    "data/v3_0/simulations/truth.npz": "f71914790092111efae6743379d846e5dfe38a3f7d39dae89aa7a36ea6533a0f",
+    "data/v3_0/simulations/catalogs.json": "35297dfb451462a9cba6219b5d942859f52d17a0fed41aca1a293faee6f526f5",
+    "data/v3_0/simulations/prepared.json": "9b99f94e2247e78eb6ec782668214e316cf414146137ba9928f9209bd55661c4",
+    "data/v3_0/empirical_transfer_bank.npz": "4b701c6a611b65859abaeec0ff6345cb3288303536c20279e66bf280d8d05c0d",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "docs/v3_1_radial_protocol.md": "873ec98175bfacafbf0fc8c206985fbb1f735c211e9b8a86c41937273bb32e0d",
+    "scripts/v3_1_radial_prepare.py": "e83d155ccd41a69dfd1f07c10a89172668ed0a00b94ac1a936e853a94ca6a86a",
+    "src/photdis/v3_1/simulation.py": "0da5989b336e9e7ab9c4d54fd61bd40a0327b003d8623e23ddb5ab8e75967e31",
+    "src/photdis/v3/simulation.py": "0f6d1a53150cb42917f50788d8d5e14d7aec409e264b669e479563e4a7a1bb75"
+  },
+  "outputs": {
+    "truth.npz": "bfa024f030a1b786e9699416c70783c43c68ea3c55b9e5606204486d426f3285",
+    "independent_empirical_library.npz": "ca678493383c0caeb019be3f0033d94b1bd9eae0f7a91451b7a9f8150be24d6b",
+    "photometry.npz": "4adbc7ada058c6ae6c23e22e410d6fcad76ab71705fdacbef2b03a9bead227c5",
+    "catalogs.json": "43f0f4bdac4007ee4733fec7569ba0df7682962bcff88d361d8088b6906d01aa"
+  },
+  "original_catalogs": 112,
+  "new_catalogs": 64,
+  "total_catalogs": 176,
+  "rows": 22528,
+  "job": "61213752",
+  "source_PSF_exclusions": 0,
+  "context_PSF_exclusions": 0,
+  "missing_TYPE": 0,
+  "role": "Conditional transfer recovery; teacher-scale empirical source uncertainty is not new absolute truth. All old catalog identities and arrays preserved as prefix."
+}

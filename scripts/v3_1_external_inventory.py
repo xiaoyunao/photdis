@@ -8,6 +8,7 @@ import numpy as np
 from v2_1_near import ROOT,sha,save_json,atomic_npz,csv_rows
 from v3_1_inventory import projected
 from photdis.stage1 import require_compute,galactic
+from photdis.v3_1.sky import qualified_sky
 from photdis.spectroscopy import APOGEE_COLUMNS,apogee_best_rows,project_apogee
 
 
@@ -15,9 +16,9 @@ def main():
     require_compute(); headers=json.loads((ROOT/'manifests/v3_1/external_reference_headers.json').read_text())
     paths=[Path(r['path']) for r in headers]; old=ROOT/'data/v3_0/references.npz'
     configs=sorted((ROOT/'configs').glob('field*.json'))
-    provenance=paths+[old,ROOT/'scripts/v3_1_external_inventory.py',ROOT/'src/photdis/spectroscopy.py',ROOT/'docs/v3_1_external_sources.md']+configs
+    provenance=paths+[old,ROOT/'scripts/v3_1_external_inventory.py',ROOT/'src/photdis/spectroscopy.py',ROOT/'docs/v3_1_external_sources.md',ROOT/'src/photdis/v3_1/sky.py']+configs
     inputs={str(p):sha(p) for p in provenance}
-    out=ROOT/'data/v3_1/external_inventory';out.mkdir(parents=True,exist_ok=True);marker=out/'complete.json'
+    out=ROOT/'data/v3_1/external_inventory_finite_sky';out.mkdir(parents=True,exist_ok=True);marker=out/'complete.json'
     if marker.exists():
         record=json.loads(marker.read_text());assert record['inputs']==inputs
         for name,digest in record['outputs'].items():assert sha(out/name)==digest
@@ -34,14 +35,14 @@ def main():
     representative=apogee_best_rows(allstar);a=allstar[representative];n=nn[representative];s=project_apogee(a)
     ids=s['source_id'];same_id=(n['source_id']==ids)&(ids>0)&name_match[representative]
     reference=projected(old,['identity','cell']);seen_id=np.isin(ids,reference['identity'])
-    cell=(np.floor(s['ra']/10).astype('i8')*18+np.floor((s['dec']+90)/10).astype('i8'))
+    sky=qualified_sky(s['ra'],s['dec']);cell=sky['cell']
     seen_sky=np.isin(cell,reference['cell']);bounds=[json.loads(p.read_text()).get('bounds_deg') for p in configs]
     bounds=[x for x in bounds if x]+[[10,-45,15,-40],[350,-45,355,-40]]
     footprint=np.zeros(len(ids),bool)
     for lo,de,hi,dh in bounds:
         inside=((s['ra']>=lo)&(s['ra']<=hi)) if lo<=hi else ((s['ra']>=lo)|(s['ra']<=hi))
         footprint |= inside & (s['dec']>=de) & (s['dec']<=dh)
-    highlat=abs(galactic(s['ra'],s['dec'])[1])>30
+    highlat=sky['valid_coordinates']&(abs(sky['latitude'])>30)
     distance=n['dist']/1000.;error=n['dist_error']/1000.
     available=same_id&np.isfinite(distance)&(distance>0)&np.isfinite(error)&(error>0)
     relative=np.divide(error,distance,out=np.full(len(ids),np.inf),where=available)
@@ -79,7 +80,8 @@ def main():
             native_TYPE_unverified=int(m.sum()),admitted_science=0,membership='local v1.0 membership definition not yet certified'))
     csv_rows(out/'cluster_inventory.csv',cluster)
     save_json(marker,dict(inputs=inputs,outputs={p.name:sha(p) for p in out.iterdir() if p.name!='complete.json'},job=os.getenv('SLURM_JOB_ID'),
-        source_rows=len(allstar),unique_identities=len(ids),position_alignment_passed=True,exact_name_mismatches=int((~name_match).sum()),
+        source_rows=len(allstar),unique_identities=len(ids),invalid_coordinate_exclusions=int((~sky['valid_coordinates']).sum()),
+        high_latitude_inventory=int(highlat.sum()),position_alignment_passed=True,exact_name_mismatches=int((~name_match).sum()),
         distance_requires_exact_name_and_positive_Gaia_identity=True,
         positive_Gaia_astroNN_mismatch=int(((ids>0)&~same_id).sum()),
         acquisition_rows=int(use.sum()),scientific_admissions=0,

@@ -126,12 +126,54 @@
       "last_observed_state": "COMPLETED",
       "exit_code": "0:0",
       "elapsed_seconds": 28
+    },
+    {
+      "job_id": "61213407",
+      "purpose": "external APOGEE source inventory",
+      "last_observed_state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed_seconds": 119
+    },
+    {
+      "job_id": "61213752",
+      "purpose": "176 radial catalog preparation",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 17
+    },
+    {
+      "job_id": "61213756",
+      "purpose": "external inventory with exact-name exclusion; invalid zero due coordinate poisoning",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 132
+    },
+    {
+      "job_id": "61213793",
+      "purpose": "radial native pilot catalog0",
+      "last_observed_state": "PENDING",
+      "exit_code": null,
+      "elapsed_seconds": 0
+    },
+    {
+      "job_id": "61213794",
+      "purpose": "radial native pilot catalog48",
+      "last_observed_state": "PENDING",
+      "exit_code": null,
+      "elapsed_seconds": 0
+    },
+    {
+      "job_id": "61213795",
+      "purpose": "radial native pilot catalog112",
+      "last_observed_state": "PENDING",
+      "exit_code": null,
+      "elapsed_seconds": 0
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts python3 -m pytest -q tests/test_v3*.py",
-    "passed": 86,
-    "seconds": 4.39
+    "passed": 89,
+    "seconds": 3.8
   },
   "science_acceptance": false,
   "pilot_actual_checks": {
@@ -165,5 +207,10 @@
     "max_broad_entry_delta": 0.0006064754582076892,
     "passed": true,
     "remaining": "direct object interpolation and finer radial quadrature/recovery"
-  }
+  },
+  "additional_validation": {
+    "coordinate_regression_tests": 2,
+    "passed": true
+  },
+  "invalid_external_inventory": "61213756 outputs retained; invalid coordinates poisoned the full latitude array. Corrected finite-only source inventory uses a new directory."
 }

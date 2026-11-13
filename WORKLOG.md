@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — recover coordinate-poisoning failure and freeze native audit
+- Radial preparation61213752 COMPLETED17s:176catalogs/22528rows, original112
+  identities/arrays preserved. Pilots0/48/112 submitted61213793/94/95; catalog0
+  requesteddebug QoS after regular-priority wait, no scientific settings changed.
+- External61213756 COMPLETED132s but scientifically INVALID: one nonfinite input
+  causes healpy rotation to return scalarNaN, broadcasting false highlatitude
+  to every row. Reproduced locally; originalzero outputs preserved/hashretrieved.
+  Added finite/range-only rotation/cell assignment with explicit invalid counts;
+  two regression tests pass. Retry uses external_inventory_finite_sky directory.
+- Added exact G3/native-primary/DR11/PSF/photometry acquisition driver, with
+  missingTYPE/nonPSF/duplicate/field exclusions; no role assignment or residuals.
+  Added same-draw .02/.01 likelihood-importance quadrature audit retaining both
+  grids, finite correctionESS and per-star/count gates. Both scripts syntaxpass;
+  execution pending. New inventory/numerical checks do not claim calibration.
+- Downloaded hashverified smallcatalog and invalidinventory records. Next: corrected
+  availability, allocated native qualification, accepted radial pilots and targetprior.
+
 ## 2026-11-13 — implement frozen radial recovery and retain inventory mismatch
 - Added 176-catalog preparation (112 unchanged old +64 registered narrow),
   all-kernel native likelihood/entry curves, broad/local multistart HMC recovery,

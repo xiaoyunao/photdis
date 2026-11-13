@@ -29,9 +29,13 @@ remain distinct. Mode support61213096 completed. Paired61212562 and strata612129
 Radial protocol and objective/selection foundation registered;5new tests pass.
 Radial selection61212909 passed (267profiles,max broad delta.0006065);
 native likelihood preparation/recovery drivers implemented,89 tests pass.
-Actual176catalog preparation and preregistered pilots0/48/112 remain.
+176catalog preparation61213752 complete22528rows; pilots0/48/112 submitted.
 External inventory61213407 failed exact-name alignment on1row; preserve failure
-and exclude mismatched astroNN pairing before retry. Target-prior controls remain.
+and excluded mismatched astroNN pairing on retry. Retry61213756 is invalid due
+to NaN coordinates poisoning full latitude array; preserved. Finite-only rotation
+fix passes2regression tests; recompute into distinct directory. Native qualification
+and coarse/fine shared-draw audit drivers implemented, execution pending.
+Target-prior controls remain.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
 Implement matched shared-target-prior contrasts and radial recovery on all

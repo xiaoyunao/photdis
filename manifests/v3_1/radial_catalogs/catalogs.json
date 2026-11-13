@@ -1,0 +1,3346 @@
+[
+  {
+    "catalog": 0,
+    "scenario": "reference_like",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 468,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 1,
+    "scenario": "reference_like",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 470,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 2,
+    "scenario": "reference_like",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 460,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 3,
+    "scenario": "reference_like",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 462,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 4,
+    "scenario": "reference_like",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 450,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 5,
+    "scenario": "reference_like",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 455,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 6,
+    "scenario": "reference_like",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 453,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 7,
+    "scenario": "reference_like",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 453,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 8,
+    "scenario": "dwarf_dominated",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 443,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 9,
+    "scenario": "dwarf_dominated",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 472,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 10,
+    "scenario": "dwarf_dominated",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 456,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 11,
+    "scenario": "dwarf_dominated",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 467,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 12,
+    "scenario": "dwarf_dominated",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 453,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 13,
+    "scenario": "dwarf_dominated",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 452,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 14,
+    "scenario": "dwarf_dominated",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 452,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 15,
+    "scenario": "dwarf_dominated",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.94,
+      0.01,
+      0.05
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 16,
+    "scenario": "evolved_rich",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 100,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 481,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 17,
+    "scenario": "evolved_rich",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 105,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 18,
+    "scenario": "evolved_rich",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 96,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 19,
+    "scenario": "evolved_rich",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 95,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 493,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 20,
+    "scenario": "evolved_rich",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 104,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 484,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 21,
+    "scenario": "evolved_rich",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 98,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 485,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 22,
+    "scenario": "evolved_rich",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 95,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 23,
+    "scenario": "evolved_rich",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 109,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 480,
+    "generated_class_weights": [
+      0.35,
+      0.45,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 24,
+    "scenario": "metal_poor",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 99,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 501,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 25,
+    "scenario": "metal_poor",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 101,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 503,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 26,
+    "scenario": "metal_poor",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 100,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 499,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 27,
+    "scenario": "metal_poor",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 103,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 506,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 28,
+    "scenario": "metal_poor",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 105,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 499,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 29,
+    "scenario": "metal_poor",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 102,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 503,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 30,
+    "scenario": "metal_poor",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 101,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 506,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 31,
+    "scenario": "metal_poor",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 108,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 502,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 32,
+    "scenario": "middle_metallicity",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 494,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 33,
+    "scenario": "middle_metallicity",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 122,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 495,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 34,
+    "scenario": "middle_metallicity",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 35,
+    "scenario": "middle_metallicity",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 494,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 36,
+    "scenario": "middle_metallicity",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 37,
+    "scenario": "middle_metallicity",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 123,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 490,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 38,
+    "scenario": "middle_metallicity",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 487,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 39,
+    "scenario": "middle_metallicity",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 494,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 40,
+    "scenario": "class_distance_correlated",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 122,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 463,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 41,
+    "scenario": "class_distance_correlated",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 123,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 469,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 42,
+    "scenario": "class_distance_correlated",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 119,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 448,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 43,
+    "scenario": "class_distance_correlated",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 121,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 480,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 44,
+    "scenario": "class_distance_correlated",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 121,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 459,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 45,
+    "scenario": "class_distance_correlated",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 119,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 467,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 46,
+    "scenario": "class_distance_correlated",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 117,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 47,
+    "scenario": "class_distance_correlated",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 122,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 464,
+    "generated_class_weights": [
+      0.55,
+      0.2,
+      0.25
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 48,
+    "scenario": "narrow_4kpc",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 49,
+    "scenario": "narrow_4kpc",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 494,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 50,
+    "scenario": "narrow_4kpc",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 463,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 51,
+    "scenario": "narrow_4kpc",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 490,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 52,
+    "scenario": "narrow_4kpc",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 468,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 53,
+    "scenario": "narrow_4kpc",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 54,
+    "scenario": "narrow_4kpc",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 482,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 55,
+    "scenario": "narrow_4kpc",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 486,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 56,
+    "scenario": "binary_brightening",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 460,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 57,
+    "scenario": "binary_brightening",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 466,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 58,
+    "scenario": "binary_brightening",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 460,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 59,
+    "scenario": "binary_brightening",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 481,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 60,
+    "scenario": "binary_brightening",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 462,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 61,
+    "scenario": "binary_brightening",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 464,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 62,
+    "scenario": "binary_brightening",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 469,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 63,
+    "scenario": "binary_brightening",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 452,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 64,
+    "scenario": "missing_WISE",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 468,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 65,
+    "scenario": "missing_WISE",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 476,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 66,
+    "scenario": "missing_WISE",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 446,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 67,
+    "scenario": "missing_WISE",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 471,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 68,
+    "scenario": "missing_WISE",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 461,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 69,
+    "scenario": "missing_WISE",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 70,
+    "scenario": "missing_WISE",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 452,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 71,
+    "scenario": "missing_WISE",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 457,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 72,
+    "scenario": "weak_WISE",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 470,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 73,
+    "scenario": "weak_WISE",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 474,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 74,
+    "scenario": "weak_WISE",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 453,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 75,
+    "scenario": "weak_WISE",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 481,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 76,
+    "scenario": "weak_WISE",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 459,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 77,
+    "scenario": "weak_WISE",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 464,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 78,
+    "scenario": "weak_WISE",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 463,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 79,
+    "scenario": "weak_WISE",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 80,
+    "scenario": "dust_offset",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 81,
+    "scenario": "dust_offset",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 473,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 82,
+    "scenario": "dust_offset",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 446,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 83,
+    "scenario": "dust_offset",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 465,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 84,
+    "scenario": "dust_offset",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 451,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 85,
+    "scenario": "dust_offset",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 86,
+    "scenario": "dust_offset",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 462,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 87,
+    "scenario": "dust_offset",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 460,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 88,
+    "scenario": "band_offset",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 89,
+    "scenario": "band_offset",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 125,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 473,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 90,
+    "scenario": "band_offset",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 451,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 91,
+    "scenario": "band_offset",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 92,
+    "scenario": "band_offset",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 456,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 93,
+    "scenario": "band_offset",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 458,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 94,
+    "scenario": "band_offset",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 124,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 446,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 95,
+    "scenario": "band_offset",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 126,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 459,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": false,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 96,
+    "scenario": "known_model",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 387,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 97,
+    "scenario": "known_model",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 387,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 98,
+    "scenario": "known_model",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 387,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 99,
+    "scenario": "known_model",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 404,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 100,
+    "scenario": "known_model",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 386,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 101,
+    "scenario": "known_model",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 378,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 102,
+    "scenario": "known_model",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 397,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 103,
+    "scenario": "known_model",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 128,
+    "template_training_overlap": 0,
+    "attempted": 512,
+    "accepted_before_cap": 406,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 104,
+    "scenario": "same_library",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 394,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 105,
+    "scenario": "same_library",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 411,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 106,
+    "scenario": "same_library",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 382,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 107,
+    "scenario": "same_library",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 405,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 108,
+    "scenario": "same_library",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 127,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 388,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 109,
+    "scenario": "same_library",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 397,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 110,
+    "scenario": "same_library",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 379,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 111,
+    "scenario": "same_library",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 128,
+    "template_training_overlap": 128,
+    "attempted": 512,
+    "accepted_before_cap": 388,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "common_library_seed": 302501,
+    "known_distance_family": true,
+    "model": "empirical source likelihood draw; teacher-scaled conditional transfer, not independent absolute truth"
+  },
+  {
+    "catalog": 112,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 504,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 113,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 509,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 114,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 498,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 115,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 507,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 116,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 503,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 117,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 505,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 118,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 509,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 119,
+    "scenario": "narrow_2kpc_w0.08",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 503,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 120,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 500,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 121,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 506,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 122,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 504,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 123,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 508,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 124,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 499,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 125,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 501,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 126,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 505,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 127,
+    "scenario": "narrow_2kpc_w0.25",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 124,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 505,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 11.505149978319906,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 128,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 129,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 130,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 472,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 131,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 486,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 132,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 124,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 476,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 133,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 469,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 134,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 474,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 135,
+    "scenario": "narrow_4kpc_w0.08",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 484,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 136,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 481,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 137,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 491,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 138,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 470,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 139,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 488,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 140,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 480,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 141,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 471,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 142,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 123,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 475,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 143,
+    "scenario": "narrow_4kpc_w0.25",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 476,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 13.010299956639813,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 144,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 437,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 145,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 454,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 146,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 408,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 147,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 454,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 148,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 414,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 149,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 423,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 150,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 422,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 151,
+    "scenario": "narrow_8kpc_w0.08",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 420,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 152,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 122,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 437,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 153,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 448,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 154,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 420,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 155,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 124,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 439,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 156,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 418,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 157,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 419,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 158,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 426,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 159,
+    "scenario": "narrow_8kpc_w0.25",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 441,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 14.515449934959719,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 160,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 369,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 161,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 385,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 162,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 123,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 326,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 163,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 404,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 164,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 128,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 347,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 165,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 123,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 362,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 166,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 354,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 167,
+    "scenario": "narrow_16kpc_w0.08",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 356,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.08,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 168,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 0,
+    "field": 0,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 357,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 169,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 1,
+    "field": 1,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 380,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 170,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 2,
+    "field": 2,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 353,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 171,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 3,
+    "field": 3,
+    "unique_template_ids": 126,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 390,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 172,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 4,
+    "field": 4,
+    "unique_template_ids": 123,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 357,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 173,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 5,
+    "field": 5,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 370,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 174,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 6,
+    "field": 6,
+    "unique_template_ids": 125,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 352,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  },
+  {
+    "catalog": 175,
+    "scenario": "narrow_16kpc_w0.25",
+    "repeat": 7,
+    "field": 7,
+    "unique_template_ids": 127,
+    "common_library_seed": 311501,
+    "attempted": 512,
+    "accepted_before_cap": 349,
+    "generated_class_weights": [
+      0.75,
+      0.05,
+      0.2
+    ],
+    "absent_classes": [],
+    "true_location_mu": 16.020599913279625,
+    "true_width_mu": 0.25,
+    "teacher_scope": "One shared source-level empirical realization; repetitions are not independent real absolute-scale references"
+  }
+]
