@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-14 — verify half of structure refinements with original failures retained
+- Refined9/61242565 COMPLETED25m51:48workers,Python1532.772s,maxchild4189404KiB,
+  batch160935460KiB;512pass/original512flags retained. Secondcomplete48-worker
+  measurement afterdraw10, no broader64-workeracceptance.64pilot61244889running.
+- Refined22/raw61232992 COMPLETED10m38:32workers,Python628.023s,maxchild4178056KiB,
+  batch117171100KiB;512pass/original133flags retained. Sourceaudit/tablescollected.
+- Actual16-statecompactchecker passes350groupedchecks/16384branchrows;
+  4695originalfailedcontexts/0unresolved. Previous14-statesnapshot preserved;
+  noaddedscientifictests orrepeatedcompletedcomputation. Fullpayloadassembly,
+  remaining16refinements andstructureposterior remainrequired.
+- Existing14/20(268/233flags) promoteddebug30 afterfreshcapacity<=3, original
+  sourcehash andthreefull512flag32-worker35-minute measurements reverified.
+  Sparsewalltime isestimate; originalwriters/math/30minlimits preserved.
+  Receiptcollected. No newscientificsample/model/gate or64-workerrollout.
+- UpdatedPLAN/status/ledger/source-linkrecords. Fulltransfer/domain/fiveplates
+  remain; goalactive, no calibrated-candidate/deployment claim.
+
 ## 2026-11-14 — launch bounded64-worker pilot and reconcile14 refined structure states
 - Confirmed61244889 submittedheld/debug30 fororiginalunstarted13; original
   cancelledzero-runtime/AllocTRESnull/queueabsence,12sourcehashes verified,
