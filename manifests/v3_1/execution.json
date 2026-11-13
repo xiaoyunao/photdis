@@ -409,9 +409,10 @@
     {
       "job_id": "61216290",
       "purpose": "maximum-error candidate-selection pilot context2",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "TIMEOUT",
       "qos": "debug",
-      "timelimit": "00:30:00"
+      "timelimit": "00:30:00",
+      "elapsed_seconds": 1818
     },
     {
       "job_id": "61216456",
@@ -445,21 +446,42 @@
     {
       "job_id": "61216657",
       "purpose": "median candidate-entry2048/8192 bounded refinement",
-      "last_observed_state": "RUNNING",
-      "qos": "debug"
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 997,
+      "numerical_passed": false
     },
     {
       "job_id": "61216786",
       "purpose": "held-out-calibration luminosity guards and fine/tail numerical audits",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "timelimit": "00:30:00"
+      "timelimit": "00:30:00",
+      "elapsed_seconds": 122,
+      "numerical_passed": true,
+      "guard_passed": true,
+      "adopted": false
+    },
+    {
+      "job_id": "61216913",
+      "purpose": "radial176 whole-node shard0",
+      "last_observed_state": "RUNNING"
+    },
+    {
+      "job_id": "61216914",
+      "purpose": "radial176 whole-node shard1",
+      "last_observed_state": "RUNNING"
+    },
+    {
+      "job_id": "61216915",
+      "purpose": "full1542development latent sign audit",
+      "last_observed_state": "PENDING"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 102,
-    "seconds": 4.55,
+    "passed": 103,
+    "seconds": 3.32,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,

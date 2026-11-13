@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-13 — pass calibration guards and expose entry covariance mismatch
+- Luminosity guard61216786 COMPLETED122s:947objects,96numericalchecks pass;
+  all15bootstrap class guards pass. Evolved39stars/2cells: score+.04171nat,
+  reference68agreement+2.56pp,95+12.82pp; sparse/source-related evidence only.
+  No finalvalidation outcomes opened and no adopted/deployed replacement.
+- Median entry61216657 COMPLETED997s but8192stillfails: previouslevel.007913,
+  independentseed.003009 versus.003; originals retained. Context2job61216290
+  TIMEOUT1818s with checkpoints; no completed numerical acceptance claimed.
+- Found native likelihood includes local mean-linearized dust covariance while
+  original entry integrals omit it. Added integration-only covariance helper,
+  exact native-likelihood equivalence test and fixed18context allocated audit.
+  Keep original controls; assess impact before matched selection/target fitting.
+- Full103tests pass3.32s; py_compile and shell syntax checks pass. Small completed
+  guard/refinement tables and hashes collected. Wide radial61216913/14 running;
+  full latent61216915 and independentresponse61216483 remain queued.
+- Next: quantify entry dust mismatch, matched numerical refinement, all176radial
+  recovery, response refits and product-matched target/final validation.
+
 ## 2026-11-13 — complete bounded optimizer sidecar and prepare whole-node recovery
 - Numericfit61216654 COMPLETED32s: originalsuccessful32drawrecords reused;
   draw19 repaired withboundedPowell. Pointdelta/sigma: dwarf−.0542/.1503,
