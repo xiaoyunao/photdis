@@ -377,9 +377,10 @@
     {
       "job_id": "61215918",
       "purpose": "all176catalog radial recovery two bounded array shards",
-      "last_observed_state": "SUBMITTED",
+      "last_observed_state": "CANCELLED",
       "qos": "regular",
-      "timelimit": "04:00:00"
+      "timelimit": "04:00:00",
+      "note": "Both array tasks confirmed PENDING; cancelled before whole-node short-allocation concurrency sidecar. No science job had started."
     },
     {
       "job_id": "61216185",
@@ -400,9 +401,10 @@
     {
       "job_id": "61216289",
       "purpose": "minimum-error candidate-selection pilot context0",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "timelimit": "00:30:00"
+      "timelimit": "00:30:00",
+      "numerical_passed": false
     },
     {
       "job_id": "61216290",
@@ -432,6 +434,26 @@
       "last_observed_state": "PENDING",
       "qos": "regular",
       "timelimit": "02:00:00"
+    },
+    {
+      "job_id": "61216654",
+      "purpose": "bounded numerical optimizer sidecar for luminosity draw19",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 32,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61216657",
+      "purpose": "median candidate-entry2048/8192 bounded refinement",
+      "last_observed_state": "RUNNING",
+      "qos": "debug"
+    },
+    {
+      "job_id": "61216786",
+      "purpose": "held-out-calibration luminosity guards and fine/tail numerical audits",
+      "last_observed_state": "PENDING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     }
   ],
   "local_validation": {

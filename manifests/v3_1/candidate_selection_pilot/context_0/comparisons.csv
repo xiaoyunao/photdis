@@ -1,0 +1,4 @@
+comparison,max_delta
+q128_to512,0.03812888278930249
+independent_q512,0.03418237760165395
+candidate_above_original_entry,0.0

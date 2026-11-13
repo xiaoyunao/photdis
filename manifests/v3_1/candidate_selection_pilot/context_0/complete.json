@@ -1,0 +1,96 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_candidate_selection_pilot.py": "3ca098bbdc9f1eb9a4b955e0e93f89af2ee5ebbc204cb363de4b173f947c6900",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "docs/v3_1_candidate_selection_protocol.md": "152f558af343440d2fa43c467f7e53ed4fbc0adea0df60c4d9797b9299eb3a4e"
+  },
+  "outputs": {
+    "q512_seed317101_step0.1.npz": "e9b33a880eb9cfa3970f6ad525a2233e5bd50eaa791b50013ad52970a86a76b3",
+    "comparisons.csv": "0bc63efdf3a2d5255a2ff43df36ded7f67d1b0c9c37ee4354e7b005813fd66c0",
+    "q512_seed317102_step0.1.npz": "84abd53643fffd8efcff7237cf11a3854f60def2800dcc2b7a8be6b963546253",
+    "q512_seed317101_step0.1.json": "69ca9fc38ab398c3338fb7b6b2b97b2f0f4e75a11266eab7c089a30447a9ba93",
+    "q128_seed317101_step0.1.npz": "e365c6e7c0968ba2741b9a1d1e423d16767dc87b5134b876a8c23a1511d7387d",
+    "q128_seed317101_step0.1.json": "fb8608cf47eebc03afe0c6e125ee9439d3887dbd928e2e7bcc3f88aeb8eadf49",
+    "original_entry.npz": "587a8e49078f4da1ddcc015b840ab1ff8734f8bbf4290a57309eff1cd7ee2885",
+    "q512_seed317102_step0.1.json": "d1782d4d41944ae822131474dcfad01cc84b10dcb022c6d317b9eec2bf296ed7"
+  },
+  "job": "61216289",
+  "context": 0,
+  "row": 21396,
+  "identity": -12105987671459598,
+  "TYPE": "PSF",
+  "context_candidate_rows": [
+    21396,
+    14437,
+    23862
+  ],
+  "candidate_count": 3540,
+  "raw_error": [
+    0.015576031990349293,
+    0.01813245564699173,
+    0.059702955186367035
+  ],
+  "transmission": [
+    0.9223265647888184,
+    0.9469909071922302,
+    0.9699937701225281
+  ],
+  "calibration_mag": [
+    -0.014182518055121537,
+    -0.005470813212388807,
+    -0.015361626695032351
+  ],
+  "effective_error": [
+    0.016668599273051532,
+    0.019051206722168413,
+    0.0606851224764633
+  ],
+  "thresholds": [
+    0.18097701713357084,
+    10.506688720525899,
+    0.6588803456287752
+  ],
+  "variants": [
+    {
+      "draws": 128,
+      "seed": 317101,
+      "step": 0.1,
+      "path": "q128_seed317101_step0.1.npz"
+    },
+    {
+      "draws": 512,
+      "seed": 317101,
+      "step": 0.1,
+      "path": "q512_seed317101_step0.1.npz"
+    },
+    {
+      "draws": 512,
+      "seed": 317102,
+      "step": 0.1,
+      "path": "q512_seed317102_step0.1.npz"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "q128_to512",
+      "max_delta": 0.03812888278930249
+    },
+    {
+      "comparison": "independent_q512",
+      "max_delta": 0.03418237760165395
+    },
+    {
+      "comparison": "candidate_above_original_entry",
+      "max_delta": 0.0
+    }
+  ],
+  "passed": false,
+  "elapsed_seconds": 599.545979874998,
+  "scope": "Numerical candidate-envelope selection pilot only; exact QRF support and original observed calibration retained. Population refit and context interpolation are not performed."
+}

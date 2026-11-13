@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — complete bounded optimizer sidecar and prepare whole-node recovery
+- Numericfit61216654 COMPLETED32s: originalsuccessful32drawrecords reused;
+  draw19 repaired withboundedPowell. Pointdelta/sigma: dwarf−.0542/.1503,
+  evolved+.0428/.8905, other+.1018/.1765mag. Evolvedbootstrap sigma95range
+  0..9458 reflects3fitcells, not independentphysical calibration. Guard61216786 queued.
+- Minimum-error entry61216289 complete butfails(.03813/.03418). Median
+  higher-order61216657 running. Originalcontext0/1failures andalltables retained.
+- Added full1542development latent-sign audit with32workers andper-object
+  checkpoints; censoring explicitlyunsupported rather than inferredfromproxy.
+  Newdriver syntax/shell checks pass; allocated execution pending.
+- Confirmed both61215918arraytasks stillPENDING, then cancelledonlythosequeued
+  allocations. Addedwhole-node32catalog concurrency sidecar, same2shards and
+  exactper-catalog scripts/checkpoints;256CPU/30min resumablewrapper. Reviewed
+  diff changes onlydrivername/concurrency. No scientificinput or tolerancechange.
+- Next: held-outcalibration/numericalguards, exactselectionrefinement, fullradial
+  recovery and independentresponse refits. Newfinalvalidation outcomes unopened.
+
 ## 2026-11-13 — preserve optimizer kink failure and complete response draw generation
 - Luminosityfit61216288 FAILED75s atbootstrap19/evolved: bothstarts reached
   delta.14,sigma0 interpolationkink; L-BFGS-B ABNORMAL/nonzeroonesidedgradient.
