@@ -119,7 +119,7 @@ def main():
                     sum(int(r['precise_newsky_' + s]) for s in ['astronn', 'specdis', 'spdist']) == 0)
     mass = sum(float(r['distance_mass_without_precise_newsky_reference']) for r in objects) / len(objects)
     transfer_main = [r for r in support if r['view'] == 'bootstrap_evidence' and r['variant'] == 'base']
-    transfer_table = ['| 总体 / 预测入选 | 单位对象联合 ESS / 支持通过 | 广义设计联合 ESS / 支持通过 |',
+    transfer_table = ['| 总体 / 预测入选 | 单位对象联合权重 ESS / 支持通过 | 广义设计联合权重 ESS / 支持通过 |',
                       '|---|---|---|']
     for r in transfer_main:
         transfer_table.append(f"| {r['case']} / {r['envelope']} | {float(r['joint_importance_ess']):.3f} / {r['joint_supported']} | {float(r['generalized_design_joint_importance_ess']):.3f} / {r['generalized_design_joint_supported']} |")
@@ -164,6 +164,9 @@ signed Gaia在观测空间比较，教师相关参考与共同系统成员不作
 此表只列原报告实际可计算的主视图；缺失视图的原因和数值状态仍在完整报告中。
 只有holdout总体拟合排除了预测天空场；其他总体是已见天空比较，且holdout也不
 建立全SED/校准训练独立性。重要性支持不是距离真值验证。
+这里的联合权重ESS为1/sum(w²)，没有按链内自相关校正，不是独立抽样数量。
+原奇偶半样本比较对应交错保存的四条链0/2与1/3；有限亮度自举状态也不是
+独立数据复现。通过原权重/半样本规则不能单独证明完整采样收敛或误差已覆盖。
 见[完整天空迁移](v3_1_transfer_result.md)及原逐视图状态，不用部分状态替代102状态。
 
 全部176目录/352臂的径向恢复及原失败均已纳入合并；窄结构覆盖和来源相关限制

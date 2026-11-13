@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — complete the final original sparse structure refinement
+- Originalstate24/raw61232994 COMPLETED21m31/0:0;512pass, original297failures
+  retained.32workers, Python1270.248s/maxchild4187828KiB. Actual26-state compact
+  check570passes over26624branchrows,8240originalfailedcontexts/0unresolved.
+- Existingnewarray27 starts after24; promotedexisting30debug30 usingfresh5-job
+  cap andcompleted64-worker512-context measurement. No newsubmission/cancel/
+  scientific changes. Remaining25/27–31; assembly actualdependency previously
+  verifiedonly24andnewarray61246935, without cancelled old writers.
+- UpdatedcurrentPLAN/status/ledger andsource-links. Extendedpendingdomainresult
+  narrative with alreadyverifiedweightESS/autocorrelation/parity-chain limits;
+  numericvalues/thresholds unchanged. Pythonparse passes; full183testsource
+  provenance remains unchanged. Fullstructure/domain/threefigures stillrequired.
+- Next: collectremaining6states andrunexistingassembly→posterior→counts→domain
+  chain, thenactualwrittenresults/visualreviews/finaldeliveryclosure.
+
 ## 2026-11-14 — make baseline preservation a live final-delivery requirement
 - Found prior tracked-preservation proof referenced older7744d5f, notcurrentHEAD.
   Added v3_1_preservation_check.py: protect6976 baseline31f1277 files, examine
