@@ -1,0 +1,99 @@
+{
+  "plan_sha256": "c41b4e7d1eeade5e0f09698194c3ace6656df033be6411de3df288e5da7d5267",
+  "group": 3,
+  "indices": [
+    43,
+    55,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63
+  ],
+  "job": "61229862",
+  "original_stage_records": [
+    {
+      "index": 43,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_1011/complete.json",
+      "sha256": "f310768ca6a6203e391e56a789ab2566db9e774ef27b8e9c9cf413c11e802dac"
+    },
+    {
+      "index": 43,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1011/complete.json",
+      "sha256": "2b39eddd54e17721317e5da913c4eb36b3244dfd5068c5c9c443685382f6ccf8"
+    },
+    {
+      "index": 55,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1023/complete.json",
+      "sha256": "63c65cd4e364759b7baaf469197dc4054f3bfcc68fffa0c49cb7c2542ddf151f"
+    },
+    {
+      "index": 57,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1025/complete.json",
+      "sha256": "ba473414c2a553a75b8790349fca6454c29086dfd19e82f46833c94cdeac19b4"
+    },
+    {
+      "index": 58,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1026/complete.json",
+      "sha256": "03a35d7aff75c721bf832ac6dc557b2f652b64303bc840b336b0adc3272ba783"
+    },
+    {
+      "index": 59,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_1027/complete.json",
+      "sha256": "bd32ef286739fd00d65723e80a842794976d0750511101a5455440f853b34ce8"
+    },
+    {
+      "index": 59,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1027/complete.json",
+      "sha256": "4b9b63ef0c829f0325619f3dc774d06f8ddb7b25fa1f707e1b36652401019c06"
+    },
+    {
+      "index": 61,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_1029/complete.json",
+      "sha256": "a540206c2108787d2feeaf5d33cddd6c525c472390ad0d1e633508a1febb0d5b"
+    },
+    {
+      "index": 61,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1029/complete.json",
+      "sha256": "c715c4baaa60131356d2686e87ffddea632d6b93a75056ea91863995205fb43e"
+    },
+    {
+      "index": 62,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_1030/complete.json",
+      "sha256": "30132b7bbfaff5f7f547f08a1167b67a42d0fcd4ca51c4ecbdedd6930c068bd2"
+    },
+    {
+      "index": 62,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1030/complete.json",
+      "sha256": "fc71d6959be4374bee0ac4fc2e000338840f65f5cde4eda73051808356facf30"
+    },
+    {
+      "index": 63,
+      "stage": "probe",
+      "path": "data/v3_1/response_probes/draw_1031/complete.json",
+      "sha256": "bb8115947f50a92d61079d37e588c996c4ff892a6ccd42b5f3fdd2864d549860"
+    },
+    {
+      "index": 63,
+      "stage": "refine",
+      "path": "data/v3_1/response_probes/development_refined/draw_1031/complete.json",
+      "sha256": "01459b2fb38346eda2dafb14f2d8b340df4a11c85f4b94c94f4b0376d83d8554"
+    }
+  ],
+  "execution_complete": true,
+  "scope": "Sequential unchanged original response drivers, at most32workers. No new scientific input, seed, grid, numerical gate, normalization or completed-product rewrite.",
+  "elapsed_seconds": 247.15299289798713,
+  "maximum_child_RSS_KiB": 1631768
+}

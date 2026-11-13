@@ -14,8 +14,10 @@ Negative findings remain deliverables, never successful calibration claims.
 
 ### Milestones and current evidence
 - Resource execution: all4exactresponse groups61229862 completed; full64state
-  report stillpending. Preparedpending-only structure-native batches (max7pairs,
-  unchanged32workers, max2nodes); dryrun and verifiedsubmission follow sync.
+  report nowrunning. Structure-native replacement61231239 (max7pairs, unchanged
+  32workers,max2nodes) submittedafter56zero-runtime cancellationproofs;8prior
+  completehashes retained. Twoactual-product structure figure scripts prepared;
+  full32state application/render/visualreview stillrequired.
 - [x] Read latest full Pro review/related chats (noDOCX), register goal/roles/ledger.
 - [ ] WP1 final correction acceptance. Same1542development stars/17386views and
   pairedclass/FeH/band/prior contrasts complete. Response12 targetprior worsens

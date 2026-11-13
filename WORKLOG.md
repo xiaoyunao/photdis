@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — submit exact structure batches and prepare shared-posterior figures
+- Remote dryrun found56pending native/refined stages,8completed markers, no
+  live native task and no orphan downstream dependency. All56verified CANCELLED
+  withzero runtime/no allocation before array61231239 (4groups,max2nodes).
+  Originaldrivers/sourcehashes and completed products preserved; fullplan,
+  cancellation proof and submissionreceipt collected/hashverified.
+- Prepared2Englishstructure figure sets/8panels for full/Gaussian sharedcounts,
+  common-scale posterior, conditional/sharedvariance, responseESS, numerical
+  sensitivity and descriptive seen-Gaia membership. Requiresactualcomplete
+  32state/512object products andidentity reconciliation; no syntheticfallback.
+  Pythonparse andgitdiffcheck pass; notrendered/visuallyaccepted yet.
+- Seventhmode shard complete:442objects/372fixedhighq,allnumericalpass.
+  First7total3098objects/2630highq; fullreport stillrequireslast442objects.
+- Collectedlastresponse resourcegroup:247.153executionseconds,maxchildRSS
+  1631768KiB; all64response reportnowrunning. Domain andfullmode reportstillneeded.
+- Entry integrals andliveoldrefinement untouched. Structureposterior, population
+  holdout/transfer andscientificuse-domain adjudication remain required.
+
 ## 2026-11-14 — prepare exact pending-only structure native batches
 - Added resource wrapper and metadata-only submission script for at most7
   native/refined state pairs per node, sequential unchanged32-worker drivers.

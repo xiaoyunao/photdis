@@ -1,0 +1,569 @@
+{
+  "source_commit": "54817c469e79296315f010bd2faf40ca9c2ccdc4",
+  "sources": {
+    "scripts/v3_1_structure_native.py": "5fe6d0e750e57281685fbbf48f728b90498a33caf3c39868bb8cda6296775825",
+    "scripts/v3_1_structure_native_refine.py": "8eb86154d7809c86a35e81b443bd60e04b5abf9e4986462a4bb565a4e07c604b",
+    "scripts/v3_1_structure_native_resource_group.py": "523ac7381026860b20d8d267e1bc0aab5319d6e7e4bc9821a8d569bd5e2bf8c2",
+    "scripts/run_v3_1_structure_native_resource_group.sh": "347564ca84b59aa56561fe9d8d5a9d424ef4530bd84a586618d6639532a7cc23"
+  },
+  "stage_scripts": {
+    "native": "scripts/v3_1_structure_native.py",
+    "native_refined": "scripts/v3_1_structure_native_refine.py"
+  },
+  "stages": [
+    {
+      "index": 0,
+      "draw": 0,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_00/complete.json",
+      "complete": true,
+      "sha256": "83874f9c2cd64821e2ce47f61b208fcc4b3a316d60dc97ae39d5f369e1019948"
+    },
+    {
+      "index": 0,
+      "draw": 0,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_00/complete.json",
+      "complete": true,
+      "sha256": "39a1b8483cfef538bf452b7a5114b3a03c77f3689086628dbe78b28bfe60baa8"
+    },
+    {
+      "index": 1,
+      "draw": 1,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_01/complete.json",
+      "complete": true,
+      "sha256": "487481fa35e3b0a66348145e70981982e072b483c74b41db89360789e8ba9f5e"
+    },
+    {
+      "index": 1,
+      "draw": 1,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_01/complete.json",
+      "complete": true,
+      "sha256": "278474c5ccbd066152ed445b45c563c8ba27e57b0077300c09ccbfc4562106ee"
+    },
+    {
+      "index": 2,
+      "draw": 2,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_02/complete.json",
+      "complete": true,
+      "sha256": "235a24a8365eecf20d45502607e294e9d30c29235270722d34351caef90d11ea"
+    },
+    {
+      "index": 2,
+      "draw": 2,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_02/complete.json",
+      "complete": true,
+      "sha256": "033e5dc627bdaaeb69fdf1bdb0552861babf542bb6b9de3455d65812b0690475"
+    },
+    {
+      "index": 3,
+      "draw": 3,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_03/complete.json",
+      "complete": false
+    },
+    {
+      "index": 3,
+      "draw": 3,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_03/complete.json",
+      "complete": false
+    },
+    {
+      "index": 4,
+      "draw": 4,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_04/complete.json",
+      "complete": false
+    },
+    {
+      "index": 4,
+      "draw": 4,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_04/complete.json",
+      "complete": false
+    },
+    {
+      "index": 5,
+      "draw": 5,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_05/complete.json",
+      "complete": false
+    },
+    {
+      "index": 5,
+      "draw": 5,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_05/complete.json",
+      "complete": false
+    },
+    {
+      "index": 6,
+      "draw": 6,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_06/complete.json",
+      "complete": false
+    },
+    {
+      "index": 6,
+      "draw": 6,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_06/complete.json",
+      "complete": false
+    },
+    {
+      "index": 7,
+      "draw": 7,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_07/complete.json",
+      "complete": false
+    },
+    {
+      "index": 7,
+      "draw": 7,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_07/complete.json",
+      "complete": false
+    },
+    {
+      "index": 8,
+      "draw": 8,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_08/complete.json",
+      "complete": false
+    },
+    {
+      "index": 8,
+      "draw": 8,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_08/complete.json",
+      "complete": false
+    },
+    {
+      "index": 9,
+      "draw": 9,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_09/complete.json",
+      "complete": false
+    },
+    {
+      "index": 9,
+      "draw": 9,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_09/complete.json",
+      "complete": false
+    },
+    {
+      "index": 10,
+      "draw": 10,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_10/complete.json",
+      "complete": false
+    },
+    {
+      "index": 10,
+      "draw": 10,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_10/complete.json",
+      "complete": false
+    },
+    {
+      "index": 11,
+      "draw": 11,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_11/complete.json",
+      "complete": false
+    },
+    {
+      "index": 11,
+      "draw": 11,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_11/complete.json",
+      "complete": false
+    },
+    {
+      "index": 12,
+      "draw": 12,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_12/complete.json",
+      "complete": true,
+      "sha256": "200a605138856e80a958def79672bfa21966cbc36a028179a1abe2ff9756e624"
+    },
+    {
+      "index": 12,
+      "draw": 12,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_12/complete.json",
+      "complete": true,
+      "sha256": "59b05686d1e6b97d2eb540d99e8772e34e57c7a5a6441a537fae7bfb3ebf2223"
+    },
+    {
+      "index": 13,
+      "draw": 13,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_13/complete.json",
+      "complete": false
+    },
+    {
+      "index": 13,
+      "draw": 13,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_13/complete.json",
+      "complete": false
+    },
+    {
+      "index": 14,
+      "draw": 14,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_14/complete.json",
+      "complete": false
+    },
+    {
+      "index": 14,
+      "draw": 14,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_14/complete.json",
+      "complete": false
+    },
+    {
+      "index": 15,
+      "draw": 15,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_15/complete.json",
+      "complete": false
+    },
+    {
+      "index": 15,
+      "draw": 15,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_15/complete.json",
+      "complete": false
+    },
+    {
+      "index": 16,
+      "draw": 16,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_16/complete.json",
+      "complete": false
+    },
+    {
+      "index": 16,
+      "draw": 16,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_16/complete.json",
+      "complete": false
+    },
+    {
+      "index": 17,
+      "draw": 17,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_17/complete.json",
+      "complete": false
+    },
+    {
+      "index": 17,
+      "draw": 17,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_17/complete.json",
+      "complete": false
+    },
+    {
+      "index": 18,
+      "draw": 18,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_18/complete.json",
+      "complete": false
+    },
+    {
+      "index": 18,
+      "draw": 18,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_18/complete.json",
+      "complete": false
+    },
+    {
+      "index": 19,
+      "draw": 19,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_19/complete.json",
+      "complete": false
+    },
+    {
+      "index": 19,
+      "draw": 19,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_19/complete.json",
+      "complete": false
+    },
+    {
+      "index": 20,
+      "draw": 20,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_20/complete.json",
+      "complete": false
+    },
+    {
+      "index": 20,
+      "draw": 20,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_20/complete.json",
+      "complete": false
+    },
+    {
+      "index": 21,
+      "draw": 21,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_21/complete.json",
+      "complete": false
+    },
+    {
+      "index": 21,
+      "draw": 21,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_21/complete.json",
+      "complete": false
+    },
+    {
+      "index": 22,
+      "draw": 22,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_22/complete.json",
+      "complete": false
+    },
+    {
+      "index": 22,
+      "draw": 22,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_22/complete.json",
+      "complete": false
+    },
+    {
+      "index": 23,
+      "draw": 23,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_23/complete.json",
+      "complete": false
+    },
+    {
+      "index": 23,
+      "draw": 23,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_23/complete.json",
+      "complete": false
+    },
+    {
+      "index": 24,
+      "draw": 24,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_24/complete.json",
+      "complete": false
+    },
+    {
+      "index": 24,
+      "draw": 24,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_24/complete.json",
+      "complete": false
+    },
+    {
+      "index": 25,
+      "draw": 25,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_25/complete.json",
+      "complete": false
+    },
+    {
+      "index": 25,
+      "draw": 25,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_25/complete.json",
+      "complete": false
+    },
+    {
+      "index": 26,
+      "draw": 26,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_26/complete.json",
+      "complete": false
+    },
+    {
+      "index": 26,
+      "draw": 26,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_26/complete.json",
+      "complete": false
+    },
+    {
+      "index": 27,
+      "draw": 27,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_27/complete.json",
+      "complete": false
+    },
+    {
+      "index": 27,
+      "draw": 27,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_27/complete.json",
+      "complete": false
+    },
+    {
+      "index": 28,
+      "draw": 28,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_28/complete.json",
+      "complete": false
+    },
+    {
+      "index": 28,
+      "draw": 28,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_28/complete.json",
+      "complete": false
+    },
+    {
+      "index": 29,
+      "draw": 29,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_29/complete.json",
+      "complete": false
+    },
+    {
+      "index": 29,
+      "draw": 29,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_29/complete.json",
+      "complete": false
+    },
+    {
+      "index": 30,
+      "draw": 30,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_30/complete.json",
+      "complete": false
+    },
+    {
+      "index": 30,
+      "draw": 30,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_30/complete.json",
+      "complete": false
+    },
+    {
+      "index": 31,
+      "draw": 31,
+      "stage": "native",
+      "path": "data/v3_1/structure/native/draw_31/complete.json",
+      "complete": false
+    },
+    {
+      "index": 31,
+      "draw": 31,
+      "stage": "native_refined",
+      "path": "data/v3_1/structure/native_refined/draw_31/complete.json",
+      "complete": false
+    }
+  ],
+  "groups": [
+    [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    [
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  ],
+  "old_pending": [
+    "61222616_3",
+    "61222661_3",
+    "61222616_4",
+    "61222661_4",
+    "61222616_5",
+    "61222661_5",
+    "61222616_6",
+    "61222661_6",
+    "61222616_7",
+    "61222661_7",
+    "61222616_8",
+    "61222661_8",
+    "61222616_9",
+    "61222661_9",
+    "61222616_10",
+    "61222661_10",
+    "61222616_11",
+    "61222661_11",
+    "61222616_13",
+    "61222661_13",
+    "61222616_14",
+    "61222661_14",
+    "61222616_15",
+    "61222661_15",
+    "61222616_16",
+    "61222661_16",
+    "61222616_17",
+    "61222661_17",
+    "61222616_18",
+    "61222661_18",
+    "61222616_19",
+    "61222661_19",
+    "61222616_20",
+    "61222661_20",
+    "61222616_21",
+    "61222661_21",
+    "61222616_22",
+    "61222661_22",
+    "61222616_23",
+    "61222661_23",
+    "61222616_24",
+    "61222661_24",
+    "61222616_25",
+    "61222661_25",
+    "61222616_26",
+    "61222661_26",
+    "61222616_27",
+    "61222661_27",
+    "61222616_28",
+    "61222661_28",
+    "61222616_29",
+    "61222661_29",
+    "61222616_30",
+    "61222661_30",
+    "61222616_31",
+    "61222661_31"
+  ],
+  "retained_live_indices": [],
+  "scope": "At most7native/refined stage pairs per node, sequential unchanged32-worker original drivers. Completed products and all numerical failures retained. Entry integrals and running tasks untouched; final assembly still requires all32states."
+}

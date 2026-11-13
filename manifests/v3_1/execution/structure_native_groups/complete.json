@@ -1,0 +1,48 @@
+{
+  "replacement_array": "61231239",
+  "cancelled_pending_stages": 56,
+  "preserved_complete_stages": 8,
+  "groups": [
+    [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    [
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  ],
+  "source_commit": "54817c469e79296315f010bd2faf40ca9c2ccdc4",
+  "outputs": {
+    "submission.json": "bbc2a2db73380ccbfabb589ab2248fe6a280417ff48c5404fb3dff5974a40ad5",
+    "plan.json": "98bffe675ab3a140499e016228c8cafb002190bca2c2bf3e0d57a820d28e85c6"
+  }
+}
