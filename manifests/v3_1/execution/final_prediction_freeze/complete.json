@@ -1,0 +1,18 @@
+{
+  "job": "61226412",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "regular",
+    "-t",
+    "01:00:00",
+    "--dependency=afterok:61226370:61226371:61224421",
+    "scripts/run_v3_1_final_validation.sh",
+    "freeze"
+  ],
+  "predictions_complete": false,
+  "outcomes_opened": false,
+  "execution_complete": false,
+  "scope": "Dependency-gated complete prediction/hash freeze only; missing/partial predictions fail. Numerical failure flags remain; no evidence association in this job."
+}

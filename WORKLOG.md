@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-13 — queue complete prediction freeze and document fixed-highq counts
+- Candidate diagnostic milestone e889983 synchronized local/origin/NERSC.
+- Dependency-gated freeze61226412 regular1h waitsafterok61226370/61226371/
+  61224421. It authenticates all3558objects/nineviews and sourcehashclosure,
+  retains numericalflags, anddoesnotopen referencevalues. Missing/incomplete
+  inventories fail; evidence association remains unrun.
+- Atlas nowincludes18main highqclass-distance expectations/realized95%intervals
+  copiedfrom authenticated compactcounts. Explicit qnear=P(d<10kpc); farcount
+  interval[3,15]usesjointsumdraws, notsummed endpoints. Far-CDF halfdelta.01378.
+- Validation: source-derived table complete3classes×6bins; gitdiffcheck.
+  Othercohorts, fullpredictions, radial/SED/structure/finalscoring stillrequired.
+
 ## 2026-11-13 — complete candidate ensemble, fixed-highq counts and prediction pilots
 - All34candidate conditional states pass at2048retained; all512attempts preserved.
   Ensemble61225884 COMPLETED18s, 3540nativePSF. Main finite-bootstrap ESS21.17325,

@@ -76,3 +76,23 @@ Both PNG300dpi/PDF exports and all seven panels were individually inspected;
 [acceptance record](../manifests/v3_1/target_candidate_figures/acceptance.json),
 [count PDF](../figures/v3_1/target_candidate/conditional_counts.pdf),
 [sensitivity PDF](../figures/v3_1/target_candidate/weights_numerics.pdf).
+
+## Fixed high-q joint count table
+
+The main qnear=P(d<10kpc)>.95 subset contains3003of3540nativePSF objects.
+Each cell below is the conditional expectation [95%shared realized-count interval].
+All four controls use exactly these same identities; this table shows the
+registered evidence-weighted main view, including its inherited numerical flag.
+
+| Class | 0–2 kpc | 2–5 kpc | 5–10 kpc | 10–20 kpc | 20–50 kpc | >50 kpc |
+|---|---:|---:|---:|---:|---:|---:|
+| Dwarf | 1824.740 [1803, 1847] | 991.948 [964, 1020] | 150.145 [133, 167] | 1.488 [0, 4] | 0.112 [0, 1] | 0.049 [0, 1] |
+| Evolved | 0.430 [0, 2] | 0.184 [0, 1] | 0.173 [0, 1] | 0.283 [0, 2] | 0.450 [0, 2] | 0.478 [0, 2] |
+| Other | 2.958 [0, 7] | 9.460 [4, 17] | 14.960 [6, 26] | 3.425 [0, 8] | 1.573 [0, 5] | 0.146 [0, 1] |
+
+Summed model-expected d>=10kpc count is8.00304, leakage0.266502%; the far-count
+interval[3,15] comes from the jointly summed draws, not summed bin endpoints.
+Its split-half CDF discrepancy is0.01378. Neither the leakage nor the intervals
+establish independent contamination or complete model uncertainty.
+[All views, numerical alternatives and count moments](../manifests/v3_1/highq_counts/counts.csv);
+[joint far-count source](../manifests/v3_1/highq_counts/model_leakage.csv).
