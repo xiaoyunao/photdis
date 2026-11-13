@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — submit diagnostic pilot and prepare reference availability audit
+- Commit5f2c298 synchronized to local/origin/NERSC; all78v3/v3.1 tests pass.
+  Submitted existing-scope pilot61212082, last observed PENDING(Priority).
+  No log exists before start; this is scheduling, not a program failure.
+- Added allocated v3_1_inventory.py/wrapper to inventory historical coverage,
+  outside-v3 raw source/sky availability and candidate-envelope subset of26k.
+  Raw sources with unverified native TYPE are acquisition inventory only,
+  zero scientific admissions; outside-v3 does not establish all-history blindness.
+- Updated README and execution manifest. Inventory syntax passed; actual
+  inventory and pilot results are pending. No new model or final outcome opened.
+- Next: run inventory in allocation, inspect pilot, then paired mechanism
+  diagnostics and evidence-available prospective role freeze before correction.
+
+
 ## 2026-11-13 — implement isolated class/FeH/band and mode diagnostics
 - Added src/photdis/v3_1/diagnostics.py and five focused analytic tests.
   FeH conditioning updates flux covariance/mean and mixture evidence; class

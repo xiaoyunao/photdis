@@ -1,5 +1,16 @@
 # photdis
 
+Active development: **v3.1 scientific calibration and use domains**, authorized
+2026-11-13 from the [latest Pro review](docs/pro_review_31f1277.md).
+[Four-package protocol](docs/v3_1_protocol.md) ·
+[Evidence and remaining-work ledger](docs/v3_1_requirements_result.md).
+The initial mechanism controls are isolated under `src/photdis/v3_1`;
+`sbatch scripts/run_v3_1_diagnostics.sh --stage pilot --workers 16` runs the
+registered small diagnostic cohort on NERSC. Inspect `manifests/v3_1/execution.json`
+before submitting: do not duplicate an active job. New correction fitting waits
+for mechanism evidence and pre-frozen reference-available validation roles.
+
+
 Latest completed research delivery: **Photdis v3.0 continuous SED and population system**.
 All 1,183,990 qualified existing-field candidates, their full joint posterior links,
 shared counts/covariance and 42 English scientific figure sets are delivered.
@@ -16,7 +27,8 @@ The candidate posterior transfers the shared fit from 26,000 sampled targets;
 it is not a full-catalog population refit or a calibrated Galactic census.
 Poor-metal scales, evolved branches, interval undercoverage and narrow-structure
 recovery remain scientific limitations. The deployed v1 catalog is unchanged.
-No further modeling, expansion, monitoring or deployment is scheduled.
+The completed v3.0 scope has no remaining jobs. Authorized v3.1 research is
+tracked separately above; no full-catalog rerun, monitoring or deployment is scheduled.
 Use `python scripts/v3_0.py status` for small-manifest status; actual production
 requires allocated NERSC compute resources through `run_v3_0_stage.sh`.
 Historical statements below about closed prospective outcomes describe earlier stages.
