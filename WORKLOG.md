@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-14 — prepare strict final research-delivery closure
+- Added scripts/v3_1_delivery.py: mandatory102transfer/32structure production
+  markers, nine source-bound reports,22plate visual provenance, test transcript
+  andfinal narrative/requirements review. Scientific acceptance staysFalse;
+  completion ofresearch delivery isexplicitly distinctfrom calibration/adoption.
+- Requiresall128 original/refined native/entry markers boundtoactualassembly.
+  Verifiedproduction assembly path isstructure/matrices fromactualinfer source.
+  py_compile andactualmissing-input rejection pass; no delivery.json written.
+  Missingguard receipt retained; fullsuccess path awaitsrealremainingproducts.
+- Newarray17/raw61247266 COMPLETED21m29:512allpass/original512flags retained;
+  Python1276.409s/maxchild4167968KiB. Unified22states pass482compactchecks,
+  6522originalfailedcontexts/0unresolved. Collected52missingnative/refined-native
+  markers (now32each), state/PSF/source/original-markerhashlinks verified.
+- Fresh106v3.1tests pass4.39s; fullv3+v3.1regression179pass6.62s. Bothactual
+  transcripts retained, fullsuite binds162test/scientificsourcehashes.
+- Full102inventory milestone1e728eb matcheslocal/origin/NERSC. Structure18 and
+  fulltransferreport nowrunning;15/16queueddebug. No newscience orjobs.
+- Next: collectcompletedrefinements/report; renderandreviewfiveactualplates;
+  finalsource/test/docclosure beforecallingresearch deliverycomplete.
+
 ## 2026-11-14 — authenticate all102 transfer states and release complete mixture reporting
 - Lastholdout group61231554_17/raw61235900 COMPLETED17m33; states0–3 each
   pass all8 originalnumeric checks. All102markers/summary/check tables collected:

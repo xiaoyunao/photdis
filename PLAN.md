@@ -194,6 +194,13 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Finaldelivery gate scripts/v3_1_delivery.py prepared: requiresactual102transfer,
+  all32structure/assembly/posterior/counts, ninewrittenreports,22visuallyreviewed
+  figures, freshunitrecord andcompletehash-boundnarrativereview. Syntaxandactual
+  missing-input rejection pass; no finaldelivery marker exists oracceptanceclaimed.
+  Freshscientific tests106v3.1pass; completev3+v3.1suite179pass6.62s/162sourcehashes.
+  Collected52missingnative/refined-native markers (now32each), PSF/state/source
+  andoriginal-markerhashlinks checked; largepayloads remainallocatedassembly.
 - Unifiedfigure checker scripts/v3_1_figure_delivery_check.py defaults toall22
   namedplates; current --completed-only verifies17plates/240source/hash/format
   andcommittedvisual-provenancechecks. Fullmode missing5guard stoppedwithout
@@ -215,8 +222,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Refined9/22complete25m51/10m38, original512/133flags retained.
   Refined19complete11m01/original153flags;13/26complete21m50/10m53,
   original512/149flags. Refined14/20also complete19m17/17m06, original268/233
-  flags retained. Total21/32refinements authenticate460groupedchecks withnewreproducible
-  refinementcompactchecker;6010originalfailedcontexts/0unresolved preserved.
+  flags retained. Newarray17/raw61247266 COMPLETED21m29/all512pass,512oldflags.
+  Total22/32refinements authenticate482groupedchecks withnewreproducible
+  refinementcompactchecker;6522originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,

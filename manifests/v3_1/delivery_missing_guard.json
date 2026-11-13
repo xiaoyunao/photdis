@@ -1,0 +1,12 @@
+{
+  "source_sha256": "23d3b4a0f4bf82e3ee9fc46442eaf353c5665ac312c8de3ca0a8074f2c48af0f",
+  "command": [
+    "python3",
+    "scripts/v3_1_delivery.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 149, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 39, in main\n    raise FileNotFoundError('Complete delivery required; no output written. Missing: ' + ', '.join(missing))\nFileNotFoundError: Complete delivery required; no output written. Missing: manifests/v3_1/transfer_result_sources.json, manifests/v3_1/structure_result_sources.json, manifests/v3_1/domain_result_sources.json, manifests/v3_1/structure/refined_entry_32_states.json, manifests/v3_1/structure/matrices/complete.json, manifests/v3_1/structure/posterior/complete.json, manifests/v3_1/structure/report/complete.json, manifests/v3_1/domain_adjudication/complete.json, manifests/v3_1/figure_delivery.json, manifests/v3_1/final_unit_validation.json, manifests/v3_1/final_narrative_review.json\n",
+  "missing_input_guard_passed": true,
+  "delivery_written": false,
+  "scope": "Actual incomplete-input rejection only; full delivery checker has not passed."
+}
