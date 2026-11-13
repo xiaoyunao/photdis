@@ -1,0 +1,147 @@
+{
+  "jobs": [
+    {
+      "job": "61226762",
+      "name": "photdis_v3_1_finalevidence_field",
+      "stage": "evidence",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_finalevidence_field",
+        "--dependency=afterok:61226412",
+        "scripts/run_v3_1_final_validation.sh",
+        "evidence",
+        "--cohort",
+        "field"
+      ]
+    },
+    {
+      "job": "61226763",
+      "name": "photdis_v3_1_finalscore_field",
+      "stage": "score",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_finalscore_field",
+        "--dependency=afterok:61226762",
+        "scripts/run_v3_1_final_validation.sh",
+        "score",
+        "--cohort",
+        "field",
+        "--workers",
+        "32"
+      ]
+    },
+    {
+      "job": "61226764",
+      "name": "photdis_v3_1_finalevidence_common",
+      "stage": "evidence",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_finalevidence_common",
+        "--dependency=afterok:61226412",
+        "scripts/run_v3_1_final_validation.sh",
+        "evidence",
+        "--cohort",
+        "common"
+      ]
+    },
+    {
+      "job": "61226770",
+      "name": "photdis_v3_1_finalscore_common",
+      "stage": "score",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_finalscore_common",
+        "--dependency=afterok:61226764",
+        "scripts/run_v3_1_final_validation.sh",
+        "score",
+        "--cohort",
+        "common",
+        "--workers",
+        "32"
+      ]
+    },
+    {
+      "job": "61226775",
+      "name": "photdis_v3_1_finalreport",
+      "stage": "report",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_finalreport",
+        "--dependency=afterok:61226763:61226770",
+        "scripts/run_v3_1_final_validation.sh",
+        "report"
+      ]
+    },
+    {
+      "job": "61226776",
+      "name": "photdis_v3_1_domainevidence",
+      "stage": "domain-evidence",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_domainevidence",
+        "--dependency=afterok:61226775:61221949",
+        "scripts/run_v3_1_final_validation.sh",
+        "domain-evidence"
+      ]
+    },
+    {
+      "job": "61226777",
+      "name": "photdis_v3_1_domainscreen",
+      "stage": "domain-assessment",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "regular",
+        "-t",
+        "02:00:00",
+        "-J",
+        "photdis_v3_1_domainscreen",
+        "--dependency=afterok:61226775",
+        "scripts/run_v3_1_final_validation.sh",
+        "domain-assessment"
+      ]
+    }
+  ],
+  "source_commit": "bd5e6f18f5ad4b0e18b6bb3b453ab4f5d8ca5710",
+  "freeze_job": "61226412",
+  "execution_complete": false,
+  "outcomes_opened_at_submission": false,
+  "scope": "Registered complete final evaluation only after write-once prediction freeze. Every stage verifies immutable hashes and retains numerical failures. Domain availability additionally waits for all64SEDprobe outcomes; no scientific retuning or automatic certification."
+}

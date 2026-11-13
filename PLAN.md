@@ -37,7 +37,7 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad0–3conditionalstatespass2048;
+  mainwithcut orrelax evidence gate. Broad0–7conditionalstatespass2048;
   original512failures retained. Otherbroad/holdout states/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
@@ -59,18 +59,24 @@ Negative findings remain deliverables, never successful calibration claims.
   Originalflags retained. Referenceoutcomes remainunopened; final target-prior
   identity computed withretained numericalflag. Both8-ID targetprediction pilots
   numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
-  61226371 runningdebug30minworkers32.
+  61226371 completes23m53, all3032numericalpass; originalensembleflagretained.
   Sharedfield checkpointreuse verified; freeze61226412 waitsafterokfullfield/common
   andoldtargetcommon; freeze again debug30min afterbroadgroup0completion freedslot. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
   common61224421 completes22m43, all3032pass. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
-  checks, notexecuted. Shared-scale/sky aggregate report nowimplemented; strict
+  checks. Dependency-gated evidence61226762/64,score61226763/70,report61226775,
+  domainavailability61226776/relativescreens61226777 submitted; notyetexecuted. Shared-scale/sky aggregate report nowimplemented; strict
   candidate admission/primary versusoutside-domain report protocol added, exact
   application3540mask reproduced by61224943(20s). Field519/526 andcommon1732/3032
   in samecandidate domain; others retained outside-domain. Same-ID MWS/VAC channel
   association/scoring implemented, but allfinalevidence/scoring/report execution
   stillwaits for matching fullcandidate predictions andfreeze.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
+  Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
+  development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
+  unchanged32bootstrap identity, exactadjoint luminosity integration; pilot8thenfull.
+  Exactluminosity-adjointmath nowimplemented/10tests pass; populationmode driver,
+  actual8-IDpilot/fullproducts andmodefigures remainpending.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -81,7 +87,9 @@ Negative findings remain deliverables, never successful calibration claims.
   All32state entry61223167/refinement61223172 underway; queuedrefinementindices
   extendedto3h. Originalrefinement0 TIMEOUT30m27; terminal/absence/sourcehashverified,
   exactresume61225943regular3h submitted. Assembly/posterior
-  awaitallstates numerical admission. Separate shared realizedcount/seen-Gaia
+  awaitallstates numerical admission. Pendingentry1–31limits now30min basedon
+  13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
+  improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now
   implemented/tested; photometry-onlypreparation61225647 completes8s/allPSF,
@@ -93,11 +101,11 @@ Negative findings remain deliverables, never successful calibration claims.
   nowcomplete; source-qualifiedreference/gap renderer readybutunrun. Full scientific counts, final
   product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
-  Integrated methods nowin docs/v3_1_methods.md, source-linked to18frozenprotocols;
+  Integrated methods nowin docs/v3_1_methods.md, source-linked to21local files (19protocols plusstatus/ledger);
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full160tests pass5.34s; seven English plates visually inspected (paired62,
+- Latest full170tests pass5.44s; seven English plates visually inspected (paired62,
   calibration32, latent1574, candidate138, photometricmap165actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.

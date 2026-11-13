@@ -1,0 +1,322 @@
+{
+  "changes": [
+    {
+      "job": "61225864_3",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_4",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_5",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_6",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_7",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_17",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_18",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_19",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_20",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_21",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_22",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_23",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_24",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61225864_25",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "2:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_1",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_2",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_3",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_4",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_5",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_6",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_7",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_8",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_9",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_10",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_11",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_12",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_13",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_14",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_15",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_16",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_17",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_18",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_19",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_20",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_21",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_22",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_23",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_24",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_25",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_26",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_27",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_28",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_29",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_30",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    },
+    {
+      "job": "61223167_31",
+      "previous_qos": "regular_1",
+      "previous_state": "PENDING",
+      "previous_limit": "1:00:00",
+      "new_limit": "00:30:00"
+    }
+  ],
+  "skipped": [],
+  "scope": "Resource-only limits for already queued jobs, based on completed broad groups9m09/9m06 and structure-entry pilot13m37. Original seeds/sources/checkpoints/dependencies and numerical schedules unchanged. Retain and exactly resume any terminal allocation exhaustion; no scientific-state deletion.",
+  "execution_complete": false
+}

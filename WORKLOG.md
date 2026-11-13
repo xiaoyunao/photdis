@@ -1,5 +1,45 @@
 # WORKLOG
 
+## 2026-11-13 — finish all candidate external predictions and improve queued allocations
+- Commoncandidate61226371 COMPLETED23m53: all3032nativePSF numericalpass,
+  fullmarker/summary collected; inheritedensembleacceptedFalse remains. Together
+  with526field/allreference/oldtarget controls, allprediction prerequisites now
+  exist. Freeze61226412 anddependentfinalevaluation stillrequireactualexecution.
+- Basedoncompletedbroadgroups9m09/9m06 andstructureentrypilot13m37, shortened
+  ONLY45pendingexistingjobs to30min:14populationgroups(3–7/17–25) and31structure
+  entrygroups(1–31), QoS unchanged. Per-object/iteration checkpoints and allsource/
+  seed/dependency/numericalschedules preserved. This improvesbackfill eligibility;
+  anyallocation exhaustion requiresverifiedterminal exactresume, neverdropout.
+  Fullresource amendment collected inexecution/pending_walltime_backfill.
+
+## 2026-11-13 — gate final evaluation and complete mode-adjoint mathematics
+- Submittedregisteredpost-freeze chain: evidence61226762(field)/61226764(common),
+  score61226763/61226770, correlatedreport61226775, domainavailability61226776
+  (alsowaits64SEDreport61221949), relativescreens61226777. Allafterokdependencies,
+  immutablefreeze verification, same3558identities/nineviews; numericalfailures
+  retained. Submissiondoesnotmeanoutcomesopened orscientificacceptance.
+- Pro§5/§6audit identified exactfinalcandidate modeattribution stillrequired;
+  seen1542mode contrasts alone cannotcomplete WP4. Registeredcandidate_modes
+  protocol: all3540/fixed3003, no refit/reweight/selection,8-IDnumericalpilot,
+  true-mu per-basin class/binary/parent responsibilities withallweakbasins retained.
+- Addedluminosity_adjoint.py and10math tests. Exactdiscrete transposeof frozen
+  shift/convolution enables responsibilityintegrals withoutwrongnative-coordinate
+  binning. Inspection caughtrepeatedfloorindices fromfloatingpoint gridpositions;
+  logaddexp scatter-add preservesallcontributions. Densebasis-matrix comparison,
+  bothshift signs,zero/nonzerosigma,boundaries,loglike−20000 andzeromass pass.
+  Fullv3/v3.1suite170passed5.44s. Realcandidate mode execution remainspending.
+- Correctedintegratedmethods prose toexplicitlydistinguish candidatefullr/error/
+  QRF entry frombroadgrzSNR5; actualfitteralreadyusedselection_candidate correctly,
+  so nofit/product rerun. Addedsourceprotocol links andexplicitmode-product gap.
+- Collectedbroadcorrections4–7: allconditionalgatespass2048; original512count
+  failures andcorrection5/6bridgefailures preserved. Integratedmethods now21local
+  links:19protocols plusstatus/ledger (the earlier18-link total included these2).
+- Latestjobcheck: broadgroup1 COMPLETED9m06; commoncandidateRUNNING22m31 with
+  2882/3032checkpoints; broadgroup2RUNNING3m45. LastSEDgroup7/freezequeued; two
+  registeredresponse refinements nowrunningregular. No finaloutcomes read locally.
+- Next: finishmainfreeze/evidence scores, candidate modeimplementation/actualruns,
+  broad/holdout/radial/64SED/structure products anddomain scientificadjudication.
+
 ## 2026-11-13 — render fixed photometric occupancy without opening references
 - Added v3_1_domain_figures.py withauthenticated photometry/evidence stages;
   evidence stage requires actualcomplete source tables andremainsunrun. No synthetic
