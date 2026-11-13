@@ -1,0 +1,168 @@
+{
+  "array_tasks": [
+    3,
+    4,
+    6
+  ],
+  "states": [
+    {
+      "case": "broad",
+      "correction": 12,
+      "refinement": "data/v3_1/target_refinement/broad/correction_12/complete.json",
+      "refinement_sha256": "324fccd670761bb0fe08a4bc85f3349028b7e8b1b09258393302311bd954ce7a",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_12/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 13,
+      "refinement": "data/v3_1/target_refinement/broad/correction_13/complete.json",
+      "refinement_sha256": "4072e73393d7e55d95871c395a7f4abfb70f0b3fd7ecc0e338812eb57b362702",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_13/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 14,
+      "refinement": "data/v3_1/target_refinement/broad/correction_14/complete.json",
+      "refinement_sha256": "ce6a3d37fbba3bf7b4ded06cb47b524b72431391d6549609a5e77840700d65db",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_14/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 15,
+      "refinement": "data/v3_1/target_refinement/broad/correction_15/complete.json",
+      "refinement_sha256": "49e9d74c51c59c48fc579dd72de87811c399967089dd5aa16f1d4ebc7338cf1b",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_15/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 16,
+      "refinement": "data/v3_1/target_refinement/broad/correction_16/complete.json",
+      "refinement_sha256": "fe4179e4b6724aab109fe70ca969db467363c0f5cb2834d3e7f802c84dd41d41",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_16/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 17,
+      "refinement": "data/v3_1/target_refinement/broad/correction_17/complete.json",
+      "refinement_sha256": "03b4e349e270e05b03be227bb32d14bbea9cd515f581e59951db3c1ef81cb023",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_17/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 18,
+      "refinement": "data/v3_1/target_refinement/broad/correction_18/complete.json",
+      "refinement_sha256": "b031a12e2d714332c6d85fbdcea651b60a1eec7ba132e86da03699dc23e9a929",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_18/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 19,
+      "refinement": "data/v3_1/target_refinement/broad/correction_19/complete.json",
+      "refinement_sha256": "6d7da70476dd3f18bb7906dae8cc672622c85e8d363ff66fe7de7e72444244ce",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_19/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 24,
+      "refinement": "data/v3_1/target_refinement/broad/correction_24/complete.json",
+      "refinement_sha256": "bd62c3fb575b7265be50f2c91f98f91a79ea9bd2f5cb552593e574d40fd2e4f4",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_24/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 25,
+      "refinement": "data/v3_1/target_refinement/broad/correction_25/complete.json",
+      "refinement_sha256": "a29e0915628f97bd131e48ae320977f9bc089c586ed298db3a67dcd5bd1e91f3",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_25/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 26,
+      "refinement": "data/v3_1/target_refinement/broad/correction_26/complete.json",
+      "refinement_sha256": "5c3dd008ca5e81f8433b3c0aaf205f8705aa2c3f65c2e0309735485cf61ee73c",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_26/complete.json"
+    },
+    {
+      "case": "broad",
+      "correction": 27,
+      "refinement": "data/v3_1/target_refinement/broad/correction_27/complete.json",
+      "refinement_sha256": "988a8da4c58f823ad1c15acda069b51172e78f23c5228a1b355a03d7f9355625",
+      "output_marker": "data/v3_1/heldout_transfer/broad/correction_27/complete.json"
+    }
+  ],
+  "sources": {
+    "scripts/v3_1_heldout_transfer.py": "f7715d264f62ab2970e6758ae601e45d8db20e425f4924a94c5377b6cbca63e9",
+    "scripts/run_v3_1_heldout_transfer.sh": "5b6676ef1176b22a43fda36e87cbce2c618a4c2805b1bf95ae091d223be6acb2",
+    "scripts/v3_1_transfer_resource_pack.py": "16760ed519b36bc12d31d71303ce544b9477fe3b8e5b18d9781341135491c9f9",
+    "scripts/run_v3_1_transfer_resource_pack.sh": "501db3bfef04eb9a1e71b5e5693834ab0d3c9b7cf84cee7305022d8b289187ce",
+    "src/photdis/v3_1/predictive.py": "d009e5702214012f7ae73323096f75a0574cc04eefd0120788be0d70fbaa5496",
+    "src/photdis/v3/population.py": "4025d3a15e5e11461985160b44fbc67e0a0562f86d20b034b485bf70cd778e48",
+    "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1",
+    "data/v3_1/target_refinement/broad/correction_12/complete.json": "324fccd670761bb0fe08a4bc85f3349028b7e8b1b09258393302311bd954ce7a",
+    "data/v3_1/target_fits/broad/correction_12_s2048/complete.json": "d0d79ea07a3e15f88f762369d3800361134e62a67e1d306b3ee4fea6e8709bf2",
+    "data/v3_1/target_fits/broad/correction_12_s2048/joint_counts/complete.json": "2099e497c4449946acdb4dd1ce55708de49f8f26e791bfcc99760e13183dc362",
+    "data/v3_1/target_refinement/broad/correction_13/complete.json": "4072e73393d7e55d95871c395a7f4abfb70f0b3fd7ecc0e338812eb57b362702",
+    "data/v3_1/target_fits/broad/correction_13_s2048/complete.json": "88f636265cd0cb6c80e6dc6ab29e8379b0074733cee7d6816923ab8e4e13b78e",
+    "data/v3_1/target_fits/broad/correction_13_s2048/joint_counts/complete.json": "370b1894ecf5efe7269f898e181036664e43b7b2812ad4cf618cafad1f77c7e4",
+    "data/v3_1/target_refinement/broad/correction_14/complete.json": "ce6a3d37fbba3bf7b4ded06cb47b524b72431391d6549609a5e77840700d65db",
+    "data/v3_1/target_fits/broad/correction_14_s2048/complete.json": "691d07c7e5025b067d566361e4228005e3c1a164cca9d7c7226514dd46869c8d",
+    "data/v3_1/target_fits/broad/correction_14_s2048/joint_counts/complete.json": "f87749884bf90e0727dd53119ae0cd2970a754be1472acec9171d8423a540365",
+    "data/v3_1/target_refinement/broad/correction_15/complete.json": "49e9d74c51c59c48fc579dd72de87811c399967089dd5aa16f1d4ebc7338cf1b",
+    "data/v3_1/target_fits/broad/correction_15_s2048/complete.json": "0f7d1c1962d44969f4c4b4b407046c4e5e2649801513a8b9ba9716eaf36bf734",
+    "data/v3_1/target_fits/broad/correction_15_s2048/joint_counts/complete.json": "4af8aea360187df5215db4077ee0250c07e5fff63b767554cf0696d14c828f35",
+    "data/v3_1/target_refinement/broad/correction_16/complete.json": "fe4179e4b6724aab109fe70ca969db467363c0f5cb2834d3e7f802c84dd41d41",
+    "data/v3_1/target_fits/broad/correction_16_s2048/complete.json": "990730d7599d9d1f05d4850befe56ff0f62a965d8a9e771634d070f3611889f1",
+    "data/v3_1/target_fits/broad/correction_16_s2048/joint_counts/complete.json": "ef116e64144820e2fe31b1b9ef4c04cf8f047b2f878aece19c5e348e8953740a",
+    "data/v3_1/target_refinement/broad/correction_17/complete.json": "03b4e349e270e05b03be227bb32d14bbea9cd515f581e59951db3c1ef81cb023",
+    "data/v3_1/target_fits/broad/correction_17_s2048/complete.json": "dab020b6da875fcbc43c9974a6af203c4892fdd8d22af11d5d4a8b8b30f088ad",
+    "data/v3_1/target_fits/broad/correction_17_s2048/joint_counts/complete.json": "9a697b200f8f4bde29db8ac02209c675ffd932a39cbb3ef5afc42664628553ad",
+    "data/v3_1/target_refinement/broad/correction_18/complete.json": "b031a12e2d714332c6d85fbdcea651b60a1eec7ba132e86da03699dc23e9a929",
+    "data/v3_1/target_fits/broad/correction_18_s2048/complete.json": "01162ae2d36cee875581d4487a2f130979acdf246b09ec835c02fdb88fbd4236",
+    "data/v3_1/target_fits/broad/correction_18_s2048/joint_counts/complete.json": "0c0fb2fc94e633927662e6842a7fa6223b66fd43f55f5ef63a2d42f229eab9e4",
+    "data/v3_1/target_refinement/broad/correction_19/complete.json": "6d7da70476dd3f18bb7906dae8cc672622c85e8d363ff66fe7de7e72444244ce",
+    "data/v3_1/target_fits/broad/correction_19_s2048/complete.json": "946cc38e3430d45e53c61690c239d2fdc2e47af67dcf1c974566f154d1b7afbe",
+    "data/v3_1/target_fits/broad/correction_19_s2048/joint_counts/complete.json": "6fa51883f07089c626bb039ef95126225f2a35bfbc0b8139c15c6b65c9fe2c42",
+    "data/v3_1/target_refinement/broad/correction_24/complete.json": "bd62c3fb575b7265be50f2c91f98f91a79ea9bd2f5cb552593e574d40fd2e4f4",
+    "data/v3_1/target_fits/broad/correction_24_s2048/complete.json": "ebcaff19b1af8fefe0f78b5246904934c16a4f333c178b049e2e863f15b1f97b",
+    "data/v3_1/target_fits/broad/correction_24_s2048/joint_counts/complete.json": "b9cb8902ecd20eb1169edb6062d0be6ec800d2dc9e830a02aee4713c403977cd",
+    "data/v3_1/target_refinement/broad/correction_25/complete.json": "a29e0915628f97bd131e48ae320977f9bc089c586ed298db3a67dcd5bd1e91f3",
+    "data/v3_1/target_fits/broad/correction_25_s2048/complete.json": "1b9cee8c8bc8e80533801535e4615a982a807acf2e7f742e0e117957ece4d809",
+    "data/v3_1/target_fits/broad/correction_25_s2048/joint_counts/complete.json": "d477754e406376f883d15898259b8dfcc5e154de931353efa76bbb99cab1567c",
+    "data/v3_1/target_refinement/broad/correction_26/complete.json": "5c3dd008ca5e81f8433b3c0aaf205f8705aa2c3f65c2e0309735485cf61ee73c",
+    "data/v3_1/target_fits/broad/correction_26_s2048/complete.json": "9642a60f09045fba4532d329419e2f45edf8cdcbc1bd6070e865972d5a5f04e7",
+    "data/v3_1/target_fits/broad/correction_26_s2048/joint_counts/complete.json": "77047656f3662649a7452c5d7c1c7d92bae6e24f3420bfdae7975fb707880069",
+    "data/v3_1/target_refinement/broad/correction_27/complete.json": "988a8da4c58f823ad1c15acda069b51172e78f23c5228a1b355a03d7f9355625",
+    "data/v3_1/target_fits/broad/correction_27_s2048/complete.json": "a411f006628161b2ee772bde90c21e8b6b3d756ffced7cbc7c6fe3e5667a52b0",
+    "data/v3_1/target_fits/broad/correction_27_s2048/joint_counts/complete.json": "fe21ea6d8833b1f10c2e81ae515a3f659af0c971286ae87fd0eb7952e45363f2",
+    "data/v3_1/heldout_transfer/broad/correction_00/complete.json": "9e8cef038580d28ca8246828154e78f29b28a1f41a1b07e25048dbb7f7ba79a2",
+    "data/v3_1/heldout_transfer/broad/correction_01/complete.json": "f1994c726f03e5f429775ff5befccb5a24d08ee7eaca15f1fd25ed8b4338b0fb",
+    "data/v3_1/heldout_transfer/broad/correction_02/complete.json": "d629886021a8030eea8251b2f58c3a84afb58c37551ae8ceff2eeaef5ebd41cf",
+    "data/v3_1/heldout_transfer/broad/correction_03/complete.json": "81780b8dc0147c1207467e7620011eea4654d72a00ad96f0a8e18aafc220da70",
+    "data/v3_1/heldout_transfer/broad/correction_04/complete.json": "9e887d4288b50b3874e979c479f72cd1e754b745bb80a864f63e69a15bb61f4e",
+    "data/v3_1/heldout_transfer/broad/correction_05/complete.json": "752e50b2bc6ea6b875ac127dc8ca29d8aeab83a7205490787f1290f2100b0ac1",
+    "data/v3_1/heldout_transfer/broad/correction_06/complete.json": "6b6a06414b8eb7da0b0132863d04fc252cc4f415d26167dd01704372c11bf8ae",
+    "data/v3_1/heldout_transfer/broad/correction_07/complete.json": "6a56fb807bb10401fcb9d8c9a1a7ff4edf708872b5191e382b14621895085702",
+    "data/v3_1/heldout_transfer/broad/correction_08/complete.json": "4855bae7acdc62fb44ccae1788e5650bca89deea1a72edbaee343a1a41f43c0a",
+    "data/v3_1/heldout_transfer/broad/correction_09/complete.json": "76ed0adaff449a48e1a7b118d30655e86110b1f5bfa7b403d2cefdaf319ff647",
+    "data/v3_1/heldout_transfer/broad/correction_10/complete.json": "7b5cccc837d243c3d83845db3b23012ea8e8b01526e04e63f16c3ecbc9492ba3",
+    "data/v3_1/heldout_transfer/broad/correction_11/complete.json": "f7f179e2d5162cd00987957e164abc44ad6c398708f6738d1a7bd74548962161",
+    "data/v3_1/target_ensemble/broad/complete.json": "f61707d2b049a6409a3840feef2f7d4c04a47e4fd40c6b978fec54547b883889",
+    "data/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a"
+  },
+  "source_commit": "59489ddcb3091cfd0f9c5f8b4824664f29077e87",
+  "queue_before": "JOBID|STATE|QOS|TIME|TIME_LIMIT|NODELIST(REASON)\n61225864_24|PENDING|regular_1|0:00|1:00:00|(Resources)\n61225864_23|PENDING|regular_1|0:00|1:00:00|(Resources)\n61231554_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_20|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_19|PENDING|regular_1|0:00|1:00:00|(Priority)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231554_16|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_15|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_14|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_13|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_12|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_7|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231554_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_31|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_30|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_28|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_27|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_26|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_25|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_24|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_23|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_22|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_21|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_20|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_19|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_18|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_17|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_16|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_15|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_14|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_13|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_12|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_11|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_10|PENDING|regular_1|0:00|30:00|(Priority)\n61225864_25|PENDING|regular_1|0:00|1:00:00|(Priority)\n61225886|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_18|RUNNING|debug|16:38|30:00|nid005862\n",
+  "controllers_before": {
+    "61231554_3": "JobId=61231565 ArrayJobId=61231554 ArrayTaskId=3 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:06:54 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:20:05 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_3.out TresPerTask=cpu=128\n",
+    "61231554_4": "JobId=61231566 ArrayJobId=61231554 ArrayTaskId=4 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:05:53 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:20:05 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_4.out TresPerTask=cpu=128\n",
+    "61231554_6": "JobId=61231568 ArrayJobId=61231554 ArrayTaskId=6 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:32:48 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:20:05 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_6.out TresPerTask=cpu=128\n"
+  },
+  "report_before": "JobId=61231678 JobName=photdis_v3_1_heldoutreport UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61231554_*(unfulfilled),afterok:61225886(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:04:54 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:04:54 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login38:2207103 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_report.sh SubmitLine=sbatch --parsable --dependency=afterok:61231554:61225883:61225886 scripts/run_v3_1_heldout_report.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldoutreport_61231678.out TresPerTask=cpu=128\n",
+  "accounting_before": "61225883|COMPLETED|00:00:24|0:0\n61225884|COMPLETED|00:00:18|0:0\n61231554_0|COMPLETED|00:17:47|0:0\n61231554_1|COMPLETED|00:17:36|0:0\n61231554_2|COMPLETED|00:17:31|0:0\n61231554_5|PENDING|00:00:00|0:0\n61231554_17|PENDING|00:00:00|0:0\n61231554_18|RUNNING|00:16:38|0:0\n61231554_21|PENDING|00:00:00|0:0\n61231554_22|PENDING|00:00:00|0:0\n61231554_23|PENDING|00:00:00|0:0\n61231554_24|PENDING|00:00:00|0:0\n61231554_25|PENDING|00:00:00|0:0\n",
+  "source_preflight_complete": true,
+  "cancelled_controllers": {
+    "61231554_3": "JobId=61231565 ArrayJobId=61231554 ArrayTaskId=3 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=CANCELLED Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:06:54 AccrueTime=Unknown StartTime=2026-11-13T11:21:41 EndTime=2026-11-13T11:21:41 Deadline=N/A PreemptEligibleTime=2026-11-13T11:21:41 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:21:00 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1 NumCPUs=256 NumTasks=N/A CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline AdminComment={\"packJobId\":0,\"stdoutPath\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/logs\\/photdis_v3_1_heldouttransfer_%A_%a.out\",\"features\":\"cpu\",\"qos\":\"regular_1\",\"cluster\":\"perlmutter\",\"gresRequest\":\"cpu=128,mem=487802M,node=1,billing=128\",\"allocCpus\":256,\"jobExitCode\":0,\"submitTime\":1794589407,\"licenses\":\"scratch:1\",\"priority\":67679,\"jobDerivedExitCode\":0,\"reboot\":0,\"startTime\":1794597701,\"argv\":[\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/scripts\\/run_v3_1_heldout_transfer.sh\"],\"partition\":\"regular_milan_ss11\",\"packJobOffset\":0,\"name\":\"photdis_v3_1_heldouttransfer\",\"jobId\":61231565,\"allocNodes\":0,\"arrayJobId\":61231554,\"stdinPath\":\"\\/dev\\/null\",\"endTime\":1794597701,\"jobAccount\":\"desi\",\"arrayTaskId\":3,\"workingDirectory\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\",\"resizing\":0,\"restartCnt\":0,\"timeLimit\":60,\"uid\":106645} StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_3.out TresPerTask=cpu=128\n",
+    "61231554_4": "JobId=61231566 ArrayJobId=61231554 ArrayTaskId=4 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=CANCELLED Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:05:53 AccrueTime=Unknown StartTime=2026-11-13T11:21:41 EndTime=2026-11-13T11:21:41 Deadline=N/A PreemptEligibleTime=2026-11-13T11:21:41 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:21:00 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1 NumCPUs=128 NumTasks=N/A CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline AdminComment={\"packJobId\":0,\"stdoutPath\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/logs\\/photdis_v3_1_heldouttransfer_%A_%a.out\",\"timeLimit\":60,\"features\":\"cpu\",\"orig_dependency\":\"aftercorr:61225864_*(unfulfilled)\",\"qos\":\"regular_1\",\"cluster\":\"perlmutter\",\"gresRequest\":\"cpu=128,mem=487802M,node=1,billing=128\",\"allocCpus\":0,\"jobExitCode\":0,\"submitTime\":1794589407,\"licenses\":\"scratch:1\",\"priority\":67679,\"jobDerivedExitCode\":0,\"reboot\":0,\"startTime\":1794597701,\"argv\":[\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/scripts\\/run_v3_1_heldout_transfer.sh\"],\"partition\":\"regular_milan_ss11\",\"packJobOffset\":0,\"name\":\"photdis_v3_1_heldouttransfer\",\"jobId\":61231566,\"allocNodes\":0,\"arrayJobId\":61231554,\"stdinPath\":\"\\/dev\\/null\",\"endTime\":1794597701,\"jobAccount\":\"desi\",\"arrayTaskId\":4,\"workingDirectory\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\",\"resizing\":0,\"restartCnt\":0,\"curr_dependency\":\"all_fulfilled\",\"uid\":106645} StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_4.out TresPerTask=cpu=128\n",
+    "61231554_6": "JobId=61231568 ArrayJobId=61231554 ArrayTaskId=6 ArrayTaskThrottle=2 JobName=photdis_v3_1_heldouttransfer UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=CANCELLED Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T09:03:27 EligibleTime=2026-11-13T09:32:48 AccrueTime=Unknown StartTime=2026-11-13T11:21:44 EndTime=2026-11-13T11:21:44 Deadline=N/A PreemptEligibleTime=2026-11-13T11:21:44 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:21:00 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login13:512334 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1 NumCPUs=128 NumTasks=N/A CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_heldout_transfer.sh SubmitLine=sbatch --parsable --array=0-25%2 --dependency=aftercorr:61225864 scripts/run_v3_1_heldout_transfer.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline AdminComment={\"packJobId\":0,\"stdoutPath\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/logs\\/photdis_v3_1_heldouttransfer_%A_%a.out\",\"timeLimit\":60,\"features\":\"cpu\",\"orig_dependency\":\"aftercorr:61225864_*(unfulfilled)\",\"qos\":\"regular_1\",\"cluster\":\"perlmutter\",\"gresRequest\":\"cpu=128,mem=487802M,node=1,billing=128\",\"allocCpus\":0,\"jobExitCode\":0,\"submitTime\":1794589407,\"licenses\":\"scratch:1\",\"priority\":67679,\"jobDerivedExitCode\":0,\"reboot\":0,\"startTime\":1794597704,\"argv\":[\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\\/scripts\\/run_v3_1_heldout_transfer.sh\"],\"partition\":\"regular_milan_ss11\",\"packJobOffset\":0,\"name\":\"photdis_v3_1_heldouttransfer\",\"jobId\":61231568,\"allocNodes\":0,\"arrayJobId\":61231554,\"stdinPath\":\"\\/dev\\/null\",\"endTime\":1794597704,\"jobAccount\":\"desi\",\"arrayTaskId\":6,\"workingDirectory\":\"\\/pscratch\\/sd\\/y\\/yunao\\/photdis_pipeline\",\"resizing\":0,\"restartCnt\":0,\"curr_dependency\":\"all_fulfilled\",\"uid\":106645} StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_heldouttransfer_61231554_6.out TresPerTask=cpu=128\n"
+  },
+  "original_writers_terminal_and_absent": true
+}

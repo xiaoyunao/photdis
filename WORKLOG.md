@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-14 — preserve first true-heldout transfer failures and launch bounded resource pilot
+- Trueholdout transfer61231554_18 COMPLETED17m56:states4–7, same6000PSF and
+  nested935candidate objects, fitexcludesfields4/6/12. All32conditional numerical
+  checks pass; all16base joint/generalized-design support checks failESS>=100.
+  Unitjoint ESSbroad5.147–10.017/candidate2.458–10.558. Complete102state mixtures
+  stillrequired; neither fullpipeline independence nor true-distance validation.
+- Pilot61237364 submitted/running12unchanged2048transfer states fromoriginal
+  groups3/4/6. Verified57source hashes, allthree CANCELLEDzero-runtime/absent,
+  nooutputoverwrite. Replacement helduntilreport61231678dependency repairedto
+  all20retained originaltasks+pilot+holdoutensemble; completed0/1/2 andtwo
+  completedensembles authenticated. Actualpilot outcome/runtime/RSS stillpending.
+- Holdoutparents21/22 actualCOMPLETED0:0 and28input/driverhashes verified;
+  clearedonlytwo stale existingtransferdependencies. Existingpendingentry10/11
+  andrefinement2 promoteddebug30min withinfresh5-jobcap, samewriters/science.
+- Entry9 COMPLETED13m13,512originalfailures collected; refinementstillneeded.
+- Validation: explicitCSV/JSONSHA collection; firstholdout supportsummary
+  reconstructs16registeredgates andverifies32originalnumericchecks, PSF/roles.
+  UpdatedPLAN/status/ledger; no core/model changes or new acceptance thresholds.
+- Next: measurepilot beforewiderpacking; finishremainingholdout/102transfer/
+  32structure chain, actualfigures/adjudication andcompletev3.1delivery.
+
 ## 2026-11-14 — retain twenty-four holdout states and prepare bounded transfer packing
 - Holdoutgroups21/22 COMPLETED8m54/8m21; states16–23 collected/all2048pass.
   Total24/34holdoutstates complete:23at2048/state1at8192. Alloriginalattempts

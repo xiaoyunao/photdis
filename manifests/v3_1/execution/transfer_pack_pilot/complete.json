@@ -1,0 +1,17 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_job": "61237364",
+  "original_cancelled_tasks": [
+    3,
+    4,
+    6
+  ],
+  "states": 12,
+  "source_hashes": 57,
+  "outputs": {
+    "preflight.json": "4f0476d15581e250f96119fcb73fd5a83a89a926f1b2994aaef89a677e0918b4",
+    "plan.json": "e1dd5ad76201fa9f6afed27e6b72990b41f926812e70792b9aec8af8d7c57ae8",
+    "submission.json": "fb71067a6713a4b5ad17744c16c5643e13df1c33e1d60048cf73be0c2ec9655f"
+  }
+}

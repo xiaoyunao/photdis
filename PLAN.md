@@ -67,9 +67,15 @@ Negative findings remain deliverables, never successful calibration claims.
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
   Pendingtransfergroups5/17 containing8192states now2h (4x17–18min estimate
-  exceedsold1h). A guarded12-state2048resource pack isprepared; actualpilot,
-  terminal/absence preflight andexplicitreportdependency repair requireexecution
-  beforewideradoption. Originalarraythrottle remains2, all102states required.
+  exceedsold1h). Guarded12-state2048resourcepilot61237364 nowrunning after57
+  sourcehash checks andzero-runtime cancellations ofonlygroups3/4/6. Report
+  61231678 nowwaits20retainedtasks+pilot+holdoutensemble; no canceledparent.
+  Actualpilot runtime/RSS/results requireverification beforewiderpacking.
+  Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
+  16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
+  Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.
+  Originalarraythrottle remains2. Entry9original512failures retained; existing
+  pendingentry10/11/refinement2 promoteddebug afterfreshcap check.
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits nowcomplete: exactgroup7resume

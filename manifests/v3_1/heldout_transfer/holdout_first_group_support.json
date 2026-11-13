@@ -1,0 +1,177 @@
+{
+  "inputs": {
+    "manifests/v3_1/heldout_transfer/holdout/correction_04/complete.json": "f0d818d7dae30bc26bf4283065463611daa9e78d914393e72a29fd337f4c57b5",
+    "manifests/v3_1/heldout_transfer/holdout/correction_04/checks.csv": "045a9a117fe43e3773280d9789052ed0896d70fef8372c0aa47cb95456e73c93",
+    "manifests/v3_1/heldout_transfer/holdout/correction_04/predictive_summary.csv": "aa7d25c2601ebaca9f9b62369605e6511be0bcb034510b8b94423e81a1fe1a77",
+    "manifests/v3_1/heldout_transfer/holdout/correction_05/complete.json": "376ff1fa05fb7628e2269f6cba2667e42559f9a5d410a0c1935a98e8a059b9b4",
+    "manifests/v3_1/heldout_transfer/holdout/correction_05/checks.csv": "369a469fe40c6ab77c04e1014329025971fca83581b4645985fe88fcea1f5199",
+    "manifests/v3_1/heldout_transfer/holdout/correction_05/predictive_summary.csv": "80487cb208b8dcf5611301ce6216369d5c8fa3b084d1133f9a539a5d07ee3605",
+    "manifests/v3_1/heldout_transfer/holdout/correction_06/complete.json": "0e1f60475c1d2076c4c9462a773e2fc1365f19ebf38f42cc7c40a080c80f0387",
+    "manifests/v3_1/heldout_transfer/holdout/correction_06/checks.csv": "6afce5773c9145065a9317a421431bc0e884df1cf87230c35cd03a1bde47bcb4",
+    "manifests/v3_1/heldout_transfer/holdout/correction_06/predictive_summary.csv": "92c5f3f26ef0a21efd6adaa6496a743199e8942aec27ad8d72bb666aa29be34d",
+    "manifests/v3_1/heldout_transfer/holdout/correction_07/complete.json": "7f4ef9db6c9fc9c87123ee6e234439af88856fb177007ede71de122f483d490c",
+    "manifests/v3_1/heldout_transfer/holdout/correction_07/checks.csv": "c4db8ac99d84543f7d2fc042cba36336195ceced3b3f9ae3481fd6131a49f293",
+    "manifests/v3_1/heldout_transfer/holdout/correction_07/predictive_summary.csv": "dbe0f686d1d47139b0ccecf1f1dd13c96454de31a98a1d4b8fcf850edea8de79"
+  },
+  "conditional_states": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "conditional_numerical_checks": 32,
+  "conditional_numerical_checks_passed": true,
+  "support_rule": {
+    "minimum_ESS": 100,
+    "maximum_half_log_density_delta_exclusive": 0.2
+  },
+  "base_support_checks": [
+    {
+      "correction": 4,
+      "envelope": "broad",
+      "measure": "joint",
+      "n": 6000,
+      "importance_ess": 6.323524581321807,
+      "half_log_density_delta": 0.6133038855114137,
+      "supported": false
+    },
+    {
+      "correction": 4,
+      "envelope": "broad",
+      "measure": "generalized_design_joint",
+      "n": 6000,
+      "importance_ess": 11.186307906399167,
+      "half_log_density_delta": 0.14107420298387296,
+      "supported": false
+    },
+    {
+      "correction": 4,
+      "envelope": "candidate",
+      "measure": "joint",
+      "n": 935,
+      "importance_ess": 2.457574561321871,
+      "half_log_density_delta": 2.8491703060481086,
+      "supported": false
+    },
+    {
+      "correction": 4,
+      "envelope": "candidate",
+      "measure": "generalized_design_joint",
+      "n": 935,
+      "importance_ess": 3.812299647227742,
+      "half_log_density_delta": 1.2165091837487125,
+      "supported": false
+    },
+    {
+      "correction": 5,
+      "envelope": "broad",
+      "measure": "joint",
+      "n": 6000,
+      "importance_ess": 10.017429958336841,
+      "half_log_density_delta": 0.6464896877441788,
+      "supported": false
+    },
+    {
+      "correction": 5,
+      "envelope": "broad",
+      "measure": "generalized_design_joint",
+      "n": 6000,
+      "importance_ess": 10.469467294926087,
+      "half_log_density_delta": 1.1169862817332614,
+      "supported": false
+    },
+    {
+      "correction": 5,
+      "envelope": "candidate",
+      "measure": "joint",
+      "n": 935,
+      "importance_ess": 3.570362110446175,
+      "half_log_density_delta": 0.8855076213203574,
+      "supported": false
+    },
+    {
+      "correction": 5,
+      "envelope": "candidate",
+      "measure": "generalized_design_joint",
+      "n": 935,
+      "importance_ess": 3.8782690700339506,
+      "half_log_density_delta": 0.4256517492358398,
+      "supported": false
+    },
+    {
+      "correction": 6,
+      "envelope": "broad",
+      "measure": "joint",
+      "n": 6000,
+      "importance_ess": 8.462967688982143,
+      "half_log_density_delta": 0.011073845307691954,
+      "supported": false
+    },
+    {
+      "correction": 6,
+      "envelope": "broad",
+      "measure": "generalized_design_joint",
+      "n": 6000,
+      "importance_ess": 7.171189354744074,
+      "half_log_density_delta": 0.10059129602450412,
+      "supported": false
+    },
+    {
+      "correction": 6,
+      "envelope": "candidate",
+      "measure": "joint",
+      "n": 935,
+      "importance_ess": 7.276553059346295,
+      "half_log_density_delta": 0.21169093301796238,
+      "supported": false
+    },
+    {
+      "correction": 6,
+      "envelope": "candidate",
+      "measure": "generalized_design_joint",
+      "n": 935,
+      "importance_ess": 9.107171367628437,
+      "half_log_density_delta": 0.042423422184583615,
+      "supported": false
+    },
+    {
+      "correction": 7,
+      "envelope": "broad",
+      "measure": "joint",
+      "n": 6000,
+      "importance_ess": 5.147111052803586,
+      "half_log_density_delta": 0.5700142316854908,
+      "supported": false
+    },
+    {
+      "correction": 7,
+      "envelope": "broad",
+      "measure": "generalized_design_joint",
+      "n": 6000,
+      "importance_ess": 4.6694023490305305,
+      "half_log_density_delta": 0.9111393066268647,
+      "supported": false
+    },
+    {
+      "correction": 7,
+      "envelope": "candidate",
+      "measure": "joint",
+      "n": 935,
+      "importance_ess": 10.557865383012249,
+      "half_log_density_delta": 0.44619985158169584,
+      "supported": false
+    },
+    {
+      "correction": 7,
+      "envelope": "candidate",
+      "measure": "generalized_design_joint",
+      "n": 935,
+      "importance_ess": 6.7833140249794095,
+      "half_log_density_delta": 0.045454849783709506,
+      "supported": false
+    }
+  ],
+  "all_base_support_failed": true,
+  "full_ensemble_available": false,
+  "scope": "Partial first four holdout states only, population-fit sky exclusion. No complete-ensemble, independent SED/calibration or true-distance validation claim."
+}
