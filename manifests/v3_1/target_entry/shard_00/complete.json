@@ -1,0 +1,34 @@
+{
+  "inputs": {
+    "data/v3_1/gaussian_importance_pilot/complete.json": "74677ea77765a15981942aed47081842b9c2bf54476f593b656a1c3bda75ce60",
+    "data/v3_1/target_native_pilot/complete.json": "81f5d6240961a6dac9d17234ad4df861951a11bc8b9c5b732e2645ba6ccd1c6d",
+    "data/v3_1/target_native_pilot/roles.npz": "95dc39dc3012b3074fdd245a3ebcbef2ab2a530cb8ef911abbc95b2e26ee1a50",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/shared_predictions/application_refit_0/draw_12/shared_system.npz": "2502f3977a383d72a44ecca02b371b18286deb06873a52769eb87b37cbbd1424",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_1/luminosity_fit_refined/parameters.npz": "4270f915ee57fe820c1cb7df3a475299f1c57c4f12ae8dfb59a04bb732cbbb31",
+    "data/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "scripts/v3_1_target_entry.py": "66235ae5c7b414fbfd8e917dc868034b4fa980a0dbe78144f8782c56ff41245d",
+    "docs/v3_1_target_entry_protocol.md": "2e3c40df326c6bb2f940f17a5f91bbfcb620bc311863fbe2d868bdf9132d9276",
+    "src/photdis/v3_1/gaussian_importance.py": "8f069d2193992cc818fcb171f08cfa5649cf7950ae0c9bf689edf06d0f6a80ef",
+    "src/photdis/v3_1/gaussian_entry.py": "49fe66d226722fa79f887351b0af62612cbc5b9c982ccc8e8938df2705dac875",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/certified_support.py": "90fdde8f583aee17458c75dc74b78e83232a85a83eca4a16ade38ac769c5e077",
+    "src/photdis/v3_1/exact_support.py": "6c2d158036bb11f642e9b8fb8e1e8252349e7dd4aab76ee7f8c0fc5e849dc7a9"
+  },
+  "job": "61220369",
+  "shard": 0,
+  "shards": 16,
+  "rows": 1625,
+  "envelopes": 1842,
+  "passed": true,
+  "failed": 0,
+  "outputs": {
+    "status.csv": "f5b5293c2e998c357a7885f1e33d8cab775a8a85df31277785a209a094091b7a"
+  },
+  "all_PSF": true,
+  "non_PSF_excluded": 0,
+  "missing_TYPE_excluded": 0,
+  "scope": "Direct observed-context selection integrals only. Numerical failures retained; no target fit or reference score."
+}

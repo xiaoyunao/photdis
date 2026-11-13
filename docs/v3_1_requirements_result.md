@@ -21,7 +21,7 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | E1 | Final product identity matches main evaluation | Pending | Reference-prior fourview predictions complete526field/3032common;2commonIDs numericflags/all3558fullnumericalsidecars pass;common34require.005/.0025; targetidentity notfrozen |
 | E2 | High-q joint counts and model versus measured contamination | Pending | Exact joint, no marginal product |
 | E3 | Usable/extrapolated/unvalidated domain map and reweight support | Pending | Independent evidence and finite response uncertainty |
-| E4 | Structure-prior replacement and full-posterior application | Pending | Shared parameters/selection; matched baseline |
+| E4 | Structure-prior replacement and full-posterior application | Registered; mathematical foundation tested | SeenNGC288512photo-only reference-ensemble example,32sharedresponseprior/commonanchor/selection; Gaussianmoment baseline analyticallywithdraws referenceprior;6mathchecks pass; actualexecution pending; notnewvalidation orcorrectedcandidate |
 | F1 | Reproducible programs, configs, job records, artifact verification | In progress | Tested diagnostic foundation; actual pilot/report/latent evidence and execution manifest |
 | F2 | English figures, source tables, visual inspection and complete report | Four plates complete; overallpending | Paired2plates62checks, calibration32checks, latent1574checks; allPNGvisuallyinspected; fullatlas/report stillpending |
 | F3 | README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync | In progress | Milestones synchronized throughc06340e; ongoing work recorded in WORKLOG |

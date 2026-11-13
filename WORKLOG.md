@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — pass first direct-entry shard and paired-response pilots
+- Entry61219182_0 COMPLETED16m23s:1625objects/1842envelopes allpass.
+  True-distance joint61220368_0 COMPLETED6m:6500objects allconserve. Compact
+  status/check records retrieved with hashes; remaining shards still pending/running.
+- Probe61220906 old12/new1004 COMPLETED60/51s: each128target/256development
+  passes native/entry/source-score numerics; no target-training overlap. Conditional
+  log evidence -862.356/-886.381 is matched-probe evidence, not26kpopulation evidence.
+  Remaining62probes submitted61221623/24/26/27/28/29/30 with per-group successful
+  SED-refit dependencies. Original failedrefitgroup0 uses its exactresume dependency.
+- IndependentSED group61216483_2 COMPLETED50m05s; groups1/2 noweightdrawscomplete.
+  Others retain original bounded refit protocol and all failed attempts.
+- Registered seenNGC288512photo-only example:32originalshared responses,
+  one shared external distance prior, explicit selection normalization and Gaussian
+  moment baseline with analytical prior withdrawal. This is a reference-ensemble
+  methodological example, distinct from corrected candidate and unopenedNGC1261.
+- Added structure preparation, broad/narrow entry pilot, shared-prior quadrature,
+  baseline integration and count covariance primitives. Six focused mathematical
+  checks pass; full124tests pass3.39s; Python/shellsyntax pass. Initial synthetic
+  test incorrectly used candidate threshold for SNR5 model; fixed test threshold,
+  independent integration thenagrees. Actual structure jobs notyetexecuted.
+- Next: complete matrices/refits/radial runs; submit structure preparation/pilot;
+  then population/count transfers, finalvalidation freeze/scores, domain/report.
+
 ## 2026-11-13 — complete all native matrices and validation numerical sidecars
 - Native61219181 fourshards COMPLETED169/192/175/186s:all26000rows prepared,
   all258fineaudits pass. Compactchecks/allmarkers collected; no targetfit yet.

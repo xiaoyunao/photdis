@@ -26,12 +26,13 @@ Negative findings remain deliverables, never successful calibration claims.
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
   0/1 now61219183/61220635regular2h. Report driver waits for all352arm outcomes.
   Native target26000rows across34corrections complete,258fineaudits allpass.
-  Direct entry61219182 all26000broad+3540candidate is running/queued; no context
+  Direct entry61219182 shard0 all1625rows/1842envelopes pass, remainder running/queued; no context
   interpolation. Assembly61219399 waits for complete inputshards. Population
   fits/evidence/count drivers implemented butnotrun. Heldoutfields12/4/6 frozen.
   Independently regenerated32SED refits inprogress; group0timeout resumes61218979.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
-  pilot old12/new1004 queued61220906. These are not26kpopulation-marginal evidence.
+  pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
+  with individual refit dependencies. These are not26kpopulation-marginal evidence.
 - [ ] WP3 final scientific validation. Roles frozen:170strictnewsky+356source-new
   seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in
   strictnewsky; no new far-field precision evidence. All3558reference-prior
@@ -40,12 +41,14 @@ Negative findings remain deliverables, never successful calibration claims.
   identity/prediction freeze stillrequired before scoring.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   True-distance Gaussian correction integral and shared count/numerical-transfer
-  foundations implemented/tested. Joint response61220368queued. Full scientific
-  counts, final product evaluation, use-domain map and structure fit remain.
+  foundations implemented/tested. Joint response61220368 shard0 passes6500rows.
+  SeenNGC288512photo-only reference-ensemble structure protocol registered,
+  analytical baseline withdrawal/entry/math foundation tested; execution pending.
+  Full scientific counts, final product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
 ### Validation and next actions
-- Latest full118tests pass; four English plates visually inspected (paired62,
+- Latest full124tests pass; four English plates visually inspected (paired62,
   calibration32, latent1574actual artifact/source checks). Large data stayNERSC.
 - Finish responseprobe pilots and all64matched response sensitivity comparisons;
   complete all32new SED fits without dropping failures or flattening weights.
