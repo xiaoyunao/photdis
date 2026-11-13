@@ -1,0 +1,143 @@
+{
+  "commands": [
+    {
+      "args": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=no"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "code": 0,
+      "stdout": "db14d2653b657e39c9def344915edd9c800b5d1b\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "sacct",
+        "--array",
+        "-S",
+        "2026-11-12",
+        "-X",
+        "-n",
+        "-P",
+        "-j",
+        "61229422",
+        "-o",
+        "JobID,JobIDRaw,State,ExitCode,ElapsedRaw,AllocTRES"
+      ],
+      "code": 0,
+      "stdout": "61229422_2|61229433|TIMEOUT|0:0|1804|billing=256,cpu=256,energy=906936,mem=487802M,node=1\n61229422_3|61229434|COMPLETED|0:0|148|billing=256,cpu=256,energy=50578,mem=487802M,node=1\n61229422_4|61229435|COMPLETED|0:0|534|billing=256,cpu=256,energy=248018,mem=487802M,node=1\n61229422_5|61229436|COMPLETED|0:0|2081|billing=256,cpu=256,energy=1025545,mem=487802M,node=1\n61229422_6|61229437|COMPLETED|0:0|2061|billing=256,cpu=256,energy=932276,mem=487802M,node=1\n61229422_7|61229438|COMPLETED|0:0|395|billing=256,cpu=256,energy=183571,mem=487802M,node=1\n61229422_8|61229439|COMPLETED|0:0|2098|billing=256,cpu=256,energy=987997,mem=487802M,node=1\n61229422_9|61229440|CANCELLED by 106645|0:0|0|\n61229422_10|61229441|CANCELLED by 106645|0:0|0|\n61229422_11|61229442|COMPLETED|0:0|636|billing=256,cpu=256,energy=283976,mem=487802M,node=1\n61229422_12|61232978|COMPLETED|0:0|135|billing=256,cpu=256,energy=45442,mem=487802M,node=1\n61229422_13|61232980|CANCELLED by 106645|0:0|0|\n61229422_14|61232981|RUNNING|0:0|641|billing=256,cpu=256,mem=487802M,node=1\n61229422_15|61232983|CANCELLED by 106645|0:0|0|\n61229422_16|61232985|CANCELLED by 106645|0:0|0|\n61229422_17|61232986|CANCELLED by 106645|0:0|0|\n61229422_18|61232987|CANCELLED by 106645|0:0|0|\n61229422_19|61232988|COMPLETED|0:0|661|billing=256,cpu=256,energy=303311,mem=487802M,node=1\n61229422_20|61232989|RUNNING|0:0|596|billing=256,cpu=256,mem=487802M,node=1\n61229422_21|61232990|COMPLETED|0:0|512|billing=256,cpu=256,energy=235012,mem=487802M,node=1\n61229422_22|61232992|COMPLETED|0:0|638|billing=256,cpu=256,energy=294518,mem=487802M,node=1\n61229422_23|61232993|COMPLETED|0:0|126|billing=256,cpu=256,energy=36512,mem=487802M,node=1\n61229422_24|61232994|PENDING|0:0|0|\n61229422_25|61232996|CANCELLED by 106645|0:0|0|\n61229422_26|61232997|COMPLETED|0:0|653|billing=256,cpu=256,energy=289518,mem=487802M,node=1\n61229422_27|61232998|CANCELLED by 106645|0:0|0|\n61229422_28|61232999|CANCELLED by 106645|0:0|0|\n61229422_29|61233000|CANCELLED by 106645|0:0|0|\n61229422_30|61233001|CANCELLED by 106645|0:0|0|\n61229422_31|61229422|CANCELLED by 106645|0:0|0|\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%j|%T|%q|%M|%R"
+      ],
+      "code": 0,
+      "stdout": "61231554_17|photdis_v3_1_heldouttransfer|PENDING|debug|0:00|(QOSMaxJobsPerUserLimit)\n61229422_24|photdis_v3_1_structureentryresume|PENDING|regular_1|0:00|(Resources)\n61233366|photdis_v3_1_domainadjudication|PENDING|regular_1|0:00|(Dependency)\n61232762|photdis_v3_1_structurereport|PENDING|regular_1|0:00|(Dependency)\n61232761|photdis_v3_1_structureinfer|PENDING|regular_1|0:00|(Dependency)\n61232760|photdis_v3_1_structureassemble|PENDING|regular_1|0:00|(DependencyNeverSatisfied)\n61231678|photdis_v3_1_heldoutreport|PENDING|regular_1|0:00|(Dependency)\n61229422_14|photdis_v3_1_structureentryresume|RUNNING|debug|10:41|nid005367\n61229422_20|photdis_v3_1_structureentryresume|RUNNING|debug|9:56|nid004152\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61232760",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232760 JobName=photdis_v3_1_structureassemble UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=DependencyNeverSatisfied Dependency=afterok:61229422_14(unfulfilled),afterok:61229422_15(failed),afterok:61229422_16(failed),afterok:61229422_17(failed),afterok:61229422_18(failed),afterok:61229422_20(unfulfilled),afterok:61229422_24(unfulfilled),afterok:61229422_25(failed),afterok:61229422_27(failed),afterok:61229422_28(failed),afterok:61229422_29(failed),afterok:61229422_30(failed) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_assemble.sh SubmitLine=sbatch --parsable --dependency=afterok:61231239:61223167:61223172_1:61229422 scripts/run_v3_1_structure_assemble.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureassemble_61232760.out TresPerTask=cpu=32\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--array=15,16,17,18,25,27,28,29,30,31%3",
+        "--qos=regular",
+        "--time=00:30:00",
+        "scripts/run_v3_1_structure_entry_resume64_array.sh"
+      ],
+      "code": 0,
+      "stdout": "61246935\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61232760",
+        "Dependency=afterok:61229422_14:61229422_20:61229422_24:61246935"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "release",
+        "61246935"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61232760",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232760 JobName=photdis_v3_1_structureassemble UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61229422_14(unfulfilled),afterok:61229422_20(unfulfilled),afterok:61229422_24(unfulfilled),afterok:61246935_*(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_assemble.sh SubmitLine=sbatch --parsable --dependency=afterok:61231239:61223167:61223172_1:61229422 scripts/run_v3_1_structure_assemble.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureassemble_61232760.out TresPerTask=cpu=32\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61231554_17|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61229422_24|PENDING|regular_1|0:00|30:00|(Resources)\n61246935_15|PENDING|regular_1|0:00|30:00|(None)\n61246935_16|PENDING|regular_1|0:00|30:00|(None)\n61246935_17|PENDING|regular_1|0:00|30:00|(None)\n61246935_18|PENDING|regular_1|0:00|30:00|(None)\n61246935_25|PENDING|regular_1|0:00|30:00|(None)\n61246935_27|PENDING|regular_1|0:00|30:00|(None)\n61246935_28|PENDING|regular_1|0:00|30:00|(None)\n61246935_29|PENDING|regular_1|0:00|30:00|(None)\n61246935_30|PENDING|regular_1|0:00|30:00|(None)\n61246935_31|PENDING|regular_1|0:00|30:00|(None)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61229422_14|RUNNING|debug|10:48|30:00|nid005367\n61229422_20|RUNNING|debug|10:03|30:00|nid004152\n",
+      "stderr": ""
+    }
+  ],
+  "prior_preflight_sha256": "289f3ce328484e873e5e3a0aabb2d0398f29449768fb9d9835f83f343db6ac82",
+  "prior_submission_sha256": "3f292e8bc48dd0d2f39f661f50dbe9a89e0e73ba453bbd871339b03f50f74520",
+  "prior_recovery_sha256": "c3fe19fcd20d61adf72294077e5697d759f77c6eebdc83de9b39a25dafa0ff47",
+  "expired_cancelled_dependency_ids": [
+    "61229422_31"
+  ],
+  "originals_terminal_zero_runtime_unallocated_absent": true,
+  "replacement_job": "61246935",
+  "array": "15,16,17,18,25,27,28,29,30,31%3",
+  "new_assembly_dependency": "afterok:61229422_14:61229422_20:61229422_24:61246935",
+  "assembly_after": "JobId=61232760 JobName=photdis_v3_1_structureassemble UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61229422_14(unfulfilled),afterok:61229422_20(unfulfilled),afterok:61229422_24(unfulfilled),afterok:61246935_*(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_assemble.sh SubmitLine=sbatch --parsable --dependency=afterok:61231239:61223167:61223172_1:61229422 scripts/run_v3_1_structure_assemble.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureassemble_61232760.out TresPerTask=cpu=32\n",
+  "queue_after": "61231554_17|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61229422_24|PENDING|regular_1|0:00|30:00|(Resources)\n61246935_15|PENDING|regular_1|0:00|30:00|(None)\n61246935_16|PENDING|regular_1|0:00|30:00|(None)\n61246935_17|PENDING|regular_1|0:00|30:00|(None)\n61246935_18|PENDING|regular_1|0:00|30:00|(None)\n61246935_25|PENDING|regular_1|0:00|30:00|(None)\n61246935_27|PENDING|regular_1|0:00|30:00|(None)\n61246935_28|PENDING|regular_1|0:00|30:00|(None)\n61246935_29|PENDING|regular_1|0:00|30:00|(None)\n61246935_30|PENDING|regular_1|0:00|30:00|(None)\n61246935_31|PENDING|regular_1|0:00|30:00|(None)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61229422_14|RUNNING|debug|10:48|30:00|nid005367\n61229422_20|RUNNING|debug|10:03|30:00|nid004152\n",
+  "submission_complete": true
+}

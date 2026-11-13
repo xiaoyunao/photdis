@@ -219,8 +219,12 @@ Negative findings remain deliverables, never successful calibration claims.
   heldsubmission/dependencyrepair/release. 320GiBguard, unchangedoriginal
   function/seed/inputs. Pilotcompleted21m50/Python1293.38s/all512pass; batch
   199.7GiB/maxchild<4.1GiB. Preparedsameexecutorarrayforpending15–18/25/27–31,
-  max3newnodes+3originalsparse14/20/24<=6; freshsource/zero-runtime/absence/
-  dependencyproof required aftercommit/sync. Noarraylaunchedyet.
+  Array61246935nowholdsremaining15–18/25/27–31, max3newnodes plusoriginal
+  sparse14/20/24<=6. All10oldwritersprovedCANCELLED/zeroelapsed/noAllocTRES
+  andqueueabsent; oneheldsubmission, repairedassemblydependencies before
+  release.40receiptchecks/19sourcehashes pass. Last31controllerexpiry and
+  twofailedrecoveryguards preserved; no repeatcancel/duplicatewriter.
+  Subsequentdebug15/16queueadjustment requiresactualreceiptconfirmation.
   Originaltransfer5complete;17promoteddebug30afteractualmatchedworkload.
   Sparse24temporarilyreturnedregular30toprioritizefull102report; no cancellation.
 - Thirdtransferpack complete18m45:70/102states,1401compactchecks,29original

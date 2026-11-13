@@ -1,0 +1,10 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_job": "61246935",
+  "array": "15,16,17,18,25,27,28,29,30,31%3",
+  "outputs": {
+    "submission.json": "4fb0a64355c1e9c28c1fa0117a1f5f76105100a9519d52b3d9cdc784ca56d5ff"
+  },
+  "scope": "Continue held submission after canceled last array controller expired. Full original array accounting proves all10CANCELLED/zero elapsed/no allocated TRES and queueabsence; original failedjournal retained. No repeated cancellations or duplicatewriters; all19sourcehashes/commit rechecked; assembly faileddependencies replaced before release."
+}

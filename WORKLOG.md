@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-14 — continue ten unstarted refinements with verified whole-array dependency
+- Submitted61246935 for15,16,17,18,25,27,28,29,30,31%3 using measured64-worker
+  executor/30min. Original14/20running and24pending retained. Original10writers
+  allCANCELLED/zeroelapsed/noAllocTRES/absent; sourcecommitdb14d26 and19hashes
+  verified. One held replacement, assembly dependency repaired before release:
+  afterok:61229422_14:61229422_20:61229422_24:61246935.
+- Last original31 controller disappeared immediately after its pending-only
+  cancellation; full --array accounting retained raw61229422 CANCELLED0s with
+  no allocation. Original failedjournal preserved. First recovery guard assumed
+  everycancelled dependency persisted; Slurm hadremoved31. Second guard parsed
+  old SubmitLine as well as Dependency; corrected toactualDependencyfield.
+  Both stoppedbefore any submission; recovery3 made the sole replacement.
+- Actual local receipt closure passes40checks, including all19sourcehashes,
+  cancellation proof, one held submission and repairedwhole-array dependency.
+  Slurm displays parent dependency as61246935_*; initial local checker literal
+  parent-only assertion corrected toobserved whole-array notation. No scientific
+  files changed or duplicated. All original/recovery journals remain available.
+- A subsequent guarded QOS update foratmostnewchildren15/16 is still awaiting
+  its actual receipt; do not infer completion or repeat while process islive.
+  Fullscience remains19/32refined and98/102transfer; finalreports/fiveplates pending.
+
 ## 2026-11-14 — measure full 64-worker refinement and prepare bounded remaining array
 - Pilot13/61244889 COMPLETED21m50: all512 pass, original512 failures retained.
   Python1293.378s, maxchild4155588KiB, batch209379848KiB (~199.7GiB), actual

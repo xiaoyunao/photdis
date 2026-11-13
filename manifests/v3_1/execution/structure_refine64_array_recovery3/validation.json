@@ -1,0 +1,176 @@
+{
+  "inputs": {
+    "manifests/v3_1/execution/structure_refine64_array/submission.json": "3f292e8bc48dd0d2f39f661f50dbe9a89e0e73ba453bbd871339b03f50f74520",
+    "manifests/v3_1/execution/structure_refine64_array_recovery/submission.json": "cf56614a61f9153c2c21f7b1d7cf41d834302f96721e3eeb5f97e0fa06f01d12",
+    "manifests/v3_1/execution/structure_refine64_array_recovery2/submission.json": "c3fe19fcd20d61adf72294077e5697d759f77c6eebdc83de9b39a25dafa0ff47",
+    "manifests/v3_1/execution/structure_refine64_array_recovery3/submission.json": "4fb0a64355c1e9c28c1fa0117a1f5f76105100a9519d52b3d9cdc784ca56d5ff",
+    "manifests/v3_1/execution/structure_refine64_array/preflight.json": "289f3ce328484e873e5e3a0aabb2d0398f29449768fb9d9835f83f343db6ac82"
+  },
+  "checks": [
+    {
+      "check": "source_commit",
+      "passed": true
+    },
+    {
+      "check": "source:scripts/run_v3_1_structure_entry_resume64_array.sh",
+      "passed": true
+    },
+    {
+      "check": "source:scripts/v3_1_structure_entry_resume64.py",
+      "passed": true
+    },
+    {
+      "check": "source:scripts/v3_1_structure_entry_refine.py",
+      "passed": true
+    },
+    {
+      "check": "source:docs/v3_1_structure_entry_refinement_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "source:src/photdis/v3_1/structure_entry.py",
+      "passed": true
+    },
+    {
+      "check": "source:src/photdis/v3_1/selection_dust.py",
+      "passed": true
+    },
+    {
+      "check": "source:src/photdis/v3_1/candidate_selection.py",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_15/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_16/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_17/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_18/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_25/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_27/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_28/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_29/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_30/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry/draw_31/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/entry_refined/draw_13/complete.json",
+      "passed": true
+    },
+    {
+      "check": "source:data/v3_1/structure/resource_execution/draw_13/job_61244889.json",
+      "passed": true
+    },
+    {
+      "check": "original_receipt_links:1",
+      "passed": true
+    },
+    {
+      "check": "original_receipt_links:2",
+      "passed": true
+    },
+    {
+      "check": "earlier_recovery_link:2",
+      "passed": true
+    },
+    {
+      "check": "original_receipt_links:3",
+      "passed": true
+    },
+    {
+      "check": "earlier_recovery_link:3",
+      "passed": true
+    },
+    {
+      "check": "one_held_replacement",
+      "passed": true
+    },
+    {
+      "check": "same_ten_states",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_15",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_16",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_17",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_18",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_25",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_27",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_28",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_29",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_30",
+      "passed": true
+    },
+    {
+      "check": "zero_runtime_unallocated:61229422_31",
+      "passed": true
+    },
+    {
+      "check": "exact_assembly_dependency",
+      "passed": true
+    },
+    {
+      "check": "failed_dependency_repaired",
+      "passed": true
+    },
+    {
+      "check": "completed_submission_receipt",
+      "passed": true
+    }
+  ],
+  "actual_checks": 40,
+  "passed": true,
+  "replacement_job": "61246935",
+  "scientific_execution_complete": false,
+  "scope": "Actual source/terminal/unallocated/one-held-submission/dependency receipt closure. Slurm displays whole-array dependency as61246935_*. Scientific state completion and fullpayload validation remain separate."
+}
