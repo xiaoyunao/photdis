@@ -56,7 +56,7 @@ Negative findings remain deliverables, never successful calibration claims.
   group61225864_5 TIMEOUT30m12 duringjointcounts. Onlystate23 exactresume61232648
   submittedregular2h; existingbroadensemble61225883 andtransferchild5 retargeted.
   Eightcompletedmarkerhashes retained. Pendingpopulationlimits restoredto2h.
-  Firsteight holdout statescomplete: seven2048pass, state1 needs8192 after
+  First16 holdout statescomplete: fifteen2048pass, state1 needs8192 after
   2048count failure. Otherholdoutstates/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.

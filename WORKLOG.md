@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — reach sixteen retained holdout states
+- Holdoutgroups61225864_19/20 COMPLETED7m24/7m25; states8–15 collected,
+  all2048pass. Total16/34conditionalholdout states nowcomplete:15at2048,
+  state1at8192; lower-resolution failures remain. Fullensemble notyetavailable.
+- Existingtransfergroup61231554_2 promotedpendingdebug30min afterfreshcap
+  check andauthentication ofallfour2048broadinputs; prioridenticalgroup times
+  17m47/17m36. Receipt retained; no replacement orduplicate writer.
+- Boundedcompletion-marker inventory confirmsoriginalentry0–6 complete and
+  refined0/1/3 complete/allpass. Remainingentry/refinements andall102transfer
+  outcomes stillrequired. Broad23count-onlyresume remainslive.
+- Validation: smallmarkercollection andregisteredstate/selecteddraw checks;
+  no extra model orscientificcut. Next: finishremainingcomputechains, actual
+  reportgenerators/Englishfigures/adjudication andfinaldelivery verification.
+
 ## 2026-11-14 — preserve eight held-out fits and prepare final source reports
 - Holdoutfit61225864_17 COMPLETED27m24; allstates0–7 nowcollected. State1
   requires8192:512bridge/countfail and2048countfail retained; otherseven2048pass.
