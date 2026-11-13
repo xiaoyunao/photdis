@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-14 — make compact transfer checks reproducible and prepare48-worker resource pilot
+- Added scripts/v3_1_transfer_compact_check.py; same44actualstates pass881
+  source/identity/PSF/role/variant/denominator/original-gate consistencychecks,
+  allsixoriginalfailures retained. Default102guard rejectsactual44inventory
+  withoutwritingfinalcertificate. Prior793-checksnapshot preserved.
+- Newstandalone resume48 adapter differsfromfrozen32adapter onlyCLIworkerchoice,
+  docstring andexecution-source attribution. Sameoriginalcontextfunction,
+  integrand/seeds/checkpoints/frozeninputs. Existing32adapter/science unchanged.
+  48x6GiB=288GiB fitspriornode70%memory; freshmemory/CPUguardsonactualallocation.
+- Parse/import/shell checks pass; actual48-workerpilot notyetlaunched/measured.
+  Targetpendingrefinement10 onlyifzero-runtime/terminal/absence/sourceproof;
+  assemblydependencyrepair beforeheldreplacementrelease. No wideradoptionyet.
+- Entry19/20 COMPLETED13m00 each;512PSFcontexts with153/512originalfailures
+  respectively collected/hashed. No refinement orposterioracceptance implied.
+- Previousgoalturn wasprogress(44transferoutcomes/newfailures). Actualscheduler
+  confirmsremainingtransfer/refinement/entryrunning; no blocker,duplicatewriter
+  orscientificrerun. Next: measureboundedresourcepilot andfinishactualproducts.
+
 ## 2026-11-14 — retain candidate broad-transfer numerical failures in first packed batch
 - Firstrollout61238249_0/raw61238416 COMPLETED18m31:12states execute/verify,
   Python1082.27s,singlechild1.486GiB/batch20.04GiB. All36compactfiles collected

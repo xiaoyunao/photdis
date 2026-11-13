@@ -196,6 +196,11 @@ Negative findings remain deliverables, never successful calibration claims.
   actual visual acceptance: paired 62, calibration 32, latent 1574, candidate
   138, photometry 165, external 104, radial 1823, response 636, candidate modes
   3613 and domain evidence 1309 artifact/source checks; response compact 351.
+- Reproducible scripts/v3_1_transfer_compact_check.py validates44states with
+  881checks, preservessixfailures; default102guardrejectspartialinventory.
+  Standalone48-worker exactrefinementadapter prepared (288GiBplanningbound,
+  sameoriginalcontextfunction); pilot10pending/sourcepreflight required,
+  actualtiming/memory notmeasured andno wideradoptionyet.
 - Prepared scripts/v3_1_remaining_figure_check.py forfivependingplates: exact
   source/panelcoverage andPNG300dpi/EnglishPDF. Onlyparse/import/missing-input
   guards tested; actualfigureintegrityandvisualreview remainrequired.
