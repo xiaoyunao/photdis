@@ -1,0 +1,41 @@
+{
+  "inputs": {
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_1/response_library/source_calibration.npz": "dc9c7e355a9fd6950aae254e98ea2e0e0bc768214e4a985b4b8fdfa00a0de127",
+    "data/v3_1/response_library/sed_case_weights.npz": "5389244e0e2703890658087967abc635e5dce2480e8207807d087a6097aff6aa",
+    "data/v3_1/response_library/complete.json": "05285836f83c0896a56050a1635066d59cd9aaf295a1e60f2d769ae3324512c8",
+    "scripts/v3_1_response_refit.py": "92c2e7f6d2d5ac448293aa69896d169d891af5fad0ba2b044c895391f6ae0695",
+    "src/photdis/v3/uncertainty.py": "f9bff14558a4e1da00594deacbe3439f9db88e1c5205c77399d904c13caaf21b",
+    "docs/v3_1_response_protocol.md": "376949eca18301e7e88b85a2c555f58cb45f8d2c5c461f0fdaaf5c790dd66a99",
+    "draw": 1031
+  },
+  "sha256": "72113d477770be94c08095bb6425c26f5455c8c7b00019e27cc2d53b336e64b9",
+  "history": [
+    -16.557644237528752,
+    -16.50527502107263,
+    -16.486720799215227,
+    -16.47475882589129,
+    -16.465979573263436,
+    -16.459229185620394,
+    -16.45373813461071,
+    -16.449026974090508,
+    -16.444619819855095,
+    -16.440726573839946,
+    -16.43725056692324,
+    -16.43428128359801,
+    -16.431559750743048,
+    -16.42906195105143,
+    -16.4269003264695,
+    -16.424981863859355,
+    -16.423211800379853,
+    -16.421536255904147
+  ],
+  "converged": true,
+  "global_draw_id": 1031,
+  "job": "61227619",
+  "elapsed_seconds": 100.32113994999963,
+  "reference_quadrature_q99": 2.6645352591003757e-15,
+  "scope": "All pre-registered responses retained. Independent Monte Carlo library conditional on same training data/family; target evidence not read."
+}

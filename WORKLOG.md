@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-13 — complete regenerated SED library and prepare faster exact structure resume
+- ExactSEDresume61227619_7 COMPLETED14m07:draws1028–1031converged at25/26/21/18
+  totaliterations, preservingoriginal17-iteration checkpoints andtimeout. All32
+  independently regeneratedSED refits nowcomplete; all64matchedprobe outcomes
+  stillrequired beforeevidence normalization. Fourcompactmarkers collected.
+- Native/refinedstructurestates0/1/2 complete; original16/30/25objectfailures
+  allpasssidecars, all512identities retained. Collectedmarkers/checktables.
+  Actualnativeelapsed37s/3m09/36s versusrefinement17s/21s/16s; keepnative10min
+  limits becauseoneobservedstate exceeds3min. No unsupportedwalltime reduction.
+- Exhaustive scoreaudit61228029 submitteddebug15min afterthreeendsb9e1930match.
+  FirstGitHubsync hittransientTLS error; exactretry succeeded, nooverwrite.
+- Implementedresource-onlystructure entryresume adapter withimmutable original
+  per-context functionSHA12301384..., same scientificinput dictionary andexisting
+  checkpoints.32processes versus8, conservative6GiB/worker planningcheck within
+  70%node memory, actualRSS/time recordedseparately. Originalscientificscripts/
+  seeds/integrands unchanged. Python/shellsyntaxpass; actual32workerpilot notrun.
+- Next: aftercleansync safelyreplace onlyunstarted draw0resumeallocation, verify
+  oldwriters absent/terminal, andrun same512contexts beforewiderresourcechange.
+  Other31refinementjobs stayuntouched untilresourcepilot evidence.
+
 ## 2026-11-13 — prepare exhaustive external score/channel audit
 - Verifiedlive mode61227827_0, SEDresume61227619_7 andregularstructureentry
   61223167_1; no restartor stopped-job inference fromwaits.

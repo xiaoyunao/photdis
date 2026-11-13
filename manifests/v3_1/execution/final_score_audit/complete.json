@@ -1,0 +1,14 @@
+{
+  "job": "61228029",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-t",
+    "00:15:00",
+    "scripts/run_v3_1_score_audit.sh"
+  ],
+  "source_commit": "b9e1930e62493e63afa65b5ee32c47d08d1cb757",
+  "scope": "All3558external identities/nineviews: sourcechannel flags/normalization/export audit. Readonly original predictions/scores; actualaudit pending."
+}

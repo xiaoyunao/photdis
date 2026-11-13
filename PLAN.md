@@ -44,9 +44,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
-  Independently regenerated32SED refits:28complete(groups0–6 includingexact
-  group0resume61218979), group7original61216483_7 TIMEOUT30m01; allfouriteration17checkpoints
-  retained, exactresume61227619_7debug30min; probe60–63dependencies redirected.
+  Independently regenerated32SED refits nowcomplete: exactgroup7resume
+  61227619_7 COMPLETED14m07, allfourconverged at25/26/21/18iterations. Original
+  timeout/checkpoints retained; all64probe/refinement comparisons stillpending.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
@@ -127,8 +127,8 @@ Negative findings remain deliverables, never successful calibration claims.
   scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
   cohort score-convergence failures and all inherited ensemble flags. Domain
   evidence 61226776 additionally waits for the complete 64-response report.
-- Finish four independent SED refits via exact resume 61227619_7, then all
-  registered old/new response probes and refinements. Require all 64 inventories
+- All 32 independent SED refits are complete (last exact resume 61227619_7).
+  Finish registered old/new response probes and refinements. Require all 64 inventories
   before normalization; no dropped response or flattened evidence weight.
 - Complete remaining broad/heldout conditional populations, their all-34-state
   ensembles and frozen sky-transfer comparisons. Native/joint/entry matrices,
