@@ -1,5 +1,27 @@
 # PLAN
 
+## Active v3.1 — scientific calibration and use domains
+
+User authorized 2026-11-13 the four complete work packages in
+`docs/pro_review_31f1277.md` and explicitly requested a detailed active goal.
+Protocol: `docs/v3_1_protocol.md`; evidence ledger:
+`docs/v3_1_requirements_result.md`. Preserve frozen v3.0 and deployed v1.
+
+- [x] Read latest full Pro message (no DOCX), related project chats and project memory.
+- [x] Register detailed chat goal, four-package protocol and pending evidence ledger.
+- [ ] WP1: same-identity class/FeH/prior/band diagnostics; mechanism-backed correction.
+- [ ] WP2: regularized radial recovery; selection-matched target transfer; response support.
+- [ ] WP3: freeze reference-available new test roles before correction fitting; final validation.
+- [ ] WP4: product-matched evaluation, joint counts, domain map, reweighting and structure example.
+- [ ] Complete scientific/numerical/visual acceptance, reports and safe three-end sync.
+
+NERSC authentication renewed and read-only recovery succeeded. Local, origin and
+NERSC tracked HEAD match31f1277; historical untracked remote figures/manifests
+are preserved. Initial next step: implement/test isolated diagnostic controls,
+run allocated pilot, inventory available independent evidence before fitting.
+No automatic million-object products, deployment, timers or subagents.
+
+
 ## Completed v3.0 research delivery
 
 Full authorized review: docs/pro_review_b59e18b.md (14,327 characters).

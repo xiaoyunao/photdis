@@ -1,5 +1,15 @@
 # Project instructions
 
+- Active scope authorized2026-11-13: v3.1 four complete Pro work packages,
+  docs/pro_review_31f1277.md section six; docs/v3_1_protocol.md and
+  docs/v3_1_requirements_result.md. Detailed chat goal active. Diagnose
+  class/FeH/prior/band failures before constrained calibration, test regularized
+  radial models and response support, freeze reference-available new tests before
+  fitting, deliver product-matched evaluation/domain map/structure example.
+  v3.0 and deployed v1 remain frozen. No fullcatalog rerun before representative
+  acceptance; no timers or subagents. Seen v3 validation is regression, not blind.
+
+
 - Completed v3.0 research delivery2026-11-12: docs/v3_0_result.md,
   docs/v3_0_atlas.md, docs/v3_0_catalog.md and requirements ledger.
   All1183990qualified native-PSF candidates in13DECamfields exported with full

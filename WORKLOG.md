@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-13 — authorize complete v3.1 scientific calibration scope
+- Recovered git status/branch/fetch/history, WORKLOG and PLAN; reviewed latest
+  full Pro message plus photdis_v1, original project planning and related Pro
+  chats. No DOCX opened. Archived docs/pro_review_31f1277.md (12972 chars).
+- Initial NERSC authentication failed; user renewed sshproxy. Read-only remote
+  recovery then passed; tracked local/origin/NERSC HEAD31f1277. Existing remote
+  untracked figures/manifests preserved; no scientific jobs submitted yet.
+- Registered explicit detailed goal and docs/v3_1_protocol.md, requirements
+  ledger; updated PLAN/AGENTS. All four work packages remain required.
+- Validation: review text retrieved in full, source version and clean local
+  baseline verified; no new scientific calibration or model result claimed.
+- Next: isolated diagnostic implementation/tests and allocated pilot; inventory
+  and freeze reference-available new tests before correction training.
+
+
 ## 2026-11-12 — v3.0 final actual delivery accepted
 - Final allocated job61163478 COMPLETED47s, exit0:0;1309actual-array/artifact
   checks pass. Downloaded immutable delivery/execution records; all1309booleans,
