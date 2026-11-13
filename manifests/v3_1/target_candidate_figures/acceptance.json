@@ -1,0 +1,564 @@
+{
+  "checks": [
+    {
+      "check": "inputs:manifests/v3_1/target_ensemble/candidate/complete.json",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/target_ensemble/candidate/counts.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/target_ensemble/candidate/weights.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/target_ensemble/candidate/checks.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/v3_1_target_candidate_figures.py",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/target_candidate/conditional_counts.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/target_candidate/conditional_counts.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/target_candidate/weights_numerics.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/target_candidate/weights_numerics.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:manifests/v3_1/target_candidate_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "conditional_counts:PNG_size",
+      "passed": true
+    },
+    {
+      "check": "conditional_counts:PNG_dpi",
+      "passed": true
+    },
+    {
+      "check": "conditional_counts:PDF_single_page",
+      "passed": true
+    },
+    {
+      "check": "conditional_counts:PDF_text",
+      "passed": true
+    },
+    {
+      "check": "conditional_counts:PDF_English",
+      "passed": true
+    },
+    {
+      "check": "weights_numerics:PNG_size",
+      "passed": true
+    },
+    {
+      "check": "weights_numerics:PNG_dpi",
+      "passed": true
+    },
+    {
+      "check": "weights_numerics:PDF_single_page",
+      "passed": true
+    },
+    {
+      "check": "weights_numerics:PDF_text",
+      "passed": true
+    },
+    {
+      "check": "weights_numerics:PDF_English",
+      "passed": true
+    },
+    {
+      "check": "plotted_rows",
+      "passed": true
+    },
+    {
+      "check": "source_match_0",
+      "passed": true
+    },
+    {
+      "check": "source_match_1",
+      "passed": true
+    },
+    {
+      "check": "source_match_2",
+      "passed": true
+    },
+    {
+      "check": "source_match_3",
+      "passed": true
+    },
+    {
+      "check": "source_match_4",
+      "passed": true
+    },
+    {
+      "check": "source_match_5",
+      "passed": true
+    },
+    {
+      "check": "source_match_6",
+      "passed": true
+    },
+    {
+      "check": "source_match_7",
+      "passed": true
+    },
+    {
+      "check": "source_match_8",
+      "passed": true
+    },
+    {
+      "check": "source_match_9",
+      "passed": true
+    },
+    {
+      "check": "source_match_10",
+      "passed": true
+    },
+    {
+      "check": "source_match_11",
+      "passed": true
+    },
+    {
+      "check": "source_match_12",
+      "passed": true
+    },
+    {
+      "check": "source_match_13",
+      "passed": true
+    },
+    {
+      "check": "source_match_14",
+      "passed": true
+    },
+    {
+      "check": "source_match_15",
+      "passed": true
+    },
+    {
+      "check": "source_match_16",
+      "passed": true
+    },
+    {
+      "check": "source_match_17",
+      "passed": true
+    },
+    {
+      "check": "source_match_18",
+      "passed": true
+    },
+    {
+      "check": "source_match_19",
+      "passed": true
+    },
+    {
+      "check": "source_match_20",
+      "passed": true
+    },
+    {
+      "check": "source_match_21",
+      "passed": true
+    },
+    {
+      "check": "source_match_22",
+      "passed": true
+    },
+    {
+      "check": "source_match_23",
+      "passed": true
+    },
+    {
+      "check": "source_match_24",
+      "passed": true
+    },
+    {
+      "check": "source_match_25",
+      "passed": true
+    },
+    {
+      "check": "source_match_26",
+      "passed": true
+    },
+    {
+      "check": "source_match_27",
+      "passed": true
+    },
+    {
+      "check": "source_match_28",
+      "passed": true
+    },
+    {
+      "check": "source_match_29",
+      "passed": true
+    },
+    {
+      "check": "source_match_30",
+      "passed": true
+    },
+    {
+      "check": "source_match_31",
+      "passed": true
+    },
+    {
+      "check": "source_match_32",
+      "passed": true
+    },
+    {
+      "check": "source_match_33",
+      "passed": true
+    },
+    {
+      "check": "source_match_34",
+      "passed": true
+    },
+    {
+      "check": "source_match_35",
+      "passed": true
+    },
+    {
+      "check": "source_match_36",
+      "passed": true
+    },
+    {
+      "check": "source_match_37",
+      "passed": true
+    },
+    {
+      "check": "source_match_38",
+      "passed": true
+    },
+    {
+      "check": "source_match_39",
+      "passed": true
+    },
+    {
+      "check": "source_match_40",
+      "passed": true
+    },
+    {
+      "check": "source_match_41",
+      "passed": true
+    },
+    {
+      "check": "source_match_42",
+      "passed": true
+    },
+    {
+      "check": "source_match_43",
+      "passed": true
+    },
+    {
+      "check": "source_match_44",
+      "passed": true
+    },
+    {
+      "check": "source_match_45",
+      "passed": true
+    },
+    {
+      "check": "source_match_46",
+      "passed": true
+    },
+    {
+      "check": "source_match_47",
+      "passed": true
+    },
+    {
+      "check": "source_match_48",
+      "passed": true
+    },
+    {
+      "check": "source_match_49",
+      "passed": true
+    },
+    {
+      "check": "source_match_50",
+      "passed": true
+    },
+    {
+      "check": "source_match_51",
+      "passed": true
+    },
+    {
+      "check": "source_match_52",
+      "passed": true
+    },
+    {
+      "check": "source_match_53",
+      "passed": true
+    },
+    {
+      "check": "source_match_54",
+      "passed": true
+    },
+    {
+      "check": "source_match_55",
+      "passed": true
+    },
+    {
+      "check": "source_match_56",
+      "passed": true
+    },
+    {
+      "check": "source_match_57",
+      "passed": true
+    },
+    {
+      "check": "source_match_58",
+      "passed": true
+    },
+    {
+      "check": "source_match_59",
+      "passed": true
+    },
+    {
+      "check": "source_match_60",
+      "passed": true
+    },
+    {
+      "check": "source_match_61",
+      "passed": true
+    },
+    {
+      "check": "source_match_62",
+      "passed": true
+    },
+    {
+      "check": "source_match_63",
+      "passed": true
+    },
+    {
+      "check": "source_match_64",
+      "passed": true
+    },
+    {
+      "check": "source_match_65",
+      "passed": true
+    },
+    {
+      "check": "source_match_66",
+      "passed": true
+    },
+    {
+      "check": "source_match_67",
+      "passed": true
+    },
+    {
+      "check": "source_match_68",
+      "passed": true
+    },
+    {
+      "check": "source_match_69",
+      "passed": true
+    },
+    {
+      "check": "source_match_70",
+      "passed": true
+    },
+    {
+      "check": "source_match_71",
+      "passed": true
+    },
+    {
+      "check": "source_match_72",
+      "passed": true
+    },
+    {
+      "check": "source_match_73",
+      "passed": true
+    },
+    {
+      "check": "source_match_74",
+      "passed": true
+    },
+    {
+      "check": "source_match_75",
+      "passed": true
+    },
+    {
+      "check": "source_match_76",
+      "passed": true
+    },
+    {
+      "check": "source_match_77",
+      "passed": true
+    },
+    {
+      "check": "source_match_78",
+      "passed": true
+    },
+    {
+      "check": "source_match_79",
+      "passed": true
+    },
+    {
+      "check": "source_match_80",
+      "passed": true
+    },
+    {
+      "check": "source_match_81",
+      "passed": true
+    },
+    {
+      "check": "source_match_82",
+      "passed": true
+    },
+    {
+      "check": "source_match_83",
+      "passed": true
+    },
+    {
+      "check": "source_match_84",
+      "passed": true
+    },
+    {
+      "check": "source_match_85",
+      "passed": true
+    },
+    {
+      "check": "source_match_86",
+      "passed": true
+    },
+    {
+      "check": "source_match_87",
+      "passed": true
+    },
+    {
+      "check": "source_match_88",
+      "passed": true
+    },
+    {
+      "check": "source_match_89",
+      "passed": true
+    },
+    {
+      "check": "source_match_90",
+      "passed": true
+    },
+    {
+      "check": "source_match_91",
+      "passed": true
+    },
+    {
+      "check": "source_match_92",
+      "passed": true
+    },
+    {
+      "check": "source_match_93",
+      "passed": true
+    },
+    {
+      "check": "source_match_94",
+      "passed": true
+    },
+    {
+      "check": "source_match_95",
+      "passed": true
+    },
+    {
+      "check": "source_match_96",
+      "passed": true
+    },
+    {
+      "check": "source_match_97",
+      "passed": true
+    },
+    {
+      "check": "source_match_98",
+      "passed": true
+    },
+    {
+      "check": "source_match_99",
+      "passed": true
+    },
+    {
+      "check": "source_match_100",
+      "passed": true
+    },
+    {
+      "check": "source_match_101",
+      "passed": true
+    },
+    {
+      "check": "source_match_102",
+      "passed": true
+    },
+    {
+      "check": "source_match_103",
+      "passed": true
+    },
+    {
+      "check": "source_match_104",
+      "passed": true
+    },
+    {
+      "check": "source_match_105",
+      "passed": true
+    },
+    {
+      "check": "source_match_106",
+      "passed": true
+    },
+    {
+      "check": "source_match_107",
+      "passed": true
+    },
+    {
+      "check": "source_match_108",
+      "passed": true
+    },
+    {
+      "check": "source_match_109",
+      "passed": true
+    },
+    {
+      "check": "source_match_110",
+      "passed": true
+    },
+    {
+      "check": "source_match_111",
+      "passed": true
+    },
+    {
+      "check": "source_match_112",
+      "passed": true
+    },
+    {
+      "check": "source_match_113",
+      "passed": true
+    },
+    {
+      "check": "source_match_114",
+      "passed": true
+    },
+    {
+      "check": "source_match_115",
+      "passed": true
+    }
+  ],
+  "checks_passed": 138,
+  "figures": 2,
+  "panels_visually_inspected": 7,
+  "visual_review_passed": true,
+  "review": "Individually inspected both exported PNGs: complete titles/axes/legends/footnotes, readable intervals and English text; original evidence failure and MC CDF discrepancies visible. No clipping or overlapping labels found.",
+  "main_candidate_accepted": false,
+  "scope": "Figure delivery acceptance only; not scientific calibration or numerical acceptance.",
+  "complete_sha256": "a7b7d70d985b4532e536e709e618e53000e9e6a90451b4d6354666fb95226116"
+}

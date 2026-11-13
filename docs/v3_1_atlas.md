@@ -1,6 +1,6 @@
 # v3.1 进行中图集
 
-以下两张图是已见开发样本的机制诊断，不是最终独立验证。2026-11-13
+前两张图是已见开发样本的机制诊断，不是最终独立验证。2026-11-13
 逐张目检PNG；62项哈希、分辨率、PDF、英文文字及源表对应检查通过。
 源表均保留原设计权重和天空块bootstrap区间。
 
@@ -52,3 +52,27 @@ new-validation claim follows. All four panels visually inspected after label
 and legend repairs;1574actual image/PDF/hash/source checks pass.
 [PDF](../figures/v3_1/latent/latent_support_failure.pdf);
 [source rows and acceptance](../manifests/v3_1/latent_figure/acceptance.json).
+
+## Candidate joint counts and finite-state numerical sensitivity
+
+![Candidate conditional counts](../figures/v3_1/target_candidate/conditional_counts.png)
+
+Four registered views share3540nativePSF objects. Points are conditional expected
+class–distance counts; intervals are shared realized-count95%intervals. All three
+classes use the same scale, linear below1and logarithmic above. Count-CDF half
+sample discrepancies are explicitly printed. These are not measured physical
+populations or densities; independent external validation remains pending.
+
+![Candidate weights and numerics](../figures/v3_1/target_candidate/weights_numerics.png)
+
+All34conditional states pass their gates, but the main evidence-weighted ensemble
+retains its failed absolute-evidence seed gate: delta logZ=.248538 versus.05.
+Probability/count/state-weight changes pass their own gates. Finite luminosity
+bootstrap ESS21.17325/32and maxweight7.01524%do not measure64-SED response support.
+Nativefine sensitivity covers36candidate objects, not all3540.
+
+Both PNG300dpi/PDF exports and all seven panels were individually inspected;
+138actual hash/PNG/PDF/source-row checks pass. [Plotted rows](../manifests/v3_1/target_candidate_figures/plotted.csv),
+[acceptance record](../manifests/v3_1/target_candidate_figures/acceptance.json),
+[count PDF](../figures/v3_1/target_candidate/conditional_counts.pdf),
+[sensitivity PDF](../figures/v3_1/target_candidate/weights_numerics.pdf).

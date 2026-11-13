@@ -1,0 +1,95 @@
+{
+  "inputs": {
+    "data/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "data/v3_1/target_ensemble/candidate/states.json": "977bc005236ff9e825a4c3e7fe4ef4aed8572115f3ca10ab2e0dea847b16089b",
+    "data/v3_1/target_joint_matrices/complete.json": "d1dba37147365dca1cbb8b897880fdee9a3052f2f1c227155215c648e5540cc1",
+    "data/v3_1/target_joint_matrices/metadata.npz": "759cd047a1d25a2aea84384f0d8139443ea97326f84c85a12457cc04c4281a54",
+    "scripts/v3_1_highq_counts.py": "88cc0464b51c436ca7bb4d7eed1e95f3ba359be850a015250580b470a9fa6060",
+    "src/photdis/v3_1/count_mixture.py": "db6ff0619fa24496a84d24568b22c3eafcf390910cf652aab742c6475ca95dcd",
+    "src/photdis/v3/population.py": "4025d3a15e5e11461985160b44fbc67e0a0562f86d20b034b485bf70cd778e48",
+    "docs/v3_1_highq_counts_protocol.md": "3c26716350abfa01e3bf68051da2012c435a3794be8d2a817883808ffba0baa2",
+    "data/v3_1/target_ensemble/candidate/bootstrap_evidence/base_probabilities.npz": "301da2cb6487ce131864352f51a819b3e56edbb9294565251c35467ed2849687"
+  },
+  "available": true,
+  "passed": false,
+  "views": [
+    {
+      "view": "zero",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "point",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "bootstrap_evidence",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "bootstrap_cut",
+      "n": 3003,
+      "accepted": true,
+      "inherited_ensemble_accepted": true
+    }
+  ],
+  "n": 3003,
+  "parent_n": 3540,
+  "all_PSF": true,
+  "outputs": {
+    "selection.npz": "882f28b477626d24acabbb9b90c4467482d9c120bec158e0076bd88fbfc8e830",
+    "counts.csv": "ee373455df3ab24f52298f894d5fe02473a1252231e35b82f0676b3224d88064",
+    "checks.csv": "686dceaf3ac18e00f2ce8c3600dd71c1e7446eeffa112706f76b50250182b732",
+    "model_leakage.csv": "27ccecb46801106c342ec1eedbf2eb037b449d5f0e3462f1707b18d4dc2d74a0"
+  },
+  "states": {
+    "correction_00/complete.json": "a1c4c6e096531eff8443e715f3b6f7634511de1f4df08e875d3bba6a2ebf306a",
+    "correction_01/complete.json": "5ef3bf822ac412fa6be89767029a3ae3f2d1f5bf9e9200e0af02be84e9d8d7b7",
+    "correction_02/complete.json": "9005921d328068f3c6639f87279af94d06a7c7032f9c30485940948bcb7f86f4",
+    "correction_03/complete.json": "8a44a6b8576836dbfe6777703648bab255f10335ef615b9674e23a1e9c044153",
+    "correction_04/complete.json": "22ff8825096c100c0075fe9174d3ce1c184cf9fccc97c02e2222034cd5a29624",
+    "correction_05/complete.json": "0ccb61f4a3f3f1d65605f6beb1637c97df8219113db5de258c752d5562f63b29",
+    "correction_06/complete.json": "b46d5603f05039d233c658a872925847ebed139ea837f68cbe7fb073597b2e39",
+    "correction_07/complete.json": "35d71c9227cb308df47f7d60c0820ff3604a70711ed6682541959bb962199998",
+    "correction_08/complete.json": "ebebdfcbe5a85f6fc1f9e8f578526fec1ababda54ae27549ebefdba0ea001b91",
+    "correction_09/complete.json": "a9c10373db2d16b2e4e2a934b9288908a680627a0bdb594a2ae945143846cd9a",
+    "correction_10/complete.json": "a66c5970488997d9035f94333d37842b9a0c200e42f8fe640bb43b736f74ffd1",
+    "correction_11/complete.json": "fe6efc0e355dd3b5cc36a04b0c7a0419fb6f82f783681041702f3b82fb329833",
+    "correction_12/complete.json": "d56f347baf49f368c81df8be6d12eedf8f34abeaaac77fb329f0b07124e8f4f7",
+    "correction_13/complete.json": "3e3e23a47597781e935b8465d93f7cb90e40873ac4acd1114f248e32621d09e8",
+    "correction_14/complete.json": "6d1c04a421698b070b52a48f0461726d1c35315f68fbf23b15d6b1f43f640bce",
+    "correction_15/complete.json": "e0eb5dd2c442f083c53ce0f78c50ed8caf8d01f8dfbb627fb731e644718e3f9d",
+    "correction_16/complete.json": "136ba85d5080d6c69c5f67af387b9b9e9c20549cd01ee6cd72048614b0e0b0d7",
+    "correction_17/complete.json": "c4a805036a50f2c2fabd7b273dda9b1b2fac7564072a9ad7af8a5b4e14e4ffe5",
+    "correction_18/complete.json": "e488c76699ab782bed6629c38cea1dd4f1d7fc3ee8371da791f729133fe36664",
+    "correction_19/complete.json": "3a10f45b5560fd7a8c0bac94ea37809c5f58244ec7004cdaa577ff59771b1dba",
+    "correction_20/complete.json": "41baf8c931fd103f2acc266dbc4faeeace85bd48f7a54acdd0841f76a40f4e64",
+    "correction_21/complete.json": "68309faa5baec2b47a140ba5de32218b0614eb6c580fde773f38a0a19e296217",
+    "correction_22/complete.json": "95d01b216f3daed3147f3e833cbfecafc03eb1b8bef97cdf4383e0fb3555e56c",
+    "correction_23/complete.json": "ad417cc440a6d0f808ef384a3f7aef562206e244f039fa2caaca52a8c93ec9c2",
+    "correction_24/complete.json": "239fc04d49673bd9752946891216cb00f968fc01461f05de134ef43e6dac60f3",
+    "correction_25/complete.json": "0092cc608b934d83ba6a2342413d5795237db62246002a0a88a2c780137fb103",
+    "correction_26/complete.json": "a9b628a728bf0bd7d7dfe0385b46b33e6d2e1a36f7d0967b57d4a05369bf47c9",
+    "correction_27/complete.json": "b85f51177538ffe8f55a3534566c83b3f8004cc9df29488ea709a2064e75368a",
+    "correction_28/complete.json": "d1828b95dfce1d411b03cf596ecc178e9999e764dbb2b0fdd36bf24031179880",
+    "correction_29/complete.json": "af14cb1ae5e871d997a57ee288ea4d720b5e5dbfc641de80a6666d123ec9fbda",
+    "correction_30/complete.json": "cf32c257f69634f8144e246a242af6a6122c65f07e46e91b35ec00449dee631c",
+    "correction_31/complete.json": "e7093186f3209d520d7e4297662f110a29ab630956087bd4dbf9c1bfa5533ae5",
+    "correction_32/complete.json": "b9808204a266bbc886ba2f15ab6a98ef97c32ec75a3ea1f8bacc04d72fff3820",
+    "correction_33/complete.json": "1054c5daf77eb017e885b952ff2228aec3ea20a187001c4dc7d2cc6f52452deb"
+  },
+  "view_markers": {
+    "zero/complete.json": "a52ad2714ef29167949d7df5f1224a1e36f6a4c7c25b76ed805b063c427ba457",
+    "point/complete.json": "9e0ddfc5d389589b708d4bb3fee08cbebfbfd3c2dcb53342fd75400eecf24831",
+    "bootstrap_evidence/complete.json": "f3430d94f48a13f6a8411aa971ba4515717253dc48e95beb491046d8777a9bb6",
+    "bootstrap_cut/complete.json": "53452a2ef92701ec6459169c7f3dba017afc6d2ef751e14eb8268c4093ee0e2f"
+  },
+  "references_read": false,
+  "job": "61226224",
+  "scope": "Same final-candidate qnear>.95 identities for all controls and numerical variants. Full shared joint count covariance. Leakage is model-expected, not independent contamination. No fullcatalog expansion."
+}

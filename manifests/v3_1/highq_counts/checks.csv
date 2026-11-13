@@ -1,0 +1,17 @@
+view,variant,maximum_probability_delta,maximum_count_mean_delta,passed
+zero,base,0.0,0.0,True
+zero,entry_seed,0.00033433759503875837,0.025702408067996174,True
+zero,entry_level,0.0013297960738232195,0.10268668357559818,True
+zero,native_fine,5.8591870338187135e-05,6.0897376670254744e-05,True
+point,base,0.0,0.0,True
+point,entry_seed,0.0003116712857861026,0.02541986412754582,True
+point,entry_level,0.0012521395454095918,0.09652771030937402,True
+point,native_fine,2.850268892466007e-06,4.194097982690437e-06,True
+bootstrap_evidence,base,0.0,0.0,True
+bootstrap_evidence,entry_seed,0.0003146712751676828,0.025669720715772115,True
+bootstrap_evidence,entry_level,0.001243786260251678,0.09640423459572389,True
+bootstrap_evidence,native_fine,3.0030659372466684e-06,4.2894052967312746e-06,True
+bootstrap_cut,base,0.0,0.0,True
+bootstrap_cut,entry_seed,0.00031218675000110885,0.025619714160848517,True
+bootstrap_cut,entry_level,0.0012440694768297567,0.09543692318496255,True
+bootstrap_cut,native_fine,2.6595487290035497e-06,4.2872568428720115e-06,True

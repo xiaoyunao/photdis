@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "stage": "field_pilot",
+      "job": "61226222",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "debug",
+        "-t",
+        "00:30:00",
+        "--dependency=afterok:61225884",
+        "scripts/run_v3_1_validation_target.sh",
+        "--cohort",
+        "field",
+        "--case",
+        "candidate",
+        "--pilot",
+        "--workers",
+        "8"
+      ]
+    },
+    {
+      "stage": "common_pilot",
+      "job": "61226223",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "debug",
+        "-t",
+        "00:30:00",
+        "--dependency=afterok:61225884",
+        "scripts/run_v3_1_validation_target.sh",
+        "--cohort",
+        "common",
+        "--case",
+        "candidate",
+        "--pilot",
+        "--workers",
+        "8"
+      ]
+    },
+    {
+      "stage": "fixed_main_highq",
+      "job": "61226224",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "debug",
+        "-t",
+        "00:30:00",
+        "--dependency=afterok:61225884",
+        "scripts/run_v3_1_highq_counts.sh"
+      ]
+    }
+  ],
+  "ensemble_sha256": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+  "main_candidate_numerically_accepted": false,
+  "main_candidate_identity_unchanged": true,
+  "references_opened": false,
+  "execution_complete": false,
+  "scope": "Registered8-ID prediction pilots and fixedhighq sharedcounts. Ensemble absolute log-evidence seed failure retained; no mainmodel substitution or adoption."
+}

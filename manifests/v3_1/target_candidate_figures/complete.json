@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "manifests/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "manifests/v3_1/target_ensemble/candidate/counts.csv": "5d528f714704141f7c20e350b39abf36c1203adbc916b53908066fa563d2e4dd",
+    "manifests/v3_1/target_ensemble/candidate/weights.csv": "5c9a5f6ba8ef33654d516eff0accbb999cdc93e80e65ef067c3e58109f6551a2",
+    "manifests/v3_1/target_ensemble/candidate/checks.csv": "b6aac8eb2121a3cbdffcd78573f764fac513927026c790b97051c7608f4b78f6",
+    "scripts/v3_1_target_candidate_figures.py": "8e7975a9cd972bf6de52db5ca630d3d168a4031f25f854066bd70c40ef174006",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/target_candidate/conditional_counts.png": "80a56769584c02ede5b222e8d8e9f18d7c5a452d802de8cd1921d50c0c61d9d3",
+    "figures/v3_1/target_candidate/conditional_counts.pdf": "c7fb3de629d5d92e99f1166401229ae9e4e04ae039a5844b557e6db212cfe291",
+    "figures/v3_1/target_candidate/weights_numerics.png": "422f7b6cbf8deb5c8375e1ff15788fea0489eddaa45eecaac6a560079b55a5bd",
+    "figures/v3_1/target_candidate/weights_numerics.pdf": "6263449635f160e4be7292142b74e6b82d7eb3ff81e6cc863b7afcfb228f52c3",
+    "manifests/v3_1/target_candidate_figures/plotted.csv": "a2ab9ebbbadda9d6175221704794a085f9e3ce0441ecc99879d81c7fb4845443"
+  },
+  "plotted_rows": 116,
+  "figures": 2,
+  "panels": 7,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "main_candidate_accepted": false,
+  "native_fine_audit_n": 36,
+  "parent_n": 3540,
+  "scope": "Rendering of authenticated compact computed tables only. Original seed evidence failure and Monte Carlo interval precision remain visible; no new catalog computation or external reference access."
+}

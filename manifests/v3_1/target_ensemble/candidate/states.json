@@ -1,0 +1,997 @@
+{
+  "case": "candidate",
+  "states": [
+    {
+      "correction": 0,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_00_s2048/complete.json",
+      "fit_sha256": "d7859abbb97b8d1497789819d863b5b772579a42fdc5cfb13c45ed7b466cf530",
+      "population": "data/v3_1/target_fits/candidate/correction_00_s2048/population.npz",
+      "population_sha256": "f01c74cac0c6b05aa089713e6bc1652254c9d62f6bead761f358807cd627812e",
+      "parameters": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_00_s2048/joint_counts/complete.json",
+      "counts_sha256": "812f29acd71bc150d8ab7a7395236efd1e51217f334164338ea7ded9948062cc",
+      "counts_passed": true,
+      "log_evidence": -59558.599954291894
+    },
+    {
+      "correction": 1,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_01_s2048/complete.json",
+      "fit_sha256": "80a8580faa700ca33a29a9ea3a03594717ebb5d8e5411bd1f40e38ebca3712dc",
+      "population": "data/v3_1/target_fits/candidate/correction_01_s2048/population.npz",
+      "population_sha256": "729e4b01d64933388fe3472462fc67649da6aee4fc89d3ae89b186de7647ac6c",
+      "parameters": [
+        [
+          -0.05419370005701221,
+          0.15032198628445104
+        ],
+        [
+          0.04283418178573365,
+          0.8904660866945754
+        ],
+        [
+          0.10175563835658517,
+          0.17650102719274197
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_01_s2048/joint_counts/complete.json",
+      "counts_sha256": "dcfae58b89ea6fc84305696ebae2156de11d9989d4bdbbf3f4e8b5b6f84ce786",
+      "counts_passed": true,
+      "log_evidence": -59570.61461036628
+    },
+    {
+      "correction": 2,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_02_s2048/complete.json",
+      "fit_sha256": "9291182ad8d5d13a13b29496d452826ee51a55c4e7b0fadcc3f340d7297af64d",
+      "population": "data/v3_1/target_fits/candidate/correction_02_s2048/population.npz",
+      "population_sha256": "6504be2c31dde6172f0a28be3941b0b4268d20570cc5d4dca56ffee087a43df0",
+      "parameters": [
+        [
+          -0.052925790768427135,
+          0.15689004983688476
+        ],
+        [
+          0.04468832380159207,
+          0.9427393551267429
+        ],
+        [
+          0.09675185734687233,
+          0.17595360910323726
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_02_s2048/joint_counts/complete.json",
+      "counts_sha256": "58622af96d1de96c9105218b0e905f0c1d9683822f1c17d5b8727ab4c5b44cf5",
+      "counts_passed": true,
+      "log_evidence": -59569.97074616786
+    },
+    {
+      "correction": 3,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_03_s2048/complete.json",
+      "fit_sha256": "7ad0824d2bc866cb09ba23d3be129c5f3997bc8593021df905a0d77329e81b7e",
+      "population": "data/v3_1/target_fits/candidate/correction_03_s2048/population.npz",
+      "population_sha256": "8ec7d375be023c3f9c01089b8d5e7238447e5a715246835acf0c5edfdb0334b1",
+      "parameters": [
+        [
+          -0.054182410276305215,
+          0.15022535597660247
+        ],
+        [
+          0.03637410133024573,
+          0.8983106308920852
+        ],
+        [
+          0.10057976618818479,
+          0.17731486291723744
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_03_s2048/joint_counts/complete.json",
+      "counts_sha256": "5fd59e049df03c23686d809716346015b537539bcce508b9d7b9a3c2ee831666",
+      "counts_passed": true,
+      "log_evidence": -59570.624734274636
+    },
+    {
+      "correction": 4,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_04_s2048/complete.json",
+      "fit_sha256": "f68c46bfc778d5a09a9b2c82d2795369504f040a1eb39b498bfdb844463b17ea",
+      "population": "data/v3_1/target_fits/candidate/correction_04_s2048/population.npz",
+      "population_sha256": "74defa3d9f792197cef00149035a47e6f1229e28228ca34bb9255765bfc7b99c",
+      "parameters": [
+        [
+          -0.05313808521413227,
+          0.1561319204773296
+        ],
+        [
+          0.04449628197923569,
+          0.9144781290545475
+        ],
+        [
+          0.10034800210884252,
+          0.1744909012953057
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_04_s2048/joint_counts/complete.json",
+      "counts_sha256": "c09b6d76814efa1755ecf0f455faad7bd2d77bf455e7d6bfebe5b1b539d09611",
+      "counts_passed": true,
+      "log_evidence": -59570.08264249566
+    },
+    {
+      "correction": 5,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_05_s2048/complete.json",
+      "fit_sha256": "53e1caba6ccfce415dc955a5857237b9327dc45ba2446af8356468d146dc492c",
+      "population": "data/v3_1/target_fits/candidate/correction_05_s2048/population.npz",
+      "population_sha256": "8993f7c048a7f4c0ed3b99e1b86c3079d489d2f708b602b7e7b40e590250c1bd",
+      "parameters": [
+        [
+          -0.05565323650011812,
+          0.14048064475638433
+        ],
+        [
+          0.04173265566270232,
+          0.8386573696167972
+        ],
+        [
+          0.10523796223716318,
+          0.17967057565459404
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_05_s2048/joint_counts/complete.json",
+      "counts_sha256": "b2258936eef92bead9ad6152b61669691595f2354b95bf5b500e1c3d6c9caa4d",
+      "counts_passed": true,
+      "log_evidence": -59571.46298597253
+    },
+    {
+      "correction": 6,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_06_s2048/complete.json",
+      "fit_sha256": "dbf73fe188ce6c83e26d63a4a0fac5a813d6ac480efda950fb87ff2b9300b4cd",
+      "population": "data/v3_1/target_fits/candidate/correction_06_s2048/population.npz",
+      "population_sha256": "b9ac5754ffc2871f64291a0b6cc109febc54ba6c740c42d077e2b1d65d011cd5",
+      "parameters": [
+        [
+          -0.057156504790924045,
+          0.11994263302969976
+        ],
+        [
+          0.035886133811964774,
+          0.7731880479957324
+        ],
+        [
+          0.10500760248961344,
+          0.1935740611263192
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_06_s2048/joint_counts/complete.json",
+      "counts_sha256": "428656e362a5dd7de309cc270127b2776ac2547a09e3b4876f3cc621e545b516",
+      "counts_passed": true,
+      "log_evidence": -59572.62703168781
+    },
+    {
+      "correction": 7,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_07_s2048/complete.json",
+      "fit_sha256": "7da78c97b2ccfde75e90482dcf50f6d6b961204eea32f3cc903eb66ec88f2c88",
+      "population": "data/v3_1/target_fits/candidate/correction_07_s2048/population.npz",
+      "population_sha256": "2b811644330b0b2a34715fef585e7b0b621e2bba9c0e0a4189cde096d1e598f3",
+      "parameters": [
+        [
+          -0.053264591172782635,
+          0.15504089765168375
+        ],
+        [
+          0.043923387252416186,
+          0.9421002163019652
+        ],
+        [
+          0.09633476811839004,
+          0.17708679672347158
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_07_s2048/joint_counts/complete.json",
+      "counts_sha256": "b02dd6e25e98a458f54ca45538bab776a28ef9124056a71f1bff6ba4a879218f",
+      "counts_passed": true,
+      "log_evidence": -59570.129620662316
+    },
+    {
+      "correction": 8,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_08_s2048/complete.json",
+      "fit_sha256": "ac80ad0b6acc7e12d838d3259cacc14cf0c29ce3637dba2f416ecbff2eb54bc6",
+      "population": "data/v3_1/target_fits/candidate/correction_08_s2048/population.npz",
+      "population_sha256": "590b4e4b32cf3bf67f5eed21d798b9731690b05bec9f3d67a973b29397c1e63b",
+      "parameters": [
+        [
+          -0.05628582388713037,
+          0.1353963609966788
+        ],
+        [
+          0.03668804359909947,
+          0.7985569151484708
+        ],
+        [
+          0.10860746876881547,
+          0.18040706980121757
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_08_s2048/joint_counts/complete.json",
+      "counts_sha256": "1cc80a1abc5d35cfd5e93a3ddc68d581a98f1b7361b7dc74b5a53f1d2b1d5f0d",
+      "counts_passed": true,
+      "log_evidence": -59571.838810468325
+    },
+    {
+      "correction": 9,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_09_s2048/complete.json",
+      "fit_sha256": "5e095733461935ea5eef557d2901dd6f3fb1a49b5957331cb5443d5f41895b79",
+      "population": "data/v3_1/target_fits/candidate/correction_09_s2048/population.npz",
+      "population_sha256": "5c2713caf46817d3d98d8726e1ba2c3398c1f6a9fe4bc70d8c1d1bd9cfc9838d",
+      "parameters": [
+        [
+          -0.054350582671803566,
+          0.1484708324635957
+        ],
+        [
+          0.034934242832354,
+          0.9297574570347443
+        ],
+        [
+          0.09584775529888201,
+          0.18081167751363061
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_09_s2048/joint_counts/complete.json",
+      "counts_sha256": "a9a4a7f33e2bc3272e9c0e88cc3a32670e40156b906aeb2bfad3b085b1650203",
+      "counts_passed": true,
+      "log_evidence": -59570.68473343717
+    },
+    {
+      "correction": 10,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_10_s2048/complete.json",
+      "fit_sha256": "362be6dc06a80958122ea753d482709a9c1da604ff64aea8332acac910f9befa",
+      "population": "data/v3_1/target_fits/candidate/correction_10_s2048/population.npz",
+      "population_sha256": "f32828c88ad2d98724ea78affb248e24793038c32fcb8b105b0357e5942d941b",
+      "parameters": [
+        [
+          -0.05326458643700936,
+          0.15615762938104918
+        ],
+        [
+          0.045026977468648116,
+          0.8657806095557772
+        ],
+        [
+          0.10687182511681703,
+          0.17033795257915044
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_10_s2048/joint_counts/complete.json",
+      "counts_sha256": "a27ef5748fc1c09b3c89d04587e01da4bfb72a802114d460fa6637c837782033",
+      "counts_passed": true,
+      "log_evidence": -59570.19358108003
+    },
+    {
+      "correction": 11,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_11_s2048/complete.json",
+      "fit_sha256": "8653e32cb21c6bf9cf1d9a6150f073af06dc0c71aad88f1a8692ff1fa1699661",
+      "population": "data/v3_1/target_fits/candidate/correction_11_s2048/population.npz",
+      "population_sha256": "0ae0ee4040f6366969a3c4138f5fb5aea44582b788859eda3991db677b7d77fd",
+      "parameters": [
+        [
+          -0.05333638127070835,
+          0.15482452644630976
+        ],
+        [
+          0.04390866718281525,
+          0.9291846984622653
+        ],
+        [
+          0.09787382988379284,
+          0.17635767982880704
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_11_s2048/joint_counts/complete.json",
+      "counts_sha256": "f065077d25b8f95c30bdda2b1482b95fccecefc5de1c1a30938198814bf49641",
+      "counts_passed": true,
+      "log_evidence": -59570.18803206063
+    },
+    {
+      "correction": 12,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_12_s2048/complete.json",
+      "fit_sha256": "8cdf2061d2dbc89638c356aac53ab360808b4c66d54129689d7fc8e2f0c0482e",
+      "population": "data/v3_1/target_fits/candidate/correction_12_s2048/population.npz",
+      "population_sha256": "977a25a82de3fab865a7f3e6597e0bf97f65bb4efeadf38d77041ece3935294d",
+      "parameters": [
+        [
+          -0.055810445211744615,
+          0.13824524629832124
+        ],
+        [
+          0.03389873276061562,
+          0.8567116193046643
+        ],
+        [
+          0.10187351260230167,
+          0.18332927269209084
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_12_s2048/joint_counts/complete.json",
+      "counts_sha256": "4d7ce35867065335661d086e7437f5ffb424af93e9041e5f54d8dc49d2ec4452",
+      "counts_passed": true,
+      "log_evidence": -59571.52112898371
+    },
+    {
+      "correction": 13,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_13_s2048/complete.json",
+      "fit_sha256": "093065e47c02d56cc75b5e5be78b03b3ad0f364710c7efcda388485ea2ed7d7b",
+      "population": "data/v3_1/target_fits/candidate/correction_13_s2048/population.npz",
+      "population_sha256": "67834b6c407815d37486ac9974539189cc3074027d9663b76f7be8b6bdb04f0f",
+      "parameters": [
+        [
+          -0.058266012999739596,
+          0.09117941772609704
+        ],
+        [
+          0.16499737484352542,
+          0.0
+        ],
+        [
+          0.14111491242174132,
+          0.1775996012170031
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_13_s2048/joint_counts/complete.json",
+      "counts_sha256": "9ce9654be411e505577b667436d4ca2c3ff3ab4c1f5f7c3d3a87181f535ebe41",
+      "counts_passed": true,
+      "log_evidence": -59574.25708975785
+    },
+    {
+      "correction": 14,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_14_s2048/complete.json",
+      "fit_sha256": "56c2eaab07e4a46e7da491c248568f84d5d93eec5fc9787bf7e0c1976ff2b8b6",
+      "population": "data/v3_1/target_fits/candidate/correction_14_s2048/population.npz",
+      "population_sha256": "976e1479d00137e9b3f092966e0d86437448fb5430dc5ad7eb13ee348f3b9bb5",
+      "parameters": [
+        [
+          -0.05653574564986724,
+          0.12790150263914216
+        ],
+        [
+          0.029950547417673678,
+          0.8611691702187299
+        ],
+        [
+          0.09691510323523311,
+          0.19331717621789282
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_14_s2048/joint_counts/complete.json",
+      "counts_sha256": "c50d9c21752e9777208cfa9e64c3a94006925b9be9bea054d16a9b4e8bb81ad3",
+      "counts_passed": true,
+      "log_evidence": -59572.04728265326
+    },
+    {
+      "correction": 15,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_15_s2048/complete.json",
+      "fit_sha256": "64282e806856dc78cb343bc5afd8efbff6470933e548a1cea0eeb3ae6dd49b41",
+      "population": "data/v3_1/target_fits/candidate/correction_15_s2048/population.npz",
+      "population_sha256": "0739de69d0205b9ee7f78a703489be04ba7035dd55e77e95033273c86779a7cb",
+      "parameters": [
+        [
+          -0.05305216797536888,
+          0.15638296489973774
+        ],
+        [
+          0.044514687708201384,
+          0.929888200678695
+        ],
+        [
+          0.09821221151443521,
+          0.17541122484775856
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_15_s2048/joint_counts/complete.json",
+      "counts_sha256": "9afc1b1b719340104149d21d156a697cd068d883eec995b79b3defcf0eda8b84",
+      "counts_passed": true,
+      "log_evidence": -59570.05223495157
+    },
+    {
+      "correction": 16,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_16_s2048/complete.json",
+      "fit_sha256": "2b7523058fd426e2f5fa9cb61d44e77347695b4fa31c4568d6bb1cffc65dc963",
+      "population": "data/v3_1/target_fits/candidate/correction_16_s2048/population.npz",
+      "population_sha256": "a7c8ead0c46ed7fba57c2bc7ca6819ecf4726aac2e37e7a41df27b87c2ab0974",
+      "parameters": [
+        [
+          -0.05880618962156636,
+          0.11118307900701019
+        ],
+        [
+          0.1520789280250193,
+          0.0
+        ],
+        [
+          0.1492292111301976,
+          0.15617011624914953
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_16_s2048/joint_counts/complete.json",
+      "counts_sha256": "3224f05d66c57a0e147288eb2c3bd29b3d3de10846410610d0e6c06fb7330a03",
+      "counts_passed": true,
+      "log_evidence": -59573.87369974824
+    },
+    {
+      "correction": 17,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_17_s2048/complete.json",
+      "fit_sha256": "bb1cae0ce8f397a576c9a5d92fcfdb162ea6a7353f0f73f3630c8e9ea160f23d",
+      "population": "data/v3_1/target_fits/candidate/correction_17_s2048/population.npz",
+      "population_sha256": "afcea910e26cc7e1be2f1fcf646f22f38b905f21fc2fa571385d7bbc47be59e9",
+      "parameters": [
+        [
+          -0.052957993825844256,
+          0.1566691802378971
+        ],
+        [
+          0.04459741677029126,
+          0.946424008204152
+        ],
+        [
+          0.09623927458678473,
+          0.17633720927138613
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_17_s2048/joint_counts/complete.json",
+      "counts_sha256": "df7a389e3486b3e21cd22e35173ef8e432a57066e164cb25e3cc3697a00f986e",
+      "counts_passed": true,
+      "log_evidence": -59569.97499903509
+    },
+    {
+      "correction": 18,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_18_s2048/complete.json",
+      "fit_sha256": "b1b707c061cc9f910edbe1485713134ab30b91c39afbe16baae1b3a23f1d586a",
+      "population": "data/v3_1/target_fits/candidate/correction_18_s2048/population.npz",
+      "population_sha256": "7501cf22bc590ea7085e65b902ddb4c8b4bd6fa19ec5cb64b6bcbb83224e30c6",
+      "parameters": [
+        [
+          -0.053166019145785656,
+          0.15560625148716042
+        ],
+        [
+          0.04416265205534229,
+          0.9410666505185022
+        ],
+        [
+          0.09661530150938659,
+          0.17665404499177093
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_18_s2048/joint_counts/complete.json",
+      "counts_sha256": "374353ff9e73930b025d2922eb35fa651e3dd51664260f655c5098005f5d8d2a",
+      "counts_passed": true,
+      "log_evidence": -59570.085984183315
+    },
+    {
+      "correction": 19,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_19_s2048/complete.json",
+      "fit_sha256": "bddd42ccf32fe3aa7e176379b75b0195e9b6979c221aa9884499607df3462c43",
+      "population": "data/v3_1/target_fits/candidate/correction_19_s2048/population.npz",
+      "population_sha256": "40efd7ab7578b745764449f3d16892e231b553f6a4227bfe50050aa3797d5dbc",
+      "parameters": [
+        [
+          -0.054218241326220114,
+          0.1510442119897861
+        ],
+        [
+          0.03805262933416493,
+          0.8450529550141942
+        ],
+        [
+          0.10800957419319175,
+          0.17206668473354877
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_19_s2048/joint_counts/complete.json",
+      "counts_sha256": "8e06172eeee67a33d30945d407059958d4cccd9cdae16c5de05f499b04a0adae",
+      "counts_passed": true,
+      "log_evidence": -59570.66701239146
+    },
+    {
+      "correction": 20,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_20_s2048/complete.json",
+      "fit_sha256": "5c2b6ee6dd3bc12445bec0e6d1b0c967c4c4cd02ce00df03a82612498e4a7fab",
+      "population": "data/v3_1/target_fits/candidate/correction_20_s2048/population.npz",
+      "population_sha256": "8019ca44f6bce0a65fddb3b02b0d6e9b631d219746d9fbfe01574e25865edb66",
+      "parameters": [
+        [
+          -0.07270592511040444,
+          0.11628655643355103
+        ],
+        [
+          0.14000000100188328,
+          3.905319329609428e-09
+        ],
+        [
+          0.39592472804342616,
+          0.0
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_20_s2048/joint_counts/complete.json",
+      "counts_sha256": "61a76d3cbf15805edd5b521b8695024313e9c0a886667020908ac3c4bfe29679",
+      "counts_passed": true,
+      "log_evidence": -59580.09590507817
+    },
+    {
+      "correction": 21,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_21_s2048/complete.json",
+      "fit_sha256": "bc80c62429c4f21bf4a54a23b69c67a544b2884d7ec6238fe05dab7f54e297c6",
+      "population": "data/v3_1/target_fits/candidate/correction_21_s2048/population.npz",
+      "population_sha256": "f44f99133feb63918fbffd0d7d43eae6c6c6338cb4980e98d5fba4dd035d03b6",
+      "parameters": [
+        [
+          -0.055531183295135664,
+          0.14095879229320962
+        ],
+        [
+          0.03472276289080942,
+          0.8575993661450061
+        ],
+        [
+          0.10277860248944444,
+          0.18106030181376329
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_21_s2048/joint_counts/complete.json",
+      "counts_sha256": "a2bd96413ccfff24510bde19d047b78d7c54363ccea47c521c386bd6eb2dfe99",
+      "counts_passed": true,
+      "log_evidence": -59571.40240547164
+    },
+    {
+      "correction": 22,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_22_s2048/complete.json",
+      "fit_sha256": "b68232417205fe8980f00a37efb062366fef4309e4423842ffc26d7ae430ff8c",
+      "population": "data/v3_1/target_fits/candidate/correction_22_s2048/population.npz",
+      "population_sha256": "0da892d722940e00a1b59662a8cc1f82bf7f9c925435d064fc5cd4cef0c69552",
+      "parameters": [
+        [
+          -0.0535131000912209,
+          0.15467572549748368
+        ],
+        [
+          0.04449582439857386,
+          0.874269470724123
+        ],
+        [
+          0.10526768925276801,
+          0.1720586027276962
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_22_s2048/joint_counts/complete.json",
+      "counts_sha256": "3d29f07938d4a8ed6f4e7544637f9ea9c7c030dda9e1d4900774821ca4ae1f36",
+      "counts_passed": true,
+      "log_evidence": -59570.32344569475
+    },
+    {
+      "correction": 23,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_23_s2048/complete.json",
+      "fit_sha256": "19f28cdf6bc78e1e06ceb382f75225312987bd5aa6b29f515b89764ad81638c6",
+      "population": "data/v3_1/target_fits/candidate/correction_23_s2048/population.npz",
+      "population_sha256": "8e8f89a41f23d755bbecdd584897061a343bfc15ea4c68e3df21570cf21c4549",
+      "parameters": [
+        [
+          -0.05596466637531567,
+          0.13507191260112908
+        ],
+        [
+          0.03067125191961088,
+          0.8915308672515037
+        ],
+        [
+          0.09601021670506853,
+          0.18890048882058075
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_23_s2048/joint_counts/complete.json",
+      "counts_sha256": "4837a6755575dde4567fc02d03a29778111086196443913e79dd2b844a44bccc",
+      "counts_passed": true,
+      "log_evidence": -59571.6177257733
+    },
+    {
+      "correction": 24,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_24_s2048/complete.json",
+      "fit_sha256": "f485c2aefad5f01ef4aaea7f3fa335173d4a8b2c076290306bf7914261a51010",
+      "population": "data/v3_1/target_fits/candidate/correction_24_s2048/population.npz",
+      "population_sha256": "9e0fd79b97b8369654f807c9a0d6e26c27613c6fa9860095b06114c406c4455a",
+      "parameters": [
+        [
+          -0.05503271868066621,
+          0.1483001182238288
+        ],
+        [
+          0.04728562791273262,
+          0.7390647020998365
+        ],
+        [
+          0.123064436374647,
+          0.16333022551155782
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_24_s2048/joint_counts/complete.json",
+      "counts_sha256": "b73d0d2b60c4f565c5880575d9ca1e5b6c1fac53e0fa0c2bcb4f2080dcc08cf0",
+      "counts_passed": true,
+      "log_evidence": -59571.17735088145
+    },
+    {
+      "correction": 25,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_25_s2048/complete.json",
+      "fit_sha256": "7a2c917ed95e71a6769af0de0dbedd607a96d244def1d9581d036ea6b6c638c4",
+      "population": "data/v3_1/target_fits/candidate/correction_25_s2048/population.npz",
+      "population_sha256": "b266414d4abd5a58e2d86ab6c51f7251abc2447f5830b46b4b6088542c0e6226",
+      "parameters": [
+        [
+          -0.05434265482772044,
+          0.14860742653425657
+        ],
+        [
+          0.041386807295405115,
+          0.9266824992216217
+        ],
+        [
+          0.09638072373839343,
+          0.180437214251819
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_25_s2048/joint_counts/complete.json",
+      "counts_sha256": "7dd21e5b9bcc80f6ca50614d9b1113c78477bfb20b04902861b00c542381577e",
+      "counts_passed": true,
+      "log_evidence": -59570.67836881257
+    },
+    {
+      "correction": 26,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_26_s2048/complete.json",
+      "fit_sha256": "04fdc70b765218dc923b44902d327dd6e5ecf2efcba6db45457eacc6d1b18952",
+      "population": "data/v3_1/target_fits/candidate/correction_26_s2048/population.npz",
+      "population_sha256": "9136a2770fb987a248293da97d162de2353f2a82e101d9ce276b1e47f9142e49",
+      "parameters": [
+        [
+          -0.052880287968799226,
+          0.15709506560238382
+        ],
+        [
+          0.04477405307470418,
+          0.9456245803024262
+        ],
+        [
+          0.09644993896040958,
+          0.1760174934787068
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_26_s2048/joint_counts/complete.json",
+      "counts_sha256": "6c236f6604472ccf944891bc4d69318e62482ce99251176dfe92f207ec61e7ba",
+      "counts_passed": true,
+      "log_evidence": -59569.9343809481
+    },
+    {
+      "correction": 27,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_27_s2048/complete.json",
+      "fit_sha256": "9a5f602f85a05010d9ff3a1091fdf13f76c5eb1dbb1a17a9bce3d2bac03649e5",
+      "population": "data/v3_1/target_fits/candidate/correction_27_s2048/population.npz",
+      "population_sha256": "c2203849b9c619f39189e8237635aff812278954d42b1e0c46c5f1e2a0c9972f",
+      "parameters": [
+        [
+          -0.05705528714338514,
+          0.11144010509311666
+        ],
+        [
+          0.030009445195560255,
+          0.8089386943977479
+        ],
+        [
+          0.09598390911893499,
+          0.20657414967349436
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_27_s2048/joint_counts/complete.json",
+      "counts_sha256": "133e70a292d464822efdce2e2da945c322db0c11e491225511a2d668cc7726de",
+      "counts_passed": true,
+      "log_evidence": -59572.740469823635
+    },
+    {
+      "correction": 28,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_28_s2048/complete.json",
+      "fit_sha256": "0a13f85f06c6e0cd22ae8e942d0018f086be535bcfbabb07f6ad617bf8d59dc1",
+      "population": "data/v3_1/target_fits/candidate/correction_28_s2048/population.npz",
+      "population_sha256": "273db188aa595237c5fa2a6f7c391980e572f5ec7b79bbe0f1a817308d221cb1",
+      "parameters": [
+        [
+          -0.05538190467256887,
+          0.14253536408664738
+        ],
+        [
+          0.03558184541335763,
+          0.8497021880448187
+        ],
+        [
+          0.10441521822566317,
+          0.17902761295843025
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_28_s2048/joint_counts/complete.json",
+      "counts_sha256": "8f1c604142b4a0668295139a6dadfbc0af7819a47d81659ad5d57e088bc02c10",
+      "counts_passed": true,
+      "log_evidence": -59571.28881411456
+    },
+    {
+      "correction": 29,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_29_s2048/complete.json",
+      "fit_sha256": "ed3dc4f4b414e41debd2ea214b23b4e554985e855d99d3ebbd0c77c16269e810",
+      "population": "data/v3_1/target_fits/candidate/correction_29_s2048/population.npz",
+      "population_sha256": "3e209858c3faf1a01ebb81909adecd28e479279e3fa701fc7ab17a65b00bd62d",
+      "parameters": [
+        [
+          -0.05507973155562882,
+          0.14468675096619749
+        ],
+        [
+          0.035721970238772265,
+          0.861257143590529
+        ],
+        [
+          0.10363801507081559,
+          0.17832194950006844
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_29_s2048/joint_counts/complete.json",
+      "counts_sha256": "225d4ce7ca80e44433a6b6293247fd15a55601c1ad0247b23eb5f4e85e943209",
+      "counts_passed": true,
+      "log_evidence": -59571.12908719471
+    },
+    {
+      "correction": 30,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_30_s2048/complete.json",
+      "fit_sha256": "d71add6c2e650fa04f99d9728454383662131d3102145398c9dbf22193df737b",
+      "population": "data/v3_1/target_fits/candidate/correction_30_s2048/population.npz",
+      "population_sha256": "a998638c4adfe80fc34e480cff4fc0488cb63323a4f8b8379fefa4da2de3a25b",
+      "parameters": [
+        [
+          -0.05495411348795706,
+          0.1468552312090121
+        ],
+        [
+          0.044225439235639694,
+          0.8151014709009475
+        ],
+        [
+          0.11087033459070493,
+          0.17231946818187563
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_30_s2048/joint_counts/complete.json",
+      "counts_sha256": "e5a3cc923c01c9a8c271b53ed59965cb3b043bb298f350156607597b330fb36b",
+      "counts_passed": true,
+      "log_evidence": -59571.05781728954
+    },
+    {
+      "correction": 31,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_31_s2048/complete.json",
+      "fit_sha256": "e20ae9fa3eacb3b2def64aae65792c7220dd50b56752d57059ecfa58e5224683",
+      "population": "data/v3_1/target_fits/candidate/correction_31_s2048/population.npz",
+      "population_sha256": "6292aea3963ff8da3b682d72a037bc2e8549ff95f79b64b74142598aad9fd7ec",
+      "parameters": [
+        [
+          -0.055477123477316724,
+          0.14041778110054728
+        ],
+        [
+          0.03296087653610369,
+          0.8898436918914309
+        ],
+        [
+          0.09814850593140813,
+          0.184202747936657
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_31_s2048/joint_counts/complete.json",
+      "counts_sha256": "27f6582a2707a36ae3751a832042087959d551d0316eca3173fed1807c79199b",
+      "counts_passed": true,
+      "log_evidence": -59571.28971203077
+    },
+    {
+      "correction": 32,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_32_s2048/complete.json",
+      "fit_sha256": "b6531137a1b1a8b68256b694c9f7b29aa43b20a33227df27cec9b46b84c6e148",
+      "population": "data/v3_1/target_fits/candidate/correction_32_s2048/population.npz",
+      "population_sha256": "0715752e945997c0543fcfaa3bc137a555da53c0ecf1248a58abbb69e37caeea",
+      "parameters": [
+        [
+          -0.05451841676277663,
+          0.15025095069902675
+        ],
+        [
+          0.04552175496101448,
+          0.7946384613789217
+        ],
+        [
+          0.11503512366200466,
+          0.16785868223184208
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_32_s2048/joint_counts/complete.json",
+      "counts_sha256": "d7dc9efd829d13f3b48f7d1f8b1c312e46934e9f8bc5f6d6a2068caa360f03a9",
+      "counts_passed": true,
+      "log_evidence": -59570.854387877436
+    },
+    {
+      "correction": 33,
+      "draws": 2048,
+      "passed": true,
+      "fit": "data/v3_1/target_fits/candidate/correction_33_s2048/complete.json",
+      "fit_sha256": "c6bbe16fdb0f4cf3438a1a3d1e256aeb117c7a4655a61c980845b94d4c7b653f",
+      "population": "data/v3_1/target_fits/candidate/correction_33_s2048/population.npz",
+      "population_sha256": "450908e570f596c2b67a0b0461370a6b5b563b1f54fb3b67ab74832aa9b75851",
+      "parameters": [
+        [
+          -0.05370605994446039,
+          0.15250210702302133
+        ],
+        [
+          0.04286454247845753,
+          0.9391613429018046
+        ],
+        [
+          0.09599112325739917,
+          0.17856758373028536
+        ]
+      ],
+      "sampler_passed": true,
+      "bridge_passed": true,
+      "counts": "data/v3_1/target_fits/candidate/correction_33_s2048/joint_counts/complete.json",
+      "counts_sha256": "5e15483bd98848e0781b6d4ec3ea69b54355b6415a71b00554e80b90374199bb",
+      "counts_passed": true,
+      "log_evidence": -59570.37567903197
+    }
+  ],
+  "response_draw": 12,
+  "calibration_draw": 12,
+  "within_class_tilts": false,
+  "main_final_candidate_case": "candidate",
+  "main_view": "bootstrap_evidence",
+  "references_read": false
+}

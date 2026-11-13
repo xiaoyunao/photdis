@@ -1,0 +1,9 @@
+identity,TYPE,role,assigned_field,existing_target_field,selected_step,numerical_passed,inherited_ensemble_accepted
+4665629437572389888,PSF,new_sky_field,10128,False,0.01,True,False
+4028223271136485504,PSF,new_source_seen_sky_field,10318,False,0.01,True,False
+2433834580823208064,PSF,new_source_seen_sky_field,10637,False,0.01,True,False
+4703899657763431680,PSF,new_sky_field,10020,False,0.01,True,False
+1231202132595122816,PSF,new_source_seen_sky_field,10388,False,0.01,True,False
+6380044798607563392,PSF,new_sky_field,10631,False,0.01,True,False
+3868330400439505536,PSF,new_source_seen_sky_field,10298,False,0.01,True,False
+1231517211395989248,PSF,new_source_seen_sky_field,10388,False,0.01,True,False

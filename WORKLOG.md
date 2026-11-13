@@ -1,5 +1,34 @@
 # WORKLOG
 
+## 2026-11-13 — complete candidate ensemble, fixed-highq counts and prediction pilots
+- All34candidate conditional states pass at2048retained; all512attempts preserved.
+  Ensemble61225884 COMPLETED18s, 3540nativePSF. Main finite-bootstrap ESS21.17325,
+  maxweight.07015244; mainqnear>.95 selects3003. Zero/point/evidence remain
+  acceptedFalse: independent-entry-seed absolute logZ shifts.249818/.248581/
+  .248538 exceed frozen.05gate. Main weight/probability/count sensitivities pass;
+  previous-level/nativefine pass. Equal-weight cut is not substituted as main.
+- Fixed3003-ID highq jointcounts61226224 COMPLETED6m17, all34states/fourviews;
+  main expectedfar8.00304/3003=.266502%, realized95%farcount[3,15]. This is
+  model leakage, not independently measured contamination. Main inherits failed
+  ensemble flag. MC CDF half discrepancies retained, not a precision guarantee.
+- External8-ID field/common pilots61226222/61226223 COMPLETED30s/24s, both
+  numericalpass; allPSF, references unopened, inherited ensembleacceptedFalse.
+  Checked unchanged hashed source files/no active targetwriter; full526/3032
+  predictions submitted61226370/61226371debug30min, workers32. Reuse exactpilot
+  checkpoints/sharedfield assignments; no pilot mistaken for fullvalidation.
+  Existingbroadgroups61225864_0/_1 promoteddebug30min afterfullqueuecheck;
+  samejob/checkpoints, no duplicatewriter.
+- Added authenticated compact-table renderer and twoEnglish PNG300dpi/PDF plates
+  (sevenpanels), individually visually inspected.138actual hash/format/source-row
+  checks pass; acceptance.json distinct from scientific acceptance. Collector
+  now supports original pilot_complete.json marker without renaming it complete.
+- Commands: v3_1_collect.py target_ensemble/candidate, highq_counts andbothpilots;
+  v3_1_target_candidate_figures.py; source/PDF/PNG acceptance checks. Latest160
+  scientific tests remainpassed; new render/collector syntax checked separately.
+- Remaining: fullpredictions/once-onlyreferencefreeze/scoring, otherpopulation
+  cohorts, radial/64response/structure outcomes andfinaldomain adjudication.
+  Absoluteevidence failure and limitedfinite support remain explicit.
+
 ## 2026-11-13 — register product-matched observable-cell reference screens
 - Added domainassessment protocol/math/driver beforefinaltest opening: sameIDs,
   frozen75cells/candidate membership, mainbootstrap_evidence versuscandidatezero,

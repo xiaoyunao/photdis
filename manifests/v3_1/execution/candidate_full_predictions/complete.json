@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "cohort": "field",
+      "job": "61226370",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "debug",
+        "-t",
+        "00:30:00",
+        "scripts/run_v3_1_validation_target.sh",
+        "--cohort",
+        "field",
+        "--case",
+        "candidate",
+        "--workers",
+        "32"
+      ],
+      "pilot_sha256": "c3a2c8e32e3e462820ee83a9d278aec3fa93d23c053aa565adbf5a692b988e21"
+    },
+    {
+      "cohort": "common",
+      "job": "61226371",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-q",
+        "debug",
+        "-t",
+        "00:30:00",
+        "scripts/run_v3_1_validation_target.sh",
+        "--cohort",
+        "common",
+        "--case",
+        "candidate",
+        "--workers",
+        "32"
+      ],
+      "pilot_sha256": "bb949aa21009e2161f5fec7f2b89da5994e839c059a57055a65a3eff9f0e3a85"
+    }
+  ],
+  "references_opened": false,
+  "execution_complete": false,
+  "inherited_ensemble_accepted": false
+}
