@@ -1,5 +1,28 @@
 # WORKLOG
 
+## 2026-11-13 — freeze all final predictions and implement exact candidate modes
+- Freeze61226412 COMPLETED5m33/0:0:53725artifacts, all3558objects andnineviews
+  authenticated beforeoutcomeopening. 8.52MBinventory retainedNERSC; localreceipt
+  records SHA256/counts/UTC/fullprediction-family statuses. Maincandidate inherited
+  ensembleacceptedFalse remains. Promotedexistingfield evidence61226762 todebug30min
+  afterfullqueue inspection; jobstartednid004346, samefrozenrules/dependencies.
+- Implemented candidate_modes.py math anddriver: same3540/fixed3003identities,
+  all34state inventory/main32weights, eachpopulationdraw normalized separately;
+  exactshift/convolution adjoint integrates everybasin overbinary/kernel/class.
+  Saves fullPDFs/coefficient arrays/jointresponsibilities, originalandrefinedlevels,
+  fullparent distributions, overlapping significantmode descriptors andallweakbasins.
+- Numericalchecks: reproductionoforiginalprobabilities<.003; probability/quantile
+  changes<.003/.03; samefine-basin componentchange<.003; conservation1e-8 andstable
+  significantmodecount. Fullgrid02/01/005/0025bounded; failedoutcomes retained.
+  Explicitforward-component tests includingdeep−20000loglikelihood pass; 173tests
+  pass5.57s. Syntax/shellchecks pass. Actual8-IDpilot/fullscientificrun stillpending.
+- Newprogramdoesnotedit frozenfinalevaluators/model/protocol inputs. Calibration
+  vectorsexactlycheckedagainstoriginalapplicationdraw12 sharedsystem beforework.
+- Collectedbroad8–11conditionalstates: allpass2048; original512countfailures
+  retained. Broad0–11plus32/33havefinished, remainingstates stillrequired.
+- Next: execute candidatepilot/fullinventory, finalexternal scores andremaining
+  broad/holdout/radial/64SED/structure science; no scientificcalibration passyet.
+
 ## 2026-11-13 — finish all candidate external predictions and improve queued allocations
 - Commoncandidate61226371 COMPLETED23m53: all3032nativePSF numericalpass,
   fullmarker/summary collected; inheritedensembleacceptedFalse remains. Together

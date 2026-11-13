@@ -1,0 +1,62 @@
+{
+  "path": "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/final_validation/freeze.json",
+  "size": 8521217,
+  "sha256": "a677031d25b10b4575f3afe2d0627fe6c42d212cda7bb58fcab696b7e91314cc",
+  "hashed_artifacts": 53725,
+  "predictions": [
+    {
+      "cohort": "field",
+      "family": "reference",
+      "n": 526,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_reference_refinement/field/complete.json",
+      "inherited_ensemble_accepted": null
+    },
+    {
+      "cohort": "field",
+      "family": "old_target",
+      "n": 526,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_old_target/field/complete.json",
+      "inherited_ensemble_accepted": null
+    },
+    {
+      "cohort": "field",
+      "family": "candidate",
+      "n": 526,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_target/candidate/field/complete.json",
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "cohort": "common",
+      "family": "reference",
+      "n": 3032,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_reference_refinement/common/complete.json",
+      "inherited_ensemble_accepted": null
+    },
+    {
+      "cohort": "common",
+      "family": "old_target",
+      "n": 3032,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_old_target/common/complete.json",
+      "inherited_ensemble_accepted": null
+    },
+    {
+      "cohort": "common",
+      "family": "candidate",
+      "n": 3032,
+      "numerical_passed": true,
+      "marker": "data/v3_1/validation_target/candidate/common/complete.json",
+      "inherited_ensemble_accepted": false
+    }
+  ],
+  "predictions_frozen": true,
+  "outcomes_opened_at_freeze": false,
+  "utc": "2026-11-13T14:42:25.891293+00:00",
+  "job": "61226412",
+  "main_identity": "candidate/response12/calibration12/beta0/bootstrap_evidence",
+  "slurm": "61226412      COMPLETED   00:05:33      0:0 \n"
+}

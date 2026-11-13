@@ -37,7 +37,7 @@ Negative findings remain deliverables, never successful calibration claims.
   All34candidate states pass2048; ensemble61225884 completes18s. MainESS21.17325,
   maxstateweight.07015244; acceptedFalse because seed absolute logZdelta.248538
   exceeds.05. Probability/count/weight sensitivity gates pass; do not replace
-  mainwithcut orrelax evidence gate. Broad0–7conditionalstatespass2048;
+  mainwithcut orrelax evidence gate. Broad0–11conditionalstatespass2048;
   original512failures retained. Otherbroad/holdout states/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
@@ -56,27 +56,30 @@ Negative findings remain deliverables, never successful calibration claims.
   seen-sky field and3032NGC1261common-scale PSF objects. Only9precisedistances in
   strictnewsky; no new far-field precision evidence. All3558reference-prior
   numerical sidecars pass:field526at.01;common2998at.01/26at.005/8at.0025.
-  Originalflags retained. Referenceoutcomes remainunopened; final target-prior
+  Originalflags retained. Allpredictionfreeze61226412 COMPLETED5m33/53725artifacts; fieldreference
+  association61226762 nowrunningdebug30min underimmutablefreeze; final target-prior
   identity computed withretained numericalflag. Both8-ID targetprediction pilots
   numericalpass; fullfield61226370 completes4m28, all526numericalpass; fullcommon
   61226371 completes23m53, all3032numericalpass; originalensembleflagretained.
-  Sharedfield checkpointreuse verified; freeze61226412 waitsafterokfullfield/common
-  andoldtargetcommon; freeze again debug30min afterbroadgroup0completion freedslot. No evidence association yet; fullpredictions/freeze stillrequired before scoring. Oldtargetfield61222759 completes526objects/allpass;
+  Sharedfield checkpointreuse verified. Freeze61226412 complete; evidenceassociation
+  startsinfieldjob61226762; scoresrequireactualcompletedassociation. Oldtargetfield
+  61222759 completes526objects/allpass;
   common61224421 completes22m43, all3032pass. Finalfreeze/evidence/nine-view score drivers andprotocol
   nowimplemented with exactidentity/hash closure and actual saved-resolution tail
   checks. Dependency-gated evidence61226762/64,score61226763/70,report61226775,
-  domainavailability61226776/relativescreens61226777 submitted; notyetexecuted. Shared-scale/sky aggregate report nowimplemented; strict
+  domainavailability61226776/relativescreens61226777 submitted; dependentexecutionpending. Shared-scale/sky aggregate report nowimplemented; strict
   candidate admission/primary versusoutside-domain report protocol added, exact
   application3540mask reproduced by61224943(20s). Field519/526 andcommon1732/3032
   in samecandidate domain; others retained outside-domain. Same-ID MWS/VAC channel
-  association/scoring implemented, but allfinalevidence/scoring/report execution
-  stillwaits for matching fullcandidate predictions andfreeze.
+  association/scoring implemented; fieldassociationrunning, commonassociation
+  andnine-view scoring/report stillpending.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
   unchanged32bootstrap identity, exactadjoint luminosity integration; pilot8thenfull.
-  Exactluminosity-adjointmath nowimplemented/10tests pass; populationmode driver,
-  actual8-IDpilot/fullproducts andmodefigures remainpending.
+  Exactluminosity-adjoint andpopulationmode driver implemented;173fulltests pass.
+  Explicitforward-component/deep-log tests pass; actual8-IDpilot/fullproducts
+  andmodefigures remainpending.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
