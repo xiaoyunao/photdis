@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "stage": "assemble",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61231239:61223167:61223172_1:61229422",
+        "scripts/run_v3_1_structure_assemble.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232760\n",
+      "stderr": "",
+      "job": "61232760"
+    },
+    {
+      "stage": "infer",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61232760",
+        "scripts/run_v3_1_structure_infer.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232761\n",
+      "stderr": "",
+      "job": "61232761"
+    },
+    {
+      "stage": "report",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61232761",
+        "scripts/run_v3_1_structure_report.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232762\n",
+      "stderr": "",
+      "job": "61232762"
+    }
+  ],
+  "outputs": {
+    "submission.json": "f9c47ec681e6c68340e3c37aff6dd29061b534fe0162c58092826b03efcf1f5a"
+  },
+  "scope": "Existing frozen32state512object structure pipeline. Explicit surviving refinement child1, never canceled original array parent. Complete-state and numerical gates remain mandatory; submission is not completed science."
+}

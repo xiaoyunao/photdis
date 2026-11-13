@@ -1,0 +1,66 @@
+{
+  "source_commit": "025186e37efe87be2d37514d3c466deb54930c64",
+  "scientific_sources": {
+    "scripts/v3_1_structure_assemble.py": "6472663d231007b94ad567375f872d6e767e092e6511c10392647b2da47afc1b",
+    "scripts/v3_1_structure_infer.py": "a78e9a644edd931317acfb8b8bbb512193b4746843fdb0d41594dd328b1db4f7",
+    "scripts/v3_1_structure_report.py": "59f6f9bd89bcada1de47e95eb99476d840a7aa72374caed8c70ef7f45999cab5",
+    "scripts/run_v3_1_structure_assemble.sh": "c9684eb609d5d27a1a51ddb812faedae2baf18ea22ed3a1d2eb0842da3f2fbd1",
+    "scripts/run_v3_1_structure_infer.sh": "eca71775ff11502c3f57358a872be2f2510041a1f704c99c5de90869d4482637",
+    "scripts/run_v3_1_structure_report.sh": "7e6a0deed636ff40107c6c5e2ddde78096cb18a43c9ec5a9c6b97ca8c3ca08e9"
+  },
+  "queue_before": "61231239_2|PENDING|photdis_v3_1_structurenativegroup\n61231239_3|PENDING|photdis_v3_1_structurenativegroup\n61223167_4|PENDING|photdis_v3_1_structureentryall\n61225864_17|PENDING|photdis_v3_1_targetrefine\n61232648|PENDING|photdis_v3_1_broad23resume\n61231554_17|PENDING|photdis_v3_1_heldouttransfer\n61231554_18|PENDING|photdis_v3_1_heldouttransfer\n61231554_19|PENDING|photdis_v3_1_heldouttransfer\n61231554_20|PENDING|photdis_v3_1_heldouttransfer\n61231554_21|PENDING|photdis_v3_1_heldouttransfer\n61231554_22|PENDING|photdis_v3_1_heldouttransfer\n61231554_23|PENDING|photdis_v3_1_heldouttransfer\n61231554_24|PENDING|photdis_v3_1_heldouttransfer\n61231554_25|PENDING|photdis_v3_1_heldouttransfer\n61231554_16|PENDING|photdis_v3_1_heldouttransfer\n61231554_15|PENDING|photdis_v3_1_heldouttransfer\n61231554_14|PENDING|photdis_v3_1_heldouttransfer\n61231554_13|PENDING|photdis_v3_1_heldouttransfer\n61231554_12|PENDING|photdis_v3_1_heldouttransfer\n61231554_11|PENDING|photdis_v3_1_heldouttransfer\n61231678|PENDING|photdis_v3_1_heldoutreport\n61231554_10|PENDING|photdis_v3_1_heldouttransfer\n61231554_9|PENDING|photdis_v3_1_heldouttransfer\n61231554_8|PENDING|photdis_v3_1_heldouttransfer\n61231554_7|PENDING|photdis_v3_1_heldouttransfer\n61231554_6|PENDING|photdis_v3_1_heldouttransfer\n61231554_5|PENDING|photdis_v3_1_heldouttransfer\n61231554_4|PENDING|photdis_v3_1_heldouttransfer\n61231554_3|PENDING|photdis_v3_1_heldouttransfer\n61231554_2|PENDING|photdis_v3_1_heldouttransfer\n61231554_1|PENDING|photdis_v3_1_heldouttransfer\n61229422_12|PENDING|photdis_v3_1_structureentryresume\n61229422_13|PENDING|photdis_v3_1_structureentryresume\n61229422_14|PENDING|photdis_v3_1_structureentryresume\n61229422_15|PENDING|photdis_v3_1_structureentryresume\n61229422_16|PENDING|photdis_v3_1_structureentryresume\n61229422_17|PENDING|photdis_v3_1_structureentryresume\n61229422_18|PENDING|photdis_v3_1_structureentryresume\n61229422_19|PENDING|photdis_v3_1_structureentryresume\n61229422_20|PENDING|photdis_v3_1_structureentryresume\n61229422_21|PENDING|photdis_v3_1_structureentryresume\n61229422_22|PENDING|photdis_v3_1_structureentryresume\n61229422_23|PENDING|photdis_v3_1_structureentryresume\n61229422_24|PENDING|photdis_v3_1_structureentryresume\n61229422_25|PENDING|photdis_v3_1_structureentryresume\n61229422_26|PENDING|photdis_v3_1_structureentryresume\n61229422_27|PENDING|photdis_v3_1_structureentryresume\n61229422_28|PENDING|photdis_v3_1_structureentryresume\n61229422_29|PENDING|photdis_v3_1_structureentryresume\n61229422_30|PENDING|photdis_v3_1_structureentryresume\n61229422_31|PENDING|photdis_v3_1_structureentryresume\n61229422_11|PENDING|photdis_v3_1_structureentryresume\n61229422_10|PENDING|photdis_v3_1_structureentryresume\n61229422_9|PENDING|photdis_v3_1_structureentryresume\n61229422_8|PENDING|photdis_v3_1_structureentryresume\n61229422_7|PENDING|photdis_v3_1_structureentryresume\n61229422_6|PENDING|photdis_v3_1_structureentryresume\n61229422_5|PENDING|photdis_v3_1_structureentryresume\n61229422_4|PENDING|photdis_v3_1_structureentryresume\n61229422_3|PENDING|photdis_v3_1_structureentryresume\n61229422_2|PENDING|photdis_v3_1_structureentryresume\n61223167_31|PENDING|photdis_v3_1_structureentryall\n61223167_30|PENDING|photdis_v3_1_structureentryall\n61223167_29|PENDING|photdis_v3_1_structureentryall\n61223167_28|PENDING|photdis_v3_1_structureentryall\n61223167_27|PENDING|photdis_v3_1_structureentryall\n61223167_26|PENDING|photdis_v3_1_structureentryall\n61223167_25|PENDING|photdis_v3_1_structureentryall\n61223167_24|PENDING|photdis_v3_1_structureentryall\n61223167_23|PENDING|photdis_v3_1_structureentryall\n61223167_22|PENDING|photdis_v3_1_structureentryall\n61223167_21|PENDING|photdis_v3_1_structureentryall\n61223167_20|PENDING|photdis_v3_1_structureentryall\n61223167_19|PENDING|photdis_v3_1_structureentryall\n61223167_18|PENDING|photdis_v3_1_structureentryall\n61223167_17|PENDING|photdis_v3_1_structureentryall\n61223167_16|PENDING|photdis_v3_1_structureentryall\n61223167_15|PENDING|photdis_v3_1_structureentryall\n61223167_14|PENDING|photdis_v3_1_structureentryall\n61223167_13|PENDING|photdis_v3_1_structureentryall\n61223167_12|PENDING|photdis_v3_1_structureentryall\n61223167_11|PENDING|photdis_v3_1_structureentryall\n61223167_10|PENDING|photdis_v3_1_structureentryall\n61223167_9|PENDING|photdis_v3_1_structureentryall\n61223167_8|PENDING|photdis_v3_1_structureentryall\n61223167_7|PENDING|photdis_v3_1_structureentryall\n61223167_6|PENDING|photdis_v3_1_structureentryall\n61223167_5|PENDING|photdis_v3_1_structureentryall\n61225864_25|PENDING|photdis_v3_1_targetrefine\n61225864_24|PENDING|photdis_v3_1_targetrefine\n61225864_23|PENDING|photdis_v3_1_targetrefine\n61225864_22|PENDING|photdis_v3_1_targetrefine\n61225864_21|PENDING|photdis_v3_1_targetrefine\n61225864_20|PENDING|photdis_v3_1_targetrefine\n61225864_19|PENDING|photdis_v3_1_targetrefine\n61225864_18|PENDING|photdis_v3_1_targetrefine\n61225886|PENDING|photdis_v3_1_targetensemble\n61225883|PENDING|photdis_v3_1_targetensemble\n61223167_3|RUNNING|photdis_v3_1_structureentryall\n61231554_0|RUNNING|photdis_v3_1_heldouttransfer\n61225864_7|RUNNING|photdis_v3_1_targetrefine\n61223172_1|RUNNING|photdis_v3_1_structureentryrefine\n",
+  "parent_accounting": "61223167_0|COMPLETED|00:13:37|0:0\n61223167_1|COMPLETED|00:13:08|0:0\n61223167_2|COMPLETED|00:12:50|0:0\n61223167_3|RUNNING|00:08:48|0:0\n61223167_4|PENDING|00:00:00|0:0\n61223167_5|PENDING|00:00:00|0:0\n61223167_6|PENDING|00:00:00|0:0\n61223167_7|PENDING|00:00:00|0:0\n61223167_8|PENDING|00:00:00|0:0\n61223167_9|PENDING|00:00:00|0:0\n61223167_10|PENDING|00:00:00|0:0\n61223167_11|PENDING|00:00:00|0:0\n61223167_12|PENDING|00:00:00|0:0\n61223167_13|PENDING|00:00:00|0:0\n61223167_14|PENDING|00:00:00|0:0\n61223167_15|PENDING|00:00:00|0:0\n61223167_16|PENDING|00:00:00|0:0\n61223167_17|PENDING|00:00:00|0:0\n61223167_18|PENDING|00:00:00|0:0\n61223167_19|PENDING|00:00:00|0:0\n61223167_20|PENDING|00:00:00|0:0\n61223167_21|PENDING|00:00:00|0:0\n61223167_22|PENDING|00:00:00|0:0\n61223167_23|PENDING|00:00:00|0:0\n61223167_24|PENDING|00:00:00|0:0\n61223167_25|PENDING|00:00:00|0:0\n61223167_26|PENDING|00:00:00|0:0\n61223167_27|PENDING|00:00:00|0:0\n61223167_28|PENDING|00:00:00|0:0\n61223167_29|PENDING|00:00:00|0:0\n61223167_30|PENDING|00:00:00|0:0\n61223167_31|PENDING|00:00:00|0:0\n61223172_1|RUNNING|01:50:25|0:0\n61229422_12|PENDING|00:00:00|0:0\n61229422_13|PENDING|00:00:00|0:0\n61229422_14|PENDING|00:00:00|0:0\n61229422_15|PENDING|00:00:00|0:0\n61229422_16|PENDING|00:00:00|0:0\n61229422_17|PENDING|00:00:00|0:0\n61229422_18|PENDING|00:00:00|0:0\n61229422_19|PENDING|00:00:00|0:0\n61229422_20|PENDING|00:00:00|0:0\n61229422_21|PENDING|00:00:00|0:0\n61229422_22|PENDING|00:00:00|0:0\n61229422_23|PENDING|00:00:00|0:0\n61229422_24|PENDING|00:00:00|0:0\n61229422_25|PENDING|00:00:00|0:0\n61229422_26|PENDING|00:00:00|0:0\n61229422_27|PENDING|00:00:00|0:0\n61229422_28|PENDING|00:00:00|0:0\n61229422_29|PENDING|00:00:00|0:0\n61229422_30|PENDING|00:00:00|0:0\n61229422_31|PENDING|00:00:00|0:0\n61231239_0|COMPLETED|00:04:47|0:0\n61231239_1|COMPLETED|00:04:51|0:0\n61231239_2|PENDING|00:00:00|0:0\n61231239_3|PENDING|00:00:00|0:0\n",
+  "completed_draw0": {
+    "path": "data/v3_1/structure/entry_refined/draw_00/complete.json",
+    "sha256": "d6b17be91d46026d8e5627f9ae585db959375260af344698293636df98e5aed2"
+  },
+  "parents": [
+    "61231239",
+    "61223167",
+    "61223172_1",
+    "61229422"
+  ],
+  "jobs": [
+    {
+      "stage": "assemble",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61231239:61223167:61223172_1:61229422",
+        "scripts/run_v3_1_structure_assemble.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232760\n",
+      "stderr": "",
+      "job": "61232760"
+    },
+    {
+      "stage": "infer",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61232760",
+        "scripts/run_v3_1_structure_infer.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232761\n",
+      "stderr": "",
+      "job": "61232761"
+    },
+    {
+      "stage": "report",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61232761",
+        "scripts/run_v3_1_structure_report.sh"
+      ],
+      "returncode": 0,
+      "stdout": "61232762\n",
+      "stderr": "",
+      "job": "61232762"
+    }
+  ],
+  "scope": "Existing frozen32state512object structure pipeline. Explicit surviving refinement child1, never canceled original array parent. Complete-state and numerical gates remain mandatory; submission is not completed science.",
+  "complete": true
+}

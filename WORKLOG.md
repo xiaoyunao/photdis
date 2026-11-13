@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — register complete-state structure posterior dependency chain
+- Submittedexistingfrozen assemble61232760 -> infer61232761 -> report61232762.
+  Assembly waits nativegroups61231239, originalentry61223167, survivingold
+  refinementchild61223172_1 andexactreplacement61229422. Neverdepends oncanceled
+  originalarrayparent. Completed draw0/512pass markerhash authenticated.
+- Fullunrolledqueue, parentaccounting, trackedcleanness and sixscript hashes
+  checkedbefore submission; no competingdownstream writers. Receiptcollected.
+  Allcomplete-state/numerical gates remain unchanged; these arequeued, notresults.
+- Broad23exactresume61232648pending; broadgroup7nowrunningwithrestored2hlimit.
+  Structureentry3 andfirsttransfergroup stillrunning. Remainingactualoutcomes,
+  figures/adjudication/finaldelivery required; activegoal notcomplete.
+
 ## 2026-11-14 — preserve broad-state timeout and resume only unfinished counts
 - Broad refinement61225864_5 TIMEOUT30m12: states20/21/22 complete2048;
   state23 needsregistered8192 duebridge failures at512/2048. Its8192fitcomplete,

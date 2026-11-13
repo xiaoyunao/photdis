@@ -121,8 +121,10 @@ Negative findings remain deliverables, never successful calibration claims.
   afterterminal/absence/hashchecks. PilotCOMPLETED26m06:all512contexts/1024
   branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
   same32workerexecution nowarray61229422for30states2–31 aftercorr61223167;
-  originalstate1running remainsuntouched. Keep3h limits/max3new+1old nodes. Assembly/posterior
-  awaitallstates numerical admission. Pendingentry1–31limits now30min basedon
+  originalstate1running remainsuntouched. Keep3h limits/max3new+1old nodes.
+  Complete-state chain submitted: assemble61232760 -> infer61232761 ->
+  report61232762. Assembly requires61231239/61223167/61223172_1/61229422;
+  completedrefinementdraw0 authenticated. Allstates/numerical gates mandatory. Pendingentry1–31limits now30min basedon
   13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
   improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
@@ -170,8 +172,9 @@ Negative findings remain deliverables, never successful calibration claims.
 - Finish all 32 structure native/entry/refinement states, including exact entry
   refinement draw0 nowcomplete61228245/all512pass. Replacementarray61229422
   handlesstates2–31 withvalidated32workeradapter, originaldraw1continues8workers.
-  Keep3h limits/max4totalnodes; then actualshared-posterior/count inference and
-  fairprior-withdrawn baseline.
+  Keep3h limits/max4totalnodes. Existingdependentchain61232760/61/62 nowqueued
+  foractualshared-posterior/count inference andfairprior-withdrawn baseline;
+  initialsubmissionreceipts alone are notscientificcompletion.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.
