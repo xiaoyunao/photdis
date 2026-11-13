@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "data/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "data/v3_1/diagnostics/diagnostic/latent_full/complete.json": "a77f88c50c92f0c764b86f29bdf564475d622f7ffaf8ffdce6874f36f068e9fb",
+    "data/v3_1/diagnostics/diagnostic/latent_full/posterior_negative_flux.csv": "f2ff05244313577bd293e6e7444f3b6d4fcd42fb0eb4a32ae5e5349d7f56f7fe",
+    "scripts/v3_1_latent_failure_report.py": "c94426b5daf30239805e880a7eb9bd023a1bdaebb45bb7558762ed8cef4134b6",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
+  },
+  "outputs": {
+    "scores.csv": "499ba79c03f7d4a00a6dd648b95f2c5d7c3f1720e3009fdccf144141bc06f51c",
+    "summary.csv": "4532ca49f609737607d6dd855de7aeaf88e4b9451ff7256fc37ee073828befd8",
+    "paired_class_feh.csv": "11a9be636520690fd1914f72559564227aeb065927acf22cc3eea4dea9fa7b25",
+    "objects.csv": "8e7767bed85c90ea28083b976cf917d3e530b3e7e5e1d0c8c198c2e19cdde142"
+  },
+  "job": "61219398",
+  "views": 2589,
+  "unsupported": 0,
+  "all_PSF": true,
+  "paired_reference_rows": 2941,
+  "scope": "Exploratory same-identity seen-development associations, not causal attribution or new validation. Native latent negative-flux bounds differ from legal negative measured flux. Class+FeH is a truth-assisted diagnostic; source-correlated references are kept separate. High-q/reference-far joint fraction is not application contamination."
+}

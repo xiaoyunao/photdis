@@ -37,3 +37,18 @@ bootstrap guards and96numerical checks pass. Evolved scatter remains poorly
 constrained by only3fit/2guard sky blocks; this is not independent calibration.
 Source rows and actual image/PDF checks: `manifests/v3_1/calibration_figure/`.
 PNG300dpi/PDF and all six panels visually inspected.
+
+## Latent-flux support and failure association
+
+![Latent support](../figures/v3_1/latent/latent_support_failure.png)
+
+Four panels distinguish weighted latent-negative bounds, individual W1/W2
+probabilities, evolved-star reference failures and raw missing-reference counts.
+Among297evolved primary-reference stars with negative-probability upper bound
+<0.001, the weighted severe |delta_mu|>1mag fraction remains87.6635%; this does
+not support negativity as the sole giant-failure explanation. The four
+unknown-class objects above0.1lack primary distance references. No causal or
+new-validation claim follows. All four panels visually inspected after label
+and legend repairs;1574actual image/PDF/hash/source checks pass.
+[PDF](../figures/v3_1/latent/latent_support_failure.pdf);
+[source rows and acceptance](../manifests/v3_1/latent_figure/acceptance.json).

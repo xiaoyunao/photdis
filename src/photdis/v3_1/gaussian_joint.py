@@ -19,7 +19,8 @@ def interval_linear_weights(grid,boundaries):
     edges=np.r_[-np.inf,boundaries,np.inf];width=np.diff(grid);result=np.zeros((len(edges)-1,len(grid)))
     for b,(lo,hi) in enumerate(zip(edges[:-1],edges[1:])):
         t0=np.clip((lo-grid[:-1])/width,0,1);t1=np.clip((hi-grid[:-1])/width,0,1)
-        square=.5*(t1*t1-t0*t0);result[b,:-1]+=width*(t1-t0-square);result[b,1:]+=width*square
+        span=t1-t0;center=.5*(t1+t0)
+        result[b,:-1]+=width*span*(1-center);result[b,1:]+=width*span*center
     return result
 
 

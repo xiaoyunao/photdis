@@ -601,8 +601,10 @@
         "field"
       ],
       "qos": "debug",
-      "last_observed_state": "SUBMITTED",
-      "timelimit": "00:30:00"
+      "last_observed_state": "COMPLETED",
+      "timelimit": "00:30:00",
+      "elapsed_seconds": 182,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61218978",
@@ -611,8 +613,9 @@
       "args": [
         "common"
       ],
-      "qos": "regular",
-      "last_observed_state": "SUBMITTED"
+      "qos": "debug",
+      "last_observed_state": "RUNNING",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61218979",
@@ -639,7 +642,8 @@
       "wrapper": "scripts/run_v3_1_target_native.sh",
       "args": [],
       "qos": "regular",
-      "last_observed_state": "SUBMITTED"
+      "last_observed_state": "PARTIAL",
+      "resource_update": "Tasks0/1 completed; all4tasks promoted debug30m. Task2running/task3pending at last inspection."
     },
     {
       "job_id": "61219182",
@@ -659,6 +663,23 @@
       ],
       "qos": "regular",
       "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61219398",
+      "purpose": "Seen-development latent-support failure association",
+      "wrapper": "scripts/run_v3_1_latent_failure_report.sh",
+      "qos": "debug",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 34,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61219399",
+      "purpose": "Authenticated target native/entry matrix assembly",
+      "wrapper": "scripts/run_v3_1_target_assemble.sh",
+      "qos": "regular",
+      "last_observed_state": "PENDING",
+      "dependency": "afterok:61219181:61219182"
     }
   ],
   "local_validation": {

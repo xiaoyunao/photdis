@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/complete.json": "0c3d0034488d435e262970b5451d50eacad9c3ecf2e817f853f347e40d09bd34",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/summary.csv": "4532ca49f609737607d6dd855de7aeaf88e4b9451ff7256fc37ee073828befd8",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/objects.csv": "8e7767bed85c90ea28083b976cf917d3e530b3e7e5e1d0c8c198c2e19cdde142",
+    "scripts/v3_1_latent_figure.py": "6ed0854a026d5a4f1642e2e6d77696798eacc7b1f1f694a38bb5b7b189cc63a6",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/latent/latent_support_failure.png": "a6616c5c5e055ea7acc6f794c7b43d1a39be900cb2a5df3a783b94b30e7298ae",
+    "figures/v3_1/latent/latent_support_failure.pdf": "65ffc8651a748aa35e37aeb288c643ecc06f40dbef87698f3a7351841202a681",
+    "manifests/v3_1/latent_figure/plotted.csv": "e86ba1cbda456f024933a2497461de7c07ad7083a52382a0ba0578eb836b51f4"
+  },
+  "plotted_rows": 1558,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scope": "Rendering of compact allocated diagnostic tables only; same-star associations and missing-reference denominators, not causal inference."
+}

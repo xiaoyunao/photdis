@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-13 — full field numerical pass and latent failure attribution limits
+- Fieldnumerical61218977 COMPLETED182s: all526objects pass at.01, no unresolved
+  flags; references remainunopened. Common61218978 nowdebug30m, stillrunning.
+  Nativeproduction61219181 shards0/1 complete6500each,63/58fineaudits allpass;
+  remainingtwo shards running/queueddebug. Originalproducts untouched.
+- Latentfailure61219398 COMPLETED34s:2589views/2941pairedreference rows,
+  zero unsupported. Evolvedlow-negative(<.001)297primary references stillhave
+  severe|dmu|>1 rate.876635 (sky95% .741997–.961221), so negativity alone
+  doesnotexplain giantfailure. Fourunknown-class>=.1outliers havenoprimary
+  distance reference; do notturn absence intoaccuracy orcausal attribution.
+- Renderedfour-panel English latentplate, visuallyrepaired oversizedlabels and
+  empty-barlegend colors, re-inspected. PNG300dpi/PDF/1558source rows verified:
+  1574actual artifact/source/visualchecks pass. Calibration/previousplates kept.
+- Registeredold32/new32matched fixed-prior responseprobe:128alreadyfrozen
+  targetIDs plus64/class seen-development. Same nominalclass/N15sigma5prior,
+  directSNR5entry, actualscoresdistinct from26kpopulation-marginalevidence.
+  Preparation/probe drivers compile/import; allocatedexecution pending.
+- True-distance jointresponse sidecardriver added; nonnegative stableinterval
+  weights retain exacttrapezoidal conservation;3focusedmathchecks pass.
+- Assembly61219399 queued afterok61219181:61219182. Conditional targetfit
+  drivers remainunrun; fullproduct/count/domain/structure work remains.
+- Next: sync/submitresponseprobe preparation andjointsidecars, completeactive
+  native/validation/radial/response/entry jobs and inspectall numericalfailures.
+
 ## 2026-11-13 — launch target matrices and implement conditional fits/count integrals
 - Submittednative26000fourshards61219181 anddirectentry16shards61219182,
   max4nodes each. Assembly/fit remain gated oncomplete authenticated inputs.
