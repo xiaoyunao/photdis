@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — freeze validation identities and register constrained luminosity correction
+- Rolefreeze61215917 COMPLETED50s:170newskyfield/9cells,356sourcenew-seensky/27cells,
+  3032NGC1261members/1system.79field annotations excluded; allhistoricalsource,
+  imagingls_id andnegativeidentity guards pass. Actualroles/hashes preserved.
+- All176radial production submitted61215918 (twoarray shards), unchangedmodels,
+  registeredfinechecks andboundednumericalextensions. Candidateentry61215525 active.
+- Registered one6parameter class-conditional luminosityshift/scatter candidate.
+  Likelihoodconvolution precedes prior, sameoperationrequired forselection; class
+  weights/FeH/binary/errorchannels unchanged. This targets residualwithinclass
+  undercoverage; dominantwrongclassproblem remains a separate acceptance issue.
+- Added role3 sky-split fit/guard preparation and32sharedsky bootstrapfit drivers;
+  no newvalidation labels enter. Prespecified bounds/priors/guardcriteria retained.
+- Three focusedanalytic/linearity/prior-order tests and full99tests pass3.70s;
+  newdrivers syntax/shell checks pass. Fit/guard/numericalaudits not yet executed.
+- Next: compute calibrationcurves, fitregisteredcandidate, complete selection
+  normalization/targettransfer, fullradial recovery and independentresponse audit.
+
 ## 2026-11-13 — complete radial pilot gates and register final reference roles
 - Catalog112 broad61214837/local61214838 COMPLETED326s/412s; both2048/chain
   finepassed. All3pre-registered pilots pass botharms; original512flags retained.

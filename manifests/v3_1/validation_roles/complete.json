@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "docs/v3_1_validation_roles.md": "df9f782c10dc4556b001d4048aa6e96f2a3095870b75702ce005a4ddf970d893",
+    "docs/v3_1_common_scale_protocol.md": "2c6c39f260029e57e7b1260f29bf5746849f60979186d3098b0cfe106665a41d",
+    "scripts/v3_1_freeze_roles.py": "f8bf16a91bf1c27499e8d0e13edd99e2ce51fc6745d4cc9c7f383595e7274d5d",
+    "scripts/v3_1_external_history.py": "71ebe99234fe84633f471e94ebf41021da7461c89bfb4d074aec7f450be4f447",
+    "data/v3_1/external_history/complete.json": "af1e924c327497a5a11dd86dafb1a046ec184f86b187f641106a44997a77f960",
+    "data/v3_1/external_history/audit.npz": "9222f9e701b938aa744c363a7edaefabc064ae488a32affae0e0cd3318a83515",
+    "data/pilot_audit_v1/reference.fits": "c8216b2a7f96e12191962f9a9296aa3167f53a7e5477775fd7cf57451ce0d8e7",
+    "data/baseline_v0/references.npz": "37abccebdb843c91fb1c01c0805d6265b77332eeb45138f372f5e7a416c8ef4d",
+    "data/giant_information_v1/labels.npz": "b0d2017be7faf0078161a27c9089d9e6f19d2fae1b4d4ca059a2c77521b3d109",
+    "data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_0/validation/reservation/photometry.npz": "5faf9123981613e967a07c3448a81c4cc68647c0f977422ce1913762a03b32a5",
+    "data/v3_0/validation/new_sky/photometry.npz": "0c9ca86d9393a2551788feb4118bd6cff0187dd7c798ef2e0f6b941e109ddb77",
+    "data/v3_0/validation/independent_scale/photometry.npz": "0074af58a0e1407726863b2e681c503942a663034512ea9ae644144ba81cd26a",
+    "data/v3_1/external_native/complete.json": "a314e8d24ee0fc6a441f36a8b54d1ebce597c259874f7abd1c210f640b220fdc",
+    "data/v3_1/external_native/photometry.npz": "48ec88e58be8b28925528471b4e0ce1f57069b2284b7a066c8e516e25fff1894",
+    "data/v3_1/common_scale_native/complete.json": "1db6181463e0ffc82472738611267a445d4d70f3de9c559bef327820d73512b4",
+    "data/v3_1/common_scale_native/photometry.npz": "cb9c93100a23782ccbf24a8fc420b9bfbd46c6a0641e5a729fabfe1819324260",
+    "data/v3_1/external_native/references.npz": "189c2777474bb8d3864e14dd5e2c106fbfa3baffc5be37434fb75f44beb65b2e",
+    "data/v3_1/common_scale_native/membership.npz": "6f4e729ffb78d7946c16dfce56fead7088b55fe0dea786c2008c05a019ed6234",
+    "data/v3_1/common_scale_native/scales.json": "9000871fb00468d9a8ebda3b10c762ac5f96dd94edef27207a2c7272de59809b"
+  },
+  "outputs": {
+    "history_guard.csv": "845b31eea81d6aeeb3a36c29288a2455c8f44114a18643a2824aebb714c44bcf",
+    "summary.csv": "f60fe511a03967527f5cff1bdfc4a3e10250466fa2b60555315f679b6a5fa1ff",
+    "field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "roles.csv": "64214f3a6a4c738ec47b45132bea7c99517b8d1c01d202b59d383c14588703f3",
+    "references.json": "ccb5975a013739a6dd38bc4abcc60a18000933949f4412bb2244b67c50ee2532",
+    "common_photometry.npz": "c143c777d64e7fe72339488a414d27816246ead59350a321949da0d58226967a"
+  },
+  "job": "61215917",
+  "summary": [
+    {
+      "cohort": "field",
+      "role": "new_sky_field",
+      "admitted": 170,
+      "cells": 9
+    },
+    {
+      "cohort": "field",
+      "role": "new_source_seen_sky_field",
+      "admitted": 356,
+      "cells": 27
+    },
+    {
+      "cohort": "common",
+      "role": "new_common_scale",
+      "admitted": 3032,
+      "cells": 1
+    }
+  ],
+  "rejected_common_systems": [],
+  "field_exclusions": 79,
+  "common_exclusions": 0,
+  "native_missing_TYPE": 0,
+  "native_nonPSF": 0,
+  "native_exclusions_recorded_in_source_manifests": true,
+  "roles_frozen": true,
+  "predictions_read": false,
+  "correction_fitted": false,
+  "scope": "Unused source/block validation roles chosen by reference availability; not label-blind acquisition. No residual-based admission. Method/prediction freeze required before final scoring."
+}

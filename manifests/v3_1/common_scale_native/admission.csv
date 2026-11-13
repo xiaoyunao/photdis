@@ -1,0 +1,4 @@
+system,strict_published_members,exact_native,nonPSF,missing_TYPE,duplicate_source,native_PSF,photometric_domain,historical_member_exposure,historical_footprint,admitted,cells
+NGC_1261,4422,4422,1,0,0,4421,3032,False,0,3032,1
+NGC_1851,9943,9943,0,0,0,9943,0,False,0,0,0
+NGC_7492,458,458,0,0,0,458,0,False,0,0,0

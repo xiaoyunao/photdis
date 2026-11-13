@@ -1,0 +1,38 @@
+[
+  {
+    "system": "NGC_1261",
+    "method": "hst_kinematic",
+    "reference": {
+      "distance_kpc": 16.775,
+      "minus_kpc": 0.872,
+      "plus_kpc": 0.872,
+      "raw": "\\,\\,\\,16.775\\pm 0.872"
+    },
+    "covariance": "One common distance per system; HST common-method3percent sensitivity separately; no independent member errors",
+    "role": "availability only; final definition/method/prediction freeze required"
+  },
+  {
+    "system": "NGC_1851",
+    "method": "hst_kinematic",
+    "reference": {
+      "distance_kpc": 11.44,
+      "minus_kpc": 0.32,
+      "plus_kpc": 0.32,
+      "raw": "\\,\\,\\,11.440\\pm 0.320"
+    },
+    "covariance": "One common distance per system; HST common-method3percent sensitivity separately; no independent member errors",
+    "role": "availability only; final definition/method/prediction freeze required"
+  },
+  {
+    "system": "NGC_7492",
+    "method": "literature",
+    "reference": {
+      "distance_kpc": 24.434,
+      "minus_kpc": 0.567,
+      "plus_kpc": 0.581,
+      "raw": "\\,\\,\\,24.434^{+0.581}_{-0.567}"
+    },
+    "covariance": "One common distance per system; HST common-method3percent sensitivity separately; no independent member errors",
+    "role": "availability only; final definition/method/prediction freeze required"
+  }
+]
