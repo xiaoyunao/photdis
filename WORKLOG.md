@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-13 — prepare all-state response report and structure likelihood pilot
+- Structure sample freeze61221747 queueddebug; observed-context entrypilot61221765
+  waits afterok. Neither has yet produced a structure likelihood or validation score.
+- Added all64response report driver: authenticate every state/object, retain failures,
+  compare actual fine/coarse/independent-seed/previous-level evidence and weights,
+  preserve conditional-probe scope. Full state set required before normalization;
+  no missing/failed draw deletion. Seen-development paired source/sky/FeH diagnostics
+  and proper mixture log scores remain distinct from new validation.
+- Added native structure sidecars with explicit regional resolution for0.02mag
+  intrinsic width; full and moment-Gaussian baseline retain same class evidence,
+  analytical prior withdrawal, actual response/calibration and both numerical grids.
+  First intended nativepilot response12/all512; actualexecution pending.
+- Validation: newdriver imports/py_compile/bash syntax pass; prior124test suite and
+  six focused mathematical checks retained. Initial report import path corrected
+  from nonexistent photdis.references to established photdis.audit before execution.
+- Reduced pending matched-probe resource limits to10min using successful51/60s
+  pilots; scientific input hashes/parameters unchanged. NERSC and GitHub synced9be10ed.
+- Next: sync/submit nativepilot and full-report dependency; finish all active
+  entry/joint/refit/radial work; preserve pending final candidate/validation/count gates.
+
 ## 2026-11-13 — pass first direct-entry shard and paired-response pilots
 - Entry61219182_0 COMPLETED16m23s:1625objects/1842envelopes allpass.
   True-distance joint61220368_0 COMPLETED6m:6500objects allconserve. Compact

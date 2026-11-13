@@ -43,7 +43,8 @@ Negative findings remain deliverables, never successful calibration claims.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 shard0 passes6500rows.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
-  analytical baseline withdrawal/entry/math foundation tested; execution pending.
+  analytical baseline withdrawal/entry/math foundation tested; preparation61221747
+  and entrypilot61221765 queued. Nativepilot driver ready, actualexecution pending.
   Full scientific counts, final product evaluation, use-domain map and structure fit remain.
 - [ ] Final reproducible reports/ledger/README/AGENTS/visual QA and safe sync.
 
