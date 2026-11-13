@@ -1,0 +1,342 @@
+{
+  "inputs": {
+    "manifests/v3_1/diagnostics/diagnostic/paired_report/complete.json": "2388688cde3bf0036cd4105b4581c7fcc39276b2398c1959d1a2da1ae0d84921",
+    "manifests/v3_1/diagnostics/diagnostic/paired_report/paired.csv": "e688f6707e805bad81fd8bbccb630c75dff6b054adf99b6676ca90975b611096",
+    "scripts/v3_1_diagnostics.py": "8950db3246fbf57c9f91653e21a1ce8c1ca7f7a12a02cf787229c32edfe30d38",
+    "src/photdis/v3_1/diagnostics.py": "7ba8b429aefe3d92d7d056f0ff57943db1665ad2361c627a262301417321ff31",
+    "manifests/v3_1/diagnostics/diagnostic/complete.json": "bb32387550249311170fa794e2d1ea700803a82ab9a828afad136b9ccc9c8619",
+    "manifests/v3_1/diagnostics/diagnostic/distance.csv": "404a65c087b0335ab370245503010c3ed775e8d0c606056dc31df1b452f65ecc",
+    "manifests/v3_1/diagnostics/diagnostic/mode_support_summary/complete.json": "094ad4987876a644b1e246e3c715826e41ff21d0b3b6a9fb42280ed8bd07af00",
+    "manifests/v3_1/diagnostics/diagnostic/mode_support_summary/summary.csv": "b5cdb78c73841423d2523c7c1cabbae9efea64b94eca0f57962867b61e600bbc",
+    "manifests/v3_1/diagnostics/diagnostic/latent_full/complete.json": "a77f88c50c92f0c764b86f29bdf564475d622f7ffaf8ffdce6874f36f068e9fb",
+    "manifests/v3_1/diagnostics/diagnostic/latent_full/summary.csv": "e7f85151fa7d054992b9e3feb3a413add38325ceeefb7939363b46bb93dd0e45",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/complete.json": "0c3d0034488d435e262970b5451d50eacad9c3ecf2e817f853f347e40d09bd34",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/summary.csv": "4532ca49f609737607d6dd855de7aeaf88e4b9451ff7256fc37ee073828befd8",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/complete.json": "f5faa9fed85852c65af3a34c174fdf162d53d30233af82128cc4f05133e86eea",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/all.csv": "027f4d7e8e987bb5431bf6df70c504eb01a7015d4a1106c956123ed868df075d",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/feh.csv": "5684630f673d4f1ed94340f514dee1a6dfa0895ec8515be6b87db69e07e2c768",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/intrinsic_gr.csv": "17d8bb3e5096725e4e5147ba3a686f30210edcfd8363dc5af3d42590d22ca2f5",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/apparent_r.csv": "ee2200072d915c05b2f520a1f6b5448ce423d83e0ccd9d9aae0aeb92e32fb0f9",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/optional_bands.csv": "de534389f38d42adefd2b67f7c6ffb356417ae268afef6ac73039f72c070c51d",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/sky.csv": "590d57b130d77e5072f960c361399e06a1c2ab086c46865333eae84fec74cb17",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/target_field_scope.csv": "24dd71b375820dd94e6dbfe83679bafa29ca494e0cc69bcbc9e8371ea6ad45fa",
+    "manifests/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "manifests/v3_1/luminosity_fit_refined/parameters.csv": "e7fb51bd56402efb043d179212898a86e5949c2b7bcead5fe627951b83629ba5",
+    "manifests/v3_1/luminosity_guard/complete.json": "9ce3fabf900601d1249e243aaf043b52e9047d28226a8e234a36576aea308ff4",
+    "manifests/v3_1/luminosity_guard/comparisons.csv": "4cb321725049c4abcf731b8a4bf6aba7f6293fa9931b7a2e615885d2ce67f7ad",
+    "manifests/v3_1/luminosity_calibration/complete.json": "9f003f48a0b28e21b97cdf9c3012443329e22501dde756deec3e226afc8fecc2",
+    "manifests/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "scripts/v3_1_mechanism_result.py": "12307534a30e56660d1f02190ed335092de606aaa8d13f13137bedde79415a4c"
+  },
+  "report_sha256": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+  "checks": [
+    {
+      "check": "source_hash:diagnostics/diagnostic/paired_report/paired.csv",
+      "passed": true
+    },
+    {
+      "check": "frozen_control_definition:scripts/v3_1_diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "frozen_control_definition:src/photdis/v3_1/diagnostics.py",
+      "passed": true
+    },
+    {
+      "check": "source_hash:diagnostics/diagnostic/distance.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:diagnostics/diagnostic/mode_support_summary/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:diagnostics/diagnostic/latent_full/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:diagnostics/diagnostic/latent_failure_report/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/all.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/feh.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/intrinsic_gr.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/apparent_r.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/optional_bands.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/sky.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:target_prior/diagnostic/paired_report/target_field_scope.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:luminosity_fit_refined/parameters.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:luminosity_guard/comparisons.csv",
+      "passed": true
+    },
+    {
+      "check": "11882_complete_stratified_contrasts",
+      "passed": true
+    },
+    {
+      "check": "1089_original_contrasts",
+      "passed": true
+    },
+    {
+      "check": "six_parameters",
+      "passed": true
+    },
+    {
+      "check": "15_original_mean_guards",
+      "passed": true
+    },
+    {
+      "check": "main_numerical_failure_retained",
+      "passed": true
+    },
+    {
+      "check": "external_scientific_failure_retained",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'feh', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'feh', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class_feh', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class_feh', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'grz', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'grz', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'griz', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'griz', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_i2', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_i2', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_optical2', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_optical2', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_w12', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_w12', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_w22', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'error_w22', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'single', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'single', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'nominal', 'reference_class': 1, 'reference': 'primary', 'metric': 'absolute_mu50_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'nominal', 'reference_class': 1, 'metric': 'signed_gaia_logscore_gain'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12_target', 'baseline': 'response12', 'reference_class': 1, 'source': 'primary', 'metric': 'absolute_mu_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12_target', 'baseline': 'response12', 'reference_class': 1, 'source': 'primary', 'metric': 'reference_point_agreement68_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class_feh', 'baseline': 'feh', 'reference_class': 1, 'source': 'primary', 'metric': 'absolute_mu_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class_feh', 'baseline': 'class', 'reference_class': 1, 'source': 'primary', 'metric': 'absolute_mu_error_change'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class', 'reference_class': 1, 'reference': 'primary'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'class', 'reference_class': 0, 'reference': 'primary'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 'all', 'metric': 'multimodal_fraction'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'single', 'reference_class': 'all', 'metric': 'multimodal_fraction'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 'all', 'metric': 'multiple_dominant_classes_fraction'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 'all', 'metric': 'mass_in_modes_dominated_by_lt10_effective_sources'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 'all', 'metric': 'mass_in_modes_dominated_by_majority_missing_class_kernel'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 'all', 'metric': 'any_negative_upper'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': 1, 'negative_group': 'below0.001', 'source': 'primary', 'metric': 'severe_abs_mu_gt1'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': -1, 'negative_group': 'atleast0.1', 'source': 'none', 'metric': 'negative_upper'}",
+      "passed": true
+    },
+    {
+      "check": "unique_row:{'control': 'response12', 'reference_class': -1, 'negative_group': 'atleast0.1', 'source': 'primary', 'metric': 'absolute_mu_error'}",
+      "passed": true
+    },
+    {
+      "check": "four_high_negative_unknowns_without_primary",
+      "passed": true
+    },
+    {
+      "check": "304_partition:feh",
+      "passed": true
+    },
+    {
+      "check": "304_partition:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "304_partition:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "document_link:v3_1_candidate_modes_result.md",
+      "passed": true
+    },
+    {
+      "check": "document_link:v3_1_final_validation_result.md",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/diagnostics/diagnostic/paired_report/paired.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/all.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/feh.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/intrinsic_gr.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/apparent_r.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/optional_bands.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/sky.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/target_prior/diagnostic/paired_report/target_field_scope.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/luminosity_fit_refined/parameters.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:../manifests/v3_1/luminosity_guard/comparisons.csv",
+      "passed": true
+    },
+    {
+      "check": "document_link:v3_1_atlas.md",
+      "passed": true
+    }
+  ],
+  "actual_checks": 76,
+  "passed": true,
+  "scope": "Authenticated completed source tables and unique reported contrasts; exact counts, labels and intervals. Written interpretation is not independent calibration acceptance."
+}

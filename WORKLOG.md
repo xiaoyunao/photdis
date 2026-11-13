@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-14 — complete mechanism interpretation and retain first held-out fits
+- Added source-backed mechanism result/generator: all11882stratified contrasts,
+  original1089paired rows andfrozen control definitions;76actualchecks/28sources
+  pass. Class conditioning improves giant offsets butnot interval calibration;
+  six-parameter correction passes internalguard, failsfinalnumerical/external
+  evaluation. WP1 implementation/interpretation complete, correctionnotadopted.
+- Collected allsix remaining targetprior stratification tables andlinkedmethods,
+  atlas/status/ledger/PLAN. Originalnumericalflags/teacher limitations preserved.
+- Found wrong hard-coded distancebins inunrendered heldoutfigure preparer;
+  replaced withauthenticated compression boundaries2/5/10/20/50kpc. Actual
+  derived-label smoke andPythonparse pass; no deliveredfigure usedwronglabels.
+- Transfergroup61231554_1 COMPLETED17m36: states4–7 collected/hashverified,
+  6000broad/935candidatePSF, allconditionalnumericpass. Broadfit includesheldout
+  fields, so notindependentvalidation; full102states stillrequired.
+- Trueholdoutfitgroup61225864_18 COMPLETED7m31: states4–7 all2048pass,
+  original512attempts preserved. Structureentry4/5 completed12m59/12m55 with
+  124/512originalfailures retained; registeredrefinements stillrequired.
+- Existingpendingrefinement3 successfullypromoteddebug afterfreshcap check;
+  originalfailed QOSdemotion receipt retained. Broad23exactcountresume running;
+  allremainingqueued science andfinaldelivery stayin scope.
+- Pendingentry7/8 promoteddebug withinfresh5-submitted cap, receipt retained;
+  no duplicate jobs orscientificparameter changes.
+- Validation: reportgenerator76checks, sourcehash checks, py_compile, derived
+  distance-label smoke, gitdiffcheck. No core/model changes ornewscience cuts.
+
 ## 2026-11-14 — gate final domain evidence join on both complete reports
 - Domainjoin61233366 submitted afterok61231678(fullskytransfer)/61232762(full
   structurecountreport). Ninealreadycompleteinput markers andthreeunchanged

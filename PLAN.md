@@ -20,7 +20,9 @@ Negative findings remain deliverables, never successful calibration claims.
   completehashes retained. Twoactual-product structure figure scripts prepared;
   full32state application/render/visualreview stillrequired.
 - [x] Read latest full Pro review/related chats (noDOCX), register goal/roles/ledger.
-- [ ] WP1 final correction acceptance. Same1542development stars/17386views and
+- [x] WP1 implementation and scientific interpretation complete; correction NOT
+  accepted. Source-backed docs/v3_1_mechanism_result.md,76checks/28sources;
+  all11882stratified contrasts retained. Same1542development stars/17386views and
   pairedclass/FeH/band/prior contrasts complete. Response12 targetprior worsens
   evolved reference performance. Six-parameter luminosity correction has32shared
   sky bootstraps;96numerical/15heldout guards pass but evolved scatter is weakly

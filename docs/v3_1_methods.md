@@ -1,5 +1,7 @@
 # Photdis v3.1 方法与统计对象
 
+机制诊断与校正的完整科学解释见[v3_1_mechanism_result.md](v3_1_mechanism_result.md)。
+
 本文整合已经冻结并实现的协议，不新增模型、阈值、样本或参考选择。
 2026-11-14 仍在执行；方法已实现不等于全部计算完成或科学校准通过。
 实际完成状态以 [需求台账](v3_1_requirements_result.md)、[进度](v3_1_status.md)

@@ -8,6 +8,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from v2_1_near import ROOT, sha, save_json, csv_rows
 from photdis_figure_style import STYLE, BLUE, ORANGE, GREEN
+from photdis.v3.compression import DISTANCE_MU_BOUNDARIES
 
 
 def main():
@@ -33,6 +34,10 @@ def main():
              ('candidate', 'Candidate fit (in sample)', ORANGE),
              ('holdout', 'Held-out fit', GREEN)]
     envelopes = [('broad', 'Broad selection'), ('candidate', 'Candidate selection')]
+    distance_edges = 10 ** ((DISTANCE_MU_BOUNDARIES - 10) / 5)
+    np.testing.assert_allclose(distance_edges, [2, 5, 10, 20, 50], rtol=1e-12)
+    distance_labels = [f'{lo:g}–{hi:g}' for lo, hi in zip(np.r_[0, distance_edges[:-1]], distance_edges)]
+    distance_labels.append(f'>={distance_edges[-1]:g}')
     status = {}
     for case, _, _ in cases:
         rows = [r for r in done['views'] if r['case'] == case and r['view'] == view]
@@ -96,7 +101,7 @@ def main():
         for c, class_label in enumerate(['Dwarf', 'Evolved', 'Other / unknown']):
             ax = axes[ei, c]
             ax.set(title=f'{envelope_label} | {class_label}', ylabel='Objects in the selected sample', ylim=(0, None))
-            ax.set_xticks(range(6), ['0–0.5', '0.5–1', '1–2', '2–5', '5–10', '10–50'], rotation=25, ha='right')
+            ax.set_xticks(range(6), distance_labels, rotation=25, ha='right')
             ax.set_xlabel('Distance interval (kpc)')
             if c == 0 and ax.get_legend_handles_labels()[0]:
                 ax.legend(frameon=False, fontsize=9)
@@ -167,6 +172,7 @@ def main():
     csv_rows(meta / 'plotted.csv', plotted)
     outputs[str((meta / 'plotted.csv').relative_to(ROOT))] = sha(meta / 'plotted.csv')
     for path in [ROOT / 'scripts/v3_1_heldout_figures.py', ROOT / 'scripts/photdis_figure_style.py',
+                 ROOT / 'src/photdis/v3/compression.py',
                  ROOT / 'docs/v3_1_heldout_transfer_protocol.md']:
         inputs[str(path.relative_to(ROOT))] = sha(path)
     save_json(meta / 'complete.json', dict(inputs=inputs, outputs=outputs, figures=2, panels=12,
