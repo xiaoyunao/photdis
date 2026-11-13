@@ -39,9 +39,8 @@ def main():
             maximum_mode_mass=max(m['mass'] for m in r['modes']),reference_channels=len(r['references']))
         rows.append(item);indexed[key]=item
         for source,ref in r['references'].items():
-            ratio=10**((r['mu'][2]-ref['mu'])/5)
             score_rows.append(dict(**item,source=source,reference_mu=ref['mu'],reference_error=ref['error'],
-                absolute_mu_error=abs(r['mu'][2]-ref['mu']),severe_distance_error=float(abs(ratio-1)>.5),
+                absolute_mu_error=abs(r['mu'][2]-ref['mu']),severe_abs_mu_gt1=float(abs(r['mu'][2]-ref['mu'])>1),
                 reference_logscore=ref['logscore'],point_agreement68=float(r['mu'][1]<=ref['mu']<=r['mu'][3]),
                 high_q_reference_far=float(r['qnear']>.95 and ref['mu']>=15),reference_far=float(ref['mu']>=15)))
         if 'gaia' in r:
@@ -56,7 +55,7 @@ def main():
                         **paired_mean([r[metric] for r in selected],[r['design_weight'] for r in selected],[r['cell'] for r in selected])))
                 for source in ('primary','specdis','spdist','gaia_precise','signed_gaia'):
                     ss=[r for r in score_rows if r['source']==source and r['control']==control and (label=='all' or r['reference_class']==label) and (group=='all' or r['negative_group']==group)]
-                    metrics=('gaia_logscore','gaia_PIT_tail') if source=='signed_gaia' else ('absolute_mu_error','severe_distance_error','reference_logscore','point_agreement68','high_q_reference_far')
+                    metrics=('gaia_logscore','gaia_PIT_tail') if source=='signed_gaia' else ('absolute_mu_error','severe_abs_mu_gt1','reference_logscore','point_agreement68','high_q_reference_far')
                     for metric in metrics:
                         summaries.append(dict(control=control,reference_class=label,negative_group=group,source=source,metric=metric,
                             **paired_mean([r[metric] for r in ss],[r['design_weight'] for r in ss],[r['cell'] for r in ss])))
