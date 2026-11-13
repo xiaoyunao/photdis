@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "data/v3_1/gaussian_entry_pilot/complete.json": "0ee5c02e309db7609d3850f2306dee05824de6999156778f02dafb40292fe4b5",
+    "data/v3_1/candidate_selection_pilot/context_1/complete.json": "fdf76b6715f041caec40163b1cebd676a18e141c35958616c5797a0adf552133",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_1/luminosity_fit_refined/parameters.npz": "4270f915ee57fe820c1cb7df3a475299f1c57c4f12ae8dfb59a04bb732cbbb31",
+    "data/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "data/v3_1/selection_certificate_audit/complete.json": "cf70a18f99031605cf3acdb6782fc47667acb0a7aa79a1dcd34d31dddc9a7881",
+    "scripts/v3_1_gaussian_importance_pilot.py": "d899fc131fe748df5ec9aa7dfb00319b2ae6d5bf1eff35de668698129d4f4e09",
+    "docs/v3_1_gaussian_importance_protocol.md": "bc2cbdb76d4c3cefdbbaf2dd9274b8b18a0214a04b996a4cdd41b69596f47102",
+    "src/photdis/v3_1/gaussian_importance.py": "8f069d2193992cc818fcb171f08cfa5649cf7950ae0c9bf689edf06d0f6a80ef",
+    "src/photdis/v3_1/gaussian_entry.py": "49fe66d226722fa79f887351b0af62612cbc5b9c982ccc8e8938df2705dac875",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/certified_support.py": "90fdde8f583aee17458c75dc74b78e83232a85a83eca4a16ade38ac769c5e077",
+    "src/photdis/v3_1/exact_support.py": "6c2d158036bb11f642e9b8fb8e1e8252349e7dd4aab76ee7f8c0fc5e849dc7a9"
+  },
+  "outputs": {
+    "q524288_seed319711.json": "008b13a8583165554ad133e878619b2d38951469b282f2dd39cb79d7842a284a",
+    "q131072_seed319712.npz": "f8baca14e2faf0e86dcd318cc87f0fd651ef26fd31b198a9b9c91c052a6501bf",
+    "q524288_seed319712.npz": "578cdf4288a9b8f72a2723931e18c7c80244ab88ec9013eed9e6da5ebbf2a198",
+    "q131072_seed319711.npz": "db27af1a9b810c95b3fe95b6cf4dc52bb79487a314f6892b68ec96c648202b41",
+    "q2097152_seed319712.npz": "b46a55041694df66fc06067b3be37ab3a9a0c7cbbec0149a086bef7aaae541b9",
+    "q524288_seed319711.npz": "76a939389beb2f9b56c416dfc9ec25c3a2a21fae87f36953371174778e452fcd",
+    "q524288_seed319712.json": "943921ba1a9a92c317bfec397ec8a82ea37d75b4fbb8e8f0421f67eccc91bab7",
+    "crosschecks.csv": "e94a9e4c25bb66dc1fd39e9ff3c1779b861111ab9ae9fa1432cdfa207e97de59",
+    "q131072_seed319712.json": "013d11e1cb8bfc6be1e048b69220cb21185387d49eca720cd7f28605eaa1e3f0",
+    "attempts.csv": "b3f79753c951e1c4a55fea26c46db4acf34419496ff2f02c3db66ac110213ff4",
+    "q131072_seed319711.json": "c4ae10cc7acf44d4f8aadd575435ce81c727e0beedc7100f2984c574d3693fee",
+    "q2097152_seed319711.npz": "09d8c8f075ab042700e1ae533cecb177e5f7dfc1ee1072ea713780bbfea0f445",
+    "q2097152_seed319711.json": "00289a1ca539022231796ea9dfc955dfb03a17bc03ecd720d5372b4045538d1f",
+    "q2097152_seed319712.json": "a3b3d69ecbd04a2d8caca415629cbc9d68b28670fb0395d60eb6fecc9b4d8f27"
+  },
+  "context": 1,
+  "identity": 3699244817965427200,
+  "TYPE": "PSF",
+  "selected_draws": 2097152,
+  "attempts": [
+    {
+      "draws": 131072,
+      "previous_delta": null,
+      "previous_stabilized_relative": null,
+      "independent_delta": 0.0005754288686406483,
+      "independent_stabilized_relative": 0.0026548742192652954,
+      "max_pruning_bound": 1.7339392567554606e-17,
+      "passed": false
+    },
+    {
+      "draws": 524288,
+      "previous_delta": 0.000632467151611138,
+      "previous_stabilized_relative": 0.0025598108143257896,
+      "independent_delta": 0.00023739630706887116,
+      "independent_stabilized_relative": 0.0006104867650681839,
+      "max_pruning_bound": 1.638876542910727e-17,
+      "passed": false
+    },
+    {
+      "draws": 2097152,
+      "previous_delta": 0.0002303229874979218,
+      "previous_stabilized_relative": 0.0008850416487656892,
+      "independent_delta": 0.00014763750236701512,
+      "independent_stabilized_relative": 0.0002751449549984515,
+      "max_pruning_bound": 1.5703278596055646e-17,
+      "passed": true
+    }
+  ],
+  "maximum_prior_ratio": 5.507466052448404,
+  "crosschecks": [
+    {
+      "variant": "reference",
+      "max_delta": 0.0002233731019769536,
+      "passed": true
+    },
+    {
+      "variant": "point",
+      "max_delta": 0.0002038331115212788,
+      "passed": true
+    },
+    {
+      "variant": "bootstrap00",
+      "max_delta": 0.00020108131619389624,
+      "passed": true
+    },
+    {
+      "variant": "bootstrap15",
+      "max_delta": 0.00020095724440660767,
+      "passed": true
+    },
+    {
+      "variant": "bootstrap31",
+      "max_delta": 0.00019808915312802267,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "elapsed_seconds": 42.4034019880055,
+  "job": "61218976"
+}

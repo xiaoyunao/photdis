@@ -548,9 +548,11 @@
       "job_id": "61217708",
       "purpose": "certified matchedentry median",
       "dependency": "afterok:61217663",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "note": "Temporary prerequisite scheduling hold released after61217972 completed"
+      "note": "Temporary prerequisite scheduling hold released after61217972 completed",
+      "exit_code": "0:0",
+      "elapsed_seconds": 721
     },
     {
       "job_id": "61217709",
@@ -585,7 +587,9 @@
       "wrapper": "scripts/run_v3_1_gaussian_importance_pilot.sh",
       "args": [],
       "qos": "debug",
-      "last_observed_state": "SUBMITTED"
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 62
     },
     {
       "job_id": "61218977",
@@ -616,6 +620,15 @@
       ],
       "qos": "regular",
       "last_observed_state": "SUBMITTED"
+    },
+    {
+      "job_id": "61219038",
+      "purpose": "Registered131object all-kernel target native response pilot",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 43,
+      "wrapper": "scripts/run_v3_1_target_native_pilot.sh",
+      "qos": "debug"
     }
   ],
   "local_validation": {

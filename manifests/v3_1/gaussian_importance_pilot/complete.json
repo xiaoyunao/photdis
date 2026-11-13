@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "data/v3_1/gaussian_entry_pilot/complete.json": "0ee5c02e309db7609d3850f2306dee05824de6999156778f02dafb40292fe4b5",
+    "data/v3_1/candidate_selection_pilot/context_1/complete.json": "fdf76b6715f041caec40163b1cebd676a18e141c35958616c5797a0adf552133",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_1/luminosity_fit_refined/parameters.npz": "4270f915ee57fe820c1cb7df3a475299f1c57c4f12ae8dfb59a04bb732cbbb31",
+    "data/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "data/v3_1/selection_certificate_audit/complete.json": "cf70a18f99031605cf3acdb6782fc47667acb0a7aa79a1dcd34d31dddc9a7881",
+    "scripts/v3_1_gaussian_importance_pilot.py": "d899fc131fe748df5ec9aa7dfb00319b2ae6d5bf1eff35de668698129d4f4e09",
+    "docs/v3_1_gaussian_importance_protocol.md": "bc2cbdb76d4c3cefdbbaf2dd9274b8b18a0214a04b996a4cdd41b69596f47102",
+    "src/photdis/v3_1/gaussian_importance.py": "8f069d2193992cc818fcb171f08cfa5649cf7950ae0c9bf689edf06d0f6a80ef",
+    "src/photdis/v3_1/gaussian_entry.py": "49fe66d226722fa79f887351b0af62612cbc5b9c982ccc8e8938df2705dac875",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/certified_support.py": "90fdde8f583aee17458c75dc74b78e83232a85a83eca4a16ade38ac769c5e077",
+    "src/photdis/v3_1/exact_support.py": "6c2d158036bb11f642e9b8fb8e1e8252349e7dd4aab76ee7f8c0fc5e849dc7a9"
+  },
+  "outputs": {
+    "summary.csv": "836b7d517854c04b7c836ba536c6d1ca155fb807df0aa9b9c11f031d6b80c303"
+  },
+  "contexts": {
+    "context_0/complete.json": "a27edcdfc899024d7bea6d8afc3499615a6710dec2919a28f0b66e3636e8cc0f",
+    "context_1/complete.json": "4ffc7ad8c5b326443c968b285379e6e02c508a2e0c72ee6b5bc619db828cee37",
+    "context_2/complete.json": "2930831e98f57763c9e6f2046ee695f6a29a297ba75e7e3410677fcb11ecdf29"
+  },
+  "job": "61218976",
+  "passed": true,
+  "scope": "Bounded shared numerical proposal, all34correction states and three original contexts. Scientific Gaussian priors unchanged; no population/outcome score."
+}

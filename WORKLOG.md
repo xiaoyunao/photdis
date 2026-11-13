@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — validate shared entry and native pilot; prepare direct target matrices
+- Sharedproposal61218976 COMPLETED62s: allthreecontexts/all34corrections pass
+  at2097152; percontext42–44s, independent/drawlevel andcrossmethodguards pass.
+  Exactcertified mediancontrol61217708 COMPLETED721s:32768passes with previous
+  .0020903/independent.0020218/fine.0010060; alloldfailedattempts retained.
+- Nativepilot61219038 COMPLETED43s:131objects allpass; maxrelevantlogresponse
+  .00293973, maxjointprobability8.42014e-6. Frozenheldoutfields12/4/6 and3540
+  candidateidentities. Compactevidence collected withoutreferenceoutcomes.
+- Addedregistered directobserved-context entryproduction: all26000broad plus
+  3540hardcandidate, same34correctionstates, alllevels/seeds/errorsretained.
+  No interpolation. Nativeproduction preservesallkernels, onecommonscale and
+  pilot+128productionidentityfineaudits;4disjointnative/16entryresourceshards.
+- Validation: newdrivers Python/shellsyntax pass;4focusedGaussian/hierarchy
+  tests pass. Productionjobs notyetexecuted; targetfit/evidence/counts pending.
+- Next: submitmatrices; resume timedout radialshard afterallocationends; finish
+  independentresponse library andfullvalidation numericalsidecars.
+
 ## 2026-11-13 — launch full numerical sidecars and native target pilot implementation
 - Submitted61218976debug sharedproposal/all34state pilot;61218977field and
   61218978common regular2h fullvalidation numericalsidecars. Reference outcomes
