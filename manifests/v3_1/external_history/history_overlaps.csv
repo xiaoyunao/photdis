@@ -1,0 +1,10 @@
+path,lineage,rows,positive_ids,candidate_identity_overlap,candidate_cell_overlap,note
+data/pilot_audit_v1/reference.fits,cold_v1_v3_and_pilot_reference,6942,6942,0,0,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/baseline_v0/references.npz,old_field_reference_parent,1689160,1670723,0,1,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/giant_information_v1/labels.npz,giant_information_parent,232454,214017,0,0,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/baseline_v1_4/references.npz,v1_4_through_v2_reference_parent,3565499,3564983,0,433,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/v2_3/training.npz,explicit_v2_3_fit,266774,266774,0,0,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/v3_0/references.npz,v3_reference_roles_parent,612114,612085,0,433,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/v3_0/validation/reservation/photometry.npz,opened_v3_reservation,3250,3231,0,1,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/v3_0/validation/new_sky/photometry.npz,opened_v3_newsky,2048,1318,0,0,Conservative prior input/inspection exposure; not every parent row was fitted.
+data/v3_0/validation/independent_scale/photometry.npz,opened_v3_NGC288,8192,2957,0,0,Conservative prior input/inspection exposure; not every parent row was fitted.

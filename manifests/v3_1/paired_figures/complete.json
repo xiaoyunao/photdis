@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "data/v3_1/target_prior/diagnostic/paired_report/complete.json": "f5faa9fed85852c65af3a34c174fdf162d53d30233af82128cc4f05133e86eea",
+    "data/v3_1/target_prior/diagnostic/paired_report/all.csv": "027f4d7e8e987bb5431bf6df70c504eb01a7015d4a1106c956123ed868df075d",
+    "scripts/v3_1_paired_figures.py": "54e2b5a4b3ed2d83d23e27476b783dd8ca795df53283db04dff3099bbf934acf",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "target_prior_transfer.png": "d48bc3659ed674b0c8253de9496589b474ae78b81e6f2ec885f9cd1d572d2315",
+    "target_prior_transfer.pdf": "4821881d4bd68284be95084e86b4af64846b0a45da81df703f4205113f7bdce2",
+    "target_prior_transfer.csv": "7dbb70d5755cff2e87258d220c2db269e45eec660bd4c243c664578a87d05e4c",
+    "class_metallicity_contrasts.png": "2ea0aa287496024bf9e3a12ea03dd6a4131365492b5c1d68ea418b452d802992",
+    "class_metallicity_contrasts.pdf": "a7098916fb6d379ef3d82ad65133220e8514a84f0520be809a9dd70bf95f8a62",
+    "class_metallicity_contrasts.csv": "d2e9805e0e19127a131e7ac3a6f9d0077ad8bea66fc3244429b48ce9773e4c35"
+  },
+  "job": "61214835",
+  "plates": 2,
+  "plotted_rows": {
+    "target_prior_transfer": 24,
+    "class_metallicity_contrasts": 24
+  },
+  "png_dpi": 300,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scope": "Two seen-development paired diagnostic plates. All plotted rows preserve exact source denominators and original numerical flags; no new scientific sample or outcome."
+}

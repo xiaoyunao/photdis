@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "data/v3_1/target_prior/diagnostic/object_2507286355604739968.json": "2f234b7e32906c6d36bc10cf9ea667ccefd8e1f1df454ab84070aba7c0ad3e5a",
+    "data/v3_1/target_prior/diagnostic/object_2507286355604739968.npz": "92b642a02ed7bbfdcd73a602ba3453790920afdea044d6364d035bf6b9272b41",
+    "data/v3_1/target_prior/diagnostic/complete.json": "bb63b7162f3e2302ffe1245bf3f897229ec340cae86c9c52bb927443be2fb7ad",
+    "data/v3_1/target_prior/diagnostic/shared_parameters.npz": "311012520c640500d12622eb8c5a0652ce4988eae56f621fa69d76805af1bccb",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_target_prior_refine.py": "43d907757c9824c17659a0fdd764946f612bb9631692b9d058770a1b1c6b9d94",
+    "src/photdis/v3_1/shared_prior.py": "e5f10085115b8282a48836ff7ae21662bd350e479880a4003e17757d1067e429"
+  },
+  "outputs": {
+    "refinement.npz": "2596d88aa084f6d4a0f4ebae197944fad92fb60eb436a7a58d6063b6d5f2dd4c"
+  },
+  "identity": 2507286355604739968,
+  "job": "61214982",
+  "levels": [
+    {
+      "level": 1,
+      "nodes": 6269,
+      "quantile_delta": 0.005808799708661994,
+      "probability_delta": 4.487313589585096e-05,
+      "joint_delta": 2.220446049250313e-16,
+      "log_normalization": 8.881784197001252e-16,
+      "marginal_half_delta": 0.0003360493589775748,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "original_flag_retained": true,
+  "original_to_refined_quantile_delta": 0.005808799708661994,
+  "original_to_refined_probability_delta": 4.487313589585096e-05,
+  "scope": "Identical shared parameters, weights, model, calibration and observation; bounded grid bisections only. Original diagnostic and paired report remain unchanged."
+}

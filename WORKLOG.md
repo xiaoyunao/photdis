@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-13 — qualify new evidence and verify paired plates
+- Native resume61214816 COMPLETED1077s after initial30min timeout:126371unique
+  exactG3 matches,126066nativePSF,605photometric admissions across38cells;
+  305nonPSF,0missingTYPE,0duplicates. Hashverified smalladmission records saved.
+- History audit completed in allocated61214835 step after cancelling pending
+  duplicate61214983.605newIDs/outsideallfootprints;171unusedsky/system,170field.
+  Strictfield distanceprecision<20%:6at0–2kpc,3at2–5,nonebeyond5; no newstrictGC.
+  All605 include163precisedistances but only7giants and0poorprecisegiants;
+  source-new/seen-sky and strictnewsky must remain separately named evidence.
+- Targetflag sidecar61214982 COMPLETED17s,6269nodes: quantiledelta.005809mag,
+  jointprobdelta.00004487; passes. Originalflag/report retained.
+- TwoEnglish pairedplates generated in allocated61214835 step (queued61215211
+  cancelled before replacement), both PNGs visually inspected.62actual hash,
+  PNG/PDF/300dpi/English/source-row checks pass. Figures and tables retained.
+- Catalog48 broad61214835 COMPLETED1332s,8192/chain finalfinepass;
+  local61214836 COMPLETED414s,2048/chain finalfinepass. Originals preserved.
+- Median candidateentry ran as61214836.0 allocated step, but was terminated143
+  when parentbatchfinished; no scientific result accepted. Retain log/inputfreeze
+  and resume under a dedicated allocation; do not attach long work to shortbatch.
+- Registered targetedcommon-scale native checks forNGC1261/1851/7492. Old
+  inventories have0MWSspectra for all3; all-history/native admission stillrequired.
+  BV21 HST Table2errors alreadyinclude1.7%; sharedmethod3% is sensitivity only.
+  Newdriver syntax/shell checks pass; no finalroles or correctionfit yet.
+
 ## 2026-11-13 — prepare paired mechanism plates and record scheduler limits
 - Candidate normalization mediancontext pilot submitted61215145 regular1h;
   independent finite-context quadrature results still pending.

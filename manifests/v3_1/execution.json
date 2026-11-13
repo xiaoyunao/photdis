@@ -266,22 +266,28 @@
     {
       "job_id": "61214816",
       "purpose": "exact per-brick native resume after61214053 timeout",
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 1077,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214835",
       "purpose": "catalog48 broad numerical extension",
-      "last_observed_state": "RUNNING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "timelimit": "00:30:00"
+      "timelimit": "00:30:00",
+      "elapsed_seconds": 1332,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214836",
       "purpose": "catalog48 local numerical extension",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "COMPLETED",
       "qos": "debug",
       "timelimit": "00:30:00",
-      "nice": 10000
+      "nice": 10000,
+      "elapsed_seconds": 414,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214837",
@@ -303,26 +309,39 @@
       "job_id": "61214982",
       "purpose": "flagged shared-target-prior grid sidecar",
       "dependency": null,
-      "last_observed_state": "PENDING",
-      "qos": "debug"
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 17,
+      "exit_code": "0:0"
     },
     {
       "job_id": "61214983",
       "purpose": "historical input/footprint/system ancestry availability audit",
       "dependency": "afterok:61214816",
-      "last_observed_state": "PENDING",
-      "qos": "debug"
+      "last_observed_state": "CANCELLED",
+      "qos": "debug",
+      "elapsed_seconds": 0,
+      "note": "Pending allocation cancelled before replacement by explicit allocated job step."
     },
     {
       "job_id": "61215145",
       "purpose": "median candidate-envelope exact selection numerical pilot",
       "qos": "regular",
       "timelimit": "01:00:00",
-      "last_observed_state": "PENDING",
+      "last_observed_state": "CANCELLED",
       "args": [
         "--context",
         "1"
-      ]
+      ],
+      "elapsed_seconds": 0,
+      "note": "Pending allocation cancelled before replacement by explicit allocated job step."
+    },
+    {
+      "job_id": "61215211",
+      "purpose": "paired mechanism figure generation",
+      "last_observed_state": "CANCELLED",
+      "elapsed_seconds": 0,
+      "note": "Pending allocation cancelled before replacement by explicit allocated job step."
     }
   ],
   "local_validation": {
@@ -383,5 +402,30 @@
     "nonconverged": 0,
     "new_target_cells_objects": 32,
     "target_observation_overlap": 0
-  }
+  },
+  "allocated_steps": [
+    {
+      "allocation": "61214835",
+      "purpose": "external history audit",
+      "state": "COMPLETED",
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_externalhistory_61214835_step.out"
+    },
+    {
+      "allocation": "61214835",
+      "purpose": "paired scientific figures",
+      "state": "COMPLETED",
+      "exit_code": 0,
+      "log": "logs/photdis_v3_1_pairedfigures_61214835_step.out"
+    },
+    {
+      "allocation": "61214836",
+      "step": "0",
+      "purpose": "candidate normalization median context",
+      "state": "CANCELLED_ON_PARENT_COMPLETION",
+      "exit_code": 143,
+      "log": "logs/photdis_v3_1_candidateentry_61214836_step.out",
+      "accepted": false
+    }
+  ]
 }

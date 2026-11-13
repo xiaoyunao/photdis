@@ -1,0 +1,362 @@
+[
+  {
+    "config": "configs/field_cal_ra140_150.json",
+    "bounds": [
+      140,
+      5,
+      150,
+      15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cold_v4_ra000_010.json",
+    "bounds": [
+      0,
+      -35,
+      10,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cold_v4_ra150_160.json",
+    "bounds": [
+      150,
+      20,
+      160,
+      30
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cold_v4_ra220_230.json",
+    "bounds": [
+      220,
+      20,
+      230,
+      30
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cross_ra000_010.json",
+    "bounds": [
+      0,
+      15,
+      10,
+      25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cross_ra160_170.json",
+    "bounds": [
+      160,
+      -25,
+      170,
+      -15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cross_ra180_190.json",
+    "bounds": [
+      180,
+      -25,
+      190,
+      -15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_cross_ra340_350.json",
+    "bounds": [
+      340,
+      5,
+      350,
+      15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_dev_cal_ra205_215.json",
+    "bounds": [
+      205,
+      -10,
+      215,
+      0
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_final_ra050_060.json",
+    "bounds": [
+      50,
+      -30,
+      60,
+      -20
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_final_ra230_240.json",
+    "bounds": [
+      230,
+      5,
+      240,
+      15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_giant_ranked_ra190_200_dec_p000_p010.json",
+    "bounds": [
+      190,
+      0,
+      200,
+      10
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_giant_ranked_ra200_210_dec_p000_p010.json",
+    "bounds": [
+      200,
+      0,
+      210,
+      10
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_giant_ranked_ra210_220_dec_p040_p050.json",
+    "bounds": [
+      210,
+      40,
+      220,
+      50
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra020_030.json",
+    "bounds": [
+      20,
+      -25,
+      30,
+      -15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra060_070.json",
+    "bounds": [
+      60,
+      -35,
+      70,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra130_140.json",
+    "bounds": [
+      130,
+      25,
+      140,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra180_190.json",
+    "bounds": [
+      180,
+      25,
+      190,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra230_240.json",
+    "bounds": [
+      230,
+      25,
+      240,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra235_245.json",
+    "bounds": [
+      235,
+      0,
+      245,
+      10
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_native_ra330_340.json",
+    "bounds": [
+      330,
+      -35,
+      340,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra010_020.json",
+    "bounds": [
+      10,
+      -35,
+      20,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra140_150.json",
+    "bounds": [
+      140,
+      25,
+      150,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra200_210.json",
+    "bounds": [
+      200,
+      25,
+      210,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra250_260.json",
+    "bounds": [
+      250,
+      25,
+      260,
+      35
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra310_320.json",
+    "bounds": [
+      310,
+      -35,
+      320,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_sky_ra340_350.json",
+    "bounds": [
+      340,
+      -15,
+      350,
+      -5
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_supp_ra035_045.json",
+    "bounds": [
+      35,
+      -35,
+      45,
+      -25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_supp_ra170_180.json",
+    "bounds": [
+      170,
+      15,
+      180,
+      25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_targeted_ra020_030_dec_p000_p010.json",
+    "bounds": [
+      20,
+      0,
+      30,
+      10
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_targeted_ra180_190_dec_m010_p000.json",
+    "bounds": [
+      180,
+      -10,
+      190,
+      0
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_targeted_ra180_190_dec_p000_p010.json",
+    "bounds": [
+      180,
+      0,
+      190,
+      10
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_targeted_ra190_200_dec_p020_p030.json",
+    "bounds": [
+      190,
+      20,
+      200,
+      30
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_test_ra190_200.json",
+    "bounds": [
+      190,
+      15,
+      200,
+      25
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/field_test_ra320_330.json",
+    "bounds": [
+      320,
+      -25,
+      330,
+      -15
+    ],
+    "overlap": 0
+  },
+  {
+    "config": "configs/pilot_10deg.json",
+    "bounds": [
+      0,
+      -10,
+      10,
+      0
+    ],
+    "overlap": 0
+  }
+]

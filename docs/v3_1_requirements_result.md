@@ -8,14 +8,14 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | A1 | Complete latest review and related project chat recovery | Complete | Latest full message archived; photdis_v1, original planning and three related Pro chats inspected |
 | A2 | Frozen baseline, roles, PSF admission/export and preservation | Registered | Protocol; actual v3.1 source inventory pending |
 | B1 | Same-star class and FeH conditional diagnostics | Full diagnostic computed; interpretation in progress | 304evolved class-oracle contrasts across8sky blocks; source/stratum tables retained; no production labels |
-| B2 | Fixed response/prior/band/error contrasts | Band/error contrasts complete; target-prior pending | 1542stars/17386views,1089paired contrasts; shared-target32star pilot passes, full1542 running; paired report pending |
+| B2 | Fixed response/prior/band/error contrasts | Full paired controls complete; correction pending | 1542stars/17386views,1089paired contrasts; full1542shared-target diagnostic and11882contrasts complete;1originalflag/finepass sidecar preserved |
 | B3 | Source/color/FeH/brightness/sky, rare support and latent negative flux | Latent pilot complete; broader audit pending | 50views, max any-negative upper0.0003423; kernel-prior proxy kept distinct; no global claim |
 | B4 | Binary/class/component mode attribution | Full diagnostic computed; interpretation in progress | Full per-mode parent support retained remotely; weighted compact summary complete, physical attribution limits retained |
 | B5 | Evidence-selected constrained correction | Pending | Mechanism diagnosis precedes amendment/fitting |
-| C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Registered; foundation tested | v3_1_radial_protocol.md;19parameter local model;176catalogs/22528rows prepared; first broad recovery numericalflag retained, pilot acceptance pending |
-| C2 | 26k/qualified-bright/held-out-field transfer | Pending | Matching selection normalization required |
+| C1 | Fixed-SED regularized radial comparison, all14 scenarios plus position×width | Registered; foundation tested | v3_1_radial_protocol.md;19parameter local model;176catalogs/22528rows prepared; catalog0/48botharms pass refined/fine gates; catalog112 pending; originals retained |
+| C2 | 26k/qualified-bright/held-out-field transfer | Numerical foundation tested; population comparison pending | Exact brightness/error/QRFsupport entry;3math tests; medianpilot interrupted by parentallocation end, dedicated resume required |
 | C3 | Independent response set and evidence concentration diagnosis | Pending | No artificial flattening; continuous-systematic amendment if supported |
-| D1 | Available-reference/historical-use inventory and frozen new test blocks | Initial inventory complete; role freeze pending | Native/role audits complete:612114eligible equals v3parent; corrected APOGEE census190431acquisition IDs; native qualification/role freeze pending; erroneouszero census preserved |
+| D1 | Available-reference/historical-use inventory and frozen new test blocks | Initial inventory complete; role freeze pending | Native/role audits complete:612114eligible equals v3parent; corrected APOGEE census190431acquisition IDs; 605nativePSF,170strictnewskyfield but9precisedistances; common-scale acquisition/role freeze pending; erroneouszero census preserved |
 | D2 | Independent near/class/poor-metal/common-scale/far evidence | Pending | Empty domains explicitly unvalidated |
 | D3 | Once-opened final scores and correlated uncertainty | Pending | Signed Gaia and source ancestry retained |
 | E1 | Final product identity matches main evaluation | Pending | Model/calibration/prior/selection/shared hashes |
@@ -23,8 +23,8 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 | E3 | Usable/extrapolated/unvalidated domain map and reweight support | Pending | Independent evidence and finite response uncertainty |
 | E4 | Structure-prior replacement and full-posterior application | Pending | Shared parameters/selection; matched baseline |
 | F1 | Reproducible programs, configs, job records, artifact verification | In progress | Tested diagnostic foundation; actual pilot/report/latent evidence and execution manifest |
-| F2 | English figures, source tables, visual inspection and complete report | Pending | Not just format checks |
-| F3 | README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync | In progress | Milestones synchronized throughce0d1e3; ongoing work recorded in WORKLOG |
+| F2 | English figures, source tables, visual inspection and complete report | First2plates complete; overallpending | TwoPNGactual visual reviews and62artifact/source checks pass; fullatlas/report stillpending |
+| F3 | README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync | In progress | Milestones synchronized through4eacaa3; ongoing work recorded in WORKLOG |
 
 Negative scientific results remain deliverables, but do not satisfy calibration
 or independent validation claims. Unavailable evidence needs an actual inventory
