@@ -18,6 +18,9 @@
   gitdiffchecks pass. Actualsummaryrun awaitscomplete radialreport.
 - Updatedintegratedmethods/PLAN/ledger; correctedmethods staleexternalpending
   wording. Main scientificfailure unchanged; remainingjobs stilllive/queued.
+- Afterthreeendsfedc389match, submittedreport61228930afterok61225052:61225072,
+  summary61228931afterokreport; bothregular15min. Fullqueue/absence/sourcecommit
+  preflight verified, submissionjournal persisted aftereachjob; no duplicatewriter.
 
 ## 2026-11-13 — document complete external evidence gaps and high-q disagreements
 - Added docs/v3_1_final_validation_result.md from11authenticatedsmallsource

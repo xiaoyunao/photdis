@@ -1,0 +1,32 @@
+{
+  "source_commit": "fedc38950118c0eeec9a8508a5793456c7a6678f",
+  "predecessors": [
+    "61225052",
+    "61225072"
+  ],
+  "jobs": [
+    {
+      "stage": "radial_report",
+      "job": "61228930",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61225052:61225072",
+        "scripts/run_v3_1_radial_report.sh"
+      ],
+      "script_sha256": "8ca2546664c9bd694c0a1301bf3aab42b8319b3747f88d6bdbaf9993951bd703"
+    },
+    {
+      "stage": "radial_summary",
+      "job": "61228931",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61228930",
+        "scripts/run_v3_1_radial_summary.sh"
+      ],
+      "script_sha256": "c7494b5d367e3aa075537cb787afa5f8e697115f36aa340389c83a7d3c4f4e63"
+    }
+  ],
+  "scope": "Complete registered all176catalog/352arm report then source/field/joint-block summaries. Same science and all failed outcomes; dependencies are execution completion, not scientific acceptance."
+}

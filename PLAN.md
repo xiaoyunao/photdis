@@ -24,7 +24,8 @@ Negative findings remain deliverables, never successful calibration claims.
 - [ ] WP2 radial/target/systematic comparisons. All176catalogs prepared; pilots
   0/48/112botharms pass. Production bounded512/2048/8192 outcomes incomplete;
   originaltimeouts and terminalnumerical failures retained. Exactresume shards
-  0/1 timedout at2h; exactresumes61225052/61225072regular2h. Report driver waits for all352arm outcomes.
+  0/1 timedout at2h; exactresumes61225052/61225072regular2h. Report61228930 waitsafterokbothresumes for all352arm outcomes; correlated
+  summary61228931 waitsafterokreport.
   Native target26000rows across34corrections complete,258fineaudits allpass.
   Direct entry all16shards complete:26000objects/29540envelopes allpass;
   initial61222996/61222997 resourcegroups bothTIMEOUT; exactresumes61223947
