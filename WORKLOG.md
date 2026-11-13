@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-14 — preserve structure11 flags and prepare two-state entry resource pilot
+- Entry11 COMPLETED13m35;512contexts/134originalfailures compactoutputs
+  collected. Existingpendingtransferpack61238249_0 promoteddebug30min after
+  measured12-state18m39pilot proof andfresh5-jobcap; originalwriter retained.
+- Originalentry8/9 batches measured26.84/26.91millionKiB aggregateRSS. Prepared
+  two original32-worker CLIs pernode, with192GiB planningbound/70%memory guard,
+  source/payload identity, locks, exclusive logs,1024contextmarker checks and
+  separateexecution/numerical outcomes. No scientificdriverchange.
+- Initialentry13/14 pilotproposedonlyifstillpending, withzero-runtime/absence
+  proof before replacement; downstreamrefinement andassembly dependencies must
+  be repaired before release. Actualresourcepilot notyetsubmitted; no wideruse.
+- Collectednative13/14 markers matchexisting64-stage inventory; original
+  failures remain, finepassed inventory retained. Missinglocalentry0 marker
+  nowcollected/matchesexistingrefined0 provenance; no completedstage rerun.
+- NewPythonparse/import andshellsyntax pass. Next: exactpreflight, actualpilot,
+  remainingholdout/transfer/structure completion andfullscientificdelivery.
+
 ## 2026-11-14 — batch sixty unstarted transfer states after measured resource validation
 - Source-syncedec25902; authenticated220driver/refinement/fit/count/completed
   sourcehashes andactualpilot/previousjobcompletion. All15oldtasks7–16/19–23

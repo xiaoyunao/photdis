@@ -1,0 +1,74 @@
+{
+  "plan_sha256": "dc4a9a5a738af18e3c9ed936ff8cef193ae12dc5ce51b03f7f98ada6291de8e3",
+  "commands": [
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61225864_25|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61225886|PENDING|debug|0:00|30:00|(Dependency)\n61223167_13|PENDING|regular_1|0:00|30:00|(Resources)\n61223167_14|PENDING|regular_1|0:00|30:00|(Resources)\n61238249_0|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_1|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_2|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_3|PENDING|regular_1|0:00|1:00:00|(Priority)\n61238249_4|PENDING|regular_1|0:00|1:00:00|(Priority)\n61231554_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61231554_24|PENDING|regular_1|0:00|1:00:00|(Priority)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61229422_31|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_30|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_29|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_28|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_27|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_26|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_25|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_24|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_23|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_22|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_21|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_20|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_19|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_18|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_17|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_16|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_15|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_14|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_13|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_17|PENDING|regular_1|0:00|2:00:00|(Priority)\n61231678|PENDING|regular_1|0:00|30:00|(Dependency)\n61231554_5|PENDING|regular_1|0:00|2:00:00|(Priority)\n61229422_12|PENDING|regular_1|0:00|1:00:00|(Dependency)\n61229422_11|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_10|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_9|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_8|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_6|PENDING|regular_1|0:00|1:00:00|(Priority)\n61229422_5|PENDING|regular_1|0:00|1:00:00|(Priority)\n61223167_31|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_30|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_29|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_28|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_27|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_26|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_25|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_24|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_23|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_22|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_21|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_20|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_19|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_18|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_17|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_16|PENDING|regular_1|0:00|30:00|(Priority)\n61223167_15|PENDING|regular_1|0:00|30:00|(Priority)\n61229422_2|RUNNING|debug|12:39|30:00|nid004518\n61223167_12|RUNNING|debug|3:25|30:00|nid004261\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61238249_0",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61238249 ArrayJobId=61238249 ArrayTaskId=0 ArrayTaskThrottle=2 JobName=photdis_v3_1_transferpacks UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A SubmitTime=2026-11-13T11:47:44 EligibleTime=2026-11-13T11:47:45 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:52:54 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login35:1829543 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_transfer_resource_array.sh SubmitLine=sbatch --parsable --hold --array=0-4%2 scripts/run_v3_1_transfer_resource_array.sh data/v3_1/execution/transfer_pack_rollout WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_transferpacks_61238249_0.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "sacct",
+        "-S",
+        "2026-11-12",
+        "-j",
+        "61237364",
+        "-X",
+        "-n",
+        "-P",
+        "-o",
+        "JobID,State,Elapsed,ExitCode"
+      ],
+      "code": 0,
+      "stdout": "61237364|COMPLETED|00:18:39|0:0\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61238249_0",
+        "QOS=debug",
+        "TimeLimit=00:30:00"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61238249_0",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61238416 ArrayJobId=61238249 ArrayTaskId=0 ArrayTaskThrottle=2 JobName=photdis_v3_1_transferpacks UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=69119 Nice=0 Account=desi QOS=debug JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T11:47:44 EligibleTime=2026-11-13T11:47:45 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:52:54 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login35:1829543 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_transfer_resource_array.sh SubmitLine=sbatch --parsable --hold --array=0-4%2 scripts/run_v3_1_transfer_resource_array.sh data/v3_1/execution/transfer_pack_rollout WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_transferpacks_61238249_0.out TresPerTask=cpu=128\n",
+      "stderr": ""
+    }
+  ],
+  "after": "JobId=61238416 ArrayJobId=61238249 ArrayTaskId=0 ArrayTaskThrottle=2 JobName=photdis_v3_1_transferpacks UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=69119 Nice=0 Account=desi QOS=debug JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T11:47:44 EligibleTime=2026-11-13T11:47:45 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T11:52:54 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login35:1829543 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=128 NumTasks=1 CPUs/Task=128 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=128,mem=487802M,node=1,billing=128 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=128 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_transfer_resource_array.sh SubmitLine=sbatch --parsable --hold --array=0-4%2 scripts/run_v3_1_transfer_resource_array.sh data/v3_1/execution/transfer_pack_rollout WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_transferpacks_61238249_0.out TresPerTask=cpu=128\n",
+  "complete": true
+}

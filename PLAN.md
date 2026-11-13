@@ -79,6 +79,9 @@ Negative findings remain deliverables, never successful calibration claims.
   Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
   16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
   Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.
+  Entry11completed13m35/134originalflags retained. Two-state initialentry
+  resourcepilot prepared (same32-worker CLIperstate; notrefinement); actual
+  preflight/pilot/dependencyrepair required before adoption.
   Originalarraythrottle remains2. Entry9original512failures retained; existing
   pendingentry10/11/refinement2 promoteddebug afterfreshcap check.
   shared whole-field predictive/count transfer andreport drivers nowready, with
