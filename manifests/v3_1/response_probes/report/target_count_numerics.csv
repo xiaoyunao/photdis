@@ -1,0 +1,4 @@
+set,alternative,maximum_probability_delta,maximum_mean_count_delta,passed
+new,native_coarse,0.00018109954996876898,0.00026388825179779474,True
+new,entry_second_seed,7.98176439864573e-06,2.9793875398809178e-05,True
+new,entry_previous_level,3.496692002191715e-05,0.00015613279017800963,True

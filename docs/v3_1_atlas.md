@@ -176,3 +176,23 @@ hash/format/English/source-row checks pass for1788plottedrows.
 [Result and full scenario tables](v3_1_radial_result.md),
 [plotted rows](../manifests/v3_1/radial_figures/plotted.csv),
 [acceptance](../manifests/v3_1/radial_figures/acceptance.json).
+
+## Complete regenerated-response evidence and source transfer
+
+![Response evidence](../figures/v3_1/response_probes/response_evidence.png)
+
+All64responses use the same128target/256seen-development design. One original
+response9 target native failure remains, so original/pooled sets are not
+renormalized. The regenerated32 set passes its numerical gates but ESS1.023628
+and maximumweight98.835% remain. Conditional probe evidence is distinct from
+26000-object population evidence and the final candidate's weights.
+
+![Response source transfer](../figures/v3_1/response_probes/response_source_transfer.png)
+
+All64same-identity points retained: signedGaia201objects/8sky cells, evolved
+primary63/6. Whole-sky intervals and source denominators shown. Regenerated
+mixture primary scores improve while all-qualified signedGaia worsens;
+seen-source agreement does not establish independent distance calibration.
+TwoEnglishPNG300dpi/PDFplates, all7panels visuallyinspected after typography
+repair;636actual artifact/source-rowchecks and349compacttablechecks pass.
+[Full result](v3_1_response_result.md); [acceptance](../manifests/v3_1/response_figures/acceptance.json).

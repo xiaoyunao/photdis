@@ -1,0 +1,12 @@
+{
+  "transfer_array": "61231554",
+  "report_job": "61231678",
+  "outputs": {
+    "submission.json": "39ee2b7b0aba2ea30fa44313d3d6b65270d267cd8b2e7d829296fe8a084f53dd",
+    "submission_before_dependency_repair.json": "bbe56769c0539dde742389a31495a29bc25cc96da74223a3588d78359da0dcc9"
+  },
+  "states": 102,
+  "groups": 26,
+  "maximum_nodes": 2,
+  "scientific_results_complete": false
+}

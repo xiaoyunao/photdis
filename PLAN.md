@@ -14,7 +14,8 @@ Negative findings remain deliverables, never successful calibration claims.
 
 ### Milestones and current evidence
 - Resource execution: all4exactresponse groups61229862 completed; full64state
-  report nowrunning. Structure-native replacement61231239 (max7pairs, unchanged
+  report61221949completed6m49; fullresponse scientificresult/2plates accepted
+  asartifacts, notscientificcalibration (newESS1.023628, original/pooledfailed). Structure-native replacement61231239 (max7pairs, unchanged
   32workers,max2nodes) submittedafter56zero-runtime cancellationproofs;8prior
   completehashes retained. Twoactual-product structure figure scripts prepared;
   full32state application/render/visualreview stillrequired.
@@ -57,7 +58,9 @@ Negative findings remain deliverables, never successful calibration claims.
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits nowcomplete: exactgroup7resume
   61227619_7 COMPLETED14m07, allfourconverged at25/26/21/18iterations. Original
-  timeout/checkpoints retained; all64probe/refinement comparisons stillpending.
+  timeout/checkpoints retained; all64probe/refinement/report outcomes nowcomplete.
+  New32numericpass butESS1.023628; original/pooled blockedbyone response9target
+  nativefailure. Fullresponse result and2visuallyacceptedplates delivered.
   Matched64-response fixed-prior probes frozen128target/256seen-development,
   pilot old12/new1004 completed61220906 and both pass; remaining62probes submitted
   with individual refit dependencies. Development numericalsidecar driver now
@@ -137,13 +140,14 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full suite: 179 tests pass (6.06 s). Twelve English plates have actual
+- Latest full suite: 179 tests pass (6.06 s). Fourteen English plates have actual
   visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
   photometric occupancy 165 and final external comparison 104 artifact/source
-  checks; radial threeplates1823checks. Candidate-mode/response/domain evidence
+  checks; radial threeplates1823checks; response twoplates636checks plus349source
+  checks. Candidate-mode/domain evidence
   figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
-  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst2656fullobjects pass;
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot andfirst3098fullobjects pass;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
 - External correlated report 61226775 and its two inspected figures are complete;
   domain screens61226777complete4m50:37800comparisons/1350groups,17table checks;
@@ -154,12 +158,14 @@ Negative findings remain deliverables, never successful calibration claims.
   evidence 61226776 additionally waits for the complete 64-response report.
 - Pending short response stages replaced by4sequential groups61229862 after
   all60oldpending stages provedcancelled/unstarted;68complete stages retained.
-  Originalall64report61221949 nowafterok61229862; groups0–2complete,3running.
+  Originalall64report61221949 nowcomplete; all4resourcegroups complete.
 - All 32 independent SED refits are complete (last exact resume 61227619_7).
-  Finish registered old/new response probes and refinements. Require all 64 inventories
-  before normalization; no dropped response or flattened evidence weight.
+  Registered old/new probes/refinements/report complete. Preserve all64inventories,
+  original/pooledfailed normalization andnewESS1.023628; no addedresponse search.
 - Complete remaining broad/heldout conditional populations, their all-34-state
-  ensembles and frozen sky-transfer comparisons. Native/joint/entry matrices,
+  ensembles and frozen sky-transfer comparisons61231554/report61231678.
+  Historicalcompleteddependencies repaired with52actualstate hashes; preserve
+  initialrejectedreportdependencyjournal. Native/joint/entry matrices,
   all candidate states and fixed-high-q joint counts are already complete.
 - Radial implementation, all176/352outcomes, correlatedsummaries andthree
   visuallycheckedplates complete. Preserve failedscience andalloriginals;

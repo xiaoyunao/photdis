@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "b205894e72cbc3554989a0fd389dd5aca35fb2fcf8a41415e564c92c95ce9281",
+  "integrity_sha256": "f134d68da2352cf5bb28e4d406fd5d3e2792d4e43b218569a63c7624ba8bac9f",
+  "actual_checks": 636,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 2,
+    "panels": 7,
+    "notes": "All7panels visually inspected. Evidence-axis typography repaired and final four-panel plate rechecked; source-transfer panel labels, intervals, denominators and legends legible. Original and pooled missing weight curves explicitly marked."
+  },
+  "scope": "Actual figure/source integrity and visual review, not scientific calibration acceptance."
+}

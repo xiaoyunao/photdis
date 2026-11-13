@@ -1,0 +1,257 @@
+{
+  "ready": [
+    {
+      "job": "61231554_0",
+      "source_job": "61225864_0",
+      "accounting": [
+        "COMPLETED",
+        "00:09:09"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_1",
+      "source_job": "61225864_1",
+      "accounting": [
+        "COMPLETED",
+        "00:09:06"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_2",
+      "source_job": "61225864_2",
+      "accounting": [
+        "COMPLETED",
+        "00:09:03"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_3",
+      "source_job": "61225864_3",
+      "accounting": [
+        "COMPLETED",
+        "00:09:16"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_8",
+      "source_job": "61225864_8",
+      "accounting": [
+        "COMPLETED",
+        "00:09:03"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_9",
+      "source_job": "61225864_9",
+      "accounting": [
+        "COMPLETED",
+        "00:02:05"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_10",
+      "source_job": "61225864_10",
+      "accounting": [
+        "COMPLETED",
+        "00:02:13"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_11",
+      "source_job": "61225864_11",
+      "accounting": [
+        "COMPLETED",
+        "00:02:05"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_12",
+      "source_job": "61225864_12",
+      "accounting": [
+        "COMPLETED",
+        "00:02:08"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_13",
+      "source_job": "61225864_13",
+      "accounting": [
+        "COMPLETED",
+        "00:02:43"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_14",
+      "source_job": "61225864_14",
+      "accounting": [
+        "COMPLETED",
+        "00:02:03"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_15",
+      "source_job": "61225864_15",
+      "accounting": [
+        "COMPLETED",
+        "00:02:00"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    },
+    {
+      "job": "61231554_16",
+      "source_job": "61225864_16",
+      "accounting": [
+        "COMPLETED",
+        "00:02:01"
+      ],
+      "original_dependency": "aftercorr:61225864_*(unfulfilled)"
+    }
+  ],
+  "sources": {
+    "data/v3_1/target_refinement/broad/correction_00/complete.json": "83df90b58c6922969b88b3c0837dd8b29b4bfe8c8942b495d9517f08e826d2e5",
+    "data/v3_1/target_refinement/broad/correction_01/complete.json": "ff9dd8efe628c2c409f205135904226b35800c4a6f0554d9de9b403f7fb0ae35",
+    "data/v3_1/target_refinement/broad/correction_02/complete.json": "596296e39f4822b5e1a008c971874f988c8df0c29f4edea57668ff6dec906bb2",
+    "data/v3_1/target_refinement/broad/correction_03/complete.json": "325eb9f267b5a9e1d2d69bce20fd8993bc44bdcd79959b3a19b596bd25d5b5ef",
+    "data/v3_1/target_refinement/broad/correction_04/complete.json": "6a3ec36372dd16a662f33ef52ecad2c62bb2d56d611ea4cdfdcb2aac5d52cd07",
+    "data/v3_1/target_refinement/broad/correction_05/complete.json": "6951342a13d726ddfa9ef9a87ea6f78512f6e9ef27c2ba8dd032c6ffe3824332",
+    "data/v3_1/target_refinement/broad/correction_06/complete.json": "dc6c409c2cf8604cb80413646b8b2e3252c79c9855f46391578a0d705d7bb81e",
+    "data/v3_1/target_refinement/broad/correction_07/complete.json": "c8e51e2dca2b3e156336359e698e714160db7c079e6f7b891d8d82ac128f2e9f",
+    "data/v3_1/target_refinement/broad/correction_08/complete.json": "45b669433e01232b8c1716654ce9b57c1799f6e4caf6953a377fa191aaad074e",
+    "data/v3_1/target_refinement/broad/correction_09/complete.json": "5e87f94dd7c903da09b6120784b1a8f7bed2a159d409b4ed92b7864082aebab5",
+    "data/v3_1/target_refinement/broad/correction_10/complete.json": "400111df6277baa8258a82f5c5fd0b474a63f703fff1dc36d8b411c2e8eeb006",
+    "data/v3_1/target_refinement/broad/correction_11/complete.json": "5604e1c9047ce670c94e394eb9c58466a57b755e23c84506cecca2274115e1f1",
+    "data/v3_1/target_refinement/broad/correction_12/complete.json": "324fccd670761bb0fe08a4bc85f3349028b7e8b1b09258393302311bd954ce7a",
+    "data/v3_1/target_refinement/broad/correction_13/complete.json": "4072e73393d7e55d95871c395a7f4abfb70f0b3fd7ecc0e338812eb57b362702",
+    "data/v3_1/target_refinement/broad/correction_14/complete.json": "ce6a3d37fbba3bf7b4ded06cb47b524b72431391d6549609a5e77840700d65db",
+    "data/v3_1/target_refinement/broad/correction_15/complete.json": "49e9d74c51c59c48fc579dd72de87811c399967089dd5aa16f1d4ebc7338cf1b",
+    "data/v3_1/target_refinement/broad/correction_32/complete.json": "521a5017660e7afde719cf26fa64a5cfd11bd83b0e81a62dd91e321f56da867e",
+    "data/v3_1/target_refinement/broad/correction_33/complete.json": "d1e86c644544a604f99f091d371f1ee75a233fa4757b5bac515454b06040fe0f",
+    "data/v3_1/target_refinement/candidate/correction_00/complete.json": "53e8e0e6518911f8f96adab24954621ccb87131f6e311d03b47fa03f45fa3f68",
+    "data/v3_1/target_refinement/candidate/correction_01/complete.json": "03ace113a8140df30854e845149d7cf44767f6781855a10a82e1ea0a5633449a",
+    "data/v3_1/target_refinement/candidate/correction_02/complete.json": "545c10288e428c1aad60887d02b6f9e2a66056a4ba119a7235005ae13e0a4177",
+    "data/v3_1/target_refinement/candidate/correction_03/complete.json": "92017f58fa6c060da0bde80fd2011380d48b477d5a8c44ca8e3a82ca2079c4a3",
+    "data/v3_1/target_refinement/candidate/correction_04/complete.json": "8cc35d3e5d8484cfe729cdbf5edce0b1185f73efa0c62e41590d40ec573e6b23",
+    "data/v3_1/target_refinement/candidate/correction_05/complete.json": "f621b0d43fedf65bb87645bc0e976b00c4be9b0b188cca68eeb9dbc069e9beef",
+    "data/v3_1/target_refinement/candidate/correction_06/complete.json": "984b3fd243cb5ba2f1d62797a8f9efed2a1e46bccbe9b5189e3aea8c244e6dec",
+    "data/v3_1/target_refinement/candidate/correction_07/complete.json": "721eb08d8dbe2397cb6c997d02a675b2cbf921d1aef98cd13c588e6f8a72557e",
+    "data/v3_1/target_refinement/candidate/correction_08/complete.json": "710eb54f94a27a7786c07f1c6a3c5a4f61c149e7894d75b795b908622fa29cf3",
+    "data/v3_1/target_refinement/candidate/correction_09/complete.json": "5775f0d15fdbd0277515dd66a749eaffab833f8b7361f3a945b10e9134d5d03b",
+    "data/v3_1/target_refinement/candidate/correction_10/complete.json": "6375202894b806ab6019362e6eef5b7f65bdf7d8dcb4eeadf4b0127bace85bfc",
+    "data/v3_1/target_refinement/candidate/correction_11/complete.json": "ad691200e06032aa9e9314d324c76d3e551fd22b7f06c3ed6f552011a043467c",
+    "data/v3_1/target_refinement/candidate/correction_12/complete.json": "aa77cbbbfa637fe245e2f623b9516b724ce897712a20a0d49b9a005f1e3aa4d8",
+    "data/v3_1/target_refinement/candidate/correction_13/complete.json": "883265d32f9d628a63a6ce11772c795ade303324b1d952194cd39e711e82d60f",
+    "data/v3_1/target_refinement/candidate/correction_14/complete.json": "e34981824f6206d7397b2533fc233916c981bf10b32359803e6e393ea6b46bdd",
+    "data/v3_1/target_refinement/candidate/correction_15/complete.json": "9ff2d5450a5482f7a3bd2d80feeb5c2c04ae9b22180cc922db6380ac75c38f62",
+    "data/v3_1/target_refinement/candidate/correction_16/complete.json": "611654258c855fa988c4eb1e82a43dc54de56a6553a6f3bd129c83e113a12825",
+    "data/v3_1/target_refinement/candidate/correction_17/complete.json": "1a487b9e4e810a9a8c5b264056bf57133f035fdc871f7a96c1ff25047b208ae0",
+    "data/v3_1/target_refinement/candidate/correction_18/complete.json": "a608ff649f5f7a0f3ca8e7dae5c7da692fc0d421a42eb2939f4103db352132f0",
+    "data/v3_1/target_refinement/candidate/correction_19/complete.json": "18efa75458651b5cf6c38435d2c53f3bb7cdc111938b110f1cb481a92392dc34",
+    "data/v3_1/target_refinement/candidate/correction_20/complete.json": "be2518b9e299375c820137743f5a059bdadb5fc380d1f30137707ce179f88058",
+    "data/v3_1/target_refinement/candidate/correction_21/complete.json": "a10901827cb5447361e9d5a1dd51abf470bc57d6d641b9c8eaf0015c2fed5900",
+    "data/v3_1/target_refinement/candidate/correction_22/complete.json": "a4c3a02e0cd84962c25e9849d84e25d43e32f8133245e29b94cb5332b02ed7b2",
+    "data/v3_1/target_refinement/candidate/correction_23/complete.json": "33a687ed204d98d53a179de422dba92ec477952e299899f78a817377382c9db2",
+    "data/v3_1/target_refinement/candidate/correction_24/complete.json": "2e91d06a4c16808dfd7ea0ef3109de3a301fa50ceabdc655c39bdd7efd985ecb",
+    "data/v3_1/target_refinement/candidate/correction_25/complete.json": "c83f3be107ad708c44f38c2a97950bcdd383e7a43d23e27cf7ebf2834a5120f9",
+    "data/v3_1/target_refinement/candidate/correction_26/complete.json": "b4e5b676c5c28e469c026d613ed67bb9bd51b1f49f4568ad5c4e6e1e44fce5a2",
+    "data/v3_1/target_refinement/candidate/correction_27/complete.json": "5774e7b5387daceda0a6c8d3d13c9a57aa2269ac513e3df26259e284936bf2ca",
+    "data/v3_1/target_refinement/candidate/correction_28/complete.json": "75537ac2bfafb2723cc0ad6461557a88dfd966d0764b4230b71351471591a74d",
+    "data/v3_1/target_refinement/candidate/correction_29/complete.json": "df3dfc13ca232ae64ecf4b22b2fb9e2d3bad7c3e02bc2e208ea5a9f296a9c1ba",
+    "data/v3_1/target_refinement/candidate/correction_30/complete.json": "b09dbbe0f2575955de645aae12e811c6c8fa0e2f3e09872450dd1a6ee7b04d34",
+    "data/v3_1/target_refinement/candidate/correction_31/complete.json": "28ef4e81f07b9162468d35163511cfe6b058419344884b872cb23db75c1c1fea",
+    "data/v3_1/target_refinement/candidate/correction_32/complete.json": "6e094340b978572e66ed1ee95a6938fab1f468892b8c7bd263b176cfdb13e790",
+    "data/v3_1/target_refinement/candidate/correction_33/complete.json": "7cb1d9d25399cd322daba4f45e1af8ceb7e113cc9501f402f7d0b8d09f509e53"
+  },
+  "commands": [
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_0",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_1",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_2",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_3",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_8",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_9",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_10",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_11",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_12",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_13",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_14",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_15",
+      "Dependency="
+    ],
+    [
+      "scontrol",
+      "update",
+      "JobId=61231554_16",
+      "Dependency="
+    ]
+  ],
+  "scope": "Clear only redundant pending dependencies with exact completed parent accounting and all4state markers authenticated. Historical parent children no longer retained by controller; no rerun or state deletion.",
+  "completed": true
+}

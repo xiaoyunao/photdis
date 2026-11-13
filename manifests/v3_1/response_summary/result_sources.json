@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "manifests/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "manifests/v3_1/response_summary/complete.json": "f8ce68328fe235b6585bc0af43c0233b9ca72f0a15301e34eccc2bad201be1c6",
+    "manifests/v3_1/response_summary/mixture_source_summary.csv": "7df6d1f340c4a08055fd945ae228264ed83bcc9e8a4315b4a52396d2aaba6aa7",
+    "manifests/v3_1/response_figures/acceptance.json": "e69fb9a6fb5252f8e70bdbc75d450446007663a0fb66525e385bcb1a486b199a",
+    "manifests/v3_1/response_probes/report/inventory.csv": "33409f9bc738fbb41aca3eb1c6078ddc08d88b608f58accd6b8213052d2b10f9",
+    "manifests/v3_1/response_probes/report/sets.json": "2e82e1c86ca0d2dcb4f83da0087131a458e005a0e1b83e67c8dfffdb398c871c",
+    "manifests/v3_1/response_probes/report/numerical_flags.json": "da75aa74a48d69c3d984bffe6f3feb8a1e782027a9db25c458819e25022e2da0",
+    "manifests/v3_1/response_probes/report/weight_numerics.csv": "41e119259391bd7bfb06c260db882295bb8f49cf1753606f1fb09284a3c13cb1",
+    "manifests/v3_1/response_probes/report/target_count_numerics.csv": "e23e8ec9d9e15a9d0547937923fc4948c61fd2f8ede30e1a6069c11ce5578540",
+    "manifests/v3_1/response_probes/report/target_counts.csv": "8f79ed24f16f506439c4c9989e4aae481b7504db11afa4bf45dee23def7bfa88",
+    "manifests/v3_1/response_probes/report/target_decomposition.csv": "46aeef9ca1668aada314e012a53c5b4a7f5fd39a1ae8c1ca1121b4a7fa6d86d5",
+    "manifests/v3_1/response_probes/report/mixture_scores.csv": "e16ac70623ffe0727eff4c2d9391cfcb5c6d5836f8909949a6cfb7c9abcbd97e"
+  },
+  "document_sha256": "996a36628880ba5b46a8fd45711a4aacef57ea8de457d6a0c880b1aedbcf2f9e",
+  "scope": "Source hashes for complete response scientific narrative; no new model or source selection."
+}

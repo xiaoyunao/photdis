@@ -1,0 +1,26 @@
+[
+  {
+    "set": "original",
+    "states": 32,
+    "target_inputs_passed": false,
+    "accepted": false
+  },
+  {
+    "set": "new",
+    "states": 32,
+    "target_inputs_passed": true,
+    "accepted": true,
+    "log_evidence": -860.7633301922741,
+    "ESS": 1.0236280503887063,
+    "maximum_weight": 0.9883501870118373,
+    "top_draw": 1029,
+    "original_library_mass": 0.0,
+    "new_library_mass": 0.9999999999999999
+  },
+  {
+    "set": "pooled",
+    "states": 64,
+    "target_inputs_passed": false,
+    "accepted": false
+  }
+]

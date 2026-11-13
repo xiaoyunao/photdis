@@ -1,0 +1,40 @@
+{
+  "source_commit": "68b54a553ba66e8cd1c97e2e4a9e3f042f018ae5",
+  "sources": {
+    "scripts/v3_1_heldout_transfer.py": "f7715d264f62ab2970e6758ae601e45d8db20e425f4924a94c5377b6cbca63e9",
+    "scripts/run_v3_1_heldout_transfer.sh": "5b6676ef1176b22a43fda36e87cbce2c618a4c2805b1bf95ae091d223be6acb2",
+    "scripts/v3_1_heldout_report.py": "4d5faa85e1525c9296dc5e2c1f417dcb27c8fbfbf7d2aecfa0c832385db1260a",
+    "scripts/run_v3_1_heldout_report.sh": "f5f0ffd7ca7e1aefd4eef7006d9b18561d34adefe4215e6c4c6ddec11d0f2178",
+    "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1",
+    "src/photdis/v3_1/predictive.py": "d009e5702214012f7ae73323096f75a0574cc04eefd0120788be0d70fbaa5496"
+  },
+  "refinement_accounting": "61225864_0|COMPLETED\n61225864_1|COMPLETED\n61225864_2|COMPLETED\n61225864_3|COMPLETED\n61225864_4|RUNNING\n61225864_5|RUNNING\n61225864_6|PENDING\n61225864_7|PENDING\n61225864_8|COMPLETED\n61225864_9|COMPLETED\n61225864_10|COMPLETED\n61225864_11|COMPLETED\n61225864_12|COMPLETED\n61225864_13|COMPLETED\n61225864_14|COMPLETED\n61225864_15|COMPLETED\n61225864_16|COMPLETED\n61225864_17|PENDING\n61225864_18|PENDING\n61225864_19|PENDING\n61225864_20|PENDING\n61225864_21|PENDING\n61225864_22|PENDING\n61225864_23|PENDING\n61225864_24|PENDING\n61225864_25|PENDING",
+  "scope": "All102frozen transfer states, no new fit or references. Original4processes pergroup, max2nodes; preserve failed states and all34state report gate.",
+  "transfer_command": [
+    "sbatch",
+    "--parsable",
+    "--array=0-25%2",
+    "--dependency=aftercorr:61225864",
+    "scripts/run_v3_1_heldout_transfer.sh"
+  ],
+  "transfer_array": "61231554",
+  "report_command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:61231554:61225883:61225886",
+    "scripts/run_v3_1_heldout_report.sh"
+  ],
+  "completed_candidate_prerequisite": {
+    "accounting": "61225884|COMPLETED|00:00:18",
+    "path": "data/v3_1/target_ensemble/candidate/complete.json",
+    "sha256": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a"
+  },
+  "rejected_report_command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:61231554:61225883:61225884:61225886",
+    "scripts/run_v3_1_heldout_report.sh"
+  ],
+  "rejected_reason": "Slurm job dependency problem; completed candidate job no longer available as a new controller dependency. Completed accounting and exact34state marker retained.",
+  "report_job": "61231678"
+}

@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "manifests/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "manifests/v3_1/response_probes/report/inventory.csv": "33409f9bc738fbb41aca3eb1c6078ddc08d88b608f58accd6b8213052d2b10f9",
+    "manifests/v3_1/response_probes/report/response_weights.csv": "34d25823c7cbb1f4d6b0ba448bfab8e2144929453d42c5a96da2db0bb7e4f4b9",
+    "manifests/v3_1/response_probes/report/weight_numerics.csv": "41e119259391bd7bfb06c260db882295bb8f49cf1753606f1fb09284a3c13cb1",
+    "manifests/v3_1/response_probes/report/target_count_numerics.csv": "e23e8ec9d9e15a9d0547937923fc4948c61fd2f8ede30e1a6069c11ce5578540",
+    "manifests/v3_1/response_probes/report/paired_all.csv": "7da537773a6b584efe2d489a24d4a3b14903dc1622b11bd24209c6039a45c2db",
+    "manifests/v3_1/response_probes/report/paired_reference_class.csv": "bd14adc4cb9ff015611e5dff33fb7869e713cfe562cfeb92ef154c1d69027a2b",
+    "scripts/v3_1_response_figures.py": "5ef15eaed8df06826300873949616db3faa7db8e868281e627be681d685dc766",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/response_probes/response_evidence.png": "618b74176bb97c3d8c43bb5313f02016eac5b5b788b3fd9513e2ab281ff16619",
+    "figures/v3_1/response_probes/response_evidence.pdf": "34b75e5284526a76134d3cdf62ec138f7626b58ea3f4d12e4904262fd09db00d",
+    "figures/v3_1/response_probes/response_source_transfer.png": "94b2223b7122c459480222dffb100b2a95af59fbb7cc29c210add80788451df5",
+    "figures/v3_1/response_probes/response_source_transfer.pdf": "92030734ee53aa42217ccacd00f5c1def9ccee021739e4e39156c8c793dfa298",
+    "manifests/v3_1/response_figures/plotted.csv": "4504f93603a9d6308485e24e580cd1d64fd181b4bdaad2c3687b187012dd665a"
+  },
+  "figures": 2,
+  "panels": 7,
+  "plotted_rows": 300,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_acceptance": false,
+  "scope": "All64actual matched-response summaries. Conditional evidence and seen-source comparisons only; no synthetic fallback or finalcandidate calibration claim."
+}

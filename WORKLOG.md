@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-14 — complete response evidence, source migration and two inspected plates
+- All64response report61221949 COMPLETED6m49; 18explicit smallCSV/JSONproducts
+  collected/hashverified, same128target/256development nativePSF. Original35flags
+  retained; response9targetnative1failure remains. Original/pooled sets do not
+  renormalize survivors. New32numericpass butESS1.023628/maxweight.988350/top1029.
+- Newmixture whole-sky source summary: primary+.05862nat, signedGaia−.03835nat;
+  evolvedprimary+.28110nat. Sourcequalification/denominators/teacher dependence
+  retained. All24nonempty source/class summaries;349actual compactchecks pass.
+- Fullscience docs/v3_1_response_result.md with18jointcount rows and12source
+  hashes/9validlocal links. TwoEnglishPNG300dpi/PDFplates/7panels visually
+  inspected; evidence-label overlap repaired/rechecked;636actualartifact/rowchecks.
+  Newreusablevalidator uses existingpypdf/Pillow; no newdependency (fitzunavailable).
+- Submittedfrozen102state transferarray61231554,max2nodes, original4processes/group;
+  report61231678waitsalloutcomes/broad/holdoutensembles. Initialreportdependency
+  rejectedbecausecompletedcandidatejob agedout; actualCOMPLETEDaccounting/34state
+  marker authenticated, oldjournal preserved before retry.13pendingchildren with
+  removedhistoricparent records released onlyafterCOMPLETEDproof+52statehashes.
+- Twoexecutionreceipts collected; allfits/selection/weights/negativeoutcomes
+  unchanged. UpdatedPLAN/status/atlas/ledger. Modes/domain/structure/remaining
+  populations andactual sky-transfer results remain; activegoal notcomplete.
+
 ## 2026-11-14 — submit exact structure batches and prepare shared-posterior figures
 - Remote dryrun found56pending native/refined stages,8completed markers, no
   live native task and no orphan downstream dependency. All56verified CANCELLED

@@ -94,6 +94,9 @@ def main():
     axes[1,2].set(title='F | Realized-count sampling check',ylabel='Alternating-half CDF difference / 0.01')
     axes[1,2].axhline(1,c='.4',ls='--',lw=1)
     for ax in [axes[0,2],axes[1,0],axes[1,2]]:ax.set_xticks([0,1],[r[1] for r in branches],fontsize=9)
+    for ax in axes.flat:
+        ax.title.set_fontsize(13);ax.xaxis.label.set_fontsize(11);ax.yaxis.label.set_fontsize(11)
+        ax.tick_params(axis='y',labelsize=10)
     statuses=' | '.join(f"{label}: numerical={row['numerically_passed']}, counts={next(r['sampling_passed'] for r in counts if r['branch']==branch)}" for branch,label,_ in branches for row in [summary[branch]])
     fig.suptitle('NGC288: full likelihood versus fair Gaussian summary',y=.975,fontsize=20)
     fig.text(.5,.93,'Same 512 photometric-first native-PSF objects | all 32 original shared response / calibration states',ha='center',fontsize=12)

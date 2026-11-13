@@ -1,0 +1,1432 @@
+{
+  "inputs": {
+    "manifests/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "manifests/v3_1/response_probes/report/paired_intrinsic_gr.csv": "fd7fe8072c9cc0db782b26f962fd6a27bca3f6508d1104eccb19b21e93cc8407",
+    "manifests/v3_1/response_probes/report/target_count_numerics.csv": "e23e8ec9d9e15a9d0547937923fc4948c61fd2f8ede30e1a6069c11ce5578540",
+    "manifests/v3_1/response_probes/report/paired_sky.csv": "1c65ddc3b92b52807a72e95c38c58460cdc1120bc7df8235fdc80f9deb94d42d",
+    "manifests/v3_1/response_probes/report/target_decomposition.csv": "46aeef9ca1668aada314e012a53c5b4a7f5fd39a1ae8c1ca1121b4a7fa6d86d5",
+    "manifests/v3_1/response_probes/report/paired_reference_feh.csv": "5276db3fcd967ff62334d6582fd04e04c94553bcfde1d3ace60208f6ec638a8c",
+    "manifests/v3_1/response_probes/report/mixture_scores.csv": "e16ac70623ffe0727eff4c2d9391cfcb5c6d5836f8909949a6cfb7c9abcbd97e",
+    "manifests/v3_1/response_probes/report/paired_optional_bands.csv": "f001b34213f36b81368aed2a2e6b6342c2f98573579d70d99defbc2eb12b80b3",
+    "manifests/v3_1/response_probes/report/original_numerical_flags.json": "dd227cd831ffb2be975dc79472aa620fe13d48fd5ea8d5747265da883fc70590",
+    "manifests/v3_1/response_probes/report/paired_all.csv": "7da537773a6b584efe2d489a24d4a3b14903dc1622b11bd24209c6039a45c2db",
+    "manifests/v3_1/response_probes/report/paired_reference_class.csv": "bd14adc4cb9ff015611e5dff33fb7869e713cfe562cfeb92ef154c1d69027a2b",
+    "manifests/v3_1/response_probes/report/numerical_flags.json": "da75aa74a48d69c3d984bffe6f3feb8a1e782027a9db25c458819e25022e2da0",
+    "manifests/v3_1/response_probes/report/paired_apparent_r.csv": "d744051d5b2932e25fab4bdaaa6c774ae835962e812d0cbba4e67780b3a38984",
+    "manifests/v3_1/response_probes/report/sets.json": "2e82e1c86ca0d2dcb4f83da0087131a458e005a0e1b83e67c8dfffdb398c871c",
+    "manifests/v3_1/response_probes/report/mixture_objects.csv": "1cceafa664c85b0658ad308415b19c82ca32c65410bd1bbcb84443392fcd664b",
+    "manifests/v3_1/response_probes/report/weight_numerics.csv": "41e119259391bd7bfb06c260db882295bb8f49cf1753606f1fb09284a3c13cb1",
+    "manifests/v3_1/response_probes/report/inventory.csv": "33409f9bc738fbb41aca3eb1c6078ddc08d88b608f58accd6b8213052d2b10f9",
+    "manifests/v3_1/response_probes/report/response_weights.csv": "34d25823c7cbb1f4d6b0ba448bfab8e2144929453d42c5a96da2db0bb7e4f4b9",
+    "manifests/v3_1/response_probes/report/target_counts.csv": "8f79ed24f16f506439c4c9989e4aae481b7504db11afa4bf45dee23def7bfa88",
+    "scripts/v3_1_response_summary.py": "2625e9452e8b1ebd50c4a2200784763bd4dc39d34b1519efc20032421bd66f14",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd"
+  },
+  "outputs": {
+    "mixture_source_summary.csv": "7df6d1f340c4a08055fd945ae228264ed83bcc9e8a4315b4a52396d2aaba6aa7"
+  },
+  "checks": [
+    {
+      "check": "hash:paired_intrinsic_gr.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:target_count_numerics.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_sky.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:target_decomposition.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_reference_feh.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:mixture_scores.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_optional_bands.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:original_numerical_flags.json",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_all.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_reference_class.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:numerical_flags.json",
+      "passed": true
+    },
+    {
+      "check": "hash:paired_apparent_r.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:sets.json",
+      "passed": true
+    },
+    {
+      "check": "hash:mixture_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:weight_numerics.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:response_weights.csv",
+      "passed": true
+    },
+    {
+      "check": "hash:target_counts.csv",
+      "passed": true
+    },
+    {
+      "check": "all64states",
+      "passed": true
+    },
+    {
+      "check": "samePSFdesign",
+      "passed": true
+    },
+    {
+      "check": "matched_rows_no_training_overlap",
+      "passed": true
+    },
+    {
+      "check": "flag_counts",
+      "passed": true
+    },
+    {
+      "check": "no_survivor_normalization:original",
+      "passed": true
+    },
+    {
+      "check": "complete_weights:new",
+      "passed": true
+    },
+    {
+      "check": "normalized_weights:new",
+      "passed": true
+    },
+    {
+      "check": "actual_ESS:new",
+      "passed": true
+    },
+    {
+      "check": "no_survivor_normalization:pooled",
+      "passed": true
+    },
+    {
+      "check": "decomposition:0:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:0:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:0:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:0:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:0:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:2:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:2:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:2:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:2:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:2:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:3:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:3:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:3:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:3:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:3:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:4:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:4:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:4:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:4:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:4:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:5:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:5:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:5:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:5:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:5:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:6:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:6:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:6:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:6:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:6:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:7:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:7:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:7:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:7:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:7:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:8:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:8:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:8:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:8:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:8:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:9:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:9:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:9:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:9:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:9:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:10:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:10:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:10:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:10:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:10:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:11:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:11:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:11:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:11:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:11:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:12:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:12:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:12:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:12:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:12:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:13:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:13:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:13:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:13:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:13:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:14:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:14:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:14:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:14:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:14:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:15:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:15:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:15:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:15:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:15:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:16:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:16:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:16:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:16:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:16:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:17:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:17:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:17:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:17:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:17:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:18:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:18:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:18:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:18:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:18:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:19:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:19:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:19:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:19:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:19:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:20:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:20:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:20:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:20:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:20:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:21:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:21:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:21:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:21:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:21:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:22:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:22:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:22:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:22:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:22:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:23:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:23:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:23:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:23:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:23:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:24:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:24:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:24:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:24:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:24:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:25:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:25:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:25:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:25:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:25:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:26:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:26:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:26:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:26:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:26:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:27:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:27:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:27:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:27:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:27:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:28:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:28:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:28:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:28:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:28:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:29:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:29:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:29:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:29:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:29:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:30:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:30:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:30:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:30:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:30:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:31:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:31:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:31:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:31:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:31:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1000:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1000:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1000:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1000:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1000:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1001:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1001:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1001:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1001:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1001:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1002:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1002:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1002:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1002:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1002:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1003:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1003:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1003:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1003:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1003:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1004:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1004:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1004:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1004:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1004:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1005:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1005:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1005:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1005:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1005:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1006:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1006:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1006:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1006:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1006:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1007:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1007:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1007:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1007:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1007:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1008:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1008:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1008:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1008:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1008:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1009:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1009:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1009:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1009:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1009:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1010:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1010:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1010:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1010:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1010:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1011:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1011:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1011:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1011:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1011:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1012:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1012:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1012:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1012:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1012:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1013:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1013:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1013:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1013:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1013:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1014:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1014:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1014:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1014:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1014:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1015:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1015:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1015:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1015:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1015:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1016:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1016:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1016:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1016:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1016:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1017:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1017:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1017:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1017:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1017:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1018:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1018:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1018:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1018:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1018:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1019:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1019:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1019:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1019:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1019:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1020:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1020:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1020:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1020:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1020:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1021:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1021:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1021:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1021:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1021:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1022:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1022:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1022:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1022:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1022:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1023:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1023:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1023:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1023:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1023:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1024:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1024:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1024:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1024:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1024:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1025:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1025:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1025:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1025:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1025:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1026:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1026:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1026:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1026:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1026:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1027:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1027:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1027:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1027:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1027:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1028:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1028:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1028:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1028:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1028:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1029:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1029:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1029:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1029:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1029:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1030:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1030:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1030:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1030:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1030:sky",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1031:all",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1031:apparent_r",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1031:intrinsic_gr",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1031:optional_bands",
+      "passed": true
+    },
+    {
+      "check": "decomposition:1031:sky",
+      "passed": true
+    },
+    {
+      "check": "joint_count_endpoints:new",
+      "passed": true
+    },
+    {
+      "check": "mixture_PSF_identity",
+      "passed": true
+    }
+  ],
+  "actual_checks": 349,
+  "passed": true,
+  "mixture_summary_rows": 24,
+  "sky_bootstrap_repeats": 1024,
+  "sky_bootstrap_seed": 311302,
+  "scope": "Compact source integrity and source-qualified saved-mixture log-score gains on seen development data. Whole-sky bootstrap, original inclusion weights; no new fitting or independent validation."
+}
