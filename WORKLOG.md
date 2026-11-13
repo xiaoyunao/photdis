@@ -1,5 +1,68 @@
 # WORKLOG
 
+## 2026-11-14 — retain twenty-four holdout states and prepare bounded transfer packing
+- Holdoutgroups21/22 COMPLETED8m54/8m21; states16–23 collected/all2048pass.
+  Total24/34holdoutstates complete:23at2048/state1at8192. Alloriginalattempts
+  retained; remainingtenstates andfullensemble stillrequired.
+- Thirdtransfergroup2 compactstates8–11 collected, allconditionalnumericpass;
+  12broad statesnowretained, eachsame6000andnested935PSFobjects.
+- Threeoriginal4-process transfergroups complete17m47/17m36/17m31 with
+  batch MaxRSS7.41/7.50/7.52millionKiB (aggregatejobmetric, notindividualRSS).
+  Existingpendingtransfer5/17 eachcontainsone8192state; limitsraisedto2h after
+  4x draw-count estimate exceedsold1h. Neitherwriter running; no sciencechange.
+- Preparedresource-only pack foratmost12disjoint2048states (threewholeexisting
+  arraytasks), unchangedoriginalCLI. Guard24GiB/child and<=70%node memory,
+  samefrozen driver/input hashes, explicitstate coverage, locks, unique logs,
+  payloadhash checks andseparateexecution/numerical outcomes. Pythonparse,
+  importsmoke andshellsyntax pass; actualmemory/runtimepilot notyetexecuted.
+- Beforeanypack launch: safelycancelonlyexactstill-pending originalwriters,
+  verifyterminalzero-runtime/absence, authenticateallsource/outcome inventories,
+  freezeplan andrepairreport dependency toretainedoriginaltasks plusreplacement.
+  No arraythrottle change orcompletedstage rerun performed. Pilotproposal uses
+  groups3/4/6 onlyifstillpending; widerpacking needsactualpilot evidence.
+
+## 2026-11-14 — complete broad ensemble with absolute-evidence failures retained
+- Broadensemble61225883 COMPLETED24s; all34conditionalcountpayloads authenticated,
+  26000PSF/258fineaudits/fourviews complete. Mainluminosity-bootstrap ESS30.97863,
+  maxweight.0379785/top27; main/zero/point fail, equalcut passes. Originalmain
+  absolute logZ changes+.600975(seed)/−6.637352(previouslevel) exceed.05;
+  probability/count-mean/state-weight gates pass. Do notsubstitute cut.
+- Collectedsixsmalltables/JSONplusmarker. Newcompactchecker passes229actual
+  source/state/weight/count/flag checks; all18jointmeans conserve26000 within
+  floatingprecision, originalmodel/nearexpectation10048.9067 conditionalonly.
+- Initialnewchecker usedtoo-tight1e−12 weightnormalization tolerance. Actualmax
+  offset6.4517e−12 isbelowlogZ ULP2.9104e−11. Preservedinitialfailure/measurements;
+  compactchecker nowpropagates4ULP weight/count roundoff withoutchangingdata or
+  anyregisteredscientificgate. Independentweighted-count residualmax2.183e−11
+  confirmsnormalization roundoff accountsfortheoffset. Main acceptance staysFalse.
+- Existingpendingentry9 andtrueholdouttransfer18 promoteddebug withinfresh
+  five-jobcap; fourholdoutinputs all2048pass, originalwriters/parameters retained.
+- Refinement7 COMPLETED6m35/all512pass,81originalflags/0unresolved; actual
+  summary collected/hashverified. Holdoutfitgroups21/22 confirmedlive1h each.
+- Commands: allocatedensemble, explicitcompactcollection, py_compile,
+  v3_1_ensemble_compact_check.py --case broad, gitdiffcheck. Updatedstatus/PLAN/
+  ledger. Fullheldoutensemble/102transfer/structure/domain/finalQA stillpending.
+
+## 2026-11-14 — release completed holdout prerequisites with authenticated evidence
+- Recovery: gitstatus/branch/fetch/history andWORKLOG/PLAN confirmedsynced
+  9cbc473. Livequeue confirmedentry8/refinement4 running; no scientificrestart.
+- Foundtransferchildren17–20 stillPENDINGDependency aftertheircorresponding
+  fitgroups17–20 wereCOMPLETED0:0. Verified16holdout refinement/selectedfit/count
+  markers andfourfrozen drivers (52hashes), cleantrackedremote andfreshstates.
+- Clearedonlythosefour existingpending dependencies; allupdates0, actualqueue
+  nowPriority. No newjobs, duplicatewriters, payloadscans orsource/outcomechanges.
+  Originalpreflight/commands preservedin execution/heldout_ready17_20 receipt.
+- Clarifiedpreparedtransferreport: population-level sky holdout isnotproof of
+  independentSED/template/calibration training. Pythonparse/gitdiffcheck pass;
+  complete-source report stillawaitsactual102state results.
+- Existingpendingrefinement7 (81originalflags) promoteddebug30min withinfresh
+  five-job cap; same32-worker execution andall512outputs, receiptretained.
+- Entry8 COMPLETED13m07 with512originalflags, requiresregisteredrefinement.
+  Refinement4 COMPLETED8m54:all512pass,124originalfailures/0unresolved. Both
+  compactoutputs collected/hashverified; broadensemble andtransfergroup2 live.
+- Next: collectfullbroadensemble andentry/refinement outcomes; continuecomplete
+  skytransfer/structure posterior/figures/domain adjudication. Goalstillactive.
+
 ## 2026-11-14 — complete every broad conditional state without refitting
 - Exactcount-onlyresume61232648 COMPLETED25m13:state23 final8192sampler,
   bridge andcounts allpass. Original512bridge/countfail,2048bridgefail and

@@ -1,0 +1,122 @@
+{
+  "initial_checker_sha256": "c2d93f8655be25bd29301acd55a940b70adcc301221e11784c1dc7fd1834ab3a",
+  "source_sha256": "f61707d2b049a6409a3840feef2f7d4c04a47e4fd40c6b978fec54547b883889",
+  "initial_check_passed": false,
+  "failure": "normalized_nonnegative_weights:bootstrap_evidence/base",
+  "initial_weight_tolerance": 1e-12,
+  "measurements": [
+    {
+      "view": "zero",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -1.4551915228366852e-11
+    },
+    {
+      "view": "zero",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 1.0913936421275139e-11
+    },
+    {
+      "view": "zero",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -7.275957614183426e-12
+    },
+    {
+      "view": "zero",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 7.275957614183426e-12
+    },
+    {
+      "view": "point",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -1.0913936421275139e-11
+    },
+    {
+      "view": "point",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 2.1827872842550278e-11
+    },
+    {
+      "view": "point",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 7.275957614183426e-12
+    },
+    {
+      "view": "point",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "base",
+      "weight_sum_minus_one": 1.2430056983703253e-12,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 3.2312527764588594e-08
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 6.45172804070171e-12,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 1.677435648161918e-07
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "entry_level",
+      "weight_sum_minus_one": -5.661804358680911e-12,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -1.4721081242896616e-07
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 5.3304027858303016e-12,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 1.385924406349659e-07
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": -3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 0.0
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "maximum_logevidence_ulp": 2.9103830456733704e-11,
+      "count_sum_minus_n": 7.275957614183426e-12
+    }
+  ],
+  "scope": "New local compact checker threshold was tighter than log-evidence floating-point subtraction precision. This is not a new scientific gate or a change to saved weights/counts; all original numerical flags retained."
+}

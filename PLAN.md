@@ -55,14 +55,21 @@ Negative findings remain deliverables, never successful calibration claims.
   33at2048 andstate23at8192. Original512/2048failures retained; group61225864_5
   TIMEOUT30m12 duringjointcounts preserved. Exactcount-onlyresume61232648
   COMPLETED25m13, allthreecachedfits reused andfinal8192sampler/bridge/countpass.
-  Broadensemble61225883 pendingdebug afteroriginaldependencies; compact34state
-  inventory complete, fullpayload authentication remainsin allocatedensemble.
-  First16 holdout statescomplete: fifteen2048pass, state1 needs8192 after
+  Broadensemble61225883 COMPLETED24s/authenticatesall34payloads; mainESS30.97863
+  andmaxweight.0379785 butabsolute logZseed+.600975/previouslevel−6.637352 fail
+  .05gate. Zero/point/main rejected; cutpasses butnotreplacement. 229actual
+  compactchecks pass; floatingweight/count roundoff andinitialcheckerfailure
+  preserved separately, productiondata/scientificgates unchanged.
+  First24 holdout statescomplete: twenty-three2048pass, state1 needs8192 after
   2048count failure. Pendingholdoutgroups21–25 now1h afteractualfull8192
   group27m24 proof (>2x margin); otherholdoutstates/ensembles stillpending.
   Fullensemble andfixed3003-ID highq61226224 complete6m17, inheritedmainflag;
   expectedfar8.00304=.266502%, notmeasuredcontamination; MCprecision retained.
   Heldoutfields12/4/6 frozen;
+  Pendingtransfergroups5/17 containing8192states now2h (4x17–18min estimate
+  exceedsold1h). A guarded12-state2048resource pack isprepared; actualpilot,
+  terminal/absence preflight andexplicitreportdependency repair requireexecution
+  beforewideradoption. Originalarraythrottle remains2, all102states required.
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
   Independently regenerated32SED refits nowcomplete: exactgroup7resume
@@ -127,7 +134,8 @@ Negative findings remain deliverables, never successful calibration claims.
   branchrows pass,original512failures retained; maxchildRSS3.967GiB. Prepare
   same32workerexecution nowarray61229422for30states2–31 aftercorr61223167;
   originalstate1nowcomplete1h58m16/all512pass; refined3complete2m28/all512pass
-  with24originalfailures retained. Pendingstates2–31 now1h
+  with24originalfailures retained; refined4complete8m54/all512pass with124originalflags; refined7complete6m35
+  with81originalflags,0unresolved. Pendingstates2–31 now1h
   (>2x exact32-worker pilot), max3nodes; native/refinedall32complete,490original
   nativefailures retained and32/32refined markerpass. Fullpayloadcheckinassembly.
   Complete-state chain submitted: assemble61232760 -> infer61232761 ->

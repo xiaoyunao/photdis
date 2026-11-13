@@ -1,0 +1,1098 @@
+{
+  "inputs": {
+    "manifests/v3_1/target_ensemble/broad/complete.json": "f61707d2b049a6409a3840feef2f7d4c04a47e4fd40c6b978fec54547b883889",
+    "manifests/v3_1/target_ensemble/broad/inventory.csv": "fe3ea913209333c1b33dbe5ff7e10cf743a48faf7e5becd6c6b69de103373b8e",
+    "manifests/v3_1/target_ensemble/broad/weights.csv": "1495c5fbe1630ee8dd5b6b4a076fe0998af74e2fb71defe20044f9d489bff1c2",
+    "manifests/v3_1/target_ensemble/broad/checks.csv": "58d63411ce4d5d5643a5dee2fd0b81071e1b7715521e7eacf348e6b8c93ef9e7",
+    "manifests/v3_1/target_ensemble/broad/counts.csv": "ce7f5fb4534cbecfc89f289c8d973d7bc34e82a40d75bf1e1f37a0620132c067",
+    "manifests/v3_1/target_refinement/broad/correction_00/complete.json": "83df90b58c6922969b88b3c0837dd8b29b4bfe8c8942b495d9517f08e826d2e5",
+    "manifests/v3_1/target_refinement/broad/correction_01/complete.json": "ff9dd8efe628c2c409f205135904226b35800c4a6f0554d9de9b403f7fb0ae35",
+    "manifests/v3_1/target_refinement/broad/correction_02/complete.json": "596296e39f4822b5e1a008c971874f988c8df0c29f4edea57668ff6dec906bb2",
+    "manifests/v3_1/target_refinement/broad/correction_03/complete.json": "325eb9f267b5a9e1d2d69bce20fd8993bc44bdcd79959b3a19b596bd25d5b5ef",
+    "manifests/v3_1/target_refinement/broad/correction_04/complete.json": "6a3ec36372dd16a662f33ef52ecad2c62bb2d56d611ea4cdfdcb2aac5d52cd07",
+    "manifests/v3_1/target_refinement/broad/correction_05/complete.json": "6951342a13d726ddfa9ef9a87ea6f78512f6e9ef27c2ba8dd032c6ffe3824332",
+    "manifests/v3_1/target_refinement/broad/correction_06/complete.json": "dc6c409c2cf8604cb80413646b8b2e3252c79c9855f46391578a0d705d7bb81e",
+    "manifests/v3_1/target_refinement/broad/correction_07/complete.json": "c8e51e2dca2b3e156336359e698e714160db7c079e6f7b891d8d82ac128f2e9f",
+    "manifests/v3_1/target_refinement/broad/correction_08/complete.json": "45b669433e01232b8c1716654ce9b57c1799f6e4caf6953a377fa191aaad074e",
+    "manifests/v3_1/target_refinement/broad/correction_09/complete.json": "5e87f94dd7c903da09b6120784b1a8f7bed2a159d409b4ed92b7864082aebab5",
+    "manifests/v3_1/target_refinement/broad/correction_10/complete.json": "400111df6277baa8258a82f5c5fd0b474a63f703fff1dc36d8b411c2e8eeb006",
+    "manifests/v3_1/target_refinement/broad/correction_11/complete.json": "5604e1c9047ce670c94e394eb9c58466a57b755e23c84506cecca2274115e1f1",
+    "manifests/v3_1/target_refinement/broad/correction_12/complete.json": "324fccd670761bb0fe08a4bc85f3349028b7e8b1b09258393302311bd954ce7a",
+    "manifests/v3_1/target_refinement/broad/correction_13/complete.json": "4072e73393d7e55d95871c395a7f4abfb70f0b3fd7ecc0e338812eb57b362702",
+    "manifests/v3_1/target_refinement/broad/correction_14/complete.json": "ce6a3d37fbba3bf7b4ded06cb47b524b72431391d6549609a5e77840700d65db",
+    "manifests/v3_1/target_refinement/broad/correction_15/complete.json": "49e9d74c51c59c48fc579dd72de87811c399967089dd5aa16f1d4ebc7338cf1b",
+    "manifests/v3_1/target_refinement/broad/correction_16/complete.json": "fe4179e4b6724aab109fe70ca969db467363c0f5cb2834d3e7f802c84dd41d41",
+    "manifests/v3_1/target_refinement/broad/correction_17/complete.json": "03b4e349e270e05b03be227bb32d14bbea9cd515f581e59951db3c1ef81cb023",
+    "manifests/v3_1/target_refinement/broad/correction_18/complete.json": "b031a12e2d714332c6d85fbdcea651b60a1eec7ba132e86da03699dc23e9a929",
+    "manifests/v3_1/target_refinement/broad/correction_19/complete.json": "6d7da70476dd3f18bb7906dae8cc672622c85e8d363ff66fe7de7e72444244ce",
+    "manifests/v3_1/target_refinement/broad/correction_20/complete.json": "c7338a616aa3b6f45be8a7e1fcc4e41ef1c9da49f13d473271f80a0d7eaa4cc2",
+    "manifests/v3_1/target_refinement/broad/correction_21/complete.json": "38be7c12d7539e0acde4b867b93b1fc49b0309d50da44a7b71f09878126b93c9",
+    "manifests/v3_1/target_refinement/broad/correction_22/complete.json": "80452d509e548739621fbfb97b0d2666198c21034058204f0188a878a6161f2b",
+    "manifests/v3_1/target_refinement/broad/correction_23/complete.json": "5244097e017d9470c9dc906448c0d5a1934faa55b34961f790daec6e9a997096",
+    "manifests/v3_1/target_refinement/broad/correction_24/complete.json": "bd62c3fb575b7265be50f2c91f98f91a79ea9bd2f5cb552593e574d40fd2e4f4",
+    "manifests/v3_1/target_refinement/broad/correction_25/complete.json": "a29e0915628f97bd131e48ae320977f9bc089c586ed298db3a67dcd5bd1e91f3",
+    "manifests/v3_1/target_refinement/broad/correction_26/complete.json": "5c3dd008ca5e81f8433b3c0aaf205f8705aa2c3f65c2e0309735485cf61ee73c",
+    "manifests/v3_1/target_refinement/broad/correction_27/complete.json": "988a8da4c58f823ad1c15acda069b51172e78f23c5228a1b355a03d7f9355625",
+    "manifests/v3_1/target_refinement/broad/correction_28/complete.json": "639ad2bcde5c1c28260409bb22f340f8e4b5815c7581ce60ca257bc3932881e6",
+    "manifests/v3_1/target_refinement/broad/correction_29/complete.json": "6d2df17f7d347baffa9b0770b4fb4fcbbfc335fc89ddb732357026f570bd09bf",
+    "manifests/v3_1/target_refinement/broad/correction_30/complete.json": "88be368f6990d9c1f5b1d6b6f500ae78c874117624b5c29e6a0160cd613d67af",
+    "manifests/v3_1/target_refinement/broad/correction_31/complete.json": "b879e5fdef1e902764320f67352f7ff501507983881d6f8adf41cb7219301bd7",
+    "manifests/v3_1/target_refinement/broad/correction_32/complete.json": "521a5017660e7afde719cf26fa64a5cfd11bd83b0e81a62dd91e321f56da867e",
+    "manifests/v3_1/target_refinement/broad/correction_33/complete.json": "d1e86c644544a604f99f091d371f1ee75a233fa4757b5bac515454b06040fe0f",
+    "scripts/v3_1_ensemble_compact_check.py": "60ec5baa7d03e94714579fe93b883d835e7918e9a1beadf361a8998b2c5b493c"
+  },
+  "checks": [
+    {
+      "check": "case34PSF",
+      "passed": true
+    },
+    {
+      "check": "source_hash:inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:weights.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:checks.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:counts.csv",
+      "passed": true
+    },
+    {
+      "check": "34_unique_states",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:0",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:0",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:1",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:1",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:2",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:2",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:3",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:3",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:4",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:4",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:5",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:5",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:6",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:6",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:7",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:7",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:8",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:8",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:9",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:9",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:10",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:10",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:11",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:11",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:12",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:12",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:13",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:13",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:14",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:14",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:15",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:15",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:16",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:16",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:17",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:17",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:18",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:18",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:19",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:19",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:20",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:20",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:21",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:21",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:22",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:22",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:23",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:23",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:24",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:24",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:25",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:25",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:26",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:26",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:27",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:27",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:28",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:28",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:29",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:29",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:30",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:30",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:31",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:31",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:32",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:32",
+      "passed": true
+    },
+    {
+      "check": "refinement_identity:33",
+      "passed": true
+    },
+    {
+      "check": "refinement_outcome:33",
+      "passed": true
+    },
+    {
+      "check": "four_named_views",
+      "passed": true
+    },
+    {
+      "check": "fixed_state_set:zero",
+      "passed": true
+    },
+    {
+      "check": "all_required_outcomes:zero",
+      "passed": true
+    },
+    {
+      "check": "cohort_size:zero",
+      "passed": true
+    },
+    {
+      "check": "four_numerical_variants:zero",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:zero/base",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:zero/base",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:zero/base",
+      "passed": true
+    },
+    {
+      "check": "reported_ESS_and_max:zero",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:zero/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:zero/base",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:zero/base",
+      "passed": true
+    },
+    {
+      "check": "variance_components:zero/base",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:zero/base",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_components:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:zero/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_components:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:zero/entry_level",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_components:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:zero/native_fine",
+      "passed": true
+    },
+    {
+      "check": "view_acceptance_preserved:zero",
+      "passed": true
+    },
+    {
+      "check": "fixed_state_set:point",
+      "passed": true
+    },
+    {
+      "check": "all_required_outcomes:point",
+      "passed": true
+    },
+    {
+      "check": "cohort_size:point",
+      "passed": true
+    },
+    {
+      "check": "four_numerical_variants:point",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:point/base",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:point/base",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:point/base",
+      "passed": true
+    },
+    {
+      "check": "reported_ESS_and_max:point",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:point/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:point/base",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:point/base",
+      "passed": true
+    },
+    {
+      "check": "variance_components:point/base",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:point/base",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_components:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:point/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_components:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:point/entry_level",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_components:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:point/native_fine",
+      "passed": true
+    },
+    {
+      "check": "view_acceptance_preserved:point",
+      "passed": true
+    },
+    {
+      "check": "fixed_state_set:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "all_required_outcomes:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "cohort_size:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "four_numerical_variants:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "reported_ESS_and_max:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_evidence/base",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_evidence/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_evidence/entry_level",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_evidence/native_fine",
+      "passed": true
+    },
+    {
+      "check": "view_acceptance_preserved:bootstrap_evidence",
+      "passed": true
+    },
+    {
+      "check": "fixed_state_set:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "all_required_outcomes:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "cohort_size:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "four_numerical_variants:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "reported_ESS_and_max:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_cut/base",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_cut/entry_seed",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_cut/entry_level",
+      "passed": true
+    },
+    {
+      "check": "frozen_numeric_gate:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "complete_weight_states:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "normalized_nonnegative_weights:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "18_joint_cells:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "weighted_count_conservation:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "variance_components:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "ordered_integer_intervals:bootstrap_cut/native_fine",
+      "passed": true
+    },
+    {
+      "check": "view_acceptance_preserved:bootstrap_cut",
+      "passed": true
+    },
+    {
+      "check": "main_flag_preserved",
+      "passed": true
+    },
+    {
+      "check": "overall_flag_preserved",
+      "passed": true
+    }
+  ],
+  "actual_checks": 229,
+  "passed": true,
+  "case": "broad",
+  "roundoff": [
+    {
+      "view": "zero",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -1.4551915228366852e-11,
+      "count_sum_minus_n": -1.4551915228366852e-11
+    },
+    {
+      "view": "zero",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 1.0913936421275139e-11,
+      "count_sum_minus_n": 1.0913936421275139e-11
+    },
+    {
+      "view": "zero",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -7.275957614183426e-12,
+      "count_sum_minus_n": -7.275957614183426e-12
+    },
+    {
+      "view": "zero",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 7.275957614183426e-12,
+      "count_sum_minus_n": 7.275957614183426e-12
+    },
+    {
+      "view": "point",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -1.0913936421275139e-11,
+      "count_sum_minus_n": -1.0913936421275139e-11
+    },
+    {
+      "view": "point",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 2.1827872842550278e-11,
+      "count_sum_minus_n": 2.1827872842550278e-11
+    },
+    {
+      "view": "point",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 7.275957614183426e-12,
+      "count_sum_minus_n": 7.275957614183426e-12
+    },
+    {
+      "view": "point",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 3.637978807091713e-12,
+      "count_sum_minus_n": 3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "base",
+      "weight_sum_minus_one": 1.2430056983703253e-12,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -7.275957614183426e-12,
+      "count_sum_minus_n": 3.2312527764588594e-08
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 6.45172804070171e-12,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 0.0,
+      "count_sum_minus_n": 1.677435648161918e-07
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "entry_level",
+      "weight_sum_minus_one": -5.661804358680911e-12,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -3.637978807091713e-12,
+      "count_sum_minus_n": -1.4721081242896616e-07
+    },
+    {
+      "view": "bootstrap_evidence",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 5.3304027858303016e-12,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 3.637978807091713e-12,
+      "count_sum_minus_n": 1.385924406349659e-07
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "base",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -3.637978807091713e-12,
+      "count_sum_minus_n": -3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "entry_seed",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": -3.637978807091713e-12,
+      "count_sum_minus_n": -3.637978807091713e-12
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "entry_level",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 0.0,
+      "count_sum_minus_n": 0.0
+    },
+    {
+      "view": "bootstrap_cut",
+      "variant": "native_fine",
+      "weight_sum_minus_one": 0.0,
+      "weight_roundoff_tolerance": 1.1641532182693481e-10,
+      "weighted_count_conservation_residual": 7.275957614183426e-12,
+      "count_sum_minus_n": 7.275957614183426e-12
+    }
+  ],
+  "original_main_accepted": false,
+  "original_overall_passed": false,
+  "scope": "Actual compact sources, complete state identities, weights, count moments and unchanged numerical flags. Conditional count payload hashes were authenticated in the allocated ensemble job; this compact check does not reread fit population arrays or assert scientific calibration."
+}
