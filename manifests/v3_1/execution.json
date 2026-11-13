@@ -471,14 +471,16 @@
     {
       "job_id": "61216914",
       "purpose": "radial176 whole-node shard1",
-      "last_observed_state": "RUNNING"
+      "last_observed_state": "TIMEOUT",
+      "elapsed_seconds": 1825
     },
     {
       "job_id": "61216915",
       "purpose": "full1542development latent sign audit",
       "last_observed_state": "COMPLETED",
       "qos": "debug",
-      "note": "Pending job QoS update; same30min and science inputs"
+      "note": "Pending job QoS update; same30min and science inputs",
+      "elapsed_seconds": 137
     },
     {
       "job_id": "61217300",
@@ -507,13 +509,18 @@
     {
       "job_id": "61217449",
       "purpose": "field frozen-role reference-prior photometric predictions",
-      "last_observed_state": "PENDING",
-      "qos": "debug"
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 95,
+      "numerical_passed": true
     },
     {
       "job_id": "61217450",
       "purpose": "common frozen-role reference-prior photometric predictions",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 328,
+      "numerical_passed": false,
+      "qos": "debug"
     },
     {
       "job_id": "61217663",
@@ -527,7 +534,9 @@
       "job_id": "61217706",
       "purpose": "radial exactresume shard0",
       "dependency": "afterany:61216913:61216914",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "RUNNING",
+      "qos": "debug",
+      "note": "Temporary prerequisite scheduling hold released after61217972 completed"
     },
     {
       "job_id": "61217707",
@@ -539,7 +548,9 @@
       "job_id": "61217708",
       "purpose": "certified matchedentry median",
       "dependency": "afterok:61217663",
-      "last_observed_state": "PENDING"
+      "last_observed_state": "RUNNING",
+      "qos": "debug",
+      "note": "Temporary prerequisite scheduling hold released after61217972 completed"
     },
     {
       "job_id": "61217709",
@@ -560,12 +571,19 @@
       "qos": "debug",
       "timelimit": "00:30:00",
       "note": "Pending array element QoS/time update; iteration checkpoints resume unchanged input"
+    },
+    {
+      "job_id": "61217972",
+      "purpose": "all17joint Gaussian-basis entry audit tasks",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 56,
+      "numerical_passed": true
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 110,
-    "seconds": 3.31,
+    "passed": 114,
+    "seconds": 3.45,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,

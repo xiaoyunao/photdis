@@ -1,0 +1,47 @@
+{
+  "inputs": {
+    "data/v3_1/candidate_selection_pilot/context_1/complete.json": "fdf76b6715f041caec40163b1cebd676a18e141c35958616c5797a0adf552133",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_1/selection_certificate_audit/complete.json": "cf70a18f99031605cf3acdb6782fc47667acb0a7aa79a1dcd34d31dddc9a7881",
+    "data/v3_1/luminosity_fit_refined/parameters.npz": "4270f915ee57fe820c1cb7df3a475299f1c57c4f12ae8dfb59a04bb732cbbb31",
+    "data/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "data/v3_1/candidate_selection_refinement/context_1/complete.json": "db7c826086ba263086d784dc797dcf7573cdf1f8b5ed36b87d5e7f9cfd829dff",
+    "scripts/v3_1_gaussian_entry_pilot.py": "d988f3a09556b69fd53e042572288e0cff0b30295352af18400a898dbe4ba700",
+    "docs/v3_1_gaussian_entry_protocol.md": "82b550fd7930bb2d5422c89f422ed4013c78096a65ede50c67326f8aebd4c018",
+    "src/photdis/v3_1/gaussian_entry.py": "49fe66d226722fa79f887351b0af62612cbc5b9c982ccc8e8938df2705dac875",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/certified_support.py": "90fdde8f583aee17458c75dc74b78e83232a85a83eca4a16ade38ac769c5e077",
+    "src/photdis/v3_1/exact_support.py": "6c2d158036bb11f642e9b8fb8e1e8252349e7dd4aab76ee7f8c0fc5e849dc7a9",
+    "src/photdis/v3_1/luminosity.py": "04f7c57e24f1897201db5b00efb941f3b33d39a155886f52da9a24b753da0fe8"
+  },
+  "outputs": {
+    "summary.csv": "856e566eebd4566394c448bb4efdcb4990fb081f6055320b2dc438ab01f7fef8"
+  },
+  "task_markers": {
+    "context0_reference_dust1/complete.json": "d9f0a54d987ae9727e69eeef8667ea22e39dda8843281a220d254d4f805e63f1",
+    "context0_point_dust1/complete.json": "91408ba35243c76cc5e8ac848d926036eccb6e512dd394e55d147b28083fef55",
+    "context0_bootstrap00_dust1/complete.json": "1220dd9f4e46cc89c11efb44c9a53f157453bc84fb0c704c5e2d8e59a3d81e95",
+    "context0_bootstrap15_dust1/complete.json": "a5d16051d98b75f5627a80fb5301f369d5e848a429ed76812a2bf6cc341a0b0a",
+    "context0_bootstrap31_dust1/complete.json": "7f3ff1d53c166e69640e4464109a81cfbdb2f4b4f70d384ed1c812cddb3e5873",
+    "context1_reference_dust1/complete.json": "570d6d3877ee9b81f3e707aa4ea40d0cdf885829eb7bb62888bd4c9139805099",
+    "context1_point_dust1/complete.json": "562716fa40ccafd042da540fe9be233604afff0ca0cbbb69a3812b40e55f3b56",
+    "context1_bootstrap00_dust1/complete.json": "fbabe6e5e316064ebad133f20de5b61d2643a2989be1c9787efcc3dccbd3c39d",
+    "context1_bootstrap15_dust1/complete.json": "b05c481f9a18cfce2e587973cd152e435f444e8b5722f1dc805c4ba6e371cf3c",
+    "context1_bootstrap31_dust1/complete.json": "6fc1b81e5aaff40bddf7d57f7b06ab6fe0f0a9313fed9cd971e5d6ab143cf1c9",
+    "context2_reference_dust1/complete.json": "7c5cfb048760439cebbc5846cdcef0ef7d445424edc527c027e01353479a1208",
+    "context2_point_dust1/complete.json": "8a7a5ca815be1f16edf413532b4baa475040f716a7f2c0050660765f9e00cf26",
+    "context2_bootstrap00_dust1/complete.json": "411fdc686e0d84aa96e1c25c1462f07e39b9c436c7652fc82e837396a4aab020",
+    "context2_bootstrap15_dust1/complete.json": "0618dc1efd0d9ee1ffb0078fa0d9ad8ff2e6c037d294e76c606ad24c0f2dcacf",
+    "context2_bootstrap31_dust1/complete.json": "75cfbbc36646a21b410c844d234108e090b421d9a9e9c9246afc28296ab6874c",
+    "context1_reference_dust0/complete.json": "7b2fce1642c96ad714bd32939100bcd20899819d451a3b736ca11475ff9c7710",
+    "context1_point_dust0/complete.json": "8c9652cd1d3812c4fea24e8c48e6182415cbec669a83496b18e2d7243e813053"
+  },
+  "job": "61217972",
+  "tasks": 17,
+  "passed": true,
+  "legacy_per_kernel_quadrature_passed": false,
+  "scope": "Joint Gaussian-basis numerical audit, frozen within-class kernels and luminosity draws. No target fit or external reference outcome read. Integration ESS is not scientific posterior support."
+}

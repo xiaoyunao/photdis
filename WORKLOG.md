@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-13 — pass joint-entry audit and retain common-scale numerical failures
+- Jointentry61217972 COMPLETED56s:all17tasks pass at524288, two-seed/level guards;
+  independentold-grid classintegrals differ.00023998(reference)/.00022654(point).
+  Originalper-kernel8192failure stillfalse; successfulclassintegrals notrelabeled.
+- Commonprediction61217450 COMPLETED328s:3032PSF/fourviews;256sampledfinechecks
+  include6failures intwoIDs4733794554288600576/4733793901455878912. Maxjoint
+  .01659 andquantile1.02657. Alloriginalsretained; noexternalresidualopened.
+- Registeredall3558validationobjects numericalaudit andbounded.01/.005/.0025/
+  .00125 sidecars. AddedexactGaussian native-response integral test(-20000log
+  tails preserved) andN15sigma6 sharednumericalproposal withanalyticratio bound;
+  proposal cancelsperintegral, not anewprior orflattenedresponseweights.
+- Registered3context/all34correction sharedproposal pilot131072..2097152,
+  same.0005/stabilized1%gates plus.001crossmethodbudget. Twofocusedtests pass;
+  full114tests pass3.45s, newdrivers syntax/shellchecks pass. Allocated pilots
+  andfullvalidationnumericalsidecars notyetexecuted.
+- Releasedtemporaryholds61217706/61217708 afterjointpilotcompleted; radialresume
+  andcertifiedmedianentry nowrunning. Negative/failedradialchains remainexplicit.
+- Next: sharedproposalpilot andnative targetmatrices, allvalidationfinechecks,
+  complete32responsefits/all176radial recovery andfullproductevaluation.
+
 ## 2026-11-13 — freeze fixed-kernel target transfer and complete field predictions
 - Fieldprediction61217449 COMPLETED95s:526frozenPSF stars/fourviews;256finechecks
   pass. No referencevalues/residuals opened; fulltargetidentityfreeze pending.
