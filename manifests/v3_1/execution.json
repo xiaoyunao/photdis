@@ -292,18 +292,24 @@
     {
       "job_id": "61214837",
       "purpose": "catalog112 broad numerical extension",
-      "last_observed_state": "PENDING",
-      "qos": "regular",
-      "timelimit": "01:00:00",
-      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted."
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "timelimit": "00:30:00",
+      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted.",
+      "elapsed_seconds": 326,
+      "exit_code": "0:0",
+      "note": "Later QoS update succeeded after debug slots became available; same numerical protocol."
     },
     {
       "job_id": "61214838",
       "purpose": "catalog112 local numerical extension",
-      "last_observed_state": "PENDING",
-      "qos": "regular",
-      "timelimit": "01:00:00",
-      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted."
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "timelimit": "00:30:00",
+      "scheduling_note": "Debug update rejected for61214837 by QoS submit limit;61214838 update not attempted.",
+      "elapsed_seconds": 412,
+      "exit_code": "0:0",
+      "note": "Later QoS update succeeded after debug slots became available; same numerical protocol."
     },
     {
       "job_id": "61214982",
@@ -342,12 +348,27 @@
       "last_observed_state": "CANCELLED",
       "elapsed_seconds": 0,
       "note": "Pending allocation cancelled before replacement by explicit allocated job step."
+    },
+    {
+      "job_id": "61215524",
+      "purpose": "targeted new common-scale native qualification",
+      "last_observed_state": "COMPLETED",
+      "qos": "debug",
+      "elapsed_seconds": 26,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61215525",
+      "purpose": "dedicated exact resume candidate-entry median context",
+      "last_observed_state": "RUNNING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 93,
-    "seconds": 2.65,
+    "passed": 96,
+    "seconds": 3.15,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,

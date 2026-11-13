@@ -1,0 +1,31 @@
+{
+  "catalog": 48,
+  "arm": "broad",
+  "attempts": [
+    {
+      "draws": 512,
+      "recovery": "data/v3_1/radial_recovery/catalog_048_broad_step0.02_s512_w512/complete.json",
+      "sha256": "7c625fe8cf516dd8e4479edd71c44b750cb4a3d7d6b2d84a9d77cfa0b594cf42",
+      "coarse_passed": false
+    },
+    {
+      "draws": 2048,
+      "recovery": "data/v3_1/radial_recovery/catalog_048_broad_step0.02_s2048_w512/complete.json",
+      "sha256": "bccc6fa919dcdc699c428c6a5fa94c05b8178e06c03d78f3814e98d8823d5f2c",
+      "coarse_passed": false
+    },
+    {
+      "draws": 8192,
+      "recovery": "data/v3_1/radial_recovery/catalog_048_broad_step0.02_s8192_w512/complete.json",
+      "sha256": "dfccac74312e6a9b2265ce0dab086e30e4200694148bb972b803c3466ac263de",
+      "coarse_passed": true,
+      "fine": "data/v3_1/radial_recovery/catalog_048_broad_step0.02_s8192_w512/fine_grid_audit/complete.json",
+      "fine_sha256": "25295bf548c0059cd0f1384f3e61a09fb8c5b0b086f2c021245c9c5facb60362",
+      "fine_passed": true
+    }
+  ],
+  "passed": true,
+  "selected_draws": 8192,
+  "protocol": "Same priors, inputs, seeds and warmup. Fixed512/2048/8192 numerical schedule; no scientific score enters selection. Unresolved flags remain at bound.",
+  "script_sha256": "783972afbf8ce95b87a06fae1354ceca617ee902a6d23feebce7bf44b82be9d2"
+}

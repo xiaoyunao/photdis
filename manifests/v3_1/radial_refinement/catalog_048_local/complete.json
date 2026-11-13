@@ -1,0 +1,25 @@
+{
+  "catalog": 48,
+  "arm": "local",
+  "attempts": [
+    {
+      "draws": 512,
+      "recovery": "data/v3_1/radial_recovery/catalog_048_local_step0.02_s512_w512/complete.json",
+      "sha256": "3fe236f82aeadcbc96da7320fe9568ec2db7ec69d8bb81234a5fb54dd58f160f",
+      "coarse_passed": false
+    },
+    {
+      "draws": 2048,
+      "recovery": "data/v3_1/radial_recovery/catalog_048_local_step0.02_s2048_w512/complete.json",
+      "sha256": "9af28c5e43b0769de57ed4a94dc2cf4815fcab5440ac54218347ae813b32edf7",
+      "coarse_passed": true,
+      "fine": "data/v3_1/radial_recovery/catalog_048_local_step0.02_s2048_w512/fine_grid_audit/complete.json",
+      "fine_sha256": "b865ab6be69e35d2e61ab204c2a9dab496742efd01e062e384f3d89bb0a4e526",
+      "fine_passed": true
+    }
+  ],
+  "passed": true,
+  "selected_draws": 2048,
+  "protocol": "Same priors, inputs, seeds and warmup. Fixed512/2048/8192 numerical schedule; no scientific score enters selection. Unresolved flags remain at bound.",
+  "script_sha256": "783972afbf8ce95b87a06fae1354ceca617ee902a6d23feebce7bf44b82be9d2"
+}

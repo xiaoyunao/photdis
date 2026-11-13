@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-13 — complete radial pilot gates and register final reference roles
+- Catalog112 broad61214837/local61214838 COMPLETED326s/412s; both2048/chain
+  finepassed. All3pre-registered pilots pass botharms; original512flags retained.
+- Common-scale61215524 COMPLETED26s: NGC1261 3032nativePSF admissions,
+  NGC1851/7492 zero underunchangedcuts; one1261nonPSF excluded. One common
+  HSTscale cannot become3032independent scale measurements.
+- Registered actual-role freeze with additional historicalls_id/negativeidentity
+  guards and whole-system quarantine; fieldnewsky versus sourcenew/seensky
+  remain distinct. Script syntax/shell checks pass; allocated execution pending.
+- Implemented resumable176catalog/twoarm production using unchanged fitted
+  numerics, bounded512/2048/8192draws and finechecks. Startup verifies allpilot
+  gates;2shards/max8concurrentcatalogs pernode. Syntax/shell checks pass.
+- Dedicated medianentry61215525 running; earlierkilledstep retained. No correction
+  fit or finalprediction residual opening yet. Next: execute registeredfreeze,
+  allscenario recovery and selection-matched target transfer.
+
 ## 2026-11-13 — qualify new evidence and verify paired plates
 - Native resume61214816 COMPLETED1077s after initial30min timeout:126371unique
   exactG3 matches,126066nativePSF,605photometric admissions across38cells;

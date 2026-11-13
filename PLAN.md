@@ -39,8 +39,8 @@ and coarse/fine shared-draw audit drivers implemented, execution pending.
 Shared-target-prior32star pilot complete; full1542 job61214214 completed with1retained numericalflag.
 Full local96tests pass with one BLAS/OpenMP thread; initial native segfault retained.
 Pilot0 broad/local512 runs retained with halfdelta flags;2048extensions bothpass
-coarse numericalgates. Catalog0 and48 botharms pass fine-grid audits; catalog112 pending. Bounded numerical extensions preserve all originalflags.
-Native53004brick qualification completed:605PSF admissions; history leaves170strictnewsky field stars but only9precisedistances. Three common-scale systems registered for targeted nativequalification.
+coarse numericalgates. Catalog0,48,112 botharms pass fine-grid audits; all176production ready. Bounded numerical extensions preserve all originalflags.
+Native53004brick qualification completed:605PSF admissions; history leaves170strictnewsky field stars but only9precisedistances. Common-scale qualification complete:3032NGC1261 admissions, other2systems empty; finalroles/imaging-ID guard registered.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
 Matched shared-target-prior contrasts complete with evolved-star regression; retain1numericflag.
