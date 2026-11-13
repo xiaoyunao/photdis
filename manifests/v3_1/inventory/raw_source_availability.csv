@@ -1,0 +1,5 @@
+group,identities,cells,qualified_class_without_conflict,evolved_without_conflict,signed_gaia,negative_gaia,admitted_scientific_sample,native_TYPE_unverified,status
+all,5932894,299,3672446,74228,4338915,413221,0,5932894,acquisition_inventory_only; native PSF/photometry/historical-use audit still required
+outside_v3_id,5320836,299,3248932,63509,3775322,341345,0,5320836,acquisition_inventory_only; native PSF/photometry/historical-use audit still required
+outside_v3_sky,2507051,193,1740107,31471,1942861,143322,0,2507051,acquisition_inventory_only; native PSF/photometry/historical-use audit still required
+outside_v3_sky_and_old_reference,2480594,193,1719830,31194,1917655,141525,0,2480594,acquisition_inventory_only; native PSF/photometry/historical-use audit still required

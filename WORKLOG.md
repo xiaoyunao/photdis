@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — verify pilot fidelity and advance registered diagnostic sample
+- Accounting confirms61212082 COMPLETED46s and61212314 COMPLETED21s, exit0:0.
+ 32stars/354views,996paired contrasts, zero numeric failures;6actual report
+ checks pass. Nominal reproduction maxima6.22e-14mag,3.00e-15qnear and
+ 2.78e-15joint. Downloaded/hash-verified all paired tables.
+- Eight pilot evolved sources show a large class-oracle improvement; FeH-only
+ change is smaller. This is a tiny seen diagnostic, not a production gain or
+ enough evidence to choose a correction. Registered128-per-stratum expansion
+ yields1542objects and will test the mechanism with wider sky/source coverage.
+- Full diagnostic61212409 submitted with48workers/64CPUs/1h, based on46s
+ pilot timing and conservative margin; no physical/control changes.
+- Latent-flux audit61212377 submitted. Added .gitignore exception for compact
+ v3.1CSV evidence so every linked table is versioned; large catalogs stay excluded.
+- Next: full registered diagnostics, actual latent-sign results, qualified new
+ evidence role freeze, then scientific correction/radial/transfer work packages.
+
+
 ## 2026-11-13 — first actual v3.1 pilot and availability inventory
 - Inventory61212144 COMPLETED27s exit0:0. Pilot61212082 writes complete32stars/
   354views, zero nonconvergence; accounting completion to recheck. Downloaded

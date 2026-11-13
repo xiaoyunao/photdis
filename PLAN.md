@@ -18,9 +18,11 @@ Protocol: `docs/v3_1_protocol.md`; evidence ledger:
 NERSC authentication renewed and read-only recovery succeeded. Local, origin and
 NERSC tracked HEAD match31f1277; historical untracked remote figures/manifests
 are preserved. Pilot32stars/354views completes with zero nonconvergence; availability inventory
-completed27s. Paired report61212314 submitted; latent-sign sidecar prepared.
-Next: verify frozen fidelity, inspect paired controls and qualify prospective
-reference evidence before correction fitting.
+completed27s. Paired report61212314 completes21s with all6actual checks passing
+and roundoff-only nominal reproduction. Registered1542-source diagnostic
+61212409 and pilot latent-sign audit61212377 are submitted. Do not duplicate.
+Next: finish these jobs, inspect paired mechanisms/negative support and qualify
+prospective reference evidence before correction fitting.
 No automatic million-object products, deployment, timers or subagents.
 
 

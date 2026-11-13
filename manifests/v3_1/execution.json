@@ -6,7 +6,7 @@
     {
       "job_id": "61212082",
       "purpose": "stratified mechanism pilot",
-      "last_observed_state": "output_complete; accounting verification pending",
+      "last_observed_state": "COMPLETED",
       "wrapper": "scripts/run_v3_1_diagnostics.sh",
       "args": [
         "--stage",
@@ -14,14 +14,18 @@
         "--workers",
         "16"
       ],
-      "qos": "debug"
+      "qos": "debug",
+      "exit_code": "0:0",
+      "elapsed_seconds": 46
     },
     {
       "job_id": "61212144",
       "purpose": "reference-availability and target-domain inventory",
       "last_observed_state": "COMPLETED",
       "wrapper": "scripts/run_v3_1_inventory.sh",
-      "qos": "debug"
+      "qos": "debug",
+      "exit_code": "0:0",
+      "elapsed_seconds": 27
     },
     {
       "job_id": "61212314",
@@ -29,6 +33,29 @@
       "wrapper": "scripts/run_v3_1_report.sh",
       "dependency": "afterok:61212082",
       "qos": "debug",
+      "last_observed_state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 21
+    },
+    {
+      "job_id": "61212377",
+      "purpose": "pilot conditional latent-flux negativity audit",
+      "wrapper": "scripts/run_v3_1_latent_audit.sh",
+      "qos": "debug",
+      "last_observed_state": "submitted"
+    },
+    {
+      "job_id": "61212409",
+      "purpose": "registered 1542-object mechanism diagnostic sample",
+      "wrapper": "scripts/run_v3_1_diagnostics.sh",
+      "args": [
+        "--stage",
+        "diagnostic",
+        "--workers",
+        "48"
+      ],
+      "requested_cpus": 64,
+      "timelimit": "01:00:00",
       "last_observed_state": "submitted"
     }
   ],
@@ -37,5 +64,15 @@
     "passed": 78,
     "seconds": 3.81
   },
-  "science_acceptance": false
+  "science_acceptance": false,
+  "pilot_actual_checks": {
+    "stars": 32,
+    "views": 354,
+    "numerical_failures": 0,
+    "paired_contrasts": 996,
+    "fidelity_passed": true,
+    "max_mu_quantile_delta": 6.217248937900877e-14,
+    "max_qnear_delta": 2.9976021664879227e-15,
+    "max_joint_delta": 2.7755575615628914e-15
+  }
 }
