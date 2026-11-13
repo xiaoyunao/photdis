@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-13 — freeze fixed-kernel target transfer and complete field predictions
+- Fieldprediction61217449 COMPLETED95s:526frozenPSF stars/fourviews;256finechecks
+  pass. No referencevalues/residuals opened; fulltargetidentityfreeze pending.
+- Registered26k/3540/threeheldoutfields targettransfer usingoriginal.7/.35field
+  priors andfixedwithin-classkernels requiredbyluminositycorrection protocol.
+  Addedcollapsedclasshierarchy; objective/gradients matchoriginal beta_sigma0
+  afterremovingtwo independentstandardnormalcoordinates; finitedifference passes.
+- Jointentrypilot61217972 queueddebug; temporarilyheldpending61217706/61217708
+  so shortnumericalprerequisite canrunfirst. MUSTreleaseafterpilotcompletes.
+  Commonprediction61217450 runningdebug; independentresponse0debug/1regular
+  active. Arraythrottle increased2to4nodes, unchangedfits/checkpoints/inputs.
+- Next: actualjointentry andcommonprediction results; releaseheldjobs; prepare
+  native targetresponse/entry matrices onlyafterregisterednumerical gates.
+
 ## 2026-11-13 — complete latent and dust audits; register Gaussian-basis joint integration
 - Full latent61216915 complete2589views/1542sources,0unsupported, exactposterior
   reproduction. response12 weighted any-negative lower/uppermeans .0026746/
