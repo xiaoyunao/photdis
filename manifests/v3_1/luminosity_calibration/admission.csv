@@ -1,0 +1,7 @@
+partition,reference_class,eligible,retained,cells
+fit,0,4282,512,3
+fit,1,89,89,3
+fit,2,1023,512,3
+guard,0,1681,512,3
+guard,1,39,39,2
+guard,2,380,380,2

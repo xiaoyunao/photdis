@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-13 — retain candidate-entry numerical failure and independent-response protocol
+- Medianentry61215525 COMPLETED1048s butfails:128/512 maxalpha.03665; independent
+  512seed.03162; grid.1/.05 .002894. Originaltables retained; no candidatefit
+  permitted from these underresolved integrals. Context0/2 queued61216289/90.
+- Registered2048/8192 two-seed/.025fine bounded refinement, identicalcuts/SED.
+  Added exacttenth-neighbor backend and<=1e-14pruningbound, two focusedchecks
+  pass. Realbackend audit and high-order allocatedrefinements pending.
+- Calibrationcurves61216185 COMPLETED52s:2044objects;fit512/89/512,guard512/39/380
+  dwarf/evolved/other, only2–3sky cells/class. Registeredfit61216288 running;
+  source/sky dependence and sparseevolvedguards remain explicit.
+- Registered independent32response library: freshsharedsource calibration,
+  source/skybootstrap andband/dustdraws; same128componentfamily/trainingdata,
+  fullconvergedweightedEM. IndependentMonteCarlo is not independentdata.
+- Newresponse/refinementdrivers syntax/shell checks pass; full101tests pass.
+  Next: realbackend audit/refinements, responsegeneration/refits, luminosity
+  fineaudit/guards and all176radialproduction; finaloutcomes remain unopened.
+
 ## 2026-11-13 — freeze validation identities and register constrained luminosity correction
 - Rolefreeze61215917 COMPLETED50s:170newskyfield/9cells,356sourcenew-seensky/27cells,
   3032NGC1261members/1system.79field annotations excluded; allhistoricalsource,

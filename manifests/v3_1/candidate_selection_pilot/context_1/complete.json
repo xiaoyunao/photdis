@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_candidate_selection_pilot.py": "3ca098bbdc9f1eb9a4b955e0e93f89af2ee5ebbc204cb363de4b173f947c6900",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "docs/v3_1_candidate_selection_protocol.md": "152f558af343440d2fa43c467f7e53ed4fbc0adea0df60c4d9797b9299eb3a4e"
+  },
+  "outputs": {
+    "q512_seed317101_step0.1.npz": "98404fabc58fdc90afebf8d5ccda3365ea1d11689185808c08d169a00949b457",
+    "comparisons.csv": "d830eae19f5a35e7c1c52157f2fd2ba800f90debd15e3f1680791405bd1e22d6",
+    "q512_seed317101_step0.05.json": "3b9ecd122f16955a62b643a645f72a3f97cf3c29a0ff35951147e96cc89abd44",
+    "q512_seed317101_step0.05.npz": "cd36dd4419ce99ae45b3333518e959d5915afa055ef30c3a0f7eac8a92d7b71c",
+    "q512_seed317102_step0.1.npz": "1b27c33353ab5ef6f712485b1891327883b22ce2db384e4c5cb9bef3ee48103b",
+    "q512_seed317101_step0.1.json": "b7aad2b8f2e3fec53af59613d86421bcd37e9a2adc1b9ee30bd7333f40a5f088",
+    "q128_seed317101_step0.1.npz": "f803216266d84e52a8fd7e52bd1154bf7142d252c7d93a6c1eb82ff80ce132e9",
+    "q128_seed317101_step0.1.json": "37fa67ea919fb2ba2b269fa3f65d95925018cf7691ddc71744927aa03a316576",
+    "original_entry.npz": "1bfd65dc210b88c01606f1e1c2c5a727e70047d896df3b47357fcc12570ac5d6",
+    "q512_seed317102_step0.1.json": "797787793e8e631eac0a3e0471fd8abbc61d09d7b623f7f92c0d00afffa5fe63"
+  },
+  "job": "61215525",
+  "context": 1,
+  "row": 14437,
+  "identity": 3699244817965427200,
+  "TYPE": "PSF",
+  "context_candidate_rows": [
+    21396,
+    14437,
+    23862
+  ],
+  "candidate_count": 3540,
+  "raw_error": [
+    0.05453276261687279,
+    0.07446186244487762,
+    0.104073166847229
+  ],
+  "transmission": [
+    0.9185700416564941,
+    0.9443910121917725,
+    0.9685032963752747
+  ],
+  "calibration_mag": [
+    0.022170187332622864,
+    0.01901693758285703,
+    -0.0016643208065176014
+  ],
+  "effective_error": [
+    0.06059172228554325,
+    0.08023961282140078,
+    0.10729313580545094
+  ],
+  "thresholds": [
+    0.657866265940643,
+    10.775934174464181,
+    1.1649204206600887
+  ],
+  "variants": [
+    {
+      "draws": 128,
+      "seed": 317101,
+      "step": 0.1,
+      "path": "q128_seed317101_step0.1.npz"
+    },
+    {
+      "draws": 512,
+      "seed": 317101,
+      "step": 0.1,
+      "path": "q512_seed317101_step0.1.npz"
+    },
+    {
+      "draws": 512,
+      "seed": 317102,
+      "step": 0.1,
+      "path": "q512_seed317102_step0.1.npz"
+    },
+    {
+      "draws": 512,
+      "seed": 317101,
+      "step": 0.05,
+      "path": "q512_seed317101_step0.05.npz"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "q128_to512",
+      "max_delta": 0.036651513202980865
+    },
+    {
+      "comparison": "independent_q512",
+      "max_delta": 0.031618730200933864
+    },
+    {
+      "comparison": "candidate_above_original_entry",
+      "max_delta": 0.0
+    },
+    {
+      "comparison": "grid0p1_to0p05",
+      "max_delta": 0.002894328736062768
+    }
+  ],
+  "passed": false,
+  "elapsed_seconds": 1028.7725614439987,
+  "scope": "Numerical candidate-envelope selection pilot only; exact QRF support and original observed calibration retained. Population refit and context interpolation are not performed."
+}
