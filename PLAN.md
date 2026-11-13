@@ -42,11 +42,11 @@ Pilot0 broad/local512 runs retained with halfdelta flags;2048extensions bothpass
 coarse numericalgates. Catalog0,48,112 botharms pass fine-grid audits; all176production ready. Bounded numerical extensions preserve all originalflags.
 Native53004brick qualification completed:605PSF admissions; history leaves170strictnewsky field stars but only9precisedistances. Common-scale qualification complete:3032NGC1261 admissions, other2systems empty; finalroles/imaging-ID guard complete:170newsky+356sourcenew-seensky field,3032NGC1261.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
-PSF/new reference blocks; freeze actual prospective roles before correction. Registered one6parameter luminosityshift/scatter correction; role3 sky-split curves complete2044;32bootstrapfit61216288 running.
+PSF/new reference blocks; freeze actual prospective roles before correction. Registered one6parameter luminosityshift/scatter correction; role3 sky-split curves complete2044;32bootstrapfit61216288 failed atdraw19 gridkink; boundedPowell sidecar andlog-space guard ready.
 Matched shared-target-prior contrasts complete with evolved-star regression; retain1numericflag.
 Candidate-envelope normalization includes brightness/error/QRFsupport;3math checks
 and outcome-blind contextpilot registered. Medianpilot fails QMC gates; bounded2048/8192 independentseed refinement registered before matched refitting.
-Finish radial pilots then all176catalogs and response/systematics work. Independent32response regeneration/refit protocol and drivers registered.
+Finish radial pilots then all176catalogs and response/systematics work. Independent32response draws complete61216457; fullrefits61216483 pending. Exactentrybackend check passes; high-orderQMC refinement pending.
 No automatic million-object products, deployment, timers or subagents.
 
 

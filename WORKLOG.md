@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-13 — preserve optimizer kink failure and complete response draw generation
+- Luminosityfit61216288 FAILED75s atbootstrap19/evolved: bothstarts reached
+  delta.14,sigma0 interpolationkink; L-BFGS-B ABNORMAL/nonzeroonesidedgradient.
+  Completed originaldraws/log retained. RegisteredboundedPowell numeric sidecar
+  only forfailedoptimizations; unchangedroles/priors/objective, fineaudit required.
+- Added log-space likelihoodconvolution preservingtiny tails; analyticlinear
+  equivalence/tiny-tail test passes. Guarddriver comparespoint/bootstrapcut
+  predictions, class/source/sky metrics andfixed32coarse/fine/8-to12sigma scores.
+  Full102tests pass4.55s; newdriver syntax/shell checks pass; guard notexecuted.
+- Exactbackend61216456 COMPLETED97s, realoriginal/pruned QMC equivalence passes.
+  Newresponse draw generation61216457 COMPLETED233s;32fullrefits queued61216483
+  afterok dependency. Candidatecontexts0/2 promoted todebug andrunning.
+- Next: numericluminositysidecar/guard, higher-ordercandidateentry, response
+  refits/evidence and fullradialproduction. No finalvalidation residuals opened.
+
 ## 2026-11-13 — retain candidate-entry numerical failure and independent-response protocol
 - Medianentry61215525 COMPLETED1048s butfails:128/512 maxalpha.03665; independent
   512seed.03162; grid.1/.05 .002894. Originaltables retained; no candidatefit

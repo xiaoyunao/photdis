@@ -1,0 +1,24 @@
+{
+  "inputs": {
+    "data/v3_1/candidate_selection_pilot/context_1/complete.json": "fdf76b6715f041caec40163b1cebd676a18e141c35958616c5797a0adf552133",
+    "data/v3_1/candidate_selection_pilot/context_1/q128_seed317101_step0.1.npz": "f803216266d84e52a8fd7e52bd1154bf7142d252c7d93a6c1eb82ff80ce132e9",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "scripts/v3_1_selection_backend_audit.py": "1c27781205762b9b2d7c3d2ec3da4e1d8654e691600293adf5409c813947a033",
+    "src/photdis/v3_1/exact_support.py": "6c2d158036bb11f642e9b8fb8e1e8252349e7dd4aab76ee7f8c0fc5e849dc7a9",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4",
+    "src/photdis/v3_1/candidate_quadrature.py": "e707eaf320705120daaa33ce580e43bb587d077c361263baa2bc3ca4192a3d2d",
+    "docs/v3_1_selection_refinement.md": "ac532fb4db1495b5b1a6f4f4fcb8c672bc504d2a978e406a8b728b909b391f75"
+  },
+  "outputs": {
+    "comparison.npz": "4124bd22b582740b35dbbfacea071397fc117615ca8ead0cb355078b95fb79f3"
+  },
+  "job": "61216456",
+  "max_probability_difference": 0.0,
+  "max_pruning_delta": 2.1932593516788977e-15,
+  "max_pruning_bound": 7.009401893950706e-15,
+  "passed": true,
+  "original_quadrature_passed": false,
+  "elapsed_seconds": 83.27169178199983,
+  "scope": "Identical Gaussian QMC nodes and original QRF support; only exact nearest-neighbor backend changes. No response/model/selection cut change."
+}

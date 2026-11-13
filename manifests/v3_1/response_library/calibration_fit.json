@@ -1,0 +1,386 @@
+[
+  [
+    {
+      "success": true,
+      "objective": -2639.5455939371304,
+      "gradient_max": 0.018826540323545537
+    },
+    {
+      "success": true,
+      "objective": -2604.450603697869,
+      "gradient_max": 0.004592948243183815
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2804.680711081888,
+      "gradient_max": 0.000682121026215418
+    },
+    {
+      "success": true,
+      "objective": -2934.9738355148716,
+      "gradient_max": 0.00013642420609505338
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -5350.308150172451,
+      "gradient_max": 0.0010004441717826132
+    },
+    {
+      "success": true,
+      "objective": -5338.419251942025,
+      "gradient_max": 0.001909938873734492
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3725.6786148058486,
+      "gradient_max": 0.0004547473508102787
+    },
+    {
+      "success": true,
+      "objective": -3709.26145572952,
+      "gradient_max": 0.004956746124691896
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2703.731008138805,
+      "gradient_max": 0.00018189894032411146
+    },
+    {
+      "success": true,
+      "objective": -2814.2420572428537,
+      "gradient_max": 0.004047251422913566
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2888.2485180916383,
+      "gradient_max": 0.0010459189068636409
+    },
+    {
+      "success": true,
+      "objective": -2864.4751162323973,
+      "gradient_max": 0.026784618967371804
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1714.425137122253,
+      "gradient_max": 0.00011368683772229119
+    },
+    {
+      "success": true,
+      "objective": -1818.6285317906445,
+      "gradient_max": 0.0020918378267908186
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1626.5949317383352,
+      "gradient_max": 0.00011368683770256967
+    },
+    {
+      "success": true,
+      "objective": -1637.9611765465272,
+      "gradient_max": 0.0005002220859780812
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2129.855004182577,
+      "gradient_max": 0.0001364242052430836
+    },
+    {
+      "success": true,
+      "objective": -2199.022865477558,
+      "gradient_max": 0.03042259777415528
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2776.9680651175972,
+      "gradient_max": 0.0004092726157292508
+    },
+    {
+      "success": true,
+      "objective": -2789.3942121892196,
+      "gradient_max": 0.0011368683772229118
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2635.5689523857895,
+      "gradient_max": 0.00013642420609505338
+    },
+    {
+      "success": true,
+      "objective": -2688.670915890913,
+      "gradient_max": 0.002955857780779571
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3531.694669420636,
+      "gradient_max": 0.011414158505337994
+    },
+    {
+      "success": true,
+      "objective": -3511.4508763357985,
+      "gradient_max": 0.0012732925824896614
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2294.6799388948225,
+      "gradient_max": 0.00018189894032411146
+    },
+    {
+      "success": true,
+      "objective": -2291.556875982857,
+      "gradient_max": 0.0015916157278359753
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1840.6622745569146,
+      "gradient_max": 4.54747353650178e-05
+    },
+    {
+      "success": true,
+      "objective": -1917.299143913373,
+      "gradient_max": 0.002273736754421172
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1621.2907135267794,
+      "gradient_max": 9.09494707300356e-05
+    },
+    {
+      "success": true,
+      "objective": -1756.2617098163098,
+      "gradient_max": 6.821210304752669e-05
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3042.8553298966594,
+      "gradient_max": 0.0001364242052430836
+    },
+    {
+      "success": true,
+      "objective": -2966.1770496285367,
+      "gradient_max": 0.003956301952049424
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2274.163533324179,
+      "gradient_max": 0.004365574567778675
+    },
+    {
+      "success": true,
+      "objective": -2361.6939740096077,
+      "gradient_max": 0.0005456968210669977
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -4892.116331986414,
+      "gradient_max": 0.0002728484104861672
+    },
+    {
+      "success": true,
+      "objective": -4857.415199016419,
+      "gradient_max": 0.00027284841219010677
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1455.034753254032,
+      "gradient_max": 2.27373676825089e-05
+    },
+    {
+      "success": true,
+      "objective": -1487.9899218137225,
+      "gradient_max": 0.0007503331289671219
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1613.0155836899887,
+      "gradient_max": 6.821210304752669e-05
+    },
+    {
+      "success": true,
+      "objective": -1751.6145382714267,
+      "gradient_max": 0.00018189894032411146
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -2919.9418513115274,
+      "gradient_max": 0.0001818989414600712
+    },
+    {
+      "success": true,
+      "objective": -3055.6288393571626,
+      "gradient_max": 0.002091837814090158
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3304.1048214607017,
+      "gradient_max": 0.0032741809258340065
+    },
+    {
+      "success": true,
+      "objective": -3347.119002800962,
+      "gradient_max": 0.001045918907045079
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3001.428752675296,
+      "gradient_max": 0.00031832314755512455
+    },
+    {
+      "success": true,
+      "objective": -3026.21011350773,
+      "gradient_max": 0.0022737367682508897
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1734.8690564687304,
+      "gradient_max": 6.821210263337472e-05
+    },
+    {
+      "success": true,
+      "objective": -1830.4547601618676,
+      "gradient_max": 0.0009322320693227878
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1752.4396206605313,
+      "gradient_max": 6.821210304752669e-05
+    },
+    {
+      "success": true,
+      "objective": -1868.153572431256,
+      "gradient_max": 0.00015916157377756228
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1761.9163112684914,
+      "gradient_max": 6.821210304752669e-05
+    },
+    {
+      "success": true,
+      "objective": -1788.9214778733915,
+      "gradient_max": 0.0004320099833447065
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -3004.2173922981356,
+      "gradient_max": 0.0009549694367015852
+    },
+    {
+      "success": true,
+      "objective": -3012.005918002209,
+      "gradient_max": 0.07548806024760135
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -4312.046539389874,
+      "gradient_max": 0.0002728484104861672
+    },
+    {
+      "success": true,
+      "objective": -4515.678649430631,
+      "gradient_max": 0.00045474735365017796
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1077.2334273783088,
+      "gradient_max": 0.00018189894032411146
+    },
+    {
+      "success": true,
+      "objective": -1129.4934870506022,
+      "gradient_max": 0.00322870619131307
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -6347.199127246436,
+      "gradient_max": 0.00027284841219010677
+    },
+    {
+      "success": true,
+      "objective": -6278.386538874514,
+      "gradient_max": 0.0006366462911343902
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1942.151647395719,
+      "gradient_max": 0.0010231815393231271
+    },
+    {
+      "success": true,
+      "objective": -1951.1500102210873,
+      "gradient_max": 0.0003865352482557901
+    }
+  ],
+  [
+    {
+      "success": true,
+      "objective": -1485.3076066102867,
+      "gradient_max": 0.00027284841053349887
+    },
+    {
+      "success": true,
+      "objective": -1627.239653282791,
+      "gradient_max": 0.018076207194708576
+    }
+  ]
+]

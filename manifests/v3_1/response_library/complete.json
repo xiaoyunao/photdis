@@ -1,0 +1,61 @@
+{
+  "inputs": {
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "data/v3_0/calibration_specdis_inputs.npz": "cfc6287503aca4416725db77b56e2679211a2b9f975c39663b6df34b16ed064d",
+    "data/v3_0/calibration_spdist_inputs.npz": "371de2c9017718d6af70a84639f1a30874dc9081ef96cc300c483d412714723b",
+    "data/v3_0/sed_cloud.npz": "1110720bed593c767af66bc92ac6d3c36e17d5a9908d9cce6936f7c73948aacd",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "docs/v3_1_response_protocol.md": "376949eca18301e7e88b85a2c555f58cb45f8d2c5c461f0fdaaf5c790dd66a99",
+    "scripts/v3_1_response_prepare.py": "b65b09ba426b82d6b4077ebf9ce066682f652fe9533e4868fe883d7cf4fe51f6",
+    "src/photdis/v3/calibration.py": "becbe78ca7a170928a2feea973e2185cbbfc5b3e7a79f2886b558cda2399fe8f",
+    "src/photdis/v3/uncertainty.py": "f9bff14558a4e1da00594deacbe3439f9db88e1c5205c77399d904c13caaf21b"
+  },
+  "outputs": {
+    "source_calibration.npz": "dc9c7e355a9fd6950aae254e98ea2e0e0bc768214e4a985b4b8fdfa00a0de127",
+    "sed_case_weights.npz": "5389244e0e2703890658087967abc635e5dce2480e8207807d087a6097aff6aa",
+    "shared_draws.npz": "75bdba1cc78689bf2c5d4f9eba5bac91195c082dfd4339a5d2fbc4ea0d0f692f",
+    "calibration_fit.json": "be1d12f2b98d2c50c2e6b6916340f79435b3eefdc732be1c1bf9d815a3a4094c"
+  },
+  "job": "61216457",
+  "draws": 32,
+  "draw_ids": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031
+  ],
+  "seeds": {
+    "source_calibration": 319103,
+    "sed_case_sky": 319101,
+    "band_dust": 319102
+  },
+  "scope": "Independent Monte Carlo source/sky/calibration/systematic regeneration, conditional on same physical reference data. SED refits and target evidence pending."
+}

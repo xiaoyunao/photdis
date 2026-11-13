@@ -391,26 +391,53 @@
     {
       "job_id": "61216288",
       "purpose": "registered six-parameter luminosity calibration plus32sky bootstrap",
-      "last_observed_state": "RUNNING",
-      "qos": "debug"
+      "last_observed_state": "FAILED",
+      "qos": "debug",
+      "elapsed_seconds": 75,
+      "exit_code": "1:0",
+      "reason": "bootstrap19 evolved grid-kink optimizer failure; originals retained, bounded numerical sidecar registered"
     },
     {
       "job_id": "61216289",
       "purpose": "minimum-error candidate-selection pilot context0",
-      "last_observed_state": "PENDING",
-      "qos": "regular"
+      "last_observed_state": "RUNNING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
     },
     {
       "job_id": "61216290",
       "purpose": "maximum-error candidate-selection pilot context2",
+      "last_observed_state": "RUNNING",
+      "qos": "debug",
+      "timelimit": "00:30:00"
+    },
+    {
+      "job_id": "61216456",
+      "purpose": "exact support backend and bounded query-pruning equivalence",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 97,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61216457",
+      "purpose": "independent32source calibration and global systematic draw generation",
+      "last_observed_state": "COMPLETED",
+      "elapsed_seconds": 233,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "61216483",
+      "purpose": "all32independent weighted SED refits eight4drawarraytasks",
+      "dependency": "afterok:61216457",
       "last_observed_state": "PENDING",
-      "qos": "regular"
+      "qos": "regular",
+      "timelimit": "02:00:00"
     }
   ],
   "local_validation": {
     "command": "env PYTHONPATH=src:tests:scripts OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q tests/test_v3*.py",
-    "passed": 101,
-    "seconds": 3.84,
+    "passed": 102,
+    "seconds": 4.55,
     "previous_attempt": "Exit139 native segfault at unchanged selection.py:47; focused6tests passed then full single-thread rerun passed. Root cause not proven."
   },
   "science_acceptance": false,
