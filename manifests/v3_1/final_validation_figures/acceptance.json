@@ -1,0 +1,428 @@
+{
+  "checks": [
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_sky_field_paired_gaia_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_sky_field_paired_astronn_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_sky_field_paired_class_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_gaia_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_astronn_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_class_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:manifests/v3_1/final_validation/report/common_scale_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/v3_1_validation_figures.py",
+      "passed": true
+    },
+    {
+      "check": "inputs:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/final_validation/field_score_gains.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/final_validation/field_score_gains.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/final_validation/common_scale_agreement.png",
+      "passed": true
+    },
+    {
+      "check": "outputs:figures/v3_1/final_validation/common_scale_agreement.pdf",
+      "passed": true
+    },
+    {
+      "check": "outputs:manifests/v3_1/final_validation_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:dimensions",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:300dpi",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:one_page",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:text",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:English",
+      "passed": true
+    },
+    {
+      "check": "field_score_gains:retained_failure",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:dimensions",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:300dpi",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:one_page",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:text",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:English",
+      "passed": true
+    },
+    {
+      "check": "common_scale_agreement:retained_failure",
+      "passed": true
+    },
+    {
+      "check": "75_plotted_rows",
+      "passed": true
+    },
+    {
+      "check": "source_row_0",
+      "passed": true
+    },
+    {
+      "check": "source_row_1",
+      "passed": true
+    },
+    {
+      "check": "source_row_2",
+      "passed": true
+    },
+    {
+      "check": "source_row_3",
+      "passed": true
+    },
+    {
+      "check": "source_row_4",
+      "passed": true
+    },
+    {
+      "check": "source_row_5",
+      "passed": true
+    },
+    {
+      "check": "source_row_6",
+      "passed": true
+    },
+    {
+      "check": "source_row_7",
+      "passed": true
+    },
+    {
+      "check": "source_row_8",
+      "passed": true
+    },
+    {
+      "check": "source_row_9",
+      "passed": true
+    },
+    {
+      "check": "source_row_10",
+      "passed": true
+    },
+    {
+      "check": "source_row_11",
+      "passed": true
+    },
+    {
+      "check": "source_row_12",
+      "passed": true
+    },
+    {
+      "check": "source_row_13",
+      "passed": true
+    },
+    {
+      "check": "source_row_14",
+      "passed": true
+    },
+    {
+      "check": "source_row_15",
+      "passed": true
+    },
+    {
+      "check": "source_row_16",
+      "passed": true
+    },
+    {
+      "check": "source_row_17",
+      "passed": true
+    },
+    {
+      "check": "source_row_18",
+      "passed": true
+    },
+    {
+      "check": "source_row_19",
+      "passed": true
+    },
+    {
+      "check": "source_row_20",
+      "passed": true
+    },
+    {
+      "check": "source_row_21",
+      "passed": true
+    },
+    {
+      "check": "source_row_22",
+      "passed": true
+    },
+    {
+      "check": "source_row_23",
+      "passed": true
+    },
+    {
+      "check": "source_row_24",
+      "passed": true
+    },
+    {
+      "check": "source_row_25",
+      "passed": true
+    },
+    {
+      "check": "source_row_26",
+      "passed": true
+    },
+    {
+      "check": "source_row_27",
+      "passed": true
+    },
+    {
+      "check": "source_row_28",
+      "passed": true
+    },
+    {
+      "check": "source_row_29",
+      "passed": true
+    },
+    {
+      "check": "source_row_30",
+      "passed": true
+    },
+    {
+      "check": "source_row_31",
+      "passed": true
+    },
+    {
+      "check": "source_row_32",
+      "passed": true
+    },
+    {
+      "check": "source_row_33",
+      "passed": true
+    },
+    {
+      "check": "source_row_34",
+      "passed": true
+    },
+    {
+      "check": "source_row_35",
+      "passed": true
+    },
+    {
+      "check": "source_row_36",
+      "passed": true
+    },
+    {
+      "check": "source_row_37",
+      "passed": true
+    },
+    {
+      "check": "source_row_38",
+      "passed": true
+    },
+    {
+      "check": "source_row_39",
+      "passed": true
+    },
+    {
+      "check": "source_row_40",
+      "passed": true
+    },
+    {
+      "check": "source_row_41",
+      "passed": true
+    },
+    {
+      "check": "source_row_42",
+      "passed": true
+    },
+    {
+      "check": "source_row_43",
+      "passed": true
+    },
+    {
+      "check": "source_row_44",
+      "passed": true
+    },
+    {
+      "check": "source_row_45",
+      "passed": true
+    },
+    {
+      "check": "source_row_46",
+      "passed": true
+    },
+    {
+      "check": "source_row_47",
+      "passed": true
+    },
+    {
+      "check": "source_row_48",
+      "passed": true
+    },
+    {
+      "check": "source_row_49",
+      "passed": true
+    },
+    {
+      "check": "source_row_50",
+      "passed": true
+    },
+    {
+      "check": "source_row_51",
+      "passed": true
+    },
+    {
+      "check": "source_row_52",
+      "passed": true
+    },
+    {
+      "check": "source_row_53",
+      "passed": true
+    },
+    {
+      "check": "source_row_54",
+      "passed": true
+    },
+    {
+      "check": "source_row_55",
+      "passed": true
+    },
+    {
+      "check": "source_row_56",
+      "passed": true
+    },
+    {
+      "check": "source_row_57",
+      "passed": true
+    },
+    {
+      "check": "source_row_58",
+      "passed": true
+    },
+    {
+      "check": "source_row_59",
+      "passed": true
+    },
+    {
+      "check": "source_row_60",
+      "passed": true
+    },
+    {
+      "check": "source_row_61",
+      "passed": true
+    },
+    {
+      "check": "source_row_62",
+      "passed": true
+    },
+    {
+      "check": "source_row_63",
+      "passed": true
+    },
+    {
+      "check": "source_row_64",
+      "passed": true
+    },
+    {
+      "check": "source_row_65",
+      "passed": true
+    },
+    {
+      "check": "source_row_66",
+      "passed": true
+    },
+    {
+      "check": "source_row_67",
+      "passed": true
+    },
+    {
+      "check": "source_row_68",
+      "passed": true
+    },
+    {
+      "check": "source_row_69",
+      "passed": true
+    },
+    {
+      "check": "source_row_70",
+      "passed": true
+    },
+    {
+      "check": "source_row_71",
+      "passed": true
+    },
+    {
+      "check": "source_row_72",
+      "passed": true
+    },
+    {
+      "check": "source_row_73",
+      "passed": true
+    },
+    {
+      "check": "source_row_74",
+      "passed": true
+    },
+    {
+      "check": "9_panels",
+      "passed": true
+    }
+  ],
+  "actual_checks": 104,
+  "passed": true,
+  "visual_review": {
+    "field_score_gains": "All six panels inspected: labels, intervals, denominators and source/role limitations readable; no clipping or overlaps.",
+    "common_scale_agreement": "All three panels inspected: all nine views, orange main and shared-scale limitations visible; no clipping or overlaps."
+  },
+  "scientific_acceptance": false,
+  "scope": "Artifact/source fidelity and visual QA only. Inherited evidence failures and external disagreements retained."
+}

@@ -1,0 +1,41 @@
+{
+  "original_timeout_job": "61223172_0",
+  "original_sacct": "61223172_0|TIMEOUT|00:30:27|0:0\n",
+  "replaced_unstarted_job": "61225943",
+  "old_state": [
+    "61225943",
+    "photdis_v3_1_structureentryrefine",
+    "regular_1",
+    "PENDING"
+  ],
+  "cancel_command": [
+    "scancel",
+    "--state=PENDING",
+    "61225943"
+  ],
+  "source_commit": "430c82e64bfef7982efba0e4497e81072253147b",
+  "scientific_source_sha256": {
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "docs/v3_1_structure_entry_refinement_protocol.md": "6a7b106816f954851cc322aec9b84b26c77168dd04e5ef66a6130545151d882d",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4"
+  },
+  "workers": 32,
+  "old_workers": 8,
+  "scope": "Resource-only exact draw0 resume using immutable original per-context function and same scientific inputs/checkpoints. Original timeout/partial artifacts preserved. Other31states unchanged pending pilot evidence.",
+  "job": "61228245",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "debug",
+    "-t",
+    "00:30:00",
+    "scripts/run_v3_1_structure_entry_resume.sh",
+    "--draw",
+    "0",
+    "--workers",
+    "32"
+  ]
+}

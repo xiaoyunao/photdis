@@ -114,3 +114,34 @@ checks pass. [PDF](../figures/v3_1/domain_photometry/photometric_occupancy.pdf),
 [acceptance](../manifests/v3_1/domain_photometry_figures/acceptance.json).
 Source-qualified reference and missing-reference-mass rendering code is ready,
 but has not run because the required final evidence products remain incomplete.
+
+## Frozen external field comparisons
+
+![External field scores](../figures/v3_1/final_validation/field_score_gains.png)
+
+The six panels compare the exact main candidate with eight frozen controls,
+using candidate-admission objects and whole-sky-cell intervals. New-sky signed
+Gaia scores worsen versus the old target prior by0.8143nat [0.6137,0.9342]
+(n166,9cells). Precise AstroNN has only9new-sky references across6cells and Gaia
+ancestry. The main evidence failure remains; relative improvements against an
+individual control cannot establish absolute calibration or fill empty domains.
+[PDF](../figures/v3_1/final_validation/field_score_gains.pdf).
+
+## One shared NGC1261 scale
+
+![Common scale](../figures/v3_1/final_validation/common_scale_agreement.png)
+
+All1732candidate-admission members use one HST kinematic scale,4096shared draws.
+The main median relative residual is-49.05% with reference-scale sensitivity
+interval[-53.85,-43.44]%; severe modulus residual fraction65.88% and95%reference-
+point agreement60.33%. These intervals are not independent-member sampling
+uncertainty, and reference agreement is not measured posterior coverage.
+All3032objects, outside-domain diagnostics and0.97/1.03method sensitivities remain
+in the source report. The72score-convergence failures on38objects are allGaia;
+none is erased by this plot. [PDF](../figures/v3_1/final_validation/common_scale_agreement.pdf).
+
+Both plates and all nine panels were individually inspected;104actual
+hash/PNG300dpi/PDF/75source-row checks pass.
+[Plotted source rows](../manifests/v3_1/final_validation_figures/plotted.csv),
+[acceptance record](../manifests/v3_1/final_validation_figures/acceptance.json),
+[complete stored-score audit](../manifests/v3_1/final_validation/score_audit/complete.json).

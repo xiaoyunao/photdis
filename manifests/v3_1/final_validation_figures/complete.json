@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_gaia_all_objects.csv": "83345733fd7320cbb189dc799a8892b418aadafd9ef96aabd76ae9bb468cdffc",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_astronn_all_objects.csv": "1f9aefe7d561ea53ec8746af43874cca898630d10b3b34f3e4abfbd9ed550a74",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_class_all_objects.csv": "f9b1d9cd9a934fda271a75ad423d6a5d80f934e936f12f7619f35f0fef8777ef",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_gaia_all_objects.csv": "95a46cf30637196fdc0310d6db6751ec35f3e0bd3d24c259d188af7ce0a0378b",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_astronn_all_objects.csv": "2e345b43780398c20f8a88b170ae1cb5d77b23071a2058e5208e2cbc60c8f839",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_class_all_objects.csv": "c516b66729c79052a3fe5aec939dea65151ae640687cdf0dadbddb7725a988d8",
+    "manifests/v3_1/final_validation/report/common_scale_summary.csv": "3ce62c6a594b11a326752b8a02ee2a5e6f6e0168b0ce23e8ed57dfb2e1262568",
+    "scripts/v3_1_validation_figures.py": "1ee972a6db86385c9b809146d5a5cef6067bba51abde9e1ee5f2e4b39bc68514",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/final_validation/field_score_gains.png": "175a53ef42c6e1aa768624e8565dc3d6eadc04e78e850fbe16fecb636897fad8",
+    "figures/v3_1/final_validation/field_score_gains.pdf": "23ed2692b66304f221da1450948ac35810d445c61de99098522afc8d8c07fb7a",
+    "figures/v3_1/final_validation/common_scale_agreement.png": "9fdbcda7f2c8c6ce8c9cdbc1145da97e4021eb68f5b8ba5c7503b96cd124bd3b",
+    "figures/v3_1/final_validation/common_scale_agreement.pdf": "780655583ae458a7a6f0c6249fb4c42acddba257663ea9c286510a747cafc26e",
+    "manifests/v3_1/final_validation_figures/plotted.csv": "7ab2b33394338e4812ff6133a029aec814a9bb207490aab9b510bb1ee591aa64"
+  },
+  "figures": 2,
+  "panels": 9,
+  "plotted_rows": 75,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scope": "Actual source-qualified complete external report only; all failures/empty groups retained; no new scientific acceptance."
+}

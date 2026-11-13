@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "cohort_size_PSF": 2,
+    "immutable_freeze_link": 2,
+    "evidence_hash": 2,
+    "numerical_table_hash": 2,
+    "evidence_rows_PSF": 2,
+    "complete_identity_set": 2,
+    "unique_nine_view_table": 2,
+    "object_hash": 3558,
+    "object_input_identity": 3558,
+    "object_role_PSF": 3558,
+    "object_nine_views": 3558,
+    "class_distance_mass": 32022,
+    "near_class_marginals": 32022,
+    "ordered_quantiles_widths": 32022,
+    "qualified_channel_denominator": 32022,
+    "unique_channels": 32022,
+    "score_gate_conjunction": 32022,
+    "inherited_gate_conjunction": 32022,
+    "exported_flag_matches_record": 128088,
+    "stored_level_threshold": 62082,
+    "object_gate_conjunction": 3558,
+    "complete_failed_view_count": 2,
+    "complete_acceptance_flag": 2
+  },
+  "actual_checks": 432132
+}

@@ -1,5 +1,27 @@
 # WORKLOG
 
+## 2026-11-13 — finish correlated external report and retain scientific rejection evidence
+- Report61226775 COMPLETED6m05: all3558PSF/nineviews retained; strictcandidate
+  newsky167/seen-sky352/common1732. Newsky signedGaia166/9cells main-oldtarget
+  -0.814323nat[-0.934231,-0.613657]; only9preciseAstroNN/6cells. NGC1261common
+  mainmedianbias-49.0484%, sharedreference sensitivity[-53.8548,-43.4370]%;
+  severe65.8776%,95%referenceagreement60.3349%, notindependentcoverage.
+- Exhaustiveaudit61228029 COMPLETED37s,432132actualartifactchecks pass. All72
+  scorefailureson38objects areGaia; maximumlogscore/PITdelta.205551/.026198.
+  Alloriginal/inheritedflags retained; auditpass isnot scientificacceptance.
+- Renderedv3_1_validation_figures.py actualreport tables:2Englishplates/9panels,
+  visuallyinspectedindividually;104hash/PNG300dpi/PDF/75source-rowcheckspass.
+  Initialformatcheck lackedfitz; usedexistingpypdf successfully, nonewdependency.
+- Mode61227827shards0/1 complete16m14/16m23,443each/all886numericalpass;
+  fixedhighq366/377. Collectedcompacts, fullresponsibilitiesstayNERSC. Existing
+  pendingchildren2/3promoteddebug30min afterfullunrolledqueuecheck, samecode/seeds.
+- Structureentrydraw1 completes13m08. Originalrefine0timeoutretained; verified
+  sourcehash/terminalabsence, safelycancelledonlyunstarted61225943 andsubmitted
+  32workerresource-onlyexactresume61228245debug30min. Pilotrunning; other31
+  refinementsunchanged untilactualmemory/runtime/outcomes justifyresourcechange.
+- UpdatedPLAN/status/ledger/atlas; remaining6mode shards,domainadjudication,
+  radial/broad/holdout/all64response/structure science required. Goalactive.
+
 ## 2026-11-13 — complete regenerated SED library and prepare faster exact structure resume
 - ExactSEDresume61227619_7 COMPLETED14m07:draws1028–1031converged at25/26/21/18
   totaliterations, preservingoriginal17-iteration checkpoints andtimeout. All32

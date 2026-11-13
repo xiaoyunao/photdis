@@ -1,0 +1,39 @@
+{
+  "inputs": {
+    "data/v3_1/final_validation/freeze.json": "a677031d25b10b4575f3afe2d0627fe6c42d212cda7bb58fcab696b7e91314cc",
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/final_validation/field/evidence.npz": "842aee6d4e8232dad9bfc9bbd19fae14fe1db2335d2593bb24c0fe9daeb6eada",
+    "data/v3_1/final_validation/scores/field/numerical.csv": "2c4c9135efdf0fdf424eaa79024086b0bdc4a1fb1b39f0129adfdd0cea8836b2",
+    "data/v3_1/final_validation/scores/common/complete.json": "c6a97ff5dcd46ad9bcdb77c423062bc2af7fb3bfbb892477e1c67e9c5566d429",
+    "data/v3_1/final_validation/common/complete.json": "21fb1b0b0c1f2b69405b4e047a94c0be97d083408e828217daf9767f8afc4201",
+    "data/v3_1/final_validation/common/evidence.npz": "4a3132d594803820fca1cef6ea357bbf85faf55fc2acf960731d61cc187fd509",
+    "data/v3_1/final_validation/scores/common/numerical.csv": "b39b5e5e874d9222de2d533ca7f064af2eb446c6a37e61d589e48ebb9633c70e",
+    "scripts/v3_1_score_audit.py": "0268ddcbff2c7836e38f8566849e6484e320d9d45ea95d73d151cbcd9d0e9f5b"
+  },
+  "outputs": {
+    "views.csv": "ded34a0e042bfe2717ebd7df271b16a604bc9087bef5e984b34e54e3e8f263d2",
+    "channels.csv": "ecbab8930d0190ef2a41ab6651f9efa8fb9ffb35e827cb4402962a85d86d65d0",
+    "failures.csv": "b70ae527d02fe76c39bc558c6e7661d0e33da85cc380feac5899a004cad85d03",
+    "checks.json": "4521b337968ceec8ccddeefd69ab2e44e3db2cf402a9c0a09750e14fb29f0afa"
+  },
+  "inventory": [
+    {
+      "cohort": "field",
+      "n": 526,
+      "view_rows": 4734,
+      "objects_with_score_failure": 0
+    },
+    {
+      "cohort": "common",
+      "n": 3032,
+      "view_rows": 27288,
+      "objects_with_score_failure": 38
+    }
+  ],
+  "actual_checks": 432132,
+  "artifact_audit_passed": true,
+  "scientific_acceptance": false,
+  "job": "61228029",
+  "scope": "Audit every stored score/identity/channel/flag and exported numerical row. Does not recompute PDFs, change frozen outcomes, erase numerical failures or establish scientific calibration."
+}

@@ -75,7 +75,10 @@ Negative findings remain deliverables, never successful calibration claims.
   association/scoring implemented; bothassociationscomplete (common2419signedGaia/996negative; oneHSTscale).
   Fieldscore61226763 complete4m37:all4734scorenumerics pass,1578inheritedflags; commonscore61226770complete5m00:27288rows/72scorenumericalfailures
   on38objects, allretained; mainperobjectscorenumerics pass. Report61226775
-  queueddebug30min. Bothcohorts scored; scientificaggregate interpretationpending.
+  COMPLETED6m05; bothcohorts/nineviews retained. Newsky Gaia main-oldtarget
+  -0.8143nat[ -0.9342,-0.6137 ]on166stars/9cells; NGC1261candidate1732median
+  distancebias-49.05%, onecommon scale. Exhaustiveaudit61228029passes432132
+  artifactchecks; all72newscorefailuresareGaia. No scientificacceptance.
 - [ ] WP4 product-matched evaluation/high-q counts/domain/structure example.
   Exactmaincandidate per-mode decomposition isstillrequired inaddition toseen
   development modes. Registered v3_1_candidate_modes_protocol.md: all3540/fixed3003,
@@ -86,7 +89,8 @@ Negative findings remain deliverables, never successful calibration claims.
   archived; same8-IDretry61227692complete/all8pass.01. Maximumoriginalprobability
   delta1.638993e-5/samebasincomponentdelta5.435582e-5. Full8shard/32worker
   array61227827submittedregular1h(indices0/1debug30min); completeinventory
-  report61227828 afterokallshards. Actualfullproducts/figures remainpending.
+  report61227828 afterokallshards. Shards0/1complete16m14/16m23, all886
+  numericalpass; remaining6required. Children2/3promoteddebug30min.
   True-distance Gaussian correction integral and shared count/numerical-transfer
   foundations implemented/tested. Joint response61220368 all26000rows pass.
   SeenNGC288512photo-only reference-ensemble structure protocol registered,
@@ -96,7 +100,9 @@ Negative findings remain deliverables, never successful calibration claims.
   pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
   All32state entry61223167/refinement61223172 underway; queuedrefinementindices
   extendedto3h. Originalrefinement0 TIMEOUT30m27; terminal/absence/sourcehashverified,
-  exactresume61225943regular3h submitted. Assembly/posterior
+  unstartedresume61225943replaced byresource-only32workerpilot61228245debug30min
+  afterterminal/absence/hashchecks. Sameintegrand/seeds/checkpoints; other31
+  refinementjobs untouchedpendingpilot runtime/memory evidence. Assembly/posterior
   awaitallstates numerical admission. Pendingentry1–31limits now30min basedon
   13m37pilot; refinementsretain3h. Otherpendingpopulationgroups now30min to
   improvebackfill; originalcheckpoints/seeds/scientificschedules unchanged. Separate shared realizedcount/seen-Gaia
@@ -115,15 +121,15 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full suite: 174 tests pass (6.39 s). Seven English plates have actual
+- Latest full suite: 174 tests pass (6.39 s). Nine English plates have actual
   visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
-  photometric occupancy 165 artifact/source checks. Three new figure renderers'
-  outputs still require real complete source tables and visual QA.
+  photometric occupancy 165 and final external comparison 104 artifact/source
+  checks. Candidate-mode/domain evidence figures still require complete sources.
 - Complete candidate mode array 61227827 and inventory report 61227828 for all
   3540 identities / fixed 3003 high-q objects. The eight-object pilot passes;
   preserve all grid levels, basin responsibilities and inherited evidence failure.
-- Finish external correlated report 61226775, then source-qualified domain
-  screens and figures. Both cohorts and all nine views are already frozen and
+- External correlated report 61226775 and its two inspected figures are complete;
+  finish source-qualified domain screens and scientific adjudication. Both cohorts and all nine views are already frozen and
   scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
   cohort score-convergence failures and all inherited ensemble flags. Domain
   evidence 61226776 additionally waits for the complete 64-response report.
@@ -137,8 +143,9 @@ Negative findings remain deliverables, never successful calibration claims.
   352 arms, including terminal numerical failures. Parameters and realized
   counts remain different estimands; all original scenarios are retained.
 - Finish all 32 structure native/entry/refinement states, including exact entry
-  refinement resume 61225943, then actual shared-posterior/count inference and
-  the fair prior-withdrawn baseline. Keep the original 3 h refinement limits.
+  refinement resource pilot 61228245, then actual shared-posterior/count inference
+  and the fair prior-withdrawn baseline. Other31refinements keep3h limits until
+  actual pilot runtime/memory/outcomes justify resource-only changes.
 - Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
   support and evidence gates; preserve failures rather than changing thresholds.
   Main finite-ensemble evidence remains failed despite stable per-object scores.
