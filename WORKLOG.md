@@ -11,6 +11,8 @@
   Thusall3558externalobjects nowactuallyscored, notyet scientificcalibration
   accepted. Threehash-authenticated spotchecks locate Gaia logscorechanges
   .0256–.0914nat whilecommon-HST channelpasses; do notgeneralize3spotcheckstoall72.
+- UpdatedPLAN nextactions toactualcompletedfreeze/scores/matrices/highq states;
+  remainingmode/report/SED/population/radial/structure work explicit.
 - Collectedcomplete commonnumericalCSV/marker; alloriginalpredictions/freeze and
   failedflags preserved. No post-opening retuning, droppingrows orchanginggates.
 - Fullmodes61227827_0 nowrunning; secondchildqueueddebug, other6regular1h,

@@ -115,24 +115,36 @@ Negative findings remain deliverables, never successful calibration claims.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
-- Latest full170tests pass5.44s; seven English plates visually inspected (paired62,
-  calibration32, latent1574, candidate138, photometricmap165actual artifact/source checks). Large data stayNERSC.
-- Finish responseprobe pilots and all64matched response sensitivity comparisons;
-  complete all32new SED fits without dropping failures or flattening weights.
-- Follow direct-entry/native-joint jobs. Assemble only complete matrices; failed
-  objects stay in denominator. Fit26k/candidate/heldout cohorts atzero/point/32
-  shared corrections only after numerical admission passes.
-- Propagate actual independent-seed/previous-resolution entry matrices through
-  posterior weights and shared counts. Nativefine audit is258objects, not an
-  unperformed fullfine26k likelihood. Require probability<.003/countmean<.5,
-  adequate importance ESS, sampler Rhat<1.05/ESS>=100/no divergence and bridge
-  overlap before accepting any product. Keep all numerical attempts/flags.
-- Freeze final candidate/model/calibration/prior/selection identities, generate
-  matching baseline/candidate predictions, then open/scorereferences once. Maincandidate identity nowregistered as candidate
-  cohort response12/cal12+evidenceweighted32luminosity bootstraps; it remains
-  conditional on fixedresponse/calibration and finite bootstrap support.
-- Complete joint high-q counts, supported/extrapolated/unvalidated domains,
-  structure-prior withdrawal/fullmarginalization, final figures and report.
+- Latest full suite: 174 tests pass (6.39 s). Seven English plates have actual
+  visual acceptance: paired 62, calibration 32, latent 1574, candidate 138 and
+  photometric occupancy 165 artifact/source checks. Three new figure renderers'
+  outputs still require real complete source tables and visual QA.
+- Complete candidate mode array 61227827 and inventory report 61227828 for all
+  3540 identities / fixed 3003 high-q objects. The eight-object pilot passes;
+  preserve all grid levels, basin responsibilities and inherited evidence failure.
+- Finish external correlated report 61226775, then source-qualified domain
+  screens and figures. Both cohorts and all nine views are already frozen and
+  scored; do not reopen/reselect or regenerate predictions. Retain 72 common-
+  cohort score-convergence failures and all inherited ensemble flags. Domain
+  evidence 61226776 additionally waits for the complete 64-response report.
+- Finish four independent SED refits via exact resume 61227619_7, then all
+  registered old/new response probes and refinements. Require all 64 inventories
+  before normalization; no dropped response or flattened evidence weight.
+- Complete remaining broad/heldout conditional populations, their all-34-state
+  ensembles and frozen sky-transfer comparisons. Native/joint/entry matrices,
+  all candidate states and fixed-high-q joint counts are already complete.
+- Finish radial exact resumes 61225052/61225072 and report all 176 catalogs /
+  352 arms, including terminal numerical failures. Parameters and realized
+  counts remain different estimands; all original scenarios are retained.
+- Finish all 32 structure native/entry/refinement states, including exact entry
+  refinement resume 61225943, then actual shared-posterior/count inference and
+  the fair prior-withdrawn baseline. Keep the original 3 h refinement limits.
+- Apply existing probability <.003, count-mean <.5, sampler/bridge/importance
+  support and evidence gates; preserve failures rather than changing thresholds.
+  Main finite-ensemble evidence remains failed despite stable per-object scores.
+- Complete scientific use-domain adjudication, source tables, English figures,
+  visual QA, result/ledger/README/AGENTS and safe milestone sync. No deployment,
+  million-object rerun, timers or subagents; large scientific products stay NERSC.
 
 ## Completed v3.0 research delivery
 
