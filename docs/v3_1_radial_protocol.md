@@ -44,7 +44,10 @@ or detection-completeness correction. Native TYPE=PSF at source/context admissio
 and output remains mandatory, including simulated samples' source provenance.
 
 Use a mu grid covering[-15,45]mag with at most.02mag spacing where local structure
-can have mass. Check finer.01mag quadrature on pilot and flagged catalogs;
+can have mass. Keep this inference grid uniform; integrate reporting bins by
+inserting exact boundaries into the piecewise-linear posterior only, which
+preserves its total integral. This avoids disrupting narrow-Gaussian quadrature.
+Check finer.01mag quadrature on pilot and flagged catalogs;
 require probability changes<.003 and count means<.5star before acceptance.
 Entry tables use the frozen256-profile geometry, mu[-25,55] at.05mag,
 256Sobol draws with independent seed311701; fixed24profile×3shift broad-basis
@@ -52,6 +55,10 @@ comparisons must differ by<.003 from the frozen table. A512draw or finer-grid
 sidecar is numerical refinement only. Selection profile interpolation must retain hull flags and compare against
 direct Gaussian entry integration on a fixed pilot subset. Do not normalize
 away missing tail support. Retain original and refined numerical artifacts.
+
+Before any recovery outcomes, fix pilot catalogs0(reference-like),48(old narrow
+4kpc),112(new narrow2kpc/.08). On these three compare direct selection on rows
+0/31/63/95/127 (512Sobol seed311702) and coarse/fine native likelihoods.
 
 MAP initialization is fixed before outcomes: baseline reference center;
 alternative location9/11/13/15/17/19mag crossed with width.08/.30mag, plus

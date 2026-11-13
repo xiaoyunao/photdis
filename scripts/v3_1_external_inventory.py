@@ -25,12 +25,14 @@ def main():
     allstar=fitsio.read(str(paths[0]),ext=1,columns=APOGEE_COLUMNS+['FIELD'])
     nn=fitsio.read(str(paths[1]),ext=1,columns=['APOGEE_ID','RA_APOGEE','DEC_APOGEE','source_id','dist','dist_error','nn_parallax'])
     assert len(allstar)==len(nn)
-    np.testing.assert_array_equal(np.char.strip(allstar['APOGEE_ID'].astype('U')),np.char.strip(nn['APOGEE_ID'].astype('U')))
+    name_match=np.char.strip(allstar['APOGEE_ID'].astype('U'))==np.char.strip(nn['APOGEE_ID'].astype('U'))
+    csv_rows(out/'alignment_exclusions.csv',[dict(row=int(i),allstar=str(allstar['APOGEE_ID'][i]),astroNN=str(nn['APOGEE_ID'][i]),
+        reason='Unequal exact APOGEE_ID; astroNN distance excluded, no suffix correction') for i in np.flatnonzero(~name_match)])
     np.testing.assert_allclose(allstar['RA'],nn['RA_APOGEE'],atol=1e-7,rtol=0,equal_nan=True)
     np.testing.assert_allclose(allstar['DEC'],nn['DEC_APOGEE'],atol=1e-7,rtol=0,equal_nan=True)
     assert nn['source_id'].dtype.kind in 'iu','Never round floating-point Gaia IDs'
     representative=apogee_best_rows(allstar);a=allstar[representative];n=nn[representative];s=project_apogee(a)
-    ids=s['source_id'];same_id=(n['source_id']==ids)&(ids>0)
+    ids=s['source_id'];same_id=(n['source_id']==ids)&(ids>0)&name_match[representative]
     reference=projected(old,['identity','cell']);seen_id=np.isin(ids,reference['identity'])
     cell=(np.floor(s['ra']/10).astype('i8')*18+np.floor((s['dec']+90)/10).astype('i8'))
     seen_sky=np.isin(cell,reference['cell']);bounds=[json.loads(p.read_text()).get('bounds_deg') for p in configs]
@@ -77,7 +79,8 @@ def main():
             native_TYPE_unverified=int(m.sum()),admitted_science=0,membership='local v1.0 membership definition not yet certified'))
     csv_rows(out/'cluster_inventory.csv',cluster)
     save_json(marker,dict(inputs=inputs,outputs={p.name:sha(p) for p in out.iterdir() if p.name!='complete.json'},job=os.getenv('SLURM_JOB_ID'),
-        source_rows=len(allstar),unique_identities=len(ids),row_identity_and_position_alignment_passed=True,
+        source_rows=len(allstar),unique_identities=len(ids),position_alignment_passed=True,exact_name_mismatches=int((~name_match).sum()),
+        distance_requires_exact_name_and_positive_Gaia_identity=True,
         positive_Gaia_astroNN_mismatch=int(((ids>0)&~same_id).sum()),
         acquisition_rows=int(use.sum()),scientific_admissions=0,
         scope='Reference availability only; native TYPE/photometry and full historical source/system audit precede final role freeze. Distances are pc converted to kpc from producer code, never weighted_dist. Gaia-trained teacher dependence retained. No prediction residuals read.'))

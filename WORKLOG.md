@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-13 — implement frozen radial recovery and retain inventory mismatch
+- Added 176-catalog preparation (112 unchanged old +64 registered narrow),
+  all-kernel native likelihood/entry curves, broad/local multistart HMC recovery,
+  shared count covariance, distinct pre-entry parameters and selected counts.
+- Fixed uniform inference grid; exact reporting boundaries split the same
+  piecewise-linear posterior. Initial toy quadrature discrepancy1.208e-5 retained
+  in development history; .005 toy grid meets1e-5 analytic CDF check. Actual
+  .02/.01 pilot comparison still required; pilot catalogs0/48/112 preregistered.
+- External inventory61213407 FAILED1:0 after119s on exact APOGEE_ID alignment:
+  row645018 has 2M19285121+3813282B versus 2M19285121+3813282. Now explicitly
+  export mismatches and exclude their astroNN distance pairing; no suffix repair.
+  Position agreement remains mandatory, class availability remains independent.
+- Validation:89 v3/v3.1 tests pass3.80s; Python/shell syntax pass. No radial
+  recovery outcomes yet. Next: allocated preparation, corrected inventory and
+  likelihood/selection pilots; preserve all numerical/scientific failures.
+
 ## 2026-11-13 — recover active work and prepare independent reference availability
 - Local/origin/NERSC tracked HEADddf814a aligned; no active Slurm jobs. Remote
   historical untracked files preserved. Previous goal turn made concrete progress.

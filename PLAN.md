@@ -15,7 +15,7 @@ Protocol: `docs/v3_1_protocol.md`; evidence ledger:
 - [ ] WP4: product-matched evaluation, joint counts, domain map, reweighting and structure example.
 - [ ] Complete scientific/numerical/visual acceptance, reports and safe three-end sync.
 
-NERSC authentication renewed; three-end tracked checkpointce0d1e3 verified.
+NERSC authentication renewed; three-end tracked checkpointe0847a1 verified before current edits.
 Historical remote untracked artifacts are preserved. Pilot32stars/354views and
 availability inventory completed. Paired report has6passing actual checks and
 roundoff-only nominal reproduction. Latent audit61212377 completed50views:
@@ -28,7 +28,10 @@ objects exactly match the v3parent; historical pool membership and training
 remain distinct. Mode support61213096 completed. Paired61212562 and strata61212908 reports completed.
 Radial protocol and objective/selection foundation registered;5new tests pass.
 Radial selection61212909 passed (267profiles,max broad delta.0006065);
-actual native likelihood preparation/recovery and target-prior controls remain.
+native likelihood preparation/recovery drivers implemented,89 tests pass.
+Actual176catalog preparation and preregistered pilots0/48/112 remain.
+External inventory61213407 failed exact-name alignment on1row; preserve failure
+and exclude mismatched astroNN pairing before retry. Target-prior controls remain.
 Next: inventory the available APOGEEallStar/astroNN/GC sources and qualify native
 PSF/new reference blocks; freeze actual prospective roles before correction.
 Implement matched shared-target-prior contrasts and radial recovery on all

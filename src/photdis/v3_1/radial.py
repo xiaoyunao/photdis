@@ -98,6 +98,18 @@ class RadialPopulation:
                     output.append(z)
         return output
 
+    def prior_density(self,z):
+        theta,eta,location,width=self.decode(z)
+        density=(1-eta)[:,None]*(theta@distance_basis(self.mu))
+        if self.local:density+=(eta*theta.sum(axis=1))[:,None]*norm.pdf(self.mu,location,width)
+        return density
+
+    def joint_density(self,z):
+        density=self.response*self.prior_density(z)[None]
+        norm=np.einsum('ncm,m->n',density,self.weights)
+        if (norm<=0).any():raise ValueError('Zero conditional latent posterior support')
+        return density/norm[:,None,None]
+
     def fit(self):
         results = []
         for initial in self.starts():
