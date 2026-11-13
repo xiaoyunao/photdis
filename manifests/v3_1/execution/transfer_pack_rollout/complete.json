@@ -1,0 +1,42 @@
+{
+  "submitted": true,
+  "scientific_execution_complete": false,
+  "replacement_array": "61238249",
+  "states": 60,
+  "packs": 5,
+  "max_concurrent_packed_nodes": 2,
+  "original_cancelled_tasks": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "retained_original_tasks": [
+    "61231554_5",
+    "61231554_17",
+    "61231554_24",
+    "61231554_25"
+  ],
+  "source_hashes": 220,
+  "outputs": {
+    "preflight.json": "f8acefe2ba8753ce9ee8f82c2c0f6679ee931018b45ea676da5649002966245f",
+    "submission.json": "b0109c0535ec7fd9e8b82d7dc921692cca4b40f75561884cff37eb70f04ecb0b",
+    "pack_0.json": "dc4a9a5a738af18e3c9ed936ff8cef193ae12dc5ce51b03f7f98ada6291de8e3",
+    "pack_1.json": "bc99bc206224b61bde44f91ed0a1cae06f85ab257000a1ffa4833570414cdfea",
+    "pack_2.json": "b5040bc4e9eaa8e5eba58464c73323f20dd81fb7b8a2b8fed7a9ff8ac698d4e5",
+    "pack_3.json": "4ad5c613b2da5c35585a1a463042b2cbcdc097d3b3f06b7cf2fffc4f7c65714a",
+    "pack_4.json": "f002dbb8a9042868b6de97d591cdc809b5004a1f18e0489a6f1d3eeb7db00d55"
+  },
+  "scope": "Five disjoint packs of the same measured2048 original CLI, up to12states/node andtwo packednodes. Original8192 groups5/17 andunreplaced24/25 retained; no scientific model, numerical gate, output or completed state replacement."
+}

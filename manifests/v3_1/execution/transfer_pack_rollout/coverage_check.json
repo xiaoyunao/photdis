@@ -1,0 +1,12 @@
+{
+  "complete_registered_state_set": true,
+  "states": 102,
+  "already_completed": 28,
+  "replacement_pending": 60,
+  "original_retained": 14,
+  "no_overlap": true,
+  "commands_verified": 59,
+  "report_dependency": "afterok:61231554_5:61231554_17:61231554_24:61231554_25:61238249:61225886",
+  "source_complete_sha256": "4bf06327a1a418ba681ad2494b3582c12e40fc110359ecd3b2a6161ae72d0c39",
+  "scope": "Actual scheduling/state coverage and zero-runtime replacement receipts only; pending states are not scientific completion."
+}

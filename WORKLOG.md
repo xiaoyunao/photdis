@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-14 — batch sixty unstarted transfer states after measured resource validation
+- Source-syncedec25902; authenticated220driver/refinement/fit/count/completed
+  sourcehashes andactualpilot/previousjobcompletion. All15oldtasks7–16/19–23
+  werepending, cancelledwithzero runtime andabsent beforeanyreplacement.
+- Submitted61238249 array0–4%2:five12-state packs, same2048originalCLI,
+  conservative24GiB/worker guard. Atmosttwo packednodes; originaltasks5/17
+  (8192inputs,2h) and24/25 retained. No completedresults oroutputs overwritten.
+- Heldarray untilreport61231678 dependency repairedto61231554_5/_17/_24/_25,
+  61238249 and61225886; no canceledparent/children. Full102states stillmandatory.
+  Original0/1/2/18 andpilot completeaccounting plus28outputmarkerhashes retained.
+- Preflight, perpack plans andcommands frozenin execution/transfer_pack_rollout.
+  Thisissubmission/resourcechange, notcompletedtransfer orscientificacceptance.
+- Validation: measuredpilot12states/96checks, shellsyntax, exactsourceidentity,
+  terminal/absence anddependency checks. Actual102-state partition verifies
+  28complete+60replacement+14retained withnooverlap;59schedulercommands succeed. Next: collectactualarrayoutcomes,
+  lasttwoholdout/ensemble, remainingstructure/figures andfinaladjudication.
+
 ## 2026-11-14 — reconcile candidate source inventory and current documentation
 - Candidatecompact audit initially stopped on25not-yet-collected localrefinement
   markers. Preservedcollection-gap record, retrievedexactsmallmarkers inone

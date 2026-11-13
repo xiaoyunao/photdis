@@ -70,11 +70,12 @@ Negative findings remain deliverables, never successful calibration claims.
   Pendingtransfergroups5/17 containing8192states now2h (4x17–18min estimate
   exceedsold1h). Guarded12-state2048resourcepilot61237364 COMPLETED18m39:
   all12states/96conditionalchecks pass; singlechild1.485GiB/batch19.42GiB,
-  all57originalsources rechecked. Zero-runtimecancelsonlygroups3/4/6; report
-  61231678 waits20retainedtasks+pilot+holdoutensemble, no canceledparent.
-  Sameexecutor arraywrapperprepared/max2packednodes; rolloutrequiresfresh
-  pending/terminal/absence/source checks andexplicitdependencyrepair. Lasttwo
-  holdoutstates task25 promoteddebug30min afteractualsame-case8192timing proof.
+  all57originalsources rechecked. Pilotzero-runtimecancelsonlygroups3/4/6.
+  Measuredsameexecutor rollout61238249array0–4%2 nowqueuedfor60states after220
+  sourcehashes and15zero-runtime cancellations (old7–16/19–23). Report61231678
+  nowwaitsretainedoriginal5/17/24/25 +replacementarray+holdoutensemble, no
+  canceledparent/children; max2packednodes, originalarraythrottle2 retained.
+  Lasttwoholdoutstates task25 promoteddebug30min afteractualsame-case8192timing proof.
   Firsttrueholdoutgroup18 completed17m56/states4–7,32numericchecks pass butall
   16basejoint supportgatesfailESS; unitESS5.147–10.017(broad)/2.458–10.558(candidate).
   Populationfitexcludesfields4/6/12; complete102state mixturestillrequired.
@@ -185,8 +186,8 @@ Negative findings remain deliverables, never successful calibration claims.
 - All 32 independent SED refits are complete (last exact resume 61227619_7).
   Registered old/new probes/refinements/report complete. Preserve all64inventories,
   original/pooledfailed normalization andnewESS1.023628; no addedresponse search.
-- Complete remaining broad/heldout conditional populations, their all-34-state
-  ensembles and frozen sky-transfer comparisons61231554/report61231678.
+- Complete lasttwoheldout conditionalstates andtheir all-34-state ensemble,
+  frozen sky-transfer61238249 plusretained61231554_5/_17/_24/_25 andreport61231678.
   Firsttransfergroup61231554_0 complete17m47/fourbroad states,6000/935PSF;
   88compactchecks. CandidatecutjointESS4.57–25.95 fails support despite conditional
   numericpass; these arein-sample, notheldoutfitresults. Twoactual-source
