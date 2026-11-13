@@ -1,0 +1,33 @@
+{
+  "original_job": "61223172_0",
+  "original_accounting": [
+    "61223172_0",
+    "TIMEOUT",
+    "00:30:27",
+    "0:0"
+  ],
+  "original_absent_from_squeue": true,
+  "resume_job": "61225943",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-q",
+    "regular",
+    "-t",
+    "03:00:00",
+    "scripts/run_v3_1_structure_entry_refine.sh",
+    "--draw",
+    "0"
+  ],
+  "unchanged_scientific_source_hashes": {
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "docs/v3_1_structure_entry_refinement_protocol.md": "6a7b106816f954851cc322aec9b84b26c77168dd04e5ef66a6130545151d882d",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4"
+  },
+  "inputs_sha256": "21f74d9b2763b84c1ce526202ded315aac3d7ca838e5f4584f64184ba546c5a9",
+  "original_checkpoint_directory": "data/v3_1/structure/entry_refined/draw_00",
+  "execution_complete": false,
+  "scope": "Resource-only exactresume afterterminaltimeout andverifiedabsence. All original/checkpoint/failed numerical products preserved; same bounded2^23 integrals and seeds."
+}

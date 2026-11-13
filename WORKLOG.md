@@ -1,5 +1,39 @@
 # WORKLOG
 
+## 2026-11-13 — complete eight bootstrap states and recover structure allocation
+- Populationgroups61225864_9/_10 COMPLETED2m05/2m13. Candidatecorrections2–9
+  allpassat2048retained, eachpreserves512initialattempt; eightcompactfinalmarkers
+  collected. Togetherwithcandidatezero,9/34candidate states complete. Groups8/
+  11/12promoteddebug; full102state outcomes stillincomplete.
+- Eachensemble nowdepends onexactgroupscontainingits34states: broad0–8,
+  candidate8–16, holdout17–25. Maincandidate canproceed withoutirrelevantcohorts
+  afterallitsstatescomplete; nooutcome/draw omitted. Initialandamendedsubmission
+  manifests retained; outputs stillrequireall34-state authentication.
+- Structure61223172_0 TIMEOUT30m27, absentfromsqueue, notopcompletemarker.
+  Verifiedall5scientificsource/protocolhashes unchanged, thenexactresume61225943
+  regular3h --draw0. Samecheckpoints/integrands/seeds/bounded2^23 sidecars;
+  originaltimeout retained. Other31queuedrefinements have3hallocation.
+- Noexternalfinaloutcomes opened, noallstate ensemble orcalibrateddomain claim.
+  Latest156tests remainpassed; onlyshellsubmission/docs/compactmarkers changed.
+  Next: complete remainingcandidate/full/heldoutstates, externalpredictions/freeze,
+  response/radial/structure execution andactualsource-qualified finalassessment.
+
+## 2026-11-13 — launch all remaining registered population states
+- Submitted61225864:26resourcegroups/remaining101conditionalfits, bounded512/
+  2048/8192schedule, fourparallelcases pergroup,max4groups. Explicitskip34
+  preservescompletedcandidatezero pilot. Groups9/10 promoteddebug30min; actual
+  candidatebootstrap2–9 fits running. No finalensemble acceptance inferred.
+- Dependency-gated all34-state ensemblejobs: broad61225883/candidate61225884/
+  holdout61225886 after61225864. Submissionmanifests recorded/collected; neither
+  ensembleweights nor finalreference outcomes opened before completeprerequisites.
+- Submissionpreflight firststopped onhistoricaluntrackedNERSCfigures/manifests,
+  beforeanyjob. Inspectedstatus: no trackedchanges. Preservedalluntrackedartifacts;
+  verifiedcommittedHEAD andtrackedsourceclean before successfulsubmission.
+- Structureentryrefinement0 stillnear30minlimit; pendingindicesnow3h. Running
+  extension denied byscheduler, soexactrecovery mustwaitforterminal/absence.
+- Next: finishconditionalstates, ensembles/highq/heldout/finalpredictions; complete
+  remainingresponse/radial/structure, thenonce-onlyexternalreference scoring.
+
 ## 2026-11-13 — verify the first conditional population/count fit
 - Candidatezero61224010 COMPLETED1m49. Fourchains512retained passsampler/bridge
   butcount marginalhalfdelta.007580 fails.005; registered2048retained refinement

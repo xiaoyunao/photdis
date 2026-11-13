@@ -1,0 +1,43 @@
+{
+  "jobs": [
+    {
+      "case": "broad",
+      "job": "61225883",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61225864",
+        "scripts/run_v3_1_target_ensemble.sh",
+        "--case",
+        "broad"
+      ]
+    },
+    {
+      "case": "candidate",
+      "job": "61225884",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61225864",
+        "scripts/run_v3_1_target_ensemble.sh",
+        "--case",
+        "candidate"
+      ]
+    },
+    {
+      "case": "holdout",
+      "job": "61225886",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:61225864",
+        "scripts/run_v3_1_target_ensemble.sh",
+        "--case",
+        "holdout"
+      ]
+    }
+  ],
+  "source_sha256": "d81bc546dc36087a690df1a87f496f5b68f20203cf3c0ce9fbb7b06a68e0797b",
+  "execution_complete": false,
+  "scope": "Dependency-gated all34-state inventories and four-view ensembles; all numerical failures retained."
+}

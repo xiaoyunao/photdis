@@ -1,0 +1,21 @@
+{
+  "changes": [
+    {
+      "case": "broad",
+      "job": "61225883",
+      "dependency": "afterok:61225864_0:61225864_1:61225864_2:61225864_3:61225864_4:61225864_5:61225864_6:61225864_7:61225864_8"
+    },
+    {
+      "case": "candidate",
+      "job": "61225884",
+      "dependency": "afterok:61225864_8:61225864_9:61225864_10:61225864_11:61225864_12:61225864_13:61225864_14:61225864_15:61225864_16"
+    },
+    {
+      "case": "holdout",
+      "job": "61225886",
+      "dependency": "afterok:61225864_17:61225864_18:61225864_19:61225864_20:61225864_21:61225864_22:61225864_23:61225864_24:61225864_25"
+    }
+  ],
+  "pilot": "61224010 COMPLETED/pass",
+  "scope": "Each ensemble waits for every group contributing its34states; candidatezero already completed and preserved. No state omitted."
+}

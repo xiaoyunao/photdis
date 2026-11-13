@@ -32,7 +32,10 @@ Negative findings remain deliverables, never successful calibration claims.
   preserved. Assembly61219399 COMPLETED28m10/allpass; jointrepack61222999 passes.
   Candidatezero61224010 COMPLETED1m49:512countMCfailure retained,
   2048retained passesallsampler/bridge/count/numericalgates. Remaining101states
-  readyafter sync; skipbatchindex34 preservespilot. No contextinterpolation. Population
+  running/queued61225864; skipbatchindex34 preservespilot. Ensemblejobs broad
+  61225883/candidate61225884/holdout61225886 waitforexactgroups0–8/8–16/17–25.
+  Candidatebootstrap2–9 allpass2048retained(9/34candidate states includingzero);
+  groups8/11/12next. No contextinterpolation. Population
   fit/count pilotcomplete; fullensemble/high-q drivers implemented butnotrun. Heldoutfields12/4/6 frozen;
   shared whole-field predictive/count transfer andreport drivers nowready, with
   proper joint-state integration and explicit out-of-sample/support flags.
@@ -68,7 +71,9 @@ Negative findings remain deliverables, never successful calibration claims.
   complete61221747. Nativepilot7/512initialfailures allpass.005sidecars61222475;
   remaining31native/refinement states queued. Entrypilot all6branch-context gates
   pass aftersame-integrand2^23extension61222758. Originalfailure preserved.
-  All32state entry61223167/refinement61223172 queued; assembly/posterior
+  All32state entry61223167/refinement61223172 underway; queuedrefinementindices
+  extendedto3h. Originalrefinement0 TIMEOUT30m27; terminal/absence/sourcehashverified,
+  exactresume61225943regular3h submitted. Assembly/posterior
   awaitallstates numerical admission. Separate shared realizedcount/seen-Gaia
   comparison report nowimplemented/tested, notrun; originalpriors/likelihoods unchanged.
   Photometry-only75-cell grid andpost-freeze domain evidence/support drivers now

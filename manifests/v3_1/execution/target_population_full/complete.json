@@ -1,0 +1,28 @@
+{
+  "job": "61225864",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:61224010",
+    "--export=ALL,PHOTDIS_SKIP_TARGET_INDEX=34",
+    "scripts/run_v3_1_target_refine.sh"
+  ],
+  "git": "22d1d5b52579ebfcd1046caeae58d8e4d0380adb",
+  "pilot_job": "61224010",
+  "pilot_sha256": "53e8e0e6518911f8f96adab24954621ccb87131f6e311d03b47fa03f45fa3f68",
+  "wrapper_sha256": "6bdced3ca4e150b1902303aebce9be4bd84f990f2fce47565395d58f85d23c41",
+  "registered_cases": [
+    "broad",
+    "candidate",
+    "holdout"
+  ],
+  "corrections_per_case": 34,
+  "total_states": 102,
+  "remaining_states": 101,
+  "skip_flat_index": 34,
+  "array": "0-25%4",
+  "group_size": 4,
+  "execution_complete": false,
+  "preserved_untracked_historical_artifacts": true,
+  "scope": "Submission only; no scientific acceptance. Preserve separately completed candidatezero pilot and all numerical attempts."
+}
