@@ -130,7 +130,9 @@ products without a final delivery verdict.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
   Collect per-catalog receipts and numerical and recovery CSVs plus
-  the final report. Run `PYTHONPATH=src:scripts:.deps python3
+  the final report. Use `python3 scripts/v3_2_collect_radial_results.py
+  CATALOG ...` for batches of completed per-catalog outputs.
+  Run `PYTHONPATH=src:scripts:.deps python3
   scripts/v3_2_radial_report_audit.py` to reconcile all seven
   derived tables with the frozen design and individual results.
   Render the fixed-truth and prior-predictive coverage plates with

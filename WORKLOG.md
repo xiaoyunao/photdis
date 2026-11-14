@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify the radial result transfer against NERSC
+
+- Added the compact recovery collector. It verifies the frozen
+  photometry, truth and cache ancestry and both table digests before
+  writing. A different existing local receipt or table is rejected.
+- Re-collected the three completed pilots from NERSC and verified
+  they match the existing archive byte for byte. A tampered table
+  failed validation. Recovery array tasks remain queued.
+
 ## 2026-11-14 — independently verify opened evidence and all eight existing plates
 
 - Recomputed 144 paired score rows, 108 confusion cells, 360
