@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "scripts/v3_2_tilt_size_control.py": "dfc00e7e67c038ba94da9efce7fb950c127470b65f93b09a5db6ec633b9f282e",
+    "docs/v3_2_tilt_size_protocol.md": "db91d2fe67eff459c6c4c0c3fccf38638b564fa552a1321b8d660ba3887e8ef1",
+    "data/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+    "data/v3_2/tilt_predictions/size_control/complete.json": "5afb25e55cb1f038d2ec9501422aa7461e62c6f2a25227be8ea2712637e48057",
+    "data/v3_2/tilt_fits/size_control/broad_zero/complete.json": "a1c216eed24de17cee2c7f1291e00e98aa50fb5bf6a0a4d6ee8a29aefdde1f79",
+    "data/v3_2/tilt_fits/size_control/broad_free/complete.json": "989ef6a3cb108a2fcf6e0847c27b4919d4655e1e590d0e857e4a9dc8299f3b82"
+  },
+  "outputs": {
+    "paired.csv": "973a36b70366d1d9d4a18ac0149c72ea9baf696fd1e2c7447c09d569ee0d16e9"
+  },
+  "job": "61274146",
+  "sample_psf": 3540,
+  "seed": 320617,
+  "n": 526,
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "grid_flags": {
+    "broad_zero": 0,
+    "broad_free": 0
+  },
+  "sampler_passed": {
+    "broad_zero": true,
+    "broad_free": true
+  }
+}

@@ -25,8 +25,7 @@ Restoring tilt improves the candidate score by +0.7788 nat. The
 population-by-tilt interaction is +0.1583 nat [0.1066, 0.1963].
 At free tilt, candidate minus broad is −0.0611 nat [−0.2646, +0.0714].
 The population contrast at zero tilt combines sample composition, size and
-matched conditional selection. A size-matched broad control would be needed
-to identify a size effect. Tilt has a directly identified effect within
+matched conditional selection. Tilt has a directly identified effect within
 each fixed sample. [Paired contrasts](../manifests/v3_2/tilt_report/initial/factorial.csv) ·
 [Historical path](../manifests/v3_2/tilt_report/initial/historical_decomposition.csv)
 
@@ -36,6 +35,35 @@ changes are −0.0664 nat [−0.2669, +0.0661] and +0.1081 nat
 [+0.0471, +0.1939], respectively. The six-parameter historical correction
 and nominal response remain in the comparator table.
 [Historical controls](../manifests/v3_2/tilt_report/initial/historical_anchor.csv)
+
+## Size-matched broad control
+
+The same seeded 3,540-row broad draw covers all 13 fields in both
+fits. Both samplers passed. The prediction jobs exported both views
+for 526 opened PSFs with zero grid flags. On the 166 matched new-sky
+Gaia rows the two same-size candidate contrasts are negative.
+
+| Tilt | Paired contrast | Mean change (nat) | 95% sky-block interval |
+|---|---|---:|---:|
+| Zero | Broad 3,540 minus broad 26,000 | +0.4427 | [+0.2753, +0.5560] |
+| Zero | Candidate minus broad 3,540 | −0.6621 | [−0.7223, −0.4710] |
+| Free | Broad 3,540 minus broad 26,000 | +0.3799 | [+0.2134, +0.4937] |
+| Free | Candidate minus broad 3,540 | −0.4409 | [−0.5024, −0.2805] |
+
+The broad subsample improves the new-sky giant class log score by
+1.2544 nat at zero tilt and 1.0857 at free tilt. In the equal-size
+comparison, candidate lowers it by 0.4251 and 0.1768 nat, while
+raising qnear by 0.0683 and 0.0668. Among these 142 giants, the free
+tilt candidate minus broad 3,540 contrasts for conditional signed
+Gaia score and giant far mass have intervals that span zero. The
+size-matched loss accompanies a weaker giant allocation in this
+development cohort. A single broad draw measures one instance of
+downsampling. The equal-size comparison changes sample admission
+and its selection normalization together.
+
+[Registered draw and comparison](v3_2_tilt_size_protocol.md) ·
+[Sample identities and receipts](../manifests/v3_2/tilt_size_control/) ·
+[Paired results](../manifests/v3_2/tilt_size_control/comparison/paired.csv)
 
 ## Giant branch availability and probability
 

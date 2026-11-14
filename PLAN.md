@@ -56,8 +56,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   together. Register one broad sample of 3,540 PSFs and fit both tilt
   modes with the original broad normalization. See
   `docs/v3_2_tilt_size_protocol.md` for the draw and opened-only scoring.
-  Fit jobs 61274143/61274144 feed forecast 61274145 and paired
-  scoring 61274146. Authenticate both identical sample exports.
+  Fit jobs 61274143/61274144, forecast 61274145 and paired
+  scoring 61274146 completed. Both sample exports agree exactly.
+  See the equal-size contrasts in `docs/v3_2_factorial_result.md`.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See
@@ -165,6 +166,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   State 01 also closed on archived nodes. Two of its 512 Gaussian
   native log-response checks exceeded 0.02 nat and remain flagged.
   State 02 passed all 2,560 checks.
+  State 03 closed on archived nodes. One Gaussian grid check and all
+  512 independent-entry-seed absolute checks fail. Retain them for
+  the entry-axis comparison across states.
   The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run

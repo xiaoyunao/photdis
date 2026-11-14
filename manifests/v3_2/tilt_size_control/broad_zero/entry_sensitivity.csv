@@ -1,0 +1,3 @@
+level,maximum_tilt_delta,maximum_joint_basis_delta,maximum_expected_basis_count_delta,maximum_fixed_parameter_entry_delta,total_fixed_parameter_log_entry_delta
+0,0.0,4.660107684817394e-05,0.036729785320701924,3.176499785842446e-05,-0.23891040611444045
+2,0.0,4.4173566300376166e-05,0.04375617905224684,2.5869805272582536e-05,0.21040859885866525

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the equal-size control and NGC288 state 03
+
+- Authenticated both fit samples, forecast and 216 comparison rows from
+  jobs 61274143–61274146. Both samplers pass and both forecasts have zero
+  grid flags. In 166 new-sky Gaia pairs, candidate minus broad 3,540
+  gives −0.6621 nat at zero tilt and −0.4409 at free tilt.
+- Verified 2,560 NGC288 state-03 checks after 61271029 completed.
+  Archived closure passes. One Gaussian native and 512 independent
+  entry seed comparisons fail. Four of the 32 states are verified.
+
 ## 2026-11-14 — verify external support by class and distance
 
 - Reconciled 18 Gaia contrasts and five agreement counts with the
