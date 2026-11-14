@@ -1,7 +1,8 @@
 import pytest
 
 from v3_2_radial_report import (ROOT, count_loss_comparison, coverage, read_csv,
-                               shrinkage_summary, validate_interval, validate_numerical)
+                               empirical_penalty, shrinkage_summary, validate_interval,
+                               validate_numerical)
 
 
 def test_count_loss_uses_same_catalog_and_all_joint_bins():
@@ -71,3 +72,21 @@ def test_prior_shrinkage_preserves_pilot_denominators():
     assert len(covered) == 6
     assert all(r['n'] == 1 and r['registered'] == 8 for r in covered)
     assert all(r['mean_toward_anchor'] is None for r in summary if not r['n'])
+
+
+def test_empirical_penalty_pairs_context_repeats_with_source_specific_truth():
+    root = ROOT/'manifests/v3_2'
+    designs = read_csv(root/'radial_design/design.csv')
+    rows = [dict(r, catalog=128, accepted=True) for r in
+            read_csv(root/'radial_recovery/catalog_128/recovery.csv')]
+    paired, summary = empirical_penalty(designs, rows, [])
+    assert not paired and all(not r['n'] and r['registered'] == 8 for r in summary)
+    rows.append(dict(catalog=0, accepted=False, arm='local', metric='selected_members',
+                     median='10', truth='6', interval_length='20', covered95='True'))
+    paired, summary = empirical_penalty(designs, rows, [])
+    assert len(paired) == 1
+    assert paired[0]['absolute_error'] == 0
+    assert paired[0]['interval_length'] == 15
+    observed = [r for r in summary if r['n']]
+    assert len(observed) == 3
+    assert all(r['subset'] == 'both_fitted' and r['n'] == 1 and r['registered'] == 8 for r in observed)

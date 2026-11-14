@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — pair empirical and model SED recovery by context repeat
+
+- Added paired empirical-minus-model results to the radial report.
+  Each fixed-truth design cell retains its eight registered context
+  repeats. Local location, width, fraction and members use the
+  corresponding catalog truth. Each arm's joint count comparison uses
+  error normalized by catalog size and its mean interval length.
+- Report fitted and numerically accepted pairs separately and resample
+  whole context repeats. The pilot regression verifies source-specific
+  realized count truth and missing-model denominators.
+
 ## 2026-11-14 — quantify radial shrinkage against the frozen latent prior
 
 - The radial report now derives zero-latent location, width and pre-entry

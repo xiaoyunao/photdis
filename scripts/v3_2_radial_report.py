@@ -190,6 +190,68 @@ def shrinkage_summary(designs, rows):
     return catalog_rows, summary
 
 
+def empirical_penalty(designs, rows, count_rows):
+    """Pair fixed-truth model and empirical SEDs on identical context repeats."""
+    designs_by_cell = defaultdict(dict)
+    for d in designs:
+        if d['design'] == 'fixed':
+            key = d['background'], d['fraction'], d['width'], int(d['repeat'])
+            if d['source'] in designs_by_cell[key]:
+                raise ValueError(f'Duplicate fixed-truth SED source: {key}')
+            designs_by_cell[key][d['source']] = int(d['catalog'])
+    observations = defaultdict(dict)
+    for r in rows:
+        if r['arm'] == 'local' and not r['metric'].startswith('count_'):
+            observations[r['catalog'], r['metric']] = {
+                'absolute_error': abs(float(r['median'])-float(r['truth'])),
+                'interval_length': float(r['interval_length']),
+                'covered95': float(r['covered95'] == 'True'),
+                'accepted': r['accepted'],
+            }
+    for r in count_rows:
+        for arm in ('broad', 'local'):
+            observations[r['catalog'], f'{arm}_joint_counts'] = {
+                'normalized_l1': r[f'{arm}_count_l1'],
+                'mean_interval_length': r[f'{arm}_mean_interval'],
+                'accepted': r['both_accepted'],
+            }
+    paired, grouped = [], defaultdict(list)
+    metrics = ('mu_location', 'mu_width', 'pre_entry_fraction', 'selected_members',
+               'broad_joint_counts', 'local_joint_counts')
+    for (background, fraction, width, repeat), pair in sorted(designs_by_cell.items()):
+        if set(pair) != {'model', 'empirical'}:
+            raise ValueError('Each fixed-truth context repeat requires both SED sources')
+        model, empirical = pair['model'], pair['empirical']
+        for metric in metrics:
+            a = observations.get((model, metric))
+            b = observations.get((empirical, metric))
+            key = background, fraction, width, metric
+            if a is None or b is None:
+                grouped[key].append(None)
+                continue
+            row = dict(background=background, fraction=fraction, width=width, repeat=repeat,
+                       metric=metric, model_catalog=model, empirical_catalog=empirical,
+                       accepted=a['accepted'] and b['accepted'],
+                       **{k: b[k]-v for k, v in a.items() if k != 'accepted'})
+            paired.append(row)
+            grouped[key].append(row)
+    summary = []
+    for (background, fraction, width, metric), registered in grouped.items():
+        observed = [r for r in registered if r is not None]
+        quantities = (('normalized_l1', 'mean_interval_length') if metric.endswith('_joint_counts')
+                      else ('absolute_error', 'interval_length', 'covered95'))
+        for subset, selected in [('both_fitted', observed),
+                                 ('both_accepted', [r for r in observed if r['accepted']])]:
+            for quantity in quantities:
+                stats = paired_mean([r[quantity] for r in selected], np.ones(len(selected)),
+                                    [r['repeat'] for r in selected], seed=320511)
+                stats['repeats'] = stats.pop('cells')
+                summary.append(dict(background=background, fraction=fraction, width=width,
+                                    metric=metric, quantity=quantity, subset=subset,
+                                    registered=len(registered), **stats))
+    return paired, summary
+
+
 def main():
     require_compute()
     source = ROOT / 'data/v3_2/radial_design'
@@ -243,11 +305,14 @@ def main():
     summary = grouped_summary(designs, recovery)
     paired, paired_summary = count_loss_comparison(designs, recovery)
     shrinkage, shrinkage_grouped = shrinkage_summary(designs, recovery)
+    empirical, empirical_summary = empirical_penalty(designs, recovery, paired)
     output = ROOT / 'data/v3_2/radial_report'
     output.mkdir(parents=True, exist_ok=False)
     for name, rows in [('numerical', gates), ('recovery', recovery), ('coverage', summary),
                        ('paired_count_loss', paired), ('paired_count_summary', paired_summary),
-                       ('shrinkage', shrinkage), ('shrinkage_summary', shrinkage_grouped)]:
+                       ('shrinkage', shrinkage), ('shrinkage_summary', shrinkage_grouped),
+                       ('empirical_minus_model', empirical),
+                       ('empirical_minus_model_summary', empirical_summary)]:
         csv_rows(output / f'{name}.csv', rows)
     save_json(output / 'complete.json', dict(
         inputs=inputs, outputs={p.name: sha(p) for p in sorted(output.iterdir())},

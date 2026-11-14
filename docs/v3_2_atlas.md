@@ -69,3 +69,10 @@ In the first empirical pilot, the width median of 0.339 mag is
 0.081 mag closer to the 0.250 mag prior anchor than the 0.080 mag
 truth is. Its 95% interval still misses the simulated width.
 [Pilot recovery records](../manifests/v3_2/radial_recovery/catalog_128/recovery.csv)
+
+The radial report also compares empirical and model SED recovery within
+each fixed-truth cell on the same context repeats. It uses each mock's
+own realized truth for member counts and joint class-distance counts.
+The paired differences describe the change in absolute error, coverage
+and interval length under the two generators. Each comparison records
+the number of paired fits and the number of registered repeats.
