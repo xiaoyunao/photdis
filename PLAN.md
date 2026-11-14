@@ -13,7 +13,8 @@ Active goal follows the Pro review of 7699299. See
   flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shard 00 refinements pass 26/26. Array 61259727 follows 61259514 and
+  Shard 00 refinements pass 26/26. Array 61259727 uses aftercorr on
+  61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records

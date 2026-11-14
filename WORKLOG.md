@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — allow matching input and refinement shards to overlap
+
+- Confirmed 61259514_1 and _2 completed successfully and their frozen
+  inputs and initial flags were verified. The rest of 61259514 is queued.
+- Changed existing 61259727 from whole-array afterok to aftercorr on
+  61259514. Slurm discharged dependencies on refinement 01 and 02,
+  retaining the four-task cap and corresponding input checks for 03–31.
+- Confirmed 61259811 still waits for all 31 refinement tasks. No duplicate
+  computation or change to quadrature, cohorts, or acceptance criteria.
+
 ## 2026-11-14 — verify the first checkpointed production input shards
 
 - Slurm 61259514_1 and _2 completed 0:0 in 5m30s and 6m13s.
