@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance states 21 and 22
+
+- Slurm recorded 61277989 and 61277990 `COMPLETED 0:0`. Verified
+  the 512 PSF identities and all 2,560 check records for each state.
+  State 22 passed every check. State 21 retained 512 flags for the
+  previous entry level and passed the other four check types.
+- Staged delivery verifies 24 of 32 receipts. Joint quadrature and
+  its figure remain pending.
+
 ## 2026-11-15 — archive NGC288 distance state 20
 
 - Slurm recorded 61277988 `COMPLETED 0:0`. Verified the frozen
