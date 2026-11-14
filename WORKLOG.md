@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial recoveries 024–025 and their registered strata
+
+- Slurm 61266369_24 and _25 completed in 3m30s and 3m28s.
+  Both broad fits and all integration checks pass. Both local fits
+  fail the sampling gate, with Rhat 1.0519 and 1.0647. The compact
+  audit verifies 28 catalogs, 56 verdicts (40 accepted) and 1,120
+  intervals. Moved 026 and 027 to vacant debug slots.
+- The first three fixed model-SED strata at 10% member fraction
+  have all eight outputs apiece. Local fit acceptance is 5/8 and
+  2/8 at 0.08 mag for near and deep backgrounds and 4/8 at
+  0.25 mag for the near background. Width coverage among accepted
+  fits is 4/5, 1/2 and 4/4. The corresponding registered coverage
+  bounds are [4/8, 7/8], [1/8, 7/8] and [4/8, 8/8].
+- Slurm shows all 22 remaining NGC288 states pending priority
+  at the revised 32 GiB and 3-hour requests. Their joint report
+  still waits on the original array.
+
 ## 2026-11-14 — verify the NGC288 allocation trial and archive two radial recoveries
 
 - State 09 (61263907_9, raw 61275388) completed in 1h25m25s under
