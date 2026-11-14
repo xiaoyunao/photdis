@@ -1,0 +1,3 @@
+arm,sampler_pass,status,entry_pass,absolute_objective_pass,relative_objective_pass,max_rhat,min_ess,divergences,max_entry_curve_delta,integration_objective_shift_max,integration_relative_shift_span,maximum_expected_bin_count_delta,maximum_expected_member_count_delta,fixed_draw_count_pass
+broad,True,sampled,True,True,True,1.00150015041991,1466.9001976556947,0,0.0003469925866761425,0.0006135266574460729,0.001062473715762735,0.0003194678936040418,0.0,True
+local,True,sampled,True,True,True,1.0018569127048762,1903.6563356503843,0,0.0003469925866761425,0.000960610704339615,0.0010407128996803294,0.0037306613809091616,4.510941636226562e-05,True

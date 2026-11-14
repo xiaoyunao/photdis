@@ -1,0 +1,38 @@
+{
+  "catalog": 227,
+  "all_PSF": true,
+  "n": 128,
+  "inputs": {
+    "data/v3_2/radial_design/complete.json": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+    "data/v3_2/radial_design/photometry_227.npz": "bc788f971c6be71f522e12f833b09d806ad80a2aa949d25c92f137dee2cde9a8",
+    "data/v3_2/radial_design/truth_227.npz": "dd148df135535be33ba04f3f28a26f8d687afa0c9caa3f453aa8a549a5df50e4",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "scripts/v3_2_radial_recover.py": "da422be614071fe36b5f12d8a5de7a6a23f7ab8b5d2fe841b9cb884576b5c00d",
+    "scripts/v3_2_radial_checkpoint.py": "52bd398afb2c5945082934cf2f0e6537fddd1a40db8030f4e491cff51edba2b0",
+    "data/v3_2/radial_entry/repeat_03/complete.json": "3b9e06ca0a529e5d74c3560b33517522d459eebd9582c6abe4880e6706e980c4",
+    "src/photdis/v3_1/radial.py": "8a90eca430beeffb9666f4653b3fa2686ba58f95ba643b7aa932b5cd291f7d08",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3/population.py": "4025d3a15e5e11461985160b44fbc67e0a0562f86d20b034b485bf70cd778e48",
+    "src/photdis/v3/sampling.py": "408c8a9fb544bb9357e8eed07936b54d353e373a269a4462210ad54cdd3f35e8"
+  },
+  "outputs": {
+    "broad_chains.npz": "e4cc04ed94e8b329b162a7aa2bf56560d8ee3b14f7dd3d2777c39a101f44a310",
+    "broad_draws.npz": "13d1db160f8c90287dd6b5fd1e5da1ed582d46bbe7d37a036778972c20d82505",
+    "broad_map.joblib": "e9c95d8f25392fc9aa12e49ee095f440ab6e1b3339d16c7b4cab7ffce46c318b",
+    "curves.npz": "74155682003d2d5b41998d97ead2817f792c5fc131130503ce4b538e698baf40",
+    "local_chains.npz": "9c91d0a9f90ffa4ddf56a291487aad497611dbe112b04eb09991fbbd25c2d5e6",
+    "local_draws.npz": "f6ad1093b37cc56e4bc8ec05e6775a32ff7bef6f4992c6d0cf4c11334181bb60",
+    "local_map.joblib": "0e000d56bdfc0b048404807929ec5da318d5303613e7a41e0b0b2cc255c5f552",
+    "numerical.csv": "ae6458267cc8ba12f13d210e355d6db71e5ec44a9f7b5df42805a699e58b6252",
+    "recovery.csv": "4a1c068fe1a3141c417b2610ca17caf00934b6629dcabdf4d1a00c3a330a0443"
+  },
+  "job": "61275170",
+  "fitted_arms": [
+    "broad",
+    "local"
+  ],
+  "row_checkpoint_sha256": "ebaeb927304f1d41453c6a32058e5e387ce4c8ea331ce69b0f0c527154d45a64",
+  "scope": "Fixed-context synthetic recovery; sampler and numerical flags retained."
+}
