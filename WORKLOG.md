@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify frozen truth at radial aggregation
+
+- The report checks each recovery against the frozen photometry and truth
+  file digests, verifies the local truth values against the registered design,
+  and reconciles the joint count truth within and across fitted arms.
+- Compilation, diff checks and five targeted tests pass. The actual
+  empirical pilot passes truth reconciliation. The regression rejects a
+  changed width and an inconsistent catalog count.
+
 ## 2026-11-14 — pair empirical and model SED recovery by context repeat
 
 - Added paired empirical-minus-model results to the radial report.

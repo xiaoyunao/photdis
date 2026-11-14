@@ -2,7 +2,7 @@ import pytest
 
 from v3_2_radial_report import (ROOT, count_loss_comparison, coverage, read_csv,
                                empirical_penalty, shrinkage_summary, validate_interval,
-                               validate_numerical)
+                               validate_numerical, validate_truth)
 
 
 def test_count_loss_uses_same_catalog_and_all_joint_bins():
@@ -56,6 +56,13 @@ def test_empirical_pilot_recovery_verdicts_and_intervals():
     assert width['covered95'] == 'False'
     with pytest.raises(ValueError, match='Invalid recovery interval'):
         validate_interval(dict(width, covered95='True'))
+
+    design = read_csv(ROOT/'manifests/v3_2/radial_design/design.csv')[128]
+    validate_truth(rows, design)
+    with pytest.raises(ValueError, match='Recovery truth differs'):
+        validate_truth(rows, dict(design, width='0.25'))
+    with pytest.raises(ValueError, match='Joint count truth differs'):
+        validate_truth(rows, dict(design, n='129'))
 
 
 def test_prior_shrinkage_preserves_pilot_denominators():

@@ -59,6 +59,28 @@ def validate_interval(row):
         raise ValueError(f"Invalid recovery interval: {row['arm']}/{row['metric']}")
 
 
+def validate_truth(rows, design):
+    truth_fields = {
+        'mu_location': 'true_location',
+        'mu_width': 'width',
+        'pre_entry_fraction': 'fraction',
+        'selected_members': 'selected_members',
+    }
+    count_truth = defaultdict(dict)
+    for row in rows:
+        metric, truth = row['metric'], float(row['truth'])
+        if metric.startswith('count_'):
+            if truth < 0 or not truth.is_integer():
+                raise ValueError('Count truth must be a nonnegative integer')
+            count_truth[row['arm']][metric] = truth
+        elif not math.isclose(truth, float(design[truth_fields[metric]]),
+                              rel_tol=1e-12, abs_tol=1e-12):
+            raise ValueError(f"Recovery truth differs from design: {design['catalog']}/{metric}")
+    if (any(sum(counts.values()) != int(design['n']) for counts in count_truth.values())
+            or len(count_truth) == 2 and count_truth['broad'] != count_truth['local']):
+        raise ValueError(f"Joint count truth differs from admitted catalog: {design['catalog']}")
+
+
 def coverage(rows, total):
     errors = np.array([float(r['median']) - float(r['truth']) for r in rows])
     k = sum(r['covered95'] == 'True' for r in rows)
@@ -259,7 +281,8 @@ def main():
     design = json.loads(marker.read_text())
     table = verified(source / 'design.csv', design['outputs']['design.csv'])
     designs = read_csv(table)
-    if len(designs) != 288 or sorted(int(d['catalog']) for d in designs) != list(range(288)):
+    if (design['all_PSF'] is not True or design['n_catalogs'] != 288
+            or sorted(int(d['catalog']) for d in designs) != list(range(288))):
         raise ValueError('Incomplete frozen design')
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in
               (marker, table, Path(__file__).resolve(), ROOT/'src/photdis/v3_1/comparison.py',
@@ -274,6 +297,10 @@ def main():
             raise ValueError(f'Unexpected catalog identity: {catalog}')
         if result['inputs'][str(marker.relative_to(ROOT))] != inputs[str(marker.relative_to(ROOT))]:
             raise ValueError(f'Design mismatch: {catalog}')
+        for kind in ('photometry', 'truth'):
+            name = f'{kind}_{catalog:03}.npz'
+            if result['inputs'][str((source/name).relative_to(ROOT))] != design['outputs'][name]:
+                raise ValueError(f'Frozen {kind} digest mismatch: {catalog}')
         inputs[str(path.relative_to(ROOT))] = sha(path)
         status = read_csv(verified(folder / 'numerical.csv', result['outputs']['numerical.csv']))
         accepted = {}
@@ -302,6 +329,7 @@ def main():
                                                       'pre_entry_fraction', 'selected_members')}
         if seen != expected or fitted != set(result['fitted_arms']):
             raise ValueError(f'Incomplete fitted recovery records: {catalog}')
+        validate_truth([r for r in rows if 'arm' in r], d)
     summary = grouped_summary(designs, recovery)
     paired, paired_summary = count_loss_comparison(designs, recovery)
     shrinkage, shrinkage_grouped = shrinkage_summary(designs, recovery)
