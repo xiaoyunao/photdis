@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial catalogs 028–029 and test CPU shared scheduling
+
+- Slurm 61266369_28 and _29 completed in 3m21s and 3m25s.
+  Both broad arms and all integration checks pass. Both local arms
+  fail sampling (ESS 6.06 and 6.77). Stage delivery passed with 32
+  archived catalogs, 64 verdicts (44 accepted) and 1,280 intervals.
+- Moved 030 and 031 to vacant debug slots. Tested CPU shared QoS
+  on existing zero-runtime NGC288 state 10 and radial catalog 032.
+  The first command specifying both partition and QoS was rejected
+  by the scheduler policy. Updating QoS alone selected the expected
+  CPU shared partition. Readback confirms both requested resource
+  sets and the original dependent jobs. Both trials remain pending.
+
 ## 2026-11-14 — recompute completed radial strata in stage delivery
 
 - The compact audit now reports local coverage for complete strata,

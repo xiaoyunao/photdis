@@ -137,10 +137,11 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Thirty of 288 catalogs have verified compact outputs. Catalogs
+  Thirty-two of 288 catalogs have verified compact outputs. Catalogs
   004–008, 011, 016 and 020–022 pass in both arms. Local fits in 009,
-  010, 012–015, 017–019 and 023–027 fail sampling and pass integration.
-  Catalogs 028 and 029 moved to the vacant debug slots under the original array.
+  010, 012–015, 017–019 and 023–029 fail sampling and pass integration.
+  Catalogs 030 and 031 moved to debug and catalog 032 moved to
+  CPU shared QoS as a scheduling trial within the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -234,6 +235,8 @@ catalogs archived.
   Gaussian native flag (0.0404 nat absolute). Applied the tested
   memory and walltime to the 22 pending states, with the original
   array and the joint report dependency verified in Slurm.
+  State 10 moved to CPU shared QoS as a scheduling trial with
+  the same resource request and original task ID.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
