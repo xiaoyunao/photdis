@@ -195,6 +195,8 @@ and external findings and identifies the two pending application results.
   Collect the joint receipt, five CSV tables and branch comparison
   JSON. Run `python3 scripts/v3_2_structure_joint_audit.py` after the
   32 input receipts and joint tables are available.
+  Render the paired membership and covariance comparison with
+  `python3 scripts/v3_2_structure_joint_figure.py`.
 
 ## v3.1 — completed research delivery
 

@@ -8,6 +8,10 @@
 - Rendered and visually inspected temporary previews using the
   three real pilot catalogs and the registered design. The production
   figures require the final 288-catalog receipt.
+- Added the NGC288 membership and covariance comparison renderer
+  behind the joint audit. Inspected a layout preview using the
+  archived v3.1 membership and variance tables. The v3.2 figure
+  remains pending and will display the resulting quadrature verdict.
 
 ## 2026-11-14 — archive two radial caches and NGC288 state 04
 
