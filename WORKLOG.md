@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — bind the parent reference limit to the delivery audit
+
+- Added validation of the frozen parent receipt, three native
+  admissions, the declared selection/photometry digests and the
+  three zero-overlap rows to the external audit.
+- The completed-only delivery audit passed. A negative test
+  rejected a changed overlap even after updating the table hash.
+
 ## 2026-11-14 — verify recovery catalogs 002 and 003
 
 - Catalog 002 completed in debug in 3m30s and catalog 003 completed

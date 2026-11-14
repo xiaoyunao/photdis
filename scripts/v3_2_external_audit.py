@@ -12,6 +12,60 @@ BASE = Path('manifests/v3_2')
 VIEWS = {'candidate', 'qrf', 'nominal_reference', 'old_target'}
 
 
+def audit_parent_support(root=ROOT):
+    folder = BASE / 'parent_reference_support'
+    path = folder / 'complete.json'
+    raw = (root / path).read_bytes()
+    receipt = json.loads(raw)
+    if receipt['all_PSF'] is not True or receipt['new_outcomes_read'] is not False:
+        raise ValueError('Invalid parent-reference audit scope')
+
+    def source(name, remote, payload=None):
+        content = (root / name).read_bytes()
+        inputs = receipt['inputs']
+        checksum = sha256(content).hexdigest()
+        if inputs[name] != checksum or inputs[remote] != checksum:
+            raise ValueError(f'Invalid parent-audit input: {name}')
+        record = json.loads(content)
+        if payload and inputs[f'{remote.rsplit("/", 1)[0]}/{payload}'] != record['outputs'][payload]:
+            raise ValueError(f'Invalid parent-audit payload binding: {payload}')
+        return record
+
+    for name in ('scripts/v3_2_parent_reference_audit.py', 'scripts/v3_2_reference_freeze.py'):
+        if sha256((root / name).read_bytes()).hexdigest() != receipt['inputs'][name]:
+            raise ValueError(f'Changed parent-audit source: {name}')
+    frame = source('manifests/v3_1/highq_counts/complete.json',
+                   'data/v3_1/highq_counts/complete.json', 'selection.npz')
+    if frame['all_PSF'] is not True or (frame['parent_n'], frame['n']) != (3540, 3003):
+        raise ValueError('Wrong frozen parent census')
+    expected = {}
+    for role, native, field in (('DR19_Astra', 'reference_native', 'admitted'),
+                                ('DR20_LCO', 'minesweeper_native', 'admitted'),
+                                ('HST_common', 'common_scale_inventory', 'admitted_members')):
+        record = source(str(BASE / native / 'complete.json'), f'data/v3_2/{native}/complete.json',
+                        None if role == 'DR19_Astra' else 'photometry.npz')
+        if record['all_admitted_PSF'] is not True:
+            raise ValueError(f'Unverified parent-audit reference cohort: {role}')
+        expected[role] = record[field]
+    if expected != {'DR19_Astra': 0, 'DR20_LCO': 1117, 'HST_common': 103}:
+        raise ValueError('Changed native reference census')
+
+    table = (root / folder / 'overlap.csv').read_bytes()
+    if sha256(table).hexdigest() != receipt['outputs']['overlap.csv']:
+        raise ValueError('Invalid parent-audit table digest')
+    rows = list(csv.DictReader(table.decode().splitlines()))
+    if len(rows) != len(expected) or {r['cohort'] for r in rows} != expected.keys():
+        raise ValueError('Wrong overlap table cohort inventory')
+    for row in rows:
+        n, high, total, match, high_match = map(int, (row[k] for k in (
+            'parent_n', 'high_q_n', 'admitted_reference_n', 'parent_overlap', 'high_q_overlap')))
+        if (n, high, total, match, high_match) != (frame['parent_n'], frame['n'], expected[row['cohort']], 0, 0):
+            raise ValueError(f'Overlap evidence differs from reported scope: {row["cohort"]}')
+    return dict(job=receipt['job'], receipt_sha256=sha256(raw).hexdigest(),
+                parent=frame['parent_n'], high_q=frame['n'], admitted=expected,
+                parent_overlap=0, high_q_overlap=0)
+
+
 def audit(root=ROOT):
     sources = {}
     checks = []
@@ -161,7 +215,8 @@ def audit(root=ROOT):
         scopes[role] = dict(n=n, admitted=admitted, numerical_flags={k: n-v for k, v in sorted(view_pass.items())},
                             freeze_job=freeze['job'], remote_payloads_declared=len(remote_only))
 
-    return dict(passed=True, checks=len(checks), scopes=scopes, sources=sources,
+    return dict(passed=True, checks=len(checks), scopes=scopes,
+                parent_reference_support=audit_parent_support(root), sources=sources,
                 scope='Archived receipts and compact tables. Remote payload digests are bound by the '
                       'compute-step freeze. This local audit does not reread remote arrays or reference outcomes.')
 
