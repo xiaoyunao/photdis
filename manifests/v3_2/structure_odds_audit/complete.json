@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "data/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+    "scripts/v3_2_structure_odds_audit.py": "7a8e7f02085e19dc95eec6411f9ae024c4a9bc9b37d28c4e5d5f1cbe6021a7ea",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/structure_posterior.py": "0416c47799875844b8277b5e4983f31382a8772d65cc83f7f33dfda56273a4f0",
+    "scripts/v3_1_structure_infer.py": "a78e9a644edd931317acfb8b8bbb512193b4746843fdb0d41594dd328b1db4f7"
+  },
+  "outputs": {
+    "checks.csv": "24dd750a0a2af8126b087d65d3acdf9b26eff4e0040aa086d454ec8adfd9c234",
+    "full_1024.npz": "ce37177014a455146a8fabc249529ecb41fa30ba09b8d6c8d1951df9fb1afd23",
+    "full_256.npz": "43ef3e0196c264c4644b9f7a9b0a43462f072072ddfc0180e4a37b679945fefe",
+    "full_512.npz": "ef497d806965630b1212fde6fbca269fc0e3e7e3ab6f735c9d3baf870b3394d6",
+    "gaussian_1024.npz": "729dd1c21d6a536507eae15b444db98831c079abdf319f9c3d31062a025aa46b",
+    "gaussian_256.npz": "960d6354908063c2318f56332c4a20459c21f5608b45454c7f5685453a13eb4a",
+    "gaussian_512.npz": "fc54c94a821b13af61692608b6787b1ec41fc7326cf6ce21f40b2d3f93f8e651"
+  },
+  "all_PSF": true,
+  "job": "61259650",
+  "n": 512,
+  "responses": 32,
+  "scope": "Odds axis only on frozen 64-point distance grid. Joint quadrature not certified."
+}

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — verify tilt shard 03 and the NGC288 odds-axis result
+
+- Slurm 61259514_3 completed 0:0 in 5m42s. Authenticated its source
+  and check table with 813 PSFs, 107 candidate objects, 920 contexts
+  and 22 initial candidate entry flags. Shards 00–03 have 3252 unique
+  PSFs, 448 candidate objects and 94 initial flags. Shards 01–03 retain
+  68 flags for the registered refinement array.
+- Slurm 61259650 completed 0:0 in 6m50s. Authenticated its four
+  fixed-distance check rows and source hashes. Both likelihoods pass
+  odds order 512 to 1024 and fail 256 to 512. The added-distance pilot
+  supplies the next evidence for the joint comparison.
+
 ## 2026-11-14 — index the v3.2 requirements and evidence
 
 - Added `docs/v3_2_requirements_result.md` and linked it from the plan.

@@ -9,8 +9,8 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first three shards (00–02) are complete and verified. Array 61259514
-  has 29 further shards queued. Shards 01/02 have 46 candidate entry
+  first four shards (00–03) are complete and verified. Array 61259514
+  has 28 further shards pending. Shards 01–03 have 68 candidate entry
   flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
@@ -57,8 +57,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
-  worst bin). NGC288 odds test 61259650 uses fixed
-  distance order 64. Added-distance native and entry pilot 61260630 follows
+  worst bin). NGC288 odds test 61259650 completed at fixed distance order
+  64. Both branches pass 512 to 1024 and retain failures at 256 to 512.
+  Added-distance native and entry pilot 61260630 follows
   `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
   The two-axis evaluator is ready for the authenticated 32-state products.
 

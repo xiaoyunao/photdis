@@ -36,3 +36,19 @@ the independent entry seed and the lower entry quadrature at 256 × 1024.
 The preparation, axis, native and entry flags remain separately inspectable.
 Report common-distance quantiles, response ESS, membership probability
 and shared/conditional count covariance for both likelihood branches.
+
+## Fixed-distance odds result
+
+Job 61259650 completed on 512 PSFs and all 32 response states with 64
+distance nodes. Increasing the odds order from 256 to 512 failed the
+membership and mean-count checks in both branches. At 1024 versus 512,
+both branches pass the registered fixed-distance comparison.
+
+| Likelihood | Maximum membership change | Absolute mean-count change | Common modulus quantile change (mag) | Log evidence change (nat) |
+|---|---:|---:|---:|---:|
+| Full | 0.002786 | 0.0951 | 0 | −0.009020 |
+| Gaussian | 0.002333 | 0.0763 | 0 | +0.009074 |
+
+The member means at odds order 1024 are 121.335 and 127.817, respectively.
+Distance-axis and joint certification still require the added-distance
+responses and selection integrals. [Both transitions and receipt](../manifests/v3_2/structure_odds_audit/)
