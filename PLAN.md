@@ -117,8 +117,8 @@ products without a final delivery verdict.
   Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
   retaining its original array membership.
   Cached recovery 61266369 covers 285 nonpilot catalogs with at most
-  eight concurrent tasks. The 279 tasks mapped to authenticated caches
-  00–25 are eligible to run. The remaining six retain the full-cache
+  eight concurrent tasks. The 281 tasks mapped to authenticated caches
+  00–27 are eligible to run. The remaining four retain the full-cache
   dependency until their own caches are verified.
   Recovery catalog 1 (61274913) requests 8 GiB in place of Slurm's
   inherited full-node memory. Two cached pilots peaked near 2 GiB.
@@ -126,8 +126,8 @@ products without a final delivery verdict.
   tasks. This does not change catalog inputs or the sampler.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–25 are verified with `scripts/v3_2_radial_cache_audit.py`.
-  Repeats 22–25 completed in debug. Repeats 26 and 27 moved to
+  Cache receipts 00–27 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Repeats 22–27 completed in debug. Repeats 28 and 29 moved to
   debug QoS with 30-minute limits.
   Report 61266374 keeps its original afterok on the full recovery array.
   Run it with `--complete` once all 32 compact receipts are collected.
@@ -177,6 +177,9 @@ products without a final delivery verdict.
   point runs freeze, evidence access and scoring in that order.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
+  Job 61275998 checks exact reference identity coverage against the
+  frozen 3,540-object application frame and 3,003 high-q subset.
+  This audit only reads native identity payloads and archived selection.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
   in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 completed.
   Each of the three controls passes its forecast numerical checks on
@@ -200,7 +203,7 @@ products without a final delivery verdict.
   the entry-axis comparison across states.
   State 04 passed all 2,560 checks.
   State 05 passed all 2,560 checks in 1h25m40s.
-  Pending state 09 (61275388) requests 32 GiB with a 3-hour limit.
+  State 09 (61275388) started with 32 GiB and a 3-hour limit.
   State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
   before using this resource request on more states.
   The two-axis evaluator

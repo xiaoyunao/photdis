@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify caches 26 and 27 and start the allocation probes
+
+- Repeats 26 and 27 completed 0:0 in 14m37s and 13m55s.
+  Verified 28 caches and 3,584 contexts. Recovery jobs 282 and 283
+  cleared their dependency. Repeats 28 and 29 moved to debug.
+- The 8 GiB recovery catalog 1 and 32 GiB NGC288 state 09 started.
+  Catalog 1 verified all 128 row checkpoints before its fits.
+- Submitted parent-reference identity audit 61275998. It checks
+  the frozen application frame against the three native cohorts
+  using IDs and PSF morphology, with no new reference outcomes.
+
 ## 2026-11-14 — archive NGC288 state 05
 
 - Slurm 61263907_5 (raw 61272557) completed 0:0 in 1h25m40s.
