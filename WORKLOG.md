@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — inventory additional common-distance systems
+
+- v3.1 admitted one system (NGC1261); NGC1851 and NGC7492 failed native
+  photometric entry. Registered a metadata-only screen of 21 systems
+  listing HST kinematic distances (no scale values exported).
+- The screen selects 47 Tuc and NGC362 for exact native DR11 identity
+  joins. Exclude whole systems with historical membership, imaging or
+  footprint overlap. Preserve all PSF/selection and zero-admission counts.
+- Confirmed the 21 catalog method entries and the two candidates locally.
+  Actual admitted support awaits the allocated native join.
+
 ## 2026-11-14 — bind historical regression attribution to common objects
 
 - Added historical-gap attribution to the queued 2x2 report. Sum the

@@ -39,6 +39,9 @@ Active goal follows the Pro review of 7699299. See
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
   The frozen nominal, historical target and QRF forecasts (61261381)
   follow native admission. Candidate forecast awaits the mechanism decision.
+- Inventory new common-distance HST methods. Metadata enables targeted
+  native PSF and historical overlap checks on 47 Tuc and NGC362.
+  Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 uses fixed
