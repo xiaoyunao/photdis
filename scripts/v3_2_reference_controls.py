@@ -25,7 +25,7 @@ from v2_1_near import ROOT, atomic_npz, load, save_json, sha
 from v3_0_response import observation
 from v3_1_luminosity_guard import predict
 from v3_1_validation_predict import class_loglike
-from v3_2_reference_freeze import COMMON_ROLE, IDENTITY, ROLE, require_native
+from v3_2_reference_freeze import COMMON_ROLE, IDENTITY, MINESWEEPER_ROLE, ROLE, require_native
 from v3_2_tilt_inputs import verified
 
 _STATE = None
@@ -114,11 +114,15 @@ def main():
     global _STATE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--workers', type=int, choices=range(1, 33), default=16)
-    parser.add_argument('--common', action='store_true', help='Use the outcome-closed common-system census')
+    cohort = parser.add_mutually_exclusive_group()
+    cohort.add_argument('--common', action='store_true', help='Use the outcome-closed common-system census')
+    cohort.add_argument('--minesweeper', action='store_true', help='Use the closed DR20 field census')
     args = parser.parse_args()
     require_compute()
     root = ROOT/'data/v3_2'
-    native_name = 'common_scale_inventory' if args.common else 'reference_native'
+    native_name, prefix, role = ('common_scale_inventory', 'common_scale', COMMON_ROLE) if args.common else (
+        ('minesweeper_native', 'minesweeper', MINESWEEPER_ROLE) if args.minesweeper else
+        ('reference_native', 'reference', ROLE))
     native = root/native_name/'complete.json'
     census = json.loads(native.read_text())
     closed = (census.get('scale_values_exported') is False and census.get('predictions_read') is False
@@ -128,6 +132,8 @@ def main():
     photo_path = verified(native.parent/'photometry.npz', census['outputs']['photometry.npz'])
     photo = load(photo_path)
     require_native(photo)
+    if args.minesweeper and len(photo['identity']) != census['admitted']:
+        raise ValueError('DR20 photometry differs from the native census')
     if args.common and (len(photo['identity']) != census['admitted_members']
                         or len(np.unique(photo['scale_system'])) != census['admitted_systems']):
         raise ValueError('Common-system photometry differs from the native census')
@@ -172,7 +178,7 @@ def main():
     grids = [np.unique(np.r_[np.linspace(-20., 50., n), DISTANCE_MU_BOUNDARIES])
              for n in (3501, 7001)]
     _STATE = photo, nominal, response, cal, grids, fields, theta, beta, chain['weights']
-    destination = root/('common_scale_controls' if args.common else 'reference_controls')
+    destination = root/f'{prefix}_controls'
     if destination.exists():
         raise FileExistsError(destination)
     with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as workers:
@@ -203,7 +209,7 @@ def main():
                 'src/photdis/v3/controls.py', 'src/photdis/baseline_v0.py',
                 'src/photdis/baseline_v1.py', 'src/photdis/v3/inference.py',
                 'src/photdis/v3/systematics.py', 'src/photdis/v3/hierarchy.py')]
-    save_json(destination/'complete.json', dict(cohort=COMMON_ROLE if args.common else ROLE,
+    save_json(destination/'complete.json', dict(cohort=role,
               n=len(photo['identity']), all_PSF=True,
               references_read=False, pilot=False, photometry_sha256=sha(photo_path), views=exports,
               candidate_admission=admission_export,

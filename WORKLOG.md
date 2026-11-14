@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — connect the DR20 cohort to frozen comparator forecasts
+
+- Added the separate DR20 field role to the existing controls and
+  forecast assembly. Both use the DR20-native photometry and preserve
+  its own admission mask and output namespace.
+- Python compilation, CLI help and 16 v3.2 tests passed. Native match
+  61267848 was running. The comparator awaits its verified admission.
+
 ## 2026-11-14 — verify DR20 census and submit native admission
 
 - Job 61267684 completed 0:0. Verified the archive and compact table

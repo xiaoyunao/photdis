@@ -16,6 +16,7 @@ from v3_2_reference_inventory import ARCHIVES
 VIEWS = ('candidate', 'qrf', 'nominal_reference', 'old_target')
 IDENTITY = ('identity', 'ls_id', 'TYPE')
 ROLE = 'new_dr19_new_sky_field'
+MINESWEEPER_ROLE = 'new_dr20_lco_new_sky_field'
 COMMON_ROLE = 'new_hst_kinematic_system'
 
 
