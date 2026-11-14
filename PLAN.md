@@ -45,6 +45,8 @@ Active goal follows the Pro review of 7699299. See
   for all native PSFs. Report paired and absolute metrics inside the
   candidate gate and across the complete native reference cohort.
   Candidate forecast awaits the mechanism decision.
+  After the forecasts are assembled, the final evaluation Slurm entry
+  point runs freeze, evidence access and scoring in that order.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Metadata enables targeted

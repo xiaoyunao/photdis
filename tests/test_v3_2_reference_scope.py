@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from v3_2_reference_freeze import VIEWS, read_admission
-from v3_2_reference_score import summarize
+from v3_2_reference_score import score_one, summarize
 
 
 def test_frozen_admission_checks_identity_order_and_count(tmp_path):
@@ -48,3 +48,16 @@ def test_metrics_and_pairs_use_candidate_admission_within_reference_groups():
         ('matched_candidate_admission', False): (1, 0.),
         ('matched_candidate_admission', True): (1, 0.),
     }
+
+
+def test_gaia_pit_tails_use_signed_observations_and_keep_missing_channels():
+    data = dict(numerical_pass=[True], mu_quantiles=np.array([[9.1, 9.3, 10., 10.7, 10.9]]),
+                mu_edges=np.array([[9., 10., 11.]]), mass=np.array([[.5, .5]]))
+    evidence = dict(parallax_eligible=True, distance_available=False, distance_precise=False,
+                    p_corr=-.5, gaia_parallax_error=.1)
+    low = score_one('qrf', data, 0, evidence)
+    assert low['gaia_pit_low'] and not low['gaia_pit_high']
+    high = score_one('qrf', data, 0, dict(evidence, p_corr=2.))
+    assert high['gaia_pit_high'] and not high['gaia_pit_low']
+    missing = score_one('qrf', data, 0, dict(evidence, parallax_eligible=False))
+    assert 'gaia_pit_low' not in missing and 'gaia_pit_high' not in missing

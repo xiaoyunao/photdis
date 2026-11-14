@@ -70,6 +70,11 @@ def score_one(view, data, i, e):
                          class_score_stable=stable['class'])
     value.update(numerical_pass=status, prediction_available=True, median_mu=float(q[2]),
                  high_qnear=bool(value['qnear'] > .95))
+    if 'gaia_pit' in value:
+        pit = value['gaia_pit']
+        if not np.isfinite(pit):
+            raise ValueError('Finite signed Gaia PIT required')
+        value.update(gaia_pit_low=pit < .025, gaia_pit_high=pit > .975)
     if view == 'qrf':
         value['in_qrf_support'] = bool(data['in_qrf_support'][i]) if 'in_qrf_support' in data else None
     if e['distance_precise']:
@@ -91,19 +96,21 @@ def summarize(rows, evidence, candidate_admitted):
     groups = {'all': np.ones(len(d), bool), 'qualified_teacher': precise,
               'giant': label == 1, 'dwarf': label == 0,
               'metal_poor_giant': (label == 1) & evidence['feh_valid'] & (evidence['feh'] < -1.5)}
-    for lo, hi in ((0, 2), (2, 5), (5, 10), (10, 20), (20, 50)):
+    for lo, hi in ((0, 2), (2, 5), (5, 10), (10, 20), (20, 50), (50, np.inf)):
         use = precise & (d >= lo) & (d < hi)
         for group in ('all', 'giant', 'metal_poor_giant'):
             groups[f'{group}_{lo}_{hi}_teacher_kpc'] = use & groups[group]
     scopes = {'native_photometric': groups['all'], 'matched_candidate_admission': candidate_admitted}
     scoped_groups = {(scope, group): base & mask for scope, base in scopes.items()
                      for group, mask in groups.items()}
-    metrics = {'gaia_log_score': 'gaia_score_stable', 'teacher_log_score': 'teacher_score_stable',
+    metrics = {'gaia_log_score': 'gaia_score_stable', 'gaia_pit_low': 'gaia_score_stable',
+               'gaia_pit_high': 'gaia_score_stable', 'teacher_log_score': 'teacher_score_stable',
                'class_log_score': 'class_score_stable', 'class_brier': 'class_score_stable',
                'class_correct': 'class_score_stable', 'p_giant': None,
                'mu_residual': 'teacher_score_stable', 'severe': 'teacher_score_stable',
                'reference_agreement68': 'teacher_score_stable', 'reference_agreement95': 'teacher_score_stable',
-               'width68': None, 'width95': None, 'teacher_near_brier': 'teacher_score_stable',
+               'width68': None, 'width95': None, 'qnear': None, 'high_qnear': None,
+               'teacher_near_brier': 'teacher_score_stable',
                'teacher_near_probability_error': 'teacher_score_stable',
                'teacher_far_given_high_q': 'teacher_score_stable',
                'high_q_given_teacher_near': 'teacher_score_stable'}

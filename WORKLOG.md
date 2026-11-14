@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — prepare the allocated DR19 final evaluation entry point
+
+- Added the Slurm entry point that freezes all forecasts, releases the
+  bound evidence and runs the hashed scorer in order. Submission awaits
+  the completed opened-domain decision and the candidate forecast.
+- Scoring now retains both signed Gaia PIT tails and high-q fractions
+  by admission and includes the 50 kpc and beyond teacher stratum.
+- Local full suite initially hit a scikit-learn KMeans segmentation
+  fault. With OpenMP, BLAS and MKL limited to one thread, all 450 tests
+  pass. Shell syntax, Python compilation and diff checks pass.
+
 ## 2026-11-14 — freeze the matched candidate gate for DR19 scoring
 
 - Reused the registered observed-r, grz-error and QRF support gate in the

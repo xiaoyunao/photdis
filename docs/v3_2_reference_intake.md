@@ -95,3 +95,11 @@ the same outcome qualifications. Export gate membership per object.
 Targeted spectroscopy has unknown inclusion probabilities within the
 candidate parent. Its high-q teacher-far fraction applies to the
 qualified DR19 reference subset.
+
+After assembling the complete outcome-closed forecast, submit
+`sbatch scripts/run_v3_2_reference_final.sh PATH_TO_EVALUATED_DECISION`
+from the canonical checkout. The allocated job verifies and writes the
+freeze, opens the bound evidence, then runs the registered scorer.
+In each admission scope, retain low/high signed Gaia PIT tail rates,
+qnear and high-q fractions, and the reference-qualified distance
+strata through and beyond 50 kpc.
