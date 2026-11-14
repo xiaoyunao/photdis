@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — open three more slots for NGC288
+
+- Slurm confirmed starts for states 21 and 22 (raw jobs 61277989
+  and 61277990). Nine tasks were running with eight held at
+  JobArrayTaskLimit. Raised the array 61263907 throttle from 9 to 12.
+- Slurm cleared JobArrayTaskLimit and retained the full-array afterok
+  dependency for job 61263908. States 15 and 31 had checkpointed
+  288 of 512 rows each. Fifteen completed receipts remain archived.
+
 ## 2026-11-15 — verify the registered equal-size control in delivery
 
 - Added the broad sample and comparison checks to
