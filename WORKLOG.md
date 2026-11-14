@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify the frozen NGC288 odds-axis evidence
+
+- Added fixed-distance odds reconciliation to the staged and final
+  delivery audits. Authenticated the parent, producer and archived
+  checks, then recomputed all four registered verdicts. Both likelihoods
+  fail the 256-to-512 step and pass the 512-to-1024 step at distance
+  order 64.
+- Syntax checks and staged delivery pass. An injected pass flag for
+  the failed full-likelihood comparison was rejected. Ten distance
+  states are running and the joint reduction is still queued.
+
 ## 2026-11-15 — verify the archived conditional count decomposition
 
 - Added a compact audit in `scripts/v3_2_opened_audit.py` and ran it

@@ -5,7 +5,7 @@ import json
 from math import isclose, isfinite
 from pathlib import Path
 
-from v3_2_structure_distance_audit import audit as distance_audit, digest
+from v3_2_structure_distance_audit import audit as distance_audit, digest, frozen_parent
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'manifests/v3_2/structure_joint'
@@ -53,6 +53,37 @@ def close(left, right):
 
 def quantile_shift(left, right):
     return max(abs(x-y) for x, y in zip(numeric(left, QUANTILES), numeric(right, QUANTILES)))
+
+
+def audit_fixed_odds():
+    folder = BASE.parent/'structure_odds_audit'
+    raw = (folder/'complete.json').read_bytes()
+    record = json.loads(raw)
+    table = folder/'checks.csv'
+    table_digest = digest(table.read_bytes())
+    parent, _ = frozen_parent()
+    sources = {'data/v3_1/structure/matrices/complete.json': parent}
+    for path in ('scripts/v3_2_structure_odds_audit.py', 'src/photdis/v3_1/structure.py',
+                 'src/photdis/v3_1/structure_posterior.py', 'scripts/v3_1_structure_infer.py'):
+        sources[path] = digest((ROOT/path).read_bytes())
+    outputs = {table.name, *(f'{b}_{z}.npz' for b in BRANCHES for z in (256, 512, 1024))}
+    if ((record['job'], record['n'], record['responses']) != ('61259650', 512, 32)
+            or record['all_PSF'] is not True or record['inputs'] != sources
+            or record['outputs'].keys() != outputs or record['outputs'][table.name] != table_digest):
+        raise ValueError('Invalid frozen odds-axis receipt')
+    keys = {(branch, order) for branch in BRANCHES for order in ('512', '1024')}
+    checks = read_table(table, ('branch', 'odds_order'), keys)
+    failures = []
+    for (branch, order), row in checks.items():
+        values = numeric(row, TOLERANCES)
+        passed = all(abs(value) < limit for value, limit in zip(values, TOLERANCES.values()))
+        if (row['distance_order'] != '64' or int(row['previous_odds_order']) != int(order)//2
+                or min(values[:3]) < 0 or row['passed'] != str(passed) or passed != (order == '1024')):
+            raise ValueError(f'Invalid retained odds-axis result: {branch}/{order}')
+        if not passed:
+            failures.append(f'{branch}/{order}')
+    return dict(job=record['job'], comparisons=len(checks), failed=failures,
+                receipt_sha256=digest(raw), table_sha256=table_digest)
 
 
 def audit_tables(folder, receipt, roster, state_failures):

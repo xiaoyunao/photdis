@@ -17,6 +17,7 @@ from v3_2_radial_report_audit import audit as radial
 from v3_2_radial_report_audit import audit_available as radial_available
 from v3_2_structure_distance_audit import audit as structure_distance
 from v3_2_structure_joint_audit import audit as structure
+from v3_2_structure_joint_audit import audit_fixed_odds
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -86,7 +87,8 @@ def audit(*, completed_only=False):
         raise ValueError('A completed delivery audit did not pass')
     result = dict(passed=True, final=not completed_only, pending=pending,
                   preservation=protected, opened=opened_result, external=external_result,
-                  factorial=factorial_result, branch=branch(), figures=figure_result, documents=sources)
+                  factorial=factorial_result, branch=branch(), fixed_structure_odds=audit_fixed_odds(),
+                  figures=figure_result, documents=sources)
     if completed_only:
         result['structure_distance'] = structure_distance()
         result['radial_available'] = radial_available()
