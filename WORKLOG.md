@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — recover timed-out radial pilots
+
+- Slurm 61260177 catalogs 000 and 128 timed out at the 30-minute limit
+  before curves were written. Verified empty output directories and moved
+  them to `data/v3_2/radial_recovery_attempts/61260177/`. Logs retained.
+- Submitted direct 000 as 61260934 with two hours and eight workers.
+  Submitted cached empirical 128 as 61260935 after repeat-00 cache 61260465.
+  Compare direct/cached arrays before extending to the remaining repeats.
+- Prior-predictive 256 and frozen class probe 61260227 started; count audit
+  and matched factorial still await Slurm. No scientific gates changed.
+
 ## 2026-11-14 — implement outcome-closed DR19 identity and native admission
 
 - Added exact SDSS/Gaia-ID join of DR19 APOGEE HDU metadata only.

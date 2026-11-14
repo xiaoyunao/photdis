@@ -18,9 +18,10 @@ Active goal follows the Pro review of 7699299. See
   Then choose one supported model modification.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
-  Recovery pilots for model, empirical and prior-predictive catalogs run
-  in array 61260177. Cache pilot 61260465 uses the same repeat as direct
-  catalog 000. Compare their actual curves before launching the remainder.
+  The initial 000 and 128 direct pilots timed out in array 61260177;
+  its prior-predictive 256 started. Direct 000 follows as 61260934 and
+  cached empirical 128 as 61260935 after cache pilot 61260465. Compare
+  actual repeat-00 curves before launching the remainder.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
   Identity index 61260891 verifies the archive receipt, and native match
