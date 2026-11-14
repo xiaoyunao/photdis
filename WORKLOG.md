@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify recovery catalogs 004 and 005
+
+- Slurm 61266369_4 and _5 completed in 3m23s and 3m17s.
+  The collector verified their raw job IDs and source digests.
+- Both broad and both local fits pass sampler and integration
+  checks. Rhat ranges from 1.0021 to 1.0031 and the minimum
+  ESS is 895.0. Eight of 288 catalogs now have verified outputs.
+- Moved zero-runtime pending catalogs 006 and 007 to the vacant
+  debug slots. The full-array report dependency remains in place.
+
 ## 2026-11-14 — bind the parent reference limit to the delivery audit
 
 - Added validation of the frozen parent receipt, three native

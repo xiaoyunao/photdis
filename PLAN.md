@@ -129,6 +129,9 @@ products without a final delivery verdict.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
+  Eight of 288 catalogs have verified compact outputs. Catalogs 004 and
+  005 pass numerical checks in both arms. Catalogs 006 and 007 moved
+  in place to the vacant debug slots.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
