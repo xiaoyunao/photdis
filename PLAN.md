@@ -11,7 +11,8 @@ Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
 after both application reports and all visual reviews. During the runs,
 `--completed-only` verifies available evidence and reports missing
 products without a final delivery verdict. It also reconciles each
-archived NGC288 distance-state receipt and its per-context verdicts.
+archived NGC288 distance-state receipt, its per-context verdicts and
+the 512 row identities against the frozen v3.1 membership export.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
@@ -130,9 +131,9 @@ archived NGC288 distance-state receipt and its per-context verdicts.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Twelve of 288 catalogs have verified compact outputs. Catalogs 004–008
-  pass numerical checks in both arms. Catalog 009 local fails sampling.
-  Catalogs 010 and 011 moved in place to the vacant debug slots.
+  Fourteen of 288 catalogs have verified compact outputs. Catalogs 004–008
+  and 011 pass in both arms. Catalogs 009 and 010 local fail sampling
+  while their integration checks pass.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.

@@ -27,6 +27,21 @@ def digest(raw):
     return sha256(raw).hexdigest()
 
 
+def frozen_parent():
+    base = ROOT/'manifests/v3_1/structure'
+    parent = digest((base/'matrices/complete.json').read_bytes())
+    receipt = json.loads((base/'posterior/complete.json').read_bytes())
+    table = (base/'posterior/membership.csv').read_bytes()
+    if (receipt['inputs']['data/v3_1/structure/matrices/complete.json'] != parent
+            or receipt['outputs']['membership.csv'] != digest(table)):
+        raise ValueError('Frozen NGC288 membership roster is not bound to the parent matrices')
+    roster = [int(row['identity']) for row in csv.DictReader(io.StringIO(table.decode()))
+              if row['branch'] == 'full' and row['TYPE'] == 'PSF']
+    if len(roster) != 512 or len(set(roster)) != 512:
+        raise ValueError('Incomplete frozen NGC288 PSF membership roster')
+    return parent, dict(enumerate(roster))
+
+
 def read_state(folder, draw, parent, *, pilot=False):
     names = COMPACT_FILES[:2] if pilot else COMPACT_FILES
     payload = {name: (folder/name).read_bytes() for name in names}
@@ -70,11 +85,11 @@ def validate_state(payload, draw, parent, *, pilot=False):
 
 
 def audit(*, complete=False, _recover_partial=False):
-    parent = digest((ROOT/'manifests/v3_1/structure/matrices/complete.json').read_bytes())
+    parent, roster = frozen_parent()
     pilot, pilot_rows = read_state(BASE/'pilot', 12, parent, pilot=True)
-    if set(pilot_rows) != {224, 273, 436}:
+    if pilot_rows != {i: roster[i] for i in (224, 273, 436)}:
         raise ValueError('Unexpected pilot contexts')
-    previous, records = None, []
+    records = []
     for draw in range(32):
         folder = BASE/f'draw_{draw:02}'
         if not complete and not folder.exists():
@@ -82,11 +97,9 @@ def audit(*, complete=False, _recover_partial=False):
         if _recover_partial and not all((folder/name).is_file() for name in COMPACT_FILES):
             continue
         record, rows = read_state(folder, draw, parent)
-        if ((previous is not None and rows != previous)
-                or any(rows[row] != identity for row, identity in pilot_rows.items())):
+        if rows != roster:
             raise ValueError(f'Changed NGC288 parent identity in response state {draw}')
         records.append(record)
-        previous = rows
     return dict(registered=32, verified=len(records), records=records, pilot=pilot,
                 scope='Compact receipts and context verdicts. Native payload closure and joint '
                       'posterior checks run in the allocated science jobs.')
@@ -99,11 +112,7 @@ def collect_completed():
     draws = sorted((jobs.keys() & set(range(32))) - archived)
     if not draws:
         return audit()
-    parent = digest((ROOT/'manifests/v3_1/structure/matrices/complete.json').read_bytes())
-    if archived:
-        _, roster = read_state(BASE/f'draw_{min(archived):02}', min(archived), parent)
-    else:
-        _, roster = read_state(BASE/'pilot', 12, parent, pilot=True)
+    parent, roster = frozen_parent()
     for offset in range(0, len(draws), 8):
         batch = {}
         for draw in draws[offset:offset + 8]:
@@ -118,11 +127,9 @@ def collect_completed():
         for draw, paths in batch.items():
             payload = {name: outputs[path] for name, path in paths.items()}
             record, rows = validate_state(payload, draw, parent)
-            if (record['job'] != jobs[draw]
-                    or any(rows[row] != identity for row, identity in roster.items())):
+            if record['job'] != jobs[draw] or rows != roster:
                 raise ValueError(f'Slurm or parent identity mismatch for draw {draw}')
             archive_verified(BASE/f'draw_{draw:02}', payload)
-            roster = rows
     return audit()
 
 

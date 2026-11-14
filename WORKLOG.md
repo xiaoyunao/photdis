@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify NGC288 identities against the fixed parent and archive 010–011
+
+- Bound each state and pilot row to the ordered v3.1 membership table,
+  whose digest and parent matrices receipt were verified. All seven
+  archived states pass the identity check. A modified row was rejected
+  even with an updated checks-table digest.
+- All 472 local tests and the completed-only delivery audit passed.
+  The full delivery still requires the NGC288 joint and radial reports.
+- Collected Slurm 61266369_10 and _11 by their successful raw job IDs.
+  Recomputed all four numerical verdicts and 80 intervals. Three fits
+  pass. Catalog 010 local fails the ESS floor (57.62); all four fit
+  integrations pass. Fourteen of 288 catalogs are archived.
+
 ## 2026-11-14 — automate NGC288 receipt collection and verify catalogs 008 and 009
 
 - Added an on-demand collector to `v3_2_structure_distance_audit.py`
