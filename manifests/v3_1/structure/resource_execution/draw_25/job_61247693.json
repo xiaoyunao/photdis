@@ -1,0 +1,26 @@
+{
+  "scientific_inputs": {
+    "data/v3_1/structure/entry/draw_25/complete.json": "16da4ef6292b6d1be19cda5b3d4a963bc16ed0950bd573a5dc5b457d1324c992",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_25/model.joblib": "54a0b7d51331ba25f064609143ac5b5999738e8db233b5e09b7029cbeca4fd0f",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_1_structure_entry_refine.py": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+    "docs/v3_1_structure_entry_refinement_protocol.md": "6a7b106816f954851cc322aec9b84b26c77168dd04e5ef66a6130545151d882d",
+    "src/photdis/v3_1/structure_entry.py": "93daf5d3827cfbde8f56f54de71313eecac78ee343b324999c7762b8431a07cc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/candidate_selection.py": "6174241477f8ce781cfc0cdf8df20aaad5a9200d07bd00d4071fe3698a69f2b4"
+  },
+  "scientific_source_sha256": "123013843b1296c0df8c43542817ac37306e66eb5da435554580a9c59c35290d",
+  "execution_source_sha256": "1eb3693b3457f3fd4a6fafabf071175fa24e3feaed7641e03480eae0128654ef",
+  "workers": 64,
+  "memory_limit_bytes": 540164268032,
+  "planning_bound_per_worker_GiB": 5,
+  "resource_basis": {
+    "data/v3_1/structure/resource_execution/draw_10/job_61240361.json": "c33d3e8fc4c4f9c158726fed8555dcf02f2a2efd53e903258dddd2b5c4fbeacc"
+  },
+  "job": "61247693",
+  "scope": "Original per-context function, same input dictionary/outputs/integrand/seeds. Only execution concurrency and resource guards change; original checkpoints and failures retained.",
+  "elapsed_seconds": 1276.7627669759968,
+  "maximum_child_RSS_KiB": 4162176,
+  "execution_complete": true
+}

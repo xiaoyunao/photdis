@@ -18,10 +18,10 @@ This snapshot takes precedence over the historical execution notes below.
 - Complete: four-package frozen implementation; mechanism, radial, response,
   external validation, candidate modes, domain evidence and all102-state transfer
   reports. Scientific failures remain explicit; no model adoption.
-- Structure refinement:26/32 states (0–24 and26),570 compact checks,
-  8240 original failed contexts retained and0 unresolved in completed states.
-  Six states remain:25,27–31. State24/raw61232994 completed21m31 with32workers,
-  Python1270.248s. Existing child30 promoteddebug30 under the fresh5-job cap.
+- Structure refinement:27/32 states (0–26),592 compact checks,
+  8752 original failed contexts retained and0 unresolved in completed states.
+  Five states remain:27–31. State25/raw61247693 completed21m30 with64workers,
+  Python1276.763s. Existing child31 promoteddebug30 under the fresh5-job cap.
 - Required sequence: all32 refinements → existing assembly61232760 → posterior
   61232761 → shared-count report61232762 → domain join61233366. No duplicate jobs.
 - Delivery:19/22 figures accepted;183 actual tests passed. Remaining structure2
@@ -260,8 +260,8 @@ This snapshot takes precedence over the historical execution notes below.
   flags retained. Newarray17/raw61247266 COMPLETED21m29/all512pass,512oldflags.
   Newarray18/raw61247267all512pass,397oldflags; Python1052.386s.
   Newarray15/raw61246950 COMPLETED21m24/all512pass,512oldflags; Python1273.713s.
-  Total26/32refinements authenticate570groupedchecks withnewreproducible
-  refinementcompactchecker;8240originalfailedcontexts/0unresolved preserved.
+  Total27/32refinements authenticate592groupedchecks withnewreproducible
+  refinementcompactchecker;8752originalfailedcontexts/0unresolved preserved.
   Missing32stateguard passedwithoutoutput. Localmissingresourceaudits3/4/7
   retrievedagainstunchangedmarkerhashes; no scientificrerun.
 - One64-worker pilot13 submitted61244889 aftersource/zero-runtimeproof,

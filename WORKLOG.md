@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate all first twenty-seven structure states
+- State25/raw61247693 COMPLETED21m30/0:0:512refinedpass,512originalflags retained.
+ 64workers, Python1276.763s/maxchild4162176KiB. Actual27-state compactchecker
+ passes592checks/27648branchrows/8752originalfailedcontexts/0unresolved.
+- Confirmedterminalaccounting andqueueabsence beforepromotingexisting31debug30
+ underfresh5-jobcap; original64-worker measurements/sourcehashes reused. No new
+ submission/cancellation/scientific edits.27/28running;29–31queued.
+- UpdatedcurrentPLAN/status/requirements andlinks. All0–26statescomplete;
+ only27–31remainbeforeallocatedassembly/posterior/counts/domain. Existing183
+ testsource hashes unchanged. No finalfigure/domain/scientificacceptance claim.
+- Next: collectfiveactualstates, thencompleteexistingdependencychain, three
+ real-product figures andfullresearchdeliverygate.
+
 ## 2026-11-14 — complete the final original sparse structure refinement
 - Originalstate24/raw61232994 COMPLETED21m31/0:0;512pass, original297failures
   retained.32workers, Python1270.248s/maxchild4187828KiB. Actual26-state compact
