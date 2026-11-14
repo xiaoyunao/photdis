@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — retry the closed DR20 comparator after a node failure
+
+- Job 61271028 ended NODE_FAIL on nid006721 after 10m41s. Confirmed
+  no comparator output, unopened DR20 outcomes and no active duplicate.
+- Submitted 61272013 with the same wrapper, debug QoS and 30-minute
+  limit, excluding nid006721. The original accounting and log remain.
+- Four-arm prediction 61259969 was still pending. Regular radial
+  cache repeat 18 started on the existing array.
+
 ## 2026-11-14 — expose class-conditional distance bias in the factorial
 
 - Added signed and absolute median distance-modulus residuals against
