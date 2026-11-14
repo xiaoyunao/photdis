@@ -10,6 +10,12 @@
   and max basis-count change (0.7006 objects). The opened distance-bin
   change reaches 0.004055 objects. The integrated completed-only audit
   passed with these checks.
+- Traced two pending job types to inherited 487,802 MiB memory
+  requests. Cached pilots 128 and 256 peaked near 2 GiB; NGC288
+  state 04 peaked near 11 GiB. Set 8 GiB on queued recovery catalog 1
+  and 32 GiB with a 3-hour limit on queued NGC288 state 09. The
+  controller confirmed both edits and retained the original arrays.
+  Full 472-test suite passed with one thread per numerical library.
 
 ## 2026-11-14 — verify radial caches 24 and 25
 

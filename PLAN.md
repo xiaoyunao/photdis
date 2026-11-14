@@ -120,6 +120,10 @@ products without a final delivery verdict.
   eight concurrent tasks. The 279 tasks mapped to authenticated caches
   00–25 are eligible to run. The remaining six retain the full-cache
   dependency until their own caches are verified.
+  Recovery catalog 1 (61274913) requests 8 GiB in place of Slurm's
+  inherited full-node memory. Two cached pilots peaked near 2 GiB.
+  Verify its result and actual memory before changing more recovery
+  tasks. This does not change catalog inputs or the sampler.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
   Cache receipts 00–25 are verified with `scripts/v3_2_radial_cache_audit.py`.
@@ -195,6 +199,9 @@ products without a final delivery verdict.
   512 independent-entry-seed absolute checks fail. Retain them for
   the entry-axis comparison across states.
   State 04 passed all 2,560 checks.
+  Pending state 09 (61275388) requests 32 GiB with a 3-hour limit.
+  State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
+  before using this resource request on more states.
   The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run
