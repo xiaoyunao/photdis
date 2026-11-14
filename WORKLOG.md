@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify live NGC288 checkpoints and prepare state reconciliation
+
+- Verified eight real checkpoints from active states 00 and 01 against
+  the frozen parent and tracked sources. All 32 sampled verdicts passed
+  on the 384 new and 112 archived nodes in the checkpoint payloads.
+- Added `scripts/v3_2_structure_distance_audit.py`. The real pilot's 15
+  checks reconcile. A synthetic 512-row state preserved a numerical
+  failure and rejected a duplicate context. Syntax and diff checks passed.
+- Broad/free 61259811_1 started. The last checkpoint count was 408/512
+  and 64/512 in states 00 and 01 respectively. Full verdicts remain pending.
+
 ## 2026-11-14 — clear the idle radial cache array's task limit
 
 - Slurm showed all 16 remaining children of 61266329 (repeats 16–31)
