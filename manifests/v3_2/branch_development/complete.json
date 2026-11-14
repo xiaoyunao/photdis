@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6",
+    "data/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+    "scripts/v3_2_branch_development.py": "79f138b9c33b4a2aa0787b4ee72e07ea3d31158e3c4adfb32a1f5824ddce8134",
+    "docs/v3_2_branch_protocol.md": "d59cc47640dd99828dd04dfc0fa2cad76cbdc7287239ff469911f474059f927a",
+    "src/photdis/v3_2/giant_branch.py": "0487040ede331b0304ccae39fab1af918048cf9232acabbb71f57d3c1cc7ec6b",
+    "manifests/v3_2/opened_qrf/complete.json": "d37b9c3ea74c5c60fb3ba9920feb9ca3eadb00b230cbf0e9b3fd99b1261db4df",
+    "manifests/v3_2/opened_qrf/objects.csv": "6ad21a58079440cb28e8b6546e43c18309bc9ea9068de0fcef51b04b93b5ec72",
+    "data/v3_2/tilt_predictions/initial/objects.csv": "2dde250e566f46e08dfe0cb68b68b84d02b9998262da266d22cd87b8eb7585d9",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32"
+  },
+  "outputs": {
+    "confusion.csv": "4eed2cfbb7db7b7e5829da263266a28030c8b0f29ac21c3eb7069910fe56a4d9",
+    "joint_counts.csv": "b0b1a674c60b3c8abd56788772fc9bdfe9166849dddae1e3705f92429b93495c",
+    "objects.csv": "a794cf47baa9cbd878f15c4e2937681b74f50d0bfa75f457ee1010aee0f98b29",
+    "paired.csv": "2565b37acfc11e031789e9b76051bdedd3674b3832c98629f70d9805183a7061"
+  },
+  "job": "61273353",
+  "n": 526,
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "class_conditional_invariance": true,
+  "numerical_flags": 0,
+  "scope": "Opened development on frozen fine grids with a thinning check. Prospective forecasts independently recompute both grids."
+}

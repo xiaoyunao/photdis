@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — evaluate the registered adjustment on opened objects
+
+- Replacement 61273353 completed 0:0 in 42s. Verified all four compact
+  output hashes, 526 PSFs, zero numerical flags and conditional-distance
+  invariance. The initial failed assertion and log are retained.
+- On 166 matched new-sky Gaia objects, adjusted minus candidate/free
+  is +0.3765 nat [0.2580, 0.4507]. Adjusted minus old target is
+  +0.3101 nat [0.0235, 0.4943]. Against nominal reference the change
+  is −1.4529 nat [−2.3434, −0.1869].
+- Mean giant probability rises 0.0788 on 142 known new-sky giants.
+  The next step is a photometry-only prospective forecast using the same
+  fixed adjustment. DR20 and common-scale outcomes remain closed.
+
 ## 2026-11-14 — register and implement giant branch adjustment
 
 - The paired diagnosis supports a single midpoint adjustment to the giant

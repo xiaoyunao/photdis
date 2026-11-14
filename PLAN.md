@@ -57,6 +57,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   61260227 completed on 519 opened PSFs. See
   `docs/v3_2_opened_probe_and_count_result.md`. Registered one posterior
   giant allocation adjustment in `docs/v3_2_branch_protocol.md`.
+  Opened development job 61273353 completed on 526 PSFs with zero
+  numerical flags and verified class-conditional distance invariance.
+  Implement the same fixed transform on independent forecast grids for
+  the closed DR20 and common-scale cohorts before outcome access.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
