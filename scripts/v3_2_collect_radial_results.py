@@ -54,9 +54,9 @@ def completed_jobs(job_ids):
 
 def collect(names, *, max_file_bytes=100_000):
     # Names are generated from the frozen catalog IDs and fixed filenames.
-    command = f'cd {REMOTE} && tar -cf - ' + ' '.join(names)
+    command = f'cd {REMOTE} && timeout -k 2 15 tar -czf - ' + ' '.join(names)
     raw = subprocess.run([*SSH, command], check=True, capture_output=True, timeout=45).stdout
-    with tarfile.open(fileobj=BytesIO(raw)) as archive:
+    with tarfile.open(fileobj=BytesIO(raw), mode='r:gz') as archive:
         members = archive.getmembers()
         if (len(members) != len(names) or {m.name for m in members} != set(names)
                 or any(not m.isfile() or m.size > max_file_bytes for m in members)):

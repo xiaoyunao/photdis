@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — recover the compact transfer for catalogs 036, 043 and 044
+
+- Slurm confirmed successful exits in 4m54s, 3m42s and 3m35s.
+  Retrieved compact tables with a time-bounded compressed transfer,
+  checked the raw job IDs and artifact digests, and switched the
+  collector to the same transfer format. Both fits pass in all three.
+- Stage delivery passed with 45 catalogs, 90 verdicts (69 accepted)
+  and 1,800 intervals. The two final reports remain pending.
+
 ## 2026-11-15 — verify the second shared radial completion
 
 - Slurm 61266369_35 completed in shared in 4m14s. Checked the
