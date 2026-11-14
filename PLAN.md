@@ -23,8 +23,8 @@ Active goal follows the Pro review of 7699299. See
   catalog 000. Compare their actual curves before launching the remainder.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
-  The exact source-ID index and native match implementations are ready
-  for those files. Freeze model, rules and new reference roles before
+  Identity index 61260891 verifies the archive receipt, and native match
+  61260892 follows it. Freeze model, rules and new reference roles before
   scoring the new validation outcomes.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338). NGC288 odds test 61259650 uses fixed

@@ -11,8 +11,9 @@
   and row pointers are exported together only after native admission.
 - Python/Bash syntax and synthetic exact 64-bit joins, duplicate and
   legacy exclusions, RA wrapping and historical imaging/sky checks pass.
-  Archive acquisition 61260678 is live in the scheduler. Use its actual
-  hashes to run identity indexing and native join without opening labels.
+  Submitted identity index 61260891 after archive acquisition 61260678
+  and native join 61260892 after the index. The hash-receipt parser passes
+  its two-file smoke check. Both jobs leave outcomes unopened.
 
 ## 2026-11-14 — verify a possible fresh APOGEE reference source
 
