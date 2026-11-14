@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify external support by class and distance
+
+- Reconciled 18 Gaia contrasts and five agreement counts with the
+  frozen DR20 tables. Added distance-specific class, interval and
+  score results to `docs/v3_2_external_result.md`.
+- The 5–10 kpc giant groups gain over QRF and lose against nominal.
+  Agreement failures persist at 2–5 kpc for dwarfs and at 10–50 kpc
+  for giants. The external samples establish no calibrated domain.
+
 ## 2026-11-14 — register the size-matched broad control
 
 - Added a single seeded 3,540-PSF broad draw with original weights

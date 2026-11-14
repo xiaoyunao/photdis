@@ -47,3 +47,32 @@ distance or class probabilities for the proposed product.
 [HST common-scale table](../manifests/v3_2/final_validation_common/scale_agreement.csv)
 
 [Signed Gaia and HST figure](v3_2_atlas.md#signed-gaia-scores-and-hst-distance-scales)
+
+## Supported comparisons by distance
+
+Candidate minus comparator signed Gaia log scores use the exact same
+objects in the matched photometric gate. Reference distance bands
+below are assigned by MINESweeper centers.
+
+| Group | Gaia pairs | vs. QRF (nat) | vs. nominal (nat) | vs. old target (nat) |
+|---|---:|---:|---:|---:|
+| 2–5 kpc dwarfs | 38 | −0.017 | −0.147 | −0.077 |
+| 2–5 kpc giants | 0 | — | — | — |
+| 5–10 kpc giants | 114 | +0.243 | −0.241 | +1.291 |
+| 5–10 kpc metal-poor giants | 85 | +0.217 | −0.211 | +1.282 |
+| 10–20 kpc giants | 212 | +0.247 | −0.420 | +1.052 |
+| 20–50 kpc giants | 179 | +1.053 | −0.571 | +0.688 |
+
+The signed Gaia intervals for the two comparator differences shown
+against QRF and nominal at 5–10 kpc exclude zero for both giant
+groups. The candidate identifies 2 of 115 giants at 5–10 kpc by
+maximum class probability, including 0 of 85 metal-poor giants.
+Its 68% interval includes the reference center for 65 of those 115
+giants. At 20–50 kpc, the candidate's median posterior moduli have a
+mean residual of −4.207 mag, and 131 of 179 reference centers lie
+inside the 95% interval. For 2–5 kpc dwarfs the candidate's 95% interval
+contains 33 of 39 centers. These strata support specific score and
+agreement comparisons. They supply no calibrated product domain.
+
+[Absolute scores and interval agreement](../manifests/v3_2/final_validation_dr20/scores/absolute.csv) ·
+[Paired intervals](../manifests/v3_2/final_validation_dr20/scores/paired.csv)
