@@ -298,6 +298,8 @@ receipt and recomputes the earlier failed and accepted transitions.
   State 31 completed and retained 508 previous-entry-level flags.
   Both native comparisons, the independent entry seed and archived
   entry closure pass. Seventeen states have verified receipts.
+  State 16 then passed all 2,560 checks, bringing the verified total
+  to 18 states.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

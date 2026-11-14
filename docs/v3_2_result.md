@@ -280,10 +280,10 @@ and 57 local fits (20 fixed model-SED, 25 fixed empirical-SED and
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
-awaits the 32-state joint result. Across the 17 archived states,
+awaits the 32-state joint result. Across the 18 archived states,
 1,230 independent-entry-seed checks, 932 previous-entry-level checks
-and seven Gaussian native checks failed. All 8,704 full-likelihood
-native and all 8,704 archived-entry closure checks passed in these
+and seven Gaussian native checks failed. All 9,216 full-likelihood
+native and all 9,216 archived-entry closure checks passed in these
 states. NGC288 is a previously opened
 system and demonstrates sensitivity of the inference to the
 likelihood representation.
