@@ -68,3 +68,12 @@ abundance flag and error. Keep uncertain classifications as unknown.
 Report counts in 0–2, 2–5, 5–10, 10–20, 20–50 and beyond 50 kpc, with
 giants and qualified [Fe/H] below −1.5 tracked explicitly.
 [Astra distance columns](https://data.sdss.org/datamodel/files/MWM_ASTRA/V_ASTRA/summary/astraAllStarAstroNNdist.html) · [ASPCAP flags](https://www.sdss.org/dr19/mwm/astra/pipelines-in-astra/aspcap/)
+
+The scorer retains each view's full continuous density or native QRF
+histogram. Compare signed Gaia proper scores and PIT, teacher scores and
+interval agreement, and class probability where available. Retain raw and
+numerically accepted comparisons. Report near-probability error, Brier,
+and the high-q selection in each teacher-qualified distance group. The
+teacher-far fraction among high-q objects has a view-specific denominator
+and describes the selected reference sample. Scientific application counts
+and independent parent-population contamination require separate evidence.

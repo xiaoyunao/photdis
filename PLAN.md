@@ -29,6 +29,7 @@ Active goal follows the Pro review of 7699299. See
   61260892 follows it. Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
+  The paired evaluator covers signed Gaia, class and teacher distance/entry.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 uses fixed

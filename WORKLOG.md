@@ -11,6 +11,10 @@
 - Python syntax, four-view/tamper and teacher-channel smoke checks, and
   11 existing freeze/scoring/channel tests pass. Native admission and a
   chosen mechanism with frozen forecasts are the next dependencies.
+- Implemented paired photometric-grid and QRF scoring with signed Gaia,
+  teacher agreement, class, interval and near-selection metrics. Synthetic
+  score and matched-stratum checks pass, including negative Gaia and the
+  missing QRF class channel.
 
 ## 2026-11-14 — retain completed class probe and count decomposition
 

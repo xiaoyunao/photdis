@@ -100,7 +100,9 @@ def main():
     bind_predictions(inv, forecast_path, photo, sha(photo_path), sha(decision_path))
     evaluator = inv.add(args.evaluator)
     for p in ('docs/v3_2_reference_intake.md', 'scripts/v3_2_reference_freeze.py',
-              'scripts/v3_2_reference_evidence.py', 'src/photdis/v3_1/freeze.py', 'src/photdis/gaia.py'):
+              'scripts/v3_2_reference_evidence.py', 'src/photdis/v3_1/freeze.py', 'src/photdis/gaia.py',
+              'src/photdis/v3/metrics.py', 'src/photdis/v3_1/validation_report.py',
+              'src/photdis/v3_1/validation_scores.py'):
         inv.add(p)
     inv.unchanged()
     receipt = dict(cohort=ROLE, n=len(photo['identity']), all_PSF=True,
