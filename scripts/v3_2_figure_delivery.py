@@ -59,7 +59,8 @@ def audit(*, completed_only=False):
     atlas = atlas_path.read_text()
     inputs = {str(p.relative_to(ROOT)): digest(p) for p in (review_path, atlas_path)}
     inventory = {}
-    groups = [group for group in GROUPS if not completed_only or group not in FINAL_GROUPS]
+    groups = [group for group, (receipt_name, _) in GROUPS.items()
+              if not completed_only or group not in FINAL_GROUPS or (BASE/receipt_name).is_file()]
     for group in groups:
         receipt_name, stems = GROUPS[group]
         receipt = BASE/receipt_name
@@ -93,5 +94,5 @@ def audit(*, completed_only=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--completed-only', action='store_true', help='Check the eight existing plates')
+    parser.add_argument('--completed-only', action='store_true', help='Check plates with available receipts')
     print(json.dumps(audit(completed_only=parser.parse_args().completed_only), indent=2))

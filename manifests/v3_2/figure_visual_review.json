@@ -46,5 +46,17 @@
     "visually_reviewed": true,
     "english_labels": true,
     "date": "2026-11-14"
+  },
+  "figures/v3_2/radial_recovery/fixed_coverage.png": {
+    "sha256": "0e26c04c91da86910a58ce31001143f2a3b2b3b798c5a2553613f362faf2f30b",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-15"
+  },
+  "figures/v3_2/radial_recovery/prior_coverage.png": {
+    "sha256": "a776c151cea8bbb7e587ca3a67a123205be7e1515c1e5d4bc181dce27ca8312a",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-15"
   }
 }

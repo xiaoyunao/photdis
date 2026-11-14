@@ -137,9 +137,8 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Two hundred seventy-eight of 288 catalogs have verified compact outputs.
-  All 32 fixed-truth strata are complete. Twenty-two prior-predictive
-  catalogs are archived, with 10 remaining.
+  All 288 catalogs have verified compact outputs. The 32 fixed-truth
+  strata and 32 prior-predictive catalogs are complete.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
@@ -166,9 +165,9 @@ catalogs archived.
   All four results are archived. Slurm canceled 165 after 19 seconds
   before writing any result. Retry 61283254 covers 165.
   Both retries, 61283177 (143) and 61283254 (165), completed and are
-  archived. The report continues to wait for the original array.
-  All remaining original recovery tasks are in CPU shared with the
-  existing eight-task array cap and 8 GiB per task.
+  archived. After the original array finished, report 61266374
+  ran in debug and completed in 22 seconds. Its compact outputs
+  and both visually reviewed coverage plates are archived.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
   Collect per-catalog receipts and numerical and recovery CSVs plus
@@ -177,7 +176,7 @@ catalogs archived.
   Use its `--completed` mode to fetch up to 32 new successful Slurm
   tasks and reconcile each raw job ID with the output receipt.
   Run `PYTHONPATH=src:scripts:.deps python3
-  scripts/v3_2_radial_report_audit.py` to reconcile all seven
+  scripts/v3_2_radial_report_audit.py` to reproduce all seven
   derived tables with the frozen design and individual results. This
   audit also requires the exact source inventory and checks fitted-arm
   declarations against the per-catalog tables.

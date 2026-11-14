@@ -260,8 +260,15 @@ Across the four fixed 0.08 mag strata at 60% and 90%, empirical
 SEDs increase local absolute width error by 0.144–0.152 mag relative
 to model SEDs on eight numerically accepted matched repeats per
 stratum. All four paired bootstrap intervals exclude zero.
-All 32 fixed-truth strata are complete. The prior-predictive
-comparison is in progress.
+All 32 fixed-truth strata and 32 prior-predictive catalogs are
+complete. In the prior-predictive model-SED experiment, 20 of 32
+local fits pass the numerical and sampler gates. For location,
+width, pre-entry member fraction and selected member count, the
+accepted intervals each cover truth 19/20 times (exact 95%
+interval 0.751–0.999). The coverage bounds across all registered
+repeats are 19/32–31/32 for each quantity. Including flagged fits,
+coverage for the four quantities is 29/32, 31/32, 31/32 and 31/32.
+These results use truths drawn from the fitted model's prior.
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test

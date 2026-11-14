@@ -1,0 +1,9 @@
+{
+  "manifests/v3_2/radial_report/complete.json": "47c8d95e840a0e468b7573eae61a0f52f19c4c020f8118d8d2f96c67296c396a",
+  "manifests/v3_2/radial_report/coverage.csv": "4fa6a9b9dd7bb3cf10dfec764f1a318db5901db732a658633af9d871bfd0af3f",
+  "scripts/v3_2_radial_recovery_figure.py": "ab8f5dc3e5749bcd638d62e43eec3a722fba32e5c4c0649346008fe63a085475",
+  "figures/v3_2/radial_recovery/fixed_coverage.png": "0e26c04c91da86910a58ce31001143f2a3b2b3b798c5a2553613f362faf2f30b",
+  "figures/v3_2/radial_recovery/fixed_coverage.pdf": "0c29a9ecdbf73f09a1d508ae8ad67bfb05d050072fecde23cf44a4811fe95b64",
+  "figures/v3_2/radial_recovery/prior_coverage.png": "a776c151cea8bbb7e587ca3a67a123205be7e1515c1e5d4bc181dce27ca8312a",
+  "figures/v3_2/radial_recovery/prior_coverage.pdf": "112526448a26c6b3ee6928ae08946f6640b861b87abe49b79970fdd16f1f6b9a"
+}

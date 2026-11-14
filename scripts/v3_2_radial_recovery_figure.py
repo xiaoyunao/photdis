@@ -23,10 +23,10 @@ METRICS = {
     'selected_members': 'Selected member count',
 }
 GROUPS = (
-    ('model', 'near', 'Model SEDs, near background'),
-    ('model', 'deep', 'Model SEDs, deep background'),
-    ('empirical', 'near', 'Empirical SEDs, near background'),
-    ('empirical', 'deep', 'Empirical SEDs, deep background'),
+    ('model', 'near', 'Model SEDs\nNear background'),
+    ('model', 'deep', 'Model SEDs\nDeep background'),
+    ('empirical', 'near', 'Empirical SEDs\nNear background'),
+    ('empirical', 'deep', 'Empirical SEDs\nDeep background'),
 )
 FRACTIONS = (.1, .3, .6, .9)
 WIDTHS = (.08, .25)
@@ -80,7 +80,8 @@ def fixed_figure(fixed):
     cmap = plt.get_cmap('Blues').with_extremes(bad='#eeeeee')
     scale = Normalize(0, 1)
     for i, (metric, name) in enumerate(METRICS.items()):
-        axes[i, 0].set_ylabel(name + '\nWidth (mag)')
+        axes[i, 0].set_ylabel(name.replace(' fraction', '\nfraction').replace(' member count', '\nmember count'),
+                             labelpad=12)
         for j, (source, background, title) in enumerate(GROUPS):
             ax = axes[i, j]
             pairs = [[fixed[subset, metric, source, background, w, f] for f in FRACTIONS] for w in WIDTHS]
@@ -91,16 +92,19 @@ def fixed_figure(fixed):
                     label = f'{k}/{n}' if n else '—'
                     ax.text(x, y-.15, label, va='center', ha='center', fontweight='bold',
                             color='white' if p > .62 else '#1c2932')
-                    ax.text(x, y+.19, f'{n}/{total} accepted', va='center', ha='center', fontsize=7,
+                    ax.text(x, y+.19, f'{n}/{total}', va='center', ha='center', fontsize=7,
                             color='white' if p > .62 else '#1c2932')
             ax.set_yticks(range(2), [f'{w:.2f}' for w in WIDTHS])
             if i == 0:
                 ax.set_title(title, fontsize=10)
             ax.set_xticks(range(4), [f'{f:.0%}' for f in FRACTIONS])
     fig.suptitle('Fixed-truth recovery after numerical and sampler gates', fontweight='bold')
-    fig.supxlabel('Generating pre-entry member fraction', y=.055)
-    fig.subplots_adjust(left=.14, right=.89, top=.89, bottom=.135, wspace=.15, hspace=.32)
-    color_axis = fig.add_axes([.912, .135, .014, .755])
+    fig.supxlabel('Generating pre-entry member fraction', y=.065)
+    fig.text(.023, .51, 'Generating width (mag)', rotation=90, va='center')
+    fig.text(.515, .027, 'Cell labels show covered / accepted above accepted / registered.',
+             ha='center', fontsize=9)
+    fig.subplots_adjust(left=.14, right=.89, top=.865, bottom=.145, wspace=.15, hspace=.32)
+    color_axis = fig.add_axes([.912, .145, .014, .72])
     fig.colorbar(heat, cax=color_axis, label='95% interval coverage among accepted fits',
                  format=PercentFormatter(1))
     return fig

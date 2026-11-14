@@ -132,3 +132,19 @@ own realized truth for member counts and joint class-distance counts.
 The paired differences describe the change in absolute error, coverage
 and interval length under the two generators. Each comparison records
 the number of paired fits and the number of registered repeats.
+
+## Narrow-structure recovery coverage
+
+The fixed-truth plate reports coverage among accepted local fits
+and acceptance among all eight registered repeats in each cell.
+The prior-predictive plate shows exact binomial intervals for
+coverage among all 32 fitted catalogs and among the 20 accepted
+local fits. Those simulated truths are drawn from the fitted
+model's prior.
+
+[Fixed-truth PNG](../figures/v3_2/radial_recovery/fixed_coverage.png) ·
+[Fixed-truth PDF](../figures/v3_2/radial_recovery/fixed_coverage.pdf) ·
+[Prior-predictive PNG](../figures/v3_2/radial_recovery/prior_coverage.png) ·
+[Prior-predictive PDF](../figures/v3_2/radial_recovery/prior_coverage.pdf) ·
+[Coverage table](../manifests/v3_2/radial_report/coverage.csv) ·
+[Source and output hashes](../manifests/v3_2/radial_report/figure.json)

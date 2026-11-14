@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — complete and verify the radial recovery report and plates
+
+- Archived 278–287. All 288 catalogs and 33 strata now reconcile.
+  The stage audit verifies 518 accepted fits of 576 and 11,520 intervals.
+- Moved report 61266374 to debug after the array dependency cleared.
+  It completed in 22 seconds. Collected and independently recomputed
+  all seven derived tables from the frozen design and catalog receipts.
+- Rendered and visually inspected both English coverage plates.
+  Shortened the cell annotations and wrapped the row and column labels
+  to eliminate overlap. Linked both PNG/PDF pairs in the atlas and
+  added the prior-predictive coverage and its denominators to the synthesis.
+- NGC288 joint computation and plate remain pending. Fifteen states
+  are archived and five are running.
+
 ## 2026-11-15 — verify six more prior-predictive recovery catalogs
 
 - Archived 269 and 273–277 via the completed-mode radial collector.
