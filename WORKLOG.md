@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — verify recovery catalogs 012–013 and clear the NGC288 array limit
+
+- Slurm 61266369_12 and _13 completed in 3m11s and 3m20s.
+  Checked source digests and recomputed four numerical verdicts
+  and 80 interval records. Both broad fits and all integration
+  checks pass. Both local fits fail the sampler gate (ESS 57.35
+  and 26.60). Sixteen of 288 catalogs are archived.
+- Moved 014 and 015 to the vacant debug slots.
+- NGC288 showed one running state and 22 pending states with
+  JobArrayTaskLimit. Updated ArrayTaskThrottle from four to five.
+  Slurm reported already-finished children during the array update.
+  Readback confirmed the cap of five, cleared the prior queue reason
+  and preserved the full-array dependency on joint job 61263908.
+
 ## 2026-11-14 — archive NGC288 state 07
 
 - Slurm 61263907_7 (raw 61274202) completed in 1h27m20s.
