@@ -56,6 +56,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   together. Register one broad sample of 3,540 PSFs and fit both tilt
   modes with the original broad normalization. See
   `docs/v3_2_tilt_size_protocol.md` for the draw and opened-only scoring.
+  Fit jobs 61274143/61274144 feed forecast 61274145 and paired
+  scoring 61274146. Authenticate both identical sample exports.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See

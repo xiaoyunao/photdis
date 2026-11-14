@@ -7,8 +7,11 @@
   fitter, scaling and prediction code and writes to its own run.
 - Rechecked the four original receipts against their exact Git
   producer. Python syntax, shell syntax and a fixed-sample smoke
-  check passed. Next collect the two registered fits and one paired
-  comparison on previously opened objects.
+  check passed. Fits 61274143 and 61274144 started. Forecast 61274145
+  and paired comparison 61274146 wait on successful predecessors.
+- All 472 tests passed with OpenMP, OpenBLAS and MKL each limited to
+  one thread. The first untuned local test run encountered a scikit-learn
+  K-means segmentation fault. No scientific result was produced by it.
 
 ## 2026-11-14 — plot the completed field and common-scale comparisons
 
