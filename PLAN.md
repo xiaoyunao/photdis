@@ -137,9 +137,10 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  One hundred fifteen of 288 catalogs have verified compact outputs. Catalogs
+  One hundred twenty-one of 288 catalogs have verified compact outputs. Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
+  The broad fit in 112 has one divergence and passes integration.
   Catalog 032 completed in CPU shared QoS in 5m38s with eight CPUs
   and 8 GiB allocated. Catalogs 035–038, 045–076 and 079–127 were moved to
   the same QoS within the original array. Catalogs 035 and 036

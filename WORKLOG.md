@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — verify six wider radial recovery catalogs
+
+- Archived 112 and 114–118 via `v3_2_collect_radial_results.py --completed`.
+  Eleven fits pass. The broad fit in 112 has one sampler divergence and
+  passes the integration checks. Preserved its intervals and failed verdict.
+- The completed-only delivery audit verifies 121 of 288 catalogs, 220
+  accepted fits out of 242, 4,840 intervals and 14 complete strata.
+  NGC288 remains at ten archived states with five tasks running.
+  Collect the remaining 90% model-SED rows, then audit the complete strata.
+
 ## 2026-11-15 — verify the 90 percent deep narrow recovery stratum
 
 - Collected catalogs 109 and 113 with
