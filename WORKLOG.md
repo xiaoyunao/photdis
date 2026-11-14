@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify the 92 refinements in tilt shards 20–23
+
+- Slurm confirmed that all four shards completed 0:0. Authenticated
+  the exact 24, 24, 17 and 27 flagged contexts against the original
+  receipts and independently recomputed each passing verdict.
+- Compact census now records 548 reviewed flags without unresolved
+  failures. The 19 flags in shard 24 await refinement.
+
 ## 2026-11-14 — verify completed tilt input 24
 
 - Raw job 61266773 (array shard 24) completed 0:0. Collected its receipt

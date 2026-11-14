@@ -17,8 +17,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   2793 candidate PSFs across these shards.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–19 refinements pass all 456 flagged contexts.
-  Shards 20–24 have 111 initial flags for refinement.
+  Shards 00–23 refinements pass all 548 flagged contexts.
+  Shard 24 has 19 initial flags for refinement.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.
