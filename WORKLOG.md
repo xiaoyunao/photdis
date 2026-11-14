@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial cache 21 and advance two queued repeats
+
+- Repeat 21 (raw 61273336) completed 0:0 in 14m03s. Verified its
+  receipt and checkpoint against the frozen design. The cache audit
+  now covers 22 repeats and 2,816 contexts.
+- With debug QoS idle, moved pending repeats 22 and 23 to debug with
+  30-minute limits. Repeat 22 started as 61274684. Repeat 23 remains
+  queued for resources as 61274685. Recovery keeps its full-array
+  dependency. NGC288 states 04–06 remain active.
+
 ## 2026-11-14 — make the external freeze audit reproducible
 
 - Archived the two assembled four-view forecast receipts after comparing
