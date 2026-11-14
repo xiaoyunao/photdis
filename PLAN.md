@@ -10,8 +10,8 @@ Active goal follows the Pro review of 7699299. See
 - Fit the population by SED tilt comparison with matched selection. The
   first production shard is verified, and array 61259514 builds the other 31.
   Shard 00 refinements pass 26/26, and array 61259727 follows 61259514.
-  Then run the four matched fits and score the
-  opened field with direct paired factorial contrasts.
+  Four matched fits are queued as 61259811. Score the opened field and
+  report direct paired factorial contrasts and shared-draw count moments.
 - Decompose giant branch availability, suppression and class-conditional
   distance error. Then choose one supported model modification.
 - Run scoped narrow-structure and numerical diagnostics. Freeze new validation

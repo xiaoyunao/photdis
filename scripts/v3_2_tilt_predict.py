@@ -62,6 +62,11 @@ def one(row):
         coarse_logs = logs[..., ::2]
     else:
         coarse_logs, _ = kernel_loglike(model, observation(photo, row), coarse_grid, calibration_mag=cal[row])
+    if photo['band_mask'][row, [0, 1]].all():
+        dered = photo['flux'][row, [0, 1]] / photo['transmission'][row, [0, 1]]
+        color = float(-2.5 * np.log10(dered[0] / dered[1])) if (dered > 0).all() else None
+    else:
+        color = None
     binary = model.binary_reference_fraction
     native = logsumexp(logs + np.log([1 - binary, binary])[:, None, None], axis=0)
     prior = model.weights[:, None] * model.classes
@@ -111,11 +116,12 @@ def one(row):
                       median_mu=float(q[2]), joint_delta=value['joint_delta'],
                       marginal_half_delta=value['marginal_half_delta'],
                       sampler_passed=meta['sampler_passed'],
-                      r0=float(photo['r0'][row]), g_r=float(photo['g0'][row]-photo['r0'][row])
-                      if 'g0' in photo else None,
+                      r0=float(photo['r0'][row]), g_r=color,
                       w1_state=int(photo['band_state'][row, 4]),
                       feh=float(ev['feh']) if ev['feh_valid'] else None,
+                      reference_class_logz_dwarf=float(ref_evidence[0]),
                       reference_class_logz_giant=float(ref_evidence[1]),
+                      reference_class_logz_other=float(ref_evidence[2]),
                       reference_p_giant=float(ref_class_probability[1]))
         if label >= 0:
             result.update({f'oracle_{k}': v for k, v in diagnostic(grid, class_curve[label], label, ev).items()})

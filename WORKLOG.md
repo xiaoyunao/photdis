@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — queue matched fits and validate the opened-field report
+
+- Previous turn produced and authenticated shard 00 and its refinements.
+  Recovered current status and three-end b15c210 via Git and Slurm. Input
+  array 61259514 and odds audit 61259650 wait for priority, refinements wait
+  on inputs. No jobs replaced.
+- Submitted four-arm array 61259811 after the existing refinement dependency.
+- Added the opened-field report with directly paired historical controls,
+  absolute confusion, 18-bin count means and conditional/shared covariance.
+  Analytic two-state test and Python/Bash syntax checks pass. Export all
+  common-prior class log evidences and compute color from native flux.
+- Next authenticate actual fit, score and summary artifacts; independent
+  narrow-structure recovery can advance while Slurm schedules the arrays.
+
 ## 2026-11-14 — verify shard 00 refinements and submit dependent stages
 
 - NERSC 61259586_0 completed 0:0 in 2m10s with batch MaxRSS 34,165,204 KiB.
