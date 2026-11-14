@@ -93,3 +93,16 @@ Both stored zero-state fits bind the same v3.1 target matrices and pass their
 sampler and bridge checks. Additional conditional count flags remain distinct.
 Compare matching zero-state fits on the common production integration rule if
 the denominator change affects the diagnostic beyond its registered tolerances.
+
+
+### First production pass
+
+Partition the 26,000 frozen application rows by original row index modulo 32.
+Each shard writes every row and both applicable admissions. Keep three entry
+arrays per context (2^20 at seed 319711 and 2^21 at seeds 319711 and 319712).
+Compare entry under each of the five pilot tilts across seed and level with
+absolute tolerance 0.0005 and stabilized relative tolerance 0.01. Match the
+zero collapse to the frozen v3.1 selection with the same tolerances. Retain
+all context flags and arrays for targeted refinement and later fitted-tilt
+checks. Both zero and free fits must use the same production denominator
+within each cohort for the factorial contrast.

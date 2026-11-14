@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — implement matched tilt input production
+
+- The previous goal turn completed the refined pilot and three-end sync.
+  `git fetch --all --prune` reconfirmed 1314246 before editing.
+- Added the 32-shard input builder and allocated runner. Builds kernel
+  likelihoods on the authenticated v3.1 grids and matched broad/candidate
+  entry arrays at both levels and seeds. Emits identity, PSF, design weight
+  and per-context checks; source hashes bind the frozen grids and entries.
+- Python compile and Bash syntax pass. Run the first full shard to measure
+  resource use and inspect the context failures before fanning out.
+
 ## 2026-11-14 — verify the refined tilt pilot on frozen contexts
 
 - Allocated job 61259164 completed 0:0 in 1m25s. Retrieved and verified
