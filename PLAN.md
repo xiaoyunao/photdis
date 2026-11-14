@@ -291,6 +291,7 @@ receipt and recomputes the earlier failed and accepted transitions.
   and the original full-array success dependency remains in place.
   States 24 and 25 started, filling the 12 slots. Raised the cap to
   17 for all remaining states; the joint success dependency is intact.
+  Slurm started states 26–30, so all remaining states are now running.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-15 — start the last NGC288 distance state
+
+- Slurm confirmed states 26–30 started as raw jobs 61277994–61277998.
+  The original array has 15 completed receipts and 17 running tasks.
+  State 30 initialized its checkpoint. States 15 and 31 recorded
+  392 and 384 of 512 rows respectively. Joint job 61263908 waits
+  for the original array to finish.
+
 ## 2026-11-15 — preserve separate NGC288 numerical verdicts in delivery
 
 - Made the joint audit report input failures by check and preserve
