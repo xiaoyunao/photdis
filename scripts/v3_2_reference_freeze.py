@@ -112,14 +112,18 @@ def main():
     parser.add_argument('decision', help='Frozen mechanism and opened evaluation decision marker')
     parser.add_argument('forecast', help='Complete photometry-only four-view forecast marker')
     parser.add_argument('evaluator', help='Registered scoring program for the frozen views')
+    parser.add_argument("--minesweeper", action="store_true")
     args = parser.parse_args()
     root = ROOT/'data/v3_2'
-    out = root/'final_validation_dr19'
+    role = MINESWEEPER_ROLE if args.minesweeper else ROLE
+    out = root/('final_validation_dr20' if args.minesweeper else 'final_validation_dr19')
     out.mkdir(parents=True, exist_ok=True)
     output = out/'freeze.json'
     if output.exists():
         digest = verify_freeze(ROOT, output)
         saved = json.loads(output.read_text())
+        if saved['cohort'] != role:
+            raise ValueError('Existing freeze has the wrong cohort')
         for key in ('decision', 'forecast', 'evaluator'):
             if (ROOT/saved[key]).resolve() != Path(getattr(args, key)).resolve():
                 raise ValueError(f'Existing freeze binds a different {key}')
@@ -128,7 +132,8 @@ def main():
     if (out/'started.json').exists():
         raise ValueError('Outcomes already accessed for this role')
     inv = Inventory(ROOT)
-    native = root/'reference_native'
+    prefix = 'minesweeper' if args.minesweeper else 'reference'
+    native = root/f'{prefix}_native'
     admitted = inv.marker(native/'complete.json')
     if admitted.get('reference_values_read') is not False or not admitted['all_admitted_PSF']:
         raise ValueError('Require outcome-closed PSF admission')
@@ -137,22 +142,30 @@ def main():
     photo, index = load(photo_path), load(index_path)
     require_native(photo)
     aligned(photo, index)
-    for key in ('sdss_id', 'distance_row', 'stellar_row'):
+    if args.minesweeper and not (index['obs'] == 'LCO').all():
+        raise ValueError('DR20 freeze requires LCO pointers')
+    pointer_keys = ('reference_row',) if args.minesweeper else ('sdss_id', 'distance_row', 'stellar_row')
+    for key in pointer_keys:
         v = index[key]
         if v.shape != photo['identity'].shape or v.dtype.kind not in 'iu' or (v < 0).any() or len(np.unique(v)) != len(v):
             raise ValueError(f'Unique integer reference pointers required: {key}')
-    inventory = inv.marker(root/'reference_inventory/complete.json')
+    inventory = inv.marker(root/f'{prefix}_inventory'/'complete.json')
     if inventory.get('outcomes_read') is not False:
         raise ValueError('Reference outcomes were read during identity selection')
-    for archive in ARCHIVES.values():
-        path = root/'reference_sources/dr19_astra_0.6.0'/archive
+    if admitted['inputs'][str(root/f'{prefix}_inventory'/'complete.json')] != sha(root/f'{prefix}_inventory'/'complete.json'):
+        raise ValueError('Native admission binds a different identity census')
+    archives = (root/'reference_sources/dr20_minesweeper/minesweeper_v1.2.2.fits',) if args.minesweeper else (
+        tuple(root/'reference_sources/dr19_astra_0.6.0'/name for name in ARCHIVES.values()))
+    for path in archives:
         inv.add(path, inventory['inputs'][str(path)])
+    if args.minesweeper:
+        inv.add('docs/v3_2_minesweeper_intake.md')
     decision_path = inv.add(args.decision)
     decision = inv.marker(decision_path)
     if decision.get('development_evaluation_complete') is not True or decision.get('new_outcomes_read') is not False:
         raise ValueError('Require a completed opened-domain mechanism decision')
     forecast_path = inv.add(args.forecast)
-    bind_predictions(inv, forecast_path, photo, sha(photo_path), sha(decision_path))
+    bind_predictions(inv, forecast_path, photo, sha(photo_path), sha(decision_path), role=role)
     evaluator = inv.add(args.evaluator)
     for p in ('docs/v3_2_reference_intake.md', 'scripts/v3_2_reference_freeze.py',
               'scripts/v3_2_reference_evidence.py', 'scripts/v3_2_contamination_support.py',
@@ -161,7 +174,7 @@ def main():
               'src/photdis/v3_1/validation_scores.py'):
         inv.add(p)
     inv.unchanged()
-    receipt = dict(cohort=ROLE, n=len(photo['identity']), all_PSF=True,
+    receipt = dict(cohort=role, n=len(photo['identity']), all_PSF=True,
                    predictions_frozen=True, outcomes_opened=False, views=list(VIEWS),
                    decision=str(decision_path.relative_to(ROOT)),
                    forecast=str(forecast_path.relative_to(ROOT)),

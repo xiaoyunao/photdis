@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Open exact new DR19 outcomes after verifying the complete prediction freeze."""
+"""Open exact field outcomes after verifying the complete prediction freeze."""
+import argparse
 from datetime import datetime, timezone
 import json
 import os
@@ -12,12 +13,14 @@ from photdis.gaia import SOURCE_ID_HEALPIX_FACTOR, derive_gaia_labels, join_gaia
 from photdis.stage1 import require_compute
 from photdis.v3_1.freeze import verify_freeze
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
-from v3_2_reference_freeze import ROLE, aligned, require_native
-from v3_2_reference_inventory import ARCHIVES
+from v3_2_reference_freeze import MINESWEEPER_ROLE, ROLE, aligned, require_native
+from v3_2_reference_inventory import ARCHIVES, text
 
 ID_COLS = ('sdss_id', 'gaia_dr3_source_id')
 DIST_COLS = ('nn_dist', 'nn_dist_err', 'nn_dist_model_err', 'flag_bad', 'flag_warn')
 STAR_COLS = ('teff', 'logg', 'e_logg', 'fe_h', 'e_fe_h', 'fe_h_flags', 'snr', 'flag_bad')
+MINESWEEPER_COLS = ('source_id', 'obs', 'flag', 'dist', 'dist_lerr', 'dist_uerr',
+                   'teff', 'logg', 'logg_lerr', 'logg_uerr', 'feh', 'feh_lerr', 'feh_uerr')
 
 
 def projected(path, index, rows, columns):
@@ -70,19 +73,62 @@ def coverage(evidence):
     return rows
 
 
+def minesweeper_channels(table):
+    dist, dlo, dhi = (table[k].astype(float) for k in ('dist', 'dist_lerr', 'dist_uerr'))
+    sigma = np.maximum(dlo, dhi)
+    clean = table['flag'] == 0
+    available = (clean & np.isfinite(dist) & (dist > 0) & np.isfinite(dlo)
+                 & np.isfinite(dhi) & (dlo > 0) & (dhi > 0) & (dlo < dist))
+    teff, g, glo, ghi = (table[k].astype(float) for k in ('teff', 'logg', 'logg_lerr', 'logg_uerr'))
+    good = (clean & np.isfinite(teff) & (teff > 0) & (teff < 7000)
+            & np.isfinite(g) & (g > -9000) & np.isfinite(glo) & np.isfinite(ghi)
+            & (glo > 0) & (ghi > 0))
+    labels = np.full(len(dist), -1, dtype='i1')
+    labels[good & (g-glo > 4.2)] = 0
+    labels[good & (g+ghi < 3.2)] = 1
+    feh, flo, fhi = (table[k].astype(float) for k in ('feh', 'feh_lerr', 'feh_uerr'))
+    feh_good = (good & np.isfinite(feh) & (feh > -9000)
+                & np.isfinite(flo) & np.isfinite(fhi) & (flo > 0) & (fhi > 0))
+    return dict(distance_kpc=np.where(available, dist, np.nan),
+                distance_error_kpc=np.where(available, sigma, np.nan),
+                distance_available=available, distance_precise=available & (sigma < .2*dist),
+                class_label=labels, feh=feh, feh_error=np.maximum(flo, fhi), feh_valid=feh_good)
+
+
+def read_minesweeper(path, index):
+    rows = index['reference_row']
+    order = np.argsort(rows)
+    with fitsio.FITS(str(path)) as handle:
+        names = {n.lower(): n for n in handle[1].get_colnames()}
+        result = handle[1].read(rows=rows[order], columns=[names[n] for n in MINESWEEPER_COLS])
+    restore = np.argsort(order)
+    table = {name: result[names[name]][restore] for name in MINESWEEPER_COLS}
+    if table['source_id'].dtype.kind not in 'iu' or not (index['obs'] == 'LCO').all():
+        raise ValueError('Require exact Gaia integer identities and LCO pointers')
+    np.testing.assert_array_equal(table['source_id'], index['identity'])
+    np.testing.assert_array_equal(text(table['obs']), index['obs'])
+    return minesweeper_channels(table)
+
+
 def main():
     require_compute()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--minesweeper', action='store_true')
+    args = parser.parse_args()
     root = ROOT/'data/v3_2'
-    out = root/'final_validation_dr19'
+    role = MINESWEEPER_ROLE if args.minesweeper else ROLE
+    out = root/('final_validation_dr20' if args.minesweeper else 'final_validation_dr19')
     freeze = out/'freeze.json'
     digest = verify_freeze(ROOT, freeze)
     receipt = json.loads(freeze.read_text())
-    if receipt['cohort'] != ROLE or not receipt['all_PSF']:
+    if receipt['cohort'] != role or not receipt['all_PSF']:
         raise ValueError('Wrong outcome cohort')
-    native = root/'reference_native'
+    native = root/('minesweeper_native' if args.minesweeper else 'reference_native')
     base = root/'reference_sources/dr19_astra_0.6.0'
+    minesweeper = root/'reference_sources/dr20_minesweeper/minesweeper_v1.2.2.fits'
+    archives = [minesweeper] if args.minesweeper else [base/name for name in ARCHIVES.values()]
     native_paths = [native/name for name in ('photometry.npz', 'reference_index.npz')]
-    required = native_paths + [base/name for name in ARCHIVES.values()] + [
+    required = native_paths + archives + [
         Path(__file__).resolve(), ROOT/'scripts/v3_2_reference_freeze.py', ROOT/'src/photdis/gaia.py']
     required += [ROOT/receipt[key] for key in ('decision', 'forecast', 'evaluator')]
     if any(str(p.relative_to(ROOT)) not in receipt['hashes'] for p in required):
@@ -121,14 +167,18 @@ def main():
         with started.open('x') as stream:
             json.dump(dict(sources=sources, utc=datetime.now(timezone.utc).isoformat(),
                            job=os.getenv('SLURM_JOB_ID')), stream, indent=2)
-    dist = projected(base/ARCHIVES['distance'], index, index['distance_row'], DIST_COLS)
-    star = projected(base/ARCHIVES['stellar'], index, index['stellar_row'], STAR_COLS)
+    if args.minesweeper:
+        reference = read_minesweeper(minesweeper, index)
+    else:
+        dist = projected(base/ARCHIVES['distance'], index, index['distance_row'], DIST_COLS)
+        star = projected(base/ARCHIVES['stellar'], index, index['stellar_row'], STAR_COLS)
+        reference = channels(dist, star)
     gaia = join_gaia(photo['identity'], gaia_root)
     label = derive_gaia_labels(gaia)
     if tile_stats() != sources['gaia_tiles']:
         raise ValueError('Gaia archive changed during evidence join')
     evidence = {k: photo[k] for k in ('identity', 'ls_id', 'TYPE', 'cell')}
-    evidence.update(role=np.full(receipt['n'], ROLE), **channels(dist, star),
+    evidence.update(role=np.full(receipt['n'], role), **reference,
                     p_corr=label['p_corr'], gaia_parallax_error=gaia['parallax_error'],
                     parallax_eligible=label['astro_quality'] & label['zpt_valid'] & label['finite_parallax'])
     atomic_npz(out/'evidence.npz', **evidence)

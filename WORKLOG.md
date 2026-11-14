@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — bind DR20 field outcomes to the four-view freeze
+
+- Extended the final runner to bind the DR20 archive and exact LCO
+  pointers, record the freeze before outcome access, recheck row
+  identity and produce the same field scoring outputs as DR19.
+- Registered conservative distance uncertainties and gravity/metallicity
+  eligibility. Compilation, shell syntax, 16 v3.2 tests and a synthetic
+  asymmetric-error check passed. No reference values were opened.
+
 ## 2026-11-14 — connect the DR20 cohort to frozen comparator forecasts
 
 - Added the separate DR20 field role to the existing controls and

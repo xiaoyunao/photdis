@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Compare the frozen DR19 forecasts on matched, independently qualified rows."""
+import argparse
 import json
 import os
 from pathlib import Path
@@ -13,7 +14,7 @@ from photdis.v3_1.validation_report import external_strata, field_statistic
 from photdis.v3_1.validation_scores import compare_score_levels, reference_center_agreement, score_pdf
 from v2_1_near import ROOT, csv_rows, load, save_json, sha
 from v3_2_contamination_support import missing_label_bounds
-from v3_2_reference_freeze import VIEWS, aligned, read_admission
+from v3_2_reference_freeze import MINESWEEPER_ROLE, ROLE, VIEWS, aligned, read_admission
 from v3_2_tilt_inputs import verified
 
 
@@ -253,10 +254,15 @@ def high_q_reference_support(rows, evidence, candidate_admitted):
 
 def main():
     require_compute()
-    out = ROOT/'data/v3_2/final_validation_dr19'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--minesweeper", action="store_true")
+    args = parser.parse_args()
+    out = ROOT/'data/v3_2'/('final_validation_dr20' if args.minesweeper else 'final_validation_dr19')
     marker = out/'freeze.json'
     freeze_sha = verify_freeze(ROOT, marker)
     freeze = json.loads(marker.read_text())
+    if freeze['cohort'] != (MINESWEEPER_ROLE if args.minesweeper else ROLE):
+        raise ValueError('Wrong field cohort for scorer')
     if freeze['evaluator'] != str(Path(__file__).resolve().relative_to(ROOT)):
         raise ValueError('Current scorer differs from registered evaluator')
     evidence_marker = out/'evidence_complete.json'
@@ -264,7 +270,9 @@ def main():
     if complete['freeze_sha256'] != freeze_sha or not complete['outcomes_opened']:
         raise ValueError('Evidence and forecast freeze must match')
     evidence = load(verified(out/'evidence.npz', complete['outputs']['evidence.npz']))
-    photo = load(ROOT/'data/v3_2/reference_native/photometry.npz')
+    native_name = 'minesweeper_native' if args.minesweeper else 'reference_native'
+    photo_path = ROOT/'data/v3_2'/native_name/'photometry.npz'
+    photo = load(verified(photo_path, freeze['hashes'][str(photo_path.relative_to(ROOT))]))
     aligned(photo, evidence)
     forecast = json.loads((ROOT/freeze['forecast']).read_text())
     admission = forecast['candidate_admission']
@@ -298,7 +306,7 @@ def main():
               all_PSF=True, views=list(VIEWS), n=len(evidence['identity']), job=os.getenv('SLURM_JOB_ID'),
               candidate_admitted=int(candidate_admitted.sum()),
               outputs={p.name: sha(p) for p in output.iterdir()},
-              scope='Paired field-reference diagnostics. AstroNNDist agreement is conditional on its reference selection.'))
+              scope='Paired field-reference diagnostics conditional on the qualified teacher selection.'))
 
 
 if __name__ == '__main__':

@@ -30,3 +30,13 @@ Its distance and stellar-parameter outputs support a teacher comparison
 under that selection. Parent contamination and independent absolute
 distance calibration require other evidence. Keep the reference
 outputs closed until the cohort, candidate and comparison rules are frozen.
+
+For teacher scoring, require `FLAG=0` and finite positive heliocentric
+distance and uncertainty on both sides. The Gaussian scoring scale is
+the larger of the two errors, in kpc. The precise subset requires that
+scale to be below 20% of the distance. For cool stars, assign dwarf
+or giant labels only when the lower gravity bound exceeds 4.2 or the
+upper bound is below 3.2, respectively. Keep the middle group as
+unknown. Qualified metallicity uses finite values and positive errors.
+Retain the separate signed Gaia channel and report the dependence of
+MINESweeper on that same astrometric source.

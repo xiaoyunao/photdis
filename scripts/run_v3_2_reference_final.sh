@@ -16,6 +16,15 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 decision=${1:?Expected evaluated mechanism receipt}
 forecast=data/v3_2/reference_forecast/complete.json
 evaluator=scripts/v3_2_reference_score.py
-python -u scripts/v3_2_reference_freeze.py "$decision" "$forecast" "$evaluator"
-python -u scripts/v3_2_reference_evidence.py
-python -u "$evaluator"
+cohort=()
+case "${2:-}" in
+    '') ;;
+    --minesweeper)
+        cohort=(--minesweeper)
+        forecast=data/v3_2/minesweeper_forecast/complete.json
+        ;;
+    *) exit 2 ;;
+esac
+python -u scripts/v3_2_reference_freeze.py "$decision" "$forecast" "$evaluator" "${cohort[@]}"
+python -u scripts/v3_2_reference_evidence.py "${cohort[@]}"
+python -u "$evaluator" "${cohort[@]}"
