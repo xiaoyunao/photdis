@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Recover narrow structure and selected counts from frozen v3.2 simulations."""
 import argparse
+import csv
 from concurrent.futures import ProcessPoolExecutor
 import json
 import multiprocessing as mp
@@ -26,26 +27,101 @@ from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
 from v3_2_tilt_inputs import verified
 
+MODEL_PATH = ROOT / 'data/v3_0/sed_fit.joblib'
+CONTEXT_KEYS = ('context_identity', 'TYPE', 'band_mask', 'flux_error', 'transmission', 'EBV')
 _MODEL = _PHOTO = _GRID = _PRIOR = _ERROR = _POPULATION = _MAPS = _SEED = None
 
 
-def likelihood_entry(row):
+def likelihood(row):
     obs = observation(_PHOTO, row)
     lk, _ = kernel_loglike(_MODEL, obs, _GRID)
     binary = _MODEL.binary_reference_fraction
     native = logsumexp(lk + np.log([1 - binary, binary])[:, None, None], axis=0)
     with np.errstate(divide='ignore'):
         class_log = logsumexp(native[:, None, :] + np.log(_PRIOR)[:, :, None], axis=0)
-    dust = entry_model_with_local_dust(_MODEL, obs['transmission'], obs['EBV'])
+    return class_log
+
+
+def entry_curve(model, observation, error, grid, prior):
+    binary = model.binary_reference_fraction
+    dust = entry_model_with_local_dust(model, observation['transmission'], observation['EBV'])
     entry = []
     # Entry is smooth in distance. Integrate on 0.05-mag nodes and compare
     # against a separately scrambled 0.025-mag grid before interpolation.
     for step, draws, seed in ((.05, 256, 326501), (.025, 512, 326502)):
-        nodes = np.linspace(_GRID[0], _GRID[-1], round(np.ptp(_GRID) / step) + 1)
-        raw = gaussian_component_entry(dust, _ERROR[row], nodes, draws=draws, seed=seed)
-        curve = _PRIOR.T @ ((1 - binary) * raw[0] + binary * raw[1])
-        entry.append([np.interp(_GRID, nodes, x) for x in curve])
-    return class_log, np.asarray(entry)
+        nodes = np.linspace(grid[0], grid[-1], round(np.ptp(grid) / step) + 1)
+        raw = gaussian_component_entry(dust, error, nodes, draws=draws, seed=seed)
+        curve = prior.T @ ((1 - binary) * raw[0] + binary * raw[1])
+        entry.append([np.interp(grid, nodes, x) for x in curve])
+    return np.asarray(entry)
+
+
+def likelihood_entry(row):
+    obs = observation(_PHOTO, row)
+    return likelihood(row), entry_curve(_MODEL, obs, _ERROR[row], _GRID, _PRIOR)
+
+
+def load_entry_model(design):
+    digest = design['inputs'][str(MODEL_PATH.relative_to(ROOT))]
+    return inference_model(joblib.load(verified(MODEL_PATH, digest))), digest
+
+
+def entry_prior(model):
+    prior = model.weights[:, None] * model.classes
+    frequency = prior.sum(axis=0)
+    return prior / frequency, frequency
+
+
+def entry_grid():
+    # 0.01 mag resolves the 0.04 mag lower width bound in the model.
+    return np.linspace(-20, 50, 7001)
+
+
+def verify_psf(photo):
+    if not (photo['TYPE'] == 'PSF').all() or not photo['band_mask'][:, [0, 1, 3]].all():
+        raise ValueError('Verified native PSF grz photometry required')
+
+
+def catalog_rows(design_path, record):
+    path = verified(design_path.parent / 'design.csv', record['outputs']['design.csv'])
+    with path.open(newline='') as stream:
+        return list(csv.DictReader(stream))
+
+
+def cached_entry(catalog, photo, design_path, model_sha):
+    root = ROOT / 'data/v3_2/radial_entry'
+    record = json.loads(design_path.read_text())
+    repeat, = [int(r['repeat']) for r in catalog_rows(design_path, record) if int(r['catalog']) == catalog]
+    folder = root / f'repeat_{repeat:02}'
+    marker_path = folder / 'complete.json'
+    marker = json.loads(marker_path.read_text())
+    if (marker['design_sha256'] != sha(design_path) or marker['repeat'] != repeat
+            or marker['model_sha256'] != model_sha or not marker['all_PSF']
+            or marker['entry_code_sha256'] != entry_signature()):
+        raise ValueError('Entry cache does not match the design or integration code')
+    p = folder / 'curves.npz'
+    data = load(verified(p, marker['outputs']['curves.npz']))
+    for key in CONTEXT_KEYS:
+        np.testing.assert_array_equal(data[key], photo[key], err_msg=key)
+    np.testing.assert_array_equal(data['mu'], _GRID)
+    entry = data['entry']
+    if (entry.shape != (len(photo['TYPE']), 2, 3, len(_GRID))
+            or not np.isfinite(entry).all() or entry.min() < -1e-12 or entry.max() > 1+1e-12):
+        raise ValueError('Invalid cached entry probability array')
+    return entry, marker_path
+
+
+def entry_signature():
+    # Changes to the local-dust response or quadrature invalidate a cache;
+    # unrelated recovery/report code changes do not.
+    import hashlib
+    import inspect
+    module_paths = ('v3/selection.py', 'v3_1/selection_dust.py')
+    functions = (entry_curve, entry_prior, entry_grid)
+    contents = ''.join(inspect.getsource(f) for f in functions)
+    contents += ''.join(sha(ROOT / 'src/photdis' / p) for p in module_paths)
+    return hashlib.sha256(contents.encode()).hexdigest()
+
 
 
 def chain(index):
@@ -102,6 +178,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('catalog', type=int)
     parser.add_argument('--workers', type=int, default=4, choices=range(1, 9))
+    parser.add_argument('--cached-entry', action='store_true')
     args = parser.parse_args()
     root = ROOT / 'data/v3_2/radial_design'
     marker = root / 'complete.json'
@@ -110,23 +187,25 @@ def main():
         raise ValueError('Catalog outside frozen design')
     photo = root / f'photometry_{args.catalog:03}.npz'
     truth_path = root / f'truth_{args.catalog:03}.npz'
-    model = ROOT / 'data/v3_0/sed_fit.joblib'
     _PHOTO = load(verified(photo, design['outputs'][photo.name]))
-    _MODEL = inference_model(joblib.load(verified(model, design['inputs'][str(model.relative_to(ROOT))])))
-    if not (_PHOTO['TYPE'] == 'PSF').all() or not _PHOTO['band_mask'][:, [0, 1, 3]].all():
-        raise ValueError('Verified native PSF grz photometry required')
-    _PRIOR = _MODEL.weights[:, None] * _MODEL.classes
-    frequency = _PRIOR.sum(axis=0)
-    _PRIOR /= frequency
+    _MODEL, model_sha = load_entry_model(design)
+    verify_psf(_PHOTO)
+    _PRIOR, frequency = entry_prior(_MODEL)
     _ERROR = effective_errors(_PHOTO)
-    # 0.01 mag resolves the 0.04 mag lower width bound in the model.
-    _GRID = np.linspace(-20, 50, 7001)
+    _GRID = entry_grid()
     output = ROOT / 'data/v3_2/radial_recovery' / f'catalog_{args.catalog:03}'
+    if output.exists():
+        raise FileExistsError(output)
+    cache_marker = None
+    if args.cached_entry:
+        levels, cache_marker = cached_entry(args.catalog, _PHOTO, marker, model_sha)
+        with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
+            logs = np.asarray(list(pool.map(likelihood, range(len(_PHOTO['identity'])))))
+    else:
+        with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
+            results = list(pool.map(likelihood_entry, range(len(_PHOTO['identity']))))
+        logs, levels = map(np.asarray, zip(*results))
     output.mkdir(parents=True, exist_ok=False)
-    with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
-        results = list(pool.map(likelihood_entry, range(len(_PHOTO['identity']))))
-    logs, levels = zip(*results)
-    logs, levels = np.asarray(logs), np.asarray(levels)
     response = np.exp(logs - logs.max(axis=(1, 2), keepdims=True))
     entry_delta = float(abs(levels[:, 1] - levels[:, 0]).max())
     atomic_npz(output / 'curves.npz', identity=_PHOTO['identity'], TYPE=_PHOTO['TYPE'],
@@ -201,7 +280,9 @@ def main():
                 rows.append(dict(arm=arm, **summarize(params[:, j], parameter_truth[j], name)))
     csv_rows(output / 'recovery.csv', rows)
     csv_rows(output / 'numerical.csv', gates)
-    sources = [marker, photo, truth_path, model, Path(__file__).resolve()]
+    sources = [marker, photo, truth_path, MODEL_PATH, Path(__file__).resolve()]
+    if cache_marker is not None:
+        sources.append(cache_marker)
     sources += [ROOT / 'src/photdis' / p for p in ('v3_1/radial.py', 'v3_1/selection_dust.py',
                 'v3/inference.py', 'v3/selection.py', 'v3/population.py', 'v3/sampling.py')]
     save_json(output / 'complete.json', dict(catalog=args.catalog, all_PSF=True,

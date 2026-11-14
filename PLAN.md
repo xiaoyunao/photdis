@@ -19,11 +19,12 @@ Active goal follows the Pro review of 7699299. See
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
   Recovery pilots for model, empirical and prior-predictive catalogs run
-  in array 61260177.
+  in array 61260177. For later catalogs, verify repeat-based entry reuse
+  against the direct pilot before launching the remaining recoveries.
   Freeze new validation
   before opening outcomes or expanding the production footprint.
 - Trace the 33 frozen conditional count failures with a statewise weight
-  versus response audit. Keep the NGC288 odds test independent.
+  versus response audit (61260338). Keep the NGC288 odds test independent.
 
 ## v3.1 — completed research delivery
 

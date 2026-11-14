@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — reuse identical observation context entry curves
+
+- Implemented two-quadrature caches by frozen design repeat. Verify design,
+  model, integration code and output digests, plus PSF, object order, band
+  mask, flux error, transmission, reddening and distance grid at read.
+- Each catalog still computes its own flux likelihood; the original pilots
+  use direct integration. Python/Bash syntax and a two-kernel equality,
+  class-frequency and context/model rejection smoke test pass.
+- Next compare cached repeat 00 with direct catalog 000 in the actual
+  allocated-run products before scheduling all repeats and catalog fits.
+
 ## 2026-11-14 — isolate the v3.1 conditional count transfer failures
 
 - Recovered matching b9ac397 heads with Git. Slurm confirms radial pilots
