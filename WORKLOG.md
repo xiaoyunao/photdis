@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify the candidate-zero posterior
+
+- Candidate zero (61259811_2, raw 61269606) completed 0:0. Confirmed
+  identical 64 shard receipts and source recipe with broad zero,
+  3,540 candidate PSFs, both sensitivity tables and the sampler verdict.
+  Maximum Rhat 1.00065, minimum ESS 2048 and no divergences.
+- Alternative entry levels shift the absolute log normalizer +0.1283
+  and +0.2938 nat. Maximum joint basis probability and count changes
+  are 0.0003433 and 0.1411 objects. Both free fits and matched
+  prediction/score analysis are pending.
+
 ## 2026-11-14 — advance the pending candidate-zero fit
 
 - Broad zero completed in 75 seconds. Candidate zero uses the same

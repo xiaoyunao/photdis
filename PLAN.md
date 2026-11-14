@@ -33,8 +33,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   report (61259977) run in dependency order. Broad zero completed in
   75 seconds and its sampler passed. Its 64 source receipts and both
   sensitivity tables are verified.
-  Candidate zero moved to debug QoS with a 30-minute limit, based on
-  broad zero's measured runtime. Both free fits retain regular QoS.
+  Candidate zero completed in debug QoS and passed sampling.
+  Both free fits retain regular QoS.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,
