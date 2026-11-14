@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — prepare the independent NGC288 joint-result audit
+
+- Added a compact audit that binds the original parent and 32 input
+  receipts to the joint calculation and independently recomputes the
+  14 verdicts, final member contrast and count covariance decomposition.
+  The joint writer now exports all five common-modulus quantiles.
+- Python syntax and a synthetic 512-member/32-state smoke check passed.
+  The check retains intentional numerical failures and rejects a non-PSF
+  row and an invalid covariance. Production waits for joint job 61263908.
+
 ## 2026-11-14 — verify radial cache 21 and advance two queued repeats
 
 - Repeat 21 (raw 61273336) completed 0:0 in 14m03s. Verified its

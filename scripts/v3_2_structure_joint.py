@@ -174,7 +174,9 @@ def main():
                                   mean_members=float(result['mean'][0]), member_sd=float(np.sqrt(result['covariance'][0, 0])),
                                   response_ess=float(1/np.sum(result['response_weights']**2)),
                                   q025=float(result['common_mu_quantiles'][0]),
+                                  q16=float(result['common_mu_quantiles'][1]),
                                   q50=float(result['common_mu_quantiles'][2]),
+                                  q84=float(result['common_mu_quantiles'][3]),
                                   q975=float(result['common_mu_quantiles'][4])))
     delta = compare(*final)
     # Full versus Gaussian is a scientific contrast, not a convergence gate.

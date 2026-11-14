@@ -181,6 +181,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   receipt and per-context verdict reconciliation.
   The joint evaluator exports the final PSF membership pairs and
   conditional, shared and total count covariance as compact CSV tables.
+  Collect the joint receipt, five CSV tables and branch comparison
+  JSON. Run `python3 scripts/v3_2_structure_joint_audit.py` after the
+  32 input receipts and joint tables are available.
 
 ## v3.1 — completed research delivery
 
