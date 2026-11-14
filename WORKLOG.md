@@ -1,5 +1,30 @@
 # WORKLOG
 
+## 2026-11-15 — verify both canceled-catalog retries and three more strata
+
+- Both retry tasks 61278909_37 and _46 completed in debug in
+  3m20s and 3m25s. Verified the receipts against raw IDs
+  61278998 and 61278909. The report dependency on the retry
+  array cleared. The original array still runs.
+- Also archived 055–057. All ten new fits pass. Stage delivery
+  verified 62 catalogs, 124 verdicts (103 accepted) and 2,480
+  intervals. Seven of 33 strata have all registered outputs.
+- At 30% generating member fraction, all eight local fits
+  pass in each of the three complete model-SED strata. Width
+  intervals cover 7/8 at 0.08 mag in near background, 8/8 at
+  0.08 mag in deep background, and 8/8 at 0.25 mag in near background.
+
+## 2026-11-15 — archive five more shared radial results
+
+- Verified catalogs 050–054 against their Slurm completions and
+  frozen receipts. All ten new fits pass. Stage delivery verified
+  57 catalogs, 114 verdicts (93 accepted), 2,280 intervals and ten
+  NGC288 states. Four recovery strata have all repeats archived.
+- Moved pending zero-runtime catalogs 079–127 to CPU shared in place.
+  Observed eight concurrent original recovery jobs before the move.
+  Both retry tasks started in debug. The three live NGC288 states
+  remain in CPU shared.
+
 ## 2026-11-15 — archive four shared recoveries and advance the retry array
 
 - Archived catalogs 045, 047, 048 and 049 after successful exits
