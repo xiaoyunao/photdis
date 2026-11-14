@@ -77,6 +77,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   active child. Slurm cleared that reason and preserved the recovery
   dependency. Repeats 16 and 17 moved to debug QoS with 30-minute limits.
   Both completed in debug with the existing afterok dependency intact.
+  Repeat 18 is running in regular QoS. Repeat 19 moved to the available
+  debug slot, retaining its original array membership.
   Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.

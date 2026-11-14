@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — advance radial cache repeat 19
+
+- Repeat 18 was already running in regular QoS. Moved the unstarted
+  repeat 19 to the vacant debug slot with a 30-minute limit, based on
+  the comparable runs for repeats 13–17.
+- Controller assigned raw ID 61272075 and confirmed recovery's original
+  afterok dependency. DR20 retry 61272013 is using the other debug slot.
+
 ## 2026-11-14 — retry the closed DR20 comparator after a node failure
 
 - Job 61271028 ended NODE_FAIL on nid006721 after 10m41s. Confirmed
