@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — verify radial catalogs 082–084
+
+- Archived three successful Slurm outputs with matching receipts.
+  All six fits pass. Stage delivery verified 87 catalogs, 174
+  verdicts (153 accepted), 3,480 intervals and ten completed strata.
+- The shared queue filled both array caps at the inspected
+  snapshot, with eight radial tasks and five NGC288 states running.
+  NGC288 states 10–14 reached 176, 144, 144, 48 and 48 verified
+  object checkpoints. No new terminal failures appeared.
+
 ## 2026-11-15 — verify the 60 percent deep-background narrow stratum
 
 - Archived 075, 076 and 079–081. All ten fits pass. Stage
