@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify half of the radial entry cache
+
+- Collected repeat 13–15 receipts and checkpoint inputs from NERSC.
+  `python3 scripts/v3_2_radial_cache_audit.py` verified all 16 available
+  repeats and 2,048 native contexts against the frozen design.
+- The remaining 16 repeats precede the full cached recovery array.
+  NGC288 state 1 started while state 0 remained active.
+
 ## 2026-11-14 — verify the candidate-zero posterior
 
 - Candidate zero (61259811_2, raw 61269606) completed 0:0. Confirmed
