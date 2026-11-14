@@ -52,6 +52,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   and decomposes the historical regression with an exact same-object sum.
   Numerical summaries retain flags for each available score channel.
   The opened-sky factorial PNG was rendered and visually checked.
+  The remaining zero-tilt population contrast changes size and admission
+  together. Register one broad sample of 3,540 PSFs and fit both tilt
+  modes with the original broad normalization. See
+  `docs/v3_2_tilt_size_protocol.md` for the draw and opened-only scoring.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See

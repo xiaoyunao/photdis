@@ -187,7 +187,7 @@ def one(row):
     return rows, path.name, sha(path)
 
 
-def main():
+def main(*, run='initial', arm_names=ARMS, fit_inputs=()):
     global _STATE
     require_compute()
     source = ROOT / 'data/v3_1'
@@ -206,7 +206,7 @@ def main():
     if np.intersect1d(original['identity'], photo['identity']).size:
         raise ValueError('Prediction identities overlap population fit')
     bounds = {}
-    paths = [pilot, model_path, shared_path, prepared, Path(__file__).resolve()]
+    paths = [pilot, model_path, shared_path, prepared, Path(__file__).resolve(), *fit_inputs]
     paths.extend(ROOT / f'src/photdis/{name}' for name in
                  ('v3/inference.py', 'v3/systematics.py', 'v3/likelihood.py',
                   'v3/metrics.py', 'v3_1/shared_prior.py', 'v3_1/validation_scores.py'))
@@ -218,8 +218,8 @@ def main():
     fields, _ = geographic_fields(photo['RA'], photo['DEC'], photo['cell'], bounds)
     calibration, _ = calibration_vectors(photo, load(shared_path), 12)
     arms = {}
-    for arm in ARMS:
-        folder = ROOT / 'data/v3_2/tilt_fits/initial' / arm
+    for arm in arm_names:
+        folder = ROOT / 'data/v3_2/tilt_fits' / run / arm
         path = folder / 'complete.json'
         marker = json.loads(path.read_text())
         fit = load(verified(folder / 'posterior.npz', marker['outputs']['posterior.npz']))
@@ -259,7 +259,7 @@ def main():
             raise ValueError('Numerical grid has no accepted reference provenance')
         steps.append(marker['selected_step'])
     inputs.update({str(p.relative_to(ROOT)): sha(p) for p in paths})
-    output = ROOT / 'data/v3_2/tilt_predictions/initial'
+    output = ROOT / 'data/v3_2/tilt_predictions' / run
     output.mkdir(parents=True, exist_ok=False)
     _STATE = photo, evidence, calibration, model, arms, fields, steps, output
     rows, markers = [], {}
@@ -272,7 +272,7 @@ def main():
     csv_rows(output / 'objects.csv', rows)
     save_json(output / 'complete.json', dict(inputs=inputs, objects=markers,
               outputs={'objects.csv': sha(output / 'objects.csv')}, all_PSF=True,
-              job=os.getenv('SLURM_JOB_ID'), n=len(markers), arms=ARMS,
+              job=os.getenv('SLURM_JOB_ID'), n=len(markers), arms=arm_names,
               scope='Opened field development diagnostic on frozen grids. '
                     'Grid sensitivity and fresh outcomes are separate requirements.'))
 

@@ -171,7 +171,7 @@ def selected_quantities(data, model, theta, beta, level):
     return joint, entry
 
 
-def main():
+def main(*, broad_size_control=None, registration=None):
     global _HIERARCHY, _FIT
     require_compute()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -193,8 +193,15 @@ def main():
     if flags[args.case] and not args.diagnostic_with_flags:
         raise ValueError(f'{flags[args.case]} {args.case} contexts need refinement')
     run = 'diagnostic' if args.diagnostic_with_flags else 'initial'
+    if broad_size_control is not None:
+        if args.case != 'broad' or run != 'initial' or args.initial_only:
+            raise ValueError('The size control requires the verified refined broad sample')
+        data = broad_size_control(data)
+        run = 'size_control'
     output = ROOT / 'data/v3_2/tilt_fits' / run / f'{args.case}_{args.mode}'
     output.mkdir(parents=True, exist_ok=False)
+    if registration is not None:
+        atomic_npz(output / 'sample.npz', **{k: data[k] for k in ('row', 'identity', 'TYPE', 'field', 'design_weight')})
     fitted = {}
     for level in (0, 2, 1):
         hierarchy = construct(data, model, args.mode, level)
@@ -240,6 +247,8 @@ def main():
         ROOT / 'src/photdis/v3/fast_hierarchy.py', ROOT / 'src/photdis/v3/hierarchy.py',
         ROOT / 'src/photdis/v3/sampling.py', ROOT / 'src/photdis/v3_1/fixed_population.py',
         ROOT / 'src/photdis/v3_2/tilt_transfer.py')}
+    if registration is not None:
+        inputs.update({str(path.relative_to(ROOT)): sha(path) for path in registration})
     save_json(output / 'complete.json', dict(
         case=args.case, tilt=args.mode, n=len(data['identity']), all_PSF=True,
         outputs={p.name: sha(p) for p in sorted(output.iterdir())}, inputs=inputs,

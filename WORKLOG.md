@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — register the size-matched broad control
+
+- Added a single seeded 3,540-PSF broad draw with original weights
+  and both tilt modes. The size-control path reuses the population
+  fitter, scaling and prediction code and writes to its own run.
+- Rechecked the four original receipts against their exact Git
+  producer. Python syntax, shell syntax and a fixed-sample smoke
+  check passed. Next collect the two registered fits and one paired
+  comparison on previously opened objects.
+
 ## 2026-11-14 — plot the completed field and common-scale comparisons
 
 - Added the source-bound development, DR20 and HST comparison plate

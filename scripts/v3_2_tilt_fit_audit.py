@@ -4,6 +4,7 @@ import argparse
 import csv
 from hashlib import sha256
 import json
+import subprocess
 from math import isfinite
 from pathlib import Path
 
@@ -77,6 +78,10 @@ def audit(*, complete=False):
                    'src/photdis/v3_1/fixed_population.py', 'src/photdis/v3_2/tilt_transfer.py')
     source_digests = {k: pilot['inputs'][k] for k in remote_sources}
     source_digests.update({k: digest(ROOT/k) for k in fit_sources})
+    # Authenticate the exact producer of the immutable four initial receipts.
+    producer = 'scripts/v3_2_tilt_fit.py'
+    original = subprocess.check_output(['git', 'show', f'fc937cb:{producer}'], cwd=ROOT)
+    source_digests[producer] = sha256(original).hexdigest()
     records = []
     for case in ('broad', 'candidate'):
         for mode in ('zero', 'free'):
