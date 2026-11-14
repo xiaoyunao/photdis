@@ -9,7 +9,8 @@
   joins. Exclude whole systems with historical membership, imaging or
   footprint overlap. Preserve all PSF/selection and zero-admission counts.
 - Confirmed the 21 catalog method entries and the two candidates locally.
-  Actual admitted support awaits the allocated native join.
+  Twelve holdout/sky tests pass. Allocated native join 61262297 submitted.
+  Actual admitted support awaits its products.
 
 ## 2026-11-14 — bind historical regression attribution to common objects
 

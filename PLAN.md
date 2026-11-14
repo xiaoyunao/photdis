@@ -40,7 +40,7 @@ Active goal follows the Pro review of 7699299. See
   The frozen nominal, historical target and QRF forecasts (61261381)
   follow native admission. Candidate forecast awaits the mechanism decision.
 - Inventory new common-distance HST methods. Metadata enables targeted
-  native PSF and historical overlap checks on 47 Tuc and NGC362.
+  native PSF and historical overlap checks on 47 Tuc and NGC362 (61262297).
   Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
