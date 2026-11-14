@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — make radial cache receipt verification reproducible
+
+- Added an independent compact audit against the frozen simulation,
+  repeat-00 equivalence receipt and each checkpoint's metadata.
+  It verifies 5 available receipts and 640 contexts. Full mode fails
+  on an incomplete inventory, and a changed context count is rejected.
+- Compilation and diff checks passed. DR20 native matching was still
+  running and the four-arm fit was pending on priority.
+
 ## 2026-11-14 — validate DR20 FITS row order and exact pointer handling
 
 - Added a FITS regression for unsorted original row pointers, Gaia IDs
