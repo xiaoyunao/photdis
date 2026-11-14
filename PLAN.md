@@ -99,7 +99,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
   Census 61267684 completed with 7,297 native match requests. Native job
   61267848 found 7,292 primary PSFs and admitted 1,117. The three frozen
-  DR20 comparators are queued as 61271028. Job 61268949 failed on the
+  DR20 comparators started as 61271028 in 30-minute debug QoS.
+  Job 61268949 failed on the
   nonuniform input grid and its log is retained. The corrected wrapper uses
   uniform likelihood grids and inserts reporting boundaries during integration.
   Photometry audit 61269472 verifies 53 sky cells and confirms that all

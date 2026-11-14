@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — start the corrected DR20 comparator
+
+- Job 61271028 still waited on regular resources while the matching
+  103-object common-scale run had completed in 61s. Verified no existing
+  output, unopened DR20 outcomes and vacant debug capacity.
+- Moved the existing job to debug QoS with a 30-minute limit. Slurm
+  confirmed it started. Four-arm prediction 61259969 remains eligible
+  in regular QoS, with its paired report waiting on afterok.
+
 ## 2026-11-14 — complete and verify all four factorial fits
 
 - Candidate/free 61259811_3 completed 0:0 in 1m51s on 3,540 PSFs.
