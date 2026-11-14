@@ -25,6 +25,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.
+  Raised the input array throttle from 4 to 5 after all eight pending
+  slots reported JobArrayTaskLimit with no running slots. The scheduler
+  cleared that reason and retained both downstream dependencies.
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.

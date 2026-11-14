@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — clear the tilt array's persistent task-limit reason
+
+- Scheduler and accounting showed 23 completed children in 61259514, eight
+  zero-runtime pending children with JobArrayTaskLimit, and no active child.
+- Ran `scontrol update JobId=61259514 ArrayTaskThrottle=5`. Controller
+  records for 24 and 31 confirmed the change from 4 to 5 and cleared
+  JobArrayTaskLimit. No jobs were duplicated or resubmitted.
+- Verified refinement 61259727 retains aftercorr on 61259514 and the four-arm
+  fit 61259811 retains afterok on 61259727. Pending children still need compute
+  results and compact receipt verification. Scientific inputs and code are unchanged.
+
 ## 2026-11-14 — verify radial verdicts at aggregation
 
 - The final radial report now independently recomputes numerical verdicts
