@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify 90 percent near wide recovery and two NGC288 states
+
+- Archived radial catalogs 242 and 244–250 with the completed-mode
+  collector. All 16 fits pass. Completed-only delivery verified
+  252 catalogs, 457 of 504 accepted fits, 10,080 intervals and 31 strata.
+- Recomputed the 90% near-background, 0.25 mag empirical stratum.
+  Width coverage is 5/8 and the paired count-error change is −10.69
+  percentage points. Updated `docs/v3_2_result.md`.
+- Collected NGC288 states 12 and 14. Each has one Gaussian native
+  flag and passes the other 2,559 checks. Fourteen states are archived.
+
 ## 2026-11-15 — verify 90 percent deep narrow recovery and NGC288 state 11
 
 - Archived 234–241 and 243 with the completed-mode radial collector.

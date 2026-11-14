@@ -137,10 +137,10 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Two hundred forty-four of 288 catalogs have verified compact outputs.
+  Two hundred fifty-two of 288 catalogs have verified compact outputs.
   All 16 fixed model-SED strata and all 12 empirical-SED strata at
   10%, 30% and 60% are complete, along with the 90% empirical
-  0.08 mag strata in both backgrounds.
+  0.08 mag strata in both backgrounds and the near 0.25 mag stratum.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
@@ -270,6 +270,8 @@ catalogs archived.
   seed flags. All archived-node closure checks pass for that state.
   State 11 passed all 2,560 context checks. Twelve states are archived.
   State 31 started in the slot released by state 10.
+  States 12 and 14 completed. Each retains one Gaussian native flag
+  and passes the other context checks. Fourteen states are archived.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

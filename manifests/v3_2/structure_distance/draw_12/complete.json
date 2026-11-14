@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "scripts/v3_2_structure_distance.py": "a35fdf9a70d988210d64da17cd950a18d592d7f5012d7965062494046a54dfdd",
+    "data/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+    "data/v3_1/structure/native_refined/draw_12/complete.json": "59b05686d1e6b97d2eb540d99e8772e34e57c7a5a6441a537fae7bfb3ebf2223",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "docs/v3_2_structure_protocol.md": "20e054a72a2272cc96ccda154fb46ede6e83aa4c67add94ee0c89f30a4379ee0",
+    "scripts/v3_2_radial_checkpoint.py": "52bd398afb2c5945082934cf2f0e6537fddd1a40db8030f4e491cff51edba2b0",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/gaussian_response.py": "0c130d60d7e07c09c588fa507cf1127bb8c78783b9071909164b7e8db7449cfc"
+  },
+  "row_checkpoint_sha256": "3f3e25c140f0ed57a876c079b2bb49b9704f993bf13872bbabc47f52c838b539",
+  "outputs": {
+    "nodes.npz": "c92a46b52a8efaf64e9bd28697aa1f38baebc1e1e96495bfe09243cbac02dfdf",
+    "checks.csv": "a0a62d9dbf279e054fa052aa9a92d9c5ce96718874420d6c8f00ae692d37cf31"
+  },
+  "job": "61277980",
+  "draw": 12,
+  "pilot": false,
+  "all_PSF": true,
+  "n": 512,
+  "new_nodes": 384,
+  "archived_native_maximum_delta": 0.0,
+  "failures": 1,
+  "passed": false
+}
