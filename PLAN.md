@@ -7,6 +7,10 @@ Active goal follows the Pro review of 7699299. See
 ledger in `docs/v3_2_requirements_result.md`.
 The synthesis in `docs/v3_2_result.md` records the completed model
 and external findings and identifies the two pending application results.
+Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
+after both application reports and all visual reviews. During the runs,
+`--completed-only` verifies available evidence and reports missing
+products without a final delivery verdict.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.

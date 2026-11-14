@@ -10,6 +10,9 @@
   review to PNG hashes. Verified their registered sources, PDF labels
   and page sizes, PNG resolution and atlas links. The final audit
   also requires the two recovery plates and one NGC288 joint plate.
+- Added the integrated delivery audit. Its completed-only mode
+  passed. Full mode rejected the four pending report and figure
+  receipts before emitting a final result.
 
 ## 2026-11-14 — prepare fixed-truth and prior-predictive coverage plates
 
