@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the effect of external numerical filtering
+
+- Reconciled three DR20 score contrasts after numerical filtering
+  and four HST median residuals across the native and matched gates.
+  The candidate still scores below nominal on DR20. The NGC362
+  numerical-only median shifts from +11.34% for 19 native members
+  to −31.71% for ten members inside the matched gate.
+- Updated the external report and reran the archived freeze audit.
+  Both science summaries still await their production inputs.
+
 ## 2026-11-14 — reconcile completed recovery jobs with output receipts
 
 - Added `--completed` to the radial collector. It uses terminal

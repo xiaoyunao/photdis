@@ -48,6 +48,25 @@ The score improvements over old target do not establish calibrated
 distance or class probabilities for the proposed product.
 [HST common-scale table](../manifests/v3_2/final_validation_common/scale_agreement.csv)
 
+## Effect of numerical filtering
+
+On DR20 pairs where both forecasts meet the per-view numerical gates,
+the candidate still gains +0.1432 nat against QRF (1,008 pairs) and
++1.0907 nat against old target (1,006 pairs). It loses 0.5272 nat
+against nominal (1,007 pairs). These are comparator-specific subsets.
+
+For the HST systems, the candidate's native-cohort median residual
+after numerical filtering is +19.66% on 73 members of 47 Tuc and
++11.34% on 19 members of NGC362. The joint photometric and candidate
+numerical cuts leave 59 and 10 members, respectively. Candidate
+median residuals in those two subsets are +18.08% and −31.71%.
+The NGC362 residual changes sign across the two admissions. Its
+10-member result is conditional on the selected subset and shared
+reference scale.
+
+[Filtered signed Gaia pairs](../manifests/v3_2/final_validation_dr20/scores/paired.csv) ·
+[Filtered HST comparisons](../manifests/v3_2/final_validation_common/scale_agreement.csv)
+
 [Signed Gaia and HST figure](v3_2_atlas.md#signed-gaia-scores-and-hst-distance-scales)
 
 ## Supported comparisons by distance
