@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — test forecast entry sensitivity against direct inference
+
+- Added an end-to-end comparison of reweighted joint bins, signed Gaia
+  log score and PIT, and AstroNN log score against fresh native mixtures
+  at both alternative entry levels. The focused test passed.
+- The first local suite hit a native segmentation fault. A rerun with
+  `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+  VECLIB_MAXIMUM_THREADS=1` passed all 468 tests. Diff checks passed.
+- Broad/free has written all three MAP levels and remains in the sampling
+  stage. Candidate/free and external controls remain queued.
+
 ## 2026-11-14 — verify live NGC288 checkpoints and prepare state reconciliation
 
 - Verified eight real checkpoints from active states 00 and 01 against
