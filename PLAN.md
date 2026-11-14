@@ -289,6 +289,8 @@ receipt and recomputes the earlier failed and accepted transitions.
   States 21 and 22 started. With nine running and eight pending at
   JobArrayTaskLimit, raised the cap to 12. The pending limit cleared
   and the original full-array success dependency remains in place.
+  States 24 and 25 started, filling the 12 slots. Raised the cap to
+  17 for all remaining states; the joint success dependency is intact.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

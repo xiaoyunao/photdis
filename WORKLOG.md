@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — release the remaining NGC288 scheduling slots
+
+- Slurm started states 24 and 25. With 12 running and the final five
+  pending at `JobArrayTaskLimit`, set `ArrayTaskThrottle=17` for
+  61263907 so every unfinished state can be scheduled. Verified the
+  pending reason cleared and joint job 61263908 retains `afterok` on
+  the full array. The per-state 32 CPU, 32 GiB and three-hour requests
+  remain in effect.
+- Checked live row checkpoints and prior completion times. The
+  longest completed shared allocation took 2h18m39s. State 15
+  had reached 328 of 512 rows in under 1h22m. Fifteen full receipts
+  are archived. Collect new receipts after Slurm reports success.
+
 ## 2026-11-15 — verify the frozen NGC288 odds-axis evidence
 
 - Added fixed-distance odds reconciliation to the staged and final
