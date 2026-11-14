@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — correct DR19 source-row provenance and collect new controls
+
+- Initial identity job 61260891 returned zero requests. The archive uses
+  row label sdss5 for SDSS-V and dr17 for legacy. Fixed the comparison
+  that used the release name dr19. Preserved the zero census and held
+  downstream native and comparator jobs before either could use it.
+- Authenticated refinement 02 (25/25) and 03 (22/22). All 94 initial
+  flags in completed shards 00–03 have now passed the registered refinement.
+- Job 61262297 completed the common-scale native intake. 47 Tuc admits
+  77 PSFs and NGC362 admits 26. The scale values remain closed.
+- Submitted full NGC288 distance array 61263907 and joint analysis
+  61263908, with verified afterok dependency on all array elements.
+
 ## 2026-11-14 — qualify the added NGC288 distance quadrature
 
 - Slurm 61260630 completed 0:0 in 2m48s. Verified 15/15 checks across

@@ -1,0 +1,18 @@
+{
+  "distance_fresh_eligible": 0,
+  "stellar_fresh_eligible": 0,
+  "unmatched_stellar": 0,
+  "distance_duplicate_identity_exclusions": 0,
+  "stellar_duplicate_identity_exclusions": 0,
+  "distance_rows": 1112053,
+  "stellar_rows": 1095480,
+  "distinct_joint_ids": 0,
+  "coordinate_agreement": 0,
+  "high_latitude": 0,
+  "prior_id_excluded": 0,
+  "old_sky_excluded": 0,
+  "footprint_excluded": 0,
+  "known_system_excluded": 0,
+  "match_requests": 0,
+  "scientific_admissions": 0
+}

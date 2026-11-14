@@ -1,0 +1,12 @@
+path,matched_identity,matched_sky_block
+data/pilot_audit_v1/reference.fits,0,0
+data/baseline_v0/references.npz,0,0
+data/giant_information_v1/labels.npz,0,0
+data/baseline_v1_4/references.npz,0,0
+data/v2_3/training.npz,0,0
+data/v3_0/references.npz,0,0
+data/v3_0/validation/reservation/photometry.npz,0,0
+data/v3_0/validation/new_sky/photometry.npz,0,0
+data/v3_0/validation/independent_scale/photometry.npz,0,0
+data/v3_1/validation_roles/field_photometry.npz,0,0
+data/v3_1/validation_roles/common_photometry.npz,0,0

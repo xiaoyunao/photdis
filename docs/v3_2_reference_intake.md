@@ -20,6 +20,12 @@ The archive includes combined SDSS-V spectra as well as legacy DR17
 spectra. Exclude DR17 APOGEE IDs and Gaia identities from the proposed
 fresh DR19-only channel and require the APO 2.5m SDSS-V 1.3
 reduction and at least one good visit in both products.
+The archive is published in DR19. The source-row release column uses
+`sdss5` for SDSS-V provenance and `dr17` for the legacy spectra.
+The first identity census used the archive's release name as a row
+value and returned zero requests. Its unchanged receipt records the
+actual provenance labels. The corrected census restores the intended
+SDSS-V filter with all other eligibility rules preserved.
 [SDSS DR19 infrared data](https://www.sdss.org/dr19/data_access/get_data/)
 Use the Astra ASPCAP flags for independent stellar-parameter eligibility.
 AstroNNDist uses spectra, 2MASS Ks and extinction and was trained using

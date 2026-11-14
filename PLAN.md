@@ -14,7 +14,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00 and 01 refinements pass 26/26 and 21/21. Array 61259727 uses aftercorr on
+  Shards 00–03 refinements pass 26/26, 21/21, 25/25 and 22/22.
+  Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.
   Four matched fits (61259811), predictions (61259969), and the paired
@@ -38,8 +39,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   retains missing or excluded catalogs in the coverage bounds.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
-  Identity index 61260891 verifies the archive receipt, and native match
-  61260892 follows it. Freeze model, rules and new reference roles before
+  Initial index 61260891 exposed a release-column mismatch. The corrected
+  census uses the observed SDSS-V provenance. Native match 61260892 and
+  comparator 61261381 were held for the corrected identity pass.
+  Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
@@ -54,8 +57,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   point runs freeze, evidence access and scoring in that order.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
-- Inventory new common-distance HST methods. Metadata enables targeted
-  native PSF and historical overlap checks on 47 Tuc and NGC362 (61262297).
+- Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
+  in 47 Tuc and 26 in NGC362. Freeze forecasts and qualify those scopes
+  before releasing their distance scales.
   Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
@@ -63,7 +67,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   64. Both branches pass 512 to 1024 and retain failures at 256 to 512.
   Added-distance pilot 61260630 passed all 15 checks, with exact native
   closure at the old nodes. Full 32-state integration uses the registered
-  levels with per-state checkpoints, followed by the two-axis evaluator.
+  levels with per-state checkpoints (61263907). The two-axis evaluator
+  61263908 waits on all 32 states.
 
 ## v3.1 — completed research delivery
 

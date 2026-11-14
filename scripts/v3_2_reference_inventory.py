@@ -25,6 +25,7 @@ COLS = ('sdss_id', 'gaia_dr3_source_id', 'ra', 'dec', 'release', 'apred',
 ARCHIVES = {'distance': 'astraAllStarAstroNNdist-0.6.0.fits.gz',
             'stellar': 'astraAllStarASPCAP-0.6.0.fits.gz'}
 SIZE = {'distance': 534769970, 'stellar': 1171102556}
+FRESH_RELEASE = 'sdss5'
 
 
 def text(column):
@@ -48,7 +49,7 @@ def inventory_join(distance, stellar, legacy_ids, legacy_names):
         sid, gid = table['sdss_id'], table['gaia_dr3_source_id']
         if sid.dtype.kind not in 'iu' or gid.dtype.kind not in 'iu':
             raise ValueError('SDSS and Gaia identities must remain exact integers')
-        new = ((text(table['release']) == 'dr19') & (text(table['apred']) == '1.3')
+        new = ((text(table['release']) == FRESH_RELEASE) & (text(table['apred']) == '1.3')
                & (text(table['telescope']) == 'apo25m') & (table['n_good_visits'] > 0))
         legacy = np.isin(gid, legacy_ids) | np.isin(text(table['obj']), legacy_names)
         legacy |= np.isin(text(table['sdss4_apogee_id']), legacy_names)
@@ -108,6 +109,9 @@ def main():
     legacy_path = verified(Path(legacy_name), legacy[legacy_name])
     old = fitsio.read(str(legacy_path), ext=1, columns=['APOGEE_ID', 'GAIAEDR3_SOURCE_ID'])
     ds, sp = [read_apogee(paths[k]) for k in ('distance', 'stellar')]
+    if any(not ((text(t['release']) == FRESH_RELEASE) & (text(t['apred']) == '1.3')).any()
+           for t in (ds, sp)):
+        raise ValueError('Expected SDSS-V provenance missing from an Astra archive')
     a, b, counts = inventory_join(ds, sp, old['GAIAEDR3_SOURCE_ID'][old['GAIAEDR3_SOURCE_ID'] > 0],
                                    np.unique(text(old['APOGEE_ID'])[text(old['APOGEE_ID']) != '']))
     ids = ds['gaia_dr3_source_id'][a]

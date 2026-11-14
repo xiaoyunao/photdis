@@ -50,6 +50,8 @@ def main():
     if record['outcomes_read'] or record['scientific_sample_exported']:
         raise ValueError('Require a photometry-only native match request')
     requests = load(verified(source/'requests.npz', record['outputs']['requests.npz']))
+    if len(requests['identity']) == 0:
+        raise ValueError('No native match requests in the authenticated identity inventory')
     out = ROOT/'data/v3_2/reference_native'
     if out.exists():
         raise FileExistsError(out)
