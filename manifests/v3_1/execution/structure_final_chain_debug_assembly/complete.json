@@ -1,0 +1,10 @@
+{
+  "scheduler_change_complete": true,
+  "stage": "assembly",
+  "job": "61232760",
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "a0b35f905b709c856326e0b0e0b21b6bf27710cd530769e6e5d920f4869ef5e6"
+  },
+  "scope": "Existing dependency-gated final stage uses debug with unchanged original time limit, command, CPUs and scientific sources. Fresh global5-jobcap; no new submission, cancellation, dependency edit or scientific completion claim."
+}

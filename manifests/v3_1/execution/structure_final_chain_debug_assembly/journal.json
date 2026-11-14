@@ -1,0 +1,70 @@
+{
+  "commands": [
+    {
+      "args": [
+        "squeue",
+        "-h",
+        "-r",
+        "-u",
+        "yunao",
+        "-o",
+        "%i|%T|%q|%M|%l|%R"
+      ],
+      "code": 0,
+      "stdout": "61246935_30|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61246935_31|PENDING|debug|0:00|30:00|(QOSMaxJobsPerUserLimit)\n61233366|PENDING|regular_1|0:00|15:00|(Dependency)\n61232762|PENDING|regular_1|0:00|30:00|(Dependency)\n61232761|PENDING|regular_1|0:00|30:00|(Dependency)\n61232760|PENDING|regular_1|0:00|30:00|(Dependency)\n61246935_29|RUNNING|debug|0:20|30:00|nid004272\n61246935_28|RUNNING|debug|13:30|30:00|nid004347\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61232760",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232760 JobName=photdis_v3_1_structureassemble UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Dependency Dependency=afterok:61246935_*(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_assemble.sh SubmitLine=sbatch --parsable --dependency=afterok:61231239:61223167:61223172_1:61229422 scripts/run_v3_1_structure_assemble.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureassemble_61232760.out TresPerTask=cpu=32\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "update",
+        "JobId=61232760",
+        "QOS=debug"
+      ],
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "scontrol",
+        "show",
+        "job",
+        "61232760",
+        "-o"
+      ],
+      "code": 0,
+      "stdout": "JobId=61232760 JobName=photdis_v3_1_structureassemble UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=69119 Nice=0 Account=desi QOS=debug JobState=PENDING Reason=None Dependency=afterok:61246935_*(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-11-13T09:37:13 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-13T09:37:13 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login33:1302053 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=487802M,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=32 MinMemoryNode=0 MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=scratch:1 LicensesAlloc=(null) Network=(null) Command=/pscratch/sd/y/yunao/photdis_pipeline/scripts/run_v3_1_structure_assemble.sh SubmitLine=sbatch --parsable --dependency=afterok:61231239:61223167:61223172_1:61229422 scripts/run_v3_1_structure_assemble.sh WorkDir=/pscratch/sd/y/yunao/photdis_pipeline StdErr= StdIn=/dev/null StdOut=/pscratch/sd/y/yunao/photdis_pipeline/logs/photdis_v3_1_structureassemble_61232760.out TresPerTask=cpu=32\n",
+      "stderr": ""
+    }
+  ],
+  "source_hashes": {
+    "scripts/v3_1_structure_assemble.py": "6472663d231007b94ad567375f872d6e767e092e6511c10392647b2da47afc1b",
+    "scripts/run_v3_1_structure_assemble.sh": "c9684eb609d5d27a1a51ddb812faedae2baf18ea22ed3a1d2eb0842da3f2fbd1",
+    "scripts/v2_1_near.py": "e0d74b8cb2addd021d951386b3ab06a3d081714b57e161829408328338c972e6",
+    "src/photdis/stage1.py": "a271732bec8dd33e0e97db000970646f9a74bb493580728cae27cdc7d8737c09",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/structure_posterior.py": "0416c47799875844b8277b5e4983f31382a8772d65cc83f7f33dfda56273a4f0",
+    "src/photdis/v3_1/structure_draws.py": "4e23668ba80f150c250ffdce4801181633a73bbbd2d7869c0dbf6cd3af1994e0",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d",
+    "docs/v3_1_structure_numerical_protocol.md": "481973063a074d370ffe3a9963c61c577b4c52146b5cf359196eacbbfcd06094",
+    "docs/v3_1_structure_counts_protocol.md": "a122e417e23da373ff24bba4ab1f5191afdd71edd5ea334eb5e068efff9a6300",
+    "docs/v3_1_domain_adjudication_notes.md": "bfa50ed7677057957132632803362397c85f09cb4f82edf9c3771ad6fd6145b2"
+  },
+  "stage": "assembly",
+  "job": "61232760",
+  "scheduler_change_complete": true,
+  "scope": "Existing dependency-gated final stage uses debug with unchanged original time limit, command, CPUs and scientific sources. Fresh global5-jobcap; no new submission, cancellation, dependency edit or scientific completion claim."
+}

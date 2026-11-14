@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate twenty-nine states and queue the original final chain
+- State27/raw61247900 COMPLETED21m21/0:0:512pass,512originalflags;64workers,
+  Python1265.195s/maxchild4174260KiB. State28/raw61247948 COMPLETED15m33/0:0:
+  512pass,344originalflags;64workers, Python913.271s/maxchild4167192KiB.
+- Actualcompact28/29 snapshots pass614/636checks respectively. Latest29states
+  cover29696branchrows/9608originalfailedcontexts/0unresolved. All0–28complete;
+  only29–31remain. Actualterminalaccounting andresourcehashes collected.
+- Promotedexistingassembly61232760 andposterior61232761 todebug30, oneatime
+  afterfresh5-jobcap,11source hashes, exactcommand/32CPU/zero-runtime/dependency
+  verification. No newjob/cancellation/dependencyedit; parentcompletion still
+  gates execution. Counts61232762/domain61233366 remainregular30/15pending.
+- Correctedstaleintegrated-report opening:transferandits2platesalreadycomplete,
+  remainingstructure/domain/3plates. Clarifiedfullposterior arraysremainNERSC.
+  UpdatedPLAN/status/ledger/provenance; existing183testsourcehashes unchanged.
+- Next: collectremaining3states, finishoriginal32-state chain, actualstructure/
+  domainresults/3visualreviews andfullfinalgate. No calibrated-domain claim.
+
 ## 2026-11-14 — authenticate all first twenty-seven structure states
 - State25/raw61247693 COMPLETED21m30/0:0:512refinedpass,512originalflags retained.
  64workers, Python1276.763s/maxchild4162176KiB. Actual27-state compactchecker
