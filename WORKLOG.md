@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-14 — verify tilt input shards 22 and 23
+
+- Authenticated both 812-object shard products after exit 0:0, with
+  120/117 candidate PSFs and 17/27 original candidate entry flags.
+  Shards 00–23 total 19504 PSFs, 2686 candidates and 548 initial flags.
+  Prior refinements passed all 456 flags and 92 are pending refinement.
+
 ## 2026-11-14 — compare the factorial directly with the frozen class probes
 
 - Added a paired probe-minus-arm class log-score table, matching exact
