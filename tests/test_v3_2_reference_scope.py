@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from v3_2_reference_freeze import VIEWS, read_admission
-from v3_2_reference_score import score_one, summarize
+from v3_2_reference_score import reliability, score_one, summarize
 
 
 def test_frozen_admission_checks_identity_order_and_count(tmp_path):
@@ -61,3 +61,34 @@ def test_gaia_pit_tails_use_signed_observations_and_keep_missing_channels():
     assert high['gaia_pit_high'] and not high['gaia_pit_low']
     missing = score_one('qrf', data, 0, dict(evidence, parallax_eligible=False))
     assert 'gaia_pit_low' not in missing and 'gaia_pit_high' not in missing
+
+
+def test_probability_bins_and_counts_keep_identical_qualified_denominators():
+    evidence = dict(class_label=np.array([1, 0, -1, 1]), cell=np.arange(4),
+                    distance_precise=np.array([True, True, True, False]),
+                    distance_kpc=np.array([3., 10., 4., np.nan]))
+    forecasts = [dict(qnear=q, p_giant=p, p_dwarf=1-p, numerical_pass=i != 1,
+                      teacher_score_stable=True, class_score_stable=True)
+                 for i, (q, p) in enumerate(zip([1., .9, .2, .6], [.8, .1, .3, .7]))]
+    rows = {name: forecasts for name in VIEWS}
+    rows['qrf'] = [{k: v for k, v in row.items() if k not in ('p_giant', 'p_dwarf')}
+                   for row in forecasts]
+    bins, totals = reliability(rows, evidence, np.array([True, True, False, True]))
+
+    for total in totals:
+        matching = [row for row in bins if all(
+            row[key] == total[key] for key in ('view', 'target', 'admission_scope', 'numerical_only'))]
+        assert sum(row['n'] for row in matching) == total['n']
+        assert sum(row['n']*(row['mean'] or 0) for row in matching) == pytest.approx(total['observed_count'])
+        assert sum(row['n']*(row['mean_probability'] or 0) for row in matching) == pytest.approx(
+            total['expected_count'])
+
+    native_near, matched_near = [
+        next(row for row in totals if row['view'] == 'candidate' and row['target'] == 'near'
+             and row['admission_scope'] == scope and not row['numerical_only'])
+        for scope in ('native_photometric', 'matched_candidate_admission')]
+    assert (native_near['reference_qualified'], native_near['observed_count']) == (3, 2)
+    assert (matched_near['reference_qualified'], matched_near['observed_count']) == (2, 1)
+    assert matched_near['count_residual'] == pytest.approx(.9)
+    qrf_giant = next(row for row in totals if row['view'] == 'qrf' and row['target'] == 'giant')
+    assert qrf_giant['reference_qualified'] == 3 and qrf_giant['n'] == 0

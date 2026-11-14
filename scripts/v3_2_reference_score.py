@@ -16,6 +16,9 @@ from v3_2_reference_freeze import VIEWS, aligned, read_admission
 from v3_2_tilt_inputs import verified
 
 
+PROBABILITY_TARGETS = ('near', 'giant', 'dwarf')
+
+
 def score_one(view, data, i, e):
     status = bool(data['numerical_pass'][i])
     if 'available' in data and not data['available'][i]:
@@ -61,7 +64,7 @@ def score_one(view, data, i, e):
             for name in ('mu_residual', 'reference_agreement68', 'reference_agreement95', 'severe'):
                 value[name] = d[name]
             value.update(teacher_log_score=d['log_score'], teacher_score_stable=stable['astronn'])
-        value['p_giant'] = current['class_probability'][1]
+        value.update(zip(('p_dwarf', 'p_giant', 'p_other'), current['class_probability']))
         if 'class' in current:
             c = current['class']
             value.update(class_log_score=-np.inf if c['zero_probability'] else c['log_score'],
@@ -143,6 +146,47 @@ def summarize(rows, evidence, candidate_admitted):
     return summaries, pairs
 
 
+def reliability(rows, evidence, candidate_admitted):
+    """Reliability and finite-subset expected counts on the same labeled rows."""
+    labels, cells = evidence['class_label'], evidence['cell']
+    precise = evidence['distance_precise']
+    scopes = {'native_photometric': np.ones(len(labels), bool),
+              'matched_candidate_admission': candidate_admitted}
+    bins, totals = [], []
+    for view in VIEWS:
+        for target in PROBABILITY_TARGETS:
+            if target == 'near':
+                metric, flag = 'qnear', 'teacher_score_stable'
+                known, truth = precise, evidence['distance_kpc'] < 10
+            else:
+                metric, flag = f'p_{target}', 'class_score_stable'
+                known, truth = labels >= 0, labels == int(target == 'giant')
+            p = np.array([r.get(metric, np.nan) for r in rows[view]])
+            available = ~np.isnan(p)
+            if np.any(available & (~np.isfinite(p) | (p < -1e-8) | (p > 1+1e-8))):
+                raise ValueError(f'Invalid {target} probability for {view}')
+            p = np.clip(p, 0, 1)
+            passed = np.array([r['numerical_pass'] and r.get(flag, False) for r in rows[view]])
+            for scope, base in scopes.items():
+                for accepted in (False, True):
+                    eligible = base & known
+                    use = eligible & available & (passed if accepted else True)
+                    keys = dict(view=view, admission_scope=scope, target=target, numerical_only=accepted)
+                    expected = float(p[use].sum())
+                    observed = int(truth[use].sum())
+                    stats = field_statistic(p[use] - truth[use], cells[use])
+                    totals.append(dict(**keys, reference_qualified=int(eligible.sum()),
+                                       expected_count=expected, observed_count=observed,
+                                       count_residual=expected-observed, **stats))
+                    for i in range(10):
+                        lo, hi = i/10, (i+1)/10
+                        take = use & (p >= lo) & ((p < hi) if i < 9 else (p <= hi))
+                        bins.append(dict(**keys, lo=lo, hi=hi,
+                                         mean_probability=float(p[take].mean()) if take.any() else None,
+                                         **field_statistic(truth[take], cells[take])))
+    return bins, totals
+
+
 def main():
     require_compute()
     out = ROOT/'data/v3_2/final_validation_dr19'
@@ -178,8 +222,10 @@ def main():
                      name, data, i, {k: v[i] for k, v in evidence.items()}))
             for i, identity in enumerate(evidence['identity'])]
     absolute, paired = summarize(by_view, evidence, candidate_admitted)
+    probability_bins, reference_counts = reliability(by_view, evidence, candidate_admitted)
     output.mkdir(parents=True, exist_ok=False)
-    for name, rows in [('objects', sum(by_view.values(), [])), ('absolute', absolute), ('paired', paired)]:
+    for name, rows in [('objects', sum(by_view.values(), [])), ('absolute', absolute), ('paired', paired),
+                       ('reliability', probability_bins), ('reference_counts', reference_counts)]:
         csv_rows(output/f'{name}.csv', rows)
     save_json(output/'complete.json', dict(freeze_sha256=freeze_sha, evidence_sha256=sha(evidence_marker),
               all_PSF=True, views=list(VIEWS), n=len(evidence['identity']), job=os.getenv('SLURM_JOB_ID'),

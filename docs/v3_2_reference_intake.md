@@ -103,3 +103,12 @@ freeze, opens the bound evidence, then runs the registered scorer.
 In each admission scope, retain low/high signed Gaia PIT tail rates,
 qnear and high-q fractions, and the reference-qualified distance
 strata through and beyond 50 kpc.
+
+Use ten equal-width bins for class and near-probability reliability,
+with occupancy and sky-block intervals on the observed fraction.
+Sum predicted probability and reference indicators on the same eligible
+rows for each view, separately for dwarf, giant and near. Report their
+count difference and the sky-block interval for the mean per-object
+difference. These are counts of agreement with available reference
+labels. Joint predictive count intervals require the shared-state
+forecasts and are evaluated separately in the injection experiments.

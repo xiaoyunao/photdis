@@ -40,6 +40,8 @@ Active goal follows the Pro review of 7699299. See
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
+  Reliability bins and expected versus observed counts use the same
+  qualified reference rows in each view.
   The frozen nominal, historical target and QRF forecasts (61261381)
   follow native admission and freeze the exact photometric candidate gate
   for all native PSFs. Report paired and absolute metrics inside the

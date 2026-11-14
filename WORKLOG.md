@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — add qualified-reference probability and count diagnostics
+
+- Updated the DR19 scorer to export near, dwarf and giant reliability
+  bins and finite-subset expected versus observed counts. Each pair of
+  tables shares the same labeled rows, with separate candidate admission
+  and numerical acceptance. QRF class probability stays unavailable.
+- Documented teacher-label and shared-count interval scope. Verified bin
+  and count conservation with a synthetic regression test. Python
+  compilation, diff check and all 451 single-threaded tests pass.
+- Slurm started tilt input 61259514_3 and the NGC288 odds-axis check
+  61259650. Both are active. New reference outcomes remain closed.
+
 ## 2026-11-14 — prepare the allocated DR19 final evaluation entry point
 
 - Added the Slurm entry point that freezes all forecasts, releases the
