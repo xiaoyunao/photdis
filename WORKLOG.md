@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — start v3.2 from the review of 7699299
+
+- Archived the latest Pro message, set the detailed goal, and recorded the
+  staged protocol in `docs/v3_2_protocol.md`.
+- `git fetch --all --prune` confirmed matching local, GitHub and NERSC heads
+  at the v3.1 starting point.
+- Added the diagnostics program and Slurm wrapper. Python compile and
+  `bash -n` passed. Next run on allocated compute and verify source tables.
+- Audited the existing target matrix assembly. Its 3 × 5 collapsed arrays
+  cannot carry class-internal tilt. The free arms need kernel-level numerator
+  and admission integrals, plus a matching zero-collapse pilot.
+
 ## 2026-11-14 — complete four-package research and final provenance audit
 - Four authorized Pro packages, nine scientific reports and22English plates
   complete; no scientific job remains. All original failures/refinements retained.

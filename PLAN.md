@@ -1,5 +1,19 @@
 # PLAN
 
+## v3.2 — diagnose the zero-model regression
+
+Active goal follows the Pro review of 7699299. See
+`docs/pro_review_7699299.md` and `docs/v3_2_protocol.md`.
+
+- Recompute the frozen same-star Gaia and class score path and recover the
+  absolute classification tables. Add reliability plots and audit the QRF overlap.
+- Fit the population by SED tilt comparison with matched selection. Verify
+  kernel-level inputs by replaying the zero-tilt collapse before larger work.
+- Decompose giant branch availability, suppression and class-conditional
+  distance error. Then choose one supported model modification.
+- Run scoped narrow-structure and numerical diagnostics. Freeze new validation
+  before opening outcomes or expanding the production footprint.
+
 ## v3.1 — completed research delivery
 
 Current objective: preserve the completed v3.1 deliverable; final source-bound
