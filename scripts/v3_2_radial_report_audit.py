@@ -111,13 +111,20 @@ def audit():
         if sha(folder/name) != digest:
             raise ValueError(f'Invalid radial report digest: {name}')
     design_folder = BASE/'radial_design'
-    design_outputs = json.loads((design_folder/'complete.json').read_text())['outputs']
+    design_path = design_folder/'complete.json'
+    design_outputs = json.loads(design_path.read_text())['outputs']
+    design_digest = sha(design_path)
     design = read_csv(design_folder/'design.csv')
     if sorted(int(r['catalog']) for r in design) != list(range(288)):
         raise ValueError('Incomplete frozen radial design')
     expected_sources = {f'data/v3_2/radial_recovery/catalog_{i:03}/complete.json' for i in range(288)}
-    if not expected_sources.issubset(receipt['inputs']):
-        raise ValueError('Missing catalog completion receipts')
+    expected_sources.update({
+        'data/v3_2/radial_design/complete.json', 'data/v3_2/radial_design/design.csv',
+        'scripts/v3_2_radial_report.py', 'src/photdis/v3_1/comparison.py',
+        'src/photdis/v3_1/radial.py',
+    })
+    if receipt['inputs'].keys() != expected_sources:
+        raise ValueError('Incomplete or unexpected radial report ancestry')
     for name, digest in receipt['inputs'].items():
         source = ROOT/name.replace('data/v3_2/', 'manifests/v3_2/', 1)
         if sha(source) != digest:
@@ -133,6 +140,8 @@ def audit():
         result = json.loads(source.read_text())
         if result['catalog'] != i or result['all_PSF'] is not True or result['n'] != int(row['n']):
             raise ValueError(f'Recovery ancestry does not declare the registered census: {i}')
+        if result['inputs']['data/v3_2/radial_design/complete.json'] != design_digest:
+            raise ValueError(f'Recovery uses a different design receipt: {i}')
         for kind in ('photometry', 'truth'):
             name = f'{kind}_{i:03}.npz'
             if result['inputs'][f'data/v3_2/radial_design/{name}'] != design_outputs[name]:
@@ -151,6 +160,10 @@ def audit():
                 any(value != b[key] for key, value in a.items()) for a, b in zip(original, pooled)
             ):
                 raise ValueError(f'Aggregate differs from catalog result: {i}/{name}')
+            if name == 'numerical.csv' and result['fitted_arms'] != sorted(
+                r['arm'] for r in original if r['status'] == 'sampled'
+            ):
+                raise ValueError(f'Fitted arms differ from catalog receipt: {i}')
     return dict(job=receipt['job'], receipt_sha256=sha(path), **audit_rows(folder, design, receipt))
 
 

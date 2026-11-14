@@ -10,7 +10,8 @@ and external findings and identifies the two pending application results.
 Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
 after both application reports and all visual reviews. During the runs,
 `--completed-only` verifies available evidence and reports missing
-products without a final delivery verdict.
+products without a final delivery verdict. It also reconciles each
+archived NGC288 distance-state receipt and its per-context verdicts.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
@@ -129,8 +130,8 @@ products without a final delivery verdict.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Eight of 288 catalogs have verified compact outputs. Catalogs 004 and
-  005 pass numerical checks in both arms. Catalogs 006 and 007 moved
+  Ten of 288 catalogs have verified compact outputs. Catalogs 004–007
+  pass numerical checks in both arms. Catalogs 008 and 009 moved
   in place to the vacant debug slots.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
@@ -142,7 +143,9 @@ products without a final delivery verdict.
   tasks and reconcile each raw job ID with the output receipt.
   Run `PYTHONPATH=src:scripts:.deps python3
   scripts/v3_2_radial_report_audit.py` to reconcile all seven
-  derived tables with the frozen design and individual results.
+  derived tables with the frozen design and individual results. This
+  audit also requires the exact source inventory and checks fitted-arm
+  declarations against the per-catalog tables.
   Render the fixed-truth and prior-predictive coverage plates with
   `python3 scripts/v3_2_radial_recovery_figure.py` after the full report.
 - Prepare the DR19 Astra identity inventory following

@@ -13,6 +13,7 @@ from v3_2_figure_delivery import audit as figures
 from v3_2_opened_audit import audit as opened
 from v3_2_preservation_check import examine as preservation
 from v3_2_radial_report_audit import audit as radial
+from v3_2_structure_distance_audit import audit as structure_distance
 from v3_2_structure_joint_audit import audit as structure
 
 
@@ -57,7 +58,9 @@ def audit(*, completed_only=False):
     result = dict(passed=True, final=not completed_only, pending=pending,
                   preservation=protected, opened=opened_result, external=external_result,
                   factorial=factorial_result, branch=branch(), figures=figure_result, documents=sources)
-    if not completed_only:
+    if completed_only:
+        result['structure_distance'] = structure_distance()
+    else:
         result['radial'] = radial()
         result['structure'] = structure()
         if (result['radial']['n_catalogs'] != 288 or result['radial']['n_arms'] != 576

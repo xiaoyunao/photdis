@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — bind the recovery report ancestry and archive catalogs 006 and 007
+
+- The radial report audit now requires the exact frozen design and
+  report source inventory. It also checks that each catalog uses the
+  same design receipt and declares the fitted arms in its table.
+- Syntax checks, five focused tests and a synthetic 288-catalog replay
+  passed. The replay rejected a report with missing design ancestry.
+  The completed-only delivery audit also passed with the new check of
+  all seven archived NGC288 state receipts and their context verdicts.
+- Slurm 61266369_6 and _7 completed in 3m26s and 3m20s. Collected with
+  `v3_2_collect_radial_results.py --completed`. Both fits in both
+  catalogs pass the registered checks. Ten of 288 catalogs are archived.
+  Moved pending 008 and 009 to the two vacant debug slots.
+
 ## 2026-11-14 — verify recovery catalogs 004 and 005
 
 - Slurm 61266369_4 and _5 completed in 3m23s and 3m17s.
