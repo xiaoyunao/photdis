@@ -149,8 +149,12 @@ reference subset by dereddened g-r edges 0.3, 0.8 and 1.3, r0 edges 16,
 18 and 20 mag, FeH edges -1.5 and -0.5, and recorded W1 state. Retain missing
 and empty strata. Report the common-prior giant probability and far-mode
 availability first, then the target minus reference change in giant
-probability and the class-conditioned distance score and far mass. Means
-use the same-object sky-block bootstrap. The frozen no-color, grz, griz and
+probability and the class-conditioned distance score and far mass.
+Average far-peak locations over objects with a peak. Report peak
+presence on the full giant denominator and show the two directions of
+peak gain or loss on the same objects. Report the common-prior
+giant-minus-dwarf log evidence alongside the giant probability.
+Use the same-object sky-block bootstrap. The frozen no-color, grz, griz and
 multiband probes are separate information controls, with historical fit and
 temperature-calibration IDs excluded. No probe score enters a distance fit.
 Join the frozen probe predictions to the four arms by exact native

@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — distinguish missing far peaks from conditional peak locations
+
+- Added all-giant far-peak presence and paired gain/loss indicators to
+  the fixed-reference and target comparison. Keep peak location on its
+  own denominator, and summarize common-prior giant-minus-dwarf log
+  evidence alongside the giant probability.
+- Synthetic checks verify exact denominators, both peak-change
+  directions and retention of nonfinite log-evidence pairs. Python
+  compilation and diff checks pass. Existing Slurm handles remain
+  queued, so new model comparisons are still pending.
+
 ## 2026-11-14 — retain observational strata in prospective field scores
 
 - The DR19 report now pairs the four models within the frozen r0,

@@ -68,6 +68,17 @@ def giant_decomposition(rows, cells, role, arm):
               'oracle_median_mu', 'reference_oracle_gaia_score', 'oracle_gaia_score',
               'reference_oracle_astronn_score', 'oracle_astronn_score')
     values = {key: np.array([number(r, key) for r in rows]) for key in fields}
+    reference_far = np.isfinite(values['reference_oracle_far_peak_mu'])
+    target_far = np.isfinite(values['oracle_far_peak_mu'])
+    values.update(reference_far_peak_available=reference_far, target_far_peak_available=target_far,
+                  reference_only_far_peak=reference_far & ~target_far,
+                  target_only_far_peak=target_far & ~reference_far)
+    giant_logz = np.array([number(r, 'reference_class_logz_giant') for r in rows])
+    dwarf_logz = np.array([number(r, 'reference_class_logz_dwarf') for r in rows])
+    with np.errstate(invalid='ignore'):
+        logz_gap = giant_logz-dwarf_logz
+    logz_gap[~np.isnan(giant_logz) & ~np.isnan(dwarf_logz) & np.isnan(logz_gap)] = np.inf
+    values['reference_giant_minus_dwarf_logz'] = logz_gap
     for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_astronn_score', 'oracle_median_mu'):
         left, right = values[key], values['reference_' + key]
         present = ~np.isnan(left) & ~np.isnan(right)
