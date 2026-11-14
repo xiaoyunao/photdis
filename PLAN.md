@@ -21,11 +21,10 @@ Active goal follows the Pro review of 7699299. See
   modification after the matched factorial results.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
-  The initial 000 and 128 direct pilots timed out in array 61260177;
-  its prior-predictive 256 started. Direct 000 follows as 61260934 and
-  cached empirical 128 as 61260935 after cache pilot 61260465. Compare
-  actual repeat-00 curves in verification job 61261765 before launching
-  the remainder. New curve
+  All three original direct pilots in 61260177 timed out. Direct 000
+  follows as 61260934; empirical 128 (61260935) and prior-predictive
+  256 (61261884) use repeat-00 cache 61260465. Check cache equivalence
+  with job 61261765 before launching the remaining catalogs. New curve
   workers retain authenticated completed rows across allocation limits.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.

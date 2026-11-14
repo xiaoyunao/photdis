@@ -1,0 +1,41 @@
+panel,anchor,stratum,n,mean,lo95,hi95,state,weight_effect,response_effect,passed
+class_probe,Nominal reference,all,157,-1.982095620563427,-2.2373848616867824,-1.4382979334479142,,,,
+class_probe,Nominal reference,giant,142,-2.1947985590961805,-2.3702655448124337,-1.605065484308108,,,,
+class_probe,Old target,all,157,0.7685328653275633,-0.11213766738940932,1.345155474092826,,,,
+class_probe,Old target,giant,142,0.8506381606121001,-0.13914701573988497,1.3886234786742722,,,,
+class_probe,Candidate zero,all,157,0.7266787196717636,-0.34467300798753797,1.4167146208830124,,,,
+class_probe,Candidate zero,giant,142,0.8045330689032176,-0.423422490529177,1.4613453143238904,,,,
+count_transfer,,,,,,,0,-0.6655360592978923,0.0,False
+count_transfer,,,,,,,1,-0.6151062590311085,0.0,False
+count_transfer,,,,,,,2,-0.6195713313779834,0.0,False
+count_transfer,,,,,,,3,-0.6117835265899885,0.0,False
+count_transfer,,,,,,,4,-0.605608477904525,0.0,False
+count_transfer,,,,,,,5,-0.611718892631643,0.0,False
+count_transfer,,,,,,,6,-0.5992230278479838,0.0,False
+count_transfer,,,,,,,7,-0.6153771947558653,0.0,False
+count_transfer,,,,,,,8,-0.6074939586137589,0.0,False
+count_transfer,,,,,,,9,-0.6113250344142216,0.0,False
+count_transfer,,,,,,,10,-0.6141576252721279,0.0,False
+count_transfer,,,,,,,11,-0.612286040177878,0.0,False
+count_transfer,,,,,,,12,-0.6176935360774678,0.0,False
+count_transfer,,,,,,,13,-0.5783797712551859,0.0,False
+count_transfer,,,,,,,14,-0.6106015742188902,0.0,False
+count_transfer,,,,,,,15,-0.6198175189999802,0.0,False
+count_transfer,,,,,,,16,-0.5823403874132964,0.0,False
+count_transfer,,,,,,,17,-0.6117831330852823,0.0,False
+count_transfer,,,,,,,18,-0.6090699600590597,0.0,False
+count_transfer,,,,,,,19,-0.603833275811894,0.0,False
+count_transfer,,,,,,,20,-0.4854637141029343,0.0,True
+count_transfer,,,,,,,21,-0.6122842434042468,0.0,False
+count_transfer,,,,,,,22,-0.6193731423918507,0.0,False
+count_transfer,,,,,,,23,-0.6229293529777351,0.0,False
+count_transfer,,,,,,,24,-0.6035846623958605,0.0,False
+count_transfer,,,,,,,25,-0.6128319949407341,0.0,False
+count_transfer,,,,,,,26,-0.6232541285153275,0.0,False
+count_transfer,,,,,,,27,-0.6059268049348248,0.0,False
+count_transfer,,,,,,,28,-0.6099292302046706,0.0,False
+count_transfer,,,,,,,29,-0.6099609343568773,0.0,False
+count_transfer,,,,,,,30,-0.6031362374819764,0.0,False
+count_transfer,,,,,,,31,-0.6199272145406667,0.0,False
+count_transfer,,,,,,,32,-0.5927031942860594,0.0,False
+count_transfer,,,,,,,33,-0.6057327858395638,0.0,False

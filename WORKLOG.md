@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — recover the prior-predictive pilot and document opened audits
+
+- Slurm 61260177_256 TIMEOUT at 30m11s, total CPU 1h59m26s. Verified no
+  output directory or curves. Submitted 61261884 after repeat-00 cache
+  61260465 using the frozen 256 context and new checkpoint path.
+- Rendered the completed class-probe and count-decomposition results as
+  a two-panel English figure. Verified 40 plotted rows and six hashes,
+  inspected the PNG, and linked it from the v3.2 atlas.
+- Continue through real cache and pilot verification; 2x2 remains queued.
+
 ## 2026-11-14 — retain radial quadrature rows through allocation limits
 
 - Prior direct pilots 000/128 lost partial work on the 30-minute limit.

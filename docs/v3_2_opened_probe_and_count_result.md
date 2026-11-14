@@ -52,3 +52,5 @@ and the 33 original count violations remain in force.
 
 [Count decompositions](../manifests/v3_2/transfer_count_audit/conditional_counts.csv) ·
 [Source receipt](../manifests/v3_2/transfer_count_audit/complete.json)
+
+[Figure and provenance](v3_2_atlas.md#opened-class-probe-and-count-audit)

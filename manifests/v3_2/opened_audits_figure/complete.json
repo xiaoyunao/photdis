@@ -1,0 +1,8 @@
+{
+  "manifests/v3_2/opened_probes/paired.csv": "07bb2220ab0210648102d1ff8be62aa5229e5a694155446add7e7d4354b8c132",
+  "manifests/v3_2/transfer_count_audit/conditional_counts.csv": "02af0380d336edb36174aad5117dc71db481a1f5b981af8eec4f116502a6fdb2",
+  "scripts/v3_2_opened_audit_figure.py": "460bd1cd5a6bced3f508f0eb2a25d5f4d4e6767e40a830ef250f458be224c01c",
+  "figures/v3_2/opened_audits/probe_and_count_audit.pdf": "2216d75466079cb79f8363c26f19f6c55629bdc86f6abfa5bfc6fea7cccfd872",
+  "figures/v3_2/opened_audits/probe_and_count_audit.png": "7872c6e2dbee89ad715f8ff3ac83e1cf75fe069fcdaffdb70411240d7387b1f4",
+  "manifests/v3_2/opened_audits_figure/plotted.csv": "590c59d5a6b5c1f93e2c73b0157d72748893ad96901bd91b23a74542cfea96be"
+}
