@@ -11,7 +11,8 @@ Active goal follows the Pro review of 7699299. See
   first production shard is verified, and array 61259514 builds the other 31.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shard 00 refinements pass 26/26, and array 61259727 follows 61259514.
+  Shard 00 refinements pass 26/26. Array 61259727 follows 61259514 and
+  checkpoints the exact flagged (row, identity, admission) contexts.
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.

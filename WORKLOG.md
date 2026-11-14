@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — retain targeted entry refinements through interruptions
+
+- Added checkpoints to the 2x2 flagged-context refinement stage. Bind
+  initial receipt, refinement code and integration levels. Validate
+  row/identity/admission keys and patch failure totals before fitting.
+- Tested that the same exact Gaia ID retains separate broad/candidate
+  refinements and the no-flag case works. Verified all 26 original
+  shard-00 flagged contexts match its refinements with no residual flags.
+  Python syntax and five existing tests pass.
+- Slurm still reports the original 2x2 array pending for priority/resources.
+  Original array, dependencies, integrands and thresholds remain in use.
+
 ## 2026-11-14 — preserve completed matched-factorial input rows
 
 - The pending 31 input shards originally wrote only after all rows finished.

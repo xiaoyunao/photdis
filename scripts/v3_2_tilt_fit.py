@@ -88,7 +88,12 @@ def assemble(case, root, expected_roles, *, refined):
                 raise ValueError(f'Refinement count mismatch: {patch_path}')
             patch = load(verified(patch_folder / 'patch.npz', patch_record['outputs']['patch.npz']))
             markers[str(patch_path.relative_to(ROOT))] = sha(patch_path)
-            if not (patch['TYPE'] == 'PSF').all():
+            if (patch_record['shard'] != shard or not patch_record['all_PSF']
+                    or len(patch['row']) != record['failed']
+                    or patch['passed'].dtype.kind != 'b'
+                    or int(np.count_nonzero(~patch['passed'])) != patch_record['remaining_flags']
+                    or not np.isin(patch['admission'], tuple(shard_flags)).all()
+                    or not (patch['TYPE'] == 'PSF').all()):
                 raise ValueError(f'Refinement morphology mismatch: {patch_path}')
             np.testing.assert_array_equal(patch['identity'], expected_roles['identity'][patch['row']])
             for admission, unresolved in shard_flags.items():
