@@ -1,0 +1,10 @@
+{
+  "scheduler_change_complete": true,
+  "stage": "counts",
+  "job": "61232762",
+  "scientific_completion_claim": false,
+  "outputs": {
+    "journal.json": "97db98d71e842c5cffecb41bcd92e038cf8272b732cf741b53376a1dfd8af128"
+  },
+  "scope": "Existing dependency-gated final stage uses debug with unchanged original time limit, command, CPUs and scientific sources. Fresh global5-jobcap; no new submission, cancellation, dependency edit or scientific completion claim."
+}

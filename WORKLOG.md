@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate thirty-one states and complete final-stage queue setup
+- State29/raw61248235 COMPLETED21m21/0:0,512pass/512originalflags retained;
+ 64workers, Python1268.878s/maxchild4160640KiB. State30/raw61248532 COMPLETED
+ 21m56/0:0,512pass/512originalflags; Python1299.083s/maxchild4174824KiB.
+- Actual30/31-state compactchecks pass658/680 respectively. Latest31states
+ cover31744branchrows/10632originalfailedcontexts/0unresolved. Only31remains;
+ itstartednormally when29ended. No science/model/threshold change.
+- Existingcounts61232762/domain61233366 promoteddebug afterfresh5-jobcap,
+ 11sourcehashes andexact32CPU/command/zero-runtime/dependency checks; retained
+ original30/15minute limits. Fulloriginalassembly→posterior→counts→domain
+ chain nowqueued withitsoriginal dependencies. No newsubmission/cancellation.
+- UpdatedcurrentPLAN/status/ledger andsource-links; actualunit-source hashes
+ unchanged,183test record retained. Intermediate30snapshot preserved with31.
+- Next: collectlaststate31, fullallocatedassembly/posterior/counts/domain,
+ source-backedresults and3inspectedplates, finalize21requirements andfinalgate.
+
 ## 2026-11-14 — bind final closure to each explicit research requirement
 - Reviewed all21ledger requirements againstProsection6, frozenprotocol, actual
   reports andcompactsource artifacts. Recorded68evidence bindings withfindings,
