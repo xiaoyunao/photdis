@@ -117,3 +117,15 @@ A fit with unresolved entry checks can run explicitly as a flagged sensitivity
 diagnostic. Before interpreting the factorial, check fitted-tilt sensitivity.
 Opened-field predictions use each posterior draw normalized separately and
 the existing regional shrinkage for unfit fields, with common random seeds.
+
+### Opened giant diagnostic strata
+
+Within each frozen sky role and candidate admission, summarize the giant
+reference subset by dereddened g-r edges 0.3, 0.8 and 1.3, r0 edges 16,
+18 and 20 mag, FeH edges -1.5 and -0.5, and recorded W1 state. Retain missing
+and empty strata. Report the common-prior giant probability and far-mode
+availability first, then the target minus reference change in giant
+probability and the class-conditioned distance score and far mass. Means
+use the same-object sky-block bootstrap. The frozen no-color, grz, griz and
+multiband probes are separate information controls, with historical fit and
+temperature-calibration IDs excluded. No probe score enters a distance fit.

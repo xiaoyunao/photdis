@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — predeclare opened giant decomposition strata
+
+- Registered direct giant probability, within-class distance and far-branch
+  comparisons across g-r, r0, W1, FeH and each frozen sky role. Includes
+  missing strata and distinguishes absent peaks from zero far mass.
+- Updated the queued tilt report source. Python compile and smoke checks
+  pass for same-object probability change and missing/empty support cases.
+- Submitted frozen probe job 61260227. Slurm shows radial pilots 0/128
+  running, 256 and probes pending under the debug concurrency limit.
+  Collect actual pilot and probe outcomes before interpreting strata.
+
 ## 2026-11-14 — run radial recovery pilots and register frozen class probes
 
 - Submitted 61260177 for catalogs 0, 128 and 256. First real model catalog

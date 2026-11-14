@@ -36,9 +36,38 @@ def joint_moments(p):
     return mean, conditional, shared
 
 
+def giant_strata(rows):
+    """Predeclared bins for opened same-object decomposition."""
+    giant = np.array([int(r['class_label']) == 1 for r in rows])
+    yield 'all', giant
+    for key, boundaries in [('g_r', (-np.inf, 0.3, 0.8, 1.3, np.inf)),
+                            ('r0', (-np.inf, 16., 18., 20., np.inf)),
+                            ('feh', (-np.inf, -1.5, -.5, np.inf))]:
+        value = np.array([number(r, key) for r in rows])
+        for lo, hi in zip(boundaries, boundaries[1:]):
+            yield f'{key}/{lo:g}_{hi:g}', giant & (value >= lo) & (value < hi)
+        yield f'{key}/missing', giant & ~np.isfinite(value)
+    wise = np.array([number(r, 'w1_state') for r in rows])
+    for state in np.unique(wise[np.isfinite(wise)]):
+        yield f'W1_state/{int(state)}', giant & (wise == state)
+
+
+def giant_decomposition(rows, cells, role, arm):
+    fields = ('reference_p_giant', 'p_giant', 'reference_oracle_far_mass', 'oracle_far_mass',
+              'reference_oracle_far_peak_mu', 'oracle_far_peak_mu', 'reference_oracle_median_mu',
+              'oracle_median_mu', 'reference_oracle_gaia_score', 'oracle_gaia_score')
+    values = {key: np.array([number(r, key) for r in rows]) for key in fields}
+    for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_median_mu'):
+        values[key + '_minus_reference'] = values[key] - values['reference_' + key]
+    for stratum, mask in giant_strata(rows):
+        for name, value in values.items():
+            yield dict(role=role, arm=arm, stratum=stratum, metric=name, group_n=int(mask.sum()),
+                       **field_statistic(value[mask], cells[mask]))
+
+
 def summarize(groups, anchors, forecast, manifest):
     absolute, alignment, confusion, counts, gates = [], [], [], [], []
-    covariances = {}
+    covariances, decomposition = {}, []
     for role in ROLES:
         selected = [g for g in groups if g[ARMS[0]]['role'] == role and
                     g[ARMS[0]]['candidate_admission'] == 'True']
@@ -53,6 +82,7 @@ def summarize(groups, anchors, forecast, manifest):
             np.testing.assert_array_equal(payload['TYPE'], ['PSF'])
         for arm in ARMS:
             rows = [g[arm] for g in selected]
+            decomposition.extend(giant_decomposition(rows, np.asarray(cells), role, arm))
             states = [v[arm + '_draw_class_distance'].reshape(-1, 18) for v in payloads]
             p = np.stack(states, axis=1)
             mean, conditional, shared = joint_moments(p)
@@ -106,7 +136,7 @@ def summarize(groups, anchors, forecast, manifest):
                               probability_identity_max=max(float(r['joint_delta']) for r in rows),
                               marginal_half_max=max(float(r['marginal_half_delta']) for r in rows)))
     return dict(absolute=absolute, historical_anchor=alignment, confusion=confusion,
-                joint_counts=counts, numerical=gates), covariances
+                joint_counts=counts, numerical=gates, giant_decomposition=decomposition), covariances
 
 
 def main():

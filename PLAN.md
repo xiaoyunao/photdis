@@ -13,7 +13,8 @@ Active goal follows the Pro review of 7699299. See
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order.
 - Decompose giant branch availability, suppression and class-conditional
-  distance error. Run the frozen class probes on the same opened PSF cohort.
+  distance error using the registered strata. Frozen class probe job
+  61260227 runs on the same opened PSF cohort.
   Then choose one supported model modification.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
