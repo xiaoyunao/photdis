@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — complete the 60 percent model-SED recovery strata
+
+- Archived 086, 088 and 090–095 with successful Slurm exits
+  and matching raw job IDs. All sixteen new fits pass. Stage
+  delivery verified 98 catalogs, 196 verdicts (175 accepted),
+  3,920 intervals and 12 complete strata.
+- The 0.25-mag near and deep 60% strata each cover width
+  truth in 8/8 accepted local fits. Paired normalized joint
+  count error changes by −15.23 and −14.26 percentage points.
+  Recorded widths and bootstrap intervals in the synthesis.
+- NGC288 remains at ten archived states, five running and 17
+  queued. Eight radial tasks were running. Both report jobs
+  remain pending.
+
 ## 2026-11-15 — verify radial catalogs 085, 087 and 089
 
 - Collected three successful Slurm outputs and authenticated the

@@ -146,7 +146,12 @@ The paired count-error contrast is −16.41 percentage points
 deep background, all eight local fits pass and cover width truth.
 The median width averages 0.110 mag, and mean interval length
 is 0.127 mag. The paired count-error contrast is −13.28 percentage
-points [−19.28, −7.52]. The empirical-SED and prior-predictive
+points [−19.28, −7.52]. At the wider 0.25 mag, both 60% model-SED
+background strata also have 8/8 accepted local fits and 8/8
+width intervals covering truth. The mean width medians are 0.232 mag
+for near and 0.243 mag for deep. The paired count-error changes are
+−15.23 [−18.75, −11.38] and −14.26 [−17.58, −10.74] percentage
+points, respectively. The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
