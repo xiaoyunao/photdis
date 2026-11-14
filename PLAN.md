@@ -12,13 +12,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   The current audit verifies 8,773 protected paths against 7699299 in the
   commit, index and worktree. Check data source digests with the run receipts.
 - Fit the population by SED tilt comparison with matched selection. The
-  first thirty shards (00–29) are complete and verified.
-  The compact receipt audit independently counts 24376 broad PSFs and
-  3319 candidate PSFs across these shards.
+  full set of 32 initial shards is complete and verified.
+  The compact receipt audit independently counts 26000 broad PSFs and
+  3540 candidate PSFs.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–28 pass all 663 reviewed contexts.
-  Shard 29 has 23 flags awaiting local verification.
+  Shards 00–29 pass all 686 reviewed contexts.
+  Shards 30–31 have 45 flags awaiting local verification.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.
@@ -73,6 +73,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   failed photometric entry. Job 61267191 verified that all 100 fail the
   grz mask, grz fraction quality and low-reddening conditions. Assess a
   separate outcome-closed acquisition route for the same science domain.
+  DR20 BOSS MINESweeper acquisition is queued as 61267444. The source
+  and its teacher limitations are in `docs/v3_2_minesweeper_intake.md`.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

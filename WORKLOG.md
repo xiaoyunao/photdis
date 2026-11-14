@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify the full initial tilt census and acquire a fresh field source
+
+- Collected completed input shards 30 and 31 and all 23 passing shard-29
+  refinements. Compact verification counts 26,000 broad and 3,540
+  candidate PSFs across all 32 initial shards. Of 731 initial flags,
+  686 have passed review and 45 remain for shards 30–31.
+- Checked the SDSS DR20 release, MINESweeper schema, archive size and
+  published checksum. Submitted the 76 MB checksum-bound acquisition
+  as 61267444. The original DR19 result is preserved and no new
+  evidence values were accessed.
+
 ## 2026-11-14 — reconcile tilt refinements through shard 28
 
 - Verified the remaining 27 and 26 flagged contexts in shards 25 and 27.
