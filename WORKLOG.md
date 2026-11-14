@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance states 17 and 18
+
+- Slurm recorded 61277985 and 61277986 `COMPLETED 0:0` in 2h17m20s
+  and 2h04m33s. Verified the three compact files and exact 512-PSF
+  roster for each state. State 18 passed all 2,560 checks. State 17
+  retained 512 flags for the independent entry seed and 512 for the
+  previous entry level. Both native checks and frozen entry closure
+  pass for both states.
+- Staged delivery verifies 20 of 32 state receipts. Joint quadrature
+  and its figure remain pending.
+
 ## 2026-11-15 — archive NGC288 distance state 16
 
 - Slurm recorded 61277984 `COMPLETED 0:0`. Collected its three
