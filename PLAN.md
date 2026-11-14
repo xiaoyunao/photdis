@@ -55,8 +55,8 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See
-  `docs/v3_2_opened_probe_and_count_result.md`. Choose one supported
-  modification after the matched factorial results.
+  `docs/v3_2_opened_probe_and_count_result.md`. Registered one posterior
+  giant allocation adjustment in `docs/v3_2_branch_protocol.md`.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
