@@ -187,8 +187,16 @@ local width intervals cover truth in two of five accepted fits,
 with bounds of 2/8–5/8 across the registered repetitions. Their
 mean width median is 0.316 mag and mean interval length is 0.904 mag.
 In the five accepted pairs, the local-minus-broad count-error
-change is +0.63 [−0.16, +1.25] percentage points. The remaining
-empirical-SED strata and prior-predictive comparison are in progress.
+change is +0.63 [−0.16, +1.25] percentage points. In the 0.08 mag
+deep background, only one local fit passes. Its 0.655 mag wide
+interval contains the truth, yielding coverage bounds of 1/8–8/8.
+At 30% in the 0.08 mag near-background empirical-SED stratum,
+both arms pass in all eight repeats, yet width coverage is 2/8
+(exact 95% interval 0.032–0.651). The local width median averages
+0.308 mag and the interval length averages 0.509 mag. The paired
+count-error change is −2.15 [−4.10, −0.20] percentage points.
+The remaining empirical-SED strata and prior-predictive comparison
+are in progress.
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test

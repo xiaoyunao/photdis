@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — close both empirical retries and verify two more strata
+
+- Collected 143 and 164–173 using the radial collector. Slurm
+  completed both retries. The completed-only audit verifies 175
+  catalogs, 303 accepted fits of 350, 7,000 intervals and 21 strata.
+- Updated `docs/v3_2_result.md` with 10% deep-narrow and 30%
+  near-narrow empirical recovery. The latter has 2/8 width coverage
+  even though all fits pass. Recomputed paired count-error bounds.
+- NGC288 has ten archived and five running states. The original
+  radial array still has eight running and 106 pending tasks.
+
 ## 2026-11-15 — archive four empirical retries and two more complete strata
 
 - Collected 133, 135, 137, 140 and 152–163 via the radial collector.
