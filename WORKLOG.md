@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — prepare the outcome-closed common-system comparators
+
+- Verified all 63 refinements in shards 05–07. The eight completed input
+  shards now have all 182 initial entry flags resolved by the registered
+  refinement. Original flags and patch digests are retained.
+- Enabled the same QRF, nominal reference and old-target predictions on
+  the 103 admitted common-system PSFs. The runner binds the census,
+  membership photometry and the original candidate gate. HST scale values
+  stay sealed pending the finalized candidate forecast and evaluation freeze.
+
 ## 2026-11-14 — verify tilt input shards 06 and 07 and refinement 04
 
 - Slurm 61259514_6 and _7 completed 0:0. Verified 813 PSFs in each,

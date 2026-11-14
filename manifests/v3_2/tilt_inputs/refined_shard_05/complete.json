@@ -1,0 +1,51 @@
+{
+  "shard": 5,
+  "all_PSF": true,
+  "source_marker_sha256": "e38c3ae397468882faa62646febd761a9c35ce3b4363d1cdaa5d5cb4afad30c4",
+  "levels": [
+    [
+      4194304,
+      319711
+    ],
+    [
+      8388608,
+      319711
+    ],
+    [
+      8388608,
+      319712
+    ]
+  ],
+  "tilt_probes": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.3,
+      0.0
+    ],
+    [
+      -0.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.0,
+      -0.3
+    ]
+  ],
+  "initial_flags": 21,
+  "remaining_flags": 0,
+  "code_sha256": "c55e4752396071bc00798f209064384dbc0c648074b2a212c026e158adccc452",
+  "row_checkpoint_sha256": "fc1ad876cf0eba36fa2179e18a9c715a50457468947d7830085db1f9eec3ef6a",
+  "checkpoint_code_sha256": "52bd398afb2c5945082934cf2f0e6537fddd1a40db8030f4e491cff51edba2b0",
+  "job": "61262703",
+  "outputs": {
+    "patch.npz": "6f9aa944980c3bdb7ffdb361253242e350ec72b51c786649862195aed6bddf9a",
+    "checks.csv": "2c5bf82fc9313cf39b33c40e5f0cec7f976902e851ec16031943c164353233cc"
+  }
+}

@@ -121,3 +121,15 @@ forecasts and are evaluated separately in the injection experiments.
 For class confusion, report reliable dwarf and giant labels against
 all three posterior argmax classes. Include missing forecasts and
 numerical exclusions in the reference-row denominator ledger.
+
+## Common-system forecast controls
+
+The common-system native census admits 77 members of 47 Tuc and 26
+members of NGC362. Run the nominal, old-target and QRF forecasts on
+these exact native PSFs with `--common`. Use the same photometric
+candidate gate and predictor definitions as the field comparison.
+The published member IDs determine the validation sample. The
+predictors receive the photometry and the sky transfer treatment.
+Bind the outcome-closed common-system forecasts and the finalized
+candidate before evaluating the HST scales. A scale is shared across
+all qualified members of a system.

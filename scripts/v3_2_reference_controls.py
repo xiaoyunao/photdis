@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the three frozen comparator forecasts from DR19 photometry."""
+"""Generate the three frozen comparator forecasts from external photometry."""
 import argparse
 from concurrent.futures import ProcessPoolExecutor
 import json
@@ -29,6 +29,7 @@ from v3_2_reference_freeze import IDENTITY, ROLE, require_native
 from v3_2_tilt_inputs import verified
 
 _STATE = None
+COMMON_ROLE = 'new_hst_kinematic_system'
 
 
 def qrf_prediction(model, table, *, batch=128):
@@ -95,7 +96,7 @@ def stack_view(rows, grids):
 def old_population(model, photo, chain, fields):
     field_ids, in_old = geographic_fields(photo['RA'], photo['DEC'], photo['cell'], fields)
     if in_old.any():
-        raise ValueError('Prospective DR19 objects overlap a historical target footprint')
+        raise ValueError('Prospective objects overlap a historical target footprint')
     original = np.array(sorted(fields))
     shape = (len(original), len(model.weights), 5)
     fit = FieldPopulation(np.ones(shape), np.ones(shape), model, original)
@@ -112,18 +113,25 @@ def old_population(model, photo, chain, fields):
 
 def main():
     global _STATE
-    require_compute()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--workers', type=int, choices=range(1, 33), default=16)
+    parser.add_argument('--common', action='store_true', help='Use the outcome-closed common-system census')
     args = parser.parse_args()
+    require_compute()
     root = ROOT/'data/v3_2'
-    native = root/'reference_native/complete.json'
+    native_name = 'common_scale_inventory' if args.common else 'reference_native'
+    native = root/native_name/'complete.json'
     census = json.loads(native.read_text())
-    if census.get('reference_values_read') is not False:
+    closed = (census.get('scale_values_exported') is False and census.get('predictions_read') is False
+              if args.common else census.get('reference_values_read') is False)
+    if not closed or census.get('all_admitted_PSF') is not True:
         raise ValueError('Require a photometry-only admission')
     photo_path = verified(native.parent/'photometry.npz', census['outputs']['photometry.npz'])
     photo = load(photo_path)
     require_native(photo)
+    if args.common and (len(photo['identity']) != census['admitted_members']
+                        or len(np.unique(photo['scale_system'])) != census['admitted_systems']):
+        raise ValueError('Common-system photometry differs from the native census')
     old, registered = ROOT/'data/v3_0', ROOT/'manifests/v3_0'
     sed_receipt = registered/'sed_fit.json'
     qrf_receipt = registered/'controls/complete.json'
@@ -150,7 +158,7 @@ def main():
     with np.load(app_path) as app:
         original = np.unique(app['field'])
         if np.intersect1d(photo['identity'], app['identity']).size:
-            raise ValueError('DR19 identities overlap frozen application fit')
+            raise ValueError('Reference identities overlap frozen application fit')
     configs, bounds = [], {}
     for f in json.loads(prep_path.read_text())['fields']:
         if f['index'] in original:
@@ -165,7 +173,7 @@ def main():
     grids = [np.unique(np.r_[np.linspace(-20., 50., n), DISTANCE_MU_BOUNDARIES])
              for n in (3501, 7001)]
     _STATE = photo, nominal, response, cal, grids, fields, theta, beta, chain['weights']
-    destination = root/'reference_controls'
+    destination = root/('common_scale_controls' if args.common else 'reference_controls')
     if destination.exists():
         raise FileExistsError(destination)
     with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as workers:
@@ -196,7 +204,8 @@ def main():
                 'src/photdis/v3/controls.py', 'src/photdis/baseline_v0.py',
                 'src/photdis/baseline_v1.py', 'src/photdis/v3/inference.py',
                 'src/photdis/v3/systematics.py', 'src/photdis/v3/hierarchy.py')]
-    save_json(destination/'complete.json', dict(cohort=ROLE, n=len(photo['identity']), all_PSF=True,
+    save_json(destination/'complete.json', dict(cohort=COMMON_ROLE if args.common else ROLE,
+              n=len(photo['identity']), all_PSF=True,
               references_read=False, pilot=False, photometry_sha256=sha(photo_path), views=exports,
               candidate_admission=admission_export,
               inputs={str(p.relative_to(ROOT)): sha(p) for p in sources},
