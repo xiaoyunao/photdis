@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate the DR20 candidate and verify radial cache 20
+
+- Candidate job 61273482 completed 0:0 in 6m21s. Reconciled the frozen
+  decision, photometry and source hashes. 1,025 of 1,117 forecasts pass
+  the numerical gate. Submitted four-view assembly, freeze and scoring
+  as 61273704 after confirming the outcome marker was absent.
+- Slurm rejected the first wrapped submission because it lacked the
+  CPU constraint. Added the explicit allocation flags and resubmitted.
+- Repeat 20 (raw 61272608) completed 0:0 in 13m56s. The cache audit
+  now verifies 21 repeats and 2,688 contexts.
+
 ## 2026-11-14 — verify the frozen HST comparison
 
 - Final common-scale job 61273526 completed 0:0 in 27s. The freeze,

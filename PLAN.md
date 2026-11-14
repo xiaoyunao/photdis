@@ -67,6 +67,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   DR20. The common-scale candidate finished with 92 numerical passes
   among 103 PSFs. Final freeze and scoring 61273526 completed. The HST
   comparison retains the positive candidate distance bias in both systems.
+  DR20 candidate 61273482 completed with 1,025 numerical passes among
+  1,117 PSFs. Four-view freeze and scoring submitted as 61273704.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
@@ -96,7 +98,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–19 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Cache receipts 00–20 are verified with `scripts/v3_2_radial_cache_audit.py`.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
