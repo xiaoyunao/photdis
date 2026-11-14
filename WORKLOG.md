@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — qualify the added NGC288 distance quadrature
+
+- Slurm 61260630 completed 0:0 in 2m48s. Verified 15/15 checks across
+  384 added nodes and three PSFs in state 12. Native closure at the
+  archived distance nodes is exact. Maximum old-node entry discrepancy
+  is 0.00010496.
+- Retained the original pilot. Added resumable per-state row checkpoints
+  for the 512-object production run and Slurm array state selection.
+
 ## 2026-11-14 — authenticate the first radial cache and DR19 acquisition
 
 - Cache job 61260465_0 completed 0:0 in 13m49s with all 128 contexts.

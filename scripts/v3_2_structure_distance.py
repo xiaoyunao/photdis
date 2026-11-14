@@ -20,6 +20,7 @@ from photdis.v3_1.gaussian_response import class_gaussian_logresponse
 from photdis.v3_1.selection_dust import entry_model_with_local_dust
 from photdis.v3_1.structure import structure_quadrature, withdrawn_gaussian_logresponse
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
+from v3_2_radial_checkpoint import compute_rows
 from v3_2_tilt_inputs import verified
 
 ROWS = (273, 436, 224)
@@ -100,6 +101,11 @@ def one(row):
     return mixed_response, mixed_entry, checks
 
 
+def checkpoint_row(row):
+    response, entry, checks = one(row)
+    return response, entry, np.array(json.dumps(checks))
+
+
 def main():
     global _STATE
     require_compute()
@@ -126,7 +132,7 @@ def main():
     photo = load(photo_path)
     np.testing.assert_array_equal(identities, photo['identity'])
     np.testing.assert_array_equal(types, photo['TYPE'])
-    if not (types == 'PSF').all() or len(types) != 512:
+    if not (types == 'PSF').all() or len(types) != 512 or len(np.unique(identities)) != 512:
         raise ValueError('The complete frozen 512-object native PSF cohort is required')
     old = ROOT/'data/v3_0'
     model_path = old/f'uncertainty_refit/draw_{draw:02}/model.joblib'
@@ -142,8 +148,21 @@ def main():
     out = ROOT/'data/v3_2/structure_distance'/name
     if out.exists():
         raise FileExistsError(out)
-    with ProcessPoolExecutor(max_workers=min(16, len(rows)), mp_context=mp.get_context('fork')) as pool:
-        results = list(pool.map(one, rows))
+    sources = [Path(__file__).resolve(), marker, refined, photo_path, model_path, shared_path,
+               ROOT/'docs/v3_2_structure_protocol.md', ROOT/'scripts/v3_2_radial_checkpoint.py']
+    sources += [ROOT/'src/photdis'/p for p in ('v3/selection.py', 'v3_1/structure.py',
+                 'v3_1/selection_dust.py', 'v3_1/gaussian_response.py')]
+    hashes = {str(p.relative_to(ROOT)): sha(p) for p in sources}
+    checkpoint_state = {}
+    if args.pilot:
+        with ProcessPoolExecutor(max_workers=min(16, len(rows)), mp_context=mp.get_context('fork')) as pool:
+            results = list(pool.map(one, rows))
+    else:
+        checkpoint = out.parent/'row_checkpoints'/name
+        parts = compute_rows(checkpoint, dict(draw=draw, inputs=hashes, new_nodes=len(means)),
+                             identities, checkpoint_row, workers=16, keys=('response', 'entry', 'checks'))
+        results = [(response, entry, json.loads(checks.item())) for response, entry, checks in parts]
+        checkpoint_state['row_checkpoint_sha256'] = sha(checkpoint/'inputs.json')
     response, entry, checks = zip(*results)
     response, entry = np.asarray(response), np.asarray(entry)
     checks = [check for context in checks for check in context]
@@ -162,11 +181,8 @@ def main():
                closure_entry=entry[:, :, len(means):], mu=means, row=rows,
                identity=identities[rows], TYPE=types[rows])
     csv_rows(out/'checks.csv', checks)
-    sources = [Path(__file__).resolve(), marker, refined, photo_path, model_path, shared_path, ROOT/'docs/v3_2_structure_protocol.md']
-    sources += [ROOT/'src/photdis'/p for p in ('v3/selection.py', 'v3_1/structure.py',
-                 'v3_1/selection_dust.py', 'v3_1/gaussian_response.py')]
     save_json(out/'complete.json', dict(
-        inputs={str(p.relative_to(ROOT)): sha(p) for p in sources},
+        inputs=hashes, **checkpoint_state,
         outputs={p.name: sha(p) for p in out.iterdir()}, job=os.getenv('SLURM_JOB_ID'),
         draw=draw, pilot=args.pilot, all_PSF=True, n=len(rows), new_nodes=len(means),
         archived_native_maximum_delta=float(abs(response[..., len(means):]-archived_response).max()),

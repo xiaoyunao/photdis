@@ -52,3 +52,16 @@ both branches pass the registered fixed-distance comparison.
 The member means at odds order 1024 are 121.335 and 127.817, respectively.
 Distance-axis and joint certification still require the added-distance
 responses and selection integrals. [Both transitions and receipt](../manifests/v3_2/structure_odds_audit/)
+
+## Added-distance pilot
+
+Job 61260630 passed all 15 checks across three PSFs in state 12 at the
+384 added nodes. The full and Gaussian responses agree exactly with the
+archived responses at the previous nodes. The maximum native log-response
+change between grid levels was 0.0001733 nat. The maximum absolute
+old-node entry discrepancy was 0.0001050. These results qualify the
+registered integration levels for the full 32-state run. Save each
+completed object integration in a source-bound per-state checkpoint so
+an interrupted allocation can resume from verified rows.
+
+[Pilot checks and receipt](../manifests/v3_2/structure_distance/pilot/)

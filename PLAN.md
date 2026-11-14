@@ -61,9 +61,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 completed at fixed distance order
   64. Both branches pass 512 to 1024 and retain failures at 256 to 512.
-  Added-distance native and entry pilot 61260630 is running and follows
-  `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
-  The two-axis evaluator is ready for the authenticated 32-state products.
+  Added-distance pilot 61260630 passed all 15 checks, with exact native
+  closure at the old nodes. Full 32-state integration uses the registered
+  levels with per-state checkpoints, followed by the two-axis evaluator.
 
 ## v3.1 — completed research delivery
 

@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "scripts/v3_2_structure_distance.py": "30be9f8be51c74b5390296864631788dc2c91bd57eace2c93b7d5bba06815d17",
+    "data/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+    "data/v3_1/structure/native_refined/draw_12/complete.json": "59b05686d1e6b97d2eb540d99e8772e34e57c7a5a6441a537fae7bfb3ebf2223",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "docs/v3_2_structure_protocol.md": "9591d30929cced7968dfb5f2b4997e8e404eccf0a11ed0be1afa5a67d5c35b84",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/gaussian_response.py": "0c130d60d7e07c09c588fa507cf1127bb8c78783b9071909164b7e8db7449cfc"
+  },
+  "outputs": {
+    "nodes.npz": "9f19eb623d0cfe9bf53360c823e08433e286d0152fd117635e8fed202895c034",
+    "checks.csv": "9f3e02bae0678b1579fabcd1c388700256997b7f1a56b9f5cac9ddcc8877bf3f"
+  },
+  "job": "61260630",
+  "draw": 12,
+  "pilot": true,
+  "all_PSF": true,
+  "n": 3,
+  "new_nodes": 384,
+  "archived_native_maximum_delta": 0.0,
+  "failures": 0,
+  "passed": true
+}

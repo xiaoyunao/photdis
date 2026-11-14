@@ -13,4 +13,7 @@ source /global/common/software/desi/desi_environment.sh main
 set -u
 export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+if [[ -n "${SLURM_ARRAY_TASK_ID:-}" ]]; then
+    set -- --draw "$SLURM_ARRAY_TASK_ID" "$@"
+fi
 python -u scripts/v3_2_structure_distance.py "$@"
