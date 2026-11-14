@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — verify three more radial recovery catalogs
+
+- Collected catalogs 103, 105 and 106 with
+  `python3 scripts/v3_2_collect_radial_results.py --completed`.
+  Both fits pass in each catalog.
+- Delivery audit with `--completed-only` verified 107 of 288 catalogs,
+  193 of 214 accepted fits, 4,280 intervals and 12 complete strata.
+  Debug retries 096 and 098 were running at the accounting check.
+  Ten NGC288 states remain verified. Continue collecting both arrays.
+
 ## 2026-11-15 — recover two more scheduler cancellations
 
 - Slurm canceled 096 and 098 after 12 and 18 seconds. Neither
