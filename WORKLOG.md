@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile tilt refinements through shard 28
+
+- Verified the remaining 27 and 26 flagged contexts in shards 25 and 27.
+  Compact census now confirms 663 passing reviews and zero unresolved
+  failures among reviewed contexts. Shard 29 has 23 pending reviews.
+
 ## 2026-11-14 — verify DR19 exclusions, prior-predictive pilot and tilt shard 29
 
 - DR19 audit 61267191 completed 0:0. Verified its input and output
