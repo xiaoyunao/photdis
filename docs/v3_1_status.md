@@ -1,5 +1,16 @@
 # v3.1 进度与当前证据
 
+## Current final state — 2026-11-14
+
+All four work packages and actual scientific jobs completed. Finalchain
+61232760/61/62/61233366 COMPLETED0:0; no remaining science task. Both structure
+branches fail joint quadrature, despite passing count sampling. Finaldomain has
+0calibrated cells. All22plates visually inspected;319unifiedfigure checks pass.
+Full source-bound final narrative/21requirements/delivery gate has passed.
+Exact finalcommit synchronization is verified separately after committing.
+The execution notes below are historical snapshots.
+See [integrated results](v3_1_result.md) and [full ledger](v3_1_requirements_result.md).
+
 2026-11-14；完整四工作包 goal 仍在执行，尚未接受新的科学模型。
 协议见 [v3_1_protocol.md](v3_1_protocol.md)，逐项状态见
 [v3_1_requirements_result.md](v3_1_requirements_result.md)。不读取 DOCX。

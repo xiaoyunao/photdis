@@ -1,36 +1,31 @@
 # PLAN
 
-## Active v3.1 — scientific calibration and use domains
+## v3.1 — completed research delivery
 
-User authorized the four complete work packages in `docs/pro_review_31f1277.md`
-and explicitly requested the detailed active chat goal. Protocol and evidence:
-`docs/v3_1_protocol.md`, `docs/v3_1_requirements_result.md`. Preserve all v3.0
-models/products/failed numerics and deployed v1; no million-object expansion,
-deployment, timers or subagents. Native DR11 TYPE=PSF required at admission/export.
-
-Current objective: finish the science comparisons, final product-matched
-validation, joint counts, use-domain map and one marginalized structure example.
-Negative findings remain deliverables, never successful calibration claims.
+Current objective: preserve the completed v3.1 deliverable; final source-bound
+delivery gate passed. The final commit is synchronized before goal closure. All authorized science
+computations, nine result reports and22visually reviewed plates are complete.
+Scientific rejection remains: no adopted correction/calibrated domain, no measured
+independent fullcandidate contamination, no new independent NGC288 scale recovery.
 
 ### Current execution snapshot
 
-This snapshot takes precedence over the historical execution notes below.
-- Complete: four-package frozen implementation; mechanism, radial, response,
-  external validation, candidate modes, domain evidence and all102-state transfer
-  reports. Scientific failures remain explicit; no model adoption.
-- Structure computation complete:32/32 refinements/702checks; allocated assembly,
-  posterior, shared counts and domain join allCOMPLETED. Original native490 and
-  entry11052 flags retained;0unresolved preparatory state objects. Both branches
-  fail final joint quadrature; both65536 count draws pass but are not accepted.
-- Required sequence: all32 refinements → existing assembly61232760 → posterior
-  61232761 → shared-count report61232762 → domain join61233366. No duplicate jobs.
-  All four original stages nowdebug, retaining dependencies/32CPUs andoriginal
-  limits30/30/30/15minutes. No further queue change required whilethesearelive.
-- Delivery:19/22 figures accepted;183 actual tests passed. Remaining structure2
-  and domain1 figures require real products, source checks and visual inspection.
-- Closure: finish structure/domain reports, reconcile every Pro requirement,
-  update final narrative/README/AGENTS, run full22-figure and final delivery gates,
-  commit and verify local/GitHub/NERSC synchronization. Goal remains active.
+- All102transfer states,64response probes,176radial catalogs/352arms and once-opened
+  external validation complete. Finalscore audit432132checks;183tests pass.
+- All32structure states assembled oncompute; originalnative490/entry11052flags
+  retained,0unresolvedpreparatorycontexts. Both joint quadratures fail; both65536
+  shared-countdraws pass but cannot override posterior rejection. Finaldomain
+  join3540PSF/fixed3003highq/75cells/30occupied establishes0calibrated cells.
+- All22English plates visually reviewed and319unifiedfigure checks pass.
+- All21requirements and current narrative authenticated; actual full delivery
+  gate passed. Finalcommit/sync is checked after freezing this record, before
+  closing the goal. No sciencejob remains. Do not submit newmodel/refinement/
+  catalog/deployment/timer/agents.
+- Future science requires a newly authorized frozen scope. Evidence gaps and
+  failure causes are described in docs/v3_1_result.md, not deferred as hidden jobs.
+
+The historical execution notes below are preserved for recovery; this snapshot
+supersedes their pending-job and partial-delivery statements.
 
 ### Milestones and current evidence
 - Resource execution: all4exactresponse groups61229862 completed; full64state

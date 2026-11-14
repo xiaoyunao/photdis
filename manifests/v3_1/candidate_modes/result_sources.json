@@ -6,5 +6,6 @@
     "manifests/v3_1/candidate_mode_figures/integrity.json": "b6a16d5a1ce8c8ef1f4ddc7546725fb49b380b62f3f1fc0d5610d10aa7028480",
     "manifests/v3_1/candidate_mode_figures/acceptance.json": "46d56430bbf6fa316a99d3d3a7382e0ae9af87bebd299632e2377d7040808858"
   },
-  "document_sha256": "65830905891d69945cc06966b72846a2dfdcb8b1a4006150a7a786b045c544c0"
+  "document_sha256": "5b9dfdf85b5c24aa9de59eb44a244ff48731d3ce1826b63fc85fb35e9dceb31a",
+  "final_editorial_update": "2026-11-14: obsolete progress wording updated to completed cross-references; science/source tables unchanged."
 }

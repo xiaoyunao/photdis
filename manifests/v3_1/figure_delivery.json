@@ -1,0 +1,1593 @@
+{
+  "inputs": {
+    "manifests/v3_1/paired_figures/complete.json": "f32b4bfcd4f5d77c1ca45482afcaa3f004df97b317fa216fc7cd7c6c83c4fe9e",
+    "manifests/v3_1/paired_figures/delivery_validation.json": "e9772dc77d2371e3b0dfa57f1a156507786d8a0d6a2e3b78a7be875bce2fd46d",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/complete.json": "f5faa9fed85852c65af3a34c174fdf162d53d30233af82128cc4f05133e86eea",
+    "manifests/v3_1/target_prior/diagnostic/paired_report/all.csv": "027f4d7e8e987bb5431bf6df70c504eb01a7015d4a1106c956123ed868df075d",
+    "scripts/v3_1_paired_figures.py": "54e2b5a4b3ed2d83d23e27476b783dd8ca795df53283db04dff3099bbf934acf",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4",
+    "figures/v3_1/paired_figures/target_prior_transfer.png": "d48bc3659ed674b0c8253de9496589b474ae78b81e6f2ec885f9cd1d572d2315",
+    "figures/v3_1/paired_figures/target_prior_transfer.pdf": "4821881d4bd68284be95084e86b4af64846b0a45da81df703f4205113f7bdce2",
+    "manifests/v3_1/paired_figures/target_prior_transfer.csv": "7dbb70d5755cff2e87258d220c2db269e45eec660bd4c243c664578a87d05e4c",
+    "figures/v3_1/paired_figures/class_metallicity_contrasts.png": "2ea0aa287496024bf9e3a12ea03dd6a4131365492b5c1d68ea418b452d802992",
+    "figures/v3_1/paired_figures/class_metallicity_contrasts.pdf": "a7098916fb6d379ef3d82ad65133220e8514a84f0520be809a9dd70bf95f8a62",
+    "manifests/v3_1/paired_figures/class_metallicity_contrasts.csv": "d2e9805e0e19127a131e7ac3a6f9d0077ad8bea66fc3244429b48ce9773e4c35",
+    "manifests/v3_1/calibration_figure/complete.json": "67a3381702a5e1f9a3244e5c1dd72fbc66f1871bded006d2c509776da70ff669",
+    "manifests/v3_1/calibration_figure/acceptance.json": "ac5091c3f5e5288ba08009f1df74f0d6c293955b6f4f975d607be08138b2dd5f",
+    "manifests/v3_1/luminosity_fit_refined/complete.json": "43442caeadbf4e2e8f41739bd9343dd133eff4428e2244c134273bd33fa6f8d8",
+    "manifests/v3_1/luminosity_fit_refined/parameters.csv": "e7fb51bd56402efb043d179212898a86e5949c2b7bcead5fe627951b83629ba5",
+    "manifests/v3_1/luminosity_guard/complete.json": "9ce3fabf900601d1249e243aaf043b52e9047d28226a8e234a36576aea308ff4",
+    "manifests/v3_1/luminosity_guard/comparisons.csv": "4cb321725049c4abcf731b8a4bf6aba7f6293fa9931b7a2e615885d2ce67f7ad",
+    "scripts/v3_1_calibration_figure.py": "cbc873f7cfe6a3158c903980acab92bd569132d00308862c6a5f72e850e0445a",
+    "figures/v3_1/calibration/luminosity_correction.png": "7e98b6c996c8448ac753e76b2228c8795bbe6988dbb040daf4e987b171e9eec1",
+    "figures/v3_1/calibration/luminosity_correction.pdf": "b00bdcb1fc0d51f1935fe5efef19e1f6dc4a66f9f1992b537c072d085b535f65",
+    "manifests/v3_1/calibration_figure/plotted.csv": "8474dfd1c29f476c83b5dc10f0a296eb9314d5c3a8c8d7bad476cb497091fa0a",
+    "manifests/v3_1/latent_figure/complete.json": "63fc776b78c5f6d1cec0de1bce6fdd595d08e1cf5cd9dcf438b8ca9b386b0e1a",
+    "manifests/v3_1/latent_figure/acceptance.json": "7ddda832e5d33f86f4af728a4ec278437fd2099294f97072be0a284ecb4336a2",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/complete.json": "0c3d0034488d435e262970b5451d50eacad9c3ecf2e817f853f347e40d09bd34",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/summary.csv": "4532ca49f609737607d6dd855de7aeaf88e4b9451ff7256fc37ee073828befd8",
+    "manifests/v3_1/diagnostics/diagnostic/latent_failure_report/objects.csv": "8e7767bed85c90ea28083b976cf917d3e530b3e7e5e1d0c8c198c2e19cdde142",
+    "scripts/v3_1_latent_figure.py": "6ed0854a026d5a4f1642e2e6d77696798eacc7b1f1f694a38bb5b7b189cc63a6",
+    "figures/v3_1/latent/latent_support_failure.png": "a6616c5c5e055ea7acc6f794c7b43d1a39be900cb2a5df3a783b94b30e7298ae",
+    "figures/v3_1/latent/latent_support_failure.pdf": "65ffc8651a748aa35e37aeb288c643ecc06f40dbef87698f3a7351841202a681",
+    "manifests/v3_1/latent_figure/plotted.csv": "e86ba1cbda456f024933a2497461de7c07ad7083a52382a0ba0578eb836b51f4",
+    "manifests/v3_1/target_candidate_figures/complete.json": "a7b7d70d985b4532e536e709e618e53000e9e6a90451b4d6354666fb95226116",
+    "manifests/v3_1/target_candidate_figures/acceptance.json": "846a452f4fa7de5f9fa0bece32e12bd60a8cdf1e3153de9360c16389ad22f260",
+    "manifests/v3_1/target_ensemble/candidate/complete.json": "60565e56650bb34370c7ea7661f4b72f5843f772e75098fa47872bc288722e3a",
+    "manifests/v3_1/target_ensemble/candidate/counts.csv": "5d528f714704141f7c20e350b39abf36c1203adbc916b53908066fa563d2e4dd",
+    "manifests/v3_1/target_ensemble/candidate/weights.csv": "5c9a5f6ba8ef33654d516eff0accbb999cdc93e80e65ef067c3e58109f6551a2",
+    "manifests/v3_1/target_ensemble/candidate/checks.csv": "b6aac8eb2121a3cbdffcd78573f764fac513927026c790b97051c7608f4b78f6",
+    "scripts/v3_1_target_candidate_figures.py": "8e7975a9cd972bf6de52db5ca630d3d168a4031f25f854066bd70c40ef174006",
+    "figures/v3_1/target_candidate/conditional_counts.png": "80a56769584c02ede5b222e8d8e9f18d7c5a452d802de8cd1921d50c0c61d9d3",
+    "figures/v3_1/target_candidate/conditional_counts.pdf": "c7fb3de629d5d92e99f1166401229ae9e4e04ae039a5844b557e6db212cfe291",
+    "figures/v3_1/target_candidate/weights_numerics.png": "422f7b6cbf8deb5c8375e1ff15788fea0489eddaa45eecaac6a560079b55a5bd",
+    "figures/v3_1/target_candidate/weights_numerics.pdf": "6263449635f160e4be7292142b74e6b82d7eb3ff81e6cc863b7afcfb228f52c3",
+    "manifests/v3_1/target_candidate_figures/plotted.csv": "a2ab9ebbbadda9d6175221704794a085f9e3ce0441ecc99879d81c7fb4845443",
+    "manifests/v3_1/domain_photometry_figures/complete.json": "125d99ccfbf178df2555fbd76eaa05df754fbf36444a2400f79cc294fbcc3298",
+    "manifests/v3_1/domain_photometry_figures/acceptance.json": "1034a12b4befdfc684ce9386493a043bd94b0a8fec78db977fd531b398c9103a",
+    "manifests/v3_1/domain_grid/complete.json": "0d949ae2ec32d9ad557af4c172ea77eadfb44f5586a7741d5227b3f8bdff0f53",
+    "manifests/v3_1/domain_grid/cells.csv": "78ae28ce680766b706754f40d7b5fe2b91f8c2a726d7c6212aae1b8efde0e1c2",
+    "scripts/v3_1_domain_figures.py": "7fd7681ccb869d1697f39a2e9cc55857f7a1649cae880152bee622b239ea1485",
+    "figures/v3_1/domain_photometry/photometric_occupancy.png": "578f63557f0478b43d28ad08fa5e8a0c2a1ff22c105387e8d264acd547c6e13e",
+    "figures/v3_1/domain_photometry/photometric_occupancy.pdf": "47a1bf12e569bd9ad51ae1afa61129c80198058fa15c9d2408524d58cbe48dd3",
+    "manifests/v3_1/domain_photometry_figures/plotted.csv": "b29598b1a3705fb9b488efedf581e4a32e88ddc6515868eb6fb31ccf977865ee",
+    "manifests/v3_1/final_validation_figures/complete.json": "2f0382d42b72b34083dba7daf67831ad03d2b822a6781179f1c73fd0846c17c3",
+    "manifests/v3_1/final_validation_figures/acceptance.json": "fbdc9b6a57328ef20594ea5ab18a9a9dcce3a8fd185dc191bbb9a5466402cd7b",
+    "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_gaia_all_objects.csv": "83345733fd7320cbb189dc799a8892b418aadafd9ef96aabd76ae9bb468cdffc",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_astronn_all_objects.csv": "1f9aefe7d561ea53ec8746af43874cca898630d10b3b34f3e4abfbd9ed550a74",
+    "manifests/v3_1/final_validation/report/new_sky_field_paired_class_all_objects.csv": "f9b1d9cd9a934fda271a75ad423d6a5d80f934e936f12f7619f35f0fef8777ef",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_gaia_all_objects.csv": "95a46cf30637196fdc0310d6db6751ec35f3e0bd3d24c259d188af7ce0a0378b",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_astronn_all_objects.csv": "2e345b43780398c20f8a88b170ae1cb5d77b23071a2058e5208e2cbc60c8f839",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_class_all_objects.csv": "c516b66729c79052a3fe5aec939dea65151ae640687cdf0dadbddb7725a988d8",
+    "manifests/v3_1/final_validation/report/common_scale_summary.csv": "3ce62c6a594b11a326752b8a02ee2a5e6f6e0168b0ce23e8ed57dfb2e1262568",
+    "scripts/v3_1_validation_figures.py": "1ee972a6db86385c9b809146d5a5cef6067bba51abde9e1ee5f2e4b39bc68514",
+    "figures/v3_1/final_validation/field_score_gains.png": "175a53ef42c6e1aa768624e8565dc3d6eadc04e78e850fbe16fecb636897fad8",
+    "figures/v3_1/final_validation/field_score_gains.pdf": "23ed2692b66304f221da1450948ac35810d445c61de99098522afc8d8c07fb7a",
+    "figures/v3_1/final_validation/common_scale_agreement.png": "9fdbcda7f2c8c6ce8c9cdbc1145da97e4021eb68f5b8ba5c7503b96cd124bd3b",
+    "figures/v3_1/final_validation/common_scale_agreement.pdf": "780655583ae458a7a6f0c6249fb4c42acddba257663ea9c286510a747cafc26e",
+    "manifests/v3_1/final_validation_figures/plotted.csv": "7ab2b33394338e4812ff6133a029aec814a9bb207490aab9b510bb1ee591aa64",
+    "manifests/v3_1/radial_figures/complete.json": "77384254a6cc4471e1b2237d9cca16d3f89bc7011675feaa6aad0ed26dcd6345",
+    "manifests/v3_1/radial_figures/acceptance.json": "2b84b9949af189e3caa868827bf8979b391422d8e272c0e26420c4a81fcd717c",
+    "manifests/v3_1/radial_summary/complete.json": "c4548ec29b0fda430689c04499509fa08d7846a286b39135b60dc2c004b12d41",
+    "manifests/v3_1/radial_summary/local_minus_broad_fraction_L1.csv": "a00dbb3aa923b015eca908c3300fdd07b3ed0048691ac89576af5bcd425eea96",
+    "manifests/v3_1/radial_summary/coverage95_nonzero_truth.csv": "738451e298229bccdcfa9128eed02246a7eedff41efa0876e3e1cf650e56dacc",
+    "manifests/v3_1/radial_summary/source_inventory.csv": "fd86a85f50797682abfa2d12e14c0291dd798a930fd3046c2b58cb6da4c4e19f",
+    "manifests/v3_1/radial_summary/median_minus_truth.csv": "ea24aa9ea62b9118881b39946093ce5a04590e1a0c8ecbb404dbaa720414fcaa",
+    "manifests/v3_1/radial_summary/coverage95_defined_structure.csv": "fce0151384b4daf28984076e00645180ddda6c0b68760ae45132d44fb8ab2d0a",
+    "scripts/v3_1_radial_figures.py": "dadc52d4293ebcb05190493de0f3299b050af6c40fa20de8e042790616097261",
+    "figures/v3_1/radial/paired_radial_error.png": "a08c7809acebb29002cbb3ff5b6ec938ef0ae886dcad1e93cbaf2baca4d04ed5",
+    "figures/v3_1/radial/paired_radial_error.pdf": "227b0ddedb032b3b93c66e825a028ad7c75c6eba8e9d705097152b37c2aea34b",
+    "figures/v3_1/radial/radial_nonzero_coverage.png": "5cc2e02828f90c13c66a05832e24fbb85e2fd430d96069541cceca51b145d96b",
+    "figures/v3_1/radial/radial_nonzero_coverage.pdf": "668cee4a0f8c380d4d36ff54162638be684b01503d95854ba90a7ed8d6dfcdf4",
+    "figures/v3_1/radial/radial_structure_parameters.png": "d6071a5f3bd74185f6c4fafb25bd355b1a74758d533dc18ff39b9e54c9aefeff",
+    "figures/v3_1/radial/radial_structure_parameters.pdf": "7c96876c322f9e1d33d4b13a607eb1be5bd7198e5ff9907f836539977abbfaa9",
+    "manifests/v3_1/radial_figures/plotted.csv": "ffa9275d7e663beaf3065b50bf47c76c0263d6812bbee2917510ccea69cd5bad",
+    "manifests/v3_1/response_figures/complete.json": "b205894e72cbc3554989a0fd389dd5aca35fb2fcf8a41415e564c92c95ce9281",
+    "manifests/v3_1/response_figures/acceptance.json": "e69fb9a6fb5252f8e70bdbc75d450446007663a0fb66525e385bcb1a486b199a",
+    "manifests/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+    "manifests/v3_1/response_probes/report/inventory.csv": "33409f9bc738fbb41aca3eb1c6078ddc08d88b608f58accd6b8213052d2b10f9",
+    "manifests/v3_1/response_probes/report/response_weights.csv": "34d25823c7cbb1f4d6b0ba448bfab8e2144929453d42c5a96da2db0bb7e4f4b9",
+    "manifests/v3_1/response_probes/report/weight_numerics.csv": "41e119259391bd7bfb06c260db882295bb8f49cf1753606f1fb09284a3c13cb1",
+    "manifests/v3_1/response_probes/report/target_count_numerics.csv": "e23e8ec9d9e15a9d0547937923fc4948c61fd2f8ede30e1a6069c11ce5578540",
+    "manifests/v3_1/response_probes/report/paired_all.csv": "7da537773a6b584efe2d489a24d4a3b14903dc1622b11bd24209c6039a45c2db",
+    "manifests/v3_1/response_probes/report/paired_reference_class.csv": "bd14adc4cb9ff015611e5dff33fb7869e713cfe562cfeb92ef154c1d69027a2b",
+    "scripts/v3_1_response_figures.py": "5ef15eaed8df06826300873949616db3faa7db8e868281e627be681d685dc766",
+    "figures/v3_1/response_probes/response_evidence.png": "618b74176bb97c3d8c43bb5313f02016eac5b5b788b3fd9513e2ab281ff16619",
+    "figures/v3_1/response_probes/response_evidence.pdf": "34b75e5284526a76134d3cdf62ec138f7626b58ea3f4d12e4904262fd09db00d",
+    "figures/v3_1/response_probes/response_source_transfer.png": "94b2223b7122c459480222dffb100b2a95af59fbb7cc29c210add80788451df5",
+    "figures/v3_1/response_probes/response_source_transfer.pdf": "92030734ee53aa42217ccacd00f5c1def9ccee021739e4e39156c8c793dfa298",
+    "manifests/v3_1/response_figures/plotted.csv": "4504f93603a9d6308485e24e580cd1d64fd181b4bdaad2c3687b187012dd665a",
+    "manifests/v3_1/candidate_mode_figures/complete.json": "83835e0364d0b9e15347615e932d05c320230f35333a1bdd09919bed957324b3",
+    "manifests/v3_1/candidate_mode_figures/acceptance.json": "46d56430bbf6fa316a99d3d3a7382e0ae9af87bebd299632e2377d7040808858",
+    "manifests/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41",
+    "manifests/v3_1/candidate_modes/full_summary.csv": "ed022851685ecde5a695846e173da952ef554ffa06a91f9773ad132c4ce8cb8d",
+    "manifests/v3_1/candidate_modes/full_overview.csv": "3f88cb92e31fc1d37aab20f4c44847d72ed12a2cc3f22758cff9fa99b0bdf604",
+    "manifests/v3_1/candidate_modes/full_histograms.csv": "a0831f8475d8101a3b2b848a57e1ea3bd60ab0b8223c8de82a639ff9acf094e4",
+    "scripts/v3_1_candidate_mode_figures.py": "5230d0a9cf420caa6e4ecddb089c23ea431e8ab34771e3d2881bdeec74efb7ba",
+    "figures/v3_1/candidate_modes/mode_responsibilities.png": "54e167c4226e35bbeb4a996826c3e63821e9d14c4095447f3e972986fbe420a1",
+    "figures/v3_1/candidate_modes/mode_responsibilities.pdf": "206abe4cf5d98f329256910a5041cf04b90c7ea13cefc59925597ed025232d5e",
+    "manifests/v3_1/candidate_mode_figures/plotted.csv": "d734bd9f001fbd5804f524ca3db454a326c6dcecad2b3d4c4ad38e7ad610ce23",
+    "manifests/v3_1/domain_evidence_figures/complete.json": "7175a15985bcc8fd6e6640d2d346881ee0740dd0cf3e35cc2ec13b009259325c",
+    "manifests/v3_1/domain_evidence_figures/acceptance.json": "ff42a17ef5c54febb02d3c6bbab2956f3ace7bf9880fe131cd37f61562258a00",
+    "manifests/v3_1/domain_evidence/complete.json": "7b5c4d393ee9567f58d51a09e31e176ab632782d8edb57a9c3f0a5ccd93d5180",
+    "manifests/v3_1/domain_evidence/cells.csv": "73c8a65387f85a4926bf7c6c0c0fcdf382e05dac570e1e827e1f3379d3ec91f6",
+    "manifests/v3_1/domain_evidence/reference_distance_cells.csv": "a91b5292e8ccc32b778ba17f670d5b67490c836cd2df6035c2dfa9ef39ff50dc",
+    "figures/v3_1/domain_evidence/precise_newsky_references.png": "7453d3b5844c240b60bf756578decfc989c1c5c41e441104da035094f8e2147f",
+    "figures/v3_1/domain_evidence/precise_newsky_references.pdf": "d58ad4b46ff793f915687d664cd906a3a5563576ffcfea1485339e49104a7458",
+    "figures/v3_1/domain_evidence/missing_reference_mass.png": "395fb578431d2eccca816c324e1d4bd6a494cc9886bb6b7e4387684f6d291601",
+    "figures/v3_1/domain_evidence/missing_reference_mass.pdf": "2b80580d426798832ad341c059460385259d14eeb0ec9409120506f7e9135fb5",
+    "manifests/v3_1/domain_evidence_figures/plotted.csv": "b81e862cb7c1a5b2a430810568e6591a2a62879790bdd03e6a60833a2a6bbfcc",
+    "manifests/v3_1/heldout_transfer_figures/complete.json": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89",
+    "manifests/v3_1/heldout_transfer_figures/acceptance.json": "7affb5cf2801b15b0c93fbdcfcccfb27a346cef8bcab6a3f349c0b3d0ea7d269",
+    "manifests/v3_1/heldout_transfer/report/complete.json": "ebf5f2078f00ec35818e48cadc7f3eca0673fd0048390b4206c2d33cf2b77576",
+    "manifests/v3_1/heldout_transfer/report/inventory.csv": "c2e35cba0c6f8374a23c34861ea8f3401e1d3144e1225d10494382e65a24644d",
+    "manifests/v3_1/heldout_transfer/report/predictive_summary.csv": "249cfe9fbf43d54fcd91b19fde2a886e092956a5d8ada25890694df4670a4cb9",
+    "manifests/v3_1/heldout_transfer/report/counts.csv": "97f91afbb93f526fcf27650ba10a96c060023044b70d6bcb537e1b9d6e1b74b0",
+    "manifests/v3_1/heldout_transfer/report/field_summary.csv": "cb61bb463bd49a92c412ebcb83f40c8588fb64255d11bc94e533852cebadc342",
+    "manifests/v3_1/heldout_transfer/report/checks.csv": "f76dd7dcaa04efc0776bd04291b4b15d223706e85b72b8f85505c701cc5da815",
+    "manifests/v3_1/heldout_transfer/report/paired.csv": "bfca30d7755c6e608d2df7f7ea5208c7c8c4b4d2045fb815cc68faabac503a06",
+    "scripts/v3_1_heldout_figures.py": "6f0f06ed46f10843f537d9a342d6a7ae5c88cd09fb3a21dbb598bafa1bb674ab",
+    "src/photdis/v3/compression.py": "0cf68a06cd4e58ce5de615aa222113c1b7a068151e2cecbab119e21a0023c746",
+    "docs/v3_1_heldout_transfer_protocol.md": "41c980d7dc929a8f38e9ccc1d79d00ad279e77efc2c7189ec041cf0ab1aa26a1",
+    "figures/v3_1/heldout_transfer/heldout_joint_counts.png": "b23fc885b970b2472f76542a5234e62692d83a9bf1b41234c1cd5806c7017814",
+    "figures/v3_1/heldout_transfer/heldout_joint_counts.pdf": "cd83042ff82a467b77b47aa1c16528bcbb91425580315bd0b9c13b1cbcfae990",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.png": "ec03bdd9d6a60f5d007946c038b7b9fc2878b6b79d945bedd2598dfee7a259d3",
+    "figures/v3_1/heldout_transfer/heldout_predictive_support.pdf": "84d3d57186a3b55de04bd1f7cceb79f289936ba1f73149570fbcbc17a46a7251",
+    "manifests/v3_1/heldout_transfer_figures/plotted.csv": "a520a84b1eecb546606c13de4ac1894fc580a13b14dd596b4fcd23946c0ee88e",
+    "manifests/v3_1/structure_figures/complete.json": "7de8116e6b851beb0aea9f34f641c01d23a79635eee82c41afdbdfe66f6b4155",
+    "manifests/v3_1/structure_figures/acceptance.json": "a529aa7755527cd37bb36b269d54d38a7478126a21e78a297a1c2caa3e7ef920",
+    "manifests/v3_1/structure/posterior/complete.json": "87c6a79faef65b2b2224e6646764d2a9d80ecfee081df088b6c80619e28a077e",
+    "manifests/v3_1/structure/posterior/summary.csv": "88a2f241ae389c17ce47111ed3091a43d3249a31ba1a42f8a75ad0d17b5e9a77",
+    "manifests/v3_1/structure/posterior/numerical_checks.csv": "60acee2db8341579f6e8d5c879d9657bced54138cac8f32e1f1d08246b4c6942",
+    "manifests/v3_1/structure/posterior/membership.csv": "c88a943c3108fe57e9d305ae5487f2b77c3b38a9a09239597b328c957c5bdf7c",
+    "manifests/v3_1/structure/report/complete.json": "efe0e511a3a08ce10c1b0ebf71d0bb83aa94bcc9ac3215b02b06d4c19e870802",
+    "manifests/v3_1/structure/report/counts.csv": "561c87a10e209096e04934568127cdb4e31b30f319b7cf5c3cad05b7c5d74c3c",
+    "manifests/v3_1/structure/report/membership.csv": "e7443fd8c7b4279c19b5b10efac8059a4a67cfe2b8984786148f500dc777f268",
+    "manifests/v3_1/structure/report/membership_comparison.csv": "4904b42c3f00b3c0c204df01ac9ebab90718b85cb07bd859ba9ac2475d1e6f1a",
+    "scripts/v3_1_structure_figures.py": "531f047a916165ef7c35d3824a372a1b841a90f0784cd7e7afb5d9e31b7c00bb",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d",
+    "figures/v3_1/structure/structure_posterior.png": "128d7e8a8f69b2dbe3b989e819795f17a6faa0f9f37d79dbe222e5bf216cb657",
+    "figures/v3_1/structure/structure_posterior.pdf": "3ec4fa45be81aea7603b2ffa8242014222683402868564d018b20d9a82f13c1b",
+    "figures/v3_1/structure/structure_membership.png": "504f8105967c0ab8f21422773eeb07f4788944f4ca187e3b8218a903144c5217",
+    "figures/v3_1/structure/structure_membership.pdf": "bc7cec1c6d161d8dd7dd52f3f796d75e7dac24365aa6eda8b268ef551c1249b1",
+    "manifests/v3_1/structure_figures/plotted.csv": "ebf0ad8f3f766a8f90709bd476d364bb872b79374c60965534f8f1080299fadb",
+    "manifests/v3_1/domain_adjudication_figures/complete.json": "0651af5ad6d3fe261ea88006034afc6ab4820416ba0ecf3bf2fea2f1176421f1",
+    "manifests/v3_1/domain_adjudication_figures/acceptance.json": "2af0c0baaaabd33aac33f7ed192c8bbecf34e9deb0605f5f2fa3995b6fb47add",
+    "manifests/v3_1/domain_adjudication/complete.json": "e2d5485c0b94922f38c7623c5ea19a3ca7a986b4965751003de87448f8c7019c",
+    "manifests/v3_1/domain_adjudication/cells.csv": "460a5b1cf5c8a492b2c5028b8a4f1bdcb8e4d201188fbfe683fa733c280d4d37",
+    "scripts/v3_1_domain_adjudication_figures.py": "6150d3014027a8e78366320b41f308a14d8deab0f7fc8a28c814c26243c982ae",
+    "figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.png": "26c2d956758cd7148c53a4dcca58509bcf202991ab9a4f5779de6c5eb27a45cd",
+    "figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.pdf": "cda4abbf67b008c5fd26a9837f830b0a09fccaad06dd8afe0850f55e03ae933c",
+    "manifests/v3_1/domain_adjudication_figures/plotted.csv": "cc1bbbef07f3792ab222d91c6340052fd3f975da77856192570c592dca51d4ce",
+    "scripts/v3_1_figure_delivery_check.py": "255766d515352598312573c321a6ece8686b6fd8fadcd1d39561a609f6a4f3f5"
+  },
+  "checks": [
+    {
+      "check": "paired_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:visual_commit_binding:delivery_validation.json",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:input:data/v3_1/target_prior/diagnostic/paired_report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:input:data/v3_1/target_prior/diagnostic/paired_report/all.csv",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:input:scripts/v3_1_paired_figures.py",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:target_prior_transfer.png",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:target_prior_transfer.pdf",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:target_prior_transfer.csv",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:class_metallicity_contrasts.png",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:class_metallicity_contrasts.pdf",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:output:class_metallicity_contrasts.csv",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:target_prior_transfer:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:target_prior_transfer:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:target_prior_transfer:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:class_metallicity_contrasts:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:class_metallicity_contrasts:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "paired_figures:class_metallicity_contrasts:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:committed_review",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:manifests/v3_1/luminosity_fit_refined/complete.json",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:manifests/v3_1/luminosity_fit_refined/parameters.csv",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:manifests/v3_1/luminosity_guard/complete.json",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:manifests/v3_1/luminosity_guard/comparisons.csv",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:scripts/v3_1_calibration_figure.py",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:output:figures/v3_1/calibration/luminosity_correction.png",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:output:figures/v3_1/calibration/luminosity_correction.pdf",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:output:manifests/v3_1/calibration_figure/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:luminosity_correction:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:luminosity_correction:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "calibration_figure:luminosity_correction:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:committed_review",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:input:manifests/v3_1/diagnostics/diagnostic/latent_failure_report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:input:manifests/v3_1/diagnostics/diagnostic/latent_failure_report/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:input:manifests/v3_1/diagnostics/diagnostic/latent_failure_report/objects.csv",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:input:scripts/v3_1_latent_figure.py",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:output:figures/v3_1/latent/latent_support_failure.png",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:output:figures/v3_1/latent/latent_support_failure.pdf",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:output:manifests/v3_1/latent_figure/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:latent_support_failure:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:latent_support_failure:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "latent_figure:latent_support_failure:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:manifests/v3_1/target_ensemble/candidate/complete.json",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:manifests/v3_1/target_ensemble/candidate/counts.csv",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:manifests/v3_1/target_ensemble/candidate/weights.csv",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:manifests/v3_1/target_ensemble/candidate/checks.csv",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:scripts/v3_1_target_candidate_figures.py",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:output:figures/v3_1/target_candidate/conditional_counts.png",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:output:figures/v3_1/target_candidate/conditional_counts.pdf",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:output:figures/v3_1/target_candidate/weights_numerics.png",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:output:figures/v3_1/target_candidate/weights_numerics.pdf",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:output:manifests/v3_1/target_candidate_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:conditional_counts:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:conditional_counts:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:conditional_counts:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:weights_numerics:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:weights_numerics:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "target_candidate_figures:weights_numerics:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:input:manifests/v3_1/domain_grid/complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:input:manifests/v3_1/domain_grid/cells.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:input:scripts/v3_1_domain_figures.py",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:output:figures/v3_1/domain_photometry/photometric_occupancy.png",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:output:figures/v3_1/domain_photometry/photometric_occupancy.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:output:manifests/v3_1/domain_photometry_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:photometric_occupancy:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:photometric_occupancy:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "domain_photometry_figures:photometric_occupancy:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_sky_field_paired_gaia_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_sky_field_paired_astronn_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_sky_field_paired_class_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_gaia_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_astronn_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/new_source_seen_sky_field_paired_class_all_objects.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:manifests/v3_1/final_validation/report/common_scale_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:scripts/v3_1_validation_figures.py",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:output:figures/v3_1/final_validation/field_score_gains.png",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:output:figures/v3_1/final_validation/field_score_gains.pdf",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:output:figures/v3_1/final_validation/common_scale_agreement.png",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:output:figures/v3_1/final_validation/common_scale_agreement.pdf",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:output:manifests/v3_1/final_validation_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:field_score_gains:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:field_score_gains:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:field_score_gains:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:common_scale_agreement:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:common_scale_agreement:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "final_validation_figures:common_scale_agreement:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/complete.json",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/local_minus_broad_fraction_L1.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/coverage95_nonzero_truth.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/source_inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/median_minus_truth.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:manifests/v3_1/radial_summary/coverage95_defined_structure.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:scripts/v3_1_radial_figures.py",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/paired_radial_error.png",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/paired_radial_error.pdf",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/radial_nonzero_coverage.png",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/radial_nonzero_coverage.pdf",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/radial_structure_parameters.png",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:figures/v3_1/radial/radial_structure_parameters.pdf",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:output:manifests/v3_1/radial_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:paired_radial_error:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:paired_radial_error:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:paired_radial_error:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_nonzero_coverage:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_nonzero_coverage:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_nonzero_coverage:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_structure_parameters:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_structure_parameters:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "radial_figures:radial_structure_parameters:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "response_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "response_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "response_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "response_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "response_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "response_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/response_weights.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/weight_numerics.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/target_count_numerics.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/paired_all.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:manifests/v3_1/response_probes/report/paired_reference_class.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:scripts/v3_1_response_figures.py",
+      "passed": true
+    },
+    {
+      "check": "response_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "response_figures:output:figures/v3_1/response_probes/response_evidence.png",
+      "passed": true
+    },
+    {
+      "check": "response_figures:output:figures/v3_1/response_probes/response_evidence.pdf",
+      "passed": true
+    },
+    {
+      "check": "response_figures:output:figures/v3_1/response_probes/response_source_transfer.png",
+      "passed": true
+    },
+    {
+      "check": "response_figures:output:figures/v3_1/response_probes/response_source_transfer.pdf",
+      "passed": true
+    },
+    {
+      "check": "response_figures:output:manifests/v3_1/response_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "response_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "response_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_evidence:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_evidence:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_evidence:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_source_transfer:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_source_transfer:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "response_figures:response_source_transfer:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:manifests/v3_1/candidate_modes/complete.json",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:manifests/v3_1/candidate_modes/full_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:manifests/v3_1/candidate_modes/full_overview.csv",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:manifests/v3_1/candidate_modes/full_histograms.csv",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:scripts/v3_1_candidate_mode_figures.py",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:output:figures/v3_1/candidate_modes/mode_responsibilities.png",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:output:figures/v3_1/candidate_modes/mode_responsibilities.pdf",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:output:manifests/v3_1/candidate_mode_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:mode_responsibilities:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:mode_responsibilities:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "candidate_mode_figures:mode_responsibilities:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:input:manifests/v3_1/domain_evidence/complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:input:manifests/v3_1/domain_evidence/cells.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:input:manifests/v3_1/domain_evidence/reference_distance_cells.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:input:scripts/v3_1_domain_figures.py",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:output:figures/v3_1/domain_evidence/precise_newsky_references.png",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:output:figures/v3_1/domain_evidence/precise_newsky_references.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:output:figures/v3_1/domain_evidence/missing_reference_mass.png",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:output:figures/v3_1/domain_evidence/missing_reference_mass.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:output:manifests/v3_1/domain_evidence_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:precise_newsky_references:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:precise_newsky_references:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:precise_newsky_references:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:missing_reference_mass:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:missing_reference_mass:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "domain_evidence_figures:missing_reference_mass:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/inventory.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/predictive_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/counts.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/field_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/checks.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:manifests/v3_1/heldout_transfer/report/paired.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:scripts/v3_1_heldout_figures.py",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:src/photdis/v3/compression.py",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:input:docs/v3_1_heldout_transfer_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:output:figures/v3_1/heldout_transfer/heldout_joint_counts.png",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:output:figures/v3_1/heldout_transfer/heldout_joint_counts.pdf",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:output:figures/v3_1/heldout_transfer/heldout_predictive_support.png",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:output:figures/v3_1/heldout_transfer/heldout_predictive_support.pdf",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:output:manifests/v3_1/heldout_transfer_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_joint_counts:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_joint_counts:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_joint_counts:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_predictive_support:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_predictive_support:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "heldout_transfer_figures:heldout_predictive_support:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/posterior/complete.json",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/posterior/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/posterior/numerical_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/posterior/membership.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/report/complete.json",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/report/counts.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/report/membership.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:manifests/v3_1/structure/report/membership_comparison.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:scripts/v3_1_structure_figures.py",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:input:docs/v3_1_structure_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:output:figures/v3_1/structure/structure_posterior.png",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:output:figures/v3_1/structure/structure_posterior.pdf",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:output:figures/v3_1/structure/structure_membership.png",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:output:figures/v3_1/structure/structure_membership.pdf",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:output:manifests/v3_1/structure_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_posterior:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_posterior:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_posterior:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_membership:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_membership:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "structure_figures:structure_membership:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:recorded_artifact_checks",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:persisted_visual_review",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:English_renderer_record",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:committed_review",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:visual_commit_binding:acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:visual_commit_binding:complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:input:manifests/v3_1/domain_adjudication/complete.json",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:input:manifests/v3_1/domain_adjudication/cells.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:input:scripts/v3_1_domain_adjudication_figures.py",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:input:scripts/v3_1_domain_figures.py",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:input:scripts/photdis_figure_style.py",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:output:figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.png",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:output:figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:output:manifests/v3_1/domain_adjudication_figures/plotted.csv",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:exact_inventory:.png",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:exact_inventory:.pdf",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:scientific_use_and_ambiguity:PNG300dpi",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:scientific_use_and_ambiguity:PDFonepage",
+      "passed": true
+    },
+    {
+      "check": "domain_adjudication_figures:scientific_use_and_ambiguity:PDFEnglish",
+      "passed": true
+    },
+    {
+      "check": "total_inventory",
+      "passed": true
+    }
+  ],
+  "actual_checks": 319,
+  "inventory": [
+    {
+      "group": "paired_figures",
+      "figures": 2,
+      "stems": [
+        "target_prior_transfer",
+        "class_metallicity_contrasts"
+      ],
+      "visual_record_commit": "9451ca3faa073988baf40d0be3ad5f7727830808",
+      "visual_record_sha256": "e9772dc77d2371e3b0dfa57f1a156507786d8a0d6a2e3b78a7be875bce2fd46d",
+      "manifest_sha256": "f32b4bfcd4f5d77c1ca45482afcaa3f004df97b317fa216fc7cd7c6c83c4fe9e"
+    },
+    {
+      "group": "calibration_figure",
+      "figures": 1,
+      "stems": [
+        "luminosity_correction"
+      ],
+      "visual_record_commit": "9219acb14c8b112c5990ab1a4a7b7b52cad7c3dc",
+      "visual_record_sha256": "ac5091c3f5e5288ba08009f1df74f0d6c293955b6f4f975d607be08138b2dd5f",
+      "manifest_sha256": "67a3381702a5e1f9a3244e5c1dd72fbc66f1871bded006d2c509776da70ff669"
+    },
+    {
+      "group": "latent_figure",
+      "figures": 1,
+      "stems": [
+        "latent_support_failure"
+      ],
+      "visual_record_commit": "1c8681a25ce4570699678655bdaddac9a256ae82",
+      "visual_record_sha256": "7ddda832e5d33f86f4af728a4ec278437fd2099294f97072be0a284ecb4336a2",
+      "manifest_sha256": "63fc776b78c5f6d1cec0de1bce6fdd595d08e1cf5cd9dcf438b8ca9b386b0e1a"
+    },
+    {
+      "group": "target_candidate_figures",
+      "figures": 2,
+      "stems": [
+        "conditional_counts",
+        "weights_numerics"
+      ],
+      "visual_record_commit": "e8899834ea179771428b9c0660e8cf9d0b15740d",
+      "visual_record_sha256": "846a452f4fa7de5f9fa0bece32e12bd60a8cdf1e3153de9360c16389ad22f260",
+      "manifest_sha256": "a7b7d70d985b4532e536e709e618e53000e9e6a90451b4d6354666fb95226116"
+    },
+    {
+      "group": "domain_photometry_figures",
+      "figures": 1,
+      "stems": [
+        "photometric_occupancy"
+      ],
+      "visual_record_commit": "bd5e6f18f5ad4b0e18b6bb3b453ab4f5d8ca5710",
+      "visual_record_sha256": "1034a12b4befdfc684ce9386493a043bd94b0a8fec78db977fd531b398c9103a",
+      "manifest_sha256": "125d99ccfbf178df2555fbd76eaa05df754fbf36444a2400f79cc294fbcc3298"
+    },
+    {
+      "group": "final_validation_figures",
+      "figures": 2,
+      "stems": [
+        "field_score_gains",
+        "common_scale_agreement"
+      ],
+      "visual_record_commit": "675dc4866ad6c020c89aff75eb8cb99cc0734b1f",
+      "visual_record_sha256": "fbdc9b6a57328ef20594ea5ab18a9a9dcce3a8fd185dc191bbb9a5466402cd7b",
+      "manifest_sha256": "2f0382d42b72b34083dba7daf67831ad03d2b822a6781179f1c73fd0846c17c3"
+    },
+    {
+      "group": "radial_figures",
+      "figures": 3,
+      "stems": [
+        "paired_radial_error",
+        "radial_nonzero_coverage",
+        "radial_structure_parameters"
+      ],
+      "visual_record_commit": "598deac7add0cb685c51141a79b59e01040fccb4",
+      "visual_record_sha256": "2b84b9949af189e3caa868827bf8979b391422d8e272c0e26420c4a81fcd717c",
+      "manifest_sha256": "77384254a6cc4471e1b2237d9cca16d3f89bc7011675feaa6aad0ed26dcd6345"
+    },
+    {
+      "group": "response_figures",
+      "figures": 2,
+      "stems": [
+        "response_evidence",
+        "response_source_transfer"
+      ],
+      "visual_record_commit": "9dbd3c0116d6ccf70b51a2dddba4c214c8f7ad38",
+      "visual_record_sha256": "e69fb9a6fb5252f8e70bdbc75d450446007663a0fb66525e385bcb1a486b199a",
+      "manifest_sha256": "b205894e72cbc3554989a0fd389dd5aca35fb2fcf8a41415e564c92c95ce9281"
+    },
+    {
+      "group": "candidate_mode_figures",
+      "figures": 1,
+      "stems": [
+        "mode_responsibilities"
+      ],
+      "visual_record_commit": "c3b44fc645446393482e9b1048afefb651d87ab4",
+      "visual_record_sha256": "46d56430bbf6fa316a99d3d3a7382e0ae9af87bebd299632e2377d7040808858",
+      "manifest_sha256": "83835e0364d0b9e15347615e932d05c320230f35333a1bdd09919bed957324b3"
+    },
+    {
+      "group": "domain_evidence_figures",
+      "figures": 2,
+      "stems": [
+        "precise_newsky_references",
+        "missing_reference_mass"
+      ],
+      "visual_record_commit": "c3b44fc645446393482e9b1048afefb651d87ab4",
+      "visual_record_sha256": "ff42a17ef5c54febb02d3c6bbab2956f3ace7bf9880fe131cd37f61562258a00",
+      "manifest_sha256": "7175a15985bcc8fd6e6640d2d346881ee0740dd0cf3e35cc2ec13b009259325c"
+    },
+    {
+      "group": "heldout_transfer_figures",
+      "figures": 2,
+      "stems": [
+        "heldout_joint_counts",
+        "heldout_predictive_support"
+      ],
+      "visual_record_commit": "eca73526c278536df0acdf6d1fefc906557c7c53",
+      "visual_record_sha256": "7affb5cf2801b15b0c93fbdcfcccfb27a346cef8bcab6a3f349c0b3d0ea7d269",
+      "manifest_sha256": "13d70d4eb0d6d8c65d8c673b2d9f4fe4d814a7c94254e0e2f168b327ef12da89"
+    },
+    {
+      "group": "structure_figures",
+      "figures": 2,
+      "stems": [
+        "structure_posterior",
+        "structure_membership"
+      ],
+      "visual_record_commit": "c5ac6526744d58bf47d14fc3afc6e1887056da7f",
+      "visual_record_sha256": "a529aa7755527cd37bb36b269d54d38a7478126a21e78a297a1c2caa3e7ef920",
+      "manifest_sha256": "7de8116e6b851beb0aea9f34f641c01d23a79635eee82c41afdbdfe66f6b4155"
+    },
+    {
+      "group": "domain_adjudication_figures",
+      "figures": 1,
+      "stems": [
+        "scientific_use_and_ambiguity"
+      ],
+      "visual_record_commit": "c5ac6526744d58bf47d14fc3afc6e1887056da7f",
+      "visual_record_sha256": "2af0c0baaaabd33aac33f7ed192c8bbecf34e9deb0605f5f2fa3995b6fb47add",
+      "manifest_sha256": "0651af5ad6d3fe261ea88006034afc6ab4820416ba0ecf3bf2fea2f1176421f1"
+    }
+  ],
+  "figures": 22,
+  "missing_groups": [],
+  "partial_requested": false,
+  "complete_figure_delivery": true,
+  "passed": true,
+  "new_visual_inspection_performed": false,
+  "scientific_acceptance": false,
+  "scope": "Current bytes, source tables, exact plate inventory, formats and committed visual-review provenance. Existing visual inspections authenticated, not repeated or inferred. Scientific and full-version acceptance remain separate."
+}

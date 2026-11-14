@@ -14,7 +14,8 @@
     "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111"
   },
   "output": "docs/v3_1_final_validation_result.md",
-  "output_sha256": "8d548188b80d5378ebf26a9cde0a140b1521d9382af27d533598d48ba50a4cfa",
+  "output_sha256": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f",
   "source_tables_verified": 11,
-  "scope": "Compact narrative/table derivation from authenticated completed report. No prediction, sample or scientific gate changed."
+  "scope": "Compact narrative/table derivation from authenticated completed report. No prediction, sample or scientific gate changed.",
+  "final_editorial_update": "2026-11-14: obsolete progress wording updated to completed cross-references; science/source tables unchanged."
 }

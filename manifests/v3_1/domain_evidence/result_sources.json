@@ -8,5 +8,6 @@
     "manifests/v3_1/domain_evidence_figures/integrity.json": "3c83ee03a43c1160b075742176da46cfa60b42720eee5da9592aa93fe83025e8",
     "manifests/v3_1/domain_evidence_figures/acceptance.json": "ff42a17ef5c54febb02d3c6bbab2956f3ace7bf9880fe131cd37f61562258a00"
   },
-  "document_sha256": "c28af87096982db084eb59c4e39330d648a77ec0e157b26e4b9b4dd5a5a69ad0"
+  "document_sha256": "4bce8a597eac8a550a89f0c33a067518ab80e6353d0ebe52ba7bf12a41100147",
+  "final_editorial_update": "2026-11-14: obsolete progress wording updated to completed cross-references; science/source tables unchanged."
 }

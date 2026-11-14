@@ -1,6 +1,6 @@
 {
   "baseline_commit": "31f12772fe29c801db7269adf3a8b160e264bb5f",
-  "examined_commit": "8a5e43cfddb74d944b128cfa7c9330258dc2de77",
+  "examined_commit": "c5ac6526744d58bf47d14fc3afc6e1887056da7f",
   "protected_baseline_files": 6976,
   "allowed_project_files": [
     ".gitignore",
@@ -11,11 +11,11 @@
   ],
   "views": {
     "worktree": {
-      "changed_paths": 1711,
+      "changed_paths": 1796,
       "protected_changes": []
     },
     "index": {
-      "changed_paths": 1711,
+      "changed_paths": 1796,
       "protected_changes": []
     }
   },

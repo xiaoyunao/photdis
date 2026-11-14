@@ -1,23 +1,21 @@
 # Project instructions
 
-- Active scope authorized2026-11-13: v3.1 four complete Pro work packages,
-  docs/pro_review_31f1277.md section six; docs/v3_1_protocol.md and
-  docs/v3_1_requirements_result.md. Detailed chat goal active. Diagnose
-  class/FeH/prior/band failures before constrained calibration, test regularized
-  radial models and response support, freeze reference-available new tests before
-  fitting, deliver product-matched evaluation/domain map/structure example.
-  v3.0 and deployed v1 remain frozen. No fullcatalog rerun before representative
-  acceptance; no timers or subagents. Seen v3 validation is regression, not blind.
-- v3.1 partial checkpoint2026-11-14: docs/v3_1_result.md is explicitlyincomplete.
-  Mechanism/radial/response/frozenexternal/mode/evidence-map reports complete;
-  finalcandidate calibration fails andmustnotbe adopted. Finalreferences already
-  openedafterauthenticatedfreeze; no retuning ontheir residuals. All32original
-  structureentry statescomplete,11052originalflags retained; refinements/full
-  structureposterior remain. All102conditionaltransfers collected/2042compact
-  checks pass,33originalfailures retained; fullmixturereport625checks/2plates complete.
-  HoldoutjointESS103.872broad/21.669candidate; allmain evidencegates stillfail. CheckliveSLURM and
-  currentPLAN/executionreceipts beforeanyresume; neverrestart fromstalearray
-  parentstatus orrestorecanceleddependencies. Threefinalplates andfinalQA pending.
+- Completed v3.1 research delivery2026-11-14: docs/v3_1_result.md,
+  docs/v3_1_atlas.md, docs/v3_1_domain_result.md and full21-requirement ledger.
+  Allfour Pro work packages implemented;183actual tests/22visually inspected
+  English plates/319unifiedfigure checks. Maincorrection NOT adopted: newsky
+  signedGaia gain-0.8143nat, NGC1261bias-49.05%, main evidence gatesfail and
+ 0calibrated domains. Independent fullcandidate contamination remainsunmeasured;
+ 3003highq modelleakage0.266502% isconditional. ResponseprobeESS1.0236; narrow
+ 4kpc widthcoverage0/8. Full102state transferretained; weightESSnotautocorrelation
+ corrected. Structure512PSF/32states allassembled; originalnative490/entry11052
+ failuresretained,0unresolvedpreparatorycontexts. Full/Gaussian jointquadrature
+ fails despite65536countsamplingpass; membermeans122.473/127.078, responseESS~1.
+ Finalchain61232760/61/62 and61233366 COMPLETED0:0. Finalvalidation openedonce
+ after53725artifactfreeze; no retuning orfreshblindclaim. Preserve allv3.0/v3.1
+ products, failed/refined numerics anddeployedv1. No remaining sciencejobs.
+ No automatic newmodel/v3.2/expansion/rerun/timer/deployment/agents; futurework
+ needsnewexplicit scope. Actual finaldelivery gate passed; preserve its source-bound records and finalsync.
 
 - Completed v3.0 research delivery2026-11-12: docs/v3_0_result.md,
   docs/v3_0_atlas.md, docs/v3_0_catalog.md and requirements ledger.

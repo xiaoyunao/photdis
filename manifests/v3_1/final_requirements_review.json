@@ -1,0 +1,283 @@
+{
+  "authority": {
+    "docs/pro_review_31f1277.md": "bf786906b4c5d882c357fd85560ee4d66c4749b1678358fb4a271521da795f48",
+    "docs/v3_1_protocol.md": "d16148dc2253f245508b6f723d272039b8fc1405cd302cb8c47b430ff5f0de0d",
+    "docs/v3_1_requirements_result.md": "e962584b26073f451685e28a77f896bbd92575745d9afbc780c6885532b12200"
+  },
+  "items": [
+    {
+      "id": "A1",
+      "requirement": "Complete latest review and related project chat recovery",
+      "status": "implemented_with_limitations",
+      "finding": "Latest full Pro turn and related chats were recovered before implementation; section six supplies the four work packages.",
+      "limitations": "The linked DOCX was not read, as requested; review recommendations are not measured outcomes.",
+      "evidence": {
+        "docs/pro_review_31f1277.md": "bf786906b4c5d882c357fd85560ee4d66c4749b1678358fb4a271521da795f48",
+        "docs/v3_1_protocol.md": "d16148dc2253f245508b6f723d272039b8fc1405cd302cb8c47b430ff5f0de0d",
+        "WORKLOG.md": "ec31ced8060619f0035adc527ec190684090c8045f0d655ce9c32a5359b441b2"
+      }
+    },
+    {
+      "id": "A2",
+      "requirement": "Frozen baseline, roles, PSF admission/export and preservation",
+      "status": "implemented_with_limitations",
+      "finding": "Native PSF admission/export, upstream exclusion records, role freeze and tracked baseline protection are present.",
+      "limitations": "The live final git guard covers tracked files/index/worktree; it is not a fresh scan of remote large payloads or deployed runtime. Unmatched acquisition rows were not admitted.",
+      "evidence": {
+        "manifests/v3_1/inventory/complete.json": "d539b097e0c8ce25aae2e156c5a6dd63d7d58411fdf1c5f25330fa18a79297ff",
+        "manifests/v3_1/external_native/complete.json": "a314e8d24ee0fc6a441f36a8b54d1ebce597c259874f7abd1c210f640b220fdc",
+        "manifests/v3_1/validation_roles/complete.json": "2f2dca95787364c0a4c5abf0740d34d6d15cf22bf7f437abdd378c6833b8dd4d",
+        "manifests/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6",
+        "manifests/v3_1/luminosity_calibration/complete.json": "9f003f48a0b28e21b97cdf9c3012443329e22501dde756deec3e226afc8fecc2",
+        "manifests/v3_1/baseline_preservation_current.json": "cd876a64d3762d0309dedee74db15fcf3ebee1443c7a4936743d0a7546e2dc02"
+      }
+    },
+    {
+      "id": "B1",
+      "requirement": "Same-star class and FeH conditional diagnostics",
+      "status": "implemented_with_limitations",
+      "finding": "Same-object class, FeH and incremental conditional comparisons were interpreted with source-specific denominators.",
+      "limitations": "Oracle labels are diagnostic only; reference-point agreement is not latent true-distance coverage.",
+      "evidence": {
+        "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+        "manifests/v3_1/mechanism_result_sources.json": "bc637897b20ee8bb1d8a19f509b73bfd920c3427d6fb8195d88fd1ff30f1c0d8"
+      }
+    },
+    {
+      "id": "B2",
+      "requirement": "Fixed response/prior/band/error contrasts",
+      "status": "implemented_with_limitations",
+      "finding": "Fixed-response prior, band, individual-error and binary contrasts retain paired identities and sky blocks.",
+      "limitations": "Error inflation and band omission have mixed effects; target-prior giant performance worsens.",
+      "evidence": {
+        "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+        "manifests/v3_1/target_prior/diagnostic/paired_report/complete.json": "f5faa9fed85852c65af3a34c174fdf162d53d30233af82128cc4f05133e86eea"
+      }
+    },
+    {
+      "id": "B3",
+      "requirement": "Source/color/FeH/brightness/sky, rare support and latent negative flux",
+      "status": "implemented_with_limitations",
+      "finding": "Source/FeH/color/magnitude/band/sky contrasts, rare parent support and full latent-negative audit were completed.",
+      "limitations": "Low latent-negative support does not remove severe giant failures; high-negative unknown objects lack primary distance references.",
+      "evidence": {
+        "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+        "manifests/v3_1/latent_figure/acceptance.json": "7ddda832e5d33f86f4af728a4ec278437fd2099294f97072be0a284ecb4336a2"
+      }
+    },
+    {
+      "id": "B4",
+      "requirement": "Binary/class/component mode attribution",
+      "status": "implemented_with_limitations",
+      "finding": "Class, single/binary and parent-kernel mode responsibilities retain weak modes and overlapping attributions.",
+      "limitations": "Responsibilities are conditional model descriptions, not physical binary rates or confirmed stellar classes.",
+      "evidence": {
+        "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+        "docs/v3_1_candidate_modes_result.md": "5b9dfdf85b5c24aa9de59eb44a244ff48731d3ce1826b63fc85fb35e9dceb31a",
+        "manifests/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41"
+      }
+    },
+    {
+      "id": "B5",
+      "requirement": "Evidence-selected constrained correction",
+      "status": "implemented_with_limitations",
+      "finding": "One registered six-parameter class luminosity shift/scatter correction was fitted on frozen role3 sky partitions and evaluated.",
+      "limitations": "Internal guards pass but the final main evidence gate and new external validation fail; no candidate adoption or post-test retuning.",
+      "evidence": {
+        "docs/v3_1_luminosity_correction_protocol.md": "21fac569e80929b898bd370baeb658d5f89784eaa180d7dbd56a35e4214f440f",
+        "manifests/v3_1/luminosity_calibration/complete.json": "9f003f48a0b28e21b97cdf9c3012443329e22501dde756deec3e226afc8fecc2",
+        "manifests/v3_1/luminosity_guard/complete.json": "9ce3fabf900601d1249e243aaf043b52e9047d28226a8e234a36576aea308ff4",
+        "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f"
+      }
+    },
+    {
+      "id": "C1",
+      "requirement": "Fixed-SED regularized radial comparison, all14 scenarios plus position×width",
+      "status": "implemented_with_limitations",
+      "finding": "All14 old and8 position/width scenarios were run with fixed shared SED/noise/selection approximations;176 catalogs/352 arms retained.",
+      "limitations": "Local-width/location recovery and minority composition remain inadequate. Source blocks collapse in21 empirical scenarios; the local dust covariance approximation is not exact selection.",
+      "evidence": {
+        "docs/v3_1_radial_result.md": "1f2bc716ae509574eb6b805cbc26dbfdd0c06cedf75ed08bde5975cb5515814c",
+        "manifests/v3_1/radial_report/complete.json": "206390e22317169b7d0ead57fd5cf310734d395f69d9516c9b49ea6a91a7a415",
+        "manifests/v3_1/radial_summary/complete.json": "c4548ec29b0fda430689c04499509fa08d7846a286b39135b60dc2c004b12d41"
+      }
+    },
+    {
+      "id": "C2",
+      "requirement": "26k/qualified-bright/held-out-field transfer",
+      "status": "implemented_with_limitations",
+      "finding": "All102 conditional transfers and complete mixtures compare broad/candidate/held-out-field populations with common selection denominators.",
+      "limitations": "Main absolute-evidence failures persist. Predictive weight ESS is not autocorrelation-adjusted independent draws; photometric prediction is not distance truth.",
+      "evidence": {
+        "docs/v3_1_transfer_result.md": "15f9ba5dd6137e8985adcd30484e6049c11cf878aefaf641d196099a65b73963",
+        "manifests/v3_1/heldout_transfer/compact_inventory_102_states.json": "b1ae182477dbebccb3b2e17fa4e9e9b032d2ecf651b7513e1eb46b41bebc759b",
+        "manifests/v3_1/transfer_result_sources.json": "bfef4aac2e4c17373cfa3469e662fc8ca250381ef7ba15c932be9a8a464eff62"
+      }
+    },
+    {
+      "id": "C3",
+      "requirement": "Independent response set and evidence concentration diagnosis",
+      "status": "implemented_with_limitations",
+      "finding": "Independent Monte Carlo regeneration and all64 response probes, decomposition, source scores and shared counts were completed.",
+      "limitations": "The128-target fixed-prior probe is not26k population evidence. One original input failure prevents original/pooled normalization; new-library ESS remains near1.",
+      "evidence": {
+        "docs/v3_1_response_result.md": "82aaee5acf16fd16e499562af3ba1b97caac8d0b304bd0d1812ec52226a7c357",
+        "manifests/v3_1/response_probes/report/complete.json": "7572a5bb89b863b9cbca8c7260b2c39113b3a70ffde2314926d1b66e7a62857e",
+        "manifests/v3_1/response_summary/complete.json": "b4dbc422c1076ca628a1f36ccf579133b1ba28b2512cb0fcbf8ed5f4de708e27"
+      }
+    },
+    {
+      "id": "D1",
+      "requirement": "Available-reference/historical-use inventory and frozen new test blocks",
+      "status": "implemented_with_limitations",
+      "finding": "Available references, historical identities/imaging IDs/sky/system use and unused source/block roles were frozen before correction fitting.",
+      "limitations": "Availability selection used reference values/precision and labels; it is not fully label-blind acquisition or a representative target selection.",
+      "evidence": {
+        "docs/v3_1_validation_roles.md": "df9f782c10dc4556b001d4048aa6e96f2a3095870b75702ce005a4ddf970d893",
+        "manifests/v3_1/validation_roles/complete.json": "2f2dca95787364c0a4c5abf0740d34d6d15cf22bf7f437abdd378c6833b8dd4d",
+        "manifests/v3_1/validation_roles/history_guard.csv": "845b31eea81d6aeeb3a36c29288a2455c8f44114a18643a2824aebb714c44bcf",
+        "manifests/v3_1/common_scale_native/history.csv": "db776fd903a94f3a34608a45662cda932e6cd2c86bd55861ce06062468681486"
+      }
+    },
+    {
+      "id": "D2",
+      "requirement": "Independent near/class/poor-metal/common-scale/far evidence",
+      "status": "evidence_gap_with_scope_limit",
+      "finding": "Actual inventories show3 precise new-sky2–5kpc references, no qualified5–10kpc distances, no precise labeled-giant distances and one new common scale.",
+      "limitations": "Do not claim broad independent distance/FeH calibration, universal far-halo accuracy, or measured full-candidate contamination. Empty/teacher-correlated cells remain unvalidated.",
+      "evidence": {
+        "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f",
+        "manifests/v3_1/final_validation/report/new_sky_field_availability.csv": "eed253dbd86c5b604df2636ece13a98f344cdbe96bbe90510fbd1abc5d250a5d",
+        "manifests/v3_1/final_validation/report/new_source_seen_sky_field_availability.csv": "8323182e7ae61f0cfe40519c8b04010ed37bcc63b6ba4604076c95bd91c79abc",
+        "manifests/v3_1/common_scale_native/scales.json": "9000871fb00468d9a8ebda3b10c762ac5f96dd94edef27207a2c7272de59809b",
+        "manifests/v3_1/final_validation/report/common_scale_summary.csv": "3ce62c6a594b11a326752b8a02ee2a5e6f6e0168b0ce23e8ed57dfb2e1262568"
+      }
+    },
+    {
+      "id": "D3",
+      "requirement": "Once-opened final scores and correlated uncertainty",
+      "status": "implemented_with_limitations",
+      "finding": "All3558 objects/nine views were frozen before final association, scored once, audited and summarized with sky/common-scale correlated uncertainty.",
+      "limitations": "72 new Gaia score-numerical failures and inherited ensemble flags remain. Signed parallax is not inverted; one shared scale is not thousands of independent standards.",
+      "evidence": {
+        "manifests/v3_1/final_validation/freeze_receipt.json": "99fc523da677891a43752dd7cdcae845508a329870a32201e30105d956e5f3a7",
+        "manifests/v3_1/final_validation/score_audit/complete.json": "aac68115177a59178d74670d8eb405336d95876b4671d4b4e71b75ab51c6fbb8",
+        "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f"
+      }
+    },
+    {
+      "id": "E1",
+      "requirement": "Final product identity matches main evaluation",
+      "status": "implemented_with_limitations",
+      "finding": "Main evaluation matches candidate/bootstrap_evidence response12/calibration12/fixed kernels and3540-admission target prior; controls remain separately identified.",
+      "limitations": "The separately registered original32-response seen-NGC288 demonstration cannot certify this corrected candidate.",
+      "evidence": {
+        "docs/v3_1_methods.md": "4f175af62037334a025cf04c5505f7c9331e15db6607665721138dd87d784cb0",
+        "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f",
+        "manifests/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6"
+      }
+    },
+    {
+      "id": "E2",
+      "requirement": "High-q joint counts and model versus measured contamination",
+      "status": "evidence_gap_with_scope_limit",
+      "finding": "Fixed3003 high-q joint class-distance counts and shared uncertainty were computed, with model leakage separated from reference-selected disagreements.",
+      "limitations": "Independent full-candidate contamination is not measured; neither8.00304 expected far objects nor selected-reference disagreement fractions estimate it independently.",
+      "evidence": {
+        "manifests/v3_1/highq_counts/complete.json": "e0c035596d908a728305e530038ba628fbc23c3da4cf0dd424289d2bf800c2d3",
+        "manifests/v3_1/highq_counts/model_leakage.csv": "27ccecb46801106c342ec1eedbf2eb037b449d5f0e3462f1707b18d4dc2d74a0",
+        "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f",
+        "docs/v3_1_atlas.md": "1d5584354dbff22e391eac3cf97cf1ba2447e856ffc1530836cd13ad5265736c"
+      }
+    },
+    {
+      "id": "E2m",
+      "requirement": "Exact main candidate per-mode class/binary/parent attribution",
+      "status": "implemented_with_limitations",
+      "finding": "Exact main-candidate mode responsibilities cover3540 nativePSF identities and the fixed3003 high-q subset.",
+      "limitations": "All inherited ensemble flags and weak modes remain; class/binary/parent categories overlap and are not empirical physical labels.",
+      "evidence": {
+        "docs/v3_1_candidate_modes_result.md": "5b9dfdf85b5c24aa9de59eb44a244ff48731d3ce1826b63fc85fb35e9dceb31a",
+        "manifests/v3_1/candidate_modes/complete.json": "3f43fd064f1cdb5d29737ca8891a8adafd049a8f14c1394ec42678c562f38d41",
+        "manifests/v3_1/candidate_modes/full_summary.csv": "ed022851685ecde5a695846e173da952ef554ffa06a91f9773ad132c4ce8cb8d"
+      }
+    },
+    {
+      "id": "E3",
+      "requirement": "Usable/extrapolated/unvalidated domain map and reweight support",
+      "status": "implemented_with_limitations",
+      "finding": "The complete12-stage evidence join, written adjudication and final6-panel map are authenticated for3540PSF/fixed3003highq identities; all30occupied cells inherit main numerical failure.",
+      "limitations": "No calibrated or scientifically accepted ambiguous domain is established. Conditional multimodality, empty/no-reference cells and global support limits remain separate.",
+      "evidence": {
+        "docs/v3_1_domain_result.md": "e57d8e60c5a2e995d1eebd88027e404173029f4979c722291e583de413bbe72b",
+        "manifests/v3_1/domain_result_sources.json": "1939be717cf2e60e945bc6f494d18ebe34390b3453a950a317b81a4b0a38f229",
+        "manifests/v3_1/domain_adjudication/complete.json": "e2d5485c0b94922f38c7623c5ea19a3ca7a986b4965751003de87448f8c7019c",
+        "manifests/v3_1/domain_adjudication_figures/acceptance.json": "2af0c0baaaabd33aac33f7ed192c8bbecf34e9deb0605f5f2fa3995b6fb47add"
+      }
+    },
+    {
+      "id": "E4",
+      "requirement": "Structure-prior replacement and full-posterior application",
+      "status": "implemented_with_limitations",
+      "finding": "Full32x512 original/refined assembly, both prior-withdrawn full/Gaussian posteriors, shared realized counts and two inspected plates are complete. All490native/11052entry original flags retained.",
+      "limitations": "Both final joint quadratures fail and responseESS is near1. Count sampling passes but remains unaccepted. Supplied shared scale, fixed spatial/depth priors and already-seen membership comparison are not independent recovery or finalcandidate validation.",
+      "evidence": {
+        "docs/v3_1_structure_result.md": "ff7f446eabf76969b887e8e9a73cbb2101f0c9a45743f21dc3688e755bb19920",
+        "manifests/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+        "manifests/v3_1/structure/posterior/complete.json": "87c6a79faef65b2b2224e6646764d2a9d80ecfee081df088b6c80619e28a077e",
+        "manifests/v3_1/structure/report/complete.json": "efe0e511a3a08ce10c1b0ebf71d0bb83aa94bcc9ac3215b02b06d4c19e870802",
+        "manifests/v3_1/structure_result_sources.json": "8d99f63e83e17b88045f7d6881c1bf573fbfdb6fe2c1d27105dfcc484d7f903b",
+        "manifests/v3_1/structure_figures/acceptance.json": "a529aa7755527cd37bb36b269d54d38a7478126a21e78a297a1c2caa3e7ef920",
+        "manifests/v3_1/structure/refined_entry_32_states.json": "6a8b37c27616d56d4703dc8f839e86e01efd25076256f43036c4072fb8dd8f78"
+      }
+    },
+    {
+      "id": "F1",
+      "requirement": "Reproducible programs, configs, job records, artifact verification",
+      "status": "implemented_with_limitations",
+      "finding": "183 actual tests with164current source bindings, allocated full-array/score audits, complete stage/report source checks and terminal job records are available for the final mechanical provenance gate.",
+      "limitations": "Artifact/source closure is distinct from calibration. The local gate authenticates completed production evidence; it doesnot perform a fresh remote large-payload scan or turn rejected scientific outputs into accepted ones.",
+      "evidence": {
+        "manifests/v3_1/final_unit_validation.json": "b47803e35ce70fd181de68fb12441120669f2aaedbf34b592bdafe1cb807cf26",
+        "scripts/v3_1_delivery.py": "70dd04c05082cac6e9208c0eabeaa9e2ee90d9531873260d2fb7558cb46047e1",
+        "manifests/v3_1/execution/final_chain_accounting.json": "3ba9da72f89a8f1af1841c41ba8dddc02ca1ff2ff288ba58eb8071c0080ede60",
+        "manifests/v3_1/final_validation/score_audit/complete.json": "aac68115177a59178d74670d8eb405336d95876b4671d4b4e71b75ab51c6fbb8",
+        "manifests/v3_1/structure_result_sources.json": "8d99f63e83e17b88045f7d6881c1bf573fbfdb6fe2c1d27105dfcc484d7f903b",
+        "manifests/v3_1/domain_result_sources.json": "1939be717cf2e60e945bc6f494d18ebe34390b3453a950a317b81a4b0a38f229"
+      }
+    },
+    {
+      "id": "F2",
+      "requirement": "English figures, source tables, visual inspection and complete report",
+      "status": "implemented_with_limitations",
+      "finding": "All22English PNG300dpi/PDF plates are individually source/format checked and visually inspected;319unified checks authenticate13groups and committed review provenance. Integrated narrative and nine result reports complete.",
+      "limitations": "Scientific failures remain. Visual/hash consistency is not empirical accuracy, and overlapping check totals are not summed as independent scientific evidence.",
+      "evidence": {
+        "docs/v3_1_result.md": "f057def7f6b0746eb40a1972a83022ad7e58c64866b22f66a534e9bfa2c4c026",
+        "docs/v3_1_atlas.md": "1d5584354dbff22e391eac3cf97cf1ba2447e856ffc1530836cd13ad5265736c",
+        "manifests/v3_1/figure_delivery.json": "8a538ea728191b05f5907614beb968eaa6cd65f7f5ae7f18fac624ecc934d490",
+        "manifests/v3_1/structure_figures/acceptance.json": "a529aa7755527cd37bb36b269d54d38a7478126a21e78a297a1c2caa3e7ef920",
+        "manifests/v3_1/domain_adjudication_figures/acceptance.json": "2af0c0baaaabd33aac33f7ed192c8bbecf34e9deb0605f5f2fa3995b6fb47add"
+      }
+    },
+    {
+      "id": "F3",
+      "requirement": "README/AGENTS/WORKLOG/PLAN, milestone commit, safe three-end sync",
+      "status": "implemented_with_limitations",
+      "finding": "Version README/AGENTS, reverse-chronological WORKLOG and current PLAN are reconciled; meaningful science/visual milestones are committed and earlier three-end equalities were verified.",
+      "limitations": "The final provenance commit is synchronized and its exact local/origin/NERSC equality verified after the gate before closing the goal; this source-bound record doesnot fabricate its own future commit hash.",
+      "evidence": {
+        "README.md": "614c10a109cd209f0910c6c1a5efc92fc6c4eae6d95209698f83c615707bdf41",
+        "AGENTS.md": "a09c3a5dee5f67e233c8743fcf0cf6fc77023baffa39c7200d6cadf6483a9072",
+        "WORKLOG.md": "ec31ced8060619f0035adc527ec190684090c8045f0d655ce9c32a5359b441b2",
+        "PLAN.md": "d4df65b72bef79df32c5797288e83cf1e2735d4fc9d832b32b25ab00f76f458f",
+        "manifests/v3_1/execution/final_chain_accounting.json": "3ba9da72f89a8f1af1841c41ba8dddc02ca1ff2ff288ba58eb8071c0080ede60"
+      }
+    }
+  ],
+  "requirements": 21,
+  "pending": [],
+  "delivery_ready": true,
+  "scientific_acceptance": false,
+  "scope": "Complete source-level21-requirement review of actual products. D2/E2 remain evidenced gaps with restricted claims; numerical/scientific rejection remains. Final mechanical gate and exact post-commit three-end sync are separately verified."
+}

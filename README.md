@@ -1,29 +1,33 @@
 # photdis
 
-Active development: **v3.1 scientific calibration and use domains**, authorized
-2026-11-13 from the [latest Pro review](docs/pro_review_31f1277.md).
-[Four-package protocol](docs/v3_1_protocol.md) ·
-[Integrated methods and estimands](docs/v3_1_methods.md) ·
-[Integrated results — delivery in progress](docs/v3_1_result.md) ·
-[Evidence and remaining-work ledger](docs/v3_1_requirements_result.md) ·
-[Registered radial comparison](docs/v3_1_radial_protocol.md) ·
-[Current evidence and status](docs/v3_1_status.md).
-Implementation is isolated under `src/photdis/v3_1` and `scripts/v3_1_*.py`;
-NERSC launch wrappers are `scripts/run_v3_1_*.sh`. Scientific execution requires
-allocated compute resources. Inspect the current `PLAN.md`, execution manifests
-and live SLURM jobs before submitting, to avoid duplicate writers. Final reference
-association requires the complete authenticated prediction freeze; numerical
-failures stay explicit and do not authorize retuning on final outcomes. The main
-candidate is response12/calibration12 with the fixed-kernel, candidate-cohort
-population and evidence-weighted luminosity bootstrap; the structure application
-and 64-response probe have separately documented identities.
-The frozen final validation does not support adopting the correction as a
-calibrated distance product. Complete102-state transfer and19reviewed figures
-are delivered; structure inference and final domain adjudication remain required; numerical or artifact checks alone do not
-establish scientific calibration. The integrated report explicitly marks pending
-results, with the live execution state in `PLAN.md` and `WORKLOG.md`.
+Latest completed research delivery: **v3.1 scientific calibration and use domains**,
+2026-11-14, following the [Pro four-package review](docs/pro_review_31f1277.md).
+[Integrated results](docs/v3_1_result.md) · [Methods](docs/v3_1_methods.md) ·
+[21-requirement ledger](docs/v3_1_requirements_result.md) · [22-plate atlas](docs/v3_1_atlas.md) ·
+[Scientific-use domains](docs/v3_1_domain_result.md) · [Structure example](docs/v3_1_structure_result.md) ·
+[Actual final delivery audit](manifests/v3_1/delivery.json).
 
-Latest completed research delivery: **Photdis v3.0 continuous SED and population system**.
+All four packages and registered computations are complete. The correction is
+**not adopted**: external new-sky scores worsen, the shared NGC1261 scale fails,
+main evidence gates fail, and no calibrated scientific-use domain is established.
+The seen512-object NGC288 full/Gaussian demonstration completes all32states but
+fails joint quadrature; shared count sampling passes without overriding rejection.
+All originals/refinements and deployedv1 remain unchanged. No v3.2, fullcatalog
+rerun, monitoring, deployment or subagents are scheduled.
+
+Validation:183 actual tests,22 visually inspected English PNG300dpi/PDF plates,
+319 unified figure checks, and source-bound stage/report/requirement audits.
+Large products remain under `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/`.
+Code uses `src/photdis/v3_1`, `scripts/v3_1_*.py` and `run_v3_1_*.sh` wrappers;
+all scientific scans/fits require allocated NERSC compute. Compact local checks:
+`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_figure_delivery_check.py` and
+`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_delivery.py`.
+These verify artifacts and preserved failures; they do not confer calibration.
+Before any future work, read `WORKLOG.md`, `PLAN.md` and the frozen protocols.
+New scientific work requires explicit scope; final reference outcomes are already
+open and cannot be reused as a fresh blind test.
+
+Previous completed research delivery: **Photdis v3.0 continuous SED and population system**.
 All 1,183,990 qualified existing-field candidates, their full joint posterior links,
 shared counts/covariance and 42 English scientific figure sets are delivered.
 Final allocated audit 61163478 passes 1,309 actual-array/artifact checks; 73 focused

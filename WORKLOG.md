@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-14 — complete four-package research and final provenance audit
+- Four authorized Pro packages, nine scientific reports and22English plates
+  complete; no scientific job remains. All original failures/refinements retained.
+  Newcandidate not adopted;0calibrated domains. D2/E2 documented reference and
+  independent-contamination gaps remain explicit, not passed by absence.
+- `v3_1_figure_delivery_check.py` passes319checks for22plates/13groups with actual
+  committed visual reviews. Existing183tests/164sourcebindings remaincurrent.
+- Reviewedall21ledger requirements/80evidence bindings; final narrative includes
+  all18documents and actual local links. Livebaseline guard protects6976files.
+  `PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_delivery.py` actual fullsuccess
+  path passed1760checks on first closure; rerun after final links records the
+  final count in manifests/v3_1/delivery.json. No numerical gate was relaxed.
+- UpdatedREADME/AGENTS/PLAN, integrated methods/results/atlas/status/ledger and
+  obsolete progress sentences in3stage reports; original scientific tables are
+  unchanged. Finalcode fields separately name native versus entry failures.
+- Researchdelivery=True/scientificacceptance=False; preservev3.0/deployedv1.
+  Finalprovenance commit is safely synchronized and exactthree-endheads checked
+  after this record is frozen, before goalcompletion. No newscience remains;
+  futurework requires explicit scope, not automatic v3.2/model/rerun/monitoring.
+
 ## 2026-11-14 — finish structure inference, shared counts and scientific domain join
 - Original chain61232760/61/62 and61233366 COMPLETED0:0 in12m59/4m32/14s/11s.
   Retrieved explicit marker/hash-verified CSVs with `scripts/v3_1_collect.py`.

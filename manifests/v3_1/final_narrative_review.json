@@ -1,0 +1,1450 @@
+{
+  "delivery_ready": true,
+  "requirements_reviewed": true,
+  "scientific_acceptance": false,
+  "inputs": {
+    "docs/v3_1_result.md": "f057def7f6b0746eb40a1972a83022ad7e58c64866b22f66a534e9bfa2c4c026",
+    "docs/v3_1_requirements_result.md": "e962584b26073f451685e28a77f896bbd92575745d9afbc780c6885532b12200",
+    "docs/v3_1_methods.md": "4f175af62037334a025cf04c5505f7c9331e15db6607665721138dd87d784cb0",
+    "docs/v3_1_atlas.md": "1d5584354dbff22e391eac3cf97cf1ba2447e856ffc1530836cd13ad5265736c",
+    "docs/v3_1_status.md": "f271ea89de0a52d88fe5aa7f384d73123d80d0c8a8990cd619ab5d789eafbd0a",
+    "README.md": "614c10a109cd209f0910c6c1a5efc92fc6c4eae6d95209698f83c615707bdf41",
+    "AGENTS.md": "a09c3a5dee5f67e233c8743fcf0cf6fc77023baffa39c7200d6cadf6483a9072",
+    "WORKLOG.md": "ec31ced8060619f0035adc527ec190684090c8045f0d655ce9c32a5359b441b2",
+    "PLAN.md": "d4df65b72bef79df32c5797288e83cf1e2735d4fc9d832b32b25ab00f76f458f",
+    "docs/v3_1_mechanism_result.md": "d08795591d5aad5efe8b1a38d3c56928c89cb73c031dd60ec027ab4905b6ce39",
+    "docs/v3_1_radial_result.md": "1f2bc716ae509574eb6b805cbc26dbfdd0c06cedf75ed08bde5975cb5515814c",
+    "docs/v3_1_response_result.md": "82aaee5acf16fd16e499562af3ba1b97caac8d0b304bd0d1812ec52226a7c357",
+    "docs/v3_1_final_validation_result.md": "215dbd3ae5e9785384e0a92faf2d52bee4fdc3064fe111c0db7a8e1118525a0f",
+    "docs/v3_1_candidate_modes_result.md": "5b9dfdf85b5c24aa9de59eb44a244ff48731d3ce1826b63fc85fb35e9dceb31a",
+    "docs/v3_1_domain_evidence_result.md": "4bce8a597eac8a550a89f0c33a067518ab80e6353d0ebe52ba7bf12a41100147",
+    "docs/v3_1_transfer_result.md": "15f9ba5dd6137e8985adcd30484e6049c11cf878aefaf641d196099a65b73963",
+    "docs/v3_1_structure_result.md": "ff7f446eabf76969b887e8e9a73cbb2101f0c9a45743f21dc3688e755bb19920",
+    "docs/v3_1_domain_result.md": "e57d8e60c5a2e995d1eebd88027e404173029f4979c722291e583de413bbe72b"
+  },
+  "links": [
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_requirements_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "pro_review_31f1277.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_methods.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_mechanism_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_radial_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_response_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_candidate_modes_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_domain_evidence_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "../manifests/v3_1/structure/initial_entry_summary.csv"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_requirements_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "v3_1_status.md"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "../manifests/v3_1/delivery.json"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "../manifests/v3_1/final_requirements_review.json"
+    },
+    {
+      "document": "docs/v3_1_result.md",
+      "target": "../manifests/v3_1/final_narrative_review.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/compact_inventory_102_states.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/transfer_result_sources.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/heldout_transfer_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/final_unit_validation.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/execution/final_chain_accounting.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/delivery.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/figure_delivery.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "v3_1_result.md"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/requirements_review_progress.json"
+    },
+    {
+      "document": "docs/v3_1_requirements_result.md",
+      "target": "../manifests/v3_1/final_requirements_review.json"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_mechanism_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_requirements_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_status.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "../manifests/v3_1/baseline_preservation_current.json"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_validation_roles.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_validation_admission_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_candidate_modes_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_candidate_modes_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_luminosity_correction_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_candidate_selection_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_target_entry_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_target_transfer_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_validation_target_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_target_counts_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_target_numerical_transfer.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_target_ensemble_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_radial_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_radial_summary_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_response_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_response_probe_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_final_validation_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_use_domain_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_domain_assessment_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_structure_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_structure_counts_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_radial_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_response_result.md"
+    },
+    {
+      "document": "docs/v3_1_methods.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_mechanism_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/figure_delivery.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/figure_delivery_partial_19.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/paired_figures/target_prior_transfer.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/paired_figures/target_prior_transfer.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/paired_figures/target_prior_transfer.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/paired_figures/class_metallicity_contrasts.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/paired_figures/class_metallicity_contrasts.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/paired_figures/class_metallicity_contrasts.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/paired_figures/delivery_validation.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/calibration/luminosity_correction.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/latent/latent_support_failure.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/latent/latent_support_failure.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/latent_figure/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/target_candidate/conditional_counts.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/target_candidate/weights_numerics.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/target_candidate_figures/plotted.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/target_candidate_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/target_candidate/conditional_counts.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/target_candidate/weights_numerics.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/highq_counts/counts.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/highq_counts/model_leakage.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_photometry/photometric_occupancy.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_photometry/photometric_occupancy.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/domain_photometry_figures/plotted.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/domain_photometry_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/final_validation/field_score_gains.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/final_validation/field_score_gains.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/final_validation/common_scale_agreement.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/final_validation/common_scale_agreement.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/final_validation_figures/plotted.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/final_validation_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/final_validation/score_audit/complete.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/radial/paired_radial_error.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/radial/radial_nonzero_coverage.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/radial/radial_structure_parameters.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_radial_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/radial_figures/plotted.csv"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/radial_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/response_probes/response_evidence.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/response_probes/response_source_transfer.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_response_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/response_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/candidate_modes/mode_responsibilities.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_candidate_modes_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/candidate_modes/mode_responsibilities.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/candidate_mode_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_evidence/precise_newsky_references.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_evidence/missing_reference_mass.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_domain_evidence_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_evidence/precise_newsky_references.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_evidence/missing_reference_mass.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/domain_evidence_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/heldout_transfer/heldout_joint_counts.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/heldout_transfer/heldout_predictive_support.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/heldout_transfer/heldout_joint_counts.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/heldout_transfer/heldout_predictive_support.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/heldout_transfer_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/structure/structure_posterior.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/structure/structure_membership.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/structure/structure_posterior.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/structure/structure_membership.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/structure_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.png"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.pdf"
+    },
+    {
+      "document": "docs/v3_1_atlas.md",
+      "target": "../manifests/v3_1/domain_adjudication_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_requirements_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_requirements_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_response_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_mechanism_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_candidate_modes_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_domain_evidence_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_methods.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_radial_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_status.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pro_review_31f1277.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_methods.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_domain_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_1_structure_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/v3_1/delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_0_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_0_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_0_methods.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_0_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v3_0_catalog.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/v3_0/delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_6_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_6_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_6_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_5_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_5_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_5_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_4_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_4_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_4_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_1_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_1_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_1_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_2_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_2_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_2_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/v2_2/delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_1_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_1_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_1_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/v2_1/delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_scope.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_methods.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_status.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_figure_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_requirements.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_revision_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_0_revision_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_6_wise_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_5_r0_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_4_science_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_4_science_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_4_science_delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_4_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_4_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_4_result.json"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_4_delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_3_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_3_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_3_result.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_2_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_2_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_2_delivery.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_1_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_1_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/baseline_v1_1_validation.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v1_catalog.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v0_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v0_catalog.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pro_review_60f65d5.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/baseline_v0_protocol.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/giant_parameter_audit_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_reference_batch_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_external_addendum_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_external_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_distance_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_distance_protocol_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/kgiant_selected190_evidence_v1.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/kgiant_pal12_feasibility_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/giant_wide_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "figures/distance_comparison_v1/01_cold_phot_vs_gaia.png"
+    },
+    {
+      "document": "README.md",
+      "target": "figures/distance_comparison_v1/02_warm_phot_vs_spectral.png"
+    },
+    {
+      "document": "README.md",
+      "target": "figures/distance_comparison_v1/03_warm_all_reserved.png"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/giant_wide_result_v1.md#同一批源的-cmd-补充"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/giant_information_decision_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_local_color_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_scales_protocol_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_scales_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_local_color_protocol_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_local_color_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pilot_audit.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_baseline.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/followup_validation.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pro_followup_v2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_application_decision.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/extinction_audit.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_weak_parallax_v2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_system_validation_v3.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_type_boundary.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_crossover.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_native_population.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_native_transfer_final.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/extinction_audit.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_dust_sensitivity.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_ps1_relative_audit.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pro_round_v5.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v5_xd_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v5_blue_branch.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/metal_poor_forward_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v5_candidate_export.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/joint_calibration_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_native_system_v2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_conditional_result_v1.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cluster_rgb_lower_result_v2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/data_sources.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/sync.md"
+    },
+    {
+      "document": "README.md",
+      "target": "WORKLOG.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/archives.json"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/pilot_10deg.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/pro_followup_v2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/cold_v4_application_decision.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/stage1_selection.md"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/stage1.json"
+    },
+    {
+      "document": "README.md",
+      "target": "manifests/holdout_reference_manifest.json"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_atlas.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_requirements_result.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/v2_3_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "v3_1_candidate_modes_result.md"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/diagnostics/diagnostic/paired_report/paired.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/all.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/feh.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/intrinsic_gr.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/apparent_r.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/optional_bands.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/sky.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/target_prior/diagnostic/paired_report/target_field_scope.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/luminosity_fit_refined/parameters.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/luminosity_guard/comparisons.csv"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_mechanism_result.md",
+      "target": "../manifests/v3_1/mechanism_result_sources.json"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "v3_1_radial_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "v3_1_radial_summary_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../manifests/v3_1/radial_summary/local_minus_broad_fraction_L1.csv"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../manifests/v3_1/radial_report/complete.json"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../manifests/v3_1/radial_summary/complete.json"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../manifests/v3_1/radial_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../scripts/v3_1_radial_report.py"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../scripts/v3_1_radial_summary.py"
+    },
+    {
+      "document": "docs/v3_1_radial_result.md",
+      "target": "../scripts/v3_1_radial_figures.py"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_summary/library_halves.csv"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_probes/report/complete.json"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_probes/report/response_weights.csv"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_probes/report/target_decomposition.csv"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_summary/mixture_source_summary.csv"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../figures/v3_1/response_probes/response_evidence.png"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../figures/v3_1/response_probes/response_source_transfer.png"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_summary/complete.json"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_figures/integrity.json"
+    },
+    {
+      "document": "docs/v3_1_response_result.md",
+      "target": "../manifests/v3_1/response_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "v3_1_final_validation_protocol.md"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "v3_1_validation_roles.md"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "v3_1_atlas.md"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "../manifests/v3_1/final_validation/report/complete.json"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "../manifests/v3_1/final_validation/score_audit/complete.json"
+    },
+    {
+      "document": "docs/v3_1_final_validation_result.md",
+      "target": "../manifests/v3_1/final_validation_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../manifests/v3_1/candidate_modes/complete.json"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../manifests/v3_1/candidate_modes/full_summary.csv"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../manifests/v3_1/candidate_modes/full_overview.csv"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../figures/v3_1/candidate_modes/mode_responsibilities.png"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../manifests/v3_1/candidate_mode_figures/integrity.json"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "../manifests/v3_1/candidate_mode_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_candidate_modes_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "v3_1_domain_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "../figures/v3_1/domain_evidence/precise_newsky_references.png"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "../figures/v3_1/domain_evidence/missing_reference_mass.png"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "../manifests/v3_1/domain_evidence/complete.json"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "../manifests/v3_1/domain_evidence_figures/integrity.json"
+    },
+    {
+      "document": "docs/v3_1_domain_evidence_result.md",
+      "target": "../manifests/v3_1/domain_evidence_figures/acceptance.json"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/inventory.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/predictive_summary.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/counts.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/field_summary.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/paired.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/heldout_transfer/report/checks.csv"
+    },
+    {
+      "document": "docs/v3_1_transfer_result.md",
+      "target": "../manifests/v3_1/transfer_result_sources.json"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure/posterior/summary.csv"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure/posterior/numerical_checks.csv"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure/report/counts.csv"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure/report/membership.csv"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure/report/membership_comparison.csv"
+    },
+    {
+      "document": "docs/v3_1_structure_result.md",
+      "target": "../manifests/v3_1/structure_result_sources.json"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "v3_1_final_validation_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "v3_1_response_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "v3_1_transfer_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "v3_1_radial_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "v3_1_structure_result.md"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "../manifests/v3_1/domain_adjudication/cells.csv"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "../manifests/v3_1/domain_adjudication/objects.csv"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "../manifests/v3_1/domain_adjudication/global_limits.json"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "../manifests/v3_1/domain_adjudication/transfer_support.csv"
+    },
+    {
+      "document": "docs/v3_1_domain_result.md",
+      "target": "../manifests/v3_1/domain_result_sources.json"
+    }
+  ],
+  "documents": 18,
+  "local_links_checked": 355,
+  "scope": "Actual final narrative cross-reference and source-level review. Science failure and evidenced scope gaps remain explicit; final synchronization is separately observed after committing."
+}

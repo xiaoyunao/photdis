@@ -43,4 +43,4 @@
 
 复现：`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_candidate_mode_figures.py`；
 验收：`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_candidate_mode_check.py`。
-本项完成E2m实施，整体v3.1结构/天空迁移与科学适用域裁决仍在推进。
+本项完成E2m实施；完整结构、天空迁移与[科学适用域裁决](v3_1_domain_result.md)均已完成，主候选仍未获科学接受。
