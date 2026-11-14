@@ -16,10 +16,30 @@ BASE = ROOT/'manifests/v3_2'
 REMOTE = '/pscratch/sd/y/yunao/photdis_pipeline'
 HOST = 'yunao@perlmutter.nersc.gov'
 FILES = ('complete.json', 'numerical.csv', 'recovery.csv')
+RECOVERY_ARRAY = '61266369'
 
 
 def digest(raw):
     return sha256(raw).hexdigest()
+
+
+def completed_catalogs(report):
+    result = {}
+    for line in report.splitlines():
+        task, raw, state, code = line.strip().split('|')
+        array, sep, catalog = task.partition('_')
+        if array != RECOVERY_ARRAY or not sep or not catalog.isdecimal():
+            continue
+        if state == 'COMPLETED' and code == '0:0':
+            result[int(catalog)] = raw
+    return result
+
+
+def discover():
+    command = f'sacct -n -X -P -j {RECOVERY_ARRAY} --format=JobID,JobIDRaw,State,ExitCode'
+    status = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
+                            check=True, capture_output=True, timeout=25, text=True)
+    return completed_catalogs(status.stdout)
 
 
 def collect(names):
@@ -57,10 +77,21 @@ def validate(catalog, payload, design, outputs, design_digest, caches):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('catalogs', nargs='+', type=int, choices=range(288),
+    parser.add_argument('catalogs', nargs='*', type=int,
                         metavar='CATALOG', help='Catalog IDs with completed Slurm jobs')
+    parser.add_argument('--completed', action='store_true',
+                        help='Find unarchived successful tasks in the production Slurm array')
     args = parser.parse_args()
-    catalogs = sorted(set(args.catalogs))
+    if bool(args.catalogs) == args.completed or any(not 0 <= i < 288 for i in args.catalogs):
+        parser.error('Choose --completed or explicit catalog IDs in 0–287')
+    jobs = discover() if args.completed else {}
+    catalogs = sorted(set(args.catalogs)) if not args.completed else [
+        i for i in sorted(jobs) if not all((BASE/f'radial_recovery/catalog_{i:03}'/name).is_file()
+                                          for name in FILES)
+    ][:32]
+    if not catalogs:
+        print('No new successful production catalogs')
+        return
     if len(catalogs) > 32:
         parser.error('Collect at most 32 compact results in each transfer')
     paths = {i: f'radial_recovery/catalog_{i:03}' for i in catalogs}
@@ -74,6 +105,8 @@ def main():
     for i, folder in paths.items():
         payload = {name: archive[f'data/v3_2/{folder}/{name}'] for name in FILES}
         receipt = validate(i, payload, design[i], outputs, digest(raw_design), caches)
+        if jobs and receipt['job'] != jobs[i]:
+            raise ValueError(f'Recovery receipt differs from the successful Slurm job for catalog {i}')
         dest = BASE/folder
         dest.mkdir(exist_ok=True)
         for name, contents in payload.items():

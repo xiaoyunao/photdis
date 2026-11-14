@@ -136,6 +136,8 @@ products without a final delivery verdict.
   Collect per-catalog receipts and numerical and recovery CSVs plus
   the final report. Use `python3 scripts/v3_2_collect_radial_results.py
   CATALOG ...` for batches of completed per-catalog outputs.
+  Use its `--completed` mode to fetch up to 32 new successful Slurm
+  tasks and reconcile each raw job ID with the output receipt.
   Run `PYTHONPATH=src:scripts:.deps python3
   scripts/v3_2_radial_report_audit.py` to reconcile all seven
   derived tables with the frozen design and individual results.

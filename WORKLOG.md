@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile completed recovery jobs with output receipts
+
+- Added `--completed` to the radial collector. It uses terminal
+  Slurm success records, skips archived catalogs and verifies each
+  received job ID. Syntax, mixed-status parsing and a live collection
+  check passed. Catalog 001 is still the sole completed array task.
+- The CPU regular partition was nearly full. Tested an in-place
+  shared-QoS change for the still-pending catalog 003. Slurm rejected
+  the request and its original queue and 8 GiB request remain in effect.
+  The final report still depends on the existing recovery array.
+- Verified that all three archived native admission receipts match
+  NERSC byte for byte. The parent-reference audit is still pending.
+
 ## 2026-11-14 — verify the first production recovery and reduce queued memory requests
 
 - Catalog 001 (61274913) completed 0:0 in 3m28s and peaked at
