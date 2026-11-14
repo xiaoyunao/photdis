@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — release recovery tasks with existing verified caches
+
+- Matched the frozen 288-catalog design to the 22 authenticated cache
+  receipts. Reconciled their NERSC hashes and inspected output paths
+  before releasing 275 pending recovery tasks in array 61266369.
+- Slurm rejected replacing task 1's dependency with an already
+  completed cache child. Clearing only the redundant dependency on
+  verified-cache tasks succeeded. Ten tasks with unfinished caches
+  remain dependent. The original array, eight-task cap, scientific
+  inputs and final report dependency stay in place.
+
 ## 2026-11-14 — prepare the independent NGC288 joint-result audit
 
 - Added a compact audit that binds the original parent and 32 input

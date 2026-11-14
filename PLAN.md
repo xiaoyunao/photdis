@@ -108,14 +108,15 @@ and external findings and identifies the two pending application results.
   Both completed in debug with the existing afterok dependency intact.
   Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
   retaining its original array membership.
-  Cached recovery 61266369
-  covers the 285 nonpilot catalogs with at most eight concurrent tasks,
-  waiting for the cache array and prior-predictive pilot 61261884.
+  Cached recovery 61266369 covers 285 nonpilot catalogs with at most
+  eight concurrent tasks. The 275 tasks mapped to authenticated caches
+  00–21 are eligible to run. The remaining ten retain the full-cache
+  dependency until their own caches are verified.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
   Cache receipts 00–21 are verified with `scripts/v3_2_radial_cache_audit.py`.
   Repeats 22 and 23 moved to debug QoS with 30-minute limits.
-  Recovery keeps its original afterok on the full cache array.
+  Report 61266374 keeps its original afterok on the full recovery array.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
