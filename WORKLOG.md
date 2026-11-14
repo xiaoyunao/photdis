@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — implement outcome-closed DR19 identity and native admission
+
+- Added exact SDSS/Gaia-ID join of DR19 APOGEE HDU metadata only.
+  Require the APO 2.5m SDSS-V 1.3 reduction and a good visit. Exclude
+  DR17 IDs/names, ambiguous identities, old sky/footprints and known systems.
+- Added exact G3 primary-brick matching, historical imaging/negative-ID
+  and native sky checks, DR11 PSF verification, and per-reason exclusions.
+  The first product holds imaging requests only. Scientific photometry
+  and row pointers are exported together only after native admission.
+- Python/Bash syntax and synthetic exact 64-bit joins, duplicate and
+  legacy exclusions, RA wrapping and historical imaging/sky checks pass.
+  Archive acquisition 61260678 is live in the scheduler. Use its actual
+  hashes to run identity indexing and native join without opening labels.
+
 ## 2026-11-14 — verify a possible fresh APOGEE reference source
 
 - Checked v3.0/v3.1 opened roles and official SDSS and DESI data releases.

@@ -18,7 +18,9 @@ This acquisition alone assigns no final role and reads no outcomes.
 
 The archive includes combined SDSS-V spectra as well as legacy DR17
 spectra. Exclude DR17 APOGEE IDs and Gaia identities from the proposed
-fresh DR19-only channel and require demonstrable SDSS-V observations.
+fresh DR19-only channel and require the APO 2.5m SDSS-V 1.3
+reduction and at least one good visit in both products.
+[SDSS DR19 infrared data](https://www.sdss.org/dr19/data_access/get_data/)
 Use the Astra ASPCAP flags for independent stellar-parameter eligibility.
 AstroNNDist uses spectra, 2MASS Ks and extinction and was trained using
 DR17 plus Gaia EDR3. Use it as a teacher-distance channel. Keep
@@ -33,6 +35,13 @@ identity audit is required for any additional DR1 reference use. The BHB
 VAC has spectroscopic classification and a photometric absolute-magnitude
 relation. Any distant BHB use would be a separate tracer channel.
 [SDSS DR20 release](https://sdss.org/dr20/) · [DESI DR1 SpecDis](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-specdis/) · [DESI DR1 BHB](https://data.desi.lbl.gov/doc/releases/dr1/vac/mws-bhb/)
+
+The index reads only provenance, positions and identity columns.
+The allocated native matching job applies exact G3, primary, release,
+morphology, historical imaging identity and photometric criteria. Its
+reference index contains row pointers paired with the same PSF identities.
+Archive checksums and both files' explicit column selection precede any
+reference-value access.
 
 Acquire and index sources without model residuals. Freeze the candidate,
 reference eligibility, outcome-access rule and actual source roles before
