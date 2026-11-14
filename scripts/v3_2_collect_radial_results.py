@@ -96,6 +96,11 @@ def validate(catalog, payload, design, outputs, design_digest, caches):
     return receipt
 
 
+def is_archived(catalog):
+    folder = BASE/f'radial_recovery/catalog_{catalog:03}'
+    return all((folder/name).is_file() for name in FILES)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('catalogs', nargs='*', type=int,
@@ -110,7 +115,8 @@ def main():
         parser.error('Collect at most 32 compact results in each transfer')
     jobs = discover(RECOVERY_ARRAY, tasks) if args.completed or tasks else {}
     for array_id, retry_catalogs in RECOVERY_RETRIES.items():
-        requested = retry_catalogs if args.completed else retry_catalogs.intersection(tasks)
+        requested = ({i for i in retry_catalogs if not is_archived(i)}
+                     if args.completed else retry_catalogs.intersection(tasks))
         if requested:
             for catalog, job in discover(array_id, sorted(requested)).items():
                 if catalog in jobs and jobs[catalog] != job:
@@ -119,8 +125,7 @@ def main():
     if missing := set(tasks) - jobs.keys():
         parser.error('Slurm has no successful completion for catalogs ' + ', '.join(map(str, sorted(missing))))
     catalogs = sorted(set(args.catalogs)) if not args.completed else [
-        i for i in sorted(jobs) if not all((BASE/f'radial_recovery/catalog_{i:03}'/name).is_file()
-                                          for name in FILES)
+        i for i in sorted(jobs) if not is_archived(i)
     ][:32]
     if not catalogs:
         print('No new successful production catalogs')

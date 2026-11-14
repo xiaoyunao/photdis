@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify radial catalogs 085, 087 and 089
+
+- Collected three successful Slurm outputs and authenticated the
+  results against their receipts. All six fits pass. Stage delivery
+  verified 90 catalogs, 180 verdicts (159 accepted), 3,600 intervals
+  and ten complete strata.
+- Automatic collection now skips Slurm queries for fully archived
+  retry outputs. Syntax and mocked complete/partial retry checks pass.
+  Some live reads timed out while polling the original array.
+- Both final report jobs remain pending. NGC288 states 10–14
+  continue at verified counts of 176, 160, 144, 56 and 56 rows
+  from the inspected logs.
+
 ## 2026-11-15 — verify radial catalogs 082–084
 
 - Archived three successful Slurm outputs with matching receipts.
