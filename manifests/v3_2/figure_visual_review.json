@@ -1,0 +1,50 @@
+{
+  "figures/v3_2/external_validation/dr20_reliability.png": {
+    "sha256": "7674def77de2bbf1df705456c5e5feab7d44e10ab8e2bddece5357e9e446d54b",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/external_validation/gaia_and_hst.png": {
+    "sha256": "9f1ceb0bb8b1ce7e65d7406bc592cbee066dd9cf535f5a013cb0925e9ac32aba",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/opened_audits/probe_and_count_audit.png": {
+    "sha256": "7872c6e2dbee89ad715f8ff3ac83e1cf75fe069fcdaffdb70411240d7387b1f4",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/opened_diagnostics/class_reliability.png": {
+    "sha256": "cf4e224183f8da2b8eda7f1edb54098cb356de2858e8298435ddc55bd390fb4f",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/radial_design/selected_membership.png": {
+    "sha256": "eaf1709060e154ea33b12e9e2d75d6472c1f6b4199e9eb88f2ad079b170c78e1",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/structure_odds_audit/fixed_distance_odds.png": {
+    "sha256": "d43cc26cb42e9a67b8caf6c487c73077a669a283bbe51f6ef7bbc1706bab287a",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/tilt_factorial/opened_factorial.png": {
+    "sha256": "6fda21af7eb3c93a6690f70b44dddd3ac5661ce4080302e760c26fcde3e846c7",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  },
+  "figures/v3_2/tilt_size_control/size_control.png": {
+    "sha256": "3198e4750da7763e53ba74c784e125bbbc0ae042efbfe6cd31c4c237ce98a2bd",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-14"
+  }
+}

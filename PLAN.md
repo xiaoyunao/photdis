@@ -10,6 +10,10 @@ and external findings and identifies the two pending application results.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
+  Recompute compact paired and class evidence with
+  `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_opened_audit.py`.
+  The eight rendered plates pass
+  `python3 scripts/v3_2_figure_delivery.py --completed-only`.
 - Repeat `python3 scripts/v3_2_preservation_check.py` before final delivery.
   The current audit verifies 8,773 protected paths against 7699299 in the
   commit, index and worktree. Check data source digests with the run receipts.

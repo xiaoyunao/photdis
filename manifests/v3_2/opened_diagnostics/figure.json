@@ -1,0 +1,7 @@
+{
+  "manifests/v3_2/opened_diagnostics/complete.json": "5371554114cea3cc00690f645e131862c4083c027d63c69614c37f6964c909c3",
+  "manifests/v3_2/opened_diagnostics/reliability.csv": "dc4db07b0968822e683e199ea593369c401ab039a9c7ba631a119aa7971ceb97",
+  "scripts/v3_2_opened_reliability.py": "ca6772da800df975c3a7a62efe381e3d601bca92383524125f12204df87ca461",
+  "figures/v3_2/opened_diagnostics/class_reliability.png": "cf4e224183f8da2b8eda7f1edb54098cb356de2858e8298435ddc55bd390fb4f",
+  "figures/v3_2/opened_diagnostics/class_reliability.pdf": "b355da6e4b582e3e13a94df3c3940d56b51bef62b67be2ceb47d594c84b90c24"
+}

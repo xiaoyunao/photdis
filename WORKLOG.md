@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — independently verify opened evidence and all eight existing plates
+
+- Recomputed 144 paired score rows, 108 confusion cells, 360
+  reliability bins and four QRF Gaia score contrasts from 519
+  same-object PSF keys. The new-sky denominators reproduce 166 Gaia
+  pairs and 157 class pairs.
+- Visually reviewed the eight available English plates and bound the
+  review to PNG hashes. Verified their registered sources, PDF labels
+  and page sizes, PNG resolution and atlas links. The final audit
+  also requires the two recovery plates and one NGC288 joint plate.
+
 ## 2026-11-14 — prepare fixed-truth and prior-predictive coverage plates
 
 - Added the coverage renderer for all 32 fixed-truth cells and the
