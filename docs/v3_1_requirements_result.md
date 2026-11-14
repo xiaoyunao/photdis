@@ -30,3 +30,10 @@ Authority: `pro_review_31f1277.md` section six; design: `v3_1_protocol.md`.
 Negative scientific results remain deliverables, but do not satisfy calibration
 or independent validation claims. Unavailable evidence needs an actual inventory
 and an explicit scope limit, never a pass by absence.
+
+The [source-bound partial review](../manifests/v3_1/requirements_review_progress.json)
+explicitly reviews all21 ledger requirements, with68 evidence bindings. E3/E4
+and F1/F2/F3 remain pending; D2 and E2 retain substantiated evidence gaps and
+restricted claims. The final delivery gate requires a separate completed review
+with every current requirement and current source hash; this partial record
+cannot close the goal or establish scientific acceptance.

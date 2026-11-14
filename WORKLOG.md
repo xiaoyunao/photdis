@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — bind final closure to each explicit research requirement
+- Reviewed all21ledger requirements againstProsection6, frozenprotocol, actual
+  reports andcompactsource artifacts. Recorded68evidence bindings withfindings,
+  scientificlimits andseparate implemented/evidence-gap/pending dispositions.
+  E3/E4/F1/F2/F3 remainpending; D2/E2 gaps do notbecome calibrateddistance or
+  independentlymeasuredcontamination claims. No newscientificsample/model/job.
+- Addedfinal_requirements_review.json tofinalgate: requireexactcurrentledger
+  IDs/text, authority/source hashes, nonemptyfindings/limits andno pendingitem.
+  Thischeckscoverage/provenance; itdoesnotautomaticallyjudge scientifictruth.
+- Pythonparse andactualmissing-full-review rejection pass; delivery.json absent.
+  Existing183test sourcehashes unchanged. Partialreviewisnotthefinalproof and
+  mustbefinalizedfromactualstructure/domain/figureoutputs beforegoalclosure.
+- UpdatedPLAN/ledger andsource-link records. Existing29/30 remainrunning,31
+  queued; assembly/posterior retainoriginaldependencies. Nextcollectlast3states,
+  completefullchain/3plates, thenactualrequirement-by-requirementfinalreview.
+
 ## 2026-11-14 — authenticate twenty-nine states and queue the original final chain
 - State27/raw61247900 COMPLETED21m21/0:0:512pass,512originalflags;64workers,
   Python1265.195s/maxchild4174260KiB. State28/raw61247948 COMPLETED15m33/0:0:

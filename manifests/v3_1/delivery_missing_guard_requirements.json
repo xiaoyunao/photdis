@@ -1,0 +1,12 @@
+{
+  "source_sha256": "ac601d601c0c44a120edbee0f7177d4ffe6eb0bf9d452ffbf9007d92d58f09ed",
+  "command": [
+    "python3",
+    "scripts/v3_1_delivery.py"
+  ],
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 228, in <module>\n    main()\n  File \"/Users/yunaoxiao/Desktop/photdis/scripts/v3_1_delivery.py\", line 45, in main\n    raise FileNotFoundError('Complete delivery required; no output written. Missing: ' + ', '.join(missing))\nFileNotFoundError: Complete delivery required; no output written. Missing: manifests/v3_1/structure_result_sources.json, manifests/v3_1/domain_result_sources.json, manifests/v3_1/structure/refined_entry_32_states.json, manifests/v3_1/structure/matrices/complete.json, manifests/v3_1/structure/matrices/status.csv, manifests/v3_1/structure/posterior/complete.json, manifests/v3_1/structure/report/complete.json, manifests/v3_1/domain_adjudication/complete.json, manifests/v3_1/figure_delivery.json, manifests/v3_1/final_narrative_review.json, manifests/v3_1/final_requirements_review.json\n",
+  "missing_input_guard_passed": true,
+  "delivery_written": false,
+  "scope": "Actual missing-input rejection after requiring a complete source-bound review of every explicit ledger requirement. The partial review cannot close delivery; full success still requires actual products and manual scientific review."
+}

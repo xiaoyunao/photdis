@@ -214,6 +214,12 @@ This snapshot takes precedence over the historical execution notes below.
   equations/product identities cross-checked against code. This isnotfinalacceptance.
 
 ### Validation and next actions
+- Source-level review now coversall21 ledger requirements/68evidence bindings;
+  E3/E4/F1/F2/F3 remainpending. D2/E2 explicitlyretain unavailableindependent
+  calibration/contamination evidence andscope limits. Finaldelivery additionally
+  requiresfinal_requirements_review.json with exactcurrent IDs/text, authority
+  hashes, findings/limitations andactualevidence. Partialreview cannotclosegoal.
+  Syntax/currentmissing-full-review guard pass; fullsuccess stillawaitsproducts.
 - Current baseline guard verifies6976 tracked baseline files in worktree AND index,
   and rejects additions outside v3.1 namespaces. Final delivery repeats it live.
   Four temporary-repository regressions pass; full183tests pass7.58s/164source

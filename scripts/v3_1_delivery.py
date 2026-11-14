@@ -4,6 +4,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import re
 
 from v3_1_preservation_check import examine as examine_preservation
 
@@ -36,7 +37,8 @@ def main():
         'structure/posterior/complete.json',
         'structure/report/complete.json', 'domain_adjudication/complete.json',
         'figure_delivery.json', 'final_unit_validation.json',
-        'final_narrative_review.json', 'baseline_preservation_current.json',
+        'final_narrative_review.json', 'final_requirements_review.json',
+        'baseline_preservation_current.json',
     ]]
     missing = [str(p.relative_to(ROOT)) for p in required if not p.exists()]
     if missing:
@@ -168,6 +170,28 @@ def main():
     authenticate(unit['inputs'], 'unit_source')
     check('test_transcript', sha(BASE / 'final_unit_validation.txt') == unit['stdout_sha256'])
     record(BASE / 'final_unit_validation.txt')
+    requirements = read('final_requirements_review.json')
+    authority = {'docs/pro_review_31f1277.md', 'docs/v3_1_protocol.md',
+                 'docs/v3_1_requirements_result.md'}
+    check('requirements_authority', set(requirements['authority']) == authority)
+    authenticate(requirements['authority'], 'requirements_authority')
+    ledger = ROOT / 'docs/v3_1_requirements_result.md'
+    expected = {line.split('|')[1].strip(): line.split('|')[2].strip()
+                for line in ledger.read_text().splitlines() if re.match(r'^\| [A-F]\d', line)}
+    items = requirements['items']
+    check('every_explicit_requirement_reviewed', expected and
+          len(items) == requirements['requirements'] == len(expected) and
+          {item['id']: item['requirement'] for item in items} == expected)
+    check('no_pending_requirement', requirements['delivery_ready'] and
+          not requirements['pending'] and requirements['scientific_acceptance'] is False)
+    for item in items:
+        check('requirement_disposition:' + item['id'], item['status'] in
+              {'implemented_with_limitations', 'evidence_gap_with_scope_limit'} and
+              bool(item['finding'].strip()) and bool(item['limitations'].strip()) and
+              bool(item['evidence']))
+        authenticate(item['evidence'], 'requirement_evidence:' + item['id'])
+    # Source binding/completeness complements the written scientific review;
+    # it does not automatically judge the truth of the reviewed claims.
     narrative = read('final_narrative_review.json')
     check('complete_narrative_review', narrative['delivery_ready'] and narrative['requirements_reviewed'] and
           narrative['scientific_acceptance'] is False)
