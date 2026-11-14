@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — complete all fixed-truth recovery strata
+
+- Archived 251–255 and 257–259 with the completed-mode collector.
+  The stage audit verified 260 catalogs, 472 of 520 accepted fits,
+  10,400 intervals and all 32 fixed-truth strata.
+- Recomputed width coverage (3/8) and paired count error (−12.01
+  percentage points) for the 90% deep-background 0.25 mag
+  empirical-SED stratum. Recomputed matched empirical-minus-model
+  width error at 60% and 90% in both 0.08 mag backgrounds.
+  Updated `docs/v3_2_result.md`.
+- Four of 32 prior-predictive catalogs are archived. NGC288
+  state 13 was running at 2h00m33s. Fourteen states are archived.
+
 ## 2026-11-15 — verify 90 percent near wide recovery and two NGC288 states
 
 - Archived radial catalogs 242 and 244–250 with the completed-mode

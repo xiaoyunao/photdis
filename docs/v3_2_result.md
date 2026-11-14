@@ -251,8 +251,17 @@ coverage is 5/8 (exact 95% interval 0.245–0.915). The mean
 width median is 0.337 mag and mean interval length is 0.200 mag.
 The paired count-error change is −10.69 [−13.92, −7.55]
 percentage points.
-The remaining empirical-SED strata and prior-predictive comparison
-are in progress.
+With the same fraction and true width in the deep background,
+both arms pass in all eight repeats and width coverage is 3/8
+(exact 95% interval 0.085–0.755). The mean width median is
+0.381 mag and mean interval length is 0.189 mag. The paired
+count-error change is −12.01 [−17.72, −6.61] percentage points.
+Across the four fixed 0.08 mag strata at 60% and 90%, empirical
+SEDs increase local absolute width error by 0.144–0.152 mag relative
+to model SEDs on eight numerically accepted matched repeats per
+stratum. All four paired bootstrap intervals exclude zero.
+All 32 fixed-truth strata are complete. The prior-predictive
+comparison is in progress.
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
