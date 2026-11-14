@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — make the external freeze audit reproducible
+
+- Archived the two assembled four-view forecast receipts after comparing
+  their bytes with the corresponding freeze digests.
+- Added `scripts/v3_2_external_audit.py`. It passed 9,130 compact checks
+  across the decision, freeze, opening, native admission, result receipts,
+  payload declarations and table rows. Reconstructed the compact archive
+  in a temporary directory and verified that a changed score CSV is rejected.
+- No extra reference access. On NERSC, radial cache 21 and NGC288 states
+  04–06 were still running at the time of the audit.
+
 ## 2026-11-14 — verify the equal-size control and NGC288 state 03
 
 - Authenticated both fit samples, forecast and 216 comparison rows from

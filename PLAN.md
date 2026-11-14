@@ -79,6 +79,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   `docs/v3_2_external_result.md` for matched gains, calibration failures
   and support limits. Retain the frozen comparisons and all flags.
   The atlas links the source-bound, visually reviewed Gaia and HST plate.
+  Reproduce the compact freeze and score reconciliation with
+  `python3 scripts/v3_2_external_audit.py`. The two assembled forecast
+  receipts are archived alongside their native admission records.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
