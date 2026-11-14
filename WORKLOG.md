@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — archive four shared recoveries and advance the retry array
+
+- Archived catalogs 045, 047, 048 and 049 after successful exits
+  in 5m12s, 4m45s, 3m56s and 3m42s. Both fits in all four pass.
+  Stage delivery verified 52 catalogs, 104 verdicts (83 accepted),
+  2,080 intervals and ten NGC288 states.
+- Eight original recovery tasks were running concurrently in
+  CPU shared at the first check. Moved pending retry tasks 037
+  and 046 to the vacant debug slots. The report still waits
+  on original-array termination and retry success.
+- NGC288 states 10–12 reached 96, 64 and 64 verified checkpoints
+  respectively at the inspected log snapshot.
+
 ## 2026-11-15 — recover two scheduler-canceled radial tasks
 
 - Slurm recorded 037 and 046 as canceled after 22 and 18 seconds.
