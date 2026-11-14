@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial cache repeat 18
+
+- Repeat 18 (raw 61271134) completed 0:0 in 13m52s. Collected the
+  receipt and checkpoint input. The radial cache audit verified all
+  19 available repeats and 2,432 contexts. Repeat 19 remains active.
+
 ## 2026-11-14 — verify the closed DR20 comparator forecasts
 
 - Replacement job 61272013 completed 0:0 in 8m02s. Reconciled its
