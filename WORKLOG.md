@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — verify the first five 60 percent empirical recoveries
+
+- Archived 192–196 via `v3_2_collect_radial_results.py --completed`.
+  All ten fits pass. Completed-only delivery verified 198 catalogs,
+  349 accepted fits of 396, 7,920 intervals and 24 complete strata.
+  The first 60% empirical stratum still needs catalogs 197–199.
+- Slurm confirmed NGC288 states 10–14 running. The last log rows
+  in states 10–12 were 416, 400 and 384 of 512. Ten states are
+  archived. Continue collecting both arrays.
+
 ## 2026-11-15 — complete the 30 percent empirical recovery strata
 
 - Archived 188–191 using the completed-mode radial collector.

@@ -137,7 +137,7 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  One hundred ninety-three of 288 catalogs have verified compact outputs.
+  One hundred ninety-eight of 288 catalogs have verified compact outputs.
   All 16 fixed model-SED strata and the eight 10% and 30% empirical-SED
   strata are complete.
   Catalogs
