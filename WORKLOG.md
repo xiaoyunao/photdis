@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first checkpointed production input shards
+
+- Slurm 61259514_1 and _2 completed 0:0 in 5m30s and 6m13s.
+  Downloaded and authenticated the two compact check tables and receipts.
+- Verified frozen source hashes and levels against shard 00, eight
+  checkpoint payloads directly, and complete admitted row/identity keys
+  in both tables. Shards 00–02 have 2439 distinct PSF objects, 341
+  candidate objects and 72 initial flags, all in candidate entry
+  contexts. Shard 00's 26 refinements were previously accepted.
+- The remaining 29 input shards and dependent array 61259727 are queued.
+  Preserve the 46 new flags for the registered matched refinement.
+
 ## 2026-11-14 — quantify missing high-q contamination evidence
 
 - Independently verified the opened v3.1 high-q tables and calculated

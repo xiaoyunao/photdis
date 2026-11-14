@@ -8,7 +8,9 @@ Active goal follows the Pro review of 7699299. See
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first production shard is verified, and array 61259514 builds the other 31.
+  first three shards (00–02) are complete and verified. Array 61259514
+  has 29 further shards queued. Shards 01/02 have 46 candidate entry
+  flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shard 00 refinements pass 26/26. Array 61259727 follows 61259514 and
