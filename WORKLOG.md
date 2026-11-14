@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — complete the 30 percent empirical recovery strata
+
+- Archived 188–191 using the completed-mode radial collector.
+  All eight fits pass. Completed-only delivery verifies 193 catalogs,
+  339 accepted fits of 386, 7,720 intervals and 24 complete strata.
+- Recomputed the 30% deep-background, 0.25 mag stratum.
+  Local width coverage is 8/8 and the paired count-error change is
+  −3.125 percentage points. Updated `docs/v3_2_result.md`.
+- Slurm confirmed NGC288 states 10–14 active. Ten states are archived.
+
 ## 2026-11-15 — verify the 30 percent empirical near wide stratum
 
 - Archived 181–187 with the radial collector. All 14 fits pass.
