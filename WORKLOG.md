@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — verify the 30 percent empirical deep narrow stratum
+
+- Collected 174–176 and 178 using the radial collector. All eight
+  new fits passed. The completed-only audit verified 179 of 288
+  catalogs, 311 of 358 accepted fits, 7,160 intervals and 22 strata.
+- Recomputed width coverage and paired count error for the 30%
+  empirical deep-background 0.08 mag stratum. All eight pairs pass,
+  and width coverage is 4/8 with a paired count-error change of
+  −6.05 percentage points. Updated `docs/v3_2_result.md`.
+- NGC288 state 10 logged 384 of 512 radial rows during its
+  three-hour allocation. Ten states are archived and five running.
+
 ## 2026-11-15 — close both empirical retries and verify two more strata
 
 - Collected 143 and 164–173 using the radial collector. Slurm
