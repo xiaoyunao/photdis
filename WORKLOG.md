@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — clear the idle radial cache array's task limit
+
+- Slurm showed all 16 remaining children of 61266329 (repeats 16–31)
+  pending at zero runtime with JobArrayTaskLimit and no active child.
+- Ran `scontrol update JobId=61266329 ArrayTaskThrottle=5` on the
+  existing array. Controller confirmed the new throttle, cleared the
+  reason and retained regular QoS, the 45-minute limit and the
+  recovery array 61266369's afterok dependency.
+
 ## 2026-11-14 — authenticate the factorial fit receipts independently
 
 - Added `scripts/v3_2_tilt_fit_audit.py` to reconcile the 64 source

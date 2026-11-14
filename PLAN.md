@@ -65,7 +65,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   and ESS, with all entry and count checks passing.
   Exact direct/cache verification 61261765 completed and passed on both
   pilot arrays of 128 contexts. Cache array 61266329 (repeats 01–31,
-  max four concurrent) has cleared that dependency. Cached recovery 61266369
+  max five concurrent) has cleared that dependency. The throttle was raised
+  from four after all 16 queued children showed JobArrayTaskLimit with no
+  active child. Slurm cleared that reason and preserved the recovery
+  dependency. Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
