@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — archive two radial caches and NGC288 state 04
+
+- Repeat 22 (61274684) completed 0:0 in 14m02s and repeat 23 (61274685)
+  in 13m59s. Verified both receipts and checkpoints, bringing the cache
+  census to 24 repeats and 3,072 contexts. Recovery catalogs 278 and
+  279 are now eligible. Moved repeats 24 and 25 to debug with 30-minute limits.
+- NGC288 state 04 (raw 61271766) completed 0:0 in 1h26m01s.
+  Audited all 2,560 checks with zero flags. Five states are verified.
+
 ## 2026-11-14 — release recovery tasks with existing verified caches
 
 - Matched the frozen 288-catalog design to the 22 authenticated cache

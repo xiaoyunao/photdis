@@ -109,13 +109,14 @@ and external findings and identifies the two pending application results.
   Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
   retaining its original array membership.
   Cached recovery 61266369 covers 285 nonpilot catalogs with at most
-  eight concurrent tasks. The 275 tasks mapped to authenticated caches
-  00–21 are eligible to run. The remaining ten retain the full-cache
+  eight concurrent tasks. The 277 tasks mapped to authenticated caches
+  00–23 are eligible to run. The remaining eight retain the full-cache
   dependency until their own caches are verified.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–21 are verified with `scripts/v3_2_radial_cache_audit.py`.
-  Repeats 22 and 23 moved to debug QoS with 30-minute limits.
+  Cache receipts 00–23 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Repeats 22 and 23 completed in debug. Repeats 24 and 25 moved to
+  debug QoS with 30-minute limits.
   Report 61266374 keeps its original afterok on the full recovery array.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
@@ -181,6 +182,7 @@ and external findings and identifies the two pending application results.
   State 03 closed on archived nodes. One Gaussian grid check and all
   512 independent-entry-seed absolute checks fail. Retain them for
   the entry-axis comparison across states.
+  State 04 passed all 2,560 checks.
   The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run
