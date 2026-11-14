@@ -22,6 +22,9 @@ It also recomputes local coverage for strata with all registered
 catalogs archived.
 When the radial report is available, the same command independently
 recomputes its seven derived tables and checks the full catalog census.
+The factorial audit also reproduces the seeded 3,540-PSF broad
+subsample, verifies both fit receipts and their forecast ancestry,
+and checks the 216 comparison keys against the opened cohort sizes.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.

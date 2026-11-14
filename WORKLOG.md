@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify the registered equal-size control in delivery
+
+- Added the broad sample and comparison checks to
+  `scripts/v3_2_factorial_audit.py`, used by both delivery modes.
+  Reproduced the seeded 3,540 PSF row and identity pairs from the
+  authenticated broad shards. Verified both fit and forecast receipts
+  and all 216 comparison keys and group denominators.
+- Re-ran the full suite (472 passed), standalone tilt-input audit
+  (731 of 731 flags resolved), and staged delivery. An altered sample
+  identity and an altered comparison denominator were both rejected.
+  Joint job 61263908
+  still awaits the 32-state array. Fifteen receipts are archived.
+
 ## 2026-11-15 — open two more NGC288 scheduling slots
 
 - Slurm confirmed seven running states and ten pending at the array
