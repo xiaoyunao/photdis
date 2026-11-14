@@ -10,6 +10,10 @@
   in a temporary directory and verified that a changed score CSV is rejected.
 - No extra reference access. On NERSC, radial cache 21 and NGC288 states
   04–06 were still running at the time of the audit.
+- Extended the pending joint evaluator to export paired PSF membership
+  and the 24 covariance cells for the final two likelihoods. Python
+  syntax and a smoke check passed, including rejection of a NaN member
+  probability. The existing Slurm entry point reads the script at start.
 
 ## 2026-11-14 — verify the equal-size control and NGC288 state 03
 

@@ -177,6 +177,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run
   `python3 scripts/v3_2_structure_distance_audit.py --complete` for final
   receipt and per-context verdict reconciliation.
+  The joint evaluator exports the final PSF membership pairs and
+  conditional, shared and total count covariance as compact CSV tables.
 
 ## v3.1 — completed research delivery
 

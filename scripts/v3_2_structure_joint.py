@@ -57,7 +57,8 @@ def validate_posterior(result, n):
             raise ValueError(f'Invalid probability: {key}')
         np.testing.assert_allclose(weight.sum(), 1, rtol=0, atol=1e-10)
     members = result['per_object_member_probability']
-    if members.shape != (n,) or (members < -1e-12).any() or (members > 1+1e-12).any():
+    if (members.shape != (n,) or not np.isfinite(members).all()
+            or (members < -1e-12).any() or (members > 1+1e-12).any()):
         raise ValueError('Invalid object membership probabilities')
     np.testing.assert_allclose(result['mean'], [members.sum(), n-members.sum()], rtol=0, atol=1e-8)
     cov = result['covariance']
@@ -65,6 +66,24 @@ def validate_posterior(result, n):
     np.testing.assert_allclose(cov, result['conditional_covariance']+result['shared_covariance'], rtol=0, atol=1e-8)
     if np.linalg.eigvalsh(cov).min() < -1e-8:
         raise ValueError('Invalid shared count covariance')
+
+
+def compact_final(ids, types, results):
+    membership = [dict(identity=int(identity), TYPE=str(kind),
+                       full=float(full), gaussian=float(gaussian),
+                       full_minus_gaussian=float(full-gaussian))
+                  for identity, kind, full, gaussian in zip(
+                      ids, types, *(result['per_object_member_probability'] for result in results))]
+    covariance = []
+    components = (('total', 'covariance'), ('conditional', 'conditional_covariance'),
+                  ('shared', 'shared_covariance'))
+    for branch, result in zip(BRANCHES, results):
+        for component, key in components:
+            for i, row in enumerate(('member', 'background')):
+                for j, column in enumerate(('member', 'background')):
+                    covariance.append(dict(branch=branch, component=component, row=row,
+                                           column=column, value=float(result[key][i, j])))
+    return membership, covariance
 
 
 def main():
@@ -165,6 +184,9 @@ def main():
     csv_rows(out/'summary.csv', summaries)
     csv_rows(out/'checks.csv', checks)
     csv_rows(out/'input_checks.csv', input_failures)
+    membership, covariance = compact_final(ids, types, final)
+    csv_rows(out/'membership.csv', membership)
+    csv_rows(out/'count_covariance.csv', covariance)
     inputs_passed = all(r['passed'] for r in input_failures)
     integration_passed = all(r['passed'] for r in checks if r['comparison'] != 'distance_first')
     save_json(out/'complete.json', dict(
