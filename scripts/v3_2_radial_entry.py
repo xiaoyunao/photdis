@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Cache the two frozen entry quadratures for one radial design repeat."""
 import argparse
-from concurrent.futures import ProcessPoolExecutor
 import json
-import multiprocessing as mp
 import os
 
 import numpy as np
@@ -11,6 +9,7 @@ import numpy as np
 from photdis.stage1 import require_compute
 from photdis.v3.selection import effective_errors
 from v2_1_near import ROOT, atomic_npz, load, save_json, sha
+from v3_2_radial_checkpoint import compute_rows
 from v3_2_radial_recover import (
     CONTEXT_KEYS, catalog_rows, entry_curve, entry_grid, entry_prior,
     entry_signature, load_entry_model, verify_psf,
@@ -50,16 +49,19 @@ def main():
     output = ROOT / 'data/v3_2/radial_entry' / f'repeat_{args.repeat:02}'
     if output.exists():
         raise FileExistsError(output)
-    with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
-        entry = np.asarray(list(pool.map(compute_row, range(len(_PHOTO['TYPE'])))))
+    inputs = dict(repeat=args.repeat, source_catalog=catalog, n_contexts=len(_PHOTO['TYPE']),
+                  all_PSF=True, design_sha256=sha(design_path), model_sha256=model_sha,
+                  photo_sha256=sha(photo_path), entry_code_sha256=entry_signature())
+    checkpoint = output.parent/'row_checkpoints'/output.name
+    results = compute_rows(checkpoint, inputs,
+                           _PHOTO['context_identity'], compute_row, workers=args.workers, keys=('entry',))
+    entry = np.stack([value[0] for value in results])
     output.mkdir(parents=True, exist_ok=False)
     curves = output / 'curves.npz'
     atomic_npz(curves, mu=_GRID, entry=entry, **{key: _PHOTO[key] for key in CONTEXT_KEYS})
     save_json(output / 'complete.json', dict(
-        repeat=args.repeat, source_catalog=catalog, n_contexts=len(entry), all_PSF=True,
-        design_sha256=sha(design_path), model_sha256=model_sha, photo_sha256=sha(photo_path),
-        entry_code_sha256=entry_signature(), outputs={curves.name: sha(curves)},
-        job=os.getenv('SLURM_JOB_ID')))
+        **inputs, outputs={curves.name: sha(curves)}, job=os.getenv('SLURM_JOB_ID'),
+        row_checkpoint_sha256=sha(checkpoint/'inputs.json')))
 
 
 if __name__ == '__main__':

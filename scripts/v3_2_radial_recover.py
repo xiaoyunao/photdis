@@ -25,6 +25,7 @@ from photdis.v3_1.radial_products import bin_integrals
 from photdis.v3_1.selection_dust import entry_model_with_local_dust
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
+from v3_2_radial_checkpoint import compute_rows
 from v3_2_tilt_inputs import verified
 
 MODEL_PATH = ROOT / 'data/v3_0/sed_fit.joblib'
@@ -199,12 +200,24 @@ def main():
     cache_marker = None
     if args.cached_entry:
         levels, cache_marker = cached_entry(args.catalog, _PHOTO, marker, model_sha)
-        with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
-            logs = np.asarray(list(pool.map(likelihood, range(len(_PHOTO['identity'])))))
+    sources = [marker, photo, truth_path, MODEL_PATH, Path(__file__).resolve(),
+               ROOT / 'scripts/v3_2_radial_checkpoint.py']
+    if cache_marker is not None:
+        sources.append(cache_marker)
+    sources += [ROOT / 'src/photdis' / p for p in ('v3_1/radial.py', 'v3_1/selection_dust.py',
+                'v3/inference.py', 'v3/selection.py', 'v3/population.py', 'v3/sampling.py')]
+    checkpoint_meta = dict(catalog=args.catalog, cached_entry=args.cached_entry,
+                           inputs={str(p.relative_to(ROOT)): sha(p) for p in sources},
+                           entry_signature=entry_signature())
+    checkpoint = output.parent/'row_checkpoints'/output.name
+    if args.cached_entry:
+        result = compute_rows(checkpoint, checkpoint_meta, _PHOTO['identity'], likelihood,
+                              workers=args.workers, keys=('log_likelihood',))
+        logs = np.stack([value[0] for value in result])
     else:
-        with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
-            results = list(pool.map(likelihood_entry, range(len(_PHOTO['identity']))))
-        logs, levels = map(np.asarray, zip(*results))
+        result = compute_rows(checkpoint, checkpoint_meta, _PHOTO['identity'], likelihood_entry,
+                              workers=args.workers, keys=('log_likelihood', 'entry'))
+        logs, levels = map(np.stack, zip(*result))
     output.mkdir(parents=True, exist_ok=False)
     response = np.exp(logs - logs.max(axis=(1, 2), keepdims=True))
     entry_delta = float(abs(levels[:, 1] - levels[:, 0]).max())
@@ -280,15 +293,10 @@ def main():
                 rows.append(dict(arm=arm, **summarize(params[:, j], parameter_truth[j], name)))
     csv_rows(output / 'recovery.csv', rows)
     csv_rows(output / 'numerical.csv', gates)
-    sources = [marker, photo, truth_path, MODEL_PATH, Path(__file__).resolve()]
-    if cache_marker is not None:
-        sources.append(cache_marker)
-    sources += [ROOT / 'src/photdis' / p for p in ('v3_1/radial.py', 'v3_1/selection_dust.py',
-                'v3/inference.py', 'v3/selection.py', 'v3/population.py', 'v3/sampling.py')]
     save_json(output / 'complete.json', dict(catalog=args.catalog, all_PSF=True,
-        n=len(_PHOTO['identity']), inputs={str(p.relative_to(ROOT)): sha(p) for p in sources},
+        n=len(_PHOTO['identity']), inputs=checkpoint_meta['inputs'],
         outputs={p.name: sha(p) for p in sorted(output.iterdir())}, job=os.getenv('SLURM_JOB_ID'),
-        fitted_arms=sorted(fitted), scope='Fixed-context synthetic recovery; sampler and numerical flags retained.'))
+        fitted_arms=sorted(fitted), row_checkpoint_sha256=sha(checkpoint/'inputs.json'), scope='Fixed-context synthetic recovery; sampler and numerical flags retained.'))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — retain radial quadrature rows through allocation limits
+
+- Prior direct pilots 000/128 lost partial work on the 30-minute limit.
+  Added per-row checkpoints to repeat-entry, direct recovery and cached
+  likelihood paths. Save completed rows immediately, bind input digests,
+  and serialize writes with a file lock.
+- Verified a two-worker run, complete reuse, recovery of one interrupted
+  row, and rejection of altered payloads or inputs. Eight radial and
+  entry tests and Python syntax pass. The quadratures are unchanged.
+- Existing live 256 has the old execution path until it terminates.
+  Queued pilots load the checkpoint-enabled code once started.
+
 ## 2026-11-14 — propagate entry reweighting through opened-field prediction
 
 - Added authenticated fit-draw weight transfer to the four-arm opened

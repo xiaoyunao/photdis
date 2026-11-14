@@ -46,3 +46,11 @@ also requires Rhat < 1.05, minimum ESS >= 100 and zero divergent transitions.
 Report the full fitted subset alongside it and show registered denominators.
 The first three recovery runs use catalogs 0, 128 and 256 to exercise fixed
 model, fixed empirical and prior-predictive paths before the wider array.
+
+New curve workers save each completed native PSF row to a checkpoint
+bound to the simulation inputs and entry integration identity. Reuse
+only rows with matching object ID and output digest. A missing receipt
+leaves the row pending. The repeat cache and direct/catalog likelihood
+paths each use their own checkpoint directories. If an interrupted fit
+already created a catalog output directory, preserve that attempt before
+running again; verified curve checkpoints remain available.
