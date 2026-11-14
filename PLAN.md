@@ -71,6 +71,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   1,117 PSFs. Four-view freeze and scoring 61273704 completed. See
   `docs/v3_2_external_result.md` for matched gains, calibration failures
   and support limits. Retain the frozen comparisons and all flags.
+  The atlas links the source-bound, visually reviewed Gaia and HST plate.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288

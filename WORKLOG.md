@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — plot the completed field and common-scale comparisons
+
+- Added the source-bound development, DR20 and HST comparison plate
+  and advanced the requirements ledger. The plot checks the three
+  input receipts and every displayed cohort size before rendering.
+- Ran Python syntax validation and the renderer. Visually inspected
+  the English PNG and checked the one-page PDF and inventory hashes.
+- Radial cache repeats 21–31 and NGC288 states 3–31 still await closure.
+
 ## 2026-11-14 — verify the frozen DR20 field evaluation
 
 - Job 61273704 completed 0:0 in 4m11s. Verified the freeze precedes the

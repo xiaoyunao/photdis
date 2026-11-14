@@ -1,5 +1,20 @@
 # Photdis v3.2 figure atlas
 
+## Signed Gaia scores and HST distance scales
+
+The left and middle panels show same-object score differences on the
+opened development field and the frozen DR20 field. Horizontal bars show
+95% sky-block intervals. The horizontal axes have different ranges.
+The right panel shows median relative residuals for the full native HST
+cohorts. Vertical bars propagate shared reference-scale uncertainty.
+
+![Photdis signed Gaia scores and HST distance residuals](../figures/v3_2/external_validation/gaia_and_hst.png)
+
+[PNG](../figures/v3_2/external_validation/gaia_and_hst.png) ·
+[PDF](../figures/v3_2/external_validation/gaia_and_hst.pdf) ·
+[Source and output hashes](../manifests/v3_2/final_validation_dr20/figure.json) ·
+[External results](v3_2_external_result.md)
+
 ## Opened-sky population and SED tilt contrasts
 
 The three panels show paired log-score changes for the same signed Gaia

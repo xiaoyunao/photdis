@@ -1,0 +1,11 @@
+{
+  "manifests/v3_2/branch_development/complete.json": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+  "manifests/v3_2/branch_development/paired.csv": "2565b37acfc11e031789e9b76051bdedd3674b3832c98629f70d9805183a7061",
+  "manifests/v3_2/final_validation_dr20/scores/complete.json": "42bd08525ae8ed62c1ed4ed6f69cad978e40880c87182d544731f1b9a0841f00",
+  "manifests/v3_2/final_validation_dr20/scores/paired.csv": "8c03573403671c8f3fecc1e8758112ed77f1b9d3b6ee0f29ca11b1f3f6e8bf5b",
+  "manifests/v3_2/final_validation_common/complete.json": "70173edadf5f89f2f4675e42d0827bd2f7350c62f4c69baf30ca6165318c31dc",
+  "manifests/v3_2/final_validation_common/scale_agreement.csv": "798f2676a1c3268153ccca7fefcaf61b5871b9d5c59b78962ad1b66a20dcf572",
+  "scripts/v3_2_external_figure.py": "0c9f97a08ba52dc07dc2be479fbe1d4c7da32fc2bd11639a5dc64f0287fb4962",
+  "figures/v3_2/external_validation/gaia_and_hst.png": "9f1ceb0bb8b1ce7e65d7406bc592cbee066dd9cf535f5a013cb0925e9ac32aba",
+  "figures/v3_2/external_validation/gaia_and_hst.pdf": "d1ccb660c61f57ca5d6da447f0f5a0744c76a70e40d8743c8909aa0760382590"
+}

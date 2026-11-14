@@ -45,3 +45,5 @@ and 88.46%. The 11 candidate numerical flags remain in the comparison.
 The score improvements over old target do not establish calibrated
 distance or class probabilities for the proposed product.
 [HST common-scale table](../manifests/v3_2/final_validation_common/scale_agreement.csv)
+
+[Signed Gaia and HST figure](v3_2_atlas.md#signed-gaia-scores-and-hst-distance-scales)
