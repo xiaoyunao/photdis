@@ -2,8 +2,10 @@ import fitsio
 import numpy as np
 import pytest
 
-from v3_2_reference_evidence import MINESWEEPER_COLS, read_minesweeper
+import v3_2_reference_controls as controls
+from test_v3_inference import model, observation
 from v3_2_reference_controls import external_calibration
+from v3_2_reference_evidence import MINESWEEPER_COLS, read_minesweeper
 from v3_2_reference_freeze import verify_request_pointers
 from v3_2_reference_inventory import inventory_join
 
@@ -70,3 +72,19 @@ def test_external_calibration_uses_sky_cells_without_native_field_ids():
     assert not np.allclose(cal[0], cal[1])
     assert np.abs(cal).max() < .1
     assert 'field' not in photo
+def test_reference_controls_predict_both_views_on_uniform_grids(monkeypatch):
+    sed = model()
+    obs = dict(observation(), EBV=0.)
+    photo = {key: np.asarray([value]) for key, value in obs.items()}
+    grids = controls.forecast_grids()
+    theta = {0: np.full((2, 3, 5), 1/15)}
+    monkeypatch.setattr(controls, '_STATE', (
+        photo, sed, sed, np.zeros((1, 6)), grids, [0], theta, np.zeros((2, 2)), np.full(2, .5),
+    ))
+    views = controls.continuous_views(0)
+    assert set(views) == {'nominal_reference', 'old_target'}
+    for rows in views.values():
+        for grid, (logpdf, quantiles, probabilities, _) in zip(grids, rows, strict=True):
+            assert logpdf.shape == grid.shape and np.isfinite(quantiles).all()
+            assert probabilities.shape == (3, 6)
+            np.testing.assert_allclose(probabilities.sum(), 1., atol=1e-12)

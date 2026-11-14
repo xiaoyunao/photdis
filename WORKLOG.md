@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — fix the uniform grid for closed external controls
+
+- DR20 controls 61268949 failed after 18s with `Uniform increasing grid
+  required`. The wrapper had inserted distance-bin boundaries into the
+  grid before the frozen zero-correction luminosity transform.
+- Restored the uniform 0.02/0.01-mag likelihood grids. The existing
+  bin integrals still insert the exact distance boundaries.
+- The new regression exercises nominal and old target forecasts at both
+  levels. All 14 focused tests passed. The failed log remains on NERSC.
+
 ## 2026-11-14 — verify the first full NGC288 distance-node state
 
 - State 00 (61263907_0, raw 61265637) completed 0:0 in 1h25m46s.

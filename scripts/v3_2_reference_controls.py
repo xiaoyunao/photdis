@@ -13,7 +13,6 @@ from scipy.special import softmax
 
 from photdis.baseline_v1 import integrate
 from photdis.stage1 import require_compute
-from photdis.v3.compression import DISTANCE_MU_BOUNDARIES
 from photdis.v3.controls import optical_magnitudes
 from photdis.v3.hierarchy import FieldPopulation
 from photdis.v3.inference import kernel_loglike
@@ -81,6 +80,12 @@ def continuous_views(row):
         all_values['old_target'].append((v['full_logpdf'], v['posterior'].quantiles(),
                                           v['class_distance'], good))
     return all_values
+
+
+def forecast_grids():
+    # The reference prediction requires a uniform likelihood grid.
+    # Both predictors insert exact distance boundaries during bin integration.
+    return [np.linspace(-20., 50., n) for n in (3501, 7001)]
 
 
 def stack_view(rows, grids):
@@ -182,8 +187,7 @@ def main():
     cal = external_calibration(photo, load(shared_path))
     chain = load(chain_path)
     fields, theta, beta = old_population(response, photo, chain, bounds)
-    grids = [np.unique(np.r_[np.linspace(-20., 50., n), DISTANCE_MU_BOUNDARIES])
-             for n in (3501, 7001)]
+    grids = forecast_grids()
     _STATE = photo, nominal, response, cal, grids, fields, theta, beta, chain['weights']
     destination = root/f'{prefix}_controls'
     if destination.exists():
