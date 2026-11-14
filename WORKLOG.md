@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-14 — index the v3.2 requirements and evidence
+
+- Added `docs/v3_2_requirements_result.md` and linked it from the plan.
+  Mapped the Pro work packages to available artifacts and evidence still
+  required for each part of the delivery. Verified 11 rows and 14 links.
+
 ## 2026-11-14 — add qualified-reference probability and count diagnostics
 
 - Updated the DR19 scorer to export near, dwarf and giant reliability
