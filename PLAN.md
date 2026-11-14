@@ -68,7 +68,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   among 103 PSFs. Final freeze and scoring 61273526 completed. The HST
   comparison retains the positive candidate distance bias in both systems.
   DR20 candidate 61273482 completed with 1,025 numerical passes among
-  1,117 PSFs. Four-view freeze and scoring submitted as 61273704.
+  1,117 PSFs. Four-view freeze and scoring 61273704 completed. See
+  `docs/v3_2_external_result.md` for matched gains, calibration failures
+  and support limits. Retain the frozen comparisons and all flags.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288

@@ -1,0 +1,24 @@
+{
+  "freeze_sha256": "c06d6145dd09d641101faab8d4304ee4caddeee4f40ef68acd4887d3c3e7a532",
+  "evidence_sha256": "208e55830276d13b3a8fce4b7f6763aaf32a45f4bea4e35997e7b433cbaa88f4",
+  "all_PSF": true,
+  "views": [
+    "candidate",
+    "qrf",
+    "nominal_reference",
+    "old_target"
+  ],
+  "n": 1117,
+  "job": "61273704",
+  "candidate_admitted": 1107,
+  "outputs": {
+    "paired.csv": "8c03573403671c8f3fecc1e8758112ed77f1b9d3b6ee0f29ca11b1f3f6e8bf5b",
+    "reliability.csv": "a9ec33ae6a4f2a785ed6f0e2e15f4677d4bbc19ad905206af490362ccb5475cf",
+    "class_confusion.csv": "ea01b1c4acc42d501a660eb67179d1f6b1fbcfbbcba36c34e105100b9b1dadee",
+    "reference_counts.csv": "b35ee5930d74f7e0be2779eae8d7f9e3e28c20768560375a4d356070ae71b93f",
+    "objects.csv": "00a85ad4d78f4dc9f83502cc32d95cc8ddb2acd7aded884b7301a22580a64e31",
+    "absolute.csv": "d51fdbdbb708aa1d59e09d45510a93c6ef67e14b6fc0dcedb7e474752ea32370",
+    "highq_reference_support.csv": "8514e4f47e9d400595931fec668fb08647d28ecf9d43a60cc41300c00fd579a6"
+  },
+  "scope": "Paired field-reference diagnostics conditional on the qualified teacher selection."
+}

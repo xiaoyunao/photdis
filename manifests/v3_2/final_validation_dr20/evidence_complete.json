@@ -1,0 +1,13 @@
+{
+  "freeze_sha256": "c06d6145dd09d641101faab8d4304ee4caddeee4f40ef68acd4887d3c3e7a532",
+  "n": 1117,
+  "all_PSF": true,
+  "outcomes_opened": true,
+  "signed_gaia": 1109,
+  "precise_teacher": 990,
+  "job": "61273704",
+  "outputs": {
+    "evidence.npz": "39d64e3c42424c5cfcd418de7d46044d2745e058750de5efd34f2c63fbbbf59d",
+    "coverage.csv": "3486abf0c8a60d06bc197dd1775ba359a3d0997ab00b2cf5fdb93aff4878b07a"
+  }
+}

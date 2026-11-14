@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the frozen DR20 field evaluation
+
+- Job 61273704 completed 0:0 in 4m11s. Verified the freeze precedes the
+  outcome receipt, the evidence and score hashes, and 4,468 distinct
+  PSF views. Candidate retains 92 numerical flags and old target one.
+- On 1,099 same-object Gaia pairs inside the matched gate, candidate
+  gains +1.0965 nat over old target and +0.1703 over QRF, and loses
+  0.5120 against nominal. Near and giant count intervals miss the
+  observed teacher counts. Added `docs/v3_2_external_result.md`.
+
 ## 2026-11-14 — authenticate the DR20 candidate and verify radial cache 20
 
 - Candidate job 61273482 completed 0:0 in 6m21s. Reconciled the frozen
