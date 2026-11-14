@@ -179,8 +179,16 @@ eight local fits passes the numerical gates. Its width,
 location and selected-member intervals cover truth, with
 lengths of 1.011 mag, 2.764 mag and 35 objects, respectively.
 For each of those metrics the coverage bounds across all
-registered repeats are 1/8–8/8. The other empirical-SED strata
-and the prior-predictive comparison await the remaining outputs.
+registered repeats are 1/8–8/8. At the same 10% fraction and
+0.25 mag true width in the deep background, zero of eight local
+fits pass sampling. Coverage across all repeats is bounded by
+0/8–8/8. At 0.08 mag true width in the near background, the
+local width intervals cover truth in two of five accepted fits,
+with bounds of 2/8–5/8 across the registered repetitions. Their
+mean width median is 0.316 mag and mean interval length is 0.904 mag.
+In the five accepted pairs, the local-minus-broad count-error
+change is +0.63 [−0.16, +1.25] percentage points. The remaining
+empirical-SED strata and prior-predictive comparison are in progress.
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test

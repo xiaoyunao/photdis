@@ -137,8 +137,8 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  One hundred forty-eight of 288 catalogs have verified compact outputs.
-  All 16 fixed model-SED strata and one empirical-SED stratum are complete.
+  One hundred sixty-four of 288 catalogs have verified compact outputs.
+  All 16 fixed model-SED strata and three empirical-SED strata are complete.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
@@ -162,8 +162,10 @@ catalogs archived.
   Debug retry 61282072 completed and both catalogs are archived.
   Catalog 131 retains its local sampling failure. Retry 61282256
   completed for 133 and 135. Retry 61282714 completed for 137 and 140.
-  The four results still need to be archived. Retry 61283177 covers
-  143 and is a dependency of 61266374 alongside the original array.
+  All four results are archived. Slurm canceled 165 after 19 seconds
+  before writing any result. Retry 61283254 covers 165.
+  The report waits for retries 61283177 (143) and 61283254 (165)
+  alongside the original array.
   All remaining original recovery tasks are in CPU shared with the
   existing eight-task array cap and 8 GiB per task.
   Final reporting pairs broad and local count error by catalog and

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — archive four empirical retries and two more complete strata
+
+- Collected 133, 135, 137, 140 and 152–163 via the radial collector.
+  The completed-only delivery audit verified 164 catalogs, 282 of
+  328 accepted fits, 6,560 intervals and 19 complete strata.
+  Reported the 10% empirical near-narrow and deep-wide strata
+  in `docs/v3_2_result.md` and recomputed paired count contrasts.
+- Slurm canceled 165 after 19 seconds, before any result directory
+  was created. Submitted debug retry 61283254 with cached inputs.
+  Verified report 61266374 waits on both open retries and the
+  original array. Registered the new job in the collector.
+- Slurm confirmed NGC288 states 10–14 running. Ten states are archived.
+
 ## 2026-11-15 — verify the first complete empirical recovery stratum
 
 - Archived original tasks 150 and 151. Completed-only delivery verifies
