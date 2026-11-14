@@ -24,7 +24,8 @@ Active goal follows the Pro review of 7699299. See
   The initial 000 and 128 direct pilots timed out in array 61260177;
   its prior-predictive 256 started. Direct 000 follows as 61260934 and
   cached empirical 128 as 61260935 after cache pilot 61260465. Compare
-  actual repeat-00 curves before launching the remainder. New curve
+  actual repeat-00 curves in verification job 61261765 before launching
+  the remainder. New curve
   workers retain authenticated completed rows across allocation limits.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
