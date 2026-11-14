@@ -5,6 +5,8 @@
 Active goal follows the Pro review of 7699299. See
 `docs/pro_review_7699299.md`, `docs/v3_2_protocol.md` and the evidence
 ledger in `docs/v3_2_requirements_result.md`.
+The synthesis in `docs/v3_2_result.md` records the completed model
+and external findings and identifies the two pending application results.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.

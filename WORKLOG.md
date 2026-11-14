@@ -12,6 +12,9 @@
 - Rendered the source-bound equal-size Gaia and giant-class comparison.
   Visually checked the English PNG and verified the 300 dpi export,
   one-page PDF and all five hashes.
+- Added `docs/v3_2_result.md` with the mechanism, external validity
+  and numerical findings. Verified the report links and left the
+  two running scientific analyses explicitly pending.
 
 ## 2026-11-14 — verify radial cache 21 and advance two queued repeats
 
