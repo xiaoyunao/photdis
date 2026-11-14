@@ -30,7 +30,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Shards 24 and 25 moved to debug QoS with their existing 30-minute limits,
   within the two-running-job QoS cap. Refinement dependencies still apply.
   Four matched fits (61259811), predictions (61259969), and the paired
-  report (61259977) are queued in dependency order. The fit also records
+  report (61259977) run in dependency order. Broad zero has started.
+  The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,
   and decomposes the historical regression with an exact same-object sum.

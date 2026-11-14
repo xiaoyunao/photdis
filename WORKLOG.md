@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — start the first fit and prepare a closed DR20 photometry audit
+
+- Array child 61259811_0 (broad zero) started. Other fits and external
+  comparators remained queued at the same poll.
+- Added an allocated-compute audit for the 1,117 admitted DR20 PSFs.
+  It verifies the census, photometry and exact LCO pointers and tallies
+  r0 and W1 occupancy with sky-cell denominators without reading
+  reference values. Compilation, synthetic boundaries and diff checks passed.
+
 ## 2026-11-14 — verify radial repeat 12 and reconcile the evidence ledger
 
 - Repeat 12 completed 0:0. Its receipt and checkpoint passed the frozen
