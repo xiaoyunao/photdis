@@ -63,3 +63,4 @@ archives/
 
 # Compact v3.1 diagnostic evidence; source catalogs remain under ignored data/.
 !manifests/v3_1/**/*.csv
+!manifests/v3_2/**/*.csv

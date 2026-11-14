@@ -1,0 +1,28 @@
+{
+  "inputs": {
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "scripts/v3_2_opened_qrf.py": "e58fe15d1814c87bbc7b4e00845d08f6fc87fd1a3ca6f4c320c92aa5f0cd576a",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+    "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+    "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56",
+    "scripts/v3_1_validation_report.py": "621904f1f60ca2ba7a78629a083c31ed81ee7aa72723606c516167759b530be7",
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6"
+  },
+  "outputs": {
+    "objects.csv": "6ad21a58079440cb28e8b6546e43c18309bc9ea9068de0fcef51b04b93b5ec72",
+    "paired.csv": "fcb1cb0a848920213b0c3fbccf207243a565dc87bd352358492215f38cd2592e"
+  },
+  "job": "61259007",
+  "n": 519,
+  "predicted": 519,
+  "in_support": 519,
+  "training_overlap": 0,
+  "invalid_grz": 0,
+  "all_PSF": true,
+  "scope": "Retrospective frozen distance QRF. Gaia scores use native histogram bins. Leaf label contributions are not scored as physical probabilities."
+}

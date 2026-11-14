@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — finish retrospective QRF and prepare the tilt pilot
+
+- QRF job 61259007 completed 0:0 in 25 s. Hash-verified both compact tables.
+  All 519 candidate field objects have grz and frozen support, with zero
+  matching training identities. New-sky main-minus-QRF is +29.03 nat on 166.
+- Added the v3.2 compact CSV Git allowlist and independently replayed absolute
+  confusion counts from the authenticated PSF per-object score table.
+- Added kernel-resolved entry and native zero-collapse pilot. Python/Bash
+  syntax checks passed and the synthetic broad/hard-admission zero-collapse
+  deltas are 2.57e-5 and 1.90e-5. Next compare on frozen NERSC pilot contexts.
+
 ## 2026-11-14 — recompute the opened score path and recover classification evidence
 
 - Allocated job 61258927 completed 0:0 in 17 s. Verified nine compact CSVs

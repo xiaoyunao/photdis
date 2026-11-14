@@ -36,3 +36,20 @@ factorial experiment is required to separate their effects.
 [PDF](../figures/v3_2/opened_diagnostics/class_reliability.pdf) ·
 [Bin source table](../manifests/v3_2/opened_diagnostics/reliability.csv) ·
 [Source hashes](../manifests/v3_2/opened_diagnostics/complete.json)
+
+## Frozen grz QRF
+
+Job 61259007 finished in 25 s. All 519 candidate-admitted objects across the
+two field roles had valid grz and passed the frozen model's support flag.
+None shared a training identity. On the strict new-sky signed Gaia subset,
+nominal reference minus QRF was +31.61 nat [5.01, 47.90] and the main
+bootstrap mixture minus QRF was +29.03 nat [3.15, 44.29], both on 166
+same-object comparisons. All qualified Gaia histogram scores agreed between
+32- and 64-node quadrature at the stated tolerance. These large score
+differences call for inspecting the per-object contributions and native
+histogram tails when interpreting the baseline. QRF leaves contribute
+reference-label fractions, so this comparison reports distance and qnear
+rather than treating those fractions as stellar class probabilities.
+
+[QRF paired scores](../manifests/v3_2/opened_qrf/paired.csv) ·
+[QRF per-object scores](../manifests/v3_2/opened_qrf/objects.csv)
