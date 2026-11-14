@@ -305,7 +305,9 @@ receipt and recomputes the earlier failed and accepted transitions.
   The report collector archives the joint receipt, five CSV tables
   and branch comparison JSON. Run
   `python3 scripts/v3_2_structure_joint_audit.py` after the
-  32 input receipts and joint tables are available.
+  32 input receipts and joint tables are available. The joint audit
+  reports input failures by check, early distance-transition failures
+  and the final integration verdict separately.
   Render the paired membership and covariance comparison with
   `python3 scripts/v3_2_structure_joint_figure.py`.
 

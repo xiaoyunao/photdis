@@ -5,6 +5,7 @@ import json
 from math import isclose, isfinite
 from pathlib import Path
 
+from v3_2_structure_distance_audit import TOLERANCES as DISTANCE_TOLERANCES
 from v3_2_structure_distance_audit import audit as distance_audit, digest, frozen_parent
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -159,13 +160,14 @@ def audit_tables(folder, receipt, roster, state_failures):
     if set(delta) != set(expected_delta) or not all(close(float(delta[k]), v) for k, v in expected_delta.items()):
         raise ValueError('Final likelihood contrast does not reconcile')
     input_passed = not any(state_failures.values())
+    initial_failed = [b for (b, c), row in checks.items() if c == 'distance_first' and row['passed'] == 'False']
     final_failed = [f'{b}/{c}' for (b, c), row in checks.items() if c != 'distance_first' and row['passed'] == 'False']
     if (receipt['input_checks_passed'] is not input_passed or receipt['integration_checks_passed'] is not (not final_failed)
             or receipt['passed'] is not (input_passed and not final_failed)):
         raise ValueError('Joint verdict does not match the component results')
     return dict(n=len(membership), n_states=len(states), n_cells=len(covariance),
                 comparisons=len(checks), retained_input_failures=sum(state_failures.values()),
-                final_failed=final_failed, passed=receipt['passed'])
+                initial_distance_failed=initial_failed, final_failed=final_failed, passed=receipt['passed'])
 
 
 def audit():
@@ -195,10 +197,13 @@ def audit():
             path = ROOT / source.replace('data/', 'manifests/', 1)
         if not path.is_file() or digest(path.read_bytes()) != expected:
             raise ValueError(f'Unverified joint ancestor: {source}')
-    with (BASE.parent/'structure_distance/draw_00/checks.csv').open(newline='') as stream:
-        roster = {row['identity'] for row in csv.DictReader(stream)}
+    _, frozen_roster = frozen_parent()
+    roster = {str(identity) for identity in frozen_roster.values()}
     state_failures = {r['draw']: sum(r['failures'].values()) for r in preparatory['records']}
+    failures_by_context = {kind: sum(r['failures'][kind] for r in preparatory['records'])
+                           for kind in DISTANCE_TOLERANCES}
     return dict(job=receipt['job'], receipt_sha256=digest(raw),
+                input_failures_by_context=failures_by_context,
                 **audit_tables(BASE, receipt, roster, state_failures))
 
 

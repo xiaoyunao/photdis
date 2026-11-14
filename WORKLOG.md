@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — preserve separate NGC288 numerical verdicts in delivery
+
+- Made the joint audit report input failures by check and preserve
+  the early distance-transition failures separately from the final
+  integration verdict. The final membership check uses the frozen
+  v3.1 roster directly.
+- Syntax and staged delivery passed. The synthetic 512-member,
+  32-state audit retained both early failures and rejected non-PSF
+  membership and inconsistent covariance. Production is pending.
+
 ## 2026-11-15 — release the remaining NGC288 scheduling slots
 
 - Slurm started states 24 and 25. With 12 running and the final five
