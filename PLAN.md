@@ -284,6 +284,8 @@ recomputes its seven derived tables and checks the full catalog census.
   and checkpoint `inputs.json` against the Slurm raw job ID, then run
   `python3 scripts/v3_2_structure_distance_audit.py --complete` for final
   receipt and per-context verdict reconciliation.
+  Production receipts also reconcile the source code hashes and the
+  three large input hashes against the frozen native-response receipts.
   The joint evaluator exports the final PSF membership pairs and
   conditional, shared and total count covariance as compact CSV tables.
   The report collector archives the joint receipt, five CSV tables

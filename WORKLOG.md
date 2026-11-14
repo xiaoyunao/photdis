@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify exact NGC288 production input ancestry
+
+- Added exact source inventory checks to
+  `scripts/v3_2_structure_distance_audit.py`. The audit reconciles the
+  native response receipt with the frozen matrix and matches its
+  photometry, model and shared-draw digests. Code and protocol files
+  are checked directly. Large inputs stay on NERSC.
+- All 15 archived production receipts passed. Three altered-digest
+  checks rejected changed model, source and native receipt hashes.
+  Staged delivery passed. Seven tasks remain active.
+
 ## 2026-11-15 — confirm the expanded NGC288 array is running
 
 - Slurm started states 19 and 20 as raw jobs 61277987 and 61277988.

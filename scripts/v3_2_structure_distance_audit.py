@@ -21,6 +21,15 @@ TOLERANCES = {
     'entry_previous_level': (.0005, .01),
     'frozen_entry_closure': (.0005, .01),
 }
+PRODUCTION_SOURCES = (
+    'scripts/v3_2_structure_distance.py',
+    'docs/v3_2_structure_protocol.md',
+    'scripts/v3_2_radial_checkpoint.py',
+    'src/photdis/v3/selection.py',
+    'src/photdis/v3_1/structure.py',
+    'src/photdis/v3_1/selection_dust.py',
+    'src/photdis/v3_1/gaussian_response.py',
+)
 
 
 def digest(raw):
@@ -48,6 +57,26 @@ def read_state(folder, draw, parent, *, pilot=False):
     return validate_state(payload, draw, parent, pilot=pilot)
 
 
+def validate_production_inputs(inputs, draw, parent):
+    matrix = 'data/v3_1/structure/matrices/complete.json'
+    native = f'data/v3_1/structure/native_refined/draw_{draw:02}/complete.json'
+    native_raw = (ROOT/native.replace('data/', 'manifests/', 1)).read_bytes()
+    matrix_path = ROOT/matrix.replace('data/', 'manifests/', 1)
+    native_sha = digest(native_raw)
+    if json.loads(matrix_path.read_bytes())['inputs'][native] != native_sha:
+        raise ValueError(f'Frozen matrix references a different native receipt for draw {draw}')
+    native_inputs = json.loads(native_raw)['inputs']
+    expected = {matrix: parent, native: native_sha}
+    for source in ('data/v3_1/structure/photometry.npz',
+                   f'data/v3_0/uncertainty_refit/draw_{draw:02}/model.joblib',
+                   'data/v3_0/uncertainty/shared_draws.npz'):
+        expected[source] = native_inputs[source]
+    for source in PRODUCTION_SOURCES:
+        expected[source] = digest((ROOT/source).read_bytes())
+    if inputs != expected:
+        raise ValueError(f'Unexpected production inputs for draw {draw}')
+
+
 def validate_state(payload, draw, parent, *, pilot=False):
     raw = payload['complete.json']
     receipt = json.loads(raw)
@@ -60,6 +89,7 @@ def validate_state(payload, draw, parent, *, pilot=False):
             or not 0 <= receipt['archived_native_maximum_delta'] <= 1e-8):
         raise ValueError(f'Invalid distance-node receipt for draw {draw}')
     if not pilot:
+        validate_production_inputs(receipt['inputs'], draw, parent)
         checkpoint = payload['inputs.json']
         if (digest(checkpoint) != receipt['row_checkpoint_sha256']
                 or json.loads(checkpoint) != dict(draw=draw, new_nodes=384, inputs=receipt['inputs'])):
