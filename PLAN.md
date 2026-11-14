@@ -7,8 +7,9 @@ Active goal follows the Pro review of 7699299. See
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
-- Fit the population by SED tilt comparison with matched selection. Verify
-  kernel-level inputs by replaying the zero-tilt collapse before larger work.
+- Fit the population by SED tilt comparison with matched selection. The
+  refined kernel-level pilot passed all 12 contexts. Next stage broad/candidate
+  kernels and verify zero plus fitted-tilt precision before scoring the four arms.
 - Decompose giant branch availability, suppression and class-conditional
   distance error. Then choose one supported model modification.
 - Run scoped narrow-structure and numerical diagnostics. Freeze new validation

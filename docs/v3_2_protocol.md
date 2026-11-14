@@ -73,3 +73,23 @@ reference and old target. All new samples require verified native DR11
 TYPE=PSF at admission and export and explicit exclusions. Use allocated NERSC
 compute for new scientific processing. The original v3.1 release remains a
 frozen comparison.
+
+### Pilot decision
+
+Job 61259079 established native numerator identity on eight objects but failed
+all 12 entry checks at the original precision. Rare kernels had raw entry
+estimates as high as 1.0188. The refined job 61259164 normalized radial
+importance weights within each kernel and compared 2^20 with 2^21 draws and
+two independent scrambles. All 12 contexts passed. The largest absolute
+zero-collapse discrepancy against v3.1 was 0.000362 and the largest tested
+tilted seed discrepancy was 0.000353. The normalized estimate has finite
+sample ratio bias, so require further transfer checks in the production
+contexts and at the fitted tilt. Preserve original and refined pilot records.
+
+The historical broad/free response replaced the numerator at fixed original
+selection. Its denominator comes from the original profile-interpolated
+selection table. This makes it an anchor outside the matched factorial design.
+Both stored zero-state fits bind the same v3.1 target matrices and pass their
+sampler and bridge checks. Additional conditional count flags remain distinct.
+Compare matching zero-state fits on the common production integration rule if
+the denominator change affects the diagnostic beyond its registered tolerances.

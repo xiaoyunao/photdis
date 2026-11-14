@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify the refined tilt pilot on frozen contexts
+
+- Allocated job 61259164 completed 0:0 in 1m25s. Retrieved and verified
+  `manifests/v3_2/tilt_pilot_refined/checks.csv`. All 12 contexts pass.
+  Maximum zero collapse versus frozen entry 0.000362 and tested tilted seed
+  delta 0.000353. The first pilot remains available with all failed checks.
+- Small frozen-marker reads verify 26,000/3,540 zero fit sizes, common
+  matrix SHA and sampler/bridge pass for both 2048-draw fit markers.
+  This does not erase prior conditional-count flags or certify new free fits.
+- Focused `pytest -q tests/test_v3_1_fixed_population.py tests/test_v3_1_gaussian_importance.py`:
+  3 passed. Next stage kernel matrices with context-level flags, compare
+  fitted-tilt seed sensitivity and execute the four matched arms.
+
 ## 2026-11-14 — resolve the first kernel-entry pilot failure
 
 - Job 61259079 completed 0:0 in 31 s. Zero-tilt native collapse matches
