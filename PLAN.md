@@ -308,6 +308,8 @@ receipt and recomputes the earlier failed and accepted transitions.
   seed and previous entry level. Twenty-two receipts are verified.
   States 21 and 22 bring the verified total to 24. State 21 retains
   512 previous-entry-level flags. State 22 passed every check.
+  States 24 and 26 passed all 5,120 checks. Twenty-six receipts are
+  verified, including state 31.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

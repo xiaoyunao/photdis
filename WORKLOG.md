@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance states 24 and 26
+
+- Slurm recorded 61277992 and 61277994 `COMPLETED 0:0`. Verified
+  both frozen 512-PSF rosters and 5,120 numerical checks. Every check
+  in these two states passes. Staged delivery verifies 26 of 32 receipts.
+- Joint quadrature and its English plate remain pending.
+
 ## 2026-11-15 — archive NGC288 distance states 21 and 22
 
 - Slurm recorded 61277989 and 61277990 `COMPLETED 0:0`. Verified
