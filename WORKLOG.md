@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — validate DR20 FITS row order and exact pointer handling
+
+- Added a FITS regression for unsorted original row pointers, Gaia IDs
+  above float64 integer precision, asymmetric distance uncertainty and
+  rejection of a mismatched identity. All 17 v3.2 tests passed.
+- Corrected the plan to identify the future DR20 comparators separately
+  from the canceled, empty DR19 comparator.
+
 ## 2026-11-14 — verify the first four production radial caches
 
 - Cache jobs 01–04 all completed 0:0. Collected receipt and checkpoint

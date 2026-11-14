@@ -84,8 +84,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
   Reliability bins and expected versus observed counts use the same
   qualified reference rows in each view.
-  The frozen nominal, historical target and QRF forecasts (61261381)
-  follow native admission and freeze the exact photometric candidate gate
+  The frozen nominal, historical target and QRF forecasts for DR20
+  follow nonempty native admission and freeze the exact photometric candidate gate
   for all native PSFs. Report paired and absolute metrics inside the
   candidate gate and across the complete native reference cohort.
   Candidate forecast awaits the mechanism decision.
