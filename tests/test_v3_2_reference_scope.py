@@ -99,6 +99,30 @@ def test_gaia_pit_tails_use_signed_observations_and_keep_missing_channels():
     assert 'gaia_pit_low' not in missing and 'gaia_pit_high' not in missing
 
 
+def test_field_scores_retain_observational_strata_and_their_denominators():
+    native = dict(identity=np.array([11, 12, 13]), TYPE=np.array(['PSF']*3))
+    photo = dict(native, r0=np.array([17., 19., 22.]), band_state=np.full((3, 6), 4),
+                 flux=np.repeat(np.array([[4.], [5.], [np.nan]]), 6, axis=1),
+                 flux_error=np.ones((3, 6)))
+    evidence = dict(native, distance_kpc=np.array([2., 3., 4.]), cell=np.arange(3),
+                    class_label=np.array([0, 1, -1]), distance_precise=np.ones(3, bool),
+                    distance_available=np.ones(3, bool), feh_valid=np.array([True, True, False]),
+                    feh=np.array([-2., 0., np.nan]))
+    rows = {view: [dict(gaia_log_score=-1., gaia_score_stable=True,
+                        numerical_pass=True), dict(numerical_pass=False), dict(numerical_pass=False)]
+            for view in VIEWS}
+    _, pairs = summarize(rows, evidence, np.array([True, False, True]), photo=photo)
+    native = {r['group']: (r['group_n'], r['n']) for r in pairs if r['anchor'] == 'qrf'
+              and r['metric'] == 'gaia_log_score' and not r['numerical_only']
+              and r['admission_scope'] == 'native_photometric'}
+    assert native['dwarf_2_5_teacher_kpc'] == (1, 1)
+    assert native['r0/18_20'] == (1, 0)
+    assert native['W1/weak'] == (1, 1)
+    assert native['W1/significant'] == (1, 0)
+    assert native['W1/unavailable'] == (1, 0)
+    assert native['feh_original/unavailable'] == (1, 0)
+
+
 def test_high_q_bounds_retain_missing_and_numerically_flagged_objects():
     evidence = dict(distance_kpc=np.array([3., 12., np.nan, 4., 20.]),
                     distance_available=np.array([True, True, False, True, True]),

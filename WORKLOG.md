@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — retain observational strata in prospective field scores
+
+- The DR19 report now pairs the four models within the frozen r0,
+  W1 significance and [Fe/H] strata. Precise-distance tables also
+  include dwarf distance bins. Each row retains the full group size
+  and the available score or paired denominator.
+- Verified empty, unavailable and partially scored strata with a
+  synthetic regression. Compilation, diff checks and 460 tests pass.
+  Existing Slurm handles still await resources or dependencies.
+
 ## 2026-11-14 — reconcile the tilt shard counts and verdicts independently
 
 - Added the compact receipt audit for exact row and PSF identities,

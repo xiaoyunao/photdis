@@ -9,7 +9,7 @@ import numpy as np
 from photdis.stage1 import require_compute
 from photdis.v3.metrics import histogram_parallax, histogram_reference_score
 from photdis.v3_1.freeze import verify_freeze
-from photdis.v3_1.validation_report import field_statistic
+from photdis.v3_1.validation_report import external_strata, field_statistic
 from photdis.v3_1.validation_scores import compare_score_levels, reference_center_agreement, score_pdf
 from v2_1_near import ROOT, csv_rows, load, save_json, sha
 from v3_2_contamination_support import missing_label_bounds
@@ -92,7 +92,7 @@ def score_one(view, data, i, e):
     return value
 
 
-def summarize(rows, evidence, candidate_admitted):
+def summarize(rows, evidence, candidate_admitted, *, photo=None):
     d = evidence['distance_kpc']
     label = evidence['class_label']
     precise = evidence['distance_precise']
@@ -102,8 +102,11 @@ def summarize(rows, evidence, candidate_admitted):
               'metal_poor_giant': (label == 1) & evidence['feh_valid'] & (evidence['feh'] < -1.5)}
     for lo, hi in ((0, 2), (2, 5), (5, 10), (10, 20), (20, 50), (50, np.inf)):
         use = precise & (d >= lo) & (d < hi)
-        for group in ('all', 'giant', 'metal_poor_giant'):
+        for group in ('all', 'dwarf', 'giant', 'metal_poor_giant'):
             groups[f'{group}_{lo}_{hi}_teacher_kpc'] = use & groups[group]
+    if photo is not None:
+        groups.update({k: mask for k, mask in external_strata(photo, evidence).items()
+                       if k.startswith(('r0/', 'W1/', 'feh_original/'))})
     scopes = {'native_photometric': groups['all'], 'matched_candidate_admission': candidate_admitted}
     scoped_groups = {(scope, group): base & mask for scope, base in scopes.items()
                      for group, mask in groups.items()}
@@ -130,7 +133,7 @@ def summarize(rows, evidence, candidate_admitted):
                     x = series[view]
                     use = mask & ~np.isnan(x) & (fixed[view] if accepted else True)
                     summaries.append(dict(view=view, admission_scope=scope, group=group, metric=metric,
-                                          numerical_only=accepted,
+                                          numerical_only=accepted, group_n=int(mask.sum()),
                                           **field_statistic(x[use], cells[use])))
                     # The high-q conditional denominators differ by view.
                     if view == 'candidate' or metric == 'teacher_far_given_high_q':
@@ -141,7 +144,7 @@ def summarize(rows, evidence, candidate_admitted):
                     undefined = np.isnan(delta)
                     delta[undefined] = np.inf
                     pairs.append(dict(anchor=view, admission_scope=scope, group=group, metric=metric,
-                                      numerical_only=accepted,
+                                      numerical_only=accepted, group_n=int(mask.sum()),
                                       undefined_nonfinite=int(undefined.sum()),
                                       **field_statistic(delta, cells[pair])))
     return summaries, pairs
@@ -282,7 +285,7 @@ def main():
                  reference_class=int(evidence['class_label'][i]), **score_one(
                      name, data, i, {k: v[i] for k, v in evidence.items()}))
             for i, identity in enumerate(evidence['identity'])]
-    absolute, paired = summarize(by_view, evidence, candidate_admitted)
+    absolute, paired = summarize(by_view, evidence, candidate_admitted, photo=photo)
     probability_bins, reference_counts = reliability(by_view, evidence, candidate_admitted)
     confusion = class_confusion(by_view, evidence, candidate_admitted)
     high_q = high_q_reference_support(by_view, evidence, candidate_admitted)

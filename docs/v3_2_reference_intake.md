@@ -123,6 +123,10 @@ forecasts and are evaluated separately in the injection experiments.
 For class confusion, report reliable dwarf and giant labels against
 all three posterior argmax classes. Include missing forecasts and
 numerical exclusions in the reference-row denominator ledger.
+Report the matched-control scores and availability by the frozen
+dereddened r, W1 significance and metallicity strata. Keep explicit
+denominators for empty or partially scored groups. The precise-distance
+table includes dwarf as well as giant and metal-poor giant strata.
 The high-q audit counts every selected reference object, including
 missing or numerically flagged distances. It reports available and
 precise teacher labels separately, with the missing-label bounds under
