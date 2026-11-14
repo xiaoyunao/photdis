@@ -74,6 +74,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   separate outcome-closed acquisition route for the same science domain.
   DR20 BOSS MINESweeper acquisition 61267444 completed. The LCO identity
   census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
+  Census 61267684 completed with 7,297 native match requests. The original
+  PSF and photometric admission runs on them in job 61267848.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

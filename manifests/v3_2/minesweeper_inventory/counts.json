@@ -1,0 +1,13 @@
+{
+  "high_latitude": 14724,
+  "prior_id_excluded": 763,
+  "old_sky_excluded": 6307,
+  "footprint_excluded": 311,
+  "known_system_excluded": 46,
+  "match_requests": 7297,
+  "scientific_admissions": 0,
+  "archive_rows": 56104,
+  "eligible_lco": 30478,
+  "duplicate_lco_rows": 0,
+  "unique_lco": 30478
+}

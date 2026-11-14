@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify DR20 census and submit native admission
+
+- Job 61267684 completed 0:0. Verified the archive and compact table
+  digests, source code hashes and mutually exclusive exclusion counts.
+  Of 30,478 LCO identities, 14,724 met the latitude cut and 7,297
+  remained after identity, sky, footprint and known-system exclusions.
+- Submitted job 61267848 for exact DR11 primary PSF and photometric
+  admission. The census reads six metadata columns, with zero admitted
+  scientific rows at this stage. Reference outcomes remain closed.
+
 ## 2026-11-14 — connect DR20 identity requests to native DR11 admission
 
 - DR20 identity census 61267684 is in the regular queue. Added its
