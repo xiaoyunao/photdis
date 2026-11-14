@@ -12,13 +12,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   The current audit verifies 8,773 protected paths against 7699299 in the
   commit, index and worktree. Check data source digests with the run receipts.
 - Fit the population by SED tilt comparison with matched selection. The
-  first twenty-nine shards (00–28) are complete and verified.
-  The compact receipt audit independently counts 23564 broad PSFs and
-  3214 candidate PSFs across these shards.
+  first thirty shards (00–29) are complete and verified.
+  The compact receipt audit independently counts 24376 broad PSFs and
+  3319 candidate PSFs across these shards.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–24 refinements pass all 567 flagged contexts.
-  Shards 25–28 have 96 initial flags for refinement.
+  Shards 00–24, 26 and 28 pass all 610 reviewed contexts.
+  Shards 25, 27 and 29 have 76 flags awaiting local verification.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.
@@ -54,6 +54,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Direct 000 completed in 29m35s. The local sampler fails Rhat and ESS
   despite passing all entry and count checks. Keep the first matched
   model/empirical comparison in the fitted subset.
+  Prior-predictive 256 completed. Its local sampler also fails Rhat
+  and ESS, with all entry and count checks passing.
   Exact direct/cache verification 61261765 completed and passed on both
   pilot arrays of 128 contexts. Cache array 61266329 (repeats 01–31,
   max four concurrent) has cleared that dependency. Cached recovery 61266369
@@ -68,8 +70,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   Initial index 61260891 exposed a release-column mismatch. The corrected
   census 61264018 recovered 39,505 exact-identity requests. Native match
   61260892 found 100 exact primary rows and admitted zero because all
-  failed photometric entry. Audit the individual frozen entry conditions
-  in 61267191 before assessing a separate outcome-closed acquisition route.
+  failed photometric entry. Job 61267191 verified that all 100 fail the
+  grz mask, grz fraction quality and low-reddening conditions. Assess a
+  separate outcome-closed acquisition route for the same science domain.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

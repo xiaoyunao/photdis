@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — verify DR19 exclusions, prior-predictive pilot and tilt shard 29
+
+- DR19 audit 61267191 completed 0:0. Verified its input and output
+  hashes and all 100 gate patterns. All rows were PSF and above the
+  latitude threshold. All failed the grz fraction, mask and reddening
+  conditions. Twelve also failed the basic grz measurement condition.
+  Reference labels remained closed.
+- Radial prior-predictive pilot 61261884 completed 0:0. Verified both
+  numerical verdicts, all 40 recovery records and frozen truth.
+  The local fit passed integration and count checks but failed Rhat
+  (1.09945) and ESS (34.15). Its results and flags are preserved.
+- Collected tilt shard 29 (812 broad, 105 candidate, 23 initial flags)
+  and passing refinements for shards 26 and 28 (43 contexts).
+  The compact audit counts 610 passing reviewed contexts.
+
 ## 2026-11-14 — verify four additional tilt inputs and the shard 24 refinement
 
 - Collected inputs 25–28 and the corresponding exact PSF identities,

@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "data/v3_2/reference_native/complete.json": "37ce157f1846202e12243b0a3a1b55c3eb3e1da5ef4ec03fc5ed1375e676c158",
+    "data/v3_2/reference_native/native_sources.json": "f363c1b0ff600f6423170336f74e94a53a699c07d8245a787b67288494ffd088",
+    "scripts/v3_2_reference_entry_audit.py": "96d36c1ecc26f3f13d78a3f247912886c3c0570c76a0ab0d7f6f85697dc06c8a",
+    "scripts/v3_0_native.py": "459d8ce9091755b202a935f7473fce45b75853e51bb519ca3afcbf45ebe53297",
+    "src/photdis/photometry.py": "cf1327c8dae2d2dbd66660a890def1d5f9b2028f214d47bc015d11221c0959bd",
+    "src/photdis/stage1.py": "a271732bec8dd33e0e97db000970646f9a74bb493580728cae27cdc7d8737c09"
+  },
+  "outputs": {
+    "gate_patterns.csv": "bf72a6ab0796faf06f27c6b15e2a9e09d5eb7a11776fb67abfdb82438081fa67"
+  },
+  "n": 100,
+  "reference_values_read": false,
+  "photometric_entry": 0,
+  "job": "61267191"
+}
