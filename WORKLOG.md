@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify recovery catalogs 002 and 003
+
+- Catalog 002 completed in debug in 3m30s and catalog 003 completed
+  in regular QoS in 3m24s. The collector matched both Slurm IDs and
+  source hashes. Both broad fits and the catalog 003 local fit pass.
+  Catalog 002 local fails at Rhat 1.8536 and ESS 5.89.
+- With debug slots vacant, moved pending catalogs 004 and 005 in
+  place. Their frozen inputs and the report dependency are preserved.
+
 ## 2026-11-14 — measure reference overlap with the frozen application frame
 
 - Job 61275998 completed 0:0 in 16 seconds. Verified the input
