@@ -120,6 +120,10 @@ and external findings and identifies the two pending application results.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
+  Collect per-catalog receipts and numerical and recovery CSVs plus
+  the final report. Run `PYTHONPATH=src:scripts:.deps python3
+  scripts/v3_2_radial_report_audit.py` to reconcile all seven
+  derived tables with the frozen design and individual results.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
   Initial index 61260891 exposed a release-column mismatch. The corrected

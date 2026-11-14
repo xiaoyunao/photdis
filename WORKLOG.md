@@ -10,6 +10,10 @@
   verified-cache tasks succeeded. Ten tasks with unfinished caches
   remain dependent. The original array, eight-task cap, scientific
   inputs and final report dependency stay in place.
+- Added the radial report audit for per-catalog ancestry, numeric
+  verdicts, coverage bounds, shrinkage and matched comparisons.
+  Recomputed its aggregate tables from the three actual pilot results
+  and verified that it rejects a changed coverage bound.
 
 ## 2026-11-14 — prepare the independent NGC288 joint-result audit
 
