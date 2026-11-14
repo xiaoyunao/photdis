@@ -35,6 +35,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   sensitivity tables are verified.
   Candidate zero completed in debug QoS and passed sampling.
   Both free fits retain regular QoS.
+  Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_fit_audit.py --complete`
+  after collecting all four compact fit receipts and sensitivity tables.
+  The two zero arms passed ancestry and sidecar verification.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,

@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate the factorial fit receipts independently
+
+- Added `scripts/v3_2_tilt_fit_audit.py` to reconcile the 64 source
+  receipt digests, shared recipe, frozen fit source lineage, sampler
+  verdict and both entry-level sensitivity tables for each arm.
+- Both zero arms passed. Verified corrupt-table and invalid-span
+  rejection, syntax and the targeted tilt assembly test. The free
+  fits remain in Slurm; use `--complete` once both are collected.
+
 ## 2026-11-14 — verify half of the radial entry cache
 
 - Collected repeat 13–15 receipts and checkpoint inputs from NERSC.
