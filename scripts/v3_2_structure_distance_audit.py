@@ -8,9 +8,12 @@ import json
 from math import isfinite
 from pathlib import Path
 
+from v3_2_collect_radial_results import archive_verified, collect, discover
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'manifests/v3_2/structure_distance'
+COMPACT_FILES = ('complete.json', 'checks.csv', 'inputs.json')
 TOLERANCES = {
     'full_native': (.02, .003),
     'gaussian_native': (.02, .003),
@@ -25,21 +28,27 @@ def digest(raw):
 
 
 def read_state(folder, draw, parent, *, pilot=False):
-    raw = (folder/'complete.json').read_bytes()
+    names = COMPACT_FILES[:2] if pilot else COMPACT_FILES
+    payload = {name: (folder/name).read_bytes() for name in names}
+    return validate_state(payload, draw, parent, pilot=pilot)
+
+
+def validate_state(payload, draw, parent, *, pilot=False):
+    raw = payload['complete.json']
     receipt = json.loads(raw)
-    table = (folder/'checks.csv').read_bytes()
+    table = payload['checks.csv']
     n = 3 if pilot else 512
     if ((receipt['draw'], receipt['n'], receipt['new_nodes']) != (draw, n, 384)
             or receipt['pilot'] is not pilot or receipt['all_PSF'] is not True
             or receipt['inputs']['data/v3_1/structure/matrices/complete.json'] != parent
             or receipt['outputs']['checks.csv'] != digest(table)
             or not 0 <= receipt['archived_native_maximum_delta'] <= 1e-8):
-        raise ValueError(f'Invalid distance-node receipt: {folder}')
+        raise ValueError(f'Invalid distance-node receipt for draw {draw}')
     if not pilot:
-        checkpoint = (folder/'inputs.json').read_bytes()
+        checkpoint = payload['inputs.json']
         if (digest(checkpoint) != receipt['row_checkpoint_sha256']
                 or json.loads(checkpoint) != dict(draw=draw, new_nodes=384, inputs=receipt['inputs'])):
-            raise ValueError(f'Invalid distance-node checkpoint: {folder}')
+            raise ValueError(f'Invalid distance-node checkpoint for draw {draw}')
     contexts, failures = {}, dict.fromkeys(TOLERANCES, 0)
     for check in csv.DictReader(io.StringIO(table.decode())):
         row, identity, kind = int(check['row']), int(check['identity']), check['check']
@@ -48,19 +57,19 @@ def read_state(folder, draw, parent, *, pilot=False):
         previous, seen = contexts.setdefault(row, (identity, set()))
         if (not 0 <= row < 512 or check['TYPE'] != 'PSF' or identity != previous or kind in seen
                 or check['passed'] != str(passed) or any(not isfinite(v) or v < 0 for v in errors)):
-            raise ValueError(f'Invalid context {row}/{kind}: {folder}')
+            raise ValueError(f'Invalid context {row}/{kind} in draw {draw}')
         seen.add(kind)
         failures[kind] += not passed
     if (len(contexts) != n or len({i for i, _ in contexts.values()}) != n
             or any(seen != TOLERANCES.keys() for _, seen in contexts.values())
             or sum(failures.values()) != receipt['failures']
             or receipt['passed'] is not (not any(failures.values()))):
-        raise ValueError(f'Incomplete context inventory: {folder}')
+        raise ValueError(f'Incomplete context inventory for draw {draw}')
     rows = {row: identity for row, (identity, _) in contexts.items()}
     return dict(draw=draw, job=receipt['job'], n=n, receipt_sha256=digest(raw), failures=failures), rows
 
 
-def audit(*, complete=False):
+def audit(*, complete=False, _recover_partial=False):
     parent = digest((ROOT/'manifests/v3_1/structure/matrices/complete.json').read_bytes())
     pilot, pilot_rows = read_state(BASE/'pilot', 12, parent, pilot=True)
     if set(pilot_rows) != {224, 273, 436}:
@@ -69,6 +78,8 @@ def audit(*, complete=False):
     for draw in range(32):
         folder = BASE/f'draw_{draw:02}'
         if not complete and not folder.exists():
+            continue
+        if _recover_partial and not all((folder/name).is_file() for name in COMPACT_FILES):
             continue
         record, rows = read_state(folder, draw, parent)
         if ((previous is not None and rows != previous)
@@ -81,7 +92,45 @@ def audit(*, complete=False):
                       'posterior checks run in the allocated science jobs.')
 
 
+def collect_completed():
+    jobs = discover('61263907')
+    current = audit(_recover_partial=True)
+    archived = {row['draw'] for row in current['records']}
+    draws = sorted((jobs.keys() & set(range(32))) - archived)
+    if not draws:
+        return audit()
+    parent = digest((ROOT/'manifests/v3_1/structure/matrices/complete.json').read_bytes())
+    if archived:
+        _, roster = read_state(BASE/f'draw_{min(archived):02}', min(archived), parent)
+    else:
+        _, roster = read_state(BASE/'pilot', 12, parent, pilot=True)
+    for offset in range(0, len(draws), 8):
+        batch = {}
+        for draw in draws[offset:offset + 8]:
+            folder = f'data/v3_2/structure_distance/draw_{draw:02}'
+            batch[draw] = {
+                'complete.json': f'{folder}/complete.json',
+                'checks.csv': f'{folder}/checks.csv',
+                'inputs.json': f'data/v3_2/structure_distance/row_checkpoints/draw_{draw:02}/inputs.json',
+            }
+        outputs = collect([path for paths in batch.values() for path in paths.values()],
+                          max_file_bytes=512_000)
+        for draw, paths in batch.items():
+            payload = {name: outputs[path] for name, path in paths.items()}
+            record, rows = validate_state(payload, draw, parent)
+            if (record['job'] != jobs[draw]
+                    or any(rows[row] != identity for row, identity in roster.items())):
+                raise ValueError(f'Slurm or parent identity mismatch for draw {draw}')
+            archive_verified(BASE/f'draw_{draw:02}', payload)
+            roster = rows
+    return audit()
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--complete', action='store_true', help='Require the full 32-state inventory')
-    print(json.dumps(audit(complete=parser.parse_args().complete), indent=2))
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--complete', action='store_true', help='Require the full 32-state inventory')
+    mode.add_argument('--collect-completed', action='store_true', help='Archive new successful Slurm states')
+    args = parser.parse_args()
+    print(json.dumps(collect_completed() if args.collect_completed else audit(complete=args.complete),
+                     indent=2))

@@ -130,9 +130,9 @@ archived NGC288 distance-state receipt and its per-context verdicts.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Ten of 288 catalogs have verified compact outputs. Catalogs 004–007
-  pass numerical checks in both arms. Catalogs 008 and 009 moved
-  in place to the vacant debug slots.
+  Twelve of 288 catalogs have verified compact outputs. Catalogs 004–008
+  pass numerical checks in both arms. Catalog 009 local fails sampling.
+  Catalogs 010 and 011 moved in place to the vacant debug slots.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -220,8 +220,10 @@ archived NGC288 distance-state receipt and its per-context verdicts.
   State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
   before using this resource request on more states.
   The two-axis evaluator
-  61263908 waits on all 32 states. Collect each completed state's
-  `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run
+  61263908 waits on all 32 states. Use
+  `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
+  to collect each successful state's `complete.json`, `checks.csv`
+  and checkpoint `inputs.json` against the Slurm raw job ID, then run
   `python3 scripts/v3_2_structure_distance_audit.py --complete` for final
   receipt and per-context verdict reconciliation.
   The joint evaluator exports the final PSF membership pairs and

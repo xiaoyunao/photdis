@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — automate NGC288 receipt collection and verify catalogs 008 and 009
+
+- Added an on-demand collector to `v3_2_structure_distance_audit.py`
+  using the shared Slurm and compact transfer functions. It validates
+  checkpoints, parent identities and Slurm raw job IDs before archiving.
+  The live collector verified seven states. Replayed draw 06 locally to
+  verify partial transfer recovery and rejection of a mismatched job ID.
+  Syntax and completed-only delivery checks passed.
+- Slurm 61266369_8 and _9 completed in 3m17s and 3m22s. Three of
+  four fits pass. Catalog 009 local fails sampling (Rhat 1.1969,
+  ESS 15.88), with passing integration checks. Archived 12/288
+  catalogs and moved pending 010 and 011 to vacant debug slots.
+- State 09 is still running under the 32 GiB request. Its batch
+  step reported 10,643,108 KiB at 49 minutes. Recheck after
+  completion before applying the request to later pending states.
+
 ## 2026-11-14 — bind the recovery report ancestry and archive catalogs 006 and 007
 
 - The radial report audit now requires the exact frozen design and

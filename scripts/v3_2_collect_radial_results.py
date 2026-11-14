@@ -23,26 +23,26 @@ def digest(raw):
     return sha256(raw).hexdigest()
 
 
-def completed_catalogs(report):
+def completed_tasks(report, array_id):
     result = {}
     for line in report.splitlines():
         task, raw, state, code = line.strip().split('|')
         array, sep, catalog = task.partition('_')
-        if array != RECOVERY_ARRAY or not sep or not catalog.isdecimal():
+        if array != array_id or not sep or not catalog.isdecimal():
             continue
         if state == 'COMPLETED' and code == '0:0':
             result[int(catalog)] = raw
     return result
 
 
-def discover():
-    command = f'sacct -n -X -P -j {RECOVERY_ARRAY} --format=JobID,JobIDRaw,State,ExitCode'
+def discover(array_id):
+    command = f'sacct -n -X -P -j {array_id} --format=JobID,JobIDRaw,State,ExitCode'
     status = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
                             check=True, capture_output=True, timeout=25, text=True)
-    return completed_catalogs(status.stdout)
+    return completed_tasks(status.stdout, array_id)
 
 
-def collect(names):
+def collect(names, *, max_file_bytes=100_000):
     # Names are generated from the frozen catalog IDs and fixed filenames.
     command = f'cd {REMOTE} && tar -cf - ' + ' '.join(names)
     raw = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
@@ -50,9 +50,20 @@ def collect(names):
     with tarfile.open(fileobj=BytesIO(raw)) as archive:
         members = archive.getmembers()
         if (len(members) != len(names) or {m.name for m in members} != set(names)
-                or any(not m.isfile() or m.size > 100_000 for m in members)):
-            raise ValueError('Unexpected compact recovery archive')
+                or any(not m.isfile() or m.size > max_file_bytes for m in members)):
+            raise ValueError('Unexpected compact results archive')
         return {name: archive.extractfile(name).read() for name in names}
+
+
+def archive_verified(dest, payload):
+    dest.mkdir(parents=True, exist_ok=True)
+    for name, contents in payload.items():
+        try:
+            with (dest/name).open('xb') as stream:
+                stream.write(contents)
+        except FileExistsError:
+            if (dest/name).read_bytes() != contents:
+                raise ValueError(f'Refusing to overwrite different archived evidence: {dest/name}') from None
 
 
 def validate(catalog, payload, design, outputs, design_digest, caches):
@@ -84,7 +95,7 @@ def main():
     args = parser.parse_args()
     if bool(args.catalogs) == args.completed or any(not 0 <= i < 288 for i in args.catalogs):
         parser.error('Choose --completed or explicit catalog IDs in 0–287')
-    jobs = discover() if args.completed else {}
+    jobs = discover(RECOVERY_ARRAY) if args.completed else {}
     catalogs = sorted(set(args.catalogs)) if not args.completed else [
         i for i in sorted(jobs) if not all((BASE/f'radial_recovery/catalog_{i:03}'/name).is_file()
                                           for name in FILES)
@@ -107,15 +118,7 @@ def main():
         receipt = validate(i, payload, design[i], outputs, digest(raw_design), caches)
         if jobs and receipt['job'] != jobs[i]:
             raise ValueError(f'Recovery receipt differs from the successful Slurm job for catalog {i}')
-        dest = BASE/folder
-        dest.mkdir(exist_ok=True)
-        for name, contents in payload.items():
-            try:
-                with (dest/name).open('xb') as stream:
-                    stream.write(contents)
-            except FileExistsError:
-                if (dest/name).read_bytes() != contents:
-                    raise ValueError(f'Refusing to overwrite different archived evidence: {dest/name}') from None
+        archive_verified(BASE/folder, payload)
         print(f'{i:03} {receipt["job"]} {digest(payload["complete.json"])}')
 
 
