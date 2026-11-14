@@ -137,9 +137,9 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Two hundred seventy-two of 288 catalogs have verified compact outputs.
-  All 32 fixed-truth strata are complete. Sixteen prior-predictive
-  catalogs are archived, with 16 remaining.
+  Two hundred seventy-eight of 288 catalogs have verified compact outputs.
+  All 32 fixed-truth strata are complete. Twenty-two prior-predictive
+  catalogs are archived, with 10 remaining.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.

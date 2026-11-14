@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — verify six more prior-predictive recovery catalogs
+
+- Archived 269 and 273–277 via the completed-mode radial collector.
+  Ten of twelve fits pass. Local fits 274 and 275 fail sampling
+  and pass integration. Preserved their intervals and flags.
+- Completed-only delivery verifies 278 of 288 catalogs, 501 accepted
+  fits of 556, 11,120 intervals and 32 complete fixed-truth strata.
+- Slurm confirms report 61266374 awaits the original array.
+  NGC288 has fifteen verified states and five running.
+
 ## 2026-11-15 — verify half of the prior-predictive catalogs and NGC288 state 13
 
 - Archived prior-predictive catalogs 260–268 and 270–272 with the
