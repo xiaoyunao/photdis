@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify shared CPU allocations and archive radial catalogs 033–034
+
+- Slurm started NGC288 state 10 and radial catalog 032 in CPU shared
+  QoS. Accounting reports 32 CPUs/32 GiB and 8 CPUs/8 GiB, respectively.
+  Moved pending states 11–14 and catalogs 035–038 to shared in place.
+  Both final jobs still depend on their original arrays.
+- Archived 033 and 034 after Slurm completion in 3m23s and 3m24s.
+  Both arms of each pass. Stage delivery verified 36 catalogs,
+  72 fit verdicts (51 accepted), 1,440 intervals and ten NGC288
+  states. Catalogs 039 and 040 started in debug.
+
 ## 2026-11-14 — complete the fourth fixed model-SED recovery stratum
 
 - Archived Slurm 61266369_30 and _31, both completed 0:0 in
