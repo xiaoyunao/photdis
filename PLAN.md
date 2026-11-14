@@ -20,6 +20,8 @@ It verifies all archived radial catalog receipts and recomputes their
 numerical verdicts, recovery intervals and frozen truth checks.
 It also recomputes local coverage for strata with all registered
 catalogs archived.
+When the radial report is available, the same command independently
+recomputes its seven derived tables and checks the full catalog census.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — bind the completed radial report into the stage audit
+
+- Updated `scripts/v3_2_delivery.py --completed-only` to audit the
+  final radial report whenever its receipt exists. Verified all seven
+  recomputed tables, the 288-catalog and 576-fit census, and ten
+  reviewed figure sets. Only the NGC288 joint result and plate remain.
+- Slurm confirms states 15–18 and 31 running. Their latest logs record
+  136, 112, 96, 72 and 160 of 512 rows, respectively. The joint job
+  remains dependent on the original array. Fifteen receipts are archived.
+
 ## 2026-11-15 — reconcile radial sampling failures and the joint dependency
 
 - Re-ran the radial report audit. All seven derived tables reconcile.

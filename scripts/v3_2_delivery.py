@@ -90,11 +90,13 @@ def audit(*, completed_only=False):
     if completed_only:
         result['structure_distance'] = structure_distance()
         result['radial_available'] = radial_available()
-    else:
+    if not completed_only or (BASE/'radial_report/complete.json').is_file():
         result['radial'] = radial()
+        if result['radial']['n_catalogs'] != 288 or result['radial']['n_arms'] != 576:
+            raise ValueError('Incomplete radial recovery census')
+    if not completed_only:
         result['structure'] = structure()
-        if (result['radial']['n_catalogs'] != 288 or result['radial']['n_arms'] != 576
-                or result['structure']['n_states'] != 32 or result['structure']['n'] != 512
+        if (result['structure']['n_states'] != 32 or result['structure']['n'] != 512
                 or figure_result['plates'] != 11):
             raise ValueError('Incomplete registered production census')
     return result
