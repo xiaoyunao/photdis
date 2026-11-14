@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the closed HST controls and advance candidate/free
+
+- Common-scale controls 61269026 completed 0:0 in 1m01s. Reconciled
+  the receipt with the admission cohort and tracked source hashes.
+  All three controls report 103 numerical passes and 80 objects pass
+  candidate admission. Reference outcomes remain closed.
+- Moved the pending candidate/free child 61259811_3 to debug QoS with
+  a 30-minute limit after broad/free completed in 12m08s. Slurm kept
+  prediction job 61259969's afterok dependency on the same array.
+
 ## 2026-11-14 — retry DR20 controls and verify two more radial caches
 
 - Replaced failed DR20 comparator 61268949 with 61271028 after syncing

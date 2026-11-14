@@ -36,7 +36,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Candidate zero completed in debug QoS and passed sampling.
   Broad/free completed in 12m08s in regular QoS and passed sampling.
   Its low entry alternative changes a posterior expected basis count
-  by up to 0.650 objects. Candidate/free remains queued in regular QoS.
+  by up to 0.650 objects. Candidate/free moved to debug QoS with a
+  30-minute limit, based on the measured broad/free runtime.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_fit_audit.py --complete`
   after collecting all four compact fit receipts and sensitivity tables.
   The two zero arms and broad/free passed ancestry and sidecar verification.
@@ -117,8 +118,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
-  in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 uses the
-  same photometric gate as the field cohort. The allocated final
+  in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 completed.
+  Each of the three controls passes its forecast numerical checks on
+  103 objects, and 80 pass the frozen candidate photometric gate.
+  The allocated final
   runner binds all four forecasts before evaluating both HST scales.
   Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
