@@ -11,7 +11,8 @@ Active goal follows the Pro review of 7699299. See
   first production shard is verified, and array 61259514 builds the other 31.
   Shard 00 refinements pass 26/26, and array 61259727 follows 61259514.
   Four matched fits (61259811), predictions (61259969), and the paired
-  report (61259977) are queued in dependency order.
+  report (61259977) are queued in dependency order. The fit also records
+  fitted-draw entry transfer for both alternative quadrature levels.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See

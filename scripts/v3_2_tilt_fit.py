@@ -18,6 +18,7 @@ from photdis.v3.model import inference_model
 from photdis.v3.sampling import chain_diagnostics, hmc
 from photdis.v3.target import sed_tilt_features
 from photdis.v3_1.fixed_population import FixedKernelFieldPopulation
+from photdis.v3_2.tilt_transfer import posterior_transfer
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_2_tilt_inputs import SHARDS, LEVELS, SOURCE, verified
 
@@ -198,15 +199,19 @@ def main():
     draws = np.array([c['samples'] for c in chains])
     checks = chain_diagnostics(draws)
     decoded = [decode(_HIERARCHY, v, args.mode) for v in draws.transpose(1, 0, 2).reshape(-1, draws.shape[-1])]
-    atomic_npz(output / 'posterior.npz', theta=np.stack([x[0] for x in decoded]),
-               beta=np.stack([x[1] for x in decoded]), global_logits=np.stack([x[2] for x in decoded]),
+    theta, beta, global_logits = map(np.stack, zip(*decoded))
+    atomic_npz(output / 'posterior.npz', theta=theta, beta=beta, global_logits=global_logits,
                fields=_HIERARCHY.fields, identity=data['identity'], TYPE=data['TYPE'], chains=draws,
                rhat=checks['rhat'], ess=checks['ess'], acceptance=np.stack([c['acceptance'] for c in chains]))
+    transfer, arrays = posterior_transfer(data, model, theta, beta, _HIERARCHY.fields)
+    csv_rows(output / 'posterior_entry_sensitivity.csv', transfer)
+    atomic_npz(output / 'posterior_entry_weights.npz', draw_index=np.arange(len(beta)), **arrays)
     divergences = sum(c['divergent'] for c in chains)
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in (
         roles_path, pilot, model_path, Path(__file__).resolve(),
         ROOT / 'src/photdis/v3/fast_hierarchy.py', ROOT / 'src/photdis/v3/hierarchy.py',
-        ROOT / 'src/photdis/v3/sampling.py', ROOT / 'src/photdis/v3_1/fixed_population.py')}
+        ROOT / 'src/photdis/v3/sampling.py', ROOT / 'src/photdis/v3_1/fixed_population.py',
+        ROOT / 'src/photdis/v3_2/tilt_transfer.py')}
     save_json(output / 'complete.json', dict(
         case=args.case, tilt=args.mode, n=len(data['identity']), all_PSF=True,
         outputs={p.name: sha(p) for p in sorted(output.iterdir())}, inputs=inputs,
@@ -217,7 +222,7 @@ def main():
         max_rhat=checks['max_rhat'], minimum_ess=checks['minimum_ess'], divergences=divergences,
         sampler_passed=checks['max_rhat'] < 1.05 and checks['minimum_ess'] >= 100 and divergences == 0,
         scope='Conditional zero-correction population fit. Context flags and MAP sensitivity retained. '
-              'External scoring, count and fitted-posterior selection sensitivity remain separate.'))
+              'Matched-posterior entry transfer reports radial-basis counts. External scoring and distance-bin counts remain separate.'))
 
 
 if __name__ == '__main__':

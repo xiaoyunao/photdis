@@ -115,6 +115,15 @@ separately from per-object and count changes. Use four 512-draw HMC chains with
 512 warmup draws, inherited regularization and a 0.9 target acceptance.
 A fit with unresolved entry checks can run explicitly as a flagged sensitivity
 diagnostic. Before interpreting the factorial, check fitted-tilt sensitivity.
+For every base posterior draw, recompute the full selection denominator
+at the other two integration levels with the fitted tilt and unchanged
+numerator. Normalize the log density ratios within each alternative.
+Record absolute log-normalizer drift, relative log-weight span, weight
+ESS, total variation and the maximum change in each object's joint
+class-by-basis probability and in expected basis counts. Retain the
+original draw ordering and unweighted finite-envelope counts. Basis
+counts are distinct from posterior distance-bin counts. This numerical
+diagnostic alone gives no new acceptance or independent accuracy claim.
 Opened-field predictions use each posterior draw normalized separately and
 the existing regional shrinkage for unfit fields, with common random seeds.
 

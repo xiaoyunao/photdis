@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — check fitted tilt across entry integration levels
+
+- The queued 2x2 originally compared entry levels at each MAP. Added
+  an all-posterior-draw transfer at the fitted tilt. Keep unchanged
+  numerator response and report entry-induced draw ratios, evidence
+  drift, weight ESS, probability and expected class-by-basis count shifts.
+- Exhaustive two-field control confirms ratios, means and counts with
+  nonuniform case weights. Python syntax and seven hierarchy, target
+  and prior tests pass. Original model and numerical gates retained.
+- Slurm input array 61259514 remains pending. The existing fit dependency
+  evaluates the added diagnostic after input/refinement and sampling.
+
 ## 2026-11-14 — assemble the NGC288 two-axis numerical audit
 
 - Added both separate-axis and joint comparisons at 128/256 distance
