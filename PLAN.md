@@ -272,6 +272,9 @@ recomputes its seven derived tables and checks the full catalog census.
   States 12 and 14 completed. Each retains one Gaussian native flag
   and passes the other context checks. Fourteen states are archived.
   State 13 passed all 2,560 context checks. Fifteen states are archived.
+  After radial recovery finished, increased the NGC288 array cap from
+  five to seven. Slurm cleared JobArrayTaskLimit for the pending states.
+  Each pending state retains 32 CPUs, 32 GiB and a three-hour limit.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

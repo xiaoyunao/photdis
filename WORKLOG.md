@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — increase NGC288 scheduling capacity after radial completion
+
+- Slurm showed five running states and 12 pending with JobArrayTaskLimit.
+  Ran `scontrol update JobId=61263907 ArrayTaskThrottle=7`. The pending
+  reason cleared. States 19 and 20 were still pending at the next read.
+- Verified the joint job still depends on successful completion of the
+  original array and pending state 19 retains 32 CPUs, 32 GiB and three
+  hours. No new science jobs or changes to the integration design.
+
 ## 2026-11-15 — bind the completed radial report into the stage audit
 
 - Updated `scripts/v3_2_delivery.py --completed-only` to audit the
