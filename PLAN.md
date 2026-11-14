@@ -34,10 +34,12 @@ ledger in `docs/v3_2_requirements_result.md`.
   75 seconds and its sampler passed. Its 64 source receipts and both
   sensitivity tables are verified.
   Candidate zero completed in debug QoS and passed sampling.
-  Both free fits retain regular QoS.
+  Broad/free completed in 12m08s in regular QoS and passed sampling.
+  Its low entry alternative changes a posterior expected basis count
+  by up to 0.650 objects. Candidate/free remains queued in regular QoS.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_fit_audit.py --complete`
   after collecting all four compact fit receipts and sensitivity tables.
-  The two zero arms passed ancestry and sidecar verification.
+  The two zero arms and broad/free passed ancestry and sidecar verification.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,

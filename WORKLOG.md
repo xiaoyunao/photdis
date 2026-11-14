@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify the broad/free posterior
+
+- Broad/free (61259811_1, raw 61269414) completed 0:0 in 12m08s.
+  The fit receipt audit verified the 26,000 PSFs, shared inputs and
+  both numerical tables. Maximum Rhat 1.01378, minimum ESS 148.96
+  and no divergences. Three factorial arms are now verified.
+- Entry alternatives shift the posterior log normalizer by +2.0668
+  and −0.4461 nat. Maximum changes in expected radial-basis counts
+  are 0.6497 and 0.1981 objects. Retain both changes and quantify
+  actual distance-bin and external-score effects in the matched report.
+
 ## 2026-11-14 — report numerical gates across the full opened field
 
 - The factorial forecast already computes grid checks on every opened
