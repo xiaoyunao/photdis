@@ -9,9 +9,8 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first four shards (00–03) are complete and verified. Array 61259514
-  has 28 further shards pending. Shards 01–03 have 68 candidate entry
-  flags for the registered second pass.
+  first six shards (00–05) are complete and verified. Shards 04/05
+  have 46 candidate entry flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shards 00–03 refinements pass 26/26, 21/21, 25/25 and 22/22.
@@ -40,8 +39,8 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
   Initial index 61260891 exposed a release-column mismatch. The corrected
-  census uses the observed SDSS-V provenance. Native match 61260892 and
-  comparator 61261381 were held for the corrected identity pass.
+  census 61264018 uses the observed SDSS-V provenance. Native match
+  61260892 now waits for it. Comparator 61261381 waits for native admission.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

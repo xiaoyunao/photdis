@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — rebind the DR19 intake and verify two more tilt shards
+
+- Moved the unchanged initial DR19 inventory to the named
+  `reference_inventory_initial_61260891` archive after receipt comparison.
+  Submitted corrected identity census 61264018. Verified the afterok chain
+  61264018 → 61260892 → 61261381 after releasing both holds.
+- Authenticated initial shards 04 and 05. Each has 813 PSFs. Their
+  candidate counts are 127 and 102 and initial flags are 25 and 21.
+  Their scheduled refinements started. The source and gate code remained
+  fixed. First six shards now contain 4878 PSFs and 677 candidate objects.
+- All 455 single-threaded tests pass, including correct Astra row
+  provenance and legacy-ID exclusion.
+
 ## 2026-11-14 — correct DR19 source-row provenance and collect new controls
 
 - Initial identity job 61260891 returned zero requests. The archive uses
