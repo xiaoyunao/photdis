@@ -21,11 +21,12 @@ Active goal follows the Pro review of 7699299. See
   Recovery pilots for model, empirical and prior-predictive catalogs run
   in array 61260177. Cache pilot 61260465 uses the same repeat as direct
   catalog 000. Compare their actual curves before launching the remainder.
-  Freeze new validation
-  before opening outcomes or expanding the production footprint.
+- Prepare the DR19 Astra identity inventory following
+  `docs/v3_2_reference_intake.md`. Freeze model, rules and new reference
+  roles before scoring the new validation outcomes.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338). NGC288 odds test 61259650 uses fixed
-  distance order 64. Added-distance native and entry pilot follows
+  distance order 64. Added-distance native and entry pilot 61260630 follows
   `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
 
 ## v3.1 — completed research delivery

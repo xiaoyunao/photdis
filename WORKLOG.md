@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify a possible fresh APOGEE reference source
+
+- Checked v3.0/v3.1 opened roles and official SDSS and DESI data releases.
+  DR19 Astra combines SDSS-V and legacy APOGEE spectra. The two pinned
+  FITS URLs return HTTP 200 with verified Content-Length metadata.
+- Added an allocated archive-acquisition step and documented new-source,
+  native PSF, lineage and shared-teacher requirements. No new model scores
+  or source outcomes opened. Public DESI DR2 NERSC VAC directory is empty.
+- Next verify downloaded headers and join identity columns; actual sample
+  eligibility and scientific coverage remain to be measured.
+
 ## 2026-11-14 — prepare added NGC288 distance nodes
 
 - Added v3.2 distance orders 128/256 for the frozen 512-PSF, 32-state
@@ -10,7 +21,8 @@
   the archived probabilities. Register the original three-context pilot.
 - Python and Bash syntax, two analytic comparisons and 10 structure/entry
   tests pass. Existing odds-only, narrow-structure and main model jobs remain
-  separate. Collect real pilot checks before deciding integration precision.
+  separate. Submitted NGC288 distance pilot 61260630. Collect real pilot
+  checks before deciding integration precision.
 
 ## 2026-11-14 — reuse identical observation context entry curves
 
