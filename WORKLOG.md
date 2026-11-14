@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — quantify missing high-q contamination evidence
+
+- Independently verified the opened v3.1 high-q tables and calculated
+  missing-label ranges for all eight role/channel qualifications.
+  Strict new sky has 9/120 precise AstroNN centers, giving 0–92.5%
+  across missing labels when treating those labels as fixed.
+- Source-bound code/table and parent-matched measurement design in
+  `docs/v3_2_contamination_support.md`. DR19 comparison has no identified
+  complete-parent sampling probabilities. No new outcome values read.
+- Main, DR19, structure and common-scale jobs remain Slurm-pending.
+
 ## 2026-11-14 — inventory additional common-distance systems
 
 - v3.1 admitted one system (NGC1261); NGC1851 and NGC7492 failed native

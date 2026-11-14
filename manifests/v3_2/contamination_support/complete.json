@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    "manifests/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "scripts/v3_2_contamination_support.py": "1be41c7ea23a78040ca7a6b2f88fef405f060b91fc122603ed98b523af9b4ff2",
+    "manifests/v3_1/final_validation/report/new_sky_field_highq.csv": "82a8eade15982c43bb0f244cc042b80ad39c7ffa2a90fcaf5463d09e70a8bceb",
+    "manifests/v3_1/final_validation/report/new_source_seen_sky_field_highq.csv": "88aeaa20a19b0aecb19baaaef5b363b1d098f358e0dcc42100f4b23aadbb0035"
+  },
+  "outputs": {
+    "opened_highq_bounds.csv": "c24c692294b8173ea0f1c461df3e022ee723208fdc24533201e3f7948915d832"
+  },
+  "n_rows": 8,
+  "scope": "Opened selected reference cohorts. Bounds treat labeled teacher centers as fixed and allow every missing label to be near or far. Separate from distance uncertainties and full-parent contamination."
+}

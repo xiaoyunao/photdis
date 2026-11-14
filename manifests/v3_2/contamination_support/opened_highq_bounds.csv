@@ -1,0 +1,9 @@
+role,reference_channel,reference_qualification,highq_n,reference_n,teacher_far_n,missing_n,teacher_labeled_far_fraction,missing_label_lower,missing_label_upper,numerical_failed
+new_sky_field,astronn,available,120,84,62,36,0.7380952380952381,0.5166666666666667,0.8166666666666667,120
+new_sky_field,astronn,precise,120,9,0,111,0.0,0.0,0.925,120
+new_sky_field,specdis,qualified,120,0,0,120,,0.0,1.0,120
+new_sky_field,spdist,qualified,120,0,0,120,,0.0,1.0,120
+new_source_seen_sky_field,astronn,available,323,318,15,5,0.04716981132075472,0.04643962848297214,0.06191950464396285,323
+new_source_seen_sky_field,astronn,precise,323,113,2,210,0.017699115044247787,0.006191950464396285,0.6563467492260062,323
+new_source_seen_sky_field,specdis,qualified,323,0,0,323,,0.0,1.0,323
+new_source_seen_sky_field,spdist,qualified,323,0,0,323,,0.0,1.0,323

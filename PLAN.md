@@ -39,6 +39,8 @@ Active goal follows the Pro review of 7699299. See
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
   The frozen nominal, historical target and QRF forecasts (61261381)
   follow native admission. Candidate forecast awaits the mechanism decision.
+  The opened-label coverage and requirements for a parent-matched
+  contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Metadata enables targeted
   native PSF and historical overlap checks on 47 Tuc and NGC362 (61262297).
   Keep the existing v3.1 system as an opened control.
