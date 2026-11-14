@@ -93,8 +93,13 @@ arms and 526 objects. Across the two entry alternatives the maximum
 expected class-distance bin shift is 0.004055 objects on the admitted
 reference cohorts. All checked external-score shifts meet their tolerances.
 The larger fitted-population radial-basis shifts remain in the fit
-sidecars. Joint realized count intervals condition on each opened cohort
-and integrate its shared population draws.
+sidecars. Across the eight fit-level comparisons, the maximum absolute
+log-normalizer drift is 2.067 nat, the maximum relative log-weight span
+is 0.1511 nat, and minimum reweighting ESS is 2,047.30 of 2,048 draws.
+The largest expected radial-basis count shift is 0.7006 objects.
+Joint realized count intervals condition on each opened cohort and
+integrate its shared population draws.
 [Forecast gates](../manifests/v3_2/tilt_report/initial/numerical.csv) ·
 [Entry sensitivity](../manifests/v3_2/tilt_report/initial/entry_sensitivity.csv) ·
-[Joint counts](../manifests/v3_2/tilt_report/initial/joint_counts.csv)
+[Joint counts](../manifests/v3_2/tilt_report/initial/joint_counts.csv) ·
+[Compact factorial audit](../scripts/v3_2_factorial_audit.py)

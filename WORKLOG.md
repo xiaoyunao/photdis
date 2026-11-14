@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile factorial contrasts and entry sensitivity
+
+- Recomputed 324 factorial and 144 historical contrasts on the
+  archived 526 PSFs. Verified all 288 entry count bins against the
+  corresponding total counts and registered verdicts.
+- Documented the fit-level absolute log-normalizer shift (2.067 nat),
+  relative log-weight span (0.1511 nat), minimum weight ESS (2047.30)
+  and max basis-count change (0.7006 objects). The opened distance-bin
+  change reaches 0.004055 objects. The integrated completed-only audit
+  passed with these checks.
+
 ## 2026-11-14 — verify radial caches 24 and 25
 
 - Repeats 24 and 25 completed 0:0 in 14m18s and 14m02s. Reconciled

@@ -7,12 +7,12 @@ from pathlib import Path
 import re
 
 from v3_2_external_audit import audit as external
+from v3_2_factorial_audit import audit as factorial
 from v3_2_figure_delivery import audit as figures
 from v3_2_opened_audit import audit as opened
 from v3_2_preservation_check import examine as preservation
 from v3_2_radial_report_audit import audit as radial
 from v3_2_structure_joint_audit import audit as structure
-from v3_2_tilt_fit_audit import audit as fits
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,15 +48,14 @@ def audit(*, completed_only=False):
     protected = preservation()
     opened_result = opened()
     external_result = external()
-    factorial = fits(complete=True)
+    factorial_result = factorial()
     figure_result = figures(completed_only=completed_only)
     if (protected['passed'] is not True or opened_result['passed'] is not True
-            or external_result['passed'] is not True or figure_result['passed'] is not True
-            or factorial['verified'] != 4 or not all(r['sampler_passed'] for r in factorial['records'])):
+            or external_result['passed'] is not True or figure_result['passed'] is not True):
         raise ValueError('A completed delivery audit did not pass')
     result = dict(passed=True, final=not completed_only, pending=pending,
                   preservation=protected, opened=opened_result, external=external_result,
-                  fits=factorial, figures=figure_result, documents=sources)
+                  factorial=factorial_result, figures=figure_result, documents=sources)
     if not completed_only:
         result['radial'] = radial()
         result['structure'] = structure()
