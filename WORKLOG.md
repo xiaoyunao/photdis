@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify all NGC288 distance states
+
+- Collected the remaining states 23, 25 and 27–30 after Slurm reported
+  `COMPLETED 0:0`. All 32 receipts reconcile to the frozen 512-PSF roster.
+  Retained 10 Gaussian native, 2,254 independent entry-seed and 2,468
+  previous-entry-level flags across 81,920 checks. Full native and
+  archived entry closure pass in every state.
+- Staged delivery passes. Slurm cleared the dependency for joint job
+  61263908, which is eligible and waiting for priority. The joint
+  result and English plate remain pending.
+
 ## 2026-11-15 — archive NGC288 distance states 24 and 26
 
 - Slurm recorded 61277992 and 61277994 `COMPLETED 0:0`. Verified
