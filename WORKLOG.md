@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — verify the NGC288 allocation trial and archive two radial recoveries
+
+- State 09 (61263907_9, raw 61275388) completed in 1h25m25s under
+  32 GiB with a batch peak of 11,485,396 KiB. Verified all 512
+  object identities and 2,560 checks. Retained one Gaussian native
+  flag (0.0404 nat absolute). Ten of 32 states are archived.
+- Applied 32 GiB and a 3-hour limit to pending zero-runtime
+  states 10–31. Slurm confirmed all 22 requests and the original
+  afterok dependency for joint job 61263908.
+- Archived 022 and 023. Catalog 022 passes both arms, and 023
+  local fails sampling (Rhat 1.0545, ESS 69.99) with passing
+  integration. Moved 024 and 025 to vacant debug slots.
+- Stage delivery passed with 26 catalogs, 52 fit verdicts
+  (38 accepted), 1,040 intervals and ten structure states.
+
 ## 2026-11-14 — verify the archived radial census during stage delivery
 
 - Stage delivery now checks all available radial receipts, both

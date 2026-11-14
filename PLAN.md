@@ -135,10 +135,10 @@ numerical verdicts, recovery intervals and frozen truth checks.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Twenty-four of 288 catalogs have verified compact outputs. Catalogs
-  004–008, 011, 016, 020 and 021 pass in both arms. The local fits in 009, 010, 012–015
-  and 017–019 fail sampling and pass their integration checks.
-  Catalogs 022 and 023 moved to the vacant debug slots under the original array.
+  Twenty-six of 288 catalogs have verified compact outputs. Catalogs
+  004–008, 011, 016 and 020–022 pass in both arms. Local fits in 009,
+  010, 012–015, 017–019 and 023 fail sampling and pass integration.
+  Catalogs 024 and 025 moved to the vacant debug slots under the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -222,14 +222,16 @@ numerical verdicts, recovery intervals and frozen truth checks.
   State 06 passed both native grids, the independent seed and archived
   entry closure. The previous entry level exceeded its absolute
   0.0005 tolerance in 424 of 512 contexts. Keep the flags in the joint run.
-  States 07 and 08 each passed all 2,560 checks. Nine states have
+  States 07 and 08 each passed all 2,560 checks. Ten states have
   verified receipts.
   Slurm showed one running state and 22 pending states with
   JobArrayTaskLimit. Raising the cap from four to five cleared
   that reason. The joint report still depends on the full original array.
-  State 09 (61275388) started with 32 GiB and a 3-hour limit.
-  State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
-  before using this resource request on more states.
+  State 09 (61275388) completed in 1h25m25s under 32 GiB and a
+  3-hour limit. Its batch peak was 10.95 GiB. Retain its one
+  Gaussian native flag (0.0404 nat absolute). Applied the tested
+  memory and walltime to the 22 pending states, with the original
+  array and the joint report dependency verified in Slurm.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
