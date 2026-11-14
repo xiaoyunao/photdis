@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — preserve the DR19 high-q reference denominator
+
+- Added the final score table for both native and matched-candidate
+  scopes. Report high-q counts, qualified far centers, missing-label
+  bounds and numerically stable support for both AstroNN qualifications.
+  Keep the model's expected far count separate from reference agreement.
+- Verified threshold, missing-label, and numerical exclusion cases.
+  Python compilation, diff checks and all 459 local tests pass.
+- Rechecked the existing Slurm handles. The final eight input shards,
+  refinements, reference intake and radial pilots remain queued.
+
 ## 2026-11-14 — retain realized joint counts for the four-arm comparison
 
 - Extended the opened factorial report with shared-state integer count

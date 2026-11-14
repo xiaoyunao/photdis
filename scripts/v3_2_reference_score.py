@@ -12,6 +12,7 @@ from photdis.v3_1.freeze import verify_freeze
 from photdis.v3_1.validation_report import field_statistic
 from photdis.v3_1.validation_scores import compare_score_levels, reference_center_agreement, score_pdf
 from v2_1_near import ROOT, csv_rows, load, save_json, sha
+from v3_2_contamination_support import missing_label_bounds
 from v3_2_reference_freeze import VIEWS, aligned, read_admission
 from v3_2_tilt_inputs import verified
 
@@ -217,6 +218,36 @@ def class_confusion(rows, evidence, candidate_admitted):
     return result
 
 
+def high_q_reference_support(rows, evidence, candidate_admitted):
+    """Retain all selected objects in the denominator of the reference audit."""
+    distance = evidence['distance_kpc']
+    scopes = {'native_photometric': np.ones(len(distance), bool),
+              'matched_candidate_admission': candidate_admitted}
+    result = []
+    for view, predictions in rows.items():
+        near = np.array([r.get('qnear', np.nan) for r in predictions])
+        high_q = near > .95
+        stable = np.array([r['numerical_pass'] and r.get('teacher_score_stable', False)
+                           for r in predictions])
+        evaluated = np.isfinite(near)
+        for scope, mask in scopes.items():
+            selected = mask & high_q
+            n = int(selected.sum())
+            for label in ('distance_available', 'distance_precise'):
+                qualified = selected & evidence[label]
+                k = int(qualified.sum())
+                far = int((qualified & (distance >= 10.)).sum())
+                lo, hi = missing_label_bounds(n, k, far) if n else (None, None)
+                result.append(dict(view=view, admission_scope=scope, reference_qualification=label,
+                                   registered=int(mask.sum()), predicted=int((mask & evaluated).sum()),
+                                   highq_n=n, reference_n=k, reference_far_n=far, missing_n=n-k,
+                                   reference_far_fraction=far/k if k else None,
+                                   missing_label_lower=lo, missing_label_upper=hi,
+                                   reference_numerically_stable=int((qualified & stable).sum()),
+                                   model_expected_far=float((1-near[selected]).sum())))
+    return result
+
+
 def main():
     require_compute()
     out = ROOT/'data/v3_2/final_validation_dr19'
@@ -254,10 +285,11 @@ def main():
     absolute, paired = summarize(by_view, evidence, candidate_admitted)
     probability_bins, reference_counts = reliability(by_view, evidence, candidate_admitted)
     confusion = class_confusion(by_view, evidence, candidate_admitted)
+    high_q = high_q_reference_support(by_view, evidence, candidate_admitted)
     output.mkdir(parents=True, exist_ok=False)
     for name, rows in [('objects', sum(by_view.values(), [])), ('absolute', absolute), ('paired', paired),
                        ('reliability', probability_bins), ('reference_counts', reference_counts),
-                       ('class_confusion', confusion)]:
+                       ('class_confusion', confusion), ('highq_reference_support', high_q)]:
         csv_rows(output/f'{name}.csv', rows)
     save_json(output/'complete.json', dict(freeze_sha256=freeze_sha, evidence_sha256=sha(evidence_marker),
               all_PSF=True, views=list(VIEWS), n=len(evidence['identity']), job=os.getenv('SLURM_JOB_ID'),

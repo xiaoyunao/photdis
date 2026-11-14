@@ -4,7 +4,7 @@ import pytest
 
 from photdis.v3_1.freeze import Inventory, file_hash
 from v3_2_reference_freeze import ROLE, VIEWS, bind_predictions, read_admission
-from v3_2_reference_score import class_confusion, reliability, score_one, summarize
+from v3_2_reference_score import class_confusion, high_q_reference_support, reliability, score_one, summarize
 
 
 def test_frozen_admission_checks_identity_order_and_count(tmp_path):
@@ -97,6 +97,26 @@ def test_gaia_pit_tails_use_signed_observations_and_keep_missing_channels():
     assert high['gaia_pit_high'] and not high['gaia_pit_low']
     missing = score_one('qrf', data, 0, dict(evidence, parallax_eligible=False))
     assert 'gaia_pit_low' not in missing and 'gaia_pit_high' not in missing
+
+
+def test_high_q_bounds_retain_missing_and_numerically_flagged_objects():
+    evidence = dict(distance_kpc=np.array([3., 12., np.nan, 4., 20.]),
+                    distance_available=np.array([True, True, False, True, True]),
+                    distance_precise=np.array([True, False, False, True, True]))
+    predictions = [dict(qnear=q, numerical_pass=i != 1, teacher_score_stable=True)
+                   for i, q in enumerate([.99, .98, .97, .95, np.nan])]
+    results = high_q_reference_support({'candidate': predictions}, evidence,
+                                       np.array([False, True, True, True, True]))
+    full = [r for r in results if r['admission_scope'] == 'native_photometric']
+    assert [r['predicted'] for r in full] == [4, 4]
+    assert [r['highq_n'] for r in full] == [3, 3]
+    assert [r['reference_n'] for r in full] == [2, 1]
+    assert [r['reference_numerically_stable'] for r in full] == [1, 1]
+    assert (full[0]['missing_label_lower'], full[0]['missing_label_upper']) == (1/3, 2/3)
+    assert (full[1]['missing_label_lower'], full[1]['missing_label_upper']) == (0., 2/3)
+    assert full[0]['model_expected_far'] == pytest.approx(.06)
+    matched = results[2]
+    assert (matched['highq_n'], matched['reference_far_n'], matched['missing_n']) == (2, 1, 1)
 
 
 def test_probability_bins_and_counts_keep_identical_qualified_denominators():

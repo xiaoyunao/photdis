@@ -123,6 +123,12 @@ forecasts and are evaluated separately in the injection experiments.
 For class confusion, report reliable dwarf and giant labels against
 all three posterior argmax classes. Include missing forecasts and
 numerical exclusions in the reference-row denominator ledger.
+The high-q audit counts every selected reference object, including
+missing or numerically flagged distances. It reports available and
+precise teacher labels separately, with the missing-label bounds under
+each qualification, and retains the model's expected far count in its
+own column. These bounds apply to the targeted reference cohort and
+hold each qualified teacher center fixed.
 
 ## Common-system forecast controls
 
