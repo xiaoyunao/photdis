@@ -14,7 +14,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   flags for the registered second pass.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shard 00 refinements pass 26/26. Array 61259727 uses aftercorr on
+  Shards 00 and 01 refinements pass 26/26 and 21/21. Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.
   Four matched fits (61259811), predictions (61259969), and the paired

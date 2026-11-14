@@ -24,3 +24,17 @@ at those bins in this particular broad-envelope entry-level comparison.
 [Plotted records](../manifests/v3_2/opened_audits_figure/plotted.csv) ·
 [Source hashes](../manifests/v3_2/opened_audits_figure/complete.json) ·
 [Audit result](v3_2_opened_probe_and_count_result.md)
+
+## NGC288 fixed-distance spatial odds quadrature
+
+Absolute changes between successive spatial-odds integrations on the
+64-node distance grid. The dashed lines are the registered tolerances.
+The first refinement exceeds the membership and mean-count thresholds
+for both likelihoods. The second refinement meets all four thresholds
+for both likelihoods. Full distance-axis integration remains pending.
+
+![NGC288 fixed-distance odds quadrature](../figures/v3_2/structure_odds_audit/fixed_distance_odds.png)
+
+[PNG](../figures/v3_2/structure_odds_audit/fixed_distance_odds.png) ·
+[PDF](../figures/v3_2/structure_odds_audit/fixed_distance_odds.pdf) ·
+[Check rows and source hashes](../manifests/v3_2/structure_odds_audit/)

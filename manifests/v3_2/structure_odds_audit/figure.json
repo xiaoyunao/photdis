@@ -1,0 +1,7 @@
+{
+  "manifests/v3_2/structure_odds_audit/checks.csv": "24dd750a0a2af8126b087d65d3acdf9b26eff4e0040aa086d454ec8adfd9c234",
+  "manifests/v3_2/structure_odds_audit/complete.json": "6afa81bdfa36dd306c296524a301a218dfe63aed07b18988a632e7b96d23520f",
+  "scripts/v3_2_structure_odds_figure.py": "b374c54a1b0d87ad0654637d7f2b76157df49353bd6903c8a983274f0e701432",
+  "figures/v3_2/structure_odds_audit/fixed_distance_odds.png": "d43cc26cb42e9a67b8caf6c487c73077a669a283bbe51f6ef7bbc1706bab287a",
+  "figures/v3_2/structure_odds_audit/fixed_distance_odds.pdf": "02a716b64b95a61d9102174ce8722a13b9d3fd86d896c07676778b5df190d243"
+}

@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate tilt refinement 01 and plot NGC288 convergence
+
+- Slurm 61259727_1 (element job 61262699) completed 0:0 in 1m43s.
+  Verified both product digests, exact flagged PSF identities and
+  admission contexts, registered levels and per-row gate decisions.
+  All 21 refinements passed. The initial table and full patch are retained.
+- Generated the four-panel fixed-distance NGC288 figure from the
+  authenticated check table and added it to the atlas. Verified five
+  file hashes, visually inspected the 300 dpi PNG and checked the
+  one-page PDF's English labels. Joint integration remains pending.
+
 ## 2026-11-14 — verify tilt shard 03 and the NGC288 odds-axis result
 
 - Slurm 61259514_3 completed 0:0 in 5m42s. Authenticated its source
