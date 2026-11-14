@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the matched four-arm forecasts
+
+- Prediction 61259969 completed 0:0 in 12m51s. Verified 526 PSFs with
+  four rows per object, 519 candidate admissions, and all four fit
+  receipt hashes. Slurm released paired report 61259977.
+- A compact-table recomputation on 166 matched new-sky signed Gaia
+  rows gives broad free minus zero +0.6205 nat and candidate free
+  minus zero +0.7788 nat. Candidate minus broad at zero tilt gives
+  −0.2194 nat. Full count and numerical checks await the paired report.
+
 ## 2026-11-14 — verify the test suite during the matched prediction
 
 - All 469 tests passed with numerical libraries limited to one thread.

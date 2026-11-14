@@ -43,6 +43,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_fit_audit.py --complete`
   after collecting all four compact fit receipts and sensitivity tables.
   All four arms passed ancestry and sidecar verification.
+  Prediction 61259969 completed all 526 opened objects and its compact
+  output matches all four fit receipts. Report 61259977 cleared its
+  prediction dependency.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,
