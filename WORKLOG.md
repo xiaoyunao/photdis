@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — complete all thirty-two structure refinements
+- Laststate31/raw61246935 (arrayindex31) COMPLETED18m18/0:0;512refinedpass,
+  420originalflags retained.64workers, Python1086.050s/maxchild4186628KiB.
+  Actualfull-array accounting, summary andresource hashes collected.
+- Command: `python3 scripts/v3_1_structure_refinement_compact_check.py`;
+  defaultfull32 checker passes702checks/32768branchrows, allsame512
+  nativePSF identities;11052originalfailedcontexts/0unresolved. Alloriginal and
+  intermediatepartial snapshots retained. Thisisnotfullpayload/posterior acceptance.
+- Originalassembly61232760 startsnormally onallocatednid004154; liveprogress
+  authenticates states0–3 at2m01. Existingposterior/counts/domain waitonoriginal
+  dependencies. No resubmission, newmodel orscientificthreshold changes.
+- UpdatedPLAN/status/ledger/integratedprogress andsource hashes. Existing183
+  unit-source bindings unchanged. Nextcollectactualassemblystatus andposterior/
+  counts/domain, render3plates, reviewall21requirements andrunfullfinalgate.
+
 ## 2026-11-14 — authenticate thirty-one states and complete final-stage queue setup
 - State29/raw61248235 COMPLETED21m21/0:0,512pass/512originalflags retained;
  64workers, Python1268.878s/maxchild4160640KiB. State30/raw61248532 COMPLETED
