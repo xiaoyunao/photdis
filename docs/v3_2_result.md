@@ -117,12 +117,23 @@ low-integration changes, up to 0.701 objects for candidate/free.
 These checks use different count estimands.
 
 Narrow-structure recovery uses 288 frozen mock catalogs, 256
-fixed-truth and 32 prior-predictive. The first three pilot outcomes
-are available; the full coverage and matched recovery comparison
-await the registered production outputs. The NGC288 odds-only
+fixed-truth and 32 prior-predictive. Four fixed model-SED strata
+at a 10% generating member fraction have all eight repetitions
+archived. At true widths of 0.08 mag (near background), 0.08 mag
+(deep background), 0.25 mag (near background) and 0.25 mag
+(deep background), local width intervals cover the truth in
+4/5, 1/2, 4/4 and 1/1 gate-accepted fits.
+The corresponding bounds over all registered repeats are
+4/8–7/8, 1/8–7/8, 4/8–8/8 and 1/8–8/8, allowing excluded fits either
+coverage outcome. Full coverage and matched recovery comparisons
+await the remaining registered outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
-awaits the 32-state joint result. NGC288 is a previously opened
+awaits the 32-state joint result. In the first ten archived states,
+512 independent-entry-seed checks, 424 previous-entry-level checks
+and four Gaussian native checks failed. All 5,120 full-likelihood
+native and all 5,120 archived-entry closure checks passed in these
+states. NGC288 is a previously opened
 system and demonstrates sensitivity of the inference to the
 likelihood representation.
 

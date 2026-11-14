@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — complete the fourth fixed model-SED recovery stratum
+
+- Archived Slurm 61266369_30 and _31, both completed 0:0 in
+  3m25s. All integrations pass and only catalog 030 local
+  fails sampling (ESS 89.65). Stage delivery passed with 34
+  catalogs, 68 verdicts (47 accepted) and 1,360 intervals.
+- Updated the research synthesis with the four complete 10%
+  model-SED strata and the NGC288 checks from the first ten states.
+  At 0.25 mag and deep background, only one of eight local fits
+  passes. Its width interval covers truth, with bounds 1/8–8/8
+  over registered repeats.
+- Moved 033 and 034 to vacant debug slots. Both CPU shared trials
+  remain pending without start estimates.
+
 ## 2026-11-14 — verify radial catalogs 028–029 and test CPU shared scheduling
 
 - Slurm 61266369_28 and _29 completed in 3m21s and 3m25s.
