@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — recompute the opened score path and recover classification evidence
+
+- Allocated job 61258927 completed 0:0 in 17 s. Verified nine compact CSVs
+  against its completion marker and recovered the frozen absolute class tables.
+- Same-star Gaia zero-minus-old is −0.8464 nat [−0.9503, −0.6741]; class log
+  score +0.0419 nat [−0.0828, +0.2294]. Main giant recall is 7/142.
+- Rendered and visually inspected the six-panel English reliability plate.
+  Its bins conserve all 157 labels per view/class. Results and provenance are
+  in `docs/v3_2_opened_result.md`.
+- Implemented the frozen retrospective QRF run and validated Python/Bash syntax.
+  Next collect QRF same-object comparisons and run the kernel-level pilot.
+
 ## 2026-11-14 — start v3.2 from the review of 7699299
 
 - Archived the latest Pro message, set the detailed goal, and recorded the

@@ -1,0 +1,34 @@
+{
+  "inputs": {
+    "data/v3_1/final_validation/report/complete.json": "071c30d8a8d5c265bc09afa37636606f357f9aa0fdeb2aeb7705825d8400e111",
+    "scripts/v3_2_opened_diagnostics.py": "a5dfea52d87070af5121753defa1dbee94af859b3660d00c9e65c6b602e23d1e",
+    "scripts/v3_1_validation_report.py": "621904f1f60ca2ba7a78629a083c31ed81ee7aa72723606c516167759b530be7",
+    "src/photdis/v3_1/validation_report.py": "f5ee139e95aec06829b027123606caba06c0a268e9efbd42eef8975e85b8b026",
+    "src/photdis/v3_1/comparison.py": "544185b3fd78dbaa37973a04b3a43e2334f2234a276da2b87d0ffc3fa777a3cd",
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6",
+    "data/v3_1/final_validation/report/new_sky_field_confusion.csv": "7087b32cfe77d3262798741ed1b3c6dc8285e3faa3a3e083950beeb977001a31",
+    "data/v3_1/final_validation/report/new_sky_field_summary_class_all_objects.csv": "f8a628962d575933ee947fe26e52fa25694f925c6a58327b6c966b612ab63387",
+    "data/v3_1/final_validation/report/new_sky_field_summary_class_numerically_accepted.csv": "f44a5ceec61f9a88d8b8d6eb8860ca7b4647948f7ab5953713c6a5567cc54ead",
+    "data/v3_1/final_validation/report/new_source_seen_sky_field_confusion.csv": "c50d2d3cd1fe2fb9ddd03e5917d4935aa0e14bb24288822ebe8b53bf00c29587",
+    "data/v3_1/final_validation/report/new_source_seen_sky_field_summary_class_all_objects.csv": "c423546979935a8ddcbc1a5f93ffe2812de7306336e05378fc661a2ca660b0ff",
+    "data/v3_1/final_validation/report/new_source_seen_sky_field_summary_class_numerically_accepted.csv": "168c87a7a044cc6bffdbf155400bbaa22a2367a789671899f008cd49e9ed1c00"
+  },
+  "outputs": {
+    "new_sky_field_confusion.csv": "7087b32cfe77d3262798741ed1b3c6dc8285e3faa3a3e083950beeb977001a31",
+    "new_sky_field_summary_class_all_objects.csv": "f8a628962d575933ee947fe26e52fa25694f925c6a58327b6c966b612ab63387",
+    "new_sky_field_summary_class_numerically_accepted.csv": "f44a5ceec61f9a88d8b8d6eb8860ca7b4647948f7ab5953713c6a5567cc54ead",
+    "new_source_seen_sky_field_confusion.csv": "c50d2d3cd1fe2fb9ddd03e5917d4935aa0e14bb24288822ebe8b53bf00c29587",
+    "new_source_seen_sky_field_summary_class_all_objects.csv": "c423546979935a8ddcbc1a5f93ffe2812de7306336e05378fc661a2ca660b0ff",
+    "new_source_seen_sky_field_summary_class_numerically_accepted.csv": "168c87a7a044cc6bffdbf155400bbaa22a2367a789671899f008cd49e9ed1c00",
+    "objects.csv": "1f7057a9e41d0429a5cdc193c9a6569235dee4f0cf8e6ea4828e3781efcebc9a",
+    "reliability.csv": "dc4db07b0968822e683e199ea593369c401ab039a9c7ba631a119aa7971ceb97",
+    "score_path.csv": "949b979685775ae82316fe20afea836733b6ebf0251077cb87cf3b050fe80042"
+  },
+  "job": "61258927",
+  "all_PSF": true,
+  "n": 526,
+  "scope": "Already-opened reference-availability selected field cohort. Sky-block intervals are conditional on this cohort. All-object statistics retain numerical flags."
+}

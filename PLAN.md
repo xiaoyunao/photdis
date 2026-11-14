@@ -5,8 +5,8 @@
 Active goal follows the Pro review of 7699299. See
 `docs/pro_review_7699299.md` and `docs/v3_2_protocol.md`.
 
-- Recompute the frozen same-star Gaia and class score path and recover the
-  absolute classification tables. Add reliability plots and audit the QRF overlap.
+- Frozen score path, absolute classification tables and reliability complete
+  in `docs/v3_2_opened_result.md`. Run retrospective frozen QRF overlap and scores.
 - Fit the population by SED tilt comparison with matched selection. Verify
   kernel-level inputs by replaying the zero-tilt collapse before larger work.
 - Decompose giant branch availability, suppression and class-conditional
