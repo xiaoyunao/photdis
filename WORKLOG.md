@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — recompute completed radial strata in stage delivery
+
+- The compact audit now reports local coverage for complete strata,
+  including both fitted and gate-accepted views and the original
+  registered denominators. It reproduces the three complete strata
+  out of 33. Syntax check, five focused tests and stage delivery passed.
+- Slurm 61266369_26 and _27 completed in 3m22s and 3m13s.
+  Both broad arms and all integration checks pass. Both local arms
+  fail sampling (ESS 72.82 and 16.94). The archive holds 30 catalogs,
+  60 verdicts (42 accepted) and 1,200 intervals.
+- Moved 028 and 029 to vacant debug slots. The NGC288 array
+  and the regular radial jobs still have no Slurm start estimate.
+
 ## 2026-11-14 — verify radial recoveries 024–025 and their registered strata
 
 - Slurm 61266369_24 and _25 completed in 3m30s and 3m28s.

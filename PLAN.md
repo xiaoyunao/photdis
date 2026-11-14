@@ -17,6 +17,8 @@ archived NGC288 distance-state receipt, its per-context verdicts and
 the 512 row identities against the frozen v3.1 membership export.
 It verifies all archived radial catalog receipts and recomputes their
 numerical verdicts, recovery intervals and frozen truth checks.
+It also recomputes local coverage for strata with all registered
+catalogs archived.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
@@ -135,10 +137,10 @@ numerical verdicts, recovery intervals and frozen truth checks.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Twenty-eight of 288 catalogs have verified compact outputs. Catalogs
+  Thirty of 288 catalogs have verified compact outputs. Catalogs
   004–008, 011, 016 and 020–022 pass in both arms. Local fits in 009,
-  010, 012–015, 017–019 and 023–025 fail sampling and pass integration.
-  Catalogs 026 and 027 moved to the vacant debug slots under the original array.
+  010, 012–015, 017–019 and 023–027 fail sampling and pass integration.
+  Catalogs 028 and 029 moved to the vacant debug slots under the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.

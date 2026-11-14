@@ -6,7 +6,7 @@ from pathlib import Path
 
 from v3_2_collect_radial_results import FILES, validate as validate_catalog
 from v3_2_radial_cache_audit import audit as cache_audit
-from v3_2_radial_report import (count_loss_comparison, empirical_penalty, grouped_summary,
+from v3_2_radial_report import (count_loss_comparison, design_groups, empirical_penalty, grouped_summary,
                                 read_csv, shrinkage_summary, validate_interval, validate_numerical,
                                 validate_truth)
 from v2_1_near import ROOT, sha
@@ -24,6 +24,8 @@ def audit_available():
     design_digest = sha(design_path)
     designs = read_csv(design_path.with_name('design.csv'))
     available, accepted, intervals = 0, 0, 0
+    verified_catalogs = set()
+    local_recovery = []
     for design in designs:
         catalog = int(design['catalog'])
         folder = BASE/f'radial_recovery/catalog_{catalog:03}'
@@ -34,7 +36,8 @@ def audit_available():
         gates = read_csv(folder/'numerical.csv')
         if len(gates) != len(GATES) or {r['arm'] for r in gates} != set(GATES):
             raise ValueError(f'Missing or duplicate verdict in catalog {catalog}')
-        accepted += sum(validate_numerical(r) for r in gates)
+        verdict = {r['arm']: validate_numerical(r) for r in gates}
+        accepted += sum(verdict.values())
         fitted = {r['arm'] for r in gates if r['status'] == 'sampled'}
         expected = {(arm, f'count_{c}_{b}') for arm in fitted for c in range(3) for b in range(6)}
         if 'local' in fitted:
@@ -46,10 +49,20 @@ def audit_available():
         for row in rows:
             validate_interval(row)
         validate_truth(rows, design)
+        local_recovery.extend(dict(row, catalog=catalog, accepted=verdict['local'])
+                              for row in rows if row['arm'] == 'local' and row['metric'] in LOCAL)
         intervals += len(rows)
         available += 1
+        verified_catalogs.add(catalog)
+    registered_groups = design_groups(designs)
+    complete_groups = [group for group in registered_groups.values() if verified_catalogs.issuperset(group)]
+    complete_catalogs = {catalog for group in complete_groups for catalog in group}
+    complete_designs = [row for row in designs if int(row['catalog']) in complete_catalogs]
+    coverage = [row for row in grouped_summary(complete_designs, local_recovery)
+                if row['arm'] == 'local' and row['metric'] in LOCAL]
     return dict(registered=len(designs), verified=available, evaluated_arms=available*len(GATES),
-                accepted_arms=accepted, intervals=intervals)
+                accepted_arms=accepted, intervals=intervals, registered_strata=len(registered_groups),
+                completed_strata=len(complete_groups), completed_local_coverage=coverage)
 
 
 def matching_table(path, rows):
