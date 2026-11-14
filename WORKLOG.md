@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — archive the first empirical retries and submit the next pair
+
+- Ran the radial collector in completed mode, including retries 130–131
+  and 14 original-array catalogs. Completed-only delivery verifies
+  146 catalogs, 259 accepted fits of 292, 5,840 intervals and 16
+  complete strata. Eleven new local fits fail sampling while passing
+  integration. Preserved all numerical verdicts and intervals.
+- Slurm confirmed 61282072 completed. Submitted 133 and 135 as
+  61282256 with cached inputs after the debug slots opened. Added the
+  retry to the collector and confirmed report 61266374 waits on it
+  and the original array. Outstanding retries are 137, 140 and 143.
+- Ten NGC288 states remain archived. Slurm confirmed 10–12 running
+  at the most recent targeted check.
+
 ## 2026-11-15 — complete fixed model-SED recovery and start empirical retries
 
 - Retrieved 119–127 via SFTP after SSH archive timeouts. Reconciled
