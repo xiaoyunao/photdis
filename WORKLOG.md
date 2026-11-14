@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile native row pointers before field freeze
+
+- Field freezing now binds both the identity census and the request
+  table and checks every native Gaia identity and row pointer against
+  that closed table before requesting teacher values. DR20 also
+  checks LCO provenance. Compilation, diff checks and all 18 v3.2
+  regressions passed, including mismatched identity and pointer cases.
+
 ## 2026-11-14 — make radial cache receipt verification reproducible
 
 - Added an independent compact audit against the frozen simulation,

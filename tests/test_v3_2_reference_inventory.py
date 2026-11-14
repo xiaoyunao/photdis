@@ -3,6 +3,7 @@ import numpy as np
 import pytest
 
 from v3_2_reference_evidence import MINESWEEPER_COLS, read_minesweeper
+from v3_2_reference_freeze import verify_request_pointers
 from v3_2_reference_inventory import inventory_join
 
 
@@ -42,3 +43,15 @@ def test_minesweeper_fits_projection_preserves_ids_and_original_row_order(tmp_pa
     np.testing.assert_array_equal(evidence['class_label'], [-1, 0, 1])
     with pytest.raises(AssertionError):
         read_minesweeper(filename, dict(index, identity=index['identity'] + 1))
+
+
+def test_field_freeze_rechecks_pointers_against_closed_requests():
+    ids = np.array([2**60 + 7, 2**60 + 11, 2**60 + 9])
+    requests = dict(identity=ids, reference_row=np.array([9, 17, 12]), obs=np.full(3, 'LCO'))
+    index = {key: values[[1, 0]] for key, values in requests.items()}
+    verify_request_pointers(index, requests, ('reference_row', 'obs'))
+    with pytest.raises(ValueError, match='pointer differs'):
+        verify_request_pointers(dict(index, reference_row=index['reference_row'][::-1]),
+                                requests, ('reference_row', 'obs'))
+    with pytest.raises(ValueError, match='identity absent'):
+        verify_request_pointers(dict(index, identity=ids[[0, 2]] + 1), requests, ('reference_row',))

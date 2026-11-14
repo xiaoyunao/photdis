@@ -39,6 +39,23 @@ def require_native(photo):
         raise ValueError('Nonempty distinct verified DR11 PSF identities required')
 
 
+def verify_request_pointers(index, requests, keys):
+    requested = requests['identity']
+    if (requested.ndim != 1 or requested.dtype.kind not in 'iu'
+            or (requested <= 0).any() or len(np.unique(requested)) != len(requested)):
+        raise ValueError('Unique positive integer request identities required')
+    order = np.argsort(requested)
+    rows = np.searchsorted(requested[order], index['identity'])
+    if (rows >= len(requested)).any():
+        raise ValueError('Native identity absent from the closed request table')
+    selected = order[rows]
+    if not np.array_equal(requested[selected], index['identity']):
+        raise ValueError('Native identity absent from the closed request table')
+    for key in keys:
+        if not np.array_equal(requests[key][selected], index[key]):
+            raise ValueError(f'Native pointer differs from the closed request table: {key}')
+
+
 def read_admission(path, photo, expected_n):
     with np.load(path) as data:
         aligned(photo, data)
@@ -149,11 +166,18 @@ def main():
         v = index[key]
         if v.shape != photo['identity'].shape or v.dtype.kind not in 'iu' or (v < 0).any() or len(np.unique(v)) != len(v):
             raise ValueError(f'Unique integer reference pointers required: {key}')
-    inventory = inv.marker(root/f'{prefix}_inventory'/'complete.json')
+    inventory_path = root/f'{prefix}_inventory'/'complete.json'
+    inventory = inv.marker(inventory_path, admitted['inputs'][str(inventory_path)])
     if inventory.get('outcomes_read') is not False:
         raise ValueError('Reference outcomes were read during identity selection')
-    if admitted['inputs'][str(root/f'{prefix}_inventory'/'complete.json')] != sha(root/f'{prefix}_inventory'/'complete.json'):
-        raise ValueError('Native admission binds a different identity census')
+    request_path = inventory_path.with_name('requests.npz')
+    request_sha = admitted['inputs'][str(request_path)]
+    if request_sha != inventory['outputs'][request_path.name]:
+        raise ValueError('Native admission binds a different request table')
+    requests = load(inv.add(request_path, request_sha))
+    if len(requests['identity']) != inventory['native_TYPE_unverified'] or len(photo['identity']) != admitted['admitted']:
+        raise ValueError('Field request or admission census changed')
+    verify_request_pointers(index, requests, (*pointer_keys, 'obs') if args.minesweeper else pointer_keys)
     archives = (root/'reference_sources/dr20_minesweeper/minesweeper_v1.2.2.fits',) if args.minesweeper else (
         tuple(root/'reference_sources/dr19_astra_0.6.0'/name for name in ARCHIVES.values()))
     for path in archives:
