@@ -49,9 +49,12 @@ ledger in `docs/v3_2_requirements_result.md`.
   256 (61261884) use completed repeat-00 cache 61260465.
   Catalog 128 completed with both numerical verdicts passing. Its true
   width of 0.08 mag falls outside the local 95% interval [0.096, 0.998] mag.
-  Check cache equivalence
-  with job 61261765 before launching the remaining catalogs. New curve
-  workers retain authenticated completed rows across allocation limits.
+  Cache array 61266329 (repeats 01–31, max four concurrent) starts after
+  exact direct/cache verification 61261765. Cached recovery 61266369
+  covers the 285 nonpilot catalogs with at most eight concurrent tasks,
+  waiting for the cache array and prior-predictive pilot 61261884.
+  Report 61266374 waits for the recovery array and both outstanding pilots.
+  Workers retain authenticated completed rows across allocation limits.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
 - Prepare the DR19 Astra identity inventory following

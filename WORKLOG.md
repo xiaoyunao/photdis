@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — schedule remaining frozen radial catalogs behind the pilot checks
+
+- Verified repeat 00 was the only completed cache and there were no
+  duplicate cache or nonpilot recovery jobs. Submitted cache array
+  61266329 (01–31, cap four), afterok on the exact direct/cache check 61261765.
+- Submitted cached recovery 61266369 for 285 catalogs, excluding 000, 128
+  and 256. It waits on all caches and the prior-predictive pilot 61261884.
+  Cap eight with a 30-minute allocation per task. The cached empirical
+  pilot completed within four minutes on the same program.
+- Slurm rejected the first report submission with the older completed
+  61260935 in the dependency list. Confirmed catalog 128's complete receipt
+  and 0:0 accounting, then submitted 61266374 behind 61266369, 61260934
+  and 61261884. The report verifies all 288 input receipts.
+- Controller dependency and time-limit checks passed. Direct pilot 000
+  was still producing rows, most recently 96/128.
+
 ## 2026-11-14 — verify frozen truth at radial aggregation
 
 - The report checks each recovery against the frozen photometry and truth
