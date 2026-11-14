@@ -1,0 +1,7 @@
+{
+  "manifests/v3_2/tilt_report/initial/complete.json": "e4acecda4240e311b6107fe8983bab7e84cc41b06acb3c70245a9f4fcd6af5f4",
+  "manifests/v3_2/tilt_report/initial/factorial.csv": "091c2637569f1b447b72f9609ac5190e5b4fc1983488f0e00f5b2a6253c22703",
+  "scripts/v3_2_tilt_figure.py": "d46e53387c22272d9ada2948212e2267fa69af0cf09d0671a0ee35f82f94c2c8",
+  "figures/v3_2/tilt_factorial/opened_factorial.png": "6fda21af7eb3c93a6690f70b44dddd3ac5661ce4080302e760c26fcde3e846c7",
+  "figures/v3_2/tilt_factorial/opened_factorial.pdf": "e82562b4657535b69a21e4b93eb27081304f604968e3f4e1ba4d7f3aba10780b"
+}

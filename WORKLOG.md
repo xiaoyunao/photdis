@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify paired factorial scores and render the plate
+
+- Paired report 61259977 moved to debug and completed 0:0 in 23s.
+  Verified all compact output hashes and independently recomputed 324
+  factorial rows to 2e-12. Rendered PNG/PDF and inspected the PNG.
+- The historical −0.8464-nat loss includes −0.6205 from removing broad
+  tilt and −0.2194 from the population change at zero tilt. All 142
+  new-sky giants retain far peaks while branch probabilities remain low.
+  The candidate/free conditional giant Gaia score declines by 0.1170 nat
+  relative to candidate/zero even as the full score improves.
+
 ## 2026-11-14 — verify NGC288 state 01 and retain two Gaussian flags
 
 - State 01 (61263907_1, raw 61268809) completed 0:0 in 1h26m11s.

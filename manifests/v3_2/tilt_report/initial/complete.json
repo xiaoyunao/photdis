@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "data/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+    "manifests/v3_2/opened_diagnostics/complete.json": "5371554114cea3cc00690f645e131862c4083c027d63c69614c37f6964c909c3",
+    "data/v3_2/tilt_predictions/initial/objects.csv": "2dde250e566f46e08dfe0cb68b68b84d02b9998262da266d22cd87b8eb7585d9",
+    "manifests/v3_2/opened_diagnostics/objects.csv": "1f7057a9e41d0429a5cdc193c9a6569235dee4f0cf8e6ea4828e3781efcebc9a",
+    "manifests/v3_2/opened_probes/complete.json": "f07490aa89711619eeb5ed74401370f23f46318e2bbd7e92c9e6f455865f49f0",
+    "manifests/v3_2/opened_probes/objects.csv": "b385b2cf8ead1cb1c614cc10a985637bbd69cfe9c4a94c2242ac5a22dd2e064a",
+    "scripts/v3_2_tilt_report.py": "8187fe176e284fe02c2af6ab93f8208b23de31131b4fa8edf8e7ed17c268a711",
+    "scripts/v3_2_tilt_contrasts.py": "15597050361263be11083b11b11ea1560b465b529921b04c967ece520ab99b79",
+    "src/photdis/v3/population.py": "4025d3a15e5e11461985160b44fbc67e0a0562f86d20b034b485bf70cd778e48"
+  },
+  "outputs": {
+    "absolute.csv": "09e8e4ac1af13d32acf897c38588dec17768369071f2c793e132b8ff33179287",
+    "confusion.csv": "c166eb8067e96e8ce8f670566ab32d7fe0435d59940359b5f3104e319859c977",
+    "entry_counts.csv": "50d24b57b11ea7eb2227ed9cc7aaed8c98aa9f9e69f7c3af4413543302547477",
+    "entry_sensitivity.csv": "02765e1e53e11f6642d30883556616418e16e094ef439d9f2354159876cd88f4",
+    "factorial.csv": "091c2637569f1b447b72f9609ac5190e5b4fc1983488f0e00f5b2a6253c22703",
+    "giant_decomposition.csv": "939e0f4d0b2b281cbe564bcb06654b892e5354740738a36e72909c8985e1db19",
+    "historical_anchor.csv": "3def774f7dfa0b428e7a3de56245e49f8ed1aa23bfb7edbdd3c537c6e7f4f3a7",
+    "historical_decomposition.csv": "7862972b1e03af635e5a1c0a95508d32a6828a828fe6d0eabbfbb92674077c4c",
+    "joint_counts.csv": "0f3ecf4035745b5f9476ef9f19cc9502856f593840c05d39598dec8f9b533052",
+    "joint_covariance.npz": "e742964594aa0d70311bb1ce1944c043f7dc59cf2b00f274944e7bb2fad9a561",
+    "numerical.csv": "5696ebcb4c81b3b5864c9dff6b13c45b6c386cc83f1eff62cdfab8de6843f0a7",
+    "probe_factorial_comparison.csv": "0678e5cbd7d8768c4bf2bd71c03b15e8d64109cc18357298bac2c840ca416a45"
+  },
+  "job": "61259977",
+  "n": 526,
+  "all_PSF": true,
+  "scope": "Opened-sky conditional diagnostic, with shared population draw covariance."
+}

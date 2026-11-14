@@ -1,5 +1,16 @@
 # Photdis v3.2 figure atlas
 
+## Opened-sky population and SED tilt contrasts
+
+The three panels show paired log-score changes for the same signed Gaia
+rows, the labeled class sample and the giant subset. The intervals resample
+whole sky blocks within each comparison.
+
+[PNG](../figures/v3_2/tilt_factorial/opened_factorial.png) ·
+[PDF](../figures/v3_2/tilt_factorial/opened_factorial.pdf) ·
+[Source table](../manifests/v3_2/tilt_report/initial/factorial.csv) ·
+[Results](v3_2_factorial_result.md)
+
 ## Opened new-sky class reliability
 
 [PNG](../figures/v3_2/opened_diagnostics/class_reliability.png) ·

@@ -44,15 +44,14 @@ ledger in `docs/v3_2_requirements_result.md`.
   after collecting all four compact fit receipts and sensitivity tables.
   All four arms passed ancestry and sidecar verification.
   Prediction 61259969 completed all 526 opened objects and its compact
-  output matches all four fit receipts. Report 61259977 cleared its
-  prediction dependency.
+  output matches all four fit receipts. Paired report 61259977 completed
+  in 23s after moving to debug. See `docs/v3_2_factorial_result.md`.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,
   and decomposes the historical regression with an exact same-object sum.
   Numerical summaries retain flags for each available score channel.
-  Collect the matched report and run `python3 scripts/v3_2_tilt_figure.py`
-  to render and visually verify the opened-sky factorial contrasts.
+  The opened-sky factorial PNG was rendered and visually checked.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See
