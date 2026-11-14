@@ -37,10 +37,12 @@ ledger in `docs/v3_2_requirements_result.md`.
   Broad/free completed in 12m08s in regular QoS and passed sampling.
   Its low entry alternative changes a posterior expected basis count
   by up to 0.650 objects. Candidate/free moved to debug QoS with a
-  30-minute limit, based on the measured broad/free runtime.
+  30-minute limit and completed in 1m51s with passing sampler diagnostics.
+  Its low entry alternative shifts expected radial-basis counts by up to
+  0.701 objects. Predictions cleared their fit dependency.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_fit_audit.py --complete`
   after collecting all four compact fit receipts and sensitivity tables.
-  The two zero arms and broad/free passed ancestry and sidecar verification.
+  All four arms passed ancestry and sidecar verification.
   The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,

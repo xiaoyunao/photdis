@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — complete and verify all four factorial fits
+
+- Candidate/free 61259811_3 completed 0:0 in 1m51s on 3,540 PSFs.
+  Maximum Rhat 1.00063, minimum ESS 2048 and zero divergences.
+  The complete fit audit verified all four arms and both entry sidecars.
+- Alternative log normalizer shifts are −0.04579 and +0.38151 nat.
+  Expected radial-basis count shifts reach 0.70061 and 0.43852 objects.
+  The opened-field predictions and paired report determine the actual
+  distance-bin and forecast-score consequences.
+- Slurm cleared the four-fit dependency on prediction 61259969.
+
 ## 2026-11-14 — verify the closed HST controls and advance candidate/free
 
 - Common-scale controls 61269026 completed 0:0 in 1m01s. Reconciled
