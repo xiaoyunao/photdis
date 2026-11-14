@@ -17,6 +17,7 @@ from v3_2_tilt_inputs import verified
 ANCHORS = ('reference/nominal', 'reference/response12', 'old_target/old_target',
            'candidate/zero', 'candidate/point', 'candidate/bootstrap_evidence')
 ROLES = ('new_sky_field', 'new_source_seen_sky_field')
+GRID_CHANNELS = ('gaia', 'astronn', 'class', 'specdis', 'spdist', 'mws_class')
 
 
 def joint_moments(p):
@@ -212,12 +213,30 @@ def historical_decomposition(groups, anchors):
     return records
 
 
+def grid_summary(rows, role, arm, *, cohort):
+    """Show grid checks and denominator for every available reference channel."""
+    result = dict(role=role, arm=arm, cohort=cohort, n=len(rows),
+                  grid_flags=sum(r['grid_passed'] != 'True' for r in rows),
+                  sampler_flags=sum(r['sampler_passed'] != 'True' for r in rows),
+                  coarse_joint_max=max(float(r['coarse_joint_delta']) for r in rows),
+                  coarse_mu_max=max(float(r['coarse_mu_delta']) for r in rows),
+                  probability_identity_max=max(float(r['joint_delta']) for r in rows),
+                  marginal_half_max=max(float(r['marginal_half_delta']) for r in rows))
+    for channel in GRID_CHANNELS:
+        verdicts = [r.get(f'coarse_{channel}_score_passed', '') for r in rows]
+        if any(v not in ('', 'True', 'False') for v in verdicts):
+            raise ValueError(f'Unexpected {channel} grid verdict')
+        result[f'{channel}_grid_checked'] = sum(bool(v) for v in verdicts)
+        result[f'{channel}_grid_flags'] = verdicts.count('False')
+    return result
+
+
 def summarize(groups, anchors, forecast, manifest):
     absolute, alignment, confusion, counts, gates = [], [], [], [], []
     covariances, decomposition, entry_checks, entry_counts = {}, [], [], []
     for role in ROLES:
-        selected = [g for g in groups if g[ARMS[0]]['role'] == role and
-                    g[ARMS[0]]['candidate_admission'] == 'True']
+        field = [g for g in groups if g[ARMS[0]]['role'] == role]
+        selected = [g for g in field if g[ARMS[0]]['candidate_admission'] == 'True']
         if not selected:
             raise ValueError(f'No candidate rows for {role}')
         identity = [int(g[ARMS[0]]['identity']) for g in selected]
@@ -289,14 +308,8 @@ def summarize(groups, anchors, forecast, manifest):
                                               stratum=stratum, group_n=int(mask.sum()),
                                               undefined_nonfinite=int(undefined.sum()),
                                               **field_statistic(delta, np.asarray(cells)[use])))
-            gates.append(dict(role=role, arm=arm, n=len(rows),
-                              grid_flags=sum(r['grid_passed'] != 'True' for r in rows),
-                              **{f'{channel}_grid_flags': sum(
-                                  r.get(f'coarse_{channel}_score_passed') == 'False' for r in rows)
-                                 for channel in ('gaia', 'astronn', 'class', 'specdis', 'spdist', 'mws_class')},
-                              sampler_flags=sum(r['sampler_passed'] != 'True' for r in rows),
-                              probability_identity_max=max(float(r['joint_delta']) for r in rows),
-                              marginal_half_max=max(float(r['marginal_half_delta']) for r in rows)))
+            gates.append(grid_summary(rows, role, arm, cohort='candidate_admitted'))
+            gates.append(grid_summary([g[arm] for g in field], role, arm, cohort='all_opened'))
     return dict(absolute=absolute, historical_anchor=alignment, confusion=confusion,
                 joint_counts=counts, numerical=gates, giant_decomposition=decomposition,
                 entry_sensitivity=entry_checks, entry_counts=entry_counts), covariances

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — report numerical gates across the full opened field
+
+- The factorial forecast already computes grid checks on every opened
+  PSF. Updated `v3_2_tilt_report.py` to report both the full field and
+  candidate-admitted subsets, with checked and failed denominators per
+  reference channel and maximum grid shifts in probability and modulus.
+- The focused checks distinguish missing channels from passes and retain
+  failures in the full field. Both tilt tests, syntax and diff checks passed.
+  Slurm report 61259977 still waits on the four-arm forecasts.
+
 ## 2026-11-14 — start radial cache repeats 16 and 17
 
 - Completed comparable repeats 13–15 took 13m42s to 13m54s.
