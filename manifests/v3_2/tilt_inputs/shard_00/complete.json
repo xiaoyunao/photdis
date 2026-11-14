@@ -1,0 +1,64 @@
+{
+  "inputs": {
+    "data/v3_1/target_native_pilot/roles.npz": "95dc39dc3012b3074fdd245a3ebcbef2ab2a530cb8ef911abbc95b2e26ee1a50",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/shared_predictions/application_refit_0/draw_12/shared_system.npz": "2502f3977a383d72a44ecca02b371b18286deb06873a52769eb87b37cbbd1424",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "manifests/v3_2/tilt_pilot_refined/complete.json": "c280a4a9750ff8a876baea162ea65298507b8246ea77581b2c1f1c4d0c596ef5",
+    "data/v3_1/target_matrices/complete.json": "c6ad2c8ec5785057c91b623e7c766e864a78d2a56d4a8fbf787a0cf6a8530cd8",
+    "data/v3_1/target_matrices/source_markers.json": "66a741989336e5a0926001a2094f4ce2e51df6d0e9e8df7affe2eaf8bfd4fd6b",
+    "scripts/v3_2_tilt_inputs.py": "c54c915dd47f9811322698f6ddbb7302fc683935dc3065d87d982c7e73a0a197",
+    "src/photdis/v3_2/kernel_entry.py": "25cbd7c38351f59787f558aef08483496b770bb6546a5c5766d0ce71320bcf70"
+  },
+  "outputs": {
+    "matrices.npz": "067fb60d02398b3a0d611f2a745fcd182dde256de47929f9304884933afc4c6f",
+    "checks.csv": "2e9f76078a87947a3f91b5d647e866a274700f3a1913a4b4212ccb849c59fae8"
+  },
+  "shard": 0,
+  "shards": 32,
+  "n": 813,
+  "candidate_n": 109,
+  "all_PSF": true,
+  "non_PSF_excluded": 0,
+  "missing_TYPE_excluded": 0,
+  "contexts": 922,
+  "failed": 26,
+  "levels": [
+    [
+      1048576,
+      319711
+    ],
+    [
+      2097152,
+      319711
+    ],
+    [
+      2097152,
+      319712
+    ]
+  ],
+  "tilts": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.3,
+      0.0
+    ],
+    [
+      -0.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.0,
+      -0.3
+    ]
+  ],
+  "job": "61259336"
+}

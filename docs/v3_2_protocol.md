@@ -106,3 +106,14 @@ zero collapse to the frozen v3.1 selection with the same tolerances. Retain
 all context flags and arrays for targeted refinement and later fitted-tilt
 checks. Both zero and free fits must use the same production denominator
 within each cohort for the factorial contrast.
+
+Refine the flagged contexts with 2^22/2^23 draws and the same two scrambles.
+Keep the initial files and use hash-bound refinement sidecars. Fit both tilt
+settings against the same merged input. For each arm compare MAP results at
+all three entry levels and retain the weighted fixed-parameter log-entry drift
+separately from per-object and count changes. Use four 512-draw HMC chains with
+512 warmup draws, inherited regularization and a 0.9 target acceptance.
+A fit with unresolved entry checks can run explicitly as a flagged sensitivity
+diagnostic. Before interpreting the factorial, check fitted-tilt sensitivity.
+Opened-field predictions use each posterior draw normalized separately and
+the existing regional shrinkage for unfit fields, with common random seeds.

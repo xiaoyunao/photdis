@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — run production inputs and implement the matched four-arm chain
+
+- NERSC 61259336_0 completed 0:0 in 5m12s with batch MaxRSS 38,351,004 KiB.
+  Authenticated shard 00 has 813 PSF objects, 109 candidates and 922 contexts.
+  Native maximum difference is 7.11e-15. The 26 absolute-tolerance failures
+  are candidate only, with 23 level failures and 3 seed failures. Zero collapse
+  versus v3.1 and stabilized-relative checks pass all 922.
+- Submitted remaining shards 1–31 as 61259514, max 4 concurrent, using the
+  same code and frozen inputs. Preserve all initial arrays and flags.
+- Added targeted 2^22/2^23 refinement and authenticated sidecar merging,
+  matched free/zero HMC, opened-field prediction and direct paired factorial
+  contrasts. Compile and shell syntax pass. Synthetic zero/free objective,
+  MAP, normalized membership, interaction and conditional far-mass checks pass.
+  Run candidate refinement on the completed shard before the full dependency chain.
+
 ## 2026-11-14 — implement matched tilt input production
 
 - The previous goal turn completed the refined pilot and three-end sync.
