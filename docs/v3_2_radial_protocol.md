@@ -34,3 +34,15 @@ coverage estimates across simulation repeats. Also report joint class by
 distance counts. Preserve fit and numerical failures with denominators.
 Use the same registered prior as v3.1 to test shrinkage. Keep the original
 v3.1 failed runs and the NGC288 numerical diagnostics separate.
+
+Recovery uses identical broad and local arms at the 0.01-mag likelihood grid.
+Entry is calculated directly under the local covariance for each context,
+using 256 draws on 0.05-mag nodes and 512 on 0.025-mag nodes with independent
+scrambles. Retain both and test at the same fitted draws. Record an absolute
+objective check of 0.05 separately from the relative objective span check
+of 0.05. Entry-curve maximum difference must be below 0.003 and maximum
+expected count change below 0.5. A report's conditional accepted subset
+also requires Rhat < 1.05, minimum ESS >= 100 and zero divergent transitions.
+Report the full fitted subset alongside it and show registered denominators.
+The first three recovery runs use catalogs 0, 128 and 256 to exercise fixed
+model, fixed empirical and prior-predictive paths before the wider array.

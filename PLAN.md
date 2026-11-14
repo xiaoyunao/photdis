@@ -15,7 +15,9 @@ Active goal follows the Pro review of 7699299. See
 - Decompose giant branch availability, suppression and class-conditional
   distance error. Then choose one supported model modification.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
-  catalogs in `docs/v3_2_radial_protocol.md`. Freeze new validation
+  catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
+  Run recovery pilots for model, empirical and prior-predictive catalogs.
+  Freeze new validation
   before opening outcomes or expanding the production footprint.
 
 ## v3.1 — completed research delivery

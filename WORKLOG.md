@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — implement narrow-structure recovery and coverage reporting
+
+- Slurm 61260010 completed 0:0 in 29s. Its 288-catalog design preserves
+  matched PSF contexts. No observed held-out validation outcomes opened.
+- Implemented per-context local-dust entry, broad/local posterior fitting
+  and joint realized structure membership and class/distance counts.
+  Same-draw numerical diagnostics separate absolute objective drift from
+  relative shift and count transfer. Coverage tables retain registered
+  denominators and separate the fixed and prior-predictive designs.
+- Python/Bash syntax passes. Synthetic checks verify analytic structure
+  mass, covariance/count conservation and rejected/empty coverage groups.
+  First verify actual recovery on catalogs 0, 128, 256 before fan-out.
+- Tilt/odds jobs remain Slurm-pending. The 2x2 report pipeline is present
+  with same-ID frozen comparisons and shared count covariance.
+
 ## 2026-11-14 — freeze the narrow-structure catalog design
 
 - Registered 256 fixed-truth model/empirical catalogs and 32 model-matched
