@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — retain completed class probe and count decomposition
+
+- Collected 61260227 (18s) and 61260338 (16s), both COMPLETED 0:0.
+  Verified output digests, 519 unique PSF identities, probability sums,
+  and all 272 conditional comparison keys.
+- Multiband recognizes 22/142 opened new-sky giants. Paired class log
+  score against candidate zero remains uncertain. All 33 count
+  failures are weight-only at their largest-shift bin. Report and exact
+  CSVs retained in `docs/v3_2_opened_probe_and_count_result.md`.
+- Preserve original gates, wait for the queued 2x2 before mechanism choice,
+  and use NGC288/radial results as separate numerical evidence.
+
 ## 2026-11-14 — recover timed-out radial pilots
 
 - Slurm 61260177 catalogs 000 and 128 timed out at the 30-minute limit

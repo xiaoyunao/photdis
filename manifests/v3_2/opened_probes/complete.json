@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "data/v3_1/final_validation/scores/field/complete.json": "a4e110dbce1b09821646de43a1e8b8a3c0b759f8f76b962e4848c6db55e7f579",
+    "data/v3_1/final_validation/field/complete.json": "3a72da5ffd9817205f5b2258555f0eb51104c0591c274883e713a2fee86ab7b2",
+    "data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "data/v3_1/validation_admission/complete.json": "dc9c2ce79b3307f5dd24d8dfe1c8812030f9ee760fefbdef5787c177d74bc2d6",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "data/v3_0/controls/training.npz": "c6c079e1a1e94a60e0d07d589cbf188b70b4318a7416169034d6054f1fc2284e",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "scripts/v3_2_opened_probes.py": "76fa32e1ec4351fe3c15c91aa79f56451310ebfd3c7d5fe9088ee802241ba1fe",
+    "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56"
+  },
+  "outputs": {
+    "paired.csv": "07bb2220ab0210648102d1ff8be62aa5229e5a694155446add7e7d4354b8c132",
+    "objects.csv": "b385b2cf8ead1cb1c614cc10a985637bbd69cfe9c4a94c2242ac5a22dd2e064a",
+    "absolute.csv": "6ea9339d6664290871e39a4f8c886ea59d1dbbb55870849618447b0905dd4fd2"
+  },
+  "all_PSF": true,
+  "n": 519,
+  "predicted": 519,
+  "labeled": 475,
+  "training_or_calibration_overlaps": 0,
+  "missing_grz": 0,
+  "job": "61260227",
+  "scope": "Frozen classification control on opened references. Identity exclusion does not establish sky independence or prevalence calibration. No probe enters likelihood."
+}

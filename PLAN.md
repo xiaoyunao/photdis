@@ -14,8 +14,9 @@ Active goal follows the Pro review of 7699299. See
   report (61259977) are queued in dependency order.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
-  61260227 runs on the same opened PSF cohort.
-  Then choose one supported model modification.
+  61260227 completed on 519 opened PSFs. See
+  `docs/v3_2_opened_probe_and_count_result.md`. Choose one supported
+  modification after the matched factorial results.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
   The initial 000 and 128 direct pilots timed out in array 61260177;
@@ -28,7 +29,8 @@ Active goal follows the Pro review of 7699299. See
   61260892 follows it. Freeze model, rules and new reference roles before
   scoring the new validation outcomes.
 - Trace the 33 frozen conditional count failures with a statewise weight
-  versus response audit (61260338). NGC288 odds test 61259650 uses fixed
+  versus response audit (61260338 complete, all 33 weight-only at the
+  worst bin). NGC288 odds test 61259650 uses fixed
   distance order 64. Added-distance native and entry pilot 61260630 follows
   `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
 
