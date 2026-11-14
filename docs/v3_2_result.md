@@ -151,7 +151,14 @@ background strata also have 8/8 accepted local fits and 8/8
 width intervals covering truth. The mean width medians are 0.232 mag
 for near and 0.243 mag for deep. The paired count-error changes are
 −15.23 [−18.75, −11.38] and −14.26 [−17.58, −10.74] percentage
-points, respectively. The empirical-SED and prior-predictive
+points, respectively. At 90% member fraction and 0.08 mag true
+width in the near background, all eight model-SED fits pass in both
+arms. Local width coverage is 8/8 (exact 95% interval 0.631–1.000),
+the mean width median is 0.095 mag, and the mean interval length
+is 0.105 mag. All eight medians move toward the 0.25 mag prior
+anchor by 0.015 mag on average. The paired count-error change is
+−22.85 [−25.88, −19.39] percentage points.
+The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test

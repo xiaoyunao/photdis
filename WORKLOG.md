@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — validate retries and the first 90 percent recovery stratum
+
+- `sacct` confirms 096 and 098 completed in debug array 61280724.
+  The collector archived both and original tasks 107, 108, 110 and 111.
+  All twelve fits pass. The completed-only audit verifies 113 catalogs,
+  205 accepted fits out of 226, 4,520 intervals and 13 complete strata.
+- Added the full near-background 90%/0.08 mag model-SED stratum to
+  `docs/v3_2_result.md` after recomputing width coverage, prior shrinkage
+  and paired count error. Width coverage is 8/8 and the paired count
+  error falls by 22.85 percentage points. The other 90% strata remain open.
+- NGC288 still has ten archived states and five running. Continue
+  collecting both Slurm arrays for the complete application reports.
+
 ## 2026-11-15 — verify three more radial recovery catalogs
 
 - Collected catalogs 103, 105 and 106 with
