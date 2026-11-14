@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — archive catalogs 016–017 after intermittent NERSC connections
+
+- Slurm 61266369_16 and _17 completed in 3m26s and 3m23s.
+  Verified both raw job IDs, four verdicts and 80 intervals.
+  Catalog 016 passes both fits. Catalog 017 local fails sampling
+  (Rhat 1.1140, ESS 23.61) with passing integration checks.
+  Twenty of 288 catalogs are archived. Catalogs 018 and 019 started in debug.
+- The explicit catalog collector now queries Slurm for only the requested
+  production tasks and binds each receipt to successful accounting.
+  Added bounded connection and accounting checks. Syntax and the targeted
+  accounting filter passed. The first SSH attempts timed out and the
+  explicit production transfer then succeeded.
+- NGC288 state 09 was still running at 1h13m under 32 GiB. The
+  remaining 22 states are pending without a scheduler start estimate.
+
 ## 2026-11-14 — prepare compact final report transfer and archive catalogs 014–015
 
 - Added `v3_2_delivery.py --collect-reports` for both final jobs.

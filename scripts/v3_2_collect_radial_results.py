@@ -17,6 +17,9 @@ REMOTE = '/pscratch/sd/y/yunao/photdis_pipeline'
 HOST = 'yunao@perlmutter.nersc.gov'
 FILES = ('complete.json', 'numerical.csv', 'recovery.csv')
 RECOVERY_ARRAY = '61266369'
+PILOT_CATALOGS = {0, 128, 256}
+SSH = ('ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10',
+       '-o', 'ServerAliveInterval=8', '-o', 'ServerAliveCountMax=2', HOST)
 
 
 def digest(raw):
@@ -35,17 +38,16 @@ def completed_tasks(report, array_id):
     return result
 
 
-def discover(array_id):
-    command = f'sacct -n -X -P -j {array_id} --format=JobID,JobIDRaw,State,ExitCode'
-    status = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
-                            check=True, capture_output=True, timeout=25, text=True)
+def discover(array_id, tasks=()):
+    job_spec = ','.join(f'{array_id}_{task}' for task in tasks) if tasks else array_id
+    command = f'timeout 15 sacct -n -X -P -j {job_spec} --format=JobID,JobIDRaw,State,ExitCode'
+    status = subprocess.run([*SSH, command], check=True, capture_output=True, timeout=45, text=True)
     return completed_tasks(status.stdout, array_id)
 
 
 def completed_jobs(job_ids):
-    command = f'sacct -n -X -P -j {",".join(job_ids)} --format=JobID,State,ExitCode'
-    status = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
-                            check=True, capture_output=True, timeout=25, text=True)
+    command = f'timeout 15 sacct -n -X -P -j {",".join(job_ids)} --format=JobID,State,ExitCode'
+    status = subprocess.run([*SSH, command], check=True, capture_output=True, timeout=45, text=True)
     return {job for job, state, code in (line.strip().split('|') for line in status.stdout.splitlines())
             if job in job_ids and state == 'COMPLETED' and code == '0:0'}
 
@@ -53,8 +55,7 @@ def completed_jobs(job_ids):
 def collect(names, *, max_file_bytes=100_000):
     # Names are generated from the frozen catalog IDs and fixed filenames.
     command = f'cd {REMOTE} && tar -cf - ' + ' '.join(names)
-    raw = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
-                         check=True, capture_output=True, timeout=35).stdout
+    raw = subprocess.run([*SSH, command], check=True, capture_output=True, timeout=45).stdout
     with tarfile.open(fileobj=BytesIO(raw)) as archive:
         members = archive.getmembers()
         if (len(members) != len(names) or {m.name for m in members} != set(names)
@@ -103,7 +104,12 @@ def main():
     args = parser.parse_args()
     if bool(args.catalogs) == args.completed or any(not 0 <= i < 288 for i in args.catalogs):
         parser.error('Choose --completed or explicit catalog IDs in 0–287')
-    jobs = discover(RECOVERY_ARRAY) if args.completed else {}
+    tasks = sorted(set(args.catalogs) - PILOT_CATALOGS)
+    if len(set(args.catalogs)) > 32:
+        parser.error('Collect at most 32 compact results in each transfer')
+    jobs = discover(RECOVERY_ARRAY, tasks) if args.completed or tasks else {}
+    if missing := set(tasks) - jobs.keys():
+        parser.error('Slurm has no successful completion for catalogs ' + ', '.join(map(str, sorted(missing))))
     catalogs = sorted(set(args.catalogs)) if not args.completed else [
         i for i in sorted(jobs) if not all((BASE/f'radial_recovery/catalog_{i:03}'/name).is_file()
                                           for name in FILES)
@@ -111,8 +117,6 @@ def main():
     if not catalogs:
         print('No new successful production catalogs')
         return
-    if len(catalogs) > 32:
-        parser.error('Collect at most 32 compact results in each transfer')
     paths = {i: f'radial_recovery/catalog_{i:03}' for i in catalogs}
     design_path = BASE/'radial_design'
     with (design_path/'design.csv').open(newline='') as stream:
@@ -124,7 +128,7 @@ def main():
     for i, folder in paths.items():
         payload = {name: archive[f'data/v3_2/{folder}/{name}'] for name in FILES}
         receipt = validate(i, payload, design[i], outputs, digest(raw_design), caches)
-        if jobs and receipt['job'] != jobs[i]:
+        if i in jobs and receipt['job'] != jobs[i]:
             raise ValueError(f'Recovery receipt differs from the successful Slurm job for catalog {i}')
         archive_verified(BASE/folder, payload)
         print(f'{i:03} {receipt["job"]} {digest(payload["complete.json"])}')

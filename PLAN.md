@@ -133,10 +133,10 @@ the 512 row identities against the frozen v3.1 membership export.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Eighteen of 288 catalogs have verified compact outputs. Catalogs 004–008
-  and 011 pass in both arms. The local fits in 009, 010 and 012–015 fail
+  Twenty of 288 catalogs have verified compact outputs. Catalogs 004–008,
+  011 and 016 pass in both arms. The local fits in 009, 010, 012–015 and 017 fail
   sampling and pass their integration checks.
-  Catalogs 016 and 017 moved to the vacant debug slots under the original array.
+  Catalogs 018 and 019 started in debug under the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
