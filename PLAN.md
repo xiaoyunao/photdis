@@ -43,7 +43,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   The atlas shows all 288 realized after-selection member fractions.
   All three original direct pilots in 61260177 timed out. Direct 000
   follows as 61260934; empirical 128 (61260935) and prior-predictive
-  256 (61261884) use completed repeat-00 cache 61260465. Check cache equivalence
+  256 (61261884) use completed repeat-00 cache 61260465.
+  Catalog 128 completed with both numerical verdicts passing. Its true
+  width of 0.08 mag falls outside the local 95% interval [0.096, 0.998] mag.
+  Check cache equivalence
   with job 61261765 before launching the remaining catalogs. New curve
   workers retain authenticated completed rows across allocation limits.
   Final reporting pairs broad and local count error by catalog and

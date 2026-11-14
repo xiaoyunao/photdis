@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first completed narrow-structure recovery
+
+- Cached empirical catalog 128 (61260935) completed with Slurm exit 0:0.
+  Collected its compact receipt, two numerical rows and 40 recovery
+  rows in `manifests/v3_2/radial_recovery/catalog_128/`.
+- The compact audit recomputed source and CSV hashes, both numerical
+  verdicts and all interval labels. Both arms have zero divergences.
+  Normalized absolute count error is 31.25% broad and 30.47% local.
+  The local width median is 0.339 mag with 95% interval [0.096, 0.998] mag
+  for a simulated width of 0.08 mag. The selected member count is 15,
+  with local median 19 and interval [3, 38].
+- Direct 000 still runs. Exact direct/cache equivalence and coverage
+  across the registered replicates remain pending.
+
 ## 2026-11-14 — plot realized membership in the frozen narrow-structure mocks
 
 - Rendered all 256 fixed-truth catalogs and 32 prior-predictive catalogs
