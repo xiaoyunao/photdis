@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify tilt shards 16–19 and validate forecasts before release
+
+- Authenticated the four input shards at 812 PSFs each. They contain
+  433 candidate PSFs and 93 initial entry flags. The first twenty
+  verified shards together contain 16256 PSFs and 2228 candidates.
+- The prospective freeze now checks available QRF histograms and the
+  continuous grids against the scorer's numerical input contract before
+  outcomes can open. An existing DR19 freeze must match the supplied
+  decision, forecast and evaluator. A synthetic regression verifies
+  that an interior density gap fails the gate. All 458 local tests pass.
+
 ## 2026-11-14 — finish the first half of the tilt refinements
 
 - Verified refinement 14 at 24/24 and 15 at 27/27. All 363 initial

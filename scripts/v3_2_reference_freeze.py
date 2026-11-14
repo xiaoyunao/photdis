@@ -47,6 +47,11 @@ def read_admission(path, photo, expected_n):
         return gate
 
 
+def check_quantiles(values, n, name):
+    if values.shape != (n, 5) or not np.isfinite(values).all() or (np.diff(values, axis=1) < 0).any():
+        raise ValueError(f'Invalid distance quantiles: {name}')
+
+
 def bind_predictions(inv, marker, photo, photo_digest, decision_digest, *, role=ROLE):
     record = inv.marker(marker)
     if (record.get('references_read') is not False or record.get('pilot') is not False
@@ -72,15 +77,29 @@ def bind_predictions(inv, marker, photo, photo_digest, decision_digest, *, role=
                         or data['mass'].ndim != 2 or data['mass'].shape[0] != n
                         or data['mu_edges'].shape != (n, data['mass'].shape[1]+1)):
                     raise ValueError('Invalid native QRF forecast arrays')
+                edges, mass = data['mu_edges'][available], data['mass'][available]
+                check_quantiles(data['mu_quantiles'][available], int(available.sum()), name)
+                if (not np.isfinite(edges).all() or not (np.diff(edges, axis=1) > 0).all()
+                        or not np.isfinite(mass).all() or (mass < 0).any()
+                        or not np.allclose(mass.sum(axis=1), 1.)):
+                    raise ValueError('Invalid available QRF histogram')
             else:
                 for prefix in ('coarse_', ''):
                     grid = data[prefix+'mu_grid']
+                    logpdf = data[prefix+'logpdf']
+                    probability = data[prefix+'class_distance']
                     if (grid.ndim != 1 or len(grid) < 3 or not np.isfinite(grid).all()
                             or not (np.diff(grid) > 0).all()
-                            or data[prefix+'logpdf'].shape != (n, len(grid))
-                            or data[prefix+'mu_quantiles'].shape != (n, 5)
-                            or data[prefix+'class_distance'].shape != (n, 3, 6)):
+                            or logpdf.shape != (n, len(grid)) or probability.shape != (n, 3, 6)):
                         raise ValueError(f'Invalid continuous forecast arrays: {name} {prefix}')
+                    check_quantiles(data[prefix+'mu_quantiles'], n, name)
+                    finite = np.isfinite(logpdf)
+                    starts = finite[:, 0].astype(int) + ((~finite[:, :-1]) & finite[:, 1:]).sum(axis=1)
+                    if (np.isnan(logpdf).any() or np.isposinf(logpdf).any()
+                            or (finite.sum(axis=1) < 3).any() or (starts != 1).any()
+                            or not np.isfinite(probability).all() or (probability < 0).any()
+                            or (abs(probability.sum(axis=(1, 2))-1.) > 1e-8).any()):
+                        raise ValueError(f'Invalid continuous probability: {name} {prefix}')
             status = data['numerical_pass']
             if status.shape != photo['identity'].shape or status.dtype.kind != 'b':
                 raise ValueError(f'Missing per-object numerical status: {name}')
@@ -98,7 +117,12 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     output = out/'freeze.json'
     if output.exists():
-        print('EXISTING FREEZE', verify_freeze(ROOT, output), flush=True)
+        digest = verify_freeze(ROOT, output)
+        saved = json.loads(output.read_text())
+        for key in ('decision', 'forecast', 'evaluator'):
+            if (ROOT/saved[key]).resolve() != Path(getattr(args, key)).resolve():
+                raise ValueError(f'Existing freeze binds a different {key}')
+        print('EXISTING FREEZE', digest, flush=True)
         return
     if (out/'started.json').exists():
         raise ValueError('Outcomes already accessed for this role')

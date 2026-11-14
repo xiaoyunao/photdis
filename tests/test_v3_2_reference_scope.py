@@ -1,7 +1,9 @@
+import json
 import numpy as np
 import pytest
 
-from v3_2_reference_freeze import VIEWS, read_admission
+from photdis.v3_1.freeze import Inventory, file_hash
+from v3_2_reference_freeze import ROLE, VIEWS, bind_predictions, read_admission
 from v3_2_reference_score import class_confusion, reliability, score_one, summarize
 
 
@@ -19,6 +21,40 @@ def test_frozen_admission_checks_identity_order_and_count(tmp_path):
     np.savez(path, **photo, candidate=[1, 0, 1])
     with pytest.raises(ValueError, match='admission mask'):
         read_admission(path, photo, 2)
+
+
+def test_bound_forecast_rejects_unscorable_payload_before_outcome_access(tmp_path):
+    photo = dict(identity=np.array([101, 102]), ls_id=np.array([201, 202]), TYPE=np.full(2, 'PSF'))
+    gate = tmp_path/'gate.npz'
+    np.savez(gate, **photo, candidate=[True, False])
+    record = dict(references_read=False, pilot=False, cohort=ROLE, photometry_sha256='photo',
+                  decision_sha256='decision', views={},
+                  candidate_admission=dict(payload=gate.name, sha256=file_hash(gate), admitted=1))
+    marker = tmp_path/'forecast.json'
+    q = np.array([[10., 11., 12., 13., 14.], [np.nan]*5])
+    for view in VIEWS:
+        path = tmp_path/f'{view}.npz'
+        if view == 'qrf':
+            payload = dict(available=[True, False], mu_edges=[[10., 12., 14.], [np.nan]*3],
+                           mass=[[.5, .5], [np.nan]*2], mu_quantiles=q)
+        else:
+            level = dict(mu_grid=np.arange(7), logpdf=np.tile([-np.inf, 0., 0., 0., 0., -np.inf, -np.inf], (2, 1)),
+                         class_distance=np.full((2, 3, 6), 1/18), mu_quantiles=np.tile(q[0], (2, 1)))
+            payload = {**level, **{f'coarse_{key}': value.copy() for key, value in level.items()}}
+        np.savez(path, **photo, **payload, numerical_pass=[True, False])
+        record['views'][view] = dict(payload=path.name, sha256=file_hash(path))
+    marker.write_text(json.dumps(record))
+    bind_predictions(Inventory(tmp_path), marker, photo, 'photo', 'decision')
+
+    path = tmp_path/'candidate.npz'
+    with np.load(path) as source:
+        invalid = dict(source)
+    invalid['coarse_logpdf'][0, 2] = -np.inf
+    np.savez(path, **invalid)
+    record['views']['candidate']['sha256'] = file_hash(path)
+    marker.write_text(json.dumps(record))
+    with pytest.raises(ValueError, match='Invalid continuous probability'):
+        bind_predictions(Inventory(tmp_path), marker, photo, 'photo', 'decision')
 
 
 def test_metrics_and_pairs_use_candidate_admission_within_reference_groups():

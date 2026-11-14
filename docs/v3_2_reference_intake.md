@@ -60,6 +60,8 @@ made from the admitted photometry for candidate, frozen grz QRF, nominal
 reference and old target. Preserve all object identities and numerical
 statuses at every forecast view. Bind the scoring program, admission,
 both archives, metadata index and source recipes to the same receipt.
+Validate available histograms, both continuous grids, class-distance
+normalization and ordered quantiles before writing the freeze receipt.
 The initial evidence access records the receipt and Gaia file inventory.
 An interrupted join can resume against the same receipt and files.
 
