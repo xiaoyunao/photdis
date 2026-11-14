@@ -117,20 +117,19 @@ products without a final delivery verdict.
   Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
   retaining its original array membership.
   Cached recovery 61266369 covers 285 nonpilot catalogs with at most
-  eight concurrent tasks. The 283 tasks mapped to authenticated caches
-  00–29 are eligible or completed. The remaining two retain the full-cache
-  dependency until their own caches are verified.
+  eight concurrent tasks. All 285 tasks have cleared their authenticated
+  cache dependencies.
   Recovery catalog 1 (61274913) completed with an 8 GiB request and
   peaked at 1,986,216 KiB. Both fits are archived. The local sampler
   fails Rhat and ESS. The remaining pending recovery tasks now request
   8 GiB in place of inherited full-node memory.
   All three pilots completed. Report 61266374 waits for the recovery array.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–29 are verified with `scripts/v3_2_radial_cache_audit.py`.
-  Repeats 22–29 completed in debug. Repeats 30 and 31 moved to
-  debug QoS with 30-minute limits.
+  All 32 cache receipts and 4,096 integration contexts pass
+  `python3 scripts/v3_2_radial_cache_audit.py --complete`.
+  Repeats 22–31 completed in debug. Catalog 002 moved to the
+  vacant debug queue and started with its 8 GiB request.
   Report 61266374 keeps its original afterok on the full recovery array.
-  Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
   Collect per-catalog receipts and numerical and recovery CSVs plus
@@ -182,6 +181,8 @@ products without a final delivery verdict.
   Job 61275998 checks exact reference identity coverage against the
   frozen 3,540-object application frame and 3,003 high-q subset.
   This audit only reads native identity payloads and archived selection.
+  Moved the queued audit to the vacant debug allocation after the cache
+  array finished.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
   in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 completed.
   Each of the three controls passes its forecast numerical checks on

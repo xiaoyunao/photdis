@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify the complete radial cache inventory
+
+- Repeats 30 and 31 completed 0:0 in 14m05s and 13m51s.
+  Reconciled all 32 cache receipts and 4,096 integration contexts
+  with the frozen design. The cache array dependency is clear.
+- Moved recovery catalog 002 and parent-reference audit 61275998
+  into the two vacant debug slots. Catalog 002 started. The
+  radial report and NGC288 joint jobs retain their original dependencies.
+
 ## 2026-11-14 — archive NGC288 state 06 with entry-level flags
 
 - Slurm 61263907_6 (raw 61273299) completed 0:0 in 1h26m52s.
