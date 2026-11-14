@@ -129,8 +129,17 @@ coverage outcome. At 30% generating member fraction, all eight local
 fits pass in each model-SED stratum. Width coverage in the same order
 is 7/8, 8/8, 8/8 and 8/8. Mean 95% interval lengths range from 0.223
 to 0.400 mag. The exact 95% binomial lower limits are 0.473 for 7/8
-and 0.631 for 8/8. Full coverage and matched recovery comparisons
-await the remaining registered outputs. The NGC288 odds-only
+and 0.631 for 8/8. For true width 0.08 mag, every accepted
+30% fit has a width median closer to the 0.25 mag prior anchor.
+The mean reduction in distance to that anchor is 0.069 mag in
+the near background and 0.052 mag in the deep background.
+In the same four 30% strata, the local-minus-broad change in
+summed absolute joint-count error divided by catalog size is
+−5.91, −8.40, −0.88 and −5.08 percentage points. The replicate
+bootstrap interval crosses zero for the 0.25 mag near-background
+stratum, [−4.98, +3.26] percentage points. These are the completed
+fixed model-SED strata. The empirical-SED and prior-predictive
+comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
 awaits the 32-state joint result. In the first ten archived states,

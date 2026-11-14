@@ -137,7 +137,7 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Sixty-eight of 288 catalogs have verified compact outputs. Catalogs
+  Seventy-two of 288 catalogs have verified compact outputs. Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
   Catalog 032 completed in CPU shared QoS in 5m38s with eight CPUs
@@ -244,8 +244,8 @@ catalogs archived.
   Gaussian native flag (0.0404 nat absolute). Applied the tested
   memory and walltime to the 22 pending states, with the original
   array and the joint report dependency verified in Slurm.
-  States 10–12 started in CPU shared QoS. All remaining states
-  13–31 were moved to shared within the original array with
+  States 10–14 started in CPU shared QoS. All remaining states
+  15–31 are queued in shared within the original array with
   32 GiB and a 3-hour limit. The joint dependency is intact.
   The two-axis evaluator
   61263908 waits on all 32 states. Use

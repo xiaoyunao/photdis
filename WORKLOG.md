@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — verify four more radial catalogs and summarize paired recovery
+
+- Archived 064–066 and 068 after successful Slurm jobs. Both
+  fits in all four pass. Stage delivery verified 72 catalogs,
+  144 fit verdicts (123 accepted), 2,880 intervals and ten NGC288 states.
+- Recomputed paired count errors and width shrinkage from the
+  completed 30% model-SED strata. Three of four count-error
+  contrasts have negative replicate-bootstrap intervals. All
+  accepted 0.08-mag cases move toward the 0.25-mag prior anchor.
+  Recorded the effects and scope in the research synthesis.
+- State 14 started. NGC288 states 10–14 reached 144, 112, 112,
+  8 and 8 verified row checkpoints at the inspected snapshot.
+  The two final reports continue to wait for their arrays.
+
 ## 2026-11-15 — complete the 30 percent model-SED recovery strata
 
 - Archived 058–063. Stage delivery passed with 68 catalogs,
