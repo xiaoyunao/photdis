@@ -38,3 +38,20 @@ for both likelihoods. Full distance-axis integration remains pending.
 [PNG](../figures/v3_2/structure_odds_audit/fixed_distance_odds.png) ·
 [PDF](../figures/v3_2/structure_odds_audit/fixed_distance_odds.pdf) ·
 [Check rows and source hashes](../manifests/v3_2/structure_odds_audit/)
+
+## Narrow-structure mock membership after selection
+
+The four fixed-truth panels contain 256 mock catalogs. The upper-right
+panel contains 32 separate prior-predictive catalogs. Each catalog has
+128 admitted objects. At a generating fraction of 60%, the median
+selected member fraction for empirical SEDs with a deep background is
+70.3–70.7% across the two widths, compared with 59.8% with a near
+background. The plotted fractions come from the simulated membership
+record before fitting.
+
+![Realized member fractions in the 288 frozen mock catalogs](../figures/v3_2/radial_design/selected_membership.png)
+
+[PNG](../figures/v3_2/radial_design/selected_membership.png) ·
+[PDF](../figures/v3_2/radial_design/selected_membership.pdf) ·
+[Catalog records](../manifests/v3_2/radial_design/design.csv) ·
+[Source and output hashes](../manifests/v3_2/radial_design/figure.json)

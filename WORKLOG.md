@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — plot realized membership in the frozen narrow-structure mocks
+
+- Rendered all 256 fixed-truth catalogs and 32 prior-predictive catalogs
+  from the authenticated design table with `scripts/v3_2_radial_design_figure.py`.
+  The empirical 60% cells yield median selected fractions of 70.3–70.7%
+  in the deep background and 59.8% in the near background.
+- Checked catalog identity and completeness, five hashes, visual layout,
+  300 dpi PNG metadata and the English labels in the one-page PDF.
+- Direct 000 (61260934) and cached empirical 128 (61260935) started.
+  Recovery metrics and cache closure still require completed Slurm outputs.
+
 ## 2026-11-14 — audit preservation of the reviewed release
 
 - Added `scripts/v3_2_preservation_check.py` and linked it in the evidence

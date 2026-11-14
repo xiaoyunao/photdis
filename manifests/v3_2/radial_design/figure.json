@@ -1,0 +1,7 @@
+{
+  "manifests/v3_2/radial_design/complete.json": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+  "manifests/v3_2/radial_design/design.csv": "2f912304e3153f982add7f7ee8734925b2234143bd504bb9ae38db249013d4d5",
+  "scripts/v3_2_radial_design_figure.py": "8610834857d6985ae70caf156dc74f41b3df13a825b373cc12e66172866c9016",
+  "figures/v3_2/radial_design/selected_membership.png": "eaf1709060e154ea33b12e9e2d75d6472c1f6b4199e9eb88f2ad079b170c78e1",
+  "figures/v3_2/radial_design/selected_membership.pdf": "0b55b3560e5d1aa13dc5de94abbb169b0a98070431d10d427e7f631b95872509"
+}

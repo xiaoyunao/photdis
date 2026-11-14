@@ -40,6 +40,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
+  The atlas shows all 288 realized after-selection member fractions.
   All three original direct pilots in 61260177 timed out. Direct 000
   follows as 61260934; empirical 128 (61260935) and prior-predictive
   256 (61261884) use completed repeat-00 cache 61260465. Check cache equivalence
