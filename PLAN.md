@@ -134,6 +134,7 @@ the 512 row identities against the frozen v3.1 membership export.
   Fourteen of 288 catalogs have verified compact outputs. Catalogs 004–008
   and 011 pass in both arms. Catalogs 009 and 010 local fail sampling
   while their integration checks pass.
+  Catalogs 012 and 013 started in debug under the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -217,6 +218,7 @@ the 512 row identities against the frozen v3.1 membership export.
   State 06 passed both native grids, the independent seed and archived
   entry closure. The previous entry level exceeded its absolute
   0.0005 tolerance in 424 of 512 contexts. Keep the flags in the joint run.
+  State 08 passed all 2,560 checks. Eight states have verified receipts.
   State 09 (61275388) started with 32 GiB and a 3-hour limit.
   State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
   before using this resource request on more states.

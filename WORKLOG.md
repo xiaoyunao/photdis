@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — archive NGC288 state 08
+
+- Slurm 61263907_8 (raw 61274203) completed in 1h26m18s.
+  The new collector validated the checkpoint, raw Slurm ID,
+  frozen 512-row roster and all 2,560 context checks. No flags.
+- Catalogs 012 and 013 started after moving to vacant debug slots.
+  State 09 is still on its 32 GiB allocation probe.
+
 ## 2026-11-14 — verify NGC288 identities against the fixed parent and archive 010–011
 
 - Bound each state and pilot row to the ordered v3.1 membership table,
