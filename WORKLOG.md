@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — queue input refinement and isolate structure quadrature
+
+- Submitted debug 61259586_0 to refine the 26 candidate contexts flagged
+  in shard 00. Read-only sync status repaired an HTTPS observation failure
+  and verified three-end equality at 6f7e462. Array 61259514 remains pending
+  on the scheduler. No replacement jobs submitted.
+- Added the NGC288 odds-axis audit on the existing 64 distance nodes, for
+  both full and Gaussian branches over all 32 responses. Python/Bash syntax
+  and prior mass/variance checks at 256/512/1024 odds nodes pass.
+- Next verify the odds result against the distance-axis numerical failure,
+  collect the first refined input shard and continue the matched fits.
+
 ## 2026-11-14 — run production inputs and implement the matched four-arm chain
 
 - NERSC 61259336_0 completed 0:0 in 5m12s with batch MaxRSS 38,351,004 KiB.
