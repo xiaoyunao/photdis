@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify tilt refinements through shard 19
+
+- Slurm 61259727_16–19 completed 0:0. Authenticated the original
+  receipts, refined probability arrays, identities, admission codes
+  and tolerances. All 93 checks passed in shards 16–19.
+- The first twenty shards now pass all 456 flagged refinements.
+  Original flags and the registered refinement sidecars remain available.
+
 ## 2026-11-14 — verify tilt shards 16–19 and validate forecasts before release
 
 - Authenticated the four input shards at 812 PSFs each. They contain

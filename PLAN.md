@@ -12,8 +12,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   first twenty shards (00–19) are complete and verified.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–15 refinements pass all 363 flagged contexts.
-  Shards 16–19 have 93 flags for refinement.
+  Shards 00–19 refinements pass all 456 flagged contexts.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
