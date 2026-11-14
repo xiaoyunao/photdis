@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-14 — finish the first half of the tilt refinements
+
+- Verified refinement 14 at 24/24 and 15 at 27/27. All 363 initial
+  flags in shards 00–15 pass the registered higher-order check.
+  Both stages remain available. Last full unit suite passed 457 tests.
+
 ## 2026-11-14 — verify the first half of the tilt inputs and fit intake
 
 - Authenticated shards 14/15 with 813 PSFs each, 119/102 candidates
