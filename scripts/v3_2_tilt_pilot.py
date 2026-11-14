@@ -106,11 +106,11 @@ def main():
                        table['transmission'][row, OPTICAL], calib[OPTICAL], MEANS, SIGMAS)
             started = time.monotonic()
             old_level, _, _ = kernel_entry(*context, support=support if admission == 'candidate' else None,
-                                            draws=131072, seed=319711)
+                                            draws=1048576, seed=319711)
             base, bound, counts = kernel_entry(*context, support=support if admission == 'candidate' else None,
-                                               draws=524288, seed=319711)
+                                               draws=2097152, seed=319711)
             repeat, _, _ = kernel_entry(*context, support=support if admission == 'candidate' else None,
-                                        draws=524288, seed=319712)
+                                        draws=2097152, seed=319712)
             alpha = prior.T @ base
             errors = [float(abs(alpha - factor).max()) for factor in
                       (exact, prior.T @ old_level, prior.T @ repeat)]
@@ -140,7 +140,8 @@ def main():
     csv_rows(out / 'checks.csv', checks)
     save_json(out / 'complete.json', dict(inputs=inputs,
               outputs={p.name: sha(p) for p in sorted(out.iterdir())},
-              all_PSF=True, n=len(rows), contexts=len(checks), passed=all(r['passed'] for r in checks),
+              all_PSF=True, n=len(rows), contexts=len(checks),
+              draws_previous=1048576, draws=2097152, passed=all(r['passed'] for r in checks),
               job=os.environ.get('SLURM_JOB_ID'),
               scope='Fixed pilot of zero collapse and entry precision. No new arm fitted.'))
 

@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-14 — resolve the first kernel-entry pilot failure
+
+- Job 61259079 completed 0:0 in 31 s. Zero-tilt native collapse matches
+  the frozen numerator to 2.89e-15. All 12 entry contexts fail at least
+  one check. The raw rare-kernel estimate reaches 1.0188, and candidate
+  entry varies by up to 0.00142 across levels.
+- Normalize radial weights within each kernel. This keeps the entry estimate
+  in [0,1] and introduces finite-sample ratio bias to check by refinement.
+  Synthetic broad and hard-admission tests agree with the legacy integral to
+  1.33e-5. Retain the first pilot and compare 2^20/2^21 with two independent
+  scrambles for the refined pilot.
+- Code audit shows the old broad/free reused a profile-interpolated selection
+  table. Use it as the historical anchor and fit broad/free with matched
+  direct selection in the factorial comparison.
+
 ## 2026-11-14 — finish retrospective QRF and prepare the tilt pilot
 
 - QRF job 61259007 completed 0:0 in 25 s. Hash-verified both compact tables.

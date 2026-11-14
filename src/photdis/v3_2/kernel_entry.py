@@ -12,9 +12,11 @@ def kernel_entry(model, error, transmission, calibration, means, sigmas, *,
     """Integrate entry for each kernel and radial basis before applying any tilt.
 
     The kernel proposal combines the average class-conditional mixture and a
-    uniform floor. Radial draws use N(15, 6). Both proposal densities cancel in
-    the weights. For the hard candidate domain, a pruning bound accompanies
-    every basis and kernel. The model must include the local dust covariance.
+    uniform floor. Radial draws use N(15, 6). Normalize radial importance
+    weights within each sampled kernel, producing a self-normalized estimator.
+    Its finite-sample ratio bias and integration error are checked by refinement.
+    Return the maximum discarded integrand as a conservative pruning bound.
+    The model must include the local dust covariance.
     """
     if draws < 2 or draws & (draws - 1):
         raise ValueError('Power-of-two Sobol size required')
@@ -37,7 +39,6 @@ def kernel_entry(model, error, transmission, calibration, means, sigmas, *,
     optical_covariance = model.covariances[:, OPTICAL][:, :, OPTICAL]
     covariance = optical_covariance[index]
     value = np.zeros(draws)
-    omitted = np.zeros(draws)
     binary = model.binary_reference_fraction
     for fraction, factor in ((1 - binary, 1.), (binary, model.binary_brightness_factor)):
         scaled = amplitude * factor
@@ -59,20 +60,23 @@ def kernel_entry(model, error, transmission, calibration, means, sigmas, *,
                 flux = mean[active] + np.einsum('nij,nj->ni', chol[active], z[active])
                 if (flux <= 0).any() or not np.isfinite(flux).all():
                     raise ValueError('Invalid selected flux')
-                admitted[active] = support(22.5 - 2.5 * np.log10(flux) + calibration)
-            omitted += fraction * np.where(active, 0., weight)
+                keep = np.asarray(support(22.5 - 2.5 * np.log10(flux) + calibration))
+                if keep.dtype.kind != 'b' or keep.shape != (int(active.sum()),):
+                    raise ValueError('Boolean candidate support required')
+                admitted[active] = keep
             weight *= admitted
         value += fraction * weight
 
-    a, b, c, max_ratio = gaussian_ratio_coefficients(means, sigmas)
-    denominator = draws * proposal
+    a, b, c, _ = gaussian_ratio_coefficients(means, sigmas)
     entry = np.empty((kernel_count, len(means)))
-    bound = np.empty_like(entry)
-    omitted_by_kernel = np.bincount(index, weights=omitted, minlength=kernel_count) / denominator
     for j in range(len(means)):
         ratio = np.exp((a[j] * mu + b[j]) * mu + c[j])
-        entry[:, j] = np.bincount(index, weights=ratio * value, minlength=kernel_count) / denominator
-        bound[:, j] = max_ratio[j] * omitted_by_kernel
-    if not np.isfinite(entry).all() or (entry < 0).any():
+        denominator = np.bincount(index, weights=ratio, minlength=kernel_count)
+        numerator = np.bincount(index, weights=ratio * value, minlength=kernel_count)
+        if (denominator <= 0).any():
+            raise ValueError('Missing radial proposal support for a kernel')
+        entry[:, j] = numerator / denominator
+    bound = np.full_like(entry, 1e-14 if support is not None else 0.)
+    if not np.isfinite(entry).all() or (entry < 0).any() or (entry > 1 + 1e-12).any():
         raise ValueError('Invalid kernel selection integral')
     return entry, bound, np.bincount(index, minlength=kernel_count)
