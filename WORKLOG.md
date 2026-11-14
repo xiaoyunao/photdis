@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance state 20
+
+- Slurm recorded 61277988 `COMPLETED 0:0`. Verified the frozen
+  512-PSF roster and all 2,560 check records. Retained 512 flags each
+  for the independent entry seed and the previous entry level.
+  Both native comparisons and frozen entry closure pass.
+- Staged delivery verifies 22 of 32 receipts. Joint quadrature and
+  its figure remain pending.
+
 ## 2026-11-15 — archive NGC288 distance state 19
 
 - Slurm recorded 61277987 `COMPLETED 0:0`. Collected its compact
