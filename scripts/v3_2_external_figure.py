@@ -50,9 +50,49 @@ def signed_score_panel(ax, title, rows, n, contrasts, anchor_key, **filters):
     ax.grid(axis='x', alpha=.17)
 
 
+def reliability_plate(rows, out):
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 4.8), sharey=True)
+    for ax, target, title, n in zip(axes, ('near', 'giant'),
+                                     ('Nearer than 10 kpc', 'Giant class'), (982, 676)):
+        ax.plot([0, 1], [0, 1], color='.5', lw=1, linestyle='--')
+        for view, label, color in (
+            ('candidate', 'Candidate', '#22587d'), ('qrf', 'QRF', '#287252'),
+            ('old_target', 'Old target', '#a85321'), ('nominal_reference', 'Nominal reference', '#615d72'),
+        ):
+            bins = [r for r in rows if r['view'] == view and r['target'] == target
+                    and r['admission_scope'] == 'matched_candidate_admission' and r['numerical_only'] == 'False']
+            expected = 0 if (view, target) == ('qrf', 'giant') else n
+            if len(bins) != 10 or sum(int(r['n']) for r in bins) != expected:
+                raise ValueError(f'Unexpected reliability denominator: {view}, {target}')
+            supported = [r for r in bins if int(r['n'])]
+            if not supported:
+                continue
+            x, y, count = ([float(r[key]) for r in supported] for key in ('mean_probability', 'mean', 'n'))
+            intervals = [r for r in supported if r['lo95'] and r['hi95']]
+            ax.vlines([float(r['mean_probability']) for r in intervals],
+                       [float(r['lo95']) for r in intervals], [float(r['hi95']) for r in intervals],
+                       color=color, lw=1, alpha=.6)
+            ax.scatter(x, y, s=[10 + 4 * math.sqrt(k) for k in count], color=color, label=label, alpha=.75)
+        ax.set(title=f'{title} ({n} references)', xlabel='Mean predicted probability',
+               xlim=(-.035, 1.035), ylim=(-.035, 1.035))
+        ax.grid(alpha=.16)
+    axes[0].set_ylabel('Observed reference fraction')
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.5, .025), ncol=4,
+               frameon=False, markerscale=.75)
+    fig.suptitle('DR20 near-distance and giant-class reliability', fontweight='bold')
+    fig.subplots_adjust(left=.09, right=.98, top=.83, bottom=.22, wspace=.19)
+    files = [out / f'dr20_reliability.{ext}' for ext in ('png', 'pdf')]
+    for path in files:
+        fig.savefig(path, dpi=300)
+    plt.close(fig)
+    return files
+
+
 def main():
     development, development_sources = read_verified('branch_development', 'paired.csv')
     dr20, dr20_sources = read_verified('final_validation_dr20/scores', 'paired.csv')
+    reliability, (_, reliability_source) = read_verified('final_validation_dr20/scores', 'reliability.csv')
     hst, hst_sources = read_verified('final_validation_common', 'scale_agreement.csv')
     blue, orange, green, gray = '#22587d', '#a85321', '#287252', '#615d72'
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'axes.spines.top': False,
@@ -97,7 +137,8 @@ def main():
     for path in files:
         fig.savefig(path, dpi=300)
     plt.close(fig)
-    sources = (*development_sources, *dr20_sources, *hst_sources, Path(__file__).resolve(), *files)
+    sources = (*development_sources, *dr20_sources, *hst_sources, Path(__file__).resolve(),
+               reliability_source, *files, *reliability_plate(reliability, out))
     inventory = MANIFEST / 'final_validation_dr20/figure.json'
     inventory.write_text(json.dumps({str(p.relative_to(ROOT)): digest(p) for p in sources}, indent=2) + '\n')
 

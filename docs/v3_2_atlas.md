@@ -15,6 +15,21 @@ cohorts. Vertical bars propagate shared reference-scale uncertainty.
 [Source and output hashes](../manifests/v3_2/final_validation_dr20/figure.json) ·
 [External results](v3_2_external_result.md)
 
+## DR20 near-distance and giant-class reliability
+
+Points show matched-gate probability bins on the MINESweeper reference
+subset. Area increases with the number of objects in the bin. Vertical
+bars show available 95% sky-block intervals. QRF supplies a distance
+distribution and has zero giant-class probabilities available for this
+comparison. The near panel uses 982 qualified distance centers and the
+giant panel uses 676 class labels.
+
+![DR20 near-distance and giant-class reliability](../figures/v3_2/external_validation/dr20_reliability.png)
+
+[PNG](../figures/v3_2/external_validation/dr20_reliability.png) ·
+[PDF](../figures/v3_2/external_validation/dr20_reliability.pdf) ·
+[Source bins](../manifests/v3_2/final_validation_dr20/scores/reliability.csv)
+
 ## Opened-sky population and SED tilt contrasts
 
 The three panels show paired log-score changes for the same signed Gaia
