@@ -17,6 +17,7 @@ REMOTE = '/pscratch/sd/y/yunao/photdis_pipeline'
 HOST = 'yunao@perlmutter.nersc.gov'
 FILES = ('complete.json', 'numerical.csv', 'recovery.csv')
 RECOVERY_ARRAY = '61266369'
+RECOVERY_RETRIES = {'61278909': {37, 46}}
 PILOT_CATALOGS = {0, 128, 256}
 SSH = ('ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10',
        '-o', 'ServerAliveInterval=8', '-o', 'ServerAliveCountMax=2', HOST)
@@ -108,6 +109,13 @@ def main():
     if len(set(args.catalogs)) > 32:
         parser.error('Collect at most 32 compact results in each transfer')
     jobs = discover(RECOVERY_ARRAY, tasks) if args.completed or tasks else {}
+    for array_id, retry_catalogs in RECOVERY_RETRIES.items():
+        requested = retry_catalogs if args.completed else retry_catalogs.intersection(tasks)
+        if requested:
+            for catalog, job in discover(array_id, sorted(requested)).items():
+                if catalog in jobs and jobs[catalog] != job:
+                    raise ValueError(f'Multiple successful recovery jobs for catalog {catalog}')
+                jobs[catalog] = job
     if missing := set(tasks) - jobs.keys():
         parser.error('Slurm has no successful completion for catalogs ' + ', '.join(map(str, sorted(missing))))
     catalogs = sorted(set(args.catalogs)) if not args.completed else [

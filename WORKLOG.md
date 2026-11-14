@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — recover two scheduler-canceled radial tasks
+
+- Slurm recorded 037 and 046 as canceled after 22 and 18 seconds.
+  Neither produced a result directory. Submitted only those two
+  catalogs in shared array 61278909 with the frozen cached inputs.
+  Report 61266374 now waits on original-array termination and retry
+  success. Its full 288-receipt check remains required.
+- The collector reconciles successful retry receipts to raw job IDs.
+  Syntax and mocked retry and conflicting-completion checks passed.
+- Archived 038, 077 and 078. All six fits pass. Stage delivery
+  verified 48 catalogs, 96 verdicts (75 accepted), 1,920 intervals
+  and ten NGC288 states. NGC288 states 10–12 remain active.
+
 ## 2026-11-15 — recover the compact transfer for catalogs 036, 043 and 044
 
 - Slurm confirmed successful exits in 4m54s, 3m42s and 3m35s.
