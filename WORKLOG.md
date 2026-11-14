@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — freeze the branch rule for outcome-closed forecasts
+
+- Bound the completed opened result, branch rule, candidate/free fit
+  and forecast implementation in the prospective decision receipt.
+- Added both-cohort photometry-only forecasts with independent 0.02
+  and 0.01 mag likelihood evaluations, frozen calibration and regional
+  draw seeds, and strict DR11 PSF and fit-overlap checks.
+- Three branch tests passed, including a comparison with the transform
+  applied directly to the native joint density. Python and shell syntax
+  and diff checks passed. External outcomes remain closed.
+
 ## 2026-11-14 — evaluate the registered adjustment on opened objects
 
 - Replacement 61273353 completed 0:0 in 42s. Verified all four compact

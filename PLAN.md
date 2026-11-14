@@ -59,8 +59,10 @@ ledger in `docs/v3_2_requirements_result.md`.
   giant allocation adjustment in `docs/v3_2_branch_protocol.md`.
   Opened development job 61273353 completed on 526 PSFs with zero
   numerical flags and verified class-conditional distance invariance.
-  Implement the same fixed transform on independent forecast grids for
-  the closed DR20 and common-scale cohorts before outcome access.
+  Apply the same fixed transform on independently evaluated grids via
+  `scripts/run_v3_2_branch_forecast.sh`. The registered decision binds
+  the development completion, four-arm source, candidate/free fit,
+  and the new forecast implementation.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288

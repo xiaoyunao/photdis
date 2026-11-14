@@ -1,0 +1,16 @@
+{
+  "mechanism": "giant_posterior_log_odds_midpoint",
+  "base": "candidate_free",
+  "development_evaluation_complete": true,
+  "new_outcomes_read": false,
+  "approved_for_prospective_evaluation": true,
+  "inputs": {
+    "manifests/v3_2/branch_development/complete.json": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+    "manifests/v3_2/tilt_report/initial/complete.json": "e4acecda4240e311b6107fe8983bab7e84cc41b06acb3c70245a9f4fcd6af5f4",
+    "manifests/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+    "manifests/v3_2/tilt_fits/initial/candidate_free/complete.json": "34c95896d97c46db63b30dfe66d22a491a8c21ab879a6b7bc14f62f68b474160",
+    "docs/v3_2_branch_protocol.md": "d59cc47640dd99828dd04dfc0fa2cad76cbdc7287239ff469911f474059f927a",
+    "src/photdis/v3_2/giant_branch.py": "0487040ede331b0304ccae39fab1af918048cf9232acabbb71f57d3c1cc7ec6b",
+    "scripts/v3_2_branch_forecast.py": "2e075988a39b0c43721118d8ef05cfe338ea54d79f97f0c5c87880b2be75e915"
+  }
+}
