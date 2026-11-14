@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — complete the 60 percent empirical recovery strata
+
+- Archived 217–225 with the completed-mode radial collector. All 18
+  new fits pass. Completed-only delivery verifies 227 catalogs,
+  407 of 454 accepted fits, 9,080 intervals and 28 complete strata.
+- Recomputed the 60% deep-background, 0.25 mag empirical stratum.
+  Width coverage is 3/8 and the paired count-error change is −6.64
+  percentage points. Updated `docs/v3_2_result.md`.
+- NGC288 state 10 was still running at 2h13m23s. Its latest checked
+  log recorded 480 of 512 radial rows. Ten states remain archived.
+
 ## 2026-11-15 — verify the 60 percent empirical near wide stratum
 
 - Archived 208–216 using the completed-mode radial collector.

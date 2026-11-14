@@ -137,10 +137,9 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Two hundred eighteen of 288 catalogs have verified compact outputs.
-  All 16 fixed model-SED strata and the eight 10% and 30% empirical-SED
-  strata are complete. Three 60% empirical strata are complete:
-  both 0.08 mag cases and the near-background 0.25 mag case.
+  Two hundred twenty-seven of 288 catalogs have verified compact outputs.
+  All 16 fixed model-SED strata and all 12 empirical-SED strata at
+  10%, 30% and 60% are complete.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.

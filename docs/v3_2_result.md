@@ -229,6 +229,11 @@ cover width truth (exact 95% coverage interval 0.245–0.915).
 The mean width median is 0.358 mag and mean interval length is
 0.264 mag. The paired count-error change is −5.37
 [−9.57, −1.56] percentage points.
+At the same fraction and true width in the deep background,
+both arms pass in all eight repeats. Local width coverage is
+3/8 (exact 95% interval 0.085–0.755). The mean width median is
+0.383 mag and mean interval length is 0.279 mag. The paired
+count-error change is −6.64 [−10.49, −3.13] percentage points.
 The remaining empirical-SED strata and prior-predictive comparison
 are in progress.
 The NGC288 odds-only
