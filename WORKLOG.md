@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — bind historical regression attribution to common objects
+
+- Added historical-gap attribution to the queued 2x2 report. Sum the
+  old-anchor gap, broad tilt removal, zero-tilt population change and
+  candidate-zero anchor gap on identical support. Report the interaction
+  on those same objects with paired sky-block intervals.
+- Synthetic signed-score check recovers each contribution, exact closure
+  and retention of nonfinite rows. Python syntax and 14 focused tests pass.
+- Slurm confirms only input shard 00 is complete. Original array and
+  downstream dependencies are still pending with no start estimate.
+
 ## 2026-11-14 — retain targeted entry refinements through interruptions
 
 - Added checkpoints to the 2x2 flagged-context refinement stage. Bind

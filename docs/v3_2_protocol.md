@@ -143,3 +143,12 @@ probability and the class-conditioned distance score and far mass. Means
 use the same-object sky-block bootstrap. The frozen no-color, grz, griz and
 multiband probes are separate information controls, with historical fit and
 temperature-calibration IDs excluded. No probe score enters a distance fit.
+
+On the common support of the four matched arms and both historical
+anchors, decompose the historical candidate-zero minus old-target gap.
+Sum old target to matched broad/free, tilt removal within broad,
+population change at zero tilt, and matched candidate zero to the
+historical candidate zero. Verify this sum object by object. Report the
+population-by-tilt interaction on those same objects. Resample whole
+sky blocks using the registered statistic. Count missing channels and
+retain nonfinite scores for every component on this shared support.

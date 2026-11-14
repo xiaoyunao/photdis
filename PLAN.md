@@ -16,7 +16,8 @@ Active goal follows the Pro review of 7699299. See
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
-  The paired report tracks their distance-bin counts and external scores.
+  The paired report tracks their distance-bin counts and external scores,
+  and decomposes the historical regression with an exact same-object sum.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See

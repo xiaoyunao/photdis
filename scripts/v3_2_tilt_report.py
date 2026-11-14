@@ -99,6 +99,52 @@ def entry_sensitivity(role, arm, rows, values):
     return summaries, counts
 
 
+def historical_decomposition(groups, anchors):
+    """Decompose the old-target to candidate-zero gap on common support."""
+    records = []
+    for role in ROLES:
+        selected = [g for g in groups if g[ARMS[0]]['role'] == role
+                    and g[ARMS[0]]['candidate_admission'] == 'True']
+        for stratum, label in [('all', None), ('dwarf', 0), ('giant', 1)]:
+            same = [g for g in selected if label is None or int(g[ARMS[0]]['class_label']) == label]
+            cells = np.array([int(g[ARMS[0]]['cell']) for g in same])
+            for metric in ('signed_gaia_log_score', 'class_log_score', 'p_giant', 'qnear'):
+                values = []
+                for group in same:
+                    row = group[ARMS[0]]
+                    identity = int(row['identity'])
+                    old, new = (anchors[identity, name] for name in ('old_target/old_target', 'candidate/zero'))
+                    for anchor in (old, new):
+                        if (anchor['TYPE'] != 'PSF' or anchor['role'] != role or anchor['cell'] != row['cell']
+                                or anchor['reference_class'] != row['class_label']):
+                            raise ValueError('Historical decomposition identity mismatch')
+                    values.append([number(dict(old, class_label=row['class_label']), metric),
+                                   *(number(group[arm], metric) for arm in ARMS),
+                                   number(dict(new, class_label=row['class_label']), metric)])
+                matrix = np.asarray(values, dtype=float).reshape(-1, 6)
+                available = ~np.isnan(matrix).any(axis=1)
+                finite = np.isfinite(matrix[available]).all(axis=1)
+                historic_old, bz, bf, cz, cf, historic_zero = matrix[available][finite].T
+                components = {
+                    'historical_gap': historic_zero-historic_old,
+                    'old_target_to_matched_broad_free': bf-historic_old,
+                    'remove_tilt_in_broad': bz-bf,
+                    'change_population_at_zero_tilt': cz-bz,
+                    'matched_candidate_zero_to_historical': historic_zero-cz,
+                    'population_by_tilt_interaction': (cf-cz)-(bf-bz),
+                }
+                np.testing.assert_allclose(
+                    components['historical_gap'],
+                    sum(components[k] for k in list(components)[1:5]), rtol=0, atol=1e-10)
+                for name, delta in components.items():
+                    full = np.full(len(finite), np.inf)
+                    full[finite] = delta
+                    records.append(dict(role=role, stratum=stratum, metric=metric, component=name,
+                                        group_n=len(same), missing_n=int((~available).sum()),
+                                        **field_statistic(full, cells[available])))
+    return records
+
+
 def summarize(groups, anchors, forecast, manifest):
     absolute, alignment, confusion, counts, gates = [], [], [], [], []
     covariances, decomposition, entry_checks, entry_counts = {}, [], [], []
@@ -202,6 +248,7 @@ def main():
             anchors[key] = r
     tables, covariance = summarize(groups, anchors, forecast, marker)
     tables['factorial'] = contrast_rows(groups)
+    tables['historical_decomposition'] = historical_decomposition(groups, anchors)
     out = root / 'tilt_report/initial'
     out.mkdir(parents=True, exist_ok=False)
     for name, rows in tables.items():
