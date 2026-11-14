@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial caches 24 and 25
+
+- Repeats 24 and 25 completed 0:0 in 14m18s and 14m02s. Reconciled
+  both compact cache receipts with the frozen design. Verified
+  coverage is now 26 repeats and 3,328 contexts.
+- Cleared the redundant dependency for recovery 280 and 281 after
+  verifying both cache hashes on NERSC. The final report still
+  depends on the full recovery array.
+- Moved pending repeats 26 and 27 to debug QoS (61275685 and
+  61275687). Recovery tasks eligible for scheduling total 279.
+
 ## 2026-11-14 — verify the radial result transfer against NERSC
 
 - Added the compact recovery collector. It verifies the frozen
