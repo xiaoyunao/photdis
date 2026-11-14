@@ -28,8 +28,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Raised the input array throttle from 4 to 5 after all eight pending
   slots reported JobArrayTaskLimit with no running slots. The scheduler
   cleared that reason and retained both downstream dependencies.
-  Pending shard 24 moved to debug QoS with its existing 30-minute limit.
-  Shard 25 remains on the regular queue.
+  Shards 24 and 25 moved to debug QoS with their existing 30-minute limits,
+  within the two-running-job QoS cap. Refinement dependencies still apply.
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.

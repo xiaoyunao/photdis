@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — use the second available debug slot for tilt shard 25
+
+- Confirmed shard 24 was running and the only debug job. Guarded
+  `scontrol update JobId=61259514_25 QOS=debug` on a zero-runtime
+  pending child with a 30-minute limit. The first SSH connection closed
+  before the update took effect. Fresh controller reads verified no
+  change before retrying.
+- The controller confirmed shard 25 is pending in debug (raw job
+  61266911) and its matching refinement retains aftercorr. Other
+  pending input slots remain on the regular queue.
+
 ## 2026-11-14 — verify exact direct/cache equivalence and advance tilt shard 24
 
 - Cache verification 61261765 completed in 17s with exit 0:0 in its existing
