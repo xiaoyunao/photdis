@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — complete the 30 percent model-SED recovery strata
+
+- Archived 058–063. Stage delivery passed with 68 catalogs,
+  136 fit verdicts (115 accepted), 2,720 intervals and ten
+  NGC288 states. Eight of 33 strata are complete. Added all
+  four 30% model-SED strata to the synthesis with interval
+  lengths and exact binomial limits.
+- Moved the remaining zero-runtime regular recovery tasks to
+  CPU shared. Slurm readback showed 212 pending and seven running
+  in shared with 8 GiB and 30 minutes. The report dependency is intact.
+- NGC288 state 13 started. States 10–12 reached 112, 96 and 96
+  verified checkpoints at the previous snapshot.
+
 ## 2026-11-15 — verify both canceled-catalog retries and three more strata
 
 - Both retry tasks 61278909_37 and _46 completed in debug in
