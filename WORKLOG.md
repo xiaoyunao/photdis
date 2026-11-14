@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — freeze the narrow-structure catalog design
+
+- Registered 256 fixed-truth model/empirical catalogs and 32 model-matched
+  prior-predictive catalogs in `docs/v3_2_radial_protocol.md`. Contexts come
+  from the frozen PSF sample with shared band-mask support. Each repeat
+  uses the same contexts across fixed-truth designs and draws conditional
+  on native grz entry. Save realized selected membership separately.
+- `python3 -m py_compile` and `bash -n` pass. A two-generator smoke test
+  verifies 288 settings, paired context identities and all grz admission.
+- Opened-field jobs 61259969 and 61259977 follow 61259811 in order. Next
+  run and authenticate the simulated catalog design and prepare matched
+  local dust entry and recovery.
+
 ## 2026-11-14 — queue matched fits and validate the opened-field report
 
 - Previous turn produced and authenticated shard 00 and its refinements.

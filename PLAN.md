@@ -10,11 +10,12 @@ Active goal follows the Pro review of 7699299. See
 - Fit the population by SED tilt comparison with matched selection. The
   first production shard is verified, and array 61259514 builds the other 31.
   Shard 00 refinements pass 26/26, and array 61259727 follows 61259514.
-  Four matched fits are queued as 61259811. Score the opened field and
-  report direct paired factorial contrasts and shared-draw count moments.
+  Four matched fits (61259811), predictions (61259969), and the paired
+  report (61259977) are queued in dependency order.
 - Decompose giant branch availability, suppression and class-conditional
   distance error. Then choose one supported model modification.
-- Run scoped narrow-structure and numerical diagnostics. Freeze new validation
+- Run scoped narrow-structure and numerical diagnostics. Registered 288
+  catalogs in `docs/v3_2_radial_protocol.md`. Freeze new validation
   before opening outcomes or expanding the production footprint.
 
 ## v3.1 — completed research delivery
