@@ -1,0 +1,1715 @@
+[
+  {
+    "brick": "1991m130",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1991m130.fits",
+    "native_stat": {
+      "size": 20704320,
+      "mtime_ns": 1777611561000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1991m132",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1991m132.fits",
+    "native_stat": {
+      "size": 20459520,
+      "mtime_ns": 1777611678000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1991m135",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1991m135.fits",
+    "native_stat": {
+      "size": 19800000,
+      "mtime_ns": 1777611175000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1992m145",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1992m145.fits",
+    "native_stat": {
+      "size": 16260480,
+      "mtime_ns": 1777610368000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1992m147",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1992m147.fits",
+    "native_stat": {
+      "size": 17208000,
+      "mtime_ns": 1777609971000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1993m127",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1993m127.fits",
+    "native_stat": {
+      "size": 23785920,
+      "mtime_ns": 1777611934000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1993m130",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1993m130.fits",
+    "native_stat": {
+      "size": 20833920,
+      "mtime_ns": 1777611555000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1993m132",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1993m132.fits",
+    "native_stat": {
+      "size": 18538560,
+      "mtime_ns": 1777611467000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "0b826ea850dbbed1eb504e462a35d85127959871ed77fbb6abcf2c3d987bb172"
+  },
+  {
+    "brick": "1993m135",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1993m135.fits",
+    "native_stat": {
+      "size": 18941760,
+      "mtime_ns": 1777611244000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1994m137",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1994m137.fits",
+    "native_stat": {
+      "size": 19584000,
+      "mtime_ns": 1777611091000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1994m142",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1994m142.fits",
+    "native_stat": {
+      "size": 19437120,
+      "mtime_ns": 1777611193000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1994m145",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1994m145.fits",
+    "native_stat": {
+      "size": 17988480,
+      "mtime_ns": 1777610501000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "0ed4d01030428cbadd707e997016e302af2c2dfdca71c6d6171e712f9d600591"
+  },
+  {
+    "brick": "1994m147",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1994m147.fits",
+    "native_stat": {
+      "size": 17038080,
+      "mtime_ns": 1777610242000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1995m127",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1995m127.fits",
+    "native_stat": {
+      "size": 20949120,
+      "mtime_ns": 1777611406000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1995m150",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1995m150.fits",
+    "native_stat": {
+      "size": 15739200,
+      "mtime_ns": 1777610199000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1996m130",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m130.fits",
+    "native_stat": {
+      "size": 20007360,
+      "mtime_ns": 1777611981000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "825bf48aacbf61ec704bcfa75345e248cabb6af84e0be7debdd41fa12a4bc0e9"
+  },
+  {
+    "brick": "1996m132",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m132.fits",
+    "native_stat": {
+      "size": 18803520,
+      "mtime_ns": 1777612275000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1996m135",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m135.fits",
+    "native_stat": {
+      "size": 18941760,
+      "mtime_ns": 1777611486000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "e5554bb1d7ea83e42112ebf1b1fbd120a7e88484cf0875af1f095d9a941a6039"
+  },
+  {
+    "brick": "1996m137",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m137.fits",
+    "native_stat": {
+      "size": 19051200,
+      "mtime_ns": 1777611462000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1996m140",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m140.fits",
+    "native_stat": {
+      "size": 17202240,
+      "mtime_ns": 1777610947000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1996m142",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1996m142.fits",
+    "native_stat": {
+      "size": 20413440,
+      "mtime_ns": 1777611820000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1997m145",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1997m145.fits",
+    "native_stat": {
+      "size": 19543680,
+      "mtime_ns": 1777611318000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "90108b50a2b10b7a29f01ef029df0a3dbf890ea113dee1a668fc465dba4bd81a"
+  },
+  {
+    "brick": "1997m147",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1997m147.fits",
+    "native_stat": {
+      "size": 16882560,
+      "mtime_ns": 1777610495000000000
+    },
+    "exact": 1,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 1
+  },
+  {
+    "brick": "1997m150",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1997m150.fits",
+    "native_stat": {
+      "size": 14693760,
+      "mtime_ns": 1777610204000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1997m152",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1997m152.fits",
+    "native_stat": {
+      "size": 16505280,
+      "mtime_ns": 1777610339000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1998m127",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1998m127.fits",
+    "native_stat": {
+      "size": 21421440,
+      "mtime_ns": 1777612805000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1998m130",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1998m130.fits",
+    "native_stat": {
+      "size": 21384000,
+      "mtime_ns": 1777612855000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1998m132",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1998m132.fits",
+    "native_stat": {
+      "size": 20764800,
+      "mtime_ns": 1774065967000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "ba4c277dd4e22f0752923463c8354bdaaf10358da2c3244e27795a772ef11b43"
+  },
+  {
+    "brick": "1999m135",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1999m135.fits",
+    "native_stat": {
+      "size": 19324800,
+      "mtime_ns": 1774064809000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "c01f77e67f7c146ec9ca6b4d43eaae225f59035a75ce07abc2bda26b53d2eb0f"
+  },
+  {
+    "brick": "1999m137",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1999m137.fits",
+    "native_stat": {
+      "size": 21038400,
+      "mtime_ns": 1777612146000000000
+    },
+    "exact": 2,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "21bbb9a52b80c394e70b62cbfdafeefd004773cee5dcf257d5233c3da3da8b7b"
+  },
+  {
+    "brick": "1999m140",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1999m140.fits",
+    "native_stat": {
+      "size": 20116800,
+      "mtime_ns": 1777612294000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1999m142",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1999m142.fits",
+    "native_stat": {
+      "size": 22466880,
+      "mtime_ns": 1777612746000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "1999m145",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/199/tractor-1999m145.fits",
+    "native_stat": {
+      "size": 18524160,
+      "mtime_ns": 1774064419000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2000m147",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2000m147.fits",
+    "native_stat": {
+      "size": 15857280,
+      "mtime_ns": 1777610644000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2000m150",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2000m150.fits",
+    "native_stat": {
+      "size": 15128640,
+      "mtime_ns": 1777610605000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "89503c2a6853f0c6502a32f6312eedcc420923909e0dd7f67ea173b7e8c90fb2"
+  },
+  {
+    "brick": "2000m152",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2000m152.fits",
+    "native_stat": {
+      "size": 17504640,
+      "mtime_ns": 1777610812000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2001m130",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2001m130.fits",
+    "native_stat": {
+      "size": 20387520,
+      "mtime_ns": 1777612451000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2001m132",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2001m132.fits",
+    "native_stat": {
+      "size": 20865600,
+      "mtime_ns": 1777612647000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2001m135",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2001m135.fits",
+    "native_stat": {
+      "size": 19949760,
+      "mtime_ns": 1774065060000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2001m137",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2001m137.fits",
+    "native_stat": {
+      "size": 19872000,
+      "mtime_ns": 1777612564000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2002m140",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2002m140.fits",
+    "native_stat": {
+      "size": 23224320,
+      "mtime_ns": 1777613896000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2002m145",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2002m145.fits",
+    "native_stat": {
+      "size": 17280000,
+      "mtime_ns": 1777611598000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2003m150",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/200/tractor-2003m150.fits",
+    "native_stat": {
+      "size": 14682240,
+      "mtime_ns": 1777611063000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2377m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/237/tractor-2377m102.fits",
+    "native_stat": {
+      "size": 20854080,
+      "mtime_ns": 1774089297000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2379m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/237/tractor-2379m100.fits",
+    "native_stat": {
+      "size": 22740480,
+      "mtime_ns": 1774089617000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2380m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2380m102.fits",
+    "native_stat": {
+      "size": 22124160,
+      "mtime_ns": 1777652434000000000
+    },
+    "exact": 2,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 2
+  },
+  {
+    "brick": "2380m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2380m105.fits",
+    "native_stat": {
+      "size": 25594560,
+      "mtime_ns": 1777653836000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2380m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2380m107.fits",
+    "native_stat": {
+      "size": 24324480,
+      "mtime_ns": 1777652893000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2380m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2380m110.fits",
+    "native_stat": {
+      "size": 23414400,
+      "mtime_ns": 1774090030000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2381m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2381m097.fits",
+    "native_stat": {
+      "size": 19863360,
+      "mtime_ns": 1774089686000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2381m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2381m100.fits",
+    "native_stat": {
+      "size": 21055680,
+      "mtime_ns": 1774089819000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "9411f0cbaebca13785ac85ba4c2b39fff9cea2a0b58f54dfd0c50cdc2c253f05"
+  },
+  {
+    "brick": "2381m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2381m112.fits",
+    "native_stat": {
+      "size": 22628160,
+      "mtime_ns": 1774090127000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2382m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2382m102.fits",
+    "native_stat": {
+      "size": 23929920,
+      "mtime_ns": 1777652438000000000
+    },
+    "exact": 4,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "9a997074c15c92299136320bf0e338f625528d9928a44534f957003ad46f28e4"
+  },
+  {
+    "brick": "2382m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2382m105.fits",
+    "native_stat": {
+      "size": 27699840,
+      "mtime_ns": 1777653462000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "5f3f6ac358ac972eb6322fd3b437ee3cc8759bce09978a00883d413bd475a3f2"
+  },
+  {
+    "brick": "2383m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2383m107.fits",
+    "native_stat": {
+      "size": 24877440,
+      "mtime_ns": 1777653648000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2383m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2383m110.fits",
+    "native_stat": {
+      "size": 24117120,
+      "mtime_ns": 1774090058000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "2547af256ccc7919821e7ddccc0552a34ff8a5c51aeb7fb0d5c49fd188132806"
+  },
+  {
+    "brick": "2384m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2384m097.fits",
+    "native_stat": {
+      "size": 20329920,
+      "mtime_ns": 1777651958000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2384m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2384m100.fits",
+    "native_stat": {
+      "size": 22734720,
+      "mtime_ns": 1777652396000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "0435219b6543260f0a8c84340e068c775b723c046693c00f472a5dd10886624d"
+  },
+  {
+    "brick": "2384m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2384m112.fits",
+    "native_stat": {
+      "size": 22245120,
+      "mtime_ns": 1774091019000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2385m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2385m102.fits",
+    "native_stat": {
+      "size": 24448320,
+      "mtime_ns": 1777652448000000000
+    },
+    "exact": 5,
+    "matched_primary": 4,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "fb09efb4a21bede13a9f25829da7f36763149f211b93784af013894a532f05ad"
+  },
+  {
+    "brick": "2385m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2385m105.fits",
+    "native_stat": {
+      "size": 25850880,
+      "mtime_ns": 1777653560000000000
+    },
+    "exact": 4,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 2,
+    "sha256": "c496f06a4b88c5f612687a4abdd94695a0ea2e7c6ee8b1d67d6430c29774149a"
+  },
+  {
+    "brick": "2386m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2386m097.fits",
+    "native_stat": {
+      "size": 21179520,
+      "mtime_ns": 1774090229000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2386m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2386m100.fits",
+    "native_stat": {
+      "size": 23382720,
+      "mtime_ns": 1774090928000000000
+    },
+    "exact": 3,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "b29b868c2e2f8d945fa46545d0a97db3402c938fdcc5e28e78ccab954c635522"
+  },
+  {
+    "brick": "2386m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2386m107.fits",
+    "native_stat": {
+      "size": 23253120,
+      "mtime_ns": 1777652367000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "dae5f3f125465b13200e7e5f28255e688d094b0a1ef33f253fbd9da557b5667c"
+  },
+  {
+    "brick": "2386m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2386m110.fits",
+    "native_stat": {
+      "size": 22184640,
+      "mtime_ns": 1777652500000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "82c1a9340310ff742bbb9d15b9ba31ccd3ef5340e1870450a961f3b32a1987a9"
+  },
+  {
+    "brick": "2386m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2386m112.fits",
+    "native_stat": {
+      "size": 23904000,
+      "mtime_ns": 1777653059000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2387m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2387m102.fits",
+    "native_stat": {
+      "size": 24056640,
+      "mtime_ns": 1774090708000000000
+    },
+    "exact": 3,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "8c21646484d4cb6b4bd34ae5ffb93404a86dcea4f8f96e966686bd711208ee8d"
+  },
+  {
+    "brick": "2387m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2387m105.fits",
+    "native_stat": {
+      "size": 25156800,
+      "mtime_ns": 1777652672000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "e7137dab34acd5ed3dd99363f2d60cb8a9a192aaf7c46cfbcb57ec0ff0a6c56c"
+  },
+  {
+    "brick": "2388m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2388m107.fits",
+    "native_stat": {
+      "size": 24503040,
+      "mtime_ns": 1774091116000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "856c9c806c634d78ca6d56635f0c3ec55819c60aad567a48c250f0ae5b194baa"
+  },
+  {
+    "brick": "2388m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2388m110.fits",
+    "native_stat": {
+      "size": 25963200,
+      "mtime_ns": 1777653020000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "c12d73fe7197086dbeeb2c1ccc07ff45de6c0fc1db207128cd0ea26ce9ff6df9"
+  },
+  {
+    "brick": "2389m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2389m097.fits",
+    "native_stat": {
+      "size": 22691520,
+      "mtime_ns": 1777652669000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2389m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2389m100.fits",
+    "native_stat": {
+      "size": 22389120,
+      "mtime_ns": 1774090587000000000
+    },
+    "exact": 2,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "318bfd9ccdc19ad8ed1cb5973da9bf06d3cc8ba45c84c69b4ce3553fa1d57816"
+  },
+  {
+    "brick": "2389m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/238/tractor-2389m112.fits",
+    "native_stat": {
+      "size": 22135680,
+      "mtime_ns": 1774090755000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2390m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2390m102.fits",
+    "native_stat": {
+      "size": 23011200,
+      "mtime_ns": 1777653030000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "67dee4e9dba5da55f2ca3cfa481bd27c2606de05c3738aea063b1bd2d74ccc34"
+  },
+  {
+    "brick": "2390m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2390m105.fits",
+    "native_stat": {
+      "size": 25295040,
+      "mtime_ns": 1777653014000000000
+    },
+    "exact": 4,
+    "matched_primary": 4,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "694ff60c1c55bbaeb623701869becf1edfd48b0033ece67735ec7a872d60d364"
+  },
+  {
+    "brick": "2391m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2391m097.fits",
+    "native_stat": {
+      "size": 22409280,
+      "mtime_ns": 1777652418000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2391m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2391m100.fits",
+    "native_stat": {
+      "size": 22066560,
+      "mtime_ns": 1777653284000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "e8e4b726c176ebffc77f6b35e0c29a34a552297ba93a7ca7371dffa5752175d6"
+  },
+  {
+    "brick": "2391m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2391m107.fits",
+    "native_stat": {
+      "size": 21801600,
+      "mtime_ns": 1777652035000000000
+    },
+    "exact": 3,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "21831fa8f1fce7cf4de0c79ae6ab07d1576dd2068fbe63bc87fa46b242d63aea"
+  },
+  {
+    "brick": "2391m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2391m110.fits",
+    "native_stat": {
+      "size": 20387520,
+      "mtime_ns": 1774090562000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "659f972c0c1c0d9352a1fd1b1b093728e027d0e93b09b7bc9347d290ecc001bb"
+  },
+  {
+    "brick": "2391m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2391m112.fits",
+    "native_stat": {
+      "size": 21156480,
+      "mtime_ns": 1774090571000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2392m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2392m102.fits",
+    "native_stat": {
+      "size": 24840000,
+      "mtime_ns": 1774091839000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2392m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2392m105.fits",
+    "native_stat": {
+      "size": 22760640,
+      "mtime_ns": 1774091315000000000
+    },
+    "exact": 3,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "c30de0e5b0031612f6d7e24e89e20a92031ce6e6fb0fa9c275964620c9434cd7"
+  },
+  {
+    "brick": "2392m115",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2392m115.fits",
+    "native_stat": {
+      "size": 22570560,
+      "mtime_ns": 1777652919000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2393m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2393m107.fits",
+    "native_stat": {
+      "size": 20678400,
+      "mtime_ns": 1777652039000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2393m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2393m110.fits",
+    "native_stat": {
+      "size": 21962880,
+      "mtime_ns": 1774090812000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "24d3d99927a5c2010afe5c41bf0f6034242b6841bc90e06df3da0c7857681246"
+  },
+  {
+    "brick": "2394m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2394m097.fits",
+    "native_stat": {
+      "size": 20370240,
+      "mtime_ns": 1774091157000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2394m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2394m100.fits",
+    "native_stat": {
+      "size": 21286080,
+      "mtime_ns": 1777652373000000000
+    },
+    "exact": 1,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 1
+  },
+  {
+    "brick": "2394m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2394m112.fits",
+    "native_stat": {
+      "size": 20957760,
+      "mtime_ns": 1777652155000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "0ed955ac920e5a2d8e8de1783a5c99f9df0f37122a4775e7876dc8948b773b4b"
+  },
+  {
+    "brick": "2395m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2395m102.fits",
+    "native_stat": {
+      "size": 22184640,
+      "mtime_ns": 1777652599000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "a13431ea78c9af9291aad53cc35a2c19e65d110b8efbd388b11f5edd0f020ce4"
+  },
+  {
+    "brick": "2395m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2395m105.fits",
+    "native_stat": {
+      "size": 20664000,
+      "mtime_ns": 1777652169000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "02b3835e31676ca0333d24336351b2653887bbfdfbaca3a68f6e5473cf9a5d4e"
+  },
+  {
+    "brick": "2395m115",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2395m115.fits",
+    "native_stat": {
+      "size": 21119040,
+      "mtime_ns": 1774091763000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2396m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2396m107.fits",
+    "native_stat": {
+      "size": 20183040,
+      "mtime_ns": 1777652184000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "b1c69755d434cfb6462441b564cc4de185749cdabe5c30f672e7a269059acbc1"
+  },
+  {
+    "brick": "2396m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2396m110.fits",
+    "native_stat": {
+      "size": 20148480,
+      "mtime_ns": 1777652273000000000
+    },
+    "exact": 1,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 1
+  },
+  {
+    "brick": "2397m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m097.fits",
+    "native_stat": {
+      "size": 19091520,
+      "mtime_ns": 1774091174000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2397m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m100.fits",
+    "native_stat": {
+      "size": 20551680,
+      "mtime_ns": 1777652666000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "01c9274cc19384fb24e1fcfb1d48327401c809b3b8fdd3a18ab8f4db1ec750cc"
+  },
+  {
+    "brick": "2397m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m102.fits",
+    "native_stat": {
+      "size": 19992960,
+      "mtime_ns": 1777652495000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "36e313d441d13ee1bc3fa3e074dc470f38882610e53831fb99289c2b9183b4b5"
+  },
+  {
+    "brick": "2397m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m105.fits",
+    "native_stat": {
+      "size": 18264960,
+      "mtime_ns": 1777652106000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "7b0a371c0f97071f0086d264c9a34446234159d9a8070d38a56bcb58ad68ce2b"
+  },
+  {
+    "brick": "2397m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m112.fits",
+    "native_stat": {
+      "size": 18964800,
+      "mtime_ns": 1777652255000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "181274669c6b16149976a8077f41ef477c8aca1bd064559c902ec253ff09558f"
+  },
+  {
+    "brick": "2397m115",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2397m115.fits",
+    "native_stat": {
+      "size": 19860480,
+      "mtime_ns": 1774091678000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2398m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2398m107.fits",
+    "native_stat": {
+      "size": 21035520,
+      "mtime_ns": 1774091537000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "926186c5b883d55a5eb342f1711eaa8cfca5f47453e5bcffe77bc532b9024d5e"
+  },
+  {
+    "brick": "2398m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2398m110.fits",
+    "native_stat": {
+      "size": 19566720,
+      "mtime_ns": 1777653064000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "3af4e83ffdd10322008baf823b507ceb7026fb15c46e75efcfd0fb8ae9f6d737"
+  },
+  {
+    "brick": "2399m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2399m097.fits",
+    "native_stat": {
+      "size": 19152000,
+      "mtime_ns": 1777652658000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2399m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2399m100.fits",
+    "native_stat": {
+      "size": 22253760,
+      "mtime_ns": 1777652893000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "a6850e9420d6d45ec0d82d409b3f78ace05c853f3704b2996fece9aea767441a"
+  },
+  {
+    "brick": "2399m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/239/tractor-2399m112.fits",
+    "native_stat": {
+      "size": 17447040,
+      "mtime_ns": 1777652103000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2400m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2400m102.fits",
+    "native_stat": {
+      "size": 20715840,
+      "mtime_ns": 1777652910000000000
+    },
+    "exact": 2,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "99eaabf2815fe8eaa12f77960b5f2b689cc50c8e2d85faf8bce2343488b5aa99"
+  },
+  {
+    "brick": "2400m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2400m105.fits",
+    "native_stat": {
+      "size": 17020800,
+      "mtime_ns": 1777652253000000000
+    },
+    "exact": 3,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 1,
+    "sha256": "a4086e03c518753a86aff5fcd9a7bf04d75e0ebfc0b6aea94818dd9978ef005a"
+  },
+  {
+    "brick": "2401m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2401m107.fits",
+    "native_stat": {
+      "size": 16917120,
+      "mtime_ns": 1778032503000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "3eeba0ca23ea00a64c5a300de9e663a2a3eb6c9d3344f4f141a95bb7a0effc30"
+  },
+  {
+    "brick": "2401m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2401m110.fits",
+    "native_stat": {
+      "size": 15419520,
+      "mtime_ns": 1777652096000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2402m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2402m097.fits",
+    "native_stat": {
+      "size": 21562560,
+      "mtime_ns": 1774092410000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2402m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2402m100.fits",
+    "native_stat": {
+      "size": 22582080,
+      "mtime_ns": 1774092419000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2402m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2402m102.fits",
+    "native_stat": {
+      "size": 20514240,
+      "mtime_ns": 1774091879000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "7213d1fb1b620d40d6d3a897e0e79e3e813ab308e5047785b5908a067eab0678"
+  },
+  {
+    "brick": "2402m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2402m105.fits",
+    "native_stat": {
+      "size": 16056000,
+      "mtime_ns": 1774091508000000000
+    },
+    "exact": 3,
+    "matched_primary": 3,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "24998f1873485020261e97221000a9c223ed8fc5d512dc612ef8a50847d9811c"
+  },
+  {
+    "brick": "2402m112",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2402m112.fits",
+    "native_stat": {
+      "size": 16251840,
+      "mtime_ns": 1777652343000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2403m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2403m107.fits",
+    "native_stat": {
+      "size": 16715520,
+      "mtime_ns": 1777652309000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "f43650c40440313b5c37267a81de0fedf77bc31bc888d00a0a9c18887d2f7f18"
+  },
+  {
+    "brick": "2403m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2403m110.fits",
+    "native_stat": {
+      "size": 14616000,
+      "mtime_ns": 1774091539000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2404m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2404m097.fits",
+    "native_stat": {
+      "size": 22109760,
+      "mtime_ns": 1777653130000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2404m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2404m100.fits",
+    "native_stat": {
+      "size": 22334400,
+      "mtime_ns": 1777653147000000000
+    },
+    "exact": 4,
+    "matched_primary": 4,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "6fbe807c68c5722905f9133f473b27f1008e3a6daee2bcb29569ee052da54e34"
+  },
+  {
+    "brick": "2405m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2405m102.fits",
+    "native_stat": {
+      "size": 22536000,
+      "mtime_ns": 1777653244000000000
+    },
+    "exact": 1,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 1
+  },
+  {
+    "brick": "2405m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2405m105.fits",
+    "native_stat": {
+      "size": 17435520,
+      "mtime_ns": 1777652466000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "94bf3b57a36825b69c221b9ffcb8b1902f5df7c6d64796c4c0fa2153fd415f60"
+  },
+  {
+    "brick": "2406m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2406m107.fits",
+    "native_stat": {
+      "size": 15785280,
+      "mtime_ns": 1777652578000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "d6f4c9184765010316c9cac789ca76147799789c72c50ea9e9812b27e7c50a98"
+  },
+  {
+    "brick": "2406m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2406m110.fits",
+    "native_stat": {
+      "size": 14590080,
+      "mtime_ns": 1774091851000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2407m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2407m100.fits",
+    "native_stat": {
+      "size": 23420160,
+      "mtime_ns": 1777653501000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2408m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2408m102.fits",
+    "native_stat": {
+      "size": 21968640,
+      "mtime_ns": 1774093193000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "277735cdaace735d0d172a30f47b6abf30735012a8293f3be3e07f5ecc3f3af4"
+  },
+  {
+    "brick": "2408m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2408m105.fits",
+    "native_stat": {
+      "size": 19025280,
+      "mtime_ns": 1777652967000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2408m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2408m107.fits",
+    "native_stat": {
+      "size": 18924480,
+      "mtime_ns": 1777652815000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "f8851a9f2026b37f0a1848ef38d2fc77a34b7ed6d6a78af9eac56f405153cfff"
+  },
+  {
+    "brick": "2408m110",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2408m110.fits",
+    "native_stat": {
+      "size": 18115200,
+      "mtime_ns": 1777652871000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2409m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2409m097.fits",
+    "native_stat": {
+      "size": 22965120,
+      "mtime_ns": 1777653768000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2409m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/240/tractor-2409m100.fits",
+    "native_stat": {
+      "size": 23353920,
+      "mtime_ns": 1774094616000000000
+    },
+    "exact": 2,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 2
+  },
+  {
+    "brick": "2410m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2410m102.fits",
+    "native_stat": {
+      "size": 20295360,
+      "mtime_ns": 1774092888000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "1dda341c88b111159521a6715dcaafa679b4a2a42185bdfa59f1672009f0df7d"
+  },
+  {
+    "brick": "2410m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2410m105.fits",
+    "native_stat": {
+      "size": 17642880,
+      "mtime_ns": 1777652899000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "bacc233352d5a5cb70ac85b1fa67879045da7707f6909ffc2a3cc0f81177dc28"
+  },
+  {
+    "brick": "2411m107",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2411m107.fits",
+    "native_stat": {
+      "size": 17896320,
+      "mtime_ns": 1777652983000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2412m097",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2412m097.fits",
+    "native_stat": {
+      "size": 24059520,
+      "mtime_ns": 1777654575000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2412m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2412m100.fits",
+    "native_stat": {
+      "size": 19895040,
+      "mtime_ns": 1777653730000000000
+    },
+    "exact": 2,
+    "matched_primary": 2,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "30b1dc2b1ec1dea9b867de5795ba821f1342efe6014a2c408e7837ee0ac233dd"
+  },
+  {
+    "brick": "2413m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2413m102.fits",
+    "native_stat": {
+      "size": 20283840,
+      "mtime_ns": 1777653565000000000
+    },
+    "exact": 1,
+    "matched_primary": 1,
+    "missing_TYPE": 0,
+    "nonprimary": 0,
+    "sha256": "ecdc1d7374d874bb911b734d6bd19243e472b365297f94f21c33bc6a72b1dc95"
+  },
+  {
+    "brick": "2413m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2413m105.fits",
+    "native_stat": {
+      "size": 18881280,
+      "mtime_ns": 1777653355000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2414m100",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2414m100.fits",
+    "native_stat": {
+      "size": 18696960,
+      "mtime_ns": 1777653809000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2415m102",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2415m102.fits",
+    "native_stat": {
+      "size": 20079360,
+      "mtime_ns": 1774093481000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  },
+  {
+    "brick": "2415m105",
+    "native_path": "/global/cfs/projectdirs/cosmo/data/legacysurvey/dr11/south/tractor/241/tractor-2415m105.fits",
+    "native_stat": {
+      "size": 20304000,
+      "mtime_ns": 1774093460000000000
+    },
+    "exact": 0,
+    "matched_primary": 0,
+    "missing_TYPE": 0,
+    "nonprimary": 0
+  }
+]

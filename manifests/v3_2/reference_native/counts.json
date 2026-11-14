@@ -1,0 +1,13 @@
+{
+  "requests": 39505,
+  "targeted_bricks": 138,
+  "missing_brick_files": 0,
+  "missing_TYPE": 0,
+  "exact_primary_rows": 100,
+  "nonPSF": 0,
+  "duplicate_primary": 0,
+  "wrong_release": 0,
+  "failed_photometric_entry": 100,
+  "historical_excluded": 0,
+  "admitted": 0
+}

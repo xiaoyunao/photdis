@@ -1,0 +1,18 @@
+{
+  "distance_fresh_eligible": 328537,
+  "stellar_fresh_eligible": 325192,
+  "unmatched_stellar": 3358,
+  "distance_duplicate_identity_exclusions": 2,
+  "stellar_duplicate_identity_exclusions": 0,
+  "distance_rows": 1112053,
+  "stellar_rows": 1095480,
+  "distinct_joint_ids": 325177,
+  "coordinate_agreement": 325177,
+  "high_latitude": 88668,
+  "prior_id_excluded": 2246,
+  "old_sky_excluded": 43678,
+  "footprint_excluded": 0,
+  "known_system_excluded": 3239,
+  "match_requests": 39505,
+  "scientific_admissions": 0
+}

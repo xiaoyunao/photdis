@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify DR19 intake and isolate the empty photometric admission
+
+- Corrected identity job 61264018 and native match 61260892 both completed
+  0:0. Preserved compact receipts, counts and source metadata for both.
+- Verified 325,177 exact joined identities and 39,505 requests after sky
+  and historical exclusions. Across 138 bricks there are 100 exact
+  primary PSF rows. All fail photometric entry. Zero rows admitted.
+- Added an allocated-compute audit that recomputes the frozen entry
+  components from archived photometry. No reference outcomes read.
+
 ## 2026-11-14 — verify the 92 refinements in tilt shards 20–23
 
 - Slurm confirmed that all four shards completed 0:0. Authenticated

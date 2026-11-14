@@ -66,8 +66,10 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
   Initial index 61260891 exposed a release-column mismatch. The corrected
-  census 61264018 uses the observed SDSS-V provenance. Native match
-  61260892 now waits for it. Comparator 61261381 waits for native admission.
+  census 61264018 recovered 39,505 exact-identity requests. Native match
+  61260892 found 100 exact primary rows and admitted zero because all
+  failed photometric entry. Audit the individual frozen entry conditions
+  before assessing a separate outcome-closed acquisition route.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

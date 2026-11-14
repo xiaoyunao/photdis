@@ -1,0 +1,12 @@
+path,matched_identity,matched_sky_block
+data/pilot_audit_v1/reference.fits,132,378
+data/baseline_v0/references.npz,9,2685
+data/giant_information_v1/labels.npz,4,2685
+data/baseline_v1_4/references.npz,2440,94967
+data/v2_3/training.npz,1,0
+data/v3_0/references.npz,11,41896
+data/v3_0/validation/reservation/photometry.npz,0,2587
+data/v3_0/validation/new_sky/photometry.npz,0,0
+data/v3_0/validation/independent_scale/photometry.npz,0,0
+data/v3_1/validation_roles/field_photometry.npz,0,12266
+data/v3_1/validation_roles/common_photometry.npz,0,0
