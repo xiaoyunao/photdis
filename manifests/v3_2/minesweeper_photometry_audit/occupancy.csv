@@ -1,0 +1,13 @@
+r0_lo,r0_hi,w1,n,sky_cells
+-inf,18.0,weak,0,0
+-inf,18.0,significant,1058,53
+-inf,18.0,unavailable,59,29
+18.0,20.0,weak,0,0
+18.0,20.0,significant,0,0
+18.0,20.0,unavailable,0,0
+20.0,22.0,weak,0,0
+20.0,22.0,significant,0,0
+20.0,22.0,unavailable,0,0
+22.0,inf,weak,0,0
+22.0,inf,significant,0,0
+22.0,inf,unavailable,0,0

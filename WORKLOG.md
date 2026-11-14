@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify closed DR20 photometric coverage
+
+- Job 61269472 completed 0:0. Verified the exact LCO pointer audit,
+  source hashes and all 12 occupancy rows. The 1,117 PSFs span 53
+  sky cells and all have r0 < 18. W1 is significant for 1,058 and
+  unavailable for 59. No weak-W1 or fainter rows occur in this cohort.
+- Reference distance and stellar parameters remain closed.
+
 ## 2026-11-14 — authenticate the first completed factorial fit
 
 - Broad zero (61259811_0, raw 61268574) completed 0:0 in 75 seconds.

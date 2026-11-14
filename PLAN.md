@@ -83,6 +83,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Census 61267684 completed with 7,297 native match requests. Native job
   61267848 found 7,292 primary PSFs and admitted 1,117. The three frozen
   DR20 comparators are queued as 61268949.
+  Photometry audit 61269472 verifies 53 sky cells and confirms that all
+  1,117 objects have r0 < 18. There are no weak-W1 rows.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

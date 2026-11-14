@@ -25,6 +25,12 @@ release, TYPE=PSF, imaging history and photometric gates in the native join.
 Keep the MINESweeper and DR19
 receipts separate. The acquisition cannot establish native coverage.
 
+The native match admitted 1,117 PSFs. Outcome-closed audit 61269472
+verified all pointers and 53 sky cells. Every object has (r_0 < 18).
+W1 is significant for 1,058 objects and unavailable for 59. The weak
+W1 and (r_0 \geq 18) strata are empty in this cohort.
+[Native occupancy and receipt](../manifests/v3_2/minesweeper_photometry_audit/)
+
 MINESweeper fits BOSS spectra, photometry and Gaia parallax jointly.
 Its distance and stellar-parameter outputs support a teacher comparison
 under that selection. Parent contamination and independent absolute

@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "data/v3_2/minesweeper_native/complete.json": "75aafae40214ca6e2740c3cc40f1f37d1a2dbe56e7ec5c338f2bc791dc57282f",
+    "data/v3_2/minesweeper_inventory/complete.json": "cf586e96a4c43833c603b25dc24c2b770af84e1d9e2658d9293b6e5b5f0778ee",
+    "data/v3_2/minesweeper_native/photometry.npz": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+    "data/v3_2/minesweeper_native/reference_index.npz": "c99fd2589cba116e4234cf18d5e6ea2b00385a7f766db92908e51216b958735d",
+    "data/v3_2/minesweeper_inventory/requests.npz": "f83b86af9554f0246fb108fca46badb9d3d7e3b00335f04a8f1725bd73f08ea0",
+    "scripts/v3_2_minesweeper_photometry_audit.py": "0eb4e1f506072586f1c50758270aa8a673088b8c96d14d70aa08f9652932d538",
+    "scripts/v3_2_reference_freeze.py": "e6499bd7303a925b84118be86ba3fb9ddb5dbb83b044b7bc3942e22ada87f115",
+    "src/photdis/v3/data.py": "394fa3db0b4a725bc9ff747106bd7ef0ab4a197a75e007f06afe06306432c8c9"
+  },
+  "outputs": {
+    "occupancy.csv": "e28da1351cb9cfaaf894a7ca9ac2d97b3cc422fc3fcd8b0bd0bc45e7b66059ee"
+  },
+  "n": 1117,
+  "sky_cells": 53,
+  "all_PSF": true,
+  "reference_values_read": false,
+  "job": "61269472"
+}
