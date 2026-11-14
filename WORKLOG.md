@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first production recovery and reduce queued memory requests
+
+- Catalog 001 (61274913) completed 0:0 in 3m28s and peaked at
+  1,986,216 KiB. Verified its archived receipt and both tables
+  against the frozen context. Broad passes. Local Rhat is 1.0648
+  and ESS is 76.11, so its sampled intervals retain a failed gate.
+- Applied the 8 GiB request to the pending recovery tasks after the
+  probe completed. Slurm confirmed eligible and still-dependent
+  examples and retained report 61266374's full-array dependency.
+
 ## 2026-11-14 — verify caches 26 and 27 and start the allocation probes
 
 - Repeats 26 and 27 completed 0:0 in 14m37s and 13m55s.

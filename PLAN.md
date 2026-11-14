@@ -120,10 +120,10 @@ products without a final delivery verdict.
   eight concurrent tasks. The 281 tasks mapped to authenticated caches
   00–27 are eligible to run. The remaining four retain the full-cache
   dependency until their own caches are verified.
-  Recovery catalog 1 (61274913) requests 8 GiB in place of Slurm's
-  inherited full-node memory. Two cached pilots peaked near 2 GiB.
-  Verify its result and actual memory before changing more recovery
-  tasks. This does not change catalog inputs or the sampler.
+  Recovery catalog 1 (61274913) completed with an 8 GiB request and
+  peaked at 1,986,216 KiB. Both fits are archived. The local sampler
+  fails Rhat and ESS. The remaining pending recovery tasks now request
+  8 GiB in place of inherited full-node memory.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
   Cache receipts 00–27 are verified with `scripts/v3_2_radial_cache_audit.py`.
