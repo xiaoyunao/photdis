@@ -303,6 +303,7 @@ receipt and recomputes the earlier failed and accepted transitions.
   States 17 and 18 also completed, bringing the verified total to 20.
   State 18 passed every check. State 17 retained 512 independent
   entry-seed and 512 previous-entry-level flags.
+  State 19 passed every check, bringing the verified total to 21.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
