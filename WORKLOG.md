@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first completed shared radial task
+
+- Catalog 032 (61274976) completed in CPU shared QoS in 5m38s
+  with a batch peak of 1,993,388 KiB. Both fits pass. Catalogs
+  035–038 remain queued in shared. NGC288 state 10 is running,
+  with verified row checkpoints. States 11–14 remain queued.
+- Archived catalogs 039 and 040, both with passing broad and local
+  fits and successful Slurm exits. Moved 041 and 042 to debug.
+- Stage delivery passed with 39 catalogs, 78 fit verdicts (57 accepted),
+  1,560 intervals and ten NGC288 states.
+
 ## 2026-11-14 — verify shared CPU allocations and archive radial catalogs 033–034
 
 - Slurm started NGC288 state 10 and radial catalog 032 in CPU shared
