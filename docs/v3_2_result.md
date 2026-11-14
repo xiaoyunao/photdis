@@ -200,6 +200,12 @@ all eight pairs pass and width coverage is 4/8 (exact 95%
 interval 0.157–0.843). The mean width median is 0.238 mag and
 the mean interval length is 0.418 mag. The paired count-error
 change is −6.05 [−8.40, −3.91] percentage points.
+At 30% with the 0.25 mag true width in the near background,
+both empirical-SED fits pass in all eight repeats and local
+width coverage is 8/8 (exact 95% interval 0.631–1.000).
+The mean width median is 0.336 mag and the mean interval
+length is 0.566 mag. The paired count-error change is
+−1.86 [−3.46, +0.04] percentage points.
 The remaining empirical-SED strata and prior-predictive comparison
 are in progress.
 The NGC288 odds-only

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — verify the 30 percent empirical near wide stratum
+
+- Archived 181–187 with the radial collector. All 14 fits pass.
+  Completed-only delivery verified 189 of 288 catalogs, 331 of 378
+  accepted fits, 7,560 intervals and 23 complete strata.
+- Recomputed the full 30% near-background, 0.25 mag stratum.
+  Width coverage is 8/8. The paired count-error change is −1.86
+  percentage points and its interval crosses zero. Updated
+  `docs/v3_2_result.md`.
+- NGC288 states 10–14 continue. State 10 logged 400 of 512 radial
+  rows at the latest check. Ten states remain archived.
+
 ## 2026-11-15 — verify three more empirical recovery catalogs
 
 - Archived 177, 179 and 180 via `v3_2_collect_radial_results.py --completed`.
