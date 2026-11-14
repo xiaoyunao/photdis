@@ -9,11 +9,10 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first ten shards (00–09) are complete and verified. Shards 08/09
-  have 39 initial flags for refinement.
+  first twelve shards (00–11) are complete and verified.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–07 refinements pass all 182 flagged contexts.
+  Shards 00–11 refinements pass all 262 flagged contexts.
   Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.
@@ -58,8 +57,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
   in 47 Tuc and 26 in NGC362. Frozen comparator job 61264223 uses the
-  same photometric gate as the field cohort. Freeze predictions and qualify
-  those scopes before releasing their distance scales.
+  same photometric gate as the field cohort. The allocated final
+  runner binds all four forecasts before evaluating both HST scales.
   Keep the existing v3.1 system as an opened control.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the

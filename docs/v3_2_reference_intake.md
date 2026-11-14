@@ -132,5 +132,12 @@ The published member IDs determine the validation sample. The
 predictors receive the photometry and the sky transfer treatment.
 Use `--common` in the forecast assembly to bind those comparator
 outputs and the finalized common-system candidate. Freeze the assembled
-predictions before evaluating the HST scales. A scale is shared across
-all qualified members of a system.
+predictions before evaluating the HST scales. The final job
+`run_v3_2_common_scale_final.sh` accepts the completed mechanism
+decision and candidate forecast receipt. Each HST scale uses 4,096
+positive draws, scaling normal offsets by the published minus/plus
+uncertainties. Every member in a system shares the same distance in
+each draw. Report median bias, severe error, and 68% and 95% interval
+agreement. Candidate-minus-control contrasts use the same members and
+scale draws. The intervals quantify reference-scale uncertainty for
+these members.

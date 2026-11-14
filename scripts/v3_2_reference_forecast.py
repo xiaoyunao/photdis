@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Assemble authenticated prospective forecasts for the final freeze."""
 import argparse
+import json
 import os
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from photdis.stage1 import require_compute
 from photdis.v3_1.freeze import Inventory
@@ -53,14 +55,27 @@ def main():
                    views=views, candidate_admission=candidate_admission,
                    inputs=inv.hashes.copy(), job=os.getenv('SLURM_JOB_ID'))
     destination = root/('common_scale_forecast' if args.common else 'reference_forecast')
-    destination.mkdir(parents=True, exist_ok=False)
     path = destination/'complete.json'
+    if path.exists():
+        existing = json.loads(path.read_text())
+        if any(existing[key] != value for key, value in receipt.items() if key != 'job'):
+            raise ValueError('Existing forecast differs from the requested sources')
+        bind_predictions(inv, path, photo, photo_digest, decision_digest, role=role)
+        inv.unchanged()
+        return
+    destination.mkdir(parents=True, exist_ok=True)
     # Validate in staging before creating the canonical completion receipt.
-    staging = destination/'checked.json'
-    save_json(staging, receipt)
-    bind_predictions(inv, staging, photo, photo_digest, decision_digest, role=role)
-    inv.unchanged()
-    staging.rename(path)
+    with TemporaryDirectory(dir=destination) as temporary:
+        staging = Path(temporary)/'checked.json'
+        save_json(staging, receipt)
+        bind_predictions(inv, staging, photo, photo_digest, decision_digest, role=role)
+        inv.unchanged()
+        try:
+            os.link(staging, path)
+        except FileExistsError:
+            existing = json.loads(path.read_text())
+            if any(existing[key] != value for key, value in receipt.items() if key != 'job'):
+                raise ValueError('Concurrent forecast differs from the requested sources') from None
 
 
 if __name__ == '__main__':

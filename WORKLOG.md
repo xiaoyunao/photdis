@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — implement common-scale scoring and verify tilt shards through 11
+
+- Added the allocated common-system runner. It assembles all four
+  forecasts, freezes the sources and scorer, then evaluates both HST
+  scales with shared uncertainty and paired member sets. Added resumable
+  forecast assembly, verified positive asymmetric scale draws and
+  exactly canceling identical paired predictions in a synthetic check.
+  Shell/Python syntax, diff checks and 456 single-threaded tests pass.
+- Authenticated initial shards 10–11 and refinements 08–11. All 262
+  flagged contexts in shards 00–11 pass refinement. There are 9756
+  broad PSFs and 1356 candidate PSFs in these twelve shards.
+- Common and field outcomes are closed. Common comparator 61264223
+  and corrected field identity census 61264018 are still pending.
+
 ## 2026-11-14 — queue common-system controls and verify tilt shards 08 and 09
 
 - Submitted 61264223 to forecast the 103 PSF common-system comparison
