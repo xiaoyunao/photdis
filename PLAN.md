@@ -63,6 +63,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   `scripts/run_v3_2_branch_forecast.sh`. The registered decision binds
   the development completion, four-arm source, candidate/free fit,
   and the new forecast implementation.
+  Candidate forecasts are 61273481 for common scales and 61273482 for
+  DR20. The common-scale candidate finished with 92 numerical passes
+  among 103 PSFs. Final freeze and scoring were submitted as 61273526.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
@@ -149,6 +152,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   passed 2,560 context checks, including closure on archived nodes.
   State 01 also closed on archived nodes. Two of its 512 Gaussian
   native log-response checks exceeded 0.02 nat and remain flagged.
+  State 02 passed all 2,560 checks.
   The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run

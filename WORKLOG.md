@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate common-scale forecasts and NGC288 state 02
+
+- Common candidate 61273481 completed 0:0 in 49s. The receipt matches
+  the frozen decision and comparator photometry. 92 of 103 candidates
+  passed numerical checks. Submitted the four-view freeze and score job
+  61273526. The DR20 candidate 61273482 was still computing.
+- NGC288 state 02 completed 0:0 in 1h26m51s. Verified all 2,560
+  checks against the same parent PSFs as states 00 and 01.
+
 ## 2026-11-14 — freeze the branch rule for outcome-closed forecasts
 
 - Bound the completed opened result, branch rule, candidate/free fit

@@ -1,0 +1,36 @@
+{
+  "cohort": "new_hst_kinematic_system",
+  "n": 103,
+  "all_PSF": true,
+  "references_read": false,
+  "pilot": false,
+  "photometry_sha256": "2e2a588757013389e314c15ebd6e8a8898dd36aa84d4acc3517d6bfeda0139a4",
+  "decision_sha256": "6ed1fe0f598288a0b570a16ae641ea193ce40d2f1950d0d9bd6388f92f8898fd",
+  "views": {
+    "candidate": {
+      "payload": "data/v3_2/common_scale_branch_candidate/candidate.npz",
+      "sha256": "8578dfc4c75efc10fd78d5fdf7b4bf8fee6ae2d48b884435a5b70afe8534eae0",
+      "passed": 92
+    }
+  },
+  "inputs": {
+    "manifests/v3_2/branch_development/complete.json": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+    "manifests/v3_2/tilt_report/initial/complete.json": "e4acecda4240e311b6107fe8983bab7e84cc41b06acb3c70245a9f4fcd6af5f4",
+    "manifests/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+    "manifests/v3_2/tilt_fits/initial/candidate_free/complete.json": "34c95896d97c46db63b30dfe66d22a491a8c21ab879a6b7bc14f62f68b474160",
+    "docs/v3_2_branch_protocol.md": "d59cc47640dd99828dd04dfc0fa2cad76cbdc7287239ff469911f474059f927a",
+    "src/photdis/v3_2/giant_branch.py": "0487040ede331b0304ccae39fab1af918048cf9232acabbb71f57d3c1cc7ec6b",
+    "scripts/v3_2_branch_forecast.py": "2e075988a39b0c43721118d8ef05cfe338ea54d79f97f0c5c87880b2be75e915",
+    "manifests/v3_2/branch_decision.json": "6ed1fe0f598288a0b570a16ae641ea193ce40d2f1950d0d9bd6388f92f8898fd",
+    "manifests/v3_2/common_scale_controls/complete.json": "735be4a2986ac4a5798d3e169b399f3e26040f8e4ebcb47a26bc9ca0b5cf0034",
+    "data/v3_2/common_scale_inventory/complete.json": "47f98ae6d24276d30bed910787ac98f39b9772109e2fcded029afdaf1d274be4",
+    "data/v3_2/common_scale_inventory/photometry.npz": "2e2a588757013389e314c15ebd6e8a8898dd36aa84d4acc3517d6bfeda0139a4",
+    "data/v3_2/tilt_fits/initial/candidate_free/complete.json": "34c95896d97c46db63b30dfe66d22a491a8c21ab879a6b7bc14f62f68b474160",
+    "data/v3_2/tilt_fits/initial/candidate_free/posterior.npz": "1327dd05393695d7ccbcbd4004ea40e45f9f5b33e087c887de0bf29432e80ec2",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "scripts/v3_2_reference_controls.py": "d677a36aeacfb2056810445d43d3e6135119ff609c91b8de0121e7b4f2d5cd38",
+    "src/photdis/v3_1/shared_prior.py": "e5f10085115b8282a48836ff7ae21662bd350e479880a4003e17757d1067e429"
+  },
+  "job": "61273481"
+}
