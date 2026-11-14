@@ -6,7 +6,9 @@
   log odds. The protocol was committed before implementation and evaluation.
 - Added the posterior transform and the allocated opened-cohort runner.
   Three focused tests, Python and shell syntax, and diff checks passed.
-  Actual opened-domain scores await the allocated run.
+  Initial allocated run 61273260 stopped in the invariance assertion.
+  Deep tails at −8.4 million nat differed by one floating-point ULP.
+  Added a relative roundoff tolerance while retaining the absolute bound.
 
 ## 2026-11-14 — verify paired factorial scores and render the plate
 

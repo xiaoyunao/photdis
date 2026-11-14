@@ -81,7 +81,8 @@ def main():
         log_width = np.log(trapezoid_weights(grid))
         def normalized(curves):
             return curves - logsumexp(curves + log_width, axis=1)[:, None]
-        np.testing.assert_allclose(normalized(adjusted), normalized(base), rtol=0, atol=1e-9)
+        # Compare shape in log space, allowing floating-point roundoff in deep tails.
+        np.testing.assert_allclose(normalized(adjusted), normalized(base), rtol=2e-15, atol=1e-9)
         ev = {k: v[i] for k, v in evidence.items()}
         left, old_joint, _ = summarize(grid, base, ev)
         right, new_joint, fine = summarize(grid, adjusted, ev)
