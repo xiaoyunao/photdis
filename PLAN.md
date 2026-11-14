@@ -125,7 +125,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   64. Both branches pass 512 to 1024 and retain failures at 256 to 512.
   Added-distance pilot 61260630 passed all 15 checks, with exact native
   closure at the old nodes. Full 32-state integration uses the registered
-  levels with per-state checkpoints (61263907). The two-axis evaluator
+  levels with per-state checkpoints (61263907). State 00 completed and
+  passed 2,560 context checks, including closure on archived nodes.
+  The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run
   `python3 scripts/v3_2_structure_distance_audit.py --complete` for final

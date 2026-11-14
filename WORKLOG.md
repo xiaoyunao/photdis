@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first full NGC288 distance-node state
+
+- State 00 (61263907_0, raw 61265637) completed 0:0 in 1h25m46s.
+  Collected and reconciled its receipt, checkpoint inputs and all 2,560
+  checks for 512 PSFs. No context failed. Both native likelihoods
+  reproduce the archived responses exactly.
+- Largest Gaussian native log-response shift was 0.018664 nat.
+  The lower entry quadrature shifted by at most 0.00048728.
+  Both are below their registered absolute thresholds in this state.
+  The joint distance and odds result awaits all 32 states.
+
 ## 2026-11-14 — verify the broad/free posterior
 
 - Broad/free (61259811_1, raw 61269414) completed 0:0 in 12m08s.

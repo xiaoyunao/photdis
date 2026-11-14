@@ -1,0 +1,18 @@
+{
+  "draw": 0,
+  "inputs": {
+    "scripts/v3_2_structure_distance.py": "a35fdf9a70d988210d64da17cd950a18d592d7f5012d7965062494046a54dfdd",
+    "data/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+    "data/v3_1/structure/native_refined/draw_00/complete.json": "39a1b8483cfef538bf452b7a5114b3a03c77f3689086628dbe78b28bfe60baa8",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "data/v3_0/uncertainty_refit/draw_00/model.joblib": "50d7546bf0bbb97dcb9d045d401867c162b1bf84576b3787ffd906aa644c5e8a",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "docs/v3_2_structure_protocol.md": "20e054a72a2272cc96ccda154fb46ede6e83aa4c67add94ee0c89f30a4379ee0",
+    "scripts/v3_2_radial_checkpoint.py": "52bd398afb2c5945082934cf2f0e6537fddd1a40db8030f4e491cff51edba2b0",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/gaussian_response.py": "0c130d60d7e07c09c588fa507cf1127bb8c78783b9071909164b7e8db7449cfc"
+  },
+  "new_nodes": 384
+}
