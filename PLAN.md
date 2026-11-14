@@ -7,6 +7,8 @@ Active goal follows the Pro review of 7699299. See
 ledger in `docs/v3_2_requirements_result.md`.
 The synthesis in `docs/v3_2_result.md` records the completed model
 and external findings and identifies the two pending application results.
+Use `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py --collect-reports`
+to archive compact tables when Slurm records a successful report job.
 Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
 after both application reports and all visual reviews. During the runs,
 `--completed-only` verifies available evidence and reports missing
@@ -131,10 +133,10 @@ the 512 row identities against the frozen v3.1 membership export.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Sixteen of 288 catalogs have verified compact outputs. Catalogs 004–008
-  and 011 pass in both arms. The local fits in 009, 010, 012 and 013 fail
+  Eighteen of 288 catalogs have verified compact outputs. Catalogs 004–008
+  and 011 pass in both arms. The local fits in 009, 010 and 012–015 fail
   sampling and pass their integration checks.
-  Catalogs 014 and 015 moved to the vacant debug slots under the original array.
+  Catalogs 016 and 017 moved to the vacant debug slots under the original array.
   Report 61266374 keeps its original afterok on the full recovery array.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -235,8 +237,9 @@ the 512 row identities against the frozen v3.1 membership export.
   receipt and per-context verdict reconciliation.
   The joint evaluator exports the final PSF membership pairs and
   conditional, shared and total count covariance as compact CSV tables.
-  Collect the joint receipt, five CSV tables and branch comparison
-  JSON. Run `python3 scripts/v3_2_structure_joint_audit.py` after the
+  The report collector archives the joint receipt, five CSV tables
+  and branch comparison JSON. Run
+  `python3 scripts/v3_2_structure_joint_audit.py` after the
   32 input receipts and joint tables are available.
   Render the paired membership and covariance comparison with
   `python3 scripts/v3_2_structure_joint_figure.py`.

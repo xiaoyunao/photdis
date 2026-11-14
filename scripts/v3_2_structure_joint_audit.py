@@ -144,10 +144,20 @@ def audit():
     if receipt['n'] != 512 or receipt['responses'] != 32 or receipt['all_PSF'] is not True:
         raise ValueError('Joint result has a different census')
     inputs = receipt['inputs']
+    expected_sources = {
+        'data/v3_1/structure/matrices/complete.json',
+        'data/v3_2/structure_odds_audit/complete.json',
+        'scripts/v3_2_structure_joint.py', 'docs/v3_2_structure_protocol.md',
+        'src/photdis/v3_1/structure.py', 'src/photdis/v3_1/structure_posterior.py',
+        'scripts/v3_1_structure_infer.py',
+    }
     for row in preparatory['records']:
         path = f'data/v3_2/structure_distance/draw_{row["draw"]:02}/complete.json'
-        if inputs[path] != row['receipt_sha256']:
+        expected_sources.add(path)
+        if inputs.get(path) != row['receipt_sha256']:
             raise ValueError(f'Joint ancestor differs from the audited state: {path}')
+    if inputs.keys() != expected_sources:
+        raise ValueError('Incomplete or unexpected joint quadrature ancestry')
     for source, expected in inputs.items():
         path = ROOT / source
         if source.startswith('data/'):

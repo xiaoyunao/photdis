@@ -42,6 +42,14 @@ def discover(array_id):
     return completed_tasks(status.stdout, array_id)
 
 
+def completed_jobs(job_ids):
+    command = f'sacct -n -X -P -j {",".join(job_ids)} --format=JobID,State,ExitCode'
+    status = subprocess.run(['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', HOST, command],
+                            check=True, capture_output=True, timeout=25, text=True)
+    return {job for job, state, code in (line.strip().split('|') for line in status.stdout.splitlines())
+            if job in job_ids and state == 'COMPLETED' and code == '0:0'}
+
+
 def collect(names, *, max_file_bytes=100_000):
     # Names are generated from the frozen catalog IDs and fixed filenames.
     command = f'cd {REMOTE} && tar -cf - ' + ' '.join(names)

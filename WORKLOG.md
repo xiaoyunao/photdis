@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-14 — prepare compact final report transfer and archive catalogs 014–015
+
+- Added `v3_2_delivery.py --collect-reports` for both final jobs.
+  Transfers require Slurm completion, the matching job ID and
+  every compact output digest. The joint audit now also requires
+  the exact source inventory. Simulated transfers and negative
+  digest and ancestry checks passed. The live check found that
+  both report jobs still await their dependency arrays.
+- Slurm 61266369_14 and _15 completed in 3m15s and 3m23s.
+  Both broad fits and all integration checks pass. Local sampling
+  failed in both (ESS 19.30 and 19.64). Eighteen of 288 catalogs
+  are archived. Moved 016 and 017 to the vacant debug slots.
+- Syntax checks, all 472 tests and the completed-only delivery
+  audit passed. No additional NGC288 state had started at the
+  last queue check. State 09 continues its 32 GiB probe.
+
 ## 2026-11-14 — verify recovery catalogs 012–013 and clear the NGC288 array limit
 
 - Slurm 61266369_12 and _13 completed in 3m11s and 3m20s.

@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 
 from v3_2_branch_audit import audit as branch
+from v3_2_collect_radial_results import archive_verified, collect, completed_jobs
 from v3_2_external_audit import audit as external
 from v3_2_factorial_audit import audit as factorial
 from v3_2_figure_delivery import audit as figures
@@ -31,6 +32,33 @@ DOCUMENTS = (
     'v3_2_opened_result.md', 'v3_2_factorial_result.md', 'v3_2_contamination_support.md',
     'v3_2_radial_protocol.md', 'v3_2_structure_protocol.md',
 )
+REPORTS = {
+    '61266374': ('radial_report', ('numerical.csv', 'recovery.csv', 'coverage.csv',
+                 'paired_count_loss.csv', 'paired_count_summary.csv', 'shrinkage.csv',
+                 'shrinkage_summary.csv', 'empirical_minus_model.csv', 'empirical_minus_model_summary.csv')),
+    '61263908': ('structure_joint', ('input_checks.csv', 'checks.csv', 'summary.csv',
+                 'membership.csv', 'count_covariance.csv', 'branch_comparison.json')),
+}
+
+
+def collect_reports():
+    finished = completed_jobs(tuple(REPORTS))
+    result = {}
+    for job, (folder, tables) in REPORTS.items():
+        if job not in finished:
+            result[folder] = 'no successful Slurm completion'
+            continue
+        root = f'data/v3_2/{folder}'
+        filenames = ('complete.json', *tables)
+        files = collect([f'{root}/{name}' for name in filenames], max_file_bytes=6_000_000)
+        payload = {name: files[f'{root}/{name}'] for name in filenames}
+        receipt = json.loads(payload['complete.json'])
+        if (receipt['job'] != job or receipt['all_PSF'] is not True
+                or any(sha256(payload[name]).hexdigest() != receipt['outputs'][name] for name in tables)):
+            raise ValueError(f'Invalid Slurm identity or compact report digest: {folder}')
+        archive_verified(BASE/folder, payload)
+        result[folder] = dict(job=job, receipt_sha256=sha256(payload['complete.json']).hexdigest())
+    return result
 
 
 def audit(*, completed_only=False):
@@ -72,6 +100,9 @@ def audit(*, completed_only=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--completed-only', action='store_true', help='Run audits available before the two final computations')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--completed-only', action='store_true', help='Run audits available before the two final computations')
+    mode.add_argument('--collect-reports', action='store_true', help='Archive compact outputs from successful report jobs')
     args = parser.parse_args()
-    print(json.dumps(audit(completed_only=args.completed_only), indent=2))
+    print(json.dumps(collect_reports() if args.collect_reports else audit(completed_only=args.completed_only),
+                     indent=2))
