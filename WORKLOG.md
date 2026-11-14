@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — advance the pending candidate-zero fit
+
+- Broad zero completed in 75 seconds. Candidate zero uses the same
+  fixed-kernel sampler and the smaller 3,540-row admitted cohort.
+  Verified an eligible zero-runtime child and vacant debug capacity,
+  then moved 61259811_2 to debug and set a 30-minute limit in place.
+- Controller confirmed raw job 61269606, unchanged afterok dependency
+  for 61259969, and regular QoS on the candidate-free sibling.
+
 ## 2026-11-14 — verify closed DR20 photometric coverage
 
 - Job 61269472 completed 0:0. Verified the exact LCO pointer audit,
