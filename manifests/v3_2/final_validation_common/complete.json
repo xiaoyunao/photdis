@@ -1,0 +1,11 @@
+{
+  "freeze_sha256": "0198dabf1d9492ed42c96a251b8c89681ff93eefa6d3958fe90b191b4f8f7b19",
+  "outcomes_opened": true,
+  "all_PSF": true,
+  "n": 103,
+  "n_systems": 2,
+  "job": "61273526",
+  "outputs": {
+    "scale_agreement.csv": "798f2676a1c3268153ccca7fefcaf61b5871b9d5c59b78962ad1b66a20dcf572"
+  }
+}

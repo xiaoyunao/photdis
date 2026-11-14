@@ -65,7 +65,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   and the new forecast implementation.
   Candidate forecasts are 61273481 for common scales and 61273482 for
   DR20. The common-scale candidate finished with 92 numerical passes
-  among 103 PSFs. Final freeze and scoring were submitted as 61273526.
+  among 103 PSFs. Final freeze and scoring 61273526 completed. The HST
+  comparison retains the positive candidate distance bias in both systems.
   The factorial report includes same-object class-score contrasts with
   the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288

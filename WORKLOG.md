@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify the frozen HST comparison
+
+- Final common-scale job 61273526 completed 0:0 in 27s. The freeze,
+  single outcome access and scale-agreement receipt share one hash.
+- On all native members, candidate median distance residual is +19.57%
+  for 47 Tuc and +23.42% for NGC362. QRF gives +12.97% and +14.58%.
+  Candidate 95% interval agreement is 72.73% and 88.46%.
+  The 11 candidate forecast numerical flags are retained.
+
 ## 2026-11-14 — authenticate common-scale forecasts and NGC288 state 02
 
 - Common candidate 61273481 completed 0:0 in 49s. The receipt matches
