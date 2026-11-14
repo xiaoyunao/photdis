@@ -22,6 +22,8 @@ Active goal follows the Pro review of 7699299. See
   in array 61260177.
   Freeze new validation
   before opening outcomes or expanding the production footprint.
+- Trace the 33 frozen conditional count failures with a statewise weight
+  versus response audit. Keep the NGC288 odds test independent.
 
 ## v3.1 — completed research delivery
 

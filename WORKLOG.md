@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — isolate the v3.1 conditional count transfer failures
+
+- Recovered matching b9ac397 heads with Git. Slurm confirms radial pilots
+  0/128 live and the other work pending. Prior turn produced progress.
+- Checked 34 frozen candidate transfer tables: 33 failures all occur
+  for broad-envelope entry_level, with largest count shift 0.66554.
+- Added a hash-verified allocated audit of all states, retaining old
+  acceptance. Separately reports population-weight and conditional-response
+  components, absolute log normalizer, relative log-weight span and ESS.
+  Python/Bash syntax and a two-state analytical decomposition pass.
+- Next collect real decomposition, radial and probe artifacts. Four-arm
+  causal attribution awaits the original Slurm dependencies.
+
 ## 2026-11-14 — predeclare opened giant decomposition strata
 
 - Registered direct giant probability, within-class distance and far-branch
