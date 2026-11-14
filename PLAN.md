@@ -12,13 +12,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   The current audit verifies 8,773 protected paths against 7699299 in the
   commit, index and worktree. Check data source digests with the run receipts.
 - Fit the population by SED tilt comparison with matched selection. The
-  first twenty-four shards (00–23) are complete and verified.
-  The compact receipt audit independently counts 19504 broad PSFs and
-  2680 candidate PSFs across these shards.
+  first twenty-five shards (00–24) are complete and verified.
+  The compact receipt audit independently counts 20316 broad PSFs and
+  2793 candidate PSFs across these shards.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shards 00–19 refinements pass all 456 flagged contexts.
-  Shards 20–23 have 92 initial flags for refinement.
+  Shards 20–24 have 111 initial flags for refinement.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.

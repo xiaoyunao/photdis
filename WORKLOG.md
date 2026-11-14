@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify completed tilt input 24
+
+- Raw job 61266773 (array shard 24) completed 0:0. Collected its receipt
+  and checks, verified source digests and all exact PSF identities. It
+  contains 812 broad rows, 113 candidate rows and 19 initial flags.
+- The compact audit verifies 20,316 broad and 2,793 candidate PSFs,
+  with 456 reviewed flags passing and 111 flags awaiting review.
+  Inputs 25–29, refinements 20–23 and the corrected DR19 census
+  were running at collection time.
+
 ## 2026-11-14 — use the second available debug slot for tilt shard 25
 
 - Confirmed shard 24 was running and the only debug job. Guarded
