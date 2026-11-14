@@ -24,7 +24,9 @@ Active goal follows the Pro review of 7699299. See
   Freeze new validation
   before opening outcomes or expanding the production footprint.
 - Trace the 33 frozen conditional count failures with a statewise weight
-  versus response audit (61260338). Keep the NGC288 odds test independent.
+  versus response audit (61260338). NGC288 odds test 61259650 uses fixed
+  distance order 64. Added-distance native and entry pilot follows
+  `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
 
 ## v3.1 — completed research delivery
 

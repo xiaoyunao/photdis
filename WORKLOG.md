@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — prepare added NGC288 distance nodes
+
+- Added v3.2 distance orders 128/256 for the frozen 512-PSF, 32-state
+  seen-system audit. Bind the stored native grids and Gaussian moments,
+  recompute both at the old nodes for closure and keep the 0.02-mag kernel.
+- Added independent narrow entry with explicit kernel summation and
+  Gauss–Hermite distance integration. Check seed, depth and closure against
+  the archived probabilities. Register the original three-context pilot.
+- Python and Bash syntax, two analytic comparisons and 10 structure/entry
+  tests pass. Existing odds-only, narrow-structure and main model jobs remain
+  separate. Collect real pilot checks before deciding integration precision.
+
 ## 2026-11-14 — reuse identical observation context entry curves
 
 - Implemented two-quadrature caches by frozen design repeat. Verify design,
