@@ -22,7 +22,8 @@ Active goal follows the Pro review of 7699299. See
   in array 61260177. Cache pilot 61260465 uses the same repeat as direct
   catalog 000. Compare their actual curves before launching the remainder.
 - Prepare the DR19 Astra identity inventory following
-  `docs/v3_2_reference_intake.md`. Freeze model, rules and new reference
+  `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
+  Freeze model, rules and new reference
   roles before scoring the new validation outcomes.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338). NGC288 odds test 61259650 uses fixed

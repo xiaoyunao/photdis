@@ -7,7 +7,8 @@
   FITS URLs return HTTP 200 with verified Content-Length metadata.
 - Added an allocated archive-acquisition step and documented new-source,
   native PSF, lineage and shared-teacher requirements. No new model scores
-  or source outcomes opened. Public DESI DR2 NERSC VAC directory is empty.
+  or source outcomes opened. Submitted archive acquisition 61260678.
+  Public DESI DR2 NERSC VAC directory was empty at inspection.
 - Next verify downloaded headers and join identity columns; actual sample
   eligibility and scientific coverage remain to be measured.
 
