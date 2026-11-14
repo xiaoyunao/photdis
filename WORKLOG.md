@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify DR20 native intake and start frozen comparator workflow
+
+- DR20 native match 61267848 completed 0:0. Across 20,668 bricks,
+  found 7,292 exact DR11 primary PSFs from 7,297 requests. The frozen
+  photometric gate excludes 6,175 and admits 1,117. No label values read.
+- Verified the compact census and history hashes, request ancestry and
+  tracked native-matcher source digests. Submitted the nominal, old target
+  and frozen QRF controls as 61268949, using the admitted photometry.
+
 ## 2026-11-14 — verify radial entry cache receipts through repeat 08
 
 - Slurm confirmed repeats 05–08 completed 0:0. Verified all four

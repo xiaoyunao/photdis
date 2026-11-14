@@ -77,8 +77,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   The empty DR19 comparator 61261381 was canceled before execution.
   DR20 BOSS MINESweeper acquisition 61267444 completed. The LCO identity
   census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
-  Census 61267684 completed with 7,297 native match requests. The original
-  PSF and photometric admission runs on them in job 61267848.
+  Census 61267684 completed with 7,297 native match requests. Native job
+  61267848 found 7,292 primary PSFs and admitted 1,117. The three frozen
+  DR20 comparators are queued as 61268949.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
