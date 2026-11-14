@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — verify the second shared radial completion
+
+- Slurm 61266369_35 completed in shared in 4m14s. Checked the
+  receipt and both fit verdicts. Stage delivery verified 42
+  catalogs, 84 verdicts (63 accepted), 1,680 intervals and ten
+  NGC288 states.
+- Slurm also reports successful exits for 036, 043 and 044.
+  SSH stalled during their compact transfer. Moved 077 and 078
+  to vacant debug slots.
+- Shared states 10–12 reached 48, 16 and 16 verified object
+  checkpoints respectively at the inspected log snapshot.
+
 ## 2026-11-14 — expand CPU shared scheduling and verify radial catalogs 041–042
 
 - Confirmed NGC288 states 10–12 running in shared and moved states
