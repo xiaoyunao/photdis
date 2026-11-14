@@ -8,6 +8,9 @@ ledger in `docs/v3_2_requirements_result.md`.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
+- Repeat `python3 scripts/v3_2_preservation_check.py` before final delivery.
+  The current audit verifies 8,773 protected paths against 7699299 in the
+  commit, index and worktree. Check data source digests with the run receipts.
 - Fit the population by SED tilt comparison with matched selection. The
   first twenty-four shards (00–23) are complete and verified.
   The compact receipt audit independently counts 19504 broad PSFs and

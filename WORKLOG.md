@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — audit preservation of the reviewed release
+
+- Added `scripts/v3_2_preservation_check.py` and linked it in the evidence
+  ledger. The committed, staged and working trees match 7699299 at all
+  8,773 protected paths. The catalog payload digests remain run-receipt checks.
+- Python compilation, `git diff --check` and an isolated Git smoke check
+  passed. The smoke check detects committed, staged and unstaged mutations.
+- Remaining tilt jobs still await scheduling or inputs. Repeat baseline
+  preservation after delivery artifacts are committed.
+
 ## 2026-11-14 — distinguish missing far peaks from conditional peak locations
 
 - Added all-giant far-peak presence and paired gain/loss indicators to
