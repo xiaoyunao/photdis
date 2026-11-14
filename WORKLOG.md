@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify the 90 percent deep narrow recovery stratum
+
+- Collected catalogs 109 and 113 with
+  `python3 scripts/v3_2_collect_radial_results.py --completed`.
+  Both fits pass in each. The completed-only audit verifies 115 catalogs,
+  209 of 230 accepted fits, 4,600 intervals and 14 complete strata.
+- Recomputed the 90%/0.08 mag deep-background stratum and added width
+  coverage, shrinkage and paired count error to `docs/v3_2_result.md`.
+  All eight local intervals cover width truth. The paired count-error
+  change is −25.49 percentage points. Continue collecting the two arrays.
+
 ## 2026-11-15 — validate retries and the first 90 percent recovery stratum
 
 - `sacct` confirms 096 and 098 completed in debug array 61280724.

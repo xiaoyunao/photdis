@@ -158,6 +158,12 @@ the mean width median is 0.095 mag, and the mean interval length
 is 0.105 mag. All eight medians move toward the 0.25 mag prior
 anchor by 0.015 mag on average. The paired count-error change is
 −22.85 [−25.88, −19.39] percentage points.
+With the same width and member fraction in the deep background,
+both arms pass in all eight replicates. Local width coverage is
+8/8, the mean width median is 0.102 mag and the mean interval
+length is 0.110 mag. Seven medians move toward the prior anchor.
+The paired count-error change is −25.49 [−30.41, −21.00]
+percentage points.
 The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
