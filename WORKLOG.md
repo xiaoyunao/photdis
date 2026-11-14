@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — expand CPU shared scheduling and verify radial catalogs 041–042
+
+- Confirmed NGC288 states 10–12 running in shared and moved states
+  15–31 to shared, joining 13–14. Readback shows all 22 unfinished
+  states in shared, with 32 GiB and three hours per state.
+- Moved zero-runtime radial tasks 045–076 to shared after catalog 032
+  completed there. The original array cap remains eight. Slurm
+  confirms both final reports still depend on the full original arrays.
+- Collected 041 and 042 after successful exits in 3m33s and 3m30s.
+  Both arms of both catalogs pass. Stage delivery verified 41
+  catalogs, 82 verdicts (61 accepted), 1,640 intervals and ten
+  NGC288 states. Moved 043 and 044 to vacant debug slots.
+
 ## 2026-11-14 — verify the first completed shared radial task
 
 - Catalog 032 (61274976) completed in CPU shared QoS in 5m38s
