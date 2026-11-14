@@ -1,0 +1,462 @@
+{
+  "passed": true,
+  "final": true,
+  "pending": [],
+  "preservation": {
+    "baseline_commit": "7699299b83a152327a83dc503dd3e1da0b437ca5",
+    "examined_commit": "0f26126a1c1dd52c1f816b74e7ea97b5d1515ac5",
+    "protected_baseline_files": 8773,
+    "allowed_project_files": [
+      ".gitignore",
+      "PLAN.md",
+      "WORKLOG.md"
+    ],
+    "views": {
+      "commit": {
+        "changed_project_files": [
+          ".gitignore",
+          "PLAN.md",
+          "WORKLOG.md"
+        ],
+        "protected_changes": []
+      },
+      "index": {
+        "changed_project_files": [
+          ".gitignore",
+          "PLAN.md",
+          "WORKLOG.md"
+        ],
+        "protected_changes": []
+      },
+      "worktree": {
+        "changed_project_files": [
+          ".gitignore",
+          "PLAN.md",
+          "WORKLOG.md"
+        ],
+        "protected_changes": []
+      }
+    },
+    "passed": true,
+    "scope": "Tracked files. Science payloads and live deployment are outside this Git audit."
+  },
+  "opened": {
+    "passed": true,
+    "matched_psf": 519,
+    "paired_rows": 144,
+    "confusion_rows": 108,
+    "reliability_rows": 360,
+    "qrf_signed_gaia_rows": 4,
+    "opened_new_sky": {
+      "gaia/log_score": 166,
+      "class/log_score": 157,
+      "class/correct": 157,
+      "qnear": 167
+    },
+    "transfer_counts": {
+      "rows": 272,
+      "weight_only_failures": 33,
+      "count_shift_range": [
+        0.5783797712551859,
+        0.6655360592978923
+      ],
+      "receipt_sha256": "710b31057b3aab79920cf00deae05eee4e55797eb78f407201adc194dcd5ed4e",
+      "table_sha256": "02af0380d336edb36174aad5117dc71db481a1f5b981af8eec4f116502a6fdb2"
+    },
+    "sources": {
+      "manifests/v3_2/opened_diagnostics/complete.json": "5371554114cea3cc00690f645e131862c4083c027d63c69614c37f6964c909c3",
+      "manifests/v3_2/opened_diagnostics/new_sky_field_confusion.csv": "7087b32cfe77d3262798741ed1b3c6dc8285e3faa3a3e083950beeb977001a31",
+      "manifests/v3_2/opened_diagnostics/new_sky_field_summary_class_all_objects.csv": "f8a628962d575933ee947fe26e52fa25694f925c6a58327b6c966b612ab63387",
+      "manifests/v3_2/opened_diagnostics/new_sky_field_summary_class_numerically_accepted.csv": "f44a5ceec61f9a88d8b8d6eb8860ca7b4647948f7ab5953713c6a5567cc54ead",
+      "manifests/v3_2/opened_diagnostics/new_source_seen_sky_field_confusion.csv": "c50d2d3cd1fe2fb9ddd03e5917d4935aa0e14bb24288822ebe8b53bf00c29587",
+      "manifests/v3_2/opened_diagnostics/new_source_seen_sky_field_summary_class_all_objects.csv": "c423546979935a8ddcbc1a5f93ffe2812de7306336e05378fc661a2ca660b0ff",
+      "manifests/v3_2/opened_diagnostics/new_source_seen_sky_field_summary_class_numerically_accepted.csv": "168c87a7a044cc6bffdbf155400bbaa22a2367a789671899f008cd49e9ed1c00",
+      "manifests/v3_2/opened_diagnostics/objects.csv": "1f7057a9e41d0429a5cdc193c9a6569235dee4f0cf8e6ea4828e3781efcebc9a",
+      "manifests/v3_2/opened_diagnostics/reliability.csv": "dc4db07b0968822e683e199ea593369c401ab039a9c7ba631a119aa7971ceb97",
+      "manifests/v3_2/opened_diagnostics/score_path.csv": "949b979685775ae82316fe20afea836733b6ebf0251077cb87cf3b050fe80042",
+      "manifests/v3_2/opened_qrf/complete.json": "d37b9c3ea74c5c60fb3ba9920feb9ca3eadb00b230cbf0e9b3fd99b1261db4df",
+      "manifests/v3_2/opened_qrf/objects.csv": "6ad21a58079440cb28e8b6546e43c18309bc9ea9068de0fcef51b04b93b5ec72",
+      "manifests/v3_2/opened_qrf/paired.csv": "fcb1cb0a848920213b0c3fbccf207243a565dc87bd352358492215f38cd2592e"
+    }
+  },
+  "external": {
+    "passed": true,
+    "checks": 9130,
+    "scopes": {
+      "dr20": {
+        "n": 1117,
+        "admitted": 1107,
+        "numerical_flags": {
+          "candidate": 92,
+          "nominal_reference": 0,
+          "old_target": 1,
+          "qrf": 0
+        },
+        "freeze_job": "61273704",
+        "remote_payloads_declared": 19
+      },
+      "common": {
+        "n": 103,
+        "admitted": 80,
+        "numerical_flags": {
+          "candidate": 11,
+          "nominal_reference": 0,
+          "old_target": 0,
+          "qrf": 0
+        },
+        "freeze_job": "61273526",
+        "remote_payloads_declared": 16
+      }
+    },
+    "parent_reference_support": {
+      "job": "61275998",
+      "receipt_sha256": "76cfbd1df6192a662b377c91b4bc68b97f0d501a92c894a71b9a659962b4f15c",
+      "parent": 3540,
+      "high_q": 3003,
+      "admitted": {
+        "DR19_Astra": 0,
+        "DR20_LCO": 1117,
+        "HST_common": 103
+      },
+      "parent_overlap": 0,
+      "high_q_overlap": 0
+    },
+    "sources": {
+      "manifests/v3_2/branch_decision.json": "6ed1fe0f598288a0b570a16ae641ea193ce40d2f1950d0d9bd6388f92f8898fd",
+      "manifests/v3_2/branch_development/complete.json": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+      "manifests/v3_2/tilt_report/initial/complete.json": "e4acecda4240e311b6107fe8983bab7e84cc41b06acb3c70245a9f4fcd6af5f4",
+      "manifests/v3_2/tilt_predictions/initial/complete.json": "e77cb6ec903c525757860ce1c0fa1a4311814f1c2a216854b92f8f007ae891c5",
+      "manifests/v3_2/tilt_fits/initial/candidate_free/complete.json": "34c95896d97c46db63b30dfe66d22a491a8c21ab879a6b7bc14f62f68b474160",
+      "docs/v3_2_branch_protocol.md": "d59cc47640dd99828dd04dfc0fa2cad76cbdc7287239ff469911f474059f927a",
+      "src/photdis/v3_2/giant_branch.py": "0487040ede331b0304ccae39fab1af918048cf9232acabbb71f57d3c1cc7ec6b",
+      "scripts/v3_2_branch_forecast.py": "2e075988a39b0c43721118d8ef05cfe338ea54d79f97f0c5c87880b2be75e915",
+      "manifests/v3_2/final_validation_dr20/freeze.json": "c06d6145dd09d641101faab8d4304ee4caddeee4f40ef68acd4887d3c3e7a532",
+      "manifests/v3_2/final_validation_dr20/started.json": "8308ee8cb209d3738ba7545d49864fa741ff7b387fe38fc42210491370247d70",
+      "manifests/v3_2/minesweeper_forecast/complete.json": "ffb4e7167d22cc065a4d1593768cc22219e1e6996b6a11e25b9d115fee98d09b",
+      "manifests/v3_2/minesweeper_native/complete.json": "75aafae40214ca6e2740c3cc40f1f37d1a2dbe56e7ec5c338f2bc791dc57282f",
+      "manifests/v3_2/minesweeper_native/history.csv": "4a1a89071d984c1609afc0840951259dc5f230ebb200d320eccb3f35acda59a3",
+      "manifests/v3_2/minesweeper_native/counts.json": "e4f4ab3b1e72f40e1e337675899d8668d577f5f132219d1f016e0dad084f5f81",
+      "manifests/v3_2/minesweeper_inventory/complete.json": "cf586e96a4c43833c603b25dc24c2b770af84e1d9e2658d9293b6e5b5f0778ee",
+      "manifests/v3_2/minesweeper_inventory/history.csv": "a44be0d37bd97233a0380f271dc10b4dd252308d45c2f51b472bbedd1734647d",
+      "manifests/v3_2/minesweeper_inventory/counts.json": "4bd2e5079b13634297b14de75667bf23ff543e5b83eda4787b2911fad2e41c4b",
+      "docs/v3_2_minesweeper_intake.md": "2ccce797632734511d6e32aaacba9cd6ada2bcb5ee73ccc1e0a5dda32df5454d",
+      "manifests/v3_2/minesweeper_branch_candidate/complete.json": "64c108283eb31f9255ec2084c524358f7eb96f617b336a5aea271bced1bdf4df",
+      "manifests/v3_2/minesweeper_controls/complete.json": "13d95456a00ac63cb7e297fc130fb01e826fa625a509ab63b7dc91ec4bbd2e51",
+      "configs/field_dev_cal_ra205_215.json": "b9b406e3c907eedfedf6460c90ddb392001f78edda925efe3c1307b9596d4462",
+      "configs/field_native_ra060_070.json": "97628c543e0a4b3cd3e7da5eb68b552cf6dcba0a204bf2454f2306cf58302415",
+      "configs/field_native_ra330_340.json": "76d9e72761491ffd86919764b7433a3bfd4453682073d573c042da6dc21e0ae9",
+      "configs/field_native_ra020_030.json": "7598b213fce96284439c2b09534cf78e557a750730f467234e2e113b5fc131bd",
+      "configs/field_native_ra130_140.json": "6322dd5206b256e3272414097f68c2ce6360f5d9394d3a1348fe3ce224602d2d",
+      "configs/field_cold_v4_ra150_160.json": "4d7b5eb3ef3d12437f0ed8a9bba51ea72d6cc152cb93012cd77f345ae7ce248c",
+      "configs/field_cold_v4_ra220_230.json": "53b3ef15f6ded92e1c450be5f14e21cf8cf03ed49b08d1a4e03f0728f8b9309e",
+      "configs/field_targeted_ra180_190_dec_p000_p010.json": "0ff36dc7ec2ac711783d085d901ba1c601b09ec3dc217de1ac7ce35f81731143",
+      "configs/field_targeted_ra180_190_dec_m010_p000.json": "332ea3fcd1b25485efb31d756828cf745410c8c43a44db5424b768a3ad2e80ba",
+      "configs/field_targeted_ra190_200_dec_p020_p030.json": "f1de44f7a6f27d13dbcb15c39e4b2857bbf097542dbdf2215cbf379e88e19d9c",
+      "configs/field_targeted_ra020_030_dec_p000_p010.json": "c51d10db43ac8ef440a7c6ad265b1a34d68c5ece368fe36a0c0f6e523d0e2fdc",
+      "configs/field_giant_ranked_ra200_210_dec_p000_p010.json": "8baf4972ca939d626feb7ccaf2be2f0399c3048ba0e49856dc9466ade8e9bc68",
+      "configs/field_giant_ranked_ra190_200_dec_p000_p010.json": "44ac42992ffc3d442c5e5ecb930c6249747a348d8e1a48c4dac6e3b0fc808d48",
+      "manifests/v3_0/sed_fit.json": "761211a4e0d476825ff48b4e40278da2e064514a3f6d02ce07fe6e11a92cb045",
+      "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+      "manifests/v3_1/validation_old_target/field/complete.json": "5fb7e170babf01007c0f2bee8261050db8385ffb5cb3d9bca79b898faeba373c",
+      "scripts/v3_2_reference_controls.py": "d677a36aeacfb2056810445d43d3e6135119ff609c91b8de0121e7b4f2d5cd38",
+      "scripts/v3_1_luminosity_guard.py": "11160cccb301d0947db0da21887396e3517996dbf6d56dd36573d0db70b9d5a5",
+      "scripts/v3_1_validation_predict.py": "33b3ae090bc7b63aecb0e05636dd0b794ce0acc9c920421402c7699b446f5522",
+      "src/photdis/v3_1/admission.py": "7c54b7264902969136ff2b1af3679b56060b485cab67943e617cecce6dc74ac1",
+      "src/photdis/v3_1/shared_prior.py": "e5f10085115b8282a48836ff7ae21662bd350e479880a4003e17757d1067e429",
+      "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56",
+      "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+      "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+      "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+      "src/photdis/v3/systematics.py": "d078d62855df573cd0a3d5cdd403ab15480402c9ee18ca0f4ed0830a407dd74c",
+      "src/photdis/v3/hierarchy.py": "a5a901edc4ba6352a65f29b9558c41bb21a3a9217e546161641c8e317ffc7c7d",
+      "scripts/v3_2_reference_forecast.py": "4cd98baf124d9ccaf8b20e5c5f4c041b51869b74ddc7ba3acace71012dff9547",
+      "scripts/v3_2_reference_freeze.py": "e6499bd7303a925b84118be86ba3fb9ddb5dbb83b044b7bc3942e22ada87f115",
+      "scripts/v3_2_reference_score.py": "7b2af16d816175a2ac60529d3c9debb335d7261cddec7350963706ca55a10114",
+      "docs/v3_2_reference_intake.md": "cfaf256414ae5731547c0d15e48bdaa3b83669054cca4f884c4cc8619db3385f",
+      "scripts/v3_2_reference_evidence.py": "0aed52f9832dbe0b183a0917e5e24040914e96a4df1240c252e68115ff15c1a6",
+      "scripts/v3_2_contamination_support.py": "1be41c7ea23a78040ca7a6b2f88fef405f060b91fc122603ed98b523af9b4ff2",
+      "src/photdis/v3_1/freeze.py": "3dbf7aa2cef42cd9986c995d09560a00b99329ad160c04bba0544bd7752786ec",
+      "src/photdis/gaia.py": "055355969be90820ec3403d98ed18702e0840c2fc4744546a165ae5f7ef4e9ac",
+      "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+      "src/photdis/v3_1/validation_report.py": "f5ee139e95aec06829b027123606caba06c0a268e9efbd42eef8975e85b8b026",
+      "src/photdis/v3_1/validation_scores.py": "a80e33aaeebe3d9ff10801133d190d0370510f05e76bff24bdcdb45020025d9c",
+      "manifests/v3_2/final_validation_dr20/evidence_complete.json": "208e55830276d13b3a8fce4b7f6763aaf32a45f4bea4e35997e7b433cbaa88f4",
+      "manifests/v3_2/final_validation_dr20/scores/complete.json": "42bd08525ae8ed62c1ed4ed6f69cad978e40880c87182d544731f1b9a0841f00",
+      "manifests/v3_2/final_validation_dr20/coverage.csv": "3486abf0c8a60d06bc197dd1775ba359a3d0997ab00b2cf5fdb93aff4878b07a",
+      "manifests/v3_2/final_validation_dr20/scores/paired.csv": "8c03573403671c8f3fecc1e8758112ed77f1b9d3b6ee0f29ca11b1f3f6e8bf5b",
+      "manifests/v3_2/final_validation_dr20/scores/reliability.csv": "a9ec33ae6a4f2a785ed6f0e2e15f4677d4bbc19ad905206af490362ccb5475cf",
+      "manifests/v3_2/final_validation_dr20/scores/class_confusion.csv": "ea01b1c4acc42d501a660eb67179d1f6b1fbcfbbcba36c34e105100b9b1dadee",
+      "manifests/v3_2/final_validation_dr20/scores/reference_counts.csv": "b35ee5930d74f7e0be2779eae8d7f9e3e28c20768560375a4d356070ae71b93f",
+      "manifests/v3_2/final_validation_dr20/scores/objects.csv": "00a85ad4d78f4dc9f83502cc32d95cc8ddb2acd7aded884b7301a22580a64e31",
+      "manifests/v3_2/final_validation_dr20/scores/absolute.csv": "d51fdbdbb708aa1d59e09d45510a93c6ef67e14b6fc0dcedb7e474752ea32370",
+      "manifests/v3_2/final_validation_dr20/scores/highq_reference_support.csv": "8514e4f47e9d400595931fec668fb08647d28ecf9d43a60cc41300c00fd579a6",
+      "manifests/v3_2/final_validation_common/freeze.json": "0198dabf1d9492ed42c96a251b8c89681ff93eefa6d3958fe90b191b4f8f7b19",
+      "manifests/v3_2/final_validation_common/started.json": "eb5444940f507abba2e57eb471d1b83f42fcc05b5a33e2e2f54e08d9fd2120bb",
+      "manifests/v3_2/common_scale_forecast/complete.json": "241a67322e37d81d2966ad20a854b1780f4bfd64434bb452d2a8000089215f15",
+      "manifests/v3_2/common_scale_inventory/complete.json": "47f98ae6d24276d30bed910787ac98f39b9772109e2fcded029afdaf1d274be4",
+      "manifests/v3_2/common_scale_inventory/systems.csv": "9cac0c8455e6e5ff79e3489b9225823c0fa6c0d66cf4dc390e38233b3ede2e05",
+      "manifests/v3_2/common_scale_inventory/history.csv": "830e4b693fb68414659ca1a95b82935b221660a9356fd17f55ffb9672dd927a7",
+      "manifests/v3_2/common_scale_branch_candidate/complete.json": "1b4b0e28c1f7b64f55a1d960f24865220425d847d6898577751ee1a90c3f19c3",
+      "manifests/v3_2/common_scale_controls/complete.json": "735be4a2986ac4a5798d3e169b399f3e26040f8e4ebcb47a26bc9ca0b5cf0034",
+      "manifests/kgiant_bv21_reference_v1.json": "21009dd8d48bafeaaa021e6e11c1ec61ee82d7093a26bb218296d7b46bc628ea",
+      "scripts/v3_2_common_scale_score.py": "0879e6083bad979cadc829e8349dace10d6d72d618b98889d5ec05127973e927",
+      "manifests/v3_2/final_validation_common/complete.json": "70173edadf5f89f2f4675e42d0827bd2f7350c62f4c69baf30ca6165318c31dc",
+      "manifests/v3_2/final_validation_common/scale_agreement.csv": "798f2676a1c3268153ccca7fefcaf61b5871b9d5c59b78962ad1b66a20dcf572"
+    },
+    "scope": "Archived receipts and compact tables. Remote payload digests are bound by the compute-step freeze. This local audit does not reread remote arrays or reference outcomes."
+  },
+  "factorial": {
+    "n": 526,
+    "factorial_contrasts": 324,
+    "historical_contrasts": 144,
+    "size_control": {
+      "sample_psf": 3540,
+      "fields": 13,
+      "paired_rows": 216,
+      "comparison_sha256": "1d66401d12380fc845583051c10eb0ef4799df09ab8667a5edc751179fc8e00e",
+      "sample_sha256": "d8fb9619f6d3b4a459c07baaa10caacb9d1084a81156126435f0c2e918e296a1",
+      "archival_audit_sha256": "13b29c3f3f6e5476110d654050adca7af435f7db49f43d09e164984f5b4f73fb"
+    },
+    "entry_count_bins": 288,
+    "max_abs_log_normalizer": 2.0667797335994083,
+    "max_relative_log_weight_span": 0.15105045454040344,
+    "minimum_weight_ess": 2047.3014944239596,
+    "max_basis_count_delta": 0.7006116072633404,
+    "max_opened_distance_bin_count_delta": 0.004054778865395292,
+    "scope": "Compact output checks. Shared draw covariance stays bound by the allocated report receipt."
+  },
+  "branch": {
+    "job": "61273353",
+    "receipt_sha256": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+    "opened_psf": 526,
+    "flags": 0,
+    "candidate_free_pairs": 144,
+    "confusion_cells": 48,
+    "count_bins": 72
+  },
+  "fixed_structure_odds": {
+    "job": "61259650",
+    "comparisons": 4,
+    "failed": [
+      "full/512",
+      "gaussian/512"
+    ],
+    "receipt_sha256": "6afa81bdfa36dd306c296524a301a218dfe63aed07b18988a632e7b96d23520f",
+    "table_sha256": "24dd750a0a2af8126b087d65d3acdf9b26eff4e0040aa086d454ec8adfd9c234"
+  },
+  "figures": {
+    "passed": true,
+    "complete": true,
+    "plates": 11,
+    "inventory": {
+      "external_validation/dr20_reliability": {
+        "png": "figures/v3_2/external_validation/dr20_reliability.png",
+        "pdf": "figures/v3_2/external_validation/dr20_reliability.pdf",
+        "pixels": [
+          2850,
+          1440
+        ]
+      },
+      "external_validation/gaia_and_hst": {
+        "png": "figures/v3_2/external_validation/gaia_and_hst.png",
+        "pdf": "figures/v3_2/external_validation/gaia_and_hst.pdf",
+        "pixels": [
+          3900,
+          1260
+        ]
+      },
+      "opened_audits/probe_and_count_audit": {
+        "png": "figures/v3_2/opened_audits/probe_and_count_audit.png",
+        "pdf": "figures/v3_2/opened_audits/probe_and_count_audit.pdf",
+        "pixels": [
+          3600,
+          1380
+        ]
+      },
+      "opened_diagnostics/class_reliability": {
+        "png": "figures/v3_2/opened_diagnostics/class_reliability.png",
+        "pdf": "figures/v3_2/opened_diagnostics/class_reliability.pdf",
+        "pixels": [
+          3300,
+          2340
+        ]
+      },
+      "radial_design/selected_membership": {
+        "png": "figures/v3_2/radial_design/selected_membership.png",
+        "pdf": "figures/v3_2/radial_design/selected_membership.pdf",
+        "pixels": [
+          3360,
+          2010
+        ]
+      },
+      "structure_odds_audit/fixed_distance_odds": {
+        "png": "figures/v3_2/structure_odds_audit/fixed_distance_odds.png",
+        "pdf": "figures/v3_2/structure_odds_audit/fixed_distance_odds.pdf",
+        "pixels": [
+          2610,
+          1950
+        ]
+      },
+      "tilt_factorial/opened_factorial": {
+        "png": "figures/v3_2/tilt_factorial/opened_factorial.png",
+        "pdf": "figures/v3_2/tilt_factorial/opened_factorial.pdf",
+        "pixels": [
+          3660,
+          1380
+        ]
+      },
+      "tilt_size_control/size_control": {
+        "png": "figures/v3_2/tilt_size_control/size_control.png",
+        "pdf": "figures/v3_2/tilt_size_control/size_control.pdf",
+        "pixels": [
+          2850,
+          1200
+        ]
+      },
+      "radial_recovery/fixed_coverage": {
+        "png": "figures/v3_2/radial_recovery/fixed_coverage.png",
+        "pdf": "figures/v3_2/radial_recovery/fixed_coverage.pdf",
+        "pixels": [
+          3720,
+          2340
+        ]
+      },
+      "radial_recovery/prior_coverage": {
+        "png": "figures/v3_2/radial_recovery/prior_coverage.png",
+        "pdf": "figures/v3_2/radial_recovery/prior_coverage.pdf",
+        "pixels": [
+          2610,
+          1200
+        ]
+      },
+      "structure_joint/likelihood_contrast": {
+        "png": "figures/v3_2/structure_joint/likelihood_contrast.png",
+        "pdf": "figures/v3_2/structure_joint/likelihood_contrast.pdf",
+        "pixels": [
+          2850,
+          1230
+        ]
+      }
+    },
+    "inputs": {
+      "manifests/v3_2/figure_visual_review.json": "6d896b5a96d8229f67c7d74d4f8dfd451af2c9c2226be6107aa8ab7360ec6540",
+      "docs/v3_2_atlas.md": "059ab688e86bd41cc344de2e8a833b6f350f7029121b0295b84a6a3536e804c1",
+      "manifests/v3_2/final_validation_dr20/figure.json": "e01356dcba33091542b936f05652f8a1fbb757407ac0154ad7ef71f760f62b84",
+      "manifests/v3_2/branch_development/complete.json": "d69034c87258bd3274c88fe56722a0dd3dfe5f71c4d7fba49659e5a96443684e",
+      "manifests/v3_2/branch_development/paired.csv": "2565b37acfc11e031789e9b76051bdedd3674b3832c98629f70d9805183a7061",
+      "manifests/v3_2/final_validation_dr20/scores/complete.json": "42bd08525ae8ed62c1ed4ed6f69cad978e40880c87182d544731f1b9a0841f00",
+      "manifests/v3_2/final_validation_dr20/scores/paired.csv": "8c03573403671c8f3fecc1e8758112ed77f1b9d3b6ee0f29ca11b1f3f6e8bf5b",
+      "manifests/v3_2/final_validation_common/complete.json": "70173edadf5f89f2f4675e42d0827bd2f7350c62f4c69baf30ca6165318c31dc",
+      "manifests/v3_2/final_validation_common/scale_agreement.csv": "798f2676a1c3268153ccca7fefcaf61b5871b9d5c59b78962ad1b66a20dcf572",
+      "scripts/v3_2_external_figure.py": "fecbcaebc88679e66a960d9cf9a85d2a14d60a1b59130ca7e1797a29195b7b6a",
+      "manifests/v3_2/final_validation_dr20/scores/reliability.csv": "a9ec33ae6a4f2a785ed6f0e2e15f4677d4bbc19ad905206af490362ccb5475cf",
+      "figures/v3_2/external_validation/gaia_and_hst.png": "9f1ceb0bb8b1ce7e65d7406bc592cbee066dd9cf535f5a013cb0925e9ac32aba",
+      "figures/v3_2/external_validation/gaia_and_hst.pdf": "f82059e274e03204c327af74d6c7011996c87819069e1cde14c4c7db3ab43cdf",
+      "figures/v3_2/external_validation/dr20_reliability.png": "7674def77de2bbf1df705456c5e5feab7d44e10ab8e2bddece5357e9e446d54b",
+      "figures/v3_2/external_validation/dr20_reliability.pdf": "06b972adc97d0eeec710011c388d6900d7a9b4cd2c1655554c86d83d76c8c850",
+      "manifests/v3_2/opened_audits_figure/complete.json": "78c85720b64b712c71b87fc107468fafe4e407fb79d91cce09a25bae274c8008",
+      "manifests/v3_2/opened_probes/paired.csv": "07bb2220ab0210648102d1ff8be62aa5229e5a694155446add7e7d4354b8c132",
+      "manifests/v3_2/transfer_count_audit/conditional_counts.csv": "02af0380d336edb36174aad5117dc71db481a1f5b981af8eec4f116502a6fdb2",
+      "scripts/v3_2_opened_audit_figure.py": "460bd1cd5a6bced3f508f0eb2a25d5f4d4e6767e40a830ef250f458be224c01c",
+      "figures/v3_2/opened_audits/probe_and_count_audit.pdf": "2216d75466079cb79f8363c26f19f6c55629bdc86f6abfa5bfc6fea7cccfd872",
+      "figures/v3_2/opened_audits/probe_and_count_audit.png": "7872c6e2dbee89ad715f8ff3ac83e1cf75fe069fcdaffdb70411240d7387b1f4",
+      "manifests/v3_2/opened_audits_figure/plotted.csv": "590c59d5a6b5c1f93e2c73b0157d72748893ad96901bd91b23a74542cfea96be",
+      "manifests/v3_2/opened_diagnostics/figure.json": "fc063cf1c6049cc960594cf6adeade5e597879f4da78d1a00ad392fe91e98718",
+      "manifests/v3_2/opened_diagnostics/complete.json": "5371554114cea3cc00690f645e131862c4083c027d63c69614c37f6964c909c3",
+      "manifests/v3_2/opened_diagnostics/reliability.csv": "dc4db07b0968822e683e199ea593369c401ab039a9c7ba631a119aa7971ceb97",
+      "scripts/v3_2_opened_reliability.py": "ca6772da800df975c3a7a62efe381e3d601bca92383524125f12204df87ca461",
+      "figures/v3_2/opened_diagnostics/class_reliability.png": "cf4e224183f8da2b8eda7f1edb54098cb356de2858e8298435ddc55bd390fb4f",
+      "figures/v3_2/opened_diagnostics/class_reliability.pdf": "b355da6e4b582e3e13a94df3c3940d56b51bef62b67be2ceb47d594c84b90c24",
+      "manifests/v3_2/radial_design/figure.json": "68d61c0549b988721d52f177607b36040559d3805805e3d105b6ef08b026dbad",
+      "manifests/v3_2/radial_design/complete.json": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+      "manifests/v3_2/radial_design/design.csv": "2f912304e3153f982add7f7ee8734925b2234143bd504bb9ae38db249013d4d5",
+      "scripts/v3_2_radial_design_figure.py": "8610834857d6985ae70caf156dc74f41b3df13a825b373cc12e66172866c9016",
+      "figures/v3_2/radial_design/selected_membership.png": "eaf1709060e154ea33b12e9e2d75d6472c1f6b4199e9eb88f2ad079b170c78e1",
+      "figures/v3_2/radial_design/selected_membership.pdf": "0b55b3560e5d1aa13dc5de94abbb169b0a98070431d10d427e7f631b95872509",
+      "manifests/v3_2/structure_odds_audit/figure.json": "3b62feb2a18a88d84119db78118396e00ba9aabc77045dc7f0cde10e8cd8bb15",
+      "manifests/v3_2/structure_odds_audit/checks.csv": "24dd750a0a2af8126b087d65d3acdf9b26eff4e0040aa086d454ec8adfd9c234",
+      "manifests/v3_2/structure_odds_audit/complete.json": "6afa81bdfa36dd306c296524a301a218dfe63aed07b18988a632e7b96d23520f",
+      "scripts/v3_2_structure_odds_figure.py": "b374c54a1b0d87ad0654637d7f2b76157df49353bd6903c8a983274f0e701432",
+      "figures/v3_2/structure_odds_audit/fixed_distance_odds.png": "d43cc26cb42e9a67b8caf6c487c73077a669a283bbe51f6ef7bbc1706bab287a",
+      "figures/v3_2/structure_odds_audit/fixed_distance_odds.pdf": "02a716b64b95a61d9102174ce8722a13b9d3fd86d896c07676778b5df190d243",
+      "manifests/v3_2/tilt_report/initial/figure.json": "328309c0c53bcb4700c2777ebefed135e1cae359a7ce1c163eb85cbd9c397469",
+      "manifests/v3_2/tilt_report/initial/complete.json": "e4acecda4240e311b6107fe8983bab7e84cc41b06acb3c70245a9f4fcd6af5f4",
+      "manifests/v3_2/tilt_report/initial/factorial.csv": "091c2637569f1b447b72f9609ac5190e5b4fc1983488f0e00f5b2a6253c22703",
+      "scripts/v3_2_tilt_figure.py": "d46e53387c22272d9ada2948212e2267fa69af0cf09d0671a0ee35f82f94c2c8",
+      "figures/v3_2/tilt_factorial/opened_factorial.png": "6fda21af7eb3c93a6690f70b44dddd3ac5661ce4080302e760c26fcde3e846c7",
+      "figures/v3_2/tilt_factorial/opened_factorial.pdf": "e82562b4657535b69a21e4b93eb27081304f604968e3f4e1ba4d7f3aba10780b",
+      "manifests/v3_2/tilt_size_control/comparison/figure.json": "082b3664d30ff7b680b4d650cebc4499265b773837214dfd0921b55dad22aa0b",
+      "manifests/v3_2/tilt_size_control/comparison/paired.csv": "973a36b70366d1d9d4a18ac0149c72ea9baf696fd1e2c7447c09d569ee0d16e9",
+      "manifests/v3_2/tilt_size_control/comparison/complete.json": "1d66401d12380fc845583051c10eb0ef4799df09ab8667a5edc751179fc8e00e",
+      "scripts/v3_2_tilt_size_figure.py": "f87ebd844d91cdd6cfddefbceb7de3b797d6b13c6d3cb62185d260cdf71bd520",
+      "figures/v3_2/tilt_size_control/size_control.png": "3198e4750da7763e53ba74c784e125bbbc0ae042efbfe6cd31c4c237ce98a2bd",
+      "figures/v3_2/tilt_size_control/size_control.pdf": "9c0a71151eaba9a2eaa471204cc99656b74d03c44eeb5ffa8bf6c72105c7b347",
+      "manifests/v3_2/radial_report/figure.json": "6be25ecab6398fa866de320414ec2d48387662f6efaf99269629c787e84a6ccc",
+      "manifests/v3_2/radial_report/complete.json": "47c8d95e840a0e468b7573eae61a0f52f19c4c020f8118d8d2f96c67296c396a",
+      "manifests/v3_2/radial_report/coverage.csv": "4fa6a9b9dd7bb3cf10dfec764f1a318db5901db732a658633af9d871bfd0af3f",
+      "scripts/v3_2_radial_recovery_figure.py": "ab8f5dc3e5749bcd638d62e43eec3a722fba32e5c4c0649346008fe63a085475",
+      "figures/v3_2/radial_recovery/fixed_coverage.png": "0e26c04c91da86910a58ce31001143f2a3b2b3b798c5a2553613f362faf2f30b",
+      "figures/v3_2/radial_recovery/fixed_coverage.pdf": "0c29a9ecdbf73f09a1d508ae8ad67bfb05d050072fecde23cf44a4811fe95b64",
+      "figures/v3_2/radial_recovery/prior_coverage.png": "a776c151cea8bbb7e587ca3a67a123205be7e1515c1e5d4bc181dce27ca8312a",
+      "figures/v3_2/radial_recovery/prior_coverage.pdf": "112526448a26c6b3ee6928ae08946f6640b861b87abe49b79970fdd16f1f6b9a",
+      "manifests/v3_2/structure_joint/figure.json": "1b326f74fc6be8d1d7894967998ca6bf8adc418ac2b54005525b3a3221730f07",
+      "manifests/v3_2/structure_joint/complete.json": "7cfa21c7559a08d628096f5b326679c5cb47c07de955457459b9545cbaea23ad",
+      "manifests/v3_2/structure_joint/membership.csv": "c1dc3af4e9a9755fd8b8c98c4204545c22fb8fed8d5fa4cc085698051898b95c",
+      "manifests/v3_2/structure_joint/count_covariance.csv": "3de593fcc89804143f7ce1c83eaaaf4ad15ad73d06d2adffa0b85fac9016f70f",
+      "manifests/v3_2/structure_joint/summary.csv": "1d65aaf983c8cef75360b351a24904b6b2424a1dba4cbeff2f791637e8b53ac8",
+      "scripts/v3_2_structure_joint_figure.py": "9e84e0c13827a2eca4badc31f3038b54368d2f0f9af87c77e7cb0aa23d46a6a7",
+      "figures/v3_2/structure_joint/likelihood_contrast.png": "7515fe89d814709bddf415291c80a2e10f389a6a731f9afe35f400c624537c9b",
+      "figures/v3_2/structure_joint/likelihood_contrast.pdf": "20bc56d8b84b35c86c5fa605be593ada51cc97c4e0979c956612e764fdd637aa"
+    }
+  },
+  "documents": {
+    "docs/pro_review_7699299.md": "e0767bafa88cbe55032974ae9aa0023a9fb497cb4ffc568ab13563571eb0f385",
+    "docs/v3_2_result.md": "5e2db1ee63e736e902f4a44c508a6a829cb2ccd5051d953182dd51445d29dfd0",
+    "docs/v3_2_requirements_result.md": "baa5256119c38ca3ed217cfa48dfb34268696cff00d3c9b988c877c4d72bb314",
+    "docs/v3_2_atlas.md": "059ab688e86bd41cc344de2e8a833b6f350f7029121b0295b84a6a3536e804c1",
+    "docs/v3_2_protocol.md": "4768bbf7467c3a6a24b52587dbd79563a652fc2f5ee924c5c484e09271de3b06",
+    "docs/v3_2_external_result.md": "d6e2944db65420a43acebc2d35da545e6a2a58e765839e4797ec2c10eae1693f",
+    "docs/v3_2_opened_result.md": "e251461f3e55cede14ccb2216cd2850f2e07329197624abe0cded67ddaf0e6fe",
+    "docs/v3_2_factorial_result.md": "0fe34e1857078b5239cbdfad8e5c567b239ca343c29800a94bea9b52be365d0c",
+    "docs/v3_2_contamination_support.md": "8fa46ea678bf670bd6274f9a71ade4a8ff9b7bf3f0bda46284f22a23123e6fe7",
+    "docs/v3_2_radial_protocol.md": "6d1e484210afbb2e09abfb96c8fd0e3026bdd15327a99c800639ff26c16f64c7",
+    "docs/v3_2_structure_protocol.md": "20e054a72a2272cc96ccda154fb46ede6e83aa4c67add94ee0c89f30a4379ee0"
+  },
+  "radial": {
+    "job": "61266374",
+    "receipt_sha256": "47c8d95e840a0e468b7573eae61a0f52f19c4c020f8118d8d2f96c67296c396a",
+    "n_catalogs": 288,
+    "n_arms": 576,
+    "relative_and_counts_accepted": 518,
+    "both_fitted": 288,
+    "both_accepted": 230,
+    "recomputed_rows": {
+      "coverage": 2640,
+      "paired_count_loss": 288,
+      "paired_count_summary": 132,
+      "shrinkage": 864,
+      "shrinkage_summary": 198,
+      "empirical_minus_model": 768,
+      "empirical_minus_model_summary": 512
+    }
+  },
+  "structure": {
+    "job": "61263908",
+    "receipt_sha256": "7cfa21c7559a08d628096f5b326679c5cb47c07de955457459b9545cbaea23ad",
+    "input_failures_by_context": {
+      "full_native": 0,
+      "gaussian_native": 10,
+      "entry_second_seed": 2254,
+      "entry_previous_level": 2468,
+      "frozen_entry_closure": 0
+    },
+    "n": 512,
+    "n_states": 32,
+    "n_cells": 24,
+    "comparisons": 14,
+    "retained_input_failures": 4732,
+    "initial_distance_failed": [],
+    "final_failed": [],
+    "passed": false
+  }
+}
