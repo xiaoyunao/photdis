@@ -44,6 +44,13 @@ of 0.05. Entry-curve maximum difference must be below 0.003 and maximum
 expected count change below 0.5. A report's conditional accepted subset
 also requires Rhat < 1.05, minimum ESS >= 100 and zero divergent transitions.
 Report the full fitted subset alongside it and show registered denominators.
+For each design report paired changes in summed absolute errors of the
+18 count medians, divided by catalog size, and mean marginal interval
+length. Compare broad and local on the same catalogs and resample whole
+replicates within each design. Report all pairs with both fits and the
+subset where both pass the conditional gates. Coverage includes exact
+binomial intervals within the reported subset and bounds across all
+registered replicates if missing or excluded trials were to pass or fail.
 The first three recovery runs use catalogs 0, 128 and 256 to exercise fixed
 model, fixed empirical and prior-predictive paths before the wider array.
 

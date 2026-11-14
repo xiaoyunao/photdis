@@ -34,6 +34,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   256 (61261884) use repeat-00 cache 61260465. Check cache equivalence
   with job 61261765 before launching the remaining catalogs. New curve
   workers retain authenticated completed rows across allocation limits.
+  Final reporting pairs broad and local count error by catalog and
+  retains missing or excluded catalogs in the coverage bounds.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
   Identity index 61260891 verifies the archive receipt, and native match

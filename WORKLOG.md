@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — verify paired radial recovery reporting
+
+- Added catalog-paired 18-bin count error and marginal interval length
+  comparisons for the broad and local arms. Both-fitted and both-accepted
+  subsets retain all registered denominators. Coverage bounds show the
+  possible effect of missing and numerically excluded trials.
+- The reporter verifies exact fitted metrics for each arm. The synthetic
+  full entry point passed 288 catalogs, 576 arms and 252 paired fits with
+  deliberately missing local fits. Compilation, diff checks and all
+  454 single-threaded tests pass. Scientific recovery jobs remain pending.
+
 ## 2026-11-14 — retain absolute class confusion in the DR19 score
 
 - Added the dwarf and giant reference-by-prediction count table in both
