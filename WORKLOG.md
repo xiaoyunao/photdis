@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — start radial cache repeats 16 and 17
+
+- Completed comparable repeats 13–15 took 13m42s to 13m54s.
+  Confirmed unused debug capacity and moved zero-runtime children
+  61266329_16 and _17 to debug QoS with 30-minute limits.
+- Controller assigned raw IDs 61270472 and 61270473. Both started
+  and recovery 61266369 retained afterok on the existing cache array.
+- NGC288 state 2 also started. Broad/free remains in sampling and
+  candidate/free remains queued.
+
 ## 2026-11-14 — prepare the opened-sky factorial plate
 
 - Added `scripts/v3_2_tilt_figure.py` for the paired Gaia and class

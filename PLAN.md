@@ -70,7 +70,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   max five concurrent) has cleared that dependency. The throttle was raised
   from four after all 16 queued children showed JobArrayTaskLimit with no
   active child. Slurm cleared that reason and preserved the recovery
-  dependency. Cached recovery 61266369
+  dependency. Repeats 16 and 17 moved to debug QoS with 30-minute limits.
+  Both started with the existing afterok dependency intact.
+  Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
