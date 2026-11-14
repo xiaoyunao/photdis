@@ -199,6 +199,7 @@ products without a final delivery verdict.
   512 independent-entry-seed absolute checks fail. Retain them for
   the entry-axis comparison across states.
   State 04 passed all 2,560 checks.
+  State 05 passed all 2,560 checks in 1h25m40s.
   Pending state 09 (61275388) requests 32 GiB with a 3-hour limit.
   State 04 peaked near 11 GiB over 1h26m. Check the state-09 result
   before using this resource request on more states.

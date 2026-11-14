@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-14 — archive NGC288 state 05
+
+- Slurm 61263907_5 (raw 61272557) completed 0:0 in 1h25m40s.
+  Verified the receipt, checkpoint and all 2,560 context checks.
+  State 05 has no flags, bringing the verified state census to six.
+
 ## 2026-11-14 — reconcile factorial contrasts and entry sensitivity
 
 - Recomputed 324 factorial and 144 historical contrasts on the
