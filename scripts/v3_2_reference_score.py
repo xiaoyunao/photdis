@@ -18,6 +18,8 @@ from v3_2_tilt_inputs import verified
 
 def score_one(view, data, i, e):
     status = bool(data['numerical_pass'][i])
+    if 'available' in data and not data['available'][i]:
+        return dict(numerical_pass=False, prediction_available=False)
     q = data['mu_quantiles'][i]
     if view == 'qrf':
         edges = data['mu_edges'][i]
@@ -66,7 +68,10 @@ def score_one(view, data, i, e):
                          class_brier=c['brier'], predicted_class=c['predicted'],
                          class_correct=c['predicted'] == e['class_label'],
                          class_score_stable=stable['class'])
-    value.update(numerical_pass=status, median_mu=float(q[2]), high_qnear=bool(value['qnear'] > .95))
+    value.update(numerical_pass=status, prediction_available=True, median_mu=float(q[2]),
+                 high_qnear=bool(value['qnear'] > .95))
+    if view == 'qrf':
+        value['in_qrf_support'] = bool(data['in_qrf_support'][i]) if 'in_qrf_support' in data else None
     if e['distance_precise']:
         value['teacher_near'] = bool(e['distance_kpc'] < 10)
         value['teacher_near_brier'] = (value['qnear']-value['teacher_near'])**2

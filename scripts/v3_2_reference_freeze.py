@@ -51,6 +51,24 @@ def bind_predictions(inv, marker, photo, photo_digest, decision_digest):
         view_path = inv.add(view['payload'], view['sha256'])
         with np.load(view_path) as data:
             aligned(photo, data)
+            n = len(photo['identity'])
+            if data['mu_quantiles'].shape != (n, 5):
+                raise ValueError(f'Missing distance quantiles: {name}')
+            if name == 'qrf':
+                available = data['available']
+                if (available.shape != (n,) or available.dtype.kind != 'b'
+                        or data['mass'].ndim != 2 or data['mass'].shape[0] != n
+                        or data['mu_edges'].shape != (n, data['mass'].shape[1]+1)):
+                    raise ValueError('Invalid native QRF forecast arrays')
+            else:
+                for prefix in ('coarse_', ''):
+                    grid = data[prefix+'mu_grid']
+                    if (grid.ndim != 1 or len(grid) < 3 or not np.isfinite(grid).all()
+                            or not (np.diff(grid) > 0).all()
+                            or data[prefix+'logpdf'].shape != (n, len(grid))
+                            or data[prefix+'mu_quantiles'].shape != (n, 5)
+                            or data[prefix+'class_distance'].shape != (n, 3, 6)):
+                        raise ValueError(f'Invalid continuous forecast arrays: {name} {prefix}')
             status = data['numerical_pass']
             if status.shape != photo['identity'].shape or status.dtype.kind != 'b':
                 raise ValueError(f'Missing per-object numerical status: {name}')

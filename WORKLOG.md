@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — implement photometry-only DR19 comparator forecasts
+
+- Added frozen nominal reference, old response12/shared population, and
+  grz QRF paths. Reuse the historical field transfer prior and chain
+  weights; keep QRF native bins, support and unavailability flags.
+- Added four-view forecast assembly and shape checks before freezing.
+  Python/Bash syntax, 10 existing tests and focused checks for bin
+  reversal, negative Gaia, missing QRF and incomplete PDFs passed.
+- Wait for native match 61260892, then run the registered comparator
+  job. The tuned candidate and actual four-view freeze follow the
+  opened-domain mechanism decision. No new outcome values were read.
+
 ## 2026-11-14 — bind DR19 outcome access to frozen predictions
 
 - Added one receipt for admitted PSF identities, exact archive row pointers,

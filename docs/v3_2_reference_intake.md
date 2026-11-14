@@ -77,3 +77,11 @@ and the high-q selection in each teacher-qualified distance group. The
 teacher-far fraction among high-q objects has a view-specific denominator
 and describes the selected reference sample. Scientific application counts
 and independent parent-population contamination require separate evidence.
+
+The comparator job uses fixed nominal SED under the reference prior,
+response12/calibration12 with the old shared target chain and transfer
+prior, and the frozen grz QRF with Sobol128. Historical training overlap
+in QRF is retained as unavailable; QRF extrapolation status is explicit.
+The joint views keep two native distance grids and class-distance tables.
+Combine these files with the chosen candidate forecast under the same
+admitted photometry hash and completed opened-development decision.
