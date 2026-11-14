@@ -67,7 +67,9 @@ def giant_decomposition(rows, cells, role, arm):
     fields = ('reference_p_giant', 'p_giant', 'reference_oracle_far_mass', 'oracle_far_mass',
               'reference_oracle_far_peak_mu', 'oracle_far_peak_mu', 'reference_oracle_median_mu',
               'oracle_median_mu', 'reference_oracle_gaia_score', 'oracle_gaia_score',
-              'reference_oracle_astronn_score', 'oracle_astronn_score')
+              'reference_oracle_astronn_score', 'oracle_astronn_score',
+              'reference_oracle_astronn_mu_residual', 'oracle_astronn_mu_residual',
+              'reference_oracle_astronn_abs_mu_residual', 'oracle_astronn_abs_mu_residual')
     values = {key: np.array([number(r, key) for r in rows]) for key in fields}
     reference_far = np.isfinite(values['reference_oracle_far_peak_mu'])
     target_far = np.isfinite(values['oracle_far_peak_mu'])
@@ -80,7 +82,8 @@ def giant_decomposition(rows, cells, role, arm):
         logz_gap = giant_logz-dwarf_logz
     logz_gap[~np.isnan(giant_logz) & ~np.isnan(dwarf_logz) & np.isnan(logz_gap)] = np.inf
     values['reference_giant_minus_dwarf_logz'] = logz_gap
-    for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_astronn_score', 'oracle_median_mu'):
+    for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_astronn_score',
+                'oracle_median_mu', 'oracle_astronn_abs_mu_residual'):
         left, right = values[key], values['reference_' + key]
         present = ~np.isnan(left) & ~np.isnan(right)
         with np.errstate(invalid='ignore'):

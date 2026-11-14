@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — expose class-conditional distance bias in the factorial
+
+- Added signed and absolute median distance-modulus residuals against
+  qualified AstroNN centers for both the common-prior and fitted giant
+  branches. The giant report also gives paired absolute-error changes.
+- Verified the calculation on two synthetic posteriors with opposite
+  signed residuals. Syntax and diff checks passed. These are diagnostic
+  teacher comparisons on previously opened labels.
+
 ## 2026-11-14 — start the corrected DR20 comparator
 
 - Job 61271028 still waited on regular resources while the matching

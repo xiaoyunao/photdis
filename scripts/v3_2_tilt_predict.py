@@ -45,6 +45,8 @@ def diagnostic(grid, class_curve, label, evidence):
         ref_mu = 10 + 5 * np.log10(evidence['distance_kpc'])
         sigma = 5 / np.log(10) * evidence['distance_error_kpc'] / evidence['distance_kpc']
         stats['astronn_score'] = normal_reference_score(grid, normalized, ref_mu, sigma)
+        stats['astronn_mu_residual'] = stats['median_mu'] - ref_mu
+        stats['astronn_abs_mu_residual'] = abs(stats['astronn_mu_residual'])
     return stats
 
 
