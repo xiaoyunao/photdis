@@ -10,11 +10,15 @@ ledger in `docs/v3_2_requirements_result.md`.
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
   first twenty-four shards (00–23) are complete and verified.
+  The compact receipt audit independently counts 19504 broad PSFs and
+  2680 candidate PSFs across these shards.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shards 00–19 refinements pass all 456 flagged contexts.
   Shards 20–23 have 92 initial flags for refinement.
   Fitting verifies each check's identity, admission and quadrature recipe.
+  Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
+  before final input sign-off.
   Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.

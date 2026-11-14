@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile the tilt shard counts and verdicts independently
+
+- Added the compact receipt audit for exact row and PSF identities,
+  cross-shard uniqueness, hashed tables, both integration recipes,
+  recomputed verdicts and matching refinement keys.
+- Ran the audit across 24 input and 20 refinement receipts. It verifies
+  19504 broad PSFs, 2680 candidate PSFs, 548 initial flags, 456 passing
+  refinements and 92 pending flags. This corrects the earlier manual
+  candidate subtotals of 1795, 2228 and 2686 to 1789, 2222 and 2680
+  through shards 15, 19 and 23. Per-shard source tables are unchanged.
+- Compilation and diff checks pass. The complete-mode check correctly
+  rejects the incomplete refinement set.
+
 ## 2026-11-14 — preserve the DR19 high-q reference denominator
 
 - Added the final score table for both native and matched-candidate
