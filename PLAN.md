@@ -30,8 +30,8 @@ Active goal follows the Pro review of 7699299. See
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
-  The frozen nominal, historical target and QRF forecasts can run after
-  native admission. Candidate forecast awaits the mechanism decision.
+  The frozen nominal, historical target and QRF forecasts (61261381)
+  follow native admission. Candidate forecast awaits the mechanism decision.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 uses fixed

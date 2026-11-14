@@ -8,8 +8,7 @@
 - Added four-view forecast assembly and shape checks before freezing.
   Python/Bash syntax, 10 existing tests and focused checks for bin
   reversal, negative Gaia, missing QRF and incomplete PDFs passed.
-- Wait for native match 61260892, then run the registered comparator
-  job. The tuned candidate and actual four-view freeze follow the
+- Submitted comparator job 61261381 after native match 61260892. The tuned candidate and actual four-view freeze follow the
   opened-domain mechanism decision. No new outcome values were read.
 
 ## 2026-11-14 — bind DR19 outcome access to frozen predictions
