@@ -55,10 +55,16 @@ def giant_strata(rows):
 def giant_decomposition(rows, cells, role, arm):
     fields = ('reference_p_giant', 'p_giant', 'reference_oracle_far_mass', 'oracle_far_mass',
               'reference_oracle_far_peak_mu', 'oracle_far_peak_mu', 'reference_oracle_median_mu',
-              'oracle_median_mu', 'reference_oracle_gaia_score', 'oracle_gaia_score')
+              'oracle_median_mu', 'reference_oracle_gaia_score', 'oracle_gaia_score',
+              'reference_oracle_astronn_score', 'oracle_astronn_score')
     values = {key: np.array([number(r, key) for r in rows]) for key in fields}
-    for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_median_mu'):
-        values[key + '_minus_reference'] = values[key] - values['reference_' + key]
+    for key in ('p_giant', 'oracle_far_mass', 'oracle_gaia_score', 'oracle_astronn_score', 'oracle_median_mu'):
+        left, right = values[key], values['reference_' + key]
+        present = ~np.isnan(left) & ~np.isnan(right)
+        with np.errstate(invalid='ignore'):
+            delta = left - right
+        delta[present & np.isnan(delta)] = np.inf
+        values[key + '_minus_reference'] = delta
     for stratum, mask in giant_strata(rows):
         for name, value in values.items():
             yield dict(role=role, arm=arm, stratum=stratum, metric=name, group_n=int(mask.sum()),
@@ -217,6 +223,9 @@ def summarize(groups, anchors, forecast, manifest):
                                               **field_statistic(delta, np.asarray(cells)[use])))
             gates.append(dict(role=role, arm=arm, n=len(rows),
                               grid_flags=sum(r['grid_passed'] != 'True' for r in rows),
+                              **{f'{channel}_grid_flags': sum(
+                                  r.get(f'coarse_{channel}_score_passed') == 'False' for r in rows)
+                                 for channel in ('gaia', 'astronn', 'class', 'specdis', 'spdist', 'mws_class')},
                               sampler_flags=sum(r['sampler_passed'] != 'True' for r in rows),
                               probability_identity_max=max(float(r['joint_delta']) for r in rows),
                               marginal_half_max=max(float(r['marginal_half_delta']) for r in rows)))

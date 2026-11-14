@@ -131,6 +131,10 @@ AstroNN log-score shifts. Keep nonfinite scores as numerical failures. This nume
 diagnostic alone gives no new acceptance or independent accuracy claim.
 Opened-field predictions use each posterior draw normalized separately and
 the existing regional shrinkage for unfit fields, with common random seeds.
+Check every available external scoring channel at both distance-grid
+levels using the frozen score tolerances of 0.02 nat and 0.003 for
+Gaia PIT. Report the channel flags, quantile shifts and joint-probability
+shifts for each arm on the full opened cohort.
 
 ### Opened giant diagnostic strata
 

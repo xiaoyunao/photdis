@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — complete opened score-grid checks and verify tilt shards 12–13
+
+- The queued predictor checks Gaia score and PIT, teacher distance, and
+  class scores at both grids with the existing frozen tolerances.
+  Report each channel's flags and the class-conditional AstroNN contrast.
+  Retain nonfinite paired contrasts as numerical failures. Syntax and
+  nine targeted existing scoring and metric tests pass.
+- Authenticated initial shards 12/13 with 813 PSFs and 106 candidates
+  each. Original candidate entry flags are 27/23.
+
 ## 2026-11-14 — implement common-scale scoring and verify tilt shards through 11
 
 - Added the allocated common-system runner. It assembles all four

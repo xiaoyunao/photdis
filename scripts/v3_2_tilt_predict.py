@@ -19,7 +19,7 @@ from photdis.v3.model import inference_model
 from photdis.v3.systematics import calibration_vectors
 from photdis.v3.target import joint_coefficients
 from photdis.v3_1.shared_prior import geographic_fields, marginalize_native
-from photdis.v3_1.validation_scores import score_pdf
+from photdis.v3_1.validation_scores import compare_score_levels, score_pdf
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
 from v3_1_validation_report import read_cohort
@@ -139,15 +139,20 @@ def one(row):
         scored = score_pdf(grid, lp, q, value['class_distance'], ev)
         coarse_joint_delta = float(abs(value['class_distance'] - coarse['class_distance']).max())
         coarse_mu_delta = float(abs(q - coarse['posterior'].quantiles()).max())
-        coarse_score_delta = (float(abs(scored['gaia']['log_score'] - coarse_score['gaia']['log_score']))
-                              if ev['parallax_eligible'] else None)
+        score_checks = compare_score_levels(coarse_score, scored)
+        score_columns = {}
+        for check in score_checks['checks']:
+            channel = check['channel']
+            score_columns[f'coarse_{channel}_score_delta'] = check['logscore_delta']
+            score_columns[f'coarse_{channel}_score_passed'] = check['passed']
+            if channel == 'gaia':
+                score_columns['coarse_gaia_pit_delta'] = check['pit_delta']
         result = dict(identity=identity, TYPE='PSF', role=str(photo['role'][row]),
                       cell=int(photo['cell'][row]), view=arm, class_label=label,
                       candidate_admission=bool(photo['candidate_admission'][row]),
                       coarse_joint_delta=coarse_joint_delta, coarse_mu_delta=coarse_mu_delta,
-                      coarse_gaia_score_delta=coarse_score_delta,
                       grid_passed=coarse_joint_delta < .003 and coarse_mu_delta < .03
-                      and (coarse_score_delta is None or coarse_score_delta < .02),
+                      and score_checks['passed'],
                       p_giant=scored['class_probability'][1], qnear=scored['qnear'],
                       predicted_class=int(np.argmax(scored['class_probability'])),
                       class_log_score=scored.get('class', {}).get('log_score'),
@@ -162,6 +167,7 @@ def one(row):
                       reference_class_logz_giant=float(ref_evidence[1]),
                       reference_class_logz_other=float(ref_evidence[2]),
                       reference_p_giant=float(ref_class_probability[1]))
+        result.update(score_columns)
         if label >= 0:
             result.update({f'oracle_{k}': v for k, v in diagnostic(grid, class_curve[label], label, ev).items()})
             result.update({f'reference_oracle_{k}': v for k, v in diagnostic(grid, ref_curve[label], label, ev).items()})

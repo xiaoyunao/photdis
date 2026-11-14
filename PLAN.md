@@ -9,7 +9,7 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first twelve shards (00–11) are complete and verified.
+  first fourteen shards (00–13) are complete and verified.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shards 00–11 refinements pass all 262 flagged contexts.
@@ -21,6 +21,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   fitted-draw entry transfer for both alternative quadrature levels.
   The paired report tracks their distance-bin counts and external scores,
   and decomposes the historical regression with an exact same-object sum.
+  Numerical summaries retain flags for each available score channel.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See
