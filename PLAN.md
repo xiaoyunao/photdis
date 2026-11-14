@@ -9,10 +9,11 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first fourteen shards (00–13) are complete and verified.
+  first sixteen shards (00–15) are complete and verified.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–11 refinements pass all 262 flagged contexts.
+  Shards 00–13 refinements pass all 312 flagged contexts.
+  Fitting verifies each check's identity, admission and quadrature recipe.
   Array 61259727 uses aftercorr on
   61259514 so each completed input shard can enter refinement. It
   checkpoints the exact flagged (row, identity, admission) contexts.

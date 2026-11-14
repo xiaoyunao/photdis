@@ -20,7 +20,8 @@ from photdis.v3.target import sed_tilt_features
 from photdis.v3_1.fixed_population import FixedKernelFieldPopulation
 from photdis.v3_2.tilt_transfer import posterior_transfer
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
-from v3_2_tilt_inputs import SHARDS, LEVELS, SOURCE, verified
+from v3_2_tilt_inputs import SHARDS, LEVELS, SOURCE, TILTS, verified
+from v3_2_tilt_refine import LEVELS as REFINEMENT_LEVELS
 
 _HIERARCHY = _FIT = None
 DRAWS = 512
@@ -30,6 +31,18 @@ WARMUP = 512
 def sample(index):
     return hmc(_HIERARCHY.objective, _FIT['map'], _FIT['metric'],
                draws=DRAWS, warmup=WARMUP, seed=319901 + index, target_acceptance=.9)
+
+
+def checked_flags(checks, data):
+    owners = dict(zip(data['row'], data['identity']))
+    expected = {(row, identity, 'PSF', 'broad') for row, identity in owners.items()}
+    expected |= {(row, owners[row], 'PSF', 'candidate') for row in data['candidate_rows']}
+    actual = {(int(r['row']), int(r['identity']), r['TYPE'], r['admission']) for r in checks}
+    if len(checks) != len(expected) or actual != expected or any(
+            r['passed'] not in ('True', 'False') for r in checks):
+        raise ValueError('Incomplete or mismatched entry check contexts')
+    return {admission: {int(r['row']) for r in checks if r['admission'] == admission and r['passed'] == 'False'}
+            for admission in ('broad', 'candidate')}
 
 
 def assemble(case, root, expected_roles, *, refined):
@@ -46,7 +59,7 @@ def assemble(case, root, expected_roles, *, refined):
         path = folder / 'complete.json'
         record = json.loads(path.read_text())
         if (record['shard'] != shard or record['shards'] != SHARDS or not record['all_PSF']
-                or record['levels'] != [list(x) for x in LEVELS]):
+                or record['levels'] != [list(x) for x in LEVELS] or record['tilts'] != TILTS.tolist()):
             raise ValueError(f'Wrong shard or quadrature identity: {path}')
         sources = dict(record['inputs'])
         if sources.pop(wrapper) not in accepted_producers:
@@ -74,9 +87,8 @@ def assemble(case, root, expected_roles, *, refined):
         for name in ('row', 'identity', 'TYPE', 'field', 'design_weight', 'response', 'log_scale'):
             columns.setdefault(name, []).append(data[name][use])
         entry = data[case + '_entry']
-        shard_flags = {a: {int(r['row']) for r in checks if r['admission'] == a and
-                            r['passed'] == 'False'} for a in flags}
-        if sum(map(len, shard_flags.values())) != record['failed']:
+        shard_flags = checked_flags(checks, data)
+        if len(checks) != record['contexts'] or sum(map(len, shard_flags.values())) != record['failed']:
             raise ValueError(f'Flag count mismatch: {path}')
         if refined:
             patch_folder = root.parent / 'refined' / folder.name
@@ -89,6 +101,8 @@ def assemble(case, root, expected_roles, *, refined):
             patch = load(verified(patch_folder / 'patch.npz', patch_record['outputs']['patch.npz']))
             markers[str(patch_path.relative_to(ROOT))] = sha(patch_path)
             if (patch_record['shard'] != shard or not patch_record['all_PSF']
+                    or patch_record['levels'] != [list(x) for x in REFINEMENT_LEVELS]
+                    or patch_record['tilt_probes'] != TILTS.tolist()
                     or len(patch['row']) != record['failed']
                     or patch['passed'].dtype.kind != 'b'
                     or int(np.count_nonzero(~patch['passed'])) != patch_record['remaining_flags']

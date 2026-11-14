@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first half of the tilt inputs and fit intake
+
+- Authenticated shards 14/15 with 813 PSFs each, 119/102 candidates
+  and 24/27 original candidate entry flags. The first sixteen shards
+  total 13008 broad PSFs, 1795 candidates and 363 original flags.
+- Verified refinement 12 at 27/27 and refinement 13 at 23/23.
+  Shards 00–13 have all 312 initial flags resolved.
+- Fit assembly now matches the full entry check key set against each
+  matrix and verifies both registered quadrature recipes. Checked all
+  14797 original contexts currently available and tested that wrong ID,
+  admission, TYPE and verdict cannot pass assembly.
+
 ## 2026-11-14 — complete opened score-grid checks and verify tilt shards 12–13
 
 - The queued predictor checks Gaia score and PIT, teacher distance, and
