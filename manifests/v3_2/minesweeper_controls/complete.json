@@ -1,0 +1,76 @@
+{
+  "cohort": "new_dr20_lco_new_sky_field",
+  "n": 1117,
+  "all_PSF": true,
+  "references_read": false,
+  "pilot": false,
+  "photometry_sha256": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+  "views": {
+    "nominal_reference": {
+      "payload": "data/v3_2/minesweeper_controls/nominal_reference.npz",
+      "sha256": "799da61c1a39ef71ab4f5fac1891ce4634c5b84cef9a215dc8b47282e91a8deb",
+      "passed": 1117
+    },
+    "old_target": {
+      "payload": "data/v3_2/minesweeper_controls/old_target.npz",
+      "sha256": "9d591643eaf5bf9d469f74b57fa9306b8206d195e092305c9e03179a0c180021",
+      "passed": 1116
+    },
+    "qrf": {
+      "payload": "data/v3_2/minesweeper_controls/qrf.npz",
+      "sha256": "e37970c85bfe250fe47a79aae439b0d3d0e1941ab591ce4becb3584af1159658",
+      "passed": 1117
+    }
+  },
+  "candidate_admission": {
+    "payload": "data/v3_2/minesweeper_controls/candidate_admission.npz",
+    "sha256": "d9715da868ae3ea1a06147015dc940fd3ae22c9769a4bbf52e211a4522975117",
+    "admitted": 1107
+  },
+  "inputs": {
+    "configs/field_dev_cal_ra205_215.json": "b9b406e3c907eedfedf6460c90ddb392001f78edda925efe3c1307b9596d4462",
+    "configs/field_native_ra060_070.json": "97628c543e0a4b3cd3e7da5eb68b552cf6dcba0a204bf2454f2306cf58302415",
+    "configs/field_native_ra330_340.json": "76d9e72761491ffd86919764b7433a3bfd4453682073d573c042da6dc21e0ae9",
+    "configs/field_native_ra020_030.json": "7598b213fce96284439c2b09534cf78e557a750730f467234e2e113b5fc131bd",
+    "configs/field_native_ra130_140.json": "6322dd5206b256e3272414097f68c2ce6360f5d9394d3a1348fe3ce224602d2d",
+    "configs/field_cold_v4_ra150_160.json": "4d7b5eb3ef3d12437f0ed8a9bba51ea72d6cc152cb93012cd77f345ae7ce248c",
+    "configs/field_cold_v4_ra220_230.json": "53b3ef15f6ded92e1c450be5f14e21cf8cf03ed49b08d1a4e03f0728f8b9309e",
+    "configs/field_targeted_ra180_190_dec_p000_p010.json": "0ff36dc7ec2ac711783d085d901ba1c601b09ec3dc217de1ac7ce35f81731143",
+    "configs/field_targeted_ra180_190_dec_m010_p000.json": "332ea3fcd1b25485efb31d756828cf745410c8c43a44db5424b768a3ad2e80ba",
+    "configs/field_targeted_ra190_200_dec_p020_p030.json": "f1de44f7a6f27d13dbcb15c39e4b2857bbf097542dbdf2215cbf379e88e19d9c",
+    "configs/field_targeted_ra020_030_dec_p000_p010.json": "c51d10db43ac8ef440a7c6ad265b1a34d68c5ece368fe36a0c0f6e523d0e2fdc",
+    "configs/field_giant_ranked_ra200_210_dec_p000_p010.json": "8baf4972ca939d626feb7ccaf2be2f0399c3048ba0e49856dc9466ade8e9bc68",
+    "configs/field_giant_ranked_ra190_200_dec_p000_p010.json": "44ac42992ffc3d442c5e5ecb930c6249747a348d8e1a48c4dac6e3b0fc808d48",
+    "data/v3_2/minesweeper_native/complete.json": "75aafae40214ca6e2740c3cc40f1f37d1a2dbe56e7ec5c338f2bc791dc57282f",
+    "data/v3_2/minesweeper_native/photometry.npz": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+    "manifests/v3_0/sed_fit.json": "761211a4e0d476825ff48b4e40278da2e064514a3f6d02ce07fe6e11a92cb045",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "manifests/v3_1/validation_old_target/field/complete.json": "5fb7e170babf01007c0f2bee8261050db8385ffb5cb3d9bca79b898faeba373c",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/uncertainty/shared_draws.npz": "b018359d036d79474320ca1ff6c2ed452be31c8ae7c1cca675ae999fa109edcc",
+    "data/v3_0/native_responses/refit_12_s4096/chain_correction.npz": "470b0045b84981a31d3ae6483675156003b54fb4625ac281012d6d22e7239f72",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/baseline_v0/prepared.json": "8bfd4274ef20edb87e3d58f7c009ada5aaf46add269846ea27110a16b32b45e0",
+    "scripts/v3_2_reference_controls.py": "d677a36aeacfb2056810445d43d3e6135119ff609c91b8de0121e7b4f2d5cd38",
+    "scripts/v3_1_luminosity_guard.py": "11160cccb301d0947db0da21887396e3517996dbf6d56dd36573d0db70b9d5a5",
+    "scripts/v3_1_validation_predict.py": "33b3ae090bc7b63aecb0e05636dd0b794ce0acc9c920421402c7699b446f5522",
+    "src/photdis/v3_1/admission.py": "7c54b7264902969136ff2b1af3679b56060b485cab67943e617cecce6dc74ac1",
+    "src/photdis/v3_1/shared_prior.py": "e5f10085115b8282a48836ff7ae21662bd350e479880a4003e17757d1067e429",
+    "src/photdis/v3/controls.py": "0aa5239cfbcd125bad7c66f6af2362546515180bf218d2f013cfff91ded79c56",
+    "src/photdis/baseline_v0.py": "3ad7c4d505313c3212da571994437e38aad82e5b420cf8cca8bf06a56769b474",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "src/photdis/v3/systematics.py": "d078d62855df573cd0a3d5cdd403ab15480402c9ee18ca0f4ed0830a407dd74c",
+    "src/photdis/v3/hierarchy.py": "a5a901edc4ba6352a65f29b9558c41bb21a3a9217e546161641c8e317ffc7c7d"
+  },
+  "outputs": {
+    "old_target.npz": "9d591643eaf5bf9d469f74b57fa9306b8206d195e092305c9e03179a0c180021",
+    "old_target_shared.npz": "c35170c6aa48687c50c5959a908d309950e248888ea7c9d1911766348f6fe2b0",
+    "nominal_reference.npz": "799da61c1a39ef71ab4f5fac1891ce4634c5b84cef9a215dc8b47282e91a8deb",
+    "candidate_admission.npz": "d9715da868ae3ea1a06147015dc940fd3ae22c9769a4bbf52e211a4522975117",
+    "qrf.npz": "e37970c85bfe250fe47a79aae439b0d3d0e1941ab591ce4becb3584af1159658"
+  },
+  "job": "61272013"
+}

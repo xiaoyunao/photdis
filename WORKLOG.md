@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify the closed DR20 comparator forecasts
+
+- Replacement job 61272013 completed 0:0 in 8m02s. Reconciled its
+  receipt with the exact admission and tracked source hashes. The
+  1,117-object cohort contains 1,107 candidate admissions.
+- Numerical passes are 1,117 nominal reference, 1,116 old target and
+  1,117 QRF. The old-target flag is retained. Confirmed the DR20
+  outcome-access marker is absent.
+
 ## 2026-11-14 — advance radial cache repeat 19
 
 - Repeat 18 was already running in regular QoS. Moved the unstarted
