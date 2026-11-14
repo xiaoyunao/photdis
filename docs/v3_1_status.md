@@ -284,3 +284,17 @@ ESS103.872、半样本差0.0590通过支持规则，在候选入选上ESS21.669�
 最后状态31的实际终态为COMPLETED/0:0/18分18秒，64进程Python1086.050秒。
 702项全32状态检查通过，原始和精化标记、共享对象、输入和执行来源均已核对。
 矩阵汇总61232760已运行，后验/计数/域汇合依赖链保持；尚无最终后验或科学接受声明。
+
+## Final computation and figure milestone (2026-11-14)
+
+All four original dependent jobs completed0:0: assembly12m59, posterior4m32,
+counts14s, domain11s. Full32x512 assembly retains490native and11052entry original
+failures with0unresolved preparatory contexts. Both final posterior quadratures
+fail: full/Gaussian member means122.473/127.078, final logZ changes-0.1981/-0.3203,
+responseESS approximately1. Both65536 shared count simulations pass; this does
+not override the posterior failure. Domainjoin yields0calibrated cells.
+[Structure result](v3_1_structure_result.md) passes43source checks;
+[domain result](v3_1_domain_result.md) passes3871checks. Two structure plates and
+one domain plate pass1342/470format-source checks; all14panels visually reviewed.
+All22plates now have individual reviews; committed aggregate/full final closure
+remain required. Earlier execution notes are historical snapshots.

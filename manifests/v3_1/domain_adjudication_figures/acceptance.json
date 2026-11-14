@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "0651af5ad6d3fe261ea88006034afc6ab4820416ba0ecf3bf2fea2f1176421f1",
+  "integrity_sha256": "38f4f69c6ba6880b58a9bba58df349a076380adcdbaa491d6250868caee89f3a",
+  "actual_checks": 470,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 1,
+    "panels": 6,
+    "notes": "Actual six-panel PNG visually inspected. Counts and failed-main disposition are separate from conditional multimodality. Empty cells use grey and em dash, not zero or passed status. Colorbars, source denominators, labels and conditional-use limitations are legible; English only."
+  },
+  "scope": "Actual source/format and visual artifact acceptance only. Numerical and scientific failures are retained."
+}

@@ -1,0 +1,49 @@
+{
+  "command": [
+    "sacct",
+    "-S",
+    "2026-11-12",
+    "-X",
+    "-n",
+    "-P",
+    "-j",
+    "61232760,61232761,61232762,61233366",
+    "--format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,NodeList"
+  ],
+  "records": [
+    [
+      "61232760",
+      "COMPLETED",
+      "0:0",
+      "00:12:59",
+      "256",
+      "nid004154"
+    ],
+    [
+      "61232761",
+      "COMPLETED",
+      "0:0",
+      "00:04:32",
+      "256",
+      "nid004154"
+    ],
+    [
+      "61232762",
+      "COMPLETED",
+      "0:0",
+      "00:00:14",
+      "256",
+      "nid004154"
+    ],
+    [
+      "61233366",
+      "COMPLETED",
+      "0:0",
+      "00:00:11",
+      "256",
+      "nid004154"
+    ]
+  ],
+  "all_completed": true,
+  "scope": "Actual Slurm terminal states only; science and numerical acceptance are separate."
+}

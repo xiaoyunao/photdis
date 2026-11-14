@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-14 — finish structure inference, shared counts and scientific domain join
+- Original chain61232760/61/62 and61233366 COMPLETED0:0 in12m59/4m32/14s/11s.
+  Retrieved explicit marker/hash-verified CSVs with `scripts/v3_1_collect.py`.
+  Assembly authenticates all32x512 payloads; native490/entry11052 original flags
+  retained,0unresolved. Accounting records allocated whole-node256CPUs; wrappers
+  retain32 requested CPUs and single-thread numerical kernels.
+- Both full/Gaussian final joint quadrature gates fail. Member means122.473/127.078;
+  final logZ shifts-0.1981/-0.3203 and responseESS approximately1 retained.
+  Both65536 shared-count simulations pass; joint acceptance remainsfalse.
+  No automatic refinement, new model, or repeat of completed science jobs.
+- Ran `v3_1_structure_result.py` (43checks), `v3_1_domain_result.py` (3871checks).
+  Full domain join retains3540PSF/fixed3003highq/75cells/30occupied;0calibrated.
+- Rendered2structure/1domain plates with the corresponding figure scripts;
+  `v3_1_remaining_figure_check.py --group structure|domain` passes1342/470checks.
+  All14panels visually inspected after explicit symlog/marker/label repairs.
+  Figure acceptance is separate from numerical/scientific acceptance.
+- Final delivery fields now distinguish native failures, entry failures and
+  unresolved state objects; Pythonparse passed. Existing183test input hashes
+  remain unchanged. Nextcommit visual provenance, run22plate audit, finalize
+  integrated report/all21requirements and actual full delivery gate, then sync.
+
 ## 2026-11-14 — complete all thirty-two structure refinements
 - Laststate31/raw61246935 (arrayindex31) COMPLETED18m18/0:0;512refinedpass,
   420originalflags retained.64workers, Python1086.050s/maxchild4186628KiB.

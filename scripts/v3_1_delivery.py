@@ -216,8 +216,11 @@ def main():
                   scientific_domain_adjudication_complete=True, model_adopted=False,
                   independent_contamination_measured=False, deployed_v1_replaced=False,
                   figures=22, transfer_states=102, structure_states=32,
-                  original_structure_failures=refined['original_failed_contexts'],
-                  unresolved_structure_contexts=refined['unresolved_contexts'],
+                  original_structure_entry_failures=refined['original_failed_contexts'],
+                  original_structure_native_failures=sum(
+                      r['original_native_passed'] == 'False' for r in status_rows),
+                  unresolved_structure_entry_contexts=refined['unresolved_contexts'],
+                  unresolved_structure_state_objects=assembly['failed_state_objects'],
                   current_tracked_preservation=current_preservation,
                   scope='Local compact provenance and complete research delivery closure. Existing allocated production audits cover large payloads; no fresh full-payload scan or independent scientific calibration is claimed. Final git synchronization is recorded separately.')
     (BASE / 'delivery.json').write_text(json.dumps(result, indent=2) + '\n')

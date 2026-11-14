@@ -2,12 +2,10 @@
 
 机制诊断与校正的完整科学解释见[v3_1_mechanism_result.md](v3_1_mechanism_result.md)。
 
-整套交付预定22张图，当前已完成19张。统一检查脚本
-`scripts/v3_1_figure_delivery_check.py` 默认要求全部22张；当前显式部分审计
-完成270项来源、文件哈希、PNG300dpi、单页英文PDF和已提交目检记录绑定检查。
-[部分审计记录](../manifests/v3_1/figure_delivery_partial_19.json)不是完整验收，
-也不代表重复目检。新迁移2张已完成158项检查及12面板目检；结构2张、最终
-适用域1张仍待实际结果。
+整套22张图均已生成并完成逐张目检。新增结构两张/8面板和适用域一张/6面板
+分别通过1342/470项来源及格式检查；统一22张验收将在目检记录提交后执行。
+[历史19张部分审计](../manifests/v3_1/figure_delivery_partial_19.json)保留。
+图件验收不是模型数值通过或科学校准成功。
 
 前两张图是已见开发样本的机制诊断，不是最终独立验证。2026-11-13
 逐张目检PNG；62项哈希、分辨率、PDF、英文文字及源表对应检查通过。
@@ -34,7 +32,7 @@
 [源表](../manifests/v3_1/paired_figures/class_metallicity_contrasts.csv)。
 
 [实际检查记录](../manifests/v3_1/paired_figures/delivery_validation.json)。
-其余工作包图件与最终适用域图仍在推进。
+其余工作包及最终适用域图见下文。
 
 ## Constrained luminosity correction
 
@@ -234,7 +232,7 @@ probability mass is 79.5834%; the complement is not validated mass. Nine
 precise AstroNN references occupy five photometric cells; source dependence,
 empty cells, shared scales and inherited numerical failure remain explicit.
 Both plates / all 12 panels visually inspected; 1309 actual artifact/source
-checks pass. Final scientific use-domain adjudication is still pending.
+checks pass. Complete scientific use-domain adjudication appears below.
 [Result](v3_1_domain_evidence_result.md);
 [reference PDF](../figures/v3_1/domain_evidence/precise_newsky_references.pdf);
 [gap PDF](../figures/v3_1/domain_evidence/missing_reference_mass.pdf);
@@ -264,3 +262,36 @@ BothPNG300dpi/PDFplates andall12panels visually inspected after tick repair;
 [counts PDF](../figures/v3_1/heldout_transfer/heldout_joint_counts.pdf);
 [support PDF](../figures/v3_1/heldout_transfer/heldout_predictive_support.pdf);
 [acceptance](../manifests/v3_1/heldout_transfer_figures/acceptance.json).
+
+## Shared structure posterior and descriptive membership
+
+![Structure posterior](../figures/v3_1/structure/structure_posterior.png)
+
+Same512 photometric-first nativePSF objects and32 shared response/calibration
+states. Full/Gaussian member means122.473/127.078; realized95%intervals[112,130]
+and[120,137]. Both joint quadratures fail and both responseESS values are near1.
+Count sampling passes but does not remove numerical rejection. The supplied
+common distance prior is used once; this is not independent scale recovery.
+
+![Descriptive membership](../figures/v3_1/structure/structure_membership.png)
+
+Published probabilities are available for119objects,96withp>=0.9. Missing is
+not nonmembership. This seen-system comparison is descriptive and separate from
+the corrected candidate. All8panels visually reviewed;1342source/format checks.
+[Result](v3_1_structure_result.md);
+[posterior PDF](../figures/v3_1/structure/structure_posterior.pdf);
+[membership PDF](../figures/v3_1/structure/structure_membership.pdf);
+[acceptance](../manifests/v3_1/structure_figures/acceptance.json).
+
+## Final scientific-use disposition and retained ambiguity
+
+![Scientific-use disposition](../figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.png)
+
+All30occupied cells inherit the main evidence failure; no calibrated scientific
+use-domain is established. The other45cells contain no candidate. Conditional
+multimodality is retained independently of numerical rejection; percentages do
+not establish physical binaries or calibrated ambiguous predictions. Grey/empty
+cells are not zero-valued validation. All6panels visually reviewed;470checks.
+[Written adjudication](v3_1_domain_result.md);
+[PDF](../figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.pdf);
+[acceptance](../manifests/v3_1/domain_adjudication_figures/acceptance.json).

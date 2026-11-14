@@ -1,0 +1,14 @@
+{
+  "figure_manifest_sha256": "7de8116e6b851beb0aea9f34f641c01d23a79635eee82c41afdbdfe66f6b4155",
+  "integrity_sha256": "efa711606fd83b39c0497be75493ca7b71d159e89136b0e3dfce4a1bea61b076",
+  "actual_checks": 1342,
+  "passed": true,
+  "visual_review": {
+    "completed": true,
+    "date": "2026-11-14",
+    "figures": 2,
+    "panels": 8,
+    "notes": "Both actual PNG plates visually inspected, including final repaired versions. Explicit symlog ticks, circle/square branches, separate numerical versus sampling flags and supplied-scale/seen-system limits are legible. Shortened membership y-label removes overlap with the numerical-rejection caption. All counts, intervals, source values and original failures unchanged."
+  },
+  "scope": "Actual source/format and visual artifact acceptance only. Numerical and scientific failures are retained."
+}

@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/posterior/complete.json": "87c6a79faef65b2b2224e6646764d2a9d80ecfee081df088b6c80619e28a077e",
+    "manifests/v3_1/structure/posterior/summary.csv": "88a2f241ae389c17ce47111ed3091a43d3249a31ba1a42f8a75ad0d17b5e9a77",
+    "manifests/v3_1/structure/posterior/numerical_checks.csv": "60acee2db8341579f6e8d5c879d9657bced54138cac8f32e1f1d08246b4c6942",
+    "manifests/v3_1/structure/posterior/membership.csv": "c88a943c3108fe57e9d305ae5487f2b77c3b38a9a09239597b328c957c5bdf7c",
+    "manifests/v3_1/structure/report/complete.json": "efe0e511a3a08ce10c1b0ebf71d0bb83aa94bcc9ac3215b02b06d4c19e870802",
+    "manifests/v3_1/structure/report/counts.csv": "561c87a10e209096e04934568127cdb4e31b30f319b7cf5c3cad05b7c5d74c3c",
+    "manifests/v3_1/structure/report/membership.csv": "e7443fd8c7b4279c19b5b10efac8059a4a67cfe2b8984786148f500dc777f268",
+    "manifests/v3_1/structure/report/membership_comparison.csv": "4904b42c3f00b3c0c204df01ac9ebab90718b85cb07bd859ba9ac2475d1e6f1a",
+    "scripts/v3_1_structure_figures.py": "531f047a916165ef7c35d3824a372a1b841a90f0784cd7e7afb5d9e31b7c00bb",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d"
+  },
+  "outputs": {
+    "figures/v3_1/structure/structure_posterior.png": "128d7e8a8f69b2dbe3b989e819795f17a6faa0f9f37d79dbe222e5bf216cb657",
+    "figures/v3_1/structure/structure_posterior.pdf": "3ec4fa45be81aea7603b2ffa8242014222683402868564d018b20d9a82f13c1b",
+    "figures/v3_1/structure/structure_membership.png": "504f8105967c0ab8f21422773eeb07f4788944f4ca187e3b8218a903144c5217",
+    "figures/v3_1/structure/structure_membership.pdf": "bc7cec1c6d161d8dd7dd52f3f796d75e7dac24365aa6eda8b268ef551c1249b1",
+    "manifests/v3_1/structure_figures/plotted.csv": "ebf0ad8f3f766a8f90709bd476d364bb872b79374c60965534f8f1080299fadb"
+  },
+  "figures": 2,
+  "panels": 8,
+  "n": 512,
+  "states": 32,
+  "plotted_rows": 1306,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_acceptance": false,
+  "scope": "Authenticated full structure reports only; all numerical flags retained. No synthetic data, independent scale accuracy or final-candidate validation claim."
+}

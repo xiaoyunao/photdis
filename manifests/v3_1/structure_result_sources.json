@@ -1,0 +1,193 @@
+{
+  "inputs": {
+    "manifests/v3_1/structure/posterior/complete.json": "87c6a79faef65b2b2224e6646764d2a9d80ecfee081df088b6c80619e28a077e",
+    "manifests/v3_1/structure/posterior/summary.csv": "88a2f241ae389c17ce47111ed3091a43d3249a31ba1a42f8a75ad0d17b5e9a77",
+    "manifests/v3_1/structure/posterior/numerical_checks.csv": "60acee2db8341579f6e8d5c879d9657bced54138cac8f32e1f1d08246b4c6942",
+    "manifests/v3_1/structure/posterior/membership.csv": "c88a943c3108fe57e9d305ae5487f2b77c3b38a9a09239597b328c957c5bdf7c",
+    "manifests/v3_1/structure/posterior/comparison.json": "816840619131c022c4349c2b934941911cc497006faf87480e32b6eef5623ce6",
+    "manifests/v3_1/structure/report/complete.json": "efe0e511a3a08ce10c1b0ebf71d0bb83aa94bcc9ac3215b02b06d4c19e870802",
+    "manifests/v3_1/structure/report/counts.csv": "561c87a10e209096e04934568127cdb4e31b30f319b7cf5c3cad05b7c5d74c3c",
+    "manifests/v3_1/structure/report/membership.csv": "e7443fd8c7b4279c19b5b10efac8059a4a67cfe2b8984786148f500dc777f268",
+    "manifests/v3_1/structure/report/membership_comparison.csv": "4904b42c3f00b3c0c204df01ac9ebab90718b85cb07bd859ba9ac2475d1e6f1a",
+    "scripts/v3_1_structure_result.py": "eaac6ffd12ca6913c6de37f25966b33d374b3708eda15f2c2dc2236d48c72924"
+  },
+  "report_sha256": "ff7f446eabf76969b887e8e9a73cbb2101f0c9a45743f21dc3688e755bb19920",
+  "checks": [
+    {
+      "check": "complete_shared_sample:posterior",
+      "passed": true
+    },
+    {
+      "check": "source_hash:posterior/summary.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:posterior/numerical_checks.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:posterior/membership.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:posterior/comparison.json",
+      "passed": true
+    },
+    {
+      "check": "complete_shared_sample:report",
+      "passed": true
+    },
+    {
+      "check": "source_hash:report/counts.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:report/membership.csv",
+      "passed": true
+    },
+    {
+      "check": "source_hash:report/membership_comparison.csv",
+      "passed": true
+    },
+    {
+      "check": "count_report_posterior_identity",
+      "passed": true
+    },
+    {
+      "check": "both_branches",
+      "passed": true
+    },
+    {
+      "check": "four_count_rows",
+      "passed": true
+    },
+    {
+      "check": "unique512PSF:full",
+      "passed": true
+    },
+    {
+      "check": "membership_unchanged:full",
+      "passed": true
+    },
+    {
+      "check": "member_sum:full",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:full",
+      "passed": true
+    },
+    {
+      "check": "shared_variance:full/member",
+      "passed": true
+    },
+    {
+      "check": "ordered_realized_intervals:full/member",
+      "passed": true
+    },
+    {
+      "check": "original_gate_identity:full/member",
+      "passed": true
+    },
+    {
+      "check": "acceptance_preserved:full/member",
+      "passed": true
+    },
+    {
+      "check": "shared_variance:full/background",
+      "passed": true
+    },
+    {
+      "check": "ordered_realized_intervals:full/background",
+      "passed": true
+    },
+    {
+      "check": "original_gate_identity:full/background",
+      "passed": true
+    },
+    {
+      "check": "acceptance_preserved:full/background",
+      "passed": true
+    },
+    {
+      "check": "unique512PSF:gaussian",
+      "passed": true
+    },
+    {
+      "check": "membership_unchanged:gaussian",
+      "passed": true
+    },
+    {
+      "check": "member_sum:gaussian",
+      "passed": true
+    },
+    {
+      "check": "count_conservation:gaussian",
+      "passed": true
+    },
+    {
+      "check": "shared_variance:gaussian/member",
+      "passed": true
+    },
+    {
+      "check": "ordered_realized_intervals:gaussian/member",
+      "passed": true
+    },
+    {
+      "check": "original_gate_identity:gaussian/member",
+      "passed": true
+    },
+    {
+      "check": "acceptance_preserved:gaussian/member",
+      "passed": true
+    },
+    {
+      "check": "shared_variance:gaussian/background",
+      "passed": true
+    },
+    {
+      "check": "ordered_realized_intervals:gaussian/background",
+      "passed": true
+    },
+    {
+      "check": "original_gate_identity:gaussian/background",
+      "passed": true
+    },
+    {
+      "check": "acceptance_preserved:gaussian/background",
+      "passed": true
+    },
+    {
+      "check": "same_branch_identities",
+      "passed": true
+    },
+    {
+      "check": "same_published_information",
+      "passed": true
+    },
+    {
+      "check": "ten_numerical_comparisons",
+      "passed": true
+    },
+    {
+      "check": "original_numerical_gate:full",
+      "passed": true
+    },
+    {
+      "check": "original_numerical_gate:gaussian",
+      "passed": true
+    },
+    {
+      "check": "full_minus_gaussian_count",
+      "passed": true
+    },
+    {
+      "check": "maximum_probability_difference",
+      "passed": true
+    }
+  ],
+  "actual_checks": 43,
+  "passed": true,
+  "scientific_acceptance": false,
+  "scope": "Actual shared-count/identity/source consistency. Seen-system supplied-scale demonstration, not independent or final-candidate validation."
+}

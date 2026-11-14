@@ -1,0 +1,71 @@
+{
+  "inputs": {
+    "data/v3_1/structure/matrices/complete.json": "aa33499e06c5b7b4a71fd35ea686c1dc511ca07dab415086e48dec05fa96de59",
+    "data/v3_1/structure/matrices/matrices.npz": "766f97997de67bf7765c36143f830f0c655af2c32ce7ed8dc78b0f400122ea5f",
+    "scripts/v3_1_structure_infer.py": "a78e9a644edd931317acfb8b8bbb512193b4746843fdb0d41594dd328b1db4f7",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/structure_posterior.py": "0416c47799875844b8277b5e4983f31382a8772d65cc83f7f33dfda56273a4f0",
+    "docs/v3_1_structure_protocol.md": "dcd8d4186b9b57be8ca8ba55a9b6700bc2004c59b61a4d6ba6c7131a7960252d",
+    "docs/v3_1_structure_numerical_protocol.md": "481973063a074d370ffe3a9963c61c577b4c52146b5cf359196eacbbfcd06094"
+  },
+  "results": {
+    "full/base_m16_z64.json": "479ac6b5c196f3d6f3e8f165b54f9e9a9e02638b7b8f2f65e49d9409ebdfeff0",
+    "full/base_m32_z128.json": "64e4a2929babe76850b9076abffc4e80ff4d96c5b676ada91087e01e8b558557",
+    "full/base_m64_z256.json": "20fd23eed3c26a0eb9e69d15bd1f625028feebd0668f66046b2af4149a4ad028",
+    "full/native_coarse_m64_z256.json": "05e8a7b403dc7a5d3e1937f84f06721ee5122caecac7359da947f54e0b2fbc43",
+    "full/entry_second_seed_m64_z256.json": "b1b276bb8f9d380c05773c64ed2c76b9083449410aa0fc4df5a47a73bc87b250",
+    "full/entry_previous_level_m64_z256.json": "1c9a22abe0fe17d18cb0008d163a869161c5f5b594f39213dc8be380fedd524a",
+    "gaussian/base_m16_z64.json": "acdc30f2635f28987a8460268a12a8c1284b92bf2335e07ddedf626e2d4af1ab",
+    "gaussian/base_m32_z128.json": "94d905be03f84f2588428e1372a2aac02c1b54a4f5c30f733d3397f7362a2683",
+    "gaussian/base_m64_z256.json": "d0a76b5576fdbed6df539f5cec02c99b899b3bee7f965168c39c69b9c299ab58",
+    "gaussian/native_coarse_m64_z256.json": "c927702fb4d587bccea78617a19bbdffcda13bc6fe2a736a7828a079f7cdc546",
+    "gaussian/entry_second_seed_m64_z256.json": "7853eb8b2bed9e1b4f321d8e33dbcee55aeb05ee3daa5bbe08a7ad689d80aa73",
+    "gaussian/entry_previous_level_m64_z256.json": "648b8fb699266f85b6ae56ae0cfe0614511132235581cc78acb48119a111ea70"
+  },
+  "outputs": {
+    "numerical_checks.csv": "60acee2db8341579f6e8d5c879d9657bced54138cac8f32e1f1d08246b4c6942",
+    "summary.csv": "88a2f241ae389c17ce47111ed3091a43d3249a31ba1a42f8a75ad0d17b5e9a77",
+    "membership.csv": "c88a943c3108fe57e9d305ae5487f2b77c3b38a9a09239597b328c957c5bdf7c",
+    "comparison.json": "816840619131c022c4349c2b934941911cc497006faf87480e32b6eef5623ce6"
+  },
+  "n": 512,
+  "states": 32,
+  "all_PSF": true,
+  "passed": false,
+  "summary": [
+    {
+      "branch": "full",
+      "n": 512,
+      "numerically_passed": false,
+      "member_mean": 122.47321681306418,
+      "background_mean": 389.5267831869358,
+      "member_sigma": 4.517047632216805,
+      "shared_member_variance": 8.584589150924405,
+      "conditional_member_variance": 11.81913016079104,
+      "response_ESS": 1.0000000908565287,
+      "top_response": 5,
+      "common_distance_median_kpc": 10.093808506853282,
+      "common_distance_lower95_kpc": 9.623836861073118,
+      "common_distance_upper95_kpc": 10.424918211693901,
+      "log_evidence": -3124.3664881528625
+    },
+    {
+      "branch": "gaussian",
+      "n": 512,
+      "numerically_passed": false,
+      "member_mean": 127.07755434486491,
+      "background_mean": 384.9224456551351,
+      "member_sigma": 4.16761538603426,
+      "shared_member_variance": 5.820065822809824,
+      "conditional_member_variance": 11.548952183099672,
+      "response_ESS": 1.0000252577773001,
+      "top_response": 5,
+      "common_distance_median_kpc": 10.179141157133932,
+      "common_distance_lower95_kpc": 9.705451770537048,
+      "common_distance_upper95_kpc": 10.657949024471625,
+      "log_evidence": -3111.8466162000395
+    }
+  ],
+  "job": "61232761",
+  "scope": "SeenNGC288 shared response/common-distance/odds posterior, selected512object counts. No effective-area density, physical depth, final-candidate validation, or new independent distance accuracy claim. Numerical failures retained."
+}

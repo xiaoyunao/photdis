@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "manifests/v3_1/domain_adjudication/complete.json": "e2d5485c0b94922f38c7623c5ea19a3ca7a986b4965751003de87448f8c7019c",
+    "manifests/v3_1/domain_adjudication/cells.csv": "460a5b1cf5c8a492b2c5028b8a4f1bdcb8e4d201188fbfe683fa733c280d4d37",
+    "scripts/v3_1_domain_adjudication_figures.py": "6150d3014027a8e78366320b41f308a14d8deab0f7fc8a28c814c26243c982ae",
+    "scripts/v3_1_domain_figures.py": "7fd7681ccb869d1697f39a2e9cc55857f7a1649cae880152bee622b239ea1485",
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4"
+  },
+  "outputs": {
+    "figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.png": "26c2d956758cd7148c53a4dcca58509bcf202991ab9a4f5779de6c5eb27a45cd",
+    "figures/v3_1/domain_adjudication/scientific_use_and_ambiguity.pdf": "cda4abbf67b008c5fd26a9837f830b0a09fccaad06dd8afe0850f55e03ae933c",
+    "manifests/v3_1/domain_adjudication_figures/plotted.csv": "cc1bbbef07f3792ab222d91c6340052fd3f975da77856192570c592dca51d4ce"
+  },
+  "figures": 1,
+  "panels": 6,
+  "plotted_rows": 150,
+  "english_text_verified": true,
+  "visual_review_pending": true,
+  "scientific_domain_adjudication_complete": false,
+  "scope": "Actual complete-evidence synthesis; disposition and model ambiguity remain distinct. Final written review and image inspection pending."
+}

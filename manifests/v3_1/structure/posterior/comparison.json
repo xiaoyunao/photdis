@@ -1,0 +1,12 @@
+{
+  "member_mean_full_minus_gaussian": -4.604337531800724,
+  "common_mu_quantile_full_minus_gaussian": [
+    -0.018337516780110974,
+    0.0,
+    -0.01828037785517722,
+    -0.029546617777572948,
+    -0.04800491160033005
+  ],
+  "maximum_member_probability_difference": 0.5349825517682574,
+  "scope": "Fair likelihood-summary comparison, not a Bayes factor between normalized generative models or independent accuracy measurement. Common distance anchor was supplied once as a prior."
+}

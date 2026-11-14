@@ -1,0 +1,6 @@
+{
+  "data/v3_0/independent_scale/membership.npz": "6e4c02994009ea073e2de7664fc9a719c699d6811a699372400f945cb226ab83",
+  "data/v3_0/independent_scale/association.json": "9a27606b01d5d40c1da5cadb1ec8d7d54673e6dc55aa82a268784b2689914521",
+  "data/v3_0/independent_scale/photometry.npz": "9e468df16ca6c4cb1edcb413307d21a7661659a6041bd7092033b5ffd41a87c3",
+  "configs/v3_0_independent_scale.json": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9"
+}

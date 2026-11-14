@@ -18,10 +18,10 @@ This snapshot takes precedence over the historical execution notes below.
 - Complete: four-package frozen implementation; mechanism, radial, response,
   external validation, candidate modes, domain evidence and all102-state transfer
   reports. Scientific failures remain explicit; no model adoption.
-- Structure refinement:32/32 states (0–31),702 compact checks,
-  11052 original failed contexts retained and0 unresolved in completed states.
-  State31/raw61246935 completed18m18;64workers, Python1086.050s.
-  Assembly61232760 is running on allocated compute and authenticating full payloads.
+- Structure computation complete:32/32 refinements/702checks; allocated assembly,
+  posterior, shared counts and domain join allCOMPLETED. Original native490 and
+  entry11052 flags retained;0unresolved preparatory state objects. Both branches
+  fail final joint quadrature; both65536 count draws pass but are not accepted.
 - Required sequence: all32 refinements → existing assembly61232760 → posterior
   61232761 → shared-count report61232762 → domain join61233366. No duplicate jobs.
   All four original stages nowdebug, retaining dependencies/32CPUs andoriginal

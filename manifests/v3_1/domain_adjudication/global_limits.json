@@ -1,0 +1,338 @@
+{
+  "candidate_main": {
+    "view": "bootstrap_evidence",
+    "states": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "inputs_passed": true,
+    "accepted": false,
+    "n": 3540,
+    "fine_audited": 36,
+    "state_ESS": 21.173248234259475,
+    "maximum_state_weight": 0.07015243896952854,
+    "top_state": 26,
+    "q95_selected": 3003
+  },
+  "highq_views": [
+    {
+      "view": "zero",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "point",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "bootstrap_evidence",
+      "n": 3003,
+      "accepted": false,
+      "inherited_ensemble_accepted": false
+    },
+    {
+      "view": "bootstrap_cut",
+      "n": 3003,
+      "accepted": true,
+      "inherited_ensemble_accepted": true
+    }
+  ],
+  "independent_SED_probe_sets": [
+    {
+      "set": "original",
+      "states": 32,
+      "target_inputs_passed": false,
+      "accepted": false
+    },
+    {
+      "set": "new",
+      "states": 32,
+      "target_inputs_passed": true,
+      "accepted": true,
+      "log_evidence": -860.7633301922741,
+      "ESS": 1.0236280503887063,
+      "maximum_weight": 0.9883501870118373,
+      "top_draw": 1029,
+      "original_library_mass": 0.0,
+      "new_library_mass": 0.9999999999999999
+    },
+    {
+      "set": "pooled",
+      "states": 64,
+      "target_inputs_passed": false,
+      "accepted": false
+    }
+  ],
+  "radial": {
+    "catalogs": 176,
+    "arms": 352,
+    "numerically_passed": 268,
+    "selection_approximation": "Original entry tables omit local dust covariance; separately audited, not exact matched selection.",
+    "shared_library_uncertainty_measured": false
+  },
+  "final_external_scientific_acceptance": false,
+  "independent_fullcandidate_contamination_measured": false,
+  "heldout_transfer_views": [
+    {
+      "case": "broad",
+      "view": "zero",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "zero",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "point",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "point",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "bootstrap_evidence",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "bootstrap_evidence",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "broad",
+      "view": "bootstrap_cut",
+      "envelope": "broad",
+      "available": true,
+      "accepted": true,
+      "inherited_inputs_passed": true
+    },
+    {
+      "case": "broad",
+      "view": "bootstrap_cut",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": true,
+      "inherited_inputs_passed": true
+    },
+    {
+      "case": "candidate",
+      "view": "zero",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "zero",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "point",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "point",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "bootstrap_evidence",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "bootstrap_evidence",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "bootstrap_cut",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "candidate",
+      "view": "bootstrap_cut",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "zero",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "zero",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "point",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "point",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "bootstrap_evidence",
+      "envelope": "broad",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "bootstrap_evidence",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": false,
+      "inherited_inputs_passed": false
+    },
+    {
+      "case": "holdout",
+      "view": "bootstrap_cut",
+      "envelope": "broad",
+      "available": true,
+      "accepted": true,
+      "inherited_inputs_passed": true
+    },
+    {
+      "case": "holdout",
+      "view": "bootstrap_cut",
+      "envelope": "candidate",
+      "available": true,
+      "accepted": true,
+      "inherited_inputs_passed": true
+    }
+  ],
+  "structure_posterior_summary": [
+    {
+      "branch": "full",
+      "n": 512,
+      "numerically_passed": false,
+      "member_mean": 122.47321681306418,
+      "background_mean": 389.5267831869358,
+      "member_sigma": 4.517047632216805,
+      "shared_member_variance": 8.584589150924405,
+      "conditional_member_variance": 11.81913016079104,
+      "response_ESS": 1.0000000908565287,
+      "top_response": 5,
+      "common_distance_median_kpc": 10.093808506853282,
+      "common_distance_lower95_kpc": 9.623836861073118,
+      "common_distance_upper95_kpc": 10.424918211693901,
+      "log_evidence": -3124.3664881528625
+    },
+    {
+      "branch": "gaussian",
+      "n": 512,
+      "numerically_passed": false,
+      "member_mean": 127.07755434486491,
+      "background_mean": 384.9224456551351,
+      "member_sigma": 4.16761538603426,
+      "shared_member_variance": 5.820065822809824,
+      "conditional_member_variance": 11.548952183099672,
+      "response_ESS": 1.0000252577773001,
+      "top_response": 5,
+      "common_distance_median_kpc": 10.179141157133932,
+      "common_distance_lower95_kpc": 9.705451770537048,
+      "common_distance_upper95_kpc": 10.657949024471625,
+      "log_evidence": -3111.8466162000395
+    }
+  ],
+  "structure_count_report_passed": false,
+  "scope": "Shared globals are not local cell evidence. Seen NGC288 supplied-scale application is not independent final-candidate calibration. Signed Gaia is never inverted. Teacher channels and the one common scale are not independent replicas."
+}
