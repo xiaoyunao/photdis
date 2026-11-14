@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — connect DR20 identity requests to native DR11 admission
+
+- DR20 identity census 61267684 is in the regular queue. Added its
+  source option to the existing native matcher. The same DR11 release,
+  primary, PSF, history and photometric gates apply, with separate
+  output paths and exact MINESweeper row pointers.
+- Python compilation, shell syntax and CLI help checks passed.
+  Native matching awaits a completed, nonempty census.
+
 ## 2026-11-14 — close tilt input verification and prepare DR20 identity census
 
 - Last two refinement shards completed 0:0 with 19 and 26 passing

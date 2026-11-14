@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Qualify identity-matched DR19 photometry without opening reference values."""
+"""Qualify identity-matched field photometry without opening reference values."""
+import argparse
 from concurrent.futures import ProcessPoolExecutor
 import json
 import multiprocessing as mp
@@ -43,8 +44,14 @@ def historical_exclusions(data, paths):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--minesweeper', action='store_true',
+                        help='Match the closed DR20 MINESweeper identity census')
+    args = parser.parse_args()
     require_compute()
-    source = ROOT/'data/v3_2/reference_inventory'
+    prefix = 'minesweeper' if args.minesweeper else 'reference'
+    root = ROOT/'data/v3_2'
+    source = root/f'{prefix}_inventory'
     marker = source/'complete.json'
     record = json.loads(marker.read_text())
     if record['outcomes_read'] or record['scientific_sample_exported']:
@@ -52,7 +59,11 @@ def main():
     requests = load(verified(source/'requests.npz', record['outputs']['requests.npz']))
     if len(requests['identity']) == 0:
         raise ValueError('No native match requests in the authenticated identity inventory')
-    out = ROOT/'data/v3_2/reference_native'
+    index_keys = ('reference_row', 'obs') if args.minesweeper else ('sdss_id', 'distance_row', 'stellar_row')
+    if args.minesweeper and (record['native_TYPE_unverified'] != len(requests['identity'])
+                            or not (requests['obs'] == 'LCO').all()):
+        raise ValueError('DR20 requests must match the LCO identity census')
+    out = root/f'{prefix}_native'
     if out.exists():
         raise FileExistsError(out)
     native._IDS, native._OUT = requests['identity'], out
@@ -114,7 +125,7 @@ def main():
         atomic_npz(out/'photometry.npz', **accepted)
         matched = match[allow]
         atomic_npz(out/'reference_index.npz', identity=ids[allow], ls_id=ls_ids[allow], TYPE=accepted['TYPE'],
-                   **{key: requests[key][matched] for key in ('sdss_id', 'distance_row', 'stellar_row')})
+                   **{key: requests[key][matched] for key in index_keys})
         outputs += ['photometry.npz', 'reference_index.npz']
     csv_rows(out/'history.csv', history_rows)
     save_json(out/'counts.json', counts)
@@ -122,6 +133,8 @@ def main():
     sources = history+configs+[bricks, roles, marker, source/'requests.npz', Path(__file__).resolve(),
                                ROOT/'scripts/v3_1_external_native.py', ROOT/'scripts/v3_0_native.py',
                                ROOT/'scripts/v3_2_reference_inventory.py']
+    if args.minesweeper:
+        sources.append(ROOT/'scripts/v3_2_minesweeper_inventory.py')
     save_json(out/'complete.json', dict(
         inputs={str(p): sha(p) for p in sources}, outputs={name: sha(out/name) for name in outputs},
         job=os.getenv('SLURM_JOB_ID'), observations_read=True, reference_values_read=False,
