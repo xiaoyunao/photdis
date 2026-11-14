@@ -10,7 +10,8 @@
   row, and rejection of altered payloads or inputs. Eight radial and
   entry tests and Python syntax pass. The quadratures are unchanged.
 - Existing live 256 has the old execution path until it terminates.
-  Queued pilots load the checkpoint-enabled code once started.
+  Queued pilots load the checkpoint-enabled code once started. Added
+  an allocated verifier for exact cache/direct pilot curve equality.
 
 ## 2026-11-14 — propagate entry reweighting through opened-field prediction
 
