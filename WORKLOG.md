@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — archive NGC288 state 06 with entry-level flags
+
+- Slurm 61263907_6 (raw 61273299) completed 0:0 in 1h26m52s.
+  Verified the checkpoint and 2,560 context checks. The 424 flags
+  all come from the absolute previous-entry-level comparison.
+  Maximum absolute change was 0.0005133 versus the 0.0005 tolerance.
+- Both native grids, independent entry seed and archived entry
+  closure have zero flags in this state. Seven of 32 states have
+  been archived and verified.
+
 ## 2026-11-14 — reconcile the opened mechanism adjustment
 
 - Checked the 526 source-aligned PSF rows and reproduced 144
