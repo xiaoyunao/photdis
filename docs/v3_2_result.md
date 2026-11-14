@@ -4,8 +4,8 @@ The fixed giant-odds adjustment improves signed Gaia prediction relative
 to old target on the frozen DR20 field. The nominal response scores
 higher, and the external distance, class and count checks leave no
 calibrated release domain. The v3.2 candidate is retained as a research
-result. The narrow-structure recovery and NGC288 joint-quadrature
-sections remain in progress.
+result. Narrow-structure recovery is complete. The NGC288
+joint-quadrature calculation is in progress.
 
 [GPT Pro review of 7699299](pro_review_7699299.md) ·
 [Experiment protocol](v3_2_protocol.md) ·
@@ -269,17 +269,26 @@ interval 0.751–0.999). The coverage bounds across all registered
 repeats are 19/32–31/32 for each quantity. Including flagged fits,
 coverage for the four quantities is 29/32, 31/32, 31/32 and 31/32.
 These results use truths drawn from the fitted model's prior.
+Within the 20 accepted prior-predictive pairs, the local fit reduces
+normalized joint count error by 6.52 percentage points (95% paired
+bootstrap interval 3.44–9.71). The mean count interval across the 18
+joint bins lengthens by 0.43 objects (95% interval 0.22–0.67).
+Across all 288 catalogs, 230 pairs pass in both arms. All 58 failed
+arm verdicts are from sampling. They include one broad model-SED fit
+and 57 local fits (20 fixed model-SED, 25 fixed empirical-SED and
+12 prior-predictive).
 The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
-awaits the 32-state joint result. In the first ten archived states,
-512 independent-entry-seed checks, 424 previous-entry-level checks
-and four Gaussian native checks failed. All 5,120 full-likelihood
-native and all 5,120 archived-entry closure checks passed in these
+awaits the 32-state joint result. Across the 15 archived states,
+1,024 independent-entry-seed checks, 424 previous-entry-level checks
+and seven Gaussian native checks failed. All 7,680 full-likelihood
+native and all 7,680 archived-entry closure checks passed in these
 states. NGC288 is a previously opened
 system and demonstrates sensitivity of the inference to the
 likelihood representation.
 
 [Conditional count audit](v3_2_opened_probe_and_count_result.md#conditional-count-sensitivity) ·
 [Narrow-structure protocol](v3_2_radial_protocol.md) ·
+[Radial recovery report](../manifests/v3_2/radial_report/) ·
 [NGC288 joint protocol](v3_2_structure_protocol.md)

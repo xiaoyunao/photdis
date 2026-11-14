@@ -6,7 +6,8 @@ Active goal follows the Pro review of 7699299. See
 `docs/pro_review_7699299.md`, `docs/v3_2_protocol.md` and the evidence
 ledger in `docs/v3_2_requirements_result.md`.
 The synthesis in `docs/v3_2_result.md` records the completed model
-and external findings and identifies the two pending application results.
+and external findings and the completed radial recovery. The NGC288
+joint result and plate remain pending.
 Use `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py --collect-reports`
 to archive compact tables when Slurm records a successful report job.
 Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
@@ -153,9 +154,7 @@ catalogs archived.
   Both retry tasks completed in debug, and both fits passed in each.
   Slurm later canceled 096 and 098 before writing their result directories.
   Both tasks in debug retry array 61280724 completed with the same
-  cached inputs. Both fits pass in each archived catalog. Report
-  61266374 still waits for the original array to finish before
-  authenticating all 288 receipts.
+  cached inputs. Both fits pass in each archived catalog.
   Seven empirical-SED tasks (130, 131, 133, 135, 137, 140, 143)
   were canceled before an output directory was created. Debug QoS
   rejected the seven-task submission under its submission limit.

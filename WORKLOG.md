@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — reconcile radial sampling failures and the joint dependency
+
+- Re-ran the radial report audit. All seven derived tables reconcile.
+  Tallied failed verdicts by arm and generator. Sampling accounts for
+  all 58 failures. Added the prior-predictive paired count contrast
+  and interval-length change to `docs/v3_2_result.md`.
+- Slurm confirms NGC288 states 15–18 and 31 running and job 61263908
+  waiting for all 32 states. Updated the synthesis with the archived
+  15-state verdict totals and `PLAN.md` with the pending deliverables.
+- All 472 tests passed. Continue collecting completed distance states.
+
 ## 2026-11-15 — complete and verify the radial recovery report and plates
 
 - Archived 278–287. All 288 catalogs and 33 strata now reconcile.
