@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — retry DR20 controls and verify two more radial caches
+
+- Replaced failed DR20 comparator 61268949 with 61271028 after syncing
+  the uniform-grid fix. Confirmed no existing output or active duplicate.
+  The common-scale comparator 61269026 remained pending at submission.
+- Cache jobs 61270472 and 61270473 completed 0:0 in 14m06s and 13m45s.
+  `v3_2_radial_cache_audit.py` verified their receipt and checkpoint hashes,
+  bringing the compact inventory to 18 repeats and 2,304 contexts.
+
 ## 2026-11-14 — fix the uniform grid for closed external controls
 
 - DR20 controls 61268949 failed after 18s with `Uniform increasing grid

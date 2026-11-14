@@ -73,13 +73,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   from four after all 16 queued children showed JobArrayTaskLimit with no
   active child. Slurm cleared that reason and preserved the recovery
   dependency. Repeats 16 and 17 moved to debug QoS with 30-minute limits.
-  Both started with the existing afterok dependency intact.
+  Both completed in debug with the existing afterok dependency intact.
   Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–15 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Cache receipts 00–17 are verified with `scripts/v3_2_radial_cache_audit.py`.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
@@ -96,7 +96,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
   Census 61267684 completed with 7,297 native match requests. Native job
   61267848 found 7,292 primary PSFs and admitted 1,117. The three frozen
-  DR20 comparators are queued as 61268949.
+  DR20 comparators are queued as 61271028. Job 61268949 failed on the
+  nonuniform input grid and its log is retained. The corrected wrapper uses
+  uniform likelihood grids and inserts reporting boundaries during integration.
   Photometry audit 61269472 verifies 53 sky cells and confirms that all
   1,117 objects have r0 < 18. There are no weak-W1 rows.
   Freeze model, rules and new reference roles before
