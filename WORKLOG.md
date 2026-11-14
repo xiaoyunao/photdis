@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify the test suite during the matched prediction
+
+- All 469 tests passed with numerical libraries limited to one thread.
+  The preservation audit found zero changes across 8,773 protected
+  tracked paths in the commit, index and worktree. Diff check passed.
+- Slurm job 61259969 passed 192 of 526 opened objects in its progress
+  log. The paired report continues to wait on that forecast.
+
 ## 2026-11-14 — verify radial cache repeat 19
 
 - Repeat 19 (raw 61272075) completed 0:0 in 13m46s. Collected its
