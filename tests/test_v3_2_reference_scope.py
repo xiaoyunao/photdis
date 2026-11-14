@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from v3_2_reference_freeze import VIEWS, read_admission
-from v3_2_reference_score import reliability, score_one, summarize
+from v3_2_reference_score import class_confusion, reliability, score_one, summarize
 
 
 def test_frozen_admission_checks_identity_order_and_count(tmp_path):
@@ -92,3 +92,21 @@ def test_probability_bins_and_counts_keep_identical_qualified_denominators():
     assert matched_near['count_residual'] == pytest.approx(.9)
     qrf_giant = next(row for row in totals if row['view'] == 'qrf' and row['target'] == 'giant')
     assert qrf_giant['reference_qualified'] == 3 and qrf_giant['n'] == 0
+
+
+def test_absolute_confusion_conserves_reference_counts_and_numerical_exclusions():
+    evidence = dict(class_label=np.array([1, 1, 0, -1, 1]), cell=np.arange(5))
+    forecasts = [dict(predicted_class=p, numerical_pass=i != 1, class_score_stable=True)
+                 for i, p in enumerate([0, 2, 0, 1, 1])]
+    rows = {name: forecasts for name in VIEWS}
+    rows['qrf'] = [dict(numerical_pass=True) for _ in forecasts]
+    reports = class_confusion(rows, evidence, np.array([True, True, True, True, False]))
+    for row in reports:
+        assert row['classified']+row['excluded_numerical']+row['missing_forecast'] == row['reference_qualified']
+    subset = [row for row in reports if row['view'] == 'candidate'
+              and row['reference_class'] == 'giant'
+              and row['admission_scope'] == 'matched_candidate_admission']
+    assert [row['count'] for row in subset] == [1, 0, 1, 1, 0, 0]
+    assert [row['excluded_numerical'] for row in subset] == [0, 0, 0, 1, 1, 1]
+    assert all(row['classified'] == 0 and row['mean'] is None
+               for row in reports if row['view'] == 'qrf')

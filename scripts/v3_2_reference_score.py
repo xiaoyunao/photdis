@@ -187,6 +187,36 @@ def reliability(rows, evidence, candidate_admitted):
     return bins, totals
 
 
+def class_confusion(rows, evidence, candidate_admitted):
+    """Count each qualified reference as dwarf or giant, retaining missing predictions."""
+    labels, cells = evidence['class_label'], evidence['cell']
+    scopes = {'native_photometric': np.ones(len(labels), bool),
+              'matched_candidate_admission': candidate_admitted}
+    names = ('dwarf', 'giant', 'other')
+    result = []
+    for view in VIEWS:
+        predicted = np.array([r.get('predicted_class', -1) for r in rows[view]])
+        if not np.isin(predicted, (-1, 0, 1, 2)).all():
+            raise ValueError(f'Invalid predicted classes for {view}')
+        passed = np.array([r['numerical_pass'] and r.get('class_score_stable', False)
+                           for r in rows[view]])
+        for scope, base in scopes.items():
+            for accepted in (False, True):
+                for reference, name in enumerate(names[:2]):
+                    eligible = base & (labels == reference)
+                    selected = eligible & (predicted >= 0) & (passed if accepted else True)
+                    for i, prediction in enumerate(names):
+                        hit = predicted[selected] == i
+                        result.append(dict(view=view, admission_scope=scope, numerical_only=accepted,
+                                           reference_class=name, predicted_class=prediction,
+                                           reference_qualified=int(eligible.sum()), classified=int(selected.sum()),
+                                           missing_forecast=int((eligible & (predicted < 0)).sum()),
+                                           excluded_numerical=int((eligible & (predicted >= 0) & ~selected).sum()),
+                                           count=int(hit.sum()),
+                                           **field_statistic(hit, cells[selected])))
+    return result
+
+
 def main():
     require_compute()
     out = ROOT/'data/v3_2/final_validation_dr19'
@@ -223,9 +253,11 @@ def main():
             for i, identity in enumerate(evidence['identity'])]
     absolute, paired = summarize(by_view, evidence, candidate_admitted)
     probability_bins, reference_counts = reliability(by_view, evidence, candidate_admitted)
+    confusion = class_confusion(by_view, evidence, candidate_admitted)
     output.mkdir(parents=True, exist_ok=False)
     for name, rows in [('objects', sum(by_view.values(), [])), ('absolute', absolute), ('paired', paired),
-                       ('reliability', probability_bins), ('reference_counts', reference_counts)]:
+                       ('reliability', probability_bins), ('reference_counts', reference_counts),
+                       ('class_confusion', confusion)]:
         csv_rows(output/f'{name}.csv', rows)
     save_json(output/'complete.json', dict(freeze_sha256=freeze_sha, evidence_sha256=sha(evidence_marker),
               all_PSF=True, views=list(VIEWS), n=len(evidence['identity']), job=os.getenv('SLURM_JOB_ID'),

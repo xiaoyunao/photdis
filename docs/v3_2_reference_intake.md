@@ -112,3 +112,6 @@ count difference and the sky-block interval for the mean per-object
 difference. These are counts of agreement with available reference
 labels. Joint predictive count intervals require the shared-state
 forecasts and are evaluated separately in the injection experiments.
+For class confusion, report reliable dwarf and giant labels against
+all three posterior argmax classes. Include missing forecasts and
+numerical exclusions in the reference-row denominator ledger.

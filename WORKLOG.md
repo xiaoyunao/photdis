@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — retain absolute class confusion in the DR19 score
+
+- Added the dwarf and giant reference-by-prediction count table in both
+  admission scopes. Counts retain the other predicted class, missing
+  forecasts and numerically excluded rows. Synthetic validation
+  reconciles every reference denominator and the QRF unavailable case.
+- Compilation, diff check and all 452 single-threaded tests pass. No
+  outcomes opened. Radial cache job 61260465_0 remains active.
+
 ## 2026-11-14 — authenticate tilt refinement 01 and plot NGC288 convergence
 
 - Slurm 61259727_1 (element job 61262699) completed 0:0 in 1m43s.
