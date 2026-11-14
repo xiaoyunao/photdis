@@ -25,11 +25,10 @@ from v2_1_near import ROOT, atomic_npz, load, save_json, sha
 from v3_0_response import observation
 from v3_1_luminosity_guard import predict
 from v3_1_validation_predict import class_loglike
-from v3_2_reference_freeze import IDENTITY, ROLE, require_native
+from v3_2_reference_freeze import COMMON_ROLE, IDENTITY, ROLE, require_native
 from v3_2_tilt_inputs import verified
 
 _STATE = None
-COMMON_ROLE = 'new_hst_kinematic_system'
 
 
 def qrf_prediction(model, table, *, batch=128):

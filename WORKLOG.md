@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — queue common-system controls and verify tilt shards 08 and 09
+
+- Submitted 61264223 to forecast the 103 PSF common-system comparison
+  without reading HST scale values. Forecast assembly now checks role,
+  native identity, admission and candidate decision for both cohorts.
+  Eight freeze/scope tests, syntax and diff checks pass.
+- Authenticated initial tilt shards 08/09, both with 813 PSFs and
+  109/122 candidate objects. Initial candidate entry flags 15/24 remain
+  available to the registered refinement array.
+
 ## 2026-11-14 — prepare the outcome-closed common-system comparators
 
 - Verified all 63 refinements in shards 05–07. The eight completed input

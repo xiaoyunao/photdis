@@ -16,6 +16,7 @@ from v3_2_reference_inventory import ARCHIVES
 VIEWS = ('candidate', 'qrf', 'nominal_reference', 'old_target')
 IDENTITY = ('identity', 'ls_id', 'TYPE')
 ROLE = 'new_dr19_new_sky_field'
+COMMON_ROLE = 'new_hst_kinematic_system'
 
 
 def aligned(source, other):
@@ -46,10 +47,10 @@ def read_admission(path, photo, expected_n):
         return gate
 
 
-def bind_predictions(inv, marker, photo, photo_digest, decision_digest):
+def bind_predictions(inv, marker, photo, photo_digest, decision_digest, *, role=ROLE):
     record = inv.marker(marker)
     if (record.get('references_read') is not False or record.get('pilot') is not False
-            or record.get('cohort') != ROLE
+            or record.get('cohort') != role
             or record.get('photometry_sha256') != photo_digest
             or record.get('decision_sha256') != decision_digest
             or set(record['views']) != set(VIEWS)):
