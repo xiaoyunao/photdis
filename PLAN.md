@@ -28,6 +28,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   Raised the input array throttle from 4 to 5 after all eight pending
   slots reported JobArrayTaskLimit with no running slots. The scheduler
   cleared that reason and retained both downstream dependencies.
+  Pending shard 24 moved to debug QoS with its existing 30-minute limit.
+  Shard 25 remains on the regular queue.
   Four matched fits (61259811), predictions (61259969), and the paired
   report (61259977) are queued in dependency order. The fit also records
   fitted-draw entry transfer for both alternative quadrature levels.
@@ -52,8 +54,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   Direct 000 completed in 29m35s. The local sampler fails Rhat and ESS
   despite passing all entry and count checks. Keep the first matched
   model/empirical comparison in the fitted subset.
-  Cache array 61266329 (repeats 01–31, max four concurrent) starts after
-  exact direct/cache verification 61261765. Cached recovery 61266369
+  Exact direct/cache verification 61261765 completed and passed on both
+  pilot arrays of 128 contexts. Cache array 61266329 (repeats 01–31,
+  max four concurrent) has cleared that dependency. Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.

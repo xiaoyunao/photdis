@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify exact direct/cache equivalence and advance tilt shard 24
+
+- Cache verification 61261765 completed in 17s with exit 0:0 in its existing
+  regular QoS. The guarded QoS change skipped it when it began executing.
+  Collected the receipt, checked eight source hashes and both exact-array
+  verdicts for catalogs 000 and 128, 128 native PSF contexts each.
+- Cache array 61266329 cleared its prerequisite. The registered recovery
+  array still waits for all caches and the prior-predictive pilot.
+- Moved existing pending tilt shard 61259514_24 to debug QoS under the
+  current 30-minute, two-running and five-submitted limits. The controller
+  verified child 24 (raw job 61266773), regular child 25 and the original
+  corresponding refinement dependency. No duplicate write was launched.
+
 ## 2026-11-14 — verify the first direct and empirical radial pair
 
 - Direct model-SED catalog 000 completed in 29m35s with Slurm exit 0:0.

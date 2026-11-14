@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "data/v3_2/radial_design/complete.json": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "scripts/v3_2_radial_entry_verify.py": "c292533d573fc0c6b6e12bbdc38dc58ee63c3cd7c16157a8e75ce2052296e13f",
+    "data/v3_2/radial_design/photometry_000.npz": "fcbf3f1048269a2fa66e03caa8e01d093e16d80c7b160a3d3450f442c1801771",
+    "data/v3_2/radial_recovery/catalog_000/complete.json": "25185fe337cd11498dd3cb33cc2b85150b719a1029c35a5bc41f4a86d41c072e",
+    "data/v3_2/radial_entry/repeat_00/complete.json": "45c9f4d46b30da5a2905f4f645078c452d205799c7c593b9fcaa378d659fe471",
+    "data/v3_2/radial_design/photometry_128.npz": "288492d577820e78ab8e98643d5e4fdb8aad9f81476dab1bbf0f1be408444339",
+    "data/v3_2/radial_recovery/catalog_128/complete.json": "9d4f31bc7cde4101be2b734ddc8e8432ebd6a016751af11214e2ddb88a53c376"
+  },
+  "checks": [
+    {
+      "catalog": 0,
+      "n": 128,
+      "array_equal": true,
+      "cached_in_recovery": false
+    },
+    {
+      "catalog": 128,
+      "n": 128,
+      "array_equal": true,
+      "cached_in_recovery": true
+    }
+  ],
+  "all_PSF": true,
+  "passed": true,
+  "job": "61261765",
+  "scope": "Exact array comparison on the original direct and cached pilot contexts."
+}
