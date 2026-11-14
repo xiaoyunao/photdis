@@ -51,8 +51,6 @@ def assemble(case, root, expected_roles, *, refined):
         check_path = verified(folder / 'checks.csv', record['outputs']['checks.csv'])
         with check_path.open(newline='') as stream:
             checks = list(csv.DictReader(stream))
-        for admission in flags:
-            flags[admission] += sum(r['admission'] == admission and r['passed'] == 'False' for r in checks)
         data = load(verified(folder / 'matrices.npz', record['outputs']['matrices.npz']))
         np.testing.assert_array_equal(data['row'], np.arange(shard, len(expected_roles['identity']), SHARDS))
         matches = expected_roles['candidate'][data['row']]

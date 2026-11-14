@@ -9,7 +9,8 @@ Active goal follows the Pro review of 7699299. See
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
   first production shard is verified, and array 61259514 builds the other 31.
-  Refine flagged entry contexts, then run the four matched fits and score the
+  Shard 00 refinements pass 26/26, and array 61259727 follows 61259514.
+  Then run the four matched fits and score the
   opened field with direct paired factorial contrasts.
 - Decompose giant branch availability, suppression and class-conditional
   distance error. Then choose one supported model modification.

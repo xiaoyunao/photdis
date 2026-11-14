@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — verify shard 00 refinements and submit dependent stages
+
+- NERSC 61259586_0 completed 0:0 in 2m10s with batch MaxRSS 34,165,204 KiB.
+  Verified its 26 PSF context rows and source hashes. All pass, with maximum
+  frozen-zero delta 0.000191, level delta 0.000110, seed delta 0.000178.
+- Submitted 61259727 for flagged-context refinement in shards 1–31 after
+  61259514. Submitted NGC288 odds-axis audit as 61259650.
+- Synthetic merge exposed double counting of initial flags after overlaying
+  a refinement. Removed the duplicate accumulation. The smoke case now
+  conserves the original flag, clears it after a passing refinement, and
+  only changes the matching candidate row. Python compile passed.
+
 ## 2026-11-14 — queue input refinement and isolate structure quadrature
 
 - Submitted debug 61259586_0 to refine the 26 candidate contexts flagged
