@@ -1,0 +1,66 @@
+{
+  "inputs": {
+    "data/v3_1/target_native_pilot/roles.npz": "95dc39dc3012b3074fdd245a3ebcbef2ab2a530cb8ef911abbc95b2e26ee1a50",
+    "data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "data/v3_0/shared_predictions/application_refit_0/draw_12/shared_system.npz": "2502f3977a383d72a44ecca02b371b18286deb06873a52769eb87b37cbbd1424",
+    "data/v3_0/uncertainty_refit/draw_12/model.joblib": "d270f5b6500e22b33f17daf10b72668eae0923f4d80d483bf5cc5caf02502a32",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "manifests/v3_2/tilt_pilot_refined/complete.json": "c280a4a9750ff8a876baea162ea65298507b8246ea77581b2c1f1c4d0c596ef5",
+    "data/v3_1/target_matrices/complete.json": "c6ad2c8ec5785057c91b623e7c766e864a78d2a56d4a8fbf787a0cf6a8530cd8",
+    "data/v3_1/target_matrices/source_markers.json": "66a741989336e5a0926001a2094f4ce2e51df6d0e9e8df7affe2eaf8bfd4fd6b",
+    "scripts/v3_2_tilt_inputs.py": "f0ab6a10dab4f2bf1577e8ad51d48a7a49e1bb5c7734238bbfbc51f791a9c242",
+    "src/photdis/v3_2/kernel_entry.py": "25cbd7c38351f59787f558aef08483496b770bb6546a5c5766d0ce71320bcf70"
+  },
+  "row_checkpoint_sha256": "32f49c6d2c42af1850167bc8ad5d27b48d6d8ad4c38606fff6709696d6170be5",
+  "checkpoint_code_sha256": "52bd398afb2c5945082934cf2f0e6537fddd1a40db8030f4e491cff51edba2b0",
+  "outputs": {
+    "matrices.npz": "04a5b052aed7f3230d8a0e819fbde9c9dd2d016d89a3fa45fd8104fce98202bc",
+    "checks.csv": "3b24db9e531f13ddc54ee5393f0401fb03c3f1b9a8daa85fed6c9fb3575c9122"
+  },
+  "shard": 6,
+  "shards": 32,
+  "n": 813,
+  "candidate_n": 121,
+  "all_PSF": true,
+  "non_PSF_excluded": 0,
+  "missing_TYPE_excluded": 0,
+  "contexts": 934,
+  "failed": 25,
+  "levels": [
+    [
+      1048576,
+      319711
+    ],
+    [
+      2097152,
+      319711
+    ],
+    [
+      2097152,
+      319712
+    ]
+  ],
+  "tilts": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.3,
+      0.0
+    ],
+    [
+      -0.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.0,
+      -0.3
+    ]
+  ],
+  "job": "61263838"
+}

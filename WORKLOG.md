@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify tilt input shards 06 and 07 and refinement 04
+
+- Slurm 61259514_6 and _7 completed 0:0. Verified 813 PSFs in each,
+  with 121/102 candidate objects and 25/17 initial flags respectively.
+  Verified unique identities across all eight shards, totaling 6504
+  broad objects, 900 candidate objects and 182 initial entry flags.
+- Slurm 61259727_4 completed 0:0. Verified 25/25 successful refinements
+  on the exact flagged contexts, giving 119 passing refinements in
+  shards 00–04 with the 63 flags in 05–07 still pending verification.
+
 ## 2026-11-14 — rebind the DR19 intake and verify two more tilt shards
 
 - Moved the unchanged initial DR19 inventory to the named
