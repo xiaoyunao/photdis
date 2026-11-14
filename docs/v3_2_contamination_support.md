@@ -31,6 +31,16 @@ likelihood, including weak and negative parallaxes.
 
 ## Parent-matched measurement
 
+An exact identity audit of the 3,540-object frozen application frame
+and its 3,003 high-q objects found zero overlaps with the 1,117 admitted
+DR20 LCO PSFs and the 103 admitted HST members. The DR19 channel admitted
+zero objects. Job 61275998 matched the native PSF identities against the
+archived gate and completed in 16 seconds. This establishes the coverage
+of these admitted cohorts. Inclusion probabilities for the frozen parent
+remain unavailable.
+
+[Identity overlap table and receipt](../manifests/v3_2/parent_reference_support/)
+
 After a candidate and threshold are fixed, define a concrete native
 PSF frame and write the high-q identities and their observable strata.
 A probability sample from that frame needs positive inclusion

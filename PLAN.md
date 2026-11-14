@@ -182,7 +182,8 @@ products without a final delivery verdict.
   frozen 3,540-object application frame and 3,003 high-q subset.
   This audit only reads native identity payloads and archived selection.
   Moved the queued audit to the vacant debug allocation after the cache
-  array finished.
+  array finished. It completed 0:0 in 16 seconds. All three cohorts
+  have zero exact overlaps with the parent and its high-q subset.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
   in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 completed.
   Each of the three controls passes its forecast numerical checks on

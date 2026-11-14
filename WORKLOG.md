@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — measure reference overlap with the frozen application frame
+
+- Job 61275998 completed 0:0 in 16 seconds. Verified the input
+  receipts, overlap table digest and admitted cohort counts.
+- The admitted DR20, HST and DR19 cohorts each have zero exact
+  overlaps with the frozen 3,540-object frame and 3,003 high-q
+  subset. Archived the table and recorded the resulting limit
+  on contamination measurement.
+
 ## 2026-11-14 — verify the complete radial cache inventory
 
 - Repeats 30 and 31 completed 0:0 in 14m05s and 13m51s.

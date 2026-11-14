@@ -1,0 +1,24 @@
+{
+  "job": "61275998",
+  "inputs": {
+    "manifests/v3_1/highq_counts/complete.json": "e0c035596d908a728305e530038ba628fbc23c3da4cf0dd424289d2bf800c2d3",
+    "data/v3_1/highq_counts/complete.json": "e0c035596d908a728305e530038ba628fbc23c3da4cf0dd424289d2bf800c2d3",
+    "data/v3_1/highq_counts/selection.npz": "882f28b477626d24acabbb9b90c4467482d9c120bec158e0076bd88fbfc8e830",
+    "scripts/v3_2_parent_reference_audit.py": "34bceeb8e340fcfe4ff9fc568fb22377b0fd333528693e9f9b9ed3195d3ce05d",
+    "scripts/v3_2_reference_freeze.py": "e6499bd7303a925b84118be86ba3fb9ddb5dbb83b044b7bc3942e22ada87f115",
+    "manifests/v3_2/reference_native/complete.json": "37ce157f1846202e12243b0a3a1b55c3eb3e1da5ef4ec03fc5ed1375e676c158",
+    "data/v3_2/reference_native/complete.json": "37ce157f1846202e12243b0a3a1b55c3eb3e1da5ef4ec03fc5ed1375e676c158",
+    "manifests/v3_2/minesweeper_native/complete.json": "75aafae40214ca6e2740c3cc40f1f37d1a2dbe56e7ec5c338f2bc791dc57282f",
+    "data/v3_2/minesweeper_native/complete.json": "75aafae40214ca6e2740c3cc40f1f37d1a2dbe56e7ec5c338f2bc791dc57282f",
+    "data/v3_2/minesweeper_native/photometry.npz": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+    "manifests/v3_2/common_scale_inventory/complete.json": "47f98ae6d24276d30bed910787ac98f39b9772109e2fcded029afdaf1d274be4",
+    "data/v3_2/common_scale_inventory/complete.json": "47f98ae6d24276d30bed910787ac98f39b9772109e2fcded029afdaf1d274be4",
+    "data/v3_2/common_scale_inventory/photometry.npz": "2e2a588757013389e314c15ebd6e8a8898dd36aa84d4acc3517d6bfeda0139a4"
+  },
+  "outputs": {
+    "overlap.csv": "bca8363db8709f68ded7d9f8a4d81f06843852f1cf61c228ce2daa90c44dd584"
+  },
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "scope": "Exact identity intersections for the previously frozen v3.1 frame and three admitted v3.2 validation cohorts. Targeted inclusion is not a probability sample."
+}

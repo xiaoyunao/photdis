@@ -1,0 +1,4 @@
+cohort,parent_n,high_q_n,admitted_reference_n,parent_overlap,high_q_overlap
+DR19_Astra,3540,3003,0,0,0
+DR20_LCO,3540,3003,1117,0,0
+HST_common,3540,3003,103,0,0
