@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from photdis.stage1 import require_compute
+from photdis.v3.population import SharedCounts
 from photdis.v3_1.validation_report import field_statistic
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_2_tilt_contrasts import ARMS, contrast_rows, matched_rows, number
@@ -34,6 +35,15 @@ def joint_moments(p):
             and np.linalg.eigvalsh(total).min() > -1e-8):
         raise ValueError('Joint count moments fail conservation or covariance check')
     return mean, conditional, shared
+
+
+def realized_counts(probability):
+    """Draw complete joint counts, using the same population state for each row."""
+    draw_ids = np.arange(len(probability))
+    counts = SharedCounts(draw_ids, 18, seed=319879)
+    for start in range(0, probability.shape[1], 16):
+        counts.add(probability[:, start:start+16], draw_ids)
+    return counts.result()
 
 
 def giant_strata(rows):
@@ -212,6 +222,11 @@ def summarize(groups, anchors, forecast, manifest):
             states = [v[arm + '_draw_class_distance'].reshape(-1, 18) for v in payloads]
             p = np.stack(states, axis=1)
             mean, conditional, shared = joint_moments(p)
+            realized = realized_counts(p)
+            np.testing.assert_allclose(realized['mean'], mean, rtol=0, atol=1e-8)
+            np.testing.assert_allclose(realized['covariance'], conditional+shared, rtol=0, atol=1e-8)
+            draws = realized['count_draws']
+            lower, upper = np.quantile(draws, [.025, .975], axis=0, method='inverted_cdf').astype(int)
             averaged = p.mean(axis=0)
             saved = np.array([[number(r, f'c{c}_bin{b}') for c in range(3) for b in range(6)]
                               for r in rows])
@@ -223,11 +238,13 @@ def summarize(groups, anchors, forecast, manifest):
             entry_checks.extend(sensitivity)
             entry_counts.extend(alternatives)
             covariances.update({f'{role}_{arm}_conditional': conditional,
-                                f'{role}_{arm}_shared': shared})
+                                f'{role}_{arm}_shared': shared,
+                                f'{role}_{arm}_realized_counts': draws})
             for j in range(18):
                 counts.append(dict(role=role, arm=arm, n=len(rows), draws=len(p), class_index=j//6,
                                    distance_bin=j % 6, expected_count=mean[j],
-                                   conditional_variance=conditional[j, j], shared_variance=shared[j, j]))
+                                   conditional_variance=conditional[j, j], shared_variance=shared[j, j],
+                                   realized_lower95=int(lower[j]), realized_upper95=int(upper[j])))
             for label in (0, 1):
                 ref = [r for r in rows if int(r['class_label']) == label]
                 for predicted in (0, 1, 2):
@@ -317,7 +334,7 @@ def main():
     save_json(out / 'complete.json', dict(
         inputs={str(p.relative_to(ROOT)): sha(p) for p in
                 (marker_path, anchor_marker, source, anchor_path, probe_marker, probe_path, Path(__file__).resolve(),
-                 ROOT / 'scripts/v3_2_tilt_contrasts.py')},
+                 ROOT / 'scripts/v3_2_tilt_contrasts.py', ROOT / 'src/photdis/v3/population.py')},
         outputs={p.name: sha(p) for p in sorted(out.iterdir())},
         job=os.getenv('SLURM_JOB_ID'), n=marker['n'], all_PSF=True,
         scope='Opened-sky conditional diagnostic, with shared population draw covariance.'))

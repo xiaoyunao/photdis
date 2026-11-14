@@ -135,6 +135,12 @@ Check every available external scoring channel at both distance-grid
 levels using the frozen score tolerances of 0.02 nat and 0.003 for
 Gaia PIT. Report the channel flags, quantile shifts and joint-probability
 shifts for each arm on the full opened cohort.
+For the matched admitted reference objects, save realized joint count
+draws and discrete 95% marginal intervals. Within each draw use one
+shared population state and draw a single class-distance category for
+each object. Verify count conservation and exact covariance agreement.
+The intervals describe uncertainty conditional on the opened cohort and
+its fitted population model.
 
 ### Opened giant diagnostic strata
 

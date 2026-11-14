@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — retain realized joint counts for the four-arm comparison
+
+- Extended the opened factorial report with shared-state integer count
+  draws and discrete 95% marginal intervals for all 18 class-distance
+  bins. The code verifies exact moments and covariance against the
+  report's analytic calculation and retains the underlying draws.
+- The synthetic 2048-state, 167-object comparison verifies conservation
+  and deterministic replay. Python compilation and diff checks pass.
+  These are conditional model intervals for the opened reference cohort.
+
 ## 2026-11-14 — verify tilt input shards 22 and 23
 
 - Authenticated both 812-object shard products after exit 0:0, with
