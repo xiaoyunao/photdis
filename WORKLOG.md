@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — verify 90 percent deep narrow recovery and NGC288 state 11
+
+- Archived 234–241 and 243 with the completed-mode radial collector.
+  All 18 fits pass. The completed-only audit verified 244 catalogs,
+  441 of 488 accepted fits, 9,760 intervals and 30 complete strata.
+- Recomputed the 90% deep-background, 0.08 mag empirical stratum.
+  Width coverage is 0/8 and the paired count-error change is −11.04
+  percentage points. Updated `docs/v3_2_result.md`.
+- Collected state 11 with `v3_2_structure_distance_audit.py --collect-completed`.
+  All 2,560 checks pass on the 512 frozen identities. State 31 started
+  on the original Slurm array. Twelve states are archived.
+
 ## 2026-11-15 — verify 90 percent near narrow recovery and NGC288 state 10
 
 - Archived radial catalogs 226–233 via the completed-mode collector.
