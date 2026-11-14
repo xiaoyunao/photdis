@@ -3,6 +3,7 @@
 import csv
 from collections import defaultdict
 import json
+import math
 import os
 from pathlib import Path
 
@@ -18,6 +19,43 @@ from v3_2_tilt_inputs import verified
 def read_csv(path):
     with path.open(newline='') as stream:
         return list(csv.DictReader(stream))
+
+
+def validate_numerical(row):
+    if row['status'] == 'no_converged_map':
+        if row['sampler_pass'] != 'False':
+            raise ValueError('A failed MAP must have a failed sampler verdict')
+        return False
+    if row['status'] != 'sampled':
+        raise ValueError(f"Unknown recovery status: {row['status']}")
+    keys = ('max_rhat', 'min_ess', 'max_entry_curve_delta',
+            'integration_objective_shift_max', 'integration_relative_shift_span',
+            'maximum_expected_bin_count_delta', 'maximum_expected_member_count_delta')
+    rhat, ess, entry, absolute, relative, count, member = (float(row[k]) for k in keys)
+    divergences = int(row['divergences'])
+    # Degenerate chains may legitimately produce nonfinite Rhat or ESS.
+    if (divergences < 0 or any(not math.isfinite(x) or x < 0
+                               for x in (entry, absolute, relative, count, member))):
+        raise ValueError('Invalid numerical recovery diagnostics')
+    verdicts = {
+        'sampler_pass': rhat < 1.05 and ess >= 100 and divergences == 0,
+        'entry_pass': entry < .003,
+        'absolute_objective_pass': absolute < .05,
+        'relative_objective_pass': relative < .05,
+        'fixed_draw_count_pass': max(count, member) < .5,
+    }
+    if any(row[key] != str(passed) for key, passed in verdicts.items()):
+        raise ValueError('Recorded recovery verdict differs from its registered tolerance')
+    return all(passed for key, passed in verdicts.items() if key != 'absolute_objective_pass')
+
+
+def validate_interval(row):
+    lo, median, hi, truth, length = (float(row[k]) for k in
+                                      ('lower95', 'median', 'upper95', 'truth', 'interval_length'))
+    if (not all(math.isfinite(x) for x in (lo, median, hi, truth, length))
+            or not lo <= median <= hi or not math.isclose(length, hi-lo, rel_tol=1e-12)
+            or row['covered95'] != str(lo <= truth <= hi)):
+        raise ValueError(f"Invalid recovery interval: {row['arm']}/{row['metric']}")
 
 
 def coverage(rows, total):
@@ -143,8 +181,7 @@ def main():
         for r in status:
             # Keep the absolute objective drift separate from the conditional
             # relative shift, count transfer, and sampler gates.
-            accepted[r['arm']] = all(r.get(k) == 'True' for k in (
-                'sampler_pass', 'entry_pass', 'relative_objective_pass', 'fixed_draw_count_pass'))
+            accepted[r['arm']] = validate_numerical(r)
             gates.append(dict(catalog=catalog, accepted=accepted[r['arm']], **r))
         if set(accepted) != {'local', 'broad'} or len(status) != 2:
             raise ValueError(f'Missing arm status: {catalog}')
@@ -156,6 +193,7 @@ def main():
             k = r['arm'], r['metric']
             if k in seen:
                 raise ValueError(f'Duplicate recovery metric: {catalog} {k}')
+            validate_interval(r)
             seen.add(k)
             recovery.append(dict(catalog=catalog, accepted=accepted[r['arm']], **r))
         fitted = {r['arm'] for r in status if r['status'] == 'sampled'}

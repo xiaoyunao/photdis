@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial verdicts at aggregation
+
+- The final radial report now independently recomputes numerical verdicts
+  and checks every reported interval, including the truth coverage label.
+  Absolute objective drift remains recorded outside the conditional
+  acceptance verdict as registered.
+- Compilation, diff checks and all three targeted report tests pass.
+  The new regression uses the two actual pilot fits and their 40 metrics.
+
 ## 2026-11-14 — verify the first completed narrow-structure recovery
 
 - Cached empirical catalog 128 (61260935) completed with Slurm exit 0:0.

@@ -1,6 +1,7 @@
 import pytest
 
-from v3_2_radial_report import count_loss_comparison, coverage
+from v3_2_radial_report import (ROOT, count_loss_comparison, coverage, read_csv,
+                               validate_interval, validate_numerical)
 
 
 def test_count_loss_uses_same_catalog_and_all_joint_bins():
@@ -35,3 +36,22 @@ def test_coverage_bounds_retain_missing_registered_catalogs():
     assert result['coverage_upper_all'] == .875
     assert result['coverage_lo95'] < .5 < result['coverage_hi95']
     assert coverage([], 8)['coverage_upper_all'] == 1
+
+
+def test_empirical_pilot_recovery_verdicts_and_intervals():
+    receipt = ROOT/'manifests/v3_2/radial_recovery/catalog_128'
+    broad, local = read_csv(receipt/'numerical.csv')
+    assert validate_numerical(broad) and validate_numerical(local)
+    absolute_only = dict(local, integration_objective_shift_max='0.1',
+                         absolute_objective_pass='False')
+    assert validate_numerical(absolute_only)
+    with pytest.raises(ValueError, match='differs'):
+        validate_numerical(dict(local, fixed_draw_count_pass='False'))
+    assert not validate_numerical(dict(status='no_converged_map', sampler_pass='False'))
+    rows = read_csv(receipt/'recovery.csv')
+    for row in rows:
+        validate_interval(row)
+    width = next(row for row in rows if row['metric'] == 'mu_width')
+    assert width['covered95'] == 'False'
+    with pytest.raises(ValueError, match='Invalid recovery interval'):
+        validate_interval(dict(width, covered95='True'))
