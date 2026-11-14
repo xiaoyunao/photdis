@@ -33,8 +33,10 @@ it expects 122.63 giants with interval [106, 139], while 610 have giant
 labels. These intervals condition on the fixed marginal probabilities.
 Of 426 objects with qnear above 0.95, 66 of 400 precise teacher centers
 are far. Model-expected far count over the 426 is 6.92. This disagreement
-is measured on a teacher-selected cohort. Its counts cannot supply
-the contamination rate of the application parent.
+is measured on a teacher-selected cohort. Holding the 400 qualified
+centers fixed and varying the 26 remaining outcomes yields a 15.49%–21.60%
+far fraction among the 426. The bound holds only within this teacher
+cohort. The application parent still lacks matched reference coverage.
 [Reference counts](../manifests/v3_2/final_validation_dr20/scores/reference_counts.csv) ·
 [High-q support](../manifests/v3_2/final_validation_dr20/scores/highq_reference_support.csv)
 

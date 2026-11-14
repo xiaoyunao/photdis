@@ -20,7 +20,7 @@ cohorts. Vertical bars propagate shared reference-scale uncertainty.
 Points show matched-gate probability bins on the MINESweeper reference
 subset. Area increases with the number of objects in the bin. Vertical
 bars show available 95% sky-block intervals. QRF supplies a distance
-distribution and has zero giant-class probabilities available for this
+distribution. Its class probabilities are unavailable for this
 comparison. The near panel uses 982 qualified distance centers and the
 giant panel uses 676 class labels.
 
