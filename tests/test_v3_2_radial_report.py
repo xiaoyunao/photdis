@@ -1,7 +1,7 @@
 import pytest
 
 from v3_2_radial_report import (ROOT, count_loss_comparison, coverage, read_csv,
-                               validate_interval, validate_numerical)
+                               shrinkage_summary, validate_interval, validate_numerical)
 
 
 def test_count_loss_uses_same_catalog_and_all_joint_bins():
@@ -55,3 +55,19 @@ def test_empirical_pilot_recovery_verdicts_and_intervals():
     assert width['covered95'] == 'False'
     with pytest.raises(ValueError, match='Invalid recovery interval'):
         validate_interval(dict(width, covered95='True'))
+
+
+def test_prior_shrinkage_preserves_pilot_denominators():
+    root = ROOT/'manifests/v3_2'
+    designs = read_csv(root/'radial_design/design.csv')
+    rows = [dict(r, catalog=128, accepted=True) for r in
+            read_csv(root/'radial_recovery/catalog_128/recovery.csv')]
+    results, summary = shrinkage_summary(designs, rows)
+    observed = {r['metric']: r for r in results}
+    assert observed['mu_width']['prior_anchor'] == pytest.approx(.25)
+    assert observed['mu_width']['toward_anchor'] == pytest.approx(.08126487275)
+    assert observed['mu_location']['toward_anchor'] < 0
+    covered = [r for r in summary if r['n']]
+    assert len(covered) == 6
+    assert all(r['n'] == 1 and r['registered'] == 8 for r in covered)
+    assert all(r['mean_toward_anchor'] is None for r in summary if not r['n'])

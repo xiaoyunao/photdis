@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — quantify radial shrinkage against the frozen latent prior
+
+- The radial report now derives zero-latent location, width and pre-entry
+  fraction anchors from the original prior decoder. It reports whether
+  each posterior median moves closer to its anchor than the truth is,
+  with fixed-truth and prior-predictive catalog denominators retained.
+- The actual empirical pilot width moved 0.0813 mag closer to the
+  0.25 mag anchor. The location median moved farther from its anchor.
+  No recovery, data generation or acceptance thresholds changed.
+- The regression uses the frozen design and the pilot receipt to check
+  direction, eight registered repeats and empty groups.
+
 ## 2026-11-14 — clear the tilt array's persistent task-limit reason
 
 - Scheduler and accounting showed 23 completed children in 61259514, eight

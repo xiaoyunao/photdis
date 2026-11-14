@@ -55,3 +55,17 @@ record before fitting.
 [PDF](../figures/v3_2/radial_design/selected_membership.pdf) ·
 [Catalog records](../manifests/v3_2/radial_design/design.csv) ·
 [Source and output hashes](../manifests/v3_2/radial_design/figure.json)
+
+## Narrow-structure prior shrinkage tables
+
+The recovery report records the distance from each simulated truth to
+the value at the center of the latent prior, minus the corresponding
+distance from the posterior median. A positive value means the median is
+closer to that anchor. Location, width and the pre-entry member fraction
+use their own units. Summaries keep the registered catalog denominators
+for each fixed-truth design cell and the separate prior-predictive cohort.
+
+In the first empirical pilot, the width median of 0.339 mag is
+0.081 mag closer to the 0.250 mag prior anchor than the 0.080 mag
+truth is. Its 95% interval still misses the simulated width.
+[Pilot recovery records](../manifests/v3_2/radial_recovery/catalog_128/recovery.csv)

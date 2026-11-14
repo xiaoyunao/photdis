@@ -12,6 +12,7 @@ from scipy.stats import binomtest
 
 from photdis.stage1 import require_compute
 from photdis.v3_1.comparison import paired_mean
+from photdis.v3_1.radial import RadialPopulation
 from v2_1_near import ROOT, csv_rows, save_json, sha
 from v3_2_tilt_inputs import verified
 
@@ -154,6 +155,41 @@ def count_loss_comparison(designs, rows):
     return list(object_rows.values()), summary
 
 
+def shrinkage_summary(designs, rows):
+    # At the zero latent vector all classes share one entry fraction. The
+    # three anchors are therefore independent of the fitted class frequencies.
+    dummy = RadialPopulation(np.linspace(-20, 50, 71), np.ones((1, 3, 71)),
+                             np.ones((1, 3, 71)), np.full(3, 1/3), local=True)
+    theta, eta, location, width = dummy.decode(np.zeros(dummy.dimension))
+    anchors = dict(mu_location=location, mu_width=width,
+                   pre_entry_fraction=float(theta.sum(axis=1) @ eta))
+    metrics = {(r['catalog'], r['metric']): r for r in rows
+               if r['arm'] == 'local' and r['metric'] in anchors}
+    catalog_rows, summary = [], []
+    for (design, source, background, fraction, width), catalogs in design_groups(designs).items():
+        for metric, anchor in anchors.items():
+            observed = []
+            for catalog in catalogs:
+                row = metrics.get((catalog, metric))
+                if row is None:
+                    continue
+                truth, median = float(row['truth']), float(row['median'])
+                observed.append(dict(catalog=catalog, metric=metric, accepted=row['accepted'],
+                                     truth=truth, median=median, prior_anchor=anchor,
+                                     toward_anchor=abs(truth-anchor)-abs(median-anchor)))
+            catalog_rows.extend(observed)
+            for subset, selected in [('all_fitted', observed),
+                                     ('relative_and_counts_accepted', [r for r in observed if r['accepted']])]:
+                n = len(selected)
+                summary.append(dict(design=design, source=source, background=background,
+                                    fraction=fraction, width=width, metric=metric, subset=subset,
+                                    prior_anchor=anchor, n=n, registered=len(catalogs),
+                                    n_closer_to_prior=sum(r['toward_anchor'] > 0 for r in selected),
+                                    mean_toward_anchor=(float(np.mean([r['toward_anchor'] for r in selected]))
+                                                        if n else None)))
+    return catalog_rows, summary
+
+
 def main():
     require_compute()
     source = ROOT / 'data/v3_2/radial_design'
@@ -164,7 +200,8 @@ def main():
     if len(designs) != 288 or sorted(int(d['catalog']) for d in designs) != list(range(288)):
         raise ValueError('Incomplete frozen design')
     inputs = {str(p.relative_to(ROOT)): sha(p) for p in
-              (marker, table, Path(__file__).resolve(), ROOT/'src/photdis/v3_1/comparison.py')}
+              (marker, table, Path(__file__).resolve(), ROOT/'src/photdis/v3_1/comparison.py',
+               ROOT/'src/photdis/v3_1/radial.py')}
     gates, recovery = [], []
     for d in designs:
         catalog = int(d['catalog'])
@@ -205,10 +242,12 @@ def main():
             raise ValueError(f'Incomplete fitted recovery records: {catalog}')
     summary = grouped_summary(designs, recovery)
     paired, paired_summary = count_loss_comparison(designs, recovery)
+    shrinkage, shrinkage_grouped = shrinkage_summary(designs, recovery)
     output = ROOT / 'data/v3_2/radial_report'
     output.mkdir(parents=True, exist_ok=False)
     for name, rows in [('numerical', gates), ('recovery', recovery), ('coverage', summary),
-                       ('paired_count_loss', paired), ('paired_count_summary', paired_summary)]:
+                       ('paired_count_loss', paired), ('paired_count_summary', paired_summary),
+                       ('shrinkage', shrinkage), ('shrinkage_summary', shrinkage_grouped)]:
         csv_rows(output / f'{name}.csv', rows)
     save_json(output / 'complete.json', dict(
         inputs=inputs, outputs={p.name: sha(p) for p in sorted(output.iterdir())},
