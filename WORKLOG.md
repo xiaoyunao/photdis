@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify the 60 percent empirical near narrow stratum
+
+- Archived 197–199 and 201 with the radial collector. All eight
+  new fits passed. The completed-only delivery audit verified 202
+  catalogs, 357 of 404 accepted fits, 8,080 intervals and 25 strata.
+- The 60% empirical near-background 0.08 mag stratum has 0/8 width
+  coverage and a paired count-error change of −3.61 percentage
+  points. Added both results to `docs/v3_2_result.md`.
+- NGC288 state 10 was running at 1h57m42s and logged 432 of 512
+  radial rows. Ten states are archived.
+
 ## 2026-11-15 — verify the first five 60 percent empirical recoveries
 
 - Archived 192–196 via `v3_2_collect_radial_results.py --completed`.
