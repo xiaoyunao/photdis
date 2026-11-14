@@ -9,7 +9,7 @@ ledger in `docs/v3_2_requirements_result.md`.
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
 - Fit the population by SED tilt comparison with matched selection. The
-  first twenty shards (00–19) are complete and verified.
+  first twenty-two shards (00–21) are complete and verified.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
   Shards 00–19 refinements pass all 456 flagged contexts.
@@ -28,6 +28,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   61260227 completed on 519 opened PSFs. See
   `docs/v3_2_opened_probe_and_count_result.md`. Choose one supported
   modification after the matched factorial results.
+  The factorial report includes same-object class-score contrasts with
+  the four frozen photometric probes.
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
   All three original direct pilots in 61260177 timed out. Direct 000

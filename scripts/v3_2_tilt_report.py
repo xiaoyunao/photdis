@@ -71,6 +71,46 @@ def giant_decomposition(rows, cells, role, arm):
                        **field_statistic(value[mask], cells[mask]))
 
 
+def probe_comparison(groups, probes):
+    """Keep probe evidence on the exact same opened objects and sky blocks."""
+    selected = [g for g in groups if g[ARMS[0]]['candidate_admission'] == 'True']
+    if {int(g[ARMS[0]]['identity']) for g in selected} != set(probes):
+        raise ValueError('Probe and factorial reference admissions differ')
+    rows = []
+    for role in ROLES:
+        field = [g for g in selected if g[ARMS[0]]['role'] == role]
+        matched = []
+        for g in field:
+            row = g[ARMS[0]]
+            probe = probes[int(row['identity'])]
+            if any(probe[k] != row[k] for k in ('TYPE', 'role', 'cell', 'class_label')):
+                raise ValueError('Probe identity metadata differs from factorial')
+            matched.append((g, probe))
+        for stratum, label in (('all_labeled', None), ('giant', 1), ('dwarf', 0)):
+            qualified = [(g, p) for g, p in matched
+                         if int(p['class_label']) in (0, 1)
+                         and (label is None or int(p['class_label']) == label)]
+            for view in ('no_color', 'grz', 'griz', 'multiband'):
+                available = [(g, p) for g, p in qualified if p['status'] == 'predicted']
+                probability = np.array([float(p[f'{view}_p{p["class_label"]}']) for _, p in available])
+                if not np.isfinite(probability).all() or (probability < 0).any() or (probability > 1).any():
+                    raise ValueError('Invalid frozen probe class probability')
+                with np.errstate(divide='ignore'):
+                    log_score = np.log(probability)
+                cells = np.array([int(p['cell']) for _, p in available])
+                for arm in ARMS:
+                    values = np.array([number(g[arm], 'class_log_score') for g, _ in available])
+                    with np.errstate(invalid='ignore'):
+                        delta = log_score-values
+                    undefined = np.isnan(delta)
+                    delta[undefined] = np.inf
+                    rows.append(dict(role=role, stratum=stratum, probe=view, arm=arm,
+                                     qualified=len(qualified), unavailable=len(qualified)-len(available),
+                                     undefined_nonfinite=int(undefined.sum()),
+                                     **field_statistic(delta, cells)))
+    return rows
+
+
 def entry_sensitivity(role, arm, rows, values):
     # Alternatives share the observed likelihood, objects and underlying draws.
     if (values.shape != (len(rows), 3, 3, 6) or not np.isfinite(values).all()
@@ -258,6 +298,17 @@ def main():
     tables, covariance = summarize(groups, anchors, forecast, marker)
     tables['factorial'] = contrast_rows(groups)
     tables['historical_decomposition'] = historical_decomposition(groups, anchors)
+    probe_marker = ROOT/'manifests/v3_2/opened_probes/complete.json'
+    probe_path = verified(probe_marker.with_name('objects.csv'),
+                          json.loads(probe_marker.read_text())['outputs']['objects.csv'])
+    probes = {}
+    with probe_path.open(newline='') as stream:
+        for row in csv.DictReader(stream):
+            identity = int(row['identity'])
+            if identity in probes:
+                raise ValueError('Duplicate probe identity')
+            probes[identity] = row
+    tables['probe_factorial_comparison'] = probe_comparison(groups, probes)
     out = root / 'tilt_report/initial'
     out.mkdir(parents=True, exist_ok=False)
     for name, rows in tables.items():
@@ -265,7 +316,7 @@ def main():
     atomic_npz(out / 'joint_covariance.npz', **covariance)
     save_json(out / 'complete.json', dict(
         inputs={str(p.relative_to(ROOT)): sha(p) for p in
-                (marker_path, anchor_marker, source, anchor_path, Path(__file__).resolve(),
+                (marker_path, anchor_marker, source, anchor_path, probe_marker, probe_path, Path(__file__).resolve(),
                  ROOT / 'scripts/v3_2_tilt_contrasts.py')},
         outputs={p.name: sha(p) for p in sorted(out.iterdir())},
         job=os.getenv('SLURM_JOB_ID'), n=marker['n'], all_PSF=True,

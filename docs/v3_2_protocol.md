@@ -147,6 +147,10 @@ probability and the class-conditioned distance score and far mass. Means
 use the same-object sky-block bootstrap. The frozen no-color, grz, griz and
 multiband probes are separate information controls, with historical fit and
 temperature-calibration IDs excluded. No probe score enters a distance fit.
+Join the frozen probe predictions to the four arms by exact native
+identity, role, sky block and class label. For each probe and arm,
+report the class log-score contrast, qualified denominator and probe
+availability for all labeled stars, giants and dwarfs.
 
 On the common support of the four matched arms and both historical
 anchors, decompose the historical candidate-zero minus old-target gap.

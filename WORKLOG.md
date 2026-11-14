@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — compare the factorial directly with the frozen class probes
+
+- Added a paired probe-minus-arm class log-score table, matching exact
+  PSF identity, role, sky block and class label. Each probe retains its
+  unavailable rows in the denominator ledger. The input probe receipt
+  and source table are bound to the paired report.
+- Exercised all 96 output series with the 519 opened probe rows and
+  historical forecasts substituted for the pending arm forecasts.
+  New-sky labeled contrasts retain 157 object pairs.
+- Authenticated input shards 20/21 with 812 PSFs each, 111/110
+  candidates and 24 initial flags apiece. Their refinements are queued.
+
 ## 2026-11-14 — verify tilt refinements through shard 19
 
 - Slurm 61259727_16–19 completed 0:0. Authenticated the original
