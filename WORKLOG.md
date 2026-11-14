@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — prepare fixed-truth and prior-predictive coverage plates
+
+- Added the coverage renderer for all 32 fixed-truth cells and the
+  separate 32-catalog prior-predictive cohort. It checks the source
+  digest, registered denominators, interval estimates and bounds.
+- Rendered and visually inspected temporary previews using the
+  three real pilot catalogs and the registered design. The production
+  figures require the final 288-catalog receipt.
+
 ## 2026-11-14 — archive two radial caches and NGC288 state 04
 
 - Repeat 22 (61274684) completed 0:0 in 14m02s and repeat 23 (61274685)

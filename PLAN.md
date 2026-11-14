@@ -125,6 +125,8 @@ and external findings and identifies the two pending application results.
   the final report. Run `PYTHONPATH=src:scripts:.deps python3
   scripts/v3_2_radial_report_audit.py` to reconcile all seven
   derived tables with the frozen design and individual results.
+  Render the fixed-truth and prior-predictive coverage plates with
+  `python3 scripts/v3_2_radial_recovery_figure.py` after the full report.
 - Prepare the DR19 Astra identity inventory following
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
   Initial index 61260891 exposed a release-column mismatch. The corrected
