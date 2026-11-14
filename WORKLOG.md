@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-15 — complete v3.2 research delivery
+
+- Joint job 61263908 completed `0:0` in 1h13m35s. Collected and
+  authenticated its compact tables with `v3_2_delivery.py --collect-reports`.
+  All 14 posterior comparisons pass. The combined verdict retains
+  4,732 input flags. Final expected members are 121.336 and 127.809
+  for the full and Gaussian likelihoods. Response weight ESS is near one.
+- Corrected the missing `Path` import in the plate script. Rendered and
+  visually reviewed the source-bound English plate. Updated the results,
+  requirements ledger, atlas, visual review receipt and plan. High-order
+  prior-weight underflow is recorded with the passing normalization checks.
+- `python3 -m pytest -q` passed 472 tests. The final delivery audit passed
+  with no pending artifacts, 11 reviewed PNG/PDF pairs, 288 radial
+  catalogs, 9,130 external checks and 8,773 protected baseline files.
+  The joint numeric rejection is retained in `manifests/v3_2/delivery.json`.
+- Slurm reports no active v3.2 job. The candidate remains a research
+  result with zero calibrated release domains and no measured independent
+  parent contamination. Record the final audit and verify local, GitHub
+  and NERSC commits with `python3 scripts/sync.py push`.
+
 ## 2026-11-15 — verify all NGC288 distance states
 
 - Collected the remaining states 23, 25 and 27–30 after Slurm reported

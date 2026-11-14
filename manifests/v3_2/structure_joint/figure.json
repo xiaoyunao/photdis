@@ -1,0 +1,12 @@
+{
+  "quadrature_passed": false,
+  "sources": {
+    "manifests/v3_2/structure_joint/complete.json": "7cfa21c7559a08d628096f5b326679c5cb47c07de955457459b9545cbaea23ad",
+    "manifests/v3_2/structure_joint/membership.csv": "c1dc3af4e9a9755fd8b8c98c4204545c22fb8fed8d5fa4cc085698051898b95c",
+    "manifests/v3_2/structure_joint/count_covariance.csv": "3de593fcc89804143f7ce1c83eaaaf4ad15ad73d06d2adffa0b85fac9016f70f",
+    "manifests/v3_2/structure_joint/summary.csv": "1d65aaf983c8cef75360b351a24904b6b2424a1dba4cbeff2f791637e8b53ac8",
+    "scripts/v3_2_structure_joint_figure.py": "9e84e0c13827a2eca4badc31f3038b54368d2f0f9af87c77e7cb0aa23d46a6a7",
+    "figures/v3_2/structure_joint/likelihood_contrast.png": "7515fe89d814709bddf415291c80a2e10f389a6a731f9afe35f400c624537c9b",
+    "figures/v3_2/structure_joint/likelihood_contrast.pdf": "20bc56d8b84b35c86c5fa605be593ada51cc97c4e0979c956612e764fdd637aa"
+  }
+}

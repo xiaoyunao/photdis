@@ -4,8 +4,9 @@ The fixed giant-odds adjustment improves signed Gaia prediction relative
 to old target on the frozen DR20 field. The nominal response scores
 higher, and the external distance, class and count checks leave no
 calibrated release domain. The v3.2 candidate is retained as a research
-result. Narrow-structure recovery is complete. The NGC288
-joint-quadrature calculation is in progress.
+result. Narrow-structure recovery and the NGC288 numerical audit are
+complete. NGC288 passes the registered posterior comparisons and
+retains input-level failures.
 
 [GPT Pro review of 7699299](pro_review_7699299.md) ·
 [Experiment protocol](v3_2_protocol.md) ·
@@ -277,18 +278,44 @@ Across all 288 catalogs, 230 pairs pass in both arms. All 58 failed
 arm verdicts are from sampling. They include one broad model-SED fit
 and 57 local fits (20 fixed model-SED, 25 fixed empirical-SED and
 12 prior-predictive).
-The NGC288 odds-only
-audit passes at 512 to 1024 with 64 distance nodes, after the
-256 to 512 step fails. The complete distance-by-odds test
-awaits the 32-state joint result. Across all 32 archived states,
+## NGC288 joint distance and spatial odds
+
+The fixed-distance odds audit passes the 512-to-1024 step with 64
+distance nodes and retains both failures at 256 to 512. Joint job
+61263908 finished in 1h13m35s and evaluated both likelihoods on the
+same 512 PSFs and 32 states. All 14 posterior comparisons meet the
+registered thresholds. On the final grid, the largest membership
+change between successive joint grids is 0.002790 for the full
+likelihood and 0.002383 for the Gaussian summary. The corresponding
+expected member-count changes are 0.09515 and 0.07690 objects.
+The native-grid and entry perturbations also pass at the posterior level.
+
+Across all 32 archived states,
 2,254 independent-entry-seed checks, 2,468 previous-entry-level checks
 and ten Gaussian native checks failed. All 16,384 full-likelihood
 native and all 16,384 archived-entry closure checks passed.
-NGC288 is a previously opened
-system and demonstrates sensitivity of the inference to the
-likelihood representation.
+The combined numerical verdict fails because the input checks retain
+4,732 flags. The quadrature emitted a log-of-zero warning at high odds
+orders. A local reproduction traced it to underflow in extreme
+Gauss–Hermite prior weights. The final posterior normalization checks pass.
+
+| Likelihood | Expected members | Count SD | Conditional variance | Shared variance | Common distance median and 95% interval (kpc) | Response weight ESS |
+|---|---:|---:|---:|---:|---:|---:|
+| Full | 121.336 | 4.900 | 11.922 | 12.086 | 10.097 [9.623, 10.482] | 1.000000 |
+| Gaussian summary | 127.809 | 4.842 | 11.593 | 11.848 | 10.138 [9.705, 10.602] | 1.000027 |
+
+The full likelihood yields 6.473 fewer expected members. The maximum
+paired membership probability difference is 0.5522 and the largest
+common distance-modulus quantile difference is 0.02465 mag. The full-minus-
+Gaussian log evidence difference of −12.44 nat describes the two likelihood
+representations. Both branches have effective weight near one of 32 response
+states. The count estimates apply to the frozen selected roster. The
+common-distance posterior uses the registered scale prior for this
+previously opened system and supplies no independent distance validation.
 
 [Conditional count audit](v3_2_opened_probe_and_count_result.md#conditional-count-sensitivity) ·
 [Narrow-structure protocol](v3_2_radial_protocol.md) ·
 [Radial recovery report](../manifests/v3_2/radial_report/) ·
-[NGC288 joint protocol](v3_2_structure_protocol.md)
+[NGC288 joint protocol](v3_2_structure_protocol.md) ·
+[NGC288 joint tables and receipt](../manifests/v3_2/structure_joint/) ·
+[NGC288 joint plate](v3_2_atlas.md#ngc288-joint-likelihood-comparison)

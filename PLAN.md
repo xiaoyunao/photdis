@@ -1,34 +1,29 @@
 # PLAN
 
-## v3.2 — diagnose the zero-model regression
+## v3.2 — completed research delivery
 
-Active goal follows the Pro review of 7699299. See
-`docs/pro_review_7699299.md`, `docs/v3_2_protocol.md` and the evidence
-ledger in `docs/v3_2_requirements_result.md`.
-The synthesis in `docs/v3_2_result.md` records the completed model
-and external findings and the completed radial recovery. The NGC288
-joint result and plate remain pending.
-Use `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py --collect-reports`
-to archive compact tables when Slurm records a successful report job.
-Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`
-after both application reports and all visual reviews. During the runs,
-`--completed-only` verifies available evidence and reports missing
-products without a final delivery verdict. It also reconciles each
-archived NGC288 distance-state receipt, its per-context verdicts and
-the 512 row identities against the frozen v3.1 membership export.
-It verifies all archived radial catalog receipts and recomputes their
-numerical verdicts, recovery intervals and frozen truth checks.
-It also recomputes local coverage for strata with all registered
-catalogs archived.
-When the radial report is available, the same command independently
-recomputes its seven derived tables and checks the full catalog census.
-The factorial audit also reproduces the seeded 3,540-PSF broad
-subsample, verifies both fit receipts and their forecast ancestry,
-and checks the 216 comparison keys against the opened cohort sizes.
-The opened audit checks all 272 conditional count decompositions
-against their frozen v3.1 comparisons and retains the 33 failures.
-The delivery audit authenticates the fixed-distance NGC288 odds
-receipt and recomputes the earlier failed and accepted transitions.
+The Pro review of 7699299 and the frozen protocol define the work.
+See `docs/v3_2_result.md`, `docs/v3_2_requirements_result.md` and the
+11-plate `docs/v3_2_atlas.md`. The giant-odds adjustment remains a
+research result. The external validation supports zero calibrated
+release domains and leaves independent parent contamination unmeasured.
+
+All 288 radial recovery catalogs and the 32-state, 512-PSF NGC288
+joint computation are complete. Both likelihoods pass all 14
+posterior comparisons. The combined numerical verdict retains 4,732
+input failures. The common scale remains conditional on the registered
+prior and the previously opened system.
+
+Verify the compact delivery with
+`PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_delivery.py`.
+The audit recomputes the opened and factorial contrasts and the radial
+report tables, checks the external freeze and reference support, and
+reconciles the joint outputs and all 11 English PNG/PDF figure pairs.
+Preserve the frozen source receipts, failed and refined numerics,
+historical versions and deployed v1. Further modeling or validation
+requires a new explicit scope.
+
+### Execution record
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.
@@ -313,8 +308,8 @@ receipt and recomputes the earlier failed and accepted transitions.
   States 23, 25 and 27–30 completed. All 32 receipts are verified.
   Slurm cleared the dependency for job 61263908 and queued it for
   priority. Collect the joint report after successful execution.
-  The two-axis evaluator
-  61263908 waits on all 32 states. Use
+  The two-axis evaluator 61263908 completed in 1h13m35s after all 32
+  states passed Slurm execution. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
   to collect each successful state's `complete.json`, `checks.csv`
   and checkpoint `inputs.json` against the Slurm raw job ID, then run

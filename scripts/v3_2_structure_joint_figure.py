@@ -2,6 +2,7 @@
 """Plot the paired membership and covariance from the final NGC288 grid."""
 import csv
 import json
+from pathlib import Path
 
 import matplotlib
 matplotlib.use('Agg')
@@ -53,7 +54,12 @@ def main():
         with path.open(newline='') as stream:
             records.append(list(csv.DictReader(stream)))
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'axes.spines.top': False, 'axes.spines.right': False})
-    subtitle = 'Registered quadrature checks passed' if verdict['passed'] else 'Registered quadrature failures retained'
+    if verdict['final_failed']:
+        subtitle = 'Final posterior checks retain failures'
+    elif verdict['retained_input_failures']:
+        subtitle = 'Final posterior checks pass. Input flags retained.'
+    else:
+        subtitle = 'Final posterior and input checks pass'
     fig = render(*records, subtitle=subtitle)
     out = ROOT/'figures/v3_2/structure_joint'
     out.mkdir(parents=True, exist_ok=True)

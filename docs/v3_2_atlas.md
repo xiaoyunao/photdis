@@ -87,7 +87,7 @@ Absolute changes between successive spatial-odds integrations on the
 64-node distance grid. The dashed lines are the registered tolerances.
 The first refinement exceeds the membership and mean-count thresholds
 for both likelihoods. The second refinement meets all four thresholds
-for both likelihoods. Full distance-axis integration remains pending.
+for both likelihoods. The joint analysis below adds the distance axis.
 
 ![NGC288 fixed-distance odds quadrature](../figures/v3_2/structure_odds_audit/fixed_distance_odds.png)
 
@@ -148,3 +148,18 @@ model's prior.
 [Prior-predictive PDF](../figures/v3_2/radial_recovery/prior_coverage.pdf) ·
 [Coverage table](../manifests/v3_2/radial_report/coverage.csv) ·
 [Source and output hashes](../manifests/v3_2/radial_report/figure.json)
+
+## NGC288 joint likelihood comparison
+
+Paired member probabilities for the same 512 PSFs and the conditional
+and shared components of member-count variance on the 256 × 1024 grid.
+Both likelihoods pass their posterior comparisons. The input checks
+retain 4,732 flags and the combined numerical verdict fails. Both
+branches concentrate on approximately one of the 32 response states.
+
+![NGC288 joint likelihood comparison](../figures/v3_2/structure_joint/likelihood_contrast.png)
+
+[PNG](../figures/v3_2/structure_joint/likelihood_contrast.png) ·
+[PDF](../figures/v3_2/structure_joint/likelihood_contrast.pdf) ·
+[Membership and covariance tables](../manifests/v3_2/structure_joint/) ·
+[Source and output hashes](../manifests/v3_2/structure_joint/figure.json)

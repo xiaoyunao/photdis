@@ -1,0 +1,7 @@
+{
+  "maximum_member_probability_delta": 0.5521607220114922,
+  "maximum_mean_count_delta": 6.4734190779935545,
+  "maximum_common_mu_quantile_delta": 0.024654436154101234,
+  "log_evidence_delta": -12.443593911519201,
+  "mean_members_full_minus_gaussian": -6.4734190779935545
+}

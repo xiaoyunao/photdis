@@ -58,5 +58,11 @@
     "visually_reviewed": true,
     "english_labels": true,
     "date": "2026-11-15"
+  },
+  "figures/v3_2/structure_joint/likelihood_contrast.png": {
+    "sha256": "7515fe89d814709bddf415291c80a2e10f389a6a731f9afe35f400c624537c9b",
+    "visually_reviewed": true,
+    "english_labels": true,
+    "date": "2026-11-15"
   }
 }
