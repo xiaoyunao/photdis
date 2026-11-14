@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — prepare the opened-sky factorial plate
+
+- Added `scripts/v3_2_tilt_figure.py` for the paired Gaia and class
+  log-score contrasts, including interaction and nonfinite score flags.
+- The source hash and denominators are checked before rendering. The
+  historical opened table confirms 166 Gaia objects in nine sky blocks,
+  157 labeled objects and 142 giants in eight sky blocks.
+- Rendered and inspected a synthetic PNG and checked PDF output
+  and Python syntax. The published plate awaits the actual factorial report.
+
 ## 2026-11-14 — test forecast entry sensitivity against direct inference
 
 - Added an end-to-end comparison of reweighted joint bins, signed Gaia

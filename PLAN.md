@@ -43,6 +43,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   The paired report tracks their distance-bin counts and external scores,
   and decomposes the historical regression with an exact same-object sum.
   Numerical summaries retain flags for each available score channel.
+  Collect the matched report and run `python3 scripts/v3_2_tilt_figure.py`
+  to render and visually verify the opened-sky factorial contrasts.
 - Decompose giant branch availability, suppression and class-conditional
   distance error using the registered strata. Frozen class probe job
   61260227 completed on 519 opened PSFs. See
