@@ -54,9 +54,17 @@ adjustment changes the score by +0.3765 nat relative to
 candidate/free, +0.3101 versus old target and −1.4529 versus
 nominal reference.
 
+Among the 142 reference giants in the same admitted development
+cohort, the argmax giant count rises from 13 to 28. Mean giant
+probability rises by 0.0788 [0.0544, 0.1295], and mean near
+probability changes by −0.0538 [−0.0869, −0.0422].
+These are paired sky-block intervals. Reference labels are used
+for evaluation of the fixed rule.
+
 [Common-prior evidence and the frozen class probes](v3_2_factorial_result.md#giant-branch-availability-and-probability) ·
 [Fixed adjustment registration](v3_2_branch_protocol.md) ·
-[Opened adjusted scores](../manifests/v3_2/branch_development/paired.csv)
+[Opened adjusted scores](../manifests/v3_2/branch_development/paired.csv) ·
+[Compact mechanism audit](../scripts/v3_2_branch_audit.py)
 
 ## External validity and release limits
 

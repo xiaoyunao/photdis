@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — reconcile the opened mechanism adjustment
+
+- Checked the 526 source-aligned PSF rows and reproduced 144
+  paired candidate/free results and 48 confusion cells. All
+  72 joint count bins conserve cohort and giant probability totals.
+- Added the checks to the delivery audit and reported the
+  13-to-28 rise in giant argmax counts on 142 opened references.
+  No outcomes were reopened and the adjustment is unchanged.
+
 ## 2026-11-14 — verify cache batches 28 and 29
 
 - Repeats 28 and 29 completed 0:0 in 13m53s and 13m42s.

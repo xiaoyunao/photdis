@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 
+from v3_2_branch_audit import audit as branch
 from v3_2_external_audit import audit as external
 from v3_2_factorial_audit import audit as factorial
 from v3_2_figure_delivery import audit as figures
@@ -55,7 +56,7 @@ def audit(*, completed_only=False):
         raise ValueError('A completed delivery audit did not pass')
     result = dict(passed=True, final=not completed_only, pending=pending,
                   preservation=protected, opened=opened_result, external=external_result,
-                  factorial=factorial_result, figures=figure_result, documents=sources)
+                  factorial=factorial_result, branch=branch(), figures=figure_result, documents=sources)
     if not completed_only:
         result['radial'] = radial()
         result['structure'] = structure()
