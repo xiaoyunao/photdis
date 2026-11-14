@@ -13,6 +13,9 @@
   the collector and verified the final report dependency. Catalog 143
   remains queued for submission when a debug slot opens.
 - NGC288 state 10 was running at 1h32m51s. Ten states remain archived.
+- Follow-up accounting confirmed 137 and 140 completed. Submitted 143
+  as 61283177, registered it with the collector and verified report
+  61266374 waits on that retry and the original array.
 
 ## 2026-11-15 — archive the first empirical retries and submit the next pair
 

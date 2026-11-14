@@ -161,9 +161,9 @@ catalogs archived.
   rejected the seven-task submission under its submission limit.
   Debug retry 61282072 completed and both catalogs are archived.
   Catalog 131 retains its local sampling failure. Retry 61282256
-  completed for 133 and 135. Retry 61282714 covers 137 and 140
-  and is a dependency of 61266374. Submit 143 when a slot opens.
-  Keep all outstanding retries in the report dependency.
+  completed for 133 and 135. Retry 61282714 completed for 137 and 140.
+  The four results still need to be archived. Retry 61283177 covers
+  143 and is a dependency of 61266374 alongside the original array.
   All remaining original recovery tasks are in CPU shared with the
   existing eight-task array cap and 8 GiB per task.
   Final reporting pairs broad and local count error by catalog and
