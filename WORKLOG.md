@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-15 — complete fixed model-SED recovery and start empirical retries
+
+- Retrieved 119–127 via SFTP after SSH archive timeouts. Reconciled
+  all nine raw job IDs against `sacct` and verified input/output digests.
+  The completed-only audit verifies 130 catalogs, 238 of 260 accepted
+  fits, 5,200 intervals and all 16 fixed model-SED strata.
+  Updated `docs/v3_2_result.md` with both 90%/0.25 mag strata.
+- `sacct` confirmed seven empirical tasks canceled in 11–13 seconds
+  and all seven output directories missing. Debug submission of seven
+  hit QOSMaxSubmitJobPerUserLimit. Submitted 130 and 131 as 61282072
+  with the original cached inputs and verified the report dependency.
+  Registered the retry in the collector. Remaining retries are
+  133, 135, 137, 140 and 143.
+- All 472 local tests passed. Ten NGC288 states remain archived and
+  Slurm confirmed states 10–14 running.
+
 ## 2026-11-15 — verify six wider radial recovery catalogs
 
 - Archived 112 and 114–118 via `v3_2_collect_radial_results.py --completed`.

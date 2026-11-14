@@ -164,6 +164,15 @@ both arms pass in all eight replicates. Local width coverage is
 length is 0.110 mag. Seven medians move toward the prior anchor.
 The paired count-error change is −25.49 [−30.41, −21.00]
 percentage points.
+At 90% member fraction and 0.25 mag true width, local width
+coverage is 7/8 in the near background and 8/8 in the deep
+background. Mean width medians are 0.262 and 0.245 mag, and
+mean interval lengths are 0.190 and 0.187 mag. The paired count
+error changes are −27.01 [−31.86, −21.09] percentage points
+for seven accepted near-background pairs and −30.37
+[−33.69, −26.66] for eight deep-background pairs. The excluded
+near-background broad fit has one sampler divergence. All 16
+fixed model-SED strata are now complete.
 The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
