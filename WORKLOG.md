@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — register and implement giant branch adjustment
+
+- The paired diagnosis supports a single midpoint adjustment to the giant
+  log odds. The protocol was committed before implementation and evaluation.
+- Added the posterior transform and the allocated opened-cohort runner.
+  Three focused tests, Python and shell syntax, and diff checks passed.
+  Actual opened-domain scores await the allocated run.
+
 ## 2026-11-14 — verify paired factorial scores and render the plate
 
 - Paired report 61259977 moved to debug and completed 0:0 in 23s.
