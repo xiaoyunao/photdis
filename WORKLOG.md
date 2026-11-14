@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — recover two more scheduler cancellations
+
+- Slurm canceled 096 and 098 after 12 and 18 seconds. Neither
+  result directory existed. Submitted only these two catalogs
+  to debug array 61280724 with the original cached inputs.
+  Report 61266374 now waits for the original array to finish
+  and for the new retries to succeed. Registered both retry IDs
+  with the collector.
+- Archived 097, 099–102 and 104. All twelve new fits pass.
+  Stage delivery verified 104 catalogs, 208 verdicts (187 accepted),
+  4,160 intervals and 12 complete strata. NGC288 states 10–14
+  remain running with ten states archived.
+
 ## 2026-11-15 — complete the 60 percent model-SED recovery strata
 
 - Archived 086, 088 and 090–095 with successful Slurm exits

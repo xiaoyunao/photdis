@@ -137,7 +137,7 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Ninety-eight of 288 catalogs have verified compact outputs. Catalogs
+  One hundred four of 288 catalogs have verified compact outputs. Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
   Catalog 032 completed in CPU shared QoS in 5m38s with eight CPUs
@@ -148,8 +148,10 @@ catalogs archived.
   Slurm canceled 037 and 046 before either result directory was created.
   Retry array 61278909 uses the original recovery script and cached inputs.
   Both retry tasks completed in debug, and both fits passed in each.
-  Report 61266374 cleared its retry dependency and waits for the original
-  array to finish. The report still authenticates all 288 receipts.
+  Slurm later canceled 096 and 098 before writing their result directories.
+  Retry array 61280724 uses the same cached inputs in debug. Report
+  61266374 waits for this retry and for the original array to finish,
+  then authenticates all 288 receipts.
   All remaining original recovery tasks are in CPU shared with the
   existing eight-task array cap and 8 GiB per task.
   Final reporting pairs broad and local count error by catalog and

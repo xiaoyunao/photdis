@@ -17,7 +17,7 @@ REMOTE = '/pscratch/sd/y/yunao/photdis_pipeline'
 HOST = 'yunao@perlmutter.nersc.gov'
 FILES = ('complete.json', 'numerical.csv', 'recovery.csv')
 RECOVERY_ARRAY = '61266369'
-RECOVERY_RETRIES = {'61278909': {37, 46}}
+RECOVERY_RETRIES = {'61278909': {37, 46}, '61280724': {96, 98}}
 PILOT_CATALOGS = {0, 128, 256}
 SSH = ('ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10',
        '-o', 'ServerAliveInterval=8', '-o', 'ServerAliveCountMax=2', HOST)
