@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — reconcile catalogs 072 and 073 with the frozen design
+
+- Collected both successful Slurm receipts and their compact tables.
+  All four fits pass. Stage delivery verified 79 catalogs, 158
+  fit verdicts (137 accepted), 3,160 intervals and nine complete
+  strata. The 60% deep-background narrow-width stratum remains
+  incomplete.
+- NGC288 states 10–14 are running and have 160, 128, 128, 32 and
+  32 verified rows at the inspected checkpoints. Slurm returned
+  no new terminal failures for either production array.
+
 ## 2026-11-15 — verify the first complete 60 percent recovery stratum
 
 - Archived 067, 069–071 and 074. All ten new fits pass.
