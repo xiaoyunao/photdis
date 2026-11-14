@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — preserve completed matched-factorial input rows
+
+- The pending 31 input shards originally wrote only after all rows finished.
+  Added a hash-bound checkpoint per identity for likelihood, both applicable
+  entry integrals and numerical checks. The fitter verifies the original
+  shard 00 receipt and enforces matching scientific inputs across shards.
+- Verified round-trip reuse with exact large Gaia IDs, both admissions,
+  and preserved numerical checks. Python syntax and seven focused prior,
+  target and hierarchy tests pass. Entry integrands and thresholds retained.
+- Slurm still lists 61259514 as pending. Original dependencies retained.
+
 ## 2026-11-14 — recover the prior-predictive pilot and document opened audits
 
 - Slurm 61260177_256 TIMEOUT at 30m11s, total CPU 1h59m26s. Verified no

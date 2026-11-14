@@ -37,6 +37,10 @@ def assemble(case, root, expected_roles, *, refined):
     markers = {}
     flags = dict(broad=0, candidate=0)
     source_inputs = None
+    original_receipt = ROOT/'manifests/v3_2/tilt_inputs/shard_00/complete.json'
+    original = json.loads(original_receipt.read_text())
+    wrapper = 'scripts/v3_2_tilt_inputs.py'
+    accepted_producers = (original['inputs'][wrapper], sha(ROOT/wrapper))
     for shard in range(SHARDS):
         folder = root / f'shard_{shard:02}'
         path = folder / 'complete.json'
@@ -44,10 +48,15 @@ def assemble(case, root, expected_roles, *, refined):
         if (record['shard'] != shard or record['shards'] != SHARDS or not record['all_PSF']
                 or record['levels'] != [list(x) for x in LEVELS]):
             raise ValueError(f'Wrong shard or quadrature identity: {path}')
+        sources = dict(record['inputs'])
+        if sources.pop(wrapper) not in accepted_producers:
+            raise ValueError(f'Unrecognized shard producer: {path}')
+        if shard == 0:
+            verified(path, sha(original_receipt))
         if source_inputs is None:
-            source_inputs = record['inputs']
-        elif record['inputs'] != source_inputs:
-            raise ValueError(f'Target sources vary across shards: {path}')
+            source_inputs = sources
+        elif sources != source_inputs:
+            raise ValueError(f'Target scientific inputs vary across shards: {path}')
         markers[str(path.relative_to(ROOT))] = sha(path)
         check_path = verified(folder / 'checks.csv', record['outputs']['checks.csv'])
         with check_path.open(newline='') as stream:

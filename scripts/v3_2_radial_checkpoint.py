@@ -6,7 +6,6 @@ import multiprocessing as mp
 import os
 
 from v2_1_near import atomic_npz, load, save_json, sha
-from v3_2_tilt_inputs import verified
 
 
 def compute_rows(folder, metadata, identities, worker, *, workers, keys):
@@ -30,7 +29,9 @@ def compute_rows(folder, metadata, identities, worker, *, workers, keys):
             record = json.loads(receipt.read_text())
             if record['identity'] != int(identity) or record['TYPE'] != 'PSF' or record['row'] != row:
                 raise ValueError(f'Checkpoint source row changed: {receipt}')
-            data = load(verified(payload, record['sha256']))
+            if sha(payload) != record['sha256']:
+                raise ValueError(f'Checkpoint payload changed: {payload}')
+            data = load(payload)
             outputs[row] = tuple(data[key] for key in keys)
         print(f'RADIAL ROWS {len(identities)-len(missing)}/{len(identities)} verified', flush=True)
         if missing:

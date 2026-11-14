@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Build matched kernel likelihood and entry arrays for one frozen target shard."""
 import argparse
-from concurrent.futures import ProcessPoolExecutor
 import json
-import multiprocessing as mp
 import os
 from pathlib import Path
 
@@ -24,12 +22,13 @@ from photdis.v3_1.selection_dust import entry_model_with_local_dust
 from photdis.v3_2.kernel_entry import kernel_entry
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
+from v3_2_radial_checkpoint import compute_rows
 
 SOURCE = ROOT / 'data/v3_1'
 SHARDS = 32
 LEVELS = ((2**20, 319711), (2**21, 319711), (2**21, 319712))
 TILTS = np.array([[0., 0.], [.3, 0.], [-.3, 0.], [0., .3], [0., -.3]])
-_STATE = None
+_STATE = _SHARD_ROWS = None
 
 
 def verified(path, digest):
@@ -97,8 +96,15 @@ def row_inputs(row):
     return row, component, log_scale, entries, audits
 
 
+def shard_row(position):
+    row = _SHARD_ROWS[position]
+    _, response, scale, entries, checks = row_inputs(row)
+    return (response, np.asarray(scale), entries['broad'],
+            entries.get('candidate', np.empty(0)), np.asarray(json.dumps(checks)))
+
+
 def main():
-    global _STATE
+    global _STATE, _SHARD_ROWS
     require_compute()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--shard', type=int, required=True, choices=range(SHARDS))
@@ -142,20 +148,26 @@ def main():
     _STATE = table, cal, roles, model, support, weights, markers
 
     destination = ROOT / 'data/v3_2/tilt_inputs' / args.run / f'shard_{args.shard:02}'
-    destination.mkdir(parents=True, exist_ok=False)
+    if destination.exists():
+        raise FileExistsError(destination)
     rows = np.arange(args.shard, len(roles['identity']), SHARDS)
-    responses, scales, broad, candidate, candidate_rows, checks = [], [], [], [], [], []
-    with ProcessPoolExecutor(max_workers=args.workers, mp_context=mp.get_context('fork')) as pool:
-        for row, response, scale, entries, audits in pool.map(row_inputs, rows.tolist()):
-            responses.append(response)
-            scales.append(scale)
-            broad.append(entries['broad'])
-            if 'candidate' in entries:
-                candidate.append(entries['candidate'])
-                candidate_rows.append(row)
-            checks.extend(audits)
-            if len(responses) % 64 == 0:
-                print(f'SHARD {args.shard} {len(responses)}/{len(rows)}', flush=True)
+    _SHARD_ROWS = rows.tolist()
+    inputs = [*source_paths, registered, matrix / 'complete.json', marker_path,
+              Path(__file__).resolve(), ROOT / 'src/photdis/v3_2/kernel_entry.py']
+    hashes = {str(p.relative_to(ROOT)): sha(p) for p in inputs}
+    checkpoint = destination.parent/'row_checkpoints'/destination.name
+    code = sha(ROOT/'scripts/v3_2_radial_checkpoint.py')
+    spec = dict(shard=args.shard, inputs=hashes, levels=[list(x) for x in LEVELS], checkpoint_code_sha256=code)
+    parts = compute_rows(checkpoint, spec,
+                         roles['identity'][rows], shard_row, workers=args.workers,
+                         keys=('response', 'scale', 'broad', 'candidate', 'checks'))
+    responses, scales, broad, candidate_all, audits = zip(*parts)
+    choice = np.array([bool(len(a)) for a in candidate_all])
+    np.testing.assert_array_equal(choice, roles['candidate'][rows])
+    candidate_rows = rows[choice]
+    candidate = [a for a in candidate_all if len(a)]
+    checks = [r for item in audits for r in json.loads(item.item())]
+    destination.mkdir(parents=True, exist_ok=False)
     candidate_entry = (np.stack(candidate) if candidate else
                        np.empty((0, len(LEVELS), len(model.weights), len(MEANS))))
     atomic_npz(destination / 'matrices.npz', row=rows, identity=roles['identity'][rows],
@@ -164,10 +176,9 @@ def main():
                log_scale=np.asarray(scales), broad_entry=np.stack(broad),
                candidate_rows=np.asarray(candidate_rows, dtype=int), candidate_entry=candidate_entry)
     csv_rows(destination / 'checks.csv', checks)
-    inputs = [*source_paths, registered, matrix / 'complete.json', marker_path,
-              Path(__file__).resolve(), ROOT / 'src/photdis/v3_2/kernel_entry.py']
     save_json(destination / 'complete.json', dict(
-        inputs={str(p.relative_to(ROOT)): sha(p) for p in inputs},
+        inputs=hashes, row_checkpoint_sha256=sha(checkpoint/'inputs.json'),
+        checkpoint_code_sha256=code,
         outputs={p: sha(destination / p) for p in ('matrices.npz', 'checks.csv')},
         shard=args.shard, shards=SHARDS, n=len(rows), candidate_n=len(candidate_rows),
         all_PSF=True, non_PSF_excluded=0, missing_TYPE_excluded=0,
