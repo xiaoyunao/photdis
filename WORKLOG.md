@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial entry cache receipts through repeat 08
+
+- Slurm confirmed repeats 05–08 completed 0:0. Verified all four
+  new receipt/checkpoint pairs with `v3_2_radial_cache_audit.py`.
+  Compact evidence now covers 9 repeats and 1,152 native contexts.
+- DR20 native intake was still producing brick receipts. The tilt
+  fits remain eligible and queued; outcomes are closed.
+
 ## 2026-11-14 — reconcile native row pointers before field freeze
 
 - Field freezing now binds both the identity census and the request
