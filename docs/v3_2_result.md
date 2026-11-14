@@ -137,8 +137,12 @@ In the same four 30% strata, the local-minus-broad change in
 summed absolute joint-count error divided by catalog size is
 −5.91, −8.40, −0.88 and −5.08 percentage points. The replicate
 bootstrap interval crosses zero for the 0.25 mag near-background
-stratum, [−4.98, +3.26] percentage points. These are the completed
-fixed model-SED strata. The empirical-SED and prior-predictive
+stratum, [−4.98, +3.26] percentage points. At 60% member fraction,
+the near-background 0.08-mag model-SED stratum has 8/8 passing
+local fits and 8/8 width intervals covering truth. Its mean width
+interval length is 0.169 mag, and its mean width median is 0.121 mag.
+The paired count-error contrast is −16.41 percentage points
+[−21.00, −11.77]. The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify the first complete 60 percent recovery stratum
+
+- Archived 067, 069–071 and 074. All ten new fits pass.
+  Stage delivery verified 77 catalogs, 154 verdicts (133 accepted),
+  3,080 intervals and nine completed strata.
+- The model-SED, near-background 60% stratum at 0.08 mag covers
+  width truth in 8/8 runs. The width median averages 0.121 mag,
+  and the paired normalized joint count-error change is −16.41
+  percentage points. Recorded the interval results in the synthesis.
+- NGC288 states 10–14 remain running. Latest inspected logs show
+  144, 128, 128, 16 and 24 verified checkpoints. Slurm showed
+  no new terminal failures, and both final reports remain dependent.
+
 ## 2026-11-15 — verify four more radial catalogs and summarize paired recovery
 
 - Archived 064–066 and 068 after successful Slurm jobs. Both
