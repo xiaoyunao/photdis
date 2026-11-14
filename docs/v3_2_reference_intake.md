@@ -85,3 +85,13 @@ in QRF is retained as unavailable; QRF extrapolation status is explicit.
 The joint views keep two native distance grids and class-distance tables.
 Combine these files with the chosen candidate forecast under the same
 admitted photometry hash and completed opened-development decision.
+
+Before opening any outcomes, record the historical candidate gate on
+each native-admitted object using observed r < 20, maximum grz magnitude
+uncertainty < 0.1 and the frozen QRF support. Authenticate the exact
+identity-aligned mask and its count with the four-view forecasts.
+Report both the full native cohort and the matched candidate gate on
+the same outcome qualifications. Export gate membership per object.
+Targeted spectroscopy has unknown inclusion probabilities within the
+candidate parent. Its high-q teacher-far fraction applies to the
+qualified DR19 reference subset.

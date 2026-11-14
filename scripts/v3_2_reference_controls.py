@@ -19,6 +19,7 @@ from photdis.v3.hierarchy import FieldPopulation
 from photdis.v3.inference import kernel_loglike
 from photdis.v3.model import inference_model
 from photdis.v3.systematics import calibration_vectors
+from photdis.v3_1.admission import candidate_admission
 from photdis.v3_1.shared_prior import geographic_fields, marginalize_native
 from v2_1_near import ROOT, atomic_npz, load, save_json, sha
 from v3_0_response import observation
@@ -141,6 +142,7 @@ def main():
     app_path = frozen('data/v3_0/cohorts/application.npz')
     prep_path = frozen('data/baseline_v0/prepared.json')
     qrf = joblib.load(qrf_path)
+    admission = candidate_admission(photo, qrf)
     nominal, response = [inference_model(joblib.load(p)) for p in (nominal_path, response_path)]
     for model in (nominal, response):
         if not model.converged or np.intersect1d(model.training_identity, photo['identity']).size:
@@ -171,6 +173,10 @@ def main():
     views = {name: stack_view([r[name] for r in rows], grids) for name in rows[0]}
     views['qrf'] = qrf_prediction(qrf, photo)
     destination.mkdir(parents=True, exist_ok=False)
+    admission_path = destination/'candidate_admission.npz'
+    atomic_npz(admission_path, ls_id=photo['ls_id'], **admission)
+    admission_export = dict(payload=str(admission_path.relative_to(ROOT)), sha256=sha(admission_path),
+                            admitted=int(admission['candidate'].sum()))
     exports = {}
     for name, data in views.items():
         p = destination/f'{name}.npz'
@@ -186,11 +192,13 @@ def main():
                        qrf_path, response_path, shared_path, chain_path, app_path, prep_path,
                        Path(__file__).resolve()]
     sources += [ROOT/p for p in ('scripts/v3_1_luminosity_guard.py', 'scripts/v3_1_validation_predict.py',
-                'src/photdis/v3_1/shared_prior.py', 'src/photdis/v3/controls.py', 'src/photdis/baseline_v0.py',
+                'src/photdis/v3_1/admission.py', 'src/photdis/v3_1/shared_prior.py',
+                'src/photdis/v3/controls.py', 'src/photdis/baseline_v0.py',
                 'src/photdis/baseline_v1.py', 'src/photdis/v3/inference.py',
                 'src/photdis/v3/systematics.py', 'src/photdis/v3/hierarchy.py')]
     save_json(destination/'complete.json', dict(cohort=ROLE, n=len(photo['identity']), all_PSF=True,
               references_read=False, pilot=False, photometry_sha256=sha(photo_path), views=exports,
+              candidate_admission=admission_export,
               inputs={str(p.relative_to(ROOT)): sha(p) for p in sources},
               outputs={p.name: sha(p) for p in destination.glob('*.npz')}, job=os.getenv('SLURM_JOB_ID')))
 

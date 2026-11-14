@@ -12,7 +12,7 @@ from photdis.v3_1.freeze import verify_freeze
 from photdis.v3_1.validation_report import field_statistic
 from photdis.v3_1.validation_scores import compare_score_levels, reference_center_agreement, score_pdf
 from v2_1_near import ROOT, csv_rows, load, save_json, sha
-from v3_2_reference_freeze import VIEWS, aligned
+from v3_2_reference_freeze import VIEWS, aligned, read_admission
 from v3_2_tilt_inputs import verified
 
 
@@ -83,7 +83,7 @@ def score_one(view, data, i, e):
     return value
 
 
-def summarize(rows, evidence):
+def summarize(rows, evidence, candidate_admitted):
     d = evidence['distance_kpc']
     label = evidence['class_label']
     precise = evidence['distance_precise']
@@ -95,6 +95,9 @@ def summarize(rows, evidence):
         use = precise & (d >= lo) & (d < hi)
         for group in ('all', 'giant', 'metal_poor_giant'):
             groups[f'{group}_{lo}_{hi}_teacher_kpc'] = use & groups[group]
+    scopes = {'native_photometric': groups['all'], 'matched_candidate_admission': candidate_admitted}
+    scoped_groups = {(scope, group): base & mask for scope, base in scopes.items()
+                     for group, mask in groups.items()}
     metrics = {'gaia_log_score': 'gaia_score_stable', 'teacher_log_score': 'teacher_score_stable',
                'class_log_score': 'class_score_stable', 'class_brier': 'class_score_stable',
                'class_correct': 'class_score_stable', 'p_giant': None,
@@ -109,13 +112,14 @@ def summarize(rows, evidence):
         series = {view: np.asarray([r.get(metric, np.nan) for r in rows[view]], float) for view in VIEWS}
         fixed = {view: np.asarray([r['numerical_pass'] and (flag is None or r.get(flag, False))
                                   for r in rows[view]], bool) for view in VIEWS}
-        for group, mask in groups.items():
+        for (scope, group), mask in scoped_groups.items():
             for accepted in (False, True):
                 cand = series['candidate']
                 for view in VIEWS:
                     x = series[view]
                     use = mask & ~np.isnan(x) & (fixed[view] if accepted else True)
-                    summaries.append(dict(view=view, group=group, metric=metric, numerical_only=accepted,
+                    summaries.append(dict(view=view, admission_scope=scope, group=group, metric=metric,
+                                          numerical_only=accepted,
                                           **field_statistic(x[use], cells[use])))
                     # The high-q conditional denominators differ by view.
                     if view == 'candidate' or metric == 'teacher_far_given_high_q':
@@ -125,7 +129,8 @@ def summarize(rows, evidence):
                         delta = cand[pair]-x[pair]
                     undefined = np.isnan(delta)
                     delta[undefined] = np.inf
-                    pairs.append(dict(anchor=view, group=group, metric=metric, numerical_only=accepted,
+                    pairs.append(dict(anchor=view, admission_scope=scope, group=group, metric=metric,
+                                      numerical_only=accepted,
                                       undefined_nonfinite=int(undefined.sum()),
                                       **field_statistic(delta, cells[pair])))
     return summaries, pairs
@@ -147,6 +152,9 @@ def main():
     photo = load(ROOT/'data/v3_2/reference_native/photometry.npz')
     aligned(photo, evidence)
     forecast = json.loads((ROOT/freeze['forecast']).read_text())
+    admission = forecast['candidate_admission']
+    candidate_admitted = read_admission(verified(ROOT/admission['payload'], admission['sha256']),
+                                        photo, admission['admitted'])
     output = out/'scores'
     if output.exists():
         raise FileExistsError(output)
@@ -157,16 +165,18 @@ def main():
         aligned(photo, data)
         by_view[name] = [
             dict(identity=int(identity), ls_id=int(evidence['ls_id'][i]), TYPE='PSF',
+                 candidate_admission=bool(candidate_admitted[i]),
                  cell=int(evidence['cell'][i]), view=name, teacher_precise=bool(evidence['distance_precise'][i]),
                  reference_class=int(evidence['class_label'][i]), **score_one(
                      name, data, i, {k: v[i] for k, v in evidence.items()}))
             for i, identity in enumerate(evidence['identity'])]
-    absolute, paired = summarize(by_view, evidence)
+    absolute, paired = summarize(by_view, evidence, candidate_admitted)
     output.mkdir(parents=True, exist_ok=False)
     for name, rows in [('objects', sum(by_view.values(), [])), ('absolute', absolute), ('paired', paired)]:
         csv_rows(output/f'{name}.csv', rows)
     save_json(output/'complete.json', dict(freeze_sha256=freeze_sha, evidence_sha256=sha(evidence_marker),
               all_PSF=True, views=list(VIEWS), n=len(evidence['identity']), job=os.getenv('SLURM_JOB_ID'),
+              candidate_admitted=int(candidate_admitted.sum()),
               outputs={p.name: sha(p) for p in output.iterdir()},
               scope='Paired field-reference diagnostics. AstroNNDist agreement is conditional on its reference selection.'))
 

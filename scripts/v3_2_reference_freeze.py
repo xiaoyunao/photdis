@@ -37,6 +37,15 @@ def require_native(photo):
         raise ValueError('Nonempty distinct verified DR11 PSF identities required')
 
 
+def read_admission(path, photo, expected_n):
+    with np.load(path) as data:
+        aligned(photo, data)
+        gate = data['candidate']
+        if gate.dtype.kind != 'b' or gate.shape != photo['identity'].shape or gate.sum() != expected_n:
+            raise ValueError('Invalid matched candidate admission mask')
+        return gate
+
+
 def bind_predictions(inv, marker, photo, photo_digest, decision_digest):
     record = inv.marker(marker)
     if (record.get('references_read') is not False or record.get('pilot') is not False
@@ -46,6 +55,8 @@ def bind_predictions(inv, marker, photo, photo_digest, decision_digest):
             or set(record['views']) != set(VIEWS)):
         raise ValueError('A full photometry-only forecast from all frozen views is required')
     photo = {k: photo[k] for k in IDENTITY}
+    admission = record['candidate_admission']
+    read_admission(inv.add(admission['payload'], admission['sha256']), photo, admission['admitted'])
     for name in VIEWS:
         view = record['views'][name]
         view_path = inv.add(view['payload'], view['sha256'])

@@ -41,7 +41,10 @@ Active goal follows the Pro review of 7699299. See
   all four complete forecasts and verify the exact reference row pointers.
   The paired evaluator covers signed Gaia, class and teacher distance/entry.
   The frozen nominal, historical target and QRF forecasts (61261381)
-  follow native admission. Candidate forecast awaits the mechanism decision.
+  follow native admission and freeze the exact photometric candidate gate
+  for all native PSFs. Report paired and absolute metrics inside the
+  candidate gate and across the complete native reference cohort.
+  Candidate forecast awaits the mechanism decision.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Metadata enables targeted

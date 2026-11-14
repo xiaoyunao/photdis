@@ -37,14 +37,18 @@ def main():
                 or record.get('pilot') is not False or record['photometry_sha256'] != photo_digest
                 or record['n'] != len(photo['identity']) or set(record['views']) != expected):
             raise ValueError(f'Incomplete or conflicting forecast: {path}')
-        if 'candidate' in expected and record['decision_sha256'] != decision_digest:
-            raise ValueError('Candidate does not bind the completed mechanism decision')
+        if 'candidate' in expected:
+            if record['decision_sha256'] != decision_digest:
+                raise ValueError('Candidate does not bind the completed mechanism decision')
+        else:
+            candidate_admission = record['candidate_admission']
         views.update(record['views'])
     inv.add(Path(__file__).resolve())
     inv.add(ROOT/'scripts/v3_2_reference_freeze.py')
     receipt = dict(cohort=ROLE, n=len(photo['identity']), all_PSF=True, references_read=False,
                    pilot=False, photometry_sha256=photo_digest, decision_sha256=decision_digest,
-                   views=views, inputs=inv.hashes.copy(), job=os.getenv('SLURM_JOB_ID'))
+                   views=views, candidate_admission=candidate_admission,
+                   inputs=inv.hashes.copy(), job=os.getenv('SLURM_JOB_ID'))
     destination = root/'reference_forecast'
     destination.mkdir(parents=True, exist_ok=False)
     path = destination/'complete.json'

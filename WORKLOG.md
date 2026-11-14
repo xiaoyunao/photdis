@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — freeze the matched candidate gate for DR19 scoring
+
+- Reused the registered observed-r, grz-error and QRF support gate in the
+  queued comparator job. Bind the gate payload, exact PSF identities and
+  admitted count before outcome access.
+- Updated the forecast, freeze and scoring programs to retain whole-native
+  and matched-candidate summaries, including paired distance/FeH strata.
+  Documented the targeted spectroscopic denominator in the intake notes.
+- Syntax, diff checks and 12 focused pytest checks pass. DR19 acquisition
+  and comparator execution remain pending. No reference outcomes read.
+
 ## 2026-11-14 — allow matching input and refinement shards to overlap
 
 - Confirmed 61259514_1 and _2 completed successfully and their frozen
