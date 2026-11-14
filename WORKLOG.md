@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify radial repeat 12 and reconcile the evidence ledger
+
+- Repeat 12 completed 0:0. Its receipt and checkpoint passed the frozen
+  cache audit. Verified inventory now covers 13 repeats and 1,664 contexts.
+- Updated the evidence ledger with all 731 verified tilt refinements,
+  exact direct/cache equivalence and the DR20 native cohort. The four
+  fitted arms and prospective outcome scores remain pending.
+
 ## 2026-11-14 — verify three more radial entry caches
 
 - Repeats 09–11 completed 0:0. Verified the three receipt/checkpoint

@@ -62,7 +62,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–11 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Cache receipts 00–12 are verified with `scripts/v3_2_radial_cache_audit.py`.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
