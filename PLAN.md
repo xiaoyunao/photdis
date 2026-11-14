@@ -19,8 +19,8 @@ Active goal follows the Pro review of 7699299. See
 - Run scoped narrow-structure and numerical diagnostics. Registered 288
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
   Recovery pilots for model, empirical and prior-predictive catalogs run
-  in array 61260177. For later catalogs, verify repeat-based entry reuse
-  against the direct pilot before launching the remaining recoveries.
+  in array 61260177. Cache pilot 61260465 uses the same repeat as direct
+  catalog 000. Compare their actual curves before launching the remainder.
   Freeze new validation
   before opening outcomes or expanding the production footprint.
 - Trace the 33 frozen conditional count failures with a statewise weight

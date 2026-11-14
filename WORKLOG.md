@@ -7,8 +7,10 @@
   mask, flux error, transmission, reddening and distance grid at read.
 - Each catalog still computes its own flux likelihood; the original pilots
   use direct integration. Python/Bash syntax and a two-kernel equality,
-  class-frequency and context/model rejection smoke test pass.
-- Next compare cached repeat 00 with direct catalog 000 in the actual
+  class-frequency and context/model rejection smoke test pass. Ten
+  targeted selection, dust and radial tests pass.
+- Submitted cache pilot 61260465 after three-way sync. Next compare
+  cached repeat 00 with direct catalog 000 in the actual
   allocated-run products before scheduling all repeats and catalog fits.
 
 ## 2026-11-14 — isolate the v3.1 conditional count transfer failures
@@ -18,7 +20,7 @@
 - Checked 34 frozen candidate transfer tables: 33 failures all occur
   for broad-envelope entry_level, with largest count shift 0.66554.
 - Added a hash-verified allocated audit of all states, retaining old
-  acceptance. Separately reports population-weight and conditional-response
+  acceptance. Submitted as 61260338. Separately reports population-weight and conditional-response
   components, absolute log normalizer, relative log-weight span and ESS.
   Python/Bash syntax and a two-state analytical decomposition pass.
 - Next collect real decomposition, radial and probe artifacts. Four-arm
