@@ -14,6 +14,7 @@ from v3_2_figure_delivery import audit as figures
 from v3_2_opened_audit import audit as opened
 from v3_2_preservation_check import examine as preservation
 from v3_2_radial_report_audit import audit as radial
+from v3_2_radial_report_audit import audit_available as radial_available
 from v3_2_structure_distance_audit import audit as structure_distance
 from v3_2_structure_joint_audit import audit as structure
 
@@ -88,6 +89,7 @@ def audit(*, completed_only=False):
                   factorial=factorial_result, branch=branch(), figures=figure_result, documents=sources)
     if completed_only:
         result['structure_distance'] = structure_distance()
+        result['radial_available'] = radial_available()
     else:
         result['radial'] = radial()
         result['structure'] = structure()

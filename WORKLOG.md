@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — verify the archived radial census during stage delivery
+
+- Stage delivery now checks all available radial receipts, both
+  numerical verdicts per catalog, interval identities and frozen truth.
+  Five focused tests pass. The audit rejected a modified coverage
+  flag even after its receipt digest was updated.
+- Slurm 61266369_20 and _21 completed in 3m13s and 3m23s.
+  All four fits pass their gates. Archived 24 of 288 catalogs.
+  Stage delivery verifies 48 verdicts (35 accepted) and 960 intervals.
+- Moved pending 022 and 023 to the two vacant debug slots.
+  NGC288 state 09 was last confirmed running at 1h21m.
+
 ## 2026-11-14 — verify narrow-structure recovery catalogs 018–019
 
 - Slurm 61266369_18 and _19 completed in 3m23s and 3m29s.

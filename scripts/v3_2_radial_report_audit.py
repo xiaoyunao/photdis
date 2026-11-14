@@ -4,6 +4,7 @@ import json
 from math import isclose
 from pathlib import Path
 
+from v3_2_collect_radial_results import FILES, validate as validate_catalog
 from v3_2_radial_cache_audit import audit as cache_audit
 from v3_2_radial_report import (count_loss_comparison, empirical_penalty, grouped_summary,
                                 read_csv, shrinkage_summary, validate_interval, validate_numerical,
@@ -14,6 +15,41 @@ from v2_1_near import ROOT, sha
 BASE = ROOT/'manifests/v3_2'
 GATES = ('broad', 'local')
 LOCAL = ('mu_location', 'mu_width', 'pre_entry_fraction', 'selected_members')
+
+
+def audit_available():
+    caches = {r['repeat']: r['receipt_sha256'] for r in cache_audit(complete=True)['records']}
+    design_path = BASE/'radial_design'/'complete.json'
+    outputs = json.loads(design_path.read_text())['outputs']
+    design_digest = sha(design_path)
+    designs = read_csv(design_path.with_name('design.csv'))
+    available, accepted, intervals = 0, 0, 0
+    for design in designs:
+        catalog = int(design['catalog'])
+        folder = BASE/f'radial_recovery/catalog_{catalog:03}'
+        if not folder.exists():
+            continue
+        payload = {name: (folder/name).read_bytes() for name in FILES}
+        receipt = validate_catalog(catalog, payload, design, outputs, design_digest, caches)
+        gates = read_csv(folder/'numerical.csv')
+        if len(gates) != len(GATES) or {r['arm'] for r in gates} != set(GATES):
+            raise ValueError(f'Missing or duplicate verdict in catalog {catalog}')
+        accepted += sum(validate_numerical(r) for r in gates)
+        fitted = {r['arm'] for r in gates if r['status'] == 'sampled'}
+        expected = {(arm, f'count_{c}_{b}') for arm in fitted for c in range(3) for b in range(6)}
+        if 'local' in fitted:
+            expected.update(('local', metric) for metric in LOCAL)
+        rows = [r for r in read_csv(folder/'recovery.csv') if r.get('arm')]
+        if (receipt['fitted_arms'] != sorted(fitted) or len(rows) != len(expected)
+                or {(r['arm'], r['metric']) for r in rows} != expected):
+            raise ValueError(f'Incomplete fitted metrics in catalog {catalog}')
+        for row in rows:
+            validate_interval(row)
+        validate_truth(rows, design)
+        intervals += len(rows)
+        available += 1
+    return dict(registered=len(designs), verified=available, evaluated_arms=available*len(GATES),
+                accepted_arms=accepted, intervals=intervals)
 
 
 def matching_table(path, rows):
