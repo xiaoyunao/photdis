@@ -3,6 +3,7 @@ import numpy as np
 import pytest
 
 from v3_2_reference_evidence import MINESWEEPER_COLS, read_minesweeper
+from v3_2_reference_controls import external_calibration
 from v3_2_reference_freeze import verify_request_pointers
 from v3_2_reference_inventory import inventory_join
 
@@ -55,3 +56,17 @@ def test_field_freeze_rechecks_pointers_against_closed_requests():
                                 requests, ('reference_row', 'obs'))
     with pytest.raises(ValueError, match='identity absent'):
         verify_request_pointers(dict(index, identity=ids[[0, 2]] + 1), requests, ('reference_row',))
+
+
+def test_external_calibration_uses_sky_cells_without_native_field_ids():
+    photo = dict(identity=np.arange(3), cell=np.array([4, 2, 4]),
+                 transmission=np.full((3, 6), .9), EBV=np.full(3, .02),
+                 band_mask=np.ones((3, 6), bool))
+    draws = dict(draw_id=np.array([12]), field_ids=np.array([4, 2]),
+                 field_dust_offset=np.array([[.1, .2]]),
+                 global_band_zero_point_mag=np.zeros((1, 6)))
+    cal = external_calibration(photo, draws)
+    np.testing.assert_array_equal(cal[0], cal[2])
+    assert not np.allclose(cal[0], cal[1])
+    assert np.abs(cal).max() < .1
+    assert 'field' not in photo

@@ -31,6 +31,13 @@ from v3_2_tilt_inputs import verified
 _STATE = None
 
 
+def external_calibration(photo, draws):
+    # As in the frozen v3.1 external roles, a negative field sends each
+    # object to its deterministic sky-cell calibration draw.
+    external = dict(photo, field=np.full(len(photo['identity']), -1, dtype='i8'))
+    return calibration_vectors(external, draws, 12)[0]
+
+
 def qrf_prediction(model, table, *, batch=128):
     ids = table['identity']
     use = ~np.isin(ids, model.training_identity) & table['band_mask'][:, [0, 1, 3]].all(axis=1)
@@ -172,7 +179,7 @@ def main():
             bounds[f['index']] = json.loads(p.read_text())['bounds_deg']
     if set(bounds) != set(original):
         raise ValueError('Missing historical field definitions')
-    cal, _ = calibration_vectors(photo, load(shared_path), 12)
+    cal = external_calibration(photo, load(shared_path))
     chain = load(chain_path)
     fields, theta, beta = old_population(response, photo, chain, bounds)
     grids = [np.unique(np.r_[np.linspace(-20., 50., n), DISTANCE_MU_BOUNDARIES])

@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — restore sky-cell calibration for external comparators
+
+- Common comparator 61264223 failed at startup with `KeyError: field`.
+  The native PSF exports omit the historical field column. Reuse v3.1's
+  external-field sentinel `-1` to select the deterministic calibration
+  draw by sky cell. Both DR20 and common-system controls use this path.
+- Python compilation and 19 targeted tests passed. The regression
+  tests shared cells, distinct cells and numeric collisions with old
+  field IDs. The failed job and original log remain on NERSC.
+
 ## 2026-11-14 — verify DR20 native intake and start frozen comparator workflow
 
 - DR20 native match 61267848 completed 0:0. Across 20,668 bricks,
