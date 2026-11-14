@@ -142,6 +142,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   closure at the old nodes. Full 32-state integration uses the registered
   levels with per-state checkpoints (61263907). State 00 completed and
   passed 2,560 context checks, including closure on archived nodes.
+  State 01 also closed on archived nodes. Two of its 512 Gaussian
+  native log-response checks exceeded 0.02 nat and remain flagged.
   The two-axis evaluator
   61263908 waits on all 32 states. Collect each completed state's
   `complete.json`, `checks.csv` and checkpoint `inputs.json`, then run

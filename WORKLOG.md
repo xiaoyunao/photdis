@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify NGC288 state 01 and retain two Gaussian flags
+
+- State 01 (61263907_1, raw 61268809) completed 0:0 in 1h26m11s.
+  The compact state audit reconciled 2,560 checks on the same 512
+  native PSFs as state 00. Archived native closure was exact.
+- Two Gaussian native log-response changes exceeded 0.02 nat
+  (0.180366 and 0.0202165). Their class-probability changes met the
+  threshold. Every full-native and entry check passed for this state.
+
 ## 2026-11-14 — verify the matched four-arm forecasts
 
 - Prediction 61259969 completed 0:0 in 12m51s. Verified 526 PSFs with
