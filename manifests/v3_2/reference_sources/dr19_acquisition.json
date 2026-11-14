@@ -1,0 +1,18 @@
+{
+  "job": "61260678",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 46,
+  "verified_by_acquisition": ["byte_length", "gzip_integrity", "sha256"],
+  "outcome_values_read": false,
+  "archives": {
+    "astraAllStarAstroNNdist-0.6.0.fits.gz": {
+      "bytes": 534769970,
+      "sha256": "50c0e49df3ab403d3ae294fff183a280a96186c2d626afe9cfdb4dc12a9ead9e"
+    },
+    "astraAllStarASPCAP-0.6.0.fits.gz": {
+      "bytes": 1171102556,
+      "sha256": "5324bf39baeede7553b0a3c8a50bea1760f47eb67a95a8a84e6db303aa2edb04"
+    }
+  }
+}

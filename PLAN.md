@@ -31,13 +31,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   catalogs in `docs/v3_2_radial_protocol.md`; design job 61260010 complete.
   All three original direct pilots in 61260177 timed out. Direct 000
   follows as 61260934; empirical 128 (61260935) and prior-predictive
-  256 (61261884) use repeat-00 cache 61260465. Check cache equivalence
+  256 (61261884) use completed repeat-00 cache 61260465. Check cache equivalence
   with job 61261765 before launching the remaining catalogs. New curve
   workers retain authenticated completed rows across allocation limits.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
 - Prepare the DR19 Astra identity inventory following
-  `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
+  `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 completed.
   Identity index 61260891 verifies the archive receipt, and native match
   61260892 follows it. Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
@@ -61,7 +61,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 completed at fixed distance order
   64. Both branches pass 512 to 1024 and retain failures at 256 to 512.
-  Added-distance native and entry pilot 61260630 follows
+  Added-distance native and entry pilot 61260630 is running and follows
   `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
   The two-axis evaluator is ready for the authenticated 32-state products.
 

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate the first radial cache and DR19 acquisition
+
+- Cache job 61260465_0 completed 0:0 in 13m49s with all 128 contexts.
+  Compared the small cache and checkpoint receipts with the frozen design,
+  nominal model and entry code. Exact live array equivalence awaits the
+  direct and cached comparison pilots 61260934 and 61260935.
+- Archive download 61260678 completed 0:0 in 46s. Recorded both file
+  sizes and registered job SHA-256 outputs after gzip verification.
+  Identity-only inventory 61260891 cleared the acquisition dependency.
+- NGC288 added-distance pilot 61260630 started. No new reference outcomes
+  were opened.
+
 ## 2026-11-14 — verify paired radial recovery reporting
 
 - Added catalog-paired 18-bin count error and marginal interval length
