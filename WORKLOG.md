@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-14 — run radial recovery pilots and register frozen class probes
+
+- Submitted 61260177 for catalogs 0, 128 and 256. First real model catalog
+  started on nid006496. Four-arm input and NGC288 odds jobs still await
+  Slurm priority/resources. No restart of live jobs.
+- Added the fixed v3.0 no-color/grz/griz/multiband class-information
+  controls on the opened v3.1 field. Authenticate fitted files and exclude
+  historical fit/temperature-calibration IDs; compare same-object class
+  metrics using sky-block bootstrap. Neither labels nor probe outputs enter
+  any likelihood or fit.
+- Python compile and Bash syntax pass. Small scoring test conserves Brier
+  and argmax and retains zero-probability log scores. Next run and collect
+  the probe and radial pilot tables with output hashes.
+
 ## 2026-11-14 — implement narrow-structure recovery and coverage reporting
 
 - Slurm 61260010 completed 0:0 in 29s. Its 288-catalog design preserves
