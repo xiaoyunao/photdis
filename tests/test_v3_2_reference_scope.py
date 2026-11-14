@@ -4,7 +4,14 @@ import pytest
 
 from photdis.v3_1.freeze import Inventory, file_hash
 from v3_2_reference_freeze import ROLE, VIEWS, bind_predictions, read_admission
-from v3_2_reference_score import class_confusion, high_q_reference_support, reliability, score_one, summarize
+from v3_2_reference_score import (class_confusion, high_q_reference_support,
+                                 independent_count_interval, reliability, score_one, summarize)
+
+
+def test_independent_count_interval_includes_deterministic_labels():
+    np.testing.assert_array_equal(independent_count_interval([1, 0, 1]), [2, 2])
+    np.testing.assert_array_equal(independent_count_interval([1, .01, .01]), [1, 1])
+    np.testing.assert_array_equal(independent_count_interval([0, .99, .99]), [2, 2])
 
 
 def test_frozen_admission_checks_identity_order_and_count(tmp_path):
@@ -172,6 +179,8 @@ def test_probability_bins_and_counts_keep_identical_qualified_denominators():
     assert matched_near['count_residual'] == pytest.approx(.9)
     qrf_giant = next(row for row in totals if row['view'] == 'qrf' and row['target'] == 'giant')
     assert qrf_giant['reference_qualified'] == 3 and qrf_giant['n'] == 0
+    assert qrf_giant['independent_count_lo95'] is None
+    assert matched_near['independent_count_covered95'] is True
 
 
 def test_absolute_confusion_conserves_reference_counts_and_numerical_exclusions():

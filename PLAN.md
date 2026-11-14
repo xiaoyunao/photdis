@@ -96,7 +96,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   The opened-label coverage and requirements for a parent-matched
   contamination measurement are in `docs/v3_2_contamination_support.md`.
 - Inventory new common-distance HST methods. Job 61262297 admits 77 PSFs
-  in 47 Tuc and 26 in NGC362. Frozen comparator job 61264223 uses the
+  in 47 Tuc and 26 in NGC362. Frozen comparator job 61269026 uses the
   same photometric gate as the field cohort. The allocated final
   runner binds all four forecasts before evaluating both HST scales.
   Keep the existing v3.1 system as an opened control.

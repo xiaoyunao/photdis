@@ -21,6 +21,15 @@ from v3_2_tilt_inputs import verified
 PROBABILITY_TARGETS = ('near', 'giant', 'dwarf')
 
 
+def independent_count_interval(probability):
+    """Central discrete 95% interval at fixed marginal probabilities."""
+    mass = np.ones(1)
+    for p in probability:
+        mass = np.convolve(mass, [1-p, p])
+    cdf = np.cumsum(mass)
+    return np.searchsorted(cdf/cdf[-1], [.025, .975])
+
+
 def score_one(view, data, i, e):
     status = bool(data['numerical_pass'][i])
     if 'available' in data and not data['available'][i]:
@@ -180,8 +189,11 @@ def reliability(rows, evidence, candidate_admitted):
                     expected = float(p[use].sum())
                     observed = int(truth[use].sum())
                     stats = field_statistic(p[use] - truth[use], cells[use])
+                    lo, hi = map(int, independent_count_interval(p[use])) if use.any() else (None, None)
                     totals.append(dict(**keys, reference_qualified=int(eligible.sum()),
                                        expected_count=expected, observed_count=observed,
+                                       independent_count_lo95=lo, independent_count_hi95=hi,
+                                       independent_count_covered95=lo <= observed <= hi if lo is not None else None,
                                        count_residual=expected-observed, **stats))
                     for i in range(10):
                         lo, hi = i/10, (i+1)/10

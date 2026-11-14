@@ -40,3 +40,9 @@ upper bound is below 3.2, respectively. Keep the middle group as
 unknown. Qualified metallicity uses finite values and positive errors.
 Retain the separate signed Gaia channel and report the dependence of
 MINESweeper on that same astrometric source.
+
+Reference count checks use the same qualified rows as the reliability
+bins. Report an exact Poisson-binomial interval under independent
+Bernoulli draws at the frozen marginal probabilities. This interval is
+conditional on those probabilities and omits shared model uncertainty.
+Retain the sky-block interval on the mean count residual alongside it.

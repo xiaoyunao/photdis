@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — add conditional finite-cohort count intervals
+
+- The field evaluator now computes exact Poisson-binomial intervals
+  for the qualified near, dwarf and giant reference counts. The
+  intervals condition on the frozen marginal probabilities and
+  assume independent object labels. Sky-block count residuals remain.
+- Tested deterministic endpoints, skewed probabilities and empty
+  QRF class coverage. All 467 tests and diff checks passed.
+- Recorded the replacement common-scale comparator job 61269026.
+  The actual outcome evaluation still awaits a completed model freeze.
+
 ## 2026-11-14 — restore sky-cell calibration for external comparators
 
 - Common comparator 61264223 failed at startup with `KeyError: field`.
