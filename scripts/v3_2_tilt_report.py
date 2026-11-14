@@ -65,9 +65,43 @@ def giant_decomposition(rows, cells, role, arm):
                        **field_statistic(value[mask], cells[mask]))
 
 
+def entry_sensitivity(role, arm, rows, values):
+    # Alternatives share the observed likelihood, objects and underlying draws.
+    if (values.shape != (len(rows), 3, 3, 6) or not np.isfinite(values).all()
+            or (values < 0).any() or not np.allclose(values.sum(axis=(2, 3)), 1., rtol=0, atol=1e-10)):
+        raise ValueError('Expected three normalized entry levels per observed object')
+    summaries, counts = [], []
+    totals = values.sum(axis=0)
+    for level in (0, 2):
+        delta = values[:, level]-values[:, 1]
+        p = float(abs(delta).max())
+        count_delta = totals[level]-totals[1]
+        c = float(abs(count_delta).max())
+        stats = {}
+        for key, tol in [('gaia_score', .02), ('gaia_pit', .003), ('teacher_score', .02)]:
+            field = f'entry_{level}_{key}_delta'
+            use = np.array([float(r[field]) for r in rows if r.get(field) not in (None, '')])
+            finite = np.isfinite(use)
+            stats[f'{key}_n'] = len(use)
+            stats[f'{key}_max_finite_abs_delta'] = float(abs(use[finite]).max()) if finite.any() else None
+            stats[f'{key}_nonfinite'] = int((~finite).sum())
+            stats[f'{key}_failed'] = int((~finite | (abs(use) >= tol)).sum())
+        summaries.append(dict(role=role, arm=arm, level=level, n=len(rows),
+                              maximum_joint_probability_delta=p, maximum_mean_count_delta=c,
+                              probability_pass=p < .003, count_pass=c < .5, **stats))
+        for c_index in range(3):
+            for distance_bin in range(6):
+                counts.append(dict(role=role, arm=arm, level=level, class_index=c_index,
+                                   distance_bin=distance_bin,
+                                   expected_count=float(totals[level, c_index, distance_bin]),
+                                   base_expected_count=float(totals[1, c_index, distance_bin]),
+                                   count_delta=float(count_delta[c_index, distance_bin])))
+    return summaries, counts
+
+
 def summarize(groups, anchors, forecast, manifest):
     absolute, alignment, confusion, counts, gates = [], [], [], [], []
-    covariances, decomposition = {}, []
+    covariances, decomposition, entry_checks, entry_counts = {}, [], [], []
     for role in ROLES:
         selected = [g for g in groups if g[ARMS[0]]['role'] == role and
                     g[ARMS[0]]['candidate_admission'] == 'True']
@@ -91,6 +125,11 @@ def summarize(groups, anchors, forecast, manifest):
                               for r in rows])
             if not np.allclose(averaged, saved, rtol=0, atol=1e-10):
                 raise ValueError('Reported joint probabilities differ from saved states')
+            entry = np.stack([v[arm + '_entry_class_distance'] for v in payloads])
+            np.testing.assert_allclose(entry[:, 1].reshape(-1, 18), saved, rtol=0, atol=1e-10)
+            sensitivity, alternatives = entry_sensitivity(role, arm, rows, entry)
+            entry_checks.extend(sensitivity)
+            entry_counts.extend(alternatives)
             covariances.update({f'{role}_{arm}_conditional': conditional,
                                 f'{role}_{arm}_shared': shared})
             for j in range(18):
@@ -136,7 +175,8 @@ def summarize(groups, anchors, forecast, manifest):
                               probability_identity_max=max(float(r['joint_delta']) for r in rows),
                               marginal_half_max=max(float(r['marginal_half_delta']) for r in rows)))
     return dict(absolute=absolute, historical_anchor=alignment, confusion=confusion,
-                joint_counts=counts, numerical=gates, giant_decomposition=decomposition), covariances
+                joint_counts=counts, numerical=gates, giant_decomposition=decomposition,
+                entry_sensitivity=entry_checks, entry_counts=entry_counts), covariances
 
 
 def main():

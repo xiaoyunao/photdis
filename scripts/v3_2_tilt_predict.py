@@ -17,6 +17,7 @@ from photdis.v3.likelihood import ContinuousPosterior, trapezoid_weights
 from photdis.v3.metrics import observed_parallax, normal_reference_score
 from photdis.v3.model import inference_model
 from photdis.v3.systematics import calibration_vectors
+from photdis.v3.target import joint_coefficients
 from photdis.v3_1.shared_prior import geographic_fields, marginalize_native
 from photdis.v3_1.validation_scores import score_pdf
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
@@ -45,6 +46,44 @@ def diagnostic(grid, class_curve, label, evidence):
         sigma = 5 / np.log(10) * evidence['distance_error_kpc'] / evidence['distance_kpc']
         stats['astronn_score'] = normal_reference_score(grid, normalized, ref_mu, sigma)
     return stats
+
+
+def entry_transfer_scores(model, grid, native, theta, beta, value, weights, base, evidence):
+    """Reuse the fixed-grid numerator and its per-draw normalizers."""
+    if value['draw_probability'].shape[0] != weights.shape[1]:
+        raise ValueError('Entry transfer weights must retain population draw order')
+    probability = np.einsum('ls,scd->lcd', weights, value['draw_probability'])
+    np.testing.assert_allclose(probability[1], value['class_distance'], rtol=0, atol=1e-10)
+    variants = {}
+    if not (evidence['parallax_eligible'] or evidence['distance_available']):
+        return probability, variants
+    # Shift the native log normalization by one common offset to avoid
+    # overflow when an object has very small marginal likelihood.
+    z = value['log_evidence_per_draw']
+    offset = float(z.min())
+    weights_over_evidence = weights[(0, 2), :]*np.exp(offset-z)
+    coefficient = np.zeros((2, len(model.weights), 5, 3))
+    for start in range(0, len(beta), 256):
+        stop = min(start+256, len(beta))
+        draws = joint_coefficients(model, theta[start:stop], beta[start:stop])
+        coefficient += np.einsum('ls,skdc->lkdc', weights_over_evidence[:, start:stop], draws)
+    with np.errstate(divide='ignore'):
+        radial_prior = np.log(distance_basis(grid))[None, :, None, :]
+    for i, level in enumerate((0, 2)):
+        with np.errstate(divide='ignore'):
+            prior = logsumexp(np.log(coefficient[i])[..., None]+radial_prior, axis=1)
+        lp = logsumexp(native[:, None, :]+prior, axis=(0, 1))
+        if evidence['parallax_eligible']:
+            gaia = observed_parallax(grid, lp, evidence['p_corr'], evidence['gaia_parallax_error'])
+            variants[f'entry_{level}_gaia_score_delta'] = gaia['log_score']-base['gaia']['log_score']
+            variants[f'entry_{level}_gaia_pit_delta'] = gaia['pit']-base['gaia']['pit']
+        if evidence['distance_available']:
+            distance = evidence['distance_kpc']
+            mu = 10+5*np.log10(distance)
+            sigma = 5/np.log(10)*evidence['distance_error_kpc']/distance
+            score = normal_reference_score(grid, lp, mu, sigma)
+            variants[f'entry_{level}_teacher_score_delta'] = score-base['references']['astronn']['log_score']
+    return probability, variants
 
 
 def one(row):
@@ -126,6 +165,10 @@ def one(row):
         if label >= 0:
             result.update({f'oracle_{k}': v for k, v in diagnostic(grid, class_curve[label], label, ev).items()})
             result.update({f'reference_oracle_{k}': v for k, v in diagnostic(grid, ref_curve[label], label, ev).items()})
+        entry, sensitivity = entry_transfer_scores(
+            model, grid, native, theta, beta, value, meta['entry_weights'], scored, ev)
+        result.update(sensitivity)
+        arrays[arm + '_entry_class_distance'] = entry
         for c, values in enumerate(value['class_distance']):
             result.update({f'c{c}_bin{b}': float(v) for b, v in enumerate(values)})
         arrays[arm + '_class_logpdf'] = class_curve
@@ -180,7 +223,19 @@ def main():
                 rng = np.random.default_rng(np.random.SeedSequence([316101, 12, int(f)]))
                 logits = fit['global_logits'] + .35 * rng.normal(size=fit['global_logits'].shape)
                 lookup[int(f)] = softmax(np.c_[logits, np.zeros(len(logits))], axis=1).reshape(-1, 3, 5)
-        arms[arm] = lookup, dict(beta=fit['beta'], sampler_passed=marker['sampler_passed'])
+        transfer_path = verified(folder / 'posterior_entry_weights.npz',
+                                 marker['outputs']['posterior_entry_weights.npz'])
+        transfer = load(transfer_path)
+        draws = len(fit['beta'])
+        np.testing.assert_array_equal(transfer['draw_index'], np.arange(draws))
+        entry_weights = transfer['weights']
+        if entry_weights.shape != (3, draws) or not np.isfinite(entry_weights).all() or (entry_weights < 0).any():
+            raise ValueError('Invalid preserved population entry weights')
+        np.testing.assert_allclose(entry_weights.sum(axis=1), 1., atol=1e-12, rtol=0)
+        np.testing.assert_allclose(entry_weights[1], 1/draws, atol=1e-12, rtol=0)
+        arms[arm] = lookup, dict(beta=fit['beta'], sampler_passed=marker['sampler_passed'],
+                                entry_weights=entry_weights)
+        paths.append(transfer_path)
         paths.append(path)
     reference = source / 'validation_reference_refinement/field'
     path = reference / 'complete.json'

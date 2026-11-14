@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — propagate entry reweighting through opened-field prediction
+
+- Added authenticated fit-draw weight transfer to the four-arm opened
+  prediction/report. Reuse the likelihood and object grids. Record both
+  alternative 18-bin joint probabilities, signed Gaia score/PIT, teacher
+  score and expected class-distance count changes by sky role.
+- Focused reconstruction matches direct weighted inference for negative
+  Gaia and log likelihood offset -2000; 11 existing prior and scoring
+  tests and syntax pass. Explicitly retain nonfinite transfer failures.
+- Slurm continues the original dependency chain. No new outcomes opened.
+
 ## 2026-11-14 — check fitted tilt across entry integration levels
 
 - The queued 2x2 originally compared entry levels at each MAP. Added

@@ -122,7 +122,12 @@ Record absolute log-normalizer drift, relative log-weight span, weight
 ESS, total variation and the maximum change in each object's joint
 class-by-basis probability and in expected basis counts. Retain the
 original draw ordering and unweighted finite-envelope counts. Basis
-counts are distinct from posterior distance-bin counts. This numerical
+counts are distinct from posterior distance-bin counts. Propagate the
+same population draw ratios into the opened forecasts on the original
+fine grid. Preserve each draw's normalization. Tabulate all 18 joint
+class-distance bins with the base and reweighted expected counts,
+and separately report signed Gaia log-score and PIT shifts and
+AstroNN log-score shifts. Keep nonfinite scores as numerical failures. This numerical
 diagnostic alone gives no new acceptance or independent accuracy claim.
 Opened-field predictions use each posterior draw normalized separately and
 the existing regional shrinkage for unfit fields, with common random seeds.
