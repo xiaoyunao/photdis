@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance state 15
+
+- Slurm recorded 61277983 `COMPLETED 0:0`. Collected its three
+  compact files with `v3_2_structure_distance_audit.py --collect-completed`.
+  All 512 PSF identities and 2,560 check records reconcile. Retained
+  206 entry-seed flags. Both native grids and archived entry closure pass.
+- Re-ran staged delivery. Sixteen of 32 state receipts are verified.
+  Joint quadrature and its figure remain pending.
+
 ## 2026-11-15 — start the last NGC288 distance state
 
 - Slurm confirmed states 26–30 started as raw jobs 61277994–61277998.
