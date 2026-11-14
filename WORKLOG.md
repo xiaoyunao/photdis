@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first direct and empirical radial pair
+
+- Direct model-SED catalog 000 completed in 29m35s with Slurm exit 0:0.
+  Verified its design and table digests, two numerical verdicts, 40
+  intervals and joint count totals against the already verified 128.
+- Local 000 passes all integration and count checks. Its sampler fails
+  with Rhat 1.06185 and ESS 82.36. Preserve its width median 0.230 mag
+  and interval [0.073, 0.999] mag. The matched empirical 128 median
+  is 0.339 mag and does not cover 0.08 mag.
+- The first matched width absolute-error increase is 0.109 mag.
+  This is one fitted pair, outside the both-accepted subset.
+  Exact direct/cache verification 61261765 is now eligible and pending.
+
 ## 2026-11-14 — schedule remaining frozen radial catalogs behind the pilot checks
 
 - Verified repeat 00 was the only completed cache and there were no

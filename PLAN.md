@@ -49,6 +49,9 @@ ledger in `docs/v3_2_requirements_result.md`.
   256 (61261884) use completed repeat-00 cache 61260465.
   Catalog 128 completed with both numerical verdicts passing. Its true
   width of 0.08 mag falls outside the local 95% interval [0.096, 0.998] mag.
+  Direct 000 completed in 29m35s. The local sampler fails Rhat and ESS
+  despite passing all entry and count checks. Keep the first matched
+  model/empirical comparison in the fitted subset.
   Cache array 61266329 (repeats 01–31, max four concurrent) starts after
   exact direct/cache verification 61261765. Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
