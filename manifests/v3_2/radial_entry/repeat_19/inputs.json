@@ -1,0 +1,10 @@
+{
+  "repeat": 19,
+  "source_catalog": 275,
+  "n_contexts": 128,
+  "all_PSF": true,
+  "design_sha256": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+  "model_sha256": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+  "photo_sha256": "7a8bf0dfbf32c22159b03e189bbcdc333825d83449a2fcbd52d86fd56290a206",
+  "entry_code_sha256": "7c8706483255f2f51627d292ac7a1d53b27b234855fe7f919c1f321380fc7ddd"
+}

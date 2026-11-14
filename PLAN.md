@@ -77,14 +77,14 @@ ledger in `docs/v3_2_requirements_result.md`.
   active child. Slurm cleared that reason and preserved the recovery
   dependency. Repeats 16 and 17 moved to debug QoS with 30-minute limits.
   Both completed in debug with the existing afterok dependency intact.
-  Repeat 18 completed in regular QoS. Repeat 19 moved to the available
-  debug slot, retaining its original array membership.
+  Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
+  retaining its original array membership.
   Cached recovery 61266369
   covers the 285 nonpilot catalogs with at most eight concurrent tasks,
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–18 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Cache receipts 00–19 are verified with `scripts/v3_2_radial_cache_audit.py`.
   Run it with `--complete` once all 32 compact receipts are collected.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
