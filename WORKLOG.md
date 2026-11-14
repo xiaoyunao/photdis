@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-14 — verify narrow-structure recovery catalogs 018–019
+
+- Slurm 61266369_18 and _19 completed in 3m23s and 3m29s.
+  The collector verified both raw job IDs and compact output digests.
+  Recomputed four numerical verdicts and 80 intervals. Both broad
+  fits and all integration checks pass. The two local fits fail
+  sampling (ESS 10.03 and 18.33). Twenty-two of 288 catalogs are archived.
+- Moved 020 and 021 to the two vacant debug slots. At that check,
+  two other regular recovery tasks were pending resources and
+  the rest were pending priority.
+- State 09 was still running at 1h17m. The other 22 NGC288
+  states and both dependent reports remain pending.
+
 ## 2026-11-14 — archive catalogs 016–017 after intermittent NERSC connections
 
 - Slurm 61266369_16 and _17 completed in 3m26s and 3m23s.
