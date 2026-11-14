@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify the 60 percent deep-background narrow stratum
+
+- Archived 075, 076 and 079–081. All ten fits pass. Stage
+  delivery verified 84 catalogs, 168 verdicts (147 accepted),
+  3,360 intervals and ten completed strata.
+- At 60% generating member fraction with deep background and
+  0.08-mag true width, all eight local fits pass and cover width
+  truth. Mean median width is 0.110 mag. The paired normalized
+  joint count error changes by −13.28 percentage points, with
+  replicate interval [−19.28, −7.52].
+- Slurm shows states 10–14 running and 17 waiting. Both final
+  reports remain pending their computation dependencies.
+
 ## 2026-11-15 — reconcile catalogs 072 and 073 with the frozen design
 
 - Collected both successful Slurm receipts and their compact tables.

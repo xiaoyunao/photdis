@@ -142,7 +142,11 @@ the near-background 0.08-mag model-SED stratum has 8/8 passing
 local fits and 8/8 width intervals covering truth. Its mean width
 interval length is 0.169 mag, and its mean width median is 0.121 mag.
 The paired count-error contrast is −16.41 percentage points
-[−21.00, −11.77]. The empirical-SED and prior-predictive
+[−21.00, −11.77]. At the same fraction and true width in the
+deep background, all eight local fits pass and cover width truth.
+The median width averages 0.110 mag, and mean interval length
+is 0.127 mag. The paired count-error contrast is −13.28 percentage
+points [−19.28, −7.52]. The empirical-SED and prior-predictive
 comparisons await the remaining outputs. The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
