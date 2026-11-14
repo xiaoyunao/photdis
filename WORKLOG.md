@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — open two more NGC288 scheduling slots
+
+- Slurm confirmed seven running states and ten pending at the array
+  cap. Ran `scontrol update JobId=61263907 ArrayTaskThrottle=9`.
+  The pending reason cleared, and joint job 61263908 still depends
+  on successful completion of the original array.
+- State 31 reached 256 of 512 rows in its log. Fifteen completed
+  receipts are archived. Check the next two starts and collect results.
+
 ## 2026-11-15 — verify exact NGC288 production input ancestry
 
 - Added exact source inventory checks to

@@ -277,6 +277,8 @@ recomputes its seven derived tables and checks the full catalog census.
   Each pending state retains 32 CPUs, 32 GiB and a three-hour limit.
   States 19 and 20 started in the two added slots. The array has
   seven running states and ten pending at that checkpoint.
+  After all seven slots filled, Slurm reported JobArrayTaskLimit again.
+  Raised the cap to nine and verified the joint job dependency.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`
