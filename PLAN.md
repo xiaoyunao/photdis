@@ -137,9 +137,9 @@ catalogs archived.
   `python3 scripts/v3_2_radial_cache_audit.py --complete`.
   Repeats 22–31 completed in debug. Catalog 002 moved to the
   vacant debug queue and started with its 8 GiB request.
-  Two hundred sixty of 288 catalogs have verified compact outputs.
-  All 32 fixed-truth strata are complete. Four prior-predictive
-  catalogs are archived, with 28 remaining.
+  Two hundred seventy-two of 288 catalogs have verified compact outputs.
+  All 32 fixed-truth strata are complete. Sixteen prior-predictive
+  catalogs are archived, with 16 remaining.
   Catalogs
   004–008, 011, 016, 020–022, 031–034 and 039–042 pass in both arms. Local fits in 009,
   010, 012–015, 017–019 and 023–030 fail sampling and pass integration.
@@ -271,6 +271,7 @@ catalogs archived.
   State 31 started in the slot released by state 10.
   States 12 and 14 completed. Each retains one Gaussian native flag
   and passes the other context checks. Fourteen states are archived.
+  State 13 passed all 2,560 context checks. Fifteen states are archived.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

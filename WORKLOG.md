@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — verify half of the prior-predictive catalogs and NGC288 state 13
+
+- Archived prior-predictive catalogs 260–268 and 270–272 with the
+  completed-mode collector. Five local fits fail sampling and pass
+  integration. Preserved their intervals and numerical verdicts.
+- Completed-only delivery verified 272 catalogs, 491 accepted fits
+  of 544, 10,880 intervals and all 32 fixed-truth strata. Sixteen
+  prior-predictive catalogs remain.
+- Archived NGC288 state 13 with `v3_2_structure_distance_audit.py
+  --collect-completed`. All 2,560 context checks pass on 512 frozen
+  identities. Fifteen of 32 states are archived.
+
 ## 2026-11-15 — complete all fixed-truth recovery strata
 
 - Archived 251–255 and 257–259 with the completed-mode collector.
