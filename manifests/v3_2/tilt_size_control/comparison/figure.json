@@ -1,0 +1,7 @@
+{
+  "manifests/v3_2/tilt_size_control/comparison/paired.csv": "973a36b70366d1d9d4a18ac0149c72ea9baf696fd1e2c7447c09d569ee0d16e9",
+  "manifests/v3_2/tilt_size_control/comparison/complete.json": "1d66401d12380fc845583051c10eb0ef4799df09ab8667a5edc751179fc8e00e",
+  "scripts/v3_2_tilt_size_figure.py": "f87ebd844d91cdd6cfddefbceb7de3b797d6b13c6d3cb62185d260cdf71bd520",
+  "figures/v3_2/tilt_size_control/size_control.png": "3198e4750da7763e53ba74c784e125bbbc0ae042efbfe6cd31c4c237ce98a2bd",
+  "figures/v3_2/tilt_size_control/size_control.pdf": "9c0a71151eaba9a2eaa471204cc99656b74d03c44eeb5ffa8bf6c72105c7b347"
+}

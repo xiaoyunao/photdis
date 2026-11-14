@@ -9,6 +9,9 @@
 - Python syntax and a synthetic 512-member/32-state smoke check passed.
   The check retains intentional numerical failures and rejects a non-PSF
   row and an invalid covariance. Production waits for joint job 61263908.
+- Rendered the source-bound equal-size Gaia and giant-class comparison.
+  Visually checked the English PNG and verified the 300 dpi export,
+  one-page PDF and all five hashes.
 
 ## 2026-11-14 — verify radial cache 21 and advance two queued repeats
 

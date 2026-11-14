@@ -41,6 +41,21 @@ whole sky blocks within each comparison.
 [Source table](../manifests/v3_2/tilt_report/initial/factorial.csv) ·
 [Results](v3_2_factorial_result.md)
 
+## Size-matched broad control
+
+Paired score changes on the opened new-sky cohort. Horizontal bars show
+95% intervals from sky-block resampling. The two broad fits at size 3,540
+use the same randomly drawn objects and the original broad entry rule.
+At equal sample size the candidate comparison retains its own admission
+and selection normalization.
+
+![Size-matched Gaia and giant-class score changes](../figures/v3_2/tilt_size_control/size_control.png)
+
+[PNG](../figures/v3_2/tilt_size_control/size_control.png) ·
+[PDF](../figures/v3_2/tilt_size_control/size_control.pdf) ·
+[Source and output hashes](../manifests/v3_2/tilt_size_control/comparison/figure.json) ·
+[Results](v3_2_factorial_result.md#size-matched-broad-control)
+
 ## Opened new-sky class reliability
 
 [PNG](../figures/v3_2/opened_diagnostics/class_reliability.png) ·
