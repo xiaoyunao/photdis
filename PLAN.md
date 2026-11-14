@@ -37,6 +37,7 @@ Active goal follows the Pro review of 7699299. See
   worst bin). NGC288 odds test 61259650 uses fixed
   distance order 64. Added-distance native and entry pilot 61260630 follows
   `docs/v3_2_structure_protocol.md` and verifies closure at the old nodes.
+  The two-axis evaluator is ready for the authenticated 32-state products.
 
 ## v3.1 — completed research delivery
 

@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — assemble the NGC288 two-axis numerical audit
+
+- Added both separate-axis and joint comparisons at 128/256 distance
+  and 512/1024 odds orders. Preserve old 64-node results, compare the
+  native grid and entry variants, and authenticate all 32 PSF-state
+  sidecars and their per-context flags.
+- Synthetic finite quadrature checks pass for evidence, probability,
+  count conservation and covariance, with a perturbed entry failure.
+  Ten existing structure tests and Python/Bash syntax pass.
+- Full run awaits the actual distance pilot 61260630 and fixed-distance
+  odds audit 61259650. No new distance convergence claim yet.
+
 ## 2026-11-14 — implement photometry-only DR19 comparator forecasts
 
 - Added frozen nominal reference, old response12/shared population, and

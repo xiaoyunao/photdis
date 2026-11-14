@@ -27,3 +27,12 @@ other fixed and compare the successive joint grids. Keep the original
 criteria (max membership probability 0.003, mean count 0.5, common
 distance-modulus quantiles 0.03 mag and log evidence 0.05). Use all 32
 states for the final checks. This is a seen-system numerical audit.
+
+The final grid uses 256 distance nodes and 1024 odds nodes. Compare this
+against 128 × 1024, 256 × 512 and 128 × 512 to isolate each axis and their
+joint refinement. Tabulate 64 × 1024 to 128 × 1024 as an earlier distance
+transition. Also compare baseline with the original coarse native grid,
+the independent entry seed and the lower entry quadrature at 256 × 1024.
+The preparation, axis, native and entry flags remain separately inspectable.
+Report common-distance quantiles, response ESS, membership probability
+and shared/conditional count covariance for both likelihood branches.
