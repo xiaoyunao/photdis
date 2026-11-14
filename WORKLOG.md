@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-14 — verify cache batches 28 and 29
+
+- Repeats 28 and 29 completed 0:0 in 13m53s and 13m42s.
+  Verified the receipts against the frozen design. The audit now covers
+  30 batches and 3,840 integration contexts.
+- Released recovery catalogs 284 and 285 after remote receipt verification.
+  Moved the last cache repeats 30 and 31 to debug. The report retains
+  the original full recovery array dependency.
+
 ## 2026-11-14 — verify the effect of external numerical filtering
 
 - Reconciled three DR20 score contrasts after numerical filtering

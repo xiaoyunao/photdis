@@ -117,17 +117,17 @@ products without a final delivery verdict.
   Repeat 18 completed in regular QoS. Repeat 19 completed in debug,
   retaining its original array membership.
   Cached recovery 61266369 covers 285 nonpilot catalogs with at most
-  eight concurrent tasks. The 281 tasks mapped to authenticated caches
-  00–27 are eligible to run. The remaining four retain the full-cache
+  eight concurrent tasks. The 283 tasks mapped to authenticated caches
+  00–29 are eligible or completed. The remaining two retain the full-cache
   dependency until their own caches are verified.
   Recovery catalog 1 (61274913) completed with an 8 GiB request and
   peaked at 1,986,216 KiB. Both fits are archived. The local sampler
   fails Rhat and ESS. The remaining pending recovery tasks now request
   8 GiB in place of inherited full-node memory.
-  Report 61266374 waits for the recovery array and both outstanding pilots.
+  All three pilots completed. Report 61266374 waits for the recovery array.
   Workers retain authenticated completed rows across allocation limits.
-  Cache receipts 00–27 are verified with `scripts/v3_2_radial_cache_audit.py`.
-  Repeats 22–27 completed in debug. Repeats 28 and 29 moved to
+  Cache receipts 00–29 are verified with `scripts/v3_2_radial_cache_audit.py`.
+  Repeats 22–29 completed in debug. Repeats 30 and 31 moved to
   debug QoS with 30-minute limits.
   Report 61266374 keeps its original afterok on the full recovery array.
   Run it with `--complete` once all 32 compact receipts are collected.
