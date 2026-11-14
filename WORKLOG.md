@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — verify the first four production radial caches
+
+- Cache jobs 01–04 all completed 0:0. Collected receipt and checkpoint
+  metadata for each. Verified 512 contexts against the frozen design,
+  photometry, model and integration source digests. Cached recovery
+  authenticates the large curve arrays on compute.
+- Canceled the pending DR19 comparator 61261381 after authenticating
+  the zero-admission receipt. Slurm confirms zero runtime. The DR20
+  native match continues with outcomes closed.
+
 ## 2026-11-14 — bind DR20 field outcomes to the four-view freeze
 
 - Extended the final runner to bind the DR20 archive and exact LCO

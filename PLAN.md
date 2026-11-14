@@ -62,6 +62,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   waiting for the cache array and prior-predictive pilot 61261884.
   Report 61266374 waits for the recovery array and both outstanding pilots.
   Workers retain authenticated completed rows across allocation limits.
+  Cache receipts 00–04 are verified.
   Final reporting pairs broad and local count error by catalog and
   retains missing or excluded catalogs in the coverage bounds.
 - Prepare the DR19 Astra identity inventory following
@@ -72,6 +73,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   failed photometric entry. Job 61267191 verified that all 100 fail the
   grz mask, grz fraction quality and low-reddening conditions. Assess a
   separate outcome-closed acquisition route for the same science domain.
+  The empty DR19 comparator 61261381 was canceled before execution.
   DR20 BOSS MINESweeper acquisition 61267444 completed. The LCO identity
   census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
   Census 61267684 completed with 7,297 native match requests. The original
