@@ -173,8 +173,15 @@ for seven accepted near-background pairs and −30.37
 [−33.69, −26.66] for eight deep-background pairs. The excluded
 near-background broad fit has one sampler divergence. All 16
 fixed model-SED strata are now complete.
-The empirical-SED and prior-predictive
-comparisons await the remaining outputs. The NGC288 odds-only
+The first complete empirical-SED stratum has 10% members, a
+true width of 0.25 mag and the near background. Only one of
+eight local fits passes the numerical gates. Its width,
+location and selected-member intervals cover truth, with
+lengths of 1.011 mag, 2.764 mag and 35 objects, respectively.
+For each of those metrics the coverage bounds across all
+registered repeats are 1/8–8/8. The other empirical-SED strata
+and the prior-predictive comparison await the remaining outputs.
+The NGC288 odds-only
 audit passes at 512 to 1024 with 64 distance nodes, after the
 256 to 512 step fails. The complete distance-by-odds test
 awaits the 32-state joint result. In the first ten archived states,

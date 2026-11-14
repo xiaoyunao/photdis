@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — verify the first complete empirical recovery stratum
+
+- Archived original tasks 150 and 151. Completed-only delivery verifies
+  148 catalogs, 262 of 296 accepted fits and 5,920 intervals. The first
+  complete empirical stratum (10%, 0.25 mag, near background) has one
+  accepted local fit out of eight. Recorded its interval lengths and
+  coverage bounds in `docs/v3_2_result.md`.
+- `sacct` confirmed 133 and 135 completed. SSH and SFTP transfer
+  attempts timed out. Both outputs still need local authentication.
+  Submitted 137 and 140 as debug retry 61282714, registered it with
+  the collector and verified the final report dependency. Catalog 143
+  remains queued for submission when a debug slot opens.
+- NGC288 state 10 was running at 1h32m51s. Ten states remain archived.
+
 ## 2026-11-15 — archive the first empirical retries and submit the next pair
 
 - Ran the radial collector in completed mode, including retries 130–131

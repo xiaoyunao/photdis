@@ -22,6 +22,7 @@ RECOVERY_RETRIES = {
     '61280724': {96, 98},
     '61282072': {130, 131},
     '61282256': {133, 135},
+    '61282714': {137, 140},
 }
 PILOT_CATALOGS = {0, 128, 256}
 SSH = ('ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10',
