@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — verify the archived conditional count decomposition
+
+- Added a compact audit in `scripts/v3_2_opened_audit.py` and ran it
+  through staged delivery. All 272 rows reconcile to the 34 frozen
+  v3.1 receipts and their comparison tables. The 33 inherited failures
+  retain zero conditional response contribution in the worst bin,
+  with absolute weight shifts of 0.5784–0.6655 objects.
+- The audit rejected an injected response contribution and an altered
+  historical failure flag. NGC288 state 23 started. Joint job 61263908
+  still waits for the original array.
+
 ## 2026-11-15 — open three more slots for NGC288
 
 - Slurm confirmed starts for states 21 and 22 (raw jobs 61277989

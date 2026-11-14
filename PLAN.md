@@ -25,6 +25,8 @@ recomputes its seven derived tables and checks the full catalog census.
 The factorial audit also reproduces the seeded 3,540-PSF broad
 subsample, verifies both fit receipts and their forecast ancestry,
 and checks the 216 comparison keys against the opened cohort sizes.
+The opened audit checks all 272 conditional count decompositions
+against their frozen v3.1 comparisons and retains the 33 failures.
 
 - Frozen score path, absolute classification tables and reliability complete
   in `docs/v3_2_opened_result.md`, including the frozen QRF distance comparison.

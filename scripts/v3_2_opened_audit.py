@@ -9,6 +9,7 @@ from pathlib import Path
 
 from photdis.v3_1.validation_report import field_statistic, paired_field_statistic
 from v3_2_opened_diagnostics import METRICS, PAIRS, ROLES
+from v3_2_transfer_count_audit import VARIANTS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,6 +52,66 @@ def metric_value(row, metric):
     if not value:
         return -math.inf if key == 'class_log_score' and label >= 0 else math.nan
     return float(value)
+
+
+def audit_transfer_counts():
+    folder = BASE/'transfer_count_audit'
+    receipt = folder/'complete.json'
+    table = folder/'conditional_counts.csv'
+    raw = receipt.read_bytes()
+    record = json.loads(raw)
+    checksum = sha256(table.read_bytes()).hexdigest()
+    if record['all_PSF'] is not True or record['outputs'] != {table.name: checksum}:
+        raise ValueError('Invalid conditional count decomposition receipt')
+
+    producer = 'scripts/v3_2_transfer_count_audit.py'
+    sources = {producer: sha256((ROOT/producer).read_bytes()).hexdigest()}
+    envelopes = {'broad': 6000, 'candidate': 935}
+    expected = {(envelope, variant) for envelope in envelopes for variant in VARIANTS}
+    observed = index(read_csv(table), lambda r: (int(r['state']), r['envelope'], r['variant']))
+    if observed.keys() != {(state, *key) for state in range(34) for key in expected}:
+        raise ValueError('Incomplete conditional count decomposition')
+    failed = []
+    for state in range(34):
+        relative = f'heldout_transfer/candidate/correction_{state:02}/complete.json'
+        frozen_path = ROOT/'manifests/v3_1'/relative
+        frozen_raw = frozen_path.read_bytes()
+        frozen = json.loads(frozen_raw)
+        sources[f'data/v3_1/{relative}'] = sha256(frozen_raw).hexdigest()
+        weight_path, = [p for p in frozen['inputs'] if p.endswith('/joint_counts/numerical_weights.npz')]
+        sources[weight_path] = frozen['inputs'][weight_path]
+        frozen_table = frozen_path.with_name('checks.csv')
+        if (frozen['all_PSF'] is not True or frozen['correction'] != state
+                or frozen['outputs']['checks.csv'] != sha256(frozen_table.read_bytes()).hexdigest()):
+            raise ValueError(f'Invalid frozen transfer state {state}')
+        old = index(read_csv(frozen_table), lambda r: (r['envelope'], r['variant']))
+        if old.keys() != expected:
+            raise ValueError(f'Incomplete frozen transfer comparisons in state {state}')
+        for envelope, variant in old:
+            row = observed[state, envelope, variant]
+            baseline = old[envelope, variant]
+            count, weight, response, maximum, ess, normalizer, span = (
+                float(row[field]) for field in ('count_delta', 'weight_effect', 'response_effect',
+                    'maximum_count_delta', 'weight_ess', 'absolute_log_normalizer_delta', 'relative_log_weight_span'))
+            if (int(row['n']) != envelopes[envelope] or int(row['draws']) != 8192
+                    or not 0 <= int(row['maximum_bin']) < 18 or not 1 <= ess <= 8192 + 1e-8
+                    or not math.isfinite(normalizer) or not 0 <= span < math.inf
+                    or not math.isclose(count, weight + response, abs_tol=1e-9)
+                    or not math.isclose(maximum, abs(count), abs_tol=1e-9)
+                    or not math.isclose(maximum, float(baseline['maximum_count_mean_delta']), abs_tol=1e-9)
+                    or float(row['v31_probability_delta']) != float(baseline['maximum_probability_delta'])
+                    or float(row['v31_pointwise_score_delta']) != float(baseline['maximum_pointwise_logscore_delta'])
+                    or row['v31_passed'] != baseline['passed']):
+                raise ValueError(f'Invalid conditional count contrast {state}/{envelope}/{variant}')
+            if row['v31_passed'] == 'False':
+                if (envelope, variant) != ('broad', 'entry_level') or maximum < .5 or response != 0:
+                    raise ValueError(f'Unexpected origin of a conditional count failure: {state}')
+                failed.append(maximum)
+    if (record['inputs'] != sources or (record['n_states'], record['n_rows'], record['failures'])
+            != (34, len(observed), len(failed)) or len(failed) != 33):
+        raise ValueError('Conditional count ancestry or failure census differs')
+    return dict(rows=len(observed), weight_only_failures=len(failed), count_shift_range=[min(failed), max(failed)],
+                receipt_sha256=sha256(raw).hexdigest(), table_sha256=checksum)
 
 
 def audit():
@@ -163,7 +224,7 @@ def audit():
         raise ValueError('Missing frozen QRF contrasts')
     return dict(passed=True, matched_psf=len(qrf), paired_rows=len(paired), confusion_rows=confusion_count,
                 reliability_rows=len(reliability), qrf_signed_gaia_rows=qrf_checks,
-                opened_new_sky=census, sources=sources)
+                opened_new_sky=census, transfer_counts=audit_transfer_counts(), sources=sources)
 
 
 if __name__ == '__main__':
