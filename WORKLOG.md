@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-14 — authenticate the first completed factorial fit
+
+- Broad zero (61259811_0, raw 61268574) completed 0:0 in 75 seconds.
+  Verified 26,000 broad PSFs, all 64 input/refinement receipt hashes,
+  the two sensitivity tables and the sampler verdict. Maximum Rhat
+  1.00121, minimum ESS 2048, zero divergences.
+- Fitted-draw entry alternatives shift the absolute log normalizer
+  +1.7330 and −1.5646 nat. Maximum joint basis probability change is
+  0.0000873 and maximum expected basis count change is 0.2278 objects.
+  External scores and distance-bin shifts await the matched predictions.
+
 ## 2026-11-14 — start the first fit and prepare a closed DR20 photometry audit
 
 - Array child 61259811_0 (broad zero) started. Other fits and external
