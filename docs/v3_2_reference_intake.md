@@ -46,3 +46,25 @@ reference-value access.
 Acquire and index sources without model residuals. Freeze the candidate,
 reference eligibility, outcome-access rule and actual source roles before
 evaluating any new validation outcomes.
+
+## Outcome access and teacher channel
+
+The freeze requires completed opened-domain evaluation and a forecast
+made from the admitted photometry for candidate, frozen grz QRF, nominal
+reference and old target. Preserve all object identities and numerical
+statuses at every forecast view. Bind the scoring program, admission,
+both archives, metadata index and source recipes to the same receipt.
+The initial evidence access records the receipt and Gaia file inventory.
+An interrupted join can resume against the same receipt and files.
+
+Take the AstroNNDist `nn_dist` channel, whose uncertainties combine the
+reported predictive and model components in quadrature. Require positive
+finite distance and predictive error, nonnegative finite model error
+and no distance warnings or bad flags. Precision is relative uncertainty
+below 20%. The ASPCAP cool-star labels require S/N at least 50, no bad
+fit flag and a one-standard-error gravity bound above 4.2 for dwarfs
+or below 3.2 for giants. Report [Fe/H] eligibility separately using the
+abundance flag and error. Keep uncertain classifications as unknown.
+Report counts in 0–2, 2–5, 5–10, 10–20, 20–50 and beyond 50 kpc, with
+giants and qualified [Fe/H] below −1.5 tracked explicitly.
+[Astra distance columns](https://data.sdss.org/datamodel/files/MWM_ASTRA/V_ASTRA/summary/astraAllStarAstroNNdist.html) · [ASPCAP flags](https://www.sdss.org/dr19/mwm/astra/pipelines-in-astra/aspcap/)

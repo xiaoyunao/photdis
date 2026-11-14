@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-14 — bind DR19 outcome access to frozen predictions
+
+- Added one receipt for admitted PSF identities, exact archive row pointers,
+  four complete forecasts, opened-domain decision, evaluator and inputs.
+  A mismatch in row order or file digest rejects access.
+- Added a receipt-gated evidence join for signed Gaia, unweighted AstroNNDist
+  and ASPCAP. Counts by distance, class and [Fe/H] preserve empty cells.
+  Actual DR19 outcomes and final role remain unopened/unfrozen.
+- Python syntax, four-view/tamper and teacher-channel smoke checks, and
+  11 existing freeze/scoring/channel tests pass. Native admission and a
+  chosen mechanism with frozen forecasts are the next dependencies.
+
 ## 2026-11-14 — retain completed class probe and count decomposition
 
 - Collected 61260227 (18s) and 61260338 (16s), both COMPLETED 0:0.

@@ -27,7 +27,8 @@ Active goal follows the Pro review of 7699299. See
   `docs/v3_2_reference_intake.md`. Archive acquisition 61260678 is queued.
   Identity index 61260891 verifies the archive receipt, and native match
   61260892 follows it. Freeze model, rules and new reference roles before
-  scoring the new validation outcomes.
+  scoring the new validation outcomes. DR19 receipt/evidence scripts bind
+  all four complete forecasts and verify the exact reference row pointers.
 - Trace the 33 frozen conditional count failures with a statewise weight
   versus response audit (61260338 complete, all 33 weight-only at the
   worst bin). NGC288 odds test 61259650 uses fixed
