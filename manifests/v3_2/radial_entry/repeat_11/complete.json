@@ -1,0 +1,15 @@
+{
+  "repeat": 11,
+  "source_catalog": 267,
+  "n_contexts": 128,
+  "all_PSF": true,
+  "design_sha256": "c01194164d4cf234ed07c6ebc6b572a6c11d5d2e0b8a77660410cf94e5fea5ae",
+  "model_sha256": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+  "photo_sha256": "8ce3143bb422784b3aaa6d64eb6fab3639476e7250307f51e973c39b4337a543",
+  "entry_code_sha256": "7c8706483255f2f51627d292ac7a1d53b27b234855fe7f919c1f321380fc7ddd",
+  "outputs": {
+    "curves.npz": "f10b885a89ef3cb27d6322955f9dd2995d30219effc0adb7343adf24c8d0569b"
+  },
+  "job": "61268860",
+  "row_checkpoint_sha256": "04a41aa354b1c55b489b869cc2b944818c5a0d63b476731ebad08b8b715fbbf8"
+}

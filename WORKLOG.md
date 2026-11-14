@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-14 — verify three more radial entry caches
+
+- Repeats 09–11 completed 0:0. Verified the three receipt/checkpoint
+  pairs with `v3_2_radial_cache_audit.py`, bringing compact coverage
+  to 12 repeats and 1,536 native contexts.
+- NGC288 state 0 verified 256 of 512 rows and remained active. The
+  four-arm fits and both external comparator jobs were queued.
+
 ## 2026-11-14 — add conditional finite-cohort count intervals
 
 - The field evaluator now computes exact Poisson-binomial intervals
