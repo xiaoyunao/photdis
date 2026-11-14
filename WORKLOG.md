@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — reconcile PSF admission and numerical evidence for delivery
+
+- Checked the DR20 count and common-scale system table digests against
+  their receipts. Added exact admissions and morphology exclusions to
+  `docs/v3_2_requirements_result.md`.
+- Recomputed the maximum probability and count shifts across all 16
+  entry-level forecast comparisons. All 16 pass with zero score flags.
+  Linked the distinct fit-level diagnostics and re-ran staged delivery.
+- Slurm confirms five NGC288 states running and two pending within the
+  expanded cap. The 512-object joint export awaits the full array.
+
 ## 2026-11-15 — increase NGC288 scheduling capacity after radial completion
 
 - Slurm showed five running states and 12 pending with JobArrayTaskLimit.
