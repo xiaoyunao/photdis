@@ -275,6 +275,8 @@ recomputes its seven derived tables and checks the full catalog census.
   After radial recovery finished, increased the NGC288 array cap from
   five to seven. Slurm cleared JobArrayTaskLimit for the pending states.
   Each pending state retains 32 CPUs, 32 GiB and a three-hour limit.
+  States 19 and 20 started in the two added slots. The array has
+  seven running states and ten pending at that checkpoint.
   The two-axis evaluator
   61263908 waits on all 32 states. Use
   `python3 scripts/v3_2_structure_distance_audit.py --collect-completed`

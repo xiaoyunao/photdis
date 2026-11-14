@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — confirm the expanded NGC288 array is running
+
+- Slurm started states 19 and 20 as raw jobs 61277987 and 61277988.
+  Seven states are running. The two new allocations each use 32 CPUs,
+  32 GiB and a three-hour limit. The joint job retains its afterok dependency.
+- The staged audit verified 15 archived states and all 288 radial
+  catalogs. Final delivery correctly rejected the two pending NGC288
+  artifacts. Collect the next completed state receipts.
+
 ## 2026-11-15 — reconcile PSF admission and numerical evidence for delivery
 
 - Checked the DR20 count and common-scale system table digests against
