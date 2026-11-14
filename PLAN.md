@@ -17,8 +17,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   3540 candidate PSFs.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–29 pass all 686 reviewed contexts.
-  Shards 30–31 have 45 flags awaiting local verification.
+  Independent complete audit verifies all 731 reviewed contexts pass.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.
@@ -73,8 +72,8 @@ ledger in `docs/v3_2_requirements_result.md`.
   failed photometric entry. Job 61267191 verified that all 100 fail the
   grz mask, grz fraction quality and low-reddening conditions. Assess a
   separate outcome-closed acquisition route for the same science domain.
-  DR20 BOSS MINESweeper acquisition is queued as 61267444. The source
-  and its teacher limitations are in `docs/v3_2_minesweeper_intake.md`.
+  DR20 BOSS MINESweeper acquisition 61267444 completed. The LCO identity
+  census and source limitations are in `docs/v3_2_minesweeper_intake.md`.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.

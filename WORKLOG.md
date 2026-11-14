@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-14 — close tilt input verification and prepare DR20 identity census
+
+- Last two refinement shards completed 0:0 with 19 and 26 passing
+  contexts. The independent `v3_2_tilt_input_audit.py --complete`
+  verifies all 26,000 broad and 3,540 candidate PSFs, with all 731
+  flagged contexts reviewed and none unresolved. Fit dependency cleared.
+- Recorded the verified DR20 archive size, checksum and SHA-256.
+  Added the six-column LCO-only identity and coverage census.
+  Python compilation, import and diff checks passed.
+
 ## 2026-11-14 — verify the full initial tilt census and acquire a fresh field source
 
 - Collected completed input shards 30 and 31 and all 23 passing shard-29

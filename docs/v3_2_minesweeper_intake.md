@@ -8,17 +8,21 @@ worth measuring for the 2–5, 5–10 and 10–50 kpc objectives.
 [DR20 MWM release](https://sdss.org/dr20/mwm/) ·
 [MINESweeper catalog and methodology](https://www.sdss.org/dr20/data_access/value-added-catalogs/?vac_id=10022)
 
-The acquisition job 61267444 requests `minesweeper_v1.2.2.fits`. It
-verifies the published byte length (76,224,960) and SHA-1 checksum
+The acquisition job 61267444 downloaded `minesweeper_v1.2.2.fits` and
+completed 0:0. It verified the published byte length (76,224,960) and SHA-1 checksum
 `b905615b4b4c08c195e5efd5c644c3d46644e7e1` before publishing the
-archive path and recording SHA-256.
+archive path and recording SHA-256
+`65bab7406656d17d335beb69ee56bcd7499cb2130fc96b783f27ac7bb0a30b15`.
 [Science Archive directory](https://data.sdss.org/sas/dr20/vac/mwm/minesweeper/) ·
 [FITS data model](https://data.sdss.org/datamodel/files/MWM_MINESWEEPER/minesweeper.html)
 
-The next intake selects identity, coordinate and observation-provenance
-columns. It checks exact Gaia DR3 IDs, sky and imaging history and
+The first census selects LCO rows with at least one exposure, positive
+Gaia DR3 identifiers and observing MJD no later than the DR20 cutoff
+60708. It reads six identity, coordinate and observation-provenance
+columns. It checks exact Gaia DR3 IDs, sky history and
 known-system exclusions, then applies the frozen Legacy DR11 primary,
-release, TYPE=PSF and photometric gates. Keep the MINESweeper and DR19
+release, TYPE=PSF, imaging history and photometric gates in the native join.
+Keep the MINESweeper and DR19
 receipts separate. The acquisition cannot establish native coverage.
 
 MINESweeper fits BOSS spectra, photometry and Gaia parallax jointly.
