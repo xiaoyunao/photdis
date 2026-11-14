@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — archive NGC288 distance state 31
+
+- Slurm recorded `61263907_31 COMPLETED 0:0` (raw job 61263907).
+  Collected and verified its 512 PSF identities and 2,560 check records.
+  Retained 508 previous-entry-level flags. Both native comparisons,
+  the independent entry seed and archived entry closure pass.
+- Staged delivery verifies 17 of 32 state receipts. The other 15
+  states remain active and joint job 61263908 awaits the full array.
+
 ## 2026-11-15 — archive NGC288 distance state 15
 
 - Slurm recorded 61277983 `COMPLETED 0:0`. Collected its three
