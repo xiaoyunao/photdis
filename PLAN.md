@@ -12,13 +12,13 @@ ledger in `docs/v3_2_requirements_result.md`.
   The current audit verifies 8,773 protected paths against 7699299 in the
   commit, index and worktree. Check data source digests with the run receipts.
 - Fit the population by SED tilt comparison with matched selection. The
-  first twenty-five shards (00–24) are complete and verified.
-  The compact receipt audit independently counts 20316 broad PSFs and
-  2793 candidate PSFs across these shards.
+  first twenty-nine shards (00–28) are complete and verified.
+  The compact receipt audit independently counts 23564 broad PSFs and
+  3214 candidate PSFs across these shards.
   Remaining input shards checkpoint completed row integrals and reuse only
   authenticated rows. Assembly checks the archived shard 00 receipt.
-  Shards 00–23 refinements pass all 548 flagged contexts.
-  Shard 24 has 19 initial flags for refinement.
+  Shards 00–24 refinements pass all 567 flagged contexts.
+  Shards 25–28 have 96 initial flags for refinement.
   Fitting verifies each check's identity, admission and quadrature recipe.
   Run `PYTHONPATH=src:scripts:.deps python3 scripts/v3_2_tilt_input_audit.py --complete`
   before final input sign-off.
@@ -69,7 +69,7 @@ ledger in `docs/v3_2_requirements_result.md`.
   census 61264018 recovered 39,505 exact-identity requests. Native match
   61260892 found 100 exact primary rows and admitted zero because all
   failed photometric entry. Audit the individual frozen entry conditions
-  before assessing a separate outcome-closed acquisition route.
+  in 61267191 before assessing a separate outcome-closed acquisition route.
   Freeze model, rules and new reference roles before
   scoring the new validation outcomes. DR19 receipt/evidence scripts bind
   all four complete forecasts and verify the exact reference row pointers.
