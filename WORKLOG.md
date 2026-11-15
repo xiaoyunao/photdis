@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — prepare same-photometry QRF replay and full-catalog jobs
+
+- `scripts/v3_6_qrf_same_photometry.py` re-reads native grz for the
+  paired cache intersection and applies both frozen models with identical
+  Sobol perturbations. Syntax and same-input smoke checks pass.
+- Slurm 61344678 runs the existing paired-cache comparison. Group-zero
+  projection 61344837 precedes 61345035 (47 groups, at most 8 concurrent),
+  reduction 61345036 and full Gaia join 61345037. Each projection task
+  requests 12 CPUs. The full Gaia join requests 24 CPUs.
+- Added the RGB luminosity function and disk/halo prior references to
+  the plan for the conditional population comparison.
+
 ## 2026-11-15 — prepare the Gaia DR3 census on all supported rows
 
 - `scripts/v3_6_catalog_summary.py` combines the projected groups and

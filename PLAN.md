@@ -34,6 +34,18 @@ shows survey imaging coverage, depth and near counts from the frozen random
 area. Add full-catalog reference maps, both-cut shell maps and the contamination
 analysis as those associations complete.
 
+For the luminosity-function analysis, reuse native SED component likelihoods
+and replace the empirical giant absolute-magnitude and metallicity weights
+within measured support. Compare an empirical baseline to a (10^{0.32 M_r})
+RGB luminosity function and disk/halo prior variations. The RGB slope is from
+[Xue et al. (2014), §3.2.1](https://arxiv.org/abs/1211.0549), and the disk/halo
+geometry is based on [Jurić et al. (2008)](https://arxiv.org/abs/astro-ph/0510520).
+Record support and keep the faint stellar branch separate. Evaluate the
+scenarios on the same magnitude, color, sky and band-availability sample,
+using the signed Gaia subcohort for forward scores and sky blocks for count
+uncertainty. The conditional population projections accompany direct reference
+comparisons.
+
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 
 The [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)
