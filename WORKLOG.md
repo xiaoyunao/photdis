@@ -16,7 +16,8 @@
   All 472 local tests passed with single-threaded numerical backends.
 - While the regular array was queued, started group 0 under debug
   61332150. Regular group 0 has the afterany dependency and will reuse
-  completed sweep receipts or resume remaining parts.
+  completed sweep receipts or resume remaining parts. Verified all four
+  32-CPU Slurm steps are running and producing completed sweep receipts.
 
 ## 2026-11-15 — complete native input, area and four-sweep pilots
 
