@@ -9,6 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.special import logsumexp
 
 from photdis.stage1 import require_compute
 from photdis.v3.likelihood import trapezoid_weights
@@ -46,7 +47,12 @@ def validate_sed(t):
     if not np.isfinite(p).all() or (p < 0).any() or not np.all(np.diff(mu) > 0):
         raise ValueError('Invalid joint density or distance grid')
     np.testing.assert_allclose(p.sum(axis=1), t['distance_marginal_per_mu'], atol=1e-8, rtol=0)
-    np.testing.assert_allclose(p @ trapezoid_weights(mu), t['class_probability'], atol=1e-6, rtol=0)
+    w = trapezoid_weights(mu)
+    np.testing.assert_allclose(p @ w, t['class_probability'], atol=1e-6, rtol=0)
+    log_curve = (t['relative_class_loglike'].astype(float) + np.log(t['class_prior'])[None, :, None]
+                 - .5*((mu-15)/5)**2)
+    log_norm = logsumexp(log_curve + np.log(w), axis=(1, 2), keepdims=True)
+    np.testing.assert_allclose(np.exp(log_curve-log_norm) @ w, t['class_probability'], atol=1e-5, rtol=0)
     np.testing.assert_allclose(t['class_probability'].sum(axis=1), 1, atol=1e-8, rtol=0)
     np.testing.assert_allclose(t['class_distance_bins'].sum(axis=2), t['class_probability'], atol=1e-8, rtol=0)
     near = mu <= 15
@@ -149,6 +155,8 @@ def prospective():
     forecast, scores = authenticate(FORECAST), authenticate(SCORES)
     if forecast['model_freeze'] != sha(FREEZE) or scores['freeze']['forecast'] != sha(FORECAST/'complete.json'):
         raise ValueError('Broken prediction and opening chain')
+    with (SCORES/'scores.csv').open() as stream:
+        all_rows = {row['view']: row for row in csv.DictReader(stream) if row['group'] == 'all'}
     base = load(SCORES/'nominal.npz')
     for view in VIEWS:
         t = load(SCORES/f'{view}.npz')
@@ -159,6 +167,11 @@ def prospective():
         use = t['eligible']
         if not np.isfinite(t['log_score'][use]).all() or not ((t['pit'][use] >= 0) & (t['pit'][use] <= 1)).all():
             raise ValueError('Invalid signed Gaia forecast scores')
+        summary = all_rows[view]
+        if int(summary['finite']) != int(use.sum()):
+            raise ValueError('Prospective score table and eligibility differ')
+        np.testing.assert_allclose(t['log_score'][use].mean(), float(summary['mean_log_score']),
+                                   atol=1e-10, rtol=0)
     n = int(base['eligible'].sum())
     if n != scores['signed_gaia']:
         raise ValueError('Inconsistent signed Gaia sample size')
