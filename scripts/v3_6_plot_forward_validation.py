@@ -8,6 +8,8 @@ from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.colors import LogNorm
+from matplotlib.patches import Circle
 from matplotlib.ticker import PercentFormatter
 import numpy as np
 
@@ -17,6 +19,8 @@ from v3_6_plot_shell_retention import ROOT, sha
 
 WEAK = ROOT/'data/v3_6/weak_gaia'
 LF = ROOT/'data/v3_6/lf_sensitivity/report'
+DISTANCE = ROOT/'data/v3_6/distance_evidence'
+CATALOG = ROOT/'data/v3_6/catalog_observables'
 OUT = ROOT/'data/v3_6/figures/forward_validation'
 CUTS = ('primary','strict')
 HISTORY = 'outside_recorded_history'
@@ -27,6 +31,7 @@ SCENARIOS = {'nominal':'Nominal', 'empirical_galactic':'Empirical Galactic',
              'rgb_disk_rich':'Disk-rich RGB', 'rgb_halo_rich':'Halo-rich RGB',
              'more_faint_other':'More faint other'}
 SHELLS = ('0–2','2–5','5–10')
+ALL_SHELLS = (*SHELLS,'10–20','20–50','>50')
 
 
 def read(directory,names):
@@ -168,7 +173,90 @@ def lf():
         deliver(fig,'F09_conditional_lf_contamination',rows,inputs,caption)
 
 
+def migration():
+    result,inputs = read(DISTANCE,('migration',))
+    data = result['migration']
+    sources = dict.fromkeys(r['source'] for r in data)
+    for source in sources:
+        rows = [r for r in data if r['source']==source]
+        field = {(r['selection'],r['reference_class'],r['reference_shell'],r['predicted_shell']):r for r in rows}
+        with plt.rc_context(STYLE):
+            fig,axes = plt.subplots(2,3,figsize=(14.6,8.9),layout='constrained',sharex=True,sharey=True)
+            for i,label in enumerate(('dwarf','giant')):
+                for j,cut in enumerate(('supported',*CUTS)):
+                    ax = axes[i,j]
+                    grid = [[field[cut,label,a,b] for b in ALL_SHELLS] for a in ALL_SHELLS]
+                    hard = np.asarray([[int(r['hard_count']) for r in line] for line in grid])
+                    weight = np.asarray([[float(r['qrf_weighted_count']) for r in line] for line in grid])
+                    n = hard.sum(axis=1)
+                    denominator = weight.sum(axis=1)
+                    np.testing.assert_allclose(n,denominator,rtol=0,atol=1e-5)
+                    frac = np.divide(weight,denominator[:,None],out=np.full_like(weight,np.nan),
+                                     where=denominator[:,None]>0)
+                    im = ax.imshow(frac,vmin=0,vmax=1,cmap='Blues',aspect='auto',interpolation='nearest')
+                    for a,b in zip(*np.nonzero(hard)):
+                        color = 'white' if frac[a,b]>.58 else 'black'
+                        ax.text(b,a,f'{hard[a,b]:,}',color=color,ha='center',va='center',fontsize=9)
+                    if n.sum()==0:
+                        ax.text(.5,.53,'No qualified references',transform=ax.transAxes,ha='center')
+                    ax.set_title(f'{cut.title()} · {label}s · N={n.sum():,}',fontsize=13)
+                    ax.set_xticks(range(6),ALL_SHELLS,rotation=28,ha='right',fontsize=10)
+                    ax.set_yticks(range(6),ALL_SHELLS,fontsize=10)
+                    ax.grid(False)
+                    if j==0:
+                        ax.set_ylabel('Reference distance [kpc]',fontsize=13)
+                    if i==1:
+                        ax.set_xlabel('QRF assigned distance [kpc]',fontsize=13)
+            fig.colorbar(im,ax=axes,shrink=.8,label='QRF posterior shell fraction')
+            fig.suptitle(f'{source} · reference to assigned distance')
+            caption = ('Each reference row belongs to one reference-distance shell. Color sums the '
+                       'full QRF PDF over assigned shells and divides by the number of qualified '
+                       'reference rows in that reference shell. Annotations count hard median '
+                       'assignments. The table also includes unknown and other classes in '
+                       'the same qualified cohort. Sources can share stars. The displayed '
+                       'fractions use the reference-matched denominator for this survey.')
+            deliver(fig,f'F09_direct_migration_{source}',rows,inputs,caption)
+
+
+def cartesian():
+    marker = CATALOG/'complete.json'
+    receipt = json.loads(marker.read_text())
+    path = CATALOG/'observables.npz'
+    digest = sha(path)
+    if digest!=receipt['outputs'][path.name]:
+        raise ValueError('Cartesian summary differs from its receipt')
+    with np.load(path,allow_pickle=False) as z:
+        data,edges = z['bright_red_cartesian'],z['cartesian_edges']
+    np.testing.assert_array_equal(data[:,0].sum(axis=(1,2)),receipt['bright_red_d50_0_2'])
+    rows = []
+    with plt.rc_context(STYLE):
+        fig,axes = plt.subplots(2,2,figsize=(11.8,9.4),layout='constrained',sharex=True,sharey=True)
+        scale = LogNorm(1,max(2,int(np.max(data[1:]))))
+        for i,cut in enumerate(CUTS,1):
+            for j,plane in enumerate(('XY','XZ')):
+                ax = axes[i-1,j]
+                h = data[i,j]
+                loc = ax.pcolormesh(edges,edges,np.ma.masked_equal(h.T,0),cmap='viridis',norm=scale,rasterized=True)
+                ax.add_patch(Circle((0,0),2.,fill=False,color=GRAY,ls='--',lw=.8))
+                ax.set(xlim=(-2,2),ylim=(-2,2),aspect='equal',title=f'{cut.title()} · {plane} · N={h.sum():,}',
+                       ylabel=f'{plane[1]} [kpc]')
+                if i==2:
+                    ax.set_xlabel('X [kpc]')
+                for a,b in zip(*np.nonzero(h)):
+                    rows.append(dict(selection=cut,plane=plane,x_lo=edges[a],x_hi=edges[a+1],
+                                     other_lo=edges[b],other_hi=edges[b+1],stars=int(h[a,b])))
+        fig.colorbar(loc,ax=axes,shrink=.84,label='Stars per 40 pc × 40 pc bin')
+        fig.suptitle('Bright red analogs · QRF median distance below 2 kpc')
+        inputs = {str(marker.relative_to(ROOT)):sha(marker),str(path.relative_to(ROOT)):digest}
+        caption = ('Heliocentric projection for the frozen bright-red observable domain. The QRF '
+                   'median is required to lie below 2 kpc. X points toward the Galactic center, Y '
+                   'follows Galactic rotation, and Z points north. Counts use hard point assignments, '
+                   'with the same count scale for both catalog cuts. The footprint and '
+                   'photometric selection limit which lines of sight appear in the figure.')
+        deliver(fig,'F10_near_cartesian_catalog',rows,inputs,caption)
+
+
 if __name__=='__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('mode',choices=('weak','lf'))
-    {'weak':weak,'lf':lf}[p.parse_args().mode]()
+    p.add_argument('mode',choices=('weak','lf','migration','cartesian'))
+    {'weak':weak,'lf':lf,'migration':migration,'cartesian':cartesian}[p.parse_args().mode]()

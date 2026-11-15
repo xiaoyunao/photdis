@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-16 — validate real sweep inputs and prepare the remaining spatial plates
+
+- The allocated integration job 61346262 completed with exit 0 in
+  30 seconds. It projected two real sweeps with 22,570 and 60,045
+  supported rows, reproduced their cut and PDF totals, recovered
+  original forecast quantiles, and checked Gaia states and intervals on
+  deterministic subsamples. It wrote no production artifacts.
+- Its test script and log are under
+  `data/v3_6/integration_smoke.tPfI1ONQ` on NERSC. SHA256 values are
+  `bd22df96842e7fafd60ac58eacbbfeb4f295efc60f6b335f15e28f85da230035`
+  and `09992d16ef1e539e18372df9642d22a7641c33e381003509002feb3fb06c93b4`.
+- Added F06 parent and reference sky projections on measured area,
+  including source-specific bias, NMAD and severe-error tables.
+  The 305-row frozen blue rehearsal preserves counts and verifies rendering.
+- F09 direct migration sums all PDF shells while printing hard counts
+  in each source/cut panel. F10 now prepares XY and XZ diagrams of the
+  frozen bright-red domain with QRF median inside 2 kpc. Checked empty
+  reference cells, axes, exact bin counts, and rendered 300 dpi previews.
+- The conditional F08 and LF F09 plots are jobs 61346503 and 61346504,
+  downstream of their respective score and count products.
+
 ## 2026-11-16 — show frozen signed-parallax and targeted-giant evidence
 
 - Verified the v3.5 Gaia and targeted-spectra inputs against their

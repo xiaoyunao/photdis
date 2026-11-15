@@ -56,6 +56,11 @@ association is available. The F06 shell and depth views already use the
 full delivered posterior masses and random area. Add density of the
 preselection frame and independent reference overlays after those jobs.
 The signed Gaia and scenario count reports follow 61345037 and 61345237.
+Read [the current plot index](docs/v3_6_figure_index.md) for the available
+figures and their denominators. The F06 reference overlays, F09 direct
+migration, and F10 near Cartesian diagram depend on the unified distance
+evidence or full observable counts. Allocated test 61346262 passed on two
+real sweeps and verified the interfaces without creating production outputs.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 
