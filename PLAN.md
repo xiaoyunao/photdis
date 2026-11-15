@@ -114,7 +114,13 @@ receipts, development scores, training configuration and analysis code.
 The forecast job writes and hashes each prediction before the outcome
 job reads Gaia. The submitted chain is freeze 61323428, forecasts 61323429,
 Gaia opening and score 61323430, catalog 61323431, structure 61323432,
-and saved-product audit 61323433.
+and saved-product audit 61323433. The freeze, forecast, Gaia score and
+catalog are complete. Job 61323989 independently authenticated all nine
+arrays, the complete 5,341-object roster and joint probability closure.
+Jobs 61323432 and 61323433 remain live. The score sensitivity check
+61323907 found −0.04975 versus −0.04921 nat at the two grid levels.
+Refine the few source/model pairs with a drift above 0.02 nat in a
+separate sidecar using the frozen model and the already recorded scores.
 
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.

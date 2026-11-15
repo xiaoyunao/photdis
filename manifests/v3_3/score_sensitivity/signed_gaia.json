@@ -1,0 +1,32 @@
+{
+  "fine": {
+    "n": 1212,
+    "cells": 4,
+    "mean": -0.04974967083199168,
+    "effective_n": 1212.0,
+    "lo95": -0.13740848586483814,
+    "hi95": 0.028334654386145627,
+    "nonfinite": 0,
+    "median_descriptive": -9.543870273187594e-05,
+    "nmad_descriptive": 0.07841238564771089,
+    "status": "sky_block_interval",
+    "undefined_nonfinite_pairs": 0
+  },
+  "coarse": {
+    "n": 1212,
+    "cells": 4,
+    "mean": -0.04921474116776614,
+    "effective_n": 1212.0,
+    "lo95": -0.13738466324767146,
+    "hi95": 0.028788442621197462,
+    "nonfinite": 0,
+    "median_descriptive": -0.00011723998747337205,
+    "nmad_descriptive": 0.07807323260634047,
+    "status": "sky_block_interval",
+    "undefined_nonfinite_pairs": 0
+  },
+  "max_absolute_log_score_change": [
+    0.4226840713329709,
+    0.022114497344064787
+  ]
+}

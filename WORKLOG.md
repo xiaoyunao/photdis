@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — verify all nine catalog outputs and quantify numerical sensitivity
+
+- Catalog 61323431 completed 0:0 in 3 min 49 s. The authenticated
+  receipt covers all 5,341 PSFs under each of the three views. An
+  independent allocated check 61323989 closed density, reweighting,
+  class masses, branch modes and counts across 69 table strata.
+- Candidate expected near/far counts are 4,817.52 / 523.48.
+  Preserved four nominal and six candidate grid flags.
+- Score sensitivity 61323907 completed 0:0. Excluding flagged
+  development rows changes the full signed Gaia contrast from
+  −0.06311 to −0.06299 nat. The prospective coarse-grid contrast
+  is −0.04921 versus −0.04975 nat on the primary grid. One candidate
+  row can drift as much as 0.423 nat when coarsened. Added targeted
+  further resolution using the recorded outcomes and frozen models.
+- All 472 local tests passed again. Structure 61323432 and the
+  delivery audit 61323433 remain in Slurm.
+
 ## 2026-11-15 — verify the frozen forecast and prospective Gaia outcome
 
 - Freeze 61323428, forecasts 61323429 and Gaia score 61323430

@@ -1,0 +1,13 @@
+{
+  "job": "61323907",
+  "development_flag_union": 7,
+  "inputs": {
+    "data/v3_3/development/initial/complete.json": "01e83814305cff6fc339f5b20fccfb24684318fa860e50c7fde9a9c1bbd5d3e9",
+    "data/v3_3/prospective/forecast/complete.json": "75cabf1faa98596f0525b11f2f962ad367d8541e015e719b91f4a2bf9194e8be",
+    "data/v3_3/prospective/score/complete.json": "f68fb316a8a75c36a0ebae6401fe9ab89779e4702d4740d8939366c7a99d0859"
+  },
+  "outputs": {
+    "opened_development.csv": "a702d08e8eaa5857a4f20862d0ab91fff5aa6820e1d3bd313665c07a96617910",
+    "signed_gaia.json": "4ca04d6ee48d00e44e768577661b256552dacf7ed5a6c6210fba36ff36f5a5c6"
+  }
+}
