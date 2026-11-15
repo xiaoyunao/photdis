@@ -1,0 +1,17 @@
+{
+  "job": "61347850",
+  "inputs": {
+    "scripts/v3_6_vac_paired.py": "4cfd521231b5d0ca041ee117fc1c101d9e8134c1d50246c2b5ab166a08178522",
+    "data/v3_6/vac_flow/specdis/complete.json": "f1cb29eace052032852fedea34d8fc6af6aa378db323cf3277d2c5c56e2274c0",
+    "data/v3_6/vac_flow/spdist/complete.json": "50cbd07b0f19b63cf8425cc2897febf027498964bdcfeccfb927f4daeb100684"
+  },
+  "pairs": 452470,
+  "primary": 266080,
+  "strict": 145493,
+  "interpretation": "Paired metrics hold the stars fixed and use both original distance-quality rules outside current QRF training. The two spectroscopic distances can share measurements. The giant lower endpoint is the available Gaussian modulus-error approximation. Source rows and catalog contamination percentages require separate interpretation.",
+  "outputs": {
+    "paired_metrics.csv": "ba3718a5796d7c77cdca6cda474fb8a16738e486075a9a3aee722c48262e1f67",
+    "pairs.npz": "800e36cffd3505ce69e286317fcb85a026b763e62a5c3aa5ace888380dcabb45",
+    "far_giants.csv": "b60302ba8443bb19a301797ec6d262a579c30d34d6934f548343647c6bb3f4af"
+  }
+}

@@ -69,6 +69,14 @@ SPDist 有 126 颗，偏差分别为 −14.1% 和 −6.8%。严格档只剩 14 �
 [SpecDis 分层测距](../manifests/v3_6/vac_flow/specdis/performance.csv) ·
 [SPDist 分层测距](../manifests/v3_6/vac_flow/spdist/performance.csv)
 
+SpecDis 与 SPDist 共有 452,470 条唯一身份配对。用两库都通过历史
+距离质量要求、也未用于现 QRF 训练的同一批主选矮星比较，以 SpecDis
+划分 5–10 kpc，有 1,175 颗星，只有 488 颗在 SPDist 也位于这一层。
+对同一批星，QRF 相对 SpecDis 的中位偏差是 −19.0%，相对 SPDist
+则为 −6.0%。若按 SPDist 划分，样本剩 544 颗，两种偏差为 −13.4%
+和 −10.6%。因此，两库的距离差异和分箱造成的样本变化都会改变偏差幅度。
+[同星、同模型的双参考比较](../manifests/v3_6/vac_paired/paired_metrics.csv)
+
 ## 同一批历史测试星上的旧、新 QRF
 
 在旧版 `expanded_A` 的 97,705 条缓存记录中，55 条不满足当前 PSF
@@ -113,6 +121,12 @@ SPDist 对应为 **621** 和 **43** 条。去掉当前 QRF 训练星后，严格
 各自解读。
 [SpecDis 完整分层](../manifests/v3_6/vac_flow/specdis/performance.csv) ·
 [SPDist 完整分层](../manifests/v3_6/vac_flow/spdist/performance.csv)
+
+进一步要求约 68% 参考区间的下界也超过 10 kpc，并排除当前 QRF
+训练对象，严格档还有 **79 条 SpecDis、43 条 SPDist** 巨星匹配。
+这些匹配的 QRF 中位距离全部小于 10 kpc。参考下界用各库可恢复的
+距离模数误差计算。
+[远端巨星和 QRF 距离归属](../manifests/v3_6/vac_paired/far_giants.csv)
 
 ## 外部光谱验证能补足什么
 

@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-16 — finish the paired VAC and far-giant uncertainty check
+
+- Job 61347850 completed at 0:0 in 20 s. Verified and published
+  two compact tables from 452,470 exact same-star pairs.
+- With both distance quality requirements and outside current QRF
+  training, 1,175 primary dwarfs have SpecDis distances in 5–10 kpc.
+  Only 488 are in the same SPDist shell. The same QRF medians are
+  biased −19.0% relative to SpecDis and −6.0% relative to SPDist.
+  Reversing the reference binning changes the roster and both offsets.
+- Under the one-sigma reference modulus lower-bound cut beyond
+  10 kpc, strict has 79 SpecDis and 43 SPDist far giant matches
+  outside current training. All have QRF median below 10 kpc.
+- Verified three projection groups and 675,695 supported objects
+  on 69 distinct sweeps. Observed projection wall times were 9–18 s.
+  Updated the remaining array tasks 61345035_[3-47] from 30 to 8
+  minutes to improve backfill opportunities. Core and RAM requests
+  and existing results were left as submitted.
+
 ## 2026-11-16 — check both blue cohorts against the completed external spectra
 
 - Joined all 305 source-bound cases with the four verified small
