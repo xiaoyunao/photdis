@@ -1,0 +1,26 @@
+{
+  "job": "61344678",
+  "archived_cache": 97705,
+  "archived_non_psf": 55,
+  "psf_parent_unmatched": 0,
+  "psf_without_current_supported_row": 2306,
+  "final_key_or_position_rejected": 0,
+  "paired": 95344,
+  "expanded_model_sha256": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+  "inputs": {
+    "data/v2_0/manifests/snapshot.json": "1594d892aaa605aeed0d2008e21049546ce4710dc78ec8d3257839db5aa8195b",
+    "data/v2_0/chosen_expanded_A.npz": "66c2d6fd806bbc0dcaf78c2eb86cbf870ad90576c76fa5f415d3f0033b7878b7",
+    "data/v2_0/training_expanded_A.npz": "4504155a0938127b7b967f98fbc827fa126fa366c9898c078a0f78b6bd098f1e",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "scripts/v3_6_qrf_cache_comparison.py": "2d5d2c7fbc9c090b2b744da6049eef3bf04012097f2f8bb305339239d6d4cb7c"
+  },
+  "scope": "Archived evaluation cache only. Predictions use the original archived and current measurement versions. Current selection membership is kept identical across both models. Both supported uses paired finite predictions. Individual support rows use each model\u2019s available predictions. Reference intervals include center agreement and error-integrated agreement.",
+  "outputs": {
+    "paired.npz": "1864462ec93590063dccb328c10627a520c13ff4ff0137e2ba93c5b4d77a9447",
+    "performance.csv": "35fc4e3408869f4a3a46a8cc3102c63d54f201ee8ec92f01b6439e8be57130ef",
+    "association.csv": "e7c6c8c495102cbb1cc7711524bc375490970c6fb11f9023baf4368b551cf486"
+  }
+}

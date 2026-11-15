@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-16 — complete the archived QRF cache comparison and first projection group
+
+- The archived comparison 61344678 completed at 0:0 in 28 s.
+  Verified the compact outputs. Of 97,705 cache rows, 55 were
+  historical non-PSF and 2,306 native PSFs lack current support.
+  The remaining 95,344 match the current catalog position and key.
+- For the same 2,542 SpecDis test dwarfs at 5–10 kpc outside current
+  training, both-support NMAD is 16.8% old and 15.5% current before
+  selection. The current primary rule leaves 202 of those stars.
+  Their median bias is −16.4% old and −17.5% current, with only
+  two stars remaining under strict. Added both sources' compact evidence.
+- The two models still use their own cached input photometry in
+  these comparisons. The identical current grz replay is 61345074.
+- Projection group zero 61344837 completed at 0:0 in 18 s and
+  recovered 277,183 native PSF predictions. Verified and retained the
+  compact table. The remaining 47 groups are Slurm array 61345035.
+
 ## 2026-11-16 — verify the LF support with the frozen nominal SED and real photometry
 
 - Checked the hash-verified fitted SED. Giant kernel centers occupy
