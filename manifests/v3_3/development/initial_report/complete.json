@@ -1,0 +1,25 @@
+{
+  "n": 3830,
+  "all_PSF": true,
+  "development_only": true,
+  "inputs": {
+    "data/v3_3/development/initial/complete.json": "01e83814305cff6fc339f5b20fccfb24684318fa860e50c7fde9a9c1bbd5d3e9",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "scripts/v3_3_development_report.py": "b26cae1b970e5c98cac58b23ace08fd5b01c101624ad50537256ab06efe90d5b"
+  },
+  "outputs": {
+    "color_distance_diagnostics.pdf": "e19766655c4c49de4e42fdb77343907c103f6209e0379414b3c913d00b355fa5",
+    "color_distance_diagnostics.png": "598917b10840e14125cfe07dd74efefcd9d5bbbcd3d066e83199100ff29a584b",
+    "giant_distance.pdf": "ac89ac9a48b4f62fbae990a8320d09b2f078233f7a06f738482baf6ecf9faa0f",
+    "giant_distance.png": "df8de326543d791389f843c250bb9afa7f5ba36c69d55a63804482bfa6fa42a6",
+    "interval_agreement.csv": "317c7750b7908a4cdd9d1d16050343d37b7b1e2993e5560bcaa530d705ee57b2",
+    "interval_agreement.pdf": "492d34a32bce5e78c25e213fbb9e5c3c24858a87a12d17fc39083bcb745031e3",
+    "interval_agreement.png": "333cfee214a068158ed9fa9d1b1d87e31423a38aa6fb772b8ca7cf5bd076be36",
+    "matched_distance.csv": "83384ab7938754e6212272231d1ca0dbfc2b2aab69967bad582a7116f28eb71d",
+    "plot_values.npz": "a1b6ca2a3a9199ec9108897850bd72e9021bb88fefbb8e52e125c237451e07f7",
+    "reference_reliability.pdf": "9c44989984e716c2cb9ed6ccda0cc38b3a44353e24e1a0994d1ae3012910587f",
+    "reference_reliability.png": "f39eb9b991fe4989ea256f42a761a753448104b7c881131fbbd11241988f616d",
+    "reliability.csv": "3f5519c7bce8f931951a6c646fa51d0ac7c6123204aa490544c1089beec627e9"
+  },
+  "job": "61321265"
+}

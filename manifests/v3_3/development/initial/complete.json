@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_3/sed/initial/model.joblib": "0209bdcbca22df495e531794df85a20e48ea75cf7946222fb8c228582522ee84",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "scripts/v3_3_development.py": "72cd5bc3245ff0e30bc872a106ebeab0fd1c7d9c455194d925208bf5caa2e5af",
+    "src/photdis/v3_3.py": "e4b573c1dbd32f04ad524077ebbcfc8cf445228b7a3dd51fa9e2a6f431723b4b",
+    "scripts/v3_0_evaluate.py": "5dc66aa325bf1f45ce34c7104d10435ed042240c1fdfe7b1766f228780efabba"
+  },
+  "outputs": {
+    "candidate.npz": "cb57f5a6fc46fdf621d7a3d48f109eff73d25e6dba4f9e9158d4ba132ed270f5",
+    "distance.csv": "cf2d2e24b3807e270bf620c1d7bb34a1ac9d81563de1d251f443c14753d6d315",
+    "nominal.npz": "d213e2dc27d6af7bdbe4a0ba9ab69452063719c06df868cb263986337f123a01",
+    "paired_scores.csv": "f88ec5c3f4fe69726b0c5c9c08bc8b91e0b0ab8b43be1da831554a95eb3865c9",
+    "qrf.npz": "6ec0c07a5a886996140fdfe76fb2e2f4fc17a192cb0b2a7dae9e9338574019d5"
+  },
+  "all_PSF": true,
+  "n": 3830,
+  "missing_TYPE": 0,
+  "non_PSF": 0,
+  "candidate_fit_converged": true,
+  "grid_flags": {
+    "nominal": 5,
+    "candidate": 2
+  },
+  "job": "61318811"
+}

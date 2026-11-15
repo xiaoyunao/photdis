@@ -1,0 +1,10 @@
+{
+  "candidate_fit": "initial",
+  "research_catalog_model": "candidate",
+  "development_rationale": "In the opened matched development cohort, class-conditioned giant bias and severe residuals improve. Class-marginalized giant signed Gaia predictive score improves by 0.1358 nat per star. Across all 3689 eligible signed Gaia pairs the candidate loses 0.0631 nat per star, giant marginal distances retain severe bias, and near giant and metal-poor conditional accuracy remain limited. Carry the candidate as a research measurement and use the two frozen controls on the identical target roster.",
+  "deployment": "Preserve v1. No calibrated release domain assigned in development.",
+  "prospective_scope": "1536 exact new source identities in four previously examined 10 degree sky blocks. Use Gaia DR3 signed parallax with reported uncertainty, the frozen evaluator, and paired contrasts to nominal and QRF.",
+  "structure_scope": "One known NGC288 system, 512 PSFs. Keep the external dynamical distance out of the shared-distance prior and evaluate full and Gaussian summaries under identical selection, cluster-distance and spatial priors, and background.",
+  "development_job": "61318811",
+  "development_report_job": "61321265"
+}
