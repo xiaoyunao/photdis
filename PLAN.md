@@ -22,9 +22,15 @@ The production distance posterior marginalizes class and keeps the far tail.
    summarized likelihoods and an independent scoring target. Document
    measured benefit and the evidence-supported scope.
 
-Use allocated NERSC CPUs for the reference scan and subsequent fits.
-Start with `scripts/run_v3_3_reference_support.sh` to determine training
-counts by class and source, including scarce giants and spectral support.
+Use allocated NERSC CPUs for fits. The
+[reference census](manifests/v3_3/reference_support/by_class_source.csv)
+found 5,887 labeled giants among 277,897 eligible training references.
+SpecDis supplies 5,654 of those giants. Start with 128 kernels split
+64 dwarf, 32 giant and 32 other, using all eligible giants within the
+existing 32,768-source budget. Sample the other two partitions by
+stable identity rank and retain their inclusion probabilities. Keep
+the nominal class mixture outside the training allocation and use the
+same reference distance prior for the first paired development test.
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.
 

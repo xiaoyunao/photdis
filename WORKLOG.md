@@ -10,6 +10,14 @@
   training support before choosing the first fit's component allocation.
 - Python and Slurm-shell syntax checks pass. A smoke check reconciled
   PSF, non-PSF, missing TYPE, nonstellar and missing-distance admissions.
+- NERSC job 61318198 completed `0:0` in 12s. Archived both compact
+  tables and verified their hashes against the receipt. The training
+  pool has 277,897 eligible PSFs and 5,887 labeled giants, including
+  1,789 with corrected FeH below −1.5. Most giant distance references
+  are SpecDis (5,654), with 188 SPDist and 45 Gaia. Opened development
+  contains 1,269 labeled giants with qualified distance references.
+- Begin the class-conditional pilot with 64/32/32 kernels and all
+  eligible giants. Separate training quotas from the inference prior.
 
 ## 2026-11-15 — complete v3.2 research delivery
 

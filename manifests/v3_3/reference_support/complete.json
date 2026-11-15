@@ -1,0 +1,13 @@
+{
+  "job": "61318198",
+  "inputs": {
+    "manifests/v3_0/preparation.json": "5fe4e427eb802c42a6430efee21a57d9b3d4f41263502060d1b2c2785fd38c93",
+    "scripts/v3_3_reference_support.py": "158c80f6bfa461deaf8656e83bab9131bc5c5d0d807b47ef3c6727258981b3c3",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769"
+  },
+  "outputs": {
+    "by_class_source.csv": "10735869a6ad06036db7870bd4bea5285a2a0c609ab60691d24e10f7721f2a1d",
+    "admission.csv": "e1daf492cb75dbbf59a3c449d7cf8fe58cf9d8557b706f28af4bb23ffe89739d"
+  },
+  "scope": "Frozen training, hyperparameter and seen-development support. No reserved outcomes read."
+}
