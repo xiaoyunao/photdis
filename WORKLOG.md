@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — compare observed and inferred CMDs on the same reference stars
+
+- Added per-source F05 figures for the three selection states, six color
+  planes, and residual maps in observed and reference CMD coordinates.
+  The tables preserve class and cut denominators, full bin counts, frame
+  exclusions, and the missing or weak i/WISE states.
+- Verified the source-bound CSV for all 305 frozen blue PSFs. The shared
+  CMD sample preserves 305 before and after the primary cut and 95 after
+  strict. The optical plane used 305 and the W1–W2 plane used 114. Checked
+  1,665 occupied cells against 135 selection counts and opened the three
+  300 dpi PNG/PDF figure sets.
+- Native photometry and F04 jobs 61347073 and 61347074 are queued. The
+  full F05 source array depends on the same native photometry pass.
+
 ## 2026-11-16 — join native multiband photometry for the reference atlas
 
 - Added `v3_6_reference_photometry.py` to retrieve the union of reference
