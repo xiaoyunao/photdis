@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Joint application validation and targeted spectral evidence for full DECam."""
+import argparse
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 from itertools import chain
@@ -21,7 +22,7 @@ from v3_4_near_recover_labels import archived_labels
 from v3_4_near_reference_support import past_evidence, separation, spectroscopic_inventory
 from v3_4_near_validate import GAIA, geometry, read_targeted, tile_inventory
 from v3_5_dr11_production import CUTS, FREEZE, PRODUCTION
-from v3_5_dr11_spatial import DELIVERY
+from v3_5_dr11_spatial import DELIVERY, read_tile
 
 OUT = PRODUCTION.parent/'validation'
 KEYS = ('ls_id','identity','source_id','TYPE','RA','DEC','observed_r','dereddened_g_r','stratum',
@@ -170,6 +171,17 @@ def stellar_statistics(t,rosters,valid,archived_history):
     return output
 
 
+def parallax_interval(p,error,usable,sigma,lower_kpc,upper_kpc):
+    """Classify interval overlap with a distance shell in parallax space."""
+    lower,upper = p-sigma*error,p+sigma*error
+    compatible = usable&(upper>0)
+    p_min = 1/upper_kpc if np.isfinite(upper_kpc) else 0.
+    p_max = 1/lower_kpc if lower_kpc else np.inf
+    contained = compatible&(lower>p_min)&(upper<p_max)
+    excluded = compatible&((upper<p_min)|(lower>p_max))
+    return contained,excluded
+
+
 def gaia_statistics(t,gaia,labels,usable,old,weights):
     cfg = json.loads(CUTS.read_text())
     p,error = labels['p_corr'],gaia['parallax_error']
@@ -185,9 +197,9 @@ def gaia_statistics(t,gaia,labels,usable,old,weights):
                 list(pool.map(one_score,eligible_rows,chunksize=64))).T
     _STATE = None
     archived,_,_,held = archived_labels(t,{})
-    err = cfg['geometry_sigma_multiplier']*error
-    near = usable&(p-err>1/10.)
-    far = usable&(p+err<1/10.)
+    sigma = cfg['geometry_sigma_multiplier']
+    near,far = parallax_interval(p,error,usable,sigma,0.,10.)
+    inconsistent = usable&(p+sigma*error<=0)
     weighted = lambda v,m: float(weights[m]@v[m]/weights[m].sum()) if m.any() else np.nan
     report = []
     for cut in ('primary','strict'):
@@ -200,6 +212,9 @@ def gaia_statistics(t,gaia,labels,usable,old,weights):
             weak_new = weak&~old
             totals = dict(selection=cut,group=name,draw=n_count(a),projected_n=float(weights[a].sum()),
                 gaia_link=int((a&t['gaia_unique']).sum()),gaia_reference=n_count(use),
+                gaia_astrometry_quality=n_count(a&labels['astro_quality']),
+                gaia_zero_point_available=n_count(a&labels['zpt_valid']),
+                gaia_positive_parallax_inconsistent=n_count(a&inconsistent),
                 gaia_outside_recorded_history=n_count(use&~old),weak_gaia=n_count(weak),
                 weak_gaia_outside_history=n_count(weak_new),gaia_far_interval=n_count(a&far),gaia_near_interval=n_count(a&near),
                 far_fraction_lower=float(weights[a&far].sum()/weights[a].sum()),
@@ -210,8 +225,12 @@ def gaia_statistics(t,gaia,labels,usable,old,weights):
             for j,(low,high) in enumerate(((0.,2.),(2.,5.),(5.,10.))):
                 ref = a&(center>=low)&(center<high)
                 b = distance_summary(10+5*np.log10(t['qrf_quantiles_kpc'][ref]),10+5*np.log10(center[ref]))
+                inside,outside = parallax_interval(p,error,usable,sigma,low,high)
                 report.append(dict(**totals,lower_kpc=low,upper_kpc=high,
                     qrf_mass=float(weights[a]@t['qrf_bins'][a,j]),geom_outside_history=n_count(ref&~old),
+                    shell_interval_inside=n_count(a&inside),shell_interval_excluded=n_count(a&outside),
+                    shell_fraction_lower=float(weights[a&inside].sum()/weights[a].sum()),
+                    shell_fraction_upper=float(1-weights[a&outside].sum()/weights[a].sum()),
                     **{f'geometry_{k}':v for k,v in b.items()}))
     return report
 
@@ -220,28 +239,47 @@ def n_count(mask):
     return int(mask.sum())
 
 
+def reference_frame(group,plan,hashes):
+    if group is None:
+        catalog = DELIVERY/'complete.json'
+        rec = json.loads(catalog.read_text())
+        if sha(FREEZE)!=rec['production_freeze_sha256']:
+            raise ValueError('Validation follows the completed production manifest')
+        hashes[str(catalog.relative_to(ROOT))] = sha(catalog)
+        spatial = load(verified(DELIVERY/'spatial.npz',rec['outputs']['spatial.npz']))
+        return OUT,list(chain.from_iterable(plan['groups'])),spatial['ambiguous_gaia_aliases'],rec['totals']
+    names = plan['groups'][group]
+    aliases,totals = [],Counter()
+    digest = sha(FREEZE)
+    for name in names:
+        rec,ids,_,receipt,_ = read_tile(name,digest)
+        aliases.append(ids['source_id'][ids['source_id']>0])
+        marker = PRODUCTION/Path(name).stem/'complete.json'
+        hashes[str(marker.relative_to(ROOT))] = receipt
+        totals.update(rec['counts'])
+    sid,n = np.unique(np.concatenate(aliases),return_counts=True)
+    return OUT.parent/f'validation_group_{group:02d}',names,sid[n>1],totals
+
+
 def main():
     require_compute()
-    catalog = DELIVERY/'complete.json'
-    rec = json.loads(catalog.read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--group',type=int,help='Evaluate a completed production group separately')
+    args = parser.parse_args()
     plan = json.loads(FREEZE.read_text())
-    if sha(FREEZE)!=rec['production_freeze_sha256']:
-        raise ValueError('Validation follows the completed production manifest')
-    paths = [FREEZE,catalog,Path(__file__),CUTS]
-    hashes = {str(p.relative_to(ROOT)):sha(p) for p in paths}
-    spatial = load(verified(DELIVERY/'spatial.npz',rec['outputs']['spatial.npz']))
-    ambiguous = spatial['ambiguous_gaia_aliases']
+    hashes = {str(p.relative_to(ROOT)):sha(p) for p in (FREEZE,Path(__file__),CUTS)}
+    destination,names,ambiguous,totals = reference_frame(args.group,plan,hashes)
     specs = acquire_spectral_metadata(hashes)
     targets = np.unique(np.concatenate([x['source_id'] for x in specs.values()]))
     previous, lsids = past_evidence(hashes)
     samples,spectra,counts = [],[],Counter()
-    for name in chain.from_iterable(plan['groups']):
+    for name in names:
         sample, matched, stats = draw_tile(PRODUCTION/Path(name).stem,targets)
         if sample:
             samples.append(sample)
             spectra.extend(matched)
             counts.update(stats)
-    if counts['rows']!=rec['totals']['primary'] or counts['strict']!=rec['totals']['strict']:
+    if counts['rows']!=totals['primary'] or counts['strict']!=totals['strict']:
         raise ValueError('Validation denominator does not match the production selections')
     photo,spectral = join_parts(samples),join_parts(spectra)
     valid = lambda t: np.where(np.isin(t['source_id'],ambiguous),0,t['source_id'])
@@ -250,8 +288,8 @@ def main():
     prior_match = historical(photo)
     photo['gaia_unique'] = ids>0
     tiles = tile_inventory(ids[ids>0])
-    OUT.mkdir(parents=True,exist_ok=True)
-    freeze = OUT/'freeze.json'
+    destination.mkdir(parents=True,exist_ok=True)
+    freeze = destination/'freeze.json'
     binding = dict(hashes=hashes,gaia_tiles=tiles,rows=counts,reference_prior_mu=REFERENCE_PRIOR.tolist())
     if freeze.exists():
         if json.loads(freeze.read_text())!=binding:
@@ -261,15 +299,15 @@ def main():
     gaia,zpt,usable = qualification(photo,ids)
     if tiles!=tile_inventory(ids[ids>0]):
         raise ValueError('Gaia tiles changed while accessing reference data')
-    csv_rows(OUT/'gaia_joint.csv',gaia_statistics(photo,gaia,zpt,usable,prior_match,photo['design_weight']))
+    csv_rows(destination/'gaia_joint.csv',gaia_statistics(photo,gaia,zpt,usable,prior_match,photo['design_weight']))
     if spectral:
-        csv_rows(OUT/'targeted_spectra_joint.csv',stellar_statistics(spectral,specs,valid(spectral),historical(spectral)))
+        csv_rows(destination/'targeted_spectra_joint.csv',stellar_statistics(spectral,specs,valid(spectral),historical(spectral)))
     counts.update(gaia_usable=n_count(usable),gaia_outside_recorded_history=n_count(usable&~prior_match),
                   targeted_candidates=len(spectral.get('ls_id',[])))
-    atomic_npz(OUT/'gaia_qualification_roster.npz',ls_id=photo['ls_id'],TYPE=photo['TYPE'],
+    atomic_npz(destination/'gaia_qualification_roster.npz',ls_id=photo['ls_id'],TYPE=photo['TYPE'],
          native_source_id=ids,qualified=usable,history=prior_match,design_weight=photo['design_weight'])
-    save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),freeze_sha256=sha(freeze),
-        all_PSF=True,counters=counts,outputs={p.name:sha(p) for p in sorted(OUT.iterdir()) if p.name!='complete.json'}))
+    save_json(destination/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),freeze_sha256=sha(freeze),
+        all_PSF=True,production_group=args.group,counters=counts,outputs={p.name:sha(p) for p in sorted(destination.iterdir()) if p.name!='complete.json'}))
 
 
 if __name__=='__main__':
