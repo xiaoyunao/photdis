@@ -1,0 +1,26 @@
+{
+  "job": "61330427",
+  "inputs": {
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_4_near_release_support.py": "600c236f9874594bb116b71ae11b764b3be366d02f5b773a9619bce53c02c511",
+    "data/v3_4/near_development/validation/forecast/complete.json": "c2947d149d18b4f3ed07ef37ed6cfa86888e91113d71a01035af6c6c3a6ddf7c",
+    "data/v3_4/near_development/validation/forecast/forecasts.npz": "bda8a3bc9db18cc5ca8c6c75ced0aac845aa52f52d2ba29857d6f348bdd536d3",
+    "data/v3_4/near_development/validation/inputs/complete.json": "f1c4d5363f60167d885f93069d9431b9458777c6a2a185c758896d1fcaeb5220",
+    "data/v3_4/near_development/validation/inputs/photometry.npz": "9f51847d31d0b2177534d3de4edfbf1fa33de864e6cc2c2da2731078e7bbc200",
+    "data/v3_4/near_development/validation/inputs/application.npz": "34e22fd25c9755d38d60f3fbee136fc958bb1fefddbe6d81c84b3f3d91aed144",
+    "data/v3_4/near_development/validation/inputs/fresh_gaia.npz": "6cd10571b1f90c0d8293e6c9fcd7d97ebcb37532214da649f21b37649692a527",
+    "data/v3_4/near_development/validation/inputs/DR20_MINESweeper.npz": "600b24ab8406b66eebea71f7dd8c82220477f74570b33c24c97fd03792f34835",
+    "data/v3_4/near_development/validation/inputs/DR20_APO.npz": "051a4d7ff22b7167df4a17f60e5713dfd5631e9af4303b475eefb2e303bc63da",
+    "data/v3_4/near_development/validation/inputs/DR19_Astra.npz": "366154bd94049802a03d17ac625abcc5b870356daf241be8c9d4af0a9637e4f5",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "manifests/v3_0/cohorts.json": "ee40a8c201e6dacf5cf6f68a9376671df7a6183fc409185ab77e2de3df76c388"
+  },
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "outputs": {
+    "joint_support.csv": "319fa81645658abb4db3861fd7ba86ad02c8793bb6a5a32be77bc3ba681c9423",
+    "radius_sensitivity.json": "f99552ec23989553980e85da9bd1e245f1046a83b040fcda485087f3cc422272"
+  }
+}

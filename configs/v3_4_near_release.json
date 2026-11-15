@@ -1,0 +1,41 @@
+{
+  "product": "Magnitude-limited near-dwarf candidate catalog",
+  "model": "frozen native grz QRF",
+  "domains": [
+    {
+      "fields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "observed_r": [
+        16.0,
+        18.0
+      ],
+      "dereddened_g_r": [
+        0.8,
+        1.4
+      ],
+      "w1_states": [
+        2,
+        4
+      ]
+    }
+  ],
+  "workpoint_sha256": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+  "domain_sha256": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+  "evidence_sha256": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+  "release_support_sha256": "4158927fc38a8b88ab3812478f6dfba7bed7ba0bfeaa63ed619bf6d8688c7171",
+  "justification": "Joint probability draw: 1,459 high-SNR geometry references, 12.16% NMAD, +0.0684 nat signed Gaia gain, and 370 dwarf associations among 379 archived class matches. Signed interval near support is 93.46% of design weight. Strict membership is retained alongside the primary cut.",
+  "limitations": "Class match fraction is reference-conditional. A confirmed far giant remains at both cuts. Gaia point calibration is not transferred to weak-parallax objects, where the nominal SED scores better. Applies to the registered DECam fields and is magnitude-limited. Distances beyond 10 kpc and the full QRF tail remain in each posterior."
+}

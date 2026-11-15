@@ -18,13 +18,17 @@ from v3_4_near_validation_inputs import CONFIG as WORKPOINT
 
 RELEASE = ROOT/'configs/v3_4_near_release.json'
 OUT = ROOT/'data/v3_4/near_catalog'
+SUPPORT = EVIDENCE.parent/'release_support/complete.json'
+RELEASE_DOMAIN = ROOT/'configs/v3_4_near_release_domain.json'
 
 
 def check_release():
     release = json.loads(RELEASE.read_text())
-    for p, digest in ((WORKPOINT, release['workpoint_sha256']),
-                      (EVIDENCE/'complete.json', release['evidence_sha256'])):
-        verified(p,digest)
+    for p, key in ((WORKPOINT, 'workpoint_sha256'), (RELEASE_DOMAIN, 'domain_sha256'),
+                   (EVIDENCE/'complete.json', 'evidence_sha256'), (SUPPORT, 'release_support_sha256')):
+        verified(p,release[key])
+    if release['domains'] != json.loads(RELEASE_DOMAIN.read_text())['domains']:
+        raise ValueError('The release domain differs from the evaluated intersection')
     if not json.loads((EVIDENCE/'complete.json').read_text())['new_outcomes_read']:
         raise ValueError('Need verified external scores for the registered release')
     return release
@@ -64,7 +68,7 @@ def apply(field):
     in_domain = observable_domain(field,r,gr,w1,release)
     models, probe, sources = prepare()
     hashes = {str(p.relative_to(ROOT)):sha(p) for p in (RELEASE, WORKPOINT, DOMAIN, census_p, Path(__file__),
-             EVIDENCE/'complete.json', ROOT/'scripts/v3_4_near_forecast.py', *sources)}
+             EVIDENCE/'complete.json', SUPPORT, RELEASE_DOMAIN, ROOT/'scripts/v3_4_near_forecast.py', *sources)}
     hashes[str(path.relative_to(ROOT))] = digest
     dest = OUT/f'field_{field:02d}'
     dest.mkdir(parents=True, exist_ok=True)
@@ -132,6 +136,8 @@ def apply(field):
 def collect():
     release = check_release()
     census = json.loads((CENSUS/'complete.json').read_text())
+    if (OUT/'complete.json').exists():
+        raise FileExistsError('Catalog delivery already complete')
     summaries, count, identities, legacy, children = [], np.zeros(6), [], [], {}
     for field in json.loads(DOMAIN.read_text())['fields']:
         dest = OUT/f'field_{field:02d}'

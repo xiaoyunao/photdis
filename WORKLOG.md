@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — identify and freeze the magnitude-limited production domain
+
+- Job 61330351 completed in 15 s. Native Gaia/Legacy aliases and
+  positional checks recover 1,292 older class matches on the primary
+  draw, with 1,233 dwarf labels. None qualifies as a new held-out row.
+- Joint-domain job 61330427 completed in 20 s. At r=[16,18), g−r
+  dereddened [0.8,1.4), and W1 states 2/4, the primary sample has 2,311
+  drawn sources, 1,459 Gaia geometry references and 12.16% NMAD.
+  Signed score improves +0.0684 nat. Weak Gaia decreases −0.1330 nat.
+- The identified interval fraction puts at least 93.46% of primary
+  design weight near under the signed measurement sensitivity.
+  One identified far giant survives both cuts. Production configuration
+  binds the joint-domain receipt and preserves both posterior tails
+  and the strict selection flag. No model refit and no deployment.
+
 ## 2026-11-15 — recover the external comparison and scientific figures
 
 - Follow-up job 61330274 completed 0:0 in 2 min 04 s. Of 3,885
