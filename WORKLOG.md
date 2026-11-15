@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-16 — compare blue failures with brightness- and color-matched stars
+
+- Added `v3_6_blue_matched_controls.py` to match each frozen case to
+  other primary PSFs with Gaia geometry, within 0.25 mag in observed r
+  and 0.05 mag in dereddened g-r. Compare accurate distances, the same
+  reference shell, and the intersection. Keep unmatched cases and
+  report the reuse of controls. Comparisons are descriptive.
+- Retrieve native fit residuals and blending indicators only for the
+  selected controls. Preserve Gaia absolute magnitude, proper motion
+  and RUWE, source IDs and per-pair distances for the three r intervals.
+- Confirmed that the program checks the original blue payload hash and
+  passed the focused matching check using actual frozen case positions
+  in color and magnitude. The fixture tests multiple candidates,
+  geometry-shell restrictions, and empty comparison cells.
+- The main Slurm jobs 61344837, 61345553, and 61344678 remained queued
+  for resources at this checkpoint. The control analysis waits for the
+  scheduled full Gaia census 61345037.
+
 ## 2026-11-16 — retain continuous spectra separately from distance qualifications
 
 - The unified distance product projects Teff, log g, [Fe/H] and
