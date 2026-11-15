@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-15 — complete external validation and document usable distances
+
+- Slurm 61332092 completed in 21 min 40 s. Validated 274,819 of the
+  289,886 Gaia draw rows. There are 231,254 qualified rows outside
+  the recorded reference history and 331 targeted spectrum candidates.
+- At 2–5 kpc, 4,519 primary Gaia geometry references give −9.5% bias,
+  13.3% NMAD and 71.2%/98.5% coverage. The blue color slice gives
+  −55.0% bias on 189 references. Faint blue lacks geometry and qualified
+  spectral distances beyond 2 kpc. Neither cut has 5–10 kpc geometry
+  or a qualified dwarf spectral distance.
+- Faint-blue weak signed parallaxes favor QRF over the uniform-modulus
+  prior by 0.728 nat/source in primary and 0.812 in strict. The DR20
+  spectra show confirmed >10 kpc giants under both cuts. The targeted
+  sample and broad Gaia bounds leave the population contamination rate
+  unresolved. Bright-red 0–2 kpc samples show small bias on new sky.
+- Verified the full survey validation rosters, design-weight denominators,
+  frozen-input and product hashes, and partition and spatial totals.
+  Archived compact validation tables and finalized the research-use guide.
+
 ## 2026-11-15 — verify the full catalog and footprint measurements
 
 - Slurm 61332091 completed in 3 min 23 s. The full audit reopened 17,454

@@ -1,6 +1,6 @@
 # PLAN
 
-## v3.5 — complete DECam application, distant dwarf validation and a spatial measurement
+## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 
 The [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)
 reply `2c2e2405` uses delivery `6f04aba` as the baseline. Widen the
@@ -29,7 +29,7 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    All 48 production tasks completed and their 1,074 receipts reconcile
    to the frozen inventory. Job 61332091 verified all 17,454 prediction
    parts and produced the area-normalized full survey maps and tables.
-   Joint external validation has cleared its dependency.
+   Joint external validation 61332092 completed after the catalog audit.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.
@@ -52,6 +52,12 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    digests. Full validation reports the v3.4 observable analogs inside
    and outside those rectangles separately from identity reuse and
    prior reference exposure. Replay 61334884 verified both labels.
+   Full validation scored 274,819 qualified Gaia matches and evaluated
+   331 targeted spectral candidates. Use the result tables to bound the
+   supported scope. Bright-red 0–2 kpc transfers to new sky with narrow
+   intervals. The 2–5 kpc evidence is selective, and faint/blue and 5–10 kpc
+   predictions retain research status. Distant giants are present under
+   both cuts. The spectra and Gaia bounds leave their population rate unresolved.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain
@@ -60,6 +66,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    with identical area in every sweep and pixel. Full delivery compares
    shallower and deeper halves of adequately covered pixels by area.
    Replay 61334779 verified the comparison on 91 completed sweeps.
+   The full measured-area comparison retains 78.7%, 28.2%, and 10.4%
+   under the strict cut across the three distance shells. Retain the
+   selection-sensitive far maps with the reference limits.
 
 Reuse all frozen model files and the v3.4 product. Exclude north BASS/MzLS.
 Paper work is paused. The final catalog stays on NERSC with checked

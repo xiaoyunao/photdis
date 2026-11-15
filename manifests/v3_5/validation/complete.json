@@ -1,0 +1,21 @@
+{
+  "job": "61332092",
+  "freeze_sha256": "0e5d6936627749e554ea756640f1f4e64c12dd80777d2a6dd5041720ad67ef8d",
+  "all_PSF": true,
+  "production_group": null,
+  "counters": {
+    "rows": 7672431,
+    "sampled": 289886,
+    "strict": 4891792,
+    "gaia_usable": 274819,
+    "gaia_outside_recorded_history": 231254,
+    "targeted_candidates": 331
+  },
+  "outputs": {
+    "freeze.json": "0e5d6936627749e554ea756640f1f4e64c12dd80777d2a6dd5041720ad67ef8d",
+    "gaia_joint.csv": "8c73ad3df0b740ab881a765c399e057e379490506f15812aee3d1acea50aa44b",
+    "gaia_qualification_roster.npz": "005738194bf379986005a707f93679f8d434e543ea858a1cebc1146ab50f0b1b",
+    "spectra_reference_roster.npz": "34be3d0eff03cc0393424db5153c1019e7b0c9894e796e0fb3cda325dca53c35",
+    "targeted_spectra_joint.csv": "9931c33eb36dd0abc68d4e8f2bcffc2a053f7f50f79c2d8d170871529be135e8"
+  }
+}
