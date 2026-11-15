@@ -147,8 +147,10 @@ def validation_history(hashes, group):
     if group is None:
         for marker in sorted(OUT.parent.glob('validation_group_*/complete.json')):
             hashes[str(marker.relative_to(ROOT))] = sha(marker)
-            name = 'gaia_qualification_roster.npz'
-            retain(marker.parent/name,json.loads(marker.read_text())['outputs'][name])
+            outputs = json.loads(marker.read_text())['outputs']
+            for name in ('gaia_qualification_roster.npz','spectra_reference_roster.npz'):
+                if name in outputs:
+                    retain(marker.parent/name,outputs[name])
     return np.unique(np.concatenate(by_id)),np.unique(np.concatenate(by_legacy))
 
 def qualification(photo,valid_id):
@@ -351,6 +353,9 @@ def main():
         spec_weak = spec_good & (zpt['p_corr'][len(ids):]<MIN_WEAK_SNR*joined['parallax_error'][len(ids):])
         stats = stellar_statistics(spectral,specs,spectral_ids,historical(spectral),spec_good,spec_weak)
         csv_rows(destination/'targeted_spectra_joint.csv',stats)
+        atomic_npz(destination/'spectra_reference_roster.npz',
+                   **{k:spectral[k] for k in ('ls_id','identity','TYPE')},
+                   native_source_id=spectral_ids,qualified_gaia=spec_good,weak_gaia=spec_weak)
     counts.update(gaia_usable=n_count(usable),gaia_outside_recorded_history=n_count(usable&~prior_match),
                   targeted_candidates=len(spectral.get('ls_id',[])))
     atomic_npz(destination/'gaia_qualification_roster.npz',ls_id=photo['ls_id'],TYPE=photo['TYPE'],
