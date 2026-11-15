@@ -36,8 +36,10 @@ samples contain 20,000 dwarfs, 5,887 giants and 6,881 other-class
 references. `scripts/run_v3_3_sed.sh` runs preparation, the three fit
 partitions and assembly in dependency order. The assembly restores the
 frozen nominal class probabilities for the first paired evaluation.
-Preparation job `61318404` completed. Fit array `61318405` precedes
-assembly `61318406`. `scripts/run_v3_3_development.sh` compares the
+Preparation job `61318404` completed. Fit array `61318405` and
+assembly `61318406` completed with all three fits converged. The
+[assembly receipt](manifests/v3_3/fit_initial/complete.json) binds 32,768
+PSF training sources and the frozen class frequencies. `scripts/run_v3_3_development.sh` compares the
 assembled model, nominal SED and frozen grz QRF on opened development
 identities. It keeps all admitted labeled giants and stable subsamples
 of the other labels. The first decision uses source-error-aware scores,
@@ -82,7 +84,10 @@ Job 61322134 authenticated 1,536 unused identities across four
 previously examined 10° sky blocks. No strictly unused block was available
 in this search. The [prospective roster receipt](manifests/v3_3/prospective_inputs.json)
 binds the closed photometry and the native admission waterfall.
-Verify historical Legacy aliases before writing forecasts. The existing DR19 request has zero native admissions, so it
+Verified zero historical Legacy aliases in the allocated preflight
+job 61322638. Its three NGC288 objects exercise the native and
+Gaussian response and the two selection scrambles without Gaia
+outcome access. The existing DR19 request has zero native admissions, so it
 cannot supply a fresh spectroscopic score. Reuse previously opened
 spectroscopic comparisons only with their documented role.
 

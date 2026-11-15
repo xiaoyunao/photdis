@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "data/v3_3/sed/initial/dwarf/complete.json": "b0a2803fcfe5f657ec8c1f8e1ae0fa0a619951550d10e73f36a48fe960c4025e",
+    "data/v3_3/sed/initial/giant/complete.json": "ca33f3d3ea9000beaf2c5512f089f9cead9eb1cb8c6efe8e0c4e616418814d11",
+    "data/v3_3/sed/initial/other/complete.json": "131587a9e7f5f28331692f2fd58154e7d844cc663d6a9a34fc184bf3606b5b68",
+    "manifests/v3_0/sed_fit.json": "761211a4e0d476825ff48b4e40278da2e064514a3f6d02ce07fe6e11a92cb045",
+    "configs/v3_3_sed.json": "0f69792d9b744992dd5dac8e79b162f784d99c058fc641a3207189d1b5068b5a",
+    "configs/v3_0_sed.json": "dbd537c87226de9f606e03c68346953f6d538ffda7c4cdd8f755279e566e7947",
+    "scripts/v3_3_sed.py": "c749e3e2e8b12989391b4bf5601e0157034657e551e40feff73b341b2fbf47d6"
+  },
+  "sha256": "0209bdcbca22df495e531794df85a20e48ea75cf7946222fb8c228582522ee84",
+  "training_sources": 32768,
+  "components": 128,
+  "class_prior": [
+    0.800268373260412,
+    0.02775152523626972,
+    0.1719801015033183
+  ],
+  "converged": true,
+  "all_training_PSF": true,
+  "job": "61318406"
+}

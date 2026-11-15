@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — authenticate the converged three-class SED assembly
+
+- The dwarf fit completed 0:0 in 26 min 50 s with 29 likelihood
+  steps. Assembly 61318406 completed 0:0 in 17 s. Verified all three
+  partition hashes, 32,768 training sources, 128 kernels and class
+  frequencies 0.800268 / 0.027752 / 0.171980.
+- Allocated preflight 61322638 authenticated zero Legacy ID aliases
+  across all 13 historical inputs for the 1,536 prospective objects.
+  It also exercises the NGC288 native likelihood and selection code.
+- Development 61318811 awaits CPU resources. Matched report 61321265
+  is already queued after successful scoring. Final freeze is pending.
+
 ## 2026-11-15 — verify 1,536 closed Gaia validation identities
 
 - Job 61322134 completed 0:0 in 1 min 6 s. Each of four native DR11
