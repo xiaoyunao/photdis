@@ -19,9 +19,16 @@ from v3_0_response import observation
 from v3_3_catalog_inputs import CONFIG, OUTPUT
 from v3_3_sed import verified
 
-FREEZE = ROOT/'manifests/v3_3/model_freeze.json'
+FREEZE = ROOT/'data/v3_3/model_freeze.json'
 EXPORT = OUTPUT.parent/'posteriors'
 _STATE = None
+
+
+def read_frozen():
+    frozen = json.loads(FREEZE.read_text())
+    for key, value in frozen['inputs'].items():
+        verified(ROOT/key, value)
+    return frozen
 
 
 def joint_summary(mu, likelihood, class_prior):
@@ -71,7 +78,7 @@ def summarize(output, measured):
 
 def main():
     require_compute()
-    frozen = json.loads(FREEZE.read_text())
+    frozen = read_frozen()
     input_marker = OUTPUT/'complete.json'
     census = json.loads(verified(input_marker, frozen['catalog_inputs_sha256']).read_text())
     config = json.loads(verified(CONFIG, census['inputs'][str(CONFIG.relative_to(ROOT))]).read_text())

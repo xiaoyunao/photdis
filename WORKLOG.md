@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — queue matched figures and bind the evidence freeze
+
+- Matched development figures 61321265 are queued after 61318811.
+  Added the shared freeze builder for the catalog, new Gaia cohort and
+  NGC288 response. The freeze has yet to be created.
+- Added a reference-scatter diagnostic using the fitted training
+  clouds. The synthetic check recovers the expected reference weights
+  after removing the flux Jacobian. Syntax and diff checks pass.
+- Direct NERSC Git connections timed out twice. An authenticated SSH
+  control connection restored synchronization across local, GitHub
+  and NERSC. Dwarf fitting remains in progress with its checkpoints.
+
 ## 2026-11-15 — verify 5,341 catalog admissions and the frozen QRF control
 
 - Catalog job 61320161 completed 0:0 in 13 s. The authenticated roster has

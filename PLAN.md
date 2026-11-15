@@ -43,7 +43,8 @@ identities. It keeps all admitted labeled giants and stable subsamples
 of the other labels. The first decision uses source-error-aware scores,
 conditional giant residuals and intervals, and marginal branch behavior.
 The development comparison is job `61318811`. The figure and
-matched-support report uses the exact saved development predictions.
+matched-support report uses the exact saved development predictions
+and is queued as 61321265.
 
 The bounded catalog uses one integer-aligned 1° × 1° window in each
 of DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
@@ -72,6 +73,16 @@ and compare it to the published dynamical scale after computing the
 response. The full native likelihood and prior-withdrawn per-class
 moment Gaussian use identical spatial, background and selection models.
 Compare native grid, posterior grid and entry-scramble variants.
+
+Use `scripts/v3_3_reference_scatter.py` to quantify the distance-node
+uncertainty carried by the training clouds in color and reference-source
+strata. The RMS from reference nodes, propagated flux/dust RMS and
+between-source center NMAD are distinct quantities.
+Use `scripts/v3_3_freeze.py` after reviewing the opened comparison and
+the prospective roster. Bind that decision to model bytes, both roster
+receipts, development scores, training configuration and analysis code.
+The forecast job writes and hashes each prediction before the outcome
+job reads Gaia.
 
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.

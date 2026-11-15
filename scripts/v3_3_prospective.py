@@ -21,7 +21,7 @@ from photdis.v3_1.validation_report import paired_field_statistic
 from photdis.v3_3 import class_log_likelihood, frozen_qrf, reference_log_curves
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
-from v3_3_catalog import FREEZE
+from v3_3_catalog import FREEZE, read_frozen
 from v3_3_prospective_inputs import OUT
 from v3_3_sed import verified
 
@@ -51,7 +51,7 @@ def inputs(frozen):
 
 
 def fit():
-    frozen = json.loads(FREEZE.read_text())
+    frozen = read_frozen()
     photo = inputs(frozen)
     global _STATE
     models = {key: joblib.load(verified(ROOT/item['path'], item['sha256']))
@@ -78,7 +78,7 @@ def fit():
 
 
 def score():
-    frozen = json.loads(FREEZE.read_text())
+    frozen = read_frozen()
     photo = inputs(frozen)
     marker = FORECAST/'complete.json'
     record = json.loads(marker.read_text())

@@ -24,7 +24,7 @@ from photdis.v3_3 import class_log_likelihood
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
 from v3_2_structure_joint import validate_posterior
-from v3_3_catalog import FREEZE
+from v3_3_catalog import FREEZE, read_frozen
 from v3_3_sed import verified
 
 CONFIG = ROOT/'configs/v3_3_structure.json'
@@ -106,7 +106,7 @@ def main():
     require_compute()
     global _STATE
     config = json.loads(CONFIG.read_text())
-    frozen = json.loads(FREEZE.read_text())
+    frozen = read_frozen()
     entry = frozen['models'][frozen['research_catalog_model']]
     model_path = verified(ROOT/entry['path'], entry['sha256'])
     model = inference_model(joblib.load(model_path))
