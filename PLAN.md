@@ -6,6 +6,8 @@ The latest [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222f
 reply `039da124`, narrows the paper's first catalog to a mainly dwarf sample
 inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
 
+See [development results and external validation design](docs/v3_4_result.md).
+
 1. Start with the archived DECam DR11 PSF photometric envelope from all 13
    existing fields. Census the whole envelope by field, observed r,
    dereddened g−r and usable W1 state. Draw a reproducible
@@ -45,6 +47,11 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    points and the contamination bounds. Deliver a small set of English
    astronomical figures and distinguish a magnitude-limited result from
    a volume census.
+   The closed validation roster contains 23,976 unique strict PSFs,
+   including 6,039 new Gaia sources. Roster job 61329405 completed.
+   Forecast 61329667 replays the application sample before scoring.
+   Evidence job 61329770 binds the evaluator and scores only after
+   forecast completion. Four figure outputs are assigned to job 61329819.
 3. Process all eligible DR11 PSFs in the verified photometric and sky
    domain. Freeze source coverage and retain identity, distance summaries,
    available posterior, near probability, support and flags. Verify
