@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — display distance errors and evidence counts by observing conditions
+
+- Added source-specific F04 figures for distance, photometry, dust,
+  WISE measurement state, and spectroscopy. Before-cut, primary, and
+  strict points share bins. The two interval plots distinguish width,
+  reference-center agreement, and agreement integrated over the
+  reference uncertainty. Each colored line carries its reference count.
+- Verified against the original frozen blue NPZ and its SHA256. The
+  207 cells from the selected comparison preserve 305, 305, and 95
+  members across the three cuts for every conditioning variable. Opened
+  both 300 dpi previews and adjusted the layout.
+- The F05 source array 61347239 and F04 conditional tables job 61347074
+  are waiting on upstream reference recovery and native photometry.
+
 ## 2026-11-16 — compare observed and inferred CMDs on the same reference stars
 
 - Added per-source F05 figures for the three selection states, six color
