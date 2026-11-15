@@ -1,0 +1,21 @@
+{
+  "job": "61347451",
+  "dpi": 300,
+  "inputs": {
+    "scripts/v3_6_plot_reference_admission.py": "ed6de83eff5d7de96e7ebe09bd807a6967c0fc12a9a334377bd64a4f9ef8b713",
+    "data/v3_6/catalog_observables/complete.json": "ef20b947f9423cae930e12bd69e16a9988ecdaaff45cf1fd8b6dc5e65b917729",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_flow_audit/specdis/complete.json": "d397027b5794309e53aff03c245bfc2c16d3bc04b6e4e3863924675c5b7e733b",
+    "data/v3_6/reference_flow_audit/spdist/complete.json": "50fb84f9ed3c0cc8618e863e5b50ed0e12c8fdc7c9b779a16f9f0507baf827e2"
+  },
+  "caption": "F01 support and losses. The three catalog columns and the deduplicated positive-distance reference column share observed bins. The raw VAC flow uses each catalog\u2019s own row denominator. The terminal table preserves all exclusive association, native admission and selection outcomes, with separate overlap flags. Source-specific coverage cells can contain the same star.",
+  "outputs": {
+    "observed_cmd.csv": "e217bcfc872a2700ee9c9c286c1fb991d08c479adcd3809d881219072a96d377",
+    "observed_cmd.pdf": "a4cb8aef3f79cc1d2bc1005fb54b743dea1e46a8168ae7186d76e32ae2cb55c6",
+    "observed_cmd.png": "858e06ae744734911ba7d9ce2759837d6568c7ae12ce934140406ec9d01eb3d8",
+    "terminal_flow.csv": "73f35cdb35489f300b8e899ad2310cbf0955f0059659890c99bf20a7763372bd",
+    "near_reference_flow.png": "33ffc9030d65a6e7ad7755c14baca7459ea238b25dfd097145336e67668c5c5b",
+    "reference_coverage_cells.csv": "ee66e92296bf73655eea21c28436d3d95982549d6230e418aec7bbe625fdeeec",
+    "near_reference_flow.pdf": "8826b4372e8e5c153ef560f4b408a8a9d566210405e85acae0fd9ed12df9bcf8"
+  }
+}

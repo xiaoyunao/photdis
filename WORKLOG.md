@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the deduplicated reference CMD and complete F01
+
+- F01 job 61347451 completed at 0:0 in 17 seconds. Verified the seven
+  output hashes and opened both figure panels. The CMD matches all frozen
+  catalog counts and contains 2,674,275 native stars with a positive
+  reference center after deduplication across sources.
+- Shared photometry job 61347073 started. Regular alternate 61357295
+  exited before computing because the original was active. Both downstream
+  dependencies still accept the original's successful receipt.
+
 ## 2026-11-16 — render the native-to-selection flow directly from the verified VAC tables
 
 - Published the F01 2–5 and 5–10 kpc reference admission comparison for

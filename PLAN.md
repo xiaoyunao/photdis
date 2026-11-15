@@ -69,10 +69,10 @@ the completed census. Regular CPU job 61350851 completed five LF forecasts
 on 12,755 native PSFs. The F09 scenario counts, migration and spatial
 intervals are published. The signed Gaia comparison, direct distance migration,
 and all-catalog Gaia and spectroscopic coverage are published using the joined
-evidence. Finish the source admission and remaining full reference plates.
+evidence. The F01 source admission and deduplicated CMD are published.
 Read [the current plot index](docs/v3_6_figure_index.md) for the available
-figures and their denominators. The final F01 source-flow view and the full
-F04/F05 reference-photometry plates are queued. Allocated test 61346262 passed on two
+figures and their denominators. The final full F04/F05 reference-photometry
+plates follow the running native photometry job 61347073. Allocated test 61346262 passed on two
 real sweeps and verified the interfaces without creating production outputs.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
