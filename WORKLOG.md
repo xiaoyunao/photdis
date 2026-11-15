@@ -11,7 +11,12 @@
   shell maps. Dependent validation 61332092 measures distance and
   targeted class evidence in the actual primary/strict samples.
 - Focused downstream smoke 61332100 checks the real completed sweep.
+  It completed in 18 s and found 499 allowable Gaia matches among
+  531 sampled rows. Signed predictive scoring passed the focused check.
   All 472 local tests passed with single-threaded numerical backends.
+- While the regular array was queued, started group 0 under debug
+  61332150. Regular group 0 has the afterany dependency and will reuse
+  completed sweep receipts or resume remaining parts.
 
 ## 2026-11-15 — complete native input, area and four-sweep pilots
 
