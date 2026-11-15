@@ -1,0 +1,14 @@
+{
+  "caption": "Selected DR11 South r-band viewer coadds. Circles mark 1.5 arcsec around the frozen catalog coordinate. The background-subtracted centroid uses positive flux inside that radius. Image stretches are local. These examples detect visible gross offsets or neighbors at the coadd resolution. They do not give individual exposure epochs or establish a physical class.",
+  "dpi": 300,
+  "documentation": "https://www.legacysurvey.org/dr11/description/",
+  "inputs": {
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "manifests/v3_6/blue_replay/blue_objects.csv": "0b90e1d6a571713955600e771249c1cdc43cb506e1cd8b8de0851e71a092ebae"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F03_selected_coadd_cutouts.csv": "6c3e94c73f049b87277c65f621fcf0c64d67750adb515e603d431661ab9f3ffd",
+    "figures/v3_6/F03_selected_coadd_cutouts.png": "4caf982c1ad38641f903a06b2beee79a10a13467e20fced3045aa02a3c7ccc76",
+    "figures/v3_6/F03_selected_coadd_cutouts.pdf": "596e32381cdb1caf797409c6e2734fd3e202b6127be4f9722224e8b6d31c9cfa"
+  }
+}

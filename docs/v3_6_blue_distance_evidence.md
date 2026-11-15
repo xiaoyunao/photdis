@@ -20,7 +20,21 @@ kpc。按逐星距离比计算，典型高估约 58 倍。根据 Gaia 距离和 
 74 颗仍被估得更近。关联档案里只有 3 颗有合格光谱分类，这组星的恒星
 演化阶段尚不明确。两组都通过冻结的 Gaia 质量和位置规则。位置核对使用
 Legacy 保存的 Gaia 关联坐标，图中的 Legacy 与 Gaia 颜色和星等有测光上的
-独立信息，位置一致性本身无法检验 Legacy 图像中的邻源混光。
+独立信息。
+
+两组在光学颜色平面明显重叠。可用 W1 的暗蓝近邻只有 29 颗，W1 和 W2
+同时可用的只有 8 颗。蓝色 2–5 kpc 参考星中，两带同时可用的有 106 颗。
+现有 grz QRF 没有使用这两条红外颜色，对可用的少数源可以看出额外分辨
+光度分支的线索。两组 QRF 在 10 kpc 内的概率中位数仍为 97.2% 和 99.7%，
+因此两种误差都能保留在近端样本。
+
+另选了四颗星查看 DR11 South 的 $r$ 波段叠加图。四个局部光心与目录点
+的偏差在 0.01–0.15 角秒。典型低估源旁有一个分得开的近邻，低估最重的例子
+在该分辨率下没有同程度的近邻。两颗亮的低估例子都具有较高的 $r$ 波段
+拟合残差。整个 189 星组的原生 `RCHISQ_R` 中位数约 34。光度分支、
+亮星测光误差和个别混光的贡献，需要用亮度及颜色匹配的参考对照来分辨。
+叠加图本身也无法提供各次曝光的历元。
+[Legacy Survey DR11 图像说明](https://www.legacysurvey.org/dr11/description/)
 
 这两个数目描述原有 Gaia 抽样中的对象。异常的全样本比例还需要把 Gaia
 和光谱参考接回整个适用目录，并考虑参考样本的选择。
@@ -30,3 +44,6 @@ Legacy 保存的 Gaia 关联坐标，图中的 Legacy 与 Gaia 颜色和星等�
   [完整逐星复查表](../manifests/v3_6/blue_replay/blue_objects.csv)
 - [F04 按星等、颜色和参考距离分层](../figures/v3_6/F04_gaia_magnitude_color.pdf)、
   [各格的计数和误差](../manifests/v3_6/figures/F04_gaia_magnitude_color.csv)
+- [四个例子的完整距离后验和两组的筛选得分](../figures/v3_6/F03_blue_posteriors_and_scores.pdf)、
+  [同星叠加图](../figures/v3_6/F03_selected_coadd_cutouts.pdf)
+- [F05 光学、i 和 WISE 颜色对照](../figures/v3_6/F05_blue_color_planes.pdf)

@@ -1,0 +1,15 @@
+{
+  "caption": "The same four stars as the coadd plate and both full frozen anomaly samples. Histogram heights are densities per distance modulus and plotted against logarithmic distance. Every stored QRF histogram bin is retained. The orange intervals use the high-S/N Gaia parallax interval. Dotted and dashed cuts indicate primary and strict sample selection. The nominal score panels include every admitted blue case.",
+  "dpi": 300,
+  "native_table_sha256": "fa31f01021ab8a5212f63e31d41e4052de446391e22eaa5e8f4a7f04af70f5af",
+  "inputs": {
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "manifests/v3_6/blue_replay/blue_objects.csv": "0b90e1d6a571713955600e771249c1cdc43cb506e1cd8b8de0851e71a092ebae",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F03_blue_posteriors_and_scores.csv": "7900580edb18f8bbcac2e0f980dcbb5c5f159c4c2af4e849a63f40324e9d4095",
+    "figures/v3_6/F03_blue_posteriors_and_scores.png": "e0163f39fdf158ccfdd72ffd528c0b4ac94ba5d4e1d3da1cd514b54b3dc631f0",
+    "figures/v3_6/F03_blue_posteriors_and_scores.pdf": "97ed6cbc5513d436d06186a39b5e5ef042d336f5d31b3d6026ad77fc522f4ddb"
+  }
+}

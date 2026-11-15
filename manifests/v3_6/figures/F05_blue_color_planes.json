@@ -1,0 +1,37 @@
+{
+  "caption": "The same two blue cohorts as F03 in six color planes. Photometry is dereddened. Each plane requires only its own bands, with usable WISE states for W1 and W2 and the native valid-band flag for i. The raw count in each legend can change across planes. Distance ratios in the table are diagnostic for the original frozen Gaia sample.",
+  "dpi": 300,
+  "planes": {
+    "1": {
+      "eligible": 305,
+      "missing_or_weak": 0
+    },
+    "2": {
+      "eligible": 135,
+      "missing_or_weak": 170
+    },
+    "3": {
+      "eligible": 135,
+      "missing_or_weak": 170
+    },
+    "4": {
+      "eligible": 114,
+      "missing_or_weak": 191
+    },
+    "5": {
+      "eligible": 222,
+      "missing_or_weak": 83
+    },
+    "6": {
+      "eligible": 222,
+      "missing_or_weak": 83
+    }
+  },
+  "blue_replay_receipt_sha256": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+  "native_table_sha256": "fa31f01021ab8a5212f63e31d41e4052de446391e22eaa5e8f4a7f04af70f5af",
+  "outputs": {
+    "manifests/v3_6/figures/F05_blue_color_planes.csv": "565afa206cd8a3c6bc01e00c91cb70ebb7a0fa3cfe35ca3cb9203089111042df",
+    "figures/v3_6/F05_blue_color_planes.png": "869f1dd4c10fed19ec2d2cac1f6d9e37494200c160d0c9379bf708e1522dcffc",
+    "figures/v3_6/F05_blue_color_planes.pdf": "56f044f7b92ed22a2e0b70c555d4522adb096be32b1cc52facb2322aac813f4c"
+  }
+}

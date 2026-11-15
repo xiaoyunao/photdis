@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — inspect native blue-cohort posteriors, colors and coadds
+
+- Added the F03 full QRF histograms and both photometric scores, and
+  the F05 color planes with per-band validity. W1 and W2 are both usable
+  for 8 of the 116 foreground stars and 106 of the 189 brighter stars.
+- Retrieved and checked four public DR11 South r-band coadds. The
+  local offsets lie within 0.16 arcsec. A close neighbor is visible
+  in the typical 2–5 kpc example. Both pictured 2–5 kpc stars have
+  substantial r fit residuals. A brightness-matched comparison is
+  needed to apportion their contribution to the full cohort.
+- Opened all three English plates and retained every illustrated
+  QRF bin, the plotted coordinates, input hashes and FITS URLs.
+- External spectra job 61345553 is queued. Native archive shard 01
+  wrote its result while shard 00 remained live with active file reads.
+
 ## 2026-11-15 — extend external spectroscopy to the preselection frame
 
 - `scripts/v3_6_external_reference.py` projects the three previously
