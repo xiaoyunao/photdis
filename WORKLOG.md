@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — shorten the full survey validation read
+
+- In `scripts/v3_5_dr11_validate.py`, search the sorted spectral IDs and
+  read completed sweeps with up to eight threads in frozen input order.
+- NERSC comparison 61334449 used 114 completed sweeps in groups 0, 1,
+  2, 3 and 5 and 381,142 spectral target IDs. The 648,785 primary rows,
+  25,627 sampled rows, all design weights and 28 spectral matches agreed
+  exactly. The original reader took 54–65 s, the sorted serial reader
+  5.95 s and the sorted eight-thread reader 4.16 s. Preparing the shared
+  spectral metadata took 116 s separately.
+- Syntax validation, `git diff --check` and all 472 tests passed.
+  The full validation job remains dependent on completed delivery.
+
 ## 2026-11-15 — verify completion after the group 0 handoff
 
 - Regular task 61332090_0 completed successfully in 1 h 01 min 46 s.

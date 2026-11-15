@@ -2,7 +2,7 @@
 """Joint application validation and targeted spectral evidence for full DECam."""
 import argparse
 from collections import Counter
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from itertools import chain
 import json
 import multiprocessing as mp
@@ -43,7 +43,7 @@ def take_rows(fields, index):
     return {k:v[index] for k,v in fields.items()}
 
 
-def draw_tile(path, targets):
+def draw_tile(path, sorted_targets):
     marker = json.loads((path/'complete.json').read_text())
     files = sorted(f for f in marker['outputs'] if f.startswith('part_'))
     inputs, spectra = [], []
@@ -55,9 +55,12 @@ def draw_tile(path, targets):
                 native['file'] = np.full(int(selection.sum()),j)
                 native['row'] = np.flatnonzero(selection)
                 inputs.append(native)
-                sex = np.isin(native['source_id'],targets)
-                if sex.any():
-                    spectra.append(take_rows(native,sex))
+                source_id = native['source_id']
+                position = np.searchsorted(sorted_targets,source_id)
+                matched = position<len(sorted_targets)
+                matched[matched] = sorted_targets[position[matched]]==source_id[matched]
+                if matched.any():
+                    spectra.append(take_rows(native,matched))
     if not inputs:
         return {},[],{}
     t = join_parts(inputs)
@@ -324,12 +327,15 @@ def main():
     targets = np.unique(np.concatenate([x['source_id'] for x in specs.values()]))
     previous, lsids = validation_history(hashes,args.group)
     samples,spectra,counts = [],[],Counter()
-    for name in names:
-        sample, matched, stats = draw_tile(PRODUCTION/Path(name).stem,targets)
-        if sample:
-            samples.append(sample)
-            spectra.extend(matched)
-            counts.update(stats)
+    paths = (PRODUCTION/Path(name).stem for name in names)
+    workers = min(8, int(os.getenv('SLURM_CPUS_PER_TASK','1')))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        # Collect in the frozen sweep order to retain roster and score ordering.
+        for sample, matched, stats in pool.map(lambda path:draw_tile(path,targets),paths):
+            if sample:
+                samples.append(sample)
+                spectra.extend(matched)
+                counts.update(stats)
     if counts['rows']!=totals['primary'] or counts['strict']!=totals['strict']:
         raise ValueError('Validation denominator does not match the production selections')
     photo,spectral = join_parts(samples),join_parts(spectra)

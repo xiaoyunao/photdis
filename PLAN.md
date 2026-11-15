@@ -40,6 +40,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    and duplicate-alias scope. This validation completed on all 23
    group-1 sweeps and found 98 primary geometric references at 2–5 kpc
    and none at 5–10 kpc. See the group evidence in the result report.
+   NERSC comparison 61334449 verified identical frozen draws, weights
+   and spectral matches on 114 sweeps after speeding up catalog reads
+   and spectral ID lookup for the pending full validation.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain
