@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — start v3.5 full DECam application
+
+- Read the full latest Pro assessment `2c2e2405` and registered the
+  complete three-part goal. Local, origin and NERSC agree at `6f04aba`.
+- Confirmed the native DR11.0 south sweep and random directories on
+  NERSC. Added the bound configuration and allocated header inventory
+  for the complete source frame and candidate pilot partitions.
+- Preserve the v3.4 release and frozen models. The reference gap that
+  matters most is the joint faint/blue and 2–10 kpc domain.
+
 ## 2026-11-15 — deliver the v3.4 near-dwarf candidate catalog
 
 - Production 61330683, 61330685, 61330694 and final 61330696 all

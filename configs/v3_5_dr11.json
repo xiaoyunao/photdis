@@ -1,0 +1,14 @@
+{
+  "sweep_root": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+  "random_root": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms",
+  "native_release": 11010,
+  "minimum_abs_galactic_latitude": 30,
+  "maximum_ebv": 0.03,
+  "maximum_observed_r": 20,
+  "maximum_grz_error_mag": 0.1,
+  "pilot_maximum_rows_per_stratum": 96,
+  "pilot_rank_seed": 350101,
+  "validation_r_edges": [0, 14, 16, 18, 19, 20],
+  "validation_color_edges": [-99, 0.2, 0.5, 0.8, 1.1, 1.4, 99],
+  "inference_batch_rows": 2048
+}

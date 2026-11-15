@@ -1,5 +1,34 @@
 # PLAN
 
+## v3.5 — complete DECam application, distant dwarf validation and a spatial measurement
+
+The [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)
+reply `2c2e2405` uses delivery `6f04aba` as the baseline. Widen the
+observable catalog and use evidence to determine how far the dwarf sample
+can be used. Preserve completed v3.4 partitions for exact reuse.
+
+1. Inventory the complete south DR11.0 sweep and survey random inputs.
+   Reuse the native DECam PSF, high-latitude, low-extinction, grz quality
+   and r<20 criteria. Establish unique Legacy source ownership and record
+   Gaia aliases separately. Pilot separated and adjacent sweeps against
+   both frozen cuts. Apply the unchanged QRF and nominal selection with
+   restartable Slurm partitions. Deliver support and evidence flags, full
+   PDF, rejected rows and random-based area accounting.
+2. Validate magnitude, color and distance together. Prioritize r=18–20,
+   dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
+   of Gaia quality and zero-point availability prior to reserving a sample.
+   Use matched spectra for physical class and distance with historical
+   exposure and missingness recorded. Quantify observational constraints
+   on distant giant leakage and the usefulness of weak Gaia measurements.
+3. Compare posterior-weighted surface distributions under both cuts in
+   0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
+   class leakage and selection sensitivity, and which measurements remain
+   defensible. Provide a catalog guide, compact evidence and English plots.
+
+Reuse all frozen model files and the v3.4 product. Exclude north BASS/MzLS.
+Paper work is paused. The final catalog stays on NERSC with checked
+partitions, a coverage denominator and an explicit validated scope.
+
 ## v3.4 — completed magnitude-limited near-dwarf candidate delivery
 
 The latest [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a),
