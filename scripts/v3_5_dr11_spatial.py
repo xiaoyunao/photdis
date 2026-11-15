@@ -15,12 +15,12 @@ from matplotlib.ticker import FuncFormatter, NullLocator
 import numpy as np
 
 from photdis.stage1 import galactic, require_compute, tile_bounds
-from v2_1_near import atomic_npz, csv_rows, load, save_json, sha
+from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_3_sed import verified
 from v3_5_dr11_area import AREA, DEPTH, NSIDE
 from v3_5_dr11_inventory import OUT
 from v3_4_near_forecast import qrf_bins
-from v3_5_dr11_pilot import LEDGER, in_tile
+from v3_5_dr11_pilot import ARCHIVE, LEDGER, in_tile
 from v3_5_dr11_production import FREEZE, INDEX, PRODUCTION, check_pdf
 
 DELIVERY = OUT/'delivery'
@@ -29,11 +29,35 @@ CUTS = ('Primary selection','Strict selection')
 REGIONS = ('all','v34_photometric_analogs','faint_blue')
 
 
-def audit_parts(dest, name, parts, status, ids, counts):
+def v34_footprint(plan):
+    archive = ARCHIVE/'complete.json'
+    marker = ROOT/'manifests/baseline_v0_prepared.json'
+    released = json.loads(verified(archive,plan['inputs'][str(archive.relative_to(ROOT))]).read_text())
+    by_field = {f['index']:f for f in json.loads(marker.read_text())['fields']}
+    fields = sorted({f for domain in released['choices']['domains'] for f in domain['fields']})
+    rectangles = []
+    inputs = {str(p.relative_to(ROOT)):sha(p) for p in (archive,marker)}
+    for f in fields:
+        path = ROOT/by_field[f]['config']
+        rectangles.append(dict(field=f,bounds_deg=json.loads(path.read_text())['bounds_deg']))
+        inputs[str(path.relative_to(ROOT))] = sha(path)
+    return dict(rectangles=rectangles,inputs=inputs)
+
+
+def in_v34_footprint(ra,dec,rectangles):
+    covered = np.zeros(len(ra),bool)
+    for field in rectangles:
+        covered |= in_tile(ra,dec,field['bounds_deg'])
+    return covered
+
+
+def audit_parts(dest, name, parts, status, ids, counts, rectangles=()):
     """Read the delivered columns and reconcile them with the parent ledger."""
     bounds = tile_bounds(name)
     offset, parent_rows = 0, []
     observed = Counter()
+    footprint = Counter(dict(rows_in_v34=0,primary_in_v34=0,analog_in_v34=0,
+                             analog_outside_v34=0,reused_outside_v34=0))
     for file in parts:
         with np.load(dest/file,allow_pickle=False) as z:
             q = {k:z[k] for k in ('TYPE','qrf_supported','primary','strict','qrf_mu_mass',
@@ -45,23 +69,32 @@ def audit_parts(dest, name, parts, status, ids, counts):
                 raise ValueError(f'Invalid distance quantiles: {name}/{file}')
             np.testing.assert_allclose(qrf_bins(q['qrf_mu_edges'],q['qrf_mu_mass']),q['qrf_bins'],
                                        atol=1e-12,rtol=0)
-            if not in_tile(z['RA'],z['DEC'],bounds).all() or not (z['photometric_system']=='DECam_DR11').all():
+            ra,dec = z['RA'],z['DEC']
+            if not in_tile(ra,dec,bounds).all() or not (z['photometric_system']=='DECam_DR11').all():
                 raise ValueError(f'Wrong sweep ownership or photometric system: {name}/{file}')
             n = len(q['TYPE'])
             for key in ('ls_id','source_id'):
                 np.testing.assert_array_equal(z[key],ids[key][offset:offset+n])
             parent_rows.append(z['parent_row'])
             offset += n
+            reused = z['reused_v34']
             observed.update(rows=n,primary=int(q['primary'].sum()),strict=int(q['strict'].sum()),
-                            reused=int(z['reused_v34'].sum()),gate=int(z['nominal_evaluated'].sum()),
+                            reused=int(reused.sum()),gate=int(z['nominal_evaluated'].sum()),
                             numerical=int(z['nominal_numerical_flag'].sum()))
+            if rectangles:
+                old = in_v34_footprint(ra,dec,rectangles)
+                analog = z['analog_v34_observable']
+                footprint.update(rows_in_v34=int(old.sum()),primary_in_v34=int((old&q['primary']).sum()),
+                                 analog_in_v34=int((analog&old).sum()),analog_outside_v34=int((analog&~old).sum()),
+                                 reused_outside_v34=int((reused&~old).sum()))
     parent = np.concatenate(parent_rows) if parent_rows else np.empty(0,dtype='i8')
     np.testing.assert_array_equal(np.sort(parent),np.flatnonzero(status==len(LEDGER)-1))
     if observed != Counter(counts):
         raise ValueError(f'Exported partition totals disagree with receipt: {name}')
+    return footprint
 
 
-def read_tile(name, plan_digest):
+def read_tile(name, plan_digest, rectangles=()):
     dest = PRODUCTION/Path(name).stem
     marker = dest/'complete.json'
     m = json.loads(marker.read_text())
@@ -80,7 +113,9 @@ def read_tile(name, plan_digest):
     np.testing.assert_allclose(space['mass'].sum(axis=2),space['selected'],atol=1e-7,rtol=0)
     if len(ids['ls_id'])!=m['counts'].get('rows',0) or len(np.unique(ids['ls_id']))!=len(ids['ls_id']):
         raise ValueError(f'Incomplete unique identity list: {name}')
-    audit_parts(dest,name,sorted(parts),status,ids,m['counts'])
+    footprint = audit_parts(dest,name,sorted(parts),status,ids,m['counts'],rectangles)
+    if rectangles:
+        space['v34_footprint_counts'] = footprint
     return m,ids,space,sha(marker),len(parts)
 
 
@@ -233,18 +268,21 @@ def main():
     a,deep = [np.bincount(area['pixel'][coverage],weights=area[k][coverage],minlength=npix)
               for k in ('area_deg2','area_r20_deg2')]
     limiting_mag,depth_digest = read_depth(coverage,area_marker,area)
+    footprint = v34_footprint(plan)
     ids,native,receipts = [],[],[]
-    totals, attrition = Counter(),Counter()
+    totals, attrition, footprint_counts = Counter(),Counter(),Counter()
     draws = np.zeros((2,3,6,npix))
     task_cpus = int(os.getenv('SLURM_CPUS_PER_TASK','8'))
     with ThreadPoolExecutor(max_workers=min(task_cpus,16)) as pool:
-        for m,x,q,h,n in pool.map(lambda name:read_tile(name,digest),names):
+        for m,x,q,h,n in pool.map(lambda name:read_tile(name,digest,footprint['rectangles']),names):
             ids.append(x['ls_id'])
             native.append(x['source_id'])
             totals.update(m['counts'])
             attrition.update(m['exclusive_counts'])
+            footprint_counts.update(q['v34_footprint_counts'])
             draws += q['mass']
-            receipts.append(dict(sweep=m['source'],receipt_sha256=h,partitions=n,**m['counts']))
+            receipts.append(dict(sweep=m['source'],receipt_sha256=h,partitions=n,**m['counts'],
+                                 **q['v34_footprint_counts']))
     merged = np.concatenate(ids)
     if len(np.unique(merged))!=len(merged) or len(merged)!=totals['rows']:
         raise ValueError('Global Legacy identities are not unique or complete')
@@ -257,6 +295,8 @@ def main():
     distinct,nmatch = np.unique(aliases,return_counts=True)
     np.testing.assert_allclose(draws[:,0].sum(axis=(1,2)),[totals['primary'],totals['strict']],atol=1e-6,rtol=0)
     DELIVERY.mkdir(parents=True,exist_ok=True)
+    save_json(DELIVERY/'v34_footprint.json',dict(**footprint,counts=footprint_counts,
+              interpretation='Original v3.4 field rectangles. Outside is a geographic label, independent of row reuse or reference history.'))
     csv_rows(DELIVERY/'sweeps.csv',receipts)
     csv_rows(DELIVERY/'angular_density.csv',angular_bins(draws,a,deep,a>0))
     csv_rows(DELIVERY/'shell_comparison.csv',shell_comparison(draws,a,deep,limiting_mag))

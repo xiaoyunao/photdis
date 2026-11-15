@@ -43,6 +43,10 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    NERSC comparison 61334449 verified identical frozen draws, weights
    and spectral matches on 114 sweeps after speeding up catalog reads
    and spectral ID lookup for the pending full validation.
+   The catalog delivers the 13 archived field rectangles with source
+   digests. Full validation reports the v3.4 observable analogs inside
+   and outside those rectangles separately from identity reuse and
+   prior reference exposure. Replay 61334884 verified both labels.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain

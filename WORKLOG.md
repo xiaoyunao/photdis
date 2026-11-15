@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-15 — separate original sky from reused rows
+
+- Added the v3.4 field rectangles and their input digests to full
+  delivery. Added per-sweep footprint counts and separate old/new sky
+  checks for the same bright-red observable sample. Catalog documentation
+  gives the coordinate rule. Existing prediction files retain their layout.
+- NERSC 61334884 verified the archive rows in all 13 rectangles and
+  audited 114 completed v3.5 sweeps. The replay found 9,092 analogs inside
+  the old rectangles and 91,863 outside. All 8,702 exact reuses were inside.
+  Group 1 retained all 5,912 original sample IDs and weights, with 401
+  observable analogs outside the old footprint and none inside.
+- The first replay harness treated a sweep with no selected rows as a
+  sample. The successful replay follows the production empty-sweep guard.
+  Syntax validation and all 472 tests passed. Full delivery will archive
+  geographic labels alongside the separate reference-history flags.
+
 ## 2026-11-15 — measure depth sensitivity on the frozen footprint
 
 - Extended `scripts/v3_5_dr11_area.py` and `scripts/v3_5_dr11_spatial.py`

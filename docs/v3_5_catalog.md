@@ -23,6 +23,12 @@
 | `qrf_supported`, `nominal_numerical_flag` | QRF 支持与名义 SED 计算质量 |
 | `analog_v34_observable`, `reused_v34` | 落在 v3.4 观测条件内、或精确复用了 v3.4 目录行。前者允许新天空，参考覆盖需要另查 |
 
+`delivery/v34_footprint.json` 提供 v3.4 使用的 13 个赤道坐标矩形及其来源。
+每个矩形的 `bounds_deg` 按 `RA 下界、DEC 下界、RA 上界、DEC 上界` 排列，
+采用左闭右开边界。按目录坐标可判断新预测是否位于原天区。`sweeps.csv`
+逐分区汇总旧范围内的预测数量和范围内外的亮红对象数量。Gaia 和光谱验证的
+对象名册同时给出原天区标记，参考历史仍按对象身份单独追踪。
+
 `parent_status.npz` 按原始 sweep 顺序保存每条记录的准入状态。`complete.json`
 中的 `exclusive_counts` 依次对应周期边界、测光版本、缺失形态、非 PSF、
 银纬与消光、r 星等、光学质量、QRF 支持和最终有预测。目录做限星等距离研究，

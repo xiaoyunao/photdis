@@ -23,11 +23,11 @@ from v3_4_near_reference_support import past_evidence, separation, spectroscopic
 from v3_4_near_validate import GAIA, OUT as V34_EVIDENCE, geometry, read_targeted, tile_inventory
 from v3_5_dr11_pilot_evidence import PRODUCT as PILOT_EVIDENCE
 from v3_5_dr11_production import CUTS, FREEZE, PRODUCTION
-from v3_5_dr11_spatial import DELIVERY, read_tile
+from v3_5_dr11_spatial import DELIVERY, in_v34_footprint, read_tile, v34_footprint
 
 OUT = PRODUCTION.parent/'validation'
 KEYS = ('ls_id','identity','source_id','TYPE','RA','DEC','observed_r','dereddened_g_r','stratum',
-        'primary','strict','qrf_bins','qrf_quantiles_kpc','reused_v34')
+        'primary','strict','qrf_bins','qrf_quantiles_kpc','reused_v34','analog_v34_observable')
 PDF_KEYS = ('qrf_mu_edges','qrf_mu_mass')
 SEED = 350419
 MIN_WEAK_SNR = 5.
@@ -184,6 +184,9 @@ def group_masks(t):
     r,c = t['observed_r'],t['dereddened_g_r']
     m = {'all':np.ones(len(r),bool),'r18_20':(r>=18)&(r<20),'color05_08':(c>=.5)&(c<.8)}
     m['r18_20_color05_08'] = m['r18_20']&m['color05_08']
+    analog, previous_sky = t['analog_v34_observable'],t['in_v34_footprint']
+    m['v34_analog_inside_original_sky'] = analog&previous_sky
+    m['v34_analog_outside_original_sky'] = analog&~previous_sky
     for a,b in ((14,16),(16,18),(18,19),(19,20)):
         for x,y in ((.2,.5),(.5,.8),(.8,1.1),(1.1,1.4)):
             m[f'r{a}_{b}_color{x:g}_{y:g}'] = (r>=a)&(r<b)&(c>=x)&(c<y)
@@ -301,7 +304,10 @@ def reference_frame(group,plan,hashes):
             raise ValueError('Validation follows the completed production manifest')
         hashes[str(catalog.relative_to(ROOT))] = sha(catalog)
         spatial = load(verified(DELIVERY/'spatial.npz',rec['outputs']['spatial.npz']))
-        return OUT,list(chain.from_iterable(plan['groups'])),spatial['ambiguous_gaia_aliases'],rec['totals']
+        key = 'v34_footprint.json'
+        footprint = json.loads(verified(DELIVERY/key,rec['outputs'][key]).read_text())
+        hashes[str((DELIVERY/key).relative_to(ROOT))] = rec['outputs'][key]
+        return OUT,list(chain.from_iterable(plan['groups'])),spatial['ambiguous_gaia_aliases'],rec['totals'],footprint
     names = plan['groups'][group]
     aliases,totals = [],Counter()
     digest = sha(FREEZE)
@@ -312,7 +318,9 @@ def reference_frame(group,plan,hashes):
         hashes[str(marker.relative_to(ROOT))] = receipt
         totals.update(rec['counts'])
     sid,n = np.unique(np.concatenate(aliases),return_counts=True)
-    return OUT.parent/f'validation_group_{group:02d}',names,sid[n>1],totals
+    footprint = v34_footprint(plan)
+    hashes.update(footprint['inputs'])
+    return OUT.parent/f'validation_group_{group:02d}',names,sid[n>1],totals,footprint
 
 
 def main():
@@ -322,7 +330,7 @@ def main():
     args = parser.parse_args()
     plan = json.loads(FREEZE.read_text())
     hashes = {str(p.relative_to(ROOT)):sha(p) for p in (FREEZE,Path(__file__),CUTS)}
-    destination,names,ambiguous,totals = reference_frame(args.group,plan,hashes)
+    destination,names,ambiguous,totals,footprint = reference_frame(args.group,plan,hashes)
     specs = acquire_spectral_metadata(hashes)
     targets = np.unique(np.concatenate([x['source_id'] for x in specs.values()]))
     previous, lsids = validation_history(hashes,args.group)
@@ -339,6 +347,9 @@ def main():
     if counts['rows']!=totals['primary'] or counts['strict']!=totals['strict']:
         raise ValueError('Validation denominator does not match the production selections')
     photo,spectral = join_parts(samples),join_parts(spectra)
+    for rows in (photo,spectral):
+        if rows:
+            rows['in_v34_footprint'] = in_v34_footprint(rows['RA'],rows['DEC'],footprint['rectangles'])
     valid = lambda t: np.where(np.isin(t['source_id'],ambiguous),0,t['source_id'])
     historical = lambda t: np.isin(t['identity'],previous)|np.isin(t['source_id'],previous[previous>0])|np.isin(t['ls_id'],lsids)
     ids = valid(photo)
@@ -369,11 +380,12 @@ def main():
         stats = stellar_statistics(spectral,specs,spectral_ids,historical(spectral),spec_good,spec_weak)
         csv_rows(destination/'targeted_spectra_joint.csv',stats)
         atomic_npz(destination/'spectra_reference_roster.npz',
-                   **{k:spectral[k] for k in ('ls_id','identity','TYPE')},
+                   **{k:spectral[k] for k in ('ls_id','identity','TYPE','in_v34_footprint','analog_v34_observable')},
                    native_source_id=spectral_ids,qualified_gaia=spec_good,weak_gaia=spec_weak)
     counts.update(gaia_usable=n_count(usable),gaia_outside_recorded_history=n_count(usable&~prior_match),
                   targeted_candidates=len(spectral.get('ls_id',[])))
-    atomic_npz(destination/'gaia_qualification_roster.npz',ls_id=photo['ls_id'],TYPE=photo['TYPE'],
+    atomic_npz(destination/'gaia_qualification_roster.npz',
+         **{k:photo[k] for k in ('ls_id','TYPE','in_v34_footprint','analog_v34_observable')},
          native_source_id=ids,qualified=usable,history=prior_match,design_weight=photo['design_weight'])
     save_json(destination/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),freeze_sha256=sha(freeze),
         all_PSF=True,production_group=args.group,counters=counts,outputs={p.name:sha(p) for p in sorted(destination.iterdir()) if p.name!='complete.json'}))
