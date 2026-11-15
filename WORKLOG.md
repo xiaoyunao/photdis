@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — collect the reference-node diagnostic and score giants early
+
+- Reference-scatter job 61321560 completed 0:0 in 16 s. Verified
+  the compact table hash. The 4,786 giants at 0.4 ≤ g−r < 0.8 have
+  1.129 mag reference-node RMS, 0.0124 mag projected g measurement/dust
+  RMS and 0.757 mag between-source center NMAD. The first quantity
+  includes the broad reference-error mixture.
+- Other-class EM converged in 24 likelihood steps on 6,881 native PSFs.
+  Giant fit already converged on 5,887. Submitted the paired conditional
+  giant development endpoint as 61321700 while the dwarf fit continued.
+- Closed-outcome Gaia intake 61320554 failed during historical
+  manifest validation. v3.1 uses explicit field/common photometry
+  filenames. The retry reads each manifest key by its actual filename.
+  No new validation outcomes have been read.
+
 ## 2026-11-15 — queue matched figures and bind the evidence freeze
 
 - Matched development figures 61321265 are queued after 61318811.

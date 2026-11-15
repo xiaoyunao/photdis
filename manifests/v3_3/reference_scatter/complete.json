@@ -1,0 +1,19 @@
+{
+  "all_PSF": true,
+  "bins": 50,
+  "inputs": {
+    "configs/v3_3_sed.json": "0f69792d9b744992dd5dac8e79b162f784d99c058fc641a3207189d1b5068b5a",
+    "scripts/v3_3_reference_scatter.py": "0000572f68608ea79203ce554418c205170cf05b7c95c31cab22088fe044a6d5",
+    "data/v3_3/sed/initial/dwarf/cloud.json": "9a73a942777d4a9fda7e29ef1a249c454a8d457f816e5a095329fe810687bbf1",
+    "data/v3_3/sed/initial/dwarf/cloud.npz": "0eec215e74ac12a062c914c93c6a5919777c1267df4b4f075641b26cd942eb9b",
+    "data/v3_3/sed/initial/giant/cloud.json": "ff2f7a89ce378b1ff49f4ef3793d84bbe9671e573bc7824701469e16edf494ae",
+    "data/v3_3/sed/initial/giant/cloud.npz": "d08f171bc461c1096eda9e5fa65790ec0f3e94d57794c217117b4fa7ddb5b34d",
+    "data/v3_3/sed/initial/other/cloud.json": "70ff61b6b8411f1178204d209b5f24674b08ce32e09819d05c719cbe84d31b68",
+    "data/v3_3/sed/initial/other/cloud.npz": "c10b6cd8cea7262744ed7f117bde0c5936fb6876d6b4843be5a7e979d87f4a5a"
+  },
+  "outputs": {
+    "by_source_color.csv": "35f955ce92e72782b3b9d0b778461ec19cf2ac340926ba281e79a36da355aca2"
+  },
+  "job": "61321560",
+  "interpretation": "Single-star reference-node RMS, projected g noise/dust RMS and center NMAD. The center NMAD also contains intrinsic locus spread and within-bin color trends."
+}

@@ -44,7 +44,9 @@ of the other labels. The first decision uses source-error-aware scores,
 conditional giant residuals and intervals, and marginal branch behavior.
 The development comparison is job `61318811`. The figure and
 matched-support report uses the exact saved development predictions
-and is queued as 61321265.
+and is queued as 61321265. Run the registered giant-conditional
+endpoint independently of the unfinished dwarf fit (61321700).
+Compare it with the corresponding rows from the assembled model.
 
 The bounded catalog uses one integer-aligned 1° × 1° window in each
 of DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
@@ -77,7 +79,10 @@ Compare native grid, posterior grid and entry-scramble variants.
 Use `scripts/v3_3_reference_scatter.py` to quantify the distance-node
 uncertainty carried by the training clouds in color and reference-source
 strata. The RMS from reference nodes, propagated flux/dust RMS and
-between-source center NMAD are distinct quantities.
+between-source center NMAD are distinct quantities. Job 61321560
+completed. The main giant color bin (0.4 ≤ g−r < 0.8, 4,786 PSFs)
+has 1.129 mag reference-node RMS and 0.0124 mag g flux/dust RMS.
+The reference-node RMS includes the calibrated broad-outlier component.
 Use `scripts/v3_3_freeze.py` after reviewing the opened comparison and
 the prospective roster. Bind that decision to model bytes, both roster
 receipts, development scores, training configuration and analysis code.

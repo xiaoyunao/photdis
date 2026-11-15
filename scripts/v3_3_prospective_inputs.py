@@ -32,7 +32,7 @@ def history():
     for path in ADDITIONAL_HISTORY:
         root = Path(path).parent
         receipt = json.loads((manifests / Path(*root.parts[1:]) / 'complete.json').read_text())
-        compact.append(verified(ROOT/path, receipt['outputs']['photometry.npz']))
+        compact.append(verified(ROOT/path, receipt['outputs'][Path(path).name]))
     identities, cells = [], []
     for path in compact:
         ids, sky = identity_position(path)
