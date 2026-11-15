@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — attach the raw SpecDis and SPDist distance inventories
+
+- Added `scripts/v3_6_vac_distances.py`. It keeps every raw VAC row,
+  distance/error and quality state, plus the original DESI pair or native
+  identity match where recoverable. SPDist positions use the matching
+  DESI primary pair. Duplicate or conflicting keys remain visible.
+- The first per-distance census distinguishes verified archive positions,
+  provisional current-catalog keys, unavailable positions and unmatched
+  sources. Current native rejection stages and selection counts follow.
+- Python syntax and focused tests of historical quality agreement, raw
+  error retention, strong/weak joins and exhaustive counts passed.
+
 ## 2026-11-15 — recover the original blue anomaly cohorts
 
 - Implemented `scripts/v3_6_blue_replay.py` to trace the original qualified
