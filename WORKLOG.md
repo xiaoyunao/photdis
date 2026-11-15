@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — prepare the all-catalog posterior comparison
+
+- `scripts/v3_6_catalog_projection.py` projects each frozen group once
+  with native PSF, receipt and exact order checks. It retains QRF shell
+  weights, medians, nominal scoring coverage, both selection flags and
+  PDF pointers for full Gaia association and observable strata.
+- Syntax and synthetic tests pass for radial mass conservation, hard
+  counts, both selection thresholds and missing nominal scores.
+
 ## 2026-11-15 — verify both blue distance cohorts and the first coverage plate
 
 - Slurm 61344223 completed in 16 min 02 s. The replay confirms 116
