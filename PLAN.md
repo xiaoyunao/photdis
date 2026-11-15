@@ -44,12 +44,31 @@ of the other labels. The first decision uses source-error-aware scores,
 conditional giant residuals and intervals, and marginal branch behavior.
 The development comparison is job `61318811`.
 
-The bounded catalog uses three half-open 1° × 1° windows in the
-existing DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
+The bounded catalog uses one integer-aligned 1° × 1° window in each
+of DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
+Within each field choose the tile with the most photometry-only
+admissions, with ties ordered by RA then Dec. The first hand-specified
+field 00 window had no qualifying rows (job 61319196).
+The corrected preparation is job 61320161.
 `configs/v3_3_catalog.json` sets the footprint and grid. Prepare the
 complete photometry-only roster from the audited v3.0 candidate input
 envelope before inference. Keep every admitted identity and the original
 optional-band states. The envelope and validation support are distinct.
+The prospective intake uses a fixed list of southern DR11 sweeps and
+checks older evaluation and fit identities, historical sky blocks, field
+configurations and known structure regions. Freeze predictions against
+the resulting previously unused Gaia-linked PSFs before signed-parallax
+outcomes. The existing DR19 request has zero native admissions, so it
+cannot supply a fresh spectroscopic score. Reuse previously opened
+spectroscopic comparisons only with their documented role.
+
+The structure application uses the existing 512-PSF NGC288 cohort.
+Fit the common distance using a broad uniform-in-modulus 2–50 kpc prior
+and compare it to the published dynamical scale after computing the
+response. The full native likelihood and prior-withdrawn per-class
+moment Gaussian use identical spatial, background and selection models.
+Compare native grid, posterior grid and entry-scramble variants.
+
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.
 

@@ -1,0 +1,12 @@
+{
+  "system": "NGC288",
+  "distance_prior_kpc": [2.0, 50.0],
+  "distance_prior": "Uniform in distance modulus",
+  "member_width_mag": 0.05,
+  "central_spatial_log_odds_sigma": 4.0,
+  "spatial_log_odds_grid": [-20.0, 20.0, 801],
+  "member_modulus_points": 281,
+  "entry_draws": 128,
+  "entry_seed": 333021,
+  "entry_check_seed": 333022
+}

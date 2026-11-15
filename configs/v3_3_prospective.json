@@ -1,0 +1,11 @@
+{
+  "sweeps": [
+    {"file": "sweep-025m045-030m040.fits", "bounds_deg": [25, -45, 30, -40]},
+    {"file": "sweep-035m045-040m040.fits", "bounds_deg": [35, -45, 40, -40]},
+    {"file": "sweep-340m045-345m040.fits", "bounds_deg": [340, -45, 345, -40]},
+    {"file": "sweep-330m045-335m040.fits", "bounds_deg": [330, -45, 335, -40]}
+  ],
+  "observed_r_edges": [16, 18, 20, 22],
+  "maximum_per_field_magnitude_cell": 128,
+  "seed": 333151
+}

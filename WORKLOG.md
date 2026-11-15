@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — implement catalog export and register independent scoring
+
+- The first catalog preparation, 61319196, failed because the hand-selected
+  field 00 window had zero qualifying rows. Preserved that result and
+  switched to a deterministic photometry-only census of one-degree tiles.
+  Resubmitted as 61320161.
+- Added catalog joint density, marginal density, near/far mass and physical
+  mode, class likelihood, grid status and frozen QRF histogram export.
+  Syntax and synthetic morphology, probability and tail checks pass.
+- Added the NGC288 shared-distance comparison, with the known dynamical
+  scale separated from the inference and identical background, spatial
+  mixture and selection. The analytic Gaussian closure and score smoke
+  checks pass. Added closed-outcome native preparation for the new Gaia
+  comparison. The previously unopened DR19 requests have zero admissions.
+- Giant fit job 61318405_1 completed 0:0 in 6 min. Dwarf continues and
+  the third fit precedes joint assembly and the first development results.
+
 ## 2026-11-15 — register bounded catalog inputs
 
 - Added the three DECam footprints, native magnitude range and extraction
