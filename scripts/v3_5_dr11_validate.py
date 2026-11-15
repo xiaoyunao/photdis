@@ -144,6 +144,15 @@ def validation_history(hashes, group):
             item = json.loads(marker.read_text())['outputs'].get('prediction.npz')
             if item is not None:
                 retain(marker.parent/'prediction.npz',item)
+    for result in sorted((OUT.parent/'evidence_replay').glob('*.json')):
+        if not result.stem.isdecimal():
+            continue
+        marker = result.with_name(result.stem+'_roster.json')
+        receipt = json.loads(marker.read_text())
+        verified(result,receipt['replay_sha256'])
+        hashes[str(marker.relative_to(ROOT))] = sha(marker)
+        hashes[str(result.relative_to(ROOT))] = receipt['replay_sha256']
+        retain(marker.with_suffix('.npz'),receipt['roster_sha256'])
     if group is None:
         for marker in sorted(OUT.parent.glob('validation_group_*/complete.json')):
             hashes[str(marker.relative_to(ROOT))] = sha(marker)

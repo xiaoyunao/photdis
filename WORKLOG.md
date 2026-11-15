@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-15 — replay the full evidence path on completed sweeps
+
+- Replay 61332404 completed in 3 min 02 s on 14 then-complete sweeps.
+  Of 35,380 primary entries, the documented probability draw held
+  2,147 sources. The Gaia match and quality intersection was 2,019.
+  Matched two targeted spectra, including one reference dwarf.
+  Production continued during the replay.
+- The primary 2–5 kpc geometry slice has 33 sources, −8.08% median
+  residual and 12.41% NMAD. There are zero primary 5–10 kpc geometry
+  references. The joint faint/blue weak Gaia slice has 336 outside
+  recorded history. Its weighted QRF score exceeds the uniform
+  distance-modulus reference by 0.7932 nats per source. This is
+  predictive evidence on the replay footprint and provides no
+  calibrated individual 2–10 kpc distance scale there.
+- Bound the compact replay evidence and added its identity roster to
+  subsequent exposure accounting. Group 0 validation 61332304 can
+  now start after either successful debug completion or successful
+  regular completion of the same group.
+
 ## 2026-11-15 — audit written partitions and recent reference exposure
 
 - Final delivery now reopens each written partition to check distance
