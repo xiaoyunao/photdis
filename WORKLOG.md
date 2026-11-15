@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-16 — release the full Gaia and LF dependency and prepare the evidence overlap
+
+- Scheduled catalog reduction 61345036 completed at 0:0 in 10 s.
+  Its summary CSV is byte-identical to the independently reduced
+  48-group table already in Git. Slurm released Gaia 61345037,
+  LF 61345237, and catalog observables 61346086.
+- Combined distance job now records the seven Gaia states on each
+  matched distance row and counts the full photometric frame against
+  the deduplicated union of source-qualified spectroscopic distances.
+  The output keeps both hard median and full posterior counts by
+  selection, distance, and observed faint-blue or bright-red domain.
+- Tested the spectra overlap and shell conservation on all 305 actual
+  frozen blue PSFs, including the one verified external match.
+- The identical-grz job 61345074 has recovered native photometry for
+  all 95,344 paired objects and is applying both frozen models.
+
 ## 2026-11-16 — complete and verify all 48 catalog projection groups
 
 - The corrected regular fallback 61350248 completed at 0:0 in 49 s.

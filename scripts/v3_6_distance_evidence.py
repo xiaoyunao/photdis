@@ -15,7 +15,7 @@ from v3_3_sed import BASE, MANIFESTS, verified
 from v3_5_dr11_validate import OUT as VALIDATION, join_parts, validation_history
 from v3_6_blue_replay import OUT as BLUE_REPLAY
 from v3_6_external_reference import OUT as EXTERNAL
-from v3_6_gaia_census import OUT as GAIA
+from v3_6_gaia_census import OUT as GAIA, STATES
 from v3_6_reference_index import OUT as INDEX
 from v3_6_vac_distances import ARCHIVE, DISTANCE_EDGES, read_columns
 from v3_6_vac_flow import OUT as VAC
@@ -27,6 +27,10 @@ COMMON = ('ls_id','identity','source_id','catalog_row','TYPE','RA','DEC','observ
           'qrf_bins','primary','strict')
 CLASSES = ('dwarf','giant','other')
 SHELLS = ('0–2','2–5','5–10','10–20','20–50','>50')
+COVERAGE_GATES = ('supported','primary','strict')
+COVERAGE_PHOTOMETRY = ('all','faint_blue','bright_red')
+COVERAGE_SCOPES = ('all_native_psf','at_least_one_qualified_spectroscopic_distance')
+RED_DOMAIN = ROOT/'configs/v3_4_near_release_domain.json'
 
 
 def class_index(paths,size,inputs):
@@ -92,22 +96,64 @@ def source(path,inputs):
     return receipt
 
 
-def geometry_rows(inputs):
+def coverage_counts(z,has_spec,domain):
+    n = len(z['ls_id'])
+    r,c = z['observed_r'],z['dereddened_g_r']
+    lo,hi = domain['observed_r']
+    a,b = domain['dereddened_g_r']
+    bright_red = ((r>=lo)&(r<hi)&(c>=a)&(c<b)&np.isin(z['band_state'][:,4],domain['w1_states']))
+    faint_blue = (r>=18)&(r<20)&(c>=.5)&(c<.8)
+    all_rows = np.ones(n,bool)
+    state = z['gaia_state']
+    hard = np.searchsorted(DISTANCE_EDGES,z['qrf_quantiles_kpc'][:,2],side='right')-1
+    shape = (len(STATES),len(SHELLS))
+    cell = np.ravel_multi_index((state,hard),shape)
+    qrf = z['qrf_bins']
+    result = np.empty((len(COVERAGE_SCOPES),len(COVERAGE_GATES),len(COVERAGE_PHOTOMETRY),*shape,2))
+    for h,scope in enumerate((all_rows,has_spec)):
+        for i,gate in enumerate((all_rows,z['primary'],z['strict'])):
+            for j,photo in enumerate((all_rows,faint_blue,bright_red)):
+                use = scope&gate&photo
+                binary = np.bincount(cell[use],minlength=np.prod(shape)).reshape(shape)
+                weighted = np.stack([np.bincount(state[use],weights=qrf[use,k],minlength=len(STATES))
+                                     for k in range(len(SHELLS))],axis=1)
+                np.testing.assert_allclose(weighted.sum(axis=1),binary.sum(axis=1),rtol=0,atol=1e-7)
+                result[h,i,j] = np.stack((binary,weighted),axis=-1)
+    return result
+
+
+def geometry_rows(inputs,has_spec):
     r = source(GAIA/'complete.json',inputs)
+    domain, = json.loads(RED_DOMAIN.read_text())['domains']
+    inputs[str(RED_DOMAIN.relative_to(ROOT))] = sha(RED_DOMAIN)
     chunks = []
+    state = np.full(len(has_spec),-1,'i1')
+    coverage = np.zeros((len(COVERAGE_SCOPES),len(COVERAGE_GATES),len(COVERAGE_PHOTOMETRY),
+                         len(STATES),len(SHELLS),2))
     for name,digest in r['child_receipts'].items():
         marker = verified(GAIA/name,digest)
         child = json.loads(marker.read_text())
         path = marker.with_suffix('.npz')
         with np.load(verified(path,child['outputs'][path.name]),allow_pickle=False) as z:
-            mask = z['gaia_state']==6
+            keys = {'TYPE','gaia_state','ls_id','catalog_row','observed_r','dereddened_g_r',
+                    'band_state','qrf_quantiles_kpc','qrf_bins','primary','strict'}
+            p = {k:z[k] for k in keys}
+            ix = p['catalog_row']
+            if np.any((ix<0)|(ix>=len(state))) or np.any(state[ix]>=0) or not (p['TYPE']=='PSF').all():
+                raise ValueError('Gaia coverage requires unique native catalog rows and verified PSF')
+            state[ix] = p['gaia_state']
+            coverage += coverage_counts(p,has_spec[ix],domain)
+            mask = p['gaia_state']==STATES.index('geometry_reference')
             if mask.any():
-                row = {key:z[key][mask] for key in (*COMMON,'reference_kpc','reference_lo_kpc',
-                                                   'reference_hi_kpc','p_corr','gaia_parallax_error')}
-                chunks.append(row)
+                for key in (*COMMON,'reference_kpc','reference_lo_kpc','reference_hi_kpc','p_corr','gaia_parallax_error'):
+                    if key not in p:
+                        p[key] = z[key]
+                chunks.append({k:v[mask] for k,v in p.items()})
     a = join_parts(chunks)
     a['high_quality'] = np.ones(len(a['ls_id']),bool)
-    return a
+    if np.any(state<0) or coverage[0,0,0,:,:,0].sum()!=len(has_spec) or coverage[1,0,0,:,:,0].sum()!=has_spec.sum():
+        raise ValueError('Gaia and spectroscopic coverage do not reconcile with the parent frame')
+    return a,state,coverage
 
 
 def vac_rows(kind,inputs):
@@ -336,11 +382,27 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     if (OUT/'complete.json').exists():
         raise FileExistsError(OUT/'complete.json')
-    cases = [('Gaia',geometry_rows(inputs)),('SpecDis',vac_rows('specdis',inputs)),
-             ('SPDist',vac_rows('spdist',inputs)),*external_rows(inputs)]
+    cases = [('SpecDis',vac_rows('specdis',inputs)),('SPDist',vac_rows('spdist',inputs)),*external_rows(inputs)]
+    has_spec = np.zeros(size,bool)
+    for _,a in cases:
+        owner = a['catalog_row']
+        if np.any((owner<0)|(owner>=size)) or not (a['TYPE']=='PSF').all():
+            raise ValueError('Spectroscopic coverage requires verified native catalog ownership')
+        qualified = a['high_quality']&np.isfinite(a['reference_kpc'])&(a['reference_kpc']>0)
+        has_spec[owner[qualified]] = True
+    geometry,gaia_state,coverage = geometry_rows(inputs,has_spec)
+    cases.insert(0,('Gaia',geometry))
+    coverage_rows = []
+    for h,i,j,k,l in np.ndindex(coverage.shape[:-1]):
+        count,mass = coverage[h,i,j,k,l]
+        coverage_rows.append(dict(scope=COVERAGE_SCOPES[h],selection=COVERAGE_GATES[i],
+            photometry=COVERAGE_PHOTOMETRY[j],gaia_state=STATES[k],qrf_shell=SHELLS[l],
+            median_count=int(count),posterior_count=mass))
+    csv_rows(OUT/'photometric_reference_coverage.csv',coverage_rows)
     all_rows,all_migration = [],[]
     for name,a in cases:
         attach(a,first,conflict,roles,training,history)
+        a['gaia_state'] = gaia_state[a['catalog_row']]
         a['reference_error_agreement'] = reference_agreement(a)
         atomic_npz(OUT/f'{name}.npz',**a)
         summary,migration = summaries(a,name)
@@ -369,7 +431,10 @@ def main():
                         'retain their published asymmetric errors, with the larger error used for '
                         'the Gaussian agreement diagnostic. Qualified intermediate gravities are '
                         'retained as other stars, with historical labels preserved. The DESI class '
-                        'roster does not require a VAC distance.'),
+                        'roster does not require a VAC distance. Photometric reference coverage '
+                        'counts each native object once across the union of source-qualified '
+                        'spectroscopic distances. It includes historical objects and preserves '
+                        'each Gaia evidence state.'),
         outputs={p.name:sha(p) for p in OUT.iterdir() if p.name!='complete.json'}))
 
 
