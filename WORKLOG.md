@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-16 — connect reference coverage to the verified catalog and selection losses
+
+- F01 now combines the full supported/primary/strict CMD counts with a
+  deduplicated distance-reference CMD. The joint source table preserves
+  reference distance, observed magnitudes and colors, class, history,
+  source roles, quality, and model/selector training overlaps.
+- The raw VAC ledger includes the archived fit/calibration/development
+  roles and separate current training flags on matched PSFs. F01 checks
+  the same match receipt before comparing raw VAC flow to source coverage.
+- The frozen raw inventories contain 158,722 and 73,716 historical
+  position-verified SpecDis matches in 2–5 and 5–10 kpc, and 154,459 and
+  58,465 SPDist matches. These counts precede both cuts and may share
+  identities. Tested the F01 counts by passing the 305 blue stars as
+  two repeated sources, then checked that the CMD retained 305 unique
+  stars and that strict retained 95. Checked the illustrated count bins
+  and the two-cut terminal stages on a small exact fixture.
+- The F04 source plots are array 61347335. The full F01 comparison waits
+  on the reference flows 61346883/61346884 and full observables 61346086.
+
 ## 2026-11-16 — display distance errors and evidence counts by observing conditions
 
 - Added source-specific F04 figures for distance, photometry, dust,

@@ -30,6 +30,7 @@ STAGES = (*UNRESOLVED, *ASSOCIATION, *(f'native_{k}' for k in COUNTS), *GATES)
 R_EDGES = (-np.inf, 16., 18., 20., 21., 22., 23., np.inf)
 COLOR_EDGES = (-np.inf, 0.35, 0.55, 0.8, 1.1, np.inf)
 CLASSES = ('unknown', 'dwarf', 'giant', 'other')
+ARCHIVE_ROLES = ('unassigned','fit','calibration','development_test','excluded')
 AXES = (DISTANCE_EDGES, R_EDGES, COLOR_EDGES)
 CUT_NAMES = ('primary', 'strict')
 
@@ -89,7 +90,14 @@ def trace(vac, matched, archive, native, parents_in_sweep, config):
     valid_class = archive['class_eligible'][row[labeled]]
     label = np.full(len(stage), -1, 'i1')
     label[labeled[valid_class]] = archive['class_label'][row[labeled[valid_class]]]
-    res = dict(class_label=label, raw_coordinates_available=position, archive_link=archived)
+    split = np.full(len(stage),-1,'i1')
+    split[labeled] = archive['split'][row[labeled]]
+    res = dict(class_label=label, archived_split=split,
+               raw_coordinates_available=position, archive_link=archived)
+    for key in ('qrf_training','selector_training'):
+        flag = np.zeros(len(stage),bool)
+        flag[supported] = matched[key]
+        res[key] = flag
     for key in ('observed_r', 'dereddened_g_r'):
         values = np.full(len(stage), np.nan, 'f4')
         values[labeled] = native[key][row[labeled]]
@@ -127,8 +135,9 @@ def summaries(vac, data, joint):
     measured = (distance, data['observed_r'], data['dereddened_g_r'])
     bins = [bin_index(x, edges) for x, edges in zip(measured, AXES)]
     if joint:
-        shape = (len(AXES[0]), len(CLASSES), len(AXES[1]), len(AXES[2]))
-        raw = np.ravel_multi_index((bins[0], data['class_label']+1, *bins[1:]), shape)
+        shape = (len(AXES[0]),len(CLASSES),len(ARCHIVE_ROLES),len(AXES[1]),len(AXES[2]))
+        raw = np.ravel_multi_index((bins[0],data['class_label']+1,data['archived_split']+1,*bins[1:]),
+                                   shape)
     else:
         shape = (len(AXES[0]),)
         raw = bins[0]
@@ -141,6 +150,8 @@ def summaries(vac, data, joint):
                  raw_coordinates_available=data['raw_coordinates_available'],
                  archived_identity=data['archive_link'],
                  historical_class_available=data['class_label']>=0,
+                 supported_qrf_training=data['qrf_training'],
+                 supported_selector_training=data['selector_training'],
                  repeated_gaia_id=vac['duplicate_source_id'])
     marginal = {k:np.bincount(inverse[valid], minlength=n) for k, valid in flags.items()}
     for cut in CUT_NAMES:
@@ -153,8 +164,9 @@ def summaries(vac, data, joint):
             row = dict(cut=cut, distance_kpc=stratum_label(AXES[0],coords[0]))
             if joint:
                 row.update(historical_class=CLASSES[coords[1]],
-                           observed_r=stratum_label(AXES[1],coords[2]),
-                           dereddened_g_r=stratum_label(AXES[2],coords[3]))
+                           baseline_v1_4_role=ARCHIVE_ROLES[coords[2]],
+                           observed_r=stratum_label(AXES[1],coords[3]),
+                           dereddened_g_r=stratum_label(AXES[2],coords[4]))
             yield dict(**row, raw_rows=int(counts[i]),
                        **{key:int(value[i]) for key,value in marginal.items()},
                        below_both_thresholds=int(overlap[i]),
@@ -184,7 +196,7 @@ def main():
     attached = load(verified(INDEX/filename,index['outputs'][filename]))
     archive_path = ARCHIVE/'references.npz'
     archive = read_columns(verified(archive_path,index['inputs'][str(archive_path.relative_to(ROOT))]),
-                           ('class_label','class_eligible'))
+                           ('class_label','class_eligible','split'))
     archive.update(match_status=attached['match_status'])
     native = native_rows(attached,native_record)
     freeze, inventory, _ = inputs()
