@@ -22,6 +22,7 @@ LF = ROOT/'data/v3_6/lf_sensitivity/report'
 DISTANCE = ROOT/'data/v3_6/distance_evidence'
 CATALOG = ROOT/'data/v3_6/catalog_observables'
 OUT = ROOT/'data/v3_6/figures/forward_validation'
+TABLE_OUT = OUT
 CUTS = ('primary','strict')
 HISTORY = 'outside_recorded_history'
 GROUPS = {'all':'All', 'r18_20':'r = 18–20', 'r18_20_blue':'Faint blue',
@@ -52,8 +53,9 @@ def read(directory,names):
 
 def deliver(fig,name,rows,inputs,caption):
     OUT.mkdir(parents=True,exist_ok=True)
+    TABLE_OUT.mkdir(parents=True,exist_ok=True)
     fields = list(dict.fromkeys(k for r in rows for k in r))
-    tab = OUT/f'{name}.csv'
+    tab = TABLE_OUT/f'{name}.csv'
     with tab.open('w',newline='') as f:
         writer = csv.DictWriter(f,fieldnames=fields,lineterminator='\n')
         writer.writeheader()
@@ -64,7 +66,7 @@ def deliver(fig,name,rows,inputs,caption):
         fig.savefig(path,dpi=300)
         files.append(path)
     plt.close(fig)
-    marker = OUT/f'{name}.json'
+    marker = TABLE_OUT/f'{name}.json'
     marker.write_text(json.dumps(dict(caption=caption,dpi=300,inputs=inputs,
         outputs={str(path.relative_to(ROOT)):sha(path) for path in files}),indent=2)+'\n')
 
@@ -218,15 +220,21 @@ def migration():
             deliver(fig,f'F09_direct_migration_{source}',rows,inputs,caption)
 
 
-def cartesian():
+def observable_histograms(*keys):
     marker = CATALOG/'complete.json'
     receipt = json.loads(marker.read_text())
     path = CATALOG/'observables.npz'
     digest = sha(path)
     if digest!=receipt['outputs'][path.name]:
-        raise ValueError('Cartesian summary differs from its receipt')
+        raise ValueError('Observable histograms differ from their receipt')
     with np.load(path,allow_pickle=False) as z:
-        data,edges = z['bright_red_cartesian'],z['cartesian_edges']
+        histograms = [z[key] for key in keys]
+    inputs = {str(marker.relative_to(ROOT)):sha(marker),str(path.relative_to(ROOT)):digest}
+    return receipt,inputs,histograms
+
+
+def cartesian():
+    receipt,inputs,(data,edges) = observable_histograms('bright_red_cartesian','cartesian_edges')
     np.testing.assert_array_equal(data[:,0].sum(axis=(1,2)),receipt['bright_red_d50_0_2'])
     rows = []
     with plt.rc_context(STYLE):
@@ -247,13 +255,57 @@ def cartesian():
                                      other_lo=edges[b],other_hi=edges[b+1],stars=int(h[a,b])))
         fig.colorbar(loc,ax=axes,shrink=.84,label='Stars per 40 pc × 40 pc bin')
         fig.suptitle('Bright red analogs · QRF median distance below 2 kpc')
-        inputs = {str(marker.relative_to(ROOT)):sha(marker),str(path.relative_to(ROOT)):digest}
         caption = ('Heliocentric projection for the frozen bright-red observable domain. The QRF '
                    'median is required to lie below 2 kpc. X points toward the Galactic center, Y '
                    'follows Galactic rotation, and Z points north. Counts use hard point assignments, '
                    'with the same count scale for both catalog cuts. The footprint and '
                    'photometric selection limit which lines of sight appear in the figure.')
         deliver(fig,'F10_near_cartesian_catalog',rows,inputs,caption)
+
+
+def probability_conflicts():
+    panels = (
+        ('nominal_qrf','Nominal SED near probability','QRF near probability'),
+        ('dwarf_qrf','Dwarf selection score','QRF near probability'),
+        ('dwarf_d50','Dwarf selection score','QRF median distance [kpc]'),
+    )
+    receipt,inputs,(q_edges,d_edges,*grids) = observable_histograms('q_edges','d_edges',
+                                                                  *(key for key,_,_ in panels))
+    cuts = ('supported',*CUTS)
+    scored = [receipt['conflict_by_selection'][cut]['nominal_scored'] for cut in cuts]
+    np.testing.assert_array_equal(grids[0].sum(axis=(1,2)),scored)
+    np.testing.assert_array_equal(grids[1].sum(axis=(1,2)),receipt['rows'])
+    np.testing.assert_array_equal(grids[2].sum(axis=(1,2))+receipt['omitted_d50_display_rows'],receipt['rows'])
+    occupied_distance = np.flatnonzero(grids[2].sum(axis=(0,1)))
+    distance_limits = d_edges[[occupied_distance[0],occupied_distance[-1]+1]]
+    rows = []
+    with plt.rc_context(STYLE):
+        fig,axes = plt.subplots(3,3,figsize=(14.2,11.2),layout='constrained')
+        scale = LogNorm(1,max(grid.max() for grid in grids))
+        for j,((key,xlabel,ylabel),grid) in enumerate(zip(panels,grids)):
+            y_edges = d_edges if key=='dwarf_d50' else q_edges
+            for i,cut in enumerate(cuts):
+                ax,h = axes[i,j],grid[i]
+                loc = ax.pcolormesh(q_edges,y_edges,np.ma.masked_equal(h.T,0),norm=scale,
+                                    cmap='viridis',rasterized=True)
+                ax.set(title=f'{cut.title()} · N={h.sum():,.0f}',ylabel=ylabel,xlim=(0,1))
+                ax.axhline(10 if key=='dwarf_d50' else .5,color=GRAY,ls='--',lw=.8)
+                if key=='dwarf_d50':
+                    ax.set(yscale='log',ylim=distance_limits)
+                if key=='nominal_qrf':
+                    ax.plot((0,1),(0,1),color=GRAY,ls=':',lw=.8)
+                if i==len(cuts)-1:
+                    ax.set_xlabel(xlabel)
+                for a,b in zip(*np.nonzero(h)):
+                    rows.append(dict(selection=cut,comparison=key,x_lo=q_edges[a],x_hi=q_edges[a+1],
+                                     y_lo=y_edges[b],y_hi=y_edges[b+1],stars=int(h[a,b])))
+        fig.colorbar(loc,ax=axes,shrink=.86,label='Stars per bin')
+        fig.suptitle('How the frozen selection redistributes near-distance assignments')
+        caption = ('All supported native PSFs or the two nested frozen selections. The left panels '
+                   'include objects with a finite nominal SED probability. The dashed lines mark '
+                   'the half-probability and 10 kpc boundaries used in the conflict counts. '
+                   'The dwarf score is a selection variable. Bin counts use a common scale.')
+        deliver(fig,'F07_catalog_probability_conflicts',rows,inputs,caption)
 
 
 def radial_estimators(rows):
@@ -352,6 +404,12 @@ def photometric_coverage():
 if __name__=='__main__':
     p = argparse.ArgumentParser(description=__doc__)
     modes = {'weak':weak,'lf':lf,'migration':migration,'cartesian':cartesian,
-             'radial':radial,'photometric_coverage':photometric_coverage}
+             'radial':radial,'probability_conflicts':probability_conflicts,
+             'photometric_coverage':photometric_coverage}
     p.add_argument('mode',choices=modes)
-    modes[p.parse_args().mode]()
+    p.add_argument('--publish',action='store_true',help='Write figures and compact tables to the tracked directories')
+    args = p.parse_args()
+    if args.publish:
+        OUT = ROOT/'figures/v3_6'
+        TABLE_OUT = ROOT/'manifests/v3_6/figures'
+    modes[args.mode]()

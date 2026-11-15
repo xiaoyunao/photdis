@@ -1,0 +1,13 @@
+{
+  "caption": "Heliocentric projection for the frozen bright-red observable domain. The QRF median is required to lie below 2 kpc. X points toward the Galactic center, Y follows Galactic rotation, and Z points north. Counts use hard point assignments, with the same count scale for both catalog cuts. The footprint and photometric selection limit which lines of sight appear in the figure.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/catalog_observables/complete.json": "ef20b947f9423cae930e12bd69e16a9988ecdaaff45cf1fd8b6dc5e65b917729",
+    "data/v3_6/catalog_observables/observables.npz": "d30ea406552c33e9d74bbda69191ee36cbdce53b53ab5aa9d9f5320f4e637745"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F10_near_cartesian_catalog.csv": "137698d110ac82de9f451a2bbbeeb700db5cc3b9734ced5b6c7cd104482b17f1",
+    "figures/v3_6/F10_near_cartesian_catalog.png": "9307d2a6b89ca872172b7e49c0a93faddfed03a95685ab2b145e30e765faf44a",
+    "figures/v3_6/F10_near_cartesian_catalog.pdf": "dace9fb24cacbdb4cf9720e811494b4e2ec326367f3b42a2f353e7b22b32ffc9"
+  }
+}

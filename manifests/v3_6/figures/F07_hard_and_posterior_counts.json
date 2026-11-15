@@ -1,0 +1,13 @@
+{
+  "caption": "Each object contributes one to the bin containing its median distance, or its posterior probability to each bin. Both calculations use the frozen QRF predictions and fixed catalog selections. A zero median count may coexist with substantial posterior mass. The six shells include the complete distant tail.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/catalog_observables/complete.json": "ef20b947f9423cae930e12bd69e16a9988ecdaaff45cf1fd8b6dc5e65b917729",
+    "data/v3_6/catalog_observables/radial_counts.csv": "27889ae978c0e11c7942473d656940811d95bbb5498286456f1a0276a97aef39"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F07_hard_and_posterior_counts.csv": "27889ae978c0e11c7942473d656940811d95bbb5498286456f1a0276a97aef39",
+    "figures/v3_6/F07_hard_and_posterior_counts.png": "184beb802bfc068d76f83e5cd4f88fc4d037fc1304bcb1abd3b83965edaa6704",
+    "figures/v3_6/F07_hard_and_posterior_counts.pdf": "bcdb26896f476adaa77f0f43aedd8dc3e9fcec26b538ba3b80743c7791b153a9"
+  }
+}

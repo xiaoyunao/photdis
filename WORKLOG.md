@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-16 — verify the six-shell catalog census and publish its figures
+
+- Slurm 61346086 completed at 0:0 in 17 seconds. Transferred the compact
+  census products and verified each SHA-256 against the completion receipt.
+  All 11,246,209 native PSFs reconcile with the six distance shells.
+- QRF median >10 kpc and QRF near probability <0.5 identify the same
+  36 primary and zero strict objects. The strict sum beyond 10 kpc
+  still equals 16,102.75 stars of posterior weight.
+- Published the counts and two-dimensional probability views in F07.
+  F10 shows the 1,143,483 primary and 989,031 strict bright-red analogs
+  assigned inside 2 kpc by the QRF median. The plots use projected positions.
+- Compiled the renderer, opened all three figures and checked 300 dpi,
+  table totals and output hashes. Gaia/LF and the consolidated reference
+  jobs are still pending. Preserve the raw histogram on NERSC.
+
 ## 2026-11-16 — prepare the remaining hard/PDF and reference-evidence views
 
 - Added F07 hard-median versus summed-PDF shell counts and F10 Gaia

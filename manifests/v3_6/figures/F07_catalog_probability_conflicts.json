@@ -1,0 +1,13 @@
+{
+  "caption": "All supported native PSFs or the two nested frozen selections. The left panels include objects with a finite nominal SED probability. The dashed lines mark the half-probability and 10 kpc boundaries used in the conflict counts. The dwarf score is a selection variable. Bin counts use a common scale.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/catalog_observables/complete.json": "ef20b947f9423cae930e12bd69e16a9988ecdaaff45cf1fd8b6dc5e65b917729",
+    "data/v3_6/catalog_observables/observables.npz": "d30ea406552c33e9d74bbda69191ee36cbdce53b53ab5aa9d9f5320f4e637745"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F07_catalog_probability_conflicts.csv": "465e4f4bdb34539c05a76444edc160751d5ed44d752abbe0bf755f5c03b2606c",
+    "figures/v3_6/F07_catalog_probability_conflicts.png": "e15c84df2b9353be564e70c50016fcfcb4b2e1e63b405dbc608fc73c902d95c1",
+    "figures/v3_6/F07_catalog_probability_conflicts.pdf": "ca778b381979522e2e203fab4436e929228512470f1ef4c82d35f734d645417b"
+  }
+}

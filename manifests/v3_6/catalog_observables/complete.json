@@ -1,0 +1,62 @@
+{
+  "job": "61346086",
+  "rows": [
+    11246209,
+    7672431,
+    4891792
+  ],
+  "nside": 16,
+  "inputs": {
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_6_catalog_observables.py": "a5f1a5869345ce0340ab304202a43bb070a846a21c88b8982b3c2007d960d697"
+  },
+  "conflict_by_selection": {
+    "supported": {
+      "rows": 11246209,
+      "nominal_scored": 7929250,
+      "qrf_d50_gt10": 590198,
+      "qrf_qnear_lt_half": 590198,
+      "either_conflict": 590198,
+      "both_conflicts": 590198,
+      "median_exactly_10": 0,
+      "qrf_qnear_exactly_half": 0
+    },
+    "primary": {
+      "rows": 7672431,
+      "nominal_scored": 7672431,
+      "qrf_d50_gt10": 36,
+      "qrf_qnear_lt_half": 36,
+      "either_conflict": 36,
+      "both_conflicts": 36,
+      "median_exactly_10": 0,
+      "qrf_qnear_exactly_half": 0
+    },
+    "strict": {
+      "rows": 4891792,
+      "nominal_scored": 4891792,
+      "qrf_d50_gt10": 0,
+      "qrf_qnear_lt_half": 0,
+      "either_conflict": 0,
+      "both_conflicts": 0,
+      "median_exactly_10": 0,
+      "qrf_qnear_exactly_half": 0
+    }
+  },
+  "omitted_d50_display_rows": [
+    0,
+    0,
+    0
+  ],
+  "bright_red_d50_0_2": [
+    1203356,
+    1143483,
+    989031
+  ],
+  "scope": "Census of original DR11 PSF predictions. Conflicts are catalog assignments rather than measured contamination.",
+  "outputs": {
+    "radial_counts.csv": "27889ae978c0e11c7942473d656940811d95bbb5498286456f1a0276a97aef39",
+    "observables.npz": "d30ea406552c33e9d74bbda69191ee36cbdce53b53ab5aa9d9f5320f4e637745",
+    "conflicts.csv": "412a4fff9e32a7a3c4e0b6c0fe2896d112bacf46acfc3dfc6c0b4b09dc374e50"
+  }
+}
