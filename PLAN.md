@@ -44,9 +44,12 @@ assembled model, nominal SED and frozen grz QRF on opened development
 identities. It keeps all admitted labeled giants and stable subsamples
 of the other labels. The first decision uses source-error-aware scores,
 conditional giant residuals and intervals, and marginal branch behavior.
-The development comparison is job `61318811`. The figure and
-matched-support report uses the exact saved development predictions
-and is queued as 61321265. Run the registered giant-conditional
+Development job `61318811` and matched report `61321265` completed.
+The report uses the same saved predictions for 3,830 native PSFs.
+The candidate's all-object marginalized Gaia gain is −0.0631 nat per
+star (95% sky-block interval −0.1736 to −0.0155). On 1,266 labeled
+giants it is +0.1358 nat. The candidate remains a research product,
+and the catalog retains the nominal and QRF controls. Run the registered giant-conditional
 endpoint independently of the unfinished dwarf fit (61321700).
 The [paired result](manifests/v3_3/giant_conditional/distance.csv)
 has 1,248 primary distance pairs. Median bias improves −5.00% to
@@ -56,7 +59,7 @@ At 20–50 kpc (770 pairs), median bias improves −6.06% to −2.02%.
 At 5–10 kpc (53 pairs), median bias worsens +100.28% to +124.50%.
 The signed Gaia contrast on 1,266 pairs is +0.0195 nat per star
 (95% sky-block interval −0.0017 to +0.0878).
-Check the corresponding rows from the assembled model.
+The assembled model reproduces the corresponding giant-conditional result.
 
 The bounded catalog uses one integer-aligned 1° × 1° window in each
 of DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
@@ -109,7 +112,9 @@ Use `scripts/v3_3_freeze.py` after reviewing the opened comparison and
 the prospective roster. Bind that decision to model bytes, both roster
 receipts, development scores, training configuration and analysis code.
 The forecast job writes and hashes each prediction before the outcome
-job reads Gaia.
+job reads Gaia. The submitted chain is freeze 61323428, forecasts 61323429,
+Gaia opening and score 61323430, catalog 61323431, structure 61323432,
+and saved-product audit 61323433.
 
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.

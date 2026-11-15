@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-15 — complete the matched development analysis and submit the frozen run
+
+- Jobs 61318811 and 61321265 completed 0:0. The full 3,830-source
+  development set retains five nominal and two candidate grid flags.
+  The candidate loses 0.0631 nat per signed Gaia pair overall and
+  gains 0.1358 nat on the labeled giant subset. Checked the four
+  English development plates and matched comparison tables.
+- Frozen decision 340eb77 runs the candidate as a research product
+  with both controls and preserves v1. Submitted 61323428–61323433
+  for freeze, forecast, score, catalog, NGC288 and output audit.
+- The published QRF binning omitted 20 near-probability values just
+  above 1 from floating-point normalization. Added a reporting-only
+  correction using the original arrays and a roundoff tolerance.
+  The initial artifacts remain available. No frozen likelihood or
+  prospective evaluation code changed.
+
 ## 2026-11-15 — authenticate the converged three-class SED assembly
 
 - The dwarf fit completed 0:0 in 26 min 50 s with 29 likelihood
