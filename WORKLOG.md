@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — prepare the stratified DR11 luminosity-function run
+
+- `scripts/v3_6_lf_sensitivity.py` defines a reproducible draw over
+  observable cells, both cuts and Galactic sky. The weights reproduce
+  the frozen cut totals. Every sampled row reopens native grz/i/WISE
+  payloads and checks Legacy ID, PSF and band availability.
+- Five scenarios share the exact native likelihood. They compare the
+  reference prior, a Galactic spatial prior, disk-rich and halo-rich
+  giant LF alternatives, and a larger supported faint-other component.
+  The giant mixture fractions are scenario assumptions. The halo radial
+  stress uses a 100 kpc smooth outer taper.
+- Syntax and mock inference verify both cuts' sampling weights, all
+  five joint-to-shell normalizations and reusable signed scoring curves.
+  Sky-block count uncertainties and real Gaia scoring follow.
+
 ## 2026-11-15 — implement the supported giant LF and line-of-sight priors
 
 - Added `scripts/v3_6_lf_priors.py` for within-giant kernel-weight

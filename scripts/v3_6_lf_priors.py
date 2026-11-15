@@ -53,7 +53,7 @@ def giant_luminosity_weights(model,slope,feh_mean,feh_sigma):
 
 
 def radial_profiles(mu,longitude,latitude,*,halo_slope=2.8,halo_flattening=.64):
-    """Densities per distance modulus along one sightline, normalized on the grid."""
+    """Densities per distance modulus, with a 100 kpc outer halo taper."""
     d = 10.**((mu-10.)/5.)
     l,b = np.deg2rad([longitude,latitude])
     z = d*np.sin(b)+.025
@@ -63,6 +63,6 @@ def radial_profiles(mu,longitude,latitude,*,halo_slope=2.8,halo_flattening=.64):
     thin = np.exp(-(r-r_sun)/2.6-np.abs(z)/.3)
     thick = .12*np.exp(-(r-r_sun)/3.6-np.abs(z)/.9)
     halo_radius = np.hypot(r,z/halo_flattening)
-    halo = (halo_radius/r_sun)**(-halo_slope)
+    halo = (halo_radius/r_sun)**(-halo_slope)*np.exp(-(halo_radius/100.)**2)
     profiles = d[None,:]**3*np.stack([thin+thick,halo])
     return profiles/(profiles@trapezoid_weights(mu))[:,None]
