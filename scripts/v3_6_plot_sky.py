@@ -35,8 +35,9 @@ def prepare(path, expected_area):
     tab = {'healpix_nested':covered,'ra_deg':ra,'dec_deg':dec,'galactic_l_deg':lon,
            'galactic_b_deg':lat,'random_area_deg2':area[covered],**bins}
     for j,cut in enumerate(('primary','strict')):
-        for k,label in enumerate(('0_2','2_5','5_10','above_10')):
+        for k,label in enumerate(('0_2','2_5','5_10','10_20','20_50','above_50')):
             tab[f'{cut}_{label}_mass'] = mass[j,0,k,covered]
+        tab[f'{cut}_above_10_mass'] = mass[j,0,3:,covered].sum(axis=1)
     return tab,bins,nside,float(mass[0,0,0,area<=0].sum())
 
 

@@ -1,0 +1,16 @@
+{
+  "caption": "Equatorial and Galactic Aitoff rotations of the same covered sky cells. For each distance shell the primary and strict densities share a color scale from the 2nd to 98th percentiles of positive pixel densities. The bottom row gives strict retention. Blank sky is outside the random-area coverage. The tail includes all probabilities beyond 10 kpc. The sensitivity table uses the same cells and gives cuts at 20% and 50% covered area and a depth split among cells with at least 20% coverage.",
+  "dpi": 300,
+  "nside": 16,
+  "depth_split_r_limiting_mag": 24.133981274977558,
+  "spatial_input_sha256": "f3f4711a7feb7a586b33c68d1f865982190d82a81edcae990d2b4a02c2364e01",
+  "delivery_receipt_sha256": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+  "plotted_cells_csv": "manifests/v3_6/figures/F06_coverage_and_near_counts.csv",
+  "outputs": {
+    "manifests/v3_6/figures/F06_shell_density_coverage_sensitivity.csv": "c2cc01aa1fd910aea86b166337e606d3cd1f1c4e2935a5312187ff1633041e9c",
+    "figures/v3_6/F06_shell_density_equatorial.png": "14035fbf3dd7e1af99fc72f20062ef87f2f9f11b7ab2eb445ce039372b3d08ce",
+    "figures/v3_6/F06_shell_density_equatorial.pdf": "66a1d5c8d561ddbf4d7e8f6f2096f6ed07411d2631643f50ad5a6211770364c5",
+    "figures/v3_6/F06_shell_density_galactic.png": "ca3eb8dd5e55fc4ad7c49a3afbf676c2c36c4a382244486833c6af987e81c3eb",
+    "figures/v3_6/F06_shell_density_galactic.pdf": "f29b2e7fb3b358d867d70a849da733b2fd02feee53c131131a27da28e17282e1"
+  }
+}

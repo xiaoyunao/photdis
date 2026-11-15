@@ -50,6 +50,12 @@ comparisons.
 Current Slurm dependencies are in WORKLOG. The 48 group projections feed
 both the probability summary and the full Gaia join. The paired-cache
 comparison feeds the shared-photometry replay.
+The blue replay now has its own native PDF, color, and coadd plate. Compare
+its fit residuals to brightness-matched references when the full Gaia
+association is available. The F06 shell and depth views already use the
+full delivered posterior masses and random area. Add density of the
+preselection frame and independent reference overlays after those jobs.
+The signed Gaia and scenario count reports follow 61345037 and 61345237.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 

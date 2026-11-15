@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — map strict-cut retention and verify all far-shell mass
+
+- F06 now shows both cut densities and strict retention in each
+  near shell and the combined far tail, in equatorial and Galactic
+  Aitoff coordinates. Both views opened after colorbar review.
+- Corrected the earlier F06 table field labeled above 10 kpc. It
+  previously contained only 10–20 kpc. The new table retains all
+  three far bins and their sum. Covered totals are 73,484.539 and
+  16,102.750 for primary and strict respectively, in posterior mass.
+- The 50% pixel area filter shifts retention by less than 0.4 percentage
+  points across near shells. The shallow and deep halves differ at
+  5–10 kpc (12.2% and 9.0%). Their footprints and populations also differ.
+- Native exclusion tasks 61344517_0 and _1 finished with exit 0.
+  The other six and the projection, VAC, and paired-cache jobs are queued.
+
 ## 2026-11-15 — inspect native blue-cohort posteriors, colors and coadds
 
 - Added the F03 full QRF histograms and both photometric scores, and
