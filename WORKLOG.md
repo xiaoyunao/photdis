@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — reconcile the first 500 sweep receipts
+
+- At 10:55 UTC, checked all 500 available receipts against the frozen
+  1,074-sweep roster, native source row counts and selection totals.
+  The receipts record 5,048,068 supported predictions, 3,459,719 primary
+  and 2,225,936 strict entries, with 57,968 exact v3.4 row reuses.
+- The 224 sweeps with no supported output retain complete native parent
+  ledgers. This check read receipt metadata. Full delivery still verifies
+  the contents and checksums of every exported partition.
+
 ## 2026-11-15 — separate original sky from reused rows
 
 - Added the v3.4 field rectangles and their input digests to full
