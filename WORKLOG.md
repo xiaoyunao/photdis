@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-16 — complete and verify all 48 catalog projection groups
+
+- The corrected regular fallback 61350248 completed at 0:0 in 49 s.
+  All 48 group memberships, frozen inputs and summary hashes agree.
+  The groups cover 1,074 distinct sweeps and 11,246,209 native PSFs.
+  Primary 7,672,431 and strict 4,891,792 exactly match frozen v3.5.
+  All median and PDF shell totals reconcile within each group.
+- Verified the original summary now has an empty Slurm dependency,
+  then retired only the pending shared-array tasks 4–47. The three
+  completed array tasks and their audited outputs are preserved.
+- Reduced the verified small summaries locally. Primary and strict
+  have 153,082 and 11,491 median assignments in 5–10 kpc. Their PDF
+  masses there are 195,029 and 20,356. Strict has zero medians beyond
+  the gate while retaining about 16,103 PDF mass there.
+- Same-native QRF evaluation 61345074 has started. The scheduled
+  summary 61345036 is eligible to run and will release the full Gaia,
+  LF sample and observed-metric aggregation jobs.
+
 ## 2026-11-16 — quantify class-specific selection survival on both full VAC references
 
 - Added F09 survival by reference distance for dwarf, giant, other and
@@ -11,6 +29,16 @@
   descriptive retention rates in the matched reference subsets.
 - The shared projection, regular fallback and remaining native
   reference shards are queued. No duplicate job was added here.
+
+## 2026-11-16 — recover the regular projection launcher after a shell initialization error
+
+- Fallback 61350052 exited at DESI environment initialization with
+  `DESI_ROOT: unbound variable`. Fixed the job wrapper to use
+  `set -eo pipefail` during environment setup and strict undefined
+  variable checking only inside the initialized worker shell.
+- Verified environment setup and its Python entry point on the login
+  node. Submitted retry 61350248 and verified the OR dependency of
+  61345036 on the retry or original shared projection array.
 
 ## 2026-11-16 — allow the approved CPU queues to finish the same frozen projection
 

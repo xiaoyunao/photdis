@@ -55,8 +55,8 @@ using the signed Gaia subcohort for forward scores and sky blocks for count
 uncertainty. The conditional population projections accompany direct reference
 comparisons.
 
-Current Slurm dependencies are in WORKLOG. The 48 group projections feed
-both the probability summary and the full Gaia join. The paired-cache
+Current Slurm dependencies are in WORKLOG. All 48 frozen group projections are verified and feed
+the probability summary and full Gaia join. The paired-cache
 comparison feeds the shared-photometry replay.
 The blue replay now has its own native PDF, color, and coadd plate. Compare
 its fit residuals to Gaia stars matched in observed magnitude and color
