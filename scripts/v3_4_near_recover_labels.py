@@ -16,12 +16,7 @@ from v3_4_near_validate import CONFIG, OUT as EVIDENCE, load_closed
 OUT = EVIDENCE.parent/'label_recovery'
 
 
-def main():
-    require_compute()
-    config = json.loads(CONFIG.read_text())
-    hashes = {str(p.relative_to(ROOT)):sha(p) for p in (CONFIG,Path(__file__))}
-    predicted, data = load_closed(hashes)
-    app = data['application']
+def archived_labels(app, hashes):
     marker = MANIFESTS/'cohorts.json'
     key = str((BASE/'references.npz').relative_to(ROOT))
     hashes[key] = json.loads(marker.read_text())['inputs'][key]
@@ -37,6 +32,16 @@ def main():
     match = (ix>=0) & ~conflict & separation(app['RA'],app['DEC'],columns['RA'][ix],columns['DEC'][ix])
     label = np.where(match,columns['class_label'][ix],-1)
     independent_role = match & ~columns['historical_fit'][ix] & np.isin(columns['role'][ix],[3,4])
+    return label, match, conflict, independent_role
+
+
+def main():
+    require_compute()
+    config = json.loads(CONFIG.read_text())
+    hashes = {str(p.relative_to(ROOT)):sha(p) for p in (CONFIG,Path(__file__))}
+    predicted, data = load_closed(hashes)
+    app = data['application']
+    label, match, conflict, independent_role = archived_labels(app, hashes)
     evidence_receipt = EVIDENCE/'complete.json'
     rec = json.loads(evidence_receipt.read_text())
     hashes[str(evidence_receipt.relative_to(ROOT))] = sha(evidence_receipt)

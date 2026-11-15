@@ -1,0 +1,12 @@
+{
+  "domains": [
+    {
+      "fields": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "observed_r": [16.0, 18.0],
+      "dereddened_g_r": [0.8, 1.4],
+      "w1_states": [2, 4]
+    }
+  ],
+  "basis": "The registered 16–18 bin has useful same-frame and archived external Gaia geometry. The two registered color cells have positive QRF minus nominal signed Gaia score in the application draw and 980 and 1,340 high-S/N geometry references over the full magnitude envelope. Weak detected W1 has no application geometry reference; retain the contaminated or unavailable state 2 and significant state 4 with their distinct band masks.",
+  "purpose": "Assess the joint support for a magnitude-limited near-dwarf candidate catalog."
+}
