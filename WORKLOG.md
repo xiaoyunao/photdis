@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — test radial selection results against imaging area and depth
+
+- Rendered F07 latitude and imaging sensitivity from the frozen full
+  QRF masses and random-covered area. The 38 table rows give matched
+  area denominators, density and retention, including the imaging
+  comparison beyond 10 kpc.
+- The 5–10 kpc retained fraction remains 10.44–10.53% when discarding
+  low-coverage cells. It is 12.2% in the shallower half and 9.0% in
+  the deeper half, which have comparable area. Distinguish this
+  observational variation from a controlled depth test.
+- Verified the four input hashes, density arithmetic, finite selection
+  rates, and viewed the 300 dpi figure. The main projection, external
+  reference association and same-star VAC jobs remain in Slurm.
+
 ## 2026-11-16 — separate common model support from current-only QRF coverage
 
 - Corrected the paired QRF summary so both models use identical stars

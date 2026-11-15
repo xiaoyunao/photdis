@@ -1,0 +1,15 @@
+{
+  "caption": "Area-weighted density from full frozen QRF posterior masses. Latitude panels use the v3.5 longitude sectors aggregated within each hemisphere. The right panels use the frozen random coverage and split usable pixels by the area-weighted median r depth. Imaging sensitivity and Galactic position covary. The plot summarizes a magnitude-limited catalog, with a shared measured imaging-area denominator for both cuts. The table preserves the combined beyond-10 kpc tail of the imaging sensitivity calculation.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_5/delivery/angular_density.csv": "39f6b80fc63e87e9e61ad4253617d74e10f5d0342edb989b3efd39f7bdb18799",
+    "manifests/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "manifests/v3_6/figures/F06_shell_density_coverage_sensitivity.csv": "c2cc01aa1fd910aea86b166337e606d3cd1f1c4e2935a5312187ff1633041e9c",
+    "manifests/v3_6/figures/F06_shell_density.json": "fef414bb45e752ca85698d97a84349371214d57c34f00904d62eb3b2782bbc88"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F07_radial_sensitivity.csv": "4a919bd7f921b766794921abf429611e4e6a75f5a9b579c4e95b61cdcdcd04e0",
+    "figures/v3_6/F07_radial_sensitivity.png": "611ce223dd0af90004e22302b90e6bf68bc22f80791a532575f59150eed61763",
+    "figures/v3_6/F07_radial_sensitivity.pdf": "d1a72eaedccae9bc245e1ed9285bb4d3fa28b6e925e5acd46026d79f0bd51921"
+  }
+}
