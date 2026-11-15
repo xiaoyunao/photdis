@@ -256,7 +256,102 @@ def cartesian():
         deliver(fig,'F10_near_cartesian_catalog',rows,inputs,caption)
 
 
+def radial_estimators(rows):
+    grid = {(r['selection'],float(r['lo_kpc'])):r for r in rows}
+    edges = sorted({float(r['lo_kpc']) for r in rows})
+    label = [f'{lo:g}–{hi:g}' if np.isfinite(hi) else f'{lo:g}+'
+             for lo,hi in zip(edges,[*edges[1:],np.inf])]
+    x = np.arange(len(edges))
+    with plt.rc_context(STYLE):
+        fig,(counts,retention) = plt.subplots(1,2,figsize=(13.9,5.5),layout='constrained')
+        for key,style,name,mark in (('median_count','--','Median bin','s'),
+                                    ('posterior_count','-','Summed PDFs','o')):
+            values = np.asarray([[float(grid[cut,lo][key]) for lo in edges] for cut in CUTS])
+            if np.any(values[1]>values[0]+1e-7):
+                raise ValueError('Strict shell counts exceed primary')
+            for i,(cut,color) in enumerate(zip(CUTS,(BLUE,ORANGE))):
+                counts.plot(x,values[i],style,c=color,marker=mark,ms=5,
+                            label=f'{cut.title()} · {name}')
+            ratio = np.divide(values[1],values[0],out=np.full(len(edges),np.nan),where=values[0]>0)
+            retention.plot(x,ratio,style,c=GREEN if key=='posterior_count' else GRAY,
+                           marker=mark,ms=5,label=name)
+        counts.set_yscale('symlog',linthresh=100)
+        counts.set(title='Catalog count in each shell',ylabel='Stars',ylim=(0,None))
+        retention.set(title='Selection retention',ylabel='Strict / primary',ylim=(0,1.05))
+        retention.yaxis.set_major_formatter(PercentFormatter(1,decimals=0))
+        for ax in (counts,retention):
+            ax.set(xticks=x,xticklabels=label,xlabel='QRF assigned distance [kpc]')
+            ax.xaxis.grid(False)
+            ax.legend(frameon=False,fontsize=10)
+    return fig
+
+
+def radial():
+    result,inputs = read(CATALOG,('radial_counts',))
+    rows = result['radial_counts']
+    caption = ('Each object contributes one to the bin containing its median distance, or its '
+               'posterior probability to each bin. Both calculations use the frozen QRF '
+               'predictions and fixed catalog selections. A zero median count may coexist with '
+               'substantial posterior mass. The six shells include the complete distant tail.')
+    deliver(radial_estimators(rows),'F07_hard_and_posterior_counts',rows,inputs,caption)
+
+
+def photometric_reference_figure(rows):
+    regions = (('all','All photometry'),('bright_red','Bright red analogs'),('faint_blue','Faint blue'))
+    states = (('No qualified astrometry',GRAY,('no_valid_native_gaia_id','dr3_key_not_found',
+                'dr3_position_mismatch','unqualified_astrometry')),
+              ('Weak signed parallax',ORANGE,('weak_signed_parallax',)),
+              ('Intermediate signed parallax',GREEN,('intermediate_signed_parallax',)),
+              ('Gaia geometry',BLUE,('geometry_reference',)))
+    grid = {(r['scope'],r['selection'],r['photometry'],r['gaia_state'],r['qrf_shell']):r for r in rows}
+    with plt.rc_context(STYLE):
+        fig,axs = plt.subplots(2,3,figsize=(15.9,8.1),layout='constrained',sharey=True)
+        x = np.arange(len(SHELLS))
+        for i,cut in enumerate(CUTS):
+            for j,(region,title) in enumerate(regions):
+                ax = axs[i,j]
+                spectra,counts = [
+                    np.asarray([[sum(int(grid[scope,cut,region,k,s]['median_count']) for k in keys)
+                                 for s in SHELLS] for _,_,keys in states])
+                    for scope in ('at_least_one_qualified_spectroscopic_distance','all_native_psf')]
+                n = counts.sum(axis=0)
+                if np.any(spectra>counts):
+                    raise ValueError('Qualified spectrum count exceeds Gaia-state frame')
+                fractions = np.divide(counts,n,out=np.zeros_like(counts,dtype=float),where=n>0)
+                bottom = np.zeros(len(n))
+                for k,(name,color,_) in enumerate(states):
+                    ax.bar(x,fractions[k],bottom=bottom,color=color,width=.61,label=name)
+                    bottom += fractions[k]
+                sn = np.divide(spectra.sum(axis=0),n,out=np.full(len(n),np.nan),where=n>0)
+                ax.scatter(x,sn,marker='D',s=24,c='black',zorder=5,label='Qualified spectrum')
+                ax.set(title=f'{cut.title()} · {title}',ylim=(0,1.01),xticks=x,
+                       xticklabels=[f'{shell}\nN={number:,}' for shell,number in zip(SHELLS,n)])
+                ax.tick_params(axis='x',labelsize=9)
+                ax.yaxis.set_major_formatter(PercentFormatter(1,decimals=0))
+                ax.xaxis.grid(False)
+                if i==1:
+                    ax.set_xlabel('QRF median distance shell [kpc]')
+        fig.supylabel('Fraction of native PSFs')
+        handles,labels = axs[0,0].get_legend_handles_labels()
+        fig.legend(handles,labels,loc='outside upper center',frameon=False,ncols=3,fontsize=10)
+    return fig
+
+
+def photometric_coverage():
+    result,inputs = read(DISTANCE,('photometric_reference_coverage',))
+    rows = result['photometric_reference_coverage']
+    caption = ('The stacked bars show mutually exclusive Gaia evidence states for the same '
+               'native PSFs. Black diamonds mark the fraction with at least one spectroscopic '
+               'distance meeting its source quality rule, and may overlap any Gaia color. '
+               'Each star with multiple spectroscopic sources counts once. The denominator is '
+               'the number assigned to each shell by the QRF median, including historical '
+               'objects. The CSV also gives posterior-weighted counts and all six shells.')
+    deliver(photometric_reference_figure(rows),'F10_photometric_reference_coverage',rows,inputs,caption)
+
+
 if __name__=='__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('mode',choices=('weak','lf','migration','cartesian'))
-    {'weak':weak,'lf':lf,'migration':migration,'cartesian':cartesian}[p.parse_args().mode]()
+    modes = {'weak':weak,'lf':lf,'migration':migration,'cartesian':cartesian,
+             'radial':radial,'photometric_coverage':photometric_coverage}
+    p.add_argument('mode',choices=modes)
+    modes[p.parse_args().mode]()

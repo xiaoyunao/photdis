@@ -1,5 +1,31 @@
 # WORKLOG
 
+## 2026-11-16 — prepare the remaining hard/PDF and reference-evidence views
+
+- Added F07 hard-median versus summed-PDF shell counts and F10 Gaia
+  evidence and deduplicated spectroscopy coverage to the existing
+  receipt-bound renderer. The F10 spectrum markers use the same
+  native PSF denominator and can overlap the Gaia categories.
+- Rendered temporary checks from the verified four-shell full-catalog
+  tables and the 305 frozen blue cases. Full F07 and F10 plates wait
+  for the actual fine-shell and evidence-overlap tables.
+- Python compile and PDF write checks passed. The pending job IDs in
+  PLAN now match the dedicated-node Gaia and LF jobs.
+
+## 2026-11-16 — route the remaining large analyses to dedicated CPU nodes
+
+- Test-only estimates for matching 1:50 and 2:40 requests favored
+  the regular CPU queue by about four hours at the time checked.
+  Moved pending Gaia 61345037 to 61350850 and LF 61345237 to
+  61350851. Both use the same frozen programs and inputs.
+- Staged the replacements on hold, verified each rewritten
+  dependent job, then released the replacements and canceled only
+  the queued predecessors. Weak Gaia 61345484 still requires
+  both analyses. No duplicate Gaia or LF computation was submitted.
+- Reduced the pending disk-based catalog observables 61346086
+  request to 6 CPUs, 8 GB and 15 minutes. Its input/output
+  paths and downstream dependencies are unchanged.
+
 ## 2026-11-16 — verify the identical-photometry comparison of both frozen QRFs
 
 - Job 61345074 completed at 0:0 in 3:53 on all 95,344 paired native PSFs.
