@@ -1,0 +1,24 @@
+{
+  "job": "61344313",
+  "reference": "spdist",
+  "inputs": {
+    "scripts/v3_6_vac_distances.py": "18a3d987b425e12761be164faf29f0a2725d2b20166bcbf407335f8fe88730d2",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/baseline_v1_4/spdist_raw.json": "e9ef92b27eeb878a6a964fdc06fc8cd6deb78b7df1ab0bb39e6c3e05d7928e51",
+    "data/baseline_v1_4/sources.json": "5196d9416fa83d9f80ba80a97a77eb1ae06ded6998c58cc142e5302957ed40d8"
+  },
+  "raw_sha256": "65b943423df93aca52a4b874f1c6355cdac89ef2a3b033eca1189ac852b0550d",
+  "inventory_rows": 6272510,
+  "statuses": [
+    "no_supported_key",
+    "ambiguous_or_duplicate",
+    "no_source_position",
+    "requires_native_position_check",
+    "verified_historical_position"
+  ],
+  "interpretation": "Raw distance rows and candidate joins. Status 3 still requires native position verification.",
+  "outputs": {
+    "vac.npz": "47412fa425a6ef1dde9774656f77484cb607fb9724e419b046a8ae9f78658a3b",
+    "inventory.csv": "e0b7435de0499073e4cea75b4fbfce5ea32981f46358787daad4f9d4d69c99da"
+  }
+}

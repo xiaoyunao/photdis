@@ -28,6 +28,11 @@ F04 now maps Gaia reference support and bias across the frozen magnitude and
 color cells. The archived expanded_A cache comparison reuses v2.0 forecasts
 on common stars. Follow it with an expanded_A replay on the current native
 photometry to distinguish input changes from model changes.
+The original blue cohorts are reproduced and documented in
+[the blue distance evidence](docs/v3_6_blue_distance_evidence.md). F06 now
+shows survey imaging coverage, depth and near counts from the frozen random
+area. Add full-catalog reference maps, both-cut shell maps and the contamination
+analysis as those associations complete.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 

@@ -1,0 +1,16 @@
+{
+  "caption": "Equatorial and Galactic Aitoff projections of the same covered HEALPix cells. Coverage and area-weighted limiting magnitude come from frozen DR11 imaging randoms. The near surface density divides summed primary QRF probability in 0\u20132 kpc by random-covered area. Cell centers represent entire footprints. Gray points represent covered pixels with missing depth or zero displayed density. Color ranges use the 2nd and 98th percentiles of positive or usable values. The table retains all three near shells and the beyond-10 kpc mass for both cuts.",
+  "dpi": 300,
+  "nside": 16,
+  "pixel_order": "nested",
+  "covered_pixels": 886,
+  "area_deg2": 6616.1216,
+  "uncovered_primary_0_2_mass": 1.0001974221420267,
+  "spatial_input_sha256": "f3f4711a7feb7a586b33c68d1f865982190d82a81edcae990d2b4a02c2364e01",
+  "delivery_receipt_sha256": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+  "outputs": {
+    "manifests/v3_6/figures/F06_coverage_and_near_counts.csv": "40921d43d8929b9967c8770371ac439ae6183412496fc11bcab187c79378a33d",
+    "figures/v3_6/F06_coverage_and_near_counts.png": "4532125cfbc1a6e9a436458bd3f66727c0c94109a7147735057f8ac55a6a3add",
+    "figures/v3_6/F06_coverage_and_near_counts.pdf": "c529d11e8a47cce0ddb0527843f8b0170b31a19e3836a285b0dda6df15efff9f"
+  }
+}

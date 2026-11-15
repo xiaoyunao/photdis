@@ -1,0 +1,8 @@
+reference_distance_lo_kpc,reference_distance_hi_kpc,raw_rows,with_uncertainty,historical_quality,no_supported_key,ambiguous_or_duplicate,no_source_position,requires_native_position_check,verified_historical_position
+-1.0,0.0,340,0,0,340,0,0,0,0
+0.0,2.0,1752024,1752024,1630518,1517020,26522,0,0,208482
+2.0,5.0,1527687,1527687,1509693,1349323,19642,0,0,158722
+5.0,10.0,580843,580843,549695,500257,6870,0,0,73716
+10.0,20.0,189539,189539,169799,159586,2184,0,0,27769
+20.0,50.0,70872,70872,61163,57120,1301,0,0,12451
+50.0,inf,19533,19533,15106,15762,291,0,0,3480

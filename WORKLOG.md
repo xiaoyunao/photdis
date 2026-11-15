@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — verify both blue distance cohorts and the first coverage plate
+
+- Slurm 61344223 completed in 16 min 02 s. The replay confirms 116
+  faint blue foreground sources (17 strict) and 189 blue 2–5 kpc
+  reference sources (148 at r=14–16, 41 at r=16–18, 78 strict).
+  One exact Gaia ID also occurs in the historical 49-source list.
+- Median source-level QRF/Gaia distance ratios are 58.45 and 0.450.
+  Every foreground source meets the descriptive low-luminosity rule.
+  None have a qualified archived spectral class. The 2–5 kpc cohort
+  has only three, and 183 of 189 QRF distances are smaller than Gaia.
+- Added F03 and its source-bound data and F06 in both sky coordinate
+  systems. F06 reproduces 6,616.12 sq deg in 886 covered cells. Both
+  English figures were visually reviewed at their saved aspect ratios.
+- Raw VAC inventories reconcile to 4,140,838 SpecDis and 6,272,510 SPDist
+  rows. Copied and verified receipts and tables. Subsequent selection and
+  native rejection tables are separate from these raw inventory counts.
+
 ## 2026-11-15 — prepare the archived same-star QRF comparison
 
 - Added `scripts/v3_6_qrf_cache_comparison.py` to link the 97,705 archived

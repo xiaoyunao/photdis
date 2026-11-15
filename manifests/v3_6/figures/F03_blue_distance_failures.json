@@ -1,0 +1,39 @@
+{
+  "caption": "Both cohorts come from the frozen v3.5 primary Gaia draw and keep every member. Gaia reference distances use the qualified zero-point-corrected parallaxes. The reference color\u2013magnitude diagram uses dereddened Legacy grz photometry. Gaia reduced proper motion uses observed G and proper motion, with no parallax in the ordinate. A low-luminosity location is evidence for a faint stellar branch and cannot establish an individual spectral class.",
+  "dpi": 300,
+  "groups": {
+    "faint_blue_near": {
+      "n": 116,
+      "strict": 17,
+      "low_luminosity_locus": 116,
+      "archived_class_known": 0,
+      "old_anomaly_gaia_match": 1,
+      "reference_median_kpc": 0.09915809705853462,
+      "qrf_median_kpc": 5.6106161931044864,
+      "median_distance_ratio": 58.445466040546144,
+      "median_reference_Mg": 15.243019558085013,
+      "median_qrf_Mg": 6.413334956028506
+    },
+    "blue_2_to_5": {
+      "n": 189,
+      "strict": 78,
+      "low_luminosity_locus": 0,
+      "archived_class_known": 3,
+      "old_anomaly_gaia_match": 0,
+      "reference_median_kpc": 2.4104976654052734,
+      "qrf_median_kpc": 1.158346797252006,
+      "median_distance_ratio": 0.44952851813643013,
+      "median_reference_Mg": 4.279294861734039,
+      "median_qrf_Mg": 6.008436592038322
+    }
+  },
+  "inputs": {
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "manifests/v3_6/blue_replay/blue_objects.csv": "0b90e1d6a571713955600e771249c1cdc43cb506e1cd8b8de0851e71a092ebae"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F03_blue_distance_failures.csv": "d3d92c34289721ca70530acaee8f586a7d25f47de014ec4694b0cea53f8b5147",
+    "figures/v3_6/F03_blue_distance_failures.png": "1bcbf4f05ed7710c200b8168f59e91b9c938237efde2bc44b6d7ef37adb100c6",
+    "figures/v3_6/F03_blue_distance_failures.pdf": "3f6b75a6e842f2d332e57a4bbe04246fc4d4be4504c5c1827b3343176ecdd6c7"
+  }
+}

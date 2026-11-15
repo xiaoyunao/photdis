@@ -1,0 +1,22 @@
+{
+  "job": "61344223",
+  "inputs": {
+    "scripts/v3_6_blue_replay.py": "d38f4765c1f73b02faf559c7a450f5d412af4c2e2034b1adfb2de9f0a93e975c",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "configs/v3_5_dr11.json": "10604c90bcd2226457267d10eff72e2f2f86502726f27ce3b152ba55b7e79cd5",
+    "data/v3_5/catalog/freeze.json": "9fa2b9b2f8f00f0e3b5f85c0c57bfd5b4efe2d1206f69ca70fdad34aef8445d0",
+    "manifests/v2_0_revision/gaia_anomalies.csv": "aa4c6ae78969db7f323f8147b5ed427b5626f7c692f798d2eb6fd283f55b5850",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "manifests/v3_0/cohorts.json": "ee40a8c201e6dacf5cf6f68a9376671df7a6183fc409185ab77e2de3df76c388",
+    "data/v3_5/validation/complete.json": "0055a3576bf0958146aa3af051782a239cf276a32693ff8d2fc3f1b3a66d1c50"
+  },
+  "counts": {
+    "blue_2_to_5": 189,
+    "faint_blue_near": 116
+  },
+  "old_gaia_overlap": 1,
+  "outputs": {
+    "blue_objects.csv": "0b90e1d6a571713955600e771249c1cdc43cb506e1cd8b8de0851e71a092ebae",
+    "blue_objects.npz": "fa31f01021ab8a5212f63e31d41e4052de446391e22eaa5e8f4a7f04af70f5af"
+  }
+}

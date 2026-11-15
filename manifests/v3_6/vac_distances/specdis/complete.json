@@ -1,0 +1,23 @@
+{
+  "job": "61344326",
+  "reference": "specdis",
+  "inputs": {
+    "scripts/v3_6_vac_distances.py": "18a3d987b425e12761be164faf29f0a2725d2b20166bcbf407335f8fe88730d2",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/baseline_v1_4/specdis_raw.json": "7d16cd4b8ac965b1c6b31e826b15229f02b8740ab81809d12b513a43208e0ddc"
+  },
+  "raw_sha256": "bf4e59a4772d555f0db413ccfdfdeb01a07dfb62e77ed47d6785efb5d88bc62b",
+  "inventory_rows": 4140838,
+  "statuses": [
+    "no_supported_key",
+    "ambiguous_or_duplicate",
+    "no_source_position",
+    "requires_native_position_check",
+    "verified_historical_position"
+  ],
+  "interpretation": "Raw distance rows and candidate joins. Status 3 still requires native position verification.",
+  "outputs": {
+    "vac.npz": "8a66698ab38e698c2f62acd442328d98fef3420acbdfaf7208c2f1b041be7611",
+    "inventory.csv": "afbc680e86905f2ade9b0a6d5cc5f8bb0fe8da08c3d04f2b403d4dc93c4da476"
+  }
+}
