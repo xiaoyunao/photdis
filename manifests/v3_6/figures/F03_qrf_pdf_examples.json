@@ -1,0 +1,13 @@
+{
+  "caption": "Illustrative cases from the two frozen blue cohorts. The agreement case minimizes the absolute modulus residual among rows within 0.1 mag whose central 68% QRF interval contains the Gaia center. The two-peak case maximizes the smaller mass within 0.25 mag of each peak, subject to separation of at least 1 mag and a clear valley. The weak-W2 case is near the median absolute residual within its W2 state. The last case has the strongest underestimate in the 2\u20135 kpc cohort with both WISE bands unusable. QRF uses grz; WISE labels describe the independently recorded photometry. These examples do not measure frequency.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "data/v3_6/inputs/blue_objects.npz": "fa31f01021ab8a5212f63e31d41e4052de446391e22eaa5e8f4a7f04af70f5af"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F03_qrf_pdf_examples.csv": "194e25a988640b382322ad52fe2e81530e20db95cbdcc6a70d2eeb52d3b2da9f",
+    "figures/v3_6/F03_qrf_pdf_examples.png": "1a20c8abc28a4d1a08e3c5da049629b5c5c76ec404f5c91f4ea90c8df25df330",
+    "figures/v3_6/F03_qrf_pdf_examples.pdf": "67a360ee949d098803075bc136876dcddf1146828ca9a544afab86488d36418c"
+  }
+}

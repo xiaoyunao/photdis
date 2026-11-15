@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — select complete QRF posterior examples from the frozen blue cohorts
+
+- Published F03 examples of Gaia agreement, two distinct peaks, a weak-W2
+  foreground failure and an underestimate with both WISE bands unusable.
+  Verified all 280 bins per star, normalization, file hashes and 300 dpi.
+- Blue cohorts have zero QRF median >10 kpc or near probability <0.5.
+  Their near-probability mismatches at the original selection thresholds
+  are recorded in `docs/v3_6_blue_distance_evidence.md`.
+- No model rerun. Full reference counts and Gaia matched controls still
+  depend on the queued Slurm work.
+
 ## 2026-11-16 — render the supported and selected catalog surface densities
 
 - Published both F06 projections from the full native catalog census and

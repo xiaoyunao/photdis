@@ -51,22 +51,24 @@ def read(directory,names):
     return result,inputs
 
 
-def deliver(fig,name,rows,inputs,caption):
-    OUT.mkdir(parents=True,exist_ok=True)
-    TABLE_OUT.mkdir(parents=True,exist_ok=True)
+def deliver(fig,name,rows,inputs,caption,*,figure_dir=None,table_dir=None):
+    figure_dir = OUT if figure_dir is None else figure_dir
+    table_dir = TABLE_OUT if table_dir is None else table_dir
+    figure_dir.mkdir(parents=True,exist_ok=True)
+    table_dir.mkdir(parents=True,exist_ok=True)
     fields = list(dict.fromkeys(k for r in rows for k in r))
-    tab = TABLE_OUT/f'{name}.csv'
+    tab = table_dir/f'{name}.csv'
     with tab.open('w',newline='') as f:
         writer = csv.DictWriter(f,fieldnames=fields,lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     files = [tab]
     for ext in ('png','pdf'):
-        path = OUT/f'{name}.{ext}'
+        path = figure_dir/f'{name}.{ext}'
         fig.savefig(path,dpi=300)
         files.append(path)
     plt.close(fig)
-    marker = TABLE_OUT/f'{name}.json'
+    marker = table_dir/f'{name}.json'
     marker.write_text(json.dumps(dict(caption=caption,dpi=300,inputs=inputs,
         outputs={str(path.relative_to(ROOT)):sha(path) for path in files}),indent=2)+'\n')
 
