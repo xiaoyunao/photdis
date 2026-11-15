@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — submit the scoped catalog and full partition replay
+
+- Added the catalog reading guide and output columns. Added a
+  delivery validator that maps all parent and sampled identities,
+  verifies numerical posterior conservation and checks the original
+  probability draw against the same fixed cuts and posterior summaries.
+- The debug quota rejected the 13-task array at submission.
+  Submitted field groups 61330683/61330685/61330694 in three
+  allocations and dependent reconciliation/replay job 61330696.
+- NERSC and GitHub matched local commit 231cf59 for these jobs.
+
 ## 2026-11-15 — identify and freeze the magnitude-limited production domain
 
 - Job 61330351 completed in 15 s. Native Gaia/Legacy aliases and

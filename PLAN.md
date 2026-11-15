@@ -65,6 +65,9 @@ See [development results and external validation design](docs/v3_4_result.md).
    dereddened g−r=[0.8,1.4), and W1 states 2 and 4 in the 13 fields.
    Retain both registered cuts and the far QRF posterior. Report weak
    parallax limitations and reference-conditional class composition.
+   Use [catalog schema and reading guide](docs/v3_4_catalog.md).
+   NERSC field groups 61330683, 61330685 and 61330694 feed catalog
+   reconciliation and frozen replay in job 61330696.
 
 The first configuration only defines census bins and the development
 sample, with the final published cuts left to the evidence. The first
