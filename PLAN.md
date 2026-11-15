@@ -37,7 +37,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    Early evidence job 61333096 uses regular production group 1, which
    reached 21/23 completed sweeps while group 0 was still queued. It uses
    the full validation rules and identifies its restricted footprint
-   and duplicate-alias scope.
+   and duplicate-alias scope. This validation completed on all 23
+   group-1 sweeps and found 98 primary geometric references at 2–5 kpc
+   and none at 5–10 kpc. See the group evidence in the result report.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain

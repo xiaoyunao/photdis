@@ -1,0 +1,517 @@
+{
+  "hashes": {
+    "data/v3_5/catalog/freeze.json": "9fa2b9b2f8f00f0e3b5f85c0c57bfd5b4efe2d1206f69ca70fdad34aef8445d0",
+    "scripts/v3_5_dr11_validate.py": "71ce10be94c0ff254ab12b822e98ffa5a3d7c991bdee207c2b1215d662138c3f",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "data/v3_5/catalog/sweep-090m070-095m065/complete.json": "dd885e0a370fac9acc45df0987a9e62f18f39c249c264ba41f4a05c38bf65da9",
+    "data/v3_5/catalog/sweep-055m040-060m035/complete.json": "7afcd1793fbb9adc1275e51cf3817fbf461d54116942947ba32c7ca1302d7c7f",
+    "data/v3_5/catalog/sweep-055m045-060m040/complete.json": "10bcbdb4dc2e6cafaea30522312d9df76503f3dc732247196e1fc29de7a7c638",
+    "data/v3_5/catalog/sweep-225m030-230m025/complete.json": "2d8cecc83edcac4feaeb12e7e57f016c29c144706079ce86b1bd1feee56986fd",
+    "data/v3_5/catalog/sweep-350m005-355p000/complete.json": "0c3b92d86a06dc0b7ed47b41b98a6e7f7c0b1146290d156f048322d2f6d1721b",
+    "data/v3_5/catalog/sweep-190m035-195m030/complete.json": "e5fccf6e3ca45f23724762c4248cc67ebb4ecea602c1817bc64a49bc3e39efc4",
+    "data/v3_5/catalog/sweep-030m055-035m050/complete.json": "a3fe781cc5f14875ab3cdf9a54c1d1cd9dff9b6e30aa96c392cf9b3d979eca22",
+    "data/v3_5/catalog/sweep-000m060-005m055/complete.json": "847a3688418f3afb03666dd0ee4b186161fd67be3bd6c23f62521b1621d436de",
+    "data/v3_5/catalog/sweep-235p005-240p010/complete.json": "4f6f325b1ac4a9b519ebc0c24d201a0ba8243799f66150c5722ca5f909aa4046",
+    "data/v3_5/catalog/sweep-330p020-335p025/complete.json": "bc0a059986f6a3aa5a7e3d65bf79224dc05bfaa787e7d7aca19cca0d1eaf6ab6",
+    "data/v3_5/catalog/sweep-325m020-330m015/complete.json": "d378d3946f23d236e937c5eaada13b2fc532a0aa949378fa48d9ccf975da0b93",
+    "data/v3_5/catalog/sweep-315m030-320m025/complete.json": "d4e0f671f315f3a852a26e27f6f897d960dc4176481de77d8a2456df59d1f06b",
+    "data/v3_5/catalog/sweep-185p015-190p020/complete.json": "41bb453695dd3b329609f950f0c668562efd71f6736bf2a369c1732fa1a72a4d",
+    "data/v3_5/catalog/sweep-180p020-185p025/complete.json": "2f37e7b1f7443d8f8f5afcfb14f0545d1383d131d14c39ad2ad1847f51380d0f",
+    "data/v3_5/catalog/sweep-340m020-345m015/complete.json": "82564395896da6da78ef74bfbbb975a895ac1f35505402543d3b2e2b8213c29d",
+    "data/v3_5/catalog/sweep-160p020-165p025/complete.json": "c09309b0f9e39652bae2847d12e8973fc2d16f3b54932c96ef1cdce71a447a1e",
+    "data/v3_5/catalog/sweep-065p000-070p005/complete.json": "b8a1ca4fadb2ffe0177f443027fead2d00ef384a1dd010de6e4c4800e79dd471",
+    "data/v3_5/catalog/sweep-030m070-035m065/complete.json": "7dc93d9865bc9f9e6c4c8c95befd30c363755810f52edc377d5983162efe3ddb",
+    "data/v3_5/catalog/sweep-040m075-045m070/complete.json": "01e6ae3d3538c1dfe8f82dd33225091034a4e1428c9f51811624281d861f4504",
+    "data/v3_5/catalog/sweep-080m085-085m080/complete.json": "8de3cfa94d0b7947bd78847dc36860e4a4d921a78bf7c6ae133e259dd8bfb800",
+    "data/v3_5/catalog/sweep-320m085-325m080/complete.json": "0195fbb2042da36dce9766443f5ea91c653ef00f64e5beb5940d135ca17c0d11",
+    "data/v3_5/catalog/sweep-270m090-275m085/complete.json": "3f99b0ed6ee564a18f9e50eb99bb728dbba4e0e235c6c4cfd4e0baad7bd8df0f",
+    "data/v3_5/catalog/sweep-135p035-140p040/complete.json": "05c0f9c3607687ed352ae231493698ac0e1cb92ee710f1df17934bbd202dc3b7",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/reference_sources/dr20_minesweeper/minesweeper_v1.2.2.fits": "65bab7406656d17d335beb69ee56bcd7499cb2130fc96b783f27ac7bb0a30b15",
+    "/pscratch/sd/y/yunao/photdis_pipeline/manifests/v3_2/reference_sources/dr19_acquisition.json": "5d189c5e5f4c9e3edc70c46da9ff489daa8501f52fe29b250fc780ee28e6f9da",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/reference_sources/dr19_astra_0.6.0/astraAllStarAstroNNdist-0.6.0.fits.gz": "50c0e49df3ab403d3ae294fff183a280a96186c2d626afe9cfdb4dc12a9ead9e",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/reference_sources/dr19_astra_0.6.0/astraAllStarASPCAP-0.6.0.fits.gz": "5324bf39baeede7553b0a3c8a50bea1760f47eb67a95a8a84e6db303aa2edb04",
+    "/pscratch/sd/y/yunao/photdis_pipeline/manifests/v3_1/external_inventory_finite_sky/complete.json": "25df28727da2df2628d83cc0a6f7c5421679bfba05af0fa37c74b906ced6409f",
+    "/global/cfs/cdirs/sdss/data/sdss/dr17/apogee/spectro/aspcap/dr17/synspec_rev1/allStar-dr17-synspec_rev1.fits": "d2f1500a9c8cc7280a0dc6a2b14fe01eddf9387f9aa83f64b21d80d5fdad4007",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/pilot_audit_v1/reference.fits": "c8216b2a7f96e12191962f9a9296aa3167f53a7e5477775fd7cf57451ce0d8e7",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v0/references.npz": "37abccebdb843c91fb1c01c0805d6265b77332eeb45138f372f5e7a416c8ef4d",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/giant_information_v1/labels.npz": "b0d2017be7faf0078161a27c9089d9e6f19d2fae1b4d4ca059a2c77521b3d109",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/reservation/photometry.npz": "5faf9123981613e967a07c3448a81c4cc68647c0f977422ce1913762a03b32a5",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/new_sky/photometry.npz": "0c9ca86d9393a2551788feb4118bd6cff0187dd7c798ef2e0f6b941e109ddb77",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/independent_scale/photometry.npz": "0074af58a0e1407726863b2e681c503942a663034512ea9ae644144ba81cd26a",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/validation_roles/common_photometry.npz": "c143c777d64e7fe72339488a414d27816246ead59350a321949da0d58226967a",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/minesweeper_native/photometry.npz": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/common_scale_inventory/photometry.npz": "2e2a588757013389e314c15ebd6e8a8898dd36aa84d4acc3517d6bfeda0139a4",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_3/prospective/inputs/photometry.npz": "983ca3b33e2d5785a2f19082f013bb22698561715b99394c88914429ffb71290",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_5/pilot_evidence/complete.json": "cbba0a022982ea99a9ca565577d5774d78b52900425ba780c68bdf4a816bda9e",
+    "data/v3_4/near_development/validation/evidence/DR19_Astra.npz": "8ad06a233e59c4a44996082c2e92e58255a18c4511e6b641d9b408ecfe2d4e62",
+    "data/v3_4/near_development/validation/evidence/DR20_APO.npz": "cdee125f68afb86f325f17d2fd7f2eba645f91327db42ea3720a55d7d6837eab",
+    "data/v3_4/near_development/validation/evidence/DR20_MINESweeper.npz": "6f77459da595e56e22b5485d7d1cc205ab16cf6a3dfea31f515369c23fa05c11",
+    "data/v3_4/near_development/validation/evidence/application.npz": "d1cf2a35576be4f08f3bb8ad263c7cafc8caff1eebd2812621b5cfab60506563",
+    "data/v3_4/near_development/validation/evidence/fresh_gaia.npz": "f76c5cba67dece3f2b16f321ffac567c12db9246f87eb47822ed6d39974ec56f",
+    "data/v3_5/pilot/sweep-010m045-015m040/prediction.npz": "85e5b3ee08ea5df75468514939b40a502c4466698627bdc535f19f1b6d064751",
+    "data/v3_5/pilot/sweep-015m045-020m040/prediction.npz": "55be6e192470e05433ad579e266b397cb771c66da355f2f662be9d01e5b5911d",
+    "data/v3_5/pilot/sweep-175p020-180p025/prediction.npz": "ed20e92047ee64afd2915b306558f53200ad09124bef254a97d9e072e1265aa2",
+    "data/v3_5/pilot/sweep-350m045-355m040/prediction.npz": "73d5c6108ca18b915fac4ce5b0e0d416f0f7215073c7affaaee404d6ece32cdb",
+    "data/v3_5/evidence_replay/61332404_roster.json": "ed158486f07e887a1a746a16b1f274318510c687b0b398a709de3531a4218a9f",
+    "data/v3_5/evidence_replay/61332404.json": "4505ef014562cbf63085d68ba3aa883a4b189d190c408156b6ca1581a9026d31",
+    "data/v3_5/evidence_replay/61332404_roster.npz": "f9434519abe34fc8acd528d1364a577ae92546e67ac90fc0ae634714773257a3"
+  },
+  "gaia_tiles": {
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01268.fits": [
+      8625600,
+      1708470632000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01269.fits": [
+      8236800,
+      1708470633000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01281.fits": [
+      6148800,
+      1708470634000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01284.fits": [
+      6073920,
+      1708470634000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01285.fits": [
+      5990400,
+      1708470634000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01286.fits": [
+      5976000,
+      1708470634000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-01287.fits": [
+      5785920,
+      1708470634000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04259.fits": [
+      8997120,
+      1708471161000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04262.fits": [
+      8904960,
+      1708471162000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04264.fits": [
+      10111680,
+      1708471162000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04265.fits": [
+      9158400,
+      1708471162000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04266.fits": [
+      10261440,
+      1708471163000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04267.fits": [
+      9532800,
+      1708471163000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04268.fits": [
+      9040320,
+      1708471163000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04270.fits": [
+      9532800,
+      1708471163000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04689.fits": [
+      7153920,
+      1708471206000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-04691.fits": [
+      7439040,
+      1708471206000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-06986.fits": [
+      6609600,
+      1708471530000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-06987.fits": [
+      6641280,
+      1708471530000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-06990.fits": [
+      7007040,
+      1708471531000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07008.fits": [
+      6701760,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07009.fits": [
+      6724800,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07010.fits": [
+      6586560,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07011.fits": [
+      6442560,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07012.fits": [
+      6624000,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07013.fits": [
+      7044480,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07014.fits": [
+      6727680,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07015.fits": [
+      6200640,
+      1708471532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07017.fits": [
+      6468480,
+      1708471533000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07018.fits": [
+      6094080,
+      1708471533000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07019.fits": [
+      5952960,
+      1708471533000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07020.fits": [
+      6333120,
+      1708471533000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07022.fits": [
+      6030720,
+      1708471533000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07023.fits": [
+      5929920,
+      1708471536000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07078.fits": [
+      6287040,
+      1708471539000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07079.fits": [
+      5918400,
+      1708471539000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07081.fits": [
+      6036480,
+      1708471540000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07083.fits": [
+      6327360,
+      1708471540000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07084.fits": [
+      6024960,
+      1708471540000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07085.fits": [
+      5921280,
+      1708471540000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07086.fits": [
+      6197760,
+      1708471540000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07087.fits": [
+      5978880,
+      1708471541000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07096.fits": [
+      5866560,
+      1708471541000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07098.fits": [
+      5938560,
+      1708471541000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07104.fits": [
+      6102720,
+      1708471541000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07105.fits": [
+      6226560,
+      1708471541000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07107.fits": [
+      6315840,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07108.fits": [
+      5777280,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07109.fits": [
+      5849280,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07110.fits": [
+      5990400,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07111.fits": [
+      5938560,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07116.fits": [
+      6269760,
+      1708471542000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07869.fits": [
+      17876160,
+      1708472320000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08249.fits": [
+      15261120,
+      1708472422000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08251.fits": [
+      14129280,
+      1708472422000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08252.fits": [
+      14385600,
+      1708472422000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08254.fits": [
+      13556160,
+      1708472423000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08336.fits": [
+      15249600,
+      1708472448000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08337.fits": [
+      13403520,
+      1708472448000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08338.fits": [
+      14402880,
+      1708472450000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08339.fits": [
+      12574080,
+      1708472449000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08342.fits": [
+      12216960,
+      1708472450000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08345.fits": [
+      11885760,
+      1708472451000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08347.fits": [
+      11427840,
+      1708472452000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08348.fits": [
+      11358720,
+      1708472452000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08383.fits": [
+      8953920,
+      1708472474000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08425.fits": [
+      8602560,
+      1708472477000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08426.fits": [
+      8533440,
+      1708472479000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08427.fits": [
+      8406720,
+      1708472479000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08430.fits": [
+      8205120,
+      1708472478000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08589.fits": [
+      8904960,
+      1708472497000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08590.fits": [
+      8550720,
+      1708472498000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08591.fits": [
+      8490240,
+      1708472498000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08600.fits": [
+      8760960,
+      1708472498000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08601.fits": [
+      8795520,
+      1708472499000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08602.fits": [
+      8400960,
+      1708472499000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08603.fits": [
+      8570880,
+      1708472499000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08606.fits": [
+      8562240,
+      1708472499000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08613.fits": [
+      8055360,
+      1708472499000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08624.fits": [
+      8182080,
+      1708472501000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08625.fits": [
+      8438400,
+      1708472501000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08626.fits": [
+      7945920,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08627.fits": [
+      8124480,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08628.fits": [
+      8605440,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08629.fits": [
+      8464320,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08630.fits": [
+      8112960,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08631.fits": [
+      8182080,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08633.fits": [
+      8020800,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08636.fits": [
+      8069760,
+      1708472502000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08714.fits": [
+      11318400,
+      1708472509000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08715.fits": [
+      10532160,
+      1708472510000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08736.fits": [
+      11085120,
+      1708472512000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08737.fits": [
+      10304640,
+      1708472512000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08738.fits": [
+      10437120,
+      1708472512000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08739.fits": [
+      9829440,
+      1708472512000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08744.fits": [
+      10080000,
+      1708472513000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08745.fits": [
+      9429120,
+      1708472512000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08746.fits": [
+      9884160,
+      1708472514000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08768.fits": [
+      8274240,
+      1708472514000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08769.fits": [
+      8274240,
+      1708472515000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08770.fits": [
+      8069760,
+      1708472515000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08771.fits": [
+      8012160,
+      1708472515000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08772.fits": [
+      7983360,
+      1708472515000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12120.fits": [
+      13878720,
+      1708473790000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12121.fits": [
+      13294080,
+      1708473790000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12122.fits": [
+      14935680,
+      1708473790000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12123.fits": [
+      13752000,
+      1708473790000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12133.fits": [
+      16539840,
+      1708473791000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12144.fits": [
+      15966720,
+      1708473794000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-12146.fits": [
+      16611840,
+      1708473793000000000
+    ]
+  },
+  "rows": {
+    "rows": 135559,
+    "sampled": 5912,
+    "strict": 86978
+  },
+  "spectral_n": 0,
+  "reference_prior_mu": [
+    5.0,
+    16.505149978319906
+  ]
+}

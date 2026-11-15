@@ -1,0 +1,19 @@
+{
+  "job": "61333096",
+  "freeze_sha256": "55f2733223d9c1edb17fc68bc4109c87fe8a18e12f796a0a6e39deb90c77baa1",
+  "all_PSF": true,
+  "production_group": 1,
+  "counters": {
+    "rows": 135559,
+    "sampled": 5912,
+    "strict": 86978,
+    "gaia_usable": 5575,
+    "gaia_outside_recorded_history": 5363,
+    "targeted_candidates": 0
+  },
+  "outputs": {
+    "freeze.json": "55f2733223d9c1edb17fc68bc4109c87fe8a18e12f796a0a6e39deb90c77baa1",
+    "gaia_joint.csv": "94ae74ac9c762a165a87b20f01f63b13bd167dc6c2c250e1106ba2378e879beb",
+    "gaia_qualification_roster.npz": "080da53b8857875e1e1c96454d3002daf8f901795bb859c89931db29368df611"
+  }
+}

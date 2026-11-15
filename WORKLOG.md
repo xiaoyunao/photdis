@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — complete reference validation for regular production group 1
+
+- Regular group 61332090_1 completed all 23 sweeps in 39 min 24 s.
+  Validation 61333096 completed in 3 min 31 s. Verified its output
+  hashes and archived the compact receipt, freeze and joint table.
+- The group has 135,559 primary and 86,978 strict sources. The
+  5,912-source draw yielded 5,575 qualified Gaia associations,
+  with 5,363 outside recorded history. No targeted spectra matched
+  the actual selected sources in this group.
+- At 2–5 kpc the primary geometry sample has 98 references, −10.71%
+  median residual and 12.07% NMAD. Strict has 17, −6.18% and 10.27%
+  on its own selected references. Neither has 5–10 kpc geometry.
+- In the primary joint faint/blue slice, QRF gains 0.761 nats per
+  source against the uniform-modulus prior on 1,161 weak Gaia
+  measurements outside recorded history. The joint slice has no
+  distant geometry references. Its shell bounds remain wide.
+
 ## 2026-11-15 — start the early reference stage with the leading regular group
 
 - Verified 102 completed sweeps and six live regular groups. Group 1
