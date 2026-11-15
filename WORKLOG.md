@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-15 — choose the validation workpoints from the matched comparison
+
+- Comparison job 61328789 completed 0:0 in 11 minutes for 17,787 application
+  and 6,589 reference-development identities. Compact receipts and tables are
+  in `manifests/v3_4/near_development/comparison`.
+- Of 2,947 common primary reference dwarfs, QRF has −0.27% median bias
+  and 9.18% NMAD. Nominal SED and v3.3 give 9.59% and 9.81% NMAD.
+  QRF also has the best paired mean signed Gaia log score at both cuts.
+- Primary and strict cuts leave 13 and 3 secure far giants among their
+  opened targeted matches. The status of unmatched and unclassified sources
+  remains unresolved. In the weighted application predictions, the fraction
+  of QRF near mass inside 2 kpc shifts from 72.8% to 90.2%.
+- Metadata pool job 61329236 completed 0:0. The application probability draw
+  includes 884 unused Gaia identities. All 218 targeted APO metadata matches
+  have historical evidence exposure. No new outcomes read.
+- Register QRF and both shared observational cuts for validation. The roster
+  keeps a stratified probability draw from the 86,359 unused Gaia identities
+  alongside the original application draw and the targeted reference cohorts.
+  Validation-roster Python compiles and Slurm script shell syntax passes.
+
 ## 2026-11-15 — verify closed reference coverage and prepare a same-frame Gaia reserve
 
 - Metadata job 61328957 completed 0:0 in 2 min 37 s. The exact

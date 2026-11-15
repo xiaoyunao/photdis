@@ -1,0 +1,32 @@
+{
+  "job": "61328789",
+  "n": 24376,
+  "application_n": 17787,
+  "opened_n": 6589,
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "inputs": {
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "configs/v3_4_near_development.json": "470f11bcb3e8c6b0148d40c8cf0c2ccb6a5f3ea04514df7fb3aae46190b138ce",
+    "data/v3_4/near_development/inputs/complete.json": "ab7a2b8d2522df7422601dcc264dab382038d9f01b3b7202417083a9d7a87eb6",
+    "data/v3_4/near_development/inputs/photometry.npz": "da71dc5a281980188b05f5d8293784fce3ff0e12ba8d7307453118da712e2f73",
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_3/sed/initial/model.joblib": "0209bdcbca22df495e531794df85a20e48ea75cf7946222fb8c228582522ee84",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "scripts/v3_4_near_development.py": "97f8307e6fba5f82cfff19f697d8ab6a8cab331b72f7c1fa9b962c5866645e03"
+  },
+  "outputs": {
+    "candidate.npz": "4c64484e59bc573b1b915bbd4ad91aeb2d94a0ac6d4508ed7c5b2ba093f3a582",
+    "distance_distributions.csv": "3b46f6ca750a82e540df8837400f0cf114f3c7083c04a0ac70b78c6cf8db11e3",
+    "matched_distances.csv": "ce0b35d7a0c7a03c994c40e45b2677598de690dbf0f3cb95c7aa047cf75bdfea",
+    "nominal.npz": "b2c07ca5318bc3c0c80052ed26f1e6b4cc7f0a1737e0e25aa976d0c41434c260",
+    "qrf.npz": "aa7d7894d11dc0f9bd48fcd7167fe770fb4701348dea346c444685e2f070d59e",
+    "reference_composition.csv": "241bf75f57f8787269c6bb0540647a90692b56341b7faa215f51db8140b8491f",
+    "roster.npz": "170134f14438ee47fb3c91cfb2c1324df63b088f47dde38fb9af766faa52a5b6"
+  },
+  "interpretation": "Development comparison. QRF class weights include unknown labels. Reference counts describe the separately identified opened comparison cohort. Giant distance split uses the calibrated reference core 95% interval."
+}

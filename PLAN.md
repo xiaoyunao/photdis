@@ -17,7 +17,7 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    Apply the same observational eligibility to a separate opened
    reference cohort and retain zero application weights on those rows.
    Keep any application contamination claim tied to its own evidence.
-   Matched comparison 61328789 is submitted. Historical Gaia and
+   Matched comparison 61328789 completed on 24,376 identities. Historical Gaia and
    spectroscopy products can support separate diagnostic checks. The
    historical 3,250-source reserve yielded zero qualifying references.
    Inventory prospective alternatives against the actual selected
@@ -29,10 +29,14 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    one outside prior evidence. It also found 86,359 uniquely linked
    Gaia identities outside prior evidence. Preserve that same-frame
    Gaia pool and link it to the 17,787-source probability draw.
-   Check the APO subset of DR20 metadata for additional leverage.
+   The application probability draw intersects 884 unused Gaia identities.
+   The APO subset adds 218 targeted matches, all with historical exposure.
    Spectrum counts and Gaia-link counts precede scientific qualification.
 2. Select an observable working point and a stricter sensitivity contrast
-   using opened development evidence. Lock the model, selection,
+   using opened development evidence. The common-cut comparison chose the
+   frozen QRF for external confirmation. Register both cuts with the frozen
+   grz dwarf score and nominal SED near probability. The stricter cut
+   substantially shifts the distance composition. Lock the model, selection,
    validation rules and independent evidence before opening any new
    outcomes. Quantify dwarf distance errors, nearby giant inclusion,
    distant giant leakage into the near sample and unresolved evidence.

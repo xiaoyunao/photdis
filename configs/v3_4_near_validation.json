@@ -1,0 +1,15 @@
+{
+  "research_distance_model": "qrf",
+  "dwarf_score": "frozen_v3_0_grz_probe",
+  "near_gate_model": "nominal",
+  "primary": {"minimum_dwarf_score": 0.80, "minimum_near_probability": 0.90},
+  "strict": {"minimum_dwarf_score": 0.95, "minimum_near_probability": 0.97},
+  "near_kpc": 10.0,
+  "gaia_geometry_minimum_snr": 10.0,
+  "geometry_sigma_multiplier": 1.96,
+  "fresh_gaia_cap_per_field_cell": 12,
+  "fresh_gaia_sample_salt": 340159,
+  "decision_basis": "At both common development cuts QRF has the smallest absolute dwarf median bias, the broadest dwarf 68 percent reference agreement, and the best mean signed Gaia score on the all-label and dwarf cohorts. The strict selection changes the radial composition, so retain both as registered observational samples.",
+  "inference_scope": "Existing 13-field native DECam application envelope. Publishable magnitude, color and sky domains require external evidence. The present file defines validation workpoints and does not establish a release domain.",
+  "missing_evidence": "Quantify in the weighted probability sample. Report lower and upper bounds with unidentified labels unresolved. Targeted reference fractions describe targeted matches."
+}
