@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — refine eight signed Gaia scores on the frozen grid
+
+- Job 61324097 completed 0:0 in 18 s. Refined seven candidate and
+  one nominal source/model pairs whose coarsening differences
+  exceeded 0.02 nat. The signed Gaia mean delta moves from −0.04975
+  to −0.04994 nat. Retain the original and the higher-resolution
+  sidecar. Two candidate refinements still shift over 0.02 nat.
+- Added the comparison plate links and reproduction details to the
+  main report. The 512-PSF NGC288 job 61323432 is running and the
+  final delivery audit is still attached by dependency.
+
 ## 2026-11-15 — verify all nine catalog outputs and quantify numerical sensitivity
 
 - Catalog 61323431 completed 0:0 in 3 min 49 s. The authenticated

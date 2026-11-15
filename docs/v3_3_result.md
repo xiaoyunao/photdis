@@ -2,7 +2,7 @@
 
 v3.3 复用 Legacy Survey DR11 原生带通、有符号通量及测量协方差，在现有经验 SED 混合族内按参考类别分配 128 个核。双星、缺测波段、尘埃和参考距离节点的处理沿用冻结实现。训练容量分为矮星、巨星、其余恒星 64/32/32 核，实际训练源为 20,000/5,887/6,881。巨星使用全部合格样本，其中 5,654 个来自 SpecDis。矮星和其余恒星用固定身份顺序抽样，入选概率保存在训练云。推断时的名义类别频率为 0.800268/0.027752/0.171980。开发条件诊断可给定参考类别，目录和结构推断对类别积分。训练支持见[参考样本统计](../manifests/v3_3/reference_support/by_class_source.csv)和[模型收据](../manifests/v3_3/fit_initial/complete.json)。
 
-参考距离误差在训练中按节点传播。巨星主色区（0.4 ≤ g−r < 0.8） 有 4,786 个源，参考节点误差 RMS 为 1.129 mag，包含宽尾参考误差分量。传播的 g 波段测光与尘埃误差 RMS 为 0.0124 mag，同箱参考中心 NMAD 为 0.757 mag。同箱散布包含光度关系自身的宽度和箱内颜色趋势。见[参考误差分解](../manifests/v3_3/reference_scatter/by_source_color.csv)。
+参考距离误差在训练中按节点传播。巨星主色区（0.4 ≤ g−r < 0.8）有 4,786 个源，参考节点误差 RMS 为 1.129 mag，包含宽尾参考误差分量。传播的 g 波段测光与尘埃误差 RMS 为 0.0124 mag，同箱参考中心 NMAD 为 0.757 mag。同箱散布包含光度关系自身的宽度和箱内颜色趋势。见[参考误差分解](../manifests/v3_3/reference_scatter/by_source_color.csv)。
 
 ## 已打开开发样本
 
@@ -38,7 +38,7 @@ v3.3 复用 Legacy Survey DR11 原生带通、有符号通量及测量协方差�
 | 名义 SED，视差信噪比 ≥ 5 | 488 | −0.1306 | [−0.3073, +0.0520] |
 | 名义 SED，视差信噪比 < 5 | 724 | +0.0047 | [−0.0091, +0.0183] |
 
-16–18、18–20、20–22 星等段，与名义 SED 的分差分别为 +0.0639、−0.1686、−0.0523。可用弱 W1 只有 2 个源。该组缺少新独立的巨星标签和远端绝对距离，支持带符号视差检验及其样本范围内的结论。前瞻参考样本由 Gaia 可用性选择，目录总体近端污染率未被独立估计。[冻结清单](../manifests/v3_3/model_freeze.json) · [前瞻配对评分](../manifests/v3_3/prospective/score/paired_scores.csv)
+16–18、18–20、20–22 星等段，与名义 SED 的分差分别为 +0.0639、−0.1686、−0.0523。可用弱 W1 只有 2 个源。该组缺少新独立的巨星标签和远端绝对距离，支持带符号视差检验及其样本范围内的结论。前瞻参考样本由 Gaia 可用性选择，目录总体近端污染率未被独立估计。原网格与副网格的差异超过 0.02 nat 的共有 7 个候选和 1 个名义预测。只用冻结模型及已记录的视差在更细网格复算，这些行生成单独结果，平均分差从 −0.04975 到 −0.04994 nat。[冻结清单](../manifests/v3_3/model_freeze.json) · [前瞻配对评分](../manifests/v3_3/prospective/score/paired_scores.csv)
 
 ## 有界目录的样本和格式
 
@@ -60,3 +60,12 @@ QRF 的 5,341 个源都处于其名义支持内，近端期望数为 4,854.79。
 ## NGC288 的评分设计
 
 复用 512 个单独核实的光测 PSF，在共同距离 2–50 kpc 的距离模数均匀先验下估计团距离。两种估计使用相同的星表、角距空间权重、背景距离混合及光测选择归一化。全方法对类别条件通量似然积分。高斯摘要每类保留参考先验下的证据及前两阶矩，并撤去相同参考先验。动态尺度在写出光测响应后用于评分。这里是已研究系统上的一次留出尺度比较，统计区间条件于这一个 SED 响应和固定结构模型。[结构配置](../configs/v3_3_structure.json) · [动力学标尺来源](../configs/v3_0_independent_scale.json)
+
+## 主图与复现入口
+
+- 巨星距离与残差。左列给定参考类别，右列对类别积分。[PNG](../figures/v3_3/development/giant_distance.png) · [PDF](../figures/v3_3/development/giant_distance.pdf)
+- CMD 与颜色空间的残差、近端概率及区间宽度。[PNG](../figures/v3_3/development/color_distance_diagnostics.png) · [PDF](../figures/v3_3/development/color_distance_diagnostics.pdf)
+- 巨星类别及近端概率的相符曲线。[PNG](../figures/v3_3/development/reliability_corrected/reference_reliability.png) · [PDF](../figures/v3_3/development/reliability_corrected/reference_reliability.pdf)
+- 68% 区间宽度与参考相符率。[PNG](../figures/v3_3/development/interval_agreement.png) · [PDF](../figures/v3_3/development/interval_agreement.pdf)
+
+分配 NERSC CPU 后，可依次用 `scripts/run_v3_3_sed.sh` 的 `prepare`、`fit`、`assemble` 阶段重建模型。开发分析由 `scripts/run_v3_3_development.sh` 及报告入口生成。之后以 `scripts/v3_3_freeze.py` 绑定模型与 `configs/v3_3_decision.json`。目录和结构入口为 `scripts/run_v3_3_catalog.sh`、`scripts/run_v3_3_structure.sh`。前瞻脚本的 `forecast` 阶段写出预测和完整哈希，`score` 阶段按该记录评分。现有产物可以用 `scripts/run_v3_3_delivery.sh` 核验。
