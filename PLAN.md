@@ -32,6 +32,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    The pilot found 76 primary high-S/N Gaia references at 2–5 kpc with
    −17.8% median relative residual, and none at 2–10 kpc in the joint
    faint/blue cells. Keep the corresponding research flags.
+   Group 0 evidence job 61332304 starts with the first complete group
+   while the array continues. It uses the same rules and records its
+   restricted footprint and duplicate-alias scope.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain

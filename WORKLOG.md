@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — start distance-shell validation during production
+
+- Regular array group 1 began on nid006582 while debug group 0
+  continued producing receipts. At this check there were seven
+  completed production sweeps. Left the regular time limit unchanged.
+- The group validator uses the fixed full survey rules within each
+  completed group. Corrected the batch wrapper to pass its group
+  argument. Replaced pending job 61332300 with 61332304, which depends
+  on group 0 production. The full validation job remains registered.
+- Added signed-parallax shell bounds with wholly nonphysical intervals
+  counted separately. Added optical distance comparisons for targeted
+  dwarfs with weak or unavailable Gaia. Gaussian intervals are per-source
+  evidence and do not establish a survey-wide posterior purity rate.
+- Added common-footprint selection retention and longitude-matched
+  north/south surface density contrasts. Tested the parallax bounds,
+  synthetic dwarf and giant references, and a uniform sky map.
+
 ## 2026-11-15 — launch the 1,074-sweep production
 
 - Full path 61332035 completed in 3 min 22 s on
