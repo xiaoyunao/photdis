@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify completion after the group 0 handoff
+
+- Regular task 61332090_0 completed successfully in 1 h 01 min 46 s.
+  The frozen 23-sweep list contains 14 original debug receipts from
+  61332150 and nine from regular allocation 61332094. Verified exact
+  sweep identity and native PSF status for every receipt. Completed
+  debug sweeps were reused.
+- Group 0 contributed 277,183 output rows, 190,904 primary and
+  117,824 strict. Its receipts record 4,171 exact v3.4 row reuses.
+  At the transition, 295 of the 1,074 survey sweeps were complete
+  and nine regular groups had completed. Delivery and validation
+  retained their full-survey dependencies.
+
 ## 2026-11-15 — verify spatial measurements on completed production groups
 
 - Production audit and spatial replay 61333290 completed on 91 sweeps
