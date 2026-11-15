@@ -67,6 +67,16 @@ $0.2\le g-r<0.8$，其中 33 颗 W1 可用；严格档没有这样的对象。
 [银纬与成像深度对照图](../figures/v3_6/F07_radial_sensitivity.pdf) ·
 [逐格计数与面积](../manifests/v3_6/figures/F07_radial_sensitivity.csv)
 
+## 全目录里的 Gaia 几何距离
+
+按参考距离分箱，主选样有 2,048,426 颗 0–2 kpc 和 58,957 颗 2–5 kpc
+的高信噪比 Gaia 参考，严格档有 1,680,728 和 16,046 颗。在筛选前，
+只有两颗通过 Gaia 几何距离要求的参考在 5–10 kpc，两颗都未入选。
+主选与严格档的暗蓝组分别还有约 55.7 万和 12.5 万条弱带符号视差，
+其参考价值体现在视差空间的统计比较。
+[全目录 Gaia 距离分箱](../manifests/v3_6/gaia_census/geometry_counts.csv) ·
+[按测光组的 Gaia 证据状态](../manifests/v3_6/gaia_census/states.csv)
+
 ## 两份完整距离库给出的 2–10 kpc 检验
 
 接回原始 SpecDis 和 SPDist 后，参考星的数量比原定向光谱抽样大得多。

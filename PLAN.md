@@ -65,8 +65,10 @@ catalog densities are published in both coordinates. The independent
 reference overlays follow the reference jobs.
 All 11,246,209 supported PSFs are counted in the six-shell catalog census.
 The F07 hard/PDF and probability comparisons and F10 bright-red Cartesian
-counts are published. The signed Gaia and scenario count reports follow regular CPU jobs
-61350850 and 61350851.
+counts are published. Dedicated-node Gaia 61350850 completed and its
+geometry counts are published. The joined evidence and Gaia controls use
+the completed census. The signed weak-Gaia comparison and scenario count
+reports use the five LF forecasts from regular CPU job 61350851.
 Read [the current plot index](docs/v3_6_figure_index.md) for the available
 figures and their denominators. The F06 reference overlays, F09 direct
 migration, and F10 reference-coverage comparison depend on the unified distance

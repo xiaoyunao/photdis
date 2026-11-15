@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — verify the full Gaia match and geometry census
+
+- Regular CPU job 61350850 completed at 0:0 in 3:36. Verified all Gaia
+  region receipts and transferred compact counts and their input hashes.
+- Primary/strict have 2,107,383/1,696,774 high-S/N geometries. The 5–10 kpc
+  layer contains two qualifying Gaia rows before the cuts and none after.
+  Primary/strict faint-blue weak signed-parallax counts are 557,067/124,989.
+- Updated the science notes with both cuts and kept the exact totals bound
+  to the census. LF 61350851 is running and the post-census jobs are eligible.
+
 ## 2026-11-16 — select complete QRF posterior examples from the frozen blue cohorts
 
 - Published F03 examples of Gaia agreement, two distinct peaks, a weak-W2

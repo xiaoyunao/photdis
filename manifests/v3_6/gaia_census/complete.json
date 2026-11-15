@@ -1,0 +1,34 @@
+{
+  "job": "61350850",
+  "rows": 11246209,
+  "freeze_sha256": "f4c401df65d2033f1b759bb73548dc2ea01d3f5153ac7b12218da9061ea0ed90",
+  "statuses": [
+    "no_valid_native_gaia_id",
+    "dr3_key_not_found",
+    "dr3_position_mismatch",
+    "unqualified_astrometry",
+    "weak_signed_parallax",
+    "intermediate_signed_parallax",
+    "geometry_reference"
+  ],
+  "child_receipts": {
+    "00.json": "7b3ad5f644ab7c73bd9c3945e85eb399f62633c587d2e2aae7aee4123ca96b46",
+    "02.json": "86f1421914389073685af69ba30ddfeba81eeb6ab5c6cfa04693e0669ac2e013",
+    "04.json": "bbea8b1af72e387d54bce8fb51ae41bcb9aa043fd1c6f246ff2344f413d32139",
+    "05.json": "c8c434a95806e14c9bb73e1faf3e7cf40d53a0dda56cfb9a910552c7ea83517a",
+    "06.json": "4b3a0a321fe073916685aa753e215582249a959eeb0ebda867dd29c7c592ac25",
+    "08.json": "3bc19dc1680f5dd08dc4cc72a4b1d8617008a6f68bd40635e73564c0fbe01324",
+    "09.json": "fef05e56bafb34dc45a9a99b404d4df4634cd792eea77c519fb9f4201338507b",
+    "10.json": "ed71f0b8412271355c2a490331b9914339a28b93237b9df2a8ca15f8f8380b70",
+    "11.json": "854f7fc3bb0d624ecbd9529348b67926738f0758a0fb6e9f735369a6ee415d7a",
+    "12.json": "3eea5b81db3f243f75d6590ccbe23e5aeb495098e3f41974ae280baf0d1b91c2",
+    "13.json": "6a84b9b8f013710f3e5757bcbee782ed1eaec245e4ee775a2d31e1fa1f8f5098",
+    "15.json": "9559395582241a250c2bdc0377ff830a6fb94c438bf13030f5a3252cacb3c66b",
+    "16.json": "63eee495dc9fe28cbf83b2e2e0a99aaa456305d3e928da50e050b67781baf578",
+    "17.json": "0e45e8872a165cf6459a600c45d2deab0a7bd02dea254f376234aae4297d3c79",
+    "19.json": "c6e694e0294026e07bb1257621c9d03bf7d87e8157c34365cb9c0757b5f69fcf",
+    "22.json": "6422a6d7624852c3c3ed3543f6d303b5a49c92cba75158b6988c9e06149fa094",
+    "23.json": "4ac69c17e75be55c71c02b6596414fc0c9fa5d4f8f93ce0d3d58d018f30f6d67",
+    "24.json": "d631eb1c4727db8f686bfb9f1320a92014f70f51785f9d23e1363bb2d2335b8e"
+  }
+}
