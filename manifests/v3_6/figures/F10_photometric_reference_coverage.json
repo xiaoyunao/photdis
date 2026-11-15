@@ -1,0 +1,13 @@
+{
+  "caption": "The stacked bars show mutually exclusive Gaia evidence states for the same native PSFs. Black diamonds mark the fraction with at least one spectroscopic distance meeting its source quality rule, and may overlap any Gaia color. Each star with multiple spectroscopic sources counts once. The denominator is the number assigned to each shell by the QRF median, including historical objects. The CSV also gives posterior-weighted counts and all six shells.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/distance_evidence/photometric_reference_coverage.csv": "a26123c0096be808ae15fb8f2e6212de1e15e06044e94278950d064ca8cee769"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F10_photometric_reference_coverage.csv": "a26123c0096be808ae15fb8f2e6212de1e15e06044e94278950d064ca8cee769",
+    "figures/v3_6/F10_photometric_reference_coverage.png": "3f711025403f75bcbc593df2e407204c40ac19919a59c0468d84aecc68950a0e",
+    "figures/v3_6/F10_photometric_reference_coverage.pdf": "2185001a0082bf992d7a31bd0c6a722f98305f9afe82405593773558baadfb82"
+  }
+}

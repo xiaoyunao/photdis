@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-16 — recover distance evidence and bring weak signed Gaia into the atlas
+
+- Distance evidence 61346084 and weak Gaia 61345484 completed at 0:0.
+  Published the compact source tables plus F08 forecasts, F09 source
+  migration, and F10 Gaia/spectroscopic evidence overlap.
+- Gaia finds 582/85 admitted faint-blue foreground distances, including
+  374/48 objects assigned to 5–10 kpc. The remaining 577/83 outside
+  QRF training retain severe overestimates. Of the 36 primary near-score
+  conflicts, 35 have only weak signed parallaxes and none has a qualified
+  spectroscopic distance.
+- The 6,483 weak-Gaia draw includes 1,109 negative parallaxes. Both QRF
+  and nominal SED improve on the broad prior. The strict faint 5–10 kpc
+  comparison has 44 stars and its mean QRF parallax is smaller than observed.
+- Verified downloaded data receipts and visually reviewed the ten plates.
+  Native flow and the remaining source-specific plots are in Slurm.
+
 ## 2026-11-16 — quantify conditional contamination under five population assumptions
 
 - Regular job 61350851 produced five LF scenarios for the same 12,755

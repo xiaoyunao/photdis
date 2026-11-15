@@ -69,11 +69,12 @@ counts are published. Dedicated-node Gaia 61350850 completed and its
 geometry counts are published. The joined evidence and Gaia controls use
 the completed census. Regular CPU job 61350851 completed five LF forecasts
 on 12,755 native PSFs. The F09 scenario counts, migration and spatial
-intervals are published. The signed Gaia comparison follows those forecasts.
+intervals are published. The signed Gaia comparison, direct distance migration,
+and all-catalog Gaia and spectroscopic coverage are published using the joined
+evidence. Finish the source admission and remaining full reference plates.
 Read [the current plot index](docs/v3_6_figure_index.md) for the available
-figures and their denominators. The F06 reference overlays, F09 direct
-migration, and F10 reference-coverage comparison depend on the unified distance
-evidence. Allocated test 61346262 passed on two
+figures and their denominators. The F06 reference overlays depend on the unified
+distance evidence and are queued. Allocated test 61346262 passed on two
 real sweeps and verified the interfaces without creating production outputs.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement

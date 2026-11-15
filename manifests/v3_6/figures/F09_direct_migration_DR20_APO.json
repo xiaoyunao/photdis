@@ -1,0 +1,13 @@
+{
+  "caption": "Each reference row belongs to one reference-distance shell. Color sums the full QRF PDF over assigned shells and divides by the number of qualified reference rows in that reference shell. Annotations count hard median assignments. The table also includes unknown and other classes in the same qualified cohort. Sources can share stars. The displayed fractions use the reference-matched denominator for this survey.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/distance_evidence/migration.csv": "f4d94129d2adec386688f9b142bc40ccd0a0dd8046a97261e9734763ef5ec951"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F09_direct_migration_DR20_APO.csv": "8187b4e3b3eedd72a31992c8c5f36249580d778e65f1d1cc8327fb84810693cd",
+    "figures/v3_6/F09_direct_migration_DR20_APO.png": "c19277fe45c1e956929b8cb2f8003b0eba6e6f4355fa5981e755c4d441323bbf",
+    "figures/v3_6/F09_direct_migration_DR20_APO.pdf": "2740a429f69e1c26dfa866be983343dd002cb6efe488a46749a3aef9b77e577a"
+  }
+}

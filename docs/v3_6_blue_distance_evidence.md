@@ -31,6 +31,13 @@ kpc，astroNN 距离为 $3.29\pm0.58$ kpc，QRF 只给出 0.70 kpc。
 直接证据，尚不能衡量它在其余 188 颗中的比例。
 [四份外部光谱逐星核对](../manifests/v3_6/blue_replay/external_spectroscopy.csv)
 
+全量 DESI DR1 MWS/RVS 关联为这组另提供三颗具有合格重力测量的星，
+$\log g$ 分别为 3.83、4.74 和 4.87。第一颗的 QRF 距离是 0.86 kpc，
+Gaia 距离是 2.13 kpc。后两颗的重力支持矮星类别，距离同样偏低，说明低估
+也出现在有光谱支持的矮星中。暗蓝近邻里有 16 颗匹配到 DESI，但这些光谱
+记录都缺合格类别与重力。光谱匹配使用 Legacy 和 Gaia 两套身份。
+[逐星光谱与质量](../manifests/v3_6/distance_evidence/blue_spectroscopy.csv)
+
 两组在光学颜色平面明显重叠。可用 W1 的暗蓝近邻只有 29 颗，W1 和 W2
 同时可用的只有 8 颗。蓝色 2–5 kpc 参考星中，两带同时可用的有 106 颗。
 现有 grz QRF 没有使用这两条红外颜色，对可用的少数源可以看出额外分辨
@@ -56,8 +63,13 @@ kpc，astroNN 距离为 $3.29\pm0.58$ kpc，QRF 只给出 0.70 kpc。
 叠加图本身也无法提供各次曝光的历元。
 [Legacy Survey DR11 图像说明](https://www.legacysurvey.org/dr11/description/)
 
-这两个数目描述原有 Gaia 抽样中的对象。异常的全样本比例还需要把 Gaia
-和光谱参考接回整个适用目录，并考虑参考样本的选择。
+全量 Gaia 关联现在找到 582 颗主选和 85 颗严格档的暗蓝几何参考，参考距离
+全部在 2 kpc 内。排除当前 QRF 训练星后，剩 577 颗和 83 颗，
+QRF 中位距离分别高估约 57 倍和 56 倍，68% 区间均未覆盖参考中心。按
+QRF 中位距离分组，主选中有 374 颗、严格档中有 48 颗近邻被放到 5–10 kpc。
+这些计数的适用范围受 Gaia 视差信噪比筛选限制。
+[按参考距离](../manifests/v3_6/distance_evidence/distance_cells.csv) ·
+[按分配距离](../manifests/v3_6/distance_evidence/photometric_reference_coverage.csv)
 
 - [F03 两组星的逐星图](../figures/v3_6/F03_blue_distance_failures.pdf)、
   [图表数据](../manifests/v3_6/figures/F03_blue_distance_failures.csv)、

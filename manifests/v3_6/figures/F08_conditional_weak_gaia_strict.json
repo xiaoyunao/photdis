@@ -1,0 +1,15 @@
+{
+  "caption": "Stratified weak-parallax evaluation outside recorded validation and training history. Scores and PIT condition on observed corrected S/N < 5. Negative parallaxes remain in every score. The stress grid varies QRF far-branch odds and the parallax scale. Shading spans the tested common zero-point shifts. N is the observed draw count; the tables also give weighted and effective counts. Brightness and assigned-distance cohorts can overlap.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/weak_gaia/complete.json": "7d6a3d30a1452c1c2a7c6614d26a14300830901fdc2296202c2b4afb10a048e0",
+    "data/v3_6/weak_gaia/scores.csv": "e949f57e8605d3e0b34c6b630e23a09de9b2030738b5f15c8b586b5e111212f5",
+    "data/v3_6/weak_gaia/pit.csv": "04b75c5daf9e26de22741145ba721965ff1f6ae5796657ea987105ed2fd52242",
+    "data/v3_6/weak_gaia/forward_grid.csv": "41d2b2e9d253c227ca4c880f5bfa48fb88c738b6c79396851b68bcaf6ef8babf"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F08_conditional_weak_gaia_strict.csv": "25c9c72ffd0819f212125213a09789f93a48cc225f79a5b809dda67c181df082",
+    "figures/v3_6/F08_conditional_weak_gaia_strict.png": "5b51e78cf4ed52fa0907917fa2165ff15d49f80cec19ca8bbd87b9b3ba05240b",
+    "figures/v3_6/F08_conditional_weak_gaia_strict.pdf": "f23285b6d06c61f3bcdcd768a6e7ed89e04cba9cd622844dc8efb31d116f36f0"
+  }
+}
