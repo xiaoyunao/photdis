@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — start the early reference stage with the leading regular group
+
+- Verified 102 completed sweeps and six live regular groups. Group 1
+  had 21/23 complete and group 0 remained queued with 14/23.
+- Submitted early validation 61333096 after 61332090_1 using the same
+  analysis and changed only the group. Canceled the still-pending
+  group 0 validation 61332304. Full survey dependencies remain in place.
+- Scratch quota at this check was 4.63 TiB of 20 TiB and 2.40M of 10M
+  inodes. No storage change was needed.
+
 ## 2026-11-15 — hand group 0 over to the regular allocation
 
 - Debug 61332150 reached its 28-minute wall limit. Group 0 retained
