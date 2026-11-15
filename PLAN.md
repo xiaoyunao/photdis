@@ -1,5 +1,33 @@
 # PLAN
 
+## v3.3 — class-conditional distance and one structure application
+
+The [latest Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)
+of `f81c9db` is the starting point (reply `51045e85`). The primary
+development metric is giant distance recovery given reference class.
+The production distance posterior marginalizes class and keeps the far tail.
+
+1. Inventory the existing PSF reference split, then refit class-specific
+   kernels within the projected empirical SED family. Preserve reference
+   distance and photometric errors. Use a common reference prior for the
+   first paired contrasts. Keep class training quotas independent of target
+   prior probabilities. Compare matched development objects to frozen nominal
+   and QRF predictions. Iterate within the family and freeze once before
+   opening any new outcomes.
+2. Export a complete joint posterior catalog for a bounded representative
+   footprint. Verify PSF identity, probability conservation, near and far
+   branches, support and numerical status. Deliver the principal paired
+   distance, reliability, interval and color-space figures.
+3. Run one end-to-end structure application with comparable full and
+   summarized likelihoods and an independent scoring target. Document
+   measured benefit and the evidence-supported scope.
+
+Use allocated NERSC CPUs for the reference scan and subsequent fits.
+Start with `scripts/run_v3_3_reference_support.sh` to determine training
+counts by class and source, including scarce giants and spectral support.
+Historical flags are retained. Response expansion, the full simulation
+matrix, all-sky reruns and deployment stay outside this stage.
+
 ## v3.2 — completed research delivery
 
 The Pro review of 7699299 and the frozen protocol define the work.

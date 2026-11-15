@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — start the v3.3 distance-core study
+
+- Read GPT Pro reply `51045e85` on `f81c9db` and set the goal around
+  one class-conditional SED candidate, one bounded catalog and one
+  scored structure application. Confirmed matching project heads.
+- Added the allocated reference census for the existing fitting and
+  opened development roles. The run will determine class/source
+  training support before choosing the first fit's component allocation.
+- Python and Slurm-shell syntax checks pass. A smoke check reconciled
+  PSF, non-PSF, missing TYPE, nonstellar and missing-distance admissions.
+
 ## 2026-11-15 — complete v3.2 research delivery
 
 - Joint job 61263908 completed `0:0` in 1h13m35s. Collected and
