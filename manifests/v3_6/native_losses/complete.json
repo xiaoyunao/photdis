@@ -1,0 +1,17 @@
+{
+  "job": "61344518",
+  "shards": {
+    "data/v3_6/native_losses/shard_00/complete.json": "c1073b8ee7d55e248ad49bc483e2902637a950e50efeb76337522b6384752cba",
+    "data/v3_6/native_losses/shard_01/complete.json": "964187478453dbb4af5d5dd51bb537ec8d2e04c87c95e3142f32dca1ee7d20e1",
+    "data/v3_6/native_losses/shard_02/complete.json": "dc9c350ab970ded8d8c862f1707c9823090e3d4128c377ca05c04189f0bd3ffd",
+    "data/v3_6/native_losses/shard_03/complete.json": "25b59b3cfd4a45babd90ad929f3da18c70bf06a159228d8f5b04e4d7cd452b78",
+    "data/v3_6/native_losses/shard_04/complete.json": "b6ba0afe089c14c668269e79f1b0b59a84670435d0fc606805805cc1b0821df4",
+    "data/v3_6/native_losses/shard_05/complete.json": "b7ee925929c7921e2705f23398560324b51201e0c924a42dabe517c1ff15a39e",
+    "data/v3_6/native_losses/shard_06/complete.json": "06757d5bdebfcc0e52997bd7c00fd91f1c6ad0db0a7162c6d5167dccfd99e64d",
+    "data/v3_6/native_losses/shard_07/complete.json": "5038fb1af61291fd5c6878aca401a3b5a73713e21b745a215edd063f06d3e516"
+  },
+  "interpreted_as": "Exclusive native reasons for the historical-classified no-supported-key cohort.",
+  "outputs": {
+    "native_losses.csv": "930af171b9a00163a405e03ad938dbe586bece9cb6a2f5e7cade26d78274098b"
+  }
+}

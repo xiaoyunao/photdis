@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Plot the complete source-by-class DR11 distance validation atlas."""
+import argparse
 import json
 import os
 from pathlib import Path
@@ -28,16 +29,17 @@ CLASSES = ('All classes','Dwarfs','Giants','Other stars','Unknown class')
 GATES = (('supported','Before cuts',BLUE),('primary','Primary',ORANGE),('strict','Strict',GREEN))
 LOW_N = 100
 EDGES = np.linspace(-1,1,41)
+DISPLAY_KPC = (.001,250.)
 
 
 def distance_range(q,d):
-    values = np.r_[q[q>0],d[d>0]]
+    values = np.r_[q,d]
+    values = values[(values>=DISPLAY_KPC[0])&(values<=DISPLAY_KPC[1])]
     if not len(values):
         return (.2,30.)
     low,high = np.min(values),np.max(values)
-    if low==high:
-        return (.7*low,1.4*high)
-    return (low*.92,high*1.08)
+    padding = (.7,1.4) if low==high else (.92,1.08)
+    return (max(DISPLAY_KPC[0],low*padding[0]),min(DISPLAY_KPC[1],high*padding[1]))
 
 
 def limits(center,lo,hi,bottom):
@@ -61,7 +63,7 @@ def plate(a,source,label,class_mask,dest):
     supported = class_mask&finite
     endpoint = np.c_[a['reference_lo_kpc'][supported],a['reference_hi_kpc'][supported]]
     endpoint = endpoint[np.isfinite(endpoint)&(endpoint>0)]
-    domain = distance_range(q[supported],np.r_[d[supported],endpoint])
+    domain = distance_range(q[supported].ravel(),np.r_[d[supported],endpoint])
     bins = np.geomspace(*domain,65)
     residual_all = q[supported,2]/d[supported]-1
     native_counts = np.histogram2d(d[supported],q[supported,2],bins=(bins,bins))[0]
@@ -82,8 +84,12 @@ def plate(a,source,label,class_mask,dest):
             count = len(dist)
             stat = distance_summary(10+5*np.log10(quant),10+5*np.log10(dist))
             outside = (frac<EDGES[0])|(frac>EDGES[-1])
+            outside_axes = ((dist<domain[0])|(dist>domain[1])|
+                            (quant[:,2]<domain[0])|(quant[:,2]>domain[1]))
             rows.append(dict(row_type='summary',selection=gate,n=stat['n'],
                              tail_outside_residual_panel=int(outside.sum()),
+                             centers_outside_distance_panel=int(outside_axes.sum()),
+                             x_lo=domain[0],x_hi=domain[1],
                              missing_distance_n=int((class_mask&~finite&(a[gate] if gate!='supported' else True)).sum()),
                              **{k:v for k,v in stat.items() if k!='n'}))
             if 0<count<=LOW_N:
@@ -115,6 +121,9 @@ def plate(a,source,label,class_mask,dest):
             top.plot(domain,domain,color=GRAY,ls='--',lw=1)
             top.set(xscale='log',yscale='log',xlim=domain,ylim=domain,title=heading)
             top.text(.04,.94,subtitle(stat,count),transform=top.transAxes,va='top',fontsize=10)
+            if outside_axes.any():
+                top.text(.04,.88,f'{outside_axes.sum():,} centers outside axes',
+                         transform=top.transAxes,va='top',fontsize=9)
             top.tick_params(axis='x',labelbottom=False)
             residual.axhline(0,color=GRAY,ls='--',lw=.8)
             residual.set(xlabel='Reference distance [kpc]',ylim=(-1,1))
@@ -141,16 +150,21 @@ def plate(a,source,label,class_mask,dest):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source',choices=SOURCE_LABELS)
+    parser.add_argument('--output-dir',type=Path,default=OUT)
+    args = parser.parse_args()
     require_compute()
     marker = INPUT/'complete.json'
     receipt = json.loads(marker.read_text())
-    OUT.mkdir(parents=True,exist_ok=True)
-    if (OUT/'complete.json').exists():
-        raise FileExistsError(OUT/'complete.json')
+    out = args.output_dir
+    out.mkdir(parents=True,exist_ok=True)
+    if (out/'complete.json').exists():
+        raise FileExistsError(out/'complete.json')
     outputs = {}
     keys = ('ls_id','TYPE','qrf_training','primary','strict','consensus_class','reference_kpc',
             'reference_lo_kpc','reference_hi_kpc','qrf_quantiles_kpc')
-    for source in receipt['rows']:
+    for source in ([args.source] if args.source else receipt['rows']):
         filename = source+'.npz'
         a = read_columns(verified(INPUT/filename,receipt['outputs'][filename]),keys)
         if not (a['TYPE']=='PSF').all():
@@ -158,12 +172,12 @@ def main():
         c = a['consensus_class']
         masks = (np.ones(len(c),bool),c==0,c==1,c==2,c<0)
         for label,mask in zip(CLASSES,masks):
-            name = plate(a,source,label,mask,OUT)
-            outputs.update({f'{name}.{ext}':sha(OUT/f'{name}.{ext}') for ext in ('png','pdf','csv')})
+            name = plate(a,source,label,mask,out)
+            outputs.update({f'{name}.{ext}':sha(out/f'{name}.{ext}') for ext in ('png','pdf','csv')})
         print(source,len(c),flush=True)
-    save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),dpi=300,
+    save_json(out/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),dpi=300,display_kpc=DISPLAY_KPC,
         inputs={str(p.relative_to(ROOT)):sha(p) for p in (marker,Path(__file__))},
-        caption='All finite positive reference centers, preserving distances with larger or missing errors. Both cuts use the same matched parent. Low-count panels show every star with its available reference error and QRF 68% interval. Density bins include all other points. Statistics include the tails outside the central residual panel. Source error conventions and training status are retained in the per-source evidence tables.',
+        caption='All finite positive reference centers, preserving distances with larger or missing errors. Both cuts use the same matched parent. Low-count panels give individual stars, their available reference errors and QRF 68% intervals; the table retains every such star. Plotted centers are limited to the display range, with an explicit exterior count. Summary statistics retain every finite positive reference center, including points outside both plotted ranges. Source error conventions and training status are retained in the per-source evidence tables.',
         outputs=outputs))
 
 

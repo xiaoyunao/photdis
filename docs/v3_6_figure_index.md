@@ -7,7 +7,7 @@ PDF、统计表和包含输入校验值的 JSON。下表列出当前可读图件
 | 图组 | 当前图件 | 科学含义与证据范围 |
 |---|---|---|
 | F01 样本进入与流失 | [筛选流程](../figures/v3_6/F01_catalog_admission.pdf) | 核对原生成像、预测支持和两档筛选。[全量参考覆盖程序](../scripts/v3_6_plot_reference_admission.py)按来源与距离追踪历史参考流失，并去重比较母样本、参考星和两档选样的观测 CMD。 |
-| F02 测距比较 | [相同测光的旧、新 QRF 比较](../figures/v3_6/F02_paired_qrf_same_grz.pdf) · [全量逐源图程序](../scripts/v3_6_plot_distance_atlas.py) | 同一来源和星族下比较可预测、主选和严格样本。中央残差图另列超出范围的对象，低数量组保留逐星误差条。全量图等待参考关联。 |
+| F02 测距比较 | [相同测光的旧、新 QRF](../figures/v3_6/F02_paired_qrf_same_grz.pdf) · [Gaia](../figures/v3_6/distance/Gaia_all_classes.pdf) · [SpecDis 矮星](../figures/v3_6/distance/SpecDis_dwarfs.pdf) · [DR20 南站矮星](../figures/v3_6/distance/DR20_MINESweeper_dwarfs.pdf) | 七个参考来源分别比较可预测、主选和严格样本。低数量组保留逐星误差条，残差窗口以外的对象保留在统计中。 |
 | F03 蓝星异常 | [距离失效](../figures/v3_6/F03_blue_distance_failures.pdf) · [后验和评分](../figures/v3_6/F03_blue_posteriors_and_scores.pdf) · [完整后验示例](../figures/v3_6/F03_qrf_pdf_examples.pdf) · [同星图像](../figures/v3_6/F03_selected_coadd_cutouts.pdf) | 冻结的 Gaia 抽样中有 116 颗暗蓝近邻和 189 颗偏亮蓝星。完整后验区分吻合、多峰、弱红外和无可用红外的例子。 |
 | F04 条件误差 | [Gaia 星等和颜色分层](../figures/v3_6/F04_gaia_magnitude_color.pdf) | 显示偏差及各参考分箱的实际数量。[全量条件误差图](../scripts/v3_6_plot_condition_errors.py)同时显示两档选样的区间宽度、参考中心相符率及积分参考误差后的相符率。 |
 | F05 测光信息 | [蓝星颜色平面](../figures/v3_6/F05_blue_color_planes.pdf) | 同星比较光学和可用的红外颜色。每个平面分别应用必要波段的有效性条件。全量[同星 CMD 与颜色图](../scripts/v3_6_plot_reference_colors.py)另外按来源给出观测星等、参考绝对星等、QRF 绝对星等及距离残差。 |

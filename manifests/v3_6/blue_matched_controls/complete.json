@@ -1,0 +1,23 @@
+{
+  "job": "61347631",
+  "candidates": 446536,
+  "cases": 305,
+  "unique_controls": 506,
+  "caliper": [
+    0.25,
+    0.05
+  ],
+  "inputs": {
+    "scripts/v3_6_blue_matched_controls.py": "86907bedcd32a5aab8aff2f28bf5fc573dc76a6447c6010848ffd3c7a3fe5f2c",
+    "data/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "data/v3_6/gaia_census/complete.json": "cbe19c26edae279aaa7ef9558b694c595cc5bad9ffbd31513e7638c3a0e06c03",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2"
+  },
+  "interpretation": "Fixed post hoc comparison of the original 305 blue cases. Both candidates and cases satisfy the native PSF and Gaia geometry rules. Controls match observed r and dereddened g-r before considering three distance conditions. Control matches may repeat. These are descriptive comparisons in validation data and do not identify the cause of a residual or change any cut.",
+  "outputs": {
+    "summary.csv": "f83c4d5aafcfd0c8a74b901172ddb99445bac06f17ecb368c8995d27d0a273bf",
+    "control_roster.npz": "6cb5a3c0b002d77093458ca53d325e6a98a3e2d4813ba06b1907b664453376af",
+    "pairs.csv": "aee852e4ba5d774475678c51f25360b987b5681bf36060b1e3072787b1821d8a"
+  }
+}

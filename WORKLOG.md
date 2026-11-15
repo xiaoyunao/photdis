@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-16 — inspect full distance triptychs and recover brightness-matched blue controls
+
+- Verified 105 F02 products from job 61346085 and reviewed all 35 PNGs.
+  The SPDist reference range extends to unphysical values that obscure
+  the normal range. Added a bounded display with explicit exterior counts.
+  The revised per-source plot uses all original center statistics and keeps
+  the original products. The isolated five-plate revision is pending.
+- Blue control job 61347631 returned all 305 cases. At fixed color and
+  brightness, 189 blue cases and their accurate distance controls have
+  similar r-band fit residuals. Gaia absolute magnitudes remain distinct.
+  All 116 faint foreground cases have same-shell controls, which share
+  the overestimate. No distance-accurate control met their photometry caliper.
+- Verified native exclusion collector 61344518. Source-specific raw VAC
+  stage totals follow 61346883 and 61346884.
+
 ## 2026-11-16 — recover distance evidence and bring weak signed Gaia into the atlas
 
 - Distance evidence 61346084 and weak Gaia 61345484 completed at 0:0.
