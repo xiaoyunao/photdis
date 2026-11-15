@@ -1,0 +1,12 @@
+{
+  "scope": "Four completed external spectroscopic rosters, joined to the two original blue samples by both IDs.",
+  "matches": 1,
+  "rows": 1220,
+  "inputs": {
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "manifests/v3_6/external_reference/complete.json": "7700407993cec7a6a64d486121b704f8c31f8d45779b34daac3a94b81dacd744"
+  },
+  "outputs": {
+    "external_spectroscopy.csv": "08bf47708ad19705e3873ee6874a2b532019029062f103cabd861a1e7eb61ca6"
+  }
+}

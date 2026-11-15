@@ -13,6 +13,7 @@ from photdis.v3.metrics import distance_summary
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_3_sed import BASE, MANIFESTS, verified
 from v3_5_dr11_validate import OUT as VALIDATION, join_parts, validation_history
+from v3_6_blue_replay import OUT as BLUE_REPLAY
 from v3_6_external_reference import OUT as EXTERNAL
 from v3_6_gaia_census import OUT as GAIA
 from v3_6_reference_index import OUT as INDEX
@@ -268,6 +269,49 @@ def summaries(a,name):
     return summary,migration
 
 
+def blue_spectrum_rows(blue,a,source):
+    if not (blue['TYPE']=='PSF').all() or not (a['TYPE']=='PSF').all():
+        raise ValueError('Blue spectroscopic comparisons require native PSF')
+    j = unique_join(blue['ls_id'],a['ls_id'])
+    elsewhere = np.isin(blue['source_id'],a['source_id'])
+    occupied = np.isin(blue['ls_id'],a['ls_id'])
+    n = len(a['ls_id'])
+    empty = np.full(n,np.nan)
+    labels = a.get('source_class',a['class_label'])
+    valid_class = a.get('class_eligible',labels>=0)
+    for i,k in enumerate(j):
+        r = dict(source=source,cohort=blue['sample'][i],ls_id=blue['ls_id'][i],
+                 gaia_source_id=blue['source_id'][i],strict=bool(blue['strict'][i]),
+                 gaia_distance_kpc=blue['reference_kpc'][i])
+        if k<0:
+            status = ('repeated_legacy_candidate' if occupied[i] else
+                      'gaia_key_only' if elsewhere[i] else 'unmatched')
+            yield dict(**r,match_status=status)
+            continue
+        if a['source_id'][k]!=blue['source_id'][i] or blue['source_id'][i]<=0:
+            yield dict(**r,match_status='conflicting_gaia_key')
+            continue
+        r.update(match_status='both_keys',reference_class=int(labels[k]) if valid_class[k] else -1,
+                 spectroscopic_distance_kpc=a.get('reference_kpc',empty)[k],
+                 spectroscopic_distance_low_kpc=a.get('reference_lo_kpc',empty)[k],
+                 spectroscopic_distance_high_kpc=a.get('reference_hi_kpc',empty)[k])
+        for key in ('logg','teff','feh'):
+            if key in a:
+                v,good = a[key][k],a[f'{key}_valid'][k]
+                symmetric = a.get(f'{key}_error',empty)
+                lo,hi = (a.get(f'{key}_error_{side}',symmetric)[k] for side in ('lo','hi'))
+            else:
+                v = a.get(f'rvs_{key}',empty)[k]
+                quality = a['rvs_parameter_quality'][k] if 'rvs_parameter_quality' in a else False
+                good = quality and np.isfinite(v)
+                lo = hi = a.get(f'rvs_{key}_err',empty)[k]
+            r.update({key:float(v) if good else None,f'{key}_qualified':bool(good),
+                      f'{key}_error_lo':float(lo) if good and np.isfinite(lo) else None,
+                      f'{key}_error_hi':float(hi) if good and np.isfinite(hi) else None})
+        yield r
+
+
+
 def main():
     require_compute()
     inputs = {str(Path(__file__).relative_to(ROOT)):sha(Path(__file__))}
@@ -311,6 +355,12 @@ def main():
                       class_eligible=int(rvs['class_eligible'].sum()),
                       parameter_quality=int(rvs['rvs_parameter_quality'].sum()))
     print('DESI MWS/RVS',rvs_counts,flush=True)
+    blue_marker = BLUE_REPLAY/'complete.json'
+    blue_record = source(blue_marker,inputs)
+    blue = read_columns(verified(BLUE_REPLAY/'blue_objects.npz',blue_record['outputs']['blue_objects.npz']),
+                        ('TYPE','sample','ls_id','source_id','reference_kpc','strict'))
+    spectra = [('DESI_MWS_RVS',rvs),*[(name,a) for name,a in cases if name!='Gaia']]
+    csv_rows(OUT/'blue_spectroscopy.csv',(r for name,a in spectra for r in blue_spectrum_rows(blue,a,name)))
     save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
         rows={name:len(a['ls_id']) for name,a in cases},desi_mws_rvs=rvs_counts,
         interpretation=('Per-source native PSF projections. Reference sets overlap. QRF training '

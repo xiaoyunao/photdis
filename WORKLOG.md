@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-16 — check both blue cohorts against the completed external spectra
+
+- Joined all 305 source-bound cases with the four verified small
+  external match products. The compact table keeps both exact keys
+  and excludes conflicting or duplicate candidates. All 1,220 rows
+  are recorded, including unmatched cases.
+- One of the 189 blue 2–5 kpc cases has APOGEE intermediate
+  gravity, log g 3.35 ± 0.04, temperature 5,030 K, metallicity
+  −0.46 dex. Its Gaia and astroNN distances are 3.00 and 3.29 kpc,
+  versus a 0.70 kpc QRF median. None of the 116 faint-blue nearby
+  cases matches these four catalogs.
+- Linked the full DESI/VAC per-star spectroscopy table into the
+  queued combined distance job. It retains source quality and
+  available errors for the same frozen cases.
+
 ## 2026-11-16 — finish and verify the external spectroscopy association
 
 - Job 61345553 finished the full supported-frame join of the four
