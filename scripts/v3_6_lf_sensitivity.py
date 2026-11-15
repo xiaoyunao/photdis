@@ -65,7 +65,7 @@ def samples(receipt):
     frozen = []
     fields = ('catalog_row','ls_id','identity','source_id','RA','DEC','primary','strict',
               'stratum','observed_r','dereddened_g_r','band_state','parent_row','sweep_number',
-              'part_number','part_row','qrf_bins')
+              'part_number','part_row','qrf_bins','qrf_quantiles_kpc')
     names = []
     for key,expected in receipt['child_receipts'].items():
         marker = verified(ROOT/key,expected)

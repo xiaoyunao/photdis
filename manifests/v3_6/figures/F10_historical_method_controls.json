@@ -1,0 +1,17 @@
+{
+  "caption": "Historical method comparisons on three fixed cohorts. Left: calibrated class log score on the same labeled v3.0 development identities with optional bands measured. The gain includes the effect of the fixed classifier. Middle: v3.3 development distances conditional on a known giant class. Severe errors are absolute modulus residuals over 1 mag. Right: NGC 288 median and central 68% interval with a held-out scale at 9.03 kpc. The historical SED controls and cluster inference have their own model and sample assumptions. Current DR11 QRF catalog performance is measured elsewhere.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "manifests/v3_0/controls/probe_metrics.csv": "e87d750d3755f2afa4539a4a6a8c42ad7d2298907c98ef37252f6228f057f576",
+    "manifests/v3_3/giant_conditional/complete.json": "33a0962180c9e3ab4e957aefaa23beabca0fa17749544f8e0603fc9772b3c086",
+    "manifests/v3_3/giant_conditional/distance.csv": "a93df6468da81aa07abbb740d5ed9e2440f66811fced82aaebbad9c561f0bd97",
+    "manifests/v3_3/structure/complete.json": "e2014c97e7d4f2e5b144a9d983fcc510fdfb3455c9432c9d60dec07efd6f6a50",
+    "manifests/v3_3/structure/distance_score.csv": "4c6e6724c1164aeccbe33123b470f459b5ecb1718a74b6402fd36185a2e7773a"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F10_historical_method_controls.csv": "d0db9fda261cf5e715543af4f3e2dbf4f8b373dc4aa2680e4e7b71f06a8d2c9c",
+    "figures/v3_6/F10_historical_method_controls.png": "a4e2d81993e7108feb2780b529b995af055ee3fc538890de230b41a552ac7b97",
+    "figures/v3_6/F10_historical_method_controls.pdf": "4cafe1043c75be950df6c522db758f37eb016837cbc32bff764944a9207e1ba4"
+  }
+}

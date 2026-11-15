@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-15 — prepare the LF count and signed Gaia comparisons
+
+- Added `scripts/v3_6_lf_report.py` to estimate joint class–distance
+  counts, QRF shell migration, far-giant contamination and paired
+  sky-block intervals under each named population scenario.
+- Added `scripts/v3_6_weak_gaia.py` to compare the frozen QRF histogram,
+  nominal and LF curves, and a uniform-distance-modulus baseline on
+  identical signed measurements. The scoring and PIT condition on
+  measured S/N below 5. The forward stress reports sensitivity to shared
+  parallax scale, zero point and distant-branch odds.
+- Synthetic validations check fixed-count sky resampling, design
+  variance, the 10 kpc split, and signed conditional scores against
+  the analytic truncated normal, including extreme tails.
+- F10 historical controls use receipt-verified fixed cohorts and were
+  opened for visual review. The NGC 288 held-out scale remains below
+  both inferred intervals. The new catalog's population tests still run
+  on their own prospective sample definition and recorded history.
+
 ## 2026-11-15 — plot catalog admission and distance-reference support
 
 - Added F01 from the frozen sweep exclusion ledger and the two verified
