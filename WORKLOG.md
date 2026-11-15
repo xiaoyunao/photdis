@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — extend external spectroscopy to the preselection frame
+
+- `scripts/v3_6_external_reference.py` projects the three previously
+  defined external surveys onto the full supported imaging footprint.
+  It records exact-ID and angular-match losses separately and retains
+  raw pipeline fields including continuous stellar parameters, distance
+  errors, historical exposure and both cut outcomes.
+- Syntax and focused tests pass for class-specific migration, retained
+  low-count cells, the strict cut, and recorded-history selection.
+- Scheduled the LF count report (61345483) and the shared weak-Gaia
+  comparison (61345484) after the applicable forecasting and Gaia jobs.
+
 ## 2026-11-15 — prepare the LF count and signed Gaia comparisons
 
 - Added `scripts/v3_6_lf_report.py` to estimate joint class–distance
