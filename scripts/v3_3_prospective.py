@@ -21,8 +21,10 @@ from photdis.v3_1.validation_report import paired_field_statistic
 from photdis.v3_3 import class_log_likelihood, frozen_qrf, reference_log_curves
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_0_response import observation
+from v3_1_external_history import HISTORY
+from v3_1_freeze_roles import history_columns
 from v3_3_catalog import FREEZE, read_frozen
-from v3_3_prospective_inputs import OUT
+from v3_3_prospective_inputs import ADDITIONAL_HISTORY, OUT
 from v3_3_sed import verified
 
 ROOT_OUT = OUT.parent
@@ -50,9 +52,24 @@ def inputs(frozen):
     return photo
 
 
+def verify_legacy_aliases(photo):
+    receipt = json.loads((OUT/'complete.json').read_text())
+    overlap = {}
+    for key in [*(path for path, _ in HISTORY), *ADDITIONAL_HISTORY]:
+        old = history_columns(verified(ROOT/key, receipt['sources'][key]))
+        identity = old.get('identity', old.get('source_id'))
+        ls_id = old.get('ls_id', np.array([], dtype=np.int64))
+        aliases = np.r_[ls_id[ls_id > 0], -identity[identity < 0]] if identity is not None else ls_id
+        overlap[key] = int(np.intersect1d(photo['ls_id'], aliases).size)
+    if any(overlap.values()):
+        raise ValueError(f'Previously exposed Legacy identities in validation roster: {overlap}')
+    return overlap
+
+
 def fit():
     frozen = read_frozen()
     photo = inputs(frozen)
+    legacy_overlap = verify_legacy_aliases(photo)
     global _STATE
     models = {key: joblib.load(verified(ROOT/item['path'], item['sha256']))
               for key, item in frozen['models'].items()}
@@ -73,7 +90,7 @@ def fit():
     atomic_npz(FORECAST/'qrf.npz', identity=photo['identity'], TYPE=photo['TYPE'],
                mass=mass, edges=edges, supported=q['supported'])
     save_json(FORECAST/'complete.json', dict(n=len(photo['identity']), model_freeze=sha(FREEZE),
-        script=sha(Path(__file__)), outcomes_read=False, all_PSF=True,
+        script=sha(Path(__file__)), outcomes_read=False, all_PSF=True, legacy_overlap=legacy_overlap,
         outputs={p.name: sha(p) for p in sorted(FORECAST.iterdir())}, job=os.getenv('SLURM_JOB_ID')))
 
 
@@ -82,7 +99,8 @@ def score():
     photo = inputs(frozen)
     marker = FORECAST/'complete.json'
     record = json.loads(marker.read_text())
-    if record['model_freeze'] != sha(FREEZE) or record['script'] != sha(Path(__file__)):
+    if (record['model_freeze'] != sha(FREEZE) or record['script'] != sha(Path(__file__))
+            or not record['legacy_overlap'] or any(record['legacy_overlap'].values())):
         raise ValueError('Frozen scoring method or forecasts changed')
     models = {}
     for name, expected in record['outputs'].items():

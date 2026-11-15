@@ -78,7 +78,11 @@ The corrected job 61321873 found zero admissions under the
 strict unused-cell requirement. The follow-up keeps the exact
 identity, native photometry and footprint guards and records a distinct
 source-new role for unused objects in previously examined cells.
-Retain the strict unused-cell role whenever available. The existing DR19 request has zero native admissions, so it
+Job 61322134 authenticated 1,536 unused identities across four
+previously examined 10° sky blocks. No strictly unused block was available
+in this search. The [prospective roster receipt](manifests/v3_3/prospective_inputs.json)
+binds the closed photometry and the native admission waterfall.
+Verify historical Legacy aliases before writing forecasts. The existing DR19 request has zero native admissions, so it
 cannot supply a fresh spectroscopic score. Reuse previously opened
 spectroscopic comparisons only with their documented role.
 

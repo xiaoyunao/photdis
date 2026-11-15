@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify 1,536 closed Gaia validation identities
+
+- Job 61322134 completed 0:0 in 1 min 6 s. Each of four native DR11
+  sweeps supplies 384 PSFs with Gaia links. The history check finds zero
+  reused identities, and every selected source lies outside named field
+  footprints. The four 10-degree sky blocks have prior exposure.
+- Saved the receipt and added a Legacy alias check before forecasting.
+  No Gaia outcomes were read. The first full 472-test run under
+  single-thread limits passed again after the code changes.
+- Next, review the assembled comparison including class-marginalized
+  behavior and freeze the models, declared scoring method and exact
+  roster before submitting the Gaia outcome job.
+
 ## 2026-11-15 — preserve distance-dependent failures and repair the prospective design
 
 - The strict unused-cell Gaia intake 61321873 completed its
