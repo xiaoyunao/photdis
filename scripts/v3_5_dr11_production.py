@@ -18,7 +18,7 @@ from v2_1_near import ROOT, atomic_npz, load, save_json, sha
 from v3_0_native import read_native, subset
 from v3_3_sed import verified
 from v3_4_near_forecast import forecast, prepare, qrf_bins
-from v3_5_dr11_area import AREA, NSIDE
+from v3_5_dr11_area import AREA, NSIDE, tile_map
 from v3_5_dr11_inventory import CONFIG, OUT
 from v3_5_dr11_pilot import ARCHIVE, CUTS, LEDGER, scan_rows, strata
 from v3_5_dr11_pilot_evidence import PRODUCT as PILOT_EVIDENCE
@@ -62,6 +62,12 @@ def setup(n_groups):
                     raise ValueError('Non-PSF v3.4 rows cannot be reused')
             index.append((ids,np.full(len(ids),len(payload),dtype='i4'),np.arange(len(ids),dtype='i4')))
             payload.append(dict(path=str(part.relative_to(ROOT)),sha256=h))
+    with np.load(ROOT/payload[0]['path']) as old_sample:
+        ra, dec = float(old_sample['RA'][0]), float(old_sample['DEC'][0])
+    old_tile = int(tile_map(inv['sweeps'])[int(ra%360),min(int(dec+90),179)])
+    if old_tile < 0:
+        raise ValueError('An archived v3.4 source lacks sweep coverage')
+    smoke = inv['sweeps'][old_tile]['filename']
     ids, owner, row = [np.concatenate(x) for x in zip(*index)]
     if len(np.unique(ids))!=record['selected']:
         raise ValueError('v3.4 reusable identity ownership failed')
@@ -77,7 +83,7 @@ def setup(n_groups):
         groups[i].append(s['filename'])
         totals[i] += s['size']
     save_json(FREEZE,dict(job=os.getenv('SLURM_JOB_ID'),archive_index_sha256=sha(INDEX),archive_parts=payload,
-        excluded_bad_headers=omitted,groups=groups,group_bytes=totals,
+        excluded_bad_headers=omitted,groups=groups,group_bytes=totals,smoke=smoke,
         inputs={str(p.relative_to(ROOT)):sha(p) for p in (CONFIG,CUTS,CHOICES,inventory,area,pilot,old,Path(__file__),
             ROOT/'scripts/v3_5_dr11_pilot.py',ROOT/'scripts/v3_4_near_forecast.py')}))
     print('Frozen production groups',len(groups),'sweeps',sum(map(len,groups)),'bytes',totals.sum(),flush=True)
@@ -222,7 +228,7 @@ def process(source,cfg,cuts,choices,models,probe,index,plan,bind):
     print('v3.5',path.name,dict(totals),flush=True)
 
 
-def run(group,lane,lanes):
+def run(group,lane,lanes,*,smoke=False):
     plan = json.loads(FREEZE.read_text())
     for key,digest in plan['inputs'].items():
         verified(ROOT/key,digest)
@@ -232,14 +238,15 @@ def run(group,lane,lanes):
     model,probe,paths = prepare()
     bind = dict(freeze_sha256=sha(FREEZE),models={str(p.relative_to(ROOT)):sha(p) for p in paths})
     index = load(verified(INDEX,plan['archive_index_sha256']))
-    for name in plan['groups'][group][lane::lanes]:
+    names = [plan['smoke']] if smoke else plan['groups'][group][lane::lanes]
+    for name in names:
         process(sources[name],cfg,cuts,choices['domains'][0],model,probe,index,plan,bind)
 
 
 def main():
     require_compute()
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('stage',choices=('setup','run'))
+    p.add_argument('stage',choices=('setup','smoke','run'))
     p.add_argument('group',type=int)
     p.add_argument('lane',type=int,nargs='?',default=0)
     p.add_argument('lanes',type=int,nargs='?',default=1)
@@ -247,7 +254,7 @@ def main():
     if a.stage=='setup':
         setup(a.group)
     else:
-        run(a.group,a.lane,a.lanes)
+        run(a.group,a.lane,a.lanes,smoke=a.stage=='smoke')
 
 
 if __name__=='__main__':

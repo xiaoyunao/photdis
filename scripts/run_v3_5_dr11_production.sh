@@ -12,7 +12,7 @@ cd /pscratch/sd/y/yunao/photdis_pipeline
 source /global/common/software/desi/desi_environment.sh main
 export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-if [[ "$1" == setup ]]; then
+if [[ "$1" == setup || "$1" == smoke ]]; then
     python -u scripts/v3_5_dr11_production.py "$@"
 else
     export SLURM_CPUS_PER_TASK=32
