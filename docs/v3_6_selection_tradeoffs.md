@@ -114,6 +114,24 @@ SPDist 对应为 **621** 和 **43** 条。去掉当前 QRF 训练星后，严格
 [SpecDis 完整分层](../manifests/v3_6/vac_flow/specdis/performance.csv) ·
 [SPDist 完整分层](../manifests/v3_6/vac_flow/spdist/performance.csv)
 
+## 外部光谱验证能补足什么
+
+在选样前的整个 PSF 框架上，DR20 LCO 匹配 2,429 条，APO 匹配 990 条，
+DR17 astroNN 匹配 2,074 条，DR19 Astra 匹配 14 条。主选、严格档及距离
+质量条件进一步缩小了各来源能检验的范围。主选中，2–5 kpc 的高质量
+DR20 矮星仍是原来的 LCO 23 颗、APO 3 颗。四份外部库存都没有新增
+历史记录之外的 2–10 kpc 合格主选矮星。因此，大样本谱距库扩大了这一层
+的条件检验；当前外部光谱没有提供同样宽的新检验域。
+
+DR20 LCO 与 APO 中，参考距离中心至少 10 kpc、距离误差小于 20% 且
+有巨星分类的对象，在主选分别有 73 和 59 条，在严格档仍有 27 和 13
+条。**这些巨星的 QRF 距离中位数全部落在 10 kpc 内**。按整个误差区间
+都超过 10 kpc 的较严条件，原定向光谱中的严格档为 26 和 12 条。
+这些结果沿用各来源自己的匹配及质量条件。
+[匹配及选择流失](../manifests/v3_6/external_reference/association.csv) ·
+[外部参考误差](../manifests/v3_6/external_reference/distance.csv) ·
+[参考距离到 QRF 距离的迁移](../manifests/v3_6/external_reference/migration.csv)
+
 ## 巨星光度先验的支持范围
 
 用实际冻结 SED 检查，待比较的 28 个绝对星等与金属丰度格中，有 13 格

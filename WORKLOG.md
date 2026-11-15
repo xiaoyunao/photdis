@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-16 — finish and verify the external spectroscopy association
+
+- Job 61345553 finished the full supported-frame join of the four
+  archived external rosters. Verified its compact tables and receipt.
+  Supported native matches are 2,429 DR20 LCO, 990 DR20 APO, 2,074
+  DR17 astroNN, and 14 DR19 Astra. Counts are per source.
+- The precise 2–5 kpc DR20 primary dwarf reference remains 23 LCO
+  and 3 APO. No qualified new primary dwarf reference across 2–10 kpc
+  lies outside recorded history in the four available external rosters.
+- For precise DR20 giant reference centers at least 10 kpc, primary
+  has 73 LCO and 59 APO, strict has 27 and 13. All have the QRF
+  median below 10 kpc. The earlier 26/12 strict values use a
+  separate whole-reference-interval rule. Documented both denominators.
+- Gaia and the native/paired model analyses remain in Slurm.
+
 ## 2026-11-16 — deliver the paired 2–10 kpc QRF comparison plate
 
 - Rendered F02 from the completed historical test-cache comparison.
