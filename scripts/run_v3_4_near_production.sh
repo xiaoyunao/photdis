@@ -12,4 +12,12 @@ cd /pscratch/sd/y/yunao/photdis_pipeline
 source /global/common/software/desi/desi_environment.sh main
 export PYTHONPATH="$PWD/src:$PWD/scripts:$PWD/.deps"
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-python -u scripts/v3_4_near_production.py "${1:-${SLURM_ARRAY_TASK_ID}}"
+if [[ "$#" -eq 0 ]]; then
+    set -- "$SLURM_ARRAY_TASK_ID"
+fi
+for task in "$@"; do
+    python -u scripts/v3_4_near_production.py "$task"
+done
+if [[ "$1" == collect ]]; then
+    python -u scripts/v3_4_near_validate_catalog.py
+fi
