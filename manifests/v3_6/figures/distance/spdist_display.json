@@ -1,0 +1,30 @@
+{
+  "job": "61355213",
+  "dpi": 300,
+  "display_kpc": [
+    0.001,
+    250.0
+  ],
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "scripts/v3_6_plot_distance_atlas.py": "a7a2229f58df0268d2aaf6ec74a61f814de1bee75f3dd5d078f80a60776a81bb"
+  },
+  "caption": "All finite positive reference centers, preserving distances with larger or missing errors. Both cuts use the same matched parent. Low-count panels give individual stars, their available reference errors and QRF 68% intervals; the table retains every such star. Plotted centers are limited to the display range, with an explicit exterior count. Summary statistics retain every finite positive reference center, including points outside both plotted ranges. Source error conventions and training status are retained in the per-source evidence tables.",
+  "outputs": {
+    "SPDist_all_classes.png": "90f006250eb082029bf68bfdcbf6184003dd3e7732371b187281374bf40d94a8",
+    "SPDist_all_classes.pdf": "5b2b88b95bb20e03df3ff3c3f66202b454f2452273246cb93a7186bbd0a202ee",
+    "SPDist_all_classes.csv": "d3401e1009d695642941e8c5395cb972a315961248fa13f57d3fbe69ce4df710",
+    "SPDist_dwarfs.png": "b5cead2a1145d941f1e4a712298c01e08582f6e795ae5af5a8eb91c6e6ca4bb0",
+    "SPDist_dwarfs.pdf": "ac16acd0a31496f88869e59e22b0d07a0b895e000a7ca9bc8ec70fc0dde4d7e5",
+    "SPDist_dwarfs.csv": "e64d7391bbf952b96c99531261c3f88932a3a45299de30858edcc04075ceabcc",
+    "SPDist_giants.png": "18fc9d2f050768d5368f3bac72cd82cb025496b016519955281acc8ea45bd238",
+    "SPDist_giants.pdf": "79ebee2017bb66163b6b39979de96e5c2fa7f3a79f6d35121edfd47bbb6617ca",
+    "SPDist_giants.csv": "bada0cf5c28900ca01b3396a1d4b35bcefe8af663e434ad4f302eb889a9331ee",
+    "SPDist_other_stars.png": "9cc10b0b9e64c17e4ee01be17af2420d2927b2c7569debd907823ea732b2f7d4",
+    "SPDist_other_stars.pdf": "a24da65d9f8a318c536bddd3e7d06fcc164125b1ec08471954148e191b43b557",
+    "SPDist_other_stars.csv": "1a814605d56983137cf5e1a022cc292adcf403b96a2c7e84b63103cc506aacd6",
+    "SPDist_unknown_class.png": "4e2331fbc37cac7f5f23ac25629710e25f6e22e09faea348959462e83e71f493",
+    "SPDist_unknown_class.pdf": "2614edc11b9313b3a84dcec6099e298c25fd63f1576ee86761b0e28fd7147f60",
+    "SPDist_unknown_class.csv": "4b57980b4609ef17fe19644b7ea8b845b92b9d00761a4640bb2849c218781984"
+  }
+}

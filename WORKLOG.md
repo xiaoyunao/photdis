@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — restore a readable SPDist axis while preserving the full statistics
+
+- Job 61355213 completed at 0:0 in 32 seconds. Verified 15 product hashes
+  and reviewed the five revised SPDist panels. All 15 source/cut summary
+  rows match the former statistics, including counts and residual tails.
+- The axis annotations identify 197/18/4 finite centers outside the
+  display for the supported/primary/strict all-class panels. Both renderings
+  stay on NERSC. The selected corrected F02 panels are synced.
+
 ## 2026-11-16 — inspect full distance triptychs and recover brightness-matched blue controls
 
 - Verified 105 F02 products from job 61346085 and reviewed all 35 PNGs.
