@@ -20,7 +20,8 @@ from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 from v3_3_sed import verified
 from v3_4_near_recover_labels import archived_labels
 from v3_4_near_reference_support import past_evidence, separation, spectroscopic_inventory
-from v3_4_near_validate import GAIA, geometry, read_targeted, tile_inventory
+from v3_4_near_validate import GAIA, OUT as V34_EVIDENCE, geometry, read_targeted, tile_inventory
+from v3_5_dr11_pilot_evidence import PRODUCT as PILOT_EVIDENCE
 from v3_5_dr11_production import CUTS, FREEZE, PRODUCTION
 from v3_5_dr11_spatial import DELIVERY, read_tile
 
@@ -114,6 +115,41 @@ def acquire_spectral_metadata(hashes):
     spec['DR20_APO'] = dict(source_id=sid[rows],RA=ra[rows],DEC=dec[rows],reference_row=rows)
     return spec
 
+
+
+def validation_history(hashes, group):
+    """Include the recent evidence cohorts alongside the legacy exposure list."""
+    prior,legacy = past_evidence(hashes)
+    by_id,by_legacy = [prior],[legacy]
+
+    def retain(path,digest):
+        hashes[str(path.relative_to(ROOT))] = digest
+        with np.load(verified(path,digest),allow_pickle=False) as rows:
+            by_legacy.append(rows['ls_id'])
+            for key in ('identity','source_id','native_source_id'):
+                if key in rows:
+                    by_id.append(rows[key])
+
+    v34 = V34_EVIDENCE/'complete.json'
+    pilot = PILOT_EVIDENCE/'complete.json'
+    for marker in (v34,pilot):
+        hashes[str(marker.relative_to(ROOT))] = sha(marker)
+    for name,digest in json.loads(v34.read_text())['outputs'].items():
+        if name.endswith('.npz'):
+            retain(v34.parent/name,digest)
+    for key,digest in json.loads(pilot.read_text())['inputs'].items():
+        path = Path(key)
+        if path.parts[:3] == ('data','v3_5','pilot') and path.name == 'complete.json':
+            marker = verified(ROOT/path,digest)
+            item = json.loads(marker.read_text())['outputs'].get('prediction.npz')
+            if item is not None:
+                retain(marker.parent/'prediction.npz',item)
+    if group is None:
+        for marker in sorted(OUT.parent.glob('validation_group_*/complete.json')):
+            hashes[str(marker.relative_to(ROOT))] = sha(marker)
+            name = 'gaia_qualification_roster.npz'
+            retain(marker.parent/name,json.loads(marker.read_text())['outputs'][name])
+    return np.unique(np.concatenate(by_id)),np.unique(np.concatenate(by_legacy))
 
 def qualification(photo,valid_id):
     gaia = join_gaia(valid_id,GAIA)
@@ -275,7 +311,7 @@ def main():
     destination,names,ambiguous,totals = reference_frame(args.group,plan,hashes)
     specs = acquire_spectral_metadata(hashes)
     targets = np.unique(np.concatenate([x['source_id'] for x in specs.values()]))
-    previous, lsids = past_evidence(hashes)
+    previous, lsids = validation_history(hashes,args.group)
     samples,spectra,counts = [],[],Counter()
     for name in names:
         sample, matched, stats = draw_tile(PRODUCTION/Path(name).stem,targets)
