@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — verify closed reference coverage and prepare a same-frame Gaia reserve
+
+- Metadata job 61328957 completed 0:0 in 2 min 37 s. The exact
+  1,183,990-source denominator has 1,183,438 unique native Gaia
+  links and 86,359 not in the prior evidence roster.
+- Direct match finds 288 DR20 LCO rows with one outside prior
+  evidence and six DR19 Astra rows with none outside. Spectroscopy
+  remains targeted. Availability counts precede distance and class
+  qualification.
+- Added a source-bound Gaia reserve, native-ID links for the
+  application probability draw and an APO metadata comparison.
+  No new parallax or spectral class/distance outcomes read.
+- Local test suite passed again with 472 tests.
+
 ## 2026-11-15 — match external reference metadata to the application denominator
 
 - The archived model identity can differ from the native DR11 Gaia DR3

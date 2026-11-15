@@ -25,6 +25,12 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    Gaia DR3 source IDs as a distinct join key from archived model identity.
    Inventory DR20 MINESweeper metadata and genuinely new DR19 Astra
    lineage in the exact application frame with the values still closed.
+   Job 61328957 found 288 LCO and six Astra metadata matches, only
+   one outside prior evidence. It also found 86,359 uniquely linked
+   Gaia identities outside prior evidence. Preserve that same-frame
+   Gaia pool and link it to the 17,787-source probability draw.
+   Check the APO subset of DR20 metadata for additional leverage.
+   Spectrum counts and Gaia-link counts precede scientific qualification.
 2. Select an observable working point and a stricter sensitivity contrast
    using opened development evidence. Lock the model, selection,
    validation rules and independent evidence before opening any new
