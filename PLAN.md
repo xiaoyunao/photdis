@@ -1,6 +1,6 @@
 # PLAN
 
-## v3.6 — reference recovery, failure diagnosis and paper figures
+## v3.6 — completed reference recovery, failure diagnosis and paper figures
 
 Use the frozen v3.5 delivery at `17e37d4` and the [latest Pro review](chatgpt-conversation://6af9bbfe-5288-83ea-9e15-f09b45daea62)
 with the 2026-11-15 task brief. Keep the full v3.5 catalog and model bytes.
@@ -52,9 +52,9 @@ using the signed Gaia subcohort for forward scores and sky blocks for count
 uncertainty. The conditional population projections accompany direct reference
 comparisons.
 
-Current Slurm dependencies are in WORKLOG. All 48 frozen group projections are verified and feed
-the probability summary and full Gaia join. The paired-cache
-comparison feeds the shared-photometry replay.
+All 48 frozen group projections, published probability summaries and Gaia
+associations are verified. The paired-cache comparison feeds the
+shared-photometry replay.
 The blue replay has its own native PDF, color and coadd plate. Its fit
 residuals have been compared with Gaia stars matched in observed magnitude
 and color. The F06 shell and depth views already use the
@@ -70,11 +70,10 @@ on 12,755 native PSFs. The F09 scenario counts, migration and spatial
 intervals are published. The signed Gaia comparison, direct distance migration,
 and all-catalog Gaia and spectroscopic coverage are published using the joined
 evidence. The F01 source admission and deduplicated CMD are published.
-Read [the current plot index](docs/v3_6_figure_index.md) for the available
-figures and their denominators. The completed 61347073 photometry pass
-feeds the final F04/F05 metrics and plates in 61359902–61359904.
-Allocated test 61346262 passed on two
-real sweeps and verified the interfaces without creating production outputs.
+F04 and F05 completed on the common native photometry pass, with all
+source tables and display files verified. See the [science result](docs/v3_6_result.md)
+and [atlas index](docs/v3_6_figure_index.md) for the evidence and its scope.
+The production models and all v3.5 predictions remain frozen.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 

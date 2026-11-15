@@ -1,0 +1,22 @@
+{
+  "job": "61359903",
+  "source": "DR20_APO",
+  "dpi": 300,
+  "inputs": {
+    "scripts/v3_6_plot_reference_colors.py": "dc91979d62b2be8c875f84ee49404bfe21262edc4b63732ec42704203ea20825",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903"
+  },
+  "caption": "CMD columns use the same positive-reference and QRF-distance sample. Color panels require only their displayed measured bands. Optional-band states, class and cut counts, off-frame counts and all occupied plotted bins are exported. Distance modulus residuals are QRF minus reference. Residual and reference CMD coordinates share the reference distance, inducing correlated errors. A narrow predicted sequence by itself gives no validation of distances.",
+  "outputs": {
+    "counts.csv": "78a3532b8b3faef0ef1aaa1a92f1365810c770f6894c6672187b858231b60c01",
+    "residuals.pdf": "fa716c0acb14d8c5a4ec27aee60106476bf475b6ab937c3a20ab2a72148e8eaa",
+    "residuals.png": "cb21f3d972949b3c14ddc184118eb7232d09025a7900248854415818b1b67f91",
+    "colors.png": "0624c1e88e0639999555e4b63fcabe4a824c2dc94a2e347e641cc9b89b4fecf7",
+    "band_states.csv": "6d0ac55de926b51c02bc8ac467ae273c1d8895b54b8583a49415fb27de5eba00",
+    "cmd.pdf": "1393a9c71f3cd0b0d7c774376b5542e2b3ee299db019ddf52e1cf30e02c721af",
+    "colors.pdf": "b8e9774a105fe6e865d3ff04e99c26f7c5096a867e774cd3392786c10684d40d",
+    "cmd.png": "7362e578cb2b436e32e1a69e10b1cfa1f8a677f47a145323482ef779fdad180c",
+    "cells.csv": "e838a2e1c96935cb1710be241483c6c45147ad6d9819cd6c093b08e139b7fb8b"
+  }
+}

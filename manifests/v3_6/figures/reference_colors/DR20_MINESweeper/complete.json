@@ -1,0 +1,19 @@
+{
+  "source": "DR20_MINESweeper",
+  "dpi": 300,
+  "input_receipt_sha256": "4c6e6fb318b4d5a91d541e9992f019c0d5838dc424102d6350d9abc6e6dfdffb",
+  "input_tables": {
+    "counts.csv": "0f88cffba18110b23912618968fd247394bb0a3c59e5e563ac3ab8d0a46fe415",
+    "cells.csv": "2c99df84fa10f802162d65151c69fa758679cdc5a04bcc7cc8fe4aa14d7f0c09"
+  },
+  "render_script_sha256": "2e5d123cb928421e22e1d62a75a2a05a6861957a9f11fc1f87744cfe533e30b0",
+  "caption": "CMD columns use the same positive-reference and QRF-distance sample. Color panels require only their displayed measured bands. Optional-band states, class and cut counts, off-frame counts and all occupied plotted bins are exported. Distance modulus residuals are QRF minus reference. Residual and reference CMD coordinates share the reference distance, inducing correlated errors. A narrow predicted sequence by itself gives no validation of distances.",
+  "outputs": {
+    "colors.pdf": "015602b1d5c2bc223ae7d18343b3cfb615a3d3dcfff6861152dd77b9151fcccc",
+    "colors.png": "e95ea0c0f6aebbfe7c2e27fd059cf3a676279ea2c87db309fe4bf68f18fa23d6",
+    "residuals.pdf": "8e36d135b94a1155f2d10ce8156034e04b887c89b22349876f9a0aa6ce20da1c",
+    "residuals.png": "7c47e2acb72621613fadd2f8b99bbb1d0928cf23e0e1375569d07da573235065",
+    "cmd.png": "bf5e2d7c0d88a2b58cb005a413dda3bdaab2f54c15d0517adc526da592466903",
+    "cmd.pdf": "117cee8fcc40c9d03d84dce9306120c0ac33a23c66a134fd2bdc5e2d90baca8f"
+  }
+}

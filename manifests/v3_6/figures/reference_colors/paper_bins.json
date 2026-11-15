@@ -1,0 +1,17 @@
+{
+  "manifests/v3_6/figures/reference_colors/Gaia/cmd_cells.csv": {
+    "input_source_cells_sha256": "9c9dbef1f1f707d6d21deec8d9da6f4a2868bfd0d4f2501b76daa69f9c63852f",
+    "sha256": "503d6137a21d10af43aa32c4f2ac6c933c4bdc3c3348168b31f81adc8cc038c0",
+    "cells": 4101
+  },
+  "manifests/v3_6/figures/reference_colors/Gaia/colors_cells.csv": {
+    "input_source_cells_sha256": "9c9dbef1f1f707d6d21deec8d9da6f4a2868bfd0d4f2501b76daa69f9c63852f",
+    "sha256": "df6136e64f2657f899d4131f39a706e1dc99091beab9e9f0e65d503752c4d717",
+    "cells": 3415
+  },
+  "manifests/v3_6/figures/reference_colors/SpecDis/residuals_cells.csv": {
+    "input_source_cells_sha256": "ba2a2c118a89c0d7ece89a7551b58563a06c62abc8e7b7a0e2a859b6c8d4ab3b",
+    "sha256": "1a7d209b3e79cfd90d32618901b2db90846b8abc360b035b779e3e2975ca2e3b",
+    "cells": 2110
+  }
+}

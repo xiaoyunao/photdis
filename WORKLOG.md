@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — complete the v3.6 scientific diagnosis and F01–F10 atlas
+
+- All seven F05 source jobs completed. Verified the raw cells, accounting
+  tables, updated layout and 21 PNG/PDF sets. The original renders and binned
+  evidence remain under `reference_colors`. Verified publication graphics
+  are in `reference_colors_display`.
+- Published `docs/v3_6_result.md` and the full figure index, with nine
+  paper candidates. The supported domain, direct reference migration and
+  conditional LF assumptions retain their distinct evidence.
+- Checked source and figure receipts, compilation, links, and the frozen
+  v3.5 source tree. Synchronized the final repository on all three endpoints.
+
 ## 2026-11-16 — verify the conditional-error atlas and all source metrics
 
 - Jobs 61359902 and 61359904 completed. The full 43,470-cell source table

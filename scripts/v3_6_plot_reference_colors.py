@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Compare observable and absolute color-magnitude diagrams on the same stars."""
 import argparse
+import csv
 import json
 import os
+from itertools import chain
 from pathlib import Path
 
 import matplotlib
@@ -66,22 +68,29 @@ def binned(x,y,residual,x_edges,y_edges):
                        finite_residual=int((valid&np.isfinite(residual)).sum()))
 
 
+def plot_axes():
+    for key,title,ylabel,xrange,yrange in CMD:
+        yield key,title,label(('G','R')),ylabel,xrange,yrange
+    for x,y in PLANES:
+        xlabel,ylabel = label(x),label(y)
+        slug_x,slug_y = '-'.join(x),'-'.join(y)
+        yield f'{slug_x}_vs_{slug_y}',f'{xlabel[:-6]} and {ylabel[:-6]}',xlabel,ylabel, \
+            COLOR_RANGE[slug_x],COLOR_RANGE[slug_y]
+
+
 def plots(a,magnitude):
     with np.errstate(divide='ignore',invalid='ignore'):
         reference = 10+5*np.log10(a['reference_kpc'])
         qrf = 10+5*np.log10(a['qrf_quantiles_kpc'][:,2])
     residual = qrf-reference
-    y = (a['observed_r'],magnitude[:,1]-reference,magnitude[:,1]-qrf)
     common = np.isfinite(residual)&np.isfinite(magnitude[:,1])
-    color = magnitude[:,0]-magnitude[:,1]
-    for (key,title,ylabel,xrange,yrange),value in zip(CMD,y):
-        yield key,title,label(('G','R')),ylabel,np.where(common,color,np.nan),value,residual,xrange,yrange
-    for x,y in PLANES:
-        xlabel,ylabel = label(x),label(y)
-        slug_x,slug_y = '-'.join(x),'-'.join(y)
-        cx,cy = (magnitude[:,BANDS.index(u)]-magnitude[:,BANDS.index(v)] for u,v in (x,y))
-        yield f'{slug_x}_vs_{slug_y}',f'{xlabel[:-6]} and {ylabel[:-6]}',xlabel,ylabel,cx,cy,residual, \
-            COLOR_RANGE[slug_x],COLOR_RANGE[slug_y]
+    color = np.where(common,magnitude[:,0]-magnitude[:,1],np.nan)
+    cmd_coords = ((color,y) for y in (a['observed_r'],magnitude[:,1]-reference,magnitude[:,1]-qrf))
+    color_coords = (tuple(magnitude[:,BANDS.index(u)]-magnitude[:,BANDS.index(v)] for u,v in pair)
+                    for pair in PLANES)
+    coords = chain(cmd_coords,color_coords)
+    for (key,title,xlabel,ylabel,xrange,yrange),(x,y) in zip(plot_axes(),coords):
+        yield key,title,xlabel,ylabel,x,y,residual,xrange,yrange
 
 
 def prepare(a,magnitude):
@@ -128,7 +137,8 @@ def panel(ax,item,field,limits,cmap,invert,minimum=0):
         ax.invert_yaxis()
     if field=='count':
         n,t = (item['counts'][k] for k in ('available','outside_frame'))
-        ax.set_title(f"{item['title']}   |   N = {n:,}" + (f'   |   {t:,} off-frame' if t else ''))
+        subtitle = f'N = {n:,}' + (f' · {t:,} off-frame' if t else '')
+        ax.set_title(f"{item['title']}\n{subtitle}",fontsize=12,pad=5)
     return m
 
 
@@ -173,10 +183,64 @@ def render(display,dest,source):
         export(fig,dest,'residuals')
 
 
+def render_saved(source,archive,dest):
+    if (dest/'complete.json').exists():
+        raise FileExistsError(dest/'complete.json')
+    marker = archive/'complete.json'
+    receipt = json.loads(marker.read_text())
+    if receipt['source']!=source:
+        raise ValueError('F05 display replay must use the requested source')
+    counts,cells = [verified(archive/name,receipt['outputs'][name]) for name in ('counts.csv','cells.csv')]
+    specs = {key:(title,xlabel,ylabel,[np.linspace(*r,GRID+1) for r in (xr,yr)])
+             for key,title,xlabel,ylabel,xr,yr in plot_axes()}
+    display = {}
+    with counts.open() as stream:
+        for row in csv.DictReader(stream):
+            if row['reference_class']!='all':
+                continue
+            title,xlabel,ylabel,edges = specs[row['plane']]
+            data = {field:np.full((GRID,GRID),np.nan) for field in ('bias','absolute','severe')}
+            data.update(count=np.zeros((GRID,GRID),int),residual_count=np.zeros((GRID,GRID),int))
+            totals = {k:int(row[k]) for k in ('available','outside_frame','finite_residual')}
+            display[row['plane'],row['selection']] = dict(data=data,counts=totals,title=title,
+                xlabel=xlabel,ylabel=ylabel,edges=edges)
+    with cells.open() as stream:
+        for row in csv.DictReader(stream):
+            if row['reference_class']!='all':
+                continue
+            item = display[row['plane'],row['selection']]
+            lo = [float(row[k]) for k in ('x_lo','y_lo')]
+            i,j = (round((v-edge[0])/(edge[1]-edge[0])) for edge,v in zip(item['edges'],lo))
+            if not (0<=i<GRID and 0<=j<GRID):
+                raise ValueError('F05 coordinate lies outside the replayed grid')
+            np.testing.assert_allclose([item['edges'][0][i],item['edges'][1][j]],lo,rtol=0,atol=1e-12)
+            if item['data']['count'][i,j]:
+                raise ValueError('Repeated F05 coordinate cell')
+            for field,values in item['data'].items():
+                values[i,j] = float(row[field])
+    for item in display.values():
+        if item['data']['count'].sum()+item['counts']['outside_frame']!=item['counts']['available']:
+            raise ValueError('Replayed F05 bins fail the available-count check')
+    dest.mkdir(parents=True,exist_ok=True)
+    render(display,dest,SOURCE_LABELS.get(source,source))
+    save_json(dest/'complete.json',dict(source=source,dpi=300,input_receipt_sha256=sha(marker),
+        input_tables={p.name:receipt['outputs'][p.name] for p in (counts,cells)},
+        render_script_sha256=sha(Path(__file__)),caption=receipt['caption'],
+        outputs={x.name:sha(x) for x in dest.iterdir() if x.suffix in ('.pdf','.png')}))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source')
-    source = parser.parse_args().source
+    parser.add_argument('--saved-tables',type=Path)
+    parser.add_argument('--output-dir',type=Path)
+    args = parser.parse_args()
+    source = args.source
+    if args.saved_tables:
+        if not args.output_dir:
+            parser.error('--saved-tables requires --output-dir')
+        render_saved(source,args.saved_tables,args.output_dir)
+        return
     require_compute()
     p,e = PHOTO/'complete.json',EVIDENCE/'complete.json'
     photo,evidence = [json.loads(x.read_text()) for x in (p,e)]
@@ -191,7 +255,7 @@ def main():
     np.testing.assert_array_equal(t['band_state'][order],a['band_state'])
     if not (a['TYPE']=='PSF').all() or not (t['TYPE'][order]=='PSF').all():
         raise ValueError('F05 requires native PSF')
-    dest = OUT/source
+    dest = args.output_dir or OUT/source
     dest.mkdir(parents=True,exist_ok=True)
     if (dest/'complete.json').exists():
         raise FileExistsError(dest/'complete.json')
