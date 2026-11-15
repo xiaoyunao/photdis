@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-15 — register bounded catalog inputs
+
+- Added the three DECam footprints, native magnitude range and extraction
+  program for the complete in-window PSF roster. The admission consumes
+  the authenticated v3.0 photometry envelope and no reference outcomes.
+- Syntax and the footprint, magnitude and PSF smoke check pass. Slurm
+  started the dwarf and giant fits. The other-class fit is queued, with
+  model assembly and opened development scoring attached by dependency.
+
 ## 2026-11-15 — implement the first class-conditional SED fit
 
 - Added the v3.3 fit configuration, trainer and Slurm wrapper. Sample
@@ -19,6 +28,10 @@
   frozen grz model and native distance bins. The synthetic check matches
   the baseline kernel reduction and verifies signed Gaia and QRF scoring.
   The full local suite passes all 472 tests.
+- Development job `61318811` follows assembly. Slurm shows all three
+  fit tasks waiting for resources. Cloud receipts verify all selected
+  objects are PSFs and record inclusion probabilities of 0.108239,
+  1.0 and 0.172400 for dwarfs, giants and other labels.
 
 ## 2026-11-15 — start the v3.3 distance-core study
 

@@ -42,6 +42,14 @@ assembled model, nominal SED and frozen grz QRF on opened development
 identities. It keeps all admitted labeled giants and stable subsamples
 of the other labels. The first decision uses source-error-aware scores,
 conditional giant residuals and intervals, and marginal branch behavior.
+The development comparison is job `61318811`.
+
+The bounded catalog uses three half-open 1° × 1° windows in the
+existing DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
+`configs/v3_3_catalog.json` sets the footprint and grid. Prepare the
+complete photometry-only roster from the audited v3.0 candidate input
+envelope before inference. Keep every admitted identity and the original
+optional-band states. The envelope and validation support are distinct.
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.
 
