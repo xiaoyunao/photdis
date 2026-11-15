@@ -1,0 +1,21 @@
+{
+  "job": "61323518",
+  "matched_near": 3515,
+  "roundoff_endpoints": {
+    "nominal/Nearer than 10 kpc": 0,
+    "nominal/Giant class": 0,
+    "candidate/Nearer than 10 kpc": 0,
+    "candidate/Giant class": 0,
+    "qrf/Nearer than 10 kpc": 20
+  },
+  "development_only": true,
+  "inputs": {
+    "data/v3_3/development/initial/complete.json": "01e83814305cff6fc339f5b20fccfb24684318fa860e50c7fde9a9c1bbd5d3e9",
+    "scripts/v3_3_reliability_correction.py": "445b4b30981e97f9d7d0a62cabb530c225039a11dbff56eee2933750fa55c536"
+  },
+  "outputs": {
+    "reference_reliability.pdf": "b201f172f6060b2e8914526e6bd85817430c5d41a92bfc3c428fae3a6f1981cc",
+    "reference_reliability.png": "39c69c9b5da8abdb497855475fd1a67d0847b4aa39b043111c5a0da54d5fba70",
+    "reliability.csv": "6257b90cffefb97168be0862eccb1fdffb5bc04f6025de228c57ef17ad92fa18"
+  }
+}

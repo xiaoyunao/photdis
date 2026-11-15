@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — verify the frozen forecast and prospective Gaia outcome
+
+- Freeze 61323428, forecasts 61323429 and Gaia score 61323430
+  completed 0:0. Verified the 48-input freeze, model digests,
+  closed prediction receipt and first opening. All 1,212 eligible
+  signed parallax scores are finite, with 125 negative parallaxes.
+- Candidate minus nominal is −0.0497 nat per star, and candidate
+  minus QRF on 1,170 matched supported sources is −0.0711 nat.
+  Both sky-block intervals cross zero over four previously seen
+  blocks with new identities. Two weak-W1 rows are scored.
+- Reporting correction 61323518 recovered the 20 probability
+  endpoints and the identical 3,515-row near reliability cohort.
+  Checked the corrected English plate and saved the original.
+- Added a saved-array numerical sensitivity check and prepared
+  the main research report. Catalog and structure jobs still
+  have pending work.
+
 ## 2026-11-15 — complete the matched development analysis and submit the frozen run
 
 - Jobs 61318811 and 61321265 completed 0:0. The full 3,830-source

@@ -1,0 +1,72 @@
+{
+  "models": {
+    "nominal": {
+      "path": "data/v3_0/sed_fit.joblib",
+      "sha256": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33"
+    },
+    "candidate": {
+      "path": "data/v3_3/sed/initial/model.joblib",
+      "sha256": "0209bdcbca22df495e531794df85a20e48ea75cf7946222fb8c228582522ee84"
+    },
+    "qrf": {
+      "path": "data/v3_0/controls/qrf_grz.joblib",
+      "sha256": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716"
+    }
+  },
+  "research_catalog_model": "candidate",
+  "fitted_candidate_converged": true,
+  "catalog_inputs_sha256": "95c40ee539e43fd5d65453a5ca643182f86cd603960b3da2c1f50970e5313d08",
+  "prospective_inputs_sha256": "d10a1bb24e55535f6e5e908a83d0646a8ffea894bc7cbc574d9186cb9750ceca",
+  "scoring_target": "Corrected signed Gaia parallax with measured uncertainty on previously unused PSFs.",
+  "decision_sha256": "9e62bfbd33467d093529bd7c84d2d601e6f64bd4471d91cbe0079f966fc667e8",
+  "inputs": {
+    "data/v3_3/development/initial/complete.json": "01e83814305cff6fc339f5b20fccfb24684318fa860e50c7fde9a9c1bbd5d3e9",
+    "data/v3_3/development/initial_report/complete.json": "5cb50bfd8c62c76af2e1ffbad5b981f267c17703b385fad25fa6124957e6521e",
+    "data/v3_3/catalog/inputs/complete.json": "95c40ee539e43fd5d65453a5ca643182f86cd603960b3da2c1f50970e5313d08",
+    "data/v3_3/prospective/inputs/complete.json": "d10a1bb24e55535f6e5e908a83d0646a8ffea894bc7cbc574d9186cb9750ceca",
+    "data/v3_3/sed/initial/complete.json": "88ef1aa31a6b7f633aa1ea56c15b2a419005751912f008aa247d72fbc5df9d3d",
+    "configs/v3_3_decision.json": "9e62bfbd33467d093529bd7c84d2d601e6f64bd4471d91cbe0079f966fc667e8",
+    "scripts/v3_3_catalog.py": "70bfa50ba170b695fdcf16dce048b8f42d45a82e3a8fcb22081a4fe8a2e48c2c",
+    "scripts/v3_3_catalog_inputs.py": "97e1173f83569a046e3c54d6aebbbd5822d19d2dab8d9bd6f9bbeb129949dce0",
+    "scripts/v3_3_delivery.py": "435a25a353bd9f845019da05554fc4a150ef5b47b915044260d301986c7221ad",
+    "scripts/v3_3_development.py": "72cd5bc3245ff0e30bc872a106ebeab0fd1c7d9c455194d925208bf5caa2e5af",
+    "scripts/v3_3_development_report.py": "b26cae1b970e5c98cac58b23ace08fd5b01c101624ad50537256ab06efe90d5b",
+    "scripts/v3_3_freeze.py": "b9e5dc65a93df51598ea362f59361026c0a1a29afa4c416dc67ca330a60e85f8",
+    "scripts/v3_3_giant_development.py": "15759dca6e5cf5c67d3f96314a8b45fc37536f65809a08bd1d50832389cecf10",
+    "scripts/v3_3_prospective.py": "46d5159ac86026d4f1791fe926bf8c667932f181799b17a2b6e5bd4cec9cb7eb",
+    "scripts/v3_3_prospective_inputs.py": "ab9eab7b38eea51319982d4d6b0755e98a38e88a7c77c08913b1273cee1add4b",
+    "scripts/v3_3_reference_scatter.py": "0000572f68608ea79203ce554418c205170cf05b7c95c31cab22088fe044a6d5",
+    "scripts/v3_3_reference_support.py": "158c80f6bfa461deaf8656e83bab9131bc5c5d0d807b47ef3c6727258981b3c3",
+    "scripts/v3_3_sed.py": "c749e3e2e8b12989391b4bf5601e0157034657e551e40feff73b341b2fbf47d6",
+    "scripts/v3_3_structure.py": "7f3b60de5206b60861d67c0d929e686f80c18892b1cca2f73895500414714748",
+    "scripts/run_v3_3_catalog.sh": "7685c9a00b0c5da3996e5280906d84245d32b4d2bcee5c64acfa32f8e4c9aaa9",
+    "scripts/run_v3_3_catalog_inputs.sh": "b4fe70555dda31e2d6a47e36bb198a9f69b1fc06a56fd9d554f582b08379b05f",
+    "scripts/run_v3_3_delivery.sh": "9a66c8169e39fbb22c737efceb1dc3a2d7953db0f1bfa14182c30f7ed901c0a8",
+    "scripts/run_v3_3_development.sh": "a1a9ea2e89410406f71ea9d37f963e6964c5d1f3448e1770cd4b7729bcc873c4",
+    "scripts/run_v3_3_development_report.sh": "26457c85a7d0ec1582b07f183533d07aceaa56c22bbdedee017b3f60122463ee",
+    "scripts/run_v3_3_giant_development.sh": "f0bda857d3b5f38af7db6d48a5291da7e37c51d41385ded6eb59ac7701901c21",
+    "scripts/run_v3_3_prospective.sh": "c8d11746eef12e4b95431a78b1b7bbc0a96f8bb028300579f33f2f7428dfa9d4",
+    "scripts/run_v3_3_prospective_inputs.sh": "68d6768a6f849b449047485148a1843080b34fb34e4ac16b0797dbde43a75a06",
+    "scripts/run_v3_3_reference_scatter.sh": "5e56114b4e9e6ede1b67f9a35e6df0cc2a882b247dd81921738b94cbe100c977",
+    "scripts/run_v3_3_reference_support.sh": "de7bc1f70326a0e1089013ecbf459fb4b22e3378cd6ac81f0360ce8314861b43",
+    "scripts/run_v3_3_sed.sh": "6e1940457c95c6a12a6077a0cbad203442d4af29db23ca5dd4c3a3300b44d864",
+    "scripts/run_v3_3_structure.sh": "733281508c12ba026ff4c244c56359713f1eddc5a9969113756d4f922c00f49d",
+    "configs/v3_3_catalog.json": "75dfc847f47422dcb7a345219ca21b0b3a724664052695c1338bf2a4667dcf0e",
+    "configs/v3_3_prospective.json": "86cfacfe7d79daa2b975bfe97269905cf8fc9ce6cb6c1e2f365ba9b3daf79cdc",
+    "configs/v3_3_sed.json": "0f69792d9b744992dd5dac8e79b162f784d99c058fc641a3207189d1b5068b5a",
+    "configs/v3_3_structure.json": "ba7b00f27a456bb51301c9f9fa39ec44e9ae2eb8d0a404eedd1dfa238e1ff557",
+    "src/photdis/v3_3.py": "e4b573c1dbd32f04ad524077ebbcfc8cf445228b7a3dd51fa9e2a6f431723b4b",
+    "src/photdis/gaia.py": "055355969be90820ec3403d98ed18702e0840c2fc4744546a165ae5f7ef4e9ac",
+    "src/photdis/baseline_v1.py": "d0601943b2e234c21643943008d34934f0d88fab4c96fc86065486a7b6388145",
+    "src/photdis/v3/fast.py": "88ed1fb121c83c321c77e856c32216831c67ddc5024c450a8dc2f3a67a6ce199",
+    "src/photdis/v3/inference.py": "e850c8ede1902ee0ac69b6bbb88344d1a3c6b8325a19a939b800a993ba500247",
+    "src/photdis/v3/likelihood.py": "f31efb508f323239633b02e1f9b888d08b5977ae55cc53c0eab9f6476ed8f3b8",
+    "src/photdis/v3/metrics.py": "df7dbd96d4990a92d1c823dbe58cb103707fe4cc0b0b10339befac3631488279",
+    "src/photdis/v3/selection.py": "7e6df8d6708f8a5567020aebe78704fe8de65a8ee025a6fbfd38c99da2f94653",
+    "src/photdis/v3_1/gaussian_response.py": "0c130d60d7e07c09c588fa507cf1127bb8c78783b9071909164b7e8db7449cfc",
+    "src/photdis/v3_1/selection_dust.py": "665bf21cde76a6f285ce6aee6f50fee5e75881e3695673176ea695084d339376",
+    "src/photdis/v3_1/structure.py": "d1dd4dd0a0cd2759b1d8f0e07bf6934e9d517b1fa6a5c5f5ef8bc16a4c118aa5",
+    "src/photdis/v3_1/structure_posterior.py": "0416c47799875844b8277b5e4983f31382a8772d65cc83f7f33dfda56273a4f0",
+    "src/photdis/v3_1/validation_report.py": "f5ee139e95aec06829b027123606caba06c0a268e9efbd42eef8975e85b8b026"
+  }
+}

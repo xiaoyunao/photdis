@@ -1,0 +1,28 @@
+{
+  "n": 1536,
+  "model_freeze": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+  "script": "46d5159ac86026d4f1791fe926bf8c667932f181799b17a2b6e5bd4cec9cb7eb",
+  "outcomes_read": false,
+  "all_PSF": true,
+  "legacy_overlap": {
+    "data/pilot_audit_v1/reference.fits": 0,
+    "data/baseline_v0/references.npz": 0,
+    "data/giant_information_v1/labels.npz": 0,
+    "data/baseline_v1_4/references.npz": 0,
+    "data/v2_3/training.npz": 0,
+    "data/v3_0/references.npz": 0,
+    "data/v3_0/validation/reservation/photometry.npz": 0,
+    "data/v3_0/validation/new_sky/photometry.npz": 0,
+    "data/v3_0/validation/independent_scale/photometry.npz": 0,
+    "data/v3_1/validation_roles/field_photometry.npz": 0,
+    "data/v3_1/validation_roles/common_photometry.npz": 0,
+    "data/v3_2/minesweeper_native/photometry.npz": 0,
+    "data/v3_2/common_scale_inventory/photometry.npz": 0
+  },
+  "outputs": {
+    "candidate.npz": "c04772bd101ef480dcb6b562212c3b1093c3cc74e18c50491dc73980d6ff4911",
+    "nominal.npz": "22063f4a4ad2d6196284eff4420c3f603e9e56485087f11536b72237d4e70727",
+    "qrf.npz": "57cfdbbed06738582ba58b0dff2e4293bed7684ada9fd291391f859212aaa746"
+  },
+  "job": "61323429"
+}
