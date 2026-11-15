@@ -23,7 +23,9 @@ The supported-row index is complete and recovers 511,687 v3.0 and
 511,704 v1.4 reference-parent rows. These cohorts overlap. Recover the
 raw source inventories, exact original anomaly rosters, and the native
 exclusion ledger. Run the VAC flow audit after the matched rows and
-native exclusion shards finish, and use its distance and joint tables
+native exclusion shards finish. The full SpecDis/SPDist matches are complete
+and summarized in [the selection evidence](docs/v3_6_selection_tradeoffs.md).
+Use the audit distance and joint tables
 to reconcile each cut with its raw denominator. Finish with joined tables, figure index,
 usable-area summary and source-conditioned conclusions for each distance range.
 Keep the DESI MWS/RVS class roster independent of VAC distance availability,

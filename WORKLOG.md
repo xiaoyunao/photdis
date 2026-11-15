@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-16 — recover full SpecDis and SPDist reference matches and selection losses
+
+- Slurm array 61344409 completed both tasks at 0:0 in 48 and 56 s.
+  Verified the downloaded flow and performance tables against their
+  receipts and retained the compact copies in `manifests/v3_6/vac_flow`.
+  The 4,140,838 SpecDis and 6,272,510 SPDist raw rows yield 484,620
+  and 476,726 verified supported rows. Counts are source-specific.
+- After primary, 82,586/6,072 SpecDis and 77,671/4,206 SPDist rows
+  remain in 2–5/5–10 kpc. Strict leaves 20,031/261 and 17,447/215.
+  In the 5–10 kpc matched sample the largest loss precedes the
+  nominal near gate and comes from the dwarf score.
+- By the archived distance-quality rules and outside current QRF
+  training, 2–5 kpc primary dwarfs have 8.9% and 9.0% NMAD.
+  All-class 5–10 kpc median bias is about −31% for both primary
+  samples, and −53% to −57% after strict. Documented the sampled
+  dark-blue reference support and the source-dependent biases.
+- Native-loss shards, consolidated distance evidence, paired QRF
+  replay and the full Gaia census remain outstanding.
+
 ## 2026-11-16 — compare blue failures with brightness- and color-matched stars
 
 - Added `v3_6_blue_matched_controls.py` to match each frozen case to

@@ -1,0 +1,21 @@
+{
+  "job": "61344411",
+  "reference": "specdis",
+  "matched": 484620,
+  "primary": 274548,
+  "strict": 149929,
+  "inputs": {
+    "scripts/v3_6_vac_flow.py": "889e88300a2688ec2a9afb98631129e290a1c0e0058e94baf82821fd7cfe1b66",
+    "data/v3_6/vac_distances/specdis/complete.json": "245aaade0127356f2a99c0d7848488c01502bba15ce5f327fc5af9cd8ce8d975",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418"
+  },
+  "interpretation": "Raw VAC to verified supported catalog and selection. Missing supported keys still need the native-parent audit. Reference-selected data outside QRF training may include historical or calibration exposures.",
+  "outputs": {
+    "matched.npz": "dc4c05804312defba0c6c3f92de2c4e4da67c24c05aecd09135ddc62ede0cb1d",
+    "performance.csv": "6d0365cc89771f3fa897987bf473ee66874991a891497cda6b64c15ff4f6ddb2",
+    "flow.csv": "b45c54bc4d44798d7bafb04892af31366322aba29548f8db0eb800f7a63d6d74"
+  }
+}
