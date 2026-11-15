@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — implement the first class-conditional SED fit
+
+- Added the v3.3 fit configuration, trainer and Slurm wrapper. Sample
+  20,000/5,887/6,881 labeled PSFs by class, with 64/32/32 kernels.
+  Retain stable row identities, inclusion probabilities and source channel.
+- Reused the native error projection, signed Gaia and source-calibrated
+  distance nodes, binary mixture and projected EM. Assemble class-specific
+  weights under the frozen nominal class prior for the first comparison.
+- Syntax and a synthetic projected-EM smoke check pass, including signed
+  flux, missing bands, exact PSF admission and training-role separation.
+
 ## 2026-11-15 — start the v3.3 distance-core study
 
 - Read GPT Pro reply `51045e85` on `f81c9db` and set the goal around

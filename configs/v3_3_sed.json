@@ -1,0 +1,12 @@
+{
+  "partitions": [
+    {"label": 0, "name": "dwarf", "sources": 20000, "components": 64},
+    {"label": 1, "name": "giant", "sources": 5887, "components": 32},
+    {"label": 2, "name": "other", "sources": 6881, "components": 32}
+  ],
+  "seed": 330211,
+  "reference_mu_nodes": 24,
+  "max_iter": 64,
+  "relative_likelihood_tolerance": 0.0001,
+  "workers": 16
+}

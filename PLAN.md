@@ -31,6 +31,11 @@ existing 32,768-source budget. Sample the other two partitions by
 stable identity rank and retain their inclusion probabilities. Keep
 the nominal class mixture outside the training allocation and use the
 same reference distance prior for the first paired development test.
+The first fit is configured in `configs/v3_3_sed.json`. Its class
+samples contain 20,000 dwarfs, 5,887 giants and 6,881 other-class
+references. `scripts/run_v3_3_sed.sh` runs preparation, the three fit
+partitions and assembly in dependency order. The assembly restores the
+frozen nominal class probabilities for the first paired evaluation.
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.
 
