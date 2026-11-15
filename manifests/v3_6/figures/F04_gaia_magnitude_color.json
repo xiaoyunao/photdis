@@ -1,0 +1,14 @@
+{
+  "caption": "Frozen v3.5 probability draw. Counts and median fractional residuals use the reference-distance shells and qualifying Gaia astrometry (corrected S/N at least 10). Statistics are unweighted within each reference subset. Gray cells have no qualifying reference. The color scale saturates at \u00b180%; printed values retain the full range. The table also gives NMAD, severe errors, interval width, and reference-center containment.",
+  "dpi": 300,
+  "cells": 96,
+  "inputs": {
+    "manifests/v3_5/validation/complete.json": "0055a3576bf0958146aa3af051782a239cf276a32693ff8d2fc3f1b3a66d1c50",
+    "manifests/v3_5/validation/gaia_joint.csv": "8c73ad3df0b740ab881a765c399e057e379490506f15812aee3d1acea50aa44b"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F04_gaia_magnitude_color.csv": "4e33a0ef71ce060cfc0769e8105539c7cd87a54aa25ed7486f87a99e50522706",
+    "figures/v3_6/F04_gaia_magnitude_color.png": "de26c3c46ca7589a15ef0c34ce0f8cce54450ff18425f919b2ed633fd8f1eb8c",
+    "figures/v3_6/F04_gaia_magnitude_color.pdf": "aff64e72e7c05723730edd225e0fdff36da9afe1ac4b842b3690fe23714983d0"
+  }
+}

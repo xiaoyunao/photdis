@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — plot external distance performance by magnitude and color
+
+- Added F04 from the verified v3.5 Gaia validation draw. All 96 selected
+  magnitude, color and reference-distance cells carry their counts, with
+  NMAD, severe errors and interval agreement in the figure table.
+- The primary blue 2–5 kpc cells contain 148 and 41 references, with median
+  biases of about −58% and −21%. The strict cut retains 50 and 28, with
+  biases of about −55% and −15%. Both cuts have zero geometry references
+  in the plotted 5–10 kpc cells. The saved plate was opened for review.
+
 ## 2026-11-15 — trace archived reference losses to frozen native rows
 
 - Added `scripts/v3_6_native_losses.py`. It matches both historical
