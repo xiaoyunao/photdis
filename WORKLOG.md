@@ -7,13 +7,18 @@
   fresh Gaia draw and targeted spectrum matches after deduplication.
 - Submitted frozen forecast 61329667, then dependency jobs 61329770
   for Gaia and spectra evidence and 61329819 for the four figure sets.
+  While pending, moved the chain to the debug queue with jobs
+  61329975, 61329976 and 61329977 to avoid the shared priority delay.
   Forecasts must replay both application cuts and probability values
   before the evidence code can execute. No new outcomes accessed locally.
 - Added the evidence evaluator with separate Gaia geometry and
   giant-composition bounds, and full posterior output for a later
   supported production domain. No production submitted.
 - Python compile, shell syntax, QRF native-bin summation, positive-only
-  geometry and observable release interval smoke checks passed.
+  geometry and observable release interval smoke checks passed. All
+  four figure writers passed synthetic PNG/PDF creation. Default-thread
+  Anaconda pytest crashed in a legacy Gaia test. With single-threaded
+  numerical backends the full 472 tests passed.
 
 ## 2026-11-15 — choose the validation workpoints from the matched comparison
 

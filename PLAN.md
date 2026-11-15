@@ -49,9 +49,9 @@ See [development results and external validation design](docs/v3_4_result.md).
    a volume census.
    The closed validation roster contains 23,976 unique strict PSFs,
    including 6,039 new Gaia sources. Roster job 61329405 completed.
-   Forecast 61329667 replays the application sample before scoring.
-   Evidence job 61329770 binds the evaluator and scores only after
-   forecast completion. Four figure outputs are assigned to job 61329819.
+   Forecast 61329975 replays the application sample before scoring.
+   Evidence job 61329976 binds the evaluator and scores only after
+   forecast completion. Four figure outputs are assigned to job 61329977.
 3. Process all eligible DR11 PSFs in the verified photometric and sky
    domain. Freeze source coverage and retain identity, distance summaries,
    available posterior, near probability, support and flags. Verify
