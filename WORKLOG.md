@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — audit written partitions and recent reference exposure
+
+- Final delivery now reopens each written partition to check distance
+  quantiles, rebin the full QRF posterior, confirm the native DECam
+  system and half-open sweep bounds, and match source IDs and parent
+  rows against the sidecars. It reconciles selection and reuse totals.
+- Allocated audit 61332366 completed in 12 seconds. Checked all 13
+  then-complete sweeps and 28,229 written rows, including 16,944 primary,
+  9,027 strict and 1,369 exact v3.4 reuses. Scope is the completed sweeps
+  at the audit snapshot. The same checks run during full delivery.
+- Historical flags now include the actual v3.4 evidence and v3.5 pilot
+  rosters. Final validation also records overlapping completed group
+  evidence. Gaia and targeted-spectra identity lists are retained.
+
 ## 2026-11-15 — start distance-shell validation during production
 
 - Regular array group 1 began on nid006582 while debug group 0

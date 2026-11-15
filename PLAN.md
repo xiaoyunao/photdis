@@ -22,7 +22,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    concurrency cap. Delivery/sky job 61332091 and joint validation
    61332092 are dependent on successful production. The [catalog
    guide](docs/v3_5_catalog.md) documents identity, spectra association,
-   posterior and evidence fields.
+   posterior and evidence fields. Written-partition audit 61332366
+   checked the first 13 available sweeps. The full delivery repeats the
+   posterior and native parent-row checks on every frozen sweep.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.
