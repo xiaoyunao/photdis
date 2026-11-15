@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — prepare the Gaia DR3 census on all supported rows
+
+- `scripts/v3_6_catalog_summary.py` combines the projected groups and
+  checks both hard counts and posterior masses against the v3.5 census.
+- `scripts/v3_6_gaia_census.py` joins Gaia sources by disjoint source-ID
+  sky regions, retaining both observational cuts and previous exclusions.
+  It distinguishes unqualified astrometry, weak signed parallaxes, and
+  geometry references. Negative values remain in the signed records.
+- Syntax and focused tests of all seven Gaia outcomes, distance inversion,
+  shell conservation, and the nominal-evaluated denominator pass.
+
 ## 2026-11-15 — prepare the all-catalog posterior comparison
 
 - `scripts/v3_6_catalog_projection.py` projects each frozen group once
