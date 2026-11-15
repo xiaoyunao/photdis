@@ -19,7 +19,7 @@ from photdis.v3.metrics import (distance_summary, histogram_parallax, histogram_
                                 normal_reference_score, observed_parallax)
 from photdis.v3.model import inference_model
 from photdis.v3_1.validation_report import paired_field_statistic
-from photdis.v3_3 import class_log_likelihood, reference_log_curves
+from photdis.v3_3 import class_log_likelihood, frozen_qrf, reference_log_curves
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
 import v3_0_evaluate as historical
 from v3_0_response import observation
@@ -79,12 +79,11 @@ def extract_row(index):
             probability_delta=probability_delta, modulus_delta=modulus_delta))
 
     edges = qrf_edges[index]
-    mass = qrf_prediction['pdf'][index, ::-1].astype(float)
-    mass /= mass.sum()
+    mass = qrf_prediction['mass'][index]
     qrf_qnear = np.sum(mass*np.clip((15.-edges[:-1])/np.diff(edges), 0, 1))
     gaia_score = histogram_parallax(edges, mass, parallax, parallax_error, order=32)['log_score'] if gaia else np.nan
     score = histogram_reference_score(edges, mass, center, error, fraction, broad) if valid else np.nan
-    encoded.append(dict(quantiles=qrf_prediction['mu_quantiles'][index], qnear=qrf_qnear,
+    encoded.append(dict(quantiles=qrf_prediction['mu'][index], qnear=qrf_qnear,
                        reference_score=score, gaia_score=gaia_score, supported=qrf_prediction['supported'][index]))
     return encoded
 
@@ -148,9 +147,8 @@ def main():
     historical._CAL = load(cal_path)
     reference = historical.evidence_views(data)['primary']
     mags, errors = optical_magnitudes(data)
-    qrf_prediction = qrf.predict(mags, errors, data['identity'])
-    qrf_prediction['mu_quantiles'] = mags[:, :1] - qrf_prediction['q_Meffective'][:, ::-1]
-    qrf_edges = mags[:, :1] - qrf.edges[None, ::-1]
+    qrf_prediction = frozen_qrf(qrf, mags, errors, data['identity'])
+    qrf_edges = qrf_prediction['mu_edges']
     global _STATE
     _STATE = data, reference, list(map(inference_model, (nominal, candidate))), prior, qrf_edges, qrf_prediction
     with concurrent.futures.ProcessPoolExecutor(max_workers=16, mp_context=mp.get_context('fork')) as pool:

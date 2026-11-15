@@ -13,7 +13,7 @@ from photdis.stage1 import require_compute
 from photdis.v3.controls import optical_magnitudes
 from photdis.v3.likelihood import normalize_joint, trapezoid_weights
 from photdis.v3.model import inference_model
-from photdis.v3_3 import class_log_likelihood, reference_log_curves
+from photdis.v3_3 import class_log_likelihood, frozen_qrf, reference_log_curves
 from v2_1_near import ROOT, atomic_npz, load, save_json, sha
 from v3_0_response import observation
 from v3_3_catalog_inputs import CONFIG, OUTPUT
@@ -101,15 +101,12 @@ def main():
                        mu=grid, class_prior=priors[key], **out)
             counts[field][key] = summarize(out, photo['band_mask'])
         mags, errors = optical_magnitudes(photo)
-        q = qrf.predict(mags, errors, photo['identity'])
-        mass = q['pdf'][:, ::-1].astype(float)
-        edges = mags[:, :1] - qrf.edges[None, ::-1]
-        np.testing.assert_allclose(mass.sum(axis=1), 1., atol=1e-5, rtol=0)
-        mass /= mass.sum(axis=1, keepdims=True)
+        q = frozen_qrf(qrf, mags, errors, photo['identity'])
+        mass, edges = q['mass'], q['mu_edges']
         qnear = np.sum(mass*np.clip((15.-edges[:, :-1])/np.diff(edges, axis=1), 0, 1), axis=1)
         atomic_npz(EXPORT/f'{field}_qrf.npz', identity=photo['identity'], TYPE=photo['TYPE'], mass=mass,
                    mu_edges=edges, qnear=qnear, supported=q['supported'],
-                   distance_quantiles_kpc=10**((mags[:, :1]-q['q_Meffective'][:, ::-1]-10.)/5.))
+                   distance_quantiles_kpc=q['distance'])
         counts[field]['qrf'] = dict(n=n, expected_near=float(qnear.sum()),
                                    supported=int(q['supported'].sum()))
     save_json(EXPORT/'complete.json', dict(all_PSF=True, n=census['n'], counts=counts,

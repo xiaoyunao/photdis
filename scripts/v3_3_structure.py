@@ -16,7 +16,6 @@ from photdis.v3.inference import DISTANCE_BASIS_MEAN, DISTANCE_BASIS_SIGMA
 from photdis.v3.likelihood import trapezoid_weights
 from photdis.v3.model import inference_model
 from photdis.v3.selection import OPTICAL, gaussian_component_entry
-from photdis.v3_1.candidate_selection import candidate_thresholds
 from photdis.v3_1.gaussian_response import class_gaussian_logresponse
 from photdis.v3_1.selection_dust import entry_model_with_local_dust
 from photdis.v3_1.structure import withdrawn_gaussian_logresponse
@@ -51,7 +50,7 @@ def one(row):
     responses = [class_response(curve[:, ::step], grid[::step], means, sigmas) for step in (1, 2)]
     responses = logsumexp(np.asarray(responses)+np.log(frequency)[None, None, :, None], axis=2)
     # The photometric entry function is identical for the two likelihoods.
-    error, _ = candidate_thresholds(o['flux_error'][OPTICAL], o['transmission'][OPTICAL], np.zeros(len(OPTICAL)))
+    error = o['flux_error'][OPTICAL] / o['transmission'][OPTICAL]
     dust = entry_model_with_local_dust(model, o['transmission'], o['EBV'])
     entry_grid = grid[::15]
     # Include the last point so integration weights describe the entire span.

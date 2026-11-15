@@ -3,6 +3,7 @@ import numpy as np
 from scipy.special import logsumexp
 from scipy.stats import norm
 
+from photdis.baseline_v1 import integrate
 from photdis.v3.inference import kernel_loglike
 
 
@@ -30,3 +31,15 @@ def reference_log_curves(log_likelihood, mu, class_prior):
             or not np.isclose(class_prior.sum(), 1.)):
         raise ValueError('Three class likelihood curves and a normalized prior are required')
     return log_likelihood + np.log(class_prior)[:, None] + norm.logpdf(mu, 15., 5.)
+
+def frozen_qrf(model, magnitudes, errors, identity):
+    """Use the published v3 grz control, with 128 Sobol perturbations."""
+    mags = np.pad(magnitudes, ((0, 0), (0, 2)))
+    error = np.pad(errors, ((0, 0), (0, 2)))
+    result = integrate(model, mags, error, identity, draws=128)['wide']
+    # QRF is trained for extinction-corrected absolute g magnitude.
+    result['mu_edges'] = magnitudes[:, :1] - model.edges[None, ::-1]
+    result['mass'] = result['pdf'][:, ::-1].astype(float)
+    np.testing.assert_allclose(result['mass'].sum(axis=1), 1., atol=1e-5, rtol=0)
+    result['mass'] /= result['mass'].sum(axis=1, keepdims=True)
+    return result
