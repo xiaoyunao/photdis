@@ -1,0 +1,14 @@
+{
+  "caption": "Full native QRF posterior masses by assigned distance, observed photometric cohort and selection. Bright red analogs use the frozen v3.4 observable domain conditions. Faint blue means 18 \u2264 r < 20 and 0.5 \u2264 dereddened g \u2212 r < 0.8. The other-photometry group is the disjoint remainder. All bins including distances beyond 50 kpc are summed from the delivered PDFs. These shares and retention fractions describe the magnitude-limited predicted catalog.",
+  "dpi": 300,
+  "spatial_input_sha256": "f3f4711a7feb7a586b33c68d1f865982190d82a81edcae990d2b4a02c2364e01",
+  "inputs": {
+    "manifests/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F07_radial_photometric_composition.csv": "d7e1e1ea62ec9d75e02c13f04aea5e36f623d88ecf00eb981905aaea98a01523",
+    "figures/v3_6/F07_radial_photometric_composition.png": "5c8b25ebfddb5c195faa5c5d0866b95eb62c1aa11972d844361ed9c0fd5c8a2a",
+    "figures/v3_6/F07_radial_photometric_composition.pdf": "1bfc41bb9da165dc75a0bba061e39374d65bd15a6a89a2ec1a9b529552fed5f9"
+  }
+}

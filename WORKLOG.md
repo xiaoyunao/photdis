@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — quantify the blue contribution to the distant research shells
+
+- F07 now preserves the full six radial bins and compares disjoint
+  bright-red, faint-blue and remaining photometry across both cuts.
+  The faint-blue share at 5–10 kpc is 57.4% primary and 53.2% strict.
+  The strict cut retains only 9.7% of the faint-blue mass in that shell.
+- Figure input and cut totals reconcile to the entire frozen catalog.
+  Opened the two panel figure. Its scientific scope and the limits of
+  v3.5's existing reference draw are in
+  `docs/v3_6_selection_tradeoffs.md`.
+- Slurm jobs 61346084–61346086 are queued for joined evidence, distance
+  atlas, and full-catalog observable counts. Their dependencies use
+  the existing jobs without duplicate scans.
+
 ## 2026-11-15 — build the common distance evidence and F02 atlas jobs
 
 - `scripts/v3_6_distance_evidence.py` joins each qualified reference
