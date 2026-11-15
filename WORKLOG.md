@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — finish the native reference photometry pass
+
+- Shared job 61347073 completed at 0:0. Its receipt binds 2,674,744
+  native reference PSFs from 600 sweeps to the frozen delivery and reference
+  evidence. The photometry payload stays on NERSC.
+- Replaced pending F04/F05 wrappers that enabled shell nounset before
+  loading DESI. Jobs 61359902/61359903/61359904 reuse the same verified
+  inputs and programs, request two CPUs per process, and parallelize the
+  seven sources. Removed only the pending predecessors and verified the
+  replacement F04 dependency.
+
 ## 2026-11-16 — deliver the deduplicated reference CMD and complete F01
 
 - F01 job 61347451 completed at 0:0 in 17 seconds. Verified the seven

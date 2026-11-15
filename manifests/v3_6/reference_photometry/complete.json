@@ -1,0 +1,25 @@
+{
+  "job": "61347073",
+  "bands": [
+    "G",
+    "R",
+    "I",
+    "Z",
+    "W1",
+    "W2"
+  ],
+  "rows": 2674744,
+  "touched_sweeps": 600,
+  "inputs": {
+    "scripts/v3_6_reference_photometry.py": "c27572015176809d53f6b3f36def22e71e7174bbb6f1cfc499e23b79ec67cf12",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "data/v3_5/catalog/freeze.json": "9fa2b9b2f8f00f0e3b5f85c0c57bfd5b4efe2d1206f69ca70fdad34aef8445d0",
+    "data/v3_5/inventory/complete.json": "a1e1edaa6222a49b35af43c5a9b5080c92625664348ec4772d486512844ef8a5",
+    "configs/v3_5_dr11.json": "10604c90bcd2226457267d10eff72e2f2f86502726f27ce3b152ba55b7e79cd5"
+  },
+  "outputs": {
+    "photometry.npz": "2781b820a34c0c6b28fda4d6c200f73f472033c15bc6a1e9c1f3feb39d21651e"
+  }
+}
