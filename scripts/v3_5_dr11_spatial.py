@@ -11,6 +11,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
+from matplotlib.ticker import FuncFormatter, NullLocator
 import numpy as np
 
 from photdis.stage1 import galactic, require_compute, tile_bounds
@@ -148,7 +149,7 @@ def shell_comparison(mass,area,deep):
 def maps(mass,area):
     ra,dec = hp.pix2ang(NSIDE,np.arange(len(area)),nest=True,lonlat=True)
     l,b = galactic(ra,dec)
-    x,y = np.deg2rad((180-l+180)%360-180),np.deg2rad(b)
+    x,y = np.deg2rad((-l+180)%360-180),np.deg2rad(b)
     valid = area>0
     fig,axes = plt.subplots(2,3,figsize=(13,6.4),subplot_kw={'projection':'mollweide'},
                              layout='constrained')
@@ -162,14 +163,26 @@ def maps(mass,area):
             norm = None
         for j in range(2):
             ax = axes[j,shell]
+            ax.scatter(x[valid],y[valid],s=8,c='0.84',rasterized=True)
             im = ax.scatter(x[valid],y[valid],c=np.ma.masked_less_equal(density[j],0),s=8,
                             cmap='viridis',norm=norm,rasterized=True)
+            ax.set_longitude_grid(60)
+            ax.set_latitude_grid(30)
+            ax.xaxis.set_major_formatter(FuncFormatter(
+                lambda x,_:f'{(-round(np.rad2deg(x)))%360}°'))
+            ax.tick_params(labelsize=8)
             ax.grid(alpha=.18)
             ax.set_title(f'{CUTS[j]} · {SHELLS[shell]}',fontsize=10)
-            ax.set_xlabel('Galactic longitude')
-            ax.set_ylabel('Galactic latitude')
-        fig.colorbar(im,ax=axes[:,shell],orientation='horizontal',shrink=.75,
-                     label='Posterior-weighted sources per square degree')
+            if j == 1:
+                ax.set_xlabel('Galactic longitude')
+            if shell == 0:
+                ax.set_ylabel('Galactic latitude')
+        ticks = np.geomspace(norm.vmin,norm.vmax,4) if norm else None
+        bar = fig.colorbar(im,ax=axes[:,shell],orientation='horizontal',shrink=.75,
+                           extend='both' if norm else 'neither',ticks=ticks,
+                           format=FuncFormatter(lambda value,_:f'{value:.2g}'),
+                           label='Posterior-weighted sources per deg²')
+        bar.ax.xaxis.set_minor_locator(NullLocator())
     for ext in ('png','pdf'):
         fig.savefig(DELIVERY/f'spatial_shells.{ext}',dpi=260)
     plt.close(fig)

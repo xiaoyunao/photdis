@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — verify spatial measurements on completed production groups
+
+- Production audit and spatial replay 61333290 completed on 91 sweeps
+  in groups 1, 2, 3 and 5. Reopened all partitions and verified global
+  Legacy identity uniqueness in that scope. Checked 670,601 research
+  rows with 457,881 primary and 293,374 strict selections. The shared
+  mask-cleared area was 351.57 deg².
+- Strict/primary posterior mass retention on the same measured
+  footprint was 80.2%, 27.8% and 8.5% in 0–2, 2–5 and 5–10 kpc.
+  Requiring at least a quarter of a pixel's imaging area gave 80.8%,
+  28.3% and 8.9%. These are posterior-weighted comparisons for the
+  replay footprint. Distant distance calibration remains incomplete.
+- Visual QA of the actual plot found longitude ticks were displaying
+  projection coordinates and log colorbar ticks overlapped. Fixed
+  the tick convention, spacing, and observed-zero coverage markers.
+  Verified the tick values and four colorbar ticks with a focused render.
+
 ## 2026-11-15 — complete reference validation for regular production group 1
 
 - Regular group 61332090_1 completed all 23 sweeps in 39 min 24 s.
