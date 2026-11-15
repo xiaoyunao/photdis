@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — preserve distance-dependent failures and repair the prospective design
+
+- The strict unused-cell Gaia intake 61321873 completed its
+  photometry-only scans and found zero admissions. All outcomes
+  remain closed. Repeat with a logged eligibility waterfall and
+  explicit new-sky versus source-new/seen-sky roles. Continue to
+  exclude all historical exact identities and named footprints.
+- The opened giant result is distance dependent. On 770 pairs at
+  20–50 kpc, median bias improves −6.06% to −2.02%. On 53 at 5–10
+  kpc, it shifts from +100.28% to +124.50%. Treat the all-giant
+  result as evidence dominated by distant references.
+
 ## 2026-11-15 — verify the first actual giant distance comparison
 
 - Job 61321700 completed 0:0 in 39 s. Of 1,270 admitted giant PSFs,

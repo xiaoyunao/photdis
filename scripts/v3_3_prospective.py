@@ -115,6 +115,8 @@ def score():
     groups = {'all': eligible, 'negative': eligible & (p < 0),
               'low_precision': eligible & (p < 5*err),
               'high_precision': eligible & (p >= 5*err)}
+    groups.update({role: eligible & (photo['validation_role'] == role)
+                   for role in ('new_sky', 'new_identity_seen_sky')})
     groups.update({f'r_{lo}_{hi}': eligible & (mag >= lo) & (mag < hi) for lo, hi in [(16, 18), (18, 20), (20, 22)]})
     groups.update({f'w1_state_{i}': eligible & (w1 == i) for i in np.unique(w1)})
     outcomes, contrasts = [], []

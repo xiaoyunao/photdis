@@ -43,13 +43,23 @@ def history():
 
 def select(t, previously_seen, cells, outside_configs, groups, config):
     ids, lsids = t['identity'], t['ls_id']
-    m = (t['TYPE'] == 'PSF') & t['photometric_entry'] & (t['RELEASE'] == 11010)
-    m &= (ids > 0) & ~np.isin(ids, previously_seen) & ~np.isin(t['cell'], cells) & outside_configs
+    psf = t['TYPE'] == 'PSF'
+    release = t['RELEASE'] == 11010
+    photometric = psf & t['photometric_entry'] & release
+    gaia_link = photometric & (ids > 0)
+    fresh = gaia_link & ~np.isin(ids, previously_seen)
+    m = fresh & outside_configs
     duplicates, count = np.unique(ids[m], return_counts=True)
     m &= ~np.isin(ids, duplicates[count > 1])
     rows = np.flatnonzero(m)
     annotation = annotate_holdouts(groups, ids[rows], t['RA'][rows], t['DEC'][rows])
     rows = rows[~annotation['external_any']]
+    old_sky = np.isin(t['cell'], cells)
+    diagnostics = dict(native_psf=int((psf & release).sum()), photometric_entry=int(photometric.sum()),
+                       gaia_link=int(gaia_link.sum()), ID_disjoint=int(fresh.sum()),
+                       outside_configs=int((fresh & outside_configs).sum()),
+                       unique=int(m.sum()), outside_structures=len(rows),
+                       unused_sky=int((~old_sky[rows]).sum()))
     inventory, selected, weights = [], [], []
     edges = config['observed_r_edges']
     for cell in np.unique(t['cell'][rows]):
@@ -57,19 +67,22 @@ def select(t, previously_seen, cells, outside_configs, groups, config):
             available = rows[(t['cell'][rows] == cell) & (t['r'][rows] >= lo) & (t['r'][rows] < hi)]
             ix = np.argsort(stable_rank(ids[available], config['seed']), kind='stable')
             take = available[ix[:config['maximum_per_field_magnitude_cell']]]
-            inventory.append(dict(cell=int(cell), r_min=lo, r_max=hi, eligible=len(available), selected=len(take)))
+            cohort = 'new_identity_seen_sky' if cell in cells else 'new_sky'
+            inventory.append(dict(cell=int(cell), role=cohort, r_min=lo, r_max=hi,
+                                  eligible=len(available), selected=len(take)))
             if len(take):
                 selected.append(take)
                 weights.append(np.full(len(take), len(available)/len(take)))
     if not selected:
-        return {}, inventory
+        return {}, inventory, diagnostics
     rows = np.concatenate(selected)
     selected = {k: t[k][rows] for k in INPUT_KEYS}
     selected['observed_r'] = t['r'][rows]
     selected['sample_weight'] = np.concatenate(weights)
+    selected['validation_role'] = np.where(old_sky[rows], 'new_identity_seen_sky', 'new_sky')
     if (lsids[rows] <= 0).any() or not (selected['TYPE'] == 'PSF').all():
         raise ValueError('Invalid native PSF or Legacy identity')
-    return selected, inventory
+    return selected, inventory, diagnostics
 
 
 def main():
@@ -96,11 +109,12 @@ def main():
         windows = ((raw['RA'] >= lo) & (raw['RA'] < hi) & (raw['DEC'] >= de) & (raw['DEC'] < dh))
         t = native_payload(raw[windows], 'DECam_DR11')
         del raw
-        selection, strata = select(t, previous, old_cells, ~footprint(t['RA'], t['DEC'], bounds), groups, config)
+        selection, strata, diagnostics = select(t, previous, old_cells, ~footprint(t['RA'], t['DEC'], bounds), groups, config)
         if selection:
             chunks.append(selection)
         census.append(dict(sweep=path.name, parent=len(t['TYPE']), non_PSF=int(((t['TYPE'] != 'PSF') & (t['TYPE'] != '')).sum()),
-                           missing_TYPE=int((t['TYPE'] == '').sum()), selected=sum(s['selected'] for s in strata), strata=strata))
+                           missing_TYPE=int((t['TYPE'] == '').sum()), selected=sum(s['selected'] for s in strata),
+                           strata=strata, **diagnostics))
         stat = path.stat()
         sweeps[str(path)] = [stat.st_size, stat.st_mtime_ns]
     if not chunks:
@@ -114,7 +128,10 @@ def main():
     atomic_npz(photo, **data)
     save_json(OUT/'complete.json', dict(n=len(data['identity']), all_PSF=True, census=census,
         sources={str(p.relative_to(ROOT)): sha(p) for p in [CONFIG, Path(__file__).resolve(), *configs, *sources, *group_paths]},
-        native_sweeps=sweeps, known_role_overlap=0, known_cell_overlap=0, sha256=sha(photo),
+        native_sweeps=sweeps, known_role_overlap=0,
+        known_cell_overlap=int(np.isin(data['cell'], old_cells).sum()),
+        role_counts={name: int((data['validation_role'] == name).sum())
+                     for name in ('new_sky', 'new_identity_seen_sky')}, sha256=sha(photo),
         outcomes_read=False, job=os.getenv('SLURM_JOB_ID')))
 
 
