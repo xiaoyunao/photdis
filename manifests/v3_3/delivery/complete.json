@@ -1,0 +1,21 @@
+{
+  "job": "61323433",
+  "catalog": 5341,
+  "signed_gaia": 1212,
+  "structure": 512,
+  "inputs": {
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "data/v3_3/catalog/inputs/complete.json": "95c40ee539e43fd5d65453a5ca643182f86cd603960b3da2c1f50970e5313d08",
+    "data/v3_3/catalog/posteriors/complete.json": "0d2bfb2aceb5fc4c5bbf8f2185c6ce5474988d14cd2e0d911165c4f1641e9940",
+    "data/v3_3/structure/complete.json": "e2014c97e7d4f2e5b144a9d983fcc510fdfb3455c9432c9d60dec07efd6f6a50",
+    "data/v3_3/prospective/forecast/complete.json": "75cabf1faa98596f0525b11f2f962ad367d8541e015e719b91f4a2bf9194e8be",
+    "data/v3_3/prospective/score/complete.json": "f68fb316a8a75c36a0ebae6401fe9ab89779e4702d4740d8939366c7a99d0859",
+    "scripts/v3_3_delivery.py": "435a25a353bd9f845019da05554fc4a150ef5b47b915044260d301986c7221ad"
+  },
+  "outputs": {
+    "catalog_counts.csv": "3f5d068bf0833ef9b4cb871e7908066c0ef0649634f6846c14e35189125d9eb6",
+    "ngc288_distance.pdf": "75f9368efa7ce285f84d049f1c80ea4474d52cef47fd1e30331b58abc81b5a8c",
+    "ngc288_distance.png": "88729a896611dfbc67ec82dc15ba2874d944dab37e378f5d1ce3edda1057f1cb",
+    "structure_score_recomputed.csv": "67324610e590f3f62f46b30392738cf51a7aba248204854605112977f6d5d187"
+  }
+}

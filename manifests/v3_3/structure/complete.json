@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "configs/v3_3_structure.json": "ba7b00f27a456bb51301c9f9fa39ec44e9ae2eb8d0a404eedd1dfa238e1ff557",
+    "data/v3_3/sed/initial/model.joblib": "0209bdcbca22df495e531794df85a20e48ea75cf7946222fb8c228582522ee84",
+    "manifests/v3_1/structure/complete.json": "7a170db2151c5564f2b739b516e508a1b87bd29226d93d53452c2bc9df794d7f",
+    "data/v3_1/structure/photometry.npz": "ed0715d5cbf15bf65e79f48bdf40cd929e0836efb9b53b00f0f8c2bfd037ff40",
+    "configs/v3_0_independent_scale.json": "6073f16514f8ce465669c233f6dc31fe7a68a082805eefad008867a7a9ff7df9",
+    "scripts/v3_3_structure.py": "7f3b60de5206b60861d67c0d929e686f80c18892b1cca2f73895500414714748",
+    "src/photdis/v3_3.py": "e4b573c1dbd32f04ad524077ebbcfc8cf445228b7a3dd51fa9e2a6f431723b4b",
+    "src/photdis/v3_1/structure_posterior.py": "0416c47799875844b8277b5e4983f31382a8772d65cc83f7f33dfda56273a4f0"
+  },
+  "outputs": {
+    "distance_score.csv": "4c6e6724c1164aeccbe33123b470f459b5ecb1718a74b6402fd36185a2e7773a",
+    "full_coarse_likelihood.npz": "c97438dbe6938a583adc8d7a3dfcee6d3495208a9c52cef39eec2c088b659894",
+    "full_coarse_posterior.npz": "f4aa871d906b297beb37e61fbf1bb2bab92eae05d4cefeb184488b55f906ec10",
+    "full_fine.npz": "f62ecc388334fd7ee57e2d123135429f49f21321274dd1ae4764bcde255d21c9",
+    "full_second_entry_seed.npz": "02ab87a17c9ce16804cdf8d9fc2d5edd6a78490c6cd892ed1128e5f25446d830",
+    "gaussian_coarse_likelihood.npz": "f7e3dce2539c04d572a492f1b2fabfc996b2a8324ed6ed8f75cdfa4ce5454ee4",
+    "gaussian_coarse_posterior.npz": "6160f9e2f3a6fdaa572b09acd1f8123512f8a14219c3ab628a15dc892b38546a",
+    "gaussian_fine.npz": "93bfb9773aeaf5b6d25b196617c7ee4b1e08856bb8e783275446900830f6480e",
+    "gaussian_second_entry_seed.npz": "07299ea4a680bc56bb7134df4ac05fb7c284c89b2405c4fb8bb57a06af04fbc8",
+    "response.npz": "e7f0d16caec33099e8971239bea65bc4d1a1e722d5725678ad5612f3f9dfb2e6"
+  },
+  "n": 512,
+  "all_PSF": true,
+  "distance_held_out_from_inference": true,
+  "known_system": true,
+  "model": "candidate",
+  "benchmark_distance_kpc": 9.03,
+  "scope": "One fixed SED response and fixed spatial/background model.",
+  "job": "61323432"
+}

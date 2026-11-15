@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-15 — complete the NGC288 application and research delivery
+
+- Structure 61323432 completed 0:0 in 6 min 35 s. On the same 512
+  original PSFs with an identical prior, background and selection, the
+  full likelihood gives 10.0565 kpc and the Gaussian summary gives
+  10.2609 kpc. The held-out dynamical log-score improvement is +0.5293
+  nat, stable across three numerical variants. Both estimates retain
+  a distance-scale offset over 1 kpc.
+- Final delivery audit 61323433 completed 0:0 in 14 s. Authenticated
+  the saved predictions, 5,341 catalog PSFs, 1,212 signed Gaia scores
+  and all eight 512-source structure calculations. Checked the
+  English NGC288 figure and added its two formats, the score table
+  and compact verification records. Checked 29 report links, the
+  compact freeze and delivery hashes, and reran 472 local tests. All passed.
+- Closed the research report and PLAN. The evidence establishes
+  localized gains and a limited real structure benefit. The
+  prospective Gaia comparison does not support a calibrated release
+  domain. Historical flags and the original v1 deployment remain.
+
 ## 2026-11-15 — refine eight signed Gaia scores on the frozen grid
 
 - Job 61324097 completed 0:0 in 18 s. Refined seven candidate and

@@ -1,11 +1,12 @@
 # PLAN
 
-## v3.3 — class-conditional distance and one structure application
+## v3.3 — completed research delivery
 
 The [latest Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)
 of `f81c9db` is the starting point (reply `51045e85`). The primary
 development metric is giant distance recovery given reference class.
 The production distance posterior marginalizes class and keeps the far tail.
+See [main results, evidence limits and five figures](docs/v3_3_result.md).
 
 1. Inventory the existing PSF reference split, then refit class-specific
    kernels within the projected empirical SED family. Preserve reference
@@ -117,13 +118,19 @@ Gaia opening and score 61323430, catalog 61323431, structure 61323432,
 and saved-product audit 61323433. The freeze, forecast, Gaia score and
 catalog are complete. Job 61323989 independently authenticated all nine
 arrays, the complete 5,341-object roster and joint probability closure.
-Jobs 61323432 and 61323433 remain live. The score sensitivity check
+The score sensitivity check
 61323907 found −0.04975 versus −0.04921 nat at the two grid levels.
 Job 61324097 refined eight pairs above 0.02 nat in a separate
 sidecar using the frozen model and recorded outcomes. The refined
 contrast is −0.04994 nat and leaves the interpretation unchanged.
-NGC288 61323432 began on allocated debug CPUs. Audit 61323433
-waits for its output.
+NGC288 61323432 completed in 6 min 35 s. The full-likelihood
+distance is 10.0565 kpc versus 10.2609 kpc for Gaussian summaries.
+The held-out dynamical log-score gain is +0.5293 nat. Both estimates
+retain a positive distance-scale offset over 1 kpc. Audit 61323433
+completed in 14 s and authenticated the catalog, all eight structure
+scores, and the prospective prediction and outcome chain. The
+[verification record](manifests/v3_3/delivery/complete.json) binds the saved
+products. The v3.3 research delivery has no remaining science jobs.
 
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.

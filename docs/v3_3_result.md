@@ -27,6 +27,8 @@ v3.3 复用 Legacy Survey DR11 原生带通、有符号通量及测量协方差�
 
 在 3,515 个处于 QRF 支持内、有配对参考距离的源上，近端概率分箱的加权绝对相符误差为名义 0.2310、候选 0.2063、QRF 0.2794。参考近端比例为 60.23%，名义与候选的平均预测分别为 83.33% 与 80.86%。巨星类别相符误差在 3,318 个已标注源上从 0.2706 降至 0.2496。这些相符率受开发样本的参考选择影响。QRF 的 20 个概率端点由浮点舍入产生，分箱修正后恢复相同分母。[修正后的可靠性表](../manifests/v3_3/development/reliability_corrected/reliability.csv)
 
+在 1,003 个有参考距离且处于 QRF 支持内的矮星上，名义 SED、类条件 SED、QRF 的距离中位偏差依次为 +3.63%、+3.14%、+2.27%，68% 区间相符率为 67.50%、67.50%、79.26%。对 985 个其余恒星，同序中位偏差为 −13.73%、−11.52%、−15.55%。在 1,231 个支持内巨星上，即使类别边缘化的中位偏差从 −87.00% 收窄至 −80.93%，巨星分支仍显著受抑。匹配样本在 20–22 星等有 16 个可比距离参考，在弱 W1 有 2 个。具体分母和距离分箱见[匹配开发距离表](../manifests/v3_3/development/initial_report/matched_distance.csv)。
+
 ## 前瞻 Gaia 评分
 
 模型、比较程序及样本先冻结，再写出 1,536 个源的三组预测，最后按冻结哈希打开 Gaia DR3 视差一次。源与历史的 Gaia 及 Legacy 身份均无交集，四个 10° 天空块已有历史检查。通过视差质量和零点校正条件的源有 1,212 个，含 125 个负视差。评分直接使用有符号视差和测量误差。预测平均分差的单位为 nat/星，区间按四个天空块重采样，反映有限的区域证据。
@@ -57,9 +59,28 @@ NERSC 目录位于 `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_3/catalog/post
 
 QRF 的 5,341 个源都处于其名义支持内，近端期望数为 4,854.79。模型预测的近端期望和高概率源数对应不同统计量。[导出清单](../manifests/v3_3/catalog_posteriors.json)
 
-## NGC288 的评分设计
+## NGC288 的共同距离
 
 复用 512 个单独核实的光测 PSF，在共同距离 2–50 kpc 的距离模数均匀先验下估计团距离。两种估计使用相同的星表、角距空间权重、背景距离混合及光测选择归一化。全方法对类别条件通量似然积分。高斯摘要每类保留参考先验下的证据及前两阶矩，并撤去相同参考先验。动态尺度在写出光测响应后用于评分。这里是已研究系统上的一次留出尺度比较，统计区间条件于这一个 SED 响应和固定结构模型。[结构配置](../configs/v3_3_structure.json) · [动力学标尺来源](../configs/v3_0_independent_scale.json)
+
+动力学外部尺度为 9.03 kpc（−0.56 / +0.48 kpc）。下表的区间为光测共同距离后验，预测对数密度已对动力学测量误差积分。
+
+| NGC288，512 个 PSF | 全似然 | 高斯摘要 |
+|---|---:|---:|
+| 共同距离中位数（kpc） | 10.0565 | 10.2609 |
+| 68% 后验区间（kpc） | [9.8490, 10.2702] | [9.9641, 10.5612] |
+| 95% 后验区间（kpc） | [9.6632, 10.4742] | [9.6829, 10.8523] |
+| 相对动力学中心的中位偏差（kpc） | +1.0265 | +1.2309 |
+| 动力学预测对数密度（nat） | −2.3057 | −2.8351 |
+| 模型成员数期望与标准差 | 123.76 ± 4.77 | 128.95 ± 5.03 |
+
+全似然将中位距离向外部标尺拉近 0.204 kpc，预测对数密度提高 +0.5293 nat。改变共同距离及空间权重网格、通量网格或选择积分随机序列后，分数优势为 +0.5290 至 +0.5294 nat。两种 95% 后验区间仍整体高于动力学中心，团距离尺度偏差仍在 1 kpc 以上。成员数是模型的辅助输出，本次外部评分的目标是距离。这一结果量化了保留联合后验在已知星团上的收益及现有尺度限制。[结构分数与数值变体](../manifests/v3_3/structure/distance_score.csv) · [同一标尺复算](../manifests/v3_3/delivery/structure_score_recomputed.csv)
+
+## 证据范围与交付核验
+
+v3.3 的证据支持同参考巨星条件距离的开发改进，以及 NGC288 共同距离在留出标尺下的相对收益。近端巨星分支、贫金属区间和前瞻边缘预测仍限制应用。当前交付为研究目录，无已校准的发布域。v1 部署继续使用原模型。
+
+分配计算作业 61323433 从保存数组核验了 5,341 个目录源的身份、原生类型、联合后验、重加权闭合与分支统计，复算了 512 个 NGC288 源对应的八组结构分数，并核对了 1,212 个带符号 Gaia 视差的预测哈希与评分汇总。本地 472 项测试通过，五张英文主图已检查。训练、开发、前瞻和原生目录的准入与排除统计保存在各自清单中。[最终核验](../manifests/v3_3/delivery/complete.json) · [分窗口、星等与 W1 的统计](../manifests/v3_3/delivery/catalog_counts.csv)
 
 ## 主图与复现入口
 
@@ -67,5 +88,6 @@ QRF 的 5,341 个源都处于其名义支持内，近端期望数为 4,854.79。
 - CMD 与颜色空间的残差、近端概率及区间宽度。[PNG](../figures/v3_3/development/color_distance_diagnostics.png) · [PDF](../figures/v3_3/development/color_distance_diagnostics.pdf)
 - 巨星类别及近端概率的相符曲线。[PNG](../figures/v3_3/development/reliability_corrected/reference_reliability.png) · [PDF](../figures/v3_3/development/reliability_corrected/reference_reliability.pdf)
 - 68% 区间宽度与参考相符率。[PNG](../figures/v3_3/development/interval_agreement.png) · [PDF](../figures/v3_3/development/interval_agreement.pdf)
+- NGC288 的共同距离后验与动力学标尺。[PNG](../figures/v3_3/structure/ngc288_distance.png) · [PDF](../figures/v3_3/structure/ngc288_distance.pdf)
 
 分配 NERSC CPU 后，可依次用 `scripts/run_v3_3_sed.sh` 的 `prepare`、`fit`、`assemble` 阶段重建模型。开发分析由 `scripts/run_v3_3_development.sh` 及报告入口生成。之后以 `scripts/v3_3_freeze.py` 绑定模型与 `configs/v3_3_decision.json`。目录和结构入口为 `scripts/run_v3_3_catalog.sh`、`scripts/run_v3_3_structure.sh`。前瞻脚本的 `forecast` 阶段写出预测和完整哈希，`score` 阶段按该记录评分。现有产物可以用 `scripts/run_v3_3_delivery.sh` 核验。
