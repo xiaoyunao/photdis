@@ -1,0 +1,22 @@
+{
+  "job": "61330275",
+  "evidence": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+  "inputs": {
+    "data/v3_4/near_development/validation/inputs/complete.json": "f1c4d5363f60167d885f93069d9431b9458777c6a2a185c758896d1fcaeb5220",
+    "data/v3_4/near_development/validation/inputs/photometry.npz": "9f51847d31d0b2177534d3de4edfbf1fa33de864e6cc2c2da2731078e7bbc200",
+    "data/v3_4/near_development/validation/inputs/application.npz": "34e22fd25c9755d38d60f3fbee136fc958bb1fefddbe6d81c84b3f3d91aed144",
+    "data/v3_4/near_development/validation/inputs/fresh_gaia.npz": "6cd10571b1f90c0d8293e6c9fcd7d97ebcb37532214da649f21b37649692a527",
+    "data/v3_4/near_development/validation/forecast/complete.json": "c2947d149d18b4f3ed07ef37ed6cfa86888e91113d71a01035af6c6c3a6ddf7c",
+    "data/v3_4/near_development/validation/forecast/forecasts.npz": "bda8a3bc9db18cc5ca8c6c75ced0aac845aa52f52d2ba29857d6f348bdd536d3"
+  },
+  "outputs": {
+    "distance_residual.pdf": "2f96f83d8df1be51af67e6f508edf6b3022e8286689a4bb550d4ab5e74d765cf",
+    "distance_residual.png": "189aa3f433f49c6020b579d247329cb0534a0fc3ded0026061abbba18e460ea9",
+    "observable_selection.pdf": "f39d0b63748efd6330009e1ffa78134d15be5ba0509f20b4516af5ac43e28fdf",
+    "observable_selection.png": "427fe9014c31978382c8c60772f3d2fae6ee1d558dfa843fb52b30164b030127",
+    "radial_sensitivity.pdf": "96429c9a717271599950ff473784caea64ac6ec360ce73fb83a82c6ab1460cc8",
+    "radial_sensitivity.png": "cfcb9832131ec0e56561cb799fd6728d83a279fa0a2f0c949ed62240ddd3366a",
+    "sky_selection.pdf": "81aa8053d2e4244bc22d3badff660a467f063b19a8baa05be41860215f4ffa64",
+    "sky_selection.png": "219e057f9c0751a55ec9f9acd605888f9a2b1fe1c6203d8f98246cea686d7011"
+  }
+}

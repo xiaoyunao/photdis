@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — recover the external comparison and scientific figures
+
+- Follow-up job 61330274 completed 0:0 in 2 min 04 s. Of 3,885
+  fresh primary selections, 950 pass strict Gaia astrometry and
+  2,351 have valid zero points, with no intersection.
+- Replayed the v3.4 cuts on archived v3.3 external predictions. The
+  main r=16–18 applied selection gives +0.0444 nat against nominal
+  SED on 395 eligible signed parallaxes and 13.63% NMAD on 219
+  geometry distances. The 58 weaker parallaxes favor nominal.
+- Figure 61329977 failed due to no fresh geometry. The corrected
+  writer shows the explicitly named application Gaia comparison.
+  Replacement job 61330275 completed 0:0. All four rendered PNGs
+  were visually checked and all eight files match their receipt.
+- Prepared a direct native-ID class reference recovery using the
+  full prior PSF reference frame and a signed-parallax interval
+  sensitivity calculation on the already scored rows.
+
 ## 2026-11-15 — score frozen Gaia and targeted spectra
 
 - Forecast 61329975 completed in 7 min 05 s. Both cuts and the

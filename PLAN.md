@@ -51,7 +51,12 @@ See [development results and external validation design](docs/v3_4_result.md).
    including 6,039 new Gaia sources. Roster job 61329405 completed.
    Forecast 61329975 replays the application sample before scoring.
    Evidence job 61329976 binds the evaluator and scores only after
-   forecast completion. Four figure outputs are assigned to job 61329977.
+   forecast completion. Figure job 61330275 produced four PNG/PDF sets.
+   The unused Gaia cohort has zero rows satisfying both strict astrometry
+   and zero-point support. Archived external Gaia evidence supports
+   QRF most clearly at r=16–18 with weak-Gaia limits. Check native
+   aliases in prior class references against the actual application
+   draw before deciding scope.
 3. Process all eligible DR11 PSFs in the verified photometric and sky
    domain. Freeze source coverage and retain identity, distance summaries,
    available posterior, near probability, support and flags. Verify

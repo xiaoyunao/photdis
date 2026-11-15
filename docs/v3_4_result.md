@@ -47,3 +47,18 @@ v3.4 用现成的距离模型，在 13 个已有 DECam 天区中寻找以矮星�
 定向光谱中，LCO 和 APO 的主选样分别确认 10 个和 9 个远端巨星，严格选样分别确认 4 个和 2 个。两档应用概率样本都交叠到 1 个带可靠远端距离的巨星，其余分别有 10,452 和 6,482 个源未判定类别。因此应用巨星混入界限几乎覆盖整个比例范围。QRF 的径向预测对选样敏感，当前光谱覆盖无法从中分离巨星混入的贡献。大范围目录仍需满足工作包中的发布证据。
 
 [Gaia 评分](../manifests/v3_4/validation/evidence/gaia_summary.csv) · [距离统计](../manifests/v3_4/validation/evidence/distances.csv) · [定向光谱](../manifests/v3_4/validation/evidence/spectral_classes.csv) · [应用巨星界限](../manifests/v3_4/validation/evidence/giant_bounds.csv)
+
+## 覆盖核查和跨样本复核
+
+零合格视差发生在条件交集。新 Gaia 主选样 3,884 个匹配全通过位置核对，3,444 个有有限视差，950 个通过严格天体测量质量，2,351 个有可用零点修正。最后两组没有交集。在严格选样上分别有 599 个和 1,252 个，也没有交集。冻结评分保留这一结果。
+
+将 v3.4 切法应用于 v3.3 已开封的外部预测，主选样有 690 个合格视差，QRF 相对名义 SED 为 +0.0392 nat。r=16–18 的 395 个合格视差上为 +0.0444 nat，219 个高信噪比几何参考的距离散布为 13.63%。同一星等段的 58 个弱视差参考上为 −0.1046 nat。严格样本 r=16–18 有 195 个几何距离，散布为 12.89%，弱视差只有 16 个。复核是对已开封存档的迁移检验。它增加了 r=16–18 的距离证据，类别与弱 Gaia 源仍是发布判断的主要缺口。
+
+[质量条件分解](../manifests/v3_4/validation/followup/gaia_attrition.csv) · [外部预测复核](../manifests/v3_4/validation/followup/archived_external.csv)
+
+## 图
+
+- [距离与残差](../figures/v3_4/distance_residual.png)
+- [颜色星等与颜色空间](../figures/v3_4/observable_selection.png)
+- [天区分布](../figures/v3_4/sky_selection.png)
+- [选样敏感性与 Gaia 距离界限](../figures/v3_4/radial_sensitivity.png)
