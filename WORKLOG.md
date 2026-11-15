@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-16 — verify the LF support with the frozen nominal SED and real photometry
+
+- Checked the hash-verified fitted SED. Giant kernel centers occupy
+  13 of 28 luminosity and metallicity cells. Before restriction, the
+  disk and halo LF scenarios put 19.7% and 11.7% of active prior mass
+  in empty cells. Giant mixture weight ESS is 9.31 nominal, 8.97 with
+  the disk LF, and 8.35 with the halo LF.
+- Ran the five likelihood scenarios on four exact blue-replay PSFs,
+  with W1 significant or rejected in each blue cohort. Joint shell
+  masses normalize, and the nominal shell masses agree with the
+  original class-likelihood implementation. Recorded inputs and
+  numerical checks in `manifests/v3_6/lf_support_preflight.json`.
+- Native shards 61344517_2 and _3 are now running. Full projection
+  and the representative LF estimates still await their resources.
+
 ## 2026-11-16 — test radial selection results against imaging area and depth
 
 - Rendered F07 latitude and imaging sensitivity from the frozen full

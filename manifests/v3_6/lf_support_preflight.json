@@ -1,0 +1,64 @@
+{
+  "nominal_model_sha256": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+  "blue_replay_payload_sha256": "fa31f01021ab8a5212f63e31d41e4052de446391e22eaa5e8f4a7f04af70f5af",
+  "sources": {
+    "manifests/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691"
+  },
+  "scenarios": [
+    "nominal",
+    "empirical_galactic",
+    "rgb_disk_rich",
+    "rgb_halo_rich",
+    "more_faint_other"
+  ],
+  "class_mass": [
+    0.8002683732604119,
+    0.027751525236269697,
+    0.17198010150331827
+  ],
+  "rgb_disk_support": {
+    "active_giant_mass": 0.7778342573526312,
+    "occupied_bins": 13,
+    "empty_bin_requested_fraction": 0.19650706938968066,
+    "giant_kernel_ess_before": 9.311368395737606,
+    "giant_kernel_ess_after": 8.972632785545153,
+    "largest_kernel_weight_ratio": 248.11772160312816
+  },
+  "rgb_halo_support": {
+    "active_giant_mass": 0.7778342573526312,
+    "occupied_bins": 13,
+    "empty_bin_requested_fraction": 0.11742001149957253,
+    "giant_kernel_ess_before": 9.311368395737606,
+    "giant_kernel_ess_after": 8.350264074640751,
+    "largest_kernel_weight_ratio": 46.66071942959914
+  },
+  "faint_other_base_mass": 0.1311640056959663,
+  "checks": [
+    {
+      "ls_id": 12105688366983016,
+      "cohort": "faint_blue_near",
+      "w1_state": 2,
+      "nominal_max_shell_difference": 0.0
+    },
+    {
+      "ls_id": 12105655589542172,
+      "cohort": "faint_blue_near",
+      "w1_state": 4,
+      "nominal_max_shell_difference": 0.0
+    },
+    {
+      "ls_id": 12105688371177399,
+      "cohort": "blue_2_to_5",
+      "w1_state": 2,
+      "nominal_max_shell_difference": 0.0
+    },
+    {
+      "ls_id": 12105745815310434,
+      "cohort": "blue_2_to_5",
+      "w1_state": 4,
+      "nominal_max_shell_difference": 0.0
+    }
+  ],
+  "scope": "Frozen-model support and numerical integration on four actual sources. These checks carry no catalog contamination estimate."
+}
