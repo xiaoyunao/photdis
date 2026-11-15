@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — recover the original blue anomaly cohorts
+
+- Implemented `scripts/v3_6_blue_replay.py` to trace the original qualified
+  v3.5 draw to native PSF partitions, verify the Gaia tiles, and repeat
+  the signed astrometry qualification only on the frozen blue slice.
+- The replay checks the published 116/17 and 189 counts and the 148/41
+  magnitude split before reading native FITS rows. It retains original
+  PDF pointers, source IDs, Gaia astrometry, extinction-corrected CMD
+  quantities and the overlap with the 49 historical anomaly candidates.
+- Python syntax and imports pass. Real replay counts and mechanism
+  checks await the NERSC run.
+
 ## 2026-11-15 — open the post-v3.5 science and figure work
 
 - Read the complete Pro review and ten-section task brief. Recorded the
