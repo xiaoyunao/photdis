@@ -1,0 +1,16 @@
+{
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_6/reference_flow_audit/specdis/complete.json": "d397027b5794309e53aff03c245bfc2c16d3bc04b6e4e3863924675c5b7e733b",
+    "manifests/v3_6/reference_flow_audit/specdis/distance.csv": "72a091dc9f5a91fbc3fa8589dd63a80cc87825555304295cc941aed5f0baf6c5",
+    "manifests/v3_6/reference_flow_audit/spdist/complete.json": "50fb84f9ed3c0cc8618e863e5b50ed0e12c8fdc7c9b779a16f9f0507baf827e2",
+    "manifests/v3_6/reference_flow_audit/spdist/distance.csv": "755ce9dbe29428707b2451567922dae9371f13bcef14a27c0b7df2772a3fb4f5",
+    "scripts/v3_6_plot_reference_admission.py": "ed6de83eff5d7de96e7ebe09bd807a6967c0fc12a9a334377bd64a4f9ef8b713"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F01_near_reference_flow.csv": "e2471c0f58da15e5a93daa97686d8135007dd3f2b328a5aa2bf9c88c5c201ea9",
+    "figures/v3_6/F01_near_reference_flow.png": "c591c809b3c8ddd1bd6117bea30ce0b1380344f9d2d4aeb50a89b81379ee794a",
+    "figures/v3_6/F01_near_reference_flow.pdf": "5119e915df0e5511494ebfc400022a7c82048217ae7ee5caac3b2140a024118f"
+  },
+  "caption": "Original SpecDis and SPDist inventory rows, successive verified prediction and selection gates in reference-distance shells. Color distinguishes fixed photometric cuts. The terminal source tables retain separate exclusion reasons."
+}

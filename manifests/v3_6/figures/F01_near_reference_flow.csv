@@ -1,0 +1,29 @@
+source,cut,distance_kpc,raw_rows,verified_support,dwarf_score_pass,selected
+SpecDis,primary,unmeasured,340,0,0,0
+SpecDis,primary,"[0, 2)",1752024,208482,185649,183824
+SpecDis,primary,"[2, 5)",1527687,158722,88735,82586
+SpecDis,primary,"[5, 10)",580843,73716,7397,6072
+SpecDis,primary,"[10, 20)",189539,27769,1538,990
+SpecDis,primary,"[20, 50)",70872,12451,1862,722
+SpecDis,primary,"[50, inf)",19533,3480,940,354
+SpecDis,strict,unmeasured,340,0,0,0
+SpecDis,strict,"[0, 2)",1752024,208482,131054,129457
+SpecDis,strict,"[2, 5)",1527687,158722,22064,20031
+SpecDis,strict,"[5, 10)",580843,73716,351,261
+SpecDis,strict,"[10, 20)",189539,27769,124,76
+SpecDis,strict,"[20, 50)",70872,12451,230,67
+SpecDis,strict,"[50, inf)",19533,3480,134,37
+SPDist,primary,unmeasured,1202911,4,1,1
+SPDist,primary,"[0, 2)",2012777,219166,196407,194122
+SPDist,primary,"[2, 5)",1820112,154459,83958,77671
+SPDist,primary,"[5, 10)",731763,58465,5418,4206
+SPDist,primary,"[10, 20)",245192,22263,1393,897
+SPDist,primary,"[20, 50)",150564,16117,2278,927
+SPDist,primary,"[50, inf)",109191,6252,638,300
+SPDist,strict,unmeasured,1202911,4,0,0
+SPDist,strict,"[0, 2)",2012777,219166,136965,135035
+SPDist,strict,"[2, 5)",1820112,154459,19371,17447
+SPDist,strict,"[5, 10)",731763,58465,329,215
+SPDist,strict,"[10, 20)",245192,22263,143,93
+SPDist,strict,"[20, 50)",150564,16117,304,102
+SPDist,strict,"[50, inf)",109191,6252,102,47

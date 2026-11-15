@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-16 — render the native-to-selection flow directly from the verified VAC tables
+
+- Published the F01 2–5 and 5–10 kpc reference admission comparison for
+  SpecDis and SPDist. The figure uses both full-inventory distance tables,
+  and the PNG was opened and checked at publication resolution.
+- The final deduplicated observed CMD still follows 61347451. F04 and
+  F05 await the shared or regular native-photometry allocation.
+
 ## 2026-11-16 — keep the native reference-photometry pass eligible in both CPU queues
 
 - Original shared job 61347073 remains pending. The regular alternative
