@@ -140,7 +140,7 @@ def group_masks(t):
     return m
 
 
-def stellar_statistics(t,rosters,valid,archived_history):
+def stellar_statistics(t,rosters,valid,archived_history,usable_gaia,weak_gaia):
     output = []
     for survey,z in rosters.items():
         j = unique_join(valid,z['source_id'])
@@ -159,15 +159,19 @@ def stellar_statistics(t,rosters,valid,archived_history):
                 if not a.any():
                     continue
                 for low,high in ((0.,2.),(2.,5.),(5.,10.)):
-                    valid_dwarf = a&(cls==0)&ref['distance_precise']&(d>=low)&(d<high)
-                    b = distance_summary(10+5*np.log10(t['qrf_quantiles_kpc'][rows[valid_dwarf]]),
-                                         10+5*np.log10(d[valid_dwarf]))
+                    dwarfs = a&(cls==0)&ref['distance_precise']&(d>=low)&(d<high)
+                    distances = {}
+                    for prefix,subset in (('dwarf',dwarfs),('dwarf_weak_gaia',dwarfs&weak_gaia[rows]),
+                                          ('dwarf_no_qualified_gaia',dwarfs&~usable_gaia[rows])):
+                        scores = distance_summary(10+5*np.log10(t['qrf_quantiles_kpc'][rows[subset]]),
+                                                  10+5*np.log10(d[subset]))
+                        distances.update({f'{prefix}_{k}':v for k,v in scores.items()})
                     output.append(dict(survey=survey,selection=cut,group=name,shell_lo=low,shell_hi=high,
                         matched=int(a.sum()),outside_recorded_history=int((a&~archived_history[rows]).sum()),
                         dwarfs=int((a&(cls==0)).sum()),giants=int((a&(cls==1)).sum()),
                         near_giant=int((a&(cls==1)&near).sum()),far_giant=int((a&(cls==1)&far).sum()),
                         unresolved_giant=int((a&(cls==1)&~(near|far)).sum()),no_label=int((a&(cls<0)).sum()),
-                        **{f'dwarf_{k}':v for k,v in b.items()}))
+                        **distances))
     return output
 
 
@@ -287,21 +291,30 @@ def main():
     ids = valid(photo)
     prior_match = historical(photo)
     photo['gaia_unique'] = ids>0
-    tiles = tile_inventory(ids[ids>0])
+    spectral_ids = valid(spectral) if spectral else np.empty(0,'i8')
+    joint_ids = np.r_[ids,spectral_ids]
+    positions = {k:np.r_[photo[k],spectral.get(k,np.empty(0))] for k in ('RA','DEC')}
+    tiles = tile_inventory(joint_ids[joint_ids>0])
     destination.mkdir(parents=True,exist_ok=True)
     freeze = destination/'freeze.json'
-    binding = dict(hashes=hashes,gaia_tiles=tiles,rows=counts,reference_prior_mu=REFERENCE_PRIOR.tolist())
+    binding = dict(hashes=hashes,gaia_tiles=tiles,rows=counts,spectral_n=len(spectral_ids),
+                   reference_prior_mu=REFERENCE_PRIOR.tolist())
     if freeze.exists():
         if json.loads(freeze.read_text())!=binding:
             raise ValueError('Cannot reopen validation with a changed roster')
     else:
         save_json(freeze,binding)
-    gaia,zpt,usable = qualification(photo,ids)
-    if tiles!=tile_inventory(ids[ids>0]):
+    joined,zpt,qualified = qualification(positions,joint_ids)
+    if tiles!=tile_inventory(joint_ids[joint_ids>0]):
         raise ValueError('Gaia tiles changed while accessing reference data')
-    csv_rows(destination/'gaia_joint.csv',gaia_statistics(photo,gaia,zpt,usable,prior_match,photo['design_weight']))
+    usable = qualified[:len(ids)]
+    csv_rows(destination/'gaia_joint.csv',gaia_statistics(photo,take_rows(joined,slice(len(ids))),
+             take_rows(zpt,slice(len(ids))),usable,prior_match,photo['design_weight']))
     if spectral:
-        csv_rows(destination/'targeted_spectra_joint.csv',stellar_statistics(spectral,specs,valid(spectral),historical(spectral)))
+        spec_good = qualified[len(ids):]
+        spec_weak = spec_good & (zpt['p_corr'][len(ids):]<MIN_WEAK_SNR*joined['parallax_error'][len(ids):])
+        stats = stellar_statistics(spectral,specs,spectral_ids,historical(spectral),spec_good,spec_weak)
+        csv_rows(destination/'targeted_spectra_joint.csv',stats)
     counts.update(gaia_usable=n_count(usable),gaia_outside_recorded_history=n_count(usable&~prior_match),
                   targeted_candidates=len(spectral.get('ls_id',[])))
     atomic_npz(destination/'gaia_qualification_roster.npz',ls_id=photo['ls_id'],TYPE=photo['TYPE'],
