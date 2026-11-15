@@ -36,15 +36,20 @@ analysis as those associations complete.
 
 For the luminosity-function analysis, reuse native SED component likelihoods
 and replace the empirical giant absolute-magnitude and metallicity weights
-within measured support. Compare an empirical baseline to a (10^{0.32 M_r})
+within measured support. Compare an empirical baseline to a $10^{0.32 M_r}$
 RGB luminosity function and disk/halo prior variations. The RGB slope is from
-[Xue et al. (2014), §3.2.1](https://arxiv.org/abs/1211.0549), and the disk/halo
-geometry is based on [Jurić et al. (2008)](https://arxiv.org/abs/astro-ph/0510520).
+[Xue et al. (2014), §3.2](https://arxiv.org/abs/1211.0549). The disk/halo
+geometry and the halo metallicity scenario use [Jurić et al. (2008)](https://arxiv.org/abs/astro-ph/0510520)
+and [Ivezić et al. (2008)](https://arxiv.org/abs/0804.3850).
 Record support and keep the faint stellar branch separate. Evaluate the
 scenarios on the same magnitude, color, sky and band-availability sample,
 using the signed Gaia subcohort for forward scores and sky blocks for count
 uncertainty. The conditional population projections accompany direct reference
 comparisons.
+
+Current Slurm dependencies are in WORKLOG. The 48 group projections feed
+both the probability summary and the full Gaia join. The paired-cache
+comparison feeds the shared-photometry replay.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 

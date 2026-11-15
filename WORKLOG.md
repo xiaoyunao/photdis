@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — implement the supported giant LF and line-of-sight priors
+
+- Added `scripts/v3_6_lf_priors.py` for within-giant kernel-weight
+  replacement in occupied absolute-magnitude and metallicity cells.
+  It records requested mass assigned to empty cells and effective
+  kernel support. Disk/halo profiles integrate in distance modulus.
+- The synthetic check verifies normalization, conservation, preservation
+  of other classes and unsupported ranges, and disk/halo radial behavior.
+  The real stratified catalog evaluation still needs to run.
+- Submitted same-grz replay 61345074 after paired-cache job 61344678.
+
 ## 2026-11-15 — prepare same-photometry QRF replay and full-catalog jobs
 
 - `scripts/v3_6_qrf_same_photometry.py` re-reads native grz for the
