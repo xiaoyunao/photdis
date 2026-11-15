@@ -69,6 +69,13 @@ SPDist 有 126 颗，偏差分别为 −14.1% 和 −6.8%。严格档只剩 14 �
 [SpecDis 分层测距](../manifests/v3_6/vac_flow/specdis/performance.csv) ·
 [SPDist 分层测距](../manifests/v3_6/vac_flow/spdist/performance.csv)
 
+把已匹配参考按星族分开后，5–10 kpc 层的严格档只留下 **43 / 24,479**
+颗 SpecDis 矮星和 **10 / 13,850** 颗 SPDist 矮星。两库对应巨星为
+13 / 540 和 4 / 433。在这些参考样本里，严格档对远端矮星的保留率
+低于同层巨星。这里均使用各库的历史质量要求并排除现 QRF 训练星。
+[各星族保留率](../figures/v3_6/F09_class_retention.pdf) ·
+[全部分箱](../manifests/v3_6/figures/F09_class_retention.csv)
+
 SpecDis 与 SPDist 共有 452,470 条唯一身份配对。用两库都通过历史
 距离质量要求、也未用于现 QRF 训练的同一批主选矮星比较，以 SpecDis
 划分 5–10 kpc，有 1,175 颗星，只有 488 颗在 SPDist 也位于这一层。

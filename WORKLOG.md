@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — quantify class-specific selection survival on both full VAC references
+
+- Added F09 survival by reference distance for dwarf, giant, other and
+  unknown class, for each VAC and cut outside current QRF training.
+  Reconciled all class bins with the source totals and verified the 48
+  plotted rows, PDF, and 300 dpi PNG.
+- Strict retains 43/24,479 SpecDis and 10/13,850 SPDist dwarfs within
+  the 5–10 kpc reference shell, and 13/540 and 4/433 giants. These are
+  descriptive retention rates in the matched reference subsets.
+- The shared projection, regular fallback and remaining native
+  reference shards are queued. No duplicate job was added here.
+
 ## 2026-11-16 — allow the approved CPU queues to finish the same frozen projection
 
 - At 09:44 Pacific, Slurm test-only estimated a fresh 4-CPU shared
@@ -13,6 +25,10 @@
 - Python compile and a focused retry check passed. Keep completed
   groups unchanged and use the first verified full projection to
   release the existing downstream summary.
+- Submitted regular fallback 61350052. Slurm confirmed that
+  61345036 can follow either the original full array 61345035
+  or the fallback. Monitor both and remove the redundant pending
+  path once the first full projection is verified.
 
 ## 2026-11-16 — finish the paired VAC and far-giant uncertainty check
 

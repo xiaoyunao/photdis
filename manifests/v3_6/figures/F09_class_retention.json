@@ -1,0 +1,15 @@
+{
+  "caption": "Per-source selection survival among verified native PSFs with an archived quality distance, outside present QRF training. The denominator is the supported reference count of that class and distance shell. Hollow markers have fewer than 20 supported references. A class with zero supported stars has no rate. The vertical axis uses a linear scale below 0.1% and a logarithmic scale above. Source targeting and shared observations limit the interpretation to the displayed reference subsets.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_6/vac_flow/specdis/complete.json": "f1cb29eace052032852fedea34d8fc6af6aa378db323cf3277d2c5c56e2274c0",
+    "manifests/v3_6/vac_flow/specdis/performance.csv": "6d0365cc89771f3fa897987bf473ee66874991a891497cda6b64c15ff4f6ddb2",
+    "manifests/v3_6/vac_flow/spdist/complete.json": "50cbd07b0f19b63cf8425cc2897febf027498964bdcfeccfb927f4daeb100684",
+    "manifests/v3_6/vac_flow/spdist/performance.csv": "2c5d9fab45979cfff0676e2ace48576171fe37e855f111b6e42f2430b4e0f571"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F09_class_retention.csv": "f96c03ec4f398252a3d44f1af9a3126e00e8d58ff97c065f4074a007f8cd687e",
+    "figures/v3_6/F09_class_retention.png": "ad604695a9c124f30264d801d88af178ab8104c15c3765b81146ede2143fea62",
+    "figures/v3_6/F09_class_retention.pdf": "0f911cca055d97cd3dd3ccc2f697d380b5962c2f1bf1d55d842cd52f6ee9f126"
+  }
+}
