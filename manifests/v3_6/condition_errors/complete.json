@@ -1,0 +1,12 @@
+{
+  "job": "61359902",
+  "inputs": {
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "scripts/v3_6_condition_errors.py": "f72186616535685fed83fb249044dbd373fd52677617d4d9e6a3b04e549bbe3c"
+  },
+  "interpretation": "Unweighted, source-conditioned reference comparisons. Intervals describe agreement with reference centers or their available errors. Selection and training history are shown for each cell.",
+  "outputs": {
+    "conditions.csv": "916ce466a4406b97166bba8d6e0ad205cfe3199e363851fc28819741a4a8270f"
+  }
+}

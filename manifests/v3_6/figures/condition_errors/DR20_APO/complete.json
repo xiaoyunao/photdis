@@ -1,0 +1,18 @@
+{
+  "job": "61359904",
+  "source": "DR20_APO",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/condition_errors/complete.json": "519eba69661ead4f8dad77cd8e45797014dac9b6b485ac162ebe2208ec709d39",
+    "data/v3_6/condition_errors/conditions.csv": "916ce466a4406b97166bba8d6e0ad205cfe3199e363851fc28819741a4a8270f",
+    "scripts/v3_6_plot_condition_errors.py": "b4993a47ab8add1bb6b4a177d9d7340a6076e9ba77d45d6437a121b007b90ddc"
+  },
+  "caption": "Reference-dependent, unweighted estimates for each selection. High-quality reference stars outside QRF training can include other historical uses. Empty strata are retained in the source table. Agreement with an uncertain reference is reported both at the reference center and with its available error integrated over the QRF interval. Neither panel measures true-distance coverage.",
+  "outputs": {
+    "photometry.pdf": "0c6c98af29eed311bfd778de3f4bb478f267b9d78bfbb26079d053838ce447f0",
+    "wise_spectroscopy.pdf": "b29717086e17ee251b8ed4b37663706b26d86dc39455ff33fd0a9d953bbb9d6d",
+    "wise_spectroscopy.png": "9ba8a4f783a7ee0e13ea4e61b40bd16b802c12d224384dab92f7eb3afb865c81",
+    "photometry.png": "dbc412ea15f4499ff948f6817222ac389e2bb6dfd9304ef18e6b0718b96896a1",
+    "plotted_strata.csv": "30a1fc1318990169c9c33be3ddbd2a60519c851a5ca0859efe2483dc30af00cd"
+  }
+}

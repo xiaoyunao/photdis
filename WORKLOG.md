@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — verify the conditional-error atlas and all source metrics
+
+- Jobs 61359902 and 61359904 completed. The full 43,470-cell source table
+  stays on NERSC. All seven plotted strata and 12 English 300 dpi plates
+  were checked. DR19 Astra retains an empty high-quality table.
+- Published the compact tables and the Gaia and SpecDis examples. F05
+  correction uses the original count and binned tables to fit the full
+  panel headings. The measured cells are unchanged.
+
 ## 2026-11-16 — finish the native reference photometry pass
 
 - Shared job 61347073 completed at 0:0. Its receipt binds 2,674,744

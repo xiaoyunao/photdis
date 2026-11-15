@@ -1,0 +1,18 @@
+{
+  "job": "61360604",
+  "source": "DR20_MINESweeper",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/condition_errors/complete.json": "519eba69661ead4f8dad77cd8e45797014dac9b6b485ac162ebe2208ec709d39",
+    "data/v3_6/condition_errors/conditions.csv": "916ce466a4406b97166bba8d6e0ad205cfe3199e363851fc28819741a4a8270f",
+    "scripts/v3_6_plot_condition_errors.py": "b4993a47ab8add1bb6b4a177d9d7340a6076e9ba77d45d6437a121b007b90ddc"
+  },
+  "caption": "Reference-dependent, unweighted estimates for each selection. High-quality reference stars outside QRF training can include other historical uses. Empty strata are retained in the source table. Agreement with an uncertain reference is reported both at the reference center and with its available error integrated over the QRF interval. Neither panel measures true-distance coverage.",
+  "outputs": {
+    "photometry.pdf": "e099dd15a7534756f26814ee8422ebf3b991da0731fb3f9469f5950e471f57e4",
+    "wise_spectroscopy.pdf": "fab6a5e35b296615d26cedbf8a3c435f6c68392c973fd98f3deba090d882c7a4",
+    "wise_spectroscopy.png": "5f427643b5ac1cff33674c7f4ade05d0b45828ba28676441220964430e3930f0",
+    "photometry.png": "0bd2494de1e95cbbd13b70b5a0258b1be745fdd80ec055b97970b0423ad5beef",
+    "plotted_strata.csv": "83fc5e0b60d432b5bc475d85bf9aff09f1316e949ef95759a9f63dd10fc1ff22"
+  }
+}
