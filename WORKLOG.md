@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — complete full DECam catalog production
+
+- At 13:23 UTC, all 48 tasks in 61332090 exited 0:0. Reconciled all
+  1,074 sweep receipts against the frozen names and input row counts.
+  No frozen sweep was missing and there were no excluded bad headers.
+- The receipts reference 17,454 prediction parts, 2,307,679,457 original
+  rows and 11,246,209 supported PSF predictions. The primary and strict
+  samples contain 7,672,431 and 4,891,792 rows. All 117,127 v3.4 rows
+  were reused. The independent full delivery job verifies the files.
+- Catalog audit and spatial job 61332091 cleared its array dependency.
+  Gaia and spectra job 61332092 depends on the successful audit.
+
 ## 2026-11-15 — allow up to 16 concurrent production groups
 
 - At 11:17 UTC, Slurm reached the 12-group cap on array 61332090 and

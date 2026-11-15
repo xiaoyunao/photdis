@@ -26,6 +26,8 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    posterior and evidence fields. Written-partition audit 61332366
    checked the first 13 available sweeps. The full delivery repeats the
    posterior and native parent-row checks on every frozen sweep.
+   All 48 production tasks completed and their 1,074 receipts reconcile
+   to the frozen inventory. Full file verification and science follow.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.
