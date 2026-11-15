@@ -1,9 +1,47 @@
 {
   "footprints": [
-    {"field": 0, "ra_deg": [210.0, 211.0], "dec_deg": [-4.0, -3.0]},
-    {"field": 4, "ra_deg": [134.0, 135.0], "dec_deg": [29.0, 30.0]},
-    {"field": 6, "ra_deg": [224.0, 225.0], "dec_deg": [24.0, 25.0]}
+    {
+      "field": 0,
+      "ra_deg": [
+        205,
+        215
+      ],
+      "dec_deg": [
+        -10,
+        0
+      ]
+    },
+    {
+      "field": 4,
+      "ra_deg": [
+        130,
+        140
+      ],
+      "dec_deg": [
+        25,
+        35
+      ]
+    },
+    {
+      "field": 6,
+      "ra_deg": [
+        220,
+        230
+      ],
+      "dec_deg": [
+        20,
+        30
+      ]
+    }
   ],
-  "observed_r": [16.0, 20.0],
-  "grid": {"min_mu": -5.0, "max_mu": 30.0, "fine_points": 1401}
+  "observed_r": [
+    16.0,
+    20.0
+  ],
+  "grid": {
+    "min_mu": -5.0,
+    "max_mu": 30.0,
+    "fine_points": 1401
+  },
+  "footprint_rule": "One 1-by-1 degree tile per field: maximum photometry-only admissions, ties by ascending RA then Dec."
 }

@@ -47,6 +47,20 @@ def select_window(table, footprint, observed_r):
     return data, counts
 
 
+def best_window(table, footprint, observed_r):
+    ra_lo, ra_hi = footprint['ra_deg']
+    dec_lo, dec_hi = footprint['dec_deg']
+    # Fixed integer-aligned tiling, independent of any model prediction or reference outcome.
+    data, _ = select_window(table, footprint, observed_r)
+    ra, dec = np.floor(data['RA']).astype(int), np.floor(data['DEC']).astype(int)
+    width = dec_hi - dec_lo
+    counts = np.bincount((ra-ra_lo)*width + dec-dec_lo, minlength=(ra_hi-ra_lo)*width)
+    i, j = divmod(int(counts.argmax()), width)
+    window = dict(field=footprint['field'], ra_deg=[ra_lo+i, ra_lo+i+1],
+                  dec_deg=[dec_lo+j, dec_lo+j+1])
+    return window, counts.reshape(-1, width).tolist()
+
+
 def main():
     require_compute()
     config = json.loads(CONFIG.read_text())
@@ -65,11 +79,13 @@ def main():
             table = {k: source[k] for k in COLUMNS}
         if len(table['identity']) != prior['candidate']:
             raise ValueError(f'Parent census differs for {name}')
-        data, counts = select_window(table, footprint, config['observed_r'])
+        window, tile_counts = best_window(table, footprint, config['observed_r'])
+        data, counts = select_window(table, window, config['observed_r'])
         if not counts['admitted']:
             raise ValueError(f'Empty footprint: {name}')
         chunks.append((name, data))
-        census[name] = counts
+        census[name] = dict(**counts, window=window, tile_counts=tile_counts,
+                            upstream_non_PSF=prior['nonPSF'], upstream_missing_TYPE=prior['missing_TYPE'])
         dependencies[key] = receipts[key]
         dependencies[str(path.relative_to(ROOT))] = digest
     ids = np.concatenate([data['identity'] for _, data in chunks])
