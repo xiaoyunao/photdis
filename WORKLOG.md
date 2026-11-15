@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — allow up to 16 concurrent production groups
+
+- At 11:17 UTC, Slurm reached the 12-group cap on array 61332090 and
+  reported `JobArrayTaskLimit`. Raised the cap to 16 on the existing
+  allocation with `scontrol update JobId=61332090 ArrayTaskThrottle=16`.
+- Slurm returned a notice for already completed tasks 21 and 23.
+  A fresh query confirmed both exited 0:0 and the pending tasks now
+  have cap 16. The array and its delivery/validation dependencies
+  retained their IDs. Each group continues with four 32-CPU steps.
+
 ## 2026-11-15 — reconcile the first 500 sweep receipts
 
 - At 10:55 UTC, checked all 500 available receipts against the frozen

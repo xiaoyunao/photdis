@@ -18,8 +18,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    Randoms give 6,616.12 deg² of mask-cleared imaging within the survey
    envelope. Production freeze 61332033 binds 48 independent groups.
    Full-sweep replay 61332035 completed on a sweep with prior deliveries.
-   Array 61332090 uses four 32-CPU steps per group, with a 12-group
-   concurrency cap. Delivery/sky job 61332091 and joint validation
+   Array 61332090 uses four 32-CPU steps per group. The concurrency cap
+   began at 12 and was raised to 16 when Slurm reported JobArrayTaskLimit.
+   Delivery/sky job 61332091 and joint validation
    61332092 are dependent on successful production. The [catalog
    guide](docs/v3_5_catalog.md) documents identity, spectra association,
    posterior and evidence fields. Written-partition audit 61332366
