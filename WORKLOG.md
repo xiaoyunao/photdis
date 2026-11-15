@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — verify 5,341 catalog admissions and the frozen QRF control
+
+- Catalog job 61320161 completed 0:0 in 13 s. The authenticated roster has
+  2,419/1,418/1,504 unique DR11 PSFs and six rows with valid weak W1.
+  Committed the roster receipt and converged 5,887-source giant fit receipt.
+- Recovered the historical 128-draw Sobol QRF inference with the native
+  absolute-g histogram. The direct model helper uses a different noise rule.
+  Confirmed the correct g anchor and reversed distance-modulus bins.
+- Added four matched development plates and associated distance, reliability
+  and interval tables. All four synthetic format checks passed. One
+  unrestricted local pytest run hit a numerical-library segfault.
+  Repeated with single-thread limits and all 472 tests passed.
+- Submitted prospective Gaia intake 61320554. Its inputs contain native
+  photometry and historical eligibility, with no astrometric outcomes.
+  The other-class fit completed in 3 min 52 s. Dwarf fit and queued
+  assembly and scoring remain to be checked.
+
 ## 2026-11-15 — implement catalog export and register independent scoring
 
 - The first catalog preparation, 61319196, failed because the hand-selected
