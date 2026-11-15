@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — hand group 0 over to the regular allocation
+
+- Debug 61332150 reached its 28-minute wall limit. Group 0 retained
+  14 complete sweep receipts of 23. The full frozen roster had 59
+  completed sweeps, and five regular groups were running.
+- The regular group 0 task 61332090_0 cleared its afterany dependency
+  and is eligible for scheduling. It will verify and reuse the 14
+  complete receipts, then process the remaining nine sweeps.
+- Group validation 61332304 remains pending on successful regular
+  completion. Its alternate dependency retained the validation job
+  when the debug task timed out. No change to the frozen analysis.
+
 ## 2026-11-15 — replay the full evidence path on completed sweeps
 
 - Replay 61332404 completed in 3 min 02 s on 14 then-complete sweeps.
