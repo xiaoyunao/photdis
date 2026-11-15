@@ -22,7 +22,7 @@ from v3_6_vac_distances import DISTANCE_EDGES, read_columns
 
 
 OUT = ROOT/'data/v3_6/gaia_census'
-FIELDS = ('catalog_row','ls_id','source_id','RA','DEC','TYPE','primary','strict',
+FIELDS = ('catalog_row','ls_id','identity','source_id','RA','DEC','TYPE','primary','strict',
           'observed_r','dereddened_g_r','band_state','qrf_quantiles_kpc','qrf_bins',
           'nominal_qnear','qrf_qnear','dwarf_selection_score')
 STATES = ('no_valid_native_gaia_id','dr3_key_not_found','dr3_position_mismatch',

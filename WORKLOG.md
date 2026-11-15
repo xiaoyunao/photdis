@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-15 — build the common distance evidence and F02 atlas jobs
+
+- `scripts/v3_6_distance_evidence.py` joins each qualified reference
+  source to the same observed catalog, carries separate QRF, SED and
+  selector training flags and historical roles, and reports class
+  disagreement, reference-error-integrated interval agreement and migration.
+- The external inventory now also reads the frozen DR17 allStar and
+  astroNN pair. Distance use requires matching APOGEE name and positive,
+  exact Gaia identity and keeps high-error distances for sensitivity.
+- `scripts/v3_6_plot_distance_atlas.py` renders all source and class
+  combinations through the same distance, residual and histogram layout.
+  Opened a run on all 305 actual blue replay rows. Its 95-row strict
+  subset preserves every marker and its available error, and all figure
+  metrics include the 116/17 overflow points.
+- `scripts/v3_6_catalog_observables.py` counts exact median and near-mass
+  conflicts, projects selection-score comparisons, and accumulates
+  preselection sky counts and hard versus posterior distance counts.
+- Header checks confirmed the relevant archive fields on NERSC. Synthetic
+  checks pass for role binding, propagated reference errors, and exact
+  thresholds including equality. The main catalogs remain queued.
+
 ## 2026-11-15 — map strict-cut retention and verify all far-shell mass
 
 - F06 now shows both cut densities and strict retention in each

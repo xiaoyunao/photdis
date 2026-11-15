@@ -9,6 +9,7 @@ import fitsio
 import numpy as np
 
 from photdis.reference_v1_4 import unique_join
+from photdis.spectroscopy import APOGEE_COLUMNS, apogee_best_rows, project_apogee
 from photdis.stage1 import require_compute
 from photdis.v3.metrics import distance_summary
 from v2_1_near import ROOT, atomic_npz, csv_rows, load, save_json, sha
@@ -31,7 +32,42 @@ SHELLS = ('0–2','2–5','5–10','10–20','20–50','>50')
 CLASSES = ('dwarf','giant','other','unknown')
 
 
+def apogee_inventory(inputs):
+    marker = ROOT/'manifests/v3_1/external_inventory_finite_sky/complete.json'
+    inputs[str(marker.relative_to(ROOT))] = sha(marker)
+    sources = json.loads(marker.read_text())['inputs']
+    star, = [Path(k) for k in sources if Path(k).name=='allStar-dr17-synspec_rev1.fits']
+    nn, = [Path(k) for k in sources if Path(k).name=='apogee_astroNN-DR17.fits']
+    for path in (star,nn):
+        inputs[str(path)] = sources[str(path)]
+        verified(path,sources[str(path)])
+    full = fitsio.read(str(star),ext=1,columns=APOGEE_COLUMNS)
+    distance = fitsio.read(str(nn),ext=1,columns=['APOGEE_ID','RA_APOGEE','DEC_APOGEE','source_id',
+                                                 'dist','dist_error','nn_parallax'])
+    if distance['source_id'].dtype.kind not in 'iu':
+        raise ValueError('astroNN Gaia identities must be integers')
+    np.testing.assert_allclose(full['RA'],distance['RA_APOGEE'],rtol=0,atol=1e-7,equal_nan=True)
+    np.testing.assert_allclose(full['DEC'],distance['DEC_APOGEE'],rtol=0,atol=1e-7,equal_nan=True)
+    ix = apogee_best_rows(full)
+    a,b = full[ix],distance[ix]
+    s = project_apogee(a)
+    same = (s['source_id']>0)&(s['source_id']==b['source_id'])&(text(a['APOGEE_ID'])==text(b['APOGEE_ID']))
+    d,e = b['dist']/1000.,b['dist_error']/1000.
+    available = same&np.isfinite(d)&(d>0)&np.isfinite(e)&(e>0)
+    label = np.where(s['quality'],2,-1).astype('i1')
+    label[s['label_dwarf']] = 0
+    label[s['label_giant']] = 1
+    return dict(source_id=s['source_id'],RA=s['ra'],DEC=s['dec'],reference_row=ix,
+        distance_kpc=np.where(available,d,np.nan),distance_error_kpc=np.where(available,e,np.nan),
+        distance_available=available,distance_precise=available&(e<.2*d),
+        class_label=label,feh=s['feh'],feh_error=s['feh_err'],feh_valid=s['quality'],apogee_astroNN_key_match=same,
+        **{f'raw_apogee_{k}':s[k] for k in s.dtype.names},
+        **{f'raw_astroNN_{k}':b[k] for k in b.dtype.names})
+
+
 def read_reference(name,index):
+    if name=='DR17_astroNN':
+        return {k:v for k,v in index.items() if k not in ('source_id','RA','DEC','reference_row')}
     if name=='DR19_Astra':
         base = ARCHIVE/'dr19_astra_0.6.0'
         keyed = dict(index,identity=index['source_id'])
@@ -107,6 +143,7 @@ def main():
                            original['outputs']['spectra_reference_roster.npz'])
     old = read_columns(old_spectra,('ls_id',))['ls_id']
     inventory = acquire_spectral_metadata(hashes)
+    inventory['DR17_astroNN'] = apogee_inventory(hashes)
     OUT.mkdir(parents=True,exist_ok=True)
     if (OUT/'complete.json').exists():
         raise FileExistsError(OUT/'complete.json')
@@ -114,6 +151,7 @@ def main():
     flow,metrics,migration = [],[],[]
     for survey,roster in inventory.items():
         match = unique_join(roster['source_id'],catalog['source_id'])
+        match[roster['source_id']<=0] = -1
         found = np.flatnonzero(match>=0)
         status = np.zeros(len(match),'u1')
         if not len(found):
@@ -139,7 +177,8 @@ def main():
                  ref_ra=r['RA'],ref_dec=r['DEC'],
                  historical_evidence=np.isin(p['source_id'],previous)|np.isin(p['identity'],previous)
                  |np.isin(p['ls_id'],legacy)|np.isin(p['ls_id'],old))
-        p.update({f'reference_{k}':v for k,v in r.items() if k not in ('RA','DEC','source_id')})
+        p.update({f'reference_{k}':v for k,v in r.items()
+                  if k not in ('RA','DEC','source_id') and k not in ref})
         p.update(selection_stages(p,cfg))
         atomic_npz(OUT/f'{survey}_matched.npz',**p)
         m,q = records(p,survey)
