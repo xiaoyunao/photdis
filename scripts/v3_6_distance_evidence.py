@@ -55,6 +55,36 @@ def class_index(paths,size,inputs):
     return first,conflict,archive_roles
 
 
+def desi_rvs(inputs):
+    # The class inventory needs its own roster because a usable DESI spectrum
+    # need not have a usable SpecDis or SPDist distance.
+    marker = INDEX/'complete.json'
+    index = json.loads(marker.read_text())
+    filename = 'baseline_v1_4.npz'
+    attached = load(verified(INDEX/filename,index['outputs'][filename]))
+    archive_path = ARCHIVE/'references.npz'
+    archive_key = str(archive_path.relative_to(ROOT))
+    archive = read_columns(verified(archive_path,index['inputs'][archive_key]),
+        ('ls_id','source_id','identity','source_row','targetid','class_label','class_eligible',
+         'split','historical_identity','rvs_teff','rvs_teff_err','rvs_logg','rvs_logg_err',
+         'rvs_feh','rvs_feh_err','rvs_parameter_quality','specdis_row','spdist_row'))
+    keep = (attached['catalog_row']>=0)&(archive['source_row']>=0)&(archive['targetid']>0)
+    supported = attached['catalog_row'][keep]
+    catalog = read_columns(verified(INDEX/'catalog_rows.npz',index['outputs']['catalog_rows.npz']),
+                           ('ls_id','source_id'))
+    archive['archive_ls_id'] = archive.pop('ls_id')
+    archive['archive_source_id'] = archive.pop('source_id')
+    archive['archive_identity'] = archive.pop('identity')
+    inputs[archive_key] = index['inputs'][archive_key]
+    native_id = catalog['ls_id'][supported]
+    _,index_back,multiplicity = np.unique(native_id,return_inverse=True,return_counts=True)
+    return dict(**{key:value[keep] for key,value in archive.items()},catalog_row=supported,
+                archive_row=np.flatnonzero(keep),match_status=attached['match_status'][keep],
+                ls_id=native_id,source_id=catalog['source_id'][supported],
+                native_identity_repeated=multiplicity[index_back]>1,TYPE=np.full(len(supported),'PSF'))
+
+
+
 def source(path,inputs):
     receipt = json.loads(path.read_text())
     inputs[str(path.relative_to(ROOT))] = sha(path)
@@ -83,7 +113,8 @@ def vac_rows(kind,inputs):
     p = VAC/kind
     r = source(p/'complete.json',inputs)
     keys = ('class_label','distance_kpc','sigma_mu','historical_quality','usable_uncertainty','vac_row',
-            'rvs_logg','rvs_teff','rvs_feh','rvs_parameter_quality')
+            'rvs_logg','rvs_teff','rvs_feh','rvs_logg_err','rvs_teff_err','rvs_feh_err',
+            'rvs_parameter_quality','historical_identity','split')
     a = read_columns(verified(p/'matched.npz',r['outputs']['matched.npz']),(*COMMON,*keys))
     a['reference_kpc'] = a['distance_kpc']
     width = np.where(a['usable_uncertainty'],a['sigma_mu'],np.nan)
@@ -93,20 +124,56 @@ def vac_rows(kind,inputs):
     return a
 
 
+def external_parameters(name, a):
+    # The archived channels only needed a hard gravity label and metallicity.
+    # Reuse their stellar quality cuts without tying temperature or gravity
+    # availability to the iron flag or the distance qualification.
+    if name=='DR17_astroNN':
+        teff,logg,err,teff_err,valid = (a[f'raw_apogee_{k}'] for k in
+                                      ('teff','logg','logg_err','teff_err','quality'))
+        lo = hi = err
+    elif name=='DR19_Astra':
+        teff,logg,err,snr,flag = (a[f'raw_stellar_{k}'] for k in ('teff','logg','e_logg','snr','flag_bad'))
+        lo = hi = err
+        teff_err = np.full(len(teff),np.nan)
+        valid = ~flag.astype(bool)&np.isfinite(snr)&(snr>=50)
+    elif name in ('DR20_APO','DR20_MINESweeper'):
+        teff,logg,lo,hi,flag = (a[f'raw_{k}'] for k in ('teff','logg','logg_lerr','logg_uerr','flag'))
+        teff_err = np.full(len(teff),np.nan)
+        valid = flag==0
+    else:
+        raise ValueError(f'Unrecognized spectroscopic source: {name}')
+    valid = (valid & np.isfinite(teff) & (teff>0) & np.isfinite(logg) & (logg>-9000)
+             & np.isfinite(lo) & np.isfinite(hi) & (lo>0) & (hi>0))
+    if name!='DR17_astroNN':
+        valid &= teff<7000
+    return dict(teff=teff,teff_error=teff_err,teff_valid=valid,
+                logg=logg,logg_error_lo=lo,logg_error_hi=hi,logg_valid=valid)
+
+
 def external_rows(inputs):
     r = source(EXTERNAL/'complete.json',inputs)
     for f,h in r['outputs'].items():
         if not f.endswith('_matched.npz'):
             continue
+        name = f.removesuffix('_matched.npz')
         keys = ('class_label','distance_kpc','distance_error_kpc','distance_available','distance_precise',
-                'historical_evidence','inventory_row','feh','feh_valid')
-        a = read_columns(verified(EXTERNAL/f,h),(*COMMON,*keys))
+                'historical_evidence','inventory_row','feh','feh_error','feh_valid')
+        with np.load(verified(EXTERNAL/f,h),allow_pickle=False) as payload:
+            a = {k:payload[k] for k in (*COMMON,*keys)}
+            a.update(external_parameters(name,payload))
+            if name.startswith('DR20_'):
+                a['distance_error_lo_kpc'] = payload['raw_dist_lerr']
+                a['distance_error_hi_kpc'] = payload['raw_dist_uerr']
         d,s = a['distance_kpc'],a['distance_error_kpc']
         a['reference_kpc'] = d
-        a['reference_lo_kpc'] = np.maximum(d-s,0.)
-        a['reference_hi_kpc'] = d+s
+        a['reference_lo_kpc'] = np.maximum(d-a.get('distance_error_lo_kpc',s),0.)
+        a['reference_hi_kpc'] = d+a.get('distance_error_hi_kpc',s)
         a['high_quality'] = a['distance_precise']
-        yield f.removesuffix('_matched.npz'),a
+        middle = a['logg_valid'] & (a['logg']>=3.2) & (a['logg']<=4.2)
+        a['class_label_historical'] = a['class_label'].copy()
+        a['class_label'][middle & (a['class_label']<0)] = 2
+        yield name,a
 
 
 def attach(a,first,conflict,roles,training,history):
@@ -124,7 +191,8 @@ def attach(a,first,conflict,roles,training,history):
         a[k] = np.isin(a['identity'],identities)|np.isin(a['source_id'],identities)
     identities,legacy = history
     a['recorded_history'] = (np.isin(a['identity'],identities)|np.isin(a['source_id'],identities)
-                             |np.isin(a['ls_id'],legacy)|a.get('historical_evidence',False))
+                             |np.isin(a['ls_id'],legacy)|a.get('historical_evidence',False)
+                             |a.get('historical_identity',False))
     for name,(pointer,key) in roles.items():
         ix = unique_join(row,pointer)
         have = ix>=0
@@ -237,9 +305,21 @@ def main():
         print(name,len(a['ls_id']),int(a['qrf_training'].sum()),int(a['class_disagreement'].sum()),flush=True)
     csv_rows(OUT/'distance_cells.csv',all_rows)
     csv_rows(OUT/'migration.csv',all_migration)
+    rvs = desi_rvs(inputs)
+    atomic_npz(OUT/'desi_mws_rvs.npz',**rvs)
+    rvs_counts = dict(rows=len(rvs['ls_id']),identities=len(np.unique(rvs['ls_id'])),
+                      class_eligible=int(rvs['class_eligible'].sum()),
+                      parameter_quality=int(rvs['rvs_parameter_quality'].sum()))
+    print('DESI MWS/RVS',rvs_counts,flush=True)
     save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
-        rows={name:len(a['ls_id']) for name,a in cases},
-        interpretation='Per-source native PSF projections. Reference sets overlap. QRF training matches are fit consistency. Error-integrated agreement uses Gaussian parallax, modulus, or distance reference errors as available.',
+        rows={name:len(a['ls_id']) for name,a in cases},desi_mws_rvs=rvs_counts,
+        interpretation=('Per-source native PSF projections. Reference sets overlap. QRF training '
+                        'matches are fit consistency. Error-integrated agreement uses Gaussian '
+                        'parallax, modulus, or distance reference errors as available. DR20 intervals '
+                        'retain their published asymmetric errors, with the larger error used for '
+                        'the Gaussian agreement diagnostic. Qualified intermediate gravities are '
+                        'retained as other stars, with historical labels preserved. The DESI class '
+                        'roster does not require a VAC distance.'),
         outputs={p.name:sha(p) for p in OUT.iterdir() if p.name!='complete.json'}))
 
 

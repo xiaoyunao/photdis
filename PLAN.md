@@ -26,6 +26,8 @@ exclusion ledger. Run the VAC flow audit after the matched rows and
 native exclusion shards finish, and use its distance and joint tables
 to reconcile each cut with its raw denominator. Finish with joined tables, figure index,
 usable-area summary and source-conditioned conclusions for each distance range.
+Keep the DESI MWS/RVS class roster independent of VAC distance availability,
+and retain external continuous spectroscopy with source-specific quality.
 F04 maps Gaia reference support and bias across the frozen magnitude and
 color cells. Full F04 conditional tables and the F05 reference CMDs reuse
 a single native-photometry pass over the source union. The archived expanded_A cache comparison reuses v2.0 forecasts

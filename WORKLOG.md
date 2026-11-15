@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-16 — retain continuous spectra separately from distance qualifications
+
+- The unified distance product projects Teff, log g, [Fe/H] and
+  available errors from the frozen external spectra. Gravity and
+  temperature use the source quality criteria independently of the
+  iron-abundance and distance flags. Keep the frozen hard label and
+  record qualified intermediate log g as other in the v3.6 analysis.
+- DR20 reference bars retain separate lower and upper errors. The
+  existing Gaussian agreement diagnostic uses the larger published
+  error. Include archived RVS parameter errors and historical flags
+  in both VAC distance tables.
+- Added a DESI DR1 MWS/RVS roster linked through verified native PSF
+  ownership. It retains spectra with no VAC distance, its archival
+  role and key, and flags repeated ownership. Verified the 18 required
+  columns against the frozen NERSC archive header. Focused fixtures
+  passed for four external channel schemas, quality flags, asymmetry,
+  F04 parameter bins and missing-distance DESI spectra.
+- The pending consolidated-distance job 61346084 consumes these changes.
+  The full F01 plot job is 61347451.
+
 ## 2026-11-16 — connect reference coverage to the verified catalog and selection losses
 
 - F01 now combines the full supported/primary/strict CMD counts with a
