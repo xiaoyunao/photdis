@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — allow the approved CPU queues to finish the same frozen projection
+
+- At 09:44 Pacific, Slurm test-only estimated a fresh 4-CPU shared
+  request for Nov 16 10:09 and a standard dedicated CPU node for
+  Nov 16 00:10. This is a comparison of requests, not a guarantee
+  about the already queued jobs.
+- Added a per-group writer lock and verified reuse of complete
+  projections with unchanged frozen inputs. The retry path validates
+  both group outputs and refuses corruption. The shared array and
+  the regular-node fallback can safely use the same source products.
+- Python compile and a focused retry check passed. Keep completed
+  groups unchanged and use the first verified full projection to
+  release the existing downstream summary.
+
 ## 2026-11-16 — finish the paired VAC and far-giant uncertainty check
 
 - Job 61347850 completed at 0:0 in 20 s. Verified and published
@@ -15,8 +29,13 @@
 - Verified three projection groups and 675,695 supported objects
   on 69 distinct sweeps. Observed projection wall times were 9–18 s.
   Updated the remaining array tasks 61345035_[3-47] from 30 to 8
-  minutes to improve backfill opportunities. Core and RAM requests
-  and existing results were left as submitted.
+  minutes to improve backfill opportunities. Later reduced only the
+  pending group 03 trial (61345035_3 / 61349454) to 4 requested CPUs
+  and 12 GB. The remaining groups keep their initial core and memory
+  requests pending real completion evidence from this trial.
+- Native-loss shard 04 then completed at 0:0 in 36:32. Five of
+  eight shards now have completion receipts. The reduced projection
+  trial and remaining three native shards still await resources.
 
 ## 2026-11-16 — check both blue cohorts against the completed external spectra
 

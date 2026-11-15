@@ -2,6 +2,7 @@
 """Project the frozen v3.5 posterior parts once for full-catalog comparisons."""
 import argparse
 import csv
+import fcntl
 import json
 import os
 from concurrent.futures import ThreadPoolExecutor
@@ -84,11 +85,30 @@ def summarize(p,cuts):
 
 def main(group):
     require_compute()
+    dest = OUT/f'{group:02d}'
+    dest.mkdir(parents=True,exist_ok=True)
+    with (dest/'writer.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        project_group(group,dest)
+
+
+def project_group(group,dest):
     delivery_path = DELIVERY/'complete.json'
     delivery = json.loads(delivery_path.read_text())
     freeze = json.loads(verified(FREEZE,delivery['production_freeze_sha256']).read_text())
     group_names = freeze['groups'][group]
     index_path = INDEX/'complete.json'
+    inputs = {str(x.relative_to(ROOT)):sha(x) for x in (delivery_path,index_path,FREEZE,CUTS)}
+    receipt = dest/'complete.json'
+    if receipt.exists():
+        record = json.loads(receipt.read_text())
+        if (record['group']!=group or set(record['sweeps'])!=set(group_names)
+                or any(record['inputs'].get(k)!=v for k,v in inputs.items())):
+            raise ValueError(f'Existing projection has different frozen inputs: {receipt}')
+        for name in ('rows.npz','summary.csv'):
+            verified(dest/name,record['outputs'][name])
+        print(f'{group:02d}: verified existing {record["rows"]} projected rows',flush=True)
+        return
     ix = json.loads(index_path.read_text())
     catalog = load(verified(INDEX/'catalog_rows.npz',ix['outputs']['catalog_rows.npz']))
     with verified(DELIVERY/'sweeps.csv',delivery['outputs']['sweeps.csv']).open() as stream:
@@ -103,18 +123,12 @@ def main(group):
     want = sum(off[tile[n]+1]-off[tile[n]] for n in group_names)
     if len(p['ls_id'])!=want:
         raise ValueError('Projected catalog group lost supported rows')
-    dest = OUT/f'{group:02d}'
-    dest.mkdir(parents=True,exist_ok=True)
-    receipt = dest/'complete.json'
-    if receipt.exists():
-        raise FileExistsError(receipt)
     atomic_npz(dest/'rows.npz',**p)
     cfg = json.loads(CUTS.read_text())
     csv_rows(dest/'summary.csv',summarize(p,{x:cfg[x] for x in ('primary','strict')}))
     save_json(receipt,dict(job=os.getenv('SLURM_JOB_ID'),group=group,rows=len(p['ls_id']),
               sweeps={n:receipts[n] for n in group_names},
-              inputs={str(x.relative_to(ROOT)):sha(x) for x in
-                      (Path(__file__),delivery_path,index_path,FREEZE,CUTS)},
+              inputs={**inputs,str(Path(__file__).relative_to(ROOT)):sha(Path(__file__))},
               outputs={x:sha(dest/x) for x in ('rows.npz','summary.csv')}))
     print(f'{group:02d}: {len(p["ls_id"])} projected native PSF rows',flush=True)
 
