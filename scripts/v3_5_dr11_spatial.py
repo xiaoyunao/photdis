@@ -71,6 +71,45 @@ def angular_bins(mass, area, deep, used):
     return result
 
 
+
+def shell_comparison(mass,area,deep):
+    """Compare spatial shape on a common imaging area under both selections."""
+    radius = hp.nside2pixarea(NSIDE,degrees=True)
+    masks = {'imaged':area>0, 'quarter_pixel':area>=radius/4}
+    ra,dec = hp.pix2ang(NSIDE,np.arange(len(area)),nest=True,lonlat=True)
+    lon,b = galactic(ra,dec)
+    result = []
+    for footprint,mask in masks.items():
+        for case,region in enumerate(REGIONS):
+            for shell,label in enumerate(SHELLS):
+                q = mass[:,case,shell][:,mask]
+                sums = q.sum(axis=1)
+                if not (sums>0).all():
+                    continue
+                total_area = area[mask].sum()
+                tv = .5*np.abs(q[0]/sums[0]-q[1]/sums[1]).sum()
+                # Match the four longitude sectors across hemispheres before
+                # forming a contrast. Each sector contributes its shared area.
+                hemisphere,matched_area = np.zeros((2,2)),0.
+                for start in (0.,90.,180.,270.):
+                    sector = mask&(lon>=start)&(lon<start+90)
+                    halves = [sector&(b>=0), sector&(b<0)]
+                    sizes = np.asarray([area[h].sum() for h in halves])
+                    share = sizes.min()
+                    if share>0:
+                        hemisphere += np.column_stack(
+                            [mass[:,case,shell][:,h].sum(axis=1)/size for h,size in zip(halves,sizes)])*share
+                        matched_area += share
+                nr,sr = np.divide(hemisphere[:,0],hemisphere[:,1],out=np.full(2,np.nan),
+                                  where=hemisphere[:,1]>0)
+                result.append(dict(footprint=footprint,cohort=region,shell=label,area_deg2=total_area,
+                    depth_fraction=deep[mask].sum()/total_area,primary_mass=sums[0],strict_mass=sums[1],
+                    primary_per_deg2=sums[0]/total_area,strict_per_deg2=sums[1]/total_area,
+                    retained_fraction=sums[1]/sums[0],spatial_total_variation=tv,
+                    longitude_matched_area_per_hemisphere_deg2=matched_area,
+                    primary_north_south_ratio=nr,strict_north_south_ratio=sr))
+    return result
+
 def maps(mass,area):
     ra,dec = hp.pix2ang(NSIDE,np.arange(len(area)),nest=True,lonlat=True)
     l,b = galactic(ra,dec)
@@ -143,6 +182,7 @@ def main():
     DELIVERY.mkdir(parents=True,exist_ok=True)
     csv_rows(DELIVERY/'sweeps.csv',receipts)
     csv_rows(DELIVERY/'angular_density.csv',angular_bins(draws,a,deep,a>0))
+    csv_rows(DELIVERY/'shell_comparison.csv',shell_comparison(draws,a,deep))
     atomic_npz(DELIVERY/'spatial.npz',mass=draws,area_deg2=a,area_r20_deg2=deep,
                ambiguous_gaia_aliases=distinct[nmatch>1])
     csv_rows(DELIVERY/'shell_mass.csv',[dict(selection=cut,cohort=region,shell=shell,
