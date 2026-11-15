@@ -15,6 +15,7 @@ from v3_3_sed import verified
 from v3_4_near_reference_support import separation
 from v3_5_dr11_spatial import DELIVERY
 from v3_5_dr11_validate import take_rows
+from v3_6_distance_evidence import reference_agreement
 from v3_6_reference_index import OUT as INDEX
 from v3_6_vac_distances import ARCHIVE, DISTANCE_EDGES, read_columns
 from v3_6_vac_flow import gather_forecasts
@@ -32,34 +33,51 @@ def compare(t):
               'faint_blue':(r>=18)&(c>=.5)&(c<.8)}
     groups.update({lab:t['class_label']==val for val,lab in
                    ((-1,'unknown_class'),(0,'dwarf'),(1,'giant'),(2,'other_star'))})
-    support = {'all_current_support':groups['all'], 'both_supported':t['expanded_supported'],
-               'current_only_support':~t['expanded_supported']}
+    old = t['expanded_supported']
     cuts = {'before_gates':groups['all'],'primary':t['primary'],'strict':t['strict']}
     q = {'expanded_A':t['expanded_mu'],'current_grz':10+5*np.log10(t['qrf_quantiles_kpc'])}
-    valid_pair = np.logical_and.reduce([np.isfinite(mu).all(axis=1) for mu in q.values()])
+    valid = {k:np.isfinite(mu).all(axis=1) for k,mu in q.items()}
+    valid_pair = valid['expanded_A']&valid['current_grz']
+    scopes = (('all_current_support',groups['all'],('current_grz',)),
+              ('expanded_support',old,('expanded_A',)),
+              ('both_supported',old,tuple(q)),
+              ('current_only_support',~old,('current_grz',)))
     rows = []
     for source in REFS:
         ref = t[f'ref_{source}']
         d = 10**((ref-10)/5)
+        error = {'p_corr':t['p_corr'],'gaia_parallax_error':t['gaia_parallax_error']} if source=='Gaia' else {
+                 'sigma_mu':t[f'{source}_sigma_mu']}
+        with np.errstate(divide='ignore',invalid='ignore',over='ignore'):
+            agreement = {k:reference_agreement(dict(reference_kpc=d,qrf_quantiles_kpc=10**((mu-10)/5),**error))
+                         for k,mu in q.items()}
         for lo,hi in zip(DISTANCE_EDGES[:-1],DISTANCE_EDGES[1:]):
             shell = np.isfinite(ref)&(d>=lo)&(d<hi)
             for split,split_label in SPLITS.items():
                 for exposed in (False,True):
                     cohort = shell&(t['split']==split)&(t['current_qrf_training']==exposed)
-                    for scope,available in support.items():
+                    for scope,available,models in scopes:
                         for selection,selected in cuts.items():
                             for group,group_mask in groups.items():
                                 use = cohort&available&selected&group_mask
                                 n = int(use.sum())
                                 if not n:
                                     continue
-                                # Report paired performance with both quantile vectors present.
-                                use &= valid_pair
-                                for model,mu in q.items():
+                                for model in models:
+                                    keep = use&(valid_pair if scope=='both_supported' else valid[model])
+                                    a = agreement[model][keep]
+                                    defined = np.isfinite(a)
+                                    counts = defined.sum(axis=0)
+                                    mean = np.divide(np.sum(np.where(defined,a,0.),axis=0),counts,
+                                                     out=np.full(2,np.nan),where=counts>0)
                                     rows.append(dict(source=source,lower_kpc=lo,upper_kpc=hi,
                                         old_split=split_label,current_qrf_training=exposed,
                                         support=scope,selection=selection,group=group,model=model,
-                                        cohort_n=n,**distance_summary(mu[use],ref[use])))
+                                        cohort_n=n,reference_error_n68=int(counts[0]),
+                                        reference_error_n95=int(counts[1]),
+                                        error_integrated_agreement68=mean[0],
+                                        error_integrated_agreement95=mean[1],
+                                        **distance_summary(q[model][keep],ref[keep])))
     return rows
 
 
@@ -133,7 +151,7 @@ def main():
         expanded_model_sha256=expanded['model_sha256'],
         inputs={str(x.relative_to(ROOT)):sha(x) for x in
                 (*inputs,index_path,parent,delivery_path,controls,Path(__file__))},
-        scope='Archived evaluation cache only. Predictions use the original archived and current measurement versions. Current selection membership is kept identical across both models. Reported reference intervals are point-center agreements.',
+        scope='Archived evaluation cache only. Predictions use the original archived and current measurement versions. Current selection membership is kept identical across both models. Both supported uses paired finite predictions. Individual support rows use each model’s available predictions. Reference intervals include center agreement and error-integrated agreement.',
         outputs={name:sha(OUT/name) for name in ('paired.npz','performance.csv','association.csv')}))
     print(tally,flush=True)
 

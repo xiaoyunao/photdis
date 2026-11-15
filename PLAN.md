@@ -33,7 +33,8 @@ and retain external continuous spectroscopy with source-specific quality.
 F04 maps Gaia reference support and bias across the frozen magnitude and
 color cells. Full F04 conditional tables and the F05 reference CMDs reuse
 a single native-photometry pass over the source union. The archived expanded_A cache comparison reuses v2.0 forecasts
-on common stars. Follow it with an expanded_A replay on the current native
+on common stars. Report individual and joint support separately. Follow it
+with an expanded_A replay on the current native
 photometry to distinguish input changes from model changes.
 The original blue cohorts are reproduced and documented in
 [the blue distance evidence](docs/v3_6_blue_distance_evidence.md). F06 now

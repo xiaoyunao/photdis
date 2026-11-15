@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — separate common model support from current-only QRF coverage
+
+- Corrected the paired QRF summary so both models use identical stars
+  only in the joint-support comparison. The current model now reports
+  its own full and current-only support even when the old prediction is
+  absent. The old model's own support also has a separate denominator.
+- Both archived-cache and same-native-grz comparisons now report
+  point-center and reference-error-integrated interval agreement for
+  Gaia, SpecDis and SPDist. No model or cut changes. The fixture passed
+  with missing predictions, finite predictions outside nominal support,
+  three reference error laws, and excluded training rows.
+- The VAC same-star and beyond-10-kpc check is 61347850. The old cache
+  61344678 and native replay 61345074 remain queued.
+
 ## 2026-11-16 — establish far-giant matches and prepare same-star VAC scale comparisons
 
 - The two full distance tables have 703/92 SpecDis and 621/43
