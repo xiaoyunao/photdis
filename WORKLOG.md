@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-15 — trace archived reference losses to frozen native rows
+
+- Added `scripts/v3_6_native_losses.py`. It matches both historical
+  parent tables to projected native IDs and reads the existing v3.5
+  exclusion ledger by native row. It records position disagreements,
+  duplicate keys, no key and coordinate cells outside the frozen roster.
+- The collector checks exhaustive parent-row accounting and reports
+  exclusion stages independently for Gaia, SpecDis and SPDist distances.
+  Raw VACs without the archived parent match need their separate audit.
+- A synthetic FITS smoke verified native row recovery, PSF, positional
+  rejection, duplicate keys and frozen exclusion codes. Syntax passes.
+
 ## 2026-11-15 — verify the supported-row index and prepare VAC retention counts
 
 - Slurm 61344134 completed in 1 min 21 s. On the 11,246,209-model-row
