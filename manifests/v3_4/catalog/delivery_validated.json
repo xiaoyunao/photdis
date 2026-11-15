@@ -1,0 +1,34 @@
+{
+  "job": "61330696",
+  "all_PSF": true,
+  "catalog_sha256": "4ae41433508f6beb3f38a1530f72865887492e9d009b46e360a8271c5cd0edb0",
+  "inputs": {
+    "data/v3_4/near_development/validation/inputs/complete.json": "f1c4d5363f60167d885f93069d9431b9458777c6a2a185c758896d1fcaeb5220",
+    "data/v3_4/near_development/validation/inputs/application.npz": "34e22fd25c9755d38d60f3fbee136fc958bb1fefddbe6d81c84b3f3d91aed144",
+    "data/v3_4/near_development/validation/forecast/complete.json": "c2947d149d18b4f3ed07ef37ed6cfa86888e91113d71a01035af6c6c3a6ddf7c",
+    "data/v3_4/near_development/validation/forecast/forecasts.npz": "bda8a3bc9db18cc5ca8c6c75ced0aac845aa52f52d2ba29857d6f348bdd536d3"
+  },
+  "probability_draw_replayed": 17787,
+  "counts": {
+    "selected": 117127,
+    "strict": 96824,
+    "numerical": 119,
+    "eligible_domain": 125220
+  },
+  "primary_mass": [
+    115058.73335540567,
+    1418.4350090678624,
+    28.062746656926162,
+    42.34671077456623,
+    309.28376214787323,
+    270.13841594716104
+  ],
+  "strict_mass": [
+    95271.94024767194,
+    1160.7023941984123,
+    25.33039177426495,
+    34.60479405704478,
+    193.62025091217305,
+    137.80192138618182
+  ]
+}

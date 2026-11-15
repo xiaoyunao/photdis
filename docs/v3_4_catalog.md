@@ -9,6 +9,10 @@
 
 ## 读取
 
+最终目录含 117,127 个主选样、96,824 个严格选样和 37 个数据分区。
+[全量核验清单](../manifests/v3_4/catalog/delivery_validated.json)记录了逐源
+核对和实际后验汇总。
+
 大文件在 NERSC
 `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_4/near_catalog`。
 `field_00` 至 `field_12` 的 `part_*.npz` 是入选对象。任意一个分区

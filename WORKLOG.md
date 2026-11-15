@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — deliver the v3.4 near-dwarf candidate catalog
+
+- Production 61330683, 61330685, 61330694 and final 61330696 all
+  completed 0:0. The final job took 24 s. Verified the downloaded
+  summary, counts and all 13 child receipts by SHA-256.
+- The 1,183,990 parent PSFs reconcile to 125,220 in-scope rows and
+  117,127 primary selections in 37 parts. Strict subset has 96,824
+  sources. Preserve 119 nominal SED numerical flags.
+- Replayed decisions for all 17,787 original application draws and
+  compared predictions for exported sample members. Both native IDs
+  and posterior normalization reconcile. Full QRF histograms remain on
+  NERSC. Primary/strict model near mass is 116,505.23/96,457.97.
+- The main report, catalog guide, source-bound validation manifests
+  and four English figures are complete. Single-threaded local tests
+  passed 472/472. Weak Gaia and full population giant contamination
+  remain scientific limits. No further jobs within the authorized scope.
+
 ## 2026-11-15 — submit the scoped catalog and full partition replay
 
 - Added the catalog reading guide and output columns. Added a

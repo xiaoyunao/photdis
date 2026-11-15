@@ -1,6 +1,6 @@
 # PLAN
 
-## v3.4 — observable selection and production of a near dwarf sample
+## v3.4 — completed magnitude-limited near-dwarf candidate delivery
 
 The latest [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a),
 reply `039da124`, narrows the paper's first catalog to a mainly dwarf sample
@@ -67,7 +67,12 @@ See [development results and external validation design](docs/v3_4_result.md).
    parallax limitations and reference-conditional class composition.
    Use [catalog schema and reading guide](docs/v3_4_catalog.md).
    NERSC field groups 61330683, 61330685 and 61330694 feed catalog
-   reconciliation and frozen replay in job 61330696.
+   reconciliation and frozen replay in job 61330696. All four completed.
+   Final output has 117,127 primary sources in 37 partitions, including
+   96,824 strict selections. Exclusions and duplicate checks reconcile
+   all 1,183,990 original qualified PSFs. Replay verifies all 17,787
+   application rows and retained 119 numerical flags. Four PNG/PDF
+   figures and the release scope are recorded in the result report.
 
 The first configuration only defines census bins and the development
 sample, with the final published cuts left to the evidence. The first

@@ -1,0 +1,47 @@
+{
+  "job": "61330683",
+  "field": 2,
+  "input_n": 166013,
+  "all_PSF": true,
+  "inputs": {
+    "configs/v3_4_near_release.json": "89a725a0d50ce5b4014957dcc837cfe3145bd1864b03cf74909978904c6a5295",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "configs/v3_4_near_development.json": "470f11bcb3e8c6b0148d40c8cf0c2ccb6a5f3ea04514df7fb3aae46190b138ce",
+    "data/v3_4/near_development/inputs/complete.json": "ab7a2b8d2522df7422601dcc264dab382038d9f01b3b7202417083a9d7a87eb6",
+    "scripts/v3_4_near_production.py": "528faab8209ac6781a575b481771120f91e85da0a94a9f13b11264243d1ae9d8",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_4/near_development/validation/release_support/complete.json": "4158927fc38a8b88ab3812478f6dfba7bed7ba0bfeaa63ed619bf6d8688c7171",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_4_near_forecast.py": "a44359500a195ac3885b80d27900241e99c7740949ad15e186d0d76bdfc82ae7",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/catalog/field_02/inputs.npz": "3d4688a00d45aa425073fb321e9631f18c2136e3066a2fcbf65dfdabf1bb7842"
+  },
+  "outputs": {
+    "part_000000.npz": "6f57b1927483f8cbd3dfdae768eb3e979355d15f6c8a84de8bf882a1e1338e3d",
+    "part_004096.npz": "187d27cc5a2cbaceb118a0d1aafc420d5c239258eb663bc3e9940ab3bf34876e",
+    "part_008192.npz": "aa9a3e7430040be217f94b9bd32997e9a795e3acaf05b478480be9273a7f67d2",
+    "part_012288.npz": "d09b1ca3bb5bab55bea680f82cb15029323f71973068a5009936a537e93b4904",
+    "selection_audit.npz": "6504e12c6f70807b7dbd5f60afd395b6e34b9c8da252e0790befa192cc198eb1"
+  },
+  "steps": {
+    "outside_domain": 150909,
+    "dwarf_score_low": 799,
+    "outside_qrf_support": 0,
+    "nominal_near_score_low": 161,
+    "selected": 14144,
+    "strict": 11622,
+    "numerical_flag_selected": 15
+  },
+  "expected_n_by_distance": [
+    13852.713321658173,
+    201.0989400663578,
+    3.2766541182807023,
+    5.4569266490822335,
+    43.99387855472976,
+    37.46027895337794
+  ]
+}

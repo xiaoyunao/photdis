@@ -1,0 +1,72 @@
+{
+  "job": "61330696",
+  "all_PSF": true,
+  "selected": 117127,
+  "parent": 1183990,
+  "expected_n_by_distance": [
+    115058.73335540565,
+    1418.4350090678618,
+    28.062746656926166,
+    42.34671077456623,
+    309.28376214787323,
+    270.1384159471611
+  ],
+  "choices": {
+    "product": "Magnitude-limited near-dwarf candidate catalog",
+    "model": "frozen native grz QRF",
+    "domains": [
+      {
+        "fields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "observed_r": [
+          16.0,
+          18.0
+        ],
+        "dereddened_g_r": [
+          0.8,
+          1.4
+        ],
+        "w1_states": [
+          2,
+          4
+        ]
+      }
+    ],
+    "workpoint_sha256": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "domain_sha256": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "evidence_sha256": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "release_support_sha256": "4158927fc38a8b88ab3812478f6dfba7bed7ba0bfeaa63ed619bf6d8688c7171",
+    "justification": "Joint probability draw: 1,459 high-SNR geometry references, 12.16% NMAD, +0.0684 nat signed Gaia gain, and 370 dwarf associations among 379 archived class matches. Signed interval near support is 93.46% of design weight. Strict membership is retained alongside the primary cut.",
+    "limitations": "Class match fraction is reference-conditional. A confirmed far giant remains at both cuts. Gaia point calibration is not transferred to weak-parallax objects, where the nominal SED scores better. Applies to the registered DECam fields and is magnitude-limited. Distances beyond 10 kpc and the full QRF tail remain in each posterior."
+  },
+  "release_sha256": "89a725a0d50ce5b4014957dcc837cfe3145bd1864b03cf74909978904c6a5295",
+  "child_receipts": {
+    "data/v3_4/near_catalog/field_00/complete.json": "14002000bce24f5838a3dac345835df8b19b43ace9e84f571347612deb0f1d0d",
+    "data/v3_4/near_catalog/field_01/complete.json": "838979dbd8c55a0114a0e247e816528ebfd61ceb74e47ce4c56c53434ed74a83",
+    "data/v3_4/near_catalog/field_02/complete.json": "e64ae3fa545a8bcc521ceb50851a45cbd8b30a406f5aaaf7e36b171ee3e088dd",
+    "data/v3_4/near_catalog/field_03/complete.json": "cd87f9c0a79cbec1d336cb6836165de38372872151243f4efd622e0851315218",
+    "data/v3_4/near_catalog/field_04/complete.json": "b319b51aeabc62510bc35c5c4cd9ff9db4013a3c5279ea719ee3799fa43ab85b",
+    "data/v3_4/near_catalog/field_05/complete.json": "772ece8fe608b388feb66c40da8c3d481d90d51fd8542b4c9ce7ddd61f51f4c9",
+    "data/v3_4/near_catalog/field_06/complete.json": "4de4fe4694e0c88a827eaa62df772385b4c9c7af06a0e0b496ee713adfce3afe",
+    "data/v3_4/near_catalog/field_07/complete.json": "28655a017a78bce1377db05f43c2b3eafeb434318821c072fe435e365e45317a",
+    "data/v3_4/near_catalog/field_08/complete.json": "e99001e8f7ee562d0630f893f60e895fe99b4cf37629d23f8c80123fd8cf27f9",
+    "data/v3_4/near_catalog/field_09/complete.json": "518770980d888cbece212cc3dc79f4ee5a9f1d0224711906504c7bf9244af425",
+    "data/v3_4/near_catalog/field_10/complete.json": "36d47cd1ca6331d7124f7042ed58b92f81d752a252a0d2af41f8094b1d1ca4b2",
+    "data/v3_4/near_catalog/field_11/complete.json": "cbad1850de9f467a6623759a3a63b99d8c58cbfece0acdf27d863591fc54a007",
+    "data/v3_4/near_catalog/field_12/complete.json": "c0fafde3156a3cc32415f104a7d84e0163783592cab9cf97e792aa527c2c6a29"
+  },
+  "field_counts_sha256": "81acb33878c2e73e54db95a52c3b9e9d602003f96de29f12a05a53fa8470e6fd"
+}

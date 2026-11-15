@@ -1,5 +1,20 @@
 # Project instructions
 
+- Completed v3.4 magnitude-limited candidate catalog 2026-11-15.
+  See docs/v3_4_result.md, docs/v3_4_catalog.md and manifests/v3_4.
+  Frozen grz QRF, nominal SED gate and fixed dwarf score produced
+  117,127 native DR11 PSFs in 37 partitions, 96,824 strict, in 13
+  DECam fields at 16<=r<18 and 0.8<=dereddened g-r<1.4 with W1 states
+  2/4. Final job 61330696 COMPLETED 0:0, 17,787 application replay,
+  472 tests and four visually checked English figure sets. Preserve
+  119 nominal numerical flags and the full QRF posterior. High-S/N
+  geometry NMAD 12.16%; weak signed Gaia favors nominal SED. Fresh
+  cohort has no intersection of quality with zero-point support.
+  One confirmed far giant passes both cuts; parent giant rate remains
+  unmeasured. Catalog is magnitude-limited and model near mass is
+  concentrated within 2 kpc. Preserve v1 and v3.0–v3.3. No remaining
+  science jobs or automatic continuation outside new user scope.
+
 - Completed v3.1 research delivery2026-11-14: docs/v3_1_result.md,
   docs/v3_1_atlas.md, docs/v3_1_domain_result.md and full21-requirement ledger.
   Allfour Pro work packages implemented;183actual tests/22visually inspected

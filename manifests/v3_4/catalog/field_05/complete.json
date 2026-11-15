@@ -1,0 +1,46 @@
+{
+  "job": "61330694",
+  "field": 5,
+  "input_n": 81105,
+  "all_PSF": true,
+  "inputs": {
+    "configs/v3_4_near_release.json": "89a725a0d50ce5b4014957dcc837cfe3145bd1864b03cf74909978904c6a5295",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "configs/v3_4_near_development.json": "470f11bcb3e8c6b0148d40c8cf0c2ccb6a5f3ea04514df7fb3aae46190b138ce",
+    "data/v3_4/near_development/inputs/complete.json": "ab7a2b8d2522df7422601dcc264dab382038d9f01b3b7202417083a9d7a87eb6",
+    "scripts/v3_4_near_production.py": "528faab8209ac6781a575b481771120f91e85da0a94a9f13b11264243d1ae9d8",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_4/near_development/validation/release_support/complete.json": "4158927fc38a8b88ab3812478f6dfba7bed7ba0bfeaa63ed619bf6d8688c7171",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_4_near_forecast.py": "a44359500a195ac3885b80d27900241e99c7740949ad15e186d0d76bdfc82ae7",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/catalog/field_05/inputs.npz": "efc15c1c46d2874f8ea48ebba3ec73ebbfc6dbd3413e1b2a66e7b755e0ed9b0f"
+  },
+  "outputs": {
+    "part_000000.npz": "48acddefb35220ff28eb617cc82c2bde5c50dcc80b8c2696ee4678730930215f",
+    "part_004096.npz": "fa0a98c54f82f013e2b9793d233fe0e058c631295d2bf7d4d88ebf2e987cccab",
+    "part_008192.npz": "bd6d73d752bb41d60bb2d1b3e6bebc3e14b1753f2bfee25a83b8f871fc0944f6",
+    "selection_audit.npz": "e394f1b4db4bee9a8b782e66173f82ba40e5bee12398cbbd2b62d94b0580ed4a"
+  },
+  "steps": {
+    "outside_domain": 70727,
+    "dwarf_score_low": 423,
+    "outside_qrf_support": 0,
+    "nominal_near_score_low": 93,
+    "selected": 9862,
+    "strict": 8586,
+    "numerical_flag_selected": 5
+  },
+  "expected_n_by_distance": [
+    9719.634822940856,
+    91.4799565314836,
+    2.965726175145261,
+    3.8857657201551206,
+    24.713429719320523,
+    19.32029891304866
+  ]
+}

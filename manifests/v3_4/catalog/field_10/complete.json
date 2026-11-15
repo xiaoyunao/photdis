@@ -1,0 +1,45 @@
+{
+  "job": "61330683",
+  "field": 10,
+  "input_n": 43690,
+  "all_PSF": true,
+  "inputs": {
+    "configs/v3_4_near_release.json": "89a725a0d50ce5b4014957dcc837cfe3145bd1864b03cf74909978904c6a5295",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "configs/v3_4_near_development.json": "470f11bcb3e8c6b0148d40c8cf0c2ccb6a5f3ea04514df7fb3aae46190b138ce",
+    "data/v3_4/near_development/inputs/complete.json": "ab7a2b8d2522df7422601dcc264dab382038d9f01b3b7202417083a9d7a87eb6",
+    "scripts/v3_4_near_production.py": "528faab8209ac6781a575b481771120f91e85da0a94a9f13b11264243d1ae9d8",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_4/near_development/validation/release_support/complete.json": "4158927fc38a8b88ab3812478f6dfba7bed7ba0bfeaa63ed619bf6d8688c7171",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_4_near_forecast.py": "a44359500a195ac3885b80d27900241e99c7740949ad15e186d0d76bdfc82ae7",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_0/catalog/field_10/inputs.npz": "0b566057dc343a61dacf8dabbededc046ee2efa25990e6e540a408cfd5cdf3c0"
+  },
+  "outputs": {
+    "part_000000.npz": "311a76b22100837b0d6fd75d9663f47ffe4f016e5680182257e278676bae5e67",
+    "part_004096.npz": "adb04c72e2a6121c92f7b4a9a6a4b969dfe994fd7e4b408b181b5ae3898138ce",
+    "selection_audit.npz": "f8f5d206647a1041b56bf129811d139e59c5a36add7ed4bacea441edb90f4987"
+  },
+  "steps": {
+    "outside_domain": 38153,
+    "dwarf_score_low": 171,
+    "outside_qrf_support": 0,
+    "nominal_near_score_low": 31,
+    "selected": 5335,
+    "strict": 4788,
+    "numerical_flag_selected": 5
+  },
+  "expected_n_by_distance": [
+    5253.754827853205,
+    49.91482839516605,
+    1.3185122016746051,
+    1.9675774753046362,
+    16.151931093558275,
+    11.892322981088256
+  ]
+}
