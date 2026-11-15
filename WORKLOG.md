@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — reconcile both raw VAC inventories with the final selections
+
+- Jobs 61346883/61346884 completed. Verified raw SpecDis 4,140,838 and
+  SPDist 6,272,510 rows across each cut's mutually exclusive stages.
+- At 5–10 kpc the largest raw losses are footprint and sky/extinction.
+  Within the verified forecast frame the dwarf-score gate is the largest
+  remaining loss. Both raw distance and combined strata are published.
+- F01 joins these outputs in the coverage plot. The native photometry
+  pass and its F04/F05 consumers remain in Slurm.
+
 ## 2026-11-16 — verify both sky projections for all reference sources
 
 - Job 61346639 completed at 0:0. Verified all 42 output hashes and

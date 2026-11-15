@@ -20,10 +20,9 @@ with the 2026-11-15 task brief. Keep the full v3.5 catalog and model bytes.
    Reuse the SED likelihood and propagate sky-block uncertainty.
 
 The supported-row index is complete and recovers 511,687 v3.0 and
-511,704 v1.4 reference-parent rows. These cohorts overlap. Recover the
-raw source inventories, exact original anomaly rosters, and the native
-exclusion ledger. Run the VAC flow audit after the matched rows and
-native exclusion shards finish. The full SpecDis/SPDist matches are complete
+511,704 v1.4 reference-parent rows. These cohorts overlap. The raw source
+inventories, original anomaly rosters, native exclusion ledger, and VAC
+flow audit are verified. The full SpecDis/SPDist matches are complete
 and summarized in [the selection evidence](docs/v3_6_selection_tradeoffs.md).
 Use the audit distance and joint tables
 to reconcile each cut with its raw denominator. Finish with joined tables, figure index,
@@ -37,9 +36,8 @@ on 95,344 common stars. Report individual and joint support separately. The two-
 replay on current native grz is also completed and documented in F02.
 The original blue cohorts are reproduced and documented in
 [the blue distance evidence](docs/v3_6_blue_distance_evidence.md). F06 now
-shows survey imaging coverage, depth and near counts from the frozen random
-area. Add full-catalog reference maps, both-cut shell maps and the contamination
-analysis as those associations complete.
+shows survey imaging coverage, depth, full-catalog reference coverage and
+both-cut shell counts from the frozen random area.
 
 For the luminosity-function analysis, reuse native SED component likelihoods
 and replace the empirical giant absolute-magnitude and metallicity weights
@@ -57,12 +55,12 @@ comparisons.
 Current Slurm dependencies are in WORKLOG. All 48 frozen group projections are verified and feed
 the probability summary and full Gaia join. The paired-cache
 comparison feeds the shared-photometry replay.
-The blue replay now has its own native PDF, color, and coadd plate. Compare
-its fit residuals to Gaia stars matched in observed magnitude and color
-using `scripts/v3_6_blue_matched_controls.py` after the full Gaia census. The F06 shell and depth views already use the
+The blue replay has its own native PDF, color and coadd plate. Its fit
+residuals have been compared with Gaia stars matched in observed magnitude
+and color. The F06 shell and depth views already use the
 full delivered posterior masses and random area. The supported and selected
-catalog densities are published in both coordinates. The independent
-reference overlays follow the reference jobs.
+catalog densities and source-specific reference maps are published in both
+coordinates.
 All 11,246,209 supported PSFs are counted in the six-shell catalog census.
 The F07 hard/PDF and probability comparisons and F10 bright-red Cartesian
 counts are published. Dedicated-node Gaia 61350850 completed and its
@@ -73,8 +71,8 @@ intervals are published. The signed Gaia comparison, direct distance migration,
 and all-catalog Gaia and spectroscopic coverage are published using the joined
 evidence. Finish the source admission and remaining full reference plates.
 Read [the current plot index](docs/v3_6_figure_index.md) for the available
-figures and their denominators. The F06 reference overlays depend on the unified
-distance evidence and are queued. Allocated test 61346262 passed on two
+figures and their denominators. The final F01 source-flow view and the full
+F04/F05 reference-photometry plates are queued. Allocated test 61346262 passed on two
 real sweeps and verified the interfaces without creating production outputs.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement

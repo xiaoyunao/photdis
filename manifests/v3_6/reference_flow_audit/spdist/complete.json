@@ -1,0 +1,52 @@
+{
+  "job": "61346884",
+  "reference": "spdist",
+  "stages": [
+    "no_source_position_or_native_key",
+    "outside_frozen_sweeps",
+    "in_frozen_sweep_without_verified_native_key",
+    "ambiguous_or_duplicate_vac_match",
+    "vac_candidate_has_no_position",
+    "vac_candidate_position_rejected",
+    "archived_key_conflict",
+    "archived_position_mismatch",
+    "archived_supported_but_vac_unverified",
+    "native_outside_tile",
+    "native_other_release",
+    "native_missing_type",
+    "native_non_psf",
+    "native_sky_dust",
+    "native_outside_r",
+    "native_optical_quality",
+    "native_outside_qrf_support",
+    "native_model_supported",
+    "native_outside_frozen_sweep_or_unusable_coordinate",
+    "native_unmatched_native_key",
+    "native_native_position_disagreement",
+    "native_duplicate_native_key",
+    "dwarf_score_unavailable",
+    "below_dwarf_score",
+    "near_probability_unavailable",
+    "below_near_probability",
+    "selected"
+  ],
+  "raw_rows": 6272510,
+  "selected": {
+    "primary": 278124,
+    "strict": 152939
+  },
+  "inputs": {
+    "scripts/v3_6_reference_flow_audit.py": "0791181cd0ba66aeac086240615b23b19869b07dd29e1245cfa703af5ecefa08",
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "data/v3_6/vac_distances/spdist/complete.json": "e345f01e91eded0f9cae332208f64101de4b7e024483223fe29b0cbf6ce7b43a",
+    "data/v3_6/vac_flow/spdist/complete.json": "50cbd07b0f19b63cf8425cc2897febf027498964bdcfeccfb927f4daeb100684",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/v3_6/native_losses/complete.json": "96f4799f96f9cc8af24f94e33d5978f2fcfbbb18e93e219fe87af942cfb84431"
+  },
+  "interpretation": "Audit rows are the raw VAC inventory. Values before verified selection serve only for exclusion accounting. A raw position in a sweep does not establish a Legacy match; overlapping quality and gate flags are counted separately.",
+  "outputs": {
+    "raw_row_audit.npz": "70b1243cfe492fa392ecb4750c3552ca44aeb7f0b1750593eb5aeadbb167f719",
+    "distance.csv": "755ce9dbe29428707b2451567922dae9371f13bcef14a27c0b7df2772a3fb4f5",
+    "strata.csv": "0a337998521cf4ff60d8461dd9db1a746a8ffa5b4c06d8b7f498379c8699db22"
+  }
+}

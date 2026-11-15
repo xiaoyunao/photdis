@@ -108,9 +108,15 @@ DR20 南站约 1,522.10 平方度。面积统计排除了现 QRF 训练星，仍
 
 在已经支持测距的 5–10 kpc 参考中，仅约一成通过主选矮星评分，严格档下
 不到 0.6%。后续近端概率筛选还有损失，但矮星评分这一步去掉了最多对象。
-从原始距离库到已有匹配之间的流失，还在用原生 DR11 记录查明具体原因。
+从原始距离库开始追踪，SpecDis 的 5–10 kpc 有 580,843 条记录，其中
+132,451 条位于冻结 sweep 以外，285,925 条落在原生天空或消光排除条件。
+SPDist 的同一层有 731,763 条记录，对应排除 153,711 和 305,219 条。
+这两个阶段早于目录内的矮星评分。全原始 VAC 表区分了无坐标或原生键、
+重复或冲突、PSF、天空消光、星等、测光质量与 QRF 支持。
 [SpecDis 完整流失表](../manifests/v3_6/vac_flow/specdis/flow.csv) ·
-[SPDist 完整流失表](../manifests/v3_6/vac_flow/spdist/flow.csv)
+[SPDist 完整流失表](../manifests/v3_6/vac_flow/spdist/flow.csv) ·
+[SpecDis 原始库存流失](../manifests/v3_6/reference_flow_audit/specdis/distance.csv) ·
+[SPDist 原始库存流失](../manifests/v3_6/reference_flow_audit/spdist/distance.csv)
 
 采用各来源的历史质量规则、排除当前 QRF 训练星后，2–5 kpc 主选矮星的
 距离中位偏差分别是 −1.6% 和 +2.7%，NMAD 分别为 8.9% 和 9.0%。
