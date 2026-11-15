@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Measure native sweep coverage with the DR11 survey random catalog."""
+import argparse
 from collections import Counter
 import json
 import os
@@ -16,6 +17,7 @@ from v3_5_dr11_inventory import CONFIG, OUT
 
 NSIDE = 16
 AREA = OUT/'area'
+DEPTH = OUT/'depth_profile'
 RANDOM_FILE = 'randoms-south-1-0.fits'
 BANDS = ('G', 'R', 'Z')
 
@@ -60,6 +62,9 @@ def random_memmap(path):
 
 def main():
     require_compute()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--depth-profile',action='store_true',help='Measure depth on the frozen coverage')
+    args = parser.parse_args()
     marker = OUT/'inventory'/'complete.json'
     inv = json.loads(marker.read_text())
     cfg = json.loads(verified(CONFIG,inv['config_sha256']).read_text())
@@ -74,6 +79,9 @@ def main():
     tiles = np.zeros((len(sweeps),4),dtype='i8')
     npix = hp.nside2npix(NSIDE)
     pixels = np.zeros((len(sweeps),npix,2),dtype='i4')
+    if args.depth_profile:
+        depth_count = np.zeros((len(sweeps),npix),dtype='i4')
+        depth_sum = np.zeros((len(sweeps),npix))
     releases = Counter()
     reject = sum(1<<bit for bit in CLEAN_REJECT_MASKBITS)
     # PSFDEPTH_R is inverse variance in native flux. The dimensional r=20
@@ -102,14 +110,39 @@ def main():
         h = hp.ang2pix(NSIDE,ra[good],dec[good],lonlat=True,nest=True)
         np.add.at(pixels[:,:,0],(i,h),1)
         np.add.at(pixels[:,:,1],(i[deep[good]],h[deep[good]]),1)
+        if args.depth_profile:
+            ivar = t['PSFDEPTH_R'][good].astype('f8')
+            valid = np.isfinite(ivar)&(ivar>0)
+            limit = cfg['maximum_observed_r']+1.25*np.log10(ivar[valid]/depth_limit)
+            key = i[valid],h[valid]
+            np.add.at(depth_count,key,1)
+            np.add.at(depth_sum,key,limit)
     if not tiles[:,2].sum():
         raise ValueError(f'No eligible native random points. Release breakdown: {releases}')
     np.testing.assert_array_equal(pixels.sum(axis=1),tiles[:,2:])
+    i,h = np.nonzero(pixels[:,:,0])
+    if args.depth_profile:
+        frozen = AREA/'complete.json'
+        coverage = json.loads(frozen.read_text())
+        expected = verified(AREA/'sweep_healpix.npz',coverage['outputs']['sweep_healpix.npz'])
+        with np.load(expected) as q:
+            for k,values in (('sweep',i),('pixel',h),('area_deg2',pixels[i,h,0]/density),
+                             ('area_r20_deg2',pixels[i,h,1]/density)):
+                np.testing.assert_array_equal(q[k],values)
+        DEPTH.mkdir(parents=True,exist_ok=True)
+        path = DEPTH/'sweep_healpix_depth.npz'
+        atomic_npz(path,sweep=i,pixel=h,valid_area_deg2=depth_count[i,h]/density,
+                   limiting_mag_times_area=depth_sum[i,h]/density)
+        save_json(DEPTH/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),source=source,
+                  frozen_area_sha256=sha(frozen),code_sha256=sha(Path(__file__)),
+                  footprint_area_deg2=pixels[i,h,0].sum()/density,valid_depth_area_deg2=depth_count[i,h].sum()/density,
+                  depth_definition='Native point-source r magnitude at nominal 0.1 mag uncertainty',
+                  outputs={path.name:sha(path)}))
+        return
     AREA.mkdir(parents=True,exist_ok=True)
     names_out = ('coordinate_dust_deg2','grz_imaged_deg2','mask_cleared_deg2','r20_depth_deg2')
     csv_rows(AREA/'by_sweep.csv',[dict(sweep=s['filename'],**dict(zip(names_out,x/density)))
                                  for s,x in zip(sweeps,tiles)])
-    i,h = np.nonzero(pixels[:,:,0])
     atomic_npz(AREA/'sweep_healpix.npz',sweep=i,pixel=h,area_deg2=pixels[i,h,0]/density,
                area_r20_deg2=pixels[i,h,1]/density)
     r = dict(job=os.getenv('SLURM_JOB_ID'),source=source,random_rows=len(raw),density_deg2=density,

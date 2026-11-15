@@ -17,7 +17,7 @@ import numpy as np
 from photdis.stage1 import galactic, require_compute, tile_bounds
 from v2_1_near import atomic_npz, csv_rows, load, save_json, sha
 from v3_3_sed import verified
-from v3_5_dr11_area import AREA, NSIDE
+from v3_5_dr11_area import AREA, DEPTH, NSIDE
 from v3_5_dr11_inventory import OUT
 from v3_4_near_forecast import qrf_bins
 from v3_5_dr11_pilot import LEDGER, in_tile
@@ -108,10 +108,19 @@ def angular_bins(mass, area, deep, used):
 
 
 
-def shell_comparison(mass,area,deep):
+def shell_comparison(mass,area,deep,limiting_mag=None):
     """Compare spatial shape on a common imaging area under both selections."""
     radius = hp.nside2pixarea(NSIDE,degrees=True)
     masks = {'imaged':area>0, 'quarter_pixel':area>=radius/4}
+    if limiting_mag is not None:
+        px = np.flatnonzero(masks['quarter_pixel']&np.isfinite(limiting_mag))
+        ordered = px[np.argsort(limiting_mag[px],kind='stable')]
+        cumulative = np.cumsum(area[ordered])
+        split = np.searchsorted(cumulative,cumulative[-1]/2)+1 if len(cumulative) else 0
+        if split==0 or split==len(ordered):
+            raise ValueError('The covered sky has no usable depth split')
+        masks['shallower_r'] = np.isin(np.arange(len(area)),ordered[:split])
+        masks['deeper_r'] = np.isin(np.arange(len(area)),ordered[split:])
     ra,dec = hp.pix2ang(NSIDE,np.arange(len(area)),nest=True,lonlat=True)
     lon,b = galactic(ra,dec)
     result = []
@@ -138,13 +147,31 @@ def shell_comparison(mass,area,deep):
                         matched_area += share
                 nr,sr = np.divide(hemisphere[:,0],hemisphere[:,1],out=np.full(2,np.nan),
                                   where=hemisphere[:,1]>0)
-                result.append(dict(footprint=footprint,cohort=region,shell=label,area_deg2=total_area,
+                depth = {}
+                if limiting_mag is not None:
+                    measured = mask&np.isfinite(limiting_mag)
+                    depth['mean_r_limit_mag'] = np.average(limiting_mag[measured],weights=area[measured])
+                result.append(dict(footprint=footprint,cohort=region,shell=label,area_deg2=total_area,**depth,
                     depth_fraction=deep[mask].sum()/total_area,primary_mass=sums[0],strict_mass=sums[1],
                     primary_per_deg2=sums[0]/total_area,strict_per_deg2=sums[1]/total_area,
                     retained_fraction=sums[1]/sums[0],spatial_total_variation=tv,
                     longitude_matched_area_per_hemisphere_deg2=matched_area,
                     primary_north_south_ratio=nr,strict_north_south_ratio=sr))
     return result
+
+
+def read_depth(coverage,area_marker,area):
+    marker = DEPTH/'complete.json'
+    receipt = json.loads(marker.read_text())
+    if receipt['frozen_area_sha256']!=sha(area_marker):
+        raise ValueError('Depth is not bound to the delivered imaging area')
+    name = 'sweep_healpix_depth.npz'
+    q = load(verified(DEPTH/name,receipt['outputs'][name]))
+    for key in ('sweep','pixel'):
+        np.testing.assert_array_equal(q[key],area[key])
+    usable,weighted = [np.bincount(q['pixel'][coverage],weights=q[k][coverage],minlength=hp.nside2npix(NSIDE))
+                       for k in ('valid_area_deg2','limiting_mag_times_area')]
+    return np.divide(weighted,usable,out=np.full(len(usable),np.nan),where=usable>0), sha(marker)
 
 def maps(mass,area):
     ra,dec = hp.pix2ang(NSIDE,np.arange(len(area)),nest=True,lonlat=True)
@@ -198,12 +225,14 @@ def main():
     inv_path = OUT/'inventory/complete.json'
     sweeps = json.loads(inv_path.read_text())['sweeps']
     inventory = {s['filename']:i for i,s in enumerate(sweeps)}
-    area_marker = json.loads((AREA/'complete.json').read_text())
-    area = load(verified(AREA/'sweep_healpix.npz',area_marker['outputs']['sweep_healpix.npz']))
+    area_marker = AREA/'complete.json'
+    area_receipt = json.loads(area_marker.read_text())
+    area = load(verified(AREA/'sweep_healpix.npz',area_receipt['outputs']['sweep_healpix.npz']))
     npix = hp.nside2npix(NSIDE)
     coverage = np.isin(area['sweep'],[inventory[n] for n in names])
     a,deep = [np.bincount(area['pixel'][coverage],weights=area[k][coverage],minlength=npix)
               for k in ('area_deg2','area_r20_deg2')]
+    limiting_mag,depth_digest = read_depth(coverage,area_marker,area)
     ids,native,receipts = [],[],[]
     totals, attrition = Counter(),Counter()
     draws = np.zeros((2,3,6,npix))
@@ -230,14 +259,15 @@ def main():
     DELIVERY.mkdir(parents=True,exist_ok=True)
     csv_rows(DELIVERY/'sweeps.csv',receipts)
     csv_rows(DELIVERY/'angular_density.csv',angular_bins(draws,a,deep,a>0))
-    csv_rows(DELIVERY/'shell_comparison.csv',shell_comparison(draws,a,deep))
+    csv_rows(DELIVERY/'shell_comparison.csv',shell_comparison(draws,a,deep,limiting_mag))
     atomic_npz(DELIVERY/'spatial.npz',mass=draws,area_deg2=a,area_r20_deg2=deep,
-               ambiguous_gaia_aliases=distinct[nmatch>1])
+               r_limiting_mag=limiting_mag,ambiguous_gaia_aliases=distinct[nmatch>1])
     csv_rows(DELIVERY/'shell_mass.csv',[dict(selection=cut,cohort=region,shell=shell,
              model_count=draws[i,j,k].sum(),uncovered_mass=draws[i,j,k,a<=0].sum())
              for i,cut in enumerate(CUTS) for j,region in enumerate(REGIONS) for k,shell in enumerate(SHELLS)])
     maps(draws,a)
     save_json(DELIVERY/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),production_freeze_sha256=digest,
+        depth_profile_sha256=depth_digest,
         sweeps=len(receipts),parts=sum(r['partitions'] for r in receipts),all_PSF=True,
         totals=totals,exclusions=attrition,absent_bad_headers=plan['excluded_bad_headers'],
         archived_v34_rows=len(before),archived_v34_intersection=in_current,

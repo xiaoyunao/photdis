@@ -1,0 +1,16 @@
+{
+  "job": "61334701",
+  "source": {
+    "filename": "randoms-south-1-0.fits",
+    "size": 22995910080,
+    "mtime_ns": 1780757592000000000
+  },
+  "frozen_area_sha256": "e41f1962c48c6a9750239fd2efb058a06bad30ddda103a07f3f106dce07f2cc0",
+  "code_sha256": "f3231a697846ab88782802dff5920577c9ef990354fb3dcb12fb4a0af43d1f5a",
+  "footprint_area_deg2": 6616.1216,
+  "valid_depth_area_deg2": 6616.1216,
+  "depth_definition": "Native point-source r magnitude at nominal 0.1 mag uncertainty",
+  "outputs": {
+    "sweep_healpix_depth.npz": "f48d7fe8837b247fd24f62ddf41d5fe13a12251109370c65f0cba193ef7bd4b9"
+  }
+}

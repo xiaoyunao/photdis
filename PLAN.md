@@ -47,6 +47,10 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain
    defensible. Provide a catalog guide, compact evidence and English plots.
+   The frozen randoms were replayed for the r-band limiting magnitude
+   with identical area in every sweep and pixel. Full delivery compares
+   shallower and deeper halves of adequately covered pixels by area.
+   Replay 61334779 verified the comparison on 91 completed sweeps.
 
 Reuse all frozen model files and the v3.4 product. Exclude north BASS/MzLS.
 Paper work is paused. The final catalog stays on NERSC with checked

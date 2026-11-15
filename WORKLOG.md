@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-15 — measure depth sensitivity on the frozen footprint
+
+- Extended `scripts/v3_5_dr11_area.py` and `scripts/v3_5_dr11_spatial.py`
+  with a random-based limiting magnitude at nominal 0.1 mag r precision.
+  Full delivery compares area-weighted depth halves within pixels with
+  at least 25% measured coverage. The original area files were reused.
+- Slurm 61334701 produced the depth receipt and verified the area for
+  every sweep and pixel against the frozen randoms. Depth is available
+  across all 6,616.1216 deg². The first replay loaded the checkout's old
+  spatial module. Replay 61334779 explicitly loaded the tested files,
+  passed the 91-sweep check and used the completed depth product.
+- Mean r limits of 23.60 and 24.34 mag gave 75.0/85.5%, 24.8/31.3% and
+  9.0/8.8% strict-to-primary mass in the three ascending distance shells.
+  The depth subsets also sample different sky, so the contrast is a
+  sensitivity check. Source checks, Python/shell syntax and 472 tests
+  passed. The depth sidecar is ready for full survey delivery.
+
 ## 2026-11-15 — shorten the full survey validation read
 
 - In `scripts/v3_5_dr11_validate.py`, search the sorted spectral IDs and

@@ -1,0 +1,10 @@
+{
+  "job": "61334779",
+  "scope": "Same 91 verified sweeps as spatial replay 61333290",
+  "prior_spatial_receipt_sha256": "2fffd6aba18c372cb33632efd4c15043564ae6667699682ec2d9885f397213dd",
+  "depth_profile_sha256": "428f67b51256fdaeeb4cbed84e08d127d84159be910bc64324eaabb7d6344631",
+  "spatial_code_sha256": "bc2615ab07b32ab0008f116f6865f7dc48a1a444e488f257bcf4f3f5f83f08de",
+  "outputs": {
+    "shell_comparison.csv": "c1a96f051d554de19d906dbb1a72fc599c746f3806f52396ae024df9c9161945"
+  }
+}
