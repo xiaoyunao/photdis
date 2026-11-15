@@ -60,8 +60,9 @@ comparison feeds the shared-photometry replay.
 The blue replay now has its own native PDF, color, and coadd plate. Compare
 its fit residuals to Gaia stars matched in observed magnitude and color
 using `scripts/v3_6_blue_matched_controls.py` after the full Gaia census. The F06 shell and depth views already use the
-full delivered posterior masses and random area. Add density of the
-preselection frame and independent reference overlays after those jobs.
+full delivered posterior masses and random area. The supported and selected
+catalog densities are published in both coordinates. The independent
+reference overlays follow the reference jobs.
 All 11,246,209 supported PSFs are counted in the six-shell catalog census.
 The F07 hard/PDF and probability comparisons and F10 bright-red Cartesian
 counts are published. The signed Gaia and scenario count reports follow regular CPU jobs

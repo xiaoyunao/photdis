@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Show the projected parent and the per-source reference support on measured area."""
+import argparse
 import json
 from pathlib import Path
 
@@ -19,6 +20,7 @@ from v3_3_sed import verified
 from v3_5_dr11_spatial import DELIVERY
 from v3_6_catalog_observables import OUT as OBSERVABLES
 from v3_6_distance_evidence import OUT as EVIDENCE
+from v3_6_plot_shell_retention import FIGURE, INPUT, TABLE
 
 
 OUT = ROOT/'data/v3_6/figures/reference_sky'
@@ -71,14 +73,14 @@ def map_panel(ax,coordinates,values,norm,cmap):
     ax.grid(alpha=.2)
 
 
-def panels(name,data,coordinates,names,norms,cmaps,row_labels):
+def panels(name,data,coordinates,names,norms,cmaps,row_labels,figure_dir=OUT):
     outputs = []
     nrows,ncols = data.shape[:2]
     for system,pos in coordinates.items():
         with plt.rc_context(STYLE):
             fig,axs = plt.subplots(nrows,ncols,figsize=(4.15*ncols,2.55*nrows+1.15),
                 squeeze=False,subplot_kw={'projection':'aitoff'},layout='constrained')
-            fig.suptitle(f'{name.replace("_"," ")} · {system} coordinates')
+            fig.suptitle(f'{name.replace("_"," ").capitalize()} · {system} coordinates')
             for j,(label,(norm,cmap)) in enumerate(zip(names,zip(norms,cmaps))):
                 for i,ax in enumerate(axs[:,j]):
                     map_panel(ax,pos,data[i,j],norm,cmap)
@@ -88,10 +90,13 @@ def panels(name,data,coordinates,names,norms,cmaps,row_labels):
                         ax.set_title(label,fontsize=14)
                 color = fig.colorbar(ScalarMappable(norm=norm,cmap=cmap),ax=axs[:,j],
                                      orientation='horizontal',shrink=.72,pad=.055,extend='both')
+                if isinstance(norm,LogNorm):
+                    ticks = np.geomspace(norm.vmin,norm.vmax,3)
+                    color.set_ticks(ticks,labels=[f'{v:,.0f}' if v>=10 else f'{v:.2g}' for v in ticks])
                 color.ax.tick_params(labelsize=10)
                 color.minorticks_off()
             for ext in ('png','pdf'):
-                path = OUT/f'F06_{name}_{system.lower()}.{ext}'
+                path = figure_dir/f'F06_{name}_{system.lower()}.{ext}'
                 fig.savefig(path,dpi=300)
                 outputs.append(path)
             plt.close(fig)
@@ -106,11 +111,9 @@ def log_span(values):
     return LogNorm(a,max(a*1.001,b))
 
 
-def main():
-    require_compute()
-    delivery = DELIVERY/'complete.json'
+def catalog_density(delivery,spatial,figure_dir,table_dir):
     production = json.loads(delivery.read_text())
-    spatial = verified(DELIVERY/'spatial.npz',production['outputs']['spatial.npz'])
+    verified(spatial,production['outputs']['spatial.npz'])
     with np.load(spatial,allow_pickle=False) as z:
         area = z['area_deg2']
     mask = area>0
@@ -122,12 +125,40 @@ def main():
         all_counts = z['sky']
     np.testing.assert_array_equal(all_counts.sum(axis=1),[production['totals'][k] for k in ('rows','primary','strict')])
     parent = (all_counts[:,mask]/area[mask]).T
+    figure_dir.mkdir(parents=True,exist_ok=True)
+    table_dir.mkdir(parents=True,exist_ok=True)
+    span = log_span(parent)
+    output = panels('catalog_density',parent.T[None,:,:],coords,['Supported','Primary','Strict'],
+                    [span]*3,['viridis']*3,['Stars per square degree'],figure_dir)
+    tab = table_dir/'F06_catalog_density.csv'
+    density = np.divide(all_counts,area,out=np.full(all_counts.shape,np.nan),where=mask)
+    rows = [dict(healpix_nested=int(pixel),selection=cut,area_deg2=area[pixel],
+                 stars=int(all_counts[i,pixel]),stars_per_deg2=density[i,pixel])
+            for pixel in np.flatnonzero(mask|np.any(all_counts>0,axis=0))
+            for i,cut in enumerate(CUTS)]
+    csv_rows(tab,rows)
+    output.append(tab)
+    marker = table_dir/'F06_catalog_density.json'
+    save_json(marker,dict(dpi=300,nside=nside,area_deg2=float(area.sum()),
+        catalog_counts=dict(zip(CUTS,all_counts.sum(axis=1).astype(int).tolist())),
+        zero_area_counts=dict(zip(CUTS,all_counts[:,~mask].sum(axis=1).astype(int).tolist())),
+        density_scale_stars_per_deg2=[float(span.vmin),float(span.vmax)],
+        inputs={str(path.relative_to(ROOT)):sha(path) for path in (delivery,obs,Path(__file__))},
+        caption='Counts per square degree of imaging-random area in each nested HEALPix cell. '
+                'All supported native PSFs and both cuts use the same denominator and color scale. '
+                'Colorbar extensions mark density clipping. Cells without random area appear only '
+                'in the count table. The positions are pixel centers.',
+        outputs={str(path.relative_to(ROOT)):sha(path) for path in output}))
+    return area,mask,nside,coords,all_counts,output+[marker]
+
+
+def main():
+    require_compute()
+    delivery = DELIVERY/'complete.json'
     OUT.mkdir(parents=True,exist_ok=True)
     if (OUT/'complete.json').exists():
         raise FileExistsError(OUT/'complete.json')
-    span = log_span(parent)
-    output = panels('catalog_density',parent.T[None,:,:],coords,['Supported','Primary','Strict'],
-                    [span]*3,['viridis']*3,['Stars per square degree'])
+    area,mask,nside,coords,all_counts,output = catalog_density(delivery,DELIVERY/'spatial.npz',OUT,OUT)
     evidence = EVIDENCE/'complete.json'
     inputs = json.loads(evidence.read_text())
     summary = []
@@ -163,10 +194,17 @@ def main():
     csv_rows(tab,summary)
     output.append(tab)
     save_json(OUT/'complete.json',dict(dpi=300,nside=nside,inputs={str(p.relative_to(ROOT)):sha(p)
-        for p in (delivery,obs,evidence,Path(__file__))},
+        for p in (delivery,OBSERVABLES/'complete.json',evidence,Path(__file__))},
         caption='Positive imaging-random area sets the displayed footprint. Reference maps show native high-quality matches outside current QRF training per source. Sky cells with fewer than ten references appear in density and in the full tables. Error colors use cells with at least ten rows. Uncovered reference rows remain in the tables. Area with reference sums the random area of cells containing at least one qualified row.',
         outputs={p.name:sha(p) for p in output}))
 
 
 if __name__=='__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--publish-catalog',type=Path,metavar='SPATIAL_NPZ',
+                        help='Publish only the catalog density from the compact spatial tables')
+    args = parser.parse_args()
+    if args.publish_catalog:
+        catalog_density(INPUT/'complete.json',args.publish_catalog,FIGURE,TABLE)
+    else:
+        main()

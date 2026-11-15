@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — render the supported and selected catalog surface densities
+
+- Published both F06 projections from the full native catalog census and
+  the frozen 6,616.1216 square degree random area. All three samples use
+  the same scale. For the 3/2/1 objects in zero-area cells, retain catalog
+  counts in the table and leave density undefined.
+- `v3_6_plot_reference_sky.py --publish-catalog` runs the census-only
+  rendering before the reference join. Both PNGs were opened and checked.
+  Reference density and residual maps retain the scheduled join dependency.
+
 ## 2026-11-16 — verify the six-shell catalog census and publish its figures
 
 - Slurm 61346086 completed at 0:0 in 17 seconds. Transferred the compact

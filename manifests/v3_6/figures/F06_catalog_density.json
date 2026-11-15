@@ -1,0 +1,32 @@
+{
+  "dpi": 300,
+  "nside": 16,
+  "area_deg2": 6616.1216,
+  "catalog_counts": {
+    "supported": 11246209,
+    "primary": 7672431,
+    "strict": 4891792
+  },
+  "zero_area_counts": {
+    "supported": 3,
+    "primary": 2,
+    "strict": 1
+  },
+  "density_scale_stars_per_deg2": [
+    393.72862533087664,
+    3899.555555555556
+  ],
+  "inputs": {
+    "manifests/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "data/v3_6/catalog_observables/complete.json": "ef20b947f9423cae930e12bd69e16a9988ecdaaff45cf1fd8b6dc5e65b917729",
+    "scripts/v3_6_plot_reference_sky.py": "2c49ef832e335adf24f7033ea4f848ccb8153e60f38254d483f150907bfb2967"
+  },
+  "caption": "Counts per square degree of imaging-random area in each nested HEALPix cell. All supported native PSFs and both cuts use the same denominator and color scale. Colorbar extensions mark density clipping. Cells without random area appear only in the count table. The positions are pixel centers.",
+  "outputs": {
+    "figures/v3_6/F06_catalog_density_equatorial.png": "f210a9a48bf1861b613784527d2cd5101f3275f83ff380673ebba84955037c41",
+    "figures/v3_6/F06_catalog_density_equatorial.pdf": "13149c0b4cfa8d8d3287384b09ef9dbe4d975f71d563dfd818843ff1f7b33389",
+    "figures/v3_6/F06_catalog_density_galactic.png": "5f9d17de40c18412077e7d35a11734ca5366f28e1a9ac3b98589ce01ef5d7dda",
+    "figures/v3_6/F06_catalog_density_galactic.pdf": "ad7b2ae6f152460b185632b838af401ca0f1f89c5865025774131ceaf2e1c389",
+    "manifests/v3_6/figures/F06_catalog_density.csv": "99e6494d4a5af9f38fdd6e6db01589ee612693f21e67b07cc0809807692fb5c3"
+  }
+}
