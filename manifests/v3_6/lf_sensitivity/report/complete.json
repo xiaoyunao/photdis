@@ -1,0 +1,20 @@
+{
+  "job": "61345483",
+  "draw_rows": 12755,
+  "inputs": {
+    "data/v3_6/lf_sensitivity/complete.json": "9aa73dfbdbcaa781ffe0f922de089bf3fa5d25cb54938b710a7d837ce59e7187",
+    "scripts/v3_6_lf_report.py": "fa8118e831eab250e011074d46f11640e55292b080ffe0b6d4227c486a397dcc"
+  },
+  "sky_bootstrap": {
+    "nside": 4,
+    "draws": 1024,
+    "seed": 360918,
+    "holding_selected_total_fixed": true
+  },
+  "interpretation": "Conditional counts under the named population hypotheses. Paired sky-block intervals describe spatial variation and design SE describes the stratified draw. Neither includes all astrophysical model uncertainty.",
+  "outputs": {
+    "shell_counts.csv": "620585fd61e39fc458889582e9281c0dcbaeba035c121da303f7539394e6e9d8",
+    "spatial_counts.csv": "b11cd6c830c6dedcb51439e464d567dc1e4e0aad87db392d105c668557c48fea",
+    "migration.csv": "c16890634c9b737738928a7853fccb0fdf59c94e872fb087898fa40c89f933c6"
+  }
+}

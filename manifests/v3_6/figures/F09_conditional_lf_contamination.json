@@ -1,0 +1,15 @@
+{
+  "caption": "Expected contamination of three QRF-assigned shells under each population scenario, weighted to each photometric cut. The two columns respectively require the latent class to be giant or allow every modeled class. Vertical intervals are 95% paired sky-block bootstrap intervals conditional on the stated scenario. The source table also retains estimated design errors, predicted class and distance migration, and the spatial subdivisions.",
+  "dpi": 300,
+  "inputs": {
+    "data/v3_6/lf_sensitivity/report/complete.json": "5ef65a2c9efbbb4d4e7c88eef333dd23332ada9cbba1e5c0d88b9d69f82fe0fe",
+    "data/v3_6/lf_sensitivity/report/shell_counts.csv": "620585fd61e39fc458889582e9281c0dcbaeba035c121da303f7539394e6e9d8",
+    "data/v3_6/lf_sensitivity/report/migration.csv": "c16890634c9b737738928a7853fccb0fdf59c94e872fb087898fa40c89f933c6",
+    "data/v3_6/lf_sensitivity/report/spatial_counts.csv": "b11cd6c830c6dedcb51439e464d567dc1e4e0aad87db392d105c668557c48fea"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F09_conditional_lf_contamination.csv": "2404e4a1c76716b9e47ebcc13b25bb11bec5beef3965eb3ec40ed77f65cc7a9e",
+    "figures/v3_6/F09_conditional_lf_contamination.png": "036870ebced0574c2f19a4b5784652340663a209a07147c225f414391901d865",
+    "figures/v3_6/F09_conditional_lf_contamination.pdf": "93128feaa721c4366f4a2549c093a229ca11e87dc7d3521f3a5965db65402603"
+  }
+}

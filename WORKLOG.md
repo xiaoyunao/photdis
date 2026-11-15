@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — quantify conditional contamination under five population assumptions
+
+- Regular job 61350851 produced five LF scenarios for the same 12,755
+  native PSFs. Report job 61345483 wrote shell counts, eight Galactic
+  regions, and distance/class migration. SHA-256 matches both receipts.
+- Published F09 with 1,024 paired sky-block draws. In the QRF 5–10 kpc
+  shell, primary/strict far giant fractions span 0.199–1.102% and
+  0.049–0.523% across the five scenarios. These are conditional estimates.
+- Verified both assignment totals and source binding. Visually reviewed
+  the 300 dpi output. The weak signed-Gaia comparison remains in Slurm.
+
 ## 2026-11-16 — verify the full Gaia match and geometry census
 
 - Regular CPU job 61350850 completed at 0:0 in 3:36. Verified all Gaia
