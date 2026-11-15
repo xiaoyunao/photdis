@@ -13,17 +13,51 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import numpy as np
 
-from photdis.stage1 import galactic, require_compute
+from photdis.stage1 import galactic, require_compute, tile_bounds
 from v2_1_near import atomic_npz, csv_rows, load, save_json, sha
 from v3_3_sed import verified
 from v3_5_dr11_area import AREA, NSIDE
 from v3_5_dr11_inventory import OUT
-from v3_5_dr11_production import FREEZE, INDEX, PRODUCTION
+from v3_4_near_forecast import qrf_bins
+from v3_5_dr11_pilot import LEDGER, in_tile
+from v3_5_dr11_production import FREEZE, INDEX, PRODUCTION, check_pdf
 
 DELIVERY = OUT/'delivery'
 SHELLS = ('0–2 kpc','2–5 kpc','5–10 kpc')
 CUTS = ('Primary selection','Strict selection')
 REGIONS = ('all','v34_photometric_analogs','faint_blue')
+
+
+def audit_parts(dest, name, parts, status, ids, counts):
+    """Read the delivered columns and reconcile them with the parent ledger."""
+    bounds = tile_bounds(name)
+    offset, parent_rows = 0, []
+    observed = Counter()
+    for file in parts:
+        with np.load(dest/file,allow_pickle=False) as z:
+            q = {k:z[k] for k in ('TYPE','qrf_supported','primary','strict','qrf_mu_mass',
+                                   'qrf_mu_edges','qrf_bins','qrf_qnear','qrf_quantiles_kpc')}
+            check_pdf(q)
+            distance = q['qrf_quantiles_kpc']
+            if (not np.isfinite(distance).all() or (distance<=0).any()
+                    or (np.diff(distance,axis=1)<0).any()):
+                raise ValueError(f'Invalid distance quantiles: {name}/{file}')
+            np.testing.assert_allclose(qrf_bins(q['qrf_mu_edges'],q['qrf_mu_mass']),q['qrf_bins'],
+                                       atol=1e-12,rtol=0)
+            if not in_tile(z['RA'],z['DEC'],bounds).all() or not (z['photometric_system']=='DECam_DR11').all():
+                raise ValueError(f'Wrong sweep ownership or photometric system: {name}/{file}')
+            n = len(q['TYPE'])
+            for key in ('ls_id','source_id'):
+                np.testing.assert_array_equal(z[key],ids[key][offset:offset+n])
+            parent_rows.append(z['parent_row'])
+            offset += n
+            observed.update(rows=n,primary=int(q['primary'].sum()),strict=int(q['strict'].sum()),
+                            reused=int(z['reused_v34'].sum()),gate=int(z['nominal_evaluated'].sum()),
+                            numerical=int(z['nominal_numerical_flag'].sum()))
+    parent = np.concatenate(parent_rows) if parent_rows else np.empty(0,dtype='i8')
+    np.testing.assert_array_equal(np.sort(parent),np.flatnonzero(status==len(LEDGER)-1))
+    if observed != Counter(counts):
+        raise ValueError(f'Exported partition totals disagree with receipt: {name}')
 
 
 def read_tile(name, plan_digest):
@@ -45,6 +79,7 @@ def read_tile(name, plan_digest):
     np.testing.assert_allclose(space['mass'].sum(axis=2),space['selected'],atol=1e-7,rtol=0)
     if len(ids['ls_id'])!=m['counts'].get('rows',0) or len(np.unique(ids['ls_id']))!=len(ids['ls_id']):
         raise ValueError(f'Incomplete unique identity list: {name}')
+    audit_parts(dest,name,sorted(parts),status,ids,m['counts'])
     return m,ids,space,sha(marker),len(parts)
 
 
