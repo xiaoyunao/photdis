@@ -12,6 +12,11 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    photometry-only sample with inverse inclusion weights. Add exact
    opened reference matches as a separate development cohort. Compare
    the frozen QRF, nominal SED and v3.3 on the same measured rows.
+   Census 61328600 found 1,183,990 objects in 821 nonempty cells,
+   17,787 sampled objects and zero exact opened-development overlaps.
+   Apply the same observational eligibility to a separate opened
+   reference cohort and retain zero application weights on those rows.
+   Keep any application contamination claim tied to its own evidence.
 2. Select an observable working point and a stricter sensitivity contrast
    using opened development evidence. Lock the model, selection,
    validation rules and independent evidence before opening any new

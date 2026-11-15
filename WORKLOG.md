@@ -1,5 +1,20 @@
 # WORKLOG
 
+## 2026-11-15 — verify the multi-field census and prepare the matched comparison
+
+- Census job 61328600 completed 0:0 in 16 s. Verified its source and
+  output receipts, 13 fields, 821 occupied cells, 1,183,990 PSFs,
+  and a weighted 17,787-source photometric sample. W1 is significant
+  in 1,032,261 rows, weak in 3,476 and unusable in 148,253.
+- The application envelope has zero exact identities in the archived
+  opened development roster. Added a separately weighted opened
+  reference comparison under the same measured-data limits.
+- Implemented the same-object QRF, nominal SED and v3.3 comparison
+  with an existing frozen grz dwarf score, shared near cuts for
+  development, distance and signed Gaia diagnostics, and separate
+  near/far/unresolved giant accounting. The synthetic design-weight
+  and matching smoke checks passed. No new outcomes opened.
+
 ## 2026-11-15 — start the near-dwarf confirmation and production goal
 
 - Read Pro reply 039da124 and the preceding v3.3 review b696eedc.
