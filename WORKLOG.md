@@ -15,7 +15,8 @@
   predictive evidence on the replay footprint and provides no
   calibrated individual 2–10 kpc distance scale there.
 - Bound the compact replay evidence and added its identity roster to
-  subsequent exposure accounting. Group 0 validation 61332304 can
+  subsequent exposure accounting. Roster job 61332659 completed and
+  recovered all 2,147 draw IDs and two spectral IDs. Group 0 validation 61332304 can
   now start after either successful debug completion or successful
   regular completion of the same group.
 
