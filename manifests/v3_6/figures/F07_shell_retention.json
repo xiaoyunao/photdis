@@ -1,0 +1,13 @@
+{
+  "caption": "The frozen v3.5 primary and strict selections applied to the same DECam inventory. Sources contribute their complete QRF posterior mass. The final bin retains mass beyond 10 kpc. Counts are conditional on the photometric catalog and its selection.",
+  "inputs": {
+    "manifests/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "manifests/v3_5/delivery/shell_mass.csv": "099369e23c7a96fd5f40efba2a655e966dacaa6883b5dc4d2fbfb185992ff746"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F07_shell_retention.csv": "8aca45f935f946c0987db98cac146a9ce0c10e942e422e11c4c14f6171a2701f",
+    "figures/v3_6/F07_shell_retention.png": "3df0a0315914d88e82712b9d9a7aa7d8f57c4def7e731892f9b490b7e43d3824",
+    "figures/v3_6/F07_shell_retention.pdf": "caf8a885771bf7437edbaf12b93e2a4220674611b2d0a4d3be43f1239d17ed30"
+  },
+  "dpi": 300
+}

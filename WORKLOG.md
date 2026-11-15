@@ -10,6 +10,12 @@
   Legacy and Gaia keys. Positional disagreements have their own outcome.
 - Python syntax and a focused Legacy/Gaia/conflict smoke comparison pass.
   Raw source recovery, excluded-parent matching, and anomaly replay follow.
+- Submitted the archived-parent index on NERSC as shared CPU job 61344134.
+  The archived v1.4 MWS data and both raw distance tables are available.
+- Rendered and opened the first F07 panel from the frozen v3.5 totals.
+  It uses Pal 5 New Step 5, includes >10 kpc, and ships PNG300dpi,
+  PDF, CSV and a provenance-bound caption. The full F07 hard-bin and
+  subgroup comparisons remain part of the new Goal.
 
 ## 2026-11-15 — complete external validation and document usable distances
 
