@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the paired 2–10 kpc QRF comparison plate
+
+- Rendered F02 from the completed historical test-cache comparison.
+  Both model symbols share a star count in each cell. Keep the two
+  SpecDis strict 5–10 kpc results as unconnected low-count points
+  and the empty SPDist strict cell labeled N=0.
+- Verified the 24 plotted CSV rows, source and output hashes and
+  300 dpi PNG. Opened the final figure and linked it in the
+  scientific result and atlas index. The same plot also accepts
+  the identical-native-grz comparison when available.
+- The native-loss shards 2 and 3 remain running. Projection array
+  61345035, native QRF replay 61345074, external references 61345553
+  and VAC pairs 61347850 are waiting for shared CPU resources.
+
 ## 2026-11-16 — complete the archived QRF cache comparison and first projection group
 
 - The archived comparison 61344678 completed at 0:0 in 28 s.

@@ -90,6 +90,7 @@ SPDist 有 126 颗，偏差分别为 −14.1% 和 −6.8%。严格档只剩 14 �
 SPDist 历史测试也有这一变化，但幅度不同。远端主选子集中两版的偏差都
 为负，选样前都为正。当前缓存比较固定了星和筛选，仍使用两版各自保存的
 测光输入。两版在相同现今原生测光上的重放将进一步分离输入和模型效应。
+[同星比较图](../figures/v3_6/F02_paired_qrf_cache.pdf) ·
 [配对对象核对](../manifests/v3_6/qrf_cache_comparison/association.csv) ·
 [各来源与选样档的完整比较](../manifests/v3_6/qrf_cache_comparison/performance.csv)
 
