@@ -24,6 +24,10 @@ The supported-row index is complete and recovers 511,687 v3.0 and
 raw source inventories, exact original anomaly rosters, and the native
 exclusion ledger. Finish with joined tables, figure index,
 usable-area summary and source-conditioned conclusions for each distance range.
+F04 now maps Gaia reference support and bias across the frozen magnitude and
+color cells. The archived expanded_A cache comparison reuses v2.0 forecasts
+on common stars. Follow it with an expanded_A replay on the current native
+photometry to distinguish input changes from model changes.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 

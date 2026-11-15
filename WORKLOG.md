@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — prepare the archived same-star QRF comparison
+
+- Added `scripts/v3_6_qrf_cache_comparison.py` to link the 97,705 archived
+  expanded_A evaluation rows to verified current forecasts. It preserves
+  both model supports, calibration/test roles, current training exposure,
+  source-specific references, and both shared current selection masks.
+- Syntax and paired source, support and selection smoke checks pass.
+  This comparison reuses old forecasts with their historical inputs. The
+  separate same-input comparison will test the current photometry directly.
+
 ## 2026-11-15 — plot external distance performance by magnitude and color
 
 - Added F04 from the verified v3.5 Gaia validation draw. All 96 selected
