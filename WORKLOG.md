@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — verify the supported-row index and prepare VAC retention counts
+
+- Slurm 61344134 completed in 1 min 21 s. On the 11,246,209-model-row
+  v3.5 index, 511,687 of 612,114 v3.0 and 511,704 of 3,565,499 v1.4
+  reference-parent rows had exact native IDs and accepted positions.
+  These parent counts overlap. Receipt hashes and accounting reconcile.
+- `scripts/v3_6_vac_flow.py` opens the current forecasts by native row and
+  checks proposed VAC positions, both frozen gate stages and current QRF
+  training membership. It emits raw and supported selection counts, source
+  distance performance, lower-quality comparisons and source provenance.
+- Syntax and mock flow, gate equality and training-stratum tests pass.
+  Raw VAC execution and the native exclusions of unmatched sources remain.
+
 ## 2026-11-15 — attach the raw SpecDis and SPDist distance inventories
 
 - Added `scripts/v3_6_vac_distances.py`. It keeps every raw VAC row,

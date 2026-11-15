@@ -19,9 +19,10 @@ with the 2026-11-15 task brief. Keep the full v3.5 catalog and model bytes.
    subset under stated luminosity-function and population assumptions.
    Reuse the SED likelihood and propagate sky-block uncertainty.
 
-Start with the supported-row identity index and the two archived parents.
-Then recover the raw source inventories, exact original anomaly rosters,
-and the native exclusion ledger. Finish with joined tables, figure index,
+The supported-row index is complete and recovers 511,687 v3.0 and
+511,704 v1.4 reference-parent rows. These cohorts overlap. Recover the
+raw source inventories, exact original anomaly rosters, and the native
+exclusion ledger. Finish with joined tables, figure index,
 usable-area summary and source-conditioned conclusions for each distance range.
 
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
