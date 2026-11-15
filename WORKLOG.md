@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-16 — join native multiband photometry for the reference atlas
+
+- Added `v3_6_reference_photometry.py` to retrieve the union of reference
+  PSFs using the frozen sweep parent-row addresses and verified IDs. Read
+  each referenced sweep once across distance sources. Retain signed WISE
+  flux and mask weak or unavailable bands in magnitude-space diagnostics.
+- Added `v3_6_condition_errors.py` for F04. It tabulates each source and
+  cut by class, reference quality and prior use. Reports distance bias,
+  NMAD, severe errors, interval widths, reference-center agreement and
+  agreement integrated over each source's available distance error.
+- Python compile and a two-part FITS fixture passed. The check recovered
+  unsorted native addresses with missing i and weak WISE, then reconciled
+  6,210 conditional cells against the original matched rows. Full runs are
+  downstream of the combined distance evidence. The earlier raw flow jobs
+  are 61346883 (SpecDis) and 61346884 (SPDist).
+
 ## 2026-11-16 — trace the raw VAC rows through native admission and both cuts
 
 - Added `scripts/v3_6_reference_flow_audit.py` to join the raw SpecDis
