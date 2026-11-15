@@ -1,0 +1,13 @@
+{
+  "caption": "Left: the original v3.5 weighted signed-parallax log-score contrast for corrected S/N < 5 outside recorded history, with unweighted counts on bars. The comparator is uniform in distance modulus over 0.1\u201320 kpc. These are the original predictive scores evaluated on that subset, before the v3.6 score conditional on the weak parallax selection. Right: weighted counts of Gaia parallax intervals disjoint from or entirely within each distance shell. Dots are the QRF mass fractions on the same probability draw. Bounds describe interval ambiguity per shell, including sources without decisive reference information.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_5/validation/complete.json": "0055a3576bf0958146aa3af051782a239cf276a32693ff8d2fc3f1b3a66d1c50",
+    "manifests/v3_5/validation/gaia_joint.csv": "8c73ad3df0b740ab881a765c399e057e379490506f15812aee3d1acea50aa44b"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F08_frozen_weak_parallax.csv": "9d8261a711d66a9a7fdd7c12d8369f1818b3cc49de7efe7ba4086a2da866f919",
+    "figures/v3_6/F08_frozen_weak_parallax.png": "4948e14b349baa9d15ef9ef33430109bf89f0a7912dd7aa7467cdbe63077390d",
+    "figures/v3_6/F08_frozen_weak_parallax.pdf": "3a5cc93b0f874b23d272edaba3265a9d80f5667e1ca4dbfe3a5c77d70d08a804"
+  }
+}

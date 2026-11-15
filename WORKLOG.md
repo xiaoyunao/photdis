@@ -1,5 +1,24 @@
 # WORKLOG
 
+## 2026-11-16 — show frozen signed-parallax and targeted-giant evidence
+
+- Verified the v3.5 Gaia and targeted-spectra inputs against their
+  original receipts and rendered the F08 and F09 companion plates.
+  The latter uses the same match-count scale for both cuts and
+  preserves the survey, unresolved class, and unresolved distance counts.
+- For faint-blue sources outside recorded history, the original signed
+  log-score gains over the broad prior are 0.728 and 0.812 nat per star
+  for primary and strict. Gaia interval counts leave wide distance
+  ambiguity despite those score gains.
+- Added an indexed list of F01–F10 candidates with explicit links and
+  remaining evidence. The conditional F08/F09 renderers pass an
+  integration check against their summary schemas, including empty
+  comparison cells and 300 dpi SHA-bound outputs.
+- The existing production jobs are still queued. Shared test-only
+  requests for 4 and 12 CPUs returned the same estimated start. A
+  separate two-sweep dry-run, 61346262, uses the debug queue only for
+  integration testing and writes no production products.
+
 ## 2026-11-15 — quantify the blue contribution to the distant research shells
 
 - F07 now preserves the full six radial bins and compares disjoint

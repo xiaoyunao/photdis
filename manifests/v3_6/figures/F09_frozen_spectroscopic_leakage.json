@@ -1,0 +1,13 @@
+{
+  "caption": "Direct spectroscopic evidence in the frozen targeting. Distance categories use the published reference qualification and require the interval to lie entirely inside or outside 10 kpc for the giant near and far labels. Each bar represents one survey and one catalog cut. Targeting and unknown distances limit interpretation to these specific matches. The two cuts overlap.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_5/validation/complete.json": "0055a3576bf0958146aa3af051782a239cf276a32693ff8d2fc3f1b3a66d1c50",
+    "manifests/v3_5/validation/targeted_spectra_joint.csv": "9931c33eb36dd0abc68d4e8f2bcffc2a053f7f50f79c2d8d170871529be135e8"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F09_frozen_spectroscopic_leakage.csv": "1f6f1ced35af0911564b87671b7763cd3e705008d0a1f6ca4717243d78ce8f7f",
+    "figures/v3_6/F09_frozen_spectroscopic_leakage.png": "4e7494468294656eec654b40aa260acfe9282d76a89c75dfd0db94d64e2f1886",
+    "figures/v3_6/F09_frozen_spectroscopic_leakage.pdf": "7a344e0c4b6c5c256f38c54c8d3feeedb67b87d44557833e493784922979e2bd"
+  }
+}
