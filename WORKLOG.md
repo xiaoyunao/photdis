@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-16 — trace the raw VAC rows through native admission and both cuts
+
+- Added `scripts/v3_6_reference_flow_audit.py` to join the raw SpecDis
+  and SPDist inventories to their verified model-supported matches and
+  the native exclusion shards. Keep missing positions, uncertain
+  associations, missing photometry, and historical class unknowns
+  explicit. A coordinate inside a frozen sweep is a coverage statement.
+- Both cuts carry one terminal stage per raw row and separate flags
+  for overlapping reasons. Joint tables stratify by reference distance,
+  historical class, observed r and dereddened g-r. Receipt hashes bind
+  the output to the matched rows, raw VAC, native ledger, and cuts.
+- Ran Python compile, CLI help, and a small audit with exact expected
+  stages, both-cut counts and entries beyond 50 kpc. Production depends
+  on the VAC match and native exclusion jobs. F06, F09 and F10 chart
+  jobs 61346639, 61346640 and 61346641 wait on the full projections.
+
 ## 2026-11-16 — validate real sweep inputs and prepare the remaining spatial plates
 
 - The allocated integration job 61346262 completed with exit 0 in

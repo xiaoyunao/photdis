@@ -22,7 +22,9 @@ with the 2026-11-15 task brief. Keep the full v3.5 catalog and model bytes.
 The supported-row index is complete and recovers 511,687 v3.0 and
 511,704 v1.4 reference-parent rows. These cohorts overlap. Recover the
 raw source inventories, exact original anomaly rosters, and the native
-exclusion ledger. Finish with joined tables, figure index,
+exclusion ledger. Run the VAC flow audit after the matched rows and
+native exclusion shards finish, and use its distance and joint tables
+to reconcile each cut with its raw denominator. Finish with joined tables, figure index,
 usable-area summary and source-conditioned conclusions for each distance range.
 F04 now maps Gaia reference support and bias across the frozen magnitude and
 color cells. The archived expanded_A cache comparison reuses v2.0 forecasts
