@@ -1,5 +1,38 @@
 # PLAN
 
+## v3.4 — observable selection and production of a near dwarf sample
+
+The latest [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a),
+reply `039da124`, narrows the paper's first catalog to a mainly dwarf sample
+inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
+
+1. Start with the archived DECam DR11 PSF photometric envelope from all 13
+   existing fields. Census the whole envelope by field, observed r,
+   dereddened g−r and usable W1 state. Draw a reproducible
+   photometry-only sample with inverse inclusion weights. Add exact
+   opened reference matches as a separate development cohort. Compare
+   the frozen QRF, nominal SED and v3.3 on the same measured rows.
+2. Select an observable working point and a stricter sensitivity contrast
+   using opened development evidence. Lock the model, selection,
+   validation rules and independent evidence before opening any new
+   outcomes. Quantify dwarf distance errors, nearby giant inclusion,
+   distant giant leakage into the near sample and unresolved evidence.
+   Trace matching and representativeness before interpreting contamination
+   as a parent rate. Compare distance distributions under the two working
+   points and the contamination bounds. Deliver a small set of English
+   astronomical figures and distinguish a magnitude-limited result from
+   a volume census.
+3. Process all eligible DR11 PSFs in the verified photometric and sky
+   domain. Freeze source coverage and retain identity, distance summaries,
+   available posterior, near probability, support and flags. Verify
+   partition completeness, identity uniqueness and the exclusion ledger.
+
+The first configuration only defines census bins and the development
+sample, with the final published cuts left to the evidence. The first
+inventory is `scripts/run_v3_4_near_development_inputs.sh`.
+Near-giant model development and additional structure work are outside
+this stage. Paper drafting follows a separate approval in the review chat.
+
 ## v3.3 — completed research delivery
 
 The [latest Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)

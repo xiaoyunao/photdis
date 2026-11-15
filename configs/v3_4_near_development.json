@@ -1,0 +1,8 @@
+{
+  "fields": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "observed_r_edges": [0.0, 14.0, 16.0, 17.0, 18.0, 19.0, 20.0],
+  "dereddened_g_r_edges": [-10.0, 0.2, 0.5, 0.8, 1.1, 1.4, 10.0],
+  "sample_cap_per_field_cell": 24,
+  "sample_salt": 340151,
+  "near_boundary_kpc": 10.0
+}

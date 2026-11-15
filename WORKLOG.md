@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — start the near-dwarf confirmation and production goal
+
+- Read Pro reply 039da124 and the preceding v3.3 review b696eedc.
+  Registered the narrower three-package goal using 8aba505 as baseline.
+- Implemented an allocated census of the 13 audited DECam DR11
+  photometric fields with stable photometry-only sampling, design weights,
+  and exact opened-reference joins. No newly reserved outcomes are read.
+- The first census is the development denominator and reference-support
+  inventory. The release sample and selected distance method remain
+  subject to matched scientific results.
+
 ## 2026-11-15 — complete the NGC288 application and research delivery
 
 - Structure 61323432 completed 0:0 in 6 min 35 s. On the same 512
