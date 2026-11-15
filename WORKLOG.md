@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — keep the native reference-photometry pass eligible in both CPU queues
+
+- Original shared job 61347073 remains pending. The regular alternative
+  61357295 uses 12 cores and claims the original only if it is still queued.
+  If the alternative fails, the original is eligible again.
+- Checked that F04 metrics 61347074 and F05 render array 61347239 accept
+  either successful parent. Replaced an earlier pending alternative after
+  finding that the DESI setup does not accept shell nounset. No forecast or
+  photometry pass was duplicated.
+
 ## 2026-11-16 — reconcile both raw VAC inventories with the final selections
 
 - Jobs 61346883/61346884 completed. Verified raw SpecDis 4,140,838 and
