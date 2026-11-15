@@ -1,0 +1,22 @@
+{
+  "n": 1270,
+  "all_PSF": true,
+  "development_only": true,
+  "missing_TYPE": 0,
+  "non_PSF": 0,
+  "inputs": {
+    "data/v3_0/cohorts/development.npz": "220e8184fac81b087d9409165ed1039836ba7d261f93c31d7ac0c5657e86c1db",
+    "data/v3_0/evaluation/development.npz": "96d9720fd081f2e6bd40c419413cd83b282e44c048bf2098a5c79834c0775238",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_3/sed/initial/giant/model.joblib": "79ac53b949d704605126366dde08554bde7f0e3a8ce545c4de9543ef664ba676",
+    "data/v3_0/calibration.npz": "dc8226a194a0db0b37c46b63dbfa1697e14b1defaf13a8f168f6099a11fb6b7f",
+    "scripts/v3_3_giant_development.py": "15759dca6e5cf5c67d3f96314a8b45fc37536f65809a08bd1d50832389cecf10",
+    "src/photdis/v3_3.py": "e4b573c1dbd32f04ad524077ebbcfc8cf445228b7a3dd51fa9e2a6f431723b4b"
+  },
+  "outputs": {
+    "distance.csv": "a93df6468da81aa07abbb740d5ed9e2440f66811fced82aaebbad9c561f0bd97",
+    "gaia_paired.csv": "8b1d4f1989b7758e4bf129203708beab08195316a0405b309aa1fe1db88fa6c9",
+    "pairs.npz": "2774fd9e9552cf9e97a687c1548e1d6f8c53191323b0f56bf7031847a685a02d"
+  },
+  "job": "61321700"
+}

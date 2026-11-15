@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-15 — verify the first actual giant distance comparison
+
+- Job 61321700 completed 0:0 in 39 s. Of 1,270 admitted giant PSFs,
+  1,248 have matched primary distance summaries and 1,266 have
+  signed Gaia pairs. Verified compact result hashes.
+- Given reference giant class, median relative distance residual
+  shifted −5.00% to −0.32%, severe residuals 19.71% to 16.11%, and
+  central 68% reference agreement 54.81% to 58.25%.
+  Central 95% agreement decreased 89.10% to 86.94%.
+- On 302 metal-poor giants with primary distances, 68% agreement fell
+  48.34% to 45.70%. On 1,266 signed Gaia pairs, the conditional score
+  change is +0.0195 nat, with a sky-block interval crossing zero.
+- Corrected prospective intake 61321873 started on allocated debug
+  CPUs. Final scoring and model freeze wait for the closed roster
+  and the assembled class-marginalized comparison.
+
 ## 2026-11-15 — collect the reference-node diagnostic and score giants early
 
 - Reference-scatter job 61321560 completed 0:0 in 16 s. Verified

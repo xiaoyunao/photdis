@@ -46,7 +46,13 @@ The development comparison is job `61318811`. The figure and
 matched-support report uses the exact saved development predictions
 and is queued as 61321265. Run the registered giant-conditional
 endpoint independently of the unfinished dwarf fit (61321700).
-Compare it with the corresponding rows from the assembled model.
+The [paired result](manifests/v3_3/giant_conditional/distance.csv)
+has 1,248 primary distance pairs. Median bias improves −5.00% to
+−0.32% and severe residuals improve 19.71% to 16.11%. On 302
+metal-poor giants, 68% agreement drops 48.34% to 45.70%.
+The signed Gaia contrast on 1,266 pairs is +0.0195 nat per star
+(95% sky-block interval −0.0017 to +0.0878).
+Check the corresponding rows from the assembled model.
 
 The bounded catalog uses one integer-aligned 1° × 1° window in each
 of DECam fields 00, 04 and 06, with observed 16 ≤ r < 20.
@@ -65,7 +71,8 @@ The prospective intake uses a fixed list of southern DR11 sweeps and
 checks older evaluation and fit identities, historical sky blocks, field
 configurations and known structure regions. Freeze predictions against
 the resulting previously unused Gaia-linked PSFs before signed-parallax
-outcomes. Closed-outcome intake job 61320554 is queued. The existing DR19 request has zero native admissions, so it
+outcomes. The first intake 61320554 failed on a history filename key.
+The corrected job is 61321873. The existing DR19 request has zero native admissions, so it
 cannot supply a fresh spectroscopic score. Reuse previously opened
 spectroscopic comparisons only with their documented role.
 
