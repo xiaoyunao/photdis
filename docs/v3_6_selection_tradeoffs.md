@@ -87,6 +87,12 @@ $0.2\le g-r<0.8$，其中 33 颗 W1 可用；严格档没有这样的对象。
 [观测证据覆盖图](../figures/v3_6/F10_photometric_reference_coverage.pdf) ·
 [按参考距离的测距表](../manifests/v3_6/distance_evidence/distance_cells.csv)
 
+在主选样中，至少有一颗合格 Gaia 几何参考的像素所覆盖的成像面积约
+6,616.10 平方度。同样口径下，SpecDis 和 SPDist 各约 2,944.63 平方度，
+DR20 南站约 1,522.10 平方度。面积统计排除了现 QRF 训练星，仍受每个
+参考源的天区、星族和距离选择影响。
+[各来源及两档面积](../manifests/v3_6/figures/reference_sky/F06_reference_coverage.csv)
+
 ## 两份完整距离库给出的 2–10 kpc 检验
 
 接回原始 SpecDis 和 SPDist 后，参考星的数量比原定向光谱抽样大得多。

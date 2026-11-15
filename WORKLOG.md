@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — verify both sky projections for all reference sources
+
+- Job 61346639 completed at 0:0. Verified all 42 output hashes and
+  reviewed the 16 PNGs. Seven reference sources have both projections.
+- Primary cells with at least one qualified non-training distance cover
+  6,616.10 square degrees for Gaia and 2,944.63 for each of SpecDis and
+  SPDist. The source tables distinguish coverage and residual display.
+- Published the compact sky tables and the Gaia and SpecDis paper examples.
+  Raw VAC flow and the native photometry pass remain in Slurm.
+
 ## 2026-11-16 — restore a readable SPDist axis while preserving the full statistics
 
 - Job 61355213 completed at 0:0 in 32 seconds. Verified 15 product hashes
