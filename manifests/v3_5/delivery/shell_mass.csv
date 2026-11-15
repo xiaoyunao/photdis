@@ -1,0 +1,19 @@
+selection,cohort,shell,model_count,uncovered_mass
+Primary selection,all,0–2 kpc,5481991.287687868,1.0001974221420267
+Primary selection,all,2–5 kpc,1921926.3167104118,0.35349623181877193
+Primary selection,all,5–10 kpc,195028.79199632152,0.5817127289701856
+Primary selection,v34_photometric_analogs,0–2 kpc,1128104.1818455579,0.0
+Primary selection,v34_photometric_analogs,2–5 kpc,15285.821511742812,0.0
+Primary selection,v34_photometric_analogs,5–10 kpc,305.06842061520064,0.0
+Primary selection,faint_blue,0–2 kpc,8529.904406617454,0.000312747347714709
+Primary selection,faint_blue,2–5 kpc,420380.84963421733,0.353380906613084
+Primary selection,faint_blue,5–10 kpc,112014.71502772342,0.5817127289701856
+Strict selection,all,0–2 kpc,4313996.160903366,0.999884674794312
+Strict selection,all,2–5 kpc,541336.7914736224,0.0001153252056879106
+Strict selection,all,5–10 kpc,20356.297863665543,0.0
+Strict selection,v34_photometric_analogs,0–2 kpc,977788.7628938882,0.0
+Strict selection,v34_photometric_analogs,2–5 kpc,12202.511584658452,0.0
+Strict selection,v34_photometric_analogs,5–10 kpc,284.27409729154454,0.0
+Strict selection,faint_blue,0–2 kpc,2500.584049473635,0.0
+Strict selection,faint_blue,2–5 kpc,113225.10799782943,0.0
+Strict selection,faint_blue,5–10 kpc,10825.491232050968,0.0

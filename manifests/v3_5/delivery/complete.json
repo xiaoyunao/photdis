@@ -1,0 +1,44 @@
+{
+  "job": "61332091",
+  "production_freeze_sha256": "9fa2b9b2f8f00f0e3b5f85c0c57bfd5b4efe2d1206f69ca70fdad34aef8445d0",
+  "depth_profile_sha256": "428f67b51256fdaeeb4cbed84e08d127d84159be910bc64324eaabb7d6344631",
+  "sweeps": 1074,
+  "parts": 17454,
+  "all_PSF": true,
+  "totals": {
+    "rows": 11246209,
+    "primary": 7672431,
+    "strict": 4891792,
+    "numerical": 18884,
+    "gate": 7929250,
+    "reused": 117127
+  },
+  "exclusions": {
+    "outside_tile": 0,
+    "other_release": 0,
+    "missing_type": 0,
+    "non_psf": 1180039966,
+    "sky_dust": 741427755,
+    "outside_r": 370999245,
+    "optical_quality": 3620205,
+    "outside_qrf_support": 346077,
+    "model_supported": 11246209
+  },
+  "absent_bad_headers": [],
+  "archived_v34_rows": 117127,
+  "archived_v34_intersection": 117127,
+  "archived_v34_outside_current": 0,
+  "ambiguous_gaia_alias_n": 0,
+  "area_deg2": 6616.1216,
+  "area_r20_deg2": 6616.1216,
+  "outputs": {
+    "angular_density.csv": "39f6b80fc63e87e9e61ad4253617d74e10f5d0342edb989b3efd39f7bdb18799",
+    "shell_comparison.csv": "4d7a270f8a8d87b1352ff2711535e8c3f15fec9a46cd98ce5e376f61f65e5d64",
+    "shell_mass.csv": "099369e23c7a96fd5f40efba2a655e966dacaa6883b5dc4d2fbfb185992ff746",
+    "spatial.npz": "f3f4711a7feb7a586b33c68d1f865982190d82a81edcae990d2b4a02c2364e01",
+    "spatial_shells.pdf": "667502a557e3a56679f2ee1a2d39723fa21d18e7d9e1ad8a70288fce4b2dd18a",
+    "spatial_shells.png": "f9ecd4d4759789d275749bab12a3b0e48223b1d6df4026882d10d3c000364c52",
+    "sweeps.csv": "dc7bee9b03f3586401f45adc218fa26bd838ce4f6c71bac67625bfe00919519f",
+    "v34_footprint.json": "6b019db51d6bba0f542bcdb00533a8551ea1be4a279c7f0462c003ad4563616e"
+  }
+}

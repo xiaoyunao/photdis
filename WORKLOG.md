@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-15 — verify the full catalog and footprint measurements
+
+- Slurm 61332091 completed in 3 min 23 s. The full audit reopened 17,454
+  output parts, verified their hashes, reconciled native row ledgers and
+  confirmed global Legacy ID uniqueness. Valid area is 6,616.1216 deg².
+- Inspected the six-panel sky figure and checked the compact tables and
+  figure digests against the delivery receipt. The strict cut retains
+  78.7%, 28.2% and 10.4% of primary mass in the three ascending shells.
+  The 5–10 kpc fraction is 12.2% on the shallower half and 9.1% on the
+  deeper half of adequately imaged pixels.
+- Updated the result and catalog guides and archived the full spatial
+  tables and figures. All 472 tests passed. Validation 61332092 cleared
+  its dependency and is the remaining science job.
+
 ## 2026-11-15 — complete full DECam catalog production
 
 - At 13:23 UTC, all 48 tasks in 61332090 exited 0:0. Reconciled all

@@ -27,7 +27,9 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    checked the first 13 available sweeps. The full delivery repeats the
    posterior and native parent-row checks on every frozen sweep.
    All 48 production tasks completed and their 1,074 receipts reconcile
-   to the frozen inventory. Full file verification and science follow.
+   to the frozen inventory. Job 61332091 verified all 17,454 prediction
+   parts and produced the area-normalized full survey maps and tables.
+   Joint external validation has cleared its dependency.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.

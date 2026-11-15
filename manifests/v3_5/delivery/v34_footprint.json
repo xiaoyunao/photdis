@@ -1,0 +1,146 @@
+{
+  "rectangles": [
+    {
+      "field": 0,
+      "bounds_deg": [
+        205,
+        -10,
+        215,
+        0
+      ]
+    },
+    {
+      "field": 1,
+      "bounds_deg": [
+        60,
+        -35,
+        70,
+        -25
+      ]
+    },
+    {
+      "field": 2,
+      "bounds_deg": [
+        330,
+        -35,
+        340,
+        -25
+      ]
+    },
+    {
+      "field": 3,
+      "bounds_deg": [
+        20,
+        -25,
+        30,
+        -15
+      ]
+    },
+    {
+      "field": 4,
+      "bounds_deg": [
+        130,
+        25,
+        140,
+        35
+      ]
+    },
+    {
+      "field": 5,
+      "bounds_deg": [
+        150,
+        20,
+        160,
+        30
+      ]
+    },
+    {
+      "field": 6,
+      "bounds_deg": [
+        220,
+        20,
+        230,
+        30
+      ]
+    },
+    {
+      "field": 7,
+      "bounds_deg": [
+        180,
+        0,
+        190,
+        10
+      ]
+    },
+    {
+      "field": 8,
+      "bounds_deg": [
+        180,
+        -10,
+        190,
+        0
+      ]
+    },
+    {
+      "field": 9,
+      "bounds_deg": [
+        190,
+        20,
+        200,
+        30
+      ]
+    },
+    {
+      "field": 10,
+      "bounds_deg": [
+        20,
+        0,
+        30,
+        10
+      ]
+    },
+    {
+      "field": 11,
+      "bounds_deg": [
+        200,
+        0,
+        210,
+        10
+      ]
+    },
+    {
+      "field": 12,
+      "bounds_deg": [
+        190,
+        0,
+        200,
+        10
+      ]
+    }
+  ],
+  "inputs": {
+    "data/v3_4/near_catalog/complete.json": "4ae41433508f6beb3f38a1530f72865887492e9d009b46e360a8271c5cd0edb0",
+    "manifests/baseline_v0_prepared.json": "8bfd4274ef20edb87e3d58f7c009ada5aaf46add269846ea27110a16b32b45e0",
+    "configs/field_dev_cal_ra205_215.json": "b9b406e3c907eedfedf6460c90ddb392001f78edda925efe3c1307b9596d4462",
+    "configs/field_native_ra060_070.json": "97628c543e0a4b3cd3e7da5eb68b552cf6dcba0a204bf2454f2306cf58302415",
+    "configs/field_native_ra330_340.json": "76d9e72761491ffd86919764b7433a3bfd4453682073d573c042da6dc21e0ae9",
+    "configs/field_native_ra020_030.json": "7598b213fce96284439c2b09534cf78e557a750730f467234e2e113b5fc131bd",
+    "configs/field_native_ra130_140.json": "6322dd5206b256e3272414097f68c2ce6360f5d9394d3a1348fe3ce224602d2d",
+    "configs/field_cold_v4_ra150_160.json": "4d7b5eb3ef3d12437f0ed8a9bba51ea72d6cc152cb93012cd77f345ae7ce248c",
+    "configs/field_cold_v4_ra220_230.json": "53b3ef15f6ded92e1c450be5f14e21cf8cf03ed49b08d1a4e03f0728f8b9309e",
+    "configs/field_targeted_ra180_190_dec_p000_p010.json": "0ff36dc7ec2ac711783d085d901ba1c601b09ec3dc217de1ac7ce35f81731143",
+    "configs/field_targeted_ra180_190_dec_m010_p000.json": "332ea3fcd1b25485efb31d756828cf745410c8c43a44db5424b768a3ad2e80ba",
+    "configs/field_targeted_ra190_200_dec_p020_p030.json": "f1de44f7a6f27d13dbcb15c39e4b2857bbf097542dbdf2215cbf379e88e19d9c",
+    "configs/field_targeted_ra020_030_dec_p000_p010.json": "c51d10db43ac8ef440a7c6ad265b1a34d68c5ece368fe36a0c0f6e523d0e2fdc",
+    "configs/field_giant_ranked_ra200_210_dec_p000_p010.json": "8baf4972ca939d626feb7ccaf2be2f0399c3048ba0e49856dc9466ade8e9bc68",
+    "configs/field_giant_ranked_ra190_200_dec_p000_p010.json": "44ac42992ffc3d442c5e5ecb930c6249747a348d8e1a48c4dac6e3b0fc808d48"
+  },
+  "counts": {
+    "rows_in_v34": 1183990,
+    "primary_in_v34": 765634,
+    "analog_in_v34": 125220,
+    "analog_outside_v34": 1085015,
+    "reused_outside_v34": 0
+  },
+  "interpretation": "Original v3.4 field rectangles. Outside is a geographic label, independent of row reuse or reference history."
+}

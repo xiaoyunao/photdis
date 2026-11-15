@@ -3,7 +3,8 @@
 目录生产记录见[当前结果](v3_5_result.md)。源表和大型产品位于 NERSC
 `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_5`。每个已验收的
 `catalog/sweep-*/complete.json` 列出本分区全部文件及校验值。最后的总清单
-和天区统计由 `delivery` 作业生成。
+和天区统计见 `delivery`。验收确认共 1,074 个分区和 17,454 个预测文件，
+有效成像面积为 6,616.12 平方度。[全量验收记录](../manifests/v3_5/delivery/complete.json)
 
 `part_*.npz` 已包含通过原生测光与 QRF 支持要求的对象。每个分区可单独读取。
 `ls_id` 是目录唯一键。`source_id` 是原生 Gaia DR3 别名，0 表示没有可用
