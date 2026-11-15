@@ -1,5 +1,29 @@
 # PLAN
 
+## v3.6 — reference recovery, failure diagnosis and paper figures
+
+Use the frozen v3.5 delivery at `17e37d4` and the [latest Pro review](chatgpt-conversation://6af9bbfe-5288-83ea-9e15-f09b45daea62)
+with the 2026-11-15 task brief. Keep the full v3.5 catalog and model bytes.
+
+1. Reconcile the full supported catalog with archived and external reference
+   inventories. Keep source-specific classes, distances and uncertainties,
+   training and exposure roles, unmatched rows, and the native exclusion
+   ledger. Trace references by distance, photometry, class and each selection.
+2. Compare the frozen expanded_A and current QRF on matched eligible stars.
+   Reproduce the 116 and 189 fixed blue cohorts by identity, investigate
+   luminosity branches and matching quality, and retain the full error tails.
+3. Measure SED/QRF disagreement, the cost of strict selection, weak signed
+   Gaia predictions, and population leakage. Produce the F01–F10 atlas,
+   with Pal 5 New Step 5 styling, figure inputs and paper candidates.
+4. Measure contamination and distance-shell sensitivity on a representative
+   subset under stated luminosity-function and population assumptions.
+   Reuse the SED likelihood and propagate sky-block uncertainty.
+
+Start with the supported-row identity index and the two archived parents.
+Then recover the raw source inventories, exact original anomaly rosters,
+and the native exclusion ledger. Finish with joined tables, figure index,
+usable-area summary and source-conditioned conclusions for each distance range.
+
 ## v3.5 — completed DECam application, distant dwarf validation and a spatial measurement
 
 The [Pro review](chatgpt-conversation://6aeebe6f-8abc-83e9-aeed-c0107222fa1a)

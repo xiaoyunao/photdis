@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-15 — open the post-v3.5 science and figure work
+
+- Read the complete Pro review and ten-section task brief. Recorded the
+  scoped Goal and plan with exact v3.5 baseline `17e37d4`.
+- Started the supported-catalog identity index in
+  `scripts/v3_6_reference_index.py`. It binds the 1,074 delivered sweep
+  receipts and associates the v1.4 and v3.0 reference parents by checked
+  Legacy and Gaia keys. Positional disagreements have their own outcome.
+- Python syntax and a focused Legacy/Gaia/conflict smoke comparison pass.
+  Raw source recovery, excluded-parent matching, and anomaly replay follow.
+
 ## 2026-11-15 — complete external validation and document usable distances
 
 - Slurm 61332092 completed in 21 min 40 s. Validated 274,819 of the
