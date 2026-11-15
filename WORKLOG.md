@@ -1,5 +1,26 @@
 # WORKLOG
 
+## 2026-11-15 — complete native input, area and four-sweep pilots
+
+- Inventory 61331852 completed with 1,600 south DR11.0 sweeps, 1,074
+  conservative high-latitude intersections and 20 random files.
+- Jobs 61331888 and 61331889 used 48 CPUs each and completed all four
+  census/forecast pilots. 100,671 model-supported PSFs, 13,097 drawn.
+  The adjacent-sweep check gives 70.9% and 68.1% primary selection
+  within one degree on opposite sides of the pilot RA boundary.
+- Native random area job 61331907 completed. It found 6,621.81 deg² with
+  grz imaging within the latitude/dust envelope and 6,616.12 deg²
+  after the image mask. This is imaging area. Flux and deblend cuts
+  depend on individual sources.
+- Evidence 61331927 completed on the frozen predictions. 12,057 usable
+  Gaia matches, 11,895 outside recorded historical evidence. Primary
+  2–5 kpc has 76 high-S/N Gaia references and −17.8% median relative
+  bias. The 18–20 and 0.5–0.8 intersection has 702 weak Gaia matches
+  but zero high-S/N geometry references at 2–10 kpc.
+- Setup 61332033 froze 48 groups and all 1,074 possible sweeps.
+  Replay 61332035 uses the sweep containing archived v3.4 rows to
+  test the exact production path before allowing the job array.
+
 ## 2026-11-15 — start v3.5 full DECam application
 
 - Read the full latest Pro assessment `2c2e2405` and registered the

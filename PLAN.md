@@ -13,13 +13,19 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    Gaia aliases separately. Pilot separated and adjacent sweeps against
    both frozen cuts. Apply the unchanged QRF and nominal selection with
    restartable Slurm partitions. Deliver support and evidence flags, full
-   PDF, rejected rows and random-based area accounting.
+   PDF, rejected rows and random-based area accounting. Four pilots
+   completed with 100,671 supported PSFs and 13,097 predictions.
+   Randoms give 6,616.12 deg² of mask-cleared imaging within the survey
+   envelope. Production freeze 61332033 binds 48 independent groups.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.
    Use matched spectra for physical class and distance with historical
    exposure and missingness recorded. Quantify observational constraints
    on distant giant leakage and the usefulness of weak Gaia measurements.
+   The pilot found 76 primary high-S/N Gaia references at 2–5 kpc with
+   −17.8% median relative residual, and none at 2–10 kpc in the joint
+   faint/blue cells. Keep the corresponding research flags.
 3. Compare posterior-weighted surface distributions under both cuts in
    0–2, 2–5 and 5–10 kpc using the same coverage measure. Report depth,
    class leakage and selection sensitivity, and which measurements remain

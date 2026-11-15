@@ -1,0 +1,27 @@
+{
+  "job": "61331907",
+  "source": {
+    "filename": "randoms-south-1-0.fits",
+    "size": 22995910080,
+    "mtime_ns": 1780757592000000000
+  },
+  "random_rows": 66080114,
+  "density_deg2": 2500.0,
+  "healpix_nside": 16,
+  "healpix_order": "nested",
+  "inventory_sha256": "a1e1edaa6222a49b35af43c5a9b5080c92625664348ec4772d486512844ef8a5",
+  "coordinate_dust_by_release": {
+    "11010": 16720693
+  },
+  "totals": {
+    "coordinate_dust_deg2": 6688.2772,
+    "grz_imaged_deg2": 6621.8092,
+    "mask_cleared_deg2": 6616.1216,
+    "r20_depth_deg2": 6616.1216
+  },
+  "semantics": "Area traces DECam imaging, foreground dust, hard image masks and a separately labeled r-band depth proxy. Object-specific flux and deblend selection are not encoded in the area.",
+  "outputs": {
+    "by_sweep.csv": "3c9fdb36cc308381add68603e13615b7c20d23f7ef9a86b91f457e2ea48e40a7",
+    "sweep_healpix.npz": "16e5d450558b899437843a3a69e4153835785a4e4ad89ba4bbbfdf5d670b0722"
+  }
+}
