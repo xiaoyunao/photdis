@@ -28,8 +28,8 @@ def save(fig, name):
     plt.close(fig)
 
 
-def distance_figure(fresh, predicted, evidence):
-    rows = fresh['prediction_row']
+def distance_figure(index, predicted, evidence, title):
+    rows = index['prediction_row']
     d = evidence['distance_kpc']
     q = predicted['qrf_quantiles_kpc'][rows, 2]
     use = np.isfinite(d) & predicted['primary'][rows]
@@ -43,7 +43,7 @@ def distance_figure(fresh, predicted, evidence):
     lo, hi = np.min(np.r_[d[use],q[use]]), np.max(np.r_[d[use],q[use]])
     ax.plot([lo,hi], [lo,hi], c='.35', lw=1, ls='--')
     ax.set(xscale='log', yscale='log', ylabel='QRF median distance (kpc)',
-           title='Photometric distances against fresh Gaia geometry')
+           title=title)
     ax.legend(loc='upper left', frameon=False)
     rat.axhline(0, c='.35', lw=1, ls='--')
     rat.set(xlabel='Gaia geometric distance (kpc)', ylabel='Distance modulus residual (mag)')
@@ -123,11 +123,18 @@ def main():
     outputs = json.loads(marker.read_text())['outputs']
     evidence = load(verified(EVIDENCE/'fresh_gaia.npz', outputs['fresh_gaia.npz']))
     np.testing.assert_array_equal(evidence['identity'],fresh['identity'])
+    index = fresh
+    title = 'Photometric distances against fresh Gaia geometry'
+    if not np.any(np.isfinite(evidence['distance_kpc']) & predicted['primary'][fresh['prediction_row']]):
+        evidence = load(verified(EVIDENCE/'application.npz', outputs['application.npz']))
+        np.testing.assert_array_equal(evidence['identity'],application['identity'])
+        index = application
+        title = 'Photometric distances against Gaia geometry in the application draw'
     path = verified(EVIDENCE/'distributions.csv', outputs['distributions.csv'])
     with path.open() as f:
         distributions = list(csv.DictReader(f))
     OUT.mkdir(parents=True,exist_ok=False)
-    distance_figure(fresh,predicted,evidence)
+    distance_figure(index,predicted,evidence,title)
     selection_figures(application,photo,predicted)
     radial_figure(distributions)
     save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),evidence=sha(marker), inputs=inputs,
