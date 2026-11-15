@@ -1,0 +1,21 @@
+panel,stage,rows,excluded,source,distance_lo_kpc,distance_hi_kpc,raw_reference_rows,verified_supported_rows
+Native catalog,Native sweep rows,2307679457,0,,,,,
+Native catalog,Native PSF,1127639491,1180039966,,,,,
+Native catalog,High latitude and low extinction,386211736,741427755,,,,,
+Native catalog,Observed $r<20$,15212491,370999245,,,,,
+Native catalog,Clean optical photometry,11592286,3620205,,,,,
+Native catalog,Within QRF support,11246209,346077,,,,,
+Native catalog,Primary selection,7672431,3573778,,,,,
+Native catalog,Strict selection,4891792,6354417,,,,,
+Distance inventory,,,,specdis,0.0,2.0,1752024,208482
+Distance inventory,,,,specdis,2.0,5.0,1527687,158722
+Distance inventory,,,,specdis,5.0,10.0,580843,73716
+Distance inventory,,,,specdis,10.0,20.0,189539,27769
+Distance inventory,,,,specdis,20.0,50.0,70872,12451
+Distance inventory,,,,specdis,50.0,inf,19533,3480
+Distance inventory,,,,spdist,0.0,2.0,2012777,219166
+Distance inventory,,,,spdist,2.0,5.0,1820112,154459
+Distance inventory,,,,spdist,5.0,10.0,731763,58465
+Distance inventory,,,,spdist,10.0,20.0,245192,22263
+Distance inventory,,,,spdist,20.0,50.0,150564,16117
+Distance inventory,,,,spdist,50.0,inf,109191,6252

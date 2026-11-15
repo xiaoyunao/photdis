@@ -1,0 +1,16 @@
+{
+  "caption": "Left: native rows from the frozen eligible DR11.0 DECam sweeps and the catalog selection stages. Both final cuts use the same QRF-supported parent. Right: raw SpecDis and SPDist rows with a positive reference distance, and archived position-verified associations to QRF-supported PSF rows before the dwarf and near-distance cuts. The two reference catalogs can share stars. The complete raw inventories also include rows without a usable reference distance.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "manifests/v3_6/vac_distances/specdis/complete.json": "245aaade0127356f2a99c0d7848488c01502bba15ce5f327fc5af9cd8ce8d975",
+    "manifests/v3_6/vac_distances/specdis/inventory.csv": "afbc680e86905f2ade9b0a6d5cc5f8bb0fe8da08c3d04f2b403d4dc93c4da476",
+    "manifests/v3_6/vac_distances/spdist/complete.json": "e345f01e91eded0f9cae332208f64101de4b7e024483223fe29b0cbf6ce7b43a",
+    "manifests/v3_6/vac_distances/spdist/inventory.csv": "e0b7435de0499073e4cea75b4fbfce5ea32981f46358787daad4f9d4d69c99da"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F01_catalog_admission.csv": "1927a65e3c74c859b77b98b89ea2b9a3d5d1422064764a01f622f2e482ad672c",
+    "figures/v3_6/F01_catalog_admission.png": "667bc4f9500b4ed3db38ca5bf8a4173b9e8cf7116a224c2e891b5772ea6ac41e",
+    "figures/v3_6/F01_catalog_admission.pdf": "e62f31119b471ca8ffc62e4300e5111964e042ce2ba41b37756b463a051385fb"
+  }
+}

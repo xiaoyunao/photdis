@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-15 — plot catalog admission and distance-reference support
+
+- Added F01 from the frozen sweep exclusion ledger and the two verified
+  raw VAC inventories. The native funnel conserves all counts through
+  11,246,209 supported rows and both cuts. VAC bars count reference rows.
+- Rendered and opened the English PNG/PDF layout with the source table.
+  Final cut retention and Gaia coverage follow their own queued jobs.
+- The real LF calculation was submitted as 61345237 with 36 CPUs, after
+  the full posterior projection summary. NERSC is allocating resources.
+
 ## 2026-11-15 — prepare the stratified DR11 luminosity-function run
 
 - `scripts/v3_6_lf_sensitivity.py` defines a reproducible draw over
