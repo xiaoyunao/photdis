@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-16 — establish far-giant matches and prepare same-star VAC scale comparisons
+
+- The two full distance tables have 703/92 SpecDis and 621/43
+  SPDist primary/strict giant matches with historical quality and a
+  reference center at least 10 kpc. Outside QRF training the strict
+  counts are 91 and 43. Added these separate source counts to the
+  selection results beside the different DR20 interval criterion.
+- Added `v3_6_vac_paired.py` for uniquely paired native PSFs with
+  both VAC distances. It holds the stars and forecasts fixed and
+  compares reference offsets in either source's bins. Its per-source
+  giant counts apply the uncertainty endpoint criterion and measure
+  assignments by QRF median and near probability.
+- Python compile and an exact fixture for repeated sources,
+  fixed-star distances and far-giant lower bounds passed. The
+  two VAC inputs are complete. The full projection and external
+  association still waited for CPU resources at this checkpoint.
+
 ## 2026-11-16 — recover full SpecDis and SPDist reference matches and selection losses
 
 - Slurm array 61344409 completed both tasks at 0:0 in 48 and 56 s.

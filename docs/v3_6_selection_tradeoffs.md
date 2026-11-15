@@ -70,3 +70,12 @@ SPDist 有 126 颗，偏差分别为 −14.1% 和 −6.8%。严格档只剩 14 �
 严格档仍保留 26 和 12 个。两批光谱分别统计，每批还有类别或距离未判定的
 对象。该结果直接确认混入现象，模型假设下的全目录比例由另一组分层抽样估算。
 [定向光谱计数](../figures/v3_6/F09_frozen_spectroscopic_leakage.pdf)
+
+在全量匹配的历史质量样本里，参考距离中心在 10 kpc 或更远，且已有关联
+巨星分类的对象，SpecDis 主选有 **703** 条、严格档有 **92** 条。
+SPDist 对应为 **621** 和 **43** 条。去掉当前 QRF 训练星后，严格档仍有
+91 和 43 条。两库分别计数，可能共享观测与对象。这里按参考距离中心分箱，
+而定向 DR20 巨星采用整个参考区间在 10 kpc 之外的条件，两个计数口径须
+各自解读。
+[SpecDis 完整分层](../manifests/v3_6/vac_flow/specdis/performance.csv) ·
+[SPDist 完整分层](../manifests/v3_6/vac_flow/spdist/performance.csv)
