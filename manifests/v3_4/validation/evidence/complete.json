@@ -1,0 +1,21 @@
+{
+  "job": "61329976",
+  "freeze_sha256": "f5e0cb00d5c8a73dd7c394214aabb91e7302137455341036b28c3d5c409d50ea",
+  "all_PSF": true,
+  "new_outcomes_read": true,
+  "outputs": {
+    "DR19_Astra.npz": "8ad06a233e59c4a44996082c2e92e58255a18c4511e6b641d9b408ecfe2d4e62",
+    "DR20_APO.npz": "cdee125f68afb86f325f17d2fd7f2eba645f91327db42ea3720a55d7d6837eab",
+    "DR20_MINESweeper.npz": "6f77459da595e56e22b5485d7d1cc205ab16cf6a3dfea31f515369c23fa05c11",
+    "application.npz": "d1cf2a35576be4f08f3bb8ad263c7cafc8caff1eebd2812621b5cfab60506563",
+    "distances.csv": "b2a1b1ddd530ab8da0bd4d5c57aac9eedef9d373f72b074efb8e226b4bf29faf",
+    "distributions.csv": "ab7cde5e8cf88515887b8c06ac861c4f5048753f94a20e2e52a5d48a07e0d9ec",
+    "freeze.json": "f5e0cb00d5c8a73dd7c394214aabb91e7302137455341036b28c3d5c409d50ea",
+    "fresh_gaia.npz": "f76c5cba67dece3f2b16f321ffac567c12db9246f87eb47822ed6d39974ec56f",
+    "gaia_summary.csv": "23733921b4c3792b9ab183a095aa63ef0e962014786dca02791f9cf52605c1f0",
+    "giant_bounds.csv": "29317a0434f038c57d6f6f9e86324b52a5a755b1e10b8e869ac7165d693110c7",
+    "spectral_classes.csv": "d040496453dd34ea192ec9654ee71f1981594c46751f3a61ce01c57cf24089f2",
+    "spectral_dwarfs.csv": "d66c2adb0cf33e70d1a6faec017896142bdb496adfb8e848ca65e6be7fcce31e",
+    "started.json": "68794a24db544f379e148f53e4737eba0f6b8286569ace91da30ade7c3b09706"
+  }
+}

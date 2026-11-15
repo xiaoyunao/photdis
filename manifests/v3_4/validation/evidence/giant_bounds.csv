@@ -1,0 +1,3 @@
+selection,sampled,estimated_total,confirmed_dwarf,confirmed_giant,conflict,class_unresolved,giant_lower,giant_upper,giant_near_lower,giant_near_upper,giant_far_lower,giant_far_upper
+primary,10453,767202.9583333333,0,1,0,10452,6.060977671542912e-05,1.0,0.0,0.9999393902232846,6.060977671542912e-05,1.0
+strict,6483,441083.7916666666,0,1,0,6482,0.00010542214626453723,1.0,0.0,0.9998945778537355,0.00010542214626453723,1.0

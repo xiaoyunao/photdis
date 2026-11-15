@@ -1,5 +1,21 @@
 # WORKLOG
 
+## 2026-11-15 — score frozen Gaia and targeted spectra
+
+- Forecast 61329975 completed in 7 min 05 s. Both cuts and the
+  probabilities replayed on 17,787 application identities.
+- Evidence 61329976 completed in 3 min 17 s. Verified compact files
+  against the receipt. Main/strict application draws have 4,787/3,630
+  geometric-near and zero geometry-confirmed far. Weighted upper
+  bounds on all-class far fractions remain 74.92%/67.77%.
+- All zero quality-qualified parallaxes in the 3,885-source fresh
+  primary selection despite 3,884 exact Gaia links. Targeted spectra
+  confirm far giants, including 1 in the application probability draw.
+  Class bounds are too broad to establish a parent giant rate.
+- Keep the same scoring gates, diagnose Gaia coverage, and use
+  application Gaia geometry for the distance figure. No release
+  configuration approved by the evidence at this stage.
+
 ## 2026-11-15 — register forecast, outcome freeze and scientific figures
 
 - Closed-roster job 61329405 completed 0:0 in 13 s. There are 23,976

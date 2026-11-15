@@ -1,0 +1,37 @@
+{
+  "job": "61329975",
+  "all_PSF": true,
+  "new_outcomes_read": false,
+  "n": 23976,
+  "replay_n": 17787,
+  "selected": {
+    "primary": {
+      "application": 10453,
+      "fresh_gaia": 3885
+    },
+    "strict": {
+      "application": 6483,
+      "fresh_gaia": 2207
+    }
+  },
+  "inputs": {
+    "configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214",
+    "scripts/v3_4_near_forecast.py": "a44359500a195ac3885b80d27900241e99c7740949ad15e186d0d76bdfc82ae7",
+    "data/v3_4/near_development/validation/inputs/complete.json": "f1c4d5363f60167d885f93069d9431b9458777c6a2a185c758896d1fcaeb5220",
+    "data/v3_4/near_development/validation/inputs/photometry.npz": "9f51847d31d0b2177534d3de4edfbf1fa33de864e6cc2c2da2731078e7bbc200",
+    "data/v3_4/near_development/validation/inputs/application.npz": "34e22fd25c9755d38d60f3fbee136fc958bb1fefddbe6d81c84b3f3d91aed144",
+    "data/v3_4/near_development/validation/inputs/fresh_gaia.npz": "6cd10571b1f90c0d8293e6c9fcd7d97ebcb37532214da649f21b37649692a527",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_4/near_development/comparison/complete.json": "493c2a41d5b8e5cd22b57ffc433ae9f5a8e5c52c1f002bce014b6e8b0843a18f",
+    "data/v3_4/near_development/comparison/roster.npz": "170134f14438ee47fb3c91cfb2c1324df63b088f47dde38fb9af766faa52a5b6",
+    "data/v3_4/near_development/comparison/qrf.npz": "aa7d7894d11dc0f9bd48fcd7167fe770fb4701348dea346c444685e2f070d59e",
+    "data/v3_4/near_development/comparison/nominal.npz": "b2c07ca5318bc3c0c80052ed26f1e6b4cc7f0a1737e0e25aa976d0c41434c260"
+  },
+  "outputs": {
+    "forecasts.npz": "bda8a3bc9db18cc5ca8c6c75ced0aac845aa52f52d2ba29857d6f348bdd536d3"
+  }
+}

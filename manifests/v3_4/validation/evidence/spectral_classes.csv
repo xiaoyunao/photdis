@@ -1,0 +1,13 @@
+source,selection,history,matched,dwarf,giant,class_unresolved,giant_near,giant_far,giant_distance_unresolved
+DR20_MINESweeper,primary,all,20,3,11,6,0,10,1
+DR20_MINESweeper,primary,outside_history,0,0,0,0,0,0,0
+DR20_MINESweeper,strict,all,5,0,5,0,0,4,1
+DR20_MINESweeper,strict,outside_history,0,0,0,0,0,0,0
+DR20_APO,primary,all,9,0,9,0,0,9,0
+DR20_APO,primary,outside_history,0,0,0,0,0,0,0
+DR20_APO,strict,all,2,0,2,0,0,2,0
+DR20_APO,strict,outside_history,0,0,0,0,0,0,0
+DR19_Astra,primary,all,5,0,0,5,0,0,0
+DR19_Astra,primary,outside_history,0,0,0,0,0,0,0
+DR19_Astra,strict,all,5,0,0,5,0,0,0
+DR19_Astra,strict,outside_history,0,0,0,0,0,0,0

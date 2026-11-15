@@ -1,0 +1,13 @@
+source,selection,history,n,median_relative,nmad_relative,median_mu_residual,severe_fraction,coverage68,coverage95,median_width68,median_width95
+DR20_MINESweeper,primary,all,3,0.08996437563514298,0.041802722061763005,0.18706151852004282,0.0,1.0,1.0,1.3581115371136274,4.460247627844506
+DR20_MINESweeper,primary,outside_history,0,,,,,,,,
+DR20_MINESweeper,strict,all,0,,,,,,,,
+DR20_MINESweeper,strict,outside_history,0,,,,,,,,
+DR20_APO,primary,all,0,,,,,,,,
+DR20_APO,primary,outside_history,0,,,,,,,,
+DR20_APO,strict,all,0,,,,,,,,
+DR20_APO,strict,outside_history,0,,,,,,,,
+DR19_Astra,primary,all,0,,,,,,,,
+DR19_Astra,primary,outside_history,0,,,,,,,,
+DR19_Astra,strict,all,0,,,,,,,,
+DR19_Astra,strict,outside_history,0,,,,,,,,
