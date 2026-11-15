@@ -10,6 +10,15 @@
   weights under the frozen nominal class prior for the first comparison.
 - Syntax and a synthetic projected-EM smoke check pass, including signed
   flux, missing bands, exact PSF admission and training-role separation.
+- Submitted preparation `61318404`, class fit array `61318405` and
+  assembly `61318406`. Preparation completed `0:0` in 14s and wrote all
+  three registered cloud sizes.
+- Added the opened-development comparison. It computes native class
+  likelihoods once, applies the same nominal prior, and reports both
+  marginalized and known-class distance diagnostics. QRF uses its
+  frozen grz model and native distance bins. The synthetic check matches
+  the baseline kernel reduction and verifies signed Gaia and QRF scoring.
+  The full local suite passes all 472 tests.
 
 ## 2026-11-15 — start the v3.3 distance-core study
 

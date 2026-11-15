@@ -36,6 +36,12 @@ samples contain 20,000 dwarfs, 5,887 giants and 6,881 other-class
 references. `scripts/run_v3_3_sed.sh` runs preparation, the three fit
 partitions and assembly in dependency order. The assembly restores the
 frozen nominal class probabilities for the first paired evaluation.
+Preparation job `61318404` completed. Fit array `61318405` precedes
+assembly `61318406`. `scripts/run_v3_3_development.sh` compares the
+assembled model, nominal SED and frozen grz QRF on opened development
+identities. It keeps all admitted labeled giants and stable subsamples
+of the other labels. The first decision uses source-error-aware scores,
+conditional giant residuals and intervals, and marginal branch behavior.
 Historical flags are retained. Response expansion, the full simulation
 matrix, all-sky reruns and deployment stay outside this stage.
 
