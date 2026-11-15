@@ -1,0 +1,19 @@
+{
+  "job": "61345074",
+  "rows": 95344,
+  "same_input_current_vs_published_median_abs_mu_delta": 0.0,
+  "same_input_current_vs_published_max_abs_mu_delta": 1.7763568394002505e-15,
+  "inputs": {
+    "scripts/v3_6_qrf_same_photometry.py": "b29cc03979029c8f36803fd405eec7c9a008cf18f5fba39a06caa353d2d01b0d",
+    "data/v3_6/qrf_cache_comparison/complete.json": "023e07c52a108a88d14511a79491150ee9794e1428bf71504e7af4bec61604c6",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "configs/v3_5_dr11.json": "10604c90bcd2226457267d10eff72e2f2f86502726f27ce3b152ba55b7e79cd5",
+    "data/baseline_v1_4/experiments/expanded_A_distance.joblib": "dac9d436e49e32dc5adce609213edcd08242bf486cce7e31908cabfc3db8e9b5",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716"
+  },
+  "interpretation": "Both frozen QRFs use the same native grz and identical Sobol perturbations. Only the historical same-star cache intersection is re-evaluated, without any refits.",
+  "outputs": {
+    "paired.npz": "1650a4e98287aeefdeed33db6a5959b41aee2c61c1ebee690804540321107829",
+    "performance.csv": "0adf0c3b5eeaf54300a177d25175d8ebcf8203921a60fd021e8429926740bc2a"
+  }
+}

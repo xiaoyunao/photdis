@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — verify the identical-photometry comparison of both frozen QRFs
+
+- Job 61345074 completed at 0:0 in 3:53 on all 95,344 paired native PSFs.
+  The replay of the current QRF reproduces the published median to
+  within 1.8e-15 mag. Verified the output receipt and 2,071 comparison
+  cells. All paired cell counts agree with the original cache study.
+- Across both models and all cells, replacing cached photometry
+  changes median relative bias by no more than 0.056 percentage points.
+  The 5–10 kpc SpecDis primary subset is still 202 of the 2,542
+  before-cut dwarfs, with both models biased low at −16.4% and −17.5%.
+- Rendered and opened the receipt-bound 300 dpi/PDF F02 comparison.
+  The identical-grz result is the primary plate; the cached comparison
+  remains available for the input-version contrast.
+
 ## 2026-11-16 — release the full Gaia and LF dependency and prepare the evidence overlap
 
 - Scheduled catalog reduction 61345036 completed at 0:0 in 10 s.

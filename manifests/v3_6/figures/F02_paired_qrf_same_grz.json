@@ -1,0 +1,13 @@
+{
+  "caption": "Historic test dwarfs evaluated on fixed stars in each panel and selection, requiring support in both QRFs and absence from either training set. Both predictions use the same source-specific reference distance for each plotted star. A hollow symbol denotes fewer than 20 paired stars. The table gives uncut distance-error statistics for the plotted cells. Both frozen models use identical current native optical photometry.",
+  "dpi": 300,
+  "inputs": {
+    "manifests/v3_6/qrf_same_photometry/complete.json": "d563ded46cdb89cc9904db92942b7928cebc9774bae55f4408e33ec0f5cfe586",
+    "manifests/v3_6/qrf_same_photometry/performance.csv": "0adf0c3b5eeaf54300a177d25175d8ebcf8203921a60fd021e8429926740bc2a"
+  },
+  "outputs": {
+    "manifests/v3_6/figures/F02_paired_qrf_same_grz.csv": "cf02ec7766c379655fa1ac7d4c2eefd2e7229b8f55dcbee9d2c680844e0fe6c6",
+    "figures/v3_6/F02_paired_qrf_same_grz.png": "e65e710e45c74b2d2ea2333fdc00982d253fcd69c95cad729d72137d615f15e7",
+    "figures/v3_6/F02_paired_qrf_same_grz.pdf": "ff4d25bff927c7a8b134abc982d132fcda9191603788aa52ab2abc69e2be0ea6"
+  }
+}
