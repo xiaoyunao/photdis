@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — launch the 1,074-sweep production
+
+- Full path 61332035 completed in 3 min 22 s on
+  sweep-205m010-210m005.fits. 17,236 supported predicted rows,
+  10,161 primary and 5,583 strict. Reused 1,369 archived rows exactly.
+- Production array 61332090 covers 48 frozen groups, 128 CPUs per
+  group and up to 12 concurrent groups. Downstream 61332091 checks
+  ownership, coverage and partition delivery and makes the same-area
+  shell maps. Dependent validation 61332092 measures distance and
+  targeted class evidence in the actual primary/strict samples.
+- Focused downstream smoke 61332100 checks the real completed sweep.
+  All 472 local tests passed with single-threaded numerical backends.
+
 ## 2026-11-15 — complete native input, area and four-sweep pilots
 
 - Inventory 61331852 completed with 1,600 south DR11.0 sweeps, 1,074

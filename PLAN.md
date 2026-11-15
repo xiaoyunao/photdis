@@ -17,6 +17,10 @@ can be used. Preserve completed v3.4 partitions for exact reuse.
    completed with 100,671 supported PSFs and 13,097 predictions.
    Randoms give 6,616.12 deg² of mask-cleared imaging within the survey
    envelope. Production freeze 61332033 binds 48 independent groups.
+   Full-sweep replay 61332035 completed on a sweep with prior deliveries.
+   Array 61332090 uses four 32-CPU steps per group, with a 12-group
+   concurrency cap. Delivery/sky job 61332091 and joint validation
+   61332092 are dependent on successful production.
 2. Validate magnitude, color and distance together. Prioritize r=18–20,
    dereddened g−r=0.5–0.8, and 2–5 and 5–10 kpc. Inventory the overlap
    of Gaia quality and zero-point availability prior to reserving a sample.

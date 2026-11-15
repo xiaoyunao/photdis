@@ -32,3 +32,13 @@ Legacy DR11.0 南区的原生 DECam PSF，保留高银纬、低消光、g/r/z �
 [面积口径](../manifests/v3_5/area/complete.json) ·
 [试跑距离和 Gaia 匹配](../manifests/v3_5/pilot_evidence/gaia_and_distance.csv) ·
 [相邻分区检查](../manifests/v3_5/pilot_evidence/adjacent_boundary.csv)
+
+## 全量运行
+
+已冻结 1,074 个 sweep 的生产清单。独立生产复核处理了一个包含旧目录对象的
+sweep，生成 17,236 个模型支持源，直接复用了 1,369 个 v3.4 对象。该分区中有
+10,161 个源通过主选样，5,583 个通过严格选样。
+
+全量 Slurm 作业为 61332090，分成 48 组。每组在同一节点上运行四个 32 CPU
+步骤，最多 12 组同时运行。61332091 在生产后统一复核并生成空间测量，
+61332092 在入选目录中按星等、颜色和预测距离分层检查 Gaia 及光谱证据。
