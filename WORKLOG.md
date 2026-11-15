@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-15 — match external reference metadata to the application denominator
+
+- The archived model identity can differ from the native DR11 Gaia DR3
+  identifier. Added a source-bound lookup through the verified Legacy
+  parent row, then checked unique native Gaia IDs and positional agreement.
+- Added coverage counts for DR20 MINESweeper and new-lineage DR19 Astra,
+  separated by historical evidence exposure. Retain only metadata and row
+  pointers until model and cuts are frozen. The targeted spectra do not
+  support a parent purity estimate on their own.
+- Compile, shell syntax and positional matching smoke checks passed.
+  The matched comparison produced a 24,376-source roster containing
+  6,589 separate opened development rows.
+
 ## 2026-11-15 — verify the multi-field census and prepare the matched comparison
 
 - Census job 61328600 completed 0:0 in 16 s. Verified its source and

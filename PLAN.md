@@ -21,7 +21,10 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    spectroscopy products can support separate diagnostic checks. The
    historical 3,250-source reserve yielded zero qualifying references.
    Inventory prospective alternatives against the actual selected
-   photometric domain before any new outcome access.
+   photometric domain before any new outcome access. Use native DR11
+   Gaia DR3 source IDs as a distinct join key from archived model identity.
+   Inventory DR20 MINESweeper metadata and genuinely new DR19 Astra
+   lineage in the exact application frame with the values still closed.
 2. Select an observable working point and a stricter sensitivity contrast
    using opened development evidence. Lock the model, selection,
    validation rules and independent evidence before opening any new
