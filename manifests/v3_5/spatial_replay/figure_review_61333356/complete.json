@@ -1,0 +1,8 @@
+{
+  "parent_sha256": "2fffd6aba18c372cb33632efd4c15043564ae6667699682ec2d9885f397213dd",
+  "figure_code_sha256": "d390ae103982926f193d9e6029ce2d148676748c0573008690aa785ce54f37e7",
+  "outputs": {
+    "spatial_shells.pdf": "a4b5241d4c90308592b4da2484086ab77987149bb7ff1e64f067c43aedd1f8a2",
+    "spatial_shells.png": "ebfcdf1c0d1e6e5aee739e71fc0a5001da48b489c89d736c4f4808e1ad06924b"
+  }
+}

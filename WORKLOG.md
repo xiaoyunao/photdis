@@ -16,6 +16,8 @@
   projection coordinates and log colorbar ticks overlapped. Fixed
   the tick convention, spacing, and observed-zero coverage markers.
   Verified the tick values and four colorbar ticks with a focused render.
+  Rerender 61333356 passed visual review on the same 91 sweeps. Its
+  manifest binds the repaired map code and both image formats.
 
 ## 2026-11-15 — complete reference validation for regular production group 1
 
