@@ -17,6 +17,11 @@ inside 10 kpc. Baseline `8aba505` preserves the v3.3 research products.
    Apply the same observational eligibility to a separate opened
    reference cohort and retain zero application weights on those rows.
    Keep any application contamination claim tied to its own evidence.
+   Matched comparison 61328789 is submitted. Historical Gaia and
+   spectroscopy products can support separate diagnostic checks. The
+   historical 3,250-source reserve yielded zero qualifying references.
+   Inventory prospective alternatives against the actual selected
+   photometric domain before any new outcome access.
 2. Select an observable working point and a stricter sensitivity contrast
    using opened development evidence. Lock the model, selection,
    validation rules and independent evidence before opening any new

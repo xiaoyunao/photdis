@@ -13,7 +13,8 @@
   with an existing frozen grz dwarf score, shared near cuts for
   development, distance and signed Gaia diagnostics, and separate
   near/far/unresolved giant accounting. The synthetic design-weight
-  and matching smoke checks passed. No new outcomes opened.
+  and matching smoke checks passed. Submitted the matched comparison
+  as Slurm job 61328789. No new outcomes opened.
 
 ## 2026-11-15 — start the near-dwarf confirmation and production goal
 
