@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — finish full weak Gaia and move pending work to one node
+
+- Weak Gaia job 61390595 completed in 8m01s with 1,397,789 verified
+  PSFs at QRF median 5–10 kpc. Verified score and stress CSV checksums.
+- The shared queue left the diagnostic and selection steps pending.
+  Cancelled only these queued submissions and moved them to the
+  120-CPU regular allocation 61391246. Each step retains its own log
+  and uses its completion receipt on restart.
+
 ## 2026-11-16 — complete reference overlap and population-odds comparisons
 
 - Jobs 61390668 and 61390669 completed. Copied checksum-verified compact

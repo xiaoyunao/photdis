@@ -46,7 +46,7 @@ def save(fig,name,rows,sources,figures,manifests):
     plt.close(fig)
     csv_path = manifests/f'{name}.csv'
     with csv_path.open('w') as f:
-        writer = csv.DictWriter(f,fieldnames=list(dict.fromkeys(k for r in rows for k in r)))
+        writer = csv.DictWriter(f,fieldnames=list(dict.fromkeys(k for r in rows for k in r)),lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     files = {f'{name}.{suffix}':digest(figures/f'{name}.{suffix}') for suffix in ('png','pdf')}

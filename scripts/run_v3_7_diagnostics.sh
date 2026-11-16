@@ -60,7 +60,7 @@ selection() {
     if [ "$error" -ne 0 ]; then
         return 1
     fi
-    step selection_summary 4 24G "$program" summarize
+    step selection_summary 4 24G "$program" report
 }
 
 selection &

@@ -39,7 +39,7 @@ def collect(stage,source,root):
         if name in SMALL:
             with path.open() as f, (output/name).open('w') as g:
                 reader = csv.DictReader(f)
-                writer = csv.DictWriter(g,fieldnames=reader.fieldnames)
+                writer = csv.DictWriter(g,fieldnames=reader.fieldnames,lineterminator="\n")
                 writer.writeheader()
                 writer.writerows(r for r in reader if SMALL[name](r))
             compact[name] = dict(complete_sha256=digest,
