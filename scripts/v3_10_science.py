@@ -57,7 +57,7 @@ def validation(side, selection, inputs):
     path = verified(marker.parent/'references.npz',r['outputs']['references.npz'])
     t = read_columns(path,('TYPE','ls_id','r','g0','r0','RA','DEC','evaluation_row','sky_role','class_label',
         'gaia_state','reference_kpc','specdis_quality','specdis_kpc','spdist_quality','spdist_kpc',
-        'qrf_quantiles_kpc','redrock_quality_assessed','redrock_SPECTYPE'))
+        'qrf_quantiles_kpc','redrock_quality_assessed','redrock_SPECTYPE','rvs_logg','rvs_teff','rvs_feh'))
     j = unique_join(t['ls_id'],selection['ls_id'])
     keep = (j>=0)&t['evaluation_row']&(t['sky_role']==4)
     t = subset(t,keep)
@@ -102,8 +102,26 @@ def validation(side, selection, inputs):
                         stats.append(dict(side=side,gr_min=a,gr_max=b,class_label=label,
                             source=name,d_min=lo,d_max=hi,stage=stage,**distance_summary(
                             10+5*np.log10(t['qrf_quantiles_kpc'][v]),10+5*np.log10(d[v]))))
+    populations = []
+    los = (-np.inf,3.2,4.2,np.inf)
+    temps = (-np.inf,4500.,5500.,7000.,np.inf)
+    q = t['qrf_quantiles_kpc']
+    for name,d,good in (('SpecDis',t['specdis_kpc'],t['specdis_quality']),
+                        ('SPDist',t['spdist_kpc'],t['spdist_quality'])):
+        frame = (labels==2)&(s>=2)&good&(d>=5)&(d<10)
+        for a,b in zip(los[:-1],los[1:]):
+            for c,e in zip(temps[:-1],temps[1:]):
+                k = frame&(t['rvs_logg']>=a)&(t['rvs_logg']<b)&(t['rvs_teff']>=c)&(t['rvs_teff']<e)
+                if not k.any():
+                    continue
+                feh = t['rvs_feh'][k]
+                feh = feh[np.isfinite(feh)]
+                populations.append(dict(side=side,source=name,logg_min=a,logg_max=b,teff_min=c,teff_max=e,
+                    selected=int((k&(s==4)).sum()),feh_measured=len(feh),
+                    median_feh=float(np.median(feh)) if len(feh) else None,
+                    **distance_summary(10+5*np.log10(q[k]),10+5*np.log10(d[k]))))
     use = (s==4)&(labels==0)&np.isfinite(ref)
-    return summaries,stats,dict(RA=t['RA'][use],DEC=t['DEC'][use],distance=ref[use])
+    return summaries,stats,populations,dict(RA=t['RA'][use],DEC=t['DEC'][use],distance=ref[use])
 
 
 def cluster(parts):
@@ -175,13 +193,14 @@ def main():
     lock = check_templates()
     inputs = {}
     DEST.mkdir(parents=True,exist_ok=True)
-    counts,selection,stats,rows,refs = [],[],[],[],[]
+    counts,selection,stats,rows,refs,populations = [],[],[],[],[],[]
     for side in DOMAINS:
         parts,p = working_index(side,inputs)
-        a,b,c = validation(side,p,inputs)
+        a,b,c,ref = validation(side,p,inputs)
         selection.extend(a)
         stats.extend(b)
-        refs.append(c)
+        populations.extend(c)
+        refs.append(ref)
         l,lat = sky_coord(p['RA'],p['DEC'])
         good = p['state']==4
         rows.append(dict(l=l[good],b=lat[good],d=p['qrf_median_kpc'][good]))
@@ -191,6 +210,7 @@ def main():
     csv_rows(DEST/'working_sample_counts.csv',counts)
     csv_rows(DEST/'working_reference_selection.csv',selection)
     csv_rows(DEST/'working_reference_distances.csv',stats)
+    csv_rows(DEST/'intermediate_star_parameters.csv',populations)
     p,t = join(rows),join(refs)
     l,b = sky_coord(t['RA'],t['DEC'])
     n,m = len(p['d']),len(l)
