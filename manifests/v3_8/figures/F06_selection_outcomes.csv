@@ -1,0 +1,5 @@
+source,selection,reference_dwarfs,correctly_assigned_dwarfs,median_bias_pct,far_giants_assigned
+SpecDis,primary,1826,410,-25.212735987663393,3
+SPDist,primary,551,229,-10.614113783902763,2
+SpecDis,lower_dwarf,5958,3396,-10.23760631401666,23
+SPDist,lower_dwarf,2488,1908,0.6719721242105697,21

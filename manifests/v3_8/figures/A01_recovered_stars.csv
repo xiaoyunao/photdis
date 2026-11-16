@@ -1,0 +1,13 @@
+source,panel,selection,n,in_axes
+SpecDis,gr/reference_Mr,primary,5510,5510
+SpecDis,gr/reference_Mr,new,9773,9773
+SpecDis,rvs_teff/rvs_logg,primary,5510,5403
+SpecDis,rvs_teff/rvs_logg,new,9773,9735
+SpecDis,rvs_feh/rvs_logg,primary,5510,5389
+SpecDis,rvs_feh/rvs_logg,new,9773,9617
+SPDist,gr/reference_Mr,primary,3170,3170
+SPDist,gr/reference_Mr,new,6097,6097
+SPDist,rvs_teff/rvs_logg,primary,3170,3168
+SPDist,rvs_teff/rvs_logg,new,6096,6096
+SPDist,rvs_feh/rvs_logg,primary,3170,3159
+SPDist,rvs_feh/rvs_logg,new,6096,6028

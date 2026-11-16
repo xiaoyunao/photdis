@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "data/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "scripts/v3_8_branches.py": "b629d92e3eea72278373ad48551c94d63f31725fbd8a06773d2955f696d336a9"
+  },
+  "exclusions": {
+    "blue_non_psf": 0,
+    "blue_unverified_type": 0,
+    "SpecDis_non_psf": 0,
+    "SpecDis_unverified_type": 0,
+    "SPDist_non_psf": 0,
+    "SPDist_unverified_type": 0,
+    "DR20_MINESweeper_non_psf": 0,
+    "DR20_MINESweeper_unverified_type": 0,
+    "DR20_APO_non_psf": 0,
+    "DR20_APO_unverified_type": 0
+  },
+  "n_test": 48,
+  "n_anchors": 32,
+  "patch_mass": 0.03,
+  "outputs": {
+    "F08_luminosity_branches.pdf": "04ee2d2c829871637537796f14edb7f00494f202ba169df196d012e3c6418ccd",
+    "branch_curves.npz": "c257baf596b44da913cc8f67a27ed85e08863c46b65c6b3dca4087d968cff90a",
+    "F08_luminosity_branches.png": "f826f77d925708e264e2d8f72e1bd53b1182a07cef1b766aedfb13620829274d",
+    "anchors.csv": "f2ddba4edd1a8d4d2359a38e6e86d1add9c4b6cc2ce9b64fa82a11bc0e063177",
+    "cases.csv": "807bd26b12727bf9d8838b46e1a5113b7f1303e1e9aeb975fd58932042582bf6"
+  }
+}

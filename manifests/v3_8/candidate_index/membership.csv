@@ -1,0 +1,17 @@
+status,rows,lo_kpc,hi_kpc,shell_rows
+evaluated_reject,2442324,0.0,1.0,32497
+evaluated_reject,2442324,1.0,5.0,937261
+evaluated_reject,2442324,5.0,10.0,930522
+evaluated_reject,2442324,10.0,inf,542044
+published_primary,7672431,0.0,1.0,2952829
+published_primary,7672431,1.0,5.0,4566484
+published_primary,7672431,5.0,10.0,153082
+published_primary,7672431,10.0,inf,36
+confirmed_addition,124877,0.0,1.0,22339
+confirmed_addition,124877,1.0,5.0,94227
+confirmed_addition,124877,5.0,10.0,8297
+confirmed_addition,124877,10.0,inf,14
+missing_nominal_gate,1006577,0.0,1.0,10535
+missing_nominal_gate,1006577,1.0,5.0,611260
+missing_nominal_gate,1006577,5.0,10.0,336678
+missing_nominal_gate,1006577,10.0,inf,48104

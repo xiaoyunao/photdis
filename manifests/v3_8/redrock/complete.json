@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v2_1/nonstellar_assessed_psf.npz": "3310d5d0c28471c100638a6873014292226da46b377c5e1eebb93b39ab2dbd84",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "scripts/v3_8_redrock.py": "75ef1b3f2276027a327d61abba4c6a24cef91b2f2213a28d1ff991e747feb8a9"
+  },
+  "excluded_morphology": {
+    "unmatched_native_owner": 523559,
+    "archived_other_morphology": 1000,
+    "ambiguous_owners": 0
+  },
+  "missing_replayed": 1120,
+  "outputs": {
+    "redrock.csv": "1f4e337938f97288c546eda08ecea82df1264f6900807f7dbd4d872c561afaf1",
+    "controls.npz": "fcac1927f31bb6400661e1cf12e0b707c6fda431bf7e8b46f4336f6cfbfc4f48"
+  }
+}

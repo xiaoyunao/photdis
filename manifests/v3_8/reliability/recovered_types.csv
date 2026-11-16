@@ -1,0 +1,7 @@
+source,group,n,reliable_parameters,robust_dwarf,transition_region,class_dwarf,class_giant,history
+SpecDis,primary,5510,3926,1829,2070,1826,40,5510
+SpecDis,newly_recovered,9773,8595,4145,4832,4132,25,9773
+SpecDis,rejected_both,48928,38022,18621,18050,18521,475,48928
+SPDist,primary,3170,2298,553,1674,551,13,3170
+SPDist,newly_recovered,6097,5273,1948,3404,1937,22,6097
+SPDist,rejected_both,36159,27380,11447,14188,11362,398,36159

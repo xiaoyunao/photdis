@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "data/v3_7/selection/complete.json": "851348a2e1106c7860402a38a8cc6e33e246e1035e8347f843b43acf77de8cd1",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "scripts/v3_8_candidate_index.py": "f20bb7001b1bcdf5cc588a69d2c60fe1d858d6d34567238d464e9cbd7bed0034"
+  },
+  "status_codes": {
+    "0": "evaluated_reject",
+    "1": "published_primary",
+    "2": "confirmed_addition",
+    "3": "missing_nominal_gate"
+  },
+  "excluded_morphology": {
+    "non_psf": 0,
+    "unverified_type": 0
+  },
+  "note": "Sparse index omits known rejects. Unknown-gate rows are included with code 3 and carry no decision.",
+  "outputs": {
+    "membership.npz": "a65ad6f651d66b5e3c5f8e70fd59ff04d36104b8fa80268e459b177514f0b9c2",
+    "membership.csv": "2cb1d452d61579084b9b898933460ea1ce1a02f2dae604814644f0fa512022a8"
+  }
+}

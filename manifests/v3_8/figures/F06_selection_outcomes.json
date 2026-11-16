@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "reference.csv": "5e9b297058d6baa1c43f74e88b3a7473579ac857a173e1e73b95c270922720ae",
+    "predicted_composition.csv": "47a82fdb0876bbcf106ff366fac797e86575ae4e1a4256f8302ed4a8c1700581"
+  },
+  "outputs": {
+    "F06_selection_outcomes.csv": "ab977c7ba9c172405f415f71d4ce98466ee38a9f124d0dd99c19ea4fd4826a76",
+    "F06_selection_outcomes.pdf": "e84b592a0d84c511cb8c9037d7450e4681485998288fc2b80f4623743acfcfee",
+    "F06_selection_outcomes.png": "827ede56b090a7368a263ec7589c91b478dfd34667783460143a19b2f5b6b112"
+  }
+}

@@ -1,0 +1,9 @@
+scope,spectype,selection,controls,passes,median_5_10
+Archived MWS labels,GALAXY,primary,3001,413,71
+Archived MWS labels,GALAXY,candidate,3001,686,163
+Archived MWS labels,QSO,primary,6795,330,140
+Archived MWS labels,QSO,candidate,6795,725,365
+Qualified DR1 Redrock subset,GALAXY,primary,415,99,17
+Qualified DR1 Redrock subset,GALAXY,candidate,415,131,28
+Qualified DR1 Redrock subset,QSO,primary,6735,317,135
+Qualified DR1 Redrock subset,QSO,candidate,6735,707,357

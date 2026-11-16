@@ -1,0 +1,41 @@
+{
+  "job": "61393179",
+  "excluded_morphology": {
+    "non_psf": 0,
+    "unverified_type": 0
+  },
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_8_direct_figures.py": "09f402a6e9830a611ef157cf79b60749323c67c2b465af2ddbd04ed8dd680994",
+    "data/v3_7/selection/complete.json": "851348a2e1106c7860402a38a8cc6e33e246e1035e8347f843b43acf77de8cd1"
+  },
+  "outputs": {
+    "F04_catalog.csv": "26ce6c929af5180dc2c29399117a69c63b2ea854a8653461131bf906de066f4b",
+    "F04_dwarfs_qrf.pdf": "3632f3cf048b36ae16bbb6e348663d3ddfde2dec47e7c1e84a709430b9d2ecfc",
+    "F04_primary.pdf": "b57f3298ec3410df38481e5f081d2eeda78ed9e7228b50d70c7f0195c4d2aaa3",
+    "F04_dwarfs_reference.png": "ad706df9f0fb60af1a9605fbb714265ae48f541b7a8872852f1b57003a2d2b50",
+    "F04_references.csv": "f150387856f253370324aaf54241da398e93859eca168665ed4070cd5ca7d97b",
+    "F04_giants_reference.png": "e775aed7d005f357541f4ab3a48cd74a286d77a13318670528ebe923d5467b3b",
+    "F04_candidate_known.png": "a49f776e401d99f5ed82d999a5697ef5e1f7e7ae654d798fb4d5f10bf4ce9bfc",
+    "F04_primary.csv": "a48bf154d6f83f72e73aa14a47ce51798b2626e608a192a6fadb17b07203d0fc",
+    "F04_giants_qrf.png": "be309946e6a244f956486dbebf88ab7469356b09be136ce4033b75161b86af6c",
+    "F04_references.pdf": "3c9de792a1a4c3b03240531ed303d15b0e8ad8a420eba1d96ca2f2738674b01f",
+    "F04_primary.png": "e6ba4832dad81cab757ac5c5dbea1188c546f2c13e2725a94a4c974251d386f2",
+    "F04_dwarfs_qrf.csv": "4d59da6ad9be5fae568d3eea10d036af46dc39d325c3d20879e7cfd5a767137c",
+    "F04_dwarfs_qrf.png": "128e0c51c7f1014881e6be0604172c55122c908ff7555ee94e6a6afe41f2bbcd",
+    "F04_references.png": "3f541e41f079cbe2df4572dc2e9f7d3054280393ae1eac05ac3378dcc31cbcc9",
+    "F04_giants_reference.pdf": "95dcd5ba44c9856f7525a2cc60b464669d8f34d063a5ef82370121bfdf2c7f97",
+    "F04_candidate_known.pdf": "89f66cdaa76d754997f703db07fe35920215d5b0d57dbcc13b94012294c39004",
+    "F04_catalog.pdf": "9270a9a843a2808638e0a1d981461df234e984a8ece50de95cf3a701be0d0545",
+    "F04_candidate_known.csv": "85ed75c664a11275847419eb9d3ce3fae47f630dffa199a3bf7778c20d4b8e72",
+    "F04_giants_qrf.csv": "a11ddb98d7363c86fae8023d2591f90cd130b863445e3c64430bd7dbaf3079aa",
+    "F04_dwarfs_reference.csv": "de549124270841eb53e505b844c4d0cc6f1e87cf06f784d9b7c06e92ad03b216",
+    "reference_roles.csv": "62730d25e998c3dc1dbf7d348567df8c63593e4b963fac0abd58b14a386d6b4d",
+    "F04_giants_reference.csv": "2bb4ad547d7154efbffc274e2c2f56d51a3e6d45442d7ea95ebd4f109d270291",
+    "F04_dwarfs_reference.pdf": "45751ce205072132aa133b550b5a537f41c16f9c573d4af7effd2a5e95949b39",
+    "F04_giants_qrf.pdf": "46f5fc93d7e8ebec351e6869d333d62852bfac78e8192ed9db461f306ed307d6",
+    "F04_catalog.png": "10f2f25b8826b83a981e393f2192695a5d02c21c42941a00199647afcf5fdb5f"
+  }
+}

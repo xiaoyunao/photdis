@@ -1,0 +1,10 @@
+{
+  "inputs": {
+    "recovered_types.npz": "7a7c38f5a8b55008da5003dc66c6d167b4fc3e3507271ffe69e226868ad7a120"
+  },
+  "outputs": {
+    "A01_recovered_stars.csv": "f0e16adf143d7e54fa92acdaed4c6cdcdb487ef8a9ac8b0695e89cd9e0a8f83a",
+    "A01_recovered_stars.pdf": "d44c3432824f54d18d26110bb667fcf6ae50b4dbe871e9c7b948a0501188061e",
+    "A01_recovered_stars.png": "47f15b074084c5bd552bb2f90a4bacd3e1b7aedf3dc7509419e6db355212cc62"
+  }
+}

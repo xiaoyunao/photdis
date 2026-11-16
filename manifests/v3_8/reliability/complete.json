@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "configs/v3_7_use_domains.json": "8323b058a586326e20e0b8e633da95dc6c112aad3fd1a8f8ce1b248aedd371a5",
+    "scripts/v3_8_reliability.py": "5858565e052adcc74a4930624c0f3af8f3e3e7e8b15ad25461c67946db3c8ab4"
+  },
+  "excluded_morphology": {
+    "non_psf": 0,
+    "unverified_type": 0
+  },
+  "outputs": {
+    "reference_gap.csv": "55b2a4ba505e0870598a78a1432ada2c271158dc1516f27e8aa058c82e6cb506",
+    "recovered_types.csv": "606baf3dc1322b640d30465d74229cb9931fb0427e94f9ea7087e63efd33c3b7",
+    "interval_calibration.csv": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8",
+    "recovered_types.npz": "7a7c38f5a8b55008da5003dc66c6d167b4fc3e3507271ffe69e226868ad7a120",
+    "calibrated_intervals.npz": "59c976f9b9b9c6a90aa14a0a01f23f8bb5381319e15c7a6386a3e87b79efbcbb"
+  },
+  "reference_gap": "Qualified-or-available is limited to the searched frozen reference inventory and includes nominal numerical flags."
+}

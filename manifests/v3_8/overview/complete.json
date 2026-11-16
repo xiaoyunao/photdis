@@ -1,0 +1,23 @@
+{
+  "job": "61393179",
+  "excluded_morphology": {
+    "non_psf": 0,
+    "unverified_type": 0
+  },
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_8_direct_figures.py": "09f402a6e9830a611ef157cf79b60749323c67c2b465af2ddbd04ed8dd680994"
+  },
+  "outputs": {
+    "F05_heliocentric_projection.pdf": "db85594f9bb9bba57c719458dfaf2dd2a9e371c01f1cd12c97eb933876e0b45f",
+    "F01_catalog_overview.csv": "94f02a3a09f039e7dda94a8c57234f36b5af6cc2b1422253ffb06b1964f7c236",
+    "F01_catalog_overview.npz": "4acf8e142cad494d09b2556925cb399a3599b5aa8305e068b67dff9a7833d539",
+    "F05_heliocentric_projection.npz": "ca06d134a7a666a7a48795bbb36bd04a2412ba47756e175f3c145699db66157d",
+    "F01_catalog_overview.pdf": "4d32d9f5cdc704c26e742166e968864dfaba13efc666049d301ecfc29dd8196c",
+    "F01_catalog_overview.png": "d015a6d4927039167550ed1f673982b1edf3094befbe40b5a8c7e3e6d3578863",
+    "F05_heliocentric_projection.csv": "ab6d86bf81e7addc3c67450ff97f27d9c7f79ffbf30383c7f425407de33810fa",
+    "F05_heliocentric_projection.png": "79f9856dc2fe3a30db690d3ea6ad95a7c8beb6f7d229a43d511a52791a725522"
+  }
+}

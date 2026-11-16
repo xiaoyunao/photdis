@@ -1,0 +1,33 @@
+{
+  "job": "61393179",
+  "excluded_morphology": {
+    "Gaia": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SpecDis": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SPDist": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_8_direct_figures.py": "09f402a6e9830a611ef157cf79b60749323c67c2b465af2ddbd04ed8dd680994"
+  },
+  "outputs": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23",
+    "F03_same_star_cmd.pdf": "dd0ff87ec428a75376812f09ebf8cfb14a679625457178cbb7b077775302f9ec",
+    "F03_same_star_cmd.csv": "c50f1d273f9264ced812c2a98d4855ca55da6c4cf10a083144e7af504d388c21",
+    "F02_direct_distances.csv": "71deef559ec6b1095c3e7e2127d6926f11475c2f729da8b04c22cb4f209ae706",
+    "F02_direct_distances.pdf": "d3a12560db3a9bb17aa931dc2732fa5d0d096b12aa66a24b2a990e2ea47d5bb1",
+    "F03_same_star_cmd.npz": "be44552cd97c74685c220e76bf3556c91e629a23ea8ca3137ed84deeb9472cd2",
+    "F02_direct_distances.npz": "77f2667314398531c3a4cb4b05032e45e4fa768aca3b1870cb93251c2206e64f"
+  }
+}
