@@ -1,0 +1,47 @@
+{
+  "job": 61394932,
+  "scientific_status": "research contrast only",
+  "reference_window_half_width_mag": 0.5,
+  "cohorts": [
+    {
+      "cohort": "faint_blue_near",
+      "case_count": 12,
+      "frozen_median_mass": 5.262961367485561e-06,
+      "candidate_median_mass": 0.16750866158341882,
+      "median_paired_change": 0.16742941930927213,
+      "increased": 12,
+      "decreased": 0,
+      "unchanged": 0
+    },
+    {
+      "cohort": "blue_2_to_5",
+      "case_count": 12,
+      "frozen_median_mass": 0.03856463372539931,
+      "candidate_median_mass": 0.030917122839864364,
+      "median_paired_change": -0.007647510885534947,
+      "increased": 0,
+      "decreased": 12,
+      "unchanged": 0
+    },
+    {
+      "cohort": "far_giant",
+      "case_count": 12,
+      "frozen_median_mass": 0.019879767342866672,
+      "candidate_median_mass": 0.016019648584863988,
+      "median_paired_change": -0.0032507771262951235,
+      "increased": 0,
+      "decreased": 12,
+      "unchanged": 0
+    },
+    {
+      "cohort": "normal",
+      "case_count": 12,
+      "frozen_median_mass": 0.9273396023482878,
+      "candidate_median_mass": 0.8791386482919731,
+      "median_paired_change": -0.00012165768274347011,
+      "increased": 0,
+      "decreased": 12,
+      "unchanged": 0
+    }
+  ]
+}

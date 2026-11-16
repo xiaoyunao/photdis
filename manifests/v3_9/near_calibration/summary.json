@@ -1,0 +1,181 @@
+{
+  "array_job": 61394763,
+  "rows": 1142280,
+  "parts": 8156,
+  "shards": [
+    {
+      "shard": 0,
+      "rows": 82906,
+      "parts": 585,
+      "receipt": "data/v3_9/existing/pdf/00/complete.json",
+      "receipt_sha256": "633b5cac116e582640105f619ab8c7fece565ce824b13538b72afa28907de5e7",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 1,
+      "rows": 73355,
+      "parts": 553,
+      "receipt": "data/v3_9/existing/pdf/01/complete.json",
+      "receipt_sha256": "1af5df07c7e8a34050ade5fc37e8ef797beb55b5f1ccd335ffa8525e6531ed02",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 2,
+      "rows": 50355,
+      "parts": 382,
+      "receipt": "data/v3_9/existing/pdf/02/complete.json",
+      "receipt_sha256": "1398486ea743deee120cb8e84c8499b8f034d2f0d7e7787f23d3473598444ddd",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 3,
+      "rows": 85517,
+      "parts": 574,
+      "receipt": "data/v3_9/existing/pdf/03/complete.json",
+      "receipt_sha256": "da3c41f0fb465f8aa641441fff59c6354fbb0f807a16679675122a55cd0a1e0f",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 4,
+      "rows": 69212,
+      "parts": 522,
+      "receipt": "data/v3_9/existing/pdf/04/complete.json",
+      "receipt_sha256": "0dbc3d8453bf78cb4f725a4a3e4b508211d535b73d46e13e0deddc881b22bf46",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 5,
+      "rows": 63103,
+      "parts": 475,
+      "receipt": "data/v3_9/existing/pdf/05/complete.json",
+      "receipt_sha256": "e8ee2df316d4537ffa23555f9716aca0a35e3d0fe6bec1f7b847b948f87a657a",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 6,
+      "rows": 85346,
+      "parts": 590,
+      "receipt": "data/v3_9/existing/pdf/06/complete.json",
+      "receipt_sha256": "539d25ad370887d950da4c9261ded19bb5dedcb6980dd137911ebec4ae7b7e79",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 7,
+      "rows": 59209,
+      "parts": 429,
+      "receipt": "data/v3_9/existing/pdf/07/complete.json",
+      "receipt_sha256": "d6eaf3a6b8a310cce85c8ec63eb19696192d72d13b11935a0ad1e0a630858abe",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 8,
+      "rows": 75388,
+      "parts": 545,
+      "receipt": "data/v3_9/existing/pdf/08/complete.json",
+      "receipt_sha256": "bca26ee3cdf00fb9d17dad9cdacea2f733dd1f9b7d1636638bc83370c7ab3c52",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 9,
+      "rows": 61127,
+      "parts": 426,
+      "receipt": "data/v3_9/existing/pdf/09/complete.json",
+      "receipt_sha256": "467c18c324d98a88a680391fcba7759d31e7a4e9fa72b8b6eb80425697d72485",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 10,
+      "rows": 78822,
+      "parts": 588,
+      "receipt": "data/v3_9/existing/pdf/10/complete.json",
+      "receipt_sha256": "65738e89fa55118d5cb38b63144fcfdd3ef9b3605c7df876dedd827fb3bc961e",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 11,
+      "rows": 71146,
+      "parts": 484,
+      "receipt": "data/v3_9/existing/pdf/11/complete.json",
+      "receipt_sha256": "ba00173b1fe80a74c2c8b4483d7820ab1ddc01d257b74d81fe7d5ed7e7c96226",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 12,
+      "rows": 81558,
+      "parts": 543,
+      "receipt": "data/v3_9/existing/pdf/12/complete.json",
+      "receipt_sha256": "88c39a7fef3ee8aed2303dd1524e9f39a86cad46c74e06c7114a6aaf9848c76d",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 13,
+      "rows": 74314,
+      "parts": 522,
+      "receipt": "data/v3_9/existing/pdf/13/complete.json",
+      "receipt_sha256": "018c63c361b3b61246fd246ff517e68bb7c9849a9d1f39eea113260e4d12e75e",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 14,
+      "rows": 63129,
+      "parts": 445,
+      "receipt": "data/v3_9/existing/pdf/14/complete.json",
+      "receipt_sha256": "bebb78f970478c571f4db951c289401ae7364d64d02d2d24ea7511ce4620585e",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    },
+    {
+      "shard": 15,
+      "rows": 67793,
+      "parts": 493,
+      "receipt": "data/v3_9/existing/pdf/15/complete.json",
+      "receipt_sha256": "3c6569a1d67bd728e65356d749e9618a0197fda274c69ff45366806cfb3e3452",
+      "calibration_sha256": "22f28442127c8754331be3b403632644a0045c6393fca31be5847e8ecfd2ead8"
+    }
+  ],
+  "max_quantile_cdf_error": 2.090543471666706e-08,
+  "max_shell_probability_error": 0.0,
+  "shells": [
+    {
+      "lo_kpc": 0,
+      "hi_kpc": 2,
+      "frozen_probability_sum": 1125056.5120997147,
+      "calibrated_probability_sum": 1116133.847546914,
+      "difference": -8922.664552800823
+    },
+    {
+      "lo_kpc": 2,
+      "hi_kpc": 5,
+      "frozen_probability_sum": 10444.83960553168,
+      "calibrated_probability_sum": 19227.862026011433,
+      "difference": 8783.022420479752
+    },
+    {
+      "lo_kpc": 5,
+      "hi_kpc": 10,
+      "frozen_probability_sum": 304.22017273627847,
+      "calibrated_probability_sum": 116.13236657844645,
+      "difference": -188.087806157832
+    },
+    {
+      "lo_kpc": 10,
+      "hi_kpc": 20,
+      "frozen_probability_sum": 427.5747097046712,
+      "calibrated_probability_sum": 281.33366653530425,
+      "difference": -146.24104316936695
+    },
+    {
+      "lo_kpc": 20,
+      "hi_kpc": 50,
+      "frozen_probability_sum": 3240.196269437786,
+      "calibrated_probability_sum": 277.61004305588455,
+      "difference": -2962.5862263819017
+    },
+    {
+      "lo_kpc": 50,
+      "hi_kpc": null,
+      "frozen_probability_sum": 2806.657142874838,
+      "calibrated_probability_sum": 6243.214350905072,
+      "difference": 3436.557208030234
+    }
+  ]
+}

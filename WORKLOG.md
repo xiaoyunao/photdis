@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the near PDF and resolve the branch trial
+
+- All 16 calibrated PDF shards completed for 1,142,280 sources and 8,156 data
+  parts. Verified disjoint part ownership, per-shard checksums for the
+  shell tables, and total shell mass conservation. Added compact receipts.
+- Branch job 61394932 completed 48 cases and 32 disjoint anchors. The
+  candidate increased reference-window probability in all 12 faint-blue
+  nearby cases and decreased it in each of the other 36 controls. Keep
+  the frozen default and make the candidate PDF available for diagnostics.
+- Native FITS header inventories passed for 1,600 southern and 526 northern
+  sweeps. These counts describe input files. Native row-level extraction is
+  running. Scientific evidence and scope are in docs/v3_9_result.md.
+
 ## 2026-11-16 — resume science jobs after Perlmutter reconnection
 
 - Regular and shared CPU scheduling resumed. Kept the original DAG,

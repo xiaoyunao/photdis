@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "scripts/v3_9_branches.py": "9df0a1699f1ecf9bb0080593ba2f0c995e13bfd760b99deaaf203f031934b0f6",
+    "data/v3_8/branches/complete.json": "06c176d6375bc287585a04813a10e36729f9936c17f75296036234952ae4988c",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2"
+  },
+  "outputs": {
+    "cases.csv": "7c40df022aac5c5d458a5fa993be5fb7dfa235dc276bfdd2748c8e59a21f5bbc",
+    "band_residuals.csv": "ff7859660a6a3519ed98eb4c548c9b5b47b54ebf6c1de62cfc5e8af2b58f8dbb",
+    "distance_pdf_control.npz": "17253badc78c0dc2fb367719f14fc48e81e97d56e5b35c2a26870f662deb9189"
+  },
+  "test": 48,
+  "anchor": 32,
+  "job": "61394932",
+  "candidate_state": "development comparison; no change to production PDF"
+}

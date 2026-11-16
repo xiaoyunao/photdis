@@ -1,0 +1,18 @@
+{
+  "south": {
+    "job": 61394869,
+    "sweeps": 1600,
+    "raw_rows": 3561828221,
+    "excluded_headers": 0,
+    "receipt": "data/v3_9/expansion/south/inventory.json",
+    "receipt_sha256": "b87d9d8e080b23643c759680d99fefe5a94946a9d970cf12ebf9c3f1f9b25d66"
+  },
+  "north": {
+    "job": 61394870,
+    "sweeps": 526,
+    "raw_rows": 405790233,
+    "excluded_headers": 0,
+    "receipt": "data/v3_9/expansion/north/inventory.json",
+    "receipt_sha256": "563038548abbc387bdda67eec193ef13f44cf17aad1b323576a652d13f99fac3"
+  }
+}
