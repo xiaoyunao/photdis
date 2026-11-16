@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-16 — use the actual faint photometric noise frame
+
+- Replaced Gaia/spectroscopy-selected noise donors with a deterministic
+  sample of the native southern faint sweep catalogs. Both achieved error
+  tiers and the 22–23 mag interval can contribute without reference IDs.
+- Native donor tier fixture and seam sidecar restart and owner-conservation
+  checks passed. Slurm job 61395045 uses the revised donor frame.
+
 ## 2026-11-16 — verify the release comparison and match the survey seam
 
 - Added one-to-one physical matching across the DR11 ownership seam.

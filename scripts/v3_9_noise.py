@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Transfer real faint-end measurement errors onto held-out native templates."""
+from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 from pathlib import Path
@@ -7,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from photdis.reference_v1_4 import unique_join
-from photdis.stage1 import require_compute
+from photdis.stage1 import galactic, require_compute
 from photdis.v3.data import stable_rank
 from photdis.v3.metrics import distance_summary
 from photdis.v3_3 import frozen_qrf
@@ -18,10 +19,51 @@ from v3_6_distance_evidence import OUT as EVIDENCE
 from v3_6_reference_photometry import OUT as PHOTO
 from v3_6_vac_distances import read_columns
 from v3_8_candidate import read_cache
-from v3_9_catalog import OUT
+from v3_9_catalog import OUT, thin
 from v3_9_references import join, subset
 
 ROOT = OUT/'noise_control'
+
+
+def faint_donors(source):
+    base = OUT/'south/photo'/Path(source['filename']).stem
+    marker = base/'complete.json'
+    inputs = json.loads(marker.read_text())['outputs']
+    parts = []
+    keys = ('ls_id','TYPE','r','g0','r0','error_grz','row_state')
+    for name,h in inputs.items():
+        if not name.endswith('_south_faint.npz'):
+            continue
+        t = read_columns(verified(base/name,h),keys)
+        if not np.all(t['TYPE']=='PSF'):
+            raise ValueError('Faint measurement noise must come from verified PSF rows')
+        for tier in (6,7):
+            use = (t['row_state']==tier)&np.isfinite(t['error_grz']).all(axis=1)
+            j,_ = thin(t,use,16,3940+tier)
+            if len(j):
+                parts.append(subset(t,j))
+    return parts, marker
+
+
+def donor_frame():
+    # Draw from the photometric parent so a faint source need not have an
+    # astrometric or spectroscopic identification to supply its measured error.
+    inventory = OUT/'south/inventory.json'
+    sample = []
+    for group in json.loads(inventory.read_text())['groups']:
+        selected = []
+        for source in group:
+            ra0,lo,ra1,hi = source['bounds_deg']
+            ra = (ra0+.5*((ra1-ra0)%360))%360
+            _,lat = galactic(np.array([ra]),np.array([(lo+hi)/2]))
+            if abs(lat[0])>32:
+                selected.append(source)
+        order = sorted(selected,key=lambda s:s['filename'])
+        if order:
+            sample.extend(order[i] for i in np.unique(np.linspace(0,len(order)-1,3,dtype=int)))
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        chunks = list(pool.map(faint_donors,sample))
+    return join([p for parts,_ in chunks for p in parts]), [inventory,*[marker for _,marker in chunks]]
 
 
 def main():
@@ -40,15 +82,9 @@ def main():
     i,mag,err = i[use],mag[use],err[use]
     if not np.all(phot['TYPE'][j[i]]=='PSF'):
         raise ValueError('Faint-noise templates must be native PSFs')
-    use_archive = OUT/'south/reference'
-    refs = []
-    source_paths = sorted(use_archive.glob('[0-9][0-9].json'))
-    for marker in source_paths:
-        for name,digest in json.loads(marker.read_text())['outputs'].items():
-            refs.append(read_columns(verified(marker.parent/name,digest),
-                  ('ls_id','TYPE','region','r','g0','r0','error_grz','row_state')))
-    donors = join(refs)
-    donors = subset(donors,(donors['region']=='south_faint')&(donors['TYPE']=='PSF'))
+    donors, source_paths = donor_frame()
+    if not donors:
+        raise ValueError('Native sweep sampling found no qualifying faint noise donors')
     original,_,path = prepare()
     qrf = original['qrf']
     rng = np.random.default_rng(3937)
@@ -76,6 +112,8 @@ def main():
                 snr = (2.5/np.log(10))/sigma
                 factor = 1+rng.normal(size=sigma.shape)/snr
                 keep = (factor>0).all(axis=1)
+                if not keep.any():
+                    continue
                 noisy = expected[keep]-2.5*np.log10(factor[keep])
                 noisy_err = sigma[keep]/factor[keep]
                 q0 = frozen_qrf(qrf,expected[keep],err[t][keep],ids[keep])
