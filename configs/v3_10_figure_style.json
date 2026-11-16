@@ -1,0 +1,11 @@
+{
+  "baseline_commit": "c9352358f740fc7564df7a30bd79e9e34a059079",
+  "files": {
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4",
+    "scripts/v3_8_direct_figures.py": "dc6ac53983920bf2f8c1752a8dddf3215476cc561bd02c518c097ac2059859b0"
+  },
+  "baseline_files": {
+    "scripts/photdis_figure_style.py": "bddb761087b3e1b79955ccd5a27b0e507c4c4f7af6cf3b59e491da7ef0d92fb4",
+    "scripts/v3_8_direct_figures.py": "09f402a6e9830a611ef157cf79b60749323c67c2b465af2ddbd04ed8dd680994"
+  }
+}

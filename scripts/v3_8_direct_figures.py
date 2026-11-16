@@ -67,19 +67,28 @@ def reference_figures(dest):
     photo = read_columns(read_cache(PHOTO,'photometry.npz'),('catalog_row','ls_id','TYPE','magnitude'))
     if np.any(np.diff(photo['catalog_row'])<=0):
         raise ValueError('Reference photometry catalog keys must be unique and sorted')
-    f,axs = plt.subplots(2,3,figsize=(18,9),layout='constrained',sharex='col')
-    c,axes = plt.subplots(3,2,figsize=(13,15),layout='constrained',sharex=True,sharey=True)
-    distance_tables,cmd_tables,counts,cmd_counts = {},{},{},[]
+    cohorts = {}
     excluded = {}
-    for n,source in enumerate(SOURCES):
+    for source in SOURCES:
         a,excluded[source] = load_source(source,evidence)
         j = np.flatnonzero(a['primary'])
         k = np.searchsorted(photo['catalog_row'],a['catalog_row'][j])
         np.testing.assert_array_equal(photo['ls_id'][k],a['ls_id'][j])
         if not (photo['TYPE'][k]=='PSF').all():
             raise ValueError('Reference CMD needs verified native PSFs')
-        d,q = a['reference_kpc'][j],a['qrf_quantiles_kpc'][j]
-        mag = photo['magnitude'][k]
+        cohorts[source] = a['reference_kpc'][j],a['qrf_quantiles_kpc'][j],photo['magnitude'][k]
+    render_reference_figures(dest,cohorts)
+    return excluded
+
+
+def render_reference_figures(dest, cohorts, *,
+        distance_title='Distance validation · primary selection and qualified references outside QRF training'):
+    """The v3.8 distance and CMD plates, with interchangeable reference cohorts."""
+    f,axs = plt.subplots(2,3,figsize=(18,9),layout='constrained',sharex='col')
+    c,axes = plt.subplots(3,2,figsize=(13,15),layout='constrained',sharex=True,sharey=True)
+    distance_tables,cmd_tables,counts,cmd_counts = {},{},{},[]
+    for n,source in enumerate(SOURCES):
+        d,q,mag = cohorts[source]
         residual = 5*np.log10(q[:,2]/d)
         xgr = mag[:,0]-mag[:,1]
         ax,bx = axs[:,n]
@@ -87,15 +96,16 @@ def reference_figures(dest):
         rh = density(f,bx,d,residual,DIST,RES)
         ax.plot(DIST[[0,-1]],DIST[[0,-1]],ls='--',color=ORANGE,lw=1.5)
         bx.axhline(0,ls='--',color=ORANGE,lw=1.25)
-        ax.set(xscale='log',yscale='log',title=f'{source}   N = {len(j):,}')
+        ax.set(xscale='log',yscale='log',title=f'{source}   N = {len(d):,}')
         bx.set(xscale='log',xlabel='Reference distance (kpc)')
         row = distance_summary(10+5*np.log10(q),10+5*np.log10(d))
-        counts[source] = dict(source=source,**row,distance_exterior=int(len(j)-dh.sum()),
-                              residual_exterior=int(len(j)-rh.sum()))
-        ax.text(.05,.94,f"Bias {100*row['median_relative']:+.1f}%   ·   NMAD {100*row['nmad_relative']:.1f}%",
-                transform=ax.transAxes,va='top',fontsize=11,
-                bbox={'facecolor':'white','edgecolor':'none','alpha':.83})
-        bx.text(.05,.06,f'{len(j)-rh.sum():,} outside axes',transform=bx.transAxes,fontsize=10,
+        counts[source] = dict(source=source,**row,distance_exterior=int(len(d)-dh.sum()),
+                              residual_exterior=int(len(d)-rh.sum()))
+        if len(d):
+            ax.text(.05,.94,f"Bias {100*row['median_relative']:+.1f}%   ·   NMAD {100*row['nmad_relative']:.1f}%",
+                    transform=ax.transAxes,va='top',fontsize=11,
+                    bbox={'facecolor':'white','edgecolor':'none','alpha':.83})
+        bx.text(.05,.06,f'{len(d)-rh.sum():,} outside axes',transform=bx.transAxes,fontsize=10,
                 bbox={'facecolor':'white','edgecolor':'none','alpha':.83})
         distance_tables.update({source+'_distance':dh,source+'_residual':rh})
         keep = np.isfinite(xgr)&np.isfinite(mag[:,1])
@@ -107,7 +117,7 @@ def reference_figures(dest):
             cmd_counts.append(dict(source=source,distance=title,rows=int(keep.sum()),outside=int(keep.sum()-hh.sum())))
     axs[0,0].set_ylabel('Photometric median distance (kpc)')
     axs[1,0].set_ylabel('Distance modulus residual (mag)')
-    f.suptitle('Distance validation · primary selection and qualified references outside QRF training')
+    f.suptitle(distance_title)
     axes[-1,0].set_xlabel('Dereddened g − r (mag)')
     axes[-1,1].set_xlabel('Dereddened g − r (mag)')
     for ax in axes[:,0]:
@@ -115,7 +125,6 @@ def reference_figures(dest):
     c.suptitle('Reference and photometric CMDs for the same stars')
     save(f,dest,'F02_direct_distances',counts.values(),dict(distance_bins=DIST,residual_bins=RES,**distance_tables))
     save(c,dest,'F03_same_star_cmd',cmd_counts,dict(color_bins=XCOL,absolute_bins=MABS,**cmd_tables))
-    return excluded
 
 
 def catalog():

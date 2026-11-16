@@ -1,5 +1,36 @@
 # PLAN
 
+## v3.10 — validate a photometry-only 2–10 kpc dwarf sample
+
+Use the full v3.9 Pro review, assistant message
+`864e677e-b124-5d26-ae9e-9b58f02d4dc1`, and baseline `a4b2bcb`.
+Require native verified PSFs. Gaia and spectroscopy supply reference evidence.
+
+1. Reuse the existing sky roles and original production scores. Join
+   qualified RVS and Redrock evidence. Compare one additional fit of the
+   same classifier family and limited SED treatment on fixed held-out rows.
+   Quantify class retention, leakage, accuracy and interval performance.
+   Use paired SpecDis and SPDist and analyze intermediate classes physically.
+2. Recover the 2,003 faint Gaia cases and the faint distant dwarf sample.
+   Test the low-luminosity branch, class likelihood and LF sensitivity on
+   disjoint held-out cases. Export normalized full PDFs and document the
+   adoption decision based on the controls.
+3. Join both actual production PDFs and availability states for all
+   verified seam pairs. Report paired distance, width, modes and shell
+   changes conditional on magnitude, color and sky position.
+4. Resolve dust-map and DECam coefficient units from the source references,
+   replay the same 311 PSFs, then test a few genuinely lower-latitude
+   fields with independent fixture, map support and crowding measurements.
+5. Publish an auditable working sample, observed selection function and one
+   controlled structure/system demonstration if supported by the evidence.
+
+The v3.8 figure recipe at `c935235` is the style authority. Share its figure
+functions, verify their checked-in checksums before rendering, and check
+the published baseline pixels. Regenerate the affected v3.9 views and use
+the same plate templates for all v3.10 figures. Keep the data and code
+receipts, technical scope and scientific validation in Git. Drafting the
+paper remains paused.
+
 ## v3.9 — completed native survey catalog expansion
 
 The [results](docs/v3_9_result.md), [catalog protocol](docs/v3_9_protocol.md)

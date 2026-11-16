@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — start v3.10 and recover the v3.8 rendering recipe
+
+- Read the complete Pro follow-up to `a4b2bcb` and opened a goal with
+  five scientific deliverables and the explicit v3.8 style constraint.
+- Reviewed the original renderers at `c935235`. v3.9 used a different
+  figure grid, density mapping, residual scale and sky point sizing.
+- Extracted the v3.8 distance/CMD data entrypoint and reused the original
+  Aitoff and heliocentric projection functions. Recorded renderer hashes.
+  The regression job compares rendered pixels to the original plates.
+
 ## 2026-11-16 — deliver the Photdis v3.9 survey extension
 
 - Delivery 61395046 completed 0:0. Reconciled 1,600 south and 526 north
