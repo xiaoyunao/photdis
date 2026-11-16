@@ -1,5 +1,9 @@
 # Photdis v3.9 扩展域验证图
 
+沿用 v3.8 模板重绘的三套距离对比、同星 CMD、逐源 Aitoff 和日心
+投影见[重绘入口](v3_10_protocol.md#图件)。下面的图件保存 v3.9
+首次发布时的绘制记录。
+
 每个天区有六组图，提供 300 dpi PNG 和单页 PDF。NERSC 图件根目录为
 `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_9/expansion/figures_labeled`，
 下设 `south_faint`、`south_low` 和 `north` 三个目录。

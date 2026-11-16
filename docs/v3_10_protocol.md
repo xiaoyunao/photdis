@@ -14,6 +14,16 @@ v3.8 `c935235` 是唯一绘图样式基准。距离对照、同星 CMD、
 像素。纠正后的 v3.9 扩展图单独写入 `data/v3_10/figures`，
 原图和科学数据继续留档。
 
+| 适用域 | Aitoff 预览 | 对照图 |
+| --- | --- | --- |
+| 南天暗端 | [逐源 Aitoff](../figures/v3_10/redraw/south_faint_aitoff.png) | [距离和残差](../figures/v3_10/redraw/south_faint_distances.png) |
+| 南天低纬 | [逐源 Aitoff](../figures/v3_10/redraw/south_low_aitoff.png) | [同星 CMD](../figures/v3_10/redraw/south_low_cmd.png) |
+| 北天 | [逐源 Aitoff](../figures/v3_10/redraw/north_aitoff.png) | [日心空间投影](../figures/v3_10/redraw/north_xyz.png) |
+
+三个域各有全体、矮星、巨星及其他类别的距离和 CMD 图。逐源
+地图按目录预测、合格参考、光谱矮星、光谱巨星各单独绘制。
+[原图像素回归记录](../manifests/v3_10/figures/regression/complete.json)
+
 ## 尘埃系数
 
 以两套标度在同一个 PS1 `g-r` 颜色上的红化量作为转换基准。
