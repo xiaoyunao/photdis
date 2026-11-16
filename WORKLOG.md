@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — register v3.7 and implement the full weak Gaia comparison
+
+- Read the complete Pro review of `34422f1`. Registered six work packages,
+  four fixed selection contrasts, both anchors and the odds sensitivity.
+- Added `configs/v3_7_selection.json`, `docs/v3_7_protocol.md` and
+  `scripts/v3_7_weak_gaia.py`. The Gaia program uses frozen native QRF PDFs,
+  signed parallaxes and paired sky-block intervals.
+- Compilation, nominal stress-grid identity and block interval smoke checks
+  passed. NERSC authentication was restored. Next run the Gaia census analysis
+  and implement the selection replay against the existing references.
+
 ## 2026-11-16 — complete the v3.6 scientific diagnosis and F01–F10 atlas
 
 - All seven F05 source jobs completed. Verified the raw cells, accounting

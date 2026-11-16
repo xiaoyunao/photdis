@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "34422f1766c471a0ae736e100b70c2e29b07b397",
+  "workpoints": {
+    "primary": [0.80, 0.90],
+    "strict": [0.95, 0.97],
+    "lower_dwarf": [0.65, 0.90],
+    "lower_near": [0.80, 0.80],
+    "lower_both": [0.65, 0.80],
+    "lower_both_bright": [0.65, 0.80]
+  },
+  "bright_r_limit": 18.0,
+  "giant_odds_factors": [0.25, 1.0, 4.0],
+  "bootstrap_seed": 370202,
+  "bootstrap_draws": 1024,
+  "sky_nside": 4
+}

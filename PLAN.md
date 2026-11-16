@@ -1,5 +1,21 @@
 # PLAN
 
+## v3.7 — evaluate photo-only selection and prepare paper evidence
+
+Follow the [v3.7 protocol](docs/v3_7_protocol.md) and the complete November 16
+Pro review of `34422f1`. Freeze the published QRF, primary and strict catalog
+outputs. Compare the registered workpoints using nominal SED probabilities
+on the restricted reference and weighted catalog frames.
+
+1. Measure separate score and near-probability gate effects, and verify both
+   published cuts on the same rows before comparing any candidate.
+2. Run the matched classifier and blue-branch feature controls, and compare
+   the three distance references by identity and observable domain.
+3. Extend the signed Gaia comparison at QRF 5–10 kpc and the LF odds and
+   branch-recovery checks. Report uncertainty and both leakage denominators.
+4. Deliver the recommended observable-domain rules, qualified paper figures,
+   and paper evidence outline. Confirm all results before adopting a rule.
+
 ## v3.6 — completed reference recovery, failure diagnosis and paper figures
 
 Use the frozen v3.5 delivery at `17e37d4` and the [latest Pro review](chatgpt-conversation://6af9bbfe-5288-83ea-9e15-f09b45daea62)
