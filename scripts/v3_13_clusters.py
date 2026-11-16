@@ -57,7 +57,7 @@ def native_config(name):
     return side,cfg,ebv
 
 
-def photos(name,inputs):
+def photos(name,inputs,extra=()):
     side,cfg,_ = native_config(name)
     center,_ = SYSTEMS[name]
     path = Path(cfg['sweep_root'])
@@ -79,7 +79,7 @@ def photos(name,inputs):
             if photo:
                 p = subset(photo,photo['row_state']==7)
                 keys = ('TYPE','ls_id','source_id','identity','RA','DEC','r','g0','r0','z0',
-                        'mag_grz','error_grz','EBV')
+                        'mag_grz','error_grz','EBV',*extra)
                 records.append(dict(**{key:p[key] for key in keys},target=zones(name,p['RA'],p['DEC'])[0]))
         groups = [((r>=lo)&(r<hi),lo,hi) for lo,hi in MAG]
         groups += [(~(np.isfinite(r)&(r<23)),23.,np.inf)]
