@@ -27,7 +27,7 @@ CLASSES = ('GALAXY','QSO')
 
 
 def labels():
-    a = read_columns(ARCHIVE/'references.npz',('identity','TYPE','rvs_rr_spectype'))
+    a = read_columns(ARCHIVE/'references.npz',('identity','target_morphtype','rvs_rr_spectype'))
     owners = read_columns(read_cache(INDEX,'baseline_v1_4.npz'),('catalog_row',))['catalog_row']
     b = read_columns(ASSESSED,('identity','TYPE','redrock_SPECTYPE'))
     ids,index,counts = np.unique(a['identity'],return_index=True,return_counts=True)
@@ -38,13 +38,15 @@ def labels():
     assessed[index[loc[use]]] = np.char.strip(b['redrock_SPECTYPE'][use].astype('U'))
     raw = np.char.strip(a['rvs_rr_spectype'].astype('U'))
     label = np.isin(raw,CLASSES)|np.isin(assessed,CLASSES)
-    sel = np.flatnonzero(label&(a['TYPE']=='PSF')&(owners>=0))
+    # Archive morphology is descriptive. Admission uses the verified DR11 projection.
+    prior_type = np.char.strip(a['target_morphtype'].astype('U'))
+    sel = np.flatnonzero(label&(owners>=0))
     _,rev,duplicates = np.unique(owners[sel],return_inverse=True,return_counts=True)
     sel = sel[duplicates[rev]==1]
     key = np.argsort(owners[sel])
     sel = sel[key]
-    return owners[sel],raw[sel],assessed[sel],dict(missing_type=int((label&(a['TYPE']=='')).sum()),
-        non_psf=int((label&(a['TYPE']!='')&(a['TYPE']!='PSF')).sum()),
+    return owners[sel],raw[sel],assessed[sel],dict(unmatched_native_owner=int((label&(owners<0)).sum()),
+        archived_other_morphology=int(((prior_type[sel]!='')&(prior_type[sel]!='PSF')).sum()),
         ambiguous_owners=int(duplicates[duplicates>1].sum()))
 
 

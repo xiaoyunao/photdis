@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-16 — recover the archival Redrock link
+
+- Candidate, branch and interval jobs wrote completion receipts.
+- The first Redrock step used a legacy morphology column name unavailable
+  in the archive. Fixed the reader to use the verified current DR11
+  projection for admission and archival morphology as metadata.
+
 ## 2026-11-16 — wire the science controls and Redrock replay
 
 - Direct figure allocation 61393179 completed all three steps.
