@@ -17,7 +17,8 @@ Use the project review eeb2ea1b-cac1-412e-bc89-543dce1bed55 at baseline
    from all new fits and calibration. Check the frozen southern QRF
    training identities. Use the published Gaia EDR3 membership catalogue
    for matched members and an independently known physical distance
-   for the structural acceptance. Treat prior v3.11 M92/M13 as seen.
+   for the structural acceptance. The M30 sightline allows E(B−V) below
+   0.08 with the original masks and optical precision. Treat M92/M13 as seen.
 3. Check 5–10 kpc blue-dwarf retention ≥50%, absolute bias <10%,
    NMAD ≤20% and severe residuals <10%, and compare with the frozen
    preselection population and common leakage budgets. Assess the
