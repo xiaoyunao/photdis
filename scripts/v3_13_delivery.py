@@ -17,6 +17,7 @@ from v3_6_vac_distances import read_columns
 from v3_8_direct_figures import STYLE, plt, save
 from v3_9_references import predictor_features
 from v3_10_figures import check_templates
+from v3_11_layers import read_receipt
 from v3_11_selection import DEST as REVISED
 from v3_12_structure import class_probability, load_model
 from v3_13_clusters import DEST as CLUSTERS, SYSTEMS, DISTANCE, GR, MAG, MR, photos
@@ -72,6 +73,12 @@ def weights(name,t,path,inputs):
     features = probe_features(p,'grz') if side=='south' else predictor_features(p['mag_grz'])
     s = class_probability(fit,features)
     s[t['training_or_calibration']] = 0.
+    trained = read_receipt(REVISED/side,'complete.json','scores.npz',
+                          ('TYPE','ls_id','new_train','new_cal'),inputs)
+    archived = trained['new_train']|trained['new_cal']
+    if not np.all(trained['TYPE'][archived]=='PSF'):
+        raise ValueError('Unexpected morphology in class-score training ledger')
+    class_overlap = np.isin(t['ls_id'],trained['ls_id'][archived])
     area = np.array([float(row['target_deg2' if q==0 else 'control_deg2'])
          for q in (0,1) for row in first_row(CLUSTERS/name/'area.csv')])
     rows = []
@@ -81,17 +88,19 @@ def weights(name,t,path,inputs):
     pdf = t['qrf_mass'][:,1:-1]
     for lo,hi in MAG:
         tier = (t['r']>=lo)&(t['r']<hi)&np.isfinite(t['qrf_kpc'][:,2])
-        on,off = tier&t['target'],tier&~t['target']
-        for key,score in (('support',np.ones(len(s))),('soft dwarf',s)):
-            x,y = [np.einsum('ij,i->j',pdf[k],score[k])/a for k,a in zip((on,off),area)]
-            net = x-y
-            m = on&t['member']
-            rows.append(dict(r_min=lo,r_max=hi,weight=key,target_rows=int(on.sum()),
-                control_rows=int(off.sum()),confirmed_members=int(m.sum()),member_weight=score[m].sum(),
-                control_weight=score[off].sum(),target_density_window=x@w,control_density_window=y@w,
-                excess_window=net@w,peak_kpc=middle[np.argmax(net)] if np.max(net)>0 else None))
+        for view,keep in (('all distance-supported',tier),('outside class train or cal',tier&~class_overlap)):
+            on,off = keep&t['target'],keep&~t['target']
+            for key,score in (('support',np.ones(len(s))),('soft dwarf',s)):
+                x,y = [np.einsum('ij,i->j',pdf[k],score[k])/a for k,a in zip((on,off),area)]
+                net = x-y
+                m = on&t['member']
+                rows.append(dict(r_min=lo,r_max=hi,weight=key,view=view,target_rows=int(on.sum()),
+                    control_rows=int(off.sum()),class_known_overlap=int((tier&class_overlap).sum()),
+                    confirmed_members=int(m.sum()),member_weight=score[m].sum(),
+                    control_weight=score[off].sum(),target_density_window=x@w,control_density_window=y@w,
+                    excess_window=net@w,peak_kpc=middle[np.argmax(net)] if np.max(net)>0 else None))
     csv_rows(path/'soft_depth.csv',rows)
-    atomic_npz(path/'soft_weights.npz',TYPE=t['TYPE'],ls_id=t['ls_id'],dwarf_score=s)
+    atomic_npz(path/'soft_weights.npz',TYPE=t['TYPE'],ls_id=t['ls_id'],dwarf_score=s,class_train_or_cal=class_overlap)
 
 
 def first_row(path):
