@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — v3.9 dust, validation, and delivery stages
+
+- Added the distance-dependent reddening pilot, same-label north/south fit
+  comparison, faint noise transfer, reference verification and atlas.
+- Staged verified Bayestar19 data and isolated query dependencies on NERSC;
+  real local map queries returned complete profiles in two pilot sightlines.
+- FITS → native census → full QRF PDF → projection/restart smoke passed.
+  Rendered six PNG/PDF figure pairs with synthetic fixtures. All 472 existing
+  tests passed. These checks do not measure performance on the new catalog.
+- Regular and shared CPU partitions still reported down in Slurm; the
+  previously submitted primary census and gate jobs remain queued.
+
 ## 2026-11-16 — v3.9 reference association and branch control
 
 - Added raw SpecDis/SPDist, spectral class/Redrock and signed Gaia association

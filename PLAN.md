@@ -2,10 +2,13 @@
 
 ## v3.9 — widen the native survey catalog
 
-Follow the [v3.9 protocol](docs/v3_9_protocol.md). Launch exact missing-gate
-replay and the calibrated PDF sidecar, then run south faint, north and
-low-extinction low-latitude catalog jobs with shared state definitions.
-Use distance-dependent dust for the distinct reddened pilot.
+Follow the [v3.9 protocol](docs/v3_9_protocol.md). The catalog, gate replay,
+calibrated PDFs, raw reference join, north fit, dust pilot, branch controls,
+noise comparison and validation figures have independent Slurm stages.
+Use the receipts in `data/v3_9` after the pending jobs start. First check
+native inventory and first finished science partitions. Then collect
+distance and population evidence, inspect plots, reconcile the near PDF and
+gate counts, and write the release decision from actual products.
 
 ## v3.8 — completed direct paper figures and science validation
 
