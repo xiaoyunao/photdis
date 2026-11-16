@@ -117,8 +117,11 @@ def run(side):
         outcomes = list(pool.map(evaluate,chunks))
     CONTEXT = None
     q,flag = [np.concatenate(a) for a in zip(*outcomes)]
-    if not np.all(np.isfinite(q)&(q>=0)&(q<=1)):
-        raise ValueError('Invalid targeted SED gate probabilities')
+    raw_q = q.copy()
+    invalid = ~np.isfinite(q)|(q < -1e-10)|(q > 1+1e-10)
+    rounded = np.isfinite(q)&~invalid&((q<0)|(q>1))
+    flag |= invalid
+    q = np.where(invalid,np.nan,np.clip(q,0.,1.))
     rows = []
     for region in ROUTES[side]:
         for lo,hi in ((-np.inf,20),(20,21),(21,22),(22,23)):
@@ -143,9 +146,10 @@ def run(side):
     dest = DEST/side
     dest.mkdir(parents=True,exist_ok=True)
     csv_rows(dest/'sed_gate_comparisons.csv',rows)
-    atomic_npz(dest/'sed_gate_controls.npz',**t,nominal_qnear=q,numerical_flag=flag)
+    atomic_npz(dest/'sed_gate_controls.npz',**t,nominal_qnear=q,nominal_qnear_raw=raw_q,numerical_flag=flag)
     save_json(dest/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,rows=n,
-        valid=int((~flag).sum()),outputs={f.name:sha(f) for f in dest.iterdir() if f.name!='complete.json'}))
+        valid=int((~flag).sum()),rounded=int(rounded.sum()),invalid=int(invalid.sum()),
+        outputs={f.name:sha(f) for f in dest.iterdir() if f.name!='complete.json'}))
 
 
 if __name__=='__main__':
