@@ -27,8 +27,7 @@ from v3_10_branch_cases import DEST as CASES
 from v3_10_evidence import DEST as EVIDENCE
 
 DEST = ROOT/'data/v3_10/branches'
-EDGES = np.linspace(-5.,25.,201)
-MU = (EDGES[1:]+EDGES[:-1])/2
+STEP = .15
 WD_PRIORS = np.array([.001,.01,.05])
 OBS = ('flux','flux_error','band_mask','transmission','EBV')
 CONTEXT = None
@@ -100,7 +99,7 @@ def photos(t, inputs):
 
 
 def qrf_pdf(t, p, inputs):
-    qrf = np.full((len(t['ls_id']),len(MU)),np.nan)
+    rows = {}
     for sweep in np.unique(p['sweep']):
         use = np.flatnonzero(p['sweep']==sweep)
         folder = EXPANSION/'south/predict'/sweep
@@ -118,10 +117,18 @@ def qrf_pdf(t, p, inputs):
                 np.testing.assert_array_equal(z['TYPE'][j],t['TYPE'][a])
                 np.testing.assert_array_equal(z['qrf_quantiles_kpc'][j],t['qrf_quantiles_kpc'][a])
                 for i,x,m in zip(a,z['qrf_mu_edges'][j],z['qrf_mu_mass'][j]):
-                    qrf[i] = histogram_on(EDGES,x,m)
+                    if i in rows:
+                        raise ValueError('Multiple native PDFs for the same branch case')
+                    rows[i] = (x,m)
         inputs[str(marker.relative_to(ROOT))] = sha(marker)
+    if len(rows)!=len(t['ls_id']):
+        raise ValueError('Missing native PDFs for branch cases')
+    lo = min(-5.,min(e[0] for e,_ in rows.values()))
+    hi = max(25.,max(e[-1] for e,_ in rows.values()))
+    edges = np.arange(np.floor(lo/STEP)-1,np.ceil(hi/STEP)+2)*STEP
+    qrf = np.array([histogram_on(edges,*rows[i]) for i in range(len(rows))])
     np.testing.assert_allclose(qrf.sum(axis=1),1.,rtol=0,atol=1e-9)
-    return qrf
+    return qrf,edges
 
 
 def observation(p,i):
@@ -131,27 +138,31 @@ def observation(p,i):
 
 
 def likelihood(i):
-    model,weights,lf_weights,p,lon,lat = CONTEXT
+    model,weights,lf_weights,p,lon,lat,mu = CONTEXT
     obs = observation(p,i)
-    ll,_ = kernel_loglike(model,obs,MU,bands=USE_BANDS)
+    ll,_ = kernel_loglike(model,obs,mu,bands=USE_BANDS)
     frac = model.binary_reference_fraction
     flux = logsumexp(ll+np.log([1-frac,frac])[:,None,None],axis=0)
     with np.errstate(divide='ignore'):
         ordinary = logsumexp(flux[:,:,None]+np.log(weights)[:,None,:],axis=0).T
         lf = logsumexp(flux[:,:,None]+np.log(lf_weights)[:,None,:],axis=0).T
-    disk,halo = radial_profiles(MU,lon[i],lat[i])
+    disk,halo = radial_profiles(mu,lon[i],lat[i])
     # Nominal branch evidence uses the existing broad distance prior. The
     # LF view uses the RGB weighting and disk/halo ratios as sensitivity.
-    nominal = ordinary+norm.logpdf(MU,15.,5.)[None,:]
+    nominal = ordinary+norm.logpdf(mu,15.,5.)[None,:]
     profiles = np.stack([.8*disk+.2*halo,.4*disk+.6*halo,.8*disk+.2*halo,disk])
     return nominal,lf+np.log(profiles)
 
 
-def summarize(t,pdf):
+def summarize(t,pdf,edges):
     ref = t['reference_kpc']
     grid = np.cumsum(pdf,axis=-1)
-    median = 10**((MU[(grid>=.5).argmax(axis=-1)]-10)/5)
-    close = np.array([[window(EDGES,m,d) for m,d in zip(a,ref)] for a in pdf])
+    cell = (grid>=.5).argmax(axis=-1)
+    upper = np.take_along_axis(grid,cell[...,None],axis=-1)[...,0]
+    mass = np.take_along_axis(np.asarray(pdf),cell[...,None],axis=-1)[...,0]
+    median_mu = edges[cell+1]-(upper-.5)/mass*np.diff(edges)[cell]
+    median = 10**((median_mu-10)/5)
+    close = np.array([[window(edges,m,d) for m,d in zip(a,ref)] for a in pdf])
     delta = 5*np.log10(median/ref[None,:])
     return median,close,delta
 
@@ -161,7 +172,7 @@ def run():
     inputs = {}
     t = cohorts(inputs)
     p = photos(t,inputs)
-    base = qrf_pdf(t,p,inputs)
+    base,edges = qrf_pdf(t,p,inputs)
     record = read_frozen()['models']['nominal']
     model = inference_model(joblib.load(verified(ROOT/record['path'],record['sha256'])))
     raw = model.weights[:,None]*model.classes
@@ -183,7 +194,7 @@ def run():
     alt = weights.copy()
     alt[:n,:3] = rgb
     lon,lat = galactic(t['RA'],t['DEC'])
-    CONTEXT = made,weights,alt,p,lon,lat
+    CONTEXT = made,weights,alt,p,lon,lat,(edges[:-1]+edges[1:])/2
     cpus = int(os.environ.get('SLURM_CPUS_PER_TASK',1))
     with concurrent.futures.ProcessPoolExecutor(max_workers=min(cpus,16),
             mp_context=multiprocessing.get_context('fork')) as pool:
@@ -198,7 +209,7 @@ def run():
         joint = np.exp(raw-logsumexp(raw,axis=(1,2))[:,None,None])
         candidates.append(joint.sum(axis=1))
         classes.append(joint)
-    _,close,_ = summarize(t,candidates)
+    _,close,_ = summarize(t,candidates,edges)
     cal = (t['sky_role']==3)&solo
     groups = [cal&(t['cohort']==name) for name in np.unique(t['cohort'])]
     balanced_score = [np.mean([np.log(np.maximum(c[k],1e-12)).mean() for k in groups if k.any()])
@@ -209,7 +220,9 @@ def run():
     patched_pdf = np.exp(logsumexp(patched,axis=1)-logsumexp(patched,axis=(1,2))[:,None])
     pdf = np.stack([base,original_pdf,patched_pdf,candidates[best]])
     labels = ('frozen_qrf','unpatched_sed','patched_nominal_prior','explicit_branches')
-    medians,close,delta = summarize(t,pdf)
+    medians,close,delta = summarize(t,pdf,edges)
+    medians[0] = t['qrf_quantiles_kpc'][:,2]
+    delta[0] = 5*np.log10(medians[0]/t['reference_kpc'])
     stats = []
     for scope,take in (('calibration',cal),('held_out',(t['sky_role']==4)&solo)):
         for name in np.unique(t['cohort']):
@@ -227,7 +240,7 @@ def run():
     atomic_npz(DEST/'distance_pdf.npz',ls_id=t['ls_id'],TYPE=t['TYPE'],cohort=t['cohort'],
                reference_kpc=t['reference_kpc'],sky_role=t['sky_role'],training=train,
                anchor=np.isin(t['ls_id'],t['ls_id'][anchors]),
-               mu_edges=EDGES,methods=np.array(labels),pdf=pdf,pdf_by_branch=classes[best])
+               mu_edges=edges,methods=np.array(labels),pdf=pdf,pdf_by_branch=classes[best])
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,rows=len(lon),
         frozen_sed_sha256=record['sha256'],anchors=len(anchors),prior_alternatives=WD_PRIORS,
         prior_balanced_calibration_scores=balanced_score,chosen_prior=float(WD_PRIORS[best]),

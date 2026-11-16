@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-16 — check faint branches and prepare the working sample
+
+- The 2,003-source faint Gaia sample contains 1,344 clean low-luminosity
+  CMD candidates. The published WD tables identify 1,308 sources above
+  Pwd 0.75 and 26 spectroscopic WDs, 25 with severe production errors.
+  Checked 12 actual DR11 cutouts. Six high-error WD-locus examples
+  are compact in the coadds, while some control cutouts include neighbors
+  or an imaging artifact.
+- Lower-latitude job 61402156 evaluated 103 PSFs and 26 same-star Gaia
+  comparisons. The ensemble score gain is −0.012 nat, with field-specific
+  gains and losses. The sample contains three strongly crowded rows.
+- Verified the three v3.8-style regional redraws. Submitted the
+  footprint and application stages and the controlled M92 test.
+- The first branch run found one QRF tail beyond the common grid
+  carrying 3.51e−8 probability. Derive the comparison grid from all
+  actual production PDF bounds before rerunning.
+
 ## 2026-11-16 — verify the first v3.10 scientific results and style regression
 
 - Regression job 61401569 reproduced both original F02 and F03 PNGs
