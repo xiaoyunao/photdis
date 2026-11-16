@@ -25,6 +25,22 @@ Preserve v3.9–v3.12 production, identities, fits and validation records.
    Any phase correction or CMD likelihood that is tested for adoption
    requires a pre-registered independent cluster and a frozen method.
 
+### v3.13 independent CMD comparison
+
+The M92 and M13 depth outcomes triggered an independent comparison because
+fatter QRF samples still shift away from the reference distance. Register
+M5 (NGC 5904, RA 229.638°, Dec +2.081°, 7.48 kpc) as the sole test field.
+Use the DECam M30 astrometric-member CMD as the fixed empirical template.
+Use the native PSF, 0.1 mag per-band error and E(B−V)<0.08 requirements,
+and the same angular annuli as M30. Forecast M5 with the frozen QRF after
+excluding its training IDs. Score both methods on common color–apparent-r
+support and use the control-footprint subtraction. A fixed weighted linear
+amplitude fit ranks CMD templates from 5 to 14 kpc. M5 membership and
+reference distance are read for scoring and reporting after predictions.
+The measured peak must be within 10% for scale acceptance. Score amplitude
+with the background-conditioned variance in the on/off counts. Do not tune
+on M5 or use this as a calibration of age or metallicity differences.
+
 ## v3.12 — completed matched distance and structure comparison
 
 [Results and adoption decision](docs/v3_12_result.md).
