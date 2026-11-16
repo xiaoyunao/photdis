@@ -1,0 +1,57 @@
+{
+  "job": "61408359",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "membership": "e868d6e012a440e61984af1cbd16492662ef91ce2e99dca48d56dd734c2edde0",
+    "membership_url": "https://zenodo.org/records/4891252",
+    "cluster_distance_source": "https://academic.oup.com/view-large/353698133",
+    "m30_ebv_max": 0.08,
+    "data/v3_12/reference/south/complete.json": "75573fc969ff21a925823d51ed980217ddd6ee3265b1cfd137c00bacd253f385",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-320m025-325m020.fits": {
+      "size": 1171503360,
+      "mtime_ns": 1780614233000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-325m025-330m020.fits": {
+      "size": 1111576320,
+      "mtime_ns": 1780614638000000000
+    },
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_10/selection/south/complete.json": "182d7ae9c522c3573ac1c3cd1e0e714794f8b19030510a6adc7606dffef04fef",
+    "data/v3_11/selection/south/complete.json": "c47fa9bbf40478a3b7040430e248a23581b06885adb696d88701e9322d4558c2",
+    "m30_random_catalog": {
+      "file": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits",
+      "size": 22995910080,
+      "mtime_ns": 1780757592000000000
+    }
+  },
+  "results": {
+    "M30": {
+      "rows": 11426,
+      "member_matches": 667,
+      "member_target": 667,
+      "published_members": 8057,
+      "excluded_frozen_qrf_fit": 0,
+      "excluded_archived_class_fit_or_cal": 0,
+      "area": [
+        0.3612,
+        3.1812
+      ],
+      "comparison_fits_exclude_m30_two_degrees": true
+    }
+  },
+  "outputs": {
+    "m30_0.pdf": "0f5d6aff3eaaa7a22464aa45de8d74bba165472a25c66525daf78ef5222624fa",
+    "m30_1.pdf": "bb68ee1aadef1f9ac5c493b529ea5a62a582cbdd8ef3135a71be9a34cc55c65a",
+    "m30_0.csv": "18e9967093a2e56876be2f7abc509dc3e396377dc7533fecbef314fcbf1c2fd0",
+    "m30_1.csv": "83c43922f09ce33249c0c1c1138b68d570c9f036b9f86b5349580a2c05a16897",
+    "m30_1.npz": "e4b34398ce997a970fb67a693dfc232c9b489f33fc2234f647c7731fada4ed42",
+    "m30_members.npz": "9870032cfe3cd619d69e00a665666703e7b0ff7f5588cc5585c98aa8cf41371b",
+    "m30_1.png": "1d57b5457284d061d758d7ef451fc78cde6c5516681a487df3070e7bc0b2e667",
+    "m30_0.npz": "93bfee2777e92a942ff38463baa3d5362e05e538e1b2756b067408c2b7c75a75",
+    "m30_0.png": "f799c8998fd3233ede85ada0c1e613d33ae55571fc5cf803956b174d9279157f"
+  }
+}

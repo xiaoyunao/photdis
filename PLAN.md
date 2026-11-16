@@ -1,6 +1,14 @@
 # PLAN
 
-## v3.12 — measure distance information before selecting a structure
+## v3.12 — completed matched distance and structure comparison
+
+[Results and adoption decision](docs/v3_12_result.md).
+The native color relation improves 5–10 kpc distance residuals for reliable
+blue dwarfs on fixed reference PSFs. Blue intermediate-gravity stars still show
+large distance errors. Soft weights preserve structure in M92, M13 and the
+reserved M30 field, with distance peaks outside the preset tolerance.
+Keep the frozen catalog and the v3.12 empirical relation as a reference baseline.
+The available evidence supports no population, depth or extinction expansion.
 
 Use the project review eeb2ea1b-cac1-412e-bc89-543dce1bed55 at baseline
 1d8c4f4. Preserve production, training, full QRF PDFs and all prior outcomes.

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-17 — deliver the v3.12 fixed reference and structure comparison
+
+- Read the full GPT Pro review, registered the goal and froze the v3.11 baseline.
+- Compared color–luminosity, frozen QRF and hard/soft selection on fixed native
+  references. Direct 5–10 kpc blue-dwarf distances improve; the blue
+  intermediate-gravity proxy remains biased by more than 25%.
+- Tested M92, M13 and reserved M30 with EDR3 membership. Soft weights preserve
+  the signal. M30 peaks at 9.875 kpc with uncut QRF and 10.125 kpc with soft
+  weights versus 8.49 kpc externally. Keep the hard-selection candidate archived.
+- Jobs 61408425 and 61408587 completed with exit 0:0. Visually checked 14
+  English plots with the same v3.8 lock, and 472 local tests passed.
+  See docs/v3_12_result.md, manifests/v3_12 and figures/v3_12.
+
 ## 2026-11-16 — deliver the validated v3.11 science results
 
 - Both fixed RVS label comparisons completed. At matched calibration budgets

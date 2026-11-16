@@ -1,0 +1,62 @@
+{
+  "job": "61408358",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "membership": "e868d6e012a440e61984af1cbd16492662ef91ce2e99dca48d56dd734c2edde0",
+    "membership_url": "https://zenodo.org/records/4891252",
+    "cluster_distance_source": "https://academic.oup.com/view-large/353698133",
+    "m30_ebv_max": 0.08,
+    "data/v3_12/reference/north/complete.json": "443d26c484333264c4d95eccfe44549e7b2c18361ffc43b93cd4d75d66c38e2e",
+    "data/v3_11/structure/complete.json": "3c6af752baa0906c4dc496f9625f35c194c982affbbd49b48524f3c33226a42f",
+    "data/v3_11/selection/north/complete.json": "792e21dd24926e24c506afe7701bfd277c81f79d05ef6e5c40178bbcbf923716",
+    "data/v3_9/delivery/complete.json": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51"
+  },
+  "results": {
+    "M92": {
+      "rows": 10967,
+      "member_matches": 1373,
+      "member_target": 1373,
+      "published_members": 14447,
+      "excluded_frozen_qrf_fit": null,
+      "excluded_archived_class_fit_or_cal": null,
+      "area": [
+        0.33,
+        2.1936
+      ],
+      "comparison_fits_exclude_m30_two_degrees": true
+    },
+    "M13": {
+      "rows": 15069,
+      "member_matches": 6253,
+      "member_target": 6253,
+      "published_members": 31035,
+      "excluded_frozen_qrf_fit": null,
+      "excluded_archived_class_fit_or_cal": null,
+      "area": [
+        0.378,
+        3.1572
+      ],
+      "comparison_fits_exclude_m30_two_degrees": true
+    }
+  },
+  "outputs": {
+    "m92_0.pdf": "c0fff069fea3586c68ced51c2f5a47aa16f9f0b530bd81f04fc97a037e5c9451",
+    "m13_0.csv": "e36e638134e4a01bc3011c938e2d290a57372a18cd942abc742344280e9fe1dd",
+    "m13_0.npz": "6c1c82422fbef681b84cdab2b3717ebaeddb07ab7d35d6f43395c53ea5ae2516",
+    "m92_1.npz": "b4ad4ba9ad04e9c5c08042c28649f89e17685a9e3ef62569f0bc5db35b321d12",
+    "m13_members.npz": "f460eab3a9e795257b10b4285e5e14bba87b9f00d7f9b03f086432421a6c02e9",
+    "m92_0.csv": "b0e2e140ef030ceb1fd55700ce57d348d3b3d83ea01051250c1ee2fd4b72dacb",
+    "m92_members.npz": "730de0e31fc1389d42f792fe9fc508109500bd3a7e7709a90d42ff2afd8b5993",
+    "m92_1.pdf": "284ff0b8f6012a045492a48d777d398962f5e38d475de032abc0003673ac93ee",
+    "m92_1.csv": "df967c0ff48e6c98e7563a58bdf20032c3df366d9c88fbb5dc125bf41f585d4e",
+    "m13_1.csv": "2364c6806610e276b7ba70f338a36501d1e2123a0b328c1ffe54b18adb0ddf12",
+    "m13_0.png": "eb2002fb6106c610eccccc59627e68f9cc84e15a49cafd32ba0168c4cabc910e",
+    "m13_0.pdf": "23e82db4c00be4a700097559042da5840a9e8bd41668e5f91128a63a0acec402",
+    "m13_1.pdf": "87f9d524eaf0a145bff269336f896595b8dd5f785d663076863f4fe3e67a7349",
+    "m92_0.png": "40acaee14f6d2125af0e38def291b1dfcdf59ee6d6247a3b51507b590d228e5b",
+    "m92_1.png": "469f718be1e8201cdafddc414f0d68e6955cbb4fe2867f5a3f063a2f45f34d6d",
+    "m13_1.png": "c46c3b309b7020787bd054981c009f5fab3e986ac574bbf103ea3ab81365b9c0",
+    "m92_0.npz": "99d89a15d1d9b87605d149aea4e26e1fcb0adbada91b4851cf9747c6ea5e7370",
+    "m13_1.npz": "9e7c9955ee7b70601bf9fe65cafb78efb93fe31cb46645635ef7a3f789518927"
+  }
+}

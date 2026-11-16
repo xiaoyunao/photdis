@@ -1,0 +1,18 @@
+{
+  "job": "61408587",
+  "inputs": {
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-320m025-325m020.fits": {
+      "size": 1171503360,
+      "mtime_ns": 1780614233000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-325m025-330m020.fits": {
+      "size": 1111576320,
+      "mtime_ns": 1780614638000000000
+    }
+  },
+  "precise_native_psf": 11697,
+  "output_forecasts": 11426,
+  "outputs": {
+    "m30_admission.csv": "83b47034ec384753ea6f763984b21891a216c941480a88cb7b56a85947142377"
+  }
+}

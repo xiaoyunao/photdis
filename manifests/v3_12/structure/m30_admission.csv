@@ -1,0 +1,3 @@
+sweep,outside_tile,other_release,missing_type,non_psf,outside_science_domain,optical_rejected,noise_control_parent,precise_parent
+sweep-320m025-325m020.fits,0,0,0,85725,75606,2166,0,5412
+sweep-325m025-330m020.fits,0,0,0,92371,83542,2487,0,6285

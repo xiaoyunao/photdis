@@ -5,7 +5,12 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-The latest [v3.11 science results](docs/v3_11_result.md) compare fixed
+The latest [v3.12 science results](docs/v3_12_result.md) compare a native
+color–luminosity relation, frozen QRF and hard/soft selection on matched reference
+stars. Uncut and weighted PDFs preserve cluster signals with residual scale
+bias in M92, M13 and the reserved M30 field.
+
+The previous [v3.11 science results](docs/v3_11_result.md) compare fixed
 reference samples, actual distance layers, faint luminosity branches and the
 north–south distance scale. Revised labels recover more distant blue dwarfs,
 with incomplete recovery of the two cluster distance signals. The revised
