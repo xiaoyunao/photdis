@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — expose the joint catalog partitions as a release manifest
+
+- Added the unified per-part entrypoint for the three native expansion
+  regions and the existing v3.5 southern base. It indexes photometry,
+  states and PDFs, applies seam overrides by native ID and reconciles
+  the resulting row counts to the independent validation audit.
+- A mixed frozen/native on-disk fixture passed, including the PSF guard,
+  pointer checks, exact coverage of seam override IDs and count changes.
+  The live delivery job remains queued behind downstream validations.
+
 ## 2026-11-16 — evaluate the real-noise controlled comparison
 
 - Job 61395045 completed. Verified the archived simulation and cell-table

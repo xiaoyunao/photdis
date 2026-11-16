@@ -17,6 +17,7 @@ from v3_9_existing import GATES, PDF
 from v3_9_branches import OUT as BRANCHES
 from v3_9_audit import all_catalog_ids
 from v3_9_seam import run as build_seam
+from v3_9_unified import build as build_unified
 
 DEST = ROOT/'data/v3_9/delivery'
 
@@ -111,7 +112,13 @@ def run(shards):
     gate = records['gates']
     if gate['rows']!=336678 or not rows:
         raise ValueError('Missing complete gate or near-PDF counts')
+    unified = build_unified(seam_path,DEST/'unified_parts.csv')
+    for side,regions in (('south',('south_faint','south_low')),('north',('north',))):
+        for key,actual in (('native_rows','rows'),('native_pdf_rows','pdfs')):
+            if sum(unified[region][key] for region in regions)!=census[side][actual]:
+                raise ValueError(f'Unified manifest disagrees with {side} audited {actual}')
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),census=census,
+        unified=unified,
         gate_rows=gate['rows'],gate_passed=gate['passes'],gate_reused=gate['from_redrock'],
         near_pdf_rows=rows,near_pdf_parts=parts,near_pdf_audit=near_audit,
         sources={str(p.relative_to(ROOT)):sha(p) for p in science.values()},
