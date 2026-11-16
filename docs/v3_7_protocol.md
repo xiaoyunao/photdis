@@ -49,3 +49,27 @@ the answer to vary across observed domains.
   Produce a photo-only use table with direct, conditional, known-failure and
   missing-evidence domains, and seven to eight figures in the established
   English figure style. Keep the v3.6 atlas accessible for the appendix.
+
+## Reproducing the delivery
+
+Run science stages from the canonical NERSC checkout in allocated compute
+steps. The 120-CPU allocation uses separate Slurm steps for each diagnostic
+and parallel steps for the missing nominal probabilities. The script resumes
+completed stages from their receipts.
+
+```bash
+sbatch scripts/run_v3_7_diagnostics.sh
+```
+
+The separate weak Gaia, same-identity reference and LF-odds stages use
+`scripts/v3_7_weak_gaia.py`, `scripts/v3_7_reference_comparison.py` and
+`scripts/v3_7_lf_odds.py`. Their verified results live beneath
+`data/v3_7` on NERSC. The published CSV projections retain their
+complete-file hashes, and the derived composition table records the hash of
+its source reference table. The six new plates can be rendered from the
+committed inputs.
+
+```bash
+python scripts/v3_7_paper_figures.py --inputs manifests/v3_7
+PYTHONPATH=scripts python scripts/v3_7_validate.py
+```

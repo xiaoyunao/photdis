@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — recover the fixed classifier and verify the native use domains
+
+- Classifier rerun 61391246.17 completed on the same allocated node.
+  All three score threshold counts agree with the archived classifier.
+  Two Gaia 0–2 kpc scores differ beyond the 1e-8 comparison tolerance.
+- Verified the 305 matched blue diagnostics and LF branch estimates for
+  850 unique known far giants. Added the observable-domain array rule
+  and checked cut boundaries, including native PSF and QRF support.
+- The twelve selection replays are still executing the original nominal
+  SED kernel. The receipt records 147,367 missing probabilities.
+
 ## 2026-11-16 — recover the production score columns in the qualified reader
 
 - On job 61391246 the blue neighborhood, case LF and observable-domain steps

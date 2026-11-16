@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Check recorded products and paper denominators from the compact delivery."""
-from collections import defaultdict
+from collections import Counter, defaultdict
 import csv
 from hashlib import sha256
 import json
@@ -98,7 +98,14 @@ def calibration():
         assert 0.<=float(r['correct_reference_shell_probability'])<=1.+1e-12
         if r['correct_joint_branch_probability']:
             assert 0.<=float(r['correct_joint_branch_probability'])<=1.+1e-12
-    return len(weak)+len(odds)+len(cases)
+    classifier = table('classifier_sky','retention.csv')
+    for r in classifier:
+        assert r['stored']==r['published_replayed'],r
+        assert int(r['archived_score_agreement'])<=int(r['n']),r
+    neighborhoods = table('blue_neighborhood','neighborhoods.csv')
+    counts = Counter((r['cohort'],r['ls_id']) for r in neighborhoods if r['TYPE']=='PSF')
+    assert len(counts)==305 and set(counts.values())=={7} and sum(counts.values())==len(neighborhoods)
+    return len(weak)+len(odds)+len(cases)+len(classifier)+len(neighborhoods)
 
 
 if __name__=='__main__':

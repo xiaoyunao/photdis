@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_7_classifier_sky.py": "549a44051f1ead376f69a9e5e10d3e4eda9ffef4431e7bd276a047aef479ca48",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769"
+  },
+  "excluded_morphology": {
+    "Gaia": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SpecDis": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SPDist": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "training_type": "native PSF only",
+  "comparison_scope": "classifier-only retention, before nominal SED admission",
+  "outputs": {
+    "development.csv": "18025aa5e306b02a0dcf7749db95216fe53454f683ea985e9b13fa6de9525591",
+    "retention.csv": "cbb85da122d7bbce73381cbf28eb6f980dea7d64606a8bedd9073f0068a8172c",
+    "diagnostic_classifier.joblib": "ac8583a9e64990e8aa7bd91c7d763a9573567a5cc5ab819c7b7450d3034434e4"
+  }
+}
