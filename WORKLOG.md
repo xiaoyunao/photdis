@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-16 — wire the science controls and Redrock replay
+
+- Direct figure allocation 61393179 completed all three steps.
+- Added held-sky reference-aware interval scaling, branch decomposition and
+  disjoint low-luminosity anchor probe, native north Gaia overlap pilot, and
+  a preserved Redrock selection replay. Python imports and quantile ordering passed.
+
 ## 2026-11-16 — implement direct validation and full-coordinate paper views
 
 - Added direct reference-distance and same-star CMD plates on qualified
