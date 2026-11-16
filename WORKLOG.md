@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — recover southern prediction workers on Python 3.14
+
+- Southern shards 61394873_0 and _1 failed during worker initialization.
+  Perlmutter's Python 3.14 defaults to forkserver, so the child does not
+  inherit the loaded model used by predict_one.
+- Prediction now explicitly uses a fork context as in the existing replay
+  code. The scanner uses its original inventory binding so completed native
+  sweep receipts remain restartable. A child-process smoke test passed with
+  a deliberately different default start method.
+
 ## 2026-11-16 — assess the completed Bayestar19 pilot
 
 - Job 61395038 completed with 311 distinct native PSFs and valid map PDFs.

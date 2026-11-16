@@ -4,6 +4,7 @@ import argparse
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from functools import partial
 import json
+import multiprocessing as mp
 import os
 from pathlib import Path
 
@@ -251,7 +252,10 @@ def run(stage, side, shard, smoke):
     description = OUT/side/'inventory.json'
     inventory = json.loads(description.read_text())
     sources = inventory['groups'][shard]
-    binding = dict(inventory=sha(description), script=sha(Path(__file__)),
+    # The inventory fixes the scanner implementation. Prediction has its own
+    # implementation binding so a worker-launch fix can preserve scan receipts.
+    script = inventory['binding']['script'] if stage=='scan' else sha(Path(__file__))
+    binding = dict(inventory=sha(description), script=script,
                    payload=sha(ROOT/'scripts/v3_0_native.py'))
     if stage=='predict':
         if side=='north':
@@ -270,7 +274,10 @@ def run(stage, side, shard, smoke):
         workers = min(workers,8)
     if not sources:
         return
-    with ProcessPoolExecutor(max_workers=min(workers,len(sources))) as pool:
+    # Prediction workers share read-only fitted models from the parent.
+    # Python 3.14 defaults to forkserver on Linux, which has no such state.
+    context = mp.get_context('fork') if stage=='predict' else mp.get_context()
+    with ProcessPoolExecutor(max_workers=min(workers,len(sources)),mp_context=context) as pool:
         list(pool.map(worker,sources))
 
 
