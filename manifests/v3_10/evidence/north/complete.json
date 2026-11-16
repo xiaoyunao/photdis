@@ -1,0 +1,23 @@
+{
+  "job": "61401857",
+  "inputs": {
+    "data/v3_9/expansion/figures_labeled/north/complete.json": "c8a68ea76809f9641cd71665fe67b37e3adc3e6b5e997f66061b06cc423022e5",
+    "data/baseline_v1_4/source_evidence.json": "79974ca6fa0a4631495e5631e0170695e574829e6b91ee90cc78fdfe7a7ffe05",
+    "data/baseline_v1_4/sources.json": "5196d9416fa83d9f80ba80a97a77eb1ae06ded6998c58cc142e5302957ed40d8",
+    "data/v3_8/redrock/complete.json": "36e1a7a8ed7d2d34c2699960a651ad3f49aae1334018288a6689054e38cafe30"
+  },
+  "rows": 4901330,
+  "label_counts": {
+    "-1": 4495107,
+    "0": 332448,
+    "1": 4822,
+    "2": 68953
+  },
+  "raw_rvs": 406217,
+  "qualified_redrock": 9487,
+  "raw_nonstellar": 11599,
+  "outputs": {
+    "references.npz": "87b37807721a08f940964b3de8d3a786df82fd8dc43071e3a01351bef68124f7",
+    "photdis_specdis_spdist.csv": "3d2ee53a3f42661b4f50dc96700748f2183741479294a5138a4afafb30c6b968"
+  }
+}

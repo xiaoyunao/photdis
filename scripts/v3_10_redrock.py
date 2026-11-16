@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Qualify the already indexed expansion nonstellar controls in DESI DR1."""
+import argparse
 import json
 import os
 
@@ -14,6 +15,7 @@ from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
 from v3_9_references import OLDER, join, matched, sorted_key
 from v3_10_evidence import DEST as EVIDENCE, REGIONS
+from v3_10_selection import DEST as SELECTION, THRESHOLDS
 
 DEST = ROOT/'data/v3_10/redrock'
 
@@ -107,5 +109,55 @@ def main():
         outputs={p.name:sha(p) for p in DEST.iterdir() if p.name!='complete.json'}))
 
 
+def evaluate():
+    require_compute()
+    marker = DEST/'complete.json'
+    r = json.loads(marker.read_text())
+    controls = read_columns(verified(DEST/'qualified.npz',r['outputs']['qualified.npz']),
+                            ('TYPE','ls_id','region','qualified','r'))
+    inputs = {str(marker.relative_to(ROOT)):sha(marker)}
+    rows = []
+    for region in REGIONS:
+        side = 'north' if region=='north' else 'south'
+        folder = SELECTION/side
+        score = folder/'complete.json'
+        s = json.loads(score.read_text())
+        t = read_columns(verified(folder/'scores.npz',s['outputs']['scores.npz']),
+                         ('TYPE','ls_id','score','score_original','held_out'))
+        folders = EVIDENCE/region
+        marker = folders/'complete.json'
+        roster = json.loads(marker.read_text())
+        p = read_columns(verified(folders/'references.npz',roster['outputs']['references.npz']),
+                         ('ls_id','TYPE','nominal_qnear','nominal_numerical_flag'))
+        j = unique_join(controls['ls_id'],t['ls_id'])
+        k = unique_join(controls['ls_id'],p['ls_id'])
+        use = np.flatnonzero((controls['region']==region)&(controls['qualified']!='')&(j>=0)&(k>=0))
+        np.testing.assert_array_equal(controls['TYPE'][use],t['TYPE'][j[use]])
+        np.testing.assert_array_equal(controls['TYPE'][use],p['TYPE'][k[use]])
+        support = t['held_out'][j[use]]&np.isfinite(t['score_original'][j[use]])&np.isfinite(t['score'][j[use]])
+        use = use[support]
+        inputs[str(score.relative_to(ROOT))] = sha(score)
+        inputs[str(marker.relative_to(ROOT))] = sha(marker)
+        for a,b in ((-np.inf,20),(20,21),(21,22),(22,23)):
+            rr = controls['r'][use]
+            for kind in ('QSO','GALAXY'):
+                ix = use[(rr>=a)&(rr<b)&(controls['qualified'][use]==kind)]
+                gate = p['nominal_qnear'][k[ix]]
+                common = np.isfinite(gate)&~p['nominal_numerical_flag'][k[ix]]
+                for label in ('score_original','score'):
+                    val = t[label][j[ix]]
+                    for cut in THRESHOLDS:
+                        rows.append(dict(region=region,r_min=a,r_max=b,class_label=kind,method=label,
+                            threshold=cut,total=len(ix),passed=int((val>=cut).sum()),
+                            with_sed=int(common.sum()),passed_both=int(((val>=cut)&common&(gate>=.90)).sum())))
+    out = DEST/'comparison'
+    out.mkdir(exist_ok=True)
+    csv_rows(out/'held_out.csv',rows)
+    save_json(out/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
+                                     outputs={'held_out.csv':sha(out/'held_out.csv')}))
+
+
 if __name__=='__main__':
-    main()
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--evaluate',action='store_true')
+    (evaluate if p.parse_args().evaluate else main)()

@@ -1,0 +1,20 @@
+{
+  "job": "61402156",
+  "inputs": {
+    "historical_labels": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "specdis": "245aaade0127356f2a99c0d7848488c01502bba15ce5f327fc5af9cd8ce8d975",
+    "spdist": "e345f01e91eded0f9cae332208f64101de4b7e024483223fe29b0cbf6ce7b43a"
+  },
+  "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27b1e32ef99",
+  "fields": [
+    6,
+    10,
+    12
+  ],
+  "rows": 103,
+  "outputs": {
+    "candidate_fields.csv": "fa8b517de8e0ca95b53fa83ce1f0f9a13edfaf949b4d9a97c8d3bbfc22ffdd47",
+    "matched_distances.csv": "ad1578ae59ee776bdae55709793948dc1bdfc6fb995d88bcb9910383487a1afe",
+    "distance_pdfs.npz": "16fc0b0ca02df6c2dc5a6466ab76686010c288cfb6b813db5e2a61e8d23d21a4"
+  }
+}

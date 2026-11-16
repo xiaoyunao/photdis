@@ -1,0 +1,15 @@
+{
+  "cohort_sha256": "3c7cf185a15b02191d88123f03a186f757af0cbe6541cb8adc874f9cde257b17",
+  "spectra_sha256": "47c8a91453f30670e246c6436c29af397f630e66837da8a0de652a018fdce7ba",
+  "spectra_url": "https://warwick.ac.uk/fac/sci/physics/research/astro/research/catalogues/gaiaedr3_wd_sdssspec.fits.gz",
+  "main_sha256": "34cec4e27c229c15c459554b2c0170330148c1efcbcd8a7a1c495a29de1ecf6c",
+  "main_url": "https://warwick.ac.uk/fac/sci/physics/research/astro/research/catalogues/gaiaedr3_wd_main.fits.gz",
+  "rows": 2003,
+  "pwd_rows": 1313,
+  "pwd_above_point75": 1308,
+  "spectroscopic_matches": 31,
+  "spectroscopic_wd": 26,
+  "spectroscopic_wd_severe": 25,
+  "spectroscopic_wd_cmd": 25,
+  "table_sha256": "9cbd7fba205e2a2469cde631d3cec3a860bd40a1f67f517c6d8210356bc701e6"
+}

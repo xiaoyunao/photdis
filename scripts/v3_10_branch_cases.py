@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Freeze the faint Gaia cohort and measure its low-luminosity evidence."""
+import argparse
 import json
 import os
 
@@ -44,7 +45,7 @@ def hrd(t, out):
           (t['bp_rp'],t['M_G'],t['gaia_g']-mu,'Gaia BP − RP (mag)','Observed absolute G magnitude',
            np.ones(len(mu),bool),XCOL,'Gaia DR3'),
           (t['bp_rp'],t['M_G'],t['gaia_g']-mu,'Gaia BP − RP (mag)','Observed absolute G magnitude',
-           t['clean_low_luminosity'],XCOL,'Low-luminosity CMD candidates'))
+           t['clean_low_luminosity'],XCOL,'Faint blue candidates'))
     tables,counts = {},[]
     for row,(x,y_ref,y_photo,xlabel,ylabel,k,xbin,name) in enumerate(xy):
         for j,(y,kind) in enumerate(((y_ref,'Gaia reference'),(y_photo,'Photometric distance'))):
@@ -82,7 +83,22 @@ def spectral_rows(t):
 
 def main():
     require_compute()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--render-only',action='store_true')
+    args = parser.parse_args()
     lock = check_templates()
+    if args.render_only:
+        marker = DEST/'complete.json'
+        record = json.loads(marker.read_text())
+        keys = ('qrf_quantiles_kpc','g_r','M_r','r0','bp_rp','M_G','gaia_g','clean_low_luminosity')
+        data = read_columns(verified(DEST/'faint_gaia.npz',record['outputs']['faint_gaia.npz']),keys)
+        root = DEST/'verified_plate'
+        root.mkdir(exist_ok=True)
+        with plt.rc_context(STYLE):
+            hrd(data,root)
+        save_json(root/'complete.json',dict(style_lock_sha256=lock,source_sha256=sha(marker),
+            job=os.getenv('SLURM_JOB_ID'),outputs={p.name:sha(p) for p in root.iterdir() if p.name!='complete.json'}))
+        return
     inputs,data,stats = {},{},[]
     keys = ('TYPE','ls_id','source_id','RA','DEC','r','g0','r0','row_state','gaia_state','qrf_quantiles_kpc',
             'class_label','sky_role','evaluation_row','reference_kpc','specdis_kpc','spdist_kpc',

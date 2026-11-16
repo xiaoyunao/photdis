@@ -18,6 +18,7 @@ from v3_9_references import join, subset
 from v3_10_coverage import DEST as COVERAGE, m92_zones
 from v3_10_evidence import DEST as EVIDENCE
 from v3_10_figures import check_templates, sky_coord
+from v3_10_redrock import DEST as REDROCK
 from v3_10_working_sample import DEST as WORK, DOMAINS, shell_mass
 
 DEST = ROOT/'data/v3_10/science'
@@ -66,6 +67,19 @@ def validation(side, selection, inputs):
     summaries = []
     stats = []
     ref = np.full(len(s),np.nan)
+    rr_marker = REDROCK/'complete.json'
+    rr_meta = json.loads(rr_marker.read_text())
+    z = read_columns(verified(REDROCK/'qualified.npz',rr_meta['outputs']['qualified.npz']),
+                     ('ls_id','TYPE','qualified'))
+    jj = unique_join(t['ls_id'],z['ls_id'])
+    found = np.flatnonzero(jj>=0)
+    np.testing.assert_array_equal(t['TYPE'][found],z['TYPE'][jj[found]])
+    assessed = found[z['qualified'][jj[found]]!='']
+    rr = np.where(t['redrock_quality_assessed'],t['redrock_SPECTYPE'].astype('U8'),'')
+    conflict = assessed[(rr[assessed]!='')&(rr[assessed]!=z['qualified'][jj[assessed]])]
+    rr[assessed] = z['qualified'][jj[assessed]]
+    rr[conflict] = ''
+    inputs[str(rr_marker.relative_to(ROOT))] = sha(rr_marker)
     for channel in reversed(CHANNELS):
         d,q = select_channel(t,channel)
         ref[q&(d>0)] = d[q&(d>0)]
@@ -73,8 +87,7 @@ def validation(side, selection, inputs):
     for a,b in ((-np.inf,np.inf),*zip(COLOR[:-1],COLOR[1:])):
         use = (c>=a)&(c<b)
         for name,k in (('dwarf',labels==0),('giant',labels==1),('other',labels==2),
-                       ('qualified_qso',t['redrock_quality_assessed']&(t['redrock_SPECTYPE'].astype('U')=='QSO')),
-                       ('qualified_galaxy',t['redrock_quality_assessed']&(t['redrock_SPECTYPE'].astype('U')=='GALAXY'))):
+                       ('qualified_qso',rr=='QSO'),('qualified_galaxy',rr=='GALAXY')):
             samples = s[use&k]
             summaries.append(dict(side=side,gr_min=a,gr_max=b,class_label=name,
                 supported=int((samples>=2).sum()),selected=int((samples==4).sum())))
@@ -150,7 +163,7 @@ def cluster_report(t, areas):
                 ax.stairs(x[1],DISTANCE,color=ORANGE,label='Control annulus')
                 ax.axvline(M92_DISTANCE,color=GRAY,ls='--',lw=1.25)
                 ax.set(xlim=(2,12),xlabel='Distance (kpc)',ylabel='Stars per cell per sq. deg.',
-                       title=f'Dereddened g − r · {a:g} to {b:g}')
+                       title='All colors' if n==0 else f'Dereddened g − r · {a:g} to {b:g}')
     axs.flat[-1].axis('off')
     axs[0,0].legend()
     f.suptitle('M92 · photometry-only working sample · reference distance marked in gray')
@@ -191,7 +204,7 @@ def main():
         area = read_columns(verified(marker.parent/'area.npz',a['outputs']['area.npz']),
                             ('m92_area_deg2',))['m92_area_deg2'][3]
         if not field or not np.all(area>0):
-            raise ValueError('The M92 comparison requires both covered field and control P(SF) areas')
+            raise ValueError('M92 and the control annulus require nonzero three-band-depth areas')
         atomic_npz(DEST/'m92_sources.npz',**field)
         cluster_report(field,area)
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,

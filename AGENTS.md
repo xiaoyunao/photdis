@@ -1,5 +1,12 @@
 # Project instructions
 
+- Photdis figure style is fixed to the v3.8 plates at `c935235`.
+  Use the shared v3.8 rendering functions and the checksum lock in
+  `configs/v3_10_figure_style.json`. Preserve the existing figure
+  geometry, colors, fonts, marks, axes, and export settings on new data.
+  The baseline F02/F03 render regression compares original PNG pixels.
+  Changes to this style require the user's explicit direction.
+
 - Completed v3.4 magnitude-limited candidate catalog 2026-11-15.
   See docs/v3_4_result.md, docs/v3_4_catalog.md and manifests/v3_4.
   Frozen grz QRF, nominal SED gate and fixed dwarf score produced

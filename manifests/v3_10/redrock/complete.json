@@ -1,0 +1,17 @@
+{
+  "job": "61402157",
+  "inputs": {
+    "data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "data/v3_10/evidence/south_faint/complete.json": "7c2ac6c43a5a5884939dbf5b31a3335a27f8a38894aa6da74fca31eac3425e3e",
+    "data/v3_10/evidence/south_low/complete.json": "65d4d70898e4c663a82942683a1721716fa88e9d1d4e5da7073d705fc690ddd4",
+    "data/v3_10/evidence/north/complete.json": "6bd03283d506e21980db108605c7db26089929a5b8d847616e28175873322989"
+  },
+  "targets": 63050,
+  "zcatalog": "/global/cfs/cdirs/desi/public/dr1/spectro/redux/iron/zcatalog/v1/zall-pix-iron.fits",
+  "size": 22371272640,
+  "mtime_ns": 1783719573926898200,
+  "outputs": {
+    "qualified.npz": "6f6c70b90fef57e64a1625439a99b26647eff603411f191c120b0fe60314d0bc",
+    "outcomes.csv": "00375719d5f7fe39c16e8966c8c07a0d9b7a3e6af46f143410fe158e1b322ed9"
+  }
+}
