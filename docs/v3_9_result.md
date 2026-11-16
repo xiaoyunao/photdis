@@ -43,6 +43,12 @@ NERSC 的 `data/v3_9/branches/distance_pdf_control.npz`，逐星与逐波段
 北天读取 526 个，表头检查未发现缺失的必需字段。
 [输入清单](../manifests/v3_9/inventory/summary.json)
 
+南天 1,600 个 sweep 的逐行筛查已完成。两个新增天区范围合计
+有 29,106,625 个原生 PSF 满足严格三带误差条件，4,571,047 个
+进入较低信噪比的母样本。测距模型支持和实际 PDF 数量仍以
+预测分区结果为准。[南天逐行计数](../manifests/v3_9/inventory/south_row_census.json)
+
+
 ## 三维消光试验
 
 Bayestar19 试验在三个有合格样本的 DECam 视场得到 **311 个 PSF**

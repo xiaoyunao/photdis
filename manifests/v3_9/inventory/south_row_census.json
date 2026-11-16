@@ -1,0 +1,17 @@
+{
+  "job": 61394871,
+  "sweeps_checked": 1600,
+  "raw_rows": 3561828221,
+  "header_inventory_sha256": "b87d9d8e080b23643c759680d99fefe5a94946a9d970cf12ebf9c3f1f9b25d66",
+  "features_ready_before_model_support": true,
+  "native_psf_quality_counts": {
+    "outside_tile": 0,
+    "other_release": 0,
+    "missing_type": 0,
+    "non_psf": 1530412089,
+    "outside_science_domain": 1993327650,
+    "optical_rejected": 4410810,
+    "noise_control_parent": 4571047,
+    "precise_parent": 29106625
+  }
+}

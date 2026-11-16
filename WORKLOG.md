@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — reconcile the complete southern input census
+
+- All 48 south scan tasks completed. Reconciled 1,600 sweep receipts to
+  3,561,828,221 input rows and 29,106,625 strict-quality native PSFs before
+  model support. The lower-S/N parent has 4,571,047 rows.
+- Submitted prediction retries 61397542_0 and _1 for the two failed elements.
+  Updated validation 61395039_0 and _1 to depend on the retry and original
+  reference join. The original south array continues from element 2.
+- Ran the full local suite again after the process-context patch. 472 passed.
+
 ## 2026-11-16 — recover southern prediction workers on Python 3.14
 
 - Southern shards 61394873_0 and _1 failed during worker initialization.
