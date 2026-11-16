@@ -101,3 +101,7 @@ NMAD 从 1.066 等降至 0.538 等。较拥挤层仅有 6 颗共同支持参考
 逐星结果位于 NERSC 的 `data/v3_9/existing/gates/completed_gates.npz`，
 可按 `catalog_row` 或 `ls_id` 连接原成员索引。门槛通过数描述
 候选规则。[完成记录](../manifests/v3_9/gates/complete.json)
+
+对完整输出重新核验后，达到阈值的对象中有 114,030 个重算
+时无数值告警，273 个有告警，265 个沿用 Redrock 门槛且告警
+状态未知。[数值质量复核](../manifests/v3_9/gates/gate_quality_audit.json)

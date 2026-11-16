@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-16 — verify numerical quality of the complete candidate gate
+
+- Independent job 61398196 reopened the exact gate product and verified
+  336,678 unique PSF identities, finite probability bounds and membership.
+  Among the 114,568 nominal passes, 114,030 have a clean recomputation,
+  273 carry numerical flags and 265 reuse values without known flag status.
+  Archived the checksum-bound totals and linked them in the result scope.
+
 ## 2026-11-16 — complete frozen far-gate replay and isolate reference evaluation
 
 - All 24 replay elements and finalization 61394762 completed. Of 336,678

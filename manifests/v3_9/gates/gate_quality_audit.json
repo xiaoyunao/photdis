@@ -1,0 +1,17 @@
+{
+  "input": "e859384730b4d87a5e19f215cf21e98cd04e190fe1c7b2933240111aabd6798f",
+  "groups": {
+    "stable": {
+      "rows": 335423,
+      "pass_gate": 114030
+    },
+    "flagged": {
+      "rows": 713,
+      "pass_gate": 273
+    },
+    "reused_flag_unavailable": {
+      "rows": 542,
+      "pass_gate": 265
+    }
+  }
+}
