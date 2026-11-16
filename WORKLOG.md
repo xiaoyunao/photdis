@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — validate the fitted northern native model
+
+- All 48 north and 48 south reference association tasks completed.
+- Northern fit 61394930 used 61,440 Gaia and 4,096 SpecDis dwarf fit rows.
+  It retained 8,000 calibration and 12,000 held-sky test objects, with a
+  −0.0070 mag calibration. Archived the fit receipt and held-sky table.
+- Shared photometric support and high-quality Gaia supplied 11,579 estimates
+  inside 2 kpc (14.17% NMAD) and 304 inside 2–5 kpc (−9.36% median).
+  No qualifying Gaia geometry was available beyond 5 kpc in that test.
+  The native north production and southern validation arrays are running.
+
 ## 2026-11-16 — verify the northern and southern same-label comparison
 
 - Job 61395041 completed with 18,000 common-reference fits and 6,000

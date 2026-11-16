@@ -123,3 +123,22 @@ NMAD 从 1.066 等降至 0.538 等。较拥挤层仅有 6 颗共同支持参考
 [同星距离结果](../manifests/v3_9/overlap/distances.csv) ·
 [接缝表](../manifests/v3_9/overlap/seam.csv) ·
 [运行记录](../manifests/v3_9/overlap/complete.json)
+
+## 北天发布模型的留出天区结果
+
+北天原生 BASS/MzLS 模型使用 61,440 个 Gaia 几何参考与 4,096 个
+合格 SpecDis 矮星拟合。另有 8,000 个校准对象和 12,000 个留出
+天区测试对象。北天零点校准为 −0.0070 等。生产模型和逐星角色
+表保存在 NERSC 的 `data/v3_9/expansion/north/native_model`。
+
+| Gaia 参考距离 | 支持内留出对象 | 中位相对距离误差 | NMAD | 68% 区间含参考中心 |
+| --- | ---: | ---: | ---: | ---: |
+| 0–2 kpc | 11,579 | +0.21% | 14.17% | 69.33% |
+| 2–5 kpc | 304 | −9.36% | 15.74% | 57.57% |
+| 5–10 kpc | 0 | — | — | — |
+
+这些样本是可用高质量 Gaia 几何距离的留出对象。2–5 kpc
+仍有可见的距离低估和区间偏窄，推断到更远处还需依赖光谱
+与带符号视差的分域验证。
+[北天留出结果](../manifests/v3_9/north_model/distance.csv) ·
+[模型清单](../manifests/v3_9/north_model/complete.json)
