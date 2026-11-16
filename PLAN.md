@@ -1,5 +1,30 @@
 # PLAN
 
+## v3.13 — trace the luminosity scale and test the deeper main sequence
+
+Use the full Pro review 9a8fddbc-3c22-4101-9715-ae0c58d79a27 at d4a27fa.
+Preserve v3.9–v3.12 production, identities, fits and validation records.
+
+1. Use the same cluster and control annuli in M92, M13 and M30. Pass native
+   DR11 PSF, quality masks and per-band 0.1-mag precision requirements.
+   Apply frozen QRF and native color forecasts in four observed r tiers
+   through 23. Keep the sightline-specific extinctions and role-4 M92 mask.
+   Record morphology exclusions, depth-dependent footprint and Gaia coverage.
+2. Measure individual absolute-r residuals against external distances,
+   stratified by both optical colors, r and coarse empirical CMD boxes.
+   Keep individual residuals, blind population distance peaks and
+   reference-conditioned phase-specific curves distinct. Require a
+   significant reference-window excess and peak within 10% to identify a
+   promising distance range.
+3. Swap Gaia and SpecDis distance targets at exactly the same fit
+   identities. Compare mixed and source-only fits with disjoint test roles.
+   Report reference-conditioned weight reliability and the mix of classes
+   by color, magnitude and distance. Do not use external cluster
+   distances to fit or correct the measured validation fields.
+4. Evaluate A/B evidence before authorizing C within the experiment.
+   Any phase correction or CMD likelihood that is tested for adoption
+   requires a pre-registered independent cluster and a frozen method.
+
 ## v3.12 — completed matched distance and structure comparison
 
 [Results and adoption decision](docs/v3_12_result.md).
