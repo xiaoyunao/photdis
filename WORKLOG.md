@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — v3.9 native survey census and distance export
+
+- Added the shared configurable DR11 census and resumable QRF PDF exporter.
+  Split structural rejects, low-S/N controls and the precise parent. Native
+  north header and eight actual input rows confirmed release/PSF/Gaia schema.
+- Checked the 20 and 23 mag boundaries, PSF exclusion and both S/N tiers in a
+  synthetic native-photometry smoke run. Five existing photometry tests passed.
+- NERSC accepted gate/PDF job chain 61394760–61394763, pending while Slurm
+  reports PartitionDown. Next use native north references and join the
+  original spectroscopy and Gaia inventory against the expansion products.
+
 ## 2026-11-16 — start the v3.9 catalog expansion
 
 - Read the full Pro review of c935235 and registered six work areas.

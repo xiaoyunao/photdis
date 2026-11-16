@@ -49,6 +49,7 @@ def read_native(path):
 def science_domain(r, b, ebv, *, r_min=None, r_max=None, abs_b_min=None,
                    abs_b_max=None, ebv_min=0., ebv_max=None):
     """Scientific half-open ranges, separate from optical and morphology checks."""
+    r, b, ebv = map(np.asarray, (r, b, ebv))
     use = np.isfinite(r)&np.isfinite(b)&np.isfinite(ebv)&(ebv>=ebv_min)
     if r_min is not None: use &= r>=r_min
     if r_max is not None: use &= r<r_max

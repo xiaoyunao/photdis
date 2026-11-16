@@ -1,0 +1,21 @@
+{
+  "north": {
+    "sweep_root": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0",
+    "release": 11011,
+    "system": "BASS_MzLS_DR11",
+    "domains": {"north": {"r_max": 23, "abs_b_min": 30, "ebv_max": 0.03}}
+  },
+  "south": {
+    "sweep_root": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0",
+    "release": 11010,
+    "system": "DECam_DR11",
+    "domains": {
+      "south_faint": {"r_min": 20, "r_max": 23, "abs_b_min": 30, "ebv_max": 0.03},
+      "south_low": {"r_max": 20, "abs_b_max": 30, "ebv_max": 0.03}
+    }
+  },
+  "maximum_grz_error_mag": 0.1,
+  "noise_control_per_stratum_per_sweep": 64,
+  "north_reference_per_stratum_per_sweep": 144,
+  "batch": 2048
+}
