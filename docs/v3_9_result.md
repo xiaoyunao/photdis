@@ -53,6 +53,15 @@ NERSC 的 `data/v3_9/branches/distance_pdf_control.npz`，逐星与逐波段
 信噪比母样本。这里分别使用北天原生测光和释放编号，数字
 对应模型支持判定前的母表。[北天逐行计数](../manifests/v3_9/inventory/north_row_census.json)
 
+对修复后的南天生产输出，另取三个已预测 sweep 做独立复核。
+其中 21,638 个原生 PSF 对应 13,936 条距离 PDF，含 13,351 条
+严格质量层与 585 条低信噪比试验层。严格质量层中 9,132 条
+没有原生 Gaia 键，8,468 条没有显著 W1/W2 检测。所有抽查
+PDF 的分位数对应累积概率最大差异为 `1.42e-8`。这是三个
+sweep 的实际运行检查。
+[首批输出核验](../manifests/v3_9/validation/first_actual_pdf_audit.json)
+
+
 
 
 ## 三维消光试验

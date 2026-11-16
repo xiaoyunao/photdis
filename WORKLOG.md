@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — verify the first native south prediction artifacts
+
+- NERSC job 61397972 independently audited three actual sweep outputs
+  from the repaired worker launch. Verified 21,638 native rows and 13,936
+  PDFs with a maximum quantile CDF error of 1.42e-8 and exact shell sums.
+- Strict-quality predictions included 9,132 without a native Gaia key
+  and 8,468 without a significant WISE detection across the three sweeps.
+  Archived the partial audit. Both sides have returned a first reference
+  joining shard, and release-wide predictions and validation continue.
+
 ## 2026-11-16 — reconcile the complete northern photometric parent
 
 - All 48 north scan tasks completed. Reconciled all 526 sweep receipts
