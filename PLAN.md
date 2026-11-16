@@ -1,5 +1,33 @@
 # PLAN
 
+## v3.12 — measure distance information before selecting a structure
+
+Use the project review eeb2ea1b-cac1-412e-bc89-543dce1bed55 at baseline
+1d8c4f4. Preserve production, training, full QRF PDFs and all prior outcomes.
+
+1. Compare native color–absolute-magnitude and frozen QRF distances on the
+   same reference PSFs. Report independent source scales, observable and
+   physical strata, distance migration, and raw and effective retention.
+   Refit the same revised-label classifier excluding the M30 field and
+   compare removal of observed brightness and available sky features at
+   the original giant and intermediate calibration budgets.
+2. Compare the support-only, hard and soft PDF curves and the color
+   relation in the fixed M92 and M13 apertures. Register M30 (325.092°,
+   −23.180°, 8.49 kpc) before any new predictions. Exclude its 2° region
+   from all new fits and calibration. Check the frozen southern QRF
+   training identities. Use the published Gaia EDR3 membership catalogue
+   for matched members and an independently known physical distance
+   for the structural acceptance. Treat prior v3.11 M92/M13 as seen.
+3. Check 5–10 kpc blue-dwarf retention ≥50%, absolute bias <10%,
+   NMAD ≤20% and severe residuals <10%, and compare with the frozen
+   preselection population and common leakage budgets. Assess the
+   independent structure peak over 1–20 kpc and require clear excess
+   at the known distance and peak bias within 10%. Report bounds and
+   preserve the 2–5 kpc hard-selection benchmark separately.
+4. Use the first comparisons to decide whether a dedicated
+   population/band calibration is warranted. Preserve the native PSF
+   scope, locked v3.8 plots, and the previous faint/low-latitude results.
+
 ## v3.11 — completed selection, luminosity branches and survey distance-scale tests
 
 See the [result](docs/v3_11_result.md) and [delivery](manifests/v3_11/delivery.json).
