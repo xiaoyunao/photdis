@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — verify the Perlmutter scheduling blocker
+
+- Rechecked the live Slurm jobs and their dependency chains. All independent
+  v3.9 stages remain pending with PartitionDown and no scheduler start time.
+  The downstream jobs are waiting on the existing arrays and final delivery
+  61395046 is still queued. No v3.9 science receipts exist yet.
+- Checked live partition access and the project's enabled QOS. Regular,
+  shared, urgent and GPU partitions are down. The two up partitions require
+  QOSes unavailable to the project's DESI association.
+- Kept the original submissions. On recovery check the terminal states and
+  output receipts before retrying any failed array elements.
+
 ## 2026-11-16 — certify row ownership and full posterior values at delivery
 
 - Added independent checks of packed native identities, raw FITS-row ownership,

@@ -10,6 +10,12 @@ native inventory and first finished science partitions. Then collect
 distance and population evidence, inspect plots, reconcile the near PDF and
 gate counts, and write the release decision from actual products.
 
+The live Slurm chain is currently blocked by Perlmutter partition availability.
+Retain the original jobs listed in WORKLOG. Recheck with
+`squeue -u yunao` and inspect the output receipts when the first jobs finish.
+The delivery dependency root is `61395046`.
+
+
 ## v3.8 — completed direct paper figures and science validation
 
 The [v3.8 results](docs/v3_8_result.md) complete the five work packages from the
