@@ -1,0 +1,11 @@
+sweep,r_min,r_max,outside_tile,other_release,missing_type,non_psf,outside_science_domain,optical_rejected,noise_control_parent,precise_parent
+sweep-320m025-325m020.fits,-inf,20.0,0,0,0,2674,0,2166,0,5412
+sweep-320m025-325m020.fits,20.0,21.0,0,0,0,4530,0,682,2,3201
+sweep-320m025-325m020.fits,21.0,22.0,0,0,0,10497,0,958,268,4285
+sweep-320m025-325m020.fits,22.0,23.0,0,0,0,20469,0,2383,3530,2585
+sweep-320m025-325m020.fits,23.0,inf,0,0,0,47555,57712,0,0,0
+sweep-325m025-330m020.fits,-inf,20.0,0,0,0,2625,0,2487,0,6285
+sweep-325m025-330m020.fits,20.0,21.0,0,0,0,4879,0,920,0,4191
+sweep-325m025-330m020.fits,21.0,22.0,0,0,0,11442,0,949,197,5120
+sweep-325m025-330m020.fits,22.0,23.0,0,0,0,23342,0,2488,4488,3355
+sweep-325m025-330m020.fits,23.0,inf,0,0,0,50083,61834,0,0,0

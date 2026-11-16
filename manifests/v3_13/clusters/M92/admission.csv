@@ -1,0 +1,6 @@
+sweep,r_min,r_max,outside_tile,other_release,missing_type,non_psf,outside_science_domain,optical_rejected,noise_control_parent,precise_parent
+sweep-255p040-260p045.fits,-inf,20.0,0,0,0,5134,176,4140,0,11247
+sweep-255p040-260p045.fits,20.0,21.0,0,0,0,6633,94,1310,5,7360
+sweep-255p040-260p045.fits,21.0,22.0,0,0,0,14567,108,850,907,6650
+sweep-255p040-260p045.fits,22.0,23.0,0,0,0,28294,213,4055,7131,2053
+sweep-255p040-260p045.fits,23.0,inf,0,0,0,44848,62605,0,0,0

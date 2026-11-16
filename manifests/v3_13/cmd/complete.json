@@ -1,0 +1,46 @@
+{
+  "job": "61411559",
+  "inputs": {
+    "styles": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "membership_source": "https://zenodo.org/records/4891252",
+    "m5_member_hash": "74889d8e421ce1a74a4377653f1a48982f2763d7ac6d12e9b539311da6743185",
+    "external_scale": "https://academic.oup.com/view-large/353698133",
+    "data/v3_13/clusters/M30/complete.json": "08bea55694e8de0a62dea2476e20b5e7a160daecbac461ddcecdfc3fcd5c2e47",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225p000-230p005.fits": {
+      "bytes": 1244249280,
+      "mtime_ns": 1780604936000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230p000-235p005.fits": {
+      "bytes": 1242869760,
+      "mtime_ns": 1780605080000000000
+    },
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_12/reference/south/complete.json": "75573fc969ff21a925823d51ed980217ddd6ee3265b1cfd137c00bacd253f385",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits": {
+      "bytes": 22995910080,
+      "mtime_ns": 1780757592000000000,
+      "density": 2500.0
+    }
+  },
+  "native_target": 11218,
+  "native_control": 9124,
+  "target_members": 9052,
+  "excluded_distance_training": 0,
+  "area": [
+    0.3376,
+    3.1616
+  ],
+  "template_members": 1077,
+  "outputs": {
+    "admission.csv": "16e422bc35f5c57792b504670f68a168f69dfb256b5e6a8854da79c60633448d",
+    "m5.pdf": "21d3f2d68fcaabf6149f76e1eff338a1229c754c1e469b4b9a8be73f9fd8354c",
+    "m5.csv": "d52f9db609232d508cb51c294ac8cf0311d8861b821e549fb97517ee1159880c",
+    "m5_rows.npz": "2c2445ce93c2f923a6700c37fdb7787190999335c93a42cef3b13e07ac7ef13e",
+    "m5.npz": "5786f0c25da2749614c84659cb1049e8810708508bc9a194480877dc006b2e26",
+    "m5.png": "1e547ad88ba8b9efc13687293262c8094c56576363847e09ccf1c58523e64a0a"
+  }
+}

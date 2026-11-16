@@ -1,0 +1,37 @@
+{
+  "job": "61411096",
+  "name": "M92",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "members": "e868d6e012a440e61984af1cbd16492662ef91ce2e99dca48d56dd734c2edde0",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-255p040-260p045.fits": {
+      "bytes": 689552640,
+      "mtime_ns": 1780638081000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits": {
+      "bytes": 5064027840,
+      "mtime_ns": 1780757234000000000,
+      "density": 2500.0
+    },
+    "data/v3_9/expansion/north/native_model/complete.json": "42cc5e149325bfc5a66fc177f84977aa943a4cbd14324d720ec33d44aba5dad4",
+    "native_north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f",
+    "data/v3_12/reference/north/complete.json": "443d26c484333264c4d95eccfe44549e7b2c18361ffc43b93cd4d75d66c38e2e"
+  },
+  "admitted": 27310,
+  "frozen_training_excluded": 0,
+  "public_target_members": 3381,
+  "matched_target_members": 2587,
+  "ebv_max": 0.03,
+  "outputs": {
+    "luminosity.pdf": "4a62f70944c7f54cdcce40e409fe2c05aa3c9546a7ef92be70c72698ad62cd66",
+    "admission.csv": "1be49a5c3e1ff6fa422d5eb1d3bd1b2fefdf775fe424a8723c333861049d705b",
+    "sources.npz": "18d5a9f86949d6bc21eec668594dc9d18c0e15390b53e80d63cc8ae879c114f3",
+    "luminosity.png": "c5104484084a69b8806e0fba430b4ebd3cac20a588bbbba3cdb6437d73a2e11c",
+    "depth.csv": "5a06e3c8077f57a366a717c5799249bf83157d20cdad2e563b18b4592d45d3b4",
+    "depth.pdf": "656eab7955d4f5e25ac5cc96a38ed9aa2451a58c61acb362e7a00a31da3c1a70",
+    "luminosity.csv": "2c3fe74363909ecdbbfad69f42b54a6b07b6809dd373b1dda266e04860ca8c38",
+    "depth.npz": "993878055e9c3f5d3463a972762ddbaf4c62a23918251b6b3fe5b03ea8038b3f",
+    "area.csv": "6d6d38377bf3a9ea785ddaf8387eca6b1163c2f7d137e0a65e72da0f5a73e8d1",
+    "depth.png": "0fe9ae8740155620737e445406d105db8d44e1b5c390d8bca7f08257c8286663"
+  }
+}

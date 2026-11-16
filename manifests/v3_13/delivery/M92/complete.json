@@ -1,0 +1,20 @@
+{
+  "job": "61411942",
+  "inputs": {
+    "data/v3_13/clusters/M92/complete.json": "de9e08b7adb54c03dabc3e028099d1f6df56a4980c7e378464d8e1f55128ac2e",
+    "data/v3_11/selection/north/complete.json": "792e21dd24926e24c506afe7701bfd277c81f79d05ef6e5c40178bbcbf923716",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-255p040-260p045.fits": {
+      "bytes": 689552640,
+      "mtime_ns": 1780638081000000000
+    }
+  },
+  "n": 23925,
+  "outputs": {
+    "cmd_residuals.npz": "131ab8429237d493a23a9536171e4ec25b8e182d697e377249c1866ea9acff0c",
+    "soft_depth.csv": "83265255590d3758dcd2a6697322d20e5af63f4183b5fb407b7d3ad257e4231e",
+    "soft_weights.npz": "40bd56ce15ef5c4519f6742f5d4596e54910120c865225bd41f32e1ecbfa83d9",
+    "cmd_residuals.pdf": "dd5b1950255721656214c5cf3bbc69536482104ac7ab3d461bf808842227ac42",
+    "cmd_residuals.csv": "399666e354cb20510cda4f6b4a6839534c156d3f9c9257583e091268b1cf1684",
+    "cmd_residuals.png": "d60dbec0e457c926d7397713b6e34545e87d107bcf227b222f4ee9ca54ffa81a"
+  }
+}

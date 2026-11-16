@@ -1,6 +1,14 @@
 # PLAN
 
-## v3.13 — trace the luminosity scale and test the deeper main sequence
+## v3.13 — completed cluster luminosity, depth and independent CMD tests
+
+[Results and adoption decision](docs/v3_13_result.md).
+Cluster member residuals vary strongly with location in the CMD. The
+20–21 mag QRF profiles shift farther than the bright profiles. Swapping
+Gaia and SpecDis targets at fixed identities shifts the field-star
+luminosity relation. The M5 CMD template comparison improved absolute
+peak bias and remained outside the 10% criterion. Keep the full research
+outputs and retain the frozen production distance scale.
 
 Use the full Pro review 9a8fddbc-3c22-4101-9715-ae0c58d79a27 at d4a27fa.
 Preserve v3.9–v3.12 production, identities, fits and validation records.

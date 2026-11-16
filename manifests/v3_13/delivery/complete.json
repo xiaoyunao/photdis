@@ -1,0 +1,14 @@
+{
+  "job": "61411945",
+  "inputs": {
+    "data/v3_13/delivery/M92/complete.json": "967c5a87f0049683fd5f60bda53422af1cfdad8775cd8cbf6342fdaea18b76dd",
+    "data/v3_13/delivery/M13/complete.json": "49690cfcd4fa7b4e9fe59d732d77f6efeb7829a2bef8e7a1b3555e92af533bbe",
+    "data/v3_13/delivery/M30/complete.json": "0971c7aa59d8dbe49e0311e30389a27950219f4255eed84355b99785c87366d4",
+    "data/v3_13/scale/north/complete.json": "1ccfb55ca253c717cd8ab91155cf9a35dcf81fde006c3e4881bcd3d66b374fac",
+    "data/v3_13/scale/south/complete.json": "1b7c77138d6d9f9d97c6398565864d49c5d306f02745f3918641bef81fcad10e",
+    "data/v3_13/cmd/complete.json": "bf2fbf708d7a1fbb27b4bde6c191ee2d7067962b1816aa5917128a369f2bebc5"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "figures": 10,
+  "outputs": {}
+}

@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-17 — measure cluster luminosity scales and a deeper native sample
+
+- Read review 9a8fddbc and registered the v3.13 goal before edits. Ran M92,
+  M13 and M30 in four optical magnitude tiers. QRF residuals are brighter
+  for matched turnoff and lower-main-sequence members and fainter in the
+  empirical subgiant box. Gaia member overlap falls steeply above r=21.
+- Compared matched Gaia and SpecDis teachers across disjoint roles. The
+  choice of teacher moves the blue absolute-magnitude relation. Archived
+  magnitude/color/distance soft-weight checks and classifier-fit overlaps.
+- Registered M5 before predicting it. Relative peak offsets are +18.6%
+  for the frozen QRF and −13.9% for matching the M30 CMD. Preserve both
+  results as research. The 10% scale target was missed.
+- The first delivery replay summed compact probabilities in float32
+  and triggered the tolerance on a few rows. Sum the stored values in
+  float64 and replay the validators. Original forecasts are preserved.
+- Existing 472 tests and focused synthetic checks passed.
+  See docs/v3_13_result.md, manifests/v3_13 and figures/v3_13.
+
 ## 2026-11-17 — deliver the v3.12 fixed reference and structure comparison
 
 - Read the full GPT Pro review, registered the goal and froze the v3.11 baseline.

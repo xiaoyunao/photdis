@@ -1,0 +1,44 @@
+{
+  "job": "61411098",
+  "name": "M30",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "members": "e868d6e012a440e61984af1cbd16492662ef91ce2e99dca48d56dd734c2edde0",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-320m025-325m020.fits": {
+      "bytes": 1171503360,
+      "mtime_ns": 1780614233000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-325m025-330m020.fits": {
+      "bytes": 1111576320,
+      "mtime_ns": 1780614638000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits": {
+      "bytes": 22995910080,
+      "mtime_ns": 1780757592000000000,
+      "density": 2500.0
+    },
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_12/reference/south/complete.json": "75573fc969ff21a925823d51ed980217ddd6ee3265b1cfd137c00bacd253f385"
+  },
+  "admitted": 34434,
+  "frozen_training_excluded": 0,
+  "public_target_members": 1363,
+  "matched_target_members": 1077,
+  "ebv_max": 0.08,
+  "outputs": {
+    "luminosity.pdf": "89c7d74c054cb0407e888580481182b4e508b94b45b07bbfc130bab9d0685911",
+    "admission.csv": "6133f2e8589ce8700701d5e8d74fbf3b5520ef176ef55b39bdba958651986e6d",
+    "sources.npz": "3fb0a3e94d88489a1ff99f345df4a7105ac8d088a64a7b5dd786c45ba8e89209",
+    "luminosity.png": "a05a18f9b7ce08bdad0159a3540ce03e3922a29201b92d5a06752eb6d9c34fb3",
+    "depth.csv": "feb7dc7434be1a6cba868ce769f6db539f414c9ede42d0109540c8330b90dfe2",
+    "depth.pdf": "995c90f8892851719d9fd6537996fcbbb3b8539c20c320e813c6811d16fd956b",
+    "luminosity.csv": "3a0d68a009c23d6cb3390159fc5518d70812ff29395db7f75b4ea35ae9bf7ecb",
+    "depth.npz": "a23dd2b289b2608927078caf3e8248c2dfb9bb7d160f6526c2feffb61073d6ac",
+    "area.csv": "add374cbb380a9487775778863eaf21379c2430015529935decaf953616a5cf0",
+    "depth.png": "5cb975498abbb6244108e5dbf24a96f11e39d9c3c3e18f8c874bcd7d24fbeb1e"
+  }
+}

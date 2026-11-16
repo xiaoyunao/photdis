@@ -1,0 +1,24 @@
+{
+  "job": "61411779",
+  "inputs": {
+    "data/v3_13/clusters/M30/complete.json": "08bea55694e8de0a62dea2476e20b5e7a160daecbac461ddcecdfc3fcd5c2e47",
+    "data/v3_11/selection/south/complete.json": "c47fa9bbf40478a3b7040430e248a23581b06885adb696d88701e9322d4558c2",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-320m025-325m020.fits": {
+      "bytes": 1171503360,
+      "mtime_ns": 1780614233000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-325m025-330m020.fits": {
+      "bytes": 1111576320,
+      "mtime_ns": 1780614638000000000
+    }
+  },
+  "n": 29301,
+  "outputs": {
+    "cmd_residuals.npz": "19b2a639e7f463dcf2a549739ed07bd172019b4c9d9e08fa285fefaeab2b57ea",
+    "soft_depth.csv": "f640a1ebb64313f6445f91260ae22f0c79c56e7e915f020e90c743a3170934db",
+    "soft_weights.npz": "313b3d5511ad327267763ff216eef6a18d9f07671ff7005dca4b203a06551001",
+    "cmd_residuals.pdf": "7e05c9baed3bafba561d84b35378bc6631ddf90fcbcde60ea65f9179adab7d0f",
+    "cmd_residuals.csv": "686affef011a0f78b95664571f7a7a6af0f094e0fafe98075b530bbece8bd7bf",
+    "cmd_residuals.png": "a594819e9c09ccb1c15b4e1d09accfb6c824a31019196d1878918af52b064c33"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "job": "61411097",
+  "name": "M13",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "members": "e868d6e012a440e61984af1cbd16492662ef91ce2e99dca48d56dd734c2edde0",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-245p035-250p040.fits": {
+      "bytes": 682945920,
+      "mtime_ns": 1780637997000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-250p035-255p040.fits": {
+      "bytes": 745067520,
+      "mtime_ns": 1780638011000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits": {
+      "bytes": 5064027840,
+      "mtime_ns": 1780757234000000000,
+      "density": 2500.0
+    },
+    "data/v3_9/expansion/north/native_model/complete.json": "42cc5e149325bfc5a66fc177f84977aa943a4cbd14324d720ec33d44aba5dad4",
+    "native_north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f",
+    "data/v3_12/reference/north/complete.json": "443d26c484333264c4d95eccfe44549e7b2c18361ffc43b93cd4d75d66c38e2e"
+  },
+  "admitted": 41858,
+  "frozen_training_excluded": 175,
+  "public_target_members": 13810,
+  "matched_target_members": 11321,
+  "ebv_max": 0.03,
+  "outputs": {
+    "luminosity.pdf": "560ac24ced492f2c48c41e9e29fd8a4cafb52678e6d41f1d17753934ac0d5519",
+    "admission.csv": "bdaf05b20d69c05185ca762e8646f4c103954c6296e667a30fd00af4610814aa",
+    "sources.npz": "05084e9f235c18d80be4aedb0cb103a2dcf6b64d6efc55292286fdaec5839b7c",
+    "luminosity.png": "bba0b44dc3302be2c297908cbf86b6b96506c3a4c106115f9ca3a4fbe4383c31",
+    "depth.csv": "72d7eb7e8330d98a03ae93bd1ac83c63d252479f5d6d4e24591e775b254159a0",
+    "depth.pdf": "99846346c61c7079a5358548bec3e265793991fcf0e049fec7445e9c0a37bba2",
+    "luminosity.csv": "a2c0f9ac4bcb9dabcd1c356596da2809c77e0e6b44baf15ad563d395d22ee2e0",
+    "depth.npz": "78d205c5f88f809fb1af5e9965bd3e09224970989637ef68f4dca90b0ea7bec6",
+    "area.csv": "c0e092ef44193342326af34f1361361820e559290d5fdcbeb1a9f0d6641dabc9",
+    "depth.png": "ddeecf69a9c5ff6024ebf88fbba9ddd02ceb2dc9b2252f9ef77310f827f5e60e"
+  }
+}

@@ -1,0 +1,3 @@
+method,peak_kpc,reference_kpc,relative_bias,detection_score,peak_at_scan_boundary
+M30 CMD matched filter,6.441247758465692,7.48,-0.1388706205259771,38.09378729830877,False
+Frozen QRF PDF sum,8.875,7.48,0.18649732620320858,,False
