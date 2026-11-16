@@ -22,7 +22,7 @@ from v3_4_near_forecast import prepare
 from v3_5_dr11_area import BANDS, random_memmap
 from v3_6_vac_distances import read_columns
 from v3_8_direct_figures import BLUE, GRAY, ORANGE, STYLE, plt, save
-from v3_9_catalog import read_native, scan_chunk, settings
+from v3_9_catalog import LEDGER, read_native, scan_chunk, settings
 from v3_9_delivery import DEST as RELEASE
 from v3_9_references import join, subset
 from v3_10_coverage import ANNULI
@@ -80,12 +80,12 @@ def class_probability(fit, v):
     return apply_temperature(fit['model'].predict_proba(v),fit['temperature'])[:,0]
 
 
-def m30(version, inputs):
+def m30_photometry(inputs):
     cfg = settings()['south']
     cfg['maximum_grz_error_mag'] = settings()['maximum_grz_error_mag']
     cfg['domains'] = {'south_test':{'r_max':20.,'abs_b_min':30.,'ebv_max':EXTINCTION_LIMIT}}
     root = Path(cfg['sweep_root'])
-    tiles = []
+    tiles,ledger = [],[]
     for source in sorted(root.glob('sweep-*.fits')):
         r0,b0,r1,b1 = tile_bounds(source)
         if not (r0<M30[0]+1.5 and r1>M30[0]-1.5 and b0<M30[1]+1.25 and b1>M30[1]-1.25):
@@ -98,15 +98,25 @@ def m30(version, inputs):
         stat = source.stat()
         inputs[str(source)] = dict(size=stat.st_size,mtime_ns=stat.st_mtime_ns)
         raw = data[in_field]
-        p = join([v for v,_ in scan_chunk(raw,(r0,b0,r1,b1),cfg,0) if v])
+        p,status = {},None
+        for photo,status in scan_chunk(raw,(r0,b0,r1,b1),cfg,0):
+            if photo:
+                p = photo
+        if status is None:
+            raise ValueError(f'Missing native admission states in {source}')
+        ledger.append(dict(sweep=source.name,**dict(zip(LEDGER,np.bincount(status,minlength=len(LEDGER))))))
         if p:
-            p = subset(p,p['row_state']==7)
-            tiles.append(p)
+            tiles.append(subset(p,p['row_state']==7))
     p = join(tiles)
     if not p or not len(p['ls_id']):
         raise ValueError('No qualified native PSF in the predeclared M30 footprint')
     if not np.all(p['TYPE']=='PSF') or len(np.unique(p['ls_id']))!=len(p['ls_id']):
         raise ValueError('M30 native source identity conflict')
+    return p,ledger
+
+
+def m30(version, inputs):
+    p,_ = m30_photometry(inputs)
     models,_,bound = prepare()
     inputs.update({str(path.relative_to(ROOT)):sha(path) for path in bound})
     qrf = models['qrf']
@@ -245,6 +255,25 @@ def render(name,t,area,d,rel,member,scale):
     return rows
 
 
+def audit_m30():
+    from v2_1_near import csv_rows
+    inputs = {}
+    p,ledger = m30_photometry(inputs)
+    report = DEST/'m30_admission.csv'
+    marker = DEST/'m30_audit.json'
+    csv_rows(report,ledger)
+    original = json.loads((DEST/'m30.json').read_text())
+    for name,receipt in inputs.items():
+        if original['inputs'][name]!=receipt:
+            raise ValueError('M30 raw file changed across admission and prediction')
+    members = read_columns(verified(DEST/'m30_members.npz',original['outputs']['m30_members.npz']),
+                           ('TYPE','ls_id'))
+    if not np.isin(members['ls_id'],p['ls_id']).all() or not np.all(members['TYPE']=='PSF'):
+        raise ValueError('The structure forecast includes rows outside audited M30 admission')
+    save_json(marker,dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,precise_native_psf=len(p['ls_id']),
+        output_forecasts=len(members['ls_id']),outputs={report.name:sha(report)}))
+
+
 def run(group):
     inputs = {'style':check_templates(),'membership':MEMBERS_SHA,
               'membership_url':'https://zenodo.org/records/4891252',
@@ -287,5 +316,9 @@ if __name__=='__main__':
     require_compute()
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('group',choices=('north','m30'))
-    run(parser.parse_args().group)
+    parser.add_argument('group',choices=('north','m30','audit_m30'))
+    group = parser.parse_args().group
+    if group=='audit_m30':
+        audit_m30()
+    else:
+        run(group)
