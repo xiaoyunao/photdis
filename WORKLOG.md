@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — queue v3.9 science jobs and dependent delivery
+
+- Missing-gate setup/replay/finalization and near PDF: 61394760–61394763.
+- Native south/north inventory and scan, south PDFs: 61394869–61394873.
+- Original-source reference joins, north model/PDF and branch PDF replay:
+  61394928–61394932.
+- Dust, grouped validation, overlap comparison, three atlases, faint noise
+  transfer and final delivery: 61395038–61395046.
+- NERSC accepts submissions and reports regular/shared CPU partitions down.
+  No catalog completion or science performance is inferred from queue state.
+  Recheck the first sweep receipts and branch/dust results on resumption.
+
 ## 2026-11-16 — v3.9 dust, validation, and delivery stages
 
 - Added the distance-dependent reddening pilot, same-label north/south fit

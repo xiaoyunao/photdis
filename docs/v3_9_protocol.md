@@ -18,14 +18,14 @@
 ## 目录结构与复现
 
 每个 sweep 保留按原始 FITS 行号排列的 `parent_state.npz`。行号记录
-几何边界、原生 RELEASE、TYPE、科学域、质量与精度层。目录照片分区
+几何边界、原生 RELEASE、TYPE、科学域、质量与精度层。测光分区
 以原生 `ls_id` 为键，距离分区通过 `photo_row` 回到同一来源和测光。
 预测状态码为 0 测光拒绝、1 低 S/N 层尚未抽到、2 进入预测但颜色
 不支持、3 已计算完整 PDF。状态 3 在质量层 6 和 7 分别对应
 S/N 约 5–11 研究层与三带误差均小于 0.1 mag 的精确测光层。
 
 南北均从原生源表建立，不以 Gaia 键作为应用门槛。南天和北天原生
-分区保留重叠观测。合并显示采用种源归属字段
+分区保留重叠观测。合并显示采用巡天归属字段
 `primary_survey_owner`，按 [LS DR11 分区定义](https://www.legacysurvey.org/dr11/description/)
 选取；同一 Gaia 身份还须通过位置校验，才进入南北成对校验。
 北区模型的 Gaia 几何、SpecDis 矮星、类别训练和留出成员分别留档。
@@ -34,7 +34,7 @@ S/N 约 5–11 研究层与三带误差均小于 0.1 mag 的精确测光层。
 显著消光试验统一采用 DECam 原生 `grz` 和冻结 SED，逐条视线在
 可靠距离范围内边缘化 Bayestar19 的五条消光曲线。Bayestar19 数值
 乘 0.883 转为物理 E(B−V)，DECaPS 输入已是该单位。保留 Legacy
-DECam 三带消光系数的形状，按 (E(B-V)=0.98\, E(g-r)) 归一化。
+DECam 三带消光系数的形状，按 `E(B−V) = 0.98 E(g−r)` 归一化。
 输出 SFD 全距离、SFD 在同一可靠距离区间、以及 3D 尘埃同区间
 三份 PDF，并记录 SFD 落入可靠区间的质量。来源包括
 [Bayestar19](https://arxiv.org/abs/1905.02734)、[DECaPS](https://arxiv.org/abs/2503.02657)、
