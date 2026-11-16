@@ -6,7 +6,7 @@
   North overlap classifier, CMD and seam report 61393707 completed 0:0.
 - North retained 3,714 held-out comparisons; the north–south median
   relative shift is −5.07%. North remains an overlap-region pilot.
-- Delivered eight paper groups, sixteen PDF/PNG sets, the paper materials,
+- Delivered eight paper groups, seventeen PDF/PNG sets, the paper materials,
   candidate index, Redrock tables and error-aware distance intervals.
 - Final checks: 101 compact products/science checks, 472 pytest tests,
   figure and link review, and git diff --check.

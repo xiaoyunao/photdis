@@ -31,3 +31,23 @@ The published southern QRF and catalog provide the common comparison baseline.
 
 Formal AAS editing follows the user's separate confirmation. The working text
 and verified paper results can be assembled while science jobs run.
+
+## Execution and products
+
+The NERSC checkout runs the direct figures with
+`sbatch scripts/run_v3_8_figures.sh`. The comparison wrapper accepts selected
+stages as arguments. The north report reads the completed north pilot receipt.
+
+```bash
+sbatch scripts/run_v3_8_science.sh candidate reliability branches redrock north
+sbatch scripts/run_v3_8_science.sh candidate_index north_report
+```
+
+The science outputs and full-coordinate inputs stay beneath `data/v3_8` in
+the NERSC checkout. Each finished stage has a checksum receipt. From a staged
+copy of the compact products, use `scripts/v3_8_collect.py` to verify them.
+Local-rendered figures use the plot inputs named in their table receipts.
+
+```bash
+python3 scripts/v3_8_collect.py /path/to/staged/v3_8 --verify
+```
