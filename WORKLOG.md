@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — resume science jobs after Perlmutter reconnection
+
+- Regular and shared CPU scheduling resumed. Kept the original DAG,
+  checked Slurm accounting and read the new output receipts.
+- Gate preparation 61394760 completed. It pinned 336,678 frozen unresolved
+  targets, with 542 carrying reusable Redrock gate values.
+- Calibrated PDF shards 61394763_0–2 completed. Their receipts cover
+  206,616 disjoint input records and 1,520 file parts. The largest saved
+  quantile CDF discrepancy is 1.81e-8. The remaining shards, new footprint
+  census and downstream validation are in the original queue.
+
 ## 2026-11-16 — verify the Perlmutter scheduling blocker
 
 - Rechecked the live Slurm jobs and their dependency chains. All independent
