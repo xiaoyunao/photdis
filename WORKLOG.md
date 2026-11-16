@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-16 — register the v3.8 work package
+
+- Read the complete Pro review of afd25ff and registered the five work areas.
+- Added the weighted candidate LF and signed Gaia forward replay. The
+  conditional parallax calculation uses the original QRF and qualification.
+
 ## 2026-11-16 — complete v3.7 selection and paper evidence
 
 - Job 61391246 recorded the initial classifier step failure. Steps 61391246.17

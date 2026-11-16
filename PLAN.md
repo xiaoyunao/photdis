@@ -1,5 +1,11 @@
 # PLAN
 
+## v3.8 — direct paper figures and scientific validation
+
+Follow the [v3.8 protocol](docs/v3_8_protocol.md). Begin the weighted candidate
+replay and individual-coordinate paper figures in parallel. Complete physical
+branch, interval and northern pilot comparisons before closing v3.8.
+
 ## v3.7 — completed photo-only selection and paper evidence
 
 The [v3.7 results](docs/v3_7_result.md) complete the November 16 Pro work
