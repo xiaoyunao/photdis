@@ -1,0 +1,14 @@
+{
+  "job": "61402842",
+  "inputs": {
+    "data/v3_10/redrock/complete.json": "331076d95f88c6e8c6b7734e2e03b7f860955f6030ea1213dd0113a7ccb7d93b",
+    "data/v3_10/selection/south/complete.json": "182d7ae9c522c3573ac1c3cd1e0e714794f8b19030510a6adc7606dffef04fef",
+    "data/v3_10/evidence/south_faint/complete.json": "7c2ac6c43a5a5884939dbf5b31a3335a27f8a38894aa6da74fca31eac3425e3e",
+    "data/v3_10/evidence/south_low/complete.json": "65d4d70898e4c663a82942683a1721716fa88e9d1d4e5da7073d705fc690ddd4",
+    "data/v3_10/selection/north/complete.json": "7fd765439f2c3b04ba669eb936843bab2e08196099c1aff70812ba7fc07feb25",
+    "data/v3_10/evidence/north/complete.json": "6bd03283d506e21980db108605c7db26089929a5b8d847616e28175873322989"
+  },
+  "outputs": {
+    "held_out.csv": "66b33c5e6c8c29d693b27b9265d2af1f6ff7172708277f16833391750338e81b"
+  }
+}

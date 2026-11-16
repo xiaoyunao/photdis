@@ -45,7 +45,7 @@ def hrd(t, out):
           (t['bp_rp'],t['M_G'],t['gaia_g']-mu,'Gaia BP − RP (mag)','Observed absolute G magnitude',
            np.ones(len(mu),bool),XCOL,'Gaia DR3'),
           (t['bp_rp'],t['M_G'],t['gaia_g']-mu,'Gaia BP − RP (mag)','Observed absolute G magnitude',
-           t['clean_low_luminosity'],XCOL,'Faint blue candidates'))
+           t['clean_low_luminosity'],XCOL,'Blue subset'))
     tables,counts = {},[]
     for row,(x,y_ref,y_photo,xlabel,ylabel,k,xbin,name) in enumerate(xy):
         for j,(y,kind) in enumerate(((y_ref,'Gaia reference'),(y_photo,'Photometric distance'))):

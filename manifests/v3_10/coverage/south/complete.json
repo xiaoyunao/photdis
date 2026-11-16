@@ -1,0 +1,17 @@
+{
+  "job": "61402637",
+  "input_path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits",
+  "input_size": 22995910080,
+  "input_mtime_ns": 1780757592000000000,
+  "sweep_inventory_sha256": "b87d9d8e080b23643c759680d99fefe5a94946a9d970cf12ebf9c3f1f9b25d66",
+  "density": 2500.0,
+  "geometry_deg2": 240.0212,
+  "grz_deg2": 235.82240000000002,
+  "unmasked_deg2": 235.4584,
+  "grz_depth20_deg2": 235.4584,
+  "outputs": {
+    "m92_area.csv": "3d569e26b8c081959341a19fb7c33cdfb544fe01164846c0526b2211bce8ec82",
+    "area.npz": "31f2ea751c1f8c1b175545a252ab6dde316b3d429378cb86fe5b84e514c3585d",
+    "healpix_area.csv": "f2772594a0a19f393bcb4ba64a98716fb37328969c2e7b1e4e851e1efc7f2e17"
+  }
+}

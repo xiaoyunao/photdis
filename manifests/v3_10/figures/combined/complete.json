@@ -1,0 +1,21 @@
+{
+  "job": "61402438",
+  "style_lock_sha256": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "release_sha256": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51",
+  "strict_photometric_rows": 42535325,
+  "qualified_reference_rows": 3625975,
+  "outputs": {
+    "F04_catalog.csv": "fd06619d58c168fc080c72e8aea32de57316980370ae173a974495faa95dc10d",
+    "F04_dwarfs.png": "c6ee354f0d05e8f742003cdfc1b64962a48de8f890623dc518bc0db16608269b",
+    "F04_references.csv": "5db5ac2e9e1d38d5d9cf1fe88084b2745827b6910e87cf39de8e6709cc64cc61",
+    "F04_giants.csv": "9c8912263246015feccf5b23586d445a156f3e6148d60925dad2aecdaa0c53b7",
+    "F04_references.pdf": "dd47d59fb258a7a9cf383087541c9d6a8efcf931939a9e55f12c0a36484c94d8",
+    "F04_dwarfs.csv": "2a2e169e6e5068c31eda7b8e80b6986ad154e8a9158a78afd109c5511216d774",
+    "F04_references.png": "7ff78463c88ad080bafdc7c72ddd0ea3c0729810847961244e6b7948fb25c6a2",
+    "F04_giants.pdf": "481cd3fd6e7ba0f528c78cebc7999dfe8886fc101a0243efbabbadf9081640e5",
+    "F04_catalog.pdf": "02c8f68c477261128fd5f89c676064ce18b1abbc66e2ffacb190607a5fffca88",
+    "F04_giants.png": "402d2497864984131a42322e90da5daa381fee3801a24ed08ac4252339034455",
+    "F04_dwarfs.pdf": "7cc2c3b27193abc36e4b704120decc4a6191ca8fb8c692d3beb8c709a4f9459a",
+    "F04_catalog.png": "198f8b3045f35d62e9e6105c415040c51857a100b71b94354ca93a7b1c09ab10"
+  }
+}
