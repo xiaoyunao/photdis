@@ -12,7 +12,7 @@ import numpy as np
 from photdis.baseline_v0 import HistogramQRF
 from photdis.reference_v1_4 import unique_join
 from photdis.stage1 import require_compute
-from photdis.v3.data import stable_rank
+from photdis.v3.data import SIGNIFICANT, stable_rank
 from photdis.v3.metrics import distance_summary
 from photdis.v3.model import inference_model
 from photdis.v3_3 import frozen_qrf
@@ -99,6 +99,10 @@ def summarize_sweep(source, *, side):
 def area_rows(p,shard):
     if not p:
         return []
+    # Two independent checks of what was actually forecast. These are
+    # availability flags, not a statement about the true source class.
+    no_gaia = p['source_id']<=0
+    no_wise_detection = (p['band_state'][:,4:]!=SIGNIFICANT).all(axis=1)
     output = []
     for region in REGIONS:
         r = p['region']==region
@@ -117,6 +121,8 @@ def area_rows(p,shard):
                 output.append(dict(region=region,shard=shard,min_r=a,max_r=b,primary_owner=owner,
                                    native_psf_rows=int(k.sum()),precise_rows=int((k&(p['row_state']==7)).sum()),
                                    precise_pdf_count=int(main.sum()),noise_control_count=int(control.sum()),
+                                   precise_pdf_without_native_gaia=int((main&no_gaia).sum()),
+                                   precise_pdf_without_significant_wise=int((main&no_wise_detection).sum()),
                                    **{f'qrf_mass_shell_{j}':float(m) for j,m in enumerate(mass)}))
     return output
 

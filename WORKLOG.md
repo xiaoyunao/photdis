@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — reconcile the complete northern photometric parent
+
+- All 48 north scan tasks completed. Reconciled all 526 sweep receipts
+  and 405,790,233 input records. Strict optical-quality PSFs before
+  model support: 12,765,439. Lower-S/N parent: 5,653,375.
+- Added per-magnitude counts of actual predictions obtained without a
+  native Gaia key and without a significant W1/W2 detection. A binning
+  fixture distinguishes these rows from unsupported and noise-control rows.
+
 ## 2026-11-16 — reconcile the complete southern input census
 
 - All 48 south scan tasks completed. Reconciled 1,600 sweep receipts to

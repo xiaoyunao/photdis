@@ -48,6 +48,12 @@ NERSC 的 `data/v3_9/branches/distance_pdf_control.npz`，逐星与逐波段
 进入较低信噪比的母样本。测距模型支持和实际 PDF 数量仍以
 预测分区结果为准。[南天逐行计数](../manifests/v3_9/inventory/south_row_census.json)
 
+北天 526 个原生 sweep 也已完成逐行筛查。4.058 亿个输入行中，
+有 12,765,439 个源通过严格三带误差条件，5,653,375 个进入低
+信噪比母样本。这里分别使用北天原生测光和释放编号，数字
+对应模型支持判定前的母表。[北天逐行计数](../manifests/v3_9/inventory/north_row_census.json)
+
+
 
 ## 三维消光试验
 
