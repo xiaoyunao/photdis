@@ -15,6 +15,7 @@ from v3_9_catalog import OUT
 from v3_9_dust import OUT as DUST
 from v3_9_existing import GATES, PDF
 from v3_9_branches import OUT as BRANCHES
+from v3_9_seam import run as build_seam
 
 DEST = ROOT/'data/v3_9/delivery'
 
@@ -59,6 +60,9 @@ def run(shards):
         **{name:OUT/'figures'/name/'complete.json' for name in ('south_faint','south_low','north')}}
     records = {k:receipt(v) for k,v in science.items()}
     rows,parts,mass = calibration(shards)
+    seam_path = DEST/'seam'
+    build_seam(seam_path)
+    science['survey_seam']=seam_path/'complete.json'
     summaries = [dict(region=name,precise_survey_owned_rows=records[name]['projected_rows'],
                      reference_rows=records[name]['reference_rows']) for name in ('south_faint','south_low','north')]
     csv_rows(DEST/'expansion.csv',summaries)
@@ -98,7 +102,7 @@ def run(shards):
         gate_rows=gate['rows'],gate_passed=gate['passes'],gate_reused=gate['from_redrock'],
         near_pdf_rows=rows,near_pdf_parts=parts,
         sources={str(p.relative_to(ROOT)):sha(p) for p in science.values()},
-        outputs={p.name:sha(p) for p in DEST.iterdir() if p.name!='complete.json'}))
+        outputs={p.name:sha(p) for p in DEST.iterdir() if p.is_file() and p.name!='complete.json'}))
     print('v3.9 sources and PDF counts validated',census,gate['rows'],rows,flush=True)
 
 

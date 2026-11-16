@@ -13,13 +13,14 @@ from photdis.reference_v1_4 import unique_join
 from photdis.stage1 import require_compute
 from photdis.v3.inference import kernel_loglike
 from photdis.v3.model import inference_model
-from photdis.v3_3 import frozen_qrf
 from v2_1_near import ROOT, atomic_npz, csv_rows, save_json, sha
 from v3_3_catalog import FREEZE, read_frozen
 from v3_3_sed import verified
-from v3_4_near_forecast import prepare
-from v3_6_distance_evidence import OUT as EVIDENCE
+from v3_5_dr11_spatial import DELIVERY
+from v3_5_dr11_validate import join_parts
+from v3_6_catalog_projection import OUT as PROJECTION
 from v3_6_vac_distances import read_columns
+from v3_6_weak_gaia import native_qrf
 from v3_8_branches import LABEL, OUT as V38, PHOTO, USE_BANDS, choose, observation, patch
 from v3_8_candidate import read_cache
 
@@ -29,6 +30,25 @@ BANDS = ('g','r','z')
 
 def colors(mag):
     return mag[:,:-1]-mag[:,1:]
+
+
+def production_pdf(ids):
+    pointer = ('ls_id','TYPE','sweep_number','part_number','part_row')
+    parents = json.loads((PROJECTION/'complete.json').read_text())['child_receipts']
+    parts = []
+    for key,digest in parents.items():
+        folder = verified(ROOT/key,digest).parent
+        p = read_columns(read_cache(folder,'rows.npz'),pointer)
+        use = np.isin(p['ls_id'],ids)
+        if use.any():
+            parts.append({k:v[use] for k,v in p.items()})
+    p = join_parts(parts)
+    if len(p.get('ls_id',[]))!=len(ids):
+        raise ValueError('The branch sample must map once to the native production PDF')
+    j = unique_join(ids,p['ls_id'])
+    if np.any(j<0) or not (p['TYPE'][j]=='PSF').all():
+        raise ValueError('Invalid production PDF ownership')
+    return native_qrf({k:v[j] for k,v in p.items()},DELIVERY/'complete.json')
 
 
 def histogram_on(edges, old_edges, old_mass):
@@ -102,10 +122,6 @@ def main():
     j = unique_join(all_ids,photo['ls_id'])
     if np.any(j<0) or not np.all(photo['TYPE'][j]=='PSF'):
         raise ValueError('The frozen branch tests require verified PSFs')
-    d = read_columns(read_cache(EVIDENCE,'Gaia.npz'),('ls_id','source_id'))
-    gi = unique_join(all_ids,d['ls_id'])
-    ids = -all_ids.copy()
-    ids[gi>=0] = np.where(d['source_id'][gi[gi>=0]]>0,d['source_id'][gi[gi>=0]],ids[gi>=0])
     obs = [observation(photo,i) for i in j]
     with np.errstate(divide='ignore',invalid='ignore'):
         mag = 22.5-2.5*np.log10(photo['flux'][j][:,USE_BANDS]/photo['transmission'][j][:,USE_BANDS])
@@ -116,8 +132,7 @@ def main():
     model = inference_model(joblib.load(verified(ROOT/inf['path'],inf['sha256'])))
     patched = patch(model,obs[:len(anchors)],anchors)
     n = len(anchors)
-    models,_,paths = prepare()
-    qrf = frozen_qrf(models['qrf'],mag[n:],err[n:],ids[n:])
+    archived = production_pdf(all_ids[n:])
     with read_cache(V38,'cases.csv').open() as stream:
         cases = {int(r['ls_id']):r for r in csv.DictReader(stream)}
     edges = np.linspace(-10,40,501)
@@ -129,7 +144,7 @@ def main():
             bands.extend(component_diagnostics(model,x,case,kind,distance))
         sep = np.linalg.norm(colors(mag[:n])-colors(mag[n+i:n+i+1]),axis=1).min()
         gate = .20*np.exp(-.5*(sep/.12)**2)
-        original = histogram_on(edges,qrf['mu_edges'][i],qrf['mass'][i])
+        original = histogram_on(edges,*archived[i])
         if not np.isclose(original.sum(),1.,atol=1e-8):
             raise ValueError('Common output grid truncates frozen QRF mass')
         candidate,anchor = anchor_control(patched,x,edges,original,gate,len(model.weights))
@@ -139,13 +154,14 @@ def main():
                           original_reference_mass=window(edges,original,truth),
                           candidate_reference_mass=window(edges,candidate,truth),
                           original_branch_mass=window(edges,original,pred),
-                          candidate_branch_mass=window(edges,candidate,pred),
-                          qrf_in_support=bool(qrf['supported'][i])))
+                          candidate_branch_mass=window(edges,candidate,pred)))
     csv_rows(OUT/'cases.csv',stats)
     csv_rows(OUT/'band_residuals.csv',bands)
     atomic_npz(OUT/'distance_pdf_control.npz',ls_id=all_ids[n:],TYPE=photo['TYPE'][j[n:]],
-               mu_edges=edges,mu_mass=np.stack(output),pdf_names=['frozen_qrf','candidate','anchor_only'])
-    paths = (Path(__file__),V38/'complete.json',PHOTO/'complete.json',FREEZE,*paths)
+               mu_edges=edges,mu_mass=np.stack(output),pdf_names=['resampled_qrf','candidate','anchor_only'],
+               frozen_mu_edges=np.stack([a for a,_ in archived]),frozen_mu_mass=np.stack([p for _,p in archived]))
+    paths = (Path(__file__),V38/'complete.json',PHOTO/'complete.json',FREEZE,
+             PROJECTION/'complete.json',DELIVERY/'complete.json')
     save_json(marker,dict(inputs={str(p.relative_to(ROOT)):sha(p) for p in paths},
               outputs={p.name:sha(p) for p in OUT.iterdir() if p!=marker},
               test=len(test),anchor=n,job=os.getenv('SLURM_JOB_ID'),

@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-16 — verify the release comparison and match the survey seam
+
+- Added one-to-one physical matching across the DR11 ownership seam.
+  It includes the v3.5 southern release and the new native parents, accepts
+  position-only pairs without Gaia and records ambiguous or inconsistent pairs.
+  Final delivery 61395046 applies the ownership overrides as a sidecar.
+- Changed the 48-case branch comparison to read the archived v3.5 PDF with
+  source-bound sweep/part/row pointers. Both the intact frozen histogram and
+  its common-grid comparison are retained in the experiment output.
+- Validated seam wrap, confusion, identity conflict and archive-grid mass
+  conservation with targeted smoke tests. Slurm still reports PartitionDown
+  for the independent stages. Queued jobs were retained.
+
 ## 2026-11-16 — queue v3.9 science jobs and dependent delivery
 
 - Missing-gate setup/replay/finalization and near PDF: 61394760–61394763.
