@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — prepare the three-reference and population-odds runs
+
+- Sent weak Gaia job 61390595 to Perlmutter with 48 CPUs. The actual census
+  score and sensitivity intervals are pending.
+- Added `scripts/v3_7_reference_comparison.py` for native identity overlaps
+  and the common non-training migration denominator. Added
+  `scripts/v3_7_lf_odds.py` for fixed class odds and two assignment weights.
+- Both programs compiled. Focused smoke checks passed for unique matches
+  and for the giant and other odds after posterior normalization.
+
 ## 2026-11-16 — register v3.7 and implement the full weak Gaia comparison
 
 - Read the complete Pro review of `34422f1`. Registered six work packages,
