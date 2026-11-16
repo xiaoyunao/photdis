@@ -46,7 +46,19 @@ def read_native(path):
     return raw
 
 
-def native_payload(raw, system):
+def science_domain(r, b, ebv, *, r_min=None, r_max=None, abs_b_min=None,
+                   abs_b_max=None, ebv_min=0., ebv_max=None):
+    """Scientific half-open ranges, separate from optical and morphology checks."""
+    use = np.isfinite(r)&np.isfinite(b)&np.isfinite(ebv)&(ebv>=ebv_min)
+    if r_min is not None: use &= r>=r_min
+    if r_max is not None: use &= r<r_max
+    if abs_b_min is not None: use &= abs(b)>abs_b_min
+    if abs_b_max is not None: use &= abs(b)<=abs_b_max
+    if ebv_max is not None: use &= ebv<ebv_max
+    return use
+
+
+def native_payload(raw, system, *, domain=None):
     phot = derive_photometry(raw, w2_snr_min=5)
     t = {k: raw[k].copy() for k in RAW if k in raw.dtype.names}
     i_state = np.zeros(len(raw), 'i1')
@@ -62,7 +74,13 @@ def native_payload(raw, system):
     t['r'] = phot['r']; t['r0'] = phot['r0']; t['g0'] = phot['g0']; t['z0'] = phot['z0']
     t['optical_error'] = np.maximum.reduce([phot['sigma_g'], phot['sigma_r'], phot['sigma_z']])
     b = galactic(t['RA'], t['DEC'])[1]
-    t['photometric_entry'] = t['psf'] & phot['grz_clean'] & (abs(b) > 30) & (t['EBV'] >= 0) & (t['EBV'] < .03)
+    t['photometric_valid'] = t['psf'] & phot['grz_clean']
+    if domain is None:
+        # Preserve the historical entry contract, including no magnitude test.
+        sky = (abs(b)>30)&(t['EBV']>=0)&(t['EBV']<.03)
+    else:
+        sky = science_domain(t['r'],b,t['EBV'],**domain)
+    t['photometric_entry'] = t['photometric_valid'] & sky
     t['cell'] = (np.floor(t['RA']/10).astype('i8')*18+np.floor((t['DEC']+90)/10).astype('i8'))
     return t
 

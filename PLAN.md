@@ -1,5 +1,12 @@
 # PLAN
 
+## v3.9 — widen the native survey catalog
+
+Follow the [v3.9 protocol](docs/v3_9_protocol.md). Launch exact missing-gate
+replay and the calibrated PDF sidecar, then run south faint, north and
+low-extinction low-latitude catalog jobs with shared state definitions.
+Use distance-dependent dust for the distinct reddened pilot.
+
 ## v3.8 — completed direct paper figures and science validation
 
 The [v3.8 results](docs/v3_8_result.md) complete the five work packages from the

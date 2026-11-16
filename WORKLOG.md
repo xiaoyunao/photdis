@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-16 — start the v3.9 catalog expansion
+
+- Read the full Pro review of c935235 and registered six work areas.
+- Added configurable science domains to native photometry, preserving the
+  historical default. Implemented exact missing-gate replay and the full
+  calibrated PDF sidecar with the original object ownership.
+
 ## 2026-11-16 — close the v3.8 science package
 
 - Corrected SED branch and north jobs completed in 61393495.
