@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — complete frozen far-gate replay and isolate reference evaluation
+
+- All 24 replay elements and finalization 61394762 completed. Of 336,678
+  frozen unresolved objects, 114,568 pass the nominal threshold. Preserved
+  713 recomputed numerical flags and 542 reused values whose flag status
+  is unknown. Archived both source-bound receipts and kept the old release.
+- Distance and reference figures now keep northern evaluation on held-out
+  sky and exclude frozen southern training IDs. The spatial reference
+  panels still describe coverage, and figure receipts record both totals.
+  The masks were tested against the existing reference schema without
+  changing active validation-array jobs.
+
 ## 2026-11-16 — verify the first native south prediction artifacts
 
 - NERSC job 61397972 independently audited three actual sweep outputs

@@ -15,9 +15,10 @@ import numpy as np
 from photdis.stage1 import galactic, require_compute
 from photdis.v3.metrics import distance_summary
 from photdis_figure_style import BLUE, GRAY, GREEN, ORANGE, STYLE
-from v2_1_near import atomic_npz, csv_rows, save_json, sha
+from v2_1_near import ROOT, atomic_npz, csv_rows, save_json, sha
 from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
+from v3_8_candidate import read_cache
 from v3_9_catalog import OUT
 from v3_9_references import join, subset
 
@@ -60,6 +61,17 @@ def select_channel(t, channel):
         return t['reference_kpc'],t['gaia_state']==6
     label = channel.lower()
     return t[label+'_kpc'],t[label+'_quality']
+
+
+def evaluation_rows(side, reference, south_training):
+    if side=='north':
+        # Match the untouched sky role in v3_9_references.northern_fit.
+        a = np.floor(reference['RA']/10).astype(int)
+        d = np.floor((reference['DEC']+90)/10).astype(int)
+        return (a+3*d)%5==4
+    sid = reference['source_id']
+    identity = np.where(sid>0,sid,-reference['ls_id'])
+    return ~np.isin(identity,south_training)
 
 
 def distance_plots(t, root):
@@ -240,19 +252,27 @@ def run(region):
               if (z:=read_columns(path,('region','ls_id','TYPE','RA','DEC','r','g0','r0','z0','EBV',
                 'FRACFLUX_R','PSFDEPTH_R','qrf_median_kpc','primary_survey_owner')))])
     t = join([subset(z,z['region']==region) for path in refs if (z:=read_columns(path,(
-        'region','ls_id','TYPE','RA','DEC','r','g0','r0','error_grz','row_state','reference_kpc','gaia_state',
+        'region','ls_id','source_id','TYPE','RA','DEC','r','g0','r0','error_grz','row_state','reference_kpc','gaia_state',
         'specdis_kpc','spdist_kpc','specdis_quality','spdist_quality','class_label','spectype',
         'qrf_quantiles_kpc','dwarf_score','signed_parallax_mas','signed_gaia_observation_metrics',
         'nominal_qnear','nominal_evaluated','nominal_numerical_flag')))])
     if not p or not t or not np.all(p['TYPE']=='PSF') or not np.all(t['TYPE']=='PSF'):
         raise ValueError(f'Real native PSF catalog and reference data are required for {region}')
+    training = None
+    if side=='south':
+        roster = read_cache(ROOT/'data/v3_0/controls','training.npz')
+        training = read_columns(roster,('identity',))['identity']
+        inputs[str(roster.relative_to(ROOT))] = sha(roster)
+    t['evaluation_row'] = evaluation_rows(side,t,training)
+    reference = subset(t,t['evaluation_row'])
     with plt.rc_context(STYLE):
-        distance_plots(t,out)
-        evidence_plots(t,out)
+        distance_plots(reference,out)
+        evidence_plots(reference,out)
         atlas(p,t,out)
     atomic_npz(out/'figure_reference_rows.npz',**t)
     save_json(out/'complete.json',dict(region=region,inputs=inputs,projected_rows=len(p['ls_id']),
-              reference_rows=len(t['ls_id']),job=os.getenv('SLURM_JOB_ID'),
+              reference_rows=len(t['ls_id']),evaluation_reference_rows=len(reference['ls_id']),
+              job=os.getenv('SLURM_JOB_ID'),
               outputs={p.name:sha(p) for p in out.iterdir() if p.name!='complete.json'}))
 
 

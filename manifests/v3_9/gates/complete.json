@@ -1,0 +1,10 @@
+{
+  "rows": 336678,
+  "passes": 114568,
+  "from_redrock": 542,
+  "numerical_flags": 713,
+  "outputs": {
+    "completed_gates.npz": "c0f62f7b3951d691f723fd599cf12b98fb6ce11fa3fdde78239f01df3c33619c"
+  },
+  "prepare_sha256": "fe4dda8177eb666300608159bfb87c6a98260e4ee95b45fe3d601919f7b30d63"
+}

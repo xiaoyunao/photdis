@@ -69,7 +69,9 @@ def run(shards):
     build_seam(seam_path)
     science['survey_seam']=seam_path/'complete.json'
     summaries = [dict(region=name,precise_survey_owned_rows=records[name]['projected_rows'],
-                     reference_rows=records[name]['reference_rows']) for name in ('south_faint','south_low','north')]
+                     reference_rows=records[name]['reference_rows'],
+                     evaluation_reference_rows=records[name]['evaluation_reference_rows'])
+                 for name in ('south_faint','south_low','north')]
     csv_rows(DEST/'expansion.csv',summaries)
     edges = [0,2,5,10,20,50,float('inf')]
     csv_rows(DEST/'calibrated_shell_counts.csv',

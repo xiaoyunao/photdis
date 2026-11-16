@@ -88,3 +88,16 @@ NMAD 从 1.066 等降至 0.538 等。较拥挤层仅有 6 颗共同支持参考
 [同星 Gaia 表](../manifests/v3_9/dust/matched_gaia.csv) ·
 [逐视线结果](../manifests/v3_9/dust/sightlines.csv) ·
 [运行记录](../manifests/v3_9/dust/complete.json)
+
+## 补齐 5–10 kpc 研究候选的门槛
+
+按冻结 QRF 中位距离划分的 5–10 kpc 层，原有 336,678 个对象
+缺名义 SED 门槛。本轮复用 542 个已有 Redrock 对照值，对其余
+对象重新计算，逐行核对母表身份。**114,568 个对象达到名义
+研究阈值**。重算结果保留 713 个数值告警，复用对象的数值告警
+状态单独标为未知。这项工作补齐了原预注册区间的候选状态。
+冻结主选样本及距离保持原定义。
+
+逐星结果位于 NERSC 的 `data/v3_9/existing/gates/completed_gates.npz`，
+可按 `catalog_row` 或 `ls_id` 连接原成员索引。门槛通过数描述
+候选规则。[完成记录](../manifests/v3_9/gates/complete.json)
