@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — verify the candidate and assemble paper figures
+
+- The weighted candidate leaves 457 weak-Gaia objects outside recorded
+  history, with a positive forward score against the broad distance baseline.
+- Confirmed direct Redrock differences in steps 61393291.5 and checked the
+  candidate 15 LF scenarios and held-sky calibration.
+- Prepared compact outputs, paper figure order, and the southern working text.
+  The corrected northern and branch reruns are scheduled as 61393495.
+
 ## 2026-11-16 — correct the native SED flux reference distance
 
 - Checked the branch patch and northern pilot against the existing native
