@@ -1,0 +1,18 @@
+{
+  "style_lock_sha256": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "job": "61401569",
+  "outputs": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23",
+    "F03_same_star_cmd.pdf": "5c15b7b6ee699f354cc3ea0bb92404f56d1a6aa196485f65bf2191c928afdee9",
+    "F03_same_star_cmd.csv": "c50f1d273f9264ced812c2a98d4855ca55da6c4cf10a083144e7af504d388c21",
+    "F02_direct_distances.csv": "71deef559ec6b1095c3e7e2127d6926f11475c2f729da8b04c22cb4f209ae706",
+    "F02_direct_distances.pdf": "f185922410049156ca67338543093292946d565c664d54960cace2f216c4ff72",
+    "F03_same_star_cmd.npz": "be44552cd97c74685c220e76bf3556c91e629a23ea8ca3137ed84deeb9472cd2",
+    "F02_direct_distances.npz": "77f2667314398531c3a4cb4b05032e45e4fa768aca3b1870cb93251c2206e64f"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "job": "61401751",
+  "inputs": {
+    "data/v3_9/dust/bayestar19/complete.json": "a29e6f2aae93da1ab3e84b75e9e9e835eac94f6628fda66bfa1ab8be7d89e592"
+  },
+  "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27b1e32ef99",
+  "coefficients_decamin_grz": [
+    3.2139999999999986,
+    2.164999999999999,
+    1.2109999999999996
+  ],
+  "bayestar_to_sfd": 0.9999999999999996,
+  "rows": 311,
+  "common_map": 311,
+  "outputs": {
+    "matched_gaia.csv": "ac881c3140d4b25795fd80bad2317b35f7c54ae7a29d1b7940bc83729fdc8cce",
+    "pdf_change.csv": "3cb82a8e6f654891fe09be119aaa97f531ea63065cbb8f66d04390bad3e636c5",
+    "distance_pdfs.npz": "7bbcd14bc51aae76ffd4cb346ebe085687de6c68ce44f7ed6db98050b37b3d9c"
+  }
+}

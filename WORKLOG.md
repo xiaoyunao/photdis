@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — verify the first v3.10 scientific results and style regression
+
+- Regression job 61401569 reproduced both original F02 and F03 PNGs
+  exactly. Three expansion-region redraws started from the locked code.
+- Jobs 61401752–61401754 compared the actual publication PDFs on all
+  1,951,902 native seam pairs. The 529,249 common forecasts give a
+  −4.40% median north/south offset and 7.35% paired scatter.
+- Bayestar19 replay 61401751 used the 311 frozen sources and the original
+  reliable map intervals. The 60 common Gaia comparisons give a shared
+  SFD-relative score gain of +0.723 nat and a corrected NMAD of 0.465 mag.
+- Started evidence and classifier comparisons. The archived quality
+  Redrock subset has no matches in the low-latitude controls. Recheck
+  the already indexed controls against the released DR1 Redrock catalog.
+
 ## 2026-11-16 — start v3.10 and recover the v3.8 rendering recipe
 
 - Read the complete Pro follow-up to `a4b2bcb` and opened a goal with

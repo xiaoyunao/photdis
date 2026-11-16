@@ -37,11 +37,11 @@ MU = (MU_EDGES[1:]+MU_EDGES[:-1])/2
 FIELDS = ((211.,-19.5),(213.8,-12.5),(198.,-8.),(170.,-10.),(37.,13.))
 
 
-def photometry():
+def photometry(centers=FIELDS):
     cfg = settings()['south'].copy()
     cfg['maximum_grz_error_mag'] = .1
     cfg['domains'] = {'dust_pilot':dict(r_min=14.,r_max=18.5,abs_b_max=25.,ebv_min=.08,ebv_max=1.25)}
-    wanted = SkyCoord(*np.asarray(FIELDS).T, unit='deg',frame='galactic').icrs
+    wanted = SkyCoord(*np.asarray(centers).T, unit='deg',frame='galactic').icrs
     parts = []
     for path in sorted(Path(cfg['sweep_root']).glob('sweep-*.fits')):
         ra0,dec0,ra1,dec1 = tile_bounds(path)

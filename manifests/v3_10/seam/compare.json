@@ -1,0 +1,13 @@
+{
+  "job": "61401754",
+  "inputs": {
+    "data/v3_9/delivery/complete.json": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51",
+    "data/v3_9/delivery/seam/complete.json": "a7537e2487aff4828cea839f0f3adebc1d71dd4e317557b34765ec8fe9dab9b9"
+  },
+  "pairs": 1951902,
+  "modes": "Native-bin density, one-bin Gaussian smoothing, peaks at least 10% of maximum",
+  "outputs": {
+    "production_comparison.csv": "0d21e0b10533cfb644921032cc2c5b47d62700584af355a4513f67a61b8fea29",
+    "shell_migration.csv": "ec1c3b7501a45a6fc465b5b5e6d9f5e2f2e88a8dbe570033c2f261b392d833be"
+  }
+}
