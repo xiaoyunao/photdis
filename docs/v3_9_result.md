@@ -33,7 +33,8 @@ v3.5 PDF 的对照版本。下表的概率是在各对象参考距离模数
 下，候选分支在另外三组降低了参考窗口的概率。因此生产默认
 沿用冻结 PDF，候选分支保留为研究对照。逐源完整对照 PDF 在
 NERSC 的 `data/v3_9/branches/distance_pdf_control.npz`，逐星与逐波段
-结果由[清单](../manifests/v3_9/branches/complete.json)指向，并附
+结果见[逐星表](../manifests/v3_9/branches/cases.csv)、
+[逐波段残差](../manifests/v3_9/branches/band_residuals.csv)及
 [汇总](../manifests/v3_9/branches/summary.json)。
 
 ## 南北原生输入
