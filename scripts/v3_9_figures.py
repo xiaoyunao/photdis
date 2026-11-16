@@ -20,7 +20,7 @@ from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
 from v3_8_candidate import read_cache
 from v3_9_catalog import OUT
-from v3_9_references import join, subset
+from v3_9_references import OLDER, join, matched, sorted_key, subset
 
 REGIONS = {'south_faint':'DECam 20–23 mag','south_low':'DECam low latitude','north':'BASS/MzLS native'}
 CHANNELS = ('Gaia','SpecDis','SPDist')
@@ -72,6 +72,40 @@ def evaluation_rows(side, reference, south_training):
     sid = reference['source_id']
     identity = np.where(sid>0,sid,-reference['ls_id'])
     return ~np.isin(identity,south_training)
+
+
+def attach_raw_spectral_labels(reference, inputs):
+    """Recover RVS class evidence outside the historical photometric window."""
+    archive = OLDER.parent
+    roster = archive/'sources.json'
+    audit = archive/'source_evidence.json'
+    declared_roster = json.loads(roster.read_text())['source_sha256']
+    evidence = json.loads(audit.read_text())
+    if evidence['input_sha256']['sources.npz'] != declared_roster:
+        raise ValueError('RVS labels and source positions use different raw inventories')
+    s = read_columns(verified(archive/'sources.npz',declared_roster),('source_id','ra','dec'))
+    e = read_columns(verified(archive/'source_evidence.npz',evidence['output_sha256']),
+                     ('source_id','original_row','class_label','class_identity_conflict','target_identity_conflict'))
+    np.testing.assert_array_equal(e['original_row'],np.arange(len(s['source_id'])))
+    np.testing.assert_array_equal(e['source_id'],s['source_id'])
+    eligible = ((s['source_id']>0)&(e['class_label']>=0)
+                &~e['class_identity_conflict']&~e['target_identity_conflict'])
+    raw = dict(reference_ra=s['ra'],reference_dec=s['dec'],
+               _gaia=sorted_key(s['source_id'],np.flatnonzero(eligible)))
+    j = matched(reference,raw)
+    label = np.full(len(j),-1,'i1')
+    label[j>=0] = e['class_label'][j[j>=0]]
+    old = reference['class_label']
+    conflict = (label>=0)&(old>=0)&(old!=label)
+    nonstellar = np.isin(reference['spectype'],('QSO','GALAXY'))
+    supplement = (label>=0)&(old<0)&~nonstellar
+    reference['class_label_historical'] = old
+    reference['class_label_raw_rvs'] = label
+    reference['class_label'] = np.where(conflict,-1,np.where(supplement,label,old)).astype('i1')
+    reference['class_label_conflict'] = conflict
+    inputs[str(roster.relative_to(ROOT))] = sha(roster)
+    inputs[str(audit.relative_to(ROOT))] = sha(audit)
+    return dict(raw_rvs_only=int(supplement.sum()),class_conflicts=int(conflict.sum()))
 
 
 def distance_plots(t, root):
@@ -206,6 +240,9 @@ def atlas(p,t,root):
             plot = k&(rd>=lo)&(rd<hi)
             ax[row,col].scatter(rx[plot],ry[plot],color=(GRAY,GREEN,ORANGE)[row-1],s=1.8,
                                 alpha=.65,linewidths=0,rasterized=True)
+            if not plot.any():
+                ax[row,col].text(.5,.12,'No qualified sources',ha='center',transform=ax[row,col].transAxes,
+                                 color=GRAY,fontsize=8)
             counts.append(dict(category=labels[row],distance_min_kpc=lo,distance_max_kpc=hi,n=int(plot.sum())))
         counts.append(dict(category=labels[0],distance_min_kpc=lo,distance_max_kpc=hi,n=int(source.sum())))
         ax[0,col].set_title(f'{lo}–{hi} kpc')
@@ -238,10 +275,10 @@ def atlas(p,t,root):
     save(f,root,'photometry_environment')
 
 
-def run(region):
+def run(region, figure_set):
     side = 'north' if region=='north' else 'south'
     tables,sky,refs,inputs = read_inventory(side)
-    out = OUT/'figures'/region
+    out = OUT/figure_set/region
     out.mkdir(parents=True,exist_ok=True)
     counts = []
     for table in tables:
@@ -258,6 +295,7 @@ def run(region):
         'nominal_qnear','nominal_evaluated','nominal_numerical_flag')))])
     if not p or not t or not np.all(p['TYPE']=='PSF') or not np.all(t['TYPE']=='PSF'):
         raise ValueError(f'Real native PSF catalog and reference data are required for {region}')
+    label_audit = attach_raw_spectral_labels(t,inputs)
     training = None
     if side=='south':
         roster = read_cache(ROOT/'data/v3_0/controls','training.npz')
@@ -272,6 +310,7 @@ def run(region):
     atomic_npz(out/'figure_reference_rows.npz',**t)
     save_json(out/'complete.json',dict(region=region,inputs=inputs,projected_rows=len(p['ls_id']),
               reference_rows=len(t['ls_id']),evaluation_reference_rows=len(reference['ls_id']),
+              label_audit=label_audit,
               job=os.getenv('SLURM_JOB_ID'),
               outputs={p.name:sha(p) for p in out.iterdir() if p.name!='complete.json'}))
 
@@ -280,4 +319,6 @@ if __name__=='__main__':
     require_compute()
     args = argparse.ArgumentParser(description=__doc__)
     args.add_argument('region',choices=tuple(REGIONS))
-    run(args.parse_args().region)
+    args.add_argument('--figure-set',choices=('figures','figures_labeled'),default='figures')
+    a = args.parse_args()
+    run(a.region,a.figure_set)

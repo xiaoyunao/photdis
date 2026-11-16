@@ -55,7 +55,7 @@ def calibration(shards):
                                  maximum_shell_probability_error=worst[1])
 
 
-def run(shards):
+def run(shards, figure_set):
     DEST.mkdir(parents=True,exist_ok=True)
     science = {
         'gates':GATES/'complete.json','branch_control':BRANCHES/'complete.json',
@@ -63,7 +63,7 @@ def run(shards):
         'faint_noise_control':OUT/'noise_control/complete.json',
         'north_native_fit':OUT/'north/native_model/complete.json',
         'paired_photometry':OUT/'validation/overlap/complete.json',
-        **{name:OUT/'figures'/name/'complete.json' for name in ('south_faint','south_low','north')}}
+        **{name:OUT/figure_set/name/'complete.json' for name in ('south_faint','south_low','north')}}
     records = {k:receipt(v) for k,v in science.items()}
     rows,parts,mass,near_audit = calibration(shards)
     seam_path = DEST/'seam'
@@ -130,4 +130,6 @@ if __name__=='__main__':
     require_compute()
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--near-pdf-shards',type=int,default=16)
-    run(ap.parse_args().near_pdf_shards)
+    ap.add_argument('--figure-set',choices=('figures','figures_labeled'),default='figures_labeled')
+    args = ap.parse_args()
+    run(args.near_pdf_shards,args.figure_set)
