@@ -131,7 +131,7 @@ def blue_cmd():
     axes[0].set_ylabel(r'Absolute Gaia $G$ magnitude')
     axes[0].invert_yaxis()
     axes[1].legend()
-    fig.suptitle('Two blue cohorts move to different luminosity branches')
+    fig.suptitle('QRF places two blue cohorts on a common luminosity branch')
     return fig,'F04_blue_color_magnitude',rows,[source]
 
 
@@ -141,7 +141,7 @@ def radial(root):
     fig,axes = plt.subplots(1,2,figsize=(12.6,5.3),layout='constrained',sharey=True)
     final = []
     for ax,name,title in zip(axes,('hard_count','pdf_count'),('Median distance bins','Summed QRF PDF mass')):
-        for j,color in zip((0,1,4),(BLUE,GRAY,ORANGE)):
+        for j,color in zip((0,1,2,4),(BLUE,GRAY,ORANGE,GREEN)):
             group = [choose(rows,selection=WORKPOINTS[j],shell=b)[0] for b in SHELLS[:3]]
             final.extend(dict(**s,estimand=name) for s in group)
             ax.plot(range(3),vals(group,name),'o-',color=color,label=LABELS[j])

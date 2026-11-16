@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "reference.csv": "5e9b297058d6baa1c43f74e88b3a7473579ac857a173e1e73b95c270922720ae"
+  },
+  "outputs": {
+    "F03_selection_tradeoffs.png": "99ef9e6ab7174bc9ff0055652ec0b13b9e6bb9bdeb73512935f8785fba263a42",
+    "F03_selection_tradeoffs.pdf": "0f02a76f72e079f3630c619cce9bf5704b1005d2774e416cb1236ea6b6919e84",
+    "F03_selection_tradeoffs.csv": "1e8475ace656ce3f021a1758792d0465b4846189ff6332708c4b9167c8d462fa"
+  },
+  "dpi": 300
+}

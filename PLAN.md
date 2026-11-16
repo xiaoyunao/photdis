@@ -1,20 +1,22 @@
 # PLAN
 
-## v3.7 — evaluate photo-only selection and prepare paper evidence
+## v3.7 — completed photo-only selection and paper evidence
 
-Follow the [v3.7 protocol](docs/v3_7_protocol.md) and the complete November 16
-Pro review of `34422f1`. Freeze the published QRF, primary and strict catalog
-outputs. Compare the registered workpoints using nominal SED probabilities
-on the restricted reference and weighted catalog frames.
+The [v3.7 results](docs/v3_7_result.md) complete the November 16 Pro work
+package. The published QRF PDFs, primary/strict flags and v3.5 release
+remain the production baseline. The registered 0.65/0.90 contrast is the
+preferred 5–10 kpc research comparison. It improves dwarf retention and
+distance bias in the historical spectral references, with greater measured
+foreground and giant leakage. The [catalog use rules](docs/v3_7_catalog_use.md)
+define the directly supported bright red near sample and the narrower uses
+for other observed regions.
 
-1. Measure separate score and near-probability gate effects, and verify both
-   published cuts on the same rows before comparing any candidate.
-2. Run the matched classifier and blue-branch feature controls, and compare
-   the three distance references by identity and observable domain.
-3. Extend the signed Gaia comparison at QRF 5–10 kpc and the LF odds and
-   branch-recovery checks. Report uncertainty and both leakage denominators.
-4. Deliver the recommended observable-domain rules, qualified paper figures,
-   and paper evidence outline. Confirm all results before adopting a rule.
+Delivered the same-star reference comparison, classifier ablation, blue
+neighborhoods, full weak Gaia census, LF odds and branch tests, six new
+English paper plates, and [paper evidence materials](docs/v3_7_paper_material.md).
+The final validator passed 35,177 checks and the local suite passed 472 tests.
+All v3.7 Slurm work has ended. A formal AAS manuscript follows the user's
+separate confirmation.
 
 ## v3.6 — completed reference recovery, failure diagnosis and paper figures
 

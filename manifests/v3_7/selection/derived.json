@@ -1,0 +1,8 @@
+{
+  "inputs": {
+    "reference.csv": "5e9b297058d6baa1c43f74e88b3a7473579ac857a173e1e73b95c270922720ae"
+  },
+  "outputs": {
+    "predicted_composition.csv": "47a82fdb0876bbcf106ff366fac797e86575ae4e1a4256f8302ed4a8c1700581"
+  }
+}

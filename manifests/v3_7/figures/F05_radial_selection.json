@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "catalog.csv": "d9561eb908b166732b3c8508eb94375c7d3bd5da3d7e97e6ed1d3372141c8c05"
+  },
+  "outputs": {
+    "F05_radial_selection.png": "93c103e7e93bb347a5e3e4d1ebd6e81656bb7a92b652248d6742f7c932b75e48",
+    "F05_radial_selection.pdf": "f450cec49c14157182f7dc3de16f46d71e4952985346593a323bb1d13f4a45dd",
+    "F05_radial_selection.csv": "e6b6bea714570904d2f33ac3f12419d5140ed192de03abaf4a26a19edd50b4ce"
+  },
+  "dpi": 300
+}

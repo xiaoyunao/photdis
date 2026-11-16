@@ -1,5 +1,19 @@
 # WORKLOG
 
+## 2026-11-16 — complete v3.7 selection and paper evidence
+
+- Job 61391246 recorded the initial classifier step failure. Steps 61391246.17
+  (classifier retry) and .18 (selection summary) completed 0:0, as did all
+  twelve nominal replay shards. No v3.7 computation remains queued or running.
+- Verified 147,367 replayed nominal gates and 121 retained numerical flags.
+  Primary and strict flags replay exactly. Changing the dwarf score from
+  0.80 to 0.65 at near probability 0.90 improves reference dwarf retention
+  in both spectral catalogs. The candidates remain development selections.
+- Added the predicted-shell composition tabulation, six checked paper plates,
+  and the final result, catalog use and paper materials.
+- Final commands: v3.7 compact verifier (35,177 checks), single-thread
+  pytest (472 passed), figure visual review and git diff --check.
+
 ## 2026-11-16 — recover the fixed classifier and verify the native use domains
 
 - Classifier rerun 61391246.17 completed on the same allocated node.

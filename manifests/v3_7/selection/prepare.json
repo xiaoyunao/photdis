@@ -1,0 +1,44 @@
+{
+  "inputs": {
+    "configs/v3_7_selection.json": "78eb2ff9a2e9b77ab9042eeb512d89f84cd2256cf0e0955eedb21ebc9bcb790e",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/lf_sensitivity/complete.json": "9aa73dfbdbcaa781ffe0f922de089bf3fa5d25cb54938b710a7d837ce59e7187",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "configs/v3_5_dr11.json": "10604c90bcd2226457267d10eff72e2f2f86502726f27ce3b152ba55b7e79cd5",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "scripts/v3_7_selection_replay.py": "bb14327e618b6d47cdb84e5711a7f651e9f073bff535b3100a70148821cc661f"
+  },
+  "shards": 12,
+  "need": 147367,
+  "draw": 12755,
+  "excluded_morphology": {
+    "Gaia": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SpecDis": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SPDist": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "outputs": {
+    "need_00.npz": "2bb99a23fc142e68e9af4a08036f011a5cb33c986f9b437399d2b9e7b9cc0592",
+    "need_01.npz": "ec79102567e72acff7a8d20240b12ed35e71d34718548655f701582a4ea6a074",
+    "need_02.npz": "5a58a84fcb0d33cc1ff9fe7770649a91ac6e415c3ae36d3dac1fc6519a960ba5",
+    "need_03.npz": "8fce60d8d16a39a7e954a498ba0cf9d6592f34767b5bdf63a8f505621a0bc8fe",
+    "need_04.npz": "1fecddf36c5db6a567ba5b54bb9b124c38a2d21b8dfa27d8537336a2834072b3",
+    "need_05.npz": "acc0873d648a3f07a7f2b3b051c0131cd1ecb3dea032f7f638aa231ae549e02b",
+    "need_06.npz": "07949ff612f1c20c6bf0c2406e822b7c5e3c1cbcbd1ea4911f7381000dee264d",
+    "need_07.npz": "5270b9ec92841f87d1fdcc5deeae6fdaca8d8cd266d9c76d829a868a14add878",
+    "need_08.npz": "b80e6e0523b3308f6e1278d6f026b09c556ab7bdd2d683f61570f26872a1b9a6",
+    "need_09.npz": "472b7512f4f49b05bc21fb3e2c0ee83a210b0dc1541e52fb5088f59af6a540a5",
+    "need_10.npz": "c4593c008934db05641dd1eb764c62c082f7730d5f52a6df69efb8fc0a4dc53d",
+    "need_11.npz": "ae6e46f9f6bb1e1769e201679d1298f3622392c8886283a9b2c6dd0e0e7f52c0",
+    "draw.npz": "f0ea2c81bf6d26635f866c60315334d8006e7719c33340b20b71e0035ec3f24b"
+  }
+}
