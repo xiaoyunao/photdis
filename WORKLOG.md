@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — implement same-identity selection replay
+
+- Added `scripts/v3_7_selection_replay.py`. The preparation stage identifies
+  missing nominal gates on the three qualified reference sets and the frozen
+  12,755-row weighted draw. Disjoint sweep shards compute only missing gates.
+- Report generation checks both old selections against their frozen flags
+  before writing reference-error, migration and weighted catalog tables.
+  Compilation and a five-object workpoint replay passed locally.
+- Submitted the independent reference and LF runs as 61390668 and 61390669.
+
 ## 2026-11-16 — prepare the three-reference and population-odds runs
 
 - Sent weak Gaia job 61390595 to Perlmutter with 48 CPUs. The actual census
