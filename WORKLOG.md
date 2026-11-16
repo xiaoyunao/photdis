@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-16 — implement direct validation and full-coordinate paper views
+
+- Added direct reference-distance and same-star CMD plates on qualified
+  non-QRF-training primary references. Added full-resolution point-layer
+  Aitoff views and observed heliocentric projections for the frozen catalog.
+- The candidate sky layer explicitly uses the verified gate subset.
+- Compiled the figure code and checked the Slurm script syntax.
+
 ## 2026-11-16 — register the v3.8 work package
 
 - Read the complete Pro review of afd25ff and registered the five work areas.
