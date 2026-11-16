@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — evaluate the real-noise controlled comparison
+
+- Job 61395045 completed. Verified the archived simulation and cell-table
+  digests. At r=22–23, common model support is 1,010/1,280 for strict
+  error donors and 699/1,280 for lower-S/N donors. Relative-residual NMAD
+  rises in both tiers. Kept the existing low-S/N research designation.
+- Added all six magnitude/tier results and the stratified source table.
+  Both native prediction arrays and their downstream validations continue.
+
 ## 2026-11-16 — validate the fitted northern native model
 
 - All 48 north and 48 south reference association tasks completed.

@@ -1,0 +1,182 @@
+{
+  "job": "61395045",
+  "input_sha256": "7b56e873b8aea1b13932a2aedbc133d30467321665289901d0db72413c373660",
+  "rows": 6539,
+  "templates": 1280,
+  "cells": [
+    {
+      "r_min": 20,
+      "r_max": 21,
+      "noise_control_quality": 6,
+      "paired_simulations": 139,
+      "common_support": 88,
+      "before": {
+        "n": 88,
+        "median_relative": 0.06514097652973294,
+        "nmad_relative": 0.15871135489655663,
+        "median_mu_residual": 0.13703489062258,
+        "severe_fraction": 0.022727272727272728,
+        "coverage68": 0.5909090909090909,
+        "coverage95": 0.9545454545454546,
+        "median_width68": 0.6668524256514843,
+        "median_width95": 1.854411112769264
+      },
+      "after": {
+        "n": 88,
+        "median_relative": 0.08161516342748676,
+        "nmad_relative": 0.25225202167552807,
+        "median_mu_residual": 0.17033952583499268,
+        "severe_fraction": 0.06818181818181818,
+        "coverage68": 0.7954545454545454,
+        "coverage95": 0.9886363636363636,
+        "median_width68": 1.2881394236644619,
+        "median_width95": 3.7420369409061554
+      }
+    },
+    {
+      "r_min": 20,
+      "r_max": 21,
+      "noise_control_quality": 7,
+      "paired_simulations": 1280,
+      "common_support": 1272,
+      "before": {
+        "n": 1272,
+        "median_relative": 0.040184327013304044,
+        "nmad_relative": 0.13571987192441998,
+        "median_mu_residual": 0.08555148910713228,
+        "severe_fraction": 0.015723270440251572,
+        "coverage68": 0.6297169811320755,
+        "coverage95": 0.9583333333333334,
+        "median_width68": 0.5804992608462092,
+        "median_width95": 1.7056589310563899
+      },
+      "after": {
+        "n": 1272,
+        "median_relative": 0.04025662829323716,
+        "nmad_relative": 0.1459287271885827,
+        "median_mu_residual": 0.08570244255838322,
+        "severe_fraction": 0.014937106918238994,
+        "coverage68": 0.6800314465408805,
+        "coverage95": 0.9669811320754716,
+        "median_width68": 0.6349009512995494,
+        "median_width95": 1.944410952934219
+      }
+    },
+    {
+      "r_min": 21,
+      "r_max": 22,
+      "noise_control_quality": 6,
+      "paired_simulations": 1280,
+      "common_support": 789,
+      "before": {
+        "n": 789,
+        "median_relative": 0.03945682996373415,
+        "nmad_relative": 0.1320978104867947,
+        "median_mu_residual": 0.08403228604858093,
+        "severe_fraction": 0.01394169835234474,
+        "coverage68": 0.6476552598225602,
+        "coverage95": 0.9543726235741445,
+        "median_width68": 0.5839669992756207,
+        "median_width95": 1.6646419748300545
+      },
+      "after": {
+        "n": 789,
+        "median_relative": 0.06472052719834165,
+        "nmad_relative": 0.2010470105388667,
+        "median_mu_residual": 0.13617813547683966,
+        "severe_fraction": 0.045627376425855515,
+        "coverage68": 0.8225602027883396,
+        "coverage95": 0.9974651457541192,
+        "median_width68": 1.3227417917910174,
+        "median_width95": 6.461237002072783
+      }
+    },
+    {
+      "r_min": 21,
+      "r_max": 22,
+      "noise_control_quality": 7,
+      "paired_simulations": 1280,
+      "common_support": 1206,
+      "before": {
+        "n": 1206,
+        "median_relative": 0.039667202441056815,
+        "nmad_relative": 0.13414261066546349,
+        "median_mu_residual": 0.08447171920021113,
+        "severe_fraction": 0.014925373134328358,
+        "coverage68": 0.6310116086235489,
+        "coverage95": 0.9593698175787728,
+        "median_width68": 0.5791385497036483,
+        "median_width95": 1.7056589310563899
+      },
+      "after": {
+        "n": 1206,
+        "median_relative": 0.0479513578395311,
+        "nmad_relative": 0.16323957931790128,
+        "median_mu_residual": 0.10170562230150981,
+        "severe_fraction": 0.01990049751243781,
+        "coverage68": 0.7106135986733002,
+        "coverage95": 0.9825870646766169,
+        "median_width68": 0.751918799279383,
+        "median_width95": 2.6268862200270338
+      }
+    },
+    {
+      "r_min": 22,
+      "r_max": 23,
+      "noise_control_quality": 6,
+      "paired_simulations": 1280,
+      "common_support": 699,
+      "before": {
+        "n": 699,
+        "median_relative": 0.04090656937708216,
+        "nmad_relative": 0.1369319738628401,
+        "median_mu_residual": 0.08705874733670527,
+        "severe_fraction": 0.01859799713876967,
+        "coverage68": 0.6137339055793991,
+        "coverage95": 0.9527896995708155,
+        "median_width68": 0.5766434737452499,
+        "median_width95": 1.6804570557363139
+      },
+      "after": {
+        "n": 699,
+        "median_relative": 0.06569083726864111,
+        "nmad_relative": 0.20610604772808788,
+        "median_mu_residual": 0.1381561588080764,
+        "severe_fraction": 0.060085836909871244,
+        "coverage68": 0.8454935622317596,
+        "coverage95": 0.9985693848354793,
+        "median_width68": 1.4117294266779652,
+        "median_width95": 6.613802011183582
+      }
+    },
+    {
+      "r_min": 22,
+      "r_max": 23,
+      "noise_control_quality": 7,
+      "paired_simulations": 1280,
+      "common_support": 1010,
+      "before": {
+        "n": 1010,
+        "median_relative": 0.03987279652763573,
+        "nmad_relative": 0.14122773824190724,
+        "median_mu_residual": 0.0849010770869203,
+        "severe_fraction": 0.01782178217821782,
+        "coverage68": 0.6049504950495049,
+        "coverage95": 0.9564356435643564,
+        "median_width68": 0.5739972655662413,
+        "median_width95": 1.6807300416267807
+      },
+      "after": {
+        "n": 1010,
+        "median_relative": 0.06314760983994916,
+        "nmad_relative": 0.19440673457170785,
+        "median_mu_residual": 0.13296782690725895,
+        "severe_fraction": 0.032673267326732675,
+        "coverage68": 0.7623762376237624,
+        "coverage95": 0.9881188118811881,
+        "median_width68": 1.0523680086447733,
+        "median_width95": 3.870639759527351
+      }
+    }
+  ]
+}
