@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — v3.9 reference association and branch control
+
+- Added raw SpecDis/SPDist, spectral class/Redrock and signed Gaia association
+  with native PSF and position verification. Northern distance fit uses
+  native photometry, disjoint sky roles, Gaia and supported SpecDis dwarfs.
+- Added 48-case band residual decomposition and a normalized candidate
+  distance PDF control from disjoint low-luminosity anchors.
+- Exact/ambiguous reference joins and PDF resampling passed smoke checks.
+  South/north inventory, scans and south prediction submitted as
+  61394869–61394873. Scientific outputs await runnable Slurm partitions.
+
 ## 2026-11-16 — v3.9 native survey census and distance export
 
 - Added the shared configurable DR11 census and resumable QRF PDF exporter.
