@@ -122,7 +122,7 @@ def run(name):
     has = np.isfinite(t['qrf_kpc'][:,2])
     if (has&t['training_or_calibration']).any():
         raise ValueError('A frozen distance training identity has leaked')
-    np.testing.assert_allclose(t['qrf_mass'].sum(axis=1),has.astype(float),rtol=0,atol=2e-7)
+    np.testing.assert_allclose(t['qrf_mass'].sum(axis=1,dtype=np.float64),has.astype(float),rtol=0,atol=2e-7)
     path = DEST/name
     path.mkdir(parents=True,exist_ok=True)
     cmd(name,t,path)
@@ -146,8 +146,18 @@ def final():
         if (k['dual_fit']&k['dual_cal']).any() or ((k['dual_fit']|k['dual_cal'])&k['eval_role']).any():
             raise ValueError('Teacher-swap roles are not separated')
         assert int(k['dual_fit'].sum())==meta['fit']['Gaia paired']==meta['fit']['SpecDis paired']
+    cmd_root = ROOT/'data/v3_13/cmd'
+    cmd_receipt = bind(cmd_root/'complete.json',inputs)
+    if cmd_receipt['inputs']['styles']!=check_templates():
+        raise ValueError('CMD figure used a different style')
+    figure_check(cmd_root/'m5.png')
+    m5 = read_columns(cmd_root/'m5_rows.npz',('TYPE','ls_id','common','target'))
+    if not np.all(m5['TYPE']=='PSF') or len(np.unique(m5['ls_id']))!=len(m5['ls_id']):
+        raise ValueError('The independent test contains repeated or unverified sources')
+    assert int((m5['common']&m5['target']).sum())==cmd_receipt['native_target']
+    assert int((m5['common']&~m5['target']).sum())==cmd_receipt['native_control']
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
-        style=check_templates(),figures=len(SYSTEMS)*3,outputs={}))
+        style=check_templates(),figures=len(SYSTEMS)*3+1,outputs={}))
 
 
 if __name__=='__main__':
