@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — assess the completed Bayestar19 pilot
+
+- Job 61395038 completed with 311 distinct native PSFs and valid map PDFs.
+  76 sources had qualified Gaia references, with 60 in the per-star map
+  support. The common-grid score improved by 0.597 nat overall, with two
+  positive fields and one negative field. Only six matched references
+  were in the higher-crowding group.
+- Checked compact CSV checksums and retained the scope and paired outcomes
+  in docs/v3_9_result.md. The 3D-dust output is a scoped research pilot.
+
 ## 2026-11-16 — deliver the near PDF and resolve the branch trial
 
 - All 16 calibrated PDF shards completed for 1,142,280 sources and 8,156 data

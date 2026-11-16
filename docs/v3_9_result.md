@@ -42,3 +42,28 @@ NERSC 的 `data/v3_9/branches/distance_pdf_control.npz`，逐星与逐波段
 原生 FITS 表头盘点完成。南天读取 1,600 个 sweep 的行数，
 北天读取 526 个，表头检查未发现缺失的必需字段。
 [输入清单](../manifests/v3_9/inventory/summary.json)
+
+## 三维消光试验
+
+Bayestar19 试验在三个有合格样本的 DECam 视场得到 **311 个 PSF**
+的联合距离与消光 PDF。试验覆盖观测 `14≤r<18.5`，实际 SFD
+`E(B−V)` 为 0.156–1.246 等。76 个对象有高质量 Gaia 距离，
+其中 60 个的参考距离位于对应视线的可靠距离区间。
+
+| 试验视场中心 `(l,b)` | 共同支持 Gaia 数 | 3D 尘埃相对 SFD 的平均预测评分变化 |
+| --- | ---: | ---: |
+| (211°, −19.5°) | 12 | +1.223 nat |
+| (213.8°, −12.5°) | 36 | +0.600 nat |
+| (37°, +13°) | 12 | −0.036 nat |
+| 合计 | 60 | +0.597 nat |
+
+比较限制在同一颗星和同一可靠距离区间，并传播 Gaia 距离误差。
+合并样本的距离模数残差中位数从 +0.158 等变为 −0.072 等，
+NMAD 从 1.066 等降至 0.538 等。较拥挤层仅有 6 颗共同支持参考
+星。两个视场的收益支持保留视线依赖的研究 PDF，现阶段适用
+范围限于这批明亮 DECam 试验视线的地图可靠区间。这些结果
+不替代低消光生产目录。完整试验 PDF 保存在 NERSC 的
+`data/v3_9/dust/bayestar19/distance_pdfs.npz`。
+[同星 Gaia 表](../manifests/v3_9/dust/matched_gaia.csv) ·
+[逐视线结果](../manifests/v3_9/dust/sightlines.csv) ·
+[运行记录](../manifests/v3_9/dust/complete.json)

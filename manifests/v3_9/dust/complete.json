@@ -1,0 +1,20 @@
+{
+  "rows": 311,
+  "valid": 311,
+  "dust_kind": "bayestar19",
+  "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27b1e32ef99",
+  "coefficients": [
+    3.1263983190988505,
+    2.105990155833544,
+    1.17799264605747
+  ],
+  "nominal_sha256": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+  "inference_source_sha256": "0554b5558628e7bbe0591e01a82ec03336f06b4145159a3b71c5feb9f457379c",
+  "frozen_nominal_manifest_sha256": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+  "job": "61395038",
+  "outputs": {
+    "matched_gaia.csv": "4f261bda06de860b97b68284cb2f4487b03b086782dc009b2407b7f158977576",
+    "sightlines.csv": "014e49c06ad35478b04ecac6ec337a38de74089fff5647873627b0f928e75f94",
+    "distance_pdfs.npz": "34061e33613674aa0e2187b8ecbcd41a083e2a23ef7104ef8576ec046666ceea"
+  }
+}
