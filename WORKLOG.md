@@ -1,5 +1,33 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the Photdis v3.9 survey extension
+
+- Delivery 61395046 completed 0:0. Reconciled 1,600 south and 526 north
+  sweeps against all 96 independent validation shards. Checked the final
+  CSV digest and recomputed the unified census locally from 28,917 rows.
+  The primary view has 72,289,386 sources and 43,347,612 complete PDFs.
+- Verified 1,951,902 cross-survey pairs and eight ownership overrides.
+  Restart 61399441 completed for one native sweep in each survey.
+- Visually checked the 18 English figures and checked all 36 PNG/PDF
+  digests, dimensions, page counts and tabulated sky totals. Archived
+  selected images, compact tables and validation receipts in Git.
+- Updated the protocol, result, figure index and plan. No v3.9 jobs remain.
+
+## 2026-11-16 — recover spectroscopic classes for the expansion atlas
+
+- All southern and northern raw predictions passed their downstream
+  per-partition PSF and PDF checks. Restart job 61399441 verified the
+  unchanged prediction receipt and file digests for one sweep per survey.
+- Initial distance and CMD figures verified the faint blue failure.
+  The southern low-latitude plots had no qualified dwarf or giant labels
+  from the old high-latitude photometric subset. Reattached quality-passing
+  raw RVS classifications already available for positioned references,
+  retaining provenance and excluding conflicts from both labeled groups.
+- Initial figures remain archived. Revised figure jobs 61399603–61399605
+  feed final assembly job 61395046. Validated 472 local tests using
+  single-threaded numerical libraries after the default OpenMP runtime
+  crashed in a pre-existing K-means test.
+
 ## 2026-11-16 — expose the joint catalog partitions as a release manifest
 
 - Added the unified per-part entrypoint for the three native expansion

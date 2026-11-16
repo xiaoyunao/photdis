@@ -1,0 +1,17 @@
+category,distance_min_kpc,distance_max_kpc,n
+Qualified distance references,0,1,7113
+Spectroscopic dwarfs,0,1,38
+Spectroscopic giants,0,1,0
+Precise survey predictions,0,1,1157462
+Qualified distance references,1,5,1050
+Spectroscopic dwarfs,1,5,48
+Spectroscopic giants,1,5,0
+Precise survey predictions,1,5,7501885
+Qualified distance references,5,10,1230
+Spectroscopic dwarfs,5,10,58
+Spectroscopic giants,5,10,1
+Precise survey predictions,5,10,2942846
+Qualified distance references,0,10,9393
+Spectroscopic dwarfs,0,10,144
+Spectroscopic giants,0,10,1
+Precise survey predictions,0,10,11602193

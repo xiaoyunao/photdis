@@ -4,6 +4,12 @@
 `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_9/expansion/figures_labeled`，
 下设 `south_faint`、`south_low` 和 `north` 三个目录。
 
+| 天区 | 逐源 Aitoff | 图件预览 | 统计表 |
+| --- | --- | --- | --- |
+| 南天暗端 | [Aitoff](../figures/v3_9/south_faint/aitoff_source_positions.png) | [距离直接比较](../figures/v3_9/south_faint/distance_comparisons.png) | [清单与底表](../manifests/v3_9/figures/south_faint/) |
+| 南天低纬 | [Aitoff](../figures/v3_9/south_low/aitoff_source_positions.png) | [同星 CMD](../figures/v3_9/south_low/same_star_cmd.png) | [清单与底表](../manifests/v3_9/figures/south_low/) |
+| 北天 | [Aitoff](../figures/v3_9/north/aitoff_source_positions.png) | [日心空间投影](../figures/v3_9/north/heliocentric_xyz.png) | [清单与底表](../manifests/v3_9/figures/north/) |
+
 | 文件名 | 图中内容 |
 | --- | --- |
 | `distance_comparisons` | 分 Gaia、SpecDis、SPDist 显示测光距离与参考距离、一一对应线、相对残差和参考距离分布。 |

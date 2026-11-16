@@ -1,0 +1,24 @@
+{
+  "north_rows": 3177873,
+  "south_rows": 2474458,
+  "paired": 1951902,
+  "gaia_pairs": 907923,
+  "position_pairs": 1043979,
+  "ambiguous_positional_edges": 479,
+  "conflicting_positional_edges": 7,
+  "gaia_position_failures": 0,
+  "formerly_two_owners": 3,
+  "formerly_no_owner": 1,
+  "override_rows": 8,
+  "inputs": {
+    "north/inventory.json": "563038548abbc387bdda67eec193ef13f44cf17aad1b323576a652d13f99fac3",
+    "south/inventory.json": "b87d9d8e080b23643c759680d99fefe5a94946a9d970cf12ebf9c3f1f9b25d66",
+    "delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "v3_9_seam.py": "d3374855fddbf312a42e108f306838c59c837d596c3683615a0f4cb8ca101a6a"
+  },
+  "outputs": {
+    "ownership_overrides.npz": "de5e360f9259747ffe3a6f76cd0db4e87e22b83e243e811d464adffa978a59a9",
+    "counts.csv": "1c028e096a739ed0e3d79e533c5d5fd8846c467154d051b4b731498cc4937525",
+    "paired_sources.npz": "68c2c57efb203b49421c09456ce413cc2c1371640a6ad8c915c89448d6f7a2b1"
+  }
+}

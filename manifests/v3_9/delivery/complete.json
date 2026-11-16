@@ -1,0 +1,81 @@
+{
+  "job": "61395046",
+  "census": {
+    "south": {
+      "sweeps": 1600,
+      "bad": 0,
+      "rows": 38088482,
+      "pdfs": 22360270,
+      "groups": 48,
+      "maximum_quantile_cdf_error": 2.00380501635955e-08,
+      "maximum_shell_probability_error": 0.0
+    },
+    "north": {
+      "sweeps": 526,
+      "bad": 0,
+      "rows": 26543060,
+      "pdfs": 10571852,
+      "groups": 48,
+      "maximum_quantile_cdf_error": 1.6860887352976306e-08,
+      "maximum_shell_probability_error": 0.0
+    }
+  },
+  "unified": {
+    "south_faint": {
+      "parts": 8893,
+      "native_rows": 36459624,
+      "owned_rows": 35395600,
+      "native_pdf_rows": 21169753,
+      "owned_pdf_rows": 20785806
+    },
+    "south_low": {
+      "parts": 633,
+      "native_rows": 1628858,
+      "owned_rows": 1628858,
+      "native_pdf_rows": 1190517,
+      "owned_pdf_rows": 1190517
+    },
+    "north": {
+      "parts": 1937,
+      "native_rows": 26543060,
+      "owned_rows": 24278158,
+      "native_pdf_rows": 10571852,
+      "owned_pdf_rows": 10384519
+    },
+    "south_v35": {
+      "parts": 17454,
+      "native_rows": 11246209,
+      "owned_rows": 10986770,
+      "native_pdf_rows": 11246209,
+      "owned_pdf_rows": 10986770
+    }
+  },
+  "gate_rows": 336678,
+  "gate_passed": 114568,
+  "gate_reused": 542,
+  "near_pdf_rows": 1142280,
+  "near_pdf_parts": 8156,
+  "near_pdf_audit": {
+    "maximum_quantile_cdf_error": 2.090543471666706e-08,
+    "maximum_shell_probability_error": 0.0
+  },
+  "sources": {
+    "data/v3_9/existing/gates/complete.json": "e859384730b4d87a5e19f215cf21e98cd04e190fe1c7b2933240111aabd6798f",
+    "data/v3_9/branches/complete.json": "a73ab5a804ed4d6f144a20ce03c3dd31adf1da37eda0d88dbb31763ed3e4bad1",
+    "data/v3_9/dust/bayestar19/complete.json": "a29e6f2aae93da1ab3e84b75e9e9e835eac94f6628fda66bfa1ab8be7d89e592",
+    "data/v3_9/expansion/noise_control/complete.json": "9cf9e3f127d8a4b806874eb058100758f6638b4e8173342f7ded50273abfb59b",
+    "data/v3_9/expansion/north/native_model/complete.json": "42cc5e149325bfc5a66fc177f84977aa943a4cbd14324d720ec33d44aba5dad4",
+    "data/v3_9/expansion/validation/overlap/complete.json": "a95af67c702a358082e001c0ffd2167007d3b1aee64aaf81630e72eac6028b67",
+    "data/v3_9/expansion/figures_labeled/south_faint/complete.json": "6c7ba922d505d064d8a27aeeab803b0eb61c78248a457be36b9ed79763d9b1a6",
+    "data/v3_9/expansion/figures_labeled/south_low/complete.json": "957a114a62d1202bded84e3fd08c66007815e56b2207c1762f1aeb4308a08a79",
+    "data/v3_9/expansion/figures_labeled/north/complete.json": "c8a68ea76809f9641cd71665fe67b37e3adc3e6b5e997f66061b06cc423022e5",
+    "data/v3_9/delivery/seam/complete.json": "a7537e2487aff4828cea839f0f3adebc1d71dd4e317557b34765ec8fe9dab9b9"
+  },
+  "outputs": {
+    "calibrated_shell_counts.csv": "fc0afae710a61422e119a2126c3e63c1777d730c743f908404ef09675c8da73e",
+    "north_sweeps.csv": "9a21b0b79ab24705431b54e0a8dd07842a1b131ebb48240f1c463fe5a86c1d63",
+    "south_sweeps.csv": "b3b1c550f8974f66beb4c4134902e6e5528ee0313bb2b8d957b3f862b0b553cf",
+    "expansion.csv": "beb8c16f1b70601fdfa2a7381060ce65f3921e3d27b33fe1f081e5261280caee",
+    "unified_parts.csv": "95137745e9d0c2e3ee41a1946cb3a210e596a8991fae123991974f7ae149bf75"
+  }
+}

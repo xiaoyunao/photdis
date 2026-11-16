@@ -85,3 +85,7 @@ PDF 重新积分核对五个距离分位数及各距离层的概率。合并前�
 和测光表对齐的归属掩码。清单中的 `owned_rows` 和
 `owned_pdf_rows` 已用这一规则计算。保留所有分区原文件可
 查看同一对象的次要巡天观测和生产状态。
+
+发布验收通过后，`data/v3_9/delivery/complete.json` 记录统一
+清单的校验值、分区数和归属行数。可先用[发布回执](../manifests/v3_9/delivery/complete.json)
+确认要读取的版本。

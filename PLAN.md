@@ -1,18 +1,19 @@
 # PLAN
 
-## v3.9 — widen the native survey catalog
+## v3.9 — completed native survey catalog expansion
 
-Follow the [v3.9 protocol](docs/v3_9_protocol.md). The catalog, gate replay,
-calibrated PDFs, raw reference join, north fit, dust pilot, branch controls,
-noise comparison and validation figures have independent Slurm stages.
-Use the receipts in `data/v3_9` after the pending jobs start. First check
-native inventory and first finished science partitions. Then collect
-distance and population evidence, inspect plots, reconcile the near PDF and
-gate counts, and write the release decision from actual products.
+The [results](docs/v3_9_result.md), [catalog protocol](docs/v3_9_protocol.md)
+and [validation atlas](docs/v3_9_figure_index.md) complete this work
+package. The unified NERSC index resolves survey ownership and links
+43,347,612 full distance PDFs across the frozen and new domains.
+Delivery job 61395046 and the restart audit completed.
 
-Perlmutter reopened on 2026-11-16. Continue with the original Slurm chain.
-Check `squeue -u yunao`, terminal accounting and output receipts before
-retrying only failed shards. The delivery dependency root is `61395046`.
+Use direct reference evidence to delimit the bright near sample and
+interpret the 2–10 kpc results by survey and reference source. Preserve
+the faint predictions, lower-S/N controls, 3D dust pilot and distant
+gate replay for research. The branch comparison supports retaining
+the frozen default. The prior calibrated bright-red view is available
+as a separate full-PDF product. There are no remaining v3.9 jobs.
 
 
 ## v3.8 — completed direct paper figures and science validation
