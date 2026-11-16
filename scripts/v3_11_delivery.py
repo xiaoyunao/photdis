@@ -55,7 +55,8 @@ def run():
             rows = table(folder/'composition.csv')
             for label,expected in (('supported',origin['role4']),):
                 k = [r for r in rows if r['view']==label and r['component']=='role4_catalog'
-                     and r['r_min']=='-inf' and r['gr_min']=='-inf' and r['gr_max']=='inf']
+                     and r['r_min']=='-inf' and r['r_max']=='20.0'
+                     and r['gr_min']=='-inf' and r['gr_max']=='inf']
                 if len(k)!=4 or sum(int(r['hard_n']) for r in k)!=expected:
                     raise ValueError('Hard distance shell membership fails conservation')
                 if abs(sum(float(r['pdf_n']) for r in k)-expected)>.1:
