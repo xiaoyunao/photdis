@@ -23,3 +23,4 @@ F04 提供 6,600 像素宽的 PNG 和对应 PDF。
 LF 情景、历史对照和全套图件继续见 [v3.6](v3_6_figure_index.md) 和
 [v3.7](v3_7_paper_figures.md) 图件索引。完整分箱数组和逐星大件在 NERSC。
 [新增星的物理参数与参考 CMD](../figures/v3_8/A01_recovered_stars.pdf)列入附图。
+[南北同星绝对 CMD](../figures/v3_8/A02_north_south_cmd.pdf)也列入附图。

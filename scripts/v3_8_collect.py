@@ -89,6 +89,17 @@ def verify():
         a = [r for r in table('candidate_index','membership.csv') if r['status']==name]
         assert len(a)==4 and int(a[0]['rows'])==sum(int(r['shell_rows']) for r in a),name
         checked += 1
+    pilot = json.loads((TABLES/'north/complete.json').read_text())
+    north = table('north','distance.csv')
+    n = int(north[0]['n'])
+    assert n<=pilot['test'] and all(int(r['n'])==n for r in north)
+    assert sum(int(r['qualified_native_pairs']) for r in
+               table('north_report','classification_comparison.csv'))==n
+    checked += 2
+    names = ('anchors.csv','cases.csv')
+    groups = [{r['ls_id'] for r in table('branches',name) if r['TYPE']=='PSF'} for name in names]
+    assert len(groups[0])==32 and len(groups[1])==48 and not groups[0]&groups[1]
+    checked += 1
     return checked
 
 

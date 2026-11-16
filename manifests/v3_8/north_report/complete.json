@@ -1,0 +1,17 @@
+{
+  "job": "61393707",
+  "inputs": {
+    "data/v3_8/north/complete.json": "ebc8156a8fb43fded693497787fdb0b8acb648b7c520ca11863663926d2141be",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_8_north_report.py": "93bb24f19997b3bdb9cf3ceec8ef76f342af4afa0b2b7face725553920795025"
+  },
+  "outputs": {
+    "A02_north_south_cmd.csv": "e8f042b32ba3e3088e4b905595902a6e9ff518ba15ee1aaad8e4cb7a6ba6e843",
+    "A02_north_south_cmd.npz": "968c0494d8535fe9f0a0da1f5ec4002fe0dc93a11042f8dfa525dcf3e2ea844f",
+    "A02_north_south_cmd.png": "426844ec048a01f023f370de36e9c4461b7ebad915d4bc0da7c6cb4393feacac",
+    "declination_seam.csv": "e8f042b32ba3e3088e4b905595902a6e9ff518ba15ee1aaad8e4cb7a6ba6e843",
+    "A02_north_south_cmd.pdf": "9053ac7aa8001cebeee035a20848f7fd3d9539a7f7d4be80acc81c0c3cd7c51c",
+    "classification_comparison.csv": "dbaeaa924306ac479982db6430284e97e3e4a01f6c6ad183c69e515a5b9fb72b"
+  }
+}

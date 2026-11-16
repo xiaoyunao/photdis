@@ -1,0 +1,5 @@
+class_name,qualified_native_pairs,north_scores,mean_dwarf_score,dwarf_score_pass,sed_trials,north_pass,south_pass
+dwarf,853,853,0.9819464946475827,835,108,104,104
+giant,0,0,,0,0,0,0
+other,25,25,0.8651299053943226,20,5,5,4
+unknown,2836,2836,0.9802137717961845,2765,399,389,368

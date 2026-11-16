@@ -1,10 +1,24 @@
 # PLAN
 
-## v3.8 — direct paper figures and scientific validation
+## v3.8 — completed direct paper figures and science validation
 
-Follow the [v3.8 protocol](docs/v3_8_protocol.md). Begin the weighted candidate
-replay and individual-coordinate paper figures in parallel. Complete physical
-branch, interval and northern pilot comparisons before closing v3.8.
+The [v3.8 results](docs/v3_8_result.md) complete the five work packages from the
+Pro review of afd25ff. The eight [paper figure groups](docs/v3_8_paper_figures.md)
+include direct distance and CMD comparisons, high-resolution source-coordinate
+Aitoff maps and all three heliocentric projections.
+
+The 0.65/0.90 gates remain a research candidate. Its own weak Gaia, LF,
+reference and Redrock comparisons support the decision to keep the existing
+production selection. The evaluated and unresolved identities have separate
+flags in the NERSC membership index. Held-sky interval calibration supports a
+width adjustment in the directly validated bright red near domain. The fixed
+low-luminosity patch increases the nearby branch mass but leaves severe errors.
+
+The native BASS/MzLS pilot trained, calibrated and tested on separate overlap
+sky; the paired north–south median distance shift is −5.07%. Further
+production needs broader population and seam validation. The v3.8 jobs ended,
+101 product and science-integrity checks passed, and 472 tests passed.
+Formal AAS editing follows the user's separate confirmation.
 
 ## v3.7 — completed photo-only selection and paper evidence
 

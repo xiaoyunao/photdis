@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "scripts/v3_8_north.py": "200138afe0e8d7b124eb700e28a9cc535654a74c7bdf28be8806fbea0731a960"
+  },
+  "native_system": "BASS_MzLS_DR11",
+  "scope": "Gaia identity and angular matched south\u2013north overlap; Gaia reference shapes are shared",
+  "train": 8839,
+  "calibration": 4000,
+  "test": 3743,
+  "duplicate_north_gaia_exclusions": 0,
+  "calibration_offset_mag": 0.01717728659753076,
+  "outputs": {
+    "pairs.npz": "9b68fb74543628421c58391b602a07a32819d18a169a21b8ec8887e7eaf81225",
+    "prototype.joblib": "720e6aebf592968945862ee25fbb0bd9997ed30c2e0134f4f929a9f9b459d025",
+    "distance.csv": "4892407bb21517e8c0a54c5d3b3929b5aa18a8a3fcafeb960e6490699c4e791c",
+    "sweeps.csv": "afa2e84ec1bbcbc01bfe760eeef36fbfb56064b7216b99834a45c95cc4ae4060",
+    "roles.npz": "e4ffc34d256f6f4e699ac1feb6f7ea3770ed6de4cfb5fab872fdfacaf3ac2746",
+    "selection.csv": "92ae717d17b4c14901d6d8cf6e019dd2315c9bfdfcc59c776e0ca7835226c8bf"
+  }
+}
