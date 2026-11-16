@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_7_reference_comparison.py": "13c3857b02df0dad259478d2ccc0ec88dedb67141e4ef63869fc741a58d43cd5"
+  },
+  "excluded_morphology": {
+    "Gaia": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SpecDis": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SPDist": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "outputs": {
+    "qualified_migration.csv": "2cad9e39d1973004382d72f69947f7702e7af77c0ed81fb9b95a8f11ece7919b",
+    "paired_distances.csv": "250118f925fde092c51cf77c8396b1d91903e569f0294e584b424cd3a4abf8a1",
+    "overlap.csv": "bc49561c643016a97e0af72b8a16001a4cbb041facc705e9dec9bf1a06c6fd21"
+  }
+}

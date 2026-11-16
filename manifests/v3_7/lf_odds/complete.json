@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "data/v3_6/lf_sensitivity/complete.json": "9aa73dfbdbcaa781ffe0f922de089bf3fa5d25cb54938b710a7d837ce59e7187",
+    "configs/v3_7_selection.json": "78eb2ff9a2e9b77ab9042eeb512d89f84cd2256cf0e0955eedb21ebc9bcb790e",
+    "scripts/v3_7_lf_odds.py": "dab27b5b8c9dd2263bd4defcfbd319b25ccb62acf1242fc7efe2eba3b734ff84"
+  },
+  "rows": 12755,
+  "excluded_morphology": {
+    "unverified_type": 0,
+    "non_psf": 0
+  },
+  "outputs": {
+    "odds_leakage.csv": "1d9c802d31c12838d88901027c82f7116e71874ac600cf30fa3694e4f3728bb6"
+  }
+}

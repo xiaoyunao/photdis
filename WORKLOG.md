@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-16 — complete reference overlap and population-odds comparisons
+
+- Jobs 61390668 and 61390669 completed. Copied checksum-verified compact
+  tables for 60,122 qualified triple-reference identities and the 15 LF
+  and giant-odds scenarios on the frozen 12,755-object draw.
+- Prepared the qualified performance, blue CMD and leakage plates and
+  checked their PDF/PNG output visually. Created the paper evidence outline.
+- Local full suite passed 472 tests with single-thread BLAS/OpenMP. The
+  initial unconstrained run hit a scikit-learn K-means runtime crash.
+- Submitted 61390947–61390949 and 61391036. Selection and weak Gaia work
+  continue in Slurm.
+
 ## 2026-11-16 — implement the blue branch and classifier diagnostics
 
 - Added same-grz and optical-error neighborhoods with paired optional-band

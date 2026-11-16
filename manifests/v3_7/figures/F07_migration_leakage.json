@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "qualified_migration.csv": "2cad9e39d1973004382d72f69947f7702e7af77c0ed81fb9b95a8f11ece7919b",
+    "odds_leakage.csv": "1d9c802d31c12838d88901027c82f7116e71874ac600cf30fa3694e4f3728bb6"
+  },
+  "outputs": {
+    "F07_migration_leakage.png": "88c254fc3163083cb0f3d9e7301c320957fa6812e52b4238168746443aa9be8f",
+    "F07_migration_leakage.pdf": "d9c5af8f9ddd37833cec71e264297c6d2d5cedc5ff1752468de8ddaf95bb5d4c",
+    "F07_migration_leakage.csv": "926ac30e734c0b4a2265cf7d775d77a73fe972ce63fda17c7304e2be157bc092"
+  },
+  "dpi": 300
+}
