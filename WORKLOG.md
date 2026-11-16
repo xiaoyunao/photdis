@@ -1,5 +1,23 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the validated v3.10 science package
+
+- Delivery 61403150 completed 0:0. It verified all stage files, 96
+  brightness-limited membership indices, native pointers and normalized
+  candidate PDFs. Recorded 1,272,142 working-sample rows, 2,464 luminosity
+  comparisons and 1,951,902 verified production-seam pairs.
+- Adopted a bright research working view of the two tested domains.
+  The 2–5 kpc dwarf NMAD is 8–9%. The 5–10 kpc selected sample loses
+  most confirmed dwarfs and underestimates the reference distance.
+  The M92 control is negative after the working cuts.
+- Archived all branch and gate outcomes, including 150 north values
+  rounded at the upper probability bound and eight south solver warnings.
+  Neither the tested branch model nor the targeted SED gate replaces
+  the production forecast.
+- Verified the restoration of the v3.8 style, checked full-sky and
+  representative validation plates, and ran 472 local tests with
+  single-threaded numerical libraries. Archived figure and data receipts.
+
 ## 2026-11-16 — check faint branches and prepare the working sample
 
 - The 2,003-source faint Gaia sample contains 1,344 clean low-luminosity

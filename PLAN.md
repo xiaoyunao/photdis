@@ -1,6 +1,18 @@
 # PLAN
 
-## v3.10 — validate a photometry-only 2–10 kpc dwarf sample
+## v3.10 — completed dwarf-sample and luminosity-branch validation
+
+The [results](docs/v3_10_result.md) and [protocol](docs/v3_10_protocol.md)
+record the completed physical experiments, the 1,272,142-source working
+sample and the acceptance of the v3.8-style redraws. NERSC delivery
+61403150 completed. Preserve the frozen v3.9 forecasts and the candidate
+class scores and PDFs. The bright working selection improves 2–5 kpc
+known dwarf residuals. It loses most 5–10 kpc reference dwarfs, and
+the M92 control loses the cluster excess. The luminosity candidate
+failed to restore reliable faint distances. Keep the far selections,
+new branch PDFs and low-latitude dust experiments as research products.
+
+### Work package and baseline
 
 Use the full v3.9 Pro review, assistant message
 `864e677e-b124-5d26-ae9e-9b58f02d4dc1`, and baseline `a4b2bcb`.

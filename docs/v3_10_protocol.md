@@ -22,7 +22,12 @@ v3.8 `c935235` 是唯一绘图样式基准。距离对照、同星 CMD、
 
 三个域各有全体、矮星、巨星及其他类别的距离和 CMD 图。逐源
 地图按目录预测、合格参考、光谱矮星、光谱巨星各单独绘制。
-[原图像素回归记录](../manifests/v3_10/figures/regression/complete.json)
+[原图像素回归记录](../manifests/v3_10/figures/regression/complete.json) ·
+[南北合并 Aitoff](../figures/v3_10/combined_aitoff.png) ·
+[暗端同星 CMD 与 Gaia HRD](../figures/v3_10/faint_blue_cmd.png) ·
+[工作样本 Aitoff](../figures/v3_10/working_sample_aitoff.png) ·
+[工作样本日心投影](../figures/v3_10/working_xyz.png) ·
+[M92 对照](../figures/v3_10/m92_distance.png)
 
 ## 尘埃系数
 
@@ -58,6 +63,11 @@ Bayestar19 和 SFD 所用的消光律并不完全相同，高消光区域
 选择状态和质量。DR11 随机点提供天区覆盖、掩膜和近似三带
 深度的有效面积。样本保留比例还按颜色统计。光谱控制测得的
 通过率只适用于这些控制样本。
+
+NERSC 项目根目录下的 `data/v3_10/working_sample/{north,south}`
+分别保存 48 个分区回执。读取 `NN.npz` 中的 `state==4`
+得到工作样本。用 `part_index` 查同号 CSV，再用
+`pdf_rows` 取回原 PDF 文件中的相同行。所有路径相对仓库根目录。
 
 M92 示范使用固定中心 (259.28076°, 43.13594°)，目标环带
 0.08–0.35°，邻近控制环带 0.65–1.20°。两环带均限制在北天

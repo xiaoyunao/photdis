@@ -1,0 +1,11 @@
+{
+  "style_lock_sha256": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "source_sha256": "9cbea078283b25aadef0270ef37ad821b86fa65b2d907a31a709c5a0af6384bb",
+  "job": "61403313",
+  "outputs": {
+    "faint_blue_cmd.csv": "b82513beeb2d17b0d2238c047352a772f20a477d50ba768deaa4417e864cfc23",
+    "faint_blue_cmd.pdf": "a38dfc16f5ddef95e63912ebff369828c1450613329e5f54af7c49a5c2ecb80a",
+    "faint_blue_cmd.npz": "fd0ad4aaf8e6fed424e4b34d6c8517008b5bd9f785ca006ecc0493565c64dac9",
+    "faint_blue_cmd.png": "5d3a8e0091c9ac4fa1d6cbf33e4b687d912829380baa23516a75be552a2b0f40"
+  }
+}

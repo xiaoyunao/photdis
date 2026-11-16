@@ -1,0 +1,60 @@
+{
+  "job": "61403150",
+  "style_lock_sha256": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "working_sample": [
+    {
+      "side": "north",
+      "rows": 7007665,
+      "counts": [
+        2583434,
+        169205,
+        1205052,
+        2118267,
+        931707
+      ]
+    },
+    {
+      "side": "south",
+      "rows": 1628858,
+      "counts": [
+        421657,
+        16684,
+        322071,
+        528011,
+        340435
+      ]
+    }
+  ],
+  "paired_production_seam": 1951902,
+  "luminosity_case_rows": 2464,
+  "inputs": {
+    "data/v3_10/figures/regression/complete.json": "5dbc198fc6144044735d89ed2a73f662f9ee6fd7f60a6a419623e7be19481399",
+    "data/v3_10/figures/north/complete.json": "7db6ad273540fc6ab0c621674382b4a26500c2e6319b4311c396c69e7376af89",
+    "data/v3_10/figures/south_faint/complete.json": "79e78f00b2597001b2b0bb4f57e4a3d0edb7ea2d44e4844f205323728c135abe",
+    "data/v3_10/figures/south_low/complete.json": "8ebf7f3e01c89ad58a1ad196849afe86ee51adab7c9f927e40f5c40323d615bf",
+    "data/v3_10/figures/combined/complete.json": "c35554884079f5fead662e008eca81064e285edeab03666177d962bcbe536f8a",
+    "data/v3_10/evidence/north/complete.json": "6bd03283d506e21980db108605c7db26089929a5b8d847616e28175873322989",
+    "data/v3_10/evidence/south_faint/complete.json": "7c2ac6c43a5a5884939dbf5b31a3335a27f8a38894aa6da74fca31eac3425e3e",
+    "data/v3_10/evidence/south_low/complete.json": "65d4d70898e4c663a82942683a1721716fa88e9d1d4e5da7073d705fc690ddd4",
+    "data/v3_10/selection/north/complete.json": "7fd765439f2c3b04ba669eb936843bab2e08196099c1aff70812ba7fc07feb25",
+    "data/v3_10/selection/south/complete.json": "182d7ae9c522c3573ac1c3cd1e0e714794f8b19030510a6adc7606dffef04fef",
+    "data/v3_10/redrock/complete.json": "331076d95f88c6e8c6b7734e2e03b7f860955f6030ea1213dd0113a7ccb7d93b",
+    "data/v3_10/redrock/comparison/complete.json": "e89fdc911bec80236094d00f8cc17841006f2bfcc6275a9c7f305aed59c2e3b5",
+    "data/v3_10/selection_sed/north/complete.json": "080276f32502d8c3da177bf37709a5ae16368ef878e1721e06624a8bafd5f386",
+    "data/v3_10/selection_sed/south/complete.json": "358e397688d296abcd6c6bf5a4b6b7238eeac868cc0c6ecf42da10f8e31e5bac",
+    "data/v3_10/branch_cases/complete.json": "9cbea078283b25aadef0270ef37ad821b86fa65b2d907a31a709c5a0af6384bb",
+    "data/v3_10/branch_cases/verified_plate/complete.json": "86b73695829872a71f1b07b42f89028b5c377a992912d3023165141b98eb4785",
+    "data/v3_10/branches/complete.json": "9a9290b0da85ad53931fd10426c1efd77d7883979390c19b9244bf5dcd5dba2e",
+    "data/v3_10/dust/replay/complete.json": "925aef899f00aaf651886337825c64db42870a1ccbf5ff18a5a4555c9818aabb",
+    "data/v3_10/dust/low_latitude/complete.json": "56c16de44f59c8a66e118935a2309300bbf9a9187d7ebbfb54eaa99cbc8bb549",
+    "data/v3_10/coverage/north/complete.json": "9d88467ff541f73de8eba82a969666ea784c944943a034b8654b99be60a183bb",
+    "data/v3_10/coverage/south/complete.json": "c192815a14b9bfaa9bf15d2a81dc7ab710eae2ddc5a0f53f3f95f98c45202a7e",
+    "data/v3_10/science/complete.json": "be63c6c655d4258effe370bd6f23a5f0f582b85867750040032a46c7e322d164",
+    "data/v3_10/seam/compare.json": "c7d6fdc1b05510db308247aecf5e00150e35a1b474a270d1287a3da1ab4836db"
+  },
+  "outputs": {
+    "working_sample_aitoff.pdf": "fb1f3d51c0a21ae6b07235c0564ff101bc45b9fff2d0a6f03058b075352faab7",
+    "working_sample_aitoff.png": "a52d8ab803534a8341c950582e58fbd7cba7d54f83a0dc9594122741682e15ff",
+    "working_sample_aitoff.csv": "6227238aedba0d3cb43afae6f0684ad263d88a41a8c1a39fce6f09170a29bf6a"
+  }
+}

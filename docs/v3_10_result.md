@@ -44,6 +44,16 @@
 [留出星族比较](../manifests/v3_10/selection/north/class_retention.csv) ·
 [Redrock 对照](../manifests/v3_10/redrock/outcomes.csv)
 
+对有限的留出控制另行计算名义 SED 门槛。北天 423 个控制
+均获得有效值，150 个接近 1 的结果在浮点容差内归到 1；
+南天 419 个控制保留 8 个数值告警。北天明亮的 5–10 kpc
+定向对照中，48 个矮星有 2 个通过新分数 0.80，33 个巨星有
+7 个通过，增加近端 SED 门槛后两组的通过数相同。这些分层
+有意保留稀有类别，不能用来估计目录的总污染率。结果支持将
+该门槛结果保留为研究对照。
+[北天定向检验](../manifests/v3_10/selection_sed/north/sed_gate_comparisons.csv) ·
+[南天定向检验](../manifests/v3_10/selection_sed/south/sed_gate_comparisons.csv)
+
 ## 工作样本在 2–5 和 5–10 kpc 的表现
 
 两个有明亮验证的扩展域共导出 **1,272,142 个工作样本候选**。
@@ -65,6 +75,15 @@ SPDist 同样支持 2–5 kpc 的结果。降低矮星分数到 0.65 能
 对应的留出参考。
 [工作样本验收](../manifests/v3_10/science/complete.json) ·
 [分参考距离表现](../manifests/v3_10/science/working_reference_distances.csv)
+
+有效三带深度面积为北天 3,008.98 平方度、南天低纬窗 235.46
+平方度。按 SpecDis 划分 5–10 kpc，带光谱参数的其他恒星中，
+有 2,848/4,615 个北天对象和 682/1,067 个南天低纬对象位于
+3.2 ≤ log g < 4.2 的中间重力范围，分组统计保留了温度和金属
+丰度。得到的是一个混合星族，星族构成会影响全样本的距离偏差。
+[北天有效面积](../manifests/v3_10/coverage/north/complete.json) ·
+[低纬有效面积](../manifests/v3_10/coverage/south/complete.json) ·
+[中间重力族群](../manifests/v3_10/science/intermediate_star_parameters.csv)
 
 ### 实际结构示范
 
@@ -95,7 +114,31 @@ M92 和邻近对照环带的有效三带深度面积分别为 0.330 和
 训练分布迁移的贡献。
 [逐源白矮星证据](../manifests/v3_10/branch_cases/wd/complete.json) ·
 [切图记录](../manifests/v3_10/branch_cases/cutouts/sources.csv) ·
-[远矮星分层](../manifests/v3_10/branch_cases/dwarf_reference_strata.csv)
+[远矮星分层](../manifests/v3_10/branch_cases/dwarf_reference_strata.csv) ·
+[白矮星目录与 SDSS 光谱分类](https://arxiv.org/html/2106.07669)
+
+## 光度模板与分支权重
+
+用分离天区的 48 个低光度锚点补足模板。使用相同原生测光比较
+冻结 QRF、原 SED、只加模板且沿用原距离先验、以及采用 LF 和
+盘晕丰度的分支模型。四个方法的完整距离 PDF 和候选的分支
+联合 PDF 统一归档。计算网格包含每条原生产 PDF 的完整支持。
+
+| 留出对象 | 数量 | 冻结 QRF 严重误差 | 只加模板 | LF 分支模型 |
+| --- | ---: | ---: | ---: | ---: |
+| 暗端低光度 | 295 | 99.7% | 94.6% | 98.0% |
+| 普通矮星 | 118 | 2.5% | 0.8% | 1.7% |
+| 2–5 kpc 蓝矮星 | 124 | 0.8% | 0.8% | 0.0% |
+| 暗端远矮星 | 12 | 33.3% | 33.3% | 33.3% |
+| 远巨星 | 49 | 93.9% | 83.7% | 93.9% |
+
+暗端低光度候选在参考模数 ±0.5 等内的中位概率质量，从原
+QRF 的 0.253% 变成只加模板时的 0.261%，采用 LF 分支模型后
+为 0.065%。模板能提供正确低光度解，测光似然与这组丰度
+仍无法稳定地给它足够权重。普通矮星没有出现同量级恶化，但
+新分支方案也未系统改善暗端低光度、远矮星和巨星。生产默认
+继续使用冻结 QRF。这轮候选主要用于分析光度简并。
+[完整留出对照](../manifests/v3_10/branches/comparisons.csv)
 
 ## 实际生产模型的南北接缝
 
@@ -118,7 +161,15 @@ PDF，109,562 对只有北侧有，667,598 对只有南侧有，645,493 对
 随后在三个实际低纬视场处理 103 个原生 PSF。26 个共同支持
 Gaia 对照中，三维消光平均评分增益 −0.012 nat，NMAD 从
 0.565 变为 0.608 等，各视场的变化成负、正、近零三种结果。
-同等条件下的光谱覆盖和拥挤样本都很少。现证据支持保留逐视线
-研究结果，使用范围仍需按视场及可靠距离区间解释。
+这批源没有通过质量和共同支持条件的 SpecDis 或 SPDist 距离，
+较拥挤层也没有合格 Gaia 对照。现证据支持保留逐视线研究结果，
+使用范围仍需按视场及可靠距离区间解释。
 [311 星复算](../manifests/v3_10/dust/replay/matched_gaia.csv) ·
 [低纬试验底表](../manifests/v3_10/dust/low_latitude/matched_distances.csv)
+
+## 验收与数据位置
+
+NERSC 作业 61403150 核对科学结果、逐行工作索引与完整 PDF。
+大型数据保存在项目根目录的 `data/v3_10`。图件与数据的可复查
+入口在[运行协议](v3_10_protocol.md)，发布回执提供校验值。
+[发布回执](../manifests/v3_10/delivery/complete.json)
