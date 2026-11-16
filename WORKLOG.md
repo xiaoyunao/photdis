@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-16 — freeze the v3.11 matched selection comparison
+
+- Read the complete new GPT Pro review and registered the v3.11 goal.
+  Recorded the four science experiments and validation criteria in PLAN.md,
+  and replaced the stale README opening with the v3.10 scope.
+- Added v3_11_selection.py and its NERSC wrapper. Fixed the v3.10 features,
+  estimators, PDF links and sky roles. Calibrate separate giant and
+  intermediate leakage budgets before evaluating the held-out set.
+- Python syntax, shell syntax and the label/threshold smoke check passed.
+  Next run the two native-survey fits and the fixed prediction-layer audit.
+
 ## 2026-11-16 — deliver the validated v3.10 science package
 
 - Delivery 61403150 completed 0:0. It verified all stage files, 96

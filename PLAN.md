@@ -1,5 +1,35 @@
 # PLAN
 
+## v3.11 — test selection, luminosity branches and survey distance scales
+
+Use the full review in ChatGPT conversation `6afb1930-5bf8-83e9-81cc-688638e52d83`,
+assistant message `88c0d1e2-aa8e-5e9b-8e86-fe5c815e7258`, against `cc910e2`.
+
+1. Compare the original and revised RVS labels with the same native features,
+   estimator, sky roles and frozen QRF PDFs. Reserve ambiguous gravity and hot
+   stars from the new hard-label fit. Match both giant and intermediate
+   acceptance budgets in calibration, then evaluate each gate on the fixed
+   role-4 set. Target median absolute bias ≤5% and NMAD ≤10% for 2–5 kpc
+   reference dwarfs. Test whether far-blue dwarf recall improves and the 5–10
+   kpc residuals approach those before selection. Use full M92 target-minus-
+   background curves and an independent structure if selection changes.
+2. Measure selected populations and distance migration in actual predicted
+   0–2, 2–5 and 5–10 kpc layers, using hard medians and full posterior mass.
+   Publish coverage and reference-specific denominators, reference-error
+   convolution and signed Gaia comparisons where supported.
+3. Compare correct and alternative luminosity branch template support,
+   integrated photometric evidence and prior odds on fixed held-out white
+   dwarf, blue dwarf and ordinary dwarf cohorts. Evaluate paired optional
+   native i and WISE fluxes when measured and quality stratification within
+   magnitude, color and class. Keep independent ordinary-dwarf controls.
+4. Compare production and matched-training native north/south forecasts on
+   identical overlap objects, including residuals to external distances.
+   Keep low-extinction windows and report existing sightline-level dust
+   evidence for significant extinction.
+5. Deliver validated native PSF outputs and compact evidence from NERSC,
+   retain negative results and freeze the v3.8 presentation. Manuscript
+   edits are deferred. Update the README entry and record adoption decisions.
+
 ## v3.10 — completed dwarf-sample and luminosity-branch validation
 
 The [results](docs/v3_10_result.md) and [protocol](docs/v3_10_protocol.md)

@@ -1,31 +1,23 @@
 # photdis
 
-Latest completed research delivery: **v3.1 scientific calibration and use domains**,
-2026-11-14, following the [Pro four-package review](docs/pro_review_31f1277.md).
-[Integrated results](docs/v3_1_result.md) · [Methods](docs/v3_1_methods.md) ·
-[21-requirement ledger](docs/v3_1_requirements_result.md) · [22-plate atlas](docs/v3_1_atlas.md) ·
-[Scientific-use domains](docs/v3_1_domain_result.md) · [Structure example](docs/v3_1_structure_result.md) ·
-[Actual final delivery audit](manifests/v3_1/delivery.json).
+**Photdis** estimates stellar distances from native Legacy Surveys photometry.
+Gaia and spectroscopy provide training and validation references. Application
+uses photometry alone. The science program focuses on dwarf-rich samples within
+10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-All four packages and registered computations are complete. The correction is
-**not adopted**: external new-sky scores worsen, the shared NGC1261 scale fails,
-main evidence gates fail, and no calibrated scientific-use domain is established.
-The seen512-object NGC288 full/Gaussian demonstration completes all32states but
-fails joint quadrature; shared count sampling passes without overriding rejection.
-All originals/refinements and deployedv1 remain unchanged. No v3.2, fullcatalog
-rerun, monitoring, deployment or subagents are scheduled.
+The latest completed release is [v3.10](docs/v3_10_result.md). Its bright research
+sample contains 1,272,142 stars in the studied northern and southern low-latitude
+domains. Reference dwarfs at 2–5 kpc show 8–9% NMAD after selection. At 5–10 kpc,
+selection discards most reference dwarfs and erases the M92 distance excess.
+The faint luminosity-branch experiment did not recover reliable white-dwarf
+distances. The [v3.9 parent](docs/v3_9_result.md) covers defined Legacy DR11
+regions up to observed r < 23 and contains 43,347,612 supported PDFs.
 
-Validation:183 actual tests,22 visually inspected English PNG300dpi/PDF plates,
-319 unified figure checks, and source-bound stage/report/requirement audits.
-Large products remain under `/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/`.
-Code uses `src/photdis/v3_1`, `scripts/v3_1_*.py` and `run_v3_1_*.sh` wrappers;
-all scientific scans/fits require allocated NERSC compute. Compact local checks:
-`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_figure_delivery_check.py` and
-`PYTHONPATH=src:scripts:.deps python3 scripts/v3_1_delivery.py`.
-These verify artifacts and preserved failures; they do not confer calibration.
-Before any future work, read `WORKLOG.md`, `PLAN.md` and the frozen protocols.
-New scientific work requires explicit scope; final reference outcomes are already
-open and cannot be reused as a fresh blind test.
+The [current plan](PLAN.md) covers matched label and selection tests, predicted
+distance layers, luminosity-branch evidence, and the northern/southern distance
+scale. See [v3.10 protocol](docs/v3_10_protocol.md) and [work log](WORKLOG.md).
+The canonical NERSC checkout is `/pscratch/sd/y/yunao/photdis_pipeline`.
+Use allocated compute resources for scientific scans and fits.
 
 Previous completed research delivery: **Photdis v3.0 continuous SED and population system**.
 All 1,183,990 qualified existing-field candidates, their full joint posterior links,
