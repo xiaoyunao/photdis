@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-16 — correct the native SED flux reference distance
+
+- Checked the branch patch and northern pilot against the existing native
+  forward kernel. Both added template builders initially used a 10 pc flux
+  scale. The model defines intrinsic flux at 1 kpc. Corrected both builders
+  and scheduled replacement runs. Preserve the initial receipts separately.
+
 ## 2026-11-16 — recover the archival Redrock link
 
 - Candidate, branch and interval jobs wrote completion receipts.

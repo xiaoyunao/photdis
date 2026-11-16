@@ -82,7 +82,7 @@ def observation(photo,index):
 def patch(model,obs,refs):
     """Fixed empirical low-luminosity component built on 32 separate anchors."""
     intrinsic = np.stack([x['flux']/np.where(x['transmission']>0,x['transmission'],1.)*
-                         (100.*r['reference_kpc'])**2 for x,r in zip(obs,refs)])
+                         r['reference_kpc']**2 for x,r in zip(obs,refs)])
     if not np.isfinite(intrinsic[:,USE_BANDS]).all() or (intrinsic[:,USE_BANDS]<=0).any():
         raise ValueError('Anchor optical flux must be positive')
     k = len(intrinsic)

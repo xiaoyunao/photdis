@@ -11,6 +11,7 @@ from sklearn.cluster import KMeans
 from sklearn.ensemble import HistGradientBoostingClassifier
 
 from photdis.baseline_v0 import HistogramQRF
+from photdis.photometry import CLEAN_REJECT_MASKBITS
 from photdis.stage1 import galactic, legacy_ids, require_compute, tile_bounds
 from photdis.v3.data import stable_rank
 from photdis.v3.metrics import distance_summary
@@ -56,7 +57,8 @@ def north_matches(south):
         separation = np.hypot(((a['RA']-south['RA'][j]+180)%360-180)*np.cos(np.deg2rad(a['DEC'])),
                               a['DEC']-south['DEC'][j])*3600
         _,b = galactic(a['RA'],a['DEC'])
-        clean = (abs(b)>30)&(a['EBV']<.03)&(separation<1.)&((a['MASKBITS']&0b111001111111110)==0)
+        clean = (abs(b)>30)&(a['EBV']>=0)&(a['EBV']<.03)&(separation<1.)&
+                 ((a['MASKBITS']&sum(1<<i for i in CLEAN_REJECT_MASKBITS))==0)
         f,v,t = [np.column_stack([a[f'{field}_{b}'] for b in 'GRZ']).astype('f8')
                  for field in ('FLUX','FLUX_IVAR','MW_TRANSMISSION')]
         for band in 'GRZ':
@@ -84,7 +86,7 @@ def north_matches(south):
 
 
 def native_sed(p,d,cls,train):
-    xyz = p['flux'][train]/p['trans'][train]*(100*d[train,None])**2
+    xyz = p['flux'][train]/p['trans'][train]*d[train,None]**2
     binary = .25
     mag = p['mag'][train]
     f = np.column_stack((mag[:,0]-mag[:,1],mag[:,1]-mag[:,2],mag[:,0]-10-5*np.log10(d[train])))
