@@ -19,7 +19,8 @@ OUT = ROOT/'data/v3_7/reference_comparison'
 SOURCES = ('Gaia','SpecDis','SPDist')
 FIELDS = ('catalog_row','ls_id','TYPE','reference_kpc','reference_lo_kpc','reference_hi_kpc',
           'high_quality','qrf_training','recorded_history','qrf_quantiles_kpc','qrf_bins',
-          'primary','strict','consensus_class','source_class','observed_r','dereddened_g_r')
+          'primary','strict','consensus_class','source_class','observed_r','dereddened_g_r',
+          'dwarf_selection_score','nominal_qnear')
 LABELS = ('dwarf','giant','other','unknown')
 PARAMETERS = ('rvs_feh','rvs_logg','rvs_parameter_quality')
 

@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "data/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "scripts/v3_7_blue_neighborhood.py": "03f763da5665b9b8865a101cb510268588013cf1f148be391e598c18a8967ead"
+  },
+  "cases": 305,
+  "native_parent": 2259490,
+  "excluded_morphology": {
+    "case": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "control": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "outputs": {
+    "neighborhoods.csv": "1ceca90443b569b994b2a717a5cd9f09b02c4118a73f07a1b63dc0b685cd01c4"
+  }
+}

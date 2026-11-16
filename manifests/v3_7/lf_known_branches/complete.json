@@ -1,0 +1,48 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/blue_replay/complete.json": "df3e55f69f125bac4d51e13a4aaf1c7db9e2d26059b78ae33693b5d7db2e2691",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "configs/v3_7_selection.json": "78eb2ff9a2e9b77ab9042eeb512d89f84cd2256cf0e0955eedb21ebc9bcb790e",
+    "scripts/v3_7_lf_known_branches.py": "2fb82b41bd31c73dbabfda38c9a06a36b9e3d3b82e130f43ca9f6e4f70296abb",
+    "scripts/v3_6_lf_sensitivity.py": "cc686743429208da4d9eaafc7ed746677aed1c5f09a4b953fbfa58805a7ae319",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33"
+  },
+  "unique_cases": 1155,
+  "source_cases": 1645,
+  "excluded_morphology": {
+    "blue_non_psf": 0,
+    "blue_unverified_type": 0,
+    "SpecDis_non_psf": 0,
+    "SpecDis_unverified_type": 0,
+    "SPDist_non_psf": 0,
+    "SPDist_unverified_type": 0,
+    "DR20_MINESweeper_non_psf": 0,
+    "DR20_MINESweeper_unverified_type": 0,
+    "DR20_APO_non_psf": 0,
+    "DR20_APO_unverified_type": 0
+  },
+  "support": {
+    "rgb_disk": {
+      "active_giant_mass": 0.7778342573526312,
+      "occupied_bins": 13,
+      "empty_bin_requested_fraction": 0.19650706938968066,
+      "giant_kernel_ess_before": 9.311368395737606,
+      "giant_kernel_ess_after": 8.972632785545153,
+      "largest_kernel_weight_ratio": 248.11772160312816
+    },
+    "rgb_halo": {
+      "active_giant_mass": 0.7778342573526312,
+      "occupied_bins": 13,
+      "empty_bin_requested_fraction": 0.11742001149957253,
+      "giant_kernel_ess_before": 9.311368395737606,
+      "giant_kernel_ess_after": 8.350264074640751,
+      "largest_kernel_weight_ratio": 46.66071942959914
+    }
+  },
+  "outputs": {
+    "forecast.npz": "70879e7329427adcc811a5738781421982222b76dcdaff775f86b7bac4e6653c",
+    "case_probabilities.csv": "75c608d8ffad1ca656a9532a123816980d3d83394af484e1af701294bf563681"
+  }
+}

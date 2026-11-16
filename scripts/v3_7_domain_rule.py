@@ -16,15 +16,15 @@ def classify(catalog,config=CONFIG):
     accepted = catalog['TYPE']=='PSF'
     accepted &= np.isfinite(r)&np.isfinite(color)&np.isfinite(d)&(d>0)
     accepted &= ~catalog['nominal_numerical_flag']
-    # The v3.5 supported product has no unsupported records.
-    if 'supported' in catalog:
-        accepted &= catalog['supported']
+    accepted &= catalog['qrf_supported']
     output = np.full(len(r),protocol['unlisted'],dtype='U64')
     output[~accepted] = 'outside_supported_sample'
     for rule in protocol['rules']:
         select = accepted&(output==protocol['unlisted'])&catalog[rule['cut']]
         for key,value in (('r',r),('gr',color),('d50_kpc',d)):
             low,high = rule[key]
+            low = -np.inf if low is None else low
+            high = np.inf if high is None else high
             select &= (value>=low)&(value<high)
         if 'W1' in rule:
             select &= np.isin(catalog['band_state'][:,4],rule['W1'])

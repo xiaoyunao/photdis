@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate and copy compact Slurm science products for the paper."""
 import argparse
+from collections import defaultdict
 import csv
 from hashlib import sha256
 import json
@@ -23,6 +24,30 @@ SMALL = {
         r['axis']=='all' or r['anchor']=='Gaia' and r['overlap']=='Gaia+SpecDis+SPDist'),
     'retention.csv': lambda r: r['healpix_nside4']=='-1',
 }
+
+
+def predicted_composition(path,destination):
+    """Transpose reference-shell counts into the two predicted near-far bins."""
+    totals = defaultdict(lambda: [0,0.,0,0.])
+    with path.open() as f:
+        for r in csv.DictReader(f):
+            if r['reference_class']=='all':
+                continue
+            source_shell = int(r['reference_shell'] in ('10–20','20–50','>50'))
+            group = tuple(r[k] for k in ('source','selection','domain','reference_class','history'))
+            for j,name in ((1,'2–5'),(2,'5–10')):
+                item = totals[(*group,name)]
+                hard,soft = int(r[f'hard_{j}']),float(r[f'pdf_{j}'])
+                item[0] += hard
+                item[1] += soft
+                item[2] += hard*source_shell
+                item[3] += soft*source_shell
+    with destination.open('w') as f:
+        writer = csv.writer(f,lineterminator="\n")
+        writer.writerow(('source','selection','domain','reference_class','history','predicted_shell',
+                         'reference_hard_count','reference_pdf_mass','reference_gt10_hard_count',
+                         'reference_gt10_pdf_mass'))
+        writer.writerows((*group,*sums) for group,sums in totals.items())
 
 
 def collect(stage,source,root):
@@ -49,6 +74,13 @@ def collect(stage,source,root):
                 raise ValueError(f'Provide a compact projection of {path}')
             shutil.copyfile(path,output/name)
     shutil.copyfile(receipt,output/receipt.name)
+    if stage=='selection':
+        target = output/'predicted_composition.csv'
+        original = output/'reference.csv'
+        predicted_composition(original,target)
+        (output/'derived.json').write_text(json.dumps(dict(
+            inputs={original.name:sha256(original.read_bytes()).hexdigest()},
+            outputs={target.name:sha256(target.read_bytes()).hexdigest()}),indent=2)+'\n')
     if compact:
         (output/'compact.json').write_text(json.dumps(compact,indent=2)+'\n')
 

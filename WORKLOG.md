@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-16 — recover the production score columns in the qualified reader
+
+- On job 61391246 the blue neighborhood, case LF and observable-domain steps
+  completed. The classifier step reached prediction but its reference
+  reader omitted the archived dwarf score. The same narrow projection
+  also omitted the nominal SED gate used by the selection report.
+- Restored both existing columns to the qualified loader. The native
+  reference admission and identity keys are unchanged. Nominal replay
+  shards remain valid and continue in the original allocation.
+
 ## 2026-11-16 — finish full weak Gaia and move pending work to one node
 
 - Weak Gaia job 61390595 completed in 8m01s with 1,397,789 verified

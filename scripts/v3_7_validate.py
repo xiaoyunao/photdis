@@ -32,6 +32,12 @@ def outputs():
             assert sha256((root/name).read_bytes()).hexdigest()==(
                 small[name]['compact_sha256'] if name in small else expected[name]),(stage,name)
             checks += 1
+    selection = MANIFEST/'selection'
+    derived = json.loads((selection/'derived.json').read_text())
+    for name,digest in (derived['inputs']|derived['outputs']).items():
+        assert sha256((selection/name).read_bytes()).hexdigest()==digest,name
+        checks += 1
+
     for figure in sorted((MANIFEST/'figures').glob('F*.json')):
         info = json.loads(figure.read_text())
         assert info['dpi']==300

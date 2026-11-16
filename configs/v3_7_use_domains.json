@@ -1,10 +1,12 @@
 {
   "interval_convention": "lower endpoint inclusive, upper endpoint exclusive",
-  "required": {"TYPE": "PSF", "supported": true, "nominal_numerical_flag": false},
+  "required": {"TYPE": "PSF", "qrf_supported": true, "nominal_numerical_flag": false},
   "rules": [
     {"name": "faint_blue_distance_alias", "evidence": "known_failure", "cut": "primary", "r": [18, 20], "gr": [0.5, 0.8], "d50_kpc": [2, 10]},
+    {"name": "faint_adjacent_distance_alias", "evidence": "known_failure", "cut": "primary", "r": [18, 20], "gr": [null, 1.1], "d50_kpc": [2, 10]},
     {"name": "bright_blue_distance_underestimate", "evidence": "known_failure", "cut": "primary", "r": [14, 18], "gr": [0.5, 0.8], "d50_kpc": [0, 5]},
-    {"name": "bright_red_near", "evidence": "direct", "cut": "primary", "r": [16, 18], "gr": [0.8, 1.4], "W1": [2, 4], "d50_kpc": [0, 2]}
+    {"name": "bright_red_near", "evidence": "direct", "cut": "primary", "r": [16, 18], "gr": [0.8, 1.4], "W1": [2, 4], "d50_kpc": [0, 2]},
+    {"name": "bright_spectroscopic_dwarf_analog", "evidence": "conditional", "cut": "primary", "r": [16, 18], "gr": [null, 0.5], "W1": [2, 4], "d50_kpc": [2, 5]}
   ],
   "unlisted": "no_matched_evidence_for_recommended_use"
 }

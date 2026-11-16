@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "data/v3_6/distance_evidence/complete.json": "ba8f488e7b038910d03d9ecee673c1342e198b9d9a9fe5fbdbc9deb8e4378e00",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "configs/v3_4_near_release_domain.json": "23991b669e7005c0126587198ba84043c7dee4feab7a0fd03d0286988a1924a7",
+    "scripts/v3_7_use_domains.py": "52eacaa24dab2fa7ae69fd31040cc4f935879e73a6c419f20b7bf1e009eb621e"
+  },
+  "excluded_morphology": {
+    "Gaia": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SpecDis": {
+      "non_psf": 0,
+      "unverified_type": 0
+    },
+    "SPDist": {
+      "non_psf": 0,
+      "unverified_type": 0
+    }
+  },
+  "outputs": {
+    "observable_domains.csv": "c462bd3d743a653c8aa935c40e1761719bccdb60a69e26df159d0d7c5efac5aa"
+  }
+}
