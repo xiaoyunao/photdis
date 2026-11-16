@@ -1,0 +1,50 @@
+{
+  "job": "61406434",
+  "inputs": {
+    "figure_templates": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "distance_source": "https://academic.oup.com/view-large/353698133",
+    "data/v3_11/selection/north/complete.json": "792e21dd24926e24c506afe7701bfd277c81f79d05ef6e5c40178bbcbf923716",
+    "data/v3_10/selection/north/complete.json": "7fd765439f2c3b04ba669eb936843bab2e08196099c1aff70812ba7fc07feb25",
+    "data/v3_9/delivery/complete.json": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51",
+    "data/v3_10/working_sample/north/25.json": "1298d01609fb08a1a0514659c9f32b9b8d0e7e647b7c3866d7e7885ca447332e",
+    "data/v3_10/working_sample/north/29.json": "992a7f53cdfd3aea670058359c1a240fc887993323ac15d8e9e5ea5b120ca674",
+    "data/v3_10/coverage/north/complete.json": "9d88467ff541f73de8eba82a969666ea784c944943a034b8654b99be60a183bb",
+    "data/v3_10/working_sample/north/21.json": "481c2bffa615a8c6d6aeaa4620568bbcdb123e2120af6ab988f5ba6627b2dd1a",
+    "data/v3_10/working_sample/north/31.json": "93ef199e6e57f226f923299003cb50cb40c76946b453fda3af3232c44d65f87f",
+    "data/v3_9/expansion/north/inventory.json": "563038548abbc387bdda67eec193ef13f44cf17aad1b323576a652d13f99fac3",
+    "m13_random_catalog": {
+      "file": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits",
+      "size": 5064027840,
+      "mtime_ns": 1780757234000000000,
+      "density": 2500.0
+    }
+  },
+  "clusters": {
+    "M92": {
+      "status": "measured",
+      "sources": 10967,
+      "direct_training_exclusions": 0,
+      "target_area_deg2": 0.33,
+      "control_area_deg2": 2.1936
+    },
+    "M13": {
+      "status": "measured",
+      "sources": 15069,
+      "direct_training_exclusions": 1940,
+      "target_area_deg2": 0.378,
+      "control_area_deg2": 3.1572
+    }
+  },
+  "outputs": {
+    "m13.pdf": "c5dd148016c213945b941c68ef894a2f4a1931fdd4cbd3c7ba8d526ff8d8100e",
+    "m92.pdf": "2ace7fa8fee7eaf1e0e398f8150c25ef94afab46cf3b7ff49ce3996c58263ead",
+    "m92.csv": "181ccd38abf204c5275de987d0f75502d7299b2a1e59a1091e182d7c2e22378b",
+    "m92_sources.npz": "8d1f0b1b1100ce0282955f8b6b711033f56de628bbebf4cdfdb1daf852c01786",
+    "m13_sources.npz": "4b6c271b33d70c78a529197a0af9001859bf079cec1bb318a2e63ef5879c4ed8",
+    "m13.csv": "3a97c4a36dc5a37a621424986c04aa109ec271b6c0da1d463a1cc92cfd79d083",
+    "m13.png": "8fdb5fee3fac21e157e8e77a1614b82f1323c2e5c5a3b9e2557a8f98a2536a2d",
+    "m92.npz": "d21030ac86d716f4eaf88bc44a181d3ac5ae52b9217c9c3e27069851f8180d85",
+    "m13.npz": "b89ee942c3856082369a49b7a093dd53ccccc1d5391f46ba009bc64fd7e4f291",
+    "m92.png": "7573adb60b9c6765998499bc297557564b4181e69e9049be919c38e7600d9ae9"
+  }
+}

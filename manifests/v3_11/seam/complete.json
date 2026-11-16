@@ -1,0 +1,16 @@
+{
+  "job": "61406164",
+  "inputs": {
+    "data/v3_9/expansion/validation/overlap/complete.json": "a95af67c702a358082e001c0ffd2167007d3b1aee64aaf81630e72eac6028b67",
+    "data/v3_9/delivery/seam/complete.json": "a7537e2487aff4828cea839f0f3adebc1d71dd4e317557b34765ec8fe9dab9b9",
+    "data/v3_10/seam/north.json": "e0294dc1cd6e080e75a8f91e9414951c8e62d2cff76f5cbb6e1570d41d9e7b66",
+    "data/v3_10/seam/south.json": "5ae3910d21f2f9206d569575b3470ca7b6011f34293e7adb5bf814cd385341fc"
+  },
+  "paired": 5026,
+  "pilot_total": 6000,
+  "exact_matches": 5117,
+  "outputs": {
+    "paired_scales.csv": "61dbabf2ed3ebee3078b6db2390c1518d3f9543e0c8224c4d1137107a718243e",
+    "same_star.npz": "f5ad260a401a97694071b65b7cd7ab3b55bf44368fc5a51b2176b4f4628ffd3e"
+  }
+}

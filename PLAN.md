@@ -1,6 +1,15 @@
 # PLAN
 
-## v3.11 — test selection, luminosity branches and survey distance scales
+## v3.11 — completed selection, luminosity branches and survey distance-scale tests
+
+See the [result](docs/v3_11_result.md) and [delivery](manifests/v3_11/delivery.json).
+The label revision improves distant blue-dwarf recall and keeps the 2–5 kpc
+SpecDis dwarf precision. The M92 and M13 peaks and the nonstellar comparison
+do not support a production change. The matched-training seam comparison
+supports a dependence on training composition in the bright overlap.
+Faint luminosity branches, faint seam corrections, and high-extinction
+catalog extension remain research questions. The v3.10 working view
+continues to use its original distances and gates.
 
 Use the full review in ChatGPT conversation `6afb1930-5bf8-83e9-81cc-688638e52d83`,
 assistant message `88c0d1e2-aa8e-5e9b-8e86-fe5c815e7258`, against `cc910e2`.

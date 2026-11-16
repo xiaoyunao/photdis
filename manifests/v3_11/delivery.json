@@ -1,0 +1,55 @@
+{
+  "job": "61406666",
+  "inputs": {
+    "data/v3_11/selection/north/complete.json": "792e21dd24926e24c506afe7701bfd277c81f79d05ef6e5c40178bbcbf923716",
+    "data/v3_11/selection/south/complete.json": "c47fa9bbf40478a3b7040430e248a23581b06885adb696d88701e9322d4558c2",
+    "data/v3_11/layers/north/complete.json": "3091f7d9030c45c4058f5f97604cb49a8745522f6358db12aaf49dea55704bf8",
+    "data/v3_11/layers/south/complete.json": "7583fa7affd8fa0839f788e27a34e6b246e87b34d9453d33d123a6b35d19f731",
+    "data/v3_11/branches/complete.json": "c31c7dbc45eef28ec50fa6f0590c0288b5e009b3ef40e144b4f2c2df3781fce7",
+    "data/v3_11/seam/complete.json": "2770df370680e970f5901c6d4d7bc3c480c289ff701eaf9f14602a3d7f182022",
+    "data/v3_11/structure/complete.json": "3c6af752baa0906c4dc496f9625f35c194c982affbbd49b48524f3c33226a42f",
+    "data/v3_11/depth/complete.json": "dbbd78dfb6deed5d695b958ec9a2f67322c61a2b46c209082798c01ce6ebd251",
+    "data/v3_11/figures/complete.json": "b5a84cf233a95ac311a1dc7e7b5404494213053c53659ae5230eb29761cccdc7"
+  },
+  "stages": {
+    "selection/north": {
+      "job": "61406058",
+      "outputs": 4
+    },
+    "selection/south": {
+      "job": "61406059",
+      "outputs": 4
+    },
+    "layers/north": {
+      "job": "61406305",
+      "outputs": 3
+    },
+    "layers/south": {
+      "job": "61406306",
+      "outputs": 3
+    },
+    "branches": {
+      "job": "61406165",
+      "outputs": 2
+    },
+    "seam": {
+      "job": "61406164",
+      "outputs": 2
+    },
+    "structure": {
+      "job": "61406434",
+      "outputs": 10
+    },
+    "depth": {
+      "job": "61406436",
+      "outputs": 1
+    },
+    "figures": {
+      "job": "61406581",
+      "outputs": 32
+    }
+  },
+  "figure_style_lock": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "png": 10,
+  "pdf": 10
+}

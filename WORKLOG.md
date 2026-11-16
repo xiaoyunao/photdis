@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-16 — deliver the validated v3.11 science results
+
+- Both fixed RVS label comparisons completed. At matched calibration budgets
+  5–10 kpc blue-dwarf retention rose 156→558 north and 89→245 south.
+  Redrock quasar leakage increased. Retain the candidate as research.
+- Measured M92 and M13 target-minus-background curves. Neither recovered
+  the correct selection peak. Completed actual predicted-bin migration,
+  reference-error convolution and weak signed Gaia scores.
+- Faint WD branches lose both grz evidence and prior weight. Optional
+  band comparisons and tighter error cuts did not repair them. On 5,026
+  pairs the bright production seam is −4.66%, or −0.025% on the matched
+  labels. Preserve low-extinction scope and the sightline-level dust outcome.
+- NERSC 61406666 completed 0:0 after nine verified stages. Checked ten English
+  figure sets under the unchanged v3.8 lock and ran 472 local tests.
+  Added docs/v3_11_result.md, manifests/v3_11 and figures/v3_11. The latest
+  README and PLAN point to the accepted evidence and unresolved limits.
+
 ## 2026-11-16 — freeze the v3.11 matched selection comparison
 
 - Read the complete new GPT Pro review and registered the v3.11 goal.

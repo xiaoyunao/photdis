@@ -1,0 +1,16 @@
+test,cohort,eligible,measured,anchors,test_ran
+i,blue_2_5,124,114,39,True
+i,faint_far_dwarfs,12,9,39,True
+i,ordinary_dwarfs,118,100,39,True
+i,published_wd_candidate,284,258,39,True
+i,spectroscopic_wd,5,2,39,True
+W1,blue_2_5,124,107,14,True
+W1,faint_far_dwarfs,12,5,14,True
+W1,ordinary_dwarfs,118,95,14,True
+W1,published_wd_candidate,284,71,14,True
+W1,spectroscopic_wd,5,2,14,True
+W2,blue_2_5,124,107,11,True
+W2,faint_far_dwarfs,12,4,11,True
+W2,ordinary_dwarfs,118,90,11,True
+W2,published_wd_candidate,284,59,11,True
+W2,spectroscopic_wd,5,2,11,True

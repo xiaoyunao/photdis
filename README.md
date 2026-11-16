@@ -5,17 +5,20 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-The latest completed release is [v3.10](docs/v3_10_result.md). Its bright research
-sample contains 1,272,142 stars in the studied northern and southern low-latitude
+The latest [v3.11 science results](docs/v3_11_result.md) compare fixed
+reference samples, actual distance layers, faint luminosity branches and the
+north–south distance scale. Revised labels recover more distant blue dwarfs,
+with incomplete recovery of the two cluster distance signals. The revised
+selection is a research candidate. The [v3.10](docs/v3_10_result.md) bright
+research sample contains 1,272,142 stars in the studied northern and southern low-latitude
 domains. Reference dwarfs at 2–5 kpc show 8–9% NMAD after selection. At 5–10 kpc,
 selection discards most reference dwarfs and erases the M92 distance excess.
 The faint luminosity-branch experiment did not recover reliable white-dwarf
 distances. The [v3.9 parent](docs/v3_9_result.md) covers defined Legacy DR11
 regions up to observed r < 23 and contains 43,347,612 supported PDFs.
 
-The [current plan](PLAN.md) covers matched label and selection tests, predicted
-distance layers, luminosity-branch evidence, and the northern/southern distance
-scale. See [v3.10 protocol](docs/v3_10_protocol.md) and [work log](WORKLOG.md).
+See the [project plan](PLAN.md), [v3.10 protocol](docs/v3_10_protocol.md) and
+[work log](WORKLOG.md).
 The canonical NERSC checkout is `/pscratch/sd/y/yunao/photdis_pipeline`.
 Use allocated compute resources for scientific scans and fits.
 

@@ -1,0 +1,12 @@
+{
+  "job": "61406436",
+  "inputs": {
+    "data/v3_10/evidence/north/complete.json": "6bd03283d506e21980db108605c7db26089929a5b8d847616e28175873322989",
+    "data/v3_10/evidence/south_low/complete.json": "65d4d70898e4c663a82942683a1721716fa88e9d1d4e5da7073d705fc690ddd4",
+    "data/v3_10/evidence/south_faint/complete.json": "7c2ac6c43a5a5884939dbf5b31a3335a27f8a38894aa6da74fca31eac3425e3e"
+  },
+  "comparisons": 5022,
+  "outputs": {
+    "quality_distance.csv": "589a886355db1adfb46a707a9951ff476aa2ba01707e907e49f09cb02cf5b060"
+  }
+}
