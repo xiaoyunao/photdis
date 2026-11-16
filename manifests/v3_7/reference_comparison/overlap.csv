@@ -1,0 +1,5 @@
+overlap,n,primary,strict
+Gaia+SpecDis,88331,77974,54675
+Gaia+SPDist,64008,56492,39144
+SpecDis+SPDist,332771,195004,101244
+Gaia+SpecDis+SPDist,60122,53009,36388

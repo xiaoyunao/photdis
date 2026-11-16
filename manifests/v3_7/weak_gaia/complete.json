@@ -1,0 +1,51 @@
+{
+  "inputs": {
+    "configs/v3_7_selection.json": "78eb2ff9a2e9b77ab9042eeb512d89f84cd2256cf0e0955eedb21ebc9bcb790e",
+    "data/v3_6/gaia_census/complete.json": "cbe19c26edae279aaa7ef9558b694c595cc5bad9ffbd31513e7638c3a0e06c03",
+    "data/v3_6/catalog_projection/complete.json": "8f27cb9268466a55a6d55ff86a9cc6d340b19f3a68c3babbdf79275e9591c8af",
+    "data/v3_5/delivery/complete.json": "e08334ba306cb55c612ab9a675145e0418b38a9330b3ea7ecce81e0c00dccbf2",
+    "data/v3_6/reference_index/complete.json": "bff4de949de9e6277480bdfdd4af6699242afecf4151584415e281588ad686f6",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/pilot_audit_v1/reference.fits": "c8216b2a7f96e12191962f9a9296aa3167f53a7e5477775fd7cf57451ce0d8e7",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v0/references.npz": "37abccebdb843c91fb1c01c0805d6265b77332eeb45138f372f5e7a416c8ef4d",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/giant_information_v1/labels.npz": "b0d2017be7faf0078161a27c9089d9e6f19d2fae1b4d4ca059a2c77521b3d109",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/baseline_v1_4/references.npz": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v2_3/training.npz": "e226fb3cfc6c3c24d0341b67dcd62010ac5e7664d282598f8b4df429ee339496",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/references.npz": "1025d1508814fea9d66240e49ed6c8d7da986db1f6237a612fcc495ec77ec769",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/reservation/photometry.npz": "5faf9123981613e967a07c3448a81c4cc68647c0f977422ce1913762a03b32a5",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/new_sky/photometry.npz": "0c9ca86d9393a2551788feb4118bd6cff0187dd7c798ef2e0f6b941e109ddb77",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/validation/independent_scale/photometry.npz": "0074af58a0e1407726863b2e681c503942a663034512ea9ae644144ba81cd26a",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/validation_roles/field_photometry.npz": "62623d80abcdf05ffacd8accff64214c75d3da65e70c0efd4550763359262300",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_1/validation_roles/common_photometry.npz": "c143c777d64e7fe72339488a414d27816246ead59350a321949da0d58226967a",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/minesweeper_native/photometry.npz": "20f4028cdbb9ffe246707090e9701dc6caf5f1a127a5c3dcb499174d9b2a6f35",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_2/common_scale_inventory/photometry.npz": "2e2a588757013389e314c15ebd6e8a8898dd36aa84d4acc3517d6bfeda0139a4",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/cohorts/application.npz": "2485158085805ca024bdafffb77458256680cff7fbd1c916b8823ae9d2985eac",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_3/prospective/inputs/photometry.npz": "983ca3b33e2d5785a2f19082f013bb22698561715b99394c88914429ffb71290",
+    "data/v3_4/near_development/validation/evidence/complete.json": "f4480a7445cae6dbe4d2fc1ac0b17c5791e3b325c8c31efd9a8fa74522a06eb8",
+    "data/v3_5/pilot_evidence/complete.json": "cbba0a022982ea99a9ca565577d5774d78b52900425ba780c68bdf4a816bda9e",
+    "data/v3_4/near_development/validation/evidence/DR19_Astra.npz": "8ad06a233e59c4a44996082c2e92e58255a18c4511e6b641d9b408ecfe2d4e62",
+    "data/v3_4/near_development/validation/evidence/DR20_APO.npz": "cdee125f68afb86f325f17d2fd7f2eba645f91327db42ea3720a55d7d6837eab",
+    "data/v3_4/near_development/validation/evidence/DR20_MINESweeper.npz": "6f77459da595e56e22b5485d7d1cc205ab16cf6a3dfea31f515369c23fa05c11",
+    "data/v3_4/near_development/validation/evidence/application.npz": "d1cf2a35576be4f08f3bb8ad263c7cafc8caff1eebd2812621b5cfab60506563",
+    "data/v3_4/near_development/validation/evidence/fresh_gaia.npz": "f76c5cba67dece3f2b16f321ffac567c12db9246f87eb47822ed6d39974ec56f",
+    "data/v3_5/pilot/sweep-010m045-015m040/prediction.npz": "85e5b3ee08ea5df75468514939b40a502c4466698627bdc535f19f1b6d064751",
+    "data/v3_5/pilot/sweep-015m045-020m040/prediction.npz": "55be6e192470e05433ad579e266b397cb771c66da355f2f662be9d01e5b5911d",
+    "data/v3_5/pilot/sweep-175p020-180p025/prediction.npz": "ed20e92047ee64afd2915b306558f53200ad09124bef254a97d9e072e1265aa2",
+    "data/v3_5/pilot/sweep-350m045-355m040/prediction.npz": "73d5c6108ca18b915fac4ce5b0e0d416f0f7215073c7affaaee404d6ece32cdb",
+    "data/v3_5/evidence_replay/61332404_roster.json": "ed158486f07e887a1a746a16b1f274318510c687b0b398a709de3531a4218a9f",
+    "data/v3_5/evidence_replay/61332404.json": "4505ef014562cbf63085d68ba3aa883a4b189d190c408156b6ca1581a9026d31",
+    "data/v3_5/evidence_replay/61332404_roster.npz": "f9434519abe34fc8acd528d1364a577ae92546e67ac90fc0ae634714773257a3",
+    "data/v3_5/validation_group_01/complete.json": "348dd01b9c4a0d27d2ac32e6379d2d6c810fecd5beaff9a7b473aded9b435bba",
+    "data/v3_5/validation_group_01/gaia_qualification_roster.npz": "080da53b8857875e1e1c96454d3002daf8f901795bb859c89931db29368df611",
+    "scripts/v3_7_weak_gaia.py": "68ab552827c988656d61a0080736ee8e06ab3895ace0441e156bbc8a0d33d22d"
+  },
+  "rows": 1397789,
+  "excluded": {
+    "non_psf": 0,
+    "unverified_type": 0
+  },
+  "outputs": {
+    "scores.npz": "e37be2c6312d13db5d9b6c158651f965d92d598d61c65a5096dc976be83460fe",
+    "scores.csv": "cfeda09a7e94b9b514508c0a76fabcca4b220b67ea8c0b13b5f3db3cd785c10a",
+    "stress.csv": "1110e9deca77f01459ea714d8adb9ef44a98cd9112d894a522acb52a184d2700"
+  }
+}

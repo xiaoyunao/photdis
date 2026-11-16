@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "scores.csv": "cfeda09a7e94b9b514508c0a76fabcca4b220b67ea8c0b13b5f3db3cd785c10a",
+    "stress.csv": "1110e9deca77f01459ea714d8adb9ef44a98cd9112d894a522acb52a184d2700"
+  },
+  "outputs": {
+    "F06_signed_gaia.png": "96fd060d053e6c0a0af5f0aa213f18077473b1a2a94597a330f379552ed3e797",
+    "F06_signed_gaia.pdf": "b98224a66a593709a1ba0ed488c11879f5b10f634d000011a2e2be3a0c15d6d3",
+    "F06_signed_gaia.csv": "54187baf5afddfb14cf006884da539dfa865860b4ba111e574691d77820753fd"
+  },
+  "dpi": 300
+}
