@@ -9,7 +9,7 @@ from astropy.coordinates import SkyCoord
 from astropy import units as u
 import joblib
 import numpy as np
-from scipy.special import logsumexp
+from scipy.special import logsumexp, ndtr
 from scipy.stats import norm
 
 from photdis.gaia import derive_gaia_labels, join_gaia
@@ -126,6 +126,51 @@ def normalize(logp, mask):
     return np.exp(p-logsumexp(p))
 
 
+def matched_reference_summary(photo, gaia_state, reference, lo, hi, quality, pdf):
+    compared = np.isfinite(pdf[:,2]).all(axis=1)
+    if not np.allclose(pdf[:,0].sum(axis=1),1.,atol=1e-10,rtol=0):
+        raise ValueError('Invalid unrestricted SFD histogram')
+    if not np.allclose(pdf[compared,1:].sum(axis=2),1.,atol=1e-10,rtol=0):
+        raise ValueError('Invalid common-support dust histogram')
+    if np.any(pdf[compared,1:]*~quality[compared,None,:]):
+        raise ValueError('Conditioned PDF has mass outside the reliable dust range')
+    with np.errstate(divide='ignore',invalid='ignore'):
+        mu = 10+5*np.log10(reference)
+        sigma = 2.5*np.log10(hi/lo)
+    j = np.searchsorted(MU_EDGES,mu)-1
+    supported = (j>=0)&(j<len(MU))
+    covered = np.zeros(len(j),bool)
+    covered[supported] = quality[np.flatnonzero(supported),j[supported]]
+    qualified = (gaia_state==6)&np.isfinite(sigma)&(sigma>0)
+    same_star = qualified&covered&compared
+    fields = [(-1,np.ones(len(j),bool)),*((i,photo['field']==i) for i in np.unique(photo['field']))]
+    crowding = [('all',np.ones(len(j),bool)),('lower',photo['FRACFLUX_R']<.1),
+                ('higher',photo['FRACFLUX_R']>=.1)]
+    rows = []
+    for field,region in fields:
+        for label,crowd in crowding:
+            base = region&crowd
+            use = base&same_star
+            row = dict(field=int(field),crowding=label,psf_rows=int(base.sum()),
+                       map_qualified=int((base&compared).sum()),
+                       gaia_qualified=int((base&qualified).sum()),common_support=int(use.sum()))
+            if use.any():
+                mask = quality[use]
+                density = np.diff(ndtr((MU_EDGES[None,:]-mu[use,None])/sigma[use,None]),axis=1)
+                kernel = density/np.diff(MU_EDGES)
+                likelihood = np.sum(pdf[use,1:]*kernel[:,None,:],axis=-1)
+                score = np.log(np.maximum(likelihood,np.finfo(float).tiny))
+                row.update(mean_common_support_score_gain=float(np.mean(score[:,1]-score[:,0])),
+                           median_sfd_mass_in_map_range=float(np.median(np.sum(pdf[use,0]*mask,axis=1))))
+                for i,name in ((1,'sfd'),(2,'dust_3d')):
+                    middle = np.argmax(np.cumsum(pdf[use,i],axis=1)>=.5,axis=1)
+                    residual = MU[middle]-mu[use]
+                    row.update({f'{name}_median_mu_residual':float(np.median(residual)),
+                                f'{name}_nmad_mu_residual':float(1.4826*np.median(abs(residual-np.median(residual))))})
+            rows.append(row)
+    return rows
+
+
 def run(path, kind):
     p = photometry()
     if not p or not np.all(p['TYPE']=='PSF'):
@@ -168,8 +213,10 @@ def run(path, kind):
     out = OUT/kind
     out.mkdir(parents=True,exist_ok=True)
     csv_rows(out/'sightlines.csv',rows)
+    pdf = np.stack(fits)
+    csv_rows(out/'matched_gaia.csv',matched_reference_summary(p,gaia_state,refs,lo,hi,quality,pdf))
     atomic_npz(out/'distance_pdfs.npz',ls_id=p['ls_id'],TYPE=p['TYPE'],mu_edges=MU_EDGES,
-               pdf=np.stack(fits),map_reliable=quality,ebv_samples=sample,reference_kpc=refs,
+               pdf=pdf,map_reliable=quality,ebv_samples=sample,reference_kpc=refs,
                gaia_reference_lo=lo,gaia_reference_hi=hi)
     save_json(out/'complete.json',dict(rows=len(rows),valid=int((quality.sum(axis=1)>=3).sum()),
         dust_kind=kind,map_sha256=sha(path),coefficients=NATIVE,nominal_sha256=entry['sha256'],

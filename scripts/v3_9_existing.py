@@ -21,6 +21,7 @@ from v3_8_candidate import read_cache
 from v3_8_candidate_index import OUT as MEMBERS
 from v3_8_redrock import OUT as REDROCK
 from v3_8_reliability import OUT as RELIABILITY
+from v3_9_audit import verify_pdf
 
 OUT = ROOT/'data/v3_9/existing'
 GATES = OUT/'gates'
@@ -174,12 +175,14 @@ def calibrated(shard,count):
                     raise ValueError('Calibrated rows require verified native PSF')
                 mass = z['qrf_mu_mass'][take]
                 edges,qq,bins = transform_pdf(z['qrf_mu_edges'][take],mass,quantile[take],scale[take])
+                cdf_error,shell_error = verify_pdf(edges,mass,qq,bins)
                 path = dest/f'{directory.name}_{name}'
                 atomic_npz(path,ls_id=z['ls_id'][take],TYPE=z['TYPE'][take],scale=scale[take],
                            qrf_mu_edges=edges,qrf_mu_mass=mass,qrf_bins=bins,qrf_quantiles_kpc=qq)
                 outputs[path.name] = sha(path)
                 old = z['qrf_bins'][take].sum(axis=0)
-                row = dict(sweep=item['sweep'],part=name,rows=int(take.sum()),source_sha256=h)
+                row = dict(sweep=item['sweep'],part=name,rows=int(take.sum()),source_sha256=h,
+                           quantile_cdf_error=cdf_error,shell_probability_error=shell_error)
                 for i,(a,b) in enumerate(zip(old,bins.sum(axis=0))):
                     row.update({f'original_{i}':float(a),f'calibrated_{i}':float(b)})
                 rows.append(row)

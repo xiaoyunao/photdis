@@ -25,7 +25,8 @@ from v3_6_reference_photometry import OUT as SOUTH_PHOTO
 from v3_6_vac_distances import read_columns
 from v3_6_weak_gaia import histogram, score
 from v3_8_candidate import read_cache
-from v3_9_catalog import OUT, confirm
+from v3_9_audit import parent_part, verify_pdf
+from v3_9_catalog import OUT, confirm, settings
 from v3_9_references import choose, join, subset
 
 REGIONS = ('south_faint','south_low','north')
@@ -45,13 +46,20 @@ def summarize_sweep(source, *, side):
     q = json.loads((output/'complete.json').read_text())
     if q['binding']['photo']!=sha(photo/'complete.json'):
         raise ValueError('Prediction and parent receipts refer to different inputs')
-    projections = []
+    counts = dict(rows=0,pdfs=0,maximum_quantile_cdf_error=0.,maximum_shell_probability_error=0.)
+    if p.get('error') or p.get('missing_fields'):
+        return [],counts
+    raw = load(verified(photo/'parent_state.npz',p['outputs']['parent_state.npz']))['state']
+    release = settings()[side]['release']
+    projections, row_index = [], []
     for name,digest in p['outputs'].items():
         if name=='parent_state.npz':
             continue
-        t = read_columns(verified(photo/name,digest),SUMMARY)
+        t = read_columns(verified(photo/name,digest),(*SUMMARY,'parent_row'))
         state = load(verified(output/('state_'+name),q['outputs']['state_'+name]))
-        np.testing.assert_array_equal(state['ls_id'],t['ls_id'])
+        parent_part(t,state,raw,release)
+        row_index.append(t.pop('parent_row'))
+        counts['rows'] += len(t['ls_id'])
         d = np.full(len(t['ls_id']),np.nan,'f4')
         ids = np.flatnonzero(state['state']==3)
         mass = np.zeros((len(d),6),'f4')
@@ -59,10 +67,16 @@ def summarize_sweep(source, *, side):
         cl = np.full(len(d),np.nan)
         if name in q['outputs']:
             pred = read_columns(verified(output/name,q['outputs'][name]),
-                                ('photo_row','ls_id','TYPE','qrf_quantiles_kpc','qrf_bins','dwarf_score'))
+                                ('photo_row','ls_id','TYPE','qrf_quantiles_kpc','qrf_bins','dwarf_score',
+                                 'qrf_mu_edges','qrf_mu_mass'))
             np.testing.assert_array_equal(pred['photo_row'],ids)
             np.testing.assert_array_equal(pred['ls_id'],t['ls_id'][ids])
             np.testing.assert_array_equal(pred['TYPE'],t['TYPE'][ids])
+            error_q,error_shell = verify_pdf(pred['qrf_mu_edges'],pred['qrf_mu_mass'],
+                                             pred['qrf_quantiles_kpc'],pred['qrf_bins'])
+            counts['pdfs'] += len(ids)
+            counts['maximum_quantile_cdf_error'] = max(counts['maximum_quantile_cdf_error'],error_q)
+            counts['maximum_shell_probability_error'] = max(counts['maximum_shell_probability_error'],error_shell)
             d[ids] = pred['qrf_quantiles_kpc'][:,2]
             mass[ids] = pred['qrf_bins']
             de[ids] = pred['qrf_quantiles_kpc'][:,3]-pred['qrf_quantiles_kpc'][:,1]
@@ -75,7 +89,11 @@ def summarize_sweep(source, *, side):
         t.update(qrf_median_kpc=d,d68_width=de,dwarf_score=cl,state=state['state'],
                  primary_survey_owner=owner,distance_mass=mass)
         projections.append(t)
-    return projections
+    ordered = np.sort(np.concatenate(row_index)) if row_index else np.empty(0,dtype=int)
+    np.testing.assert_array_equal(ordered,np.flatnonzero(raw>=5))
+    if counts['pdfs']!=q['counts']['precise_pdf']+q['counts']['control_pdf']:
+        raise ValueError('PDF pointer count differs from the production receipt')
+    return projections,counts
 
 
 def area_rows(p,shard):
@@ -181,10 +199,17 @@ def group(side,shard):
         return
     cpus = int(os.getenv('SLURM_CPUS_PER_TASK','4'))
     with ProcessPoolExecutor(max_workers=min(cpus,8)) as pool:
-        p = join([r for a in pool.map(partial(summarize_sweep,side=side),sources) for r in a])
+        checks = list(pool.map(partial(summarize_sweep,side=side),sources))
+    p = join([r for records,_ in checks for r in records])
+    report = {key:sum(a[key] for _,a in checks) for key in ('rows','pdfs')}
+    report.update({key:max((a[key] for _,a in checks),default=0.)
+                   for key in ('maximum_quantile_cdf_error','maximum_shell_probability_error')})
     table = dest/f'{shard:02d}_count.csv'
     csv_rows(table,area_rows(p,shard))
     outputs = {table.name:sha(table)}
+    identities = dest/f'{shard:02d}_identities.npz'
+    atomic_npz(identities,ls_id=p.get('ls_id',np.empty(0,dtype='i8')))
+    outputs[identities.name] = sha(identities)
     if p:
         precise = (p['state']==3)&(p['row_state']==7)
         np.testing.assert_equal(len(np.unique(p['ls_id'])),len(p['ls_id']))
@@ -217,7 +242,7 @@ def group(side,shard):
             target = dest/f'{shard:02d}_reference.npz'
             atomic_npz(target,**ref,nominal_qnear=value,nominal_evaluated=np.isfinite(value),nominal_numerical_flag=flag)
             outputs[target.name] = sha(target)
-    save_json(marker,dict(binding=binding,outputs=outputs,job=os.getenv('SLURM_JOB_ID')))
+    save_json(marker,dict(binding=binding,outputs=outputs,audit=report,job=os.getenv('SLURM_JOB_ID')))
 
 
 def same_label():

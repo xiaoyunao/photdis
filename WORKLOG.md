@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-16 — certify row ownership and full posterior values at delivery
+
+- Added independent checks of packed native identities, raw FITS-row ownership,
+  noise-control weights, every histogram CDF and the saved distance shells.
+  Rollup now checks the full native inventories for duplicates and confirms
+  that the v3.9 southern domains do not repeat frozen v3.5 identities.
+- Added a matched high-quality Gaia comparison for the 3D dust pilot. It
+  compares SFD and Bayestar on each object's common reliable distance range,
+  propagates reference errors into the score and reports crowding separately.
+- Full synthetic FITS-to-audit and PDF-calibration smoke tests passed, including
+  rejection of corrupted quantiles and duplicate identities. All 472 existing
+  tests passed. Actual rows remain contingent on the queued Perlmutter jobs.
+
 ## 2026-11-16 — use the actual faint photometric noise frame
 
 - Replaced Gaia/spectroscopy-selected noise donors with a deterministic

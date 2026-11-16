@@ -15,6 +15,7 @@ from v3_9_catalog import OUT
 from v3_9_dust import OUT as DUST
 from v3_9_existing import GATES, PDF
 from v3_9_branches import OUT as BRANCHES
+from v3_9_audit import all_catalog_ids
 from v3_9_seam import run as build_seam
 
 DEST = ROOT/'data/v3_9/delivery'
@@ -31,6 +32,7 @@ def receipt(path, *, verify_outputs=True):
 def calibration(shards):
     accum = np.zeros((2,6))
     rows = checks = 0
+    worst = np.zeros(2)
     for i in range(shards):
         path = PDF/f'{i:02d}'/'complete.json'
         r = receipt(path)
@@ -43,10 +45,13 @@ def calibration(shards):
             raise ValueError('Calibrated per-sweep counts do not match receipt')
         rows += n
         checks += len(counts)
+        for j,k in enumerate(('quantile_cdf_error','shell_probability_error')):
+            worst[j] = max(worst[j],max((float(a[k]) for a in counts),default=0.))
         for k,kind in enumerate(('original','calibrated')):
             accum[k] += np.array([sum(float(a[f'{kind}_{j}']) for a in counts) for j in range(6)])
     np.testing.assert_allclose(accum.sum(axis=1),rows,atol=1e-5,rtol=0)
-    return rows,checks,accum
+    return rows,checks,accum,dict(maximum_quantile_cdf_error=worst[0],
+                                 maximum_shell_probability_error=worst[1])
 
 
 def run(shards):
@@ -59,7 +64,7 @@ def run(shards):
         'paired_photometry':OUT/'validation/overlap/complete.json',
         **{name:OUT/'figures'/name/'complete.json' for name in ('south_faint','south_low','north')}}
     records = {k:receipt(v) for k,v in science.items()}
-    rows,parts,mass = calibration(shards)
+    rows,parts,mass,near_audit = calibration(shards)
     seam_path = DEST/'seam'
     build_seam(seam_path)
     science['survey_seam']=seam_path/'complete.json'
@@ -71,6 +76,7 @@ def run(shards):
         [dict(lo_kpc=edges[i],hi_kpc=edges[i+1],frozen=mass[0,i],calibrated=mass[1,i]) for i in range(6)])
     census = {}
     for side in ('south','north'):
+        catalog_audit = all_catalog_ids(OUT,side)
         status = []
         catalog = OUT/side/'inventory.json'
         inventory = json.loads(catalog.read_text())
@@ -94,13 +100,18 @@ def run(shards):
                     **counts,**b['counts']))
         target = DEST/f'{side}_sweeps.csv'
         csv_rows(target,status)
-        census[side] = dict(sweeps=len(status),bad=sum(bool(z['error'] or z['missing_fields']) for z in status))
+        counts = sum(z.get('parent',0) for z in status)
+        pdfs = sum(z.get('precise_pdf',0)+z.get('control_pdf',0) for z in status)
+        if (catalog_audit['rows'],catalog_audit['pdfs'])!=(counts,pdfs):
+            raise ValueError(f'{side} catalog receipt counts do not reconcile with audited rows')
+        census[side] = dict(sweeps=len(status),bad=sum(bool(z['error'] or z['missing_fields']) for z in status),
+                            **catalog_audit)
     gate = records['gates']
     if gate['rows']!=336678 or not rows:
         raise ValueError('Missing complete gate or near-PDF counts')
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),census=census,
         gate_rows=gate['rows'],gate_passed=gate['passes'],gate_reused=gate['from_redrock'],
-        near_pdf_rows=rows,near_pdf_parts=parts,
+        near_pdf_rows=rows,near_pdf_parts=parts,near_pdf_audit=near_audit,
         sources={str(p.relative_to(ROOT)):sha(p) for p in science.values()},
         outputs={p.name:sha(p) for p in DEST.iterdir() if p.is_file() and p.name!='complete.json'}))
     print('v3.9 sources and PDF counts validated',census,gate['rows'],rows,flush=True)
