@@ -1,0 +1,11 @@
+{
+  "train": 18000,
+  "test": 6000,
+  "shared": 5899,
+  "job": "61395041",
+  "outputs": {
+    "seam.csv": "4249db8aa16ab32e8f491c8201d464e53cef72f45a02456677a6a1e1d834909c",
+    "paired.npz": "f51a481bb4e9969626a57b14376e78565cab6ae246e47047de2e71d975df13f8",
+    "distances.csv": "6557443ffa1e0ff37ca947b9a9a1de94e4d216d1a973e309a61377981332f31a"
+  }
+}

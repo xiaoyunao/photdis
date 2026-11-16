@@ -1,5 +1,14 @@
 # WORKLOG
 
+## 2026-11-16 — verify the northern and southern same-label comparison
+
+- Job 61395041 completed with 18,000 common-reference fits and 6,000
+  held-out cases. Shared support: 5,899. Seam shifts were +0.143% and
+  −0.106%. The 145 shared 2–5 kpc references remain low-biased in both
+  systems. No shared supported 5–10 kpc references were available.
+- Verified receipt-bound dist/seam table checksums and preserved the
+  limited interpretation. The independent native north fit is running.
+
 ## 2026-11-16 — verify numerical quality of the complete candidate gate
 
 - Independent job 61398196 reopened the exact gate product and verified
