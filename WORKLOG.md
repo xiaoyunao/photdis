@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-16 — implement the blue branch and classifier diagnostics
+
+- Added same-grz and optical-error neighborhoods with paired optional-band
+  comparisons, the fixed classifier refit without sky features, and the LF
+  replay for known blue and far-giant cases.
+- The new scripts compile. Reference joins and original PSF classifier
+  identity counts are checked in the run before scoring.
+
 ## 2026-11-16 — implement same-identity selection replay
 
 - Added `scripts/v3_7_selection_replay.py`. The preparation stage identifies
