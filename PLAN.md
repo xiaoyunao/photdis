@@ -1,5 +1,23 @@
 # PLAN
 
+## v3.14 — audit cluster processing before a population calibration
+
+Use Pro review 60197eff-a3d2-4cab-8471-c27207fd9094 at 8af5739.
+Preserve all published production and independent-test artifacts.
+
+- Rejoin frozen M92/M13/M30/M5 native PSFs against DR11 sweeps. Audit
+  CLUSTER, forced PSF, Gaia provenance, crowding, radius and depth.
+  Compare supported member residuals inside and outside the mask with
+  explicit magnitude/color/error and CMD strata. A nearest-neighbor
+  measure among admitted rows is a crowding proxy.
+- Based on these strata, compare the empirical relation, frozen QRF,
+  physical population diagnostics and a grz-only marginalized relation
+  using fixed independent field reference identities.
+- Register M68 coverage and membership before applying the known
+  distance. Compare locked M30 DECam template and QRF on the same
+  low-crowding, outside-mask rows if enough exist. Keep field validation
+  and any special-processing overlap explicit. Test the 10% scale target.
+
 ## v3.13 — completed cluster luminosity, depth and independent CMD tests
 
 [Results and adoption decision](docs/v3_13_result.md).
