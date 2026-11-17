@@ -1,0 +1,5 @@
+region,partition_id,pdf_file,ls_id,d50_kpc,n_owned
+south_v35,24082,data/v3_5/catalog/sweep-080m030-085m025/part_00024.npz,12105796588414158,1.2876347703561615,699
+south_faint,8900,data/v3_9/expansion/south/predict/sweep-075m065-080m060/001200000_south_faint.npz,12105659620287986,39.25364006392669,15901
+south_low,8536,data/v3_9/expansion/south/predict/sweep-125p000-130p005/000600000_south_low.npz,12105994119152426,3.5375300453544676,2416
+north,10190,data/v3_9/expansion/north/predict/sweep-255p045-260p050/000900000_north.npz,12107327533486698,2.11951565046012,8988

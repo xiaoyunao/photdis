@@ -7,8 +7,20 @@
 - All 24 source shards in 61465405 completed and bind core rows to native
   PDF offsets. Job 61465455 reproduced F15 and populated paired-block
   statistics, stellar migration and F20. 476 regressions passed.
-- The staged random-area job picked up the old canonical helper first.
-  Run the corrected resolution interface from the canonical checkout.
+- The staged area helper resolved to the old canonical module. Synced
+  the validated code and reran both area jobs from the canonical checkout
+  (61465735/36). The new NSIDE=128 cells reduce exactly to the old masks.
+- Revised F20 after visual checks identified a duplicate all-distance row
+  in the plot rollup. Added disjoint-shell sum checks and reran 61465745.
+  Distances and paired statistics were unchanged.
+- P2 job 61465594 wrote and read back 2,281,023 core FITS rows. The 28,917
+  partition index binds 43,347,612 owned PDFs and verified native offsets.
+- Refined the first atlas color stretch, maintaining scale units, covering
+  zero and preserving coverage. Final atlas 61465855 and QA 61465856
+  completed. Visually checked F20–F25, verified 300 DPI/PDF and checksums,
+  and replayed three core and four native PDF examples. Kept large products
+  on NERSC. Deliver docs/v3_final_result.md and the versioned figure index.
+  Manuscript drafting and public hosting follow in the next stage.
 
 ## 2026-11-17 — full catalogue atlas and selection-independent comparison
 

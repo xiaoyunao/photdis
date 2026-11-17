@@ -130,11 +130,11 @@ def physics_figure(rows, migration, dest):
         x = [r['retention_from_supported'] or 0 for r in b]
         ax.barh(y, 100*np.array(x), color=BLUE, height=.55)
         for j, (aa, bb) in enumerate(zip(a,b)):
-            ax.annotate(f"{bb['n']:,}/{aa['n']:,}", (100*x[j], j), xytext=(4,0),
+            ax.annotate(f"{bb['n']:,}/{aa['n']:,}" if aa['n'] else 'No references', (100*x[j], j), xytext=(4,0),
                         textcoords='offset points', va='center', fontsize=9)
         ax.set(title=f'{ref} · core retention', xlabel='Selected / supported (%)',
                yticks=y, yticklabels=NAMES, ylim=(3.55,-.55), xlim=(0,126))
-        for k, key, name in ((1,'bias','Median relative error (%)'), (2,'tail','|Modulus error| > 1 mag (%)')):
+        for k, key, name in ((1,'bias','Median relative error (%)'), (2,'tail','Severe errors (%)')):
             ax = axes[i, k]
             for data, shift, color, label in ((a,-.12,BLUE,'Supported parent'),(b,.12,ORANGE,'Core 2–5 kpc')):
                 values = [100*r[key] if r[key] is not None else np.nan for r in data]
@@ -146,18 +146,23 @@ def physics_figure(rows, migration, dest):
                 ax.legend(loc='best', fontsize=9)
         ax = axes[i, 3]
         hist = np.array([[sum(r['working'] for r in migration if r['population']==p and r['reference']==ref
-                             and r['region']=='all' and r['pred_lo']==2 and r['ref_lo']==d0)
-                          for d0 in SHELLS[:-1]] for p in POPULATIONS[:4]])
+                             and r['region']=='all' and r['pred_lo']==2
+                             and r['ref_lo']==d0 and r['ref_hi']==d1)
+                          for d0,d1 in zip(SHELLS[:-1],SHELLS[1:])] for p in POPULATIONS[:4]])
+        expected = [next(r['n'] for r in rows if r['reference']==ref and r['region']=='all'
+                         and r['population']==p and r['ref_lo']==0 and r['ref_hi']==np.inf
+                         and r['stage']=='core_2_5') for p in POPULATIONS[:4]]
+        np.testing.assert_array_equal(hist.sum(axis=1), expected)
         left = np.zeros(4)
         for j, (color, label) in enumerate(zip((BLUE, GREEN, ORANGE, '#81649c'),
                 ('<2 kpc', '2–5 kpc', '5–10 kpc', '≥10 kpc'))):
             x = np.divide(100*hist[:,j], hist.sum(axis=1), out=np.zeros(4), where=hist.sum(axis=1)>0)
             ax.barh(y, x, left=left, color=color, height=.58, label=label)
             left += x
-        ax.set(title=f'{ref} · arrival into the core', xlabel='Reference distance composition (%)',
+        ax.set(title=f'{ref} · arrival into the core', xlabel='Reference distance mix (%)',
                yticks=y, yticklabels=[], ylim=(3.55,-.55), xlim=(0,100))
         if i==0:
-            ax.legend(fontsize=8, ncol=2)
+            ax.legend(fontsize=8, ncol=2, loc='upper center', bbox_to_anchor=(.5,1.31))
     fig.suptitle('Luminosity class changes which stars enter the 2–5 kpc sample')
     save(fig, dest, 'F20_population_physics',
          [r for r in rows if r['population'] in POPULATIONS[:4] and r['region']=='all'

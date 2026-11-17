@@ -1,0 +1,25 @@
+{
+  "job": "61465856",
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "science": "26b5935154414a61258b436910f6fa0c3e1f7a9db47afa6831e76dcd404c1fbf",
+    "atlas": "a82ab22312de1485ba18a59b9f6e6974b5fe73f2af0b56a42d5af1ec30ed2853",
+    "release": "4e4aa31f6ea220ffad5c24e208ca821ffc6335729307e86ed29940d7028a80c5"
+  },
+  "valid_plates": [
+    "F20_population_physics.png",
+    "F21_full_density.png",
+    "F22_pdf_density.png",
+    "F23_core_density.png",
+    "F24_reference_density.png",
+    "F25_native_density.png"
+  ],
+  "pdf_core_replays": [
+    "south_v35",
+    "south_low",
+    "north"
+  ],
+  "pdf_raw_replays": 4,
+  "full_pdf_rows": 43347612,
+  "core_rows": 2281023
+}

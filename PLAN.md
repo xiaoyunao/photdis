@@ -1,6 +1,6 @@
 # PLAN
 
-## Photdis v3 science closeout
+## Photdis v3 science closeout — completed
 
 Use the complete GPT Pro review linked to c530007c and the user's request
 for true Aitoff surface-density panels with a colorbar. Preserve the frozen
@@ -16,6 +16,12 @@ model, catalogue, Pal 5 rendering lock and morphology admission.
 - P2. Build and verify the versioned core FITS and portable full-PDF
   download/ownership indices, including lookup checks from all components.
   Deliver the result and figure index before the separate manuscript phase.
+
+Delivery 61465856 completed. The distance scatter result is reproducible in
+the weak-Gaia, 18–20 mag, 2–5 kpc dwarf reference cohort. The verified density
+atlas and FITS are ready. Public hosting and the AJ draft are the next phase.
+See [results](docs/v3_final_result.md), [figures](docs/v3_final_figures.md)
+and [data release](docs/v3_final_release.md).
 
 ## Final Catalogue and Independent Validation — completed
 

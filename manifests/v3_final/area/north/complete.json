@@ -1,0 +1,15 @@
+{
+  "job": "61465735",
+  "config": "d2341fd94f27d136699598af554a506af338063fdc9a09c90f5851b51c6b0024",
+  "inventory": "563038548abbc387bdda67eec193ef13f44cf17aad1b323576a652d13f99fac3",
+  "random_path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits",
+  "random_bytes": 5064027840,
+  "random_mtime_ns": 1780757234000000000,
+  "rows": 14551718,
+  "density": 2500.0,
+  "nside": 128,
+  "outputs": {
+    "area.npz": "5c414810b2ebef76157e8e70baea2fdd88a1ec275db3e3721af0f020a21cff19",
+    "area_totals.csv": "7feeca93ecf3d35cdad146ec6c58360d3114fd8392b6eae4decd5ef67e5152e9"
+  }
+}
