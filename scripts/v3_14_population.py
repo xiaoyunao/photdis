@@ -9,6 +9,7 @@ from scipy.spatial import cKDTree
 from photdis.stage1 import require_compute
 from photdis.v3.metrics import distance_summary
 from v2_1_near import ROOT, atomic_npz, csv_rows, save_json, sha
+from v3_9_references import subset
 from v3_10_selection import features, references
 from v3_11_layers import read_receipt
 from v3_11_selection import DEST as LABELS
