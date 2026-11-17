@@ -12,7 +12,7 @@ from v3_8_direct_figures import BLUE, GRAY, GREEN, ORANGE, STYLE, plt, save
 from v3_10_figures import check_templates
 from v3_13_delivery import figure_check
 from v3_15_delivery import validate
-from v3_16_fit import DEPTH, METHODS
+from v3_16_fit import DEPTH, FIT, METHODS
 from v3_16_gd1 import CONFIG, DEST, EDGES, P
 
 REFERENCE = ROOT/'manifests/v3_16/cfht_reference.csv'
@@ -109,20 +109,20 @@ def figure(out,rows,external):
 def run():
     lock = check_templates()
     inputs = {'config':sha(CONFIG),'reference':CFHT,'reference_csv':sha(REFERENCE)}
-    for stage in ('footprint','sample','fit'):
-        validate(DEST/stage,inputs,lock)
-    out = DEST/'score'
+    for stage in (DEST/'footprint',DEST/'sample',FIT):
+        validate(stage,inputs,lock)
+    out = DEST/'score_block'
     out.mkdir(parents=True,exist_ok=True)
     r = read(REFERENCE)
     ref = {float(a['phi1']):(float(a['distance_kpc']),float(a['error_kpc'])) for a in r}
     np.testing.assert_array_equal(list(ref),.5*(EDGES[1:]+EDGES[:-1]))
-    rows = read(DEST/'fit'/'segments.csv')
+    rows = read(FIT/'segments.csv')
     for x in rows:
         d,e = ref[float(x['phi1'])]
         delta = float(x['peak'])/d-1
         x.update(reference_kpc=d,reference_error_kpc=e,relative_error=delta,
                  within_ten_percent=bool(abs(delta)<=P['reference_tolerance_fraction']))
-    with np.load(DEST/'fit'/'curves.npz',allow_pickle=False) as curves:
+    with np.load(FIT/'curves.npz',allow_pickle=False) as curves:
         result,depth = comparison(rows,ref,curves)
     csv_rows(out/'distance.csv',rows)
     csv_rows(out/'gradient.csv',result)

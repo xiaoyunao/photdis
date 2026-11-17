@@ -21,6 +21,7 @@ METHODS = ('Frozen QRF','M13 CMD','M92 deep CMD')
 DEPTH = {'r < 20':(0,), '20 <= r < 21':(1,), '21 <= r < 22':(2,),
          'r < 21':(0,1), 'r < 22':(0,1,2)}
 DRAWS = P['spatial_draws']
+FIT = DEST/'fit_block'
 
 
 def cluster_template(name,inputs):
@@ -143,17 +144,18 @@ def run():
     area = cov['area'][1:].reshape(len(LIMITS),NSEG,NSTEP,len(OFFSETS)).transpose(1,2,3,0)
     eligible = cov['coverage_ok'].transpose(1,2,0)
     rng = np.random.default_rng(P['seed'])
-    weights = np.vstack((np.ones((1,NSTEP)),rng.multinomial(NSTEP,np.full(NSTEP,1/NSTEP),size=DRAWS)))
+    weights = np.concatenate((np.ones((NSEG,1,NSTEP)),
+        rng.multinomial(NSTEP,np.full(NSTEP,1/NSTEP),size=(NSEG,DRAWS))),axis=1)
     rows,controls,content = [],[],{}
     for s in range(NSEG):
         for k,(name,depth) in enumerate(DEPTH.items()):
             if not cov['passed'][list(depth),s].all():
                 continue
-            curves,scores = fit_curves(h[s],q[s],v[s],area[s],eligible[s],0,weights,templates,depth)
+            curves,scores = fit_curves(h[s],q[s],v[s],area[s],eligible[s],0,weights[s],templates,depth)
             d,z = peak(curves,scores)
             null = []
             for j in range(1,len(OFFSETS)):
-                trial = fit_curves(h[s],q[s],v[s],area[s],eligible[s],j,weights[:1],templates,depth)
+                trial = fit_curves(h[s],q[s],v[s],area[s],eligible[s],j,weights[s,:1],templates,depth)
                 if trial is None:
                     continue
                 x,y = peak(*trial)
@@ -174,7 +176,7 @@ def run():
                     target_exposure_min_deg2=area[s,:,0,:].sum(axis=0)[list(depth)].min(),
                     peak=d[m,0],p16=lo,p84=hi,peak_z=z[m,0],control_n=len(null),
                     largest_control_z=highest,signal=bool(z[m,0]>=3 and z[m,0]>highest)))
-    out = DEST/'fit'
+    out = FIT
     out.mkdir(parents=True,exist_ok=True)
     csv_rows(out/'segments.csv',rows)
     csv_rows(out/'controls.csv',controls)

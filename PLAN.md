@@ -1,5 +1,20 @@
 # PLAN
 
+## v3.16 — GD-1 photometric distance and gradient validation
+
+Review bd5e53c0 starts a fixed BASS/MzLS test on six GD-1 segments
+between −40° and −10°. Use native clean-low-extinction PSFs, common archived
+QRF support, eight displaced ribbons and three independent magnitude tiers.
+Footprint and cuts are fixed in `configs/v3_16_gd1.json`. Fit all three
+methods (fixed QRF, classical M13 CMD, deeper M92 CMD) with the same
+objects and exposure. Keep CFHT distance measurements in the scoring
+stage, separate from coordinates and inference. Use common spatial
+resamples within each segment and independent weights across segments.
+
+Compare the 10% scale target, gradient, displaced signals and depth
+increments. Retain the frozen catalog and any failed result. Advance to
+a fainter structure only if the matched GD-1 outcome supports it.
+
 ## v3.15 — completed matched CMD transfer and native-band tests
 
 [Results](docs/v3_15_result.md). Review 333c2df5 at 11543c5 defined the two
