@@ -1,5 +1,21 @@
 # PLAN
 
+## Manuscript v1 scientific evidence
+
+Use frozen scientific commit 87069408 and the supplied v1 analysis prompt.
+The manuscript belongs to the writing task. Derive coverage and calibration
+from exact archived sources, and import the pinned figures for a build
+check in an independent directory.
+
+- P0-A close the native observable census and exact benchmark overlap,
+  with finite-support reweighting and a per-core-source sidecar.
+- P0-B audit training, quality-state sensitivity, reference boundary
+  selection, and distribution calibration including signed Gaia.
+- P1 resolve the luminosity-branch residual morphology and conditional
+  rare-count diagnostics. Keep already reported migration and LF evidence.
+- P0-C prepare 6–8 article figure candidates and matrix provenance.
+- P2 verify access and deliver science evidence for the writing revision.
+
 ## Photdis v3 science closeout — completed
 
 Use the complete GPT Pro review linked to c530007c and the user's request

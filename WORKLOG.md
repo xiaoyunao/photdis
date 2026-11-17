@@ -1,5 +1,18 @@
 # WORKLOG
 
+## 2026-11-17 — v1 manuscript scientific evidence
+
+- Read GPT reply 9c9c8e1c, the complete supplied prompt and AASTeX evidence.
+  Registered the goal before work. Imported four original PDFs and compiled
+  the unchanged manuscript in a temporary root. F21 is too tall at the
+  manuscript insertion width. Produce a compact layout asset.
+- Scan 61468875 covered the full original partition index. Mixed native
+  modulus grids in shard 7 require zero-mass padding for batching. Retry
+  61469517 completed without changing any original histogram probabilities.
+- Provenance job 61469471 verified archived fit identities and conditional
+  LF positive-cell coverage. No fit identity overlapped either headline pair.
+  Syntax, shell, focused numerical replay and 476 regressions passed.
+
 ## 2026-11-17 — v3 final science closeout
 
 - Read the full GPT Pro review of c530007c and registered P0/P1/P2

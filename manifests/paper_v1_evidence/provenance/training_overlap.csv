@@ -1,0 +1,49 @@
+training_native,role,target,n,training_gaia_keys,test_frame,test_domain,test_size,bench_ls,bench_gaia,bench_either
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,parent,all,49308,0,0,0
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,parent,same_native,7249,0,0,0
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,SpecDis,all,9355,0,0,0
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,SpecDis,same_native,2064,0,0,0
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,SPDist,all,8927,0,0,0
+DECam,qrf_fit_specdis,SpecDis calibrated primary posterior mean mu,26461,26461,SPDist,same_native,1940,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,parent,all,49308,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,parent,same_native,7249,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,SpecDis,all,9355,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,SpecDis,same_native,2064,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,SPDist,all,8927,0,0,0
+DECam,qrf_fit_spdist,SPDist calibrated primary posterior mean mu,3883,3883,SPDist,same_native,1940,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,parent,all,49308,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,parent,same_native,7249,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,SpecDis,all,9355,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,SpecDis,same_native,2064,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,SPDist,all,8927,0,0,0
+DECam,qrf_fit_gaia,signed Gaia primary posterior mean mu,2424,2424,SPDist,same_native,1940,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,parent,all,49308,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,parent,same_native,42059,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,SpecDis,all,9355,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,SpecDis,same_native,7291,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,SPDist,all,8927,0,0,0
+BASS_MzLS,gaia_fit,high-S/N Gaia geometry,61440,61440,SPDist,same_native,6987,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,parent,all,49308,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,parent,same_native,42059,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,SpecDis,all,9355,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,SpecDis,same_native,7291,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,SPDist,all,8927,0,0,0
+BASS_MzLS,specdis_fit,quality-qualified SpecDis,4096,4096,SPDist,same_native,6987,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,parent,all,49308,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,parent,same_native,42059,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,SpecDis,all,9355,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,SpecDis,same_native,7291,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,SPDist,all,8927,0,0,0
+BASS_MzLS,calibration,independent Gaia geometry zero-point fit,8000,8000,SPDist,same_native,6987,0,0,0
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,parent,all,49308,606,606,606
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,parent,same_native,42059,606,606,606
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,SpecDis,all,9355,0,0,0
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,SpecDis,same_native,7291,0,0,0
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,SPDist,all,8927,0,0,0
+BASS_MzLS,test,Gaia geometry holdout,12000,12000,SPDist,same_native,6987,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,parent,all,49308,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,parent,same_native,42059,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,SpecDis,all,9355,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,SpecDis,same_native,7291,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,SPDist,all,8927,0,0,0
+BASS_MzLS,class_fit,spectroscopic class label,27872,27872,SPDist,same_native,6987,0,0,0
