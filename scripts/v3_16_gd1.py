@@ -59,6 +59,7 @@ def bounding_box():
     lon = np.linspace(EDGES[0],EDGES[-1],401)
     lo,hi = min(OFFSETS)-WIDTH,max(OFFSETS)+WIDTH
     ra,dec = angles(ROTATION.T@unit(np.tile(lon,2),np.r_[track(lon)+lo,track(lon)+hi]))
+    ra %= 360
     return ra.min()-1,dec.min()-1,ra.max()+1,dec.max()+1
 
 
@@ -107,7 +108,7 @@ def coverage():
                     clean_area_deg2=sums[0,s,j],area_r20_deg2=sums[1,s,j],
                     area_r21_deg2=sums[2,s,j],area_r22_deg2=sums[3,s,j])
                for s in range(NSEG) for j,off in enumerate(OFFSETS)]
-    folder = DEST/'coverage'
+    folder = DEST/'footprint'
     folder.mkdir(parents=True,exist_ok=True)
     csv_rows(folder/'area.csv',records)
     atomic_npz(folder/'area.npz',area=area,coverage_ok=good,passed=passed)

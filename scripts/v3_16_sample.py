@@ -105,7 +105,7 @@ def take_sources(tile, footprint, history):
 
 def run():
     binding = {'geometry':sha(CONFIG)}
-    area = read_receipt(DEST/'coverage','complete.json','area.npz',('coverage_ok','passed'),binding)
+    area = read_receipt(DEST/'footprint','complete.json','area.npz',('coverage_ok','passed'),binding)
     if area['passed'][0].sum()<P['minimum_viable_segments']:
         raise RuntimeError('GD-1 fails the frozen bright coverage requirement')
     _,_,history = model_and_history('north',binding)
