@@ -5,7 +5,11 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-The latest [v3.15 science results](docs/v3_15_result.md) compare M5 and M68
+The latest [v3.16 GD-1 results](docs/v3_16_gd1.md) compare three methods on
+the same native northern sources and evaluate the distance scale, gradient
+and depth gains against independent photometric references.
+
+The [v3.15 science results](docs/v3_15_result.md) compare M5 and M68
 with one fixed CMD template and test the distance information in native i
 and WISE bands on matched stellar cohorts.
 

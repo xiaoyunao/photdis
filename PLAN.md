@@ -1,6 +1,6 @@
 # PLAN
 
-## v3.16 — GD-1 photometric distance and gradient validation
+## v3.16 — completed GD-1 photometric distance and gradient validation
 
 Review bd5e53c0 starts a fixed BASS/MzLS test on six GD-1 segments
 between −40° and −10°. Use native clean-low-extinction PSFs, common archived
@@ -11,9 +11,13 @@ objects and exposure. Keep CFHT distance measurements in the scoring
 stage, separate from coordinates and inference. Use common spatial
 resamples within each segment and independent weights across segments.
 
-Compare the 10% scale target, gradient, displaced signals and depth
-increments. Retain the frozen catalog and any failed result. Advance to
-a fainter structure only if the matched GD-1 outcome supports it.
+[Results](docs/v3_16_gd1.md). All six segments have adequate coverage to r=22.
+At that limit, QRF passes the background test on four segments and misses
+the 10% CFHT scale target on all four. Both CMD templates pass both tests
+on the same single segment. No method resolves the CFHT gradient and the
+matched depth increments have no reliable distance gain. Use independent
+member data to check the accessible faint main sequence and the foreground
+controls before attempting a fainter stream. Preserve the frozen catalog.
 
 ## v3.15 — completed matched CMD transfer and native-band tests
 

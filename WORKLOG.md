@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-17 — GD-1 distance and depth validation (v3.16)
+
+- Read complete Pro review bd5e53c0 and registered the goal before edits.
+  Froze the north DR11 geometry, six segments, eight controls and three tiers.
+  Fixed the longitude wrap at 180° and kept the initial coverage run archived.
+- Ran scripts/run_v3_16.sh gd1 coverage, sample, fit and score on NERSC.
+  Footprint 61452983 and sample 61452985 completed. All segments have useful
+  r=22 exposure and the matched roster has 142,098 native PSFs.
+- Replayed the same fit with independent spatial draws across segments and
+  explicit CMD magnitude-tier support. Fixed the score reader to handle
+  the coverage receipt schema. Final fit 61453682 and score 61453990 passed.
+- At r<22, QRF has four background-passing segments and no scale pass.
+  Both CMDs pass the scale and background tests on the same one segment.
+  The CFHT gradient remains unresolved. Preserve production and the initial
+  fit outputs. Report in docs/v3_16_gd1.md, manifests/v3_16 and figures/v3_16.
+- Two focused geometry and CMD support regressions and all 474 tests passed.
+  Checked artifact hashes and visually reviewed the locked v3.8 plate.
+- Retain GD-1 as the validation target until deeper native CMD support and
+  the background systematics can be checked with independent members.
+
 ## 2026-11-17 — matched M30 transfer and optional-band information (v3.15)
 
 - Read the complete Pro review 333c2df5 of v3.14, registered the goal,

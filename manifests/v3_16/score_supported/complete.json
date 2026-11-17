@@ -1,0 +1,23 @@
+{
+  "job": "61453990",
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "config": "2e52b220ff90bed1a08efa9ab47014d71b0ae8bd6dbbd62194bc833c56a7d68a",
+    "reference": "https://doi.org/10.1093/mnras/sty677",
+    "reference_csv": "2ffa35e36a01e804154698a76364d1d75402f3fa4dc6af95b9757a1e3af64b87",
+    "data/v3_16/footprint/complete.json": "cde9dd2a972b4d06b647b0aba6372ade8aa090fc4e065a5e504ac294388ed9b6",
+    "data/v3_16/sample/complete.json": "f775259ed6623bce444d0b6965248cfc6f9f4ac118484b52887338236315e156",
+    "data/v3_16/fit_supported/complete.json": "a75c350031805b68d5e7d4e9afabf2f449e33ff14617be992e7de77cda69312f",
+    "sdss_source": "https://doi.org/10.1088/0004-637X/712/1/260",
+    "sdss_csv": "51921bb743994bf9e1c1adc4d116f228a3e9b0f5f8ea5a03f4cb525160544a15",
+    "candles_context": "https://arxiv.org/abs/2205.13547"
+  },
+  "outputs": {
+    "depth.csv": "15a8ab2b1824a34b95f77fffaeaebaf00285caeab2201d8045e12069a5996b0e",
+    "distance.csv": "f1ee89eb06fc389413c1eb887ba18d53335f150c174a60a7876f3b7eea5761c6",
+    "gd1_distance.csv": "f1ee89eb06fc389413c1eb887ba18d53335f150c174a60a7876f3b7eea5761c6",
+    "gd1_distance.png": "8287c8855241f8759f2034211a8264ea123989b387bf2754c61c06fe0a3ae158",
+    "gd1_distance.pdf": "0843305d5e6ae2aafaed6fa6fca25a5e9585f825689194fe9f725b5e4b22a0fb",
+    "gradient.csv": "27bb3c7e853da39d4891e4db471eb5d718904f09f6d1b7627f3f92b0acbb5a86"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "job": "61453682",
+  "inputs": {
+    "geometry": "2e52b220ff90bed1a08efa9ab47014d71b0ae8bd6dbbd62194bc833c56a7d68a",
+    "data/v3_16/footprint/complete.json": "cde9dd2a972b4d06b647b0aba6372ade8aa090fc4e065a5e504ac294388ed9b6",
+    "data/v3_16/sample/complete.json": "f775259ed6623bce444d0b6965248cfc6f9f4ac118484b52887338236315e156",
+    "data/v3_14/audit/M13/complete.json": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311"
+  },
+  "templates": {
+    "M13": {
+      "source": "high-probability native members",
+      "target": 9050,
+      "mass_Mr_ge_6": 0.17879899960182935
+    },
+    "M92": {
+      "source": "native target minus background",
+      "target": 5521,
+      "background": 18769,
+      "native_target_area": 0.32999999999999996,
+      "native_background_area": 2.1936,
+      "mass_Mr_ge_6": 0.18318961679296392
+    }
+  },
+  "outputs": {
+    "segments.csv": "301ad5592557a00897050b5387eed61f54d4cb65a54a22680ad18f1af1eb7c2f",
+    "controls.csv": "3aaad8fdc1a3d2bad0f00b232745b42c69a3f9bf5492b03d47e602a421770c7a",
+    "curves.npz": "802e266dbcda757a35010af03e2094c4831f77049dd03d1eab76181b762b2fa7"
+  }
+}
