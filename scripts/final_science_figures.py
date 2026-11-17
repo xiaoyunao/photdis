@@ -4,6 +4,7 @@ import json
 import os
 
 import healpy as hp
+from matplotlib.colors import LinearSegmentedColormap
 import numpy as np
 
 from photdis.stage1 import galactic, require_compute
@@ -22,7 +23,7 @@ LABELS = {'south_v35':'DECam high latitude','south_low':'DECam low-latitude wind
 DISPLAY = (('south_v35',1),('south_low',2),('north',2))
 MAG = np.arange(14.,20.5,.5)
 LAT = (0,15,30,40,50,60,75,90.01)
-R0 = 8.2
+RESIDUAL_MAP = LinearSegmentedColormap.from_list("pal5_residual", (BLUE, "white", ORANGE))
 
 
 def inputs():
@@ -94,7 +95,7 @@ def references(dest,t):
         counts = np.histogram2d(t['color'][use],abs_r[use],(xedge,yedge))[0]
         totals = np.histogram2d(t['color'][use],abs_r[use],(xedge,yedge),weights=dm[use])[0]
         means = np.divide(totals,counts,out=np.full_like(totals,np.nan),where=counts>=5)
-        m = ax.pcolormesh(xedge,yedge,means.T,cmap='RdBu_r',vmin=-1,vmax=1,rasterized=True)
+        m = ax.pcolormesh(xedge,yedge,means.T,cmap=RESIDUAL_MAP,vmin=-1,vmax=1,rasterized=True)
         fig.colorbar(m,ax=ax,pad=.02,label='Mean modulus residual (mag)')
         ax.set(title=f'{name} · reference CMD',xlabel='Dereddened g − r (mag)',
                ylabel='Reference absolute r (mag)',ylim=(12,-2))
@@ -129,9 +130,11 @@ def regional_sky(dest,t,areas):
     d = t['q'][:,2]
     l,b,fp = footprint(t)
     primary = t['science']<=2
-    aitoff(dest,'F04_science','Selected Photdis science samples',d,l,b,primary,fp,BLUE)
-    aitoff(dest,'F04_weak_gaia','Selected sample · Gaia counterpart below geometric-distance cut',
-           d,l,b,primary&np.isin(t['gaia_state'],(3,4,5)),fp,BLUE)
+    atlas = t['science']<=3
+    aitoff(dest,'F04_science','Selected Photdis sources · 5–10 kpc is a research tier',
+           d,l,b,atlas,fp,BLUE)
+    aitoff(dest,'F04_weak_gaia','Gaia counterpart below geometric-distance cut · 5–10 kpc is a research tier',
+           d,l,b,atlas&np.isin(t['gaia_state'],(3,4,5)),fp,BLUE)
     ref = t['gaia_kpc'].copy()
     for k in ('specdis_kpc','spdist_kpc'):
         ref = np.where(np.isfinite(ref),ref,t[k])
@@ -154,6 +157,7 @@ def regional_sky(dest,t,areas):
         use = science_region(t,region,tier)
         total = np.bincount(pix[use],minlength=npix)
         control = (ar[1]>0)&(area>=.9*ar[1])&(area>=.5)
+        control &= (abs(b_center)>30)==bool(zone)
         for k in range(3):
             hard = np.bincount(pix[use&(hardshell==k)],minlength=npix)
             soft = np.bincount(pix[use],weights=t['bins'][use,k],minlength=npix)
