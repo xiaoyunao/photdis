@@ -33,8 +33,9 @@ def query_ids(ids, url, name, columns):
     upload = BytesIO()
     Table({'source_id':ids}).write(upload,format='votable',tabledata_format='binary2')
     select = ', '.join(f'a.{c}' for c in columns)
-    query = f'SELECT u.source_id, {select} FROM TAP_UPLOAD.ids u JOIN {name} a ON u.source_id = a.source_id'
-    payload = dict(REQUEST='doQuery',LANG='ADQL',FORMAT='votable',UPLOAD='ids,param:uids',
+    upload_name = 'rr_'+hashlib.sha256(ids.tobytes()).hexdigest()[:12]
+    query = f'SELECT u.source_id, {select} FROM TAP_UPLOAD.{upload_name} u JOIN {name} a ON u.source_id = a.source_id'
+    payload = dict(REQUEST='doQuery',LANG='ADQL',FORMAT='votable',UPLOAD=f'{upload_name},param:uids',
                    MAXREC=len(ids)+1,QUERY=query)
     attach = {'uids':('ids.xml',upload.getvalue(),'application/x-votable+xml')}
     for retry in range(3):
