@@ -10,8 +10,7 @@ from photdis.stage1 import require_compute
 from v2_1_near import ROOT, csv_rows, save_json, sha
 from v3_8_direct_figures import BLUE, GRAY, GREEN, ORANGE, STYLE, plt, save
 from v3_10_figures import check_templates
-from v3_13_delivery import figure_check
-from v3_15_delivery import validate
+from v3_13_delivery import bind, figure_check
 from v3_16_fit import DEPTH, FIT, METHODS
 from v3_16_gd1 import CONFIG, DEST, EDGES, P
 
@@ -100,7 +99,10 @@ def figure(out,rows,external):
                 a = [k for k in rows if (k['method'],k['depth'])==(method,depth)]
                 xx,y,lo,hi = (np.array([float(k[key]) for k in a]) for key in ('phi1','peak','p16','p84'))
                 ax.vlines(xx,lo,hi,color=color,alpha=alpha,lw=1.)
-                ax.scatter(xx,y,marker=mark,c=color,alpha=alpha,label=depth)
+                filled = np.array([k['signal']=='True' for k in a],dtype=bool)
+                ax.scatter(xx[filled],y[filled],marker=mark,c=color,alpha=alpha)
+                ax.scatter(xx[~filled],y[~filled],marker=mark,facecolors='none',
+                           edgecolors=color,alpha=alpha,label=depth)
             ax.set(title=method,xlabel=r'Stream longitude $\phi_1$ (deg)',ylim=(5,14))
             ax.legend(loc='upper left')
         axes[0].set_ylabel('Heliocentric distance (kpc)')
@@ -111,8 +113,13 @@ def figure(out,rows,external):
 def run():
     lock = check_templates()
     inputs = {'config':sha(CONFIG),'reference':CFHT,'reference_csv':sha(REFERENCE)}
-    for stage in (DEST/'footprint',DEST/'sample',FIT):
-        validate(stage,inputs,lock)
+    cover = bind(DEST/'footprint'/'complete.json',inputs)
+    if cover['config']!=inputs['config']:
+        raise ValueError('Footprint geometry differs from the scoring protocol')
+    for stage in (DEST/'sample',FIT):
+        record = bind(stage/'complete.json',inputs)
+        if record['inputs']['geometry']!=inputs['config']:
+            raise ValueError(f'Geometry mismatch in {stage.name}')
     out = DEST/'score_supported'
     out.mkdir(parents=True,exist_ok=True)
     r = read(REFERENCE)
