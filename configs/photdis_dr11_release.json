@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "name": "Photdis DR11",
+  "baseline_commit": "ef329cc6e5a402149422922f7021892c4fcd8c0f",
+  "native_census": {"owned_rows": 72289386, "owned_pdf_rows": 43347612, "partitions": 28917},
+  "data_root": "/pscratch/sd/y/yunao/photdis_pipeline",
+  "source_index": "data/v3_9/delivery/unified_parts.csv",
+  "source_receipt": "data/v3_9/delivery/complete.json",
+  "sweep_ownership": {"function": "scripts/v3_9_unified.py:owner_rows",
+    "override_file": "data/v3_9/delivery/seam/ownership_overrides.npz",
+    "native_release": {"south": 11010, "north": 11011}, "admission": {"TYPE": "PSF"}},
+  "raw_pdf": {
+    "version": "frozen north v3.9 and south v3.5 QRF in v3.9 unified delivery",
+    "status_field": "state",
+    "states": {"0": "rejected photometry", "1": "lower SNR not sampled",
+               "2": "attempted but unsupported", "3": "full PDF"},
+    "key": ["ls_id", "TYPE"],
+    "photo_row": "Native expansion PDF row stores a zero-based pointer to its photo_file; frozen south stores photo and PDF on the same row.",
+    "fields": {
+      "ls_id": {"type": "int64", "description": "Original Legacy Surveys DR11 identity"},
+      "TYPE": {"type": "string", "allowed": ["PSF"]},
+      "qrf_quantiles_kpc": {"unit": "kpc", "probabilities": [0.025, 0.16, 0.5, 0.84, 0.975]},
+      "qrf_mu_edges": {"unit": "mag", "definition": "distance modulus = 10 + 5 log10(d/kpc)"},
+      "qrf_mu_mass": {"unit": "1", "definition": "normalized probability in each adjacent modulus interval"},
+      "qrf_bins": {"unit": "1", "edges_kpc": [0, 2, 5, 10, 20, 50, null],
+                   "definition": "integrals over fixed distance shells; final edge is positive infinity"}
+    }
+  },
+  "calibrated_near_pdf": {
+    "version": "v3.9 bright-red width companion",
+    "path": "data/v3_9/existing/pdf/{shard:02d}/{sweep}_{part}.npz",
+    "receipt": "manifests/v3_9/near_calibration/summary.json",
+    "rules": "manifests/v3_8/reliability/interval_calibration.csv",
+    "predicate": "v3.5 primary; no nominal numerical flag; 16 <= observed r < 18; 0 < d50 < 2 kpc; evaluated color/W1 cell",
+    "transform": "distance modulus edges expanded about the original median; original interval probability masses retained",
+    "join": ["ls_id", "TYPE"],
+    "raw_sidecar_rows_before_release_ownership": 1142280,
+    "inherit_release_owner": true
+  },
+  "selected_index": {
+    "path": "data/final_science/evidence/selected.npz",
+    "key": ["ls_id", "TYPE"],
+    "science_field": "science",
+    "regions": {"0": "south_v35", "1": "south_faint", "2": "south_low", "3": "north"},
+    "tiers": {
+      "1": {"label": "bright_red_near", "rows": 1115077,
+            "predicate": "south_v35 primary; no nominal numerical flag; 16 <= observed r < 18; 0.8 <= intrinsic g-r < 1.4; W1 state in [2,4]; d50 < 2 kpc"},
+      "2": {"label": "dwarf_enhanced_2_5", "rows": 1165946,
+            "predicate": "v3.10 working state 4 in north or south_low; 2 <= d50 < 5 kpc"},
+      "3": {"label": "dwarf_enhanced_5_10_research", "rows": 106196,
+            "predicate": "v3.10 working state 4 in north or south_low; 5 <= d50 < 10 kpc"}
+    },
+    "working_state4": "owned native PSF; observed r < 20; strict grz row_state 7; frozen QRF PDF; v3.10 dwarf score >= 0.80; P(2 <= d < 10 kpc) >= 0.50",
+    "gaia_state": {"0": "missing valid native Gaia ID", "1": "key not in archive", "2": "position mismatch",
+                   "3": "position confirmed, astrometry unqualified", "4": "weak signed parallax",
+                   "5": "intermediate signed parallax", "6": "reliable Gaia geometry",
+                   "7": "archive tile missing", "8": "ambiguous identity"}
+  },
+  "area": {
+    "table_north": "manifests/final_science/area/north/area_totals.csv",
+    "table_south": "manifests/final_science/area/south/area_totals.csv",
+    "unit": "deg2",
+    "definition": "Native grz covered random catalogue at low extinction, with unmasked and depth-specific levels; quality-gated source counts retain further object-level selection."
+  }
+}
