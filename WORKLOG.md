@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-17 — full catalogue atlas and selection-independent comparison
+
+- Read complete GPT Pro review f179b8a7 on e3abf916 and registered the goal
+  before edits. Kept the original models, selection, PDFs and style locked.
+- Raw arrays 61463578 and 61463579 reconcile the 2,126 DR11 sweeps with the
+  original row-state flags. Separated latitude, reddening and magnitude
+  failures including overlaps, and the distinct southern bright branch.
+  Sky array 61463681 closes 28,917 partitions and 43,347,612 owned PDFs.
+- Comparison parent 61463625 exports 49,308 unique observable-selected
+  spectra. Reran the public TAP joins on that frame. Job 61464193 tracks
+  both archival rows and position-qualified usable matches. Photdis keeps
+  its NMAD advantage over BJ photogeometric before the distance/class cut.
+- Population job 61464108 tests the empirical, disk-rich and halo-rich
+  template responses on held-out native spectra. Empirical counts pass in
+  all four reference/domain blocks. Neither LF tilt passes the transfer
+  criterion, so retain conditional contamination measurements.
+- Initial atlas 61464110 and numeric validation 61464194 passed. Added
+  explicit random-footprint captions and separate native-system panels.
+  Final atlas 61464280 and validation 61464281 completed 0:0. Nine Pal 5
+  plates passed visual and DPI/PDF checks. Large atlas arrays stay on NERSC.
+- 476 regressions passed. Verified the Aitoff raster geometry against
+  normalized display coordinates and target-count conservation in the
+  population draws. Deliver docs/final_catalogue.md and bound tables.
+
 ## 2026-11-17 — Release Readiness / Paper Decision
 
 - Read GPT Pro 6c0ffd81 on ef329cc6 and created the goal before changes.

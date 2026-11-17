@@ -1,0 +1,10 @@
+stage,figure,width,height
+atlas,F19_native_systems,6600,3600
+atlas,F16_catalogue_xyz,5100,3000
+atlas,F14_all_pdf_shells,6600,3600
+atlas,F18_catalogue_flow,3600,2100
+atlas,F17_catalogue_strata,5400,3000
+atlas,F04_science_random_coverage,6600,3600
+atlas,F13_catalogue_sky,6600,3600
+atlas,F04_weak_gaia_random_coverage,6600,3600
+benchmark/results,F15_independent_distances,4200,3600

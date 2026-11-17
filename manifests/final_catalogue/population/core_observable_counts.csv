@@ -1,0 +1,13 @@
+region,r_min,r_max,color_min,color_max,core_sources
+north,18.0,19.0,-inf,0.5,16753
+north,18.0,19.0,0.5,0.8,169405
+north,18.0,19.0,0.8,inf,111433
+north,19.0,20.0,-inf,0.5,0
+north,19.0,20.0,0.5,0.8,61547
+north,19.0,20.0,0.8,inf,259196
+south_low,18.0,19.0,-inf,0.5,6950
+south_low,18.0,19.0,0.5,0.8,52195
+south_low,18.0,19.0,0.8,inf,37535
+south_low,19.0,20.0,-inf,0.5,0
+south_low,19.0,20.0,0.5,0.8,18028
+south_low,19.0,20.0,0.8,inf,83998

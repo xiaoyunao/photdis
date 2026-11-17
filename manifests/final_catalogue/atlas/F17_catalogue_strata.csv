@@ -1,0 +1,25 @@
+group,region,n
+r < 20,south_v35,10986770
+r < 20,south_faint,0
+r < 20,south_low,1190517
+r < 20,north,4255027
+20 ≤ r < 21,south_v35,0
+20 ≤ r < 21,south_faint,5970975
+20 ≤ r < 21,south_low,0
+20 ≤ r < 21,north,2513805
+21 ≤ r < 23,south_v35,0
+21 ≤ r < 23,south_faint,14814831
+21 ≤ r < 23,south_low,0
+21 ≤ r < 23,north,3615687
+g − r < 0.5,south_v35,2929146
+g − r < 0.5,south_faint,5014765
+g − r < 0.5,south_low,330048
+g − r < 0.5,north,1968527
+0.5 ≤ g − r < 0.8,south_v35,2016095
+0.5 ≤ g − r < 0.8,south_faint,2960244
+0.5 ≤ g − r < 0.8,south_low,252640
+0.5 ≤ g − r < 0.8,north,1724615
+0.8 ≤ g − r,south_v35,6041529
+0.8 ≤ g − r,south_faint,12810797
+0.8 ≤ g − r,south_low,607829
+0.8 ≤ g − r,north,6691377

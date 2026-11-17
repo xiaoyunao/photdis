@@ -1,0 +1,9 @@
+side,rule,first_failure,anywhere
+south,legacy_bright_region,15212491,15212491
+south,latitude,0,0
+south,extinction,1630763765,1630763765
+south,magnitude,347351394,1651550234
+north,legacy_bright_region,0,0
+north,latitude,66912932,66912932
+north,extinction,32221238,97458917
+north,magnitude,64723612,122421237

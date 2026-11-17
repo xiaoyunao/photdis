@@ -1,0 +1,20 @@
+{
+  "job": "61464281",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "atlas": "fe34c71ec24555c72348a829be3957bbf0bcf03aa98d5603fc44d153339aa5c2",
+    "population": "8fa1629caa2e44414b7477cd0cc56bb2e89da7ec2975781848629c63a3b6acc4",
+    "benchmark/results": "7b5c1da038d5242e6e41043ccad1e1f1aafe873740cd5587277fa8f14f3a3ef8",
+    "bailer_jones": "da7a1053a397a4444b38d1dad22191a0252725f7f130b4c1ee69d0d0acd45d9c",
+    "gsp_phot": "d6491a752d74c66262ac3d1bf061d89695c8c307a1d6118003e852a012361451",
+    "starhorse": "dbb94b804fce031345b5460532640a4def8c8c4cd42a33c1121ef299e460c270"
+  },
+  "figures": 9,
+  "pairs": 1000,
+  "parent_sources": 49308,
+  "atlas_partitions": 28917,
+  "outputs": {
+    "figure_checks.csv": "7886b5d02438261ed2930364d6f9a2659953913db1a019c96a46cdb8a2aa8872",
+    "p1_test_summary.csv": "2f880672222dc597e14fde16caf5287ee5158ef6f98ac21e6b99acf87681be6d"
+  }
+}

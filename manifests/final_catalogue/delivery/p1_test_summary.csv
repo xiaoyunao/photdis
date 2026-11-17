@@ -1,0 +1,13 @@
+region,reference,scenario,cells,within95,tests,fraction,passes_90pct
+north,spdist,disk_rich,6,31,48,0.6458333333333334,False
+north,spdist,empirical,6,45,48,0.9375,True
+north,spdist,halo_rich,6,29,48,0.6041666666666666,False
+north,specdis,disk_rich,6,29,48,0.6041666666666666,False
+north,specdis,empirical,6,47,48,0.9791666666666666,True
+north,specdis,halo_rich,6,28,48,0.5833333333333334,False
+south_low,spdist,disk_rich,4,29,32,0.90625,True
+south_low,spdist,empirical,4,29,32,0.90625,True
+south_low,spdist,halo_rich,4,27,32,0.84375,False
+south_low,specdis,disk_rich,4,28,32,0.875,False
+south_low,specdis,empirical,4,29,32,0.90625,True
+south_low,specdis,halo_rich,4,26,32,0.8125,False

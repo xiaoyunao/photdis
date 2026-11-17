@@ -1,0 +1,13 @@
+region,r_min,r_max,color_min,color_max,parent_qualified_nonstellar,parent_class_conflict,parent_unclassified,core_qualified_nonstellar,core_class_conflict,core_unclassified
+north,18.0,19.0,-inf,0.5,32,0,33946,0,0,2360
+north,18.0,19.0,0.5,0.8,5,0,30834,4,0,24450
+north,18.0,19.0,0.8,inf,1,0,110746,0,0,18410
+north,19.0,20.0,-inf,0.5,69,0,46948,0,0,0
+north,19.0,20.0,0.5,0.8,13,0,33695,1,0,9884
+north,19.0,20.0,0.8,inf,7,0,121695,4,0,36580
+south_low,18.0,19.0,-inf,0.5,48,0,9063,0,0,809
+south_low,18.0,19.0,0.5,0.8,0,0,8097,0,0,6973
+south_low,18.0,19.0,0.8,inf,2,0,24678,1,0,5532
+south_low,19.0,20.0,-inf,0.5,102,0,9333,0,0,0
+south_low,19.0,20.0,0.5,0.8,14,0,8008,4,0,2811
+south_low,19.0,20.0,0.8,inf,4,0,27614,2,0,9216

@@ -1,5 +1,36 @@
 # PLAN
 
+## Final Catalogue and Independent Validation — completed
+
+Follow the complete GPT Pro review f179b8a7 on e3abf916. Keep the original
+PSF inputs, selection recipes, QRF estimates, spectra and the locked Pal 5
+style in place.
+
+- P0a. Split frozen sweep exclusions into latitude, dust and magnitude,
+  retain the southern legacy branch, verify all cuts against native rows,
+  and close the owned census. Accumulate full-release sky histograms and
+  compare complete PDFs and science projections with the random footprint.
+- P0b. Use native held-out spectra selected by apparent magnitude,
+  photometric quality, morphology and sky. Query exact published Gaia
+  IDs. Compare same-star distance and coverage with reference-distance
+  slices, before the Photdis class and median-distance cuts.
+- P1. Transfer the empirical selection response under fixed luminosity,
+  metallicity and disk/halo alternatives. Check predictive class counts
+  on independent reference sky cells and keep the model sensitivity limited
+  to the reference selection.
+
+Report results and interpretation in docs/final_catalogue.md, with
+frozen inputs and numeric receipts. Deliver both P0 products even if the
+conditional P1 class validation identifies population-transfer failure.
+
+The 2,126 sweeps, 28,917 release partitions, 43,347,612 PDFs and the
+random footprint close. On weak-Gaia spectroscopic dwarfs selected by
+observables, SpecDis and SPDist NMAD are 9.77% and 10.38%, versus 13.27%
+and 14.06% for BJ photogeometric. The empirical selection response
+passes within the qualified spectral frame. Two fixed LF alternatives
+fail the cross-domain criterion, so population fractions remain
+conditional. See [final results](docs/final_catalogue.md).
+
 ## Release Readiness / Paper Decision — completed
 
 Follow the complete review 6c0ffd81 on ef329cc6. Freeze the Final Science
