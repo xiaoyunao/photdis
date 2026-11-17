@@ -1,5 +1,23 @@
 # PLAN
 
+## Paper v2 scientific evidence
+
+Use GPT review ac05ae45 and the supplied v2 science-and-figures instructions.
+Lock the DR11 photometry, survey ownership, models and release PDFs at
+87069408. Reuse the v1 F15 pairing as the narrow benchmark.
+
+- P0-A. Scan the owned parent and full PDFs, attach signed Gaia and each
+  spectroscopic reference on the frozen positional and quality rules,
+  reproduce F15, and deliver counts, distance statistics and figures.
+- P0-B. Reconcile exact hard and soft 0–1, 1–10 and outside layers against
+  independent random-based area. Apply the separately frozen native CMD
+  filter gate to M5 and GD-1 before rendering any matched-filter layer.
+- P1. Use observed spectra to measure reference-distance migration with
+  separate unsupported and working-selection stages. Check matched
+  native photometry cells and reuse the archived cluster/stream controls.
+- Deliver data, figures and audit receipts. Scientific baselines and
+  manuscript sources stay outside this change.
+
 ## Manuscript v1 scientific evidence — completed
 
 Use frozen scientific commit 87069408 and the supplied v1 analysis prompt.

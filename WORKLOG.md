@@ -1,5 +1,16 @@
 # WORKLOG
 
+## 2026-11-17 — paper v2 full-catalogue reference tests
+
+- Read GPT reply ac05ae45 and the complete v2 instructions. Registered
+  the full goal before any work. Bound the original owned release and
+  the v1 evidence rather than expanding the prediction catalogue.
+- Submission 61471507 scans all 28,917 partitions on allocated CPUs.
+  NERSC workers verify native IDs, positions and PDF row correspondence.
+  Focused math/syntax checks and 476 existing tests passed.
+- Locked the native M30/M92 shifts, noise widths, background and trial
+  correction tests before opening the new M5/GD-1 control results.
+
 ## 2026-11-17 — v1 manuscript scientific evidence
 
 - Read GPT reply 9c9c8e1c, the complete supplied prompt and AASTeX evidence.
