@@ -86,7 +86,9 @@ def profiles(t,measurements,found,dest):
     coverage,pairs,overlap=[],[],[]
     valid={k:available(v) for k,v in measurements.items()}
     common=np.logical_and.reduce(list(valid.values()))
-    masks=(('all',np.ones(len(common),bool)),('north',t['region']==3),('south_low',t['region']==2))
+    role=(np.floor(t['RA']/10).astype(int)+3*np.floor((t['DEC']+90)/10).astype(int))%5
+    masks=(('all',np.ones(len(common),bool)),('north',t['region']==3),
+           ('south_low',t['region']==2),('all_role4',role==4))
     populations=strata(t)
     competitors=list(measurements)[1:]
     bit=np.zeros(len(common),'u1')
