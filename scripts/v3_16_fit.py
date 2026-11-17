@@ -21,7 +21,7 @@ METHODS = ('Frozen QRF','M13 CMD','M92 deep CMD')
 DEPTH = {'r < 20':(0,), '20 <= r < 21':(1,), '21 <= r < 22':(2,),
          'r < 21':(0,1), 'r < 22':(0,1,2)}
 DRAWS = P['spatial_draws']
-FIT = DEST/'fit_block'
+FIT = DEST/'fit_supported'
 
 
 def cluster_template(name,inputs):
@@ -67,6 +67,19 @@ def project(template):
     return u.reshape(len(MU),-1)
 
 
+def magnitude_response(extinction):
+    """Fraction of each dereddened r bin in each observed-r tier."""
+    edges = np.r_[-np.inf,LIMITS]
+    width = np.diff(APPARENT)
+    # The narrow attenuation range makes these quantiles sufficient for the
+    # window response; retain the measured distribution rather than shifting r.
+    shifts = np.quantile(extinction,(np.arange(101)+.5)/101)
+    limits = (edges[:,None,None]-APPARENT[None,None,:-1]-shifts[None,:,None])/width
+    cdf = np.clip(limits,0,1).mean(axis=1)
+    response = np.diff(cdf,axis=0)
+    return np.tile(response,(1,len(COLOR)-1))
+
+
 def arrays(t):
     cell = (t['block'].astype('i8')*len(OFFSETS)+t['ribbon'])*len(LIMITS)+t['tier']
     shape = (NSEG,NSTEP,len(OFFSETS),len(LIMITS))
@@ -99,7 +112,7 @@ def contrast(values,geo,j,keep,draw,variance=False):
 def fit_curves(h,q,v,area,eligible,j,draw,templates,depth):
     # Retain magnitude-tier exposure terms when combining independent tiers.
     count,noise = np.zeros((len(draw),len(D))),np.zeros((len(draw),len(D)))
-    num = np.zeros((len(templates),len(draw),len(D)))
+    num = np.zeros((templates.shape[1],len(draw),len(D)))
     den = np.zeros_like(num)
     for k in depth:
         bg = eligible[:,k].copy()
@@ -113,7 +126,7 @@ def fit_curves(h,q,v,area,eligible,j,draw,templates,depth):
         noise += contrast(v[:,:,k],geo,j,bg,draw,variance=True)
         signal = contrast(h[:,:,k],geo,j,bg,draw)
         var = np.maximum(contrast(h[:,:,k],geo,j,bg,draw,variance=True),5.)
-        for i,u in enumerate(templates):
+        for i,u in enumerate(templates[k]):
             num[i] += (signal/var)@u.T
             den[i] += (1/var)@(u*u).T
     z = np.divide(count,np.sqrt(noise),out=np.full_like(count,np.nan),where=noise>0)
@@ -135,12 +148,14 @@ def run():
     inputs = {'geometry':sha(CONFIG)}
     cov = read_receipt(DEST/'footprint','complete.json','area.npz',('area','coverage_ok','passed'),inputs)
     t = read_receipt(DEST/'sample','complete.json','sources.npz',
-                    ('TYPE','ls_id','r0','color','qrf','block','ribbon','tier'),inputs)
+                    ('TYPE','ls_id','r','r0','color','qrf','block','ribbon','tier'),inputs)
     assert np.all(t['TYPE']=='PSF') and len(np.unique(t['ls_id']))==len(t['ls_id'])
     np.testing.assert_allclose(t['qrf'].sum(axis=1,dtype='f8'),1.,atol=2e-7,rtol=0)
     h,q,v,n = arrays(t)
     sources = [cluster_template(name,inputs) for name in ('M13','M92')]
-    templates = [project(x[0]) for x in sources]
+    response = magnitude_response(t['r']-t['r0'])
+    base_templates = np.array([project(x[0]) for x in sources])
+    templates = base_templates[None]*response[:,None,None,:]
     area = cov['area'][1:].reshape(len(LIMITS),NSEG,NSTEP,len(OFFSETS)).transpose(1,2,3,0)
     eligible = cov['coverage_ok'].transpose(1,2,0)
     rng = np.random.default_rng(P['seed'])
@@ -180,7 +195,7 @@ def run():
     out.mkdir(parents=True,exist_ok=True)
     csv_rows(out/'segments.csv',rows)
     csv_rows(out/'controls.csv',controls)
-    atomic_npz(out/'curves.npz',distance=D,resample_blocks=weights,template_m13=sources[0][0],
+    atomic_npz(out/'curves.npz',distance=D,resample_blocks=weights,magnitude_response=response,template_m13=sources[0][0],
                template_m92=sources[1][0],color_edges=COLOR,absolute_edges=ABS,**content)
     save_json(out/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
         templates={name:x[1] for name,x in zip(('M13','M92'),sources)},

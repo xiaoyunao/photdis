@@ -113,7 +113,7 @@ def run():
     inputs = {'config':sha(CONFIG),'reference':CFHT,'reference_csv':sha(REFERENCE)}
     for stage in (DEST/'footprint',DEST/'sample',FIT):
         validate(stage,inputs,lock)
-    out = DEST/'score_release'
+    out = DEST/'score_supported'
     out.mkdir(parents=True,exist_ok=True)
     r = read(REFERENCE)
     ref = {float(a['phi1']):(float(a['distance_kpc']),float(a['error_kpc'])) for a in r}
