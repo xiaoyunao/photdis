@@ -31,6 +31,7 @@ TABLES = {
 RAD = np.deg2rad(C['position_match_arcsec']/3600)
 MODEL_NAMES = ('thin','cocoon','ambiguous','foreground')
 CFG = settings()
+NATIVE = dict(CFG['north'],maximum_grz_error_mag=CFG['maximum_grz_error_mag'])
 RAW_COLUMNS = ('RA','DEC','RELEASE','BRICKID','OBJID','TYPE','REF_CAT','REF_ID')
 
 
@@ -68,25 +69,38 @@ def external():
 
 
 def native_matches(path,e):
-    rows = fitsio.read(path,columns=list(RAW_COLUMNS),ext=1)
-    primary = (rows['RELEASE']==CFG['north']['release'])&in_tile(rows['RA'],rows['DEC'],tile_bounds(path))
-    i = np.flatnonzero(primary)
-    if not len(i):
-        return []
+    bounds = tile_bounds(path)
     p = np.array([[a['ra'],a['dec']] for a in e])
-    tree = cKDTree(unit(rows['RA'][i],rows['DEC'][i]).T)
-    centers = unit(p[:,0],p[:,1]).T
+    a,b,c,d = bounds
+    near = np.flatnonzero((p[:,0]>=a-.005)&(p[:,0]<c+.005)&(p[:,1]>=b-.005)&(p[:,1]<d+.005))
+    with fits.open(path,memmap=True) as hdus:
+        table = hdus[1].data
+        ra,dec = table['RA'],table['DEC']
+        lo,hi = p[near].min(axis=0)-.005,p[near].max(axis=0)+.005
+        i = np.flatnonzero((ra>=lo[0])&(ra<=hi[0])&(dec>=lo[1])&(dec<=hi[1]))
+        i = i[in_tile(ra[i],dec[i],bounds)]
+        if not len(i):
+            return []
+        tree = cKDTree(unit(ra[i],dec[i]).T)
+    centers = unit(p[near,0],p[near,1]).T
     choose = tree.query_ball_point(centers,2*np.sin(RAD/2))
     links = []
-    for j,indices in enumerate(choose):
+    indices_all = np.unique([i[k] for indices in choose for k in indices])
+    if not len(indices_all):
+        return links
+    rows = fitsio.read(path,rows=indices_all,columns=list(RAW_COLUMNS),ext=1)
+    for jj,indices in enumerate(choose):
+        j = near[jj]
         sel = i[indices]
         if not len(sel):
             continue
-        r = rows[sel]
+        r = rows[np.searchsorted(indices_all,sel)]
         xyz = unit(r['RA'],r['DEC']).T
-        arcsec = np.rad2deg(2*np.arcsin(np.linalg.norm(xyz-centers[j],axis=1)/2))*3600
+        arcsec = np.rad2deg(2*np.arcsin(np.linalg.norm(xyz-centers[jj],axis=1)/2))*3600
         ids = legacy_ids(r)
         for k,raw_index in enumerate(sel):
+            if r['RELEASE'][k]!=NATIVE['release']:
+                continue
             flag = str(r['REF_CAT'][k]).strip()
             if isinstance(r['REF_CAT'][k],bytes):
                 flag = r['REF_CAT'][k].decode().strip()
@@ -117,7 +131,7 @@ def qualities(path,links):
     raw = fitsio.read(path,rows=ix,ext=1)
     host = path.stem
     ans = {}
-    for p,_ in scan_chunk(raw,tile_bounds(path),CFG['north'],0):
+    for p,_ in scan_chunk(raw,tile_bounds(path),NATIVE,0):
         if not p:
             continue
         frac = np.column_stack([p['FRACFLUX_'+b] for b in 'GRZ'])
