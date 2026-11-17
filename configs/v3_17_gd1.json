@@ -1,0 +1,17 @@
+{
+  "review": "e58fa40a-6a17-4a89-97b4-aa81675d7289",
+  "far_offsets_deg": [-5.8,-4.8,4.8,5.8],
+  "blank_offsets_deg": [-7.8,-6.8,6.8,7.8],
+  "minimum_far_per_side": 1,
+  "minimum_blank_per_side": 1,
+  "ridge_half_width_mag": 0.10,
+  "ridge_Mr_range": [3.5,7.0],
+  "position_match_arcsec": 1.0,
+  "matched_member_probability": 0.5,
+  "gaia_candidate_probability": 0.9,
+  "minimum_z": 3.0,
+  "exploration_segments": [0,2,4],
+  "validation_segments": [1,3,5],
+  "minimum_exploration_pass": 1,
+  "minimum_validation_pass": 2
+}
