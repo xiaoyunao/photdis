@@ -141,7 +141,8 @@ def run():
     t['RA'],t['DEC'] = t.pop('ra'),t.pop('dec')
     t['TYPE'] = np.array([a['native_type'] for a in raw])
     t['group'] = np.array([a['group'] for a in raw])
-    t['clean'],t['qrf_archived'] = (np.array([x[k]=='True' for x in raw]) for k in ('clean','qrf_archived'))
+    for k in ('clean','qrf_archived','desi_qrf'):
+        t[k] = np.array([x[k]=='True' for x in raw])
     _,_,training=model_and_history('north',inputs)
     ledger = read_receipt(NORTH/'native_model','complete.json','roles.npz',('ls_id','role'),inputs)
     cut = np.isin(ledger['role'],('gaia_fit','specdis_fit','calibration'))
@@ -185,13 +186,17 @@ def run():
              cfht_kpc=ref['CFHT'],sdss_kpc=ref['SDSS'],median_kpc=pred[:,2],science=used).items()} for j in range(len(used))])
     b=shell_mass(edges,mass,CUTS)
     np.testing.assert_allclose(b.sum(axis=1),1.,rtol=0,atol=2e-7)
-    marks = (('Validation segment',1,10.125),('Exploration segment',2,10.375))
+    field = bind(V317/'distance'/'complete.json',inputs)
+    fields = read(verified(V317/'distance'/'scores.csv',field['outputs']['scores.csv']))
+    peaks = {int(x['segment']):float(x['distance_kpc']) for x in fields
+             if (x['cohort'],x['method'])==('same_qrf_source','Frozen QRF')}
+    marks = (('Validation segment',1,peaks[1]),('Exploration segment',2,peaks[2]))
     peak_rows=[]
     with plt.rc_context(STYLE):
         fig,axes=plt.subplots(1,2,figsize=(13,5.5),layout='constrained')
         for ax,(name,seg,field) in zip(axes,marks):
             for g,color in [('thin',BLUE),('cocoon',ORANGE)]:
-                take=used&(t['group']==g)&(t['segment']==seg)&(t['desi_ribbon']==0)
+                take=used&t['desi_qrf']&(t['group']==g)&(t['segment']==seg)&(t['desi_ribbon']==0)
                 mask=take[indices]
                 values=b[mask,1:-1].sum(axis=0)
                 if mask.any():
