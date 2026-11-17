@@ -2,6 +2,7 @@
   "baseline": "8706940843975e9f9af657ea298aa5b7c94f64bc",
   "validation": ["M5", "GD-1"],
   "native_templates": {"DECam": "M30", "BASS/MzLS": "M92"},
+  "template_construction": {"M30": "membership", "M92": "native on/off Hess with depth-22 unmasked random area, clipped at zero before smoothing"},
   "template_distance_kpc": {"M30": 8.49, "M92": 8.5},
   "template_age_gyr_approx": {"M30": 13.25, "M92": 13.25},
   "template_feh_dex_approx": {"M30": -2.3, "M92": -2.3},

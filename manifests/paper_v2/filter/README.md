@@ -1,8 +1,12 @@
 # Native CMD filter control
 
 Fixed setup in `configs/paper_v2_filter.json`. M30 supplies DECam and M92
-supplies BASS/MzLS, using independently archived low-crowding, native
-DR11 PSF members with individual training/calibration IDs excluded.
+supplies BASS/MzLS. M30 uses archived low-crowding native DR11 PSF members.
+The M92 strict member-only roster has fewer than 20 histogram inputs.
+Before evaluating either test field, the M92 construction was switched
+to the v3.16-style native target minus control Hess, with fixed depth-22
+unmasked random area and nonnegative cells. Training and calibration
+identities are excluded.
 Approximate ages are 13.25 Gyr and metallicities −2.3 dex. The empirical
 absolute magnitudes use the fixed 8.49 and 8.50 kpc scales. The main-sequence
 support is restricted to the template magnitude bins. The shifts span

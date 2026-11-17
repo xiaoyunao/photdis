@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Evaluate an empirical native CMD matched filter on the two frozen control fields."""
 from pathlib import Path
+import csv
 import json
 import os
 
@@ -10,6 +11,7 @@ from scipy.stats import norm
 
 from photdis.stage1 import galactic, require_compute
 from v2_1_near import ROOT, atomic_npz, csv_rows, save_json, sha
+from v3_3_sed import verified
 from v3_11_layers import read_receipt
 from v3_13_clusters import SYSTEMS, native_config, zones
 from v3_13_cmd import M5_CENTER,M5_D
@@ -34,11 +36,31 @@ def template(name,inp):
     t=read_receipt(AUDIT/name,'complete.json','native_join.npz',
         ('TYPE','g0','r0','r','target','member','low_crowding','cluster_mask','training_or_calibration'),inp)
     assert np.all(t['TYPE']=='PSF')
-    ok=t['target']&t['member']&t['low_crowding']&~t['cluster_mask']&~t['training_or_calibration']&(t['r']<22)
+    clean=t['low_crowding']&~t['cluster_mask']&~t['training_or_calibration']&(t['r']<22)
     c=t['g0']-t['r0']; m=t['r0']-10-5*np.log10(P['template_distance_kpc'][name])
-    h=np.histogram2d(c[ok],m[ok],(COLOR,ABS))[0]
-    if h.sum()<20: raise ValueError(f'{name} has inadequate native members')
-    return h,int(ok.sum())
+    def hist(mask):
+        return np.histogram2d(c[mask],m[mask],(COLOR,ABS))[0]
+    if name=='M30':
+        ok=clean&t['target']&t['member']
+        h=hist(ok)
+        meta=dict(method='members',target=int(ok.sum()))
+    else:
+        # This field's member-only strict subset truncates the lower main sequence.
+        # Reuse the independently measured on/off CMD construction of v3.16.
+        folder=AUDIT/name
+        record=json.loads((folder/'complete.json').read_text())
+        file=verified(folder/'area.csv',record['outputs']['area.csv'])
+        with file.open() as f:
+            area=[x for x in csv.DictReader(f) if x['limiting_r']=='22' and x['masked']=='False']
+        a,b=(sum(float(x['area_deg2']) for x in area if x['zone']==z) for z in ('target','background'))
+        assert a>0 and b>0
+        on,off=clean&t['target'],clean&~t['target']
+        h=np.maximum(hist(on)-(a/b)*hist(off),0)
+        meta=dict(method='target_minus_background',target=int(on.sum()),control=int(off.sum()),
+                  target_area=a,control_area=b,strict_members=int((on&t['member']).sum()))
+    if h.sum()<20:
+        raise ValueError(f'{name} has inadequate native template support')
+    return h,meta
 
 
 def projected(h,width):
