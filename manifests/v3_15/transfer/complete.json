@@ -1,0 +1,28 @@
+{
+  "job": "61446819",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "seed": 31509,
+    "resamples": 512,
+    "data/v3_14/audit/M30/complete.json": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+    "data/v3_14/audit/M5/complete.json": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "data/v3_14/structure/complete.json": "39f691ff32f41eb54fce213519d5c35a05926b9031092653719ed5fc6ef88238",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185m030-190m025.fits": {
+      "bytes": 1077770880,
+      "mtime_ns": 1780603772000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190m030-195m025.fits": {
+      "bytes": 1403737920,
+      "mtime_ns": 1780603892000000000
+    }
+  },
+  "outputs": {
+    "matched_transfer.pdf": "a52f828904959582d14b916297b5d78ba9ed2de6d5104ca6b07cbc802579c980",
+    "matched_transfer.png": "f0cd2c4616d936704125750d49963c661747831ccc3445e26c54660e1e4f55a0",
+    "rosters.npz": "f97690367f58fd23274ce2bc80e24ec93a87f30c236b0b9f2edaea1aa04c4a5f",
+    "matched_transfer.csv": "9d6f5344b63ac0774bdd22ff4d4b10c50717f83d4aba8b9252f9c81a6ce06250",
+    "matched_transfer.npz": "e85fb6ddf0dc25c016c6e5215dc6f5fb6534ae12fafb2088a2f83c08f836da86",
+    "comparison.csv": "9d6f5344b63ac0774bdd22ff4d4b10c50717f83d4aba8b9252f9c81a6ce06250",
+    "bootstrap.csv": "acf6106bc1e2a6b989dcdd49101d6570b702a162e6ecc4e04373a85211e354f1"
+  }
+}

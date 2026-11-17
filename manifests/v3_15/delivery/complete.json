@@ -1,0 +1,42 @@
+{
+  "job": "61447008",
+  "inputs": {
+    "data/v3_15/transfer/complete.json": "6efbf3ade2a0d151c719a0ff12c31b4f5f351b1acb6d2a45bb9d25b2f33a585c",
+    "data/v3_15/bands/north/complete.json": "740eee5ec13ea020b3058d8dd5f2a7b35f913f56ebd794482c1f98704ee6a679",
+    "data/v3_14/population/north/complete.json": "449b802b8b2afb41e54f8ea4067c0b2792b6cfa488cbabb7822f424a0665529a",
+    "data/v3_15/bands/south/complete.json": "069c6a58939ad811c0544746fe8efef4c48265c5d9d14e2954270c51a5d41b85",
+    "data/v3_14/population/south/complete.json": "58f3df53529b1f96b806f87754eb2862179b2e91321b6830d90c57a44a6869ec",
+    "data/v3_14/audit/M30/complete.json": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+    "data/v3_14/audit/M5/complete.json": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "data/v3_14/structure/complete.json": "39f691ff32f41eb54fce213519d5c35a05926b9031092653719ed5fc6ef88238",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185m030-190m025.fits": {
+      "bytes": 1077770880,
+      "mtime_ns": 1780603772000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190m030-195m025.fits": {
+      "bytes": 1403737920,
+      "mtime_ns": 1780603892000000000
+    }
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "transfer": "61446819",
+  "bands": {
+    "north": {
+      "job": "61446926",
+      "matched_tests": {
+        "grzi": 0,
+        "grzW1W2": 58915
+      }
+    },
+    "south": {
+      "job": "61446927",
+      "matched_tests": {
+        "grzi": 12940,
+        "grzW1W2": 11221
+      }
+    }
+  },
+  "outputs": {
+    "member_cmd.csv": "a896ee9d4b27dee5c54ca3b18814259f448d0b8e4a10dc6d9acf47bea70fb117"
+  }
+}

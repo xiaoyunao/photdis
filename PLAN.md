@@ -1,21 +1,19 @@
 # PLAN
 
-## v3.15 — matched CMD transfer and native-band information tests
+## v3.15 — completed matched CMD transfer and native-band tests
 
-Review 333c2df5-68f9-4966-8c49-a18305361005 at 11543c5 defines two
-small experiments. Preserve all production and previous independent tests.
+[Results](docs/v3_15_result.md). Review 333c2df5 at 11543c5 defined the two
+experiments. Keep the existing production models and previous tests.
 
-1. Repeat M5 and M68 under the same native DECam observable support and
-   quality rules, using the same frozen 99-member M30 template and matching
-   target/control QRF support. Cross the 99/1,077 template selections with
-   strict/all target selections. Use 512 paired fixed-seed resamples of the
-   99 template identities and report conditional peak intervals and window
-   significance. Keep reference distances out of fitting.
-2. Read the exact v3.14 held-out identities, along with original training
-   roles and native flux quality. Compare grz and each optional band view
-   on the same available test and fit objects. Measure support, branch
-   calibration and distance errors with and without true labels. Keep
-   the sparse-structure validation as a later experiment with its own scope.
+- The common 99-star M30 template gives peaks of 6.591 kpc for M5 and
+  10.327 kpc for M68. The scale difference persists across 512 paired
+  template resamples. Population-dependent transfer needs independent tests.
+- Matched grz, grzi and grzW1W2 comparisons retain strong intermediate-star
+  distance bias at 5–10 kpc. Known-branch distances make far fewer severe
+  errors. Keep the metal-poor dwarf QRF baseline and the full posteriors.
+- Future validation should freeze a sparse, low-crowding halo segment and
+  its independent distance track, controls, and same-source comparisons
+  before scoring. Keep this separate from catalog production.
 
 ## v3.14 — completed native cluster audit and population comparisons
 

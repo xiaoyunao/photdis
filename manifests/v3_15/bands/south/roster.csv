@@ -1,0 +1,9 @@
+pair,branch,train_parent,test_parent,train_pair,test_pair
+grzi,ordinary_dwarf,26999,11232,24501,10157
+grzi,metal_poor_dwarf,945,336,859,312
+grzi,intermediate,2257,918,2037,791
+grzi,giant,231,72,202,62
+grzW1W2,ordinary_dwarf,26999,11232,22752,9181
+grzW1W2,metal_poor_dwarf,945,336,596,203
+grzW1W2,intermediate,2257,918,1703,691
+grzW1W2,giant,231,72,201,60

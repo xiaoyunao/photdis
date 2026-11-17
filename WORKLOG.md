@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-17 — matched M30 transfer and optional-band information (v3.15)
+
+- Read the complete Pro review 333c2df5 of v3.14, registered the goal,
+  and froze the two matched comparisons before running them.
+- Added scripts/v3_15_transfer.py, v3_15_bands.py, v3_15_delivery.py and
+  run_v3_15.sh. At identical selection M5 still peaks 11.9% near while M68
+  peaks 0.7% near. 512 paired resamples preserve the difference. At fixed
+  absolute magnitude M5 is systematically redder than the M30 CMD.
+- Frozen v3.14 holdout: i and WISE give no consistent improvement for blue
+  intermediate-gravity stars at 5–10 kpc. Known-branch errors remain much
+  smaller. Preserve frozen metal-poor QRF and publish all class/quality strata.
+- Ran py_compile, interpolation/quantile smoke tests, 472 pytest regressions,
+  and v3.8 checksum and figure checks. NERSC jobs 61446819/61446926/61446927
+  and delivery 61447008 completed 0:0. Deliver docs/v3_15_result.md,
+  manifests/v3_15 and the v3.8-style comparison plate. A future sparse-halo
+  segment needs a separately frozen validation design and external scale.
+
 ## 2026-11-17 — audit DR11 cluster selection and test empirical population distances
 
 - Read Pro review 60197eff and registered the goal before edits. Rejoined
