@@ -1,0 +1,7 @@
+catalog,group,n,near_north_imaging,matched,matched_near_north_imaging,psf,clean,qrf_archived
+BHB,BHB,1,1,1,1,1,0,0
+DESI,ambiguous,1,1,1,1,1,0,0
+DESI,cocoon,128,128,128,128,128,108,109
+DESI,foreground,25,25,25,25,25,23,23
+DESI,thin,163,163,163,163,163,151,152
+Gaia+PS1,candidate,554,554,554,554,554,498,495

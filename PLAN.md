@@ -1,5 +1,22 @@
 # PLAN
 
+## v3.17 — GD-1 member recovery and main-sequence detection
+
+Follow review e58fa40a on the six frozen v3.16 segments. Use the corrected
+Jarvis Table 3 and high-precision DESI members, alongside Gaia DR3/PS1
+candidate memberships. Audit native PSF and local imaging before applying
+the frozen photometry and QRF support definitions. Compare Hess diagrams
+against near and distant foreground ribbons, retaining independent blank
+ribbons in the new geometry. Apply the fixed published main-sequence window.
+
+The gate passed in three native segments and two QRF-supported segments.
+Of the two reserved validation segments, only −32.5° yielded a reliable
+CMD distance. The frozen QRF distance is biased high; the other segment's
+free distance search does not beat its controls. Keep the local CMD result
+and the original forecasts. The evidence supports longer-gradient work
+only after independent coverage and stronger CMD distances are available.
+See [v3.17 results](docs/v3_17_gd1.md).
+
 ## v3.16 — completed GD-1 photometric distance and gradient validation
 
 Review bd5e53c0 starts a fixed BASS/MzLS test on six GD-1 segments

@@ -5,7 +5,11 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-The latest [v3.16 GD-1 results](docs/v3_16_gd1.md) compare three methods on
+The latest [v3.17 GD-1 results](docs/v3_17_gd1.md) audit DESI and Gaia member
+recovery, compare main-sequence excesses against near and distant controls,
+and evaluate frozen distance methods only where the detection gate passes.
+
+The [v3.16 GD-1 results](docs/v3_16_gd1.md) compare three methods on
 the same native northern sources and evaluate the distance scale, gradient
 and depth gains against independent photometric references.
 

@@ -1,0 +1,26 @@
+{
+  "job": "61459107",
+  "inputs": {
+    "config": "9c0c0bf1bb7ac40a2f5893269fb1ac5f0e0cf78ea07e13639a52243670dcf126",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1",
+    "data/v3_17/members_precise/complete.json": "b06cf0e4082e5f7e216bf3dbe9e752e20712372b082c816141adab4f2874dd1f",
+    "data/v3_17/hess/complete.json": "5c187022c3e854d5023f8c70d23c2338c492e00d5e10be5e52f6359bffc52a75",
+    "data/v3_17/distance/complete.json": "de4e0174f167dfbeec4dabc903f1792235d3ef01da273e378803eda49f5c9ca5",
+    "random": {
+      "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits",
+      "size": 5064027840,
+      "mtime_ns": 1780757234000000000
+    }
+  },
+  "distance_gate": true,
+  "signal_segments": [
+    1,
+    2,
+    5
+  ],
+  "outputs": {
+    "imaging.csv": "d49938e5aa4cd93e12d10dae16f12d0eece02274d8591a4abd58fb1d09fad17d",
+    "member_summary.csv": "a6f9dcf23de89cba46a74e6b46eb28b0786b7ded81dcd7b470eb24472ddb3922"
+  }
+}

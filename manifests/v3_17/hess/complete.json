@@ -1,0 +1,34 @@
+{
+  "job": "61458501",
+  "inputs": {
+    "config": "9c0c0bf1bb7ac40a2f5893269fb1ac5f0e0cf78ea07e13639a52243670dcf126",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "cfht": "2ffa35e36a01e804154698a76364d1d75402f3fa4dc6af95b9757a1e3af64b87",
+    "sdss": "51921bb743994bf9e1c1adc4d116f228a3e9b0f5f8ea5a03f4cb525160544a15",
+    "desi_modulus_curve": "c2ed28ca8341f40e001946e33c6e2ac513786ac5cad23be516ad6eaec7a1d651",
+    "bhb_points": "5b286259a1874c857b90155210e595fd108ec92fb7aa34f0941a602d30c8ef58",
+    "ridge_sha256": "d59d99bf3143bc3dfc91d9076468a01d8e87d8ccf9318f137ffd8d017f3ec0bc",
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1"
+  },
+  "signal_segments": [
+    1,
+    2,
+    5
+  ],
+  "authorize_distance_stage": true,
+  "outputs": {
+    "hess.npz": "bde585921a24b7923e8678259c5e5a2dac993ddf45a252db1d79cf7d9762c8be",
+    "references.csv": "c15d55b6fcfb6547e29d108c328051bff772b21844d1989677fa9376d3d44635",
+    "signal.csv": "f2c874c33e9bc61110764ed16ad7b99d02434ae42696f48e4e47df9f714f14f4",
+    "blank.csv": "73803ad00fed0f4346731dbc557b7a2b3546cd572ce33a1179a113388fd49841",
+    "hess_desi.csv": "ce529e3ffe37f25fad9bbdd0f70c196aab94e30b47a8a6e3eb2a264379227aa0",
+    "hess_desi.pdf": "81c49f9450025d4c0959da844c8fd63d9d3a2ff5606a43bf932e5cddbdff06ec",
+    "ribbons.csv": "5ef6abf0fa983ad6ea97099d581fc7193bbd036742adbfcdfd984919d1c69c9c",
+    "gradient.csv": "011bbb075add517bbec2836c911f38c69292ab481b53ab4b8320a7ec218387c1",
+    "bhb.csv": "00c239cedbac7e05a472d44fefbe38fe0f038303cca4c4a9779749d9928dad2b",
+    "hess_legacy.csv": "aa2bfcc0198c0ea77702ffa778f15d8699c4e6430c45e159d94b074b200a1b8a",
+    "hess_legacy.png": "d964ae4dee1ea4d0f6c9a45415f3f1b35b3b122916a429e835a38a7439fb50ae",
+    "hess_legacy.pdf": "bb866d7ebe53b96150c79ea6bbfb3381f71602d32e20fa2c62c8488f3ea50463",
+    "hess_desi.png": "4d73fa2d02131c9b6aa22552648730a6f1201df7c4db2f6862ddfb60e5281e8c"
+  }
+}

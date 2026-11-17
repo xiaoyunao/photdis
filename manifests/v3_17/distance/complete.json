@@ -1,0 +1,24 @@
+{
+  "job": "61458711",
+  "inputs": {
+    "config": "9c0c0bf1bb7ac40a2f5893269fb1ac5f0e0cf78ea07e13639a52243670dcf126",
+    "detection": "5c187022c3e854d5023f8c70d23c2338c492e00d5e10be5e52f6359bffc52a75",
+    "segments": [
+      1,
+      2,
+      5
+    ],
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1",
+    "frozen_qrf_parts": 88,
+    "data/v3_14/audit/M13/complete.json": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "reference_csv": "c15d55b6fcfb6547e29d108c328051bff772b21844d1989677fa9376d3d44635"
+  },
+  "max_validation_segments": 2,
+  "outputs": {
+    "fits.csv": "784791f2d3ff6916dc51720a75c89231b690aa6cee42604dc81617904cd2e2c1",
+    "scores.csv": "46dc50696ed56be23a569b36d784d869bd13bd6d34db212f83120f71d04d9a6d",
+    "distance.npz": "ce8f9256ccea783c062026e9b69b0b0eee1a38dc28cd515575d9532a258a0352",
+    "gradient.csv": "03a7da9c4791a333515f9a644157bcc1902e59e38cdbb0942ae69c526ff40fee"
+  }
+}

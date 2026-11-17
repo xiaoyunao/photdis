@@ -1,0 +1,130 @@
+{
+  "job": "61459081",
+  "inputs": {
+    "config": "9c0c0bf1bb7ac40a2f5893269fb1ac5f0e0cf78ea07e13639a52243670dcf126",
+    "external": {
+      "v4_Table1.fits": "e70a661e26feac5574bbd33f964eea0bf2d8adbd1f6ab8e31e76baa72b04c29d",
+      "v4_Table7_all.fits": "80fdb61ab706b8be960a69f920e3af64dd124de3bb6a3b00c9ca297c1ab34378",
+      "v4_Table8_all.fits": "c54dfbc1f88c2af0d7ad44ca90fa528a17f9aafca4e63a2998df779993a725e1",
+      "v3_Table7.fits": "20ad8f91d56616bacf6ff972f133a342696cb32a9089716055f036688a6dd242",
+      "v3_Table8.fits": "498ee03069b3602a2a3553525eead4e45c7155ac4de4a0cbcfced31e5ab9c216",
+      "v4_Figure3_empirical_isochrone.fits": "d59d99bf3143bc3dfc91d9076468a01d8e87d8ccf9318f137ffd8d017f3ec0bc",
+      "v4_Figure3_dotter_isochrone.fits": "2af9aed0494d78f6b4a84aa302765501728ab753d34ebf5adf7800c7e7136c25"
+    },
+    "gaia_audit": "6594470d992937a597baac207402a2e6025a76aa1e0a777fe1e20fbcacbcf826",
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-140p035-145p040.fits": [
+      608999040,
+      1780637402000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-145p035-150p040.fits": [
+      619617600,
+      1780637423000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-145p040-150p045.fits": [
+      569168640,
+      1780637410000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-150p035-155p040.fits": [
+      607403520,
+      1780637437000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-150p040-155p045.fits": [
+      557366400,
+      1780637453000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-150p045-155p050.fits": [
+      510793920,
+      1780637434000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-155p035-160p040.fits": [
+      604857600,
+      1780637467000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-155p040-160p045.fits": [
+      569183040,
+      1780637453000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-155p045-160p050.fits": [
+      510053760,
+      1780637452000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-155p050-160p055.fits": [
+      454118400,
+      1780637435000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-160p035-165p040.fits": [
+      612466560,
+      1780637488000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-160p040-165p045.fits": [
+      553795200,
+      1780637478000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-160p045-165p050.fits": [
+      487964160,
+      1780637466000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-160p050-165p055.fits": [
+      454279680,
+      1780637460000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-160p055-165p060.fits": [
+      414213120,
+      1780637458000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-165p045-170p050.fits": [
+      486671040,
+      1780637498000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-165p050-170p055.fits": [
+      469316160,
+      1780637493000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-165p055-170p060.fits": [
+      403185600,
+      1780637491000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-170p045-175p050.fits": [
+      496661760,
+      1780637518000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-170p050-175p055.fits": [
+      462029760,
+      1780637517000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-170p055-175p060.fits": [
+      386326080,
+      1780637509000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-175p045-180p050.fits": [
+      508501440,
+      1780637539000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-175p050-180p055.fits": [
+      435090240,
+      1780637538000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-175p055-180p060.fits": [
+      393232320,
+      1780637532000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-180p045-185p050.fits": [
+      522020160,
+      1780637575000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-180p050-185p055.fits": [
+      442094400,
+      1780637573000000000
+    ],
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-180p055-185p060.fits": [
+      396694080,
+      1780637560000000000
+    ]
+  },
+  "rows": 872,
+  "outputs": {
+    "members.csv": "566b8bff1d0537b017ca2c9db29d5668073fcc7318a1d39ed16af4a97bec20b7",
+    "retention.csv": "61a42e1d39cd74794c1a8d73f5497cec98e4821f294c984bbb1c6ea4800ea7a3"
+  }
+}

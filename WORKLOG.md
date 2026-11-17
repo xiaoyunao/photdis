@@ -1,5 +1,29 @@
 # WORKLOG
 
+## 2026-11-17 — audit GD-1 members, CMD signal, and local distances (v3.17)
+
+- Read full review e58fa40a and registered a goal before edits. Froze six
+  segments and the detection gate. Verified Jarvis Zenodo v3/v4 checksums
+  and independent Gaia DR3/PS1 input, with provenance for overlapping IDs.
+- Sample job 61458202 reproduced 175,328 native and the exact 142,098 QRF
+  IDs. Hess job 61458501 detected three native segments with distant controls
+  and blank bands. The QRF subset retained two. Drawn with locked v3.8 style.
+- The first member scan omitted the production grz threshold in native
+  extraction. Kept its log and reran with the threshold and sparse FITS
+  row association. The v4 table rounds sky positions. Reconciled release
+  IDs and substituted precise v3 positions, retaining v4 probabilities.
+- The gated distance run 61458711 left v3.16 products frozen. In the
+  −32.5° validation segment M13/M92/Dotter give 8.125 kpc on common PSFs,
+  while QRF gives 10.125 kpc. The second validation segment yields no
+  reliable distance peak. The gradient remains unresolved.
+- Ran targeted identity and background checks, Python compilation, and
+  476 regressions. Deliver docs/v3_17_gd1.md, manifests/v3_17 and two Hess
+  figures. Keep the measured local distance, existing catalog and limits.
+- Ran the sample/members/hess/distance/delivery stages via run_v3_17.sh.
+  Full-precision member audit 61459081 and final receipt 61459107 completed.
+  DESI near ribbons contain 72 classified cocoon members, of which 62 meet
+  native experiment cuts. Far ribbons contain five, all five meet the cuts.
+
 ## 2026-11-17 — GD-1 distance and depth validation (v3.16)
 
 - Read complete Pro review bd5e53c0 and registered the goal before edits.
