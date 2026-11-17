@@ -48,7 +48,7 @@ def zones(name,ra,dec):
 
 
 def native_config(name):
-    side = 'south' if name in ('M30','M5') else 'north'
+    side = 'south' if name in ('M30','M5','M68') else 'north'
     all_cfg = settings()
     cfg = all_cfg[side]
     ebv = .08 if side=='south' else .03

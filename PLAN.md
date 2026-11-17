@@ -18,6 +18,22 @@ Preserve all published production and independent-test artifacts.
   low-crowding, outside-mask rows if enough exist. Keep field validation
   and any special-processing overlap explicit. Test the 10% scale target.
 
+### Fixed follow-on comparisons
+
+M13 masked and unmasked low-crowding members retain the same residual signs.
+Run the four physical branch diagnostics on the v3.11 fixed field roles,
+excluding the audited cluster fields and M68. Build the empirical luminosity
+mixture from local two-color neighborhoods and leave catalog priors uncalibrated.
+
+M68 (189.86658°, −26.74406°) is the registered DECam structure for the
+single final transfer. Use the external 10.404 kpc distance only for scoring.
+Fix M30 native DECam as the template. Use the same CMD and signed
+target-minus-background treatment as v3.13. Before admitting the strict
+comparison require 30 low-crowding off-mask member matches in the target
+and template, and at least 30 common rows in each annulus. Use nominal
+3-sigma reference-window evidence and ≤10% peak error. Report the
+all-admitted profile separately as a special-processing diagnostic.
+
 ## v3.13 — completed cluster luminosity, depth and independent CMD tests
 
 [Results and adoption decision](docs/v3_13_result.md).
