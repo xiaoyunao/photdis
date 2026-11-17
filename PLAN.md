@@ -1,5 +1,22 @@
 # PLAN
 
+## v3.15 — matched CMD transfer and native-band information tests
+
+Review 333c2df5-68f9-4966-8c49-a18305361005 at 11543c5 defines two
+small experiments. Preserve all production and previous independent tests.
+
+1. Repeat M5 and M68 under the same native DECam observable support and
+   quality rules, using the same frozen 99-member M30 template and matching
+   target/control QRF support. Cross the 99/1,077 template selections with
+   strict/all target selections. Use 512 paired fixed-seed resamples of the
+   99 template identities and report conditional peak intervals and window
+   significance. Keep reference distances out of fitting.
+2. Read the exact v3.14 held-out identities, along with original training
+   roles and native flux quality. Compare grz and each optional band view
+   on the same available test and fit objects. Measure support, branch
+   calibration and distance errors with and without true labels. Keep
+   the sparse-structure validation as a later experiment with its own scope.
+
 ## v3.14 — completed native cluster audit and population comparisons
 
 [Results](docs/v3_14_result.md). The luminosity residual signs persist in
