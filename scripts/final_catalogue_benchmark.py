@@ -3,7 +3,6 @@
 import argparse
 import json
 import os
-from pathlib import Path
 
 import numpy as np
 
@@ -100,9 +99,10 @@ def published(t, expected):
         np.testing.assert_array_equal(ids[k],data['source_id'])
         assert len(np.unique(k))==len(k)==a['matched']
         inputs[name]=sha(p)
+        linked=np.isin(t['gaia_state'][k],(3,4,5,6))
         for method in methods:
             q[method]=np.full((len(ids),3),np.nan)
-            q[method][k]=data[method]
+            q[method][k[linked]]=data[method][linked]
             found[method]=np.zeros(len(ids),bool)
             found[method][k]=True
     return q,found,inputs
@@ -112,13 +112,18 @@ def masks(t):
     c=t['g0']-t['r0']
     rr=np.where(t['redrock_quality_assessed'],t['redrock_SPECTYPE'],'')
     group=classes(t,rr)
+    weak=np.isin(t['gaia_state'],(3,4,5))
     sets=dict(all=np.ones(len(c),bool),north=t['region']=='north',south_low=t['region']=='south_low',
         blue=c<.5,intermediate_color=(c>=.5)&(c<.8),redder=c>=.8,
         dwarfs=t['class_label']==0,poor_dwarfs=group=='dwarf_feh_lt_minus1p5',
         ordinary_dwarfs=group=='dwarf_feh_ge_minus1p5',intermediate_gravity=group=='intermediate_gravity',
-        giants=group=='giant',weak_gaia=np.isin(t['gaia_state'],(3,4,5)),
+        giants=group=='giant',weak_gaia=weak,
+        bright_half=t['r']<19,faint_half=t['r']>=19,
         reliable_geometry=t['gaia_state']==6,unqualified_link=t['gaia_state']<3,
-        weak_gaia_dwarfs=np.isin(t['gaia_state'],(3,4,5))&(t['class_label']==0))
+        weak_gaia_dwarfs=weak&(t['class_label']==0),
+        weak_gaia_ordinary=weak&(group=='dwarf_feh_ge_minus1p5'),
+        weak_gaia_poor=weak&(group=='dwarf_feh_lt_minus1p5'),
+        weak_gaia_intermediate=weak&(group=='intermediate_gravity'))
     return sets
 
 
@@ -135,7 +140,10 @@ def evaluate(out,t,q,found):
                 for m,x in q.items():
                     coverage.append(dict(group=group,reference=label,lo=lo,hi=hi,method=m,n=int(base.sum()),
                       queried=int((base&t['unique_gaia']).sum()) if m!='Photdis' else int(base.sum()),
-                      matched=int((base&found[m]).sum()),valid=int((base&valid[m]).sum()),
+                      matched=int((base&found[m]).sum()),
+                      qualified_link=int((base&found[m]&np.isin(t['gaia_state'],(3,4,5,6))).sum())
+                         if m!='Photdis' else int((base&found[m]).sum()),
+                      valid=int((base&valid[m]).sum()),
                       valid68=int((base&interval_ok(x)).sum())))
                 for other in list(q)[1:]:
                     j=base&valid['Photdis']&valid[other]
