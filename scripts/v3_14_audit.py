@@ -176,16 +176,9 @@ def statistics(name,t):
     return samples,paired
 
 
-def run(name):
-    inputs = {'style':check_templates(),'bits':'https://www.legacysurvey.org/dr11/bitmasks/'}
-    t = get_rows(name,inputs)
-    t.update(read_flags(name,t,inputs))
-    annotate(t,name)
-    samples,paired = statistics(name,t)
-    out = DEST/name
-    out.mkdir(parents=True,exist_ok=True)
-    csv_rows(out/'matched_cells.csv',paired)
-    csv_rows(out/'area.csv',area(name,inputs))
+def plot(name,t,samples,out):
+    if name=='M5':
+        SYSTEMS[name] = M5_CENTER,M5_D
     with plt.rc_context(STYLE):
         f,axes = plt.subplots(1,4,figsize=(19,5.5),layout='constrained',sharey=True)
         delta = 5*np.log10(SYSTEMS[name][1]/t['qrf_kpc'][:,2])
@@ -197,15 +190,46 @@ def run(name):
                            rasterized=True)
             ax.axhline(0,color='0.5',lw=1,ls='--')
             ax.set(title=f'r < {hi:g}' if not np.isfinite(lo) else f'{lo:g} ≤ r < {hi:g}',
-                   xlabel='Dereddened g − r (mag)',ylim=(-2.5,3.5))
+                   xlabel='Dereddened g − r (mag)',xlim=(-.2,1.7),ylim=(-2.5,3.5))
             ax.legend()
         axes[0].set_ylabel('Predicted minus reference absolute r (mag)')
         f.suptitle(f'{name} · native DR11 mask and crowding audit')
         save(f,out,'mask_residuals',samples)
+
+
+def run(name):
+    inputs = {'style':check_templates(),'bits':'https://www.legacysurvey.org/dr11/bitmasks/'}
+    t = get_rows(name,inputs)
+    t.update(read_flags(name,t,inputs))
+    annotate(t,name)
+    samples,paired = statistics(name,t)
+    out = DEST/name
+    out.mkdir(parents=True,exist_ok=True)
+    csv_rows(out/'matched_cells.csv',paired)
+    csv_rows(out/'area.csv',area(name,inputs))
+    plot(name,t,samples,out)
     atomic_npz(out/'native_join.npz',**t)
     save_json(out/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,rows=len(t['TYPE']),
         mask_rows=int(t['cluster_mask'].sum()),matched_cells=len(paired),
         outputs={f.name:sha(f) for f in out.iterdir() if f.name!='complete.json'}))
+
+
+def redraw(name):
+    out = DEST/name
+    inputs = {}
+    keys = ('TYPE','target','member','low_crowding','r','g0','r0','qrf_kpc','cluster_mask')
+    t = read_receipt(out,'complete.json','native_join.npz',keys,inputs)
+    receipt = json.loads((out/'complete.json').read_text())
+    if receipt['inputs']['style']!=check_templates():
+        raise ValueError('Historical figure style lock is invalid')
+    with (out/'mask_residuals.csv').open() as f:
+        from csv import DictReader
+        rows = list(DictReader(f))
+    plot(name,t,rows,out)
+    receipt['figure_job'] = os.getenv('SLURM_JOB_ID')
+    receipt['inputs']['figure_script'] = sha(Path(__file__))
+    receipt['outputs'] = {file:sha(out/file) for file in receipt['outputs']}
+    save_json(out/'complete.json',receipt)
 
 
 if __name__=='__main__':

@@ -10,7 +10,7 @@ from v2_1_near import ROOT, save_json, sha
 from v3_6_vac_distances import read_columns
 from v3_10_figures import check_templates
 from v3_13_delivery import figure_check
-from v3_14_audit import DEST as AUDIT, MASK
+from v3_14_audit import DEST as AUDIT, MASK, redraw
 from v3_14_population import DEST as POPULATION, MIN_MASS
 from v3_14_structure import DEST as STRUCTURE
 
@@ -68,4 +68,10 @@ def run():
 
 if __name__=='__main__':
     require_compute()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--redraw',action='store_true')
+    if parser.parse_args().redraw:
+        for name in ('M92','M13','M30','M5'):
+            redraw(name)
     run()
