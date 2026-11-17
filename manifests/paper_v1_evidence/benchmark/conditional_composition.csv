@@ -1,0 +1,7 @@
+reference,region,n_spectral_distance,n_stellar_label,n_unknown,giant,intermediate,severe,giant_severe,intermediate_severe,redrock_assessed_in_observable_frame,redrock_nonstellar_in_assessed,phase_nonstellar_in_observable_frame
+SpecDis,north,8307,6200,2107,46,118,409,46,82,0,0,0
+SPDist,north,7581,5727,1854,40,104,229,40,79,0,0,0
+SpecDis,south_low,2353,1814,539,0,24,55,0,17,0,0,0
+SPDist,south_low,2217,1716,501,0,20,29,0,13,0,0,0
+SpecDis,all,10660,8014,2646,46,142,464,46,99,0,0,0
+SPDist,all,9798,7443,2355,40,124,258,40,92,0,0,0

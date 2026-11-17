@@ -1,6 +1,6 @@
 # PLAN
 
-## Manuscript v1 scientific evidence
+## Manuscript v1 scientific evidence — completed
 
 Use frozen scientific commit 87069408 and the supplied v1 analysis prompt.
 The manuscript belongs to the writing task. Derive coverage and calibration
@@ -15,6 +15,10 @@ check in an independent directory.
   rare-count diagnostics. Keep already reported migration and LF evidence.
 - P0-C prepare 6–8 article figure candidates and matrix provenance.
 - P2 verify access and deliver science evidence for the writing revision.
+
+Final QA 61469684 passed. See [scientific handoff](docs/paper_v1_evidence.md),
+[figure candidates](docs/paper_v1_figures.md) and [data access](docs/paper_v1_data_access.md).
+The manuscript and public hosting remain with the writing and release stages.
 
 ## Photdis v3 science closeout — completed
 

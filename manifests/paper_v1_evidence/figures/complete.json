@@ -1,0 +1,33 @@
+{
+  "job": "61469682",
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "benchmark": "69f18b92a383446382ea611926f96b3a4bb67e4bd764aecb055bb9d59e5f6aaa",
+    "density": "a82ab22312de1485ba18a59b9f6e6974b5fe73f2af0b56a42d5af1ec30ed2853",
+    "space": "fe34c71ec24555c72348a829be3957bbf0bcf03aa98d5603fc44d153339aa5c2"
+  },
+  "outputs": {
+    "native_luminosity_residuals.csv": "09f1c947c1f108d449c3a2678c90c042c93f0829052eb41cb074d1cad3de4221",
+    "observable_support.png": "f953d96656b686fa337585767492aee70f9921045a23c5a7a87e0a13ed905a21",
+    "native_luminosity_residuals.pdf": "724225bc9eb0c33746a389057a9282f9d8158601fbf2e7455f13b6493b61dc22",
+    "pdf_calibration.pdf": "ec6e17a559cca55a8a3e8fe6df3b9c181fcde18f19af99af50760f77cf4559f6",
+    "f21_catalogue_density.csv": "4a6c0341389a92e6d5fd775b4e199194bfa29a7a2849d828584903e2f7f59007",
+    "f21_catalogue_density.pdf": "b30a3f8ea222457270328c7e51c859b92aa203d7eb82ea1f754ffbd59cc38045",
+    "f16_heliocentric_projections.csv": "8a95f75b2d9d38ef2b20a38b13c20a9bc34e2f0f1a44f61c8e5e583cdad0e19b",
+    "f21_catalogue_density.png": "bd5903e2f4a71240d3378f42779b974f8eeca4cfddcce6e52b88d38030526fd7",
+    "observable_support.pdf": "f2514461b14f576c49085fc9d8909c2e1e24e9b1fb7944739e35c2372463f001",
+    "pdf_calibration.csv": "4d65766506626471443966d8ce4536be543d52a216009f3c06e985b9637dc5a0",
+    "native_luminosity_residuals.npz": "0b324c826f91d75b4833577d840f035c517ae1f74102261432563c7d2363b9b7",
+    "observable_support.csv": "13db4ffda0fcc464004743674237e2d597c94f35c076086a06a171b8fb673882",
+    "f16_heliocentric_projections.png": "a60fca5cc2996f9a9cb2162b7663401153ed2b35afa4db8d4b399d12fac50d49",
+    "f15_same_star_distances.pdf": "a0708d31b10eec8c1072d259d737b10fe26f5e786b1aaeecffa54e3be9f36232",
+    "f15_same_star_distances.npz": "f15ba1e187f7b5f367d7b31a24970aa173cafdfe55012f84c24a2712337c3c23",
+    "f16_heliocentric_projections.pdf": "7e9a7d2a9cc1524c6e257d4e3a944a71551f07e6667b9c797e9e92be9be78bce",
+    "observable_support.npz": "dde2ce253955858651ac243ac9fd69f1d46bca680e736aa659cf043f3a73ab4e",
+    "native_luminosity_residuals.png": "25b679578d7b6f1342a76b41d7559aa8f283d91794b4ee9dfbbceddd56abe6cc",
+    "f15_same_star_distances.csv": "72bd1229f8abfa98071daf6da8ed97b70291e091bdca7e4bd24097ec49da9a05",
+    "pdf_calibration.png": "eb25a4932aef22b9a409dc2acebb38ab9d61aeb1fd7ccdb69870c1e83c3a629f",
+    "f16_heliocentric_projections.npz": "93febe6423f0208738898e9e8abbc57380a2b1e10e22e28db385897b82b43549",
+    "f15_same_star_distances.png": "6da392cca8dd64efad21dc0fd71cd4bce33632da40a2bd5975feff5b7c0dc2a3"
+  }
+}

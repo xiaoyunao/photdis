@@ -1,0 +1,76 @@
+{
+  "axis_order": [
+    "region",
+    "r",
+    "g_r",
+    "r_z",
+    "max_grz_error",
+    "ebv",
+    "sky"
+  ],
+  "dimensions": [
+    4,
+    9,
+    9,
+    5,
+    5,
+    4,
+    48
+  ],
+  "bounds": {
+    "r": [
+      "-inf",
+      16.0,
+      18.0,
+      19.0,
+      20.0,
+      21.0,
+      22.0,
+      23.0,
+      "inf"
+    ],
+    "g_r": [
+      "-inf",
+      0.0,
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      1.05,
+      1.4,
+      "inf"
+    ],
+    "r_z": [
+      "-inf",
+      0.15,
+      0.35,
+      0.65,
+      "inf"
+    ],
+    "max_grz_error": [
+      "-inf",
+      0.035,
+      0.085,
+      0.16,
+      "inf"
+    ],
+    "ebv": [
+      "-inf",
+      0.015,
+      0.025,
+      "inf"
+    ]
+  },
+  "sky": "nested equatorial HEALPix nside 2",
+  "regions": [
+    "south_v35",
+    "south_faint",
+    "south_low",
+    "north"
+  ],
+  "unknown_bin": "final bin in each continuous axis",
+  "min_pair": 20,
+  "score_support": "counts of weak-geometry, reference 2\u20135 kpc F15 paired dwarfs",
+  "caution": "observable overlap; the target tier does not enter the F15 admission",
+  "weight": "source-to-reference ratio within common selected cells, rescaled mean 1 then clipped 0.1\u201310"
+}

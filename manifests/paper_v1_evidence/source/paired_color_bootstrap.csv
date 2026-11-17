@@ -1,0 +1,13 @@
+region,color_bin,reference,n,delta_nmad_pp,low95_pp,high95_pp
+North,blue,SpecDis,1071,-2.16,-3.67,-0.03
+North,blue,SPDist,1228,-1.97,-3.8,0.12
+North,mid,SpecDis,3813,-3.73,-4.3,-3.04
+North,mid,SPDist,3546,-4.05,-4.73,-3.39
+North,red,SpecDis,2407,-3.86,-4.35,-3.27
+North,red,SPDist,2213,-3.25,-3.94,-2.52
+South,blue,SpecDis,234,-2.71,-3.74,1.45
+South,blue,SPDist,269,-0.38,-2.42,2.09
+South,mid,SpecDis,1032,-2.76,-3.56,-0.28
+South,mid,SPDist,989,-3.65,-4.55,-0.79
+South,red,SpecDis,798,-2.29,-2.71,-1.84
+South,red,SPDist,682,-1.73,-3.04,-1.35

@@ -7,13 +7,15 @@ import os
 import numpy as np
 
 from photdis.stage1 import require_compute
+from photdis.reference_v1_4 import unique_join
 from v2_1_near import ROOT, csv_rows, save_json, sha
 from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
 from v3_9_catalog import OUT as NATIVE
-from final_catalogue_benchmark import load_parent, published, masks
-from final_catalogue_population import OUT as LF
+from final_catalogue_benchmark import load_parent, parent, published, masks
+from final_catalogue_population import OUT as LF, phase
 from release_readiness_compare import available
+from v3_10_redrock import DEST as RR
 from paper_v1_scan import OUT
 
 
@@ -61,6 +63,15 @@ def roster(t, headline, inputs, dest):
     assert sum(x['n'] for x in rows if x['training_native']=='DECam' and
                x['test_frame']=='parent' and x['test_domain']=='all')==32768
     csv_rows(dest/'training_overlap.csv',rows)
+    def block(a,d):
+        return (a//10).astype(int)*18+np.minimum(((d+90)//10).astype(int),17)
+    k=block(b['RA'][ii],b['DEC'][ii])
+    z=block(t['RA'],t['DEC'])
+    csv_rows(dest/'south_training_sky.csv',[dict(test_frame=name,n=int(use.sum()),
+        southern_fit_blocks=len(np.unique(k)),test_blocks=len(np.unique(z[use])),
+        common_blocks=len(np.intersect1d(k,z[use])),test_rows_in_south_fit_blocks=int((use&np.isin(z,k)).sum()))
+        for name,j in (('parent',np.ones(len(z),bool)),*headline.items())
+        for use in (j&(t['region']=='south_low'),)])
 
 
 def lf_summary(inputs,dest):
@@ -86,6 +97,34 @@ def lf_summary(inputs,dest):
     csv_rows(dest/'lf_positive_counts.csv',rows)
 
 
+def nonstellar_control(inputs,dest):
+    p=RR/'complete.json'
+    m=json.loads(p.read_text())
+    a=read_columns(verified(p.with_name('qualified.npz'),m['outputs']['qualified.npz']),
+                   ('ls_id','TYPE','qualified'))
+    rows=[]
+    for domain in ('north','south'):
+        t=parent(domain,inputs)
+        labels=phase(t,inputs)
+        j=unique_join(t['ls_id'],a['ls_id'])
+        matched=j>=0
+        np.testing.assert_array_equal(a['TYPE'][j[matched]],t['TYPE'][matched])
+        rr=np.where(t['redrock_quality_assessed'],t['redrock_SPECTYPE'],'').astype('U8')
+        matched[matched] = a['qualified'][j[matched]]!=''
+        rr[matched]=a['qualified'][j[matched]]
+        d=t['qrf_quantiles_kpc'][:,2]
+        obs=(t['r']>=18)&(t['r']<20)&(t['sky_role']==4)&t['evaluation_row']&(t['row_state']==7)
+        for stage,w in (('supported',t['state']>=2),('core_2_5',
+                        (t['state']==4)&(d>=2)&(d<5))):
+            z=obs&w
+            rows.append(dict(region=t['region'][0],stage=stage,n_heldout=int(z.sum()),
+                n_redrock_class=int((z&np.isin(rr,('STAR','QSO','GALAXY'))).sum()),
+                n_nonstellar=int((z&np.isin(rr,('QSO','GALAXY'))).sum()),
+                nonstellar_unconflicted=int((z&(labels=='qualified_nonstellar')).sum()),
+                class_conflicts=int((z&(labels=='class_conflict')).sum())))
+    csv_rows(dest/'redrock_nonstellar.csv',rows)
+
+
 def main():
     require_compute()
     d=OUT/'provenance'
@@ -96,6 +135,7 @@ def main():
     headline={s:use&(t[s.lower()+'_kpc']>=2)&(t[s.lower()+'_kpc']<5) for s in ('SpecDis','SPDist')}
     roster(t,headline,inputs,d)
     lf_summary(inputs,d)
+    nonstellar_control(inputs,d)
     save_json(d/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
         outputs={p.name:sha(p) for p in d.glob('*.csv')}))
 

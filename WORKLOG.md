@@ -12,6 +12,17 @@
 - Provenance job 61469471 verified archived fit identities and conditional
   LF positive-cell coverage. No fit identity overlapped either headline pair.
   Syntax, shell, focused numerical replay and 476 regressions passed.
+- Benchmark 61469548 closed all 43,347,612 PDF rows and both core tiers,
+  regenerated paired distance checks and replayed 41,563 signed Gaia
+  observations. The new coverage sidecar has one keyed row per core PSF.
+- Provenance 61469602 also verified southern training sky tiles and
+  conditional Redrock contamination controls. Final figure 61469682 and
+  delivery 61469684 verified assets, checksums, three portable core lookups
+  and a 23-source raw/near-width replay. Eight candidate plates reviewed.
+- Compiled unchanged TeX/BibTeX source with the compact F21 asset in a
+  separate copy. All seven original figure slots are visible in 19 pages.
+  Remaining inherited AASTeX float warnings are recorded. Handoff goes to
+  the writing task and the versioned data are staged on NERSC.
 
 ## 2026-11-17 — v3 final science closeout
 

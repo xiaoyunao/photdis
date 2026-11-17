@@ -1,0 +1,59 @@
+{
+  "source_zip_sha256": "8b4550fcec6e180861b1e316a47c9c5ad25759d2ee0cc827c129e274eef0b6ae",
+  "compiled_source": {
+    "manuscript.tex": "9e461ac87bc8b3cad048a567b2711ef977dfdb5f1e47a9e833ce48a0086df32a",
+    "references.bib": "1583e69f25aa6a962847f6fb3f4676a7d0747f2137352c826c9ab2dfca9fc0bd"
+  },
+  "compiler": "Tectonic",
+  "pages": 19,
+  "caption_pages": {
+    "1": 4,
+    "2": 8,
+    "3": 9,
+    "4": 10,
+    "5": 11,
+    "6": 14,
+    "7": 15
+  },
+  "frozen_import_manifest": {
+    "figures": [
+      {
+        "file": "F21_full_density.pdf",
+        "repository_path": "figures/v3_final/F21_full_density.pdf",
+        "commit": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+        "bytes": 650088,
+        "sha256": "fa1783c413761a0dfb6c42466a2cf8cd96699a7f7a582f166c8efdf1e85db26b"
+      },
+      {
+        "file": "F15_independent_distances.pdf",
+        "repository_path": "figures/final_catalogue/F15_independent_distances.pdf",
+        "commit": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+        "bytes": 52440,
+        "sha256": "c00616563000a8b5a79e76c550995d5edb67637c4fbacc039a15324ae0d49554"
+      },
+      {
+        "file": "F10_distance_residuals.pdf",
+        "repository_path": "figures/final_science/F10_distance_residuals.pdf",
+        "commit": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+        "bytes": 113752,
+        "sha256": "1c28c1958369f8e1d925d0e7b2b9f648b7b4c0548980cd45a9b2fa9a4c8d6c40"
+      },
+      {
+        "file": "F16_catalogue_xyz.pdf",
+        "repository_path": "figures/final_catalogue/F16_catalogue_xyz.pdf",
+        "commit": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+        "bytes": 239518,
+        "sha256": "fcf17c2ae8a103fd27982eeabc72c55039960eac807e830368fb2eb3111cfe73"
+      }
+    ],
+    "failed": []
+  },
+  "preview_F21_asset": "f21_catalogue_density.pdf",
+  "preview_F21_sha256": "6ce947f6e1ce4ff4ba204f807996feb36fb5d135e0c757ff76af742c1af497eb",
+  "preview_pdf_sha256": "c16ed73bf939abca61e15abce54d0d5d69a75d5f42b735601db15feb7dccd6fc",
+  "open_float_layout_warnings": [
+    "LaTeX Warning: A float is stuck (cannot be placed) on input line 422.",
+    "LaTeX Warning: A float is stuck (cannot be placed) on input line 422.",
+    "Class aastex7 Warning: Deferred float stuck during \\clearpage processing."
+  ]
+}

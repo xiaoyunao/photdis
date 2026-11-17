@@ -1,0 +1,19 @@
+reference,population,diagnostic,n
+SpecDis,Ordinary dwarfs,center,22376
+SpecDis,Ordinary dwarfs,forward,22377
+SpecDis,Metal-poor dwarfs,center,2854
+SpecDis,Metal-poor dwarfs,forward,2854
+SpecDis,Intermediate gravity,center,2694
+SpecDis,Intermediate gravity,forward,2702
+SPDist,Ordinary dwarfs,center,18522
+SPDist,Ordinary dwarfs,forward,18522
+SPDist,Metal-poor dwarfs,center,2172
+SPDist,Metal-poor dwarfs,forward,2172
+SPDist,Intermediate gravity,center,2145
+SPDist,Intermediate gravity,forward,2152
+Gaia signed,dwarf_feh_ge_minus1p5,4,14641
+Gaia signed,dwarf_feh_ge_minus1p5,5,4106
+Gaia signed,dwarf_feh_lt_minus1p5,4,2889
+Gaia signed,dwarf_feh_lt_minus1p5,5,66
+Gaia signed,intermediate_gravity,4,2660
+Gaia signed,intermediate_gravity,5,81

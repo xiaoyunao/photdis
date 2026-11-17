@@ -1,0 +1,72 @@
+{
+  "job": "61469684",
+  "inputs": {
+    "benchmark": "69f18b92a383446382ea611926f96b3a4bb67e4bd764aecb055bb9d59e5f6aaa",
+    "provenance": "a98b3d64fa1f61f7fe3761f766e45646bd989ab7576cf68adf96313d3b8cfe70",
+    "figures": "13d1c7c8f6f58d467138c1f0bb35571f87e0710ade5e2a2955936a50d725fde6",
+    "frozen_staging": "4e4aa31f6ea220ffad5c24e208ca821ffc6335729307e86ed29940d7028a80c5",
+    "calibrated_near": "d987e6f142c632ff7a910cbe65513518ab22601c6b79a2ce2abe4315a34fc8ae"
+  },
+  "plates": [
+    "f15_same_star_distances",
+    "f16_heliocentric_projections",
+    "f21_catalogue_density",
+    "native_luminosity_residuals",
+    "observable_support",
+    "pdf_calibration"
+  ],
+  "core_pdf_examples": [
+    {
+      "region": "south_v35",
+      "ls_id": 12105796588414158,
+      "tier": 1,
+      "distance_kpc": [
+        1.0338516235351562,
+        1.1904665231704712,
+        1.2876347303390503,
+        1.3757095336914062,
+        1.4918949604034424
+      ],
+      "obs_cell": 69188,
+      "f15_specdis_n": 0,
+      "f15_spdist_n": 0,
+      "f15_specdis_supported": false,
+      "f15_spdist_supported": false
+    },
+    {
+      "region": "south_low",
+      "ls_id": 12105994119152426,
+      "tier": 2,
+      "distance_kpc": [
+        2.6902718544006348,
+        3.2542340755462646,
+        3.537529945373535,
+        3.8416976928710938,
+        16.115598678588867
+      ],
+      "obs_cell": 884277,
+      "f15_specdis_n": 170,
+      "f15_spdist_n": 164,
+      "f15_specdis_supported": true,
+      "f15_spdist_supported": true
+    },
+    {
+      "region": "north",
+      "ls_id": 12107327533486698,
+      "tier": 2,
+      "distance_kpc": [
+        1.4338226318359375,
+        1.8185402154922485,
+        2.1195156574249268,
+        2.3803789615631104,
+        2.8151135444641113
+      ],
+      "obs_cell": 1225017,
+      "f15_specdis_n": 0,
+      "f15_spdist_n": 0,
+      "f15_specdis_supported": false,
+      "f15_spdist_supported": false
+    }
+  ],
+  "calibration_example_rows": 23
+}

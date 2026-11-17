@@ -1,0 +1,5 @@
+region,stage,n_heldout,n_redrock_class,n_nonstellar,nonstellar_unconflicted,class_conflicts
+north,supported,409480,127,127,127,0
+north,core_2_5,98598,9,9,9,0
+south_low,supported,92368,170,170,170,0
+south_low,core_2_5,27199,7,7,7,0

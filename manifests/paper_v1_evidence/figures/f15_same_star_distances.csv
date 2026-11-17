@@ -1,0 +1,5 @@
+reference,method,n,density_displayed,residual_displayed,below_density,above_density,residual_left,residual_right
+SpecDis,Photdis,9355,9355,9355,0,0,0,0
+SpecDis,BJ photogeometric,9355,9355,9355,0,0,0,0
+SPDist,Photdis,8927,8927,8927,0,0,0,0
+SPDist,BJ photogeometric,8927,8927,8927,0,0,0,0
