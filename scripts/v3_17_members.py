@@ -25,6 +25,8 @@ TABLES = {
     'v4_Table1.fits':'e70a661e26feac5574bbd33f964eea0bf2d8adbd1f6ab8e31e76baa72b04c29d',
     'v4_Table7_all.fits':'80fdb61ab706b8be960a69f920e3af64dd124de3bb6a3b00c9ca297c1ab34378',
     'v4_Table8_all.fits':'c54dfbc1f88c2af0d7ad44ca90fa528a17f9aafca4e63a2998df779993a725e1',
+    'v3_Table7.fits':'20ad8f91d56616bacf6ff972f133a342696cb32a9089716055f036688a6dd242',
+    'v3_Table8.fits':'498ee03069b3602a2a3553525eead4e45c7155ac4de4a0cbcfced31e5ab9c216',
     'v4_Figure3_empirical_isochrone.fits':'d59d99bf3143bc3dfc91d9076468a01d8e87d8ccf9318f137ffd8d017f3ec0bc',
     'v4_Figure3_dotter_isochrone.fits':'2af9aed0494d78f6b4a84aa302765501728ab753d34ebf5adf7800c7e7136c25',
 }
@@ -33,6 +35,7 @@ MODEL_NAMES = ('thin','cocoon','ambiguous','foreground')
 CFG = settings()
 NATIVE = dict(CFG['north'],maximum_grz_error_mag=CFG['maximum_grz_error_mag'])
 RAW_COLUMNS = ('RA','DEC','RELEASE','BRICKID','OBJID','TYPE','REF_CAT','REF_ID')
+MEMBERS = DEST/'members_precise'
 
 
 def table(file):
@@ -40,14 +43,20 @@ def table(file):
 
 
 def external():
-    for file,kind in [('v4_Table7_all.fits','DESI'),('v4_Table8_all.fits','BHB')]:
-        t = table(file)
+    for number,kind in [(7,'DESI'),(8,'BHB')]:
+        t = np.sort(table(f'v3_Table{number}.fits'),order='SOURCE_ID')
+        update = np.sort(table(f'v4_Table{number}_all.fits'),order='SOURCE_ID')
+        np.testing.assert_array_equal(t['SOURCE_ID'],update['SOURCE_ID'])
+        # Version four rounds positions to 0.001 deg. Use the original positions
+        # while retaining the updated mixture probabilities on the identical IDs.
+        if len(np.unique(t['SOURCE_ID']))!=len(t):
+            raise ValueError('Duplicate published DESI identity')
         l,b = coordinates(t['RA'],t['Dec'])
         if np.max(abs(l-t['phi1']))>.002 or np.max(abs(b-t['phi2']))>.002:
             raise ValueError('Published coordinates do not reproduce the frozen frame')
         q = (l>=EDGES[0])&(l<EDGES[-1])
-        for row,x,y in zip(t[q],l[q],b[q]):
-            p,c = (float(row[k]) for k in ('P_THIN','P_COCOON')) if kind=='DESI' else (np.nan,np.nan)
+        for row,payload,x,y in zip(t[q],update[q],l[q],b[q]):
+            p,c = (float(payload[k]) for k in ('P_THIN','P_COCOON')) if kind=='DESI' else (np.nan,np.nan)
             if kind=='DESI' and not (p>=0 and c>=0 and p+c<=1.000001):
                 raise ValueError('Invalid DESI mixture probabilities')
             name = 'BHB' if kind=='BHB' else MODEL_NAMES[0 if p>.5 else 1 if c>.5 else 2 if p+c>.5 else 3]
@@ -208,7 +217,7 @@ def run():
         phot.update(qualities(path,links))
     for x in e:
         x.update(phot.get(x.get('ls_id'),{}))
-    out = DEST/'members'
+    out = MEMBERS
     out.mkdir(parents=True,exist_ok=True)
     csv_rows(out/'members.csv',e)
     by = []

@@ -14,6 +14,7 @@ from v3_5_dr11_area import random_memmap
 from v3_10_figures import check_templates
 from v3_13_delivery import bind, figure_check
 from v3_16_gd1 import unit
+from v3_17_members import MEMBERS
 from v3_17_sample import CONFIG, DEST, P, settings
 
 RADIUS_DEG = .04
@@ -48,8 +49,8 @@ def local_coverage(path,ra,dec):
 def run():
     inp = {'config':sha(CONFIG),'style':check_templates()}
     h = {}
-    for stage in ('sample','members','hess'):
-        h[stage] = bind(DEST/stage/'complete.json',inp)
+    for stage,path in [('sample',DEST/'sample'),('members',MEMBERS),('hess',DEST/'hess')]:
+        h[stage] = bind(path/'complete.json',inp)
         assert h[stage]['inputs']['config']==inp['config']
     assert h['hess']['inputs']['style']==inp['style']
     if h['hess']['authorize_distance_stage']:
@@ -64,7 +65,7 @@ def run():
             )
     for f in (DEST/'hess').glob('*.png'):
         figure_check(f)
-    rec = read(DEST/'members'/'members.csv')
+    rec = read(MEMBERS/'members.csv')
     n = len(rec)
     assert h['members']['rows']==n and n==len({(r['catalog'],r['source_id']) for r in rec})
     for x in rec:
@@ -88,7 +89,7 @@ def run():
             matched=int(sum(count)),matched_near_north_imaging=int((available&count).sum()),
             psf=sum(r['psf']=='True' for r in rows),clean=sum(r['clean']=='True' for r in rows),
             qrf_archived=sum(r['qrf_archived']=='True' for r in rows)))
-    out = DEST/'delivery'
+    out = DEST/'delivery_precise'
     out.mkdir(parents=True,exist_ok=True)
     csv_rows(out/'imaging.csv',[dict(catalog=x['catalog'],source_id=x['source_id'],
         north_randoms_with_grz_within_0p04deg=int(n),north_declination=bool(d>=P['north_declination_min']))
