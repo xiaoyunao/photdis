@@ -52,6 +52,16 @@ def run():
         h[stage] = bind(DEST/stage/'complete.json',inp)
         assert h[stage]['inputs']['config']==inp['config']
     assert h['hess']['inputs']['style']==inp['style']
+    if h['hess']['authorize_distance_stage']:
+        fit = bind(DEST/'distance'/'complete.json',inp)
+        assert fit['inputs']['detection']==sha(DEST/'hess'/'complete.json')
+        assert fit['inputs']['segments']==h['hess']['signal_segments']
+        scores = read(DEST/'distance'/'scores.csv')
+        assert {int(x['segment']) for x in scores}==set(h['hess']['signal_segments'])
+        for row in scores:
+            assert (row['cfht_ten_percent_with_signal']=='True') == (
+                row['distance_signal']=='True' and abs(float(row['cfht_relative_bias']))<=P['reference_tolerance_fraction']
+            )
     for f in (DEST/'hess').glob('*.png'):
         figure_check(f)
     rec = read(DEST/'members'/'members.csv')
