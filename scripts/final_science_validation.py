@@ -26,6 +26,12 @@ REUSE = (
     ('v3_8/F04_dwarfs_reference.png','v3_8/direct_figures/sky/F04_dwarfs_reference.png'),
     ('v3_8/F04_giants_reference.png','v3_8/direct_figures/sky/F04_giants_reference.png'),
     ('v3_8/F05_heliocentric_projection.png','v3_8/direct_figures/overview/F05_heliocentric_projection.png'),
+    ('v3_10/redraw/north_aitoff.png','v3_10/figures/north/F04_catalog.png'),
+    ('v3_10/redraw/north_xyz.png','v3_10/figures/north/F05_heliocentric_projection.png'),
+    ('v3_10/redraw/south_faint_aitoff.png','v3_10/figures/south_faint/F04_catalog.png'),
+    ('v3_10/redraw/south_faint_distances.png','v3_10/figures/south_faint/all/F02_direct_distances.png'),
+    ('v3_10/redraw/south_low_aitoff.png','v3_10/figures/south_low/F04_catalog.png'),
+    ('v3_10/redraw/south_low_cmd.png','v3_10/figures/south_low/all/F03_same_star_cmd.png'),
 )
 
 
@@ -124,6 +130,17 @@ def main():
         local = ROOT/'figures'/repo
         distant = ROOT/'data'/archive
         digest = sha(local)
+        located = distant.parent
+        if not (located/'complete.json').is_file():
+            located = located.parent
+        marker = located/'complete.json'
+        r = json.loads(marker.read_text())
+        parents[str(marker.relative_to(ROOT))] = sha(marker)
+        for suffix in ('.png','.pdf','.csv','.npz'):
+            path = distant.with_suffix(suffix)
+            key = str(path.relative_to(located))
+            if suffix!='.npz' or key in r['outputs']:
+                verified(path,r['outputs'][key])
         with Image.open(local) as a, Image.open(distant) as b:
             exact = a.size==b.size and np.array_equal(np.asarray(a.convert('RGB')),np.asarray(b.convert('RGB')))
         if not exact:
