@@ -9,12 +9,12 @@ import numpy as np
 from photdis.reference_v1_4 import unique_join
 from photdis.stage1 import require_compute
 from photdis.v3.data import SIGNIFICANT
-from v2_1_near import ROOT, save_json
+from v2_1_near import ROOT, csv_rows, save_json, sha
 from v3_11_layers import read_receipt
 from v3_14_delivery import identity, validate
 from v3_14_population import DEST as V314
 from v3_15_bands import BRANCH, DEST as BANDS, MIN_MASS
-from v3_15_transfer import DEST as TRANSFER, DRAW, SEED
+from v3_15_transfer import AUDIT, DEST as TRANSFER, DRAW, M5_D, D68, SEED, SYSTEMS, cohort
 from v3_10_figures import check_templates
 
 DEST = ROOT/'data/v3_15/delivery'
@@ -84,14 +84,42 @@ def validate_bands(side,inputs,lock):
     return dict(job=r['job'],matched_tests=counts)
 
 
+def compare_member_cmd(inputs):
+    """Measure color at fixed reference absolute magnitude on the shared CMD range."""
+    template = read_receipt(AUDIT/'M30','complete.json','native_join.npz',
+                            ('TYPE','ls_id','g0','r0'),inputs)
+    with np.load(TRANSFER/'rosters.npz',allow_pickle=False) as roster:
+        ix = unique_join(roster['template_id'],template['ls_id'])
+        assert (ix>=0).all() and (template['TYPE'][ix]=='PSF').all()
+    samples = [('M30',template,ix,SYSTEMS['M30'][1])]
+    for name,d in (('M5',M5_D),('M68',D68)):
+        p,v = cohort(name,inputs)
+        use = v['strict']['used']&p['target']&p['member']
+        samples.append((name,p,use,d))
+    rows = []
+    for name,p,ix,d in samples:
+        color = (p['g0']-p['r0'])[ix]
+        absolute = p['r0'][ix]-10-5*np.log10(d)
+        for lo in np.arange(2.5,5.5,.5):
+            x = color[(absolute>=lo)&(absolute<lo+.5)]
+            row = dict(cluster=name,Mr_lo=lo,Mr_hi=lo+.5,n=len(x))
+            if len(x):
+                q = np.quantile(x,(.16,.5,.84))
+                row.update(gr_p16=q[0],gr_p50=q[1],gr_p84=q[2])
+            rows.append(row)
+    return rows
+
+
 def run():
     lock = check_templates()
     inputs = {}
     transfer = validate_transfer(inputs,lock)
     bands = {side:validate_bands(side,inputs,lock) for side in ('north','south')}
     DEST.mkdir(parents=True,exist_ok=True)
+    path = DEST/'member_cmd.csv'
+    csv_rows(path,compare_member_cmd(inputs))
     save_json(DEST/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,style=lock,
-              transfer=transfer,bands=bands,outputs={}))
+              transfer=transfer,bands=bands,outputs={path.name:sha(path)}))
 
 
 if __name__=='__main__':
