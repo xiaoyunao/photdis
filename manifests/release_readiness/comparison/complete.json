@@ -1,0 +1,21 @@
+{
+  "job": "61462715",
+  "inputs": {
+    "cohort": "6fcf2bfe550e31501c81a9fd1540f0aa978ce453eddce1b00abb759c8ec3d90d",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "script": "ab87970b4a85758712a60aa3de5cf700f8d853a8ff8e036435bb65724cbdfe6a",
+    "bailer_jones": "02c29ffa18324df787b1783781b273c21b5897fd46aea55f9bea494f84358f4a",
+    "gsp_phot": "88b1e4c1f93601546689ec00ea538b96436be56ea43d0212882d1be2002bed83",
+    "starhorse": "37e6a0b324443dba8b965be133143964bb4c6a49c3e0830f4fdfb7cdf0eae0c6"
+  },
+  "rows": 1150705,
+  "outputs": {
+    "F12_published_distances.png": "a86dfbee7d73bff0c1be1e73e47432d19a6f5dbee7f5a757aa2790c93b8e7fc5",
+    "F12_published_distances.pdf": "ec2e3db1ac1857070046601b07a5de0b6aae18bdde513774249904ad7af598cc",
+    "paired_distances.csv": "844b304c53f394825ecd0a9aad32be1af6090627aae3edd59ece10ecad25045d",
+    "method_overlap.csv": "231da47d01f79a54b9b9c76695ded709d5f93e13a9d27908354b97422f8ff6c5",
+    "coverage.csv": "3ee97715e6118d1e976d6eef324798f5542a3c61063626b739face13c25f4b11",
+    "F12_published_distances.csv": "9053de78aacb387ee1536597c6a89f9f79594956b994cb8dac8dc99d5eb66567",
+    "F12_published_distances.npz": "9bfbee405f04ad4bd3b3935d74014fe5161558983dc88ced188e63503bf6fb75"
+  }
+}

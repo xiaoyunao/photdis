@@ -1,0 +1,18 @@
+{
+  "job": "61462716",
+  "rows": 1150705,
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "schema": "41c1e6fd9a9345d822b6b7d92850fe4c1281fc3f3e5ddf07a85300c07341fa69",
+    "bailer_jones": "02c29ffa18324df787b1783781b273c21b5897fd46aea55f9bea494f84358f4a",
+    "gsp_phot": "88b1e4c1f93601546689ec00ea538b96436be56ea43d0212882d1be2002bed83",
+    "starhorse": "37e6a0b324443dba8b965be133143964bb4c6a49c3e0830f4fdfb7cdf0eae0c6",
+    "population": "f5f9c901334054aaf8728f5bbacde80447a43b3a0b738635965b1286e1771368",
+    "comparison": "8f02b10406d5e485ace442f94339e8e613340204d5b9e18d1c61c2fe301372a4",
+    "access": "5bb59d6eed3fa257d1f6c5c25eba960577b14df68b90ec305b385334dd256a80"
+  },
+  "all_products": 469696,
+  "paired_views": 2600,
+  "population_rows": 2592,
+  "publication_rows": 2387219
+}

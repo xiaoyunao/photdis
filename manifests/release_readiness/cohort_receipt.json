@@ -1,0 +1,9 @@
+{
+  "job": "61462424",
+  "rows": 1150705,
+  "final_science_sha256": "db898b9c0ab49db94fe1febe597833d9abc96b389ab818a554702e31ee2a75e5",
+  "outputs": {
+    "gaia_ids.npy": "f40a8da4413dbe69d1e887d8ba4cf8198638e33fbb3261df548fe0aae5d720b1",
+    "cohort.npz": "fc891c08f2bde4e55e137b17801f4df2a8611c147c52732a99df13637c5fcfb6"
+  }
+}

@@ -5,6 +5,10 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
+[Release Readiness](docs/release_readiness.md) records the matched tests
+against published distance products, the photometric selection's population
+dependence, the release field schema and the paper decision.
+
 The [Final Science Analysis](docs/final_science.md) covers the frozen DR11
 catalogue, the Gaia geometry increment, and space distributions under the
 native survey selection. It links the figure and evidence receipts.

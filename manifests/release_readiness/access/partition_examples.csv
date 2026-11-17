@@ -1,0 +1,6 @@
+region,product,partition,rows,example_ls_id,example_d50_kpc
+south_v35,raw,data/v3_5/catalog/sweep-010m030-015m025/part_00027.npz,2035,12105814970993062,10.482200846528775
+north,raw,data/v3_9/expansion/north/predict/sweep-250p035-255p040/001500000_north.npz,21613,12107283301405080,4.605848979708989
+south_low,raw,data/v3_9/expansion/south/predict/sweep-115p005-120p010/001650000_south_low.npz,11134,12106019626815056,2.23045524831181
+south_faint,raw,data/v3_9/expansion/south/predict/sweep-075m065-080m060/001200000_south_faint.npz,15901,12105659620287986,39.25364006392669
+south_v35,calibrated_near,data/v3_9/existing/pdf/00/sweep-080m065-085m060_part_00000.npz,23,12105668909596965,1.0741708542693058

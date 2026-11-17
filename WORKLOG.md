@@ -1,5 +1,32 @@
 # WORKLOG
 
+## 2026-11-17 — Release Readiness / Paper Decision
+
+- Read GPT Pro 6c0ffd81 on ef329cc6 and created the goal before changes.
+  Exported the unchanged unique Gaia cohort in job 61462424.
+  Retrieved GAVO Bailer-Jones, ESA GSP-Phot and AIP StarHorse with
+  47 exact-ID batches each. The initial StarHorse parallel response
+  failed ID validation. Retried with unique upload names and one worker.
+  Every requested batch closed and retained the payload hash.
+- Population job 61462460 reused original working and held-out evidence.
+  Kept actual source cohorts while recording hard and full-PDF migration.
+  Northern poor-metallicity dwarfs retained 224/2,347 at reference
+  2–5 kpc, and all 230 selected intermediate-gravity objects at reference
+  5–10 kpc were assigned 2–5 kpc.
+- Access job 61462513 verified four original DR11 partitions and the
+  width-calibrated near companion against the source manifest. Added
+  configs/photdis_dr11_release.json and reproducible access examples.
+- Same-star distance job 61462613 and delivery 61462616 used the frozen
+  Gaia sample. BJ geometric covers 99.7%; 3,094 have no valid distance
+  median in the four comparison estimates. On faint dwarfs with all
+  methods Photdis has 7.5–7.6% scatter versus 10.85%–11.04% BJ photogeometric.
+  Final comparison 61462715 and validation 61462716 both completed 0:0.
+  Included faint spectroscopic rows and a separate classifier-sky holdout.
+  F12 uses the locked Pal 5 style and passed visual inspection.
+- 476 regression tests and the focused quantile/coverage smoke test passed.
+  Preserve the model and raw PDFs. Record the AJ scope and data access in
+  docs/release_readiness.md. Paper drafting follows the author's review.
+
 ## 2026-11-17 — Final Science Analysis of frozen DR11 release
 
 - Read GPT Pro review d5ea5ae0 and registered the goal before edits.

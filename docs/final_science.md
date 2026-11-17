@@ -1,5 +1,8 @@
 # Photdis · Final Science Analysis
 
+发布前的同星目录比较、最终星族使用条件和 PDF 访问规范见
+[Release Readiness](release_readiness.md)。本页保留冻结的首次科学统计。
+
 Photdis 要回答的是，单用 Legacy Surveys DR11 原生测光，能给
 哪些缺少精确 Gaia 几何距离的恒星提供可用距离，以及这些距离
 能支持怎样的银河系研究。本轮结合 v3.9 完整目录与 v3.18

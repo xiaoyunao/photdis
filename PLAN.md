@@ -1,5 +1,30 @@
 # PLAN
 
+## Release Readiness / Paper Decision — completed
+
+Follow the complete review 6c0ffd81 on ef329cc6. Freeze the Final Science
+Analysis identities. Query Gaia source IDs against Bailer-Jones EDR3,
+Gaia DR3 GSP-Phot and StarHorse 2022. Report availability in the eligible
+working index and test matched distances on held-out SpecDis and SPDist
+stars, with pairwise and all-method intersections.
+
+Reuse the v3.10 classifier, PDF indices and held-out spectroscopic evidence.
+Measure retention from the supported parent and migrations before limiting
+the predicted distance. Describe observed reference composition separately
+from catalog purity. Bind the original and near-width-companion product
+schemas, effective areas, versioned provenance, and working access examples.
+Use the locked Pal 5 styles. Complete the release/readiness report and
+publication decision before drafting any paper.
+
+The search covered all 1,150,705 input Gaia identities. Bailer-Jones
+geometric distances cover 99.7%. No usable median appears in the four
+published estimates for 3,094 sources. On common faint spectroscopic dwarfs,
+Photdis has 7.5–7.6% NMAD versus 10.85%–11.04% for BJ photogeometric. The
+selection and its metallicity and intermediate-gravity limits define the
+AJ catalog paper scope. The release access smoke test covers all four
+original domains and the near companion PDF. See the
+[readiness report](docs/release_readiness.md).
+
 ## Final Science Analysis — completed
 
 The target is the frozen v3.9 owned native DR11 PSF catalog and its original
