@@ -27,6 +27,20 @@ and the stability rule. These are tests on previously studied control
 structures using a new fixed control design. They do not constitute blind
 discovery of an unknown structure.
 
+M5 has no usable common random coverage under the fixed masks, depth and
+extinction cuts. For GD-1 the four filter variants clear the fixed blank
+ribbon comparison, with unadjusted maximum scores of 2.06–2.12 and trial-
+adjusted p equal to 1. The highest scores select a foreground distance
+of about 0.84–0.89 kpc. Neither target passes the adoption criterion.
+The first completed pilot counted the nested GD-1 depth footprints twice
+at r < 21. The final rerun requires common area and counts it once. It
+also reports blank-ribbon comparison separately from trial significance.
+No all-sky matched-filter map was generated.
+
+- [Target, background and blank-ribbon counts and scores](control_scores.csv)
+- [Final adoption checks](control_decisions.csv)
+- [Fixed modulus grid and score curves](filter_grid.npz)
+
 Age/metallicity context is from the published cluster analyses.
 [M30](https://academic.oup.com/mnras/article/499/2/2390/5903728) ·
 [M92](https://doi.org/10.1088/0004-637X/775/2/134)

@@ -140,20 +140,24 @@ def gd1(inp):
     dims=(len(EDGES)-1,len(NEW))
     result=[]
     for k,r in enumerate(P['r_limits']):
-        areas=a['desi'][:k+1].reshape(k+1,*dims[:1],NSTEP,dims[1]).sum(axis=(0,2))
+        areas_by_depth=a['desi'][:k+1].reshape(k+1,*dims[:1],NSTEP,dims[1]).sum(axis=2)
         valid=a['desi_good'][:k+1].all(axis=0)
         # Restrict to the same frozen segments for every included ribbon, tier and method.
         ar=np.flatnonzero(np.isclose(NEW,0.)|np.isin(np.round(NEW,2),(-5.8,-4.8,4.8,5.8,-7.8,-6.8,6.8,7.8)))
         controls=np.flatnonzero(np.isin(np.round(NEW[ar],2),(-5.8,-4.8,4.8,5.8)))
         blanks=np.flatnonzero(np.isin(np.round(NEW[ar],2),(-7.8,-6.8,6.8,7.8)))
-        keep_seg=valid[:,ar].all(axis=1)
+        # Archived depth masks are nested. Keep only segments whose effective
+        # area agrees at every included depth, then count each sky area once.
+        common_area=(areas_by_depth==areas_by_depth[-1:]).all(axis=0)
+        keep_seg=(valid[:,ar]&common_area[:,ar]).all(axis=1)
         m=(p['r']<r)&keep_seg[p['block']//NSTEP]
         h=[];n=[];q=[]
         for i in ar:
             j=m&(p['ribbon']==i)
             n.append(int(j.sum()));q.append(int((j&p['qrf']).sum()))
             h.append(np.histogram2d(p['color'][j],p['r0'][j],(COLOR,APP))[0].ravel())
-        result.append((np.array(h),np.array(n),np.array(q),areas[keep_seg][:,ar].sum(axis=0),controls,blanks))
+        area=areas_by_depth[-1,keep_seg][:,ar].sum(axis=0)
+        result.append((np.array(h),np.array(n),np.array(q),area,controls,blanks))
     return result
 
 
@@ -176,7 +180,7 @@ def evaluate(fields,templates):
                         back=h[bg].sum(axis=0)*scale
                         diff=h[k]-back
                         var=np.maximum(h[k]+scale*back,4.)
-                        d=((sig*sig)/var) .sum(axis=1)
+                        d=((sig*sig)/var).sum(axis=1)
                         z=np.divide((sig*(diff/var)).sum(axis=1),np.sqrt(d),
                                    out=np.full(len(d),np.nan),where=d>0)
                         finite=np.isfinite(z)
@@ -215,10 +219,10 @@ def decide(rows,trials):
             z=[abs(x['z_max']) for x in blanks
                if x['r_limit']==r['r_limit'] and x['width']==r['width']]
             control_ok.append(bool(z) and r['z_max']>max(z))
-        guarded=repeats and all(control_ok)
+        above_blanks=complete and all(control_ok)
         decisions.append(dict(system=system,observed_variants=len(v),blank_variants=len(blanks),
               repeat_trial_adjusted=bool(repeats),stable_support=bool(stable),
-              above_blanks=bool(guarded),passed=bool(guarded and stable)))
+              above_blanks=bool(above_blanks),passed=bool(repeats and above_blanks and stable)))
     return decisions
 
 

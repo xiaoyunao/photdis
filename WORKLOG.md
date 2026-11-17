@@ -10,6 +10,19 @@
   Focused math/syntax checks and 476 existing tests passed.
 - Locked the native M30/M92 shifts, noise widths, background and trial
   correction tests before opening the new M5/GD-1 control results.
+- All 48 chunks completed. Jobs 61471548 and 61471646 matched the reference
+  census and figures to the exact 43,347,612 archived PDFs and reproduced
+  both F15 same-star comparisons. P1 outputs separate unsupported PSFs,
+  inapplicable selection, assessed rejections and radial migration.
+- Pilot 61471647 stopped before scoring when the northern member histogram
+  was too sparse. Used the archived native M92 target-minus-control Hess.
+  Corrected nested GD-1 random area and separated blank exceedance from the
+  trials test in 61472462. M5 has no usable common area. GD-1 clears the
+  blank contrast but fails trial significance and peaks in the foreground.
+- Spatial rerender 61472463 improved tick spacing, then verified the exact
+  hard and soft counts and receipt hashes with 61472464. Inspected AAS
+  width renders of all eight scientific plates. Archived compact evidence
+  and figure products under the separate paper-v2 output roots.
 
 ## 2026-11-17 — v1 manuscript scientific evidence
 

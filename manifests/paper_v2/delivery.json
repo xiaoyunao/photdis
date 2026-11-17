@@ -1,0 +1,22 @@
+{
+  "job": "61472464",
+  "inputs": {
+    "reference": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+    "figures": "49d97576897b645cedcc26364d352d4d78d8ea094018b341efbcba0a59417bb5",
+    "filter": "edcfe0e12af1b2cd2a9328abe65b47b61a0ef544ec1e44c9bd267890112ebd01",
+    "spatial": "6c52f2f9549132fe481c1013403232ff44d02851823031e7fa4c1a28c9fd73b0"
+  },
+  "plates": [
+    "all_reference_distance",
+    "all_reference_distance_all_matches",
+    "distance_bias_trends",
+    "native_cmd_residuals",
+    "population_distance_migration",
+    "aitoff_distance",
+    "aitoff_probability",
+    "gd1_hess_member_residuals"
+  ],
+  "parent": 72289386,
+  "pdfs": 43347612,
+  "filter_gate": false
+}

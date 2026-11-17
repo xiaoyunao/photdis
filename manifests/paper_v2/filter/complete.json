@@ -1,0 +1,36 @@
+{
+  "job": "61472462",
+  "inputs": {
+    "preregistered": "1cbea898add984b6d582d4557f402443dc6e5c9f274bd40d47d6cad1750e5611",
+    "implementation": "99863ac55a6ff434d15491cc92d1660a19fffb091f81e3755a136ccc420dd416",
+    "data/v3_14/audit/M30/complete.json": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "data/v3_14/audit/M5/complete.json": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "M5_random": {
+      "bytes": 22995910080,
+      "mtime_ns": 1780757592000000000
+    },
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1"
+  },
+  "trials": 712,
+  "templates": {
+    "M30": {
+      "method": "members",
+      "target": 99
+    },
+    "M92": {
+      "method": "target_minus_background",
+      "target": 1696,
+      "control": 18769,
+      "target_area": 0.1844,
+      "control_area": 2.178,
+      "strict_members": 9
+    }
+  },
+  "passed": false,
+  "outputs": {
+    "control_scores.csv": "dfc36b76da03d45bbd19846b902dccc14227f23a01c350cbdc13e175c241393c",
+    "filter_grid.npz": "a7424214894779c5a86941b383e081854812b6127d802a53b0d93771100a0722",
+    "control_decisions.csv": "47a6b6c1ad5cd4a6e622d2d8a431f8fde8e2bfd46f57e8908bf7e3be85ce3094"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "job": "61472463",
+  "inputs": {
+    "reference": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+    "data/final_science/area/north/complete.json": "409d26b9a88a3b5aa30e0e3366d745c2518a44886d5614ec83045aca94a40afa",
+    "data/final_science/area/south/complete.json": "3855542518a23951892992483cca5028abc001987ba971fdcc336c499dff7518",
+    "data/v3_final/area/north/complete.json": "ae91b4459c9354a0f65ec7caadac1509996f7dd2d097557112c000b0920860ce",
+    "data/v3_final/area/south/complete.json": "c1dbeebdcfe29565fdcebb129b802ad631cab26a976cad09d6ae175717f51ce7",
+    "data/v3_17/hess/complete.json": "5c187022c3e854d5023f8c70d23c2338c492e00d5e10be5e52f6359bffc52a75",
+    "gd1_members": "09b9644054ccbb2454db8d3fc3de1bec21508f5d0a0ace9451f69eb83afd3457",
+    "cluster_transfer": "9d6f5344b63ac0774bdd22ff4d4b10c50717f83d4aba8b9252f9c81a6ce06250"
+  },
+  "area": {
+    "effective_deg2": 9686.988399999998,
+    "mapped_deg2": 9659.3532
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "outputs": {
+    "aitoff_probability.png": "94ff6f2065a625fcb8776a4efc7b387000eec0d186a2d330761d72a9d1989895",
+    "aitoff_probability.pdf": "03a913a2f27b00c038aba5fdf137cd9ff3e88046c63a9b348252e189f2f3a25d",
+    "aitoff_distance.png": "38649f1c3290f2ed02657ac656add9cca343c5e85603a551b497133a35c99e77",
+    "distance_layers.csv": "0beec33436b86478987fa0dc6f98e6bb40b6db8b0073b1607807cc9226d45e27",
+    "aitoff_distance.pdf": "9c4071824b94cc541a7dba18b6c489fb0bf23dbd8e43014daa36ccd831e23a3e",
+    "aitoff_probability.csv": "46c6ce36483af681086a98b4c2059c783d2c3d298673b7623cf7e3bc65f627a1",
+    "aitoff_distance.csv": "8a20e6bab5a8861e0aef5e7a8b542f6acf20ac69c618d91b82bddb752bf795f8",
+    "gd1_hess_member_residuals.npz": "2f52e2c996bec1ac6d753ed9b95d71b68ed956adedcb02ba609706f6494fe2c8",
+    "gd1_hess_member_residuals.csv": "96212ee02714ffe67b6fb66351ff842fd91e0aac9ca8256edbbf176bb70f7a78",
+    "cluster_template_transfer.csv": "9de293b008bd75498cd36c37a2e42b941b5ac2cb50ff8c672d7340eebe56bb64",
+    "gd1_hess_member_residuals.pdf": "f27f8353cc8cd28c145112050a5a8b275e5ee36674dad665f0f5bdc35b9a4496",
+    "gd1_display_census.csv": "cce9e0859201b58b266e23ad90f427cb0dcfe0bef326e5284a12af6d863fae9a",
+    "gd1_hess_member_residuals.png": "562cbbfecce14d955e9653ce64fa09de0353e69027e24f2d357f13903edd3031"
+  }
+}

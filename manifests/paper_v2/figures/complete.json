@@ -1,0 +1,28 @@
+{
+  "job": "61471646",
+  "reference": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+  "science_working": "6a141c5586ba92bf27eaf2f8a76bd28d670e0db598a110c54cc8e4316f0d180a",
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "outputs": {
+    "all_reference_distance_all_matches.pdf": "8a139208c747ccd9c91ddcf9b588a5500906d4bd70e79b2b456888a26a3783fe",
+    "all_reference_distance.npz": "b129553cd3fcae4d7f5ca9ef28f5241939b19fe2aa6963c21b3503cae6b1ca70",
+    "matched_physical_conditions.csv": "ca553bc8836c94e5f5d727edddc495110c6960b25a6603b864508233a4a7da10",
+    "native_cmd_residuals.pdf": "a26439afee0c81f2654cf81e3c35a7adc16a5dd67113e6d0565c801427410dba",
+    "all_reference_distance_all_matches.csv": "a4124a3cd16320d6eb910d4658b02b04268bb5d0c4eda953e840f1e24f04e2dd",
+    "distance_bias_trends.png": "2be17dd9d69c95326405493bfc356890633f4a57dcd1d264cca6c39888f92a96",
+    "all_reference_distance_all_matches.png": "0f8a98a65839d1df35adf3b1cf1484a8abc15615be94e3e4f1ad6bef13560eec",
+    "all_reference_distance_all_matches.npz": "a4fea396b0bcb5e9dddb177136df8476d5337835b892ca8bbfaa0732232c9e85",
+    "population_distance_migration.npz": "63700b917c84eb632a303f6a69c45a41f740b727853442eebfa67efe4fcff781",
+    "native_cmd_residuals.npz": "4775bb3eff5c67651e5c910b2b3a420f427cd9418118fecb76fb3b9c283aebfe",
+    "all_reference_distance.csv": "aca9659d76e5abf98cd36853d72615241781981a8d4fcf3680f8af17712eff3a",
+    "all_reference_distance.pdf": "94074dd88c10224471aa75f5a573de38831bbc671139f5114ee363ef842ede31",
+    "population_distance_migration.png": "6d3e5acb617310ddddeccee887ae655d35137c12cb2a7b18596ddd711b259903",
+    "distance_bias_trends.pdf": "07f654536aa52b6a954fb883dfdb96b4e4f988b20d54e0f6bdd7fd2f75c783dd",
+    "distance_bias_trends.csv": "3ac415865ed65350bf03d975d4997ca2ff6a21781f99350fc18f113707a4f600",
+    "native_cmd_residuals.csv": "6546fd94df50ed552075b3ebcdcb830ce18b0ae498b79e0801617e03f41c3dce",
+    "population_distance_migration.pdf": "950cfa0de7132c0e9b234d77fe5b07412e0704fda1c98473d88198ec43165ee8",
+    "all_reference_distance.png": "137eb02856648616fa96a258e5eb4375117405a63c81e0f6645817ce80c38aaa",
+    "population_distance_migration.csv": "eea3f3300ef0f0cd21631226317057a05b79ec513626d9f291d9b59ca55ea67c",
+    "native_cmd_residuals.png": "f353ea6a1d41b20bac407ea56a05fb332a9ea7880cfaf6b35ede63337d1c1190"
+  }
+}

@@ -1,6 +1,6 @@
 # PLAN
 
-## Paper v2 scientific evidence
+## Paper v2 scientific evidence — completed
 
 Use GPT review ac05ae45 and the supplied v2 science-and-figures instructions.
 Lock the DR11 photometry, survey ownership, models and release PDFs at
@@ -17,6 +17,12 @@ Lock the DR11 photometry, survey ownership, models and release PDFs at
   native photometry cells and reuse the archived cluster/stream controls.
 - Deliver data, figures and audit receipts. Scientific baselines and
   manuscript sources stay outside this change.
+
+All 48 scan tasks closed. Final reference, figures, filter and sky receipts
+are linked from the [science handoff](manifests/paper_v2/README.md).
+Neither matched-filter control passed the fixed criterion. Eight figures
+and the AAS size preview are available in the [figure index](figures/paper_v2/README.md).
+The next handoff is the separate manuscript revision.
 
 ## Manuscript v1 scientific evidence — completed
 
