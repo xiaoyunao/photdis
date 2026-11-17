@@ -1,0 +1,13 @@
+{
+  "review": "bb077256-a729-4227-b713-b6a43f5504a0",
+  "primary_reference": "Jarvis Figure 2 empirical DESI distance curve",
+  "high_purity_pthin": 0.9,
+  "high_purity_dvg_km_s": 8,
+  "high_purity_velocity_error_km_s": 5,
+  "maximum_logg_error_dex": 0.3,
+  "maximum_feh_error_dex": 0.3,
+  "color_edges": [0.1,0.32,0.5,0.8,1.15],
+  "depth_edges": [16,18,20,21,22],
+  "bootstrap_seed": 31809,
+  "bootstrap_draws": 512
+}
