@@ -1,0 +1,26 @@
+{
+  "job": "61461730",
+  "inputs": {
+    "config": "d2341fd94f27d136699598af554a506af338063fdc9a09c90f5851b51c6b0024",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "data/final_science/area/north/complete.json": "409d26b9a88a3b5aa30e0e3366d745c2518a44886d5614ec83045aca94a40afa",
+    "data/final_science/area/south/complete.json": "3855542518a23951892992483cca5028abc001987ba971fdcc336c499dff7518",
+    "data/final_science/evidence/complete.json": "db898b9c0ab49db94fe1febe597833d9abc96b389ab818a554702e31ee2a75e5",
+    "data/final_science/figures/complete.json": "4923c125e2d4ec67f4f49ae555b7d2df3d56ea30c3f3fdd467cef42900a87e4d",
+    "data/v3_8/direct_figures/overview/complete.json": "5c61faf3504631f56674f14a47d08c2c9dbeb0b4fa1f3a2b806e6e92a1ae9dd2",
+    "data/v3_8/direct_figures/reference/complete.json": "9bfdc2ba79293e85d69996e8d1c7f4c89bddde99d2114e08ad7a4ccdf544fd65",
+    "data/v3_8/direct_figures/sky/complete.json": "e69182877201f846463badb530dbabff6ae850caa2ff71328fbd527e472b8586",
+    "data/v3_10/figures/north/complete.json": "7db6ad273540fc6ab0c621674382b4a26500c2e6319b4311c396c69e7376af89",
+    "data/v3_10/figures/south_faint/complete.json": "79e78f00b2597001b2b0bb4f57e4a3d0edb7ea2d44e4844f205323728c135abe",
+    "data/v3_10/figures/south_low/complete.json": "8ebf7f3e01c89ad58a1ad196849afe86ee51adab7c9f927e40f5c40323d615bf"
+  },
+  "rows": 2387219,
+  "new_figures": 8,
+  "reused_figures": 14,
+  "outputs": {
+    "galactocentric_RZ.csv": "3fe7e35643df9c3a86191f83328a005c7dde9c68faa75fc3e69f9d9ef0350058",
+    "new_figures.csv": "693c942b8467b961b121f518ee45b534bf906c85d6158fa919b19040b6598c31",
+    "reused_figures.csv": "b5ef7624ee431b5b1ee08f55d1d26defaa34f149ed1c58546ae73b9c67d25429",
+    "spectroscopic_increment.csv": "23c04362556f187045c5bbfa2e496077b3160d5d184a5c64cf74edc6595b9765"
+  }
+}

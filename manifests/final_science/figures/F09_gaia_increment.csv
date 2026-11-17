@@ -1,0 +1,109 @@
+region,tier,gaia,r_min,r_max,n
+south_v35,bright_red_near,Reliable Gaia geometry,14.0,14.5,0
+south_v35,bright_red_near,Reliable Gaia geometry,14.5,15.0,0
+south_v35,bright_red_near,Reliable Gaia geometry,15.0,15.5,0
+south_v35,bright_red_near,Reliable Gaia geometry,15.5,16.0,0
+south_v35,bright_red_near,Reliable Gaia geometry,16.0,16.5,135244
+south_v35,bright_red_near,Reliable Gaia geometry,16.5,17.0,221207
+south_v35,bright_red_near,Reliable Gaia geometry,17.0,17.5,224641
+south_v35,bright_red_near,Reliable Gaia geometry,17.5,18.0,148800
+south_v35,bright_red_near,Reliable Gaia geometry,18.0,18.5,0
+south_v35,bright_red_near,Reliable Gaia geometry,18.5,19.0,0
+south_v35,bright_red_near,Reliable Gaia geometry,19.0,19.5,0
+south_v35,bright_red_near,Reliable Gaia geometry,19.5,20.0,0
+south_v35,bright_red_near,"Matched, below geometry requirement",14.0,14.5,0
+south_v35,bright_red_near,"Matched, below geometry requirement",14.5,15.0,0
+south_v35,bright_red_near,"Matched, below geometry requirement",15.0,15.5,0
+south_v35,bright_red_near,"Matched, below geometry requirement",15.5,16.0,0
+south_v35,bright_red_near,"Matched, below geometry requirement",16.0,16.5,11196
+south_v35,bright_red_near,"Matched, below geometry requirement",16.5,17.0,26898
+south_v35,bright_red_near,"Matched, below geometry requirement",17.0,17.5,104326
+south_v35,bright_red_near,"Matched, below geometry requirement",17.5,18.0,242540
+south_v35,bright_red_near,"Matched, below geometry requirement",18.0,18.5,0
+south_v35,bright_red_near,"Matched, below geometry requirement",18.5,19.0,0
+south_v35,bright_red_near,"Matched, below geometry requirement",19.0,19.5,0
+south_v35,bright_red_near,"Matched, below geometry requirement",19.5,20.0,0
+south_v35,bright_red_near,Missing or unresolved link,14.0,14.5,0
+south_v35,bright_red_near,Missing or unresolved link,14.5,15.0,0
+south_v35,bright_red_near,Missing or unresolved link,15.0,15.5,0
+south_v35,bright_red_near,Missing or unresolved link,15.5,16.0,0
+south_v35,bright_red_near,Missing or unresolved link,16.0,16.5,14
+south_v35,bright_red_near,Missing or unresolved link,16.5,17.0,40
+south_v35,bright_red_near,Missing or unresolved link,17.0,17.5,55
+south_v35,bright_red_near,Missing or unresolved link,17.5,18.0,116
+south_v35,bright_red_near,Missing or unresolved link,18.0,18.5,0
+south_v35,bright_red_near,Missing or unresolved link,18.5,19.0,0
+south_v35,bright_red_near,Missing or unresolved link,19.0,19.5,0
+south_v35,bright_red_near,Missing or unresolved link,19.5,20.0,0
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,14.0,14.5,0
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,14.5,15.0,0
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,15.0,15.5,0
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,15.5,16.0,1474
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,16.0,16.5,2524
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,16.5,17.0,720
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,17.0,17.5,44
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,17.5,18.0,3
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,18.0,18.5,2
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,18.5,19.0,1
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,19.0,19.5,4
+south_low,dwarf_enhanced_2_5,Reliable Gaia geometry,19.5,20.0,3
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",14.0,14.5,0
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",14.5,15.0,0
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",15.0,15.5,0
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",15.5,16.0,919
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",16.0,16.5,8529
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",16.5,17.0,19554
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",17.0,17.5,30377
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",17.5,18.0,41213
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",18.0,18.5,49181
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",18.5,19.0,47473
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",19.0,19.5,49108
+south_low,dwarf_enhanced_2_5,"Matched, below geometry requirement",19.5,20.0,52810
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,14.0,14.5,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,14.5,15.0,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,15.0,15.5,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,15.5,16.0,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,16.0,16.5,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,16.5,17.0,0
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,17.0,17.5,1
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,17.5,18.0,3
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,18.0,18.5,9
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,18.5,19.0,14
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,19.0,19.5,38
+south_low,dwarf_enhanced_2_5,Missing or unresolved link,19.5,20.0,63
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,14.0,14.5,0
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,14.5,15.0,0
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,15.0,15.5,0
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,15.5,16.0,0
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,16.0,16.5,2825
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,16.5,17.0,5573
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,17.0,17.5,770
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,17.5,18.0,56
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,18.0,18.5,31
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,18.5,19.0,57
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,19.0,19.5,78
+north,dwarf_enhanced_2_5,Reliable Gaia geometry,19.5,20.0,62
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",14.0,14.5,0
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",14.5,15.0,0
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",15.0,15.5,0
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",15.5,16.0,0
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",16.0,16.5,3370
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",16.5,17.0,35134
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",17.0,17.5,81065
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",17.5,18.0,114722
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",18.0,18.5,152962
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",18.5,19.0,144422
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",19.0,19.5,147812
+north,dwarf_enhanced_2_5,"Matched, below geometry requirement",19.5,20.0,172054
+north,dwarf_enhanced_2_5,Missing or unresolved link,14.0,14.5,0
+north,dwarf_enhanced_2_5,Missing or unresolved link,14.5,15.0,0
+north,dwarf_enhanced_2_5,Missing or unresolved link,15.0,15.5,0
+north,dwarf_enhanced_2_5,Missing or unresolved link,15.5,16.0,0
+north,dwarf_enhanced_2_5,Missing or unresolved link,16.0,16.5,0
+north,dwarf_enhanced_2_5,Missing or unresolved link,16.5,17.0,1
+north,dwarf_enhanced_2_5,Missing or unresolved link,17.0,17.5,11
+north,dwarf_enhanced_2_5,Missing or unresolved link,17.5,18.0,18
+north,dwarf_enhanced_2_5,Missing or unresolved link,18.0,18.5,41
+north,dwarf_enhanced_2_5,Missing or unresolved link,18.5,19.0,78
+north,dwarf_enhanced_2_5,Missing or unresolved link,19.0,19.5,221
+north,dwarf_enhanced_2_5,Missing or unresolved link,19.5,20.0,516

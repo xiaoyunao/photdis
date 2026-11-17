@@ -1,0 +1,45 @@
+{
+  "job": "61461729",
+  "rows": 2387219,
+  "inputs": {
+    "selected": "db898b9c0ab49db94fe1febe597833d9abc96b389ab818a554702e31ee2a75e5",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "area_north": "409d26b9a88a3b5aa30e0e3366d745c2518a44886d5614ec83045aca94a40afa",
+    "area_south": "3855542518a23951892992483cca5028abc001987ba971fdcc336c499dff7518"
+  },
+  "regression": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "outputs": {
+    "F02_direct_distances.csv": "8c52d6c0ab6591daacdba00d0618620ac0b1d90785d175f7888273cfb6a89d15",
+    "F02_direct_distances.npz": "03892fdd224806fdffdf90df01dbae636a2abc413f8e586f5998bbd007b565a7",
+    "F02_direct_distances.pdf": "63d568005c83fdc106cba559d188cc09ef20b7e9ed493f507a023482dccf8afe",
+    "F02_direct_distances.png": "bbbae6c9a3a727525fc10a2525f0a5a2233ad0ebee82547b537606edc29ae24d",
+    "F03_same_star_cmd.csv": "3922257e2cdbb671335cfd2293d177ead184432c6b076f1de75601eac24bf04f",
+    "F03_same_star_cmd.npz": "22eed424c6e923b3e554513baf3942604271c4dbfdb5f81a1ad0957686616969",
+    "F03_same_star_cmd.pdf": "49d008a3521566727233ee0d6e04b63ea6242f21c9de9724eba60897f1daf017",
+    "F03_same_star_cmd.png": "c833cd2955bcf6e350af986d94645d7e4e533001a93ba9f1bfdef976b2ea728b",
+    "F04_science.csv": "1721b88ddf8e5f8ac7e6a3d8cde56d29816a1220921b084cd87fc1099f079fd2",
+    "F04_science.pdf": "0128b63320aed57243808fb1bac7510d2d3f75eac6945342b5d9d14919371c66",
+    "F04_science.png": "bbf8ba28bb0301010303b4ec9c12443fdd103fb57a6cbb7fc89136aed579557b",
+    "F04_weak_gaia.csv": "d6693590ce1aec1324b571ff87eed331774790b57898b15c268e9bbcf62af1d5",
+    "F04_weak_gaia.pdf": "957da298bfc8bcf1fbf472ad9fd08b0c2b5318dabe2f4a47f1cdbb4c3ebae051",
+    "F04_weak_gaia.png": "7f1a97bcb442b5f391864d17a4e432a5ac36bef81dc95d703bd4e0ddb88723ae",
+    "F05_heliocentric_projection.csv": "dd581351ffd44026645effb972de2b1f4831395353d42beeade9b481687e2c6c",
+    "F05_heliocentric_projection.npz": "e8033dc7c70830b39e08daed97f059de5b6a93df82d3dfbc8aec684bf8142c1c",
+    "F05_heliocentric_projection.pdf": "5c6c7fef7b9875d455940ed28e794b75370cf05c597a12c3d2ad8d92021426ba",
+    "F05_heliocentric_projection.png": "a1a31b645d17fb650eab27dfd5952d5b2c73437c20f4e93e4e0805b6b6468314",
+    "F09_gaia_increment.csv": "dc0e091c613fe20f7dc0e4560187fd818797dac830765c1f3932d347247aa88f",
+    "F09_gaia_increment.pdf": "020e9fdcb4973709f99233808e17a886bdbc9fe3d0fcbb798fcecb05d366d402",
+    "F09_gaia_increment.png": "014a71cbd97b3c75127e50d35f1fef421fca2312e77f199b20befda25d3ebb42",
+    "F10_distance_residuals.csv": "1bea7e6e9b802188a2ace9ca56edcbd323aa70363568ad63a9b18780200c9ed8",
+    "F10_distance_residuals.npz": "256ab6c8e54b5bef33f2344081a08a2de80b64d8b42f08869a3e797263598e1c",
+    "F10_distance_residuals.pdf": "1c28c1958369f8e1d925d0e7b2b9f648b7b4c0548980cd45a9b2fa9a4c8d6c40",
+    "F10_distance_residuals.png": "41e79783799c286689f1cfabd30745edc382e640b52ae2fc378a1738e490a0d8",
+    "F11_depth_controlled_profiles.csv": "01fea1f12ccfa2bce35a6fac53ab71f18ae59c46ab1f10de32f46fff53409473",
+    "F11_depth_controlled_profiles.pdf": "09612f978eba92319267074dd502c467b7e94dfcc501da36b5c83e27431e56b8",
+    "F11_depth_controlled_profiles.png": "f6cc7b29d58005de2ff9f9c7b9590e755ca81a7c20defca1a5aef8eb278315a8",
+    "pixel_selection.csv": "deb3918e597d5ae5a0515629618425c6ced5e2ab5b7c5a4ab249105fdb8b1072"
+  }
+}

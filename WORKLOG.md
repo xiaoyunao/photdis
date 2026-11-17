@@ -1,5 +1,36 @@
 # WORKLOG
 
+## 2026-11-17 — Final Science Analysis of frozen DR11 release
+
+- Read GPT Pro review d5ea5ae0 and registered the goal before edits.
+  Froze v3.9 release, v3.7/v3.10 sample recipes, existing PDFs/references
+  and the Pal 5 v3.8 figure styles.
+- Implemented configs/final_science.json and scripts/final_science_*.py.
+  NERSC preparation 61460257 and all 32 census tasks 61460258 completed.
+  Reconciled 72,289,386 owned PSFs and 43,347,612 full PDFs against the
+  release. Independent native random-area jobs 61460406 and 61460407
+  completed. Evidence job 61460408 directly read 4,120 Gaia DR3 tiles and
+  recovered 2,387,219 rows in the near, 2–5 kpc and distant research selections.
+- Working selection profile job 61461227 failed on apparent r because
+  the validation helper exports dereddened r only in its joined view.
+  Recovered apparent r from the source partitions with an exact identity
+  check. Job 61461328 passed. The restricted northern slice shows how
+  the dwarf selection changes the latitude density contrast.
+- Relative to Gaia geometry, 1,150,705 matched 2–5 kpc candidates fall
+  below its parallax quality requirement. Their 2–5 kpc mass is 997,824.
+  The holdout spectral dwarfs support roughly 8–9% NMAD on those matched
+  references. The metal-poor subset retains a substantial positive bias.
+- Initial figures and receipts 61460538/61460680 passed. Visual review
+  prompted the addition of the explicit 5–10 kpc research tier to both
+  Aitoff plates and alignment of latitude profiles with native domains.
+  Final render and validation used jobs 61461729 and 61461730.
+  Both completed 0:0. Eight new PNG/PDF plates were visually checked.
+  Both F02/F03 baseline render regressions match the original pixels and
+  14 reused figures were bound to their original archived data and outputs.
+  Report and compact tables are linked in docs/final_science.md.
+- Compiled the programs, checked the wrapper and ran all 476 existing
+  tests. Retain the original GD-1 science closure, models and catalogues.
+
 ## 2026-11-17 — GD-1 member QRF and native passbands (v3.18)
 
 - Read full GPT Pro review bb077256 on 033ee1c4 and recorded the goal.

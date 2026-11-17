@@ -1,0 +1,858 @@
+region,source,R_lo,R_hi,Z_lo,Z_hi,n
+south_v35,Photdis,6.5,6.75,-1.5,-1.25,6
+south_v35,Photdis,6.5,6.75,-1.25,-1.0,29
+south_v35,Photdis,6.5,6.75,-1.0,-0.75,2
+south_v35,Photdis,6.75,7.0,-1.75,-1.5,56
+south_v35,Photdis,6.75,7.0,-1.5,-1.25,662
+south_v35,Photdis,6.75,7.0,-1.25,-1.0,355
+south_v35,Photdis,6.75,7.0,-1.0,-0.75,66
+south_v35,Photdis,6.75,7.0,1.25,1.5,1
+south_v35,Photdis,6.75,7.0,1.5,1.75,1
+south_v35,Photdis,7.0,7.25,-1.75,-1.5,869
+south_v35,Photdis,7.0,7.25,-1.5,-1.25,3520
+south_v35,Photdis,7.0,7.25,-1.25,-1.0,3398
+south_v35,Photdis,7.0,7.25,-1.0,-0.75,706
+south_v35,Photdis,7.0,7.25,-0.75,-0.5,30
+south_v35,Photdis,7.0,7.25,1.0,1.25,11
+south_v35,Photdis,7.0,7.25,1.25,1.5,101
+south_v35,Photdis,7.0,7.25,1.5,1.75,169
+south_v35,Photdis,7.25,7.5,-2.0,-1.75,123
+south_v35,Photdis,7.25,7.5,-1.75,-1.5,2111
+south_v35,Photdis,7.25,7.5,-1.5,-1.25,6400
+south_v35,Photdis,7.25,7.5,-1.25,-1.0,10801
+south_v35,Photdis,7.25,7.5,-1.0,-0.75,8906
+south_v35,Photdis,7.25,7.5,-0.75,-0.5,1389
+south_v35,Photdis,7.25,7.5,-0.5,-0.25,2
+south_v35,Photdis,7.25,7.5,0.5,0.75,5
+south_v35,Photdis,7.25,7.5,0.75,1.0,98
+south_v35,Photdis,7.25,7.5,1.0,1.25,1188
+south_v35,Photdis,7.25,7.5,1.25,1.5,1756
+south_v35,Photdis,7.25,7.5,1.5,1.75,919
+south_v35,Photdis,7.25,7.5,1.75,2.0,75
+south_v35,Photdis,7.5,7.75,-2.0,-1.75,409
+south_v35,Photdis,7.5,7.75,-1.75,-1.5,2816
+south_v35,Photdis,7.5,7.75,-1.5,-1.25,7198
+south_v35,Photdis,7.5,7.75,-1.25,-1.0,14819
+south_v35,Photdis,7.5,7.75,-1.0,-0.75,29220
+south_v35,Photdis,7.5,7.75,-0.75,-0.5,24360
+south_v35,Photdis,7.5,7.75,-0.5,-0.25,1505
+south_v35,Photdis,7.5,7.75,0.25,0.5,7
+south_v35,Photdis,7.5,7.75,0.5,0.75,1390
+south_v35,Photdis,7.5,7.75,0.75,1.0,6662
+south_v35,Photdis,7.5,7.75,1.0,1.25,6245
+south_v35,Photdis,7.5,7.75,1.25,1.5,3661
+south_v35,Photdis,7.5,7.75,1.5,1.75,1838
+south_v35,Photdis,7.5,7.75,1.75,2.0,289
+south_v35,Photdis,7.75,8.0,-2.0,-1.75,704
+south_v35,Photdis,7.75,8.0,-1.75,-1.5,3419
+south_v35,Photdis,7.75,8.0,-1.5,-1.25,7716
+south_v35,Photdis,7.75,8.0,-1.25,-1.0,16292
+south_v35,Photdis,7.75,8.0,-1.0,-0.75,33574
+south_v35,Photdis,7.75,8.0,-0.75,-0.5,54329
+south_v35,Photdis,7.75,8.0,-0.5,-0.25,30592
+south_v35,Photdis,7.75,8.0,-0.25,0.0,225
+south_v35,Photdis,7.75,8.0,0.0,0.25,11
+south_v35,Photdis,7.75,8.0,0.25,0.5,6713
+south_v35,Photdis,7.75,8.0,0.5,0.75,22532
+south_v35,Photdis,7.75,8.0,0.75,1.0,19014
+south_v35,Photdis,7.75,8.0,1.0,1.25,9574
+south_v35,Photdis,7.75,8.0,1.25,1.5,4248
+south_v35,Photdis,7.75,8.0,1.5,1.75,2140
+south_v35,Photdis,7.75,8.0,1.75,2.0,518
+south_v35,Photdis,8.0,8.25,-2.0,-1.75,798
+south_v35,Photdis,8.0,8.25,-1.75,-1.5,3266
+south_v35,Photdis,8.0,8.25,-1.5,-1.25,7688
+south_v35,Photdis,8.0,8.25,-1.25,-1.0,17057
+south_v35,Photdis,8.0,8.25,-1.0,-0.75,36582
+south_v35,Photdis,8.0,8.25,-0.75,-0.5,57995
+south_v35,Photdis,8.0,8.25,-0.5,-0.25,47119
+south_v35,Photdis,8.0,8.25,-0.25,0.0,2510
+south_v35,Photdis,8.0,8.25,0.0,0.25,930
+south_v35,Photdis,8.0,8.25,0.25,0.5,23860
+south_v35,Photdis,8.0,8.25,0.5,0.75,31572
+south_v35,Photdis,8.0,8.25,0.75,1.0,19469
+south_v35,Photdis,8.0,8.25,1.0,1.25,8816
+south_v35,Photdis,8.0,8.25,1.25,1.5,3658
+south_v35,Photdis,8.0,8.25,1.5,1.75,1749
+south_v35,Photdis,8.0,8.25,1.75,2.0,432
+south_v35,Photdis,8.25,8.5,-2.0,-1.75,673
+south_v35,Photdis,8.25,8.5,-1.75,-1.5,3087
+south_v35,Photdis,8.25,8.5,-1.5,-1.25,7623
+south_v35,Photdis,8.25,8.5,-1.25,-1.0,19142
+south_v35,Photdis,8.25,8.5,-1.0,-0.75,43644
+south_v35,Photdis,8.25,8.5,-0.75,-0.5,75735
+south_v35,Photdis,8.25,8.5,-0.5,-0.25,61751
+south_v35,Photdis,8.25,8.5,-0.25,0.0,2832
+south_v35,Photdis,8.25,8.5,0.0,0.25,1528
+south_v35,Photdis,8.25,8.5,0.25,0.5,16380
+south_v35,Photdis,8.25,8.5,0.5,0.75,18739
+south_v35,Photdis,8.25,8.5,0.75,1.0,10974
+south_v35,Photdis,8.25,8.5,1.0,1.25,4634
+south_v35,Photdis,8.25,8.5,1.25,1.5,2009
+south_v35,Photdis,8.25,8.5,1.5,1.75,977
+south_v35,Photdis,8.25,8.5,1.75,2.0,245
+south_v35,Photdis,8.5,8.75,-2.0,-1.75,418
+south_v35,Photdis,8.5,8.75,-1.75,-1.5,2404
+south_v35,Photdis,8.5,8.75,-1.5,-1.25,6375
+south_v35,Photdis,8.5,8.75,-1.25,-1.0,15199
+south_v35,Photdis,8.5,8.75,-1.0,-0.75,31193
+south_v35,Photdis,8.5,8.75,-0.75,-0.5,36736
+south_v35,Photdis,8.5,8.75,-0.5,-0.25,13742
+south_v35,Photdis,8.5,8.75,-0.25,0.0,1
+south_v35,Photdis,8.5,8.75,0.0,0.25,308
+south_v35,Photdis,8.5,8.75,0.25,0.5,11990
+south_v35,Photdis,8.5,8.75,0.5,0.75,16706
+south_v35,Photdis,8.5,8.75,0.75,1.0,8724
+south_v35,Photdis,8.5,8.75,1.0,1.25,4191
+south_v35,Photdis,8.5,8.75,1.25,1.5,1936
+south_v35,Photdis,8.5,8.75,1.5,1.75,787
+south_v35,Photdis,8.5,8.75,1.75,2.0,168
+south_v35,Photdis,8.75,9.0,-2.0,-1.75,185
+south_v35,Photdis,8.75,9.0,-1.75,-1.5,1545
+south_v35,Photdis,8.75,9.0,-1.5,-1.25,4958
+south_v35,Photdis,8.75,9.0,-1.25,-1.0,8402
+south_v35,Photdis,8.75,9.0,-1.0,-0.75,8618
+south_v35,Photdis,8.75,9.0,-0.75,-0.5,6786
+south_v35,Photdis,8.75,9.0,-0.5,-0.25,199
+south_v35,Photdis,8.75,9.0,0.25,0.5,2685
+south_v35,Photdis,8.75,9.0,0.5,0.75,10278
+south_v35,Photdis,8.75,9.0,0.75,1.0,6272
+south_v35,Photdis,8.75,9.0,1.0,1.25,2597
+south_v35,Photdis,8.75,9.0,1.25,1.5,1273
+south_v35,Photdis,8.75,9.0,1.5,1.75,452
+south_v35,Photdis,8.75,9.0,1.75,2.0,46
+south_v35,Photdis,9.0,9.25,-2.0,-1.75,34
+south_v35,Photdis,9.0,9.25,-1.75,-1.5,763
+south_v35,Photdis,9.0,9.25,-1.5,-1.25,1379
+south_v35,Photdis,9.0,9.25,-1.25,-1.0,1591
+south_v35,Photdis,9.0,9.25,-1.0,-0.75,2600
+south_v35,Photdis,9.0,9.25,-0.75,-0.5,287
+south_v35,Photdis,9.0,9.25,0.25,0.5,19
+south_v35,Photdis,9.0,9.25,0.5,0.75,3225
+south_v35,Photdis,9.0,9.25,0.75,1.0,3429
+south_v35,Photdis,9.0,9.25,1.0,1.25,1948
+south_v35,Photdis,9.0,9.25,1.25,1.5,725
+south_v35,Photdis,9.0,9.25,1.5,1.75,214
+south_v35,Photdis,9.0,9.25,1.75,2.0,2
+south_v35,Photdis,9.25,9.5,-1.75,-1.5,32
+south_v35,Photdis,9.25,9.5,-1.5,-1.25,97
+south_v35,Photdis,9.25,9.5,-1.25,-1.0,282
+south_v35,Photdis,9.25,9.5,-1.0,-0.75,216
+south_v35,Photdis,9.25,9.5,-0.75,-0.5,1
+south_v35,Photdis,9.25,9.5,0.5,0.75,235
+south_v35,Photdis,9.25,9.5,0.75,1.0,1638
+south_v35,Photdis,9.25,9.5,1.0,1.25,898
+south_v35,Photdis,9.25,9.5,1.25,1.5,389
+south_v35,Photdis,9.25,9.5,1.5,1.75,31
+south_v35,Photdis,9.5,9.75,-1.25,-1.0,1
+south_v35,Photdis,9.5,9.75,-1.0,-0.75,1
+south_v35,Photdis,9.5,9.75,0.75,1.0,260
+south_v35,Photdis,9.5,9.75,1.0,1.25,292
+south_v35,Photdis,9.5,9.75,1.25,1.5,51
+south_v35,Photdis,9.75,10.0,-1.0,-0.75,1
+south_v35,Photdis,9.75,10.0,0.75,1.0,10
+south_v35,Photdis,9.75,10.0,1.0,1.25,3
+south_v35,Gaia same-footprint reference,6.75,7.0,-1.25,-1.0,1
+south_v35,Gaia same-footprint reference,6.75,7.0,-1.0,-0.75,2
+south_v35,Gaia same-footprint reference,7.0,7.25,-1.5,-1.25,10
+south_v35,Gaia same-footprint reference,7.0,7.25,-1.25,-1.0,67
+south_v35,Gaia same-footprint reference,7.0,7.25,-1.0,-0.75,49
+south_v35,Gaia same-footprint reference,7.0,7.25,-0.75,-0.5,6
+south_v35,Gaia same-footprint reference,7.25,7.5,-1.75,-1.5,3
+south_v35,Gaia same-footprint reference,7.25,7.5,-1.5,-1.25,62
+south_v35,Gaia same-footprint reference,7.25,7.5,-1.25,-1.0,1131
+south_v35,Gaia same-footprint reference,7.25,7.5,-1.0,-0.75,3520
+south_v35,Gaia same-footprint reference,7.25,7.5,-0.75,-0.5,815
+south_v35,Gaia same-footprint reference,7.25,7.5,0.5,0.75,1
+south_v35,Gaia same-footprint reference,7.25,7.5,0.75,1.0,15
+south_v35,Gaia same-footprint reference,7.25,7.5,1.0,1.25,31
+south_v35,Gaia same-footprint reference,7.25,7.5,1.25,1.5,6
+south_v35,Gaia same-footprint reference,7.5,7.75,-1.75,-1.5,8
+south_v35,Gaia same-footprint reference,7.5,7.75,-1.5,-1.25,256
+south_v35,Gaia same-footprint reference,7.5,7.75,-1.25,-1.0,3470
+south_v35,Gaia same-footprint reference,7.5,7.75,-1.0,-0.75,17611
+south_v35,Gaia same-footprint reference,7.5,7.75,-0.75,-0.5,21317
+south_v35,Gaia same-footprint reference,7.5,7.75,-0.5,-0.25,1366
+south_v35,Gaia same-footprint reference,7.5,7.75,0.25,0.5,8
+south_v35,Gaia same-footprint reference,7.5,7.75,0.5,0.75,1046
+south_v35,Gaia same-footprint reference,7.5,7.75,0.75,1.0,3089
+south_v35,Gaia same-footprint reference,7.5,7.75,1.0,1.25,1056
+south_v35,Gaia same-footprint reference,7.5,7.75,1.25,1.5,68
+south_v35,Gaia same-footprint reference,7.5,7.75,1.5,1.75,1
+south_v35,Gaia same-footprint reference,7.75,8.0,-2.0,-1.75,1
+south_v35,Gaia same-footprint reference,7.75,8.0,-1.75,-1.5,19
+south_v35,Gaia same-footprint reference,7.75,8.0,-1.5,-1.25,584
+south_v35,Gaia same-footprint reference,7.75,8.0,-1.25,-1.0,6082
+south_v35,Gaia same-footprint reference,7.75,8.0,-1.0,-0.75,25941
+south_v35,Gaia same-footprint reference,7.75,8.0,-0.75,-0.5,50674
+south_v35,Gaia same-footprint reference,7.75,8.0,-0.5,-0.25,26439
+south_v35,Gaia same-footprint reference,7.75,8.0,-0.25,0.0,232
+south_v35,Gaia same-footprint reference,7.75,8.0,0.0,0.25,8
+south_v35,Gaia same-footprint reference,7.75,8.0,0.25,0.5,5910
+south_v35,Gaia same-footprint reference,7.75,8.0,0.5,0.75,20458
+south_v35,Gaia same-footprint reference,7.75,8.0,0.75,1.0,12356
+south_v35,Gaia same-footprint reference,7.75,8.0,1.0,1.25,2873
+south_v35,Gaia same-footprint reference,7.75,8.0,1.25,1.5,212
+south_v35,Gaia same-footprint reference,7.75,8.0,1.5,1.75,6
+south_v35,Gaia same-footprint reference,8.0,8.25,-1.75,-1.5,23
+south_v35,Gaia same-footprint reference,8.0,8.25,-1.5,-1.25,720
+south_v35,Gaia same-footprint reference,8.0,8.25,-1.25,-1.0,7337
+south_v35,Gaia same-footprint reference,8.0,8.25,-1.0,-0.75,29139
+south_v35,Gaia same-footprint reference,8.0,8.25,-0.75,-0.5,54299
+south_v35,Gaia same-footprint reference,8.0,8.25,-0.5,-0.25,40337
+south_v35,Gaia same-footprint reference,8.0,8.25,-0.25,0.0,2717
+south_v35,Gaia same-footprint reference,8.0,8.25,0.0,0.25,1112
+south_v35,Gaia same-footprint reference,8.0,8.25,0.25,0.5,21275
+south_v35,Gaia same-footprint reference,8.0,8.25,0.5,0.75,28778
+south_v35,Gaia same-footprint reference,8.0,8.25,0.75,1.0,12380
+south_v35,Gaia same-footprint reference,8.0,8.25,1.0,1.25,2283
+south_v35,Gaia same-footprint reference,8.0,8.25,1.25,1.5,146
+south_v35,Gaia same-footprint reference,8.0,8.25,1.5,1.75,4
+south_v35,Gaia same-footprint reference,8.25,8.5,-1.75,-1.5,21
+south_v35,Gaia same-footprint reference,8.25,8.5,-1.5,-1.25,691
+south_v35,Gaia same-footprint reference,8.25,8.5,-1.25,-1.0,7102
+south_v35,Gaia same-footprint reference,8.25,8.5,-1.0,-0.75,32553
+south_v35,Gaia same-footprint reference,8.25,8.5,-0.75,-0.5,69946
+south_v35,Gaia same-footprint reference,8.25,8.5,-0.5,-0.25,54384
+south_v35,Gaia same-footprint reference,8.25,8.5,-0.25,0.0,2688
+south_v35,Gaia same-footprint reference,8.25,8.5,0.0,0.25,1628
+south_v35,Gaia same-footprint reference,8.25,8.5,0.25,0.5,14479
+south_v35,Gaia same-footprint reference,8.25,8.5,0.5,0.75,16162
+south_v35,Gaia same-footprint reference,8.25,8.5,0.75,1.0,5946
+south_v35,Gaia same-footprint reference,8.25,8.5,1.0,1.25,1106
+south_v35,Gaia same-footprint reference,8.25,8.5,1.25,1.5,69
+south_v35,Gaia same-footprint reference,8.25,8.5,1.5,1.75,2
+south_v35,Gaia same-footprint reference,8.5,8.75,-1.75,-1.5,15
+south_v35,Gaia same-footprint reference,8.5,8.75,-1.5,-1.25,282
+south_v35,Gaia same-footprint reference,8.5,8.75,-1.25,-1.0,3959
+south_v35,Gaia same-footprint reference,8.5,8.75,-1.0,-0.75,19847
+south_v35,Gaia same-footprint reference,8.5,8.75,-0.75,-0.5,32829
+south_v35,Gaia same-footprint reference,8.5,8.75,-0.5,-0.25,12482
+south_v35,Gaia same-footprint reference,8.5,8.75,-0.25,0.0,1
+south_v35,Gaia same-footprint reference,8.5,8.75,0.0,0.25,279
+south_v35,Gaia same-footprint reference,8.5,8.75,0.25,0.5,10190
+south_v35,Gaia same-footprint reference,8.5,8.75,0.5,0.75,11987
+south_v35,Gaia same-footprint reference,8.5,8.75,0.75,1.0,3861
+south_v35,Gaia same-footprint reference,8.5,8.75,1.0,1.25,580
+south_v35,Gaia same-footprint reference,8.5,8.75,1.25,1.5,25
+south_v35,Gaia same-footprint reference,8.75,9.0,-1.5,-1.25,98
+south_v35,Gaia same-footprint reference,8.75,9.0,-1.25,-1.0,1014
+south_v35,Gaia same-footprint reference,8.75,9.0,-1.0,-0.75,3257
+south_v35,Gaia same-footprint reference,8.75,9.0,-0.75,-0.5,5002
+south_v35,Gaia same-footprint reference,8.75,9.0,-0.5,-0.25,201
+south_v35,Gaia same-footprint reference,8.75,9.0,0.25,0.5,1945
+south_v35,Gaia same-footprint reference,8.75,9.0,0.5,0.75,4734
+south_v35,Gaia same-footprint reference,8.75,9.0,0.75,1.0,1456
+south_v35,Gaia same-footprint reference,8.75,9.0,1.0,1.25,167
+south_v35,Gaia same-footprint reference,8.75,9.0,1.25,1.5,7
+south_v35,Gaia same-footprint reference,9.0,9.25,-2.0,-1.75,1
+south_v35,Gaia same-footprint reference,9.0,9.25,-1.75,-1.5,1
+south_v35,Gaia same-footprint reference,9.0,9.25,-1.5,-1.25,9
+south_v35,Gaia same-footprint reference,9.0,9.25,-1.25,-1.0,42
+south_v35,Gaia same-footprint reference,9.0,9.25,-1.0,-0.75,343
+south_v35,Gaia same-footprint reference,9.0,9.25,-0.75,-0.5,103
+south_v35,Gaia same-footprint reference,9.0,9.25,0.25,0.5,12
+south_v35,Gaia same-footprint reference,9.0,9.25,0.5,0.75,782
+south_v35,Gaia same-footprint reference,9.0,9.25,0.75,1.0,187
+south_v35,Gaia same-footprint reference,9.0,9.25,1.0,1.25,24
+south_v35,Gaia same-footprint reference,9.25,9.5,-1.25,-1.0,1
+south_v35,Gaia same-footprint reference,9.25,9.5,-1.0,-0.75,2
+south_v35,Gaia same-footprint reference,9.25,9.5,-0.75,-0.5,2
+south_v35,Gaia same-footprint reference,9.25,9.5,0.5,0.75,15
+south_v35,Gaia same-footprint reference,9.25,9.5,0.75,1.0,13
+south_low,Photdis,8.25,8.5,-1.25,-1.0,1
+south_low,Photdis,8.25,8.5,-1.0,-0.75,1
+south_low,Photdis,8.5,8.75,-1.5,-1.25,9
+south_low,Photdis,8.5,8.75,-1.25,-1.0,11
+south_low,Photdis,8.75,9.0,-1.75,-1.5,9
+south_low,Photdis,8.75,9.0,0.75,1.0,1
+south_low,Photdis,8.75,9.0,1.0,1.25,10
+south_low,Photdis,9.0,9.25,-2.25,-2.0,2
+south_low,Photdis,9.0,9.25,-2.0,-1.75,4
+south_low,Photdis,9.0,9.25,-1.25,-1.0,80
+south_low,Photdis,9.0,9.25,-1.0,-0.75,74
+south_low,Photdis,9.0,9.25,0.75,1.0,3
+south_low,Photdis,9.0,9.25,1.0,1.25,9
+south_low,Photdis,9.0,9.25,1.25,1.5,4
+south_low,Photdis,9.25,9.5,-2.5,-2.25,3
+south_low,Photdis,9.25,9.5,-2.25,-2.0,1
+south_low,Photdis,9.25,9.5,-1.5,-1.25,42
+south_low,Photdis,9.25,9.5,-1.25,-1.0,2218
+south_low,Photdis,9.25,9.5,-1.0,-0.75,3125
+south_low,Photdis,9.25,9.5,-0.75,-0.5,416
+south_low,Photdis,9.25,9.5,0.5,0.75,487
+south_low,Photdis,9.25,9.5,0.75,1.0,3236
+south_low,Photdis,9.25,9.5,1.0,1.25,816
+south_low,Photdis,9.25,9.5,1.25,1.5,5
+south_low,Photdis,9.25,9.5,1.5,1.75,2
+south_low,Photdis,9.5,9.75,-1.75,-1.5,14
+south_low,Photdis,9.5,9.75,-1.5,-1.25,819
+south_low,Photdis,9.5,9.75,-1.25,-1.0,5186
+south_low,Photdis,9.5,9.75,-1.0,-0.75,6301
+south_low,Photdis,9.5,9.75,-0.75,-0.5,514
+south_low,Photdis,9.5,9.75,0.25,0.5,3
+south_low,Photdis,9.5,9.75,0.5,0.75,1593
+south_low,Photdis,9.5,9.75,0.75,1.0,10534
+south_low,Photdis,9.5,9.75,1.0,1.25,3861
+south_low,Photdis,9.5,9.75,1.25,1.5,203
+south_low,Photdis,9.5,9.75,1.5,1.75,1
+south_low,Photdis,9.5,9.75,1.75,2.0,2
+south_low,Photdis,9.75,10.0,-2.0,-1.75,6
+south_low,Photdis,9.75,10.0,-1.75,-1.5,326
+south_low,Photdis,9.75,10.0,-1.5,-1.25,2621
+south_low,Photdis,9.75,10.0,-1.25,-1.0,5105
+south_low,Photdis,9.75,10.0,-1.0,-0.75,1987
+south_low,Photdis,9.75,10.0,0.25,0.5,105
+south_low,Photdis,9.75,10.0,0.5,0.75,19618
+south_low,Photdis,9.75,10.0,0.75,1.0,16263
+south_low,Photdis,9.75,10.0,1.0,1.25,5765
+south_low,Photdis,9.75,10.0,1.25,1.5,1453
+south_low,Photdis,9.75,10.0,1.5,1.75,54
+south_low,Photdis,9.75,10.0,1.75,2.0,3
+south_low,Photdis,10.0,10.25,-2.25,-2.0,3
+south_low,Photdis,10.0,10.25,-2.0,-1.75,121
+south_low,Photdis,10.0,10.25,-1.75,-1.5,1408
+south_low,Photdis,10.0,10.25,-1.5,-1.25,2929
+south_low,Photdis,10.0,10.25,-1.25,-1.0,2959
+south_low,Photdis,10.0,10.25,-1.0,-0.75,425
+south_low,Photdis,10.0,10.25,0.25,0.5,1
+south_low,Photdis,10.0,10.25,0.5,0.75,17114
+south_low,Photdis,10.0,10.25,0.75,1.0,17774
+south_low,Photdis,10.0,10.25,1.0,1.25,6888
+south_low,Photdis,10.0,10.25,1.25,1.5,2511
+south_low,Photdis,10.0,10.25,1.5,1.75,497
+south_low,Photdis,10.0,10.25,1.75,2.0,16
+south_low,Photdis,10.0,10.25,2.0,2.25,1
+south_low,Photdis,10.0,10.25,2.25,2.5,2
+south_low,Photdis,10.25,10.5,-2.25,-2.0,42
+south_low,Photdis,10.25,10.5,-2.0,-1.75,633
+south_low,Photdis,10.25,10.5,-1.75,-1.5,1913
+south_low,Photdis,10.25,10.5,-1.5,-1.25,2737
+south_low,Photdis,10.25,10.5,-1.25,-1.0,1031
+south_low,Photdis,10.25,10.5,-1.0,-0.75,9
+south_low,Photdis,10.25,10.5,0.5,0.75,5953
+south_low,Photdis,10.25,10.5,0.75,1.0,16020
+south_low,Photdis,10.25,10.5,1.0,1.25,7694
+south_low,Photdis,10.25,10.5,1.25,1.5,3273
+south_low,Photdis,10.25,10.5,1.5,1.75,1209
+south_low,Photdis,10.25,10.5,1.75,2.0,173
+south_low,Photdis,10.25,10.5,2.0,2.25,5
+south_low,Photdis,10.5,10.75,-2.5,-2.25,5
+south_low,Photdis,10.5,10.75,-2.25,-2.0,280
+south_low,Photdis,10.5,10.75,-2.0,-1.75,1188
+south_low,Photdis,10.5,10.75,-1.75,-1.5,1828
+south_low,Photdis,10.5,10.75,-1.5,-1.25,1605
+south_low,Photdis,10.5,10.75,-1.25,-1.0,312
+south_low,Photdis,10.5,10.75,0.5,0.75,1436
+south_low,Photdis,10.5,10.75,0.75,1.0,11784
+south_low,Photdis,10.5,10.75,1.0,1.25,7203
+south_low,Photdis,10.5,10.75,1.25,1.5,3741
+south_low,Photdis,10.5,10.75,1.5,1.75,1527
+south_low,Photdis,10.5,10.75,1.75,2.0,645
+south_low,Photdis,10.5,10.75,2.0,2.25,60
+south_low,Photdis,10.75,11.0,-2.5,-2.25,96
+south_low,Photdis,10.75,11.0,-2.25,-2.0,669
+south_low,Photdis,10.75,11.0,-2.0,-1.75,1056
+south_low,Photdis,10.75,11.0,-1.75,-1.5,1604
+south_low,Photdis,10.75,11.0,-1.5,-1.25,694
+south_low,Photdis,10.75,11.0,-1.25,-1.0,49
+south_low,Photdis,10.75,11.0,0.5,0.75,180
+south_low,Photdis,10.75,11.0,0.75,1.0,6854
+south_low,Photdis,10.75,11.0,1.0,1.25,6712
+south_low,Photdis,10.75,11.0,1.25,1.5,3887
+south_low,Photdis,10.75,11.0,1.5,1.75,1974
+south_low,Photdis,10.75,11.0,1.75,2.0,802
+south_low,Photdis,10.75,11.0,2.0,2.25,268
+south_low,Photdis,10.75,11.0,2.25,2.5,21
+south_low,Photdis,11.0,11.25,-2.5,-2.25,253
+south_low,Photdis,11.0,11.25,-2.25,-2.0,728
+south_low,Photdis,11.0,11.25,-2.0,-1.75,1074
+south_low,Photdis,11.0,11.25,-1.75,-1.5,849
+south_low,Photdis,11.0,11.25,-1.5,-1.25,267
+south_low,Photdis,11.0,11.25,0.75,1.0,2985
+south_low,Photdis,11.0,11.25,1.0,1.25,5994
+south_low,Photdis,11.0,11.25,1.25,1.5,3781
+south_low,Photdis,11.0,11.25,1.5,1.75,1994
+south_low,Photdis,11.0,11.25,1.75,2.0,1026
+south_low,Photdis,11.0,11.25,2.0,2.25,444
+south_low,Photdis,11.0,11.25,2.25,2.5,76
+south_low,Photdis,11.25,11.5,-2.5,-2.25,217
+south_low,Photdis,11.25,11.5,-2.25,-2.0,508
+south_low,Photdis,11.25,11.5,-2.0,-1.75,849
+south_low,Photdis,11.25,11.5,-1.75,-1.5,396
+south_low,Photdis,11.25,11.5,-1.5,-1.25,88
+south_low,Photdis,11.25,11.5,0.75,1.0,983
+south_low,Photdis,11.25,11.5,1.0,1.25,4996
+south_low,Photdis,11.25,11.5,1.25,1.5,3370
+south_low,Photdis,11.25,11.5,1.5,1.75,2172
+south_low,Photdis,11.25,11.5,1.75,2.0,1054
+south_low,Photdis,11.25,11.5,2.0,2.25,478
+south_low,Photdis,11.25,11.5,2.25,2.5,132
+south_low,Photdis,11.5,11.75,-2.5,-2.25,27
+south_low,Photdis,11.5,11.75,-2.25,-2.0,371
+south_low,Photdis,11.5,11.75,-2.0,-1.75,199
+south_low,Photdis,11.5,11.75,-1.75,-1.5,135
+south_low,Photdis,11.5,11.75,0.75,1.0,316
+south_low,Photdis,11.5,11.75,1.0,1.25,3239
+south_low,Photdis,11.5,11.75,1.25,1.5,3326
+south_low,Photdis,11.5,11.75,1.5,1.75,2072
+south_low,Photdis,11.5,11.75,1.75,2.0,929
+south_low,Photdis,11.5,11.75,2.0,2.25,285
+south_low,Photdis,11.5,11.75,2.25,2.5,18
+south_low,Photdis,11.75,12.0,-2.25,-2.0,44
+south_low,Photdis,11.75,12.0,-2.0,-1.75,1
+south_low,Photdis,11.75,12.0,0.75,1.0,16
+south_low,Photdis,11.75,12.0,1.0,1.25,1666
+south_low,Photdis,11.75,12.0,1.25,1.5,2892
+south_low,Photdis,11.75,12.0,1.5,1.75,1838
+south_low,Photdis,11.75,12.0,1.75,2.0,837
+south_low,Photdis,11.75,12.0,2.0,2.25,197
+south_low,Photdis,11.75,12.0,2.25,2.5,41
+south_low,Photdis,12.0,12.25,-2.5,-2.25,5
+south_low,Photdis,12.0,12.25,-2.25,-2.0,7
+south_low,Photdis,12.0,12.25,1.0,1.25,707
+south_low,Photdis,12.0,12.25,1.25,1.5,2195
+south_low,Photdis,12.0,12.25,1.5,1.75,1501
+south_low,Photdis,12.0,12.25,1.75,2.0,808
+south_low,Photdis,12.0,12.25,2.0,2.25,175
+south_low,Photdis,12.0,12.25,2.25,2.5,47
+south_low,Photdis,12.25,12.5,-2.5,-2.25,7
+south_low,Photdis,12.25,12.5,1.0,1.25,210
+south_low,Photdis,12.25,12.5,1.25,1.5,999
+south_low,Photdis,12.25,12.5,1.5,1.75,805
+south_low,Photdis,12.25,12.5,1.75,2.0,386
+south_low,Photdis,12.25,12.5,2.0,2.25,58
+south_low,Photdis,12.25,12.5,2.25,2.5,11
+south_low,Photdis,12.5,12.75,1.0,1.25,35
+south_low,Photdis,12.5,12.75,1.25,1.5,97
+south_low,Photdis,12.5,12.75,1.5,1.75,106
+south_low,Photdis,12.5,12.75,1.75,2.0,15
+south_low,Photdis,12.5,12.75,2.0,2.25,3
+south_low,Gaia same-footprint reference,8.0,8.25,-0.25,0.0,2
+south_low,Gaia same-footprint reference,8.0,8.25,0.0,0.25,2
+south_low,Gaia same-footprint reference,8.25,8.5,-0.25,0.0,2
+south_low,Gaia same-footprint reference,8.25,8.5,0.0,0.25,6
+south_low,Gaia same-footprint reference,8.5,8.75,0.0,0.25,1
+south_low,Gaia same-footprint reference,8.75,9.0,-1.0,-0.75,5
+south_low,Gaia same-footprint reference,8.75,9.0,-0.75,-0.5,9
+south_low,Gaia same-footprint reference,8.75,9.0,-0.5,-0.25,1
+south_low,Gaia same-footprint reference,8.75,9.0,0.0,0.25,1
+south_low,Gaia same-footprint reference,8.75,9.0,0.25,0.5,1
+south_low,Gaia same-footprint reference,8.75,9.0,0.5,0.75,3
+south_low,Gaia same-footprint reference,9.0,9.25,-1.25,-1.0,4
+south_low,Gaia same-footprint reference,9.0,9.25,-1.0,-0.75,167
+south_low,Gaia same-footprint reference,9.0,9.25,-0.75,-0.5,156
+south_low,Gaia same-footprint reference,9.0,9.25,-0.5,-0.25,3
+south_low,Gaia same-footprint reference,9.0,9.25,0.25,0.5,13
+south_low,Gaia same-footprint reference,9.0,9.25,0.5,0.75,159
+south_low,Gaia same-footprint reference,9.0,9.25,0.75,1.0,38
+south_low,Gaia same-footprint reference,9.25,9.5,-1.25,-1.0,71
+south_low,Gaia same-footprint reference,9.25,9.5,-1.0,-0.75,440
+south_low,Gaia same-footprint reference,9.25,9.5,-0.75,-0.5,209
+south_low,Gaia same-footprint reference,9.25,9.5,0.25,0.5,209
+south_low,Gaia same-footprint reference,9.25,9.5,0.5,0.75,436
+south_low,Gaia same-footprint reference,9.25,9.5,0.75,1.0,142
+south_low,Gaia same-footprint reference,9.25,9.5,1.0,1.25,4
+south_low,Gaia same-footprint reference,9.5,9.75,-1.5,-1.25,7
+south_low,Gaia same-footprint reference,9.5,9.75,-1.25,-1.0,117
+south_low,Gaia same-footprint reference,9.5,9.75,-1.0,-0.75,193
+south_low,Gaia same-footprint reference,9.5,9.75,-0.75,-0.5,24
+south_low,Gaia same-footprint reference,9.5,9.75,0.25,0.5,235
+south_low,Gaia same-footprint reference,9.5,9.75,0.5,0.75,1037
+south_low,Gaia same-footprint reference,9.5,9.75,0.75,1.0,138
+south_low,Gaia same-footprint reference,9.5,9.75,1.0,1.25,4
+south_low,Gaia same-footprint reference,9.75,10.0,-1.5,-1.25,13
+south_low,Gaia same-footprint reference,9.75,10.0,-1.25,-1.0,50
+south_low,Gaia same-footprint reference,9.75,10.0,-1.0,-0.75,27
+south_low,Gaia same-footprint reference,9.75,10.0,0.25,0.5,30
+south_low,Gaia same-footprint reference,9.75,10.0,0.5,0.75,518
+south_low,Gaia same-footprint reference,9.75,10.0,0.75,1.0,128
+south_low,Gaia same-footprint reference,9.75,10.0,1.0,1.25,5
+south_low,Gaia same-footprint reference,10.0,10.25,-1.75,-1.5,1
+south_low,Gaia same-footprint reference,10.0,10.25,-1.5,-1.25,7
+south_low,Gaia same-footprint reference,10.0,10.25,-1.25,-1.0,5
+south_low,Gaia same-footprint reference,10.0,10.25,-1.0,-0.75,1
+south_low,Gaia same-footprint reference,10.0,10.25,0.5,0.75,100
+south_low,Gaia same-footprint reference,10.0,10.25,0.75,1.0,35
+south_low,Gaia same-footprint reference,10.0,10.25,1.0,1.25,1
+south_low,Gaia same-footprint reference,10.25,10.5,-1.5,-1.25,1
+south_low,Gaia same-footprint reference,10.25,10.5,0.5,0.75,8
+south_low,Gaia same-footprint reference,10.25,10.5,0.75,1.0,4
+south_low,Gaia same-footprint reference,10.25,10.5,1.0,1.25,1
+south_low,Gaia same-footprint reference,10.5,10.75,0.75,1.0,1
+north,Photdis,6.5,6.75,2.75,3.0,9
+north,Photdis,6.5,6.75,3.0,3.25,35
+north,Photdis,6.5,6.75,3.25,3.5,45
+north,Photdis,6.5,6.75,3.5,3.75,17
+north,Photdis,6.5,6.75,3.75,4.0,3
+north,Photdis,6.75,7.0,1.75,2.0,8
+north,Photdis,6.75,7.0,2.0,2.25,336
+north,Photdis,6.75,7.0,2.25,2.5,1076
+north,Photdis,6.75,7.0,2.5,2.75,1583
+north,Photdis,6.75,7.0,2.75,3.0,1392
+north,Photdis,6.75,7.0,3.0,3.25,915
+north,Photdis,6.75,7.0,3.25,3.5,523
+north,Photdis,6.75,7.0,3.5,3.75,276
+north,Photdis,6.75,7.0,3.75,4.0,150
+north,Photdis,6.75,7.0,4.0,4.25,65
+north,Photdis,6.75,7.0,4.25,4.5,5
+north,Photdis,7.0,7.25,1.25,1.5,97
+north,Photdis,7.0,7.25,1.5,1.75,1825
+north,Photdis,7.0,7.25,1.75,2.0,3689
+north,Photdis,7.0,7.25,2.0,2.25,4618
+north,Photdis,7.0,7.25,2.25,2.5,4159
+north,Photdis,7.0,7.25,2.5,2.75,3348
+north,Photdis,7.0,7.25,2.75,3.0,2589
+north,Photdis,7.0,7.25,3.0,3.25,1802
+north,Photdis,7.0,7.25,3.25,3.5,1250
+north,Photdis,7.0,7.25,3.5,3.75,831
+north,Photdis,7.0,7.25,3.75,4.0,509
+north,Photdis,7.0,7.25,4.0,4.25,257
+north,Photdis,7.0,7.25,4.25,4.5,105
+north,Photdis,7.0,7.25,4.5,4.75,12
+north,Photdis,7.25,7.5,1.0,1.25,1339
+north,Photdis,7.25,7.5,1.25,1.5,7505
+north,Photdis,7.25,7.5,1.5,1.75,9437
+north,Photdis,7.25,7.5,1.75,2.0,8247
+north,Photdis,7.25,7.5,2.0,2.25,6777
+north,Photdis,7.25,7.5,2.25,2.5,5760
+north,Photdis,7.25,7.5,2.5,2.75,4700
+north,Photdis,7.25,7.5,2.75,3.0,3636
+north,Photdis,7.25,7.5,3.0,3.25,2554
+north,Photdis,7.25,7.5,3.25,3.5,1805
+north,Photdis,7.25,7.5,3.5,3.75,1201
+north,Photdis,7.25,7.5,3.75,4.0,815
+north,Photdis,7.25,7.5,4.0,4.25,453
+north,Photdis,7.25,7.5,4.25,4.5,255
+north,Photdis,7.25,7.5,4.5,4.75,72
+north,Photdis,7.5,7.75,1.0,1.25,2894
+north,Photdis,7.5,7.75,1.25,1.5,12652
+north,Photdis,7.5,7.75,1.5,1.75,17283
+north,Photdis,7.5,7.75,1.75,2.0,15867
+north,Photdis,7.5,7.75,2.0,2.25,12075
+north,Photdis,7.5,7.75,2.25,2.5,8937
+north,Photdis,7.5,7.75,2.5,2.75,6290
+north,Photdis,7.5,7.75,2.75,3.0,4328
+north,Photdis,7.5,7.75,3.0,3.25,2948
+north,Photdis,7.5,7.75,3.25,3.5,1941
+north,Photdis,7.5,7.75,3.5,3.75,1413
+north,Photdis,7.5,7.75,3.75,4.0,925
+north,Photdis,7.5,7.75,4.0,4.25,621
+north,Photdis,7.5,7.75,4.25,4.5,339
+north,Photdis,7.5,7.75,4.5,4.75,134
+north,Photdis,7.5,7.75,4.75,5.0,18
+north,Photdis,7.75,8.0,1.0,1.25,6652
+north,Photdis,7.75,8.0,1.25,1.5,13535
+north,Photdis,7.75,8.0,1.5,1.75,15574
+north,Photdis,7.75,8.0,1.75,2.0,16134
+north,Photdis,7.75,8.0,2.0,2.25,13021
+north,Photdis,7.75,8.0,2.25,2.5,9088
+north,Photdis,7.75,8.0,2.5,2.75,6362
+north,Photdis,7.75,8.0,2.75,3.0,4350
+north,Photdis,7.75,8.0,3.0,3.25,3054
+north,Photdis,7.75,8.0,3.25,3.5,2117
+north,Photdis,7.75,8.0,3.5,3.75,1528
+north,Photdis,7.75,8.0,3.75,4.0,1039
+north,Photdis,7.75,8.0,4.0,4.25,678
+north,Photdis,7.75,8.0,4.25,4.5,395
+north,Photdis,7.75,8.0,4.5,4.75,220
+north,Photdis,7.75,8.0,4.75,5.0,55
+north,Photdis,8.0,8.25,1.0,1.25,1857
+north,Photdis,8.0,8.25,1.25,1.5,7917
+north,Photdis,8.0,8.25,1.5,1.75,11282
+north,Photdis,8.0,8.25,1.75,2.0,13087
+north,Photdis,8.0,8.25,2.0,2.25,12067
+north,Photdis,8.0,8.25,2.25,2.5,8827
+north,Photdis,8.0,8.25,2.5,2.75,6356
+north,Photdis,8.0,8.25,2.75,3.0,4465
+north,Photdis,8.0,8.25,3.0,3.25,3032
+north,Photdis,8.0,8.25,3.25,3.5,2207
+north,Photdis,8.0,8.25,3.5,3.75,1566
+north,Photdis,8.0,8.25,3.75,4.0,1164
+north,Photdis,8.0,8.25,4.0,4.25,665
+north,Photdis,8.0,8.25,4.25,4.5,411
+north,Photdis,8.0,8.25,4.5,4.75,262
+north,Photdis,8.0,8.25,4.75,5.0,74
+north,Photdis,8.25,8.5,1.0,1.25,2175
+north,Photdis,8.25,8.5,1.25,1.5,7337
+north,Photdis,8.25,8.5,1.5,1.75,10229
+north,Photdis,8.25,8.5,1.75,2.0,11918
+north,Photdis,8.25,8.5,2.0,2.25,11661
+north,Photdis,8.25,8.5,2.25,2.5,8581
+north,Photdis,8.25,8.5,2.5,2.75,6098
+north,Photdis,8.25,8.5,2.75,3.0,4195
+north,Photdis,8.25,8.5,3.0,3.25,3059
+north,Photdis,8.25,8.5,3.25,3.5,2250
+north,Photdis,8.25,8.5,3.5,3.75,1561
+north,Photdis,8.25,8.5,3.75,4.0,1085
+north,Photdis,8.25,8.5,4.0,4.25,734
+north,Photdis,8.25,8.5,4.25,4.5,486
+north,Photdis,8.25,8.5,4.5,4.75,244
+north,Photdis,8.25,8.5,4.75,5.0,77
+north,Photdis,8.5,8.75,1.0,1.25,898
+north,Photdis,8.5,8.75,1.25,1.5,5229
+north,Photdis,8.5,8.75,1.5,1.75,9225
+north,Photdis,8.5,8.75,1.75,2.0,11425
+north,Photdis,8.5,8.75,2.0,2.25,10958
+north,Photdis,8.5,8.75,2.25,2.5,8011
+north,Photdis,8.5,8.75,2.5,2.75,6062
+north,Photdis,8.5,8.75,2.75,3.0,4481
+north,Photdis,8.5,8.75,3.0,3.25,3240
+north,Photdis,8.5,8.75,3.25,3.5,2266
+north,Photdis,8.5,8.75,3.5,3.75,1562
+north,Photdis,8.5,8.75,3.75,4.0,1149
+north,Photdis,8.5,8.75,4.0,4.25,730
+north,Photdis,8.5,8.75,4.25,4.5,477
+north,Photdis,8.5,8.75,4.5,4.75,268
+north,Photdis,8.5,8.75,4.75,5.0,103
+north,Photdis,8.75,9.0,1.0,1.25,384
+north,Photdis,8.75,9.0,1.25,1.5,4480
+north,Photdis,8.75,9.0,1.5,1.75,7472
+north,Photdis,8.75,9.0,1.75,2.0,10859
+north,Photdis,8.75,9.0,2.0,2.25,10051
+north,Photdis,8.75,9.0,2.25,2.5,7381
+north,Photdis,8.75,9.0,2.5,2.75,5581
+north,Photdis,8.75,9.0,2.75,3.0,4303
+north,Photdis,8.75,9.0,3.0,3.25,3142
+north,Photdis,8.75,9.0,3.25,3.5,2249
+north,Photdis,8.75,9.0,3.5,3.75,1645
+north,Photdis,8.75,9.0,3.75,4.0,1147
+north,Photdis,8.75,9.0,4.0,4.25,777
+north,Photdis,8.75,9.0,4.25,4.5,448
+north,Photdis,8.75,9.0,4.5,4.75,268
+north,Photdis,8.75,9.0,4.75,5.0,97
+north,Photdis,9.0,9.25,1.0,1.25,351
+north,Photdis,9.0,9.25,1.25,1.5,3829
+north,Photdis,9.0,9.25,1.5,1.75,8362
+north,Photdis,9.0,9.25,1.75,2.0,11296
+north,Photdis,9.0,9.25,2.0,2.25,8396
+north,Photdis,9.0,9.25,2.25,2.5,6561
+north,Photdis,9.0,9.25,2.5,2.75,5151
+north,Photdis,9.0,9.25,2.75,3.0,3939
+north,Photdis,9.0,9.25,3.0,3.25,2908
+north,Photdis,9.0,9.25,3.25,3.5,2191
+north,Photdis,9.0,9.25,3.5,3.75,1553
+north,Photdis,9.0,9.25,3.75,4.0,1070
+north,Photdis,9.0,9.25,4.0,4.25,722
+north,Photdis,9.0,9.25,4.25,4.5,454
+north,Photdis,9.0,9.25,4.5,4.75,275
+north,Photdis,9.0,9.25,4.75,5.0,68
+north,Photdis,9.25,9.5,1.0,1.25,2275
+north,Photdis,9.25,9.5,1.25,1.5,2193
+north,Photdis,9.25,9.5,1.5,1.75,10106
+north,Photdis,9.25,9.5,1.75,2.0,10222
+north,Photdis,9.25,9.5,2.0,2.25,7926
+north,Photdis,9.25,9.5,2.25,2.5,6076
+north,Photdis,9.25,9.5,2.5,2.75,4698
+north,Photdis,9.25,9.5,2.75,3.0,3467
+north,Photdis,9.25,9.5,3.0,3.25,2811
+north,Photdis,9.25,9.5,3.25,3.5,2051
+north,Photdis,9.25,9.5,3.5,3.75,1501
+north,Photdis,9.25,9.5,3.75,4.0,1055
+north,Photdis,9.25,9.5,4.0,4.25,682
+north,Photdis,9.25,9.5,4.25,4.5,441
+north,Photdis,9.25,9.5,4.5,4.75,236
+north,Photdis,9.25,9.5,4.75,5.0,42
+north,Photdis,9.5,9.75,1.0,1.25,4122
+north,Photdis,9.5,9.75,1.25,1.5,8259
+north,Photdis,9.5,9.75,1.5,1.75,9157
+north,Photdis,9.5,9.75,1.75,2.0,7813
+north,Photdis,9.5,9.75,2.0,2.25,6689
+north,Photdis,9.5,9.75,2.25,2.5,5547
+north,Photdis,9.5,9.75,2.5,2.75,4279
+north,Photdis,9.5,9.75,2.75,3.0,3202
+north,Photdis,9.5,9.75,3.0,3.25,2531
+north,Photdis,9.5,9.75,3.25,3.5,1967
+north,Photdis,9.5,9.75,3.5,3.75,1410
+north,Photdis,9.5,9.75,3.75,4.0,974
+north,Photdis,9.5,9.75,4.0,4.25,653
+north,Photdis,9.5,9.75,4.25,4.5,419
+north,Photdis,9.5,9.75,4.5,4.75,227
+north,Photdis,9.5,9.75,4.75,5.0,13
+north,Photdis,9.75,10.0,1.0,1.25,1373
+north,Photdis,9.75,10.0,1.25,1.5,8986
+north,Photdis,9.75,10.0,1.5,1.75,8394
+north,Photdis,9.75,10.0,1.75,2.0,5459
+north,Photdis,9.75,10.0,2.0,2.25,5047
+north,Photdis,9.75,10.0,2.25,2.5,4571
+north,Photdis,9.75,10.0,2.5,2.75,3891
+north,Photdis,9.75,10.0,2.75,3.0,3109
+north,Photdis,9.75,10.0,3.0,3.25,2505
+north,Photdis,9.75,10.0,3.25,3.5,1815
+north,Photdis,9.75,10.0,3.5,3.75,1307
+north,Photdis,9.75,10.0,3.75,4.0,929
+north,Photdis,9.75,10.0,4.0,4.25,575
+north,Photdis,9.75,10.0,4.25,4.5,348
+north,Photdis,9.75,10.0,4.5,4.75,145
+north,Photdis,10.0,10.25,1.0,1.25,26
+north,Photdis,10.0,10.25,1.25,1.5,2358
+north,Photdis,10.0,10.25,1.5,1.75,6393
+north,Photdis,10.0,10.25,1.75,2.0,5163
+north,Photdis,10.0,10.25,2.0,2.25,3610
+north,Photdis,10.0,10.25,2.25,2.5,3361
+north,Photdis,10.0,10.25,2.5,2.75,3229
+north,Photdis,10.0,10.25,2.75,3.0,2710
+north,Photdis,10.0,10.25,3.0,3.25,2300
+north,Photdis,10.0,10.25,3.25,3.5,1624
+north,Photdis,10.0,10.25,3.5,3.75,1120
+north,Photdis,10.0,10.25,3.75,4.0,866
+north,Photdis,10.0,10.25,4.0,4.25,504
+north,Photdis,10.0,10.25,4.25,4.5,325
+north,Photdis,10.0,10.25,4.5,4.75,62
+north,Photdis,10.25,10.5,1.25,1.5,193
+north,Photdis,10.25,10.5,1.5,1.75,2530
+north,Photdis,10.25,10.5,1.75,2.0,4338
+north,Photdis,10.25,10.5,2.0,2.25,3332
+north,Photdis,10.25,10.5,2.25,2.5,2426
+north,Photdis,10.25,10.5,2.5,2.75,2410
+north,Photdis,10.25,10.5,2.75,3.0,2334
+north,Photdis,10.25,10.5,3.0,3.25,2035
+north,Photdis,10.25,10.5,3.25,3.5,1507
+north,Photdis,10.25,10.5,3.5,3.75,983
+north,Photdis,10.25,10.5,3.75,4.0,697
+north,Photdis,10.25,10.5,4.0,4.25,394
+north,Photdis,10.25,10.5,4.25,4.5,204
+north,Photdis,10.25,10.5,4.5,4.75,3
+north,Photdis,10.5,10.75,1.25,1.5,7
+north,Photdis,10.5,10.75,1.5,1.75,407
+north,Photdis,10.5,10.75,1.75,2.0,2425
+north,Photdis,10.5,10.75,2.0,2.25,2978
+north,Photdis,10.5,10.75,2.25,2.5,2374
+north,Photdis,10.5,10.75,2.5,2.75,1771
+north,Photdis,10.5,10.75,2.75,3.0,1837
+north,Photdis,10.5,10.75,3.0,3.25,1618
+north,Photdis,10.5,10.75,3.25,3.5,1340
+north,Photdis,10.5,10.75,3.5,3.75,877
+north,Photdis,10.5,10.75,3.75,4.0,590
+north,Photdis,10.5,10.75,4.0,4.25,353
+north,Photdis,10.5,10.75,4.25,4.5,87
+north,Photdis,10.75,11.0,1.5,1.75,13
+north,Photdis,10.75,11.0,1.75,2.0,637
+north,Photdis,10.75,11.0,2.0,2.25,2038
+north,Photdis,10.75,11.0,2.25,2.5,2110
+north,Photdis,10.75,11.0,2.5,2.75,1648
+north,Photdis,10.75,11.0,2.75,3.0,1288
+north,Photdis,10.75,11.0,3.0,3.25,1194
+north,Photdis,10.75,11.0,3.25,3.5,1099
+north,Photdis,10.75,11.0,3.5,3.75,662
+north,Photdis,10.75,11.0,3.75,4.0,479
+north,Photdis,10.75,11.0,4.0,4.25,217
+north,Photdis,10.75,11.0,4.25,4.5,7
+north,Photdis,11.0,11.25,1.5,1.75,1
+north,Photdis,11.0,11.25,1.75,2.0,86
+north,Photdis,11.0,11.25,2.0,2.25,764
+north,Photdis,11.0,11.25,2.25,2.5,1644
+north,Photdis,11.0,11.25,2.5,2.75,1560
+north,Photdis,11.0,11.25,2.75,3.0,1136
+north,Photdis,11.0,11.25,3.0,3.25,917
+north,Photdis,11.0,11.25,3.25,3.5,765
+north,Photdis,11.0,11.25,3.5,3.75,556
+north,Photdis,11.0,11.25,3.75,4.0,350
+north,Photdis,11.0,11.25,4.0,4.25,42
+north,Photdis,11.25,11.5,1.75,2.0,6
+north,Photdis,11.25,11.5,2.0,2.25,171
+north,Photdis,11.25,11.5,2.25,2.5,780
+north,Photdis,11.25,11.5,2.5,2.75,1191
+north,Photdis,11.25,11.5,2.75,3.0,961
+north,Photdis,11.25,11.5,3.0,3.25,704
+north,Photdis,11.25,11.5,3.25,3.5,610
+north,Photdis,11.25,11.5,3.5,3.75,392
+north,Photdis,11.25,11.5,3.75,4.0,107
+north,Photdis,11.5,11.75,2.0,2.25,12
+north,Photdis,11.5,11.75,2.25,2.5,212
+north,Photdis,11.5,11.75,2.5,2.75,558
+north,Photdis,11.5,11.75,2.75,3.0,553
+north,Photdis,11.5,11.75,3.0,3.25,565
+north,Photdis,11.5,11.75,3.25,3.5,443
+north,Photdis,11.5,11.75,3.5,3.75,154
+north,Photdis,11.75,12.0,2.0,2.25,2
+north,Photdis,11.75,12.0,2.25,2.5,30
+north,Photdis,11.75,12.0,2.5,2.75,132
+north,Photdis,11.75,12.0,2.75,3.0,262
+north,Photdis,11.75,12.0,3.0,3.25,365
+north,Photdis,11.75,12.0,3.25,3.5,142
+north,Photdis,11.75,12.0,3.5,3.75,1
+north,Photdis,12.0,12.25,2.25,2.5,2
+north,Photdis,12.0,12.25,2.5,2.75,4
+north,Photdis,12.0,12.25,2.75,3.0,68
+north,Photdis,12.0,12.25,3.0,3.25,64
+north,Photdis,12.25,12.5,2.75,3.0,1
+north,Gaia same-footprint reference,7.0,7.25,1.25,1.5,1
+north,Gaia same-footprint reference,7.0,7.25,1.5,1.75,3
+north,Gaia same-footprint reference,7.25,7.5,0.75,1.0,1
+north,Gaia same-footprint reference,7.25,7.5,1.0,1.25,76
+north,Gaia same-footprint reference,7.25,7.5,1.25,1.5,129
+north,Gaia same-footprint reference,7.25,7.5,1.5,1.75,86
+north,Gaia same-footprint reference,7.25,7.5,1.75,2.0,17
+north,Gaia same-footprint reference,7.25,7.5,2.0,2.25,2
+north,Gaia same-footprint reference,7.5,7.75,0.75,1.0,24
+north,Gaia same-footprint reference,7.5,7.75,1.0,1.25,363
+north,Gaia same-footprint reference,7.5,7.75,1.25,1.5,514
+north,Gaia same-footprint reference,7.5,7.75,1.5,1.75,287
+north,Gaia same-footprint reference,7.5,7.75,1.75,2.0,101
+north,Gaia same-footprint reference,7.5,7.75,2.0,2.25,15
+north,Gaia same-footprint reference,7.75,8.0,0.5,0.75,3
+north,Gaia same-footprint reference,7.75,8.0,0.75,1.0,109
+north,Gaia same-footprint reference,7.75,8.0,1.0,1.25,543
+north,Gaia same-footprint reference,7.75,8.0,1.25,1.5,634
+north,Gaia same-footprint reference,7.75,8.0,1.5,1.75,423
+north,Gaia same-footprint reference,7.75,8.0,1.75,2.0,176
+north,Gaia same-footprint reference,7.75,8.0,2.0,2.25,48
+north,Gaia same-footprint reference,7.75,8.0,2.25,2.5,8
+north,Gaia same-footprint reference,8.0,8.25,0.0,0.25,223
+north,Gaia same-footprint reference,8.0,8.25,0.5,0.75,1
+north,Gaia same-footprint reference,8.0,8.25,0.75,1.0,30
+north,Gaia same-footprint reference,8.0,8.25,1.0,1.25,204
+north,Gaia same-footprint reference,8.0,8.25,1.25,1.5,406
+north,Gaia same-footprint reference,8.0,8.25,1.5,1.75,403
+north,Gaia same-footprint reference,8.0,8.25,1.75,2.0,216
+north,Gaia same-footprint reference,8.0,8.25,2.0,2.25,52
+north,Gaia same-footprint reference,8.0,8.25,2.25,2.5,12
+north,Gaia same-footprint reference,8.25,8.5,0.0,0.25,20
+north,Gaia same-footprint reference,8.25,8.5,0.5,0.75,1
+north,Gaia same-footprint reference,8.25,8.5,0.75,1.0,33
+north,Gaia same-footprint reference,8.25,8.5,1.0,1.25,216
+north,Gaia same-footprint reference,8.25,8.5,1.25,1.5,382
+north,Gaia same-footprint reference,8.25,8.5,1.5,1.75,394
+north,Gaia same-footprint reference,8.25,8.5,1.75,2.0,204
+north,Gaia same-footprint reference,8.25,8.5,2.0,2.25,40
+north,Gaia same-footprint reference,8.25,8.5,2.25,2.5,6
+north,Gaia same-footprint reference,8.5,8.75,0.25,0.5,2
+north,Gaia same-footprint reference,8.5,8.75,0.5,0.75,3
+north,Gaia same-footprint reference,8.5,8.75,0.75,1.0,15
+north,Gaia same-footprint reference,8.5,8.75,1.0,1.25,168
+north,Gaia same-footprint reference,8.5,8.75,1.25,1.5,351
+north,Gaia same-footprint reference,8.5,8.75,1.5,1.75,317
+north,Gaia same-footprint reference,8.5,8.75,1.75,2.0,132
+north,Gaia same-footprint reference,8.5,8.75,2.0,2.25,18
+north,Gaia same-footprint reference,8.5,8.75,2.25,2.5,3
+north,Gaia same-footprint reference,8.5,8.75,2.5,2.75,1
+north,Gaia same-footprint reference,8.75,9.0,0.5,0.75,2
+north,Gaia same-footprint reference,8.75,9.0,0.75,1.0,14
+north,Gaia same-footprint reference,8.75,9.0,1.0,1.25,164
+north,Gaia same-footprint reference,8.75,9.0,1.25,1.5,334
+north,Gaia same-footprint reference,8.75,9.0,1.5,1.75,281
+north,Gaia same-footprint reference,8.75,9.0,1.75,2.0,104
+north,Gaia same-footprint reference,8.75,9.0,2.0,2.25,21
+north,Gaia same-footprint reference,9.0,9.25,0.5,0.75,3
+north,Gaia same-footprint reference,9.0,9.25,0.75,1.0,45
+north,Gaia same-footprint reference,9.0,9.25,1.0,1.25,113
+north,Gaia same-footprint reference,9.0,9.25,1.25,1.5,218
+north,Gaia same-footprint reference,9.0,9.25,1.5,1.75,138
+north,Gaia same-footprint reference,9.0,9.25,1.75,2.0,47
+north,Gaia same-footprint reference,9.0,9.25,2.0,2.25,11
+north,Gaia same-footprint reference,9.0,9.25,2.25,2.5,2
+north,Gaia same-footprint reference,9.25,9.5,0.75,1.0,45
+north,Gaia same-footprint reference,9.25,9.5,1.0,1.25,144
+north,Gaia same-footprint reference,9.25,9.5,1.25,1.5,120
+north,Gaia same-footprint reference,9.25,9.5,1.5,1.75,74
+north,Gaia same-footprint reference,9.25,9.5,1.75,2.0,8
+north,Gaia same-footprint reference,9.25,9.5,2.0,2.25,3
+north,Gaia same-footprint reference,9.5,9.75,0.75,1.0,5
+north,Gaia same-footprint reference,9.5,9.75,1.0,1.25,67
+north,Gaia same-footprint reference,9.5,9.75,1.25,1.5,35
+north,Gaia same-footprint reference,9.5,9.75,1.5,1.75,18
+north,Gaia same-footprint reference,9.5,9.75,1.75,2.0,2
+north,Gaia same-footprint reference,9.75,10.0,1.0,1.25,11
+north,Gaia same-footprint reference,9.75,10.0,1.25,1.5,5
+north,Gaia same-footprint reference,9.75,10.0,1.75,2.0,2

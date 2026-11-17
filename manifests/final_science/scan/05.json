@@ -1,0 +1,19 @@
+{
+  "job": "61460341",
+  "inputs": {
+    "release": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51",
+    "index": "95137745e9d0c2e3ee41a1946cb3a210e596a8991fae123991974f7ae149bf75",
+    "seam": "a7537e2487aff4828cea839f0f3adebc1d71dd4e317557b34765ec8fe9dab9b9",
+    "config": "d2341fd94f27d136699598af554a506af338063fdc9a09c90f5851b51c6b0024",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "working_ids": "6a141c5586ba92bf27eaf2f8a76bd28d670e0db598a110c54cc8e4316f0d180a",
+    "script": "6ea975702bbb2dcb8573c73447e978566d337d2b6856360ea82a619625e08336"
+  },
+  "outputs": {
+    "05.csv": "0ad648c3f62f7168452d9d339bad18db19c0bff7fe2279c45ef18b0b2b3e3e86",
+    "05.npz": "bb31f7fd927b5c2e69e82d1c9f8ab55c6f72e685b6d6753a7c83f14ab4ef60f9"
+  },
+  "parts": 904,
+  "owned": 3003375,
+  "selected": 15874
+}

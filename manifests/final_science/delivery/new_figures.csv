@@ -1,0 +1,9 @@
+figure,width,height,dpi
+F02_direct_distances,5400,2700,299.9994
+F03_same_star_cmd,3900,4500,299.9994
+F04_science,6600,3600,299.9994
+F04_weak_gaia,6600,3600,299.9994
+F05_heliocentric_projection,5100,3000,299.9994
+F09_gaia_increment,5400,1800,299.9994
+F10_distance_residuals,5400,3300,299.9994
+F11_depth_controlled_profiles,5400,1800,299.9994

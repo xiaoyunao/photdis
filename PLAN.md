@@ -1,5 +1,35 @@
 # PLAN
 
+## Final Science Analysis — completed
+
+The target is the frozen v3.9 owned native DR11 PSF catalog and its original
+distance PDFs, following GPT Pro review d5ea5ae0 on fa9d9b2f. Read the whole
+release index once, close the census against owned counts, and use native
+random catalogs for geometric, unmasked and depth-conditioned areas.
+
+- A. Publish replayable near and dwarf-enhanced 2–5 kpc selections and
+  separate research tiers. Count reliable Gaia geometry, confirmed Gaia below
+  the geometry requirement, and unresolved links. Compare held-out Gaia,
+  SpecDis and SPDist by reference distance and stellar population. Measure
+  performance in the spectroscopic subset with weak Gaia explicitly.
+- B. Reuse the fixed Pal 5 plates for context. Plot the final selection
+  with direct references, individual sky coordinates and heliocentric
+  distances. Compare median bins and full PDF weights on common-depth
+  areas while retaining the magnitude and classification selection.
+- C. Summarize the scientific increment, supported applications, limits,
+  independent tests and publication scope in docs/final_science.md.
+  Freeze existing models and predictions. Run the NERSC validation and
+  bind the released tables, figures and original positive and negative evidence.
+
+The owned catalog and 43,347,612 PDFs close to the frozen release totals.
+The 2–5 kpc working index has 1,165,946 objects. Of these, 1,150,705 have a
+confirmed Gaia counterpart below the geometric-distance requirement. Their
+2–5 kpc PDF mass is 997,824. Held-out spectroscopic dwarfs in that subgroup
+have roughly 8–9% scatter. The metal-poor subset shows positive bias.
+Native deep-area controls show how selection changes the latitude contrast.
+See [the final report](docs/final_science.md) for the use and publication
+decision.
+
 ## v3.18 — completed GD-1 member and passband tests
 
 Follow the full GPT Pro review bb077256. Use verified DR11 PSF and frozen
