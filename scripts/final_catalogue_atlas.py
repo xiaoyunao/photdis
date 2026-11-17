@@ -12,7 +12,7 @@ from photdis.stage1 import require_compute
 from v2_1_near import ROOT, atomic_npz, csv_rows, save_json, sha
 from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
-from v3_8_direct_figures import BLUE, GREEN, ORANGE, STYLE, aitoff, plt, save
+from v3_8_direct_figures import BLUE, GREEN, ORANGE, STYLE, plt, save, scatter_sky
 from v3_10_figures import check_templates
 from v3_9_catalog import LEDGER
 from final_science_catalog import REGIONS
@@ -142,8 +142,20 @@ def selected_rerender(grid,inputs):
         ('F04_science_random_coverage','Selected Photdis sources · 5–10 kpc is a research tier',t['science']<=3),
         ('F04_weak_gaia_random_coverage','Gaia counterpart below geometric-distance cut · research tier included',
          (t['science']<=3)&np.isin(t['gaia_state'],(3,4,5)))):
-        # Existing v3.8 geometry and per-source scatter, with the independent mask.
-        aitoff(OUT,name,title,t['q'][:,2],l,b,cut,grid[:3],BLUE)
+        fig,axes=plt.subplots(2,2,subplot_kw={'projection':'aitoff'},figsize=(22,12),layout='constrained')
+        rows=[]
+        d=t['q'][:,2]
+        for ax,(lo,hi) in zip(axes.ravel(),((0,1),(1,5),(5,10),(0,10))):
+            j=cut&(d>=lo)&(d<hi)
+            backdrop(ax,grid)
+            scatter_sky(ax,l[j],b[j],BLUE)
+            n=int(j.sum())
+            ax.set_title(f'{lo:g}–{hi:g} kpc   ·   {n:,} sources',pad=10)
+            rows.append(dict(lo_kpc=lo,hi_kpc=hi,n=n,view=name))
+        assert sum(row['n'] for row in rows[:3])==rows[-1]['n']
+        fig.suptitle(title+'\nGalactic coordinates · gray: DR11 random-point footprint · individual source positions',
+                     fontsize=21)
+        save(fig,OUT,name,rows)
 
 
 def xyz_figure(a):
@@ -183,6 +195,31 @@ def strata_figure(a,random):
         rows.extend(dict(group=name,region=r,n=int(x.sum())) for r,x in zip(REGIONS,v))
     fig.suptitle('Complete PDFs in observed magnitude and native dereddened color strata')
     save(fig,OUT,'F17_catalogue_strata',rows)
+
+
+
+def native_systems(a,random):
+    fig,axes=plt.subplots(2,2,figsize=(22,12),layout='constrained',subplot_kw={'projection':'aitoff'})
+    rows=[]
+    sides=(('DECam',(0,1,2),random[[0,2]].sum(axis=0)),('BASS/MzLS',(3,),random[3]))
+    plots=[]
+    for j,(system,regions,area) in enumerate(sides):
+        g=sky_grid(area[0])
+        for i,label in enumerate(('Owned native PSFs','Complete distance PDFs')):
+            count=a['counts_by_pixel'][list(regions),i].sum(axis=0)
+            rate=np.divide(count,area[1],out=np.full_like(area[1],np.nan),where=area[1]>0)
+            plots.append((axes[i,j],system,label,g,count,rate))
+    vmax=np.nanpercentile(np.concatenate([p[-1] for p in plots]),99)
+    for ax,system,label,g,count,rate in plots:
+        backdrop(ax,g)
+        img=ax.pcolormesh(*g[:2],np.ma.masked_invalid(rate[g[3]]),norm=LogNorm(1,vmax),
+                          cmap='viridis',shading='auto',rasterized=True)
+        fig.colorbar(img,ax=ax,pad=.025,shrink=.72,label='Sources per deg²')
+        n=int(count.sum())
+        ax.set_title(f'{system} · {label} · {n:,}')
+        rows.append(dict(system=system,sample=label,n=n,n_with_area=int(count[np.isfinite(rate)].sum())))
+    fig.suptitle('Native-system density · shared scale · effective area from DR11 random points',fontsize=21)
+    save(fig,OUT,'F19_native_systems',rows)
 
 
 def raw_flow(inputs):
@@ -265,6 +302,7 @@ def main():
         selected_rerender(grid,inputs)
         xyz_figure(a)
         strata_figure(a,ar)
+        native_systems(a,ar)
         raw_flow(inputs)
     save_json(OUT/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,parts=28917,
         outputs={p.name:sha(p) for p in OUT.iterdir() if p.name!='complete.json'}))

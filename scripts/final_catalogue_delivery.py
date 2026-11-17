@@ -39,7 +39,7 @@ def main():
                     figures.append(dict(stage=name,figure=p.stem,width=im.width,height=im.height))
                     im.verify()
                 assert p.with_suffix('.pdf').read_bytes().startswith(b'%PDF')
-    assert len(figures)==8
+    assert len(figures)==9
     a=rows(DEST/'atlas/F18_catalogue_flow.csv')
     assert [int(x['n']) for x in a][0]==3967618454
     assert [int(x['n']) for x in a][-3:]==[72289386,43347612,2281023]
