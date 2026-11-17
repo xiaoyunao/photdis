@@ -17,6 +17,8 @@ from v3_16_gd1 import CONFIG, DEST, EDGES, P
 
 REFERENCE = ROOT/'manifests/v3_16/cfht_reference.csv'
 CFHT = 'https://doi.org/10.1093/mnras/sty677'
+SDSS = 'https://doi.org/10.1088/0004-637X/712/1/260'
+CANDLES = 'https://arxiv.org/abs/2205.13547'
 
 
 def read(path):
@@ -100,7 +102,7 @@ def figure(out,rows,external):
                 ax.vlines(xx,lo,hi,color=color,alpha=alpha,lw=1.)
                 ax.scatter(xx,y,marker=mark,c=color,alpha=alpha,label=depth)
             ax.set(title=method,xlabel=r'Stream longitude $\phi_1$ (deg)',ylim=(5,14))
-            ax.legend(loc='upper left',fontsize=9)
+            ax.legend(loc='upper left')
         axes[0].set_ylabel('Heliocentric distance (kpc)')
         save(fig,out,'gd1_distance',rows)
     figure_check(out/'gd1_distance.png')
@@ -111,16 +113,21 @@ def run():
     inputs = {'config':sha(CONFIG),'reference':CFHT,'reference_csv':sha(REFERENCE)}
     for stage in (DEST/'footprint',DEST/'sample',FIT):
         validate(stage,inputs,lock)
-    out = DEST/'score_block'
+    out = DEST/'score_release'
     out.mkdir(parents=True,exist_ok=True)
     r = read(REFERENCE)
     ref = {float(a['phi1']):(float(a['distance_kpc']),float(a['error_kpc'])) for a in r}
     np.testing.assert_array_equal(list(ref),.5*(EDGES[1:]+EDGES[:-1]))
+    sdss_path = REFERENCE.with_name('sdss_reference.csv')
+    sdss = np.array([[float(a[k]) for k in ('phi1','distance_kpc')] for a in read(sdss_path)])
+    inputs.update(sdss_source=SDSS,sdss_csv=sha(sdss_path),candles_context=CANDLES)
     rows = read(FIT/'segments.csv')
     for x in rows:
         d,e = ref[float(x['phi1'])]
         delta = float(x['peak'])/d-1
+        sdss_d = float(np.interp(float(x['phi1']),sdss[:,0],sdss[:,1]))
         x.update(reference_kpc=d,reference_error_kpc=e,relative_error=delta,
+                 sdss_interpolated_kpc=sdss_d,relative_error_vs_sdss=float(x['peak'])/sdss_d-1,
                  within_ten_percent=bool(abs(delta)<=P['reference_tolerance_fraction']))
     with np.load(FIT/'curves.npz',allow_pickle=False) as curves:
         result,depth = comparison(rows,ref,curves)
