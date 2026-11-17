@@ -1,0 +1,14 @@
+{
+  "job": "61459787",
+  "inputs": {
+    "config": "21832519fce3ddcc9535d560f80902f6dd0975f2088ac7b983c17483e107ccff",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "data/v3_18/members/complete.json": "09b9644054ccbb2454db8d3fc3de1bec21508f5d0a0ace9451f69eb83afd3457",
+    "data/v3_18/bands/complete.json": "d634c0da86c3198e49ac99452d834ad609491ce21d073f49647d8e7683c076ad",
+    "data/v3_17/distance/complete.json": "de4e0174f167dfbeec4dabc903f1792235d3ef01da273e378803eda49f5c9ca5"
+  },
+  "publications": "61458711",
+  "member_science_rows": 259,
+  "frozen_baseline_replayed": 6,
+  "outputs": {}
+}

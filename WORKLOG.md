@@ -1,5 +1,25 @@
 # WORKLOG
 
+## 2026-11-17 — GD-1 member QRF and native passbands (v3.18)
+
+- Read full GPT Pro review bb077256 on 033ee1c4 and recorded the goal.
+  Fixed original sources, background, forecasts, and rendering style.
+- Added v3.18 config, member and passband scripts, Slurm wrapper and delivery
+  checks. Initial member job 61459694 assumed training identities were stored
+  on the estimator. Used the frozen northern role table by LS and Gaia IDs
+  instead. Submitted the member, bands and delivery stages via run_v3_18.sh.
+  Jobs 61459764, 61459751 and 61459787 completed with exit 0:0.
+- Reused 259 full PDFs from 291 matched DESI PSFs. Narrow-stream member
+  peaks at 6.625 kpc in the two comparable segments do not reproduce the
+  10.125/10.375 kpc field peaks. Member residuals vary with CMD phase.
+- Measured 6,000 native overlap pairs. The GD-1 color range has no direct
+  5–10 kpc pairs. Fixed template perturbations shift the local CMD peak,
+  with no robust gradient measurement. See docs/v3_18_gd1.md.
+- Compiled new Python, ran 476 regression tests, verified archived output
+  hashes and six frozen M13/M92 replay results. Visually checked both
+  English plates against the unchanged rendering settings. Retain the
+  phased dwarf-distance evidence and GD-1 as a local test.
+
 ## 2026-11-17 — audit GD-1 members, CMD signal, and local distances (v3.17)
 
 - Read full review e58fa40a and registered a goal before edits. Froze six

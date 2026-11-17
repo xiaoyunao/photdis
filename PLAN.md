@@ -1,5 +1,20 @@
 # PLAN
 
+## v3.18 — completed GD-1 member and passband tests
+
+Follow the full GPT Pro review bb077256. Use verified DR11 PSF and frozen
+north QRF distance PDFs on DESI thin-stream members. Keep cocoon separate.
+Check phase, reference track, selection, and same-geometry member-versus-field
+peaks. Measure BASS/MzLS minus DECam on previously held-out native PSF pairs
+and test fixed two-sided perturbations on the DESI ridge and M13/M92 CMDs.
+
+The confirmed members do not reproduce the far signed field peak. Their
+scatter and branch-specific biases still limit individual use. Native CMD
+supports a local distance at −32.5°, with meaningful template sensitivity.
+Retain the thin-stream detection and the reference-validated dwarf work.
+Future gradient work needs more independent distance nodes and a faint
+native-system main sequence. See [v3.18 results](docs/v3_18_gd1.md).
+
 ## v3.17 — GD-1 member recovery and main-sequence detection
 
 Follow review e58fa40a on the six frozen v3.16 segments. Use the corrected

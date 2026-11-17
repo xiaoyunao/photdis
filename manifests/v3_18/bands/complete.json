@@ -1,0 +1,29 @@
+{
+  "job": "61459751",
+  "inputs": {
+    "config": "21832519fce3ddcc9535d560f80902f6dd0975f2088ac7b983c17483e107ccff",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "data/v3_9/expansion/validation/overlap/complete.json": "a95af67c702a358082e001c0ffd2167007d3b1aee64aaf81630e72eac6028b67",
+    "data/v3_6/reference_photometry/complete.json": "f8145e8e413efa5df77ebf05444bdf9d3c21322034157d2c5f652f480c642903",
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1",
+    "reference_track": "c2ed28ca8341f40e001946e33c6e2ac513786ac5cad23be516ad6eaec7a1d651",
+    "data/v3_14/audit/M13/complete.json": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "data/v3_17/members_precise/complete.json": "b06cf0e4082e5f7e216bf3dbe9e752e20712372b082c816141adab4f2874dd1f"
+  },
+  "applied_north_minus_south": [
+    0.03416650824612333,
+    0.013139889280129324,
+    0.0015342075775173214
+  ],
+  "outputs": {
+    "ridge_window.csv": "bc859d0c56a3bcc07da6c67a818510b48c39d9940cfd9410af3d7443f8b38d11",
+    "native_band_offsets.pdf": "e188fc72816085379fd5951d46291ed43258b17da900ee552a68b495651ddb76",
+    "member_catalog_agreement.csv": "9d5684290d9ab9c3ea78b4740b0af2c67ade7e0eef6cb1a0154dcf37bf0a0922",
+    "photometry.csv": "f41b1c42cc25a38496ff53a48c861a0e791709f53a224f93edfe4a18fb94873b",
+    "paired_offsets.npz": "ce48f9a592186e29e3ce3a020fe68eca3e24f62f177afb6b22222eee006101fd",
+    "native_band_offsets.png": "6dec0c583752dfd88da92deec795ab13bb93e546e2424c28c0f1b1cf75b6d553",
+    "native_band_offsets.csv": "f41b1c42cc25a38496ff53a48c861a0e791709f53a224f93edfe4a18fb94873b",
+    "cmd_sensitivity.csv": "94604f52ae1d16d3d3226260080eb4c1ebc12aef79b98b84e00d943dd06379a3"
+  }
+}
