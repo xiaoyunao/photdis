@@ -77,6 +77,7 @@ def strata(t):
             ('r_lt_18',t['r']<18),('r_18_20',(t['r']>=18)&(t['r']<20)),
             ('color_blue',c<.5),('color_0p5_0p8',(c>=.5)&(c<.8)),('color_ge_0p8',c>=.8),
             ('faint_blue',(t['r']>=18)&(c<.5)),('spectroscopic_dwarf',lab==0),
+            ('faint_spectroscopic_dwarf',(t['r']>=18)&(t['r']<20)&(lab==0)),
             ('dwarf_feh_ge_minus1p5',(lab==0)&feh&(f>=-1.5)),
             ('dwarf_feh_lt_minus1p5',(lab==0)&feh&(f<-1.5)),
             ('non_dwarf_stellar',np.isin(lab,(1,2))),('spectrally_unclassified',lab<0))
@@ -149,7 +150,9 @@ def figures(t,q,common,dest):
                    if len(d) else 'No common reference')
         ax.text(.04,.94,caption,transform=ax.transAxes,va='top',
                 bbox={'facecolor':'white','edgecolor':'none','alpha':.83})
-        rows.append(dict(panel=i,reference=source,method=name,**summary))
+        in_axes=(d>=1)&(d<=12)&(z[:,1]>=1)&(z[:,1]<=12)
+        rows.append(dict(panel=i,reference=source,method=name,outside_axes=int((~in_axes).sum()),
+                         **summary))
         counts[f'panel_{i}']=h
     fig.suptitle('Same stars across published products · faint spectroscopic dwarfs · 2–5 kpc reference')
     save(fig,dest,'F12_published_distances',rows,dict(distance_bins=edges,**counts))
