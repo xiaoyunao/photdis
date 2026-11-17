@@ -5,7 +5,11 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
-The latest [v3.13 science results](docs/v3_13_result.md) trace the cluster distance
+The latest [v3.14 science results](docs/v3_14_result.md) audit native DR11
+cluster processing, distinguish true and grz-inferred luminosity branches,
+and record an independent M68 DECam population template test.
+
+The preceding [v3.13 science results](docs/v3_13_result.md) trace the cluster distance
 scale by luminosity branch, test strict optical photometry through r=23, and
 compare the frozen QRF with an independent M5 CMD-template result.
 

@@ -1,0 +1,79 @@
+{
+  "job": "61445740",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "membership": "2abad48f2d3ea23952f60b7a36069f1d385175be6c5fdd69ea398b33a61f3fcd",
+    "distance_source": "https://academic.oup.com/mnras/article/505/4/5957/6283731",
+    "data/v3_14/audit/M30/complete.json": "79456cdeb99291a5a5d6ea8e01e02c35108519ea1e5173022cedcf776c902972",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-185m030-190m025.fits": {
+      "bytes": 1077770880,
+      "mtime_ns": 1780603772000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-190m030-195m025.fits": {
+      "bytes": 1403737920,
+      "mtime_ns": 1780603892000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits": {
+      "bytes": 22995910080,
+      "mtime_ns": 1780757592000000000
+    },
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_12/reference/south/complete.json": "75573fc969ff21a925823d51ed980217ddd6ee3265b1cfd137c00bacd253f385"
+  },
+  "rows": 9598,
+  "demographics": [
+    {
+      "selection": "outside CLUSTER, low crowding",
+      "reference_kpc": 10.404,
+      "target": 1964,
+      "background": 6730,
+      "target_members": 635,
+      "template_members": 99,
+      "target_area": 0.2656,
+      "background_area": 1.8908,
+      "cmd_peak": 10.32690077905275,
+      "cmd_score": 22.30295678724677,
+      "cmd_peak_bias": -0.0074105364232266435,
+      "cmd_window_score": 22.30295678724677,
+      "cmd_pass": true,
+      "qrf_peak": 11.875,
+      "qrf_peak_bias": 0.14138792772010755,
+      "qrf_window_z": 21.97639517172702,
+      "qrf_pass": false
+    },
+    {
+      "selection": "all admitted diagnostic",
+      "reference_kpc": 10.404,
+      "target": 2558,
+      "background": 6826,
+      "target_members": 1060,
+      "template_members": 1077,
+      "target_area": 0.2772,
+      "background_area": 1.8908,
+      "cmd_peak": 10.091831818407906,
+      "cmd_score": 29.219086596825782,
+      "cmd_peak_bias": -0.030004631064215137,
+      "cmd_window_score": 29.219086596825782,
+      "cmd_pass": true,
+      "qrf_peak": 11.875,
+      "qrf_peak_bias": 0.14138792772010755,
+      "qrf_window_z": 28.301191185238572,
+      "qrf_pass": false
+    }
+  ],
+  "training_exclusions": 0,
+  "outputs": {
+    "admission.csv": "0d44054c1101a8d880946da37b227cb5e0203fd96fd537c00b2a9be9069b5d2e",
+    "distance.pdf": "6e460710c30ecd435021b5c533ec9353960b710feb3749e111a4c1547e9af731",
+    "distance.csv": "8bace61a8c02847f56658daf1ab8e86750b442050a03f18401b8288a6698e0f5",
+    "distance.png": "f09fa86e9b3fb711f99d29ec48cfbc02aef3301c6475d276a3c78be7732e5c48",
+    "field.npz": "5a3d25100ee6ea3c6423a7df85b0d8aa251a0de917831867b4c91176a482a5a7",
+    "distance.npz": "8d2d8d4e695da753327b0e7321da8ba1cb1d0d2c0f45833e6f93075c28e30e98",
+    "comparison.csv": "8bace61a8c02847f56658daf1ab8e86750b442050a03f18401b8288a6698e0f5",
+    "area.csv": "09b444c46be227187393a3444b06fbdfc4149908e351fe60d95e36e63772fd75"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "job": "61445609",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "bits": "https://www.legacysurvey.org/dr11/bitmasks/",
+    "data/v3_13/clusters/M92/complete.json": "de9e08b7adb54c03dabc3e028099d1f6df56a4980c7e378464d8e1f55128ac2e",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-255p040-260p045.fits": {
+      "bytes": 689552640,
+      "mtime_ns": 1780638081000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits": {
+      "bytes": 5064027840,
+      "mtime_ns": 1780757234000000000
+    },
+    "figure_script": "0295ec1fab1aef4879b8501696967d5e41f7e42d6e8d554cd6c80bc8508981ad"
+  },
+  "rows": 27310,
+  "mask_rows": 4158,
+  "matched_cells": 0,
+  "outputs": {
+    "mask_residuals.png": "570db7ee8873812d87cca77e0a0ec4979eeaf59141121ed8185067e7e64b064c",
+    "mask_residuals.csv": "71d4a874b371da23587c6216f07a61dbdc56fa62049c4d7c72bad9a5df51e1eb",
+    "native_join.npz": "2083320acaf7d950a5090f33f1f8e87b38905b59e81d452ee7595ccd1c7295fa",
+    "mask_residuals.pdf": "5c4339ea708273c7a7b11f2af9f940388df881fcb3d8cbb6c63d2e1d3aa6c656",
+    "matched_cells.csv": "ea47bd39a57943d80f02deccc508b254e1d18023b2ac11177e76c23e2d00d845",
+    "area.csv": "b13d95e9969359b71593cb0e8a2de6719d9e3a741e2df051c2a463be412def95"
+  },
+  "figure_job": "61445974"
+}

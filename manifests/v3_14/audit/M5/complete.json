@@ -1,0 +1,39 @@
+{
+  "job": "61445615",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "bits": "https://www.legacysurvey.org/dr11/bitmasks/",
+    "data/v3_13/cmd/complete.json": "bf2fbf708d7a1fbb27b4bde6c191ee2d7067962b1816aa5917128a369f2bebc5",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225p000-230p005.fits": {
+      "bytes": 1244249280,
+      "mtime_ns": 1780604936000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230p000-235p005.fits": {
+      "bytes": 1242869760,
+      "mtime_ns": 1780605080000000000
+    },
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_12/reference/south/complete.json": "75573fc969ff21a925823d51ed980217ddd6ee3265b1cfd137c00bacd253f385",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits": {
+      "bytes": 22995910080,
+      "mtime_ns": 1780757592000000000
+    },
+    "figure_script": "0295ec1fab1aef4879b8501696967d5e41f7e42d6e8d554cd6c80bc8508981ad"
+  },
+  "rows": 20805,
+  "mask_rows": 10238,
+  "matched_cells": 15,
+  "outputs": {
+    "mask_residuals.png": "8a730641f5c3a8d4ec879fa9f5555392ec4883ff16dc4b6ccf0b3df3f9aa5634",
+    "mask_residuals.csv": "3ae25f7d954112d578006b439fa230ba65d38abc92db00e93337d8a89a7e656b",
+    "native_join.npz": "b55d9e635306ab6557a819cae3424fd2c1f2ae0249c066a44704c316704f9026",
+    "mask_residuals.pdf": "353e49ef0d230520ab910324ab17950e7036a977b810226a31dbc72f69f4aef8",
+    "matched_cells.csv": "1ebabc2e26cd4b32d2d0426a4b2c00cc9b64a51cf49dd1fb350da6d184e769e7",
+    "area.csv": "a0c051acb36ba89189dcaa6333e0f814f22477a848708c76fe73e012105c6aaf"
+  },
+  "figure_job": "61445974"
+}

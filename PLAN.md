@@ -1,6 +1,14 @@
 # PLAN
 
-## v3.14 — audit cluster processing before a population calibration
+## v3.14 — completed native cluster audit and population comparisons
+
+[Results](docs/v3_14_result.md). The luminosity residual signs persist in
+off-mask, low-crowding cases. A true-branch diagnostic largely resolves
+the intermediate-gravity scale error, while the grz mixture has poor
+branch discrimination. M68 passes the preregistered distance criterion
+with the fixed DECam M30 CMD; the frozen QRF PDF sum misses it.
+Keep the catalog and current field model. A narrow group-distance
+application requires wider independent confirmation.
 
 Use Pro review 60197eff-a3d2-4cab-8471-c27207fd9094 at 8af5739.
 Preserve all published production and independent-test artifacts.

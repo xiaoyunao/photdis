@@ -1,0 +1,33 @@
+{
+  "job": "61445613",
+  "inputs": {
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "bits": "https://www.legacysurvey.org/dr11/bitmasks/",
+    "data/v3_13/clusters/M13/complete.json": "ef5e1860672b3b144c44334c6a883c0f0fafdcbff47657b2d364d52579dc8fb8",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-245p035-250p040.fits": {
+      "bytes": 682945920,
+      "mtime_ns": 1780637997000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-250p035-255p040.fits": {
+      "bytes": 745067520,
+      "mtime_ns": 1780638011000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/randoms/randoms-north-1-0.fits": {
+      "bytes": 5064027840,
+      "mtime_ns": 1780757234000000000
+    },
+    "figure_script": "0295ec1fab1aef4879b8501696967d5e41f7e42d6e8d554cd6c80bc8508981ad"
+  },
+  "rows": 41858,
+  "mask_rows": 13833,
+  "matched_cells": 13,
+  "outputs": {
+    "mask_residuals.png": "f66596493a8dd8173e9bf125924fc0d2ded079957beac57ac009adb6fa4e77b2",
+    "mask_residuals.csv": "957763e1343d3d9f3b79206c9f18a53e428c5852a8d1dbe88877e9316c63ed81",
+    "native_join.npz": "95677e1153461c4d45f15439d9c527bab8a0e8a3cedfcb3fb60d2383ae8709ee",
+    "mask_residuals.pdf": "84bbb289700e20ace9f865b860f33e3708139d47b79f473892c40bfa1ade1509",
+    "matched_cells.csv": "51e801fbff7a14dea1cb11c43686181f67981fecb16da8b470e055e528780e80",
+    "area.csv": "66b28d48203aa86a5f70a8b5b2a206c307cdd9b6a95b1ce33ad20bc76250ddac"
+  },
+  "figure_job": "61445974"
+}

@@ -1,5 +1,22 @@
 # WORKLOG
 
+## 2026-11-17 — audit DR11 cluster selection and test empirical population distances
+
+- Read Pro review 60197eff and registered the goal before edits. Rejoined
+  native FITBITS and MASKBITS for four frozen fields on NERSC. Joint color,
+  magnitude, error and crowding controls show phase-dependent residuals
+  outside CLUSTER. Preserve the frozen predictions and admission scopes.
+- Field population scoring initially stopped at an omitted subset import.
+  Restored it and replayed both sides. Known-branch scoring removes most
+  intermediate-gravity distance bias. Marginalizing grz-only branch weights
+  preserves large intermediate-gravity errors.
+- Registered M68 before inference. On common low-crowding, off-mask sources,
+  M30 CMD finds 10.327 kpc and QRF 11.875 kpc versus the 10.404 kpc reference.
+  Keep the group method as a research result and retain current production.
+- Ran Python compile, weighted quantile smoke checks and 472 regressions.
+  NERSC 61445974 completed 0:0 after fixed-axis redraw and revalidation.
+  Deliver docs/v3_14_result.md, manifests/v3_14 and v3.8-style figures.
+
 ## 2026-11-17 — measure cluster luminosity scales and a deeper native sample
 
 - Read review 9a8fddbc and registered the v3.13 goal before edits. Ran M92,

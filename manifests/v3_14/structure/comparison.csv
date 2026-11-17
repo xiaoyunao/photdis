@@ -1,0 +1,3 @@
+selection,reference_kpc,target,background,target_members,template_members,target_area,background_area,cmd_peak,cmd_score,cmd_peak_bias,cmd_window_score,cmd_pass,qrf_peak,qrf_peak_bias,qrf_window_z,qrf_pass
+"outside CLUSTER, low crowding",10.404,1964,6730,635,99,0.2656,1.8908,10.32690077905275,22.30295678724677,-0.0074105364232266435,22.30295678724677,True,11.875,0.14138792772010755,21.97639517172702,False
+all admitted diagnostic,10.404,2558,6826,1060,1077,0.2772,1.8908,10.091831818407906,29.219086596825782,-0.030004631064215137,29.219086596825782,True,11.875,0.14138792772010755,28.301191185238572,False
