@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-17 — v3 final science closeout
+
+- Read the full GPT Pro review of c530007c and registered P0/P1/P2
+  before edits. Keep the v3.8 Pal 5 lock and native PSF selection.
+- All 24 source shards in 61465405 completed and bind core rows to native
+  PDF offsets. Job 61465455 reproduced F15 and populated paired-block
+  statistics, stellar migration and F20. 476 regressions passed.
+- The staged random-area job picked up the old canonical helper first.
+  Run the corrected resolution interface from the canonical checkout.
+
 ## 2026-11-17 — full catalogue atlas and selection-independent comparison
 
 - Read complete GPT Pro review f179b8a7 on e3abf916 and registered the goal

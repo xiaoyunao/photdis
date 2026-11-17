@@ -1,5 +1,22 @@
 # PLAN
 
+## Photdis v3 science closeout
+
+Use the complete GPT Pro review linked to c530007c and the user's request
+for true Aitoff surface-density panels with a colorbar. Preserve the frozen
+model, catalogue, Pal 5 rendering lock and morphology admission.
+
+- P0. Reproduce F15 exactly, add paired HEALPix block intervals for NMAD,
+  severe residuals and distance zero point, and bound the ordinary and
+  metal-poor stellar strata by native footprint and color.
+- P1. Compare preselection spectral populations, class retention and
+  actual distance migration into 2–5 kpc, and retain the conditional LF
+  results. Close the full-PDF map census with fine independent random areas,
+  show native samples and reference populations, and verify the figures.
+- P2. Build and verify the versioned core FITS and portable full-PDF
+  download/ownership indices, including lookup checks from all components.
+  Deliver the result and figure index before the separate manuscript phase.
+
 ## Final Catalogue and Independent Validation — completed
 
 Follow the complete GPT Pro review f179b8a7 on e3abf916. Keep the original

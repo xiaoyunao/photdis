@@ -21,7 +21,7 @@ FIELDS = ('coverage','unmasked',*(f'grz_{v:g}' for v in DEPTHS))
 BANDS_LABEL = ('low','high')
 
 
-def run(side):
+def run(side, *, nside=C['sky_nside'], destination=DEST/'area'):
     root = Path(settings()[side]['sweep_root']).parent.parent/'randoms'
     path = root/f'randoms-{side}-1-0.fits'
     before = path.stat()
@@ -29,7 +29,6 @@ def run(side):
     inventory = EXPANSION/side/'inventory.json'
     meta = json.loads(inventory.read_text())
     tiles = tile_map([s for group in meta['groups'] for s in group])
-    nside = C['sky_nside']
     npix = hp.nside2npix(nside)
     counts = np.zeros((2,len(FIELDS),npix),'i8')
     reject = sum(1<<b for b in CLEAN_REJECT_MASKBITS)
@@ -62,7 +61,7 @@ def run(side):
     after = path.stat()
     if (before.st_size,before.st_mtime_ns)!=(after.st_size,after.st_mtime_ns):
         raise ValueError('Random catalog changed during analysis')
-    dest = DEST/'area'/side
+    dest = destination/side
     dest.mkdir(exist_ok=True,parents=True)
     atomic_npz(dest/'area.npz',effective_deg2=area)
     csv_rows(dest/'area_totals.csv',[dict(side=side,latitude=label,**dict(zip(FIELDS,a.sum(axis=1))))
