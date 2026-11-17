@@ -5,7 +5,7 @@ import os
 
 import numpy as np
 
-from photdis.stage1 import galactic, require_compute
+from photdis.stage1 import require_compute
 from v2_1_near import ROOT, csv_rows, save_json, sha
 from v3_3_sed import verified
 from v3_6_vac_distances import read_columns
@@ -108,19 +108,19 @@ def profiles(t,measurements,found,dest):
                                     products='+'.join(k for i,k in enumerate(competitors) if (b>>i)&1)))
             for source in ('SpecDis','SPDist'):
                 ref = t[source.lower()+'_kpc']
-                full=j&t['heldout']&np.isfinite(ref)&(ref>0)
-                if not full.any():
+                base=np.flatnonzero(j&t['heldout']&np.isfinite(ref)&(ref>0))
+                if not len(base):
                     continue
                 for lo,hi in SHELLS:
-                    use=full&(ref>=lo)&(ref<hi)
+                    use=base[(ref[base]>=lo)&(ref[base]<hi)]
                     comparisons=[('photdis_reference_all','Photdis',use)]
                     for other in competitors:
-                        pair=use&valid[other]
+                        pair=use[valid[other][use]]
                         comparisons.extend((('pair_'+other,'Photdis',pair),('pair_'+other,other,pair)))
-                    comparisons.extend(('all_methods_common',k,use&common) for k in measurements)
+                    comparisons.extend(('all_methods_common',k,use[common[use]]) for k in measurements)
                     for match,name,k in comparisons:
                         pairs.append(dict(region=region,group=group,reference=source,ref_lo=lo,
-                            ref_hi=hi,match=match,method=name,ref_n=int(use.sum()),
+                            ref_hi=hi,match=match,method=name,ref_n=len(use),
                             **stats(measurements[name][k],ref[k])))
     csv_rows(dest/'coverage.csv',coverage)
     csv_rows(dest/'method_overlap.csv',overlap)

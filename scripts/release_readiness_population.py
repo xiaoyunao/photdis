@@ -42,7 +42,7 @@ def classes(t, redrock):
     return result
 
 
-def build(side, inputs, rows, compositions, scatter):
+def build(side, inputs, rows, compositions):
     _, work = working_index(side,inputs)
     region = DOMAINS[side]
     marker = EVIDENCE/region/'complete.json'
@@ -111,18 +111,15 @@ def build(side, inputs, rows, compositions, scatter):
                             **{key:int((k&m).sum()) for key,m in med_slices.items()},
                             pdf_2_5=float(radial[k,0].sum(dtype='f8')),
                             pdf_5_10=float(radial[k,1].sum(dtype='f8'))))
-        if source=='SpecDis':
-            z = base&support&(d>=2)&(d<10)
-            scatter[region] = dict(d=d[z],q=median[z],selected=sel[z],label=labels[z])
 
 
 def main():
     require_compute()
     dest = DEST/'population'
     dest.mkdir(exist_ok=True,parents=True)
-    inputs,rows,composition,scatter = {},[],[],{}
+    inputs,rows,composition = {},[],[]
     for side in ('north','south'):
-        build(side,inputs,rows,composition,scatter)
+        build(side,inputs,rows,composition)
     csv_rows(dest/'retention_migration.csv',rows)
     csv_rows(dest/'reference_composition.csv',composition)
     save_json(dest/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
