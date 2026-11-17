@@ -21,7 +21,10 @@ LEVELS = ('bright_parent','strict_grz','qrf_supported','dwarf_score','working_pa
 
 
 def run(side, inputs, cells, profiles):
-    _, t = working_index(side,inputs)
+    parts,t = working_index(side,inputs)
+    photometry = [read_columns(path,('ls_id','r')) for path,_ in parts]
+    np.testing.assert_array_equal(np.concatenate([a['ls_id'] for a in photometry]),t['ls_id'])
+    apparent_r = np.concatenate([a['r'] for a in photometry])
     marker = DEST/'area'/side/'complete.json'
     meta = json.loads(marker.read_text())
     p = verified(marker.with_name('area.npz'),meta['outputs']['area.npz'])
@@ -40,7 +43,7 @@ def run(side, inputs, cells, profiles):
     states = (*[score>=i for i in range(5)],(score==4)&(distance>=2)&(distance<5))
     for a,b in RANGES:
         for lo,hi in zip(MAG[:-1],MAG[1:]):
-            q = (t['r']>=lo)&(t['r']<hi)&(c>=a)&(c<b)
+            q = (apparent_r>=lo)&(apparent_r<hi)&(c>=a)&(c<b)
             counts = np.array([np.bincount(k[q&w],minlength=n) for w in states])
             if np.any(np.diff(counts,axis=0)>0):
                 raise ValueError('Selection counts are not nested')
