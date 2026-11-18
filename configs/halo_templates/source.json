@@ -1,0 +1,11 @@
+{
+  "url": "https://github.com/DarkEnergySurvey/ugali/releases/download/v1.9.0/ugali-isochrones-tiny.tar.gz",
+  "archive_sha256": "8d20c8efeb44822ca7e0513269db34a32cfb92596a857b03b36a39bcf9e2549b",
+  "archive_member": "isochrones/des/dotter2016/iso_a12.0_z0.00010.dat",
+  "template_sha256": "b78c24b8062a20188ab0e26895b5a4c5a1d8dc2867e2e70e41459bb3b0fe6fe2",
+  "model": "MIST 1.0 / Dotter2016",
+  "age_gyr": 12.0,
+  "Z": 0.0001,
+  "photometry": "DECam AB",
+  "native_north": "empirical quadratic-in-both-native-colors transfer from strict same-star overlap; training fields exclude all known systems by 0.8deg"
+}

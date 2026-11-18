@@ -154,5 +154,24 @@
     ],
     "variance_floor": 4.0,
     "null_scope": "independent available blank ribbons through identical complete local peak scan, archive repeated-field reuse"
-  }
+  },
+  "native_transfer": {
+    "basis": [
+      "1",
+      "gr",
+      "rz",
+      "gr2",
+      "gr_rz",
+      "rz2"
+    ],
+    "r_range": [
+      16,
+      19
+    ],
+    "max_error": 0.03,
+    "max_rows": 32768,
+    "validation_rule": "fixed separate modulo-5 hash role; report median and NMAD band residual; support restricted to calibration color envelope plus 0.05mag",
+    "system_exclusion_deg": 0.8
+  },
+  "cache_shards": 32
 }
