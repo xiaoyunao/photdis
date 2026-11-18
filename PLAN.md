@@ -1,5 +1,32 @@
 # PLAN
 
+## Science validation 2026-11-18
+
+Use the complete GPT review a05e3c54 and supplied science-improvement
+prompt. Freeze the release at 87069408 and prior evidence at f4dc28f5.
+Run experiments in `data/science_validation_20261118` on allocated CPUs.
+
+1. P0 repair the matched-filter observable selection, replay the old
+   distance scan, and test self recovery and empirical injections before
+   accepting a real-system scale or expanding any spatial search.
+2. P0 define Gaia modulus 95% halfwidth and one-sigma separately, audit
+   downstream uses, and reconcile working 2–5 versus 5–10 kpc selections.
+3. P1 audit all fit/calibration/development identities and sky relations,
+   replay original and expanded benchmark masks, and compare a fixed simple
+   same-training empirical color–luminosity baseline with QRF and BJ.
+4. P1 measure metal-poor offsets with rematched sky uncertainty and
+   alternative references, trace each selection cut and radial PDF mass,
+   and check known systems, real faint stars and noise-only controls.
+5. P1 evaluate observation-space scores, coverage and sensitivity to
+   scale and branch errors. Use these results to decide the small P2
+   same-star north/south and class-oracle controls.
+6. Deliver locked-style figures, numerical sidecars, configurations,
+   provenance, decisions and validation. Keep manuscript work separate.
+
+Registered parameters and thresholds are in
+`configs/science_validation_20261118.json`. Failed and low-information
+experiments retain numerical results and determine the next decision.
+
 ## Paper v2 scientific evidence — completed
 
 Use GPT review ac05ae45 and the supplied v2 science-and-figures instructions.

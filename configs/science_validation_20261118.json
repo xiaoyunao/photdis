@@ -1,0 +1,59 @@
+{
+  "baseline": "f4dc28f57aec954644dcb4f0e76275292d01afc3",
+  "prediction_baseline": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "seed": 20261118,
+  "sky_nside": 8,
+  "bootstrap_draws": 256,
+  "minimum_group": 20,
+  "minimum_matched_cell": 5,
+  "matched_sensitivity": ["original", "double_color_width", "r_split"],
+  "filter": {
+    "mu_grid": [5,16,0.125],
+    "widths": [0.06,0.09],
+    "r_limits": [20,21],
+    "segment_indices": [1,2,5],
+    "selection": "observed r with native extinction; color-dependent grz depth and original PSF, mask, error and crowding cuts, common effective random area",
+    "normalization": "one selected member conditional on each local observed selection",
+    "injection_counts": [30,100,300],
+    "injection_trials": 128,
+    "self_recovery_mu_tolerance": 0.125,
+    "recovery_fraction_tolerance": 0.10,
+    "minimum_coverage68": 0.55,
+    "maximum_false_peak_fraction": 0.05,
+    "significance": 3,
+    "minimum_empirical_null_trials": 128
+  },
+  "simple_baseline": {
+    "features": "same adjacent native gr and rz colors, same training IDs and nominal Mg labels",
+    "color_bin_width": 0.10,
+    "minimum_cell_training": 20,
+    "smoothing_neighbors": 4,
+    "fallback": "nearest supported cell, distance and count explicitly reported",
+    "intervals": "conditional training Mg empirical quantiles with native band-noise propagation",
+    "noise_draws": 32
+  },
+  "noise": {
+    "bright_per_native": 256,
+    "draws": 16,
+    "r_bins": [[20,21],[21,22],[22,23]],
+    "error_sampling": "joint three-band errors from actual matched native, gr/rz color bins",
+    "success_bias_absolute": 0.10,
+    "minimum_effective_n": 30
+  },
+  "predictive": {
+    "max_rows_per_group": 2048,
+    "nominal_coverage": [0.50,0.68,0.90,0.95],
+    "distance_scale_fraction": [-0.20,-0.10,-0.05,0,0.05,0.10,0.20],
+    "wrong_branch_mass": [0.10,0.30],
+    "error_multipliers": [0.75,1,1.25],
+    "reference_cross_error_correlation": [-0.5,0,0.5],
+    "power_replications": 128,
+    "likelihood": "signed Gaussian Gaia with actual observed SNR windows; Gaussian VAC modulus-summary approximation for spectroscopy, SPDist intrinsic already included"
+  },
+  "stop_rules": {
+    "spatial": "require self recovery, background-injection scale and false-peak criteria, and stable local known-system distances at the fixed two widths and depths",
+    "model_expansion": "only small same-input empirical baseline and same-star frozen-model experiments; no whole-catalogue retraining or prediction",
+    "faint": "require minimum effective N and scale CI narrower than 20 percentage points to resolve a 10 percent scale",
+    "metallicity": "no global shift adopted from a conditional descriptive measurement"
+  }
+}

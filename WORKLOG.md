@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-18 — scientific selection and scale validation
+
+- Read the entire new GPT reply a05e3c54 and supplied improvement prompt.
+  Registered the complete goal before development. Local, origin and
+  NERSC main reconcile at f4dc28f5 with a clean starting worktree.
+- Fixed the initial configurations, seeds and scientific stop conditions.
+  Reuse the full-reference cache and archived native known-system samples.
+  Metadata probe 61513607 uses allocated CPUs. The Pal5 rendering lock,
+  historical evidence, original models and release remain input records.
+
 ## 2026-11-17 — paper v2 full-catalogue reference tests
 
 - Read GPT reply ac05ae45 and the complete v2 instructions. Registered
