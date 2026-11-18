@@ -7,7 +7,7 @@ from halo_common import *
 from v3_10_figures import regression,STYLE
 
 STAGES=('native','parent','power','noise_fixed','noise_imaging','roles','balance','balance_comparison',
-        'sequence','sequence_views','hess','hess_views','known','seam','selection','atlas')
+        'sequence','sequence_views','hess','hess_views','known','seam','selection','atlas','redraw','reference_scales')
 
 
 def table(path):
