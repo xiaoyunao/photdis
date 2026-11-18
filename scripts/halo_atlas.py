@@ -22,8 +22,8 @@ def smooth(x,sigma):
 def grid():
     l=np.linspace(-np.pi,np.pi,1441);b=np.linspace(-np.pi/2,np.pi/2,721)
     lc,bc=np.meshgrid((l[:-1]+l[1:])/2,(b[:-1]+b[1:])/2)
-    ra,dec=hp.Rotator(coord=('G','C'))(-np.rad2deg(lc),np.rad2deg(bc),lonlat=True)
-    return l,b,hp.ang2pix(C['nside'],ra,dec,lonlat=True,nest=True)
+    ra,dec=hp.Rotator(coord=('G','C'))(-np.rad2deg(lc.ravel()),np.rad2deg(bc.ravel()),lonlat=True)
+    return l,b,hp.ang2pix(C['nside'],ra,dec,lonlat=True,nest=True).reshape(lc.shape)
 
 
 def panels(d,name,maps,labels,unit,signed=False,annotated=False,limits=None):
@@ -65,14 +65,28 @@ def panels(d,name,maps,labels,unit,signed=False,annotated=False,limits=None):
 
 def assemble():
     d=folder('atlas');inputs={}
-    cube=np.zeros((2,3,len(MU),NPIX),'i8');prob=np.zeros((2,7,NPIX));sw2=np.zeros((2,5,NPIX))
-    census=[]
-    for i in range(C['cache_shards']):
-        p=OUT/'counts'/f'{i:02}'
-        t=read(p,('cube.npz','counts','probability','channel_sumw2'),inputs)
-        cube+=t['counts'];prob+=t['probability'];sw2+=t['channel_sumw2']
-        with (p/'census.csv').open() as f:census.extend(csv.DictReader(f))
-        print('assembled',i,flush=True)
+    resume=(d/'cmd_filter_cube.fits').exists()
+    if resume:
+        h=fits.open(d/'cmd_filter_cube.fits',memmap=True)
+        assert h[0].header['CONFIG']==CONFIG_HASH and h[0].header['NSIDE']==C['nside']
+        assert all(x.verify_checksum()==1 for x in h), 'Raw checkpoint checksum failed'
+        cube=h['COUNTS'].data;prob=h['QRF_MASS'].data;sw2=h['BROAD_SUMW2'].data
+        census=[]
+        for i in range(C['cache_shards']):
+            p=OUT/'counts'/f'{i:02}'
+            mark=json.loads((p/'complete.json').read_text());assert mark['config']==CONFIG_HASH
+            inputs[str(p.relative_to(ROOT))]=sha(p/'complete.json')
+            with (p/'census.csv').open() as f:census.extend(csv.DictReader(f))
+        print('resumed checksum-verified raw cube; count/PDF conservation rechecked below',flush=True)
+    else:
+        cube=np.zeros((2,3,len(MU),NPIX),'i8');prob=np.zeros((2,7,NPIX));sw2=np.zeros((2,5,NPIX))
+        census=[]
+        for i in range(C['cache_shards']):
+            p=OUT/'counts'/f'{i:02}'
+            t=read(p,('cube.npz','counts','probability','channel_sumw2'),inputs)
+            cube+=t['counts'];prob+=t['probability'];sw2+=t['channel_sumw2']
+            with (p/'census.csv').open() as f:census.extend(csv.DictReader(f))
+            print('assembled',i,flush=True)
     assert (cube[:,1:]<=cube[:,:1]).all()
     areas=[];depth=[];ebv=[]
     for side in ('south','north'):
@@ -106,19 +120,22 @@ def assemble():
     # Per-phase visibility is an approximate mean-depth/color-domain diagnostic,
     # not an IMF-weighted detection or PSF completeness correction.
     template=read(OUT/'native',('template.npz','south','north','phase','north_support'),inputs)
-    visible=np.zeros((2,2,len(MU),NPIX),'u1')
-    attenuation=np.array([3.214,2.165,1.211])
-    for native,key in enumerate(('south','north')):
-        lim=depth[native]-attenuation[:,None]*ebv[native]
-        for v,limit in enumerate((20.,23.)):
-            limv=np.minimum(lim,limit-attenuation[:,None]*ebv[native])
-            for bit,phase in enumerate((0,2)):
-                take=template['phase']==phase
-                if native:take&=template['north_support']
-                mags=template[key][take]
-                maxmu=np.full(NPIX,-np.inf)
-                for m in mags:maxmu=np.maximum(maxmu,np.min(limv-m[:,None],axis=0))
-                visible[v,native]|=((MU[:,None]<=maxmu[None,:])&(areas[native,2]>0)).astype('u1')*(1<<bit)
+    if resume:
+        visible=h['PHASE_VISIBLE'].data
+    else:
+        visible=np.zeros((2,2,len(MU),NPIX),'u1')
+        attenuation=np.array([3.214,2.165,1.211])
+        for native,key in enumerate(('south','north')):
+            lim=depth[native]-attenuation[:,None]*ebv[native]
+            for v,limit in enumerate((20.,23.)):
+                limv=np.minimum(lim,limit-attenuation[:,None]*ebv[native])
+                for bit,phase in enumerate((0,2)):
+                    take=template['phase']==phase
+                    if native:take&=template['north_support']
+                    mags=template[key][take]
+                    maxmu=np.full(NPIX,-np.inf)
+                    for m in mags:maxmu=np.maximum(maxmu,np.min(limv-m[:,None],axis=0))
+                    visible[v,native]|=((MU[:,None]<=maxmu[None,:])&(areas[native,2]>0)).astype('u1')*(1<<bit)
     hd=fits.Header();hd['NSIDE']=C['nside'];hd['ORDERING']='NESTED';hd['COORDSYS']='C'
     hd['CONFIG']=CONFIG_HASH;hd['SIGMA']=.3;hd['LMAX']=C['smoothing']['lmax']
     hd['COMMENT']='Counts axes: version(bright,deep),gate(all,score>=.8,PDF-common),mu,pixel.'
@@ -129,7 +146,7 @@ def assemble():
         fits.ImageHDU(prob,name='QRF_MASS'),fits.ImageHDU(areas,name='NATIVE_AREAS'),
         fits.ImageHDU(depth,name='DEPTH'),fits.ImageHDU(ebv,name='EBV'),
         fits.ImageHDU(visible,name='PHASE_VISIBLE'),fits.ImageHDU(masked.astype('u1'),name='DISPLAY_MASK')]
-    fits.HDUList(hdus).writeto(d/'cmd_filter_cube.fits',overwrite=True,checksum=True)
+    if not resume:fits.HDUList(hdus).writeto(d/'cmd_filter_cube.fits',overwrite=True,checksum=True)
     csv_rows(d/'node_totals.csv',totals)
     # Smooth independent maps concurrently with single-threaded spherical transforms.
     work=[];keys=[]
@@ -149,6 +166,7 @@ def assemble():
     mapped={}
     with ThreadPoolExecutor(6) as pool:
         for key,val in zip(keys,pool.map(smoothed,work)):mapped[key]=val
+    atomic_npz(d/'smoothed_maps.npz',keys=np.array([str(k) for k in mapped]),values=np.array([v[:2] for v in mapped.values()]).astype('f4'))
     del work,cube
     annotations=[];redraw={};labels=[f'{a:.1f}–{b:g} kpc' for a,b in C['distance_bins_kpc']]
     for v,version in enumerate(('bright','deep')):

@@ -68,3 +68,12 @@ def test_known_galactic_coordinate_allows_equivalent_ra_wrap():
     np.testing.assert_allclose([ra%360,dec],[266.4049948,-28.936174],atol=1e-4)
     weights=channel_weights(np.round(np.arange(14,20.001,.1),1),[(10,15)])
     assert weights.shape==(1,61)
+
+
+def test_aitoff_grid_obeys_healpy_flat_rotation_api():
+    from halo_atlas import grid
+    import healpy as hp
+    l,b,pix=grid()
+    assert pix.shape==(720,1440)
+    assert l.shape==(1441,) and b.shape==(721,)
+    assert pix.min()>=0 and pix.max()<hp.nside2npix(512)
