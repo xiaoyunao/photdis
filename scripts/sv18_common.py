@@ -17,7 +17,9 @@ from v3_8_direct_figures import BLUE, ORANGE, GREEN, plt, save
 from paper_v1_figures import PAPER
 from v3_10_figures import check_templates
 
-CONFIG=ROOT/'configs/science_validation_20261118.json'
+CONFIG=Path(__file__).with_name('science_validation_20261118.json')
+if not CONFIG.exists():
+    CONFIG=ROOT/'configs/science_validation_20261118.json'
 P=json.loads(CONFIG.read_text())
 DEST=ROOT/'data/science_validation_20261118'
 RNG=np.random.default_rng(P['seed'])

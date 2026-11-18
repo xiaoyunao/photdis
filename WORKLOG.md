@@ -9,6 +9,22 @@
   Reuse the full-reference cache and archived native known-system samples.
   Metadata probe 61513607 uses allocated CPUs. The Pal5 rendering lock,
   historical evidence, original models and release remain input records.
+- Added explicit Gaia one-sigma and 95%-halfwidth definitions and a regression
+  for their ratio. The historical CSV stays preserved. Replayed all 404
+  original Gaia aggregate rows with unchanged center-based statistics.
+- The first definitions pass repeated full-cache binning. Stopped its own
+  job 61513706 and precomputed the qualified Gaia bins. Job 61514293 then
+  finished in 76 seconds and reproduced the six exact 2–5 kpc selected counts.
+- The initial window-only filter experiment 61513753 completed with failed
+  real-background recovery. Preserved it. Corrected the profile grid edges
+  and added a test for interval containment. Extended the selection model
+  to actual native random-point grz depths and extinction, retaining the
+  fixed PSF/deblending/crowding sample and original comparison.
+- Prepared cached P1 rematching, provenance, same-training simple baseline,
+  known-system/seam, noise and observation-space power experiments. The
+  independent stages share one allocated 64-core job to reduce queue overhead.
+  Targeted selection/PDF tests pass. Full 480-test pass predates the added
+  Gaia-unit regression. Await current experiment outcomes and final QA.
 
 ## 2026-11-17 — paper v2 full-catalogue reference tests
 

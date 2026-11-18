@@ -81,6 +81,15 @@ def metric(q,d,modes=None):
                 mu_median=np.median(dm))
 
 
+def reference_uncertainty_mu(t, source, rows):
+    """Return the one-sigma scale and optional 95% geometric halfwidth."""
+    if source!='gaia':
+        return t[source+'_sig'][rows],None
+    sigma=(5/np.log(10))*t['p_err'][rows]/t['p_corr'][rows]
+    halfwidth95=2.5*np.log10(t['gaia_hi'][rows]/t['gaia_lo'][rows])
+    return sigma,halfwidth95
+
+
 def summarize(t,counts,dest):
     x=bins(t)
     sh=AXES[:-2]
@@ -117,11 +126,12 @@ def summarize(t,counts,dest):
                 for b,(start,stop) in enumerate(zip(boundaries[:-1],boundaries[1:])):
                     if stop==start: continue
                     z=j[order[start:stop]]
-                    sig=t[src+'_sig'][z] if src!='gaia' else 2.5*np.log10(t['gaia_hi'][z]/t['gaia_lo'][z])
+                    sig,halfwidth95=reference_uncertainty_mu(t,src,z)
                     row=dict(reference=src,frame=frame,grouping=label)
                     row.update({x:None for x in BIN_AXES})
                     row.update({BIN_AXES[a]:int(v) for a,v in zip(axes,k[b])})
-                    row.update(**metric(t['q'][z],d[z],t['peaks'][z]),median_reference_sigma_mu=np.median(sig))
+                    row.update(**metric(t['q'][z],d[z],t['peaks'][z]),median_reference_sigma_mu=np.median(sig),
+                        median_reference_halfwidth95_mu=None if halfwidth95 is None else np.median(halfwidth95))
                     met.append(row)
     for a,b in (('specdis','spdist'),('gaia','specdis'),('gaia','spdist')):
         base=(t[a+'_stage']==3)&(t[b+'_stage']==3)&(t['state']==3)
