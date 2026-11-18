@@ -2,6 +2,7 @@
 import csv
 import json
 import os
+import sys
 from pathlib import Path
 
 import healpy as hp
@@ -26,6 +27,9 @@ RNG=np.random.default_rng(P['seed'])
 REFERENCE_NAMES={'gaia':'Gaia','specdis':'SpecDis','spdist':'SPDist'}
 CODE_HASHES={p.name:sha(p) for p in Path(__file__).parent.glob('sv18_*.py')}
 CODE_HASHES['paper_v2_reference.py']=sha(Path(__file__).with_name('paper_v2_reference.py'))
+# Historical script imports prepend the canonical scripts directory. Restore
+# this experiment's directory before loading its versioned sibling modules.
+sys.path.insert(0,str(Path(__file__).parent))
 
 
 def read(path, fields, inputs):

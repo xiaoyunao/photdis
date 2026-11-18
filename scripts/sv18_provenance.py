@@ -68,9 +68,21 @@ def main():
                 # v3.10 evaluated its score-threshold curves on this cohort.
                 roles.append((side+'_working_rule_development',src))
             csv_rows(d/(side+'_'+role+'_unlinked.csv'),[dict(expected=len(ids),linked=int(valid.sum()),unlinked=int((~valid).sum()))])
-    del allref
     v,vm=load_parent();pub,_,_=published(v,vm['outputs']['ids.npy'])
     cohorts={'expanded_spectral_holdout':t}
+    cohorts['original_benchmark_parent']={k:v[k] for k in ('ls_id','source_id','RA','DEC')}
+    noise=DEST/'noise/complete.json'
+    if noise.is_file():
+        members=read(DEST/'noise',('individual_noise.npz','TYPE','ls_id'),inputs)
+        ids=np.unique(members['ls_id']);ii=index_join(ids,allref['ls_id'])
+        assert (ii>=0).all() and (members['TYPE']=='PSF').all()
+        cohorts['noise_stars']={k:allref[k][ii] for k in ('ls_id','source_id','RA','DEC')}
+    member_path=ROOT/'data/v3_18/members'
+    members=read(member_path,('posteriors.npz','TYPE','ls_id','science'),inputs)
+    ii=index_join(members['ls_id'][members['science']],allref['ls_id'])
+    assert (ii>=0).all() and (members['TYPE']=='PSF').all()
+    cohorts['GD1_science_members']={k:allref[k][ii] for k in ('ls_id','source_id','RA','DEC')}
+    del allref
     for ref in ('specdis','spdist'):
         keep=masks(v)['weak_gaia_dwarfs']&available(pub['Photdis'])&available(pub['BJ_photogeometric'])
         keep&=(v[ref+'_kpc']>=2)&(v[ref+'_kpc']<5)

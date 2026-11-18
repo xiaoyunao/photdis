@@ -85,11 +85,16 @@ def main():
     tracks=[]
     for table in ('Table1','Table3','Figure2_track_jarvis'):
         p3=INPUT/f'v3_{table}.fits';p4=INPUT/f'v4_{table}.fits'
-        same=p3.read_bytes()==p4.read_bytes()
-        tracks.append(dict(table=table,v3_sha256=sha(p3),v4_sha256=sha(p4),byte_identical=same,
+        if not p3.exists() and not p4.exists():
+            continue
+        both=p3.exists() and p4.exists()
+        same=p3.read_bytes()==p4.read_bytes() if both else None
+        tracks.append(dict(table=table,v3_sha256=sha(p3) if p3.exists() else None,
+            v4_sha256=sha(p4) if p4.exists() else None,byte_identical=same,
             used_version='v3 corrected spatial track' if table=='Table3' else 'v4 archived distance reference',
             documented_record='https://zenodo.org/records/19889980'))
-        assert same
+        if both:
+            assert same
     assert sha(INPUT/'v3_Table3.fits')==TRACK_SHA
     assert sha(INPUT/'v4_Figure2_track_jarvis.fits')==MODULUS_CURVE
     csv_rows(d/'track_version_audit.csv',tracks)

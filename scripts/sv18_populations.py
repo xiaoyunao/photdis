@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Rematch metal-poor and ordinary dwarfs inside each sky-block resample."""
 import numpy as np
+import argparse
 from photdis.stage1 import require_compute
 from sv18_common import *
 from paper_v2_scan import R, GR, RZ, bin_axis
@@ -24,18 +25,18 @@ def match(x,pop,delta,weight=None):
     weight=np.ones(len(pop),'i4') if weight is None else weight
     a,labels=np.unique(x,axis=0,return_inverse=True)
     cells=[];bal=np.zeros(len(pop))
-    order=np.argsort(labels,kind='stable')
-    boundaries=np.r_[0,np.flatnonzero(np.diff(labels[order]))+1,len(order)]
+    row_order=np.argsort(labels,kind='stable')
+    boundaries=np.r_[0,np.flatnonzero(np.diff(labels[row_order]))+1,len(row_order)]
     for k,(start,stop) in enumerate(zip(boundaries[:-1],boundaries[1:])):
-        local=order[start:stop]
+        local=row_order[start:stop]
         j=[local[(pop[local]==p)&(weight[local]>0)] for p in (1,2)]
         n=[int(weight[i].sum()) for i in j]
         if min(n)<P['minimum_matched_cell']:
             continue
         m=[]
         for i in j:
-            order=np.argsort(delta[i],kind='stable')
-            values=delta[i][order]; cum=np.cumsum(weight[i][order])
+            value_order=np.argsort(delta[i],kind='stable')
+            values=delta[i][value_order]; cum=np.cumsum(weight[i][value_order])
             size=cum[-1]
             at=np.searchsorted(cum,[(size-1)//2+1,size//2+1])
             m.append(values[at].mean())
@@ -51,13 +52,26 @@ def match(x,pop,delta,weight=None):
 
 def main():
     require_compute()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--exclude-calibration',action='store_true')
+    args=parser.parse_args()
     inputs={}
     keys=('TYPE','ls_id','RA','DEC','region','observed_r','m','EBV','err','pop','state','heldout','q',
           'gaia_stage','gaia_d','specdis_stage','specdis_d','spdist_stage','spdist_d')
     t=cached(inputs,keys)
     use=t['heldout']&(t['state']==3)&np.isin(t['pop'],(1,2))
     t={k:v[use] for k,v in t.items()}
-    block=sky(t);d=out('populations')
+    excluded=0
+    if args.exclude_calibration:
+        mask=read(DEST/'provenance',('additional_exclusions.npz','TYPE','ls_id',
+                  'additional_calibration_or_selection_overlap'),inputs)
+        ix=index_join(t['ls_id'],mask['ls_id'])
+        reject=np.zeros(len(ix),bool)
+        known=ix>=0
+        reject[known]=mask['additional_calibration_or_selection_overlap'][ix[known]]
+        excluded=int(reject.sum())
+        t={key:value[~reject] for key,value in t.items()}
+    block=sky(t);d=out('populations_clean' if args.exclude_calibration else 'populations')
     result=[];drawtable=[];balance=[]
     for ref in ('specdis','spdist','gaia'):
         dist=t[ref+'_d']
@@ -72,7 +86,7 @@ def main():
             for variant in P['matched_sensitivity']:
                 x=cells(t,variant,dist)[idx]
                 point,matched,bw=match(x,pp,res)
-                if variant=='original' and ref in ('specdis','spdist'):
+                if not args.exclude_calibration and variant=='original' and ref in ('specdis','spdist'):
                     with (PRIOR/'figures/matched_physical_conditions.csv').open() as f:
                         old=[r for r in csv.DictReader(f) if r['reference']==ref and float(r['d_lo'])==lo]
                     sums={}
@@ -134,7 +148,7 @@ def main():
         axes[0].set_ylabel(r'Metal-poor minus ordinary $\Delta\mu$ (mag)')
         axes[0].legend(fontsize=7,frameon=False)
         figure(d,'matched_metallicity',f,result)
-    complete(d,inputs)
+    complete(d,inputs,exclude_calibration=args.exclude_calibration,excluded_sources=excluded)
 
 
 if __name__=='__main__':

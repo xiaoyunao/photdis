@@ -65,6 +65,15 @@ def test_sky_bootstrap_rematch_respects_multiplicity_and_support():
     assert np.isnan(value) and not cells
 
 
+def test_rematching_retains_every_cell_after_sorting_its_residuals():
+    x=np.repeat([[0],[1]],12,axis=0)
+    pop=np.tile(np.repeat([1,2],6),2)
+    delta=np.r_[np.zeros(6),np.ones(6)*.38,np.zeros(6),np.ones(6)*.50]
+    value,cells,_=match(x,pop,delta)
+    assert len(cells)==2
+    np.testing.assert_allclose(value,.44)
+
+
 def test_gaussian_observation_cdf_conditioning_uses_signed_values():
     edges=np.tile([10.,10.001],(2,1))
     mass=np.ones((2,1))

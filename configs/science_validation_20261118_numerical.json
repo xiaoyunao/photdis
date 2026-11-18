@@ -1,0 +1,8 @@
+{
+  "hypothesis": "Bound the numerical-integration contribution to the same-training empirical-baseline comparison.",
+  "cohort": "union of both original F15 samples, unchanged source IDs and paired sky blocks",
+  "draws": [32,128],
+  "fixed": "color cells, histograms, labels, calibration offset, photometry, photometry errors and Sobol digital shifts",
+  "outputs": "pointwise numerical shifts, same-star metrics and paired sky intervals",
+  "scientific_parameters_retuned": false
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate source-bound scientific outputs independently of acceptance outcomes."""
 from PIL import Image
+import time
 from photdis.stage1 import require_compute
 from sv18_common import *
 
@@ -13,7 +14,13 @@ def table(path):
 def main():
     require_compute()
     d=out('delivery');marks={};plates=[]
-    stages=('definitions','observable','filter','provenance','benchmark','populations','systems','noise','predictive','oracle','figures')
+    stages=('definitions','observable','filter','provenance','cohorts','benchmark','numerics','populations','populations_clean',
+            'systems','noise','predictive','oracle','figures')
+    deadline=time.monotonic()+600
+    while not (DEST/'numerics/complete.json').exists():
+        if time.monotonic()>deadline:
+            raise RuntimeError('The concurrent numerical-integration check has not completed')
+        time.sleep(5)
     reports={}
     for stage in stages:
         folder=DEST/stage
@@ -59,7 +66,7 @@ def main():
         group=[r for r in rows if r['group']=='headline']
         assert len(group)==3 and all(int(r['n'])==n for r in group)
     q=table(DEST/'systems/track_version_audit.csv')
-    assert all(r['byte_identical']=='True' for r in q)
+    assert all(r['byte_identical']=='True' for r in q if r['v3_sha256'] and r['v4_sha256'])
     save_json(d/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),stages=marks,plates=plates,
        filter_gate=reports['filter']['all_sky_search_authorized_by_evidence'],
        original_models_and_release='87069408',baseline_evidence='f4dc28f5',

@@ -9,12 +9,13 @@ import sys
 from photdis.stage1 import require_compute
 from sv18_common import DEST, out
 
-def run(stage):
+def run(stage,args=()):
     folder=out('execution')
-    log=folder/(stage+'_'+os.getenv('SLURM_JOB_ID','local')+'.log')
+    suffix='_clean' if args else ''
+    log=folder/(stage+suffix+'_'+os.getenv('SLURM_JOB_ID','local')+'.log')
     script=Path(__file__).with_name('sv18_'+stage+'.py')
     with log.open('wb') as handle:
-        result=subprocess.run([sys.executable,str(script)],stdout=handle,stderr=subprocess.STDOUT)
+        result=subprocess.run([sys.executable,str(script),*args],stdout=handle,stderr=subprocess.STDOUT)
     print(stage,result.returncode,flush=True)
     return result.returncode
 
@@ -31,6 +32,8 @@ def main():
         raise SystemExit(1)
     required=('definitions','observable','filter','provenance','benchmark','populations','systems','noise','predictive')
     if all((DEST/stage/'complete.json').is_file() for stage in required):
+        if run('populations',('--exclude-calibration',)):
+            raise SystemExit(1)
         for stage in ('oracle','figures','verify'):
             if run(stage):
                 raise SystemExit(1)
