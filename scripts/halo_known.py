@@ -6,6 +6,7 @@ from photdis.stage1 import require_compute
 from halo_common import *
 from halo_filtering import accepted,prepare_templates
 from v3_13_clusters import SYSTEMS
+from v3_13_cmd import M5_CENTER
 
 
 def main():
@@ -33,7 +34,7 @@ def main():
     stats=[dict(mu=mu,distance=DISTANCE[i],on=int(k[on,i].sum()),off=int(k[off,i].sum()),
        on_area=aon,off_area=aoff,excess_density=k[on,i].sum()/aon-k[off,i].sum()/aoff) for i,mu in enumerate(MU)]
     csv_rows(d/'M13_node_check.csv',stats)
-    m5pix=hp.query_disc(C['nside'],hp.ang2vec(*SYSTEMS['M5'][0],lonlat=True),np.deg2rad(.4),nest=True)
+    m5pix=hp.query_disc(C['nside'],hp.ang2vec(*M5_CENTER,lonlat=True),np.deg2rad(.4),nest=True)
     mu=10+5*np.log10(ref)
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(1,3,figsize=(7.15,3.2),layout='constrained')

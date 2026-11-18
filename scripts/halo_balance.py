@@ -24,8 +24,14 @@ def balance(x,y,mult):
     mean=np.average(x[use],axis=0,weights=mult[use]);var=np.average((x[use]-mean)**2,axis=0,weights=mult[use])
     z=np.clip((x-mean)/np.maximum(np.sqrt(var),1e-5),-8,8)
     design=np.column_stack((z,z*z,z*z*z,z[:,1]*z[:,2]))
-    model=LogisticRegression(C=10.,max_iter=1000,tol=1e-7,solver='lbfgs')
+    # Scale the polynomial columns as well as the physical variables.
+    # The small positive ridge keeps nearly collinear color powers solvable.
+    dm=np.average(design[use],axis=0,weights=mult[use])
+    ds=np.sqrt(np.average((design[use]-dm)**2,axis=0,weights=mult[use]))
+    design=(design-dm)/np.maximum(ds,1e-5)
+    model=LogisticRegression(C=10.,max_iter=200,tol=1e-8,solver='newton-cholesky')
     model.fit(design[use],y[use],sample_weight=mult[use])
+    assert model.n_iter_[0]<200, 'Propensity optimizer did not converge'
     p=expit(model.decision_function(design))
     common=(p>=.05)&(p<=.95)
     return mult*np.where(y==1,1-p,p)*common
@@ -112,7 +118,7 @@ def main():
         axes[0].legend(frameon=False,fontsize=7)
         figure(d,'continuous_observable_balance',f,audit)
     complete(d,inputs,estimand='metal-poor minus ordinary overlap-population weighted mean modulus residual; differs from old coarse-cell median contrast',
-        design='standardized linear, squared, cubic terms and gr*rz; L2 logistic C=10; common propensity [.05,.95]; independently refit each sky bootstrap and omission',
+        design='standardized physical variables then standardized linear, squared, cubic terms and gr*rz; L2 logistic C=10, Newton-Cholesky; common propensity [.05,.95]; independently refit each sky bootstrap and omission',
         inference='reference-scale agreement, not causal chemical identification; no new blind validation')
 
 

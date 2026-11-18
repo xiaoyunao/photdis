@@ -88,7 +88,7 @@ def assemble():
     weights=channel_weights(MU,C['distance_bins_kpc'])
     # Fixed-node geometric checks precede exporting and rendering.
     ra,dec=hp.Rotator(coord=('G','C'))(0,0,lonlat=True)
-    np.testing.assert_allclose([ra,dec],[266.4049948,-28.936174],atol=1e-4)
+    np.testing.assert_allclose([ra%360,dec],[266.4049948,-28.936174],atol=1e-4)
     np.testing.assert_allclose(weights.sum(axis=1),1)
     totals=[]
     for v,version in enumerate(('bright','deep')):

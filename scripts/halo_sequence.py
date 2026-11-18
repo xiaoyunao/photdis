@@ -70,6 +70,7 @@ def main():
             system=np.full(len(j),'GD1_'+group),native=(cache['region'][j]==3).astype('u1'),m=cache['m'][j],err=cache['err'][j],
             r=r,q=z['quantiles_kpc'][rows],ref=ref,phase=np.full(len(j),'MS/TO'),mask=np.zeros(len(j),bool)))
     t={k:np.concatenate([p[k] for p in pieces]) for k in pieces[0]};assert (t['TYPE']=='PSF').all()
+    identity=np.where(t['source_id']>0,t['source_id'],-t['ls_id'])
     template=read(OUT/'native',('template.npz','south','north','phase','north_support'),inputs)
     simple=np.full_like(t['q'],np.nan);seq=simple.copy();support=np.zeros(len(seq),int);training={}
     for code,side in enumerate(('south','north')):
@@ -80,25 +81,35 @@ def main():
         ii=np.flatnonzero(t['native']==code)
         for start in range(0,len(ii),256):
             j=ii[start:start+256]
-            simple[j],_,_=predict(model,t['m'][j],t['err'][j],t['source_id'][j],offset,draws=128)
-            seq[j],support[j]=old_sequence(t['m'][j],t['err'][j],t['source_id'][j],relation(template,side))
+            simple[j],_,_=predict(model,t['m'][j],t['err'][j],identity[j],offset,draws=128)
+            seq[j],support[j]=old_sequence(t['m'][j],t['err'][j],identity[j],relation(template,side))
     methods={'QRF':t['q'],'Label grid':simple,'Old sequence':seq}
     common=np.logical_and.reduce([np.isfinite(q).all(axis=1)&(q>0).all(axis=1) for q in methods.values()])
     rows=[];cohorts=[]
     for name in np.unique(t['system']):
         for low,high in ((14,18),(18,20),(20,21),(21,22),(22,23),(14,23)):
             parent=(t['system']==name)&(t['r']>=low)&(t['r']<high)
-            use=parent&common
-            cohorts.append(dict(system=name,r_lo=low,r_hi=high,parent=int(parent.sum()),common=int(use.sum()),
-                qrf_supported=int((parent&np.isfinite(t['q']).all(axis=1)).sum()),
-                sequence_supported=int((parent&np.isfinite(seq).all(axis=1)).sum()),masked_common=int((use&t['mask']).sum())))
-            if not use.any():continue
-            for method,q in methods.items():
-                stat=metric(q[use],t['ref'][use]);res=q[use,2]/t['ref'][use]-1
-                ci=interval([np.median(res[RNG.integers(len(res),size=len(res))]) for _ in range(256)])
-                rows.append(dict(system=name,r_lo=low,r_hi=high,method=method,**stat,**ci,
-                    bias_pass=bool(len(res)>=30 and abs(stat['bias'])<=.1),
-                    role='test with prior development ancestry',reference_scope='common system scale, not independent per-star truth'))
+            for quality,keep in (('unmasked_low_crowding',~t['mask']),('all_low_crowding',np.ones(len(common),bool))):
+                use=parent&common&keep
+                cohorts.append(dict(system=name,r_lo=low,r_hi=high,quality=quality,parent=int((parent&keep).sum()),common=int(use.sum()),
+                    qrf_supported=int((parent&keep&np.isfinite(t['q']).all(axis=1)).sum()),
+                    sequence_supported=int((parent&keep&np.isfinite(seq).all(axis=1)).sum()),masked_common=int((use&t['mask']).sum())))
+                if not use.any():continue
+                for method,q in methods.items():
+                    stat=metric(q[use],t['ref'][use]);res=q[use,2]/t['ref'][use]-1
+                    ci=interval([np.median(res[RNG.integers(len(res),size=len(res))]) for _ in range(256)])
+                    rows.append(dict(system=name,r_lo=low,r_hi=high,quality=quality,method=method,**stat,**ci,
+                        bias_pass=bool(len(res)>=30 and abs(stat['bias'])<=.1),
+                        role='test with prior development ancestry',reference_scope='common system scale, not independent per-star truth'))
+    phases=[]
+    for name in np.unique(t['system']):
+        for phase in np.unique(t['phase'][t['system']==name]):
+            for quality,keep in (('unmasked_low_crowding',~t['mask']),('all_low_crowding',np.ones(len(common),bool))):
+                use=common&(t['system']==name)&(t['phase']==phase)&keep
+                if not use.any():continue
+                for method,q in methods.items():
+                    phases.append(dict(system=name,phase=phase,quality=quality,method=method,**metric(q[use],t['ref'][use])))
+    csv_rows(d/'sequence_phase_scale.csv',phases)
     atomic_npz(d/'same_source_predictions.npz',**t,simple=simple,sequence=seq,sequence_draw_support=support,common=common)
     csv_rows(d/'sequence_scale.csv',rows);csv_rows(d/'sequence_support.csv',cohorts)
     with plt.rc_context(PAPER):
@@ -106,7 +117,7 @@ def main():
         shown=[]
         # Independent counts are given in the sidecar; all three CMDs use identical members.
         for col,name in enumerate(('M5','M13','GD1_thin')):
-            ii=np.flatnonzero(common&(t['system']==name))
+            ii=np.flatnonzero(common&~t['mask']&(t['system']==name))
             color=t['m'][ii,0]-t['m'][ii,1]
             mu=10+5*np.log10(t['ref'][ii]);qmu=10+5*np.log10(t['q'][ii,2])
             for row,values in enumerate((t['m'][ii,1]-mu,t['m'][ii,1]-qmu)):
@@ -133,7 +144,7 @@ def main():
         f,axes=plt.subplots(1,2,figsize=(7.1,3.1),layout='constrained')
         for ax,names in zip(axes,(('M5','M13','M30','M92'),('GD1_thin','GD1_cocoon'))):
             for method,color in zip(methods,(BLUE,GREEN,ORANGE)):
-                a=[r for r in rows if r['system'] in names and r['r_lo']!=14 and r['r_hi']<=23]
+                a=[r for r in rows if r['system'] in names and r['quality']=='unmasked_low_crowding' and r['r_lo']!=14 and r['r_hi']<=23]
                 for name in names:
                     z=[r for r in a if r['method']==method and r['system']==name]
                     if z:ax.plot([(r['r_lo']+r['r_hi'])/2 for r in z],[r['bias'] for r in z],
