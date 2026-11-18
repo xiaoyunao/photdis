@@ -127,6 +127,7 @@ def main():
         f,axes=plt.subplots(1,2,figsize=(7.1,3.15),layout='constrained')
         for i,name in enumerate(('M30','M5','M68','M92','M13')):
             z=[p for p in points if p['system']==name]
+            if not z:continue
             axes[0].scatter([r['color'] for r in z],[r['delta_mu'] for r in z],s=5,alpha=.4,
                             label=name,edgecolors='none',rasterized=True)
         axes[0].axhline(0,color='.6',lw=.7,ls=':')
