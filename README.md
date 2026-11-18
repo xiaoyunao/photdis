@@ -5,6 +5,14 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
+The [halo response scientific package](manifests/halo_response_20261118/README.md)
+contains the full-footprint Nside512 CMD-filter atlas, same-source QRF maps,
+known-system sequence tests and selection/noise/reference-scale controls.
+Its [scientific decisions](manifests/halo_response_20261118/science_decisions.md)
+and [34-plate index](manifests/halo_response_20261118/figures.md) link the
+results and exact redraw grids. Template distance labels describe CMD
+hypotheses; catalogue predictions remain frozen at `87069408`.
+
 The [full catalogue and independent validation](docs/final_catalogue.md)
 connect the raw DR11 cuts to the complete PDF maps, compare published
 distances before the Photdis distance cut, and test population sensitivity.

@@ -2,6 +2,12 @@
 
 ## 2026-11-18 — halo atlas and sequence response
 
+- Published the main delivery in35acd537. Final repository completeness
+  audit verified15losslessly compressed plotted grids,162CSV tables and
+  all32cache receipt/admission pairs. Added narrow ignore exceptions for
+  these public metadata and compact grids; original data/cache exclusions
+  remain. README now links the package directly.
+
 - Completed the full halo-response scope:34 English PDF/PNG science plates,
   including15 full-footprint map sets. Main atlas:61mu nodes,51,231,975
   strict PSFs,9,451.5268deg2eligible area;8,598.252deg2after display mask.

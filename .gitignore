@@ -68,3 +68,7 @@ archives/
 # Exact compact plotted grids for the completed halo atlas (raw cubes stay private).
 !manifests/halo_response_20261118/redraw/*.npz
 !manifests/halo_response_20261118/**/*.csv
+!manifests/halo_response_20261118/cache/
+!manifests/halo_response_20261118/cache/**/
+!manifests/halo_response_20261118/cache/**/*.json
+!manifests/halo_response_20261118/cache/**/*.csv
