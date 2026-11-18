@@ -1,0 +1,121 @@
+{
+  "tests": {
+    "command": "env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=src:scripts:.deps python3 -m pytest -q",
+    "passed": 485,
+    "warnings": 20
+  },
+  "syntax": "py_compile all sv18 scripts and paper_v2_reference; bash -n run_sv18.sh",
+  "remote_delivery_job": "61516883",
+  "original_pixel_regression_job": "61516786",
+  "style_lock_sha256": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "transfer_receipt_sha256": "92decfddf7823134eb73fcd29497ca76e20108828e450d9f30ed26a44a9b7e93",
+  "plates": [
+    {
+      "pdf": "figures/science_validation_20261118/benchmark/same_training_baseline.pdf",
+      "png": "figures/science_validation_20261118/benchmark/same_training_baseline.png",
+      "width": 2130,
+      "height": 960,
+      "dpi": 299.9994,
+      "pdf_sha256": "a9678c199ce8ff1f05d55cbf23533ae74b94d959eee3cbbcdb7ac2897ec4c493",
+      "png_sha256": "7e337478907f2beafedf728b2e413df03f1b7b68ab2a84950b74b87739f427d3",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/definitions/selection_chemistry.pdf",
+      "png": "figures/science_validation_20261118/definitions/selection_chemistry.png",
+      "width": 2130,
+      "height": 945,
+      "dpi": 299.9994,
+      "pdf_sha256": "382d4c5ab55644489ef582827a8246f7e655100779d490396c0d653e907ccf4f",
+      "png_sha256": "b831e924aaa2b5f53cfae6d78eec07df3473fedaafd9ed20d43eb5f0cd40e717",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/figures/native_training_reference_cmd.pdf",
+      "png": "figures/science_validation_20261118/figures/native_training_reference_cmd.png",
+      "width": 2130,
+      "height": 1440,
+      "dpi": 299.9994,
+      "pdf_sha256": "df70a224567860ac17f66d45381e25dd76a9300f3fa5a442ecf00aa27f042c30",
+      "png_sha256": "86b49445e2d96cfefdde30ca6c0e62b1867eb1b60be2d0d03ec3dc5ce6521007",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/figures/training_and_branch_pdfs.pdf",
+      "png": "figures/science_validation_20261118/figures/training_and_branch_pdfs.png",
+      "width": 2130,
+      "height": 1590,
+      "dpi": 299.9994,
+      "pdf_sha256": "458457dab58f02d72fe14b50f04e2eb960e39c346fa2587ba526a0d254b57cc0",
+      "png_sha256": "c7ca4545283b1615792e87858fb6513ec531db6a945d6198d0e64dbbaa0f15f3",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/filter/filter_selection_recovery.pdf",
+      "png": "figures/science_validation_20261118/filter/filter_selection_recovery.png",
+      "width": 2145,
+      "height": 855,
+      "dpi": 299.9994,
+      "pdf_sha256": "422b5bbf39ee52d2a2135ae8114776f0ae6ea6517651dc4f8e7c568bef93048f",
+      "png_sha256": "a6c0bca3b3c138625e497674701c658fba4e418c0deee82a6b6775546cfabcce",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/noise/fixed_population_noise.pdf",
+      "png": "figures/science_validation_20261118/noise/fixed_population_noise.png",
+      "width": 2130,
+      "height": 915,
+      "dpi": 299.9994,
+      "pdf_sha256": "8d45269b63601a58bdb397ecb448a738999661d763fb851309168156f09f16fe",
+      "png_sha256": "752ce454bde43282b02a014faf18b322ae8051b6e1fdc86b821d3a70aecd81c3",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/populations/matched_metallicity.pdf",
+      "png": "figures/science_validation_20261118/populations/matched_metallicity.png",
+      "width": 2130,
+      "height": 945,
+      "dpi": 299.9994,
+      "pdf_sha256": "8afdba33b89c38db8ec9168ce8a2b4647b88d862f60b1ccbad54a6aee21e0421",
+      "png_sha256": "44013e5e8acdc10056cb7fff76826e9ac8841e3d6ae7e6a82703597ddf0291de",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/populations_clean/matched_metallicity.pdf",
+      "png": "figures/science_validation_20261118/populations_clean/matched_metallicity.png",
+      "width": 2130,
+      "height": 945,
+      "dpi": 299.9994,
+      "pdf_sha256": "9e8694bbf7e700a8b59de401b1c2003dce5146b6e5b4452c24b6ac14044b4070",
+      "png_sha256": "1d42c2e6129dbc53f9991034952d6b64a4effc0875583b64ed814f6fbcc2e912",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/predictive/measurement_space_calibration.pdf",
+      "png": "figures/science_validation_20261118/predictive/measurement_space_calibration.png",
+      "width": 2145,
+      "height": 855,
+      "dpi": 299.9994,
+      "pdf_sha256": "a240bdf6a953e14bb98a39715339edc0cd461e1b59f089541720698ef5c8c002",
+      "png_sha256": "f9227b2bfb412aec51c52a5ae62b9bbb81e62d4ce7be4c58154a0b252d6f11d2",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    },
+    {
+      "pdf": "figures/science_validation_20261118/systems/known_system_sequences.pdf",
+      "png": "figures/science_validation_20261118/systems/known_system_sequences.png",
+      "width": 2130,
+      "height": 945,
+      "dpi": 299.9994,
+      "pdf_sha256": "92a7be0d19ff1441522c94981c6277fd79508e740dc2b5ee1a4f7548274cb46c",
+      "png_sha256": "603e748358b52f696f2649efaa7773dbdc27f541f6b1a1b031799074ec501662",
+      "visual_review": "reviewed at 7.1 in; labels need two-column width"
+    }
+  ],
+  "preview_sha256": "f248495265f43e03b1496500d000bbd5a264fee7fee890e336a60c0ec66079c0",
+  "retained_limits": [
+    "failed empirical matched-filter gate",
+    "sparse faint direct references and historical 18\u201320 mag observation-space PDFs",
+    "shared reference calibration scales",
+    "unlinked historical classifier roles"
+  ]
+}

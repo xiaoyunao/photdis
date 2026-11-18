@@ -1,0 +1,7 @@
+native,r_lo,r_hi,donor_rows,bright_rows,median_sigma_g,median_sigma_r,median_sigma_z,baseline_bias,perturbation
+south,20,21,6377925,256,0.008134024,0.005450194,0.009140994,0.0024516582,"quadrature incremental native magnitude noise, shared g/r used coherently"
+south,21,22,1794006,256,0.012330998,0.0070308084,0.014059164,0.0024516582,"quadrature incremental native magnitude noise, shared g/r used coherently"
+south,22,23,19599,256,0.074304014,0.018287227,0.0033037327,0.0024516582,"quadrature incremental native magnitude noise, shared g/r used coherently"
+north,20,21,2725900,256,0.01666406,0.014150379,0.012285186,-0.037691206,"quadrature incremental native magnitude noise, shared g/r used coherently"
+north,21,22,913382,256,0.025255814,0.02225619,0.020417178,-0.037691206,"quadrature incremental native magnitude noise, shared g/r used coherently"
+north,22,23,9283,256,0.15660399,0.054090172,0.005097827,-0.037691206,"quadrature incremental native magnitude noise, shared g/r used coherently"

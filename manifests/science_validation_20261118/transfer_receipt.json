@@ -1,0 +1,516 @@
+{
+  "files": [
+    {
+      "path": "manifests/science_validation_20261118/definitions/complete.json",
+      "sha256": "c87ef1f08da3248d50090344722e25f4530e37ee81647738ace99cac7bf7989a",
+      "remote_path": "data/science_validation_20261118/definitions/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/gaia_reference_uncertainty.csv",
+      "sha256": "d35e1eac16e7cdfcb354946701ff494a5e2d5ac3bed9eb5201afd9342d3a71bc",
+      "remote_path": "data/science_validation_20261118/definitions/gaia_reference_uncertainty.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/nonstellar_distance_tails.csv",
+      "sha256": "6197a48e585b7b6d4a95558c592d680ebdecdc51e6853f74607781eff4a2c40a",
+      "remote_path": "data/science_validation_20261118/definitions/nonstellar_distance_tails.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/selection_block_intervals.csv",
+      "sha256": "2a6c1980967f15089e2a2ed74457c1b430704df439319d54342995fec7080693",
+      "remote_path": "data/science_validation_20261118/definitions/selection_block_intervals.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/selection_chemistry.csv",
+      "sha256": "2a6c1980967f15089e2a2ed74457c1b430704df439319d54342995fec7080693",
+      "remote_path": "data/science_validation_20261118/definitions/selection_chemistry.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/definitions/selection_chemistry.pdf",
+      "sha256": "382d4c5ab55644489ef582827a8246f7e655100779d490396c0d653e907ccf4f",
+      "remote_path": "data/science_validation_20261118/definitions/selection_chemistry.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/definitions/selection_chemistry.png",
+      "sha256": "b831e924aaa2b5f53cfae6d78eec07df3473fedaafd9ed20d43eb5f0cd40e717",
+      "remote_path": "data/science_validation_20261118/definitions/selection_chemistry.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/selection_physical_trends.csv",
+      "sha256": "6f8edcab4b312e52f177fc327784aa3685341fafde7410b9ce3617debd87b776",
+      "remote_path": "data/science_validation_20261118/definitions/selection_physical_trends.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/uncertainty_field_usage.csv",
+      "sha256": "b4a1c6af03857a33606950deecba1e8367a7b2e8c46ef42c26f002c7c325a7e0",
+      "remote_path": "data/science_validation_20261118/definitions/uncertainty_field_usage.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/definitions/working_selection.csv",
+      "sha256": "1b8246c5575d865ac6ee10795a136bbb6b1b4c7ce5d2135960fc2abd96ad390e",
+      "remote_path": "data/science_validation_20261118/definitions/working_selection.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/observable/M5_control_reachability.csv",
+      "sha256": "0764bfc20266afa64f448dca50c13c369902b27e23fbaec7cdc7b7ba0ddc500b",
+      "remote_path": "data/science_validation_20261118/observable/M5_control_reachability.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/observable/complete.json",
+      "sha256": "b6ce7cbc2a3843836f23daa9008a33a5bf0ccc4a4f5bf7863a2e8fd4c555a4a9",
+      "remote_path": "data/science_validation_20261118/observable/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/observable/random_coverage.csv",
+      "sha256": "e3244a1ff7b3e6591c27b751067e55d749aa45cec2ccb92da60e9708ced4c3c7",
+      "remote_path": "data/science_validation_20261118/observable/random_coverage.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/observable/selection.npz",
+      "sha256": "d1a4d1805124e3919d2f6001ee2aa55a48df6c398a7ae305094ba5748c910602",
+      "remote_path": "data/science_validation_20261118/observable/selection.npz"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/complete.json",
+      "sha256": "5cebed74d1b8140ea4eb83972fa688358fdb3156c2c3a54ee407fc745b7b3d22",
+      "remote_path": "data/science_validation_20261118/filter/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/distance_scans.csv",
+      "sha256": "258086d706e6e4cdcb4566a898ac90d1c0e13057914ef3605346bf8cadf22451",
+      "remote_path": "data/science_validation_20261118/filter/distance_scans.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/effective_areas.csv",
+      "sha256": "7efc491b5e0ca74aa968bc5639b7813f64d01051230d71a23d4345692c302e4f",
+      "remote_path": "data/science_validation_20261118/filter/effective_areas.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/empirical_injections.csv",
+      "sha256": "1bed7d8369f47e8dc6d1ae95a42cc179d80fde7ba281d37cbe906bf9b55e194e",
+      "remote_path": "data/science_validation_20261118/filter/empirical_injections.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/filter_selection_recovery.csv",
+      "sha256": "e066c384188a6dacbb7466920556a9d2648a87135ce0caf01309cc18abc8a712",
+      "remote_path": "data/science_validation_20261118/filter/filter_selection_recovery.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/filter/filter_selection_recovery.pdf",
+      "sha256": "422b5bbf39ee52d2a2135ae8114776f0ae6ea6517651dc4f8e7c568bef93048f",
+      "remote_path": "data/science_validation_20261118/filter/filter_selection_recovery.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/filter/filter_selection_recovery.png",
+      "sha256": "a6c0bca3b3c138625e497674701c658fba4e418c0deee82a6b6775546cfabcce",
+      "remote_path": "data/science_validation_20261118/filter/filter_selection_recovery.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/injection_summary.csv",
+      "sha256": "e066c384188a6dacbb7466920556a9d2648a87135ce0caf01309cc18abc8a712",
+      "remote_path": "data/science_validation_20261118/filter/injection_summary.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/filter/template_self_recovery.csv",
+      "sha256": "c1e67f514712abe3a1510d7133559266409abbfbe3869b0de9bddfd81f6533c1",
+      "remote_path": "data/science_validation_20261118/filter/template_self_recovery.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/complete.json",
+      "sha256": "0fd6ecd32be29357ab96d53b2e881d9baaaf238beb4d8266c933f4fba7c8b2f4",
+      "remote_path": "data/science_validation_20261118/provenance/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/historical_qsky_roles.csv",
+      "sha256": "c473e75edb3f0c347d9b3f725b4e11e7a68b373432c349cc454ab9e52da9bc96",
+      "remote_path": "data/science_validation_20261118/provenance/historical_qsky_roles.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/known_system_training_regions.csv",
+      "sha256": "e28771ef4b87e305b2fed121d3e1dfd64e0f7dbe16a63d9273ca3745e21b4f36",
+      "remote_path": "data/science_validation_20261118/provenance/known_system_training_regions.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/north_calibration_unlinked.csv",
+      "sha256": "5b2058a353f10b6caf36b01dcb7b1eaac727b0fb988f7b068017ea55a7c366bf",
+      "remote_path": "data/science_validation_20261118/provenance/north_calibration_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/north_held_out_unlinked.csv",
+      "sha256": "85eb287aaffc5b538e7cffb0418fec17f95f1071600ea182aa642f7379e80fa8",
+      "remote_path": "data/science_validation_20261118/provenance/north_held_out_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/north_training_unlinked.csv",
+      "sha256": "1b253a529c587088071b062023476c122ca8106d1f503884b93001622e7260ac",
+      "remote_path": "data/science_validation_20261118/provenance/north_training_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/overlap_matrix.csv",
+      "sha256": "38833a6fd6727ca5ae9eb3fb1b8b45b3df227c7985bd85d753ad97761792271a",
+      "remote_path": "data/science_validation_20261118/provenance/overlap_matrix.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/role_sky_cells.csv",
+      "sha256": "c83bf2fecbb3d352e5ac5e4bc49f0c8cd539008581a67f3730413b219a058a59",
+      "remote_path": "data/science_validation_20261118/provenance/role_sky_cells.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/south_calibration_unlinked.csv",
+      "sha256": "49712d417f2c0972fd2bd712a04be12d33236b4d3689ee1d533a693a0d9d4ce6",
+      "remote_path": "data/science_validation_20261118/provenance/south_calibration_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/south_held_out_unlinked.csv",
+      "sha256": "1cd1e7ae9d9fbc8292899e42a38e5e8096bf4b878ecca4fb035c12e326c92577",
+      "remote_path": "data/science_validation_20261118/provenance/south_held_out_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/provenance/south_training_unlinked.csv",
+      "sha256": "e29f678cfcfa565138dcbdb6e6d20cfe55c0d307dfe5621437a4741412992e0a",
+      "remote_path": "data/science_validation_20261118/provenance/south_training_unlinked.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/cohorts/complete.json",
+      "sha256": "a9e41e35c631747052cb4da277e8ce01a406c4cadaa6f06ad8f1ffd3c7a23af2",
+      "remote_path": "data/science_validation_20261118/cohorts/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/cohorts/expanded_parent_differences.csv",
+      "sha256": "ea19c45a2cdd0bca920d64f4c0e5bbbfb13c455006fe07f250a7270f021e8dca",
+      "remote_path": "data/science_validation_20261118/cohorts/expanded_parent_differences.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/complete.json",
+      "sha256": "e882890f1b8d27914d15a32524c9ab07bf4aa629165143d4a9927c1b2be23d7b",
+      "remote_path": "data/science_validation_20261118/benchmark/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/mask_replay.csv",
+      "sha256": "09dab2d0ab06f69d062582a88b826af2e813e19d147ec67c605fdd25f64f809f",
+      "remote_path": "data/science_validation_20261118/benchmark/mask_replay.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/same_training_baseline.csv",
+      "sha256": "ba61a595bf8c2a38c2918841aa8aa2e5c054ef7c9489814a2f09b26289809acb",
+      "remote_path": "data/science_validation_20261118/benchmark/same_training_baseline.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/benchmark/same_training_baseline.pdf",
+      "sha256": "a9678c199ce8ff1f05d55cbf23533ae74b94d959eee3cbbcdb7ac2897ec4c493",
+      "remote_path": "data/science_validation_20261118/benchmark/same_training_baseline.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/benchmark/same_training_baseline.png",
+      "sha256": "7e337478907f2beafedf728b2e413df03f1b7b68ab2a84950b74b87739f427d3",
+      "remote_path": "data/science_validation_20261118/benchmark/same_training_baseline.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/spdist_metrics.csv",
+      "sha256": "609be2529c86329784d0c2f703a8073978ebef1a0256a5d463f6c7aeb128b2de",
+      "remote_path": "data/science_validation_20261118/benchmark/spdist_metrics.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/spdist_paired_ci.csv",
+      "sha256": "6aaed0a8101d07864bcd9e818ccc4bc47ca8b240f46df931e83eca45e51bb114",
+      "remote_path": "data/science_validation_20261118/benchmark/spdist_paired_ci.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/specdis_metrics.csv",
+      "sha256": "1b007bcb776a47aa950b025c80e3ac0b67540741504f730c575d1bee7f2736f7",
+      "remote_path": "data/science_validation_20261118/benchmark/specdis_metrics.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/benchmark/specdis_paired_ci.csv",
+      "sha256": "356d55cf3fa8f96f151b9500495707cecf5dc5b97525377e5e7509913ec711bd",
+      "remote_path": "data/science_validation_20261118/benchmark/specdis_paired_ci.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/baseline_integration.csv",
+      "sha256": "5f0a1a97200900913333f9ee2d2a476c3168c51fbefb58e98de991d73e007b42",
+      "remote_path": "data/science_validation_20261118/numerics/baseline_integration.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/complete.json",
+      "sha256": "e621950e6ad192017e5909a32b11f0ee758e11db03957e0654d32320eec81384",
+      "remote_path": "data/science_validation_20261118/numerics/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/spdist_metrics.csv",
+      "sha256": "28b1c3946d3f618e7132e28465b5935a02eb6ea1fcc83cbd705f9ffbaf23493c",
+      "remote_path": "data/science_validation_20261118/numerics/spdist_metrics.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/spdist_paired_ci.csv",
+      "sha256": "f4ba1cf7f3a094ce994477a9da278a0ba2ab65ec319dc0f797467fb9cfc1de32",
+      "remote_path": "data/science_validation_20261118/numerics/spdist_paired_ci.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/specdis_metrics.csv",
+      "sha256": "9cab136285e9a87ed4b63907c67f251ec860dff4eb7de2878c4a880e042ddd53",
+      "remote_path": "data/science_validation_20261118/numerics/specdis_metrics.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/numerics/specdis_paired_ci.csv",
+      "sha256": "577294d9b58e3f70bd6f8d6c23e9afa5fd495bbfdc8a263eb6518eccaa1f80f4",
+      "remote_path": "data/science_validation_20261118/numerics/specdis_paired_ci.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations/complete.json",
+      "sha256": "95b9e3660dd53b3e159156c926411cf777a0b2ca2cd7cb070e0d4435e8ee8ec1",
+      "remote_path": "data/science_validation_20261118/populations/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations/matched_metallicity.csv",
+      "sha256": "5113f83da3704a0b2c90cafe82a6eea5c43801ed08c8a06d1ef39cc4073b27b8",
+      "remote_path": "data/science_validation_20261118/populations/matched_metallicity.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/populations/matched_metallicity.pdf",
+      "sha256": "8afdba33b89c38db8ec9168ce8a2b4647b88d862f60b1ccbad54a6aee21e0421",
+      "remote_path": "data/science_validation_20261118/populations/matched_metallicity.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/populations/matched_metallicity.png",
+      "sha256": "44013e5e8acdc10056cb7fff76826e9ac8841e3d6ae7e6a82703597ddf0291de",
+      "remote_path": "data/science_validation_20261118/populations/matched_metallicity.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations/observable_balance.csv",
+      "sha256": "5d55cae6a5ca40d034ed1be38a02acc6da56ae54902ec3429a40612f4baff028",
+      "remote_path": "data/science_validation_20261118/populations/observable_balance.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations/sky_rematch_draws.csv",
+      "sha256": "e993976d94db3aea5821fc3da527d5cbc5681517dac2cc290d67f39580d3c3c0",
+      "remote_path": "data/science_validation_20261118/populations/sky_rematch_draws.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations_clean/complete.json",
+      "sha256": "9e145ca0bc6852588755df97c106ef9abeafe8d8087e64ffd1976456b020fabb",
+      "remote_path": "data/science_validation_20261118/populations_clean/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations_clean/matched_metallicity.csv",
+      "sha256": "39852e4a336e72f340313d979191355311f62439e5ccf704a5a5a63a5b29cf78",
+      "remote_path": "data/science_validation_20261118/populations_clean/matched_metallicity.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/populations_clean/matched_metallicity.pdf",
+      "sha256": "9e8694bbf7e700a8b59de401b1c2003dce5146b6e5b4452c24b6ac14044b4070",
+      "remote_path": "data/science_validation_20261118/populations_clean/matched_metallicity.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/populations_clean/matched_metallicity.png",
+      "sha256": "1d42c2e6129dbc53f9991034952d6b64a4effc0875583b64ed814f6fbcc2e912",
+      "remote_path": "data/science_validation_20261118/populations_clean/matched_metallicity.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations_clean/observable_balance.csv",
+      "sha256": "859a6e79275114d6e69a5828069f3ba39de1d0dd8275470bcbf58dfd9126eefb",
+      "remote_path": "data/science_validation_20261118/populations_clean/observable_balance.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/populations_clean/sky_rematch_draws.csv",
+      "sha256": "7c4df3d4cec9a2e1a064946f9bc85c8680cb29fe97a342772a959a83d29a47d5",
+      "remote_path": "data/science_validation_20261118/populations_clean/sky_rematch_draws.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/M68_frozen_transfer.csv",
+      "sha256": "8bace61a8c02847f56658daf1ab8e86750b442050a03f18401b8288a6698e0f5",
+      "remote_path": "data/science_validation_20261118/systems/M68_frozen_transfer.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/complete.json",
+      "sha256": "d6cf4e8b45da1edaab98588bb910b9d79a1074be5888c53cb02dc7e46bcae2ce",
+      "remote_path": "data/science_validation_20261118/systems/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/final_model_seam.csv",
+      "sha256": "be57a0d6b0e256845ae75d40ac951ffe443350aba92eabe931b975cc853231ad",
+      "remote_path": "data/science_validation_20261118/systems/final_model_seam.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/known_scale_members.csv",
+      "sha256": "a6e348a6d57e8ea6c77aaa8dd1f4dac82be895bd3f07ebbc2df3c689f65d7fdd",
+      "remote_path": "data/science_validation_20261118/systems/known_scale_members.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/known_system_sequences.csv",
+      "sha256": "a6e348a6d57e8ea6c77aaa8dd1f4dac82be895bd3f07ebbc2df3c689f65d7fdd",
+      "remote_path": "data/science_validation_20261118/systems/known_system_sequences.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/systems/known_system_sequences.pdf",
+      "sha256": "92a7be0d19ff1441522c94981c6277fd79508e740dc2b5ee1a4f7548274cb46c",
+      "remote_path": "data/science_validation_20261118/systems/known_system_sequences.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/systems/known_system_sequences.png",
+      "sha256": "603e748358b52f696f2649efaa7773dbdc27f541f6b1a1b031799074ec501662",
+      "remote_path": "data/science_validation_20261118/systems/known_system_sequences.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/sequence_display_counts.csv",
+      "sha256": "846a774ae093ad77c8dc049455ca9251c90db1fc10a1a3e2d63363f2385915f2",
+      "remote_path": "data/science_validation_20261118/systems/sequence_display_counts.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/systems/track_version_audit.csv",
+      "sha256": "ff1c0df767f396323ef6f5ef79eb65abee78c65bb99f1b6e8185434e2f55c1ef",
+      "remote_path": "data/science_validation_20261118/systems/track_version_audit.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/noise/complete.json",
+      "sha256": "142a2078490d0bc4c2dad0740e09d9dd7017786b760cdb090e694167ec11edad",
+      "remote_path": "data/science_validation_20261118/noise/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/noise/error_donors.csv",
+      "sha256": "be1a20273e054cee53dc8631616a893e8b0a63f7f64da6738b4a7b95580631e1",
+      "remote_path": "data/science_validation_20261118/noise/error_donors.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/noise/fixed_population_noise.csv",
+      "sha256": "2979dcca94314835b816925f2bc7c122989d8116be8e38c1384bf5ba32b19e27",
+      "remote_path": "data/science_validation_20261118/noise/fixed_population_noise.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/noise/fixed_population_noise.pdf",
+      "sha256": "8d45269b63601a58bdb397ecb448a738999661d763fb851309168156f09f16fe",
+      "remote_path": "data/science_validation_20261118/noise/fixed_population_noise.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/noise/fixed_population_noise.png",
+      "sha256": "752ce454bde43282b02a014faf18b322ae8051b6e1fdc86b821d3a70aecd81c3",
+      "remote_path": "data/science_validation_20261118/noise/fixed_population_noise.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/noise/noise_realizations.csv",
+      "sha256": "d6f7e991c55942a96939be4de335aad8f57a72176fe6da453faa825d6c178066",
+      "remote_path": "data/science_validation_20261118/noise/noise_realizations.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/noise/noise_summary.csv",
+      "sha256": "2979dcca94314835b816925f2bc7c122989d8116be8e38c1384bf5ba32b19e27",
+      "remote_path": "data/science_validation_20261118/noise/noise_summary.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/complete.json",
+      "sha256": "5a4f63c2f2dbc6ed1649e9bd982133a18fabc4ace6f9d2ba7a387dfeb0ce6f67",
+      "remote_path": "data/science_validation_20261118/predictive/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/measurement_space_calibration.csv",
+      "sha256": "9ffc711ef3cd6ebc9c14f2697a1b8bdf55a045b18a9145800435839975afb3db",
+      "remote_path": "data/science_validation_20261118/predictive/measurement_space_calibration.csv"
+    },
+    {
+      "path": "figures/science_validation_20261118/predictive/measurement_space_calibration.pdf",
+      "sha256": "a240bdf6a953e14bb98a39715339edc0cd461e1b59f089541720698ef5c8c002",
+      "remote_path": "data/science_validation_20261118/predictive/measurement_space_calibration.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/predictive/measurement_space_calibration.png",
+      "sha256": "f9227b2bfb412aec51c52a5ae62b9bbb81e62d4ce7be4c58154a0b252d6f11d2",
+      "remote_path": "data/science_validation_20261118/predictive/measurement_space_calibration.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/observation_space_metrics.csv",
+      "sha256": "9ffc711ef3cd6ebc9c14f2697a1b8bdf55a045b18a9145800435839975afb3db",
+      "remote_path": "data/science_validation_20261118/predictive/observation_space_metrics.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/observation_space_pit.csv",
+      "sha256": "ba5b8bf2a86f204c0041efcabde4d152f1ffa147d3a82e31883a059203df51b1",
+      "remote_path": "data/science_validation_20261118/predictive/observation_space_pit.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/sampling.csv",
+      "sha256": "8c1ff6491bcdd965ced41f1a4f2566cf899b1f4d438abfba3d26867dfbaaecbb",
+      "remote_path": "data/science_validation_20261118/predictive/sampling.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/scale_branch_power.csv",
+      "sha256": "6a5ac21bca350fb5b1932bd856411001261a4ea1743b6abeba65cf22e117531a",
+      "remote_path": "data/science_validation_20261118/predictive/scale_branch_power.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/predictive/shared_error_sensitivity.csv",
+      "sha256": "a376971569ddab96f0c20ad73eb5169bb444538391667eac4637c34bc2560130",
+      "remote_path": "data/science_validation_20261118/predictive/shared_error_sensitivity.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/oracle/class_oracle.csv",
+      "sha256": "6afdf558be8315219262b6d538e1a04010b61f6cb20f91f3728cfe5f390a9024",
+      "remote_path": "data/science_validation_20261118/oracle/class_oracle.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/oracle/complete.json",
+      "sha256": "12cf1503d4ac0f6b9f2fd4af3314d21b4b279f985a57511e13429bd37a915dc0",
+      "remote_path": "data/science_validation_20261118/oracle/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/complete.json",
+      "sha256": "dd78ead0f51faac45e68b78d382d2f51b4a536b6a4dc84faa2499f6be0e68b88",
+      "remote_path": "data/science_validation_20261118/figures/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/native_training_reference_cmd.csv",
+      "sha256": "c07bbf5e228f3ed82844cfc89b8d593d2684bc2226a36b97b7f17a2e2901bace",
+      "remote_path": "data/science_validation_20261118/figures/native_training_reference_cmd.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/native_training_reference_cmd.npz",
+      "sha256": "5b42188b67d546d08997685a88151f569c109f22e7e698a7a7216534a4597be3",
+      "remote_path": "data/science_validation_20261118/figures/native_training_reference_cmd.npz"
+    },
+    {
+      "path": "figures/science_validation_20261118/figures/native_training_reference_cmd.pdf",
+      "sha256": "df70a224567860ac17f66d45381e25dd76a9300f3fa5a442ecf00aa27f042c30",
+      "remote_path": "data/science_validation_20261118/figures/native_training_reference_cmd.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/figures/native_training_reference_cmd.png",
+      "sha256": "86b49445e2d96cfefdde30ca6c0e62b1867eb1b60be2d0d03ec3dc5ce6521007",
+      "remote_path": "data/science_validation_20261118/figures/native_training_reference_cmd.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/representative_curves.csv",
+      "sha256": "7dbed7f4ad23f457f37233290fe56bba666a87325a04ed5b341793f3267dde84",
+      "remote_path": "data/science_validation_20261118/figures/representative_curves.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/training_and_branch_pdfs.csv",
+      "sha256": "2cb899116f266a07a6ba942e57504f0289ba72112c6b4bb03de08d2b299ab0ff",
+      "remote_path": "data/science_validation_20261118/figures/training_and_branch_pdfs.csv"
+    },
+    {
+      "path": "manifests/science_validation_20261118/figures/training_and_branch_pdfs.npz",
+      "sha256": "19d0cc55a3c8607311ffac502025361e5a5ca4a396934c25d71895e59fa6b5eb",
+      "remote_path": "data/science_validation_20261118/figures/training_and_branch_pdfs.npz"
+    },
+    {
+      "path": "figures/science_validation_20261118/figures/training_and_branch_pdfs.pdf",
+      "sha256": "458457dab58f02d72fe14b50f04e2eb960e39c346fa2587ba526a0d254b57cc0",
+      "remote_path": "data/science_validation_20261118/figures/training_and_branch_pdfs.pdf"
+    },
+    {
+      "path": "figures/science_validation_20261118/figures/training_and_branch_pdfs.png",
+      "sha256": "c7ca4545283b1615792e87858fb6513ec531db6a945d6198d0e64dbbaa0f15f3",
+      "remote_path": "data/science_validation_20261118/figures/training_and_branch_pdfs.png"
+    },
+    {
+      "path": "manifests/science_validation_20261118/delivery/complete.json",
+      "sha256": "517407ff9254f4992a48b495cdada45f72b2152e9834a23d283077ea6dcb3cfe",
+      "remote_path": "data/science_validation_20261118/delivery/complete.json"
+    },
+    {
+      "path": "manifests/science_validation_20261118/style_regression/complete.json",
+      "sha256": "007cf1f5543e7ff680864c6182091ef1cedbb8df67e7bc927fd606f8a2b4b92d",
+      "remote_path": "data/science_validation_20261118/style_regression/complete.json"
+    }
+  ],
+  "source_release": "87069408",
+  "remote_delivery_job": "61516883"
+}

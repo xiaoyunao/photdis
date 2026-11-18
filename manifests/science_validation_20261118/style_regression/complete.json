@@ -1,0 +1,43 @@
+{
+  "job": "61516786",
+  "inputs": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "config": "dcd0a090f9431f705eea7434279c16d4a041230629fda21bb474463a0ef04ecf",
+  "code_hashes": {
+    "sv18_closeout.py": "1ace35ad99df0fad883292e69f47296a89802936f2393fd376ebe526b901b880",
+    "sv18_parallel.py": "97afbb47d953928c61514079741f28c9e01e7e21a6a01a1e1cfa98176da28cfa",
+    "sv18_definitions.py": "41e19bf50a6f2712b78d0986182fed319a2e53a3765844cac8c167c1e0d8c6ad",
+    "sv18_numerics.py": "ec20c8ff9beb2db7090fbc14475a8fbf3d69a369272c82382ada05e08450a8cb",
+    "sv18_finalize.py": "dbe3e0e51b60a42446319647a8c1c373ea6e8a101236e1a94fe4c52d47a97c13",
+    "sv18_filter_complete.py": "275e63bcd34ee4f782744b0524fd850c05503f2b5a363dbe6b010c4afe9266db",
+    "sv18_common.py": "bbf5cce1cc12273eee91905ceeb95516e1ce170b61f6b98d3792458fa23f5306",
+    "sv18_predictive.py": "57bb348374f69f70ebfa3aa02ab78fb5e5446bfd5c932a4535d35cdbbf979921",
+    "sv18_noise.py": "a7a812add1a9f5661c327cb24365b52c7763033b6cbd054250115db08c9cbe98",
+    "sv18_verify.py": "717647ff170895da8ecdf9a859c4a8cc4ae8db94fa956ed0a69403418169c075",
+    "sv18_cohorts.py": "c8a48c0e85bd98c34a87a6722278289d45cb9cde19c338d2c4a9e7e756ba64a3",
+    "sv18_observable.py": "a2843fbb24dfbb9681c83051ae50f59e0ac2ce6373b4497e1beb3e200ff1ffeb",
+    "sv18_figures.py": "6a04e580c0e97985339483b8a07c4ae3eb4d2787ca17c6508c175f566021a09f",
+    "sv18_filter.py": "b9cb8c797370c54f8f3ec3d1ed995789863c04ceb19c71f0be7208255f8123b0",
+    "sv18_style.py": "dc23c04537d9a1a1dec46565ec72876eb3d75507f2ddc2e9709b3983aa8abbce",
+    "sv18_benchmark.py": "045078b1a1d465d2442d99709e9b736b3d6cc1b23d8d5bedb070f7f79202bcd3",
+    "sv18_systems.py": "d8466324f9e87fd5aad9fda0b6cb4e5efd1514ba5ba8a8bd1959a088b6344ca8",
+    "sv18_oracle.py": "3f643d27256d618091adf14d92aef1996964082a15b634a1c65a86ea7c4f6bf1",
+    "sv18_populations.py": "db8f3b70795204df3371ea6b3b5d64e508ef213caa9d54b3074a535c034da878",
+    "sv18_provenance.py": "bd31a4c6ed564f3a7bd78d75bbb13c397fe345afefee83d85b4bad5215d86648",
+    "paper_v2_reference.py": "adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "pixel_comparison": "both original v3.8 PNGs match exactly",
+  "outputs": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23",
+    "F03_same_star_cmd.pdf": "6c65ea3d7b49ff059c9f2f4c3f0be3f8060d72a144b68106306c80045f75af70",
+    "F03_same_star_cmd.csv": "c50f1d273f9264ced812c2a98d4855ca55da6c4cf10a083144e7af504d388c21",
+    "F02_direct_distances.csv": "71deef559ec6b1095c3e7e2127d6926f11475c2f729da8b04c22cb4f209ae706",
+    "F02_direct_distances.pdf": "53adffb79fa08dd848e937229132ef8bb404eccd69f5228945ee618b343a7873",
+    "F03_same_star_cmd.npz": "be44552cd97c74685c220e76bf3556c91e629a23ea8ca3137ed84deeb9472cd2",
+    "F02_direct_distances.npz": "77f2667314398531c3a4cb4b05032e45e4fa768aca3b1870cb93251c2206e64f"
+  }
+}

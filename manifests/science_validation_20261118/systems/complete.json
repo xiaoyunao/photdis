@@ -1,0 +1,51 @@
+{
+  "job": "61516883",
+  "inputs": {
+    "data/v3_14/audit/M30/complete.json": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+    "data/v3_14/audit/M5/complete.json": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "M68_structure": "39f691ff32f41eb54fce213519d5c35a05926b9031092653719ed5fc6ef88238",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "data/v3_14/audit/M13/complete.json": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/v3_18/members/complete.json": "09b9644054ccbb2454db8d3fc3de1bec21508f5d0a0ace9451f69eb83afd3457",
+    "data/v3_10/seam/north.json": "e0294dc1cd6e080e75a8f91e9414951c8e62d2cff76f5cbb6e1570d41d9e7b66",
+    "data/v3_10/seam/south.json": "5ae3910d21f2f9206d569575b3470ca7b6011f34293e7adb5bf814cd385341fc"
+  },
+  "config": "dcd0a090f9431f705eea7434279c16d4a041230629fda21bb474463a0ef04ecf",
+  "code_hashes": {
+    "sv18_closeout.py": "1ace35ad99df0fad883292e69f47296a89802936f2393fd376ebe526b901b880",
+    "sv18_parallel.py": "97afbb47d953928c61514079741f28c9e01e7e21a6a01a1e1cfa98176da28cfa",
+    "sv18_definitions.py": "41e19bf50a6f2712b78d0986182fed319a2e53a3765844cac8c167c1e0d8c6ad",
+    "sv18_numerics.py": "ec20c8ff9beb2db7090fbc14475a8fbf3d69a369272c82382ada05e08450a8cb",
+    "sv18_finalize.py": "dbe3e0e51b60a42446319647a8c1c373ea6e8a101236e1a94fe4c52d47a97c13",
+    "sv18_filter_complete.py": "275e63bcd34ee4f782744b0524fd850c05503f2b5a363dbe6b010c4afe9266db",
+    "sv18_common.py": "bbf5cce1cc12273eee91905ceeb95516e1ce170b61f6b98d3792458fa23f5306",
+    "sv18_predictive.py": "57bb348374f69f70ebfa3aa02ab78fb5e5446bfd5c932a4535d35cdbbf979921",
+    "sv18_noise.py": "a7a812add1a9f5661c327cb24365b52c7763033b6cbd054250115db08c9cbe98",
+    "sv18_verify.py": "717647ff170895da8ecdf9a859c4a8cc4ae8db94fa956ed0a69403418169c075",
+    "sv18_cohorts.py": "c8a48c0e85bd98c34a87a6722278289d45cb9cde19c338d2c4a9e7e756ba64a3",
+    "sv18_observable.py": "a2843fbb24dfbb9681c83051ae50f59e0ac2ce6373b4497e1beb3e200ff1ffeb",
+    "sv18_figures.py": "6a04e580c0e97985339483b8a07c4ae3eb4d2787ca17c6508c175f566021a09f",
+    "sv18_filter.py": "b9cb8c797370c54f8f3ec3d1ed995789863c04ceb19c71f0be7208255f8123b0",
+    "sv18_style.py": "dc23c04537d9a1a1dec46565ec72876eb3d75507f2ddc2e9709b3983aa8abbce",
+    "sv18_benchmark.py": "045078b1a1d465d2442d99709e9b736b3d6cc1b23d8d5bedb070f7f79202bcd3",
+    "sv18_systems.py": "7aa1e5a549e502b939be76d550f0b3d95b32b62cdfaf3fe1b50c265cb0e58555",
+    "sv18_oracle.py": "3f643d27256d618091adf14d92aef1996964082a15b634a1c65a86ea7c4f6bf1",
+    "sv18_populations.py": "db8f3b70795204df3371ea6b3b5d64e508ef213caa9d54b3074a535c034da878",
+    "sv18_provenance.py": "bd31a4c6ed564f3a7bd78d75bbb13c397fe345afefee83d85b4bad5215d86648",
+    "paper_v2_reference.py": "adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "member_intervals": "stellar bootstrap conditional on fixed external shared system scale",
+  "seam_scope": "native final production PDFs, unconditioned on independent reference, training overlap remains explicit",
+  "outputs": {
+    "cluster_sequence_residuals.csv": "7f63f143ae960c3d5b116689668f99e5e413a14a940fc17ef8ce205ce2e6379c",
+    "final_model_seam.csv": "be57a0d6b0e256845ae75d40ac951ffe443350aba92eabe931b975cc853231ad",
+    "known_system_sequences.csv": "a6e348a6d57e8ea6c77aaa8dd1f4dac82be895bd3f07ebbc2df3c689f65d7fdd",
+    "known_system_sequences.pdf": "92a7be0d19ff1441522c94981c6277fd79508e740dc2b5ee1a4f7548274cb46c",
+    "M68_frozen_transfer.csv": "8bace61a8c02847f56658daf1ab8e86750b442050a03f18401b8288a6698e0f5",
+    "sequence_display_counts.csv": "846a774ae093ad77c8dc049455ca9251c90db1fc10a1a3e2d63363f2385915f2",
+    "known_scale_members.csv": "a6e348a6d57e8ea6c77aaa8dd1f4dac82be895bd3f07ebbc2df3c689f65d7fdd",
+    "track_version_audit.csv": "ff1c0df767f396323ef6f5ef79eb65abee78c65bb99f1b6e8185434e2f55c1ef",
+    "known_system_sequences.png": "603e748358b52f696f2649efaa7773dbdc27f541f6b1a1b031799074ec501662"
+  }
+}

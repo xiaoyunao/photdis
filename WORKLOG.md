@@ -2,6 +2,46 @@
 
 ## 2026-11-18 — scientific selection and scale validation
 
+- Final evidence is under manifests/science_validation_20261118 and ten
+  Pal5-style plates under figures/science_validation_20261118. Read the
+  decision record for conditional measurements and the execution record
+  for commands, inputs and recovery paths. Manuscript inputs are separate.
+- Main stages used allocated shared CPUs in 61515493/61516156/61516277.
+  Additional fixed 128-draw quadrature changes the simple-baseline NMAD
+  by at most 0.0084 pp. QRF gains 0.451/0.488 pp over it in the paired F15.
+  Exact mask replay explains 4627/4518 extra objects by native geography.
+- Provenance finds 3065/3387 expanded identities in the southern
+  SpecDis/SPDist scale calibrators. Original F15 has zero such overlap.
+  The supplementary exclusion rematch preserves 0.376/0.382 mag shifts.
+  Gaia's alternative common support has three cells and wider intervals.
+- Fixed bright-population noise and actual common-distance members close
+  the faint-control experiments. GD-1 18–20 mag thin members have +4.09%
+  median bias; 20–21 mag has +39.00% on 15 stars. Cluster members also
+  show substantial phase/magnitude dependence. All limits remain recorded.
+- Repaired a sort-index collision in the new rematcher, with a multi-cell
+  regression. Historical imports shadowed staged siblings, so final work
+  fast-forwards committed sources into the canonical checkout. Original
+  failed/staged filter outputs remain archived under sibling directories.
+- Canonical filter 61516620 fixes zero-observable-support nodes in the
+  profile normalization and passes finite-interval/self-recovery checks.
+  Actual background injection/system recovery still fails the registered
+  scientific criteria. Selected-template membership, signed Hess cells,
+  effective areas and full distance curves remain available.
+- Figures 61516715 add same-star training/reference/inferred CMDs. The
+  first direct style-regression invocation omitted the caller's STYLE
+  context. Dedicated 61516786 then reproduces original F02/F03 pixels.
+  Final 61516883 retains system colors, records exterior points and
+  verifies every stage receipt. Original model/style sources are inputs.
+- Validation commands include py_compile, bash -n, git diff --check and
+  PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest -q. All 485 tests pass. Actual
+  PDFs are visually inspected at 7.1-inch width with a 3.5-inch comparison.
+  Selected aggregate/figure transfer is hash-checked against remote receipts.
+- Remaining scientific limits include faint observation-space PDF coverage,
+  unlinked historical classifier identities, shared reference scales,
+  strong chemical selection and failed empirical structure recovery.
+  Code, selected numerical evidence and the ten figure sets are packaged
+  together for the final GitHub/NERSC source/evidence sync.
+
 - Read the entire new GPT reply a05e3c54 and supplied improvement prompt.
   Registered the complete goal before development. Local, origin and
   NERSC main reconcile at f4dc28f5 with a clean starting worktree.

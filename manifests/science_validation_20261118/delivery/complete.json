@@ -1,0 +1,36 @@
+{
+  "job": "61516883",
+  "stages": {
+    "definitions": "c87ef1f08da3248d50090344722e25f4530e37ee81647738ace99cac7bf7989a",
+    "observable": "b6ce7cbc2a3843836f23daa9008a33a5bf0ccc4a4f5bf7863a2e8fd4c555a4a9",
+    "filter": "5cebed74d1b8140ea4eb83972fa688358fdb3156c2c3a54ee407fc745b7b3d22",
+    "provenance": "0fd6ecd32be29357ab96d53b2e881d9baaaf238beb4d8266c933f4fba7c8b2f4",
+    "cohorts": "a9e41e35c631747052cb4da277e8ce01a406c4cadaa6f06ad8f1ffd3c7a23af2",
+    "benchmark": "e882890f1b8d27914d15a32524c9ab07bf4aa629165143d4a9927c1b2be23d7b",
+    "numerics": "e621950e6ad192017e5909a32b11f0ee758e11db03957e0654d32320eec81384",
+    "populations": "95b9e3660dd53b3e159156c926411cf777a0b2ca2cd7cb070e0d4435e8ee8ec1",
+    "populations_clean": "9e145ca0bc6852588755df97c106ef9abeafe8d8087e64ffd1976456b020fabb",
+    "systems": "d6cf4e8b45da1edaab98588bb910b9d79a1074be5888c53cb02dc7e46bcae2ce",
+    "noise": "142a2078490d0bc4c2dad0740e09d9dd7017786b760cdb090e694167ec11edad",
+    "predictive": "5a4f63c2f2dbc6ed1649e9bd982133a18fabc4ace6f9d2ba7a387dfeb0ce6f67",
+    "oracle": "12cf1503d4ac0f6b9f2fd4af3314d21b4b279f985a57511e13429bd37a915dc0",
+    "figures": "dd78ead0f51faac45e68b78d382d2f51b4a536b6a4dc84faa2499f6be0e68b88",
+    "style_regression": "007cf1f5543e7ff680864c6182091ef1cedbb8df67e7bc927fd606f8a2b4b92d"
+  },
+  "plates": [
+    "definitions/selection_chemistry.png",
+    "filter/filter_selection_recovery.png",
+    "benchmark/same_training_baseline.png",
+    "populations/matched_metallicity.png",
+    "populations_clean/matched_metallicity.png",
+    "systems/known_system_sequences.png",
+    "noise/fixed_population_noise.png",
+    "predictive/measurement_space_calibration.png",
+    "figures/native_training_reference_cmd.png",
+    "figures/training_and_branch_pdfs.png"
+  ],
+  "filter_gate": false,
+  "original_models_and_release": "87069408",
+  "baseline_evidence": "f4dc28f5",
+  "scientific_scope": "acceptance flags record experimental limits; numerical checks are independent"
+}

@@ -1,0 +1,3 @@
+path,sha256,role
+scripts/sv18_definitions.py,9e52ea69f76e70cb91188ce786390e715dda7db91b6c33a8bc9fa9576dbb3e5a,new explicit scale audit
+scripts/paper_v2_reference.py,adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395,historical writer

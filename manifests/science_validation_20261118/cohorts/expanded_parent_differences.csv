@@ -1,0 +1,3 @@
+reference,first_failing_admission,region,n,bias,nmad,severe,c68,c95,multiple_peak_fraction,mu_median
+specdis,outside_original_native_domains,0,4627,0.024905562,0.11820227,0.01880267992219581,0.7765290685109142,0.9933001945104819,,0.05341925
+spdist,outside_original_native_domains,0,4518,0.06854868,0.13013276,0.01814962372731297,0.7270916334661355,0.9891544931385569,,0.14397156

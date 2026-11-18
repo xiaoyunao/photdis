@@ -1,6 +1,6 @@
 # PLAN
 
-## Science validation 2026-11-18
+## Science validation 2026-11-18 — completed
 
 Use the complete GPT review a05e3c54 and supplied science-improvement
 prompt. Freeze the release at 87069408 and prior evidence at f4dc28f5.
@@ -26,6 +26,21 @@ Run experiments in `data/science_validation_20261118` on allocated CPUs.
 Registered parameters and thresholds are in
 `configs/science_validation_20261118.json`. Failed and low-information
 experiments retain numerical results and determine the next decision.
+
+All stages have measured outputs. Delivery 61516883 verifies the final source
+receipts, finite filter profiles, original counts, rematching anchors, PDF/PNG
+exports and style lock. Pixel regression 61516786 reproduces the two original
+v3.8 PNGs. The local suite passes 485 tests. Ten plates have physical-width
+visual checks and compact numerical sidecars.
+
+The same-label control leaves a 0.45/0.49 pp QRF NMAD improvement. The
+metal-poor matched offset persists after additional calibration exclusions.
+Real faint members and the class oracle expose population-dependent distance
+and support failures. The filter fails the fixed real-background and system
+recovery criteria. The next scientific priorities and present data limits are
+in [science decisions](manifests/science_validation_20261118/science_decisions.md).
+Code and selected scientific evidence are versioned together for GitHub/NERSC
+synchronization. Future experiments follow the stated remaining science limits.
 
 ## Paper v2 scientific evidence — completed
 

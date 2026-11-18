@@ -1,0 +1,60 @@
+{
+  "job": "61516620",
+  "inputs": {
+    "data/v3_17/sample/complete.json": "3dc3545ab03afb9bd7b2a00d7d123bbc4c52d387543c9a3a8d291812770d93a1",
+    "data/science_validation_20261118/observable/complete.json": "b6ce7cbc2a3843836f23daa9008a33a5bf0ccc4a4f5bf7863a2e8fd4c555a4a9",
+    "data/v3_14/audit/M92/complete.json": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "distance_curve": "c2ed28ca8341f40e001946e33c6e2ac513786ac5cad23be516ad6eaec7a1d651",
+    "data/v3_14/audit/M13/complete.json": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "reference_census": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669"
+  },
+  "config": "dcd0a090f9431f705eea7434279c16d4a041230629fda21bb474463a0ef04ecf",
+  "code_hashes": {
+    "sv18_closeout.py": "1ee338762b168a1ab8030ea97ae16bc42a281b75dde8eb9c4510e6416d5b774b",
+    "sv18_parallel.py": "97afbb47d953928c61514079741f28c9e01e7e21a6a01a1e1cfa98176da28cfa",
+    "sv18_definitions.py": "41e19bf50a6f2712b78d0986182fed319a2e53a3765844cac8c167c1e0d8c6ad",
+    "sv18_numerics.py": "ec20c8ff9beb2db7090fbc14475a8fbf3d69a369272c82382ada05e08450a8cb",
+    "sv18_finalize.py": "dbe3e0e51b60a42446319647a8c1c373ea6e8a101236e1a94fe4c52d47a97c13",
+    "sv18_filter_complete.py": "275e63bcd34ee4f782744b0524fd850c05503f2b5a363dbe6b010c4afe9266db",
+    "sv18_common.py": "bbf5cce1cc12273eee91905ceeb95516e1ce170b61f6b98d3792458fa23f5306",
+    "sv18_predictive.py": "57bb348374f69f70ebfa3aa02ab78fb5e5446bfd5c932a4535d35cdbbf979921",
+    "sv18_noise.py": "a7a812add1a9f5661c327cb24365b52c7763033b6cbd054250115db08c9cbe98",
+    "sv18_verify.py": "eef744f659240ea8460223c72f154007102b72aa69dae885c92329bfd682d401",
+    "sv18_cohorts.py": "c8a48c0e85bd98c34a87a6722278289d45cb9cde19c338d2c4a9e7e756ba64a3",
+    "sv18_observable.py": "a2843fbb24dfbb9681c83051ae50f59e0ac2ce6373b4497e1beb3e200ff1ffeb",
+    "sv18_figures.py": "01fc1a339a85301c73c04542843586af48460db58f918a359025ce1e81646ab7",
+    "sv18_filter.py": "b9cb8c797370c54f8f3ec3d1ed995789863c04ceb19c71f0be7208255f8123b0",
+    "sv18_benchmark.py": "045078b1a1d465d2442d99709e9b736b3d6cc1b23d8d5bedb070f7f79202bcd3",
+    "sv18_systems.py": "0640fabcc19e275c242464720236c78d63190ea5ab44207b9f76fa9bca84745e",
+    "sv18_oracle.py": "3f643d27256d618091adf14d92aef1996964082a15b634a1c65a86ea7c4f6bf1",
+    "sv18_populations.py": "db8f3b70795204df3371ea6b3b5d64e508ef213caa9d54b3074a535c034da878",
+    "sv18_provenance.py": "bd31a4c6ed564f3a7bd78d75bbb13c397fe345afefee83d85b4bad5215d86648",
+    "paper_v2_reference.py": "adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "template": {
+    "method": "target_minus_background",
+    "target": 1696,
+    "control": 18769,
+    "target_area": 0.1844,
+    "control_area": 2.178,
+    "strict_members": 9
+  },
+  "injection_sequence": "native M13 members",
+  "pass_injections": false,
+  "pass_null": true,
+  "pass_structure": false,
+  "all_sky_search_authorized_by_evidence": false,
+  "interval_scope": "nonnegative Gaussian contrast amplitude profile; empirical coverage measured",
+  "outputs": {
+    "template_support.npz": "46397e9179a3a3f4bd12d91a7ae2700b8e624f736ba785376441c3156607baba",
+    "filter_selection_recovery.csv": "e066c384188a6dacbb7466920556a9d2648a87135ce0caf01309cc18abc8a712",
+    "filter_selection_recovery.pdf": "422b5bbf39ee52d2a2135ae8114776f0ae6ea6517651dc4f8e7c568bef93048f",
+    "template_self_recovery.csv": "c1e67f514712abe3a1510d7133559266409abbfbe3869b0de9bddfd81f6533c1",
+    "filter_selection_recovery.png": "a6c0bca3b3c138625e497674701c658fba4e418c0deee82a6b6775546cfabcce",
+    "distance_scans.csv": "258086d706e6e4cdcb4566a898ac90d1c0e13057914ef3605346bf8cadf22451",
+    "empirical_injections.csv": "1bed7d8369f47e8dc6d1ae95a42cc179d80fde7ba281d37cbe906bf9b55e194e",
+    "effective_areas.csv": "7efc491b5e0ca74aa968bc5639b7813f64d01051230d71a23d4345692c302e4f",
+    "injection_summary.csv": "e066c384188a6dacbb7466920556a9d2648a87135ce0caf01309cc18abc8a712"
+  }
+}

@@ -1,0 +1,7 @@
+native,kind,parent,inside_plot,outside_plot,evaluation
+south,Training,32768,31896,872,same 18–20 mag historical held-out stars in columns 2 and 3
+south,SpecDis,6938,6855,83,same 18–20 mag historical held-out stars in columns 2 and 3
+south,Photdis,6938,6863,75,same 18–20 mag historical held-out stars in columns 2 and 3
+north,Training,65536,56488,9048,same 18–20 mag historical held-out stars in columns 2 and 3
+north,SpecDis,39497,36774,2723,same 18–20 mag historical held-out stars in columns 2 and 3
+north,Photdis,39497,36620,2877,same 18–20 mag historical held-out stars in columns 2 and 3

@@ -1,0 +1,5 @@
+generated,trials,inside_histogram,outside_histogram,display_density,source
+0,6144,6144,0,"conditional on residual in [-1,1.2]",filter/empirical_injections.csv
+30,6144,6144,0,"conditional on residual in [-1,1.2]",filter/empirical_injections.csv
+100,6144,6144,0,"conditional on residual in [-1,1.2]",filter/empirical_injections.csv
+300,6144,6144,0,"conditional on residual in [-1,1.2]",filter/empirical_injections.csv

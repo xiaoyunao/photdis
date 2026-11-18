@@ -1,0 +1,40 @@
+{
+  "job": "61516156",
+  "inputs": {
+    "reference_census": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+    "data/science_validation_20261118/provenance/complete.json": "0fd6ecd32be29357ab96d53b2e881d9baaaf238beb4d8266c933f4fba7c8b2f4"
+  },
+  "config": "dcd0a090f9431f705eea7434279c16d4a041230629fda21bb474463a0ef04ecf",
+  "code_hashes": {
+    "sv18_parallel.py": "97afbb47d953928c61514079741f28c9e01e7e21a6a01a1e1cfa98176da28cfa",
+    "sv18_definitions.py": "41e19bf50a6f2712b78d0986182fed319a2e53a3765844cac8c167c1e0d8c6ad",
+    "sv18_finalize.py": "dbe3e0e51b60a42446319647a8c1c373ea6e8a101236e1a94fe4c52d47a97c13",
+    "sv18_filter_complete.py": "275e63bcd34ee4f782744b0524fd850c05503f2b5a363dbe6b010c4afe9266db",
+    "sv18_common.py": "29e79e3d247c5ae5e4f93ff3cc1f8e470013b94a920916061aa93d54f96571b6",
+    "sv18_predictive.py": "57bb348374f69f70ebfa3aa02ab78fb5e5446bfd5c932a4535d35cdbbf979921",
+    "sv18_noise.py": "a7a812add1a9f5661c327cb24365b52c7763033b6cbd054250115db08c9cbe98",
+    "sv18_verify.py": "a85761e11817a6bcef496461a54ec04f02fa97a8663e4c7636e33c77e1add65e",
+    "sv18_cohorts.py": "c8a48c0e85bd98c34a87a6722278289d45cb9cde19c338d2c4a9e7e756ba64a3",
+    "sv18_observable.py": "a2843fbb24dfbb9681c83051ae50f59e0ac2ce6373b4497e1beb3e200ff1ffeb",
+    "sv18_figures.py": "01fc1a339a85301c73c04542843586af48460db58f918a359025ce1e81646ab7",
+    "sv18_extra.py": "39786b21d86836db42fc8447f7b7ac4fe70790c5d30bfa8a0fdce204954ff660",
+    "sv18_debug_replay.py": "37b19cdb6a846679fadcf1f8e068bd58d0f02a391e8d9bd966d64e07fb380ebd",
+    "sv18_filter.py": "ece9731be65375b15d4b362a3c7b6937111a227ec7e090c6f1ad8c924b7381bb",
+    "sv18_benchmark.py": "f8ddf73b4f1ed10ff117ca9235e5c9fe453d95dc756555936b8b6db9ebc6c3e7",
+    "sv18_systems.py": "0640fabcc19e275c242464720236c78d63190ea5ab44207b9f76fa9bca84745e",
+    "sv18_oracle.py": "3f643d27256d618091adf14d92aef1996964082a15b634a1c65a86ea7c4f6bf1",
+    "sv18_populations.py": "db8f3b70795204df3371ea6b3b5d64e508ef213caa9d54b3074a535c034da878",
+    "sv18_provenance.py": "bd31a4c6ed564f3a7bd78d75bbb13c397fe345afefee83d85b4bad5215d86648",
+    "paper_v2_reference.py": "adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "exclude_calibration": true,
+  "excluded_sources": 2966,
+  "outputs": {
+    "matched_metallicity.png": "1d42c2e6129dbc53f9991034952d6b64a4effc0875583b64ed814f6fbcc2e912",
+    "sky_rematch_draws.csv": "7c4df3d4cec9a2e1a064946f9bc85c8680cb29fe97a342772a959a83d29a47d5",
+    "matched_metallicity.pdf": "9e8694bbf7e700a8b59de401b1c2003dce5146b6e5b4452c24b6ac14044b4070",
+    "observable_balance.csv": "859a6e79275114d6e69a5828069f3ba39de1d0dd8275470bcbf58dfd9126eefb",
+    "matched_metallicity.csv": "39852e4a336e72f340313d979191355311f62439e5ccf704a5a5a63a5b29cf78"
+  }
+}

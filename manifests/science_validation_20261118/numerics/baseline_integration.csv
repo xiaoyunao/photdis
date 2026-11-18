@@ -1,0 +1,3 @@
+reference,n,median_shift_mu,p95_absolute_shift_mu,nmad32,nmad128,numerical_nmad_change
+specdis,9355,-1.5531587e-06,0.0015599101,0.10230515,0.102221556,-8.3595514e-05
+spdist,8927,-1.9414485e-06,0.0015719462,0.10868174,0.10871126,2.95192e-05

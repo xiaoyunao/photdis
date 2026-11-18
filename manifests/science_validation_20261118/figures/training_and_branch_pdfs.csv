@@ -1,0 +1,9 @@
+native,kind,parent,inside_plot,outside_plot,outside_plot_mass
+south,training_CMD,32768,31896,872,
+north,training_CMD,65536,56488,9048,
+south,Ordinary dwarf,1,,,0.0041619454058482944
+south,Metal-poor dwarf,1,,,0.07080432259057241
+south,Intermediate gravity,1,,,0.010028259798548853
+north,Ordinary dwarf,1,,,0.0061332847630054445
+north,Metal-poor dwarf,1,,,0.012304964132823105
+north,Intermediate gravity,1,,,0.04644926655804306

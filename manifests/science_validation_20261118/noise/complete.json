@@ -1,0 +1,38 @@
+{
+  "job": "61515493",
+  "inputs": {
+    "reference_census": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+    "south_model": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f"
+  },
+  "config": "dcd0a090f9431f705eea7434279c16d4a041230629fda21bb474463a0ef04ecf",
+  "code_hashes": {
+    "sv18_parallel.py": "01bc76c0d3f140cc30a118fe815d9aa6937cd877ab0d3121c5c3469a61fe6202",
+    "sv18_definitions.py": "41e19bf50a6f2712b78d0986182fed319a2e53a3765844cac8c167c1e0d8c6ad",
+    "sv18_filter_complete.py": "275e63bcd34ee4f782744b0524fd850c05503f2b5a363dbe6b010c4afe9266db",
+    "sv18_common.py": "29e79e3d247c5ae5e4f93ff3cc1f8e470013b94a920916061aa93d54f96571b6",
+    "sv18_predictive.py": "57bb348374f69f70ebfa3aa02ab78fb5e5446bfd5c932a4535d35cdbbf979921",
+    "sv18_noise.py": "a7a812add1a9f5661c327cb24365b52c7763033b6cbd054250115db08c9cbe98",
+    "sv18_verify.py": "3c538151ab09ad136de85651be1e023e9e80a718e3615c6762a5508a66bad14f",
+    "sv18_observable.py": "a2843fbb24dfbb9681c83051ae50f59e0ac2ce6373b4497e1beb3e200ff1ffeb",
+    "sv18_figures.py": "01fc1a339a85301c73c04542843586af48460db58f918a359025ce1e81646ab7",
+    "sv18_filter.py": "ece9731be65375b15d4b362a3c7b6937111a227ec7e090c6f1ad8c924b7381bb",
+    "sv18_benchmark.py": "f8ddf73b4f1ed10ff117ca9235e5c9fe453d95dc756555936b8b6db9ebc6c3e7",
+    "sv18_systems.py": "5fe029f0a9a89ea3b10973b256b6f878d63a31bb9b0c6bcb465a111b55479d82",
+    "sv18_oracle.py": "3f643d27256d618091adf14d92aef1996964082a15b634a1c65a86ea7c4f6bf1",
+    "sv18_populations.py": "2e3aedca823983499621e14ec8c07d8bbb28f155c1ad86c0fe2f757e3fc38c68",
+    "sv18_provenance.py": "e91a05339428c94719dc997dcfd7918656a89f9bed5ff5b484c3ba517676812f",
+    "paper_v2_reference.py": "adc8ea96b181cf431e47e1b3406f38e9818d415480b2f772f7eccbd105ca4395"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "conditional fixed bright-population noise experiment; no new true faint-distance validation",
+  "outputs": {
+    "fixed_population_noise.png": "752ce454bde43282b02a014faf18b322ae8051b6e1fdc86b821d3a70aecd81c3",
+    "noise_realizations.csv": "d6f7e991c55942a96939be4de335aad8f57a72176fe6da453faa825d6c178066",
+    "individual_noise.npz": "68c48fc10ecf1f8280ffe3311f4fe31594852e6ec18800c7a419b981198b7a46",
+    "noise_summary.csv": "2979dcca94314835b816925f2bc7c122989d8116be8e38c1384bf5ba32b19e27",
+    "error_donors.csv": "be1a20273e054cee53dc8631616a893e8b0a63f7f64da6738b4a7b95580631e1",
+    "fixed_population_noise.csv": "2979dcca94314835b816925f2bc7c122989d8116be8e38c1384bf5ba32b19e27",
+    "fixed_population_noise.pdf": "8d45269b63601a58bdb397ecb448a738999661d763fb851309168156f09f16fe"
+  }
+}
