@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inspect source schemas and actual cached admission inventories on a CPU node."""
 from zipfile import ZipFile
-from numpy.lib.format import read_magic, _read_array_header
+from numpy.lib.format import read_magic, read_array_header_1_0, read_array_header_2_0
 from photdis.stage1 import require_compute
 from halo_common import *
 from final_science_catalog import indices
@@ -16,7 +16,8 @@ def schema(path):
         for name in z.namelist():
             with z.open(name) as f:
                 version = read_magic(f)
-                shape, _, dtype = _read_array_header(f, version)
+                reader = read_array_header_1_0 if version==(1,0) else read_array_header_2_0
+                shape, _, dtype = reader(f)
                 result[name.removesuffix('.npy')] = dict(shape=shape, dtype=str(dtype))
     return result
 
