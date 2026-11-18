@@ -1,0 +1,158 @@
+{
+  "evidence": "7f9fcc787e06b5472797173ab1f4015d1f3e5dd3",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "seed": 2026111804,
+  "nside": 512,
+  "ordering": "NESTED",
+  "coordsys": "C",
+  "display_coordsys": "G",
+  "mu_grid": [
+    14.0,
+    20.0,
+    0.1
+  ],
+  "fixed_mu": [
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0
+  ],
+  "distance_bins_kpc": [
+    [
+      6.309573444801933,
+      10
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      15,
+      26
+    ],
+    [
+      26,
+      50
+    ],
+    [
+      50,
+      100
+    ]
+  ],
+  "bin_weight": "overlap of exact modulus interval with midpoint cells of fixed mu nodes, normalized to unit total",
+  "template": {
+    "age_gyr": 12.0,
+    "Z": 0.0001,
+    "phases": "MS, subgiant and RGB; report visible stages at each node",
+    "color_spread": [
+      0.05,
+      0.1
+    ],
+    "modulus_width": 0.5,
+    "error_width_sigma": 2.0,
+    "color_range": [
+      -0.2,
+      1.2
+    ],
+    "native_transfer": "if a direct native theoretical table is unavailable, fit a predeclared color-dependent relation from strict same-star overlap, exclude 0.8deg known-system regions, validate on native held-out cluster CMD; retain transfer uncertainty and support"
+  },
+  "sample": {
+    "TYPE": "PSF",
+    "quality": "original strict grz error<0.10mag and optical/mask admission",
+    "ownership": "original native boundary and measured ID overrides",
+    "abs_b_min": 30,
+    "ebv_max": 0.03,
+    "observed_r_max": 23.0,
+    "versions": {
+      "bright": {
+        "maximum_observed_grz": 20.0,
+        "minimum_random_depth_mag": 20.0
+      },
+      "deep": {
+        "maximum_observed_grz": 23.0,
+        "minimum_random_depth_mag": 20.0
+      }
+    },
+    "lower_snr": "count separately with original complete photometry state and sampled prediction status"
+  },
+  "smoothing": {
+    "sigma_deg": 0.3,
+    "lmax": 1024,
+    "minimum_raw_pixel_coverage": 0.1,
+    "minimum_smoothed_coverage": 0.7,
+    "background_sigma_deg": 5.0,
+    "formula": "smooth(counts)/smooth(area); signed density minus 5deg count/area background"
+  },
+  "score_cut": 0.8,
+  "bootstrap_draws": 256,
+  "sequence": {
+    "template": "fixed native old metal-poor literature relation, no system zero-point fit",
+    "phase": "MS/turnoff only",
+    "reference_Mr_range": [
+      3.0,
+      8.0
+    ],
+    "minimum_N": 30,
+    "bias_tolerance": 0.1,
+    "roles": "M5/M13/M30/GD1 used as test systems with prior development ancestry retained"
+  },
+  "balance": {
+    "method": "fixed clipped propensity overlap weighting with cubic terms in continuous observables and native; refit each sky bootstrap",
+    "continuous": [
+      "r",
+      "gr",
+      "rz",
+      "max_error",
+      "EBV",
+      "reference_distance"
+    ],
+    "SMD_tolerance": 0.1,
+    "propensity_common": [
+      0.05,
+      0.95
+    ],
+    "sky_nside": 8,
+    "draws": 256
+  },
+  "noise": {
+    "primary": "replay old IDs, donor choices and standard-normal realizations, pass max(original,donor) error",
+    "secondary": "whole-imaging strict native color/depth-matched donor library with reapplied quality and model support"
+  },
+  "power": {
+    "N": 256,
+    "draws": 128,
+    "sample": "uniform final valid rows",
+    "branch_mass": "before observed selection, joint branch-component weights times acceptance",
+    "scale_fraction": [
+      -0.2,
+      -0.1,
+      -0.05,
+      0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "branch_fraction": [
+      0,
+      0.1,
+      0.3
+    ]
+  },
+  "local_filter": {
+    "segments": [
+      1,
+      2,
+      5
+    ],
+    "compare_mu": [
+      "measured_peak",
+      "external_reference"
+    ],
+    "variance_floor": 4.0,
+    "null_scope": "independent available blank ribbons through identical complete local peak scan, archive repeated-field reuse"
+  }
+}

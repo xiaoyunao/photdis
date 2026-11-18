@@ -1,5 +1,22 @@
 # PLAN
 
+## Halo response 2026-11-18 — active
+
+Use the full v4 prompt and review 718e2850. First deliver the actual
+61-node full-footprint CMD-filter atlas, independent random areas and
+same-source PDF/score/depth comparisons. Recover the strict southern
+bright imaging parent before any QRF-support filter. Freeze the native
+template/transfer and small-system roles before measuring their outcomes.
+Then close paired noise, conditional-power and foreground-Hess corrections,
+continuous chemical balance, full role links and sequence/seam controls.
+
+Outputs use halo_response_20261118. Configuration is registered in
+configs/halo_response_20261118.json. Validation requires source/area/count
+conservation, real multi-distance Galactic Aitoff PDF/PNG and redraw arrays,
+small-system result tables and scientific decisions. Computation uses
+allocated NERSC resources and the existing native photometry/PDF caches.
+
+
 ## Science validation 2026-11-18 — completed
 
 Use the complete GPT review a05e3c54 and supplied science-improvement

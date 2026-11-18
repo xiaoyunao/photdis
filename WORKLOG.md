@@ -1,5 +1,17 @@
 # WORKLOG
 
+## 2026-11-18 — halo atlas and sequence response
+
+- Read full v4 prompt and complete GPT reply 718e2850. Registered the
+  complete goal before changes. Local/origin/NERSC reconcile at 7f9fcc78.
+- Confirmed the old southern bright carrier excludes QRF-unsupported rows.
+  New atlas admission uses the original strict imaging row ledger and
+  native data, with original ownership and shared bright/faint sky area.
+- Fixed the 61-node grid, five distance channels, Nside512, smoothing,
+  conservative/deeper selections and small-control evaluation criteria.
+  Native-template and cache metadata are being checked before inference.
+
+
 ## 2026-11-18 — scientific selection and scale validation
 
 - Final evidence is under manifests/science_validation_20261118 and ten
