@@ -40,3 +40,31 @@ def test_overlapping_cmd_nodes_are_not_exclusive_distance_memberships():
     w=channel_weights(mu,[(10**.8,10),(10,15),(15,26),(26,50),(50,100)])
     np.testing.assert_allclose(w.sum(axis=1),1.)
     assert (w>=0).all() and (w[0,mu>15.1]==0).all()
+
+
+def test_continuous_weights_remove_observable_composition_from_a_known_shift():
+    from halo_balance import balance, contrast
+    from scipy.special import expit
+    rng=np.random.default_rng(24)
+    x=rng.normal(size=(1000,7))
+    y=(rng.random(len(x))<expit(x[:,0]+.7*x[:,1])).astype(int)
+    residual=.38*y+.2*x[:,0]+.1*x[:,1]
+    before=contrast(residual,y,np.ones(len(y)))
+    w=balance(x,y,np.ones(len(y)))
+    after=contrast(residual,y,w)
+    assert before>.45
+    assert abs(after-.38)<.01
+    assert (w>=0).all()
+    # Refit multiplicities rather than retaining a stale full-sample weight.
+    repeated=np.repeat([0.,2.],500)
+    ww=balance(x,y,repeated)
+    assert (ww[:500]==0).all()
+    assert abs(contrast(residual,y,ww)-.38)<.02
+
+
+def test_known_galactic_coordinate_allows_equivalent_ra_wrap():
+    import healpy as hp
+    ra,dec=hp.Rotator(coord=('G','C'))(0.,0.,lonlat=True)
+    np.testing.assert_allclose([ra%360,dec],[266.4049948,-28.936174],atol=1e-4)
+    weights=channel_weights(np.round(np.arange(14,20.001,.1),1),[(10,15)])
+    assert weights.shape==(1,61)
