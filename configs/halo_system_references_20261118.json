@@ -1,0 +1,9 @@
+{
+  "source_url": "https://academic.oup.com/view-large/353698133",
+  "source_description": "Published Table3 quoting Baumgardt & Vasiliev2021 distances; same centers already frozen in Photdis",
+  "M5": {"distance_kpc": 7.48, "sigma_kpc": 0.06},
+  "M13": {"distance_kpc": 7.42, "sigma_kpc": 0.08},
+  "M30": {"distance_kpc": 8.49, "sigma_kpc": 0.09},
+  "M92": {"distance_kpc": 8.50, "sigma_kpc": 0.07},
+  "interpretation": "One Gaussian common system-scale nuisance draw per cluster/bootstrap; same draw across members, methods and magnitude groups; reference-center domain remains fixed. Sensitivity calculation, not a newly calibrated absolute posterior. GD1 curve covariance unavailable in the cached center table."
+}
