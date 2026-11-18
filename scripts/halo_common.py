@@ -48,3 +48,10 @@ def read(path, fields, inputs):
 
 def figure(path, name, fig, rows, arrays=None):
     save(fig, path, name, rows, arrays)
+
+
+def cache_folders():
+    for stage in ('cache','cache_extra'):
+        for path in sorted((OUT/stage).glob('*')):
+            if (path/'complete.json').is_file() and (path/'photometry.npz').is_file():
+                yield path
