@@ -10,6 +10,6 @@ if __name__=='__main__':
         results=list(workers.map(run,('filter_complete','numerics','oracle')))
     if any(results):
         raise SystemExit(1)
-    for stage in ('figures','verify'):
+    for stage in ('figures','style','verify'):
         if run(stage):
             raise SystemExit(1)

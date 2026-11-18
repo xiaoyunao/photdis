@@ -15,7 +15,7 @@ def main():
     require_compute()
     d=out('delivery');marks={};plates=[]
     stages=('definitions','observable','filter','provenance','cohorts','benchmark','numerics','populations','populations_clean',
-            'systems','noise','predictive','oracle','figures')
+            'systems','noise','predictive','oracle','figures','style_regression')
     deadline=time.monotonic()+600
     while not (DEST/'numerics/complete.json').exists():
         if time.monotonic()>deadline:
@@ -38,7 +38,8 @@ def main():
                 assert image.width>=2000 and abs(image.info['dpi'][0]-300)<.02
             assert path.with_suffix('.pdf').read_bytes().startswith(b'%PDF')
             assert path.with_suffix('.csv').is_file()
-            plates.append(str(path.relative_to(DEST)))
+            if stage!='style_regression':
+                plates.append(str(path.relative_to(DEST)))
     u=table(DEST/'definitions/gaia_reference_uncertainty.csv')
     assert len(u)==404 and all(r['centers_unchanged']=='True' for r in u)
     ratios=np.array([float(r['median_halfwidth95_to_linear_sigma']) for r in u])
