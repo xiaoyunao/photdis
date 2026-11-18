@@ -122,7 +122,7 @@ def main():
             mu=10+5*np.log10(t['ref'][ii]);qmu=10+5*np.log10(t['q'][ii,2])
             for row,values in enumerate((t['m'][ii,1]-mu,t['m'][ii,1]-qmu)):
                 ax=axes[row,col];ax.scatter(color,values,s=5,lw=0,alpha=.6,color=BLUE,rasterized=True)
-                native=1 if name=='M13' else 0
+                native=int(np.bincount(t['native'][ii],minlength=2).argmax()) if len(ii) else int(name=='M13')
                 mag=template[('south','north')[native]];take=(template['phase']==0)|(template['phase']==2)
                 if native:take&=template['north_support']
                 ax.plot(mag[take,0]-mag[take,1],mag[take,1],color=ORANGE,lw=.8)
@@ -159,4 +159,37 @@ def main():
         history='M13/M92 sky regions occurred in northern model construction; all systems previously inspected; no fresh blind claim')
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--cmd-only',action='store_true')
+    args=parser.parse_args()
+    if not args.cmd_only:main()
+    else:
+        require_compute();d=folder('sequence');marker=d/'complete.json';r=json.loads(marker.read_text())
+        archive=folder('execution')/'sequence_before_native_plot_revision.json'
+        if not archive.exists():archive.write_text(marker.read_text())
+        with np.load(verified(d/'same_source_predictions.npz',r['outputs']['same_source_predictions.npz'])) as a:
+            t={k:a[k] for k in a.files}
+        template=read(OUT/'native',('template.npz','south','north','phase','north_support'),{})
+        with plt.rc_context(PAPER):
+            f,axes=plt.subplots(2,3,figsize=(7.15,5.7),layout='constrained');shown=[]
+            for col,name in enumerate(('M5','M13','GD1_thin')):
+                ii=np.flatnonzero(t['common']&~t['mask']&(t['system']==name))
+                color=t['m'][ii,0]-t['m'][ii,1];mu=10+5*np.log10(t['ref'][ii]);qmu=10+5*np.log10(t['q'][ii,2])
+                for row,values in enumerate((t['m'][ii,1]-mu,t['m'][ii,1]-qmu)):
+                    ax=axes[row,col];ax.scatter(color,values,s=5,lw=0,alpha=.6,color=BLUE,rasterized=True)
+                    codes=np.unique(t['native'][ii])
+                    for native in codes:
+                        mag=template[('south','north')[native]];take=np.isin(template['phase'],(0,2))
+                        if native:take&=template['north_support']
+                        ax.plot(mag[take,0]-mag[take,1],mag[take,1],color=ORANGE,lw=.8,ls='-' if len(codes)==1 or native==0 else '--')
+                    ax.set(xlim=(-.1,1),ylim=(8.5,1.5),xlabel=r'$(g-r)_0$',ylabel=r'$M_r$ (mag)',title=name.replace('_',' ')+' · '+('reference' if row==0 else 'QRF'))
+                    shown.append(dict(system=name,coordinate=('reference','QRF')[row],n=len(ii),
+                        native_south=int((t['native'][ii]==0).sum()),native_north=int((t['native'][ii]==1).sum()),
+                        outside=int(((color<-.1)|(color>1)|(values<1.5)|(values>8.5)).sum())))
+            figure(d,'known_sequence_same_source_cmd',f,shown)
+        r['figure_revision']=dict(code=sha(Path(__file__)),parent_complete=sha(archive),
+            scope='plot-only exact same saved members/predictions, native template selected from actual source metadata')
+        for name in r['outputs']:r['outputs'][name]=sha(d/name)
+        save_json(marker,r)
+
