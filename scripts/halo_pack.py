@@ -26,7 +26,7 @@ def main():
           BROAD_WEIGHTS='unit-normalized overlap of each broad modulus interval with fixed mu cells',QRF_MASS='seven exclusive PDF integrals including below/above displayed range',
           NATIVE_AREAS='deg2: south/north,geometric/unmasked/depth20,pixel',DEPTH='mean 0.1mag g/r/z sensitivity',EBV='mean random E(B-V)',
           PHASE_VISIBLE='bit0 MS,bit1 SGB-RGB; version,native,mu,pixel',DISPLAY_MASK='raw coverage>=.1,smoothed coverage>=.7'),
-        sample='strict native imaging PSFs, unique ownership; both versions use shared area counted once per southern bright/faint union')))
+        sample='strict native imaging PSFs, unique ownership; both versions use shared area counted once per southern bright/faint union'))
     complete(d,inputs,scope='lossless zipped actual physical display-grid arrays; use halo_redraw.py with matching atlas CSV scales',array_count=len(rows))
 
 

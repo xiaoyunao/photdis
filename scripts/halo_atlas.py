@@ -33,6 +33,7 @@ def panels(d,name,maps,labels,unit,signed=False,annotated=False,limits=None):
     cap=max(cap,1e-5) if limits is None else limits[1]
     lin=max(cap/100,.001)
     norm=SymLogNorm(linthresh=lin,linscale=.32,vmin=-cap if signed else 0,vmax=cap)
+    decades=10.**np.arange(np.ceil(np.log10(lin)),np.floor(np.log10(cap))+1)
     ncols=2 if len(maps)>1 else 1;nrows=(len(maps)+ncols-1)//ncols
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(nrows,ncols,figsize=(7.15,2.35*nrows+.35),
@@ -52,13 +53,22 @@ def panels(d,name,maps,labels,unit,signed=False,annotated=False,limits=None):
                     xx=-((ll+180)%360-180)
                     ax.plot(np.deg2rad(xx),np.deg2rad(bb),'+',ms=3,color='black',lw=.5)
                     ax.annotate(key,(np.deg2rad(xx),np.deg2rad(bb)),xytext=(3,2),textcoords='offset points',fontsize=5)
+                from v3_16_gd1 import ROTATION,unit as skyunit,angles,track,EDGES
+                phi1=np.linspace(EDGES[0],EDGES[-1],201)
+                ra,dec=angles(ROTATION.T@skyunit(phi1,track(phi1)))
+                ll,bb=hp.Rotator(coord=('C','G'))(ra,dec,lonlat=True);xx=-((ll+180)%360-180)
+                ax.plot(np.deg2rad(xx),np.deg2rad(bb),'--',color='.1',lw=.6)
+                mid=len(xx)//2
+                ax.annotate('GD-1',(np.deg2rad(xx[mid]),np.deg2rad(bb[mid])),xytext=(3,2),textcoords='offset points',fontsize=5)
             stats.append(dict(panel=label,finite_pixels=int(np.isfinite(a).sum()),
                 below_color=int((a<norm.vmin).sum()),above_color=int((a>cap).sum()),
                 color_lo=norm.vmin,color_hi=cap,linthresh=lin,units=unit))
         for ax in list(axes.flat)[len(maps):]:ax.set_visible(False)
         f.supxlabel('Galactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
         f.colorbar(z,ax=list(axes.flat),location='bottom',fraction=.025,pad=.07,shrink=.8,
-                   aspect=48,extend='both' if signed else 'max',label=unit)
+                   aspect=48,extend='both' if signed else 'max',label=unit,
+                   ticks=np.r_[-decades[::-1],0,decades] if signed else np.r_[0,decades],
+                   format=plt.FormatStrFormatter('%g'))
         figure(d,name,f,stats,dict(l=l,b=b,values=maps[:,pix].astype('f4')))
     return stats
 
@@ -168,6 +178,10 @@ def assemble():
         for key,val in zip(keys,pool.map(smoothed,work)):mapped[key]=val
     atomic_npz(d/'smoothed_maps.npz',keys=np.array([str(k) for k in mapped]),values=np.array([v[:2] for v in mapped.values()]).astype('f4'))
     del work,cube
+    render_maps(d,inputs,mapped,areas,depth,ebv,area,masked)
+
+
+def render_maps(d,inputs,mapped,areas,depth,ebv,area,masked):
     annotations=[];redraw={};labels=[f'{a:.1f}–{b:g} kpc' for a,b in C['distance_bins_kpc']]
     for v,version in enumerate(('bright','deep')):
         main=np.array([mapped[v,0,b,'broad'][0] for b in range(5)])
@@ -228,4 +242,23 @@ def assemble():
 
 
 if __name__=='__main__':
-    require_compute();assemble()
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--render-only',action='store_true')
+    args=parser.parse_args();require_compute()
+    if args.render_only:
+        import ast
+        d=folder('atlas');marker=d/'complete.json';r=json.loads(marker.read_text())
+        assert r['config']==CONFIG_HASH
+        archive=folder('execution')/'atlas_before_colorbar_revision.json'
+        if not archive.exists():archive.write_text(marker.read_text())
+        inputs=r['inputs'];inputs['render_previous_complete']=sha(archive)
+        with np.load(verified(d/'smoothed_maps.npz',r['outputs']['smoothed_maps.npz'])) as a:
+            keys=[ast.literal_eval(k) for k in a['keys']];values=a['values']
+        previous=json.loads((d/'cmd_filter_manifest.json').read_text())
+        negatives={q['key']:q['n'] for q in previous['smoothing_negative_pixels']}
+        mapped={k:(values[i,0],values[i,1],negatives[str(k)]) for i,k in enumerate(keys)}
+        with fits.open(d/'cmd_filter_cube.fits',memmap=True) as h:
+            areas=h['NATIVE_AREAS'].data;depth=h['DEPTH'].data;ebv=h['EBV'].data
+            area=areas[:,2].sum(axis=0);masked=h['DISPLAY_MASK'].data.astype(bool)
+            render_maps(d,inputs,mapped,areas,depth,ebv,area,masked)
+    else:assemble()

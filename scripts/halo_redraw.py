@@ -12,6 +12,7 @@ def render(prefix,dest,annotated=False):
     assert len(rows)==len(values) and all('panel' in r and 'linthresh' in r for r in rows)
     r=rows[0];signed=float(r['color_lo'])<0
     norm=SymLogNorm(linthresh=float(r['linthresh']),linscale=.32,vmin=float(r['color_lo']),vmax=float(r['color_hi']))
+    decades=10.**np.arange(np.ceil(np.log10(float(r['linthresh']))),np.floor(np.log10(float(r['color_hi'])))+1)
     ncols=2 if len(values)>1 else 1;nrows=(len(values)+ncols-1)//ncols
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(nrows,ncols,figsize=(7.15,2.35*nrows+.35),subplot_kw={'projection':'aitoff'},layout='constrained',squeeze=False)
@@ -36,7 +37,8 @@ def render(prefix,dest,annotated=False):
         for ax in list(axes.flat)[len(values):]:ax.set_visible(False)
         f.supxlabel('Galactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
         f.colorbar(image,ax=list(axes.flat),location='bottom',fraction=.025,pad=.07,shrink=.8,aspect=48,
-                   extend='both' if signed else 'max',label=r['units'])
+                   extend='both' if signed else 'max',label=r['units'],
+                   ticks=np.r_[-decades[::-1],0,decades] if signed else np.r_[0,decades],format=plt.FormatStrFormatter('%g'))
         dest.mkdir(parents=True,exist_ok=True)
         name=prefix.name+('_known_structures' if annotated else '_redraw')
         figure(dest,name,f,rows)
