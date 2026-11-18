@@ -2,6 +2,7 @@
 """Selection-matched native CMD scans and empirical injections in real GD-1 fields."""
 from astropy.io import fits
 from scipy.special import logsumexp
+from scipy.spatial import cKDTree
 from photdis.stage1 import require_compute
 from sv18_common import *
 import paper_v2_filter as old
@@ -73,6 +74,11 @@ def main():
     real_errors=cache['err'][j[j>=0]]
     real_mags=cache['m'][j[j>=0]]
     del cache
+    good=np.isfinite(real_errors).all(axis=1)&np.isfinite(real_mags).all(axis=1)&(real_errors>0).all(axis=1)
+    real_errors,real_mags=real_errors[good],real_mags[good]
+    features=np.column_stack((real_mags[:,1]/.5,(real_mags[:,0]-real_mags[:,1])/.15,
+                              (real_mags[:,1]-real_mags[:,2])/.15))
+    error_neighbors=cKDTree(features)
     rows=[];recoveries=[];selfchecks=[];arrays={};area_rows=[]
     segment=t['block']//NSTEP
     controls=np.flatnonzero(np.isin(np.round(NEW,2),(-5.8,-4.8,4.8,5.8)))
@@ -150,6 +156,11 @@ def main():
                     blank_sig=raw*blank_response*common_blank
                     blank_sig=np.divide(blank_sig,blank_sig.sum(axis=1)[:,None],out=np.zeros_like(blank_sig),
                                         where=blank_sig.sum(axis=1)[:,None]>0)
+                    blank_rows=use&(t['ribbon']==blank)
+                    blank_ar=t['r'][blank_rows]-t['r0'][blank_rows]
+                    r_window=observable(blank_ar,rlim)
+                    depth_given_r=np.divide(blank_response,r_window,out=np.zeros_like(blank_response),where=r_window>0)
+                    depth_given_r=np.clip(depth_given_r,0,1).reshape(len(C),len(A))
                     for count in (0,*F['injection_counts']):
                         for draw in range(F['injection_trials']):
                             added=np.zeros_like(bgon)
@@ -160,13 +171,21 @@ def main():
                                 mag=absolute[ii]+mu
                                 # Error triplets are sampled together from the same
                                 # native sky, matched to apparent r at this distance.
-                                ee=np.flatnonzero(abs(real_mags[:,1]-np.median(mag[:,1]))<.5)
-                                if not len(ee):
-                                    ee=np.arange(len(real_errors))
-                                err=real_errors[RNG.choice(ee,size=count)]
-                                mag+=RNG.normal(size=(count,3))*np.maximum(err,seqerr[ii])
-                                ex=RNG.choice(ar,size=count)
+                                features=np.column_stack((mag[:,1]/.5,(mag[:,0]-mag[:,1])/.15,
+                                                           (mag[:,1]-mag[:,2])/.15))
+                                _,neighbors=error_neighbors.query(features,k=np.arange(1,17))
+                                pick=neighbors[np.arange(count),RNG.integers(16,size=count)]
+                                err=real_errors[pick]
+                                additional=np.sqrt(np.maximum(err**2-seqerr[ii]**2,0))
+                                mag+=RNG.normal(size=(count,3))*additional
+                                ex=RNG.choice(blank_ar,size=count)
                                 take=(mag[:,1]+ex<rlim)&(np.maximum(err,seqerr[ii]).max(axis=1)<.1)
+                                ci=np.searchsorted(old.COLOR,mag[:,0]-mag[:,1],side='right')-1
+                                ri=np.searchsorted(old.APP,mag[:,1],side='right')-1
+                                inside=(ci>=0)&(ci<len(C))&(ri>=0)&(ri<len(A))
+                                probability=np.zeros(count)
+                                probability[inside]=depth_given_r[ci[inside],ri[inside]]
+                                take&=RNG.random(count)<probability
                                 added=hess((mag[:,0]-mag[:,1])[take],mag[take,1])
                                 added*=common_blank
                                 admitted=int(added.sum())

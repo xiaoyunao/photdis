@@ -58,7 +58,7 @@ def main():
                     supported=int(good.sum()),support_retention=good.mean(),experiment='noise_only_fixed_scale',
                     **metric(q[good],ref[idx][good])))
                 for i in range(len(idx)):
-                    detail.append(dict(native=side,r_lo=low,draw=draw,ls_id=int(t['ls_id'][idx[i]]),
+                    detail.append(dict(TYPE='PSF',native=side,r_lo=low,draw=draw,ls_id=int(t['ls_id'][idx[i]]),
                       supported=bool(good[i]),distance=q[i,2],reference=ref[idx[i]],
                       sigma_g=error[i,0],sigma_r=error[i,1],sigma_z=error[i,2]))
             error_summary.append(dict(native=side,r_lo=low,r_hi=high,donor_rows=len(pp),bright_rows=len(idx),

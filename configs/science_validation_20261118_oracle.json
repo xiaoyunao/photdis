@@ -1,0 +1,11 @@
+{
+  "hypothesis": "The existing large intermediate-gravity inward migration can be isolated from missing luminosity support by conditioning the frozen forest's joint leaf histogram on the external physical class.",
+  "max_per_native_class": 128,
+  "seed": 20261119,
+  "classes": {"dwarf": [1,2,3], "intermediate": [4], "giant": [5]},
+  "same_stars": true,
+  "same_forest_and_training_labels": true,
+  "empty_class_leaf": "use the original predictive distribution only when the summed class mass is zero; report its rate",
+  "metric": ["bias","nmad","severe","c68"],
+  "next_step": "A gain is an upper-bound information experiment. Additional observable features require a separate same-star held-out test."
+}

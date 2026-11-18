@@ -127,7 +127,7 @@ def main():
                     y=r['shift_mu'];l=r['ci_lo'];u=r['ci_hi']
                     ax.errorbar(i+(j-1)*.15,y,yerr=None if l is None else [[max(0,y-l)],[max(0,u-y)]],
                        fmt=('o','s','^')[j],ms=4,color=(BLUE,ORANGE,GREEN)[j],
-                       label=ref.capitalize() if i==0 else None)
+                       label=REFERENCE_NAMES[ref] if i==0 else None)
             ax.axhline(0,color='.6',lw=.7,ls=':')
             ax.set(xticks=range(3),xticklabels=['Original','Wider colors','Finer r / d'],
                    title=f'{lo}–{5 if lo==2 else 10} kpc')

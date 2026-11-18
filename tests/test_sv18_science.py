@@ -4,6 +4,25 @@ from sv18_filter import observable, scan, recover
 from sv18_populations import match
 from sv18_predictive import gaussian_mixture
 from paper_v2_reference import reference_uncertainty_mu
+from sv18_observable import selected_fraction
+from sv18_benchmark import fit, predict
+
+
+def test_random_depth_selection_integrates_partial_magnitude_bins():
+    result=selected_fraction(np.array([19.,20.,21.]),np.array([18.,19.,20.,21.,22.]))
+    np.testing.assert_allclose(result,[1.,2/3,1/3,0.])
+    result=selected_fraction(np.array([19.5]),np.array([19.,20.]))
+    np.testing.assert_allclose(result,[.5])
+
+
+def test_empirical_relation_supports_a_single_qualified_color_cell():
+    mags=np.tile([18.45,18.,17.75],(24,1))
+    training=dict(m=mags,y=np.linspace(4.,5.,24))
+    model=fit(training)
+    q,distance,count=predict(model,mags[:2],np.zeros((2,3)),np.array([1,2]),0.)
+    assert q.shape==(2,5)
+    assert np.isfinite(q).all() and (np.diff(q,axis=1)>=0).all()
+    assert (count==24).all()
 
 
 def test_geometric_one_sigma_and_95_halfwidth_have_distinct_units():

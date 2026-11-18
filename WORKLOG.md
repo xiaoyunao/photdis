@@ -25,6 +25,14 @@
   independent stages share one allocated 64-core job to reduce queue overhead.
   Targeted selection/PDF tests pass. Full 480-test pass predates the added
   Gaia-unit regression. Await current experiment outcomes and final QA.
+- Added a known-class joint-leaf control and registered its separate config,
+  empirical interval-score/sharpness comparisons, observation-space width
+  and branch sensitivities, training/PDF example figures and delivery checks.
+  Full local regression now passes 483 tests. All earlier products stay frozen.
+- Jobs 61514459/61514501/61514540 are waiting for CPU resources. Reduced
+  their requested memory to 128/64/64 GiB. Interactive allocation 61515350
+  is also queued. It cancels those duplicate queued jobs only after getting
+  a node, then runs the registered experiments with independent stage logs.
 
 ## 2026-11-17 — paper v2 full-catalogue reference tests
 

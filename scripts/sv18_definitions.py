@@ -155,7 +155,7 @@ def working(t,d,inputs):
                 upper=np.array([r['ci_hi'] or r['retention'] for r in z])
                 ax.errorbar(range(4),y,yerr=np.maximum(0,[y-lower,upper-y]),fmt='o-',color=color,
                             label=CLASSES[pop].replace('_',' ').capitalize(),ms=3)
-            ax.set(ylim=(0,1.04),xticks=range(4),xticklabels=['PDF','Score','Probability','2–5 kpc'],title=ref.capitalize())
+            ax.set(ylim=(0,1.04),xticks=range(4),xticklabels=['PDF','Score','Probability','2–5 kpc'],title=REFERENCE_NAMES[ref])
         axes[0].set_ylabel('Cumulative retained fraction');axes[0].legend(fontsize=6,frameon=False)
         figure(d,'selection_chemistry',f,step)
 

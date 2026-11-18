@@ -16,12 +16,12 @@ from v3_4_near_validate import GAIA
 
 def training(side,inputs):
     if side=='south':
-        a=read(ROOT/'data/v3_0/controls',('training.npz','TYPE','identity','rows','Mg'),inputs)
+        a=read(ROOT/'data/v3_0/controls',('training.npz','TYPE','identity','rows','Mg','class_label'),inputs)
         b=read_columns(ROOT/'data/v3_0/references.npz',('TYPE','ls_id','source_id','flux','flux_error','band_mask','transmission','role'))
         j=a['rows']
         assert (a['TYPE']=='PSF').all() and (b['TYPE'][j]=='PSF').all()
         mag,_=optical_magnitudes(b)
-        return dict(m=mag[j],y=a['Mg'],ls_id=b['ls_id'][j],source_id=b['source_id'][j]),0.
+        return dict(TYPE=a['TYPE'],m=mag[j],y=a['Mg'],ls_id=b['ls_id'][j],source_id=b['source_id'][j],class_label=a['class_label']),0.
     role=read(V39/'north/native_model',('roles.npz','TYPE','ls_id','role'),inputs)
     use=np.isin(role['role'],('gaia_fit','specdis_fit'))
     ids=role['ls_id'][use];typ=role['role'][use]
@@ -32,13 +32,13 @@ def training(side,inputs):
         for name,h in r['outputs'].items():
             if name.endswith('.npz'):
                 t=read_columns(verified(p.with_name(name),h),
-                    ('TYPE','ls_id','source_id','mag_grz','reference_kpc','specdis_kpc'))
+                    ('TYPE','ls_id','source_id','mag_grz','reference_kpc','specdis_kpc','class_label'))
                 j=index_join(t['ls_id'],ids);k=j>=0
                 if k.any():
                     z=j[k];d=np.where(typ[z]=='gaia_fit',t['reference_kpc'][k],t['specdis_kpc'][k])
                     assert (t['TYPE'][k]=='PSF').all()
-                    chunks.append(dict(ls_id=t['ls_id'][k],source_id=t['source_id'][k],
-                                       m=t['mag_grz'][k],y=t['mag_grz'][k,0]-10-5*np.log10(d)))
+                    chunks.append(dict(TYPE=t['TYPE'][k],ls_id=t['ls_id'][k],source_id=t['source_id'][k],
+                                       m=t['mag_grz'][k],y=t['mag_grz'][k,0]-10-5*np.log10(d),class_label=t['class_label'][k]))
     t=join(chunks)
     assert len(t['ls_id'])==len(ids) and len(np.unique(t['ls_id']))==len(ids)
     model,hd=from_north();inputs['north_qrf']=hd
@@ -66,7 +66,7 @@ def predict(model,m,e,ids,offset):
         delta=qmc_noise(ids,draw)[:,:3]*e
         pert=m+delta
         x=pert[:,:2]-pert[:,1:3]
-        dist,ind=tree.query(x,k=min(4,len(h)))
+        dist,ind=tree.query(x,k=np.arange(1,min(4,len(h))+1))
         w=1/np.maximum(dist,.025)**2
         w/=w.sum(axis=1)[:,None]
         p=np.sum(h[ind]*w[:,:,None],axis=1)
@@ -88,6 +88,13 @@ def comparison(t,qs,groups,dist,block,d,frame):
             continue
         idx=np.flatnonzero(use); bb=block[idx];keys=np.unique(bb)
         values={k:metric(q[idx],dist[idx]) for k,q in qs.items()}
+        y=10+5*np.log10(dist[idx])
+        for method,q in qs.items():
+            mu=10+5*np.log10(q[idx])
+            width=mu[:,3]-mu[:,1]
+            score=width+(2/.32)*(np.maximum(mu[:,1]-y,0)+np.maximum(y-mu[:,3],0))
+            values[method]['median_width68_mu']=np.median(width)
+            values[method]['mean_interval_score68_mu']=np.mean(score)
         if 'BJ' in values:
             values['BJ']['c95']=None
         for k,v in values.items():
@@ -131,6 +138,7 @@ def main():
     histories={}
     for side,north in (('south',False),('north',True)):
         train,offset=training(side,inputs)
+        atomic_npz(d/(side+'_training_sample.npz'),**train)
         model=fit(train); models[side]=(model,offset)
         histories[side]=dict(ls_id=train['ls_id'],source_id=train['source_id'])
         k=np.flatnonzero((t['region']==3)==north)
@@ -182,21 +190,31 @@ def main():
                 k:v for k,v in metric(t['q'][active],dist[active]).items() if k!='n'}))
             # Full per-source deltas remain on NERSC.
             atomic_npz(d/(ref+'_'+label+'_delta.npz'),removed=t['ls_id'][removed],original_missing=t['ls_id'][added],
-                       extra=t['ls_id'][active&~anchor])
+                       extra=t['ls_id'][active&~anchor],removed_TYPE=t['TYPE'][removed],
+                       original_missing_TYPE=t['TYPE'][added],extra_TYPE=t['TYPE'][active&~anchor])
     csv_rows(d/'mask_replay.csv',replay)
     atomic_npz(d/'evaluated.npz',**t,simple=simple,bj=bq,was_f15=was,baseline_color_distance=near,
                baseline_neighbor_training_count=nn)
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(1,2,figsize=(7.1,3.2),layout='constrained',sharey=True)
-        for ax,ref in zip(axes,('specdis','spdist')):
+        density=[]
+        edges=np.linspace(-2,2,101)
+        for i,(ax,ref) in enumerate(zip(axes,('specdis','spdist'))):
             for method,color in zip(('Photdis','Simple','BJ'),(BLUE,ORANGE,GREEN)):
-                a=[r for r in metrics if r['frame']==ref and r['method']==method and r['group'] in ('headline','ordinary','metal_poor')]
-                x=range(len(a));y=[100*r['nmad'] for r in a]
-                ax.plot(x,y,'o-',color=color,ms=4,label=method)
-            ax.set(xticks=range(3),xticklabels=['Same stars','Ordinary','Metal-poor'],title=ref.capitalize())
-        axes[0].set_ylabel('Relative-distance NMAD (%)')
+                values={'Photdis':t['q'],'Simple':simple,'BJ':bq}[method]
+                use=was[:,i]
+                residual=5*np.log10(values[use,2]/t[ref+'_d'][use])
+                counts=np.histogram(residual,edges)[0]
+                hist=counts/(len(residual)*np.diff(edges))
+                ax.stairs(hist,edges,color=color,lw=1,label=method)
+                density.extend(dict(reference=ref,method=method,lo=a,hi=b,n=int(n),density=y,
+                    total=len(residual),outside_plot=int(((residual<edges[0])|(residual>edges[-1])).sum()))
+                    for a,b,n,y in zip(edges[:-1],edges[1:],counts,hist))
+            ax.axvline(0,color='.6',lw=.7,ls=':')
+            ax.set(xlabel=r'$\Delta\mu$ (mag)',title=REFERENCE_NAMES[ref],xlim=(-2,2))
+        axes[0].set_ylabel('Probability density')
         axes[0].legend(fontsize=7,frameon=False)
-        figure(d,'same_training_baseline',f,metrics)
+        figure(d,'same_training_baseline',f,density)
     complete(d,inputs,model_scope='fixed coarse empirical relation on same source IDs, same labels and offset',
              methods='Photdis and BJ frozen, simple intervals are conditional training distributions')
 

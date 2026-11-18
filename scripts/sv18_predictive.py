@@ -9,7 +9,7 @@ from final_catalogue_benchmark import load_parent
 from paper_v1_scan import locate
 
 
-def gaussian_mixture(edges,mass,y,error,kind,window=None,shift=0):
+def gaussian_mixture(edges,mass,y,error,kind,window=None,shift=0,return_selection=False):
     mid=(edges[:,:-1]+edges[:,1:])/2+shift
     half=np.diff(edges,axis=1)/2
     nodes,weights=np.polynomial.legendre.leggauss(3)
@@ -23,8 +23,9 @@ def gaussian_mixture(edges,mass,y,error,kind,window=None,shift=0):
         numerator+=weight*np.sum(mass*(ndtr(z)-a),axis=1)
         selection+=weight*np.sum(mass*(b-a),axis=1)
         density+=weight*np.sum(mass*norm.pdf(z)/error[:,None],axis=1)
-    return (np.divide(numerator,selection,out=np.full(len(y),np.nan),where=selection>1e-12),
+    result=(np.divide(numerator,selection,out=np.full(len(y),np.nan),where=selection>1e-12),
             np.divide(density,selection,out=np.full(len(y),np.nan),where=selection>1e-12))
+    return (*result,selection) if return_selection else result
 
 
 def row_stats(u,density):
@@ -49,7 +50,7 @@ def main():
     for k in ('p_corr','p_err','pop','specdis_sig','spdist_sig'):t[k]=r[k][ix]
     del r
     edges=detail['qrf_mu_edges'];mass=detail['qrf_mu_mass']
-    allrows=[];hist=[];power=[];sensitivity=[]
+    allrows=[];hist=[];power=[];sensitivity=[];sampling=[];sample_ids={}
     for ref in ('gaia','specdis','spdist'):
         qual=np.isin(t['gaia_state'],(4,5)) if ref=='gaia' else np.isfinite(t[ref+'_kpc'])&(t[ref+'_kpc']>0)
         sets={'all':qual,'north':qual&(t['region']=='north'),'south':qual&(t['region']!='north'),
@@ -57,6 +58,7 @@ def main():
               'intermediate_gravity':qual&(t['pop']==4)}
         for label,eligible in sets.items():
             rows=np.flatnonzero(eligible)
+            parent_n=len(rows)
             if len(rows)>P['predictive']['max_rows_per_group']:
                 rows=np.sort(RNG.choice(rows,P['predictive']['max_rows_per_group'],replace=False))
             if not len(rows):continue
@@ -65,6 +67,10 @@ def main():
             good=np.isfinite(error)&(error>0)&np.isfinite(y)
             rows,y,error=rows[good],y[good],error[good]
             if not len(rows):continue
+            sampling.append(dict(reference=ref,group=label,eligible_parent=parent_n,used=len(rows),
+                negative=int((y<0).sum()) if ref=='gaia' else 0))
+            sample_ids[ref+'_'+label+'_ls_id']=t['ls_id'][rows]
+            sample_ids[ref+'_'+label+'_TYPE']=t['TYPE'][rows]
             window=None
             if ref=='gaia':
                 window=np.column_stack((np.where(t['gaia_state'][rows]==4,-np.inf,5),
@@ -85,6 +91,22 @@ def main():
                 allrows.append(dict(reference=ref,group=label,error_multiplier=1,
                      scale_fraction=eps,negative=int((y<0).sum()) if ref=='gaia' else 0,
                      **row_stats(u,dens)))
+            center=10+5*np.log10(t['qrf_quantiles_kpc'][rows,2])
+            for width in P['predictive']['error_multipliers']:
+                scaled=center[:,None]+width*(edges[rows]-center[:,None])
+                u,dens=gaussian_mixture(scaled,mass[rows],y,error,ref,window)
+                allrows.append(dict(reference=ref,group=label,error_multiplier=1,scale_fraction=0,
+                   pdf_width_multiplier=width,median_pdf_width_mu=width*np.median(
+                       5*np.log10(t['qrf_quantiles_kpc'][rows,3]/t['qrf_quantiles_kpc'][rows,1])),
+                   **row_stats(u,dens)))
+            u0,f0,z0=gaussian_mixture(edges[rows],mass[rows],y,error,ref,window,return_selection=True)
+            u1,f1,z1=gaussian_mixture(edges[rows],mass[rows],y,error,ref,window,2.,return_selection=True)
+            for fraction in P['predictive']['wrong_branch_mass']:
+                normalizer=(1-fraction)*z0+fraction*z1
+                u=((1-fraction)*z0*np.nan_to_num(u0)+fraction*z1*np.nan_to_num(u1))/normalizer
+                dens=((1-fraction)*z0*np.nan_to_num(f0)+fraction*z1*np.nan_to_num(f1))/normalizer
+                allrows.append(dict(reference=ref,group=label,error_multiplier=1,scale_fraction=0,
+                   added_far_branch_mass=fraction,**row_stats(u,dens)))
             if ref!='gaia':
                 sigpred=2.5*np.log10(t['qrf_quantiles_kpc'][rows,3]/t['qrf_quantiles_kpc'][rows,1])
                 dm=5*np.log10(t['qrf_quantiles_kpc'][rows,2]/t[ref+'_kpc'][rows])
@@ -98,17 +120,21 @@ def main():
             if label=='all':
                 rr=rows[:256];ee=error[:256]; ww=None if window is None else window[:256]
                 mids=(edges[rr,:-1]+edges[rr,1:])/2
+                half=np.diff(edges[rr],axis=1)/2
+                nodes,quadrature=np.polynomial.legendre.leggauss(3)
+                components=(mids[:,:,None]+half[:,:,None]*nodes).reshape(len(rr),-1)
+                component_mass=(mass[rr,:,None]*(quadrature/2)).reshape(len(rr),-1)
                 for eps in P['predictive']['distance_scale_fraction']:
                     for branch in (0.,*P['predictive']['wrong_branch_mass']):
                         rejections=[];negative=[]
                         for draw in range(P['predictive']['power_replications']):
-                            shifted=mids+5*np.log10(1+eps)
+                            shifted=components+5*np.log10(1+eps)
                             wrong=RNG.random(len(rr))<branch
                             shifted=shifted+wrong[:,None]*2.0
                             center=10**((10-shifted)/5) if ref=='gaia' else shifted
                             lower=np.zeros_like(center) if ww is None else ndtr(ww[:,0,None]-center/ee[:,None])
                             upper=np.ones_like(center) if ww is None else ndtr(ww[:,1,None]-center/ee[:,None])
-                            weights=mass[rr]*(upper-lower)
+                            weights=component_mass*(upper-lower)
                             total=weights.sum(axis=1)
                             valid=total>1e-12
                             if not valid.any():continue
@@ -131,6 +157,8 @@ def main():
     csv_rows(d/'observation_space_pit.csv',hist)
     csv_rows(d/'scale_branch_power.csv',power)
     csv_rows(d/'shared_error_sensitivity.csv',sensitivity)
+    csv_rows(d/'sampling.csv',sampling)
+    atomic_npz(d/'sampled_ids.npz',**sample_ids)
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(1,3,figsize=(7.15,2.85),layout='constrained',sharey=True)
         for ax,ref in zip(axes,('gaia','specdis','spdist')):
@@ -140,7 +168,7 @@ def main():
                 nominal=P['predictive']['nominal_coverage']
                 ax.plot(nominal,[a[f'coverage_{int(100*c)}'] for c in nominal],'o-',color=col,ms=3,label=group.replace('_',' '))
             ax.plot([0,1],[0,1],ls=':',color='.5',lw=.7)
-            ax.set(title=ref.capitalize(),xlabel='Nominal probability',xlim=(0,1),ylim=(0,1))
+            ax.set(title=REFERENCE_NAMES[ref],xlabel='Nominal probability',xlim=(0,1),ylim=(0,1))
         axes[0].set_ylabel('Observation-space central fraction')
         axes[0].legend(fontsize=5.5,frameon=False,loc='upper left')
         figure(d,'measurement_space_calibration',f,allrows)

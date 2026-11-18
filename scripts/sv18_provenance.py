@@ -64,6 +64,9 @@ def main():
             ii=index_join(ids,allref['ls_id']);valid=ii>=0
             src={k:v[ii[valid]] for k,v in allref.items() if k!='TYPE'}
             roles.append((side+'_selection_'+role,src))
+            if role=='held_out':
+                # v3.10 evaluated its score-threshold curves on this cohort.
+                roles.append((side+'_working_rule_development',src))
             csv_rows(d/(side+'_'+role+'_unlinked.csv'),[dict(expected=len(ids),linked=int(valid.sum()),unlinked=int((~valid).sum()))])
     del allref
     v,vm=load_parent();pub,_,_=published(v,vm['outputs']['ids.npy'])

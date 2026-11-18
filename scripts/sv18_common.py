@@ -23,6 +23,9 @@ if not CONFIG.exists():
 P=json.loads(CONFIG.read_text())
 DEST=ROOT/'data/science_validation_20261118'
 RNG=np.random.default_rng(P['seed'])
+REFERENCE_NAMES={'gaia':'Gaia','specdis':'SpecDis','spdist':'SPDist'}
+CODE_HASHES={p.name:sha(p) for p in Path(__file__).parent.glob('sv18_*.py')}
+CODE_HASHES['paper_v2_reference.py']=sha(Path(__file__).with_name('paper_v2_reference.py'))
 
 
 def read(path, fields, inputs):
@@ -54,7 +57,7 @@ def out(stage):
 
 def complete(d, inputs, **metadata):
     save_json(d/'complete.json',dict(job=os.getenv('SLURM_JOB_ID'),inputs=inputs,
-        config=sha(CONFIG),style=check_templates(),**metadata,
+        config=sha(CONFIG),code_hashes=CODE_HASHES,style=check_templates(),**metadata,
         outputs={p.name:sha(p) for p in d.iterdir() if p.is_file() and p.name!='complete.json'}))
 
 
