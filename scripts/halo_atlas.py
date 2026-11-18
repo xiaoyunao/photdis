@@ -182,6 +182,7 @@ def assemble():
 
 
 def render_maps(d,inputs,mapped,areas,depth,ebv,area,masked):
+    fraction=np.clip(area/PIXAREA,0,1)
     annotations=[];redraw={};labels=[f'{a:.1f}–{b:g} kpc' for a,b in C['distance_bins_kpc']]
     for v,version in enumerate(('bright','deep')):
         main=np.array([mapped[v,0,b,'broad'][0] for b in range(5)])
