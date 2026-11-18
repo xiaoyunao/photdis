@@ -151,6 +151,12 @@ def join(pieces):
 
 
 def scan(shard, smoke=False):
+    d=folder('cache_smoke' if smoke else 'cache')/f'{shard:02}'
+    if (d/'complete.json').exists():
+        r=json.loads((d/'complete.json').read_text())
+        assert r['config']==CONFIG_HASH and r['code']['halo_cache.py']==sha(Path(__file__))
+        for name,h in r['outputs'].items():verified(d/name,h)
+        return
     marker=OUT/'inventory/tasks.json'
     tasks=json.loads(marker.read_text())['groups'][shard]
     if smoke:
@@ -172,7 +178,6 @@ def scan(shard, smoke=False):
     t=join(output)
     assert (t['TYPE']=='PSF').all() and len(np.unique(t['ls_id']))==len(t['ls_id'])
     np.testing.assert_allclose(t['mass'][t['pdf']].sum(axis=1),1,rtol=0,atol=2e-7)
-    d=folder('cache_smoke' if smoke else 'cache')/f'{shard:02}'
     d.mkdir(exist_ok=True)
     atomic_npz(d/'photometry.npz',**t)
     csv_rows(d/'admission.csv',ledger)

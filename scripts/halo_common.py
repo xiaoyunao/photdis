@@ -21,6 +21,8 @@ OUT = ROOT / 'data/halo_response_20261118'
 MU = np.round(np.arange(14, 20.001, .1), 1)
 DISTANCE = 10 ** ((MU - 10) / 5)
 RNG = np.random.default_rng(C['seed'])
+CONFIG_HASH = sha(CONFIG)
+CODE_HASHES = {p.name:sha(p) for p in Path(__file__).parent.glob('halo_*.py')}
 
 
 def folder(stage):
@@ -31,8 +33,8 @@ def folder(stage):
 
 def complete(path, inputs, **metadata):
     save_json(path / 'complete.json', dict(
-        job=os.getenv('SLURM_JOB_ID'), config=sha(CONFIG), inputs=inputs,
-        code={p.name:sha(p) for p in Path(__file__).parent.glob('halo_*.py')},
+        job=os.getenv('SLURM_JOB_ID'), config=CONFIG_HASH, inputs=inputs,
+        code=CODE_HASHES,
         style=check_templates(), **metadata,
         outputs={p.name:sha(p) for p in path.iterdir() if p.is_file() and p.name!='complete.json'}))
 
