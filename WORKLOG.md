@@ -2,6 +2,35 @@
 
 ## 2026-11-18 — halo atlas and sequence response
 
+- Completed the full halo-response scope:34 English PDF/PNG science plates,
+  including15 full-footprint map sets. Main atlas:61mu nodes,51,231,975
+  strict PSFs,9,451.5268deg2eligible area;8,598.252deg2after display mask.
+  Public lossless display grids are~97MB;14,007,980,160byte raw cube stays
+  NERSC,sha583f2077ab3401ca49840d532db390340692c2a78dfd0c8ee6a7bfedd2521de9.
+- Scientific results and decisions: manifests/halo_response_20261118/
+  science_decisions.md. Score retains70.96%ordinary versus6.32%metal-poor
+  labelled CMD holdouts. Fixed old sequence reduces faint-system high bias
+  but does not establish the pre-fixed multi-system10%scale requirement.
+  Source/role and continuous-overlap controls retain limited common support.
+- Final per-cluster published reference errors are propagated once per
+  cluster/draw, shared across stars/methods/groups. Their~1%scale uncertainty
+  does not explain the QRF faint-member offsets. GD1 joint curve covariance
+  remains unavailable and is not replaced by independent member errors.
+- Final18-stage source/output verification and exact originalv3.8F02/F03
+  pixel regression passed in61519139. Fifteen targeted scientific tests
+  pass locally; all new Python files compile. All34 science PDFs have
+  one page and English-only extracted labels. Contact-sheet and larger
+  PDF-render checks recorded in delivery/visual_review.json.
+- Plot-grid flattening and standalone coverage-variable errors were fixed;
+  raw counts and original forecasts remained unchanged. Saved-map replay
+  avoids new source scans. Density colorbar tick overlap was corrected.
+  Lossless redraw arrays equal their exact source grids; platform font
+  rendering can differ locally, as measured in the visual review.
+- Code, configuration, small figures, scientific tables, compressed task
+  inventory and redraw data are being committed/synchronized as the final
+  milestone. No production/TeX/Bib edits, new full-catalogue predictions,
+  agents or recurring monitoring. No further science work is implied.
+
 - Allocations 61518416 / 61518711 / 61519139: metadata, native imaging
   recovery, independent Nside512 random areas and all 32 CMD-count shards
   completed. Parent has 51,231,975 unique strict PSFs; no newly recovered

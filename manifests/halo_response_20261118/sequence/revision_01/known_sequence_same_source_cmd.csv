@@ -1,0 +1,7 @@
+system,coordinate,n,outside
+M5,reference,7231,0
+M5,QRF,7231,0
+M13,reference,8254,0
+M13,QRF,8254,5
+GD1_thin,reference,137,0
+GD1_thin,QRF,137,1

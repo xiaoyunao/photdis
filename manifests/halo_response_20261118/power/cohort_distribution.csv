@@ -1,0 +1,10 @@
+reference,sampling,native,n,median_r,mean_parent_index
+gaia,previous_first_rows,north,256,18.712837,2925.72265625
+gaia,uniform_valid_rows,north,223,18.74026,20482.058295964125
+gaia,uniform_valid_rows,south_low,33,18.727737,44474.333333333336
+specdis,previous_first_rows,north,256,18.7256,3060.9765625
+specdis,uniform_valid_rows,north,218,18.63924,21684.032110091743
+specdis,uniform_valid_rows,south_low,38,18.505621,44684.05263157895
+spdist,previous_first_rows,north,256,18.634392,2998.73828125
+spdist,uniform_valid_rows,north,215,18.601824,19843.34418604651
+spdist,uniform_valid_rows,south_low,41,18.687496,45516.07317073171

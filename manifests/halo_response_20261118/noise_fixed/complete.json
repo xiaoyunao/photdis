@@ -1,0 +1,35 @@
+{
+  "job": "61519139",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "reference_census": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669",
+    "data/science_validation_20261118/noise": "142a2078490d0bc4c2dad0740e09d9dd7017786b760cdb090e694167ec11edad",
+    "south_model": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f"
+  },
+  "code": {
+    "halo_noise.py": "393ac2f707b1eb4a7539dd585e19482ee2ca194336c61ef7d552efbacb30384c",
+    "halo_dedup.py": "8a8d962efaa95eef35a8f22bef981fba0874b702e89b9327319ec9ba71575f5e",
+    "halo_recover.py": "6ff0e4703fcf56778e00464f033a2576eb6398dd99d03718f7a725f97b07f3e2",
+    "halo_common.py": "1cd8e28dd8fab4a569e1d106b9c8e0d7bedb2e7b14a48aabdf3994f4a68bcf7c",
+    "halo_native.py": "8d8a2fca544cda107807b4b4d8a475e9bda7e53474e84e4384be64362375c589",
+    "halo_count.py": "4e22101cb5cdd8bc31c0e46d437aab88e2adfb62622a83c10bdb4e4f319d52da",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_filtering.py": "f7cc515452ee65e225832018a7635ae9491bf5579c109e4f716895592295b26a",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_power.py": "ab84aaf30ca15d82284ad2642a81947d44241e86e37de91baa37e25ba518767e",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "exact old source/donor/draw replay; only donor-error clips change model input",
+  "replay_checks": "every donor triplet equals old archive; every clipped prediction and one full draw per bin reproduce original distances/support",
+  "efficiency": "unchanged input rows reuse archived distances/support; full reference-center coverage updated by the exact changed-row contribution",
+  "outputs": {
+    "paired_realizations.npz": "aaa075a088442c67001f34e1c38fff17efd70ab6e40f53eeee6c4a9ffbd209ac",
+    "clip_by_color.csv": "56ceac7c1adfb2efdc1f5a1135f0bc891975346a5d40707e47d4a2b0ae48db7f",
+    "paired_noise_metrics.csv": "b9265ad4d04fc68172243eb212ce784719545dcea42ccfad82a7f81f132970c2",
+    "receivers.npz": "6a3f95f5a7cb910a394ab034de1f1afe0d3aab368bbdc90f0dfdec185f39d3f1",
+    "noise_correction.csv": "656d687f10d55788feef09d00828cd8d43813e1182f6d3a4b0834c494f2f7797"
+  }
+}

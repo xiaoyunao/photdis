@@ -1,0 +1,9 @@
+panel,finite_pixels,below_color,above_color,color_lo,color_hi,linthresh,units
+μ = 14.5 · 7.94 kpc,663367,0,1724,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 15 · 10.00 kpc,663367,0,2242,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 15.5 · 12.59 kpc,663367,0,2481,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 16 · 15.85 kpc,663367,0,3274,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 16.5 · 19.95 kpc,663367,0,4114,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 17 · 25.12 kpc,663367,0,4267,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 17.5 · 31.62 kpc,663367,0,4229,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²
+μ = 18 · 39.81 kpc,663367,0,4204,0.0,2433.996337890625,24.33996337890625,Template-selected PSFs / deg²

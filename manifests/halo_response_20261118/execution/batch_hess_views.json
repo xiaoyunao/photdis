@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "stage": "hess_views",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/hess_views_61519139.log"
+    }
+  ],
+  "job": "61519139"
+}

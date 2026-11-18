@@ -1,20 +1,38 @@
 # PLAN
 
-## Halo response 2026-11-18 — active
+## Halo response 2026-11-18 — completed
 
-Use the full v4 prompt and review 718e2850. First deliver the actual
-61-node full-footprint CMD-filter atlas, independent random areas and
-same-source PDF/score/depth comparisons. Recover the strict southern
-bright imaging parent before any QRF-support filter. Freeze the native
-template/transfer and small-system roles before measuring their outcomes.
-Then close paired noise, conditional-power and foreground-Hess corrections,
-continuous chemical balance, full role links and sequence/seam controls.
+The complete v4 prompt/review718e2850 is delivered in
+manifests/halo_response_20261118 and figures/halo_response_20261118.
+Read its README, science_decisions, figures and execution records before
+resuming. Production remains87069408; prior evidence remains7f9fcc78.
 
-Outputs use halo_response_20261118. Configuration is registered in
-configs/halo_response_20261118.json. Validation requires source/area/count
-conservation, real multi-distance Galactic Aitoff PDF/PNG and redraw arrays,
-small-system result tables and scientific decisions. Computation uses
-allocated NERSC resources and the existing native photometry/PDF caches.
+Completed: full strict-imaging parent recovery and ownership audit;
+independent Nside512 native areas;61-node CMD cube;15 map sets with
+same-source QRF, score, depth, background and residual controls; real
+known-system geometry; fixed sequence/grid/QRF same-star tests; complete
+native/Gaia role links; continuous balance with refitted sky uncertainty;
+paired/max-error and imaging-donor noise controls; corrected branch power;
+foreground Hess/available-blank scans; frozen seam decomposition and
+shared common-reference-scale sensitivity.34science plates are complete.
+
+Validation:18source-bound stages, source/node/PDF/area conservation,
+actual PDF/PNG and exact v3.8F02/F03 pixels;15targeted scientific tests.
+Public compressed grids reproduce physical panel data; raw cube remains
+NERSC with axes, units and checksum in redraw/private_cube.json.
+
+Scientific limits: no universal old-sequence replacement; only a limited
+overlap population identifies the continuous chemical contrast; SpecDis
+5–10kpc balance fails0.1SMD; four available blank targets/segment do not
+calibrate a full-sky search; deep maps are not uniformly complete to23.
+Northern physical template uses a measured supported native transform.
+The score preferentially loses metal-poor stars. Preserve all negative
+results and prior products.
+
+Next recommended step: review this scientific package with the paper
+analysis task. New population-specific calibration/additional information
+requires a new scientific scope. No automatic new fitting, production,
+expansion, timer, manuscript editing or agents remain in this goal.
 
 
 ## Science validation 2026-11-18 — completed

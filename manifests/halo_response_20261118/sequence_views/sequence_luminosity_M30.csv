@@ -1,0 +1,4 @@
+system,method,n,color_strip_lo,color_strip_hi,training_total,training_strip,interval_points_outside_axes,residual_points_outside_axes
+M30,q,94,0.23219375610351561,0.3459644317626953,32768,5685,0,0
+M30,simple,94,0.23219375610351561,0.3459644317626953,32768,5685,0,0
+M30,sequence,94,0.23219375610351561,0.3459644317626953,32768,5685,0,0

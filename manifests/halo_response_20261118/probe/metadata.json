@@ -1,0 +1,1954 @@
+{
+  "parts": 28917,
+  "schemas": {
+    "south_v35": {
+      "identity": {
+        "shape": [
+          199
+        ],
+        "dtype": "int64"
+      },
+      "ls_id": {
+        "shape": [
+          199
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          199
+        ],
+        "dtype": "<U4"
+      },
+      "qrf_supported": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "dwarf_selection_score": {
+        "shape": [
+          199
+        ],
+        "dtype": "float64"
+      },
+      "nominal_qnear": {
+        "shape": [
+          199
+        ],
+        "dtype": "float64"
+      },
+      "nominal_numerical_flag": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "qrf_quantiles_kpc": {
+        "shape": [
+          199,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "qrf_qnear": {
+        "shape": [
+          199
+        ],
+        "dtype": "float64"
+      },
+      "qrf_bins": {
+        "shape": [
+          199,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "qrf_mu_edges": {
+        "shape": [
+          199,
+          281
+        ],
+        "dtype": "float64"
+      },
+      "qrf_mu_mass": {
+        "shape": [
+          199,
+          280
+        ],
+        "dtype": "float64"
+      },
+      "primary": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "strict": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "nominal_evaluated": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "source_id": {
+        "shape": [
+          199
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          199
+        ],
+        "dtype": ">f8"
+      },
+      "DEC": {
+        "shape": [
+          199
+        ],
+        "dtype": ">f8"
+      },
+      "EBV": {
+        "shape": [
+          199
+        ],
+        "dtype": ">f4"
+      },
+      "parent_row": {
+        "shape": [
+          199
+        ],
+        "dtype": "int64"
+      },
+      "photometric_system": {
+        "shape": [
+          199
+        ],
+        "dtype": "<U16"
+      },
+      "observed_r": {
+        "shape": [
+          199
+        ],
+        "dtype": "float32"
+      },
+      "dereddened_g_r": {
+        "shape": [
+          199
+        ],
+        "dtype": "float32"
+      },
+      "band_state": {
+        "shape": [
+          199,
+          6
+        ],
+        "dtype": "int8"
+      },
+      "band_mask": {
+        "shape": [
+          199,
+          6
+        ],
+        "dtype": "bool"
+      },
+      "stratum": {
+        "shape": [
+          199
+        ],
+        "dtype": "int64"
+      },
+      "analog_v34_observable": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      },
+      "reused_v34": {
+        "shape": [
+          199
+        ],
+        "dtype": "bool"
+      }
+    },
+    "south_faint": {
+      "ls_id": {
+        "shape": [
+          1096
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          1096
+        ],
+        "dtype": "<U4"
+      },
+      "source_id": {
+        "shape": [
+          1096
+        ],
+        "dtype": "int64"
+      },
+      "identity": {
+        "shape": [
+          1096
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f8"
+      },
+      "DEC": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f8"
+      },
+      "EBV": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "MASKBITS": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">i4"
+      },
+      "band_mask": {
+        "shape": [
+          1096,
+          6
+        ],
+        "dtype": "bool"
+      },
+      "band_state": {
+        "shape": [
+          1096,
+          6
+        ],
+        "dtype": "int8"
+      },
+      "flux": {
+        "shape": [
+          1096,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "flux_error": {
+        "shape": [
+          1096,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "transmission": {
+        "shape": [
+          1096,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "photometric_system": {
+        "shape": [
+          1096
+        ],
+        "dtype": "<U16"
+      },
+      "r": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "g0": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "psf": {
+        "shape": [
+          1096
+        ],
+        "dtype": "bool"
+      },
+      "parent_row": {
+        "shape": [
+          1096
+        ],
+        "dtype": "int64"
+      },
+      "mag_grz": {
+        "shape": [
+          1096,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "error_grz": {
+        "shape": [
+          1096,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "observed_r": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "dereddened_g_r": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float32"
+      },
+      "north_primary_region": {
+        "shape": [
+          1096
+        ],
+        "dtype": "bool"
+      },
+      "galactic_latitude": {
+        "shape": [
+          1096
+        ],
+        "dtype": "float64"
+      },
+      "row_state": {
+        "shape": [
+          1096
+        ],
+        "dtype": "int8"
+      },
+      "region": {
+        "shape": [
+          1096
+        ],
+        "dtype": "<U11"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_G": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_R": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_Z": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_G": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_R": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_Z": {
+        "shape": [
+          1096
+        ],
+        "dtype": ">f4"
+      }
+    },
+    "south_low": {
+      "ls_id": {
+        "shape": [
+          30
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          30
+        ],
+        "dtype": "<U4"
+      },
+      "source_id": {
+        "shape": [
+          30
+        ],
+        "dtype": "int64"
+      },
+      "identity": {
+        "shape": [
+          30
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f8"
+      },
+      "DEC": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f8"
+      },
+      "EBV": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "MASKBITS": {
+        "shape": [
+          30
+        ],
+        "dtype": ">i4"
+      },
+      "band_mask": {
+        "shape": [
+          30,
+          6
+        ],
+        "dtype": "bool"
+      },
+      "band_state": {
+        "shape": [
+          30,
+          6
+        ],
+        "dtype": "int8"
+      },
+      "flux": {
+        "shape": [
+          30,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "flux_error": {
+        "shape": [
+          30,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "transmission": {
+        "shape": [
+          30,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "photometric_system": {
+        "shape": [
+          30
+        ],
+        "dtype": "<U16"
+      },
+      "r": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "g0": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "psf": {
+        "shape": [
+          30
+        ],
+        "dtype": "bool"
+      },
+      "parent_row": {
+        "shape": [
+          30
+        ],
+        "dtype": "int64"
+      },
+      "mag_grz": {
+        "shape": [
+          30,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "error_grz": {
+        "shape": [
+          30,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "observed_r": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "dereddened_g_r": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "north_primary_region": {
+        "shape": [
+          30
+        ],
+        "dtype": "bool"
+      },
+      "galactic_latitude": {
+        "shape": [
+          30
+        ],
+        "dtype": "float64"
+      },
+      "row_state": {
+        "shape": [
+          30
+        ],
+        "dtype": "int8"
+      },
+      "region": {
+        "shape": [
+          30
+        ],
+        "dtype": "<U11"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_G": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_R": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_Z": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_G": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_R": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_Z": {
+        "shape": [
+          30
+        ],
+        "dtype": ">f4"
+      }
+    },
+    "north": {
+      "ls_id": {
+        "shape": [
+          13833
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          13833
+        ],
+        "dtype": "<U4"
+      },
+      "source_id": {
+        "shape": [
+          13833
+        ],
+        "dtype": "int64"
+      },
+      "identity": {
+        "shape": [
+          13833
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f8"
+      },
+      "DEC": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f8"
+      },
+      "EBV": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "MASKBITS": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">i4"
+      },
+      "band_mask": {
+        "shape": [
+          13833,
+          6
+        ],
+        "dtype": "bool"
+      },
+      "band_state": {
+        "shape": [
+          13833,
+          6
+        ],
+        "dtype": "int8"
+      },
+      "flux": {
+        "shape": [
+          13833,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "flux_error": {
+        "shape": [
+          13833,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "transmission": {
+        "shape": [
+          13833,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "photometric_system": {
+        "shape": [
+          13833
+        ],
+        "dtype": "<U16"
+      },
+      "r": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "g0": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "psf": {
+        "shape": [
+          13833
+        ],
+        "dtype": "bool"
+      },
+      "parent_row": {
+        "shape": [
+          13833
+        ],
+        "dtype": "int64"
+      },
+      "mag_grz": {
+        "shape": [
+          13833,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "error_grz": {
+        "shape": [
+          13833,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "observed_r": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "dereddened_g_r": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float32"
+      },
+      "north_primary_region": {
+        "shape": [
+          13833
+        ],
+        "dtype": "bool"
+      },
+      "galactic_latitude": {
+        "shape": [
+          13833
+        ],
+        "dtype": "float64"
+      },
+      "row_state": {
+        "shape": [
+          13833
+        ],
+        "dtype": "int8"
+      },
+      "region": {
+        "shape": [
+          13833
+        ],
+        "dtype": "<U11"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_G": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_R": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFDEPTH_Z": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_G": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_R": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      },
+      "PSFSIZE_Z": {
+        "shape": [
+          13833
+        ],
+        "dtype": ">f4"
+      }
+    },
+    "seam_south": {
+      "ls_id": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "<U3"
+      },
+      "r": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "float64"
+      },
+      "gr": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "float64"
+      },
+      "state": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "uint8"
+      },
+      "qrf_quantiles_kpc": {
+        "shape": [
+          1951902,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "distance_shell_mass": {
+        "shape": [
+          1951902,
+          4
+        ],
+        "dtype": "float64"
+      },
+      "native_pdf_modes": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "uint8"
+      }
+    },
+    "seam_north": {
+      "ls_id": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "int64"
+      },
+      "TYPE": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "<U3"
+      },
+      "r": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "float64"
+      },
+      "gr": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "float64"
+      },
+      "state": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "uint8"
+      },
+      "qrf_quantiles_kpc": {
+        "shape": [
+          1951902,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "distance_shell_mass": {
+        "shape": [
+          1951902,
+          4
+        ],
+        "dtype": "float64"
+      },
+      "native_pdf_modes": {
+        "shape": [
+          1951902
+        ],
+        "dtype": "uint8"
+      }
+    },
+    "old_noise": {
+      "TYPE": {
+        "shape": [
+          24576
+        ],
+        "dtype": "<U3"
+      },
+      "native": {
+        "shape": [
+          24576
+        ],
+        "dtype": "<U5"
+      },
+      "r_lo": {
+        "shape": [
+          24576
+        ],
+        "dtype": "int64"
+      },
+      "draw": {
+        "shape": [
+          24576
+        ],
+        "dtype": "int64"
+      },
+      "ls_id": {
+        "shape": [
+          24576
+        ],
+        "dtype": "int64"
+      },
+      "supported": {
+        "shape": [
+          24576
+        ],
+        "dtype": "bool"
+      },
+      "distance": {
+        "shape": [
+          24576
+        ],
+        "dtype": "float64"
+      },
+      "reference": {
+        "shape": [
+          24576
+        ],
+        "dtype": "float32"
+      },
+      "sigma_g": {
+        "shape": [
+          24576
+        ],
+        "dtype": "float32"
+      },
+      "sigma_r": {
+        "shape": [
+          24576
+        ],
+        "dtype": "float32"
+      },
+      "sigma_z": {
+        "shape": [
+          24576
+        ],
+        "dtype": "float32"
+      }
+    },
+    "M5": {
+      "TYPE": {
+        "shape": [
+          20805
+        ],
+        "dtype": "<U4"
+      },
+      "ls_id": {
+        "shape": [
+          20805
+        ],
+        "dtype": "int64"
+      },
+      "source_id": {
+        "shape": [
+          20805
+        ],
+        "dtype": "int64"
+      },
+      "identity": {
+        "shape": [
+          20805
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "DEC": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "r": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "g0": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "mag_grz": {
+        "shape": [
+          20805,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "error_grz": {
+        "shape": [
+          20805,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "EBV": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "target": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "training_or_calibration": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "qrf_kpc": {
+        "shape": [
+          20805,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "qrf_mass": {
+        "shape": [
+          20805,
+          78
+        ],
+        "dtype": "float32"
+      },
+      "linear_mu": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "linear_width": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "member": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "phase_box": {
+        "shape": [
+          20805
+        ],
+        "dtype": "<U19"
+      },
+      "MASKBITS": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">i4"
+      },
+      "FITBITS": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">i2"
+      },
+      "REF_CAT": {
+        "shape": [
+          20805
+        ],
+        "dtype": "<U2"
+      },
+      "REF_ID": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">i8"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          20805
+        ],
+        "dtype": ">f4"
+      },
+      "cluster_mask": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "forced_psf": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "fit_gaia": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "gaia_key": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      },
+      "max_fracflux": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float32"
+      },
+      "max_error": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "radius_deg": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "nearest_admitted_arcsec": {
+        "shape": [
+          20805
+        ],
+        "dtype": "float64"
+      },
+      "low_crowding": {
+        "shape": [
+          20805
+        ],
+        "dtype": "bool"
+      }
+    },
+    "M13": {
+      "TYPE": {
+        "shape": [
+          41858
+        ],
+        "dtype": "<U4"
+      },
+      "ls_id": {
+        "shape": [
+          41858
+        ],
+        "dtype": "int64"
+      },
+      "source_id": {
+        "shape": [
+          41858
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "DEC": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "target": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "member": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "g0": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float32"
+      },
+      "r": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float32"
+      },
+      "error_grz": {
+        "shape": [
+          41858,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "qrf_kpc": {
+        "shape": [
+          41858,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "linear_mu": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "phase_box": {
+        "shape": [
+          41858
+        ],
+        "dtype": "<U19"
+      },
+      "training_or_calibration": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "MASKBITS": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">i4"
+      },
+      "FITBITS": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">i2"
+      },
+      "REF_CAT": {
+        "shape": [
+          41858
+        ],
+        "dtype": "<U2"
+      },
+      "REF_ID": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">i8"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          41858
+        ],
+        "dtype": ">f4"
+      },
+      "cluster_mask": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "forced_psf": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "fit_gaia": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "gaia_key": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      },
+      "max_fracflux": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float32"
+      },
+      "max_error": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "radius_deg": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "nearest_admitted_arcsec": {
+        "shape": [
+          41858
+        ],
+        "dtype": "float64"
+      },
+      "low_crowding": {
+        "shape": [
+          41858
+        ],
+        "dtype": "bool"
+      }
+    },
+    "M30": {
+      "TYPE": {
+        "shape": [
+          34434
+        ],
+        "dtype": "<U4"
+      },
+      "ls_id": {
+        "shape": [
+          34434
+        ],
+        "dtype": "int64"
+      },
+      "source_id": {
+        "shape": [
+          34434
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "DEC": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "target": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "member": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "g0": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float32"
+      },
+      "r": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float32"
+      },
+      "error_grz": {
+        "shape": [
+          34434,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "qrf_kpc": {
+        "shape": [
+          34434,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "linear_mu": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "phase_box": {
+        "shape": [
+          34434
+        ],
+        "dtype": "<U19"
+      },
+      "training_or_calibration": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "MASKBITS": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">i4"
+      },
+      "FITBITS": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">i2"
+      },
+      "REF_CAT": {
+        "shape": [
+          34434
+        ],
+        "dtype": "<U2"
+      },
+      "REF_ID": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">i8"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          34434
+        ],
+        "dtype": ">f4"
+      },
+      "cluster_mask": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "forced_psf": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "fit_gaia": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "gaia_key": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      },
+      "max_fracflux": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float32"
+      },
+      "max_error": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "radius_deg": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "nearest_admitted_arcsec": {
+        "shape": [
+          34434
+        ],
+        "dtype": "float64"
+      },
+      "low_crowding": {
+        "shape": [
+          34434
+        ],
+        "dtype": "bool"
+      }
+    },
+    "M92": {
+      "TYPE": {
+        "shape": [
+          27310
+        ],
+        "dtype": "<U4"
+      },
+      "ls_id": {
+        "shape": [
+          27310
+        ],
+        "dtype": "int64"
+      },
+      "source_id": {
+        "shape": [
+          27310
+        ],
+        "dtype": "int64"
+      },
+      "RA": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "DEC": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "target": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "member": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "g0": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float32"
+      },
+      "r0": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float32"
+      },
+      "r": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float32"
+      },
+      "z0": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float32"
+      },
+      "error_grz": {
+        "shape": [
+          27310,
+          3
+        ],
+        "dtype": "float64"
+      },
+      "qrf_kpc": {
+        "shape": [
+          27310,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "linear_mu": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "phase_box": {
+        "shape": [
+          27310
+        ],
+        "dtype": "<U19"
+      },
+      "training_or_calibration": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "MASKBITS": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">i4"
+      },
+      "FITBITS": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">i2"
+      },
+      "REF_CAT": {
+        "shape": [
+          27310
+        ],
+        "dtype": "<U2"
+      },
+      "REF_ID": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">i8"
+      },
+      "FRACFLUX_G": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_R": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">f4"
+      },
+      "FRACFLUX_Z": {
+        "shape": [
+          27310
+        ],
+        "dtype": ">f4"
+      },
+      "cluster_mask": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "forced_psf": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "fit_gaia": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "gaia_key": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      },
+      "max_fracflux": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float32"
+      },
+      "max_error": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "radius_deg": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "nearest_admitted_arcsec": {
+        "shape": [
+          27310
+        ],
+        "dtype": "float64"
+      },
+      "low_crowding": {
+        "shape": [
+          27310
+        ],
+        "dtype": "bool"
+      }
+    }
+  },
+  "domains": {
+    "south_v35": {
+      "region": "south_v35",
+      "sweep": "sweep-080m065-085m060",
+      "side": "south",
+      "release": "11010",
+      "photometric_system": "DECam_DR11",
+      "native_rows": "199",
+      "owned_rows": "199",
+      "native_pdf_rows": "199",
+      "owned_pdf_rows": "199",
+      "photo_file": "data/v3_5/catalog/sweep-080m065-085m060/part_00000.npz",
+      "photo_sha256": "4c7b91ff1f1cf662a21762acb8bc6769cd45fd6938752983697544ae66ff7174",
+      "state_file": "",
+      "state_sha256": "",
+      "pdf_file": "data/v3_5/catalog/sweep-080m065-085m060/part_00000.npz",
+      "pdf_sha256": "4c7b91ff1f1cf662a21762acb8bc6769cd45fd6938752983697544ae66ff7174"
+    },
+    "south_faint": {
+      "region": "south_faint",
+      "sweep": "sweep-055m025-060m020",
+      "side": "south",
+      "release": "11010",
+      "photometric_system": "DECam_DR11",
+      "native_rows": "1096",
+      "owned_rows": "1096",
+      "native_pdf_rows": "576",
+      "owned_pdf_rows": "576",
+      "photo_file": "data/v3_9/expansion/south/photo/sweep-055m025-060m020/000000000_south_faint.npz",
+      "photo_sha256": "84251e36fc2c8d9c476fc22b6a957492a31dfc7bdd292e2ef9f6ddccf1f455c5",
+      "state_file": "data/v3_9/expansion/south/predict/sweep-055m025-060m020/state_000000000_south_faint.npz",
+      "state_sha256": "128979f3e69eae861e69279b3996f9f34b445c8811e343cadaff03931922b083",
+      "pdf_file": "data/v3_9/expansion/south/predict/sweep-055m025-060m020/000000000_south_faint.npz",
+      "pdf_sha256": "a3d8e161cd029ac45c6e1e313784e3a6c420252b53c1f23b234f7ff00962c84f"
+    },
+    "south_low": {
+      "region": "south_low",
+      "sweep": "sweep-065m005-070p000",
+      "side": "south",
+      "release": "11010",
+      "photometric_system": "DECam_DR11",
+      "native_rows": "30",
+      "owned_rows": "30",
+      "native_pdf_rows": "28",
+      "owned_pdf_rows": "28",
+      "photo_file": "data/v3_9/expansion/south/photo/sweep-065m005-070p000/000450000_south_low.npz",
+      "photo_sha256": "6abb065bc8538c2b26ca5729a6da661f888b5cf2ae9214511c80f5e18a6001cf",
+      "state_file": "data/v3_9/expansion/south/predict/sweep-065m005-070p000/state_000450000_south_low.npz",
+      "state_sha256": "0b3388feb293a60cea22d347886c435cb09b12622135e9143244cbc32219a766",
+      "pdf_file": "data/v3_9/expansion/south/predict/sweep-065m005-070p000/000450000_south_low.npz",
+      "pdf_sha256": "5ff3a0db6edf1a0c56f72b0b4207f41adfab651c975a96df8d5f1366eea22a0f"
+    },
+    "north": {
+      "region": "north",
+      "sweep": "sweep-155p040-160p045",
+      "side": "north",
+      "release": "11011",
+      "photometric_system": "BASS_MzLS_DR11",
+      "native_rows": "13833",
+      "owned_rows": "13833",
+      "native_pdf_rows": "5606",
+      "owned_pdf_rows": "5606",
+      "photo_file": "data/v3_9/expansion/north/photo/sweep-155p040-160p045/000000000_north.npz",
+      "photo_sha256": "a8358363ec8febde5c475ee4b87ec922afeb74e7437356cc15b6900c45113f1a",
+      "state_file": "data/v3_9/expansion/north/predict/sweep-155p040-160p045/state_000000000_north.npz",
+      "state_sha256": "66ef3a7c6588e7e0872fbe74e4823fd2965b2eb4662e11a1612371f9b5b7935b",
+      "pdf_file": "data/v3_9/expansion/north/predict/sweep-155p040-160p045/000000000_north.npz",
+      "pdf_sha256": "3ac35050e41182a4a772819f5c824d070bddd78a0dc0fe7a7a52f47f688f4076"
+    }
+  },
+  "native_override_rows": 8,
+  "dotter": {
+    "columns": [
+      "g-r",
+      "Mr"
+    ],
+    "header": {
+      "XTENSION": "BINTABLE",
+      "BITPIX": 8,
+      "NAXIS": 2,
+      "NAXIS1": 16,
+      "NAXIS2": 1000,
+      "PCOUNT": 0,
+      "GCOUNT": 1,
+      "TFIELDS": 2,
+      "TTYPE1": "g-r",
+      "TFORM1": "D",
+      "TTYPE2": "Mr",
+      "TFORM2": "D"
+    },
+    "rows": 1000
+  }
+}

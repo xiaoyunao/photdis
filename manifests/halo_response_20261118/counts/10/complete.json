@@ -1,0 +1,35 @@
+{
+  "job": "61519139",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "data/halo_response_20261118/cache/10": "a1ad167f56ce6ca5a23fa62fbda2ec82d0ea18f7ecbe5013d91237a527094611",
+    "data/halo_response_20261118/parent": "2a1a83541226b2c7ea505dcb6bb0d518dfb907229b1aa16c0346d5ff5d0a277f",
+    "data/halo_response_20261118/native": "81982ee4e6b9019c2c3301b503328f8e003d8b08aa3334cd92da70253f64c47f",
+    "south_classifier": "182d7ae9c522c3573ac1c3cd1e0e714794f8b19030510a6adc7606dffef04fef",
+    "north_classifier": "7fd765439f2c3b04ba669eb936843bab2e08196099c1aff70812ba7fc07feb25"
+  },
+  "code": {
+    "halo_noise.py": "393ac2f707b1eb4a7539dd585e19482ee2ca194336c61ef7d552efbacb30384c",
+    "halo_dedup.py": "8a8d962efaa95eef35a8f22bef981fba0874b702e89b9327319ec9ba71575f5e",
+    "halo_recover.py": "6ff0e4703fcf56778e00464f033a2576eb6398dd99d03718f7a725f97b07f3e2",
+    "halo_common.py": "1cd8e28dd8fab4a569e1d106b9c8e0d7bedb2e7b14a48aabdf3994f4a68bcf7c",
+    "halo_native.py": "8d8a2fca544cda107807b4b4d8a475e9bda7e53474e84e4384be64362375c589",
+    "halo_count.py": "4e22101cb5cdd8bc31c0e46d437aab88e2adfb62622a83c10bdb4e4f319d52da",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_filtering.py": "f7cc515452ee65e225832018a7635ae9491bf5579c109e4f716895592295b26a",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_power.py": "ab84aaf30ca15d82284ad2642a81947d44241e86e37de91baa37e25ba518767e",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "cache": "cache/10",
+  "TYPE": "PSF",
+  "counts_axis": "bright/deep, all/score>=0.8/PDF-common, 61 mu nodes, NESTED celestial pixels",
+  "probability_axis": "same CMD-union source parent with PDF, seven exclusive true PDF integrals including below/above plotted range",
+  "node_sumw2": "equals counts for binary CMD acceptance; broad-channel sumw2 accumulated per source with overlapping nodes retained",
+  "outputs": {
+    "cube.npz": "39aa05afdce78477adcf4050bc34c4a2124174272627c8a84be10f55f6e68c53",
+    "census.csv": "1ca36f40d12c388251ccdda575131d13df2cce8bdb64afbb19bd87862a282abf"
+  }
+}

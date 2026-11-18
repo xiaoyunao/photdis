@@ -1,0 +1,22 @@
+{
+  "path": "/pscratch/sd/y/yunao/photdis_pipeline/data/halo_response_20261118/atlas/cmd_filter_cube.fits",
+  "bytes": 14007980160,
+  "sha256": "583f2077ab3401ca49840d532db390340692c2a78dfd0c8ee6a7bfedd2521de9",
+  "nside": 512,
+  "ordering": "NESTED",
+  "coordsys": "C",
+  "axes": "COUNTS: bright/deep,all/score>=.8/PDF-common,mu,pixel",
+  "units": {
+    "COUNTS": "PSFs",
+    "NODE_SUMW2": "binary weight squared equals node counts",
+    "BROAD_SUMW2": "sum of squared per-source overlapping-channel weights, main gate only",
+    "BROAD_WEIGHTS": "unit-normalized overlap of each broad modulus interval with fixed mu cells",
+    "QRF_MASS": "seven exclusive PDF integrals including below/above displayed range",
+    "NATIVE_AREAS": "deg2: south/north,geometric/unmasked/depth20,pixel",
+    "DEPTH": "mean 0.1mag g/r/z sensitivity",
+    "EBV": "mean random E(B-V)",
+    "PHASE_VISIBLE": "bit0 MS,bit1 SGB-RGB; version,native,mu,pixel",
+    "DISPLAY_MASK": "raw coverage>=.1,smoothed coverage>=.7"
+  },
+  "sample": "strict native imaging PSFs, unique ownership; both versions use shared area counted once per southern bright/faint union"
+}

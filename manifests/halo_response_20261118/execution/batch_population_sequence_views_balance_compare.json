@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "stage": "population",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/population_61519139.log"
+    },
+    {
+      "stage": "sequence_views",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/sequence_views_61519139.log"
+    },
+    {
+      "stage": "balance_compare",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/balance_compare_61519139.log"
+    }
+  ],
+  "job": "61519139"
+}

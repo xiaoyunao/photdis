@@ -1,0 +1,7 @@
+system,coordinate,n,native_south,native_north,outside
+M5,reference,569,569,0,0
+M5,QRF,569,569,0,0
+M13,reference,241,0,241,0
+M13,QRF,241,0,241,0
+GD1_thin,reference,137,0,137,0
+GD1_thin,QRF,137,0,137,1

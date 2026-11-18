@@ -1,0 +1,11 @@
+panel,finite_pixels,below_color,above_color,color_lo,color_hi,linthresh,units
+6.3–10 kpc · imaging,663367,0,3443,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+6.3–10 kpc · score ≥ 0.8,663367,0,96,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+10.0–15 kpc · imaging,663367,0,10282,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+10.0–15 kpc · score ≥ 0.8,663367,0,61,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+15.0–26 kpc · imaging,663367,0,7842,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+15.0–26 kpc · score ≥ 0.8,663367,0,8,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+26.0–50 kpc · imaging,663367,0,5719,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+26.0–50 kpc · score ≥ 0.8,663367,0,0,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+50.0–100 kpc · imaging,663367,0,5503,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²
+50.0–100 kpc · score ≥ 0.8,663367,0,215,0.0,1792.2454833984375,17.922454833984375,Mean template-selected PSFs / deg²

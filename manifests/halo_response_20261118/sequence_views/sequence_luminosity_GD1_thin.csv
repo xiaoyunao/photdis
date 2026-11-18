@@ -1,0 +1,4 @@
+system,method,n,color_strip_lo,color_strip_hi,training_total,training_strip,interval_points_outside_axes,residual_points_outside_axes
+GD1_thin,q,137,0.24772300720214843,0.3543525695800782,65536,960,1,1
+GD1_thin,simple,137,0.24772300720214843,0.3543525695800782,65536,960,0,0
+GD1_thin,sequence,137,0.24772300720214843,0.3543525695800782,65536,960,0,1

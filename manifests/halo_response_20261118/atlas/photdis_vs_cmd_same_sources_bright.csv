@@ -1,0 +1,11 @@
+panel,finite_pixels,below_color,above_color,color_lo,color_hi,linthresh,units
+6.3–10 kpc · mean CMD,663367,0,3302,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+6.3–10 kpc · QRF mass,663367,0,404,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+10.0–15 kpc · mean CMD,663367,0,7911,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+10.0–15 kpc · QRF mass,663367,0,372,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+15.0–26 kpc · mean CMD,663367,0,14887,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+15.0–26 kpc · QRF mass,663367,0,30,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+26.0–50 kpc · mean CMD,663367,0,4180,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+26.0–50 kpc · QRF mass,663367,0,0,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+50.0–100 kpc · mean CMD,663367,0,2083,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²
+50.0–100 kpc · QRF mass,663367,0,0,0.0,561.9061889648438,5.619061889648438,Mean CMD count or integrated PDF mass / deg²

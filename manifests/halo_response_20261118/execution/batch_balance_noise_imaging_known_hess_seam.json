@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "stage": "balance",
+      "exit_code": -15,
+      "log": "data/halo_response_20261118/execution/balance_61519139.log"
+    },
+    {
+      "stage": "noise_imaging",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/noise_imaging_61519139.log"
+    },
+    {
+      "stage": "known",
+      "exit_code": 1,
+      "log": "data/halo_response_20261118/execution/known_61519139.log"
+    },
+    {
+      "stage": "hess",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/hess_61519139.log"
+    },
+    {
+      "stage": "seam",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/seam_61519139.log"
+    }
+  ],
+  "job": "61519139"
+}

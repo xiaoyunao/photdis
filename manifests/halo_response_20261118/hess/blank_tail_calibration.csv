@@ -1,0 +1,4 @@
+segment,target_max,independent_target_regions,exceedances,finite_sample_tail,minimum_resolvable_tail,scope
+1,1.339576701892987,4,2,0.6,0.2,disjoint available target ribbons; same local off field reused
+2,2.796537727435809,4,0,0.2,0.2,disjoint available target ribbons; same local off field reused
+5,1.7925135488785595,4,1,0.4,0.2,disjoint available target ribbons; same local off field reused

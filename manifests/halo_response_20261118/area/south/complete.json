@@ -1,0 +1,29 @@
+{
+  "job": "61518711",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "inventory": "b87d9d8e080b23643c759680d99fefe5a94946a9d970cf12ebf9c3f1f9b25d66",
+    "random_path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits",
+    "bytes": 22995910080,
+    "mtime_ns": 1780757592000000000
+  },
+  "code": {
+    "halo_common.py": "e89ff37bf1682c789d17431e6974289dc8b5cebab96e34ba74de8b9993ba5f31",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "density": 2500.0,
+  "nside": 512,
+  "ordering": "NESTED",
+  "coordsys": "C",
+  "minimum_depth_mag": 20.0,
+  "selection": "native unique geometric ownership, |b|>30, 0<=EBV<0.03, clean mask, positive grz observations and 0.10mag sensitivity at 20mag",
+  "area_scope": "shared geometric/depth area for bright and deep actual strict-photometry selections; faint visibility supplied separately",
+  "outputs": {
+    "randoms.npz": "9d3f72679355141ea8681123530890d627d231c32bf3b83fb8a02b098c361c6e",
+    "area_totals.csv": "b207acab285d8dffe0bf54758489a3c8e919b0502d12a216f1eacc4335b4aec6"
+  }
+}

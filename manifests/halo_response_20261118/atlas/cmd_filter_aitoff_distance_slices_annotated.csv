@@ -1,0 +1,6 @@
+panel,finite_pixels,below_color,above_color,color_lo,color_hi,linthresh,units
+6.3–10 kpc,663367,0,1725,0.0,2436.5732421875,24.365732421875,Mean template-selected PSFs / deg²
+10.0–15 kpc,663367,0,2519,0.0,2436.5732421875,24.365732421875,Mean template-selected PSFs / deg²
+15.0–26 kpc,663367,0,4011,0.0,2436.5732421875,24.365732421875,Mean template-selected PSFs / deg²
+26.0–50 kpc,663367,0,4234,0.0,2436.5732421875,24.365732421875,Mean template-selected PSFs / deg²
+50.0–100 kpc,663367,0,4096,0.0,2436.5732421875,24.365732421875,Mean template-selected PSFs / deg²

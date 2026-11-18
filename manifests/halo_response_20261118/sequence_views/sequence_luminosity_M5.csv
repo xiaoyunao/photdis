@@ -1,0 +1,4 @@
+system,method,n,color_strip_lo,color_strip_hi,training_total,training_strip,interval_points_outside_axes,residual_points_outside_axes
+M5,q,569,0.2944355010986328,0.48761749267578125,32768,9567,0,6
+M5,simple,569,0.2944355010986328,0.48761749267578125,32768,9567,0,0
+M5,sequence,569,0.2944355010986328,0.48761749267578125,32768,9567,0,6

@@ -1,0 +1,12 @@
+role,expected,linked,unlinked
+south_selection_training,36208,36208,0
+south_selection_calibration,862,862,0
+south_selection_held_out,26066,26066,0
+north_selection_training,248991,248991,0
+north_selection_calibration,83401,83401,0
+north_selection_held_out,76313,76313,0
+north_calibration,8000,8000,0
+north_class_fit,27872,27872,0
+north_gaia_fit,61440,61440,0
+north_specdis_fit,4096,4096,0
+north_test,12000,12000,0

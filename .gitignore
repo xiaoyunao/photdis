@@ -64,3 +64,7 @@ archives/
 # Compact v3.1 diagnostic evidence; source catalogs remain under ignored data/.
 !manifests/v3_1/**/*.csv
 !manifests/v3_2/**/*.csv
+
+# Exact compact plotted grids for the completed halo atlas (raw cubes stay private).
+!manifests/halo_response_20261118/redraw/*.npz
+!manifests/halo_response_20261118/**/*.csv

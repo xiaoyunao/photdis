@@ -1,0 +1,24 @@
+{
+  "job": "61518711",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "release": "2c5be245927a2bfd824fc2b554c7d41f92cabbf5c92aee935dc0cbbeb7bb8b51",
+    "index": "95137745e9d0c2e3ee41a1946cb3a210e596a8991fae123991974f7ae149bf75",
+    "seam": "a7537e2487aff4828cea839f0f3adebc1d71dd4e317557b34765ec8fe9dab9b9",
+    "config": "d2341fd94f27d136699598af554a506af338063fdc9a09c90f5851b51c6b0024",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f"
+  },
+  "code": {
+    "halo_common.py": "e89ff37bf1682c789d17431e6974289dc8b5cebab96e34ba74de8b9993ba5f31",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "tasks": 967,
+  "groups": 32,
+  "outputs": {
+    "tasks.json": "f31b456128e51fa2bba44966d613af74adc871b7fd32368cdf957269e1305cbf"
+  }
+}

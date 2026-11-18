@@ -1,0 +1,386 @@
+{
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "data/halo_response_20261118/counts/00": "891016ee53fc331f7a5d05a75016af74e2c2f1cf41a0f0bccdaaa27de0f5dc5f",
+    "data/halo_response_20261118/counts/01": "ad9f81c7d1493f8ea03f05b72e140de95dc7b63527a2925db1e2013dec95d6e2",
+    "data/halo_response_20261118/counts/02": "2e8ca5fcf3107150af87bab98fe9fb68e9bec31c986baa8545eb83556fb36282",
+    "data/halo_response_20261118/counts/03": "993972945f98f16f1f78bb4e190b076a4eba18486f471ba01ca548ed64c6eb94",
+    "data/halo_response_20261118/counts/04": "caaeaf43445006cff711f433993a717ae076ed2fd1bb1afd996cb162d5ff36a6",
+    "data/halo_response_20261118/counts/05": "584ac2fbcfa6abbf56f26a341c8994b6bb294ce1ff8d17e695500c27b8ef711a",
+    "data/halo_response_20261118/counts/06": "1c1ebcafa40f46e2c677453e7ef755022c12a232ee67dd8c82802ff9cf332395",
+    "data/halo_response_20261118/counts/07": "a83ff3b71cbf460135e113810d4830570d99ce76ef800856d6374798bf5f2085",
+    "data/halo_response_20261118/counts/08": "57c84001dbcb7c496e3634929208232817b7aca8049fb783dc7a70f4a4c2b828",
+    "data/halo_response_20261118/counts/09": "a3dc4b75b100a4b33576a32a20a9f4db11a5713a4351414833f8d4dc4d600826",
+    "data/halo_response_20261118/counts/10": "11d2c3170cdaae5c1c7b508a316cd2039d064da71dd138f6b3fc5b80b7e13612",
+    "data/halo_response_20261118/counts/11": "6328c10f5f1a2bcdc14a162001657cbc9019c1fda1b81e862720e25c7bc698ba",
+    "data/halo_response_20261118/counts/12": "6765003632c2de95715cae835f82a24b3d38eafdc9c3c830f1166ec01b05d9e4",
+    "data/halo_response_20261118/counts/13": "b55015360d03cf22fd09349acc469299e0362a317a7ba220af005b182a84da84",
+    "data/halo_response_20261118/counts/14": "8fcdaa3a3f31f6573cce6b7495a17fef836125ee67bcdc038a026e8292bdc2d2",
+    "data/halo_response_20261118/counts/15": "ba99d20f1ff8de9d2ddf863b091e0df2d489b74001db73c789bd6ad6697bb552",
+    "data/halo_response_20261118/counts/16": "78cc66cef0406f150cb4e571642124708f7a2fc418ea8b3fb95db9359f47ed09",
+    "data/halo_response_20261118/counts/17": "2aaec1c247781f3e15ef86570a930e2958be5470726ccea0aa7e85820e64bf6a",
+    "data/halo_response_20261118/counts/18": "1f14379c85505f922973dc35d5fa599a5665d6335ceadb5172d6947a510c44b4",
+    "data/halo_response_20261118/counts/19": "4deeafef23fbfd97601a5651d937a37a580cdc0dc23cb154bc604cc0ec4b655d",
+    "data/halo_response_20261118/counts/20": "c6874d8b49b47b3c3b6b505dd7214ca1dbc988187df98ddf5b1d5b33575d507e",
+    "data/halo_response_20261118/counts/21": "1cb00b757d32bf1f24b16618f9938a75ff63ef1be4e398237f5e0e037083c1ec",
+    "data/halo_response_20261118/counts/22": "ebb751762d082bc61c335453dfdbe4496aec1eb1549d515fa632dbc4e621bbf0",
+    "data/halo_response_20261118/counts/23": "dba4cecf1be7efb843b408cbfb6f81cae8026c0327fbd2a433b44e34174ff1f3",
+    "data/halo_response_20261118/counts/24": "b1e2e61f3b9eb903fff249b6ba4d1de3958f345f0156bafcadf8852434c3f48b",
+    "data/halo_response_20261118/counts/25": "e9ca7a8dd9d9c4c13e484787c78bd505cfc38c7f985dbaaa50b061c1ebb735f2",
+    "data/halo_response_20261118/counts/26": "4c17f1ca8fb3b51d33f14849c627ec43388b7586645ef60e49981524f63f2e9b",
+    "data/halo_response_20261118/counts/27": "2777f238a479c813df6ac925a2bc1a6de83a05ec8b0f4312fd4335aed3c37523",
+    "data/halo_response_20261118/counts/28": "2197f6f2701eeebe40f327af6875a61255582497eecd3e295643d31bce0f9b5a",
+    "data/halo_response_20261118/counts/29": "ceaea07621d854725b296f081d3862d7e5a5cba5f265520df542956fb1244860",
+    "data/halo_response_20261118/counts/30": "816a02ac07753344f196a957b21c376836b38cef7da4d138dc353d703be5368e",
+    "data/halo_response_20261118/counts/31": "d7b773f32fbd30d8e93bd02b0ce338afe917f86f039485f6837ff40bea3cca10",
+    "data/halo_response_20261118/area/south": "881baae20fdef11e850d11156155dac04a40dd066b0696c6fd5384c57b1bb998",
+    "data/halo_response_20261118/area/north": "c920311e0499090209ffbad565bcd31248af65d1abe7f6b8270e108bf3138b1e",
+    "data/halo_response_20261118/native": "81982ee4e6b9019c2c3301b503328f8e003d8b08aa3334cd92da70253f64c47f",
+    "render_previous_complete": "11e82d739a9b832b5a6f6d147a0681826d71a4e61992954362afa0fd4c91ac3f"
+  },
+  "nside": 512,
+  "ordering": "NESTED",
+  "coordinates": "C",
+  "display": "Galactic Aitoff, l=0 center, longitude increases left",
+  "geometric_deg2": 9460.365200000004,
+  "unmasked_deg2": 9451.53,
+  "depth20_deg2": 9451.5268,
+  "display_deg2": 8598.252,
+  "sigma_deg": 0.3,
+  "lmax": 1024,
+  "background_sigma_deg": 5,
+  "depth_scope": "Both observed-grz<20 and <23 use the independent grz depth20 footprint; deep selection is not uniformly complete to 23.",
+  "visibility_scope": "bit0 MS / bit1 SGB-RGB has at least one supported template point at mean pixel sensitivity and observed limit; not an IMF-weighted completeness",
+  "templates": "DECam MIST1.0 12Gyr Z=.0001; northern same-star empirical native transform with finite color support",
+  "display_clipping": [
+    {
+      "panel": "6.3\u201310 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 1575,
+      "color_lo": 0.0,
+      "color_hi": 638.8619384765625,
+      "linthresh": 6.388619384765625,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "10.0\u201315 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 3337,
+      "color_lo": 0.0,
+      "color_hi": 638.8619384765625,
+      "linthresh": 6.388619384765625,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "15.0\u201326 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 7811,
+      "color_lo": 0.0,
+      "color_hi": 638.8619384765625,
+      "linthresh": 6.388619384765625,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "26.0\u201350 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 2101,
+      "color_lo": 0.0,
+      "color_hi": 638.8619384765625,
+      "linthresh": 6.388619384765625,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "50.0\u2013100 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 1761,
+      "color_lo": 0.0,
+      "color_hi": 638.8619384765625,
+      "linthresh": 6.388619384765625,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "6.3\u201310 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 1725,
+      "color_lo": 0.0,
+      "color_hi": 2436.5732421875,
+      "linthresh": 24.365732421875,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "10.0\u201315 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 2519,
+      "color_lo": 0.0,
+      "color_hi": 2436.5732421875,
+      "linthresh": 24.365732421875,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "15.0\u201326 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 4011,
+      "color_lo": 0.0,
+      "color_hi": 2436.5732421875,
+      "linthresh": 24.365732421875,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "26.0\u201350 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 4234,
+      "color_lo": 0.0,
+      "color_hi": 2436.5732421875,
+      "linthresh": 24.365732421875,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    },
+    {
+      "panel": "50.0\u2013100 kpc",
+      "finite_pixels": 663367,
+      "below_color": 0,
+      "above_color": 4096,
+      "color_lo": 0.0,
+      "color_hi": 2436.5732421875,
+      "linthresh": 24.365732421875,
+      "units": "Mean template-selected PSFs / deg\u00b2"
+    }
+  ],
+  "cube_path": "/pscratch/sd/y/yunao/photdis_pipeline/data/halo_response_20261118/atlas/cmd_filter_cube.fits",
+  "cube_sha256": "583f2077ab3401ca49840d532db390340692c2a78dfd0c8ee6a7bfedd2521de9",
+  "smoothing_negative_pixels": [
+    {
+      "key": "(0, 0, 0, 'broad')",
+      "n": 1028291
+    },
+    {
+      "key": "(0, 0, 1, 'broad')",
+      "n": 1027907
+    },
+    {
+      "key": "(0, 0, 2, 'broad')",
+      "n": 1026700
+    },
+    {
+      "key": "(0, 0, 3, 'broad')",
+      "n": 1025414
+    },
+    {
+      "key": "(0, 0, 4, 'broad')",
+      "n": 1026254
+    },
+    {
+      "key": "(0, 1, 0, 'broad')",
+      "n": 1029462
+    },
+    {
+      "key": "(0, 1, 1, 'broad')",
+      "n": 1028041
+    },
+    {
+      "key": "(0, 1, 2, 'broad')",
+      "n": 1028205
+    },
+    {
+      "key": "(0, 1, 3, 'broad')",
+      "n": 1028158
+    },
+    {
+      "key": "(0, 1, 4, 'broad')",
+      "n": 1027313
+    },
+    {
+      "key": "(0, 2, 0, 'broad')",
+      "n": 1028107
+    },
+    {
+      "key": "(0, 2, 1, 'broad')",
+      "n": 1027520
+    },
+    {
+      "key": "(0, 2, 2, 'broad')",
+      "n": 1026436
+    },
+    {
+      "key": "(0, 2, 3, 'broad')",
+      "n": 1026088
+    },
+    {
+      "key": "(0, 2, 4, 'broad')",
+      "n": 1026248
+    },
+    {
+      "key": "(0, 0, 5, 'fixed')",
+      "n": 1029068
+    },
+    {
+      "key": "(0, 0, 10, 'fixed')",
+      "n": 1029532
+    },
+    {
+      "key": "(0, 0, 15, 'fixed')",
+      "n": 1027756
+    },
+    {
+      "key": "(0, 0, 20, 'fixed')",
+      "n": 1027463
+    },
+    {
+      "key": "(0, 0, 25, 'fixed')",
+      "n": 1027251
+    },
+    {
+      "key": "(0, 0, 30, 'fixed')",
+      "n": 1026625
+    },
+    {
+      "key": "(0, 0, 35, 'fixed')",
+      "n": 1026411
+    },
+    {
+      "key": "(0, 0, 40, 'fixed')",
+      "n": 1026987
+    },
+    {
+      "key": "(0, 3, 0, 'qrf')",
+      "n": 1028281
+    },
+    {
+      "key": "(0, 3, 1, 'qrf')",
+      "n": 1029840
+    },
+    {
+      "key": "(0, 3, 2, 'qrf')",
+      "n": 1029230
+    },
+    {
+      "key": "(0, 3, 3, 'qrf')",
+      "n": 1034059
+    },
+    {
+      "key": "(0, 3, 4, 'qrf')",
+      "n": 1163729
+    },
+    {
+      "key": "(1, 0, 0, 'broad')",
+      "n": 1025958
+    },
+    {
+      "key": "(1, 0, 1, 'broad')",
+      "n": 1024508
+    },
+    {
+      "key": "(1, 0, 2, 'broad')",
+      "n": 1024004
+    },
+    {
+      "key": "(1, 0, 3, 'broad')",
+      "n": 1025395
+    },
+    {
+      "key": "(1, 0, 4, 'broad')",
+      "n": 1024523
+    },
+    {
+      "key": "(1, 1, 0, 'broad')",
+      "n": 1026696
+    },
+    {
+      "key": "(1, 1, 1, 'broad')",
+      "n": 1026997
+    },
+    {
+      "key": "(1, 1, 2, 'broad')",
+      "n": 1027653
+    },
+    {
+      "key": "(1, 1, 3, 'broad')",
+      "n": 1027882
+    },
+    {
+      "key": "(1, 1, 4, 'broad')",
+      "n": 1026021
+    },
+    {
+      "key": "(1, 2, 0, 'broad')",
+      "n": 1025470
+    },
+    {
+      "key": "(1, 2, 1, 'broad')",
+      "n": 1024554
+    },
+    {
+      "key": "(1, 2, 2, 'broad')",
+      "n": 1024061
+    },
+    {
+      "key": "(1, 2, 3, 'broad')",
+      "n": 1024684
+    },
+    {
+      "key": "(1, 2, 4, 'broad')",
+      "n": 1024407
+    },
+    {
+      "key": "(1, 0, 5, 'fixed')",
+      "n": 1026385
+    },
+    {
+      "key": "(1, 0, 10, 'fixed')",
+      "n": 1025152
+    },
+    {
+      "key": "(1, 0, 15, 'fixed')",
+      "n": 1024355
+    },
+    {
+      "key": "(1, 0, 20, 'fixed')",
+      "n": 1024258
+    },
+    {
+      "key": "(1, 0, 25, 'fixed')",
+      "n": 1024712
+    },
+    {
+      "key": "(1, 0, 30, 'fixed')",
+      "n": 1025307
+    },
+    {
+      "key": "(1, 0, 35, 'fixed')",
+      "n": 1025722
+    },
+    {
+      "key": "(1, 0, 40, 'fixed')",
+      "n": 1025732
+    },
+    {
+      "key": "(1, 3, 0, 'qrf')",
+      "n": 1025424
+    },
+    {
+      "key": "(1, 3, 1, 'qrf')",
+      "n": 1025248
+    },
+    {
+      "key": "(1, 3, 2, 'qrf')",
+      "n": 1025241
+    },
+    {
+      "key": "(1, 3, 3, 'qrf')",
+      "n": 1026162
+    },
+    {
+      "key": "(1, 3, 4, 'qrf')",
+      "n": 1028076
+    }
+  ],
+  "redraw": "Final panel NPZs store actual Galactic display-grid values, edges and CSV color scales; full raw counts in private cube."
+}

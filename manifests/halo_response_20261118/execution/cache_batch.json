@@ -1,0 +1,175 @@
+{
+  "job": "61518711",
+  "results": [
+    {
+      "stage": "area_north",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/area_north_61518711.log"
+    },
+    {
+      "stage": "area_south",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/area_south_61518711.log"
+    },
+    {
+      "stage": "cache_00",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_00_61518711.log"
+    },
+    {
+      "stage": "cache_01",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_01_61518711.log"
+    },
+    {
+      "stage": "cache_02",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_02_61518711.log"
+    },
+    {
+      "stage": "cache_03",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_03_61518711.log"
+    },
+    {
+      "stage": "cache_04",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_04_61518711.log"
+    },
+    {
+      "stage": "cache_05",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_05_61518711.log"
+    },
+    {
+      "stage": "cache_06",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_06_61518711.log"
+    },
+    {
+      "stage": "cache_07",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_07_61518711.log"
+    },
+    {
+      "stage": "cache_08",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_08_61518711.log"
+    },
+    {
+      "stage": "cache_09",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_09_61518711.log"
+    },
+    {
+      "stage": "cache_10",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_10_61518711.log"
+    },
+    {
+      "stage": "cache_11",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_11_61518711.log"
+    },
+    {
+      "stage": "cache_12",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_12_61518711.log"
+    },
+    {
+      "stage": "cache_13",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_13_61518711.log"
+    },
+    {
+      "stage": "cache_14",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_14_61518711.log"
+    },
+    {
+      "stage": "cache_15",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_15_61518711.log"
+    },
+    {
+      "stage": "cache_16",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_16_61518711.log"
+    },
+    {
+      "stage": "cache_17",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_17_61518711.log"
+    },
+    {
+      "stage": "cache_18",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_18_61518711.log"
+    },
+    {
+      "stage": "cache_19",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_19_61518711.log"
+    },
+    {
+      "stage": "cache_20",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_20_61518711.log"
+    },
+    {
+      "stage": "cache_21",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_21_61518711.log"
+    },
+    {
+      "stage": "cache_22",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_22_61518711.log"
+    },
+    {
+      "stage": "cache_23",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_23_61518711.log"
+    },
+    {
+      "stage": "cache_24",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_24_61518711.log"
+    },
+    {
+      "stage": "cache_25",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_25_61518711.log"
+    },
+    {
+      "stage": "cache_26",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_26_61518711.log"
+    },
+    {
+      "stage": "cache_27",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_27_61518711.log"
+    },
+    {
+      "stage": "cache_28",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_28_61518711.log"
+    },
+    {
+      "stage": "cache_29",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_29_61518711.log"
+    },
+    {
+      "stage": "cache_30",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_30_61518711.log"
+    },
+    {
+      "stage": "cache_31",
+      "exit_code": 0,
+      "log": "data/halo_response_20261118/execution/cache_31_61518711.log"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "job": "61519139",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "data/halo_response_20261118/sequence": "342566e95d52c7e234c5960ad931a2908ac2e5f54d03a6e5eb28ddb17b6535eb",
+    "data/halo_response_20261118/native": "81982ee4e6b9019c2c3301b503328f8e003d8b08aa3334cd92da70253f64c47f",
+    "data/science_validation_20261118/benchmark": "e882890f1b8d27914d15a32524c9ab07bf4aa629165143d4a9927c1b2be23d7b"
+  },
+  "code": {
+    "halo_hess.py": "bf5c7d626903cdc4d3ccd3fa34df6233e26f902b5941d02a504d07091b282d8a",
+    "halo_noise.py": "393ac2f707b1eb4a7539dd585e19482ee2ca194336c61ef7d552efbacb30384c",
+    "halo_balance_compare.py": "a78ae3915824e7072560790b36a079a63b96190b8838890ac45c6312fdfa9bcb",
+    "halo_dedup.py": "8a8d962efaa95eef35a8f22bef981fba0874b702e89b9327319ec9ba71575f5e",
+    "halo_seam.py": "584a7c895c3f0499d7392e336298bd5f3b12d12b1cf2e6301e3d9f1f8e6309de",
+    "halo_recover.py": "6ff0e4703fcf56778e00464f033a2576eb6398dd99d03718f7a725f97b07f3e2",
+    "halo_stages.py": "d641c033a31a9e6e0c05bd14dc651da0eea48554b9eb364eb81cf7993db0cdfd",
+    "halo_roles.py": "cf1e9a411c46cc0067a45a11802c654d40e53bba931b0d73a9eda93996d91885",
+    "halo_noise_imaging.py": "6cce6d164d8668217e7328b181ddaa5f37a2d9e841f1c27cfd5fbc172bcabe8e",
+    "halo_atlas.py": "196e9c10715a186bef115b6a2708c90551c91c5d020b9a5233c71a5ed9299f66",
+    "halo_known.py": "2852c2f07bdc2c132798acaf7f70ce81e610993b293915bd088d4eaf6fbe5b13",
+    "halo_common.py": "1cd8e28dd8fab4a569e1d106b9c8e0d7bedb2e7b14a48aabdf3994f4a68bcf7c",
+    "halo_balance.py": "8f433914b6df88ceebb80a741bf0485a7a03a2b31471241b84cc8291f591ceb4",
+    "halo_sequence.py": "0192522150082e5a27ec99c118d0bc025e7ee13f5528bb004e03ac39c3abadc9",
+    "halo_native.py": "8d8a2fca544cda107807b4b4d8a475e9bda7e53474e84e4384be64362375c589",
+    "halo_count.py": "4e22101cb5cdd8bc31c0e46d437aab88e2adfb62622a83c10bdb4e4f319d52da",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_sequence_views.py": "65fc9e3bcc74f9e80557f06f3ef7b6fd83545364271ef16436c016446000ff08",
+    "halo_filtering.py": "f7cc515452ee65e225832018a7635ae9491bf5579c109e4f716895592295b26a",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_power.py": "ab84aaf30ca15d82284ad2642a81947d44241e86e37de91baa37e25ba518767e",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_population.py": "e3db0bfa6a4022b7fb0e80d068fc943eba3f17c3e95b3ec0704b4cc991e66551",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "same source identities for reference positions and model luminosity intervals; QRF/grid/sequence 16-84 intervals and medians, not a reconstructed full PDF",
+  "training_scope": "original same-label independent object counts and class labels retained; overlap/development history follows sequence role records",
+  "outputs": {
+    "conditional_luminosity_census.csv": "e0dfeffe72f5ca4ec7ddf68e6f4e38259633a98e59c88e54371fc4132621c819",
+    "sequence_luminosity_M30.pdf": "e583285e21df9c67eba1cc1146f0576ecbde402ff39b68da9e7359687a6b388b",
+    "sequence_luminosity_M30.png": "1b660f8d9a728c0e6d14ff126d1eb84ad65f1f0ef293b356ec9ec2350c3b0eda",
+    "sequence_luminosity_M13.png": "e22bad4383d7657c5d2a0d076fae2e008d165c0e4e5d049043df41de4786bd84",
+    "sequence_luminosity_GD1_thin.csv": "6e93f3dfc5f36e133f4f02d3a43b2ba3fdde2038ce8d463fc3eefcabc7b3cb16",
+    "sequence_luminosity_M5.pdf": "e6f819f9090296599b8abe98122ca2c1be6f1f9875c6e439f27d488867da27cb",
+    "sequence_luminosity_GD1_thin.pdf": "5919e40bece6fe55e781ef7d92516a20fdf4595236d11109d2f2ca228425030a",
+    "sequence_luminosity_M30.csv": "3bbafa388a53a5a1b8bfa30cd382456cb919753019a7580df36e2cd3030935ad",
+    "sequence_luminosity_M13.pdf": "bf78246465be6a99efd3840cc9f5bdab5c58f6b1f825714e69b17c50df01fabb",
+    "sequence_luminosity_M13.csv": "c6cdc65330f12ba9a1e5260d747eda48af25f7fa0a4d48a5d10ea305fce82481",
+    "sequence_luminosity_GD1_thin.png": "2665e498bc30780d023e5cf1ff83b4420abf1009dabdd0c2b19c31b58dc80303",
+    "sequence_luminosity_M5.png": "8282f7469e75265df5199e9f1c5368a6d089c6841eaaba3e9b7899ccaa8622bb",
+    "sequence_luminosity_M5.csv": "8f6b0d2ed9b4cf2afeef5542f6b5d0d2b8e27aa8d51d87f97b9185535de247bb"
+  }
+}

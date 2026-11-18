@@ -1,0 +1,47 @@
+{
+  "job": "61519139",
+  "config": "a80fa7aaf3a9c1232c786cdfec2b107364399b702544c191c75a39d97d69d52c",
+  "inputs": {
+    "reference_config": "d97688d61e274015069e707ac6e76c86580220ac17e6c9b1a6f2dfa1c4c4fd58",
+    "data/halo_response_20261118/sequence": "9dc15e0f26708edbd337c4f2907bab086361a3901d98ba46f03bafdcc49d1953"
+  },
+  "code": {
+    "halo_redraw.py": "f8b12485832be1d0eab0cf5305446375159cea022b49f92af572c7eaaaebd255",
+    "halo_hess.py": "bf5c7d626903cdc4d3ccd3fa34df6233e26f902b5941d02a504d07091b282d8a",
+    "halo_noise.py": "393ac2f707b1eb4a7539dd585e19482ee2ca194336c61ef7d552efbacb30384c",
+    "halo_balance_compare.py": "a78ae3915824e7072560790b36a079a63b96190b8838890ac45c6312fdfa9bcb",
+    "halo_pack.py": "44f4ce742ab7e884be0aff4e04b9e05a66ec52507b7c88e17daf9dd58b21a5b8",
+    "halo_dedup.py": "8a8d962efaa95eef35a8f22bef981fba0874b702e89b9327319ec9ba71575f5e",
+    "halo_seam.py": "584a7c895c3f0499d7392e336298bd5f3b12d12b1cf2e6301e3d9f1f8e6309de",
+    "halo_recover.py": "6ff0e4703fcf56778e00464f033a2576eb6398dd99d03718f7a725f97b07f3e2",
+    "halo_stages.py": "d641c033a31a9e6e0c05bd14dc651da0eea48554b9eb364eb81cf7993db0cdfd",
+    "halo_roles.py": "cf1e9a411c46cc0067a45a11802c654d40e53bba931b0d73a9eda93996d91885",
+    "halo_noise_imaging.py": "6cce6d164d8668217e7328b181ddaa5f37a2d9e841f1c27cfd5fbc172bcabe8e",
+    "halo_hess_views.py": "03a038cc725305c723b223d37c96341f3a4369477d8d51d48d6a0a7609dad8ab",
+    "halo_atlas.py": "2f2e6e9dbed91644a071035a91a0743333a65abde5fc26212fea1985af1497a1",
+    "halo_verify.py": "05800a6ece4e76dbd02f5413e128aa3091436aae846fc0c0cd8be275255df9cc",
+    "halo_reference_scales.py": "414a8b9e19a19b50d3e494b60c8ac2402bc43b9b9e1c4a72a5e07156558cf9be",
+    "halo_known.py": "2852c2f07bdc2c132798acaf7f70ce81e610993b293915bd088d4eaf6fbe5b13",
+    "halo_common.py": "1cd8e28dd8fab4a569e1d106b9c8e0d7bedb2e7b14a48aabdf3994f4a68bcf7c",
+    "halo_balance.py": "8f433914b6df88ceebb80a741bf0485a7a03a2b31471241b84cc8291f591ceb4",
+    "halo_sequence.py": "716c849c888cbcd365535166dec3f16424de5780981f85aafb411648251be86e",
+    "halo_native.py": "8d8a2fca544cda107807b4b4d8a475e9bda7e53474e84e4384be64362375c589",
+    "halo_count.py": "4e22101cb5cdd8bc31c0e46d437aab88e2adfb62622a83c10bdb4e4f319d52da",
+    "halo_probe.py": "00e1ce0a7f062b7084c1154adbee3bcf6ebb778c742c489ad0f9c7cac700c20f",
+    "halo_sequence_views.py": "65fc9e3bcc74f9e80557f06f3ef7b6fd83545364271ef16436c016446000ff08",
+    "halo_filtering.py": "f7cc515452ee65e225832018a7635ae9491bf5579c109e4f716895592295b26a",
+    "halo_driver.py": "9e74427d91a1d2bc39a23735f81efdcbd9e063cc9d4176f4b33de18d0a9a63e2",
+    "halo_power.py": "ab84aaf30ca15d82284ad2642a81947d44241e86e37de91baa37e25ba518767e",
+    "halo_cache.py": "31d70c3c372537709998f0d88a82682c93ad17cb833ff910bc8c4a4da1f7c20d",
+    "halo_population.py": "e3db0bfa6a4022b7fb0e80d068fc943eba3f17c3e95b3ec0704b4cc991e66551",
+    "halo_randoms.py": "eaf285856c7834c05e62b23adc6938f32f99a363cd33d74f6e05dc29b2f14146"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "published_reference_source": "https://academic.oup.com/view-large/353698133",
+  "common_error": "one common Gaussian distance draw per cluster reused across methods and magnitude groups; never divided by sqrt(N)",
+  "GD1": "cached distance-curve centers do not contain a joint scale covariance; no invented independent per-member errors",
+  "scope": "supplemental uncertainty sensitivity, no new member selection or zero-point fitting",
+  "outputs": {
+    "cluster_common_scale_sensitivity.csv": "deb15ac04000e8374d65de294209616d1abcadf4852d5bdf274a60f1c618039e"
+  }
+}

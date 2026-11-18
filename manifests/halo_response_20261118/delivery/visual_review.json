@@ -1,0 +1,247 @@
+{
+  "plates": [
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_distance_slices.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "58ca1481d87b17048f2e3af6d67e60dfdb2a27a25d89e2a2268bc4ebc3c3aad2",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_distance_slices_annotated.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "6ab36592a88276cda4fc1dc4f88aa2ad43e426f9e39d82d760283c008b67c968",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_distance_slices_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "4ed5eb8f20867217a0916efe6f59c7ca56d9b2cb7811311486fe75f3d08e47ce",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_distance_slices_bright_annotated.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "518e3f64fa3ab330e921c4c982e44e3fef878fe80bfbbea742cf40cfbcaffcd1",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_fixed_mu_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 702.0,
+      "png_sha256": "5ad773d1c15afbe100ca239e1c8bae3942f0eececa5ef280857e478ab730838d",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_aitoff_fixed_mu_deep.pdf",
+      "width_pt": 514.8,
+      "height_pt": 702.0,
+      "png_sha256": "08524912d9e764d927b9910b4731d1899873749f309a753c0fee9cc626f17966",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_background_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "900306826e6376b44c4115a95e5805776f2de0fe61863070c54e0389c8401d2d",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_background_deep.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "b9a77760a1d7a530c599f1e890b22c253a1b6ea3c8285c73b2db2c644e6d7dd9",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_background_residual_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "4984b3274962cbd02eed1734eb6b9c7dab0202867274780ee39463bb6ed92aea",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_background_residual_deep.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "eb4ac2e4450e40df51fb54bb8edd0fc47c4daf23d4ba62df7ef12365875a0e56",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_coverage_depth.pdf",
+      "width_pt": 514.8,
+      "height_pt": 532.8,
+      "png_sha256": "29c2967b689439d90537e69c1966b209e0d4312eff5ebc2fbe9e484824ca9731",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_score_comparison_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 871.2,
+      "png_sha256": "9ce627379b4e70db053332851a0e3026c131b8ff5f23eb96f56f32256bab4ff1",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/cmd_filter_score_comparison_deep.pdf",
+      "width_pt": 514.8,
+      "height_pt": 871.2,
+      "png_sha256": "a0089000cc8bec1dda73468bc313ec7f41e1cb59a16e4278fd7bd91e728c2ce9",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/photdis_vs_cmd_same_sources_bright.pdf",
+      "width_pt": 514.8,
+      "height_pt": 871.2,
+      "png_sha256": "52b9006f469ac8b001110ccd43297c79aa50dfe5fe28d26b08aad20f729b9133",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/atlas/photdis_vs_cmd_same_sources_deep.pdf",
+      "width_pt": 514.8,
+      "height_pt": 871.2,
+      "png_sha256": "668321de152d456da2f17b0d44372eed0b1a134ccf1df77d761be72e1b494080",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/balance/continuous_observable_balance.pdf",
+      "width_pt": 511.2,
+      "height_pt": 223.2,
+      "png_sha256": "bd34814c69449bf4b45c998929bc67075a182640fd4ce113b8ccc667a44a5c99",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess/foreground_hess_segment_1.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "fe5cd0e53fb3dd762879e8ad31ddbe8f8e78c7151393bc1678c019335c57e4b3",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess/foreground_hess_segment_2.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "d5574ce775ea3264e7480ed48db99bfd31493ca21ca04430e97acaef3dd7629f",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess/foreground_hess_segment_5.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "d480b360c10f18b1ab3b2181fc23835bd76fa5c3683e518418ab37585588e6da",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess_views/foreground_on_off_segment_1.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "b0f2adb8fb242ae6b1a69f0c04d5d56ee5533c4f049f265f7561d93047fd506a",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess_views/foreground_on_off_segment_2.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "c956167bf4a4153748b9cda3a718fd7145c27f9f3bb988cfab7f19aab70bf267",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/hess_views/foreground_on_off_segment_5.pdf",
+      "width_pt": 514.8,
+      "height_pt": 705.6,
+      "png_sha256": "c93a6e60dfba942b9875ba1f067729aeca3503ed556ec3144052d1652c05b8ee",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/known/cmd_filter_known_system_check.pdf",
+      "width_pt": 514.8,
+      "height_pt": 230.4,
+      "png_sha256": "7642276b3ea7e7e609e3f482709831edbc1955fa026b7581b1ca47c9e469c2d7",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/native/native_template_transfer.pdf",
+      "width_pt": 511.2,
+      "height_pt": 208.8,
+      "png_sha256": "2a09b0c579e109a493e440fe50bd6b06b33def33357dfa4ce934de13df6e399b",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/noise_imaging/whole_imaging_noise_control.pdf",
+      "width_pt": 511.2,
+      "height_pt": 223.2,
+      "png_sha256": "156055c659ea9390ab68195e46b6b68aa54fd9702b2011c250159ae4f9b25409",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/power/corrected_scale_branch_power.pdf",
+      "width_pt": 511.2,
+      "height_pt": 208.8,
+      "png_sha256": "276dbdcd549cf8ab3e313f3cf69dc46d4c422303d140dfb59a31296e0e7c6fc0",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/seam/native_seam_frozen_decomposition.pdf",
+      "width_pt": 511.2,
+      "height_pt": 226.8,
+      "png_sha256": "d32fb5b894575911dc5a7c8ed01ecd819da4ffd643be6e2e22a8acdb4b887248",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence/known_sequence_same_source_cmd.pdf",
+      "width_pt": 514.8,
+      "height_pt": 410.4,
+      "png_sha256": "8589f493e9cb1e5968ff97ddec6ca07df683e067a637fa32b07850de31422d77",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence/known_sequence_scale_comparison.pdf",
+      "width_pt": 511.2,
+      "height_pt": 223.2,
+      "png_sha256": "797560944fce3fb30464c5f4094abbb1fbd6f60c7932074472a6ca3aa16fe365",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence/training_luminosity_old_sequence.pdf",
+      "width_pt": 511.2,
+      "height_pt": 230.4,
+      "png_sha256": "d32f94e57ee9755437a6ca1aec0c18da3e934ce94fbc915ffd2355ccc4d957b5",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence_views/sequence_luminosity_GD1_thin.pdf",
+      "width_pt": 514.8,
+      "height_pt": 223.2,
+      "png_sha256": "2665e498bc30780d023e5cf1ff83b4420abf1009dabdd0c2b19c31b58dc80303",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence_views/sequence_luminosity_M13.pdf",
+      "width_pt": 514.8,
+      "height_pt": 223.2,
+      "png_sha256": "e22bad4383d7657c5d2a0d076fae2e008d165c0e4e5d049043df41de4786bd84",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence_views/sequence_luminosity_M30.pdf",
+      "width_pt": 514.8,
+      "height_pt": 223.2,
+      "png_sha256": "1b660f8d9a728c0e6d14ff126d1eb84ad65f1f0ef293b356ec9ec2350c3b0eda",
+      "english_only": true
+    },
+    {
+      "file": "figures/halo_response_20261118/sequence_views/sequence_luminosity_M5.pdf",
+      "width_pt": 514.8,
+      "height_pt": 223.2,
+      "png_sha256": "8282f7469e75265df5199e9f1c5368a6d089c6841eaaba3e9b7899ccaa8622bb",
+      "english_only": true
+    }
+  ],
+  "scientific_plate_count": 34,
+  "review": "All science plates inspected in contact sheets; main bright/deep/coverage/common-QRF, known CMD, power and member CMD also rendered from PDFs and inspected at larger resolution. Density colorbar overlap corrected and final plates inspected.",
+  "local_redraw_mean_absolute_RGB": 6.757970347970348,
+  "redraw_scope": "actual physical plotted grids, same normalized scales; local renderer can differ from NERSC in font rasterization",
+  "baseline_scope": "Original v3.8 F02/F03 exact pixel regression performed separately on allocated NERSC CPU"
+}

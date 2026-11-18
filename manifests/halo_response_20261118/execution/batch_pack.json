@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "stage": "pack",
+      "exit_code": 1,
+      "log": "data/halo_response_20261118/execution/pack_61519139.log"
+    }
+  ],
+  "job": "61519139"
+}
