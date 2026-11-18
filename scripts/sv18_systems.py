@@ -123,13 +123,20 @@ def main():
                   nmad_delta_mu=1.4826*np.median(abs(v-np.median(v))) if len(v) else None,
                   mean_shell_L1=np.mean(abs(ns['distance_shell_mass'][k]-ss['distance_shell_mass'][k]).sum(axis=1)) if len(v) else None))
     csv_rows(d/'final_model_seam.csv',seamrows)
+    display=[]
+    for name in ('M30','M5','M92','M13'):
+        a=[p for p in points if p['system']==name]
+        inside=sum(-.1<=p['color']<=1.5 and -4<=p['delta_mu']<=4 for p in a)
+        display.append(dict(system=name,plotted_parent=len(a),inside_axes=inside,outside_axes=len(a)-inside))
+    csv_rows(d/'sequence_display_counts.csv',display)
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(1,2,figsize=(7.1,3.15),layout='constrained')
         for i,name in enumerate(('M30','M5','M68','M92','M13')):
             z=[p for p in points if p['system']==name]
             if not z:continue
             axes[0].scatter([r['color'] for r in z],[r['delta_mu'] for r in z],s=5,alpha=.4,
-                            label=name,edgecolors='none',rasterized=True)
+                            label=name,color=plt.rcParams['axes.prop_cycle'].by_key()['color'][i],
+                            edgecolors='none',rasterized=True)
         axes[0].axhline(0,color='.6',lw=.7,ls=':')
         axes[0].set(xlabel=r'$(g-r)_0$',ylabel=r'$\Delta\mu$ (mag)',xlim=(-.1,1.5),ylim=(-4,4))
         axes[0].legend(fontsize=5.5,frameon=False,ncols=2)
