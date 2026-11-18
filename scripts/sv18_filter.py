@@ -34,8 +34,9 @@ def scan(signal,on,off,alpha):
     denominator=(signal*signal)@(1/variance)
     z=np.divide(numerator,np.sqrt(denominator),out=np.full(len(signal),np.nan),where=denominator>0)
     # Gaussian-contrast amplitude profile with nonnegative population amplitude.
-    profile=.5*np.maximum(z,0)**2
-    weight=np.exp(profile-logsumexp(profile))
+    profile=np.where(np.isfinite(z),.5*np.maximum(z,0)**2,-np.inf)
+    lognorm=logsumexp(profile)
+    weight=np.exp(profile-lognorm) if np.isfinite(lognorm) else np.zeros(len(z))
     return z,numerator,denominator,weight
 
 

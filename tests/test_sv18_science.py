@@ -53,6 +53,18 @@ def test_selected_template_recovers_true_grid_node(monkeypatch):
     assert lo<=11.<=hi
 
 
+def test_unobservable_modulus_nodes_have_zero_profile_mass(monkeypatch):
+    import sv18_filter
+    monkeypatch.setattr(sv18_filter.old,'MU',np.array([10.,11.,12.]))
+    template=np.array([[0.,0.],[.3,.7],[.8,.2]])
+    z,_,_,weight=scan(template,1000*template[1],np.zeros(2),0.)
+    assert np.isnan(z[0]) and weight[0]==0
+    assert np.isfinite(weight).all()
+    np.testing.assert_allclose(weight.sum(),1.)
+    peak,lo,hi=recover(z,weight)
+    assert peak==1 and lo<=11<=hi
+
+
 def test_sky_bootstrap_rematch_respects_multiplicity_and_support():
     x=np.zeros((12,1))
     pop=np.repeat([1,2],6)

@@ -53,6 +53,8 @@ def main():
         assert int(r['applicable'])>=int(r['passed_score'])>=n
     checks=table(DEST/'filter/template_self_recovery.csv')
     assert len(checks)>0 and all(r['passed']=='True' for r in checks if r['method']=='selected')
+    for r in table(DEST/'filter/empirical_injections.csv'):
+        assert np.isfinite(float(r['profile_lo'])) and np.isfinite(float(r['profile_hi']))
     with np.load(DEST/'observable/selection.npz') as a:
         assert np.isfinite(a['response']).all()
         assert (a['response']>=-1e-10).all() and (a['response']<=1+1e-10).all()
