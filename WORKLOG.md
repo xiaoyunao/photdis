@@ -2,6 +2,39 @@
 
 ## 2026-11-18 — halo atlas and sequence response
 
+- Allocations 61518416 / 61518711 / 61519139: metadata, native imaging
+  recovery, independent Nside512 random areas and all 32 CMD-count shards
+  completed. Parent has 51,231,975 unique strict PSFs; no newly recovered
+  opposite-owner boundary duplicates. Audited 473 wholly omitted bright
+  sweeps; their original strict pre-support count is zero.
+- Source: scripts/halo_cache.py, halo_recover.py, halo_native.py and
+  halo_count.py. The 61 nodes conserve source/node counts and seven PDF
+  interval masses; original production predictions are read, not refitted.
+- Bound an exact archived MIST1.0 DECam12Gyr Z=.0001 file. Native overlap
+  transfer fits32187, validates18055; grz NMAD0.010/0.009/0.012mag.
+  Northern template uses this empirical transfer and finite color support.
+- Exact old noise source/donor/random replay completed. Correct max-error
+  injection changes at most0.0015kpc for these fixed stars; primary2048
+  signed-Gaia PIT reproduces mean log score0.340004282354 exactly.
+- Corrected power256 is sampled uniformly after validity. Joint branch
+  acceptance passes an analytic test;128 realizations include MC intervals.
+- Complete native role joins link every selection/native-model role,
+  including class/Gaia-only IDs that the old spectral-union join omitted.
+- First continuous propensity solver was poorly conditioned by unscaled
+  cubic columns; stopped only its process, preserved its log, standardized
+  the polynomial columns and used the small ridge Newton-Cholesky solver.
+  All final fits must converge before output. Bootstrap refits256 times.
+- Found coordinate check compared equivalent negative/wrapped RA values;
+  normalized RA before the known Galactic-center test. Count data unchanged.
+  Fixed an M5 center lookup in the geometry-only control; original mask stays.
+- Sequence controls separate unmasked low-crowding primary rows from the
+  masked-region control and keep previous low-crowding tables as revision01.
+  No system is used to fit an old-sequence zero point. All roles retain
+  previous development ancestry.
+- Validation: five new scientific regression tests pass, with the nine
+  prior targeted science tests also passing before the final helper additions.
+  Full atlas assembly, final physical plates and delivery QA are in progress.
+
 - Read full v4 prompt and complete GPT reply 718e2850. Registered the
   complete goal before changes. Local/origin/NERSC reconcile at 7f9fcc78.
 - Confirmed the old southern bright carrier excludes QRF-unsupported rows.
