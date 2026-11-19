@@ -55,3 +55,12 @@ def profile(name,ra,dec):
     offset=(dec-np.interp(ra,r,d))/np.sqrt(1+(at/np.cos(np.deg2rad(dec)))**2)
     along=(ra-lo)/(hi-lo)
     return offset,along
+
+
+@lru_cache(maxsize=8)
+def track_length(name):
+    """Mean angular metric of the fixed along-RA coordinate, in degrees."""
+    a,_=track(C['local'][name]['track']);lo,hi=C['local'][name]['ra_range'];order=np.argsort(a['ra']);r=a['ra'][order];d=a['dec'][order]
+    use=(r>lo)&(r<hi);ra=np.r_[lo,r[use],hi];dec=np.interp(ra,r,d)
+    ra,dec=np.deg2rad(ra),np.deg2rad(dec);v=np.column_stack((np.cos(dec)*np.cos(ra),np.cos(dec)*np.sin(ra),np.sin(dec)))
+    return float(np.rad2deg(np.arctan2(np.linalg.norm(np.cross(v[:-1],v[1:]),axis=1),(v[:-1]*v[1:]).sum(axis=1))).sum())

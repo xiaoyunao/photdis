@@ -39,7 +39,7 @@ def main():
         with np.load(d/(roi+'_redraw.npz')) as z:a={k:z[k] for k in z.files}
         ec=(a['g_centers'],a['sigma_g']);sr=region_masks(t['offset'],cfg);rr=region_masks(r['offset'],cfg);g=np.linspace(14,24,600)
         rows=[];save=dict(gr_edges=a['hess_gr_edges'],g_edges=a['hess_g_edges'],hess=a['FOS_hess_gr_complete'][0]-a['FOS_hess_gr_complete'][1],g_curve=g,reference_mu=np.array(mu),along_edges=a['sky_along_edges'],offset_edges=a['sky_offset_edges']);maps=[];ccounts=[]
-        area=a['FOS_sky_gr_complete'][1];width=(cfg['ra_range'][1]-cfg['ra_range'][0])*np.cos(np.deg2rad(np.median(t['DEC'])));kernel=(.3/(width*np.diff(save['along_edges'])[0]),.3/np.diff(save['offset_edges'])[0]);sa=gaussian_filter(area,kernel)
+        area=a['FOS_sky_gr_complete'][1];width=track_length(roi);kernel=(.3/(width*np.diff(save['along_edges'])[0]),.3/np.diff(save['offset_edges'])[0]);sa=gaussian_filter(area,kernel)
         for k,kind in enumerate(KINDS):
             curve=curves(mag,phase,kind);accepted=accept(t['m'],[mu],curve,ec,kind)[:,0];ccounts.append(accepted)
             save[f'lower_{k}'],save[f'upper_{k}']=boundaries(g,mu,curve,ec,kind)

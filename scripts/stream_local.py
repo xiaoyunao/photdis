@@ -164,7 +164,7 @@ def make_maps(roi,t,r,model,ec,mu,label,d,density,responses):
             rr0=[z for z in responses if z['roi']==roi and z['model']==label and z['phase']=='MS_TO' and z['variant']==var]
             ax.plot([z['mu'] for z in rr0],[z['signed_excess'] for z in rr0],color=color,lw=.8,label=var.replace('_',' '))
         ax.axvline(mu,color='.3',lw=.7,ls=':');ax.axhline(0,color='.5',lw=.5);ax.set(xlabel='Distance modulus (mag)',ylabel='Target − control (deg⁻²)');ax.legend(frameon=False,fontsize=5.5)
-        raw,area=images['gr_complete'];width_ra=(cfg['ra_range'][1]-cfg['ra_range'][0])*np.cos(np.deg2rad(np.median(t['DEC'])))
+        raw,area=images['gr_complete'];width_ra=track_length(roi)
         for ax,sigma in zip(axs[1,1:],(.1,.3)):
             kernel=(sigma/(width_ra*np.diff(sx)[0]),sigma/np.diff(oy)[0]);count_s=gaussian_filter(raw,kernel);area_s=gaussian_filter(area,kernel)
             values=np.divide(count_s,area_s,out=np.full_like(raw,np.nan),where=(area>0)&(area_s>0))
