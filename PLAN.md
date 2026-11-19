@@ -1,5 +1,30 @@
 # PLAN
 
+## Full-sky display and sequence shape2026-11-19 — active
+
+Execute v6 prompt and complete latest reviewcbad66cc, archived under docs/v6_inputs.
+Goal registered before development. Baseline6538df76; production87069408 frozen.
+
+1. First: all locally available south/north native sweeps and gr random geometry,
+   without latitude/EBV ceiling/common23-depth filters. PSF, native ownership,
+   positive gr flux/ivar/transmission, SNR>=5, fixed pixel/FRACMASKED/FRACIN and
+   g0/r0<23 only. Strict imaging companions, raw/valid/CMD counts, dust/depth,
+   same-display old-domain control and identities explicit. User steering adds b=0/±20/±30 lines, actual galstreams Sgr/Pal5 tracks, known structures, and fixed-source band-origin/dust-depth controls.
+2. A small actual input/count/coordinate/area check then full accumulation,
+   independent of any target recovery. Deliver overview and five internal RGBs,
+   coverage companion, physical/signed arrays, stretch/masks and independent replay
+   immediately after actual figure QA, before the sequence experiment finishes.
+3. Native M13/M5 ridge in two colors plus M30; all available members and unsupported
+   rows visible. Freeze few literature-matched MIST1.2 models plus same-version
+   control and original FOS. Shared distances/extinction sensitivity and binary
+   reference track. No broad model search or binary fraction fit.
+4. Same-member original/centered scale, scatter, PDF widths, reference-center and
+   shared-reference/calibration-convolved diagnostics. Inherit v5 conditioning.
+5. Scientific decisions, compact evidence and Pal5/v3.8-style PNG/PDFs; one adequate
+   source/count/area/coordinate check and full independent redraw. Sync milestones
+   through GitHub/canonical NERSC and release this allocation. No manuscript edits,
+   production replacement, agents or automatic next work.
+
 ## Stream response2026-11-19 — completed
 
 Full v5 prompt/reviewfc961495 delivered in manifests/stream_response_20261119

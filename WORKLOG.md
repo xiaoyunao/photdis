@@ -1,5 +1,11 @@
 # WORKLOG
 
+## 2026-11-19 — v6 full-sky display and native sequence shape
+
+- Read complete latest replycbad66cc (6922characters) and full v6 prompt; archive both under docs/v6_inputs. Local/origin/NERSC reconcile at6538df76, tracked worktrees clean. Registered complete goal before changes.
+- Display explicitly includes low latitude/high extinction/shallow actual gr imaging; no stream-recovery gate. Registered independent config, frozen source/CMD/noise/ownership and limited literature model set before new measurements. Main scientific experiment is native ridge shape and scale/width; v5 conditioning inherited.
+- Own allocation61562374,64CPU/192GiB request,3h on nid200010. Other user jobs/allocations remain untouched. Use explicit srun job ID for compute steps because multiple allocations share the node.
+
 ## 2026-11-19 — stream recovery and population scales
 
 - Final synchronization verified at evidence commit ec2f50c0 on local/origin/canonical NERSC. Allocated-node portable checkout audit passes204package-file hashes and197delivery-source/output hashes; all36PDF plates present. Local tracked worktree clean; unrelated NERSC untracked products preserved. Original generated public exports retained under execution/server_public_before_git_sync before fast-forward. Returned allocation61555882 after all science/verification processes exited; no remaining authorized jobs or continuation. This closeout updates memory only.

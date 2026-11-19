@@ -1,0 +1,124 @@
+{
+  "evidence": "6538df7624bfa3a53b12b83326596b712204f12a",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "seed": 2026111906,
+  "nside": 512,
+  "workers": 32,
+  "chunk_rows": 500000,
+  "scope": "All locally available native sweeps; no latitude, EBV ceiling, or common-depth admission; display independent of scientific stream recovery",
+  "gr": {
+    "snr_min": 5,
+    "mag0_max": 23,
+    "fracmasked_max": 0.4,
+    "fracin_min": 0.7,
+    "reject_maskbits": [
+      2,
+      3,
+      5,
+      6,
+      10
+    ],
+    "transmission": "finite positive catalog MW_TRANSMISSION, 2D full column",
+    "strict_companion": "FRACFLUX_gr<.05 and ANYMASK_gr==0; not admission"
+  },
+  "old_domain": {
+    "abs_b_min": 30,
+    "EBV_min": 0,
+    "EBV_max": 0.1,
+    "depth0_at_error0p1_min": 23,
+    "comparison": "same new display entrance within old geographic/dust/depth domain; legacy stricter source entrance counted separately"
+  },
+  "rgb": {
+    "mu_min": 14,
+    "mu_max": 20,
+    "mu_step": 0.1,
+    "sigma_deg": 0.3,
+    "background_sigma_deg": 5,
+    "overview_BGR_kpc": [
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        26,
+        100
+      ]
+    ],
+    "density_stretch": "asinh(10*clip((density-p05)/(p995-p05),0,1))/asinh(10)",
+    "residual_stretch": "asinh(10*clip(max(signed_residual,0)/positive_p995,0,1))/asinh(10)",
+    "zero_rule": "covered pixels with zero raw channel counts remain zero; only geometric missingness is masked",
+    "coverage": "independent random gr geometry; observed-source geometric evidence retains rare random-empty edge pixels with smoothed-area support"
+  },
+  "inputs": {
+    "native_template": "data/halo_response_20261118/native",
+    "error_curve": "data/stream_response_20261119/full_replay/fixed_error_curve.npz",
+    "source_roots": "configs/v3_9_catalog.json",
+    "ownership": "data/v3_9/delivery/seam"
+  },
+  "ridge": {
+    "systems": [
+      "M13",
+      "M5",
+      "M30"
+    ],
+    "parent": "frozen target/member, exclude direct fit/calibration, low crowding; all finite native grz and PSF; do not require QRF/theory support; primary unmasked and masked supplement",
+    "models": [
+      {
+        "key": "matched_M13",
+        "age_Gyr": 12.0,
+        "FeH": -1.58
+      },
+      {
+        "key": "matched_M5",
+        "age_Gyr": 11.5,
+        "FeH": -1.33
+      },
+      {
+        "key": "matched_M30",
+        "age_Gyr": 13.0,
+        "FeH": -2.33
+      },
+      {
+        "key": "version_control",
+        "age_Gyr": 12.0,
+        "FeH": -2.17
+      }
+    ],
+    "model_version": "MIST1.2, DECam AB, vvcrit0.4, alpha0; original MIST1.0 FOS separately retained",
+    "population_source": "https://doi.org/10.1088/0004-637X/775/2/134 Table2; archived v5 population table",
+    "alpha": "MIST1.2 fixed alpha0; no MIST2.5 switch or alpha fit",
+    "Mg_bin_width": 0.25,
+    "minimum_ridge_N": 8,
+    "ridge": "median colors in Mg_ref bins; two iterations fixed +/-0.10mag both-color core; require core>=60% and N>=8; full scatter and rejected modes retained",
+    "draws": 256,
+    "extinction_sensitivity": "common catalog-column correction scale0.75/1/1.25, plus +/-0.01 E(B-V) clipped to E>=0; no dust fit",
+    "model_projection": "original evolutionary segments; horizontal fixed-Mg color intersections and fixed-color vertical intersections; nearest observed complementary color/reference luminosity only for diagnostic branch identification",
+    "binary_shift_mag": -0.752574989159953,
+    "correction": "No new distance correction fitted in this round. Diagnose gray versus shape and v5 scale/width on same members before choosing a future calibration. Keep original FOS zero point and draws unchanged."
+  },
+  "annotations": {
+    "coordinates": "Galactic; preserve current longitude direction",
+    "latitude_deg": [
+      -30,
+      -20,
+      0,
+      20,
+      30
+    ],
+    "tracks": [
+      "Sagittarius.antoja2020",
+      "Pal5.ibata2024"
+    ],
+    "known_structures": [
+      "Pal5",
+      "M13",
+      "M5",
+      "M30"
+    ],
+    "band_diagnostic": "raw PSF/valid-gr/CMD versus area/dust/depth and fixed latitude/Sgr strips; one no-extinction CMD overview on exactly the same admitted sources, preserving observed-input selection"
+  }
+}
