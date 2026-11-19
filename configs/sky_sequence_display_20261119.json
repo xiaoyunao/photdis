@@ -1,0 +1,8 @@
+{
+  "request": "Restore the previous v5 brightness/color stretch; retain the expanded imaging footprint, Galactic references and dashed Pal5 track",
+  "stretch_source": "data/stream_response_20261119/full_rgb/stretch.csv",
+  "stretch_rule": "Use the exact previous v5 full-RGB lo/hi for each group, channel and row, with its original asinh10 transform; do not estimate display caps from the expanded low-latitude parent",
+  "physical_arrays": "Unchanged; this overrides rendering only, with original darker displays retained in execution history",
+  "Pal5_line": "dashed",
+  "Sagittarius_line": "dashed"
+}
