@@ -9,6 +9,19 @@ from stream_sequence import polyline,posterior,count_median
 from stream_local import boundaries,accept,curves
 from stream_conditioning import propensity
 from stream_fold_audit import native_bounds
+from stream_extract import footprints
+
+
+def test_gr_admission_does_not_veto_z_only_pixels():
+    t=dict(RA=np.full(4,230.),DEC=np.zeros(4),EBV=np.full(4,.02),
+           mask=np.array([0,1<<4,1<<7,1<<3]),nobs=np.ones((4,3)),depth0=np.full((4,3),24.),
+           valid=np.ones((4,3),bool),err=np.full((4,3),.01),fracmasked=np.zeros((4,3)),
+           fracin=np.ones((4,3)),fracflux=np.zeros((4,3)),observed=np.full((4,3),20.),
+           anymask=np.zeros((4,3)),m=np.full((4,3),20.))
+    for random in (False,True):
+        actual=footprints(t,random=random)
+        np.testing.assert_array_equal(actual[[2,4]],[[True,True,True,False]]*2)
+        np.testing.assert_array_equal(actual[[0,1,3,5]],[[True,False,False,False]]*4)
 
 
 def test_rgb_exact_modulus_partition():

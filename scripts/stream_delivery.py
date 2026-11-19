@@ -6,6 +6,7 @@ from stream_common import *
 
 def main():
     stages=['rgb','local_source','local_area','local','core','sequence','conditioning','validation']
+    if (OUT/'mask_revision/complete.json').exists():stages.append('mask_revision')
     if (OUT/'full_replay/complete.json').exists():
         stages.append('full_replay')
         if json.loads((OUT/'full_replay/decision.json').read_text())['both_systems_pass']:
