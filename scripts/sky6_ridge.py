@@ -90,10 +90,10 @@ def render(a,d):
                             if not len(seg):continue
                             ax.plot(points[seg,j+1],points[seg,0],color=color,lw=.8,label=label if seg[0]==ids[0] else None)
                             if key.startswith('matched_'):ax.plot(points[seg,j+1],points[seg,0]+C['ridge']['binary_shift_mag'],color=color,lw=.7,ls=':',label='Equal-mass binary reference' if seg[0]==ids[0] else None)
-                    good=rr&a['ridge_usable'];x=a['ridge_colors'][good,j];y=a['ridge_Mg'][good];ax.plot(x,y,'o',ms=2,color='.1',label='Binned sequence median')
+                    good=rr&a['ridge_usable'];x=a['ridge_colors'][good,j];y=a['ridge_Mg'][good];ax.errorbar(x,y,xerr=a['ridge_scatter'][good,j],fmt='o',ms=2,color='.1',lw=.5,label='Median ± observed NMAD')
                     mederr=np.median(a['err'][ii],axis=0);xerr=np.hypot(mederr[0 if j==0 else 1],mederr[1 if j==0 else 2]);ax.errorbar(np.quantile(col[:,j],.05),yhi-.5,xerr=xerr,yerr=mederr[0],fmt='none',color='.3',lw=.6)
                     xlo=min(-.05,float(col[:,j].min())-.05);xhi=float(col[:,j].max())+.05
-                    ax.set(xlim=(xlo,xhi),ylim=(yhi,ylo),xlabel=r'$(g-r)_0$' if j==0 else r'$(r-z)_0$',ylabel=r'$M_{g,\mathrm{ref}}$ (mag)',title=system)
+                    ax.set(xlim=(xlo,xhi),ylim=(yhi,ylo),xlabel=r'$(g-r)_0$' if j==0 else r'$(r-z)_0$',ylabel=r'$M_{g,\mathrm{ref}}$ (mag)',title=f'{system} · N={int(ii.sum())}')
             axes[0,0].legend(frameon=False,fontsize=5,loc='lower right');figure(d,name,f,[dict(system=s,primary=int(((a['system']==s)&~a['mask']).sum())) for s in systems])
 
 
@@ -125,13 +125,19 @@ def main():
                 values=draws[:,k,col];values=values[np.isfinite(values)];row[label+'_lo']=np.quantile(values,.025) if len(values) else np.nan;row[label+'_hi']=np.quantile(values,.975) if len(values) else np.nan
             rows.append(row)
         for key in ('FOS10','version_control','matched_'+name):
-            res,ncandidate=residuals(mag,models[key],native,MS)
+            res,ncandidate=residuals(mag,models[key],native,np.zeros(len(MS),bool))
             for phase in ('all','lower_MS','turnoff','other'):
                 use=np.ones(len(mag),bool) if phase=='all' else phases==phase
                 for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):
                     z=res[use,k];finite=np.isfinite(z);v=z[finite];value=float(np.median(v)) if len(v) else np.nan
-                    resrows.append(dict(system=name,model=key,phase=phase,component=label,N=int(use.sum()),supported=int(finite.sum()),median=value,nmad=float(1.4826*np.median(abs(v-value))) if len(v) else np.nan,
+                    resrows.append(dict(system=name,model=key,projection='MS_SGB_RGB',phase=phase,component=label,N=int(use.sum()),supported=int(finite.sum()),median=value,nmad=float(1.4826*np.median(abs(v-value))) if len(v) else np.nan,
                         r_min=float(t['r'][ii][use].min()) if use.any() else np.nan,r_max=float(t['r'][ii][use].max()) if use.any() else np.nan,Mr_min=float(mr[use].min()) if use.any() else np.nan,Mr_max=float(mr[use].max()) if use.any() else np.nan))
+            restricted,_=residuals(mag,models[key],native,MS)
+            for phase in ('lower_MS','turnoff'):
+                use=phases==phase
+                for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):
+                    v=restricted[use,k];v=v[np.isfinite(v)];center=float(np.median(v)) if len(v) else np.nan
+                    resrows.append(dict(system=name,model=key,projection='phase0_for_reference_MS_boxes',phase=phase,component=label,N=int(use.sum()),supported=len(v),median=center,nmad=float(1.4826*np.median(abs(v-center))) if len(v) else np.nan))
             for scenario in ('column075','column125','EBV_minus001','EBV_plus001','distance_minus_sigma','distance_plus_sigma'):
                 changed=mag.copy();E=t['EBV'][ii];ext=t['extinction'][ii]
                 if scenario.startswith('column'):changed+=ext*(.25 if scenario=='column075' else -.25)
@@ -139,13 +145,13 @@ def main():
                     shift=-.01 if 'minus' in scenario else .01;coefficient=np.nanmedian(np.divide(ext,E[:,None],out=np.full_like(ext,np.nan),where=E[:,None]>1e-5),axis=0);changed-=(np.maximum(E+shift,0)-E)[:,None]*coefficient
                 else:
                     sigma=t['sigma_ref'][ii][0];D=t['ref'][ii][0];changed-=5*np.log10((D+(-sigma if 'minus' in scenario else sigma))/D)
-                r,_=residuals(changed,models[key],native,MS)
+                r,_=residuals(changed,models[key],native,np.zeros(len(MS),bool))
                 for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):sensitivity.append(dict(system=name,model=key,scenario=scenario,component=label,N=int(np.isfinite(r[:,k]).sum()),median=float(np.nanmedian(r[:,k]))))
             per_star.append(dict(ls_id=t['ls_id'][ii],system=np.full(len(mag),name),model=np.full(len(mag),key),residual=res,candidate_count=ncandidate,reference_phase=phases))
     csv_rows(d/'ridge.csv',rows);csv_rows(d/'model_residuals.csv',resrows);csv_rows(d/'distance_dust_sensitivity.csv',sensitivity)
     npz(d/'per_member_residuals.npz',**{k:np.concatenate([p[k] for p in per_star]) for k in per_star[0]})
     npz(d/'members.npz',**t,color_support=support)
-    rdata=dict(system=t['system'],mask=t['mask'],m=t['m'],err=t['err'],ref=t['ref'],support=support,model_keys=np.array(list(models)),ridge_system=np.array([r['system'] for r in rows]),ridge_usable=np.array([r['usable'] for r in rows]),ridge_Mg=np.array([r['Mg'] for r in rows]),ridge_colors=np.array([[r['gr'],r['rz']] for r in rows]))
+    rdata=dict(system=t['system'],mask=t['mask'],m=t['m'],err=t['err'],ref=t['ref'],support=support,model_keys=np.array(list(models)),ridge_system=np.array([r['system'] for r in rows]),ridge_usable=np.array([r['usable'] for r in rows]),ridge_Mg=np.array([r['Mg'] for r in rows]),ridge_colors=np.array([[r['gr'],r['rz']] for r in rows]),ridge_scatter=np.array([[r['gr_scatter'],r['rz_scatter']] for r in rows]))
     rdata.update({'model_'+key+'_'+field:value for key,model in models.items() for field,value in model.items()});npz(d/'ridge_redraw.npz',**rdata);render(rdata,d)
     csv_rows(d/'support.csv',[dict(system=name,parent=int((t['system']==name).sum()),unmasked=int(((t['system']==name)&~t['mask']).sum()),primary_MS_color_supported=int(((t['system']==name)&~t['mask']&support).sum()),masked=int(((t['system']==name)&t['mask']).sum())) for name in C['ridge']['systems']])
     complete(d,inputs,native_replay_max_mag_difference=replay,ridge='observed binned two-color median/core, not deconvolved single-star fiducial; ambiguous/sparse bins explicit',projection='original adjacent evolutionary segments; fixed-Mg colors and fixed-color gray luminosity residuals, reference luminosity resolves branches diagnostically; not a new photometry-only estimator',north='frozen DECam-to-BASS/MzLS transfer, scatter and hull inherited',no_new_distance_correction=True)
