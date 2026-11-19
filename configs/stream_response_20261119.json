@@ -139,7 +139,24 @@
       "distance_kpc": 21.94,
       "common_sigma_kpc": 0.51,
       "diagnostic_only": true
-    }
+    },
+    "gr_reject_maskbits": [
+      2,
+      3,
+      5,
+      6,
+      10
+    ],
+    "grz_reject_maskbits": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10
+    ],
+    "mask_revision": "gr removes z-only saturation/allmask bits; strict and z-addback retain them; original pre-correction outputs archived"
   },
   "sequence": {
     "draws": 128,

@@ -11,10 +11,11 @@
     20,
     0.1
   ],
-  "workers": 24,
+  "workers": 32,
   "nside": 512,
   "scope": "all raw south/north sweeps with conservative geometry prefilter; south local stream validation; north native color-transfer inherited and separately flagged",
   "smoothing_deg": 0.3,
   "background_deg": 5,
-  "source_cache": "private admitted PSF records with exact IDs and count conservation; science bins overlap in mu"
+  "source_cache": "private admitted PSF records with exact IDs and count conservation; science bins overlap in mu",
+  "mask_revision": "pure gr pixel veto bits2/3/5/6/10; no z pixel veto. Original conservative all-band mask result archived before correction."
 }

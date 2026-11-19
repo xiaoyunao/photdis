@@ -7,7 +7,7 @@ from astropy.io import fits
 import healpy as hp
 from photdis.stage1 import require_compute,galactic,legacy_ids,tile_bounds
 from stream_common import *
-from stream_extract import K,REJECT
+from stream_extract import K,GR_REJECT as REJECT
 from stream_local import templates,curves,accept,region_masks,uncertainty
 from v3_9_seam import BOUNDARY
 from v3_5_dr11_area import random_memmap,tile_map

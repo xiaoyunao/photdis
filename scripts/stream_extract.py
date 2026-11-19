@@ -13,6 +13,7 @@ from v3_9_seam import BOUNDARY
 ROIS=[k for k,v in C['local'].items() if isinstance(v,dict) and 'track' in v]
 VARS=C['local']['variants']
 REJECT=sum(1<<b for b in CLEAN_REJECT_MASKBITS)
+GR_REJECT=REJECT&~((1<<4)|(1<<7))
 K=2.5/np.log(10)
 
 
@@ -27,10 +28,10 @@ def geometry(name,ra,dec):
 
 def footprints(t,random=False):
     high=abs(galactic(t['RA'],t['DEC'])[1])>30
-    base=(t['EBV']>=0)&high&((t['mask']&REJECT)==0)
+    base=(t['EBV']>=0)&high
     obs=t['nobs']>0
-    gr_geo=base&obs[:,:2].all(axis=1)
-    grz_geo=gr_geo&obs[:,2]
+    gr_geo=base&((t['mask']&GR_REJECT)==0)&obs[:,:2].all(axis=1)
+    grz_geo=gr_geo&((t['mask']&REJECT)==0)&obs[:,2]
     e03=t['EBV']<.03;e10=t['EBV']<.10
     complete=(t['depth0'][:,:2]>=23).all(axis=1)
     # Randoms describe imaging coverage, not object deblending or PSF purity.
@@ -156,7 +157,7 @@ def audit():
         for relaxed in (False,True):
             keep=np.ones(len(high),bool)
             cuts=[('owned_unique_PSF',keep.copy()),('latitude',high),('finite_nonnegative_EBV',np.isfinite(t['EBV'])&(t['EBV']>=0)),
-                  ('EBV_limit',t['EBV']<(.1 if relaxed else .03)),('clean_maskbits',(t['mask']&REJECT)==0),
+                  ('EBV_limit',t['EBV']<(.1 if relaxed else .03)),('clean_maskbits',(t['mask']&GR_REJECT)==0),
                   ('gr_nobs',(t['nobs'][:,:2]>0).all(axis=1)),('gr_flux_transmission_ivar',t['valid'][:,:2].all(axis=1)),
                   ('gr_error',(t['err'][:,:2]<.1).all(axis=1)),('gr_fracmasked',(t['fracmasked'][:,:2]<.4).all(axis=1)),
                   ('gr_fracin',(t['fracin'][:,:2]>.7).all(axis=1)),('gr_fracflux',(t['fracflux'][:,:2]<.05).all(axis=1)),
