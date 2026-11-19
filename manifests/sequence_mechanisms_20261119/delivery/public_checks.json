@@ -1,0 +1,82 @@
+{
+  "bound_outputs": 51,
+  "source_files": 12,
+  "style_lock": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "sky_unchanged": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+  "render_runtime": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "freetype": "2.14.3"
+  },
+  "release_runtime": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "freetype": "2.14.3"
+  },
+  "same_runtime": true,
+  "redraw_directory": "/tmp/photdis-v7-replay-wtjab0ef",
+  "plates": [
+    {
+      "plate": "QRF_complete_PDF",
+      "png_sha256": "1f8c5025a51eae98bf07cf54e2a735334ea76f17c12c3f9943a477f297cf4364",
+      "pdf_sha256": "1e8854d096e39583e2a4f164bc55713383a05c8cb3f2652384a405b577dbff3c",
+      "size": [
+        2145,
+        2190
+      ],
+      "one_page": null,
+      "English": null,
+      "portable_pixels_identical": true
+    },
+    {
+      "plate": "branch_complete_PDF",
+      "png_sha256": "18738e4f41d8f8da0bce7c56451499d94710ad3617ce5675bb7b5c51e21038da",
+      "pdf_sha256": "78657d1b9d8a9b25f72271aed88170ef34049ddbbe79713ba608a30f56136d61",
+      "size": [
+        2145,
+        1095
+      ],
+      "one_page": null,
+      "English": null,
+      "portable_pixels_identical": true
+    },
+    {
+      "plate": "controlled_scales_scores",
+      "png_sha256": "8b6c0ea954b94b31b230fcf11471f5ae9b4eed2ae160841b9ea677e0d21d68bb",
+      "pdf_sha256": "6fc8f6ef98a57baae1a7b4025b0fd9c060a5f5c6a0888e62d6a90d58caeed30f",
+      "size": [
+        2145,
+        1590
+      ],
+      "one_page": null,
+      "English": null,
+      "portable_pixels_identical": true
+    },
+    {
+      "plate": "native_loci_branch_mass",
+      "png_sha256": "0314b5b4adc92a38fdb096b9b510bacf3396f5196501a5421c37e97f8c9d8885",
+      "pdf_sha256": "f565463339956fe7c051b0af4079b864d69dbedc72d1885af935e80617f4982f",
+      "size": [
+        2145,
+        2130
+      ],
+      "one_page": null,
+      "English": null,
+      "portable_pixels_identical": true
+    },
+    {
+      "plate": "sequence_complete_PDF",
+      "png_sha256": "5c68b329404c2368c0ee0f6df19117a3ddc785d3cbd63369889025d0570eb7fc",
+      "pdf_sha256": "01b08a0df86bade07f6f1dca0a341a90cd8a5d80a157d020265cb165a06389b3",
+      "size": [
+        2145,
+        2190
+      ],
+      "one_page": null,
+      "English": null,
+      "portable_pixels_identical": true
+    }
+  ]
+}

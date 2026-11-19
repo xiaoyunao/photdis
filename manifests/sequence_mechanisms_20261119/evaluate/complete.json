@@ -1,0 +1,33 @@
+{
+  "config": "eb76b473c58f28b560e6e394b187e7fe09376b501c54517c6fca842e45fae13d",
+  "job": "61568731",
+  "inputs": {
+    "curves": "81b8a8322ec015858c1575c12a9f61b1cb282ecdb216ddb7df1d0d54ee0092dc"
+  },
+  "code": {
+    "seq7_math.py": "272d513acd630fedcd31d9b3b63c52be98193d3ebffe8578313ef929e71be0a8",
+    "seq7_run.py": "f2658c28f9456d3828f918a4521cde2de7703b46a74cec40010438c8267db1bf",
+    "seq7_validate.py": "e16df0fbfbfcddbb55f17c3fb4cb0c4b60e37a37063708aa0fa80343b977560e",
+    "seq7_evaluate.py": "afdcb6daad063073c3be8b12d7ece769471da9d52c51631527c5b97a6efac39e",
+    "seq7_examples.py": "d005a5ef93da945e485d6d7b57176f5257515670dbd69418ebc5379fcf3a81ec",
+    "seq7_curves.py": "7caf2461bc33cb44ae53f4e123142898bc15e54c23512803e7cb503f2dd58c48",
+    "seq7_figures.py": "9decba51b7f6d23c7a3b2c09f61e91c984f65d29fe28b152cd1e58ef44a5d6f5",
+    "seq7_prepare.py": "0fc0bb4080a3cac5ff9e8c0e294209812b7a561050f581421485178ede8f3dc5",
+    "seq7_common.py": "3f9192091630761fddc25745af2f38b1f595933ee8f552afd6416c7f25912f7d",
+    "seq7_publish.py": "71f7914fa06929bf644389a2b5eb77e6ed8ced406bfdd590ba88ff77b3199246",
+    "seq7_delivery.py": "2799f63462b9ada77c51d72ac7fe93f3eebfb90502a470d634ec9b0aa5309d6d",
+    "seq7_predict.py": "ed65099b54e88e822b11d5c7ae4c91ee1b8af695351a145f832f0c8cf209377c"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "score": "mean per-star marginal predictive log density, Gaussian reference convolution, modulus coordinate; not joint cluster likelihood",
+  "bootstrap": "shared whole-parent or original-v5 multinomial, one system-common observed reference draw; same convolved kernel, not extra posterior broadening",
+  "centering": "diagnostic evaluated-group median recomputed for every shared replicate",
+  "CRPS": "integral of convolved CDF squared against observation step; lower is better",
+  "outputs": {
+    "paired.csv": "c38560439d07c06f9f314ac9dcbc169ccce2dd580598450517ffc36331a89c1a",
+    "phase_gaps.csv": "dbc068c6c09114a88c60910b486a068863a9a99c40caafec98910f1a0eff77e5",
+    "summary.csv": "e60b480c5d44f62e371ae0cf024e153f0d9d97a1aabec5bba80555369c8a59b9",
+    "shared_bootstrap_summary.csv": "43d1f215b185f71a8d819a84824f09d6d526d0cb9f252bddc85314b038045d7f",
+    "per_star_scores.csv": "58be45287d892a8041a9c184e48f8d614c5aeda2cd8da18e8bdfa599ab2db780"
+  }
+}

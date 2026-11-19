@@ -1,0 +1,51 @@
+{
+  "config": "eb76b473c58f28b560e6e394b187e7fe09376b501c54517c6fca842e45fae13d",
+  "job": "61568731",
+  "inputs": {
+    "predict": "be29fcdd8a5917712a532f5a1ea2bc3df49c379ca1e0a4c99fcf6cdfd1e16aaa",
+    "prepare": "54de829ea3bbf3b82c294ff78777f22a3fbe2f51d1d39786a014699e7ff24bd1"
+  },
+  "code": {
+    "seq7_math.py": "272d513acd630fedcd31d9b3b63c52be98193d3ebffe8578313ef929e71be0a8",
+    "seq7_run.py": "c54287362bb6fc18cff5e71a17c2d2b9a141c1ae8e6798e35dfc879d6b03eb6e",
+    "seq7_validate.py": "e16df0fbfbfcddbb55f17c3fb4cb0c4b60e37a37063708aa0fa80343b977560e",
+    "seq7_evaluate.py": "5d6d0f92223fb0ce769d0eba0b41f62dadf03ddf6fdcb7e1b49a2da037c3b2c3",
+    "seq7_examples.py": "b8ac0c7d0f379b45841680d950ee87bd1e2e1411f4b49c6e88ea9145c0e4549d",
+    "seq7_curves.py": "7caf2461bc33cb44ae53f4e123142898bc15e54c23512803e7cb503f2dd58c48",
+    "seq7_figures.py": "8f3e0da3cfe7f85a757d29beb33e7bf1fc495dc20ea2a0df58626fbe68b6b32f",
+    "seq7_prepare.py": "0fc0bb4080a3cac5ff9e8c0e294209812b7a561050f581421485178ede8f3dc5",
+    "seq7_common.py": "3f9192091630761fddc25745af2f38b1f595933ee8f552afd6416c7f25912f7d",
+    "seq7_publish.py": "71f7914fa06929bf644389a2b5eb77e6ed8ced406bfdd590ba88ff77b3199246",
+    "seq7_predict.py": "ed65099b54e88e822b11d5c7ae4c91ee1b8af695351a145f832f0c8cf209377c"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "mu_grid": [
+    -6.1775,
+    30.277500000005695,
+    0.0025
+  ],
+  "normalized_all_tails": true,
+  "summation_accuracy": "CDF omitted total <= machine epsilon; log-density relative sum bound < exp(-40); every original component parameter retained and direct unbounded half-grid comparison required",
+  "outputs": {
+    "grid.npz": "d0fcd21f442e305e53ec5c9a21be74314706d77c7d1c3764431263d09da97a38",
+    "M5_E.npz": "7d6e60b7bb5f5c8191dd76fb2c155498b05883f4929531a9c374b2b79207a388",
+    "M13_E.npz": "475b5a1d22086dc2a18824eaa64772dfa0344ed69d5938f8675f1c85025e0c37",
+    "M5_A.npz": "9d3ddf51ff4df0cab62688ceebdc0d036f7a61113e85c612009bdd8185467f40",
+    "M30_A.npz": "f31bc0d0dec0bb71e941061345bec842b994007c28d91d3b8175d9a9ce6d3811",
+    "M30_D.npz": "d1da15c047c76e30a6e71e8b68275af6740cf29fd8d7909926978b371b06be20",
+    "M13_D.npz": "8f1607a6a2d149d8a1172dbcb8247a3e5c07a894d5ac357e10eaf940ab13cf09",
+    "M30_QRF.npz": "17ab6980da1785b4dee264819976cfdb9e1c968833392aa6d1555be642f96957",
+    "M5_C.npz": "e6c577c05d4ca41cb21026aa645f3bf833280d70f180a6473e4e6c90b582bb20",
+    "M30_B.npz": "bea07e8e48c1687978ba8c47331212929644728c8796cce2d894ca4a044b4e5a",
+    "M13_B.npz": "f4678c6dca19270f5c33566362bba72289d20692bb8234508dbaa2ff381ff38a",
+    "M13_A.npz": "00935f143a09fef24fd664d840f75f771e445b0646d601c26d213560a77142db",
+    "support_status.csv": "f4457dce02a1f2fdddc6d066420785d28d887f7db642ff1d0ee2c568aebc68f7",
+    "M30_E.npz": "e3c0a113e52dbef35da5dc2d0838a66e6dcf58a13310cf5d8bb4c8241654ca77",
+    "M5_D.npz": "fa3258525b745c70f85fe4cf60ecf4cecd406f433cc63ba5ce8914d81470da7b",
+    "M30_C.npz": "c13d2ff48311e726f48a8fe404f86a20978db7609947cf5fb090776a824cbe57",
+    "M5_QRF.npz": "869bca38bffaed72edc6a59af1ace4ae660b235c2c58c8fa5cf74f0a01bf563e",
+    "M5_B.npz": "6212f798d62759630d0c73290461c2a6183e6d1ebf8c002a5d585a4238fbbf7f",
+    "M13_C.npz": "653e213916540cbf8d4f1b7a872781ec15e3036f716aee4c5a1cbe9040791c44",
+    "M13_QRF.npz": "3222ba4f11f32a9e829215d4af88b0c9501e8211d52a5d8a9d302be57aa5ac6a"
+  }
+}

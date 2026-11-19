@@ -5,6 +5,12 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
+The [five-control sequence experiment](manifests/sequence_mechanisms_20261119/README.md)
+separates locus geometry, initial-mass weighting and early post-MS support on
+the same native members. Its [science decision](manifests/sequence_mechanisms_20261119/science_decisions.md)
+finds system-dependent geometry/branch gains and small IMF-only effects;
+no common absolute-scale correction is adopted.
+
 The [available-sky and native-sequence package](manifests/sky_sequence_20261119/README.md)
 extends the fixed-CMD display to all locally available native gr imaging and
 compares observed M13/M5/M30 sequence shape with population-matched models.

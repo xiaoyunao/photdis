@@ -1,0 +1,34 @@
+{
+  "reviewed": true,
+  "plates": [
+    {
+      "name": "QRF_complete_PDF",
+      "png": "1f8c5025a51eae98bf07cf54e2a735334ea76f17c12c3f9943a477f297cf4364",
+      "pdf": "1e8854d096e39583e2a4f164bc55713383a05c8cb3f2652384a405b577dbff3c"
+    },
+    {
+      "name": "branch_complete_PDF",
+      "png": "18738e4f41d8f8da0bce7c56451499d94710ad3617ce5675bb7b5c51e21038da",
+      "pdf": "78657d1b9d8a9b25f72271aed88170ef34049ddbbe79713ba608a30f56136d61"
+    },
+    {
+      "name": "controlled_scales_scores",
+      "png": "8b6c0ea954b94b31b230fcf11471f5ae9b4eed2ae160841b9ea677e0d21d68bb",
+      "pdf": "6fc8f6ef98a57baae1a7b4025b0fd9c060a5f5c6a0888e62d6a90d58caeed30f"
+    },
+    {
+      "name": "native_loci_branch_mass",
+      "png": "0314b5b4adc92a38fdb096b9b510bacf3396f5196501a5421c37e97f8c9d8885",
+      "pdf": "f565463339956fe7c051b0af4079b864d69dbedc72d1885af935e80617f4982f"
+    },
+    {
+      "name": "sequence_complete_PDF",
+      "png": "5c68b329404c2368c0ee0f6df19117a3ddc785d3cbd63369889025d0570eb7fc",
+      "pdf": "01b08a0df86bade07f6f1dca0a341a90cd8a5d80a157d020265cb165a06389b3"
+    }
+  ],
+  "method": "Actual PNG contact/enlarged QRF and branch reviews plus Poppler rendering of all five PDF pages; labels, legends, axes, reference-height note, non-overlapping CDF panels and no clipped peaks checked.",
+  "initial_exports": "Preserved private execution archives; corrected reference dominance and inset occlusion without changing palette/fonts/marks or any sky product.",
+  "cross_runtime": "Initial local pixel assertion failure retained; release-runtime independent replay is pixel-identical; local PDF/portable redraw checked separately.",
+  "scientific_limits": "Five conditional known-system controls; no uniform absolute-scale correction adopted."
+}

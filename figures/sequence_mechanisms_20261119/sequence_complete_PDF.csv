@@ -1,0 +1,5 @@
+system,index,kind,rule,case,ls_id,source_id,phase,ref_mu,ref_sigma,TYPE,native
+M13,833,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,4,12107276076712048,1328049414576774400,turnoff,14.352019526395136,0.02272956691419032,PSF,1
+M5,417,sequence_lower_MS,nearest phase median A modulus residual on frozen v5 A-supported members,6,12105983988861772,4421531396574398848,lower_MS,14.369507989322308,0.01749736508054663,PSF,0
+M5,173,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,7,12105980970012762,4421459271188110080,turnoff,14.369507989322308,0.01749736508054663,PSF,0
+M30,13,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,9,12105833995310325,6816573587966657024,turnoff,14.644538451219763,0.022869083789184615,PSF,0

@@ -1,0 +1,12 @@
+system,index,kind,rule,case,ls_id,source_id,phase,ref_mu,ref_sigma,TYPE,native
+M13,808,QRF_decline,three most negative exact centered-minus-raw marginal scores on frozen v5 lower-MS,0,12107276073571288,1328086145137465216,lower_MS,14.352019526395136,0.02272956691419032,PSF,1
+M13,888,QRF_decline,three most negative exact centered-minus-raw marginal scores on frozen v5 lower-MS,1,12107277287820916,1328125006003402496,lower_MS,14.352019526395136,0.02272956691419032,PSF,1
+M13,903,QRF_decline,three most negative exact centered-minus-raw marginal scores on frozen v5 lower-MS,2,12107277288865997,1328118168415459456,lower_MS,14.352019526395136,0.02272956691419032,PSF,1
+M13,798,QRF_ordinary,closest to median exact centered-minus-raw marginal score on frozen v5 lower-MS,3,12107276073570935,1328084152272488192,lower_MS,14.352019526395136,0.02272956691419032,PSF,1
+M13,833,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,4,12107276076712048,1328049414576774400,turnoff,14.352019526395136,0.02272956691419032,PSF,1
+M13,879,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",5,12107277287820172,1328124323111919872,other,14.352019526395136,0.02272956691419032,PSF,1
+M5,417,sequence_lower_MS,nearest phase median A modulus residual on frozen v5 A-supported members,6,12105983988861772,4421531396574398848,lower_MS,14.369507989322308,0.01749736508054663,PSF,0
+M5,173,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,7,12105980970012762,4421459271188110080,turnoff,14.369507989322308,0.01749736508054663,PSF,0
+M5,412,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",8,12105983988860865,4421529777372475776,other,14.369507989322308,0.01749736508054663,PSF,0
+M30,13,sequence_turnoff,nearest phase median A modulus residual on frozen v5 A-supported members,9,12105833995310325,6816573587966657024,turnoff,14.644538451219763,0.022869083789184615,PSF,0
+M30,93,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",10,12105835388867080,6816580459914193664,turnoff,14.644538451219763,0.022869083789184615,PSF,0

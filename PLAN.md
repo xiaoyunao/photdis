@@ -1,24 +1,24 @@
 # PLAN
 
-## Sequence mechanisms2026-11-19 — active
+## Sequence mechanisms2026-11-19 — science completed, final sync
 
-Execute the full v7 prompt/review2561be88. Baseline20513877, production87069408,
-all completed sky displays and Pal5/v3.8 style frozen; no manuscript changes.
-Registered goal before development. Roster/model sealing and all five forecasts
-are complete; the registered16→32integration comparison passes. Full-tail curve
-caches, shared-score statistics, fixed-rule figures and direct numerical replay
-are in progress on own allocation61568731. Fixed parent PSFs249/585/99, native/role
-exclusions retained. Five fixed A–E comparisons isolate version, age/FeH,
-IMF integration and connected early post-MS support within original Mr3–8.
-Predict from photometry only, flat mu and sigma_gray0.10; reference only scores.
-Deliver full-parent/status, paired-support and exact v5-cohort statistics;
-complete PDFs/CRPS/per-star and paired scores with shared member/reference draws,
-phase/color/Mg trends, fixed-rule explanatory PDFs and three science-figure groups.
-Keep A/v5 replay separately sealed, original QRF float64 inputs, all tails and
-negative findings. Numerical refinement only if it competes with scientific effects.
-Stop after all five controls and evidence decision; no automatic calibration fit.
-Use allocated NERSC CPUs, compact public data/replay, actual figure QA, milestone
-memory/commits and safe final synchronization/resource return.
+Full v7 prompt/review2561be88 completed with five fixed A–E controls, all933
+parent PSFs/statuses, exact original-v5/QRF/zero replay, shared-score intervals,
+continuous phase/color diagnostics and11fixed-rule full-PDF cases. See
+manifests/sequence_mechanisms_20261119/{README,science_decisions,figures}.md.
+Locus/early-branch gains are system-dependent; IMF-only effect is small.
+All six common-cohort E lower-MS/TO groups miss the0.10mag raw-scale target;
+no production replacement or new calibration adopted. Production87069408 and
+all previous sky images/style sources preserved, no manuscript/agents.
+
+Five English Pal5-style PNG/PDF plates,51source-bound outputs, complete private
+PDFs and draws, exact native-runtime portable pixel replay and originalv3.8
+F02/F03 pixel baselines pass. All5PDF pages visually/Poppler checked; local
+cross-runtime pixel differences recorded honestly. Initial reference-height/
+inset exports and all numerical trials remain archived. Mathematical/half-grid
+precision and36legacy score replays pass. Remaining: safe GitHub/canonical
+reconciliation and return of own allocation61568731, then close this goal.
+No automatic next fit, sky change, prospective opening or production rerun.
 
 ## Full-sky display and sequence shape2026-11-19 — completed
 

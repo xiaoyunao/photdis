@@ -1,0 +1,10 @@
+{
+  "N": 166,
+  "center": 0.5987755413855087,
+  "raw_mean": -1.0558830551728027,
+  "centered_mean": -2.467287085998114,
+  "mean_delta": -1.4114040308253124,
+  "fraction_improved": 0.8373493975903614,
+  "three_worst_mean_contribution": -2.1533044958018897,
+  "median_delta": 0.6936596252518625
+}

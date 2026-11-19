@@ -103,11 +103,16 @@ on a half-step grid check these approximations. CRPS uses cumulative trapezoid
 integration over the whole grid. Initial and refined outputs remain available.
 
 The five new plates use the shared PAPER/Pal5/v3.8 settings and locked sources.
-PDF examples follow the registered ID rules; insets show the full CDF while
+PDF examples follow the registered ID rules; separate small panels show the full CDF while
 the main panel resolves the central density. Dotted curves are outside the
 method's declared color support. Complete example parameters, full-grid curves,
 original quantiles and reference kernels accompany them. They explain mechanisms;
 aggregate claims come from the whole-member paired statistics.
+The gray reference profile has its displayed height scaled to 80% of the largest
+prediction peak; its width is unchanged. This prevents a narrow reference kernel
+from flattening the prediction curves. Scientific scores use the normalized
+reference kernel. Branch-case main windows follow D/E quantiles; separate full-CDF panels
+retain the broader QRF support. Initial plot exports are archived separately.
 
 ## Reproduction
 
@@ -136,3 +141,11 @@ The predeclared practical target is an unshifted absolute group median modulus
 residual ≤0.10 mag. Improvement and target attainment are separate conclusions.
 This task stops after the five controls and a scientific decision; it does not
 fit per-system corrections, tune a sixth model or replace production.
+
+Pixel regression is enforced within the recorded Matplotlib/Pillow/FreeType/NumPy
+build runtime. A cross-runtime redraw is checked and reported separately rather
+than claiming pixel identity across rendering-library versions. PDF text/page
+checks run locally with pypdf; the compute-side pixel replay uses `--pixels-only`.
+Public per-source status rows explicitly carry TYPE=PSF/native verified against
+the sealed identity roster; the deterministic enrichment is recorded in the
+release receipt and does not change source admission or support.

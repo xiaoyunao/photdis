@@ -48,24 +48,29 @@ def render(src,d):
     for name,cc,methods in groups:
         ncol=3 if name.startswith('branch') else 2;nrow=(len(cc)+ncol-1)//ncol
         with plt.rc_context(PAPER):
-            f,axes=plt.subplots(nrow,ncol,figsize=(7.15,2.75*nrow),layout='constrained',squeeze=False)
-            for ax,c in zip(axes.ravel(),cc):
-                k=c['case'];ref=c['ref_mu'];rs=c['ref_sigma'];reference=np.exp(-.5*((mu-ref)/rs)**2)/(rs*np.sqrt(2*np.pi));ax.fill_between(mu-ref,reference,color='.85',lw=0,label='Reference scale')
-                lo=ref-.6;hi=ref+.6
+            f,all_axes=plt.subplots(2*nrow,ncol,figsize=(7.15,3.65*nrow),height_ratios=[3,1]*nrow,layout='constrained',squeeze=False);axes=all_axes[::2];caxes=all_axes[1::2]
+            for ax,cax,c in zip(axes.ravel(),caxes.ravel(),cc):
+                k=c['case'];ref=c['ref_mu'];rs=c['ref_sigma'];reference=np.exp(-.5*((mu-ref)/rs)**2)
+                lo=ref-.6;hi=ref+.6;peak=0.
                 for m in methods:
                     if m not in c['methods']:continue
-                    yy=curves[f'{k}_{m}_density'];ax.plot(mu-ref,yy,color=COLORS[m],lw=.8,ls='-' if c['methods'][m]['supported'] else ':',label=LABELS[m]);qq=np.array(c['methods'][m]['q']);lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
+                    yy=curves[f'{k}_{m}_density'];ax.plot(mu-ref,yy,color=COLORS[m],lw=.8,ls='-' if c['methods'][m]['supported'] else ':',label=LABELS[m]);qq=np.array(c['methods'][m]['q']);peak=max(peak,float(yy.max()))
+                    if not (name.startswith('branch') and m=='QRF'):lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
                 if methods==['QRF']:
-                    ax.plot(mu-ref,curves[f'{k}_QRF_centered_density'],color=ORANGE,lw=.8,ls='--',label='Diagnostic centered');shift=float(curves[f'{k}_QRF_center'][0]);qq=np.array(c['methods']['QRF']['q'])-shift;lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
-                ax.set(xlim=(lo-ref,hi-ref),xlabel=r'$\mu-\mu_{\rm ref}$ (mag)',ylabel=r'Predictive density (mag$^{-1}$)',title=f"{c['system']} · {c['ls_id']}")
-                inset=ax.inset_axes([.61,.63,.36,.3]);nonzero=[]
+                    ax.plot(mu-ref,curves[f'{k}_QRF_centered_density'],color=ORANGE,lw=.8,ls='--',label='Diagnostic centered');peak=max(peak,float(curves[f'{k}_QRF_centered_density'].max()));shift=float(curves[f'{k}_QRF_center'][0]);qq=np.array(c['methods']['QRF']['q'])-shift;lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
+                # Reference uncertainty is much narrower than these predictions.
+                # Scale only its displayed height, preserving the actual kernel
+                # in the case metadata and every scientific score.
+                ax.fill_between(mu-ref,reference*.8*peak,color='.85',lw=0,label='Reference (scaled)',zorder=0)
+                ax.set(xlim=(lo-ref,hi-ref),ylim=(0,1.12*peak),ylabel=r'Predictive density (mag$^{-1}$)',title=f"{c['system']} · {c['ls_id']}")
+                nonzero=[]
                 for m in methods:
                     if m not in c['methods']:continue
-                    vv=curves[f'{k}_{m}_CDF'];inset.plot(mu-ref,vv,color=COLORS[m],lw=.5);nonzero.extend([mu[np.searchsorted(vv,1e-9)],mu[min(len(mu)-1,np.searchsorted(vv,1-1e-9))]])
-                if methods==['QRF']:inset.plot(mu-ref,curves[f'{k}_QRF_centered_CDF'],color=ORANGE,ls='--',lw=.5);nonzero.extend([min(nonzero)-shift,max(nonzero)-shift])
-                inset.set(xlim=(min(nonzero)-ref-.1,max(nonzero)-ref+.1),ylim=(0,1),yticks=[0,1]);inset.tick_params(labelsize=4,length=2);inset.set_title('Full CDF',fontsize=5,pad=1)
-            for ax in axes.ravel()[len(cc):]:ax.set_visible(False)
-            axes[0,0].legend(frameon=False,fontsize=5,loc='upper left');figure(d,name,f,[{k:v for k,v in c.items() if k!='methods'} for c in cc])
+                    vv=curves[f'{k}_{m}_CDF'];cax.plot(mu-ref,vv,color=COLORS[m],lw=.6);nonzero.extend([mu[np.searchsorted(vv,1e-9)],mu[min(len(mu)-1,np.searchsorted(vv,1-1e-9))]])
+                if methods==['QRF']:cax.plot(mu-ref,curves[f'{k}_QRF_centered_CDF'],color=ORANGE,ls='--',lw=.6);nonzero.extend([min(nonzero)-shift,max(nonzero)-shift])
+                cax.plot(mu-ref,ndtr((mu-ref)/rs),color='.65',lw=.6,ls=':');cax.set(xlim=(min(nonzero)-ref-.1,max(nonzero)-ref+.1),ylim=(0,1),yticks=[0,.5,1],ylabel='Full CDF',xlabel=r'$\mu-\mu_{\rm ref}$ (mag)');cax.tick_params(labelsize=6)
+            for ax in list(axes.ravel()[len(cc):])+list(caxes.ravel()[len(cc):]):ax.set_visible(False)
+            handles,labels=axes[0,0].get_legend_handles_labels();f.legend(handles,labels,frameon=False,fontsize=5,loc='outside upper center',ncol=min(3,len(labels)));figure(d,name,f,[{k:v for k,v in c.items() if k!='methods'} for c in cc])
 
 
 def main():

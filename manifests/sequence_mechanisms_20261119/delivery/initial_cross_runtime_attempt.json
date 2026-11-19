@@ -1,0 +1,11 @@
+{
+  "plate": "prior QRF figure with inset panels",
+  "local_matplotlib": "3.9.2",
+  "outcome": "pixel assertion failed, source hashes passed; retained, followed by runtime-bound server redraw",
+  "difference_bbox": [
+    12,
+    12,
+    2133,
+    1636
+  ]
+}

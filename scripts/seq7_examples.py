@@ -2,7 +2,7 @@
 """Fixed-rule complete-PDF examples and native geometry diagnostics."""
 from seq7_common import *
 from seq7_predict import load
-from seq7_math import log_density_grid
+from seq7_math import log_density_grid,row_interp
 from photdis.stage1 import require_compute
 from sky6_width import uniform_convolution
 from scipy.special import ndtr
@@ -47,7 +47,7 @@ def main():
         for m in METHODS:
             z=load(OUT/'curves'/f'{s}_{m}.npz');jj=np.flatnonzero(z['ii']==i)
             if not len(jj):continue
-            j=int(jj[0]);jqs=z['q'][j];data=dict(q=jqs.tolist(),supported=bool(z['support'][j]),post=float(z['post'][j]),raw_logscore=float(np.interp(ref,x,z['logpdf'][j])),CDF_reference=float(np.interp(ref,x,z['cdf'][j])))
+            j=int(jj[0]);jqs=z['q'][j];data=dict(q=jqs.tolist(),supported=bool(z['support'][j]),post=float(z['post'][j]),raw_logscore=float(row_interp(x,np.array([ref]),z['logpdf'][j:j+1],cubic=True)[0]),CDF_reference=float(np.interp(ref,x,z['cdf'][j])))
             if m=='QRF':
                 a=load(OUT/'predict'/('QRF_north.npz' if s=='M13' else 'QRF_south.npz'));at=int(np.flatnonzero(a['ii']==i)[0]);edges=a['edges'][at];mass=a['mass'][at];jbin=np.searchsorted(edges,x,side='right')-1;valid=(jbin>=0)&(jbin<len(mass));density=np.zeros(len(x));density[valid]=(mass/np.diff(edges))[jbin[valid]]
                 ii=np.flatnonzero((t['system']==s)&t['v5']&(t['phase']==t['phase'][i]));ii=np.intersect1d(ii,a['ii']);center=np.median(a['q'][np.searchsorted(a['ii'],ii),2]-ref);curves[f'{k}_QRF_center']=np.array([center]);curves[f'{k}_QRF_centered_density']=np.interp(x+center,x,density,left=0,right=0);curves[f'{k}_QRF_centered_CDF']=np.interp(x+center,x,z['raw'][j],left=0,right=1)

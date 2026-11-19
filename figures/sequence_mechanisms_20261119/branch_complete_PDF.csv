@@ -1,0 +1,4 @@
+system,index,kind,rule,case,ls_id,source_id,phase,ref_mu,ref_sigma,TYPE,native
+M13,879,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",5,12107277287820172,1328124323111919872,other,14.352019526395136,0.02272956691419032,PSF,1
+M5,412,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",8,12105983988860865,4421529777372475776,other,14.369507989322308,0.01749736508054663,PSF,0
+M30,93,branch,"largest absolute D-to-E post-MS posterior-mass change on common support, native-ID tie break",10,12105835388867080,6816580459914193664,turnoff,14.644538451219763,0.022869083789184615,PSF,0

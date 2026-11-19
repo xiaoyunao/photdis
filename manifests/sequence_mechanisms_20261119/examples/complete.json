@@ -1,0 +1,33 @@
+{
+  "config": "eb76b473c58f28b560e6e394b187e7fe09376b501c54517c6fca842e45fae13d",
+  "job": "61568731",
+  "inputs": {
+    "evaluate": "fa3eb222fa410e19572063f5d7e4e5101bb78cd84136df296c975b9a1bbf01d5"
+  },
+  "code": {
+    "seq7_math.py": "272d513acd630fedcd31d9b3b63c52be98193d3ebffe8578313ef929e71be0a8",
+    "seq7_run.py": "f2658c28f9456d3828f918a4521cde2de7703b46a74cec40010438c8267db1bf",
+    "seq7_validate.py": "e16df0fbfbfcddbb55f17c3fb4cb0c4b60e37a37063708aa0fa80343b977560e",
+    "seq7_evaluate.py": "afdcb6daad063073c3be8b12d7ece769471da9d52c51631527c5b97a6efac39e",
+    "seq7_examples.py": "d005a5ef93da945e485d6d7b57176f5257515670dbd69418ebc5379fcf3a81ec",
+    "seq7_curves.py": "7caf2461bc33cb44ae53f4e123142898bc15e54c23512803e7cb503f2dd58c48",
+    "seq7_figures.py": "9decba51b7f6d23c7a3b2c09f61e91c984f65d29fe28b152cd1e58ef44a5d6f5",
+    "seq7_prepare.py": "0fc0bb4080a3cac5ff9e8c0e294209812b7a561050f581421485178ede8f3dc5",
+    "seq7_common.py": "3f9192091630761fddc25745af2f38b1f595933ee8f552afd6416c7f25912f7d",
+    "seq7_publish.py": "71f7914fa06929bf644389a2b5eb77e6ed8ced406bfdd590ba88ff77b3199246",
+    "seq7_delivery.py": "2799f63462b9ada77c51d72ac7fe93f3eebfb90502a470d634ec9b0aa5309d6d",
+    "seq7_predict.py": "ed65099b54e88e822b11d5c7ae4c91ee1b8af695351a145f832f0c8cf209377c"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "selection": "registered rules, no visual cherry-picking",
+  "full_example_distributions": true,
+  "outputs": {
+    "example_curves.npz": "1ac9e4aab525bc3327881be9340b3d00172f969c058afccb286e584d0b43a0d5",
+    "selected.csv": "d107524514c39957d5a98b58c36ecf14fdeb7258d59fc89e456149a19379a777",
+    "cases.json": "8660f5cb7c2785a74275f37ceb3f3b286e65f679da2d4c70a69640a0c5905cd5",
+    "prediction_color_residuals.csv": "e6c724aaec0ba12f6468a089653675c0d9b4181c6cd0aee296b7cecf2bb0b337",
+    "QRF_M13_lowerMS_per_star.csv": "d83e547247f39b74b5587aa564e781bca2634c2f229603ed8805eba4c242c2a1",
+    "QRF_centering_explanation.json": "9338733a8e88af28a7ffb0839a6bb4148fb8924087adb3c6c958409415461950",
+    "geometry.npz": "4d68902acae69371e5886bb3727c59bcb0088db2a3b0f8c53a15dd1a1a02b69c"
+  }
+}

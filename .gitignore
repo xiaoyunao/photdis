@@ -98,3 +98,11 @@ archives/
 !manifests/sky_sequence_20261119/channel_trials/rgb_*.npz
 !manifests/sky_sequence_20261119/selected_channels/rgb_*.npz
 !manifests/sky_sequence_20261119/smoothing_trials/rgb_*.npz
+
+# Compact five-control science packet; full-member PDF caches remain private.
+!manifests/sequence_mechanisms_20261119/**/*.csv
+!manifests/sequence_mechanisms_20261119/data/
+!manifests/sequence_mechanisms_20261119/data/*.json
+!manifests/sequence_mechanisms_20261119/data/*.csv
+!manifests/sequence_mechanisms_20261119/data/*.npz
+!figures/sequence_mechanisms_20261119/*.csv
