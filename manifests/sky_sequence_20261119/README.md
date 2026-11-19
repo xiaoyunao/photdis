@@ -4,6 +4,17 @@ This package executes the archived v6 prompt and review in `docs/v6_inputs`.
 The frozen production distance catalog remains `87069408`. No manuscript,
 production forest, source distance PDF or selection has been replaced.
 
+## Final overview and navigation
+
+The user's final main-display choice is **B5–10/G10–20/R20–100kpc**:
+[PNG](../../figures/sky_sequence_20261119/selected_channels/rgb_selected_fixed_gain.png)
+and [PDF](../../figures/sky_sequence_20261119/selected_channels/rgb_selected_fixed_gain.pdf).
+The fixed original V5 brightness is primary; a balanced companion and all earlier
+channel trials remain available. [Figure index](figures.md) separates full-footprint
+images from the deliberately restricted old-domain/previous-version controls.
+[Science decisions](science_decisions.md) and [phase summary](sequence_phase_summary.csv)
+report the independent sequence and probability experiment.
+
 ## Display A
 
 All **2,126 locally available native south/north sweeps** were read. The
@@ -95,6 +106,13 @@ receipts and execution logs preserve the actual scientific choices and attempts.
 
 ## Sequence science B
 
-The independent native-ridge and same-member center/width results will be recorded
-in `science_decisions.md` with the completed tables and actual figure audit.
-No new empirical distance correction is fitted in this round.
+Native M13/M5 ridge, M30 comparison, sequence-position residuals and same-member
+center/width experiments are complete. Read `science_decisions.md`,
+`sequence_phase_summary.csv`, `ridge/` and `width/`. Literature-matched models
+improve several colors but retain phase-dependent gray errors; a common zero
+point does not fix the turnoff distributions. No new distance correction is fitted.
+
+The exact full-QRF replay uses original float64 model inputs; the rounded display
+columns are preserved for the sequence experiment. Original/centered diagnostics,
+shared-reference/zero-point probabilities and all negative findings are retained.
+

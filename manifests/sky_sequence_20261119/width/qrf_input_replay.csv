@@ -1,0 +1,4 @@
+system,N,max_display_column_rounding_mag,role
+M13,233,9.530939060198307e-07,QRF replay uses exact original mag_grz/error_grz/identity; observed-sequence diagnostics retain v5 displayed magnitudes
+M5,510,9.523431430125129e-07,QRF replay uses exact original mag_grz/error_grz/identity; observed-sequence diagnostics retain v5 displayed magnitudes
+M30,88,9.49480813972059e-07,QRF replay uses exact original mag_grz/error_grz/identity; observed-sequence diagnostics retain v5 displayed magnitudes

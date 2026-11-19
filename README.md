@@ -5,6 +5,14 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
+The [available-sky and native-sequence package](manifests/sky_sequence_20261119/README.md)
+extends the fixed-CMD display to all locally available native gr imaging and
+compares observed M13/M5/M30 sequence shape with population-matched models.
+The [final sky overview](figures/sky_sequence_20261119/selected_channels/rgb_selected_fixed_gain.png)
+uses B5–10/G10–20/R20–100kpc, with Galactic references and dashed Sgr/Pal5 tracks.
+[Scientific decisions](manifests/sky_sequence_20261119/science_decisions.md)
+separate distance-scale offsets, phase-dependent shape and PDF width.
+
 The [stream and population-scale package](manifests/stream_response_20261119/README.md)
 adds true three-channel atlas views, fixed Pal5/Sgr raw-imaging controls,
 a native multivalued sequence experiment and a same-support conditioning test.

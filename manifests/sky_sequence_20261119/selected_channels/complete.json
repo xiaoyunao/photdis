@@ -1,0 +1,49 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "final_display_settings": "8fdff4a52e3781708cc1efff92aaccf1a364231fd8aa235b3b321549d49a6c61",
+    "data/sky_sequence_20261119/channel_trials": "325378139057ab65ff065464391768f79150066a80689bdc6b8cdbdb8a1f3e56",
+    "original_cube": "24c3ed561ecaff1f9ecce679fbcf60ab1ba7d2076b6fd3ee967dc4efd9c20840"
+  },
+  "code": {
+    "sky6_width.py": "3ade6d2e28c9fb12e8b4db6626ff155f11cde13ef34d5ec7680e7b9a31bb4bdf",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_selected.py": "d2acc0884cfc49146c39f327ec6d8ccd2b0b4fdc062c8d45fcd6bb49efac31d2",
+    "sky6_publish.py": "604fa16e349c071923ba4f5f7b0a099f3c8f47bad5df5dc46cd292f2f75ea2ca",
+    "sky6_figures.py": "3d0197c760f9c927b7fce033c3da6aa6db219a44beda5e666e8d0b910e892b62",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_verify.py": "c693061ba9fd324f28c18bb54b5b28cc6b6032831c7f6f6e6e18a5100caff58c",
+    "sky6_channels.py": "ff2b4a815e22c710e4bd0d5c5aa8d74bc4a3fa8fb3556cc29e1343b6056b2a43",
+    "sky6_atlas.py": "2d9c79b30e1634f84daa6529f548da1c089ae9d483ca7056a170fc9f64dcbdbd",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "Final user-selected overview, all available gr footprint; fixed gain is primary, balanced companion retained",
+  "weight_identity_passed": true,
+  "coordinates": "Galactic, actual Sgr/Pal5 dashed, b0/\u00b120/\u00b130",
+  "new_distance_fit": false,
+  "outputs": {
+    "rgb_selected_balanced.csv": "8b9df44e907e399305d74585c47feb2ec0183efc0419633c397674146b65978a",
+    "physical_selected.pdf": "860f2438942b79a3e167b035e6e950234b0b447ff3a4507c5ee6949ec88485e6",
+    "selection.json": "f485660aed7a6cec129f07c24b9d0a8082e6637aa4f94fc642f05d7f14de40f0",
+    "rgb_selected_balanced.pdf": "a412f054d79b8bd475c74574e538b5f0a52b5c1c91969f7c9f9127d4cada0dce",
+    "stretch.csv": "0a3d2f29562d9a3e0425775677cf35d05765218d3fe1868a23127688e15a3eac",
+    "rgb_selected_balanced.png": "f8274a284d7195408da7cae8e7fce6dc2a3d4b4fc850c022d88a7c407df420df",
+    "physical_selected.png": "5c8acdf7c8eea8fb9c41419e9bd31f1c320ec6a1a9b9581da11a6c1a08c1f62b",
+    "rgb_selected_fixed_gain.csv": "ac118de9321f8cefd8ad5b037b26ac3b9871e47c1d31be9cc60a89f8cc453bf3",
+    "node_weights.csv": "6745fc91b625f1fe93ca57609bc920ffa6c1a1db3b0114317cd4f70d55bd0bc9",
+    "physical_selected.csv": "0698fbd4318fa16e17812b01630e4b73e232ab6a94fe358817518a56e4efca39",
+    "rgb_selected_fixed_gain.pdf": "0c0b47cb993b3e1f5efc0713c9d911d7a6d8fc542e2d4e10b437e91377c68b46",
+    "rgb_selected_fixed_gain.npz": "5aa85a278e4eddb01ee1930e33e55cf3cb6e1fb40c0df278724c100cbac62b91",
+    "physical_selected.npz": "91175089b1733c72aaf54d822afac2a6ebf44e9b4a0144e462d609fa772a1670",
+    "rgb_selected_balanced.npz": "55ef54a1f27d9744c22eb89d8b55fabeb6093158ed3fea00e8f15db4bec5694b",
+    "rgb_selected_fixed_gain.png": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5"
+  }
+}

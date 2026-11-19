@@ -1,0 +1,4 @@
+background_sigma_deg,density_sigma_deg,main_unchanged,stretch,B_kpc,G_kpc,R_kpc
+2,0.3,True,exact same original5deg main stretch,5–10,10–20,20–100
+5,0.3,True,exact same original5deg main stretch,5–10,10–20,20–100
+10,0.3,True,exact same original5deg main stretch,5–10,10–20,20–100

@@ -1,0 +1,21 @@
+{
+  "BGR_kpc": [
+    [
+      5,
+      10
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      20,
+      100
+    ]
+  ],
+  "primary": "rgb_selected_fixed_gain",
+  "companion": "rgb_selected_balanced",
+  "parent": 493314135,
+  "weights_exactly_reuse_completed_responses": true,
+  "production_unchanged": true
+}

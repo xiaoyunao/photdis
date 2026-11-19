@@ -1,0 +1,9 @@
+{
+  "inputs": {
+    "smoothing_trials/rgb_background_2deg.png": "3c1d4e044acb815ba7fe688d094792d5723854570bac7d4bf380e8751b66e262",
+    "smoothing_trials/rgb_background_5deg.png": "fe9ab15e285353644529631bfdcdc437b8d8d1ca8b004682291bb75d3f94be9b",
+    "smoothing_trials/rgb_background_10deg.png": "e0b8a1ed6121acc5d4fa484055caef0bdc9a6c7e75ea522ebc80b7548c0a7432"
+  },
+  "font_sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+  "scope": "Positive residual only;2/5/10degree Gaussian background; identical main stretch/density; previews do not replace the main image"
+}

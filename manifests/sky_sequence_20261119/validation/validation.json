@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "check": "Actual native PSF201-node replay equals split near+frozen61far response, and exact far counts reproduce original part in both domains",
+      "part": "north_sweep-085p060-090p065",
+      "N": 5704,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "atlas",
+      "N": 4,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "band",
+      "N": 4,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "rgb",
+      "N": 29,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "old_domain",
+      "N": 29,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "no_extinction",
+      "N": 8,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "prior_display",
+      "N": 8,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "brightness",
+      "N": 1,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "ridge",
+      "N": 18,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "width",
+      "N": 6,
+      "passed": true
+    },
+    {
+      "check": "source-bound stage output hashes",
+      "stage": "channel_trials",
+      "N": 30,
+      "passed": true
+    }
+  ],
+  "pixel_regression": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "bounded actual source replay; exact baseline pixels; completed scientific stage hashes. All raw-source identity/count/geometry conservation already checked during actual extraction."
+}

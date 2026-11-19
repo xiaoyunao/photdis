@@ -1,6 +1,6 @@
 # PLAN
 
-## Full-sky display and sequence shape2026-11-19 — active
+## Full-sky display and sequence shape2026-11-19 — science complete; final synchronization
 
 Execute v6 prompt and complete latest reviewcbad66cc, archived under docs/v6_inputs.
 Goal registered before development. Baseline6538df76; production87069408 frozen.
@@ -34,6 +34,13 @@ Goal registered before development. Baseline6538df76; production87069408 frozen.
    source/count/area/coordinate check and full independent redraw. Sync milestones
    through GitHub/canonical NERSC and release this allocation. No manuscript edits,
    production replacement, agents or automatic next work.
+
+Science milestones are complete. See manifests/sky_sequence_20261119/{README,
+science_decisions,figures}.md, sequence_phase_summary.csv and delivery/ records.
+35science plates replay exactly;37English PNG/PDF pairs checked. Production87069408
+and originalv3.8templates remain unchanged. Remaining: final public-byte/GitHub/
+canonical synchronization and returning own allocation61562374. No new fits or
+additional scientific scans are required by this goal.
 
 ## Stream response2026-11-19 — completed
 

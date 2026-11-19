@@ -1,0 +1,8 @@
+{
+  "plates": 37,
+  "scientific": 35,
+  "comparisons": 2,
+  "review": "All contact-sheet PNGs reviewed. Enlarged full/old/unchanged-prior and final-channel RGBs, physical/colorbar companions, nativeM13/M5 ridge, sequence residuals, width and2/5/10degree controls checked. Poppler-rendered final-channel and native-ridge PDFs visually checked. Galactic wrap, latitude lines, actual Sgr/Pal5 dashed annotations, masks/zeros, English units and labels retained.",
+  "main_preserved_sha256": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+  "scope": "Previews do not replace main; no manuscript changes"
+}

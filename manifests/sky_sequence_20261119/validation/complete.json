@@ -1,0 +1,34 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {},
+  "code": {
+    "sky6_width.py": "3ade6d2e28c9fb12e8b4db6626ff155f11cde13ef34d5ec7680e7b9a31bb4bdf",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_smoothing.py": "40d371fed9d6e851d03a76566afbdd2de01d6efd43714bc3e3f0965aed8a3a88",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_selected.py": "d2acc0884cfc49146c39f327ec6d8ccd2b0b4fdc062c8d45fcd6bb49efac31d2",
+    "sky6_publish.py": "17477326ecea40798b8bfa62abccf0f9dafb4a03116c98835c743bd25ff21051",
+    "sky6_replay_check.py": "ca4f426708c5b936bbc1164e96e83f54fc0e4a6ac1f69946681e26eb84a118b3",
+    "sky6_figures.py": "1b9da17ab93094ef9ca8057fa36d9e00331fdcc4a9963e84edfe6e316776cf05",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_verify.py": "c693061ba9fd324f28c18bb54b5b28cc6b6032831c7f6f6e6e18a5100caff58c",
+    "sky6_channels.py": "ff2b4a815e22c710e4bd0d5c5aa8d74bc4a3fa8fb3556cc29e1343b6056b2a43",
+    "sky6_atlas.py": "2d9c79b30e1634f84daa6529f548da1c089ae9d483ca7056a170fc9f64dcbdbd",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "actual_source_smoke": true,
+  "original_style_pixels": true,
+  "portable_redraw_plates": 35,
+  "main_protection_passed": true,
+  "outputs": {
+    "validation.json": "f04bdd16b040c47fb971b0e2d80587f1bf8690aea1bc9accad86a00e476417df",
+    "independent_replay.json": "af90bbed161aa893499e7ef5966b112c3aa8a8dbba0ece1c890783dcc128da8a"
+  }
+}

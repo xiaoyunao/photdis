@@ -1,0 +1,197 @@
+{
+  "source_output_hashes": 194,
+  "PNG_PDF_pairs": 37,
+  "scientific_plates": 35,
+  "comparison_montages": 2,
+  "portable_science_redraw": 35,
+  "pixels_identical": true,
+  "checks": [
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near10_30_100_balanced.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near10_30_100_fixed_gain.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near3_15_100_balanced.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near3_15_100_fixed_gain.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near5_10_100_balanced.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/channel_trials/rgb_near5_10_100_fixed_gain.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/comparisons/channel_layout_comparison.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/comparisons/smoothing_comparison.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/coverage/sky_coverage.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/no_extinction/physical_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/no_extinction/rgb_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/physical_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_bin_10.0_15.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_bin_15.0_26.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_bin_26.0_50.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_bin_50.0_100.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_bin_6.3_10.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/old_domain/rgb_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/prior_display/physical_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/prior_display/rgb_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/physical_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_bin_10.0_15.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_bin_15.0_26.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_bin_26.0_50.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_bin_50.0_100.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_bin_6.3_10.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/rgb/rgb_overview.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/ridge/native_ridge_M13_M5.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/ridge/native_ridge_M30.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/ridge/sequence_shape_residuals.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/selected_channels/physical_selected.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/selected_channels/rgb_selected_balanced.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/selected_channels/rgb_selected_fixed_gain.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/smoothing_trials/rgb_background_10deg.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/smoothing_trials/rgb_background_2deg.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/smoothing_trials/rgb_background_5deg.png",
+      "one_page_PDF": true,
+      "English_source": true
+    },
+    {
+      "plate": "figures/sky_sequence_20261119/width/sequence_center_width.png",
+      "one_page_PDF": true,
+      "English_source": true
+    }
+  ],
+  "style_lock_unchanged": true,
+  "manuscript_unchanged": true
+}

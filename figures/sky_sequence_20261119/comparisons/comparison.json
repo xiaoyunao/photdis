@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    "rgb/rgb_overview.png": "586563221476724091f5091fcdf876f243f6e68420c8903874abe23d6e19665e",
+    "channel_trials/rgb_near5_10_100_fixed_gain.png": "67819676daa5889ff1325f9a31a12b349d511c2059fc3d90a49aa00a87fde9f8",
+    "channel_trials/rgb_near3_15_100_fixed_gain.png": "3d3a8551f826d6f34b5ed58b08dd1d05f63f7d838fbf73511429aa2c35e131eb",
+    "selected_channels/rgb_selected_fixed_gain.png": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+    "channel_trials/rgb_near5_10_100_balanced.png": "afcaa411d6760fb4caea21130699e292a28553bcaa046ecc8743917834fc71b8",
+    "channel_trials/rgb_near3_15_100_balanced.png": "28dc5cd584a17bd55a19275819c69ff8617c8c32d818e371a06da02f474e8a1d",
+    "selected_channels/rgb_selected_balanced.png": "f8274a284d7195408da7cae8e7fce6dc2a3d4b4fc850c022d88a7c407df420df"
+  },
+  "font_sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+  "scope": "Density-panel thumbnail comparison of already completed scientific plates; final user choice is5\u201310/10\u201320/20\u2013100; full-size density/residual plates are separate"
+}

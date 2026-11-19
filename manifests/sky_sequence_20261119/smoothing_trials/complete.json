@@ -1,0 +1,50 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "smoothing_settings": "ace4359d1357fd21f6766bb58f1de1f49242b5907d7a68bde37450bb52cad47f",
+    "unchanged_main": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+    "data/sky_sequence_20261119/selected_channels": "3679082e7f0013f0f2839f1f0f41db1c05d664dba0aefca860a9086ff290a258"
+  },
+  "code": {
+    "sky6_width.py": "3ade6d2e28c9fb12e8b4db6626ff155f11cde13ef34d5ec7680e7b9a31bb4bdf",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_smoothing.py": "40d371fed9d6e851d03a76566afbdd2de01d6efd43714bc3e3f0965aed8a3a88",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_selected.py": "d2acc0884cfc49146c39f327ec6d8ccd2b0b4fdc062c8d45fcd6bb49efac31d2",
+    "sky6_publish.py": "17477326ecea40798b8bfa62abccf0f9dafb4a03116c98835c743bd25ff21051",
+    "sky6_figures.py": "1b9da17ab93094ef9ca8057fa36d9e00331fdcc4a9963e84edfe6e316776cf05",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_verify.py": "c693061ba9fd324f28c18bb54b5b28cc6b6032831c7f6f6e6e18a5100caff58c",
+    "sky6_channels.py": "ff2b4a815e22c710e4bd0d5c5aa8d74bc4a3fa8fb3556cc29e1343b6056b2a43",
+    "sky6_atlas.py": "2d9c79b30e1634f84daa6529f548da1c089ae9d483ca7056a170fc9f64dcbdbd",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "preview_only": true,
+  "main_image_unchanged": true,
+  "interpretation": "Gaussian background smoothing scale; density smoothing and all counts/area/masks remain unchanged",
+  "outputs": {
+    "preview_parameters.csv": "ae437c4216c681dbb70d0f5ddfacee73b4c29533a0f9ff723633da199be7cae0",
+    "physical_background_2deg.npz": "9c3246c52972b3261164a5c717d06178f63912740bd2323ebe9ecf6bf9e8658f",
+    "rgb_background_5deg.png": "fe9ab15e285353644529631bfdcdc437b8d8d1ca8b004682291bb75d3f94be9b",
+    "rgb_background_10deg.png": "e0b8a1ed6121acc5d4fa484055caef0bdc9a6c7e75ea522ebc80b7548c0a7432",
+    "rgb_background_5deg.csv": "8ffc16464ce914d10f57c52975eea603bdcc5dc5a6008b30cf5929ca5871724a",
+    "main_preserved.json": "cc480374432b38d9afca2ddd80547381c935e5a365e297a1fe3809119bc74a0f",
+    "rgb_background_10deg.pdf": "98e9ca9587d3a938968c9c4cca85ab8af7f49dea97cba168c235b519031c776f",
+    "rgb_background_2deg.pdf": "46c113ca23842400e84b628f928211627ab45eeb937dc39e3470d30b03517e0d",
+    "rgb_background_5deg.npz": "3936b7eff93aad79180c68e88eb9b65d491f86d7e07a100656b25f42419c2e0c",
+    "rgb_background_10deg.npz": "a1194a782a8103cffe548f4a65024833069ea460531287f2f0ac0b9b704f9138",
+    "rgb_background_2deg.npz": "914950be508078f2b946ef76bf90c665dee83ac33eb7ed50cb3ace626a598747",
+    "rgb_background_2deg.png": "3c1d4e044acb815ba7fe688d094792d5723854570bac7d4bf380e8751b66e262",
+    "rgb_background_5deg.pdf": "e3b21d6796c347712a7b7515acd474698497f05a48dc6640110f8c0cc09264aa",
+    "physical_background_10deg.npz": "4bca154bc2d7e047ed5c08f756b3b7f8865529e057f122272ed8a82aa6335221",
+    "rgb_background_2deg.csv": "4131599edd42e55f4ceb7c30d719aaa1e255c0459d8bcf7f1d4cd323185db3da",
+    "rgb_background_10deg.csv": "e328693fb94f6e21cf52b9dc931d15c7b588c307ef64df27f346495c8bf46892"
+  }
+}

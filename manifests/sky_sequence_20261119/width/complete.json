@@ -1,0 +1,48 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "data/stream_response_20261119/sequence": "851055e55e54dfbed009bc11d7447cd86d11abe66c00c3efc0f723722af9792d",
+    "data/v3_13/clusters/M13": "ef5e1860672b3b144c44334c6a883c0f0fafdcbff47657b2d364d52579dc8fb8",
+    "data/v3_14/audit/M5": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "data/v3_13/clusters/M30": "08bea55694e8de0a62dea2476e20b5e7a160daecbac461ddcecdfc3fcd5c2e47",
+    "calibration": "5c29664ad17f11354045d9483958a0e5c0fc550e07ab5b3979bcdfb94006c1e3",
+    "data/halo_response_20261118/native": "81982ee4e6b9019c2c3301b503328f8e003d8b08aa3334cd92da70253f64c47f",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_9/expansion/north/native_model/complete.json": "42cc5e149325bfc5a66fc177f84977aa943a4cbd14324d720ec33d44aba5dad4",
+    "native_north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f"
+  },
+  "code": {
+    "sky6_width.py": "3ade6d2e28c9fb12e8b4db6626ff155f11cde13ef34d5ec7680e7b9a31bb4bdf",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_publish.py": "1008b973b914605ec9e0eb8b7eee885e352bf5121efc5f5ff0872fb8cfe0addc",
+    "sky6_figures.py": "ad3877c6cbc4a3c41be04709bb3e05e728170c79691f81e52c9a34c5844a1cd0",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_channels.py": "ff2b4a815e22c710e4bd0d5c5aa8d74bc4a3fa8fb3556cc29e1343b6056b2a43",
+    "sky6_atlas.py": "2d9c79b30e1634f84daa6529f548da1c089ae9d483ca7056a170fc9f64dcbdbd",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "unchanged current v5 common unmasked members, external reference centers and original quantiles preserved; no new distance model fit",
+  "probability": "fixed sequence analytic Gaussian mixture reconstructs the original branch likelihood; all256 shared reference/M13-zero draws coupled. Frozen QRF full PDFs independently replayed and quantiles verified; exact uniform-bin Gaussian-reference convolution using small-error modulus approximation; no Gaussian approximation of QRF PDF",
+  "centering": "subtract each evaluated system/phase/method sample median for diagnostic only; not a transferable correction",
+  "shared_uncertainty": "original member multiplicities and system distances/zero points reused; common uncertainties do not independently shrink with star count",
+  "outputs": {
+    "center_width.csv": "e2aeb648abbd56f3aebf7bc839e1a86e702a8d5ae63cd3689c2047949e4d08b2",
+    "sequence_center_width.pdf": "0ae12371a89522590010487590e4b4387e2eb350a256af3367528a566bd54aef",
+    "sequence_center_width.png": "f1c4d24f62fd6746ce068d04b8ac2a6b67607f36f79b8dc0e6c7631d16b7e040",
+    "width_redraw.npz": "4d05bc43f548e1a0661518d6b8116407cc5ba238a1bf3511ee93a849418237c4",
+    "sequence_center_width.csv": "686d8e604f1fef50e54f1f4f044b6136b2afc1613e5ee04f385e46c63a6d9dbd",
+    "qrf_input_replay.csv": "747a8a5319ebb5389c069ad6373a9609286953d785d83287559651539db56553"
+  }
+}

@@ -1,0 +1,10 @@
+scheme,channel,d_lo,d_hi,node_average_acceptances,scope
+near5_10_100,B,0.01,5,27188488.71556756,"overlapping CMD responses, not inferred-distance counts"
+near5_10_100,G,5,10,80723974.2001645,"overlapping CMD responses, not inferred-distance counts"
+near5_10_100,R,10,100,29089359.79,"overlapping CMD responses, not inferred-distance counts"
+near3_15_100,B,0.01,3,20520491.670574255,"overlapping CMD responses, not inferred-distance counts"
+near3_15_100,G,3,15,81038582.8365315,"overlapping CMD responses, not inferred-distance counts"
+near3_15_100,R,15,100,23419254.18435572,"overlapping CMD responses, not inferred-distance counts"
+near10_30_100,B,0.01,10,32560417.703333355,"overlapping CMD responses, not inferred-distance counts"
+near10_30_100,G,10,30,45324353.085228525,"overlapping CMD responses, not inferred-distance counts"
+near10_30_100,R,30,100,14275102.294733565,"overlapping CMD responses, not inferred-distance counts"
