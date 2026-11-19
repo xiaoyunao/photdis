@@ -1,0 +1,49 @@
+{
+  "job": "61555882",
+  "config": "2418bbe16fed7421738a8610aa4eb64f02fe79c531139ce68e99a18ded1531c0",
+  "code": {
+    "stream_local.py": "864c8d661dc645e182a1b8030c6d829289b5eef76b85011656e96fcf02539460",
+    "stream_extract.py": "98b8030f29ab5db6f78e30da71dcea4dac20e6df3765fd577bfc5bf291b8ce12",
+    "stream_core.py": "8dd1caa565d0ae95357f804576a4b69429b9f98d1fdb6ca757cd14daf0e51976",
+    "stream_rgb.py": "c9587e678bb60c415efa25369828ec80ffa171fe667d89b369f20c86dfa077fd",
+    "stream_sequence.py": "bb61c10502e283abb7c5ecf8b4a4ec789f899ab9ffc7ea913a1dffbb315443ae",
+    "stream_common.py": "82db37f0c83716d39ffbde20d5bf820f97e677a791e72c91807d2d1c3fdb022a",
+    "stream_conditioning.py": "71dc8aa83adf87e62daad365d0f88e7e4cb0b00d329531f1df1c88f629c7e176",
+    "stream_redraw.py": "342cd3308d3bac60cb8b6945b84e4d2da4823490b032a46e5dac1ae555b7c241"
+  },
+  "inputs": {
+    "configs/stream_inputs/pal5_dr11_core.json": "3c57b47cf1e067aa2ccc876d433dad9d0d8c6c3c63fca77d08a520b22a282a08",
+    "sweep-225m005-230p000.fits": {
+      "bytes": 1365747840,
+      "mtime_ns": 1780604928000000000
+    },
+    "sweep-225p000-230p005.fits": {
+      "bytes": 1244249280,
+      "mtime_ns": 1780604936000000000
+    }
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "actual_mask": {
+    "name": "Pal 5",
+    "alt_name": "",
+    "type": "GCl",
+    "ra": 229.0205,
+    "dec": -0.1202,
+    "radius": 0.0641667,
+    "pa": 0.0,
+    "ba": 1.0,
+    "source": "https://www.legacysurvey.org/dr11/external/",
+    "catalog_path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/masking/NGC-star-clusters.fits",
+    "catalog_sha256": "c765ca532fb324f5fe8ca4faf1c7ec17e32a9449d6486210c8cd7608c604f002",
+    "scope": "actual DR11 special detection circle; independent audit, never used for stream-tail recovery",
+    "existing_Pal5_core_ROI": "historical diagnostic key refers to adjacent track stripRA229.4..229.9, not the actual masked circle"
+  },
+  "scope": "special detection circle is not an independent star-count completeness test; registered Pal5_core track-strip name is historical and does not denote this circle; neither enters recovery criterion",
+  "interpretation": "DR11 turns detection off inside circle, retaining Gaia forced photometry; source counts are conditioned on Gaia catalog in this region",
+  "outputs": {
+    "actual_core_random_area.csv": "a750157ceea849801b1bce146249ca79acb7d78bb0700aa3532ccb310310b11f",
+    "core_PSF.npz": "3508580d95d39c1ab32ba3798ec91988b90ec36de91af961abc248ce50fa1c9c",
+    "actual_core_counts.csv": "0be446a5afd3a547320e96ca9ddf305ae2409c70dcec72a85d9254924a669757",
+    "admission.json": "346ea1d1735e8b026a28a2788cc4c614ea9b6e4fd56b6f9824330b74fd2aa74b"
+  }
+}

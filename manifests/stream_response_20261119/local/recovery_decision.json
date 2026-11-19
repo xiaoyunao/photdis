@@ -1,0 +1,13 @@
+{
+  "per_ROI": {
+    "Pal5_tail": true,
+    "Pal5_leading": false,
+    "Sgr_north": true,
+    "Sgr_south": true,
+    "Pal5_core": false
+  },
+  "both_systems_pass": true,
+  "full_footprint_action": "same gr_complete+MS_TO definition authorized for accumulation",
+  "fixed_scheme": "FOS template, gr_complete, MS_TO, >=2 predeclared angular segments with positive95% on-minus-off interval and on density above both equal-width shifted controls",
+  "diagnostic_only": "Pal5_core never determines stream recovery"
+}

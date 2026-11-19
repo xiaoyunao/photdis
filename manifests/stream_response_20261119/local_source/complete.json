@@ -1,0 +1,53 @@
+{
+  "job": "61555882",
+  "config": "2418bbe16fed7421738a8610aa4eb64f02fe79c531139ce68e99a18ded1531c0",
+  "code": {
+    "stream_local.py": "322fad9bf6a01b2f5b730fe5ab8c100bf93b65efabc253fd58adbe1c834bec8d",
+    "stream_extract.py": "98b8030f29ab5db6f78e30da71dcea4dac20e6df3765fd577bfc5bf291b8ce12",
+    "stream_rgb.py": "c9587e678bb60c415efa25369828ec80ffa171fe667d89b369f20c86dfa077fd",
+    "stream_sequence.py": "eed2acd0afc766ea6f83291be4578ce48995dc5d4b06bfd7b9b73c648fb11924",
+    "stream_common.py": "82db37f0c83716d39ffbde20d5bf820f97e677a791e72c91807d2d1c3fdb022a",
+    "stream_conditioning.py": "ab5748e9a81dd179a09db606dc6fb30d0d63b9f401edb5cf0a2f52aa6006fc70",
+    "stream_redraw.py": "a51cea11136c163073ad123dff5a76f4e99ab0e5aba58737a3ca335356ae8efc"
+  },
+  "inputs": {},
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "deduplicated_ls_ids": 0,
+  "TYPE_required": true,
+  "native": "DECam; all local declinations outside north ownership",
+  "source_quality_scope": "gr source quality is separate from geometric random coverage; z only required in named contrasts",
+  "outputs": {
+    "Sgr_south.npz": "3dfbd4913021cc6d321012ae48069cc02264f24f2ee539638ce2f3ca95265c32",
+    "Pal5_leading.npz": "34a092c5498fb2dc59644f96a911d7f8c08efb711ab450b28ca39dd4748ec03f",
+    "raw_inputs.json": "26ff9bf127e71f99f6abd8515528f9c574a3d3c9f551aff26a34c42e99fed269",
+    "sequential_cutflow.csv": "65815a8a156e8de6c03c7d4965b702e96d04d4a77518deddaefec78a49a1cba6",
+    "source_cutflow.csv": "1611db716b2d3556f4c8ae5c78fb21ebb889af3077d34dc0b1c808696ca6d805",
+    "Pal5_core.npz": "26d371be4e92514c313c423e467352c46fe97931840ac23e8c23f6c0b581b281",
+    "photometry.npz": "eabdaa4960a222e861e06b9de4021d4a28f4456ce355840681cc6bb5dffdd836",
+    "Pal5_tail.npz": "61ee243a6a690f06f8cdf80f7eb565239ee4aa16d6984739c26df84192825515",
+    "Sgr_north.npz": "1c63d2f078bf26a08b81190000ecb64db568d6f68573db8668d25eb3a2da53cc"
+  },
+  "cutflow_audit_code": "7995947eb1c5888ce0802ed60cd2bfe20d918d1421ac42b038c65a5a8d20df07",
+  "pure_gr_mask_revision": {
+    "code": "00c77135f68a2ad784bbc762b99a0e71ec6bd38886afc93b79c5b2dffc7fc85c",
+    "parent": "14edf010b70477bd97767664ad2cdedcd9f343ea08141f0a4d8254a9ec3cc160",
+    "config": "f292287e36d980aff9e40d3f46f3b5659d694758d49dcf57b56ea84cc00f057a",
+    "gr_bits": [
+      2,
+      3,
+      5,
+      6,
+      10
+    ],
+    "strict_z_addback_bits": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10
+    ],
+    "raw_measurements_and_IDs_unchanged": true
+  }
+}

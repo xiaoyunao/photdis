@@ -1,0 +1,5 @@
+native,domain,parent,supported,role_exclusions
+south,all_ordinary_receivers,236,3,20
+south,registered_lower_MS,134,3,20
+north,all_ordinary_receivers,256,12,20
+north,registered_lower_MS,142,8,20

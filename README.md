@@ -5,6 +5,13 @@ Gaia and spectroscopy provide training and validation references. Application
 uses photometry alone. The science program focuses on dwarf-rich samples within
 10 kpc and measures where photometry can distinguish competing luminosity branches.
 
+The [stream and population-scale package](manifests/stream_response_20261119/README.md)
+adds true three-channel atlas views, fixed Pal5/Sgr raw-imaging controls,
+a native multivalued sequence experiment and a same-support conditioning test.
+Its [science decisions](manifests/stream_response_20261119/science_decisions.md)
+and [figure index](manifests/stream_response_20261119/figures.md) distinguish
+conditional CMD-response images from the frozen production distances.
+
 The [halo response scientific package](manifests/halo_response_20261118/README.md)
 contains the full-footprint Nside512 CMD-filter atlas, same-source QRF maps,
 known-system sequence tests and selection/noise/reference-scale controls.

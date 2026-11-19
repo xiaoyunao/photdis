@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "check": "all output hashes",
+      "stage": "rgb",
+      "n": 45,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "local_source",
+      "n": 9,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "local_area",
+      "n": 6,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "local",
+      "n": 43,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "core",
+      "n": 4,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "sequence",
+      "n": 17,
+      "passed": true
+    },
+    {
+      "check": "all output hashes",
+      "stage": "conditioning",
+      "n": 9,
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_bin_50.0_100",
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_bin_6.3_10",
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_bin_15.0_26",
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_bin_10.0_15",
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_bin_26.0_50",
+      "passed": true
+    },
+    {
+      "check": "RGB display mask and physical units retained",
+      "stage": "rgb_overview",
+      "passed": true
+    },
+    {
+      "check": "all raw segment counts and random areas conserve at exact reference mu",
+      "n": 528,
+      "passed": true
+    },
+    {
+      "check": "same IDs and same support in both conditioning designs",
+      "passed": true
+    },
+    {
+      "check": "verified PSF members, one common system-scale vector and one member multiplicity matrix for every group",
+      "passed": true
+    }
+  ],
+  "style_pixel_regression": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "scope": "scientific conservation plus original v3.8 pixel baseline; figure visual/PDF audit separately recorded"
+}

@@ -1,0 +1,52 @@
+{
+  "job": "61555882",
+  "config": "2418bbe16fed7421738a8610aa4eb64f02fe79c531139ce68e99a18ded1531c0",
+  "code": {
+    "stream_extract.py": "dd2f53889d156650e7b74f789246cfce8cc621e6a4f904100bf4ba2a677252c8",
+    "stream_rgb.py": "507feea73a68beb72bd3c4e9548e269396b0d9b1c05bd3d5c80f867b49f8dfa4",
+    "stream_common.py": "f016033ba7381bd4e6522eb41a65eeeace5ba0cdb6f9fa12872496d12cb4c4ac"
+  },
+  "inputs": {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits",
+    "bytes": 22995910080,
+    "mtime_ns": 1780757592000000000
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "density": 2500.0,
+  "scope": "independent DR11 random geometry/mask/nobs/dereddened depth, no invented source-quality completeness",
+  "dust_coefficients": [
+    3.214,
+    2.165,
+    1.211
+  ],
+  "outputs": {
+    "Sgr_south.npz": "2c704d90e907a9d3e542bee7f07f8d36dc3a709cb65812bb601d075bba14ddab",
+    "areas.csv": "77e72634cd5a066c6db5c00929ec2b8df12e958dcb22b2c7adce84db6a349226",
+    "Pal5_leading.npz": "58ae21598c003036c0c1d74fd07dd53f38203b655ffbf2384dad873910359507",
+    "Pal5_core.npz": "d9180d53c687bce39a32ffad32cce08371e7ae871c27e6b9dfc84997f1ddbae7",
+    "Pal5_tail.npz": "5e38350e0c934f43ce79b43d9415b2e26f059eff0f88d6fe2b683181244a6b57",
+    "Sgr_north.npz": "c044cae32d4dfe1d69b0d003452ddb0916d575310a1d3f974630b6e689403a12"
+  },
+  "pure_gr_mask_revision": {
+    "code": "00c77135f68a2ad784bbc762b99a0e71ec6bd38886afc93b79c5b2dffc7fc85c",
+    "parent": "1024a6bac4f70d7a22addb60d24fa7ed8c49e53ae0376c6c1bd5b4e9b4a91483",
+    "config": "f292287e36d980aff9e40d3f46f3b5659d694758d49dcf57b56ea84cc00f057a",
+    "gr_bits": [
+      2,
+      3,
+      5,
+      6,
+      10
+    ],
+    "strict_z_addback_bits": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10
+    ],
+    "raw_measurements_and_IDs_unchanged": true
+  }
+}

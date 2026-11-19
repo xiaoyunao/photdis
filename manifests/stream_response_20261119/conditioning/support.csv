@@ -1,0 +1,19 @@
+reference,lo,hi,domain,parent,without,with_distance,intersection,ordinary,metal_poor,status
+specdis,2,5,reference_range,18905,5255,3543,3230,1894,1336,fixed intersection
+specdis,2,5,common_luminosity_domain,2423,472,362,334,208,126,fixed intersection
+specdis,2,5,magnitude_complete_rectangle,890,135,107,101,53,48,fixed intersection
+specdis,5,10,reference_range,3507,2178,2054,1988,1319,669,fixed intersection
+specdis,5,10,common_luminosity_domain,42,15,12,10,5,5,fixed intersection
+specdis,5,10,magnitude_complete_rectangle,0,,,,,,no rows
+spdist,2,5,reference_range,17856,4801,2657,2408,1280,1128,fixed intersection
+spdist,2,5,common_luminosity_domain,13645,2936,1637,1474,812,662,fixed intersection
+spdist,2,5,magnitude_complete_rectangle,5539,802,564,525,277,248,fixed intersection
+spdist,5,10,reference_range,2135,1226,996,970,597,373,fixed intersection
+spdist,5,10,common_luminosity_domain,197,44,44,39,30,9,fixed intersection
+spdist,5,10,magnitude_complete_rectangle,0,,,,,,no rows
+gaia,2,5,reference_range,545,36,35,31,21,10,fixed intersection
+gaia,2,5,common_luminosity_domain,26,,,,26,0,fewer than5 in one group
+gaia,2,5,magnitude_complete_rectangle,0,,,,,,no rows
+gaia,5,10,reference_range,0,,,,,,no rows
+gaia,5,10,common_luminosity_domain,0,,,,,,no rows
+gaia,5,10,magnitude_complete_rectangle,0,,,,,,no rows

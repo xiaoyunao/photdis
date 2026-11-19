@@ -1,0 +1,49 @@
+cohort,system,method,n,bias,nmad
+frozen_v4_three_method,GD1_cocoon,QRF,6,0.43262933178363505,0.2188017050619269
+frozen_v4_three_method,GD1_cocoon,Label grid,6,0.43782875743092586,0.15539469654684615
+frozen_v4_three_method,GD1_cocoon,Old sequence,6,-0.11281964866555644,0.039193714310805046
+frozen_v4_three_method,GD1_thin,QRF,15,0.3899937494444816,0.12027707252463307
+frozen_v4_three_method,GD1_thin,Label grid,15,0.3996898288507653,0.09840456006063215
+frozen_v4_three_method,GD1_thin,Old sequence,15,-0.14333953557437162,0.07367016301567632
+frozen_v4_three_method,M13,QRF,65,0.36249110584149924,0.06441122463258483
+frozen_v4_three_method,M13,Label grid,65,0.38988644064765543,0.0680457340629171
+frozen_v4_three_method,M13,Old sequence,65,-0.11420675678226133,0.059198728339046124
+frozen_v4_three_method,M30,QRF,26,0.45512466123004236,0.11864405014428689
+frozen_v4_three_method,M30,Label grid,26,0.514459537078912,0.04765044982055203
+frozen_v4_three_method,M30,Old sequence,26,-0.1327084208316467,0.05252204381497528
+frozen_v4_three_method,M5,QRF,209,0.34847461376400735,0.0802405243598716
+frozen_v4_three_method,M5,Label grid,209,0.3585555627120627,0.059223348823947475
+frozen_v4_three_method,M5,Old sequence,209,-0.20382765975706818,0.030565622605120028
+frozen_v4_three_method,M92,QRF,1,0.3710791209273716,0.0
+frozen_v4_three_method,M92,Label grid,1,0.4338109786258466,0.0
+frozen_v4_three_method,M92,Old sequence,1,-0.11296505197319895,0.0
+v5_same_current_common_IDs,GD1_cocoon,QRF,6,0.43262933178363505,0.2188017050619269
+v5_same_current_common_IDs,GD1_cocoon,Label grid,6,0.43782875743092586,0.15539469654684615
+v5_same_current_common_IDs,GD1_cocoon,Old sorted,6,-0.11281964866555644,0.039193714310805046
+v5_same_current_common_IDs,GD1_cocoon,Fixed branches,6,-0.08195426348910723,0.08360641913088257
+v5_same_current_common_IDs,GD1_cocoon,Calibrated,6,0.0655824049898247,0.09704258255004282
+v5_same_current_common_IDs,GD1_thin,QRF,15,0.3899937494444816,0.12027707252463307
+v5_same_current_common_IDs,GD1_thin,Label grid,15,0.3996898288507653,0.09840456006063215
+v5_same_current_common_IDs,GD1_thin,Old sorted,15,-0.14333953557437162,0.07367016301567632
+v5_same_current_common_IDs,GD1_thin,Fixed branches,15,-0.11132188420331857,0.04138756606179525
+v5_same_current_common_IDs,GD1_thin,Calibrated,15,0.03149519270298118,0.04803885081849616
+v5_same_current_common_IDs,M13,QRF,64,0.3618653019931617,0.06321639889759935
+v5_same_current_common_IDs,M13,Label grid,64,0.39021189984304516,0.06698848276233231
+v5_same_current_common_IDs,M13,Old sorted,64,-0.11327064588658664,0.057044728990886986
+v5_same_current_common_IDs,M13,Fixed branches,64,-0.10616738064176229,0.03817839711938758
+v5_same_current_common_IDs,M13,Calibrated,64,0.03747806270957443,0.04431394494107642
+v5_same_current_common_IDs,M30,QRF,26,0.45512466123004236,0.11864405014428689
+v5_same_current_common_IDs,M30,Label grid,26,0.514459537078912,0.04765044982055203
+v5_same_current_common_IDs,M30,Old sorted,26,-0.1327084208316467,0.05252204381497528
+v5_same_current_common_IDs,M30,Fixed branches,26,-0.09999149619243147,0.03497776249516845
+v5_same_current_common_IDs,M30,Calibrated,26,0.0446464569874766,0.04059894490923558
+v5_same_current_common_IDs,M5,QRF,207,0.3469593494819585,0.0772039217029391
+v5_same_current_common_IDs,M5,Label grid,207,0.3585114157334428,0.0592888011344493
+v5_same_current_common_IDs,M5,Old sorted,207,-0.20361771710998966,0.03087688357367864
+v5_same_current_common_IDs,M5,Fixed branches,207,-0.17902118682790547,0.034576228570421565
+v5_same_current_common_IDs,M5,Calibrated,207,-0.047083883303637,0.04013288154419791
+v5_same_current_common_IDs,M92,QRF,1,0.3710791209273716,0.0
+v5_same_current_common_IDs,M92,Label grid,1,0.4338109786258466,0.0
+v5_same_current_common_IDs,M92,Old sorted,1,-0.11296505197319895,0.0
+v5_same_current_common_IDs,M92,Fixed branches,1,-0.0997292086834618,0.0
+v5_same_current_common_IDs,M92,Calibrated,1,0.04495089601866131,0.0

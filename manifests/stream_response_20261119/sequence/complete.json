@@ -1,0 +1,77 @@
+{
+  "job": "61555882",
+  "config": "2418bbe16fed7421738a8610aa4eb64f02fe79c531139ce68e99a18ded1531c0",
+  "code": {
+    "stream_local.py": "0a6789ed7b108adac7d2671f29c0e76c8208aaf4c2b11b2d35a7c8437e12956a",
+    "stream_extract.py": "98b8030f29ab5db6f78e30da71dcea4dac20e6df3765fd577bfc5bf291b8ce12",
+    "stream_core.py": "596f174dec24ca41d6fa5a73f386be57f8da2fb8b5ddcf8e91ff46c040e8d3a7",
+    "stream_rgb.py": "399525d7a6cd14645a7e71373335c503eb02c3cc3c668cde1dfedd37ed293a7f",
+    "stream_sequence.py": "b06debc1dbacdca85b44ffe5b084d751cc88ba293ee7f7b5cc8a4f28641e3ba8",
+    "stream_full_finish.py": "25a0971ffdf939f8b875771bfdaced4734c737cdc3ce30b29e2eac316db73095",
+    "stream_full.py": "5e304800517174aa8914980c737d38e6664d61f36a7e2c18b4dada1d6199b95f",
+    "stream_common.py": "82db37f0c83716d39ffbde20d5bf820f97e677a791e72c91807d2d1c3fdb022a",
+    "stream_conditioning.py": "07539e5ff7e630cd3238698141dec66b90489b69ca2fbeb54ec1c561168f730b",
+    "stream_delivery.py": "a414d619243727daeaad10b231edf36d0d8e4e56c80f2fbcbe7f9f1847bb91ba",
+    "stream_redraw.py": "ee2ed39ee7b3341960323f4ad6769970a8393aa544351813233753efbdc3560c",
+    "stream_verify.py": "1d556d32c03aaa3e31c2ade9cb300cb0554b27ef5be6d457f1118e1fdff848c0",
+    "stream_coverage_mask.py": "6efbcfeb2dd8bbc6eed26b9639bd6dd0e266117e72855c8671231b0a1c9a055f",
+    "stream_phase.py": "c5e70b9924bebd3f2e6954148fca9b96bdd8d0aa05efa9eeecc4588a79ec594d",
+    "stream_polish.py": "17d01419de88059f3997394c46ec2a1decaaedf068ecdb501b7507095318971f"
+  },
+  "inputs": {
+    "data/halo_response_20261118/sequence": "9dc15e0f26708edbd337c4f2907bab086361a3901d98ba46f03bafdcc49d1953",
+    "data/halo_response_20261118/native": "81982ee4e6b9019c2c3301b503328f8e003d8b08aa3334cd92da70253f64c47f",
+    "data/v3_14/audit/M5": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "data/v3_14/audit/M13": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/v3_14/audit/M30": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+    "data/v3_14/audit/M92": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+    "data/halo_response_20261118/noise_fixed": "89c56e84a85441ffa1e64b318aba15afcd8df96edfa32c9d299b416ac81ae933",
+    "data/halo_response_20261118/roles": "e2d8aa15a5ed575562f3ec0f81844f09f28dcc1612fd223670b863a662587bcf"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "branch_measure": "arc length of physical absolute-grz polyline, four midpoint quadrature nodes per original segment; explicitly not an IMF or LF",
+  "posterior": "Gaussian joint gr/rz with negative shared-r covariance; exact conditional distance amplitude; 128 Sobol mixture draws plus 0.1mag gray intrinsic scatter; >5sigma rejection",
+  "reference_uncertainty": "one common cluster draw per bootstrap shared across methods and members; same M13 reference draw used in zero point",
+  "ancestry": "M13/M92 native construction and all systems examined in earlier development; transfer is independent of this zero point only; GD1 reference curve uncertainty unavailable, conditional centers retained",
+  "outputs": {
+    "ordinary_predictions.npz": "0bacb0ab0f1f17d181df2073c224bb47eaf8a7c3958919a719a2d1b623174d4a",
+    "known_system_branch_calibration.pdf": "536dee5b883d3fca86eaa28f4b90b060d1d5611f90a0a72daa7b6da04f86e8c2",
+    "distance_scale.csv": "ea254f679da9fa6448b2a8f53ef5510bb4f6b0d4171d55c0277b8c93aaa393e7",
+    "qrf_only_identity_audit.csv": "91f8b5a346d12d0a439ed534ffb1b54afc7c2691ac8ea62813e4945f16d9b256",
+    "cross_counts.csv": "73054fdf6a5893d18e34d07350b9b3a7164110df8b2efecfd6ab99ca7a11cf9f",
+    "per_star_branches.csv": "5bdd94f082063031480bf7d0fb993d99f178f1d617e0061ffcc2b33fcff284d9",
+    "known_system_branch_calibration.png": "b2a160119ad15ec20c5fe8288c0722e8d2b72e34efab3a434e30fca9eabe8c8a",
+    "ordinary_support.csv": "623cea367a593f792b52cefe54269ebe369fe3e2180242226f7d1da62e3ba059",
+    "calibration.json": "5c29664ad17f11354045d9483958a0e5c0fc550e07ab5b3979bcdfb94006c1e3",
+    "predictions.npz": "c7f137ad1f9069cb767da05015dea0015d4575513fd0a2e1a305003515399786",
+    "shared_bootstrap.npz": "47c7b5084a819fe106644e95c55711df3cf7c7405fcf89dd8897b0a9da4f4f24",
+    "template_redraw.npz": "33fa9a7c414aa490eda685094917517f565f9337dc219e814fd4d2660640d7df",
+    "original_and_current_r20_21.csv": "0a096bb99e9cf5f492b8a144285af17262daf0645b320cc7379e405883157f6e",
+    "ordinary_dwarf_control.csv": "983e9dd0d42512ba0cc6f65c8cb35d1bb2090c3199d390e6af53be51ed93437c",
+    "known_system_branch_calibration.csv": "ea254f679da9fa6448b2a8f53ef5510bb4f6b0d4171d55c0277b8c93aaa393e7",
+    "native_fold_regions.json": "7c1a7e3e92042cfd2fd353913b6793586c423e4bf6c244fa18e520e85a7aeaba",
+    "full_member_cross_counts.csv": "d7fb2d0dd67d8b07aba7fff5edd940442815e6262e50e99ed72726693c17dc61"
+  },
+  "full_member_audit": {
+    "code": "8079a67e409a78f719a8f5cd75d89f1147510c2f5294208344de45fc0958fede",
+    "inputs": {
+      "data/v3_14/audit/M5": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+      "data/v3_14/audit/M13": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+      "data/v3_14/audit/M30": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53",
+      "data/v3_14/audit/M92": "e74f0f76f44fec69e9413430e883ad666f07afa54d856ea290a7b2cd0e788311",
+      "data/v3_18/members": "09b9644054ccbb2454db8d3fc3de1bec21508f5d0a0ace9451f69eb83afd3457",
+      "reference_census": "2437f844fcfafe5ef1f34023bde6104fb3bb0801dd9ebfd74a5dc52a1ec77669"
+    },
+    "scope": "all original QRF-only admitted members, including outside the old reference-Mr3..8 interval; reference CMD phase is not an independent spectroscopic label"
+  },
+  "figure_revision": {
+    "renderer": "b0552f09f8d2b506763757b8354dfb200b7b78788f47236e4af35d5e050b6309",
+    "revision_receipt": "92bb9da3b7bfd0b2e16ad0f7e14e5d52d56fc2881fd40881d7833c8fcad9a6b7",
+    "numerical_arrays_and_tables_unchanged": true
+  },
+  "native_fold_diagnostic": {
+    "code": "c6e3a8969e2c6fad344b396c9e5f2111e51a819f64af81371b54ff08f6ad958a",
+    "parent_prediction": "161d01fb8c51b90493e5ad0fd11a3a4bc567a0be6493267efc4a1704aeb0a14d",
+    "scope": "fold frequency corrected for actual north native color transform; all distance/posterior/zero-point/group-statistic values unchanged"
+  }
+}

@@ -72,3 +72,16 @@ archives/
 !manifests/halo_response_20261118/cache/**/
 !manifests/halo_response_20261118/cache/**/*.json
 !manifests/halo_response_20261118/cache/**/*.csv
+
+# Compact v5 science evidence. Source catalogs and full cubes remain under data/.
+!manifests/stream_response_20261119/**/*.csv
+!manifests/stream_response_20261119/rgb/rgb_*.npz
+!manifests/stream_response_20261119/full_rgb/rgb_*.npz
+!manifests/stream_response_20261119/local/*_redraw.npz
+!manifests/stream_response_20261119/sequence/predictions.npz
+!manifests/stream_response_20261119/sequence/template_redraw.npz
+!manifests/stream_response_20261119/sequence/ordinary_predictions.npz
+!manifests/stream_response_20261119/sequence/shared_bootstrap.npz
+!manifests/stream_response_20261119/conditioning/weighted_ids.npz
+!manifests/stream_response_20261119/full_replay/fixed_error_curve.npz
+!manifests/stream_response_20261119/full_identities/source_alias_exclusions.npz

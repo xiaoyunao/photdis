@@ -1,0 +1,56 @@
+{
+  "sweeps": 1339,
+  "native_counts": {
+    "south": {
+      "raw": 2221527159,
+      "missing_TYPE": 0,
+      "non_PSF": 1146131024,
+      "PSF": 1075396135,
+      "owned": 1067499772,
+      "latitude_E010": 853512060,
+      "clean_mask": 847271319,
+      "gr_NOBS": 825138028,
+      "gr_error": 178692098,
+      "gr_masked": 177304662,
+      "gr_fracin": 170547813,
+      "gr_fracflux": 144664328,
+      "gr_anymask": 122583976,
+      "gr0_lt23": 80313183,
+      "gr_complete_depth": 73545100
+    },
+    "north": {
+      "raw": 302200536,
+      "missing_TYPE": 0,
+      "non_PSF": 171506428,
+      "PSF": 130694108,
+      "owned": 125422187,
+      "latitude_E010": 112448497,
+      "clean_mask": 109901611,
+      "gr_NOBS": 105554177,
+      "gr_error": 21415132,
+      "gr_masked": 21102513,
+      "gr_fracin": 20750285,
+      "gr_fracflux": 18435431,
+      "gr_anymask": 17479031,
+      "gr0_lt23": 15369842,
+      "gr_complete_depth": 1368278
+    }
+  },
+  "identities": {
+    "native_unique": 74913378,
+    "positive_gaia": 51111289,
+    "repeated_positive_gaia_aliases": 0,
+    "admitted_after_aliases": 74913378,
+    "rule": "verified TYPEPSF/native owner first; same positive Gaia reference aliases retained once at minimum native LSID; source_id0 uses unique native IDs, no unsupported positional identity claim"
+  },
+  "CMD_union": 25423822,
+  "node_acceptances": 502901006,
+  "mean_node_acceptances_per_union": 19.780700399806136,
+  "area_deg2": 14155.704399999999,
+  "display_area_deg2": 13963.184121782911,
+  "cube_sha256": "c5237cf0023836348478fbf7aca67167cd8c0c064d305d44a7ed22913c3443f6",
+  "cube_bytes": 3224399040,
+  "cube_axes": "NATIVE_COUNTS[native,mu,pixel], COUNTS[1,0,mu,pixel]=combinedMS_TO; COUNTS[0,0] unused zero compatibility slot, not a bright sample; NATIVE_AREAS three identical eligibility slots, gr_complete area in index2",
+  "role": "conditional full-footprint CMD-response imaging; these are not newly measured distances or spectral phase labels",
+  "north_scope": "native template support and seam ownership inherited; independent local stream recovery in DECam only"
+}

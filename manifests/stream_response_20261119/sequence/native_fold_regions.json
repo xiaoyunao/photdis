@@ -1,0 +1,15 @@
+{
+  "regions": {
+    "south": {
+      "gr_lo": 0.15545399999999976,
+      "gr_hi": 0.1787449999999997
+    },
+    "north": {
+      "gr_lo": 0.15745964144494629,
+      "gr_hi": 0.1835430517322485
+    }
+  },
+  "changed_rows": 17,
+  "definition": "native phase0 redward turnoff-hook color range in original physical order, inside fixed reference-Mr3..4.5 turnoff/support interval; 128 identity-matched g/r Sobol perturbations with the same0.001mag numerical floor as the likelihood",
+  "distance_predictions_unchanged": true
+}

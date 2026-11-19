@@ -1,0 +1,95 @@
+{
+  "job": "61555882",
+  "config": "2418bbe16fed7421738a8610aa4eb64f02fe79c531139ce68e99a18ded1531c0",
+  "code": {
+    "stream_local.py": "322fad9bf6a01b2f5b730fe5ab8c100bf93b65efabc253fd58adbe1c834bec8d",
+    "stream_extract.py": "98b8030f29ab5db6f78e30da71dcea4dac20e6df3765fd577bfc5bf291b8ce12",
+    "stream_rgb.py": "c9587e678bb60c415efa25369828ec80ffa171fe667d89b369f20c86dfa077fd",
+    "stream_sequence.py": "eed2acd0afc766ea6f83291be4578ce48995dc5d4b06bfd7b9b73c648fb11924",
+    "stream_common.py": "82db37f0c83716d39ffbde20d5bf820f97e677a791e72c91807d2d1c3fdb022a",
+    "stream_conditioning.py": "ab5748e9a81dd179a09db606dc6fb30d0d63b9f401edb5cf0a2f52aa6006fc70",
+    "stream_redraw.py": "a51cea11136c163073ad123dff5a76f4e99ab0e5aba58737a3ca335356ae8efc"
+  },
+  "inputs": {
+    "raw_cube": "583f2077ab3401ca49840d532db390340692c2a78dfd0c8ee6a7bfedd2521de9",
+    "configs/stream_inputs/track.st.Pal5.ibata2024.ecsv": "bdfba81702890bd697d7b8a76cad672d038b7870f7dfc3a17d9fb101bdcc817d",
+    "configs/stream_inputs/track.st.Sagittarius.antoja2020.ecsv": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "channel_order": "B near,G middle,R far; sub-bins equal in modulus",
+  "geometry": "Galactic Aitoff l0 center, increasing longitude left",
+  "stretch": {
+    "overview_BGR_kpc": [
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        26,
+        100
+      ]
+    ],
+    "within_bin": "three equal-modulus intervals, normalized exact mu-cell overlap weights",
+    "density_stretch": "asinh(10*clip((density-p05)/(p995-p05),0,1))/asinh(10), each channel",
+    "positive_residual_stretch": "asinh(10*clip(max(residual,0)/positive_p995,0,1))/asinh(10)",
+    "sigma_deg": 0.3,
+    "background_sigma_deg": 5
+  },
+  "signed_data_retained": true,
+  "outputs": {
+    "rgb_bin_50.0_100.npz": "a3a8e6402f604db51a91a07c24d5d0576f3bb7d110860fc243381635bee1d8df",
+    "physical_bin_26.0_50.png": "b661cc990858c600bd8c16b4e642a9592b9a658132f9cbeea466c0c349f23a5d",
+    "physical_channels.npz": "8952e88367da635451c650cc1c6770ded3b0d5b667b7eb3f04dd41503105dcf0",
+    "rgb_overview.png": "044bac61da757e0e4335281f967b23b2ea58b852ec970a345b32c5a7af9913bc",
+    "rgb_bin_10.0_15.png": "1547e2d45b6dbed54624b4e5386264645de0fd20da82bdcab2c994ffb553aeda",
+    "rgb_bin_6.3_10.png": "56d7a5112a3bc64413be195138dd580a7e86ff4f7b617e713ed9cb90c49b6233",
+    "physical_bin_50.0_100.pdf": "368714d50e312e4bad2cce0bc52b3ba29436be79fe8e09fb53389811a1409163",
+    "rgb_bin_6.3_10.npz": "33a52118bda0f86f61812d3e1de51d8f6555f9f6b283a5bbaf8b8bd58b81dfde",
+    "rgb_bin_10.0_15.csv": "313edab6644b31c3a9365df7dfab41738fd206e445a18b72eb30083cb3c767ed",
+    "stretch.csv": "5d7eac65876c5a55867879199c39a9eb22aeb52d9cc0d618b447e8fa9f448322",
+    "rgb_bin_15.0_26.npz": "ccdcce02e3c207ed0fcd47e11ab467bc1919c6a304f9973217fc8f65442f48fe",
+    "rgb_overview.csv": "4a64f04bdb6d35bfa09c5deebfb37eb2c2b9868d3cad5bdf0c361306a8cfabff",
+    "physical_bin_26.0_50.pdf": "d5021c5459d0effa9807bbfee48424aa4127e2c474117f8fcb27c583ea2dc227",
+    "physical_bin_6.3_10.png": "25d9aeddedf4e9cb43fe2c1086aa7b8420eec85a33d8ab960156ffbf6e71ac51",
+    "rgb_bin_50.0_100.csv": "1224bbc270f4fbb83061d233b0eea19bbdbfcab68419a709686c1b187615c4d1",
+    "physical_bin_10.0_15.pdf": "b87968eee73ac7a8eefa07d72dd636117ca62e72ccddc39f49dae4df850d2b35",
+    "rgb_bin_6.3_10.pdf": "34cc86bc0d7a7cf8ba52563f8841adc282ac78bdd8c19c9d0c9dacaa4107b14c",
+    "physical_bin_6.3_10.csv": "306bd874d6c9eefa7db6471ccebef597d211579b20c4b90fd02495e8ad2eda16",
+    "physical_bin_50.0_100.csv": "1224bbc270f4fbb83061d233b0eea19bbdbfcab68419a709686c1b187615c4d1",
+    "rgb_bin_10.0_15.npz": "f20e4775d21bafd65d17d830edbaa86617479089d0a515630759207e1df384bf",
+    "physical_bin_10.0_15.csv": "313edab6644b31c3a9365df7dfab41738fd206e445a18b72eb30083cb3c767ed",
+    "physical_overview.csv": "4a64f04bdb6d35bfa09c5deebfb37eb2c2b9868d3cad5bdf0c361306a8cfabff",
+    "rgb_bin_50.0_100.png": "58215fece002779829ce76d29078da70f0e3e9d84f38596731de46ab3cd80349",
+    "physical_bin_15.0_26.csv": "5b053ef61f525e0597e36477fc81b1601b1409aa19a96ff7494e137ac2f607d5",
+    "rgb_bin_15.0_26.pdf": "248b34a776cffc83c21a141acdb3ee42b21c8484305e937433a97ca8a73bf0cc",
+    "physical_bin_50.0_100.png": "14bea0fe7319bce4ce560a25bc8f8b10707f721acc621271731fbf7f70035b8a",
+    "node_weights.csv": "d1a73155623f6eea560609f8eac504181fed45f21b8d2a48586c134193a7bd11",
+    "physical_bin_15.0_26.pdf": "6ba2e3b9d4911ce50cbc4b3aa5fbb4ff25947d00b3fdf56ae99225580c24dc80",
+    "rgb_bin_10.0_15.pdf": "a8071ca991e50118a1f589768fe68b8189684425bbf0de61f8fa68f0df0ae180",
+    "physical_overview.pdf": "81879c8f498d0b37bb3f6113d0cd97d8cdc69dbbc04c2a6e458b72ce8d2ee4b3",
+    "rgb_bin_26.0_50.png": "436d92d543355d939827a34623e9023e0405766b213cc4af8e1471ea04f2a6cc",
+    "physical_bin_10.0_15.png": "c7f5cc0f6a150b837c436dc03cd0552cf0daa581d66e045aa76280ad9f8ea4f4",
+    "rgb_bin_50.0_100.pdf": "1d4005123ee33581fc5a184b8e2b734faecccdaf2ce17756c502bc81db427a40",
+    "rgb_bin_26.0_50.npz": "97e9200b3df2ef35d3433469788e41834478439d372fe7ac257fe81de3a628e7",
+    "physical_bin_6.3_10.pdf": "e5447d4b9ef778671c7df486bc6b51c4cd569949b09e6e0e446303db16e09e31",
+    "rgb_bin_15.0_26.csv": "5b053ef61f525e0597e36477fc81b1601b1409aa19a96ff7494e137ac2f607d5",
+    "physical_bin_26.0_50.csv": "93ca0160988672e1012f452fe3924e806e788bcf88f0342f33673264d46ee595",
+    "rgb_overview.pdf": "b36e1d5870f69f051afba6fc26749ea035b920582ff3278c01a40f6a9a903038",
+    "rgb_overview.npz": "5ac7a6159496207032cf37ed5d54dc6fe90f3025d92462528fd593d040819afe",
+    "rgb_bin_26.0_50.pdf": "231ebbb05c7adfba0d44f6a235bcd047d75be8f72665d5ab12edf3f3709f43b7",
+    "rgb_bin_15.0_26.png": "9745812e3678fa25e291c1a1e273d2c08ab18a0828d78a4d9cfa184398aa29d8",
+    "physical_overview.png": "6adf9fea266795cae8325d6003fcb9c39761e5c22997b08691c22039ef12d7c6",
+    "rgb_bin_26.0_50.csv": "93ca0160988672e1012f452fe3924e806e788bcf88f0342f33673264d46ee595",
+    "physical_bin_15.0_26.png": "308b49528a7596e4adb958f4c2e1ab3930ee7e323d49bdd5043f844e39697716",
+    "rgb_bin_6.3_10.csv": "306bd874d6c9eefa7db6471ccebef597d211579b20c4b90fd02495e8ad2eda16"
+  },
+  "figure_revision": {
+    "renderer": "b0552f09f8d2b506763757b8354dfb200b7b78788f47236e4af35d5e050b6309",
+    "revision_receipt": "ace9e0e814700323a163bcf09f8d432937d83c9570682223e0cf9d157aab8d9f",
+    "numerical_arrays_and_tables_unchanged": true
+  }
+}

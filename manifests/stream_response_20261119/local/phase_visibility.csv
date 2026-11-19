@@ -1,0 +1,9 @@
+roi,model,phase,reference_mu,formal_depth_p10,brightest_g0,turnoff_g0,template_nodes_g0_lt23,warning
+Pal5_tail,FOS,MS_TO,16.70618311619346,23.115896586383656,20.19247311619346,20.19247311619346,102,template-point visibility is not stellar-population completeness
+Pal5_tail,Pal5_control,MS_TO,16.70618311619346,23.115896586383656,20.39584011619346,20.39584011619346,102,template-point visibility is not stellar-population completeness
+Pal5_leading,FOS,MS_TO,16.70618311619346,23.167629191907505,20.19247311619346,20.19247311619346,102,template-point visibility is not stellar-population completeness
+Pal5_leading,Pal5_control,MS_TO,16.70618311619346,23.167629191907505,20.39584011619346,20.39584011619346,102,template-point visibility is not stellar-population completeness
+Sgr_north,FOS,MS_TO,18.408876627676833,23.093158160102597,21.895166627676833,21.895166627676833,48,template-point visibility is not stellar-population completeness
+Sgr_south,FOS,MS_TO,16.765210985926952,23.171847279698692,20.251500985926953,20.251500985926953,98,template-point visibility is not stellar-population completeness
+Pal5_core,FOS,MS_TO,16.70618311619346,23.229952288646054,20.19247311619346,20.19247311619346,102,template-point visibility is not stellar-population completeness
+Pal5_core,Pal5_control,MS_TO,16.70618311619346,23.229952288646054,20.39584011619346,20.39584011619346,102,template-point visibility is not stellar-population completeness

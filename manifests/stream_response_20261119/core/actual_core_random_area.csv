@@ -1,0 +1,3 @@
+region,n_random,density,area_deg2,area_poisson_sigma
+actual_cluster_circle,18,2500.0,0.0072,0.001697056274847714
+adjacent_0.13_0.25deg,356,2500.0,0.1424,0.007547184905645283

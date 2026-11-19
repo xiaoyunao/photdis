@@ -1,0 +1,7 @@
+{
+  "native_unique": 74913378,
+  "positive_gaia": 51111289,
+  "repeated_positive_gaia_aliases": 0,
+  "admitted_after_aliases": 74913378,
+  "rule": "verified TYPEPSF/native owner first; same positive Gaia reference aliases retained once at minimum native LSID; source_id0 uses unique native IDs, no unsupported positional identity claim"
+}

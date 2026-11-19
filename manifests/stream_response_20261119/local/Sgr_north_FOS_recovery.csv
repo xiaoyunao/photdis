@@ -1,0 +1,7 @@
+roi,model,variant,source_count,area_on,area_off
+Sgr_north,FOS,strict_original,338013,16.3464,22.2176
+Sgr_north,FOS,strict_E010,591136,18.4308,36.6236
+Sgr_north,FOS,gr_E010,568494,18.442,36.6612
+Sgr_north,FOS,gr_E010_plus_z,523291,18.4308,36.6236
+Sgr_north,FOS,gr_complete,533985,17.3908,33.2076
+Sgr_north,FOS,gr_complete_plus_z,494956,17.382,33.188

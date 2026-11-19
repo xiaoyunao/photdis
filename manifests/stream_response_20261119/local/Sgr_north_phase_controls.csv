@@ -1,0 +1,13 @@
+roi,phase,zone,n,area_deg2
+Sgr_north,MS_SGB_RGB,target,23295,17.3908
+Sgr_north,MS_SGB_RGB,off,29205,33.2076
+Sgr_north,MS_TO,target,12125,17.3908
+Sgr_north,MS_TO,off,10018,33.2076
+Sgr_north,blue_box,target,12528,17.3908
+Sgr_north,blue_box,off,12283,33.2076
+Sgr_north,MS_only,target,9775,
+Sgr_north,RGB_only,target,11170,
+Sgr_north,both,target,2350,
+Sgr_north,MS_only,off,7778,
+Sgr_north,RGB_only,off,19187,
+Sgr_north,both,off,2240,

@@ -1,0 +1,277 @@
+[
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m005-010p000.fits",
+    "size": 1904895360,
+    "mtime_ns": 1780600075000000000,
+    "raw_local": 3505384,
+    "PSF_owned": 1469651
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m010-010m005.fits",
+    "size": 1440118080,
+    "mtime_ns": 1780600011000000000,
+    "raw_local": 2851633,
+    "PSF_owned": 1225252
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m015-010m010.fits",
+    "size": 1237282560,
+    "mtime_ns": 1780600013000000000,
+    "raw_local": 2449975,
+    "PSF_owned": 1070845
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m020-010m015.fits",
+    "size": 1162287360,
+    "mtime_ns": 1780600024000000000,
+    "raw_local": 2301472,
+    "PSF_owned": 976490
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m025-010m020.fits",
+    "size": 1539354240,
+    "mtime_ns": 1780600038000000000,
+    "raw_local": 3048138,
+    "PSF_owned": 1177069
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m030-010m025.fits",
+    "size": 1828771200,
+    "mtime_ns": 1780600087000000000,
+    "raw_local": 3207774,
+    "PSF_owned": 1353350
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005m035-010m030.fits",
+    "size": 1783644480,
+    "mtime_ns": 1780600047000000000,
+    "raw_local": 66052,
+    "PSF_owned": 28291
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-005p000-010p005.fits",
+    "size": 1870502400,
+    "mtime_ns": 1780600067000000000,
+    "raw_local": 252161,
+    "PSF_owned": 104443
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m005-015p000.fits",
+    "size": 1921320000,
+    "mtime_ns": 1780600274000000000,
+    "raw_local": 2301367,
+    "PSF_owned": 958544
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m010-015m005.fits",
+    "size": 1398718080,
+    "mtime_ns": 1780600223000000000,
+    "raw_local": 1669963,
+    "PSF_owned": 687370
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m015-015m010.fits",
+    "size": 1153635840,
+    "mtime_ns": 1780600191000000000,
+    "raw_local": 1366780,
+    "PSF_owned": 585642
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m020-015m015.fits",
+    "size": 1598310720,
+    "mtime_ns": 1780600242000000000,
+    "raw_local": 1751674,
+    "PSF_owned": 736471
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m025-015m020.fits",
+    "size": 1955761920,
+    "mtime_ns": 1780600259000000000,
+    "raw_local": 2314550,
+    "PSF_owned": 951994
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m030-015m025.fits",
+    "size": 1831536000,
+    "mtime_ns": 1780600235000000000,
+    "raw_local": 1170769,
+    "PSF_owned": 485051
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010m035-015m030.fits",
+    "size": 1800613440,
+    "rows": 3565480,
+    "local": 0
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-010p000-015p005.fits",
+    "size": 1904333760,
+    "mtime_ns": 1780600274000000000,
+    "raw_local": 1033081,
+    "PSF_owned": 425871
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205m005-210p000.fits",
+    "size": 1307756160,
+    "mtime_ns": 1780604308000000000,
+    "raw_local": 2103036,
+    "PSF_owned": 1020212
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205m010-210m005.fits",
+    "size": 1370234880,
+    "mtime_ns": 1780604315000000000,
+    "raw_local": 2160636,
+    "PSF_owned": 1023671
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205m015-210m010.fits",
+    "size": 1219124160,
+    "mtime_ns": 1780604302000000000,
+    "raw_local": 488253,
+    "PSF_owned": 237991
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p000-210p005.fits",
+    "size": 1220794560,
+    "mtime_ns": 1780604304000000000,
+    "raw_local": 1952207,
+    "PSF_owned": 902501
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p005-210p010.fits",
+    "size": 1143374400,
+    "mtime_ns": 1780604301000000000,
+    "raw_local": 1817605,
+    "PSF_owned": 824271
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p010-210p015.fits",
+    "size": 1162226880,
+    "mtime_ns": 1780604300000000000,
+    "raw_local": 1830985,
+    "PSF_owned": 801408
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p015-210p020.fits",
+    "size": 1093271040,
+    "mtime_ns": 1780604296000000000,
+    "raw_local": 1417949,
+    "PSF_owned": 587473
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-205p020-210p025.fits",
+    "size": 1012348800,
+    "mtime_ns": 1780604291000000000,
+    "raw_local": 8502,
+    "PSF_owned": 3680
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220m005-225p000.fits",
+    "size": 1360941120,
+    "mtime_ns": 1780604717000000000,
+    "raw_local": 530753,
+    "PSF_owned": 278193
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220m010-225m005.fits",
+    "size": 1450117440,
+    "mtime_ns": 1780604724000000000,
+    "raw_local": 578507,
+    "PSF_owned": 301182
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220m015-225m010.fits",
+    "size": 1285067520,
+    "mtime_ns": 1780604751000000000,
+    "raw_local": 8214,
+    "PSF_owned": 4646
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-220p000-225p005.fits",
+    "size": 1209119040,
+    "mtime_ns": 1780604745000000000,
+    "raw_local": 13889,
+    "PSF_owned": 7175
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225m005-230p000.fits",
+    "size": 1365747840,
+    "mtime_ns": 1780604928000000000,
+    "raw_local": 1168898,
+    "PSF_owned": 601689
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225m010-230m005.fits",
+    "size": 1454302080,
+    "mtime_ns": 1780605016000000000,
+    "raw_local": 626536,
+    "PSF_owned": 321317
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225m015-230m010.fits",
+    "size": 1393626240,
+    "rows": 2759567,
+    "local": 0
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-225p000-230p005.fits",
+    "size": 1244249280,
+    "mtime_ns": 1780604936000000000,
+    "raw_local": 400695,
+    "PSF_owned": 220793
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230m005-235p000.fits",
+    "size": 1134475200,
+    "mtime_ns": 1780605046000000000,
+    "raw_local": 372605,
+    "PSF_owned": 189647
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230p000-235p005.fits",
+    "size": 1242869760,
+    "mtime_ns": 1780605080000000000,
+    "raw_local": 1953126,
+    "PSF_owned": 997964
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230p005-235p010.fits",
+    "size": 1206325440,
+    "mtime_ns": 1780605078000000000,
+    "raw_local": 411029,
+    "PSF_owned": 204043
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-230p010-235p015.fits",
+    "size": 1163399040,
+    "rows": 2303673,
+    "local": 0
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-235m005-240p000.fits",
+    "size": 1118160000,
+    "rows": 2214090,
+    "local": 0
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-235p000-240p005.fits",
+    "size": 1225252800,
+    "mtime_ns": 1780605153000000000,
+    "raw_local": 1582443,
+    "PSF_owned": 835589
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-235p005-240p010.fits",
+    "size": 1209582720,
+    "mtime_ns": 1780605169000000000,
+    "raw_local": 1648340,
+    "PSF_owned": 869075
+  },
+  {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-235p010-240p015.fits",
+    "size": 1150752960,
+    "rows": 2278630,
+    "local": 0
+  }
+]

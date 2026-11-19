@@ -1,0 +1,7 @@
+roi,model,variant,source_count,area_on,area_off
+Pal5_core,FOS,strict_original,0,0.0,0.0
+Pal5_core,FOS,strict_E010,25976,0.0828,0.2384
+Pal5_core,FOS,gr_E010,17333,0.0828,0.2384
+Pal5_core,FOS,gr_E010_plus_z,15577,0.0828,0.2384
+Pal5_core,FOS,gr_complete,16920,0.0816,0.2288
+Pal5_core,FOS,gr_complete_plus_z,15288,0.0816,0.2288

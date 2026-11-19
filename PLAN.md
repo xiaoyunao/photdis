@@ -1,16 +1,41 @@
 # PLAN
 
-## Stream response2026-11-19 — active
+## Stream response2026-11-19 — completed
 
-Execute full v5 prompt and reviewfc961495 in stream_response_20261119.
-Completed numerical milestones:61-node RGB+scalar maps, random areas, branch/zero-point experiment, fixed-support conditioning. Local recovery and common-curve replay passed in both systems. Final mask audit separated z-only pixel vetoes from gr; the full earlier imaging trial is retained. Replay corrected local selection and common-curve recovery, then conditionally rescan1339sweeps with32workers. Finish actual counts/areas, same renderer RGB, conservation/visual/PDF replay, delivery/sync. Keep northern inherited-transfer scope explicit.
-1. Deliver overview and five internal-three-channel RGBs from actual61-node cube, with physical density/signed residual/masks and lossless redraw grids.
-2. Fixed Pal5/Sgr raw-imaging and random-area extraction: strict/E/gr/z/depth cutflows, on/off Hess, full common CMD envelope, phase and angular/mu controls. Only a locally supported exact definition may expand full footprint.
-3. Preserve turnoff multivalued branches, same-ID/phase/support audit; one M13 lower-MS zero point and held-out-system migration plus ordinary-dwarf control, common scale errors.
-4. Fixed-population/reference-role/logg-phase conditioning comparison with/without distance, identical support/weighted mean, independent-scale/selection controls and effect definitions.
-5. Validate scientific conservation and actual figures, retain negative outcomes, write scientific decisions, update memory, commit and synchronize GitHub/NERSC. Preserve v3.8 base style; authorized RGB extension only.
+Full v5 prompt/reviewfc961495 delivered in manifests/stream_response_20261119
+and figures/stream_response_20261119. Read README, science_decisions.md,
+figures.md and delivery/{public_checks,visual_review}.json before resuming.
 
-Parameters and roles: configs/stream_response_20261119.json. Primary evidence884ea87b, production87069408. All TYPE=PSF/ownership and source exclusions explicit. Numerical jobs on allocated NERSC nodes only.
+Completed: original61-node RGB and scalar companions; fixed Pal5/Sgr raw
+imaging/independent areas and phase/angle/modulus controls; corrected pure-gr
+pixel admission; common-error-curve cross-system replay; conditional full
+1339-sweep accumulation; native multivalued sequence and one M13lower-MS
+zero point with shared member/reference draws; same-support conditioning
+with point/bootstrap refits, reference-luminosity and signed-Gaia anchors.
+All negative controls and conservative-mask imaging trial are preserved.
+
+Final image parent74,913,378unique PSFs;25,423,822MS/TO-CMD-union sources;
+502,901,006node acceptances;14,155.7044deg2 independent imaging area.
+These are CMD-response images, not a new distance catalog. Production
+87069408 and prior evidence884ea87b remain intact; no manuscript edits.
+
+Validation:8targeted scientific tests,16source-bound checks,197published
+hashes, originalv3.8F02/F03 exact pixels,36English PNG/PDF pairs, visual
+and Poppler checks, and independent redraw of all36from compact evidence.
+All heavy computation used allocated NERSC61555882; large data stay there.
+
+Scientific limits: broad stream template responses do not establish precise
+stream distances/purity. Northern template transfer remains inherited.
+The lower-MS zero point transfers in informative known-system groups;
+turnoff and ordinary-population support do not justify universal replacement.
+Conditioning contrasts remain reference-selected and teacher-dependent;
+removing reference distance is not a physical metallicity coefficient.
+
+Next recommended step: use this package in the separate paper analysis.
+A new population-matched age/FeH/alpha and binary-sequence experiment needs
+a new explicit scope. No automatic fitting, expansion, monitoring, manuscript
+editing or agents remain. Finalize GitHub/NERSC synchronization and release
+only this task's allocation61555882.
 
 ## Halo response 2026-11-18 — completed
 
