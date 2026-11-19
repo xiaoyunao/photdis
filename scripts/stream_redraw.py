@@ -33,6 +33,7 @@ def rgb(root,d,stage='rgb'):
                     ax.set_axisbelow(False);ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4);ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')
                 ticks=np.array([10.**np.floor(np.log10(cap))])
                 f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=np.r_[0,ticks] if row==0 else np.r_[-ticks[::-1],0,ticks],format=plt.FormatStrFormatter('%g'))
+            f.supxlabel('Galactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
             figure(d,p.stem.replace('rgb_','physical_'),f,rows)
 
 

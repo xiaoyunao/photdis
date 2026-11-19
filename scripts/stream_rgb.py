@@ -87,6 +87,7 @@ def main():
                     ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')
                 decades=np.array([10.**np.floor(np.log10(cap))])
                 f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=np.r_[0,decades] if row==0 else np.r_[-decades[::-1],0,decades],format=plt.FormatStrFormatter('%g'))
+            f.supxlabel('Galactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
             figure(d,'physical_'+name,f,stats)
     csv_rows(d/'stretch.csv',allmeta)
     csv_rows(d/'node_weights.csv',[dict(group=g,channel=c,d_lo=ab[0],d_hi=ab[1],mu=m,weight=float(w[3*i+j,k])) for i,(g,bs) in enumerate(groups) for j,(c,ab) in enumerate(zip('BGR',bs)) for k,m in enumerate(mu) if w[3*i+j,k]>0])

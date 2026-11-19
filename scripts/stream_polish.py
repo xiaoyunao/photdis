@@ -8,12 +8,15 @@ from stream_common import *
 
 def main():
     require_compute();execution=folder('execution')
-    for stage in ('rgb','local','sequence','conditioning'):
+    stages=['rgb']+(['full_rgb'] if (OUT/'full_rgb/complete.json').exists() else [])+['local','sequence','conditioning']
+    for stage in stages:
         source=OUT/stage;marker=source/'complete.json';r=json.loads(marker.read_text());before={name:sha(source/name) for name in r['outputs'] if not name.endswith(('.png','.pdf'))}
-        archive=execution/(stage+'_before_plot_polish.json')
+        archive=execution/(stage+'_before_plot_polish_'+sha(marker)[:12]+'.json')
         if not archive.exists():archive.write_text(marker.read_text())
         dest=folder('polished')/stage
-        subprocess.run([sys.executable,str(ROOT/'scripts/stream_redraw.py'),stage,'--root',str(OUT),'--output',str(dest)],check=True)
+        cmd=[sys.executable,str(ROOT/'scripts/stream_redraw.py'),'rgb' if stage=='full_rgb' else stage,'--root',str(OUT),'--output',str(dest)]
+        if stage=='full_rgb':cmd+=['--rgb-stage','full_rgb']
+        subprocess.run(cmd,check=True)
         if stage=='local':subprocess.run([sys.executable,str(ROOT/'scripts/stream_redraw.py'),'phase','--root',str(OUT),'--output',str(dest)],check=True)
         for p in dest.iterdir():
             if p.suffix in ('.png','.pdf'):shutil.copy2(p,source/p.name)
