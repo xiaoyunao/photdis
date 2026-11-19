@@ -44,6 +44,8 @@ def render_maps(counts,area,mask):
 
 def render():
     require_compute();inputs={};rec=json.loads((OUT/'atlas/complete.json').read_text());path=verified(OUT/'atlas/cmd_cube.fits',rec['outputs']['cmd_cube.fits']);inputs['cube']=sha(path)
+    for name in C['annotations']['tracks']:
+        _,source=track(name);inputs[str(source.relative_to(ROOT))]=sha(source)
     l,b,pix=grid();groups=[('overview',np.array(C['rgb']['overview_BGR_kpc']))]
     for lo,hi in ((10**.8,10),(10,15),(15,26),(26,50),(50,100)):
         edge=lo*(hi/lo)**(np.arange(4)/3);groups.append((f'bin_{lo:.1f}_{hi:g}',np.column_stack((edge[:-1],edge[1:]))))

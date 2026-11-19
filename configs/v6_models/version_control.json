@@ -1,0 +1,35 @@
+{
+  "key": "version_control",
+  "age_Gyr": 12.0,
+  "FeH": -2.17,
+  "parameters": {
+    "v_div_vcrit": "vvcrit0.4",
+    "age_scale": "linear",
+    "age_type": "single",
+    "age_value": 12000000000.0,
+    "FeH_value": -2.17,
+    "alpha_value": "p0",
+    "output_option": "photometry",
+    "Av_value": 0,
+    "output": "DECam",
+    "version": "MIST1"
+  },
+  "url": "https://mist.science/output/MIST_iso_6afe9cc0c4066.zip",
+  "archive_member": "MIST_iso_6afe9cc0c4066.iso.DECam",
+  "sha256": "81f7f2b200129f2e2abb514e42219e2612b828c06a522bc0195f01cc4ffee954",
+  "archive_sha256": "fdc07a7d7bad47a3d88006210d4495108dbb02df87100c93416d6b7b06c959f1",
+  "actual_header": [
+    "# MIST version number  = 1.2     ",
+    "# MESA revision number =     7503",
+    "# photometric system   = DECam (AB)                                                      ",
+    "# --------------------------------------------------------------------------------------",
+    "#  Yinit        Zinit   [Fe/H]   [a/Fe]  v/vcrit                                        ",
+    "# 0.2492  1.27835E-04    -2.17     0.00     0.40",
+    "# --------------------------------------------------------------------------------------",
+    "# number of isochrones =     1",
+    "# extinction:   Av, Rv =  0.000 3.100",
+    "# --------------------------------------------------------------------------------------"
+  ],
+  "population_source": "https://doi.org/10.1088/0004-637X/775/2/134 Table2",
+  "alpha_scope": "MIST1.2 fixed solar scaled; same-version controls, original MIST1.0 comparison separately labelled"
+}
