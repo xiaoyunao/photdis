@@ -113,7 +113,7 @@ def main():
     save_json(d/'calibration.json',dict(system='M13',phase='lower_MS',n=int(cal.sum()),delta_Mg=delta,zero_point_draws=caldraw,color_term=0,
          interpretation='one common absolute-magnitude offset; calibration uncertainty shared by all transfer members; all-band offset preserves colors'))
     ordinary_control(d,template,delta,caldraw,inputs)
-    draw(d,rows,t,phase,new,common,delta,template)
+    plot_results(d,rows,t,phase,new,common,delta,template)
     complete(d,inputs,branch_measure='arc length of physical absolute-grz polyline, four midpoint quadrature nodes per original segment; explicitly not an IMF or LF',
         posterior='Gaussian joint gr/rz with negative shared-r covariance; exact conditional distance amplitude; 128 Sobol mixture draws plus 0.1mag gray intrinsic scatter; >5sigma rejection',
         reference_uncertainty='one common cluster draw per bootstrap shared across methods and members; same M13 reference draw used in zero point',
@@ -138,7 +138,7 @@ def ordinary_control(d,template,delta,caldraw,inputs):
     npz(d/'ordinary_predictions.npz',**z,sequence=out,calibrated=out*10**(-delta/5))
 
 
-def draw(d,rows,t,phase,new,common,delta,template):
+def plot_results(d,rows,t,phase,new,common,delta,template):
     with plt.rc_context(PAPER):
         f,axs=plt.subplots(2,3,figsize=(7.15,5.7),layout='constrained')
         for ax,name in zip(axs[0],('M13','M5','M30')):
