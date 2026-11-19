@@ -2,6 +2,9 @@
 
 ## 2026-11-19 — v6 full-sky display and native sequence shape
 
+- Exact parallel identities pass:2,198,481,902native owned PSFs and493,319,577validgr native IDs unique;5,442positive-Gaia aliases removed,493,314,135display sources retained. All2126node counters underway on allocated CPUs; raw scans/areas reused. Five targeted tests and all v6 Python parse checks pass.
+- User additionally requests Galactic band attribution. Preserve coordinates; draw b=0/±20/±30 and full actual galstreams Sgr/Pal5 tracks with known-system positions. Add unchanged-v5 RGB overlay, physical-density/signed-residual colorbar companions, latitude/actual-Sgr strips and same-parent no-extinction CMD control. Do not infer physical stream membership from CMD morphology.
+
 - All2126available sweeps and both native random geometries completed; geographic/dust/depth filters absent from display admission. Serial global identity sorting became the CPU bottleneck; stopped only its process, retained complete scan/area caches and original attempt log. Replaced global sorts by exact deterministic native/Gaia-prefix buckets using8shared-memory workers; alias priority unchanged. Added a same-rule invariant; resume from identities without re-reading raw imaging.
 
 - Read complete latest replycbad66cc (6922characters) and full v6 prompt; archive both under docs/v6_inputs. Local/origin/NERSC reconcile at6538df76, tracked worktrees clean. Registered complete goal before changes.
