@@ -63,6 +63,15 @@ def main():
     if (args.root/'coverage/sky_coverage.npz').exists():
         with np.load(args.root/'coverage/sky_coverage.npz') as z:a={k:z[k] for k in z.files}
         d=args.output/'coverage';d.mkdir(exist_ok=True);coverage(a,d)
+    for stage,filename in [('ridge','ridge_redraw.npz'),('width','width_redraw.npz')]:
+        if not (args.root/stage/filename).exists():continue
+        with np.load(args.root/stage/filename) as z:a={k:z[k] for k in z.files}
+        d=args.output/stage;d.mkdir(exist_ok=True)
+        if stage=='ridge':
+            from sky6_ridge import render
+        else:
+            from sky6_width import render
+        render(a,d)
 
 
 if __name__=='__main__':main()

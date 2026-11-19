@@ -37,14 +37,15 @@ def uniform_convolution(edges,mass,y,sigma):
 def render(a,d):
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(2,3,figsize=(7.15,5.3),layout='constrained')
+        xmax=max(.3,float(np.ceil(a['halfwidth'].max()*10)/10));allres=np.r_[a['residual'],a['residual']-a['group_center']];ylo=min(-.7,float(np.floor(allres.min()*10)/10));yhi=max(.7,float(np.ceil(allres.max()*10)/10))
         for col,name in enumerate(('M13','M5','M30')):
             for row in (0,1):
                 ax=axes[row,col]
                 for phase,color in [('lower_MS',BLUE),('turnoff',ORANGE)]:
                     use=(a['system']==name)&(a['phase']==phase);value=a['residual'][use]-(a['group_center'][use] if row else 0)
                     ax.scatter(a['halfwidth'][use],value,s=5,lw=0,alpha=.5,color=color,rasterized=True,label='Lower MS' if phase=='lower_MS' else 'Turnoff')
-                xx=np.linspace(0,.65,100);ax.plot(xx,xx,':',color='.5',lw=.6);ax.plot(xx,-xx,':',color='.5',lw=.6);ax.axhline(0,color='.4',ls=':',lw=.5)
-                ax.set(xlim=(0,.65),ylim=(-1.,.7),xlabel='68% half-width (mag)',ylabel='Modulus residual (mag)' if not row else 'Centered residual (mag)',title=name)
+                xx=np.linspace(0,xmax,100);ax.plot(xx,xx,':',color='.5',lw=.6);ax.plot(xx,-xx,':',color='.5',lw=.6);ax.axhline(0,color='.4',ls=':',lw=.5)
+                ax.set(xlim=(0,xmax),ylim=(ylo,yhi),xlabel='68% half-width (mag)',ylabel='Modulus residual (mag)' if not row else 'Centered residual (mag)',title=name)
         axes[0,0].legend(frameon=False,fontsize=5);figure(d,'sequence_center_width',f,[dict(scope='Calibrated fixed sequence; exact same members; symmetric half-width diagonals are a visual guide, exact asymmetric interval results in table')])
 
 

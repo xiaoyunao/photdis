@@ -27,6 +27,16 @@ def assemble():
     dust=average('EBV',0);depth=np.array([average('depth5',slice(1,3))[j] for j in range(2)]);ext=average('extinction',slice(5,7))
     npz(d/'companions.npz',parents=z['parents'],geometry=z['geometry'],strict=z['strict'],uncorrected=z['uncorrected'],EBV=dust,depth5=depth,extinction=ext,area=areas,mask=masks)
     ident=json.loads((OUT/'identities/identity_counts.json').read_text());parts=list(csv.DictReader((OUT/'counts/part_counts.csv').open()));raw=list(csv.DictReader((OUT/'inventory/raw_to_display.csv').open()))
+    domains={}
+    for source in (OUT/'cache').glob('*/domains.csv'):
+        for r in csv.DictReader(source.open()):
+            row=domains.setdefault(r['domain'],dict(domain=r['domain'],input_owned_PSF=0,gr_geometry_PSF=0,valid_gr_before_alias=0,valid_gr=0,CMD_union=0,strict_companion=0,area_deg2=0.))
+            row['input_owned_PSF']+=int(r['raw_PSF']);row['gr_geometry_PSF']+=int(r['gr_geometry']);row['valid_gr_before_alias']+=int(r['valid_gr'])
+    for r in csv.DictReader((OUT/'counts/domain_counts.csv').open()):
+        for key in ('valid_gr','CMD_union','strict_companion'):domains[r['domain']][key]+=int(r[key])
+    for side in ('south','north'):
+        for r in csv.DictReader((OUT/'area'/side/'domains.csv').open()):domains[r['domain']]['area_deg2']+=float(r['area_deg2'])
+    csv_rows(d/'domain_summary.csv',list(domains.values()))
     save_json(d/'summary.json',dict(identity=ident,sweeps=len(raw),raw_records=sum(int(r['raw']) for r in raw),PSF=sum(int(r['PSF']) for r in raw),missing_TYPE=sum(int(r['missing_TYPE']) for r in raw),non_PSF=sum(int(r['non_PSF']) for r in raw),old_legacy_entrance=sum(int(r['legacy_entrance']) for r in raw),area_deg2=areas[:,0].sum(),old_domain_area_deg2=areas[:,1].sum(),CMD_union=sum(int(r['union']) for r in parts if r['view']=='0'),node_acceptances=int(z['counts'][:,0].sum()),north_scope='existing finite-support native transfer; no new stellar population distance calibration',correction='2D full-column catalog MW transmission; display only in dusty/crowded regions'))
     complete(d,inputs,views=['all available display','same display in old geographic/dust/depth domain'],cube_axes='COUNTS[native,view,mu,equatorial-NESTED-pixel]',zero_and_mask_separate=True)
 
