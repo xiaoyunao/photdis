@@ -52,6 +52,13 @@ def main():
                     np.testing.assert_array_equal(a['ls_id'][ii[0]],a['ls_id'][ii[1]]);np.testing.assert_array_equal(a['common'][ii[0]],a['common'][ii[1]])
                     assert (a['weight'][ii[0]][~a['common'][ii[0]]]==0).all()
     checks.append(dict(check='same IDs and same support in both conditioning designs',passed=True))
+    with np.load(OUT/'sequence/predictions.npz') as a,np.load(OUT/'sequence/shared_bootstrap.npz') as b:
+        assert (a['TYPE']=='PSF').all() and len(np.unique(a['ls_id']))==len(a['ls_id'])
+        np.testing.assert_array_equal(a['ls_id'],b['ls_id']);assert b['multiplicity'].shape==(256,len(a['ls_id']))
+        for name in np.unique(a['system']):
+            assert b['scale_'+name].shape==(256,) and (b['scale_'+name]>0).all()
+        cal=(a['system']=='M13')&(a['reference_phase']=='lower_MS')&~a['mask']&a['new_common'];assert cal.sum()==json.loads((OUT/'sequence/calibration.json').read_text())['n']
+    checks.append(dict(check='verified PSF members, one common system-scale vector and one member multiplicity matrix for every group',passed=True))
     (d/'v38_pixels').mkdir(parents=True,exist_ok=True)
     with plt.rc_context(STYLE):r=regression(d/'v38_pixels')
     save_json(d/'validation.json',dict(checks=checks,style_pixel_regression=r,scope='scientific conservation plus original v3.8 pixel baseline; figure visual/PDF audit separately recorded'))

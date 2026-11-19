@@ -60,6 +60,7 @@ def posterior(m,e,ids,model):
 def main():
     require_compute();d=folder('sequence');inputs={}
     t=read(OLD/'sequence',('same_source_predictions.npz','TYPE','ls_id','source_id','system','native','m','err','r','q','ref','phase','mask','simple','sequence','common'),inputs)
+    assert (t['TYPE']=='PSF').all() and len(np.unique(t['ls_id']))==len(t['ls_id'])
     template=read(OLD/'native',('template.npz','south','north','phase','north_support'),inputs)
     ids=np.where(t['source_id']>0,t['source_id'],-t['ls_id']);new=np.full_like(t['q'],np.nan);fold=np.zeros(len(new))
     for code,side in enumerate(('south','north')):
@@ -137,6 +138,7 @@ def main():
 def ordinary_control(d,template,delta,caldraw,inputs):
     # Reuse an already role-excluded held-out dwarf control; no new fitting.
     z=read(OLD/'noise_fixed',('receivers.npz','TYPE','ls_id','source_id','m','err','native','reference','q'),inputs)
+    assert (z['TYPE']=='PSF').all()
     roles=read(OLD/'roles',('reference_roles.npz','TYPE','ls_id','direct_fit_or_calibration'),inputs)
     j=index_join(z['ls_id'],roles['ls_id']);assert (j>=0).all()
     excluded=roles['direct_fit_or_calibration'][j];z={k:v[~excluded] for k,v in z.items()}
