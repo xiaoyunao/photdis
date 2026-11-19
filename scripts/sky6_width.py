@@ -52,6 +52,15 @@ def render(a,d):
 def main():
     require_compute();d=folder('width');inputs={};t=read(STREAM/'sequence',('predictions.npz','TYPE','ls_id','source_id','system','native','mask','m','err','ref','q','new','calibrated','new_common','reference_phase'),inputs)
     selected=np.isin(t['system'],C['ridge']['systems'])&~t['mask']&t['new_common'];t={k:v[selected] for k,v in t.items()};assert (t['TYPE']=='PSF').all()
+    # The displayed g0/r0/z0 columns were rounded to float32. The historical
+    # QRF used the original float64 mag_grz; forest splits can respond to one ULP.
+    qrf_mag=np.empty_like(t['m'],dtype=float);qrf_error=np.empty_like(t['err'],dtype=float);qrf_identity=np.empty(len(t['ls_id']),'i8');replay=[]
+    for name in C['ridge']['systems']:
+        parent=ROOT/('data/v3_14/audit/M5' if name=='M5' else 'data/v3_13/clusters/'+name)
+        original=read(parent,('native_join.npz' if name=='M5' else 'sources.npz','TYPE','ls_id','mag_grz','error_grz','identity'),inputs);ii=np.flatnonzero(t['system']==name);j=index_join(t['ls_id'][ii],original['ls_id']);assert (j>=0).all() and (original['TYPE'][j]=='PSF').all()
+        difference=float(np.max(abs(t['m'][ii]-original['mag_grz'][j])));assert difference<2e-5
+        qrf_mag[ii]=original['mag_grz'][j];qrf_error[ii]=original['error_grz'][j];qrf_identity[ii]=original['identity'][j]
+        replay.append(dict(system=name,N=len(ii),max_display_column_rounding_mag=difference,role='QRF replay uses exact original mag_grz/error_grz/identity; observed-sequence diagnostics retain v5 displayed magnitudes'))
     b=read(STREAM/'sequence',('shared_bootstrap.npz','ls_id','multiplicity',*['scale_'+s for s in C['ridge']['systems']]),inputs);j=index_join(t['ls_id'],b['ls_id']);assert (j>=0).all();multiplicity=b['multiplicity'][:,j]
     calibration=json.loads((STREAM/'sequence/calibration.json').read_text());inputs['calibration']=sha(STREAM/'sequence/calibration.json');delta=calibration['delta_Mg'];delta_draw=np.array(calibration['zero_point_draws'])
     template=read(HALO/'native',('template.npz','south','north','phase','north_support'),inputs);mean=[None]*len(t['ls_id']);logw=[None]*len(mean);sigma=np.zeros(len(mean));qrf=[None]*len(mean)
@@ -63,7 +72,7 @@ def main():
         for at,m,w,s in zip(ii,mm,ww,ss):mean[at]=m;logw[at]=w;sigma[at]=s
         model,offset,_=model_and_history(side,inputs)
         for start in range(0,len(ii),128):
-            use=ii[start:start+128];identity=np.where(t['source_id'][use]>0,t['source_id'][use],-t['ls_id'][use]);z=frozen_qrf(model,t['m'][use],t['err'][use],identity);assert z['supported'].all()
+            use=ii[start:start+128];z=frozen_qrf(model,qrf_mag[use],qrf_error[use],qrf_identity[use]);assert z['supported'].all()
             np.testing.assert_allclose(z['distance']*10**(offset/5),t['q'][use],atol=2e-6,rtol=2e-6)
             for k,at in enumerate(use):qrf[at]=(z['mu_edges'][k]+offset,z['mass'][k])
     rows=[];points=[]
@@ -88,7 +97,7 @@ def main():
                 rows.append(dict(system=name,phase=phase,method=method,N=len(ii),median_mu_residual=center,centered_NMAD=1.4826*np.median(abs(res-center)),median_width68=np.median(width),median_width95=np.median(qmu[:,4]-qmu[:,0]),raw_quantile_C68=raw68.mean(),raw_quantile_C95=raw95.mean(),centered_quantile_C68=center68.mean(),raw_analytic_C68=((raw_u>=.16)&(raw_u<=.84)).mean(),reference_convolved_C68=((u>=.16)&(u<=.84)).mean(),centered_reference_convolved_C68=((uc>=.16)&(uc<=.84)).mean(),reference_convolved_logscore=np.mean(logdensity),centered_reference_convolved_logscore=np.mean(lc),shared_center_lo=np.quantile(mu0,.025),shared_center_hi=np.quantile(mu0,.975),reference_sigma_mu=ref_sigma,calibration_draws_shared=key=='calibrated'))
                 if phase in ('lower_MS','turnoff') and key=='calibrated':points.append(dict(system=np.full(len(ii),name),phase=np.full(len(ii),phase),halfwidth=width/2,residual=res,group_center=np.full(len(ii),center)))
                 print(name,phase,method,len(ii),flush=True)
-    csv_rows(d/'center_width.csv',rows);npz(d/'width_redraw.npz',**{k:np.concatenate([p[k] for p in points]) for k in points[0]});a={k:np.concatenate([p[k] for p in points]) for k in points[0]};render(a,d)
+    csv_rows(d/'qrf_input_replay.csv',replay);csv_rows(d/'center_width.csv',rows);npz(d/'width_redraw.npz',**{k:np.concatenate([p[k] for p in points]) for k in points[0]});a={k:np.concatenate([p[k] for p in points]) for k in points[0]};render(a,d)
     complete(d,inputs,scope='unchanged current v5 common unmasked members, external reference centers and original quantiles preserved; no new distance model fit',probability='fixed sequence analytic Gaussian mixture reconstructs the original branch likelihood; all256 shared reference/M13-zero draws coupled. Frozen QRF full PDFs independently replayed and quantiles verified; exact uniform-bin Gaussian-reference convolution using small-error modulus approximation; no Gaussian approximation of QRF PDF',centering='subtract each evaluated system/phase/method sample median for diagnostic only; not a transferable correction',shared_uncertainty='original member multiplicities and system distances/zero points reused; common uncertainties do not independently shrink with star count')
 
 
