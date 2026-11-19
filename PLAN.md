@@ -1,6 +1,6 @@
 # PLAN
 
-## Sequence mechanisms2026-11-19 — science completed, final sync
+## Sequence mechanisms2026-11-19 — completed
 
 Full v7 prompt/review2561be88 completed with five fixed A–E controls, all933
 parent PSFs/statuses, exact original-v5/QRF/zero replay, shared-score intervals,
@@ -16,8 +16,11 @@ PDFs and draws, exact native-runtime portable pixel replay and originalv3.8
 F02/F03 pixel baselines pass. All5PDF pages visually/Poppler checked; local
 cross-runtime pixel differences recorded honestly. Initial reference-height/
 inset exports and all numerical trials remain archived. Mathematical/half-grid
-precision and36legacy score replays pass. Remaining: safe GitHub/canonical
-reconciliation and return of own allocation61568731, then close this goal.
+precision and36legacy score replays pass. Final science evidence7f483a2b synchronized local/origin/canonical; all77science
+packet files,51bound outputs and12source files reconciled.66owned server exports
+archived safely before ff; own allocation61568731 returned, no active queue row.
+Final compute/replay/sync steps pass; shell exit130 from an earlier deliberate
+interrupt is preserved in accounting and does not alter final scientific status.
 No automatic next fit, sky change, prospective opening or production rerun.
 
 ## Full-sky display and sequence shape2026-11-19 — completed
