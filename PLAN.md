@@ -34,8 +34,9 @@ removing reference distance is not a physical metallicity coefficient.
 Next recommended step: use this package in the separate paper analysis.
 A new population-matched age/FeH/alpha and binary-sequence experiment needs
 a new explicit scope. No automatic fitting, expansion, monitoring, manuscript
-editing or agents remain. Finalize GitHub/NERSC synchronization and release
-only this task's allocation61555882.
+editing or agents remain. GitHub/local/canonical NERSC evidence synchronized
+at ec2f50c0; portable hashes verified on the allocated node. Allocation
+61555882 returned after all work completed. No outstanding execution steps.
 
 ## Halo response 2026-11-18 — completed
 
