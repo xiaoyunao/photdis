@@ -95,6 +95,17 @@ def render(a,d):
                     xlo=min(-.05,float(col[:,j].min())-.05);xhi=float(col[:,j].max())+.05
                     ax.set(xlim=(xlo,xhi),ylim=(yhi,ylo),xlabel=r'$(g-r)_0$' if j==0 else r'$(r-z)_0$',ylabel=r'$M_{g,\mathrm{ref}}$ (mag)',title=f'{system} · N={int(ii.sum())}')
             axes[0,0].legend(frameon=False,fontsize=5,loc='lower right');figure(d,name,f,[dict(system=s,primary=int(((a['system']==s)&~a['mask']).sum())) for s in systems])
+    if 'position_system' in a:
+        with plt.rc_context(PAPER):
+            f,axes=plt.subplots(3,3,figsize=(7.15,7),layout='constrained')
+            for row,system in enumerate(('M13','M5','M30')):
+                for col,(component,ylabel) in enumerate([(0,r'$\Delta(g-r)_0$ (mag)'),(1,r'$\Delta(r-z)_0$ (mag)'),(2,r'$\Delta M_g$ at $(g-r)_0$ (mag)')]):
+                    ax=axes[row,col]
+                    for key,label,color in [('FOS10','Fixed MIST1.0','.5'),('version_control','MIST1.2 control',GREEN),('matched_'+system,'Literature match',ORANGE)]:
+                        use=(a['position_system']==system)&(a['position_model']==key)&(a['position_N'][:,component]>=8)
+                        ax.errorbar(a['position_Mg'][use],a['position_median'][use,component],yerr=a['position_scatter'][use,component],fmt='o-',ms=2,lw=.5,color=color,label=label)
+                    ax.axhline(0,color='.4',ls=':',lw=.5);ax.set(xlabel=r'$M_{g,\mathrm{ref}}$ (mag)',ylabel=ylabel,title=system)
+            axes[0,0].legend(frameon=False,fontsize=5);figure(d,'sequence_shape_residuals',f,[dict(scope='All primary unmasked members in reference-Mg bins; medians and observed NMAD, bins with at least8 finite intersections; reference branch choice is diagnostic only')])
 
 
 def main():
@@ -108,7 +119,7 @@ def main():
     transfer=HALO/'native/native_transfer.csv';inputs['native_transfer_table']=sha(transfer)
     csv_rows(d/'north_transfer.csv',[dict(**r,scope='frozen bright16..19 native overlap; total measured transfer residual, not an independent atmosphere calibration') for r in csv.DictReader(transfer.open())])
     bootstrap=read(STREAM/'sequence',('shared_bootstrap.npz',*['scale_'+s for s in C['ridge']['systems']]),inputs)
-    support=np.zeros(len(j),bool);rows=[];resrows=[];sensitivity=[];per_star=[]
+    support=np.zeros(len(j),bool);rows=[];resrows=[];sensitivity=[];per_star=[];position=[];position_plot=[]
     for code in (0,1):
         use=t['native']==code;support[use]=color_support(t['m'][use],t['err'][use],template,code)
     for name in C['ridge']['systems']:
@@ -126,6 +137,16 @@ def main():
             rows.append(row)
         for key in ('FOS10','version_control','matched_'+name):
             res,ncandidate=residuals(mag,models[key],native,np.zeros(len(MS),bool))
+            for lo,hi in zip(edges[:-1],edges[1:]):
+                use=(mag[:,0]>=lo)&(mag[:,0]<hi)
+                if not use.any():continue
+                median=[];scatter=[];number=[]
+                for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):
+                    value=res[use,k];value=value[np.isfinite(value)];center=float(np.median(value)) if len(value) else np.nan;scale=float(1.4826*np.median(abs(value-center))) if len(value) else np.nan
+                    record=dict(system=name,model=key,Mg_lo=lo,Mg_hi=hi,Mg_median=float(np.median(mag[use,0])),component=label,N=int(use.sum()),finite=len(value),median=center,nmad=scale)
+                    for q in (.05,.16,.84,.95):record[f'q{int(q*100):02d}']=float(np.quantile(value,q)) if len(value) else np.nan
+                    position.append(record);median.append(center);scatter.append(scale);number.append(len(value))
+                position_plot.append(dict(system=name,model=key,Mg=float(np.median(mag[use,0])),median=median,scatter=scatter,N=number))
             for phase in ('all','lower_MS','turnoff','other'):
                 use=np.ones(len(mag),bool) if phase=='all' else phases==phase
                 for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):
@@ -148,11 +169,13 @@ def main():
                 r,_=residuals(changed,models[key],native,np.zeros(len(MS),bool))
                 for k,label in enumerate(('gr_at_Mg','rz_at_Mg','Mg_at_gr','Mg_at_rz')):sensitivity.append(dict(system=name,model=key,scenario=scenario,component=label,N=int(np.isfinite(r[:,k]).sum()),median=float(np.nanmedian(r[:,k]))))
             per_star.append(dict(ls_id=t['ls_id'][ii],system=np.full(len(mag),name),model=np.full(len(mag),key),residual=res,candidate_count=ncandidate,reference_phase=phases))
-    csv_rows(d/'ridge.csv',rows);csv_rows(d/'model_residuals.csv',resrows);csv_rows(d/'distance_dust_sensitivity.csv',sensitivity)
+    csv_rows(d/'ridge.csv',rows);csv_rows(d/'model_residuals.csv',resrows);csv_rows(d/'sequence_position_residuals.csv',position);csv_rows(d/'distance_dust_sensitivity.csv',sensitivity)
     npz(d/'per_member_residuals.npz',**{k:np.concatenate([p[k] for p in per_star]) for k in per_star[0]})
     npz(d/'members.npz',**t,color_support=support)
     rdata=dict(system=t['system'],mask=t['mask'],m=t['m'],err=t['err'],ref=t['ref'],support=support,model_keys=np.array(list(models)),ridge_system=np.array([r['system'] for r in rows]),ridge_usable=np.array([r['usable'] for r in rows]),ridge_Mg=np.array([r['Mg'] for r in rows]),ridge_colors=np.array([[r['gr'],r['rz']] for r in rows]),ridge_scatter=np.array([[r['gr_scatter'],r['rz_scatter']] for r in rows]))
-    rdata.update({'model_'+key+'_'+field:value for key,model in models.items() for field,value in model.items()});npz(d/'ridge_redraw.npz',**rdata);render(rdata,d)
+    rdata.update({'model_'+key+'_'+field:value for key,model in models.items() for field,value in model.items()})
+    for key in ('system','model','Mg','median','scatter','N'):rdata['position_'+key]=np.array([r[key] for r in position_plot])
+    npz(d/'ridge_redraw.npz',**rdata);render(rdata,d)
     csv_rows(d/'support.csv',[dict(system=name,parent=int((t['system']==name).sum()),unmasked=int(((t['system']==name)&~t['mask']).sum()),primary_MS_color_supported=int(((t['system']==name)&~t['mask']&support).sum()),masked=int(((t['system']==name)&t['mask']).sum())) for name in C['ridge']['systems']])
     complete(d,inputs,native_replay_max_mag_difference=replay,ridge='observed binned two-color median/core, not deconvolved single-star fiducial; ambiguous/sparse bins explicit',projection='original adjacent evolutionary segments; fixed-Mg colors and fixed-color gray luminosity residuals, reference luminosity resolves branches diagnostically; not a new photometry-only estimator',north='frozen DECam-to-BASS/MzLS transfer, scatter and hull inherited',no_new_distance_correction=True)
 
