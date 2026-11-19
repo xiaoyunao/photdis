@@ -138,7 +138,24 @@ def band():
                 for j,ch in enumerate('BGR'):row[ch+'_weighted_counts']=float(cc[j,flag].sum());row[ch+'_density']=float(cc[j,flag].sum()/total)
                 strip_rows.append(row)
     csv_rows(d/'latitude_profiles.csv',profiles);csv_rows(d/'fixed_strips.csv',rows);csv_rows(d/'Sgr_by_Galactic_latitude.csv',strip_rows);complete(d,dict(**inputs,Sgr_track=sha(source)),interpretation='morphological association and same-parent extinction sensitivity, not a calibrated physical decomposition of disk/halo/Sgr membership; actual-track and neighboring strips also compared within2degree Galactic latitude bands on unchanged previous v5 arrays')
+    band_summary()
+
+
+def band_summary():
+    """Standardize the actual-track comparison to the same latitude weights."""
+    d=OUT/'band';record=json.loads((d/'complete.json').read_text());path=verified(d/'Sgr_by_Galactic_latitude.csv',record['outputs']['Sgr_by_Galactic_latitude.csv']);data=list(csv.DictReader(path.open()));rows=[]
+    for scope in dict.fromkeys(r['scope'] for r in data):
+        pairs=[]
+        for lat in sorted({float(r['lat_lo']) for r in data if r['scope']==scope}):
+            pair={r['strip']:r for r in data if r['scope']==scope and float(r['lat_lo'])==lat}
+            if len(pair)==2:pairs.append(pair)
+        w=np.array([min(float(r['Sgr_0_5']['area_deg2']),float(r['Sgr_5_10']['area_deg2'])) for r in pairs]);assert w.sum()>0
+        for ch in 'BGR':
+            density=[sum(wi*float(r[k][ch+'_density']) for wi,r in zip(w,pairs))/w.sum() for k in ('Sgr_0_5','Sgr_5_10')]
+            rows.append(dict(scope=scope,channel=ch,paired_2degree_bins=len(pairs),common_area_weight=w.sum(),Sgr_0_5_density=density[0],Sgr_5_10_density=density[1],density_ratio=density[0]/density[1]))
+    csv_rows(d/'latitude_standardized_Sgr.csv',rows);metadata={k:v for k,v in record.items() if k not in ('config','job','inputs','code','style','outputs')};metadata['latitude_standardization']='Both strips use identical min(on area, off area) weights in every available2degree Galactic-latitude bin; descriptive CMD response, not membership/purity'
+    complete(d,record['inputs'],**metadata)
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=['assemble','render','redraw','band']);a=p.parse_args();globals()[a.stage]()
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=['assemble','render','redraw','band','band_summary']);a=p.parse_args();globals()[a.stage]()
