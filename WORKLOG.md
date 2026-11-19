@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — stream recovery and population scales
 
+- Fixed-support balance audit exposed a design issue before adoption: trimming the two parent-propensity fits to their common intersection degraded color balance (SpecDis2–5SMD0.147; SPDist0.305). Registered a numerical/statistical correction before reading new contrasts: freeze the same original intersection, refit BOTH point models and every sky bootstrap only within it, never re-trim. Keep previous fits/tables as execution history; report actual post-refit balance/ESS. Earlier v5 point contrasts are interim, not the final estimands.
+
 - Raw local imaging completed:40sweeps, unique PSF admissions and zero positive-Gaia aliases in everyROI. Gr-complete tail area46.2588deg2, versus strict0.0684deg2 across the whole local on/off domain. Pal5 leading has an uncovered angular segment; preserve that failure.
 - Operational fixed-reference recovery passes Pal5 trailing3/3 and Sgr north/south4/4; leading fails. A single frozen Pal5 pre-CMD error-width curve also passes cross-system replay. Registered configs/stream_full_20261119.json and started conditional full-footprint imaging on1339sweeps with24workers; no new distances or forest fitting. North inherits the existing native transfer, with no new northern stream recovery claim.
 - Actual DR11 Pal5 detection circle isRA229.0205/Dec-0.1202/radius0.0641667deg:568PSFs,567withG3reference, all568CLUSTERbit13. The earlier Pal5_core key is an adjacent track-strip diagnostic, not this published circle; actual core is separately extracted and never enters stream recovery.

@@ -68,25 +68,31 @@ def main():
                 individual=[(p>=.05)&(p<=.95) for p in probs];common=individual[0]&individual[1]
                 support.append(dict(reference=ref,lo=lo,hi=hi,domain=domain,parent=len(y),without=int(individual[0].sum()),with_distance=int(individual[1].sum()),intersection=int(common.sum()),ordinary=int((common&(y==0)).sum()),metal_poor=int((common&(y==1)).sum()),status='fixed intersection'))
                 if min(np.bincount(y[common],minlength=2))<5:continue
+                # Trimming can destroy the balance achieved on the parent.
+                # Refit both designs on this SAME frozen population; never
+                # trim it again using the new fitted propensities.
+                probs=[propensity(a,y,common.astype(float)) for a in designs]
                 keys,inv=np.unique(block[ii],return_inverse=True)
                 def bootstrap(draw):
                     rng=np.random.default_rng(C['seed']+draw*1009+lo);mult=np.bincount(rng.integers(len(keys),size=len(keys)),minlength=len(keys))[inv]
                     result=[]
                     for a in designs:
-                        p=propensity(a,y,mult);w=mult*np.where(y==1,1-p,p)*common
+                        p=propensity(a,y,mult*common);w=mult*np.where(y==1,1-p,p)*common
                         result.append([contrast(delta,y,w),contrast(mg,y,w),median(delta[y==1],w[y==1])-median(delta[y==0],w[y==0])])
                     return result
                 with ThreadPoolExecutor(8) as pool:draws=np.array(list(pool.map(bootstrap,range(C['conditioning']['sky_bootstrap_draws']))))
                 for k,(label,p) in enumerate(zip(('without_distance','with_distance'),probs)):
                     w=np.where(y==1,1-p,p)*common
+                    balance_rows=moments(x,y,w)
+                    max_smd=max(abs(r['SMD']) for r in balance_rows if label=='with_distance' or r['variable']!='reference_distance')
                     for value,outcome in ((delta,'modulus_residual'),(mg,'reference_Mg')):
                         for statistic in ('mean','median') if outcome=='modulus_residual' else ('mean',):
                             val=contrast(value,y,w) if statistic=='mean' else median(value[y==1],w[y==1])-median(value[y==0],w[y==0])
                             column=0 if outcome=='modulus_residual' and statistic=='mean' else 2 if statistic=='median' else 1
                             rows.append(dict(reference=ref,lo=lo,hi=hi,domain=domain,weight_design=label,outcome=outcome,statistic=statistic,
-                                contrast=float(val),n=int(common.sum()),ordinary_ESS=ess(w[y==0]),metal_poor_ESS=ess(w[y==1]),**interval(draws[:,k,column])))
-                    audits.extend(dict(reference=ref,lo=lo,domain=domain,weight_design=label,**r) for r in moments(x,y,w))
-                    private.append(dict(TYPE=t['TYPE'][ii],ls_id=t['ls_id'][ii],reference=np.full(len(ii),ref),lo=np.full(len(ii),lo),domain=np.full(len(ii),domain),weight_design=np.full(len(ii),label),common=common,weight=w))
+                                contrast=float(val),n=int(common.sum()),ordinary_ESS=ess(w[y==0]),metal_poor_ESS=ess(w[y==1]),maximum_abs_SMD=max_smd,balance_pass=bool(max_smd<.1),**interval(draws[:,k,column])))
+                    audits.extend(dict(reference=ref,lo=lo,domain=domain,weight_design=label,**r) for r in balance_rows)
+                    private.append(dict(TYPE=t['TYPE'][ii],ls_id=t['ls_id'][ii],reference=np.full(len(ii),ref),lo=np.full(len(ii),lo),domain=np.full(len(ii),domain),weight_design=np.full(len(ii),label),common=common,weight=w,propensity_refit_on_fixed_support=p))
                 for draw,a in enumerate(draws):drawtable.append(dict(reference=ref,lo=lo,domain=domain,draw=draw,without_delta=a[0,0],with_delta=a[1,0],paired_change=a[1,0]-a[0,0]))
                 print(ref,lo,domain,len(y),int(common.sum()),flush=True)
     csv_rows(d/'estimands.csv',rows);csv_rows(d/'balance.csv',audits);csv_rows(d/'support.csv',support);csv_rows(d/'sky_draws.csv',drawtable)
@@ -94,7 +100,7 @@ def main():
     signed_anchor(t,d,inputs)
     plot_results(d,rows)
     complete(d,inputs,initial_role_excluded_rows=raw_n,independent_phase_color_magnitude_rows=len(t['ls_id']),
-        estimand='metal-poor minus ordinary weighted marginal contrast on a single fixed propensity-overlap intersection; identical IDs in both designs and every sky resample',
+        estimand='metal-poor minus ordinary weighted marginal contrast on a single fixed parent-propensity-overlap intersection; both point models and each sky refit fit within that same frozen population, with no second trim. IDs fixed, weights/overlap target distributions differ.',
         selection='common luminosity domain remains reference-selected and Mr-truncated; stricter rectangle is complete only with respect to stated r window and formal photometric depth, not spectral targeting, Gaia selection, or metallicity completeness',
         interpretation='descriptive sensitivity; no causal physical FeH coefficient. Spectroscopic FeH and spectroscopic distances share teachers. Gaia anchor normalizes its signed-parallax window; cluster absolute anchor is in sequence stage.')
 
