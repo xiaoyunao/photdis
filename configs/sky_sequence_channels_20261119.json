@@ -1,0 +1,17 @@
+{
+  "scope": "User-requested RGB channel comparisons; display only, unchanged native PSF parent/CMD/error curve/areas",
+  "mu_min": 0,
+  "mu_max": 20,
+  "mu_step": 0.1,
+  "near_edge_kpc": 0.01,
+  "near_edge_note": "Requested zero lower edge represented by10pc; legends show the finite support, not a claimed volume-complete0–5kpc sample",
+  "workers": 32,
+  "schemes": {
+    "near5_10_100": [[0.01,5],[5,10],[10,100]],
+    "near3_15_100": [[0.01,3],[3,15],[15,100]],
+    "near10_30_100": [[0.01,10],[10,30],[30,100]]
+  },
+  "normalization": "Same exact modulus-cell overlap and per-channel normalized weights as v5; overlapping source responses are not independent physical distance counts",
+  "displays": ["fixed previous V5 overview BGR limits for all schemes", "V5 p05/p995 asinh10 recipe on the same fixed old geographic/dust/depth domain, applied to full-sky maps"],
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc"
+}

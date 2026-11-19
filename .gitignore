@@ -95,3 +95,4 @@ archives/
 !manifests/sky_sequence_20261119/coverage/sky_coverage.npz
 !manifests/sky_sequence_20261119/ridge/ridge_redraw.npz
 !manifests/sky_sequence_20261119/width/width_redraw.npz
+!manifests/sky_sequence_20261119/channel_trials/rgb_*.npz

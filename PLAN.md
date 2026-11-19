@@ -14,6 +14,12 @@ Goal registered before development. Baseline6538df76; production87069408 frozen.
    independent of any target recovery. Deliver overview and five internal RGBs,
    coverage companion, physical/signed arrays, stretch/masks and independent replay
    immediately after actual figure QA, before the sequence experiment finishes.
+   User steering: Pal5 dashed; restore exact previous V5 brightness. Compare
+   original channels with0–5/5–10/10–100,0–3/3–15/15–100 and0–10/10–30/30–100.
+   Extend template responses below6.3kpc from cached native PSF photometry;
+   finite near edge10pc is explicit. Preserve original maps. Compare fixed V5
+   channel gains and V5 percentile balance on one fixed old-domain reference,
+   so partition changes can be distinguished from display normalization.
 3. Native M13/M5 ridge in two colors plus M30; all available members and unsupported
    rows visible. Freeze few literature-matched MIST1.2 models plus same-version
    control and original FOS. Shared distances/extinction sensitivity and binary
