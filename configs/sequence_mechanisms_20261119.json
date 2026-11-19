@@ -151,5 +151,12 @@
       454,
       463
     ]
-  }
+  },
+  "mu_grid_step": 0.0025,
+  "mu_grid_tail_sigma": 10,
+  "workers": 16,
+  "post_MS_boundary": "Include adjacent phase0-to-phase2 bridge after final MS node; assign bridge and phase2 subcells to post-MS, preserving disjoint mass coverage. Native Mr/support masks split segments.",
+  "numerical_rule": "Initial4 and8-subcell probe on same controls. Refine if phase median mu shift>0.005mag, phase mean marginal logscore shift>0.005nat, or 98th-percentile same-support star median shift>0.01mag; choose one common resolution up to32 and preserve all earlier results. Legacy A4/MC128 remains separately sealed.",
+  "evaluation": "Main reference kernel: one Gaussian in modulus with sigma from frozen common D draws; convolution is measurement likelihood. Parametric-observation bootstrap draws one system-common reference center per replicate and evaluates same convolution kernel; not extra PDF broadening. Legacy sequence empirical-reference convolution retained only for replay.",
+  "CRPS_grid": "Same common modulus grid for all methods, enclosing all Gaussian means and QRF edges with10sigma tails, minimum0..30; trapezoid prefix integral of convolved CDF against step observation. Halved-grid probe reports numerical error; never floor log density."
 }

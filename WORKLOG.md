@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — v7 sequence mechanisms
 
+- Implementing sealed roster/model quadratures and full-tail analytic forecasts. Initial roster join correctly exposed primary members absent from the old model-limited v5 table; retain all933 primary identities, mark missing historical predictions, and apply exact-v5 replay only to its declared subset. Original failed log retained. Own allocation61568731 obtained using standard CPU shared_interactive routing; explicit partition requests rejected before allocation. Other user resources untouched.
+
 - Read full latest reply2561be88(5974characters) and complete v7 prompt. Local/origin/canonical20513877 match, tracked trees clean; NERSC authentication valid. New complete goal registered before edits; freeze production and all finished sky displays, no manuscript/agents.
 - Fixed five comparisons, samples, metrics, shared reference/bootstrap convention and scale/precision criteria in configs/sequence_mechanisms_20261119.json before new predictions. Actual MIST metadata: no phase1, all initial masses strictly increasing; matched phase2 within Mr3–8 spans M13EEP454–468/M5 454–470/M30 454–463. Only these connected early segments enter E; no brighter range expansion or lifetime multiplier.
 
