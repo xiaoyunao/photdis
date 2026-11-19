@@ -24,10 +24,12 @@ def stretch(values,mask,residual=False):
 
 
 def main():
-    require_compute();d=folder('rgb');inputs={}
-    record=json.loads((OLD/'atlas/complete.json').read_text())
-    path=verified(OLD/'atlas/cmd_filter_cube.fits',record['outputs']['cmd_filter_cube.fits']);inputs['raw_cube']=sha(path)
-    redraw='--redraw' in __import__('sys').argv
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--redraw',action='store_true');parser.add_argument('--cube-stage',type=Path,default=OLD/'atlas');parser.add_argument('--output-stage',default='rgb');args=parser.parse_args()
+    require_compute();d=folder(args.output_stage);inputs={}
+    record=json.loads((args.cube_stage/'complete.json').read_text())
+    path=verified(args.cube_stage/'cmd_filter_cube.fits',record['outputs']['cmd_filter_cube.fits']);inputs['raw_cube']=sha(path);inputs['cube_receipt']=sha(args.cube_stage/'complete.json')
+    redraw=args.redraw
     with fits.open(path,memmap=True) as h:
         mu=h['MU'].data;area=h['NATIVE_AREAS'].data[:,2].sum(axis=0);mask=h['DISPLAY_MASK'].data.astype(bool)
         groups=[('overview',np.array([[10,15],[15,26],[26,100]],float))]
