@@ -1,0 +1,171 @@
+{
+  "allocation": 61574693,
+  "queue_row_after_release": false,
+  "only_own_allocation_returned": true,
+  "records": [
+    {
+      "job": "61574693",
+      "name": "photdis-v8",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:53:07",
+      "CPUs": "52"
+    },
+    {
+      "job": "61574693.interactive",
+      "name": "interactive",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:53:07",
+      "CPUs": "52"
+    },
+    {
+      "job": "61574693.extern",
+      "name": "extern",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:53:07",
+      "CPUs": "52"
+    },
+    {
+      "job": "61574693.0",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:21",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.1",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:02:47",
+      "CPUs": "24"
+    },
+    {
+      "job": "61574693.2",
+      "name": "env",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:00:24",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.3",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:53",
+      "CPUs": "24"
+    },
+    {
+      "job": "61574693.4",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:47",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.5",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:03:23",
+      "CPUs": "24"
+    },
+    {
+      "job": "61574693.6",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:06",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.7",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:11",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.8",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:51",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.9",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:12",
+      "CPUs": "8"
+    },
+    {
+      "job": "61574693.10",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:05",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.11",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:07",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.12",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:03",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.13",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:08",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.14",
+      "name": "env",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:13",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.15",
+      "name": "python",
+      "state": "FAILED",
+      "exit": "2:0",
+      "elapsed": "00:00:01",
+      "CPUs": "4"
+    },
+    {
+      "job": "61574693.16",
+      "name": "python",
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:00:01",
+      "CPUs": "4"
+    }
+  ],
+  "failed_preparations": {
+    "2": "NGC_6205_M13 archive alias, fixed before inventory",
+    "15": "Login-node /tmp script unavailable on compute node; moved verifier and input to shared private workspace, step16 passes; no scientific result change"
+  }
+}

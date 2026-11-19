@@ -1,6 +1,6 @@
 # PLAN
 
-## Native luminosity2026-11-19 — science completed, closing synchronization
+## Native luminosity2026-11-19 — completed
 
 Full v8prompt/reviewb790c69f executed in native_luminosity_20261119. One E gray
 mapping only;933PSFs,525M5calibration members,2folds and771actual point/refits.
@@ -17,8 +17,11 @@ rows, full private PDFs and shareddraws preserved.42actual-source numerical chec
 5math tests in both runtimes, oldv3.8pixels,77bound outputs and16source files,
 5exact native-runtime portable redraws and all5PDFpages visually checked.
 Production87069408, old fivecontrols/score tables and allskyproducts unchanged;
-no manuscript or agents. Only safe local/GitHub/canonical reconciliation and
-return of own61574693 remain. Next science needs a new scope; do not add parameters,
+no manuscript or agents. Science evidence830f6632matches local/GitHub/canonical;
+133incomingfiles,77boundoutputs and16sourcefiles verify after checkout.98owned
+server exports safely archived; unrelated files preserved. Own61574693returned
+COMPLETED0:0 after53:07, no queue row. No remaining science/sync/resource work.
+Next science needs a new scope; do not add parameters,
 per-system zero points, prospective evaluation, production rerun or sky changes.
 
 

@@ -1,0 +1,11 @@
+{
+  "head": "830f6632bcccf9c70aee7177f58cf13e704a43d1",
+  "node": "nid200004",
+  "job": "61574693",
+  "whole_incoming_packet": 133,
+  "release_outputs": 77,
+  "source_files": 16,
+  "all_hashes_match": true,
+  "tracked_changes": false,
+  "all_science_steps_finished": true
+}
