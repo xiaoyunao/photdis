@@ -20,5 +20,10 @@
   "sha256": "505eecce0f062ab4fe545dd8cc9faeed97ac552a56e0f558f97a3a8af2bd01e4",
   "archive_sha256": "59c208e9ab07a8ab96fc072c254ec46721ad9f8e92daf8fe150efe051c282d23",
   "role": "fixed physical Pal5 control; no zero-point adjustment",
-  "literature": "11.5Gyr and [Fe/H]~ -1.4; Pal5 stellar population literature; distinct from FOS reference template"
+  "literature": "11.5Gyr and [Fe/H]~ -1.4; Pal5 stellar population literature; distinct from FOS reference template",
+  "actual_MIST_version": "1.2",
+  "actual_log10_age_yr": 10.060697840353614,
+  "actual_Zinit": 0.00075131,
+  "actual_FeH_init": -1.4,
+  "comparison_caveat": "The public custom MIST service returns version1.2, whereas the frozen FOS template is1.0. This is a combined population+model-version control, not an isolated FeH experiment."
 }
