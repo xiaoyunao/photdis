@@ -1,0 +1,155 @@
+{
+  "baseline": "205138774fb489c438146c5d2dc86184856a8c9b",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "seed": 2026111907,
+  "systems": [
+    "M13",
+    "M5",
+    "M30"
+  ],
+  "parent_N": [
+    249,
+    585,
+    99
+  ],
+  "sigma_gray": 0.1,
+  "photometric_error_floor": 0.001,
+  "Mr_range": [
+    3,
+    8
+  ],
+  "mu_measure": "flat mu prior; analytic common amplitude; no reference in prediction",
+  "subdivisions": 4,
+  "precision_probe": 8,
+  "max_subdivisions": 32,
+  "precision_target_median_mag": 0.005,
+  "precision_target_mean_logscore": 0.005,
+  "reference_kernel": "Gaussian modulus measurement kernel, sigma from frozen shared distance draws; same for all methods. Marginal predictive density is p convolved with kernel; not a joint cluster likelihood.",
+  "bootstrap": "256 shared member multinomial and common observed-distance parametric bootstrap; reference kernel retained in scores. No additional predictive broadening. V5 cohort reuses original multiplicity/scale and coupled M13-zero draws for legacy replay.",
+  "bootstrap_draws": 256,
+  "IMF": {
+    "name": "Kroupa2001",
+    "break_mass": 0.5,
+    "alpha_low": 1.3,
+    "alpha_high": 2.3,
+    "integral": "continuous normalized piecewise M^-alpha dM_init over each actual subdivided monotonic initial-mass interval",
+    "no_extra_lifetime": true,
+    "source": "https://doi.org/10.1046/j.1365-8711.2001.04022.x"
+  },
+  "models": {
+    "A": [
+      "FOS10",
+      "phase0",
+      "arc"
+    ],
+    "B": [
+      "version_control",
+      "phase0",
+      "arc"
+    ],
+    "C": [
+      "matched_system",
+      "phase0",
+      "arc"
+    ],
+    "D": [
+      "matched_system",
+      "phase0",
+      "IMF"
+    ],
+    "E": [
+      "matched_system",
+      "phase0+connected_phase2_Mr3to8",
+      "IMF"
+    ]
+  },
+  "phase_boxes": {
+    "lower_MS": {
+      "gr": [
+        0.3,
+        0.85
+      ],
+      "Mr": [
+        4.5,
+        8
+      ]
+    },
+    "turnoff": {
+      "gr": [
+        0.15,
+        0.3
+      ],
+      "Mr": [
+        3,
+        4.5
+      ]
+    }
+  },
+  "diagnostic_gr_edges": [
+    -0.2,
+    0.15,
+    0.3,
+    0.45,
+    0.6,
+    0.85,
+    1.2,
+    2
+  ],
+  "diagnostic_Mg_edges": [
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0
+  ],
+  "decision": {
+    "scale_target_mag": 0.1,
+    "paired_CI": [
+      0.025,
+      0.975
+    ],
+    "primary": "M5 turnoff; then M30 and M13; fixed A-B/B-C/C-D/D-E; mixed if scales/scores/support disagree"
+  },
+  "examples": {
+    "M13_QRF_decline": 3,
+    "M13_QRF_median": 1,
+    "M5_lower_MS": 1,
+    "each_system_TO": 1,
+    "DE_branch_change_per_system": 1,
+    "ranking": "on frozen v5 cohort; most negative centered-minus-original QRF marginal score and closest-to-median ordinary change; representative sources nearest phase median A residual; DE largest absolute post-MS mass change, ties by native ID"
+  },
+  "CRPS": "positive loss E|X-y|-0.5 E|X-Xprime| on modulus coordinate after same Gaussian reference convolution; evaluate full normalized distributions, including tails",
+  "frozen_sky": "selected_channels main B5-10/G10-20/R20-100; all existing sky images unchanged",
+  "model_files": {
+    "configs/v6_models/matched_M13.json": "387df1c8c3732197c0aa0af48baa5110be533d94c58745e2b8f2127f058e060f",
+    "configs/v6_models/matched_M13.txt": "98618dbe68e106d424dea11b4b58f56ca1ee2c80c73aacd31768f3ce80a32149",
+    "configs/v6_models/matched_M30.json": "80814925fb1df5ef416df8bcf972e7b45eece00636ee585f73be3e4d8b6fa081",
+    "configs/v6_models/matched_M30.txt": "40882c078de728ecbeb3ef79f4889efdaa7975a56d2b965676a96ddc6071a103",
+    "configs/v6_models/matched_M5.json": "c4ab2a93f6251856e65d6679e682a7b915850047c87396987fa4b6ddb39f6010",
+    "configs/v6_models/matched_M5.txt": "d6020e2fbd507d73d55996ada0953598477c56065e4bd02f6bd69a013c4085be",
+    "configs/v6_models/version_control.json": "42bf067fb015f61f794405ba26996467b4e1c08ad7cbddac63a50f4c7776e27a",
+    "configs/v6_models/version_control.txt": "81f7f2b200129f2e2abb514e42219e2612b828c06a522bc0195f01cc4ffee954"
+  },
+  "expected_EEP_phase2": {
+    "M13": [
+      454,
+      468
+    ],
+    "M5": [
+      454,
+      470
+    ],
+    "M30": [
+      454,
+      463
+    ]
+  }
+}

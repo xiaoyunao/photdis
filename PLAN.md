@@ -1,5 +1,22 @@
 # PLAN
 
+## Sequence mechanisms2026-11-19 — active
+
+Execute the full v7 prompt/review2561be88. Baseline20513877, production87069408,
+all completed sky displays and Pal5/v3.8 style frozen; no manuscript changes.
+Registered goal before development. Fixed parent PSFs249/585/99, native/role
+exclusions retained. Five fixed A–E comparisons isolate version, age/FeH,
+IMF integration and connected early post-MS support within original Mr3–8.
+Predict from photometry only, flat mu and sigma_gray0.10; reference only scores.
+Deliver full-parent/status, paired-support and exact v5-cohort statistics;
+complete PDFs/CRPS/per-star and paired scores with shared member/reference draws,
+phase/color/Mg trends, fixed-rule explanatory PDFs and three science-figure groups.
+Keep A/v5 replay separately sealed, original QRF float64 inputs, all tails and
+negative findings. Numerical refinement only if it competes with scientific effects.
+Stop after all five controls and evidence decision; no automatic calibration fit.
+Use allocated NERSC CPUs, compact public data/replay, actual figure QA, milestone
+memory/commits and safe final synchronization/resource return.
+
 ## Full-sky display and sequence shape2026-11-19 — completed
 
 Execute v6 prompt and complete latest reviewcbad66cc, archived under docs/v6_inputs.

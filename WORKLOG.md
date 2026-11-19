@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-19 — v7 sequence mechanisms
+
+- Read full latest reply2561be88(5974characters) and complete v7 prompt. Local/origin/canonical20513877 match, tracked trees clean; NERSC authentication valid. New complete goal registered before edits; freeze production and all finished sky displays, no manuscript/agents.
+- Fixed five comparisons, samples, metrics, shared reference/bootstrap convention and scale/precision criteria in configs/sequence_mechanisms_20261119.json before new predictions. Actual MIST metadata: no phase1, all initial masses strictly increasing; matched phase2 within Mr3–8 spans M13EEP454–468/M5 454–470/M30 454–463. Only these connected early segments enter E; no brighter range expansion or lifetime multiplier.
+
 ## 2026-11-19 — v6 full-sky display and native sequence shape
 
 - Final reconciliation complete at scientific evidence68ea1e84 on local/origin/canonical NERSC. Allocated-node audit verifies all243release-packet file bytes after Git checkout;35portable science replays are pixel-identical,194source outputs and37English PNG/PDF pairs verified. Main5–10/10–20/20–100 and5deg background unchanged;2/10deg remain previews. Generated server exports and9owned source/config versions archived under execution/server_public_before_git_sync_20261119T082644Z before ff; unrelated untracked products preserved. Returned only own61562374 after no science steps remained; salloc exited0. No outstanding science, automatic models, deployment, timers or agents belong to this goal. This closeout changes memory only.
