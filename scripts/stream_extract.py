@@ -2,6 +2,8 @@
 """Fixed local imaging experiment, before any photometric or population cut."""
 from concurrent.futures import ThreadPoolExecutor
 import fitsio
+from astropy.io import fits
+from functools import lru_cache
 from photdis.stage1 import require_compute,galactic,legacy_ids,tile_bounds
 from photdis.photometry import CLEAN_REJECT_MASKBITS
 from stream_common import *
@@ -47,7 +49,12 @@ def footprints(t,random=False):
 def process_file(path):
     chunks=[];flow=[]
     with fitsio.FITS(str(path)) as f:
-        names=set(f[1].get_colnames());rc=f[1].read(columns=['RA','DEC'])
+        names=set(f[1].get_colnames())
+        # Strided CFITSIO column reads over these wide records generate many
+        # tiny network reads. Memory-map coordinates, then read complete selected
+        # records once; FITSIO still decodes TZERO/TSCAL correctly.
+        with fits.open(path,memmap=True) as h:
+            rc={k:np.asarray(h[1].data[k]).copy() for k in ('RA','DEC')}
         spatial=np.logical_or.reduce([geometry(n,rc['RA'],rc['DEC'])[0] for n in ROIS])
         rows=np.flatnonzero(spatial)
         if not len(rows):return None,[],dict(path=str(path),size=path.stat().st_size,rows=f[1].get_nrows(),local=0)
@@ -57,7 +64,7 @@ def process_file(path):
             for n in ROIS:flow.append(dict(roi=n,file=path.name,stage='missing_TYPE',n=int(geometry(n,rc['RA'][rows],rc['DEC'][rows])[0].sum())))
             return None,flow,dict(path=str(path),size=path.stat().st_size,missing_TYPE=len(rows))
         assert set(cols)<=names, sorted(set(cols)-names)
-        a=f[1].read(columns=cols,rows=rows)
+        a=f[1].read(rows=rows)
     typ=np.char.strip(a['TYPE'].astype('U'));psf=typ=='PSF'
     for n in ROIS:
         g=geometry(n,a['RA'],a['DEC'])[0]
@@ -81,15 +88,21 @@ def process_file(path):
 
 def sources():
     require_compute();d=folder('local_source');inputs={};root=Path(json.loads((ROOT/'configs/v3_9_catalog.json').read_text())['south']['sweep_root'])
-    selected=[]
+    selected=[];bounds={}
+    for name in ROIS:
+        lo,hi=C['local'][name]['ra_range'];ra,dec=np.meshgrid(np.linspace(lo,hi,201),np.linspace(-40,35,1501));g,_,_=geometry(name,ra.ravel(),dec.ravel())
+        # One-degree conservative I/O padding; exact source-level geometry below
+        # is unchanged. This only avoids reading irrelevant sweep rectangles.
+        bounds[name]=(float(dec.ravel()[g].min()-1),float(dec.ravel()[g].max()+1))
     for p in sorted(root.glob('sweep-*.fits')):
         ra0,dec0,ra1,dec1=tile_bounds(p)
-        if any(ra0<C['local'][n]['ra_range'][1] and ra1>C['local'][n]['ra_range'][0] and dec0<35 and dec1> -40 for n in ROIS):selected.append(p)
+        if any(ra0<C['local'][n]['ra_range'][1] and ra1>C['local'][n]['ra_range'][0] and dec0<bounds[n][1] and dec1>bounds[n][0] for n in ROIS):selected.append(p)
+    print('fixed-geometry I/O bounding boxes',bounds,'files',len(selected),flush=True)
     payload=[];flow=[];receipts=[]
     with ThreadPoolExecutor(8) as pool:
         for t,ff,receipt in pool.map(process_file,selected):
             if t is not None and len(t['ls_id']):payload.append(t)
-            flow.extend(ff);receipts.append(receipt)
+            flow.extend(ff);receipts.append(receipt);print('read',receipt,flush=True)
     t={k:np.concatenate([p[k] for p in payload]) for k in payload[0]}
     _,idx=np.unique(t['ls_id'],return_index=True);duplicates=len(t['ls_id'])-len(idx);t={k:v[idx] for k,v in t.items()}
     assert (t['TYPE']=='PSF').all();npz(d/'photometry.npz',**t)

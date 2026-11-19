@@ -27,7 +27,7 @@ def rgb(root,d):
             figure(d,p.stem,f,rows)
             f,axs=plt.subplots(2,3,figsize=(7.15,5.1),subplot_kw={'projection':'aitoff'},layout='constrained')
             for row,values in enumerate((a['density'],a['signed_residual'])):
-                finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.995)),1e-5);lin=cap/100
+                cap=float(a['scalar_cap'][row]);lin=cap/100
                 for j,ax in enumerate(axs[row]):
                     z=ax.pcolormesh(a['l'],a['b'],np.ma.masked_invalid(values[j]),cmap=COLORMAP if row==0 else 'RdBu_r',norm=SymLogNorm(lin,vmin=0 if row==0 else -cap,vmax=cap),rasterized=True)
                     ax.set_axisbelow(False);ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4);ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')

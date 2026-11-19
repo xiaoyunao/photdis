@@ -52,6 +52,7 @@ def main():
     for gi,(name,bounds) in enumerate(groups):
         density=maps[3*gi:3*gi+3,0];residual=maps[3*gi:3*gi+3,1]
         rendered=[];stats=[]
+        caps=np.array([max(float(np.quantile(abs(v[np.isfinite(v)]),.995)),1e-5) for v in (density,residual)])
         with plt.rc_context(PAPER):
             f,axes=plt.subplots(2,1,figsize=(7.15,7.0),subplot_kw={'projection':'aitoff'},layout='constrained')
             for kind,ax,values in zip(('CMD density','Positive residual'),axes,(density,residual)):
@@ -74,7 +75,7 @@ def main():
             axes[0].legend(frameon=False,fontsize=6,loc='lower right')
             labels=[f'{c}: {a:.2f}–{b:.2f} kpc' for c,(a,b) in zip(('B','G','R'),bounds)]
             f.supxlabel('   |   '.join(labels)+'\nGalactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
-            figure(d,'rgb_'+name,f,stats,dict(l=l,b=b,rgb=np.array(rendered),density=density[:,pix].astype('f4'),signed_residual=residual[:,pix].astype('f4'),mask=mask[pix],channel_kpc=bounds))
+            figure(d,'rgb_'+name,f,stats,dict(l=l,b=b,rgb=np.array(rendered),density=density[:,pix].astype('f4'),signed_residual=residual[:,pix].astype('f4'),mask=mask[pix],channel_kpc=bounds,scalar_cap=caps))
             f,axs=plt.subplots(2,3,figsize=(7.15,5.1),subplot_kw={'projection':'aitoff'},layout='constrained')
             for row,values in enumerate((density,residual)):
                 finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.995)),1e-5);lin=cap/100
