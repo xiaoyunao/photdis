@@ -31,7 +31,7 @@ def rgb(root,d):
                 for j,ax in enumerate(axs[row]):
                     z=ax.pcolormesh(a['l'],a['b'],np.ma.masked_invalid(values[j]),cmap=COLORMAP if row==0 else 'RdBu_r',norm=SymLogNorm(lin,vmin=0 if row==0 else -cap,vmax=cap),rasterized=True)
                     ax.set_axisbelow(False);ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4);ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')
-                ticks=10.**np.arange(np.ceil(np.log10(lin)),np.floor(np.log10(cap))+1)
+                ticks=np.array([10.**np.floor(np.log10(cap))])
                 f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=np.r_[0,ticks] if row==0 else np.r_[-ticks[::-1],0,ticks],format=plt.FormatStrFormatter('%g'))
             figure(d,p.stem.replace('rgb_','physical_'),f,rows)
 
@@ -48,7 +48,7 @@ def local(root,d):
                     pair=a[model+'_hess_'+var];h=pair[0]-pair[1];cap=max(float(np.quantile(abs(h),.99)),.1)
                     z=ax.pcolormesh(a['hess_gr_edges'],a['hess_g_edges'],h.T,cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
                     for lo,hi in zip(a[model+'_envelope_lower'],a[model+'_envelope_upper']):ax.plot(lo,a[model+'_envelope_g'],color=ORANGE,lw=.6);ax.plot(hi,a[model+'_envelope_g'],color=ORANGE,lw=.6)
-                    ax.set(xlim=(-.2,1.2),ylim=(24,14),xlabel=r'$(g-r)_0$',ylabel=r'$g_0$ (mag)',title=var.replace('_',' '));f.colorbar(z,ax=ax,fraction=.04,label='Target − control (deg⁻² bin⁻¹)')
+                    ax.set(xlim=(-.2,1.2),ylim=(24,14),xlabel=r'$(g-r)_0$',ylabel=r'$g_0$ (mag)',title={'strict_original':'Original cuts','gr_E010':'gr selection','gr_complete':'Depth-matched gr'}[var]);f.colorbar(z,ax=ax,fraction=.04,label='Excess (deg⁻² bin⁻¹)',ticks=[-10**np.floor(np.log10(cap)),0,10**np.floor(np.log10(cap))],format=plt.FormatStrFormatter('%g'))
                 mu=10+5*np.log10(cfg['distance_kpc']) if 'distance_kpc' in cfg else cfg['reference_mu'];ax=axs[1,0]
                 for var,color in zip(('strict_original','strict_E010','gr_E010','gr_complete'),('.5',GREEN,BLUE,ORANGE)):
                     rows=[r for r in responses if r['roi']==roi and r['model']==model and r['phase']=='MS_TO' and r['variant']==var]
@@ -57,7 +57,7 @@ def local(root,d):
                 for ax,sigma in zip(axs[1,1:],(.1,.3)):
                     values=a[model+'_sky_smoothed_'+str(sigma)][2];finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
                     z=ax.pcolormesh(a['sky_along_edges'],a['sky_offset_edges'],np.ma.masked_invalid(values.T),cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
-                    ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Fraction along fixed RA segment',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Signed excess (deg⁻²)')
+                    ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Along-track fraction',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Excess (deg⁻²)',ticks=[-10**np.floor(np.log10(cap)),0,10**np.floor(np.log10(cap))],format=plt.FormatStrFormatter('%g'))
                 figure(d,roi+'_'+model+'_recovery',f,[dict(roi=roi,model=model)])
 
 

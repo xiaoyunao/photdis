@@ -156,7 +156,7 @@ def make_maps(roi,t,r,model,ec,mu,label,d,density,responses):
             z=ax.pcolormesh(xe,ye,h.T,cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
             g=np.linspace(14,24,600);lower,upper=boundaries(g,mu,cc,ec,kind)
             for lo,hi in zip(lower,upper):ax.plot(lo,g,color=ORANGE,lw=.6);ax.plot(hi,g,color=ORANGE,lw=.6)
-            ax.set(xlim=(-.2,1.2),ylim=(24,14),xlabel=r'$(g-r)_0$',ylabel=r'$g_0$ (mag)',title=var.replace('_',' '));f.colorbar(z,ax=ax,fraction=.04,label='Target − control (deg⁻² bin⁻¹)')
+            ax.set(xlim=(-.2,1.2),ylim=(24,14),xlabel=r'$(g-r)_0$',ylabel=r'$g_0$ (mag)',title={'strict_original':'Original cuts','gr_E010':'gr selection','gr_complete':'Depth-matched gr'}[var]);f.colorbar(z,ax=ax,fraction=.04,label='Excess (deg⁻² bin⁻¹)',ticks=[-10**np.floor(np.log10(cap)),0,10**np.floor(np.log10(cap))],format=plt.FormatStrFormatter('%g'))
         ax=axs[1,0]
         for var,color in zip(('strict_original','strict_E010','gr_E010','gr_complete'),('.5',GREEN,BLUE,ORANGE)):
             rr0=[z for z in responses if z['roi']==roi and z['model']==label and z['phase']=='MS_TO' and z['variant']==var]
@@ -169,7 +169,7 @@ def make_maps(roi,t,r,model,ec,mu,label,d,density,responses):
             off=(abs((oy[:-1]+oy[1:])/2)>=cfg['off_abs_deg'][0]);background=np.nanmedian(values[:,off],axis=1)
             residual=values-background[:,None];finite=residual[np.isfinite(residual)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
             z=ax.pcolormesh(sx,oy,np.ma.masked_invalid(residual.T),cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
-            ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Fraction along fixed RA segment',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Signed excess (deg⁻²)')
+            ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Along-track fraction',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Excess (deg⁻²)',ticks=[-10**np.floor(np.log10(cap)),0,10**np.floor(np.log10(cap))],format=plt.FormatStrFormatter('%g'))
             images['smoothed_'+str(sigma)]=np.stack((count_s,area_s,residual))
         figure(d,roi+'_'+label+'_recovery',f,tables)
     out={label+'_hess_'+k:v for k,v in hesses.items()};out.update({label+'_sky_'+k:v for k,v in images.items()});out.update(hess_gr_edges=xe,hess_g_edges=ye,sky_along_edges=sx,sky_offset_edges=oy)

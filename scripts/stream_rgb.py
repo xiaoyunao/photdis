@@ -83,7 +83,7 @@ def main():
                     z=ax.pcolormesh(l,b,np.ma.masked_invalid(values[j,pix]),cmap=COLORMAP if row==0 else 'RdBu_r',norm=SymLogNorm(lin,vmin=0 if row==0 else -cap,vmax=cap),rasterized=True)
                     ax.set_axisbelow(False);ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4)
                     ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')
-                decades=10.**np.arange(np.ceil(np.log10(lin)),np.floor(np.log10(cap))+1)
+                decades=np.array([10.**np.floor(np.log10(cap))])
                 f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=np.r_[0,decades] if row==0 else np.r_[-decades[::-1],0,decades],format=plt.FormatStrFormatter('%g'))
             figure(d,'physical_'+name,f,stats)
     csv_rows(d/'stretch.csv',allmeta)
