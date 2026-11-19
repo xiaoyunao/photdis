@@ -12,7 +12,7 @@ from sky6_common import *
 def overlay(ax):
     x=np.linspace(-np.pi,np.pi,721)
     for lat in (-30,-20,0,20,30):
-        ax.plot(x,np.full_like(x,np.deg2rad(lat)),color='.25',lw=.65 if lat==0 else .45,ls='-' if lat==0 else '--' if abs(lat)==20 else ':',alpha=.8)
+        ax.plot(x,np.full_like(x,np.deg2rad(lat)),color='.25',lw=.65 if lat==0 else .45,ls='-' if lat==0 else '--' if abs(lat)==20 else ':',alpha=.8,label='Galactic plane (b=0°)' if lat==0 else 'b=±20°' if lat==20 else 'b=±30°' if lat==30 else None)
     for label,name,col in [('Sagittarius','Sagittarius.antoja2020','.12'),('Pal 5 track','Pal5.ibata2024',ORANGE)]:
         t,_=track(name);l,b=hp.Rotator(coord=('C','G'))(t['ra'],t['dec'],lonlat=True);l=-((l+180)%360-180)
         jumps=np.flatnonzero((abs(np.diff(l))>120)|(abs(np.diff(b))>5))+1
