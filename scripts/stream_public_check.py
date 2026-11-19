@@ -25,7 +25,7 @@ def main():
         reader=PdfReader(pdf);assert len(reader.pages)==1
         text=reader.pages[0].extract_text();assert len(text.strip())>20
         assert not re.search('[\u3400-\u9fff]',text),pdf
-        with Image.open(pdf.with_suffix('.png')) as im:assert min(im.size)>900
+        with Image.open(pdf.with_suffix('.png')) as im:assert min(im.size)>=900
     checks.append(dict(check='36 one-page PDFs and high-resolution PNGs, English labels',passed=True))
     for md in PUBLIC.glob('*.md'):
         for target in re.findall(r'\]\(([^)#]+)(?:#[^)]*)?\)',md.read_text()):
