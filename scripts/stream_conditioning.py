@@ -125,9 +125,15 @@ def signed_anchor(t,d,inputs):
         good=np.isin(z['gaia_state'],(4,5,6))&(z['pop']==pop)&np.isfinite(z['p_corr'])&(z['p_err']>0)
         if not good.any():continue
         state=z['gaia_state'][good];window=np.column_stack((np.where(state==4,-np.inf,np.where(state==5,5,10)),np.where(state==4,5,np.where(state==5,10,np.inf))))
+        _,base_density=gaussian_mixture(a['qrf_mu_edges'][good],a['qrf_mu_mass'][good],z['p_corr'][good],z['p_err'][good],'gaia',window,0)
+        sky=hp.ang2pix(16,z['RA'][good],z['DEC'][good],lonlat=True,nest=True);keys,inv=np.unique(sky,return_inverse=True)
         for shift in (-.2,0,.2):
             u,density=gaussian_mixture(a['qrf_mu_edges'][good],a['qrf_mu_mass'][good],z['p_corr'][good],z['p_err'][good],'gaia',window,shift)
-            rows.append(dict(population=name,shift_mu=shift,negative=int((z['p_corr'][good]<0).sum()),**row_stats(u,density)))
+            difference=np.log(density)-np.log(base_density);draws=[]
+            for draw in range(256):
+                rng=np.random.default_rng(C['seed']+draw);weight=np.bincount(rng.integers(len(keys),size=len(keys)),minlength=len(keys))[inv]
+                draws.append(np.average(difference,weights=weight))
+            rows.append(dict(population=name,shift_mu=shift,negative=int((z['p_corr'][good]<0).sum()),paired_delta_logscore=float(np.mean(difference)),**interval(draws),**row_stats(u,density)))
     csv_rows(d/'signed_gaia_anchor.csv',rows)
 
 
