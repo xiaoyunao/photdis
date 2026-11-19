@@ -76,6 +76,10 @@ def main():
         cfg=C['local'][roi];t=read(OUT/'local_source',(roi+'.npz','TYPE','ls_id','source_id','RA','DEC','m','err','observed','EBV','offset','along','selected'),inputs)
         r=read(OUT/'local_area',(roi+'.npz','RA','DEC','depth0','EBV','offset','along','selected'),inputs)
         assert (t['TYPE']=='PSF').all()
+        # Rows failing every registered entrance cannot contribute to any
+        # contrast. Their full admission/cutflow remains in local_source.
+        original_parent=len(t['ls_id']);admitted=t['selected'].any(axis=0)
+        t={k:(v[:,admitted] if k=='selected' else v[admitted]) for k,v in t.items()}
         mu=10+5*np.log10(cfg['distance_kpc']) if 'distance_kpc' in cfg else cfg['reference_mu']
         nodes=np.unique(np.r_[MU,mu,mu-1,mu+1]);at=np.argmin(abs(nodes-mu));sr=region_masks(t['offset'],cfg);rr=region_masks(r['offset'],cfg)
         # Pool on and both backgrounds before any CMD/phase selection. Width
@@ -91,7 +95,7 @@ def main():
         else:sig=np.interp(gcent,gcent[good],sig[good])
         errcurve=(gcent,sig)
         modelnames=('FOS','Pal5_control') if roi.startswith('Pal') else ('FOS',)
-        roi_arrays=dict(g_centers=gcent,sigma_g=sig,mu=nodes)
+        roi_arrays=dict(g_centers=gcent,sigma_g=sig,mu=nodes,original_PSF_parent=np.array(original_parent),admitted_union=np.array(int(admitted.sum())))
         for model in modelnames:
             mag,phase=tm[model]
             for kind in ('MS_SGB_RGB','MS_TO','blue_box','SGB_RGB'):
