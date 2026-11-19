@@ -40,7 +40,7 @@
   "calibration_parent": "M5 E-supported existing lower_MS or turnoff, all other primary parents retained for prediction/status",
   "bootstrap": 256,
   "workers": 16,
-  "common_draws": "reuse archived v7 whole-parent mult and system scale draws for every new cohort/method; v5 IDs retained, original v7v5 stats untouched. Fit M5 folds/full with same whole-parent counts and common M5 reference shift; M30/M13 independent shared target shifts.",
+  "common_draws": "Reuse v7 whole-parent multiplicities for all new cohorts. New fixed-seed independent Gaussian system-mu draws with sigma from frozen distance-draw spread; one draw/system/replicate shared across all methods. Preserve original v7 reference vectors and scores separately. This matches the declared Gaussian system-mu likelihood exactly.",
   "fit": {
     "objective": "joint MAP R(mu)*product_i p_i^cal(mu); theta0=a0+mu-mu_ref factorizes likelihood and one R; optimize(theta0,a1), mu_MAP=mu_ref; bootstrap a0=theta0_boot-delta_mu_M5",
     "prior": "flat a0/a1, one Gaussian system reference only; no per-star R, no added scatter",

@@ -23,7 +23,11 @@ def main():
     for i in np.flatnonzero((t['system']=='M5')&~eligible):fold[i]=int(key(i),16)%2
     for test in (0,1):
         train=eligible&(fold!=test);ii=np.flatnonzero(train);bounds.append(dict(prediction_fold=test,train_N=len(ii),test_N=int(sum(eligible&(fold==test))),gr_min=float(gr[ii].min()),gr_max=float(gr[ii].max()),training_ids=[int(v) for v in t['ls_id'][ii]],test_ids=[int(v) for v in t['ls_id'][eligible&(fold==test)]]))
-    ii=np.flatnonzero(eligible);bounds.append(dict(prediction_fold='external',train_N=len(ii),gr_min=float(gr[ii].min()),gr_max=float(gr[ii].max()),training_ids=[int(v) for v in t['ls_id'][ii]]));t.update(fold=fold,calibration_eligible=eligible);npz(d/'roster.npz',**t)
+    ii=np.flatnonzero(eligible);bounds.append(dict(prediction_fold='external',train_N=len(ii),gr_min=float(gr[ii].min()),gr_max=float(gr[ii].max()),training_ids=[int(v) for v in t['ls_id'][ii]]));t.update(fold=fold,calibration_eligible=eligible)
+    rng=np.random.default_rng(C['seed']+2)
+    for s in C['systems']:
+        sigma=np.std(5*np.log10(t['scale_'+s]),ddof=1);t['shift_'+s]=rng.normal(0,sigma,C['bootstrap']);t['reference_sigma_'+s]=np.array(sigma)
+    npz(d/'roster.npz',**t)
     csv_rows(d/'identities.csv',[dict(TYPE=t['TYPE'][i],ls_id=int(t['ls_id'][i]),source_id=int(t['source_id'][i]),system=t['system'][i],native=int(t['native'][i]),phase=t['phase'][i],v5=bool(t['v5'][i]),fold=int(fold[i]),calibration_eligible=bool(eligible[i])) for i in range(933)])
     save_json(d/'fit_design.json',bounds);csv_rows(d/'actual_gray_invariance.csv',invariance);complete(d,inputs,registered_before_fit=True,parent=933,eligible_M5=int(eligible.sum()));print('Sealed',933,'M5 calibration',eligible.sum(),flush=True)
 
