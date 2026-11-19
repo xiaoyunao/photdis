@@ -54,7 +54,7 @@ def render(src,d):
                 lo=ref-.6;hi=ref+.6
                 for m in methods:
                     if m not in c['methods']:continue
-                    yy=curves[f'{k}_{m}_density'];ax.plot(mu-ref,yy,color=COLORS[m],lw=.8,label=LABELS[m]);qq=np.array(c['methods'][m]['q']);lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
+                    yy=curves[f'{k}_{m}_density'];ax.plot(mu-ref,yy,color=COLORS[m],lw=.8,ls='-' if c['methods'][m]['supported'] else ':',label=LABELS[m]);qq=np.array(c['methods'][m]['q']);lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
                 if methods==['QRF']:
                     ax.plot(mu-ref,curves[f'{k}_QRF_centered_density'],color=ORANGE,lw=.8,ls='--',label='Diagnostic centered');shift=float(curves[f'{k}_QRF_center'][0]);qq=np.array(c['methods']['QRF']['q'])-shift;lo=min(lo,qq[0]-.15);hi=max(hi,qq[-1]+.15)
                 ax.set(xlim=(lo-ref,hi-ref),xlabel=r'$\mu-\mu_{\rm ref}$ (mag)',ylabel=r'Predictive density (mag$^{-1}$)',title=f"{c['system']} · {c['ls_id']}")

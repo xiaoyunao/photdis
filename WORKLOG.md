@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — v7 sequence mechanisms
 
+- All five controls finish registered4/8/16/32integration;16→32passes every declared phase/mean-score/star-shift criterion. Main resolution32; old A4/MC128 remains sealed separately. Full PDF cache includes exact original components and tails. Expensive grid log-density sum accelerated with a rigorous relative omitted-sum bound<exp(-40), keeping all original parameters and tail-dominant components; direct unbounded half-grid checks remain required. Original serial/full-sum execution logs and complete caches preserved.
+
 - Original A/MC128 replay passes on233/510/88v5 members. Numerical4→8→16controls expose sensitivity in a few non-MS color outliers; apply registered common refinement up to32, preserving all checkpoints. Migrated remaining identical calculations to16independent worker processes within own allocation; original serial log retained, no model/selection change. Four independent IMF/gray-shift/tail/CRPS math tests pass.
 
 - Implementing sealed roster/model quadratures and full-tail analytic forecasts. Initial roster join correctly exposed primary members absent from the old model-limited v5 table; retain all933 primary identities, mark missing historical predictions, and apply exact-v5 replay only to its declared subset. Original failed log retained. Own allocation61568731 obtained using standard CPU shared_interactive routing; explicit partition requests rejected before allocation. Other user resources untouched.

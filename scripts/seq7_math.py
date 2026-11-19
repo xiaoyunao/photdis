@@ -25,6 +25,23 @@ def evaluate_mix(y,means,logw,sigma):
     return np.sum(np.exp(logw)*ndtr(z),axis=-1),logsumexp(logw-.5*z*z-np.log(np.asarray(sigma)[...,None]*np.sqrt(2*np.pi)),axis=-1)
 
 
+def log_density_grid(x,means,logw,sigma):
+    """Full-tail log density with a rigorous <exp(-40) relative sum bound.
+
+    On each grid block, upper-bound each component over the whole interval.
+    A single component supplies a lower bound for the sum everywhere in that
+    block. Terms smaller than that lower bound by 40+log(K) have a combined
+    relative contribution below exp(-40). Original parameters stay untouched;
+    distant tail modes are retained whenever they can contribute there.
+    """
+    result=np.empty(len(x));margin=40+np.log(len(means));normal=np.log(sigma*np.sqrt(2*np.pi))
+    for start in range(0,len(x),256):
+        xx=x[start:start+256];near=np.maximum(np.maximum(xx[0]-means,means-xx[-1]),0);far=np.maximum(abs(xx[0]-means),abs(xx[-1]-means))
+        upper=logw-.5*(near/sigma)**2;lower=np.max(logw-.5*(far/sigma)**2);use=upper>=lower-margin
+        z=(xx[:,None]-means[use])/sigma;result[start:start+256]=logsumexp(logw[use]-.5*z*z-normal,axis=1)
+    return result
+
+
 def quantiles(means,logw,sigma):
     out=[]
     for q in (.025,.16,.5,.84,.975):
@@ -53,8 +70,10 @@ def curve_crps(x,cdf):
     return left+right[-1]-right
 
 
-def row_interp(x,y,values):
+def row_interp(x,y,values,cubic=False):
     # One grid per experiment, arbitrary query shape beginning with source row.
     k=(y-x[0])/(x[1]-x[0]);assert k.min()>=0 and k.max()<len(x)-1,(k.min(),k.max(),len(x))
     j=np.floor(k).astype(int);f=k-j;ii=np.arange(len(values)).reshape((-1,)+(1,)*(y.ndim-1))
-    return values[ii,j]*(1-f)+values[ii,j+1]*f
+    if not cubic:return values[ii,j]*(1-f)+values[ii,j+1]*f
+    assert (j>=1).all() and (j+2<len(x)).all()
+    return (-f*(f-1)*(f-2)/6*values[ii,j-1]+(f+1)*(f-1)*(f-2)/2*values[ii,j]-(f+1)*f*(f-2)/2*values[ii,j+1]+(f+1)*f*(f-1)/6*values[ii,j+2])

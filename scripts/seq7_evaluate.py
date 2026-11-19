@@ -29,7 +29,7 @@ def measure(z,ii,t,x,mult,shift):
     nb=np.array([1.4826*count_median(abs(res-shift[k]-cb[k]),w[:,k]) for k in range(len(shift))]);values['NMAD_lo'],values['NMAD_hi']=CI(nb)
     for state,point,draw,med in [('raw',ref,ref[:,None]+shift[None],0),('centered',ref+center,ref[:,None]+shift[None]+draw_center[None],center)]:
         for label,key in [('logscore','logpdf'),('CRPS','crps'),('CDF','cdf')]:
-            pv=row_interp(x,point,z[key][j]);bv=row_interp(x,draw,z[key][j]);per[state+'_'+label]=pv
+            pv=row_interp(x,point,z[key][j],cubic=label=='logscore');bv=row_interp(x,draw,z[key][j],cubic=label=='logscore');per[state+'_'+label]=pv
             if label=='CDF':
                 for level,lo,hi in [('68',.16,.84),('95',.025,.975)]:
                     score=((pv>=lo)&(pv<=hi)).astype(float);boot=weighted_mean(((bv>=lo)&(bv<=hi)).astype(float),w);name=state+'_convolved_C'+level;values[name]=float(score.mean());values[name+'_lo'],values[name+'_hi']=CI(boot);boots[name]=boot

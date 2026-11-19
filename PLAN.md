@@ -4,7 +4,10 @@
 
 Execute the full v7 prompt/review2561be88. Baseline20513877, production87069408,
 all completed sky displays and Pal5/v3.8 style frozen; no manuscript changes.
-Registered goal before development. Fixed parent PSFs249/585/99, native/role
+Registered goal before development. Roster/model sealing and all five forecasts
+are complete; the registered16→32integration comparison passes. Full-tail curve
+caches, shared-score statistics, fixed-rule figures and direct numerical replay
+are in progress on own allocation61568731. Fixed parent PSFs249/585/99, native/role
 exclusions retained. Five fixed A–E comparisons isolate version, age/FeH,
 IMF integration and connected early post-MS support within original Mr3–8.
 Predict from photometry only, flat mu and sigma_gray0.10; reference only scores.

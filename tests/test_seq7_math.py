@@ -5,7 +5,7 @@ import numpy as np
 from scipy.special import ndtr
 from scipy.integrate import trapezoid
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from seq7_math import imf_integral,mixture,evaluate_mix,quantiles,uniform_curve,curve_crps,row_interp
+from seq7_math import imf_integral,mixture,evaluate_mix,quantiles,uniform_curve,curve_crps,row_interp,log_density_grid
 
 
 def test_mass_measure_is_subdivision_invariant():
@@ -33,3 +33,9 @@ def test_crps_gaussian_identity_and_row_queries():
     np.testing.assert_allclose(np.interp(0,x,v),expected,atol=1e-6)
     values=np.array([x,x*2]);query=np.array([[.1,.2],[.3,.4]])
     np.testing.assert_allclose(row_interp(x,query,values),[[.1,.2],[.6,.8]],atol=1e-10)
+    quadratic=np.array([-.5*x*x,-x*x]);np.testing.assert_allclose(row_interp(x,query,quadratic,cubic=True),[[-.005,-.02],[-.09,-.16]],atol=1e-12)
+
+
+def test_bounded_sum_preserves_distant_low_weight_tail_modes():
+    means=np.array([-10.,0.,10.]);lw=np.array([-1000.,-1.,-2000.]);lw-=np.logaddexp.reduce(lw);x=np.linspace(-30,30,2001)
+    _,exact=evaluate_mix(x,means,lw,.1);np.testing.assert_allclose(log_density_grid(x,means,lw,.1),exact,atol=2e-10,rtol=1e-13)
