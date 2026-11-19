@@ -8,6 +8,7 @@ from stream_common import profile,C,track
 from stream_sequence import polyline,posterior,count_median
 from stream_local import boundaries,accept,curves
 from stream_conditioning import propensity
+from stream_fold_audit import native_bounds
 
 
 def test_rgb_exact_modulus_partition():
@@ -67,3 +68,11 @@ def test_common_member_resample_median():
     for _ in range(20):
         value=rng.normal(size=50);weight=rng.integers(0,5,size=50)
         np.testing.assert_allclose(count_median(value,weight),np.median(np.repeat(value,weight)))
+
+
+def test_fold_audit_uses_each_native_curve():
+    m=np.array([[8.5,8,7.8],[6.3,6,5.8],[4.15,4,3.8],[3.68,3.5,3.3]])
+    north=m.copy();north[:,0]+=.02
+    t=dict(south=m,north=north,phase=np.zeros(4),north_support=np.ones(4,bool))
+    np.testing.assert_allclose(native_bounds(t,'south'),[.15,.18])
+    np.testing.assert_allclose(native_bounds(t,'north'),[.17,.20])

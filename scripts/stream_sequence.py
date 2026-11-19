@@ -30,7 +30,7 @@ def polyline(template,side):
     return nodes[take],weights[take]/weights[take].sum()
 
 
-def posterior(m,e,ids,model):
+def posterior(m,e,ids,model,fold_interval=(.15545,.178745)):
     nodes,prior=model;out=np.full((len(m),5),np.nan);fold=np.zeros(len(m))
     intrinsic=C['sequence']['intrinsic_sigma_mag']
     color=np.column_stack((nodes[:,0]-nodes[:,1],nodes[:,1]-nodes[:,2]))
@@ -49,7 +49,7 @@ def posterior(m,e,ids,model):
         for j in range(C['sequence']['draws']):
             z=qmc_noise(identity,j);u=ndtr(z[:,3]);ix=(cdf>=u[:,None]).argmax(axis=1)
             draws.append(mean[np.arange(len(a)),ix]+z[:,4]*np.sqrt(1/total+intrinsic**2))
-            noisy=c[:,0]+z[:,0]*s[:,0]-z[:,1]*s[:,1];hits+=(noisy>=.15545)&(noisy<=.178745)
+            noisy=c[:,0]+z[:,0]*s[:,0]-z[:,1]*s[:,1];hits+=(noisy>=fold_interval[0])&(noisy<=fold_interval[1])
         out[start:stop]=10**((np.quantile(np.array(draws),[.025,.16,.5,.84,.975],axis=0).T-10)/5)
         # Reject extrapolation when every physical polyline point is >5 sigma.
         out[start:stop][chi.min(axis=1)>25]=np.nan
@@ -64,7 +64,8 @@ def main():
     template=read(OLD/'native',('template.npz','south','north','phase','north_support'),inputs)
     ids=np.where(t['source_id']>0,t['source_id'],-t['ls_id']);new=np.full_like(t['q'],np.nan);fold=np.zeros(len(new))
     for code,side in enumerate(('south','north')):
-        ii=np.flatnonzero(t['native']==code);new[ii],fold[ii]=posterior(t['m'][ii],t['err'][ii],ids[ii],polyline(template,side))
+        from stream_fold_audit import native_bounds
+        ii=np.flatnonzero(t['native']==code);new[ii],fold[ii]=posterior(t['m'][ii],t['err'][ii],ids[ii],polyline(template,side),native_bounds(template,side))
     gr=t['m'][:,0]-t['m'][:,1];mr=t['m'][:,1]-10-5*np.log10(t['ref']);phase=np.full(len(gr),'other',dtype='U12')
     phase[(gr>=.3)&(gr<=.85)&(mr>=4.5)&(mr<=8)]='lower_MS'
     phase[(gr>=.15)&(gr<.3)&(mr>=3)&(mr<4.5)]='turnoff'
