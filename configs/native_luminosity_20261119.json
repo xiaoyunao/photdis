@@ -1,0 +1,139 @@
+{
+  "baseline": "cb2ffcd45b0214b9c623f20f6914bebbe8504f77",
+  "science_base": "7f483a2becae8d04ea9ab62b4ae2b0b74c769180",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "review_id": "b790c69f-5162-5304-b276-77f0a53ac024",
+  "seed": 2026111908,
+  "systems": [
+    "M5",
+    "M30",
+    "M13"
+  ],
+  "parent_N": {
+    "M5": 585,
+    "M30": 99,
+    "M13": 249
+  },
+  "base_model": "E, exact archived32-subcell mixtures/nodes/weights/support, no recut or refit",
+  "pivot": 0.3,
+  "parameters": [
+    "a0",
+    "a1"
+  ],
+  "correction": "M_bj += a0+a1*(native_node_g-r-.30), all three bands; means_ij -= correction; all weights/labels/support unchanged",
+  "gray_sigma": 0.1,
+  "error_floor": 0.001,
+  "fold_color_edges": [
+    -0.2,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5,
+    0.65,
+    0.85,
+    1.2,
+    2.0
+  ],
+  "folds": "fixed SHA256(native_id,seed), alternating within each observed-color stratum of eligible M5; other M5 parent identities hash%2; every prediction uses opposite training fold",
+  "calibration_parent": "M5 E-supported existing lower_MS or turnoff, all other primary parents retained for prediction/status",
+  "bootstrap": 256,
+  "workers": 16,
+  "common_draws": "reuse archived v7 whole-parent mult and system scale draws for every new cohort/method; v5 IDs retained, original v7v5 stats untouched. Fit M5 folds/full with same whole-parent counts and common M5 reference shift; M30/M13 independent shared target shifts.",
+  "fit": {
+    "objective": "joint MAP R(mu)*product_i p_i^cal(mu); theta0=a0+mu-mu_ref factorizes likelihood and one R; optimize(theta0,a1), mu_MAP=mu_ref; bootstrap a0=theta0_boot-delta_mu_M5",
+    "prior": "flat a0/a1, one Gaussian system reference only; no per-star R, no added scatter",
+    "solver": "unbounded L-BFGS-B, analytic gradient; six fixed numerical starts, not six models",
+    "starts": [
+      [
+        0,
+        0
+      ],
+      [
+        -0.5,
+        0
+      ],
+      [
+        -0.5,
+        1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        0.5,
+        -1
+      ],
+      [
+        -0.2,
+        2
+      ]
+    ],
+    "bootstrap_starts": "point optimum and zero; retain best objective and solver/curvature/mode diagnostics",
+    "maxiter": 500,
+    "gtol": 1e-06,
+    "ftol": 1e-12
+  },
+  "scoring": {
+    "M5": "conditional on shared system reference: point forecasts at mu_ref; no independent reference-kernel convolution. Bootstrap ref shifts same reference and calibrated intercept, hence cancellation for calibrated PDF. Reference-CDF diagnostic integrates the coupled reference/fit draws; original E/QRF use their same shared draw. Zero QRF density retained as -inf with explicit counts, never floor.",
+    "external": "point-parameter forecasts convolved once with independent target Gaussian mu kernel. Bootstrap parameters refitted with common M5 shifts; target reference draws shared across methods. Separately empirical bootstrap-parameter-mixture prediction, one common parameter index for all target members, independent target kernel once; mixture evaluation CIs condition on fitted calibration ensemble and resample target members/reference.",
+    "legacy": "all v7 scores/definitions preserved; new conditional M5 scores are a separately named estimand",
+    "CRPS": "same modulus coordinate and respective explicit reference convention, positive loss; no Gaussian approximation of mixture/QRF"
+  },
+  "extrapolation": {
+    "training_range": "actual observed native g-r min/max of each training fold or full eligible M5; compute node posterior mass outside unchanged weights",
+    "thresholds": [
+      0.05,
+      0.5
+    ],
+    "labels": [
+      "overlap",
+      "transition",
+      "extrapolation"
+    ]
+  },
+  "geometry": {
+    "metric": "exact nearest original adjacent segment in native gr/rz with full negative shared-r covariance; preserve frozen E support",
+    "competitive_delta_chi2": 4,
+    "interpretation": "whitened tangent residual zero by definition for an interior nearest projection; report endpoints separately and physical perpendicular residual/error; no fixed-Mg projection used as orthogonal-color evidence"
+  },
+  "gr_edges": [
+    -0.2,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5,
+    0.65,
+    0.85,
+    1.2,
+    2.0
+  ],
+  "scale_target": 0.1,
+  "independent": {
+    "candidates": [
+      "NGC1851",
+      "NGC5053"
+    ],
+    "prescreen_excluded": {
+      "NGC362": "published project v3.2 distance outcomes, not an unused independent system"
+    },
+    "history": "NGC1851 prior availability-only empty admissions; whole-project exposed source/fit/validation IDs must be audited. NGC5053 proposed only, roles/coverage to be audited before predictions.",
+    "minimum_in_domain": 20,
+    "minimum_per_phase": 10,
+    "choice": "prioritize nearest M5 native passband/FeH/age overlap and clean history/independent kinematic reference; at most one evaluation after full freeze and gate",
+    "gate": "M5 cross-prediction both phase |bias|<=.10, combined calibration-set paired logscore95lo>0 and CRPS95hi<0 versus E, reduced phase gap and W68 ratio<=1.5; at least one original external system has both phase target met, combined paired scores improve and W68 ratio<=1.5. Require eligible candidate and no exposed prediction IDs; otherwise no independent evaluation."
+  },
+  "sky": "all old sky images unchanged, selected B5-10/G10-20/R20-100, .3deg/5deg and fixed gain",
+  "source_receipts": {
+    "manifests/sequence_mechanisms_20261119/prepare/complete.json": "54de829ea3bbf3b82c294ff78777f22a3fbe2f51d1d39786a014699e7ff24bd1",
+    "manifests/sequence_mechanisms_20261119/predict/complete.json": "be29fcdd8a5917712a532f5a1ea2bc3df49c379ca1e0a4c99fcf6cdfd1e16aaa",
+    "manifests/sequence_mechanisms_20261119/curves/complete.json": "81b8a8322ec015858c1575c12a9f61b1cb282ecdb216ddb7df1d0d54ee0092dc",
+    "manifests/sequence_mechanisms_20261119/evaluate/complete.json": "fa3eb222fa410e19572063f5d7e4e5101bb78cd84136df296c975b9a1bbf01d5",
+    "manifests/sequence_mechanisms_20261119/examples/complete.json": "3b2bc61732dd36430e5669384e7f87b248e9395e69270450a974a01b08747111",
+    "manifests/sequence_mechanisms_20261119/validation/complete.json": "5306136a0cdbdd45c4fac341c6847ddd6e193197b40649f3d7082d8610d93804"
+  }
+}

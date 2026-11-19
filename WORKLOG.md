@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-19 — v8 native luminosity calibration
+
+- Read full latest replyb790c69f(6197characters) and full v8prompt; local/origin/canonicalcb2ffcd4match, clean tracked state, valid NERSC auth. New complete goal registered before development. Freeze production/old PDFs/sky/style/manuscript. Register one two-parameter E gray correction, stratified two-fold M5 CV, shared system reference and parametric bootstrap, external conditional/parameter-mixture forecasts and objective gate before any new fit. NGC362 excluded by known v3.2 outcomes before candidate inventory; inventory only NGC1851(previous empty availability) andNGC5053, history status explicit. Own allocation61574693,32CPU/96GiB request,3h; other user resources untouched.
+
 ## 2026-11-19 — v7 sequence mechanisms
 
 - Final reconciliation at scientific evidence7f483a2b: local/origin/canonical match, tracked trees clean; allocated-node audit verifies all77science-packet files,51bound outputs and12executed source files.66owned server exports/programs archived under execution/server_public_before_git_sync_20261119T101451Z before ff; unrelated data/edits preserved. Returned own61568731 only, no remaining queue row. Final scientific/publish/replay/sync steps.3/.6/.8/.9/.10 COMPLETED0:0. Allocation accounting endsFAILED130:0 because the interactive shell retained the earlier deliberate interrupt status; this is not a final science failure. Elapsed49:54,52allocatedCPUs; all failed preparatory/export attempts and archives retained. No outstanding science or automatic next fit, manuscript/production changes, prospective opening, timer or agents.

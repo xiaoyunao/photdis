@@ -1,5 +1,21 @@
 # PLAN
 
+## Native luminosity2026-11-19 — active
+
+Execute full v8prompt/reviewb790c69f in native_luminosity_20261119. One model:
+E with common-band a0+a1*(native-node-gr-.30). Preserve weights, colors, support,
+phase, nodes, old products and Pal5style; no manuscript/agents. First seal933PSF
+parents/folds and source hashes, exact two-color segment geometry and three
+fixed QRF-source evidence audits. Fit M5two-fold cross predictions, then fullM5
+freeze and transfer toM30/M13 with shared reference/member refits; parameter
+mixtures external only, conditional M5 shared reference explicitly coupled.
+At most two independent-candidate inventories, one pre-frozen evaluation only
+if registered CV/transfer gate passes; no model/parameter expansion. Deliver
+scales/phase gaps/scores/widths/coverage/domain/support, at most three figure
+groups, full private PDFs and compact replay, scientific scope decision,
+actual numerical/visual QA, safe GitHub/canonical sync and resource return.
+
+
 ## Sequence mechanisms2026-11-19 — completed
 
 Full v7 prompt/review2561be88 completed with five fixed A–E controls, all933
