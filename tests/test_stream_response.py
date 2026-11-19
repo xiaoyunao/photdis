@@ -5,7 +5,7 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from halo_filtering import channel_weights
 from stream_common import profile,C,track
-from stream_sequence import polyline,posterior
+from stream_sequence import polyline,posterior,count_median
 from stream_local import boundaries,accept,curves
 from stream_conditioning import propensity
 
@@ -60,3 +60,10 @@ def test_weighting_support_is_a_fixed_intersection():
     fixed=(p>=.05)&(p<=.95)&(q>=.05)&(q<=.95)
     mult=rng.integers(0,4,size=400);b=propensity(x,y,mult);w=mult*np.where(y==1,1-b,b)*fixed
     assert (w[~fixed]==0).all()
+
+
+def test_common_member_resample_median():
+    rng=np.random.default_rng(625)
+    for _ in range(20):
+        value=rng.normal(size=50);weight=rng.integers(0,5,size=50)
+        np.testing.assert_allclose(count_median(value,weight),np.median(np.repeat(value,weight)))

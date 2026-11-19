@@ -5,7 +5,11 @@ from stream_common import *
 
 
 def main():
-    stages=('rgb','local_source','local_area','local','core','sequence','conditioning')
+    stages=['rgb','local_source','local_area','local','core','sequence','conditioning']
+    if (OUT/'full_replay/complete.json').exists():
+        stages.append('full_replay')
+        if json.loads((OUT/'full_replay/decision.json').read_text())['both_systems_pass']:
+            stages+=['full_inventory','full_identities','full_count','full_area/south','full_area/north','full_atlas','full_rgb','full_validation']
     public=ROOT/'manifests/stream_response_20261119';fig=ROOT/'figures/stream_response_20261119'
     receipts={}
     for stage in stages:
@@ -14,7 +18,7 @@ def main():
             p=verified(source/name,h)
             if p.suffix in ('.png','.pdf'):
                 target=fig/stage;target.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target/p.name)
-            elif p.suffix in ('.csv','.json') or (p.suffix=='.npz' and ((stage=='rgb' and p.name.startswith('rgb_')) or (stage=='local' and p.name.endswith('_redraw.npz')) or (stage=='sequence' and p.name in ('predictions.npz','template_redraw.npz','ordinary_predictions.npz')))):
+            elif p.suffix in ('.csv','.json') or (p.suffix=='.npz' and ((stage in ('rgb','full_rgb') and p.name.startswith('rgb_')) or (stage=='local' and p.name.endswith('_redraw.npz')) or (stage=='sequence' and p.name in ('predictions.npz','template_redraw.npz','ordinary_predictions.npz','shared_bootstrap.npz')) or (stage=='conditioning' and p.name=='weighted_ids.npz') or (stage=='full_replay' and p.name=='fixed_error_curve.npz') or (stage=='full_identities' and p.name=='source_alias_exclusions.npz'))):
                 shutil.copy2(p,dest/p.name)
         shutil.copy2(source/'complete.json',dest/'complete.json');receipts[stage]=sha(source/'complete.json')
     save_json(public/'delivery.json',dict(inputs=receipts,outputs={str(p.relative_to(ROOT)):sha(p) for root in (public,fig) for p in root.rglob('*') if p.is_file() and p.name!='delivery.json'},

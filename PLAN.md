@@ -3,7 +3,7 @@
 ## Stream response2026-11-19 — active
 
 Execute full v5 prompt and reviewfc961495 in stream_response_20261119.
-Completed numerical milestones:61-node RGB+scalar maps, random areas, branch/zero-point experiment, fixed-support conditioning. Pending: finish raw imaging and local recovery, assess the predeclared expansion criterion, inspect/replay all final figures, deliver/sync evidence.
+Completed numerical milestones:61-node RGB+scalar maps, random areas, branch/zero-point experiment, fixed-support conditioning. Local recovery and common-curve replay passed in both systems. Conditional full-footprint gr_complete/MS_TO imaging is running on1339sweeps (24workers); finish counts/areas, same renderer RGB, conservation/visual/PDF replay, delivery/sync. Keep northern inherited-transfer scope explicit.
 1. Deliver overview and five internal-three-channel RGBs from actual61-node cube, with physical density/signed residual/masks and lossless redraw grids.
 2. Fixed Pal5/Sgr raw-imaging and random-area extraction: strict/E/gr/z/depth cutflows, on/off Hess, full common CMD envelope, phase and angular/mu controls. Only a locally supported exact definition may expand full footprint.
 3. Preserve turnoff multivalued branches, same-ID/phase/support audit; one M13 lower-MS zero point and held-out-system migration plus ordinary-dwarf control, common scale errors.

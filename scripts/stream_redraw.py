@@ -11,8 +11,8 @@ def load(p):
     with np.load(p) as a:return {k:a[k] for k in a.files}
 
 
-def rgb(root,d):
-    for p in sorted((root/'rgb').glob('rgb_*.npz')):
+def rgb(root,d,stage='rgb'):
+    for p in sorted((root/stage).glob('rgb_*.npz')):
         a=load(p);bounds=a['channel_kpc'];rows=list(csv.DictReader(p.with_suffix('.csv').open()))
         with plt.rc_context(PAPER):
             f,axes=plt.subplots(2,1,figsize=(7.15,7),subplot_kw={'projection':'aitoff'},layout='constrained')
@@ -75,8 +75,8 @@ def numeric_rows(p):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=('rgb','local','phase','sequence','conditioning'));p.add_argument('--root',type=Path,default=ROOT/'manifests/stream_response_20261119');p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
-    if a.stage=='rgb':rgb(a.root,a.output)
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=('rgb','local','phase','sequence','conditioning'));p.add_argument('--root',type=Path,default=ROOT/'manifests/stream_response_20261119');p.add_argument('--rgb-stage',default='rgb');p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
+    if a.stage=='rgb':rgb(a.root,a.output,a.rgb_stage)
     elif a.stage=='local':local(a.root,a.output)
     elif a.stage=='phase':
         from stream_phase import render

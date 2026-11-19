@@ -10,6 +10,14 @@ from sv18_common import metric,interval,cached,index_join
 SIGMA={'M5':.06,'M13':.08,'M30':.09,'M92':.07}
 
 
+def count_median(values,counts):
+    """Exact median of a multinomial member resample without expanding rows."""
+    n=int(counts.sum())
+    if not n:return np.nan
+    order=np.argsort(values);c=np.cumsum(counts[order]);j=np.searchsorted(c,[(n-1)//2,n//2],side='right')
+    return float(np.mean(values[order[j]]))
+
+
 def polyline(template,side):
     m=template[side];valid=(template['phase']==0)&(m[:,1]>=3)&(m[:,1]<=8)
     if side=='north':valid&=template['north_support']
@@ -65,9 +73,15 @@ def main():
     assert cal.sum()>=30,('registered calibration too small',cal.sum())
     calres=5*np.log10(new[cal,2]/t['ref'][cal]);delta=float(np.median(calres));adjusted=new*10**(-delta/5)
     methods['Calibrated']=adjusted
-    caldraw=[]
-    for draw in range(256):
-        dc=max(.01,RNG.normal(7.42,SIGMA['M13']));caldraw.append(np.median(calres[RNG.integers(len(calres),size=len(calres))])+5*np.log10(7.42/dc))
+    # One member resample and reference-distance vector per system, reused in
+    # every magnitude/phase/mask group and every method. The M13 calibration
+    # and its own evaluation use the same member multiplicities and scale.
+    multiplicity=np.zeros((256,len(gr)),dtype='i4');scales={}
+    for name in np.unique(t['system']):
+        ii=np.flatnonzero(common&(t['system']==name));n=len(ii)
+        for draw in range(256):multiplicity[draw,ii]=np.bincount(RNG.integers(n,size=n),minlength=n)
+        scales[name]=RNG.normal(1,SIGMA.get(name,0)/np.median(t['ref'][ii]),256)
+    caldraw=[count_median(calres,multiplicity[draw,cal])-5*np.log10(scales['M13'][draw]) for draw in range(256)]
     rows=[];cross=[];audit=[]
     for i in range(len(gr)):
         audit.append(dict(TYPE=t['TYPE'][i],ls_id=int(t['ls_id'][i]),source_id=int(t['source_id'][i]),system=t['system'][i],native=int(t['native'][i]),
@@ -87,14 +101,12 @@ def main():
                     dd=t['ref'][use];native=t['native'][use];col=gr[use]
                     # A single common-scale draw for all members and methods of
                     # each system, coupled with the M13 calibration uncertainty.
-                    resamples=[RNG.integers(n,size=n) for _ in range(256)]
-                    scale=RNG.normal(1,SIGMA.get(name,0)/np.median(dd),256)
-                    if name=='M13':scale=10**((np.median(calres)-np.array(caldraw))/5)
+                    scale=scales[name]
                     for method,q in methods.items():
                         z=q[use];vals=[]
-                        for draw,(j,s) in enumerate(zip(resamples,scale)):
+                        for draw,s in enumerate(scale):
                             correction=10**((delta-caldraw[draw])/5) if method=='Calibrated' else 1
-                            vals.append(np.median(z[j,2]*correction/(dd[j]*s)-1))
+                            vals.append(count_median(z[:,2]*correction/(dd*s)-1,multiplicity[draw,use]))
                         stat=metric(z,dd)
                         slope=np.polyfit(col,5*np.log10(z[:,2]/dd),1)[0] if n>=3 and np.std(col)>.01 else np.nan
                         rows.append(dict(system=name,r_lo=low,r_hi=high,phase=p,include_masked=masked,method=method,**stat,**interval(vals),
@@ -112,6 +124,7 @@ def main():
     npz(d/'predictions.npz',**t,new=new,calibrated=adjusted,new_common=common,reference_phase=phase,fold_noise_fraction=fold)
     save_json(d/'calibration.json',dict(system='M13',phase='lower_MS',n=int(cal.sum()),delta_Mg=delta,zero_point_draws=caldraw,color_term=0,
          interpretation='one common absolute-magnitude offset; calibration uncertainty shared by all transfer members; all-band offset preserves colors'))
+    npz(d/'shared_bootstrap.npz',TYPE=t['TYPE'],ls_id=t['ls_id'],multiplicity=multiplicity,**{'scale_'+name:value for name,value in scales.items()})
     ordinary_control(d,template,delta,caldraw,inputs)
     npz(d/'template_redraw.npz',**template)
     plot_results(d,rows,t,phase,new,common,delta,template)
