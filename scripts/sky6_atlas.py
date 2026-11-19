@@ -105,7 +105,17 @@ def band():
         flag&=a['mask'][0];aa=float(area[flag].sum());row=dict(region=name,area_deg2=aa,raw_PSF=int(a['geometry'][:,0,flag].sum()),valid_gr=int(a['parents'][:,0,flag].sum()),strict=int(a['strict'][:,flag].sum()))
         for j,ch in enumerate('BGR'):row['corrected_'+ch]=float(z['weighted_counts'][j,flag].sum());row['uncorrected_'+ch]=float(q['weighted_counts'][j,flag].sum())
         rows.append(row)
-    csv_rows(d/'latitude_profiles.csv',profiles);csv_rows(d/'fixed_strips.csv',rows);complete(d,dict(**inputs,Sgr_track=sha(source)),interpretation='morphological association and same-parent extinction sensitivity, not a calibrated physical decomposition of disk/halo/Sgr membership')
+    prior=read(STREAM/'full_rgb',('physical_channels.npz','weighted_counts','area','mask'),inputs)
+    strip_rows=[]
+    for scope,aa,mm,cc in [('all_available',area,a['mask'][0],z['weighted_counts'][:3]),('unchanged_previous_v5',prior['area'],prior['mask'],prior['weighted_counts'][:3])]:
+        for lo in np.arange(-90,90,2):
+            for label,selection in [('Sgr_0_5',sep<5),('Sgr_5_10',(sep>=5)&(sep<10))]:
+                flag=mm&selection&(bb>=lo)&(bb<lo+2)&(abs(bb)>=20);total=float(aa[flag].sum())
+                if total<=0:continue
+                row=dict(scope=scope,lat_lo=lo,lat_hi=lo+2,strip=label,area_deg2=total)
+                for j,ch in enumerate('BGR'):row[ch+'_weighted_counts']=float(cc[j,flag].sum());row[ch+'_density']=float(cc[j,flag].sum()/total)
+                strip_rows.append(row)
+    csv_rows(d/'latitude_profiles.csv',profiles);csv_rows(d/'fixed_strips.csv',rows);csv_rows(d/'Sgr_by_Galactic_latitude.csv',strip_rows);complete(d,dict(**inputs,Sgr_track=sha(source)),interpretation='morphological association and same-parent extinction sensitivity, not a calibrated physical decomposition of disk/halo/Sgr membership; actual-track and neighboring strips also compared within2degree Galactic latitude bands on unchanged previous v5 arrays')
 
 
 if __name__=='__main__':

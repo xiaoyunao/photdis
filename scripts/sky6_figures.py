@@ -2,6 +2,7 @@
 """Portable v5-style Galactic RGB and coverage plates from compact arrays."""
 import argparse
 import healpy as hp
+import matplotlib.patheffects as pe
 from matplotlib.colors import SymLogNorm,Normalize
 from stream_common import track
 from v3_final_atlas import COLORMAP
@@ -17,13 +18,13 @@ def overlay(ax):
         t,_=track(name);l,b=hp.Rotator(coord=('C','G'))(t['ra'],t['dec'],lonlat=True);l=-((l+180)%360-180)
         jumps=np.flatnonzero((abs(np.diff(l))>120)|(abs(np.diff(b))>5))+1
         for j,part in enumerate(np.split(np.arange(len(l)),jumps)):
-            if len(part)>1:ax.plot(np.deg2rad(l[part]),np.deg2rad(b[part]),color=col,lw=.55,ls='--' if name.startswith('Sagittarius') else '-',label=label if j==0 else None)
+            if len(part)>1:ax.plot(np.deg2rad(l[part]),np.deg2rad(b[part]),color=col,lw=.55,ls='--' if name.startswith('Sagittarius') else '-',label=label if j==0 else None,path_effects=[pe.Stroke(linewidth=1.1,foreground='white',alpha=.6),pe.Normal()])
     from v3_13_clusters import SYSTEMS
     from v3_13_cmd import M5_CENTER
     places={'Pal 5':(229.0205,-.1202),'M13':SYSTEMS['M13'][0],'M5':M5_CENTER,'M30':SYSTEMS['M30'][0]}
     for name,(ra,dec) in places.items():
         l,b=hp.Rotator(coord=('C','G'))(ra,dec,lonlat=True);x=-((l+180)%360-180);ax.plot(np.deg2rad(x),np.deg2rad(b),'+',color='.1',ms=3,lw=.6)
-        ax.annotate(name,(np.deg2rad(x),np.deg2rad(b)),xytext=(3,2 if name!='M5' else -7),textcoords='offset points',fontsize=5)
+        ax.annotate(name,(np.deg2rad(x),np.deg2rad(b)),xytext=(3,2 if name!='M5' else -7),textcoords='offset points',fontsize=5,path_effects=[pe.withStroke(linewidth=1,foreground='white',alpha=.7)])
     ax.set_axisbelow(False);ax.grid(ls=':',lw=.4,color='.5');ax.set_xticks(np.deg2rad([-120,-60,0,60,120]),labels=['120°','60°','0°','300°','240°']);ax.set_yticks(np.deg2rad([-60,-30,-20,0,20,30,60]),labels=['−60°','−30°','−20°','0°','20°','30°','60°']);ax.tick_params(labelsize=6)
 
 
