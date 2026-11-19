@@ -131,12 +131,15 @@ def ordinary_control(d,template,delta,caldraw,inputs):
     for code,side in enumerate(('south','north')):
         j=np.flatnonzero(z['native']==code);out[j],_=posterior(z['m'][j],z['err'][j],ids[j],polyline(template,side))
     rows=[]
+    color=z['m'][:,0]-z['m'][:,1];mr=z['m'][:,1]-10-5*np.log10(z['reference'])
+    lower=(color>=.3)&(color<=.85)&(mr>=4.5)&(mr<=8)
     for code,side in enumerate(('south','north')):
-        good=(z['native']==code)&np.isfinite(out).all(axis=1)
-        if good.any():
-            for name,q in (('QRF',z['q']),('Fixed branches',out),('Calibrated',out*10**(-delta/5))):rows.append(dict(native=side,method=name,**metric(q[good],z['reference'][good]),role_exclusions=int(excluded.sum()),original_parent=len(excluded)))
+        for domain,eligible in (('all_ordinary_receivers',np.ones(len(out),bool)),('registered_lower_MS',lower)):
+            parent=(z['native']==code)&eligible;good=parent&np.isfinite(out).all(axis=1)
+            if good.any():
+                for name,q in (('QRF',z['q']),('Fixed branches',out),('Calibrated',out*10**(-delta/5))):rows.append(dict(native=side,domain=domain,eligible_parent=int(parent.sum()),method=name,**metric(q[good],z['reference'][good]),role_exclusions=int(excluded.sum()),original_parent=len(excluded)))
     csv_rows(d/'ordinary_dwarf_control.csv',rows)
-    csv_rows(d/'ordinary_support.csv',[dict(native=side,parent=int((z['native']==code).sum()),supported=int(((z['native']==code)&np.isfinite(out).all(axis=1)).sum()),role_exclusions=int(excluded.sum())) for code,side in enumerate(('south','north'))])
+    csv_rows(d/'ordinary_support.csv',[dict(native=side,domain=domain,parent=int(((z['native']==code)&eligible).sum()),supported=int(((z['native']==code)&eligible&np.isfinite(out).all(axis=1)).sum()),role_exclusions=int(excluded.sum())) for code,side in enumerate(('south','north')) for domain,eligible in (('all_ordinary_receivers',np.ones(len(out),bool)),('registered_lower_MS',lower))])
     npz(d/'ordinary_predictions.npz',**z,sequence=out,calibrated=out*10**(-delta/5))
 
 
