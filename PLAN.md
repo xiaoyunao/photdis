@@ -1,6 +1,6 @@
 # PLAN
 
-## Full-sky display and sequence shape2026-11-19 — science complete; final synchronization
+## Full-sky display and sequence shape2026-11-19 — completed
 
 Execute v6 prompt and complete latest reviewcbad66cc, archived under docs/v6_inputs.
 Goal registered before development. Baseline6538df76; production87069408 frozen.
@@ -38,9 +38,12 @@ Goal registered before development. Baseline6538df76; production87069408 frozen.
 Science milestones are complete. See manifests/sky_sequence_20261119/{README,
 science_decisions,figures}.md, sequence_phase_summary.csv and delivery/ records.
 35science plates replay exactly;37English PNG/PDF pairs checked. Production87069408
-and originalv3.8templates remain unchanged. Remaining: final public-byte/GitHub/
-canonical synchronization and returning own allocation61562374. No new fits or
-additional scientific scans are required by this goal.
+and originalv3.8templates remain unchanged. Local/GitHub/canonical science evidence
+68ea1e84 synchronized; allocated-node audit passes243release-packet hashes.
+Only own allocation61562374 was returned after all work. No remaining execution,
+new fit, production replacement, timer, agent or additional scientific scan belongs
+to this goal. Next step is to use the scientific package in the separate paper
+analysis; a new phase/population correction requires its own scientific scope.
 
 ## Stream response2026-11-19 — completed
 
