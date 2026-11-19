@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — v8 native luminosity calibration
 
+- Core experiment complete:933sealedPSFs and525M5calibration members; two folds262/263 and full525 fits,771point/bootstrap fits all report solver success. M5cross-prediction improves both scales to within0.10mag and both paired proper scores versusE. Fixed M30/M13transfer improves several metrics but neither meets both-phase raw-scale target; no candidate distance outcome opened. Candidate207NGC1851members,NGC5053history overlap/reference dependence retained. Full933conditional forecasts plus external parameter mixtures, shared-reference/refit score caches and separate centered diagnostics preserved. FivePal5-style plates generated in threegroups; actual-source direct/half-grid and originalv3.8pixel checks pass; final visual/portable/export checks pending.
+
 - Read full latest replyb790c69f(6197characters) and full v8prompt; local/origin/canonicalcb2ffcd4match, clean tracked state, valid NERSC auth. New complete goal registered before development. Freeze production/old PDFs/sky/style/manuscript. Register one two-parameter E gray correction, stratified two-fold M5 CV, shared system reference and parametric bootstrap, external conditional/parameter-mixture forecasts and objective gate before any new fit. NGC362 excluded by known v3.2 outcomes before candidate inventory; inventory only NGC1851(previous empty availability) andNGC5053, history status explicit. Own allocation61574693,32CPU/96GiB request,3h; other user resources untouched.
 
 ## 2026-11-19 — v7 sequence mechanisms
