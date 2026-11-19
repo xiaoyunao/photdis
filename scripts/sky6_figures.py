@@ -18,7 +18,7 @@ def overlay(ax):
         t,_=track(name);l,b=hp.Rotator(coord=('C','G'))(t['ra'],t['dec'],lonlat=True);l=-((l+180)%360-180)
         jumps=np.flatnonzero((abs(np.diff(l))>120)|(abs(np.diff(b))>5))+1
         for j,part in enumerate(np.split(np.arange(len(l)),jumps)):
-            if len(part)>1:ax.plot(np.deg2rad(l[part]),np.deg2rad(b[part]),color=col,lw=.55,ls='--' if name.startswith('Sagittarius') else '-',label=label if j==0 else None,path_effects=[pe.Stroke(linewidth=1.1,foreground='white',alpha=.6),pe.Normal()])
+            if len(part)>1:ax.plot(np.deg2rad(l[part]),np.deg2rad(b[part]),color=col,lw=.55,ls='--',label=label if j==0 else None,path_effects=[pe.Stroke(linewidth=1.1,foreground='white',alpha=.6),pe.Normal()])
     from v3_13_clusters import SYSTEMS
     from v3_13_cmd import M5_CENTER
     places={'Pal 5':(229.0205,-.1202),'M13':SYSTEMS['M13'][0],'M5':M5_CENTER,'M30':SYSTEMS['M30'][0]}
