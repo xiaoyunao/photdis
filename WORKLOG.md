@@ -2,6 +2,10 @@
 
 ## 2026-11-19 — stream recovery and population scales
 
+- Final entrance audit found that the gr route inherited z-only pixel vetoes4/7 from the legacy all-band mask. Separated gr bits2/3/5/6/10 from strict/z-addback bits2/3/4/5/6/7/10. This affects imaging admission/area, not frozen production or sequence/conditioning values.
+- Added an explicit synthetic admission invariant for both source and random paths; all8 targeted tests pass and all stream Python files compile. Preserved the complete conservative-mask imaging trial under execution/before_pure_gr_mask. Replaying affected local source selection, areas, fixed-curve recovery and conditional full-footprint imaging on61555882; no new fit or threshold search.
+- Added public-package verification and complete36-plate redraw entry point. Final tables, science notes and delivery will bind the corrected mask results after actual conservation and visual checks.
+
 - Fixed-support balance audit exposed a design issue before adoption: trimming the two parent-propensity fits to their common intersection degraded color balance (SpecDis2–5SMD0.147; SPDist0.305). Registered a numerical/statistical correction before reading new contrasts: freeze the same original intersection, refit BOTH point models and every sky bootstrap only within it, never re-trim. Keep previous fits/tables as execution history; report actual post-refit balance/ESS. Earlier v5 point contrasts are interim, not the final estimands.
 
 - Raw local imaging completed:40sweeps, unique PSF admissions and zero positive-Gaia aliases in everyROI. Gr-complete tail area46.2588deg2, versus strict0.0684deg2 across the whole local on/off domain. Pal5 leading has an uncovered angular segment; preserve that failure.
