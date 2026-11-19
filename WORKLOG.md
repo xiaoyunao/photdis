@@ -2,6 +2,12 @@
 
 ## 2026-11-19 — stream recovery and population scales
 
+- Initial RGB/scalar/signed-residual delivery and independent local random scan completed on61555882; preserved physical channels and masks. Plot QA exposed grid lines hidden by opaque RGB cells; restored existing atlas axis ordering and saved scalar stretch caps for independent redraw.
+- Branch posterior integrates both adjacent colors along physical evolutionary order, retaining turnoff multiplicity. M13 lower-MS calibrationN166 gives delta_Mg=-0.323614; ordinary-dwarf support is sparse and fails a universal replacement interpretation. All old sorted predictions retained.
+- Conditioning run fixes independent spectral logg/Teff and same-ID overlap. SpecDis2–5kpcN3230: without/with distance weighted-mean residual contrast0.32139/0.05363mag. These are descriptive conditioning effects. Added a narrower magnitude-complete rectangle, separate reference-selection caveats and signed-Gaia full-PDF anchor.
+- Five targeted invariants pass locally: exact RGB overlap algebra, track/placeholder geometry, multivalued sequence posterior, shared full2sigma CMD/count boundary and fixed support under bootstrap. Python syntax checks pass.
+- First raw-sweep extraction generated excessive tiny CFITSIO network reads. Replaced wide-record column scans with memory-mapped coordinates and one decoded complete-record read; conservative I/O bounding boxes retain exact registered source geometry. Initial read log preserved; no target excess was used to change selections. Local recovery and final figure verification remain pending.
+
 - Read the complete latest GPT reply fc961495 and v5 prompt. Local/origin/NERSC reconcile at884ea87b; new detailed goal registered before changes.
 - Freeze production87069408 and all v4 evidence. Registered config before inspecting newly extracted target excesses. Fixed Pal5 trailing/leading and Sgr north/south track windows, on/off/phase rules and recovery criteria.
 - NERSC authentication valid; allocated64CPU/192GiB61555882 on nid200010. All scans and numerical work use that allocation.
