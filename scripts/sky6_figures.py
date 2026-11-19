@@ -38,7 +38,7 @@ def rgb(a,d,name):
         im=np.moveaxis(out[::-1],0,-1);im[~a['mask']]=.88;images.append(im)
     with plt.rc_context(PAPER):
         f,axes=plt.subplots(2,1,figsize=(7.15,7),subplot_kw={'projection':'aitoff'},layout='constrained')
-        for ax,im,label in zip(axes,images,(str(a.get('label','CMD-selected sky')),'Positive residual')):
+        for ax,im,label in zip(axes,images,(str(a.get('label','CMD-selected sky')),str(a.get('residual_label','Positive residual')))):
             mesh=ax.pcolormesh(a['l'],a['b'],np.zeros(a['mask'].shape),shading='flat',rasterized=True);mesh.set_array(None);mesh.set_facecolor(np.nan_to_num(im.reshape(-1,3),nan=.88));overlay(ax);ax.set_title(label);ax.set_facecolor('.88')
         axes[0].legend(frameon=False,fontsize=5,loc='lower right')
         f.supxlabel('   |   '.join(f'{c}: {lo:.2f}–{hi:.2f} kpc' for c,(lo,hi) in zip('BGR',a['channel_kpc']))+'\nGalactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
@@ -72,7 +72,7 @@ def coverage(a,d):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT/'manifests/sky_sequence_20261119');p.add_argument('--output',type=Path,required=True);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    for stage in ('rgb','old_domain','no_extinction','prior_display','channel_trials','selected_channels'):
+    for stage in ('rgb','old_domain','no_extinction','prior_display','channel_trials','selected_channels','smoothing_trials'):
         d=args.output/stage;d.mkdir(exist_ok=True)
         for path in sorted((args.root/stage).glob('rgb_*.npz')):
             with np.load(path) as z:a={k:z[k] for k in z.files}

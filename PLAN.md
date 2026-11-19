@@ -22,6 +22,8 @@ Goal registered before development. Baseline6538df76; production87069408 frozen.
    so partition changes can be distinguished from display normalization.
    Final user decision supersedes those main-display choices: B5–10/G10–20/
    R20–100kpc. Reuse completed responses exactly; original/near trials are controls.
+   Preview only: background Gaussian sigma2/5/10deg, fixed0.3deg density and
+   identical main stretch. Keep final main PNG/data unchanged and prove its hash.
 3. Native M13/M5 ridge in two colors plus M30; all available members and unsupported
    rows visible. Freeze few literature-matched MIST1.2 models plus same-version
    control and original FOS. Shared distances/extinction sensitivity and binary

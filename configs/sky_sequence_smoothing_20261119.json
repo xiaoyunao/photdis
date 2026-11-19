@@ -1,0 +1,9 @@
+{
+  "scope": "User-requested previews only; do not change the main sky overview",
+  "background_sigma_deg": [2,5,10],
+  "density_sigma_deg": 0.3,
+  "channels_kpc": [[5,10],[10,20],[20,100]],
+  "stretch": "Keep the exact main5degree display stretch for all previews",
+  "main": "figures/sky_sequence_20261119/selected_channels/rgb_selected_fixed_gain.png",
+  "interpretation": "Gaussian background smoothing scale; density smoothing and all counts/area/masks remain unchanged"
+}
