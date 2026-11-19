@@ -40,6 +40,7 @@ def local(root,d):
     from halo_common import BLUE,ORANGE,GREEN
     responses=list(csv.DictReader((root/'local/modulus_response.csv').open()))
     for p in sorted((root/'local').glob('*_redraw.npz')):
+        if '_phase_redraw' in p.name:continue
         a=load(p);roi=p.stem.replace('_redraw','');cfg=C['local'][roi]
         for model in ('FOS','Pal5_control') if roi.startswith('Pal') else ('FOS',):
             with plt.rc_context(PAPER):
@@ -74,9 +75,13 @@ def numeric_rows(p):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=('rgb','local','sequence','conditioning'));p.add_argument('--root',type=Path,default=ROOT/'manifests/stream_response_20261119');p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=('rgb','local','phase','sequence','conditioning'));p.add_argument('--root',type=Path,default=ROOT/'manifests/stream_response_20261119');p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
     if a.stage=='rgb':rgb(a.root,a.output)
     elif a.stage=='local':local(a.root,a.output)
+    elif a.stage=='phase':
+        from stream_phase import render
+        for p in sorted((a.root/'local').glob('*_phase_redraw.npz')):
+            roi=p.stem.replace('_phase_redraw','');render(load(p),a.output,roi,numeric_rows(a.root/'local'/(roi+'_phase_controls.csv')))
     elif a.stage=='sequence':
         from stream_sequence import plot_results
         t=load(a.root/'sequence/predictions.npz');template=load(a.root/'sequence/template_redraw.npz');delta=json.loads((a.root/'sequence/calibration.json').read_text())['delta_Mg']

@@ -14,6 +14,7 @@ def main():
         if not archive.exists():archive.write_text(marker.read_text())
         dest=folder('polished')/stage
         subprocess.run([sys.executable,str(ROOT/'scripts/stream_redraw.py'),stage,'--root',str(OUT),'--output',str(dest)],check=True)
+        if stage=='local':subprocess.run([sys.executable,str(ROOT/'scripts/stream_redraw.py'),'phase','--root',str(OUT),'--output',str(dest)],check=True)
         for p in dest.iterdir():
             if p.suffix in ('.png','.pdf'):shutil.copy2(p,source/p.name)
         for name,h in before.items():assert sha(source/name)==h,(stage,name)
