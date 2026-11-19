@@ -46,7 +46,7 @@ def local(root,d):
             with plt.rc_context(PAPER):
                 f,axs=plt.subplots(2,3,figsize=(7.15,5.3),layout='constrained')
                 for ax,var in zip(axs[0],('strict_original','gr_E010','gr_complete')):
-                    pair=a[model+'_hess_'+var];h=pair[0]-pair[1];cap=max(float(np.quantile(abs(h),.99)),.1)
+                    pair=a[model+'_hess_'+var];h=pair[0]-pair[1];finite=h[np.isfinite(h)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
                     z=ax.pcolormesh(a['hess_gr_edges'],a['hess_g_edges'],h.T,cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
                     for lo,hi in zip(a[model+'_envelope_lower'],a[model+'_envelope_upper']):ax.plot(lo,a[model+'_envelope_g'],color=ORANGE,lw=.6);ax.plot(hi,a[model+'_envelope_g'],color=ORANGE,lw=.6)
                     ax.set(xlim=(-.2,1.2),ylim=(24,14),xlabel=r'$(g-r)_0$',ylabel=r'$g_0$ (mag)',title={'strict_original':'Original cuts','gr_E010':'gr selection','gr_complete':'Depth-matched gr'}[var]);f.colorbar(z,ax=ax,fraction=.04,label='Excess (deg⁻² bin⁻¹)',ticks=[-10**np.floor(np.log10(cap)),0,10**np.floor(np.log10(cap))],format=plt.FormatStrFormatter('%g'))

@@ -1,0 +1,20 @@
+{
+  "role": "conditional full-footprint CMD image, no new distance catalog/model",
+  "parent_config": "configs/stream_response_20261119.json",
+  "source_error_curve": "data/stream_response_20261119/local/Pal5_tail_redraw.npz",
+  "error_rule": "exact fixed g_centers/sigma_g from registered Pal5 pre-CMD pool; freeze before cross-system replay and full imaging scan; same curve all areas",
+  "entrance": "gr_complete, exact local TYPE/ownership/EBV<.10/gr errors<.10/gr0<23/FRACFLUX<.05/ANYMASKgr0/cleanmask/FRACMASKED<.4/FRACIN>.7/nobsgr/depth0gr>=23; no z requirement",
+  "phase": "phase0 only, frozen native FOS12Gyr Z.0001 templates and north_support",
+  "recovery": "same >=2 fixed angular segments with positive95% target-minus-control interval and on above both shifted controls in Pal5 and Sgr; replay uses common error curve",
+  "mu": [
+    14,
+    20,
+    0.1
+  ],
+  "workers": 24,
+  "nside": 512,
+  "scope": "all raw south/north sweeps with conservative geometry prefilter; south local stream validation; north native color-transfer inherited and separately flagged",
+  "smoothing_deg": 0.3,
+  "background_deg": 5,
+  "source_cache": "private admitted PSF records with exact IDs and count conservation; science bins overlap in mu"
+}

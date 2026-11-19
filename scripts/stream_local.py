@@ -145,14 +145,16 @@ def make_maps(roi,t,r,model,ec,mu,label,d,density,responses):
     for vi in (0,1,2,3,4,5):
         ss=t['selected'][vi];ar=r['selected'][vi];areas=np.array([int((ar&z).sum())/density for z in rr[:2]])
         hist=[]
-        for zone,area in zip(sr[:2],areas):hist.append(np.histogram2d(t['m'][ss&zone,0]-t['m'][ss&zone,1],t['m'][ss&zone,0],(xe,ye))[0]/max(area,1e-20))
+        for zone,area in zip(sr[:2],areas):
+            value=np.histogram2d(t['m'][ss&zone,0]-t['m'][ss&zone,1],t['m'][ss&zone,0],(xe,ye))[0]
+            hist.append(value/area if area>0 else np.full_like(value,np.nan))
         hesses[VARS[vi]]=np.array(hist);counts=np.histogram2d(t['along'][ss&a],t['offset'][ss&a],(sx,oy))[0];area=np.histogram2d(r['along'][ar],r['offset'][ar],(sx,oy))[0]/density
         images[VARS[vi]]=np.stack((counts,area))
         tables.append(dict(roi=roi,model=label,variant=VARS[vi],source_count=int(ss.sum()),area_on=areas[0],area_off=areas[1]))
     with plt.rc_context(PAPER):
         f,axs=plt.subplots(2,3,figsize=(7.15,5.3),layout='constrained')
         for ax,var in zip(axs[0],('strict_original','gr_E010','gr_complete')):
-            h=hesses[var][0]-hesses[var][1];cap=max(float(np.quantile(abs(h),.99)),.1)
+            h=hesses[var][0]-hesses[var][1];finite=h[np.isfinite(h)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
             z=ax.pcolormesh(xe,ye,h.T,cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
             g=np.linspace(14,24,600);lower,upper=boundaries(g,mu,cc,ec,kind)
             for lo,hi in zip(lower,upper):ax.plot(lo,g,color=ORANGE,lw=.6);ax.plot(hi,g,color=ORANGE,lw=.6)
