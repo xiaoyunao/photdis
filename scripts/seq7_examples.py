@@ -2,11 +2,14 @@
 """Fixed-rule complete-PDF examples and native geometry diagnostics."""
 from seq7_common import *
 from seq7_predict import load
-from seq7_math import evaluate_mix
+from seq7_math import log_density_grid
 from photdis.stage1 import require_compute
 from sky6_width import uniform_convolution
 from scipy.special import ndtr
 from scipy.signal import find_peaks
+from functools import lru_cache
+
+load=lru_cache(maxsize=64)(load)
 
 
 def main():
@@ -50,7 +53,7 @@ def main():
                 ii=np.flatnonzero((t['system']==s)&t['v5']&(t['phase']==t['phase'][i]));ii=np.intersect1d(ii,a['ii']);center=np.median(a['q'][np.searchsorted(a['ii'],ii),2]-ref);curves[f'{k}_QRF_center']=np.array([center]);curves[f'{k}_QRF_centered_density']=np.interp(x+center,x,density,left=0,right=0);curves[f'{k}_QRF_centered_CDF']=np.interp(x+center,x,z['raw'][j],left=0,right=1)
                 data.update(edges=edges.tolist(),mass=mass.tolist(),diagnostic_center=float(center))
             else:
-                a=load(OUT/'predict'/f'{s}_{m}_{q}.npz');at=int(np.flatnonzero(a['ii']==i)[0]);_,lp=evaluate_mix(x,a['means'][at],a['logw'][at],a['sigma'][at]);density=np.exp(lp)
+                a=load(OUT/'predict'/f'{s}_{m}_{q}.npz');at=int(np.flatnonzero(a['ii']==i)[0]);density=np.exp(log_density_grid(x,a['means'][at],a['logw'][at],a['sigma'][at]))
                 data.update(means=a['means'][at].tolist(),logweights=a['logw'][at].tolist(),sigma=float(a['sigma'][at]))
             modes=find_peaks(density)[0];modes=modes[np.argsort(density[modes])[::-1]][:5];data.update(top_modes_mu=x[modes].tolist(),top_modes_density=density[modes].tolist());methods[m]=data;curves[f'{k}_{m}_density']=density;curves[f'{k}_{m}_CDF']=z['raw'][j]
         case['methods']=methods;cases.append(case)

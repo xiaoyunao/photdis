@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — v7 sequence mechanisms
 
+- Five-control science results: common-source M5TO B→C marginal score+24.166nat[22.311,25.819],D→E+12.232[6.647,17.803]; IMF-only changes≈−0.02nat and<0.001mag. M30B→C worsens; E barely shifts its median. All six common-cohort E lower-MS/TO groups still miss0.10mag absolute target. M13QRF centering:83.735% improve, median gain0.694nat, but worst3contribute−2.153nat to full166-star mean change−1.411nat. Retain all objects. Five initial Pal5-style plates/11fixed-rule PDF cases produced; direct replay/half-grid validation and visual QA in progress. Add explicitly paired raw-to-centered score intervals from already shared bootstrap draws.
+
 - All five controls finish registered4/8/16/32integration;16→32passes every declared phase/mean-score/star-shift criterion. Main resolution32; old A4/MC128 remains sealed separately. Full PDF cache includes exact original components and tails. Expensive grid log-density sum accelerated with a rigorous relative omitted-sum bound<exp(-40), keeping all original parameters and tail-dominant components; direct unbounded half-grid checks remain required. Original serial/full-sum execution logs and complete caches preserved.
 
 - Original A/MC128 replay passes on233/510/88v5 members. Numerical4→8→16controls expose sensitivity in a few non-MS color outliers; apply registered common refinement up to32, preserving all checkpoints. Migrated remaining identical calculations to16independent worker processes within own allocation; original serial log retained, no model/selection change. Four independent IMF/gray-shift/tail/CRPS math tests pass.

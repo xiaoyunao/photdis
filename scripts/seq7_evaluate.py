@@ -38,6 +38,11 @@ def measure(z,ii,t,x,mult,shift):
         for level,lo,hi in [('68',1,3),('95',0,4)]:
             pv=(qq[:,lo]-med<=ref)&(ref<=qq[:,hi]-med);dv=(qq[:,lo,None]<=draw)&(draw<=qq[:,hi,None]);name=state+'_center_C'+level;values[name]=float(pv.mean());bv=weighted_mean(dv.astype(float),w);values[name+'_lo'],values[name+'_hi']=CI(bv);boots[name]=bv
     values.update(post_mean=float(np.nanmean(z['post'][j])) if np.isfinite(z['post'][j]).any() else np.nan,r_min=float(t['r'][ii].min()),r_max=float(t['r'][ii].max()),Mr_min=float((t['m'][ii,1]-ref).min()),Mr_max=float((t['m'][ii,1]-ref).max()),gr_min=float((t['m'][ii,0]-t['m'][ii,1]).min()),gr_max=float((t['m'][ii,0]-t['m'][ii,1]).max()))
+    if np.isfinite(z['post'][j]).all():
+        pb=weighted_mean(z['post'][j,None],w);values['post_mean_lo'],values['post_mean_hi']=CI(pb);boots['post_mean']=pb
+    for metric in ('logscore','CRPS'):
+        key='centered_minus_raw_'+metric;values[key]=values['centered_'+metric]-values['raw_'+metric];delta=boots['centered_'+metric]-boots['raw_'+metric];values[key+'_lo'],values[key+'_hi']=CI(delta);boots[key]=delta
+    values['bootstrap_valid_draws']=int((w.sum(axis=0)>0).sum())
     return values,boots,per
 
 
