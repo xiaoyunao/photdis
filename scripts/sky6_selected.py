@@ -28,7 +28,7 @@ def main():
         _,r=stretch(maps[1,:,row],mask[1],bool(row));balanced.append([[x['lo'],x['hi']] for x in r])
     l,b,pix=grid();rows=[]
     for kind,limits in [('fixed_gain',fixed),('balanced',np.array(balanced))]:
-        a=dict(l=l,b=b,density=maps[0,:,0,pix].astype('f4'),signed_residual=maps[0,:,1,pix].astype('f4'),mask=mask[0,pix],channel_kpc=bounds,stretch=limits,scope=np.array('Final user choice5–10/10–20/20–100kpc; '+kind+'; original native PSF parent, CMD and geometry'),label=np.array('CMD-selected sky'))
+        a=dict(l=l,b=b,density=maps[0][:,0,pix].astype('f4'),signed_residual=maps[0][:,1,pix].astype('f4'),mask=mask[0,pix],channel_kpc=bounds,stretch=limits,scope=np.array('Final user choice5–10/10–20/20–100kpc; '+kind+'; original native PSF parent, CMD and geometry'),label=np.array('CMD-selected sky'))
         npz(d/('rgb_selected_'+kind+'.npz'),**a);rgb(a,d,'rgb_selected_'+kind)
         if kind=='fixed_gain':physical(a,d,'physical_selected')
         for row in (0,1):
