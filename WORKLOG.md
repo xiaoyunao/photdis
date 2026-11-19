@@ -2,6 +2,7 @@
 
 ## 2026-11-19 — v6 full-sky display and native sequence shape
 
+- Completed full counts/cube and physical render:493,314,135display parents,144,211,360CMD-union objects,2,244,930,193node acceptances,29,386.5984deg2. Low-latitude/high-EBV/shallow domains all actually included. Final display receipt raised duplicate`style`keyword only after all physical arrays/figures finished; corrected metadata and added compact-grid redraw, retaining original log/arrays. User requests Pal5 also dashed; replay annotations without repeating raw scan/CMD/harmonics.
 - Exact parallel identities pass:2,198,481,902native owned PSFs and493,319,577validgr native IDs unique;5,442positive-Gaia aliases removed,493,314,135display sources retained. All2126node counters underway on allocated CPUs; raw scans/areas reused. Five targeted tests and all v6 Python parse checks pass.
 - User additionally requests Galactic band attribution. Preserve coordinates; draw b=0/±20/±30 and full actual galstreams Sgr/Pal5 tracks with known-system positions. Add unchanged-v5 RGB overlay, physical-density/signed-residual colorbar companions, latitude/actual-Sgr strips and same-parent no-extinction CMD control. Do not infer physical stream membership from CMD morphology.
 

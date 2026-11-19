@@ -85,7 +85,24 @@ def render():
     r=dict(l=l,b=b,density=maps[:,0,pix].astype('f4'),signed_residual=maps[:,1,pix].astype('f4'),mask=mask[pix],channel_kpc=np.array(C['rgb']['overview_BGR_kpc']),stretch=st,scope=np.array('No extinction in CMD only; exact same admitted sources; same corrected-overview stretch'),label=np.array('No extinction · same sources'))
     npz(d/'rgb_overview.npz',**r);rgb(r,d,'rgb_overview');physical(r,d);npz(d/'physical_channels.npz',density=maps[:,0].astype('f4'),signed_residual=maps[:,1].astype('f4'),weighted_counts=raw,mask=mask);complete(d,inputs,scope='same source IDs/admission/geometry, observed colors/magnitudes in fixed CMD; diagnostic only, not a new dust solution')
     csv_rows(folder('display')/'stretch.csv',stats)
-    complete(OUT/'display',inputs,style='same V5/Pal5 base and BGR channels; Galactic annotations requested separately')
+    complete(OUT/'display',inputs,render_style='same V5/Pal5 base and BGR channels; Galactic annotations requested separately')
+
+
+def redraw():
+    """Update annotations/receipts from finished grids without redoing harmonics."""
+    require_compute()
+    for stage in ('rgb','old_domain','no_extinction'):
+        d=OUT/stage;record=json.loads((d/'complete.json').read_text())
+        for path in sorted(d.glob('rgb_*.npz')):
+            with np.load(verified(path,record['outputs'][path.name])) as z:a={k:z[k] for k in z.files}
+            rgb(a,d,path.stem)
+            if path.stem=='rgb_overview':physical(a,d)
+        metadata={k:v for k,v in record.items() if k not in ('config','job','inputs','code','style','outputs')}
+        complete(d,record['inputs'],**metadata)
+    d=OUT/'coverage';record=json.loads((d/'complete.json').read_text())
+    with np.load(verified(d/'sky_coverage.npz',record['outputs']['sky_coverage.npz'])) as z:a={k:z[k] for k in z.files}
+    coverage(a,d);metadata={k:v for k,v in record.items() if k not in ('config','job','inputs','code','style','outputs')};complete(d,record['inputs'],**metadata)
+    complete(OUT/'display',record['inputs'],render_style='same V5/Pal5 base and BGR channels; user-requested dashed Sgr and Pal5 annotations',resume='original full physical arrays and stretch unchanged; completed grids replayed after metadata keyword correction')
 
 
 def band():
@@ -119,4 +136,4 @@ def band():
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=['assemble','render','band']);a=p.parse_args();globals()[a.stage]()
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=['assemble','render','redraw','band']);a=p.parse_args();globals()[a.stage]()
