@@ -1,0 +1,2 @@
+group,note
+2,"Same original node set remains after gray correction, including nodes shifted outside original Mr range. Top: frozen full-M5 transfer map, not evaluated in-sample M5 forecast; M5 width/score panels use two-fold cross predictions. Bottom: original conditional predictive widths, without target reference kernel. No extra scatter fit."

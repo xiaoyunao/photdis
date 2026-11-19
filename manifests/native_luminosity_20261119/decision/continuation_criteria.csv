@@ -1,0 +1,25 @@
+system,criterion,value,pass_condition,passed
+M5,lower_MS_absolute_scale,0.05771331604353769,absolute value <=0.10mag,True
+M5,turnoff_absolute_scale,-0.005740919337728911,absolute value <=0.10mag,True
+M5,raw_logscore_lo,2.637437442481655,>0,True
+M5,raw_CRPS_hi,-0.07405863293152759,<0,True
+M5,phase_gap_reduced,-0.18557049253192925,<0,True
+M5,all_W68_ratio,1.025901736295341,<=1.5,True
+M5,lower_MS_W68_ratio,1.027640874796273,<=1.5,True
+M5,turnoff_W68_ratio,1.0045711050786101,<=1.5,True
+M30,lower_MS_absolute_scale,0.17636166206129733,absolute value <=0.10mag,False
+M30,turnoff_absolute_scale,-0.2516093188769588,absolute value <=0.10mag,False
+M30,raw_logscore_lo,9.33655762829398,>0,True
+M30,raw_CRPS_hi,-0.15748625271171007,<0,True
+M30,phase_gap_reduced,-0.13268924569336882,<0,True
+M30,all_W68_ratio,1.0138314926816343,<=1.5,True
+M30,lower_MS_W68_ratio,1.0340412348929455,<=1.5,True
+M30,turnoff_W68_ratio,1.0052428959889743,<=1.5,True
+M13,lower_MS_absolute_scale,0.12056366111102967,absolute value <=0.10mag,False
+M13,turnoff_absolute_scale,-0.1573074849488325,absolute value <=0.10mag,False
+M13,raw_logscore_lo,0.8148760551266001,>0,True
+M13,raw_CRPS_hi,0.005096244976030839,<0,False
+M13,phase_gap_reduced,-0.15521912103974156,<0,True
+M13,all_W68_ratio,1.0259474606364927,<=1.5,True
+M13,lower_MS_W68_ratio,1.0249614642104083,<=1.5,True
+M13,turnoff_W68_ratio,1.006726637301982,<=1.5,True

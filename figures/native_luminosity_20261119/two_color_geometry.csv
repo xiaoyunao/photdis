@@ -1,0 +1,2 @@
+group,note
+1,"All 933 primary PSFs; original physical segments and full shared-r covariance. Support is frozen E node support. Orthogonal residual shown in sigma; symlog preserves all outliers. Tangent is zero at interior nearest segment by construction, endpoints in table."

@@ -1,0 +1,5 @@
+group,case,TYPE,ls_id,system,note
+3,3,PSF,12107276076712048,M13,"Fixed original v7 identities. Complete CDF in separate row; displayed gray reference profile height only scaled. Conditional raw PDFs, no scoring-reference convolution applied to plotted prediction."
+3,4,PSF,12105983988861772,M5,"Fixed original v7 identities. Complete CDF in separate row; displayed gray reference profile height only scaled. Conditional raw PDFs, no scoring-reference convolution applied to plotted prediction."
+3,5,PSF,12105980970012762,M5,"Fixed original v7 identities. Complete CDF in separate row; displayed gray reference profile height only scaled. Conditional raw PDFs, no scoring-reference convolution applied to plotted prediction."
+3,6,PSF,12105833995310325,M30,"Fixed original v7 identities. Complete CDF in separate row; displayed gray reference profile height only scaled. Conditional raw PDFs, no scoring-reference convolution applied to plotted prediction."

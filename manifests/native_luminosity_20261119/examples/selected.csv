@@ -1,0 +1,8 @@
+system,index,kind,rule,case,ls_id,source_id,phase,ref_mu,ref_sigma,TYPE,native,previous_case,fit
+M13,808,QRF_decline,"same sealed v7 identity, no ranking by new results",0,12107276073571288,1328086145137465216,lower_MS,14.352019526395136,0.02272956691419032,PSF,1,0,full
+M13,888,QRF_decline,"same sealed v7 identity, no ranking by new results",1,12107277287820916,1328125006003402496,lower_MS,14.352019526395136,0.02272956691419032,PSF,1,1,full
+M13,903,QRF_decline,"same sealed v7 identity, no ranking by new results",2,12107277288865997,1328118168415459456,lower_MS,14.352019526395136,0.02272956691419032,PSF,1,2,full
+M13,833,sequence_turnoff,"same sealed v7 identity, no ranking by new results",3,12107276076712048,1328049414576774400,turnoff,14.352019526395136,0.02272956691419032,PSF,1,4,full
+M5,417,sequence_lower_MS,"same sealed v7 identity, no ranking by new results",4,12105983988861772,4421531396574398848,lower_MS,14.369507989322308,0.01749736508054663,PSF,0,6,1
+M5,173,sequence_turnoff,"same sealed v7 identity, no ranking by new results",5,12105980970012762,4421459271188110080,turnoff,14.369507989322308,0.01749736508054663,PSF,0,7,1
+M30,13,sequence_turnoff,"same sealed v7 identity, no ranking by new results",6,12105833995310325,6816573587966657024,turnoff,14.644538451219763,0.022869083789184615,PSF,0,9,full

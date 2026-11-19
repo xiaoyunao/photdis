@@ -1,0 +1,4 @@
+shared_reference_shift,intercept_shift,likelihood_difference,reference_factor_count
+-0.05,0.05,0.0,1
+0,0,0.0,1
+0.05,-0.05,0.0,1

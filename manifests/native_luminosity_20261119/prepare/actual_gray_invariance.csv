@@ -1,0 +1,4 @@
+system,N,means_error,weight_error,color_chi_error,support_unchanged,post_mass_unchanged
+M5,8,1.0658141036401503e-14,4.2934406030425976e-16,0.0,True,True
+M30,8,1.0658141036401503e-14,3.127039181907349e-70,0.0,True,True
+M13,8,1.0658141036401503e-14,1.1449174941446927e-15,0.0,True,True
