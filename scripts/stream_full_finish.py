@@ -7,6 +7,8 @@ from stream_full import FH,gate
 
 def main():
     require_compute();gate();d=folder('full_validation');inputs={}
+    with np.load(OUT/'full_replay/fixed_error_curve.npz') as a,np.load(OUT/'local/Pal5_tail_redraw.npz') as b:
+        for key in ('g_centers','sigma_g'):np.testing.assert_array_equal(a[key],b[key])
     roster=list(csv.DictReader((OUT/'full_inventory/raw_to_gr_complete.csv').open()));counts={}
     fields=('raw','missing_TYPE','non_PSF','PSF','owned','latitude_E010','clean_mask','gr_NOBS','gr_error','gr_masked','gr_fracin','gr_fracflux','gr_anymask','gr0_lt23','gr_complete_depth')
     for side in ('south','north'):
