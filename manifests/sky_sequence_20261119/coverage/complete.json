@@ -1,0 +1,37 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "cube": "24c3ed561ecaff1f9ecce679fbcf60ab1ba7d2076b6fd3ee967dc4efd9c20840",
+    "configs/stream_inputs/track.st.Sagittarius.antoja2020.ecsv": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9",
+    "configs/stream_inputs/track.st.Pal5.ibata2024.ecsv": "bdfba81702890bd697d7b8a76cad672d038b7870f7dfc3a17d9fb101bdcc817d"
+  },
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "2c9fbbe4048b5fc3ddd4257386046ca143ca53d371339cbaa473ec1917d64fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "26061507ac5031eea15ea6fcecb18c9fe9be8619cddf0faf60184b952fc47c4a",
+    "sky6_figures.py": "8fa2b703f56f0f83853e8e6f9c657cba8b1d137f883c956bc23573ff778dee86",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "8da83f991fdb75aac6cb7d75df5aa60a5497f73f35fcbcc54a47cd76306e15ec",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "field_definitions": [
+    "native PSF per geometricgr area",
+    "validgr unique source per area",
+    "mean native shallower observed5sigma gr depth",
+    "mean catalog E(B-V)"
+  ],
+  "correction_fields": "Ag,Ar full-column maps retained in NPZ",
+  "outputs": {
+    "sky_coverage.pdf": "bb4d83903f7b1a0449efa1799b06e24d6f84baf8c50e225b4ee81be73a03485c",
+    "sky_coverage.png": "961dd352b49e454bc68b6c0bb2169c39adeb39af6dbdc052adde166aa4d0adc7",
+    "sky_coverage.npz": "117eb2f9760d8ac3a5b994ced8809f5afdb78c2fe9dbeffb4e81e7661967b52c",
+    "sky_coverage.csv": "ea47bd39a57943d80f02deccc508b254e1d18023b2ac11177e76c23e2d00d845"
+  }
+}

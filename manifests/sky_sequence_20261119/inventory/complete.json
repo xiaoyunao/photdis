@@ -1,0 +1,25 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {},
+  "code": {
+    "sky6_run.py": "8fa2418bca2066a5a4cf8495746da0038c188ea103d40ae2b64df5d85ff7d4b9",
+    "sky6_count.py": "d3a5abb0f8d0d19e8a3564af21a47432fe5ba9f493f29013473eb7fbffd252af",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "07cd33ea16ee60c9bfd8211c894f056e5a4efdd6880b0c760734dd0d522122d9",
+    "sky6_figures.py": "184aba3b5a7c6d4c9263b3e56fe3291641e9242edc9bb04a9bd9b964514fec73",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "b8c28f9a8b933adaa8b61485abce28277e5b6a32adc59b9979c6dedd7832e21a",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "sweeps": 2126,
+  "display_scope": "All locally available native sweeps; no latitude, EBV ceiling, or common-depth admission; display independent of scientific stream recovery",
+  "outputs": {
+    "smoke.csv": "c99568dee39d28e9d561aa9aaaa8415a10a1f5e113383ac4c86487a41d7a3698",
+    "raw_to_display.csv": "e02fb78989d0189532e603600b0460aabe68a053d36069b05357930fa2d580af",
+    "smoke.json": "a215fc2018bbfd0ce8b33174e895e76e92d5d8c11922e13e6cfb5e901d1c5620",
+    "tasks.json": "846d83185c08c87799bb9bbbff3ff07bd4eed4e19048bd03b3cca5cd2da58469"
+  }
+}

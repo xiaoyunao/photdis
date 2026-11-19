@@ -1,0 +1,36 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "data/sky_sequence_20261119/atlas": "cf6aa712f6d3a1738efe33d3e22c1ee114bb32975156d8aa065d1bfdfb7dcf50",
+    "data/sky_sequence_20261119/rgb": "aeb2693c5fcc6dd3fa940a36815ef749d8be4ce1022bc6feaf61ca6cb01c1ab2",
+    "data/sky_sequence_20261119/no_extinction": "399f5c80cd6066c9b279efb3dffe8b43c3d323a69b0a279180aa3e2dd6592842",
+    "data/stream_response_20261119/full_rgb": "3c5811065c811541444151d55ea0c3f2ae49e75dc8ff30e451a00a13452ebf10",
+    "Sgr_track": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9"
+  },
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_publish.py": "1008b973b914605ec9e0eb8b7eee885e352bf5121efc5f5ff0872fb8cfe0addc",
+    "sky6_figures.py": "ad3877c6cbc4a3c41be04709bb3e05e728170c79691f81e52c9a34c5844a1cd0",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_channels.py": "ff2b4a815e22c710e4bd0d5c5aa8d74bc4a3fa8fb3556cc29e1343b6056b2a43",
+    "sky6_atlas.py": "2d9c79b30e1634f84daa6529f548da1c089ae9d483ca7056a170fc9f64dcbdbd",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "interpretation": "morphological association and same-parent extinction sensitivity, not a calibrated physical decomposition of disk/halo/Sgr membership; actual-track and neighboring strips also compared within2degree Galactic latitude bands on unchanged previous v5 arrays",
+  "latitude_standardization": "Both strips use identical min(on area, off area) weights in every available2degree Galactic-latitude bin; descriptive CMD response, not membership/purity",
+  "outputs": {
+    "Sgr_by_Galactic_latitude.csv": "03b95ff8e534c2dc76c01efb391b57f049886143168150a5124f699d99f79514",
+    "latitude_standardized_Sgr.csv": "4d156032adae2dfc473a2178101ae54ed5815d85b15e6c3cf7f1f45b7b3c1568",
+    "fixed_strips.csv": "9620f32d88ba2757c25d1112ae594efe685faa979e0d25458b5106a0705fd0c2",
+    "latitude_profiles.csv": "0c0f48b8b9457897b89a5914796dcbed5a5f361ef5924ff1c7dbc81fb1f4f7cb"
+  }
+}

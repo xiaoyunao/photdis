@@ -1,0 +1,36 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "data/sky_sequence_20261119/counts": "61206a7cc3ad6e15945ebc2921521cc9b3269c0a579449f62ff5191528ed844c",
+    "data/sky_sequence_20261119/area/south": "db0a46827a0cfae513f92f553660496b3da6aeb3c666f7a84ad8965029e366cb",
+    "data/sky_sequence_20261119/area/north": "6c021f38563d082d5eedf1c1a6b5ad3fcedaa3ad1e860742b246904a0c4fdd26"
+  },
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "2c9fbbe4048b5fc3ddd4257386046ca143ca53d371339cbaa473ec1917d64fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "26061507ac5031eea15ea6fcecb18c9fe9be8619cddf0faf60184b952fc47c4a",
+    "sky6_figures.py": "f4622716ed83d6fb1bf4bb1b1d74d9cdac637c5aa05e786d87c91d183f25944f",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "41adcfc6a98c37d51c828bb5a6e594065b1b2e85d7234e0227f2e6a86b07efda",
+    "sky6_ridge.py": "c020f614622258780c2d6e53ad04a681e5f409684d115d016478f888b7a3ace3",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "views": [
+    "all available display",
+    "same display in old geographic/dust/depth domain"
+  ],
+  "cube_axes": "COUNTS[native,view,mu,equatorial-NESTED-pixel]",
+  "zero_and_mask_separate": true,
+  "outputs": {
+    "companions.npz": "f64c82ad77759104d37dd09a35ae32ebddeba17f016140a73773d20df3742659",
+    "cmd_cube.fits": "24c3ed561ecaff1f9ecce679fbcf60ab1ba7d2076b6fd3ee967dc4efd9c20840",
+    "summary.json": "291bcae3dcf464975a8f669a3141d523813180f11f36255c00b6574570622e3f",
+    "domain_summary.csv": "d0c0f5ed4541fb2c434553039a09149dba3d4b2d48441ac057ef9d9aa327adf7"
+  }
+}

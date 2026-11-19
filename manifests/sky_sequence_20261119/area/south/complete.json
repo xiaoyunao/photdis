@@ -1,0 +1,33 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/randoms/randoms-south-1-0.fits",
+    "bytes": 22995910080,
+    "mtime_ns": 1780757592000000000,
+    "coefficient_source": "36be7d315205b8b51f65f382e9999690f128bd77b116d226d095e032551bf06e"
+  },
+  "code": {
+    "sky6_run.py": "8fa2418bca2066a5a4cf8495746da0038c188ea103d40ae2b64df5d85ff7d4b9",
+    "sky6_count.py": "d3a5abb0f8d0d19e8a3564af21a47432fe5ba9f493f29013473eb7fbffd252af",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "07cd33ea16ee60c9bfd8211c894f056e5a4efdd6880b0c760734dd0d522122d9",
+    "sky6_figures.py": "184aba3b5a7c6d4c9263b3e56fe3291641e9242edc9bb04a9bd9b964514fec73",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "b8c28f9a8b933adaa8b61485abce28277e5b6a32adc59b9979c6dedd7832e21a",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "density": 2500.0,
+  "extinction_coefficient": [
+    3.2139999866485596,
+    2.1649999618530273
+  ],
+  "area_deg2": 24294.8604,
+  "scope": "gr NOBS/positive PSFDEPTH/pixel/native geometry only; no source SNR, morphology, latitude, EBV ceiling, common depth or deblend completeness cut",
+  "outputs": {
+    "domains.csv": "e1f4029de0c8e5e8f41c68fd11a321188ec2a254fdd99ebdffa6e9f99693fb69",
+    "geometry.npz": "2a738e4a76401cbda1833ff9a6fffd885137820792f3aab4fdfddeacdf75bbf2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "data/v3_14/audit/M13": "79a120299a2d0cf5ba59a205234470f59b80889f36029c3c7eb1241793e3e124",
+    "data/stream_response_20261119/sequence": "851055e55e54dfbed009bc11d7447cd86d11abe66c00c3efc0f723722af9792d",
+    "data/v3_14/audit/M5": "06ebe30168c661ead87676e7623f31bf1018095405cfe04cadac521868854e19",
+    "data/v3_14/audit/M30": "c0c68ad7ad33590a8071cce1ab8fa3cac21136a413d234f8a2fef78b8f584e53"
+  },
+  "code": {
+    "sky6_run.py": "8fa2418bca2066a5a4cf8495746da0038c188ea103d40ae2b64df5d85ff7d4b9",
+    "sky6_count.py": "d3a5abb0f8d0d19e8a3564af21a47432fe5ba9f493f29013473eb7fbffd252af",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "07cd33ea16ee60c9bfd8211c894f056e5a4efdd6880b0c760734dd0d522122d9",
+    "sky6_figures.py": "0883c42723d2aa9e6e5d064ed3307e438597792da67dc983010bd03948ec760f",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "b8c28f9a8b933adaa8b61485abce28277e5b6a32adc59b9979c6dedd7832e21a",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "all available frozen external low-crowding member photometry, before QRF/theory/Mr support; primary unmasked and masked supplementary; earlier native admission and membership limits remain",
+  "outputs": {
+    "admission.csv": "64334fb00d3188d9d8ce0649412774072ab8d99d12d4befd805e4ecd497caa3c",
+    "roster.npz": "eb13f3e3054c335c58e16a98fb43125f668df28a7daf2a908e6c66cfc04a8212"
+  }
+}

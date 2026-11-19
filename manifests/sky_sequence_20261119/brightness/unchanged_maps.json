@@ -1,0 +1,182 @@
+{
+  "checks": [
+    {
+      "stage": "rgb",
+      "group": "bin_10.0_15",
+      "unchanged_physical_arrays": {
+        "density": "933535bf82c4c85054bd50eb38b8ee7f0ec481b6fa73528839745115d61438b0",
+        "signed_residual": "8e880c4e42b4c9c7998d41023c3bd277ac0f357199f79a08fbd1613d2fe0e81d",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "e0d41d4eec0ed1fb43af122199d9ea4fb84b5ff4336a783b391373858fe67474"
+      },
+      "passed": true
+    },
+    {
+      "stage": "rgb",
+      "group": "bin_15.0_26",
+      "unchanged_physical_arrays": {
+        "density": "ba898415bbceb3064cd3371858c24a24a90332d8a5e0400ddc9d33c47dd0673e",
+        "signed_residual": "feea1bdf17adcab115ffd84d49310aa879e13cd9443a78ffd2f57ff6648a6eb0",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "9f3a6ae93bcc378a6487967711991e378c0b82fea28bb8ca7980bf2504461307"
+      },
+      "passed": true
+    },
+    {
+      "stage": "rgb",
+      "group": "bin_26.0_50",
+      "unchanged_physical_arrays": {
+        "density": "15318035764f77512cfabcd9949a57d46086422323d20b50c63768ca961f7adc",
+        "signed_residual": "6566fcba470acba2369d760b00e8289828fba63925925728a44a243747ae69a3",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "37f245d32cbeac161c4c952b31d97313a26cc8fc52a9ca9ccb1657c8969a4718"
+      },
+      "passed": true
+    },
+    {
+      "stage": "rgb",
+      "group": "bin_50.0_100",
+      "unchanged_physical_arrays": {
+        "density": "1d884ef5e494676e1e7f60e526bcaa620a6159369d893d5a77e32a3887d03259",
+        "signed_residual": "89c7f35fcd77395b347a18aa329b1891572dfb9adacd44176134f46a7d00c390",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "88649bda66e152d78900d624837b725d7da68fe05c207a7dec0bf66ac13f798d"
+      },
+      "passed": true
+    },
+    {
+      "stage": "rgb",
+      "group": "bin_6.3_10",
+      "unchanged_physical_arrays": {
+        "density": "7ab4f271357deea4e5d118ae4c4889107700e38405c2411292b1bb899567479b",
+        "signed_residual": "3bb899728f31a4194e301ef2a5c1e57a17245d62be80490c3ed53af79da52678",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "4560a947f53932a9146f6f5d45bc306cd5fb940432eb418d51703ab0919ca725"
+      },
+      "passed": true
+    },
+    {
+      "stage": "rgb",
+      "group": "overview",
+      "unchanged_physical_arrays": {
+        "density": "82c7bf63d4027852b73f103fd6ff6153cd6afffb9860af4fff4b7d0e90aff6f0",
+        "signed_residual": "7998193da62bae43eb1083ba255c69076d2907f1990af2785d929157c40704d0",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "77b236f22f5fffdeeae97ece2060150108caa813e608bdcc75baeff19d07e0a2"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "bin_10.0_15",
+      "unchanged_physical_arrays": {
+        "density": "c20ca3285f7556346e6e61e8df81c2ebb1627a572ef1f98d3403d67f0f6f358a",
+        "signed_residual": "3ebc04e6e98f44c4239de08b128c19ff800b0fd800d1cbe990b97d5fc80882c4",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "e0d41d4eec0ed1fb43af122199d9ea4fb84b5ff4336a783b391373858fe67474"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "bin_15.0_26",
+      "unchanged_physical_arrays": {
+        "density": "bcc98f138075caa2d7944fbe8c501ef735d559aec61c902e5b7b4924b5a54c67",
+        "signed_residual": "eef231700dac3f45c2224b9a88bae0a59d5204cb88ca4991b65a5b21b1301d1e",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "9f3a6ae93bcc378a6487967711991e378c0b82fea28bb8ca7980bf2504461307"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "bin_26.0_50",
+      "unchanged_physical_arrays": {
+        "density": "3df43d8efe8527a5ae170b420086d969aa4ed9c418a24dc41fcbfc7a8da4cd19",
+        "signed_residual": "37db88dffe495c130b9d28378ba60b91bdcf7c6d982a851f611d15f540030889",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "37f245d32cbeac161c4c952b31d97313a26cc8fc52a9ca9ccb1657c8969a4718"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "bin_50.0_100",
+      "unchanged_physical_arrays": {
+        "density": "e6eb6c925898afd75db4334d5095328f62b894b4dbd2f2168876c02aac9a9515",
+        "signed_residual": "8b77e6e1d2144b7b6d1a60f75db1a55584c65a1d98aeb7d0cbd5c8ec397c9462",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "88649bda66e152d78900d624837b725d7da68fe05c207a7dec0bf66ac13f798d"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "bin_6.3_10",
+      "unchanged_physical_arrays": {
+        "density": "503475376378037d3cca7e66f61df4144f3472459f8427c820185b96888f093e",
+        "signed_residual": "4d5d218253886ed1e39ed17eafc424bffe3208eb6feb95475f484c0c32c21ad9",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "4560a947f53932a9146f6f5d45bc306cd5fb940432eb418d51703ab0919ca725"
+      },
+      "passed": true
+    },
+    {
+      "stage": "old_domain",
+      "group": "overview",
+      "unchanged_physical_arrays": {
+        "density": "f325d4a0f0139f039a2a3d714dd53c25e6c50646e7aab24c1987f87eabb8718e",
+        "signed_residual": "a5147770e41c6fbb02cff126a86a9c5cf6247264452c8efe33bf60ee5ee824b4",
+        "mask": "a9a9d19ab058268bfe25f494ba4d3e0670e5d8839fa9caa1aaa2b50a04b50031",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "77b236f22f5fffdeeae97ece2060150108caa813e608bdcc75baeff19d07e0a2"
+      },
+      "passed": true
+    },
+    {
+      "stage": "no_extinction",
+      "group": "overview",
+      "unchanged_physical_arrays": {
+        "density": "ce3abdf256d54594123bec2f4cce9abd1584540a3f683ce59257f852fabe5ec2",
+        "signed_residual": "35af115654fe0e448e479fa202ba58f2410cd48e65b27afcef1e0512fb971a6f",
+        "mask": "988d66417c14de32299e200809aea13dc86458fecd45967bbb45d5ed38c5a9e9",
+        "l": "8acf133b854f6483eeac152f75aa0b1ff0300504fdd9e227883445d3477b7b60",
+        "b": "ff330ec0e66f632e979161769e523b27a45822d8aacc8d16ec0a8937cb05c1fc",
+        "channel_kpc": "77b236f22f5fffdeeae97ece2060150108caa813e608bdcc75baeff19d07e0a2"
+      },
+      "passed": true
+    }
+  ],
+  "rule": {
+    "request": "Restore the previous v5 brightness/color stretch; retain the expanded imaging footprint, Galactic references and dashed Pal5 track",
+    "stretch_source": "data/stream_response_20261119/full_rgb/stretch.csv",
+    "stretch_rule": "Use the exact previous v5 full-RGB lo/hi for each group, channel and row, with its original asinh10 transform; do not estimate display caps from the expanded low-latitude parent",
+    "physical_arrays": "Unchanged; this overrides rendering only, with original darker displays retained in execution history",
+    "Pal5_line": "dashed",
+    "Sagittarius_line": "dashed"
+  },
+  "physical_data_unchanged": true
+}

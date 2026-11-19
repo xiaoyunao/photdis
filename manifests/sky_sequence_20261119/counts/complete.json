@@ -1,0 +1,28 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {},
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "2c9fbbe4048b5fc3ddd4257386046ca143ca53d371339cbaa473ec1917d64fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_publish.py": "26061507ac5031eea15ea6fcecb18c9fe9be8619cddf0faf60184b952fc47c4a",
+    "sky6_figures.py": "f4622716ed83d6fb1bf4bb1b1d74d9cdac637c5aa05e786d87c91d183f25944f",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "41adcfc6a98c37d51c828bb5a6e594065b1b2e85d7234e0227f2e6a86b07efda",
+    "sky6_ridge.py": "c020f614622258780c2d6e53ad04a681e5f409684d115d016478f888b7a3ace3",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "parent_count_conservation": true,
+  "node_acceptances": 2939043764,
+  "scope": "views all display and same display within old geographic/dust/depth domain; not a new distance posterior",
+  "outputs": {
+    "node_counts.npz": "314ee1701334b8c8c4fc8c2d63c35ace550099ac828b67ebcb3adc7954dc01fb",
+    "domain_counts.csv": "8670667ea4ebaba908dd12ab637e6295d8164ddd1d4d809df3f963d66902b7b2",
+    "part_counts.csv": "b2d9c4e2228a05af079c2b256020228ed5daede41ea8c90d4b1247004d909b67"
+  }
+}

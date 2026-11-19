@@ -1,0 +1,39 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "cube": "24c3ed561ecaff1f9ecce679fbcf60ab1ba7d2076b6fd3ee967dc4efd9c20840",
+    "configs/stream_inputs/track.st.Sagittarius.antoja2020.ecsv": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9",
+    "configs/stream_inputs/track.st.Pal5.ibata2024.ecsv": "bdfba81702890bd697d7b8a76cad672d038b7870f7dfc3a17d9fb101bdcc817d",
+    "previous_v5_stretch": "f3a03f29a8066eb0fd322fe3593888b042f53f5a6a8d9f9a7085b851cf87d73a",
+    "display_settings": "90e11222f141da49ec090530b8343441766c8af62b6941080c03324a2006fdb0"
+  },
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_publish.py": "cd32e127c1fdd8a358913d674cd9489750f6ea7e5f46fc34842470d7b1d77d87",
+    "sky6_figures.py": "8fa2b703f56f0f83853e8e6f9c657cba8b1d137f883c956bc23573ff778dee86",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "e01ab4b5f616b83414864ba67301393c05bc783739ea66113dfc43cf08905988",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "same source IDs/admission/geometry, observed colors/magnitudes in fixed CMD; diagnostic only, not a new dust solution",
+  "display_stretch": "exact previous v5 per-group/channel limits, requested by user",
+  "outputs": {
+    "physical_channels.npz": "4b0a52df9175c6ab13eecac93f8a3975b042f4b9fc2329036666f8a4a4c57038",
+    "rgb_overview.png": "bf8ee5d36e7f9f56496df5ebefaa0528561be604eb05e30657f4617805db5942",
+    "rgb_overview.csv": "7b9850336543d71377d056e4ccade2d64c23365aac82e9a83f9718b55ac8039f",
+    "physical_overview.csv": "3eb1e1b02197548d9775518e0ea701e17c893b6b08b6ac600111d1ac3c1865e2",
+    "physical_overview.pdf": "a3422d4d9200ea75751d22863f9974eef52cf3957ffd5c78b034492d8b210f2d",
+    "rgb_overview.pdf": "995d8a33cb852e5f4d5e2c6ef9c2c22ac4dc88b319f7eb28d3576fe397b0990f",
+    "rgb_overview.npz": "a193939d6f738771a667b58034d69f047aedb2a14cf32bef87b23bfbff7e5b0e",
+    "physical_overview.png": "aaea91fdefcb8998e8083a3cbb7f39bdfbb4a11b871aab3849618dd0692f832c"
+  }
+}

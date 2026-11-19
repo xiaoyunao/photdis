@@ -1,0 +1,23 @@
+{
+  "identity": {
+    "native_PSF_unique": 2198481902,
+    "valid_gr_native_unique": 493319577,
+    "positive_gaia": 339461437,
+    "positive_gaia_aliases": 5442,
+    "valid_gr_after_aliases": 493314135,
+    "rule": "actual PSF/native first; minimum native ID per repeated positive G3 identity; unlinked sources retain native IDs",
+    "execution": "64 deterministic native identity buckets and native Gaia HEALPix-prefix buckets; exact sorts in8 shared-memory workers"
+  },
+  "sweeps": 2126,
+  "raw_records": 3967618454,
+  "PSF": 2221816974,
+  "missing_TYPE": 0,
+  "non_PSF": 1745801480,
+  "old_legacy_entrance": 74913406,
+  "area_deg2": 29386.598399999995,
+  "old_domain_area_deg2": 14155.704800000001,
+  "CMD_union": 144211360,
+  "node_acceptances": 2244930193,
+  "north_scope": "existing finite-support native transfer; no new stellar population distance calibration",
+  "correction": "2D full-column catalog MW transmission; display only in dusty/crowded regions"
+}

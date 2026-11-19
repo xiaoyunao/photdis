@@ -1,0 +1,82 @@
+{
+  "config": "d0643f5b8781be0fee24f517523ba2c06fc833434faebfc5d1db3fe6b8857556",
+  "job": "61562374",
+  "inputs": {
+    "cube": "24c3ed561ecaff1f9ecce679fbcf60ab1ba7d2076b6fd3ee967dc4efd9c20840",
+    "configs/stream_inputs/track.st.Sagittarius.antoja2020.ecsv": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9",
+    "configs/stream_inputs/track.st.Pal5.ibata2024.ecsv": "bdfba81702890bd697d7b8a76cad672d038b7870f7dfc3a17d9fb101bdcc817d",
+    "previous_v5_stretch": "f3a03f29a8066eb0fd322fe3593888b042f53f5a6a8d9f9a7085b851cf87d73a",
+    "display_settings": "90e11222f141da49ec090530b8343441766c8af62b6941080c03324a2006fdb0"
+  },
+  "code": {
+    "sky6_width.py": "35469002b45420f06d82a4ea2ab1f64602a4400747391c19a2457476cadd09ec",
+    "sky6_run.py": "623f913b666d4f53ea60e13bf1dd87eb06364b54a69a5a6feefeefc4f0302fc0",
+    "sky6_count.py": "4e2bbdd6ae7582066a15c7b9b1e603ff5a62e8ca3b0c36d4564a58531470c1b7",
+    "sky6_scan.py": "3d77568c7e024f97a6a12b67481afdef804fa5f8f1ade3d2a0451ca6b6da01db",
+    "sky6_prior.py": "64341ec7608b5c6cb53de6e8718ebf8c8da1bbcf8efe77dee2b989774c23632f",
+    "sky6_roster.py": "7ad14fb60edd5665d0eb8cf3a5cda1d1be61412fc0bb7507dfdef9e0f596ffec",
+    "sky6_brightness.py": "3f7cf9e2b1288838eeac18c89465965d27ab37f818d7eab5f272f2f84a7a4069",
+    "sky6_publish.py": "cd32e127c1fdd8a358913d674cd9489750f6ea7e5f46fc34842470d7b1d77d87",
+    "sky6_figures.py": "8fa2b703f56f0f83853e8e6f9c657cba8b1d137f883c956bc23573ff778dee86",
+    "sky6_common.py": "496f048a37e7dace0d07eae36a188fcc14aa5b0adbec492adebb61747986ce9d",
+    "sky6_atlas.py": "e01ab4b5f616b83414864ba67301393c05bc783739ea66113dfc43cf08905988",
+    "sky6_ridge.py": "6410048f5381f8d4f047ba25bf31756af0be38743fdf049993a7deafaebbdd84",
+    "sky6_area.py": "ff0a5319798de8efd76918aa4089558a64d4880f5586c03af16fe8abb6079835"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "coordinate": "Galactic l0 center, increasing left",
+  "scope": "old_domain",
+  "annotations": {
+    "coordinates": "Galactic; preserve current longitude direction",
+    "latitude_deg": [
+      -30,
+      -20,
+      0,
+      20,
+      30
+    ],
+    "tracks": [
+      "Sagittarius.antoja2020",
+      "Pal5.ibata2024"
+    ],
+    "known_structures": [
+      "Pal5",
+      "M13",
+      "M5",
+      "M30"
+    ],
+    "band_diagnostic": "raw PSF/valid-gr/CMD versus area/dust/depth and fixed latitude/Sgr strips; one no-extinction CMD overview on exactly the same admitted sources, preserving observed-input selection"
+  },
+  "display_stretch": "exact previous v5 per-group/channel limits, requested by user",
+  "outputs": {
+    "rgb_bin_50.0_100.npz": "ed033162d401926ae588a9a02c2d710f5a25c84024b0ccb2225c8e8c8ed6363e",
+    "physical_channels.npz": "58e4c3d272fe40ba69c48d905ea09114289850910565477019a1688ec87ce879",
+    "rgb_overview.png": "6988918e91797bd313fef22ddf9456ba1899bcc4a4b9623e7f4bc1ba781e4824",
+    "rgb_bin_10.0_15.png": "0be129454106b2b7485dc699c9d3e50cfa7918ffab6f6aba62dfb4b4b1c4318d",
+    "rgb_bin_6.3_10.png": "34cf7ee025f4bab63138616312c3dbdff2a84e846ea688593fd190e2fa85da37",
+    "rgb_bin_6.3_10.npz": "6d4029bfe7414d2fd791f3f8746e8bc611e2d2ca0774024c113951436763d0df",
+    "rgb_bin_10.0_15.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499",
+    "rgb_bin_15.0_26.npz": "29077902e9f5dba04378e6350e3e68f1a1c31708fa60f6abf9381b162d493b7c",
+    "rgb_overview.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499",
+    "rgb_bin_50.0_100.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499",
+    "rgb_bin_6.3_10.pdf": "f9a28cb1475b32a3137045cc6f56a5ae146fc3632fb3ce687db397d23bba9dca",
+    "rgb_bin_10.0_15.npz": "a4344c497b951a34e3c3a5aa692e051423eb9beba4e31c2a32ff659f7340e2ee",
+    "physical_overview.csv": "528f25d3681b3934938ca658dbda02177d7e7d8b465b3cdf5ca314387e25f1c7",
+    "rgb_bin_50.0_100.png": "adcb549acdaa6e308ceb19d870326eadecab4302be0ebe0427f17fe058df4643",
+    "rgb_bin_15.0_26.pdf": "863a597624394943bb37fa8d78f3664151a883496833583dea0287ab29fa7137",
+    "node_weights.csv": "3f95395294f750610836327d97e941f2ae5d6abaae3a0fb64121abd56d938d84",
+    "rgb_bin_10.0_15.pdf": "65164578c0671e16703aaafdc742f30b03bd277540c7cda8f9f4bdfffb322efa",
+    "physical_overview.pdf": "0e4e84e806f52365ea7d2aeba0beec9781fdbb67faa7e7e17cce73749bbb2872",
+    "rgb_bin_26.0_50.png": "899cf8a8d7ad098304e892d9e85176d3f9404b1e1dbf40eeeaf86ce29778b64d",
+    "rgb_bin_50.0_100.pdf": "446145b75282b0132aba1e4c861d46613fb8558c6c771c307ae430865ca32ece",
+    "rgb_bin_26.0_50.npz": "e1f64e31d18c0b18917ba2cd7b8a26426b4d9069caea07c3da7dfbe553d96b7d",
+    "rgb_bin_15.0_26.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499",
+    "rgb_overview.pdf": "3a76069c706e1337f3b3a25584e422e3918d74d9e9c5a7753610f5090f6aac0e",
+    "rgb_overview.npz": "2959a838f3c3fdef886fae7b313b29955fb2a5c31f67ec5fc26df1e444412e0e",
+    "rgb_bin_26.0_50.pdf": "dff0d2b59ceab6dd4c50900f7a946df576ea8060dbf3e87a09c1beb5fe9e3aad",
+    "rgb_bin_15.0_26.png": "a7d08d375c212dfe53c161388ecb5129f993c6e04f4ec86595f7bda787c5efb2",
+    "physical_overview.png": "b03064eeb96e9aa49c95867ef31c8716aec912ac2898ee408f5105d754071438",
+    "rgb_bin_26.0_50.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499",
+    "rgb_bin_6.3_10.csv": "9c6ab60a593d68c1d52e289165f6a9e14577a653c003b1b2c95ebbb4345d1499"
+  }
+}

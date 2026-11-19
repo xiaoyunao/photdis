@@ -1,0 +1,9 @@
+{
+  "native_PSF_unique": 2198481902,
+  "valid_gr_native_unique": 493319577,
+  "positive_gaia": 339461437,
+  "positive_gaia_aliases": 5442,
+  "valid_gr_after_aliases": 493314135,
+  "rule": "actual PSF/native first; minimum native ID per repeated positive G3 identity; unlinked sources retain native IDs",
+  "execution": "64 deterministic native identity buckets and native Gaia HEALPix-prefix buckets; exact sorts in8 shared-memory workers"
+}
