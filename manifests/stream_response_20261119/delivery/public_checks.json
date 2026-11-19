@@ -23,7 +23,7 @@
     "manifests/stream_response_20261119/README.md": "e308c9f83d4f420988dc33fe79932b293ddc5cf2ef99cb45d080d2cec00be467",
     "manifests/stream_response_20261119/conditioning/balance.csv": "6c79f1854d1e4e17e8b603d49d2305f142a6201412a4a8381219ce0fcf0551aa",
     "manifests/stream_response_20261119/conditioning/complete.json": "fbde6ce3ccb902907677066927463fe0045ed329239bdee1006696cd13077dfd",
-    "manifests/stream_response_20261119/conditioning/effect_definitions.csv": "ed15b02e8290086ddc30c4e7693894ce36125293d815db9f636b8d26e0386910",
+    "manifests/stream_response_20261119/conditioning/effect_definitions.csv": "f2c2f9e39682980aac4451c5ec054f0b6870bbca06ebec99319ad8498779e06e",
     "manifests/stream_response_20261119/conditioning/estimands.csv": "762cc20bbc2787d301d1ed7801c1037fdc9520262a606409ee33c9fd4ab89c18",
     "manifests/stream_response_20261119/conditioning/metallicity_conditioning.csv": "762cc20bbc2787d301d1ed7801c1037fdc9520262a606409ee33c9fd4ab89c18",
     "manifests/stream_response_20261119/conditioning/signed_gaia_anchor.csv": "10d393c7ec0781e296280fa7eb67fb275215552520eefc0b684409855bf9f574",
@@ -147,7 +147,7 @@
     "manifests/stream_response_20261119/sequence/predictions.npz": "c7f137ad1f9069cb767da05015dea0015d4575513fd0a2e1a305003515399786",
     "manifests/stream_response_20261119/sequence/qrf_only_identity_audit.csv": "91f8b5a346d12d0a439ed534ffb1b54afc7c2691ac8ea62813e4945f16d9b256",
     "manifests/stream_response_20261119/sequence/shared_bootstrap.npz": "47c7b5084a819fe106644e95c55711df3cf7c7405fcf89dd8897b0a9da4f4f24",
-    "manifests/stream_response_20261119/sequence/system_populations.csv": "4e0c29d3b361fe0d3a5a8f107c14f817945b9002e702b5107f3dc0ae1bf7db52",
+    "manifests/stream_response_20261119/sequence/system_populations.csv": "bb45865c1e98687df5f3457e13d604082871e03ae2a777c74c89e32c6280c944",
     "manifests/stream_response_20261119/sequence/template_redraw.npz": "33fa9a7c414aa490eda685094917517f565f9337dc219e814fd4d2660640d7df",
     "manifests/stream_response_20261119/validation/complete.json": "05e2f9c6380204170d83483c49f0b484e955eebf2697bae5032aaea3107b4549",
     "manifests/stream_response_20261119/validation/identity_audit.csv": "4e8d4406c1baa65da77a65dbce173fa9e8d49797452164e460d2d255cfaa0f66",
@@ -224,5 +224,14 @@
     "figures/stream_response_20261119/rgb/rgb_overview.png": "044bac61da757e0e4335281f967b23b2ea58b852ec970a345b32c5a7af9913bc",
     "figures/stream_response_20261119/sequence/known_system_branch_calibration.pdf": "536dee5b883d3fca86eaa28f4b90b060d1d5611f90a0a72daa7b6da04f86e8c2",
     "figures/stream_response_20261119/sequence/known_system_branch_calibration.png": "b2a160119ad15ec20c5fe8288c0722e8d2b72e34efab3a434e30fca9eabe8c8a"
+  },
+  "byte_normalization": {
+    "files": [
+      "manifests/stream_response_20261119/conditioning/effect_definitions.csv",
+      "manifests/stream_response_20261119/sequence/system_populations.csv"
+    ],
+    "CSV_values_unchanged": true,
+    "canonical_Git_blob_bytes_verified": true,
+    "independent_36_plate_redraw_precedes_auxiliary_line_ending_normalization": true
   }
 }
