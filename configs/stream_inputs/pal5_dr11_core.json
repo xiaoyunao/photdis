@@ -1,0 +1,15 @@
+{
+  "name": "Pal 5",
+  "alt_name": "",
+  "type": "GCl",
+  "ra": 229.0205,
+  "dec": -0.1202,
+  "radius": 0.0641667,
+  "pa": 0.0,
+  "ba": 1.0,
+  "source": "https://www.legacysurvey.org/dr11/external/",
+  "catalog_path": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/masking/NGC-star-clusters.fits",
+  "catalog_sha256": "c765ca532fb324f5fe8ca4faf1c7ec17e32a9449d6486210c8cd7608c604f002",
+  "scope": "actual DR11 special detection circle; independent audit, never used for stream-tail recovery",
+  "existing_Pal5_core_ROI": "historical diagnostic key refers to adjacent track stripRA229.4..229.9, not the actual masked circle"
+}
