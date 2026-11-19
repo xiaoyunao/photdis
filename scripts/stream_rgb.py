@@ -27,23 +27,27 @@ def main():
     require_compute();d=folder('rgb');inputs={}
     record=json.loads((OLD/'atlas/complete.json').read_text())
     path=verified(OLD/'atlas/cmd_filter_cube.fits',record['outputs']['cmd_filter_cube.fits']);inputs['raw_cube']=sha(path)
+    redraw='--redraw' in __import__('sys').argv
     with fits.open(path,memmap=True) as h:
         mu=h['MU'].data;area=h['NATIVE_AREAS'].data[:,2].sum(axis=0);mask=h['DISPLAY_MASK'].data.astype(bool)
         groups=[('overview',np.array([[10,15],[15,26],[26,100]],float))]
         for a,b in ((10**.8,10),(10,15),(15,26),(26,50),(50,100)):
             edges=a*(b/a)**(np.arange(4)/3);groups.append((f'bin_{a:.1f}_{b:g}',np.column_stack((edges[:-1],edges[1:]))))
         intervals=np.concatenate([x[1] for x in groups]);w=channel_weights(mu,intervals)
-        counts=np.tensordot(w,h['COUNTS'].data[1,0],axes=(1,0))
-    sa=np.maximum(smooth(area,.3),0);ba=np.maximum(smooth(area,5),0)
+        counts=None if redraw else np.tensordot(w,h['COUNTS'].data[1,0],axes=(1,0))
+    if redraw:
+        with np.load(d/'physical_channels.npz') as a:maps=np.stack((a['density'],a['signed_residual']),axis=1)
+    sa=np.maximum(smooth(area,.3),0) if not redraw else None;ba=np.maximum(smooth(area,5),0) if not redraw else None
     def work(c):
         s=np.maximum(smooth(c,.3),0);b=np.maximum(smooth(c,5),0)
         density=np.divide(s,sa,out=np.full_like(s,np.nan),where=sa>0)
         background=np.divide(b,ba,out=np.full_like(b,np.nan),where=ba>0)
         density[~mask]=np.nan;background[~mask]=np.nan
         return density,density-background
-    with ThreadPoolExecutor(6) as pool:maps=np.array(list(pool.map(work,counts)))
-    npz(d/'physical_channels.npz',mu=mu,intervals=intervals,weights=w,weighted_counts=counts.astype('f4'),area=area,
-        density=maps[:,0].astype('f4'),signed_residual=maps[:,1].astype('f4'),mask=mask)
+    if not redraw:
+        with ThreadPoolExecutor(6) as pool:maps=np.array(list(pool.map(work,counts)))
+        npz(d/'physical_channels.npz',mu=mu,intervals=intervals,weights=w,weighted_counts=counts.astype('f4'),area=area,
+            density=maps[:,0].astype('f4'),signed_residual=maps[:,1].astype('f4'),mask=mask)
     l,b,pix=grid();allmeta=[]
     for gi,(name,bounds) in enumerate(groups):
         density=maps[3*gi:3*gi+3,0];residual=maps[3*gi:3*gi+3,1]
@@ -58,7 +62,7 @@ def main():
                 mesh.set_array(None);mesh.set_facecolor(np.nan_to_num(image.reshape(-1,3),nan=.88))
                 ax.set_xticks(np.deg2rad([-120,-60,0,60,120]),labels=['120°','60°','0°','300°','240°'])
                 ax.set_yticks(np.deg2rad([-60,-30,0,30,60]));ax.tick_params(labelsize=7);ax.grid(ls=':',lw=.5,color='.5');ax.set_title(kind)
-                ax.set_facecolor('.88')
+                ax.set_facecolor('.88');ax.set_axisbelow(False)
                 for tname in ('Pal5.ibata2024','Sagittarius.antoja2020'):
                     import healpy as hp
                     t,p=track(tname);inputs[str(p.relative_to(ROOT))]=sha(p)
@@ -76,9 +80,10 @@ def main():
                 finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.995)),1e-5);lin=cap/100
                 for j,ax in enumerate(axs[row]):
                     z=ax.pcolormesh(l,b,np.ma.masked_invalid(values[j,pix]),cmap=COLORMAP if row==0 else 'RdBu_r',norm=SymLogNorm(lin,vmin=0 if row==0 else -cap,vmax=cap),rasterized=True)
-                    ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4)
+                    ax.set_axisbelow(False);ax.set_xticks(np.deg2rad([-120,0,120]),labels=['120°','0°','240°']);ax.tick_params(labelsize=6);ax.grid(ls=':',lw=.4)
                     ax.set_title(f'{bounds[j,0]:.2f}–{bounds[j,1]:.2f} kpc')
-                f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both')
+                decades=10.**np.arange(np.ceil(np.log10(lin)),np.floor(np.log10(cap))+1)
+                f.colorbar(z,ax=axs[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=np.r_[0,decades] if row==0 else np.r_[-decades[::-1],0,decades],format=plt.FormatStrFormatter('%g'))
             figure(d,'physical_'+name,f,stats)
     csv_rows(d/'stretch.csv',allmeta)
     csv_rows(d/'node_weights.csv',[dict(group=g,channel=c,d_lo=ab[0],d_hi=ab[1],mu=m,weight=float(w[3*i+j,k])) for i,(g,bs) in enumerate(groups) for j,(c,ab) in enumerate(zip('BGR',bs)) for k,m in enumerate(mu) if w[3*i+j,k]>0])

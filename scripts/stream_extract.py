@@ -135,6 +135,26 @@ def randoms():
         scope='independent DR11 random geometry/mask/nobs/dereddened depth, no invented source-quality completeness',dust_coefficients=[3.214,2.165,1.211])
 
 
+def audit():
+    require_compute();d=folder('local_source');rows=[]
+    for roi in ROIS:
+        with np.load(d/(roi+'.npz')) as a:t={k:a[k] for k in a.files}
+        high=abs(galactic(t['RA'],t['DEC'])[1])>30
+        for relaxed in (False,True):
+            keep=np.ones(len(high),bool)
+            cuts=[('owned_unique_PSF',keep.copy()),('latitude',high),('finite_nonnegative_EBV',np.isfinite(t['EBV'])&(t['EBV']>=0)),
+                  ('EBV_limit',t['EBV']<(.1 if relaxed else .03)),('clean_maskbits',(t['mask']&REJECT)==0),
+                  ('gr_nobs',(t['nobs'][:,:2]>0).all(axis=1)),('gr_flux_transmission_ivar',t['valid'][:,:2].all(axis=1)),
+                  ('gr_error',(t['err'][:,:2]<.1).all(axis=1)),('gr_fracmasked',(t['fracmasked'][:,:2]<.4).all(axis=1)),
+                  ('gr_fracin',(t['fracin'][:,:2]>.7).all(axis=1)),('gr_fracflux',(t['fracflux'][:,:2]<.05).all(axis=1)),
+                  ('gr_anymask',(t['anymask'][:,:2]==0).all(axis=1)),('gr_dered_mag',(t['m'][:,:2]<23).all(axis=1)),
+                  ('gr_complete_depth',(t['depth0'][:,:2]>=23).all(axis=1))]
+            for stage,cut in cuts:
+                before=int(keep.sum());keep&=cut;rows.append(dict(roi=roi,route='gr_E010' if relaxed else 'gr_E003',stage=stage,before=before,retained=int(keep.sum()),excluded=before-int(keep.sum())))
+    csv_rows(d/'sequential_cutflow.csv',rows)
+    rec=json.loads((d/'complete.json').read_text());rec['cutflow_audit_code']=sha(Path(__file__));rec['outputs']['sequential_cutflow.csv']=sha(d/'sequential_cutflow.csv');save_json(d/'complete.json',rec)
+
+
 if __name__=='__main__':
     import argparse
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=('sources','randoms'));a=p.parse_args();globals()[a.stage]()
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=('sources','randoms','audit'));a=p.parse_args();globals()[a.stage]()

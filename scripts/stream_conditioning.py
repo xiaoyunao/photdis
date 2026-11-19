@@ -54,7 +54,7 @@ def main():
                     mu=10+5*np.log10(np.maximum(distance,1e-20))
                     use&=(mr>=4.5)&(mr<=5.5)&(mu>=11.5)&(mu<=12.5-2.165*.03)&(t['EBV']<.03)&(t['EBV']>=0)
                     depth=22.5-2.5*np.log10(2.5/np.log(10)/.05/np.sqrt(np.maximum(t['dep'],1e-20)))
-                    use&=(depth[:,:2]>=19.5).all(axis=1)
+                    use&=(depth[:,:2]>=19.5).all(axis=1)&(depth[:,2]>=18.1)
                     if ref=='gaia':use&=t['p_err']<=.03
                 ii=np.flatnonzero(use)
                 if not len(ii):support.append(dict(reference=ref,lo=lo,hi=hi,domain=domain,parent=0,status='no rows'));continue
