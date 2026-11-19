@@ -21,6 +21,7 @@ def main():
             a=h[1].data;at=np.flatnonzero(sep(a['RA'],a['DEC'],c)<.25)
         with fitsio.FITS(str(path)) as f:
             a=f[1].read(rows=at)
+        assert (a['RELEASE']==11010).all(), 'unexpected native release in core aperture'
         raw_n+=len(a);typ=np.char.strip(a['TYPE'].astype('U'));nonpsf+=int(((typ!='PSF')&(typ!='')).sum());missing+=int((typ=='').sum());a=a[typ=='PSF'];separation=sep(a['RA'],a['DEC'],c)
         flux=np.column_stack([a['FLUX_'+b] for b in 'GRZ']);iv=np.column_stack([a['FLUX_IVAR_'+b] for b in 'GRZ'])
         with np.errstate(divide='ignore',invalid='ignore'):err=2.5/np.log(10)/flux/np.sqrt(iv)
