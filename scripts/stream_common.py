@@ -1,5 +1,6 @@
 """Frozen inputs and independent outputs for the19November stream experiments."""
 import csv,json,os,sys
+from functools import lru_cache
 from pathlib import Path
 import numpy as np
 from halo_common import ROOT,sha,verified,read_columns,save_json,csv_rows,PAPER,plt
@@ -37,6 +38,7 @@ def figure(d,name,f,rows,arrays=None):
     if arrays:npz(d/(name+'.npz'),**arrays)
 
 
+@lru_cache(maxsize=4)
 def track(name):
     from astropy.table import Table
     filename={'Pal5.ibata2024':'track.st.Pal5.ibata2024.ecsv','Sagittarius.antoja2020':'track.st.Sagittarius.antoja2020.ecsv'}[name]

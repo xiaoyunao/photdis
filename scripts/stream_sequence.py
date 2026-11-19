@@ -113,6 +113,7 @@ def main():
     save_json(d/'calibration.json',dict(system='M13',phase='lower_MS',n=int(cal.sum()),delta_Mg=delta,zero_point_draws=caldraw,color_term=0,
          interpretation='one common absolute-magnitude offset; calibration uncertainty shared by all transfer members; all-band offset preserves colors'))
     ordinary_control(d,template,delta,caldraw,inputs)
+    npz(d/'template_redraw.npz',**template)
     plot_results(d,rows,t,phase,new,common,delta,template)
     complete(d,inputs,branch_measure='arc length of physical absolute-grz polyline, four midpoint quadrature nodes per original segment; explicitly not an IMF or LF',
         posterior='Gaussian joint gr/rz with negative shared-r covariance; exact conditional distance amplitude; 128 Sobol mixture draws plus 0.1mag gray intrinsic scatter; >5sigma rejection',
@@ -135,6 +136,7 @@ def ordinary_control(d,template,delta,caldraw,inputs):
         if good.any():
             for name,q in (('QRF',z['q']),('Fixed branches',out),('Calibrated',out*10**(-delta/5))):rows.append(dict(native=side,method=name,**metric(q[good],z['reference'][good]),role_exclusions=int(excluded.sum()),original_parent=len(excluded)))
     csv_rows(d/'ordinary_dwarf_control.csv',rows)
+    csv_rows(d/'ordinary_support.csv',[dict(native=side,parent=int((z['native']==code).sum()),supported=int(((z['native']==code)&np.isfinite(out).all(axis=1)).sum()),role_exclusions=int(excluded.sum())) for code,side in enumerate(('south','north'))])
     npz(d/'ordinary_predictions.npz',**z,sequence=out,calibrated=out*10**(-delta/5))
 
 

@@ -92,6 +92,14 @@ def main():
     csv_rows(d/'estimands.csv',rows);csv_rows(d/'balance.csv',audits);csv_rows(d/'support.csv',support);csv_rows(d/'sky_draws.csv',drawtable)
     npz(d/'weighted_ids.npz',**{k:np.concatenate([p[k] for p in private]) for k in private[0]})
     signed_anchor(t,d,inputs)
+    plot_results(d,rows)
+    complete(d,inputs,initial_role_excluded_rows=raw_n,independent_phase_color_magnitude_rows=len(t['ls_id']),
+        estimand='metal-poor minus ordinary weighted marginal contrast on a single fixed propensity-overlap intersection; identical IDs in both designs and every sky resample',
+        selection='common luminosity domain remains reference-selected and Mr-truncated; stricter rectangle is complete only with respect to stated r window and formal photometric depth, not spectral targeting, Gaia selection, or metallicity completeness',
+        interpretation='descriptive sensitivity; no causal physical FeH coefficient. Spectroscopic FeH and spectroscopic distances share teachers. Gaia anchor normalizes its signed-parallax window; cluster absolute anchor is in sequence stage.')
+
+
+def plot_results(d,rows):
     with plt.rc_context(PAPER):
         f,axs=plt.subplots(1,3,figsize=(7.15,3.0),layout='constrained')
         for ax,(domain,outcome) in zip(axs,(('reference_range','modulus_residual'),('common_luminosity_domain','reference_Mg'),('magnitude_complete_rectangle','reference_Mg'))):
@@ -105,10 +113,6 @@ def main():
             ax.axhline(0,color='.4',ls=':',lw=.6);ax.set(xticks=range(6),xticklabels=labels,ylabel='Metal-poor minus ordinary (mag)',title={'reference_range':'Same population · residual','common_luminosity_domain':'Common luminosity domain','magnitude_complete_rectangle':'Magnitude-complete rectangle'}[domain]);ax.tick_params(axis='x',rotation=55,labelsize=6)
         axs[0].legend(frameon=False,fontsize=6)
         figure(d,'metallicity_conditioning',f,rows)
-    complete(d,inputs,initial_role_excluded_rows=raw_n,independent_phase_color_magnitude_rows=len(t['ls_id']),
-        estimand='metal-poor minus ordinary weighted marginal contrast on a single fixed propensity-overlap intersection; identical IDs in both designs and every sky resample',
-        selection='common luminosity domain remains reference-selected and Mr-truncated; stricter rectangle is complete only with respect to stated r window and formal photometric depth, not spectral targeting, Gaia selection, or metallicity completeness',
-        interpretation='descriptive sensitivity; no causal physical FeH coefficient. Spectroscopic FeH and spectroscopic distances share teachers. Gaia anchor normalizes its signed-parallax window; cluster absolute anchor is in sequence stage.')
 
 
 def signed_anchor(t,d,inputs):
