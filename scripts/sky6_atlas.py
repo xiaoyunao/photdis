@@ -54,6 +54,7 @@ def render_maps(counts,area,mask):
 
 def render():
     require_compute();inputs={};rec=json.loads((OUT/'atlas/complete.json').read_text());path=verified(OUT/'atlas/cmd_cube.fits',rec['outputs']['cmd_cube.fits']);inputs['cube']=sha(path)
+    source=STREAM/'full_rgb/stretch.csv';record=json.loads((source.parent/'complete.json').read_text());verified(source,record['outputs'][source.name]);limits=list(csv.DictReader(source.open()));inputs['previous_v5_stretch']=sha(source);inputs['display_settings']=sha(ROOT/'configs/sky_sequence_display_20261119.json')
     for name in C['annotations']['tracks']:
         _,source=track(name);inputs[str(source.relative_to(ROOT))]=sha(source)
     l,b,pix=grid();groups=[('overview',np.array(C['rgb']['overview_BGR_kpc']))]
@@ -68,7 +69,11 @@ def render():
             for i,(name,bounds) in enumerate(groups):
                 pair=maps[3*i:3*i+3];st=[]
                 for row in (0,1):
-                    _,rows=stretch(pair[:,row],mask,residual=bool(row));st.append([[r['lo'],r['hi']] for r in rows]);stats.extend(dict(stage=stage,group=name,kind=('density','positive_residual')[row],**r) for r in rows)
+                    rows=[]
+                    for j,ch in enumerate('BGR'):
+                        selected=[r for r in limits if r['group']==name and r['view']==('CMD density','Positive residual')[row] and r['channel']==ch];assert len(selected)==1
+                        lo,hi=[float(selected[0][k]) for k in ('lo','hi')];rows.append(dict(channel=ch,lo=lo,hi=hi,saturated_fraction=float((pair[j,row,mask]>hi).mean()),stretch_source='unchanged previous v5 full_RGB'))
+                    st.append([[r['lo'],r['hi']] for r in rows]);stats.extend(dict(stage=stage,group=name,kind=('density','positive_residual')[row],**r) for r in rows)
                 a=dict(l=l,b=b,density=pair[:,0,pix].astype('f4'),signed_residual=pair[:,1,pix].astype('f4'),mask=mask[pix],channel_kpc=bounds,stretch=np.array(st),scope=np.array(stage),label=np.array('CMD-selected sky' if view==0 else 'CMD-selected sky · old domain'))
                 npz(d/('rgb_'+name+'.npz'),**a);rgb(a,d,'rgb_'+name)
                 if name=='overview':physical(a,d)
