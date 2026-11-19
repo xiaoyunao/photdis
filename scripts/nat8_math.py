@@ -14,7 +14,8 @@ def fit(means,lw,sigma,x,mu,counts,starts,maxiter=500):
     for start in starts:
         result=minimize(objective,np.array(start,dtype=float),args=(means,lw,sigma,x,mu,counts),jac=True,method='L-BFGS-B',options=dict(maxiter=maxiter,ftol=1e-12,gtol=1e-6,maxls=40))
         solutions.append(dict(a=result.x,objective=float(result.fun),success=bool(result.success),gradient=float(np.max(abs(result.jac))),iterations=int(result.nit),message=str(result.message)))
-    chosen=min(solutions,key=lambda r:r['objective']);assert np.isfinite(chosen['objective']) and np.isfinite(chosen['a']).all()
+    valid=[r for r in solutions if np.isfinite(r['objective']) and np.isfinite(r['a']).all()];assert valid
+    chosen=dict(min(valid,key=lambda r:r['objective']))
     a=chosen['a'];r=mu+a[0]+a[1]*x[None]-means;iv=1/sigma[:,None]**2;lp=lw-.5*r*r*iv;w=np.exp(lp-logsumexp(lp,axis=1)[:,None]);v=r*iv;h=np.zeros((2,2))
     for i,j in ((0,0),(0,1),(1,1)):
         xi=1 if i==0 else x;xj=1 if j==0 else x;h[i,j]=np.sum(counts*((w*iv*xi*xj).sum(axis=1)-(w*v*v*xi*xj).sum(axis=1)+(w*v*xi).sum(axis=1)*(w*v*xj).sum(axis=1)));h[j,i]=h[i,j]

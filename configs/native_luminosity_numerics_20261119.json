@@ -1,0 +1,17 @@
+{
+  "scope": "numerical evaluation only, no model/fit/admission change; declared before new calibrated scores",
+  "CRPS_grid_step": 0.0025,
+  "marginal_grid_step": 0.00125,
+  "Gaussian_tail_sigmas": 10,
+  "CDF_omitted_mass_bound": "machine epsilon",
+  "conditional_quantiles": "34-step exact CDF bisection after at most eps total CDF-weight omission; full original parameters retained",
+  "marginal_CDF": "linear deposition of all component means, Gaussian convolution; normalized weights, complete factorized parameters retained",
+  "logscore": "direct full mixture at queries for conditional; rigorous exp(-40) relative bounded full-component grid for parameter mixture, cubic interpolation, no density floor",
+  "precision": {
+    "logscore_nat": 0.001,
+    "CRPS_mag": 0.0001,
+    "quantile_mag": 0.0025,
+    "CDF": 0.0002
+  },
+  "reference": "no independent reference smoothing on M5 conditional forecasts; independent external target kernel once; all bootstrap/reference structure registered in main science config"
+}

@@ -1,0 +1,27 @@
+{
+  "candidates": [
+    "NGC1851",
+    "NGC5053"
+  ],
+  "source": "Zenodo4891252v2 MD5 3a07093be9a1fcbfb0e3c545ca175c99",
+  "membership_probability_min": 0.9,
+  "native": "Legacy DR11 DECam, explicit TYPE=PSF, exact G3 ID, native ownership",
+  "r_max": 23,
+  "abs_b_min": 30,
+  "EBV_max": 0.08,
+  "maximum_grz_error_mag": 0.1,
+  "annulus_deg": [
+    0.08,
+    0.35
+  ],
+  "maximum_fracflux": 0.1,
+  "nearest_admitted_arcsec_min": 2,
+  "cluster_mask_bit": 13,
+  "history": "all v3.1 HISTORY parents + later opened common-scale and current fitted role IDs; source overlap excluded, whole-system exposure separately disqualifies a new-system claim; prior zero-admission inventory alone not a distance test",
+  "order": [
+    "NGC1851 near-M5 FeH/native domain if adequate and unexposed",
+    "NGC5053 metal-poor/deeper extrapolation backup, not an in-domain substitute"
+  ],
+  "no_candidate_predictions_before_freeze_and_gate": true,
+  "reference_ancestry": "prefer isolated kinematic/HST component over combined literature scale, retain component method/source dependencies; if insufficient independent support return inventory and do not evaluate"
+}
