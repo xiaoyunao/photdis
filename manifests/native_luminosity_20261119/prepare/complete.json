@@ -1,0 +1,27 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "data/sequence_mechanisms_20261119/prepare/complete.json": "54de829ea3bbf3b82c294ff78777f22a3fbe2f51d1d39786a014699e7ff24bd1",
+    "data/sequence_mechanisms_20261119/predict/complete.json": "be29fcdd8a5917712a532f5a1ea2bc3df49c379ca1e0a4c99fcf6cdfd1e16aaa"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_math.py": "6467b48122dca69ba2178d1003a4c742deb63d017df23bc605c3f94b7b9d57d9"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "registered_before_fit": true,
+  "parent": 933,
+  "eligible_M5": 525,
+  "outputs": {
+    "actual_gray_invariance.csv": "279651a9d4358d3507051ce6b3ef5c081a4c122c4f87a6c50ec553432603ee75",
+    "M5_E.npz": "ebe36f552d2b912a68e459e86a430f94a07b5f544d41079741ad983419333ec9",
+    "M13_E.npz": "ad529ccebfdbd7eae468e82f2c13d20202559db9b39cb590c65610284374681a",
+    "identities.csv": "9aa6553e137faf1f7347f9883d4d29465ee8848992c285ef974c1c4a51e172d6",
+    "roster.npz": "d2eff52a22b2dfd9ccebe3fdd1c092075bc2191c503a8988aad1cbbf7c6dbac1",
+    "M30_E.npz": "91165de5d710946f5f08f2ebcc6730a82b8585041c6b3e5fb237142bece5018b",
+    "fit_design.json": "36872cd2a8ce50a55f0cc077b8d80c8e04c276e01f110b0c27b321435d1331d5"
+  }
+}

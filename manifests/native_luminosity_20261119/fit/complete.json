@@ -1,0 +1,33 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "prepare": "7babacc7287bce92964034c3c4316f3af5d79e648def3209664257ed72d4313b"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_audit.py": "06f7ef3ad45cbcbc8484fba01241bccf82aff16cdecd1ceb204bb305e43d8844",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_fit.py": "e5f8a7e4ae5ee055f557e8abf21985c468a5c5585a0beff5ee23a7a690f2e5e2",
+    "nat8_math.py": "f07c595c58151425086cabaec9240653ec34413ba362069c47afec2d6e776163"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "only_two_parameters": true,
+  "common_reference_factor_count": 1,
+  "fit_order": [
+    "fold0",
+    "fold1",
+    "fullM5",
+    "bootstrap"
+  ],
+  "factorization": "theta0=a0+mu-mu_ref; joint likelihood=L(theta0,a1)*R(mu), unit Jacobian; point mu_MAP=mu_ref. Bootstrap intercept theta0_boot minus one shared reference shift.",
+  "predictions_not_opened": true,
+  "outputs": {
+    "shared_reference_identity.csv": "e37f5748eb0464753a8d0025198873f9a1caaa598e9f3f0e5ec8d5c6e3168880",
+    "parameters.json": "532c0d0d73b36e50ffb93720ac296566fcb85a873c8f83c4234147c60768f007",
+    "all_solutions.json": "055195333130e10301faf262159c38fe7f9dcd172d8025761edbc7f7aeb9ad3e",
+    "fit_draws.csv": "8e83c8cc38d0a0a3580a7f20602386ff07fd83d99b8b9b23cc24dedf5bbf1f97",
+    "parameter_draws.npz": "f5e59bcfadc544dd77154ae549bf3f12b63b43b3bee4204c4df4a1ffdb9b6e0f"
+  }
+}

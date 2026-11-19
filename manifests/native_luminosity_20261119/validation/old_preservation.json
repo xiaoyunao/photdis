@@ -1,0 +1,12 @@
+{
+  "receipts": {
+    "manifests/sequence_mechanisms_20261119/prepare/complete.json": "54de829ea3bbf3b82c294ff78777f22a3fbe2f51d1d39786a014699e7ff24bd1",
+    "manifests/sequence_mechanisms_20261119/predict/complete.json": "be29fcdd8a5917712a532f5a1ea2bc3df49c379ca1e0a4c99fcf6cdfd1e16aaa",
+    "manifests/sequence_mechanisms_20261119/curves/complete.json": "81b8a8322ec015858c1575c12a9f61b1cb282ecdb216ddb7df1d0d54ee0092dc",
+    "manifests/sequence_mechanisms_20261119/evaluate/complete.json": "fa3eb222fa410e19572063f5d7e4e5101bb78cd84136df296c975b9a1bbf01d5",
+    "manifests/sequence_mechanisms_20261119/examples/complete.json": "3b2bc61732dd36430e5669384e7f87b248e9395e69270450a974a01b08747111",
+    "manifests/sequence_mechanisms_20261119/validation/complete.json": "5306136a0cdbdd45c4fac341c6847ddd6e193197b40649f3d7082d8610d93804"
+  },
+  "sky": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+  "old_science_sources_unchanged": true
+}

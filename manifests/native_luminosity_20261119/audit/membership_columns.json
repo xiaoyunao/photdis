@@ -1,0 +1,7 @@
+{
+  "header": [
+    "# source_id     \tra      \tdec     \tx\ty\tplx\tpmra\tpmdec\tplxe\tpmrae\tpmdece\tpmcorr\tg_mag\tbp_rp\tSigma\tqflag\tmemberprob"
+  ],
+  "example_column_count": 17,
+  "source": "Vasiliev/Baumgardt2021v2"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "https://arxiv.org/html/1308.2257#S0.T2",
+  "doi": "10.1088/0004-637X/775/2/134",
+  "table": "VandenBerg et al.2013 Table2, original adopted population estimates; not a new model fit",
+  "retrieved": "2026-11-19",
+  "entries": {
+    "M5": {"FeH": -1.33, "age_Gyr": 11.50, "quoted_age_fit_error_Gyr": 0.25},
+    "NGC1851": {"FeH": -1.18, "age_Gyr": 11.00, "quoted_age_fit_error_Gyr": 0.25, "role": "same DECam passbands and closer population to M5; multiple-population/double-SGB caveat in source sectionV, not a demonstrated one-sequence twin"},
+    "NGC5053": {"FeH": -2.30, "age_Gyr": 12.25, "quoted_age_fit_error_Gyr": 0.38, "role": "more metal-poor and deeper extrapolation, not a substitute for an M5-like test"}
+  },
+  "uncertainty_note": "Quoted age fitting errors do not include the full distance/composition systematic uncertainty discussed by the authors.",
+  "order_note": "Completes inventory metadata after the registered continuation gate closed. No candidate model requested, no residual/forecast opened, no selection or gate changed."
+}

@@ -1,0 +1,27 @@
+{
+  "plates": [
+    "two_color_geometry",
+    "cross_prediction_transfer_scores",
+    "luminosity_mapping_widths",
+    "calibration_complete_PDF",
+    "fixed_three_QRF_tails"
+  ],
+  "scientific_groups": 3,
+  "all_five_PNGs_enlarged_reviewed": true,
+  "all_five_PDFs_Poppler_rendered_reviewed": true,
+  "contact_sheet": "poppler/contact.png",
+  "findings": "English labels, full-parent points, unchanged Pal5/v3.8 palette/fonts/geometry conventions, clear legends and separate full-CDF rows; no peak occlusion or cropped labels. Long numerical CDF ranges reflect retained QRF tails, not a restricted near-mode PDF.",
+  "changes_required": false,
+  "original_v38_F02_F03_pixel_pass": true,
+  "main_sky_unchanged": true,
+  "native_independent_pixel_replay": 5,
+  "actual_source_precision_checks": 42,
+  "max_errors": {
+    "logscore_error": 2.842170943040401e-14,
+    "CDF_error": 3.4209346836427956e-05,
+    "CRPS_error": 7.082646093160144e-06,
+    "quantile_error": 7.594587204451386e-06
+  },
+  "math_tests": 5,
+  "math_tests_local_and_native": true
+}

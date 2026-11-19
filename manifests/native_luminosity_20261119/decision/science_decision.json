@@ -1,0 +1,14 @@
+{
+  "M5_gate": true,
+  "external_gates": {
+    "M30": false,
+    "M13": false
+  },
+  "science_gate": false,
+  "prospective_evaluation_performed": false,
+  "candidates": "both inventories delivered; NGC5053 contains historically exposed members and no isolated kinematic component; NGC1851 prior empty availability inventory, no residual opened",
+  "decision": "Two-parameter hypothesis insufficient as a universal old-population calibration; M5 cross-prediction benefit and partial transfer improvements retained.",
+  "scope": "M5 known-population, known-age/FeH, native-photometry conditional calibration only. M30/M13 do not achieve both-phase absolute-scale target. No universal field-star correction or production replacement.",
+  "gate_note": "M5 uses all525 E-supported predeclared calibration-region members. External combined tests use all primary E-supported objects; both phases tested separately. M5 internal gain is insufficient to authorize independent evaluation when no external system passes.",
+  "next_science": "Do not add a third parameter or per-system shift in this task. Existing evidence motivates population/phase information and predictive tail/branch representation as future separately scoped questions. All original forecasts and negative results retained."
+}

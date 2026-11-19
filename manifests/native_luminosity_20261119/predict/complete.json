@@ -1,0 +1,29 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "fit": "8a63b0f22a968b283f50ebebd081e2e3364cc358132c70be46c3f75be3cc9884",
+    "prepare": "7babacc7287bce92964034c3c4316f3af5d79e648def3209664257ed72d4313b",
+    "numerics": "22369cfe021c513617ae17d2895e01a8c7e0cd7ff8b8f7f02f813e50538929e5"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_audit.py": "e865435497b9617888c79f044fd5cf118bead32a2bf86c3944f6cf6baa57747e",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_predict.py": "e80d292ef136803805c6e3845f021d98b2566b656d31f5a228f29daa8de66892",
+    "nat8_fit.py": "e5f8a7e4ae5ee055f557e8abf21985c468a5c5585a0beff5ee23a7a690f2e5e2",
+    "nat8_math.py": "f07c595c58151425086cabaec9240653ec34413ba362069c47afec2d6e776163",
+    "nat8_statsmath.py": "27e32e0bc73cb63a2b469ec4aad3be6f6131ee42bbe45f25a808b58a8e868078"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "color_likelihood_weights_support_post_mass_unchanged": true,
+  "conditional_M5": "out-of-fold parameters only; no M5 parameter-mixture forecast",
+  "marginal_external": "empirical bootstrap parameter mixture, all target members share one draw index; target-reference kernel not yet added",
+  "outputs": {
+    "M5_calibrated.npz": "79767a04f8e6a71020dbfca3af0ed88c6892c2ba4f9423607bb03f23e1c80296",
+    "M30_calibrated.npz": "fd4a7b8f8e96c3b960d9b651d378a4a10e5ab83002da63c94e417a870c4a6ddb",
+    "support_domain.csv": "7d3c633b91a98892c5da3c1f6ce57362512aaf31e38cdbd286537a552c783cc8",
+    "M13_calibrated.npz": "8b946d109091f50508712ae81a4b445e1d5428291b1148ec551243253639984c"
+  }
+}

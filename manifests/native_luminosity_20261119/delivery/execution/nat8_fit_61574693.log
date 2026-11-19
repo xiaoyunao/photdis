@@ -1,0 +1,16 @@
+Point 0 [-0.39906265  0.84474705] 200.22588616033224 1.9971458709022727e-07
+Point 1 [-0.48120821  1.58920848] 252.1168160842594 7.442870411655811e-08
+Point full [-0.41762066  1.06739516] 466.00832912964836 6.899412287708628e-06
+Bootstrap refit 0 768
+Bootstrap refit 64 768
+Bootstrap refit 128 768
+Bootstrap refit 192 768
+Bootstrap refit 256 768
+Bootstrap refit 320 768
+Bootstrap refit 384 768
+Bootstrap refit 448 768
+Bootstrap refit 512 768
+Bootstrap refit 576 768
+Bootstrap refit 640 768
+Bootstrap refit 704 768
+All fixed fits frozen

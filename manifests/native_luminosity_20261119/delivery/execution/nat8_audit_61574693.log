@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/nat8_audit.py", line 98, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/nat8_audit.py", line 69, in main
+    header,rows=members('NGC_6205',archive);lookup={int(r[0]):r for r in rows};save_json(d/'membership_columns.json',dict(header=header,example_column_count=len(rows[0]),source='Vasiliev/Baumgardt2021v2'))
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/nat8_audit.py", line 16, in members
+    with archive.open(target) as f:
+         ~~~~~~~~~~~~^^^^^^^^
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/zipfile/__init__.py", line 1727, in open
+    zinfo = self.getinfo(name)
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/zipfile/__init__.py", line 1655, in getinfo
+    raise KeyError(
+        'There is no item named %r in the archive' % name)
+KeyError: "There is no item named 'catalogues/NGC_6205.txt' in the archive"
+srun: error: nid200004: task 0: Exited with exit code 1
+srun: Terminating StepId=61574693.2

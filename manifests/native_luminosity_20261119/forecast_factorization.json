@@ -1,0 +1,19 @@
+{
+  "private": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/prepare/M5_E.npz": "ebe36f552d2b912a68e459e86a430f94a07b5f544d41079741ad983419333ec9",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/predict/M5_calibrated.npz": "79767a04f8e6a71020dbfca3af0ed88c6892c2ba4f9423607bb03f23e1c80296",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/prepare/M30_E.npz": "91165de5d710946f5f08f2ebcc6730a82b8585041c6b3e5fb237142bece5018b",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/predict/M30_calibrated.npz": "fd4a7b8f8e96c3b960d9b651d378a4a10e5ab83002da63c94e417a870c4a6ddb",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/prepare/M13_E.npz": "ad529ccebfdbd7eae468e82f2c13d20202559db9b39cb590c65610284374681a",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/predict/M13_calibrated.npz": "8b946d109091f50508712ae81a4b445e1d5428291b1148ec551243253639984c"
+  },
+  "roster": {
+    "path": "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/prepare/roster.npz",
+    "sha": "d2eff52a22b2dfd9ccebe3fdd1c092075bc2191c503a8988aad1cbbf7c6dbac1"
+  },
+  "conditional": "Exact original E mean/logweight/sigma/x arrays, calibrated means=means-a0-a1*x; M5 opposite-fold parameters, external full-M5. No nodes/weights removed for log scoring.",
+  "marginal": "Uniform empirical ensemble of256 full-M5 bootstrap parameter vectors, same index shared across all external members; no target reference kernel in saved predictive PDF.",
+  "scoring": "M5 coupled conditional shared reference, external once-independent target Gaussian kernel; original v7 definitions unchanged.",
+  "private_score_cache": "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/score_cache",
+  "private_external_raw_curves": "/pscratch/sd/y/yunao/photdis_pipeline/data/native_luminosity_20261119/marginal_raw"
+}

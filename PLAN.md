@@ -1,19 +1,25 @@
 # PLAN
 
-## Native luminosity2026-11-19 — active
+## Native luminosity2026-11-19 — science completed, closing synchronization
 
-Execute full v8prompt/reviewb790c69f in native_luminosity_20261119. One model:
-E with common-band a0+a1*(native-node-gr-.30). Preserve weights, colors, support,
-phase, nodes, old products and Pal5style; no manuscript/agents. First seal933PSF
-parents/folds and source hashes, exact two-color segment geometry and three
-fixed QRF-source evidence audits. Fit M5two-fold cross predictions, then fullM5
-freeze and transfer toM30/M13 with shared reference/member refits; parameter
-mixtures external only, conditional M5 shared reference explicitly coupled.
-At most two independent-candidate inventories, one pre-frozen evaluation only
-if registered CV/transfer gate passes; no model/parameter expansion. Deliver
-scales/phase gaps/scores/widths/coverage/domain/support, at most three figure
-groups, full private PDFs and compact replay, scientific scope decision,
-actual numerical/visual QA, safe GitHub/canonical sync and resource return.
+Full v8prompt/reviewb790c69f executed in native_luminosity_20261119. One E gray
+mapping only;933PSFs,525M5calibration members,2folds and771actual point/refits.
+M5 CV lowerMS/TO biases+0.058/-0.006mag pass the registered point target;
+M30+0.176/-0.252 and M13+0.121/-0.157 fail both-phase transfer. Gains versus
+originalE retained, QRF still better on turnoff full-distribution metrics.
+Two-parameter hypothesis is insufficient for universal old-population calibration.
+M5gate passes, both external gates fail; two real candidate inventories delivered,
+no new system residual opened. Three fixed QRF tails retained after evidence audit.
+See manifests/native_luminosity_20261119/{README,science_decisions,methods,figures}.md.
+
+Five English Pal5/v3.8 PNG/PDF plates in threegroups,933source states/3147forecast
+rows, full private PDFs and shareddraws preserved.42actual-source numerical checks,
+5math tests in both runtimes, oldv3.8pixels,77bound outputs and16source files,
+5exact native-runtime portable redraws and all5PDFpages visually checked.
+Production87069408, old fivecontrols/score tables and allskyproducts unchanged;
+no manuscript or agents. Only safe local/GitHub/canonical reconciliation and
+return of own61574693 remain. Next science needs a new scope; do not add parameters,
+per-system zero points, prospective evaluation, production rerun or sky changes.
 
 
 ## Sequence mechanisms2026-11-19 — completed

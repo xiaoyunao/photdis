@@ -1,0 +1,17 @@
+{
+  "system": "NGC1851",
+  "published_members": 9943,
+  "history_member_ID_exposures": 0,
+  "prior_system": "availability_only_empty",
+  "forecast_opened": false,
+  "qualified_field_PSF": 16224,
+  "qualified_native_PSF": 6776,
+  "annulus_member": 1440,
+  "unmasked_low_crowding": 207,
+  "source_history_excluded": 0,
+  "inventory_eligible": 207,
+  "gr_min": 0.24071884155273438,
+  "gr_max": 1.3757076263427734,
+  "r_min": 15.906758308410645,
+  "r_max": 20.71868896484375
+}

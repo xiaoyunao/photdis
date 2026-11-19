@@ -1,0 +1,34 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "evaluation": "5c1df518c71df97b86a69ea6ecb2ccd5650e57f58cac9de16fffacb68b20a7db",
+    "audit": "bc0e5dbabac0b4be43192effc2b231a805817c62f7348967a2f6859c5e21b8c4"
+  },
+  "code": {
+    "nat8_figures.py": "4a0fe36663398ee910590b432c22276512c0ce545333379e1aaeeafcb2a0e8dd",
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_audit.py": "e865435497b9617888c79f044fd5cf118bead32a2bf86c3944f6cf6baa57747e",
+    "nat8_examples.py": "1d9bc7dd97cfe36bd3940ebb295a92e102125b93bf24d75b2e4d2d7df19109ca",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_predict.py": "e80d292ef136803805c6e3845f021d98b2566b656d31f5a228f29daa8de66892",
+    "nat8_inventory_finish.py": "f76d10a64ce136e4afb06061ded1668d99aa219f7e9a9b93e88a71cc72b017ea",
+    "nat8_fit.py": "e5f8a7e4ae5ee055f557e8abf21985c468a5c5585a0beff5ee23a7a690f2e5e2",
+    "nat8_math.py": "f07c595c58151425086cabaec9240653ec34413ba362069c47afec2d6e776163",
+    "nat8_decide.py": "b02b8f91ffcd4390ef0f51e2d8e19ee75c26c3d8c4770e8b0ba6baf3704a3460",
+    "nat8_evaluate.py": "fb3afc31d6e14251d6555f585c5c02da6f397b20e1afdd0d2fa55623c1da1b8c",
+    "nat8_validate.py": "c86901970fb78851ef5dcb1dc114046fe093e2f06d082cc3a603e491c2093067",
+    "nat8_statsmath.py": "27e32e0bc73cb63a2b469ec4aad3be6f6131ee42bbe45f25a808b58a8e868078"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "registered_gate_applied_without_retuning": true,
+  "prospective_prediction_opened": false,
+  "outputs": {
+    "science_decision.json": "ec1517715860e19d293ea3c60aaf7f7a8e310fe5011fb7890263dc781a9de533",
+    "width_ratios.csv": "2abde81fb50981fa8702f108bbed743808799b78e3a529523649dd407cdf517f",
+    "phase_gap_changes.csv": "9b483ed68bfda588fb076d37207043d96e0d20ac12ede885172799d8825f47e2",
+    "luminosity_scale.csv": "8506eda6074be79c52679367e527a28e018c55a463f608a2072c4ccd4a66a73f",
+    "continuation_criteria.csv": "031738972f4949e055517882c9d64f53bde1578f47bdd1faaf52e8aff031b329"
+  }
+}

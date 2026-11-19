@@ -1,0 +1,34 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "predict": "b6b38c78ad59e3f5b69cb2c6bfe6e72adb5ad64bbede2818183ace508062aab1",
+    "fit": "8a63b0f22a968b283f50ebebd081e2e3364cc358132c70be46c3f75be3cc9884"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_audit.py": "e865435497b9617888c79f044fd5cf118bead32a2bf86c3944f6cf6baa57747e",
+    "nat8_examples.py": "1d9bc7dd97cfe36bd3940ebb295a92e102125b93bf24d75b2e4d2d7df19109ca",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_predict.py": "e80d292ef136803805c6e3845f021d98b2566b656d31f5a228f29daa8de66892",
+    "nat8_inventory_finish.py": "f76d10a64ce136e4afb06061ded1668d99aa219f7e9a9b93e88a71cc72b017ea",
+    "nat8_fit.py": "e5f8a7e4ae5ee055f557e8abf21985c468a5c5585a0beff5ee23a7a690f2e5e2",
+    "nat8_math.py": "f07c595c58151425086cabaec9240653ec34413ba362069c47afec2d6e776163",
+    "nat8_evaluate.py": "fb3afc31d6e14251d6555f585c5c02da6f397b20e1afdd0d2fa55623c1da1b8c",
+    "nat8_statsmath.py": "27e32e0bc73cb63a2b469ec4aad3be6f6131ee42bbe45f25a808b58a8e868078"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "M5": "conditional point forecasts at common reference, reference uncertainty coupled to calibration refits, no independent M5 measurement kernel",
+  "external": "once-convolved target reference, conditional calibration refits or separately parameter-marginalized forecast",
+  "marginal_CIs": "conditional on frozen calibration-parameter ensemble; target member/reference resampling; full parameter effects already inside forecast",
+  "v7_scores_preserved": true,
+  "outputs": {
+    "group_centers.npz": "c859943e2ec294c28a25207d03a94061a8cfb8fbc58f0dffd66d5e612e6dbcd7",
+    "paired.csv": "0defd27bb45e4517ede9718a43f24a709841c5a97e510db599f816ac131f4362",
+    "family_metrics.json": "316c92aa0658cc0ecbe067099b3bc5a560f294ddfdebaf4dc2f317a71233bc97",
+    "phase_gaps.csv": "065f4f84be1aa8d14c44cd8495d1d433c535794d4852e463edbafa546e01907c",
+    "summary.csv": "e3dac4bda3d69ee69ae32542f6a92423e185c0c63dbf9387113f965b6432a849",
+    "group_design.json": "db649479b3e530fc66da14df98497f1bd4f29413a802554dc4466880df2c8921"
+  }
+}

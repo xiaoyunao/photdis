@@ -1,0 +1,37 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "prepare": "7babacc7287bce92964034c3c4316f3af5d79e648def3209664257ed72d4313b",
+    "membership_zip": "9eafa2e10afc031790cfe36ed8545aa6336cc87c317fab167e9cea9dacbd0748",
+    "data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716",
+    "data/v3_9/expansion/north/native_model/complete.json": "42cc5e149325bfc5a66fc177f84977aa943a4cbd14324d720ec33d44aba5dad4",
+    "native_north_model": "2d33b0e528d3bdfafb560e5905cdea6354ba8216496ab15a9a1c0c0cab3bb71f"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_audit.py": "e865435497b9617888c79f044fd5cf118bead32a2bf86c3944f6cf6baa57747e",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_predict.py": "e80d292ef136803805c6e3845f021d98b2566b656d31f5a228f29daa8de66892",
+    "nat8_fit.py": "e5f8a7e4ae5ee055f557e8abf21985c468a5c5585a0beff5ee23a7a690f2e5e2",
+    "nat8_math.py": "f07c595c58151425086cabaec9240653ec34413ba362069c47afec2d6e776163",
+    "nat8_statsmath.py": "27e32e0bc73cb63a2b469ec4aad3be6f6131ee42bbe45f25a808b58a8e868078"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "fixed_tail_sources": 3,
+  "candidate_count": 2,
+  "no_new_candidate_distance_predictions": true,
+  "membership_probability_is_astrometric_not_independent_distance_truth": true,
+  "outputs": {
+    "three_membership.json": "83d9783c1cfa046678115fe27d7726b0b17aad80a9bea689a44cbf0e09a73c04",
+    "candidate_history.csv": "d4d65e8acbbde7d9d2baa3a1760584bcd593df38ac275b1e59a1f2e406865a6c",
+    "three_raw_imaging.json": "2e0e9264a9c888308ed4b9223511c77f55ee19b23ce7dd84fae6fbeb30be3ccd",
+    "candidate_inventory.csv": "4d180ab803f4e5b6c41fa7d24895ef97c341ad2f2d5b02509f78f9fc1bc9880e",
+    "membership_columns.json": "1bad581ba4955146da830ca6132fa59140ce30af8727e29a0f4250b87c9a044b"
+  }
+}

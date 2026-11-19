@@ -1,0 +1,171 @@
+{
+  "source": "https://arxiv.org/html/2105.09526v2",
+  "DOI": "10.1093/mnras/stab1474",
+  "table": "Table2 (including continuation pages)",
+  "source_sha": "6148fe1fbc48d19ef183acbbcb7c199770c707d9ab0dfee88bf930913ab900b5",
+  "systems": [
+    {
+      "name": "NGC 1851",
+      "methods": {
+        "gaia_parallax": null,
+        "gaia_kinematic": null,
+        "hst_kinematic": {
+          "distance_kpc": 11.44,
+          "minus_kpc": 0.32,
+          "plus_kpc": 0.32,
+          "raw": "\\,\\,\\,11.440\\pm 0.320"
+        },
+        "subdwarf": {
+          "distance_kpc": 12.303,
+          "minus_kpc": 0.445,
+          "plus_kpc": 0.462,
+          "raw": "\\,\\,\\,12.303^{+0.462}_{-0.445}"
+        },
+        "star_count": {
+          "distance_kpc": 12.376,
+          "minus_kpc": 0.528,
+          "plus_kpc": 0.528,
+          "raw": "\\,\\,\\,12.376\\pm 0.528"
+        },
+        "literature": {
+          "distance_kpc": 12.017,
+          "minus_kpc": 0.154,
+          "plus_kpc": 0.156,
+          "raw": "\\,\\,\\,12.017^{+0.156}_{-0.154}"
+        },
+        "combined": {
+          "distance_kpc": 11.951,
+          "minus_kpc": 0.133,
+          "plus_kpc": 0.134,
+          "raw": "\\,\\,\\,11.951^{+0.134}_{-0.133}"
+        }
+      },
+      "n_publication": 18,
+      "mu": 15.38702123199049,
+      "mu_minus": 0.024301303772251117,
+      "mu_plus": 0.024212041727856654,
+      "displayed_methods": [
+        "hst_kinematic",
+        "subdwarf",
+        "star_count",
+        "literature"
+      ],
+      "dependency_flags": {
+        "gaia_possible": true,
+        "stellar_model_possible": true,
+        "dynamical_model": true,
+        "shared_calibration": true,
+        "method_covariance": "not supplied; do not independently combine columns"
+      }
+    },
+    {
+      "name": "NGC 5053",
+      "methods": {
+        "gaia_parallax": null,
+        "gaia_kinematic": null,
+        "hst_kinematic": null,
+        "subdwarf": {
+          "distance_kpc": 18.03,
+          "minus_kpc": 0.652,
+          "plus_kpc": 0.677,
+          "raw": "\\,\\,\\,18.030^{+0.677}_{-0.652}"
+        },
+        "star_count": null,
+        "literature": {
+          "distance_kpc": 17.515,
+          "minus_kpc": 0.232,
+          "plus_kpc": 0.235,
+          "raw": "\\,\\,\\,17.515^{+0.235}_{-0.232}"
+        },
+        "combined": {
+          "distance_kpc": 17.537,
+          "minus_kpc": 0.232,
+          "plus_kpc": 0.235,
+          "raw": "\\,\\,\\,17.537^{+0.235}_{-0.232}"
+        }
+      },
+      "n_publication": 20,
+      "mu": 16.219776509893705,
+      "mu_minus": 0.028918491742972334,
+      "mu_plus": 0.028905012950461176,
+      "displayed_methods": [
+        "subdwarf",
+        "literature"
+      ],
+      "dependency_flags": {
+        "gaia_possible": true,
+        "stellar_model_possible": true,
+        "dynamical_model": false,
+        "shared_calibration": true,
+        "method_covariance": "not supplied; do not independently combine columns"
+      }
+    },
+    {
+      "name": "NGC 5904",
+      "methods": {
+        "gaia_parallax": {
+          "distance_kpc": 7.651,
+          "minus_kpc": 0.575,
+          "plus_kpc": 0.677,
+          "raw": "\\,\\,\\,\\,\\,\\,7.651^{+0.677}_{-0.575}"
+        },
+        "gaia_kinematic": {
+          "distance_kpc": 7.467,
+          "minus_kpc": 0.357,
+          "plus_kpc": 0.357,
+          "raw": "\\,\\,\\,\\,\\,\\,7.467\\pm 0.357"
+        },
+        "hst_kinematic": {
+          "distance_kpc": 7.456,
+          "minus_kpc": 0.201,
+          "plus_kpc": 0.201,
+          "raw": "\\,\\,\\,\\,\\,\\,7.456\\pm 0.201"
+        },
+        "subdwarf": {
+          "distance_kpc": 7.551,
+          "minus_kpc": 0.273,
+          "plus_kpc": 0.283,
+          "raw": "\\,\\,\\,\\,\\,\\,7.551^{+0.283}_{-0.273}"
+        },
+        "star_count": {
+          "distance_kpc": 7.721,
+          "minus_kpc": 0.35,
+          "plus_kpc": 0.35,
+          "raw": "\\,\\,\\,\\,\\,\\,7.721\\pm 0.350"
+        },
+        "literature": {
+          "distance_kpc": 7.471,
+          "minus_kpc": 0.065,
+          "plus_kpc": 0.066,
+          "raw": "\\,\\,\\,\\,\\,\\,7.471^{+0.066}_{-0.065}"
+        },
+        "combined": {
+          "distance_kpc": 7.479,
+          "minus_kpc": 0.06,
+          "plus_kpc": 0.06,
+          "raw": "\\,\\,\\,\\,\\,\\,7.479^{+0.060}_{-0.060}"
+        }
+      },
+      "n_publication": 38,
+      "mu": 14.36921766611718,
+      "mu_minus": 0.0174908107123805,
+      "mu_plus": 0.017351050444012465,
+      "displayed_methods": [
+        "gaia_parallax",
+        "gaia_kinematic",
+        "hst_kinematic",
+        "subdwarf",
+        "star_count",
+        "literature"
+      ],
+      "dependency_flags": {
+        "gaia_possible": true,
+        "stellar_model_possible": true,
+        "dynamical_model": true,
+        "shared_calibration": true,
+        "method_covariance": "not supplied; do not independently combine columns"
+      }
+    }
+  ],
+  "interpretation": "M5 frozen combined scale includes photometric and dynamical inputs. NGC1851 isolated HST kinematics 11.440+/-0.320 kpc is a possible future target reference; published error already includes floor. Common dynamical modeling systematics with M5 cannot be quantified from this table. NGC5053 has no isolated parallax/kinematic component; combined/subdwarf/literature are model-sensitive. No new independent truth claim."
+}

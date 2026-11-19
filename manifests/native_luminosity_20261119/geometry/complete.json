@@ -1,0 +1,26 @@
+{
+  "config": "3ef070efd2f45c4cf2b346270398075cd3524d94e808062060cebe0df72ffa3c",
+  "job": "61574693",
+  "inputs": {
+    "prepare": "7babacc7287bce92964034c3c4316f3af5d79e648def3209664257ed72d4313b",
+    "data/sequence_mechanisms_20261119/prepare/complete.json": "54de829ea3bbf3b82c294ff78777f22a3fbe2f51d1d39786a014699e7ff24bd1"
+  },
+  "code": {
+    "nat8_prepare.py": "f71725a223f6ef716ae1c29ea295411f0a670c9276ec4c894a9b7e39fc1af9e2",
+    "nat8_common.py": "5cd28ad73477dc162da3220fcf86a7d5b184b5107e05f319d488c23313275d6c",
+    "nat8_geometry.py": "a2481b0b421f2d3cbe8baa6c85f962b1eb7d3581468397a1e6e6d9aeb5981902",
+    "nat8_math.py": "6467b48122dca69ba2178d1003a4c742deb63d017df23bc605c3f94b7b9d57d9"
+  },
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "scope": "distance-independent weighted nearest original physical segments, frozen E support remains unchanged",
+  "tangent": "zero at interior nearest projection by construction; endpoints and physical components reported, not evidence of no shape error",
+  "outputs": {
+    "M5_segments.npz": "6b2af0544612d9350ddc92ebe36788aaa032cd4bb9b3b55a0af54a478d3a8a07",
+    "M13_segments.npz": "fe9ee2441f827523bd4a672929a8859bf9b6732fdb4ed18c00627f044cbdf7ab",
+    "per_member.csv": "563db09d405d4ca9d8b7e295ab255d74b831c64956d1d6060f2b8b34ac4d35bf",
+    "redraw.npz": "3d1aeaafd6ef92e3519445b42310c4e3bdbad657003a6b190223dd021ed96f7e",
+    "competitive_segments.csv": "7fcc6d39fd307d6b1f679f9aa43280160c8ed282a3cc1ddc24f52225aaa83ae9",
+    "M30_segments.npz": "86bf34e5b6fc891f7548a2190e8143d3a1ff9e897b7d748b748323f14633158e",
+    "color_bins.csv": "411ad8ef255ac3d085afc0be3f0dc02735442610cfdc61505a05c875eea1bb06"
+  }
+}

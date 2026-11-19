@@ -1,0 +1,66 @@
+{
+  "bound_outputs": 77,
+  "source_files": 16,
+  "parent_PSF": 933,
+  "forecast_rows": 3147,
+  "fixed_examples": 7,
+  "all_full_CDFs_normalized": true,
+  "gate_not_opened": true,
+  "local_PDF_checks": [
+    {
+      "file": "calibration_complete_PDF.pdf",
+      "pages": 1,
+      "English_only": true,
+      "width_pt": 514.8,
+      "height_pt": 518.4,
+      "PNG": [
+        2145,
+        2160
+      ]
+    },
+    {
+      "file": "cross_prediction_transfer_scores.pdf",
+      "pages": 1,
+      "English_only": true,
+      "width_pt": 514.8,
+      "height_pt": 489.6,
+      "PNG": [
+        2145,
+        2040
+      ]
+    },
+    {
+      "file": "fixed_three_QRF_tails.pdf",
+      "pages": 1,
+      "English_only": true,
+      "width_pt": 514.8,
+      "height_pt": 259.2,
+      "PNG": [
+        2145,
+        1080
+      ]
+    },
+    {
+      "file": "luminosity_mapping_widths.pdf",
+      "pages": 1,
+      "English_only": true,
+      "width_pt": 514.8,
+      "height_pt": 468.0,
+      "PNG": [
+        2145,
+        1950
+      ]
+    },
+    {
+      "file": "two_color_geometry.pdf",
+      "pages": 1,
+      "English_only": true,
+      "width_pt": 514.8,
+      "height_pt": 352.8,
+      "PNG": [
+        2145,
+        1470
+      ]
+    }
+  ]
+}
