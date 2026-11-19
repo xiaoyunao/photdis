@@ -85,3 +85,13 @@ archives/
 !manifests/stream_response_20261119/conditioning/weighted_ids.npz
 !manifests/stream_response_20261119/full_replay/fixed_error_curve.npz
 !manifests/stream_response_20261119/full_identities/source_alias_exclusions.npz
+
+# Compact v6 display and sequence evidence; raw sources and full cubes stay on NERSC.
+!manifests/sky_sequence_20261119/**/*.csv
+!manifests/sky_sequence_20261119/rgb/rgb_*.npz
+!manifests/sky_sequence_20261119/old_domain/rgb_*.npz
+!manifests/sky_sequence_20261119/no_extinction/rgb_*.npz
+!manifests/sky_sequence_20261119/prior_display/rgb_*.npz
+!manifests/sky_sequence_20261119/coverage/sky_coverage.npz
+!manifests/sky_sequence_20261119/ridge/ridge_redraw.npz
+!manifests/sky_sequence_20261119/width/width_redraw.npz

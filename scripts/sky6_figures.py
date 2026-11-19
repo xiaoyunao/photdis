@@ -30,6 +30,8 @@ def overlay(ax):
 def rgb(a,d,name):
     images=[]
     for row in (0,1):
+        if 'rgb' in a:
+            images.append(a['rgb'][row].copy());continue
         values=a['density'] if row==0 else np.maximum(a['signed_residual'],0);lo=a['stretch'][row,:,0,None,None];hi=a['stretch'][row,:,1,None,None]
         out=np.arcsinh(10*np.clip((values-lo)/np.maximum(hi-lo,1e-8),0,1))/np.arcsinh(10)
         im=np.moveaxis(out[::-1],0,-1);im[~a['mask']]=.88;images.append(im)
@@ -40,6 +42,20 @@ def rgb(a,d,name):
         axes[0].legend(frameon=False,fontsize=5,loc='lower right')
         f.supxlabel('   |   '.join(f'{c}: {lo:.2f}–{hi:.2f} kpc' for c,(lo,hi) in zip('BGR',a['channel_kpc']))+'\nGalactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8)
         figure(d,name,f,[dict(scope=str(a['scope']),coordinates='Galactic',latitude_lines='0,+/-20,+/-30',correction='2D catalog full-column')])
+
+
+def physical(a,d,name='physical_overview'):
+    """Retain the v5 scalar companion and its physical colorbar units."""
+    with plt.rc_context(PAPER):
+        f,axes=plt.subplots(2,3,figsize=(7.15,5.1),subplot_kw={'projection':'aitoff'},layout='constrained')
+        for row,key in enumerate(('density','signed_residual')):
+            values=a[key];finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.995)),1e-5)
+            for j,ax in enumerate(axes[row]):
+                z=ax.pcolormesh(a['l'],a['b'],np.ma.masked_invalid(values[j]),cmap=COLORMAP if row==0 else 'RdBu_r',norm=SymLogNorm(cap/100,vmin=0 if row==0 else -cap,vmax=cap),rasterized=True)
+                overlay(ax);lo,hi=a['channel_kpc'][j];ax.set_title(f'{lo:.2f}–{hi:.2f} kpc')
+            decade=10.**np.floor(np.log10(cap));ticks=[0,decade] if row==0 else [-decade,0,decade]
+            f.colorbar(z,ax=axes[row].tolist(),location='bottom',fraction=.03,pad=.06,label='CMD-selected source density (deg⁻²)' if row==0 else 'Signed residual (deg⁻²)',extend='max' if row==0 else 'both',ticks=ticks,format=plt.FormatStrFormatter('%g'))
+        f.supxlabel('Galactic longitude',fontsize=8);f.supylabel('Galactic latitude',fontsize=8);figure(d,name,f,[dict(scope=str(a['scope']),coordinates='Galactic')])
 
 
 def coverage(a,d):
@@ -55,11 +71,12 @@ def coverage(a,d):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT/'manifests/sky_sequence_20261119');p.add_argument('--output',type=Path,required=True);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    for stage in ('rgb','old_domain','no_extinction'):
+    for stage in ('rgb','old_domain','no_extinction','prior_display'):
         d=args.output/stage;d.mkdir(exist_ok=True)
         for path in sorted((args.root/stage).glob('rgb_*.npz')):
             with np.load(path) as z:a={k:z[k] for k in z.files}
             rgb(a,d,path.stem)
+            if path.stem=='rgb_overview':physical(a,d)
     if (args.root/'coverage/sky_coverage.npz').exists():
         with np.load(args.root/'coverage/sky_coverage.npz') as z:a={k:z[k] for k in z.files}
         d=args.output/'coverage';d.mkdir(exist_ok=True);coverage(a,d)

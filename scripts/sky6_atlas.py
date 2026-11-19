@@ -11,7 +11,7 @@ from halo_filtering import channel_weights
 from stream_rgb import stretch
 from stream_common import track
 from sky6_common import *
-from sky6_figures import rgb,coverage
+from sky6_figures import rgb,coverage,physical
 
 
 def assemble():
@@ -71,6 +71,7 @@ def render():
                     _,rows=stretch(pair[:,row],mask,residual=bool(row));st.append([[r['lo'],r['hi']] for r in rows]);stats.extend(dict(stage=stage,group=name,kind=('density','positive_residual')[row],**r) for r in rows)
                 a=dict(l=l,b=b,density=pair[:,0,pix].astype('f4'),signed_residual=pair[:,1,pix].astype('f4'),mask=mask[pix],channel_kpc=bounds,stretch=np.array(st),scope=np.array(stage),label=np.array('CMD-selected sky' if view==0 else 'CMD-selected sky · old domain'))
                 npz(d/('rgb_'+name+'.npz'),**a);rgb(a,d,'rgb_'+name)
+                if name=='overview':physical(a,d)
             csv_rows(d/'node_weights.csv',[dict(channel=j,mu=float(mu),weight=float(value)) for j,row in enumerate(w) for mu,value in zip(h['MU'].data,row) if value>0]);complete(d,inputs,coordinate='Galactic l0 center, increasing left',scope=stage,annotations=C['annotations'])
     with np.load(OUT/'atlas/companions.npz') as z:a={k:z[k] for k in z.files}
     d=folder('coverage');area=a['area'][:,0].sum(axis=0);mask=a['mask'][0];sa=np.maximum(smooth(area,.3),0)
@@ -82,7 +83,7 @@ def render():
         values=maps[:,row] if row==0 else np.maximum(maps[:,row],0)
         for j,ch in enumerate('BGR'):stats.append(dict(stage='no_extinction',group='overview',kind=('density','positive_residual')[row],channel=ch,lo=float(st[row,j,0]),hi=float(st[row,j,1]),saturated_fraction=float((values[j,mask]>st[row,j,1]).mean())))
     r=dict(l=l,b=b,density=maps[:,0,pix].astype('f4'),signed_residual=maps[:,1,pix].astype('f4'),mask=mask[pix],channel_kpc=np.array(C['rgb']['overview_BGR_kpc']),stretch=st,scope=np.array('No extinction in CMD only; exact same admitted sources; same corrected-overview stretch'),label=np.array('No extinction · same sources'))
-    npz(d/'rgb_overview.npz',**r);rgb(r,d,'rgb_overview');npz(d/'physical_channels.npz',density=maps[:,0].astype('f4'),signed_residual=maps[:,1].astype('f4'),weighted_counts=raw,mask=mask);complete(d,inputs,scope='same source IDs/admission/geometry, observed colors/magnitudes in fixed CMD; diagnostic only, not a new dust solution')
+    npz(d/'rgb_overview.npz',**r);rgb(r,d,'rgb_overview');physical(r,d);npz(d/'physical_channels.npz',density=maps[:,0].astype('f4'),signed_residual=maps[:,1].astype('f4'),weighted_counts=raw,mask=mask);complete(d,inputs,scope='same source IDs/admission/geometry, observed colors/magnitudes in fixed CMD; diagnostic only, not a new dust solution')
     csv_rows(folder('display')/'stretch.csv',stats)
     complete(OUT/'display',inputs,style='same V5/Pal5 base and BGR channels; Galactic annotations requested separately')
 

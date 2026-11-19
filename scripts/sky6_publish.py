@@ -6,7 +6,7 @@ from sky6_common import *
 
 def main():
     public=ROOT/'manifests/sky_sequence_20261119';fig=ROOT/'figures/sky_sequence_20261119';records={}
-    for stage in (*stages(),'no_extinction','display','band','ridge','width'):
+    for stage in (*stages(),'no_extinction','display','band','prior_display','ridge','width'):
         source=OUT/stage
         if not (source/'complete.json').exists():continue
         r=json.loads((source/'complete.json').read_text());dest=public/stage;dest.mkdir(parents=True,exist_ok=True)

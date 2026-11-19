@@ -20,7 +20,7 @@ def main():
         run('sky6_scan.py','scan')
     run('sky6_count.py','identities');run('sky6_count.py','count')
     for p in areas:assert p.wait()==0
-    run('sky6_atlas.py','assemble');run('sky6_atlas.py','render');run('sky6_atlas.py','band');run('sky6_publish.py')
+    run('sky6_atlas.py','assemble');run('sky6_atlas.py','render');run('sky6_atlas.py','band');run('sky6_prior.py');run('sky6_publish.py')
     print('TASK_A_DELIVERED',flush=True)
 
 
