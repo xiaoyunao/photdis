@@ -1,0 +1,8 @@
+{
+  "scope": "Final user-selected display channels; supersedes earlier near-bin preferences for the main overview",
+  "BGR_kpc": [[5,10],[10,20],[20,100]],
+  "primary_display": "fixed original V5 overview BGR brightness limits and asinh10",
+  "companion_display": "same V5 percentile rule balanced on the fixed old-domain reference",
+  "calculation": "Reuse exact5–10 channel already accumulated on the201-node grid;10–20 and20–100 reweight the original61far nodes. No source rescan or distance-model rerun",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc"
+}

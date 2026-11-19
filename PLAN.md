@@ -20,6 +20,8 @@ Goal registered before development. Baseline6538df76; production87069408 frozen.
    finite near edge10pc is explicit. Preserve original maps. Compare fixed V5
    channel gains and V5 percentile balance on one fixed old-domain reference,
    so partition changes can be distinguished from display normalization.
+   Final user decision supersedes those main-display choices: B5–10/G10–20/
+   R20–100kpc. Reuse completed responses exactly; original/near trials are controls.
 3. Native M13/M5 ridge in two colors plus M30; all available members and unsupported
    rows visible. Freeze few literature-matched MIST1.2 models plus same-version
    control and original FOS. Shared distances/extinction sensitivity and binary

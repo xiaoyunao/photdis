@@ -72,12 +72,13 @@ def coverage(a,d):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT/'manifests/sky_sequence_20261119');p.add_argument('--output',type=Path,required=True);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    for stage in ('rgb','old_domain','no_extinction','prior_display','channel_trials'):
+    for stage in ('rgb','old_domain','no_extinction','prior_display','channel_trials','selected_channels'):
         d=args.output/stage;d.mkdir(exist_ok=True)
         for path in sorted((args.root/stage).glob('rgb_*.npz')):
             with np.load(path) as z:a={k:z[k] for k in z.files}
             rgb(a,d,path.stem)
             if path.stem=='rgb_overview':physical(a,d)
+            if stage=='selected_channels' and path.stem=='rgb_selected_fixed_gain':physical(a,d,'physical_selected')
     if (args.root/'coverage/sky_coverage.npz').exists():
         with np.load(args.root/'coverage/sky_coverage.npz') as z:a={k:z[k] for k in z.files}
         d=args.output/'coverage';d.mkdir(exist_ok=True);coverage(a,d)
