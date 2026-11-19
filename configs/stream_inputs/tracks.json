@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/cmateu/galstreams",
+  "commit": "6a304c05bea7f774390a11082ea127719e99b70a",
+  "files": {
+    "track.st.Sagittarius.antoja2020.ecsv": "4ea181c1456f3a9df28f12a41dfbbd1ea34401e6a0d5838a7bd01a52defd10a9",
+    "track.st.Pal5.ibata2024.ecsv": "bdfba81702890bd697d7b8a76cad672d038b7870f7dfc3a17d9fb101bdcc817d"
+  },
+  "Pal5_distance": "placeholder1kpc never used; adopted21.94+-.51kpc from frozen published reference"
+}

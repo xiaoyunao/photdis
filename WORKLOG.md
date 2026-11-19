@@ -1,5 +1,12 @@
 # WORKLOG
 
+## 2026-11-19 — stream recovery and population scales
+
+- Read the complete latest GPT reply fc961495 and v5 prompt. Local/origin/NERSC reconcile at884ea87b; new detailed goal registered before changes.
+- Freeze production87069408 and all v4 evidence. Registered config before inspecting newly extracted target excesses. Fixed Pal5 trailing/leading and Sgr north/south track windows, on/off/phase rules and recovery criteria.
+- NERSC authentication valid; allocated64CPU/192GiB61555882 on nid200010. All scans and numerical work use that allocation.
+- Existing61-node cube supplies requested RGB; new local raw imaging establishes whether a broader whole-footprint definition is scientifically supported. No manuscript edits.
+
 ## 2026-11-18 — halo atlas and sequence response
 
 - Published the main delivery in35acd537. Final repository completeness

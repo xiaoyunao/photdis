@@ -1,0 +1,24 @@
+{
+  "url": "https://mist.science/output/MIST_iso_6afe6a78786d5.zip",
+  "params": {
+    "v_div_vcrit": "vvcrit0.4",
+    "age_scale": "linear",
+    "age_type": "single",
+    "age_value": 11500000000.0,
+    "age_range_low": "",
+    "age_range_high": "",
+    "age_range_delta": "",
+    "age_list": "",
+    "FeH_value": -1.4,
+    "alpha_value": "p0",
+    "output_option": "photometry",
+    "Av_value": 0,
+    "output": "DECam",
+    "version": "MIST1"
+  },
+  "template_file": "configs/stream_inputs/pal5_mist_11p5_fehm1p4_decam.txt",
+  "sha256": "505eecce0f062ab4fe545dd8cc9faeed97ac552a56e0f558f97a3a8af2bd01e4",
+  "archive_sha256": "59c208e9ab07a8ab96fc072c254ec46721ad9f8e92daf8fe150efe051c282d23",
+  "role": "fixed physical Pal5 control; no zero-point adjustment",
+  "literature": "11.5Gyr and [Fe/H]~ -1.4; Pal5 stellar population literature; distinct from FOS reference template"
+}

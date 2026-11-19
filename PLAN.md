@@ -1,5 +1,16 @@
 # PLAN
 
+## Stream response2026-11-19 — active
+
+Execute full v5 prompt and reviewfc961495 in stream_response_20261119.
+1. Deliver overview and five internal-three-channel RGBs from actual61-node cube, with physical density/signed residual/masks and lossless redraw grids.
+2. Fixed Pal5/Sgr raw-imaging and random-area extraction: strict/E/gr/z/depth cutflows, on/off Hess, full common CMD envelope, phase and angular/mu controls. Only a locally supported exact definition may expand full footprint.
+3. Preserve turnoff multivalued branches, same-ID/phase/support audit; one M13 lower-MS zero point and held-out-system migration plus ordinary-dwarf control, common scale errors.
+4. Fixed-population/reference-role/logg-phase conditioning comparison with/without distance, identical support/weighted mean, independent-scale/selection controls and effect definitions.
+5. Validate scientific conservation and actual figures, retain negative outcomes, write scientific decisions, update memory, commit and synchronize GitHub/NERSC. Preserve v3.8 base style; authorized RGB extension only.
+
+Parameters and roles: configs/stream_response_20261119.json. Primary evidence884ea87b, production87069408. All TYPE=PSF/ownership and source exclusions explicit. Numerical jobs on allocated NERSC nodes only.
+
 ## Halo response 2026-11-18 — completed
 
 The complete v4 prompt/review718e2850 is delivered in

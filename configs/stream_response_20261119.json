@@ -1,0 +1,30 @@
+{
+  "evidence": "884ea87be35031017a17586d463b02f602d60c22",
+  "production": "8706940843975e9f9af657ea298aa5b7c94f64bc",
+  "seed": 2026111905,
+  "nside": 512,
+  "rgb": {"overview_BGR_kpc": [[10,15],[15,26],[26,100]], "within_bin": "three equal-modulus intervals, normalized exact mu-cell overlap weights", "density_stretch": "asinh(10*clip((density-p05)/(p995-p05),0,1))/asinh(10), each channel", "positive_residual_stretch": "asinh(10*clip(max(residual,0)/positive_p995,0,1))/asinh(10)", "sigma_deg": 0.3, "background_sigma_deg": 5},
+  "local": {
+    "Pal5_tail": {"track": "Pal5.ibata2024", "ra_range": [231,240], "on_halfwidth_deg": 0.3, "off_abs_deg": [1,2], "segments": 3, "distance_kpc": 21.94, "common_sigma_kpc": 0.51, "exclude_M5_radius_deg": 0.8},
+    "Pal5_leading": {"track": "Pal5.ibata2024", "ra_range": [224,227], "on_halfwidth_deg": 0.3, "off_abs_deg": [1,2], "segments": 3, "distance_kpc": 21.94, "common_sigma_kpc": 0.51, "exclude_M5_radius_deg": 0.8},
+    "Sgr_north": {"track": "Sagittarius.antoja2020", "ra_range": [205,209], "on_halfwidth_deg": 2, "off_abs_deg": [8,12], "segments": 4, "reference_mu": 18.408876627676833},
+    "Sgr_south": {"track": "Sagittarius.antoja2020", "ra_range": [5,13], "on_halfwidth_deg": 2, "off_abs_deg": [8,12], "segments": 4, "reference_mu": 16.765210985926952},
+    "variants": ["strict_original","strict_E010","gr_E010","gr_E010_plus_z","gr_complete","gr_complete_plus_z"],
+    "ebv_relaxed_max": 0.1,
+    "gr_limit_dereddened": 23.0,
+    "gr_error_max": 0.1,
+    "fracflux_gr_max": 0.05,
+    "fracmasked_max": 0.4,
+    "fracin_min": 0.7,
+    "minimum_dereddened_gr_depth": 23.0,
+    "phase_filters": ["MS_SGB_RGB","MS_TO","blue_box"],
+    "blue_box": {"gr": [0.15,0.45],"Mr": [3.5,5.0],"error_width": "2*sigma_g"},
+    "local_sigma_deg": [0.1,0.3],
+    "bootstrap_draws": 256,
+    "coverage_min_segment_deg2": 0.1,
+    "recovery": "positive target-minus-off sequence excess with 95% interval excluding0 in at least2 fixed segments, angular on excess exceeds both shifted controls; show all fixed phase/template/mu comparisons",
+    "full_footprint": "only one predeclared gr_complete+MS_TO definition if the fixed local criterion is supported in both target systems; otherwise retain full existing-cube RGB plus local failures"
+  },
+  "sequence": {"draws":128,"intrinsic_sigma_mag":0.1,"minimum_draw_support":64,"lower_MS": {"gr":[0.30,0.85],"reference_Mr":[4.5,8]},"turnoff": {"gr":[0.15,0.30],"reference_Mr":[3,4.5]},"calibration_systems":["M13"],"transfer_systems":["M5","M30","M92","GD1_thin","GD1_cocoon"],"calibration":"one zero point in Mg, lower-MS only; zero color term this round", "branch_weight":"integral along original phase0 polyline, Gaussian likelihood in both adjacent colors with shared-r covariance, segment arc-length weight; no sorting across folds", "success":"N>=30, |bias|<=.1 with shared-scale sensitivity, improvement transfers to>=2 information-rich systems/phase groups; ordinary-dwarf control mandatory"},
+  "conditioning": {"support":"intersection of .05<=propensity<=.95 under both variable sets, fixed once; same source IDs in both comparisons and all bootstrap draws", "variables_without_distance":["r","gr","rz","max_error","EBV","native"],"with_distance":"same plus reference distance", "phase":"spectroscopic logg4.1..4.8 and teff4000..6500; no inferred CMD gravity", "colors":{"gr":[0.3,0.8],"rz":[0.05,0.65]},"magnitude":[16,20],"reference_ranges_kpc":[[2,5],[5,10]],"complete_luminosity_domain":{"observed_r":[16,18],"reference_Mr":[3,7],"max_error":0.05,"reference_relative_error_max":0.15},"sky_bootstrap_draws":256,"balance_tolerance":0.1,"interpretation":"descriptive same-population sensitivity; physical FeH coefficients require selection and independent scale identification"}
+}
