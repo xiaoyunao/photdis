@@ -6,25 +6,32 @@ from photdis.stage1 import require_compute
 from photdis.v3_3 import frozen_qrf
 from v3_13_clusters import model_and_history
 from stream_sequence import posterior
+from concurrent.futures import ProcessPoolExecutor
 
 
 def load(path):
     with np.load(path) as f:return dict(f)
 
 
+def predict_one(task):
+    s,method,q=task;t=load(OUT/'prepare/roster.npz');d=folder('predict');path=d/f'{s}_{method}_{q}.npz';audit=[]
+    ii=np.flatnonzero(t['system']==s);ref=10+5*np.log10(t['ref'][ii]);rs=np.std(5*np.log10(t['scale_'+s]),ddof=1)
+    if path.exists():
+        a=load(path);np.testing.assert_array_equal(a['ii'],ii);mm,lw,sigma,qs,ok,chi,post=[a[k] for k in ('means','logw','sigma','q','support','chi','post')]
+    else:
+        z=load(OUT/'prepare'/f'{s}_{method}_{q}.npz');mm,lw,sigma,chi=mixture(t['m'][ii],t['err'][ii],z['nodes'],z['prior']);qs=quantiles(mm,lw,sigma);ok=chi<=25;post=np.exp(lw[:,z['post']]).sum(axis=1)
+        npz(path,ii=ii,means=mm,logw=lw,sigma=sigma,q=qs,support=ok,chi=chi,post=post)
+    np.testing.assert_allclose(np.exp(lw).sum(axis=1),1,atol=1e-10)
+    _,score=evaluate_mix(ref,mm,lw,np.sqrt(sigma**2+rs**2))
+    for phase in ('all','lower_MS','turnoff','other'):
+        keep=ok&((t['phase'][ii]==phase) if phase!='all' else True)
+        if keep.any():audit.append(dict(system=s,method=method,subdivisions=q,phase=phase,N=int(keep.sum()),median_mu_residual=float(np.median((qs[:,2]-ref)[keep])),mean_logscore=float(np.mean(score[keep]))))
+    print('Predicted/reused',s,method,q,int(ok.sum()),flush=True);return audit
+
+
 def sequence(t,q,d):
-    audit=[]
-    for s in C['systems']:
-        ii=np.flatnonzero(t['system']==s);ref=10+5*np.log10(t['ref'][ii]);rs=np.std(5*np.log10(t['scale_'+s]),ddof=1)
-        for method in METHODS[:-1]:
-            z=load(OUT/'prepare'/f'{s}_{method}_{q}.npz');mm,lw,sigma,chi=mixture(t['m'][ii],t['err'][ii],z['nodes'],z['prior']);qs=quantiles(mm,lw,sigma);ok=chi<=25
-            _,score=evaluate_mix(ref,mm,lw,np.sqrt(sigma**2+rs**2));post=np.exp(lw[:,z['post']]).sum(axis=1)
-            npz(d/f'{s}_{method}_{q}.npz',ii=ii,means=mm,logw=lw,sigma=sigma,q=qs,support=ok,chi=chi,post=post)
-            for phase in ('all','lower_MS','turnoff','other'):
-                keep=ok&((t['phase'][ii]==phase) if phase!='all' else True)
-                if keep.any():audit.append(dict(system=s,method=method,subdivisions=q,phase=phase,N=int(keep.sum()),median_mu_residual=float(np.median((qs[:,2]-ref)[keep])),mean_logscore=float(np.mean(score[keep]))))
-            print('Predicted',s,method,q,int(ok.sum()),flush=True)
-    return audit
+    with ProcessPoolExecutor(max_workers=C['workers']) as pool:result=list(pool.map(predict_one,[(s,m,q) for s in C['systems'] for m in METHODS[:-1]]))
+    return [row for rows in result for row in rows]
 
 
 def main():

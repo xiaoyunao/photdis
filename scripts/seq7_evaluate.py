@@ -20,11 +20,14 @@ def measure(z,ii,t,x,mult,shift):
     # ii indexes the global frozen roster; z has an independent explicit row map.
     j=np.searchsorted(z['ii'],ii);assert (z['ii'][j]==ii).all();qq=z['q'][j];ref=10+5*np.log10(t['ref'][ii]);res=qq[:,2]-ref;center=float(np.median(res));w=mult[:,ii].T
     cb=np.array([count_median(res-ss,w[:,k]) for k,ss in enumerate(shift)])
+    # A full-parent bootstrap can contain no member of a sparse diagnostic bin.
+    # Evaluate a harmless finite placeholder, but omit that empty draw in every CI.
+    draw_center=np.where(np.isfinite(cb),cb,center-shift)
     values={};boots={};per={};norm=np.sum(w,axis=0)
     values.update(N=len(ii),median_mu_residual=center,NMAD=float(1.4826*np.median(abs(res-center))),scale_target_met=abs(center)<=.1,median_width68=float(np.median(qq[:,3]-qq[:,1])),median_width95=float(np.median(qq[:,4]-qq[:,0])),median_left68=float(np.median(qq[:,2]-qq[:,1])),median_right68=float(np.median(qq[:,3]-qq[:,2])),median_left95=float(np.median(qq[:,2]-qq[:,0])),median_right95=float(np.median(qq[:,4]-qq[:,2])))
     values['center_lo'],values['center_hi']=CI(cb);boots['center']=cb
     nb=np.array([1.4826*count_median(abs(res-shift[k]-cb[k]),w[:,k]) for k in range(len(shift))]);values['NMAD_lo'],values['NMAD_hi']=CI(nb)
-    for state,point,draw,med in [('raw',ref,ref[:,None]+shift[None],0),('centered',ref+center,ref[:,None]+shift[None]+cb[None],center)]:
+    for state,point,draw,med in [('raw',ref,ref[:,None]+shift[None],0),('centered',ref+center,ref[:,None]+shift[None]+draw_center[None],center)]:
         for label,key in [('logscore','logpdf'),('CRPS','crps'),('CDF','cdf')]:
             pv=row_interp(x,point,z[key][j]);bv=row_interp(x,draw,z[key][j]);per[state+'_'+label]=pv
             if label=='CDF':
@@ -42,7 +45,9 @@ def main():
     require_compute();d=folder('evaluate');inputs={'curves':sha(OUT/'curves/complete.json')};t=load(OUT/'prepare/roster.npz');x=load(OUT/'curves/grid.npz')['mu'];summary=[];paired=[];perstar=[];gaps=[];bootrows=[]
     for s in C['systems']:
         rows=np.flatnonzero(t['system']==s);shift=5*np.log10(t['scale_'+s]);z={m:load(OUT/'curves'/f'{s}_{m}.npz') for m in METHODS};supported={m:z[m]['ii'][z[m]['support']] for m in METHODS};bs={}
-        for cohort,base,mult in [('primary',rows,t['mult']),('v5',rows[t['v5'][rows]],t['v5_mult'])]:
+        common=rows[t['v5'][rows]]
+        for m in METHODS[:-1]:common=np.intersect1d(common,supported[m])
+        for cohort,base,mult in [('primary',rows,t['mult']),('v5',rows[t['v5'][rows]],t['v5_mult']),('v5_commonABCDE',common,t['v5_mult'])]:
             groups=[(phase,base if phase=='all' else base[t['phase'][base]==phase]) for phase in ('all','lower_MS','turnoff','other')]
             if cohort=='primary':
                 gr=t['m'][base,0]-t['m'][base,1];mg=t['m'][base,0]-(10+5*np.log10(t['ref'][base]))

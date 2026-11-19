@@ -6,16 +6,21 @@ from seq7_predict import load
 from photdis.stage1 import require_compute
 from concurrent.futures import ProcessPoolExecutor
 from scipy.special import ndtr
+from functools import lru_cache
+
+
+@lru_cache(maxsize=2)
+def cached(path):return load(path)
 
 
 def worker(task):
-    s,method,q,x,ii,ref_sigma=task;p=OUT/'predict';t=load(OUT/'prepare/roster.npz')
+    s,method,q,x,ii,ref_sigma=task;p=OUT/'predict'
     if method=='QRF':
-        z=load(p/('QRF_north.npz' if s=='M13' else 'QRF_south.npz'));at={int(k):i for i,k in enumerate(z['ii'])};j=at[int(ii)]
+        z=cached(p/('QRF_north.npz' if s=='M13' else 'QRF_south.npz'));at={int(k):i for i,k in enumerate(z['ii'])};j=at[int(ii)]
         edge=z['edges'][j];mass=z['mass'][j];width=np.diff(edge);raw=(mass[:,None]*np.clip((x[None]-edge[:-1,None])/width[:,None],0,1)).sum(axis=0)
         conv,lp=uniform_curve(x,edge,mass,ref_sigma)
     else:
-        z=load(p/f'{s}_{method}_{q}.npz');j=int(np.flatnonzero(z['ii']==ii)[0]);mm=z['means'][j];lw=z['logw'][j];sg=z['sigma'][j]
+        z=cached(p/f'{s}_{method}_{q}.npz');j=int(np.flatnonzero(z['ii']==ii)[0]);mm=z['means'][j];lw=z['logw'][j];sg=z['sigma'][j]
         # Every representable component is retained in the CDF; original finite
         # log weights, including underflowing probabilities, enter log density.
         w=np.exp(lw);use=w>0;raw=np.zeros(len(x));conv=np.zeros(len(x));lp=np.empty(len(x));eff=np.hypot(sg,ref_sigma)
