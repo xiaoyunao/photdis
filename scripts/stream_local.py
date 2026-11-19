@@ -84,7 +84,12 @@ def main():
         for center in gcent:
             x=t['err'][base&(abs(t['m'][:,0]-center)<.25),0]
             sig.append(np.median(x) if len(x) else np.nan)
-        sig=np.array(sig);good=np.isfinite(sig);sig=np.interp(gcent,gcent[good],sig[good]);errcurve=(gcent,sig)
+        sig=np.array(sig);good=np.isfinite(sig)
+        if not good.any():
+            valid=np.isfinite(t['err'][:,0])&(t['err'][:,0]>0)&(t['err'][:,0]<.1)
+            sig[:]=np.median(t['err'][valid,0]) if valid.any() else .1
+        else:sig=np.interp(gcent,gcent[good],sig[good])
+        errcurve=(gcent,sig)
         modelnames=('FOS','Pal5_control') if roi.startswith('Pal') else ('FOS',)
         roi_arrays=dict(g_centers=gcent,sigma_g=sig,mu=nodes)
         for model in modelnames:
@@ -158,7 +163,7 @@ def make_maps(roi,t,r,model,ec,mu,label,d,density,responses):
             kernel=(sigma/(width_ra*np.diff(sx)[0]),sigma/np.diff(oy)[0]);count_s=gaussian_filter(raw,kernel);area_s=gaussian_filter(area,kernel)
             values=np.divide(count_s,area_s,out=np.full_like(raw,np.nan),where=(area>0)&(area_s>0))
             off=(abs((oy[:-1]+oy[1:])/2)>=cfg['off_abs_deg'][0]);background=np.nanmedian(values[:,off],axis=1)
-            residual=values-background[:,None];cap=max(float(np.nanquantile(abs(residual),.99)),.1)
+            residual=values-background[:,None];finite=residual[np.isfinite(residual)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
             z=ax.pcolormesh(sx,oy,np.ma.masked_invalid(residual.T),cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
             ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Fraction along fixed RA segment',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Signed excess (deg⁻²)')
             images['smoothed_'+str(sigma)]=np.stack((count_s,area_s,residual))

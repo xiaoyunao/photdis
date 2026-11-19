@@ -55,7 +55,7 @@ def local(root,d):
                     ax.plot([float(r['mu']) for r in rows],[float(r['signed_excess']) for r in rows],color=color,lw=.8,label=var.replace('_',' '))
                 ax.axvline(mu,color='.3',lw=.7,ls=':');ax.axhline(0,color='.5',lw=.5);ax.set(xlabel='Distance modulus (mag)',ylabel='Target − control (deg⁻²)');ax.legend(frameon=False,fontsize=5.5)
                 for ax,sigma in zip(axs[1,1:],(.1,.3)):
-                    values=a[model+'_sky_smoothed_'+str(sigma)][2];cap=max(float(np.nanquantile(abs(values),.99)),.1)
+                    values=a[model+'_sky_smoothed_'+str(sigma)][2];finite=values[np.isfinite(values)];cap=max(float(np.quantile(abs(finite),.99)),.1) if len(finite) else .1
                     z=ax.pcolormesh(a['sky_along_edges'],a['sky_offset_edges'],np.ma.masked_invalid(values.T),cmap='RdBu_r',norm=SymLogNorm(cap/20,vmin=-cap,vmax=cap),rasterized=True)
                     ax.axhline(0,color='.3',lw=.5,ls=':');ax.set(xlabel='Fraction along fixed RA segment',ylabel='Cross-track offset (deg)',title=f'Fixed μ · σ={sigma:g}°');f.colorbar(z,ax=ax,fraction=.04,label='Signed excess (deg⁻²)')
                 figure(d,roi+'_'+model+'_recovery',f,[dict(roi=roi,model=model)])

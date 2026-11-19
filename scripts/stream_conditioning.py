@@ -105,12 +105,12 @@ def plot_results(d,rows):
         for ax,(domain,outcome) in zip(axs,(('reference_range','modulus_residual'),('common_luminosity_domain','reference_Mg'),('magnitude_complete_rectangle','reference_Mg'))):
             labels=[]
             for i,(ref,lo) in enumerate((('specdis',2),('spdist',2),('gaia',2),('specdis',5),('spdist',5),('gaia',5))):
-                labels.append(ref.upper() if ref=='gaia' else ref.capitalize())
+                labels.append(('Gaia' if ref=='gaia' else 'SpecDis' if ref=='specdis' else 'SPDist')+'\n'+('2–5' if lo==2 else '5–10'))
                 for k,(design,col) in enumerate(zip(('without_distance','with_distance'),(BLUE,ORANGE))):
                     a=[r for r in rows if r['reference']==ref and r['lo']==lo and r['domain']==domain and r['outcome']==outcome and r['weight_design']==design and r['statistic']=='mean']
                     if a:
-                        r=a[0];ax.errorbar(i+(k-.5)*.2,r['contrast'],yerr=[[max(0,r['contrast']-r['ci_lo'])],[max(0,r['ci_hi']-r['contrast'])]],fmt='o',ms=3,color=col,lw=.8,label=design.replace('_',' ') if i==0 else None)
-            ax.axhline(0,color='.4',ls=':',lw=.6);ax.set(xticks=range(6),xticklabels=labels,ylabel='Metal-poor minus ordinary (mag)',title={'reference_range':'Same population · residual','common_luminosity_domain':'Common luminosity domain','magnitude_complete_rectangle':'Magnitude-complete rectangle'}[domain]);ax.tick_params(axis='x',rotation=55,labelsize=6)
+                        r=a[0];ax.errorbar(i+(k-.5)*.2,r['contrast'],yerr=[[max(0,r['contrast']-r['ci_lo'])],[max(0,r['ci_hi']-r['contrast'])]],fmt='o',ms=3,color=col,lw=.8,label=(r'Without $d_{\rm ref}$' if k==0 else r'With $d_{\rm ref}$') if i==0 else None)
+            ax.axhline(0,color='.4',ls=':',lw=.6);ax.set(xticks=range(6),xticklabels=labels,ylabel='Metal-poor minus ordinary (mag)',title={'reference_range':'Distance residual','common_luminosity_domain':'Reference luminosity','magnitude_complete_rectangle':'Complete magnitude slice'}[domain]);ax.tick_params(axis='x',rotation=45,labelsize=6)
         axs[0].legend(frameon=False,fontsize=6)
         figure(d,'metallicity_conditioning',f,rows)
 
