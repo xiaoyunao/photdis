@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Unique native identities and exact 61-node all-sky CMD counts."""
 import argparse
-from concurrent.futures import ProcessPoolExecutor,as_completed
+from concurrent.futures import ProcessPoolExecutor,ThreadPoolExecutor,as_completed
 from multiprocessing import get_context
 import healpy as hp
 from photdis.stage1 import require_compute
@@ -12,19 +12,38 @@ from halo_filtering import channel_weights
 NPIX=hp.nside2npix(C['nside']);MU=np.round(np.arange(14,20.001,.1),1)
 
 
+def assert_unique_partitioned(ids,label):
+    # Equal identities necessarily have equal brick-bit buckets. Exact local
+    # sorts therefore prove global uniqueness without a billion-row serial sort.
+    bucket=((ids>>20)&63).astype('u1')
+    def check(k):
+        part=ids[bucket==k];assert len(np.unique(part))==len(part),(label,k)
+        return len(part)
+    with ThreadPoolExecutor(8) as pool:total=sum(pool.map(check,range(64)))
+    assert total==len(ids);print('UNIQUE_NATIVE_PASS',label,total,flush=True)
+
+
+def gaia_aliases(ids,gaia):
+    bucket=(gaia>>56).astype('u1');keys=np.unique(bucket[gaia>0])
+    def aliases(k):
+        j=np.flatnonzero((gaia>0)&(bucket==k));jj=j[np.lexsort((ids[j],gaia[j]))]
+        return ids[jj[np.r_[False,np.diff(gaia[jj])==0]]]
+    with ThreadPoolExecutor(8) as pool:parts=list(pool.map(aliases,keys))
+    return np.sort(np.concatenate(parts)) if parts else np.array([],dtype=ids.dtype)
+
+
 def identities():
     require_compute();d=folder('identities');paths=sorted((OUT/'cache').glob('*/complete.json'))
     # Exact audit of all owned native PSFs, not only accepted CMD members.
     ids=np.concatenate([read_columns(p.parent/'owned_ids.npz',('ls_id',))['ls_id'] for p in paths]);nraw=len(ids)
-    assert len(np.unique(ids))==nraw,'Raw sweep/native IDs overlap; refuse uncorrected counts'
+    assert_unique_partitioned(ids,'all raw owned PSFs')
     del ids
     parts=[read_columns(p.parent/'photometry.npz',('TYPE','ls_id','source_id')) for p in paths]
     assert all((z['TYPE']=='PSF').all() for z in parts)
     ids=np.concatenate([z['ls_id'] for z in parts]);gaia=np.concatenate([z['source_id'] for z in parts]);del parts
-    assert len(np.unique(ids))==len(ids)
-    j=np.flatnonzero(gaia>0);jj=j[np.lexsort((ids[j],gaia[j]))];duplicate=np.r_[False,np.diff(gaia[jj])==0];exclude=np.sort(ids[jj[duplicate]])
+    assert_unique_partitioned(ids,'valid gr');positive=int((gaia>0).sum());exclude=gaia_aliases(ids,gaia)
     npz(d/'alias_exclusions.npz',TYPE=np.full(len(exclude),'PSF'),ls_id=exclude)
-    save_json(d/'identity_counts.json',dict(native_PSF_unique=nraw,valid_gr_native_unique=len(ids),positive_gaia=len(j),positive_gaia_aliases=len(exclude),valid_gr_after_aliases=len(ids)-len(exclude),rule='actual PSF/native first; minimum native ID per repeated positive G3 identity; unlinked sources retain native IDs'))
+    save_json(d/'identity_counts.json',dict(native_PSF_unique=nraw,valid_gr_native_unique=len(ids),positive_gaia=positive,positive_gaia_aliases=len(exclude),valid_gr_after_aliases=len(ids)-len(exclude),rule='actual PSF/native first; minimum native ID per repeated positive G3 identity; unlinked sources retain native IDs',execution='64 deterministic native identity buckets and native Gaia HEALPix-prefix buckets; exact sorts in8 shared-memory workers'))
     complete(d,{},raw_native_unique_verified=True)
 
 

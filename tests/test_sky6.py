@@ -33,3 +33,13 @@ def test_full_pdf_reference_convolution_retains_tiny_tail_scores():
     _,tail=uniform_convolution(np.array([[-1.,1.]]),np.array([[1.]]),np.array([10.]),.1)
     assert np.isfinite(tail).all() and tail[0]<-3000
     p,_=mixture_probability(np.array([0.]),np.array([[0.]]),np.array([[0.]]),np.array([.1]));np.testing.assert_allclose(p,.5)
+
+
+def test_parallel_identity_proof_keeps_exact_alias_rule():
+    import pytest
+    from sky6_count import assert_unique_partitioned,gaia_aliases
+    ids=np.array([(11010<<40)|(k<<20)|k for k in range(100)],dtype='i8')
+    assert_unique_partitioned(ids,'test')
+    with pytest.raises(AssertionError):assert_unique_partitioned(np.r_[ids,ids[35]],'duplicate')
+    gaia=np.arange(100,dtype='i8')+1;gaia[40]=gaia[20];gaia[60]=gaia[20];gaia[80]=0
+    np.testing.assert_array_equal(gaia_aliases(ids,gaia),ids[[40,60]])

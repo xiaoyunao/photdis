@@ -2,6 +2,8 @@
 
 ## 2026-11-19 — v6 full-sky display and native sequence shape
 
+- All2126available sweeps and both native random geometries completed; geographic/dust/depth filters absent from display admission. Serial global identity sorting became the CPU bottleneck; stopped only its process, retained complete scan/area caches and original attempt log. Replaced global sorts by exact deterministic native/Gaia-prefix buckets using8shared-memory workers; alias priority unchanged. Added a same-rule invariant; resume from identities without re-reading raw imaging.
+
 - Read complete latest replycbad66cc (6922characters) and full v6 prompt; archive both under docs/v6_inputs. Local/origin/NERSC reconcile at6538df76, tracked worktrees clean. Registered complete goal before changes.
 - Display explicitly includes low latitude/high extinction/shallow actual gr imaging; no stream-recovery gate. Registered independent config, frozen source/CMD/noise/ownership and limited literature model set before new measurements. Main scientific experiment is native ridge shape and scale/width; v5 conditioning inherited.
 - Own allocation61562374,64CPU/192GiB request,3h on nid200010. Other user jobs/allocations remain untouched. Use explicit srun job ID for compute steps because multiple allocations share the node.
