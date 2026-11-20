@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-20 — low-latitude environment feasibility
+
+- Read full review 613e204c. Local/GitHub/NERSC at 67ccfb2; clean tracked state. Registered separate goal and six fields before opening predictions. Existing v3.10 low-latitude SED pilot is coverage context only. NERSC allocation 61621590 for this study.
+
 ## 2026-11-19 — v8 native luminosity calibration
 
 - Final reconciliation at science830f6632: local/GitHub/canonical match;133incomingfiles,77boundoutputs and16sourcefiles verified on allocatednid200004aftercheckout.98ownedprogram/config/exportfiles safely archived before ff; unrelated untracked products untouched. GenericCSV/NPZignores corrected by explicit tracking of all43compactevidencefiles; all109publicpacketfiles inGit. Own61574693returnedCOMPLETED0:0,53:07,52allocatedCPUs,noqueue row. Preparatory failure2archivealias and verification15login-vs-compute/tmp separation preserved; corrected science and final16verify pass. No remaining science, prospective opening, production/manuscript edits or automatic next task.

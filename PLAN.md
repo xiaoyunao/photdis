@@ -1,5 +1,9 @@
 # PLAN
 
+## Environment feasibility 2026-11-20 — active
+
+Follow the complete review 613e204c. Six fixed native DECam fields from existing imaging coverage, frozen QRF and working selection. Count parent, precision, support and reference losses. Score actual Gaia and spectroscopic subsets separately, compare overlapping populations and run same-source 2D/Bayestar19 sensitivities with equal distance support plus reference-free iteration. Assess 0.10 mag resolution with spatial bootstrap. Preserve V8, production, RGB and unopened cluster candidates. Deliver reproducible tables, style-locked plots and bounded scope.
+
 ## Native luminosity2026-11-19 — completed
 
 Full v8prompt/reviewb790c69f executed in native_luminosity_20261119. One E gray

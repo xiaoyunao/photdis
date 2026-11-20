@@ -1,0 +1,46 @@
+{
+  "baseline": "67ccfb2ca5f1cf9864f33b1a5f6dbc162f547971",
+  "review": "613e204c-73d5-4265-b972-d7d6fa61ea97",
+  "field_radius_deg": 1.25,
+  "fields": [
+    ["L219", 219.0, -9.9],
+    ["L233", 233.0, -9.9],
+    ["L240", 240.0, -9.9],
+    ["M240", 240.0, -20.0],
+    ["M037", 37.0, 18.0],
+    ["H240", 240.0, -48.0]
+  ],
+  "native": "DECam DR11 RELEASE=11010, southern owner convention; freeze one passband/model to avoid confounding with north",
+  "observed_r": [14.0, 23.0],
+  "max_grz_error_mag": 0.1,
+  "latitude_edges_deg": [0, 10, 15, 30, 90],
+  "sfd_edges": [0, 0.08, 0.2, 0.5, 10],
+  "fracflux_r_edges": [-0.01, 0.02, 0.10, 0.5],
+  "sample_seed": 20261120,
+  "application_per_field": 3000,
+  "reference_per_field_per_provider": 1800,
+  "bayestar_iteration_per_field": 500,
+  "field_minimum_evidence": 60,
+  "minimum_common_effective_n_per_arm": 60,
+  "minimum_spatial_blocks_per_arm": 8,
+  "spatial_block_deg": 0.30,
+  "bootstrap_draws": 600,
+  "precision_target_mu_mag": 0.1,
+  "severe_error_mu_mag": 1.0,
+  "matching": {
+    "gr0": [-10, 0.45, 0.75, 1.05, 1.40, 10],
+    "r": [14, 17, 19, 21, 23],
+    "distance_kpc": [0.0, 0.5, 1, 2, 5, 10, 100],
+    "minimum_per_cell_per_arm": 4
+  },
+  "dust": {
+    "map": "/pscratch/sd/y/yunao/dustmaps/bayestar2019_v3_9.h5",
+    "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27e32ef99",
+    "max_steps": 9,
+    "damping": 0.5,
+    "tolerance_mag": 0.02,
+    "minimum_histogram_mass": 0.5
+  },
+  "working_selection": "frozen v3.10 south refit classifier P_dwarf>=0.80 and QRF 2-10 kpc mass>=0.50, explicitly a pilot replay of this rule",
+  "stopping": "Evaluate only registered fields. Retain fields with low or missing coverage as census/limits. Descriptive counts/scores at any N; 0.10mag precision only at N_eff>=60 in each arm, >=8 blocks each and 95% CI max deviation <=0.10mag. Report repeatability across fields and the four cross-environment contrasts, no causal claim or deployment."
+}
