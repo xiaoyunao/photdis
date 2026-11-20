@@ -2,6 +2,12 @@
 
 ## 2026-11-20 — cluster CMD depth
 
+- Closeout. Three portable PNGs match pixel-for-pixel, F02/F03 regression hashes match, and all 16 compute steps completed 0:0. Returned NERSC allocation 61629375 after 17:53 with no remaining queue entry.
+
+- Fixed archives reproduce the original QRF medians and complete CMD member counts. Mask-all-zero diagnostic excluded the faint cohort. Preserved it and applied documented optical-only veto, then retained the strict arm (1/0/5 faint members) and separate original-membership imaging diagnostics. NGC 6362/M55 outer low-crowding +0.620/+0.843 mag; lower common CMD low-crowding +0.683/+0.814 mag. Alternate published scales preserve positive offsets.
+- Exact same-source MIST comparisons for 1,328/42/1,395 faint stars improve mean CRPS by 0.363/0.315/0.702 mag. M5 empirical ridge improves within supported colors. M30 has zero support for the fixed faint proxy. Match larger models and 68/95% coverage reported separately. Strict primary threshold lacks support. Branch mass/training-domain diagnosis is the next scientific question.
+- Validated all 20,875 frozen identities, 12 hashed result tables and 36 independent CRPS integrations of actual mixture PDFs. Three English Pal 5 plates and compact redraw data prepared.
+
 - Read review a3ab0832 and matched local, GitHub and NERSC to c09f7198. Registered fixed aperture, quality controls, common CMD and comparison conditions. Allocation 61629375. Recovered 20,875 original native PSFs and archived PDFs across the three systems. Built externally specified MIST main-sequence tracks from the official grid and reused empirical M5/M30 ridges. Corrected Dambis table attribution in the previous methods document.
 
 ## 2026-11-20 — faint signed Gaia

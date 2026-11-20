@@ -34,7 +34,7 @@ def cmd(source,dest):
             ax.set(title=p['label']+f' · {int(n.sum()):,} members',
                    xlabel=r'$(g-r)_0$ (mag)' if i==0 else r'$(r-z)_0$ (mag)')
             if i==0:
-                ax.set_ylabel(r'$M_{r,mathrm{ref}}$ (mag)')
+                ax.set_ylabel(r'$M_{r,\mathrm{ref}}$ (mag)')
     layout.colorbar(pic,ax=axes.ravel(),label='Median QRF modulus residual (mag)',
                     shrink=.84,extend='both')
     figure(dest,'native_cmd_distance_residuals',layout,data)
@@ -51,7 +51,7 @@ def depth(source,dest):
             (2,'Mr','c68','Reference $M_r$ (mag)')]:
             ax=axes[j,i]
             for group,color,label in [('lower',BLUE,'Lower sequence'),
-                                       ('clean_lower',ORANGE,'Outer clean lower sequence')]:
+                                       ('outer_quality_lower',ORANGE,'Outer low-crowding sequence')]:
                 q=[r for r in rows if r['system']==key and r['axis']==axis and r['group']==group and int(r['N'])>=8]
                 if not q:
                     continue
@@ -101,7 +101,7 @@ def compare(source,dest):
             x,lo,hi=[float(row.get(k) or np.nan) for k in ('mean_delta_crps','crps_lo','crps_hi')]
             axs[0].plot([lo,hi],[y,y],color=color,lw=.8)
             axs[0].plot(x,y,'o',color=color,ms=3.5,label=label if j==0 else None)
-        use=[r for r in scales if r['system']==cluster and r['subset']=='faint_lower_clean']
+        use=[r for r in scales if r['system']==cluster and r['subset']=='faint_lower_outer_quality']
         for i,(anchor,label,color) in enumerate([('rrl_hst','HST W1',BLUE),
                      ('baumgardt_vasiliev','Combined scale',ORANGE),
                      ('secondary_published','Other published',GRAY)]):
@@ -121,7 +121,7 @@ def compare(source,dest):
         ax.legend(frameon=False,fontsize=6.1,loc='best')
     axs[0].set(xlabel='Paired CRPS change (mag)',title='Independent CMD fits')
     axs[1].axvline(.30,color=GRAY,ls='--',lw=.7)
-    axs[1].set(xlabel='Median QRF modulus residual (mag)',title='Outer clean faint stars')
+    axs[1].set(xlabel='Median QRF modulus residual (mag)',title='Outer low-crowding faint stars')
     figure(dest,'cmd_comparison_and_reference_scales',layout,data)
 
 

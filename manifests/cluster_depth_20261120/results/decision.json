@@ -1,0 +1,42 @@
+{
+  "config": "fdffb3f8089331ba4d441d58dc7e584ea34f86a3ef837ab32c2e16ea10dd0114",
+  "shared_cells": 0,
+  "primary_pass": false,
+  "systems": {
+    "NGC_6362": {
+      "n": 0,
+      "blocks": 0,
+      "enough": false,
+      "robust": false,
+      "minimum_published_bias": null
+    },
+    "NGC_6723": {
+      "n": 0,
+      "blocks": 0,
+      "enough": false,
+      "robust": false,
+      "minimum_published_bias": null
+    },
+    "NGC_6809_M55": {
+      "n": 0,
+      "blocks": 0,
+      "enough": false,
+      "robust": false,
+      "minimum_published_bias": null
+    }
+  },
+  "outputs": {
+    "cmd.csv": "a3efd0ae1fadce81b8c5effe45ec31dc6b11ebfdec2e7359cf0f1bfff847e739",
+    "color_residuals.csv": "98014794e73178ddc581d6402594bcc70e275cfae515fae8f749721a3082bee3",
+    "continuous.csv": "4dc8026eb28269a60c4f9498ee2e977481561e83eb2ecb38b61df55fd975cf0e",
+    "growth.csv": "196f38c20766918d0ba83910457144ce8967b5cca8aa394ebb3d4573ec311f97",
+    "mask_audit.csv": "c827a457ac3d0430a33beb8867303aab68f87b3c81507fd2f9aaddab271ff534",
+    "matched_cells.csv": "f92d550c804ac6d15ecc22dd402cea5ca7a8577929462e60fb12e559d3692804",
+    "model_support.csv": "57c9d705ac2fc58c0b93e769b0809d39da6b7132fbd606c00630c8c094a75822",
+    "paired.csv": "7ca89368367cc73b651d28afb7c3f17e7d5e3fcb066ac91fb80bf8349be75810",
+    "populations.csv": "160ddf86e510a81bf89548a31f88ffbd27f8da885fe432ac9589d2e875995ee9",
+    "quality.csv": "d666a639577490d18da3b1a07d14564afe4cb150216f16ddeffa4046f13e3a61",
+    "quality_common.csv": "1b21e5171a24b6af2a0091fa9f53a0d7aa9befa724e04a0c391bf3918fa0950a",
+    "scales.csv": "ed58360e900a801e9130ad291eb8b7fb04ea302a5ad6313b17e7d5423da8d700"
+  }
+}

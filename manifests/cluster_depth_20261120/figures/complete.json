@@ -1,0 +1,29 @@
+{
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "input": {
+    "cmd.csv": "a3efd0ae1fadce81b8c5effe45ec31dc6b11ebfdec2e7359cf0f1bfff847e739",
+    "color_residuals.csv": "98014794e73178ddc581d6402594bcc70e275cfae515fae8f749721a3082bee3",
+    "continuous.csv": "4dc8026eb28269a60c4f9498ee2e977481561e83eb2ecb38b61df55fd975cf0e",
+    "growth.csv": "196f38c20766918d0ba83910457144ce8967b5cca8aa394ebb3d4573ec311f97",
+    "mask_audit.csv": "c827a457ac3d0430a33beb8867303aab68f87b3c81507fd2f9aaddab271ff534",
+    "matched_cells.csv": "f92d550c804ac6d15ecc22dd402cea5ca7a8577929462e60fb12e559d3692804",
+    "model_support.csv": "57c9d705ac2fc58c0b93e769b0809d39da6b7132fbd606c00630c8c094a75822",
+    "paired.csv": "7ca89368367cc73b651d28afb7c3f17e7d5e3fcb066ac91fb80bf8349be75810",
+    "populations.csv": "160ddf86e510a81bf89548a31f88ffbd27f8da885fe432ac9589d2e875995ee9",
+    "quality.csv": "d666a639577490d18da3b1a07d14564afe4cb150216f16ddeffa4046f13e3a61",
+    "quality_common.csv": "1b21e5171a24b6af2a0091fa9f53a0d7aa9befa724e04a0c391bf3918fa0950a",
+    "scales.csv": "ed58360e900a801e9130ad291eb8b7fb04ea302a5ad6313b17e7d5423da8d700"
+  },
+  "outputs": {
+    "cmd_comparison_and_reference_scales.csv": "814a4eb9c87a57c62314313c9a7e79e95d357ef4c02df9c2228a1380851b91d5",
+    "cmd_comparison_and_reference_scales.pdf": "9c5167c62e83ea58bdc48a43fcd6b2b0d1161dcbf4e4457ee6daeca8bb8076b1",
+    "cmd_comparison_and_reference_scales.png": "8e92fd345c2fff1c4054fdfd9d30e5efdcf39b435f84e87fd918ed3e6a551958",
+    "lower_sequence_depth_and_coverage.csv": "78b27c6aaf8594d4cf38c8c7378f69a93d3cbedddc86aa4d9e79277ca0d634d1",
+    "lower_sequence_depth_and_coverage.pdf": "eefcecd5cdba8520a12fadebf326d1c7d036a319dd15961f58a3842c5e2feb2a",
+    "lower_sequence_depth_and_coverage.png": "961932307da67d64e01e400938ef395759c04641a672ba5d90f0a8520f1b2118",
+    "native_cmd_distance_residuals.csv": "a3efd0ae1fadce81b8c5effe45ec31dc6b11ebfdec2e7359cf0f1bfff847e739",
+    "native_cmd_distance_residuals.pdf": "b7b7cddf31456488804e9c6c32216c858c86713767834ade90fa362316c0be2e",
+    "native_cmd_distance_residuals.png": "3ab2ba60917aaec60368a9880282dfc7ef1f2f47d2fe71a925f0a64084027942",
+    "regression.json": "489d9421f4b9afeaaf4099f73de4fd2ad3cae128d5d033f19143bc84acd02a99"
+  }
+}

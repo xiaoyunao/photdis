@@ -15,6 +15,7 @@ from seq7_math import evaluate_mix, mixture, quantiles
 from v2_1_near import atomic_npz, csv_rows, load, save_json, sha
 
 MODELS = ('mist','ridge_M5','ridge_M30')
+OPTICAL_VETO = sum(1<<bit for bit in (0,1,2,3,4,5,6,7,10,11,12))
 
 
 def column(t,name):
@@ -28,14 +29,18 @@ def imaging_arrays(t):
     depth = column(t,'PSFDEPTH')
     with np.errstate(divide='ignore',invalid='ignore'):
         margin=np.min(22.5-2.5*np.log10(5/np.sqrt(depth))-obs,axis=1)
+    band_mask=(column(t,'ALLMASK')!=0).any(1)
+    bits=t['MASKBITS'].astype('i8')
     m=dict(fracflux=column(t,'FRACFLUX').max(1),fracmasked=column(t,'FRACMASKED').max(1),
            fracin=column(t,'FRACIN').min(1),sigma=t['error_grz'].max(1),depth_margin=margin,
-           nobs=column(t,'NOBS').min(1),masked=(t['MASKBITS']!=0)|(column(t,'ALLMASK')!=0).any(1))
+           nobs=column(t,'NOBS').min(1),masked=((bits&OPTICAL_VETO)!=0)|band_mask,
+           masked_any_bit=(bits!=0)|band_mask)
     flags=dict(outer=t['radius']>=s['outer_arcmin'],low_crowd=m['fracflux']<=s['max_fracflux'],
                phot_precise=m['sigma']<=s['max_sigma'],deep=np.isfinite(margin)&(margin>=s['min_depth_margin']),
                high_membership=t['member_p']>s['strict_membership'],imaging_unmasked=~m['masked']&
                   (m['fracmasked']<=s['max_fracmasked'])&(m['fracin']>=s['min_fracin']))
     flags['clean']=np.logical_and.reduce(list(flags.values()))
+    flags['clean_all_bits']=flags['clean']&~m['masked_any_bit']
     return m,flags
 
 

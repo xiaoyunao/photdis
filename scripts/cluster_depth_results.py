@@ -6,13 +6,14 @@ import json
 import numpy as np
 
 from cluster_depth_inputs import C, CONFIG, OLD_CONFIG, OUT, ROOT
-from cluster_depth_physics import MODELS
+from cluster_depth_physics import MODELS, OPTICAL_VETO, imaging_arrays
 from environment_results import median
 from photdis.stage1 import require_compute
 from v2_1_near import csv_rows, load, save_json, sha
 
 PRODUCT = OUT/'results'
-LABELS = ('all','lower','faint_lower','faint_lower_clean','faint_lower_common_clean')
+LABELS = ('all','lower','faint_lower','faint_lower_clean','faint_lower_common_clean',
+          'faint_lower_outer_quality','faint_lower_outer_common','faint_lower_low_crowd_common')
 METRICS = ('crps','log','width68','width95','c68','c95','severe')
 
 
@@ -55,7 +56,7 @@ def indices(a):
     return np.where(ok,np.ravel_multi_index(np.clip(k,0,np.array(shape)[:,None]-1),shape),-1)
 
 
-def weighted_overlap(data):
+def weighted_overlap(data,quality="clean"):
     spec=C['common_cells']
     keys=C['primary']
     cell={key:indices(a) for key,a in data.items()}
@@ -63,7 +64,7 @@ def weighted_overlap(data):
     for key in keys:
         c=cell[key]
         a=data[key]
-        idx=c[a['clean']&a['faint']&a['lower']&(c>=0)]
+        idx=c[a[quality]&a['faint']&a['lower']&(c>=0)]
         count[key]={int(j):int(sum(idx==j)) for j in np.unique(idx)}
     shared={j:min(count[key].get(j,0) for key in keys) for j in set().union(*(count[k] for k in keys))}
     kept={j:n for j,n in shared.items() if n>=spec['minimum_per_cluster']}
@@ -102,7 +103,8 @@ def continuous(a,key):
         for lo,hi in zip(values[:-1],values[1:]):
             k=(a[axis]>=lo)&(a[axis]<hi)
             for group,eligible in [('all',k),('lower',k&a['lower']),
-              ('clean_lower',k&a['lower']&a['clean']),('faint_lower',k&a['lower']&a['faint'])]:
+              ('clean_lower',k&a['lower']&a['clean']),('outer_quality_lower',k&a['lower']&a['outer_quality']),
+              ('faint_lower',k&a['lower']&a['faint'])]:
                 if eligible.any():
                     rows.append(dict(system=key,axis=axis,lo=lo,hi=hi,group=group,
                             **summary(a,eligible,full,ci=int(eligible.sum())>=20)))
@@ -172,14 +174,27 @@ def main():
     require_compute()
     PRODUCT.mkdir(exist_ok=True)
     data={k:load(OUT/(k+'_diagnostics.npz')) for k in C['systems']}
+    for key,a in data.items():
+        native=load(OUT/(key+'_native.npz'))
+        np.testing.assert_array_equal(a['ls_id'],native['ls_id'])
+        metrics,flags=imaging_arrays(native)
+        a.update(**metrics,**flags)
+        a['outer_quality']=a['outer']&a['low_crowd']&a['phot_precise']&a['deep']
+        a['low_crowd_quality']=a['low_crowd']&a['phot_precise']&a['deep']
     weights,overlap=weighted_overlap(data)
+    outer_w,outer_cells=weighted_overlap(data,'outer_quality')
+    crowd_w,crowd_cells=weighted_overlap(data,'low_crowd_quality')
     prior=json.loads(OLD_CONFIG.read_text())['cluster_candidates']
-    results={k:[] for k in ('populations','quality','quality_common','continuous','paired','cmd','scales','color_residuals','growth')}
+    results={k:[] for k in ('populations','quality','mask_audit','quality_common','continuous','paired','cmd','scales','color_residuals','growth')}
     choices={}
     for key,a in data.items():
         assert (a['TYPE']=='PSF').all()
         w=np.ones(len(a['r']))
         res=partitions(a,weights[key])
+        base=res['faint_lower']
+        res.update(faint_lower_outer_quality=base&a['outer_quality'],
+                   faint_lower_outer_common=base&a['outer_quality']&(outer_w[key]>0),
+                   faint_lower_low_crowd_common=base&a['low_crowd_quality']&(crowd_w[key]>0))
         rrl=prior[key]['rrl_mu'];p=C['systems'][key]
         sigma=np.hypot(prior[key]['rrl_sigma_mag'],C['model']['score_ref_common_mag'])
         bv=10+5*np.log10(p['bv_distance_kpc'])
@@ -188,12 +203,13 @@ def main():
                     'baumgardt_vasiliev':(bv,np.hypot(.10,5/np.log(10)*p['bv_sigma_kpc']/p['bv_distance_kpc'])),
                     'secondary_published':(p['other_mu'],np.hypot(.10,p['other_sigma'] or 0.)) }
         for label,mask in res.items():
-            kw=weights[key] if label=='faint_lower_common_clean' else w
+            kw={'faint_lower_common_clean':weights[key],'faint_lower_outer_common':outer_w[key],
+                'faint_lower_low_crowd_common':crowd_w[key]}.get(label,w)
             row=dict(system=key,subset=label,**summary(a,mask,kw,sigma=sigma,ci=True))
             results['populations'].append(row)
             if label in LABELS:
                 results['paired'].extend(paired(a,mask,key,label))
-            if label in ('lower','bright_lower','faint_lower','faint_lower_clean','faint_lower_common_clean') and mask.any():
+            if label!='all' and mask.any():
                 for anchor,(mu,err) in refs.items():
                     x=a['qrf_median'][mask]-mu
                     lo,hi=blocks_ci(x,a['block'][mask],kw[mask],err)
@@ -214,23 +230,29 @@ def main():
         choices[key]=dict(n=int(first.sum()),blocks=b['blocks'],enough=enough,
                            robust=bool(enough and all(r['bias']>=C['threshold_mag'] and r['lo']>0 for r in lit)),
                            minimum_published_bias=min((r['bias'] for r in lit),default=None))
-        for q in ('outer','low_crowd','imaging_unmasked','phot_precise','deep','high_membership','clean'):
+        for q in ('outer','low_crowd','imaging_unmasked','phot_precise','deep','high_membership','clean','clean_all_bits'):
             for side,sel in [('passes',a[q]),('remaining',~a[q])]:
                 mask=sel&res['faint_lower']
                 results['quality'].append(dict(system=key,cut=q,side=side,
                                 **summary(a,mask,w,sigma=sigma,ci=True)))
+        bits=a['MASKBITS'].astype('i8')
+        for bit in range(20):
+            use=res['faint_lower']&((bits&(1<<bit))!=0)
+            results['mask_audit'].append(dict(system=key,bit=bit,optical_veto=bool(OPTICAL_VETO&(1<<bit)),
+                                         N=int(use.sum()),faint_lower=int(res['faint_lower'].sum())))
         results['quality_common'].extend(quality_on_common_cmd(a,key))
         cont=continuous(a,key)
         results['continuous'].extend(cont)
         for axis in ('r','Mr'):
-            for g in ('lower','clean_lower'):
+            for g in ('lower','clean_lower','outer_quality_lower'):
                 good=[r for r in cont if r['axis']==axis and r['group']==g and r['N']>=30 and
                     r['blocks']>=3 and r.get('bias_lo',0)>=C['threshold_mag']]
                 results['growth'].append(dict(system=key,axis=axis,group=g,
                          first_lo=good[0]['lo'] if good else '',first_hi=good[0]['hi'] if good else '',
                          N=good[0]['N'] if good else 0,bias=good[0]['bias'] if good else ''))
         results['cmd'].extend(cmd_bins(a,key))
-    results['matched_cells']=overlap
+    results['matched_cells']=[dict(control=group,**r) for group,tab in
+                [('strict_clean',overlap),('outer_quality',outer_cells),('low_crowd',crowd_cells)] for r in tab]
     results['model_support']=[]
     for key in data:
         with (OUT/(key+'_model_support.csv')).open() as f:

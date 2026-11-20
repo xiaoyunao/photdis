@@ -1,0 +1,80 @@
+{
+  "config": "fdffb3f8089331ba4d441d58dc7e584ea34f86a3ef837ab32c2e16ea10dd0114",
+  "total_members": 20875,
+  "checked_output_tables": 12,
+  "all_cmd_members": true,
+  "checks": [
+    {
+      "system": "NGC_6362",
+      "model": "mist",
+      "roster": 5935,
+      "replayed_crps": 4,
+      "max_error": 7.771561172376096e-16,
+      "pdf_archive_sha256": "7ec211a92cb935774210df61cde784fbe7a2cb6fb10ba6d2607dcdfed692a336"
+    },
+    {
+      "system": "NGC_6362",
+      "model": "ridge_M5",
+      "roster": 5935,
+      "replayed_crps": 4,
+      "max_error": 4.579669976578771e-16,
+      "pdf_archive_sha256": "c101a7a4afc93eaf1d2b32e36916e7be2c9655fa0b35380ec524dbdc23499b07"
+    },
+    {
+      "system": "NGC_6362",
+      "model": "ridge_M30",
+      "roster": 5935,
+      "replayed_crps": 4,
+      "max_error": 6.661338147750939e-16,
+      "pdf_archive_sha256": "9bb0e5234de24be949cbce941a75a438f75d8e95cd6ef6c54c252d24f8e11d63"
+    },
+    {
+      "system": "NGC_6723",
+      "model": "mist",
+      "roster": 2621,
+      "replayed_crps": 4,
+      "max_error": 6.217248937900877e-15,
+      "pdf_archive_sha256": "a7121857cb7f709805957edb8b89aa53268f34c0198afcd3db52e1d93d3629cd"
+    },
+    {
+      "system": "NGC_6723",
+      "model": "ridge_M5",
+      "roster": 2621,
+      "replayed_crps": 4,
+      "max_error": 4.440892098500626e-15,
+      "pdf_archive_sha256": "41ab7783dd9b375194b9faa36ca60f2e7a0c0c4c078e4603c830a883a45e85f6"
+    },
+    {
+      "system": "NGC_6723",
+      "model": "ridge_M30",
+      "roster": 2621,
+      "replayed_crps": 4,
+      "max_error": 8.881784197001252e-16,
+      "pdf_archive_sha256": "6551548698139bb976f1a6fa043fca996e884838f10efa239fa7705c75599493"
+    },
+    {
+      "system": "NGC_6809_M55",
+      "model": "mist",
+      "roster": 12319,
+      "replayed_crps": 4,
+      "max_error": 1.3322676295501878e-15,
+      "pdf_archive_sha256": "4277fe8a118de6849610ffe9d82ab157eaf178390d57ea7d58352661d44256a2"
+    },
+    {
+      "system": "NGC_6809_M55",
+      "model": "ridge_M5",
+      "roster": 12319,
+      "replayed_crps": 4,
+      "max_error": 4.3021142204224816e-16,
+      "pdf_archive_sha256": "9473d9d7689db9d9239fb902af02818587a34fb9153a34993367750d0b4f137b"
+    },
+    {
+      "system": "NGC_6809_M55",
+      "model": "ridge_M30",
+      "roster": 12319,
+      "replayed_crps": 4,
+      "max_error": 1.1102230246251565e-15,
+      "pdf_archive_sha256": "28a1090d20982d14ec20e1ac75a77ae139ab505ee661f46d2396ec2ad1e77a34"
+    }
+  ]
+}

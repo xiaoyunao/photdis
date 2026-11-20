@@ -1,8 +1,10 @@
 # PLAN
 
-## Cluster CMD depth 2026-11-20 — in progress
+## Cluster CMD depth 2026-11-20 — scientific experiment complete
 
-Review a3ab0832 on the immutable faint-signed roster. Compare NGC 6362 and M55 in fixed clean CMD overlap, with NGC 6723 as secondary verification. Reuse all QRF PDFs, qualify independent archived M5/M30 ridges and age/metallicity-matched MIST, and test published external scales without phase re-selection. Delivery in docs/cluster_depth_20261120 and manifests/cluster_depth_20261120.
+Review a3ab0832 on the immutable faint-signed roster. Recovered 20,875 native PSFs and exact archived QRF statistics, and fit same-star fixed external MIST and M5/M30 ridge comparisons. NGC 6362 and M55 bright/faint lower-sequence offsets differ by 0.17–0.18 mag. Outer low-crowding medians remain +0.62/+0.84 mag. Their lower-sequence bias also persists on common CMD cells. The strict optical compound arm contains 1/5 stars and no common cells, so its preregistered threshold is unsupported. NGC 6723 is secondary. The independent CMD relation improves paired scale and CRPS and retains interval undercoverage in some strata.
+
+Next science is a training-population support and branch-mass audit in the overlapping lower sequence. The production distance model is retained. Compact results in manifests/cluster_depth_20261120, methods in docs/cluster_depth_20261120.
 
 ## Faint signed Gaia 2026-11-20 — scientific experiment completed
 

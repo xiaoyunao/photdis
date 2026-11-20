@@ -1,0 +1,47 @@
+{
+  "config": "fdffb3f8089331ba4d441d58dc7e584ea34f86a3ef837ab32c2e16ea10dd0114",
+  "member_archive": "9eafa2e10afc031790cfe36ed8545aa6336cc87c317fab167e9cea9dacbd0748",
+  "files": {
+    "NGC_6362": {
+      "native": "77559e3e5fc152e37de4fdddb50ddbecfb15d62080f2618af65bc4f047b53d8f",
+      "pdf": "152e419066e1213dca5cc6e4cdbef12e700991c2c6a8ca5c41868e7d39123c94",
+      "sweeps": {
+        "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-260m070-265m065.fits": {
+          "size": 993836160,
+          "mtime_ns": 1780605770000000000
+        }
+      },
+      "roster_sha": "a335320f4335425469ec1ba0d6f5b9350c5c291ee4a27825e88faac38eaeed48"
+    },
+    "NGC_6723": {
+      "native": "63c5cadc4f4ece80f4714d004d8f0d1ff7ea76e7c752a4cb7260e288588fea8a",
+      "pdf": "ceabf9e91b5ebf886fa9d6dbff100c934f4e055802715b4f8621e4258c42a5a1",
+      "sweeps": {
+        "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-280m040-285m035.fits": {
+          "size": 3792758400,
+          "mtime_ns": 1780610572000000000
+        },
+        "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-285m040-290m035.fits": {
+          "size": 2357700480,
+          "mtime_ns": 1780610897000000000
+        }
+      },
+      "roster_sha": "a335320f4335425469ec1ba0d6f5b9350c5c291ee4a27825e88faac38eaeed48"
+    },
+    "NGC_6809_M55": {
+      "native": "9c290fd1a4b90560201803e4422781af137ba8b5796d32f375eab83a2b28cd24",
+      "pdf": "62eee64ff1aef720872ca2de1f25c947f037ed46da487acd9d37cf2b224bc030",
+      "sweeps": {
+        "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-290m035-295m030.fits": {
+          "size": 3019063680,
+          "mtime_ns": 1780611586000000000
+        },
+        "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-295m035-300m030.fits": {
+          "size": 1831582080,
+          "mtime_ns": 1780612091000000000
+        }
+      },
+      "roster_sha": "a335320f4335425469ec1ba0d6f5b9350c5c291ee4a27825e88faac38eaeed48"
+    }
+  }
+}
