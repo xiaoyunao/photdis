@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/environment_20261120": "c23628759bc2d144d020091011d544c39269079c9d035cb19372ca7a46d32fae",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/environment_transfer_20261120": "6e7b3a323acbc859955a4128dbea87bb24b24f3601d9a7a8a2e162ea6c3ea113"
+  },
+  "outputs": {
+    "population_availability.csv": "25855c087d34c7b8a460a4b66a1b64930dde34a8a53489691e128caeaf232d4b",
+    "population_matches.csv": "4718d23eb92b6d49353e98e7cc7c747130f6e56e92d79a5bf48d38a60aef7bca",
+    "population_balance.csv": "199176a9a90c1fb2d35bf0913e45b43bfc55336e3470312c47c709f5c51a9331",
+    "population_stars.csv": "4affe9e64584f44d82746be409a6391c47ba7cad17cc656bb95774ad4efeb297"
+  }
+}

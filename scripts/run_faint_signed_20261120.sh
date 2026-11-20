@@ -24,4 +24,5 @@ runtime=/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/b
 "$runtime" -u scripts/faint_signed_clusters.py
 out=data/faint_signed_20261120
 cp "$out/power/power.csv" "$out/results/"
+"$runtime" -u scripts/faint_signed_delivery.py
 "$runtime" -u scripts/faint_signed_figures.py "$out/results" "$out/figures" --regression

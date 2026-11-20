@@ -1,0 +1,30 @@
+{
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "cluster_fixed_scores.csv": "4590429decac0ba9990cd50f4521b0837b59fcb670f63cfe50909b1139e6a0ca",
+    "cluster_native_inventory.csv": "01932f95ea83f8e783f6c17717c3cb340ad8684c52577fa2ef80c921c5f5f812",
+    "cluster_scale_summary.csv": "a25b5ba857dc11a28f1b61b51cefb68464c8abbf76b8f4a377dedede984ab505",
+    "pit.csv": "6003bd0b1cb841e862651cf38fdaf155f374c2b856cbc6de18f4a41a86bde94e",
+    "population_availability.csv": "25855c087d34c7b8a460a4b66a1b64930dde34a8a53489691e128caeaf232d4b",
+    "population_balance.csv": "199176a9a90c1fb2d35bf0913e45b43bfc55336e3470312c47c709f5c51a9331",
+    "population_figure_input.csv": "cf76ff5ade50160eb91c558e1780d95236668f3dba8cce2b6bc2d6f37b53e020",
+    "population_matches.csv": "4718d23eb92b6d49353e98e7cc7c747130f6e56e92d79a5bf48d38a60aef7bca",
+    "population_stars.csv": "4affe9e64584f44d82746be409a6391c47ba7cad17cc656bb95774ad4efeb297",
+    "power.csv": "7ad2b762b1897eac90f8ab54dcd7243895be364854f4b12aeac5867129b7c9f3",
+    "signed_scores.csv": "b406e06f1be34e8792a42c0ad2eda8a81a062e3023600c695cc5ceae495d6f09",
+    "signed_snr.csv": "f5a6c2e2a0f1862dc889e9aebbf7d009fc8cb859ad46da8c3b75b74ca8501104",
+    "signed_summary.csv": "45d3d9ac69f965b3fa5fcbed6b3f584c242cd2408c5129aebbdedc5125c7b441"
+  },
+  "outputs": {
+    "dust_population_common_support.csv": "0465eb4f72fe595dede37449470b2edb0d02eba67c9ad572fd603cf63563a989",
+    "dust_population_common_support.pdf": "26cce7ea488155934c05a6f0e71979893c5aaee6d9b304a9ae788ba4428f836e",
+    "dust_population_common_support.png": "84b1e66f17079cff0a7551eb3acf986597ade56b9fd923fb644e94ff4cf15d1f",
+    "regression.json": "489d9421f4b9afeaaf4099f73de4fd2ad3cae128d5d033f19143bc84acd02a99",
+    "signed_parallax_observed.csv": "2cacfd7ad8d5ace4303c6ecd9dfb95edac902ad42b658f6c2d44bba9861c8138",
+    "signed_parallax_observed.pdf": "2467c9cbdde1987bcf23275fff7ae966ebb44801a13df4de92bd6c4374a1647e",
+    "signed_parallax_observed.png": "87c99095d66cf2bde357d1a1a106e9dddb527d8b3730b8e3acf2eced340fb93e",
+    "signed_parallax_scale_power.csv": "7ad2b762b1897eac90f8ab54dcd7243895be364854f4b12aeac5867129b7c9f3",
+    "signed_parallax_scale_power.pdf": "07525399578960ee51b77a8e8e1ea1c41550aa0b68cf1d51be2c94c7aea6d86f",
+    "signed_parallax_scale_power.png": "93737d643f5eb19e8fb72ca030d6149fadd065784dc25018e6e27cdd31b61aab"
+  }
+}

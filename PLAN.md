@@ -1,8 +1,10 @@
 # PLAN
 
-## Faint signed Gaia 2026-11-20 — registered
+## Faint signed Gaia 2026-11-20 — scientific experiment completed
 
-Read the full new review 3beaa71f at fcd59ee9. The new experiment is specified in docs/faint_signed_20261120/methods.md and configs/faint_signed_20261120.json. Run two-field signed-parallax power first with real Gaia errors, exact weak selection and spatial offsets. Expand only the magnitude layers passing the registered power and null checks. Separately use archived same-star PDFs for the bright population/dust comparison and check the three 5–10 kpc candidate systems against native PSF and history. Confirm compact tables, Pal 5 figures and reproducibility before closing.
+Review 3beaa71f at fcd59ee9. Two fields and 12,727 frozen PSFs scored with the same weak selection and signed parallax likelihood. Null rates pass, while ±0.10 mag power is insufficient in both magnitude bins. The registered gate leaves all nine-field expansions closed. The 3,054 archived bright stars have only partial covariate overlap and no independent phase labels. L224, L240 and M249 retain dust-response differences in the shared cells.
+
+NGC 6362, NGC 6723 and M55 all passed the fixed native-member gate. On the adopted independent W1 RR Lyrae scale, 2,780 faint lower-sequence proxies across the three systems have positive group median biases of +0.61 to +0.89 mag. This group result is retained across the declared zero-point sensitivity. Future work would diagnose luminosity/phase and photometric support in these fixed systems. No production calibration is supported. Science report and compact tables in manifests/faint_signed_20261120, methods in docs/faint_signed_20261120.
 
 ## Independent extinction transfer 2026-11-20 — scientific experiment completed
 

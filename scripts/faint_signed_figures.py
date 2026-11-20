@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 
 import numpy as np
+from matplotlib.lines import Line2D
 
 from environment_figures import BLUE, ORANGE, GRAY, PAPER, STYLE, check_templates, figure, plt, read, sha
 from v3_10_figures import regression
@@ -28,6 +29,9 @@ def power_plate(source,dest):
         ax.set(title=field,xlabel='Injected modulus shift (mag)',ylim=(0,1.02))
     axes[0].set_ylabel('Rejection and directional power')
     axes[0].legend(frameon=False)
+    axes[1].legend(handles=[Line2D([],[],color=GRAY,ls=style,label=name)
+                            for style,name in [('-','Nominal offsets'),('--','Doubled offsets')]],
+                   frameon=False,loc='upper center')
     figure(dest,'signed_parallax_scale_power',fig,rows)
 
 
@@ -38,7 +42,7 @@ def observed_plate(source,dest):
     fields=list(dict.fromkeys((q['field'],q['r_lo']) for q in rows if q['mode']==use))
     if use=='full':
         fields=[x for x in fields if x[0] in ('L032','M249')][:4]
-    fig,axes=plt.subplots(2,len(fields),figsize=(7.15,4.1),layout='constrained',squeeze=False)
+    fig,axes=plt.subplots(2,len(fields),figsize=(7.15,4.1),layout='constrained',squeeze=False,sharey='row')
     displayed=[]
     for j,(field,mag) in enumerate(fields):
         q=[r for r in rows if (r['field'],r['r_lo'])==(field,mag) and r['mode']==use]
@@ -62,7 +66,7 @@ def observed_plate(source,dest):
 
 
 def population_plate(source,dest):
-    rows=read(source,'population_stars')
+    rows=read(source,'population_figure_input')
     scores=read(source,'population_matches')
     fig,axes=plt.subplots(1,3,figsize=(7.15,3.0),layout='constrained')
     for ax,x,y,xlabel,ylabel in [(axes[0],'gaia_bp_rp','gaia_MG','Gaia BP − RP (mag)','$M_G$ (uncorrected, mag)'),
@@ -77,11 +81,14 @@ def population_plate(source,dest):
     ax=axes[2]
     q=[s for s in scores if s.get('metric')=='C_crps']
     for i,s in enumerate(q):
-        ax.plot([float(s['lo']),float(s['hi'])],[i,i],color=BLUE,lw=.8)
-        ax.plot(float(s['change_difference']),i,'o',color=BLUE,ms=4)
+        sparse = int(s['blocks'])<8
+        color = GRAY if sparse else BLUE
+        ax.plot([float(s['lo']),float(s['hi'])],[i,i],color=color,lw=.8,ls=':' if sparse else '-')
+        ax.plot(float(s['change_difference']),i,'o',color=color,ms=4,
+                markerfacecolor='none' if sparse else color)
     ax.axvline(0,color=GRAY,ls=':',lw=.7)
     ax.set(yticks=range(len(q)),yticklabels=[s['field'] for s in q],
-           xlabel='Difference in CRPS change (mag)')
+           xlabel='Difference in CRPS change')
     figure(dest,'dust_population_common_support',fig,rows+q)
 
 

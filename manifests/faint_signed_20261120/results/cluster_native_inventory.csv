@@ -1,0 +1,4 @@
+system,members_p90,intersecting_sweeps,raw_rows,missing_type,rejected_non_psf,photometric_member_psf,history,fit,qrf_support,eligible,faint_lower_sequence,bright,faint,median_ebv
+NGC_6362,15176,1,170095,0,30929,6239,0,0,5935,5935,1336,4570,1365,0.07450820505619049
+NGC_6723,7487,2,228266,0,65895,2905,0,0,2621,2621,44,2439,182,0.1574195772409439
+NGC_6809_M55,23845,2,192934,0,34938,13810,0,0,12319,12319,1400,10909,1410,0.13590148091316223

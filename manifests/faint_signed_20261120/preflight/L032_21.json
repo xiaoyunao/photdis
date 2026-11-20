@@ -1,0 +1,17 @@
+{
+  "config": "130912f2c077766e6bc48056d62e15eae737624ba98abce1c24d0fbf90b58177",
+  "roster": "63fa50e2409d475bc0ecab958b1ad9010679becf2b0ca9c5476bb1497a2d19f9",
+  "sources": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "/pscratch/sd/y/yunao/photdis_pipeline/manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716"
+  },
+  "outputs": {
+    "inputs.npz": "721403612676d70bb35f5357a3bd4d818f544ef9b664d3162e4b664e20ff88ab",
+    "signed_observation.npz": "40e3c55e3b863da935ac82708bdd9b505723f5b2ed3926ea3f0788caf61139d9",
+    "pdf.npz": "11b4c896bcab14d7ce139c51d4e0739a5fc7073f7fc480622da23d00eaab8eb5"
+  },
+  "n": 342
+}

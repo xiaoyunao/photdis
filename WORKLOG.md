@@ -2,6 +2,12 @@
 
 ## 2026-11-20 — faint signed Gaia
 
+- Closeout. Replayed all three PNGs from portable tables with identical pixels and checked the original F02/F03 style baselines. Actual 8/32-node diagnostics agree within 4.5e−14 on the audited slices. All 12 compute steps completed 0:0. Released the idle interactive allocation 61627267 after 09:39, with no queue entry.
+
+- Passed native DR11 and history audits on 12,727 faint pilot PSFs. Independent null rejection 4.1%–6.8%. At [20,21), ±0.10 mag power 21%–30% L032 and 55%–59% M249, weaker in [21,22). Neither layer passes. Scored actual pilot parallaxes, PIT, signs and fixed shifts. No nine-field predictions.
+- Compared 3,054 archived bright Gaia stars. Fixed five-variable overlap retains positive CRPS response contrasts in L224/L240/M249, with no independent optical or astroNN class evidence on the matched archive. L219 and M240 have very limited matched support. All three systems pass the prospective native-member screen. 20,875 total members, 2,780 faint lower-sequence proxies, median scale offsets +0.612/+0.804/+0.892 mag in NGC 6362/6723/M55.
+- Final compact packet includes Pal 5/v3.8 power, observed-parallax and population plates, actual-model quadrature and conservation audit, and fixed independent cluster scale tables. 12 targeted tests pass locally and on NERSC. Production, manuscript and sky displays retained.
+
 - Read the full latest review 3beaa71f and set a separate P0–P2 goal. Local, GitHub and canonical NERSC base fcd59ee9 match. NERSC authentication initially expired and was renewed. Allocation 61627267. Registered L032 and M249, 6,000 per cell cap, signed S/N selection and field/block offset model before the pilot. Use independent null verification and a 0.80 directional-power threshold at ±0.10/0.20 mag.
 - Added the forward model, CPU workflows, exact selection and spatial tests, and native cluster candidate screen. Three local numerical tests passed. All three literature systems have coverage in the archived public imaging grid. Their exact member and support counts await the focused NERSC census.
 
