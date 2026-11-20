@@ -16,7 +16,7 @@ t = 29.068 s
        nan:   0.020 s
       sort:  11.492 s
        idx:   0.103 s
-concurrent.futures.process._RemoteTraceback: 
+concurrent.futures.process._RemoteTraceback:
 """
 Traceback (most recent call last):
   File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/process.py", line 254, in _process_worker

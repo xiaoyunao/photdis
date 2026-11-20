@@ -2,6 +2,8 @@
 
 ## 2026-11-20 — low-latitude environment feasibility
 
+- Closeout. Local, GitHub and canonical science snapshot bd8c6820 verified across 50 changed files. Archived only seven identical deployed source/config inputs before the safe fast-forward. Returned own allocation 61621590, COMPLETED 0:0, elapsed 19:01, no queue entry. Accounting includes the repaired dust quantile error and the canceled slow direct archive scan. Review evidence and all results at manifests/environment_20261120.
+
 - Six-field study finished on NERSC 61621590. 527,156 precise native PSFs, 466,979 nominal QRF support, 25,605 Gaia geometry and 9,870 evaluated. SpecDis, SPDist and receipt-bound APOGEE were checked and gave zero qualified spectral references. Two matched low-latitude fields shift +0.233/+0.186 mag against high-latitude control. Bayestar same-support comparisons bring them to +0.009/−0.018 mag, while heavily reddened L219 remains −0.414 mag with limited convergence. High crowding and faint/distant evidence sparse. Three PNG/PDFs checked, reproducible byte-for-byte, v3.8 pixel regression and numeric/reference-independence checks pass. First dust attempt exposed per-source histogram edges; fixed in separate new script. Direct APOGEE archive reread replaced with already verified complete projected inventory. Production and reserved clusters retained.
 
 - Read full review 613e204c. Local/GitHub/NERSC at 67ccfb2; clean tracked state. Registered separate goal and six fields before opening predictions. Existing v3.10 low-latitude SED pilot is coverage context only. NERSC allocation 61621590 for this study.
