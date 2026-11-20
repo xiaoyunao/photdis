@@ -1,0 +1,4 @@
+system,longitude,latitude,comparison_kpc,rrl_w1_modulus,rrl_w1_stat_sigma,rrl_scale_source,combined_area_cells,aperture_cells,median_shallower_gr_depth,median_sfd,old_member_inventory_rows,old_admitted_science,prior_native_k_giant_members
+NGC_6362,325.5545,-17.5697,7.65,14.45,0.03,https://academic.oup.com/mnras/article/439/4/3765/1165609,13,13,23.95014762878418,0.07551342993974686,,,0
+NGC_6723,0.0692,-17.2988,8.27,14.69,0.05,https://academic.oup.com/mnras/article/439/4/3765/1165609,13,13,24.129709243774414,0.19504831731319427,9,0,0
+NGC_6809_M55,8.7925,-23.2715,5.35,13.73,0.05,https://academic.oup.com/mnras/article/439/4/3765/1165609,13,13,24.329463958740234,0.13443513214588165,98,0,

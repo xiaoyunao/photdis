@@ -1,5 +1,10 @@
 # WORKLOG
 
+## 2026-11-20 — faint signed Gaia
+
+- Read the full latest review 3beaa71f and set a separate P0–P2 goal. Local, GitHub and canonical NERSC base fcd59ee9 match. NERSC authentication initially expired and was renewed. Allocation 61627267. Registered L032 and M249, 6,000 per cell cap, signed S/N selection and field/block offset model before the pilot. Use independent null verification and a 0.80 directional-power threshold at ±0.10/0.20 mag.
+- Added the forward model, CPU workflows, exact selection and spatial tests, and native cluster candidate screen. Three local numerical tests passed. All three literature systems have coverage in the archived public imaging grid. Their exact member and support counts await the focused NERSC census.
+
 ## 2026-11-20 — independent extinction transfer
 
 - Closeout. Recomputed 108 PDF scores independently, with maximum absolute errors below 2e−15. Verified 28 bound outputs, three pixel-identical native-runtime figure replays, and both original v3.8 regression plates. Returned NERSC allocation 61624582, COMPLETED 0:0 after 18:32. All 15 job steps completed.

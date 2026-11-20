@@ -1,0 +1,83 @@
+{
+  "baseline": "fcd59ee9d76d71efa1fe76dd9727fd56474e64f7",
+  "review": "3beaa71f-2263-40c4-8355-e434be5c3962",
+  "pilot_fields": [
+    "L032",
+    "M249"
+  ],
+  "pilot_cap": 6000,
+  "bins": [
+    20,
+    21,
+    22
+  ],
+  "shifts_mag": [
+    -0.2,
+    -0.1,
+    0.0,
+    0.1,
+    0.2
+  ],
+  "weak_snr_upper": 5.0,
+  "zero_calibration": 512,
+  "zero_evaluation": 512,
+  "injection_repetitions": 384,
+  "null_rejection": 0.05,
+  "allowed_realized_null_rejection": [
+    0.02,
+    0.08
+  ],
+  "minimum_power": 0.8,
+  "minimum_blocks": 8,
+  "field_offset_rms_mas": 0.01,
+  "block_offset_rms_mas": 0.01,
+  "systematic_stress_factor": 2.0,
+  "seed": 20261120,
+  "covariate_match": {
+    "gr": 0.2,
+    "rz": 0.15,
+    "r": 0.75,
+    "mu_ref": 0.55,
+    "ebv": 0.075
+  },
+  "cluster_minimum_psf": 50,
+  "cluster_minimum_faint_lower_sequence": 20,
+  "cluster_candidates": {
+    "NGC_6362": {
+      "galactic": [
+        325.5545,
+        -17.5697
+      ],
+      "scale_kpc": 7.65,
+      "scale_error_kpc": 0.07,
+      "independent_scale": "https://academic.oup.com/mnras/article/439/4/3765/1165609",
+      "rrl_mu": 14.45,
+      "rrl_sigma_mag": 0.03,
+      "zeropoint_stress_mag": 0.1
+    },
+    "NGC_6723": {
+      "galactic": [
+        0.0692,
+        -17.2988
+      ],
+      "scale_kpc": 8.27,
+      "scale_error_kpc": 0.1,
+      "independent_scale": "https://academic.oup.com/mnras/article/439/4/3765/1165609",
+      "rrl_mu": 14.69,
+      "rrl_sigma_mag": 0.05,
+      "zeropoint_stress_mag": 0.1
+    },
+    "NGC_6809_M55": {
+      "galactic": [
+        8.7925,
+        -23.2715
+      ],
+      "scale_kpc": 5.35,
+      "scale_error_kpc": 0.05,
+      "independent_scale": "https://academic.oup.com/mnras/article/439/4/3765/1165609",
+      "rrl_mu": 13.73,
+      "rrl_sigma_mag": 0.05,
+      "zeropoint_stress_mag": 0.1
+    }
+  }
+}

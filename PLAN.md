@@ -1,5 +1,9 @@
 # PLAN
 
+## Faint signed Gaia 2026-11-20 — registered
+
+Read the full new review 3beaa71f at fcd59ee9. The new experiment is specified in docs/faint_signed_20261120/methods.md and configs/faint_signed_20261120.json. Run two-field signed-parallax power first with real Gaia errors, exact weak selection and spatial offsets. Expand only the magnitude layers passing the registered power and null checks. Separately use archived same-star PDFs for the bright population/dust comparison and check the three 5–10 kpc candidate systems against native PSF and history. Confirm compact tables, Pal 5 figures and reproducibility before closing.
+
 ## Independent extinction transfer 2026-11-20 — scientific experiment completed
 
 Review ca01b642 and base 6c5cc2c7. Three registered apertures, immutable pre-outcome roster of 1,500 TYPE=PSF, paired A/B/C and Gaia-input diagnosis, archived L219 replay, nine-aperture faint inventory. 1,363 objects scored at shared map support. Allocation 61624582 was returned after completion. L224 and mid-latitude M249 pass. L032 worsens. The study-level two-low-latitude transfer criterion fails. The beneficial signal is strongest in bright 0.5–2 kpc conservative dwarf proxies. L219 has 198/500 converged, 188 common, with separate initial mass, color support, updated mass and step-limit causes.
