@@ -12,8 +12,10 @@ from environment_pilot import C, OUT, finish, sample
 from photdis.stage1 import require_compute
 from photdis.v3.controls import apply_temperature, probe_features
 from v2_1_near import atomic_npz, load, sha
+from v3_3_sed import verified
 from v3_4_near_forecast import prepare
-from v3_6_external_reference import apogee_inventory
+from v3_6_external_reference import OUT as EXTERNAL
+from v3_6_vac_distances import read_columns
 from v3_9_references import matched, sorted_key, subset
 from v3_10_selection import DEST as CLASSIFIERS
 import joblib
@@ -23,8 +25,13 @@ def main():
     require_compute()
     dest=OUT/'apogee'
     dest.mkdir(parents=True,exist_ok=True)
-    inputs={}
-    source=apogee_inventory(inputs)
+    receipt=EXTERNAL/'complete.json'
+    path=EXTERNAL/'DR17_astroNN_inventory.npz'
+    marker=json.loads(receipt.read_text())
+    digest=marker['outputs'][path.name]
+    source=read_columns(verified(path,digest),('source_id','RA','DEC','distance_precise',
+                                             'class_label','distance_kpc','distance_error_kpc'))
+    inputs={str(receipt):sha(receipt),str(path):digest}
     good=np.flatnonzero(source['source_id']>0)
     cat=dict(_gaia=sorted_key(source['source_id'],good),
              reference_ra=source['RA'],reference_dec=source['DEC'])
