@@ -1,0 +1,2 @@
+mode,field,r_lo,n,blocks,observed_negative,predicted_negative,scale_shift_linear_mag,systematic_stress_scale_mag,model_sd_mag,systematic_stress_sd_mag,p08_p16_error
+field_power,L240,20,3000,47,0.37633333333333335,0.35128227764885134,0.14347414251138177,0.13869900593417647,0.07821413572866058,0.09048707380910459,2.6645352591003757e-15

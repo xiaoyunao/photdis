@@ -1,0 +1,26 @@
+{
+  "style": {
+    "lock": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "baseline": {
+      "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+      "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+    }
+  },
+  "pixel_identical_portable": {
+    "environment_comparison.png": "a00ee83db09c36da5ab7dd8fd07b3946f6ba770a3b722897b521ed0557128c35",
+    "migration_and_gd1.png": "5fb2fac33d44e99166ad7d365b90d91455dc254d4f8776611dd24d0f0a2a9530",
+    "signed_parallax_by_field.png": "2c3bd94e5ae4b1a96bcbd5a1522225afbc5d7c4c01efd5c652ce2c120e1d441a",
+    "training_and_cluster_scale.png": "2193eeb63614a549d7c87d1d80dd534adb35fc4cc953916f65ef518a9604f084"
+  },
+  "figure_groups": 10,
+  "actual_tests": 15,
+  "field_cells": 18,
+  "observed_scoring_cells": 14,
+  "code_hashes": {
+    "science_closeout_catalogue.py": "443ee790f2b931bf7fb74541fb70ac6782cf4b5055a8d51a0b80b9f828af135f",
+    "science_closeout_environment.py": "c8b3ddd299342061b9aa0480c3d9c8f9bde669e63a0fb5ff1873eade0e48066a",
+    "science_closeout_figures.py": "944acdfbf5d240a27ee778d5006a2eb8bc294dbfad0bc17b5138e74a09011d98",
+    "science_closeout_sequence.py": "a3f3384c4acdf569165564ff3c80e84a151b09ce96ac7726dd79e3cd734301b1",
+    "science_closeout_signed.py": "d298fff2601321466e578aef49a04d9d672ed418cb53c56001320a6484527055"
+  }
+}

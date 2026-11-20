@@ -1,0 +1,16 @@
+{
+  "job": "61641694",
+  "inputs": {
+    "data/environment_20261120/dust/forecasts.npz": "6d8d643374da7af2bf2bc428e9fc4c6477143dbcdbdc3fe8b0485445fcde0aae",
+    "data/environment_20261120/forecast/roster.npz": "74339664fbd8ffec7f7565a8a6ad7a8df5d7b2e0c5237bdc8428671aafc8cee8",
+    "data/environment_20261120/forecast/pdf.npz": "161554ffc2dc1c6f0232ee92b047cb1d98b24277539d4f37d70f52b35262320f",
+    "data/environment_transfer_20261120/dust/forecasts.npz": "5caf79a2bfb7ba7f1c11109aafeaf1910cc003884bd4c898435c66dd705fea7d",
+    "data/environment_transfer_20261120/forecast/roster.npz": "1ec5e3176a3c54a9c7fdaa18c93406ccb1e85e1bbec194e76d3563a7c4ac8329",
+    "data/environment_transfer_20261120/forecast/pdf.npz": "293c7a5a49d494a6a9a10374f0b4285d6238e6f72434a708f12d027fc3b3bc2d"
+  },
+  "outputs": {
+    "environment_metrics.csv": "b6ab8fd151c7feb662f2dd035bfb4af234d30e584aaebc84cd311b7354e50ac6",
+    "environment_oracle.csv": "0ea85114c75485b1398d1226a5eb0bf655161dfe5ddf84bd435dd8f4c8d5949f",
+    "environment_flow.csv": "fee5c3b7756f3dcf28ca1706e657347af3de20f395c4cd54c45a85833d2846b7"
+  }
+}

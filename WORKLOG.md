@@ -1,5 +1,15 @@
 # WORKLOG
 
+## 2026-11-20 — integrated Photdis science closeout
+
+- Final verification. 15 focused tests passed. Re-rendered four compact figures with identical PNG pixels and validated original v3.8 F02/F03 pixel regression under the frozen Pal 5 style. The initial regression invoked without the rc context was replaced by the actual style-bound regression. Remote score and table hashes match.
+
+- Read the latest full paper-review thread and the user's WP-A–E text. Set the goal on `526cc819`. Ran nine signed-Gaia cells by field in parallel on CPU allocation 61641694, plus separate frozen member/training, catalogue-shard and dust tasks. Kept all candidates, forecasts, RGB and TeX on their existing versions.
+- `scripts/science_closeout_catalogue.py` replayed selected counts via the archived 32 census shards, cross-checked production and science layers, and built reference-specific migration, three conditional abundance scenarios and exact GD-1 four-shell PDF counts. The 259 GD-1 members give 155 medians and 130.0 PDF source-equivalents in 5–10 kpc.
+- `scripts/science_closeout_sequence.py` reconstructed exact training histograms and class weights leaf by leaf. Added same-label empirical PDFs on frozen member IDs. M92 audit initially lacked the normalized `identity` field, resolved using verified native archive `source_id`, reconstructing grz from archived AB mags and replaying the frozen quantiles. Historical M68 binned archive preserved. No new cluster passes the available 5–10 kpc screening beyond the independently anchored existing sample.
+- `scripts/science_closeout_signed.py` tested ±0.3 and ±0.5 mag shifts on 29,327 typed native objects and scored 14 eligible field/bin cells. At 20–21 mag, 8/9 and 9/9 pass. At 21–22, 0/9 and 5/9 pass. Scoring shows heterogeneous local responses with no supported common correction. `scripts/science_closeout_environment.py` replayed A/B/C on 3,054 common objects from 4,500 registered, preserving updated point-diagnostic D and all failures.
+- Added Chinese report, scope and decision tables, ten indexed figure groups (four newly rendered), and reductions under `manifests/science_closeout_20261120`. Verified table links and data hashes. Thesis of the evidence package is reference-conditioned distance accuracy, population-dependent scale and the effect of selections. Final publication handoff favors the validated catalogue and scope, with faint/far/high-dust limitations retained.
+
 ## 2026-11-20 — cluster CMD depth
 
 - Closeout. Three portable PNGs match pixel-for-pixel, F02/F03 regression hashes match, and all 16 compute steps completed 0:0. Returned NERSC allocation 61629375 after 17:53 with no remaining queue entry.

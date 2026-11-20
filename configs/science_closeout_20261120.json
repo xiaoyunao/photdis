@@ -1,0 +1,19 @@
+{
+  "baseline": "526cc819b320bdac32689081969e54860f2b9043",
+  "signed": {
+    "shifts_mag": [-0.5, -0.3, 0, 0.3, 0.5],
+    "pilot_cap": 3000,
+    "zero_calibration": 512,
+    "zero_evaluation": 512,
+    "injection_repetitions": 384,
+    "minimum_power": 0.8,
+    "minimum_blocks": 8,
+    "allowed_realized_null_rejection": [0.02, 0.08]
+  },
+  "sequence": {
+    "external_window_mag": 0.3,
+    "branch_offset_mag": 0.5,
+    "color_box_mag": [0.05, 0.04],
+    "phase_bands_mr": [[4, 5], [5, 5.5], [5.5, 6], [6, 7], [7, 9]]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "config": "3483f98500929e079fe9aeafb9dc17b8b36b36ad8a6a503b8dfab002a1c096a6",
+  "field": "L224",
+  "slurm_job": "61641694",
+  "model_hashes": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_3/model_freeze.json": "caa5de9fac213ce9c3eb1c72c9bd4dec881fa3e196cd729943221363665fa525",
+    "/pscratch/sd/y/yunao/photdis_pipeline/manifests/v3_0/controls/complete.json": "cfe2f9fa1baf368a461b189e38b109a940e0e56212f7682bbc3fcf3c3249a418",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/controls/probes.joblib": "26c1a4611eaf25af93e7d8b5377e24054ca692cb92eeca519f1249a9748bd197",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/sed_fit.joblib": "f996068f77ed086835daecc4c303f6422e0c4bedd8d8c014716eb86410d09e33",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_0/controls/qrf_grz.joblib": "e21b81bf436ff830ed2696261b66e645ffc5275a7696096454d832055b31d716"
+  },
+  "outputs": {
+    "signed_summary.csv": "a3ebb54a12fe33edc8c6006070f55629df7f211a5ae1277824fa3676c6eabb33",
+    "power.csv": "59f2ee20ce39952d440b0ae72ce4fe225b9853dccdd01d6ffe6287bd0b6a4535",
+    "pit.csv": "3208767aad3573275bd955055f76777cd1430d60c88e4c6395dea497d1c8193b",
+    "signed_scores.csv": "367d69f0df958ddac7efb68a53ea6d84125480e315302e3256c04181655d6398",
+    "gate.csv": "032c2595183b383796a06698083651604bb503ddcb0e236fb03346bd43999ea5",
+    "signed_snr.csv": "acf48d44a8a86db8a0bdd247c6f702982a6145d55669499a599c436e54077727"
+  }
+}

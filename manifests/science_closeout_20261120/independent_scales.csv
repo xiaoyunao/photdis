@@ -1,0 +1,9 @@
+system,reference_kpc,reference,role,coverage_and_decision
+NGC 6362,7.76,"Dambis W1 RR Lyrae: mu=14.45 +/- 0.03 mag","Independent distance scale; member predictions previously scored","5935 typed members; 1336 faint lower sequence. Retain as independent physical benchmark; no fresh test."
+NGC 6723,8.67,"Dambis W1 RR Lyrae: mu=14.69 +/- 0.05 mag","Independent distance scale; member predictions previously scored","2621 typed members; 44 faint lower sequence. Small-sample corroboration."
+M55,5.57,"Dambis W1 RR Lyrae: mu=13.73 +/- 0.05 mag","Independent distance scale; member predictions previously scored","12319 typed members; 1400 faint lower sequence. Retain independently anchored existing comparison."
+M92,8.50,"Legacy fixed cluster scale","Historically exposed aperture; audited member IDs outside fit/calibration","Replayed native northern members. Current run does not count as a prospective test."
+M68,10.404,"Legacy fixed cluster scale","Previously opened binned cluster response","Outside 5–10 kpc; historical structure comparison remains available."
+NGC 1851,11.44,"BV21 HST kinematics +/- 0.32 kpc","Inventory only; forecasts unopened","207 qualified native PSFs; isolated scale outside 5–10 kpc."
+NGC 5053,18.03,"BV21 subdwarf scale; no isolated parallax/kinematic distance","Historical IDs excluded from 238 eligible inventory PSFs","Outside 5–10 kpc. The subdwarf-based scale is not independent geometry."
+GD-1,,"DESI distance curve with CFHT and SDSS literature comparisons","Historically used real member and stream example","259 quality-selected members, all at reference 5–10 kpc on the DESI curve. Population-specific track consistency, no new absolute standard."

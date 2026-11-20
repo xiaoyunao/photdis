@@ -59,7 +59,7 @@ def fit(t):
     return cKDTree(centers),h,edges,counts[support],centers
 
 
-def predict(model,m,e,ids,offset,draws=None):
+def predict_pdf(model,m,e,ids,draws=None):
     tree,h,edges,counts,centers=model
     pdf=np.zeros((len(m),len(edges)-1))
     count=P['simple_baseline']['noise_draws'] if draws is None else draws
@@ -73,6 +73,12 @@ def predict(model,m,e,ids,offset,draws=None):
         p=np.sum(h[ind]*w[:,:,None],axis=1)
         pdf+=shift_pdf(p,delta[:,0],edges)
     pdf/=count
+    return pdf, edges
+
+
+def predict(model,m,e,ids,offset,draws=None):
+    pdf,edges=predict_pdf(model,m,e,ids,draws)
+    tree,_,_,counts,_=model
     qm=quantiles_interpolated(pdf,edges)
     q=10**((m[:,:1]-qm[:,::-1]-10+offset)/5)
     dist,ind=tree.query(m[:,:2]-m[:,1:3],k=1)

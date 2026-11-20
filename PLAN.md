@@ -1,5 +1,11 @@
 # PLAN
 
+## Scientific closeout 2026-11-20 — integrated WP-A through WP-E
+
+The Pro work package is closed at the evidence level. The catalogue, 2.28M core and CMD display have separate source and area definitions. Retain the frozen production QRF. In the primary reference group at 18–20 mag and 2–5 kpc, Photdis has measured same-star scatter gains. The magnitude trend of old lower-MS offsets is present in the routed training luminosities and same-label empirical control. The signed Gaia samples constrain global shifts in individual 20–22 mag fields and have heterogeneous responses. The common-support nine-field extinction analysis preserves reversals, map coverage and sample losses. GD-1 members show direct broad-bin leakage and poor recovery in a narrow distance window even with a nearly unbiased overall median scale.
+
+[Science report](docs/science_closeout_20261120/report.md), [ten figure groups](docs/science_closeout_20261120/figures.md), [scope](manifests/science_closeout_20261120/science_scope.csv) and [decisions](manifests/science_closeout_20261120/science_decisions.csv) define the handoff. Prioritize the catalogue and its validated applications in the manuscript. Public data access, field definitions and version references are manuscript-release work. Any broader population or deep/high-dust calibration needs independently anchored data with usable phase and environmental coverage. No new model or full catalogue run follows.
+
 ## Cluster CMD depth 2026-11-20 — scientific experiment complete
 
 Review a3ab0832 on the immutable faint-signed roster. Recovered 20,875 native PSFs and exact archived QRF statistics, and fit same-star fixed external MIST and M5/M30 ridge comparisons. NGC 6362 and M55 bright/faint lower-sequence offsets differ by 0.17–0.18 mag. Outer low-crowding medians remain +0.62/+0.84 mag. Their lower-sequence bias also persists on common CMD cells. The strict optical compound arm contains 1/5 stars and no common cells, so its preregistered threshold is unsupported. NGC 6723 is secondary. The independent CMD relation improves paired scale and CRPS and retains interval undercoverage in some strata.
