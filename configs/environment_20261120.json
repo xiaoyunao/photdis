@@ -35,7 +35,7 @@
   },
   "dust": {
     "map": "/pscratch/sd/y/yunao/dustmaps/bayestar2019_v3_9.h5",
-    "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27e32ef99",
+    "map_sha256": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27b1e32ef99",
     "max_steps": 9,
     "damping": 0.5,
     "tolerance_mag": 0.02,
