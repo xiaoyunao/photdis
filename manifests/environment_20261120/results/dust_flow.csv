@@ -1,0 +1,8 @@
+field,inputs,reliable_map,reference_in_map,sfd_has_half_map_mass,converged,converged_ref_in_map,oracle_common,iteration_state_0,iteration_state_1,iteration_state_2,iteration_state_3,iteration_state_4,iteration_state_5
+ALL,3000,2305,2048,2040,1747,1691,1841,695,265,56,153,84,1747
+L219,500,500,467,412,198,188,321,0,88,48,98,68,198
+L233,500,500,462,477,446,438,450,0,23,5,16,10,446
+L240,500,500,457,465,443,435,438,0,35,2,15,5,443
+M240,500,305,214,228,212,198,198,195,77,1,15,0,212
+M037,500,500,448,458,448,432,434,0,42,0,9,1,448
+H240,500,0,0,0,0,0,0,500,0,0,0,0,0

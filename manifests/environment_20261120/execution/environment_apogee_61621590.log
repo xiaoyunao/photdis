@@ -1,0 +1,4 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-20T02:17:27.310] error: *** STEP 61621590.4 ON nid200002 CANCELLED AT 2026-11-20T02:17:27 DUE to SIGNAL Killed ***
+srun: error: nid200002: task 0: Killed
+srun: Terminating StepId=61621590.4

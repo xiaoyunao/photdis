@@ -1,0 +1,21 @@
+{
+  "config_sha256": "57ca61bd9d9373288e32d22a6a0f5f9c72fb00ab24620a8d6d3708b2d56433ef",
+  "inputs": {
+    "results": "17fa7a19b8dbcaba51c565644abb3b4cb4cca45fcea6bb96d6db439353378d09",
+    "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+    "script": "0e73a7777e72f71eb90770905356fac14df5553b6d56f93166de1838d5732c78"
+  },
+  "job": "61621590",
+  "outputs": {
+    "environment_distance_comparison.csv": "8faef3f55cb194e301f9dc8339cbbf1a5131b4d1d63600d0dd0c4e42d5afd42f",
+    "environment_distance_comparison.pdf": "7b5d4513dbef0e327160fed2f232f6c5bf99626c5495eca0faa1fa890c685a50",
+    "environment_distance_comparison.png": "8c3d6ddcb3e2d39e6ab29eac768cfc44d7241df22d044501114a246147d3fad4",
+    "environment_matched_scales.csv": "5190e9f8f6cec89a35d31bbec3e4b960efbd7ec8d04bf8799c2539af99639d40",
+    "environment_matched_scales.pdf": "211a172dd7320f88653b34b2b6c446d4e9a8e7c57dd83687af976d033bdf64de",
+    "environment_matched_scales.png": "bea3ee0e47976a15a4ecdbae525b28b9344402768e72e7380d5f84682c12ac83",
+    "finite_distance_dust_comparison.csv": "f6da6a210849cc04dc09fdcd5330f22f9ea23da6ca469390c2e19c0ce28a04c1",
+    "finite_distance_dust_comparison.pdf": "3a9b36f4b7dd25ed3fb2e78cd60df10f6de3ad182de90994bb0f62d26e2a005a",
+    "finite_distance_dust_comparison.png": "fe4f6b6572e765c46fe6cb08110b99440cd41877a897a1dd756b0310028aa428",
+    "style_regression.json": "489d9421f4b9afeaaf4099f73de4fd2ad3cae128d5d033f19143bc84acd02a99"
+  }
+}

@@ -1,0 +1,60 @@
+Loading pixel_info ...
+Loading samples ...
+Loading best_fit ...
+Replacing NaNs in reliable distance estimates ...
+Sorting pixel_info ...
+Extracting hp_idx_sorted and data_idx at each nside ...
+  nside = 64
+  nside = 128
+  nside = 256
+  nside = 512
+  nside = 1024
+t = 29.068 s
+  pix_info:   0.390 s
+   samples:  14.351 s
+      best:   2.713 s
+       nan:   0.020 s
+      sort:  11.492 s
+       idx:   0.103 s
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/process.py", line 254, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/process.py", line 203, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ~~^^^^^^^
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/environment_dust.py", line 49, in compute
+    track[active] = quantiles_interpolated(base_weight[active],base_edge[active])[:,2]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/y/yunao/photdis_pipeline/src/photdis/baseline_v1.py", line 23, in quantiles_interpolated
+    return edges[idx]+np.clip(frac,0,1)*(edges[idx+1]-edges[idx])
+           ~~~~~^^^^^
+IndexError: index 153 is out of bounds for axis 0 with size 39
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/environment_dust.py", line 148, in <module>
+    main()
+    ~~~~^^
+  File "/pscratch/sd/y/yunao/photdis_pipeline/scripts/environment_dust.py", line 136, in main
+    pieces = list(pool.map(compute,chunks))
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/process.py", line 712, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/_base.py", line 454, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/global/common/software/desi/perlmutter/desiconda/20260910-3.1.0/conda/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+IndexError: index 153 is out of bounds for axis 0 with size 39
+srun: error: nid200002: task 0: Exited with exit code 1
+srun: Terminating StepId=61621590.2

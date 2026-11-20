@@ -1,0 +1,22 @@
+{
+  "config_sha256": "57ca61bd9d9373288e32d22a6a0f5f9c72fb00ab24620a8d6d3708b2d56433ef",
+  "inputs": {
+    "geometry_south": "2a738e4a76401cbda1833ff9a6fffd885137820792f3aab4fdfddeacdf75bbf2",
+    "forecast": "74de9b2a8cc50afeb3a02e1a303ad317390e94e1a7844ccc11490b4c18fb2d6c",
+    "dust": "c23628759bc2d144d020091011d544c39269079c9d035cb19372ca7a46d32fae",
+    "apogee": "3b725132d1cb36a1e7fcc945ae35e4ce44074ef578706b8f349fed0b9be49ae8",
+    "script": "1be586ffb0319eaede00871481fe50e3c84c60b67cbf702535e244726e8d72dd"
+  },
+  "job": "61621590",
+  "outputs": {
+    "band_metrics.csv": "52915e8704036f0e589d7b6df2a68b1ca49a76cac2de864b88a1a06b8a13f028",
+    "census.csv": "a44fb318495ca9bd5fdd11ebca6252ae0ffd293107177e2c2957bf7c9aec245c",
+    "dust_flow.csv": "0ecc905b63a1f9594c94d1a61727d9078665f4ec4dc7047ff3ec6eaef8adcb6b",
+    "dust_pairs.csv": "933032d9e421d01604b3cc1b32629d98a12aba76600e19271d662469e4040d77",
+    "dust_source_pairs.csv": "165c311a0aaf3735546a12ef2ed684b20bf95d081c961c5933fd4a18f9dafd51",
+    "environment_contrasts.csv": "514ba704c2814f139c28012f52351c182bda54c7176d3311a78a338474e8751e",
+    "field_metrics.csv": "7a3e514aab2286263ef4f73c14b3ec0c2f7acf3a35328b08ddaee47c1daca5de",
+    "matched_cells.csv": "bfd637ddb2e39887c895833b9cf48e3715cd8457e59d1b4b29bb7b2cf5e7887f",
+    "source_scores.csv": "45377da22f27a0d0ad724e7f9211bef43c028a4f20c12afe3291fd1d3f363211"
+  }
+}

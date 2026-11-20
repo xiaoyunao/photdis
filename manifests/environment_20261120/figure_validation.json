@@ -1,0 +1,7 @@
+{
+  "plates": ["environment_distance_comparison", "environment_matched_scales", "finite_distance_dust_comparison"],
+  "render_job": 61621590,
+  "portable_redraw_png_byte_identical": true,
+  "v3_8_F02_F03_reference_pixel_regression_pass": true,
+  "each_single_page_pdf_english_text_and_poppler_visual_review_pass": true
+}

@@ -1,0 +1,35 @@
+{
+  "analytic_vs_quadrature_score_errors": [
+    [
+      2.220446049250313e-16,
+      2.7755575615628914e-17
+    ],
+    [
+      3.469446951953614e-18,
+      0.0
+    ]
+  ],
+  "receipts": {
+    "census": "086d9499697e2a2e95b7a33e3e4dc8ef99d2295b5a313116ee4cfb0a633730b3",
+    "forecast": "74de9b2a8cc50afeb3a02e1a303ad317390e94e1a7844ccc11490b4c18fb2d6c",
+    "dust": "c23628759bc2d144d020091011d544c39269079c9d035cb19372ca7a46d32fae",
+    "apogee": "3b725132d1cb36a1e7fcc945ae35e4ce44074ef578706b8f349fed0b9be49ae8",
+    "results": "17fa7a19b8dbcaba51c565644abb3b4cb4cca45fcea6bb96d6db439353378d09",
+    "figures": "e15113d78797b388e5dacec8bf64ffc132f960c20231cd18fa5ad01fe7f5fc22"
+  },
+  "precise_catalog_n": 527156,
+  "pdf_n": 24775,
+  "gaia_prediction_n": 9870,
+  "bayestar_converged": 1747,
+  "supplemental_astro_reference_n": 0,
+  "median_original_grz_extinction_per_SFD_EBV": [
+    3.213999999712076,
+    2.1650000000231144,
+    1.2109999996126086
+  ],
+  "frozen_median_replay_max_mag": 8.641847308865636e-07,
+  "dust_reference_independence_replay_n": 8,
+  "origin_production_reference": "67ccfb2ca5f1cf9864f33b1a5f6dbc162f547971",
+  "sky_sha256": "411b0086e9d4c6f9f208805f02f064e2c24bb117d61293083b9bb51dc7faaed5",
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f"
+}

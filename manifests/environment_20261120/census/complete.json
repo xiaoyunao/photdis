@@ -1,0 +1,159 @@
+{
+  "config_sha256": "57ca61bd9d9373288e32d22a6a0f5f9c72fb00ab24620a8d6d3708b2d56433ef",
+  "inputs": {
+    "historical_labels": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "specdis": "245aaade0127356f2a99c0d7848488c01502bba15ce5f327fc5af9cd8ce8d975",
+    "spdist": "e345f01e91eded0f9cae332208f64101de4b7e024483223fe29b0cbf6ce7b43a",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-095m010-100m005.fits": {
+      "size": 129381120,
+      "mtime_ns": 1780602255000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-095m015-100m010.fits": {
+      "size": 833181120,
+      "mtime_ns": 1780602384000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-100m025-105m020.fits": {
+      "size": 1034052480,
+      "mtime_ns": 1780602428000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-100m030-105m025.fits": {
+      "size": 1612304640,
+      "mtime_ns": 1780602490000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-105m030-110m025.fits": {
+      "size": 321940800,
+      "mtime_ns": 1780602451000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-090m035-095m030.fits": {
+      "size": 1400693760,
+      "mtime_ns": 1780602290000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-095m035-100m030.fits": {
+      "size": 1261679040,
+      "mtime_ns": 1780602409000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-265p010-270p015.fits": {
+      "size": 1974985920,
+      "mtime_ns": 1780609257000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-060m040-065m035.fits": {
+      "size": 1743808320,
+      "mtime_ns": 1780601529000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05136.fits": {
+      "size": 32676480,
+      "mtime_ns": 1708471252000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05137.fits": {
+      "size": 37281600,
+      "mtime_ns": 1708471251000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05138.fits": {
+      "size": 30755520,
+      "mtime_ns": 1708471251000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05139.fits": {
+      "size": 36319680,
+      "mtime_ns": 1708471253000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05190.fits": {
+      "size": 94898880,
+      "mtime_ns": 1708471264000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05191.fits": {
+      "size": 123310080,
+      "mtime_ns": 1708471265000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05196.fits": {
+      "size": 87914880,
+      "mtime_ns": 1708471263000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05197.fits": {
+      "size": 107326080,
+      "mtime_ns": 1708471262000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05331.fits": {
+      "size": 49789440,
+      "mtime_ns": 1708471286000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05334.fits": {
+      "size": 56885760,
+      "mtime_ns": 1708471286000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05337.fits": {
+      "size": 47730240,
+      "mtime_ns": 1708471285000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05340.fits": {
+      "size": 61194240,
+      "mtime_ns": 1708471288000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07973.fits": {
+      "size": 116326080,
+      "mtime_ns": 1708472344000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07975.fits": {
+      "size": 92315520,
+      "mtime_ns": 1708472344000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07984.fits": {
+      "size": 126740160,
+      "mtime_ns": 1708472350000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07986.fits": {
+      "size": 98619840,
+      "mtime_ns": 1708472353000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07992.fits": {
+      "size": 81792000,
+      "mtime_ns": 1708472356000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08604.fits": {
+      "size": 8599680,
+      "mtime_ns": 1708472499000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08605.fits": {
+      "size": 8798400,
+      "mtime_ns": 1708472499000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08606.fits": {
+      "size": 8562240,
+      "mtime_ns": 1708472499000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08607.fits": {
+      "size": 8709120,
+      "mtime_ns": 1708472500000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08628.fits": {
+      "size": 8605440,
+      "mtime_ns": 1708472502000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-08629.fits": {
+      "size": 8464320,
+      "mtime_ns": 1708472502000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-09961.fits": {
+      "size": 99449280,
+      "mtime_ns": 1708472834000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-09963.fits": {
+      "size": 89297280,
+      "mtime_ns": 1708472834000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-09964.fits": {
+      "size": 132048000,
+      "mtime_ns": 1708472837000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-09966.fits": {
+      "size": 114272640,
+      "mtime_ns": 1708472837000000000
+    },
+    "/pscratch/sd/y/yunao/photdis_pipeline/configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214"
+  },
+  "job": "61621590",
+  "outputs": {
+    "historical_identity_audit.csv": "7b817e756967c8a8e1a0c91a20dc0597a897e76739405bfbfda9723abbdbf93a",
+    "qualified.npz": "edfd72d555629f6b4914f9871c7a530073533fc5a5e5df316440f6a7909c813a",
+    "raw_admission.csv": "2157dbdd09d36dd45c9f094e8118ec19f1943fd706c8f7c95ad5e201087acb2b"
+  }
+}

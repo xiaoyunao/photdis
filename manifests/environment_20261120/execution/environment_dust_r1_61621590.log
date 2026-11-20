@@ -1,0 +1,19 @@
+Loading pixel_info ...
+Loading samples ...
+Loading best_fit ...
+Replacing NaNs in reliable distance estimates ...
+Sorting pixel_info ...
+Extracting hp_idx_sorted and data_idx at each nside ...
+  nside = 64
+  nside = 128
+  nside = 256
+  nside = 512
+  nside = 1024
+t = 29.524 s
+  pix_info:   0.359 s
+   samples:  14.683 s
+      best:   2.948 s
+       nan:   0.024 s
+      sort:  11.398 s
+       idx:   0.112 s
+Bayestar 3000 query rows; iteration states [ 695  265   56  153   84 1747] known distance states [ 952   18  120 1910]

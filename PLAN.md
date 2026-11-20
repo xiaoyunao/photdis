@@ -1,8 +1,10 @@
 # PLAN
 
-## Environment feasibility 2026-11-20 — active
+## Environment feasibility 2026-11-20 — science complete
 
 Follow the complete review 613e204c. Six fixed native DECam fields from existing imaging coverage, frozen QRF and working selection. Count parent, precision, support and reference losses. Score actual Gaia and spectroscopic subsets separately, compare overlapping populations and run same-source 2D/Bayestar19 sensitivities with equal distance support plus reference-free iteration. Assess 0.10 mag resolution with spatial bootstrap. Preserve V8, production, RGB and unopened cluster candidates. Deliver reproducible tables, style-locked plots and bounded scope.
+
+Actual outcome and scope in manifests/environment_20261120/README.md. Two low-latitude fields exhibit reproducible scale shifts and partial 3D dust repair. Extreme dust, crowding, r>=20 and 5–10 kpc lack a reliable generalization. Three Pal5 plots and all compact tables verified. Pending closeout is repository reconciliation and release of the study allocation.
 
 ## Native luminosity2026-11-19 — completed
 

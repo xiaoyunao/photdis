@@ -1,0 +1,13 @@
+{
+  "config_sha256": "57ca61bd9d9373288e32d22a6a0f5f9c72fb00ab24620a8d6d3708b2d56433ef",
+  "inputs": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_6/external_reference/complete.json": "7700407993cec7a6a64d486121b704f8c31f8d45779b34daac3a94b81dacd744",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/v3_6/external_reference/DR17_astroNN_inventory.npz": "8b1c189678a7882ab9d1d94cb44599e95796db7df23c51d83940c652c4d44f69",
+    "forecast": "74de9b2a8cc50afeb3a02e1a303ad317390e94e1a7844ccc11490b4c18fb2d6c",
+    "script": "928e04be8f94257f373af693f799d3bf152a1ac210448968c82ea4d2ab395071"
+  },
+  "job": "61621590",
+  "outputs": {
+    "references.npz": "d59bd0697fc0715909d3024e6fcc50f87594ad58a2b6c28eab917de208161e94"
+  }
+}
