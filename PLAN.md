@@ -1,5 +1,11 @@
 # PLAN
 
+## Independent extinction transfer 2026-11-20 — scientific experiment completed
+
+Review ca01b642 and base 6c5cc2c7. Three registered apertures, immutable pre-outcome roster of 1,500 TYPE=PSF, paired A/B/C and Gaia-input diagnosis, archived L219 replay, nine-aperture faint inventory. 1,363 objects scored at shared map support. Allocation 61624582 was returned after completion. L224 and mid-latitude M249 pass. L032 worsens. The study-level two-low-latitude transfer criterion fails. The beneficial signal is strongest in bright 0.5–2 kpc conservative dwarf proxies. L219 has 198/500 converged, 188 common, with separate initial mass, color support, updated mass and step-limit causes.
+
+Deliverables in manifests/environment_transfer_20261120 and docs/environment_transfer_20261120/methods.md. No production change follows. Candidate next science is signed-Gaia forward scoring at 20≤r<22 with frozen selection, paired observable-space predictions and effective spatial uncertainty. 22≤r<23 and independent 5–10 kpc distances remain unsupported in these apertures. Joint distance–dust fitting requires an independent way to distinguish dust from luminosity-branch errors.
+
 ## Environment feasibility 2026-11-20 — completed
 
 Follow the complete review 613e204c. Six fixed native DECam fields from existing imaging coverage, frozen QRF and working selection. Count parent, precision, support and reference losses. Score actual Gaia and spectroscopic subsets separately, compare overlapping populations and run same-source 2D/Bayestar19 sensitivities with equal distance support plus reference-free iteration. Assess 0.10 mag resolution with spatial bootstrap. Preserve V8, production, RGB and unopened cluster candidates. Deliver reproducible tables, style-locked plots and bounded scope.

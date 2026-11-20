@@ -1,5 +1,13 @@
 # WORKLOG
 
+## 2026-11-20 — independent extinction transfer
+
+- Closeout. Recomputed 108 PDF scores independently, with maximum absolute errors below 2e−15. Verified 28 bound outputs, three pixel-identical native-runtime figure replays, and both original v3.8 regression plates. Returned NERSC allocation 61624582, COMPLETED 0:0 after 18:32. All 15 job steps completed.
+
+- Read complete linked review ca01b642 and fixed baseline 6c5cc2c7 across local, GitHub and NERSC. Registered the P0–P2 goal before changes. Selected L032, L224, M249 using imaging only with L248 as sole reserve. NERSC 61624582 froze 1,500 exact IDs and decision thresholds before QRF forecasts. Old-aperture and training overlaps excluded; 515 and 110 historical identities flagged in L224 and M249.
+- Executed census, frozen forecasts, Bayestar19 replay, L219 traces, and targeted faint/spec/cluster inventories. 1,363 common stars. L224 passes (+0.253 to −0.067 mag), M249 passes (+0.132 to +0.037), L032 worsens (−0.119 to −0.191). One of two low fields passes. L219 exact 500-star replay found 88/48/98/68 failures by state and 198 converged. Clean supported weak Gaia 160,773/2,998/0 across r20–21/21–22/22–23. 88 SpecDis and 57 SPDist historical 5–10 kpc distances present, no clean common-scale references.
+- Added six small execution scripts, one locked configuration, methods, science report and compact artifacts. Python compilation, numerical and identity audit on actual outputs, prior v3.8 F02/F03 pixel replay and all three new English plates checked. Production, existing sky figures and manuscript preserved.
+
 ## 2026-11-20 — low-latitude environment feasibility
 
 - Closeout. Local, GitHub and canonical science snapshot bd8c6820 verified across 50 changed files. Archived only seven identical deployed source/config inputs before the safe fast-forward. Returned own allocation 61621590, COMPLETED 0:0, elapsed 19:01, no queue entry. Accounting includes the repaired dust quantile error and the canceled slow direct archive scan. Review evidence and all results at manifests/environment_20261120.

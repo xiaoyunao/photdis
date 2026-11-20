@@ -1,0 +1,31 @@
+{
+  "style": "1bd61832d4c7aafd0ef7531a9018102e255960d9c13f8a98d64689517305a20f",
+  "inputs": {
+    "cluster_inventory.csv": "6c1b68bd61b2108fa86dcbfcbcda5ad649297dea40dbf78c49dcb036140d9332",
+    "common_parallax_sensitivity.csv": "8e9786a4559eac7857cd81a7d55fb767bf90af334ae4198ffd5fd329d2c1776b",
+    "contrasts.csv": "0cbc061917035ae12c11d5f262a6efc7a2708ba7d04ec4c7ed58b1b372a89cb5",
+    "distant_reference.csv": "0c2dbfa9d7b2d58713cc0d34a05f1859dfea4f5c49ecf88cd04559815d60c228",
+    "faint_signed_parallax.csv": "1f3926e8c3f3228c10ed878398988fe007606de452e70801babbfa9a65e1c6cc",
+    "flow.csv": "c95eec70f44e676692a00f280ebce1768c301b3beb945a659322cf0995f03c83",
+    "judgments.csv": "39f2b8bb0c293e1842a0c9a68901e527290d08cdf163730c15d3bac8dd347505",
+    "l219_groups.csv": "9ebce26f58df7cfcdb8b2d0c678b16e67758a118d99beab206635809004fdeaf",
+    "l219_profiles.csv": "25b58dd335169279632e1a56f02e465fc6117d131ea33b43a5f408db71a757c2",
+    "l219_stars.csv": "8c1b6f73eb2b712e577bd54c8e98660cb12a8c39289ff38c90a60a6fac9e8163",
+    "oracle.csv": "1496110fdfce06770a5ece53217338b28c65cba746c7dfa2d36070c6ac517c41",
+    "pairs.csv": "0f8981af18677950379e3ec587acccb51165bd8c9a8bb78fb5420df9d32ee640",
+    "reference_bootstrap.csv": "fa901d9abd5da1220cace8c10bfc0b12fa392e19bd30e4ab162c53e1b7084923",
+    "scores.csv": "529594a279506b28d8255833235de58f5088117d01ce0397499fbd2e984cc7da"
+  },
+  "outputs": {
+    "finite_distance_transfer_scores.csv": "a88ee49144f882dd0f8050c0a7832bb8e14d1c7897bb5aed8016f809a19249d4",
+    "finite_distance_transfer_scores.pdf": "c2caf689d5ba8ec611998df07d9ef4c4491b3a7968533aef9172e07d23a6a75c",
+    "finite_distance_transfer_scores.png": "78dbd8eb70be1c56f506989a011796b5ec569dde2e0ca386bdbfb8b6e757a1c0",
+    "l219_extinction_and_failures.csv": "e91b0ff6a5cabbdfbe91e13860af24e7d988e57307529a51fe1785f69cc459d3",
+    "l219_extinction_and_failures.pdf": "4d5721b4ac8e5a3f63a3aa2df9452d16dc91f4eeba02bf34df7690573eb869fb",
+    "l219_extinction_and_failures.png": "1394e8a51c08aed70729debba0e59a695cb659fc4bb246c1f920986624d54c26",
+    "same_star_transfer_and_attrition.csv": "eec55284fb4a8ec6f7cef27db7c94eb2a89587df0e03dcb644b0764cd4ab5d59",
+    "same_star_transfer_and_attrition.pdf": "73637ed33678cd99001c3e595020953047b331ce5130ada6532f848816e552db",
+    "same_star_transfer_and_attrition.png": "c4c1c7b5e8c55e58143505631b9fd8bafd685c30b9b9055e5be04e37df7ad094",
+    "style_regression.json": "489d9421f4b9afeaaf4099f73de4fd2ad3cae128d5d033f19143bc84acd02a99"
+  }
+}

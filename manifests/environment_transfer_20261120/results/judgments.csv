@@ -1,0 +1,4 @@
+field,n,blocks,converged_fraction,common_fraction,enough_reference,scale_improves,scale_target,crps_improves,log_guard,severe_guard,coverage_guard,passed
+L032,449,61,0.91,0.898,True,False,False,False,True,True,True,False
+L224,446,64,0.912,0.892,True,True,True,True,True,True,True,True
+M249,468,67,0.958,0.936,True,True,True,True,True,True,True,True

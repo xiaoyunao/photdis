@@ -1,0 +1,14 @@
+{
+  "freeze": "64320c97b1f1b3cac7d5749c948b284c33b78eda8eb81e6257c32b945b351846",
+  "inputs": {
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/reference/vasiliev_baumgardt_2021_clusters.txt": "e1c504be3abe9ceb7b582f0ccaacd1b18fc45afc0fa27107a056ec64d86331fa",
+    "/pscratch/sd/y/yunao/photdis_pipeline/data/reference/vasiliev_baumgardt_2021_members.zip": "9eafa2e10afc031790cfe36ed8545aa6336cc87c317fab167e9cea9dacbd0748",
+    "old": "74de9b2a8cc50afeb3a02e1a303ad317390e94e1a7844ccc11490b4c18fb2d6c",
+    "new": "63fa50e2409d475bc0ecab958b1ad9010679becf2b0ca9c5476bb1497a2d19f9"
+  },
+  "outputs": {
+    "faint_signed_parallax.csv": "1f3926e8c3f3228c10ed878398988fe007606de452e70801babbfa9a65e1c6cc",
+    "distant_reference.csv": "0c2dbfa9d7b2d58713cc0d34a05f1859dfea4f5c49ecf88cd04559815d60c228",
+    "cluster_inventory.csv": "6c1b68bd61b2108fa86dcbfcbcda5ad649297dea40dbf78c49dcb036140d9332"
+  }
+}

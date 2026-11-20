@@ -1,0 +1,4 @@
+field,unique_precise,nominal_support,gaia_before_cap,application_draw,application_predicted,working_sample,registered,map_valid,reference_inside,sfd_half_mass,converged,common,state0,state1,state2,state3,state4,state5
+L032,512157,460822,1800,3000,2700,658,500,500,472,467,455,449,0,33,1,5,6,455
+L224,177119,159302,1800,3000,2685,1015,500,500,463,480,456,446,0,20,1,17,6,456
+M249,85102,75984,1800,3000,2698,862,500,500,477,486,479,468,0,14,0,7,0,479

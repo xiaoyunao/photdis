@@ -1,0 +1,12 @@
+{
+  "config_sha256": "18837a1e731178f4cfe0c9fd181e7c7299b80228cdf36669587e2f622c151fb0",
+  "inputs": {
+    "forecast": "63fa50e2409d475bc0ecab958b1ad9010679becf2b0ca9c5476bb1497a2d19f9",
+    "map": "f68f14dfba45556b4a073d5ca20b99a100e7ac91c97312f11c24e27b1e32ef99",
+    "script": "201e663449f78366c6de1a43e5eb4f06a6afc4e99e4ba2095b89a618a0a580bd"
+  },
+  "job": "61624582",
+  "outputs": {
+    "forecasts.npz": "5caf79a2bfb7ba7f1c11109aafeaf1910cc003884bd4c898435c66dd705fea7d"
+  }
+}

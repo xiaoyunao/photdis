@@ -1,0 +1,11 @@
+{
+  "config_sha256": "18837a1e731178f4cfe0c9fd181e7c7299b80228cdf36669587e2f622c151fb0",
+  "inputs": {
+    "archive_sha256": "8b1c189678a7882ab9d1d94cb44599e95796db7df23c51d83940c652c4d44f69",
+    "forecast": "63fa50e2409d475bc0ecab958b1ad9010679becf2b0ca9c5476bb1497a2d19f9"
+  },
+  "job": "61624582",
+  "outputs": {
+    "references.npz": "5f84ebb80b468c19d3e97c7d8d6f253455907ba5b893535ed6be348575321ebb"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "baseline": "6c5cc2c7049cf840ad05b4a61743e8b11cd647d0",
+  "review": "ca01b642-1435-46f9-949a-535f58529cb7",
+  "fields": [["L032", 32, 11], ["L224", 224, -11.5], ["M249", 249, 17], ["L248", 248, 11]],
+  "roles": {"L032": "low", "L224": "low", "M249": "control", "L248": "reserve"},
+  "minimum_gaia": 200,
+  "minimum_blocks": 8,
+  "absolute_bias_target_mag": 0.10,
+  "log_score_loss_nat": 0.10,
+  "severe_rate_increase": 0.02,
+  "coverage_error_increase": 0.05,
+  "common_parallax_sensitivity_mas": 0.01,
+  "point_inventory": "Fixed six historical apertures plus chosen three new apertures. The reserve is only used when a low field fails the pre-outcome census.",
+  "cohort": "Native DECam PSF, historical masks frozen; exclude training and historical identities from P0, use the existing 500-per-field stable-ranking cap."
+}

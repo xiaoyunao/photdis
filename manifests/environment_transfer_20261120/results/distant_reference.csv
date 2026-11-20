@@ -1,0 +1,73 @@
+field,source,lo_kpc,hi_kpc,qualified,qrf_support,fit_overlap,history_overlap,history_clean_qrf,blocks,r20plus,median_r,provenance,n_dwarf_proxy,n_uncertain
+L219,gaia,2,5,98,62,0,0,62,21,0,15.623825073242188,signed zero-point-corrected DR3 geometry,0,62
+L219,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+L219,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L219,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L219,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L219,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L219,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L219,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L233,gaia,2,5,466,460,0,0,460,41,0,15.959790229797363,signed zero-point-corrected DR3 geometry,41,419
+L233,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+L233,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L233,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L233,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L233,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L233,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L233,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L240,gaia,2,5,1116,1105,0,0,1105,43,0,15.943572998046875,signed zero-point-corrected DR3 geometry,163,942
+L240,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+L240,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L240,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L240,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L240,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L240,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L240,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M240,gaia,2,5,696,695,0,0,695,73,0,16.07709503173828,signed zero-point-corrected DR3 geometry,209,486
+M240,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+M240,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M240,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M240,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M240,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M240,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M240,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M037,gaia,2,5,591,586,0,0,586,67,0,15.786172866821289,signed zero-point-corrected DR3 geometry,9,577
+M037,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+M037,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M037,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M037,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M037,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M037,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M037,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+H240,gaia,2,5,149,149,0,0,149,75,0,16.13520622253418,signed zero-point-corrected DR3 geometry,71,78
+H240,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+H240,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+H240,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+H240,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+H240,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+H240,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+H240,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L032,gaia,2,5,1190,1183,0,0,1183,67,0,15.756799697875977,signed zero-point-corrected DR3 geometry,4,1179
+L032,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+L032,specdis,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L032,specdis,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L032,spdist,2,5,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L032,spdist,5,10,0,0,0,0,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L032,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L032,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L224,gaia,2,5,520,516,0,52,464,64,0,15.910642623901367,signed zero-point-corrected DR3 geometry,4,460
+L224,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+L224,specdis,2,5,235,235,0,235,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L224,specdis,5,10,80,76,0,80,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L224,spdist,2,5,270,269,0,270,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L224,spdist,5,10,52,51,0,52,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+L224,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+L224,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M249,gaia,2,5,420,419,0,9,410,68,0,15.757899284362793,signed zero-point-corrected DR3 geometry,17,393
+M249,gaia,5,10,0,0,0,0,0,0,0,,signed zero-point-corrected DR3 geometry,0,0
+M249,specdis,2,5,47,47,0,47,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M249,specdis,5,10,8,8,0,8,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M249,spdist,2,5,48,48,0,48,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M249,spdist,5,10,5,5,0,5,0,0,0,,"spectro-photometric teacher, ancestry overlaps QRF",0,0
+M249,astro,2,5,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0
+M249,astro,5,10,0,0,0,0,0,0,0,,APOGEE astroNN; method shares stellar information and reference scale,0,0

@@ -1,0 +1,18 @@
+{
+  "fields": 3,
+  "registered": 1500,
+  "scored": 1363,
+  "l219_archived": 500,
+  "gaia_faint_cells": 27,
+  "receipt_outputs": 28,
+  "style_regression": {
+    "F02_direct_distances.png": "6d3fb56f4a2a621b205c4db27a42c09c88f10fa3dad5f81b8c383f5ab295651b",
+    "F03_same_star_cmd.png": "2a821469410fe23504a30b03a432069f5ef1c3efbedc36324557f2b0a3c5ab23"
+  },
+  "independent_quadrature": {
+    "n": 108,
+    "crps_abs_error": 1.7208456881689926e-15,
+    "log_abs_error": 8.881784197001252e-16
+  },
+  "preoutcome_freeze": "64320c97b1f1b3cac7d5749c948b284c33b78eda8eb81e6257c32b945b351846"
+}

@@ -1,0 +1,20 @@
+{
+  "registry": "18837a1e731178f4cfe0c9fd181e7c7299b80228cdf36669587e2f622c151fb0",
+  "freeze": "64320c97b1f1b3cac7d5749c948b284c33b78eda8eb81e6257c32b945b351846",
+  "inputs": {
+    "census": "13133a46d38e69fdde1a02a19ab11ba05860a451071acd2bb1096751c56ec61a",
+    "forecast": "63fa50e2409d475bc0ecab958b1ad9010679becf2b0ca9c5476bb1497a2d19f9",
+    "dust": "6e7b3a323acbc859955a4128dbea87bb24b24f3601d9a7a8a2e162ea6c3ea113",
+    "apogee": "563e1334b1b5b4a00f6dc7bb0f767192508edbd2ccacf005ef1f3372716afc8a"
+  },
+  "outputs": {
+    "flow.csv": "c95eec70f44e676692a00f280ebce1768c301b3beb945a659322cf0995f03c83",
+    "scores.csv": "529594a279506b28d8255833235de58f5088117d01ce0397499fbd2e984cc7da",
+    "contrasts.csv": "0cbc061917035ae12c11d5f262a6efc7a2708ba7d04ec4c7ed58b1b372a89cb5",
+    "pairs.csv": "0f8981af18677950379e3ec587acccb51165bd8c9a8bb78fb5420df9d32ee640",
+    "judgments.csv": "39f2b8bb0c293e1842a0c9a68901e527290d08cdf163730c15d3bac8dd347505",
+    "oracle.csv": "1496110fdfce06770a5ece53217338b28c65cba746c7dfa2d36070c6ac517c41",
+    "common_parallax_sensitivity.csv": "8e9786a4559eac7857cd81a7d55fb767bf90af334ae4198ffd5fd329d2c1776b",
+    "reference_bootstrap.csv": "fa901d9abd5da1220cace8c10bfc0b12fa392e19bd30e4ab162c53e1b7084923"
+  }
+}

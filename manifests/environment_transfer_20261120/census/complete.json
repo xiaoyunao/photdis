@@ -1,0 +1,147 @@
+{
+  "config_sha256": "18837a1e731178f4cfe0c9fd181e7c7299b80228cdf36669587e2f622c151fb0",
+  "inputs": {
+    "historical_labels": "cf9e350355f0fca412e3dc40ff0d50025f26b40b65ebeef6b8c8dc1bb10d5b78",
+    "specdis": "245aaade0127356f2a99c0d7848488c01502bba15ce5f327fc5af9cd8ce8d975",
+    "spdist": "e345f01e91eded0f9cae332208f64101de4b7e024483223fe29b0cbf6ce7b43a",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-270p000-275p005.fits": {
+      "size": 2243347200,
+      "mtime_ns": 1780609625000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-270p005-275p010.fits": {
+      "size": 2875956480,
+      "mtime_ns": 1780609698000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-095m015-100m010.fits": {
+      "size": 833181120,
+      "mtime_ns": 1780602384000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-095m020-100m015.fits": {
+      "size": 1408976640,
+      "mtime_ns": 1780602436000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-135m025-140m020.fits": {
+      "size": 1121863680,
+      "mtime_ns": 1780602925000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-125m025-130m020.fits": {
+      "size": 691557120,
+      "mtime_ns": 1780602725000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-125m030-130m025.fits": {
+      "size": 3392640,
+      "mtime_ns": 1780602636000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-130m025-135m020.fits": {
+      "size": 1245170880,
+      "mtime_ns": 1780602858000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-130m030-135m025.fits": {
+      "size": 929036160,
+      "mtime_ns": 1780602827000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05229.fits": {
+      "size": 66407040,
+      "mtime_ns": 1708471271000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05231.fits": {
+      "size": 60638400,
+      "mtime_ns": 1708471272000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05240.fits": {
+      "size": 76403520,
+      "mtime_ns": 1708471275000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05241.fits": {
+      "size": 88318080,
+      "mtime_ns": 1708471274000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05242.fits": {
+      "size": 70289280,
+      "mtime_ns": 1708471275000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-05243.fits": {
+      "size": 82097280,
+      "mtime_ns": 1708471275000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07937.fits": {
+      "size": 275042880,
+      "mtime_ns": 1708472336000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07940.fits": {
+      "size": 305663040,
+      "mtime_ns": 1708472339000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07941.fits": {
+      "size": 330626880,
+      "mtime_ns": 1708472342000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07942.fits": {
+      "size": 224343360,
+      "mtime_ns": 1708472338000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-07943.fits": {
+      "size": 241718400,
+      "mtime_ns": 1708472339000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10031.fits": {
+      "size": 99904320,
+      "mtime_ns": 1708472862000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10039.fits": {
+      "size": 36552960,
+      "mtime_ns": 1708472859000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10040.fits": {
+      "size": 75507840,
+      "mtime_ns": 1708472859000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10041.fits": {
+      "size": 55535040,
+      "mtime_ns": 1708472859000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10042.fits": {
+      "size": 75257280,
+      "mtime_ns": 1708472862000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10043.fits": {
+      "size": 56672640,
+      "mtime_ns": 1708472863000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10045.fits": {
+      "size": 35928000,
+      "mtime_ns": 1708472861000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10047.fits": {
+      "size": 36547200,
+      "mtime_ns": 1708472862000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10082.fits": {
+      "size": 32855040,
+      "mtime_ns": 1708472878000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10088.fits": {
+      "size": 32322240,
+      "mtime_ns": 1708472879000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10090.fits": {
+      "size": 31541760,
+      "mtime_ns": 1708472880000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10128.fits": {
+      "size": 78419520,
+      "mtime_ns": 1708472888000000000
+    },
+    "/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix/healpix-10129.fits": {
+      "size": 60825600,
+      "mtime_ns": 1708472884000000000
+    },
+    "/pscratch/sd/y/yunao/photdis_pipeline/configs/v3_4_near_validation.json": "4828f46e7c8c9031679c0828f1391f53098574877caf22047d1b74190f49d214"
+  },
+  "job": "61624582",
+  "outputs": {
+    "historical_identity_audit.csv": "7faa69ace5f6e336b159a5c33119865bb29c4cb7b2eea75b3fbdd425a3356d5d",
+    "qualified.npz": "f6e24e208bf1229bc39ab6526d9d7750f6836f8baeebcf9498eb50ecc33e7c34",
+    "raw_admission.csv": "347beab5ab234c3b5e912750643ee1aa2ca56de76fb7a96d212fdf23c09979e8"
+  }
+}
