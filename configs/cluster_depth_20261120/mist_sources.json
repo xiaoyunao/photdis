@@ -1,0 +1,105 @@
+{
+  "url": "https://mist.science/data/tarballs_v1.2/MIST_v1.2_vvcrit0.4_DECam.txz",
+  "archive_sha256": "eaba03402a8abcf2da74be2bb32093fedcb193c916eef46ef6f643eb46440670",
+  "rotation": 0.4,
+  "alpha": 0,
+  "version": "1.2",
+  "systems": {
+    "NGC_6362": {
+      "FeH": -0.99,
+      "age_gyr": 12.0,
+      "n": 206,
+      "brackets": [
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.0,
+          "log_age": 10.05,
+          "weight": 0.39972007588561953
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.0,
+          "log_age": 10.100000000000001,
+          "weight": 0.5602799241143804
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m0.75_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -0.75,
+          "log_age": 10.05,
+          "weight": 0.016655003161900828
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m0.75_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -0.75,
+          "log_age": 10.100000000000001,
+          "weight": 0.023344996838099208
+        }
+      ],
+      "sha256": "d120dd1aa8fac25e4d9b9ff257207837f248f8b627046a4784a8a72bb4c1a31e"
+    },
+    "NGC_6723": {
+      "FeH": -1.1,
+      "age_gyr": 12.43,
+      "n": 205,
+      "brackets": [
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.25_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.25,
+          "log_age": 10.05,
+          "weight": 0.044230970866848324
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.25_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.25,
+          "log_age": 10.100000000000001,
+          "weight": 0.355769029133152
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.0,
+          "log_age": 10.05,
+          "weight": 0.06634645630027239
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.0,
+          "log_age": 10.100000000000001,
+          "weight": 0.5336535436997273
+        }
+      ],
+      "sha256": "efb4c4ea9b25257eb2d68e3a66776d027224291a09b111fa40fc4805102b64a6"
+    },
+    "NGC_6809_M55": {
+      "FeH": -1.94,
+      "age_gyr": 12.9,
+      "n": 200,
+      "brackets": [
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m2.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -2.0,
+          "log_age": 10.100000000000001,
+          "weight": 0.5990364034514285
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m2.00_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -2.0,
+          "log_age": 10.150000000000002,
+          "weight": 0.16096359654857134
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.75_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.75,
+          "log_age": 10.100000000000001,
+          "weight": 0.1891693905636092
+        },
+        {
+          "filename": "MIST_v1.2_vvcrit0.4_DECam/MIST_v1.2_feh_m1.75_afe_p0.0_vvcrit0.4_DECam.iso.cmd",
+          "feh": -1.75,
+          "log_age": 10.150000000000002,
+          "weight": 0.050830609436391005
+        }
+      ],
+      "sha256": "5dd89eccc948dd77dc2435b7fd8c02536e089b9bfa22838dbe61f49e760c96b5"
+    }
+  }
+}

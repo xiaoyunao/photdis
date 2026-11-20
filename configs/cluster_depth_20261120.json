@@ -1,0 +1,26 @@
+{
+  "baseline": "c09f7198fce3ab1bba0845d0e556015fdf034255",
+  "review": "a3ab0832-b376-4fa4-bae1-27cff85fd179",
+  "systems": {
+    "NGC_6362": {"label":"NGC 6362","age_gyr":12.0,"feh":-0.99,"bv_distance_kpc":7.65,"bv_sigma_kpc":0.07,"other_mu":14.45,"other_sigma":0.041,"sfd_error_ebv":0.02},
+    "NGC_6723": {"label":"NGC 6723","age_gyr":12.43,"feh":-1.10,"bv_distance_kpc":8.27,"bv_sigma_kpc":0.10,"other_mu":14.56,"other_sigma":0.041,"sfd_error_ebv":0.02},
+    "NGC_6809_M55": {"label":"M55","age_gyr":12.9,"feh":-1.94,"bv_distance_kpc":5.35,"bv_sigma_kpc":0.05,"other_mu":13.62,"other_sigma":null,"sfd_error_ebv":0.02}
+  },
+  "primary": ["NGC_6362", "NGC_6809_M55"],
+  "quality": {"outer_arcmin":8,"max_fracflux":0.05,"max_fracmasked":0.05,"min_fracin":0.9,"max_sigma":0.035,"min_depth_margin":0.75,"strict_membership":0.99},
+  "common_cells": {"Mr_edges":[5.5,6.0,6.5,7.0,7.5],"gr_edges":[0.4,0.55,0.7,0.85,1.0,1.15],"rz_edges":[-0.05,0.10,0.22,0.34,0.55],"minimum_per_cluster":8},
+  "threshold_mag": 0.30,
+  "minimum_clean": 50,
+  "minimum_spatial_blocks": 4,
+  "bootstrap": 600,
+  "seed": 2026112051,
+  "model": {"cov_floor_mag":0.025,"gray_sigma_mag":0.10,"support_color_chi2":25,"step_Mr_mag":0.025,"score_ref_common_mag":0.10},
+  "sources": {
+    "rrl":"https://doi.org/10.1093/mnras/stu226",
+    "combined":"https://doi.org/10.1093/mnras/stab1474",
+    "multiband":"https://academic.oup.com/mnras/article/518/2/3036/6825492",
+    "m55_age":"https://arxiv.org/abs/1806.02916",
+    "m55_k":"https://academic.oup.com/mnras/article/372/4/1675/1189052",
+    "mist":"https://mist.science/model_grids.html"
+  }
+}

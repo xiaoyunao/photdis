@@ -1,5 +1,9 @@
 # WORKLOG
 
+## 2026-11-20 — cluster CMD depth
+
+- Read review a3ab0832 and matched local, GitHub and NERSC to c09f7198. Registered fixed aperture, quality controls, common CMD and comparison conditions. Allocation 61629375. Recovered 20,875 original native PSFs and archived PDFs across the three systems. Built externally specified MIST main-sequence tracks from the official grid and reused empirical M5/M30 ridges. Corrected Dambis table attribution in the previous methods document.
+
 ## 2026-11-20 — faint signed Gaia
 
 - Closeout. Replayed all three PNGs from portable tables with identical pixels and checked the original F02/F03 style baselines. Actual 8/32-node diagnostics agree within 4.5e−14 on the audited slices. All 12 compute steps completed 0:0. Released the idle interactive allocation 61627267 after 09:39, with no queue entry.

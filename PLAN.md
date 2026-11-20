@@ -1,5 +1,9 @@
 # PLAN
 
+## Cluster CMD depth 2026-11-20 — in progress
+
+Review a3ab0832 on the immutable faint-signed roster. Compare NGC 6362 and M55 in fixed clean CMD overlap, with NGC 6723 as secondary verification. Reuse all QRF PDFs, qualify independent archived M5/M30 ridges and age/metallicity-matched MIST, and test published external scales without phase re-selection. Delivery in docs/cluster_depth_20261120 and manifests/cluster_depth_20261120.
+
 ## Faint signed Gaia 2026-11-20 — scientific experiment completed
 
 Review 3beaa71f at fcd59ee9. Two fields and 12,727 frozen PSFs scored with the same weak selection and signed parallax likelihood. Null rates pass, while ±0.10 mag power is insufficient in both magnitude bins. The registered gate leaves all nine-field expansions closed. The 3,054 archived bright stars have only partial covariate overlap and no independent phase labels. L224, L240 and M249 retain dust-response differences in the shared cells.
